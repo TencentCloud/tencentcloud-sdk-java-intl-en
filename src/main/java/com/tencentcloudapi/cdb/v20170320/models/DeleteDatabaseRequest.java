@@ -21,41 +21,67 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeCpuExpandStrategyRequest extends AbstractModel {
+public class DeleteDatabaseRequest extends AbstractModel {
 
     /**
-    * Instance ID
+    * Instance ID, in the format such as cdb-c1nl9rpv. This matches the instance ID displayed on the TencentDB console.
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-     * Get Instance ID 
-     * @return InstanceId Instance ID
+    * Database name, length not exceeding 64.
+    */
+    @SerializedName("DBName")
+    @Expose
+    private String DBName;
+
+    /**
+     * Get Instance ID, in the format such as cdb-c1nl9rpv. This matches the instance ID displayed on the TencentDB console. 
+     * @return InstanceId Instance ID, in the format such as cdb-c1nl9rpv. This matches the instance ID displayed on the TencentDB console.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Instance ID
-     * @param InstanceId Instance ID
+     * Set Instance ID, in the format such as cdb-c1nl9rpv. This matches the instance ID displayed on the TencentDB console.
+     * @param InstanceId Instance ID, in the format such as cdb-c1nl9rpv. This matches the instance ID displayed on the TencentDB console.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
-    public DescribeCpuExpandStrategyRequest() {
+    /**
+     * Get Database name, length not exceeding 64. 
+     * @return DBName Database name, length not exceeding 64.
+     */
+    public String getDBName() {
+        return this.DBName;
+    }
+
+    /**
+     * Set Database name, length not exceeding 64.
+     * @param DBName Database name, length not exceeding 64.
+     */
+    public void setDBName(String DBName) {
+        this.DBName = DBName;
+    }
+
+    public DeleteDatabaseRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeCpuExpandStrategyRequest(DescribeCpuExpandStrategyRequest source) {
+    public DeleteDatabaseRequest(DeleteDatabaseRequest source) {
         if (source.InstanceId != null) {
             this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.DBName != null) {
+            this.DBName = new String(source.DBName);
         }
     }
 
@@ -65,6 +91,7 @@ public class DescribeCpuExpandStrategyRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
+        this.setParamSimple(map, prefix + "DBName", this.DBName);
 
     }
 }

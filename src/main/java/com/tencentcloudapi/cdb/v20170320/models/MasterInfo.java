@@ -24,414 +24,414 @@ import java.util.HashMap;
 public class MasterInfo extends AbstractModel {
 
     /**
-    * Region information
+    * <p>Regional information</p>
     */
     @SerializedName("Region")
     @Expose
     private String Region;
 
     /**
-    * Region ID
+    * <p>Region ID</p>
     */
     @SerializedName("RegionId")
     @Expose
     private Long RegionId;
 
     /**
-    * AZ ID
+    * <p>Availability zone ID.</p>
     */
     @SerializedName("ZoneId")
     @Expose
     private Long ZoneId;
 
     /**
-    * AZ information
+    * <p>AZ information</p>
     */
     @SerializedName("Zone")
     @Expose
     private String Zone;
 
     /**
-    * Instance ID
+    * <p>Instance ID.</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Long instance ID
+    * <p>Instance long ID</p>
     */
     @SerializedName("ResourceId")
     @Expose
     private String ResourceId;
 
     /**
-    * Instance status
+    * <p>Instance status</p>
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * Instance name
+    * <p>Instance name</p>
     */
     @SerializedName("InstanceName")
     @Expose
     private String InstanceName;
 
     /**
-    * Instance type
+    * <p>Instance type</p>
     */
     @SerializedName("InstanceType")
     @Expose
     private Long InstanceType;
 
     /**
-    * Task status
+    * <p>Task status.</p>
     */
     @SerializedName("TaskStatus")
     @Expose
     private Long TaskStatus;
 
     /**
-    * Memory capacity
+    * <p>Memory capacity</p>
     */
     @SerializedName("Memory")
     @Expose
     private Long Memory;
 
     /**
-    * Disk capacity
+    * <p>Disk capacity</p>
     */
     @SerializedName("Volume")
     @Expose
     private Long Volume;
 
     /**
-    * Instance model
+    * <p>Instance model</p>
     */
     @SerializedName("DeviceType")
     @Expose
     private String DeviceType;
 
     /**
-    * Queries per second
+    * <p>Queries per second.</p>
     */
     @SerializedName("Qps")
     @Expose
     private Long Qps;
 
     /**
-    * VPC ID
+    * <p>VPC ID</p>
     */
     @SerializedName("VpcId")
     @Expose
     private Long VpcId;
 
     /**
-    * Subnet ID
+    * <p>subnet ID</p>
     */
     @SerializedName("SubnetId")
     @Expose
     private Long SubnetId;
 
     /**
-    * Dedicated cluster ID
+    * <p>Dedicated cluster ID</p>
     */
     @SerializedName("ExClusterId")
     @Expose
     private String ExClusterId;
 
     /**
-    * Dedicated cluster name
+    * <p>Dedicated cluster name</p>
     */
     @SerializedName("ExClusterName")
     @Expose
     private String ExClusterName;
 
     /**
-     * Get Region information 
-     * @return Region Region information
+     * Get <p>Regional information</p> 
+     * @return Region <p>Regional information</p>
      */
     public String getRegion() {
         return this.Region;
     }
 
     /**
-     * Set Region information
-     * @param Region Region information
+     * Set <p>Regional information</p>
+     * @param Region <p>Regional information</p>
      */
     public void setRegion(String Region) {
         this.Region = Region;
     }
 
     /**
-     * Get Region ID 
-     * @return RegionId Region ID
+     * Get <p>Region ID</p> 
+     * @return RegionId <p>Region ID</p>
      */
     public Long getRegionId() {
         return this.RegionId;
     }
 
     /**
-     * Set Region ID
-     * @param RegionId Region ID
+     * Set <p>Region ID</p>
+     * @param RegionId <p>Region ID</p>
      */
     public void setRegionId(Long RegionId) {
         this.RegionId = RegionId;
     }
 
     /**
-     * Get AZ ID 
-     * @return ZoneId AZ ID
+     * Get <p>Availability zone ID.</p> 
+     * @return ZoneId <p>Availability zone ID.</p>
      */
     public Long getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set AZ ID
-     * @param ZoneId AZ ID
+     * Set <p>Availability zone ID.</p>
+     * @param ZoneId <p>Availability zone ID.</p>
      */
     public void setZoneId(Long ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * Get AZ information 
-     * @return Zone AZ information
+     * Get <p>AZ information</p> 
+     * @return Zone <p>AZ information</p>
      */
     public String getZone() {
         return this.Zone;
     }
 
     /**
-     * Set AZ information
-     * @param Zone AZ information
+     * Set <p>AZ information</p>
+     * @param Zone <p>AZ information</p>
      */
     public void setZone(String Zone) {
         this.Zone = Zone;
     }
 
     /**
-     * Get Instance ID 
-     * @return InstanceId Instance ID
+     * Get <p>Instance ID.</p> 
+     * @return InstanceId <p>Instance ID.</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Instance ID
-     * @param InstanceId Instance ID
+     * Set <p>Instance ID.</p>
+     * @param InstanceId <p>Instance ID.</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Long instance ID 
-     * @return ResourceId Long instance ID
+     * Get <p>Instance long ID</p> 
+     * @return ResourceId <p>Instance long ID</p>
      */
     public String getResourceId() {
         return this.ResourceId;
     }
 
     /**
-     * Set Long instance ID
-     * @param ResourceId Long instance ID
+     * Set <p>Instance long ID</p>
+     * @param ResourceId <p>Instance long ID</p>
      */
     public void setResourceId(String ResourceId) {
         this.ResourceId = ResourceId;
     }
 
     /**
-     * Get Instance status 
-     * @return Status Instance status
+     * Get <p>Instance status</p> 
+     * @return Status <p>Instance status</p>
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Instance status
-     * @param Status Instance status
+     * Set <p>Instance status</p>
+     * @param Status <p>Instance status</p>
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get Instance name 
-     * @return InstanceName Instance name
+     * Get <p>Instance name</p> 
+     * @return InstanceName <p>Instance name</p>
      */
     public String getInstanceName() {
         return this.InstanceName;
     }
 
     /**
-     * Set Instance name
-     * @param InstanceName Instance name
+     * Set <p>Instance name</p>
+     * @param InstanceName <p>Instance name</p>
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;
     }
 
     /**
-     * Get Instance type 
-     * @return InstanceType Instance type
+     * Get <p>Instance type</p> 
+     * @return InstanceType <p>Instance type</p>
      */
     public Long getInstanceType() {
         return this.InstanceType;
     }
 
     /**
-     * Set Instance type
-     * @param InstanceType Instance type
+     * Set <p>Instance type</p>
+     * @param InstanceType <p>Instance type</p>
      */
     public void setInstanceType(Long InstanceType) {
         this.InstanceType = InstanceType;
     }
 
     /**
-     * Get Task status 
-     * @return TaskStatus Task status
+     * Get <p>Task status.</p> 
+     * @return TaskStatus <p>Task status.</p>
      */
     public Long getTaskStatus() {
         return this.TaskStatus;
     }
 
     /**
-     * Set Task status
-     * @param TaskStatus Task status
+     * Set <p>Task status.</p>
+     * @param TaskStatus <p>Task status.</p>
      */
     public void setTaskStatus(Long TaskStatus) {
         this.TaskStatus = TaskStatus;
     }
 
     /**
-     * Get Memory capacity 
-     * @return Memory Memory capacity
+     * Get <p>Memory capacity</p> 
+     * @return Memory <p>Memory capacity</p>
      */
     public Long getMemory() {
         return this.Memory;
     }
 
     /**
-     * Set Memory capacity
-     * @param Memory Memory capacity
+     * Set <p>Memory capacity</p>
+     * @param Memory <p>Memory capacity</p>
      */
     public void setMemory(Long Memory) {
         this.Memory = Memory;
     }
 
     /**
-     * Get Disk capacity 
-     * @return Volume Disk capacity
+     * Get <p>Disk capacity</p> 
+     * @return Volume <p>Disk capacity</p>
      */
     public Long getVolume() {
         return this.Volume;
     }
 
     /**
-     * Set Disk capacity
-     * @param Volume Disk capacity
+     * Set <p>Disk capacity</p>
+     * @param Volume <p>Disk capacity</p>
      */
     public void setVolume(Long Volume) {
         this.Volume = Volume;
     }
 
     /**
-     * Get Instance model 
-     * @return DeviceType Instance model
+     * Get <p>Instance model</p> 
+     * @return DeviceType <p>Instance model</p>
      */
     public String getDeviceType() {
         return this.DeviceType;
     }
 
     /**
-     * Set Instance model
-     * @param DeviceType Instance model
+     * Set <p>Instance model</p>
+     * @param DeviceType <p>Instance model</p>
      */
     public void setDeviceType(String DeviceType) {
         this.DeviceType = DeviceType;
     }
 
     /**
-     * Get Queries per second 
-     * @return Qps Queries per second
+     * Get <p>Queries per second.</p> 
+     * @return Qps <p>Queries per second.</p>
      */
     public Long getQps() {
         return this.Qps;
     }
 
     /**
-     * Set Queries per second
-     * @param Qps Queries per second
+     * Set <p>Queries per second.</p>
+     * @param Qps <p>Queries per second.</p>
      */
     public void setQps(Long Qps) {
         this.Qps = Qps;
     }
 
     /**
-     * Get VPC ID 
-     * @return VpcId VPC ID
+     * Get <p>VPC ID</p> 
+     * @return VpcId <p>VPC ID</p>
      */
     public Long getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set VPC ID
-     * @param VpcId VPC ID
+     * Set <p>VPC ID</p>
+     * @param VpcId <p>VPC ID</p>
      */
     public void setVpcId(Long VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get Subnet ID 
-     * @return SubnetId Subnet ID
+     * Get <p>subnet ID</p> 
+     * @return SubnetId <p>subnet ID</p>
      */
     public Long getSubnetId() {
         return this.SubnetId;
     }
 
     /**
-     * Set Subnet ID
-     * @param SubnetId Subnet ID
+     * Set <p>subnet ID</p>
+     * @param SubnetId <p>subnet ID</p>
      */
     public void setSubnetId(Long SubnetId) {
         this.SubnetId = SubnetId;
     }
 
     /**
-     * Get Dedicated cluster ID 
-     * @return ExClusterId Dedicated cluster ID
+     * Get <p>Dedicated cluster ID</p> 
+     * @return ExClusterId <p>Dedicated cluster ID</p>
      */
     public String getExClusterId() {
         return this.ExClusterId;
     }
 
     /**
-     * Set Dedicated cluster ID
-     * @param ExClusterId Dedicated cluster ID
+     * Set <p>Dedicated cluster ID</p>
+     * @param ExClusterId <p>Dedicated cluster ID</p>
      */
     public void setExClusterId(String ExClusterId) {
         this.ExClusterId = ExClusterId;
     }
 
     /**
-     * Get Dedicated cluster name 
-     * @return ExClusterName Dedicated cluster name
+     * Get <p>Dedicated cluster name</p> 
+     * @return ExClusterName <p>Dedicated cluster name</p>
      */
     public String getExClusterName() {
         return this.ExClusterName;
     }
 
     /**
-     * Set Dedicated cluster name
-     * @param ExClusterName Dedicated cluster name
+     * Set <p>Dedicated cluster name</p>
+     * @param ExClusterName <p>Dedicated cluster name</p>
      */
     public void setExClusterName(String ExClusterName) {
         this.ExClusterName = ExClusterName;

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ParamTemplateInfo extends AbstractModel {
 
     /**
-    * Parameter template ID
+    * parameter template ID
     */
     @SerializedName("TemplateId")
     @Expose
@@ -45,37 +45,37 @@ public class ParamTemplateInfo extends AbstractModel {
     private String Description;
 
     /**
-    * Instance engine version
+    * Instance engine version. Values: 5.5, 5.6, 5.7, and 8.0.
     */
     @SerializedName("EngineVersion")
     @Expose
     private String EngineVersion;
 
     /**
-    * Parameter template type
+    * Parameter template type. Valid values: HIGH_STABILITY, HIGH_PERFORMANCE.
     */
     @SerializedName("TemplateType")
     @Expose
     private String TemplateType;
 
     /**
-    * Parameter template engine Note: This field may return null, indicating that no valid values can be obtained.
+    * Parameter template engine, values: InnoDB, RocksDB.
     */
     @SerializedName("EngineType")
     @Expose
     private String EngineType;
 
     /**
-     * Get Parameter template ID 
-     * @return TemplateId Parameter template ID
+     * Get parameter template ID 
+     * @return TemplateId parameter template ID
      */
     public Long getTemplateId() {
         return this.TemplateId;
     }
 
     /**
-     * Set Parameter template ID
-     * @param TemplateId Parameter template ID
+     * Set parameter template ID
+     * @param TemplateId parameter template ID
      */
     public void setTemplateId(Long TemplateId) {
         this.TemplateId = TemplateId;
@@ -114,48 +114,48 @@ public class ParamTemplateInfo extends AbstractModel {
     }
 
     /**
-     * Get Instance engine version 
-     * @return EngineVersion Instance engine version
+     * Get Instance engine version. Values: 5.5, 5.6, 5.7, and 8.0. 
+     * @return EngineVersion Instance engine version. Values: 5.5, 5.6, 5.7, and 8.0.
      */
     public String getEngineVersion() {
         return this.EngineVersion;
     }
 
     /**
-     * Set Instance engine version
-     * @param EngineVersion Instance engine version
+     * Set Instance engine version. Values: 5.5, 5.6, 5.7, and 8.0.
+     * @param EngineVersion Instance engine version. Values: 5.5, 5.6, 5.7, and 8.0.
      */
     public void setEngineVersion(String EngineVersion) {
         this.EngineVersion = EngineVersion;
     }
 
     /**
-     * Get Parameter template type 
-     * @return TemplateType Parameter template type
+     * Get Parameter template type. Valid values: HIGH_STABILITY, HIGH_PERFORMANCE. 
+     * @return TemplateType Parameter template type. Valid values: HIGH_STABILITY, HIGH_PERFORMANCE.
      */
     public String getTemplateType() {
         return this.TemplateType;
     }
 
     /**
-     * Set Parameter template type
-     * @param TemplateType Parameter template type
+     * Set Parameter template type. Valid values: HIGH_STABILITY, HIGH_PERFORMANCE.
+     * @param TemplateType Parameter template type. Valid values: HIGH_STABILITY, HIGH_PERFORMANCE.
      */
     public void setTemplateType(String TemplateType) {
         this.TemplateType = TemplateType;
     }
 
     /**
-     * Get Parameter template engine Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return EngineType Parameter template engine Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Parameter template engine, values: InnoDB, RocksDB. 
+     * @return EngineType Parameter template engine, values: InnoDB, RocksDB.
      */
     public String getEngineType() {
         return this.EngineType;
     }
 
     /**
-     * Set Parameter template engine Note: This field may return null, indicating that no valid values can be obtained.
-     * @param EngineType Parameter template engine Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Parameter template engine, values: InnoDB, RocksDB.
+     * @param EngineType Parameter template engine, values: InnoDB, RocksDB.
      */
     public void setEngineType(String EngineType) {
         this.EngineType = EngineType;

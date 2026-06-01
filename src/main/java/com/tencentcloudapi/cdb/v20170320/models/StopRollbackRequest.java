@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class StopRollbackRequest extends AbstractModel {
 
     /**
-    * ID of the instance whose rollback task is canceled
+    * Revoke the corresponding instance ID of the rollback task. Obtain through the API [DescribeDBInstances](https://www.tencentcloud.com/document/api/236/15872?from_cn_redirect=1).
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-     * Get ID of the instance whose rollback task is canceled 
-     * @return InstanceId ID of the instance whose rollback task is canceled
+     * Get Revoke the corresponding instance ID of the rollback task. Obtain through the API [DescribeDBInstances](https://www.tencentcloud.com/document/api/236/15872?from_cn_redirect=1). 
+     * @return InstanceId Revoke the corresponding instance ID of the rollback task. Obtain through the API [DescribeDBInstances](https://www.tencentcloud.com/document/api/236/15872?from_cn_redirect=1).
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set ID of the instance whose rollback task is canceled
-     * @param InstanceId ID of the instance whose rollback task is canceled
+     * Set Revoke the corresponding instance ID of the rollback task. Obtain through the API [DescribeDBInstances](https://www.tencentcloud.com/document/api/236/15872?from_cn_redirect=1).
+     * @param InstanceId Revoke the corresponding instance ID of the rollback task. Obtain through the API [DescribeDBInstances](https://www.tencentcloud.com/document/api/236/15872?from_cn_redirect=1).
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;

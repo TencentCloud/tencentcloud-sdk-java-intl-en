@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class LocalBinlogConfigDefault extends AbstractModel {
 
     /**
-    * Retention period of local binlog. Value range: [72,168].
+    * Local binlog retention duration. Valid values: [6,168].
     */
     @SerializedName("SaveHours")
     @Expose
     private Long SaveHours;
 
     /**
-    * Space utilization of local binlog. Value range: [30,50].
+    * Local binlog space utilization. Valid values: [30,50].
     */
     @SerializedName("MaxUsage")
     @Expose
     private Long MaxUsage;
 
     /**
-     * Get Retention period of local binlog. Value range: [72,168]. 
-     * @return SaveHours Retention period of local binlog. Value range: [72,168].
+     * Get Local binlog retention duration. Valid values: [6,168]. 
+     * @return SaveHours Local binlog retention duration. Valid values: [6,168].
      */
     public Long getSaveHours() {
         return this.SaveHours;
     }
 
     /**
-     * Set Retention period of local binlog. Value range: [72,168].
-     * @param SaveHours Retention period of local binlog. Value range: [72,168].
+     * Set Local binlog retention duration. Valid values: [6,168].
+     * @param SaveHours Local binlog retention duration. Valid values: [6,168].
      */
     public void setSaveHours(Long SaveHours) {
         this.SaveHours = SaveHours;
     }
 
     /**
-     * Get Space utilization of local binlog. Value range: [30,50]. 
-     * @return MaxUsage Space utilization of local binlog. Value range: [30,50].
+     * Get Local binlog space utilization. Valid values: [30,50]. 
+     * @return MaxUsage Local binlog space utilization. Valid values: [30,50].
      */
     public Long getMaxUsage() {
         return this.MaxUsage;
     }
 
     /**
-     * Set Space utilization of local binlog. Value range: [30,50].
-     * @param MaxUsage Space utilization of local binlog. Value range: [30,50].
+     * Set Local binlog space utilization. Valid values: [30,50].
+     * @param MaxUsage Local binlog space utilization. Valid values: [30,50].
      */
     public void setMaxUsage(Long MaxUsage) {
         this.MaxUsage = MaxUsage;

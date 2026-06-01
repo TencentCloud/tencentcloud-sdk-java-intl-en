@@ -25,25 +25,21 @@ public class RollbackDBName extends AbstractModel {
 
     /**
     * Original database name before rollback
-Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("DatabaseName")
     @Expose
     private String DatabaseName;
 
     /**
-    * New database name after rollback
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Name of the rolled back database
     */
     @SerializedName("NewDatabaseName")
     @Expose
     private String NewDatabaseName;
 
     /**
-     * Get Original database name before rollback
-Note: this field may return null, indicating that no valid values can be obtained. 
+     * Get Original database name before rollback 
      * @return DatabaseName Original database name before rollback
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getDatabaseName() {
         return this.DatabaseName;
@@ -51,29 +47,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Original database name before rollback
-Note: this field may return null, indicating that no valid values can be obtained.
      * @param DatabaseName Original database name before rollback
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setDatabaseName(String DatabaseName) {
         this.DatabaseName = DatabaseName;
     }
 
     /**
-     * Get New database name after rollback
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return NewDatabaseName New database name after rollback
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Name of the rolled back database 
+     * @return NewDatabaseName Name of the rolled back database
      */
     public String getNewDatabaseName() {
         return this.NewDatabaseName;
     }
 
     /**
-     * Set New database name after rollback
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param NewDatabaseName New database name after rollback
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Name of the rolled back database
+     * @param NewDatabaseName Name of the rolled back database
      */
     public void setNewDatabaseName(String NewDatabaseName) {
         this.NewDatabaseName = NewDatabaseName;

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateCdbProxyAddressRequest extends AbstractModel {
 
     /**
-    * Proxy group ID
+    * Proxy group ID, which can be obtained through the [DescribeCdbProxyInfo](https://www.tencentcloud.com/document/api/236/90585?from_cn_redirect=1) API.
     */
     @SerializedName("ProxyGroupId")
     @Expose
@@ -52,7 +52,7 @@ public class CreateCdbProxyAddressRequest extends AbstractModel {
     private Long MinCount;
 
     /**
-    * The delay threshold. Minimum value:  `0`
+    * Delay removal threshold, minimum value: 1, range: 1–10000. The value is an integer.
     */
     @SerializedName("MaxDelay")
     @Expose
@@ -94,21 +94,22 @@ public class CreateCdbProxyAddressRequest extends AbstractModel {
     private ProxyAllocation [] ProxyAllocation;
 
     /**
-    * VPC ID
+    * VPC ID. Obtain through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
     */
     @SerializedName("UniqVpcId")
     @Expose
     private String UniqVpcId;
 
     /**
-    * VPC subnet ID
+    * Private subnet ID. Obtain through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
     */
     @SerializedName("UniqSubnetId")
     @Expose
     private String UniqSubnetId;
 
     /**
-    * Whether to enable the connection pool. Valid values: 
+    * Whether to enable connection pool. Off by default.
+Note: If you need to use the database proxy connection pool capability, the kernel minor version of the MySQL 8.0 primary instance must be equal to or greater than MySQL 8.0 20230630.
     */
     @SerializedName("ConnectionPool")
     @Expose
@@ -122,14 +123,14 @@ public class CreateCdbProxyAddressRequest extends AbstractModel {
     private String Desc;
 
     /**
-    * IP address
+    * IP. Leave it blank to default to a random supported IP in the selected VPC.
     */
     @SerializedName("Vip")
     @Expose
     private String Vip;
 
     /**
-    * Port
+    * Port. Default value 3306.
     */
     @SerializedName("VPort")
     @Expose
@@ -143,37 +144,37 @@ public class CreateCdbProxyAddressRequest extends AbstractModel {
     private String [] SecurityGroup;
 
     /**
-    * Connection pool type, which will take effect only when `ConnectionPool` is `true`. Valid values:  `transaction` (transaction-level), `connection` (session-level).
+    * Connection pool type. Available values: transaction (transaction-level connection pool), connection (session-level connection pool). This parameter is valid only when ConnectionPool is true. Default value: connection.
     */
     @SerializedName("ConnectionPoolType")
     @Expose
     private String ConnectionPoolType;
 
     /**
-    * Whether to enable adaptive load balancing. Disabled by default.
+    * Whether adaptive load balancing is enabled. Off by default.
     */
     @SerializedName("AutoLoadBalance")
     @Expose
     private Boolean AutoLoadBalance;
 
     /**
-    * Access Mode. nearBy - nearby access, balance - balanced allocation. Default value: nearBy.
+    * Access mode. nearBy - proximity access, balance - balanced allocation. Default value: nearBy.
     */
     @SerializedName("AccessMode")
     @Expose
     private String AccessMode;
 
     /**
-     * Get Proxy group ID 
-     * @return ProxyGroupId Proxy group ID
+     * Get Proxy group ID, which can be obtained through the [DescribeCdbProxyInfo](https://www.tencentcloud.com/document/api/236/90585?from_cn_redirect=1) API. 
+     * @return ProxyGroupId Proxy group ID, which can be obtained through the [DescribeCdbProxyInfo](https://www.tencentcloud.com/document/api/236/90585?from_cn_redirect=1) API.
      */
     public String getProxyGroupId() {
         return this.ProxyGroupId;
     }
 
     /**
-     * Set Proxy group ID
-     * @param ProxyGroupId Proxy group ID
+     * Set Proxy group ID, which can be obtained through the [DescribeCdbProxyInfo](https://www.tencentcloud.com/document/api/236/90585?from_cn_redirect=1) API.
+     * @param ProxyGroupId Proxy group ID, which can be obtained through the [DescribeCdbProxyInfo](https://www.tencentcloud.com/document/api/236/90585?from_cn_redirect=1) API.
      */
     public void setProxyGroupId(String ProxyGroupId) {
         this.ProxyGroupId = ProxyGroupId;
@@ -228,16 +229,16 @@ public class CreateCdbProxyAddressRequest extends AbstractModel {
     }
 
     /**
-     * Get The delay threshold. Minimum value:  `0` 
-     * @return MaxDelay The delay threshold. Minimum value:  `0`
+     * Get Delay removal threshold, minimum value: 1, range: 1–10000. The value is an integer. 
+     * @return MaxDelay Delay removal threshold, minimum value: 1, range: 1–10000. The value is an integer.
      */
     public Long getMaxDelay() {
         return this.MaxDelay;
     }
 
     /**
-     * Set The delay threshold. Minimum value:  `0`
-     * @param MaxDelay The delay threshold. Minimum value:  `0`
+     * Set Delay removal threshold, minimum value: 1, range: 1–10000. The value is an integer.
+     * @param MaxDelay Delay removal threshold, minimum value: 1, range: 1–10000. The value is an integer.
      */
     public void setMaxDelay(Long MaxDelay) {
         this.MaxDelay = MaxDelay;
@@ -324,48 +325,52 @@ public class CreateCdbProxyAddressRequest extends AbstractModel {
     }
 
     /**
-     * Get VPC ID 
-     * @return UniqVpcId VPC ID
+     * Get VPC ID. Obtain through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API. 
+     * @return UniqVpcId VPC ID. Obtain through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
      */
     public String getUniqVpcId() {
         return this.UniqVpcId;
     }
 
     /**
-     * Set VPC ID
-     * @param UniqVpcId VPC ID
+     * Set VPC ID. Obtain through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
+     * @param UniqVpcId VPC ID. Obtain through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
      */
     public void setUniqVpcId(String UniqVpcId) {
         this.UniqVpcId = UniqVpcId;
     }
 
     /**
-     * Get VPC subnet ID 
-     * @return UniqSubnetId VPC subnet ID
+     * Get Private subnet ID. Obtain through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API. 
+     * @return UniqSubnetId Private subnet ID. Obtain through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
      */
     public String getUniqSubnetId() {
         return this.UniqSubnetId;
     }
 
     /**
-     * Set VPC subnet ID
-     * @param UniqSubnetId VPC subnet ID
+     * Set Private subnet ID. Obtain through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
+     * @param UniqSubnetId Private subnet ID. Obtain through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
      */
     public void setUniqSubnetId(String UniqSubnetId) {
         this.UniqSubnetId = UniqSubnetId;
     }
 
     /**
-     * Get Whether to enable the connection pool. Valid values:  
-     * @return ConnectionPool Whether to enable the connection pool. Valid values: 
+     * Get Whether to enable connection pool. Off by default.
+Note: If you need to use the database proxy connection pool capability, the kernel minor version of the MySQL 8.0 primary instance must be equal to or greater than MySQL 8.0 20230630. 
+     * @return ConnectionPool Whether to enable connection pool. Off by default.
+Note: If you need to use the database proxy connection pool capability, the kernel minor version of the MySQL 8.0 primary instance must be equal to or greater than MySQL 8.0 20230630.
      */
     public Boolean getConnectionPool() {
         return this.ConnectionPool;
     }
 
     /**
-     * Set Whether to enable the connection pool. Valid values: 
-     * @param ConnectionPool Whether to enable the connection pool. Valid values: 
+     * Set Whether to enable connection pool. Off by default.
+Note: If you need to use the database proxy connection pool capability, the kernel minor version of the MySQL 8.0 primary instance must be equal to or greater than MySQL 8.0 20230630.
+     * @param ConnectionPool Whether to enable connection pool. Off by default.
+Note: If you need to use the database proxy connection pool capability, the kernel minor version of the MySQL 8.0 primary instance must be equal to or greater than MySQL 8.0 20230630.
      */
     public void setConnectionPool(Boolean ConnectionPool) {
         this.ConnectionPool = ConnectionPool;
@@ -388,32 +393,32 @@ public class CreateCdbProxyAddressRequest extends AbstractModel {
     }
 
     /**
-     * Get IP address 
-     * @return Vip IP address
+     * Get IP. Leave it blank to default to a random supported IP in the selected VPC. 
+     * @return Vip IP. Leave it blank to default to a random supported IP in the selected VPC.
      */
     public String getVip() {
         return this.Vip;
     }
 
     /**
-     * Set IP address
-     * @param Vip IP address
+     * Set IP. Leave it blank to default to a random supported IP in the selected VPC.
+     * @param Vip IP. Leave it blank to default to a random supported IP in the selected VPC.
      */
     public void setVip(String Vip) {
         this.Vip = Vip;
     }
 
     /**
-     * Get Port 
-     * @return VPort Port
+     * Get Port. Default value 3306. 
+     * @return VPort Port. Default value 3306.
      */
     public Long getVPort() {
         return this.VPort;
     }
 
     /**
-     * Set Port
-     * @param VPort Port
+     * Set Port. Default value 3306.
+     * @param VPort Port. Default value 3306.
      */
     public void setVPort(Long VPort) {
         this.VPort = VPort;
@@ -436,48 +441,48 @@ public class CreateCdbProxyAddressRequest extends AbstractModel {
     }
 
     /**
-     * Get Connection pool type, which will take effect only when `ConnectionPool` is `true`. Valid values:  `transaction` (transaction-level), `connection` (session-level). 
-     * @return ConnectionPoolType Connection pool type, which will take effect only when `ConnectionPool` is `true`. Valid values:  `transaction` (transaction-level), `connection` (session-level).
+     * Get Connection pool type. Available values: transaction (transaction-level connection pool), connection (session-level connection pool). This parameter is valid only when ConnectionPool is true. Default value: connection. 
+     * @return ConnectionPoolType Connection pool type. Available values: transaction (transaction-level connection pool), connection (session-level connection pool). This parameter is valid only when ConnectionPool is true. Default value: connection.
      */
     public String getConnectionPoolType() {
         return this.ConnectionPoolType;
     }
 
     /**
-     * Set Connection pool type, which will take effect only when `ConnectionPool` is `true`. Valid values:  `transaction` (transaction-level), `connection` (session-level).
-     * @param ConnectionPoolType Connection pool type, which will take effect only when `ConnectionPool` is `true`. Valid values:  `transaction` (transaction-level), `connection` (session-level).
+     * Set Connection pool type. Available values: transaction (transaction-level connection pool), connection (session-level connection pool). This parameter is valid only when ConnectionPool is true. Default value: connection.
+     * @param ConnectionPoolType Connection pool type. Available values: transaction (transaction-level connection pool), connection (session-level connection pool). This parameter is valid only when ConnectionPool is true. Default value: connection.
      */
     public void setConnectionPoolType(String ConnectionPoolType) {
         this.ConnectionPoolType = ConnectionPoolType;
     }
 
     /**
-     * Get Whether to enable adaptive load balancing. Disabled by default. 
-     * @return AutoLoadBalance Whether to enable adaptive load balancing. Disabled by default.
+     * Get Whether adaptive load balancing is enabled. Off by default. 
+     * @return AutoLoadBalance Whether adaptive load balancing is enabled. Off by default.
      */
     public Boolean getAutoLoadBalance() {
         return this.AutoLoadBalance;
     }
 
     /**
-     * Set Whether to enable adaptive load balancing. Disabled by default.
-     * @param AutoLoadBalance Whether to enable adaptive load balancing. Disabled by default.
+     * Set Whether adaptive load balancing is enabled. Off by default.
+     * @param AutoLoadBalance Whether adaptive load balancing is enabled. Off by default.
      */
     public void setAutoLoadBalance(Boolean AutoLoadBalance) {
         this.AutoLoadBalance = AutoLoadBalance;
     }
 
     /**
-     * Get Access Mode. nearBy - nearby access, balance - balanced allocation. Default value: nearBy. 
-     * @return AccessMode Access Mode. nearBy - nearby access, balance - balanced allocation. Default value: nearBy.
+     * Get Access mode. nearBy - proximity access, balance - balanced allocation. Default value: nearBy. 
+     * @return AccessMode Access mode. nearBy - proximity access, balance - balanced allocation. Default value: nearBy.
      */
     public String getAccessMode() {
         return this.AccessMode;
     }
 
     /**
-     * Set Access Mode. nearBy - nearby access, balance - balanced allocation. Default value: nearBy.
-     * @param AccessMode Access Mode. nearBy - nearby access, balance - balanced allocation. Default value: nearBy.
+     * Set Access mode. nearBy - proximity access, balance - balanced allocation. Default value: nearBy.
+     * @param AccessMode Access mode. nearBy - proximity access, balance - balanced allocation. Default value: nearBy.
      */
     public void setAccessMode(String AccessMode) {
         this.AccessMode = AccessMode;

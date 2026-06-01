@@ -24,325 +24,371 @@ import java.util.HashMap;
 public class AdjustCdbProxyAddressRequest extends AbstractModel {
 
     /**
-    * Proxy group ID
+    * <p>Proxy group ID, which can be obtained through the <a href="https://www.tencentcloud.com/document/api/236/90585?from_cn_redirect=1">DescribeCdbProxyInfo</a> API.</p>
     */
     @SerializedName("ProxyGroupId")
     @Expose
     private String ProxyGroupId;
 
     /**
-    * Assignment mode of weights. Valid values: `system` (auto-assigned), `custom`.
+    * <p>Weight allocation mode,<br>system Auto-Assignment: "system", custom: "custom"</p>
     */
     @SerializedName("WeightMode")
     @Expose
     private String WeightMode;
 
     /**
-    * Whether to remove delayed read-only instances from the proxy group Valid values: `true`, `false`.
+    * <p>Whether delay removal is enabled. Value: "true" | "false"</p>
     */
     @SerializedName("IsKickOut")
     @Expose
     private Boolean IsKickOut;
 
     /**
-    * Least read-only instances. Minimum value:  `0`
+    * <p>Minimum retention quantity, minimum value: 0.<br>Description: Valid only when IsKickOut is true.</p>
     */
     @SerializedName("MinCount")
     @Expose
     private Long MinCount;
 
     /**
-    * The delay threshold. Minimum value:  `0`
+    * <p>Delay removal threshold, minimum value: 1, value ranges from 1 to 10000, integer.</p>
     */
     @SerializedName("MaxDelay")
     @Expose
     private Long MaxDelay;
 
     /**
-    * Whether to enable failover. Valid values: `true`, `false`.
+    * <p>Whether fault migration is enabled, value: "true" | "false"</p>
     */
     @SerializedName("FailOver")
     @Expose
     private Boolean FailOver;
 
     /**
-    * Whether to automatically add newly created read-only instances. Valid values: `true`, `false`.
+    * <p>Automatically add RO. Parameter: "true" | "false"</p>
     */
     @SerializedName("AutoAddRo")
     @Expose
     private Boolean AutoAddRo;
 
     /**
-    * Whether it is read-only. Valid values: `true`, `false`.
+    * <p>Whether it is read-only. Value: "true" | "false".</p>
     */
     @SerializedName("ReadOnly")
     @Expose
     private Boolean ReadOnly;
 
     /**
-    * Address ID of the proxy group
+    * <p>Proxy group address ID. Obtain through the <a href="https://www.tencentcloud.com/document/api/236/90585?from_cn_redirect=1">DescribeCdbProxyInfo</a> API.</p>
     */
     @SerializedName("ProxyAddressId")
     @Expose
     private String ProxyAddressId;
 
     /**
-    * Whether to enable transaction splitting. Valid values: `true`, `false`.
+    * <p>Whether transaction splitting is enabled. Value: "true" | "false". Default value: false.</p>
     */
     @SerializedName("TransSplit")
     @Expose
     private Boolean TransSplit;
 
     /**
-    * Whether to enable the connection pool
+    * <p>Whether the connection pool is enabled. Off by default.<br>Note: If you need to use the database proxy connection pool capability, the kernel minor version of the MySQL 8.0 primary instance must be at least MySQL 8.0 20230630.</p>
     */
     @SerializedName("ConnectionPool")
     @Expose
     private Boolean ConnectionPool;
 
     /**
-    * Assignment of read/write weights If `system` is passed in for `WeightMode`, only the default weight assigned by the system will take effect.
+    * <p>Read-write weight allocation. If WeightMode is passed in as system, the passed-in weight does not take effect and the default weight is assigned by the system.</p>
     */
     @SerializedName("ProxyAllocation")
     @Expose
     private ProxyAllocation [] ProxyAllocation;
 
     /**
-    * Whether to enable adaptive load balancing. Disabled by default.
+    * <p>Whether self-adaptive load balancing is enabled. Off by default.</p>
     */
     @SerializedName("AutoLoadBalance")
     @Expose
     private Boolean AutoLoadBalance;
 
     /**
-    * Access Mode: nearby - nearby access, balance - balanced allocation. Default is nearby access.
+    * <p>Access mode: nearby - proximity access, balance - balanced allocation. Default is proximity access.</p>
     */
     @SerializedName("AccessMode")
     @Expose
     private String AccessMode;
 
     /**
-     * Get Proxy group ID 
-     * @return ProxyGroupId Proxy group ID
+    * <p>Whether to treat the libra node as an ordinary RO node</p>
+    */
+    @SerializedName("ApNodeAsRoNode")
+    @Expose
+    private Boolean ApNodeAsRoNode;
+
+    /**
+    * <p>Whether to forward to other nodes in case of a libra node fault</p>
+    */
+    @SerializedName("ApQueryToOtherNode")
+    @Expose
+    private Boolean ApQueryToOtherNode;
+
+    /**
+     * Get <p>Proxy group ID, which can be obtained through the <a href="https://www.tencentcloud.com/document/api/236/90585?from_cn_redirect=1">DescribeCdbProxyInfo</a> API.</p> 
+     * @return ProxyGroupId <p>Proxy group ID, which can be obtained through the <a href="https://www.tencentcloud.com/document/api/236/90585?from_cn_redirect=1">DescribeCdbProxyInfo</a> API.</p>
      */
     public String getProxyGroupId() {
         return this.ProxyGroupId;
     }
 
     /**
-     * Set Proxy group ID
-     * @param ProxyGroupId Proxy group ID
+     * Set <p>Proxy group ID, which can be obtained through the <a href="https://www.tencentcloud.com/document/api/236/90585?from_cn_redirect=1">DescribeCdbProxyInfo</a> API.</p>
+     * @param ProxyGroupId <p>Proxy group ID, which can be obtained through the <a href="https://www.tencentcloud.com/document/api/236/90585?from_cn_redirect=1">DescribeCdbProxyInfo</a> API.</p>
      */
     public void setProxyGroupId(String ProxyGroupId) {
         this.ProxyGroupId = ProxyGroupId;
     }
 
     /**
-     * Get Assignment mode of weights. Valid values: `system` (auto-assigned), `custom`. 
-     * @return WeightMode Assignment mode of weights. Valid values: `system` (auto-assigned), `custom`.
+     * Get <p>Weight allocation mode,<br>system Auto-Assignment: "system", custom: "custom"</p> 
+     * @return WeightMode <p>Weight allocation mode,<br>system Auto-Assignment: "system", custom: "custom"</p>
      */
     public String getWeightMode() {
         return this.WeightMode;
     }
 
     /**
-     * Set Assignment mode of weights. Valid values: `system` (auto-assigned), `custom`.
-     * @param WeightMode Assignment mode of weights. Valid values: `system` (auto-assigned), `custom`.
+     * Set <p>Weight allocation mode,<br>system Auto-Assignment: "system", custom: "custom"</p>
+     * @param WeightMode <p>Weight allocation mode,<br>system Auto-Assignment: "system", custom: "custom"</p>
      */
     public void setWeightMode(String WeightMode) {
         this.WeightMode = WeightMode;
     }
 
     /**
-     * Get Whether to remove delayed read-only instances from the proxy group Valid values: `true`, `false`. 
-     * @return IsKickOut Whether to remove delayed read-only instances from the proxy group Valid values: `true`, `false`.
+     * Get <p>Whether delay removal is enabled. Value: "true" | "false"</p> 
+     * @return IsKickOut <p>Whether delay removal is enabled. Value: "true" | "false"</p>
      */
     public Boolean getIsKickOut() {
         return this.IsKickOut;
     }
 
     /**
-     * Set Whether to remove delayed read-only instances from the proxy group Valid values: `true`, `false`.
-     * @param IsKickOut Whether to remove delayed read-only instances from the proxy group Valid values: `true`, `false`.
+     * Set <p>Whether delay removal is enabled. Value: "true" | "false"</p>
+     * @param IsKickOut <p>Whether delay removal is enabled. Value: "true" | "false"</p>
      */
     public void setIsKickOut(Boolean IsKickOut) {
         this.IsKickOut = IsKickOut;
     }
 
     /**
-     * Get Least read-only instances. Minimum value:  `0` 
-     * @return MinCount Least read-only instances. Minimum value:  `0`
+     * Get <p>Minimum retention quantity, minimum value: 0.<br>Description: Valid only when IsKickOut is true.</p> 
+     * @return MinCount <p>Minimum retention quantity, minimum value: 0.<br>Description: Valid only when IsKickOut is true.</p>
      */
     public Long getMinCount() {
         return this.MinCount;
     }
 
     /**
-     * Set Least read-only instances. Minimum value:  `0`
-     * @param MinCount Least read-only instances. Minimum value:  `0`
+     * Set <p>Minimum retention quantity, minimum value: 0.<br>Description: Valid only when IsKickOut is true.</p>
+     * @param MinCount <p>Minimum retention quantity, minimum value: 0.<br>Description: Valid only when IsKickOut is true.</p>
      */
     public void setMinCount(Long MinCount) {
         this.MinCount = MinCount;
     }
 
     /**
-     * Get The delay threshold. Minimum value:  `0` 
-     * @return MaxDelay The delay threshold. Minimum value:  `0`
+     * Get <p>Delay removal threshold, minimum value: 1, value ranges from 1 to 10000, integer.</p> 
+     * @return MaxDelay <p>Delay removal threshold, minimum value: 1, value ranges from 1 to 10000, integer.</p>
      */
     public Long getMaxDelay() {
         return this.MaxDelay;
     }
 
     /**
-     * Set The delay threshold. Minimum value:  `0`
-     * @param MaxDelay The delay threshold. Minimum value:  `0`
+     * Set <p>Delay removal threshold, minimum value: 1, value ranges from 1 to 10000, integer.</p>
+     * @param MaxDelay <p>Delay removal threshold, minimum value: 1, value ranges from 1 to 10000, integer.</p>
      */
     public void setMaxDelay(Long MaxDelay) {
         this.MaxDelay = MaxDelay;
     }
 
     /**
-     * Get Whether to enable failover. Valid values: `true`, `false`. 
-     * @return FailOver Whether to enable failover. Valid values: `true`, `false`.
+     * Get <p>Whether fault migration is enabled, value: "true" | "false"</p> 
+     * @return FailOver <p>Whether fault migration is enabled, value: "true" | "false"</p>
      */
     public Boolean getFailOver() {
         return this.FailOver;
     }
 
     /**
-     * Set Whether to enable failover. Valid values: `true`, `false`.
-     * @param FailOver Whether to enable failover. Valid values: `true`, `false`.
+     * Set <p>Whether fault migration is enabled, value: "true" | "false"</p>
+     * @param FailOver <p>Whether fault migration is enabled, value: "true" | "false"</p>
      */
     public void setFailOver(Boolean FailOver) {
         this.FailOver = FailOver;
     }
 
     /**
-     * Get Whether to automatically add newly created read-only instances. Valid values: `true`, `false`. 
-     * @return AutoAddRo Whether to automatically add newly created read-only instances. Valid values: `true`, `false`.
+     * Get <p>Automatically add RO. Parameter: "true" | "false"</p> 
+     * @return AutoAddRo <p>Automatically add RO. Parameter: "true" | "false"</p>
      */
     public Boolean getAutoAddRo() {
         return this.AutoAddRo;
     }
 
     /**
-     * Set Whether to automatically add newly created read-only instances. Valid values: `true`, `false`.
-     * @param AutoAddRo Whether to automatically add newly created read-only instances. Valid values: `true`, `false`.
+     * Set <p>Automatically add RO. Parameter: "true" | "false"</p>
+     * @param AutoAddRo <p>Automatically add RO. Parameter: "true" | "false"</p>
      */
     public void setAutoAddRo(Boolean AutoAddRo) {
         this.AutoAddRo = AutoAddRo;
     }
 
     /**
-     * Get Whether it is read-only. Valid values: `true`, `false`. 
-     * @return ReadOnly Whether it is read-only. Valid values: `true`, `false`.
+     * Get <p>Whether it is read-only. Value: "true" | "false".</p> 
+     * @return ReadOnly <p>Whether it is read-only. Value: "true" | "false".</p>
      */
     public Boolean getReadOnly() {
         return this.ReadOnly;
     }
 
     /**
-     * Set Whether it is read-only. Valid values: `true`, `false`.
-     * @param ReadOnly Whether it is read-only. Valid values: `true`, `false`.
+     * Set <p>Whether it is read-only. Value: "true" | "false".</p>
+     * @param ReadOnly <p>Whether it is read-only. Value: "true" | "false".</p>
      */
     public void setReadOnly(Boolean ReadOnly) {
         this.ReadOnly = ReadOnly;
     }
 
     /**
-     * Get Address ID of the proxy group 
-     * @return ProxyAddressId Address ID of the proxy group
+     * Get <p>Proxy group address ID. Obtain through the <a href="https://www.tencentcloud.com/document/api/236/90585?from_cn_redirect=1">DescribeCdbProxyInfo</a> API.</p> 
+     * @return ProxyAddressId <p>Proxy group address ID. Obtain through the <a href="https://www.tencentcloud.com/document/api/236/90585?from_cn_redirect=1">DescribeCdbProxyInfo</a> API.</p>
      */
     public String getProxyAddressId() {
         return this.ProxyAddressId;
     }
 
     /**
-     * Set Address ID of the proxy group
-     * @param ProxyAddressId Address ID of the proxy group
+     * Set <p>Proxy group address ID. Obtain through the <a href="https://www.tencentcloud.com/document/api/236/90585?from_cn_redirect=1">DescribeCdbProxyInfo</a> API.</p>
+     * @param ProxyAddressId <p>Proxy group address ID. Obtain through the <a href="https://www.tencentcloud.com/document/api/236/90585?from_cn_redirect=1">DescribeCdbProxyInfo</a> API.</p>
      */
     public void setProxyAddressId(String ProxyAddressId) {
         this.ProxyAddressId = ProxyAddressId;
     }
 
     /**
-     * Get Whether to enable transaction splitting. Valid values: `true`, `false`. 
-     * @return TransSplit Whether to enable transaction splitting. Valid values: `true`, `false`.
+     * Get <p>Whether transaction splitting is enabled. Value: "true" | "false". Default value: false.</p> 
+     * @return TransSplit <p>Whether transaction splitting is enabled. Value: "true" | "false". Default value: false.</p>
      */
     public Boolean getTransSplit() {
         return this.TransSplit;
     }
 
     /**
-     * Set Whether to enable transaction splitting. Valid values: `true`, `false`.
-     * @param TransSplit Whether to enable transaction splitting. Valid values: `true`, `false`.
+     * Set <p>Whether transaction splitting is enabled. Value: "true" | "false". Default value: false.</p>
+     * @param TransSplit <p>Whether transaction splitting is enabled. Value: "true" | "false". Default value: false.</p>
      */
     public void setTransSplit(Boolean TransSplit) {
         this.TransSplit = TransSplit;
     }
 
     /**
-     * Get Whether to enable the connection pool 
-     * @return ConnectionPool Whether to enable the connection pool
+     * Get <p>Whether the connection pool is enabled. Off by default.<br>Note: If you need to use the database proxy connection pool capability, the kernel minor version of the MySQL 8.0 primary instance must be at least MySQL 8.0 20230630.</p> 
+     * @return ConnectionPool <p>Whether the connection pool is enabled. Off by default.<br>Note: If you need to use the database proxy connection pool capability, the kernel minor version of the MySQL 8.0 primary instance must be at least MySQL 8.0 20230630.</p>
      */
     public Boolean getConnectionPool() {
         return this.ConnectionPool;
     }
 
     /**
-     * Set Whether to enable the connection pool
-     * @param ConnectionPool Whether to enable the connection pool
+     * Set <p>Whether the connection pool is enabled. Off by default.<br>Note: If you need to use the database proxy connection pool capability, the kernel minor version of the MySQL 8.0 primary instance must be at least MySQL 8.0 20230630.</p>
+     * @param ConnectionPool <p>Whether the connection pool is enabled. Off by default.<br>Note: If you need to use the database proxy connection pool capability, the kernel minor version of the MySQL 8.0 primary instance must be at least MySQL 8.0 20230630.</p>
      */
     public void setConnectionPool(Boolean ConnectionPool) {
         this.ConnectionPool = ConnectionPool;
     }
 
     /**
-     * Get Assignment of read/write weights If `system` is passed in for `WeightMode`, only the default weight assigned by the system will take effect. 
-     * @return ProxyAllocation Assignment of read/write weights If `system` is passed in for `WeightMode`, only the default weight assigned by the system will take effect.
+     * Get <p>Read-write weight allocation. If WeightMode is passed in as system, the passed-in weight does not take effect and the default weight is assigned by the system.</p> 
+     * @return ProxyAllocation <p>Read-write weight allocation. If WeightMode is passed in as system, the passed-in weight does not take effect and the default weight is assigned by the system.</p>
      */
     public ProxyAllocation [] getProxyAllocation() {
         return this.ProxyAllocation;
     }
 
     /**
-     * Set Assignment of read/write weights If `system` is passed in for `WeightMode`, only the default weight assigned by the system will take effect.
-     * @param ProxyAllocation Assignment of read/write weights If `system` is passed in for `WeightMode`, only the default weight assigned by the system will take effect.
+     * Set <p>Read-write weight allocation. If WeightMode is passed in as system, the passed-in weight does not take effect and the default weight is assigned by the system.</p>
+     * @param ProxyAllocation <p>Read-write weight allocation. If WeightMode is passed in as system, the passed-in weight does not take effect and the default weight is assigned by the system.</p>
      */
     public void setProxyAllocation(ProxyAllocation [] ProxyAllocation) {
         this.ProxyAllocation = ProxyAllocation;
     }
 
     /**
-     * Get Whether to enable adaptive load balancing. Disabled by default. 
-     * @return AutoLoadBalance Whether to enable adaptive load balancing. Disabled by default.
+     * Get <p>Whether self-adaptive load balancing is enabled. Off by default.</p> 
+     * @return AutoLoadBalance <p>Whether self-adaptive load balancing is enabled. Off by default.</p>
      */
     public Boolean getAutoLoadBalance() {
         return this.AutoLoadBalance;
     }
 
     /**
-     * Set Whether to enable adaptive load balancing. Disabled by default.
-     * @param AutoLoadBalance Whether to enable adaptive load balancing. Disabled by default.
+     * Set <p>Whether self-adaptive load balancing is enabled. Off by default.</p>
+     * @param AutoLoadBalance <p>Whether self-adaptive load balancing is enabled. Off by default.</p>
      */
     public void setAutoLoadBalance(Boolean AutoLoadBalance) {
         this.AutoLoadBalance = AutoLoadBalance;
     }
 
     /**
-     * Get Access Mode: nearby - nearby access, balance - balanced allocation. Default is nearby access. 
-     * @return AccessMode Access Mode: nearby - nearby access, balance - balanced allocation. Default is nearby access.
+     * Get <p>Access mode: nearby - proximity access, balance - balanced allocation. Default is proximity access.</p> 
+     * @return AccessMode <p>Access mode: nearby - proximity access, balance - balanced allocation. Default is proximity access.</p>
      */
     public String getAccessMode() {
         return this.AccessMode;
     }
 
     /**
-     * Set Access Mode: nearby - nearby access, balance - balanced allocation. Default is nearby access.
-     * @param AccessMode Access Mode: nearby - nearby access, balance - balanced allocation. Default is nearby access.
+     * Set <p>Access mode: nearby - proximity access, balance - balanced allocation. Default is proximity access.</p>
+     * @param AccessMode <p>Access mode: nearby - proximity access, balance - balanced allocation. Default is proximity access.</p>
      */
     public void setAccessMode(String AccessMode) {
         this.AccessMode = AccessMode;
+    }
+
+    /**
+     * Get <p>Whether to treat the libra node as an ordinary RO node</p> 
+     * @return ApNodeAsRoNode <p>Whether to treat the libra node as an ordinary RO node</p>
+     */
+    public Boolean getApNodeAsRoNode() {
+        return this.ApNodeAsRoNode;
+    }
+
+    /**
+     * Set <p>Whether to treat the libra node as an ordinary RO node</p>
+     * @param ApNodeAsRoNode <p>Whether to treat the libra node as an ordinary RO node</p>
+     */
+    public void setApNodeAsRoNode(Boolean ApNodeAsRoNode) {
+        this.ApNodeAsRoNode = ApNodeAsRoNode;
+    }
+
+    /**
+     * Get <p>Whether to forward to other nodes in case of a libra node fault</p> 
+     * @return ApQueryToOtherNode <p>Whether to forward to other nodes in case of a libra node fault</p>
+     */
+    public Boolean getApQueryToOtherNode() {
+        return this.ApQueryToOtherNode;
+    }
+
+    /**
+     * Set <p>Whether to forward to other nodes in case of a libra node fault</p>
+     * @param ApQueryToOtherNode <p>Whether to forward to other nodes in case of a libra node fault</p>
+     */
+    public void setApQueryToOtherNode(Boolean ApQueryToOtherNode) {
+        this.ApQueryToOtherNode = ApQueryToOtherNode;
     }
 
     public AdjustCdbProxyAddressRequest() {
@@ -398,6 +444,12 @@ public class AdjustCdbProxyAddressRequest extends AbstractModel {
         if (source.AccessMode != null) {
             this.AccessMode = new String(source.AccessMode);
         }
+        if (source.ApNodeAsRoNode != null) {
+            this.ApNodeAsRoNode = new Boolean(source.ApNodeAsRoNode);
+        }
+        if (source.ApQueryToOtherNode != null) {
+            this.ApQueryToOtherNode = new Boolean(source.ApQueryToOtherNode);
+        }
     }
 
 
@@ -419,6 +471,8 @@ public class AdjustCdbProxyAddressRequest extends AbstractModel {
         this.setParamArrayObj(map, prefix + "ProxyAllocation.", this.ProxyAllocation);
         this.setParamSimple(map, prefix + "AutoLoadBalance", this.AutoLoadBalance);
         this.setParamSimple(map, prefix + "AccessMode", this.AccessMode);
+        this.setParamSimple(map, prefix + "ApNodeAsRoNode", this.ApNodeAsRoNode);
+        this.setParamSimple(map, prefix + "ApQueryToOtherNode", this.ApQueryToOtherNode);
 
     }
 }

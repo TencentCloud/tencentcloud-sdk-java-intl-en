@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DescribeDataBackupOverviewRequest extends AbstractModel {
 
     /**
-    * TencentDB product type to be queried. Currently, only `mysql` is supported.
+    * The cloud database product type for which you need to query the data backup overview. Value is: mysql refers to two-node/three-node high-availability instances, mysql-basic refers to single-node (cloud disk) instances, mysql-cluster refers to cloud disk edition instances.
     */
     @SerializedName("Product")
     @Expose
     private String Product;
 
     /**
-     * Get TencentDB product type to be queried. Currently, only `mysql` is supported. 
-     * @return Product TencentDB product type to be queried. Currently, only `mysql` is supported.
+     * Get The cloud database product type for which you need to query the data backup overview. Value is: mysql refers to two-node/three-node high-availability instances, mysql-basic refers to single-node (cloud disk) instances, mysql-cluster refers to cloud disk edition instances. 
+     * @return Product The cloud database product type for which you need to query the data backup overview. Value is: mysql refers to two-node/three-node high-availability instances, mysql-basic refers to single-node (cloud disk) instances, mysql-cluster refers to cloud disk edition instances.
      */
     public String getProduct() {
         return this.Product;
     }
 
     /**
-     * Set TencentDB product type to be queried. Currently, only `mysql` is supported.
-     * @param Product TencentDB product type to be queried. Currently, only `mysql` is supported.
+     * Set The cloud database product type for which you need to query the data backup overview. Value is: mysql refers to two-node/three-node high-availability instances, mysql-basic refers to single-node (cloud disk) instances, mysql-cluster refers to cloud disk edition instances.
+     * @param Product The cloud database product type for which you need to query the data backup overview. Value is: mysql refers to two-node/three-node high-availability instances, mysql-basic refers to single-node (cloud disk) instances, mysql-cluster refers to cloud disk edition instances.
      */
     public void setProduct(String Product) {
         this.Product = Product;

@@ -38,6 +38,13 @@ public class ModifyBackupEncryptionStatusRequest extends AbstractModel {
     private String EncryptionStatus;
 
     /**
+    * Set the default encryption status of the newly-added automated log backup file for the instance. Available values are on or off.
+    */
+    @SerializedName("BinlogEncryptionStatus")
+    @Expose
+    private String BinlogEncryptionStatus;
+
+    /**
      * Get Instance ID in the format of cdb-XXXX, which is the same as that displayed in the TencentDB console. 
      * @return InstanceId Instance ID in the format of cdb-XXXX, which is the same as that displayed in the TencentDB console.
      */
@@ -69,6 +76,22 @@ public class ModifyBackupEncryptionStatusRequest extends AbstractModel {
         this.EncryptionStatus = EncryptionStatus;
     }
 
+    /**
+     * Get Set the default encryption status of the newly-added automated log backup file for the instance. Available values are on or off. 
+     * @return BinlogEncryptionStatus Set the default encryption status of the newly-added automated log backup file for the instance. Available values are on or off.
+     */
+    public String getBinlogEncryptionStatus() {
+        return this.BinlogEncryptionStatus;
+    }
+
+    /**
+     * Set Set the default encryption status of the newly-added automated log backup file for the instance. Available values are on or off.
+     * @param BinlogEncryptionStatus Set the default encryption status of the newly-added automated log backup file for the instance. Available values are on or off.
+     */
+    public void setBinlogEncryptionStatus(String BinlogEncryptionStatus) {
+        this.BinlogEncryptionStatus = BinlogEncryptionStatus;
+    }
+
     public ModifyBackupEncryptionStatusRequest() {
     }
 
@@ -83,6 +106,9 @@ public class ModifyBackupEncryptionStatusRequest extends AbstractModel {
         if (source.EncryptionStatus != null) {
             this.EncryptionStatus = new String(source.EncryptionStatus);
         }
+        if (source.BinlogEncryptionStatus != null) {
+            this.BinlogEncryptionStatus = new String(source.BinlogEncryptionStatus);
+        }
     }
 
 
@@ -92,6 +118,7 @@ public class ModifyBackupEncryptionStatusRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "EncryptionStatus", this.EncryptionStatus);
+        this.setParamSimple(map, prefix + "BinlogEncryptionStatus", this.BinlogEncryptionStatus);
 
     }
 }

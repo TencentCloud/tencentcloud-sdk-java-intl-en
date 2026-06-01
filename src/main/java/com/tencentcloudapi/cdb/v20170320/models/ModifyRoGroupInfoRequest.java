@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ModifyRoGroupInfoRequest extends AbstractModel {
 
     /**
-    * RO group ID.
+    * ID of the RO group, which can be obtained through the [DescribeRoGroups](https://www.tencentcloud.com/document/api/236/40939?from_cn_redirect=1) API.
     */
     @SerializedName("RoGroupId")
     @Expose
@@ -38,7 +38,7 @@ public class ModifyRoGroupInfoRequest extends AbstractModel {
     private RoGroupAttr RoGroupInfo;
 
     /**
-    * Weights of instances in RO group. If the weighting mode of an RO group is changed to custom mode, this parameter must be set, and a weight value needs to be set for each RO instance.
+    * Weight of instances in the RO group. If modification is needed to set the weight mode of the RO group to user-defined mode (custom), this parameter must be set, and the weight value of each read-only instance needs to be set. The RO instance ID can be obtained through the [DescribeRoGroups](https://www.tencentcloud.com/document/api/236/40939?from_cn_redirect=1) API.
     */
     @SerializedName("RoWeightValues")
     @Expose
@@ -59,16 +59,16 @@ public class ModifyRoGroupInfoRequest extends AbstractModel {
     private Long ReplicationDelayTime;
 
     /**
-     * Get RO group ID. 
-     * @return RoGroupId RO group ID.
+     * Get ID of the RO group, which can be obtained through the [DescribeRoGroups](https://www.tencentcloud.com/document/api/236/40939?from_cn_redirect=1) API. 
+     * @return RoGroupId ID of the RO group, which can be obtained through the [DescribeRoGroups](https://www.tencentcloud.com/document/api/236/40939?from_cn_redirect=1) API.
      */
     public String getRoGroupId() {
         return this.RoGroupId;
     }
 
     /**
-     * Set RO group ID.
-     * @param RoGroupId RO group ID.
+     * Set ID of the RO group, which can be obtained through the [DescribeRoGroups](https://www.tencentcloud.com/document/api/236/40939?from_cn_redirect=1) API.
+     * @param RoGroupId ID of the RO group, which can be obtained through the [DescribeRoGroups](https://www.tencentcloud.com/document/api/236/40939?from_cn_redirect=1) API.
      */
     public void setRoGroupId(String RoGroupId) {
         this.RoGroupId = RoGroupId;
@@ -91,16 +91,16 @@ public class ModifyRoGroupInfoRequest extends AbstractModel {
     }
 
     /**
-     * Get Weights of instances in RO group. If the weighting mode of an RO group is changed to custom mode, this parameter must be set, and a weight value needs to be set for each RO instance. 
-     * @return RoWeightValues Weights of instances in RO group. If the weighting mode of an RO group is changed to custom mode, this parameter must be set, and a weight value needs to be set for each RO instance.
+     * Get Weight of instances in the RO group. If modification is needed to set the weight mode of the RO group to user-defined mode (custom), this parameter must be set, and the weight value of each read-only instance needs to be set. The RO instance ID can be obtained through the [DescribeRoGroups](https://www.tencentcloud.com/document/api/236/40939?from_cn_redirect=1) API. 
+     * @return RoWeightValues Weight of instances in the RO group. If modification is needed to set the weight mode of the RO group to user-defined mode (custom), this parameter must be set, and the weight value of each read-only instance needs to be set. The RO instance ID can be obtained through the [DescribeRoGroups](https://www.tencentcloud.com/document/api/236/40939?from_cn_redirect=1) API.
      */
     public RoWeightValue [] getRoWeightValues() {
         return this.RoWeightValues;
     }
 
     /**
-     * Set Weights of instances in RO group. If the weighting mode of an RO group is changed to custom mode, this parameter must be set, and a weight value needs to be set for each RO instance.
-     * @param RoWeightValues Weights of instances in RO group. If the weighting mode of an RO group is changed to custom mode, this parameter must be set, and a weight value needs to be set for each RO instance.
+     * Set Weight of instances in the RO group. If modification is needed to set the weight mode of the RO group to user-defined mode (custom), this parameter must be set, and the weight value of each read-only instance needs to be set. The RO instance ID can be obtained through the [DescribeRoGroups](https://www.tencentcloud.com/document/api/236/40939?from_cn_redirect=1) API.
+     * @param RoWeightValues Weight of instances in the RO group. If modification is needed to set the weight mode of the RO group to user-defined mode (custom), this parameter must be set, and the weight value of each read-only instance needs to be set. The RO instance ID can be obtained through the [DescribeRoGroups](https://www.tencentcloud.com/document/api/236/40939?from_cn_redirect=1) API.
      */
     public void setRoWeightValues(RoWeightValue [] RoWeightValues) {
         this.RoWeightValues = RoWeightValues;
@@ -125,7 +125,9 @@ public class ModifyRoGroupInfoRequest extends AbstractModel {
     /**
      * Get This field has been deprecated. 
      * @return ReplicationDelayTime This field has been deprecated.
+     * @deprecated
      */
+    @Deprecated
     public Long getReplicationDelayTime() {
         return this.ReplicationDelayTime;
     }
@@ -133,7 +135,9 @@ public class ModifyRoGroupInfoRequest extends AbstractModel {
     /**
      * Set This field has been deprecated.
      * @param ReplicationDelayTime This field has been deprecated.
+     * @deprecated
      */
+    @Deprecated
     public void setReplicationDelayTime(Long ReplicationDelayTime) {
         this.ReplicationDelayTime = ReplicationDelayTime;
     }

@@ -24,26 +24,49 @@ import java.util.HashMap;
 public class DescribeDBInstanceLogToCLSRequest extends AbstractModel {
 
     /**
-    * Instance ID.
+    * Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-     * Get Instance ID. 
-     * @return InstanceId Instance ID.
+    * Region of the CLS service
+    */
+    @SerializedName("ClsRegion")
+    @Expose
+    private String ClsRegion;
+
+    /**
+     * Get Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API. 
+     * @return InstanceId Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Instance ID.
-     * @param InstanceId Instance ID.
+     * Set Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
+     * @param InstanceId Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
+    }
+
+    /**
+     * Get Region of the CLS service 
+     * @return ClsRegion Region of the CLS service
+     */
+    public String getClsRegion() {
+        return this.ClsRegion;
+    }
+
+    /**
+     * Set Region of the CLS service
+     * @param ClsRegion Region of the CLS service
+     */
+    public void setClsRegion(String ClsRegion) {
+        this.ClsRegion = ClsRegion;
     }
 
     public DescribeDBInstanceLogToCLSRequest() {
@@ -57,6 +80,9 @@ public class DescribeDBInstanceLogToCLSRequest extends AbstractModel {
         if (source.InstanceId != null) {
             this.InstanceId = new String(source.InstanceId);
         }
+        if (source.ClsRegion != null) {
+            this.ClsRegion = new String(source.ClsRegion);
+        }
     }
 
 
@@ -65,6 +91,7 @@ public class DescribeDBInstanceLogToCLSRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
+        this.setParamSimple(map, prefix + "ClsRegion", this.ClsRegion);
 
     }
 }

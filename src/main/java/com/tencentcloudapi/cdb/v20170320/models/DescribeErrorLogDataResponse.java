@@ -31,8 +31,7 @@ public class DescribeErrorLogDataResponse extends AbstractModel {
     private Long TotalCount;
 
     /**
-    * Returned result.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Returned records.
     */
     @SerializedName("Items")
     @Expose
@@ -62,20 +61,16 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Returned result.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return Items Returned result.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Returned records. 
+     * @return Items Returned records.
      */
     public ErrlogItem [] getItems() {
         return this.Items;
     }
 
     /**
-     * Set Returned result.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Items Returned result.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Returned records.
+     * @param Items Returned records.
      */
     public void setItems(ErrlogItem [] Items) {
         this.Items = Items;

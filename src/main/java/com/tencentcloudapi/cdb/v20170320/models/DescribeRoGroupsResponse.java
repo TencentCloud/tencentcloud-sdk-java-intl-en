@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeRoGroupsResponse extends AbstractModel {
 
     /**
-    * RO group information array. An instance can be associated with multiple RO groups.
+    * RO group information array. An instance can associate with multiple RO groups.
     */
     @SerializedName("RoGroups")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeRoGroupsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get RO group information array. An instance can be associated with multiple RO groups. 
-     * @return RoGroups RO group information array. An instance can be associated with multiple RO groups.
+     * Get RO group information array. An instance can associate with multiple RO groups. 
+     * @return RoGroups RO group information array. An instance can associate with multiple RO groups.
      */
     public RoGroup [] getRoGroups() {
         return this.RoGroups;
     }
 
     /**
-     * Set RO group information array. An instance can be associated with multiple RO groups.
-     * @param RoGroups RO group information array. An instance can be associated with multiple RO groups.
+     * Set RO group information array. An instance can associate with multiple RO groups.
+     * @param RoGroups RO group information array. An instance can associate with multiple RO groups.
      */
     public void setRoGroups(RoGroup [] RoGroups) {
         this.RoGroups = RoGroups;

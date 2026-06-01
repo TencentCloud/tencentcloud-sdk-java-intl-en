@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class UpgradeDBInstanceEngineVersionResponse extends AbstractModel {
 
     /**
-    * Async task ID. The task execution result can be queried using the [async task execution result querying API](https://intl.cloud.tencent.com/document/api/236/20410?from_cn_redirect=1).
+    * <p>Asynchronous Task ID. Use <a href="https://www.tencentcloud.com/document/api/236/20410?from_cn_redirect=1">Query Asynchronous Task</a> to get its execution situation.</p>
     */
     @SerializedName("AsyncRequestId")
     @Expose
@@ -38,16 +38,16 @@ public class UpgradeDBInstanceEngineVersionResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Async task ID. The task execution result can be queried using the [async task execution result querying API](https://intl.cloud.tencent.com/document/api/236/20410?from_cn_redirect=1). 
-     * @return AsyncRequestId Async task ID. The task execution result can be queried using the [async task execution result querying API](https://intl.cloud.tencent.com/document/api/236/20410?from_cn_redirect=1).
+     * Get <p>Asynchronous Task ID. Use <a href="https://www.tencentcloud.com/document/api/236/20410?from_cn_redirect=1">Query Asynchronous Task</a> to get its execution situation.</p> 
+     * @return AsyncRequestId <p>Asynchronous Task ID. Use <a href="https://www.tencentcloud.com/document/api/236/20410?from_cn_redirect=1">Query Asynchronous Task</a> to get its execution situation.</p>
      */
     public String getAsyncRequestId() {
         return this.AsyncRequestId;
     }
 
     /**
-     * Set Async task ID. The task execution result can be queried using the [async task execution result querying API](https://intl.cloud.tencent.com/document/api/236/20410?from_cn_redirect=1).
-     * @param AsyncRequestId Async task ID. The task execution result can be queried using the [async task execution result querying API](https://intl.cloud.tencent.com/document/api/236/20410?from_cn_redirect=1).
+     * Set <p>Asynchronous Task ID. Use <a href="https://www.tencentcloud.com/document/api/236/20410?from_cn_redirect=1">Query Asynchronous Task</a> to get its execution situation.</p>
+     * @param AsyncRequestId <p>Asynchronous Task ID. Use <a href="https://www.tencentcloud.com/document/api/236/20410?from_cn_redirect=1">Query Asynchronous Task</a> to get its execution situation.</p>
      */
     public void setAsyncRequestId(String AsyncRequestId) {
         this.AsyncRequestId = AsyncRequestId;

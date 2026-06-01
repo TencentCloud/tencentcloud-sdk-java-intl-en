@@ -31,14 +31,14 @@ public class ModifyDBInstanceVipVportRequest extends AbstractModel {
     private String InstanceId;
 
     /**
-    * Target IP. Either this parameter or `DstPort` must be passed in.
+    * Target IP address.
     */
     @SerializedName("DstIp")
     @Expose
     private String DstIp;
 
     /**
-    * Target port number. Value range: 1024-65535. Either this parameter or `DstIp` must be passed in.
+    * Destination port. Support scope: [1024-65535].
     */
     @SerializedName("DstPort")
     @Expose
@@ -66,6 +66,13 @@ public class ModifyDBInstanceVipVportRequest extends AbstractModel {
     private Long ReleaseDuration;
 
     /**
+    * When updating the read-only group of a cluster edition instance, specify the instance id in InstanceId and this parameter is required to indicate the operation is for the read-only group. If you perform the operation on the read-write node, this parameter is not required.
+    */
+    @SerializedName("OpResourceId")
+    @Expose
+    private String OpResourceId;
+
+    /**
      * Get Instance ID in the format of cdb-c1nl9rpv, cdbro-c2nl9rpv, or cdbrg-c3nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page. You can use the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872) API to query the ID, which is the value of the `InstanceId` output parameter. 
      * @return InstanceId Instance ID in the format of cdb-c1nl9rpv, cdbro-c2nl9rpv, or cdbrg-c3nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page. You can use the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872) API to query the ID, which is the value of the `InstanceId` output parameter.
      */
@@ -82,32 +89,32 @@ public class ModifyDBInstanceVipVportRequest extends AbstractModel {
     }
 
     /**
-     * Get Target IP. Either this parameter or `DstPort` must be passed in. 
-     * @return DstIp Target IP. Either this parameter or `DstPort` must be passed in.
+     * Get Target IP address. 
+     * @return DstIp Target IP address.
      */
     public String getDstIp() {
         return this.DstIp;
     }
 
     /**
-     * Set Target IP. Either this parameter or `DstPort` must be passed in.
-     * @param DstIp Target IP. Either this parameter or `DstPort` must be passed in.
+     * Set Target IP address.
+     * @param DstIp Target IP address.
      */
     public void setDstIp(String DstIp) {
         this.DstIp = DstIp;
     }
 
     /**
-     * Get Target port number. Value range: 1024-65535. Either this parameter or `DstIp` must be passed in. 
-     * @return DstPort Target port number. Value range: 1024-65535. Either this parameter or `DstIp` must be passed in.
+     * Get Destination port. Support scope: [1024-65535]. 
+     * @return DstPort Destination port. Support scope: [1024-65535].
      */
     public Long getDstPort() {
         return this.DstPort;
     }
 
     /**
-     * Set Target port number. Value range: 1024-65535. Either this parameter or `DstIp` must be passed in.
-     * @param DstPort Target port number. Value range: 1024-65535. Either this parameter or `DstIp` must be passed in.
+     * Set Destination port. Support scope: [1024-65535].
+     * @param DstPort Destination port. Support scope: [1024-65535].
      */
     public void setDstPort(Long DstPort) {
         this.DstPort = DstPort;
@@ -161,6 +168,22 @@ public class ModifyDBInstanceVipVportRequest extends AbstractModel {
         this.ReleaseDuration = ReleaseDuration;
     }
 
+    /**
+     * Get When updating the read-only group of a cluster edition instance, specify the instance id in InstanceId and this parameter is required to indicate the operation is for the read-only group. If you perform the operation on the read-write node, this parameter is not required. 
+     * @return OpResourceId When updating the read-only group of a cluster edition instance, specify the instance id in InstanceId and this parameter is required to indicate the operation is for the read-only group. If you perform the operation on the read-write node, this parameter is not required.
+     */
+    public String getOpResourceId() {
+        return this.OpResourceId;
+    }
+
+    /**
+     * Set When updating the read-only group of a cluster edition instance, specify the instance id in InstanceId and this parameter is required to indicate the operation is for the read-only group. If you perform the operation on the read-write node, this parameter is not required.
+     * @param OpResourceId When updating the read-only group of a cluster edition instance, specify the instance id in InstanceId and this parameter is required to indicate the operation is for the read-only group. If you perform the operation on the read-write node, this parameter is not required.
+     */
+    public void setOpResourceId(String OpResourceId) {
+        this.OpResourceId = OpResourceId;
+    }
+
     public ModifyDBInstanceVipVportRequest() {
     }
 
@@ -187,6 +210,9 @@ public class ModifyDBInstanceVipVportRequest extends AbstractModel {
         if (source.ReleaseDuration != null) {
             this.ReleaseDuration = new Long(source.ReleaseDuration);
         }
+        if (source.OpResourceId != null) {
+            this.OpResourceId = new String(source.OpResourceId);
+        }
     }
 
 
@@ -200,6 +226,7 @@ public class ModifyDBInstanceVipVportRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "UniqVpcId", this.UniqVpcId);
         this.setParamSimple(map, prefix + "UniqSubnetId", this.UniqSubnetId);
         this.setParamSimple(map, prefix + "ReleaseDuration", this.ReleaseDuration);
+        this.setParamSimple(map, prefix + "OpResourceId", this.OpResourceId);
 
     }
 }

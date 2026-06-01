@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class DescribeDBPriceResponse extends AbstractModel {
 
     /**
-    * Instance price. If `Currency` is set to `CNY`, the unit will be 0.01 CNY. If `Currency` is set to `USD`, the unit will be US Cent.
+    * <p>Instance price, unit: cent.</p>
     */
     @SerializedName("Price")
     @Expose
     private Long Price;
 
     /**
-    * Original price of the instance. If `Currency` is set to `CNY`, the unit will be 0.01 CNY. If `Currency` is set to `USD`, the unit will be US Cent.
+    * <p>Original price of instance. Measurement unit: cent.</p>
     */
     @SerializedName("OriginalPrice")
     @Expose
     private Long OriginalPrice;
 
     /**
-    * Currency: `CNY`, `USD`.
+    * <p>Currency unit. CNY - RMB, USD - USD.</p>
     */
     @SerializedName("Currency")
     @Expose
@@ -52,48 +52,48 @@ public class DescribeDBPriceResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Instance price. If `Currency` is set to `CNY`, the unit will be 0.01 CNY. If `Currency` is set to `USD`, the unit will be US Cent. 
-     * @return Price Instance price. If `Currency` is set to `CNY`, the unit will be 0.01 CNY. If `Currency` is set to `USD`, the unit will be US Cent.
+     * Get <p>Instance price, unit: cent.</p> 
+     * @return Price <p>Instance price, unit: cent.</p>
      */
     public Long getPrice() {
         return this.Price;
     }
 
     /**
-     * Set Instance price. If `Currency` is set to `CNY`, the unit will be 0.01 CNY. If `Currency` is set to `USD`, the unit will be US Cent.
-     * @param Price Instance price. If `Currency` is set to `CNY`, the unit will be 0.01 CNY. If `Currency` is set to `USD`, the unit will be US Cent.
+     * Set <p>Instance price, unit: cent.</p>
+     * @param Price <p>Instance price, unit: cent.</p>
      */
     public void setPrice(Long Price) {
         this.Price = Price;
     }
 
     /**
-     * Get Original price of the instance. If `Currency` is set to `CNY`, the unit will be 0.01 CNY. If `Currency` is set to `USD`, the unit will be US Cent. 
-     * @return OriginalPrice Original price of the instance. If `Currency` is set to `CNY`, the unit will be 0.01 CNY. If `Currency` is set to `USD`, the unit will be US Cent.
+     * Get <p>Original price of instance. Measurement unit: cent.</p> 
+     * @return OriginalPrice <p>Original price of instance. Measurement unit: cent.</p>
      */
     public Long getOriginalPrice() {
         return this.OriginalPrice;
     }
 
     /**
-     * Set Original price of the instance. If `Currency` is set to `CNY`, the unit will be 0.01 CNY. If `Currency` is set to `USD`, the unit will be US Cent.
-     * @param OriginalPrice Original price of the instance. If `Currency` is set to `CNY`, the unit will be 0.01 CNY. If `Currency` is set to `USD`, the unit will be US Cent.
+     * Set <p>Original price of instance. Measurement unit: cent.</p>
+     * @param OriginalPrice <p>Original price of instance. Measurement unit: cent.</p>
      */
     public void setOriginalPrice(Long OriginalPrice) {
         this.OriginalPrice = OriginalPrice;
     }
 
     /**
-     * Get Currency: `CNY`, `USD`. 
-     * @return Currency Currency: `CNY`, `USD`.
+     * Get <p>Currency unit. CNY - RMB, USD - USD.</p> 
+     * @return Currency <p>Currency unit. CNY - RMB, USD - USD.</p>
      */
     public String getCurrency() {
         return this.Currency;
     }
 
     /**
-     * Set Currency: `CNY`, `USD`.
-     * @param Currency Currency: `CNY`, `USD`.
+     * Set <p>Currency unit. CNY - RMB, USD - USD.</p>
+     * @param Currency <p>Currency unit. CNY - RMB, USD - USD.</p>
      */
     public void setCurrency(String Currency) {
         this.Currency = Currency;

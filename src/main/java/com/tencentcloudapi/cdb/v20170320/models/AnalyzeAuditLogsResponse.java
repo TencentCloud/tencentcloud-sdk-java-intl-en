@@ -24,16 +24,14 @@ import java.util.HashMap;
 public class AnalyzeAuditLogsResponse extends AbstractModel {
 
     /**
-    * Information set of the aggregation bucket returned
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Returned aggregation bucket information set
     */
     @SerializedName("Items")
     @Expose
     private AuditLogAggregationResult [] Items;
 
     /**
-    * Number of scanned logs
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Number of logs scanned
     */
     @SerializedName("TotalCount")
     @Expose
@@ -47,40 +45,32 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Information set of the aggregation bucket returned
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Items Information set of the aggregation bucket returned
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Returned aggregation bucket information set 
+     * @return Items Returned aggregation bucket information set
      */
     public AuditLogAggregationResult [] getItems() {
         return this.Items;
     }
 
     /**
-     * Set Information set of the aggregation bucket returned
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Items Information set of the aggregation bucket returned
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Returned aggregation bucket information set
+     * @param Items Returned aggregation bucket information set
      */
     public void setItems(AuditLogAggregationResult [] Items) {
         this.Items = Items;
     }
 
     /**
-     * Get Number of scanned logs
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return TotalCount Number of scanned logs
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Number of logs scanned 
+     * @return TotalCount Number of logs scanned
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set Number of scanned logs
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param TotalCount Number of scanned logs
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Number of logs scanned
+     * @param TotalCount Number of logs scanned
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

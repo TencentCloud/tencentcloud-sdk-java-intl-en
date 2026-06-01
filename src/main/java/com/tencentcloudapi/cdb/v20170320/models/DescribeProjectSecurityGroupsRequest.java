@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DescribeProjectSecurityGroupsRequest extends AbstractModel {
 
     /**
-    * Project ID.
+    * Project ID. You can obtain it through the [DescribeProjects](https://www.tencentcloud.com/document/api/651/78725?from_cn_redirect=1) API.
     */
     @SerializedName("ProjectId")
     @Expose
     private Long ProjectId;
 
     /**
-     * Get Project ID. 
-     * @return ProjectId Project ID.
+     * Get Project ID. You can obtain it through the [DescribeProjects](https://www.tencentcloud.com/document/api/651/78725?from_cn_redirect=1) API. 
+     * @return ProjectId Project ID. You can obtain it through the [DescribeProjects](https://www.tencentcloud.com/document/api/651/78725?from_cn_redirect=1) API.
      */
     public Long getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set Project ID.
-     * @param ProjectId Project ID.
+     * Set Project ID. You can obtain it through the [DescribeProjects](https://www.tencentcloud.com/document/api/651/78725?from_cn_redirect=1) API.
+     * @param ProjectId Project ID. You can obtain it through the [DescribeProjects](https://www.tencentcloud.com/document/api/651/78725?from_cn_redirect=1) API.
      */
     public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;

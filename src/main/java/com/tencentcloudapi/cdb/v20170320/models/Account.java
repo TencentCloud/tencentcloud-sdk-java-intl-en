@@ -24,46 +24,61 @@ import java.util.HashMap;
 public class Account extends AbstractModel {
 
     /**
-    * New account name
+    * Account name, enter 1-32 characters.
     */
     @SerializedName("User")
     @Expose
     private String User;
 
     /**
-    * New account domain name
+    * Account's host.
+Note:
+1. IP format. You can specify a percent sign (%).
+2. Multiple hosts are separated by a separator, which supports ;, |, line break, and space.
     */
     @SerializedName("Host")
     @Expose
     private String Host;
 
     /**
-     * Get New account name 
-     * @return User New account name
+     * Get Account name, enter 1-32 characters. 
+     * @return User Account name, enter 1-32 characters.
      */
     public String getUser() {
         return this.User;
     }
 
     /**
-     * Set New account name
-     * @param User New account name
+     * Set Account name, enter 1-32 characters.
+     * @param User Account name, enter 1-32 characters.
      */
     public void setUser(String User) {
         this.User = User;
     }
 
     /**
-     * Get New account domain name 
-     * @return Host New account domain name
+     * Get Account's host.
+Note:
+1. IP format. You can specify a percent sign (%).
+2. Multiple hosts are separated by a separator, which supports ;, |, line break, and space. 
+     * @return Host Account's host.
+Note:
+1. IP format. You can specify a percent sign (%).
+2. Multiple hosts are separated by a separator, which supports ;, |, line break, and space.
      */
     public String getHost() {
         return this.Host;
     }
 
     /**
-     * Set New account domain name
-     * @param Host New account domain name
+     * Set Account's host.
+Note:
+1. IP format. You can specify a percent sign (%).
+2. Multiple hosts are separated by a separator, which supports ;, |, line break, and space.
+     * @param Host Account's host.
+Note:
+1. IP format. You can specify a percent sign (%).
+2. Multiple hosts are separated by a separator, which supports ;, |, line break, and space.
      */
     public void setHost(String Host) {
         this.Host = Host;

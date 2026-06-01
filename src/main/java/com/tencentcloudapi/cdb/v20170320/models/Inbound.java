@@ -66,6 +66,13 @@ public class Inbound extends AbstractModel {
     private String AddressModule;
 
     /**
+    * Rule ID, rule ID of the nested security group
+    */
+    @SerializedName("Id")
+    @Expose
+    private String Id;
+
+    /**
     * Rule description
     */
     @SerializedName("Desc")
@@ -169,6 +176,22 @@ public class Inbound extends AbstractModel {
     }
 
     /**
+     * Get Rule ID, rule ID of the nested security group 
+     * @return Id Rule ID, rule ID of the nested security group
+     */
+    public String getId() {
+        return this.Id;
+    }
+
+    /**
+     * Set Rule ID, rule ID of the nested security group
+     * @param Id Rule ID, rule ID of the nested security group
+     */
+    public void setId(String Id) {
+        this.Id = Id;
+    }
+
+    /**
      * Get Rule description 
      * @return Desc Rule description
      */
@@ -210,6 +233,9 @@ public class Inbound extends AbstractModel {
         if (source.AddressModule != null) {
             this.AddressModule = new String(source.AddressModule);
         }
+        if (source.Id != null) {
+            this.Id = new String(source.Id);
+        }
         if (source.Desc != null) {
             this.Desc = new String(source.Desc);
         }
@@ -226,6 +252,7 @@ public class Inbound extends AbstractModel {
         this.setParamSimple(map, prefix + "IpProtocol", this.IpProtocol);
         this.setParamSimple(map, prefix + "Dir", this.Dir);
         this.setParamSimple(map, prefix + "AddressModule", this.AddressModule);
+        this.setParamSimple(map, prefix + "Id", this.Id);
         this.setParamSimple(map, prefix + "Desc", this.Desc);
 
     }

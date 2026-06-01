@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeSSLStatusResponse extends AbstractModel {
 
     /**
-    * Whether SSL is enabled. ON indicates enabled; OFF indicates not enabled.
+    * Whether to enable SSL. ON represents enabled, OFF represents not enabled.
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * Certificate download link.
+    * Certificate download URL.
     */
     @SerializedName("Url")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeSSLStatusResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Whether SSL is enabled. ON indicates enabled; OFF indicates not enabled. 
-     * @return Status Whether SSL is enabled. ON indicates enabled; OFF indicates not enabled.
+     * Get Whether to enable SSL. ON represents enabled, OFF represents not enabled. 
+     * @return Status Whether to enable SSL. ON represents enabled, OFF represents not enabled.
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Whether SSL is enabled. ON indicates enabled; OFF indicates not enabled.
-     * @param Status Whether SSL is enabled. ON indicates enabled; OFF indicates not enabled.
+     * Set Whether to enable SSL. ON represents enabled, OFF represents not enabled.
+     * @param Status Whether to enable SSL. ON represents enabled, OFF represents not enabled.
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get Certificate download link. 
-     * @return Url Certificate download link.
+     * Get Certificate download URL. 
+     * @return Url Certificate download URL.
      */
     public String getUrl() {
         return this.Url;
     }
 
     /**
-     * Set Certificate download link.
-     * @param Url Certificate download link.
+     * Set Certificate download URL.
+     * @param Url Certificate download URL.
      */
     public void setUrl(String Url) {
         this.Url = Url;

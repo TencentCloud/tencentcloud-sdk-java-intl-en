@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeCdbProxyInfoResponse extends AbstractModel {
 
     /**
-    * Number of proxy groups Note: This field may return null, indicating that no valid values can be obtained.
+    * Number of proxy groups
     */
     @SerializedName("Count")
     @Expose
     private Long Count;
 
     /**
-    * Proxy group information Note: This field may return null, indicating that no valid values can be obtained.
+    * Proxy group information
     */
     @SerializedName("ProxyInfos")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeCdbProxyInfoResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Number of proxy groups Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Count Number of proxy groups Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Number of proxy groups 
+     * @return Count Number of proxy groups
      */
     public Long getCount() {
         return this.Count;
     }
 
     /**
-     * Set Number of proxy groups Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Count Number of proxy groups Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Number of proxy groups
+     * @param Count Number of proxy groups
      */
     public void setCount(Long Count) {
         this.Count = Count;
     }
 
     /**
-     * Get Proxy group information Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ProxyInfos Proxy group information Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Proxy group information 
+     * @return ProxyInfos Proxy group information
      */
     public ProxyGroupInfo [] getProxyInfos() {
         return this.ProxyInfos;
     }
 
     /**
-     * Set Proxy group information Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ProxyInfos Proxy group information Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Proxy group information
+     * @param ProxyInfos Proxy group information
      */
     public void setProxyInfos(ProxyGroupInfo [] ProxyInfos) {
         this.ProxyInfos = ProxyInfos;

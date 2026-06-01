@@ -38,6 +38,13 @@ public class DescribeDBSecurityGroupsRequest extends AbstractModel {
     private Boolean ForReadonlyInstance;
 
     /**
+    * When updating the read-only group of a cluster edition instance, specify the instance id in InstanceId and this parameter to indicate the operation is for the read-only group. If you perform the operation on the read-write node, this parameter is not required.
+    */
+    @SerializedName("OpResourceId")
+    @Expose
+    private String OpResourceId;
+
+    /**
      * Get Instance ID in the format of cdb-c1nl9rpv or cdbro-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page. 
      * @return InstanceId Instance ID in the format of cdb-c1nl9rpv or cdbro-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
      */
@@ -69,6 +76,22 @@ public class DescribeDBSecurityGroupsRequest extends AbstractModel {
         this.ForReadonlyInstance = ForReadonlyInstance;
     }
 
+    /**
+     * Get When updating the read-only group of a cluster edition instance, specify the instance id in InstanceId and this parameter to indicate the operation is for the read-only group. If you perform the operation on the read-write node, this parameter is not required. 
+     * @return OpResourceId When updating the read-only group of a cluster edition instance, specify the instance id in InstanceId and this parameter to indicate the operation is for the read-only group. If you perform the operation on the read-write node, this parameter is not required.
+     */
+    public String getOpResourceId() {
+        return this.OpResourceId;
+    }
+
+    /**
+     * Set When updating the read-only group of a cluster edition instance, specify the instance id in InstanceId and this parameter to indicate the operation is for the read-only group. If you perform the operation on the read-write node, this parameter is not required.
+     * @param OpResourceId When updating the read-only group of a cluster edition instance, specify the instance id in InstanceId and this parameter to indicate the operation is for the read-only group. If you perform the operation on the read-write node, this parameter is not required.
+     */
+    public void setOpResourceId(String OpResourceId) {
+        this.OpResourceId = OpResourceId;
+    }
+
     public DescribeDBSecurityGroupsRequest() {
     }
 
@@ -83,6 +106,9 @@ public class DescribeDBSecurityGroupsRequest extends AbstractModel {
         if (source.ForReadonlyInstance != null) {
             this.ForReadonlyInstance = new Boolean(source.ForReadonlyInstance);
         }
+        if (source.OpResourceId != null) {
+            this.OpResourceId = new String(source.OpResourceId);
+        }
     }
 
 
@@ -92,6 +118,7 @@ public class DescribeDBSecurityGroupsRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "ForReadonlyInstance", this.ForReadonlyInstance);
+        this.setParamSimple(map, prefix + "OpResourceId", this.OpResourceId);
 
     }
 }

@@ -24,16 +24,14 @@ import java.util.HashMap;
 public class CustomConfig extends AbstractModel {
 
     /**
-    * Device
-Note: this field may return `null`, indicating that no valid value can be found.
+    * device
     */
     @SerializedName("Device")
     @Expose
     private String Device;
 
     /**
-    * Type
-Note: this field may return `null`, indicating that no valid value can be found.
+    * Type.
     */
     @SerializedName("Type")
     @Expose
@@ -41,73 +39,60 @@ Note: this field may return `null`, indicating that no valid value can be found.
 
     /**
     * Device type
-Note: this field may return `null`, indicating that no valid value can be found.
     */
     @SerializedName("DeviceType")
     @Expose
     private String DeviceType;
 
     /**
-    * Memory
-Note: this field may return `null`, indicating that no valid value can be found.
+    * Memory, measured in MB
     */
     @SerializedName("Memory")
     @Expose
     private Long Memory;
 
     /**
-    * Number of CPU cores
-Note: this field may return `null`, indicating that no valid value can be found.
+    * Number of cores
     */
     @SerializedName("Cpu")
     @Expose
     private Long Cpu;
 
     /**
-     * Get Device
-Note: this field may return `null`, indicating that no valid value can be found. 
-     * @return Device Device
-Note: this field may return `null`, indicating that no valid value can be found.
+     * Get device 
+     * @return Device device
      */
     public String getDevice() {
         return this.Device;
     }
 
     /**
-     * Set Device
-Note: this field may return `null`, indicating that no valid value can be found.
-     * @param Device Device
-Note: this field may return `null`, indicating that no valid value can be found.
+     * Set device
+     * @param Device device
      */
     public void setDevice(String Device) {
         this.Device = Device;
     }
 
     /**
-     * Get Type
-Note: this field may return `null`, indicating that no valid value can be found. 
-     * @return Type Type
-Note: this field may return `null`, indicating that no valid value can be found.
+     * Get Type. 
+     * @return Type Type.
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set Type
-Note: this field may return `null`, indicating that no valid value can be found.
-     * @param Type Type
-Note: this field may return `null`, indicating that no valid value can be found.
+     * Set Type.
+     * @param Type Type.
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get Device type
-Note: this field may return `null`, indicating that no valid value can be found. 
+     * Get Device type 
      * @return DeviceType Device type
-Note: this field may return `null`, indicating that no valid value can be found.
      */
     public String getDeviceType() {
         return this.DeviceType;
@@ -115,49 +100,39 @@ Note: this field may return `null`, indicating that no valid value can be found.
 
     /**
      * Set Device type
-Note: this field may return `null`, indicating that no valid value can be found.
      * @param DeviceType Device type
-Note: this field may return `null`, indicating that no valid value can be found.
      */
     public void setDeviceType(String DeviceType) {
         this.DeviceType = DeviceType;
     }
 
     /**
-     * Get Memory
-Note: this field may return `null`, indicating that no valid value can be found. 
-     * @return Memory Memory
-Note: this field may return `null`, indicating that no valid value can be found.
+     * Get Memory, measured in MB 
+     * @return Memory Memory, measured in MB
      */
     public Long getMemory() {
         return this.Memory;
     }
 
     /**
-     * Set Memory
-Note: this field may return `null`, indicating that no valid value can be found.
-     * @param Memory Memory
-Note: this field may return `null`, indicating that no valid value can be found.
+     * Set Memory, measured in MB
+     * @param Memory Memory, measured in MB
      */
     public void setMemory(Long Memory) {
         this.Memory = Memory;
     }
 
     /**
-     * Get Number of CPU cores
-Note: this field may return `null`, indicating that no valid value can be found. 
-     * @return Cpu Number of CPU cores
-Note: this field may return `null`, indicating that no valid value can be found.
+     * Get Number of cores 
+     * @return Cpu Number of cores
      */
     public Long getCpu() {
         return this.Cpu;
     }
 
     /**
-     * Set Number of CPU cores
-Note: this field may return `null`, indicating that no valid value can be found.
-     * @param Cpu Number of CPU cores
-Note: this field may return `null`, indicating that no valid value can be found.
+     * Set Number of cores
+     * @param Cpu Number of cores
      */
     public void setCpu(Long Cpu) {
         this.Cpu = Cpu;

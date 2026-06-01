@@ -38,7 +38,7 @@ public class AuditLog extends AbstractModel {
     private Long ErrCode;
 
     /**
-    * SQL Type.
+    * 
     */
     @SerializedName("SqlType")
     @Expose
@@ -52,14 +52,14 @@ public class AuditLog extends AbstractModel {
     private String PolicyName;
 
     /**
-    * Database Name.
+    * 
     */
     @SerializedName("DBName")
     @Expose
     private String DBName;
 
     /**
-    * SQL Statement.
+    * 
     */
     @SerializedName("Sql")
     @Expose
@@ -108,60 +108,68 @@ public class AuditLog extends AbstractModel {
     private Long ThreadId;
 
     /**
-    * Number of scanned rows
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Number of scanned rows.
     */
     @SerializedName("CheckRows")
     @Expose
     private Long CheckRows;
 
     /**
-    * CPU execution time (μs)
-Note: This field may return null, indicating that no valid values can be obtained.
+    * cpu execution time, µs.
     */
     @SerializedName("CpuTime")
     @Expose
     private Float CpuTime;
 
     /**
-    * IO wait time (μs)
-Note: This field may return null, indicating that no valid values can be obtained.
+    * IO wait time, µs.
     */
     @SerializedName("IoWaitTime")
     @Expose
     private Long IoWaitTime;
 
     /**
-    * Lock wait time (μs)
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Lock waiting time (unit: microsecond).
     */
     @SerializedName("LockWaitTime")
     @Expose
     private Long LockWaitTime;
 
     /**
-    * Start time, which forms a time accurate to nanoseconds with·`timestamp`.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Start time, which combines with timestamp to form a time accurate to nanoseconds.
     */
     @SerializedName("NsTime")
     @Expose
     private Long NsTime;
 
     /**
-    * Transaction duration (μs)
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Transaction duration, µs.
     */
     @SerializedName("TrxLivingTime")
     @Expose
     private Long TrxLivingTime;
 
     /**
-    * Basic information on the rule template hit by the log.
-Note: The return value may be null, indicating that no valid data can be obtained.
+    * Basic info of the log hit rule template
     */
     @SerializedName("TemplateInfo")
     @Expose
     private LogRuleTemplateInfo [] TemplateInfo;
+
+    /**
+    * Transaction ID
+    */
+    @SerializedName("TrxId")
+    @Expose
+    private Long TrxId;
+
+    /**
+    * Port.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("ClientPort")
+    @Expose
+    private Long ClientPort;
 
     /**
      * Get Number of affected rows 
@@ -196,16 +204,16 @@ Note: The return value may be null, indicating that no valid data can be obtaine
     }
 
     /**
-     * Get SQL Type. 
-     * @return SqlType SQL Type.
+     * Get  
+     * @return SqlType 
      */
     public String getSqlType() {
         return this.SqlType;
     }
 
     /**
-     * Set SQL Type.
-     * @param SqlType SQL Type.
+     * Set 
+     * @param SqlType 
      */
     public void setSqlType(String SqlType) {
         this.SqlType = SqlType;
@@ -228,32 +236,32 @@ Note: The return value may be null, indicating that no valid data can be obtaine
     }
 
     /**
-     * Get Database Name. 
-     * @return DBName Database Name.
+     * Get  
+     * @return DBName 
      */
     public String getDBName() {
         return this.DBName;
     }
 
     /**
-     * Set Database Name.
-     * @param DBName Database Name.
+     * Set 
+     * @param DBName 
      */
     public void setDBName(String DBName) {
         this.DBName = DBName;
     }
 
     /**
-     * Get SQL Statement. 
-     * @return Sql SQL Statement.
+     * Get  
+     * @return Sql 
      */
     public String getSql() {
         return this.Sql;
     }
 
     /**
-     * Set SQL Statement.
-     * @param Sql SQL Statement.
+     * Set 
+     * @param Sql 
      */
     public void setSql(String Sql) {
         this.Sql = Sql;
@@ -356,143 +364,151 @@ Note: The return value may be null, indicating that no valid data can be obtaine
     }
 
     /**
-     * Get Number of scanned rows
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return CheckRows Number of scanned rows
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Number of scanned rows. 
+     * @return CheckRows Number of scanned rows.
      */
     public Long getCheckRows() {
         return this.CheckRows;
     }
 
     /**
-     * Set Number of scanned rows
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param CheckRows Number of scanned rows
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Number of scanned rows.
+     * @param CheckRows Number of scanned rows.
      */
     public void setCheckRows(Long CheckRows) {
         this.CheckRows = CheckRows;
     }
 
     /**
-     * Get CPU execution time (μs)
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return CpuTime CPU execution time (μs)
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get cpu execution time, µs. 
+     * @return CpuTime cpu execution time, µs.
      */
     public Float getCpuTime() {
         return this.CpuTime;
     }
 
     /**
-     * Set CPU execution time (μs)
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param CpuTime CPU execution time (μs)
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set cpu execution time, µs.
+     * @param CpuTime cpu execution time, µs.
      */
     public void setCpuTime(Float CpuTime) {
         this.CpuTime = CpuTime;
     }
 
     /**
-     * Get IO wait time (μs)
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return IoWaitTime IO wait time (μs)
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get IO wait time, µs. 
+     * @return IoWaitTime IO wait time, µs.
      */
     public Long getIoWaitTime() {
         return this.IoWaitTime;
     }
 
     /**
-     * Set IO wait time (μs)
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param IoWaitTime IO wait time (μs)
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set IO wait time, µs.
+     * @param IoWaitTime IO wait time, µs.
      */
     public void setIoWaitTime(Long IoWaitTime) {
         this.IoWaitTime = IoWaitTime;
     }
 
     /**
-     * Get Lock wait time (μs)
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return LockWaitTime Lock wait time (μs)
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Lock waiting time (unit: microsecond). 
+     * @return LockWaitTime Lock waiting time (unit: microsecond).
      */
     public Long getLockWaitTime() {
         return this.LockWaitTime;
     }
 
     /**
-     * Set Lock wait time (μs)
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param LockWaitTime Lock wait time (μs)
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Lock waiting time (unit: microsecond).
+     * @param LockWaitTime Lock waiting time (unit: microsecond).
      */
     public void setLockWaitTime(Long LockWaitTime) {
         this.LockWaitTime = LockWaitTime;
     }
 
     /**
-     * Get Start time, which forms a time accurate to nanoseconds with·`timestamp`.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return NsTime Start time, which forms a time accurate to nanoseconds with·`timestamp`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Start time, which combines with timestamp to form a time accurate to nanoseconds. 
+     * @return NsTime Start time, which combines with timestamp to form a time accurate to nanoseconds.
      */
     public Long getNsTime() {
         return this.NsTime;
     }
 
     /**
-     * Set Start time, which forms a time accurate to nanoseconds with·`timestamp`.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param NsTime Start time, which forms a time accurate to nanoseconds with·`timestamp`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Start time, which combines with timestamp to form a time accurate to nanoseconds.
+     * @param NsTime Start time, which combines with timestamp to form a time accurate to nanoseconds.
      */
     public void setNsTime(Long NsTime) {
         this.NsTime = NsTime;
     }
 
     /**
-     * Get Transaction duration (μs)
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return TrxLivingTime Transaction duration (μs)
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Transaction duration, µs. 
+     * @return TrxLivingTime Transaction duration, µs.
      */
     public Long getTrxLivingTime() {
         return this.TrxLivingTime;
     }
 
     /**
-     * Set Transaction duration (μs)
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param TrxLivingTime Transaction duration (μs)
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Transaction duration, µs.
+     * @param TrxLivingTime Transaction duration, µs.
      */
     public void setTrxLivingTime(Long TrxLivingTime) {
         this.TrxLivingTime = TrxLivingTime;
     }
 
     /**
-     * Get Basic information on the rule template hit by the log.
-Note: The return value may be null, indicating that no valid data can be obtained. 
-     * @return TemplateInfo Basic information on the rule template hit by the log.
-Note: The return value may be null, indicating that no valid data can be obtained.
+     * Get Basic info of the log hit rule template 
+     * @return TemplateInfo Basic info of the log hit rule template
      */
     public LogRuleTemplateInfo [] getTemplateInfo() {
         return this.TemplateInfo;
     }
 
     /**
-     * Set Basic information on the rule template hit by the log.
-Note: The return value may be null, indicating that no valid data can be obtained.
-     * @param TemplateInfo Basic information on the rule template hit by the log.
-Note: The return value may be null, indicating that no valid data can be obtained.
+     * Set Basic info of the log hit rule template
+     * @param TemplateInfo Basic info of the log hit rule template
      */
     public void setTemplateInfo(LogRuleTemplateInfo [] TemplateInfo) {
         this.TemplateInfo = TemplateInfo;
+    }
+
+    /**
+     * Get Transaction ID 
+     * @return TrxId Transaction ID
+     */
+    public Long getTrxId() {
+        return this.TrxId;
+    }
+
+    /**
+     * Set Transaction ID
+     * @param TrxId Transaction ID
+     */
+    public void setTrxId(Long TrxId) {
+        this.TrxId = TrxId;
+    }
+
+    /**
+     * Get Port.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return ClientPort Port.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getClientPort() {
+        return this.ClientPort;
+    }
+
+    /**
+     * Set Port.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ClientPort Port.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setClientPort(Long ClientPort) {
+        this.ClientPort = ClientPort;
     }
 
     public AuditLog() {
@@ -563,6 +579,12 @@ Note: The return value may be null, indicating that no valid data can be obtaine
                 this.TemplateInfo[i] = new LogRuleTemplateInfo(source.TemplateInfo[i]);
             }
         }
+        if (source.TrxId != null) {
+            this.TrxId = new Long(source.TrxId);
+        }
+        if (source.ClientPort != null) {
+            this.ClientPort = new Long(source.ClientPort);
+        }
     }
 
 
@@ -589,6 +611,8 @@ Note: The return value may be null, indicating that no valid data can be obtaine
         this.setParamSimple(map, prefix + "NsTime", this.NsTime);
         this.setParamSimple(map, prefix + "TrxLivingTime", this.TrxLivingTime);
         this.setParamArrayObj(map, prefix + "TemplateInfo.", this.TemplateInfo);
+        this.setParamSimple(map, prefix + "TrxId", this.TrxId);
+        this.setParamSimple(map, prefix + "ClientPort", this.ClientPort);
 
     }
 }

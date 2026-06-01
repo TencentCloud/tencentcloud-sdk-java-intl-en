@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class UpgradeDBInstanceResponse extends AbstractModel {
 
     /**
-    * Order ID.
+    * <p>Order ID.</p>
     */
     @SerializedName("DealIds")
     @Expose
     private String [] DealIds;
 
     /**
-    * Async task request ID, which can be used to query the execution result of an async task.
+    * <p>Request ID of the async task. Use this ID to <a href="https://www.tencentcloud.com/document/product/236/20410?from_cn_redirect=1">query the outcome of the async task</a>.</p>
     */
     @SerializedName("AsyncRequestId")
     @Expose
@@ -45,32 +45,32 @@ public class UpgradeDBInstanceResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Order ID. 
-     * @return DealIds Order ID.
+     * Get <p>Order ID.</p> 
+     * @return DealIds <p>Order ID.</p>
      */
     public String [] getDealIds() {
         return this.DealIds;
     }
 
     /**
-     * Set Order ID.
-     * @param DealIds Order ID.
+     * Set <p>Order ID.</p>
+     * @param DealIds <p>Order ID.</p>
      */
     public void setDealIds(String [] DealIds) {
         this.DealIds = DealIds;
     }
 
     /**
-     * Get Async task request ID, which can be used to query the execution result of an async task. 
-     * @return AsyncRequestId Async task request ID, which can be used to query the execution result of an async task.
+     * Get <p>Request ID of the async task. Use this ID to <a href="https://www.tencentcloud.com/document/product/236/20410?from_cn_redirect=1">query the outcome of the async task</a>.</p> 
+     * @return AsyncRequestId <p>Request ID of the async task. Use this ID to <a href="https://www.tencentcloud.com/document/product/236/20410?from_cn_redirect=1">query the outcome of the async task</a>.</p>
      */
     public String getAsyncRequestId() {
         return this.AsyncRequestId;
     }
 
     /**
-     * Set Async task request ID, which can be used to query the execution result of an async task.
-     * @param AsyncRequestId Async task request ID, which can be used to query the execution result of an async task.
+     * Set <p>Request ID of the async task. Use this ID to <a href="https://www.tencentcloud.com/document/product/236/20410?from_cn_redirect=1">query the outcome of the async task</a>.</p>
+     * @param AsyncRequestId <p>Request ID of the async task. Use this ID to <a href="https://www.tencentcloud.com/document/product/236/20410?from_cn_redirect=1">query the outcome of the async task</a>.</p>
      */
     public void setAsyncRequestId(String AsyncRequestId) {
         this.AsyncRequestId = AsyncRequestId;

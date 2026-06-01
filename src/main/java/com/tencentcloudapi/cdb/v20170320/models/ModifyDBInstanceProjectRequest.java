@@ -24,46 +24,76 @@ import java.util.HashMap;
 public class ModifyDBInstanceProjectRequest extends AbstractModel {
 
     /**
-    * Array of instance IDs in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page. You can use the [instance list querying API](https://intl.cloud.tencent.com/document/api/236/15872?from_cn_redirect=1) to query the ID, whose value is the `InstanceId` value in output parameters.
+    * Instance ID, in the format such as cdb-c1nl9rpv. This matches the instance ID displayed on the TencentDB console. You can obtain it through the query instance list API (https://www.tencentcloud.com/document/api/236/15872?from_cn_redirect=1). The value is the InstanceId field in the output parameter.
+Description: Multiple instance IDs can be entered for modification. The json format is as follows.
+[
+    "cdb-30z11v8s",
+    "cdb-93h11efg"
+  ]
     */
     @SerializedName("InstanceIds")
     @Expose
     private String [] InstanceIds;
 
     /**
-    * Project ID.
+    * ID of the project to which instance belongs can be queried on the Projects page in the account center.
+Description: This item is required.
     */
     @SerializedName("NewProjectId")
     @Expose
     private Long NewProjectId;
 
     /**
-     * Get Array of instance IDs in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page. You can use the [instance list querying API](https://intl.cloud.tencent.com/document/api/236/15872?from_cn_redirect=1) to query the ID, whose value is the `InstanceId` value in output parameters. 
-     * @return InstanceIds Array of instance IDs in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page. You can use the [instance list querying API](https://intl.cloud.tencent.com/document/api/236/15872?from_cn_redirect=1) to query the ID, whose value is the `InstanceId` value in output parameters.
+     * Get Instance ID, in the format such as cdb-c1nl9rpv. This matches the instance ID displayed on the TencentDB console. You can obtain it through the query instance list API (https://www.tencentcloud.com/document/api/236/15872?from_cn_redirect=1). The value is the InstanceId field in the output parameter.
+Description: Multiple instance IDs can be entered for modification. The json format is as follows.
+[
+    "cdb-30z11v8s",
+    "cdb-93h11efg"
+  ] 
+     * @return InstanceIds Instance ID, in the format such as cdb-c1nl9rpv. This matches the instance ID displayed on the TencentDB console. You can obtain it through the query instance list API (https://www.tencentcloud.com/document/api/236/15872?from_cn_redirect=1). The value is the InstanceId field in the output parameter.
+Description: Multiple instance IDs can be entered for modification. The json format is as follows.
+[
+    "cdb-30z11v8s",
+    "cdb-93h11efg"
+  ]
      */
     public String [] getInstanceIds() {
         return this.InstanceIds;
     }
 
     /**
-     * Set Array of instance IDs in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page. You can use the [instance list querying API](https://intl.cloud.tencent.com/document/api/236/15872?from_cn_redirect=1) to query the ID, whose value is the `InstanceId` value in output parameters.
-     * @param InstanceIds Array of instance IDs in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page. You can use the [instance list querying API](https://intl.cloud.tencent.com/document/api/236/15872?from_cn_redirect=1) to query the ID, whose value is the `InstanceId` value in output parameters.
+     * Set Instance ID, in the format such as cdb-c1nl9rpv. This matches the instance ID displayed on the TencentDB console. You can obtain it through the query instance list API (https://www.tencentcloud.com/document/api/236/15872?from_cn_redirect=1). The value is the InstanceId field in the output parameter.
+Description: Multiple instance IDs can be entered for modification. The json format is as follows.
+[
+    "cdb-30z11v8s",
+    "cdb-93h11efg"
+  ]
+     * @param InstanceIds Instance ID, in the format such as cdb-c1nl9rpv. This matches the instance ID displayed on the TencentDB console. You can obtain it through the query instance list API (https://www.tencentcloud.com/document/api/236/15872?from_cn_redirect=1). The value is the InstanceId field in the output parameter.
+Description: Multiple instance IDs can be entered for modification. The json format is as follows.
+[
+    "cdb-30z11v8s",
+    "cdb-93h11efg"
+  ]
      */
     public void setInstanceIds(String [] InstanceIds) {
         this.InstanceIds = InstanceIds;
     }
 
     /**
-     * Get Project ID. 
-     * @return NewProjectId Project ID.
+     * Get ID of the project to which instance belongs can be queried on the Projects page in the account center.
+Description: This item is required. 
+     * @return NewProjectId ID of the project to which instance belongs can be queried on the Projects page in the account center.
+Description: This item is required.
      */
     public Long getNewProjectId() {
         return this.NewProjectId;
     }
 
     /**
-     * Set Project ID.
-     * @param NewProjectId Project ID.
+     * Set ID of the project to which instance belongs can be queried on the Projects page in the account center.
+Description: This item is required.
+     * @param NewProjectId ID of the project to which instance belongs can be queried on the Projects page in the account center.
+Description: This item is required.
      */
     public void setNewProjectId(Long NewProjectId) {
         this.NewProjectId = NewProjectId;

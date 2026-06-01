@@ -45,8 +45,7 @@ public class DescribeDBInstanceInfoResponse extends AbstractModel {
     private String Encryption;
 
     /**
-    * Encryption key ID.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Key ID used for encryption.
     */
     @SerializedName("KeyId")
     @Expose
@@ -54,15 +53,13 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
     * Key region.
-Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("KeyRegion")
     @Expose
     private String KeyRegion;
 
     /**
-    * The default region of the KMS service currently used by the TencentDB backend service.
-Note: this field may return `null`, indicating that no valid value can be found.
+    * The default region of the KMS service used by the current CDB backend service.
     */
     @SerializedName("DefaultKmsRegion")
     @Expose
@@ -124,30 +121,24 @@ Note: this field may return `null`, indicating that no valid value can be found.
     }
 
     /**
-     * Get Encryption key ID.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return KeyId Encryption key ID.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Key ID used for encryption. 
+     * @return KeyId Key ID used for encryption.
      */
     public String getKeyId() {
         return this.KeyId;
     }
 
     /**
-     * Set Encryption key ID.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param KeyId Encryption key ID.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Key ID used for encryption.
+     * @param KeyId Key ID used for encryption.
      */
     public void setKeyId(String KeyId) {
         this.KeyId = KeyId;
     }
 
     /**
-     * Get Key region.
-Note: this field may return null, indicating that no valid values can be obtained. 
+     * Get Key region. 
      * @return KeyRegion Key region.
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getKeyRegion() {
         return this.KeyRegion;
@@ -155,29 +146,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Key region.
-Note: this field may return null, indicating that no valid values can be obtained.
      * @param KeyRegion Key region.
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setKeyRegion(String KeyRegion) {
         this.KeyRegion = KeyRegion;
     }
 
     /**
-     * Get The default region of the KMS service currently used by the TencentDB backend service.
-Note: this field may return `null`, indicating that no valid value can be found. 
-     * @return DefaultKmsRegion The default region of the KMS service currently used by the TencentDB backend service.
-Note: this field may return `null`, indicating that no valid value can be found.
+     * Get The default region of the KMS service used by the current CDB backend service. 
+     * @return DefaultKmsRegion The default region of the KMS service used by the current CDB backend service.
      */
     public String getDefaultKmsRegion() {
         return this.DefaultKmsRegion;
     }
 
     /**
-     * Set The default region of the KMS service currently used by the TencentDB backend service.
-Note: this field may return `null`, indicating that no valid value can be found.
-     * @param DefaultKmsRegion The default region of the KMS service currently used by the TencentDB backend service.
-Note: this field may return `null`, indicating that no valid value can be found.
+     * Set The default region of the KMS service used by the current CDB backend service.
+     * @param DefaultKmsRegion The default region of the KMS service used by the current CDB backend service.
      */
     public void setDefaultKmsRegion(String DefaultKmsRegion) {
         this.DefaultKmsRegion = DefaultKmsRegion;

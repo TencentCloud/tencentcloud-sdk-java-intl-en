@@ -24,32 +24,28 @@ import java.util.HashMap;
 public class LogRuleTemplateInfo extends AbstractModel {
 
     /**
-    * Template ID. 
-Note: The return value may be null, indicating that no valid data can be obtained.
+    * Template ID.
     */
     @SerializedName("RuleTemplateId")
     @Expose
     private String RuleTemplateId;
 
     /**
-    * Template name.
-Note: The return value may be null, indicating that no valid data can be obtained.
+    * Rule template name
     */
     @SerializedName("RuleTemplateName")
     @Expose
     private String RuleTemplateName;
 
     /**
-    * Alarm level. Valid values: 1: Low risk; 2: Medium risk; 3: High risk. 
-Note: The return value may be null, indicating that no valid data can be obtained.
+    * Alarm level. Valid values: 1 - Low risk, 2 - Medium risk, 3 - High risk.
     */
     @SerializedName("AlarmLevel")
     @Expose
     private String AlarmLevel;
 
     /**
-    * Template change status. Valid values: 0: Unchanged; 1: Changed; 2: Deleted.
-Note: The return value may be null, indicating that no valid data can be obtained.
+    * Rule template change status. Valid values: 0 - Not changed, 1 - changed, 2 - deleted.
     */
     @SerializedName("RuleTemplateStatus")
     @Expose
@@ -57,79 +53,63 @@ Note: The return value may be null, indicating that no valid data can be obtaine
 
     /**
      * Get Template ID. 
-Note: The return value may be null, indicating that no valid data can be obtained. 
-     * @return RuleTemplateId Template ID. 
-Note: The return value may be null, indicating that no valid data can be obtained.
+     * @return RuleTemplateId Template ID.
      */
     public String getRuleTemplateId() {
         return this.RuleTemplateId;
     }
 
     /**
-     * Set Template ID. 
-Note: The return value may be null, indicating that no valid data can be obtained.
-     * @param RuleTemplateId Template ID. 
-Note: The return value may be null, indicating that no valid data can be obtained.
+     * Set Template ID.
+     * @param RuleTemplateId Template ID.
      */
     public void setRuleTemplateId(String RuleTemplateId) {
         this.RuleTemplateId = RuleTemplateId;
     }
 
     /**
-     * Get Template name.
-Note: The return value may be null, indicating that no valid data can be obtained. 
-     * @return RuleTemplateName Template name.
-Note: The return value may be null, indicating that no valid data can be obtained.
+     * Get Rule template name 
+     * @return RuleTemplateName Rule template name
      */
     public String getRuleTemplateName() {
         return this.RuleTemplateName;
     }
 
     /**
-     * Set Template name.
-Note: The return value may be null, indicating that no valid data can be obtained.
-     * @param RuleTemplateName Template name.
-Note: The return value may be null, indicating that no valid data can be obtained.
+     * Set Rule template name
+     * @param RuleTemplateName Rule template name
      */
     public void setRuleTemplateName(String RuleTemplateName) {
         this.RuleTemplateName = RuleTemplateName;
     }
 
     /**
-     * Get Alarm level. Valid values: 1: Low risk; 2: Medium risk; 3: High risk. 
-Note: The return value may be null, indicating that no valid data can be obtained. 
-     * @return AlarmLevel Alarm level. Valid values: 1: Low risk; 2: Medium risk; 3: High risk. 
-Note: The return value may be null, indicating that no valid data can be obtained.
+     * Get Alarm level. Valid values: 1 - Low risk, 2 - Medium risk, 3 - High risk. 
+     * @return AlarmLevel Alarm level. Valid values: 1 - Low risk, 2 - Medium risk, 3 - High risk.
      */
     public String getAlarmLevel() {
         return this.AlarmLevel;
     }
 
     /**
-     * Set Alarm level. Valid values: 1: Low risk; 2: Medium risk; 3: High risk. 
-Note: The return value may be null, indicating that no valid data can be obtained.
-     * @param AlarmLevel Alarm level. Valid values: 1: Low risk; 2: Medium risk; 3: High risk. 
-Note: The return value may be null, indicating that no valid data can be obtained.
+     * Set Alarm level. Valid values: 1 - Low risk, 2 - Medium risk, 3 - High risk.
+     * @param AlarmLevel Alarm level. Valid values: 1 - Low risk, 2 - Medium risk, 3 - High risk.
      */
     public void setAlarmLevel(String AlarmLevel) {
         this.AlarmLevel = AlarmLevel;
     }
 
     /**
-     * Get Template change status. Valid values: 0: Unchanged; 1: Changed; 2: Deleted.
-Note: The return value may be null, indicating that no valid data can be obtained. 
-     * @return RuleTemplateStatus Template change status. Valid values: 0: Unchanged; 1: Changed; 2: Deleted.
-Note: The return value may be null, indicating that no valid data can be obtained.
+     * Get Rule template change status. Valid values: 0 - Not changed, 1 - changed, 2 - deleted. 
+     * @return RuleTemplateStatus Rule template change status. Valid values: 0 - Not changed, 1 - changed, 2 - deleted.
      */
     public Long getRuleTemplateStatus() {
         return this.RuleTemplateStatus;
     }
 
     /**
-     * Set Template change status. Valid values: 0: Unchanged; 1: Changed; 2: Deleted.
-Note: The return value may be null, indicating that no valid data can be obtained.
-     * @param RuleTemplateStatus Template change status. Valid values: 0: Unchanged; 1: Changed; 2: Deleted.
-Note: The return value may be null, indicating that no valid data can be obtained.
+     * Set Rule template change status. Valid values: 0 - Not changed, 1 - changed, 2 - deleted.
+     * @param RuleTemplateStatus Rule template change status. Valid values: 0 - Not changed, 1 - changed, 2 - deleted.
      */
     public void setRuleTemplateStatus(Long RuleTemplateStatus) {
         this.RuleTemplateStatus = RuleTemplateStatus;

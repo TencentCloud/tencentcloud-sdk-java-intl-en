@@ -24,21 +24,23 @@ import java.util.HashMap;
 public class DescribeSlowLogDataRequest extends AbstractModel {
 
     /**
-    * Instance ID.
+    * Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Start timestamp, such as 1585142640.
+    * Session start timestamp. For example, 1585142640.
+Description: This parameter is a timestamp in seconds.
     */
     @SerializedName("StartTime")
     @Expose
     private Long StartTime;
 
     /**
-    * End timestamp, such as 1585142640.
+    * End timestamp. Example: 1585142640.
+Description: This parameter is a timestamp in seconds.
     */
     @SerializedName("EndTime")
     @Expose
@@ -66,28 +68,33 @@ public class DescribeSlowLogDataRequest extends AbstractModel {
     private String [] DataBases;
 
     /**
-    * Sort by field. Valid values: Timestamp, QueryTime, LockTime, RowsExamined, RowsSent.
+    * Sorting field. Currently supported fields and their meanings are as follows. Default value is Timestamp.
+1. Timestamp: SQL execution time
+2. QueryTime: SQL execution duration (seconds)
+3. LockTime: Lock duration (seconds)
+4. RowsExamined: Number of scanned rows
+5. RowsSent: Result set row count
     */
     @SerializedName("SortBy")
     @Expose
     private String SortBy;
 
     /**
-    * Sorting order. Valid values: ASC (ascending), DESC (descending).
+    * Ascending or descending order. Valid values: "ASC" - Ascending order, "DESC" - Descending order. Default value: "ASC".
     */
     @SerializedName("OrderBy")
     @Expose
     private String OrderBy;
 
     /**
-    * Offset. Default value: 0.
+    * Offset. The default is 0, and the maximum is 9999.
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * The number of results per page in paginated queries. Default value: 100. Maximum value: 400.
+    * The number of records returned in a single use, default is 100, maximum is 800.
     */
     @SerializedName("Limit")
     @Expose
@@ -101,48 +108,63 @@ public class DescribeSlowLogDataRequest extends AbstractModel {
     private String InstType;
 
     /**
-     * Get Instance ID. 
-     * @return InstanceId Instance ID.
+    * Node ID.
+    */
+    @SerializedName("OpResourceId")
+    @Expose
+    private String OpResourceId;
+
+    /**
+     * Get Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API. 
+     * @return InstanceId Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Instance ID.
-     * @param InstanceId Instance ID.
+     * Set Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
+     * @param InstanceId Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Start timestamp, such as 1585142640. 
-     * @return StartTime Start timestamp, such as 1585142640.
+     * Get Session start timestamp. For example, 1585142640.
+Description: This parameter is a timestamp in seconds. 
+     * @return StartTime Session start timestamp. For example, 1585142640.
+Description: This parameter is a timestamp in seconds.
      */
     public Long getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set Start timestamp, such as 1585142640.
-     * @param StartTime Start timestamp, such as 1585142640.
+     * Set Session start timestamp. For example, 1585142640.
+Description: This parameter is a timestamp in seconds.
+     * @param StartTime Session start timestamp. For example, 1585142640.
+Description: This parameter is a timestamp in seconds.
      */
     public void setStartTime(Long StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get End timestamp, such as 1585142640. 
-     * @return EndTime End timestamp, such as 1585142640.
+     * Get End timestamp. Example: 1585142640.
+Description: This parameter is a timestamp in seconds. 
+     * @return EndTime End timestamp. Example: 1585142640.
+Description: This parameter is a timestamp in seconds.
      */
     public Long getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set End timestamp, such as 1585142640.
-     * @param EndTime End timestamp, such as 1585142640.
+     * Set End timestamp. Example: 1585142640.
+Description: This parameter is a timestamp in seconds.
+     * @param EndTime End timestamp. Example: 1585142640.
+Description: This parameter is a timestamp in seconds.
      */
     public void setEndTime(Long EndTime) {
         this.EndTime = EndTime;
@@ -197,64 +219,84 @@ public class DescribeSlowLogDataRequest extends AbstractModel {
     }
 
     /**
-     * Get Sort by field. Valid values: Timestamp, QueryTime, LockTime, RowsExamined, RowsSent. 
-     * @return SortBy Sort by field. Valid values: Timestamp, QueryTime, LockTime, RowsExamined, RowsSent.
+     * Get Sorting field. Currently supported fields and their meanings are as follows. Default value is Timestamp.
+1. Timestamp: SQL execution time
+2. QueryTime: SQL execution duration (seconds)
+3. LockTime: Lock duration (seconds)
+4. RowsExamined: Number of scanned rows
+5. RowsSent: Result set row count 
+     * @return SortBy Sorting field. Currently supported fields and their meanings are as follows. Default value is Timestamp.
+1. Timestamp: SQL execution time
+2. QueryTime: SQL execution duration (seconds)
+3. LockTime: Lock duration (seconds)
+4. RowsExamined: Number of scanned rows
+5. RowsSent: Result set row count
      */
     public String getSortBy() {
         return this.SortBy;
     }
 
     /**
-     * Set Sort by field. Valid values: Timestamp, QueryTime, LockTime, RowsExamined, RowsSent.
-     * @param SortBy Sort by field. Valid values: Timestamp, QueryTime, LockTime, RowsExamined, RowsSent.
+     * Set Sorting field. Currently supported fields and their meanings are as follows. Default value is Timestamp.
+1. Timestamp: SQL execution time
+2. QueryTime: SQL execution duration (seconds)
+3. LockTime: Lock duration (seconds)
+4. RowsExamined: Number of scanned rows
+5. RowsSent: Result set row count
+     * @param SortBy Sorting field. Currently supported fields and their meanings are as follows. Default value is Timestamp.
+1. Timestamp: SQL execution time
+2. QueryTime: SQL execution duration (seconds)
+3. LockTime: Lock duration (seconds)
+4. RowsExamined: Number of scanned rows
+5. RowsSent: Result set row count
      */
     public void setSortBy(String SortBy) {
         this.SortBy = SortBy;
     }
 
     /**
-     * Get Sorting order. Valid values: ASC (ascending), DESC (descending). 
-     * @return OrderBy Sorting order. Valid values: ASC (ascending), DESC (descending).
+     * Get Ascending or descending order. Valid values: "ASC" - Ascending order, "DESC" - Descending order. Default value: "ASC". 
+     * @return OrderBy Ascending or descending order. Valid values: "ASC" - Ascending order, "DESC" - Descending order. Default value: "ASC".
      */
     public String getOrderBy() {
         return this.OrderBy;
     }
 
     /**
-     * Set Sorting order. Valid values: ASC (ascending), DESC (descending).
-     * @param OrderBy Sorting order. Valid values: ASC (ascending), DESC (descending).
+     * Set Ascending or descending order. Valid values: "ASC" - Ascending order, "DESC" - Descending order. Default value: "ASC".
+     * @param OrderBy Ascending or descending order. Valid values: "ASC" - Ascending order, "DESC" - Descending order. Default value: "ASC".
      */
     public void setOrderBy(String OrderBy) {
         this.OrderBy = OrderBy;
     }
 
     /**
-     * Get Offset. Default value: 0. 
-     * @return Offset Offset. Default value: 0.
+     * Get Offset. The default is 0, and the maximum is 9999. 
+     * @return Offset Offset. The default is 0, and the maximum is 9999.
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Offset. Default value: 0.
-     * @param Offset Offset. Default value: 0.
+     * Set Offset. The default is 0, and the maximum is 9999.
+     * @param Offset Offset. The default is 0, and the maximum is 9999.
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get The number of results per page in paginated queries. Default value: 100. Maximum value: 400. 
-     * @return Limit The number of results per page in paginated queries. Default value: 100. Maximum value: 400.
+     * Get The number of records returned in a single use, default is 100, maximum is 800. 
+     * @return Limit The number of records returned in a single use, default is 100, maximum is 800.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set The number of results per page in paginated queries. Default value: 100. Maximum value: 400.
-     * @param Limit The number of results per page in paginated queries. Default value: 100. Maximum value: 400.
+     * Set The number of records returned in a single use, default is 100, maximum is 800.
+     * @param Limit The number of records returned in a single use, default is 100, maximum is 800.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
@@ -274,6 +316,22 @@ public class DescribeSlowLogDataRequest extends AbstractModel {
      */
     public void setInstType(String InstType) {
         this.InstType = InstType;
+    }
+
+    /**
+     * Get Node ID. 
+     * @return OpResourceId Node ID.
+     */
+    public String getOpResourceId() {
+        return this.OpResourceId;
+    }
+
+    /**
+     * Set Node ID.
+     * @param OpResourceId Node ID.
+     */
+    public void setOpResourceId(String OpResourceId) {
+        this.OpResourceId = OpResourceId;
     }
 
     public DescribeSlowLogDataRequest() {
@@ -326,6 +384,9 @@ public class DescribeSlowLogDataRequest extends AbstractModel {
         if (source.InstType != null) {
             this.InstType = new String(source.InstType);
         }
+        if (source.OpResourceId != null) {
+            this.OpResourceId = new String(source.OpResourceId);
+        }
     }
 
 
@@ -344,6 +405,7 @@ public class DescribeSlowLogDataRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "InstType", this.InstType);
+        this.setParamSimple(map, prefix + "OpResourceId", this.OpResourceId);
 
     }
 }

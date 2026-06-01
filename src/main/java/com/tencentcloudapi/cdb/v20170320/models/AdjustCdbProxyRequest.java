@@ -24,21 +24,28 @@ import java.util.HashMap;
 public class AdjustCdbProxyRequest extends AbstractModel {
 
     /**
-    * Instance ID
+    * Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Proxy group ID
+    * Proxy group ID, which can be obtained through the [DescribeCdbProxyInfo](https://www.tencentcloud.com/document/api/236/90585?from_cn_redirect=1) API.
     */
     @SerializedName("ProxyGroupId")
     @Expose
     private String ProxyGroupId;
 
     /**
-    * The specification configuration of a node
+    * Node specification configuration
+Remark: Database proxy supported node specifications are 2C4000MB, 4C8000MB, 8C16000MB.
+Parameter description in the example.
+NodeCount: Number of nodes
+Region: Node region
+Zone: Node availability zone
+Cpu: Number of node cores for one agent (Unit: core)
+Mem: Memory size of each proxy node (unit: MB)
     */
     @SerializedName("ProxyNodeCustom")
     @Expose
@@ -59,48 +66,76 @@ public class AdjustCdbProxyRequest extends AbstractModel {
     private String UpgradeTime;
 
     /**
-     * Get Instance ID 
-     * @return InstanceId Instance ID
+     * Get Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API. 
+     * @return InstanceId Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Instance ID
-     * @param InstanceId Instance ID
+     * Set Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
+     * @param InstanceId Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Proxy group ID 
-     * @return ProxyGroupId Proxy group ID
+     * Get Proxy group ID, which can be obtained through the [DescribeCdbProxyInfo](https://www.tencentcloud.com/document/api/236/90585?from_cn_redirect=1) API. 
+     * @return ProxyGroupId Proxy group ID, which can be obtained through the [DescribeCdbProxyInfo](https://www.tencentcloud.com/document/api/236/90585?from_cn_redirect=1) API.
      */
     public String getProxyGroupId() {
         return this.ProxyGroupId;
     }
 
     /**
-     * Set Proxy group ID
-     * @param ProxyGroupId Proxy group ID
+     * Set Proxy group ID, which can be obtained through the [DescribeCdbProxyInfo](https://www.tencentcloud.com/document/api/236/90585?from_cn_redirect=1) API.
+     * @param ProxyGroupId Proxy group ID, which can be obtained through the [DescribeCdbProxyInfo](https://www.tencentcloud.com/document/api/236/90585?from_cn_redirect=1) API.
      */
     public void setProxyGroupId(String ProxyGroupId) {
         this.ProxyGroupId = ProxyGroupId;
     }
 
     /**
-     * Get The specification configuration of a node 
-     * @return ProxyNodeCustom The specification configuration of a node
+     * Get Node specification configuration
+Remark: Database proxy supported node specifications are 2C4000MB, 4C8000MB, 8C16000MB.
+Parameter description in the example.
+NodeCount: Number of nodes
+Region: Node region
+Zone: Node availability zone
+Cpu: Number of node cores for one agent (Unit: core)
+Mem: Memory size of each proxy node (unit: MB) 
+     * @return ProxyNodeCustom Node specification configuration
+Remark: Database proxy supported node specifications are 2C4000MB, 4C8000MB, 8C16000MB.
+Parameter description in the example.
+NodeCount: Number of nodes
+Region: Node region
+Zone: Node availability zone
+Cpu: Number of node cores for one agent (Unit: core)
+Mem: Memory size of each proxy node (unit: MB)
      */
     public ProxyNodeCustom [] getProxyNodeCustom() {
         return this.ProxyNodeCustom;
     }
 
     /**
-     * Set The specification configuration of a node
-     * @param ProxyNodeCustom The specification configuration of a node
+     * Set Node specification configuration
+Remark: Database proxy supported node specifications are 2C4000MB, 4C8000MB, 8C16000MB.
+Parameter description in the example.
+NodeCount: Number of nodes
+Region: Node region
+Zone: Node availability zone
+Cpu: Number of node cores for one agent (Unit: core)
+Mem: Memory size of each proxy node (unit: MB)
+     * @param ProxyNodeCustom Node specification configuration
+Remark: Database proxy supported node specifications are 2C4000MB, 4C8000MB, 8C16000MB.
+Parameter description in the example.
+NodeCount: Number of nodes
+Region: Node region
+Zone: Node availability zone
+Cpu: Number of node cores for one agent (Unit: core)
+Mem: Memory size of each proxy node (unit: MB)
      */
     public void setProxyNodeCustom(ProxyNodeCustom [] ProxyNodeCustom) {
         this.ProxyNodeCustom = ProxyNodeCustom;

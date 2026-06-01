@@ -24,161 +24,161 @@ import java.util.HashMap;
 public class ModifyCdbProxyAddressVipAndVPortRequest extends AbstractModel {
 
     /**
-    * Proxy group ID
+    * Proxy group ID. Obtain through the [DescribeCdbProxyInfo](https://www.tencentcloud.com/document/api/236/90585?from_cn_redirect=1) API.
     */
     @SerializedName("ProxyGroupId")
     @Expose
     private String ProxyGroupId;
 
     /**
-    * Address ID of the proxy group
+    * Proxy group address ID. Obtain through the [DescribeCdbProxyInfo](https://www.tencentcloud.com/document/api/236/90585?from_cn_redirect=1) API.
     */
     @SerializedName("ProxyAddressId")
     @Expose
     private String ProxyAddressId;
 
     /**
-    * VPC ID
+    * VPC ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
     */
     @SerializedName("UniqVpcId")
     @Expose
     private String UniqVpcId;
 
     /**
-    * VPC subnet ID
+    * Private subnet ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
     */
     @SerializedName("UniqSubnetId")
     @Expose
     private String UniqSubnetId;
 
     /**
-    * IP address
+    * IP. If not specified, the system will assign an available IP under subnet.
     */
     @SerializedName("Vip")
     @Expose
     private String Vip;
 
     /**
-    * Port
+    * Port. Default value 3306, value ranges from 1024 to 65535.
     */
     @SerializedName("VPort")
     @Expose
     private Long VPort;
 
     /**
-    * Valid Hours of Old IP
+    * Old IP valid hours. Measurement unit: hr, default value: 24, value ranges from 0 to 168.
     */
     @SerializedName("ReleaseDuration")
     @Expose
     private Long ReleaseDuration;
 
     /**
-     * Get Proxy group ID 
-     * @return ProxyGroupId Proxy group ID
+     * Get Proxy group ID. Obtain through the [DescribeCdbProxyInfo](https://www.tencentcloud.com/document/api/236/90585?from_cn_redirect=1) API. 
+     * @return ProxyGroupId Proxy group ID. Obtain through the [DescribeCdbProxyInfo](https://www.tencentcloud.com/document/api/236/90585?from_cn_redirect=1) API.
      */
     public String getProxyGroupId() {
         return this.ProxyGroupId;
     }
 
     /**
-     * Set Proxy group ID
-     * @param ProxyGroupId Proxy group ID
+     * Set Proxy group ID. Obtain through the [DescribeCdbProxyInfo](https://www.tencentcloud.com/document/api/236/90585?from_cn_redirect=1) API.
+     * @param ProxyGroupId Proxy group ID. Obtain through the [DescribeCdbProxyInfo](https://www.tencentcloud.com/document/api/236/90585?from_cn_redirect=1) API.
      */
     public void setProxyGroupId(String ProxyGroupId) {
         this.ProxyGroupId = ProxyGroupId;
     }
 
     /**
-     * Get Address ID of the proxy group 
-     * @return ProxyAddressId Address ID of the proxy group
+     * Get Proxy group address ID. Obtain through the [DescribeCdbProxyInfo](https://www.tencentcloud.com/document/api/236/90585?from_cn_redirect=1) API. 
+     * @return ProxyAddressId Proxy group address ID. Obtain through the [DescribeCdbProxyInfo](https://www.tencentcloud.com/document/api/236/90585?from_cn_redirect=1) API.
      */
     public String getProxyAddressId() {
         return this.ProxyAddressId;
     }
 
     /**
-     * Set Address ID of the proxy group
-     * @param ProxyAddressId Address ID of the proxy group
+     * Set Proxy group address ID. Obtain through the [DescribeCdbProxyInfo](https://www.tencentcloud.com/document/api/236/90585?from_cn_redirect=1) API.
+     * @param ProxyAddressId Proxy group address ID. Obtain through the [DescribeCdbProxyInfo](https://www.tencentcloud.com/document/api/236/90585?from_cn_redirect=1) API.
      */
     public void setProxyAddressId(String ProxyAddressId) {
         this.ProxyAddressId = ProxyAddressId;
     }
 
     /**
-     * Get VPC ID 
-     * @return UniqVpcId VPC ID
+     * Get VPC ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API. 
+     * @return UniqVpcId VPC ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
      */
     public String getUniqVpcId() {
         return this.UniqVpcId;
     }
 
     /**
-     * Set VPC ID
-     * @param UniqVpcId VPC ID
+     * Set VPC ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
+     * @param UniqVpcId VPC ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
      */
     public void setUniqVpcId(String UniqVpcId) {
         this.UniqVpcId = UniqVpcId;
     }
 
     /**
-     * Get VPC subnet ID 
-     * @return UniqSubnetId VPC subnet ID
+     * Get Private subnet ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API. 
+     * @return UniqSubnetId Private subnet ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
      */
     public String getUniqSubnetId() {
         return this.UniqSubnetId;
     }
 
     /**
-     * Set VPC subnet ID
-     * @param UniqSubnetId VPC subnet ID
+     * Set Private subnet ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
+     * @param UniqSubnetId Private subnet ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
      */
     public void setUniqSubnetId(String UniqSubnetId) {
         this.UniqSubnetId = UniqSubnetId;
     }
 
     /**
-     * Get IP address 
-     * @return Vip IP address
+     * Get IP. If not specified, the system will assign an available IP under subnet. 
+     * @return Vip IP. If not specified, the system will assign an available IP under subnet.
      */
     public String getVip() {
         return this.Vip;
     }
 
     /**
-     * Set IP address
-     * @param Vip IP address
+     * Set IP. If not specified, the system will assign an available IP under subnet.
+     * @param Vip IP. If not specified, the system will assign an available IP under subnet.
      */
     public void setVip(String Vip) {
         this.Vip = Vip;
     }
 
     /**
-     * Get Port 
-     * @return VPort Port
+     * Get Port. Default value 3306, value ranges from 1024 to 65535. 
+     * @return VPort Port. Default value 3306, value ranges from 1024 to 65535.
      */
     public Long getVPort() {
         return this.VPort;
     }
 
     /**
-     * Set Port
-     * @param VPort Port
+     * Set Port. Default value 3306, value ranges from 1024 to 65535.
+     * @param VPort Port. Default value 3306, value ranges from 1024 to 65535.
      */
     public void setVPort(Long VPort) {
         this.VPort = VPort;
     }
 
     /**
-     * Get Valid Hours of Old IP 
-     * @return ReleaseDuration Valid Hours of Old IP
+     * Get Old IP valid hours. Measurement unit: hr, default value: 24, value ranges from 0 to 168. 
+     * @return ReleaseDuration Old IP valid hours. Measurement unit: hr, default value: 24, value ranges from 0 to 168.
      */
     public Long getReleaseDuration() {
         return this.ReleaseDuration;
     }
 
     /**
-     * Set Valid Hours of Old IP
-     * @param ReleaseDuration Valid Hours of Old IP
+     * Set Old IP valid hours. Measurement unit: hr, default value: 24, value ranges from 0 to 168.
+     * @param ReleaseDuration Old IP valid hours. Measurement unit: hr, default value: 24, value ranges from 0 to 168.
      */
     public void setReleaseDuration(Long ReleaseDuration) {
         this.ReleaseDuration = ReleaseDuration;

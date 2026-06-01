@@ -24,491 +24,674 @@ import java.util.HashMap;
 public class CreateCloneInstanceRequest extends AbstractModel {
 
     /**
-    * ID of the instance to be cloned from
+    * <p>Clone source instance ID, which can be obtained through the <a href="https://www.tencentcloud.com/document/api/236/15872?from_cn_redirect=1">DescribeDBInstances</a> API.</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * To roll back the cloned instance to a specific point in time, set this parameter to a value in the format of "yyyy-mm-dd hh:mm:ss".
+    * <p>If necessary, specify this value when cloning an instance and rolling back to a specified time. The time format is yyyy-mm-dd hh:mm:ss.<br>Note: This parameter and the SpecifiedBackupId parameter require a choice between the two for configuration.</p>
     */
     @SerializedName("SpecifiedRollbackTime")
     @Expose
     private String SpecifiedRollbackTime;
 
     /**
-    * To roll back the cloned instance to a specific physical backup file, set this parameter to the ID of the physical backup file. The ID can be obtained by the [DescribeBackups](https://intl.cloud.tencent.com/document/api/236/15842?from_cn_redirect=1) API.
+    * <p>If necessary to clone an instance and roll back to a designated backup set, specify this value as the Id of the backup file. Please use <a href="/document/api/236/15842">query data backup file list</a>.</p><p>If it is a clone of a two-node, three-node, or four-node instance, the backup file is a physical backup. If it is a clone of a single-node or cloud disk edition instance, the backup file is a snapshot backup.</p>
     */
     @SerializedName("SpecifiedBackupId")
     @Expose
     private Long SpecifiedBackupId;
 
     /**
-    * VPC ID, which can be obtained by the [DescribeVpcs](https://intl.cloud.tencent.com/document/api/215/15778?from_cn_redirect=1) API. If this parameter is left empty, the classic network will be used by default.
+    * <p>VPC ID. Please use <a href="/document/api/215/15778">Querying VPC List</a>.</p>
     */
     @SerializedName("UniqVpcId")
     @Expose
     private String UniqVpcId;
 
     /**
-    * VPC subnet ID, which can be obtained by the [DescribeSubnets](https://intl.cloud.tencent.com/document/api/215/15784?from_cn_redirect=1) API. If `UniqVpcId` is set, `UniqSubnetId` will be required.
+    * <p>Subnet ID in the private network. If UniqVpcId is set up, UniqSubnetId is required. Please use <a href="/document/api/215/15784">query subnet list</a>.</p>
     */
     @SerializedName("UniqSubnetId")
     @Expose
     private String UniqSubnetId;
 
     /**
-    * Memory of the cloned instance in MB, which should be equal to (by default) or larger than that of the original instance
+    * <p>Instance memory size, unit: MB, must not be less than the clone source instance. Default is same as the source instance.</p>
     */
     @SerializedName("Memory")
     @Expose
     private Long Memory;
 
     /**
-    * Disk capacity of the cloned instance in GB, which should be equal to (by default) or larger than that of the original instance
+    * <p>Instance disk size, unit: GB, must not be less than the clone source instance. Default is same as the source instance.</p>
     */
     @SerializedName("Volume")
     @Expose
     private Long Volume;
 
     /**
-    * Name of the cloned instance
+    * <p>Name of the newly generated clone instance. Support input of up to 60 characters.</p>
     */
     @SerializedName("InstanceName")
     @Expose
     private String InstanceName;
 
     /**
-    * Security group parameter, which can be obtained by the [DescribeProjectSecurityGroups](https://intl.cloud.tencent.com/document/api/236/15850?from_cn_redirect=1) API
+    * <p>Security group parameters. Use the API <a href="https://www.tencentcloud.com/document/api/236/15850?from_cn_redirect=1">Query Project Security Group Information</a> to query security group details of a certain project.</p>
     */
     @SerializedName("SecurityGroup")
     @Expose
     private String [] SecurityGroup;
 
     /**
-    * Information of the cloned instance tag
+    * <p>Tag information of the instance.</p>
     */
     @SerializedName("ResourceTags")
     @Expose
     private TagInfo [] ResourceTags;
 
     /**
-    * The number of CPU cores of the cloned instance. It should be equal to (by default) or larger than that of the original instance.
+    * <p>Instance Cpu cores, must not be less than the clone source instance. Default is same as the source instance.</p>
     */
     @SerializedName("Cpu")
     @Expose
     private Long Cpu;
 
     /**
-    * Data replication mode. Valid values: 0 (async), 1 (semi-sync), 2 (strong sync). Default value: 0.
+    * <p>Data replication method, defaults to 0. Supported values include: 0 - means async replication, 1 - means semi-sync replication, 2 - means strong sync replication.</p>
     */
     @SerializedName("ProtectMode")
     @Expose
     private Long ProtectMode;
 
     /**
-    * Multi-AZ or single-AZ. Valid values: 0 (single-AZ), 1 (multi-AZ). Default value: 0.
+    * <p>Multiple Availability Zones, defaults to 0. Supported values include: 0 - means single availability zone, 1 - means multi-availability zone.</p>
     */
     @SerializedName("DeployMode")
     @Expose
     private Long DeployMode;
 
     /**
-    * Availability zone information of replica 1 of the cloned instance, which is the same as the value of `Zone` of the original instance by default
+    * <p>The AZ information of the newly generated clone instance standby 1 is the same as the source instance Zone by default.</p>
     */
     @SerializedName("SlaveZone")
     @Expose
     private String SlaveZone;
 
     /**
-    * Availability zone information of replica 2 of the cloned instance, 
-which is left empty by default. Specify this parameter when cloning a strong sync source instance.
+    * <p>AZ information of standby 2, empty by default. Specify this parameter when you clone a strong sync primary instance.</p>
     */
     @SerializedName("BackupZone")
     @Expose
     private String BackupZone;
 
     /**
-    * Resource isolation type of the clone. Valid values: `UNIVERSAL` (general instance), `EXCLUSIVE` (dedicated instance). Default value: `UNIVERSAL`.
+    * <p>Clone instance type. Supported values include: "UNIVERSAL" - general-purpose instance, "EXCLUSIVE" - dedicated instance, "CLOUD_NATIVE_CLUSTER" - standard type for CLOUD disk, "CLOUD_NATIVE_CLUSTER_EXCLUSIVE" - enhanced type for CLOUD disk. If not specified, it defaults to general-purpose instance.</p>
     */
     @SerializedName("DeviceType")
     @Expose
     private String DeviceType;
 
     /**
-    * The number of nodes of the clone. If this parameter is set to `3` or the `BackupZone` parameter is specified, the clone will have three nodes. If this parameter is set to `2` or left empty, the clone will have two nodes.
+    * <p>Number of nodes in the new clone instance.</p><p>To clone a three-node instance, set this value to 3 or specify the BackupZone parameter. To clone a dual-node instance, set this value to 2. By default, a dual-node instance is cloned. To clone a four-node instance, set this value to 4 or specify the FourthZone parameter.</p>
     */
     @SerializedName("InstanceNodes")
     @Expose
     private Long InstanceNodes;
 
     /**
-    * Placement group ID.
+    * <p>Placement group ID.</p>
     */
     @SerializedName("DeployGroupId")
     @Expose
     private String DeployGroupId;
 
     /**
-    * Whether to check the request without creating any instance. Valid values: `true`, `false` (default). After being submitted, the request will be checked to see if it is in correct format and has all required parameters with valid values. An error code is returned if the check failed, and `RequestId` is returned if the check succeeded. After a successful check, no instance will be created if this parameter is set to `true`, whereas an instance will be created and if it is set to `false`.
+    * <p>Whether to only pre-check this request. true: Send a check request without creating an instance. Check items include required parameters, request format, and service limits. If the check fails, return the corresponding error code; if the check passes, return RequestId. Default false: Send a normal request and create the instance directly after passing the check.</p>
     */
     @SerializedName("DryRun")
     @Expose
     private Boolean DryRun;
 
     /**
-    * Financial cage ID.
+    * <p>Financial Enclosure ID.</p>
     */
     @SerializedName("CageId")
     @Expose
     private String CageId;
 
     /**
-    * Project ID. Default value: 0.
+    * <p>Project ID. Default project ID 0.</p>
     */
     @SerializedName("ProjectId")
     @Expose
     private Long ProjectId;
 
     /**
-     * Get ID of the instance to be cloned from 
-     * @return InstanceId ID of the instance to be cloned from
+    * <p>Payment type. Valid values: PRE_PAID (prepaid, also known as yearly/monthly subscription) and USED_PAID (pay-as-you-go). Default billing mode is pay-as-you-go.</p>
+    */
+    @SerializedName("PayType")
+    @Expose
+    private String PayType;
+
+    /**
+    * <p>Instance duration, required when PayType is PRE_PAID, measurement unit: month, optional values include [1,2,3,4,5,6,7,8,9,10,11,12,24,36].</p>
+    */
+    @SerializedName("Period")
+    @Expose
+    private Long Period;
+
+    /**
+    * <p>Topology configuration for cloud disk edition nodes.</p>
+    */
+    @SerializedName("ClusterTopology")
+    @Expose
+    private ClusterTopology ClusterTopology;
+
+    /**
+    * <p>Original instance region. Required when importing a remote backup, for example: ap-guangzhou</p>
+    */
+    @SerializedName("SrcRegion")
+    @Expose
+    private String SrcRegion;
+
+    /**
+    * <p>Offsite data backup id</p>
+    */
+    @SerializedName("SpecifiedSubBackupId")
+    @Expose
+    private Long SpecifiedSubBackupId;
+
+    /**
+    * <p>The AZ information of the newly generated clone instance primary database is the same as the source instance Zone by default.</p>
+    */
+    @SerializedName("MasterZone")
+    @Expose
+    private String MasterZone;
+
+    /**
+    * <p>The AZ information of the newly generated clone instance's primary database defaults to the same as the source instance's Zone.</p>
+    */
+    @SerializedName("Zone")
+    @Expose
+    private String Zone;
+
+    /**
+    * <p>AZ information of standby 3, empty by default. Specify this parameter when you proceed to purchase a four-node primary instance.</p>
+    */
+    @SerializedName("FourthZone")
+    @Expose
+    private String FourthZone;
+
+    /**
+     * Get <p>Clone source instance ID, which can be obtained through the <a href="https://www.tencentcloud.com/document/api/236/15872?from_cn_redirect=1">DescribeDBInstances</a> API.</p> 
+     * @return InstanceId <p>Clone source instance ID, which can be obtained through the <a href="https://www.tencentcloud.com/document/api/236/15872?from_cn_redirect=1">DescribeDBInstances</a> API.</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set ID of the instance to be cloned from
-     * @param InstanceId ID of the instance to be cloned from
+     * Set <p>Clone source instance ID, which can be obtained through the <a href="https://www.tencentcloud.com/document/api/236/15872?from_cn_redirect=1">DescribeDBInstances</a> API.</p>
+     * @param InstanceId <p>Clone source instance ID, which can be obtained through the <a href="https://www.tencentcloud.com/document/api/236/15872?from_cn_redirect=1">DescribeDBInstances</a> API.</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get To roll back the cloned instance to a specific point in time, set this parameter to a value in the format of "yyyy-mm-dd hh:mm:ss". 
-     * @return SpecifiedRollbackTime To roll back the cloned instance to a specific point in time, set this parameter to a value in the format of "yyyy-mm-dd hh:mm:ss".
+     * Get <p>If necessary, specify this value when cloning an instance and rolling back to a specified time. The time format is yyyy-mm-dd hh:mm:ss.<br>Note: This parameter and the SpecifiedBackupId parameter require a choice between the two for configuration.</p> 
+     * @return SpecifiedRollbackTime <p>If necessary, specify this value when cloning an instance and rolling back to a specified time. The time format is yyyy-mm-dd hh:mm:ss.<br>Note: This parameter and the SpecifiedBackupId parameter require a choice between the two for configuration.</p>
      */
     public String getSpecifiedRollbackTime() {
         return this.SpecifiedRollbackTime;
     }
 
     /**
-     * Set To roll back the cloned instance to a specific point in time, set this parameter to a value in the format of "yyyy-mm-dd hh:mm:ss".
-     * @param SpecifiedRollbackTime To roll back the cloned instance to a specific point in time, set this parameter to a value in the format of "yyyy-mm-dd hh:mm:ss".
+     * Set <p>If necessary, specify this value when cloning an instance and rolling back to a specified time. The time format is yyyy-mm-dd hh:mm:ss.<br>Note: This parameter and the SpecifiedBackupId parameter require a choice between the two for configuration.</p>
+     * @param SpecifiedRollbackTime <p>If necessary, specify this value when cloning an instance and rolling back to a specified time. The time format is yyyy-mm-dd hh:mm:ss.<br>Note: This parameter and the SpecifiedBackupId parameter require a choice between the two for configuration.</p>
      */
     public void setSpecifiedRollbackTime(String SpecifiedRollbackTime) {
         this.SpecifiedRollbackTime = SpecifiedRollbackTime;
     }
 
     /**
-     * Get To roll back the cloned instance to a specific physical backup file, set this parameter to the ID of the physical backup file. The ID can be obtained by the [DescribeBackups](https://intl.cloud.tencent.com/document/api/236/15842?from_cn_redirect=1) API. 
-     * @return SpecifiedBackupId To roll back the cloned instance to a specific physical backup file, set this parameter to the ID of the physical backup file. The ID can be obtained by the [DescribeBackups](https://intl.cloud.tencent.com/document/api/236/15842?from_cn_redirect=1) API.
+     * Get <p>If necessary to clone an instance and roll back to a designated backup set, specify this value as the Id of the backup file. Please use <a href="/document/api/236/15842">query data backup file list</a>.</p><p>If it is a clone of a two-node, three-node, or four-node instance, the backup file is a physical backup. If it is a clone of a single-node or cloud disk edition instance, the backup file is a snapshot backup.</p> 
+     * @return SpecifiedBackupId <p>If necessary to clone an instance and roll back to a designated backup set, specify this value as the Id of the backup file. Please use <a href="/document/api/236/15842">query data backup file list</a>.</p><p>If it is a clone of a two-node, three-node, or four-node instance, the backup file is a physical backup. If it is a clone of a single-node or cloud disk edition instance, the backup file is a snapshot backup.</p>
      */
     public Long getSpecifiedBackupId() {
         return this.SpecifiedBackupId;
     }
 
     /**
-     * Set To roll back the cloned instance to a specific physical backup file, set this parameter to the ID of the physical backup file. The ID can be obtained by the [DescribeBackups](https://intl.cloud.tencent.com/document/api/236/15842?from_cn_redirect=1) API.
-     * @param SpecifiedBackupId To roll back the cloned instance to a specific physical backup file, set this parameter to the ID of the physical backup file. The ID can be obtained by the [DescribeBackups](https://intl.cloud.tencent.com/document/api/236/15842?from_cn_redirect=1) API.
+     * Set <p>If necessary to clone an instance and roll back to a designated backup set, specify this value as the Id of the backup file. Please use <a href="/document/api/236/15842">query data backup file list</a>.</p><p>If it is a clone of a two-node, three-node, or four-node instance, the backup file is a physical backup. If it is a clone of a single-node or cloud disk edition instance, the backup file is a snapshot backup.</p>
+     * @param SpecifiedBackupId <p>If necessary to clone an instance and roll back to a designated backup set, specify this value as the Id of the backup file. Please use <a href="/document/api/236/15842">query data backup file list</a>.</p><p>If it is a clone of a two-node, three-node, or four-node instance, the backup file is a physical backup. If it is a clone of a single-node or cloud disk edition instance, the backup file is a snapshot backup.</p>
      */
     public void setSpecifiedBackupId(Long SpecifiedBackupId) {
         this.SpecifiedBackupId = SpecifiedBackupId;
     }
 
     /**
-     * Get VPC ID, which can be obtained by the [DescribeVpcs](https://intl.cloud.tencent.com/document/api/215/15778?from_cn_redirect=1) API. If this parameter is left empty, the classic network will be used by default. 
-     * @return UniqVpcId VPC ID, which can be obtained by the [DescribeVpcs](https://intl.cloud.tencent.com/document/api/215/15778?from_cn_redirect=1) API. If this parameter is left empty, the classic network will be used by default.
+     * Get <p>VPC ID. Please use <a href="/document/api/215/15778">Querying VPC List</a>.</p> 
+     * @return UniqVpcId <p>VPC ID. Please use <a href="/document/api/215/15778">Querying VPC List</a>.</p>
      */
     public String getUniqVpcId() {
         return this.UniqVpcId;
     }
 
     /**
-     * Set VPC ID, which can be obtained by the [DescribeVpcs](https://intl.cloud.tencent.com/document/api/215/15778?from_cn_redirect=1) API. If this parameter is left empty, the classic network will be used by default.
-     * @param UniqVpcId VPC ID, which can be obtained by the [DescribeVpcs](https://intl.cloud.tencent.com/document/api/215/15778?from_cn_redirect=1) API. If this parameter is left empty, the classic network will be used by default.
+     * Set <p>VPC ID. Please use <a href="/document/api/215/15778">Querying VPC List</a>.</p>
+     * @param UniqVpcId <p>VPC ID. Please use <a href="/document/api/215/15778">Querying VPC List</a>.</p>
      */
     public void setUniqVpcId(String UniqVpcId) {
         this.UniqVpcId = UniqVpcId;
     }
 
     /**
-     * Get VPC subnet ID, which can be obtained by the [DescribeSubnets](https://intl.cloud.tencent.com/document/api/215/15784?from_cn_redirect=1) API. If `UniqVpcId` is set, `UniqSubnetId` will be required. 
-     * @return UniqSubnetId VPC subnet ID, which can be obtained by the [DescribeSubnets](https://intl.cloud.tencent.com/document/api/215/15784?from_cn_redirect=1) API. If `UniqVpcId` is set, `UniqSubnetId` will be required.
+     * Get <p>Subnet ID in the private network. If UniqVpcId is set up, UniqSubnetId is required. Please use <a href="/document/api/215/15784">query subnet list</a>.</p> 
+     * @return UniqSubnetId <p>Subnet ID in the private network. If UniqVpcId is set up, UniqSubnetId is required. Please use <a href="/document/api/215/15784">query subnet list</a>.</p>
      */
     public String getUniqSubnetId() {
         return this.UniqSubnetId;
     }
 
     /**
-     * Set VPC subnet ID, which can be obtained by the [DescribeSubnets](https://intl.cloud.tencent.com/document/api/215/15784?from_cn_redirect=1) API. If `UniqVpcId` is set, `UniqSubnetId` will be required.
-     * @param UniqSubnetId VPC subnet ID, which can be obtained by the [DescribeSubnets](https://intl.cloud.tencent.com/document/api/215/15784?from_cn_redirect=1) API. If `UniqVpcId` is set, `UniqSubnetId` will be required.
+     * Set <p>Subnet ID in the private network. If UniqVpcId is set up, UniqSubnetId is required. Please use <a href="/document/api/215/15784">query subnet list</a>.</p>
+     * @param UniqSubnetId <p>Subnet ID in the private network. If UniqVpcId is set up, UniqSubnetId is required. Please use <a href="/document/api/215/15784">query subnet list</a>.</p>
      */
     public void setUniqSubnetId(String UniqSubnetId) {
         this.UniqSubnetId = UniqSubnetId;
     }
 
     /**
-     * Get Memory of the cloned instance in MB, which should be equal to (by default) or larger than that of the original instance 
-     * @return Memory Memory of the cloned instance in MB, which should be equal to (by default) or larger than that of the original instance
+     * Get <p>Instance memory size, unit: MB, must not be less than the clone source instance. Default is same as the source instance.</p> 
+     * @return Memory <p>Instance memory size, unit: MB, must not be less than the clone source instance. Default is same as the source instance.</p>
      */
     public Long getMemory() {
         return this.Memory;
     }
 
     /**
-     * Set Memory of the cloned instance in MB, which should be equal to (by default) or larger than that of the original instance
-     * @param Memory Memory of the cloned instance in MB, which should be equal to (by default) or larger than that of the original instance
+     * Set <p>Instance memory size, unit: MB, must not be less than the clone source instance. Default is same as the source instance.</p>
+     * @param Memory <p>Instance memory size, unit: MB, must not be less than the clone source instance. Default is same as the source instance.</p>
      */
     public void setMemory(Long Memory) {
         this.Memory = Memory;
     }
 
     /**
-     * Get Disk capacity of the cloned instance in GB, which should be equal to (by default) or larger than that of the original instance 
-     * @return Volume Disk capacity of the cloned instance in GB, which should be equal to (by default) or larger than that of the original instance
+     * Get <p>Instance disk size, unit: GB, must not be less than the clone source instance. Default is same as the source instance.</p> 
+     * @return Volume <p>Instance disk size, unit: GB, must not be less than the clone source instance. Default is same as the source instance.</p>
      */
     public Long getVolume() {
         return this.Volume;
     }
 
     /**
-     * Set Disk capacity of the cloned instance in GB, which should be equal to (by default) or larger than that of the original instance
-     * @param Volume Disk capacity of the cloned instance in GB, which should be equal to (by default) or larger than that of the original instance
+     * Set <p>Instance disk size, unit: GB, must not be less than the clone source instance. Default is same as the source instance.</p>
+     * @param Volume <p>Instance disk size, unit: GB, must not be less than the clone source instance. Default is same as the source instance.</p>
      */
     public void setVolume(Long Volume) {
         this.Volume = Volume;
     }
 
     /**
-     * Get Name of the cloned instance 
-     * @return InstanceName Name of the cloned instance
+     * Get <p>Name of the newly generated clone instance. Support input of up to 60 characters.</p> 
+     * @return InstanceName <p>Name of the newly generated clone instance. Support input of up to 60 characters.</p>
      */
     public String getInstanceName() {
         return this.InstanceName;
     }
 
     /**
-     * Set Name of the cloned instance
-     * @param InstanceName Name of the cloned instance
+     * Set <p>Name of the newly generated clone instance. Support input of up to 60 characters.</p>
+     * @param InstanceName <p>Name of the newly generated clone instance. Support input of up to 60 characters.</p>
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;
     }
 
     /**
-     * Get Security group parameter, which can be obtained by the [DescribeProjectSecurityGroups](https://intl.cloud.tencent.com/document/api/236/15850?from_cn_redirect=1) API 
-     * @return SecurityGroup Security group parameter, which can be obtained by the [DescribeProjectSecurityGroups](https://intl.cloud.tencent.com/document/api/236/15850?from_cn_redirect=1) API
+     * Get <p>Security group parameters. Use the API <a href="https://www.tencentcloud.com/document/api/236/15850?from_cn_redirect=1">Query Project Security Group Information</a> to query security group details of a certain project.</p> 
+     * @return SecurityGroup <p>Security group parameters. Use the API <a href="https://www.tencentcloud.com/document/api/236/15850?from_cn_redirect=1">Query Project Security Group Information</a> to query security group details of a certain project.</p>
      */
     public String [] getSecurityGroup() {
         return this.SecurityGroup;
     }
 
     /**
-     * Set Security group parameter, which can be obtained by the [DescribeProjectSecurityGroups](https://intl.cloud.tencent.com/document/api/236/15850?from_cn_redirect=1) API
-     * @param SecurityGroup Security group parameter, which can be obtained by the [DescribeProjectSecurityGroups](https://intl.cloud.tencent.com/document/api/236/15850?from_cn_redirect=1) API
+     * Set <p>Security group parameters. Use the API <a href="https://www.tencentcloud.com/document/api/236/15850?from_cn_redirect=1">Query Project Security Group Information</a> to query security group details of a certain project.</p>
+     * @param SecurityGroup <p>Security group parameters. Use the API <a href="https://www.tencentcloud.com/document/api/236/15850?from_cn_redirect=1">Query Project Security Group Information</a> to query security group details of a certain project.</p>
      */
     public void setSecurityGroup(String [] SecurityGroup) {
         this.SecurityGroup = SecurityGroup;
     }
 
     /**
-     * Get Information of the cloned instance tag 
-     * @return ResourceTags Information of the cloned instance tag
+     * Get <p>Tag information of the instance.</p> 
+     * @return ResourceTags <p>Tag information of the instance.</p>
      */
     public TagInfo [] getResourceTags() {
         return this.ResourceTags;
     }
 
     /**
-     * Set Information of the cloned instance tag
-     * @param ResourceTags Information of the cloned instance tag
+     * Set <p>Tag information of the instance.</p>
+     * @param ResourceTags <p>Tag information of the instance.</p>
      */
     public void setResourceTags(TagInfo [] ResourceTags) {
         this.ResourceTags = ResourceTags;
     }
 
     /**
-     * Get The number of CPU cores of the cloned instance. It should be equal to (by default) or larger than that of the original instance. 
-     * @return Cpu The number of CPU cores of the cloned instance. It should be equal to (by default) or larger than that of the original instance.
+     * Get <p>Instance Cpu cores, must not be less than the clone source instance. Default is same as the source instance.</p> 
+     * @return Cpu <p>Instance Cpu cores, must not be less than the clone source instance. Default is same as the source instance.</p>
      */
     public Long getCpu() {
         return this.Cpu;
     }
 
     /**
-     * Set The number of CPU cores of the cloned instance. It should be equal to (by default) or larger than that of the original instance.
-     * @param Cpu The number of CPU cores of the cloned instance. It should be equal to (by default) or larger than that of the original instance.
+     * Set <p>Instance Cpu cores, must not be less than the clone source instance. Default is same as the source instance.</p>
+     * @param Cpu <p>Instance Cpu cores, must not be less than the clone source instance. Default is same as the source instance.</p>
      */
     public void setCpu(Long Cpu) {
         this.Cpu = Cpu;
     }
 
     /**
-     * Get Data replication mode. Valid values: 0 (async), 1 (semi-sync), 2 (strong sync). Default value: 0. 
-     * @return ProtectMode Data replication mode. Valid values: 0 (async), 1 (semi-sync), 2 (strong sync). Default value: 0.
+     * Get <p>Data replication method, defaults to 0. Supported values include: 0 - means async replication, 1 - means semi-sync replication, 2 - means strong sync replication.</p> 
+     * @return ProtectMode <p>Data replication method, defaults to 0. Supported values include: 0 - means async replication, 1 - means semi-sync replication, 2 - means strong sync replication.</p>
      */
     public Long getProtectMode() {
         return this.ProtectMode;
     }
 
     /**
-     * Set Data replication mode. Valid values: 0 (async), 1 (semi-sync), 2 (strong sync). Default value: 0.
-     * @param ProtectMode Data replication mode. Valid values: 0 (async), 1 (semi-sync), 2 (strong sync). Default value: 0.
+     * Set <p>Data replication method, defaults to 0. Supported values include: 0 - means async replication, 1 - means semi-sync replication, 2 - means strong sync replication.</p>
+     * @param ProtectMode <p>Data replication method, defaults to 0. Supported values include: 0 - means async replication, 1 - means semi-sync replication, 2 - means strong sync replication.</p>
      */
     public void setProtectMode(Long ProtectMode) {
         this.ProtectMode = ProtectMode;
     }
 
     /**
-     * Get Multi-AZ or single-AZ. Valid values: 0 (single-AZ), 1 (multi-AZ). Default value: 0. 
-     * @return DeployMode Multi-AZ or single-AZ. Valid values: 0 (single-AZ), 1 (multi-AZ). Default value: 0.
+     * Get <p>Multiple Availability Zones, defaults to 0. Supported values include: 0 - means single availability zone, 1 - means multi-availability zone.</p> 
+     * @return DeployMode <p>Multiple Availability Zones, defaults to 0. Supported values include: 0 - means single availability zone, 1 - means multi-availability zone.</p>
      */
     public Long getDeployMode() {
         return this.DeployMode;
     }
 
     /**
-     * Set Multi-AZ or single-AZ. Valid values: 0 (single-AZ), 1 (multi-AZ). Default value: 0.
-     * @param DeployMode Multi-AZ or single-AZ. Valid values: 0 (single-AZ), 1 (multi-AZ). Default value: 0.
+     * Set <p>Multiple Availability Zones, defaults to 0. Supported values include: 0 - means single availability zone, 1 - means multi-availability zone.</p>
+     * @param DeployMode <p>Multiple Availability Zones, defaults to 0. Supported values include: 0 - means single availability zone, 1 - means multi-availability zone.</p>
      */
     public void setDeployMode(Long DeployMode) {
         this.DeployMode = DeployMode;
     }
 
     /**
-     * Get Availability zone information of replica 1 of the cloned instance, which is the same as the value of `Zone` of the original instance by default 
-     * @return SlaveZone Availability zone information of replica 1 of the cloned instance, which is the same as the value of `Zone` of the original instance by default
+     * Get <p>The AZ information of the newly generated clone instance standby 1 is the same as the source instance Zone by default.</p> 
+     * @return SlaveZone <p>The AZ information of the newly generated clone instance standby 1 is the same as the source instance Zone by default.</p>
      */
     public String getSlaveZone() {
         return this.SlaveZone;
     }
 
     /**
-     * Set Availability zone information of replica 1 of the cloned instance, which is the same as the value of `Zone` of the original instance by default
-     * @param SlaveZone Availability zone information of replica 1 of the cloned instance, which is the same as the value of `Zone` of the original instance by default
+     * Set <p>The AZ information of the newly generated clone instance standby 1 is the same as the source instance Zone by default.</p>
+     * @param SlaveZone <p>The AZ information of the newly generated clone instance standby 1 is the same as the source instance Zone by default.</p>
      */
     public void setSlaveZone(String SlaveZone) {
         this.SlaveZone = SlaveZone;
     }
 
     /**
-     * Get Availability zone information of replica 2 of the cloned instance, 
-which is left empty by default. Specify this parameter when cloning a strong sync source instance. 
-     * @return BackupZone Availability zone information of replica 2 of the cloned instance, 
-which is left empty by default. Specify this parameter when cloning a strong sync source instance.
+     * Get <p>AZ information of standby 2, empty by default. Specify this parameter when you clone a strong sync primary instance.</p> 
+     * @return BackupZone <p>AZ information of standby 2, empty by default. Specify this parameter when you clone a strong sync primary instance.</p>
      */
     public String getBackupZone() {
         return this.BackupZone;
     }
 
     /**
-     * Set Availability zone information of replica 2 of the cloned instance, 
-which is left empty by default. Specify this parameter when cloning a strong sync source instance.
-     * @param BackupZone Availability zone information of replica 2 of the cloned instance, 
-which is left empty by default. Specify this parameter when cloning a strong sync source instance.
+     * Set <p>AZ information of standby 2, empty by default. Specify this parameter when you clone a strong sync primary instance.</p>
+     * @param BackupZone <p>AZ information of standby 2, empty by default. Specify this parameter when you clone a strong sync primary instance.</p>
      */
     public void setBackupZone(String BackupZone) {
         this.BackupZone = BackupZone;
     }
 
     /**
-     * Get Resource isolation type of the clone. Valid values: `UNIVERSAL` (general instance), `EXCLUSIVE` (dedicated instance). Default value: `UNIVERSAL`. 
-     * @return DeviceType Resource isolation type of the clone. Valid values: `UNIVERSAL` (general instance), `EXCLUSIVE` (dedicated instance). Default value: `UNIVERSAL`.
+     * Get <p>Clone instance type. Supported values include: "UNIVERSAL" - general-purpose instance, "EXCLUSIVE" - dedicated instance, "CLOUD_NATIVE_CLUSTER" - standard type for CLOUD disk, "CLOUD_NATIVE_CLUSTER_EXCLUSIVE" - enhanced type for CLOUD disk. If not specified, it defaults to general-purpose instance.</p> 
+     * @return DeviceType <p>Clone instance type. Supported values include: "UNIVERSAL" - general-purpose instance, "EXCLUSIVE" - dedicated instance, "CLOUD_NATIVE_CLUSTER" - standard type for CLOUD disk, "CLOUD_NATIVE_CLUSTER_EXCLUSIVE" - enhanced type for CLOUD disk. If not specified, it defaults to general-purpose instance.</p>
      */
     public String getDeviceType() {
         return this.DeviceType;
     }
 
     /**
-     * Set Resource isolation type of the clone. Valid values: `UNIVERSAL` (general instance), `EXCLUSIVE` (dedicated instance). Default value: `UNIVERSAL`.
-     * @param DeviceType Resource isolation type of the clone. Valid values: `UNIVERSAL` (general instance), `EXCLUSIVE` (dedicated instance). Default value: `UNIVERSAL`.
+     * Set <p>Clone instance type. Supported values include: "UNIVERSAL" - general-purpose instance, "EXCLUSIVE" - dedicated instance, "CLOUD_NATIVE_CLUSTER" - standard type for CLOUD disk, "CLOUD_NATIVE_CLUSTER_EXCLUSIVE" - enhanced type for CLOUD disk. If not specified, it defaults to general-purpose instance.</p>
+     * @param DeviceType <p>Clone instance type. Supported values include: "UNIVERSAL" - general-purpose instance, "EXCLUSIVE" - dedicated instance, "CLOUD_NATIVE_CLUSTER" - standard type for CLOUD disk, "CLOUD_NATIVE_CLUSTER_EXCLUSIVE" - enhanced type for CLOUD disk. If not specified, it defaults to general-purpose instance.</p>
      */
     public void setDeviceType(String DeviceType) {
         this.DeviceType = DeviceType;
     }
 
     /**
-     * Get The number of nodes of the clone. If this parameter is set to `3` or the `BackupZone` parameter is specified, the clone will have three nodes. If this parameter is set to `2` or left empty, the clone will have two nodes. 
-     * @return InstanceNodes The number of nodes of the clone. If this parameter is set to `3` or the `BackupZone` parameter is specified, the clone will have three nodes. If this parameter is set to `2` or left empty, the clone will have two nodes.
+     * Get <p>Number of nodes in the new clone instance.</p><p>To clone a three-node instance, set this value to 3 or specify the BackupZone parameter. To clone a dual-node instance, set this value to 2. By default, a dual-node instance is cloned. To clone a four-node instance, set this value to 4 or specify the FourthZone parameter.</p> 
+     * @return InstanceNodes <p>Number of nodes in the new clone instance.</p><p>To clone a three-node instance, set this value to 3 or specify the BackupZone parameter. To clone a dual-node instance, set this value to 2. By default, a dual-node instance is cloned. To clone a four-node instance, set this value to 4 or specify the FourthZone parameter.</p>
      */
     public Long getInstanceNodes() {
         return this.InstanceNodes;
     }
 
     /**
-     * Set The number of nodes of the clone. If this parameter is set to `3` or the `BackupZone` parameter is specified, the clone will have three nodes. If this parameter is set to `2` or left empty, the clone will have two nodes.
-     * @param InstanceNodes The number of nodes of the clone. If this parameter is set to `3` or the `BackupZone` parameter is specified, the clone will have three nodes. If this parameter is set to `2` or left empty, the clone will have two nodes.
+     * Set <p>Number of nodes in the new clone instance.</p><p>To clone a three-node instance, set this value to 3 or specify the BackupZone parameter. To clone a dual-node instance, set this value to 2. By default, a dual-node instance is cloned. To clone a four-node instance, set this value to 4 or specify the FourthZone parameter.</p>
+     * @param InstanceNodes <p>Number of nodes in the new clone instance.</p><p>To clone a three-node instance, set this value to 3 or specify the BackupZone parameter. To clone a dual-node instance, set this value to 2. By default, a dual-node instance is cloned. To clone a four-node instance, set this value to 4 or specify the FourthZone parameter.</p>
      */
     public void setInstanceNodes(Long InstanceNodes) {
         this.InstanceNodes = InstanceNodes;
     }
 
     /**
-     * Get Placement group ID. 
-     * @return DeployGroupId Placement group ID.
+     * Get <p>Placement group ID.</p> 
+     * @return DeployGroupId <p>Placement group ID.</p>
      */
     public String getDeployGroupId() {
         return this.DeployGroupId;
     }
 
     /**
-     * Set Placement group ID.
-     * @param DeployGroupId Placement group ID.
+     * Set <p>Placement group ID.</p>
+     * @param DeployGroupId <p>Placement group ID.</p>
      */
     public void setDeployGroupId(String DeployGroupId) {
         this.DeployGroupId = DeployGroupId;
     }
 
     /**
-     * Get Whether to check the request without creating any instance. Valid values: `true`, `false` (default). After being submitted, the request will be checked to see if it is in correct format and has all required parameters with valid values. An error code is returned if the check failed, and `RequestId` is returned if the check succeeded. After a successful check, no instance will be created if this parameter is set to `true`, whereas an instance will be created and if it is set to `false`. 
-     * @return DryRun Whether to check the request without creating any instance. Valid values: `true`, `false` (default). After being submitted, the request will be checked to see if it is in correct format and has all required parameters with valid values. An error code is returned if the check failed, and `RequestId` is returned if the check succeeded. After a successful check, no instance will be created if this parameter is set to `true`, whereas an instance will be created and if it is set to `false`.
+     * Get <p>Whether to only pre-check this request. true: Send a check request without creating an instance. Check items include required parameters, request format, and service limits. If the check fails, return the corresponding error code; if the check passes, return RequestId. Default false: Send a normal request and create the instance directly after passing the check.</p> 
+     * @return DryRun <p>Whether to only pre-check this request. true: Send a check request without creating an instance. Check items include required parameters, request format, and service limits. If the check fails, return the corresponding error code; if the check passes, return RequestId. Default false: Send a normal request and create the instance directly after passing the check.</p>
      */
     public Boolean getDryRun() {
         return this.DryRun;
     }
 
     /**
-     * Set Whether to check the request without creating any instance. Valid values: `true`, `false` (default). After being submitted, the request will be checked to see if it is in correct format and has all required parameters with valid values. An error code is returned if the check failed, and `RequestId` is returned if the check succeeded. After a successful check, no instance will be created if this parameter is set to `true`, whereas an instance will be created and if it is set to `false`.
-     * @param DryRun Whether to check the request without creating any instance. Valid values: `true`, `false` (default). After being submitted, the request will be checked to see if it is in correct format and has all required parameters with valid values. An error code is returned if the check failed, and `RequestId` is returned if the check succeeded. After a successful check, no instance will be created if this parameter is set to `true`, whereas an instance will be created and if it is set to `false`.
+     * Set <p>Whether to only pre-check this request. true: Send a check request without creating an instance. Check items include required parameters, request format, and service limits. If the check fails, return the corresponding error code; if the check passes, return RequestId. Default false: Send a normal request and create the instance directly after passing the check.</p>
+     * @param DryRun <p>Whether to only pre-check this request. true: Send a check request without creating an instance. Check items include required parameters, request format, and service limits. If the check fails, return the corresponding error code; if the check passes, return RequestId. Default false: Send a normal request and create the instance directly after passing the check.</p>
      */
     public void setDryRun(Boolean DryRun) {
         this.DryRun = DryRun;
     }
 
     /**
-     * Get Financial cage ID. 
-     * @return CageId Financial cage ID.
+     * Get <p>Financial Enclosure ID.</p> 
+     * @return CageId <p>Financial Enclosure ID.</p>
      */
     public String getCageId() {
         return this.CageId;
     }
 
     /**
-     * Set Financial cage ID.
-     * @param CageId Financial cage ID.
+     * Set <p>Financial Enclosure ID.</p>
+     * @param CageId <p>Financial Enclosure ID.</p>
      */
     public void setCageId(String CageId) {
         this.CageId = CageId;
     }
 
     /**
-     * Get Project ID. Default value: 0. 
-     * @return ProjectId Project ID. Default value: 0.
+     * Get <p>Project ID. Default project ID 0.</p> 
+     * @return ProjectId <p>Project ID. Default project ID 0.</p>
      */
     public Long getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set Project ID. Default value: 0.
-     * @param ProjectId Project ID. Default value: 0.
+     * Set <p>Project ID. Default project ID 0.</p>
+     * @param ProjectId <p>Project ID. Default project ID 0.</p>
      */
     public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;
+    }
+
+    /**
+     * Get <p>Payment type. Valid values: PRE_PAID (prepaid, also known as yearly/monthly subscription) and USED_PAID (pay-as-you-go). Default billing mode is pay-as-you-go.</p> 
+     * @return PayType <p>Payment type. Valid values: PRE_PAID (prepaid, also known as yearly/monthly subscription) and USED_PAID (pay-as-you-go). Default billing mode is pay-as-you-go.</p>
+     */
+    public String getPayType() {
+        return this.PayType;
+    }
+
+    /**
+     * Set <p>Payment type. Valid values: PRE_PAID (prepaid, also known as yearly/monthly subscription) and USED_PAID (pay-as-you-go). Default billing mode is pay-as-you-go.</p>
+     * @param PayType <p>Payment type. Valid values: PRE_PAID (prepaid, also known as yearly/monthly subscription) and USED_PAID (pay-as-you-go). Default billing mode is pay-as-you-go.</p>
+     */
+    public void setPayType(String PayType) {
+        this.PayType = PayType;
+    }
+
+    /**
+     * Get <p>Instance duration, required when PayType is PRE_PAID, measurement unit: month, optional values include [1,2,3,4,5,6,7,8,9,10,11,12,24,36].</p> 
+     * @return Period <p>Instance duration, required when PayType is PRE_PAID, measurement unit: month, optional values include [1,2,3,4,5,6,7,8,9,10,11,12,24,36].</p>
+     */
+    public Long getPeriod() {
+        return this.Period;
+    }
+
+    /**
+     * Set <p>Instance duration, required when PayType is PRE_PAID, measurement unit: month, optional values include [1,2,3,4,5,6,7,8,9,10,11,12,24,36].</p>
+     * @param Period <p>Instance duration, required when PayType is PRE_PAID, measurement unit: month, optional values include [1,2,3,4,5,6,7,8,9,10,11,12,24,36].</p>
+     */
+    public void setPeriod(Long Period) {
+        this.Period = Period;
+    }
+
+    /**
+     * Get <p>Topology configuration for cloud disk edition nodes.</p> 
+     * @return ClusterTopology <p>Topology configuration for cloud disk edition nodes.</p>
+     */
+    public ClusterTopology getClusterTopology() {
+        return this.ClusterTopology;
+    }
+
+    /**
+     * Set <p>Topology configuration for cloud disk edition nodes.</p>
+     * @param ClusterTopology <p>Topology configuration for cloud disk edition nodes.</p>
+     */
+    public void setClusterTopology(ClusterTopology ClusterTopology) {
+        this.ClusterTopology = ClusterTopology;
+    }
+
+    /**
+     * Get <p>Original instance region. Required when importing a remote backup, for example: ap-guangzhou</p> 
+     * @return SrcRegion <p>Original instance region. Required when importing a remote backup, for example: ap-guangzhou</p>
+     */
+    public String getSrcRegion() {
+        return this.SrcRegion;
+    }
+
+    /**
+     * Set <p>Original instance region. Required when importing a remote backup, for example: ap-guangzhou</p>
+     * @param SrcRegion <p>Original instance region. Required when importing a remote backup, for example: ap-guangzhou</p>
+     */
+    public void setSrcRegion(String SrcRegion) {
+        this.SrcRegion = SrcRegion;
+    }
+
+    /**
+     * Get <p>Offsite data backup id</p> 
+     * @return SpecifiedSubBackupId <p>Offsite data backup id</p>
+     */
+    public Long getSpecifiedSubBackupId() {
+        return this.SpecifiedSubBackupId;
+    }
+
+    /**
+     * Set <p>Offsite data backup id</p>
+     * @param SpecifiedSubBackupId <p>Offsite data backup id</p>
+     */
+    public void setSpecifiedSubBackupId(Long SpecifiedSubBackupId) {
+        this.SpecifiedSubBackupId = SpecifiedSubBackupId;
+    }
+
+    /**
+     * Get <p>The AZ information of the newly generated clone instance primary database is the same as the source instance Zone by default.</p> 
+     * @return MasterZone <p>The AZ information of the newly generated clone instance primary database is the same as the source instance Zone by default.</p>
+     * @deprecated
+     */
+    @Deprecated
+    public String getMasterZone() {
+        return this.MasterZone;
+    }
+
+    /**
+     * Set <p>The AZ information of the newly generated clone instance primary database is the same as the source instance Zone by default.</p>
+     * @param MasterZone <p>The AZ information of the newly generated clone instance primary database is the same as the source instance Zone by default.</p>
+     * @deprecated
+     */
+    @Deprecated
+    public void setMasterZone(String MasterZone) {
+        this.MasterZone = MasterZone;
+    }
+
+    /**
+     * Get <p>The AZ information of the newly generated clone instance's primary database defaults to the same as the source instance's Zone.</p> 
+     * @return Zone <p>The AZ information of the newly generated clone instance's primary database defaults to the same as the source instance's Zone.</p>
+     */
+    public String getZone() {
+        return this.Zone;
+    }
+
+    /**
+     * Set <p>The AZ information of the newly generated clone instance's primary database defaults to the same as the source instance's Zone.</p>
+     * @param Zone <p>The AZ information of the newly generated clone instance's primary database defaults to the same as the source instance's Zone.</p>
+     */
+    public void setZone(String Zone) {
+        this.Zone = Zone;
+    }
+
+    /**
+     * Get <p>AZ information of standby 3, empty by default. Specify this parameter when you proceed to purchase a four-node primary instance.</p> 
+     * @return FourthZone <p>AZ information of standby 3, empty by default. Specify this parameter when you proceed to purchase a four-node primary instance.</p>
+     */
+    public String getFourthZone() {
+        return this.FourthZone;
+    }
+
+    /**
+     * Set <p>AZ information of standby 3, empty by default. Specify this parameter when you proceed to purchase a four-node primary instance.</p>
+     * @param FourthZone <p>AZ information of standby 3, empty by default. Specify this parameter when you proceed to purchase a four-node primary instance.</p>
+     */
+    public void setFourthZone(String FourthZone) {
+        this.FourthZone = FourthZone;
     }
 
     public CreateCloneInstanceRequest() {
@@ -588,6 +771,30 @@ which is left empty by default. Specify this parameter when cloning a strong syn
         if (source.ProjectId != null) {
             this.ProjectId = new Long(source.ProjectId);
         }
+        if (source.PayType != null) {
+            this.PayType = new String(source.PayType);
+        }
+        if (source.Period != null) {
+            this.Period = new Long(source.Period);
+        }
+        if (source.ClusterTopology != null) {
+            this.ClusterTopology = new ClusterTopology(source.ClusterTopology);
+        }
+        if (source.SrcRegion != null) {
+            this.SrcRegion = new String(source.SrcRegion);
+        }
+        if (source.SpecifiedSubBackupId != null) {
+            this.SpecifiedSubBackupId = new Long(source.SpecifiedSubBackupId);
+        }
+        if (source.MasterZone != null) {
+            this.MasterZone = new String(source.MasterZone);
+        }
+        if (source.Zone != null) {
+            this.Zone = new String(source.Zone);
+        }
+        if (source.FourthZone != null) {
+            this.FourthZone = new String(source.FourthZone);
+        }
     }
 
 
@@ -616,6 +823,14 @@ which is left empty by default. Specify this parameter when cloning a strong syn
         this.setParamSimple(map, prefix + "DryRun", this.DryRun);
         this.setParamSimple(map, prefix + "CageId", this.CageId);
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
+        this.setParamSimple(map, prefix + "PayType", this.PayType);
+        this.setParamSimple(map, prefix + "Period", this.Period);
+        this.setParamObj(map, prefix + "ClusterTopology.", this.ClusterTopology);
+        this.setParamSimple(map, prefix + "SrcRegion", this.SrcRegion);
+        this.setParamSimple(map, prefix + "SpecifiedSubBackupId", this.SpecifiedSubBackupId);
+        this.setParamSimple(map, prefix + "MasterZone", this.MasterZone);
+        this.setParamSimple(map, prefix + "Zone", this.Zone);
+        this.setParamSimple(map, prefix + "FourthZone", this.FourthZone);
 
     }
 }

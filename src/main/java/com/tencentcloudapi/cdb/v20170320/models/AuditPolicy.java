@@ -77,8 +77,7 @@ public class AuditPolicy extends AbstractModel {
     private String RuleId;
 
     /**
-    * Audit rule name
-Note: This field may return `null`, indicating that no valid value was found.
+    * Audit rule name.
     */
     @SerializedName("RuleName")
     @Expose
@@ -86,7 +85,6 @@ Note: This field may return `null`, indicating that no valid value was found.
 
     /**
     * Database instance name
-Note: This field may return `null`, indicating that no valid value was found.
     */
     @SerializedName("InstanceName")
     @Expose
@@ -221,30 +219,24 @@ Note: This field may return `null`, indicating that no valid value was found.
     }
 
     /**
-     * Get Audit rule name
-Note: This field may return `null`, indicating that no valid value was found. 
-     * @return RuleName Audit rule name
-Note: This field may return `null`, indicating that no valid value was found.
+     * Get Audit rule name. 
+     * @return RuleName Audit rule name.
      */
     public String getRuleName() {
         return this.RuleName;
     }
 
     /**
-     * Set Audit rule name
-Note: This field may return `null`, indicating that no valid value was found.
-     * @param RuleName Audit rule name
-Note: This field may return `null`, indicating that no valid value was found.
+     * Set Audit rule name.
+     * @param RuleName Audit rule name.
      */
     public void setRuleName(String RuleName) {
         this.RuleName = RuleName;
     }
 
     /**
-     * Get Database instance name
-Note: This field may return `null`, indicating that no valid value was found. 
+     * Get Database instance name 
      * @return InstanceName Database instance name
-Note: This field may return `null`, indicating that no valid value was found.
      */
     public String getInstanceName() {
         return this.InstanceName;
@@ -252,9 +244,7 @@ Note: This field may return `null`, indicating that no valid value was found.
 
     /**
      * Set Database instance name
-Note: This field may return `null`, indicating that no valid value was found.
      * @param InstanceName Database instance name
-Note: This field may return `null`, indicating that no valid value was found.
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;

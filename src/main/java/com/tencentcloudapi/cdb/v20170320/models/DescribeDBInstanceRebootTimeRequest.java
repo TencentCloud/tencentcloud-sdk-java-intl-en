@@ -24,23 +24,48 @@ import java.util.HashMap;
 public class DescribeDBInstanceRebootTimeRequest extends AbstractModel {
 
     /**
-    * Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
+    * Instance ID, in the format such as cdb-c1nl9rpv. This matches the instance ID displayed on the TencentDB console.
+Description: Multiple instance IDs allowed for query. json format as follows.
+[
+    "cdb-30z11v8s",
+    "cdb-93h11efg"
+  ]
     */
     @SerializedName("InstanceIds")
     @Expose
     private String [] InstanceIds;
 
     /**
-     * Get Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page. 
-     * @return InstanceIds Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
+     * Get Instance ID, in the format such as cdb-c1nl9rpv. This matches the instance ID displayed on the TencentDB console.
+Description: Multiple instance IDs allowed for query. json format as follows.
+[
+    "cdb-30z11v8s",
+    "cdb-93h11efg"
+  ] 
+     * @return InstanceIds Instance ID, in the format such as cdb-c1nl9rpv. This matches the instance ID displayed on the TencentDB console.
+Description: Multiple instance IDs allowed for query. json format as follows.
+[
+    "cdb-30z11v8s",
+    "cdb-93h11efg"
+  ]
      */
     public String [] getInstanceIds() {
         return this.InstanceIds;
     }
 
     /**
-     * Set Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
-     * @param InstanceIds Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
+     * Set Instance ID, in the format such as cdb-c1nl9rpv. This matches the instance ID displayed on the TencentDB console.
+Description: Multiple instance IDs allowed for query. json format as follows.
+[
+    "cdb-30z11v8s",
+    "cdb-93h11efg"
+  ]
+     * @param InstanceIds Instance ID, in the format such as cdb-c1nl9rpv. This matches the instance ID displayed on the TencentDB console.
+Description: Multiple instance IDs allowed for query. json format as follows.
+[
+    "cdb-30z11v8s",
+    "cdb-93h11efg"
+  ]
      */
     public void setInstanceIds(String [] InstanceIds) {
         this.InstanceIds = InstanceIds;

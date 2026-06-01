@@ -25,25 +25,21 @@ public class RollbackTables extends AbstractModel {
 
     /**
     * Database name
-Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Database")
     @Expose
     private String Database;
 
     /**
-    * Table details
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Database table details
     */
     @SerializedName("Table")
     @Expose
     private RollbackTableName [] Table;
 
     /**
-     * Get Database name
-Note: this field may return null, indicating that no valid values can be obtained. 
+     * Get Database name 
      * @return Database Database name
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getDatabase() {
         return this.Database;
@@ -51,29 +47,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Database name
-Note: this field may return null, indicating that no valid values can be obtained.
      * @param Database Database name
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setDatabase(String Database) {
         this.Database = Database;
     }
 
     /**
-     * Get Table details
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return Table Table details
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Database table details 
+     * @return Table Database table details
      */
     public RollbackTableName [] getTable() {
         return this.Table;
     }
 
     /**
-     * Set Table details
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Table Table details
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Database table details
+     * @param Table Database table details
      */
     public void setTable(RollbackTableName [] Table) {
         this.Table = Table;

@@ -24,164 +24,210 @@ import java.util.HashMap;
 public class ProxyInst extends AbstractModel {
 
     /**
-    * Instance ID Note: This field may return null, indicating that no valid values can be obtained.
+    * Instance ID.
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Instance name Note: This field may return null, indicating that no valid values can be obtained.
+    * Instance name.
     */
     @SerializedName("InstanceName")
     @Expose
     private String InstanceName;
 
     /**
-    * Instance type. Valid values:  `master` (source instance), `ro` (read-only instance), `dr` (disaster recovery instance), `sdr` (disaster recovery instance of small specifications). Note: This field may return null, indicating that no valid values can be obtained.
+    * Instance type: 1 master primary instance; 2 read-only instance; 3 dr disaster recovery instance; 4 sdr (small disaster recovery) instance
     */
     @SerializedName("InstanceType")
     @Expose
     private Long InstanceType;
 
     /**
-    * Instance status. Valid values:  `0` (creating), `1` (running), `4` (isolating), `5` (isolated). Note: This field may return null, indicating that no valid values can be obtained.
+    * Instance status. Valid values: 0: creating; 1: running; 4: isolation; 5: isolated.
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * Read weight. If it is assigned by the system automatically, the modification will not take effect but represents whether the instance is enabled. Note: This field may return null, indicating that no valid values can be obtained.
+    * Read-only weight. If the weight is automatically assigned by the system, this value does not take effect and only indicates whether the instance is enabled or not.
     */
     @SerializedName("Weight")
     @Expose
     private Long Weight;
 
     /**
-    * Instance region Note: This field may return null, indicating that no valid values can be obtained.
+    * Instance region
     */
     @SerializedName("Region")
     @Expose
     private String Region;
 
     /**
-    * Instance AZ Note: This field may return null, indicating that no valid values can be obtained.
+    * Availability zone to which the instance belongs
     */
     @SerializedName("Zone")
     @Expose
     private String Zone;
 
     /**
-     * Get Instance ID Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return InstanceId Instance ID Note: This field may return null, indicating that no valid values can be obtained.
+    * Instance Node ID
+    */
+    @SerializedName("InstNodeId")
+    @Expose
+    private String InstNodeId;
+
+    /**
+    * Node role
+    */
+    @SerializedName("InstNodeRole")
+    @Expose
+    private String InstNodeRole;
+
+    /**
+     * Get Instance ID. 
+     * @return InstanceId Instance ID.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Instance ID Note: This field may return null, indicating that no valid values can be obtained.
-     * @param InstanceId Instance ID Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Instance ID.
+     * @param InstanceId Instance ID.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Instance name Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return InstanceName Instance name Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Instance name. 
+     * @return InstanceName Instance name.
      */
     public String getInstanceName() {
         return this.InstanceName;
     }
 
     /**
-     * Set Instance name Note: This field may return null, indicating that no valid values can be obtained.
-     * @param InstanceName Instance name Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Instance name.
+     * @param InstanceName Instance name.
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;
     }
 
     /**
-     * Get Instance type. Valid values:  `master` (source instance), `ro` (read-only instance), `dr` (disaster recovery instance), `sdr` (disaster recovery instance of small specifications). Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return InstanceType Instance type. Valid values:  `master` (source instance), `ro` (read-only instance), `dr` (disaster recovery instance), `sdr` (disaster recovery instance of small specifications). Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Instance type: 1 master primary instance; 2 read-only instance; 3 dr disaster recovery instance; 4 sdr (small disaster recovery) instance 
+     * @return InstanceType Instance type: 1 master primary instance; 2 read-only instance; 3 dr disaster recovery instance; 4 sdr (small disaster recovery) instance
      */
     public Long getInstanceType() {
         return this.InstanceType;
     }
 
     /**
-     * Set Instance type. Valid values:  `master` (source instance), `ro` (read-only instance), `dr` (disaster recovery instance), `sdr` (disaster recovery instance of small specifications). Note: This field may return null, indicating that no valid values can be obtained.
-     * @param InstanceType Instance type. Valid values:  `master` (source instance), `ro` (read-only instance), `dr` (disaster recovery instance), `sdr` (disaster recovery instance of small specifications). Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Instance type: 1 master primary instance; 2 read-only instance; 3 dr disaster recovery instance; 4 sdr (small disaster recovery) instance
+     * @param InstanceType Instance type: 1 master primary instance; 2 read-only instance; 3 dr disaster recovery instance; 4 sdr (small disaster recovery) instance
      */
     public void setInstanceType(Long InstanceType) {
         this.InstanceType = InstanceType;
     }
 
     /**
-     * Get Instance status. Valid values:  `0` (creating), `1` (running), `4` (isolating), `5` (isolated). Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Status Instance status. Valid values:  `0` (creating), `1` (running), `4` (isolating), `5` (isolated). Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Instance status. Valid values: 0: creating; 1: running; 4: isolation; 5: isolated. 
+     * @return Status Instance status. Valid values: 0: creating; 1: running; 4: isolation; 5: isolated.
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Instance status. Valid values:  `0` (creating), `1` (running), `4` (isolating), `5` (isolated). Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Status Instance status. Valid values:  `0` (creating), `1` (running), `4` (isolating), `5` (isolated). Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Instance status. Valid values: 0: creating; 1: running; 4: isolation; 5: isolated.
+     * @param Status Instance status. Valid values: 0: creating; 1: running; 4: isolation; 5: isolated.
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get Read weight. If it is assigned by the system automatically, the modification will not take effect but represents whether the instance is enabled. Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Weight Read weight. If it is assigned by the system automatically, the modification will not take effect but represents whether the instance is enabled. Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Read-only weight. If the weight is automatically assigned by the system, this value does not take effect and only indicates whether the instance is enabled or not. 
+     * @return Weight Read-only weight. If the weight is automatically assigned by the system, this value does not take effect and only indicates whether the instance is enabled or not.
      */
     public Long getWeight() {
         return this.Weight;
     }
 
     /**
-     * Set Read weight. If it is assigned by the system automatically, the modification will not take effect but represents whether the instance is enabled. Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Weight Read weight. If it is assigned by the system automatically, the modification will not take effect but represents whether the instance is enabled. Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Read-only weight. If the weight is automatically assigned by the system, this value does not take effect and only indicates whether the instance is enabled or not.
+     * @param Weight Read-only weight. If the weight is automatically assigned by the system, this value does not take effect and only indicates whether the instance is enabled or not.
      */
     public void setWeight(Long Weight) {
         this.Weight = Weight;
     }
 
     /**
-     * Get Instance region Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Region Instance region Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Instance region 
+     * @return Region Instance region
      */
     public String getRegion() {
         return this.Region;
     }
 
     /**
-     * Set Instance region Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Region Instance region Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Instance region
+     * @param Region Instance region
      */
     public void setRegion(String Region) {
         this.Region = Region;
     }
 
     /**
-     * Get Instance AZ Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Zone Instance AZ Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Availability zone to which the instance belongs 
+     * @return Zone Availability zone to which the instance belongs
      */
     public String getZone() {
         return this.Zone;
     }
 
     /**
-     * Set Instance AZ Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Zone Instance AZ Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Availability zone to which the instance belongs
+     * @param Zone Availability zone to which the instance belongs
      */
     public void setZone(String Zone) {
         this.Zone = Zone;
+    }
+
+    /**
+     * Get Instance Node ID 
+     * @return InstNodeId Instance Node ID
+     */
+    public String getInstNodeId() {
+        return this.InstNodeId;
+    }
+
+    /**
+     * Set Instance Node ID
+     * @param InstNodeId Instance Node ID
+     */
+    public void setInstNodeId(String InstNodeId) {
+        this.InstNodeId = InstNodeId;
+    }
+
+    /**
+     * Get Node role 
+     * @return InstNodeRole Node role
+     */
+    public String getInstNodeRole() {
+        return this.InstNodeRole;
+    }
+
+    /**
+     * Set Node role
+     * @param InstNodeRole Node role
+     */
+    public void setInstNodeRole(String InstNodeRole) {
+        this.InstNodeRole = InstNodeRole;
     }
 
     public ProxyInst() {
@@ -213,6 +259,12 @@ public class ProxyInst extends AbstractModel {
         if (source.Zone != null) {
             this.Zone = new String(source.Zone);
         }
+        if (source.InstNodeId != null) {
+            this.InstNodeId = new String(source.InstNodeId);
+        }
+        if (source.InstNodeRole != null) {
+            this.InstNodeRole = new String(source.InstNodeRole);
+        }
     }
 
 
@@ -227,6 +279,8 @@ public class ProxyInst extends AbstractModel {
         this.setParamSimple(map, prefix + "Weight", this.Weight);
         this.setParamSimple(map, prefix + "Region", this.Region);
         this.setParamSimple(map, prefix + "Zone", this.Zone);
+        this.setParamSimple(map, prefix + "InstNodeId", this.InstNodeId);
+        this.setParamSimple(map, prefix + "InstNodeRole", this.InstNodeRole);
 
     }
 }

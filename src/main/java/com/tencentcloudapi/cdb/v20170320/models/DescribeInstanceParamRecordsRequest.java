@@ -38,7 +38,7 @@ public class DescribeInstanceParamRecordsRequest extends AbstractModel {
     private Long Offset;
 
     /**
-    * Number of entries per page. Default value: 20.
+    * Page size. Default value: 20. Maximum value: 100.
     */
     @SerializedName("Limit")
     @Expose
@@ -77,16 +77,16 @@ public class DescribeInstanceParamRecordsRequest extends AbstractModel {
     }
 
     /**
-     * Get Number of entries per page. Default value: 20. 
-     * @return Limit Number of entries per page. Default value: 20.
+     * Get Page size. Default value: 20. Maximum value: 100. 
+     * @return Limit Page size. Default value: 20. Maximum value: 100.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Number of entries per page. Default value: 20.
-     * @param Limit Number of entries per page. Default value: 20.
+     * Set Page size. Default value: 20. Maximum value: 100.
+     * @param Limit Page size. Default value: 20. Maximum value: 100.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

@@ -52,24 +52,21 @@ public class DescribeBackupOverviewResponse extends AbstractModel {
     private Long FreeVolume;
 
     /**
-    * Total capacity of backups of a user in the current region
-Note: This field may return null, indicating that no valid value can be obtained.
+    * Total offsite backup capacity of the user in current region.
     */
     @SerializedName("RemoteBackupVolume")
     @Expose
     private Long RemoteBackupVolume;
 
     /**
-    * Archive backup capacity, which includes data backups and log backups.
-Note: This field may return null, indicating that no valid value can be obtained.
+    * Archive backup capacity, including data backup and log backup.
     */
     @SerializedName("BackupArchiveVolume")
     @Expose
     private Long BackupArchiveVolume;
 
     /**
-    * Backup capacity of standard storage, which includes data backups and log backups.
-Note: This field may return null, indicating that no valid value can be obtained.
+    * Standard storage backup capacity includes data backup and log backup.
     */
     @SerializedName("BackupStandbyVolume")
     @Expose
@@ -147,60 +144,48 @@ Note: This field may return null, indicating that no valid value can be obtained
     }
 
     /**
-     * Get Total capacity of backups of a user in the current region
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return RemoteBackupVolume Total capacity of backups of a user in the current region
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get Total offsite backup capacity of the user in current region. 
+     * @return RemoteBackupVolume Total offsite backup capacity of the user in current region.
      */
     public Long getRemoteBackupVolume() {
         return this.RemoteBackupVolume;
     }
 
     /**
-     * Set Total capacity of backups of a user in the current region
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param RemoteBackupVolume Total capacity of backups of a user in the current region
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set Total offsite backup capacity of the user in current region.
+     * @param RemoteBackupVolume Total offsite backup capacity of the user in current region.
      */
     public void setRemoteBackupVolume(Long RemoteBackupVolume) {
         this.RemoteBackupVolume = RemoteBackupVolume;
     }
 
     /**
-     * Get Archive backup capacity, which includes data backups and log backups.
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return BackupArchiveVolume Archive backup capacity, which includes data backups and log backups.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get Archive backup capacity, including data backup and log backup. 
+     * @return BackupArchiveVolume Archive backup capacity, including data backup and log backup.
      */
     public Long getBackupArchiveVolume() {
         return this.BackupArchiveVolume;
     }
 
     /**
-     * Set Archive backup capacity, which includes data backups and log backups.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param BackupArchiveVolume Archive backup capacity, which includes data backups and log backups.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set Archive backup capacity, including data backup and log backup.
+     * @param BackupArchiveVolume Archive backup capacity, including data backup and log backup.
      */
     public void setBackupArchiveVolume(Long BackupArchiveVolume) {
         this.BackupArchiveVolume = BackupArchiveVolume;
     }
 
     /**
-     * Get Backup capacity of standard storage, which includes data backups and log backups.
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return BackupStandbyVolume Backup capacity of standard storage, which includes data backups and log backups.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get Standard storage backup capacity includes data backup and log backup. 
+     * @return BackupStandbyVolume Standard storage backup capacity includes data backup and log backup.
      */
     public Long getBackupStandbyVolume() {
         return this.BackupStandbyVolume;
     }
 
     /**
-     * Set Backup capacity of standard storage, which includes data backups and log backups.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param BackupStandbyVolume Backup capacity of standard storage, which includes data backups and log backups.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set Standard storage backup capacity includes data backup and log backup.
+     * @param BackupStandbyVolume Standard storage backup capacity includes data backup and log backup.
      */
     public void setBackupStandbyVolume(Long BackupStandbyVolume) {
         this.BackupStandbyVolume = BackupStandbyVolume;

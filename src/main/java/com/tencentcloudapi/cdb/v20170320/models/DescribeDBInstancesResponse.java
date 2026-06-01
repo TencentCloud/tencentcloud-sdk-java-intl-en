@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeDBInstancesResponse extends AbstractModel {
 
     /**
-    * Number of eligible instances.
+    * <p>Total number of eligible instances.</p>
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * List of instance details
+    * <p>Instance detail list.</p>
     */
     @SerializedName("Items")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeDBInstancesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Number of eligible instances. 
-     * @return TotalCount Number of eligible instances.
+     * Get <p>Total number of eligible instances.</p> 
+     * @return TotalCount <p>Total number of eligible instances.</p>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set Number of eligible instances.
-     * @param TotalCount Number of eligible instances.
+     * Set <p>Total number of eligible instances.</p>
+     * @param TotalCount <p>Total number of eligible instances.</p>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get List of instance details 
-     * @return Items List of instance details
+     * Get <p>Instance detail list.</p> 
+     * @return Items <p>Instance detail list.</p>
      */
     public InstanceInfo [] getItems() {
         return this.Items;
     }
 
     /**
-     * Set List of instance details
-     * @param Items List of instance details
+     * Set <p>Instance detail list.</p>
+     * @param Items <p>Instance detail list.</p>
      */
     public void setItems(InstanceInfo [] Items) {
         this.Items = Items;

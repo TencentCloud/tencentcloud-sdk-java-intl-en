@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class ModifyInstanceTagRequest extends AbstractModel {
 
     /**
-    * Instance ID.
+    * Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Tag to be added or modified.
+    * Tags to add or modify. ReplaceTags or DeleteTags is mandatory to fill in one.
     */
     @SerializedName("ReplaceTags")
     @Expose
     private TagInfo [] ReplaceTags;
 
     /**
-    * Tag to be deleted.
+    * Tag to delete. ReplaceTags or DeleteTags is mandatory to fill in one.
     */
     @SerializedName("DeleteTags")
     @Expose
     private TagInfo [] DeleteTags;
 
     /**
-     * Get Instance ID. 
-     * @return InstanceId Instance ID.
+     * Get Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API. 
+     * @return InstanceId Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Instance ID.
-     * @param InstanceId Instance ID.
+     * Set Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
+     * @param InstanceId Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Tag to be added or modified. 
-     * @return ReplaceTags Tag to be added or modified.
+     * Get Tags to add or modify. ReplaceTags or DeleteTags is mandatory to fill in one. 
+     * @return ReplaceTags Tags to add or modify. ReplaceTags or DeleteTags is mandatory to fill in one.
      */
     public TagInfo [] getReplaceTags() {
         return this.ReplaceTags;
     }
 
     /**
-     * Set Tag to be added or modified.
-     * @param ReplaceTags Tag to be added or modified.
+     * Set Tags to add or modify. ReplaceTags or DeleteTags is mandatory to fill in one.
+     * @param ReplaceTags Tags to add or modify. ReplaceTags or DeleteTags is mandatory to fill in one.
      */
     public void setReplaceTags(TagInfo [] ReplaceTags) {
         this.ReplaceTags = ReplaceTags;
     }
 
     /**
-     * Get Tag to be deleted. 
-     * @return DeleteTags Tag to be deleted.
+     * Get Tag to delete. ReplaceTags or DeleteTags is mandatory to fill in one. 
+     * @return DeleteTags Tag to delete. ReplaceTags or DeleteTags is mandatory to fill in one.
      */
     public TagInfo [] getDeleteTags() {
         return this.DeleteTags;
     }
 
     /**
-     * Set Tag to be deleted.
-     * @param DeleteTags Tag to be deleted.
+     * Set Tag to delete. ReplaceTags or DeleteTags is mandatory to fill in one.
+     * @param DeleteTags Tag to delete. ReplaceTags or DeleteTags is mandatory to fill in one.
      */
     public void setDeleteTags(TagInfo [] DeleteTags) {
         this.DeleteTags = DeleteTags;

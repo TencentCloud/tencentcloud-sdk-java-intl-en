@@ -24,28 +24,28 @@ import java.util.HashMap;
 public class DescribeErrorLogDataRequest extends AbstractModel {
 
     /**
-    * Instance ID.
+    * Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Start timestamp, such as 1585142640.
+    * Start timestamp. For example, 1585142640, in seconds.
     */
     @SerializedName("StartTime")
     @Expose
     private Long StartTime;
 
     /**
-    * End timestamp, such as 1585142640.
+    * End timestamp. For example, 1585142640, in seconds.
     */
     @SerializedName("EndTime")
     @Expose
     private Long EndTime;
 
     /**
-    * List of keywords to match. Up to 15 keywords are supported.
+    * Keyword list to match, supports up to 15 keywords with fuzzy matching support.
     */
     @SerializedName("KeyWords")
     @Expose
@@ -73,64 +73,64 @@ public class DescribeErrorLogDataRequest extends AbstractModel {
     private String InstType;
 
     /**
-     * Get Instance ID. 
-     * @return InstanceId Instance ID.
+     * Get Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API. 
+     * @return InstanceId Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Instance ID.
-     * @param InstanceId Instance ID.
+     * Set Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
+     * @param InstanceId Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Start timestamp, such as 1585142640. 
-     * @return StartTime Start timestamp, such as 1585142640.
+     * Get Start timestamp. For example, 1585142640, in seconds. 
+     * @return StartTime Start timestamp. For example, 1585142640, in seconds.
      */
     public Long getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set Start timestamp, such as 1585142640.
-     * @param StartTime Start timestamp, such as 1585142640.
+     * Set Start timestamp. For example, 1585142640, in seconds.
+     * @param StartTime Start timestamp. For example, 1585142640, in seconds.
      */
     public void setStartTime(Long StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get End timestamp, such as 1585142640. 
-     * @return EndTime End timestamp, such as 1585142640.
+     * Get End timestamp. For example, 1585142640, in seconds. 
+     * @return EndTime End timestamp. For example, 1585142640, in seconds.
      */
     public Long getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set End timestamp, such as 1585142640.
-     * @param EndTime End timestamp, such as 1585142640.
+     * Set End timestamp. For example, 1585142640, in seconds.
+     * @param EndTime End timestamp. For example, 1585142640, in seconds.
      */
     public void setEndTime(Long EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get List of keywords to match. Up to 15 keywords are supported. 
-     * @return KeyWords List of keywords to match. Up to 15 keywords are supported.
+     * Get Keyword list to match, supports up to 15 keywords with fuzzy matching support. 
+     * @return KeyWords Keyword list to match, supports up to 15 keywords with fuzzy matching support.
      */
     public String [] getKeyWords() {
         return this.KeyWords;
     }
 
     /**
-     * Set List of keywords to match. Up to 15 keywords are supported.
-     * @param KeyWords List of keywords to match. Up to 15 keywords are supported.
+     * Set Keyword list to match, supports up to 15 keywords with fuzzy matching support.
+     * @param KeyWords Keyword list to match, supports up to 15 keywords with fuzzy matching support.
      */
     public void setKeyWords(String [] KeyWords) {
         this.KeyWords = KeyWords;

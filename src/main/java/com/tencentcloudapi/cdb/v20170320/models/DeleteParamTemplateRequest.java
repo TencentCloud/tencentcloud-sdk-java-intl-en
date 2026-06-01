@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DeleteParamTemplateRequest extends AbstractModel {
 
     /**
-    * Parameter template ID.
+    * Parameter template ID, which can be obtained through the API [DescribeParamTemplates](https://www.tencentcloud.com/document/api/236/32659?from_cn_redirect=1).
     */
     @SerializedName("TemplateId")
     @Expose
     private Long TemplateId;
 
     /**
-     * Get Parameter template ID. 
-     * @return TemplateId Parameter template ID.
+     * Get Parameter template ID, which can be obtained through the API [DescribeParamTemplates](https://www.tencentcloud.com/document/api/236/32659?from_cn_redirect=1). 
+     * @return TemplateId Parameter template ID, which can be obtained through the API [DescribeParamTemplates](https://www.tencentcloud.com/document/api/236/32659?from_cn_redirect=1).
      */
     public Long getTemplateId() {
         return this.TemplateId;
     }
 
     /**
-     * Set Parameter template ID.
-     * @param TemplateId Parameter template ID.
+     * Set Parameter template ID, which can be obtained through the API [DescribeParamTemplates](https://www.tencentcloud.com/document/api/236/32659?from_cn_redirect=1).
+     * @param TemplateId Parameter template ID, which can be obtained through the API [DescribeParamTemplates](https://www.tencentcloud.com/document/api/236/32659?from_cn_redirect=1).
      */
     public void setTemplateId(Long TemplateId) {
         this.TemplateId = TemplateId;

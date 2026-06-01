@@ -38,19 +38,26 @@ public class CreateBackupRequest extends AbstractModel {
     private String BackupMethod;
 
     /**
-    * Information of the table to be backed up. If this parameter is not set, the entire instance will be backed up by default. It can be set only in logical backup (i.e., BackupMethod = logical). The specified table must exist; otherwise, backup may fail.
-For example, if you want to backup tb1 and tb2 in db1 and the entire db2, you should set the parameter as [{"Db": "db1", "Table": "tb1"}, {"Db": "db1", "Table": "tb2"}, {"Db": "db2"} ].
+    * Database table information to be backed up. If this parameter is not set, the whole instance is backed up by default. This parameter can only be set when BackupMethod=logical. The specified database and tables must exist. Otherwise, backup may fail.
+If necessary to back up tables tb1 and tb2 in database db1 and database db2, configure the parameter as [{"Db": "db1", "Table": "tb1"}, {"Db": "db1", "Table": "tb2"}, {"Db": "db2"}].
     */
     @SerializedName("BackupDBTableList")
     @Expose
     private BackupItem [] BackupDBTableList;
 
     /**
-    * Manual backup alias
+    * Manually back up the alias. Keep the input length within 60 characters.
     */
     @SerializedName("ManualBackupName")
     @Expose
     private String ManualBackupName;
+
+    /**
+    * Whether the physical backup needs encryption, optional values: on - yes, off - no. This value is meaningful only when BackupMethod is physical. If not specified, use the default encryption policy of instance backup. Here, the default encryption policy refers to the current instance encryption policy queried via the api for the query [DescribeBackupEncryptionStatus](https://www.tencentcloud.com/document/product/236/86508?from_cn_redirect=1).
+    */
+    @SerializedName("EncryptionFlag")
+    @Expose
+    private String EncryptionFlag;
 
     /**
      * Get Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page. 
@@ -85,39 +92,55 @@ For example, if you want to backup tb1 and tb2 in db1 and the entire db2, you sh
     }
 
     /**
-     * Get Information of the table to be backed up. If this parameter is not set, the entire instance will be backed up by default. It can be set only in logical backup (i.e., BackupMethod = logical). The specified table must exist; otherwise, backup may fail.
-For example, if you want to backup tb1 and tb2 in db1 and the entire db2, you should set the parameter as [{"Db": "db1", "Table": "tb1"}, {"Db": "db1", "Table": "tb2"}, {"Db": "db2"} ]. 
-     * @return BackupDBTableList Information of the table to be backed up. If this parameter is not set, the entire instance will be backed up by default. It can be set only in logical backup (i.e., BackupMethod = logical). The specified table must exist; otherwise, backup may fail.
-For example, if you want to backup tb1 and tb2 in db1 and the entire db2, you should set the parameter as [{"Db": "db1", "Table": "tb1"}, {"Db": "db1", "Table": "tb2"}, {"Db": "db2"} ].
+     * Get Database table information to be backed up. If this parameter is not set, the whole instance is backed up by default. This parameter can only be set when BackupMethod=logical. The specified database and tables must exist. Otherwise, backup may fail.
+If necessary to back up tables tb1 and tb2 in database db1 and database db2, configure the parameter as [{"Db": "db1", "Table": "tb1"}, {"Db": "db1", "Table": "tb2"}, {"Db": "db2"}]. 
+     * @return BackupDBTableList Database table information to be backed up. If this parameter is not set, the whole instance is backed up by default. This parameter can only be set when BackupMethod=logical. The specified database and tables must exist. Otherwise, backup may fail.
+If necessary to back up tables tb1 and tb2 in database db1 and database db2, configure the parameter as [{"Db": "db1", "Table": "tb1"}, {"Db": "db1", "Table": "tb2"}, {"Db": "db2"}].
      */
     public BackupItem [] getBackupDBTableList() {
         return this.BackupDBTableList;
     }
 
     /**
-     * Set Information of the table to be backed up. If this parameter is not set, the entire instance will be backed up by default. It can be set only in logical backup (i.e., BackupMethod = logical). The specified table must exist; otherwise, backup may fail.
-For example, if you want to backup tb1 and tb2 in db1 and the entire db2, you should set the parameter as [{"Db": "db1", "Table": "tb1"}, {"Db": "db1", "Table": "tb2"}, {"Db": "db2"} ].
-     * @param BackupDBTableList Information of the table to be backed up. If this parameter is not set, the entire instance will be backed up by default. It can be set only in logical backup (i.e., BackupMethod = logical). The specified table must exist; otherwise, backup may fail.
-For example, if you want to backup tb1 and tb2 in db1 and the entire db2, you should set the parameter as [{"Db": "db1", "Table": "tb1"}, {"Db": "db1", "Table": "tb2"}, {"Db": "db2"} ].
+     * Set Database table information to be backed up. If this parameter is not set, the whole instance is backed up by default. This parameter can only be set when BackupMethod=logical. The specified database and tables must exist. Otherwise, backup may fail.
+If necessary to back up tables tb1 and tb2 in database db1 and database db2, configure the parameter as [{"Db": "db1", "Table": "tb1"}, {"Db": "db1", "Table": "tb2"}, {"Db": "db2"}].
+     * @param BackupDBTableList Database table information to be backed up. If this parameter is not set, the whole instance is backed up by default. This parameter can only be set when BackupMethod=logical. The specified database and tables must exist. Otherwise, backup may fail.
+If necessary to back up tables tb1 and tb2 in database db1 and database db2, configure the parameter as [{"Db": "db1", "Table": "tb1"}, {"Db": "db1", "Table": "tb2"}, {"Db": "db2"}].
      */
     public void setBackupDBTableList(BackupItem [] BackupDBTableList) {
         this.BackupDBTableList = BackupDBTableList;
     }
 
     /**
-     * Get Manual backup alias 
-     * @return ManualBackupName Manual backup alias
+     * Get Manually back up the alias. Keep the input length within 60 characters. 
+     * @return ManualBackupName Manually back up the alias. Keep the input length within 60 characters.
      */
     public String getManualBackupName() {
         return this.ManualBackupName;
     }
 
     /**
-     * Set Manual backup alias
-     * @param ManualBackupName Manual backup alias
+     * Set Manually back up the alias. Keep the input length within 60 characters.
+     * @param ManualBackupName Manually back up the alias. Keep the input length within 60 characters.
      */
     public void setManualBackupName(String ManualBackupName) {
         this.ManualBackupName = ManualBackupName;
+    }
+
+    /**
+     * Get Whether the physical backup needs encryption, optional values: on - yes, off - no. This value is meaningful only when BackupMethod is physical. If not specified, use the default encryption policy of instance backup. Here, the default encryption policy refers to the current instance encryption policy queried via the api for the query [DescribeBackupEncryptionStatus](https://www.tencentcloud.com/document/product/236/86508?from_cn_redirect=1). 
+     * @return EncryptionFlag Whether the physical backup needs encryption, optional values: on - yes, off - no. This value is meaningful only when BackupMethod is physical. If not specified, use the default encryption policy of instance backup. Here, the default encryption policy refers to the current instance encryption policy queried via the api for the query [DescribeBackupEncryptionStatus](https://www.tencentcloud.com/document/product/236/86508?from_cn_redirect=1).
+     */
+    public String getEncryptionFlag() {
+        return this.EncryptionFlag;
+    }
+
+    /**
+     * Set Whether the physical backup needs encryption, optional values: on - yes, off - no. This value is meaningful only when BackupMethod is physical. If not specified, use the default encryption policy of instance backup. Here, the default encryption policy refers to the current instance encryption policy queried via the api for the query [DescribeBackupEncryptionStatus](https://www.tencentcloud.com/document/product/236/86508?from_cn_redirect=1).
+     * @param EncryptionFlag Whether the physical backup needs encryption, optional values: on - yes, off - no. This value is meaningful only when BackupMethod is physical. If not specified, use the default encryption policy of instance backup. Here, the default encryption policy refers to the current instance encryption policy queried via the api for the query [DescribeBackupEncryptionStatus](https://www.tencentcloud.com/document/product/236/86508?from_cn_redirect=1).
+     */
+    public void setEncryptionFlag(String EncryptionFlag) {
+        this.EncryptionFlag = EncryptionFlag;
     }
 
     public CreateBackupRequest() {
@@ -143,6 +166,9 @@ For example, if you want to backup tb1 and tb2 in db1 and the entire db2, you sh
         if (source.ManualBackupName != null) {
             this.ManualBackupName = new String(source.ManualBackupName);
         }
+        if (source.EncryptionFlag != null) {
+            this.EncryptionFlag = new String(source.EncryptionFlag);
+        }
     }
 
 
@@ -154,6 +180,7 @@ For example, if you want to backup tb1 and tb2 in db1 and the entire db2, you sh
         this.setParamSimple(map, prefix + "BackupMethod", this.BackupMethod);
         this.setParamArrayObj(map, prefix + "BackupDBTableList.", this.BackupDBTableList);
         this.setParamSimple(map, prefix + "ManualBackupName", this.ManualBackupName);
+        this.setParamSimple(map, prefix + "EncryptionFlag", this.EncryptionFlag);
 
     }
 }

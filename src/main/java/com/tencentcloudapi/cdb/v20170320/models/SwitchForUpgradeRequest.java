@@ -31,6 +31,13 @@ public class SwitchForUpgradeRequest extends AbstractModel {
     private String InstanceId;
 
     /**
+    * Whether to enable association switchover. Enable for true and shutdown for false. Default false.
+    */
+    @SerializedName("IsRelatedSwitch")
+    @Expose
+    private Boolean IsRelatedSwitch;
+
+    /**
      * Get Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page. 
      * @return InstanceId Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
      */
@@ -46,6 +53,22 @@ public class SwitchForUpgradeRequest extends AbstractModel {
         this.InstanceId = InstanceId;
     }
 
+    /**
+     * Get Whether to enable association switchover. Enable for true and shutdown for false. Default false. 
+     * @return IsRelatedSwitch Whether to enable association switchover. Enable for true and shutdown for false. Default false.
+     */
+    public Boolean getIsRelatedSwitch() {
+        return this.IsRelatedSwitch;
+    }
+
+    /**
+     * Set Whether to enable association switchover. Enable for true and shutdown for false. Default false.
+     * @param IsRelatedSwitch Whether to enable association switchover. Enable for true and shutdown for false. Default false.
+     */
+    public void setIsRelatedSwitch(Boolean IsRelatedSwitch) {
+        this.IsRelatedSwitch = IsRelatedSwitch;
+    }
+
     public SwitchForUpgradeRequest() {
     }
 
@@ -57,6 +80,9 @@ public class SwitchForUpgradeRequest extends AbstractModel {
         if (source.InstanceId != null) {
             this.InstanceId = new String(source.InstanceId);
         }
+        if (source.IsRelatedSwitch != null) {
+            this.IsRelatedSwitch = new Boolean(source.IsRelatedSwitch);
+        }
     }
 
 
@@ -65,6 +91,7 @@ public class SwitchForUpgradeRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
+        this.setParamSimple(map, prefix + "IsRelatedSwitch", this.IsRelatedSwitch);
 
     }
 }

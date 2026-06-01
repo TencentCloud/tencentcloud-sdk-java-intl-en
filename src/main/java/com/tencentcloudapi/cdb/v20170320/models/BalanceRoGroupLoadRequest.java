@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class BalanceRoGroupLoadRequest extends AbstractModel {
 
     /**
-    * RO group ID in the format of `cdbrg-c1nl9rpv`.
+    * ID of the RO group, in the format of cdbrg-c1nl9rpv. You can obtain it via [DescribeRoGroups](https://www.tencentcloud.com/document/api/236/40939?from_cn_redirect=1).
     */
     @SerializedName("RoGroupId")
     @Expose
     private String RoGroupId;
 
     /**
-     * Get RO group ID in the format of `cdbrg-c1nl9rpv`. 
-     * @return RoGroupId RO group ID in the format of `cdbrg-c1nl9rpv`.
+     * Get ID of the RO group, in the format of cdbrg-c1nl9rpv. You can obtain it via [DescribeRoGroups](https://www.tencentcloud.com/document/api/236/40939?from_cn_redirect=1). 
+     * @return RoGroupId ID of the RO group, in the format of cdbrg-c1nl9rpv. You can obtain it via [DescribeRoGroups](https://www.tencentcloud.com/document/api/236/40939?from_cn_redirect=1).
      */
     public String getRoGroupId() {
         return this.RoGroupId;
     }
 
     /**
-     * Set RO group ID in the format of `cdbrg-c1nl9rpv`.
-     * @param RoGroupId RO group ID in the format of `cdbrg-c1nl9rpv`.
+     * Set ID of the RO group, in the format of cdbrg-c1nl9rpv. You can obtain it via [DescribeRoGroups](https://www.tencentcloud.com/document/api/236/40939?from_cn_redirect=1).
+     * @param RoGroupId ID of the RO group, in the format of cdbrg-c1nl9rpv. You can obtain it via [DescribeRoGroups](https://www.tencentcloud.com/document/api/236/40939?from_cn_redirect=1).
      */
     public void setRoGroupId(String RoGroupId) {
         this.RoGroupId = RoGroupId;

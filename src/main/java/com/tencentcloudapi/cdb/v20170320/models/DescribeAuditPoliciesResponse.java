@@ -31,8 +31,7 @@ public class DescribeAuditPoliciesResponse extends AbstractModel {
     private Long TotalCount;
 
     /**
-    * Audit policy details
-Note: This field may return `null`, indicating that no valid value was found.
+    * Audit policy details.
     */
     @SerializedName("Items")
     @Expose
@@ -62,20 +61,16 @@ Note: This field may return `null`, indicating that no valid value was found.
     }
 
     /**
-     * Get Audit policy details
-Note: This field may return `null`, indicating that no valid value was found. 
-     * @return Items Audit policy details
-Note: This field may return `null`, indicating that no valid value was found.
+     * Get Audit policy details. 
+     * @return Items Audit policy details.
      */
     public AuditPolicy [] getItems() {
         return this.Items;
     }
 
     /**
-     * Set Audit policy details
-Note: This field may return `null`, indicating that no valid value was found.
-     * @param Items Audit policy details
-Note: This field may return `null`, indicating that no valid value was found.
+     * Set Audit policy details.
+     * @param Items Audit policy details.
      */
     public void setItems(AuditPolicy [] Items) {
         this.Items = Items;

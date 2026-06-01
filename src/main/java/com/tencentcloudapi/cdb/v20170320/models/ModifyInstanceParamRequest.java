@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ModifyInstanceParamRequest extends AbstractModel {
 
     /**
-    * List of short instance IDs.
+    * Instance ID list, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
     */
     @SerializedName("InstanceIds")
     @Expose
@@ -38,7 +38,7 @@ public class ModifyInstanceParamRequest extends AbstractModel {
     private Parameter [] ParamList;
 
     /**
-    * Template ID. At least one of `ParamList` and `TemplateId` must be passed in.
+    * Template ID. At least one of ParamList and TemplateId must be provided. It can be obtained through the API [DescribeParamTemplates](https://www.tencentcloud.com/document/api/236/32659?from_cn_redirect=1).
     */
     @SerializedName("TemplateId")
     @Expose
@@ -66,16 +66,16 @@ public class ModifyInstanceParamRequest extends AbstractModel {
     private Boolean NotSyncDr;
 
     /**
-     * Get List of short instance IDs. 
-     * @return InstanceIds List of short instance IDs.
+     * Get Instance ID list, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API. 
+     * @return InstanceIds Instance ID list, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
      */
     public String [] getInstanceIds() {
         return this.InstanceIds;
     }
 
     /**
-     * Set List of short instance IDs.
-     * @param InstanceIds List of short instance IDs.
+     * Set Instance ID list, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
+     * @param InstanceIds Instance ID list, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
      */
     public void setInstanceIds(String [] InstanceIds) {
         this.InstanceIds = InstanceIds;
@@ -98,16 +98,16 @@ public class ModifyInstanceParamRequest extends AbstractModel {
     }
 
     /**
-     * Get Template ID. At least one of `ParamList` and `TemplateId` must be passed in. 
-     * @return TemplateId Template ID. At least one of `ParamList` and `TemplateId` must be passed in.
+     * Get Template ID. At least one of ParamList and TemplateId must be provided. It can be obtained through the API [DescribeParamTemplates](https://www.tencentcloud.com/document/api/236/32659?from_cn_redirect=1). 
+     * @return TemplateId Template ID. At least one of ParamList and TemplateId must be provided. It can be obtained through the API [DescribeParamTemplates](https://www.tencentcloud.com/document/api/236/32659?from_cn_redirect=1).
      */
     public Long getTemplateId() {
         return this.TemplateId;
     }
 
     /**
-     * Set Template ID. At least one of `ParamList` and `TemplateId` must be passed in.
-     * @param TemplateId Template ID. At least one of `ParamList` and `TemplateId` must be passed in.
+     * Set Template ID. At least one of ParamList and TemplateId must be provided. It can be obtained through the API [DescribeParamTemplates](https://www.tencentcloud.com/document/api/236/32659?from_cn_redirect=1).
+     * @param TemplateId Template ID. At least one of ParamList and TemplateId must be provided. It can be obtained through the API [DescribeParamTemplates](https://www.tencentcloud.com/document/api/236/32659?from_cn_redirect=1).
      */
     public void setTemplateId(Long TemplateId) {
         this.TemplateId = TemplateId;

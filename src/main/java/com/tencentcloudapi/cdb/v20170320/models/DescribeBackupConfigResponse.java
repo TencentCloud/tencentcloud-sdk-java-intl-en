@@ -166,7 +166,9 @@ public class DescribeBackupConfigResponse extends AbstractModel {
     /**
      * Get Earliest start time point of automatic backup, such as 2 (for 2:00 AM). (This field has been disused. You are recommended to use the `BackupTimeWindow` field) 
      * @return StartTimeMin Earliest start time point of automatic backup, such as 2 (for 2:00 AM). (This field has been disused. You are recommended to use the `BackupTimeWindow` field)
+     * @deprecated
      */
+    @Deprecated
     public Long getStartTimeMin() {
         return this.StartTimeMin;
     }
@@ -174,7 +176,9 @@ public class DescribeBackupConfigResponse extends AbstractModel {
     /**
      * Set Earliest start time point of automatic backup, such as 2 (for 2:00 AM). (This field has been disused. You are recommended to use the `BackupTimeWindow` field)
      * @param StartTimeMin Earliest start time point of automatic backup, such as 2 (for 2:00 AM). (This field has been disused. You are recommended to use the `BackupTimeWindow` field)
+     * @deprecated
      */
+    @Deprecated
     public void setStartTimeMin(Long StartTimeMin) {
         this.StartTimeMin = StartTimeMin;
     }
@@ -182,7 +186,9 @@ public class DescribeBackupConfigResponse extends AbstractModel {
     /**
      * Get Latest start time point of automatic backup, such as 6 (for 6:00 AM). (This field has been disused. You are recommended to use the `BackupTimeWindow` field) 
      * @return StartTimeMax Latest start time point of automatic backup, such as 6 (for 6:00 AM). (This field has been disused. You are recommended to use the `BackupTimeWindow` field)
+     * @deprecated
      */
+    @Deprecated
     public Long getStartTimeMax() {
         return this.StartTimeMax;
     }
@@ -190,7 +196,9 @@ public class DescribeBackupConfigResponse extends AbstractModel {
     /**
      * Set Latest start time point of automatic backup, such as 6 (for 6:00 AM). (This field has been disused. You are recommended to use the `BackupTimeWindow` field)
      * @param StartTimeMax Latest start time point of automatic backup, such as 6 (for 6:00 AM). (This field has been disused. You are recommended to use the `BackupTimeWindow` field)
+     * @deprecated
      */
+    @Deprecated
     public void setStartTimeMax(Long StartTimeMax) {
         this.StartTimeMax = StartTimeMax;
     }

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class InstanceRollbackRangeTime extends AbstractModel {
 
     /**
-    * Queries database error code
+    * Query database error codes. 0 - Normal, 1600001 - Internal error, 1600003 - Input parameter exception, 1600009 - Instance does not exist, 1624001 - DB access exception.
     */
     @SerializedName("Code")
     @Expose
@@ -52,16 +52,16 @@ public class InstanceRollbackRangeTime extends AbstractModel {
     private RollbackTimeRange [] Times;
 
     /**
-     * Get Queries database error code 
-     * @return Code Queries database error code
+     * Get Query database error codes. 0 - Normal, 1600001 - Internal error, 1600003 - Input parameter exception, 1600009 - Instance does not exist, 1624001 - DB access exception. 
+     * @return Code Query database error codes. 0 - Normal, 1600001 - Internal error, 1600003 - Input parameter exception, 1600009 - Instance does not exist, 1624001 - DB access exception.
      */
     public Long getCode() {
         return this.Code;
     }
 
     /**
-     * Set Queries database error code
-     * @param Code Queries database error code
+     * Set Query database error codes. 0 - Normal, 1600001 - Internal error, 1600003 - Input parameter exception, 1600009 - Instance does not exist, 1624001 - DB access exception.
+     * @param Code Query database error codes. 0 - Normal, 1600001 - Internal error, 1600003 - Input parameter exception, 1600009 - Instance does not exist, 1624001 - DB access exception.
      */
     public void setCode(Long Code) {
         this.Code = Code;

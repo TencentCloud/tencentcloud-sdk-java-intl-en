@@ -38,7 +38,7 @@ public class DescribeDatabasesRequest extends AbstractModel {
     private Long Offset;
 
     /**
-    * Number of results to be returned for a single request. Value range: 1-100. Maximum value: 20.
+    * Number of entries per request. Default value: 20. Minimum value: 1. Maximum value: 5000.
     */
     @SerializedName("Limit")
     @Expose
@@ -84,16 +84,16 @@ public class DescribeDatabasesRequest extends AbstractModel {
     }
 
     /**
-     * Get Number of results to be returned for a single request. Value range: 1-100. Maximum value: 20. 
-     * @return Limit Number of results to be returned for a single request. Value range: 1-100. Maximum value: 20.
+     * Get Number of entries per request. Default value: 20. Minimum value: 1. Maximum value: 5000. 
+     * @return Limit Number of entries per request. Default value: 20. Minimum value: 1. Maximum value: 5000.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Number of results to be returned for a single request. Value range: 1-100. Maximum value: 20.
-     * @param Limit Number of results to be returned for a single request. Value range: 1-100. Maximum value: 20.
+     * Set Number of entries per request. Default value: 20. Minimum value: 1. Maximum value: 5000.
+     * @param Limit Number of entries per request. Default value: 20. Minimum value: 1. Maximum value: 5000.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

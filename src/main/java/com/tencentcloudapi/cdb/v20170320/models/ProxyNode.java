@@ -24,161 +24,161 @@ import java.util.HashMap;
 public class ProxyNode extends AbstractModel {
 
     /**
-    * Proxy node ID Note: This field may return null, indicating that no valid values can be obtained.
+    * Proxy node ID
     */
     @SerializedName("ProxyId")
     @Expose
     private String ProxyId;
 
     /**
-    * Number of CPU cores Note: This field may return null, indicating that no valid values can be obtained.
+    * Number of CPU cores.
     */
     @SerializedName("Cpu")
     @Expose
     private Long Cpu;
 
     /**
-    * Memory size Note: This field may return null, indicating that no valid values can be obtained.
+    * Memory size, measured in MB.
     */
     @SerializedName("Mem")
     @Expose
     private Long Mem;
 
     /**
-    * Node status Note: This field may return null, indicating that no valid values can be obtained.
+    * Node status: 0 - Initializing, 1 - Online, 2 - Offline, 3 - Being destroyed, 4 - Recovering, 5 - Node fault, 6 - Switching.
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * Proxy node AZ Note: This field may return null, indicating that no valid values can be obtained.
+    * Proxy node availability zone
     */
     @SerializedName("Zone")
     @Expose
     private String Zone;
 
     /**
-    * Proxy node region Note: This field may return null, indicating that no valid values can be obtained.
+    * Proxy Node Region
     */
     @SerializedName("Region")
     @Expose
     private String Region;
 
     /**
-    * Connections Note: This field may return null, indicating that no valid values can be obtained.
+    * Number of connections
     */
     @SerializedName("Connection")
     @Expose
     private Long Connection;
 
     /**
-     * Get Proxy node ID Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ProxyId Proxy node ID Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Proxy node ID 
+     * @return ProxyId Proxy node ID
      */
     public String getProxyId() {
         return this.ProxyId;
     }
 
     /**
-     * Set Proxy node ID Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ProxyId Proxy node ID Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Proxy node ID
+     * @param ProxyId Proxy node ID
      */
     public void setProxyId(String ProxyId) {
         this.ProxyId = ProxyId;
     }
 
     /**
-     * Get Number of CPU cores Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Cpu Number of CPU cores Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Number of CPU cores. 
+     * @return Cpu Number of CPU cores.
      */
     public Long getCpu() {
         return this.Cpu;
     }
 
     /**
-     * Set Number of CPU cores Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Cpu Number of CPU cores Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Number of CPU cores.
+     * @param Cpu Number of CPU cores.
      */
     public void setCpu(Long Cpu) {
         this.Cpu = Cpu;
     }
 
     /**
-     * Get Memory size Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Mem Memory size Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Memory size, measured in MB. 
+     * @return Mem Memory size, measured in MB.
      */
     public Long getMem() {
         return this.Mem;
     }
 
     /**
-     * Set Memory size Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Mem Memory size Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Memory size, measured in MB.
+     * @param Mem Memory size, measured in MB.
      */
     public void setMem(Long Mem) {
         this.Mem = Mem;
     }
 
     /**
-     * Get Node status Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Status Node status Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Node status: 0 - Initializing, 1 - Online, 2 - Offline, 3 - Being destroyed, 4 - Recovering, 5 - Node fault, 6 - Switching. 
+     * @return Status Node status: 0 - Initializing, 1 - Online, 2 - Offline, 3 - Being destroyed, 4 - Recovering, 5 - Node fault, 6 - Switching.
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Node status Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Status Node status Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Node status: 0 - Initializing, 1 - Online, 2 - Offline, 3 - Being destroyed, 4 - Recovering, 5 - Node fault, 6 - Switching.
+     * @param Status Node status: 0 - Initializing, 1 - Online, 2 - Offline, 3 - Being destroyed, 4 - Recovering, 5 - Node fault, 6 - Switching.
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get Proxy node AZ Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Zone Proxy node AZ Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Proxy node availability zone 
+     * @return Zone Proxy node availability zone
      */
     public String getZone() {
         return this.Zone;
     }
 
     /**
-     * Set Proxy node AZ Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Zone Proxy node AZ Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Proxy node availability zone
+     * @param Zone Proxy node availability zone
      */
     public void setZone(String Zone) {
         this.Zone = Zone;
     }
 
     /**
-     * Get Proxy node region Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Region Proxy node region Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Proxy Node Region 
+     * @return Region Proxy Node Region
      */
     public String getRegion() {
         return this.Region;
     }
 
     /**
-     * Set Proxy node region Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Region Proxy node region Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Proxy Node Region
+     * @param Region Proxy Node Region
      */
     public void setRegion(String Region) {
         this.Region = Region;
     }
 
     /**
-     * Get Connections Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Connection Connections Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Number of connections 
+     * @return Connection Number of connections
      */
     public Long getConnection() {
         return this.Connection;
     }
 
     /**
-     * Set Connections Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Connection Connections Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Number of connections
+     * @param Connection Number of connections
      */
     public void setConnection(Long Connection) {
         this.Connection = Connection;

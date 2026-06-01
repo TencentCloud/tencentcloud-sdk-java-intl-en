@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class InstanceRebootTime extends AbstractModel {
 
     /**
-    * Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
+    * Instance ID, in the format such as cdb-c1nl9rpv. This matches the instance ID displayed on the TencentDB console.
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Estimated restart time
+    * Expected restart time, unit: second.
     */
     @SerializedName("TimeInSeconds")
     @Expose
     private Long TimeInSeconds;
 
     /**
-     * Get Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page. 
-     * @return InstanceId Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
+     * Get Instance ID, in the format such as cdb-c1nl9rpv. This matches the instance ID displayed on the TencentDB console. 
+     * @return InstanceId Instance ID, in the format such as cdb-c1nl9rpv. This matches the instance ID displayed on the TencentDB console.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
-     * @param InstanceId Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
+     * Set Instance ID, in the format such as cdb-c1nl9rpv. This matches the instance ID displayed on the TencentDB console.
+     * @param InstanceId Instance ID, in the format such as cdb-c1nl9rpv. This matches the instance ID displayed on the TencentDB console.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Estimated restart time 
-     * @return TimeInSeconds Estimated restart time
+     * Get Expected restart time, unit: second. 
+     * @return TimeInSeconds Expected restart time, unit: second.
      */
     public Long getTimeInSeconds() {
         return this.TimeInSeconds;
     }
 
     /**
-     * Set Estimated restart time
-     * @param TimeInSeconds Estimated restart time
+     * Set Expected restart time, unit: second.
+     * @param TimeInSeconds Expected restart time, unit: second.
      */
     public void setTimeInSeconds(Long TimeInSeconds) {
         this.TimeInSeconds = TimeInSeconds;

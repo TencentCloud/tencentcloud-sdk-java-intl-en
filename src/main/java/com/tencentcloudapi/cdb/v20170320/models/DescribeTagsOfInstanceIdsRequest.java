@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeTagsOfInstanceIdsRequest extends AbstractModel {
 
     /**
-    * List of instances.
+    * Instance list. Instance ID can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API. The length of the array passed in is not limited.
     */
     @SerializedName("InstanceIds")
     @Expose
@@ -38,23 +38,23 @@ public class DescribeTagsOfInstanceIdsRequest extends AbstractModel {
     private Long Offset;
 
     /**
-    * Number of entries per page.
+    * Page size. Defaults to 15.
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-     * Get List of instances. 
-     * @return InstanceIds List of instances.
+     * Get Instance list. Instance ID can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API. The length of the array passed in is not limited. 
+     * @return InstanceIds Instance list. Instance ID can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API. The length of the array passed in is not limited.
      */
     public String [] getInstanceIds() {
         return this.InstanceIds;
     }
 
     /**
-     * Set List of instances.
-     * @param InstanceIds List of instances.
+     * Set Instance list. Instance ID can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API. The length of the array passed in is not limited.
+     * @param InstanceIds Instance list. Instance ID can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API. The length of the array passed in is not limited.
      */
     public void setInstanceIds(String [] InstanceIds) {
         this.InstanceIds = InstanceIds;
@@ -77,16 +77,16 @@ public class DescribeTagsOfInstanceIdsRequest extends AbstractModel {
     }
 
     /**
-     * Get Number of entries per page. 
-     * @return Limit Number of entries per page.
+     * Get Page size. Defaults to 15. 
+     * @return Limit Page size. Defaults to 15.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Number of entries per page.
-     * @param Limit Number of entries per page.
+     * Set Page size. Defaults to 15.
+     * @param Limit Page size. Defaults to 15.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

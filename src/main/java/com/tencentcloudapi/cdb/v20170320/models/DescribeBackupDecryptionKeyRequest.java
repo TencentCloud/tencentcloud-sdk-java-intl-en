@@ -24,49 +24,72 @@ import java.util.HashMap;
 public class DescribeBackupDecryptionKeyRequest extends AbstractModel {
 
     /**
-    * Instance ID in the format of  cdb-XXXX,  which is the same as the instance ID displayed in the TencentDB console.
+    * Instance ID, in the format such as cdb-fybaegd8. This matches the instance ID displayed on the TencentDB console.
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Instance backup ID, which can be obtained by the `DescribeBackups` API.
+    * Backup ID of the instance, which can be obtained through the [DescribeBackups](https://www.tencentcloud.com/document/api/236/15842?from_cn_redirect=1) API.
     */
     @SerializedName("BackupId")
     @Expose
     private Long BackupId;
 
     /**
-     * Get Instance ID in the format of  cdb-XXXX,  which is the same as the instance ID displayed in the TencentDB console. 
-     * @return InstanceId Instance ID in the format of  cdb-XXXX,  which is the same as the instance ID displayed in the TencentDB console.
+    * Backup type. data - data backup, binlog - log backup. The default value is data.
+    */
+    @SerializedName("BackupType")
+    @Expose
+    private String BackupType;
+
+    /**
+     * Get Instance ID, in the format such as cdb-fybaegd8. This matches the instance ID displayed on the TencentDB console. 
+     * @return InstanceId Instance ID, in the format such as cdb-fybaegd8. This matches the instance ID displayed on the TencentDB console.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Instance ID in the format of  cdb-XXXX,  which is the same as the instance ID displayed in the TencentDB console.
-     * @param InstanceId Instance ID in the format of  cdb-XXXX,  which is the same as the instance ID displayed in the TencentDB console.
+     * Set Instance ID, in the format such as cdb-fybaegd8. This matches the instance ID displayed on the TencentDB console.
+     * @param InstanceId Instance ID, in the format such as cdb-fybaegd8. This matches the instance ID displayed on the TencentDB console.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Instance backup ID, which can be obtained by the `DescribeBackups` API. 
-     * @return BackupId Instance backup ID, which can be obtained by the `DescribeBackups` API.
+     * Get Backup ID of the instance, which can be obtained through the [DescribeBackups](https://www.tencentcloud.com/document/api/236/15842?from_cn_redirect=1) API. 
+     * @return BackupId Backup ID of the instance, which can be obtained through the [DescribeBackups](https://www.tencentcloud.com/document/api/236/15842?from_cn_redirect=1) API.
      */
     public Long getBackupId() {
         return this.BackupId;
     }
 
     /**
-     * Set Instance backup ID, which can be obtained by the `DescribeBackups` API.
-     * @param BackupId Instance backup ID, which can be obtained by the `DescribeBackups` API.
+     * Set Backup ID of the instance, which can be obtained through the [DescribeBackups](https://www.tencentcloud.com/document/api/236/15842?from_cn_redirect=1) API.
+     * @param BackupId Backup ID of the instance, which can be obtained through the [DescribeBackups](https://www.tencentcloud.com/document/api/236/15842?from_cn_redirect=1) API.
      */
     public void setBackupId(Long BackupId) {
         this.BackupId = BackupId;
+    }
+
+    /**
+     * Get Backup type. data - data backup, binlog - log backup. The default value is data. 
+     * @return BackupType Backup type. data - data backup, binlog - log backup. The default value is data.
+     */
+    public String getBackupType() {
+        return this.BackupType;
+    }
+
+    /**
+     * Set Backup type. data - data backup, binlog - log backup. The default value is data.
+     * @param BackupType Backup type. data - data backup, binlog - log backup. The default value is data.
+     */
+    public void setBackupType(String BackupType) {
+        this.BackupType = BackupType;
     }
 
     public DescribeBackupDecryptionKeyRequest() {
@@ -83,6 +106,9 @@ public class DescribeBackupDecryptionKeyRequest extends AbstractModel {
         if (source.BackupId != null) {
             this.BackupId = new Long(source.BackupId);
         }
+        if (source.BackupType != null) {
+            this.BackupType = new String(source.BackupType);
+        }
     }
 
 
@@ -92,6 +118,7 @@ public class DescribeBackupDecryptionKeyRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "BackupId", this.BackupId);
+        this.setParamSimple(map, prefix + "BackupType", this.BackupType);
 
     }
 }

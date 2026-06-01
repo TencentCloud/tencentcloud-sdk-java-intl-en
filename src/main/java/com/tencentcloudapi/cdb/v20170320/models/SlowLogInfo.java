@@ -38,7 +38,7 @@ public class SlowLogInfo extends AbstractModel {
     private Long Size;
 
     /**
-    * Backup snapshot time in the format of yyyy-MM-dd HH:mm:ss, such as 2016-03-17 02:10:37
+    * Backup snapshot time. Time format: 2016-03-17.
     */
     @SerializedName("Date")
     @Expose
@@ -98,16 +98,16 @@ public class SlowLogInfo extends AbstractModel {
     }
 
     /**
-     * Get Backup snapshot time in the format of yyyy-MM-dd HH:mm:ss, such as 2016-03-17 02:10:37 
-     * @return Date Backup snapshot time in the format of yyyy-MM-dd HH:mm:ss, such as 2016-03-17 02:10:37
+     * Get Backup snapshot time. Time format: 2016-03-17. 
+     * @return Date Backup snapshot time. Time format: 2016-03-17.
      */
     public String getDate() {
         return this.Date;
     }
 
     /**
-     * Set Backup snapshot time in the format of yyyy-MM-dd HH:mm:ss, such as 2016-03-17 02:10:37
-     * @param Date Backup snapshot time in the format of yyyy-MM-dd HH:mm:ss, such as 2016-03-17 02:10:37
+     * Set Backup snapshot time. Time format: 2016-03-17.
+     * @param Date Backup snapshot time. Time format: 2016-03-17.
      */
     public void setDate(String Date) {
         this.Date = Date;

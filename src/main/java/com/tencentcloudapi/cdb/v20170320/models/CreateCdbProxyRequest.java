@@ -24,28 +24,37 @@ import java.util.HashMap;
 public class CreateCdbProxyRequest extends AbstractModel {
 
     /**
-    * Instance ID
+    * Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * VPC ID
+    * VPC ID. Obtain through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
     */
     @SerializedName("UniqVpcId")
     @Expose
     private String UniqVpcId;
 
     /**
-    * VPC subnet ID
+    * Private subnet ID. Obtain through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
     */
     @SerializedName("UniqSubnetId")
     @Expose
     private String UniqSubnetId;
 
     /**
-    * The specification configuration of a node
+    * Node specification configuration.
+Parameter description in the example.
+NodeCount: Number of nodes.
+Region: Node region.
+Zone: Node availability zone.
+Cpu: Number of cores per proxy node (unit: core).
+Mem: Memory size of each proxy node (unit: MB).
+Remarks:
+1. Database proxy supported node specifications are: 2C4000MB, 4C8000MB, 8C16000MB.
+2. The above parameters (such as number of nodes, availability zone) are required. When calling the API, if incomplete, creation may fail.
     */
     @SerializedName("ProxyNodeCustom")
     @Expose
@@ -67,70 +76,114 @@ public class CreateCdbProxyRequest extends AbstractModel {
 
     /**
     * Connection pool threshold
+Note: If you need to use the database proxy connection pool capability, the kernel minor version of the MySQL 8.0 primary instance must be equal to or greater than MySQL 8.0 20230630.
     */
     @SerializedName("ConnectionPoolLimit")
     @Expose
     private Long ConnectionPoolLimit;
 
     /**
-     * Get Instance ID 
-     * @return InstanceId Instance ID
+    * Specify the Linux kernel version of the purchased proxy. Leave it blank to ship the latest version by default.
+    */
+    @SerializedName("ProxyVersion")
+    @Expose
+    private String ProxyVersion;
+
+    /**
+     * Get Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API. 
+     * @return InstanceId Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Instance ID
-     * @param InstanceId Instance ID
+     * Set Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
+     * @param InstanceId Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get VPC ID 
-     * @return UniqVpcId VPC ID
+     * Get VPC ID. Obtain through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API. 
+     * @return UniqVpcId VPC ID. Obtain through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
      */
     public String getUniqVpcId() {
         return this.UniqVpcId;
     }
 
     /**
-     * Set VPC ID
-     * @param UniqVpcId VPC ID
+     * Set VPC ID. Obtain through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
+     * @param UniqVpcId VPC ID. Obtain through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
      */
     public void setUniqVpcId(String UniqVpcId) {
         this.UniqVpcId = UniqVpcId;
     }
 
     /**
-     * Get VPC subnet ID 
-     * @return UniqSubnetId VPC subnet ID
+     * Get Private subnet ID. Obtain through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API. 
+     * @return UniqSubnetId Private subnet ID. Obtain through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
      */
     public String getUniqSubnetId() {
         return this.UniqSubnetId;
     }
 
     /**
-     * Set VPC subnet ID
-     * @param UniqSubnetId VPC subnet ID
+     * Set Private subnet ID. Obtain through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
+     * @param UniqSubnetId Private subnet ID. Obtain through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
      */
     public void setUniqSubnetId(String UniqSubnetId) {
         this.UniqSubnetId = UniqSubnetId;
     }
 
     /**
-     * Get The specification configuration of a node 
-     * @return ProxyNodeCustom The specification configuration of a node
+     * Get Node specification configuration.
+Parameter description in the example.
+NodeCount: Number of nodes.
+Region: Node region.
+Zone: Node availability zone.
+Cpu: Number of cores per proxy node (unit: core).
+Mem: Memory size of each proxy node (unit: MB).
+Remarks:
+1. Database proxy supported node specifications are: 2C4000MB, 4C8000MB, 8C16000MB.
+2. The above parameters (such as number of nodes, availability zone) are required. When calling the API, if incomplete, creation may fail. 
+     * @return ProxyNodeCustom Node specification configuration.
+Parameter description in the example.
+NodeCount: Number of nodes.
+Region: Node region.
+Zone: Node availability zone.
+Cpu: Number of cores per proxy node (unit: core).
+Mem: Memory size of each proxy node (unit: MB).
+Remarks:
+1. Database proxy supported node specifications are: 2C4000MB, 4C8000MB, 8C16000MB.
+2. The above parameters (such as number of nodes, availability zone) are required. When calling the API, if incomplete, creation may fail.
      */
     public ProxyNodeCustom [] getProxyNodeCustom() {
         return this.ProxyNodeCustom;
     }
 
     /**
-     * Set The specification configuration of a node
-     * @param ProxyNodeCustom The specification configuration of a node
+     * Set Node specification configuration.
+Parameter description in the example.
+NodeCount: Number of nodes.
+Region: Node region.
+Zone: Node availability zone.
+Cpu: Number of cores per proxy node (unit: core).
+Mem: Memory size of each proxy node (unit: MB).
+Remarks:
+1. Database proxy supported node specifications are: 2C4000MB, 4C8000MB, 8C16000MB.
+2. The above parameters (such as number of nodes, availability zone) are required. When calling the API, if incomplete, creation may fail.
+     * @param ProxyNodeCustom Node specification configuration.
+Parameter description in the example.
+NodeCount: Number of nodes.
+Region: Node region.
+Zone: Node availability zone.
+Cpu: Number of cores per proxy node (unit: core).
+Mem: Memory size of each proxy node (unit: MB).
+Remarks:
+1. Database proxy supported node specifications are: 2C4000MB, 4C8000MB, 8C16000MB.
+2. The above parameters (such as number of nodes, availability zone) are required. When calling the API, if incomplete, creation may fail.
      */
     public void setProxyNodeCustom(ProxyNodeCustom [] ProxyNodeCustom) {
         this.ProxyNodeCustom = ProxyNodeCustom;
@@ -169,8 +222,10 @@ public class CreateCdbProxyRequest extends AbstractModel {
     }
 
     /**
-     * Get Connection pool threshold 
+     * Get Connection pool threshold
+Note: If you need to use the database proxy connection pool capability, the kernel minor version of the MySQL 8.0 primary instance must be equal to or greater than MySQL 8.0 20230630. 
      * @return ConnectionPoolLimit Connection pool threshold
+Note: If you need to use the database proxy connection pool capability, the kernel minor version of the MySQL 8.0 primary instance must be equal to or greater than MySQL 8.0 20230630.
      */
     public Long getConnectionPoolLimit() {
         return this.ConnectionPoolLimit;
@@ -178,10 +233,28 @@ public class CreateCdbProxyRequest extends AbstractModel {
 
     /**
      * Set Connection pool threshold
+Note: If you need to use the database proxy connection pool capability, the kernel minor version of the MySQL 8.0 primary instance must be equal to or greater than MySQL 8.0 20230630.
      * @param ConnectionPoolLimit Connection pool threshold
+Note: If you need to use the database proxy connection pool capability, the kernel minor version of the MySQL 8.0 primary instance must be equal to or greater than MySQL 8.0 20230630.
      */
     public void setConnectionPoolLimit(Long ConnectionPoolLimit) {
         this.ConnectionPoolLimit = ConnectionPoolLimit;
+    }
+
+    /**
+     * Get Specify the Linux kernel version of the purchased proxy. Leave it blank to ship the latest version by default. 
+     * @return ProxyVersion Specify the Linux kernel version of the purchased proxy. Leave it blank to ship the latest version by default.
+     */
+    public String getProxyVersion() {
+        return this.ProxyVersion;
+    }
+
+    /**
+     * Set Specify the Linux kernel version of the purchased proxy. Leave it blank to ship the latest version by default.
+     * @param ProxyVersion Specify the Linux kernel version of the purchased proxy. Leave it blank to ship the latest version by default.
+     */
+    public void setProxyVersion(String ProxyVersion) {
+        this.ProxyVersion = ProxyVersion;
     }
 
     public CreateCdbProxyRequest() {
@@ -219,6 +292,9 @@ public class CreateCdbProxyRequest extends AbstractModel {
         if (source.ConnectionPoolLimit != null) {
             this.ConnectionPoolLimit = new Long(source.ConnectionPoolLimit);
         }
+        if (source.ProxyVersion != null) {
+            this.ProxyVersion = new String(source.ProxyVersion);
+        }
     }
 
 
@@ -233,6 +309,7 @@ public class CreateCdbProxyRequest extends AbstractModel {
         this.setParamArraySimple(map, prefix + "SecurityGroup.", this.SecurityGroup);
         this.setParamSimple(map, prefix + "Desc", this.Desc);
         this.setParamSimple(map, prefix + "ConnectionPoolLimit", this.ConnectionPoolLimit);
+        this.setParamSimple(map, prefix + "ProxyVersion", this.ProxyVersion);
 
     }
 }

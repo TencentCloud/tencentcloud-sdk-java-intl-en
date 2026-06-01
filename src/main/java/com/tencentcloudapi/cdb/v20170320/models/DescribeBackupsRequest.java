@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeBackupsRequest extends AbstractModel {
 
     /**
-    * Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
+    * Instance ID, in the format such as cdb-c1nl9rpv. This matches the instance ID displayed on the TencentDB console.
     */
     @SerializedName("InstanceId")
     @Expose
@@ -38,23 +38,23 @@ public class DescribeBackupsRequest extends AbstractModel {
     private Long Offset;
 
     /**
-    * Number of entries per page. Value range: 1-100. Default value: 20.
+    * Page size. Default value: 20. Minimum value: 1. Maximum value: 1000.
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-     * Get Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page. 
-     * @return InstanceId Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
+     * Get Instance ID, in the format such as cdb-c1nl9rpv. This matches the instance ID displayed on the TencentDB console. 
+     * @return InstanceId Instance ID, in the format such as cdb-c1nl9rpv. This matches the instance ID displayed on the TencentDB console.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
-     * @param InstanceId Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
+     * Set Instance ID, in the format such as cdb-c1nl9rpv. This matches the instance ID displayed on the TencentDB console.
+     * @param InstanceId Instance ID, in the format such as cdb-c1nl9rpv. This matches the instance ID displayed on the TencentDB console.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
@@ -77,16 +77,16 @@ public class DescribeBackupsRequest extends AbstractModel {
     }
 
     /**
-     * Get Number of entries per page. Value range: 1-100. Default value: 20. 
-     * @return Limit Number of entries per page. Value range: 1-100. Default value: 20.
+     * Get Page size. Default value: 20. Minimum value: 1. Maximum value: 1000. 
+     * @return Limit Page size. Default value: 20. Minimum value: 1. Maximum value: 1000.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Number of entries per page. Value range: 1-100. Default value: 20.
-     * @param Limit Number of entries per page. Value range: 1-100. Default value: 20.
+     * Set Page size. Default value: 20. Minimum value: 1. Maximum value: 1000.
+     * @param Limit Page size. Default value: 20. Minimum value: 1. Maximum value: 1000.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

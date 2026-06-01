@@ -52,6 +52,27 @@ public class DescribeAccountsRequest extends AbstractModel {
     private String AccountRegexp;
 
     /**
+    * Default none, support: ASC, DESC, asc, desc
+    */
+    @SerializedName("SortBy")
+    @Expose
+    private String SortBy;
+
+    /**
+    * Time field for sorting. Options: CreateTime (account creation time), ModifyTime (update time), ModifyPasswordTime (password modification time).
+    */
+    @SerializedName("OrderBy")
+    @Expose
+    private String OrderBy;
+
+    /**
+    * Regular expression to match the account host address (Host). The rule is the same as that on the MySQL official website.
+    */
+    @SerializedName("HostRegexp")
+    @Expose
+    private String HostRegexp;
+
+    /**
      * Get Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed in the TencentDB console. 
      * @return InstanceId Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed in the TencentDB console.
      */
@@ -115,6 +136,54 @@ public class DescribeAccountsRequest extends AbstractModel {
         this.AccountRegexp = AccountRegexp;
     }
 
+    /**
+     * Get Default none, support: ASC, DESC, asc, desc 
+     * @return SortBy Default none, support: ASC, DESC, asc, desc
+     */
+    public String getSortBy() {
+        return this.SortBy;
+    }
+
+    /**
+     * Set Default none, support: ASC, DESC, asc, desc
+     * @param SortBy Default none, support: ASC, DESC, asc, desc
+     */
+    public void setSortBy(String SortBy) {
+        this.SortBy = SortBy;
+    }
+
+    /**
+     * Get Time field for sorting. Options: CreateTime (account creation time), ModifyTime (update time), ModifyPasswordTime (password modification time). 
+     * @return OrderBy Time field for sorting. Options: CreateTime (account creation time), ModifyTime (update time), ModifyPasswordTime (password modification time).
+     */
+    public String getOrderBy() {
+        return this.OrderBy;
+    }
+
+    /**
+     * Set Time field for sorting. Options: CreateTime (account creation time), ModifyTime (update time), ModifyPasswordTime (password modification time).
+     * @param OrderBy Time field for sorting. Options: CreateTime (account creation time), ModifyTime (update time), ModifyPasswordTime (password modification time).
+     */
+    public void setOrderBy(String OrderBy) {
+        this.OrderBy = OrderBy;
+    }
+
+    /**
+     * Get Regular expression to match the account host address (Host). The rule is the same as that on the MySQL official website. 
+     * @return HostRegexp Regular expression to match the account host address (Host). The rule is the same as that on the MySQL official website.
+     */
+    public String getHostRegexp() {
+        return this.HostRegexp;
+    }
+
+    /**
+     * Set Regular expression to match the account host address (Host). The rule is the same as that on the MySQL official website.
+     * @param HostRegexp Regular expression to match the account host address (Host). The rule is the same as that on the MySQL official website.
+     */
+    public void setHostRegexp(String HostRegexp) {
+        this.HostRegexp = HostRegexp;
+    }
+
     public DescribeAccountsRequest() {
     }
 
@@ -135,6 +204,15 @@ public class DescribeAccountsRequest extends AbstractModel {
         if (source.AccountRegexp != null) {
             this.AccountRegexp = new String(source.AccountRegexp);
         }
+        if (source.SortBy != null) {
+            this.SortBy = new String(source.SortBy);
+        }
+        if (source.OrderBy != null) {
+            this.OrderBy = new String(source.OrderBy);
+        }
+        if (source.HostRegexp != null) {
+            this.HostRegexp = new String(source.HostRegexp);
+        }
     }
 
 
@@ -146,6 +224,9 @@ public class DescribeAccountsRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "AccountRegexp", this.AccountRegexp);
+        this.setParamSimple(map, prefix + "SortBy", this.SortBy);
+        this.setParamSimple(map, prefix + "OrderBy", this.OrderBy);
+        this.setParamSimple(map, prefix + "HostRegexp", this.HostRegexp);
 
     }
 }

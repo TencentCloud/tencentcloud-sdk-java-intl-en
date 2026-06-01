@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class StopCpuExpandResponse extends AbstractModel {
 
     /**
-    * Async task ID, which can be passed in by calling the `DescribeAsyncRequest` API for task progress query.
+    * Asynchronous Task ID. When calling [DescribeAsyncRequestInfo](https://www.tencentcloud.com/document/api/236/20410?from_cn_redirect=1) to query the task execution progress, you can pass in this ID.
     */
     @SerializedName("AsyncRequestId")
     @Expose
@@ -38,16 +38,16 @@ public class StopCpuExpandResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Async task ID, which can be passed in by calling the `DescribeAsyncRequest` API for task progress query. 
-     * @return AsyncRequestId Async task ID, which can be passed in by calling the `DescribeAsyncRequest` API for task progress query.
+     * Get Asynchronous Task ID. When calling [DescribeAsyncRequestInfo](https://www.tencentcloud.com/document/api/236/20410?from_cn_redirect=1) to query the task execution progress, you can pass in this ID. 
+     * @return AsyncRequestId Asynchronous Task ID. When calling [DescribeAsyncRequestInfo](https://www.tencentcloud.com/document/api/236/20410?from_cn_redirect=1) to query the task execution progress, you can pass in this ID.
      */
     public String getAsyncRequestId() {
         return this.AsyncRequestId;
     }
 
     /**
-     * Set Async task ID, which can be passed in by calling the `DescribeAsyncRequest` API for task progress query.
-     * @param AsyncRequestId Async task ID, which can be passed in by calling the `DescribeAsyncRequest` API for task progress query.
+     * Set Asynchronous Task ID. When calling [DescribeAsyncRequestInfo](https://www.tencentcloud.com/document/api/236/20410?from_cn_redirect=1) to query the task execution progress, you can pass in this ID.
+     * @param AsyncRequestId Asynchronous Task ID. When calling [DescribeAsyncRequestInfo](https://www.tencentcloud.com/document/api/236/20410?from_cn_redirect=1) to query the task execution progress, you can pass in this ID.
      */
     public void setAsyncRequestId(String AsyncRequestId) {
         this.AsyncRequestId = AsyncRequestId;

@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class CreateRotationPasswordRequest extends AbstractModel {
 
     /**
-    * Instance ID, in the format of cdb-c1nl9rpv, which is the same as the instance ID displayed on the TencentDB for MySQL console page.
+    * Instance ID, in the format such as cdb-c1nl9rpv. This matches the instance ID displayed on the TencentDB console.
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Information about the account for which password rotation needs to be enabled. The account and host names are included.
+    * Currently, enable password rotation for account information, including account name and host name.
     */
     @SerializedName("Accounts")
     @Expose
     private Account [] Accounts;
 
     /**
-     * Get Instance ID, in the format of cdb-c1nl9rpv, which is the same as the instance ID displayed on the TencentDB for MySQL console page. 
-     * @return InstanceId Instance ID, in the format of cdb-c1nl9rpv, which is the same as the instance ID displayed on the TencentDB for MySQL console page.
+     * Get Instance ID, in the format such as cdb-c1nl9rpv. This matches the instance ID displayed on the TencentDB console. 
+     * @return InstanceId Instance ID, in the format such as cdb-c1nl9rpv. This matches the instance ID displayed on the TencentDB console.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Instance ID, in the format of cdb-c1nl9rpv, which is the same as the instance ID displayed on the TencentDB for MySQL console page.
-     * @param InstanceId Instance ID, in the format of cdb-c1nl9rpv, which is the same as the instance ID displayed on the TencentDB for MySQL console page.
+     * Set Instance ID, in the format such as cdb-c1nl9rpv. This matches the instance ID displayed on the TencentDB console.
+     * @param InstanceId Instance ID, in the format such as cdb-c1nl9rpv. This matches the instance ID displayed on the TencentDB console.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Information about the account for which password rotation needs to be enabled. The account and host names are included. 
-     * @return Accounts Information about the account for which password rotation needs to be enabled. The account and host names are included.
+     * Get Currently, enable password rotation for account information, including account name and host name. 
+     * @return Accounts Currently, enable password rotation for account information, including account name and host name.
      */
     public Account [] getAccounts() {
         return this.Accounts;
     }
 
     /**
-     * Set Information about the account for which password rotation needs to be enabled. The account and host names are included.
-     * @param Accounts Information about the account for which password rotation needs to be enabled. The account and host names are included.
+     * Set Currently, enable password rotation for account information, including account name and host name.
+     * @param Accounts Currently, enable password rotation for account information, including account name and host name.
      */
     public void setAccounts(Account [] Accounts) {
         this.Accounts = Accounts;

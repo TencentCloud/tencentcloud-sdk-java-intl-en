@@ -52,6 +52,13 @@ public class SwitchDBInstanceMasterSlaveRequest extends AbstractModel {
     private Boolean WaitSwitch;
 
     /**
+    * Trigger primary-secondary switch for the designated node ID of the cluster edition instance.
+    */
+    @SerializedName("DstNodeId")
+    @Expose
+    private String DstNodeId;
+
+    /**
      * Get Instance ID 
      * @return InstanceId Instance ID
      */
@@ -115,6 +122,22 @@ public class SwitchDBInstanceMasterSlaveRequest extends AbstractModel {
         this.WaitSwitch = WaitSwitch;
     }
 
+    /**
+     * Get Trigger primary-secondary switch for the designated node ID of the cluster edition instance. 
+     * @return DstNodeId Trigger primary-secondary switch for the designated node ID of the cluster edition instance.
+     */
+    public String getDstNodeId() {
+        return this.DstNodeId;
+    }
+
+    /**
+     * Set Trigger primary-secondary switch for the designated node ID of the cluster edition instance.
+     * @param DstNodeId Trigger primary-secondary switch for the designated node ID of the cluster edition instance.
+     */
+    public void setDstNodeId(String DstNodeId) {
+        this.DstNodeId = DstNodeId;
+    }
+
     public SwitchDBInstanceMasterSlaveRequest() {
     }
 
@@ -135,6 +158,9 @@ public class SwitchDBInstanceMasterSlaveRequest extends AbstractModel {
         if (source.WaitSwitch != null) {
             this.WaitSwitch = new Boolean(source.WaitSwitch);
         }
+        if (source.DstNodeId != null) {
+            this.DstNodeId = new String(source.DstNodeId);
+        }
     }
 
 
@@ -146,6 +172,7 @@ public class SwitchDBInstanceMasterSlaveRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "DstSlave", this.DstSlave);
         this.setParamSimple(map, prefix + "ForceSwitch", this.ForceSwitch);
         this.setParamSimple(map, prefix + "WaitSwitch", this.WaitSwitch);
+        this.setParamSimple(map, prefix + "DstNodeId", this.DstNodeId);
 
     }
 }

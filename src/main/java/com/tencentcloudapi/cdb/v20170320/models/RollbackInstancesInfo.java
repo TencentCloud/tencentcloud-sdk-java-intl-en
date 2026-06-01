@@ -24,130 +24,115 @@ import java.util.HashMap;
 public class RollbackInstancesInfo extends AbstractModel {
 
     /**
-    * TencentDB instance ID
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Cloud database instance ID.
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Rollback policy. Valid values: `table` (ultrafast mode), `db` (faster mode), and `full` (fast mode). Default value: `full`. In the ultrafast mode, only backups and binlogs of the tables specified by the `Tables` parameter are imported; if `Tables` does not include all of the tables involved in cross-table operations, the rollback may fail; and the `Database` parameter must be left empty. In the faster mode, only backups and binlogs of the databases specified by the `Databases` parameter are imported, and if `Databases` does not include all of the databases involved in cross-database operations, the rollback may fail. In the fast mode, backups and binlogs of the entire instance will be imported in a speed slower than the other modes.
+    * Rollback strategy. Optional values: table, db, full. table - Ultra-fast rollback mode, only imports selected table-level backups and binlog. If there are cross-table operations and the associated table hasn't been selected, it will cause rollback failure. In this mode, parameter Databases must be empty. db - Quick mode, only imports selected database-level backups and binlog. If there are cross-database operations and the associated database hasn't been selected, it will cause rollback failure. full - Standard rollback mode, imports backups and binlog of the entire instance, speed is not as fast.
     */
     @SerializedName("Strategy")
     @Expose
     private String Strategy;
 
     /**
-    * Database rollback time in the format of yyyy-mm-dd hh:mm:ss
+    * Database rollback time in the format of yyyy-mm-dd hh:mm:ss.
     */
     @SerializedName("RollbackTime")
     @Expose
     private String RollbackTime;
 
     /**
-    * Information of the databases to be rolled back, which means rollback at the database level
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Database information to be rolled back, which means database rollback.
     */
     @SerializedName("Databases")
     @Expose
     private RollbackDBName [] Databases;
 
     /**
-    * Information of the tables to be rolled back, which means rollback at the table level
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Database table information to be rolled back, which means rollback by table.
     */
     @SerializedName("Tables")
     @Expose
     private RollbackTables [] Tables;
 
     /**
-     * Get TencentDB instance ID
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return InstanceId TencentDB instance ID
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Cloud database instance ID. 
+     * @return InstanceId Cloud database instance ID.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set TencentDB instance ID
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param InstanceId TencentDB instance ID
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Cloud database instance ID.
+     * @param InstanceId Cloud database instance ID.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Rollback policy. Valid values: `table` (ultrafast mode), `db` (faster mode), and `full` (fast mode). Default value: `full`. In the ultrafast mode, only backups and binlogs of the tables specified by the `Tables` parameter are imported; if `Tables` does not include all of the tables involved in cross-table operations, the rollback may fail; and the `Database` parameter must be left empty. In the faster mode, only backups and binlogs of the databases specified by the `Databases` parameter are imported, and if `Databases` does not include all of the databases involved in cross-database operations, the rollback may fail. In the fast mode, backups and binlogs of the entire instance will be imported in a speed slower than the other modes. 
-     * @return Strategy Rollback policy. Valid values: `table` (ultrafast mode), `db` (faster mode), and `full` (fast mode). Default value: `full`. In the ultrafast mode, only backups and binlogs of the tables specified by the `Tables` parameter are imported; if `Tables` does not include all of the tables involved in cross-table operations, the rollback may fail; and the `Database` parameter must be left empty. In the faster mode, only backups and binlogs of the databases specified by the `Databases` parameter are imported, and if `Databases` does not include all of the databases involved in cross-database operations, the rollback may fail. In the fast mode, backups and binlogs of the entire instance will be imported in a speed slower than the other modes.
+     * Get Rollback strategy. Optional values: table, db, full. table - Ultra-fast rollback mode, only imports selected table-level backups and binlog. If there are cross-table operations and the associated table hasn't been selected, it will cause rollback failure. In this mode, parameter Databases must be empty. db - Quick mode, only imports selected database-level backups and binlog. If there are cross-database operations and the associated database hasn't been selected, it will cause rollback failure. full - Standard rollback mode, imports backups and binlog of the entire instance, speed is not as fast. 
+     * @return Strategy Rollback strategy. Optional values: table, db, full. table - Ultra-fast rollback mode, only imports selected table-level backups and binlog. If there are cross-table operations and the associated table hasn't been selected, it will cause rollback failure. In this mode, parameter Databases must be empty. db - Quick mode, only imports selected database-level backups and binlog. If there are cross-database operations and the associated database hasn't been selected, it will cause rollback failure. full - Standard rollback mode, imports backups and binlog of the entire instance, speed is not as fast.
      */
     public String getStrategy() {
         return this.Strategy;
     }
 
     /**
-     * Set Rollback policy. Valid values: `table` (ultrafast mode), `db` (faster mode), and `full` (fast mode). Default value: `full`. In the ultrafast mode, only backups and binlogs of the tables specified by the `Tables` parameter are imported; if `Tables` does not include all of the tables involved in cross-table operations, the rollback may fail; and the `Database` parameter must be left empty. In the faster mode, only backups and binlogs of the databases specified by the `Databases` parameter are imported, and if `Databases` does not include all of the databases involved in cross-database operations, the rollback may fail. In the fast mode, backups and binlogs of the entire instance will be imported in a speed slower than the other modes.
-     * @param Strategy Rollback policy. Valid values: `table` (ultrafast mode), `db` (faster mode), and `full` (fast mode). Default value: `full`. In the ultrafast mode, only backups and binlogs of the tables specified by the `Tables` parameter are imported; if `Tables` does not include all of the tables involved in cross-table operations, the rollback may fail; and the `Database` parameter must be left empty. In the faster mode, only backups and binlogs of the databases specified by the `Databases` parameter are imported, and if `Databases` does not include all of the databases involved in cross-database operations, the rollback may fail. In the fast mode, backups and binlogs of the entire instance will be imported in a speed slower than the other modes.
+     * Set Rollback strategy. Optional values: table, db, full. table - Ultra-fast rollback mode, only imports selected table-level backups and binlog. If there are cross-table operations and the associated table hasn't been selected, it will cause rollback failure. In this mode, parameter Databases must be empty. db - Quick mode, only imports selected database-level backups and binlog. If there are cross-database operations and the associated database hasn't been selected, it will cause rollback failure. full - Standard rollback mode, imports backups and binlog of the entire instance, speed is not as fast.
+     * @param Strategy Rollback strategy. Optional values: table, db, full. table - Ultra-fast rollback mode, only imports selected table-level backups and binlog. If there are cross-table operations and the associated table hasn't been selected, it will cause rollback failure. In this mode, parameter Databases must be empty. db - Quick mode, only imports selected database-level backups and binlog. If there are cross-database operations and the associated database hasn't been selected, it will cause rollback failure. full - Standard rollback mode, imports backups and binlog of the entire instance, speed is not as fast.
      */
     public void setStrategy(String Strategy) {
         this.Strategy = Strategy;
     }
 
     /**
-     * Get Database rollback time in the format of yyyy-mm-dd hh:mm:ss 
-     * @return RollbackTime Database rollback time in the format of yyyy-mm-dd hh:mm:ss
+     * Get Database rollback time in the format of yyyy-mm-dd hh:mm:ss. 
+     * @return RollbackTime Database rollback time in the format of yyyy-mm-dd hh:mm:ss.
      */
     public String getRollbackTime() {
         return this.RollbackTime;
     }
 
     /**
-     * Set Database rollback time in the format of yyyy-mm-dd hh:mm:ss
-     * @param RollbackTime Database rollback time in the format of yyyy-mm-dd hh:mm:ss
+     * Set Database rollback time in the format of yyyy-mm-dd hh:mm:ss.
+     * @param RollbackTime Database rollback time in the format of yyyy-mm-dd hh:mm:ss.
      */
     public void setRollbackTime(String RollbackTime) {
         this.RollbackTime = RollbackTime;
     }
 
     /**
-     * Get Information of the databases to be rolled back, which means rollback at the database level
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return Databases Information of the databases to be rolled back, which means rollback at the database level
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Database information to be rolled back, which means database rollback. 
+     * @return Databases Database information to be rolled back, which means database rollback.
      */
     public RollbackDBName [] getDatabases() {
         return this.Databases;
     }
 
     /**
-     * Set Information of the databases to be rolled back, which means rollback at the database level
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Databases Information of the databases to be rolled back, which means rollback at the database level
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Database information to be rolled back, which means database rollback.
+     * @param Databases Database information to be rolled back, which means database rollback.
      */
     public void setDatabases(RollbackDBName [] Databases) {
         this.Databases = Databases;
     }
 
     /**
-     * Get Information of the tables to be rolled back, which means rollback at the table level
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return Tables Information of the tables to be rolled back, which means rollback at the table level
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Database table information to be rolled back, which means rollback by table. 
+     * @return Tables Database table information to be rolled back, which means rollback by table.
      */
     public RollbackTables [] getTables() {
         return this.Tables;
     }
 
     /**
-     * Set Information of the tables to be rolled back, which means rollback at the table level
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Tables Information of the tables to be rolled back, which means rollback at the table level
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Database table information to be rolled back, which means rollback by table.
+     * @param Tables Database table information to be rolled back, which means rollback by table.
      */
     public void setTables(RollbackTables [] Tables) {
         this.Tables = Tables;

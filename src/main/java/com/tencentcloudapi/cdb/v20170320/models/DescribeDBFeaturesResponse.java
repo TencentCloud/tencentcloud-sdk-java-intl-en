@@ -59,7 +59,8 @@ public class DescribeDBFeaturesResponse extends AbstractModel {
     private Boolean IsRemoteRo;
 
     /**
-    * Region of the source instance
+    * Primary instance region.
+Description: This parameter may return null. You can ignore this return value. If needed, you can call the [Query Instance List](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API to obtain the instance region details.
     */
     @SerializedName("MasterRegion")
     @Expose
@@ -174,16 +175,20 @@ public class DescribeDBFeaturesResponse extends AbstractModel {
     }
 
     /**
-     * Get Region of the source instance 
-     * @return MasterRegion Region of the source instance
+     * Get Primary instance region.
+Description: This parameter may return null. You can ignore this return value. If needed, you can call the [Query Instance List](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API to obtain the instance region details. 
+     * @return MasterRegion Primary instance region.
+Description: This parameter may return null. You can ignore this return value. If needed, you can call the [Query Instance List](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API to obtain the instance region details.
      */
     public String getMasterRegion() {
         return this.MasterRegion;
     }
 
     /**
-     * Set Region of the source instance
-     * @param MasterRegion Region of the source instance
+     * Set Primary instance region.
+Description: This parameter may return null. You can ignore this return value. If needed, you can call the [Query Instance List](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API to obtain the instance region details.
+     * @param MasterRegion Primary instance region.
+Description: This parameter may return null. You can ignore this return value. If needed, you can call the [Query Instance List](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API to obtain the instance region details.
      */
     public void setMasterRegion(String MasterRegion) {
         this.MasterRegion = MasterRegion;

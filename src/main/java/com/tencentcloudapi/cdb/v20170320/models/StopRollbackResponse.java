@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class StopRollbackResponse extends AbstractModel {
 
     /**
-    * Async task request ID
+    * Asynchronous Task ID of the execution request.
     */
     @SerializedName("AsyncRequestId")
     @Expose
@@ -38,16 +38,16 @@ public class StopRollbackResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Async task request ID 
-     * @return AsyncRequestId Async task request ID
+     * Get Asynchronous Task ID of the execution request. 
+     * @return AsyncRequestId Asynchronous Task ID of the execution request.
      */
     public String getAsyncRequestId() {
         return this.AsyncRequestId;
     }
 
     /**
-     * Set Async task request ID
-     * @param AsyncRequestId Async task request ID
+     * Set Asynchronous Task ID of the execution request.
+     * @param AsyncRequestId Asynchronous Task ID of the execution request.
      */
     public void setAsyncRequestId(String AsyncRequestId) {
         this.AsyncRequestId = AsyncRequestId;

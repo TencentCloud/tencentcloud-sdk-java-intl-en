@@ -25,25 +25,21 @@ public class AuditLogAggregationResult extends AbstractModel {
 
     /**
     * Aggregation dimension
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("AggregationField")
     @Expose
     private String AggregationField;
 
     /**
-    * Result set of an aggregation bucket
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Aggregate bucket result set
     */
     @SerializedName("Buckets")
     @Expose
     private Bucket [] Buckets;
 
     /**
-     * Get Aggregation dimension
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Aggregation dimension 
      * @return AggregationField Aggregation dimension
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getAggregationField() {
         return this.AggregationField;
@@ -51,29 +47,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Aggregation dimension
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param AggregationField Aggregation dimension
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setAggregationField(String AggregationField) {
         this.AggregationField = AggregationField;
     }
 
     /**
-     * Get Result set of an aggregation bucket
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Buckets Result set of an aggregation bucket
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Aggregate bucket result set 
+     * @return Buckets Aggregate bucket result set
      */
     public Bucket [] getBuckets() {
         return this.Buckets;
     }
 
     /**
-     * Set Result set of an aggregation bucket
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Buckets Result set of an aggregation bucket
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Aggregate bucket result set
+     * @param Buckets Aggregate bucket result set
      */
     public void setBuckets(Bucket [] Buckets) {
         this.Buckets = Buckets;

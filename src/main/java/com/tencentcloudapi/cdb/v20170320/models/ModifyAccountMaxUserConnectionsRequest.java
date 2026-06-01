@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ModifyAccountMaxUserConnectionsRequest extends AbstractModel {
 
     /**
-    * List of TencentDB accounts
+    * Cloud Database account. Obtain through the [DescribeAccounts](https://www.tencentcloud.com/document/api/236/17499?from_cn_redirect=1) API.
     */
     @SerializedName("Accounts")
     @Expose
@@ -45,16 +45,16 @@ public class ModifyAccountMaxUserConnectionsRequest extends AbstractModel {
     private Long MaxUserConnections;
 
     /**
-     * Get List of TencentDB accounts 
-     * @return Accounts List of TencentDB accounts
+     * Get Cloud Database account. Obtain through the [DescribeAccounts](https://www.tencentcloud.com/document/api/236/17499?from_cn_redirect=1) API. 
+     * @return Accounts Cloud Database account. Obtain through the [DescribeAccounts](https://www.tencentcloud.com/document/api/236/17499?from_cn_redirect=1) API.
      */
     public Account [] getAccounts() {
         return this.Accounts;
     }
 
     /**
-     * Set List of TencentDB accounts
-     * @param Accounts List of TencentDB accounts
+     * Set Cloud Database account. Obtain through the [DescribeAccounts](https://www.tencentcloud.com/document/api/236/17499?from_cn_redirect=1) API.
+     * @param Accounts Cloud Database account. Obtain through the [DescribeAccounts](https://www.tencentcloud.com/document/api/236/17499?from_cn_redirect=1) API.
      */
     public void setAccounts(Account [] Accounts) {
         this.Accounts = Accounts;

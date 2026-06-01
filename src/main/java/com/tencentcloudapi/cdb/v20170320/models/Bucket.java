@@ -25,7 +25,6 @@ public class Bucket extends AbstractModel {
 
     /**
     * None
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Key")
     @Expose
@@ -39,10 +38,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long Count;
 
     /**
-     * Get None
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get None 
      * @return Key None
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getKey() {
         return this.Key;
@@ -50,9 +47,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set None
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Key None
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setKey(String Key) {
         this.Key = Key;

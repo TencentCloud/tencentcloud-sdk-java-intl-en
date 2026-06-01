@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeBackupSummariesRequest extends AbstractModel {
 
     /**
-    * TencentDB product type to be queried. Currently, only `mysql` is supported.
+    * The cloud database product type for which real-time backup statistics need to be queried. The value can be mysql (two-node/three-node high-availability instances), mysql-basic (single-node cloud disk edition instance), or mysql-cluster (cloud disk edition instance).
     */
     @SerializedName("Product")
     @Expose
@@ -59,16 +59,16 @@ public class DescribeBackupSummariesRequest extends AbstractModel {
     private String OrderDirection;
 
     /**
-     * Get TencentDB product type to be queried. Currently, only `mysql` is supported. 
-     * @return Product TencentDB product type to be queried. Currently, only `mysql` is supported.
+     * Get The cloud database product type for which real-time backup statistics need to be queried. The value can be mysql (two-node/three-node high-availability instances), mysql-basic (single-node cloud disk edition instance), or mysql-cluster (cloud disk edition instance). 
+     * @return Product The cloud database product type for which real-time backup statistics need to be queried. The value can be mysql (two-node/three-node high-availability instances), mysql-basic (single-node cloud disk edition instance), or mysql-cluster (cloud disk edition instance).
      */
     public String getProduct() {
         return this.Product;
     }
 
     /**
-     * Set TencentDB product type to be queried. Currently, only `mysql` is supported.
-     * @param Product TencentDB product type to be queried. Currently, only `mysql` is supported.
+     * Set The cloud database product type for which real-time backup statistics need to be queried. The value can be mysql (two-node/three-node high-availability instances), mysql-basic (single-node cloud disk edition instance), or mysql-cluster (cloud disk edition instance).
+     * @param Product The cloud database product type for which real-time backup statistics need to be queried. The value can be mysql (two-node/three-node high-availability instances), mysql-basic (single-node cloud disk edition instance), or mysql-cluster (cloud disk edition instance).
      */
     public void setProduct(String Product) {
         this.Product = Product;

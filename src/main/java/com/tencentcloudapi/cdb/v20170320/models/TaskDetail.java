@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class TaskDetail extends AbstractModel {
 
     /**
-    * Error code.
+    * Error code. `0` indicates success. Other values correspond to different error scenarios.
     */
     @SerializedName("Code")
     @Expose
@@ -101,8 +101,7 @@ public class TaskDetail extends AbstractModel {
     private String EndTime;
 
     /**
-    * ID of an instance associated with a task.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * ID of the associated instance.
     */
     @SerializedName("InstanceIds")
     @Expose
@@ -116,16 +115,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String AsyncRequestId;
 
     /**
-     * Get Error code. 
-     * @return Code Error code.
+    * Additional information of the task.
+    */
+    @SerializedName("TaskAttachInfo")
+    @Expose
+    private TaskAttachInfo [] TaskAttachInfo;
+
+    /**
+     * Get Error code. `0` indicates success. Other values correspond to different error scenarios. 
+     * @return Code Error code. `0` indicates success. Other values correspond to different error scenarios.
      */
     public Long getCode() {
         return this.Code;
     }
 
     /**
-     * Set Error code.
-     * @param Code Error code.
+     * Set Error code. `0` indicates success. Other values correspond to different error scenarios.
+     * @param Code Error code. `0` indicates success. Other values correspond to different error scenarios.
      */
     public void setCode(Long Code) {
         this.Code = Code;
@@ -328,20 +334,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get ID of an instance associated with a task.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return InstanceIds ID of an instance associated with a task.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get ID of the associated instance. 
+     * @return InstanceIds ID of the associated instance.
      */
     public String [] getInstanceIds() {
         return this.InstanceIds;
     }
 
     /**
-     * Set ID of an instance associated with a task.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param InstanceIds ID of an instance associated with a task.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set ID of the associated instance.
+     * @param InstanceIds ID of the associated instance.
      */
     public void setInstanceIds(String [] InstanceIds) {
         this.InstanceIds = InstanceIds;
@@ -361,6 +363,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
      */
     public void setAsyncRequestId(String AsyncRequestId) {
         this.AsyncRequestId = AsyncRequestId;
+    }
+
+    /**
+     * Get Additional information of the task. 
+     * @return TaskAttachInfo Additional information of the task.
+     */
+    public TaskAttachInfo [] getTaskAttachInfo() {
+        return this.TaskAttachInfo;
+    }
+
+    /**
+     * Set Additional information of the task.
+     * @param TaskAttachInfo Additional information of the task.
+     */
+    public void setTaskAttachInfo(TaskAttachInfo [] TaskAttachInfo) {
+        this.TaskAttachInfo = TaskAttachInfo;
     }
 
     public TaskDetail() {
@@ -404,6 +422,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.AsyncRequestId != null) {
             this.AsyncRequestId = new String(source.AsyncRequestId);
         }
+        if (source.TaskAttachInfo != null) {
+            this.TaskAttachInfo = new TaskAttachInfo[source.TaskAttachInfo.length];
+            for (int i = 0; i < source.TaskAttachInfo.length; i++) {
+                this.TaskAttachInfo[i] = new TaskAttachInfo(source.TaskAttachInfo[i]);
+            }
+        }
     }
 
 
@@ -421,6 +445,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
         this.setParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);
         this.setParamSimple(map, prefix + "AsyncRequestId", this.AsyncRequestId);
+        this.setParamArrayObj(map, prefix + "TaskAttachInfo.", this.TaskAttachInfo);
 
     }
 }

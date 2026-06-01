@@ -24,210 +24,243 @@ import java.util.HashMap;
 public class ModifyDBInstanceLogToCLSRequest extends AbstractModel {
 
     /**
-    * Instance ID.
+    * Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Log type. Valid values: error and slowLog.
+    * Log type. error: error log. slowlog: slow log.
     */
     @SerializedName("LogType")
     @Expose
     private String LogType;
 
     /**
-    * Enabling status. Valid values: ON and OFF.
+    * Delivery status. ON: Enabled, OFF: Disabled.
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * Indicates whether a log set needs to be created.
+    * Whether required to create logset. Default to false.
     */
     @SerializedName("CreateLogset")
     @Expose
     private Boolean CreateLogset;
 
     /**
-    * Log set name if the log set is to be created or ID of the selected existing log set.
+    * Logset name when creating a logset; logset ID when selecting an existing log set. Empty by default.
+Description: When the parameter Status is set to ON, you must fill in either the Logset or LogTopic parameter.
     */
     @SerializedName("Logset")
     @Expose
     private String Logset;
 
     /**
-    * Indicates whether a log topic needs to be created.
+    * Whether required to create log topic. Default to false.
     */
     @SerializedName("CreateLogTopic")
     @Expose
     private Boolean CreateLogTopic;
 
     /**
-    * Log topic name if the topic is to be created or ID of the selected existing topic.
+    * Log topic name when creating a log topic; log topic ID when selecting an existing log topic. Empty by default.
+Description: When the parameter Status is set to ON, you must fill in either the Logset or LogTopic parameter.
     */
     @SerializedName("LogTopic")
     @Expose
     private String LogTopic;
 
     /**
-    * Log topic validity period, which is 30 days by default if not specified.
+    * Log topic valid period. Default value: 30 days if left empty. Maximum value: 3600.
     */
     @SerializedName("Period")
     @Expose
     private Long Period;
 
     /**
-    * Indicates whether to create an index when creating the log topic.
+    * Whether to create an index when creating a log topic. Default to false.
     */
     @SerializedName("CreateIndex")
     @Expose
     private Boolean CreateIndex;
 
     /**
-     * Get Instance ID. 
-     * @return InstanceId Instance ID.
+    * The region of CLS. If left empty, it defaults to the parameter value of Region.
+    */
+    @SerializedName("ClsRegion")
+    @Expose
+    private String ClsRegion;
+
+    /**
+     * Get Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API. 
+     * @return InstanceId Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Instance ID.
-     * @param InstanceId Instance ID.
+     * Set Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
+     * @param InstanceId Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Log type. Valid values: error and slowLog. 
-     * @return LogType Log type. Valid values: error and slowLog.
+     * Get Log type. error: error log. slowlog: slow log. 
+     * @return LogType Log type. error: error log. slowlog: slow log.
      */
     public String getLogType() {
         return this.LogType;
     }
 
     /**
-     * Set Log type. Valid values: error and slowLog.
-     * @param LogType Log type. Valid values: error and slowLog.
+     * Set Log type. error: error log. slowlog: slow log.
+     * @param LogType Log type. error: error log. slowlog: slow log.
      */
     public void setLogType(String LogType) {
         this.LogType = LogType;
     }
 
     /**
-     * Get Enabling status. Valid values: ON and OFF. 
-     * @return Status Enabling status. Valid values: ON and OFF.
+     * Get Delivery status. ON: Enabled, OFF: Disabled. 
+     * @return Status Delivery status. ON: Enabled, OFF: Disabled.
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Enabling status. Valid values: ON and OFF.
-     * @param Status Enabling status. Valid values: ON and OFF.
+     * Set Delivery status. ON: Enabled, OFF: Disabled.
+     * @param Status Delivery status. ON: Enabled, OFF: Disabled.
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get Indicates whether a log set needs to be created. 
-     * @return CreateLogset Indicates whether a log set needs to be created.
+     * Get Whether required to create logset. Default to false. 
+     * @return CreateLogset Whether required to create logset. Default to false.
      */
     public Boolean getCreateLogset() {
         return this.CreateLogset;
     }
 
     /**
-     * Set Indicates whether a log set needs to be created.
-     * @param CreateLogset Indicates whether a log set needs to be created.
+     * Set Whether required to create logset. Default to false.
+     * @param CreateLogset Whether required to create logset. Default to false.
      */
     public void setCreateLogset(Boolean CreateLogset) {
         this.CreateLogset = CreateLogset;
     }
 
     /**
-     * Get Log set name if the log set is to be created or ID of the selected existing log set. 
-     * @return Logset Log set name if the log set is to be created or ID of the selected existing log set.
+     * Get Logset name when creating a logset; logset ID when selecting an existing log set. Empty by default.
+Description: When the parameter Status is set to ON, you must fill in either the Logset or LogTopic parameter. 
+     * @return Logset Logset name when creating a logset; logset ID when selecting an existing log set. Empty by default.
+Description: When the parameter Status is set to ON, you must fill in either the Logset or LogTopic parameter.
      */
     public String getLogset() {
         return this.Logset;
     }
 
     /**
-     * Set Log set name if the log set is to be created or ID of the selected existing log set.
-     * @param Logset Log set name if the log set is to be created or ID of the selected existing log set.
+     * Set Logset name when creating a logset; logset ID when selecting an existing log set. Empty by default.
+Description: When the parameter Status is set to ON, you must fill in either the Logset or LogTopic parameter.
+     * @param Logset Logset name when creating a logset; logset ID when selecting an existing log set. Empty by default.
+Description: When the parameter Status is set to ON, you must fill in either the Logset or LogTopic parameter.
      */
     public void setLogset(String Logset) {
         this.Logset = Logset;
     }
 
     /**
-     * Get Indicates whether a log topic needs to be created. 
-     * @return CreateLogTopic Indicates whether a log topic needs to be created.
+     * Get Whether required to create log topic. Default to false. 
+     * @return CreateLogTopic Whether required to create log topic. Default to false.
      */
     public Boolean getCreateLogTopic() {
         return this.CreateLogTopic;
     }
 
     /**
-     * Set Indicates whether a log topic needs to be created.
-     * @param CreateLogTopic Indicates whether a log topic needs to be created.
+     * Set Whether required to create log topic. Default to false.
+     * @param CreateLogTopic Whether required to create log topic. Default to false.
      */
     public void setCreateLogTopic(Boolean CreateLogTopic) {
         this.CreateLogTopic = CreateLogTopic;
     }
 
     /**
-     * Get Log topic name if the topic is to be created or ID of the selected existing topic. 
-     * @return LogTopic Log topic name if the topic is to be created or ID of the selected existing topic.
+     * Get Log topic name when creating a log topic; log topic ID when selecting an existing log topic. Empty by default.
+Description: When the parameter Status is set to ON, you must fill in either the Logset or LogTopic parameter. 
+     * @return LogTopic Log topic name when creating a log topic; log topic ID when selecting an existing log topic. Empty by default.
+Description: When the parameter Status is set to ON, you must fill in either the Logset or LogTopic parameter.
      */
     public String getLogTopic() {
         return this.LogTopic;
     }
 
     /**
-     * Set Log topic name if the topic is to be created or ID of the selected existing topic.
-     * @param LogTopic Log topic name if the topic is to be created or ID of the selected existing topic.
+     * Set Log topic name when creating a log topic; log topic ID when selecting an existing log topic. Empty by default.
+Description: When the parameter Status is set to ON, you must fill in either the Logset or LogTopic parameter.
+     * @param LogTopic Log topic name when creating a log topic; log topic ID when selecting an existing log topic. Empty by default.
+Description: When the parameter Status is set to ON, you must fill in either the Logset or LogTopic parameter.
      */
     public void setLogTopic(String LogTopic) {
         this.LogTopic = LogTopic;
     }
 
     /**
-     * Get Log topic validity period, which is 30 days by default if not specified. 
-     * @return Period Log topic validity period, which is 30 days by default if not specified.
+     * Get Log topic valid period. Default value: 30 days if left empty. Maximum value: 3600. 
+     * @return Period Log topic valid period. Default value: 30 days if left empty. Maximum value: 3600.
      */
     public Long getPeriod() {
         return this.Period;
     }
 
     /**
-     * Set Log topic validity period, which is 30 days by default if not specified.
-     * @param Period Log topic validity period, which is 30 days by default if not specified.
+     * Set Log topic valid period. Default value: 30 days if left empty. Maximum value: 3600.
+     * @param Period Log topic valid period. Default value: 30 days if left empty. Maximum value: 3600.
      */
     public void setPeriod(Long Period) {
         this.Period = Period;
     }
 
     /**
-     * Get Indicates whether to create an index when creating the log topic. 
-     * @return CreateIndex Indicates whether to create an index when creating the log topic.
+     * Get Whether to create an index when creating a log topic. Default to false. 
+     * @return CreateIndex Whether to create an index when creating a log topic. Default to false.
      */
     public Boolean getCreateIndex() {
         return this.CreateIndex;
     }
 
     /**
-     * Set Indicates whether to create an index when creating the log topic.
-     * @param CreateIndex Indicates whether to create an index when creating the log topic.
+     * Set Whether to create an index when creating a log topic. Default to false.
+     * @param CreateIndex Whether to create an index when creating a log topic. Default to false.
      */
     public void setCreateIndex(Boolean CreateIndex) {
         this.CreateIndex = CreateIndex;
+    }
+
+    /**
+     * Get The region of CLS. If left empty, it defaults to the parameter value of Region. 
+     * @return ClsRegion The region of CLS. If left empty, it defaults to the parameter value of Region.
+     */
+    public String getClsRegion() {
+        return this.ClsRegion;
+    }
+
+    /**
+     * Set The region of CLS. If left empty, it defaults to the parameter value of Region.
+     * @param ClsRegion The region of CLS. If left empty, it defaults to the parameter value of Region.
+     */
+    public void setClsRegion(String ClsRegion) {
+        this.ClsRegion = ClsRegion;
     }
 
     public ModifyDBInstanceLogToCLSRequest() {
@@ -265,6 +298,9 @@ public class ModifyDBInstanceLogToCLSRequest extends AbstractModel {
         if (source.CreateIndex != null) {
             this.CreateIndex = new Boolean(source.CreateIndex);
         }
+        if (source.ClsRegion != null) {
+            this.ClsRegion = new String(source.ClsRegion);
+        }
     }
 
 
@@ -281,6 +317,7 @@ public class ModifyDBInstanceLogToCLSRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "LogTopic", this.LogTopic);
         this.setParamSimple(map, prefix + "Period", this.Period);
         this.setParamSimple(map, prefix + "CreateIndex", this.CreateIndex);
+        this.setParamSimple(map, prefix + "ClsRegion", this.ClsRegion);
 
     }
 }

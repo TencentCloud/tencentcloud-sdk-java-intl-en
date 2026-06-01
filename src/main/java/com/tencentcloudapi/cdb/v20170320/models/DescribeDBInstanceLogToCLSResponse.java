@@ -24,16 +24,14 @@ import java.util.HashMap;
 public class DescribeDBInstanceLogToCLSResponse extends AbstractModel {
 
     /**
-    * Configurations of sending error logs to CLS.
-Note: The return value may be null, indicating that no valid data can be obtained.
+    * Error log delivery CLS configuration
     */
     @SerializedName("ErrorLog")
     @Expose
     private LogToCLSConfig ErrorLog;
 
     /**
-    * Configurations of sending slow logs to CLS.
-Note: The return value may be null, indicating that no valid data can be obtained.
+    * Slow log delivery CLS configuration
     */
     @SerializedName("SlowLog")
     @Expose
@@ -47,40 +45,32 @@ Note: The return value may be null, indicating that no valid data can be obtaine
     private String RequestId;
 
     /**
-     * Get Configurations of sending error logs to CLS.
-Note: The return value may be null, indicating that no valid data can be obtained. 
-     * @return ErrorLog Configurations of sending error logs to CLS.
-Note: The return value may be null, indicating that no valid data can be obtained.
+     * Get Error log delivery CLS configuration 
+     * @return ErrorLog Error log delivery CLS configuration
      */
     public LogToCLSConfig getErrorLog() {
         return this.ErrorLog;
     }
 
     /**
-     * Set Configurations of sending error logs to CLS.
-Note: The return value may be null, indicating that no valid data can be obtained.
-     * @param ErrorLog Configurations of sending error logs to CLS.
-Note: The return value may be null, indicating that no valid data can be obtained.
+     * Set Error log delivery CLS configuration
+     * @param ErrorLog Error log delivery CLS configuration
      */
     public void setErrorLog(LogToCLSConfig ErrorLog) {
         this.ErrorLog = ErrorLog;
     }
 
     /**
-     * Get Configurations of sending slow logs to CLS.
-Note: The return value may be null, indicating that no valid data can be obtained. 
-     * @return SlowLog Configurations of sending slow logs to CLS.
-Note: The return value may be null, indicating that no valid data can be obtained.
+     * Get Slow log delivery CLS configuration 
+     * @return SlowLog Slow log delivery CLS configuration
      */
     public LogToCLSConfig getSlowLog() {
         return this.SlowLog;
     }
 
     /**
-     * Set Configurations of sending slow logs to CLS.
-Note: The return value may be null, indicating that no valid data can be obtained.
-     * @param SlowLog Configurations of sending slow logs to CLS.
-Note: The return value may be null, indicating that no valid data can be obtained.
+     * Set Slow log delivery CLS configuration
+     * @param SlowLog Slow log delivery CLS configuration
      */
     public void setSlowLog(LogToCLSConfig SlowLog) {
         this.SlowLog = SlowLog;

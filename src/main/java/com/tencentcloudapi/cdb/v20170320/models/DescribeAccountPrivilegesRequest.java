@@ -31,14 +31,14 @@ public class DescribeAccountPrivilegesRequest extends AbstractModel {
     private String InstanceId;
 
     /**
-    * Database user account.
+    * Account name of the database. Obtain through the [DescribeAccounts](https://www.tencentcloud.com/document/api/236/17499?from_cn_redirect=1) API.
     */
     @SerializedName("User")
     @Expose
     private String User;
 
     /**
-    * Database account domain name.
+    * Domain name of the database account. Obtain through the API [DescribeAccounts](https://www.tencentcloud.com/document/api/236/17499?from_cn_redirect=1).
     */
     @SerializedName("Host")
     @Expose
@@ -61,32 +61,32 @@ public class DescribeAccountPrivilegesRequest extends AbstractModel {
     }
 
     /**
-     * Get Database user account. 
-     * @return User Database user account.
+     * Get Account name of the database. Obtain through the [DescribeAccounts](https://www.tencentcloud.com/document/api/236/17499?from_cn_redirect=1) API. 
+     * @return User Account name of the database. Obtain through the [DescribeAccounts](https://www.tencentcloud.com/document/api/236/17499?from_cn_redirect=1) API.
      */
     public String getUser() {
         return this.User;
     }
 
     /**
-     * Set Database user account.
-     * @param User Database user account.
+     * Set Account name of the database. Obtain through the [DescribeAccounts](https://www.tencentcloud.com/document/api/236/17499?from_cn_redirect=1) API.
+     * @param User Account name of the database. Obtain through the [DescribeAccounts](https://www.tencentcloud.com/document/api/236/17499?from_cn_redirect=1) API.
      */
     public void setUser(String User) {
         this.User = User;
     }
 
     /**
-     * Get Database account domain name. 
-     * @return Host Database account domain name.
+     * Get Domain name of the database account. Obtain through the API [DescribeAccounts](https://www.tencentcloud.com/document/api/236/17499?from_cn_redirect=1). 
+     * @return Host Domain name of the database account. Obtain through the API [DescribeAccounts](https://www.tencentcloud.com/document/api/236/17499?from_cn_redirect=1).
      */
     public String getHost() {
         return this.Host;
     }
 
     /**
-     * Set Database account domain name.
-     * @param Host Database account domain name.
+     * Set Domain name of the database account. Obtain through the API [DescribeAccounts](https://www.tencentcloud.com/document/api/236/17499?from_cn_redirect=1).
+     * @param Host Domain name of the database account. Obtain through the API [DescribeAccounts](https://www.tencentcloud.com/document/api/236/17499?from_cn_redirect=1).
      */
     public void setHost(String Host) {
         this.Host = Host;

@@ -24,302 +24,329 @@ import java.util.HashMap;
 public class BinlogInfo extends AbstractModel {
 
     /**
-    * Binlog backup filename
+    * <p>binlog backup file name</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * Backup file size in bytes
+    * <p>Backup file size, unit: Byte</p>
     */
     @SerializedName("Size")
     @Expose
     private Long Size;
 
     /**
-    * File stored time in the format of 2016-03-17 02:10:37
+    * <p>File storage time. Time format: 2016-03-17 02:10:37</p>
     */
     @SerializedName("Date")
     @Expose
     private String Date;
 
     /**
-    * Download address
+    * <p>Download link<br>Description: This download link is the same as the download address of the parameter InternetUrl.</p>
     */
     @SerializedName("IntranetUrl")
     @Expose
     private String IntranetUrl;
 
     /**
-    * Download address
+    * <p>Download address<br>Description: This download address is the same as the IntranetUrl download address.</p>
     */
     @SerializedName("InternetUrl")
     @Expose
     private String InternetUrl;
 
     /**
-    * Log type. Value range: binlog
+    * <p>Log specific type. Possible values: binlog - binary log</p>
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * Binlog file start file
+    * <p>binlog file start time</p>
     */
     @SerializedName("BinlogStartTime")
     @Expose
     private String BinlogStartTime;
 
     /**
-    * Binlog file end time
+    * <p>binlog file expiration time</p>
     */
     @SerializedName("BinlogFinishTime")
     @Expose
     private String BinlogFinishTime;
 
     /**
-    * The region where the binlog file resides
+    * <p>Region where local binlog files are located</p>
     */
     @SerializedName("Region")
     @Expose
     private String Region;
 
     /**
-    * Backup task status. Valid values: `SUCCESS` (backup succeeded), `FAILED` (backup failed), `RUNNING` (backup is in progress).
+    * <p>Backup task status. Possible values: "SUCCESS": backup successful, "FAILED": backup FAILED, "RUNNING": backup in progress.</p>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * The detailed information of remote binlog backups
+    * <p>Detailed information of binlog offsite backup</p>
     */
     @SerializedName("RemoteInfo")
     @Expose
     private RemoteBackupInfo [] RemoteInfo;
 
     /**
-    * Storage method. Valid values: `0` (regular storage), `1`(archive storage). Default value: `0`.
+    * <p>Storage method: 0 - regular storage, 1 - archive storage, 2 - standard storage, defaults to 0.</p>
     */
     @SerializedName("CosStorageType")
     @Expose
     private Long CosStorageType;
 
     /**
-    * Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed in the TencentDB console.
+    * <p>Instance ID, in the format such as cdb-c1nl9rpv. This matches the instance ID displayed on the TencentDB console.</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-     * Get Binlog backup filename 
-     * @return Name Binlog backup filename
+    * <p>Backup completion progress</p>
+    */
+    @SerializedName("Progress")
+    @Expose
+    private Long Progress;
+
+    /**
+     * Get <p>binlog backup file name</p> 
+     * @return Name <p>binlog backup file name</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Binlog backup filename
-     * @param Name Binlog backup filename
+     * Set <p>binlog backup file name</p>
+     * @param Name <p>binlog backup file name</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get Backup file size in bytes 
-     * @return Size Backup file size in bytes
+     * Get <p>Backup file size, unit: Byte</p> 
+     * @return Size <p>Backup file size, unit: Byte</p>
      */
     public Long getSize() {
         return this.Size;
     }
 
     /**
-     * Set Backup file size in bytes
-     * @param Size Backup file size in bytes
+     * Set <p>Backup file size, unit: Byte</p>
+     * @param Size <p>Backup file size, unit: Byte</p>
      */
     public void setSize(Long Size) {
         this.Size = Size;
     }
 
     /**
-     * Get File stored time in the format of 2016-03-17 02:10:37 
-     * @return Date File stored time in the format of 2016-03-17 02:10:37
+     * Get <p>File storage time. Time format: 2016-03-17 02:10:37</p> 
+     * @return Date <p>File storage time. Time format: 2016-03-17 02:10:37</p>
      */
     public String getDate() {
         return this.Date;
     }
 
     /**
-     * Set File stored time in the format of 2016-03-17 02:10:37
-     * @param Date File stored time in the format of 2016-03-17 02:10:37
+     * Set <p>File storage time. Time format: 2016-03-17 02:10:37</p>
+     * @param Date <p>File storage time. Time format: 2016-03-17 02:10:37</p>
      */
     public void setDate(String Date) {
         this.Date = Date;
     }
 
     /**
-     * Get Download address 
-     * @return IntranetUrl Download address
+     * Get <p>Download link<br>Description: This download link is the same as the download address of the parameter InternetUrl.</p> 
+     * @return IntranetUrl <p>Download link<br>Description: This download link is the same as the download address of the parameter InternetUrl.</p>
      */
     public String getIntranetUrl() {
         return this.IntranetUrl;
     }
 
     /**
-     * Set Download address
-     * @param IntranetUrl Download address
+     * Set <p>Download link<br>Description: This download link is the same as the download address of the parameter InternetUrl.</p>
+     * @param IntranetUrl <p>Download link<br>Description: This download link is the same as the download address of the parameter InternetUrl.</p>
      */
     public void setIntranetUrl(String IntranetUrl) {
         this.IntranetUrl = IntranetUrl;
     }
 
     /**
-     * Get Download address 
-     * @return InternetUrl Download address
+     * Get <p>Download address<br>Description: This download address is the same as the IntranetUrl download address.</p> 
+     * @return InternetUrl <p>Download address<br>Description: This download address is the same as the IntranetUrl download address.</p>
      */
     public String getInternetUrl() {
         return this.InternetUrl;
     }
 
     /**
-     * Set Download address
-     * @param InternetUrl Download address
+     * Set <p>Download address<br>Description: This download address is the same as the IntranetUrl download address.</p>
+     * @param InternetUrl <p>Download address<br>Description: This download address is the same as the IntranetUrl download address.</p>
      */
     public void setInternetUrl(String InternetUrl) {
         this.InternetUrl = InternetUrl;
     }
 
     /**
-     * Get Log type. Value range: binlog 
-     * @return Type Log type. Value range: binlog
+     * Get <p>Log specific type. Possible values: binlog - binary log</p> 
+     * @return Type <p>Log specific type. Possible values: binlog - binary log</p>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set Log type. Value range: binlog
-     * @param Type Log type. Value range: binlog
+     * Set <p>Log specific type. Possible values: binlog - binary log</p>
+     * @param Type <p>Log specific type. Possible values: binlog - binary log</p>
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get Binlog file start file 
-     * @return BinlogStartTime Binlog file start file
+     * Get <p>binlog file start time</p> 
+     * @return BinlogStartTime <p>binlog file start time</p>
      */
     public String getBinlogStartTime() {
         return this.BinlogStartTime;
     }
 
     /**
-     * Set Binlog file start file
-     * @param BinlogStartTime Binlog file start file
+     * Set <p>binlog file start time</p>
+     * @param BinlogStartTime <p>binlog file start time</p>
      */
     public void setBinlogStartTime(String BinlogStartTime) {
         this.BinlogStartTime = BinlogStartTime;
     }
 
     /**
-     * Get Binlog file end time 
-     * @return BinlogFinishTime Binlog file end time
+     * Get <p>binlog file expiration time</p> 
+     * @return BinlogFinishTime <p>binlog file expiration time</p>
      */
     public String getBinlogFinishTime() {
         return this.BinlogFinishTime;
     }
 
     /**
-     * Set Binlog file end time
-     * @param BinlogFinishTime Binlog file end time
+     * Set <p>binlog file expiration time</p>
+     * @param BinlogFinishTime <p>binlog file expiration time</p>
      */
     public void setBinlogFinishTime(String BinlogFinishTime) {
         this.BinlogFinishTime = BinlogFinishTime;
     }
 
     /**
-     * Get The region where the binlog file resides 
-     * @return Region The region where the binlog file resides
+     * Get <p>Region where local binlog files are located</p> 
+     * @return Region <p>Region where local binlog files are located</p>
      */
     public String getRegion() {
         return this.Region;
     }
 
     /**
-     * Set The region where the binlog file resides
-     * @param Region The region where the binlog file resides
+     * Set <p>Region where local binlog files are located</p>
+     * @param Region <p>Region where local binlog files are located</p>
      */
     public void setRegion(String Region) {
         this.Region = Region;
     }
 
     /**
-     * Get Backup task status. Valid values: `SUCCESS` (backup succeeded), `FAILED` (backup failed), `RUNNING` (backup is in progress). 
-     * @return Status Backup task status. Valid values: `SUCCESS` (backup succeeded), `FAILED` (backup failed), `RUNNING` (backup is in progress).
+     * Get <p>Backup task status. Possible values: "SUCCESS": backup successful, "FAILED": backup FAILED, "RUNNING": backup in progress.</p> 
+     * @return Status <p>Backup task status. Possible values: "SUCCESS": backup successful, "FAILED": backup FAILED, "RUNNING": backup in progress.</p>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Backup task status. Valid values: `SUCCESS` (backup succeeded), `FAILED` (backup failed), `RUNNING` (backup is in progress).
-     * @param Status Backup task status. Valid values: `SUCCESS` (backup succeeded), `FAILED` (backup failed), `RUNNING` (backup is in progress).
+     * Set <p>Backup task status. Possible values: "SUCCESS": backup successful, "FAILED": backup FAILED, "RUNNING": backup in progress.</p>
+     * @param Status <p>Backup task status. Possible values: "SUCCESS": backup successful, "FAILED": backup FAILED, "RUNNING": backup in progress.</p>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get The detailed information of remote binlog backups 
-     * @return RemoteInfo The detailed information of remote binlog backups
+     * Get <p>Detailed information of binlog offsite backup</p> 
+     * @return RemoteInfo <p>Detailed information of binlog offsite backup</p>
      */
     public RemoteBackupInfo [] getRemoteInfo() {
         return this.RemoteInfo;
     }
 
     /**
-     * Set The detailed information of remote binlog backups
-     * @param RemoteInfo The detailed information of remote binlog backups
+     * Set <p>Detailed information of binlog offsite backup</p>
+     * @param RemoteInfo <p>Detailed information of binlog offsite backup</p>
      */
     public void setRemoteInfo(RemoteBackupInfo [] RemoteInfo) {
         this.RemoteInfo = RemoteInfo;
     }
 
     /**
-     * Get Storage method. Valid values: `0` (regular storage), `1`(archive storage). Default value: `0`. 
-     * @return CosStorageType Storage method. Valid values: `0` (regular storage), `1`(archive storage). Default value: `0`.
+     * Get <p>Storage method: 0 - regular storage, 1 - archive storage, 2 - standard storage, defaults to 0.</p> 
+     * @return CosStorageType <p>Storage method: 0 - regular storage, 1 - archive storage, 2 - standard storage, defaults to 0.</p>
      */
     public Long getCosStorageType() {
         return this.CosStorageType;
     }
 
     /**
-     * Set Storage method. Valid values: `0` (regular storage), `1`(archive storage). Default value: `0`.
-     * @param CosStorageType Storage method. Valid values: `0` (regular storage), `1`(archive storage). Default value: `0`.
+     * Set <p>Storage method: 0 - regular storage, 1 - archive storage, 2 - standard storage, defaults to 0.</p>
+     * @param CosStorageType <p>Storage method: 0 - regular storage, 1 - archive storage, 2 - standard storage, defaults to 0.</p>
      */
     public void setCosStorageType(Long CosStorageType) {
         this.CosStorageType = CosStorageType;
     }
 
     /**
-     * Get Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed in the TencentDB console. 
-     * @return InstanceId Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed in the TencentDB console.
+     * Get <p>Instance ID, in the format such as cdb-c1nl9rpv. This matches the instance ID displayed on the TencentDB console.</p> 
+     * @return InstanceId <p>Instance ID, in the format such as cdb-c1nl9rpv. This matches the instance ID displayed on the TencentDB console.</p>
+     * @deprecated
      */
+    @Deprecated
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed in the TencentDB console.
-     * @param InstanceId Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed in the TencentDB console.
+     * Set <p>Instance ID, in the format such as cdb-c1nl9rpv. This matches the instance ID displayed on the TencentDB console.</p>
+     * @param InstanceId <p>Instance ID, in the format such as cdb-c1nl9rpv. This matches the instance ID displayed on the TencentDB console.</p>
+     * @deprecated
      */
+    @Deprecated
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
+    }
+
+    /**
+     * Get <p>Backup completion progress</p> 
+     * @return Progress <p>Backup completion progress</p>
+     */
+    public Long getProgress() {
+        return this.Progress;
+    }
+
+    /**
+     * Set <p>Backup completion progress</p>
+     * @param Progress <p>Backup completion progress</p>
+     */
+    public void setProgress(Long Progress) {
+        this.Progress = Progress;
     }
 
     public BinlogInfo() {
@@ -372,6 +399,9 @@ public class BinlogInfo extends AbstractModel {
         if (source.InstanceId != null) {
             this.InstanceId = new String(source.InstanceId);
         }
+        if (source.Progress != null) {
+            this.Progress = new Long(source.Progress);
+        }
     }
 
 
@@ -392,6 +422,7 @@ public class BinlogInfo extends AbstractModel {
         this.setParamArrayObj(map, prefix + "RemoteInfo.", this.RemoteInfo);
         this.setParamSimple(map, prefix + "CosStorageType", this.CosStorageType);
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
+        this.setParamSimple(map, prefix + "Progress", this.Progress);
 
     }
 }

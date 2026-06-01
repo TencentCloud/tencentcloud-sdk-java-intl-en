@@ -31,7 +31,7 @@ public class BackupConfig extends AbstractModel {
     private String ReplicationMode;
 
     /**
-    * Name of the AZ of secondary database 2, such as ap-shanghai-2
+    * The canonical name of the second secondary availability zone, for example ap-shanghai-2
     */
     @SerializedName("Zone")
     @Expose
@@ -68,16 +68,16 @@ public class BackupConfig extends AbstractModel {
     }
 
     /**
-     * Get Name of the AZ of secondary database 2, such as ap-shanghai-2 
-     * @return Zone Name of the AZ of secondary database 2, such as ap-shanghai-2
+     * Get The canonical name of the second secondary availability zone, for example ap-shanghai-2 
+     * @return Zone The canonical name of the second secondary availability zone, for example ap-shanghai-2
      */
     public String getZone() {
         return this.Zone;
     }
 
     /**
-     * Set Name of the AZ of secondary database 2, such as ap-shanghai-2
-     * @param Zone Name of the AZ of secondary database 2, such as ap-shanghai-2
+     * Set The canonical name of the second secondary availability zone, for example ap-shanghai-2
+     * @param Zone The canonical name of the second secondary availability zone, for example ap-shanghai-2
      */
     public void setZone(String Zone) {
         this.Zone = Zone;

@@ -32,7 +32,6 @@ public class DescribeRollbackTaskDetailResponse extends AbstractModel {
 
     /**
     * Rollback task details.
-Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Items")
     @Expose
@@ -62,10 +61,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Rollback task details.
-Note: this field may return null, indicating that no valid values can be obtained. 
+     * Get Rollback task details. 
      * @return Items Rollback task details.
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     public RollbackTask [] getItems() {
         return this.Items;
@@ -73,9 +70,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Rollback task details.
-Note: this field may return null, indicating that no valid values can be obtained.
      * @param Items Rollback task details.
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setItems(RollbackTask [] Items) {
         this.Items = Items;

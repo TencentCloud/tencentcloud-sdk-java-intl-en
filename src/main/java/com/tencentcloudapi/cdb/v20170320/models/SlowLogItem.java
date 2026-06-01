@@ -24,32 +24,28 @@ import java.util.HashMap;
 public class SlowLogItem extends AbstractModel {
 
     /**
-    * SQL execution time.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Sql execution time. Unix second-level timestamp.
     */
     @SerializedName("Timestamp")
     @Expose
     private Long Timestamp;
 
     /**
-    * SQL execution duration in seconds.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * Execution duration of Sql (seconds).
     */
     @SerializedName("QueryTime")
     @Expose
     private Float QueryTime;
 
     /**
-    * SQL statement.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Sql statement.
     */
     @SerializedName("SqlText")
     @Expose
     private String SqlText;
 
     /**
-    * Client address.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Client IP address.
     */
     @SerializedName("UserHost")
     @Expose
@@ -57,7 +53,6 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
     * Username.
-Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("UserName")
     @Expose
@@ -65,15 +60,13 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
     * Database name.
-Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Database")
     @Expose
     private String Database;
 
     /**
-    * Lock duration in seconds.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * Lock duration (unit: second).
     */
     @SerializedName("LockTime")
     @Expose
@@ -81,121 +74,99 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
     /**
     * Number of scanned rows.
-Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("RowsExamined")
     @Expose
     private Long RowsExamined;
 
     /**
-    * Number of rows in result set.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Result set row count.
     */
     @SerializedName("RowsSent")
     @Expose
     private Long RowsSent;
 
     /**
-    * SQL template.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Sql Template.
     */
     @SerializedName("SqlTemplate")
     @Expose
     private String SqlTemplate;
 
     /**
-    * SQL statement MD5.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * md5 of the Sql statement.
     */
     @SerializedName("Md5")
     @Expose
     private String Md5;
 
     /**
-     * Get SQL execution time.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return Timestamp SQL execution time.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Sql execution time. Unix second-level timestamp. 
+     * @return Timestamp Sql execution time. Unix second-level timestamp.
      */
     public Long getTimestamp() {
         return this.Timestamp;
     }
 
     /**
-     * Set SQL execution time.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Timestamp SQL execution time.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Sql execution time. Unix second-level timestamp.
+     * @param Timestamp Sql execution time. Unix second-level timestamp.
      */
     public void setTimestamp(Long Timestamp) {
         this.Timestamp = Timestamp;
     }
 
     /**
-     * Get SQL execution duration in seconds.
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return QueryTime SQL execution duration in seconds.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get Execution duration of Sql (seconds). 
+     * @return QueryTime Execution duration of Sql (seconds).
      */
     public Float getQueryTime() {
         return this.QueryTime;
     }
 
     /**
-     * Set SQL execution duration in seconds.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param QueryTime SQL execution duration in seconds.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set Execution duration of Sql (seconds).
+     * @param QueryTime Execution duration of Sql (seconds).
      */
     public void setQueryTime(Float QueryTime) {
         this.QueryTime = QueryTime;
     }
 
     /**
-     * Get SQL statement.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return SqlText SQL statement.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Sql statement. 
+     * @return SqlText Sql statement.
      */
     public String getSqlText() {
         return this.SqlText;
     }
 
     /**
-     * Set SQL statement.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param SqlText SQL statement.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Sql statement.
+     * @param SqlText Sql statement.
      */
     public void setSqlText(String SqlText) {
         this.SqlText = SqlText;
     }
 
     /**
-     * Get Client address.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return UserHost Client address.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Client IP address. 
+     * @return UserHost Client IP address.
      */
     public String getUserHost() {
         return this.UserHost;
     }
 
     /**
-     * Set Client address.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param UserHost Client address.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Client IP address.
+     * @param UserHost Client IP address.
      */
     public void setUserHost(String UserHost) {
         this.UserHost = UserHost;
     }
 
     /**
-     * Get Username.
-Note: this field may return null, indicating that no valid values can be obtained. 
+     * Get Username. 
      * @return UserName Username.
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getUserName() {
         return this.UserName;
@@ -203,19 +174,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Username.
-Note: this field may return null, indicating that no valid values can be obtained.
      * @param UserName Username.
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setUserName(String UserName) {
         this.UserName = UserName;
     }
 
     /**
-     * Get Database name.
-Note: this field may return null, indicating that no valid values can be obtained. 
+     * Get Database name. 
      * @return Database Database name.
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getDatabase() {
         return this.Database;
@@ -223,39 +190,31 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Database name.
-Note: this field may return null, indicating that no valid values can be obtained.
      * @param Database Database name.
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setDatabase(String Database) {
         this.Database = Database;
     }
 
     /**
-     * Get Lock duration in seconds.
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return LockTime Lock duration in seconds.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get Lock duration (unit: second). 
+     * @return LockTime Lock duration (unit: second).
      */
     public Float getLockTime() {
         return this.LockTime;
     }
 
     /**
-     * Set Lock duration in seconds.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param LockTime Lock duration in seconds.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set Lock duration (unit: second).
+     * @param LockTime Lock duration (unit: second).
      */
     public void setLockTime(Float LockTime) {
         this.LockTime = LockTime;
     }
 
     /**
-     * Get Number of scanned rows.
-Note: this field may return null, indicating that no valid values can be obtained. 
+     * Get Number of scanned rows. 
      * @return RowsExamined Number of scanned rows.
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     public Long getRowsExamined() {
         return this.RowsExamined;
@@ -263,69 +222,55 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Number of scanned rows.
-Note: this field may return null, indicating that no valid values can be obtained.
      * @param RowsExamined Number of scanned rows.
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setRowsExamined(Long RowsExamined) {
         this.RowsExamined = RowsExamined;
     }
 
     /**
-     * Get Number of rows in result set.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return RowsSent Number of rows in result set.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Result set row count. 
+     * @return RowsSent Result set row count.
      */
     public Long getRowsSent() {
         return this.RowsSent;
     }
 
     /**
-     * Set Number of rows in result set.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param RowsSent Number of rows in result set.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Result set row count.
+     * @param RowsSent Result set row count.
      */
     public void setRowsSent(Long RowsSent) {
         this.RowsSent = RowsSent;
     }
 
     /**
-     * Get SQL template.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return SqlTemplate SQL template.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Sql Template. 
+     * @return SqlTemplate Sql Template.
      */
     public String getSqlTemplate() {
         return this.SqlTemplate;
     }
 
     /**
-     * Set SQL template.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param SqlTemplate SQL template.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Sql Template.
+     * @param SqlTemplate Sql Template.
      */
     public void setSqlTemplate(String SqlTemplate) {
         this.SqlTemplate = SqlTemplate;
     }
 
     /**
-     * Get SQL statement MD5.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return Md5 SQL statement MD5.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get md5 of the Sql statement. 
+     * @return Md5 md5 of the Sql statement.
      */
     public String getMd5() {
         return this.Md5;
     }
 
     /**
-     * Set SQL statement MD5.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Md5 SQL statement MD5.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set md5 of the Sql statement.
+     * @param Md5 md5 of the Sql statement.
      */
     public void setMd5(String Md5) {
         this.Md5 = Md5;

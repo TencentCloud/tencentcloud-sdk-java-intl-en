@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateParamTemplateRequest extends AbstractModel {
 
     /**
-    * Parameter template name.
+    * Parameter template name. Up to 60 characters are allowed.
     */
     @SerializedName("Name")
     @Expose
@@ -38,14 +38,14 @@ public class CreateParamTemplateRequest extends AbstractModel {
     private String Description;
 
     /**
-    * MySQL version number.
+    * MySQL version number. Available values: 5.6, 5.7, and 8.0.
     */
     @SerializedName("EngineVersion")
     @Expose
     private String EngineVersion;
 
     /**
-    * Source parameter template ID.
+    * Source parameter template ID, which can be obtained through the [DescribeParamTemplates](https://www.tencentcloud.com/document/api/236/32659?from_cn_redirect=1) API.
     */
     @SerializedName("TemplateId")
     @Expose
@@ -66,23 +66,24 @@ public class CreateParamTemplateRequest extends AbstractModel {
     private String TemplateType;
 
     /**
-    * Instance engine type. Valid values: `InnoDB` (default), `RocksDB`.
+    * Instance engine type, defaults to "InnoDB". Supported values include "InnoDB" and "RocksDB".
+Description: RocksDB is only supported in database versions MySQL 5.7 and MySQL 8.0.
     */
     @SerializedName("EngineType")
     @Expose
     private String EngineType;
 
     /**
-     * Get Parameter template name. 
-     * @return Name Parameter template name.
+     * Get Parameter template name. Up to 60 characters are allowed. 
+     * @return Name Parameter template name. Up to 60 characters are allowed.
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Parameter template name.
-     * @param Name Parameter template name.
+     * Set Parameter template name. Up to 60 characters are allowed.
+     * @param Name Parameter template name. Up to 60 characters are allowed.
      */
     public void setName(String Name) {
         this.Name = Name;
@@ -105,32 +106,32 @@ public class CreateParamTemplateRequest extends AbstractModel {
     }
 
     /**
-     * Get MySQL version number. 
-     * @return EngineVersion MySQL version number.
+     * Get MySQL version number. Available values: 5.6, 5.7, and 8.0. 
+     * @return EngineVersion MySQL version number. Available values: 5.6, 5.7, and 8.0.
      */
     public String getEngineVersion() {
         return this.EngineVersion;
     }
 
     /**
-     * Set MySQL version number.
-     * @param EngineVersion MySQL version number.
+     * Set MySQL version number. Available values: 5.6, 5.7, and 8.0.
+     * @param EngineVersion MySQL version number. Available values: 5.6, 5.7, and 8.0.
      */
     public void setEngineVersion(String EngineVersion) {
         this.EngineVersion = EngineVersion;
     }
 
     /**
-     * Get Source parameter template ID. 
-     * @return TemplateId Source parameter template ID.
+     * Get Source parameter template ID, which can be obtained through the [DescribeParamTemplates](https://www.tencentcloud.com/document/api/236/32659?from_cn_redirect=1) API. 
+     * @return TemplateId Source parameter template ID, which can be obtained through the [DescribeParamTemplates](https://www.tencentcloud.com/document/api/236/32659?from_cn_redirect=1) API.
      */
     public Long getTemplateId() {
         return this.TemplateId;
     }
 
     /**
-     * Set Source parameter template ID.
-     * @param TemplateId Source parameter template ID.
+     * Set Source parameter template ID, which can be obtained through the [DescribeParamTemplates](https://www.tencentcloud.com/document/api/236/32659?from_cn_redirect=1) API.
+     * @param TemplateId Source parameter template ID, which can be obtained through the [DescribeParamTemplates](https://www.tencentcloud.com/document/api/236/32659?from_cn_redirect=1) API.
      */
     public void setTemplateId(Long TemplateId) {
         this.TemplateId = TemplateId;
@@ -169,16 +170,20 @@ public class CreateParamTemplateRequest extends AbstractModel {
     }
 
     /**
-     * Get Instance engine type. Valid values: `InnoDB` (default), `RocksDB`. 
-     * @return EngineType Instance engine type. Valid values: `InnoDB` (default), `RocksDB`.
+     * Get Instance engine type, defaults to "InnoDB". Supported values include "InnoDB" and "RocksDB".
+Description: RocksDB is only supported in database versions MySQL 5.7 and MySQL 8.0. 
+     * @return EngineType Instance engine type, defaults to "InnoDB". Supported values include "InnoDB" and "RocksDB".
+Description: RocksDB is only supported in database versions MySQL 5.7 and MySQL 8.0.
      */
     public String getEngineType() {
         return this.EngineType;
     }
 
     /**
-     * Set Instance engine type. Valid values: `InnoDB` (default), `RocksDB`.
-     * @param EngineType Instance engine type. Valid values: `InnoDB` (default), `RocksDB`.
+     * Set Instance engine type, defaults to "InnoDB". Supported values include "InnoDB" and "RocksDB".
+Description: RocksDB is only supported in database versions MySQL 5.7 and MySQL 8.0.
+     * @param EngineType Instance engine type, defaults to "InnoDB". Supported values include "InnoDB" and "RocksDB".
+Description: RocksDB is only supported in database versions MySQL 5.7 and MySQL 8.0.
      */
     public void setEngineType(String EngineType) {
         this.EngineType = EngineType;

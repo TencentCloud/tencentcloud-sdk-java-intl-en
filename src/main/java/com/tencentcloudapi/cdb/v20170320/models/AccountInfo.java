@@ -73,6 +73,13 @@ public class AccountInfo extends AbstractModel {
     private Long MaxUserConnections;
 
     /**
+    * Is password rotation enabled for the user account?
+    */
+    @SerializedName("OpenCam")
+    @Expose
+    private Boolean OpenCam;
+
+    /**
      * Get Account remarks 
      * @return Notes Account remarks
      */
@@ -155,7 +162,9 @@ public class AccountInfo extends AbstractModel {
     /**
      * Get This parameter is deprecated. 
      * @return CreateTime This parameter is deprecated.
+     * @deprecated
      */
+    @Deprecated
     public String getCreateTime() {
         return this.CreateTime;
     }
@@ -163,7 +172,9 @@ public class AccountInfo extends AbstractModel {
     /**
      * Set This parameter is deprecated.
      * @param CreateTime This parameter is deprecated.
+     * @deprecated
      */
+    @Deprecated
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
@@ -182,6 +193,22 @@ public class AccountInfo extends AbstractModel {
      */
     public void setMaxUserConnections(Long MaxUserConnections) {
         this.MaxUserConnections = MaxUserConnections;
+    }
+
+    /**
+     * Get Is password rotation enabled for the user account? 
+     * @return OpenCam Is password rotation enabled for the user account?
+     */
+    public Boolean getOpenCam() {
+        return this.OpenCam;
+    }
+
+    /**
+     * Set Is password rotation enabled for the user account?
+     * @param OpenCam Is password rotation enabled for the user account?
+     */
+    public void setOpenCam(Boolean OpenCam) {
+        this.OpenCam = OpenCam;
     }
 
     public AccountInfo() {
@@ -213,6 +240,9 @@ public class AccountInfo extends AbstractModel {
         if (source.MaxUserConnections != null) {
             this.MaxUserConnections = new Long(source.MaxUserConnections);
         }
+        if (source.OpenCam != null) {
+            this.OpenCam = new Boolean(source.OpenCam);
+        }
     }
 
 
@@ -227,6 +257,7 @@ public class AccountInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "ModifyPasswordTime", this.ModifyPasswordTime);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "MaxUserConnections", this.MaxUserConnections);
+        this.setParamSimple(map, prefix + "OpenCam", this.OpenCam);
 
     }
 }

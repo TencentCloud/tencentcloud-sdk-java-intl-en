@@ -31,8 +31,7 @@ public class DescribeSlowLogDataResponse extends AbstractModel {
     private Long TotalCount;
 
     /**
-    * Queried results.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Queried records.
     */
     @SerializedName("Items")
     @Expose
@@ -62,20 +61,16 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Queried results.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return Items Queried results.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Queried records. 
+     * @return Items Queried records.
      */
     public SlowLogItem [] getItems() {
         return this.Items;
     }
 
     /**
-     * Set Queried results.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Items Queried results.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Queried records.
+     * @param Items Queried records.
      */
     public void setItems(SlowLogItem [] Items) {
         this.Items = Items;

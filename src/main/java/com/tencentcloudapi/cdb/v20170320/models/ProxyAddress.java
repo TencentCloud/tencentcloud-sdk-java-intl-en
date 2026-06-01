@@ -59,81 +59,110 @@ public class ProxyAddress extends AbstractModel {
     private Long VPort;
 
     /**
-    * Assignment mode of weights. Valid values: `system` (auto-assigned), `custom`. Note: This field may return null, indicating that no valid values can be obtained.
+    * Weight allocation mode.
+System Auto-Assignment: "system", Custom: "custom"
     */
     @SerializedName("WeightMode")
     @Expose
     private String WeightMode;
 
     /**
-    * Whether to remove delayed read-only instances from the proxy group Valid values: `true`, `false`. Note: This field may return null, indicating that no valid values can be obtained.
+    * Whether to enable delay removal. Parameter value: "true" | "false"
     */
     @SerializedName("IsKickOut")
     @Expose
     private Boolean IsKickOut;
 
     /**
-    * Least read-only instances. Minimum value:  `0`. Note: This field may return null, indicating that no valid values can be obtained.
+    * Minimum retention quantity, minimum value: 0.
     */
     @SerializedName("MinCount")
     @Expose
     private Long MinCount;
 
     /**
-    * The delay threshold. Minimum value:  `0`. Note: This field may return null, indicating that no valid values can be obtained.
+    * Delay removal threshold, minimum value: 0
     */
     @SerializedName("MaxDelay")
     @Expose
     private Long MaxDelay;
 
     /**
-    * Whether to automatically add newly created read-only instances. Valid values: `true`, `false`. Note: This field may return null, indicating that no valid values can be obtained.
+    * Automatically add RO. Value: "true" | "false"
     */
     @SerializedName("AutoAddRo")
     @Expose
     private Boolean AutoAddRo;
 
     /**
-    * Whether it is read-only. Valid values: `true`, `false`. Note: This field may return null, indicating that no valid values can be obtained.
+    * Whether it is read-only. Value: "true" | "false".
     */
     @SerializedName("ReadOnly")
     @Expose
     private Boolean ReadOnly;
 
     /**
-    * Whether to enable transaction splitting Note: This field may return null, indicating that no valid values can be obtained.
+    * Whether transaction splitting is enabled
     */
     @SerializedName("TransSplit")
     @Expose
     private Boolean TransSplit;
 
     /**
-    * Whether to enable failover Note: This field may return null, indicating that no valid values can be obtained.
+    * Whether fault migration is enabled
     */
     @SerializedName("FailOver")
     @Expose
     private Boolean FailOver;
 
     /**
-    * Whether to enable the connection pool Note: This field may return null, indicating that no valid values can be obtained.
+    * Whether to enable connection pool
     */
     @SerializedName("ConnectionPool")
     @Expose
     private Boolean ConnectionPool;
 
     /**
-    * Note:  This field may return null, indicating that no valid values can be obtained.
+    * Description
     */
     @SerializedName("Desc")
     @Expose
     private String Desc;
 
     /**
-    * Read weight assignment for an instance Note: This field may return null, indicating that no valid values can be obtained.
+    * Read weight distribution of an instance
     */
     @SerializedName("ProxyAllocation")
     @Expose
     private ProxyAllocation [] ProxyAllocation;
+
+    /**
+    * Access mode
+    */
+    @SerializedName("AccessMode")
+    @Expose
+    private String AccessMode;
+
+    /**
+    * Whether automatic CLB is enabled
+    */
+    @SerializedName("AutoLoadBalance")
+    @Expose
+    private Boolean AutoLoadBalance;
+
+    /**
+    * Whether to treat libra as a read-only node
+    */
+    @SerializedName("ApNodeAsRoNode")
+    @Expose
+    private Boolean ApNodeAsRoNode;
+
+    /**
+    * libra node fault, whether to forward to other nodes
+    */
+    @SerializedName("ApQueryToOtherNode")
+    @Expose
+    private Boolean ApQueryToOtherNode;
 
     /**
      * Get Address ID of the proxy group 
@@ -216,179 +245,247 @@ public class ProxyAddress extends AbstractModel {
     }
 
     /**
-     * Get Assignment mode of weights. Valid values: `system` (auto-assigned), `custom`. Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return WeightMode Assignment mode of weights. Valid values: `system` (auto-assigned), `custom`. Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Weight allocation mode.
+System Auto-Assignment: "system", Custom: "custom" 
+     * @return WeightMode Weight allocation mode.
+System Auto-Assignment: "system", Custom: "custom"
      */
     public String getWeightMode() {
         return this.WeightMode;
     }
 
     /**
-     * Set Assignment mode of weights. Valid values: `system` (auto-assigned), `custom`. Note: This field may return null, indicating that no valid values can be obtained.
-     * @param WeightMode Assignment mode of weights. Valid values: `system` (auto-assigned), `custom`. Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Weight allocation mode.
+System Auto-Assignment: "system", Custom: "custom"
+     * @param WeightMode Weight allocation mode.
+System Auto-Assignment: "system", Custom: "custom"
      */
     public void setWeightMode(String WeightMode) {
         this.WeightMode = WeightMode;
     }
 
     /**
-     * Get Whether to remove delayed read-only instances from the proxy group Valid values: `true`, `false`. Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return IsKickOut Whether to remove delayed read-only instances from the proxy group Valid values: `true`, `false`. Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Whether to enable delay removal. Parameter value: "true" | "false" 
+     * @return IsKickOut Whether to enable delay removal. Parameter value: "true" | "false"
      */
     public Boolean getIsKickOut() {
         return this.IsKickOut;
     }
 
     /**
-     * Set Whether to remove delayed read-only instances from the proxy group Valid values: `true`, `false`. Note: This field may return null, indicating that no valid values can be obtained.
-     * @param IsKickOut Whether to remove delayed read-only instances from the proxy group Valid values: `true`, `false`. Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Whether to enable delay removal. Parameter value: "true" | "false"
+     * @param IsKickOut Whether to enable delay removal. Parameter value: "true" | "false"
      */
     public void setIsKickOut(Boolean IsKickOut) {
         this.IsKickOut = IsKickOut;
     }
 
     /**
-     * Get Least read-only instances. Minimum value:  `0`. Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return MinCount Least read-only instances. Minimum value:  `0`. Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Minimum retention quantity, minimum value: 0. 
+     * @return MinCount Minimum retention quantity, minimum value: 0.
      */
     public Long getMinCount() {
         return this.MinCount;
     }
 
     /**
-     * Set Least read-only instances. Minimum value:  `0`. Note: This field may return null, indicating that no valid values can be obtained.
-     * @param MinCount Least read-only instances. Minimum value:  `0`. Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Minimum retention quantity, minimum value: 0.
+     * @param MinCount Minimum retention quantity, minimum value: 0.
      */
     public void setMinCount(Long MinCount) {
         this.MinCount = MinCount;
     }
 
     /**
-     * Get The delay threshold. Minimum value:  `0`. Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return MaxDelay The delay threshold. Minimum value:  `0`. Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Delay removal threshold, minimum value: 0 
+     * @return MaxDelay Delay removal threshold, minimum value: 0
      */
     public Long getMaxDelay() {
         return this.MaxDelay;
     }
 
     /**
-     * Set The delay threshold. Minimum value:  `0`. Note: This field may return null, indicating that no valid values can be obtained.
-     * @param MaxDelay The delay threshold. Minimum value:  `0`. Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Delay removal threshold, minimum value: 0
+     * @param MaxDelay Delay removal threshold, minimum value: 0
      */
     public void setMaxDelay(Long MaxDelay) {
         this.MaxDelay = MaxDelay;
     }
 
     /**
-     * Get Whether to automatically add newly created read-only instances. Valid values: `true`, `false`. Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return AutoAddRo Whether to automatically add newly created read-only instances. Valid values: `true`, `false`. Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Automatically add RO. Value: "true" | "false" 
+     * @return AutoAddRo Automatically add RO. Value: "true" | "false"
      */
     public Boolean getAutoAddRo() {
         return this.AutoAddRo;
     }
 
     /**
-     * Set Whether to automatically add newly created read-only instances. Valid values: `true`, `false`. Note: This field may return null, indicating that no valid values can be obtained.
-     * @param AutoAddRo Whether to automatically add newly created read-only instances. Valid values: `true`, `false`. Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Automatically add RO. Value: "true" | "false"
+     * @param AutoAddRo Automatically add RO. Value: "true" | "false"
      */
     public void setAutoAddRo(Boolean AutoAddRo) {
         this.AutoAddRo = AutoAddRo;
     }
 
     /**
-     * Get Whether it is read-only. Valid values: `true`, `false`. Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ReadOnly Whether it is read-only. Valid values: `true`, `false`. Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Whether it is read-only. Value: "true" | "false". 
+     * @return ReadOnly Whether it is read-only. Value: "true" | "false".
      */
     public Boolean getReadOnly() {
         return this.ReadOnly;
     }
 
     /**
-     * Set Whether it is read-only. Valid values: `true`, `false`. Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ReadOnly Whether it is read-only. Valid values: `true`, `false`. Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Whether it is read-only. Value: "true" | "false".
+     * @param ReadOnly Whether it is read-only. Value: "true" | "false".
      */
     public void setReadOnly(Boolean ReadOnly) {
         this.ReadOnly = ReadOnly;
     }
 
     /**
-     * Get Whether to enable transaction splitting Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return TransSplit Whether to enable transaction splitting Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Whether transaction splitting is enabled 
+     * @return TransSplit Whether transaction splitting is enabled
      */
     public Boolean getTransSplit() {
         return this.TransSplit;
     }
 
     /**
-     * Set Whether to enable transaction splitting Note: This field may return null, indicating that no valid values can be obtained.
-     * @param TransSplit Whether to enable transaction splitting Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Whether transaction splitting is enabled
+     * @param TransSplit Whether transaction splitting is enabled
      */
     public void setTransSplit(Boolean TransSplit) {
         this.TransSplit = TransSplit;
     }
 
     /**
-     * Get Whether to enable failover Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return FailOver Whether to enable failover Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Whether fault migration is enabled 
+     * @return FailOver Whether fault migration is enabled
      */
     public Boolean getFailOver() {
         return this.FailOver;
     }
 
     /**
-     * Set Whether to enable failover Note: This field may return null, indicating that no valid values can be obtained.
-     * @param FailOver Whether to enable failover Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Whether fault migration is enabled
+     * @param FailOver Whether fault migration is enabled
      */
     public void setFailOver(Boolean FailOver) {
         this.FailOver = FailOver;
     }
 
     /**
-     * Get Whether to enable the connection pool Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ConnectionPool Whether to enable the connection pool Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Whether to enable connection pool 
+     * @return ConnectionPool Whether to enable connection pool
      */
     public Boolean getConnectionPool() {
         return this.ConnectionPool;
     }
 
     /**
-     * Set Whether to enable the connection pool Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ConnectionPool Whether to enable the connection pool Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Whether to enable connection pool
+     * @param ConnectionPool Whether to enable connection pool
      */
     public void setConnectionPool(Boolean ConnectionPool) {
         this.ConnectionPool = ConnectionPool;
     }
 
     /**
-     * Get Note:  This field may return null, indicating that no valid values can be obtained. 
-     * @return Desc Note:  This field may return null, indicating that no valid values can be obtained.
+     * Get Description 
+     * @return Desc Description
      */
     public String getDesc() {
         return this.Desc;
     }
 
     /**
-     * Set Note:  This field may return null, indicating that no valid values can be obtained.
-     * @param Desc Note:  This field may return null, indicating that no valid values can be obtained.
+     * Set Description
+     * @param Desc Description
      */
     public void setDesc(String Desc) {
         this.Desc = Desc;
     }
 
     /**
-     * Get Read weight assignment for an instance Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ProxyAllocation Read weight assignment for an instance Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Read weight distribution of an instance 
+     * @return ProxyAllocation Read weight distribution of an instance
      */
     public ProxyAllocation [] getProxyAllocation() {
         return this.ProxyAllocation;
     }
 
     /**
-     * Set Read weight assignment for an instance Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ProxyAllocation Read weight assignment for an instance Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Read weight distribution of an instance
+     * @param ProxyAllocation Read weight distribution of an instance
      */
     public void setProxyAllocation(ProxyAllocation [] ProxyAllocation) {
         this.ProxyAllocation = ProxyAllocation;
+    }
+
+    /**
+     * Get Access mode 
+     * @return AccessMode Access mode
+     */
+    public String getAccessMode() {
+        return this.AccessMode;
+    }
+
+    /**
+     * Set Access mode
+     * @param AccessMode Access mode
+     */
+    public void setAccessMode(String AccessMode) {
+        this.AccessMode = AccessMode;
+    }
+
+    /**
+     * Get Whether automatic CLB is enabled 
+     * @return AutoLoadBalance Whether automatic CLB is enabled
+     */
+    public Boolean getAutoLoadBalance() {
+        return this.AutoLoadBalance;
+    }
+
+    /**
+     * Set Whether automatic CLB is enabled
+     * @param AutoLoadBalance Whether automatic CLB is enabled
+     */
+    public void setAutoLoadBalance(Boolean AutoLoadBalance) {
+        this.AutoLoadBalance = AutoLoadBalance;
+    }
+
+    /**
+     * Get Whether to treat libra as a read-only node 
+     * @return ApNodeAsRoNode Whether to treat libra as a read-only node
+     */
+    public Boolean getApNodeAsRoNode() {
+        return this.ApNodeAsRoNode;
+    }
+
+    /**
+     * Set Whether to treat libra as a read-only node
+     * @param ApNodeAsRoNode Whether to treat libra as a read-only node
+     */
+    public void setApNodeAsRoNode(Boolean ApNodeAsRoNode) {
+        this.ApNodeAsRoNode = ApNodeAsRoNode;
+    }
+
+    /**
+     * Get libra node fault, whether to forward to other nodes 
+     * @return ApQueryToOtherNode libra node fault, whether to forward to other nodes
+     */
+    public Boolean getApQueryToOtherNode() {
+        return this.ApQueryToOtherNode;
+    }
+
+    /**
+     * Set libra node fault, whether to forward to other nodes
+     * @param ApQueryToOtherNode libra node fault, whether to forward to other nodes
+     */
+    public void setApQueryToOtherNode(Boolean ApQueryToOtherNode) {
+        this.ApQueryToOtherNode = ApQueryToOtherNode;
     }
 
     public ProxyAddress() {
@@ -450,6 +547,18 @@ public class ProxyAddress extends AbstractModel {
                 this.ProxyAllocation[i] = new ProxyAllocation(source.ProxyAllocation[i]);
             }
         }
+        if (source.AccessMode != null) {
+            this.AccessMode = new String(source.AccessMode);
+        }
+        if (source.AutoLoadBalance != null) {
+            this.AutoLoadBalance = new Boolean(source.AutoLoadBalance);
+        }
+        if (source.ApNodeAsRoNode != null) {
+            this.ApNodeAsRoNode = new Boolean(source.ApNodeAsRoNode);
+        }
+        if (source.ApQueryToOtherNode != null) {
+            this.ApQueryToOtherNode = new Boolean(source.ApQueryToOtherNode);
+        }
     }
 
 
@@ -473,6 +582,10 @@ public class ProxyAddress extends AbstractModel {
         this.setParamSimple(map, prefix + "ConnectionPool", this.ConnectionPool);
         this.setParamSimple(map, prefix + "Desc", this.Desc);
         this.setParamArrayObj(map, prefix + "ProxyAllocation.", this.ProxyAllocation);
+        this.setParamSimple(map, prefix + "AccessMode", this.AccessMode);
+        this.setParamSimple(map, prefix + "AutoLoadBalance", this.AutoLoadBalance);
+        this.setParamSimple(map, prefix + "ApNodeAsRoNode", this.ApNodeAsRoNode);
+        this.setParamSimple(map, prefix + "ApQueryToOtherNode", this.ApQueryToOtherNode);
 
     }
 }

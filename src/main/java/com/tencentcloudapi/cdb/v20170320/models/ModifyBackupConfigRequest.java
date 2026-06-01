@@ -24,14 +24,16 @@ import java.util.HashMap;
 public class ModifyBackupConfigRequest extends AbstractModel {
 
     /**
-    * Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
+    * Instance ID, in the format such as cdb-c1nl9rpv. This matches the instance ID displayed on the TencentDB console.
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Backup file retention period in days. Value range: 7-1830.
+    * Retention time of the data backup file, in days.
+1. MySQL two-node, three-node, and cloud disk edition data backup files can be retained for 7-1830 days.
+2. MySQL single-node (cloud disk) data backup files can be retained for 7-30 days.
     */
     @SerializedName("ExpireDays")
     @Expose
@@ -52,7 +54,9 @@ public class ModifyBackupConfigRequest extends AbstractModel {
     private String BackupMethod;
 
     /**
-    * Binlog retention period in days. Value range: 7-1830. It can’t be greater than the retention period of backup files.
+    * binlog retention time in days.
+1. MySQL two-node, three-node, and cloud disk log backup files can be retained for 7 to 3650 days.
+2. MySQL single-node (cloud disk) log backup files can be retained for 7-30 days.
     */
     @SerializedName("BinlogExpireDays")
     @Expose
@@ -66,7 +70,7 @@ public class ModifyBackupConfigRequest extends AbstractModel {
     private CommonTimeWindow BackupTimeWindow;
 
     /**
-    * Switch for periodic archive. Valid values: `off` (disable), `on` (enable). Default value:`off`. When you enable the periodic archive policy for the first time, you need to enter the `BackupPeriodSaveDays`, `BackupPeriodSaveInterval`, `BackupPeriodSaveCount`, and `StartBackupPeriodSaveDate` parameters; otherwise, the policy will not take effect.
+    * Periodic backup retention switch. off - periodic backup retention policy is not enabled, on - periodic backup retention policy is enabled. Default is off.
     */
     @SerializedName("EnableBackupPeriodSave")
     @Expose
@@ -108,7 +112,7 @@ public class ModifyBackupConfigRequest extends AbstractModel {
     private String StartBackupPeriodSaveDate;
 
     /**
-    * Whether to enable the archive backup. Valid values: `off` (disable), `on` (enable). Default value: `off`.
+    * Whether the data backup/archive policy is enabled. off - disabled, on - enabled. If not specified, remain unchanged.
     */
     @SerializedName("EnableBackupArchive")
     @Expose
@@ -129,14 +133,14 @@ public class ModifyBackupConfigRequest extends AbstractModel {
     private Long BinlogArchiveDays;
 
     /**
-    * Whether to enable the archive backup of the log. Valid values: `off` (disable), `on` (enable). Default value: `off`.
+    * Whether to enable log backup archive strategy. off - off, on - on. If not specified, remain unchanged.
     */
     @SerializedName("EnableBinlogArchive")
     @Expose
     private String EnableBinlogArchive;
 
     /**
-    * Whether to enable the standard storage policy for data backup. Valid values: `off` (disable), `on` (enable). Default value: `off`.
+    * Whether to enable the standard storage policy for data backup. off - disabled, on - enabled. If not specified, it remains unchanged.
     */
     @SerializedName("EnableBackupStandby")
     @Expose
@@ -150,7 +154,7 @@ public class ModifyBackupConfigRequest extends AbstractModel {
     private Long BackupStandbyDays;
 
     /**
-    * Whether to enable the standard storage policy for log backup. Valid values: `off` (disable), `on` (enable). Default value: `off`.
+    * Whether to enable log backup standard storage policy. off - off, on - on. If not specified, remain unchanged.
     */
     @SerializedName("EnableBinlogStandby")
     @Expose
@@ -164,32 +168,40 @@ public class ModifyBackupConfigRequest extends AbstractModel {
     private Long BinlogStandbyDays;
 
     /**
-     * Get Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page. 
-     * @return InstanceId Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
+     * Get Instance ID, in the format such as cdb-c1nl9rpv. This matches the instance ID displayed on the TencentDB console. 
+     * @return InstanceId Instance ID, in the format such as cdb-c1nl9rpv. This matches the instance ID displayed on the TencentDB console.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
-     * @param InstanceId Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
+     * Set Instance ID, in the format such as cdb-c1nl9rpv. This matches the instance ID displayed on the TencentDB console.
+     * @param InstanceId Instance ID, in the format such as cdb-c1nl9rpv. This matches the instance ID displayed on the TencentDB console.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Backup file retention period in days. Value range: 7-1830. 
-     * @return ExpireDays Backup file retention period in days. Value range: 7-1830.
+     * Get Retention time of the data backup file, in days.
+1. MySQL two-node, three-node, and cloud disk edition data backup files can be retained for 7-1830 days.
+2. MySQL single-node (cloud disk) data backup files can be retained for 7-30 days. 
+     * @return ExpireDays Retention time of the data backup file, in days.
+1. MySQL two-node, three-node, and cloud disk edition data backup files can be retained for 7-1830 days.
+2. MySQL single-node (cloud disk) data backup files can be retained for 7-30 days.
      */
     public Long getExpireDays() {
         return this.ExpireDays;
     }
 
     /**
-     * Set Backup file retention period in days. Value range: 7-1830.
-     * @param ExpireDays Backup file retention period in days. Value range: 7-1830.
+     * Set Retention time of the data backup file, in days.
+1. MySQL two-node, three-node, and cloud disk edition data backup files can be retained for 7-1830 days.
+2. MySQL single-node (cloud disk) data backup files can be retained for 7-30 days.
+     * @param ExpireDays Retention time of the data backup file, in days.
+1. MySQL two-node, three-node, and cloud disk edition data backup files can be retained for 7-1830 days.
+2. MySQL single-node (cloud disk) data backup files can be retained for 7-30 days.
      */
     public void setExpireDays(Long ExpireDays) {
         this.ExpireDays = ExpireDays;
@@ -228,16 +240,24 @@ public class ModifyBackupConfigRequest extends AbstractModel {
     }
 
     /**
-     * Get Binlog retention period in days. Value range: 7-1830. It can’t be greater than the retention period of backup files. 
-     * @return BinlogExpireDays Binlog retention period in days. Value range: 7-1830. It can’t be greater than the retention period of backup files.
+     * Get binlog retention time in days.
+1. MySQL two-node, three-node, and cloud disk log backup files can be retained for 7 to 3650 days.
+2. MySQL single-node (cloud disk) log backup files can be retained for 7-30 days. 
+     * @return BinlogExpireDays binlog retention time in days.
+1. MySQL two-node, three-node, and cloud disk log backup files can be retained for 7 to 3650 days.
+2. MySQL single-node (cloud disk) log backup files can be retained for 7-30 days.
      */
     public Long getBinlogExpireDays() {
         return this.BinlogExpireDays;
     }
 
     /**
-     * Set Binlog retention period in days. Value range: 7-1830. It can’t be greater than the retention period of backup files.
-     * @param BinlogExpireDays Binlog retention period in days. Value range: 7-1830. It can’t be greater than the retention period of backup files.
+     * Set binlog retention time in days.
+1. MySQL two-node, three-node, and cloud disk log backup files can be retained for 7 to 3650 days.
+2. MySQL single-node (cloud disk) log backup files can be retained for 7-30 days.
+     * @param BinlogExpireDays binlog retention time in days.
+1. MySQL two-node, three-node, and cloud disk log backup files can be retained for 7 to 3650 days.
+2. MySQL single-node (cloud disk) log backup files can be retained for 7-30 days.
      */
     public void setBinlogExpireDays(Long BinlogExpireDays) {
         this.BinlogExpireDays = BinlogExpireDays;
@@ -260,16 +280,16 @@ public class ModifyBackupConfigRequest extends AbstractModel {
     }
 
     /**
-     * Get Switch for periodic archive. Valid values: `off` (disable), `on` (enable). Default value:`off`. When you enable the periodic archive policy for the first time, you need to enter the `BackupPeriodSaveDays`, `BackupPeriodSaveInterval`, `BackupPeriodSaveCount`, and `StartBackupPeriodSaveDate` parameters; otherwise, the policy will not take effect. 
-     * @return EnableBackupPeriodSave Switch for periodic archive. Valid values: `off` (disable), `on` (enable). Default value:`off`. When you enable the periodic archive policy for the first time, you need to enter the `BackupPeriodSaveDays`, `BackupPeriodSaveInterval`, `BackupPeriodSaveCount`, and `StartBackupPeriodSaveDate` parameters; otherwise, the policy will not take effect.
+     * Get Periodic backup retention switch. off - periodic backup retention policy is not enabled, on - periodic backup retention policy is enabled. Default is off. 
+     * @return EnableBackupPeriodSave Periodic backup retention switch. off - periodic backup retention policy is not enabled, on - periodic backup retention policy is enabled. Default is off.
      */
     public String getEnableBackupPeriodSave() {
         return this.EnableBackupPeriodSave;
     }
 
     /**
-     * Set Switch for periodic archive. Valid values: `off` (disable), `on` (enable). Default value:`off`. When you enable the periodic archive policy for the first time, you need to enter the `BackupPeriodSaveDays`, `BackupPeriodSaveInterval`, `BackupPeriodSaveCount`, and `StartBackupPeriodSaveDate` parameters; otherwise, the policy will not take effect.
-     * @param EnableBackupPeriodSave Switch for periodic archive. Valid values: `off` (disable), `on` (enable). Default value:`off`. When you enable the periodic archive policy for the first time, you need to enter the `BackupPeriodSaveDays`, `BackupPeriodSaveInterval`, `BackupPeriodSaveCount`, and `StartBackupPeriodSaveDate` parameters; otherwise, the policy will not take effect.
+     * Set Periodic backup retention switch. off - periodic backup retention policy is not enabled, on - periodic backup retention policy is enabled. Default is off.
+     * @param EnableBackupPeriodSave Periodic backup retention switch. off - periodic backup retention policy is not enabled, on - periodic backup retention policy is enabled. Default is off.
      */
     public void setEnableBackupPeriodSave(String EnableBackupPeriodSave) {
         this.EnableBackupPeriodSave = EnableBackupPeriodSave;
@@ -356,16 +376,16 @@ public class ModifyBackupConfigRequest extends AbstractModel {
     }
 
     /**
-     * Get Whether to enable the archive backup. Valid values: `off` (disable), `on` (enable). Default value: `off`. 
-     * @return EnableBackupArchive Whether to enable the archive backup. Valid values: `off` (disable), `on` (enable). Default value: `off`.
+     * Get Whether the data backup/archive policy is enabled. off - disabled, on - enabled. If not specified, remain unchanged. 
+     * @return EnableBackupArchive Whether the data backup/archive policy is enabled. off - disabled, on - enabled. If not specified, remain unchanged.
      */
     public String getEnableBackupArchive() {
         return this.EnableBackupArchive;
     }
 
     /**
-     * Set Whether to enable the archive backup. Valid values: `off` (disable), `on` (enable). Default value: `off`.
-     * @param EnableBackupArchive Whether to enable the archive backup. Valid values: `off` (disable), `on` (enable). Default value: `off`.
+     * Set Whether the data backup/archive policy is enabled. off - disabled, on - enabled. If not specified, remain unchanged.
+     * @param EnableBackupArchive Whether the data backup/archive policy is enabled. off - disabled, on - enabled. If not specified, remain unchanged.
      */
     public void setEnableBackupArchive(String EnableBackupArchive) {
         this.EnableBackupArchive = EnableBackupArchive;
@@ -404,32 +424,32 @@ public class ModifyBackupConfigRequest extends AbstractModel {
     }
 
     /**
-     * Get Whether to enable the archive backup of the log. Valid values: `off` (disable), `on` (enable). Default value: `off`. 
-     * @return EnableBinlogArchive Whether to enable the archive backup of the log. Valid values: `off` (disable), `on` (enable). Default value: `off`.
+     * Get Whether to enable log backup archive strategy. off - off, on - on. If not specified, remain unchanged. 
+     * @return EnableBinlogArchive Whether to enable log backup archive strategy. off - off, on - on. If not specified, remain unchanged.
      */
     public String getEnableBinlogArchive() {
         return this.EnableBinlogArchive;
     }
 
     /**
-     * Set Whether to enable the archive backup of the log. Valid values: `off` (disable), `on` (enable). Default value: `off`.
-     * @param EnableBinlogArchive Whether to enable the archive backup of the log. Valid values: `off` (disable), `on` (enable). Default value: `off`.
+     * Set Whether to enable log backup archive strategy. off - off, on - on. If not specified, remain unchanged.
+     * @param EnableBinlogArchive Whether to enable log backup archive strategy. off - off, on - on. If not specified, remain unchanged.
      */
     public void setEnableBinlogArchive(String EnableBinlogArchive) {
         this.EnableBinlogArchive = EnableBinlogArchive;
     }
 
     /**
-     * Get Whether to enable the standard storage policy for data backup. Valid values: `off` (disable), `on` (enable). Default value: `off`. 
-     * @return EnableBackupStandby Whether to enable the standard storage policy for data backup. Valid values: `off` (disable), `on` (enable). Default value: `off`.
+     * Get Whether to enable the standard storage policy for data backup. off - disabled, on - enabled. If not specified, it remains unchanged. 
+     * @return EnableBackupStandby Whether to enable the standard storage policy for data backup. off - disabled, on - enabled. If not specified, it remains unchanged.
      */
     public String getEnableBackupStandby() {
         return this.EnableBackupStandby;
     }
 
     /**
-     * Set Whether to enable the standard storage policy for data backup. Valid values: `off` (disable), `on` (enable). Default value: `off`.
-     * @param EnableBackupStandby Whether to enable the standard storage policy for data backup. Valid values: `off` (disable), `on` (enable). Default value: `off`.
+     * Set Whether to enable the standard storage policy for data backup. off - disabled, on - enabled. If not specified, it remains unchanged.
+     * @param EnableBackupStandby Whether to enable the standard storage policy for data backup. off - disabled, on - enabled. If not specified, it remains unchanged.
      */
     public void setEnableBackupStandby(String EnableBackupStandby) {
         this.EnableBackupStandby = EnableBackupStandby;
@@ -452,16 +472,16 @@ public class ModifyBackupConfigRequest extends AbstractModel {
     }
 
     /**
-     * Get Whether to enable the standard storage policy for log backup. Valid values: `off` (disable), `on` (enable). Default value: `off`. 
-     * @return EnableBinlogStandby Whether to enable the standard storage policy for log backup. Valid values: `off` (disable), `on` (enable). Default value: `off`.
+     * Get Whether to enable log backup standard storage policy. off - off, on - on. If not specified, remain unchanged. 
+     * @return EnableBinlogStandby Whether to enable log backup standard storage policy. off - off, on - on. If not specified, remain unchanged.
      */
     public String getEnableBinlogStandby() {
         return this.EnableBinlogStandby;
     }
 
     /**
-     * Set Whether to enable the standard storage policy for log backup. Valid values: `off` (disable), `on` (enable). Default value: `off`.
-     * @param EnableBinlogStandby Whether to enable the standard storage policy for log backup. Valid values: `off` (disable), `on` (enable). Default value: `off`.
+     * Set Whether to enable log backup standard storage policy. off - off, on - on. If not specified, remain unchanged.
+     * @param EnableBinlogStandby Whether to enable log backup standard storage policy. off - off, on - on. If not specified, remain unchanged.
      */
     public void setEnableBinlogStandby(String EnableBinlogStandby) {
         this.EnableBinlogStandby = EnableBinlogStandby;

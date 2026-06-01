@@ -24,87 +24,95 @@ import java.util.HashMap;
 public class LogToCLSConfig extends AbstractModel {
 
     /**
-    * Enabling status of the feature.
-Note: The return value may be null, indicating that no valid data can be obtained.
+    * Delivery status on or turn off
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * CLS log set ID.
-Note: The return value may be null, indicating that no valid data can be obtained.
+    * CLS Logset ID
     */
     @SerializedName("LogSetId")
     @Expose
     private String LogSetId;
 
     /**
-    * Log topic ID.
-Note: The return value may be null, indicating that no valid data can be obtained.
+    * Log topic ID
     */
     @SerializedName("LogTopicId")
     @Expose
     private String LogTopicId;
 
     /**
-     * Get Enabling status of the feature.
-Note: The return value may be null, indicating that no valid data can be obtained. 
-     * @return Status Enabling status of the feature.
-Note: The return value may be null, indicating that no valid data can be obtained.
+    * Region of the CLS service
+    */
+    @SerializedName("ClsRegion")
+    @Expose
+    private String ClsRegion;
+
+    /**
+     * Get Delivery status on or turn off 
+     * @return Status Delivery status on or turn off
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Enabling status of the feature.
-Note: The return value may be null, indicating that no valid data can be obtained.
-     * @param Status Enabling status of the feature.
-Note: The return value may be null, indicating that no valid data can be obtained.
+     * Set Delivery status on or turn off
+     * @param Status Delivery status on or turn off
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get CLS log set ID.
-Note: The return value may be null, indicating that no valid data can be obtained. 
-     * @return LogSetId CLS log set ID.
-Note: The return value may be null, indicating that no valid data can be obtained.
+     * Get CLS Logset ID 
+     * @return LogSetId CLS Logset ID
      */
     public String getLogSetId() {
         return this.LogSetId;
     }
 
     /**
-     * Set CLS log set ID.
-Note: The return value may be null, indicating that no valid data can be obtained.
-     * @param LogSetId CLS log set ID.
-Note: The return value may be null, indicating that no valid data can be obtained.
+     * Set CLS Logset ID
+     * @param LogSetId CLS Logset ID
      */
     public void setLogSetId(String LogSetId) {
         this.LogSetId = LogSetId;
     }
 
     /**
-     * Get Log topic ID.
-Note: The return value may be null, indicating that no valid data can be obtained. 
-     * @return LogTopicId Log topic ID.
-Note: The return value may be null, indicating that no valid data can be obtained.
+     * Get Log topic ID 
+     * @return LogTopicId Log topic ID
      */
     public String getLogTopicId() {
         return this.LogTopicId;
     }
 
     /**
-     * Set Log topic ID.
-Note: The return value may be null, indicating that no valid data can be obtained.
-     * @param LogTopicId Log topic ID.
-Note: The return value may be null, indicating that no valid data can be obtained.
+     * Set Log topic ID
+     * @param LogTopicId Log topic ID
      */
     public void setLogTopicId(String LogTopicId) {
         this.LogTopicId = LogTopicId;
+    }
+
+    /**
+     * Get Region of the CLS service 
+     * @return ClsRegion Region of the CLS service
+     */
+    public String getClsRegion() {
+        return this.ClsRegion;
+    }
+
+    /**
+     * Set Region of the CLS service
+     * @param ClsRegion Region of the CLS service
+     */
+    public void setClsRegion(String ClsRegion) {
+        this.ClsRegion = ClsRegion;
     }
 
     public LogToCLSConfig() {
@@ -124,6 +132,9 @@ Note: The return value may be null, indicating that no valid data can be obtaine
         if (source.LogTopicId != null) {
             this.LogTopicId = new String(source.LogTopicId);
         }
+        if (source.ClsRegion != null) {
+            this.ClsRegion = new String(source.ClsRegion);
+        }
     }
 
 
@@ -134,6 +145,7 @@ Note: The return value may be null, indicating that no valid data can be obtaine
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "LogSetId", this.LogSetId);
         this.setParamSimple(map, prefix + "LogTopicId", this.LogTopicId);
+        this.setParamSimple(map, prefix + "ClsRegion", this.ClsRegion);
 
     }
 }

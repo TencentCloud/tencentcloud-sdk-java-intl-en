@@ -38,7 +38,7 @@ public class DescribeSlowLogsRequest extends AbstractModel {
     private Long Offset;
 
     /**
-    * Number of entries per page. Value range: 1-100. Default value: 20.
+    * Page size. Default value: 20. Minimum value: 1. Maximum value: 1000.
     */
     @SerializedName("Limit")
     @Expose
@@ -77,16 +77,16 @@ public class DescribeSlowLogsRequest extends AbstractModel {
     }
 
     /**
-     * Get Number of entries per page. Value range: 1-100. Default value: 20. 
-     * @return Limit Number of entries per page. Value range: 1-100. Default value: 20.
+     * Get Page size. Default value: 20. Minimum value: 1. Maximum value: 1000. 
+     * @return Limit Page size. Default value: 20. Minimum value: 1. Maximum value: 1000.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Number of entries per page. Value range: 1-100. Default value: 20.
-     * @param Limit Number of entries per page. Value range: 1-100. Default value: 20.
+     * Set Page size. Default value: 20. Minimum value: 1. Maximum value: 1000.
+     * @param Limit Page size. Default value: 20. Minimum value: 1. Maximum value: 1000.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

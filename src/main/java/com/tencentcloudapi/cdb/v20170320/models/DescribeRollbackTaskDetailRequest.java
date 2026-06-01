@@ -38,7 +38,7 @@ public class DescribeRollbackTaskDetailRequest extends AbstractModel {
     private String AsyncRequestId;
 
     /**
-    * Pagination parameter, i.e., the number of entries to be returned for a single request. Default value: 20. Maximum value: 100.
+    * Pagination parameter. Number of records returned per request. Default value: 20. Maximum value: 100 is recommended.
     */
     @SerializedName("Limit")
     @Expose
@@ -84,16 +84,16 @@ public class DescribeRollbackTaskDetailRequest extends AbstractModel {
     }
 
     /**
-     * Get Pagination parameter, i.e., the number of entries to be returned for a single request. Default value: 20. Maximum value: 100. 
-     * @return Limit Pagination parameter, i.e., the number of entries to be returned for a single request. Default value: 20. Maximum value: 100.
+     * Get Pagination parameter. Number of records returned per request. Default value: 20. Maximum value: 100 is recommended. 
+     * @return Limit Pagination parameter. Number of records returned per request. Default value: 20. Maximum value: 100 is recommended.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Pagination parameter, i.e., the number of entries to be returned for a single request. Default value: 20. Maximum value: 100.
-     * @param Limit Pagination parameter, i.e., the number of entries to be returned for a single request. Default value: 20. Maximum value: 100.
+     * Set Pagination parameter. Number of records returned per request. Default value: 20. Maximum value: 100 is recommended.
+     * @param Limit Pagination parameter. Number of records returned per request. Default value: 20. Maximum value: 100 is recommended.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

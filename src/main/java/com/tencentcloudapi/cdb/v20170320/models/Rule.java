@@ -24,8 +24,7 @@ import java.util.HashMap;
 public class Rule extends AbstractModel {
 
     /**
-    * The maximum weight
-Note: this field may return `null`, indicating that no valid value can be found.
+    * Division ceiling
     */
     @SerializedName("LessThan")
     @Expose
@@ -33,37 +32,30 @@ Note: this field may return `null`, indicating that no valid value can be found.
 
     /**
     * Weight
-Note: this field may return `null`, indicating that no valid value can be found.
     */
     @SerializedName("Weight")
     @Expose
     private Long Weight;
 
     /**
-     * Get The maximum weight
-Note: this field may return `null`, indicating that no valid value can be found. 
-     * @return LessThan The maximum weight
-Note: this field may return `null`, indicating that no valid value can be found.
+     * Get Division ceiling 
+     * @return LessThan Division ceiling
      */
     public Long getLessThan() {
         return this.LessThan;
     }
 
     /**
-     * Set The maximum weight
-Note: this field may return `null`, indicating that no valid value can be found.
-     * @param LessThan The maximum weight
-Note: this field may return `null`, indicating that no valid value can be found.
+     * Set Division ceiling
+     * @param LessThan Division ceiling
      */
     public void setLessThan(Long LessThan) {
         this.LessThan = LessThan;
     }
 
     /**
-     * Get Weight
-Note: this field may return `null`, indicating that no valid value can be found. 
+     * Get Weight 
      * @return Weight Weight
-Note: this field may return `null`, indicating that no valid value can be found.
      */
     public Long getWeight() {
         return this.Weight;
@@ -71,9 +63,7 @@ Note: this field may return `null`, indicating that no valid value can be found.
 
     /**
      * Set Weight
-Note: this field may return `null`, indicating that no valid value can be found.
      * @param Weight Weight
-Note: this field may return `null`, indicating that no valid value can be found.
      */
     public void setWeight(Long Weight) {
         this.Weight = Weight;

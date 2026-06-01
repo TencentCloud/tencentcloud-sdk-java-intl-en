@@ -24,16 +24,14 @@ import java.util.HashMap;
 public class DescribeAsyncRequestInfoResponse extends AbstractModel {
 
     /**
-    * Task execution result. Valid values: INITIAL, RUNNING, SUCCESS, FAILED, KILLED, REMOVED, PAUSED.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Task execution result. Possible values: INITIAL - Initialization, RUNNING - Running, SUCCESS - Execution successful, FAILED - Execution failed, KILLED - Terminated, REMOVED - Deleted, PAUSED - Terminating.
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * Task execution information.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Task execution information description.
     */
     @SerializedName("Info")
     @Expose
@@ -47,40 +45,32 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Task execution result. Valid values: INITIAL, RUNNING, SUCCESS, FAILED, KILLED, REMOVED, PAUSED.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Status Task execution result. Valid values: INITIAL, RUNNING, SUCCESS, FAILED, KILLED, REMOVED, PAUSED.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Task execution result. Possible values: INITIAL - Initialization, RUNNING - Running, SUCCESS - Execution successful, FAILED - Execution failed, KILLED - Terminated, REMOVED - Deleted, PAUSED - Terminating. 
+     * @return Status Task execution result. Possible values: INITIAL - Initialization, RUNNING - Running, SUCCESS - Execution successful, FAILED - Execution failed, KILLED - Terminated, REMOVED - Deleted, PAUSED - Terminating.
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Task execution result. Valid values: INITIAL, RUNNING, SUCCESS, FAILED, KILLED, REMOVED, PAUSED.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Status Task execution result. Valid values: INITIAL, RUNNING, SUCCESS, FAILED, KILLED, REMOVED, PAUSED.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Task execution result. Possible values: INITIAL - Initialization, RUNNING - Running, SUCCESS - Execution successful, FAILED - Execution failed, KILLED - Terminated, REMOVED - Deleted, PAUSED - Terminating.
+     * @param Status Task execution result. Possible values: INITIAL - Initialization, RUNNING - Running, SUCCESS - Execution successful, FAILED - Execution failed, KILLED - Terminated, REMOVED - Deleted, PAUSED - Terminating.
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get Task execution information.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Info Task execution information.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Task execution information description. 
+     * @return Info Task execution information description.
      */
     public String getInfo() {
         return this.Info;
     }
 
     /**
-     * Set Task execution information.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Info Task execution information.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Task execution information description.
+     * @param Info Task execution information description.
      */
     public void setInfo(String Info) {
         this.Info = Info;

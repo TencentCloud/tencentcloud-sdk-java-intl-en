@@ -38,7 +38,7 @@ public class DescribeBinlogsRequest extends AbstractModel {
     private Long Offset;
 
     /**
-    * Number of entries per page. Value range: 1-100. Default value: 20.
+    * Page size. Default value: 20. Minimum value: 1. Maximum value: 1000.
     */
     @SerializedName("Limit")
     @Expose
@@ -57,6 +57,13 @@ public class DescribeBinlogsRequest extends AbstractModel {
     @SerializedName("MaxStartTime")
     @Expose
     private String MaxStartTime;
+
+    /**
+    * Whether the binlog list contains the starting node MinStartTime, no by default
+    */
+    @SerializedName("ContainsMinStartTime")
+    @Expose
+    private Boolean ContainsMinStartTime;
 
     /**
      * Get Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page. 
@@ -91,16 +98,16 @@ public class DescribeBinlogsRequest extends AbstractModel {
     }
 
     /**
-     * Get Number of entries per page. Value range: 1-100. Default value: 20. 
-     * @return Limit Number of entries per page. Value range: 1-100. Default value: 20.
+     * Get Page size. Default value: 20. Minimum value: 1. Maximum value: 1000. 
+     * @return Limit Page size. Default value: 20. Minimum value: 1. Maximum value: 1000.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Number of entries per page. Value range: 1-100. Default value: 20.
-     * @param Limit Number of entries per page. Value range: 1-100. Default value: 20.
+     * Set Page size. Default value: 20. Minimum value: 1. Maximum value: 1000.
+     * @param Limit Page size. Default value: 20. Minimum value: 1. Maximum value: 1000.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
@@ -138,6 +145,22 @@ public class DescribeBinlogsRequest extends AbstractModel {
         this.MaxStartTime = MaxStartTime;
     }
 
+    /**
+     * Get Whether the binlog list contains the starting node MinStartTime, no by default 
+     * @return ContainsMinStartTime Whether the binlog list contains the starting node MinStartTime, no by default
+     */
+    public Boolean getContainsMinStartTime() {
+        return this.ContainsMinStartTime;
+    }
+
+    /**
+     * Set Whether the binlog list contains the starting node MinStartTime, no by default
+     * @param ContainsMinStartTime Whether the binlog list contains the starting node MinStartTime, no by default
+     */
+    public void setContainsMinStartTime(Boolean ContainsMinStartTime) {
+        this.ContainsMinStartTime = ContainsMinStartTime;
+    }
+
     public DescribeBinlogsRequest() {
     }
 
@@ -161,6 +184,9 @@ public class DescribeBinlogsRequest extends AbstractModel {
         if (source.MaxStartTime != null) {
             this.MaxStartTime = new String(source.MaxStartTime);
         }
+        if (source.ContainsMinStartTime != null) {
+            this.ContainsMinStartTime = new Boolean(source.ContainsMinStartTime);
+        }
     }
 
 
@@ -173,6 +199,7 @@ public class DescribeBinlogsRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "MinStartTime", this.MinStartTime);
         this.setParamSimple(map, prefix + "MaxStartTime", this.MaxStartTime);
+        this.setParamSimple(map, prefix + "ContainsMinStartTime", this.ContainsMinStartTime);
 
     }
 }

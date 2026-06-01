@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class DescribeParamTemplatesRequest extends AbstractModel {
 
     /**
-    * Engine version. If it is left empty, all parameter templates will be queried.
+    * Engine version. Query all if default. Valid values: 5.5, 5.6, 5.7, 8.0.
     */
     @SerializedName("EngineVersions")
     @Expose
     private String [] EngineVersions;
 
     /**
-    * Engine type. If it is left empty, all engine types will be queried.
+    * Engine type. Query all if default. Valid values: InnoDB, RocksDB. Case-insensitive.
     */
     @SerializedName("EngineTypes")
     @Expose
     private String [] EngineTypes;
 
     /**
-    * Template name. If it is left empty, all template names will be queried.
+    * Template name. Query all if default. Support fuzzy matching.
     */
     @SerializedName("TemplateNames")
     @Expose
     private String [] TemplateNames;
 
     /**
-    * Template ID. If it is left empty, all template IDs will be queried.
+    * Template ID. Query all if default.
     */
     @SerializedName("TemplateIds")
     @Expose
     private Long [] TemplateIds;
 
     /**
-     * Get Engine version. If it is left empty, all parameter templates will be queried. 
-     * @return EngineVersions Engine version. If it is left empty, all parameter templates will be queried.
+     * Get Engine version. Query all if default. Valid values: 5.5, 5.6, 5.7, 8.0. 
+     * @return EngineVersions Engine version. Query all if default. Valid values: 5.5, 5.6, 5.7, 8.0.
      */
     public String [] getEngineVersions() {
         return this.EngineVersions;
     }
 
     /**
-     * Set Engine version. If it is left empty, all parameter templates will be queried.
-     * @param EngineVersions Engine version. If it is left empty, all parameter templates will be queried.
+     * Set Engine version. Query all if default. Valid values: 5.5, 5.6, 5.7, 8.0.
+     * @param EngineVersions Engine version. Query all if default. Valid values: 5.5, 5.6, 5.7, 8.0.
      */
     public void setEngineVersions(String [] EngineVersions) {
         this.EngineVersions = EngineVersions;
     }
 
     /**
-     * Get Engine type. If it is left empty, all engine types will be queried. 
-     * @return EngineTypes Engine type. If it is left empty, all engine types will be queried.
+     * Get Engine type. Query all if default. Valid values: InnoDB, RocksDB. Case-insensitive. 
+     * @return EngineTypes Engine type. Query all if default. Valid values: InnoDB, RocksDB. Case-insensitive.
      */
     public String [] getEngineTypes() {
         return this.EngineTypes;
     }
 
     /**
-     * Set Engine type. If it is left empty, all engine types will be queried.
-     * @param EngineTypes Engine type. If it is left empty, all engine types will be queried.
+     * Set Engine type. Query all if default. Valid values: InnoDB, RocksDB. Case-insensitive.
+     * @param EngineTypes Engine type. Query all if default. Valid values: InnoDB, RocksDB. Case-insensitive.
      */
     public void setEngineTypes(String [] EngineTypes) {
         this.EngineTypes = EngineTypes;
     }
 
     /**
-     * Get Template name. If it is left empty, all template names will be queried. 
-     * @return TemplateNames Template name. If it is left empty, all template names will be queried.
+     * Get Template name. Query all if default. Support fuzzy matching. 
+     * @return TemplateNames Template name. Query all if default. Support fuzzy matching.
      */
     public String [] getTemplateNames() {
         return this.TemplateNames;
     }
 
     /**
-     * Set Template name. If it is left empty, all template names will be queried.
-     * @param TemplateNames Template name. If it is left empty, all template names will be queried.
+     * Set Template name. Query all if default. Support fuzzy matching.
+     * @param TemplateNames Template name. Query all if default. Support fuzzy matching.
      */
     public void setTemplateNames(String [] TemplateNames) {
         this.TemplateNames = TemplateNames;
     }
 
     /**
-     * Get Template ID. If it is left empty, all template IDs will be queried. 
-     * @return TemplateIds Template ID. If it is left empty, all template IDs will be queried.
+     * Get Template ID. Query all if default. 
+     * @return TemplateIds Template ID. Query all if default.
      */
     public Long [] getTemplateIds() {
         return this.TemplateIds;
     }
 
     /**
-     * Set Template ID. If it is left empty, all template IDs will be queried.
-     * @param TemplateIds Template ID. If it is left empty, all template IDs will be queried.
+     * Set Template ID. Query all if default.
+     * @param TemplateIds Template ID. Query all if default.
      */
     public void setTemplateIds(Long [] TemplateIds) {
         this.TemplateIds = TemplateIds;

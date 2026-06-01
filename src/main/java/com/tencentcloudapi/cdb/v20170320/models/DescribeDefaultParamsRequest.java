@@ -24,69 +24,74 @@ import java.util.HashMap;
 public class DescribeDefaultParamsRequest extends AbstractModel {
 
     /**
-    * Engine version. Currently, the supported versions are `5.1`, `5.5`, `5.6`, `5.7`, and `8.0`.
+    * Engine version. Currently supports ["5.1", "5.5", "5.6", "5.7", "8.0"].
+Description: Engine version is required.
     */
     @SerializedName("EngineVersion")
     @Expose
     private String EngineVersion;
 
     /**
-    * Type of the default parameter template. Valid values: `HIGH_STABILITY` (high-stability template), `HIGH_PERFORMANCE` (high-performance template).
+    * Default parameter template type. Supported values include "HIGH_STABILITY" - high-stability template, "HIGH_PERFORMANCE" - high-performance template. Default value: HIGH_STABILITY.
     */
     @SerializedName("TemplateType")
     @Expose
     private String TemplateType;
 
     /**
-    * Parameter template engine. Default value: `InnoDB`.
+    * Parameter template engine, default value: InnoDB, valid values: InnoDB, RocksDB.
     */
     @SerializedName("EngineType")
     @Expose
     private String EngineType;
 
     /**
-     * Get Engine version. Currently, the supported versions are `5.1`, `5.5`, `5.6`, `5.7`, and `8.0`. 
-     * @return EngineVersion Engine version. Currently, the supported versions are `5.1`, `5.5`, `5.6`, `5.7`, and `8.0`.
+     * Get Engine version. Currently supports ["5.1", "5.5", "5.6", "5.7", "8.0"].
+Description: Engine version is required. 
+     * @return EngineVersion Engine version. Currently supports ["5.1", "5.5", "5.6", "5.7", "8.0"].
+Description: Engine version is required.
      */
     public String getEngineVersion() {
         return this.EngineVersion;
     }
 
     /**
-     * Set Engine version. Currently, the supported versions are `5.1`, `5.5`, `5.6`, `5.7`, and `8.0`.
-     * @param EngineVersion Engine version. Currently, the supported versions are `5.1`, `5.5`, `5.6`, `5.7`, and `8.0`.
+     * Set Engine version. Currently supports ["5.1", "5.5", "5.6", "5.7", "8.0"].
+Description: Engine version is required.
+     * @param EngineVersion Engine version. Currently supports ["5.1", "5.5", "5.6", "5.7", "8.0"].
+Description: Engine version is required.
      */
     public void setEngineVersion(String EngineVersion) {
         this.EngineVersion = EngineVersion;
     }
 
     /**
-     * Get Type of the default parameter template. Valid values: `HIGH_STABILITY` (high-stability template), `HIGH_PERFORMANCE` (high-performance template). 
-     * @return TemplateType Type of the default parameter template. Valid values: `HIGH_STABILITY` (high-stability template), `HIGH_PERFORMANCE` (high-performance template).
+     * Get Default parameter template type. Supported values include "HIGH_STABILITY" - high-stability template, "HIGH_PERFORMANCE" - high-performance template. Default value: HIGH_STABILITY. 
+     * @return TemplateType Default parameter template type. Supported values include "HIGH_STABILITY" - high-stability template, "HIGH_PERFORMANCE" - high-performance template. Default value: HIGH_STABILITY.
      */
     public String getTemplateType() {
         return this.TemplateType;
     }
 
     /**
-     * Set Type of the default parameter template. Valid values: `HIGH_STABILITY` (high-stability template), `HIGH_PERFORMANCE` (high-performance template).
-     * @param TemplateType Type of the default parameter template. Valid values: `HIGH_STABILITY` (high-stability template), `HIGH_PERFORMANCE` (high-performance template).
+     * Set Default parameter template type. Supported values include "HIGH_STABILITY" - high-stability template, "HIGH_PERFORMANCE" - high-performance template. Default value: HIGH_STABILITY.
+     * @param TemplateType Default parameter template type. Supported values include "HIGH_STABILITY" - high-stability template, "HIGH_PERFORMANCE" - high-performance template. Default value: HIGH_STABILITY.
      */
     public void setTemplateType(String TemplateType) {
         this.TemplateType = TemplateType;
     }
 
     /**
-     * Get Parameter template engine. Default value: `InnoDB`. 
-     * @return EngineType Parameter template engine. Default value: `InnoDB`.
+     * Get Parameter template engine, default value: InnoDB, valid values: InnoDB, RocksDB. 
+     * @return EngineType Parameter template engine, default value: InnoDB, valid values: InnoDB, RocksDB.
      */
     public String getEngineType() {
         return this.EngineType;
     }
 
     /**
-     * Set Parameter template engine. Default value: `InnoDB`.
-     * @param EngineType Parameter template engine. Default value: `InnoDB`.
+     * Set Parameter template engine, default value: InnoDB, valid values: InnoDB, RocksDB.
+     * @param EngineType Parameter template engine, default value: InnoDB, valid values: InnoDB, RocksDB.
      */
     public void setEngineType(String EngineType) {
         this.EngineType = EngineType;

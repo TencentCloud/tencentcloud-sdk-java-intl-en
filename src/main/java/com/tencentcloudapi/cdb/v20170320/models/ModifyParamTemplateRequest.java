@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class ModifyParamTemplateRequest extends AbstractModel {
 
     /**
-    * Template ID.
+    * Template ID, which can be obtained through the [DescribeParamTemplates](https://www.tencentcloud.com/document/api/236/32659?from_cn_redirect=1) API.
     */
     @SerializedName("TemplateId")
     @Expose
     private Long TemplateId;
 
     /**
-    * Template name (up to 64 characters)
+    * Template name, supports numbers, English uppercase and lowercase letters, Chinese, and special characters _-./()[]+=:@, and the length cannot exceed 60.
     */
     @SerializedName("Name")
     @Expose
@@ -52,32 +52,32 @@ public class ModifyParamTemplateRequest extends AbstractModel {
     private Parameter [] ParamList;
 
     /**
-     * Get Template ID. 
-     * @return TemplateId Template ID.
+     * Get Template ID, which can be obtained through the [DescribeParamTemplates](https://www.tencentcloud.com/document/api/236/32659?from_cn_redirect=1) API. 
+     * @return TemplateId Template ID, which can be obtained through the [DescribeParamTemplates](https://www.tencentcloud.com/document/api/236/32659?from_cn_redirect=1) API.
      */
     public Long getTemplateId() {
         return this.TemplateId;
     }
 
     /**
-     * Set Template ID.
-     * @param TemplateId Template ID.
+     * Set Template ID, which can be obtained through the [DescribeParamTemplates](https://www.tencentcloud.com/document/api/236/32659?from_cn_redirect=1) API.
+     * @param TemplateId Template ID, which can be obtained through the [DescribeParamTemplates](https://www.tencentcloud.com/document/api/236/32659?from_cn_redirect=1) API.
      */
     public void setTemplateId(Long TemplateId) {
         this.TemplateId = TemplateId;
     }
 
     /**
-     * Get Template name (up to 64 characters) 
-     * @return Name Template name (up to 64 characters)
+     * Get Template name, supports numbers, English uppercase and lowercase letters, Chinese, and special characters _-./()[]+=:@, and the length cannot exceed 60. 
+     * @return Name Template name, supports numbers, English uppercase and lowercase letters, Chinese, and special characters _-./()[]+=:@, and the length cannot exceed 60.
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Template name (up to 64 characters)
-     * @param Name Template name (up to 64 characters)
+     * Set Template name, supports numbers, English uppercase and lowercase letters, Chinese, and special characters _-./()[]+=:@, and the length cannot exceed 60.
+     * @param Name Template name, supports numbers, English uppercase and lowercase letters, Chinese, and special characters _-./()[]+=:@, and the length cannot exceed 60.
      */
     public void setName(String Name) {
         this.Name = Name;

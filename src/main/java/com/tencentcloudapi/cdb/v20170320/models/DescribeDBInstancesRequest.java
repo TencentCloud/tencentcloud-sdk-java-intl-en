@@ -31,247 +31,245 @@ public class DescribeDBInstancesRequest extends AbstractModel {
     private Long ProjectId;
 
     /**
-    * Instance type. Value range: 1 (primary), 2 (disaster recovery), 3 (read-only).
+    * <p>Instance type. Valid values: 1 - Primary instance, 2 - Disaster recovery instance, 3 - Read-only instance.</p>
     */
     @SerializedName("InstanceTypes")
     @Expose
     private Long [] InstanceTypes;
 
     /**
-    * Private IP address of the instance.
+    * <p>Private IP address of the instance.</p>
     */
     @SerializedName("Vips")
     @Expose
     private String [] Vips;
 
     /**
-    * Instance status. Valid values: <br>`0` (creating) <br>`1` (running) <br>`4` (isolating) <br>`5` (isolated; the instance can be restored and started in the recycle bin)
+    * <p>Instance status. Valid values:<br>0 - Creating<br>1 - Running<br>4 - Isolation operation in progress<br>5 - Isolated (can be restored from the Recycle Bin)</p>
     */
     @SerializedName("Status")
     @Expose
     private Long [] Status;
 
     /**
-    * Offset. Default value: 0.
+    * <p>Offset. Default value is 0.</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * Number of results to be returned for a single request. Default value: 20. Maximum value: 2,000.
+    * <p>Number of items returned per request. Default value: 20. Maximum value: 2000.</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * Security group ID. When it is used as a filter, the `WithSecurityGroup` parameter should be set to 1.
+    * <p>Security group ID. When using security group ID as the filter condition, the WithSecurityGroup parameter needs to be specified as 1.</p>
     */
     @SerializedName("SecurityGroupId")
     @Expose
     private String SecurityGroupId;
 
     /**
-    * Payment type. Valid values: 0 - yearly/monthly subscription; 1 - bill by hour.
+    * <p>Payment type. Valid values: 0 - yearly/monthly subscription; 1 - bill by hour.</p>
     */
     @SerializedName("PayTypes")
     @Expose
     private Long [] PayTypes;
 
     /**
-    * Instance name.
+    * <p>Instance name.</p>
     */
     @SerializedName("InstanceNames")
     @Expose
     private String [] InstanceNames;
 
     /**
-    * Instance task status. Valid values:<br>0 - no task;<br>1 - upgrading;<br>2 - importing data;<br>3 - enabling secondary nodes;<br>4 - enabling public network access;<br>5 - executing batch operations;<br>6 - rolling back;<br>7 - disabling public network access;<br>8 - changing the password;<br>9 - renaming the instance;<br>10 - restarting;<br>12 - migrating self-built databases;<br>13 - deleting databases and tables;<br>14 - synchronizing the creation of disaster recovery instances;<br>15 - pending upgrade switch;<br>16 - under upgrade switch;<br>17 - upgrade switch completed;<br>19 - parameter settings pending execution;<br>34 - in-place upgrade pending execution.
+    * <p>Instance task status, possible values:<br>0 - No tasks<br>1 - Upgrading<br>2 - Data import in progress<br>3 - Enabling Slave<br>4 - Enabling public network access<br>5 - Batch operation in progress<br>6 - Rolling back<br>7 - Disabling public network access<br>8 - Password change in progress<br>9 - Renaming instance<br>10 - Restarting<br>12 - Self-built migration in progress<br>13 - Deleting database table<br>14 - Disaster recovery instance creation sync in progress<br>15 - Upgrade pending switch<br>16 - Upgrade and switch in progress<br>17 - Switch completed<br>19 - Parameter setting pending execution<br>34 - Node in-place upgrade to be executed</p>
     */
     @SerializedName("TaskStatus")
     @Expose
     private Long [] TaskStatus;
 
     /**
-    * Version of the instance database engine. Value range: 5.1, 5.5, 5.6, 5.7.
+    * <p>Database engine version of the instance. Possible values: 5.1, 5.5, 5.6, and 5.7.</p>
     */
     @SerializedName("EngineVersions")
     @Expose
     private String [] EngineVersions;
 
     /**
-    * VPC ID.
+    * <p>VPC ID.</p>
     */
     @SerializedName("VpcIds")
     @Expose
     private Long [] VpcIds;
 
     /**
-    * AZ ID.
+    * <p>Availability zone ID.</p>
     */
     @SerializedName("ZoneIds")
     @Expose
     private Long [] ZoneIds;
 
     /**
-    * Subnet ID.
+    * <p>Subnet ID.</p>
     */
     @SerializedName("SubnetIds")
     @Expose
     private Long [] SubnetIds;
 
     /**
-    * Whether to lock disk write. Valid values: `0`(unlock), `1`(lock). Default value: 0.
+    * <p>Whether to set the lock flag. Available values: 0 - not lock, 1 - lock. Default is 0.</p>
     */
     @SerializedName("CdbErrors")
     @Expose
     private Long [] CdbErrors;
 
     /**
-    * Sorting field of the query results. Valid values: "instanceId", "instanceName", "createTime", and "deadlineTime".
+    * <p>Sorting field of the returned result set. Currently supports: "instanceId", "instanceName", "createTime", and "deadlineTime".</p>
     */
     @SerializedName("OrderBy")
     @Expose
     private String OrderBy;
 
     /**
-    * Sorting method of the returned result set. Valid values: "ASC" - ascending order; "DESC" - descending order. The default value is "DESC".
+    * <p>Sorting method of the returned result set. Valid values: "ASC" - ascending order; "DESC" - descending order. The default is "DESC".</p>
     */
     @SerializedName("OrderDirection")
     @Expose
     private String OrderDirection;
 
     /**
-    * Whether to use the security group ID as the filter condition.
-Note: 0 indicates no; 1 indicates yes.
+    * <p>Whether to use security group ID as the filter condition.<br>Description: 0 indicates no, 1 indicates yes.</p>
     */
     @SerializedName("WithSecurityGroup")
     @Expose
     private Long WithSecurityGroup;
 
     /**
-    * Whether dedicated cluster details are included. Value range: 0 (not included), 1 (included)
+    * <p>Whether the exclusive cluster detail is included. Value range: 0 - not contained, 1 - contained.</p>
     */
     @SerializedName("WithExCluster")
     @Expose
     private Long WithExCluster;
 
     /**
-    * Exclusive cluster ID.
+    * <p>Dedicated cluster ID.</p>
     */
     @SerializedName("ExClusterId")
     @Expose
     private String ExClusterId;
 
     /**
-    * Instance ID.
+    * <p>Instance ID.</p>
     */
     @SerializedName("InstanceIds")
     @Expose
     private String [] InstanceIds;
 
     /**
-    * Initialization flag. Value range: 0 (not initialized), 1 (initialized).
+    * <p>Initialization flag. Valid values: 0 - uninitialized, 1 - initialized.</p>
     */
     @SerializedName("InitFlag")
     @Expose
     private Long InitFlag;
 
     /**
-    * Whether instances corresponding to the disaster recovery relationship are included. Valid values: 0 (not included), 1 (included). Default value: 1. If a primary instance is pulled, the data of the disaster recovery relationship will be in the `DrInfo` field. If a disaster recovery instance is pulled, the data of the disaster recovery relationship will be in the `MasterInfo` field. The disaster recovery relationship contains only partial basic data. To get the detailed data, you need to call an API to pull it.
+    * <p>Whether the corresponding instance in the disaster recovery relationship is included. Valid values: 0 - excluding, 1 - included. Default value: 1. If pulling the primary instance, the data of the disaster recovery relationship is in the DrInfo field. If pulling the disaster recovery instance, the data of the disaster recovery relationship is in the MasterInfo field. The disaster recovery relationship only contains partial basic data. Detailed data must be pulled manually via the interface.</p>
     */
     @SerializedName("WithDr")
     @Expose
     private Long WithDr;
 
     /**
-    * Whether read-only instances are included. Valid values: 0 (not included), 1 (included). Default value: 1.
+    * <p>Whether it contains read-only instances. Valid values: 0 - does not include, 1 - includes. Default value is 1.</p>
     */
     @SerializedName("WithRo")
     @Expose
     private Long WithRo;
 
     /**
-    * Whether primary instances are included. Valid values: 0 (not included), 1 (included). Default value: 1.
+    * <p>Whether the primary instance is included. Valid values: 0 - does not include, 1 - includes. Default value is 1.</p>
     */
     @SerializedName("WithMaster")
     @Expose
     private Long WithMaster;
 
     /**
-    * Placement group ID list.
+    * <p>Placement group ID list.</p>
     */
     @SerializedName("DeployGroupIds")
     @Expose
     private String [] DeployGroupIds;
 
     /**
-    * Whether to use the tag key as a filter condition
+    * <p>Filter by tag key.</p>
     */
     @SerializedName("TagKeysForSearch")
     @Expose
     private String [] TagKeysForSearch;
 
     /**
-    * Financial cage IDs.
+    * <p>Financial Enclosure ID.</p>
     */
     @SerializedName("CageIds")
     @Expose
     private String [] CageIds;
 
     /**
-    * Tag value
+    * <p>Tag value</p>
     */
     @SerializedName("TagValues")
     @Expose
     private String [] TagValues;
 
     /**
-    * VPC character vpcId
+    * <p>Character type VPC ID</p>
     */
     @SerializedName("UniqueVpcIds")
     @Expose
     private String [] UniqueVpcIds;
 
     /**
-    * VPC character subnetId
+    * <p>VPC character type subnetId</p>
     */
     @SerializedName("UniqSubnetIds")
     @Expose
     private String [] UniqSubnetIds;
 
     /**
-    * Tag key value.
-Note that tags cannot be queried for instances being created.
+    * <p>Tag key value<br>Please note, tags of the instance being created are unable to query.</p>
     */
     @SerializedName("Tags")
     @Expose
     private Tag [] Tags;
 
     /**
-    * Database proxy IP
+    * <p>Database proxy IP.</p>
     */
     @SerializedName("ProxyVips")
     @Expose
     private String [] ProxyVips;
 
     /**
-    * Database proxy ID
+    * <p>Database proxy ID.</p>
     */
     @SerializedName("ProxyIds")
     @Expose
     private String [] ProxyIds;
 
     /**
-    * Database engine type. Valid values: InnoDB; RocksDB.
+    * <p>Database engine type. Valid values: InnoDB, RocksDB.</p>
     */
     @SerializedName("EngineTypes")
     @Expose
     private String [] EngineTypes;
 
     /**
-    * Whether to obtain the Cluster Edition instance node information. Valid values: true or false. The default value is false.
+    * <p>Whether to obtain the Cluster Edition instance node information. Valid values: true or false. The default value is false.</p>
     */
     @SerializedName("QueryClusterInfo")
     @Expose
@@ -294,568 +292,560 @@ Note that tags cannot be queried for instances being created.
     }
 
     /**
-     * Get Instance type. Value range: 1 (primary), 2 (disaster recovery), 3 (read-only). 
-     * @return InstanceTypes Instance type. Value range: 1 (primary), 2 (disaster recovery), 3 (read-only).
+     * Get <p>Instance type. Valid values: 1 - Primary instance, 2 - Disaster recovery instance, 3 - Read-only instance.</p> 
+     * @return InstanceTypes <p>Instance type. Valid values: 1 - Primary instance, 2 - Disaster recovery instance, 3 - Read-only instance.</p>
      */
     public Long [] getInstanceTypes() {
         return this.InstanceTypes;
     }
 
     /**
-     * Set Instance type. Value range: 1 (primary), 2 (disaster recovery), 3 (read-only).
-     * @param InstanceTypes Instance type. Value range: 1 (primary), 2 (disaster recovery), 3 (read-only).
+     * Set <p>Instance type. Valid values: 1 - Primary instance, 2 - Disaster recovery instance, 3 - Read-only instance.</p>
+     * @param InstanceTypes <p>Instance type. Valid values: 1 - Primary instance, 2 - Disaster recovery instance, 3 - Read-only instance.</p>
      */
     public void setInstanceTypes(Long [] InstanceTypes) {
         this.InstanceTypes = InstanceTypes;
     }
 
     /**
-     * Get Private IP address of the instance. 
-     * @return Vips Private IP address of the instance.
+     * Get <p>Private IP address of the instance.</p> 
+     * @return Vips <p>Private IP address of the instance.</p>
      */
     public String [] getVips() {
         return this.Vips;
     }
 
     /**
-     * Set Private IP address of the instance.
-     * @param Vips Private IP address of the instance.
+     * Set <p>Private IP address of the instance.</p>
+     * @param Vips <p>Private IP address of the instance.</p>
      */
     public void setVips(String [] Vips) {
         this.Vips = Vips;
     }
 
     /**
-     * Get Instance status. Valid values: <br>`0` (creating) <br>`1` (running) <br>`4` (isolating) <br>`5` (isolated; the instance can be restored and started in the recycle bin) 
-     * @return Status Instance status. Valid values: <br>`0` (creating) <br>`1` (running) <br>`4` (isolating) <br>`5` (isolated; the instance can be restored and started in the recycle bin)
+     * Get <p>Instance status. Valid values:<br>0 - Creating<br>1 - Running<br>4 - Isolation operation in progress<br>5 - Isolated (can be restored from the Recycle Bin)</p> 
+     * @return Status <p>Instance status. Valid values:<br>0 - Creating<br>1 - Running<br>4 - Isolation operation in progress<br>5 - Isolated (can be restored from the Recycle Bin)</p>
      */
     public Long [] getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Instance status. Valid values: <br>`0` (creating) <br>`1` (running) <br>`4` (isolating) <br>`5` (isolated; the instance can be restored and started in the recycle bin)
-     * @param Status Instance status. Valid values: <br>`0` (creating) <br>`1` (running) <br>`4` (isolating) <br>`5` (isolated; the instance can be restored and started in the recycle bin)
+     * Set <p>Instance status. Valid values:<br>0 - Creating<br>1 - Running<br>4 - Isolation operation in progress<br>5 - Isolated (can be restored from the Recycle Bin)</p>
+     * @param Status <p>Instance status. Valid values:<br>0 - Creating<br>1 - Running<br>4 - Isolation operation in progress<br>5 - Isolated (can be restored from the Recycle Bin)</p>
      */
     public void setStatus(Long [] Status) {
         this.Status = Status;
     }
 
     /**
-     * Get Offset. Default value: 0. 
-     * @return Offset Offset. Default value: 0.
+     * Get <p>Offset. Default value is 0.</p> 
+     * @return Offset <p>Offset. Default value is 0.</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Offset. Default value: 0.
-     * @param Offset Offset. Default value: 0.
+     * Set <p>Offset. Default value is 0.</p>
+     * @param Offset <p>Offset. Default value is 0.</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get Number of results to be returned for a single request. Default value: 20. Maximum value: 2,000. 
-     * @return Limit Number of results to be returned for a single request. Default value: 20. Maximum value: 2,000.
+     * Get <p>Number of items returned per request. Default value: 20. Maximum value: 2000.</p> 
+     * @return Limit <p>Number of items returned per request. Default value: 20. Maximum value: 2000.</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Number of results to be returned for a single request. Default value: 20. Maximum value: 2,000.
-     * @param Limit Number of results to be returned for a single request. Default value: 20. Maximum value: 2,000.
+     * Set <p>Number of items returned per request. Default value: 20. Maximum value: 2000.</p>
+     * @param Limit <p>Number of items returned per request. Default value: 20. Maximum value: 2000.</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get Security group ID. When it is used as a filter, the `WithSecurityGroup` parameter should be set to 1. 
-     * @return SecurityGroupId Security group ID. When it is used as a filter, the `WithSecurityGroup` parameter should be set to 1.
+     * Get <p>Security group ID. When using security group ID as the filter condition, the WithSecurityGroup parameter needs to be specified as 1.</p> 
+     * @return SecurityGroupId <p>Security group ID. When using security group ID as the filter condition, the WithSecurityGroup parameter needs to be specified as 1.</p>
      */
     public String getSecurityGroupId() {
         return this.SecurityGroupId;
     }
 
     /**
-     * Set Security group ID. When it is used as a filter, the `WithSecurityGroup` parameter should be set to 1.
-     * @param SecurityGroupId Security group ID. When it is used as a filter, the `WithSecurityGroup` parameter should be set to 1.
+     * Set <p>Security group ID. When using security group ID as the filter condition, the WithSecurityGroup parameter needs to be specified as 1.</p>
+     * @param SecurityGroupId <p>Security group ID. When using security group ID as the filter condition, the WithSecurityGroup parameter needs to be specified as 1.</p>
      */
     public void setSecurityGroupId(String SecurityGroupId) {
         this.SecurityGroupId = SecurityGroupId;
     }
 
     /**
-     * Get Payment type. Valid values: 0 - yearly/monthly subscription; 1 - bill by hour. 
-     * @return PayTypes Payment type. Valid values: 0 - yearly/monthly subscription; 1 - bill by hour.
+     * Get <p>Payment type. Valid values: 0 - yearly/monthly subscription; 1 - bill by hour.</p> 
+     * @return PayTypes <p>Payment type. Valid values: 0 - yearly/monthly subscription; 1 - bill by hour.</p>
      */
     public Long [] getPayTypes() {
         return this.PayTypes;
     }
 
     /**
-     * Set Payment type. Valid values: 0 - yearly/monthly subscription; 1 - bill by hour.
-     * @param PayTypes Payment type. Valid values: 0 - yearly/monthly subscription; 1 - bill by hour.
+     * Set <p>Payment type. Valid values: 0 - yearly/monthly subscription; 1 - bill by hour.</p>
+     * @param PayTypes <p>Payment type. Valid values: 0 - yearly/monthly subscription; 1 - bill by hour.</p>
      */
     public void setPayTypes(Long [] PayTypes) {
         this.PayTypes = PayTypes;
     }
 
     /**
-     * Get Instance name. 
-     * @return InstanceNames Instance name.
+     * Get <p>Instance name.</p> 
+     * @return InstanceNames <p>Instance name.</p>
      */
     public String [] getInstanceNames() {
         return this.InstanceNames;
     }
 
     /**
-     * Set Instance name.
-     * @param InstanceNames Instance name.
+     * Set <p>Instance name.</p>
+     * @param InstanceNames <p>Instance name.</p>
      */
     public void setInstanceNames(String [] InstanceNames) {
         this.InstanceNames = InstanceNames;
     }
 
     /**
-     * Get Instance task status. Valid values:<br>0 - no task;<br>1 - upgrading;<br>2 - importing data;<br>3 - enabling secondary nodes;<br>4 - enabling public network access;<br>5 - executing batch operations;<br>6 - rolling back;<br>7 - disabling public network access;<br>8 - changing the password;<br>9 - renaming the instance;<br>10 - restarting;<br>12 - migrating self-built databases;<br>13 - deleting databases and tables;<br>14 - synchronizing the creation of disaster recovery instances;<br>15 - pending upgrade switch;<br>16 - under upgrade switch;<br>17 - upgrade switch completed;<br>19 - parameter settings pending execution;<br>34 - in-place upgrade pending execution. 
-     * @return TaskStatus Instance task status. Valid values:<br>0 - no task;<br>1 - upgrading;<br>2 - importing data;<br>3 - enabling secondary nodes;<br>4 - enabling public network access;<br>5 - executing batch operations;<br>6 - rolling back;<br>7 - disabling public network access;<br>8 - changing the password;<br>9 - renaming the instance;<br>10 - restarting;<br>12 - migrating self-built databases;<br>13 - deleting databases and tables;<br>14 - synchronizing the creation of disaster recovery instances;<br>15 - pending upgrade switch;<br>16 - under upgrade switch;<br>17 - upgrade switch completed;<br>19 - parameter settings pending execution;<br>34 - in-place upgrade pending execution.
+     * Get <p>Instance task status, possible values:<br>0 - No tasks<br>1 - Upgrading<br>2 - Data import in progress<br>3 - Enabling Slave<br>4 - Enabling public network access<br>5 - Batch operation in progress<br>6 - Rolling back<br>7 - Disabling public network access<br>8 - Password change in progress<br>9 - Renaming instance<br>10 - Restarting<br>12 - Self-built migration in progress<br>13 - Deleting database table<br>14 - Disaster recovery instance creation sync in progress<br>15 - Upgrade pending switch<br>16 - Upgrade and switch in progress<br>17 - Switch completed<br>19 - Parameter setting pending execution<br>34 - Node in-place upgrade to be executed</p> 
+     * @return TaskStatus <p>Instance task status, possible values:<br>0 - No tasks<br>1 - Upgrading<br>2 - Data import in progress<br>3 - Enabling Slave<br>4 - Enabling public network access<br>5 - Batch operation in progress<br>6 - Rolling back<br>7 - Disabling public network access<br>8 - Password change in progress<br>9 - Renaming instance<br>10 - Restarting<br>12 - Self-built migration in progress<br>13 - Deleting database table<br>14 - Disaster recovery instance creation sync in progress<br>15 - Upgrade pending switch<br>16 - Upgrade and switch in progress<br>17 - Switch completed<br>19 - Parameter setting pending execution<br>34 - Node in-place upgrade to be executed</p>
      */
     public Long [] getTaskStatus() {
         return this.TaskStatus;
     }
 
     /**
-     * Set Instance task status. Valid values:<br>0 - no task;<br>1 - upgrading;<br>2 - importing data;<br>3 - enabling secondary nodes;<br>4 - enabling public network access;<br>5 - executing batch operations;<br>6 - rolling back;<br>7 - disabling public network access;<br>8 - changing the password;<br>9 - renaming the instance;<br>10 - restarting;<br>12 - migrating self-built databases;<br>13 - deleting databases and tables;<br>14 - synchronizing the creation of disaster recovery instances;<br>15 - pending upgrade switch;<br>16 - under upgrade switch;<br>17 - upgrade switch completed;<br>19 - parameter settings pending execution;<br>34 - in-place upgrade pending execution.
-     * @param TaskStatus Instance task status. Valid values:<br>0 - no task;<br>1 - upgrading;<br>2 - importing data;<br>3 - enabling secondary nodes;<br>4 - enabling public network access;<br>5 - executing batch operations;<br>6 - rolling back;<br>7 - disabling public network access;<br>8 - changing the password;<br>9 - renaming the instance;<br>10 - restarting;<br>12 - migrating self-built databases;<br>13 - deleting databases and tables;<br>14 - synchronizing the creation of disaster recovery instances;<br>15 - pending upgrade switch;<br>16 - under upgrade switch;<br>17 - upgrade switch completed;<br>19 - parameter settings pending execution;<br>34 - in-place upgrade pending execution.
+     * Set <p>Instance task status, possible values:<br>0 - No tasks<br>1 - Upgrading<br>2 - Data import in progress<br>3 - Enabling Slave<br>4 - Enabling public network access<br>5 - Batch operation in progress<br>6 - Rolling back<br>7 - Disabling public network access<br>8 - Password change in progress<br>9 - Renaming instance<br>10 - Restarting<br>12 - Self-built migration in progress<br>13 - Deleting database table<br>14 - Disaster recovery instance creation sync in progress<br>15 - Upgrade pending switch<br>16 - Upgrade and switch in progress<br>17 - Switch completed<br>19 - Parameter setting pending execution<br>34 - Node in-place upgrade to be executed</p>
+     * @param TaskStatus <p>Instance task status, possible values:<br>0 - No tasks<br>1 - Upgrading<br>2 - Data import in progress<br>3 - Enabling Slave<br>4 - Enabling public network access<br>5 - Batch operation in progress<br>6 - Rolling back<br>7 - Disabling public network access<br>8 - Password change in progress<br>9 - Renaming instance<br>10 - Restarting<br>12 - Self-built migration in progress<br>13 - Deleting database table<br>14 - Disaster recovery instance creation sync in progress<br>15 - Upgrade pending switch<br>16 - Upgrade and switch in progress<br>17 - Switch completed<br>19 - Parameter setting pending execution<br>34 - Node in-place upgrade to be executed</p>
      */
     public void setTaskStatus(Long [] TaskStatus) {
         this.TaskStatus = TaskStatus;
     }
 
     /**
-     * Get Version of the instance database engine. Value range: 5.1, 5.5, 5.6, 5.7. 
-     * @return EngineVersions Version of the instance database engine. Value range: 5.1, 5.5, 5.6, 5.7.
+     * Get <p>Database engine version of the instance. Possible values: 5.1, 5.5, 5.6, and 5.7.</p> 
+     * @return EngineVersions <p>Database engine version of the instance. Possible values: 5.1, 5.5, 5.6, and 5.7.</p>
      */
     public String [] getEngineVersions() {
         return this.EngineVersions;
     }
 
     /**
-     * Set Version of the instance database engine. Value range: 5.1, 5.5, 5.6, 5.7.
-     * @param EngineVersions Version of the instance database engine. Value range: 5.1, 5.5, 5.6, 5.7.
+     * Set <p>Database engine version of the instance. Possible values: 5.1, 5.5, 5.6, and 5.7.</p>
+     * @param EngineVersions <p>Database engine version of the instance. Possible values: 5.1, 5.5, 5.6, and 5.7.</p>
      */
     public void setEngineVersions(String [] EngineVersions) {
         this.EngineVersions = EngineVersions;
     }
 
     /**
-     * Get VPC ID. 
-     * @return VpcIds VPC ID.
+     * Get <p>VPC ID.</p> 
+     * @return VpcIds <p>VPC ID.</p>
      */
     public Long [] getVpcIds() {
         return this.VpcIds;
     }
 
     /**
-     * Set VPC ID.
-     * @param VpcIds VPC ID.
+     * Set <p>VPC ID.</p>
+     * @param VpcIds <p>VPC ID.</p>
      */
     public void setVpcIds(Long [] VpcIds) {
         this.VpcIds = VpcIds;
     }
 
     /**
-     * Get AZ ID. 
-     * @return ZoneIds AZ ID.
+     * Get <p>Availability zone ID.</p> 
+     * @return ZoneIds <p>Availability zone ID.</p>
      */
     public Long [] getZoneIds() {
         return this.ZoneIds;
     }
 
     /**
-     * Set AZ ID.
-     * @param ZoneIds AZ ID.
+     * Set <p>Availability zone ID.</p>
+     * @param ZoneIds <p>Availability zone ID.</p>
      */
     public void setZoneIds(Long [] ZoneIds) {
         this.ZoneIds = ZoneIds;
     }
 
     /**
-     * Get Subnet ID. 
-     * @return SubnetIds Subnet ID.
+     * Get <p>Subnet ID.</p> 
+     * @return SubnetIds <p>Subnet ID.</p>
      */
     public Long [] getSubnetIds() {
         return this.SubnetIds;
     }
 
     /**
-     * Set Subnet ID.
-     * @param SubnetIds Subnet ID.
+     * Set <p>Subnet ID.</p>
+     * @param SubnetIds <p>Subnet ID.</p>
      */
     public void setSubnetIds(Long [] SubnetIds) {
         this.SubnetIds = SubnetIds;
     }
 
     /**
-     * Get Whether to lock disk write. Valid values: `0`(unlock), `1`(lock). Default value: 0. 
-     * @return CdbErrors Whether to lock disk write. Valid values: `0`(unlock), `1`(lock). Default value: 0.
+     * Get <p>Whether to set the lock flag. Available values: 0 - not lock, 1 - lock. Default is 0.</p> 
+     * @return CdbErrors <p>Whether to set the lock flag. Available values: 0 - not lock, 1 - lock. Default is 0.</p>
      */
     public Long [] getCdbErrors() {
         return this.CdbErrors;
     }
 
     /**
-     * Set Whether to lock disk write. Valid values: `0`(unlock), `1`(lock). Default value: 0.
-     * @param CdbErrors Whether to lock disk write. Valid values: `0`(unlock), `1`(lock). Default value: 0.
+     * Set <p>Whether to set the lock flag. Available values: 0 - not lock, 1 - lock. Default is 0.</p>
+     * @param CdbErrors <p>Whether to set the lock flag. Available values: 0 - not lock, 1 - lock. Default is 0.</p>
      */
     public void setCdbErrors(Long [] CdbErrors) {
         this.CdbErrors = CdbErrors;
     }
 
     /**
-     * Get Sorting field of the query results. Valid values: "instanceId", "instanceName", "createTime", and "deadlineTime". 
-     * @return OrderBy Sorting field of the query results. Valid values: "instanceId", "instanceName", "createTime", and "deadlineTime".
+     * Get <p>Sorting field of the returned result set. Currently supports: "instanceId", "instanceName", "createTime", and "deadlineTime".</p> 
+     * @return OrderBy <p>Sorting field of the returned result set. Currently supports: "instanceId", "instanceName", "createTime", and "deadlineTime".</p>
      */
     public String getOrderBy() {
         return this.OrderBy;
     }
 
     /**
-     * Set Sorting field of the query results. Valid values: "instanceId", "instanceName", "createTime", and "deadlineTime".
-     * @param OrderBy Sorting field of the query results. Valid values: "instanceId", "instanceName", "createTime", and "deadlineTime".
+     * Set <p>Sorting field of the returned result set. Currently supports: "instanceId", "instanceName", "createTime", and "deadlineTime".</p>
+     * @param OrderBy <p>Sorting field of the returned result set. Currently supports: "instanceId", "instanceName", "createTime", and "deadlineTime".</p>
      */
     public void setOrderBy(String OrderBy) {
         this.OrderBy = OrderBy;
     }
 
     /**
-     * Get Sorting method of the returned result set. Valid values: "ASC" - ascending order; "DESC" - descending order. The default value is "DESC". 
-     * @return OrderDirection Sorting method of the returned result set. Valid values: "ASC" - ascending order; "DESC" - descending order. The default value is "DESC".
+     * Get <p>Sorting method of the returned result set. Valid values: "ASC" - ascending order; "DESC" - descending order. The default is "DESC".</p> 
+     * @return OrderDirection <p>Sorting method of the returned result set. Valid values: "ASC" - ascending order; "DESC" - descending order. The default is "DESC".</p>
      */
     public String getOrderDirection() {
         return this.OrderDirection;
     }
 
     /**
-     * Set Sorting method of the returned result set. Valid values: "ASC" - ascending order; "DESC" - descending order. The default value is "DESC".
-     * @param OrderDirection Sorting method of the returned result set. Valid values: "ASC" - ascending order; "DESC" - descending order. The default value is "DESC".
+     * Set <p>Sorting method of the returned result set. Valid values: "ASC" - ascending order; "DESC" - descending order. The default is "DESC".</p>
+     * @param OrderDirection <p>Sorting method of the returned result set. Valid values: "ASC" - ascending order; "DESC" - descending order. The default is "DESC".</p>
      */
     public void setOrderDirection(String OrderDirection) {
         this.OrderDirection = OrderDirection;
     }
 
     /**
-     * Get Whether to use the security group ID as the filter condition.
-Note: 0 indicates no; 1 indicates yes. 
-     * @return WithSecurityGroup Whether to use the security group ID as the filter condition.
-Note: 0 indicates no; 1 indicates yes.
+     * Get <p>Whether to use security group ID as the filter condition.<br>Description: 0 indicates no, 1 indicates yes.</p> 
+     * @return WithSecurityGroup <p>Whether to use security group ID as the filter condition.<br>Description: 0 indicates no, 1 indicates yes.</p>
      */
     public Long getWithSecurityGroup() {
         return this.WithSecurityGroup;
     }
 
     /**
-     * Set Whether to use the security group ID as the filter condition.
-Note: 0 indicates no; 1 indicates yes.
-     * @param WithSecurityGroup Whether to use the security group ID as the filter condition.
-Note: 0 indicates no; 1 indicates yes.
+     * Set <p>Whether to use security group ID as the filter condition.<br>Description: 0 indicates no, 1 indicates yes.</p>
+     * @param WithSecurityGroup <p>Whether to use security group ID as the filter condition.<br>Description: 0 indicates no, 1 indicates yes.</p>
      */
     public void setWithSecurityGroup(Long WithSecurityGroup) {
         this.WithSecurityGroup = WithSecurityGroup;
     }
 
     /**
-     * Get Whether dedicated cluster details are included. Value range: 0 (not included), 1 (included) 
-     * @return WithExCluster Whether dedicated cluster details are included. Value range: 0 (not included), 1 (included)
+     * Get <p>Whether the exclusive cluster detail is included. Value range: 0 - not contained, 1 - contained.</p> 
+     * @return WithExCluster <p>Whether the exclusive cluster detail is included. Value range: 0 - not contained, 1 - contained.</p>
      */
     public Long getWithExCluster() {
         return this.WithExCluster;
     }
 
     /**
-     * Set Whether dedicated cluster details are included. Value range: 0 (not included), 1 (included)
-     * @param WithExCluster Whether dedicated cluster details are included. Value range: 0 (not included), 1 (included)
+     * Set <p>Whether the exclusive cluster detail is included. Value range: 0 - not contained, 1 - contained.</p>
+     * @param WithExCluster <p>Whether the exclusive cluster detail is included. Value range: 0 - not contained, 1 - contained.</p>
      */
     public void setWithExCluster(Long WithExCluster) {
         this.WithExCluster = WithExCluster;
     }
 
     /**
-     * Get Exclusive cluster ID. 
-     * @return ExClusterId Exclusive cluster ID.
+     * Get <p>Dedicated cluster ID.</p> 
+     * @return ExClusterId <p>Dedicated cluster ID.</p>
      */
     public String getExClusterId() {
         return this.ExClusterId;
     }
 
     /**
-     * Set Exclusive cluster ID.
-     * @param ExClusterId Exclusive cluster ID.
+     * Set <p>Dedicated cluster ID.</p>
+     * @param ExClusterId <p>Dedicated cluster ID.</p>
      */
     public void setExClusterId(String ExClusterId) {
         this.ExClusterId = ExClusterId;
     }
 
     /**
-     * Get Instance ID. 
-     * @return InstanceIds Instance ID.
+     * Get <p>Instance ID.</p> 
+     * @return InstanceIds <p>Instance ID.</p>
      */
     public String [] getInstanceIds() {
         return this.InstanceIds;
     }
 
     /**
-     * Set Instance ID.
-     * @param InstanceIds Instance ID.
+     * Set <p>Instance ID.</p>
+     * @param InstanceIds <p>Instance ID.</p>
      */
     public void setInstanceIds(String [] InstanceIds) {
         this.InstanceIds = InstanceIds;
     }
 
     /**
-     * Get Initialization flag. Value range: 0 (not initialized), 1 (initialized). 
-     * @return InitFlag Initialization flag. Value range: 0 (not initialized), 1 (initialized).
+     * Get <p>Initialization flag. Valid values: 0 - uninitialized, 1 - initialized.</p> 
+     * @return InitFlag <p>Initialization flag. Valid values: 0 - uninitialized, 1 - initialized.</p>
      */
     public Long getInitFlag() {
         return this.InitFlag;
     }
 
     /**
-     * Set Initialization flag. Value range: 0 (not initialized), 1 (initialized).
-     * @param InitFlag Initialization flag. Value range: 0 (not initialized), 1 (initialized).
+     * Set <p>Initialization flag. Valid values: 0 - uninitialized, 1 - initialized.</p>
+     * @param InitFlag <p>Initialization flag. Valid values: 0 - uninitialized, 1 - initialized.</p>
      */
     public void setInitFlag(Long InitFlag) {
         this.InitFlag = InitFlag;
     }
 
     /**
-     * Get Whether instances corresponding to the disaster recovery relationship are included. Valid values: 0 (not included), 1 (included). Default value: 1. If a primary instance is pulled, the data of the disaster recovery relationship will be in the `DrInfo` field. If a disaster recovery instance is pulled, the data of the disaster recovery relationship will be in the `MasterInfo` field. The disaster recovery relationship contains only partial basic data. To get the detailed data, you need to call an API to pull it. 
-     * @return WithDr Whether instances corresponding to the disaster recovery relationship are included. Valid values: 0 (not included), 1 (included). Default value: 1. If a primary instance is pulled, the data of the disaster recovery relationship will be in the `DrInfo` field. If a disaster recovery instance is pulled, the data of the disaster recovery relationship will be in the `MasterInfo` field. The disaster recovery relationship contains only partial basic data. To get the detailed data, you need to call an API to pull it.
+     * Get <p>Whether the corresponding instance in the disaster recovery relationship is included. Valid values: 0 - excluding, 1 - included. Default value: 1. If pulling the primary instance, the data of the disaster recovery relationship is in the DrInfo field. If pulling the disaster recovery instance, the data of the disaster recovery relationship is in the MasterInfo field. The disaster recovery relationship only contains partial basic data. Detailed data must be pulled manually via the interface.</p> 
+     * @return WithDr <p>Whether the corresponding instance in the disaster recovery relationship is included. Valid values: 0 - excluding, 1 - included. Default value: 1. If pulling the primary instance, the data of the disaster recovery relationship is in the DrInfo field. If pulling the disaster recovery instance, the data of the disaster recovery relationship is in the MasterInfo field. The disaster recovery relationship only contains partial basic data. Detailed data must be pulled manually via the interface.</p>
      */
     public Long getWithDr() {
         return this.WithDr;
     }
 
     /**
-     * Set Whether instances corresponding to the disaster recovery relationship are included. Valid values: 0 (not included), 1 (included). Default value: 1. If a primary instance is pulled, the data of the disaster recovery relationship will be in the `DrInfo` field. If a disaster recovery instance is pulled, the data of the disaster recovery relationship will be in the `MasterInfo` field. The disaster recovery relationship contains only partial basic data. To get the detailed data, you need to call an API to pull it.
-     * @param WithDr Whether instances corresponding to the disaster recovery relationship are included. Valid values: 0 (not included), 1 (included). Default value: 1. If a primary instance is pulled, the data of the disaster recovery relationship will be in the `DrInfo` field. If a disaster recovery instance is pulled, the data of the disaster recovery relationship will be in the `MasterInfo` field. The disaster recovery relationship contains only partial basic data. To get the detailed data, you need to call an API to pull it.
+     * Set <p>Whether the corresponding instance in the disaster recovery relationship is included. Valid values: 0 - excluding, 1 - included. Default value: 1. If pulling the primary instance, the data of the disaster recovery relationship is in the DrInfo field. If pulling the disaster recovery instance, the data of the disaster recovery relationship is in the MasterInfo field. The disaster recovery relationship only contains partial basic data. Detailed data must be pulled manually via the interface.</p>
+     * @param WithDr <p>Whether the corresponding instance in the disaster recovery relationship is included. Valid values: 0 - excluding, 1 - included. Default value: 1. If pulling the primary instance, the data of the disaster recovery relationship is in the DrInfo field. If pulling the disaster recovery instance, the data of the disaster recovery relationship is in the MasterInfo field. The disaster recovery relationship only contains partial basic data. Detailed data must be pulled manually via the interface.</p>
      */
     public void setWithDr(Long WithDr) {
         this.WithDr = WithDr;
     }
 
     /**
-     * Get Whether read-only instances are included. Valid values: 0 (not included), 1 (included). Default value: 1. 
-     * @return WithRo Whether read-only instances are included. Valid values: 0 (not included), 1 (included). Default value: 1.
+     * Get <p>Whether it contains read-only instances. Valid values: 0 - does not include, 1 - includes. Default value is 1.</p> 
+     * @return WithRo <p>Whether it contains read-only instances. Valid values: 0 - does not include, 1 - includes. Default value is 1.</p>
      */
     public Long getWithRo() {
         return this.WithRo;
     }
 
     /**
-     * Set Whether read-only instances are included. Valid values: 0 (not included), 1 (included). Default value: 1.
-     * @param WithRo Whether read-only instances are included. Valid values: 0 (not included), 1 (included). Default value: 1.
+     * Set <p>Whether it contains read-only instances. Valid values: 0 - does not include, 1 - includes. Default value is 1.</p>
+     * @param WithRo <p>Whether it contains read-only instances. Valid values: 0 - does not include, 1 - includes. Default value is 1.</p>
      */
     public void setWithRo(Long WithRo) {
         this.WithRo = WithRo;
     }
 
     /**
-     * Get Whether primary instances are included. Valid values: 0 (not included), 1 (included). Default value: 1. 
-     * @return WithMaster Whether primary instances are included. Valid values: 0 (not included), 1 (included). Default value: 1.
+     * Get <p>Whether the primary instance is included. Valid values: 0 - does not include, 1 - includes. Default value is 1.</p> 
+     * @return WithMaster <p>Whether the primary instance is included. Valid values: 0 - does not include, 1 - includes. Default value is 1.</p>
      */
     public Long getWithMaster() {
         return this.WithMaster;
     }
 
     /**
-     * Set Whether primary instances are included. Valid values: 0 (not included), 1 (included). Default value: 1.
-     * @param WithMaster Whether primary instances are included. Valid values: 0 (not included), 1 (included). Default value: 1.
+     * Set <p>Whether the primary instance is included. Valid values: 0 - does not include, 1 - includes. Default value is 1.</p>
+     * @param WithMaster <p>Whether the primary instance is included. Valid values: 0 - does not include, 1 - includes. Default value is 1.</p>
      */
     public void setWithMaster(Long WithMaster) {
         this.WithMaster = WithMaster;
     }
 
     /**
-     * Get Placement group ID list. 
-     * @return DeployGroupIds Placement group ID list.
+     * Get <p>Placement group ID list.</p> 
+     * @return DeployGroupIds <p>Placement group ID list.</p>
      */
     public String [] getDeployGroupIds() {
         return this.DeployGroupIds;
     }
 
     /**
-     * Set Placement group ID list.
-     * @param DeployGroupIds Placement group ID list.
+     * Set <p>Placement group ID list.</p>
+     * @param DeployGroupIds <p>Placement group ID list.</p>
      */
     public void setDeployGroupIds(String [] DeployGroupIds) {
         this.DeployGroupIds = DeployGroupIds;
     }
 
     /**
-     * Get Whether to use the tag key as a filter condition 
-     * @return TagKeysForSearch Whether to use the tag key as a filter condition
+     * Get <p>Filter by tag key.</p> 
+     * @return TagKeysForSearch <p>Filter by tag key.</p>
      */
     public String [] getTagKeysForSearch() {
         return this.TagKeysForSearch;
     }
 
     /**
-     * Set Whether to use the tag key as a filter condition
-     * @param TagKeysForSearch Whether to use the tag key as a filter condition
+     * Set <p>Filter by tag key.</p>
+     * @param TagKeysForSearch <p>Filter by tag key.</p>
      */
     public void setTagKeysForSearch(String [] TagKeysForSearch) {
         this.TagKeysForSearch = TagKeysForSearch;
     }
 
     /**
-     * Get Financial cage IDs. 
-     * @return CageIds Financial cage IDs.
+     * Get <p>Financial Enclosure ID.</p> 
+     * @return CageIds <p>Financial Enclosure ID.</p>
      */
     public String [] getCageIds() {
         return this.CageIds;
     }
 
     /**
-     * Set Financial cage IDs.
-     * @param CageIds Financial cage IDs.
+     * Set <p>Financial Enclosure ID.</p>
+     * @param CageIds <p>Financial Enclosure ID.</p>
      */
     public void setCageIds(String [] CageIds) {
         this.CageIds = CageIds;
     }
 
     /**
-     * Get Tag value 
-     * @return TagValues Tag value
+     * Get <p>Tag value</p> 
+     * @return TagValues <p>Tag value</p>
      */
     public String [] getTagValues() {
         return this.TagValues;
     }
 
     /**
-     * Set Tag value
-     * @param TagValues Tag value
+     * Set <p>Tag value</p>
+     * @param TagValues <p>Tag value</p>
      */
     public void setTagValues(String [] TagValues) {
         this.TagValues = TagValues;
     }
 
     /**
-     * Get VPC character vpcId 
-     * @return UniqueVpcIds VPC character vpcId
+     * Get <p>Character type VPC ID</p> 
+     * @return UniqueVpcIds <p>Character type VPC ID</p>
      */
     public String [] getUniqueVpcIds() {
         return this.UniqueVpcIds;
     }
 
     /**
-     * Set VPC character vpcId
-     * @param UniqueVpcIds VPC character vpcId
+     * Set <p>Character type VPC ID</p>
+     * @param UniqueVpcIds <p>Character type VPC ID</p>
      */
     public void setUniqueVpcIds(String [] UniqueVpcIds) {
         this.UniqueVpcIds = UniqueVpcIds;
     }
 
     /**
-     * Get VPC character subnetId 
-     * @return UniqSubnetIds VPC character subnetId
+     * Get <p>VPC character type subnetId</p> 
+     * @return UniqSubnetIds <p>VPC character type subnetId</p>
      */
     public String [] getUniqSubnetIds() {
         return this.UniqSubnetIds;
     }
 
     /**
-     * Set VPC character subnetId
-     * @param UniqSubnetIds VPC character subnetId
+     * Set <p>VPC character type subnetId</p>
+     * @param UniqSubnetIds <p>VPC character type subnetId</p>
      */
     public void setUniqSubnetIds(String [] UniqSubnetIds) {
         this.UniqSubnetIds = UniqSubnetIds;
     }
 
     /**
-     * Get Tag key value.
-Note that tags cannot be queried for instances being created. 
-     * @return Tags Tag key value.
-Note that tags cannot be queried for instances being created.
+     * Get <p>Tag key value<br>Please note, tags of the instance being created are unable to query.</p> 
+     * @return Tags <p>Tag key value<br>Please note, tags of the instance being created are unable to query.</p>
      */
     public Tag [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set Tag key value.
-Note that tags cannot be queried for instances being created.
-     * @param Tags Tag key value.
-Note that tags cannot be queried for instances being created.
+     * Set <p>Tag key value<br>Please note, tags of the instance being created are unable to query.</p>
+     * @param Tags <p>Tag key value<br>Please note, tags of the instance being created are unable to query.</p>
      */
     public void setTags(Tag [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get Database proxy IP 
-     * @return ProxyVips Database proxy IP
+     * Get <p>Database proxy IP.</p> 
+     * @return ProxyVips <p>Database proxy IP.</p>
      */
     public String [] getProxyVips() {
         return this.ProxyVips;
     }
 
     /**
-     * Set Database proxy IP
-     * @param ProxyVips Database proxy IP
+     * Set <p>Database proxy IP.</p>
+     * @param ProxyVips <p>Database proxy IP.</p>
      */
     public void setProxyVips(String [] ProxyVips) {
         this.ProxyVips = ProxyVips;
     }
 
     /**
-     * Get Database proxy ID 
-     * @return ProxyIds Database proxy ID
+     * Get <p>Database proxy ID.</p> 
+     * @return ProxyIds <p>Database proxy ID.</p>
      */
     public String [] getProxyIds() {
         return this.ProxyIds;
     }
 
     /**
-     * Set Database proxy ID
-     * @param ProxyIds Database proxy ID
+     * Set <p>Database proxy ID.</p>
+     * @param ProxyIds <p>Database proxy ID.</p>
      */
     public void setProxyIds(String [] ProxyIds) {
         this.ProxyIds = ProxyIds;
     }
 
     /**
-     * Get Database engine type. Valid values: InnoDB; RocksDB. 
-     * @return EngineTypes Database engine type. Valid values: InnoDB; RocksDB.
+     * Get <p>Database engine type. Valid values: InnoDB, RocksDB.</p> 
+     * @return EngineTypes <p>Database engine type. Valid values: InnoDB, RocksDB.</p>
      */
     public String [] getEngineTypes() {
         return this.EngineTypes;
     }
 
     /**
-     * Set Database engine type. Valid values: InnoDB; RocksDB.
-     * @param EngineTypes Database engine type. Valid values: InnoDB; RocksDB.
+     * Set <p>Database engine type. Valid values: InnoDB, RocksDB.</p>
+     * @param EngineTypes <p>Database engine type. Valid values: InnoDB, RocksDB.</p>
      */
     public void setEngineTypes(String [] EngineTypes) {
         this.EngineTypes = EngineTypes;
     }
 
     /**
-     * Get Whether to obtain the Cluster Edition instance node information. Valid values: true or false. The default value is false. 
-     * @return QueryClusterInfo Whether to obtain the Cluster Edition instance node information. Valid values: true or false. The default value is false.
+     * Get <p>Whether to obtain the Cluster Edition instance node information. Valid values: true or false. The default value is false.</p> 
+     * @return QueryClusterInfo <p>Whether to obtain the Cluster Edition instance node information. Valid values: true or false. The default value is false.</p>
      */
     public Boolean getQueryClusterInfo() {
         return this.QueryClusterInfo;
     }
 
     /**
-     * Set Whether to obtain the Cluster Edition instance node information. Valid values: true or false. The default value is false.
-     * @param QueryClusterInfo Whether to obtain the Cluster Edition instance node information. Valid values: true or false. The default value is false.
+     * Set <p>Whether to obtain the Cluster Edition instance node information. Valid values: true or false. The default value is false.</p>
+     * @param QueryClusterInfo <p>Whether to obtain the Cluster Edition instance node information. Valid values: true or false. The default value is false.</p>
      */
     public void setQueryClusterInfo(Boolean QueryClusterInfo) {
         this.QueryClusterInfo = QueryClusterInfo;

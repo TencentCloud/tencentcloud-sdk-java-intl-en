@@ -31,7 +31,7 @@ public class CreateDatabaseRequest extends AbstractModel {
     private String InstanceId;
 
     /**
-    * Database Name, up to 64 characters in length.
+    * Database name, length not exceeding 64.
     */
     @SerializedName("DBName")
     @Expose
@@ -61,16 +61,16 @@ public class CreateDatabaseRequest extends AbstractModel {
     }
 
     /**
-     * Get Database Name, up to 64 characters in length. 
-     * @return DBName Database Name, up to 64 characters in length.
+     * Get Database name, length not exceeding 64. 
+     * @return DBName Database name, length not exceeding 64.
      */
     public String getDBName() {
         return this.DBName;
     }
 
     /**
-     * Set Database Name, up to 64 characters in length.
-     * @param DBName Database Name, up to 64 characters in length.
+     * Set Database name, length not exceeding 64.
+     * @param DBName Database name, length not exceeding 64.
      */
     public void setDBName(String DBName) {
         this.DBName = DBName;

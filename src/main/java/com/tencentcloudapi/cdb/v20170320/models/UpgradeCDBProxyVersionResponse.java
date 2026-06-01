@@ -24,8 +24,7 @@ import java.util.HashMap;
 public class UpgradeCDBProxyVersionResponse extends AbstractModel {
 
     /**
-    * Async request ID
-Note: this field may return `null`, indicating that no valid value can be found.
+    * Async Processing ID
     */
     @SerializedName("AsyncRequestId")
     @Expose
@@ -39,20 +38,16 @@ Note: this field may return `null`, indicating that no valid value can be found.
     private String RequestId;
 
     /**
-     * Get Async request ID
-Note: this field may return `null`, indicating that no valid value can be found. 
-     * @return AsyncRequestId Async request ID
-Note: this field may return `null`, indicating that no valid value can be found.
+     * Get Async Processing ID 
+     * @return AsyncRequestId Async Processing ID
      */
     public String getAsyncRequestId() {
         return this.AsyncRequestId;
     }
 
     /**
-     * Set Async request ID
-Note: this field may return `null`, indicating that no valid value can be found.
-     * @param AsyncRequestId Async request ID
-Note: this field may return `null`, indicating that no valid value can be found.
+     * Set Async Processing ID
+     * @param AsyncRequestId Async Processing ID
      */
     public void setAsyncRequestId(String AsyncRequestId) {
         this.AsyncRequestId = AsyncRequestId;

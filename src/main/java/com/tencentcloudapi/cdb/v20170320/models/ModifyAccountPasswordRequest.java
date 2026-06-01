@@ -38,11 +38,18 @@ public class ModifyAccountPasswordRequest extends AbstractModel {
     private String NewPassword;
 
     /**
-    * TencentDB account
+    * TDSQL for MySQL accounts. Obtain through the [DescribeAccounts](https://www.tencentcloud.com/document/api/236/17499?from_cn_redirect=1) API.
     */
     @SerializedName("Accounts")
     @Expose
     private Account [] Accounts;
+
+    /**
+    * Deprecated.
+    */
+    @SerializedName("SkipValidatePassword")
+    @Expose
+    private Boolean SkipValidatePassword;
 
     /**
      * Get Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page. 
@@ -77,19 +84,39 @@ public class ModifyAccountPasswordRequest extends AbstractModel {
     }
 
     /**
-     * Get TencentDB account 
-     * @return Accounts TencentDB account
+     * Get TDSQL for MySQL accounts. Obtain through the [DescribeAccounts](https://www.tencentcloud.com/document/api/236/17499?from_cn_redirect=1) API. 
+     * @return Accounts TDSQL for MySQL accounts. Obtain through the [DescribeAccounts](https://www.tencentcloud.com/document/api/236/17499?from_cn_redirect=1) API.
      */
     public Account [] getAccounts() {
         return this.Accounts;
     }
 
     /**
-     * Set TencentDB account
-     * @param Accounts TencentDB account
+     * Set TDSQL for MySQL accounts. Obtain through the [DescribeAccounts](https://www.tencentcloud.com/document/api/236/17499?from_cn_redirect=1) API.
+     * @param Accounts TDSQL for MySQL accounts. Obtain through the [DescribeAccounts](https://www.tencentcloud.com/document/api/236/17499?from_cn_redirect=1) API.
      */
     public void setAccounts(Account [] Accounts) {
         this.Accounts = Accounts;
+    }
+
+    /**
+     * Get Deprecated. 
+     * @return SkipValidatePassword Deprecated.
+     * @deprecated
+     */
+    @Deprecated
+    public Boolean getSkipValidatePassword() {
+        return this.SkipValidatePassword;
+    }
+
+    /**
+     * Set Deprecated.
+     * @param SkipValidatePassword Deprecated.
+     * @deprecated
+     */
+    @Deprecated
+    public void setSkipValidatePassword(Boolean SkipValidatePassword) {
+        this.SkipValidatePassword = SkipValidatePassword;
     }
 
     public ModifyAccountPasswordRequest() {
@@ -112,6 +139,9 @@ public class ModifyAccountPasswordRequest extends AbstractModel {
                 this.Accounts[i] = new Account(source.Accounts[i]);
             }
         }
+        if (source.SkipValidatePassword != null) {
+            this.SkipValidatePassword = new Boolean(source.SkipValidatePassword);
+        }
     }
 
 
@@ -122,6 +152,7 @@ public class ModifyAccountPasswordRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "NewPassword", this.NewPassword);
         this.setParamArrayObj(map, prefix + "Accounts.", this.Accounts);
+        this.setParamSimple(map, prefix + "SkipValidatePassword", this.SkipValidatePassword);
 
     }
 }

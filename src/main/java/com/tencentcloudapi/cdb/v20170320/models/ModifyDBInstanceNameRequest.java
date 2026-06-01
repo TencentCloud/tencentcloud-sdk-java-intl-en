@@ -31,7 +31,7 @@ public class ModifyDBInstanceNameRequest extends AbstractModel {
     private String InstanceId;
 
     /**
-    * The modified instance name.
+    * Modified instance name, which can only contain digits, English uppercase and lowercase letters, Chinese, and special characters -_./()[]（）+=:：@. Its length cannot exceed 60.
     */
     @SerializedName("InstanceName")
     @Expose
@@ -54,16 +54,16 @@ public class ModifyDBInstanceNameRequest extends AbstractModel {
     }
 
     /**
-     * Get The modified instance name. 
-     * @return InstanceName The modified instance name.
+     * Get Modified instance name, which can only contain digits, English uppercase and lowercase letters, Chinese, and special characters -_./()[]（）+=:：@. Its length cannot exceed 60. 
+     * @return InstanceName Modified instance name, which can only contain digits, English uppercase and lowercase letters, Chinese, and special characters -_./()[]（）+=:：@. Its length cannot exceed 60.
      */
     public String getInstanceName() {
         return this.InstanceName;
     }
 
     /**
-     * Set The modified instance name.
-     * @param InstanceName The modified instance name.
+     * Set Modified instance name, which can only contain digits, English uppercase and lowercase letters, Chinese, and special characters -_./()[]（）+=:：@. Its length cannot exceed 60.
+     * @param InstanceName Modified instance name, which can only contain digits, English uppercase and lowercase letters, Chinese, and special characters -_./()[]（）+=:：@. Its length cannot exceed 60.
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;

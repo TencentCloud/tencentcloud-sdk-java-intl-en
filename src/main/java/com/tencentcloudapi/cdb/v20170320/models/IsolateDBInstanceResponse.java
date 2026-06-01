@@ -24,8 +24,7 @@ import java.util.HashMap;
 public class IsolateDBInstanceResponse extends AbstractModel {
 
     /**
-    * Async task request ID, which can be used to query the execution result of an async task. (This returned field has been disused. You can query the isolation status of an instance through the `DescribeDBInstances` API.)
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Request ID of the async task. Use this ID to query the outcome of the async task. (This returned field is currently abandoned. The quarantined state of instances can be queried through the API to query instances.)
     */
     @SerializedName("AsyncRequestId")
     @Expose
@@ -39,21 +38,21 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Async task request ID, which can be used to query the execution result of an async task. (This returned field has been disused. You can query the isolation status of an instance through the `DescribeDBInstances` API.)
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return AsyncRequestId Async task request ID, which can be used to query the execution result of an async task. (This returned field has been disused. You can query the isolation status of an instance through the `DescribeDBInstances` API.)
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Request ID of the async task. Use this ID to query the outcome of the async task. (This returned field is currently abandoned. The quarantined state of instances can be queried through the API to query instances.) 
+     * @return AsyncRequestId Request ID of the async task. Use this ID to query the outcome of the async task. (This returned field is currently abandoned. The quarantined state of instances can be queried through the API to query instances.)
+     * @deprecated
      */
+    @Deprecated
     public String getAsyncRequestId() {
         return this.AsyncRequestId;
     }
 
     /**
-     * Set Async task request ID, which can be used to query the execution result of an async task. (This returned field has been disused. You can query the isolation status of an instance through the `DescribeDBInstances` API.)
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param AsyncRequestId Async task request ID, which can be used to query the execution result of an async task. (This returned field has been disused. You can query the isolation status of an instance through the `DescribeDBInstances` API.)
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Request ID of the async task. Use this ID to query the outcome of the async task. (This returned field is currently abandoned. The quarantined state of instances can be queried through the API to query instances.)
+     * @param AsyncRequestId Request ID of the async task. Use this ID to query the outcome of the async task. (This returned field is currently abandoned. The quarantined state of instances can be queried through the API to query instances.)
+     * @deprecated
      */
+    @Deprecated
     public void setAsyncRequestId(String AsyncRequestId) {
         this.AsyncRequestId = AsyncRequestId;
     }

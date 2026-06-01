@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class SlaveInfo extends AbstractModel {
 
     /**
-    * Information of secondary server 1
+    * <p>Secondary server information of the top spot</p>
     */
     @SerializedName("First")
     @Expose
     private SlaveInstanceInfo First;
 
     /**
-    * Second secondary server information.
+    * <p>Second standby machine information</p>
     */
     @SerializedName("Second")
     @Expose
     private SlaveInstanceInfo Second;
 
     /**
-     * Get Information of secondary server 1 
-     * @return First Information of secondary server 1
+     * Get <p>Secondary server information of the top spot</p> 
+     * @return First <p>Secondary server information of the top spot</p>
      */
     public SlaveInstanceInfo getFirst() {
         return this.First;
     }
 
     /**
-     * Set Information of secondary server 1
-     * @param First Information of secondary server 1
+     * Set <p>Secondary server information of the top spot</p>
+     * @param First <p>Secondary server information of the top spot</p>
      */
     public void setFirst(SlaveInstanceInfo First) {
         this.First = First;
     }
 
     /**
-     * Get Second secondary server information. 
-     * @return Second Second secondary server information.
+     * Get <p>Second standby machine information</p> 
+     * @return Second <p>Second standby machine information</p>
      */
     public SlaveInstanceInfo getSecond() {
         return this.Second;
     }
 
     /**
-     * Set Second secondary server information.
-     * @param Second Second secondary server information.
+     * Set <p>Second standby machine information</p>
+     * @param Second <p>Second standby machine information</p>
      */
     public void setSecond(SlaveInstanceInfo Second) {
         this.Second = Second;

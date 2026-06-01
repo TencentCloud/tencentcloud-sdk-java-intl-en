@@ -45,7 +45,7 @@ public class DescribeTablesRequest extends AbstractModel {
     private Long Offset;
 
     /**
-    * Number of results to be returned for a single request. Default value: 20. Maximum value: 2,000.
+    * Number of items returned per request. Default value: 20. Maximum value: 5000.
     */
     @SerializedName("Limit")
     @Expose
@@ -107,16 +107,16 @@ public class DescribeTablesRequest extends AbstractModel {
     }
 
     /**
-     * Get Number of results to be returned for a single request. Default value: 20. Maximum value: 2,000. 
-     * @return Limit Number of results to be returned for a single request. Default value: 20. Maximum value: 2,000.
+     * Get Number of items returned per request. Default value: 20. Maximum value: 5000. 
+     * @return Limit Number of items returned per request. Default value: 20. Maximum value: 5000.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Number of results to be returned for a single request. Default value: 20. Maximum value: 2,000.
-     * @param Limit Number of results to be returned for a single request. Default value: 20. Maximum value: 2,000.
+     * Set Number of items returned per request. Default value: 20. Maximum value: 5000.
+     * @param Limit Number of items returned per request. Default value: 20. Maximum value: 5000.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

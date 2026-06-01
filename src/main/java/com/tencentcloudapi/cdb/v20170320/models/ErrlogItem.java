@@ -24,8 +24,7 @@ import java.util.HashMap;
 public class ErrlogItem extends AbstractModel {
 
     /**
-    * Error occurrence time.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Error occurrence time. Timestamp in seconds.
     */
     @SerializedName("Timestamp")
     @Expose
@@ -33,37 +32,30 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
     * Error details
-Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Content")
     @Expose
     private String Content;
 
     /**
-     * Get Error occurrence time.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return Timestamp Error occurrence time.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Error occurrence time. Timestamp in seconds. 
+     * @return Timestamp Error occurrence time. Timestamp in seconds.
      */
     public Long getTimestamp() {
         return this.Timestamp;
     }
 
     /**
-     * Set Error occurrence time.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Timestamp Error occurrence time.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Error occurrence time. Timestamp in seconds.
+     * @param Timestamp Error occurrence time. Timestamp in seconds.
      */
     public void setTimestamp(Long Timestamp) {
         this.Timestamp = Timestamp;
     }
 
     /**
-     * Get Error details
-Note: this field may return null, indicating that no valid values can be obtained. 
+     * Get Error details 
      * @return Content Error details
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getContent() {
         return this.Content;
@@ -71,9 +63,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Error details
-Note: this field may return null, indicating that no valid values can be obtained.
      * @param Content Error details
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setContent(String Content) {
         this.Content = Content;

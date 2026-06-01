@@ -59,8 +59,7 @@ public class RollbackTask extends AbstractModel {
     private String EndTime;
 
     /**
-    * Rollback task details.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Rollback task detail.
     */
     @SerializedName("Detail")
     @Expose
@@ -147,20 +146,16 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Rollback task details.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return Detail Rollback task details.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Rollback task detail. 
+     * @return Detail Rollback task detail.
      */
     public RollbackInstancesInfo [] getDetail() {
         return this.Detail;
     }
 
     /**
-     * Set Rollback task details.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Detail Rollback task details.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Rollback task detail.
+     * @param Detail Rollback task detail.
      */
     public void setDetail(RollbackInstancesInfo [] Detail) {
         this.Detail = Detail;

@@ -31,7 +31,7 @@ public class SlaveConfig extends AbstractModel {
     private String ReplicationMode;
 
     /**
-    * AZ name of the secondary database, such as ap-shanghai-2
+    * Canonical name of the read-only availability zone, for example ap-shanghai-2
     */
     @SerializedName("Zone")
     @Expose
@@ -54,16 +54,16 @@ public class SlaveConfig extends AbstractModel {
     }
 
     /**
-     * Get AZ name of the secondary database, such as ap-shanghai-2 
-     * @return Zone AZ name of the secondary database, such as ap-shanghai-2
+     * Get Canonical name of the read-only availability zone, for example ap-shanghai-2 
+     * @return Zone Canonical name of the read-only availability zone, for example ap-shanghai-2
      */
     public String getZone() {
         return this.Zone;
     }
 
     /**
-     * Set AZ name of the secondary database, such as ap-shanghai-2
-     * @param Zone AZ name of the secondary database, such as ap-shanghai-2
+     * Set Canonical name of the read-only availability zone, for example ap-shanghai-2
+     * @param Zone Canonical name of the read-only availability zone, for example ap-shanghai-2
      */
     public void setZone(String Zone) {
         this.Zone = Zone;

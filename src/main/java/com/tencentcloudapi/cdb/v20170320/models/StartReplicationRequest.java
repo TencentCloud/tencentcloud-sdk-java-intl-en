@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class StartReplicationRequest extends AbstractModel {
 
     /**
-    * Read-Only instance ID.
+    * Instance ID. It only supports read-only instances. It can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-     * Get Read-Only instance ID. 
-     * @return InstanceId Read-Only instance ID.
+     * Get Instance ID. It only supports read-only instances. It can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API. 
+     * @return InstanceId Instance ID. It only supports read-only instances. It can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Read-Only instance ID.
-     * @param InstanceId Read-Only instance ID.
+     * Set Instance ID. It only supports read-only instances. It can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
+     * @param InstanceId Instance ID. It only supports read-only instances. It can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;

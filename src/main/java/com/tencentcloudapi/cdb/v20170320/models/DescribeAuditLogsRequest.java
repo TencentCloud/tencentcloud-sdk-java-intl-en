@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class DescribeAuditLogsRequest extends AbstractModel {
 
     /**
-    * Instance ID
+    * Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Start time
+    * Start time. We recommend that the interval between start and end time does not exceed 7 days.
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * End time
+    * End time. We recommend that the interval between start and end time does not exceed 7 days.
     */
     @SerializedName("EndTime")
     @Expose
@@ -52,24 +52,24 @@ public class DescribeAuditLogsRequest extends AbstractModel {
     private Long Limit;
 
     /**
-    * Pagination offset
+    * Log offset, supports up to 65535 log entries for offset querying. Fill in the range: 0 - 65535.
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * Sorting order Valid values: `ASC (ascending), `DESC` (descending).
+    * Sort order. Valid values: "ASC" - Ascending order, "DESC" - Descending order. Default value: "DESC".
     */
     @SerializedName("Order")
     @Expose
     private String Order;
 
     /**
-    * Sorting field Valid values: 
-`timestamp`: Timestamp,
-`affectRows`: Number of affected rows,
-`execTime`: Execution time.
+    * Field to sort by. Valid values:
+"timestamp" - timestamp;
+"affectRows" - Number of affected rows.
+"execTime" - Execution time.
     */
     @SerializedName("OrderBy")
     @Expose
@@ -83,48 +83,48 @@ public class DescribeAuditLogsRequest extends AbstractModel {
     private InstanceAuditLogFilters [] LogFilter;
 
     /**
-     * Get Instance ID 
-     * @return InstanceId Instance ID
+     * Get Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API. 
+     * @return InstanceId Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Instance ID
-     * @param InstanceId Instance ID
+     * Set Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
+     * @param InstanceId Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Start time 
-     * @return StartTime Start time
+     * Get Start time. We recommend that the interval between start and end time does not exceed 7 days. 
+     * @return StartTime Start time. We recommend that the interval between start and end time does not exceed 7 days.
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set Start time
-     * @param StartTime Start time
+     * Set Start time. We recommend that the interval between start and end time does not exceed 7 days.
+     * @param StartTime Start time. We recommend that the interval between start and end time does not exceed 7 days.
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get End time 
-     * @return EndTime End time
+     * Get End time. We recommend that the interval between start and end time does not exceed 7 days. 
+     * @return EndTime End time. We recommend that the interval between start and end time does not exceed 7 days.
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set End time
-     * @param EndTime End time
+     * Set End time. We recommend that the interval between start and end time does not exceed 7 days.
+     * @param EndTime End time. We recommend that the interval between start and end time does not exceed 7 days.
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
@@ -147,60 +147,60 @@ public class DescribeAuditLogsRequest extends AbstractModel {
     }
 
     /**
-     * Get Pagination offset 
-     * @return Offset Pagination offset
+     * Get Log offset, supports up to 65535 log entries for offset querying. Fill in the range: 0 - 65535. 
+     * @return Offset Log offset, supports up to 65535 log entries for offset querying. Fill in the range: 0 - 65535.
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Pagination offset
-     * @param Offset Pagination offset
+     * Set Log offset, supports up to 65535 log entries for offset querying. Fill in the range: 0 - 65535.
+     * @param Offset Log offset, supports up to 65535 log entries for offset querying. Fill in the range: 0 - 65535.
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get Sorting order Valid values: `ASC (ascending), `DESC` (descending). 
-     * @return Order Sorting order Valid values: `ASC (ascending), `DESC` (descending).
+     * Get Sort order. Valid values: "ASC" - Ascending order, "DESC" - Descending order. Default value: "DESC". 
+     * @return Order Sort order. Valid values: "ASC" - Ascending order, "DESC" - Descending order. Default value: "DESC".
      */
     public String getOrder() {
         return this.Order;
     }
 
     /**
-     * Set Sorting order Valid values: `ASC (ascending), `DESC` (descending).
-     * @param Order Sorting order Valid values: `ASC (ascending), `DESC` (descending).
+     * Set Sort order. Valid values: "ASC" - Ascending order, "DESC" - Descending order. Default value: "DESC".
+     * @param Order Sort order. Valid values: "ASC" - Ascending order, "DESC" - Descending order. Default value: "DESC".
      */
     public void setOrder(String Order) {
         this.Order = Order;
     }
 
     /**
-     * Get Sorting field Valid values: 
-`timestamp`: Timestamp,
-`affectRows`: Number of affected rows,
-`execTime`: Execution time. 
-     * @return OrderBy Sorting field Valid values: 
-`timestamp`: Timestamp,
-`affectRows`: Number of affected rows,
-`execTime`: Execution time.
+     * Get Field to sort by. Valid values:
+"timestamp" - timestamp;
+"affectRows" - Number of affected rows.
+"execTime" - Execution time. 
+     * @return OrderBy Field to sort by. Valid values:
+"timestamp" - timestamp;
+"affectRows" - Number of affected rows.
+"execTime" - Execution time.
      */
     public String getOrderBy() {
         return this.OrderBy;
     }
 
     /**
-     * Set Sorting field Valid values: 
-`timestamp`: Timestamp,
-`affectRows`: Number of affected rows,
-`execTime`: Execution time.
-     * @param OrderBy Sorting field Valid values: 
-`timestamp`: Timestamp,
-`affectRows`: Number of affected rows,
-`execTime`: Execution time.
+     * Set Field to sort by. Valid values:
+"timestamp" - timestamp;
+"affectRows" - Number of affected rows.
+"execTime" - Execution time.
+     * @param OrderBy Field to sort by. Valid values:
+"timestamp" - timestamp;
+"affectRows" - Number of affected rows.
+"execTime" - Execution time.
      */
     public void setOrderBy(String OrderBy) {
         this.OrderBy = OrderBy;

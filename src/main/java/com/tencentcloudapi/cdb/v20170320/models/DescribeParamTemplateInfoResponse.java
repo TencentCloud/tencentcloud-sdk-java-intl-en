@@ -38,7 +38,7 @@ public class DescribeParamTemplateInfoResponse extends AbstractModel {
     private String Name;
 
     /**
-    * Database engine version specified in the parameter template
+    * The parameter template corresponds to the instance version. Valid values: 5.5, 5.6, 5.7, 8.0.
     */
     @SerializedName("EngineVersion")
     @Expose
@@ -73,8 +73,7 @@ public class DescribeParamTemplateInfoResponse extends AbstractModel {
     private String TemplateType;
 
     /**
-    * Parameter template engine.  Valid values: `InnoDB`, `RocksDB`. 
-Note:  This field may return null, indicating that no valid values can be obtained.
+    * Parameter template engine. Supported values include "InnoDB", "RocksDB".
     */
     @SerializedName("EngineType")
     @Expose
@@ -120,16 +119,16 @@ Note:  This field may return null, indicating that no valid values can be obtain
     }
 
     /**
-     * Get Database engine version specified in the parameter template 
-     * @return EngineVersion Database engine version specified in the parameter template
+     * Get The parameter template corresponds to the instance version. Valid values: 5.5, 5.6, 5.7, 8.0. 
+     * @return EngineVersion The parameter template corresponds to the instance version. Valid values: 5.5, 5.6, 5.7, 8.0.
      */
     public String getEngineVersion() {
         return this.EngineVersion;
     }
 
     /**
-     * Set Database engine version specified in the parameter template
-     * @param EngineVersion Database engine version specified in the parameter template
+     * Set The parameter template corresponds to the instance version. Valid values: 5.5, 5.6, 5.7, 8.0.
+     * @param EngineVersion The parameter template corresponds to the instance version. Valid values: 5.5, 5.6, 5.7, 8.0.
      */
     public void setEngineVersion(String EngineVersion) {
         this.EngineVersion = EngineVersion;
@@ -200,20 +199,16 @@ Note:  This field may return null, indicating that no valid values can be obtain
     }
 
     /**
-     * Get Parameter template engine.  Valid values: `InnoDB`, `RocksDB`. 
-Note:  This field may return null, indicating that no valid values can be obtained. 
-     * @return EngineType Parameter template engine.  Valid values: `InnoDB`, `RocksDB`. 
-Note:  This field may return null, indicating that no valid values can be obtained.
+     * Get Parameter template engine. Supported values include "InnoDB", "RocksDB". 
+     * @return EngineType Parameter template engine. Supported values include "InnoDB", "RocksDB".
      */
     public String getEngineType() {
         return this.EngineType;
     }
 
     /**
-     * Set Parameter template engine.  Valid values: `InnoDB`, `RocksDB`. 
-Note:  This field may return null, indicating that no valid values can be obtained.
-     * @param EngineType Parameter template engine.  Valid values: `InnoDB`, `RocksDB`. 
-Note:  This field may return null, indicating that no valid values can be obtained.
+     * Set Parameter template engine. Supported values include "InnoDB", "RocksDB".
+     * @param EngineType Parameter template engine. Supported values include "InnoDB", "RocksDB".
      */
     public void setEngineType(String EngineType) {
         this.EngineType = EngineType;

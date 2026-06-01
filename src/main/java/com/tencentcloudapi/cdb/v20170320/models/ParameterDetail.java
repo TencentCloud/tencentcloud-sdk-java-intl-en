@@ -101,7 +101,7 @@ public class ParameterDetail extends AbstractModel {
     private String MinFunc;
 
     /**
-    * Whether the parameter can be modified Note: This field may return null, indicating that no valid values can be obtained.
+    * Whether the parameter cannot be modified
     */
     @SerializedName("IsNotSupportEdit")
     @Expose
@@ -284,16 +284,16 @@ public class ParameterDetail extends AbstractModel {
     }
 
     /**
-     * Get Whether the parameter can be modified Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return IsNotSupportEdit Whether the parameter can be modified Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Whether the parameter cannot be modified 
+     * @return IsNotSupportEdit Whether the parameter cannot be modified
      */
     public Boolean getIsNotSupportEdit() {
         return this.IsNotSupportEdit;
     }
 
     /**
-     * Set Whether the parameter can be modified Note: This field may return null, indicating that no valid values can be obtained.
-     * @param IsNotSupportEdit Whether the parameter can be modified Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Whether the parameter cannot be modified
+     * @param IsNotSupportEdit Whether the parameter cannot be modified
      */
     public void setIsNotSupportEdit(Boolean IsNotSupportEdit) {
         this.IsNotSupportEdit = IsNotSupportEdit;

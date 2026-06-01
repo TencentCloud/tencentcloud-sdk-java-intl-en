@@ -24,138 +24,217 @@ import java.util.HashMap;
 public class OpenAuditServiceRequest extends AbstractModel {
 
     /**
-    * TencentDB for MySQL instance ID
+    * CDB instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Retention period of the audit log. Valid values:  `7` (one week), `30` (one month), `90` (three months), `180` (six months), `365` (one year), `1095` (three years), `1825` (five years).
+    * Audit log retention period. Supported values include:
+7 - A week;
+30 - one month
+90 - three months;
+180 - 6 months;
+365 - One year;
+1095 - Three years;
+1825 - Five years.
     */
     @SerializedName("LogExpireDay")
     @Expose
     private Long LogExpireDay;
 
     /**
-    * Retention period of high-frequency audit logs. Valid values:  `7` (one week), `30` (one month).
+    * High frequency audit log retention period. Default value is 7. This item must take value less than or equal to LogExpireDay. Supported values include:
+3 - 3 days;
+7 - A week;
+30 - one month
+90 - three months;
+180 - 6 months;
+365 - One year;
+1095 - Three years;
+1825 - Five years.
     */
     @SerializedName("HighLogExpireDay")
     @Expose
     private Long HighLogExpireDay;
 
     /**
-    * Audit rule If both this parameter and `RuleTemplateIds` are left empty, full audit will be applied.
+    * Audit rule (deprecated, no longer effective).
     */
     @SerializedName("AuditRuleFilters")
     @Expose
     private AuditRuleFilters [] AuditRuleFilters;
 
     /**
-    * Rule template ID. If both this parameter and AuditRuleFilters are not specified, all SQL statements will be recorded.
+    * Rule template ID.
     */
     @SerializedName("RuleTemplateIds")
     @Expose
     private String [] RuleTemplateIds;
 
     /**
-    * Audit type. Valid values: true: Record all; false: Record by rules (default value).
+    * Audit type. true - full audit; default false - rule audit.
     */
     @SerializedName("AuditAll")
     @Expose
     private Boolean AuditAll;
 
     /**
-     * Get TencentDB for MySQL instance ID 
-     * @return InstanceId TencentDB for MySQL instance ID
+     * Get CDB instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API. 
+     * @return InstanceId CDB instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set TencentDB for MySQL instance ID
-     * @param InstanceId TencentDB for MySQL instance ID
+     * Set CDB instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
+     * @param InstanceId CDB instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Retention period of the audit log. Valid values:  `7` (one week), `30` (one month), `90` (three months), `180` (six months), `365` (one year), `1095` (three years), `1825` (five years). 
-     * @return LogExpireDay Retention period of the audit log. Valid values:  `7` (one week), `30` (one month), `90` (three months), `180` (six months), `365` (one year), `1095` (three years), `1825` (five years).
+     * Get Audit log retention period. Supported values include:
+7 - A week;
+30 - one month
+90 - three months;
+180 - 6 months;
+365 - One year;
+1095 - Three years;
+1825 - Five years. 
+     * @return LogExpireDay Audit log retention period. Supported values include:
+7 - A week;
+30 - one month
+90 - three months;
+180 - 6 months;
+365 - One year;
+1095 - Three years;
+1825 - Five years.
      */
     public Long getLogExpireDay() {
         return this.LogExpireDay;
     }
 
     /**
-     * Set Retention period of the audit log. Valid values:  `7` (one week), `30` (one month), `90` (three months), `180` (six months), `365` (one year), `1095` (three years), `1825` (five years).
-     * @param LogExpireDay Retention period of the audit log. Valid values:  `7` (one week), `30` (one month), `90` (three months), `180` (six months), `365` (one year), `1095` (three years), `1825` (five years).
+     * Set Audit log retention period. Supported values include:
+7 - A week;
+30 - one month
+90 - three months;
+180 - 6 months;
+365 - One year;
+1095 - Three years;
+1825 - Five years.
+     * @param LogExpireDay Audit log retention period. Supported values include:
+7 - A week;
+30 - one month
+90 - three months;
+180 - 6 months;
+365 - One year;
+1095 - Three years;
+1825 - Five years.
      */
     public void setLogExpireDay(Long LogExpireDay) {
         this.LogExpireDay = LogExpireDay;
     }
 
     /**
-     * Get Retention period of high-frequency audit logs. Valid values:  `7` (one week), `30` (one month). 
-     * @return HighLogExpireDay Retention period of high-frequency audit logs. Valid values:  `7` (one week), `30` (one month).
+     * Get High frequency audit log retention period. Default value is 7. This item must take value less than or equal to LogExpireDay. Supported values include:
+3 - 3 days;
+7 - A week;
+30 - one month
+90 - three months;
+180 - 6 months;
+365 - One year;
+1095 - Three years;
+1825 - Five years. 
+     * @return HighLogExpireDay High frequency audit log retention period. Default value is 7. This item must take value less than or equal to LogExpireDay. Supported values include:
+3 - 3 days;
+7 - A week;
+30 - one month
+90 - three months;
+180 - 6 months;
+365 - One year;
+1095 - Three years;
+1825 - Five years.
      */
     public Long getHighLogExpireDay() {
         return this.HighLogExpireDay;
     }
 
     /**
-     * Set Retention period of high-frequency audit logs. Valid values:  `7` (one week), `30` (one month).
-     * @param HighLogExpireDay Retention period of high-frequency audit logs. Valid values:  `7` (one week), `30` (one month).
+     * Set High frequency audit log retention period. Default value is 7. This item must take value less than or equal to LogExpireDay. Supported values include:
+3 - 3 days;
+7 - A week;
+30 - one month
+90 - three months;
+180 - 6 months;
+365 - One year;
+1095 - Three years;
+1825 - Five years.
+     * @param HighLogExpireDay High frequency audit log retention period. Default value is 7. This item must take value less than or equal to LogExpireDay. Supported values include:
+3 - 3 days;
+7 - A week;
+30 - one month
+90 - three months;
+180 - 6 months;
+365 - One year;
+1095 - Three years;
+1825 - Five years.
      */
     public void setHighLogExpireDay(Long HighLogExpireDay) {
         this.HighLogExpireDay = HighLogExpireDay;
     }
 
     /**
-     * Get Audit rule If both this parameter and `RuleTemplateIds` are left empty, full audit will be applied. 
-     * @return AuditRuleFilters Audit rule If both this parameter and `RuleTemplateIds` are left empty, full audit will be applied.
+     * Get Audit rule (deprecated, no longer effective). 
+     * @return AuditRuleFilters Audit rule (deprecated, no longer effective).
+     * @deprecated
      */
+    @Deprecated
     public AuditRuleFilters [] getAuditRuleFilters() {
         return this.AuditRuleFilters;
     }
 
     /**
-     * Set Audit rule If both this parameter and `RuleTemplateIds` are left empty, full audit will be applied.
-     * @param AuditRuleFilters Audit rule If both this parameter and `RuleTemplateIds` are left empty, full audit will be applied.
+     * Set Audit rule (deprecated, no longer effective).
+     * @param AuditRuleFilters Audit rule (deprecated, no longer effective).
+     * @deprecated
      */
+    @Deprecated
     public void setAuditRuleFilters(AuditRuleFilters [] AuditRuleFilters) {
         this.AuditRuleFilters = AuditRuleFilters;
     }
 
     /**
-     * Get Rule template ID. If both this parameter and AuditRuleFilters are not specified, all SQL statements will be recorded. 
-     * @return RuleTemplateIds Rule template ID. If both this parameter and AuditRuleFilters are not specified, all SQL statements will be recorded.
+     * Get Rule template ID. 
+     * @return RuleTemplateIds Rule template ID.
      */
     public String [] getRuleTemplateIds() {
         return this.RuleTemplateIds;
     }
 
     /**
-     * Set Rule template ID. If both this parameter and AuditRuleFilters are not specified, all SQL statements will be recorded.
-     * @param RuleTemplateIds Rule template ID. If both this parameter and AuditRuleFilters are not specified, all SQL statements will be recorded.
+     * Set Rule template ID.
+     * @param RuleTemplateIds Rule template ID.
      */
     public void setRuleTemplateIds(String [] RuleTemplateIds) {
         this.RuleTemplateIds = RuleTemplateIds;
     }
 
     /**
-     * Get Audit type. Valid values: true: Record all; false: Record by rules (default value). 
-     * @return AuditAll Audit type. Valid values: true: Record all; false: Record by rules (default value).
+     * Get Audit type. true - full audit; default false - rule audit. 
+     * @return AuditAll Audit type. true - full audit; default false - rule audit.
      */
     public Boolean getAuditAll() {
         return this.AuditAll;
     }
 
     /**
-     * Set Audit type. Valid values: true: Record all; false: Record by rules (default value).
-     * @param AuditAll Audit type. Valid values: true: Record all; false: Record by rules (default value).
+     * Set Audit type. true - full audit; default false - rule audit.
+     * @param AuditAll Audit type. true - full audit; default false - rule audit.
      */
     public void setAuditAll(Boolean AuditAll) {
         this.AuditAll = AuditAll;

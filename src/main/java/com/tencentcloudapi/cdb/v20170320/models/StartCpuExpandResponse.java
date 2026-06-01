@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class StartCpuExpandResponse extends AbstractModel {
 
     /**
-    * Async task ID, which can be passed in by calling the `DescribeAsyncRequest` API for task progress query.
+    * Asynchronous Task ID. Call the API DescribeAsyncRequest and input the ID to query the task execution progress.
     */
     @SerializedName("AsyncRequestId")
     @Expose
@@ -38,16 +38,16 @@ public class StartCpuExpandResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Async task ID, which can be passed in by calling the `DescribeAsyncRequest` API for task progress query. 
-     * @return AsyncRequestId Async task ID, which can be passed in by calling the `DescribeAsyncRequest` API for task progress query.
+     * Get Asynchronous Task ID. Call the API DescribeAsyncRequest and input the ID to query the task execution progress. 
+     * @return AsyncRequestId Asynchronous Task ID. Call the API DescribeAsyncRequest and input the ID to query the task execution progress.
      */
     public String getAsyncRequestId() {
         return this.AsyncRequestId;
     }
 
     /**
-     * Set Async task ID, which can be passed in by calling the `DescribeAsyncRequest` API for task progress query.
-     * @param AsyncRequestId Async task ID, which can be passed in by calling the `DescribeAsyncRequest` API for task progress query.
+     * Set Asynchronous Task ID. Call the API DescribeAsyncRequest and input the ID to query the task execution progress.
+     * @param AsyncRequestId Asynchronous Task ID. Call the API DescribeAsyncRequest and input the ID to query the task execution progress.
      */
     public void setAsyncRequestId(String AsyncRequestId) {
         this.AsyncRequestId = AsyncRequestId;

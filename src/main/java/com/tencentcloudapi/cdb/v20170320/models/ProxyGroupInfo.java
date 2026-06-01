@@ -31,63 +31,63 @@ public class ProxyGroupInfo extends AbstractModel {
     private String ProxyGroupId;
 
     /**
-    * Proxy version Note: This field may return null, indicating that no valid values can be obtained.
+    * proxy version
     */
     @SerializedName("ProxyVersion")
     @Expose
     private String ProxyVersion;
 
     /**
-    * Supported proxy upgrade version Note: This field may return null, indicating that no valid values can be obtained.
+    * Proxy supports edition upgrade
     */
     @SerializedName("SupportUpgradeProxyVersion")
     @Expose
     private String SupportUpgradeProxyVersion;
 
     /**
-    * Proxy status Note: This field may return null, indicating that no valid values can be obtained.
+    * Agent status. 0 - Initializing, 1 - Online, 2 - Online - Read-write separation, 3 - Offline, 4 - Terminated.
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * Proxy task status Note: This field may return null, indicating that no valid values can be obtained.
+    * Agent task status, Upgrading - upgrading, UpgradeTo - upgrade pending switch, UpgradeSwitching - upgrade and switch in progress, ProxyCreateAddress - configuring address, ProxyModifyAddress - changing address, ProxyCloseAddress - closing address.
     */
     @SerializedName("TaskStatus")
     @Expose
     private String TaskStatus;
 
     /**
-    * Node information of the proxy group Note: This field may return null, indicating that no valid values can be obtained.
+    * Proxy group node information
     */
     @SerializedName("ProxyNode")
     @Expose
     private ProxyNode [] ProxyNode;
 
     /**
-    * Address information of the proxy group Note: This field may return null, indicating that no valid values can be obtained.
+    * Proxy group address information
     */
     @SerializedName("ProxyAddress")
     @Expose
     private ProxyAddress [] ProxyAddress;
 
     /**
-    * Connection pool threshold Note: This field may return null, indicating that no valid values can be obtained.
+    * Connection pool threshold
     */
     @SerializedName("ConnectionPoolLimit")
     @Expose
     private Long ConnectionPoolLimit;
 
     /**
-    * Whether to support address creation Note: This field may return null, indicating that no valid values can be obtained.
+    * Support creating an address
     */
     @SerializedName("SupportCreateProxyAddress")
     @Expose
     private Boolean SupportCreateProxyAddress;
 
     /**
-    * TencentDB versions supporting proxy versions upgrade Note: This field may return null, indicating that no valid values can be obtained.
+    * cdb version required for proxy version upgrade
     */
     @SerializedName("SupportUpgradeProxyMysqlVersion")
     @Expose
@@ -110,144 +110,144 @@ public class ProxyGroupInfo extends AbstractModel {
     }
 
     /**
-     * Get Proxy version Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ProxyVersion Proxy version Note: This field may return null, indicating that no valid values can be obtained.
+     * Get proxy version 
+     * @return ProxyVersion proxy version
      */
     public String getProxyVersion() {
         return this.ProxyVersion;
     }
 
     /**
-     * Set Proxy version Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ProxyVersion Proxy version Note: This field may return null, indicating that no valid values can be obtained.
+     * Set proxy version
+     * @param ProxyVersion proxy version
      */
     public void setProxyVersion(String ProxyVersion) {
         this.ProxyVersion = ProxyVersion;
     }
 
     /**
-     * Get Supported proxy upgrade version Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return SupportUpgradeProxyVersion Supported proxy upgrade version Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Proxy supports edition upgrade 
+     * @return SupportUpgradeProxyVersion Proxy supports edition upgrade
      */
     public String getSupportUpgradeProxyVersion() {
         return this.SupportUpgradeProxyVersion;
     }
 
     /**
-     * Set Supported proxy upgrade version Note: This field may return null, indicating that no valid values can be obtained.
-     * @param SupportUpgradeProxyVersion Supported proxy upgrade version Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Proxy supports edition upgrade
+     * @param SupportUpgradeProxyVersion Proxy supports edition upgrade
      */
     public void setSupportUpgradeProxyVersion(String SupportUpgradeProxyVersion) {
         this.SupportUpgradeProxyVersion = SupportUpgradeProxyVersion;
     }
 
     /**
-     * Get Proxy status Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Status Proxy status Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Agent status. 0 - Initializing, 1 - Online, 2 - Online - Read-write separation, 3 - Offline, 4 - Terminated. 
+     * @return Status Agent status. 0 - Initializing, 1 - Online, 2 - Online - Read-write separation, 3 - Offline, 4 - Terminated.
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Proxy status Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Status Proxy status Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Agent status. 0 - Initializing, 1 - Online, 2 - Online - Read-write separation, 3 - Offline, 4 - Terminated.
+     * @param Status Agent status. 0 - Initializing, 1 - Online, 2 - Online - Read-write separation, 3 - Offline, 4 - Terminated.
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get Proxy task status Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return TaskStatus Proxy task status Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Agent task status, Upgrading - upgrading, UpgradeTo - upgrade pending switch, UpgradeSwitching - upgrade and switch in progress, ProxyCreateAddress - configuring address, ProxyModifyAddress - changing address, ProxyCloseAddress - closing address. 
+     * @return TaskStatus Agent task status, Upgrading - upgrading, UpgradeTo - upgrade pending switch, UpgradeSwitching - upgrade and switch in progress, ProxyCreateAddress - configuring address, ProxyModifyAddress - changing address, ProxyCloseAddress - closing address.
      */
     public String getTaskStatus() {
         return this.TaskStatus;
     }
 
     /**
-     * Set Proxy task status Note: This field may return null, indicating that no valid values can be obtained.
-     * @param TaskStatus Proxy task status Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Agent task status, Upgrading - upgrading, UpgradeTo - upgrade pending switch, UpgradeSwitching - upgrade and switch in progress, ProxyCreateAddress - configuring address, ProxyModifyAddress - changing address, ProxyCloseAddress - closing address.
+     * @param TaskStatus Agent task status, Upgrading - upgrading, UpgradeTo - upgrade pending switch, UpgradeSwitching - upgrade and switch in progress, ProxyCreateAddress - configuring address, ProxyModifyAddress - changing address, ProxyCloseAddress - closing address.
      */
     public void setTaskStatus(String TaskStatus) {
         this.TaskStatus = TaskStatus;
     }
 
     /**
-     * Get Node information of the proxy group Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ProxyNode Node information of the proxy group Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Proxy group node information 
+     * @return ProxyNode Proxy group node information
      */
     public ProxyNode [] getProxyNode() {
         return this.ProxyNode;
     }
 
     /**
-     * Set Node information of the proxy group Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ProxyNode Node information of the proxy group Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Proxy group node information
+     * @param ProxyNode Proxy group node information
      */
     public void setProxyNode(ProxyNode [] ProxyNode) {
         this.ProxyNode = ProxyNode;
     }
 
     /**
-     * Get Address information of the proxy group Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ProxyAddress Address information of the proxy group Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Proxy group address information 
+     * @return ProxyAddress Proxy group address information
      */
     public ProxyAddress [] getProxyAddress() {
         return this.ProxyAddress;
     }
 
     /**
-     * Set Address information of the proxy group Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ProxyAddress Address information of the proxy group Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Proxy group address information
+     * @param ProxyAddress Proxy group address information
      */
     public void setProxyAddress(ProxyAddress [] ProxyAddress) {
         this.ProxyAddress = ProxyAddress;
     }
 
     /**
-     * Get Connection pool threshold Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ConnectionPoolLimit Connection pool threshold Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Connection pool threshold 
+     * @return ConnectionPoolLimit Connection pool threshold
      */
     public Long getConnectionPoolLimit() {
         return this.ConnectionPoolLimit;
     }
 
     /**
-     * Set Connection pool threshold Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ConnectionPoolLimit Connection pool threshold Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Connection pool threshold
+     * @param ConnectionPoolLimit Connection pool threshold
      */
     public void setConnectionPoolLimit(Long ConnectionPoolLimit) {
         this.ConnectionPoolLimit = ConnectionPoolLimit;
     }
 
     /**
-     * Get Whether to support address creation Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return SupportCreateProxyAddress Whether to support address creation Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Support creating an address 
+     * @return SupportCreateProxyAddress Support creating an address
      */
     public Boolean getSupportCreateProxyAddress() {
         return this.SupportCreateProxyAddress;
     }
 
     /**
-     * Set Whether to support address creation Note: This field may return null, indicating that no valid values can be obtained.
-     * @param SupportCreateProxyAddress Whether to support address creation Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Support creating an address
+     * @param SupportCreateProxyAddress Support creating an address
      */
     public void setSupportCreateProxyAddress(Boolean SupportCreateProxyAddress) {
         this.SupportCreateProxyAddress = SupportCreateProxyAddress;
     }
 
     /**
-     * Get TencentDB versions supporting proxy versions upgrade Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return SupportUpgradeProxyMysqlVersion TencentDB versions supporting proxy versions upgrade Note: This field may return null, indicating that no valid values can be obtained.
+     * Get cdb version required for proxy version upgrade 
+     * @return SupportUpgradeProxyMysqlVersion cdb version required for proxy version upgrade
      */
     public String getSupportUpgradeProxyMysqlVersion() {
         return this.SupportUpgradeProxyMysqlVersion;
     }
 
     /**
-     * Set TencentDB versions supporting proxy versions upgrade Note: This field may return null, indicating that no valid values can be obtained.
-     * @param SupportUpgradeProxyMysqlVersion TencentDB versions supporting proxy versions upgrade Note: This field may return null, indicating that no valid values can be obtained.
+     * Set cdb version required for proxy version upgrade
+     * @param SupportUpgradeProxyMysqlVersion cdb version required for proxy version upgrade
      */
     public void setSupportUpgradeProxyMysqlVersion(String SupportUpgradeProxyMysqlVersion) {
         this.SupportUpgradeProxyMysqlVersion = SupportUpgradeProxyMysqlVersion;

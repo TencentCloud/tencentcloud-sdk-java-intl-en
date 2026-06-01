@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class ImportRecord extends AbstractModel {
 
     /**
-    * Status value
+    * Status value. 0 - Initializing, 1 - Running, 2 - Operation successful, 3 - Operation failure.
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * Status value
+    * Status value. Task exception when the value is negative.
     */
     @SerializedName("Code")
     @Expose
     private Long Code;
 
     /**
-    * Execution duration
+    * Execution time, unit: seconds.
     */
     @SerializedName("CostTime")
     @Expose
@@ -66,7 +66,7 @@ public class ImportRecord extends AbstractModel {
     private String FileName;
 
     /**
-    * Execution progress
+    * Execution progress, measurement unit: percentage.
     */
     @SerializedName("Process")
     @Expose
@@ -80,7 +80,7 @@ public class ImportRecord extends AbstractModel {
     private String CreateTime;
 
     /**
-    * File size
+    * File size, unit: byte.
     */
     @SerializedName("FileSize")
     @Expose
@@ -115,48 +115,48 @@ public class ImportRecord extends AbstractModel {
     private String AsyncRequestId;
 
     /**
-     * Get Status value 
-     * @return Status Status value
+     * Get Status value. 0 - Initializing, 1 - Running, 2 - Operation successful, 3 - Operation failure. 
+     * @return Status Status value. 0 - Initializing, 1 - Running, 2 - Operation successful, 3 - Operation failure.
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Status value
-     * @param Status Status value
+     * Set Status value. 0 - Initializing, 1 - Running, 2 - Operation successful, 3 - Operation failure.
+     * @param Status Status value. 0 - Initializing, 1 - Running, 2 - Operation successful, 3 - Operation failure.
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get Status value 
-     * @return Code Status value
+     * Get Status value. Task exception when the value is negative. 
+     * @return Code Status value. Task exception when the value is negative.
      */
     public Long getCode() {
         return this.Code;
     }
 
     /**
-     * Set Status value
-     * @param Code Status value
+     * Set Status value. Task exception when the value is negative.
+     * @param Code Status value. Task exception when the value is negative.
      */
     public void setCode(Long Code) {
         this.Code = Code;
     }
 
     /**
-     * Get Execution duration 
-     * @return CostTime Execution duration
+     * Get Execution time, unit: seconds. 
+     * @return CostTime Execution time, unit: seconds.
      */
     public Long getCostTime() {
         return this.CostTime;
     }
 
     /**
-     * Set Execution duration
-     * @param CostTime Execution duration
+     * Set Execution time, unit: seconds.
+     * @param CostTime Execution time, unit: seconds.
      */
     public void setCostTime(Long CostTime) {
         this.CostTime = CostTime;
@@ -211,16 +211,16 @@ public class ImportRecord extends AbstractModel {
     }
 
     /**
-     * Get Execution progress 
-     * @return Process Execution progress
+     * Get Execution progress, measurement unit: percentage. 
+     * @return Process Execution progress, measurement unit: percentage.
      */
     public Long getProcess() {
         return this.Process;
     }
 
     /**
-     * Set Execution progress
-     * @param Process Execution progress
+     * Set Execution progress, measurement unit: percentage.
+     * @param Process Execution progress, measurement unit: percentage.
      */
     public void setProcess(Long Process) {
         this.Process = Process;
@@ -243,16 +243,16 @@ public class ImportRecord extends AbstractModel {
     }
 
     /**
-     * Get File size 
-     * @return FileSize File size
+     * Get File size, unit: byte. 
+     * @return FileSize File size, unit: byte.
      */
     public String getFileSize() {
         return this.FileSize;
     }
 
     /**
-     * Set File size
-     * @param FileSize File size
+     * Set File size, unit: byte.
+     * @param FileSize File size, unit: byte.
      */
     public void setFileSize(String FileSize) {
         this.FileSize = FileSize;

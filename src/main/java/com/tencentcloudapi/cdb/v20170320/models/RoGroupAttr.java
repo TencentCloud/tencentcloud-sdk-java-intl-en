@@ -31,7 +31,8 @@ public class RoGroupAttr extends AbstractModel {
     private String RoGroupName;
 
     /**
-    * Maximum delay threshold for RO instances in seconds. Minimum value: 1. Please note that this value will take effect only if an instance removal policy is enabled in the RO group.
+    * Maximum delay threshold for the RO instance. Unit: seconds, minimum value is 1. Range: [1,10000], integer.
+Note: The RO group must have enabled the instance latency removal policy for this value to be valid.
     */
     @SerializedName("RoMaxDelayTime")
     @Expose
@@ -45,7 +46,8 @@ public class RoGroupAttr extends AbstractModel {
     private Long RoOfflineDelay;
 
     /**
-    * Minimum number of instances to be retained, which can be set to any value less than or equal to the number of RO instances in the RO group. Please note that if this value is set to be greater than the number of RO instances, no removal will be performed, and if it is set to 0, all instances with an excessive delay will be removed.
+    * Minimum reserved instances. Can be set to any value ≤ the number of instances in the RO group. Default value: 1.
+Note: If the set value is larger than the RO instance count, do not remove. If set to 0, all instances with delay above the limit will be excluded.
     */
     @SerializedName("MinRoInGroup")
     @Expose
@@ -59,7 +61,7 @@ public class RoGroupAttr extends AbstractModel {
     private String WeightMode;
 
     /**
-    * Replication delay.
+    * Delayed replication time. Unit: second, range: 1 - 259200 seconds, not required to enable delayed replication for the instance.
     */
     @SerializedName("ReplicationDelayTime")
     @Expose
@@ -82,16 +84,20 @@ public class RoGroupAttr extends AbstractModel {
     }
 
     /**
-     * Get Maximum delay threshold for RO instances in seconds. Minimum value: 1. Please note that this value will take effect only if an instance removal policy is enabled in the RO group. 
-     * @return RoMaxDelayTime Maximum delay threshold for RO instances in seconds. Minimum value: 1. Please note that this value will take effect only if an instance removal policy is enabled in the RO group.
+     * Get Maximum delay threshold for the RO instance. Unit: seconds, minimum value is 1. Range: [1,10000], integer.
+Note: The RO group must have enabled the instance latency removal policy for this value to be valid. 
+     * @return RoMaxDelayTime Maximum delay threshold for the RO instance. Unit: seconds, minimum value is 1. Range: [1,10000], integer.
+Note: The RO group must have enabled the instance latency removal policy for this value to be valid.
      */
     public Long getRoMaxDelayTime() {
         return this.RoMaxDelayTime;
     }
 
     /**
-     * Set Maximum delay threshold for RO instances in seconds. Minimum value: 1. Please note that this value will take effect only if an instance removal policy is enabled in the RO group.
-     * @param RoMaxDelayTime Maximum delay threshold for RO instances in seconds. Minimum value: 1. Please note that this value will take effect only if an instance removal policy is enabled in the RO group.
+     * Set Maximum delay threshold for the RO instance. Unit: seconds, minimum value is 1. Range: [1,10000], integer.
+Note: The RO group must have enabled the instance latency removal policy for this value to be valid.
+     * @param RoMaxDelayTime Maximum delay threshold for the RO instance. Unit: seconds, minimum value is 1. Range: [1,10000], integer.
+Note: The RO group must have enabled the instance latency removal policy for this value to be valid.
      */
     public void setRoMaxDelayTime(Long RoMaxDelayTime) {
         this.RoMaxDelayTime = RoMaxDelayTime;
@@ -114,16 +120,20 @@ public class RoGroupAttr extends AbstractModel {
     }
 
     /**
-     * Get Minimum number of instances to be retained, which can be set to any value less than or equal to the number of RO instances in the RO group. Please note that if this value is set to be greater than the number of RO instances, no removal will be performed, and if it is set to 0, all instances with an excessive delay will be removed. 
-     * @return MinRoInGroup Minimum number of instances to be retained, which can be set to any value less than or equal to the number of RO instances in the RO group. Please note that if this value is set to be greater than the number of RO instances, no removal will be performed, and if it is set to 0, all instances with an excessive delay will be removed.
+     * Get Minimum reserved instances. Can be set to any value ≤ the number of instances in the RO group. Default value: 1.
+Note: If the set value is larger than the RO instance count, do not remove. If set to 0, all instances with delay above the limit will be excluded. 
+     * @return MinRoInGroup Minimum reserved instances. Can be set to any value ≤ the number of instances in the RO group. Default value: 1.
+Note: If the set value is larger than the RO instance count, do not remove. If set to 0, all instances with delay above the limit will be excluded.
      */
     public Long getMinRoInGroup() {
         return this.MinRoInGroup;
     }
 
     /**
-     * Set Minimum number of instances to be retained, which can be set to any value less than or equal to the number of RO instances in the RO group. Please note that if this value is set to be greater than the number of RO instances, no removal will be performed, and if it is set to 0, all instances with an excessive delay will be removed.
-     * @param MinRoInGroup Minimum number of instances to be retained, which can be set to any value less than or equal to the number of RO instances in the RO group. Please note that if this value is set to be greater than the number of RO instances, no removal will be performed, and if it is set to 0, all instances with an excessive delay will be removed.
+     * Set Minimum reserved instances. Can be set to any value ≤ the number of instances in the RO group. Default value: 1.
+Note: If the set value is larger than the RO instance count, do not remove. If set to 0, all instances with delay above the limit will be excluded.
+     * @param MinRoInGroup Minimum reserved instances. Can be set to any value ≤ the number of instances in the RO group. Default value: 1.
+Note: If the set value is larger than the RO instance count, do not remove. If set to 0, all instances with delay above the limit will be excluded.
      */
     public void setMinRoInGroup(Long MinRoInGroup) {
         this.MinRoInGroup = MinRoInGroup;
@@ -146,16 +156,16 @@ public class RoGroupAttr extends AbstractModel {
     }
 
     /**
-     * Get Replication delay. 
-     * @return ReplicationDelayTime Replication delay.
+     * Get Delayed replication time. Unit: second, range: 1 - 259200 seconds, not required to enable delayed replication for the instance. 
+     * @return ReplicationDelayTime Delayed replication time. Unit: second, range: 1 - 259200 seconds, not required to enable delayed replication for the instance.
      */
     public Long getReplicationDelayTime() {
         return this.ReplicationDelayTime;
     }
 
     /**
-     * Set Replication delay.
-     * @param ReplicationDelayTime Replication delay.
+     * Set Delayed replication time. Unit: second, range: 1 - 259200 seconds, not required to enable delayed replication for the instance.
+     * @param ReplicationDelayTime Delayed replication time. Unit: second, range: 1 - 259200 seconds, not required to enable delayed replication for the instance.
      */
     public void setReplicationDelayTime(Long ReplicationDelayTime) {
         this.ReplicationDelayTime = ReplicationDelayTime;

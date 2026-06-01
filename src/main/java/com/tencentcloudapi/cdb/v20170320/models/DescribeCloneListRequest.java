@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeCloneListRequest extends AbstractModel {
 
     /**
-    * ID of the original instance. This parameter is used to query the clone task list of a specific original instance.
+    * Query the cloning task list of the specified source instance. Obtain the instance ID through the [DescribeDBInstances](https://www.tencentcloud.com/document/api/236/15872?from_cn_redirect=1) API.
     */
     @SerializedName("InstanceId")
     @Expose
@@ -38,23 +38,23 @@ public class DescribeCloneListRequest extends AbstractModel {
     private Long Offset;
 
     /**
-    * Number of results per page. Default value: `20`.
+    * Number of entries per page for paging query. Default value: 20. Maximum value: 100 recommended.
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-     * Get ID of the original instance. This parameter is used to query the clone task list of a specific original instance. 
-     * @return InstanceId ID of the original instance. This parameter is used to query the clone task list of a specific original instance.
+     * Get Query the cloning task list of the specified source instance. Obtain the instance ID through the [DescribeDBInstances](https://www.tencentcloud.com/document/api/236/15872?from_cn_redirect=1) API. 
+     * @return InstanceId Query the cloning task list of the specified source instance. Obtain the instance ID through the [DescribeDBInstances](https://www.tencentcloud.com/document/api/236/15872?from_cn_redirect=1) API.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set ID of the original instance. This parameter is used to query the clone task list of a specific original instance.
-     * @param InstanceId ID of the original instance. This parameter is used to query the clone task list of a specific original instance.
+     * Set Query the cloning task list of the specified source instance. Obtain the instance ID through the [DescribeDBInstances](https://www.tencentcloud.com/document/api/236/15872?from_cn_redirect=1) API.
+     * @param InstanceId Query the cloning task list of the specified source instance. Obtain the instance ID through the [DescribeDBInstances](https://www.tencentcloud.com/document/api/236/15872?from_cn_redirect=1) API.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
@@ -77,16 +77,16 @@ public class DescribeCloneListRequest extends AbstractModel {
     }
 
     /**
-     * Get Number of results per page. Default value: `20`. 
-     * @return Limit Number of results per page. Default value: `20`.
+     * Get Number of entries per page for paging query. Default value: 20. Maximum value: 100 recommended. 
+     * @return Limit Number of entries per page for paging query. Default value: 20. Maximum value: 100 recommended.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Number of results per page. Default value: `20`.
-     * @param Limit Number of results per page. Default value: `20`.
+     * Set Number of entries per page for paging query. Default value: 20. Maximum value: 100 recommended.
+     * @param Limit Number of entries per page for paging query. Default value: 20. Maximum value: 100 recommended.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

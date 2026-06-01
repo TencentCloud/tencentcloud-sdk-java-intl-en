@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class AddTimeWindowRequest extends AbstractModel {
 
     /**
-    * Instance ID in the format of cdb-c1nl9rpv or cdbro-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
+    * Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
     */
     @SerializedName("InstanceId")
     @Expose
@@ -80,23 +80,23 @@ public class AddTimeWindowRequest extends AbstractModel {
     private String [] Sunday;
 
     /**
-    * Maximum delay threshold, which takes effect only for source instances and disaster recovery instances.
+    * Maximum delay threshold (seconds), only applicable to primary instance and disaster recovery instance. Default value: 10. Value ranges from 1 to 10 integers.
     */
     @SerializedName("MaxDelayTime")
     @Expose
     private Long MaxDelayTime;
 
     /**
-     * Get Instance ID in the format of cdb-c1nl9rpv or cdbro-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page. 
-     * @return InstanceId Instance ID in the format of cdb-c1nl9rpv or cdbro-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
+     * Get Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API. 
+     * @return InstanceId Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Instance ID in the format of cdb-c1nl9rpv or cdbro-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
-     * @param InstanceId Instance ID in the format of cdb-c1nl9rpv or cdbro-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
+     * Set Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
+     * @param InstanceId Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
@@ -215,16 +215,16 @@ public class AddTimeWindowRequest extends AbstractModel {
     }
 
     /**
-     * Get Maximum delay threshold, which takes effect only for source instances and disaster recovery instances. 
-     * @return MaxDelayTime Maximum delay threshold, which takes effect only for source instances and disaster recovery instances.
+     * Get Maximum delay threshold (seconds), only applicable to primary instance and disaster recovery instance. Default value: 10. Value ranges from 1 to 10 integers. 
+     * @return MaxDelayTime Maximum delay threshold (seconds), only applicable to primary instance and disaster recovery instance. Default value: 10. Value ranges from 1 to 10 integers.
      */
     public Long getMaxDelayTime() {
         return this.MaxDelayTime;
     }
 
     /**
-     * Set Maximum delay threshold, which takes effect only for source instances and disaster recovery instances.
-     * @param MaxDelayTime Maximum delay threshold, which takes effect only for source instances and disaster recovery instances.
+     * Set Maximum delay threshold (seconds), only applicable to primary instance and disaster recovery instance. Default value: 10. Value ranges from 1 to 10 integers.
+     * @param MaxDelayTime Maximum delay threshold (seconds), only applicable to primary instance and disaster recovery instance. Default value: 10. Value ranges from 1 to 10 integers.
      */
     public void setMaxDelayTime(Long MaxDelayTime) {
         this.MaxDelayTime = MaxDelayTime;

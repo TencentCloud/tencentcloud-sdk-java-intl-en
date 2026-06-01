@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class AdjustCdbProxyAddressResponse extends AbstractModel {
 
     /**
-    * Async task ID Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Asynchronous Task ID</p>
     */
     @SerializedName("AsyncRequestId")
     @Expose
@@ -38,16 +38,16 @@ public class AdjustCdbProxyAddressResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Async task ID Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return AsyncRequestId Async task ID Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Asynchronous Task ID</p> 
+     * @return AsyncRequestId <p>Asynchronous Task ID</p>
      */
     public String getAsyncRequestId() {
         return this.AsyncRequestId;
     }
 
     /**
-     * Set Async task ID Note: This field may return null, indicating that no valid values can be obtained.
-     * @param AsyncRequestId Async task ID Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Asynchronous Task ID</p>
+     * @param AsyncRequestId <p>Asynchronous Task ID</p>
      */
     public void setAsyncRequestId(String AsyncRequestId) {
         this.AsyncRequestId = AsyncRequestId;

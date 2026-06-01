@@ -31,7 +31,7 @@ public class ModifyAccountPrivilegesRequest extends AbstractModel {
     private String InstanceId;
 
     /**
-    * Database account, including username and domain name.
+    * Database account, includes users and domain name. Obtain through the API [DescribeAccounts](https://www.tencentcloud.com/document/api/236/17499?from_cn_redirect=1).
     */
     @SerializedName("Accounts")
     @Expose
@@ -93,16 +93,16 @@ Note: When “ModifyAction” is empty, if `ColumnPrivileges` is not passed in, 
     }
 
     /**
-     * Get Database account, including username and domain name. 
-     * @return Accounts Database account, including username and domain name.
+     * Get Database account, includes users and domain name. Obtain through the API [DescribeAccounts](https://www.tencentcloud.com/document/api/236/17499?from_cn_redirect=1). 
+     * @return Accounts Database account, includes users and domain name. Obtain through the API [DescribeAccounts](https://www.tencentcloud.com/document/api/236/17499?from_cn_redirect=1).
      */
     public Account [] getAccounts() {
         return this.Accounts;
     }
 
     /**
-     * Set Database account, including username and domain name.
-     * @param Accounts Database account, including username and domain name.
+     * Set Database account, includes users and domain name. Obtain through the API [DescribeAccounts](https://www.tencentcloud.com/document/api/236/17499?from_cn_redirect=1).
+     * @param Accounts Database account, includes users and domain name. Obtain through the API [DescribeAccounts](https://www.tencentcloud.com/document/api/236/17499?from_cn_redirect=1).
      */
     public void setAccounts(Account [] Accounts) {
         this.Accounts = Accounts;

@@ -31,14 +31,14 @@ public class ModifyAccountDescriptionRequest extends AbstractModel {
     private String InstanceId;
 
     /**
-    * TencentDB account
+    * TDSQL for MySQL accounts. Obtain through the [DescribeAccounts](https://www.tencentcloud.com/document/api/236/17499?from_cn_redirect=1) API.
     */
     @SerializedName("Accounts")
     @Expose
     private Account [] Accounts;
 
     /**
-    * Database account remarks
+    * Remark information of the database account. Input limit: 255 characters.
     */
     @SerializedName("Description")
     @Expose
@@ -61,32 +61,32 @@ public class ModifyAccountDescriptionRequest extends AbstractModel {
     }
 
     /**
-     * Get TencentDB account 
-     * @return Accounts TencentDB account
+     * Get TDSQL for MySQL accounts. Obtain through the [DescribeAccounts](https://www.tencentcloud.com/document/api/236/17499?from_cn_redirect=1) API. 
+     * @return Accounts TDSQL for MySQL accounts. Obtain through the [DescribeAccounts](https://www.tencentcloud.com/document/api/236/17499?from_cn_redirect=1) API.
      */
     public Account [] getAccounts() {
         return this.Accounts;
     }
 
     /**
-     * Set TencentDB account
-     * @param Accounts TencentDB account
+     * Set TDSQL for MySQL accounts. Obtain through the [DescribeAccounts](https://www.tencentcloud.com/document/api/236/17499?from_cn_redirect=1) API.
+     * @param Accounts TDSQL for MySQL accounts. Obtain through the [DescribeAccounts](https://www.tencentcloud.com/document/api/236/17499?from_cn_redirect=1) API.
      */
     public void setAccounts(Account [] Accounts) {
         this.Accounts = Accounts;
     }
 
     /**
-     * Get Database account remarks 
-     * @return Description Database account remarks
+     * Get Remark information of the database account. Input limit: 255 characters. 
+     * @return Description Remark information of the database account. Input limit: 255 characters.
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set Database account remarks
-     * @param Description Database account remarks
+     * Set Remark information of the database account. Input limit: 255 characters.
+     * @param Description Remark information of the database account. Input limit: 255 characters.
      */
     public void setDescription(String Description) {
         this.Description = Description;

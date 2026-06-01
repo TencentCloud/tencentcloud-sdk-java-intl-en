@@ -24,189 +24,189 @@ import java.util.HashMap;
 public class InstanceInfo extends AbstractModel {
 
     /**
-    * Public network access status. Value range: 0 (not enabled), 1 (enabled), 2 (disabled)
+    * <p>Public network status. Possible returned values: 0 - External network not enabled; 1 - Public network enabled; 2 - Public network disabled</p>
     */
     @SerializedName("WanStatus")
     @Expose
     private Long WanStatus;
 
     /**
-    * AZ information
+    * <p>AZ information</p>
     */
     @SerializedName("Zone")
     @Expose
     private String Zone;
 
     /**
-    * Initialization flag. Value range: 0 (not initialized), 1 (initialized)
+    * <p>Initialization flag. Possible returned values: 0 - uninitialized; 1 - initialized.</p>
     */
     @SerializedName("InitFlag")
     @Expose
     private Long InitFlag;
 
     /**
-    * Read-only VIP information. This field is available only for read-only instances with dedicated access enabled.
+    * <p>Read-only vip information. This field is available only for read-only instances with separate instance access enabled.</p>
     */
     @SerializedName("RoVipInfo")
     @Expose
     private RoVipInfo RoVipInfo;
 
     /**
-    * Memory capacity in MB
+    * <p>Memory capacity, in MB.</p>
     */
     @SerializedName("Memory")
     @Expose
     private Long Memory;
 
     /**
-    * Instance status. Valid values: `0` (creating), `1` (running), `4` (isolating), `5` (isolated).
+    * <p>Instance status. Valid values: 0: creating; 1: running; 4: isolation operation in progress; 5: isolated.</p>
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * VPC ID, such as 51102
+    * <p>VPC ID, for example: 51102</p>
     */
     @SerializedName("VpcId")
     @Expose
     private Long VpcId;
 
     /**
-    * Secondary server information.
+    * <p>Secondary server information</p>
     */
     @SerializedName("SlaveInfo")
     @Expose
     private SlaveInfo SlaveInfo;
 
     /**
-    * Instance ID
+    * <p>Instance ID</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Disk capacity in GB
+    * <p>Disk capacity, in GB.</p>
     */
     @SerializedName("Volume")
     @Expose
     private Long Volume;
 
     /**
-    * Auto-renewal flag. Value range: 0 (auto-renewal not enabled), 1 (auto-renewal enabled), 2 (auto-renewal disabled)
+    * <p>Auto-renewal flag. Possible returned values: 0 - auto-renewal is not enabled; 1 - auto-renewal is enabled; 2 - automatic renewal is disabled.</p>
     */
     @SerializedName("AutoRenew")
     @Expose
     private Long AutoRenew;
 
     /**
-    * Data replication mode. Valid values: 0 (async), 1 (semi-sync), 2 (strong sync)
+    * <p>Data replication mode. 0 - async replication; 1 - semi-sync replication; 2 - strong sync replication</p>
     */
     @SerializedName("ProtectMode")
     @Expose
     private Long ProtectMode;
 
     /**
-    * Detailed information about the read-only group.
+    * <p>Read-only group detailed information</p>
     */
     @SerializedName("RoGroups")
     @Expose
     private RoGroup [] RoGroups;
 
     /**
-    * Subnet ID, such as 2333
+    * <p>Subnet ID, for example: 2333</p>
     */
     @SerializedName("SubnetId")
     @Expose
     private Long SubnetId;
 
     /**
-    * Instance type. Value range: 1 (primary), 2 (disaster recovery), 3 (read-only)
+    * <p>Instance type. Possible returned values: 1 - Primary instance; 2 - Disaster recovery instance; 3 - Read-only instance.</p>
     */
     @SerializedName("InstanceType")
     @Expose
     private Long InstanceType;
 
     /**
-    * Project ID
+    * <p>Project ID</p>
     */
     @SerializedName("ProjectId")
     @Expose
     private Long ProjectId;
 
     /**
-    * Region information
+    * <p>Regional information</p>
     */
     @SerializedName("Region")
     @Expose
     private String Region;
 
     /**
-    * Instance expiration time
+    * <p>Instance expiration time</p>
     */
     @SerializedName("DeadlineTime")
     @Expose
     private String DeadlineTime;
 
     /**
-    * AZ deployment mode. Valid values: 0 (single-AZ), 1 (multi-AZ)
+    * <p>Availability Zone Deployment method. Valid values: 0 - single availability zone; 1 - multi-availability zone.</p>
     */
     @SerializedName("DeployMode")
     @Expose
     private Long DeployMode;
 
     /**
-    * Instance task status. 0 - no task; 1 - upgrading; 2 - importing data; 3 - activating secondary; 4 - enabling public network access; 5 - batch operation in progress; 6 - rolling back; 7 - disabling public network access; 8 - changing password; 9 - renaming instance; 10 - restarting; 12 - migrating self-built instance; 13 - dropping table; 14 - creating and syncing disaster recovery instance; 15 - pending upgrade and switch; 16 - upgrade and switch in progress; 17 - upgrade and switch completed
+    * <p>Instance task status. 0 - No tasks, 1 - Upgrading, 2 - Data import, 3 - Opening Slave, 4 - Public network access enabling, 5 - Batch operation executing, 6 - Rolling back, 7 - Public network access disabling, 8 - Password modification, 9 - Renaming instance, 10 - Restarting, 12 - Self-built migration, 13 - Database deletion, 14 - Disaster recovery instance creation sync, 15 - Upgrade pending switch, 16 - Upgrade and switch, 17 - Upgrade and switch completed</p>
     */
     @SerializedName("TaskStatus")
     @Expose
     private Long TaskStatus;
 
     /**
-    * Detailed information about the primary instance.
+    * <p>Detailed information about the primary instance.</p>
     */
     @SerializedName("MasterInfo")
     @Expose
     private MasterInfo MasterInfo;
 
     /**
-    * Instance type
+    * <p>Instance type</p>
     */
     @SerializedName("DeviceType")
     @Expose
     private String DeviceType;
 
     /**
-    * Kernel version
+    * <p>Kernel version</p>
     */
     @SerializedName("EngineVersion")
     @Expose
     private String EngineVersion;
 
     /**
-    * Instance name
+    * <p>Instance name</p>
     */
     @SerializedName("InstanceName")
     @Expose
     private String InstanceName;
 
     /**
-    * Detailed information about the disaster recovery instance.
+    * <p>Disaster recovery instance details</p>
     */
     @SerializedName("DrInfo")
     @Expose
     private DrInfo [] DrInfo;
 
     /**
-    * Public domain name
+    * <p>public network domain name</p>
     */
     @SerializedName("WanDomain")
     @Expose
     private String WanDomain;
 
     /**
-    * Public network port number
+    * <p>Public network port number</p>
     */
     @SerializedName("WanPort")
     @Expose
@@ -220,597 +220,608 @@ public class InstanceInfo extends AbstractModel {
     private Long PayType;
 
     /**
-    * Instance creation time
+    * <p>Instance creation time</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * Instance IP
+    * <p>Instance IP</p>
     */
     @SerializedName("Vip")
     @Expose
     private String Vip;
 
     /**
-    * Port number
+    * <p>Port number</p>
     */
     @SerializedName("Vport")
     @Expose
     private Long Vport;
 
     /**
-    * Whether the disk write is locked (It depends on whether the instance data in disk exceeds its quota). Valid values: `0` (unlocked), `1` (locked).
+    * <p>Whether disk write is locked (data write volume of the instance exceeds disk quota). 0 - Unlocked 1 - Locked</p>
     */
     @SerializedName("CdbError")
     @Expose
     private Long CdbError;
 
     /**
-    * VPC descriptor, such as "vpc-5v8wn9mg"
+    * <p>Private network descriptor, for example: "vpc-5v8wn9mg"</p>
     */
     @SerializedName("UniqVpcId")
     @Expose
     private String UniqVpcId;
 
     /**
-    * Subnet descriptor, such as "subnet-1typ0s7d"
+    * <p>Subnet descriptor, such as "subnet-1typ0s7d"</p>
     */
     @SerializedName("UniqSubnetId")
     @Expose
     private String UniqSubnetId;
 
     /**
-    * Physical ID
+    * <p>Physical ID</p>
     */
     @SerializedName("PhysicalId")
     @Expose
     private String PhysicalId;
 
     /**
-    * Number of cores
+    * <p>Core count</p>
     */
     @SerializedName("Cpu")
     @Expose
     private Long Cpu;
 
     /**
-    * Queries per second
+    * <p>Queries per second.</p>
     */
     @SerializedName("Qps")
     @Expose
     private Long Qps;
 
     /**
-    * AZ name
+    * <p>Chinese Name of Availability Zone</p>
     */
     @SerializedName("ZoneName")
     @Expose
     private String ZoneName;
 
     /**
-    * Physical server model.
+    * <p>Physical machine model</p>
     */
     @SerializedName("DeviceClass")
     @Expose
     private String DeviceClass;
 
     /**
-    * Placement group ID.
+    * <p>Placement group ID</p>
     */
     @SerializedName("DeployGroupId")
     @Expose
     private String DeployGroupId;
 
     /**
-    * AZ ID.
+    * <p>Availability zone ID</p>
     */
     @SerializedName("ZoneId")
     @Expose
     private Long ZoneId;
 
     /**
-    * Number of nodes
+    * <p>Number of nodes</p>
     */
     @SerializedName("InstanceNodes")
     @Expose
     private Long InstanceNodes;
 
     /**
-    * Tag list.
+    * <p>Tag list</p>
     */
     @SerializedName("TagList")
     @Expose
     private TagInfoItem [] TagList;
 
     /**
-    * Engine type.
+    * <p>Engine type</p>
     */
     @SerializedName("EngineType")
     @Expose
     private String EngineType;
 
     /**
-    * Maximum delay threshold.
+    * <p>Maximum delay threshold</p>
     */
     @SerializedName("MaxDelayTime")
     @Expose
     private Long MaxDelayTime;
 
     /**
-    * Instance disk type. Valid values are returned only for Cluster Edition and single-node (cloud disk) instances.
-Note:
-1. If "DiskType": "CLOUD_HSSD" is returned, it indicates that the instance disk type is Enhanced SSD.
-2. If "DiskType": "CLOUD_SSD" is returned, it indicates that the instance disk type is Cloud SSD.
-3. If "DiskType": "" is returned and the DeviceType parameter value is UNIVERSAL or EXCLUSIVE, it indicates that the instance uses a local SSD.
+    * <p>Instance disk type. Only CLOUD disk edition and single-node (CLOUD disk) instances will return a valid value.<br>Description:</p><ol><li>If "DiskType": "CLOUD_HSSD" is returned, it indicates that the instance disk type is enhanced SSD CLOUD disk.</li><li>If "DiskType": "CLOUD_SSD" is returned, it indicates that the instance disk type is SSD CLOUD Block Storage.</li><li>If "DiskType": "" is returned and the DeviceType parameter value is UNIVERSAL or EXCLUSIVE, it means that the instance uses local SSD.</li></ol>
     */
     @SerializedName("DiskType")
     @Expose
     private String DiskType;
 
     /**
-    * Current number of CPU cores for scale-out.
+    * <p>Current number of CPU cores for scale-out.</p>
     */
     @SerializedName("ExpandCpu")
     @Expose
     private Long ExpandCpu;
 
     /**
-    * Cluster Edition instance node information.
+    * <p>Cloud Disk Edition instance node information</p>
     */
     @SerializedName("ClusterInfo")
     @Expose
     private ClusterInfo [] ClusterInfo;
 
     /**
-    * Analysis engine node list.
+    * <p>Analysis engine node list</p>
     */
     @SerializedName("AnalysisNodeInfos")
     @Expose
     private AnalysisNodeInfo [] AnalysisNodeInfos;
 
     /**
-    * Device bandwidth, in GB. This parameter is valid when DeviceClass is specified. For example, 25 means the current device bandwidth is 25 GB; 10 means the current device bandwidth is 10 GB.
+    * <p>Device bandwidth, in G. This parameter is valid only when DeviceClass is not empty. For example, 25 means the current device bandwidth is 25G; 10 means the current device bandwidth is 10G.</p>
     */
     @SerializedName("DeviceBandwidth")
     @Expose
     private Long DeviceBandwidth;
 
     /**
-    * Instance termination protection status. on indicates enabled; otherwise, the protection is disabled.
+    * <p>Instance termination protection status. on indicates enabled; otherwise, the protection is disabled.</p>
     */
     @SerializedName("DestroyProtect")
     @Expose
     private String DestroyProtect;
 
     /**
-     * Get Public network access status. Value range: 0 (not enabled), 1 (enabled), 2 (disabled) 
-     * @return WanStatus Public network access status. Value range: 0 (not enabled), 1 (enabled), 2 (disabled)
+    * <p>TDSQL engine parameters</p>
+    */
+    @SerializedName("CpuModel")
+    @Expose
+    private String CpuModel;
+
+    /**
+    * <p>Analysis engine instance version upgrade information</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("AnalysisUpgradeVersionInfo")
+    @Expose
+    private UpgradeAnalysisInstanceVersionInfo AnalysisUpgradeVersionInfo;
+
+    /**
+     * Get <p>Public network status. Possible returned values: 0 - External network not enabled; 1 - Public network enabled; 2 - Public network disabled</p> 
+     * @return WanStatus <p>Public network status. Possible returned values: 0 - External network not enabled; 1 - Public network enabled; 2 - Public network disabled</p>
      */
     public Long getWanStatus() {
         return this.WanStatus;
     }
 
     /**
-     * Set Public network access status. Value range: 0 (not enabled), 1 (enabled), 2 (disabled)
-     * @param WanStatus Public network access status. Value range: 0 (not enabled), 1 (enabled), 2 (disabled)
+     * Set <p>Public network status. Possible returned values: 0 - External network not enabled; 1 - Public network enabled; 2 - Public network disabled</p>
+     * @param WanStatus <p>Public network status. Possible returned values: 0 - External network not enabled; 1 - Public network enabled; 2 - Public network disabled</p>
      */
     public void setWanStatus(Long WanStatus) {
         this.WanStatus = WanStatus;
     }
 
     /**
-     * Get AZ information 
-     * @return Zone AZ information
+     * Get <p>AZ information</p> 
+     * @return Zone <p>AZ information</p>
      */
     public String getZone() {
         return this.Zone;
     }
 
     /**
-     * Set AZ information
-     * @param Zone AZ information
+     * Set <p>AZ information</p>
+     * @param Zone <p>AZ information</p>
      */
     public void setZone(String Zone) {
         this.Zone = Zone;
     }
 
     /**
-     * Get Initialization flag. Value range: 0 (not initialized), 1 (initialized) 
-     * @return InitFlag Initialization flag. Value range: 0 (not initialized), 1 (initialized)
+     * Get <p>Initialization flag. Possible returned values: 0 - uninitialized; 1 - initialized.</p> 
+     * @return InitFlag <p>Initialization flag. Possible returned values: 0 - uninitialized; 1 - initialized.</p>
      */
     public Long getInitFlag() {
         return this.InitFlag;
     }
 
     /**
-     * Set Initialization flag. Value range: 0 (not initialized), 1 (initialized)
-     * @param InitFlag Initialization flag. Value range: 0 (not initialized), 1 (initialized)
+     * Set <p>Initialization flag. Possible returned values: 0 - uninitialized; 1 - initialized.</p>
+     * @param InitFlag <p>Initialization flag. Possible returned values: 0 - uninitialized; 1 - initialized.</p>
      */
     public void setInitFlag(Long InitFlag) {
         this.InitFlag = InitFlag;
     }
 
     /**
-     * Get Read-only VIP information. This field is available only for read-only instances with dedicated access enabled. 
-     * @return RoVipInfo Read-only VIP information. This field is available only for read-only instances with dedicated access enabled.
+     * Get <p>Read-only vip information. This field is available only for read-only instances with separate instance access enabled.</p> 
+     * @return RoVipInfo <p>Read-only vip information. This field is available only for read-only instances with separate instance access enabled.</p>
      */
     public RoVipInfo getRoVipInfo() {
         return this.RoVipInfo;
     }
 
     /**
-     * Set Read-only VIP information. This field is available only for read-only instances with dedicated access enabled.
-     * @param RoVipInfo Read-only VIP information. This field is available only for read-only instances with dedicated access enabled.
+     * Set <p>Read-only vip information. This field is available only for read-only instances with separate instance access enabled.</p>
+     * @param RoVipInfo <p>Read-only vip information. This field is available only for read-only instances with separate instance access enabled.</p>
      */
     public void setRoVipInfo(RoVipInfo RoVipInfo) {
         this.RoVipInfo = RoVipInfo;
     }
 
     /**
-     * Get Memory capacity in MB 
-     * @return Memory Memory capacity in MB
+     * Get <p>Memory capacity, in MB.</p> 
+     * @return Memory <p>Memory capacity, in MB.</p>
      */
     public Long getMemory() {
         return this.Memory;
     }
 
     /**
-     * Set Memory capacity in MB
-     * @param Memory Memory capacity in MB
+     * Set <p>Memory capacity, in MB.</p>
+     * @param Memory <p>Memory capacity, in MB.</p>
      */
     public void setMemory(Long Memory) {
         this.Memory = Memory;
     }
 
     /**
-     * Get Instance status. Valid values: `0` (creating), `1` (running), `4` (isolating), `5` (isolated). 
-     * @return Status Instance status. Valid values: `0` (creating), `1` (running), `4` (isolating), `5` (isolated).
+     * Get <p>Instance status. Valid values: 0: creating; 1: running; 4: isolation operation in progress; 5: isolated.</p> 
+     * @return Status <p>Instance status. Valid values: 0: creating; 1: running; 4: isolation operation in progress; 5: isolated.</p>
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Instance status. Valid values: `0` (creating), `1` (running), `4` (isolating), `5` (isolated).
-     * @param Status Instance status. Valid values: `0` (creating), `1` (running), `4` (isolating), `5` (isolated).
+     * Set <p>Instance status. Valid values: 0: creating; 1: running; 4: isolation operation in progress; 5: isolated.</p>
+     * @param Status <p>Instance status. Valid values: 0: creating; 1: running; 4: isolation operation in progress; 5: isolated.</p>
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get VPC ID, such as 51102 
-     * @return VpcId VPC ID, such as 51102
+     * Get <p>VPC ID, for example: 51102</p> 
+     * @return VpcId <p>VPC ID, for example: 51102</p>
      */
     public Long getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set VPC ID, such as 51102
-     * @param VpcId VPC ID, such as 51102
+     * Set <p>VPC ID, for example: 51102</p>
+     * @param VpcId <p>VPC ID, for example: 51102</p>
      */
     public void setVpcId(Long VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get Secondary server information. 
-     * @return SlaveInfo Secondary server information.
+     * Get <p>Secondary server information</p> 
+     * @return SlaveInfo <p>Secondary server information</p>
      */
     public SlaveInfo getSlaveInfo() {
         return this.SlaveInfo;
     }
 
     /**
-     * Set Secondary server information.
-     * @param SlaveInfo Secondary server information.
+     * Set <p>Secondary server information</p>
+     * @param SlaveInfo <p>Secondary server information</p>
      */
     public void setSlaveInfo(SlaveInfo SlaveInfo) {
         this.SlaveInfo = SlaveInfo;
     }
 
     /**
-     * Get Instance ID 
-     * @return InstanceId Instance ID
+     * Get <p>Instance ID</p> 
+     * @return InstanceId <p>Instance ID</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Instance ID
-     * @param InstanceId Instance ID
+     * Set <p>Instance ID</p>
+     * @param InstanceId <p>Instance ID</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Disk capacity in GB 
-     * @return Volume Disk capacity in GB
+     * Get <p>Disk capacity, in GB.</p> 
+     * @return Volume <p>Disk capacity, in GB.</p>
      */
     public Long getVolume() {
         return this.Volume;
     }
 
     /**
-     * Set Disk capacity in GB
-     * @param Volume Disk capacity in GB
+     * Set <p>Disk capacity, in GB.</p>
+     * @param Volume <p>Disk capacity, in GB.</p>
      */
     public void setVolume(Long Volume) {
         this.Volume = Volume;
     }
 
     /**
-     * Get Auto-renewal flag. Value range: 0 (auto-renewal not enabled), 1 (auto-renewal enabled), 2 (auto-renewal disabled) 
-     * @return AutoRenew Auto-renewal flag. Value range: 0 (auto-renewal not enabled), 1 (auto-renewal enabled), 2 (auto-renewal disabled)
+     * Get <p>Auto-renewal flag. Possible returned values: 0 - auto-renewal is not enabled; 1 - auto-renewal is enabled; 2 - automatic renewal is disabled.</p> 
+     * @return AutoRenew <p>Auto-renewal flag. Possible returned values: 0 - auto-renewal is not enabled; 1 - auto-renewal is enabled; 2 - automatic renewal is disabled.</p>
      */
     public Long getAutoRenew() {
         return this.AutoRenew;
     }
 
     /**
-     * Set Auto-renewal flag. Value range: 0 (auto-renewal not enabled), 1 (auto-renewal enabled), 2 (auto-renewal disabled)
-     * @param AutoRenew Auto-renewal flag. Value range: 0 (auto-renewal not enabled), 1 (auto-renewal enabled), 2 (auto-renewal disabled)
+     * Set <p>Auto-renewal flag. Possible returned values: 0 - auto-renewal is not enabled; 1 - auto-renewal is enabled; 2 - automatic renewal is disabled.</p>
+     * @param AutoRenew <p>Auto-renewal flag. Possible returned values: 0 - auto-renewal is not enabled; 1 - auto-renewal is enabled; 2 - automatic renewal is disabled.</p>
      */
     public void setAutoRenew(Long AutoRenew) {
         this.AutoRenew = AutoRenew;
     }
 
     /**
-     * Get Data replication mode. Valid values: 0 (async), 1 (semi-sync), 2 (strong sync) 
-     * @return ProtectMode Data replication mode. Valid values: 0 (async), 1 (semi-sync), 2 (strong sync)
+     * Get <p>Data replication mode. 0 - async replication; 1 - semi-sync replication; 2 - strong sync replication</p> 
+     * @return ProtectMode <p>Data replication mode. 0 - async replication; 1 - semi-sync replication; 2 - strong sync replication</p>
      */
     public Long getProtectMode() {
         return this.ProtectMode;
     }
 
     /**
-     * Set Data replication mode. Valid values: 0 (async), 1 (semi-sync), 2 (strong sync)
-     * @param ProtectMode Data replication mode. Valid values: 0 (async), 1 (semi-sync), 2 (strong sync)
+     * Set <p>Data replication mode. 0 - async replication; 1 - semi-sync replication; 2 - strong sync replication</p>
+     * @param ProtectMode <p>Data replication mode. 0 - async replication; 1 - semi-sync replication; 2 - strong sync replication</p>
      */
     public void setProtectMode(Long ProtectMode) {
         this.ProtectMode = ProtectMode;
     }
 
     /**
-     * Get Detailed information about the read-only group. 
-     * @return RoGroups Detailed information about the read-only group.
+     * Get <p>Read-only group detailed information</p> 
+     * @return RoGroups <p>Read-only group detailed information</p>
      */
     public RoGroup [] getRoGroups() {
         return this.RoGroups;
     }
 
     /**
-     * Set Detailed information about the read-only group.
-     * @param RoGroups Detailed information about the read-only group.
+     * Set <p>Read-only group detailed information</p>
+     * @param RoGroups <p>Read-only group detailed information</p>
      */
     public void setRoGroups(RoGroup [] RoGroups) {
         this.RoGroups = RoGroups;
     }
 
     /**
-     * Get Subnet ID, such as 2333 
-     * @return SubnetId Subnet ID, such as 2333
+     * Get <p>Subnet ID, for example: 2333</p> 
+     * @return SubnetId <p>Subnet ID, for example: 2333</p>
      */
     public Long getSubnetId() {
         return this.SubnetId;
     }
 
     /**
-     * Set Subnet ID, such as 2333
-     * @param SubnetId Subnet ID, such as 2333
+     * Set <p>Subnet ID, for example: 2333</p>
+     * @param SubnetId <p>Subnet ID, for example: 2333</p>
      */
     public void setSubnetId(Long SubnetId) {
         this.SubnetId = SubnetId;
     }
 
     /**
-     * Get Instance type. Value range: 1 (primary), 2 (disaster recovery), 3 (read-only) 
-     * @return InstanceType Instance type. Value range: 1 (primary), 2 (disaster recovery), 3 (read-only)
+     * Get <p>Instance type. Possible returned values: 1 - Primary instance; 2 - Disaster recovery instance; 3 - Read-only instance.</p> 
+     * @return InstanceType <p>Instance type. Possible returned values: 1 - Primary instance; 2 - Disaster recovery instance; 3 - Read-only instance.</p>
      */
     public Long getInstanceType() {
         return this.InstanceType;
     }
 
     /**
-     * Set Instance type. Value range: 1 (primary), 2 (disaster recovery), 3 (read-only)
-     * @param InstanceType Instance type. Value range: 1 (primary), 2 (disaster recovery), 3 (read-only)
+     * Set <p>Instance type. Possible returned values: 1 - Primary instance; 2 - Disaster recovery instance; 3 - Read-only instance.</p>
+     * @param InstanceType <p>Instance type. Possible returned values: 1 - Primary instance; 2 - Disaster recovery instance; 3 - Read-only instance.</p>
      */
     public void setInstanceType(Long InstanceType) {
         this.InstanceType = InstanceType;
     }
 
     /**
-     * Get Project ID 
-     * @return ProjectId Project ID
+     * Get <p>Project ID</p> 
+     * @return ProjectId <p>Project ID</p>
      */
     public Long getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set Project ID
-     * @param ProjectId Project ID
+     * Set <p>Project ID</p>
+     * @param ProjectId <p>Project ID</p>
      */
     public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;
     }
 
     /**
-     * Get Region information 
-     * @return Region Region information
+     * Get <p>Regional information</p> 
+     * @return Region <p>Regional information</p>
      */
     public String getRegion() {
         return this.Region;
     }
 
     /**
-     * Set Region information
-     * @param Region Region information
+     * Set <p>Regional information</p>
+     * @param Region <p>Regional information</p>
      */
     public void setRegion(String Region) {
         this.Region = Region;
     }
 
     /**
-     * Get Instance expiration time 
-     * @return DeadlineTime Instance expiration time
+     * Get <p>Instance expiration time</p> 
+     * @return DeadlineTime <p>Instance expiration time</p>
      */
     public String getDeadlineTime() {
         return this.DeadlineTime;
     }
 
     /**
-     * Set Instance expiration time
-     * @param DeadlineTime Instance expiration time
+     * Set <p>Instance expiration time</p>
+     * @param DeadlineTime <p>Instance expiration time</p>
      */
     public void setDeadlineTime(String DeadlineTime) {
         this.DeadlineTime = DeadlineTime;
     }
 
     /**
-     * Get AZ deployment mode. Valid values: 0 (single-AZ), 1 (multi-AZ) 
-     * @return DeployMode AZ deployment mode. Valid values: 0 (single-AZ), 1 (multi-AZ)
+     * Get <p>Availability Zone Deployment method. Valid values: 0 - single availability zone; 1 - multi-availability zone.</p> 
+     * @return DeployMode <p>Availability Zone Deployment method. Valid values: 0 - single availability zone; 1 - multi-availability zone.</p>
      */
     public Long getDeployMode() {
         return this.DeployMode;
     }
 
     /**
-     * Set AZ deployment mode. Valid values: 0 (single-AZ), 1 (multi-AZ)
-     * @param DeployMode AZ deployment mode. Valid values: 0 (single-AZ), 1 (multi-AZ)
+     * Set <p>Availability Zone Deployment method. Valid values: 0 - single availability zone; 1 - multi-availability zone.</p>
+     * @param DeployMode <p>Availability Zone Deployment method. Valid values: 0 - single availability zone; 1 - multi-availability zone.</p>
      */
     public void setDeployMode(Long DeployMode) {
         this.DeployMode = DeployMode;
     }
 
     /**
-     * Get Instance task status. 0 - no task; 1 - upgrading; 2 - importing data; 3 - activating secondary; 4 - enabling public network access; 5 - batch operation in progress; 6 - rolling back; 7 - disabling public network access; 8 - changing password; 9 - renaming instance; 10 - restarting; 12 - migrating self-built instance; 13 - dropping table; 14 - creating and syncing disaster recovery instance; 15 - pending upgrade and switch; 16 - upgrade and switch in progress; 17 - upgrade and switch completed 
-     * @return TaskStatus Instance task status. 0 - no task; 1 - upgrading; 2 - importing data; 3 - activating secondary; 4 - enabling public network access; 5 - batch operation in progress; 6 - rolling back; 7 - disabling public network access; 8 - changing password; 9 - renaming instance; 10 - restarting; 12 - migrating self-built instance; 13 - dropping table; 14 - creating and syncing disaster recovery instance; 15 - pending upgrade and switch; 16 - upgrade and switch in progress; 17 - upgrade and switch completed
+     * Get <p>Instance task status. 0 - No tasks, 1 - Upgrading, 2 - Data import, 3 - Opening Slave, 4 - Public network access enabling, 5 - Batch operation executing, 6 - Rolling back, 7 - Public network access disabling, 8 - Password modification, 9 - Renaming instance, 10 - Restarting, 12 - Self-built migration, 13 - Database deletion, 14 - Disaster recovery instance creation sync, 15 - Upgrade pending switch, 16 - Upgrade and switch, 17 - Upgrade and switch completed</p> 
+     * @return TaskStatus <p>Instance task status. 0 - No tasks, 1 - Upgrading, 2 - Data import, 3 - Opening Slave, 4 - Public network access enabling, 5 - Batch operation executing, 6 - Rolling back, 7 - Public network access disabling, 8 - Password modification, 9 - Renaming instance, 10 - Restarting, 12 - Self-built migration, 13 - Database deletion, 14 - Disaster recovery instance creation sync, 15 - Upgrade pending switch, 16 - Upgrade and switch, 17 - Upgrade and switch completed</p>
      */
     public Long getTaskStatus() {
         return this.TaskStatus;
     }
 
     /**
-     * Set Instance task status. 0 - no task; 1 - upgrading; 2 - importing data; 3 - activating secondary; 4 - enabling public network access; 5 - batch operation in progress; 6 - rolling back; 7 - disabling public network access; 8 - changing password; 9 - renaming instance; 10 - restarting; 12 - migrating self-built instance; 13 - dropping table; 14 - creating and syncing disaster recovery instance; 15 - pending upgrade and switch; 16 - upgrade and switch in progress; 17 - upgrade and switch completed
-     * @param TaskStatus Instance task status. 0 - no task; 1 - upgrading; 2 - importing data; 3 - activating secondary; 4 - enabling public network access; 5 - batch operation in progress; 6 - rolling back; 7 - disabling public network access; 8 - changing password; 9 - renaming instance; 10 - restarting; 12 - migrating self-built instance; 13 - dropping table; 14 - creating and syncing disaster recovery instance; 15 - pending upgrade and switch; 16 - upgrade and switch in progress; 17 - upgrade and switch completed
+     * Set <p>Instance task status. 0 - No tasks, 1 - Upgrading, 2 - Data import, 3 - Opening Slave, 4 - Public network access enabling, 5 - Batch operation executing, 6 - Rolling back, 7 - Public network access disabling, 8 - Password modification, 9 - Renaming instance, 10 - Restarting, 12 - Self-built migration, 13 - Database deletion, 14 - Disaster recovery instance creation sync, 15 - Upgrade pending switch, 16 - Upgrade and switch, 17 - Upgrade and switch completed</p>
+     * @param TaskStatus <p>Instance task status. 0 - No tasks, 1 - Upgrading, 2 - Data import, 3 - Opening Slave, 4 - Public network access enabling, 5 - Batch operation executing, 6 - Rolling back, 7 - Public network access disabling, 8 - Password modification, 9 - Renaming instance, 10 - Restarting, 12 - Self-built migration, 13 - Database deletion, 14 - Disaster recovery instance creation sync, 15 - Upgrade pending switch, 16 - Upgrade and switch, 17 - Upgrade and switch completed</p>
      */
     public void setTaskStatus(Long TaskStatus) {
         this.TaskStatus = TaskStatus;
     }
 
     /**
-     * Get Detailed information about the primary instance. 
-     * @return MasterInfo Detailed information about the primary instance.
+     * Get <p>Detailed information about the primary instance.</p> 
+     * @return MasterInfo <p>Detailed information about the primary instance.</p>
      */
     public MasterInfo getMasterInfo() {
         return this.MasterInfo;
     }
 
     /**
-     * Set Detailed information about the primary instance.
-     * @param MasterInfo Detailed information about the primary instance.
+     * Set <p>Detailed information about the primary instance.</p>
+     * @param MasterInfo <p>Detailed information about the primary instance.</p>
      */
     public void setMasterInfo(MasterInfo MasterInfo) {
         this.MasterInfo = MasterInfo;
     }
 
     /**
-     * Get Instance type 
-     * @return DeviceType Instance type
+     * Get <p>Instance type</p> 
+     * @return DeviceType <p>Instance type</p>
      */
     public String getDeviceType() {
         return this.DeviceType;
     }
 
     /**
-     * Set Instance type
-     * @param DeviceType Instance type
+     * Set <p>Instance type</p>
+     * @param DeviceType <p>Instance type</p>
      */
     public void setDeviceType(String DeviceType) {
         this.DeviceType = DeviceType;
     }
 
     /**
-     * Get Kernel version 
-     * @return EngineVersion Kernel version
+     * Get <p>Kernel version</p> 
+     * @return EngineVersion <p>Kernel version</p>
      */
     public String getEngineVersion() {
         return this.EngineVersion;
     }
 
     /**
-     * Set Kernel version
-     * @param EngineVersion Kernel version
+     * Set <p>Kernel version</p>
+     * @param EngineVersion <p>Kernel version</p>
      */
     public void setEngineVersion(String EngineVersion) {
         this.EngineVersion = EngineVersion;
     }
 
     /**
-     * Get Instance name 
-     * @return InstanceName Instance name
+     * Get <p>Instance name</p> 
+     * @return InstanceName <p>Instance name</p>
      */
     public String getInstanceName() {
         return this.InstanceName;
     }
 
     /**
-     * Set Instance name
-     * @param InstanceName Instance name
+     * Set <p>Instance name</p>
+     * @param InstanceName <p>Instance name</p>
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;
     }
 
     /**
-     * Get Detailed information about the disaster recovery instance. 
-     * @return DrInfo Detailed information about the disaster recovery instance.
+     * Get <p>Disaster recovery instance details</p> 
+     * @return DrInfo <p>Disaster recovery instance details</p>
      */
     public DrInfo [] getDrInfo() {
         return this.DrInfo;
     }
 
     /**
-     * Set Detailed information about the disaster recovery instance.
-     * @param DrInfo Detailed information about the disaster recovery instance.
+     * Set <p>Disaster recovery instance details</p>
+     * @param DrInfo <p>Disaster recovery instance details</p>
      */
     public void setDrInfo(DrInfo [] DrInfo) {
         this.DrInfo = DrInfo;
     }
 
     /**
-     * Get Public domain name 
-     * @return WanDomain Public domain name
+     * Get <p>public network domain name</p> 
+     * @return WanDomain <p>public network domain name</p>
      */
     public String getWanDomain() {
         return this.WanDomain;
     }
 
     /**
-     * Set Public domain name
-     * @param WanDomain Public domain name
+     * Set <p>public network domain name</p>
+     * @param WanDomain <p>public network domain name</p>
      */
     public void setWanDomain(String WanDomain) {
         this.WanDomain = WanDomain;
     }
 
     /**
-     * Get Public network port number 
-     * @return WanPort Public network port number
+     * Get <p>Public network port number</p> 
+     * @return WanPort <p>Public network port number</p>
      */
     public Long getWanPort() {
         return this.WanPort;
     }
 
     /**
-     * Set Public network port number
-     * @param WanPort Public network port number
+     * Set <p>Public network port number</p>
+     * @param WanPort <p>Public network port number</p>
      */
     public void setWanPort(Long WanPort) {
         this.WanPort = WanPort;
@@ -833,387 +844,407 @@ Note:
     }
 
     /**
-     * Get Instance creation time 
-     * @return CreateTime Instance creation time
+     * Get <p>Instance creation time</p> 
+     * @return CreateTime <p>Instance creation time</p>
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set Instance creation time
-     * @param CreateTime Instance creation time
+     * Set <p>Instance creation time</p>
+     * @param CreateTime <p>Instance creation time</p>
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get Instance IP 
-     * @return Vip Instance IP
+     * Get <p>Instance IP</p> 
+     * @return Vip <p>Instance IP</p>
      */
     public String getVip() {
         return this.Vip;
     }
 
     /**
-     * Set Instance IP
-     * @param Vip Instance IP
+     * Set <p>Instance IP</p>
+     * @param Vip <p>Instance IP</p>
      */
     public void setVip(String Vip) {
         this.Vip = Vip;
     }
 
     /**
-     * Get Port number 
-     * @return Vport Port number
+     * Get <p>Port number</p> 
+     * @return Vport <p>Port number</p>
      */
     public Long getVport() {
         return this.Vport;
     }
 
     /**
-     * Set Port number
-     * @param Vport Port number
+     * Set <p>Port number</p>
+     * @param Vport <p>Port number</p>
      */
     public void setVport(Long Vport) {
         this.Vport = Vport;
     }
 
     /**
-     * Get Whether the disk write is locked (It depends on whether the instance data in disk exceeds its quota). Valid values: `0` (unlocked), `1` (locked). 
-     * @return CdbError Whether the disk write is locked (It depends on whether the instance data in disk exceeds its quota). Valid values: `0` (unlocked), `1` (locked).
+     * Get <p>Whether disk write is locked (data write volume of the instance exceeds disk quota). 0 - Unlocked 1 - Locked</p> 
+     * @return CdbError <p>Whether disk write is locked (data write volume of the instance exceeds disk quota). 0 - Unlocked 1 - Locked</p>
      */
     public Long getCdbError() {
         return this.CdbError;
     }
 
     /**
-     * Set Whether the disk write is locked (It depends on whether the instance data in disk exceeds its quota). Valid values: `0` (unlocked), `1` (locked).
-     * @param CdbError Whether the disk write is locked (It depends on whether the instance data in disk exceeds its quota). Valid values: `0` (unlocked), `1` (locked).
+     * Set <p>Whether disk write is locked (data write volume of the instance exceeds disk quota). 0 - Unlocked 1 - Locked</p>
+     * @param CdbError <p>Whether disk write is locked (data write volume of the instance exceeds disk quota). 0 - Unlocked 1 - Locked</p>
      */
     public void setCdbError(Long CdbError) {
         this.CdbError = CdbError;
     }
 
     /**
-     * Get VPC descriptor, such as "vpc-5v8wn9mg" 
-     * @return UniqVpcId VPC descriptor, such as "vpc-5v8wn9mg"
+     * Get <p>Private network descriptor, for example: "vpc-5v8wn9mg"</p> 
+     * @return UniqVpcId <p>Private network descriptor, for example: "vpc-5v8wn9mg"</p>
      */
     public String getUniqVpcId() {
         return this.UniqVpcId;
     }
 
     /**
-     * Set VPC descriptor, such as "vpc-5v8wn9mg"
-     * @param UniqVpcId VPC descriptor, such as "vpc-5v8wn9mg"
+     * Set <p>Private network descriptor, for example: "vpc-5v8wn9mg"</p>
+     * @param UniqVpcId <p>Private network descriptor, for example: "vpc-5v8wn9mg"</p>
      */
     public void setUniqVpcId(String UniqVpcId) {
         this.UniqVpcId = UniqVpcId;
     }
 
     /**
-     * Get Subnet descriptor, such as "subnet-1typ0s7d" 
-     * @return UniqSubnetId Subnet descriptor, such as "subnet-1typ0s7d"
+     * Get <p>Subnet descriptor, such as "subnet-1typ0s7d"</p> 
+     * @return UniqSubnetId <p>Subnet descriptor, such as "subnet-1typ0s7d"</p>
      */
     public String getUniqSubnetId() {
         return this.UniqSubnetId;
     }
 
     /**
-     * Set Subnet descriptor, such as "subnet-1typ0s7d"
-     * @param UniqSubnetId Subnet descriptor, such as "subnet-1typ0s7d"
+     * Set <p>Subnet descriptor, such as "subnet-1typ0s7d"</p>
+     * @param UniqSubnetId <p>Subnet descriptor, such as "subnet-1typ0s7d"</p>
      */
     public void setUniqSubnetId(String UniqSubnetId) {
         this.UniqSubnetId = UniqSubnetId;
     }
 
     /**
-     * Get Physical ID 
-     * @return PhysicalId Physical ID
+     * Get <p>Physical ID</p> 
+     * @return PhysicalId <p>Physical ID</p>
      */
     public String getPhysicalId() {
         return this.PhysicalId;
     }
 
     /**
-     * Set Physical ID
-     * @param PhysicalId Physical ID
+     * Set <p>Physical ID</p>
+     * @param PhysicalId <p>Physical ID</p>
      */
     public void setPhysicalId(String PhysicalId) {
         this.PhysicalId = PhysicalId;
     }
 
     /**
-     * Get Number of cores 
-     * @return Cpu Number of cores
+     * Get <p>Core count</p> 
+     * @return Cpu <p>Core count</p>
      */
     public Long getCpu() {
         return this.Cpu;
     }
 
     /**
-     * Set Number of cores
-     * @param Cpu Number of cores
+     * Set <p>Core count</p>
+     * @param Cpu <p>Core count</p>
      */
     public void setCpu(Long Cpu) {
         this.Cpu = Cpu;
     }
 
     /**
-     * Get Queries per second 
-     * @return Qps Queries per second
+     * Get <p>Queries per second.</p> 
+     * @return Qps <p>Queries per second.</p>
      */
     public Long getQps() {
         return this.Qps;
     }
 
     /**
-     * Set Queries per second
-     * @param Qps Queries per second
+     * Set <p>Queries per second.</p>
+     * @param Qps <p>Queries per second.</p>
      */
     public void setQps(Long Qps) {
         this.Qps = Qps;
     }
 
     /**
-     * Get AZ name 
-     * @return ZoneName AZ name
+     * Get <p>Chinese Name of Availability Zone</p> 
+     * @return ZoneName <p>Chinese Name of Availability Zone</p>
      */
     public String getZoneName() {
         return this.ZoneName;
     }
 
     /**
-     * Set AZ name
-     * @param ZoneName AZ name
+     * Set <p>Chinese Name of Availability Zone</p>
+     * @param ZoneName <p>Chinese Name of Availability Zone</p>
      */
     public void setZoneName(String ZoneName) {
         this.ZoneName = ZoneName;
     }
 
     /**
-     * Get Physical server model. 
-     * @return DeviceClass Physical server model.
+     * Get <p>Physical machine model</p> 
+     * @return DeviceClass <p>Physical machine model</p>
      */
     public String getDeviceClass() {
         return this.DeviceClass;
     }
 
     /**
-     * Set Physical server model.
-     * @param DeviceClass Physical server model.
+     * Set <p>Physical machine model</p>
+     * @param DeviceClass <p>Physical machine model</p>
      */
     public void setDeviceClass(String DeviceClass) {
         this.DeviceClass = DeviceClass;
     }
 
     /**
-     * Get Placement group ID. 
-     * @return DeployGroupId Placement group ID.
+     * Get <p>Placement group ID</p> 
+     * @return DeployGroupId <p>Placement group ID</p>
      */
     public String getDeployGroupId() {
         return this.DeployGroupId;
     }
 
     /**
-     * Set Placement group ID.
-     * @param DeployGroupId Placement group ID.
+     * Set <p>Placement group ID</p>
+     * @param DeployGroupId <p>Placement group ID</p>
      */
     public void setDeployGroupId(String DeployGroupId) {
         this.DeployGroupId = DeployGroupId;
     }
 
     /**
-     * Get AZ ID. 
-     * @return ZoneId AZ ID.
+     * Get <p>Availability zone ID</p> 
+     * @return ZoneId <p>Availability zone ID</p>
      */
     public Long getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set AZ ID.
-     * @param ZoneId AZ ID.
+     * Set <p>Availability zone ID</p>
+     * @param ZoneId <p>Availability zone ID</p>
      */
     public void setZoneId(Long ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * Get Number of nodes 
-     * @return InstanceNodes Number of nodes
+     * Get <p>Number of nodes</p> 
+     * @return InstanceNodes <p>Number of nodes</p>
      */
     public Long getInstanceNodes() {
         return this.InstanceNodes;
     }
 
     /**
-     * Set Number of nodes
-     * @param InstanceNodes Number of nodes
+     * Set <p>Number of nodes</p>
+     * @param InstanceNodes <p>Number of nodes</p>
      */
     public void setInstanceNodes(Long InstanceNodes) {
         this.InstanceNodes = InstanceNodes;
     }
 
     /**
-     * Get Tag list. 
-     * @return TagList Tag list.
+     * Get <p>Tag list</p> 
+     * @return TagList <p>Tag list</p>
      */
     public TagInfoItem [] getTagList() {
         return this.TagList;
     }
 
     /**
-     * Set Tag list.
-     * @param TagList Tag list.
+     * Set <p>Tag list</p>
+     * @param TagList <p>Tag list</p>
      */
     public void setTagList(TagInfoItem [] TagList) {
         this.TagList = TagList;
     }
 
     /**
-     * Get Engine type. 
-     * @return EngineType Engine type.
+     * Get <p>Engine type</p> 
+     * @return EngineType <p>Engine type</p>
      */
     public String getEngineType() {
         return this.EngineType;
     }
 
     /**
-     * Set Engine type.
-     * @param EngineType Engine type.
+     * Set <p>Engine type</p>
+     * @param EngineType <p>Engine type</p>
      */
     public void setEngineType(String EngineType) {
         this.EngineType = EngineType;
     }
 
     /**
-     * Get Maximum delay threshold. 
-     * @return MaxDelayTime Maximum delay threshold.
+     * Get <p>Maximum delay threshold</p> 
+     * @return MaxDelayTime <p>Maximum delay threshold</p>
      */
     public Long getMaxDelayTime() {
         return this.MaxDelayTime;
     }
 
     /**
-     * Set Maximum delay threshold.
-     * @param MaxDelayTime Maximum delay threshold.
+     * Set <p>Maximum delay threshold</p>
+     * @param MaxDelayTime <p>Maximum delay threshold</p>
      */
     public void setMaxDelayTime(Long MaxDelayTime) {
         this.MaxDelayTime = MaxDelayTime;
     }
 
     /**
-     * Get Instance disk type. Valid values are returned only for Cluster Edition and single-node (cloud disk) instances.
-Note:
-1. If "DiskType": "CLOUD_HSSD" is returned, it indicates that the instance disk type is Enhanced SSD.
-2. If "DiskType": "CLOUD_SSD" is returned, it indicates that the instance disk type is Cloud SSD.
-3. If "DiskType": "" is returned and the DeviceType parameter value is UNIVERSAL or EXCLUSIVE, it indicates that the instance uses a local SSD. 
-     * @return DiskType Instance disk type. Valid values are returned only for Cluster Edition and single-node (cloud disk) instances.
-Note:
-1. If "DiskType": "CLOUD_HSSD" is returned, it indicates that the instance disk type is Enhanced SSD.
-2. If "DiskType": "CLOUD_SSD" is returned, it indicates that the instance disk type is Cloud SSD.
-3. If "DiskType": "" is returned and the DeviceType parameter value is UNIVERSAL or EXCLUSIVE, it indicates that the instance uses a local SSD.
+     * Get <p>Instance disk type. Only CLOUD disk edition and single-node (CLOUD disk) instances will return a valid value.<br>Description:</p><ol><li>If "DiskType": "CLOUD_HSSD" is returned, it indicates that the instance disk type is enhanced SSD CLOUD disk.</li><li>If "DiskType": "CLOUD_SSD" is returned, it indicates that the instance disk type is SSD CLOUD Block Storage.</li><li>If "DiskType": "" is returned and the DeviceType parameter value is UNIVERSAL or EXCLUSIVE, it means that the instance uses local SSD.</li></ol> 
+     * @return DiskType <p>Instance disk type. Only CLOUD disk edition and single-node (CLOUD disk) instances will return a valid value.<br>Description:</p><ol><li>If "DiskType": "CLOUD_HSSD" is returned, it indicates that the instance disk type is enhanced SSD CLOUD disk.</li><li>If "DiskType": "CLOUD_SSD" is returned, it indicates that the instance disk type is SSD CLOUD Block Storage.</li><li>If "DiskType": "" is returned and the DeviceType parameter value is UNIVERSAL or EXCLUSIVE, it means that the instance uses local SSD.</li></ol>
      */
     public String getDiskType() {
         return this.DiskType;
     }
 
     /**
-     * Set Instance disk type. Valid values are returned only for Cluster Edition and single-node (cloud disk) instances.
-Note:
-1. If "DiskType": "CLOUD_HSSD" is returned, it indicates that the instance disk type is Enhanced SSD.
-2. If "DiskType": "CLOUD_SSD" is returned, it indicates that the instance disk type is Cloud SSD.
-3. If "DiskType": "" is returned and the DeviceType parameter value is UNIVERSAL or EXCLUSIVE, it indicates that the instance uses a local SSD.
-     * @param DiskType Instance disk type. Valid values are returned only for Cluster Edition and single-node (cloud disk) instances.
-Note:
-1. If "DiskType": "CLOUD_HSSD" is returned, it indicates that the instance disk type is Enhanced SSD.
-2. If "DiskType": "CLOUD_SSD" is returned, it indicates that the instance disk type is Cloud SSD.
-3. If "DiskType": "" is returned and the DeviceType parameter value is UNIVERSAL or EXCLUSIVE, it indicates that the instance uses a local SSD.
+     * Set <p>Instance disk type. Only CLOUD disk edition and single-node (CLOUD disk) instances will return a valid value.<br>Description:</p><ol><li>If "DiskType": "CLOUD_HSSD" is returned, it indicates that the instance disk type is enhanced SSD CLOUD disk.</li><li>If "DiskType": "CLOUD_SSD" is returned, it indicates that the instance disk type is SSD CLOUD Block Storage.</li><li>If "DiskType": "" is returned and the DeviceType parameter value is UNIVERSAL or EXCLUSIVE, it means that the instance uses local SSD.</li></ol>
+     * @param DiskType <p>Instance disk type. Only CLOUD disk edition and single-node (CLOUD disk) instances will return a valid value.<br>Description:</p><ol><li>If "DiskType": "CLOUD_HSSD" is returned, it indicates that the instance disk type is enhanced SSD CLOUD disk.</li><li>If "DiskType": "CLOUD_SSD" is returned, it indicates that the instance disk type is SSD CLOUD Block Storage.</li><li>If "DiskType": "" is returned and the DeviceType parameter value is UNIVERSAL or EXCLUSIVE, it means that the instance uses local SSD.</li></ol>
      */
     public void setDiskType(String DiskType) {
         this.DiskType = DiskType;
     }
 
     /**
-     * Get Current number of CPU cores for scale-out. 
-     * @return ExpandCpu Current number of CPU cores for scale-out.
+     * Get <p>Current number of CPU cores for scale-out.</p> 
+     * @return ExpandCpu <p>Current number of CPU cores for scale-out.</p>
      */
     public Long getExpandCpu() {
         return this.ExpandCpu;
     }
 
     /**
-     * Set Current number of CPU cores for scale-out.
-     * @param ExpandCpu Current number of CPU cores for scale-out.
+     * Set <p>Current number of CPU cores for scale-out.</p>
+     * @param ExpandCpu <p>Current number of CPU cores for scale-out.</p>
      */
     public void setExpandCpu(Long ExpandCpu) {
         this.ExpandCpu = ExpandCpu;
     }
 
     /**
-     * Get Cluster Edition instance node information. 
-     * @return ClusterInfo Cluster Edition instance node information.
+     * Get <p>Cloud Disk Edition instance node information</p> 
+     * @return ClusterInfo <p>Cloud Disk Edition instance node information</p>
      */
     public ClusterInfo [] getClusterInfo() {
         return this.ClusterInfo;
     }
 
     /**
-     * Set Cluster Edition instance node information.
-     * @param ClusterInfo Cluster Edition instance node information.
+     * Set <p>Cloud Disk Edition instance node information</p>
+     * @param ClusterInfo <p>Cloud Disk Edition instance node information</p>
      */
     public void setClusterInfo(ClusterInfo [] ClusterInfo) {
         this.ClusterInfo = ClusterInfo;
     }
 
     /**
-     * Get Analysis engine node list. 
-     * @return AnalysisNodeInfos Analysis engine node list.
+     * Get <p>Analysis engine node list</p> 
+     * @return AnalysisNodeInfos <p>Analysis engine node list</p>
      */
     public AnalysisNodeInfo [] getAnalysisNodeInfos() {
         return this.AnalysisNodeInfos;
     }
 
     /**
-     * Set Analysis engine node list.
-     * @param AnalysisNodeInfos Analysis engine node list.
+     * Set <p>Analysis engine node list</p>
+     * @param AnalysisNodeInfos <p>Analysis engine node list</p>
      */
     public void setAnalysisNodeInfos(AnalysisNodeInfo [] AnalysisNodeInfos) {
         this.AnalysisNodeInfos = AnalysisNodeInfos;
     }
 
     /**
-     * Get Device bandwidth, in GB. This parameter is valid when DeviceClass is specified. For example, 25 means the current device bandwidth is 25 GB; 10 means the current device bandwidth is 10 GB. 
-     * @return DeviceBandwidth Device bandwidth, in GB. This parameter is valid when DeviceClass is specified. For example, 25 means the current device bandwidth is 25 GB; 10 means the current device bandwidth is 10 GB.
+     * Get <p>Device bandwidth, in G. This parameter is valid only when DeviceClass is not empty. For example, 25 means the current device bandwidth is 25G; 10 means the current device bandwidth is 10G.</p> 
+     * @return DeviceBandwidth <p>Device bandwidth, in G. This parameter is valid only when DeviceClass is not empty. For example, 25 means the current device bandwidth is 25G; 10 means the current device bandwidth is 10G.</p>
      */
     public Long getDeviceBandwidth() {
         return this.DeviceBandwidth;
     }
 
     /**
-     * Set Device bandwidth, in GB. This parameter is valid when DeviceClass is specified. For example, 25 means the current device bandwidth is 25 GB; 10 means the current device bandwidth is 10 GB.
-     * @param DeviceBandwidth Device bandwidth, in GB. This parameter is valid when DeviceClass is specified. For example, 25 means the current device bandwidth is 25 GB; 10 means the current device bandwidth is 10 GB.
+     * Set <p>Device bandwidth, in G. This parameter is valid only when DeviceClass is not empty. For example, 25 means the current device bandwidth is 25G; 10 means the current device bandwidth is 10G.</p>
+     * @param DeviceBandwidth <p>Device bandwidth, in G. This parameter is valid only when DeviceClass is not empty. For example, 25 means the current device bandwidth is 25G; 10 means the current device bandwidth is 10G.</p>
      */
     public void setDeviceBandwidth(Long DeviceBandwidth) {
         this.DeviceBandwidth = DeviceBandwidth;
     }
 
     /**
-     * Get Instance termination protection status. on indicates enabled; otherwise, the protection is disabled. 
-     * @return DestroyProtect Instance termination protection status. on indicates enabled; otherwise, the protection is disabled.
+     * Get <p>Instance termination protection status. on indicates enabled; otherwise, the protection is disabled.</p> 
+     * @return DestroyProtect <p>Instance termination protection status. on indicates enabled; otherwise, the protection is disabled.</p>
      */
     public String getDestroyProtect() {
         return this.DestroyProtect;
     }
 
     /**
-     * Set Instance termination protection status. on indicates enabled; otherwise, the protection is disabled.
-     * @param DestroyProtect Instance termination protection status. on indicates enabled; otherwise, the protection is disabled.
+     * Set <p>Instance termination protection status. on indicates enabled; otherwise, the protection is disabled.</p>
+     * @param DestroyProtect <p>Instance termination protection status. on indicates enabled; otherwise, the protection is disabled.</p>
      */
     public void setDestroyProtect(String DestroyProtect) {
         this.DestroyProtect = DestroyProtect;
+    }
+
+    /**
+     * Get <p>TDSQL engine parameters</p> 
+     * @return CpuModel <p>TDSQL engine parameters</p>
+     */
+    public String getCpuModel() {
+        return this.CpuModel;
+    }
+
+    /**
+     * Set <p>TDSQL engine parameters</p>
+     * @param CpuModel <p>TDSQL engine parameters</p>
+     */
+    public void setCpuModel(String CpuModel) {
+        this.CpuModel = CpuModel;
+    }
+
+    /**
+     * Get <p>Analysis engine instance version upgrade information</p>
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return AnalysisUpgradeVersionInfo <p>Analysis engine instance version upgrade information</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public UpgradeAnalysisInstanceVersionInfo getAnalysisUpgradeVersionInfo() {
+        return this.AnalysisUpgradeVersionInfo;
+    }
+
+    /**
+     * Set <p>Analysis engine instance version upgrade information</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param AnalysisUpgradeVersionInfo <p>Analysis engine instance version upgrade information</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setAnalysisUpgradeVersionInfo(UpgradeAnalysisInstanceVersionInfo AnalysisUpgradeVersionInfo) {
+        this.AnalysisUpgradeVersionInfo = AnalysisUpgradeVersionInfo;
     }
 
     public InstanceInfo() {
@@ -1392,6 +1423,12 @@ Note:
         if (source.DestroyProtect != null) {
             this.DestroyProtect = new String(source.DestroyProtect);
         }
+        if (source.CpuModel != null) {
+            this.CpuModel = new String(source.CpuModel);
+        }
+        if (source.AnalysisUpgradeVersionInfo != null) {
+            this.AnalysisUpgradeVersionInfo = new UpgradeAnalysisInstanceVersionInfo(source.AnalysisUpgradeVersionInfo);
+        }
     }
 
 
@@ -1450,6 +1487,8 @@ Note:
         this.setParamArrayObj(map, prefix + "AnalysisNodeInfos.", this.AnalysisNodeInfos);
         this.setParamSimple(map, prefix + "DeviceBandwidth", this.DeviceBandwidth);
         this.setParamSimple(map, prefix + "DestroyProtect", this.DestroyProtect);
+        this.setParamSimple(map, prefix + "CpuModel", this.CpuModel);
+        this.setParamObj(map, prefix + "AnalysisUpgradeVersionInfo.", this.AnalysisUpgradeVersionInfo);
 
     }
 }

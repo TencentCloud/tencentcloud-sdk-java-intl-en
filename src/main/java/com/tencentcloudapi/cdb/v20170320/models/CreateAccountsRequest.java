@@ -38,14 +38,18 @@ public class CreateAccountsRequest extends AbstractModel {
     private Account [] Accounts;
 
     /**
-    * Password of the new account
+    * Password of the new account.
+Note:
+1. Within 8–64 characters (recommend not exceeding 12).
+2. At least two of the following items: lowercase letter a – z or uppercase letter A – Z, digit 0 – 9, _+-,&=!@#$%^*().|.
+3. Cannot contain invalid characters.
     */
     @SerializedName("Password")
     @Expose
     private String Password;
 
     /**
-    * Remarks
+    * Remark information. Input limit: 255 characters.
     */
     @SerializedName("Description")
     @Expose
@@ -91,32 +95,48 @@ public class CreateAccountsRequest extends AbstractModel {
     }
 
     /**
-     * Get Password of the new account 
-     * @return Password Password of the new account
+     * Get Password of the new account.
+Note:
+1. Within 8–64 characters (recommend not exceeding 12).
+2. At least two of the following items: lowercase letter a – z or uppercase letter A – Z, digit 0 – 9, _+-,&=!@#$%^*().|.
+3. Cannot contain invalid characters. 
+     * @return Password Password of the new account.
+Note:
+1. Within 8–64 characters (recommend not exceeding 12).
+2. At least two of the following items: lowercase letter a – z or uppercase letter A – Z, digit 0 – 9, _+-,&=!@#$%^*().|.
+3. Cannot contain invalid characters.
      */
     public String getPassword() {
         return this.Password;
     }
 
     /**
-     * Set Password of the new account
-     * @param Password Password of the new account
+     * Set Password of the new account.
+Note:
+1. Within 8–64 characters (recommend not exceeding 12).
+2. At least two of the following items: lowercase letter a – z or uppercase letter A – Z, digit 0 – 9, _+-,&=!@#$%^*().|.
+3. Cannot contain invalid characters.
+     * @param Password Password of the new account.
+Note:
+1. Within 8–64 characters (recommend not exceeding 12).
+2. At least two of the following items: lowercase letter a – z or uppercase letter A – Z, digit 0 – 9, _+-,&=!@#$%^*().|.
+3. Cannot contain invalid characters.
      */
     public void setPassword(String Password) {
         this.Password = Password;
     }
 
     /**
-     * Get Remarks 
-     * @return Description Remarks
+     * Get Remark information. Input limit: 255 characters. 
+     * @return Description Remark information. Input limit: 255 characters.
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set Remarks
-     * @param Description Remarks
+     * Set Remark information. Input limit: 255 characters.
+     * @param Description Remark information. Input limit: 255 characters.
      */
     public void setDescription(String Description) {
         this.Description = Description;

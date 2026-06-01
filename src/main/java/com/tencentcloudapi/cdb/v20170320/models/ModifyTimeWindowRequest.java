@@ -24,92 +24,142 @@ import java.util.HashMap;
 public class ModifyTimeWindowRequest extends AbstractModel {
 
     /**
-    * Instance ID in the format of cdb-c1nl9rpv or cdbro-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
+    * Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Time period available for maintenance after modification in the format of 10:00-12:00. Each period lasts from half an hour to three hours, with the start time and end time aligned by half-hour. Up to two time periods can be set. Start and end time range: [00:00, 24:00].
+    * The modified maintenance time slot. Among them, each time period is in the format of 10:00-12:00. The start and end time is aligned by half hour. The shortest is half hour and the longest is three hours. Up to two time periods can be set. The start and end time ranges from [00:00, 24:00].
+Description: The following is an example of setting two time periods in json.
+[
+    "01:00-01:30",
+    "02:00-02:30"
+  ]
     */
     @SerializedName("TimeRanges")
     @Expose
     private String [] TimeRanges;
 
     /**
-    * Specifies for which day to modify the time period. Value range: Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday. If it is not specified or is left blank, the time period will be modified for every day by default.
+    * Specify which day to modify the maintenance time slot. Possible values are: monday, tuesday, wednesday, thursday, friday, saturday, sunday. If not specified or empty, modify all seven days of the week by default.
+Description: The json example for modifying more than one day is as follows.
+[
+    "monday",
+    "tuesday"
+  ]
     */
     @SerializedName("Weekdays")
     @Expose
     private String [] Weekdays;
 
     /**
-    * Data delay threshold. It takes effect only for source instance and disaster recovery instance. Default value: 10.
+    * Data latency threshold (seconds), only applicable to primary instance and disaster recovery instance. No modification by default to keep the original threshold. Value ranges from 1 to 10 integers.
     */
     @SerializedName("MaxDelayTime")
     @Expose
     private Long MaxDelayTime;
 
     /**
-     * Get Instance ID in the format of cdb-c1nl9rpv or cdbro-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page. 
-     * @return InstanceId Instance ID in the format of cdb-c1nl9rpv or cdbro-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
+     * Get Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API. 
+     * @return InstanceId Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Instance ID in the format of cdb-c1nl9rpv or cdbro-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
-     * @param InstanceId Instance ID in the format of cdb-c1nl9rpv or cdbro-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
+     * Set Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
+     * @param InstanceId Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Time period available for maintenance after modification in the format of 10:00-12:00. Each period lasts from half an hour to three hours, with the start time and end time aligned by half-hour. Up to two time periods can be set. Start and end time range: [00:00, 24:00]. 
-     * @return TimeRanges Time period available for maintenance after modification in the format of 10:00-12:00. Each period lasts from half an hour to three hours, with the start time and end time aligned by half-hour. Up to two time periods can be set. Start and end time range: [00:00, 24:00].
+     * Get The modified maintenance time slot. Among them, each time period is in the format of 10:00-12:00. The start and end time is aligned by half hour. The shortest is half hour and the longest is three hours. Up to two time periods can be set. The start and end time ranges from [00:00, 24:00].
+Description: The following is an example of setting two time periods in json.
+[
+    "01:00-01:30",
+    "02:00-02:30"
+  ] 
+     * @return TimeRanges The modified maintenance time slot. Among them, each time period is in the format of 10:00-12:00. The start and end time is aligned by half hour. The shortest is half hour and the longest is three hours. Up to two time periods can be set. The start and end time ranges from [00:00, 24:00].
+Description: The following is an example of setting two time periods in json.
+[
+    "01:00-01:30",
+    "02:00-02:30"
+  ]
      */
     public String [] getTimeRanges() {
         return this.TimeRanges;
     }
 
     /**
-     * Set Time period available for maintenance after modification in the format of 10:00-12:00. Each period lasts from half an hour to three hours, with the start time and end time aligned by half-hour. Up to two time periods can be set. Start and end time range: [00:00, 24:00].
-     * @param TimeRanges Time period available for maintenance after modification in the format of 10:00-12:00. Each period lasts from half an hour to three hours, with the start time and end time aligned by half-hour. Up to two time periods can be set. Start and end time range: [00:00, 24:00].
+     * Set The modified maintenance time slot. Among them, each time period is in the format of 10:00-12:00. The start and end time is aligned by half hour. The shortest is half hour and the longest is three hours. Up to two time periods can be set. The start and end time ranges from [00:00, 24:00].
+Description: The following is an example of setting two time periods in json.
+[
+    "01:00-01:30",
+    "02:00-02:30"
+  ]
+     * @param TimeRanges The modified maintenance time slot. Among them, each time period is in the format of 10:00-12:00. The start and end time is aligned by half hour. The shortest is half hour and the longest is three hours. Up to two time periods can be set. The start and end time ranges from [00:00, 24:00].
+Description: The following is an example of setting two time periods in json.
+[
+    "01:00-01:30",
+    "02:00-02:30"
+  ]
      */
     public void setTimeRanges(String [] TimeRanges) {
         this.TimeRanges = TimeRanges;
     }
 
     /**
-     * Get Specifies for which day to modify the time period. Value range: Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday. If it is not specified or is left blank, the time period will be modified for every day by default. 
-     * @return Weekdays Specifies for which day to modify the time period. Value range: Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday. If it is not specified or is left blank, the time period will be modified for every day by default.
+     * Get Specify which day to modify the maintenance time slot. Possible values are: monday, tuesday, wednesday, thursday, friday, saturday, sunday. If not specified or empty, modify all seven days of the week by default.
+Description: The json example for modifying more than one day is as follows.
+[
+    "monday",
+    "tuesday"
+  ] 
+     * @return Weekdays Specify which day to modify the maintenance time slot. Possible values are: monday, tuesday, wednesday, thursday, friday, saturday, sunday. If not specified or empty, modify all seven days of the week by default.
+Description: The json example for modifying more than one day is as follows.
+[
+    "monday",
+    "tuesday"
+  ]
      */
     public String [] getWeekdays() {
         return this.Weekdays;
     }
 
     /**
-     * Set Specifies for which day to modify the time period. Value range: Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday. If it is not specified or is left blank, the time period will be modified for every day by default.
-     * @param Weekdays Specifies for which day to modify the time period. Value range: Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday. If it is not specified or is left blank, the time period will be modified for every day by default.
+     * Set Specify which day to modify the maintenance time slot. Possible values are: monday, tuesday, wednesday, thursday, friday, saturday, sunday. If not specified or empty, modify all seven days of the week by default.
+Description: The json example for modifying more than one day is as follows.
+[
+    "monday",
+    "tuesday"
+  ]
+     * @param Weekdays Specify which day to modify the maintenance time slot. Possible values are: monday, tuesday, wednesday, thursday, friday, saturday, sunday. If not specified or empty, modify all seven days of the week by default.
+Description: The json example for modifying more than one day is as follows.
+[
+    "monday",
+    "tuesday"
+  ]
      */
     public void setWeekdays(String [] Weekdays) {
         this.Weekdays = Weekdays;
     }
 
     /**
-     * Get Data delay threshold. It takes effect only for source instance and disaster recovery instance. Default value: 10. 
-     * @return MaxDelayTime Data delay threshold. It takes effect only for source instance and disaster recovery instance. Default value: 10.
+     * Get Data latency threshold (seconds), only applicable to primary instance and disaster recovery instance. No modification by default to keep the original threshold. Value ranges from 1 to 10 integers. 
+     * @return MaxDelayTime Data latency threshold (seconds), only applicable to primary instance and disaster recovery instance. No modification by default to keep the original threshold. Value ranges from 1 to 10 integers.
      */
     public Long getMaxDelayTime() {
         return this.MaxDelayTime;
     }
 
     /**
-     * Set Data delay threshold. It takes effect only for source instance and disaster recovery instance. Default value: 10.
-     * @param MaxDelayTime Data delay threshold. It takes effect only for source instance and disaster recovery instance. Default value: 10.
+     * Set Data latency threshold (seconds), only applicable to primary instance and disaster recovery instance. No modification by default to keep the original threshold. Value ranges from 1 to 10 integers.
+     * @param MaxDelayTime Data latency threshold (seconds), only applicable to primary instance and disaster recovery instance. No modification by default to keep the original threshold. Value ranges from 1 to 10 integers.
      */
     public void setMaxDelayTime(Long MaxDelayTime) {
         this.MaxDelayTime = MaxDelayTime;

@@ -24,46 +24,61 @@ import java.util.HashMap;
 public class ReloadBalanceProxyNodeRequest extends AbstractModel {
 
     /**
-    * Proxy group ID
+    * Proxy group ID, which can be obtained through the [DescribeCdbProxyInfo](https://www.tencentcloud.com/document/api/236/90585?from_cn_redirect=1) API.
     */
     @SerializedName("ProxyGroupId")
     @Expose
     private String ProxyGroupId;
 
     /**
-    * Address ID of the proxy group
+    * Proxy group address ID. You can obtain it through the API [DescribeCdbProxyInfo](https://www.tencentcloud.com/document/api/236/90585?from_cn_redirect=1).
+Note:
+1. For dual-node instances, this parameter is optional. If not provided, load balancing will be performed for ALL proxy group addresses.
+2. For cloud disk edition instances, this parameter is required.
     */
     @SerializedName("ProxyAddressId")
     @Expose
     private String ProxyAddressId;
 
     /**
-     * Get Proxy group ID 
-     * @return ProxyGroupId Proxy group ID
+     * Get Proxy group ID, which can be obtained through the [DescribeCdbProxyInfo](https://www.tencentcloud.com/document/api/236/90585?from_cn_redirect=1) API. 
+     * @return ProxyGroupId Proxy group ID, which can be obtained through the [DescribeCdbProxyInfo](https://www.tencentcloud.com/document/api/236/90585?from_cn_redirect=1) API.
      */
     public String getProxyGroupId() {
         return this.ProxyGroupId;
     }
 
     /**
-     * Set Proxy group ID
-     * @param ProxyGroupId Proxy group ID
+     * Set Proxy group ID, which can be obtained through the [DescribeCdbProxyInfo](https://www.tencentcloud.com/document/api/236/90585?from_cn_redirect=1) API.
+     * @param ProxyGroupId Proxy group ID, which can be obtained through the [DescribeCdbProxyInfo](https://www.tencentcloud.com/document/api/236/90585?from_cn_redirect=1) API.
      */
     public void setProxyGroupId(String ProxyGroupId) {
         this.ProxyGroupId = ProxyGroupId;
     }
 
     /**
-     * Get Address ID of the proxy group 
-     * @return ProxyAddressId Address ID of the proxy group
+     * Get Proxy group address ID. You can obtain it through the API [DescribeCdbProxyInfo](https://www.tencentcloud.com/document/api/236/90585?from_cn_redirect=1).
+Note:
+1. For dual-node instances, this parameter is optional. If not provided, load balancing will be performed for ALL proxy group addresses.
+2. For cloud disk edition instances, this parameter is required. 
+     * @return ProxyAddressId Proxy group address ID. You can obtain it through the API [DescribeCdbProxyInfo](https://www.tencentcloud.com/document/api/236/90585?from_cn_redirect=1).
+Note:
+1. For dual-node instances, this parameter is optional. If not provided, load balancing will be performed for ALL proxy group addresses.
+2. For cloud disk edition instances, this parameter is required.
      */
     public String getProxyAddressId() {
         return this.ProxyAddressId;
     }
 
     /**
-     * Set Address ID of the proxy group
-     * @param ProxyAddressId Address ID of the proxy group
+     * Set Proxy group address ID. You can obtain it through the API [DescribeCdbProxyInfo](https://www.tencentcloud.com/document/api/236/90585?from_cn_redirect=1).
+Note:
+1. For dual-node instances, this parameter is optional. If not provided, load balancing will be performed for ALL proxy group addresses.
+2. For cloud disk edition instances, this parameter is required.
+     * @param ProxyAddressId Proxy group address ID. You can obtain it through the API [DescribeCdbProxyInfo](https://www.tencentcloud.com/document/api/236/90585?from_cn_redirect=1).
+Note:
+1. For dual-node instances, this parameter is optional. If not provided, load balancing will be performed for ALL proxy group addresses.
+2. For cloud disk edition instances, this parameter is required.
      */
     public void setProxyAddressId(String ProxyAddressId) {
         this.ProxyAddressId = ProxyAddressId;

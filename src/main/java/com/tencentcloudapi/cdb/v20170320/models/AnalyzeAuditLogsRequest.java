@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class AnalyzeAuditLogsRequest extends AbstractModel {
 
     /**
-    * Instance ID
+    * Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
     */
     @SerializedName("InstanceId")
     @Expose
@@ -52,7 +52,7 @@ public class AnalyzeAuditLogsRequest extends AbstractModel {
     private AggregationCondition [] AggregationConditions;
 
     /**
-    * This parameter is disused. The result set of the audit log filtered by this condition is set as the analysis log.
+    * Deprecated.
     */
     @SerializedName("AuditLogFilter")
     @Expose
@@ -66,16 +66,16 @@ public class AnalyzeAuditLogsRequest extends AbstractModel {
     private InstanceAuditLogFilters [] LogFilter;
 
     /**
-     * Get Instance ID 
-     * @return InstanceId Instance ID
+     * Get Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API. 
+     * @return InstanceId Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Instance ID
-     * @param InstanceId Instance ID
+     * Set Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
+     * @param InstanceId Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
@@ -130,17 +130,21 @@ public class AnalyzeAuditLogsRequest extends AbstractModel {
     }
 
     /**
-     * Get This parameter is disused. The result set of the audit log filtered by this condition is set as the analysis log. 
-     * @return AuditLogFilter This parameter is disused. The result set of the audit log filtered by this condition is set as the analysis log.
+     * Get Deprecated. 
+     * @return AuditLogFilter Deprecated.
+     * @deprecated
      */
+    @Deprecated
     public AuditLogFilter getAuditLogFilter() {
         return this.AuditLogFilter;
     }
 
     /**
-     * Set This parameter is disused. The result set of the audit log filtered by this condition is set as the analysis log.
-     * @param AuditLogFilter This parameter is disused. The result set of the audit log filtered by this condition is set as the analysis log.
+     * Set Deprecated.
+     * @param AuditLogFilter Deprecated.
+     * @deprecated
      */
+    @Deprecated
     public void setAuditLogFilter(AuditLogFilter AuditLogFilter) {
         this.AuditLogFilter = AuditLogFilter;
     }
