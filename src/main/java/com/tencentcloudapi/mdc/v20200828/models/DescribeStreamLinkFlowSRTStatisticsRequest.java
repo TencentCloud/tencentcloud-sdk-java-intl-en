@@ -75,6 +75,13 @@ It must be in UTC format, such as `2020-01-01T12:00:00Z`.
     private String Period;
 
     /**
+    * Peer IP address
+    */
+    @SerializedName("RemoteIp")
+    @Expose
+    private String RemoteIp;
+
+    /**
      * Get The flow ID. 
      * @return FlowId The flow ID.
      */
@@ -194,6 +201,22 @@ It must be in UTC format, such as `2020-01-01T12:00:00Z`.
         this.Period = Period;
     }
 
+    /**
+     * Get Peer IP address 
+     * @return RemoteIp Peer IP address
+     */
+    public String getRemoteIp() {
+        return this.RemoteIp;
+    }
+
+    /**
+     * Set Peer IP address
+     * @param RemoteIp Peer IP address
+     */
+    public void setRemoteIp(String RemoteIp) {
+        this.RemoteIp = RemoteIp;
+    }
+
     public DescribeStreamLinkFlowSRTStatisticsRequest() {
     }
 
@@ -223,6 +246,9 @@ It must be in UTC format, such as `2020-01-01T12:00:00Z`.
         if (source.Period != null) {
             this.Period = new String(source.Period);
         }
+        if (source.RemoteIp != null) {
+            this.RemoteIp = new String(source.RemoteIp);
+        }
     }
 
 
@@ -237,6 +263,7 @@ It must be in UTC format, such as `2020-01-01T12:00:00Z`.
         this.setParamSimple(map, prefix + "StartTime", this.StartTime);
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
         this.setParamSimple(map, prefix + "Period", this.Period);
+        this.setParamSimple(map, prefix + "RemoteIp", this.RemoteIp);
 
     }
 }
