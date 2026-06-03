@@ -708,6 +708,17 @@ This API is used to query audit rules in current region.
     }
 
     /**
+     *This API is used to query cloud disk edition instance info.
+     * @param req DescribeClusterInfoRequest
+     * @return DescribeClusterInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeClusterInfoResponse DescribeClusterInfo(DescribeClusterInfoRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeClusterInfo", DescribeClusterInfoResponse.class);
+    }
+
+    /**
      *This API is used to query cloud database version attributes, including whether database encryption and database audit are supported, and other features.
      * @param req DescribeDBFeaturesRequest
      * @return DescribeDBFeaturesResponse

@@ -564,6 +564,9 @@ public enum CdbErrorCode {
      /* The resource is unavailable. */
      RESOURCEUNAVAILABLE("ResourceUnavailable"),
      
+     /* Unauthorized operation. */
+     UNAUTHORIZEDOPERATION("UnauthorizedOperation"),
+     
      /* Verification failed. Insufficient permissions. */
      UNAUTHORIZEDOPERATION_NOTENOUGHPRIVILEGES("UnauthorizedOperation.NotEnoughPrivileges"),
      

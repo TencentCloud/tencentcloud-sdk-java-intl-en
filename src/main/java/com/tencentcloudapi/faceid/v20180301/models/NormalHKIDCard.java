@@ -108,7 +108,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String CurrentIssueDate;
 
     /**
-    * Hong kong identity card version.
+    * Hong Kong identity card version number, HKID-2003: 03 edition ID card, HKID-2018: 18 edition ID card
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("HKIDVersion")
@@ -332,9 +332,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Hong kong identity card version.
+     * Get Hong Kong identity card version number, HKID-2003: 03 edition ID card, HKID-2018: 18 edition ID card
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return HKIDVersion Hong kong identity card version.
+     * @return HKIDVersion Hong Kong identity card version number, HKID-2003: 03 edition ID card, HKID-2018: 18 edition ID card
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getHKIDVersion() {
@@ -342,9 +342,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Hong kong identity card version.
+     * Set Hong Kong identity card version number, HKID-2003: 03 edition ID card, HKID-2018: 18 edition ID card
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param HKIDVersion Hong kong identity card version.
+     * @param HKIDVersion Hong Kong identity card version number, HKID-2003: 03 edition ID card, HKID-2018: 18 edition ID card
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setHKIDVersion(String HKIDVersion) {

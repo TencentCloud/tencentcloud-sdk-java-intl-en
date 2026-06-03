@@ -96,6 +96,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String Seq;
 
     /**
+    * Describe the detailed reason why the current request was rejected in the liveness phase. This parameter only applies to the PLUS edition eKYC service.
+-Details as follows:
+01-User eyes closed throughout
+02-User not completed specified action
+03-Suspected rephotography attack
+04-Suspected Synthesis Attack
+05-Suspected fraudulent template
+06-Suspected watermark
+07-Reflection validation failed
+08 - Suspected change of person midway
+09-Poor face quality
+10 - Distance validation failed
+11-Suspected adversarial sample attack
+12 - Suspected attack traces in the mouth area
+13 - Suspected attack traces exist in the eye area
+14 - Eye or mouth obstruction
+Note: This field may return null, indicating that no valid values can be obtained.
+Example value: ["01"].
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("LivenessInfoTag")
+    @Expose
+    private String [] LivenessInfoTag;
+
+    /**
      * Get The final result of this verification. `0` indicates that the person is the same as that in the photo.
 Note: This field may return null, indicating that no valid values can be obtained. 
      * @return ErrorCode The final result of this verification. `0` indicates that the person is the same as that in the photo.
@@ -275,6 +300,94 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.Seq = Seq;
     }
 
+    /**
+     * Get Describe the detailed reason why the current request was rejected in the liveness phase. This parameter only applies to the PLUS edition eKYC service.
+-Details as follows:
+01-User eyes closed throughout
+02-User not completed specified action
+03-Suspected rephotography attack
+04-Suspected Synthesis Attack
+05-Suspected fraudulent template
+06-Suspected watermark
+07-Reflection validation failed
+08 - Suspected change of person midway
+09-Poor face quality
+10 - Distance validation failed
+11-Suspected adversarial sample attack
+12 - Suspected attack traces in the mouth area
+13 - Suspected attack traces exist in the eye area
+14 - Eye or mouth obstruction
+Note: This field may return null, indicating that no valid values can be obtained.
+Example value: ["01"].
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return LivenessInfoTag Describe the detailed reason why the current request was rejected in the liveness phase. This parameter only applies to the PLUS edition eKYC service.
+-Details as follows:
+01-User eyes closed throughout
+02-User not completed specified action
+03-Suspected rephotography attack
+04-Suspected Synthesis Attack
+05-Suspected fraudulent template
+06-Suspected watermark
+07-Reflection validation failed
+08 - Suspected change of person midway
+09-Poor face quality
+10 - Distance validation failed
+11-Suspected adversarial sample attack
+12 - Suspected attack traces in the mouth area
+13 - Suspected attack traces exist in the eye area
+14 - Eye or mouth obstruction
+Note: This field may return null, indicating that no valid values can be obtained.
+Example value: ["01"].
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String [] getLivenessInfoTag() {
+        return this.LivenessInfoTag;
+    }
+
+    /**
+     * Set Describe the detailed reason why the current request was rejected in the liveness phase. This parameter only applies to the PLUS edition eKYC service.
+-Details as follows:
+01-User eyes closed throughout
+02-User not completed specified action
+03-Suspected rephotography attack
+04-Suspected Synthesis Attack
+05-Suspected fraudulent template
+06-Suspected watermark
+07-Reflection validation failed
+08 - Suspected change of person midway
+09-Poor face quality
+10 - Distance validation failed
+11-Suspected adversarial sample attack
+12 - Suspected attack traces in the mouth area
+13 - Suspected attack traces exist in the eye area
+14 - Eye or mouth obstruction
+Note: This field may return null, indicating that no valid values can be obtained.
+Example value: ["01"].
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param LivenessInfoTag Describe the detailed reason why the current request was rejected in the liveness phase. This parameter only applies to the PLUS edition eKYC service.
+-Details as follows:
+01-User eyes closed throughout
+02-User not completed specified action
+03-Suspected rephotography attack
+04-Suspected Synthesis Attack
+05-Suspected fraudulent template
+06-Suspected watermark
+07-Reflection validation failed
+08 - Suspected change of person midway
+09-Poor face quality
+10 - Distance validation failed
+11-Suspected adversarial sample attack
+12 - Suspected attack traces in the mouth area
+13 - Suspected attack traces exist in the eye area
+14 - Eye or mouth obstruction
+Note: This field may return null, indicating that no valid values can be obtained.
+Example value: ["01"].
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setLivenessInfoTag(String [] LivenessInfoTag) {
+        this.LivenessInfoTag = LivenessInfoTag;
+    }
+
     public VerificationDetail() {
     }
 
@@ -310,6 +423,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.Seq != null) {
             this.Seq = new String(source.Seq);
         }
+        if (source.LivenessInfoTag != null) {
+            this.LivenessInfoTag = new String[source.LivenessInfoTag.length];
+            for (int i = 0; i < source.LivenessInfoTag.length; i++) {
+                this.LivenessInfoTag[i] = new String(source.LivenessInfoTag[i]);
+            }
+        }
     }
 
 
@@ -326,6 +445,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "ReqTimestamp", this.ReqTimestamp);
         this.setParamSimple(map, prefix + "Similarity", this.Similarity);
         this.setParamSimple(map, prefix + "Seq", this.Seq);
+        this.setParamArraySimple(map, prefix + "LivenessInfoTag.", this.LivenessInfoTag);
 
     }
 }

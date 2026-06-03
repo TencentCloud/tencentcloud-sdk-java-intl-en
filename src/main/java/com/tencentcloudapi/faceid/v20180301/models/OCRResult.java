@@ -24,14 +24,15 @@ import java.util.HashMap;
 public class OCRResult extends AbstractModel {
 
     /**
-    * Is the indentity verification or OCR process passed
+    * <p>Whether the identity authentication or OCR process is successful.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("IsPass")
     @Expose
     private Boolean IsPass;
 
     /**
-    * The Base64 of ID card image
+    * <p>Base64 of the ID image</p>
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("CardImageBase64")
@@ -39,75 +40,85 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String CardImageBase64;
 
     /**
-    * OCR result of the ID card.
+    * <p>ID card recognition result</p>
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("CardInfo")
     @Expose
     private CardInfo CardInfo;
 
     /**
-    * OCR result of the ID card.
+    * <p>Document recognition result (when CheckMode value is 4, return the OriginalCardInfo field; other scenarios return the current field)</p>
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("NormalCardInfo")
     @Expose
     private NormalCardInfo NormalCardInfo;
 
     /**
-    * The request id
+    * <p>Request id</p>
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
 
     /**
-    * Base64 of cropped image of ID card
+    * <p>Base64 of the cropped ID image</p>
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("CardCutImageBase64")
     @Expose
     private String CardCutImageBase64;
 
     /**
-    * Base64 of the cropped image on the reverse side of the ID card
+    * <p>Base64 of the cropped image of the back side of the ID</p>
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("CardBackCutImageBase64")
     @Expose
     private String CardBackCutImageBase64;
 
     /**
-    * Card Warning Information
-
--9101 Alarm for covered certificate,
--9102 Alarm for photocopied certificate,
--9103 Alarm for photographed certificate,
--9104 Alarm for PS certificate,
--9107 Alarm for reflective certificate,
--9108 Alarm for blurry image,
--9109 This capability is not enabled.
+    * <p>Alarm code</p><p>Enumeration value:</p><ul><li>-9101: Alarm for incomplete document border</li><li>-9102: Alarm for document photocopy</li><li>-9103: Alarm for rephotographing</li><li>-9104: PS alarm</li><li>-9107: Reflective alarm</li><li>-9108: Blurry alarm</li><li>-9109: Alarm capability not enabled</li></ul>
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("WarnCardInfos")
     @Expose
     private Long [] WarnCardInfos;
 
     /**
-     * Get Is the indentity verification or OCR process passed 
-     * @return IsPass Is the indentity verification or OCR process passed
+    * <p>Original document recognition information (the current field will be returned when CheckMode value is 4)</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("OriginalCardInfo")
+    @Expose
+    private String OriginalCardInfo;
+
+    /**
+     * Get <p>Whether the identity authentication or OCR process is successful.</p>
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return IsPass <p>Whether the identity authentication or OCR process is successful.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Boolean getIsPass() {
         return this.IsPass;
     }
 
     /**
-     * Set Is the indentity verification or OCR process passed
-     * @param IsPass Is the indentity verification or OCR process passed
+     * Set <p>Whether the identity authentication or OCR process is successful.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param IsPass <p>Whether the identity authentication or OCR process is successful.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setIsPass(Boolean IsPass) {
         this.IsPass = IsPass;
     }
 
     /**
-     * Get The Base64 of ID card image
+     * Get <p>Base64 of the ID image</p>
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return CardImageBase64 The Base64 of ID card image
+     * @return CardImageBase64 <p>Base64 of the ID image</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getCardImageBase64() {
@@ -115,9 +126,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set The Base64 of ID card image
+     * Set <p>Base64 of the ID image</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param CardImageBase64 The Base64 of ID card image
+     * @param CardImageBase64 <p>Base64 of the ID image</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setCardImageBase64(String CardImageBase64) {
@@ -125,8 +136,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get OCR result of the ID card. 
-     * @return CardInfo OCR result of the ID card.
+     * Get <p>ID card recognition result</p>
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return CardInfo <p>ID card recognition result</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      * @deprecated
      */
     @Deprecated
@@ -135,8 +148,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set OCR result of the ID card.
-     * @param CardInfo OCR result of the ID card.
+     * Set <p>ID card recognition result</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param CardInfo <p>ID card recognition result</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      * @deprecated
      */
     @Deprecated
@@ -145,115 +160,123 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get OCR result of the ID card. 
-     * @return NormalCardInfo OCR result of the ID card.
+     * Get <p>Document recognition result (when CheckMode value is 4, return the OriginalCardInfo field; other scenarios return the current field)</p>
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return NormalCardInfo <p>Document recognition result (when CheckMode value is 4, return the OriginalCardInfo field; other scenarios return the current field)</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public NormalCardInfo getNormalCardInfo() {
         return this.NormalCardInfo;
     }
 
     /**
-     * Set OCR result of the ID card.
-     * @param NormalCardInfo OCR result of the ID card.
+     * Set <p>Document recognition result (when CheckMode value is 4, return the OriginalCardInfo field; other scenarios return the current field)</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param NormalCardInfo <p>Document recognition result (when CheckMode value is 4, return the OriginalCardInfo field; other scenarios return the current field)</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setNormalCardInfo(NormalCardInfo NormalCardInfo) {
         this.NormalCardInfo = NormalCardInfo;
     }
 
     /**
-     * Get The request id 
-     * @return RequestId The request id
+     * Get <p>Request id</p>
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return RequestId <p>Request id</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getRequestId() {
         return this.RequestId;
     }
 
     /**
-     * Set The request id
-     * @param RequestId The request id
+     * Set <p>Request id</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param RequestId <p>Request id</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setRequestId(String RequestId) {
         this.RequestId = RequestId;
     }
 
     /**
-     * Get Base64 of cropped image of ID card 
-     * @return CardCutImageBase64 Base64 of cropped image of ID card
+     * Get <p>Base64 of the cropped ID image</p>
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return CardCutImageBase64 <p>Base64 of the cropped ID image</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getCardCutImageBase64() {
         return this.CardCutImageBase64;
     }
 
     /**
-     * Set Base64 of cropped image of ID card
-     * @param CardCutImageBase64 Base64 of cropped image of ID card
+     * Set <p>Base64 of the cropped ID image</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param CardCutImageBase64 <p>Base64 of the cropped ID image</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setCardCutImageBase64(String CardCutImageBase64) {
         this.CardCutImageBase64 = CardCutImageBase64;
     }
 
     /**
-     * Get Base64 of the cropped image on the reverse side of the ID card 
-     * @return CardBackCutImageBase64 Base64 of the cropped image on the reverse side of the ID card
+     * Get <p>Base64 of the cropped image of the back side of the ID</p>
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return CardBackCutImageBase64 <p>Base64 of the cropped image of the back side of the ID</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getCardBackCutImageBase64() {
         return this.CardBackCutImageBase64;
     }
 
     /**
-     * Set Base64 of the cropped image on the reverse side of the ID card
-     * @param CardBackCutImageBase64 Base64 of the cropped image on the reverse side of the ID card
+     * Set <p>Base64 of the cropped image of the back side of the ID</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param CardBackCutImageBase64 <p>Base64 of the cropped image of the back side of the ID</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setCardBackCutImageBase64(String CardBackCutImageBase64) {
         this.CardBackCutImageBase64 = CardBackCutImageBase64;
     }
 
     /**
-     * Get Card Warning Information
-
--9101 Alarm for covered certificate,
--9102 Alarm for photocopied certificate,
--9103 Alarm for photographed certificate,
--9104 Alarm for PS certificate,
--9107 Alarm for reflective certificate,
--9108 Alarm for blurry image,
--9109 This capability is not enabled. 
-     * @return WarnCardInfos Card Warning Information
-
--9101 Alarm for covered certificate,
--9102 Alarm for photocopied certificate,
--9103 Alarm for photographed certificate,
--9104 Alarm for PS certificate,
--9107 Alarm for reflective certificate,
--9108 Alarm for blurry image,
--9109 This capability is not enabled.
+     * Get <p>Alarm code</p><p>Enumeration value:</p><ul><li>-9101: Alarm for incomplete document border</li><li>-9102: Alarm for document photocopy</li><li>-9103: Alarm for rephotographing</li><li>-9104: PS alarm</li><li>-9107: Reflective alarm</li><li>-9108: Blurry alarm</li><li>-9109: Alarm capability not enabled</li></ul>
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return WarnCardInfos <p>Alarm code</p><p>Enumeration value:</p><ul><li>-9101: Alarm for incomplete document border</li><li>-9102: Alarm for document photocopy</li><li>-9103: Alarm for rephotographing</li><li>-9104: PS alarm</li><li>-9107: Reflective alarm</li><li>-9108: Blurry alarm</li><li>-9109: Alarm capability not enabled</li></ul>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long [] getWarnCardInfos() {
         return this.WarnCardInfos;
     }
 
     /**
-     * Set Card Warning Information
-
--9101 Alarm for covered certificate,
--9102 Alarm for photocopied certificate,
--9103 Alarm for photographed certificate,
--9104 Alarm for PS certificate,
--9107 Alarm for reflective certificate,
--9108 Alarm for blurry image,
--9109 This capability is not enabled.
-     * @param WarnCardInfos Card Warning Information
-
--9101 Alarm for covered certificate,
--9102 Alarm for photocopied certificate,
--9103 Alarm for photographed certificate,
--9104 Alarm for PS certificate,
--9107 Alarm for reflective certificate,
--9108 Alarm for blurry image,
--9109 This capability is not enabled.
+     * Set <p>Alarm code</p><p>Enumeration value:</p><ul><li>-9101: Alarm for incomplete document border</li><li>-9102: Alarm for document photocopy</li><li>-9103: Alarm for rephotographing</li><li>-9104: PS alarm</li><li>-9107: Reflective alarm</li><li>-9108: Blurry alarm</li><li>-9109: Alarm capability not enabled</li></ul>
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param WarnCardInfos <p>Alarm code</p><p>Enumeration value:</p><ul><li>-9101: Alarm for incomplete document border</li><li>-9102: Alarm for document photocopy</li><li>-9103: Alarm for rephotographing</li><li>-9104: PS alarm</li><li>-9107: Reflective alarm</li><li>-9108: Blurry alarm</li><li>-9109: Alarm capability not enabled</li></ul>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setWarnCardInfos(Long [] WarnCardInfos) {
         this.WarnCardInfos = WarnCardInfos;
+    }
+
+    /**
+     * Get <p>Original document recognition information (the current field will be returned when CheckMode value is 4)</p>
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return OriginalCardInfo <p>Original document recognition information (the current field will be returned when CheckMode value is 4)</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getOriginalCardInfo() {
+        return this.OriginalCardInfo;
+    }
+
+    /**
+     * Set <p>Original document recognition information (the current field will be returned when CheckMode value is 4)</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param OriginalCardInfo <p>Original document recognition information (the current field will be returned when CheckMode value is 4)</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setOriginalCardInfo(String OriginalCardInfo) {
+        this.OriginalCardInfo = OriginalCardInfo;
     }
 
     public OCRResult() {
@@ -291,6 +314,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 this.WarnCardInfos[i] = new Long(source.WarnCardInfos[i]);
             }
         }
+        if (source.OriginalCardInfo != null) {
+            this.OriginalCardInfo = new String(source.OriginalCardInfo);
+        }
     }
 
 
@@ -306,6 +332,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "CardCutImageBase64", this.CardCutImageBase64);
         this.setParamSimple(map, prefix + "CardBackCutImageBase64", this.CardBackCutImageBase64);
         this.setParamArraySimple(map, prefix + "WarnCardInfos.", this.WarnCardInfos);
+        this.setParamSimple(map, prefix + "OriginalCardInfo", this.OriginalCardInfo);
 
     }
 }

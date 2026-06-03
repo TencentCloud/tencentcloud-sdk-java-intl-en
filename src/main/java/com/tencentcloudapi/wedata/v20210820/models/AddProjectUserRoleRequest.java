@@ -38,7 +38,7 @@ public class AddProjectUserRoleRequest extends AbstractModel {
     private String [] UserIds;
 
     /**
-    * Role id
+    * Role ID
     */
     @SerializedName("RoleIds")
     @Expose
@@ -77,16 +77,16 @@ public class AddProjectUserRoleRequest extends AbstractModel {
     }
 
     /**
-     * Get Role id 
-     * @return RoleIds Role id
+     * Get Role ID 
+     * @return RoleIds Role ID
      */
     public String [] getRoleIds() {
         return this.RoleIds;
     }
 
     /**
-     * Set Role id
-     * @param RoleIds Role id
+     * Set Role ID
+     * @param RoleIds Role ID
      */
     public void setRoleIds(String [] RoleIds) {
         this.RoleIds = RoleIds;
