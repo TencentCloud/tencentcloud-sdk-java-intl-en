@@ -3,6 +3,9 @@ public enum LkeapErrorCode {
      /* Operation failed. */
      FAILEDOPERATION("FailedOperation"),
      
+     /* Engine layer internal error. */
+     FAILEDOPERATION_ENGINESERVERERROR("FailedOperation.EngineServerError"),
+     
      /*  */
      FAILEDOPERATION_FILEPARSEERROR("FailedOperation.FileParseError"),
      

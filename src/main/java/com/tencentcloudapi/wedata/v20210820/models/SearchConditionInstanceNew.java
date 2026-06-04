@@ -32,7 +32,7 @@ public class SearchConditionInstanceNew extends AbstractModel {
     private String ExecutionSpace;
 
     /**
-    * Business Products, options: <DATA_DEV / DATA_QUALITY / DATA_INTEGRATION, default DATA_DEV. Non-empty. Default own project
+    * Business Products, options: DATA_DEV, DATA_QUALITY, DATA_INTEGRATION, default DATA_DEV. Non-empty. Default own project
     */
     @SerializedName("ProductName")
     @Expose
@@ -66,16 +66,16 @@ public class SearchConditionInstanceNew extends AbstractModel {
     }
 
     /**
-     * Get Business Products, options: <DATA_DEV / DATA_QUALITY / DATA_INTEGRATION, default DATA_DEV. Non-empty. Default own project 
-     * @return ProductName Business Products, options: <DATA_DEV / DATA_QUALITY / DATA_INTEGRATION, default DATA_DEV. Non-empty. Default own project
+     * Get Business Products, options: DATA_DEV, DATA_QUALITY, DATA_INTEGRATION, default DATA_DEV. Non-empty. Default own project 
+     * @return ProductName Business Products, options: DATA_DEV, DATA_QUALITY, DATA_INTEGRATION, default DATA_DEV. Non-empty. Default own project
      */
     public String getProductName() {
         return this.ProductName;
     }
 
     /**
-     * Set Business Products, options: <DATA_DEV / DATA_QUALITY / DATA_INTEGRATION, default DATA_DEV. Non-empty. Default own project
-     * @param ProductName Business Products, options: <DATA_DEV / DATA_QUALITY / DATA_INTEGRATION, default DATA_DEV. Non-empty. Default own project
+     * Set Business Products, options: DATA_DEV, DATA_QUALITY, DATA_INTEGRATION, default DATA_DEV. Non-empty. Default own project
+     * @param ProductName Business Products, options: DATA_DEV, DATA_QUALITY, DATA_INTEGRATION, default DATA_DEV. Non-empty. Default own project
      */
     public void setProductName(String ProductName) {
         this.ProductName = ProductName;

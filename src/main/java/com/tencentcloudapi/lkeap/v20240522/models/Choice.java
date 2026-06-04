@@ -1,0 +1,162 @@
+/*
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+package com.tencentcloudapi.lkeap.v20240522.models;
+
+import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.annotations.Expose;
+import java.util.HashMap;
+
+public class Choice extends AbstractModel {
+
+    /**
+    * The end flag, which can be "stop" or "content_filter."
+"Stop" indicates normal output end.
+"Content_filter" appears only when streaming output review is enabled, indicating that the security review has not passed.
+    */
+    @SerializedName("FinishReason")
+    @Expose
+    private String FinishReason;
+
+    /**
+    * Incremental return value, used when making streaming calls.
+    */
+    @SerializedName("Delta")
+    @Expose
+    private Delta Delta;
+
+    /**
+    * Return value, used when making non-streaming calls.
+    */
+    @SerializedName("Message")
+    @Expose
+    private Message Message;
+
+    /**
+    * Index value, used when making streaming calls.
+    */
+    @SerializedName("Index")
+    @Expose
+    private Long Index;
+
+    /**
+     * Get The end flag, which can be "stop" or "content_filter."
+"Stop" indicates normal output end.
+"Content_filter" appears only when streaming output review is enabled, indicating that the security review has not passed. 
+     * @return FinishReason The end flag, which can be "stop" or "content_filter."
+"Stop" indicates normal output end.
+"Content_filter" appears only when streaming output review is enabled, indicating that the security review has not passed.
+     */
+    public String getFinishReason() {
+        return this.FinishReason;
+    }
+
+    /**
+     * Set The end flag, which can be "stop" or "content_filter."
+"Stop" indicates normal output end.
+"Content_filter" appears only when streaming output review is enabled, indicating that the security review has not passed.
+     * @param FinishReason The end flag, which can be "stop" or "content_filter."
+"Stop" indicates normal output end.
+"Content_filter" appears only when streaming output review is enabled, indicating that the security review has not passed.
+     */
+    public void setFinishReason(String FinishReason) {
+        this.FinishReason = FinishReason;
+    }
+
+    /**
+     * Get Incremental return value, used when making streaming calls. 
+     * @return Delta Incremental return value, used when making streaming calls.
+     */
+    public Delta getDelta() {
+        return this.Delta;
+    }
+
+    /**
+     * Set Incremental return value, used when making streaming calls.
+     * @param Delta Incremental return value, used when making streaming calls.
+     */
+    public void setDelta(Delta Delta) {
+        this.Delta = Delta;
+    }
+
+    /**
+     * Get Return value, used when making non-streaming calls. 
+     * @return Message Return value, used when making non-streaming calls.
+     */
+    public Message getMessage() {
+        return this.Message;
+    }
+
+    /**
+     * Set Return value, used when making non-streaming calls.
+     * @param Message Return value, used when making non-streaming calls.
+     */
+    public void setMessage(Message Message) {
+        this.Message = Message;
+    }
+
+    /**
+     * Get Index value, used when making streaming calls. 
+     * @return Index Index value, used when making streaming calls.
+     */
+    public Long getIndex() {
+        return this.Index;
+    }
+
+    /**
+     * Set Index value, used when making streaming calls.
+     * @param Index Index value, used when making streaming calls.
+     */
+    public void setIndex(Long Index) {
+        this.Index = Index;
+    }
+
+    public Choice() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Choice(Choice source) {
+        if (source.FinishReason != null) {
+            this.FinishReason = new String(source.FinishReason);
+        }
+        if (source.Delta != null) {
+            this.Delta = new Delta(source.Delta);
+        }
+        if (source.Message != null) {
+            this.Message = new Message(source.Message);
+        }
+        if (source.Index != null) {
+            this.Index = new Long(source.Index);
+        }
+    }
+
+
+    /**
+     * Internal implementation, normal users should not use it.
+     */
+    public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "FinishReason", this.FinishReason);
+        this.setParamObj(map, prefix + "Delta.", this.Delta);
+        this.setParamObj(map, prefix + "Message.", this.Message);
+        this.setParamSimple(map, prefix + "Index", this.Index);
+
+    }
+}
+
