@@ -24,56 +24,46 @@ import java.util.HashMap;
 public class DescribeRTMPPullSourceAddress extends AbstractModel {
 
     /**
-    * The TcUrl address of the RTMP origin server.
+    * 
     */
     @SerializedName("TcUrl")
     @Expose
     private String TcUrl;
 
     /**
-    * The StreamKey of the RTMP origin server.
-
-The concatenation rule for the RTMP origin server address is: $TcUrl/$StreamKey.
+    * 
     */
     @SerializedName("StreamKey")
     @Expose
     private String StreamKey;
 
     /**
-     * Get The TcUrl address of the RTMP origin server. 
-     * @return TcUrl The TcUrl address of the RTMP origin server.
+     * Get  
+     * @return TcUrl 
      */
     public String getTcUrl() {
         return this.TcUrl;
     }
 
     /**
-     * Set The TcUrl address of the RTMP origin server.
-     * @param TcUrl The TcUrl address of the RTMP origin server.
+     * Set 
+     * @param TcUrl 
      */
     public void setTcUrl(String TcUrl) {
         this.TcUrl = TcUrl;
     }
 
     /**
-     * Get The StreamKey of the RTMP origin server.
-
-The concatenation rule for the RTMP origin server address is: $TcUrl/$StreamKey. 
-     * @return StreamKey The StreamKey of the RTMP origin server.
-
-The concatenation rule for the RTMP origin server address is: $TcUrl/$StreamKey.
+     * Get  
+     * @return StreamKey 
      */
     public String getStreamKey() {
         return this.StreamKey;
     }
 
     /**
-     * Set The StreamKey of the RTMP origin server.
-
-The concatenation rule for the RTMP origin server address is: $TcUrl/$StreamKey.
-     * @param StreamKey The StreamKey of the RTMP origin server.
-
-The concatenation rule for the RTMP origin server address is: $TcUrl/$StreamKey.
+     * Set 
+     * @param StreamKey 
      */
     public void setStreamKey(String StreamKey) {
         this.StreamKey = StreamKey;

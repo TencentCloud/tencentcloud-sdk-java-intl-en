@@ -237,6 +237,9 @@ public enum TatErrorCode {
      /* Multi-factor authentication (MFA) does not exist. */
      UNAUTHORIZEDOPERATION_MFANOTFOUND("UnauthorizedOperation.MFANotFound"),
      
+     /*  */
+     UNAUTHORIZEDOPERATION_NEEDAPPROVAL("UnauthorizedOperation.NeedApproval"),
+     
      /* Unknown parameter error. */
      UNKNOWNPARAMETER("UnknownParameter"),
      

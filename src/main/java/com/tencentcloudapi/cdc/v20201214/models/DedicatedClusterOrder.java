@@ -173,49 +173,49 @@ Note: The returned value of this field may be null, indicating that no valid val
     private String OrderType;
 
     /**
-    * Acceptance Status
+    * 
     */
     @SerializedName("CheckStatus")
     @Expose
     private String CheckStatus;
 
     /**
-    * Expected Delivery Time
+    * 
     */
     @SerializedName("DeliverExpectTime")
     @Expose
     private String DeliverExpectTime;
 
     /**
-    * Actual Delivery Completion Time
+    * 
     */
     @SerializedName("DeliverFinishTime")
     @Expose
     private String DeliverFinishTime;
 
     /**
-    * Expected Acceptance Time
+    * 
     */
     @SerializedName("CheckExpectTime")
     @Expose
     private String CheckExpectTime;
 
     /**
-    * Actual Acceptance Completion Time
+    * 
     */
     @SerializedName("CheckFinishTime")
     @Expose
     private String CheckFinishTime;
 
     /**
-    * Order SLA
+    * 
     */
     @SerializedName("OrderSLA")
     @Expose
     private String OrderSLA;
 
     /**
-    * Order Payment Plan
+    * 
     */
     @SerializedName("OrderPayPlan")
     @Expose
@@ -240,7 +240,9 @@ Note: The returned value of this field may be null, indicating that no valid val
     /**
      * Get CDC type id (moved to the next level, obsolete and will be deleted later) 
      * @return DedicatedClusterTypeId CDC type id (moved to the next level, obsolete and will be deleted later)
+     * @deprecated
      */
+    @Deprecated
     public String getDedicatedClusterTypeId() {
         return this.DedicatedClusterTypeId;
     }
@@ -248,7 +250,9 @@ Note: The returned value of this field may be null, indicating that no valid val
     /**
      * Set CDC type id (moved to the next level, obsolete and will be deleted later)
      * @param DedicatedClusterTypeId CDC type id (moved to the next level, obsolete and will be deleted later)
+     * @deprecated
      */
+    @Deprecated
     public void setDedicatedClusterTypeId(String DedicatedClusterTypeId) {
         this.DedicatedClusterTypeId = DedicatedClusterTypeId;
     }
@@ -256,7 +260,9 @@ Note: The returned value of this field may be null, indicating that no valid val
     /**
      * Get List of supported storage types (moved to the next level, obsolete and will be deleted later) 
      * @return SupportedStorageType List of supported storage types (moved to the next level, obsolete and will be deleted later)
+     * @deprecated
      */
+    @Deprecated
     public String [] getSupportedStorageType() {
         return this.SupportedStorageType;
     }
@@ -264,7 +270,9 @@ Note: The returned value of this field may be null, indicating that no valid val
     /**
      * Set List of supported storage types (moved to the next level, obsolete and will be deleted later)
      * @param SupportedStorageType List of supported storage types (moved to the next level, obsolete and will be deleted later)
+     * @deprecated
      */
+    @Deprecated
     public void setSupportedStorageType(String [] SupportedStorageType) {
         this.SupportedStorageType = SupportedStorageType;
     }
@@ -272,7 +280,9 @@ Note: The returned value of this field may be null, indicating that no valid val
     /**
      * Get Supported uplink switch transmission rate (GiB) (moved to the next level, obsolete and will be deleted later) 
      * @return SupportedUplinkSpeed Supported uplink switch transmission rate (GiB) (moved to the next level, obsolete and will be deleted later)
+     * @deprecated
      */
+    @Deprecated
     public Long [] getSupportedUplinkSpeed() {
         return this.SupportedUplinkSpeed;
     }
@@ -280,7 +290,9 @@ Note: The returned value of this field may be null, indicating that no valid val
     /**
      * Set Supported uplink switch transmission rate (GiB) (moved to the next level, obsolete and will be deleted later)
      * @param SupportedUplinkSpeed Supported uplink switch transmission rate (GiB) (moved to the next level, obsolete and will be deleted later)
+     * @deprecated
      */
+    @Deprecated
     public void setSupportedUplinkSpeed(Long [] SupportedUplinkSpeed) {
         this.SupportedUplinkSpeed = SupportedUplinkSpeed;
     }
@@ -288,7 +300,9 @@ Note: The returned value of this field may be null, indicating that no valid val
     /**
      * Get List of supported instance families (moved to the next level, obsolete and will be deleted later) 
      * @return SupportedInstanceFamily List of supported instance families (moved to the next level, obsolete and will be deleted later)
+     * @deprecated
      */
+    @Deprecated
     public String [] getSupportedInstanceFamily() {
         return this.SupportedInstanceFamily;
     }
@@ -296,7 +310,9 @@ Note: The returned value of this field may be null, indicating that no valid val
     /**
      * Set List of supported instance families (moved to the next level, obsolete and will be deleted later)
      * @param SupportedInstanceFamily List of supported instance families (moved to the next level, obsolete and will be deleted later)
+     * @deprecated
      */
+    @Deprecated
     public void setSupportedInstanceFamily(String [] SupportedInstanceFamily) {
         this.SupportedInstanceFamily = SupportedInstanceFamily;
     }
@@ -578,112 +594,112 @@ Note: The returned value of this field may be null, indicating that no valid val
     }
 
     /**
-     * Get Acceptance Status 
-     * @return CheckStatus Acceptance Status
+     * Get  
+     * @return CheckStatus 
      */
     public String getCheckStatus() {
         return this.CheckStatus;
     }
 
     /**
-     * Set Acceptance Status
-     * @param CheckStatus Acceptance Status
+     * Set 
+     * @param CheckStatus 
      */
     public void setCheckStatus(String CheckStatus) {
         this.CheckStatus = CheckStatus;
     }
 
     /**
-     * Get Expected Delivery Time 
-     * @return DeliverExpectTime Expected Delivery Time
+     * Get  
+     * @return DeliverExpectTime 
      */
     public String getDeliverExpectTime() {
         return this.DeliverExpectTime;
     }
 
     /**
-     * Set Expected Delivery Time
-     * @param DeliverExpectTime Expected Delivery Time
+     * Set 
+     * @param DeliverExpectTime 
      */
     public void setDeliverExpectTime(String DeliverExpectTime) {
         this.DeliverExpectTime = DeliverExpectTime;
     }
 
     /**
-     * Get Actual Delivery Completion Time 
-     * @return DeliverFinishTime Actual Delivery Completion Time
+     * Get  
+     * @return DeliverFinishTime 
      */
     public String getDeliverFinishTime() {
         return this.DeliverFinishTime;
     }
 
     /**
-     * Set Actual Delivery Completion Time
-     * @param DeliverFinishTime Actual Delivery Completion Time
+     * Set 
+     * @param DeliverFinishTime 
      */
     public void setDeliverFinishTime(String DeliverFinishTime) {
         this.DeliverFinishTime = DeliverFinishTime;
     }
 
     /**
-     * Get Expected Acceptance Time 
-     * @return CheckExpectTime Expected Acceptance Time
+     * Get  
+     * @return CheckExpectTime 
      */
     public String getCheckExpectTime() {
         return this.CheckExpectTime;
     }
 
     /**
-     * Set Expected Acceptance Time
-     * @param CheckExpectTime Expected Acceptance Time
+     * Set 
+     * @param CheckExpectTime 
      */
     public void setCheckExpectTime(String CheckExpectTime) {
         this.CheckExpectTime = CheckExpectTime;
     }
 
     /**
-     * Get Actual Acceptance Completion Time 
-     * @return CheckFinishTime Actual Acceptance Completion Time
+     * Get  
+     * @return CheckFinishTime 
      */
     public String getCheckFinishTime() {
         return this.CheckFinishTime;
     }
 
     /**
-     * Set Actual Acceptance Completion Time
-     * @param CheckFinishTime Actual Acceptance Completion Time
+     * Set 
+     * @param CheckFinishTime 
      */
     public void setCheckFinishTime(String CheckFinishTime) {
         this.CheckFinishTime = CheckFinishTime;
     }
 
     /**
-     * Get Order SLA 
-     * @return OrderSLA Order SLA
+     * Get  
+     * @return OrderSLA 
      */
     public String getOrderSLA() {
         return this.OrderSLA;
     }
 
     /**
-     * Set Order SLA
-     * @param OrderSLA Order SLA
+     * Set 
+     * @param OrderSLA 
      */
     public void setOrderSLA(String OrderSLA) {
         this.OrderSLA = OrderSLA;
     }
 
     /**
-     * Get Order Payment Plan 
-     * @return OrderPayPlan Order Payment Plan
+     * Get  
+     * @return OrderPayPlan 
      */
     public String getOrderPayPlan() {
         return this.OrderPayPlan;
     }
 
     /**
-     * Set Order Payment Plan
-     * @param OrderPayPlan Order Payment Plan
+     * Set 
+     * @param OrderPayPlan 
      */
     public void setOrderPayPlan(String OrderPayPlan) {
         this.OrderPayPlan = OrderPayPlan;

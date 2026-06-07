@@ -24,115 +24,115 @@ import java.util.HashMap;
 public class HostDetailInfo extends AbstractModel {
 
     /**
-    * Type Family
+    * 
     */
     @SerializedName("HostTypeFamily")
     @Expose
     private String HostTypeFamily;
 
     /**
-    * Total CPU
+    * 
     */
     @SerializedName("CpuTotal")
     @Expose
     private Float CpuTotal;
 
     /**
-    * Available CPU
+    * 
     */
     @SerializedName("CpuAvailable")
     @Expose
     private Float CpuAvailable;
 
     /**
-    * Total Memory
+    * 
     */
     @SerializedName("MemTotal")
     @Expose
     private Float MemTotal;
 
     /**
-    * Available Memory
+    * 
     */
     @SerializedName("MemAvailable")
     @Expose
     private Float MemAvailable;
 
     /**
-     * Get Type Family 
-     * @return HostTypeFamily Type Family
+     * Get  
+     * @return HostTypeFamily 
      */
     public String getHostTypeFamily() {
         return this.HostTypeFamily;
     }
 
     /**
-     * Set Type Family
-     * @param HostTypeFamily Type Family
+     * Set 
+     * @param HostTypeFamily 
      */
     public void setHostTypeFamily(String HostTypeFamily) {
         this.HostTypeFamily = HostTypeFamily;
     }
 
     /**
-     * Get Total CPU 
-     * @return CpuTotal Total CPU
+     * Get  
+     * @return CpuTotal 
      */
     public Float getCpuTotal() {
         return this.CpuTotal;
     }
 
     /**
-     * Set Total CPU
-     * @param CpuTotal Total CPU
+     * Set 
+     * @param CpuTotal 
      */
     public void setCpuTotal(Float CpuTotal) {
         this.CpuTotal = CpuTotal;
     }
 
     /**
-     * Get Available CPU 
-     * @return CpuAvailable Available CPU
+     * Get  
+     * @return CpuAvailable 
      */
     public Float getCpuAvailable() {
         return this.CpuAvailable;
     }
 
     /**
-     * Set Available CPU
-     * @param CpuAvailable Available CPU
+     * Set 
+     * @param CpuAvailable 
      */
     public void setCpuAvailable(Float CpuAvailable) {
         this.CpuAvailable = CpuAvailable;
     }
 
     /**
-     * Get Total Memory 
-     * @return MemTotal Total Memory
+     * Get  
+     * @return MemTotal 
      */
     public Float getMemTotal() {
         return this.MemTotal;
     }
 
     /**
-     * Set Total Memory
-     * @param MemTotal Total Memory
+     * Set 
+     * @param MemTotal 
      */
     public void setMemTotal(Float MemTotal) {
         this.MemTotal = MemTotal;
     }
 
     /**
-     * Get Available Memory 
-     * @return MemAvailable Available Memory
+     * Get  
+     * @return MemAvailable 
      */
     public Float getMemAvailable() {
         return this.MemAvailable;
     }
 
     /**
-     * Set Available Memory
-     * @param MemAvailable Available Memory
+     * Set 
+     * @param MemAvailable 
      */
     public void setMemAvailable(Float MemAvailable) {
         this.MemAvailable = MemAvailable;

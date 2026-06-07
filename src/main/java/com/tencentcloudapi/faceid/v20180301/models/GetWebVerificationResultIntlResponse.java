@@ -65,8 +65,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String BestFrameBase64;
 
     /**
-    * Card recognize result.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Card recognize result
     */
     @SerializedName("OCRResult")
     @Expose
@@ -191,20 +190,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Card recognize result.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return OCRResult Card recognize result.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Card recognize result 
+     * @return OCRResult Card recognize result
      */
     public OCRResult [] getOCRResult() {
         return this.OCRResult;
     }
 
     /**
-     * Set Card recognize result.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param OCRResult Card recognize result.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Card recognize result
+     * @param OCRResult Card recognize result
      */
     public void setOCRResult(OCRResult [] OCRResult) {
         this.OCRResult = OCRResult;

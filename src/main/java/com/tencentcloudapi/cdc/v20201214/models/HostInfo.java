@@ -104,7 +104,9 @@ Note: The returned value of this field may be null, indicating that no valid val
     /**
      * Get Host IP 
      * @return HostIp Host IP
+     * @deprecated
      */
+    @Deprecated
     public String getHostIp() {
         return this.HostIp;
     }
@@ -112,7 +114,9 @@ Note: The returned value of this field may be null, indicating that no valid val
     /**
      * Set Host IP
      * @param HostIp Host IP
+     * @deprecated
      */
+    @Deprecated
     public void setHostIp(String HostIp) {
         this.HostIp = HostIp;
     }

@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DescribeOutputRTSPPullSettings extends AbstractModel {
 
     /**
-    * RTSP pull stream address list.
+    * 
     */
     @SerializedName("ServerUrls")
     @Expose
     private DescribeOutputRTSPPullServerUrl [] ServerUrls;
 
     /**
-     * Get RTSP pull stream address list. 
-     * @return ServerUrls RTSP pull stream address list.
+     * Get  
+     * @return ServerUrls 
      */
     public DescribeOutputRTSPPullServerUrl [] getServerUrls() {
         return this.ServerUrls;
     }
 
     /**
-     * Set RTSP pull stream address list.
-     * @param ServerUrls RTSP pull stream address list.
+     * Set 
+     * @param ServerUrls 
      */
     public void setServerUrls(DescribeOutputRTSPPullServerUrl [] ServerUrls) {
         this.ServerUrls = ServerUrls;

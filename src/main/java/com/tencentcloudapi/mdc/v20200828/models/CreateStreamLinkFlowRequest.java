@@ -52,6 +52,13 @@ public class CreateStreamLinkFlowRequest extends AbstractModel {
     private String EventId;
 
     /**
+    * Flow output group.
+    */
+    @SerializedName("OutputGroup")
+    @Expose
+    private CreateOutputInfo [] OutputGroup;
+
+    /**
      * Get Flow name 
      * @return FlowName Flow name
      */
@@ -115,6 +122,22 @@ public class CreateStreamLinkFlowRequest extends AbstractModel {
         this.EventId = EventId;
     }
 
+    /**
+     * Get Flow output group. 
+     * @return OutputGroup Flow output group.
+     */
+    public CreateOutputInfo [] getOutputGroup() {
+        return this.OutputGroup;
+    }
+
+    /**
+     * Set Flow output group.
+     * @param OutputGroup Flow output group.
+     */
+    public void setOutputGroup(CreateOutputInfo [] OutputGroup) {
+        this.OutputGroup = OutputGroup;
+    }
+
     public CreateStreamLinkFlowRequest() {
     }
 
@@ -138,6 +161,12 @@ public class CreateStreamLinkFlowRequest extends AbstractModel {
         if (source.EventId != null) {
             this.EventId = new String(source.EventId);
         }
+        if (source.OutputGroup != null) {
+            this.OutputGroup = new CreateOutputInfo[source.OutputGroup.length];
+            for (int i = 0; i < source.OutputGroup.length; i++) {
+                this.OutputGroup[i] = new CreateOutputInfo(source.OutputGroup[i]);
+            }
+        }
     }
 
 
@@ -149,6 +178,7 @@ public class CreateStreamLinkFlowRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "MaxBandwidth", this.MaxBandwidth);
         this.setParamArrayObj(map, prefix + "InputGroup.", this.InputGroup);
         this.setParamSimple(map, prefix + "EventId", this.EventId);
+        this.setParamArrayObj(map, prefix + "OutputGroup.", this.OutputGroup);
 
     }
 }

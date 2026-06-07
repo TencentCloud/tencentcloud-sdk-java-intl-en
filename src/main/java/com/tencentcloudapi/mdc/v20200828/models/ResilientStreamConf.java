@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class ResilientStreamConf extends AbstractModel {
 
     /**
-    * Whether to enable delayed broadcast smooth stream delivery: true to enable, false to disable. It is disabled by default.
+    * 
     */
     @SerializedName("Enable")
     @Expose
     private Boolean Enable;
 
     /**
-    * Delayed broadcast duration, in seconds. Supported range: 10 to 300 seconds.
+    * 
     */
     @SerializedName("BufferTime")
     @Expose
     private Long BufferTime;
 
     /**
-     * Get Whether to enable delayed broadcast smooth stream delivery: true to enable, false to disable. It is disabled by default. 
-     * @return Enable Whether to enable delayed broadcast smooth stream delivery: true to enable, false to disable. It is disabled by default.
+     * Get  
+     * @return Enable 
      */
     public Boolean getEnable() {
         return this.Enable;
     }
 
     /**
-     * Set Whether to enable delayed broadcast smooth stream delivery: true to enable, false to disable. It is disabled by default.
-     * @param Enable Whether to enable delayed broadcast smooth stream delivery: true to enable, false to disable. It is disabled by default.
+     * Set 
+     * @param Enable 
      */
     public void setEnable(Boolean Enable) {
         this.Enable = Enable;
     }
 
     /**
-     * Get Delayed broadcast duration, in seconds. Supported range: 10 to 300 seconds. 
-     * @return BufferTime Delayed broadcast duration, in seconds. Supported range: 10 to 300 seconds.
+     * Get  
+     * @return BufferTime 
      */
     public Long getBufferTime() {
         return this.BufferTime;
     }
 
     /**
-     * Set Delayed broadcast duration, in seconds. Supported range: 10 to 300 seconds.
-     * @param BufferTime Delayed broadcast duration, in seconds. Supported range: 10 to 300 seconds.
+     * Set 
+     * @param BufferTime 
      */
     public void setBufferTime(Long BufferTime) {
         this.BufferTime = BufferTime;
