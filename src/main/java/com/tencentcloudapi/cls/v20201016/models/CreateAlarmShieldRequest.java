@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class CreateAlarmShieldRequest extends AbstractModel {
 
     /**
-    * Notification Channel Group ID
+    * Notification channel group id. Search the notification channel group list (https://www.tencentcloud.com/document/product/614/56462?from_cn_redirect=1) to get the notification channel group id.
     */
     @SerializedName("AlarmNoticeId")
     @Expose
     private String AlarmNoticeId;
 
     /**
-    * Block start time (second-level timestamp).
+    * Block rule start time (second-level timestamp).
     */
     @SerializedName("StartTime")
     @Expose
     private Long StartTime;
 
     /**
-    * Block end time (second-level timestamp).
+    * Block rule end time (second-level timestamp). The end time must be greater than the current time.
     */
     @SerializedName("EndTime")
     @Expose
@@ -66,48 +66,48 @@ public class CreateAlarmShieldRequest extends AbstractModel {
     private String Rule;
 
     /**
-     * Get Notification Channel Group ID 
-     * @return AlarmNoticeId Notification Channel Group ID
+     * Get Notification channel group id. Search the notification channel group list (https://www.tencentcloud.com/document/product/614/56462?from_cn_redirect=1) to get the notification channel group id. 
+     * @return AlarmNoticeId Notification channel group id. Search the notification channel group list (https://www.tencentcloud.com/document/product/614/56462?from_cn_redirect=1) to get the notification channel group id.
      */
     public String getAlarmNoticeId() {
         return this.AlarmNoticeId;
     }
 
     /**
-     * Set Notification Channel Group ID
-     * @param AlarmNoticeId Notification Channel Group ID
+     * Set Notification channel group id. Search the notification channel group list (https://www.tencentcloud.com/document/product/614/56462?from_cn_redirect=1) to get the notification channel group id.
+     * @param AlarmNoticeId Notification channel group id. Search the notification channel group list (https://www.tencentcloud.com/document/product/614/56462?from_cn_redirect=1) to get the notification channel group id.
      */
     public void setAlarmNoticeId(String AlarmNoticeId) {
         this.AlarmNoticeId = AlarmNoticeId;
     }
 
     /**
-     * Get Block start time (second-level timestamp). 
-     * @return StartTime Block start time (second-level timestamp).
+     * Get Block rule start time (second-level timestamp). 
+     * @return StartTime Block rule start time (second-level timestamp).
      */
     public Long getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set Block start time (second-level timestamp).
-     * @param StartTime Block start time (second-level timestamp).
+     * Set Block rule start time (second-level timestamp).
+     * @param StartTime Block rule start time (second-level timestamp).
      */
     public void setStartTime(Long StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get Block end time (second-level timestamp). 
-     * @return EndTime Block end time (second-level timestamp).
+     * Get Block rule end time (second-level timestamp). The end time must be greater than the current time. 
+     * @return EndTime Block rule end time (second-level timestamp). The end time must be greater than the current time.
      */
     public Long getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set Block end time (second-level timestamp).
-     * @param EndTime Block end time (second-level timestamp).
+     * Set Block rule end time (second-level timestamp). The end time must be greater than the current time.
+     * @param EndTime Block rule end time (second-level timestamp). The end time must be greater than the current time.
      */
     public void setEndTime(Long EndTime) {
         this.EndTime = EndTime;

@@ -24,8 +24,8 @@ import java.util.HashMap;
 public class DescribeIgnoreHostAndItemConfigRequest extends AbstractModel {
 
     /**
-    * <li>ItemId - int64 - whether required: no - item ID</i>
-<li>RuleId - int64 - whether required: no - rule ID</li>
+    * <li>ItemId - int64 - required: no - item ID</li>
+<li>RuleId - int64 - required: no - rule ID</li>
 <li>HostId - string - whether required: no - host ID</li>
     */
     @SerializedName("Filters")
@@ -33,11 +33,11 @@ public class DescribeIgnoreHostAndItemConfigRequest extends AbstractModel {
     private Filter [] Filters;
 
     /**
-     * Get <li>ItemId - int64 - whether required: no - item ID</i>
-<li>RuleId - int64 - whether required: no - rule ID</li>
+     * Get <li>ItemId - int64 - required: no - item ID</li>
+<li>RuleId - int64 - required: no - rule ID</li>
 <li>HostId - string - whether required: no - host ID</li> 
-     * @return Filters <li>ItemId - int64 - whether required: no - item ID</i>
-<li>RuleId - int64 - whether required: no - rule ID</li>
+     * @return Filters <li>ItemId - int64 - required: no - item ID</li>
+<li>RuleId - int64 - required: no - rule ID</li>
 <li>HostId - string - whether required: no - host ID</li>
      */
     public Filter [] getFilters() {
@@ -45,11 +45,11 @@ public class DescribeIgnoreHostAndItemConfigRequest extends AbstractModel {
     }
 
     /**
-     * Set <li>ItemId - int64 - whether required: no - item ID</i>
-<li>RuleId - int64 - whether required: no - rule ID</li>
+     * Set <li>ItemId - int64 - required: no - item ID</li>
+<li>RuleId - int64 - required: no - rule ID</li>
 <li>HostId - string - whether required: no - host ID</li>
-     * @param Filters <li>ItemId - int64 - whether required: no - item ID</i>
-<li>RuleId - int64 - whether required: no - rule ID</li>
+     * @param Filters <li>ItemId - int64 - required: no - item ID</li>
+<li>RuleId - int64 - required: no - rule ID</li>
 <li>HostId - string - whether required: no - host ID</li>
      */
     public void setFilters(Filter [] Filters) {

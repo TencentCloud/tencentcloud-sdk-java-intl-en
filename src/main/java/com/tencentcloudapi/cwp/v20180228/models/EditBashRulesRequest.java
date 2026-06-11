@@ -94,6 +94,41 @@ public class EditBashRulesRequest extends AbstractModel {
     private Long DealOldEvents;
 
     /**
+    * Policy description
+    */
+    @SerializedName("Descript")
+    @Expose
+    private String Descript;
+
+    /**
+    * Effective or not [0: not effective, 1: effective]
+    */
+    @SerializedName("Status")
+    @Expose
+    private Long Status;
+
+    /**
+    * 0: alarm; 1: allowlist; 2: intercept
+    */
+    @SerializedName("BashAction")
+    @Expose
+    private Long BashAction;
+
+    /**
+    * Effective range (0: a set of quuid 1: all Pro edition hosts 2: all Pro edition and Ultimate edition hosts 3: all hosts)
+    */
+    @SerializedName("Scope")
+    @Expose
+    private Long Scope;
+
+    /**
+    * QUUID set for effective hosts
+    */
+    @SerializedName("Quuids")
+    @Expose
+    private String [] Quuids;
+
+    /**
      * Get Rule ID (leave this parameter blank for addition) 
      * @return Id Rule ID (leave this parameter blank for addition)
      */
@@ -253,6 +288,86 @@ public class EditBashRulesRequest extends AbstractModel {
         this.DealOldEvents = DealOldEvents;
     }
 
+    /**
+     * Get Policy description 
+     * @return Descript Policy description
+     */
+    public String getDescript() {
+        return this.Descript;
+    }
+
+    /**
+     * Set Policy description
+     * @param Descript Policy description
+     */
+    public void setDescript(String Descript) {
+        this.Descript = Descript;
+    }
+
+    /**
+     * Get Effective or not [0: not effective, 1: effective] 
+     * @return Status Effective or not [0: not effective, 1: effective]
+     */
+    public Long getStatus() {
+        return this.Status;
+    }
+
+    /**
+     * Set Effective or not [0: not effective, 1: effective]
+     * @param Status Effective or not [0: not effective, 1: effective]
+     */
+    public void setStatus(Long Status) {
+        this.Status = Status;
+    }
+
+    /**
+     * Get 0: alarm; 1: allowlist; 2: intercept 
+     * @return BashAction 0: alarm; 1: allowlist; 2: intercept
+     */
+    public Long getBashAction() {
+        return this.BashAction;
+    }
+
+    /**
+     * Set 0: alarm; 1: allowlist; 2: intercept
+     * @param BashAction 0: alarm; 1: allowlist; 2: intercept
+     */
+    public void setBashAction(Long BashAction) {
+        this.BashAction = BashAction;
+    }
+
+    /**
+     * Get Effective range (0: a set of quuid 1: all Pro edition hosts 2: all Pro edition and Ultimate edition hosts 3: all hosts) 
+     * @return Scope Effective range (0: a set of quuid 1: all Pro edition hosts 2: all Pro edition and Ultimate edition hosts 3: all hosts)
+     */
+    public Long getScope() {
+        return this.Scope;
+    }
+
+    /**
+     * Set Effective range (0: a set of quuid 1: all Pro edition hosts 2: all Pro edition and Ultimate edition hosts 3: all hosts)
+     * @param Scope Effective range (0: a set of quuid 1: all Pro edition hosts 2: all Pro edition and Ultimate edition hosts 3: all hosts)
+     */
+    public void setScope(Long Scope) {
+        this.Scope = Scope;
+    }
+
+    /**
+     * Get QUUID set for effective hosts 
+     * @return Quuids QUUID set for effective hosts
+     */
+    public String [] getQuuids() {
+        return this.Quuids;
+    }
+
+    /**
+     * Set QUUID set for effective hosts
+     * @param Quuids QUUID set for effective hosts
+     */
+    public void setQuuids(String [] Quuids) {
+        this.Quuids = Quuids;
+    }
+
     public EditBashRulesRequest() {
     }
 
@@ -294,6 +409,24 @@ public class EditBashRulesRequest extends AbstractModel {
         if (source.DealOldEvents != null) {
             this.DealOldEvents = new Long(source.DealOldEvents);
         }
+        if (source.Descript != null) {
+            this.Descript = new String(source.Descript);
+        }
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
+        if (source.BashAction != null) {
+            this.BashAction = new Long(source.BashAction);
+        }
+        if (source.Scope != null) {
+            this.Scope = new Long(source.Scope);
+        }
+        if (source.Quuids != null) {
+            this.Quuids = new String[source.Quuids.length];
+            for (int i = 0; i < source.Quuids.length; i++) {
+                this.Quuids[i] = new String(source.Quuids[i]);
+            }
+        }
     }
 
 
@@ -311,6 +444,11 @@ public class EditBashRulesRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "White", this.White);
         this.setParamSimple(map, prefix + "EventId", this.EventId);
         this.setParamSimple(map, prefix + "DealOldEvents", this.DealOldEvents);
+        this.setParamSimple(map, prefix + "Descript", this.Descript);
+        this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "BashAction", this.BashAction);
+        this.setParamSimple(map, prefix + "Scope", this.Scope);
+        this.setParamArraySimple(map, prefix + "Quuids.", this.Quuids);
 
     }
 }

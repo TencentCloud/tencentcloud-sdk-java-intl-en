@@ -87,11 +87,18 @@ public class ModifyWebHookPolicyRequest extends AbstractModel {
     private String [] Quuids;
 
     /**
-    * Machines to be excluded
+    * List of machines to be excluded.	
     */
     @SerializedName("ExcludedQuuids")
     @Expose
     private String [] ExcludedQuuids;
+
+    /**
+    * Push language type, Chinese zh, English en
+    */
+    @SerializedName("MsgLanguage")
+    @Expose
+    private String MsgLanguage;
 
     /**
      * Get id 
@@ -238,19 +245,35 @@ public class ModifyWebHookPolicyRequest extends AbstractModel {
     }
 
     /**
-     * Get Machines to be excluded 
-     * @return ExcludedQuuids Machines to be excluded
+     * Get List of machines to be excluded.	 
+     * @return ExcludedQuuids List of machines to be excluded.	
      */
     public String [] getExcludedQuuids() {
         return this.ExcludedQuuids;
     }
 
     /**
-     * Set Machines to be excluded
-     * @param ExcludedQuuids Machines to be excluded
+     * Set List of machines to be excluded.	
+     * @param ExcludedQuuids List of machines to be excluded.	
      */
     public void setExcludedQuuids(String [] ExcludedQuuids) {
         this.ExcludedQuuids = ExcludedQuuids;
+    }
+
+    /**
+     * Get Push language type, Chinese zh, English en 
+     * @return MsgLanguage Push language type, Chinese zh, English en
+     */
+    public String getMsgLanguage() {
+        return this.MsgLanguage;
+    }
+
+    /**
+     * Set Push language type, Chinese zh, English en
+     * @param MsgLanguage Push language type, Chinese zh, English en
+     */
+    public void setMsgLanguage(String MsgLanguage) {
+        this.MsgLanguage = MsgLanguage;
     }
 
     public ModifyWebHookPolicyRequest() {
@@ -309,6 +332,9 @@ public class ModifyWebHookPolicyRequest extends AbstractModel {
                 this.ExcludedQuuids[i] = new String(source.ExcludedQuuids[i]);
             }
         }
+        if (source.MsgLanguage != null) {
+            this.MsgLanguage = new String(source.MsgLanguage);
+        }
     }
 
 
@@ -326,6 +352,7 @@ public class ModifyWebHookPolicyRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "IsDisabled", this.IsDisabled);
         this.setParamArraySimple(map, prefix + "Quuids.", this.Quuids);
         this.setParamArraySimple(map, prefix + "ExcludedQuuids.", this.ExcludedQuuids);
+        this.setParamSimple(map, prefix + "MsgLanguage", this.MsgLanguage);
 
     }
 }

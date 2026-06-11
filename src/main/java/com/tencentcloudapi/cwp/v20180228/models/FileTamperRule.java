@@ -49,11 +49,17 @@ public class FileTamperRule extends AbstractModel {
 <li>read: read file</li>
 <li>write: modify file</li>
 <li>read-write: read and modify file</li>
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("FileAction")
     @Expose
     private String FileAction;
+
+    /**
+    * Command line parameter not filled
+    */
+    @SerializedName("Args")
+    @Expose
+    private String Args;
 
     /**
      * Get Process path 
@@ -107,13 +113,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * Get Monitoring behavior
 <li>read: read file</li>
 <li>write: modify file</li>
-<li>read-write: read and modify file</li>
-Note: This field may return null, indicating that no valid values can be obtained. 
+<li>read-write: read and modify file</li> 
      * @return FileAction Monitoring behavior
 <li>read: read file</li>
 <li>write: modify file</li>
 <li>read-write: read and modify file</li>
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getFileAction() {
         return this.FileAction;
@@ -124,15 +128,29 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>read: read file</li>
 <li>write: modify file</li>
 <li>read-write: read and modify file</li>
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param FileAction Monitoring behavior
 <li>read: read file</li>
 <li>write: modify file</li>
 <li>read-write: read and modify file</li>
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setFileAction(String FileAction) {
         this.FileAction = FileAction;
+    }
+
+    /**
+     * Get Command line parameter not filled 
+     * @return Args Command line parameter not filled
+     */
+    public String getArgs() {
+        return this.Args;
+    }
+
+    /**
+     * Set Command line parameter not filled
+     * @param Args Command line parameter not filled
+     */
+    public void setArgs(String Args) {
+        this.Args = Args;
     }
 
     public FileTamperRule() {
@@ -155,6 +173,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.FileAction != null) {
             this.FileAction = new String(source.FileAction);
         }
+        if (source.Args != null) {
+            this.Args = new String(source.Args);
+        }
     }
 
 
@@ -166,6 +187,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "Target", this.Target);
         this.setParamSimple(map, prefix + "Action", this.Action);
         this.setParamSimple(map, prefix + "FileAction", this.FileAction);
+        this.setParamSimple(map, prefix + "Args", this.Args);
 
     }
 }

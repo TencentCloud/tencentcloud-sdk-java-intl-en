@@ -31,8 +31,7 @@ public class DescribeNetworkFirewallPolicyStatusResponse extends AbstractModel {
     private String TaskStatus;
 
     /**
-    * Task result, such as `NameRepeat` and `K8sRuleIngressPortError`.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * NameRepeat, K8sRuleIngressPortError, etc.
     */
     @SerializedName("TaskResult")
     @Expose
@@ -62,20 +61,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Task result, such as `NameRepeat` and `K8sRuleIngressPortError`.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return TaskResult Task result, such as `NameRepeat` and `K8sRuleIngressPortError`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get NameRepeat, K8sRuleIngressPortError, etc. 
+     * @return TaskResult NameRepeat, K8sRuleIngressPortError, etc.
      */
     public String [] getTaskResult() {
         return this.TaskResult;
     }
 
     /**
-     * Set Task result, such as `NameRepeat` and `K8sRuleIngressPortError`.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param TaskResult Task result, such as `NameRepeat` and `K8sRuleIngressPortError`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set NameRepeat, K8sRuleIngressPortError, etc.
+     * @param TaskResult NameRepeat, K8sRuleIngressPortError, etc.
      */
     public void setTaskResult(String [] TaskResult) {
         this.TaskResult = TaskResult;

@@ -30,7 +30,6 @@ LH, TencentCloud Lighthouse
 ECM, Tencent Cloud Edge Computing Machine
 BM, Tencent BM 1.0
 Other, Other servers (non-Tencent Cloud)
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("MachineType")
     @Expose
@@ -46,15 +45,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
 6 Google
 7 Oracle
 8 Digital Ocean
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("CloudFrom")
     @Expose
     private Long CloudFrom;
 
     /**
-    * List of regions
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Region list
     */
     @SerializedName("RegionList")
     @Expose
@@ -66,15 +63,13 @@ CVM, Tencent Cloud Virtual Machine
 LH, TencentCloud Lighthouse
 ECM, Tencent Cloud Edge Computing Machine
 BM, Tencent BM 1.0
-Other, Other servers (non-Tencent Cloud)
-Note: This field may return null, indicating that no valid values can be obtained. 
+Other, Other servers (non-Tencent Cloud) 
      * @return MachineType Machine type
 CVM, Tencent Cloud Virtual Machine
 LH, TencentCloud Lighthouse
 ECM, Tencent Cloud Edge Computing Machine
 BM, Tencent BM 1.0
 Other, Other servers (non-Tencent Cloud)
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getMachineType() {
         return this.MachineType;
@@ -87,14 +82,12 @@ LH, TencentCloud Lighthouse
 ECM, Tencent Cloud Edge Computing Machine
 BM, Tencent BM 1.0
 Other, Other servers (non-Tencent Cloud)
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param MachineType Machine type
 CVM, Tencent Cloud Virtual Machine
 LH, TencentCloud Lighthouse
 ECM, Tencent Cloud Edge Computing Machine
 BM, Tencent BM 1.0
 Other, Other servers (non-Tencent Cloud)
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setMachineType(String MachineType) {
         this.MachineType = MachineType;
@@ -109,8 +102,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 5 Microsoft
 6 Google
 7 Oracle
-8 Digital Ocean
-Note: This field may return null, indicating that no valid values can be obtained. 
+8 Digital Ocean 
      * @return CloudFrom 0 Tencent Cloud
 1 IDC
 2 Alibaba Cloud
@@ -120,7 +112,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 6 Google
 7 Oracle
 8 Digital Ocean
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getCloudFrom() {
         return this.CloudFrom;
@@ -136,7 +127,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 6 Google
 7 Oracle
 8 Digital Ocean
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param CloudFrom 0 Tencent Cloud
 1 IDC
 2 Alibaba Cloud
@@ -146,27 +136,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
 6 Google
 7 Oracle
 8 Digital Ocean
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setCloudFrom(Long CloudFrom) {
         this.CloudFrom = CloudFrom;
     }
 
     /**
-     * Get List of regions
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return RegionList List of regions
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Region list 
+     * @return RegionList Region list
      */
     public RegionInfo [] getRegionList() {
         return this.RegionList;
     }
 
     /**
-     * Set List of regions
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param RegionList List of regions
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Region list
+     * @param RegionList Region list
      */
     public void setRegionList(RegionInfo [] RegionList) {
         this.RegionList = RegionList;

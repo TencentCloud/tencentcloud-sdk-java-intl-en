@@ -24,217 +24,261 @@ import java.util.HashMap;
 public class AssetClusterListItem extends AbstractModel {
 
     /**
-    * Cluster ID
+    * <p>Cluster ID.</p>
     */
     @SerializedName("ClusterID")
     @Expose
     private String ClusterID;
 
     /**
-    * Cluster name
+    * <p>Cluster name.</p>
     */
     @SerializedName("ClusterName")
     @Expose
     private String ClusterName;
 
     /**
-    * Cluster status
-`CSR_RUNNING`: Running
-`CSR_EXCEPTION`: Abnormal
-`CSR_DEL`: Deleted
+    * <p>Cluster status<br>CSR_RUNNING: Running<br>CSR_EXCEPTION: Exception<br>CSR_DEL: Deleted</p>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * Bound rule name
+    * <p>ID of the bound cluster</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("BindRuleID")
+    @Expose
+    private String BindRuleID;
+
+    /**
+    * <p>Binding rule name</p>
     */
     @SerializedName("BindRuleName")
     @Expose
     private String BindRuleName;
 
     /**
-    * Cluster type:
-`CT_TKE`: TKE cluster
-`CT_USER_CREATE`: External cluster
-`CT_TKE_SERVERLESS`: TKE Serverless cluster
+    * <p>ClusterType:<br>CT_TKE: tke cluster;<br>CT_USER_CREATE: user-built cluster;<br>CT_TKE_SERVERLESS: TKE Serverless Cluster;</p>
     */
     @SerializedName("ClusterType")
     @Expose
     private String ClusterType;
 
     /**
-    * Cluster version
+    * <p>Cluster edition</p>
     */
     @SerializedName("ClusterVersion")
     @Expose
     private String ClusterVersion;
 
     /**
-    * MEM usage
+    * <p>Memory capacity</p>
     */
     @SerializedName("MemLimit")
     @Expose
     private Long MemLimit;
 
     /**
-    * cpu
+    * <p>cpu</p>
     */
     @SerializedName("CpuLimit")
     @Expose
     private Long CpuLimit;
 
     /**
-     * Get Cluster ID 
-     * @return ClusterID Cluster ID
+    * <p>Cluster audit switch status:<br>Closed/Closing/CloseFailed/Opened/Opening/OpenFailed</p>
+    */
+    @SerializedName("ClusterAuditStatus")
+    @Expose
+    private String ClusterAuditStatus;
+
+    /**
+    * <p>Access status:<br>Not connected: AccessedNone<br>Defended: AccessedDefended<br>No protection: AccessedInstalled<br>Partial protection: AccessedPartialDefence<br>Access exception: AccessedException<br>Uninstallation exception: AccessedUninstallException<br>Accessing: AccessedInstalling<br>Uninstalling: AccessedUninstalling</p>
+    */
+    @SerializedName("AccessedStatus")
+    @Expose
+    private String AccessedStatus;
+
+    /**
+     * Get <p>Cluster ID.</p> 
+     * @return ClusterID <p>Cluster ID.</p>
      */
     public String getClusterID() {
         return this.ClusterID;
     }
 
     /**
-     * Set Cluster ID
-     * @param ClusterID Cluster ID
+     * Set <p>Cluster ID.</p>
+     * @param ClusterID <p>Cluster ID.</p>
      */
     public void setClusterID(String ClusterID) {
         this.ClusterID = ClusterID;
     }
 
     /**
-     * Get Cluster name 
-     * @return ClusterName Cluster name
+     * Get <p>Cluster name.</p> 
+     * @return ClusterName <p>Cluster name.</p>
      */
     public String getClusterName() {
         return this.ClusterName;
     }
 
     /**
-     * Set Cluster name
-     * @param ClusterName Cluster name
+     * Set <p>Cluster name.</p>
+     * @param ClusterName <p>Cluster name.</p>
      */
     public void setClusterName(String ClusterName) {
         this.ClusterName = ClusterName;
     }
 
     /**
-     * Get Cluster status
-`CSR_RUNNING`: Running
-`CSR_EXCEPTION`: Abnormal
-`CSR_DEL`: Deleted 
-     * @return Status Cluster status
-`CSR_RUNNING`: Running
-`CSR_EXCEPTION`: Abnormal
-`CSR_DEL`: Deleted
+     * Get <p>Cluster status<br>CSR_RUNNING: Running<br>CSR_EXCEPTION: Exception<br>CSR_DEL: Deleted</p> 
+     * @return Status <p>Cluster status<br>CSR_RUNNING: Running<br>CSR_EXCEPTION: Exception<br>CSR_DEL: Deleted</p>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Cluster status
-`CSR_RUNNING`: Running
-`CSR_EXCEPTION`: Abnormal
-`CSR_DEL`: Deleted
-     * @param Status Cluster status
-`CSR_RUNNING`: Running
-`CSR_EXCEPTION`: Abnormal
-`CSR_DEL`: Deleted
+     * Set <p>Cluster status<br>CSR_RUNNING: Running<br>CSR_EXCEPTION: Exception<br>CSR_DEL: Deleted</p>
+     * @param Status <p>Cluster status<br>CSR_RUNNING: Running<br>CSR_EXCEPTION: Exception<br>CSR_DEL: Deleted</p>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get Bound rule name 
-     * @return BindRuleName Bound rule name
+     * Get <p>ID of the bound cluster</p>
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return BindRuleID <p>ID of the bound cluster</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getBindRuleID() {
+        return this.BindRuleID;
+    }
+
+    /**
+     * Set <p>ID of the bound cluster</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param BindRuleID <p>ID of the bound cluster</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setBindRuleID(String BindRuleID) {
+        this.BindRuleID = BindRuleID;
+    }
+
+    /**
+     * Get <p>Binding rule name</p> 
+     * @return BindRuleName <p>Binding rule name</p>
      */
     public String getBindRuleName() {
         return this.BindRuleName;
     }
 
     /**
-     * Set Bound rule name
-     * @param BindRuleName Bound rule name
+     * Set <p>Binding rule name</p>
+     * @param BindRuleName <p>Binding rule name</p>
      */
     public void setBindRuleName(String BindRuleName) {
         this.BindRuleName = BindRuleName;
     }
 
     /**
-     * Get Cluster type:
-`CT_TKE`: TKE cluster
-`CT_USER_CREATE`: External cluster
-`CT_TKE_SERVERLESS`: TKE Serverless cluster 
-     * @return ClusterType Cluster type:
-`CT_TKE`: TKE cluster
-`CT_USER_CREATE`: External cluster
-`CT_TKE_SERVERLESS`: TKE Serverless cluster
+     * Get <p>ClusterType:<br>CT_TKE: tke cluster;<br>CT_USER_CREATE: user-built cluster;<br>CT_TKE_SERVERLESS: TKE Serverless Cluster;</p> 
+     * @return ClusterType <p>ClusterType:<br>CT_TKE: tke cluster;<br>CT_USER_CREATE: user-built cluster;<br>CT_TKE_SERVERLESS: TKE Serverless Cluster;</p>
      */
     public String getClusterType() {
         return this.ClusterType;
     }
 
     /**
-     * Set Cluster type:
-`CT_TKE`: TKE cluster
-`CT_USER_CREATE`: External cluster
-`CT_TKE_SERVERLESS`: TKE Serverless cluster
-     * @param ClusterType Cluster type:
-`CT_TKE`: TKE cluster
-`CT_USER_CREATE`: External cluster
-`CT_TKE_SERVERLESS`: TKE Serverless cluster
+     * Set <p>ClusterType:<br>CT_TKE: tke cluster;<br>CT_USER_CREATE: user-built cluster;<br>CT_TKE_SERVERLESS: TKE Serverless Cluster;</p>
+     * @param ClusterType <p>ClusterType:<br>CT_TKE: tke cluster;<br>CT_USER_CREATE: user-built cluster;<br>CT_TKE_SERVERLESS: TKE Serverless Cluster;</p>
      */
     public void setClusterType(String ClusterType) {
         this.ClusterType = ClusterType;
     }
 
     /**
-     * Get Cluster version 
-     * @return ClusterVersion Cluster version
+     * Get <p>Cluster edition</p> 
+     * @return ClusterVersion <p>Cluster edition</p>
      */
     public String getClusterVersion() {
         return this.ClusterVersion;
     }
 
     /**
-     * Set Cluster version
-     * @param ClusterVersion Cluster version
+     * Set <p>Cluster edition</p>
+     * @param ClusterVersion <p>Cluster edition</p>
      */
     public void setClusterVersion(String ClusterVersion) {
         this.ClusterVersion = ClusterVersion;
     }
 
     /**
-     * Get MEM usage 
-     * @return MemLimit MEM usage
+     * Get <p>Memory capacity</p> 
+     * @return MemLimit <p>Memory capacity</p>
      */
     public Long getMemLimit() {
         return this.MemLimit;
     }
 
     /**
-     * Set MEM usage
-     * @param MemLimit MEM usage
+     * Set <p>Memory capacity</p>
+     * @param MemLimit <p>Memory capacity</p>
      */
     public void setMemLimit(Long MemLimit) {
         this.MemLimit = MemLimit;
     }
 
     /**
-     * Get cpu 
-     * @return CpuLimit cpu
+     * Get <p>cpu</p> 
+     * @return CpuLimit <p>cpu</p>
      */
     public Long getCpuLimit() {
         return this.CpuLimit;
     }
 
     /**
-     * Set cpu
-     * @param CpuLimit cpu
+     * Set <p>cpu</p>
+     * @param CpuLimit <p>cpu</p>
      */
     public void setCpuLimit(Long CpuLimit) {
         this.CpuLimit = CpuLimit;
+    }
+
+    /**
+     * Get <p>Cluster audit switch status:<br>Closed/Closing/CloseFailed/Opened/Opening/OpenFailed</p> 
+     * @return ClusterAuditStatus <p>Cluster audit switch status:<br>Closed/Closing/CloseFailed/Opened/Opening/OpenFailed</p>
+     */
+    public String getClusterAuditStatus() {
+        return this.ClusterAuditStatus;
+    }
+
+    /**
+     * Set <p>Cluster audit switch status:<br>Closed/Closing/CloseFailed/Opened/Opening/OpenFailed</p>
+     * @param ClusterAuditStatus <p>Cluster audit switch status:<br>Closed/Closing/CloseFailed/Opened/Opening/OpenFailed</p>
+     */
+    public void setClusterAuditStatus(String ClusterAuditStatus) {
+        this.ClusterAuditStatus = ClusterAuditStatus;
+    }
+
+    /**
+     * Get <p>Access status:<br>Not connected: AccessedNone<br>Defended: AccessedDefended<br>No protection: AccessedInstalled<br>Partial protection: AccessedPartialDefence<br>Access exception: AccessedException<br>Uninstallation exception: AccessedUninstallException<br>Accessing: AccessedInstalling<br>Uninstalling: AccessedUninstalling</p> 
+     * @return AccessedStatus <p>Access status:<br>Not connected: AccessedNone<br>Defended: AccessedDefended<br>No protection: AccessedInstalled<br>Partial protection: AccessedPartialDefence<br>Access exception: AccessedException<br>Uninstallation exception: AccessedUninstallException<br>Accessing: AccessedInstalling<br>Uninstalling: AccessedUninstalling</p>
+     */
+    public String getAccessedStatus() {
+        return this.AccessedStatus;
+    }
+
+    /**
+     * Set <p>Access status:<br>Not connected: AccessedNone<br>Defended: AccessedDefended<br>No protection: AccessedInstalled<br>Partial protection: AccessedPartialDefence<br>Access exception: AccessedException<br>Uninstallation exception: AccessedUninstallException<br>Accessing: AccessedInstalling<br>Uninstalling: AccessedUninstalling</p>
+     * @param AccessedStatus <p>Access status:<br>Not connected: AccessedNone<br>Defended: AccessedDefended<br>No protection: AccessedInstalled<br>Partial protection: AccessedPartialDefence<br>Access exception: AccessedException<br>Uninstallation exception: AccessedUninstallException<br>Accessing: AccessedInstalling<br>Uninstalling: AccessedUninstalling</p>
+     */
+    public void setAccessedStatus(String AccessedStatus) {
+        this.AccessedStatus = AccessedStatus;
     }
 
     public AssetClusterListItem() {
@@ -254,6 +298,9 @@ public class AssetClusterListItem extends AbstractModel {
         if (source.Status != null) {
             this.Status = new String(source.Status);
         }
+        if (source.BindRuleID != null) {
+            this.BindRuleID = new String(source.BindRuleID);
+        }
         if (source.BindRuleName != null) {
             this.BindRuleName = new String(source.BindRuleName);
         }
@@ -269,6 +316,12 @@ public class AssetClusterListItem extends AbstractModel {
         if (source.CpuLimit != null) {
             this.CpuLimit = new Long(source.CpuLimit);
         }
+        if (source.ClusterAuditStatus != null) {
+            this.ClusterAuditStatus = new String(source.ClusterAuditStatus);
+        }
+        if (source.AccessedStatus != null) {
+            this.AccessedStatus = new String(source.AccessedStatus);
+        }
     }
 
 
@@ -279,11 +332,14 @@ public class AssetClusterListItem extends AbstractModel {
         this.setParamSimple(map, prefix + "ClusterID", this.ClusterID);
         this.setParamSimple(map, prefix + "ClusterName", this.ClusterName);
         this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "BindRuleID", this.BindRuleID);
         this.setParamSimple(map, prefix + "BindRuleName", this.BindRuleName);
         this.setParamSimple(map, prefix + "ClusterType", this.ClusterType);
         this.setParamSimple(map, prefix + "ClusterVersion", this.ClusterVersion);
         this.setParamSimple(map, prefix + "MemLimit", this.MemLimit);
         this.setParamSimple(map, prefix + "CpuLimit", this.CpuLimit);
+        this.setParamSimple(map, prefix + "ClusterAuditStatus", this.ClusterAuditStatus);
+        this.setParamSimple(map, prefix + "AccessedStatus", this.AccessedStatus);
 
     }
 }

@@ -24,7 +24,9 @@ import java.util.HashMap;
 public class DescribeJavaMemShellPluginListRequest extends AbstractModel {
 
     /**
-    * Filter Criteria: Keywords: Fuzzy query of IP or host name, JavaShellStatus, exact match of Exception
+    * Filtering criteria: InstanceID and IP
+
+MachineName fuzzy query, JavaShellStatus, Exception exact match
     */
     @SerializedName("Filters")
     @Expose
@@ -45,16 +47,24 @@ public class DescribeJavaMemShellPluginListRequest extends AbstractModel {
     private Long Limit;
 
     /**
-     * Get Filter Criteria: Keywords: Fuzzy query of IP or host name, JavaShellStatus, exact match of Exception 
-     * @return Filters Filter Criteria: Keywords: Fuzzy query of IP or host name, JavaShellStatus, exact match of Exception
+     * Get Filtering criteria: InstanceID and IP
+
+MachineName fuzzy query, JavaShellStatus, Exception exact match 
+     * @return Filters Filtering criteria: InstanceID and IP
+
+MachineName fuzzy query, JavaShellStatus, Exception exact match
      */
     public Filters [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set Filter Criteria: Keywords: Fuzzy query of IP or host name, JavaShellStatus, exact match of Exception
-     * @param Filters Filter Criteria: Keywords: Fuzzy query of IP or host name, JavaShellStatus, exact match of Exception
+     * Set Filtering criteria: InstanceID and IP
+
+MachineName fuzzy query, JavaShellStatus, Exception exact match
+     * @param Filters Filtering criteria: InstanceID and IP
+
+MachineName fuzzy query, JavaShellStatus, Exception exact match
      */
     public void setFilters(Filters [] Filters) {
         this.Filters = Filters;

@@ -136,7 +136,7 @@ public class VulDefenceEvent extends AbstractModel {
     private Long Status;
 
     /**
-    * 0: Pro Edition; 1: Ultimate Edition; 2: LH Inclusive Edition (for Lighthouse only); 3: CVM Inclusive Edition (for CVM only).
+    * 0: Pro Edition; 1: Flagship Edition; 2: LH Light Edition (for Lighthouse only); 3: CVM Light Edition (for CVM only).
     */
     @SerializedName("UpgradeType")
     @Expose
@@ -158,7 +158,6 @@ public class VulDefenceEvent extends AbstractModel {
 
     /**
     * Host Additional Information
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("MachineExtraInfo")
     @Expose
@@ -421,16 +420,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get 0: Pro Edition; 1: Ultimate Edition; 2: LH Inclusive Edition (for Lighthouse only); 3: CVM Inclusive Edition (for CVM only). 
-     * @return UpgradeType 0: Pro Edition; 1: Ultimate Edition; 2: LH Inclusive Edition (for Lighthouse only); 3: CVM Inclusive Edition (for CVM only).
+     * Get 0: Pro Edition; 1: Flagship Edition; 2: LH Light Edition (for Lighthouse only); 3: CVM Light Edition (for CVM only). 
+     * @return UpgradeType 0: Pro Edition; 1: Flagship Edition; 2: LH Light Edition (for Lighthouse only); 3: CVM Light Edition (for CVM only).
      */
     public Long getUpgradeType() {
         return this.UpgradeType;
     }
 
     /**
-     * Set 0: Pro Edition; 1: Ultimate Edition; 2: LH Inclusive Edition (for Lighthouse only); 3: CVM Inclusive Edition (for CVM only).
-     * @param UpgradeType 0: Pro Edition; 1: Ultimate Edition; 2: LH Inclusive Edition (for Lighthouse only); 3: CVM Inclusive Edition (for CVM only).
+     * Set 0: Pro Edition; 1: Flagship Edition; 2: LH Light Edition (for Lighthouse only); 3: CVM Light Edition (for CVM only).
+     * @param UpgradeType 0: Pro Edition; 1: Flagship Edition; 2: LH Light Edition (for Lighthouse only); 3: CVM Light Edition (for CVM only).
      */
     public void setUpgradeType(Long UpgradeType) {
         this.UpgradeType = UpgradeType;
@@ -469,10 +468,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Host Additional Information
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Host Additional Information 
      * @return MachineExtraInfo Host Additional Information
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public MachineExtraInfo getMachineExtraInfo() {
         return this.MachineExtraInfo;
@@ -480,9 +477,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Host Additional Information
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param MachineExtraInfo Host Additional Information
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setMachineExtraInfo(MachineExtraInfo MachineExtraInfo) {
         this.MachineExtraInfo = MachineExtraInfo;

@@ -45,14 +45,14 @@ public class AigcImageTaskInput extends AbstractModel {
     private AigcImageTaskInputFileInfo [] FileInfos;
 
     /**
-    * <p>Prompt for image generation. Supports up to 1000 characters. This parameter is required when FileInfos is empty.</p>
+    * <p>Prompt content for image generation. This parameter is required when FileInfos is empty.</p>
     */
     @SerializedName("Prompt")
     @Expose
     private String Prompt;
 
     /**
-    * <p>To prevent the model from generating images, set a prompt. Supports a maximum of 1000 characters.</p>
+    * <p>To prevent the model from generating image prompts.</p>
     */
     @SerializedName("NegativePrompt")
     @Expose
@@ -142,32 +142,32 @@ public class AigcImageTaskInput extends AbstractModel {
     }
 
     /**
-     * Get <p>Prompt for image generation. Supports up to 1000 characters. This parameter is required when FileInfos is empty.</p> 
-     * @return Prompt <p>Prompt for image generation. Supports up to 1000 characters. This parameter is required when FileInfos is empty.</p>
+     * Get <p>Prompt content for image generation. This parameter is required when FileInfos is empty.</p> 
+     * @return Prompt <p>Prompt content for image generation. This parameter is required when FileInfos is empty.</p>
      */
     public String getPrompt() {
         return this.Prompt;
     }
 
     /**
-     * Set <p>Prompt for image generation. Supports up to 1000 characters. This parameter is required when FileInfos is empty.</p>
-     * @param Prompt <p>Prompt for image generation. Supports up to 1000 characters. This parameter is required when FileInfos is empty.</p>
+     * Set <p>Prompt content for image generation. This parameter is required when FileInfos is empty.</p>
+     * @param Prompt <p>Prompt content for image generation. This parameter is required when FileInfos is empty.</p>
      */
     public void setPrompt(String Prompt) {
         this.Prompt = Prompt;
     }
 
     /**
-     * Get <p>To prevent the model from generating images, set a prompt. Supports a maximum of 1000 characters.</p> 
-     * @return NegativePrompt <p>To prevent the model from generating images, set a prompt. Supports a maximum of 1000 characters.</p>
+     * Get <p>To prevent the model from generating image prompts.</p> 
+     * @return NegativePrompt <p>To prevent the model from generating image prompts.</p>
      */
     public String getNegativePrompt() {
         return this.NegativePrompt;
     }
 
     /**
-     * Set <p>To prevent the model from generating images, set a prompt. Supports a maximum of 1000 characters.</p>
-     * @param NegativePrompt <p>To prevent the model from generating images, set a prompt. Supports a maximum of 1000 characters.</p>
+     * Set <p>To prevent the model from generating image prompts.</p>
+     * @param NegativePrompt <p>To prevent the model from generating image prompts.</p>
      */
     public void setNegativePrompt(String NegativePrompt) {
         this.NegativePrompt = NegativePrompt;

@@ -103,7 +103,7 @@ The original configuration will apply if this field is not specified.
     private Boolean SessionPersist;
 
     /**
-    * Duration for the persistent session. The value takes effect only when `SessionPersist = true`.
+    * Duration for session persistence, in seconds. The value takes effect only when SessionPersist is true.
     */
     @SerializedName("SessionPersistTime")
     @Expose
@@ -334,16 +334,16 @@ The original configuration will apply if this field is not specified.
     }
 
     /**
-     * Get Duration for the persistent session. The value takes effect only when `SessionPersist = true`. 
-     * @return SessionPersistTime Duration for the persistent session. The value takes effect only when `SessionPersist = true`.
+     * Get Duration for session persistence, in seconds. The value takes effect only when SessionPersist is true. 
+     * @return SessionPersistTime Duration for session persistence, in seconds. The value takes effect only when SessionPersist is true.
      */
     public Long getSessionPersistTime() {
         return this.SessionPersistTime;
     }
 
     /**
-     * Set Duration for the persistent session. The value takes effect only when `SessionPersist = true`.
-     * @param SessionPersistTime Duration for the persistent session. The value takes effect only when `SessionPersist = true`.
+     * Set Duration for session persistence, in seconds. The value takes effect only when SessionPersist is true.
+     * @param SessionPersistTime Duration for session persistence, in seconds. The value takes effect only when SessionPersist is true.
      */
     public void setSessionPersistTime(Long SessionPersistTime) {
         this.SessionPersistTime = SessionPersistTime;

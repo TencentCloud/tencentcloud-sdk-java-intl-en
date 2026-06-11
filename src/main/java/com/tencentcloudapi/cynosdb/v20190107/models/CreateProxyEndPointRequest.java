@@ -24,512 +24,440 @@ import java.util.HashMap;
 public class CreateProxyEndPointRequest extends AbstractModel {
 
     /**
-    * Cluster ID.
+    * <p>Cluster ID.</p>
     */
     @SerializedName("ClusterId")
     @Expose
     private String ClusterId;
 
     /**
-    * VPC ID. By default, it remains consistent with the VPC ID of the cluster.
+    * <p>VPC ID.</p>
     */
     @SerializedName("UniqueVpcId")
     @Expose
     private String UniqueVpcId;
 
     /**
-    * Subnet ID of the VPC. By default, it remains consistent with the subnet ID of the cluster.
+    * <p>VPC subnet ID.</p>
     */
     @SerializedName("UniqueSubnetId")
     @Expose
     private String UniqueSubnetId;
 
     /**
-    * Type of connection pool: SessionConnectionPool (session-level connection pool).
+    * <p>Connection pool Type: SessionConnectionPool (session-level connection pool).</p>
     */
     @SerializedName("ConnectionPoolType")
     @Expose
     private String ConnectionPoolType;
 
     /**
-    * Whether to enable the connection pool.
-yes: indicates enabled.
-no: indicates not enabled.
+    * <p>Whether the connection pool is enabled.<br>yes: enabled.<br>no: disabled.</p>
     */
     @SerializedName("OpenConnectionPool")
     @Expose
     private String OpenConnectionPool;
 
     /**
-    * Threshold of the connection pool: unit (seconds). Valid values: 0 - 300 seconds.
+    * <p>Connection pool threshold: measurement unit (seconds), optional range: 0 - 300 seconds.</p>
     */
     @SerializedName("ConnectionPoolTimeOut")
     @Expose
     private Long ConnectionPoolTimeOut;
 
     /**
-    * Array of bound security group IDs.
+    * <p>Bound security group ID array.</p>
     */
     @SerializedName("SecurityGroupIds")
     @Expose
     private String [] SecurityGroupIds;
 
     /**
-    * Description.
+    * <p>Description.</p>
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * The vip information to be bound must correspond to the UniqueVpcId.
+    * <p>vip information that should be bound must correspond to UniqueVpcId.</p>
     */
     @SerializedName("Vip")
     @Expose
     private String Vip;
 
     /**
-    * Weight mode:
-system: system-assigned.
-custom: custom.
+    * <p>Weight mode:<br>system: system-assigned.<br>custom: custom.</p>
     */
     @SerializedName("WeightMode")
     @Expose
     private String WeightMode;
 
     /**
-    * Whether to automatically add a read-only instance.
-yes: indicates automatically adding a read-only instance.
-no: indicates not to automatically add a read-only instance.
+    * <p>Automatically add read-only instance.<br>yes: means automatically add read-only instance.<br>no: means not automatic add read-only instance.</p>
     */
     @SerializedName("AutoAddRo")
     @Expose
     private String AutoAddRo;
 
     /**
-    * Whether to enable failover.
-yes: indicates enabled. After it is enabled, when the database proxy encounters faults, the connection address will be routed to the primary instance.
-no: indicates not enabled.
-Description:
-Only when the value of the RwType parameter is READWRITE can this option be configured.
+    * <p>Whether fault migration is enabled.<br>yes: Enable. Once enabled, when a database proxy failure occurs, the connection address will be routed to the primary instance.<br>no: Disabled.<br>Description:<br>This item can be set to only when the RwType parameter value is READWRITE.</p>
     */
     @SerializedName("FailOver")
     @Expose
     private String FailOver;
 
     /**
-    * Consistency Type:
-eventual: eventual consistency.
-global: global consistency.
-session: session consistency.
-Description:
-Only when the RwType parameter value is READWRITE can this option be configured.
+    * <p>Consistency type:<br>eventual: Final consistency.<br>global: Global consistency.<br>session: Session consistency.<br>Description:<br>This item can be set to only when the RwType parameter value is READWRITE.</p>
     */
     @SerializedName("ConsistencyType")
     @Expose
     private String ConsistencyType;
 
     /**
-    * Read-Write Attribute:
-READWRITE: indicates read/write splitting. Only when this parameter value is READWRITE can the FailOver and ConsistencyType parameters be configured.
-READONLY: indicates read-only.
+    * <p>Read-write attribute:<br>READWRITE: means read-write separation. When the parameter value is READWRITE, FailOver and ConsistencyType parameters can be set.<br>READONLY: means read-only.</p>
     */
     @SerializedName("RwType")
     @Expose
     private String RwType;
 
     /**
-    * The consistency timeout period. Value range: 0 - 1000000 (microseconds). When set to 0, if a read-only instance experiences latency causing the consistency policy to be unsatisfied, the request will wait indefinitely.
+    * <p>Consistency timeout. Value ranges from 0 to 1000000 (microseconds). When set to 0, it means the request will wait if the read-only instance fails to satisfy the consistency policy due to latency.</p>
     */
     @SerializedName("ConsistencyTimeOut")
     @Expose
     private Long ConsistencyTimeOut;
 
     /**
-    * Whether to enable transaction split. After it is enabled, read and write operations in a transaction are split to different instances for execution.
+    * <p>Whether to enable transaction split. Once enabled, read and write operations in a transaction are split and executed on different instances.</p>
     */
     @SerializedName("TransSplit")
     @Expose
     private Boolean TransSplit;
 
     /**
-    * Access mode:
-nearby: nearby access.
-balance: balanced allocation.
+    * <p>Access mode:<br>nearby: proximity access.<br>balance: balanced allocation.</p>
     */
     @SerializedName("AccessMode")
     @Expose
     private String AccessMode;
 
     /**
-    * Instance weight.
+    * <p>Instance weight.</p>
     */
     @SerializedName("InstanceWeights")
     @Expose
     private ProxyInstanceWeight [] InstanceWeights;
 
     /**
-     * Get Cluster ID. 
-     * @return ClusterId Cluster ID.
+    * 
+    */
+    @SerializedName("LoadBalanceMode")
+    @Expose
+    private String LoadBalanceMode;
+
+    /**
+     * Get <p>Cluster ID.</p> 
+     * @return ClusterId <p>Cluster ID.</p>
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set Cluster ID.
-     * @param ClusterId Cluster ID.
+     * Set <p>Cluster ID.</p>
+     * @param ClusterId <p>Cluster ID.</p>
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
     }
 
     /**
-     * Get VPC ID. By default, it remains consistent with the VPC ID of the cluster. 
-     * @return UniqueVpcId VPC ID. By default, it remains consistent with the VPC ID of the cluster.
+     * Get <p>VPC ID.</p> 
+     * @return UniqueVpcId <p>VPC ID.</p>
      */
     public String getUniqueVpcId() {
         return this.UniqueVpcId;
     }
 
     /**
-     * Set VPC ID. By default, it remains consistent with the VPC ID of the cluster.
-     * @param UniqueVpcId VPC ID. By default, it remains consistent with the VPC ID of the cluster.
+     * Set <p>VPC ID.</p>
+     * @param UniqueVpcId <p>VPC ID.</p>
      */
     public void setUniqueVpcId(String UniqueVpcId) {
         this.UniqueVpcId = UniqueVpcId;
     }
 
     /**
-     * Get Subnet ID of the VPC. By default, it remains consistent with the subnet ID of the cluster. 
-     * @return UniqueSubnetId Subnet ID of the VPC. By default, it remains consistent with the subnet ID of the cluster.
+     * Get <p>VPC subnet ID.</p> 
+     * @return UniqueSubnetId <p>VPC subnet ID.</p>
      */
     public String getUniqueSubnetId() {
         return this.UniqueSubnetId;
     }
 
     /**
-     * Set Subnet ID of the VPC. By default, it remains consistent with the subnet ID of the cluster.
-     * @param UniqueSubnetId Subnet ID of the VPC. By default, it remains consistent with the subnet ID of the cluster.
+     * Set <p>VPC subnet ID.</p>
+     * @param UniqueSubnetId <p>VPC subnet ID.</p>
      */
     public void setUniqueSubnetId(String UniqueSubnetId) {
         this.UniqueSubnetId = UniqueSubnetId;
     }
 
     /**
-     * Get Type of connection pool: SessionConnectionPool (session-level connection pool). 
-     * @return ConnectionPoolType Type of connection pool: SessionConnectionPool (session-level connection pool).
+     * Get <p>Connection pool Type: SessionConnectionPool (session-level connection pool).</p> 
+     * @return ConnectionPoolType <p>Connection pool Type: SessionConnectionPool (session-level connection pool).</p>
      */
     public String getConnectionPoolType() {
         return this.ConnectionPoolType;
     }
 
     /**
-     * Set Type of connection pool: SessionConnectionPool (session-level connection pool).
-     * @param ConnectionPoolType Type of connection pool: SessionConnectionPool (session-level connection pool).
+     * Set <p>Connection pool Type: SessionConnectionPool (session-level connection pool).</p>
+     * @param ConnectionPoolType <p>Connection pool Type: SessionConnectionPool (session-level connection pool).</p>
      */
     public void setConnectionPoolType(String ConnectionPoolType) {
         this.ConnectionPoolType = ConnectionPoolType;
     }
 
     /**
-     * Get Whether to enable the connection pool.
-yes: indicates enabled.
-no: indicates not enabled. 
-     * @return OpenConnectionPool Whether to enable the connection pool.
-yes: indicates enabled.
-no: indicates not enabled.
+     * Get <p>Whether the connection pool is enabled.<br>yes: enabled.<br>no: disabled.</p> 
+     * @return OpenConnectionPool <p>Whether the connection pool is enabled.<br>yes: enabled.<br>no: disabled.</p>
      */
     public String getOpenConnectionPool() {
         return this.OpenConnectionPool;
     }
 
     /**
-     * Set Whether to enable the connection pool.
-yes: indicates enabled.
-no: indicates not enabled.
-     * @param OpenConnectionPool Whether to enable the connection pool.
-yes: indicates enabled.
-no: indicates not enabled.
+     * Set <p>Whether the connection pool is enabled.<br>yes: enabled.<br>no: disabled.</p>
+     * @param OpenConnectionPool <p>Whether the connection pool is enabled.<br>yes: enabled.<br>no: disabled.</p>
      */
     public void setOpenConnectionPool(String OpenConnectionPool) {
         this.OpenConnectionPool = OpenConnectionPool;
     }
 
     /**
-     * Get Threshold of the connection pool: unit (seconds). Valid values: 0 - 300 seconds. 
-     * @return ConnectionPoolTimeOut Threshold of the connection pool: unit (seconds). Valid values: 0 - 300 seconds.
+     * Get <p>Connection pool threshold: measurement unit (seconds), optional range: 0 - 300 seconds.</p> 
+     * @return ConnectionPoolTimeOut <p>Connection pool threshold: measurement unit (seconds), optional range: 0 - 300 seconds.</p>
      */
     public Long getConnectionPoolTimeOut() {
         return this.ConnectionPoolTimeOut;
     }
 
     /**
-     * Set Threshold of the connection pool: unit (seconds). Valid values: 0 - 300 seconds.
-     * @param ConnectionPoolTimeOut Threshold of the connection pool: unit (seconds). Valid values: 0 - 300 seconds.
+     * Set <p>Connection pool threshold: measurement unit (seconds), optional range: 0 - 300 seconds.</p>
+     * @param ConnectionPoolTimeOut <p>Connection pool threshold: measurement unit (seconds), optional range: 0 - 300 seconds.</p>
      */
     public void setConnectionPoolTimeOut(Long ConnectionPoolTimeOut) {
         this.ConnectionPoolTimeOut = ConnectionPoolTimeOut;
     }
 
     /**
-     * Get Array of bound security group IDs. 
-     * @return SecurityGroupIds Array of bound security group IDs.
+     * Get <p>Bound security group ID array.</p> 
+     * @return SecurityGroupIds <p>Bound security group ID array.</p>
      */
     public String [] getSecurityGroupIds() {
         return this.SecurityGroupIds;
     }
 
     /**
-     * Set Array of bound security group IDs.
-     * @param SecurityGroupIds Array of bound security group IDs.
+     * Set <p>Bound security group ID array.</p>
+     * @param SecurityGroupIds <p>Bound security group ID array.</p>
      */
     public void setSecurityGroupIds(String [] SecurityGroupIds) {
         this.SecurityGroupIds = SecurityGroupIds;
     }
 
     /**
-     * Get Description. 
-     * @return Description Description.
+     * Get <p>Description.</p> 
+     * @return Description <p>Description.</p>
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set Description.
-     * @param Description Description.
+     * Set <p>Description.</p>
+     * @param Description <p>Description.</p>
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get The vip information to be bound must correspond to the UniqueVpcId. 
-     * @return Vip The vip information to be bound must correspond to the UniqueVpcId.
+     * Get <p>vip information that should be bound must correspond to UniqueVpcId.</p> 
+     * @return Vip <p>vip information that should be bound must correspond to UniqueVpcId.</p>
      */
     public String getVip() {
         return this.Vip;
     }
 
     /**
-     * Set The vip information to be bound must correspond to the UniqueVpcId.
-     * @param Vip The vip information to be bound must correspond to the UniqueVpcId.
+     * Set <p>vip information that should be bound must correspond to UniqueVpcId.</p>
+     * @param Vip <p>vip information that should be bound must correspond to UniqueVpcId.</p>
      */
     public void setVip(String Vip) {
         this.Vip = Vip;
     }
 
     /**
-     * Get Weight mode:
-system: system-assigned.
-custom: custom. 
-     * @return WeightMode Weight mode:
-system: system-assigned.
-custom: custom.
+     * Get <p>Weight mode:<br>system: system-assigned.<br>custom: custom.</p> 
+     * @return WeightMode <p>Weight mode:<br>system: system-assigned.<br>custom: custom.</p>
      */
     public String getWeightMode() {
         return this.WeightMode;
     }
 
     /**
-     * Set Weight mode:
-system: system-assigned.
-custom: custom.
-     * @param WeightMode Weight mode:
-system: system-assigned.
-custom: custom.
+     * Set <p>Weight mode:<br>system: system-assigned.<br>custom: custom.</p>
+     * @param WeightMode <p>Weight mode:<br>system: system-assigned.<br>custom: custom.</p>
      */
     public void setWeightMode(String WeightMode) {
         this.WeightMode = WeightMode;
     }
 
     /**
-     * Get Whether to automatically add a read-only instance.
-yes: indicates automatically adding a read-only instance.
-no: indicates not to automatically add a read-only instance. 
-     * @return AutoAddRo Whether to automatically add a read-only instance.
-yes: indicates automatically adding a read-only instance.
-no: indicates not to automatically add a read-only instance.
+     * Get <p>Automatically add read-only instance.<br>yes: means automatically add read-only instance.<br>no: means not automatic add read-only instance.</p> 
+     * @return AutoAddRo <p>Automatically add read-only instance.<br>yes: means automatically add read-only instance.<br>no: means not automatic add read-only instance.</p>
      */
     public String getAutoAddRo() {
         return this.AutoAddRo;
     }
 
     /**
-     * Set Whether to automatically add a read-only instance.
-yes: indicates automatically adding a read-only instance.
-no: indicates not to automatically add a read-only instance.
-     * @param AutoAddRo Whether to automatically add a read-only instance.
-yes: indicates automatically adding a read-only instance.
-no: indicates not to automatically add a read-only instance.
+     * Set <p>Automatically add read-only instance.<br>yes: means automatically add read-only instance.<br>no: means not automatic add read-only instance.</p>
+     * @param AutoAddRo <p>Automatically add read-only instance.<br>yes: means automatically add read-only instance.<br>no: means not automatic add read-only instance.</p>
      */
     public void setAutoAddRo(String AutoAddRo) {
         this.AutoAddRo = AutoAddRo;
     }
 
     /**
-     * Get Whether to enable failover.
-yes: indicates enabled. After it is enabled, when the database proxy encounters faults, the connection address will be routed to the primary instance.
-no: indicates not enabled.
-Description:
-Only when the value of the RwType parameter is READWRITE can this option be configured. 
-     * @return FailOver Whether to enable failover.
-yes: indicates enabled. After it is enabled, when the database proxy encounters faults, the connection address will be routed to the primary instance.
-no: indicates not enabled.
-Description:
-Only when the value of the RwType parameter is READWRITE can this option be configured.
+     * Get <p>Whether fault migration is enabled.<br>yes: Enable. Once enabled, when a database proxy failure occurs, the connection address will be routed to the primary instance.<br>no: Disabled.<br>Description:<br>This item can be set to only when the RwType parameter value is READWRITE.</p> 
+     * @return FailOver <p>Whether fault migration is enabled.<br>yes: Enable. Once enabled, when a database proxy failure occurs, the connection address will be routed to the primary instance.<br>no: Disabled.<br>Description:<br>This item can be set to only when the RwType parameter value is READWRITE.</p>
      */
     public String getFailOver() {
         return this.FailOver;
     }
 
     /**
-     * Set Whether to enable failover.
-yes: indicates enabled. After it is enabled, when the database proxy encounters faults, the connection address will be routed to the primary instance.
-no: indicates not enabled.
-Description:
-Only when the value of the RwType parameter is READWRITE can this option be configured.
-     * @param FailOver Whether to enable failover.
-yes: indicates enabled. After it is enabled, when the database proxy encounters faults, the connection address will be routed to the primary instance.
-no: indicates not enabled.
-Description:
-Only when the value of the RwType parameter is READWRITE can this option be configured.
+     * Set <p>Whether fault migration is enabled.<br>yes: Enable. Once enabled, when a database proxy failure occurs, the connection address will be routed to the primary instance.<br>no: Disabled.<br>Description:<br>This item can be set to only when the RwType parameter value is READWRITE.</p>
+     * @param FailOver <p>Whether fault migration is enabled.<br>yes: Enable. Once enabled, when a database proxy failure occurs, the connection address will be routed to the primary instance.<br>no: Disabled.<br>Description:<br>This item can be set to only when the RwType parameter value is READWRITE.</p>
      */
     public void setFailOver(String FailOver) {
         this.FailOver = FailOver;
     }
 
     /**
-     * Get Consistency Type:
-eventual: eventual consistency.
-global: global consistency.
-session: session consistency.
-Description:
-Only when the RwType parameter value is READWRITE can this option be configured. 
-     * @return ConsistencyType Consistency Type:
-eventual: eventual consistency.
-global: global consistency.
-session: session consistency.
-Description:
-Only when the RwType parameter value is READWRITE can this option be configured.
+     * Get <p>Consistency type:<br>eventual: Final consistency.<br>global: Global consistency.<br>session: Session consistency.<br>Description:<br>This item can be set to only when the RwType parameter value is READWRITE.</p> 
+     * @return ConsistencyType <p>Consistency type:<br>eventual: Final consistency.<br>global: Global consistency.<br>session: Session consistency.<br>Description:<br>This item can be set to only when the RwType parameter value is READWRITE.</p>
      */
     public String getConsistencyType() {
         return this.ConsistencyType;
     }
 
     /**
-     * Set Consistency Type:
-eventual: eventual consistency.
-global: global consistency.
-session: session consistency.
-Description:
-Only when the RwType parameter value is READWRITE can this option be configured.
-     * @param ConsistencyType Consistency Type:
-eventual: eventual consistency.
-global: global consistency.
-session: session consistency.
-Description:
-Only when the RwType parameter value is READWRITE can this option be configured.
+     * Set <p>Consistency type:<br>eventual: Final consistency.<br>global: Global consistency.<br>session: Session consistency.<br>Description:<br>This item can be set to only when the RwType parameter value is READWRITE.</p>
+     * @param ConsistencyType <p>Consistency type:<br>eventual: Final consistency.<br>global: Global consistency.<br>session: Session consistency.<br>Description:<br>This item can be set to only when the RwType parameter value is READWRITE.</p>
      */
     public void setConsistencyType(String ConsistencyType) {
         this.ConsistencyType = ConsistencyType;
     }
 
     /**
-     * Get Read-Write Attribute:
-READWRITE: indicates read/write splitting. Only when this parameter value is READWRITE can the FailOver and ConsistencyType parameters be configured.
-READONLY: indicates read-only. 
-     * @return RwType Read-Write Attribute:
-READWRITE: indicates read/write splitting. Only when this parameter value is READWRITE can the FailOver and ConsistencyType parameters be configured.
-READONLY: indicates read-only.
+     * Get <p>Read-write attribute:<br>READWRITE: means read-write separation. When the parameter value is READWRITE, FailOver and ConsistencyType parameters can be set.<br>READONLY: means read-only.</p> 
+     * @return RwType <p>Read-write attribute:<br>READWRITE: means read-write separation. When the parameter value is READWRITE, FailOver and ConsistencyType parameters can be set.<br>READONLY: means read-only.</p>
      */
     public String getRwType() {
         return this.RwType;
     }
 
     /**
-     * Set Read-Write Attribute:
-READWRITE: indicates read/write splitting. Only when this parameter value is READWRITE can the FailOver and ConsistencyType parameters be configured.
-READONLY: indicates read-only.
-     * @param RwType Read-Write Attribute:
-READWRITE: indicates read/write splitting. Only when this parameter value is READWRITE can the FailOver and ConsistencyType parameters be configured.
-READONLY: indicates read-only.
+     * Set <p>Read-write attribute:<br>READWRITE: means read-write separation. When the parameter value is READWRITE, FailOver and ConsistencyType parameters can be set.<br>READONLY: means read-only.</p>
+     * @param RwType <p>Read-write attribute:<br>READWRITE: means read-write separation. When the parameter value is READWRITE, FailOver and ConsistencyType parameters can be set.<br>READONLY: means read-only.</p>
      */
     public void setRwType(String RwType) {
         this.RwType = RwType;
     }
 
     /**
-     * Get The consistency timeout period. Value range: 0 - 1000000 (microseconds). When set to 0, if a read-only instance experiences latency causing the consistency policy to be unsatisfied, the request will wait indefinitely. 
-     * @return ConsistencyTimeOut The consistency timeout period. Value range: 0 - 1000000 (microseconds). When set to 0, if a read-only instance experiences latency causing the consistency policy to be unsatisfied, the request will wait indefinitely.
+     * Get <p>Consistency timeout. Value ranges from 0 to 1000000 (microseconds). When set to 0, it means the request will wait if the read-only instance fails to satisfy the consistency policy due to latency.</p> 
+     * @return ConsistencyTimeOut <p>Consistency timeout. Value ranges from 0 to 1000000 (microseconds). When set to 0, it means the request will wait if the read-only instance fails to satisfy the consistency policy due to latency.</p>
      */
     public Long getConsistencyTimeOut() {
         return this.ConsistencyTimeOut;
     }
 
     /**
-     * Set The consistency timeout period. Value range: 0 - 1000000 (microseconds). When set to 0, if a read-only instance experiences latency causing the consistency policy to be unsatisfied, the request will wait indefinitely.
-     * @param ConsistencyTimeOut The consistency timeout period. Value range: 0 - 1000000 (microseconds). When set to 0, if a read-only instance experiences latency causing the consistency policy to be unsatisfied, the request will wait indefinitely.
+     * Set <p>Consistency timeout. Value ranges from 0 to 1000000 (microseconds). When set to 0, it means the request will wait if the read-only instance fails to satisfy the consistency policy due to latency.</p>
+     * @param ConsistencyTimeOut <p>Consistency timeout. Value ranges from 0 to 1000000 (microseconds). When set to 0, it means the request will wait if the read-only instance fails to satisfy the consistency policy due to latency.</p>
      */
     public void setConsistencyTimeOut(Long ConsistencyTimeOut) {
         this.ConsistencyTimeOut = ConsistencyTimeOut;
     }
 
     /**
-     * Get Whether to enable transaction split. After it is enabled, read and write operations in a transaction are split to different instances for execution. 
-     * @return TransSplit Whether to enable transaction split. After it is enabled, read and write operations in a transaction are split to different instances for execution.
+     * Get <p>Whether to enable transaction split. Once enabled, read and write operations in a transaction are split and executed on different instances.</p> 
+     * @return TransSplit <p>Whether to enable transaction split. Once enabled, read and write operations in a transaction are split and executed on different instances.</p>
      */
     public Boolean getTransSplit() {
         return this.TransSplit;
     }
 
     /**
-     * Set Whether to enable transaction split. After it is enabled, read and write operations in a transaction are split to different instances for execution.
-     * @param TransSplit Whether to enable transaction split. After it is enabled, read and write operations in a transaction are split to different instances for execution.
+     * Set <p>Whether to enable transaction split. Once enabled, read and write operations in a transaction are split and executed on different instances.</p>
+     * @param TransSplit <p>Whether to enable transaction split. Once enabled, read and write operations in a transaction are split and executed on different instances.</p>
      */
     public void setTransSplit(Boolean TransSplit) {
         this.TransSplit = TransSplit;
     }
 
     /**
-     * Get Access mode:
-nearby: nearby access.
-balance: balanced allocation. 
-     * @return AccessMode Access mode:
-nearby: nearby access.
-balance: balanced allocation.
+     * Get <p>Access mode:<br>nearby: proximity access.<br>balance: balanced allocation.</p> 
+     * @return AccessMode <p>Access mode:<br>nearby: proximity access.<br>balance: balanced allocation.</p>
      */
     public String getAccessMode() {
         return this.AccessMode;
     }
 
     /**
-     * Set Access mode:
-nearby: nearby access.
-balance: balanced allocation.
-     * @param AccessMode Access mode:
-nearby: nearby access.
-balance: balanced allocation.
+     * Set <p>Access mode:<br>nearby: proximity access.<br>balance: balanced allocation.</p>
+     * @param AccessMode <p>Access mode:<br>nearby: proximity access.<br>balance: balanced allocation.</p>
      */
     public void setAccessMode(String AccessMode) {
         this.AccessMode = AccessMode;
     }
 
     /**
-     * Get Instance weight. 
-     * @return InstanceWeights Instance weight.
+     * Get <p>Instance weight.</p> 
+     * @return InstanceWeights <p>Instance weight.</p>
      */
     public ProxyInstanceWeight [] getInstanceWeights() {
         return this.InstanceWeights;
     }
 
     /**
-     * Set Instance weight.
-     * @param InstanceWeights Instance weight.
+     * Set <p>Instance weight.</p>
+     * @param InstanceWeights <p>Instance weight.</p>
      */
     public void setInstanceWeights(ProxyInstanceWeight [] InstanceWeights) {
         this.InstanceWeights = InstanceWeights;
+    }
+
+    /**
+     * Get  
+     * @return LoadBalanceMode 
+     */
+    public String getLoadBalanceMode() {
+        return this.LoadBalanceMode;
+    }
+
+    /**
+     * Set 
+     * @param LoadBalanceMode 
+     */
+    public void setLoadBalanceMode(String LoadBalanceMode) {
+        this.LoadBalanceMode = LoadBalanceMode;
     }
 
     public CreateProxyEndPointRequest() {
@@ -600,6 +528,9 @@ balance: balanced allocation.
                 this.InstanceWeights[i] = new ProxyInstanceWeight(source.InstanceWeights[i]);
             }
         }
+        if (source.LoadBalanceMode != null) {
+            this.LoadBalanceMode = new String(source.LoadBalanceMode);
+        }
     }
 
 
@@ -625,6 +556,7 @@ balance: balanced allocation.
         this.setParamSimple(map, prefix + "TransSplit", this.TransSplit);
         this.setParamSimple(map, prefix + "AccessMode", this.AccessMode);
         this.setParamArrayObj(map, prefix + "InstanceWeights.", this.InstanceWeights);
+        this.setParamSimple(map, prefix + "LoadBalanceMode", this.LoadBalanceMode);
 
     }
 }

@@ -25,7 +25,6 @@ public class DescribeMachineGroupsResponse extends AbstractModel {
 
     /**
     * Machine group information list
-Note: This field may return "null", indicating that no valid values can be obtained.
     */
     @SerializedName("MachineGroups")
     @Expose
@@ -46,10 +45,8 @@ Note: This field may return "null", indicating that no valid values can be obtai
     private String RequestId;
 
     /**
-     * Get Machine group information list
-Note: This field may return "null", indicating that no valid values can be obtained. 
+     * Get Machine group information list 
      * @return MachineGroups Machine group information list
-Note: This field may return "null", indicating that no valid values can be obtained.
      */
     public MachineGroupInfo [] getMachineGroups() {
         return this.MachineGroups;
@@ -57,9 +54,7 @@ Note: This field may return "null", indicating that no valid values can be obtai
 
     /**
      * Set Machine group information list
-Note: This field may return "null", indicating that no valid values can be obtained.
      * @param MachineGroups Machine group information list
-Note: This field may return "null", indicating that no valid values can be obtained.
      */
     public void setMachineGroups(MachineGroupInfo [] MachineGroups) {
         this.MachineGroups = MachineGroups;

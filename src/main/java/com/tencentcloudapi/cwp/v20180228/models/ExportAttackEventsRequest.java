@@ -37,14 +37,14 @@ public class ExportAttackEventsRequest extends AbstractModel {
     private Filters [] Filters;
 
     /**
-    * Sorting value: CreateTime
+    * Sorting value: CreateTime
     */
     @SerializedName("By")
     @Expose
     private String By;
 
     /**
-    * Sorting method: ASC, DESC
+    * Sorting method: ASC, DESC
     */
     @SerializedName("Order")
     @Expose
@@ -91,32 +91,32 @@ public class ExportAttackEventsRequest extends AbstractModel {
     }
 
     /**
-     * Get Sorting value: CreateTime 
-     * @return By Sorting value: CreateTime
+     * Get Sorting value: CreateTime 
+     * @return By Sorting value: CreateTime
      */
     public String getBy() {
         return this.By;
     }
 
     /**
-     * Set Sorting value: CreateTime
-     * @param By Sorting value: CreateTime
+     * Set Sorting value: CreateTime
+     * @param By Sorting value: CreateTime
      */
     public void setBy(String By) {
         this.By = By;
     }
 
     /**
-     * Get Sorting method: ASC, DESC 
-     * @return Order Sorting method: ASC, DESC
+     * Get Sorting method: ASC, DESC 
+     * @return Order Sorting method: ASC, DESC
      */
     public String getOrder() {
         return this.Order;
     }
 
     /**
-     * Set Sorting method: ASC, DESC
-     * @param Order Sorting method: ASC, DESC
+     * Set Sorting method: ASC, DESC
+     * @param Order Sorting method: ASC, DESC
      */
     public void setOrder(String Order) {
         this.Order = Order;

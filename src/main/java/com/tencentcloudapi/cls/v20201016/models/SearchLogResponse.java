@@ -24,81 +24,76 @@ import java.util.HashMap;
 public class SearchLogResponse extends AbstractModel {
 
     /**
-    * Pass through the Context value returned by this API, which can access more logs later, with an expiration time of 1 hour.Note:* Applicable only for single log topic searches. When searching multiple log topics, please use the Context in Topics.
+    * <p>Pass through the Context value returned by this API to obtain more logs later. The expiration time is 1 hour.<br>Note:</p><ul><li>Applicable only for single log topic retrieval. To retrieve multiple log topics, use the Context in Topics.</li></ul>
     */
     @SerializedName("Context")
     @Expose
     private String Context;
 
     /**
-    * Whether to return all raw log query results. If not, you can use `Context` to continue to get logs.
-Note: This parameter is valid only when the query statement (`Query`) does not contain an SQL statement.
+    * <p>Whether all logs meeting the retrieval criteria have been returned. If not, use Context parameter to retrieve more logs.<br>Note: This is only valid when the search and analysis statement (Query) does not contain SQL.</p>
     */
     @SerializedName("ListOver")
     @Expose
     private Boolean ListOver;
 
     /**
-    * Whether the returned data is the analysis (SQL) result
+    * <p>Whether the returned data is the SQL analysis result</p>
     */
     @SerializedName("Analysis")
     @Expose
     private Boolean Analysis;
 
     /**
-    * Raw logs that meet the search conditions
-Note: This field may return `null`, indicating that no valid value was found.
+    * <p>Raw logs matching the retrieval criteria</p>
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Results")
     @Expose
     private LogInfo [] Results;
 
     /**
-    * Column names of log analysis
-This parameter is valid only when `UseNewAnalysis` is `false`.
-Note: This field may return `null`, indicating that no valid value was found.
+    * <p>Column names of log statistics analysis results<br>This parameter is valid only when UseNewAnalysis is false</p>
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ColNames")
     @Expose
     private String [] ColNames;
 
     /**
-    * Log analysis result
-This parameter is valid only when `UseNewAnalysis` is `false`.
-Note: This field may return `null`, indicating that no valid value was found.
+    * <p>Statistical analysis results of logs<br>This parameter is valid only when UseNewAnalysis is false</p>
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("AnalysisResults")
     @Expose
     private LogItems [] AnalysisResults;
 
     /**
-    * Log analysis result
-This parameter is valid only when `UseNewAnalysis` is `true`.
-Note: This field may return `null`, indicating that no valid value was found.
+    * <p>Log statistics and analysis results<br>This parameter is valid only when UseNewAnalysis is true</p>
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("AnalysisRecords")
     @Expose
     private String [] AnalysisRecords;
 
     /**
-    * Column attributes of log analysis
-This parameter is valid only when `UseNewAnalysis` is `true`.
-Note: This field may return `null`, indicating that no valid value was found.
+    * <p>Column attribute of log statistics and analysis results<br>This parameter is valid only when UseNewAnalysis is true</p>
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Columns")
     @Expose
     private Column [] Columns;
 
     /**
-    * Sample rate used in this statistical analysis
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Sampling rate used in this analysis</p>
     */
     @SerializedName("SamplingRate")
     @Expose
     private Float SamplingRate;
 
     /**
-    * Refers to the basic information of each log topic when multiple log topics are used for search, such as error messages.Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>When multiple log topics are used for retrieval, basic information of each log topic, such as error message.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Topics")
     @Expose
@@ -112,204 +107,184 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Pass through the Context value returned by this API, which can access more logs later, with an expiration time of 1 hour.Note:* Applicable only for single log topic searches. When searching multiple log topics, please use the Context in Topics. 
-     * @return Context Pass through the Context value returned by this API, which can access more logs later, with an expiration time of 1 hour.Note:* Applicable only for single log topic searches. When searching multiple log topics, please use the Context in Topics.
+     * Get <p>Pass through the Context value returned by this API to obtain more logs later. The expiration time is 1 hour.<br>Note:</p><ul><li>Applicable only for single log topic retrieval. To retrieve multiple log topics, use the Context in Topics.</li></ul> 
+     * @return Context <p>Pass through the Context value returned by this API to obtain more logs later. The expiration time is 1 hour.<br>Note:</p><ul><li>Applicable only for single log topic retrieval. To retrieve multiple log topics, use the Context in Topics.</li></ul>
      */
     public String getContext() {
         return this.Context;
     }
 
     /**
-     * Set Pass through the Context value returned by this API, which can access more logs later, with an expiration time of 1 hour.Note:* Applicable only for single log topic searches. When searching multiple log topics, please use the Context in Topics.
-     * @param Context Pass through the Context value returned by this API, which can access more logs later, with an expiration time of 1 hour.Note:* Applicable only for single log topic searches. When searching multiple log topics, please use the Context in Topics.
+     * Set <p>Pass through the Context value returned by this API to obtain more logs later. The expiration time is 1 hour.<br>Note:</p><ul><li>Applicable only for single log topic retrieval. To retrieve multiple log topics, use the Context in Topics.</li></ul>
+     * @param Context <p>Pass through the Context value returned by this API to obtain more logs later. The expiration time is 1 hour.<br>Note:</p><ul><li>Applicable only for single log topic retrieval. To retrieve multiple log topics, use the Context in Topics.</li></ul>
      */
     public void setContext(String Context) {
         this.Context = Context;
     }
 
     /**
-     * Get Whether to return all raw log query results. If not, you can use `Context` to continue to get logs.
-Note: This parameter is valid only when the query statement (`Query`) does not contain an SQL statement. 
-     * @return ListOver Whether to return all raw log query results. If not, you can use `Context` to continue to get logs.
-Note: This parameter is valid only when the query statement (`Query`) does not contain an SQL statement.
+     * Get <p>Whether all logs meeting the retrieval criteria have been returned. If not, use Context parameter to retrieve more logs.<br>Note: This is only valid when the search and analysis statement (Query) does not contain SQL.</p> 
+     * @return ListOver <p>Whether all logs meeting the retrieval criteria have been returned. If not, use Context parameter to retrieve more logs.<br>Note: This is only valid when the search and analysis statement (Query) does not contain SQL.</p>
      */
     public Boolean getListOver() {
         return this.ListOver;
     }
 
     /**
-     * Set Whether to return all raw log query results. If not, you can use `Context` to continue to get logs.
-Note: This parameter is valid only when the query statement (`Query`) does not contain an SQL statement.
-     * @param ListOver Whether to return all raw log query results. If not, you can use `Context` to continue to get logs.
-Note: This parameter is valid only when the query statement (`Query`) does not contain an SQL statement.
+     * Set <p>Whether all logs meeting the retrieval criteria have been returned. If not, use Context parameter to retrieve more logs.<br>Note: This is only valid when the search and analysis statement (Query) does not contain SQL.</p>
+     * @param ListOver <p>Whether all logs meeting the retrieval criteria have been returned. If not, use Context parameter to retrieve more logs.<br>Note: This is only valid when the search and analysis statement (Query) does not contain SQL.</p>
      */
     public void setListOver(Boolean ListOver) {
         this.ListOver = ListOver;
     }
 
     /**
-     * Get Whether the returned data is the analysis (SQL) result 
-     * @return Analysis Whether the returned data is the analysis (SQL) result
+     * Get <p>Whether the returned data is the SQL analysis result</p> 
+     * @return Analysis <p>Whether the returned data is the SQL analysis result</p>
      */
     public Boolean getAnalysis() {
         return this.Analysis;
     }
 
     /**
-     * Set Whether the returned data is the analysis (SQL) result
-     * @param Analysis Whether the returned data is the analysis (SQL) result
+     * Set <p>Whether the returned data is the SQL analysis result</p>
+     * @param Analysis <p>Whether the returned data is the SQL analysis result</p>
      */
     public void setAnalysis(Boolean Analysis) {
         this.Analysis = Analysis;
     }
 
     /**
-     * Get Raw logs that meet the search conditions
-Note: This field may return `null`, indicating that no valid value was found. 
-     * @return Results Raw logs that meet the search conditions
-Note: This field may return `null`, indicating that no valid value was found.
+     * Get <p>Raw logs matching the retrieval criteria</p>
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Results <p>Raw logs matching the retrieval criteria</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public LogInfo [] getResults() {
         return this.Results;
     }
 
     /**
-     * Set Raw logs that meet the search conditions
-Note: This field may return `null`, indicating that no valid value was found.
-     * @param Results Raw logs that meet the search conditions
-Note: This field may return `null`, indicating that no valid value was found.
+     * Set <p>Raw logs matching the retrieval criteria</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Results <p>Raw logs matching the retrieval criteria</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setResults(LogInfo [] Results) {
         this.Results = Results;
     }
 
     /**
-     * Get Column names of log analysis
-This parameter is valid only when `UseNewAnalysis` is `false`.
-Note: This field may return `null`, indicating that no valid value was found. 
-     * @return ColNames Column names of log analysis
-This parameter is valid only when `UseNewAnalysis` is `false`.
-Note: This field may return `null`, indicating that no valid value was found.
+     * Get <p>Column names of log statistics analysis results<br>This parameter is valid only when UseNewAnalysis is false</p>
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return ColNames <p>Column names of log statistics analysis results<br>This parameter is valid only when UseNewAnalysis is false</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String [] getColNames() {
         return this.ColNames;
     }
 
     /**
-     * Set Column names of log analysis
-This parameter is valid only when `UseNewAnalysis` is `false`.
-Note: This field may return `null`, indicating that no valid value was found.
-     * @param ColNames Column names of log analysis
-This parameter is valid only when `UseNewAnalysis` is `false`.
-Note: This field may return `null`, indicating that no valid value was found.
+     * Set <p>Column names of log statistics analysis results<br>This parameter is valid only when UseNewAnalysis is false</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ColNames <p>Column names of log statistics analysis results<br>This parameter is valid only when UseNewAnalysis is false</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setColNames(String [] ColNames) {
         this.ColNames = ColNames;
     }
 
     /**
-     * Get Log analysis result
-This parameter is valid only when `UseNewAnalysis` is `false`.
-Note: This field may return `null`, indicating that no valid value was found. 
-     * @return AnalysisResults Log analysis result
-This parameter is valid only when `UseNewAnalysis` is `false`.
-Note: This field may return `null`, indicating that no valid value was found.
+     * Get <p>Statistical analysis results of logs<br>This parameter is valid only when UseNewAnalysis is false</p>
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return AnalysisResults <p>Statistical analysis results of logs<br>This parameter is valid only when UseNewAnalysis is false</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public LogItems [] getAnalysisResults() {
         return this.AnalysisResults;
     }
 
     /**
-     * Set Log analysis result
-This parameter is valid only when `UseNewAnalysis` is `false`.
-Note: This field may return `null`, indicating that no valid value was found.
-     * @param AnalysisResults Log analysis result
-This parameter is valid only when `UseNewAnalysis` is `false`.
-Note: This field may return `null`, indicating that no valid value was found.
+     * Set <p>Statistical analysis results of logs<br>This parameter is valid only when UseNewAnalysis is false</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param AnalysisResults <p>Statistical analysis results of logs<br>This parameter is valid only when UseNewAnalysis is false</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setAnalysisResults(LogItems [] AnalysisResults) {
         this.AnalysisResults = AnalysisResults;
     }
 
     /**
-     * Get Log analysis result
-This parameter is valid only when `UseNewAnalysis` is `true`.
-Note: This field may return `null`, indicating that no valid value was found. 
-     * @return AnalysisRecords Log analysis result
-This parameter is valid only when `UseNewAnalysis` is `true`.
-Note: This field may return `null`, indicating that no valid value was found.
+     * Get <p>Log statistics and analysis results<br>This parameter is valid only when UseNewAnalysis is true</p>
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return AnalysisRecords <p>Log statistics and analysis results<br>This parameter is valid only when UseNewAnalysis is true</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String [] getAnalysisRecords() {
         return this.AnalysisRecords;
     }
 
     /**
-     * Set Log analysis result
-This parameter is valid only when `UseNewAnalysis` is `true`.
-Note: This field may return `null`, indicating that no valid value was found.
-     * @param AnalysisRecords Log analysis result
-This parameter is valid only when `UseNewAnalysis` is `true`.
-Note: This field may return `null`, indicating that no valid value was found.
+     * Set <p>Log statistics and analysis results<br>This parameter is valid only when UseNewAnalysis is true</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param AnalysisRecords <p>Log statistics and analysis results<br>This parameter is valid only when UseNewAnalysis is true</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setAnalysisRecords(String [] AnalysisRecords) {
         this.AnalysisRecords = AnalysisRecords;
     }
 
     /**
-     * Get Column attributes of log analysis
-This parameter is valid only when `UseNewAnalysis` is `true`.
-Note: This field may return `null`, indicating that no valid value was found. 
-     * @return Columns Column attributes of log analysis
-This parameter is valid only when `UseNewAnalysis` is `true`.
-Note: This field may return `null`, indicating that no valid value was found.
+     * Get <p>Column attribute of log statistics and analysis results<br>This parameter is valid only when UseNewAnalysis is true</p>
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Columns <p>Column attribute of log statistics and analysis results<br>This parameter is valid only when UseNewAnalysis is true</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Column [] getColumns() {
         return this.Columns;
     }
 
     /**
-     * Set Column attributes of log analysis
-This parameter is valid only when `UseNewAnalysis` is `true`.
-Note: This field may return `null`, indicating that no valid value was found.
-     * @param Columns Column attributes of log analysis
-This parameter is valid only when `UseNewAnalysis` is `true`.
-Note: This field may return `null`, indicating that no valid value was found.
+     * Set <p>Column attribute of log statistics and analysis results<br>This parameter is valid only when UseNewAnalysis is true</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Columns <p>Column attribute of log statistics and analysis results<br>This parameter is valid only when UseNewAnalysis is true</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setColumns(Column [] Columns) {
         this.Columns = Columns;
     }
 
     /**
-     * Get Sample rate used in this statistical analysis
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return SamplingRate Sample rate used in this statistical analysis
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Sampling rate used in this analysis</p> 
+     * @return SamplingRate <p>Sampling rate used in this analysis</p>
      */
     public Float getSamplingRate() {
         return this.SamplingRate;
     }
 
     /**
-     * Set Sample rate used in this statistical analysis
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param SamplingRate Sample rate used in this statistical analysis
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Sampling rate used in this analysis</p>
+     * @param SamplingRate <p>Sampling rate used in this analysis</p>
      */
     public void setSamplingRate(Float SamplingRate) {
         this.SamplingRate = SamplingRate;
     }
 
     /**
-     * Get Refers to the basic information of each log topic when multiple log topics are used for search, such as error messages.Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Topics Refers to the basic information of each log topic when multiple log topics are used for search, such as error messages.Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>When multiple log topics are used for retrieval, basic information of each log topic, such as error message.</p>
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Topics <p>When multiple log topics are used for retrieval, basic information of each log topic, such as error message.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public SearchLogTopics getTopics() {
         return this.Topics;
     }
 
     /**
-     * Set Refers to the basic information of each log topic when multiple log topics are used for search, such as error messages.Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Topics Refers to the basic information of each log topic when multiple log topics are used for search, such as error messages.Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>When multiple log topics are used for retrieval, basic information of each log topic, such as error message.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Topics <p>When multiple log topics are used for retrieval, basic information of each log topic, such as error message.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setTopics(SearchLogTopics Topics) {
         this.Topics = Topics;

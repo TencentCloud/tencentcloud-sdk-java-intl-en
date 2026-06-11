@@ -32,7 +32,6 @@ public class DescribeVulDefenceListResponse extends AbstractModel {
 
     /**
     * Vulnerability defense list
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("List")
     @Expose
@@ -62,10 +61,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Vulnerability defense list
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Vulnerability defense list 
      * @return List Vulnerability defense list
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public VulDefenceRangeDetail [] getList() {
         return this.List;
@@ -73,9 +70,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Vulnerability defense list
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param List Vulnerability defense list
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setList(VulDefenceRangeDetail [] List) {
         this.List = List;

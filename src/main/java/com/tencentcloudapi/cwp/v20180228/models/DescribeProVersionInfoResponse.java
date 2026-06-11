@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeProVersionInfoResponse extends AbstractModel {
 
     /**
-    * Postpay yesterday's charge
+    * Payment details for [Pro Edition - pay-as-you-go] yesterday (the actual bill prevails).
     */
     @SerializedName("PostPayCost")
     @Expose
@@ -38,7 +38,7 @@ public class DescribeProVersionInfoResponse extends AbstractModel {
     private Boolean IsAutoOpenProVersion;
 
     /**
-    * Number of hosts with Pro Edition activated
+    * Number of hosts with Pro Edition.
     */
     @SerializedName("ProVersionNum")
     @Expose
@@ -52,16 +52,16 @@ public class DescribeProVersionInfoResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Postpay yesterday's charge 
-     * @return PostPayCost Postpay yesterday's charge
+     * Get Payment details for [Pro Edition - pay-as-you-go] yesterday (the actual bill prevails). 
+     * @return PostPayCost Payment details for [Pro Edition - pay-as-you-go] yesterday (the actual bill prevails).
      */
     public Long getPostPayCost() {
         return this.PostPayCost;
     }
 
     /**
-     * Set Postpay yesterday's charge
-     * @param PostPayCost Postpay yesterday's charge
+     * Set Payment details for [Pro Edition - pay-as-you-go] yesterday (the actual bill prevails).
+     * @param PostPayCost Payment details for [Pro Edition - pay-as-you-go] yesterday (the actual bill prevails).
      */
     public void setPostPayCost(Long PostPayCost) {
         this.PostPayCost = PostPayCost;
@@ -84,16 +84,16 @@ public class DescribeProVersionInfoResponse extends AbstractModel {
     }
 
     /**
-     * Get Number of hosts with Pro Edition activated 
-     * @return ProVersionNum Number of hosts with Pro Edition activated
+     * Get Number of hosts with Pro Edition. 
+     * @return ProVersionNum Number of hosts with Pro Edition.
      */
     public Long getProVersionNum() {
         return this.ProVersionNum;
     }
 
     /**
-     * Set Number of hosts with Pro Edition activated
-     * @param ProVersionNum Number of hosts with Pro Edition activated
+     * Set Number of hosts with Pro Edition.
+     * @param ProVersionNum Number of hosts with Pro Edition.
      */
     public void setProVersionNum(Long ProVersionNum) {
         this.ProVersionNum = ProVersionNum;

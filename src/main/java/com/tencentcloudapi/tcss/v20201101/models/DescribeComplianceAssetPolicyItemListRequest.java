@@ -45,12 +45,19 @@ public class DescribeComplianceAssetPolicyItemListRequest extends AbstractModel 
     private Long Limit;
 
     /**
-    * Filter list, which is supported by the `Name` field.
-RiskLevel
+    * Filter list. Name field support
+RiskLevel, AppId
     */
     @SerializedName("Filters")
     @Expose
     private ComplianceFilters [] Filters;
+
+    /**
+    * Asset type. <li>ASSET_CONTAINER: Docker container.</li> <li>ASSET_IMAGE: Docker image.</li> <li>ASSET_HOST: Docker host.</li> <li>ASSET_K8S: Kubernetes.</li> <li>ASSET_CONTAINERD: Containerd host.</li> <li>ASSET_CONTAINERD_CONTAINER: Containerd container.</li>
+    */
+    @SerializedName("AssetType")
+    @Expose
+    private String AssetType;
 
     /**
      * Get Customer asset ID 
@@ -101,23 +108,39 @@ RiskLevel
     }
 
     /**
-     * Get Filter list, which is supported by the `Name` field.
-RiskLevel 
-     * @return Filters Filter list, which is supported by the `Name` field.
-RiskLevel
+     * Get Filter list. Name field support
+RiskLevel, AppId 
+     * @return Filters Filter list. Name field support
+RiskLevel, AppId
      */
     public ComplianceFilters [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set Filter list, which is supported by the `Name` field.
-RiskLevel
-     * @param Filters Filter list, which is supported by the `Name` field.
-RiskLevel
+     * Set Filter list. Name field support
+RiskLevel, AppId
+     * @param Filters Filter list. Name field support
+RiskLevel, AppId
      */
     public void setFilters(ComplianceFilters [] Filters) {
         this.Filters = Filters;
+    }
+
+    /**
+     * Get Asset type. <li>ASSET_CONTAINER: Docker container.</li> <li>ASSET_IMAGE: Docker image.</li> <li>ASSET_HOST: Docker host.</li> <li>ASSET_K8S: Kubernetes.</li> <li>ASSET_CONTAINERD: Containerd host.</li> <li>ASSET_CONTAINERD_CONTAINER: Containerd container.</li> 
+     * @return AssetType Asset type. <li>ASSET_CONTAINER: Docker container.</li> <li>ASSET_IMAGE: Docker image.</li> <li>ASSET_HOST: Docker host.</li> <li>ASSET_K8S: Kubernetes.</li> <li>ASSET_CONTAINERD: Containerd host.</li> <li>ASSET_CONTAINERD_CONTAINER: Containerd container.</li>
+     */
+    public String getAssetType() {
+        return this.AssetType;
+    }
+
+    /**
+     * Set Asset type. <li>ASSET_CONTAINER: Docker container.</li> <li>ASSET_IMAGE: Docker image.</li> <li>ASSET_HOST: Docker host.</li> <li>ASSET_K8S: Kubernetes.</li> <li>ASSET_CONTAINERD: Containerd host.</li> <li>ASSET_CONTAINERD_CONTAINER: Containerd container.</li>
+     * @param AssetType Asset type. <li>ASSET_CONTAINER: Docker container.</li> <li>ASSET_IMAGE: Docker image.</li> <li>ASSET_HOST: Docker host.</li> <li>ASSET_K8S: Kubernetes.</li> <li>ASSET_CONTAINERD: Containerd host.</li> <li>ASSET_CONTAINERD_CONTAINER: Containerd container.</li>
+     */
+    public void setAssetType(String AssetType) {
+        this.AssetType = AssetType;
     }
 
     public DescribeComplianceAssetPolicyItemListRequest() {
@@ -143,6 +166,9 @@ RiskLevel
                 this.Filters[i] = new ComplianceFilters(source.Filters[i]);
             }
         }
+        if (source.AssetType != null) {
+            this.AssetType = new String(source.AssetType);
+        }
     }
 
 
@@ -154,6 +180,7 @@ RiskLevel
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
+        this.setParamSimple(map, prefix + "AssetType", this.AssetType);
 
     }
 }

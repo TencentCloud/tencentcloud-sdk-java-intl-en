@@ -45,7 +45,7 @@ public class UrlRedirectRule extends AbstractModel {
     private String RedirectUrl;
 
     /**
-    * Target host. It should be a standard domain name starting with `http://` or `https://`. If it is left empty, “http://[current domain name]” will be used by default.
+    * Target host. It should be a standard domain name starting with `http://` or `https://`. If it is left empty, "http://[current domain name]" will be used by default.
 Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("RedirectHost")
@@ -59,6 +59,13 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     @SerializedName("FullMatch")
     @Expose
     private Boolean FullMatch;
+
+    /**
+    * 
+    */
+    @SerializedName("Regex")
+    @Expose
+    private Boolean Regex;
 
     /**
      * Get Redirect status code. Valid values: 301, 302 
@@ -109,9 +116,9 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     }
 
     /**
-     * Get Target host. It should be a standard domain name starting with `http://` or `https://`. If it is left empty, “http://[current domain name]” will be used by default.
+     * Get Target host. It should be a standard domain name starting with `http://` or `https://`. If it is left empty, "http://[current domain name]" will be used by default.
 Note: This field may return `null`, indicating that no valid value can be obtained. 
-     * @return RedirectHost Target host. It should be a standard domain name starting with `http://` or `https://`. If it is left empty, “http://[current domain name]” will be used by default.
+     * @return RedirectHost Target host. It should be a standard domain name starting with `http://` or `https://`. If it is left empty, "http://[current domain name]" will be used by default.
 Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public String getRedirectHost() {
@@ -119,9 +126,9 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     }
 
     /**
-     * Set Target host. It should be a standard domain name starting with `http://` or `https://`. If it is left empty, “http://[current domain name]” will be used by default.
+     * Set Target host. It should be a standard domain name starting with `http://` or `https://`. If it is left empty, "http://[current domain name]" will be used by default.
 Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param RedirectHost Target host. It should be a standard domain name starting with `http://` or `https://`. If it is left empty, “http://[current domain name]” will be used by default.
+     * @param RedirectHost Target host. It should be a standard domain name starting with `http://` or `https://`. If it is left empty, "http://[current domain name]" will be used by default.
 Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setRedirectHost(String RedirectHost) {
@@ -148,6 +155,22 @@ Note: This field may return `null`, indicating that no valid value can be obtain
         this.FullMatch = FullMatch;
     }
 
+    /**
+     * Get  
+     * @return Regex 
+     */
+    public Boolean getRegex() {
+        return this.Regex;
+    }
+
+    /**
+     * Set 
+     * @param Regex 
+     */
+    public void setRegex(Boolean Regex) {
+        this.Regex = Regex;
+    }
+
     public UrlRedirectRule() {
     }
 
@@ -171,6 +194,9 @@ Note: This field may return `null`, indicating that no valid value can be obtain
         if (source.FullMatch != null) {
             this.FullMatch = new Boolean(source.FullMatch);
         }
+        if (source.Regex != null) {
+            this.Regex = new Boolean(source.Regex);
+        }
     }
 
 
@@ -183,6 +209,7 @@ Note: This field may return `null`, indicating that no valid value can be obtain
         this.setParamSimple(map, prefix + "RedirectUrl", this.RedirectUrl);
         this.setParamSimple(map, prefix + "RedirectHost", this.RedirectHost);
         this.setParamSimple(map, prefix + "FullMatch", this.FullMatch);
+        this.setParamSimple(map, prefix + "Regex", this.Regex);
 
     }
 }

@@ -25,7 +25,6 @@ public class DescribeBruteAttackListResponse extends AbstractModel {
 
     /**
     * Total number
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("TotalCount")
     @Expose
@@ -33,7 +32,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * List of password cracking attacks
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("BruteAttackList")
     @Expose
@@ -47,10 +45,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Total number
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Total number 
      * @return TotalCount Total number
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getTotalCount() {
         return this.TotalCount;
@@ -58,19 +54,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Total number
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param TotalCount Total number
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get List of password cracking attacks
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get List of password cracking attacks 
      * @return BruteAttackList List of password cracking attacks
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public BruteAttackInfo [] getBruteAttackList() {
         return this.BruteAttackList;
@@ -78,9 +70,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set List of password cracking attacks
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param BruteAttackList List of password cracking attacks
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setBruteAttackList(BruteAttackInfo [] BruteAttackList) {
         this.BruteAttackList = BruteAttackList;

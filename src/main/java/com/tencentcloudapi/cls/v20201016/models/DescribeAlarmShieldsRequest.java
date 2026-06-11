@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeAlarmShieldsRequest extends AbstractModel {
 
     /**
-    * Notification Channel Group ID
+    * Notification channel group id. Obtain the notification channel group id by searching the [notification channel group list](https://www.tencentcloud.com/document/api/614/56462?from_cn_redirect=1).
     */
     @SerializedName("AlarmNoticeId")
     @Expose
@@ -54,16 +54,16 @@ Each request can have up to 10 Filters. The upper limit of Filter.Values is 100.
     private Long Limit;
 
     /**
-     * Get Notification Channel Group ID 
-     * @return AlarmNoticeId Notification Channel Group ID
+     * Get Notification channel group id. Obtain the notification channel group id by searching the [notification channel group list](https://www.tencentcloud.com/document/api/614/56462?from_cn_redirect=1). 
+     * @return AlarmNoticeId Notification channel group id. Obtain the notification channel group id by searching the [notification channel group list](https://www.tencentcloud.com/document/api/614/56462?from_cn_redirect=1).
      */
     public String getAlarmNoticeId() {
         return this.AlarmNoticeId;
     }
 
     /**
-     * Set Notification Channel Group ID
-     * @param AlarmNoticeId Notification Channel Group ID
+     * Set Notification channel group id. Obtain the notification channel group id by searching the [notification channel group list](https://www.tencentcloud.com/document/api/614/56462?from_cn_redirect=1).
+     * @param AlarmNoticeId Notification channel group id. Obtain the notification channel group id by searching the [notification channel group list](https://www.tencentcloud.com/document/api/614/56462?from_cn_redirect=1).
      */
     public void setAlarmNoticeId(String AlarmNoticeId) {
         this.AlarmNoticeId = AlarmNoticeId;

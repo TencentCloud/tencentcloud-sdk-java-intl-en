@@ -24,138 +24,138 @@ import java.util.HashMap;
 public class RegistryConnDetectResult extends AbstractModel {
 
     /**
-    * Host quuid or backend for Connectivity Detection
+    * 
     */
     @SerializedName("Quuid")
     @Expose
     private String Quuid;
 
     /**
-    * Host uuid or backend for Connectivity Detection
+    * 
     */
     @SerializedName("Uuid")
     @Expose
     private String Uuid;
 
     /**
-    * Detection Result Status
+    * 
     */
     @SerializedName("ConnDetectStatus")
     @Expose
     private String ConnDetectStatus;
 
     /**
-    * Detection Result Information
+    * 
     */
     @SerializedName("ConnDetectMessage")
     @Expose
     private String ConnDetectMessage;
 
     /**
-    * Failure Resolution
+    * 
     */
     @SerializedName("Solution")
     @Expose
     private String Solution;
 
     /**
-    * Failure Cause
+    * 
     */
     @SerializedName("FailReason")
     @Expose
     private String FailReason;
 
     /**
-     * Get Host quuid or backend for Connectivity Detection 
-     * @return Quuid Host quuid or backend for Connectivity Detection
+     * Get  
+     * @return Quuid 
      */
     public String getQuuid() {
         return this.Quuid;
     }
 
     /**
-     * Set Host quuid or backend for Connectivity Detection
-     * @param Quuid Host quuid or backend for Connectivity Detection
+     * Set 
+     * @param Quuid 
      */
     public void setQuuid(String Quuid) {
         this.Quuid = Quuid;
     }
 
     /**
-     * Get Host uuid or backend for Connectivity Detection 
-     * @return Uuid Host uuid or backend for Connectivity Detection
+     * Get  
+     * @return Uuid 
      */
     public String getUuid() {
         return this.Uuid;
     }
 
     /**
-     * Set Host uuid or backend for Connectivity Detection
-     * @param Uuid Host uuid or backend for Connectivity Detection
+     * Set 
+     * @param Uuid 
      */
     public void setUuid(String Uuid) {
         this.Uuid = Uuid;
     }
 
     /**
-     * Get Detection Result Status 
-     * @return ConnDetectStatus Detection Result Status
+     * Get  
+     * @return ConnDetectStatus 
      */
     public String getConnDetectStatus() {
         return this.ConnDetectStatus;
     }
 
     /**
-     * Set Detection Result Status
-     * @param ConnDetectStatus Detection Result Status
+     * Set 
+     * @param ConnDetectStatus 
      */
     public void setConnDetectStatus(String ConnDetectStatus) {
         this.ConnDetectStatus = ConnDetectStatus;
     }
 
     /**
-     * Get Detection Result Information 
-     * @return ConnDetectMessage Detection Result Information
+     * Get  
+     * @return ConnDetectMessage 
      */
     public String getConnDetectMessage() {
         return this.ConnDetectMessage;
     }
 
     /**
-     * Set Detection Result Information
-     * @param ConnDetectMessage Detection Result Information
+     * Set 
+     * @param ConnDetectMessage 
      */
     public void setConnDetectMessage(String ConnDetectMessage) {
         this.ConnDetectMessage = ConnDetectMessage;
     }
 
     /**
-     * Get Failure Resolution 
-     * @return Solution Failure Resolution
+     * Get  
+     * @return Solution 
      */
     public String getSolution() {
         return this.Solution;
     }
 
     /**
-     * Set Failure Resolution
-     * @param Solution Failure Resolution
+     * Set 
+     * @param Solution 
      */
     public void setSolution(String Solution) {
         this.Solution = Solution;
     }
 
     /**
-     * Get Failure Cause 
-     * @return FailReason Failure Cause
+     * Get  
+     * @return FailReason 
      */
     public String getFailReason() {
         return this.FailReason;
     }
 
     /**
-     * Set Failure Cause
-     * @param FailReason Failure Cause
+     * Set 
+     * @param FailReason 
      */
     public void setFailReason(String FailReason) {
         this.FailReason = FailReason;

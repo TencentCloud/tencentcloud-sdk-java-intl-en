@@ -34,14 +34,14 @@ K8s API: k8s_api
     private String LogType;
 
     /**
-    * List of QUuids of bound servers
+    * Bound list
     */
     @SerializedName("BindList")
     @Expose
     private String [] BindList;
 
     /**
-    * List of QUuids of servers to be unbound
+    * List of assets to be unbound. When the node scope involves all nodes, this parameter indicates the list of assets to be excluded.
     */
     @SerializedName("UnBindList")
     @Expose
@@ -56,6 +56,20 @@ K8s API: k8s_api
     @SerializedName("NodeType")
     @Expose
     private String NodeType;
+
+    /**
+    * Log node scope type. 0: specified; 1: all.
+    */
+    @SerializedName("RangeType")
+    @Expose
+    private Long RangeType;
+
+    /**
+    * Whether new assets are accessed automatically. This parameter is valid only when the node scope involves all nodes.
+    */
+    @SerializedName("AutoJoin")
+    @Expose
+    private Boolean AutoJoin;
 
     /**
      * Get Log type
@@ -86,32 +100,32 @@ K8s API: k8s_api
     }
 
     /**
-     * Get List of QUuids of bound servers 
-     * @return BindList List of QUuids of bound servers
+     * Get Bound list 
+     * @return BindList Bound list
      */
     public String [] getBindList() {
         return this.BindList;
     }
 
     /**
-     * Set List of QUuids of bound servers
-     * @param BindList List of QUuids of bound servers
+     * Set Bound list
+     * @param BindList Bound list
      */
     public void setBindList(String [] BindList) {
         this.BindList = BindList;
     }
 
     /**
-     * Get List of QUuids of servers to be unbound 
-     * @return UnBindList List of QUuids of servers to be unbound
+     * Get List of assets to be unbound. When the node scope involves all nodes, this parameter indicates the list of assets to be excluded. 
+     * @return UnBindList List of assets to be unbound. When the node scope involves all nodes, this parameter indicates the list of assets to be excluded.
      */
     public String [] getUnBindList() {
         return this.UnBindList;
     }
 
     /**
-     * Set List of QUuids of servers to be unbound
-     * @param UnBindList List of QUuids of servers to be unbound
+     * Set List of assets to be unbound. When the node scope involves all nodes, this parameter indicates the list of assets to be excluded.
+     * @param UnBindList List of assets to be unbound. When the node scope involves all nodes, this parameter indicates the list of assets to be excluded.
      */
     public void setUnBindList(String [] UnBindList) {
         this.UnBindList = UnBindList;
@@ -145,6 +159,38 @@ K8s API: k8s_api
         this.NodeType = NodeType;
     }
 
+    /**
+     * Get Log node scope type. 0: specified; 1: all. 
+     * @return RangeType Log node scope type. 0: specified; 1: all.
+     */
+    public Long getRangeType() {
+        return this.RangeType;
+    }
+
+    /**
+     * Set Log node scope type. 0: specified; 1: all.
+     * @param RangeType Log node scope type. 0: specified; 1: all.
+     */
+    public void setRangeType(Long RangeType) {
+        this.RangeType = RangeType;
+    }
+
+    /**
+     * Get Whether new assets are accessed automatically. This parameter is valid only when the node scope involves all nodes. 
+     * @return AutoJoin Whether new assets are accessed automatically. This parameter is valid only when the node scope involves all nodes.
+     */
+    public Boolean getAutoJoin() {
+        return this.AutoJoin;
+    }
+
+    /**
+     * Set Whether new assets are accessed automatically. This parameter is valid only when the node scope involves all nodes.
+     * @param AutoJoin Whether new assets are accessed automatically. This parameter is valid only when the node scope involves all nodes.
+     */
+    public void setAutoJoin(Boolean AutoJoin) {
+        this.AutoJoin = AutoJoin;
+    }
+
     public ModifySecLogJoinObjectsRequest() {
     }
 
@@ -171,6 +217,12 @@ K8s API: k8s_api
         if (source.NodeType != null) {
             this.NodeType = new String(source.NodeType);
         }
+        if (source.RangeType != null) {
+            this.RangeType = new Long(source.RangeType);
+        }
+        if (source.AutoJoin != null) {
+            this.AutoJoin = new Boolean(source.AutoJoin);
+        }
     }
 
 
@@ -182,6 +234,8 @@ K8s API: k8s_api
         this.setParamArraySimple(map, prefix + "BindList.", this.BindList);
         this.setParamArraySimple(map, prefix + "UnBindList.", this.UnBindList);
         this.setParamSimple(map, prefix + "NodeType", this.NodeType);
+        this.setParamSimple(map, prefix + "RangeType", this.RangeType);
+        this.setParamSimple(map, prefix + "AutoJoin", this.AutoJoin);
 
     }
 }

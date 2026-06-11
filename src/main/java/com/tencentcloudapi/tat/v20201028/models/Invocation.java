@@ -47,15 +47,15 @@ public class Invocation extends AbstractModel {
     /**
     * Execution task status. valid values:.
 
--PENDING: waiting for distribution.
-- RUNNING: command RUNNING.
--Canceling.
--SUCCESS: command success.
--TIMEOUT: command timeout.
+- PENDING: waiting for distribution.
+- RUNNING: command is running.
+- CANCELLING: canceling.
+- SUCCESS: command success.
+- TIMEOUT: command timeout.
 - FAILED: command FAILED.
--CANCELLED: all commands canceled.
--PARTIAL_FAILED: the command partially failed.
--PARTIAL_CANCELLED: the command is partially canceled.
+- CANCELLED: all commands canceled.
+- PARTIAL_FAILED: the command partially failed.
+- PARTIAL_CANCELLED: the command is partially canceled.
     */
     @SerializedName("InvocationStatus")
     @Expose
@@ -135,8 +135,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     /**
     * Invocation source.
 
--USER: originate from user invocation.
--INVOKER: originate from scheduled execution.
+- USER: originate from user invocation.
+- INVOKER: originate from scheduled execution.
     */
     @SerializedName("InvocationSource")
     @Expose
@@ -235,26 +235,26 @@ Note: This field may return null, indicating that no valid values can be obtaine
     /**
      * Get Execution task status. valid values:.
 
--PENDING: waiting for distribution.
-- RUNNING: command RUNNING.
--Canceling.
--SUCCESS: command success.
--TIMEOUT: command timeout.
+- PENDING: waiting for distribution.
+- RUNNING: command is running.
+- CANCELLING: canceling.
+- SUCCESS: command success.
+- TIMEOUT: command timeout.
 - FAILED: command FAILED.
--CANCELLED: all commands canceled.
--PARTIAL_FAILED: the command partially failed.
--PARTIAL_CANCELLED: the command is partially canceled. 
+- CANCELLED: all commands canceled.
+- PARTIAL_FAILED: the command partially failed.
+- PARTIAL_CANCELLED: the command is partially canceled. 
      * @return InvocationStatus Execution task status. valid values:.
 
--PENDING: waiting for distribution.
-- RUNNING: command RUNNING.
--Canceling.
--SUCCESS: command success.
--TIMEOUT: command timeout.
+- PENDING: waiting for distribution.
+- RUNNING: command is running.
+- CANCELLING: canceling.
+- SUCCESS: command success.
+- TIMEOUT: command timeout.
 - FAILED: command FAILED.
--CANCELLED: all commands canceled.
--PARTIAL_FAILED: the command partially failed.
--PARTIAL_CANCELLED: the command is partially canceled.
+- CANCELLED: all commands canceled.
+- PARTIAL_FAILED: the command partially failed.
+- PARTIAL_CANCELLED: the command is partially canceled.
      */
     public String getInvocationStatus() {
         return this.InvocationStatus;
@@ -263,26 +263,26 @@ Note: This field may return null, indicating that no valid values can be obtaine
     /**
      * Set Execution task status. valid values:.
 
--PENDING: waiting for distribution.
-- RUNNING: command RUNNING.
--Canceling.
--SUCCESS: command success.
--TIMEOUT: command timeout.
+- PENDING: waiting for distribution.
+- RUNNING: command is running.
+- CANCELLING: canceling.
+- SUCCESS: command success.
+- TIMEOUT: command timeout.
 - FAILED: command FAILED.
--CANCELLED: all commands canceled.
--PARTIAL_FAILED: the command partially failed.
--PARTIAL_CANCELLED: the command is partially canceled.
+- CANCELLED: all commands canceled.
+- PARTIAL_FAILED: the command partially failed.
+- PARTIAL_CANCELLED: the command is partially canceled.
      * @param InvocationStatus Execution task status. valid values:.
 
--PENDING: waiting for distribution.
-- RUNNING: command RUNNING.
--Canceling.
--SUCCESS: command success.
--TIMEOUT: command timeout.
+- PENDING: waiting for distribution.
+- RUNNING: command is running.
+- CANCELLING: canceling.
+- SUCCESS: command success.
+- TIMEOUT: command timeout.
 - FAILED: command FAILED.
--CANCELLED: all commands canceled.
--PARTIAL_FAILED: the command partially failed.
--PARTIAL_CANCELLED: the command is partially canceled.
+- CANCELLED: all commands canceled.
+- PARTIAL_FAILED: the command partially failed.
+- PARTIAL_CANCELLED: the command is partially canceled.
      */
     public void setInvocationStatus(String InvocationStatus) {
         this.InvocationStatus = InvocationStatus;
@@ -455,12 +455,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
     /**
      * Get Invocation source.
 
--USER: originate from user invocation.
--INVOKER: originate from scheduled execution. 
+- USER: originate from user invocation.
+- INVOKER: originate from scheduled execution. 
      * @return InvocationSource Invocation source.
 
--USER: originate from user invocation.
--INVOKER: originate from scheduled execution.
+- USER: originate from user invocation.
+- INVOKER: originate from scheduled execution.
      */
     public String getInvocationSource() {
         return this.InvocationSource;
@@ -469,12 +469,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
     /**
      * Set Invocation source.
 
--USER: originate from user invocation.
--INVOKER: originate from scheduled execution.
+- USER: originate from user invocation.
+- INVOKER: originate from scheduled execution.
      * @param InvocationSource Invocation source.
 
--USER: originate from user invocation.
--INVOKER: originate from scheduled execution.
+- USER: originate from user invocation.
+- INVOKER: originate from scheduled execution.
      */
     public void setInvocationSource(String InvocationSource) {
         this.InvocationSource = InvocationSource;

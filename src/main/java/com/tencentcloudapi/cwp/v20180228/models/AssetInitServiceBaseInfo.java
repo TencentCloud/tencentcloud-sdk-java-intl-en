@@ -136,9 +136,8 @@ public class AssetInitServiceBaseInfo extends AbstractModel {
     private String MachineWanIp;
 
     /**
-    * Additional information
+    *  Additional information
 
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("MachineExtraInfo")
     @Expose
@@ -432,24 +431,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Additional information
+     * Get  Additional information
+ 
+     * @return MachineExtraInfo  Additional information
 
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return MachineExtraInfo Additional information
-
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public MachineExtraInfo getMachineExtraInfo() {
         return this.MachineExtraInfo;
     }
 
     /**
-     * Set Additional information
+     * Set  Additional information
 
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param MachineExtraInfo Additional information
+     * @param MachineExtraInfo  Additional information
 
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setMachineExtraInfo(MachineExtraInfo MachineExtraInfo) {
         this.MachineExtraInfo = MachineExtraInfo;

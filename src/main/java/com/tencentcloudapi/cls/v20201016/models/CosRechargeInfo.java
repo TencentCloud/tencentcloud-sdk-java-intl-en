@@ -25,130 +25,129 @@ public class CosRechargeInfo extends AbstractModel {
 
     /**
     * COS import configuration ID.
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Id")
     @Expose
     private String Id;
 
     /**
-    * ID of the log topic.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Log topic ID
     */
     @SerializedName("TopicId")
     @Expose
     private String TopicId;
 
     /**
-    * ID of the logset.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Logset ID
     */
     @SerializedName("LogsetId")
     @Expose
     private String LogsetId;
 
     /**
-    * COS import task name.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * COS import task name
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * COS bucket.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * COS bucket
     */
     @SerializedName("Bucket")
     @Expose
     private String Bucket;
 
     /**
-    * Region where the COS bucket is located.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * COS bucket location.
+
+-Obtain region information via [regions and access endpoints](https://www.tencentcloud.com/document/product/436/6224?from_cn_redirect=1).
     */
     @SerializedName("BucketRegion")
     @Expose
     private String BucketRegion;
 
     /**
-    * The prefix of the folder where COS files are located.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Prefix of the COS file folder location
     */
     @SerializedName("Prefix")
     @Expose
     private String Prefix;
 
     /**
-    * The type of log collected. `json_log`: JSON logs; `delimiter_log`: separator logs; `minimalist_log`: full text in a single line
-Default value: `minimalist_log`
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Types of logs collected: json_log represents JSON logs, delimiter_log represents delimiter-separated format logs, minimalist_log represents single-line full-text representation.
+default is minimalist_log
     */
     @SerializedName("LogType")
     @Expose
     private String LogType;
 
     /**
-    * Status. `0`: Created, `1`: Running, `2`: Stopped, `3`: Completed, `4`: Run failed
-Note: This field may return null, indicating that no valid values can be obtained.
+    * status 0: Created, 1: Running, 2: Stopped, 3: Completed, 4: Execution failed.
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * Whether the configuration is enabled. `0`: Not enabled, `1`: Enabled
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Whether this feature is enabled. 0: Disabled; 1: Enabled.
     */
     @SerializedName("Enable")
     @Expose
     private Long Enable;
 
     /**
-    * Creation time.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Creation time. Time format: YYYY-MM-DD HH:mm:ss
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * Update time.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Update time. Time format: YYYY-MM-DD HH:mm:ss
     */
     @SerializedName("UpdateTime")
     @Expose
     private String UpdateTime;
 
     /**
-    * Progress in percentage.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Progress Bar Percentage
     */
     @SerializedName("Progress")
     @Expose
     private Long Progress;
 
     /**
-    * Valid values: "" (default), "gzip", "lzop", "snappy"
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Compression methods supported: "", "gzip", "lzop", and "snappy". Default empty with no compression.
     */
     @SerializedName("Compress")
     @Expose
     private String Compress;
 
     /**
-    * See the description of the `ExtractRuleInfo` structure.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * See the description of the ExtractRuleInfo structure.
     */
     @SerializedName("ExtractRuleInfo")
     @Expose
     private ExtractRuleInfo ExtractRuleInfo;
 
     /**
-     * Get COS import configuration ID.
-Note: This field may return null, indicating that no valid values can be obtained. 
+    * COS import task type. Valid values: 1: one-time import task; 2: continuous import task.
+    */
+    @SerializedName("TaskType")
+    @Expose
+    private Long TaskType;
+
+    /**
+    * Metadata. Buckets and objects are supported.
+    */
+    @SerializedName("Metadata")
+    @Expose
+    private String [] Metadata;
+
+    /**
+     * Get COS import configuration ID. 
      * @return Id COS import configuration ID.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getId() {
         return this.Id;
@@ -156,296 +155,278 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set COS import configuration ID.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Id COS import configuration ID.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setId(String Id) {
         this.Id = Id;
     }
 
     /**
-     * Get ID of the log topic.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return TopicId ID of the log topic.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Log topic ID 
+     * @return TopicId Log topic ID
      */
     public String getTopicId() {
         return this.TopicId;
     }
 
     /**
-     * Set ID of the log topic.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param TopicId ID of the log topic.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Log topic ID
+     * @param TopicId Log topic ID
      */
     public void setTopicId(String TopicId) {
         this.TopicId = TopicId;
     }
 
     /**
-     * Get ID of the logset.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return LogsetId ID of the logset.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Logset ID 
+     * @return LogsetId Logset ID
      */
     public String getLogsetId() {
         return this.LogsetId;
     }
 
     /**
-     * Set ID of the logset.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param LogsetId ID of the logset.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Logset ID
+     * @param LogsetId Logset ID
      */
     public void setLogsetId(String LogsetId) {
         this.LogsetId = LogsetId;
     }
 
     /**
-     * Get COS import task name.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Name COS import task name.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get COS import task name 
+     * @return Name COS import task name
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set COS import task name.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Name COS import task name.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set COS import task name
+     * @param Name COS import task name
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get COS bucket.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Bucket COS bucket.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get COS bucket 
+     * @return Bucket COS bucket
      */
     public String getBucket() {
         return this.Bucket;
     }
 
     /**
-     * Set COS bucket.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Bucket COS bucket.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set COS bucket
+     * @param Bucket COS bucket
      */
     public void setBucket(String Bucket) {
         this.Bucket = Bucket;
     }
 
     /**
-     * Get Region where the COS bucket is located.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return BucketRegion Region where the COS bucket is located.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get COS bucket location.
+
+-Obtain region information via [regions and access endpoints](https://www.tencentcloud.com/document/product/436/6224?from_cn_redirect=1). 
+     * @return BucketRegion COS bucket location.
+
+-Obtain region information via [regions and access endpoints](https://www.tencentcloud.com/document/product/436/6224?from_cn_redirect=1).
      */
     public String getBucketRegion() {
         return this.BucketRegion;
     }
 
     /**
-     * Set Region where the COS bucket is located.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param BucketRegion Region where the COS bucket is located.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set COS bucket location.
+
+-Obtain region information via [regions and access endpoints](https://www.tencentcloud.com/document/product/436/6224?from_cn_redirect=1).
+     * @param BucketRegion COS bucket location.
+
+-Obtain region information via [regions and access endpoints](https://www.tencentcloud.com/document/product/436/6224?from_cn_redirect=1).
      */
     public void setBucketRegion(String BucketRegion) {
         this.BucketRegion = BucketRegion;
     }
 
     /**
-     * Get The prefix of the folder where COS files are located.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Prefix The prefix of the folder where COS files are located.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Prefix of the COS file folder location 
+     * @return Prefix Prefix of the COS file folder location
      */
     public String getPrefix() {
         return this.Prefix;
     }
 
     /**
-     * Set The prefix of the folder where COS files are located.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Prefix The prefix of the folder where COS files are located.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Prefix of the COS file folder location
+     * @param Prefix Prefix of the COS file folder location
      */
     public void setPrefix(String Prefix) {
         this.Prefix = Prefix;
     }
 
     /**
-     * Get The type of log collected. `json_log`: JSON logs; `delimiter_log`: separator logs; `minimalist_log`: full text in a single line
-Default value: `minimalist_log`
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return LogType The type of log collected. `json_log`: JSON logs; `delimiter_log`: separator logs; `minimalist_log`: full text in a single line
-Default value: `minimalist_log`
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Types of logs collected: json_log represents JSON logs, delimiter_log represents delimiter-separated format logs, minimalist_log represents single-line full-text representation.
+default is minimalist_log 
+     * @return LogType Types of logs collected: json_log represents JSON logs, delimiter_log represents delimiter-separated format logs, minimalist_log represents single-line full-text representation.
+default is minimalist_log
      */
     public String getLogType() {
         return this.LogType;
     }
 
     /**
-     * Set The type of log collected. `json_log`: JSON logs; `delimiter_log`: separator logs; `minimalist_log`: full text in a single line
-Default value: `minimalist_log`
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param LogType The type of log collected. `json_log`: JSON logs; `delimiter_log`: separator logs; `minimalist_log`: full text in a single line
-Default value: `minimalist_log`
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Types of logs collected: json_log represents JSON logs, delimiter_log represents delimiter-separated format logs, minimalist_log represents single-line full-text representation.
+default is minimalist_log
+     * @param LogType Types of logs collected: json_log represents JSON logs, delimiter_log represents delimiter-separated format logs, minimalist_log represents single-line full-text representation.
+default is minimalist_log
      */
     public void setLogType(String LogType) {
         this.LogType = LogType;
     }
 
     /**
-     * Get Status. `0`: Created, `1`: Running, `2`: Stopped, `3`: Completed, `4`: Run failed
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Status Status. `0`: Created, `1`: Running, `2`: Stopped, `3`: Completed, `4`: Run failed
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get status 0: Created, 1: Running, 2: Stopped, 3: Completed, 4: Execution failed. 
+     * @return Status status 0: Created, 1: Running, 2: Stopped, 3: Completed, 4: Execution failed.
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Status. `0`: Created, `1`: Running, `2`: Stopped, `3`: Completed, `4`: Run failed
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Status Status. `0`: Created, `1`: Running, `2`: Stopped, `3`: Completed, `4`: Run failed
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set status 0: Created, 1: Running, 2: Stopped, 3: Completed, 4: Execution failed.
+     * @param Status status 0: Created, 1: Running, 2: Stopped, 3: Completed, 4: Execution failed.
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get Whether the configuration is enabled. `0`: Not enabled, `1`: Enabled
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Enable Whether the configuration is enabled. `0`: Not enabled, `1`: Enabled
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Whether this feature is enabled. 0: Disabled; 1: Enabled. 
+     * @return Enable Whether this feature is enabled. 0: Disabled; 1: Enabled.
      */
     public Long getEnable() {
         return this.Enable;
     }
 
     /**
-     * Set Whether the configuration is enabled. `0`: Not enabled, `1`: Enabled
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Enable Whether the configuration is enabled. `0`: Not enabled, `1`: Enabled
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Whether this feature is enabled. 0: Disabled; 1: Enabled.
+     * @param Enable Whether this feature is enabled. 0: Disabled; 1: Enabled.
      */
     public void setEnable(Long Enable) {
         this.Enable = Enable;
     }
 
     /**
-     * Get Creation time.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return CreateTime Creation time.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Creation time. Time format: YYYY-MM-DD HH:mm:ss 
+     * @return CreateTime Creation time. Time format: YYYY-MM-DD HH:mm:ss
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set Creation time.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param CreateTime Creation time.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Creation time. Time format: YYYY-MM-DD HH:mm:ss
+     * @param CreateTime Creation time. Time format: YYYY-MM-DD HH:mm:ss
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get Update time.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return UpdateTime Update time.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Update time. Time format: YYYY-MM-DD HH:mm:ss 
+     * @return UpdateTime Update time. Time format: YYYY-MM-DD HH:mm:ss
      */
     public String getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set Update time.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param UpdateTime Update time.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Update time. Time format: YYYY-MM-DD HH:mm:ss
+     * @param UpdateTime Update time. Time format: YYYY-MM-DD HH:mm:ss
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;
     }
 
     /**
-     * Get Progress in percentage.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Progress Progress in percentage.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Progress Bar Percentage 
+     * @return Progress Progress Bar Percentage
      */
     public Long getProgress() {
         return this.Progress;
     }
 
     /**
-     * Set Progress in percentage.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Progress Progress in percentage.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Progress Bar Percentage
+     * @param Progress Progress Bar Percentage
      */
     public void setProgress(Long Progress) {
         this.Progress = Progress;
     }
 
     /**
-     * Get Valid values: "" (default), "gzip", "lzop", "snappy"
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Compress Valid values: "" (default), "gzip", "lzop", "snappy"
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Compression methods supported: "", "gzip", "lzop", and "snappy". Default empty with no compression. 
+     * @return Compress Compression methods supported: "", "gzip", "lzop", and "snappy". Default empty with no compression.
      */
     public String getCompress() {
         return this.Compress;
     }
 
     /**
-     * Set Valid values: "" (default), "gzip", "lzop", "snappy"
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Compress Valid values: "" (default), "gzip", "lzop", "snappy"
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Compression methods supported: "", "gzip", "lzop", and "snappy". Default empty with no compression.
+     * @param Compress Compression methods supported: "", "gzip", "lzop", and "snappy". Default empty with no compression.
      */
     public void setCompress(String Compress) {
         this.Compress = Compress;
     }
 
     /**
-     * Get See the description of the `ExtractRuleInfo` structure.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ExtractRuleInfo See the description of the `ExtractRuleInfo` structure.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get See the description of the ExtractRuleInfo structure. 
+     * @return ExtractRuleInfo See the description of the ExtractRuleInfo structure.
      */
     public ExtractRuleInfo getExtractRuleInfo() {
         return this.ExtractRuleInfo;
     }
 
     /**
-     * Set See the description of the `ExtractRuleInfo` structure.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ExtractRuleInfo See the description of the `ExtractRuleInfo` structure.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set See the description of the ExtractRuleInfo structure.
+     * @param ExtractRuleInfo See the description of the ExtractRuleInfo structure.
      */
     public void setExtractRuleInfo(ExtractRuleInfo ExtractRuleInfo) {
         this.ExtractRuleInfo = ExtractRuleInfo;
+    }
+
+    /**
+     * Get COS import task type. Valid values: 1: one-time import task; 2: continuous import task. 
+     * @return TaskType COS import task type. Valid values: 1: one-time import task; 2: continuous import task.
+     */
+    public Long getTaskType() {
+        return this.TaskType;
+    }
+
+    /**
+     * Set COS import task type. Valid values: 1: one-time import task; 2: continuous import task.
+     * @param TaskType COS import task type. Valid values: 1: one-time import task; 2: continuous import task.
+     */
+    public void setTaskType(Long TaskType) {
+        this.TaskType = TaskType;
+    }
+
+    /**
+     * Get Metadata. Buckets and objects are supported. 
+     * @return Metadata Metadata. Buckets and objects are supported.
+     */
+    public String [] getMetadata() {
+        return this.Metadata;
+    }
+
+    /**
+     * Set Metadata. Buckets and objects are supported.
+     * @param Metadata Metadata. Buckets and objects are supported.
+     */
+    public void setMetadata(String [] Metadata) {
+        this.Metadata = Metadata;
     }
 
     public CosRechargeInfo() {
@@ -501,6 +482,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.ExtractRuleInfo != null) {
             this.ExtractRuleInfo = new ExtractRuleInfo(source.ExtractRuleInfo);
         }
+        if (source.TaskType != null) {
+            this.TaskType = new Long(source.TaskType);
+        }
+        if (source.Metadata != null) {
+            this.Metadata = new String[source.Metadata.length];
+            for (int i = 0; i < source.Metadata.length; i++) {
+                this.Metadata[i] = new String(source.Metadata[i]);
+            }
+        }
     }
 
 
@@ -523,6 +513,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "Progress", this.Progress);
         this.setParamSimple(map, prefix + "Compress", this.Compress);
         this.setParamObj(map, prefix + "ExtractRuleInfo.", this.ExtractRuleInfo);
+        this.setParamSimple(map, prefix + "TaskType", this.TaskType);
+        this.setParamArraySimple(map, prefix + "Metadata.", this.Metadata);
 
     }
 }

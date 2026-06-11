@@ -53,7 +53,6 @@ public class DescribeRiskSyscallDetailResponse extends AbstractModel {
 
     /**
     * Ancestor process information
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("AncestorProcessInfo")
     @Expose
@@ -131,10 +130,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Ancestor process information
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Ancestor process information 
      * @return AncestorProcessInfo Ancestor process information
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public ProcessBaseInfo getAncestorProcessInfo() {
         return this.AncestorProcessInfo;
@@ -142,9 +139,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Ancestor process information
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param AncestorProcessInfo Ancestor process information
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setAncestorProcessInfo(ProcessBaseInfo AncestorProcessInfo) {
         this.AncestorProcessInfo = AncestorProcessInfo;

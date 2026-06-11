@@ -31,8 +31,7 @@ public class DescribeNetworkFirewallPodLabelsListResponse extends AbstractModel 
     private Long TotalCount;
 
     /**
-    * Details of the cluster Pod
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Cluster Pod Details
     */
     @SerializedName("PodList")
     @Expose
@@ -62,20 +61,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Details of the cluster Pod
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return PodList Details of the cluster Pod
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Cluster Pod Details 
+     * @return PodList Cluster Pod Details
      */
     public NetworkClusterPodInfo [] getPodList() {
         return this.PodList;
     }
 
     /**
-     * Set Details of the cluster Pod
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param PodList Details of the cluster Pod
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Cluster Pod Details
+     * @param PodList Cluster Pod Details
      */
     public void setPodList(NetworkClusterPodInfo [] PodList) {
         this.PodList = PodList;

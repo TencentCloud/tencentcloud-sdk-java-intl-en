@@ -228,7 +228,6 @@ public class FileTamperEvent extends AbstractModel {
 
     /**
     * Target File Update Time
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("TargetModifyTime")
     @Expose
@@ -236,7 +235,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Target File Creation Time
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("TargetCreatTime")
     @Expose
@@ -272,7 +270,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Process name
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ExeName")
     @Expose
@@ -280,7 +277,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     *  Host Additional Information
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("MachineExtraInfo")
     @Expose
@@ -290,7 +286,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
     * File threat behavior
 <li>read: read file</li>
 <li>write: modify file</li>
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("FileAction")
     @Expose
@@ -761,10 +756,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Target File Update Time
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Target File Update Time 
      * @return TargetModifyTime Target File Update Time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getTargetModifyTime() {
         return this.TargetModifyTime;
@@ -772,19 +765,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Target File Update Time
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param TargetModifyTime Target File Update Time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setTargetModifyTime(String TargetModifyTime) {
         this.TargetModifyTime = TargetModifyTime;
     }
 
     /**
-     * Get Target File Creation Time
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Target File Creation Time 
      * @return TargetCreatTime Target File Creation Time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getTargetCreatTime() {
         return this.TargetCreatTime;
@@ -792,9 +781,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Target File Creation Time
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param TargetCreatTime Target File Creation Time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setTargetCreatTime(String TargetCreatTime) {
         this.TargetCreatTime = TargetCreatTime;
@@ -865,10 +852,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Process name
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Process name 
      * @return ExeName Process name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getExeName() {
         return this.ExeName;
@@ -876,19 +861,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Process name
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param ExeName Process name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setExeName(String ExeName) {
         this.ExeName = ExeName;
     }
 
     /**
-     * Get  Host Additional Information
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get  Host Additional Information 
      * @return MachineExtraInfo  Host Additional Information
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public MachineExtraInfo getMachineExtraInfo() {
         return this.MachineExtraInfo;
@@ -896,9 +877,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set  Host Additional Information
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param MachineExtraInfo  Host Additional Information
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setMachineExtraInfo(MachineExtraInfo MachineExtraInfo) {
         this.MachineExtraInfo = MachineExtraInfo;
@@ -907,12 +886,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
     /**
      * Get File threat behavior
 <li>read: read file</li>
-<li>write: modify file</li>
-Note: This field may return null, indicating that no valid values can be obtained. 
+<li>write: modify file</li> 
      * @return FileAction File threat behavior
 <li>read: read file</li>
 <li>write: modify file</li>
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getFileAction() {
         return this.FileAction;
@@ -922,11 +899,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * Set File threat behavior
 <li>read: read file</li>
 <li>write: modify file</li>
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param FileAction File threat behavior
 <li>read: read file</li>
 <li>write: modify file</li>
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setFileAction(String FileAction) {
         this.FileAction = FileAction;

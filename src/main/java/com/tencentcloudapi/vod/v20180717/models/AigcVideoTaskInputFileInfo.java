@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class AigcVideoTaskInputFileInfo extends AbstractModel {
 
     /**
-    * <p>Input video file type. Valid values: <li>File: On-demand media file;</li> <li>Url: Accessible URL;</li></p>
+    * <p>Input video file type. Valid values: <li>File: on-demand media file;</li> <li>Url: accessible Url;</li> <li>Base64: Base64 string of image or video conversion;</li></p>
     */
     @SerializedName("Type")
     @Expose
@@ -52,7 +52,7 @@ public class AigcVideoTaskInputFileInfo extends AbstractModel {
     private String Url;
 
     /**
-    * 
+    * <p>Accessible file Base64. This parameter is valid when Type value is Base64. Description:</p><ol><li>The total size of all files must not exceed 7MB to avoid exceeding the 10MB upper limit of message size for cloud APIs after conversion to Base64.</li><li>Image format should be: jpeg, jpg, png, webp.</li><li>Video format should be: mp4, mov, avi.</li><li>Do not include prefixes like data:image/jpeg;base64.</li></ol>
     */
     @SerializedName("Base64")
     @Expose
@@ -87,7 +87,7 @@ public class AigcVideoTaskInputFileInfo extends AbstractModel {
     private String KeepOriginalSound;
 
     /**
-    * <p>Used to distinguish whether the input image is for <strong>first (last) frame to video</strong>, <strong>image to video</strong>, or <strong>reference to video</strong>. Available values:</p><ul><li>FirstFrame: For first (last) frame to video or image to video;</li><li>Reference: For reference to video;</li></ul><p><strong>Note: FirstFrame is selected by default</strong></p>
+    * <p>Used to distinguish whether the input image is for <strong>first (last) frame to video</strong>, <strong>image to video</strong>, or <strong>reference to video</strong>. Available values:</p><ul><li>FirstFrame: Used for the first frame of first (last) frame to video or image to video.</li><li>Reference: Used for reference to video.</li><li>LastFrame: Used for the last frame of first (last) frame to video.</li></ul><p><strong>Note that FirstFrame is selected by default</strong></p>
     */
     @SerializedName("Usage")
     @Expose
@@ -101,16 +101,16 @@ public class AigcVideoTaskInputFileInfo extends AbstractModel {
     private String Text;
 
     /**
-     * Get <p>Input video file type. Valid values: <li>File: On-demand media file;</li> <li>Url: Accessible URL;</li></p> 
-     * @return Type <p>Input video file type. Valid values: <li>File: On-demand media file;</li> <li>Url: Accessible URL;</li></p>
+     * Get <p>Input video file type. Valid values: <li>File: on-demand media file;</li> <li>Url: accessible Url;</li> <li>Base64: Base64 string of image or video conversion;</li></p> 
+     * @return Type <p>Input video file type. Valid values: <li>File: on-demand media file;</li> <li>Url: accessible Url;</li> <li>Base64: Base64 string of image or video conversion;</li></p>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set <p>Input video file type. Valid values: <li>File: On-demand media file;</li> <li>Url: Accessible URL;</li></p>
-     * @param Type <p>Input video file type. Valid values: <li>File: On-demand media file;</li> <li>Url: Accessible URL;</li></p>
+     * Set <p>Input video file type. Valid values: <li>File: on-demand media file;</li> <li>Url: accessible Url;</li> <li>Base64: Base64 string of image or video conversion;</li></p>
+     * @param Type <p>Input video file type. Valid values: <li>File: on-demand media file;</li> <li>Url: accessible Url;</li> <li>Base64: Base64 string of image or video conversion;</li></p>
      */
     public void setType(String Type) {
         this.Type = Type;
@@ -165,16 +165,16 @@ public class AigcVideoTaskInputFileInfo extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return Base64 
+     * Get <p>Accessible file Base64. This parameter is valid when Type value is Base64. Description:</p><ol><li>The total size of all files must not exceed 7MB to avoid exceeding the 10MB upper limit of message size for cloud APIs after conversion to Base64.</li><li>Image format should be: jpeg, jpg, png, webp.</li><li>Video format should be: mp4, mov, avi.</li><li>Do not include prefixes like data:image/jpeg;base64.</li></ol> 
+     * @return Base64 <p>Accessible file Base64. This parameter is valid when Type value is Base64. Description:</p><ol><li>The total size of all files must not exceed 7MB to avoid exceeding the 10MB upper limit of message size for cloud APIs after conversion to Base64.</li><li>Image format should be: jpeg, jpg, png, webp.</li><li>Video format should be: mp4, mov, avi.</li><li>Do not include prefixes like data:image/jpeg;base64.</li></ol>
      */
     public String getBase64() {
         return this.Base64;
     }
 
     /**
-     * Set 
-     * @param Base64 
+     * Set <p>Accessible file Base64. This parameter is valid when Type value is Base64. Description:</p><ol><li>The total size of all files must not exceed 7MB to avoid exceeding the 10MB upper limit of message size for cloud APIs after conversion to Base64.</li><li>Image format should be: jpeg, jpg, png, webp.</li><li>Video format should be: mp4, mov, avi.</li><li>Do not include prefixes like data:image/jpeg;base64.</li></ol>
+     * @param Base64 <p>Accessible file Base64. This parameter is valid when Type value is Base64. Description:</p><ol><li>The total size of all files must not exceed 7MB to avoid exceeding the 10MB upper limit of message size for cloud APIs after conversion to Base64.</li><li>Image format should be: jpeg, jpg, png, webp.</li><li>Video format should be: mp4, mov, avi.</li><li>Do not include prefixes like data:image/jpeg;base64.</li></ol>
      */
     public void setBase64(String Base64) {
         this.Base64 = Base64;
@@ -245,16 +245,16 @@ public class AigcVideoTaskInputFileInfo extends AbstractModel {
     }
 
     /**
-     * Get <p>Used to distinguish whether the input image is for <strong>first (last) frame to video</strong>, <strong>image to video</strong>, or <strong>reference to video</strong>. Available values:</p><ul><li>FirstFrame: For first (last) frame to video or image to video;</li><li>Reference: For reference to video;</li></ul><p><strong>Note: FirstFrame is selected by default</strong></p> 
-     * @return Usage <p>Used to distinguish whether the input image is for <strong>first (last) frame to video</strong>, <strong>image to video</strong>, or <strong>reference to video</strong>. Available values:</p><ul><li>FirstFrame: For first (last) frame to video or image to video;</li><li>Reference: For reference to video;</li></ul><p><strong>Note: FirstFrame is selected by default</strong></p>
+     * Get <p>Used to distinguish whether the input image is for <strong>first (last) frame to video</strong>, <strong>image to video</strong>, or <strong>reference to video</strong>. Available values:</p><ul><li>FirstFrame: Used for the first frame of first (last) frame to video or image to video.</li><li>Reference: Used for reference to video.</li><li>LastFrame: Used for the last frame of first (last) frame to video.</li></ul><p><strong>Note that FirstFrame is selected by default</strong></p> 
+     * @return Usage <p>Used to distinguish whether the input image is for <strong>first (last) frame to video</strong>, <strong>image to video</strong>, or <strong>reference to video</strong>. Available values:</p><ul><li>FirstFrame: Used for the first frame of first (last) frame to video or image to video.</li><li>Reference: Used for reference to video.</li><li>LastFrame: Used for the last frame of first (last) frame to video.</li></ul><p><strong>Note that FirstFrame is selected by default</strong></p>
      */
     public String getUsage() {
         return this.Usage;
     }
 
     /**
-     * Set <p>Used to distinguish whether the input image is for <strong>first (last) frame to video</strong>, <strong>image to video</strong>, or <strong>reference to video</strong>. Available values:</p><ul><li>FirstFrame: For first (last) frame to video or image to video;</li><li>Reference: For reference to video;</li></ul><p><strong>Note: FirstFrame is selected by default</strong></p>
-     * @param Usage <p>Used to distinguish whether the input image is for <strong>first (last) frame to video</strong>, <strong>image to video</strong>, or <strong>reference to video</strong>. Available values:</p><ul><li>FirstFrame: For first (last) frame to video or image to video;</li><li>Reference: For reference to video;</li></ul><p><strong>Note: FirstFrame is selected by default</strong></p>
+     * Set <p>Used to distinguish whether the input image is for <strong>first (last) frame to video</strong>, <strong>image to video</strong>, or <strong>reference to video</strong>. Available values:</p><ul><li>FirstFrame: Used for the first frame of first (last) frame to video or image to video.</li><li>Reference: Used for reference to video.</li><li>LastFrame: Used for the last frame of first (last) frame to video.</li></ul><p><strong>Note that FirstFrame is selected by default</strong></p>
+     * @param Usage <p>Used to distinguish whether the input image is for <strong>first (last) frame to video</strong>, <strong>image to video</strong>, or <strong>reference to video</strong>. Available values:</p><ul><li>FirstFrame: Used for the first frame of first (last) frame to video or image to video.</li><li>Reference: Used for reference to video.</li><li>LastFrame: Used for the last frame of first (last) frame to video.</li></ul><p><strong>Note that FirstFrame is selected by default</strong></p>
      */
     public void setUsage(String Usage) {
         this.Usage = Usage;

@@ -94,8 +94,7 @@ public class DescribeVirusScanSettingResponse extends AbstractModel {
     private String [] ScanPath;
 
     /**
-    * Timeout settings of quick check
-Note: This field may return null, indicating that no valid values can be obtained.
+    * One-Click Detection Timeout Setting
     */
     @SerializedName("ClickTimeout")
     @Expose
@@ -280,20 +279,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Timeout settings of quick check
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ClickTimeout Timeout settings of quick check
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get One-Click Detection Timeout Setting 
+     * @return ClickTimeout One-Click Detection Timeout Setting
      */
     public Long getClickTimeout() {
         return this.ClickTimeout;
     }
 
     /**
-     * Set Timeout settings of quick check
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ClickTimeout Timeout settings of quick check
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set One-Click Detection Timeout Setting
+     * @param ClickTimeout One-Click Detection Timeout Setting
      */
     public void setClickTimeout(Long ClickTimeout) {
         this.ClickTimeout = ClickTimeout;

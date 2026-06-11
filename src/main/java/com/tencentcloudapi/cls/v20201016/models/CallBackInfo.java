@@ -24,51 +24,126 @@ import java.util.HashMap;
 public class CallBackInfo extends AbstractModel {
 
     /**
-    * `Body` during callback
+    * Callback Body.
+Place various alarm variables in the request content. For details, see the help documentation (https://www.tencentcloud.com/document/product/614/74718?from_cn_redirect=1).
+in the following example:
+
+```
+{
+"TopicId": "{{ .QueryLog[0][0].topicId }}",
+"key": "{{.Alarm}}",
+"time": "{{ .QueryLog[0][0].time }}",
+"log": "{{ .QueryLog[0][0].content.__CONTENT__ }}",
+"namespace": "{{ .QueryLog[0][0].content.__TAG__.namespace }}"
+}
+```
     */
     @SerializedName("Body")
     @Expose
     private String Body;
 
     /**
-    * `Headers` during callback
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * HTTP request header field for callbacks.
+For example, the following request header field informs the server request content type is JSON.
+```
+"Content-Type: application/json"
+```
     */
     @SerializedName("Headers")
     @Expose
     private String [] Headers;
 
     /**
-     * Get `Body` during callback 
-     * @return Body `Body` during callback
+     * Get Callback Body.
+Place various alarm variables in the request content. For details, see the help documentation (https://www.tencentcloud.com/document/product/614/74718?from_cn_redirect=1).
+in the following example:
+
+```
+{
+"TopicId": "{{ .QueryLog[0][0].topicId }}",
+"key": "{{.Alarm}}",
+"time": "{{ .QueryLog[0][0].time }}",
+"log": "{{ .QueryLog[0][0].content.__CONTENT__ }}",
+"namespace": "{{ .QueryLog[0][0].content.__TAG__.namespace }}"
+}
+``` 
+     * @return Body Callback Body.
+Place various alarm variables in the request content. For details, see the help documentation (https://www.tencentcloud.com/document/product/614/74718?from_cn_redirect=1).
+in the following example:
+
+```
+{
+"TopicId": "{{ .QueryLog[0][0].topicId }}",
+"key": "{{.Alarm}}",
+"time": "{{ .QueryLog[0][0].time }}",
+"log": "{{ .QueryLog[0][0].content.__CONTENT__ }}",
+"namespace": "{{ .QueryLog[0][0].content.__TAG__.namespace }}"
+}
+```
      */
     public String getBody() {
         return this.Body;
     }
 
     /**
-     * Set `Body` during callback
-     * @param Body `Body` during callback
+     * Set Callback Body.
+Place various alarm variables in the request content. For details, see the help documentation (https://www.tencentcloud.com/document/product/614/74718?from_cn_redirect=1).
+in the following example:
+
+```
+{
+"TopicId": "{{ .QueryLog[0][0].topicId }}",
+"key": "{{.Alarm}}",
+"time": "{{ .QueryLog[0][0].time }}",
+"log": "{{ .QueryLog[0][0].content.__CONTENT__ }}",
+"namespace": "{{ .QueryLog[0][0].content.__TAG__.namespace }}"
+}
+```
+     * @param Body Callback Body.
+Place various alarm variables in the request content. For details, see the help documentation (https://www.tencentcloud.com/document/product/614/74718?from_cn_redirect=1).
+in the following example:
+
+```
+{
+"TopicId": "{{ .QueryLog[0][0].topicId }}",
+"key": "{{.Alarm}}",
+"time": "{{ .QueryLog[0][0].time }}",
+"log": "{{ .QueryLog[0][0].content.__CONTENT__ }}",
+"namespace": "{{ .QueryLog[0][0].content.__TAG__.namespace }}"
+}
+```
      */
     public void setBody(String Body) {
         this.Body = Body;
     }
 
     /**
-     * Get `Headers` during callback
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return Headers `Headers` during callback
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get HTTP request header field for callbacks.
+For example, the following request header field informs the server request content type is JSON.
+```
+"Content-Type: application/json"
+``` 
+     * @return Headers HTTP request header field for callbacks.
+For example, the following request header field informs the server request content type is JSON.
+```
+"Content-Type: application/json"
+```
      */
     public String [] getHeaders() {
         return this.Headers;
     }
 
     /**
-     * Set `Headers` during callback
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param Headers `Headers` during callback
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set HTTP request header field for callbacks.
+For example, the following request header field informs the server request content type is JSON.
+```
+"Content-Type: application/json"
+```
+     * @param Headers HTTP request header field for callbacks.
+For example, the following request header field informs the server request content type is JSON.
+```
+"Content-Type: application/json"
+```
      */
     public void setHeaders(String [] Headers) {
         this.Headers = Headers;

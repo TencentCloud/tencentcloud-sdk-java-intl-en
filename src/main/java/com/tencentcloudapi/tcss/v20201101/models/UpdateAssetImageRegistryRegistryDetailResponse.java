@@ -25,23 +25,20 @@ public class UpdateAssetImageRegistryRegistryDetailResponse extends AbstractMode
 
     /**
     * Connection error message
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("HealthCheckErr")
     @Expose
     private String HealthCheckErr;
 
     /**
-    * Name error message
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Incorrect name message
     */
     @SerializedName("NameRepeatErr")
     @Expose
     private String NameRepeatErr;
 
     /**
-    * Unique repository ID
-Note: This field may return null, indicating that no valid values can be obtained.
+    * repository unique id
     */
     @SerializedName("RegistryId")
     @Expose
@@ -55,10 +52,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Connection error message
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Connection error message 
      * @return HealthCheckErr Connection error message
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getHealthCheckErr() {
         return this.HealthCheckErr;
@@ -66,49 +61,39 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Connection error message
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param HealthCheckErr Connection error message
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setHealthCheckErr(String HealthCheckErr) {
         this.HealthCheckErr = HealthCheckErr;
     }
 
     /**
-     * Get Name error message
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return NameRepeatErr Name error message
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Incorrect name message 
+     * @return NameRepeatErr Incorrect name message
      */
     public String getNameRepeatErr() {
         return this.NameRepeatErr;
     }
 
     /**
-     * Set Name error message
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param NameRepeatErr Name error message
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Incorrect name message
+     * @param NameRepeatErr Incorrect name message
      */
     public void setNameRepeatErr(String NameRepeatErr) {
         this.NameRepeatErr = NameRepeatErr;
     }
 
     /**
-     * Get Unique repository ID
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return RegistryId Unique repository ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get repository unique id 
+     * @return RegistryId repository unique id
      */
     public Long getRegistryId() {
         return this.RegistryId;
     }
 
     /**
-     * Set Unique repository ID
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param RegistryId Unique repository ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set repository unique id
+     * @param RegistryId repository unique id
      */
     public void setRegistryId(Long RegistryId) {
         this.RegistryId = RegistryId;

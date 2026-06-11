@@ -24,72 +24,118 @@ import java.util.HashMap;
 public class ModifyKafkaConsumerRequest extends AbstractModel {
 
     /**
-    * Log Topic ID
+    * <p>log topic id</p><ul><li>Obtain the log topic Id through <a href="https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1">Get Log Topic List</a>.</li><li>Obtain the log topic Id through <a href="https://www.tencentcloud.com/document/product/614/56456?from_cn_redirect=1">Create Log Topic</a>.</li></ul>
     */
     @SerializedName("FromTopicId")
     @Expose
     private String FromTopicId;
 
     /**
-    * Compression mode [0: NONE; 2: SNAPPY; 3: LZ4]
+    * <p>Compression mode. 0: No compression; 2: Use Snappy compression; 3: Use LZ4 compression</p>
     */
     @SerializedName("Compression")
     @Expose
     private Long Compression;
 
     /**
-    * Kafka protocol consumer data format
+    * <p>kafka protocol consumption data format</p>
     */
     @SerializedName("ConsumerContent")
     @Expose
     private KafkaConsumerContent ConsumerContent;
 
     /**
-     * Get Log Topic ID 
-     * @return FromTopicId Log Topic ID
+    * <p>Whether to enable the delivery service log. 1: Disabled, 2: Enabled.</p>
+    */
+    @SerializedName("HasServicesLog")
+    @Expose
+    private Long HasServicesLog;
+
+    /**
+    * <p>Range type of consumption, 0: latest, 1: history + latest</p>
+    */
+    @SerializedName("ScopeType")
+    @Expose
+    private Long ScopeType;
+
+    /**
+     * Get <p>log topic id</p><ul><li>Obtain the log topic Id through <a href="https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1">Get Log Topic List</a>.</li><li>Obtain the log topic Id through <a href="https://www.tencentcloud.com/document/product/614/56456?from_cn_redirect=1">Create Log Topic</a>.</li></ul> 
+     * @return FromTopicId <p>log topic id</p><ul><li>Obtain the log topic Id through <a href="https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1">Get Log Topic List</a>.</li><li>Obtain the log topic Id through <a href="https://www.tencentcloud.com/document/product/614/56456?from_cn_redirect=1">Create Log Topic</a>.</li></ul>
      */
     public String getFromTopicId() {
         return this.FromTopicId;
     }
 
     /**
-     * Set Log Topic ID
-     * @param FromTopicId Log Topic ID
+     * Set <p>log topic id</p><ul><li>Obtain the log topic Id through <a href="https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1">Get Log Topic List</a>.</li><li>Obtain the log topic Id through <a href="https://www.tencentcloud.com/document/product/614/56456?from_cn_redirect=1">Create Log Topic</a>.</li></ul>
+     * @param FromTopicId <p>log topic id</p><ul><li>Obtain the log topic Id through <a href="https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1">Get Log Topic List</a>.</li><li>Obtain the log topic Id through <a href="https://www.tencentcloud.com/document/product/614/56456?from_cn_redirect=1">Create Log Topic</a>.</li></ul>
      */
     public void setFromTopicId(String FromTopicId) {
         this.FromTopicId = FromTopicId;
     }
 
     /**
-     * Get Compression mode [0: NONE; 2: SNAPPY; 3: LZ4] 
-     * @return Compression Compression mode [0: NONE; 2: SNAPPY; 3: LZ4]
+     * Get <p>Compression mode. 0: No compression; 2: Use Snappy compression; 3: Use LZ4 compression</p> 
+     * @return Compression <p>Compression mode. 0: No compression; 2: Use Snappy compression; 3: Use LZ4 compression</p>
      */
     public Long getCompression() {
         return this.Compression;
     }
 
     /**
-     * Set Compression mode [0: NONE; 2: SNAPPY; 3: LZ4]
-     * @param Compression Compression mode [0: NONE; 2: SNAPPY; 3: LZ4]
+     * Set <p>Compression mode. 0: No compression; 2: Use Snappy compression; 3: Use LZ4 compression</p>
+     * @param Compression <p>Compression mode. 0: No compression; 2: Use Snappy compression; 3: Use LZ4 compression</p>
      */
     public void setCompression(Long Compression) {
         this.Compression = Compression;
     }
 
     /**
-     * Get Kafka protocol consumer data format 
-     * @return ConsumerContent Kafka protocol consumer data format
+     * Get <p>kafka protocol consumption data format</p> 
+     * @return ConsumerContent <p>kafka protocol consumption data format</p>
      */
     public KafkaConsumerContent getConsumerContent() {
         return this.ConsumerContent;
     }
 
     /**
-     * Set Kafka protocol consumer data format
-     * @param ConsumerContent Kafka protocol consumer data format
+     * Set <p>kafka protocol consumption data format</p>
+     * @param ConsumerContent <p>kafka protocol consumption data format</p>
      */
     public void setConsumerContent(KafkaConsumerContent ConsumerContent) {
         this.ConsumerContent = ConsumerContent;
+    }
+
+    /**
+     * Get <p>Whether to enable the delivery service log. 1: Disabled, 2: Enabled.</p> 
+     * @return HasServicesLog <p>Whether to enable the delivery service log. 1: Disabled, 2: Enabled.</p>
+     */
+    public Long getHasServicesLog() {
+        return this.HasServicesLog;
+    }
+
+    /**
+     * Set <p>Whether to enable the delivery service log. 1: Disabled, 2: Enabled.</p>
+     * @param HasServicesLog <p>Whether to enable the delivery service log. 1: Disabled, 2: Enabled.</p>
+     */
+    public void setHasServicesLog(Long HasServicesLog) {
+        this.HasServicesLog = HasServicesLog;
+    }
+
+    /**
+     * Get <p>Range type of consumption, 0: latest, 1: history + latest</p> 
+     * @return ScopeType <p>Range type of consumption, 0: latest, 1: history + latest</p>
+     */
+    public Long getScopeType() {
+        return this.ScopeType;
+    }
+
+    /**
+     * Set <p>Range type of consumption, 0: latest, 1: history + latest</p>
+     * @param ScopeType <p>Range type of consumption, 0: latest, 1: history + latest</p>
+     */
+    public void setScopeType(Long ScopeType) {
+        this.ScopeType = ScopeType;
     }
 
     public ModifyKafkaConsumerRequest() {
@@ -109,6 +155,12 @@ public class ModifyKafkaConsumerRequest extends AbstractModel {
         if (source.ConsumerContent != null) {
             this.ConsumerContent = new KafkaConsumerContent(source.ConsumerContent);
         }
+        if (source.HasServicesLog != null) {
+            this.HasServicesLog = new Long(source.HasServicesLog);
+        }
+        if (source.ScopeType != null) {
+            this.ScopeType = new Long(source.ScopeType);
+        }
     }
 
 
@@ -119,6 +171,8 @@ public class ModifyKafkaConsumerRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "FromTopicId", this.FromTopicId);
         this.setParamSimple(map, prefix + "Compression", this.Compression);
         this.setParamObj(map, prefix + "ConsumerContent.", this.ConsumerContent);
+        this.setParamSimple(map, prefix + "HasServicesLog", this.HasServicesLog);
+        this.setParamSimple(map, prefix + "ScopeType", this.ScopeType);
 
     }
 }

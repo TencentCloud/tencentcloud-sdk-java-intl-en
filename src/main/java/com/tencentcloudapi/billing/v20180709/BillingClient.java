@@ -564,6 +564,17 @@ For customers with large-scale consumption detail (for example, monthly consumpt
     }
 
     /**
+     *Query member available balance in batches
+     * @param req DescribeOrgMemberAccountBalanceRequest
+     * @return DescribeOrgMemberAccountBalanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeOrgMemberAccountBalanceResponse DescribeOrgMemberAccountBalance(DescribeOrgMemberAccountBalanceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeOrgMemberAccountBalance", DescribeOrgMemberAccountBalanceResponse.class);
+    }
+
+    /**
      *Notes:
 1. This API supports querying annual and monthly subscription instances integrated into the renewal management page, including running and isolated instances (some products unsupported).
 2. When using this API, a sub-user should have the QcloudFinanceRenewManageFullAccess permission policy.

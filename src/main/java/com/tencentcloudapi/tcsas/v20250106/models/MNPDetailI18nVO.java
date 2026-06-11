@@ -24,115 +24,115 @@ import java.util.HashMap;
 public class MNPDetailI18nVO extends AbstractModel {
 
     /**
-    * Language ID.
+    * <p>Language ID.</p>
     */
     @SerializedName("ID")
     @Expose
     private Long ID;
 
     /**
-    * Language type. Valid values: en-US: English; zh-CN: Simplified Chinese; zh-Hant: Traditional Chinese; fr-FR: French; ar-SA: Arabic; id-ID: Indonesian; vi-VN: Vietnamese. Default value: en-US.
+    * <p>Language type. Valid values: en-US: English; zh-CN: Simplified Chinese; zh-Hant: Traditional Chinese; fr-FR: French; ar-SA: Arabic; id-ID: Indonesian; vi-VN: Vietnamese. Default value: en-US.</p>
     */
     @SerializedName("Lang")
     @Expose
     private String Lang;
 
     /**
-    * Whether this is the default language. Valid values: 0: No; 1: Yes. Default value: 0.
+    * <p>Whether this is the default language. Valid values: 0: No; 1: Yes. Default value: 0.</p>
     */
     @SerializedName("IsDefault")
     @Expose
     private Long IsDefault;
 
     /**
-    * Mini program name.
+    * <p>Mini program name.</p>
     */
     @SerializedName("MNPName")
     @Expose
     private String MNPName;
 
     /**
-    * Mini program introduction.
+    * <p>Mini program introduction.</p>
     */
     @SerializedName("MNPIntro")
     @Expose
     private String MNPIntro;
 
     /**
-     * Get Language ID. 
-     * @return ID Language ID.
+     * Get <p>Language ID.</p> 
+     * @return ID <p>Language ID.</p>
      */
     public Long getID() {
         return this.ID;
     }
 
     /**
-     * Set Language ID.
-     * @param ID Language ID.
+     * Set <p>Language ID.</p>
+     * @param ID <p>Language ID.</p>
      */
     public void setID(Long ID) {
         this.ID = ID;
     }
 
     /**
-     * Get Language type. Valid values: en-US: English; zh-CN: Simplified Chinese; zh-Hant: Traditional Chinese; fr-FR: French; ar-SA: Arabic; id-ID: Indonesian; vi-VN: Vietnamese. Default value: en-US. 
-     * @return Lang Language type. Valid values: en-US: English; zh-CN: Simplified Chinese; zh-Hant: Traditional Chinese; fr-FR: French; ar-SA: Arabic; id-ID: Indonesian; vi-VN: Vietnamese. Default value: en-US.
+     * Get <p>Language type. Valid values: en-US: English; zh-CN: Simplified Chinese; zh-Hant: Traditional Chinese; fr-FR: French; ar-SA: Arabic; id-ID: Indonesian; vi-VN: Vietnamese. Default value: en-US.</p> 
+     * @return Lang <p>Language type. Valid values: en-US: English; zh-CN: Simplified Chinese; zh-Hant: Traditional Chinese; fr-FR: French; ar-SA: Arabic; id-ID: Indonesian; vi-VN: Vietnamese. Default value: en-US.</p>
      */
     public String getLang() {
         return this.Lang;
     }
 
     /**
-     * Set Language type. Valid values: en-US: English; zh-CN: Simplified Chinese; zh-Hant: Traditional Chinese; fr-FR: French; ar-SA: Arabic; id-ID: Indonesian; vi-VN: Vietnamese. Default value: en-US.
-     * @param Lang Language type. Valid values: en-US: English; zh-CN: Simplified Chinese; zh-Hant: Traditional Chinese; fr-FR: French; ar-SA: Arabic; id-ID: Indonesian; vi-VN: Vietnamese. Default value: en-US.
+     * Set <p>Language type. Valid values: en-US: English; zh-CN: Simplified Chinese; zh-Hant: Traditional Chinese; fr-FR: French; ar-SA: Arabic; id-ID: Indonesian; vi-VN: Vietnamese. Default value: en-US.</p>
+     * @param Lang <p>Language type. Valid values: en-US: English; zh-CN: Simplified Chinese; zh-Hant: Traditional Chinese; fr-FR: French; ar-SA: Arabic; id-ID: Indonesian; vi-VN: Vietnamese. Default value: en-US.</p>
      */
     public void setLang(String Lang) {
         this.Lang = Lang;
     }
 
     /**
-     * Get Whether this is the default language. Valid values: 0: No; 1: Yes. Default value: 0. 
-     * @return IsDefault Whether this is the default language. Valid values: 0: No; 1: Yes. Default value: 0.
+     * Get <p>Whether this is the default language. Valid values: 0: No; 1: Yes. Default value: 0.</p> 
+     * @return IsDefault <p>Whether this is the default language. Valid values: 0: No; 1: Yes. Default value: 0.</p>
      */
     public Long getIsDefault() {
         return this.IsDefault;
     }
 
     /**
-     * Set Whether this is the default language. Valid values: 0: No; 1: Yes. Default value: 0.
-     * @param IsDefault Whether this is the default language. Valid values: 0: No; 1: Yes. Default value: 0.
+     * Set <p>Whether this is the default language. Valid values: 0: No; 1: Yes. Default value: 0.</p>
+     * @param IsDefault <p>Whether this is the default language. Valid values: 0: No; 1: Yes. Default value: 0.</p>
      */
     public void setIsDefault(Long IsDefault) {
         this.IsDefault = IsDefault;
     }
 
     /**
-     * Get Mini program name. 
-     * @return MNPName Mini program name.
+     * Get <p>Mini program name.</p> 
+     * @return MNPName <p>Mini program name.</p>
      */
     public String getMNPName() {
         return this.MNPName;
     }
 
     /**
-     * Set Mini program name.
-     * @param MNPName Mini program name.
+     * Set <p>Mini program name.</p>
+     * @param MNPName <p>Mini program name.</p>
      */
     public void setMNPName(String MNPName) {
         this.MNPName = MNPName;
     }
 
     /**
-     * Get Mini program introduction. 
-     * @return MNPIntro Mini program introduction.
+     * Get <p>Mini program introduction.</p> 
+     * @return MNPIntro <p>Mini program introduction.</p>
      */
     public String getMNPIntro() {
         return this.MNPIntro;
     }
 
     /**
-     * Set Mini program introduction.
-     * @param MNPIntro Mini program introduction.
+     * Set <p>Mini program introduction.</p>
+     * @param MNPIntro <p>Mini program introduction.</p>
      */
     public void setMNPIntro(String MNPIntro) {
         this.MNPIntro = MNPIntro;

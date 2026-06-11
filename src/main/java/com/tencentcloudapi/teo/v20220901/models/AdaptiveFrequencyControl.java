@@ -31,6 +31,13 @@ public class AdaptiveFrequencyControl extends AbstractModel {
     private String Enabled;
 
     /**
+    * Rule ID of adaptive frequency control, returned as an output parameter.
+    */
+    @SerializedName("Id")
+    @Expose
+    private String Id;
+
+    /**
     * The restriction level of adaptive frequency control. required when Enabled is on. valid values: <li>Loose: Loose</li><li>Moderate: Moderate</li><li>Strict: Strict</li>.
     */
     @SerializedName("Sensitivity")
@@ -58,6 +65,22 @@ public class AdaptiveFrequencyControl extends AbstractModel {
      */
     public void setEnabled(String Enabled) {
         this.Enabled = Enabled;
+    }
+
+    /**
+     * Get Rule ID of adaptive frequency control, returned as an output parameter. 
+     * @return Id Rule ID of adaptive frequency control, returned as an output parameter.
+     */
+    public String getId() {
+        return this.Id;
+    }
+
+    /**
+     * Set Rule ID of adaptive frequency control, returned as an output parameter.
+     * @param Id Rule ID of adaptive frequency control, returned as an output parameter.
+     */
+    public void setId(String Id) {
+        this.Id = Id;
     }
 
     /**
@@ -103,6 +126,9 @@ public class AdaptiveFrequencyControl extends AbstractModel {
         if (source.Enabled != null) {
             this.Enabled = new String(source.Enabled);
         }
+        if (source.Id != null) {
+            this.Id = new String(source.Id);
+        }
         if (source.Sensitivity != null) {
             this.Sensitivity = new String(source.Sensitivity);
         }
@@ -117,6 +143,7 @@ public class AdaptiveFrequencyControl extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Enabled", this.Enabled);
+        this.setParamSimple(map, prefix + "Id", this.Id);
         this.setParamSimple(map, prefix + "Sensitivity", this.Sensitivity);
         this.setParamObj(map, prefix + "Action.", this.Action);
 

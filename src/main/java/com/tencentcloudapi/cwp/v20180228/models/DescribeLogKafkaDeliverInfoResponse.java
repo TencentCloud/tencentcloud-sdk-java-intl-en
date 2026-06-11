@@ -115,7 +115,7 @@ public class DescribeLogKafkaDeliverInfoResponse extends AbstractModel {
     private String Username;
 
     /**
-    * xx
+    * Shipping type details.
     */
     @SerializedName("DeliverTypeDetails")
     @Expose
@@ -337,16 +337,16 @@ public class DescribeLogKafkaDeliverInfoResponse extends AbstractModel {
     }
 
     /**
-     * Get xx 
-     * @return DeliverTypeDetails xx
+     * Get Shipping type details. 
+     * @return DeliverTypeDetails Shipping type details.
      */
     public DeliverTypeDetails [] getDeliverTypeDetails() {
         return this.DeliverTypeDetails;
     }
 
     /**
-     * Set xx
-     * @param DeliverTypeDetails xx
+     * Set Shipping type details.
+     * @param DeliverTypeDetails Shipping type details.
      */
     public void setDeliverTypeDetails(DeliverTypeDetails [] DeliverTypeDetails) {
         this.DeliverTypeDetails = DeliverTypeDetails;

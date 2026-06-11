@@ -59,7 +59,7 @@ public class AlarmShieldInfo extends AbstractModel {
     private Long Type;
 
     /**
-    * Rule for shielding, mandatory when Type is 2. See Product Documentation (https://intl.cloud.tencent.com/document/product/614/103178?from_cn_redirect=1#rule) for rule writing details.Note: This field may return null, indicating that no valid values can be obtained.
+    * Blocking rules, required when Type is 2. For detailed information on filling in rules, see [Product Documentation](https://www.tencentcloud.com/document/product/614/103178?from_cn_redirect=1#rule).
     */
     @SerializedName("Rule")
     @Expose
@@ -96,14 +96,14 @@ public class AlarmShieldInfo extends AbstractModel {
     private Long Status;
 
     /**
-    * Rule Creation Time.
+    * Rule creation time. Unix second-level timestamp (s).
     */
     @SerializedName("CreateTime")
     @Expose
     private Long CreateTime;
 
     /**
-    * Rule Update Time.
+    * Rule update time. Unix second-level timestamp (s).
     */
     @SerializedName("UpdateTime")
     @Expose
@@ -190,16 +190,16 @@ public class AlarmShieldInfo extends AbstractModel {
     }
 
     /**
-     * Get Rule for shielding, mandatory when Type is 2. See Product Documentation (https://intl.cloud.tencent.com/document/product/614/103178?from_cn_redirect=1#rule) for rule writing details.Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Rule Rule for shielding, mandatory when Type is 2. See Product Documentation (https://intl.cloud.tencent.com/document/product/614/103178?from_cn_redirect=1#rule) for rule writing details.Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Blocking rules, required when Type is 2. For detailed information on filling in rules, see [Product Documentation](https://www.tencentcloud.com/document/product/614/103178?from_cn_redirect=1#rule). 
+     * @return Rule Blocking rules, required when Type is 2. For detailed information on filling in rules, see [Product Documentation](https://www.tencentcloud.com/document/product/614/103178?from_cn_redirect=1#rule).
      */
     public String getRule() {
         return this.Rule;
     }
 
     /**
-     * Set Rule for shielding, mandatory when Type is 2. See Product Documentation (https://intl.cloud.tencent.com/document/product/614/103178?from_cn_redirect=1#rule) for rule writing details.Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Rule Rule for shielding, mandatory when Type is 2. See Product Documentation (https://intl.cloud.tencent.com/document/product/614/103178?from_cn_redirect=1#rule) for rule writing details.Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Blocking rules, required when Type is 2. For detailed information on filling in rules, see [Product Documentation](https://www.tencentcloud.com/document/product/614/103178?from_cn_redirect=1#rule).
+     * @param Rule Blocking rules, required when Type is 2. For detailed information on filling in rules, see [Product Documentation](https://www.tencentcloud.com/document/product/614/103178?from_cn_redirect=1#rule).
      */
     public void setRule(String Rule) {
         this.Rule = Rule;
@@ -278,32 +278,32 @@ public class AlarmShieldInfo extends AbstractModel {
     }
 
     /**
-     * Get Rule Creation Time. 
-     * @return CreateTime Rule Creation Time.
+     * Get Rule creation time. Unix second-level timestamp (s). 
+     * @return CreateTime Rule creation time. Unix second-level timestamp (s).
      */
     public Long getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set Rule Creation Time.
-     * @param CreateTime Rule Creation Time.
+     * Set Rule creation time. Unix second-level timestamp (s).
+     * @param CreateTime Rule creation time. Unix second-level timestamp (s).
      */
     public void setCreateTime(Long CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get Rule Update Time. 
-     * @return UpdateTime Rule Update Time.
+     * Get Rule update time. Unix second-level timestamp (s). 
+     * @return UpdateTime Rule update time. Unix second-level timestamp (s).
      */
     public Long getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set Rule Update Time.
-     * @param UpdateTime Rule Update Time.
+     * Set Rule update time. Unix second-level timestamp (s).
+     * @param UpdateTime Rule update time. Unix second-level timestamp (s).
      */
     public void setUpdateTime(Long UpdateTime) {
         this.UpdateTime = UpdateTime;

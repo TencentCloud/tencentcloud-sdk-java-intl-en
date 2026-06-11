@@ -47,19 +47,19 @@ public class InvocationTask extends AbstractModel {
     /**
     * Execution task status. valid values:.
 
--PENDING: waiting for distribution.
--DELIVERING: distributing.
--DELIVER_DELAYED: delivery delay.
--DELIVER_FAILED: delivery fail.
--START_FAILED: command start failed.
+- PENDING: waiting for distribution.
+- DELIVERING: distributing.
+- DELIVER_DELAYED: delivery delay.
+- DELIVER_FAILED: delivery fail.
+- START_FAILED: command start failed.
 - RUNNING: command RUNNING.
--SUCCESS: command success.
--FAILED: command execution failed, exit code not 0.
--TIMEOUT: command timeout.
--TASK_TIMEOUT: client no response.
--Canceling.
+- SUCCESS: command success.
+- FAILED: command execution failed, exit code not 0.
+- TIMEOUT: command timeout.
+- TASK_TIMEOUT: client no response.
+- CANCELLING: canceling.
 - CANCELLED: canceled (command canceled before startup).
--TERMINATED: suspended (canceled during command execution).
+- TERMINATED: suspended (canceled during command execution).
     */
     @SerializedName("TaskStatus")
     @Expose
@@ -126,8 +126,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     /**
     * Invocation source.
 
--USER: originate from user invocation.
--INVOKER: originate from scheduled execution.
+- USER: originate from user invocation.
+- INVOKER: originate from scheduled execution.
     */
     @SerializedName("InvocationSource")
     @Expose
@@ -191,34 +191,34 @@ Note: This field may return null, indicating that no valid values can be obtaine
     /**
      * Get Execution task status. valid values:.
 
--PENDING: waiting for distribution.
--DELIVERING: distributing.
--DELIVER_DELAYED: delivery delay.
--DELIVER_FAILED: delivery fail.
--START_FAILED: command start failed.
+- PENDING: waiting for distribution.
+- DELIVERING: distributing.
+- DELIVER_DELAYED: delivery delay.
+- DELIVER_FAILED: delivery fail.
+- START_FAILED: command start failed.
 - RUNNING: command RUNNING.
--SUCCESS: command success.
--FAILED: command execution failed, exit code not 0.
--TIMEOUT: command timeout.
--TASK_TIMEOUT: client no response.
--Canceling.
+- SUCCESS: command success.
+- FAILED: command execution failed, exit code not 0.
+- TIMEOUT: command timeout.
+- TASK_TIMEOUT: client no response.
+- CANCELLING: canceling.
 - CANCELLED: canceled (command canceled before startup).
--TERMINATED: suspended (canceled during command execution). 
+- TERMINATED: suspended (canceled during command execution). 
      * @return TaskStatus Execution task status. valid values:.
 
--PENDING: waiting for distribution.
--DELIVERING: distributing.
--DELIVER_DELAYED: delivery delay.
--DELIVER_FAILED: delivery fail.
--START_FAILED: command start failed.
+- PENDING: waiting for distribution.
+- DELIVERING: distributing.
+- DELIVER_DELAYED: delivery delay.
+- DELIVER_FAILED: delivery fail.
+- START_FAILED: command start failed.
 - RUNNING: command RUNNING.
--SUCCESS: command success.
--FAILED: command execution failed, exit code not 0.
--TIMEOUT: command timeout.
--TASK_TIMEOUT: client no response.
--Canceling.
+- SUCCESS: command success.
+- FAILED: command execution failed, exit code not 0.
+- TIMEOUT: command timeout.
+- TASK_TIMEOUT: client no response.
+- CANCELLING: canceling.
 - CANCELLED: canceled (command canceled before startup).
--TERMINATED: suspended (canceled during command execution).
+- TERMINATED: suspended (canceled during command execution).
      */
     public String getTaskStatus() {
         return this.TaskStatus;
@@ -227,34 +227,34 @@ Note: This field may return null, indicating that no valid values can be obtaine
     /**
      * Set Execution task status. valid values:.
 
--PENDING: waiting for distribution.
--DELIVERING: distributing.
--DELIVER_DELAYED: delivery delay.
--DELIVER_FAILED: delivery fail.
--START_FAILED: command start failed.
+- PENDING: waiting for distribution.
+- DELIVERING: distributing.
+- DELIVER_DELAYED: delivery delay.
+- DELIVER_FAILED: delivery fail.
+- START_FAILED: command start failed.
 - RUNNING: command RUNNING.
--SUCCESS: command success.
--FAILED: command execution failed, exit code not 0.
--TIMEOUT: command timeout.
--TASK_TIMEOUT: client no response.
--Canceling.
+- SUCCESS: command success.
+- FAILED: command execution failed, exit code not 0.
+- TIMEOUT: command timeout.
+- TASK_TIMEOUT: client no response.
+- CANCELLING: canceling.
 - CANCELLED: canceled (command canceled before startup).
--TERMINATED: suspended (canceled during command execution).
+- TERMINATED: suspended (canceled during command execution).
      * @param TaskStatus Execution task status. valid values:.
 
--PENDING: waiting for distribution.
--DELIVERING: distributing.
--DELIVER_DELAYED: delivery delay.
--DELIVER_FAILED: delivery fail.
--START_FAILED: command start failed.
+- PENDING: waiting for distribution.
+- DELIVERING: distributing.
+- DELIVER_DELAYED: delivery delay.
+- DELIVER_FAILED: delivery fail.
+- START_FAILED: command start failed.
 - RUNNING: command RUNNING.
--SUCCESS: command success.
--FAILED: command execution failed, exit code not 0.
--TIMEOUT: command timeout.
--TASK_TIMEOUT: client no response.
--Canceling.
+- SUCCESS: command success.
+- FAILED: command execution failed, exit code not 0.
+- TIMEOUT: command timeout.
+- TASK_TIMEOUT: client no response.
+- CANCELLING: canceling.
 - CANCELLED: canceled (command canceled before startup).
--TERMINATED: suspended (canceled during command execution).
+- TERMINATED: suspended (canceled during command execution).
      */
     public void setTaskStatus(String TaskStatus) {
         this.TaskStatus = TaskStatus;
@@ -399,12 +399,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
     /**
      * Get Invocation source.
 
--USER: originate from user invocation.
--INVOKER: originate from scheduled execution. 
+- USER: originate from user invocation.
+- INVOKER: originate from scheduled execution. 
      * @return InvocationSource Invocation source.
 
--USER: originate from user invocation.
--INVOKER: originate from scheduled execution.
+- USER: originate from user invocation.
+- INVOKER: originate from scheduled execution.
      */
     public String getInvocationSource() {
         return this.InvocationSource;
@@ -413,12 +413,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
     /**
      * Set Invocation source.
 
--USER: originate from user invocation.
--INVOKER: originate from scheduled execution.
+- USER: originate from user invocation.
+- INVOKER: originate from scheduled execution.
      * @param InvocationSource Invocation source.
 
--USER: originate from user invocation.
--INVOKER: originate from scheduled execution.
+- USER: originate from user invocation.
+- INVOKER: originate from scheduled execution.
      */
     public void setInvocationSource(String InvocationSource) {
         this.InvocationSource = InvocationSource;

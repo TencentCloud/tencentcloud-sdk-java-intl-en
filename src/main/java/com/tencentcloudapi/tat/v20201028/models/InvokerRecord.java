@@ -54,15 +54,15 @@ public class InvokerRecord extends AbstractModel {
     /**
     * Trigger result.
 
--PENDING: waiting for distribution.
+- PENDING: waiting for distribution.
 - RUNNING: command RUNNING.
--Canceling.
--SUCCESS: command success.
--TIMEOUT: command timeout.
+- CANCELLING: canceling.
+- SUCCESS: command success.
+- TIMEOUT: command timeout.
 - FAILED: command FAILED.
--CANCELLED: all commands canceled.
--PARTIAL_FAILED: the command partially failed.
--PARTIAL_CANCELLED: the command is partially canceled.
+- CANCELLED: all commands canceled.
+- PARTIAL_FAILED: the command partially failed.
+- PARTIAL_CANCELLED: the command is partially canceled.
     */
     @SerializedName("Result")
     @Expose
@@ -135,26 +135,26 @@ public class InvokerRecord extends AbstractModel {
     /**
      * Get Trigger result.
 
--PENDING: waiting for distribution.
+- PENDING: waiting for distribution.
 - RUNNING: command RUNNING.
--Canceling.
--SUCCESS: command success.
--TIMEOUT: command timeout.
+- CANCELLING: canceling.
+- SUCCESS: command success.
+- TIMEOUT: command timeout.
 - FAILED: command FAILED.
--CANCELLED: all commands canceled.
--PARTIAL_FAILED: the command partially failed.
--PARTIAL_CANCELLED: the command is partially canceled. 
+- CANCELLED: all commands canceled.
+- PARTIAL_FAILED: the command partially failed.
+- PARTIAL_CANCELLED: the command is partially canceled. 
      * @return Result Trigger result.
 
--PENDING: waiting for distribution.
+- PENDING: waiting for distribution.
 - RUNNING: command RUNNING.
--Canceling.
--SUCCESS: command success.
--TIMEOUT: command timeout.
+- CANCELLING: canceling.
+- SUCCESS: command success.
+- TIMEOUT: command timeout.
 - FAILED: command FAILED.
--CANCELLED: all commands canceled.
--PARTIAL_FAILED: the command partially failed.
--PARTIAL_CANCELLED: the command is partially canceled.
+- CANCELLED: all commands canceled.
+- PARTIAL_FAILED: the command partially failed.
+- PARTIAL_CANCELLED: the command is partially canceled.
      */
     public String getResult() {
         return this.Result;
@@ -163,26 +163,26 @@ public class InvokerRecord extends AbstractModel {
     /**
      * Set Trigger result.
 
--PENDING: waiting for distribution.
+- PENDING: waiting for distribution.
 - RUNNING: command RUNNING.
--Canceling.
--SUCCESS: command success.
--TIMEOUT: command timeout.
+- CANCELLING: canceling.
+- SUCCESS: command success.
+- TIMEOUT: command timeout.
 - FAILED: command FAILED.
--CANCELLED: all commands canceled.
--PARTIAL_FAILED: the command partially failed.
--PARTIAL_CANCELLED: the command is partially canceled.
+- CANCELLED: all commands canceled.
+- PARTIAL_FAILED: the command partially failed.
+- PARTIAL_CANCELLED: the command is partially canceled.
      * @param Result Trigger result.
 
--PENDING: waiting for distribution.
+- PENDING: waiting for distribution.
 - RUNNING: command RUNNING.
--Canceling.
--SUCCESS: command success.
--TIMEOUT: command timeout.
+- CANCELLING: canceling.
+- SUCCESS: command success.
+- TIMEOUT: command timeout.
 - FAILED: command FAILED.
--CANCELLED: all commands canceled.
--PARTIAL_FAILED: the command partially failed.
--PARTIAL_CANCELLED: the command is partially canceled.
+- CANCELLED: all commands canceled.
+- PARTIAL_FAILED: the command partially failed.
+- PARTIAL_CANCELLED: the command is partially canceled.
      */
     public void setResult(String Result) {
         this.Result = Result;

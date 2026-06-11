@@ -165,15 +165,13 @@ public class RiskDnsList extends AbstractModel {
 
     /**
     * Public IP address
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("MachineWanIp")
     @Expose
     private String MachineWanIp;
 
     /**
-    * Host online status. OFFLINE: offline; ONLINE: online; UNKNOWN: unknown.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Host online status [OFFLINE: offline|ONLINE: online|UNKNOWN: unknown]
     */
     @SerializedName("MachineStatus")
     @Expose
@@ -500,10 +498,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Public IP address
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Public IP address 
      * @return MachineWanIp Public IP address
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getMachineWanIp() {
         return this.MachineWanIp;
@@ -511,29 +507,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Public IP address
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param MachineWanIp Public IP address
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setMachineWanIp(String MachineWanIp) {
         this.MachineWanIp = MachineWanIp;
     }
 
     /**
-     * Get Host online status. OFFLINE: offline; ONLINE: online; UNKNOWN: unknown.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return MachineStatus Host online status. OFFLINE: offline; ONLINE: online; UNKNOWN: unknown.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Host online status [OFFLINE: offline|ONLINE: online|UNKNOWN: unknown] 
+     * @return MachineStatus Host online status [OFFLINE: offline|ONLINE: online|UNKNOWN: unknown]
      */
     public String getMachineStatus() {
         return this.MachineStatus;
     }
 
     /**
-     * Set Host online status. OFFLINE: offline; ONLINE: online; UNKNOWN: unknown.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param MachineStatus Host online status. OFFLINE: offline; ONLINE: online; UNKNOWN: unknown.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Host online status [OFFLINE: offline|ONLINE: online|UNKNOWN: unknown]
+     * @param MachineStatus Host online status [OFFLINE: offline|ONLINE: online|UNKNOWN: unknown]
      */
     public void setMachineStatus(String MachineStatus) {
         this.MachineStatus = MachineStatus;

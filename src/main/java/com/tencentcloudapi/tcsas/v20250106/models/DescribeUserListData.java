@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeUserListData extends AbstractModel {
 
     /**
-    * User ID.
+    * <p>User ID.</p>
     */
     @SerializedName("UserId")
     @Expose
     private String UserId;
 
     /**
-    * User account.
+    * <p>User account.</p>
     */
     @SerializedName("UserAccount")
     @Expose
@@ -45,14 +45,14 @@ public class DescribeUserListData extends AbstractModel {
     private Long AccountType;
 
     /**
-    * User name.
+    * <p>User name.</p>
     */
     @SerializedName("UserName")
     @Expose
     private String UserName;
 
     /**
-    * Creation time.
+    * <p>Creation time.</p>
     */
     @SerializedName("CreateTime")
     @Expose
@@ -66,39 +66,39 @@ public class DescribeUserListData extends AbstractModel {
     private Long Status;
 
     /**
-    * Team name.
+    * <p>Team name.</p>
     */
     @SerializedName("TeamName")
     @Expose
     private String TeamName;
 
     /**
-     * Get User ID. 
-     * @return UserId User ID.
+     * Get <p>User ID.</p> 
+     * @return UserId <p>User ID.</p>
      */
     public String getUserId() {
         return this.UserId;
     }
 
     /**
-     * Set User ID.
-     * @param UserId User ID.
+     * Set <p>User ID.</p>
+     * @param UserId <p>User ID.</p>
      */
     public void setUserId(String UserId) {
         this.UserId = UserId;
     }
 
     /**
-     * Get User account. 
-     * @return UserAccount User account.
+     * Get <p>User account.</p> 
+     * @return UserAccount <p>User account.</p>
      */
     public String getUserAccount() {
         return this.UserAccount;
     }
 
     /**
-     * Set User account.
-     * @param UserAccount User account.
+     * Set <p>User account.</p>
+     * @param UserAccount <p>User account.</p>
      */
     public void setUserAccount(String UserAccount) {
         this.UserAccount = UserAccount;
@@ -121,32 +121,32 @@ public class DescribeUserListData extends AbstractModel {
     }
 
     /**
-     * Get User name. 
-     * @return UserName User name.
+     * Get <p>User name.</p> 
+     * @return UserName <p>User name.</p>
      */
     public String getUserName() {
         return this.UserName;
     }
 
     /**
-     * Set User name.
-     * @param UserName User name.
+     * Set <p>User name.</p>
+     * @param UserName <p>User name.</p>
      */
     public void setUserName(String UserName) {
         this.UserName = UserName;
     }
 
     /**
-     * Get Creation time. 
-     * @return CreateTime Creation time.
+     * Get <p>Creation time.</p> 
+     * @return CreateTime <p>Creation time.</p>
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set Creation time.
-     * @param CreateTime Creation time.
+     * Set <p>Creation time.</p>
+     * @param CreateTime <p>Creation time.</p>
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
@@ -169,16 +169,16 @@ public class DescribeUserListData extends AbstractModel {
     }
 
     /**
-     * Get Team name. 
-     * @return TeamName Team name.
+     * Get <p>Team name.</p> 
+     * @return TeamName <p>Team name.</p>
      */
     public String getTeamName() {
         return this.TeamName;
     }
 
     /**
-     * Set Team name.
-     * @param TeamName Team name.
+     * Set <p>Team name.</p>
+     * @param TeamName <p>Team name.</p>
      */
     public void setTeamName(String TeamName) {
         this.TeamName = TeamName;

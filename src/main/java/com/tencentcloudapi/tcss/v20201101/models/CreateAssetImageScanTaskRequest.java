@@ -24,57 +24,92 @@ import java.util.HashMap;
 public class CreateAssetImageScanTaskRequest extends AbstractModel {
 
     /**
-    * Whether to scan all images.
+    * <p>Whether to scan all images; select one from all images, image list, and filter by condition.</p>
     */
     @SerializedName("All")
     @Expose
     private Boolean All;
 
     /**
-    * List of images to be scanned.
+    * <p>List of images to scan; choose one from all images, image list, and filter by condition.</p>
     */
     @SerializedName("Images")
     @Expose
     private String [] Images;
 
     /**
-    * Scan for vulnerabilities.
+    * <p>Scan vulnerabilities; select one from vulnerability, Trojan, and risk.</p>
     */
     @SerializedName("ScanVul")
     @Expose
     private Boolean ScanVul;
 
     /**
-    * Scan for trojans.
+    * <p>Scan for trojans; select either vulnerability, Trojan or risk.</p>
     */
     @SerializedName("ScanVirus")
     @Expose
     private Boolean ScanVirus;
 
     /**
-    * Scan for risks.
+    * <p>Scan risk; select one from vulnerability, Trojan, and risk.</p>
     */
     @SerializedName("ScanRisk")
     @Expose
     private Boolean ScanRisk;
 
     /**
-    * Filter
+    * <p>Filter images by conditions; select one from all images, image list, and filter by condition.</p>
     */
     @SerializedName("Filters")
     @Expose
     private AssetFilters [] Filters;
 
     /**
-    * Specified image IDs to be excluded
+    * <p>Filter images by conditions and exclude individual images</p>
     */
     @SerializedName("ExcludeImageIds")
     @Expose
     private String [] ExcludeImageIds;
 
     /**
-     * Get Whether to scan all images. 
-     * @return All Whether to scan all images.
+    * <p>Whether the image has running containers</p>
+    */
+    @SerializedName("ContainerRunning")
+    @Expose
+    private Boolean ContainerRunning;
+
+    /**
+    * <p>Scan range 0 all authorized images, 1 selected images, 2 recommended scan, 3 cluster scan</p><p>Value ranges from 0 to 3</p><p>Default value: 0</p>
+    */
+    @SerializedName("ScanScope")
+    @Expose
+    private Long ScanScope;
+
+    /**
+    * <p>Task timeout duration unit seconds, default 1 hour.</p>
+    */
+    @SerializedName("Timeout")
+    @Expose
+    private Long Timeout;
+
+    /**
+    * <p>One-click scan task. Default false indicates non-one-click scan, true one-click scan.</p>
+    */
+    @SerializedName("IsOneClickScanningTask")
+    @Expose
+    private Boolean IsOneClickScanningTask;
+
+    /**
+    * <p>Cluster ID.</p>
+    */
+    @SerializedName("ClusterIDs")
+    @Expose
+    private String [] ClusterIDs;
+
+    /**
+     * Get <p>Whether to scan all images; select one from all images, image list, and filter by condition.</p> 
+     * @return All <p>Whether to scan all images; select one from all images, image list, and filter by condition.</p>
      * @deprecated
      */
     @Deprecated
@@ -83,8 +118,8 @@ public class CreateAssetImageScanTaskRequest extends AbstractModel {
     }
 
     /**
-     * Set Whether to scan all images.
-     * @param All Whether to scan all images.
+     * Set <p>Whether to scan all images; select one from all images, image list, and filter by condition.</p>
+     * @param All <p>Whether to scan all images; select one from all images, image list, and filter by condition.</p>
      * @deprecated
      */
     @Deprecated
@@ -93,99 +128,179 @@ public class CreateAssetImageScanTaskRequest extends AbstractModel {
     }
 
     /**
-     * Get List of images to be scanned. 
-     * @return Images List of images to be scanned.
+     * Get <p>List of images to scan; choose one from all images, image list, and filter by condition.</p> 
+     * @return Images <p>List of images to scan; choose one from all images, image list, and filter by condition.</p>
      */
     public String [] getImages() {
         return this.Images;
     }
 
     /**
-     * Set List of images to be scanned.
-     * @param Images List of images to be scanned.
+     * Set <p>List of images to scan; choose one from all images, image list, and filter by condition.</p>
+     * @param Images <p>List of images to scan; choose one from all images, image list, and filter by condition.</p>
      */
     public void setImages(String [] Images) {
         this.Images = Images;
     }
 
     /**
-     * Get Scan for vulnerabilities. 
-     * @return ScanVul Scan for vulnerabilities.
+     * Get <p>Scan vulnerabilities; select one from vulnerability, Trojan, and risk.</p> 
+     * @return ScanVul <p>Scan vulnerabilities; select one from vulnerability, Trojan, and risk.</p>
      */
     public Boolean getScanVul() {
         return this.ScanVul;
     }
 
     /**
-     * Set Scan for vulnerabilities.
-     * @param ScanVul Scan for vulnerabilities.
+     * Set <p>Scan vulnerabilities; select one from vulnerability, Trojan, and risk.</p>
+     * @param ScanVul <p>Scan vulnerabilities; select one from vulnerability, Trojan, and risk.</p>
      */
     public void setScanVul(Boolean ScanVul) {
         this.ScanVul = ScanVul;
     }
 
     /**
-     * Get Scan for trojans. 
-     * @return ScanVirus Scan for trojans.
+     * Get <p>Scan for trojans; select either vulnerability, Trojan or risk.</p> 
+     * @return ScanVirus <p>Scan for trojans; select either vulnerability, Trojan or risk.</p>
      */
     public Boolean getScanVirus() {
         return this.ScanVirus;
     }
 
     /**
-     * Set Scan for trojans.
-     * @param ScanVirus Scan for trojans.
+     * Set <p>Scan for trojans; select either vulnerability, Trojan or risk.</p>
+     * @param ScanVirus <p>Scan for trojans; select either vulnerability, Trojan or risk.</p>
      */
     public void setScanVirus(Boolean ScanVirus) {
         this.ScanVirus = ScanVirus;
     }
 
     /**
-     * Get Scan for risks. 
-     * @return ScanRisk Scan for risks.
+     * Get <p>Scan risk; select one from vulnerability, Trojan, and risk.</p> 
+     * @return ScanRisk <p>Scan risk; select one from vulnerability, Trojan, and risk.</p>
      */
     public Boolean getScanRisk() {
         return this.ScanRisk;
     }
 
     /**
-     * Set Scan for risks.
-     * @param ScanRisk Scan for risks.
+     * Set <p>Scan risk; select one from vulnerability, Trojan, and risk.</p>
+     * @param ScanRisk <p>Scan risk; select one from vulnerability, Trojan, and risk.</p>
      */
     public void setScanRisk(Boolean ScanRisk) {
         this.ScanRisk = ScanRisk;
     }
 
     /**
-     * Get Filter 
-     * @return Filters Filter
+     * Get <p>Filter images by conditions; select one from all images, image list, and filter by condition.</p> 
+     * @return Filters <p>Filter images by conditions; select one from all images, image list, and filter by condition.</p>
      */
     public AssetFilters [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set Filter
-     * @param Filters Filter
+     * Set <p>Filter images by conditions; select one from all images, image list, and filter by condition.</p>
+     * @param Filters <p>Filter images by conditions; select one from all images, image list, and filter by condition.</p>
      */
     public void setFilters(AssetFilters [] Filters) {
         this.Filters = Filters;
     }
 
     /**
-     * Get Specified image IDs to be excluded 
-     * @return ExcludeImageIds Specified image IDs to be excluded
+     * Get <p>Filter images by conditions and exclude individual images</p> 
+     * @return ExcludeImageIds <p>Filter images by conditions and exclude individual images</p>
      */
     public String [] getExcludeImageIds() {
         return this.ExcludeImageIds;
     }
 
     /**
-     * Set Specified image IDs to be excluded
-     * @param ExcludeImageIds Specified image IDs to be excluded
+     * Set <p>Filter images by conditions and exclude individual images</p>
+     * @param ExcludeImageIds <p>Filter images by conditions and exclude individual images</p>
      */
     public void setExcludeImageIds(String [] ExcludeImageIds) {
         this.ExcludeImageIds = ExcludeImageIds;
+    }
+
+    /**
+     * Get <p>Whether the image has running containers</p> 
+     * @return ContainerRunning <p>Whether the image has running containers</p>
+     */
+    public Boolean getContainerRunning() {
+        return this.ContainerRunning;
+    }
+
+    /**
+     * Set <p>Whether the image has running containers</p>
+     * @param ContainerRunning <p>Whether the image has running containers</p>
+     */
+    public void setContainerRunning(Boolean ContainerRunning) {
+        this.ContainerRunning = ContainerRunning;
+    }
+
+    /**
+     * Get <p>Scan range 0 all authorized images, 1 selected images, 2 recommended scan, 3 cluster scan</p><p>Value ranges from 0 to 3</p><p>Default value: 0</p> 
+     * @return ScanScope <p>Scan range 0 all authorized images, 1 selected images, 2 recommended scan, 3 cluster scan</p><p>Value ranges from 0 to 3</p><p>Default value: 0</p>
+     */
+    public Long getScanScope() {
+        return this.ScanScope;
+    }
+
+    /**
+     * Set <p>Scan range 0 all authorized images, 1 selected images, 2 recommended scan, 3 cluster scan</p><p>Value ranges from 0 to 3</p><p>Default value: 0</p>
+     * @param ScanScope <p>Scan range 0 all authorized images, 1 selected images, 2 recommended scan, 3 cluster scan</p><p>Value ranges from 0 to 3</p><p>Default value: 0</p>
+     */
+    public void setScanScope(Long ScanScope) {
+        this.ScanScope = ScanScope;
+    }
+
+    /**
+     * Get <p>Task timeout duration unit seconds, default 1 hour.</p> 
+     * @return Timeout <p>Task timeout duration unit seconds, default 1 hour.</p>
+     */
+    public Long getTimeout() {
+        return this.Timeout;
+    }
+
+    /**
+     * Set <p>Task timeout duration unit seconds, default 1 hour.</p>
+     * @param Timeout <p>Task timeout duration unit seconds, default 1 hour.</p>
+     */
+    public void setTimeout(Long Timeout) {
+        this.Timeout = Timeout;
+    }
+
+    /**
+     * Get <p>One-click scan task. Default false indicates non-one-click scan, true one-click scan.</p> 
+     * @return IsOneClickScanningTask <p>One-click scan task. Default false indicates non-one-click scan, true one-click scan.</p>
+     */
+    public Boolean getIsOneClickScanningTask() {
+        return this.IsOneClickScanningTask;
+    }
+
+    /**
+     * Set <p>One-click scan task. Default false indicates non-one-click scan, true one-click scan.</p>
+     * @param IsOneClickScanningTask <p>One-click scan task. Default false indicates non-one-click scan, true one-click scan.</p>
+     */
+    public void setIsOneClickScanningTask(Boolean IsOneClickScanningTask) {
+        this.IsOneClickScanningTask = IsOneClickScanningTask;
+    }
+
+    /**
+     * Get <p>Cluster ID.</p> 
+     * @return ClusterIDs <p>Cluster ID.</p>
+     */
+    public String [] getClusterIDs() {
+        return this.ClusterIDs;
+    }
+
+    /**
+     * Set <p>Cluster ID.</p>
+     * @param ClusterIDs <p>Cluster ID.</p>
+     */
+    public void setClusterIDs(String [] ClusterIDs) {
+        this.ClusterIDs = ClusterIDs;
     }
 
     public CreateAssetImageScanTaskRequest() {
@@ -226,6 +341,24 @@ public class CreateAssetImageScanTaskRequest extends AbstractModel {
                 this.ExcludeImageIds[i] = new String(source.ExcludeImageIds[i]);
             }
         }
+        if (source.ContainerRunning != null) {
+            this.ContainerRunning = new Boolean(source.ContainerRunning);
+        }
+        if (source.ScanScope != null) {
+            this.ScanScope = new Long(source.ScanScope);
+        }
+        if (source.Timeout != null) {
+            this.Timeout = new Long(source.Timeout);
+        }
+        if (source.IsOneClickScanningTask != null) {
+            this.IsOneClickScanningTask = new Boolean(source.IsOneClickScanningTask);
+        }
+        if (source.ClusterIDs != null) {
+            this.ClusterIDs = new String[source.ClusterIDs.length];
+            for (int i = 0; i < source.ClusterIDs.length; i++) {
+                this.ClusterIDs[i] = new String(source.ClusterIDs[i]);
+            }
+        }
     }
 
 
@@ -240,6 +373,11 @@ public class CreateAssetImageScanTaskRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ScanRisk", this.ScanRisk);
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
         this.setParamArraySimple(map, prefix + "ExcludeImageIds.", this.ExcludeImageIds);
+        this.setParamSimple(map, prefix + "ContainerRunning", this.ContainerRunning);
+        this.setParamSimple(map, prefix + "ScanScope", this.ScanScope);
+        this.setParamSimple(map, prefix + "Timeout", this.Timeout);
+        this.setParamSimple(map, prefix + "IsOneClickScanningTask", this.IsOneClickScanningTask);
+        this.setParamArraySimple(map, prefix + "ClusterIDs.", this.ClusterIDs);
 
     }
 }

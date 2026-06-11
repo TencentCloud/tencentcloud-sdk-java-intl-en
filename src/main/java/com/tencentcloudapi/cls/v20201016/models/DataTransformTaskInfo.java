@@ -45,7 +45,7 @@ public class DataTransformTaskInfo extends AbstractModel {
     private Long EnableFlag;
 
     /**
-    * Task type. Valid values: 1 (DSL) and 2 (SQL).
+    * Processing task type, 1: DSL (processing task using custom language), 2: SQL (processing task using SQL)
     */
     @SerializedName("Type")
     @Expose
@@ -66,21 +66,24 @@ public class DataTransformTaskInfo extends AbstractModel {
     private Long Status;
 
     /**
-    * Task creation time
+    * Creation time.
+Time format: yyyy-MM-dd HH:mm:ss
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * Last modified time
+    * Last modification time
+Time format: yyyy-MM-dd HH:mm:ss
     */
     @SerializedName("UpdateTime")
     @Expose
     private String UpdateTime;
 
     /**
-    * Last enabled time. If you need to rebuild a cluster, modify this time.
+    * Last enabled time. Modify this time if the cluster needs to be rebuilt.
+Time format: yyyy-MM-dd HH:mm:ss
     */
     @SerializedName("LastEnableTime")
     @Expose
@@ -108,11 +111,91 @@ public class DataTransformTaskInfo extends AbstractModel {
     private DataTransformResouceInfo [] DstResources;
 
     /**
-    * Logical function for data processing
+    * Processing logic function.
     */
     @SerializedName("EtlContent")
     @Expose
     private String EtlContent;
+
+    /**
+    * Fallback Topic ID
+    */
+    @SerializedName("BackupTopicID")
+    @Expose
+    private String BackupTopicID;
+
+    /**
+    * Whether to discard log data after the limit is exceeded
+    */
+    @SerializedName("BackupGiveUpData")
+    @Expose
+    private Boolean BackupGiveUpData;
+
+    /**
+    * Whether to enable service log shipping. Valid values: 1: disable; 2: enable.
+    */
+    @SerializedName("HasServicesLog")
+    @Expose
+    private Long HasServicesLog;
+
+    /**
+    * Number of the target log topics of a task.
+    */
+    @SerializedName("TaskDstCount")
+    @Expose
+    private Long TaskDstCount;
+
+    /**
+    * Data processing type. Valid values: 0: standard processing task; 1: pre-processing task.
+    */
+    @SerializedName("DataTransformType")
+    @Expose
+    private Long DataTransformType;
+
+    /**
+    * Whether to keep the failure log status. Valid values: 1: no; 2: yes.
+    */
+    @SerializedName("KeepFailureLog")
+    @Expose
+    private Long KeepFailureLog;
+
+    /**
+    * Field name of a failed log.
+    */
+    @SerializedName("FailureLogKey")
+    @Expose
+    private String FailureLogKey;
+
+    /**
+    * Specify the start time of data processing (a second-level timestamp).
+-For any time range within the log topic lifecycle, if it exceeds the lifecycle, only process the part with data within the lifecycle.
+    */
+    @SerializedName("ProcessFromTimestamp")
+    @Expose
+    private Long ProcessFromTimestamp;
+
+    /**
+    * Specify the end time of data processing, a Unix second-level timestamp.
+1. Cannot specify a future time
+2. If left blank, it means that the task will run constantly.
+    */
+    @SerializedName("ProcessToTimestamp")
+    @Expose
+    private Long ProcessToTimestamp;
+
+    /**
+    * sql data source information
+    */
+    @SerializedName("DataTransformSqlDataSources")
+    @Expose
+    private DataTransformSqlDataSource [] DataTransformSqlDataSources;
+
+    /**
+    * Environment variable.
+    */
+    @SerializedName("EnvInfos")
+    @Expose
+    private EnvInfo [] EnvInfos;
 
     /**
      * Get Data processing task name 
@@ -163,16 +246,16 @@ public class DataTransformTaskInfo extends AbstractModel {
     }
 
     /**
-     * Get Task type. Valid values: 1 (DSL) and 2 (SQL). 
-     * @return Type Task type. Valid values: 1 (DSL) and 2 (SQL).
+     * Get Processing task type, 1: DSL (processing task using custom language), 2: SQL (processing task using SQL) 
+     * @return Type Processing task type, 1: DSL (processing task using custom language), 2: SQL (processing task using SQL)
      */
     public Long getType() {
         return this.Type;
     }
 
     /**
-     * Set Task type. Valid values: 1 (DSL) and 2 (SQL).
-     * @param Type Task type. Valid values: 1 (DSL) and 2 (SQL).
+     * Set Processing task type, 1: DSL (processing task using custom language), 2: SQL (processing task using SQL)
+     * @param Type Processing task type, 1: DSL (processing task using custom language), 2: SQL (processing task using SQL)
      */
     public void setType(Long Type) {
         this.Type = Type;
@@ -211,48 +294,60 @@ public class DataTransformTaskInfo extends AbstractModel {
     }
 
     /**
-     * Get Task creation time 
-     * @return CreateTime Task creation time
+     * Get Creation time.
+Time format: yyyy-MM-dd HH:mm:ss 
+     * @return CreateTime Creation time.
+Time format: yyyy-MM-dd HH:mm:ss
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set Task creation time
-     * @param CreateTime Task creation time
+     * Set Creation time.
+Time format: yyyy-MM-dd HH:mm:ss
+     * @param CreateTime Creation time.
+Time format: yyyy-MM-dd HH:mm:ss
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get Last modified time 
-     * @return UpdateTime Last modified time
+     * Get Last modification time
+Time format: yyyy-MM-dd HH:mm:ss 
+     * @return UpdateTime Last modification time
+Time format: yyyy-MM-dd HH:mm:ss
      */
     public String getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set Last modified time
-     * @param UpdateTime Last modified time
+     * Set Last modification time
+Time format: yyyy-MM-dd HH:mm:ss
+     * @param UpdateTime Last modification time
+Time format: yyyy-MM-dd HH:mm:ss
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;
     }
 
     /**
-     * Get Last enabled time. If you need to rebuild a cluster, modify this time. 
-     * @return LastEnableTime Last enabled time. If you need to rebuild a cluster, modify this time.
+     * Get Last enabled time. Modify this time if the cluster needs to be rebuilt.
+Time format: yyyy-MM-dd HH:mm:ss 
+     * @return LastEnableTime Last enabled time. Modify this time if the cluster needs to be rebuilt.
+Time format: yyyy-MM-dd HH:mm:ss
      */
     public String getLastEnableTime() {
         return this.LastEnableTime;
     }
 
     /**
-     * Set Last enabled time. If you need to rebuild a cluster, modify this time.
-     * @param LastEnableTime Last enabled time. If you need to rebuild a cluster, modify this time.
+     * Set Last enabled time. Modify this time if the cluster needs to be rebuilt.
+Time format: yyyy-MM-dd HH:mm:ss
+     * @param LastEnableTime Last enabled time. Modify this time if the cluster needs to be rebuilt.
+Time format: yyyy-MM-dd HH:mm:ss
      */
     public void setLastEnableTime(String LastEnableTime) {
         this.LastEnableTime = LastEnableTime;
@@ -307,19 +402,207 @@ public class DataTransformTaskInfo extends AbstractModel {
     }
 
     /**
-     * Get Logical function for data processing 
-     * @return EtlContent Logical function for data processing
+     * Get Processing logic function. 
+     * @return EtlContent Processing logic function.
      */
     public String getEtlContent() {
         return this.EtlContent;
     }
 
     /**
-     * Set Logical function for data processing
-     * @param EtlContent Logical function for data processing
+     * Set Processing logic function.
+     * @param EtlContent Processing logic function.
      */
     public void setEtlContent(String EtlContent) {
         this.EtlContent = EtlContent;
+    }
+
+    /**
+     * Get Fallback Topic ID 
+     * @return BackupTopicID Fallback Topic ID
+     */
+    public String getBackupTopicID() {
+        return this.BackupTopicID;
+    }
+
+    /**
+     * Set Fallback Topic ID
+     * @param BackupTopicID Fallback Topic ID
+     */
+    public void setBackupTopicID(String BackupTopicID) {
+        this.BackupTopicID = BackupTopicID;
+    }
+
+    /**
+     * Get Whether to discard log data after the limit is exceeded 
+     * @return BackupGiveUpData Whether to discard log data after the limit is exceeded
+     */
+    public Boolean getBackupGiveUpData() {
+        return this.BackupGiveUpData;
+    }
+
+    /**
+     * Set Whether to discard log data after the limit is exceeded
+     * @param BackupGiveUpData Whether to discard log data after the limit is exceeded
+     */
+    public void setBackupGiveUpData(Boolean BackupGiveUpData) {
+        this.BackupGiveUpData = BackupGiveUpData;
+    }
+
+    /**
+     * Get Whether to enable service log shipping. Valid values: 1: disable; 2: enable. 
+     * @return HasServicesLog Whether to enable service log shipping. Valid values: 1: disable; 2: enable.
+     */
+    public Long getHasServicesLog() {
+        return this.HasServicesLog;
+    }
+
+    /**
+     * Set Whether to enable service log shipping. Valid values: 1: disable; 2: enable.
+     * @param HasServicesLog Whether to enable service log shipping. Valid values: 1: disable; 2: enable.
+     */
+    public void setHasServicesLog(Long HasServicesLog) {
+        this.HasServicesLog = HasServicesLog;
+    }
+
+    /**
+     * Get Number of the target log topics of a task. 
+     * @return TaskDstCount Number of the target log topics of a task.
+     */
+    public Long getTaskDstCount() {
+        return this.TaskDstCount;
+    }
+
+    /**
+     * Set Number of the target log topics of a task.
+     * @param TaskDstCount Number of the target log topics of a task.
+     */
+    public void setTaskDstCount(Long TaskDstCount) {
+        this.TaskDstCount = TaskDstCount;
+    }
+
+    /**
+     * Get Data processing type. Valid values: 0: standard processing task; 1: pre-processing task. 
+     * @return DataTransformType Data processing type. Valid values: 0: standard processing task; 1: pre-processing task.
+     */
+    public Long getDataTransformType() {
+        return this.DataTransformType;
+    }
+
+    /**
+     * Set Data processing type. Valid values: 0: standard processing task; 1: pre-processing task.
+     * @param DataTransformType Data processing type. Valid values: 0: standard processing task; 1: pre-processing task.
+     */
+    public void setDataTransformType(Long DataTransformType) {
+        this.DataTransformType = DataTransformType;
+    }
+
+    /**
+     * Get Whether to keep the failure log status. Valid values: 1: no; 2: yes. 
+     * @return KeepFailureLog Whether to keep the failure log status. Valid values: 1: no; 2: yes.
+     */
+    public Long getKeepFailureLog() {
+        return this.KeepFailureLog;
+    }
+
+    /**
+     * Set Whether to keep the failure log status. Valid values: 1: no; 2: yes.
+     * @param KeepFailureLog Whether to keep the failure log status. Valid values: 1: no; 2: yes.
+     */
+    public void setKeepFailureLog(Long KeepFailureLog) {
+        this.KeepFailureLog = KeepFailureLog;
+    }
+
+    /**
+     * Get Field name of a failed log. 
+     * @return FailureLogKey Field name of a failed log.
+     */
+    public String getFailureLogKey() {
+        return this.FailureLogKey;
+    }
+
+    /**
+     * Set Field name of a failed log.
+     * @param FailureLogKey Field name of a failed log.
+     */
+    public void setFailureLogKey(String FailureLogKey) {
+        this.FailureLogKey = FailureLogKey;
+    }
+
+    /**
+     * Get Specify the start time of data processing (a second-level timestamp).
+-For any time range within the log topic lifecycle, if it exceeds the lifecycle, only process the part with data within the lifecycle. 
+     * @return ProcessFromTimestamp Specify the start time of data processing (a second-level timestamp).
+-For any time range within the log topic lifecycle, if it exceeds the lifecycle, only process the part with data within the lifecycle.
+     */
+    public Long getProcessFromTimestamp() {
+        return this.ProcessFromTimestamp;
+    }
+
+    /**
+     * Set Specify the start time of data processing (a second-level timestamp).
+-For any time range within the log topic lifecycle, if it exceeds the lifecycle, only process the part with data within the lifecycle.
+     * @param ProcessFromTimestamp Specify the start time of data processing (a second-level timestamp).
+-For any time range within the log topic lifecycle, if it exceeds the lifecycle, only process the part with data within the lifecycle.
+     */
+    public void setProcessFromTimestamp(Long ProcessFromTimestamp) {
+        this.ProcessFromTimestamp = ProcessFromTimestamp;
+    }
+
+    /**
+     * Get Specify the end time of data processing, a Unix second-level timestamp.
+1. Cannot specify a future time
+2. If left blank, it means that the task will run constantly. 
+     * @return ProcessToTimestamp Specify the end time of data processing, a Unix second-level timestamp.
+1. Cannot specify a future time
+2. If left blank, it means that the task will run constantly.
+     */
+    public Long getProcessToTimestamp() {
+        return this.ProcessToTimestamp;
+    }
+
+    /**
+     * Set Specify the end time of data processing, a Unix second-level timestamp.
+1. Cannot specify a future time
+2. If left blank, it means that the task will run constantly.
+     * @param ProcessToTimestamp Specify the end time of data processing, a Unix second-level timestamp.
+1. Cannot specify a future time
+2. If left blank, it means that the task will run constantly.
+     */
+    public void setProcessToTimestamp(Long ProcessToTimestamp) {
+        this.ProcessToTimestamp = ProcessToTimestamp;
+    }
+
+    /**
+     * Get sql data source information 
+     * @return DataTransformSqlDataSources sql data source information
+     */
+    public DataTransformSqlDataSource [] getDataTransformSqlDataSources() {
+        return this.DataTransformSqlDataSources;
+    }
+
+    /**
+     * Set sql data source information
+     * @param DataTransformSqlDataSources sql data source information
+     */
+    public void setDataTransformSqlDataSources(DataTransformSqlDataSource [] DataTransformSqlDataSources) {
+        this.DataTransformSqlDataSources = DataTransformSqlDataSources;
+    }
+
+    /**
+     * Get Environment variable. 
+     * @return EnvInfos Environment variable.
+     */
+    public EnvInfo [] getEnvInfos() {
+        return this.EnvInfos;
+    }
+
+    /**
+     * Set Environment variable.
+     * @param EnvInfos Environment variable.
+     */
+    public void setEnvInfos(EnvInfo [] EnvInfos) {
+        this.EnvInfos = EnvInfos;
     }
 
     public DataTransformTaskInfo() {
@@ -372,6 +655,45 @@ public class DataTransformTaskInfo extends AbstractModel {
         if (source.EtlContent != null) {
             this.EtlContent = new String(source.EtlContent);
         }
+        if (source.BackupTopicID != null) {
+            this.BackupTopicID = new String(source.BackupTopicID);
+        }
+        if (source.BackupGiveUpData != null) {
+            this.BackupGiveUpData = new Boolean(source.BackupGiveUpData);
+        }
+        if (source.HasServicesLog != null) {
+            this.HasServicesLog = new Long(source.HasServicesLog);
+        }
+        if (source.TaskDstCount != null) {
+            this.TaskDstCount = new Long(source.TaskDstCount);
+        }
+        if (source.DataTransformType != null) {
+            this.DataTransformType = new Long(source.DataTransformType);
+        }
+        if (source.KeepFailureLog != null) {
+            this.KeepFailureLog = new Long(source.KeepFailureLog);
+        }
+        if (source.FailureLogKey != null) {
+            this.FailureLogKey = new String(source.FailureLogKey);
+        }
+        if (source.ProcessFromTimestamp != null) {
+            this.ProcessFromTimestamp = new Long(source.ProcessFromTimestamp);
+        }
+        if (source.ProcessToTimestamp != null) {
+            this.ProcessToTimestamp = new Long(source.ProcessToTimestamp);
+        }
+        if (source.DataTransformSqlDataSources != null) {
+            this.DataTransformSqlDataSources = new DataTransformSqlDataSource[source.DataTransformSqlDataSources.length];
+            for (int i = 0; i < source.DataTransformSqlDataSources.length; i++) {
+                this.DataTransformSqlDataSources[i] = new DataTransformSqlDataSource(source.DataTransformSqlDataSources[i]);
+            }
+        }
+        if (source.EnvInfos != null) {
+            this.EnvInfos = new EnvInfo[source.EnvInfos.length];
+            for (int i = 0; i < source.EnvInfos.length; i++) {
+                this.EnvInfos[i] = new EnvInfo(source.EnvInfos[i]);
+            }
+        }
     }
 
 
@@ -392,6 +714,17 @@ public class DataTransformTaskInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "LogsetId", this.LogsetId);
         this.setParamArrayObj(map, prefix + "DstResources.", this.DstResources);
         this.setParamSimple(map, prefix + "EtlContent", this.EtlContent);
+        this.setParamSimple(map, prefix + "BackupTopicID", this.BackupTopicID);
+        this.setParamSimple(map, prefix + "BackupGiveUpData", this.BackupGiveUpData);
+        this.setParamSimple(map, prefix + "HasServicesLog", this.HasServicesLog);
+        this.setParamSimple(map, prefix + "TaskDstCount", this.TaskDstCount);
+        this.setParamSimple(map, prefix + "DataTransformType", this.DataTransformType);
+        this.setParamSimple(map, prefix + "KeepFailureLog", this.KeepFailureLog);
+        this.setParamSimple(map, prefix + "FailureLogKey", this.FailureLogKey);
+        this.setParamSimple(map, prefix + "ProcessFromTimestamp", this.ProcessFromTimestamp);
+        this.setParamSimple(map, prefix + "ProcessToTimestamp", this.ProcessToTimestamp);
+        this.setParamArrayObj(map, prefix + "DataTransformSqlDataSources.", this.DataTransformSqlDataSources);
+        this.setParamArrayObj(map, prefix + "EnvInfos.", this.EnvInfos);
 
     }
 }

@@ -31,8 +31,7 @@ public class DescribeAssetWebFrameListResponse extends AbstractModel {
     private Long Total;
 
     /**
-    * Data list
-Note: This field may return null, indicating that no valid values can be obtained.
+    * List
     */
     @SerializedName("WebFrames")
     @Expose
@@ -62,20 +61,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Data list
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return WebFrames Data list
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get List 
+     * @return WebFrames List
      */
     public AssetWebFrameBaseInfo [] getWebFrames() {
         return this.WebFrames;
     }
 
     /**
-     * Set Data list
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param WebFrames Data list
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set List
+     * @param WebFrames List
      */
     public void setWebFrames(AssetWebFrameBaseInfo [] WebFrames) {
         this.WebFrames = WebFrames;

@@ -52,6 +52,13 @@ public class CreateAigcCustomVoiceRequest extends AbstractModel {
     private String VideoId;
 
     /**
+    * <p>If the overseas custom timbre library is enabled, you can input <code>True</code> to use it.</p><p>Enumeration value:</p><ul><li>True: Use the overseas custom timbre library.</li><li>False: Non-use of the overseas custom timbre library.</li></ul>
+    */
+    @SerializedName("DisableModeration")
+    @Expose
+    private String DisableModeration;
+
+    /**
     * <p>Identifier for deduplication. If a request with the same identifier has been sent within the past three days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.</p>
     */
     @SerializedName("SessionId")
@@ -137,6 +144,22 @@ public class CreateAigcCustomVoiceRequest extends AbstractModel {
     }
 
     /**
+     * Get <p>If the overseas custom timbre library is enabled, you can input <code>True</code> to use it.</p><p>Enumeration value:</p><ul><li>True: Use the overseas custom timbre library.</li><li>False: Non-use of the overseas custom timbre library.</li></ul> 
+     * @return DisableModeration <p>If the overseas custom timbre library is enabled, you can input <code>True</code> to use it.</p><p>Enumeration value:</p><ul><li>True: Use the overseas custom timbre library.</li><li>False: Non-use of the overseas custom timbre library.</li></ul>
+     */
+    public String getDisableModeration() {
+        return this.DisableModeration;
+    }
+
+    /**
+     * Set <p>If the overseas custom timbre library is enabled, you can input <code>True</code> to use it.</p><p>Enumeration value:</p><ul><li>True: Use the overseas custom timbre library.</li><li>False: Non-use of the overseas custom timbre library.</li></ul>
+     * @param DisableModeration <p>If the overseas custom timbre library is enabled, you can input <code>True</code> to use it.</p><p>Enumeration value:</p><ul><li>True: Use the overseas custom timbre library.</li><li>False: Non-use of the overseas custom timbre library.</li></ul>
+     */
+    public void setDisableModeration(String DisableModeration) {
+        this.DisableModeration = DisableModeration;
+    }
+
+    /**
      * Get <p>Identifier for deduplication. If a request with the same identifier has been sent within the past three days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.</p> 
      * @return SessionId <p>Identifier for deduplication. If a request with the same identifier has been sent within the past three days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.</p>
      */
@@ -204,6 +227,9 @@ public class CreateAigcCustomVoiceRequest extends AbstractModel {
         if (source.VideoId != null) {
             this.VideoId = new String(source.VideoId);
         }
+        if (source.DisableModeration != null) {
+            this.DisableModeration = new String(source.DisableModeration);
+        }
         if (source.SessionId != null) {
             this.SessionId = new String(source.SessionId);
         }
@@ -224,6 +250,7 @@ public class CreateAigcCustomVoiceRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "VoiceName", this.VoiceName);
         this.setParamSimple(map, prefix + "VoiceUrl", this.VoiceUrl);
         this.setParamSimple(map, prefix + "VideoId", this.VideoId);
+        this.setParamSimple(map, prefix + "DisableModeration", this.DisableModeration);
         this.setParamSimple(map, prefix + "SessionId", this.SessionId);
         this.setParamSimple(map, prefix + "SessionContext", this.SessionContext);
         this.setParamSimple(map, prefix + "TasksPriority", this.TasksPriority);

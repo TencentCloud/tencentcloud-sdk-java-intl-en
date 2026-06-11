@@ -31,16 +31,14 @@ public class HostLoginList extends AbstractModel {
     private Long Id;
 
     /**
-    * UUID string
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Host UUID
     */
     @SerializedName("Uuid")
     @Expose
     private String Uuid;
 
     /**
-    * Host IP
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Host IP address
     */
     @SerializedName("MachineIp")
     @Expose
@@ -48,15 +46,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Host name
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("MachineName")
     @Expose
     private String MachineName;
 
     /**
-    * Username
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Username.
     */
     @SerializedName("UserName")
     @Expose
@@ -64,7 +60,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Source IP
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("SrcIp")
     @Expose
@@ -79,7 +74,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Country/Region ID
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Country")
     @Expose
@@ -87,15 +81,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * City ID
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("City")
     @Expose
     private Long City;
 
     /**
-    * Province ID
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Province id
     */
     @SerializedName("Province")
     @Expose
@@ -103,7 +95,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Log-in time
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("LoginTime")
     @Expose
@@ -111,15 +102,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Modification time
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ModifyTime")
     @Expose
     private String ModifyTime;
 
     /**
-    * Whether hit the exception of cross-region log-in: 1: yes; 0: no
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Whether hit the exception of cross-region log-in: 1 means hit the exception, 0 means not hit
     */
     @SerializedName("IsRiskArea")
     @Expose
@@ -127,7 +116,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Whether hit the exception of abnormal user: 1: yes; 0: no
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("IsRiskUser")
     @Expose
@@ -135,7 +123,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Whether hit the exception of abnormal time: 1: yes; 0: no
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("IsRiskTime")
     @Expose
@@ -143,7 +130,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Whether hit the exception of abnormal IP: 1: yes; 0: no
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("IsRiskSrcIp")
     @Expose
@@ -151,9 +137,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Risk level:
-0: high
-1: suspicious
-Note: This field may return null, indicating that no valid values can be obtained.
+0: high risk
+1: Suspicious
     */
     @SerializedName("RiskLevel")
     @Expose
@@ -161,7 +146,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Location name
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Location")
     @Expose
@@ -169,7 +153,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Host QUUID
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Quuid")
     @Expose
@@ -177,9 +160,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * High-risk information description:
-ABROAD - overseas IP
-XTI - threat intelligence
-Note: This field may return null, indicating that no valid values can be obtained.
+ABROAD - IP outside Chinese mainland
+XTI - Threat Intelligence
     */
     @SerializedName("Desc")
     @Expose
@@ -187,19 +169,24 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Additional information
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("MachineExtraInfo")
     @Expose
     private MachineExtraInfo MachineExtraInfo;
 
     /**
-    * Request destination port
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Request destination port.
     */
     @SerializedName("Port")
     @Expose
     private Long Port;
+
+    /**
+    * ip analysis
+    */
+    @SerializedName("IPAnalyse")
+    @Expose
+    private IPAnalyse IPAnalyse;
 
     /**
      * Get Record ID 
@@ -218,50 +205,40 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get UUID string
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Uuid UUID string
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Host UUID 
+     * @return Uuid Host UUID
      */
     public String getUuid() {
         return this.Uuid;
     }
 
     /**
-     * Set UUID string
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Uuid UUID string
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Host UUID
+     * @param Uuid Host UUID
      */
     public void setUuid(String Uuid) {
         this.Uuid = Uuid;
     }
 
     /**
-     * Get Host IP
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return MachineIp Host IP
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Host IP address 
+     * @return MachineIp Host IP address
      */
     public String getMachineIp() {
         return this.MachineIp;
     }
 
     /**
-     * Set Host IP
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param MachineIp Host IP
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Host IP address
+     * @param MachineIp Host IP address
      */
     public void setMachineIp(String MachineIp) {
         this.MachineIp = MachineIp;
     }
 
     /**
-     * Get Host name
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Host name 
      * @return MachineName Host name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getMachineName() {
         return this.MachineName;
@@ -269,39 +246,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Host name
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param MachineName Host name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setMachineName(String MachineName) {
         this.MachineName = MachineName;
     }
 
     /**
-     * Get Username
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return UserName Username
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Username. 
+     * @return UserName Username.
      */
     public String getUserName() {
         return this.UserName;
     }
 
     /**
-     * Set Username
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param UserName Username
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Username.
+     * @param UserName Username.
      */
     public void setUserName(String UserName) {
         this.UserName = UserName;
     }
 
     /**
-     * Get Source IP
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Source IP 
      * @return SrcIp Source IP
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getSrcIp() {
         return this.SrcIp;
@@ -309,9 +278,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Source IP
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param SrcIp Source IP
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setSrcIp(String SrcIp) {
         this.SrcIp = SrcIp;
@@ -334,10 +301,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Country/Region ID
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Country/Region ID 
      * @return Country Country/Region ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getCountry() {
         return this.Country;
@@ -345,19 +310,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Country/Region ID
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Country Country/Region ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setCountry(Long Country) {
         this.Country = Country;
     }
 
     /**
-     * Get City ID
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get City ID 
      * @return City City ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getCity() {
         return this.City;
@@ -365,39 +326,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set City ID
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param City City ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setCity(Long City) {
         this.City = City;
     }
 
     /**
-     * Get Province ID
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Province Province ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Province id 
+     * @return Province Province id
      */
     public Long getProvince() {
         return this.Province;
     }
 
     /**
-     * Set Province ID
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Province Province ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Province id
+     * @param Province Province id
      */
     public void setProvince(Long Province) {
         this.Province = Province;
     }
 
     /**
-     * Get Log-in time
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Log-in time 
      * @return LoginTime Log-in time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getLoginTime() {
         return this.LoginTime;
@@ -405,19 +358,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Log-in time
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param LoginTime Log-in time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setLoginTime(String LoginTime) {
         this.LoginTime = LoginTime;
     }
 
     /**
-     * Get Modification time
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Modification time 
      * @return ModifyTime Modification time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getModifyTime() {
         return this.ModifyTime;
@@ -425,39 +374,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Modification time
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param ModifyTime Modification time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setModifyTime(String ModifyTime) {
         this.ModifyTime = ModifyTime;
     }
 
     /**
-     * Get Whether hit the exception of cross-region log-in: 1: yes; 0: no
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return IsRiskArea Whether hit the exception of cross-region log-in: 1: yes; 0: no
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Whether hit the exception of cross-region log-in: 1 means hit the exception, 0 means not hit 
+     * @return IsRiskArea Whether hit the exception of cross-region log-in: 1 means hit the exception, 0 means not hit
      */
     public Long getIsRiskArea() {
         return this.IsRiskArea;
     }
 
     /**
-     * Set Whether hit the exception of cross-region log-in: 1: yes; 0: no
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param IsRiskArea Whether hit the exception of cross-region log-in: 1: yes; 0: no
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Whether hit the exception of cross-region log-in: 1 means hit the exception, 0 means not hit
+     * @param IsRiskArea Whether hit the exception of cross-region log-in: 1 means hit the exception, 0 means not hit
      */
     public void setIsRiskArea(Long IsRiskArea) {
         this.IsRiskArea = IsRiskArea;
     }
 
     /**
-     * Get Whether hit the exception of abnormal user: 1: yes; 0: no
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Whether hit the exception of abnormal user: 1: yes; 0: no 
      * @return IsRiskUser Whether hit the exception of abnormal user: 1: yes; 0: no
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getIsRiskUser() {
         return this.IsRiskUser;
@@ -465,19 +406,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Whether hit the exception of abnormal user: 1: yes; 0: no
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param IsRiskUser Whether hit the exception of abnormal user: 1: yes; 0: no
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setIsRiskUser(Long IsRiskUser) {
         this.IsRiskUser = IsRiskUser;
     }
 
     /**
-     * Get Whether hit the exception of abnormal time: 1: yes; 0: no
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Whether hit the exception of abnormal time: 1: yes; 0: no 
      * @return IsRiskTime Whether hit the exception of abnormal time: 1: yes; 0: no
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getIsRiskTime() {
         return this.IsRiskTime;
@@ -485,19 +422,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Whether hit the exception of abnormal time: 1: yes; 0: no
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param IsRiskTime Whether hit the exception of abnormal time: 1: yes; 0: no
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setIsRiskTime(Long IsRiskTime) {
         this.IsRiskTime = IsRiskTime;
     }
 
     /**
-     * Get Whether hit the exception of abnormal IP: 1: yes; 0: no
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Whether hit the exception of abnormal IP: 1: yes; 0: no 
      * @return IsRiskSrcIp Whether hit the exception of abnormal IP: 1: yes; 0: no
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getIsRiskSrcIp() {
         return this.IsRiskSrcIp;
@@ -505,9 +438,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Whether hit the exception of abnormal IP: 1: yes; 0: no
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param IsRiskSrcIp Whether hit the exception of abnormal IP: 1: yes; 0: no
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setIsRiskSrcIp(Long IsRiskSrcIp) {
         this.IsRiskSrcIp = IsRiskSrcIp;
@@ -515,13 +446,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get Risk level:
-0: high
-1: suspicious
-Note: This field may return null, indicating that no valid values can be obtained. 
+0: high risk
+1: Suspicious 
      * @return RiskLevel Risk level:
-0: high
-1: suspicious
-Note: This field may return null, indicating that no valid values can be obtained.
+0: high risk
+1: Suspicious
      */
     public Long getRiskLevel() {
         return this.RiskLevel;
@@ -529,23 +458,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Risk level:
-0: high
-1: suspicious
-Note: This field may return null, indicating that no valid values can be obtained.
+0: high risk
+1: Suspicious
      * @param RiskLevel Risk level:
-0: high
-1: suspicious
-Note: This field may return null, indicating that no valid values can be obtained.
+0: high risk
+1: Suspicious
      */
     public void setRiskLevel(Long RiskLevel) {
         this.RiskLevel = RiskLevel;
     }
 
     /**
-     * Get Location name
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Location name 
      * @return Location Location name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getLocation() {
         return this.Location;
@@ -553,19 +478,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Location name
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Location Location name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setLocation(String Location) {
         this.Location = Location;
     }
 
     /**
-     * Get Host QUUID
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Host QUUID 
      * @return Quuid Host QUUID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getQuuid() {
         return this.Quuid;
@@ -573,9 +494,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Host QUUID
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Quuid Host QUUID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setQuuid(String Quuid) {
         this.Quuid = Quuid;
@@ -583,13 +502,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get High-risk information description:
-ABROAD - overseas IP
-XTI - threat intelligence
-Note: This field may return null, indicating that no valid values can be obtained. 
+ABROAD - IP outside Chinese mainland
+XTI - Threat Intelligence 
      * @return Desc High-risk information description:
-ABROAD - overseas IP
-XTI - threat intelligence
-Note: This field may return null, indicating that no valid values can be obtained.
+ABROAD - IP outside Chinese mainland
+XTI - Threat Intelligence
      */
     public String getDesc() {
         return this.Desc;
@@ -597,23 +514,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set High-risk information description:
-ABROAD - overseas IP
-XTI - threat intelligence
-Note: This field may return null, indicating that no valid values can be obtained.
+ABROAD - IP outside Chinese mainland
+XTI - Threat Intelligence
      * @param Desc High-risk information description:
-ABROAD - overseas IP
-XTI - threat intelligence
-Note: This field may return null, indicating that no valid values can be obtained.
+ABROAD - IP outside Chinese mainland
+XTI - Threat Intelligence
      */
     public void setDesc(String Desc) {
         this.Desc = Desc;
     }
 
     /**
-     * Get Additional information
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Additional information 
      * @return MachineExtraInfo Additional information
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public MachineExtraInfo getMachineExtraInfo() {
         return this.MachineExtraInfo;
@@ -621,32 +534,42 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Additional information
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param MachineExtraInfo Additional information
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setMachineExtraInfo(MachineExtraInfo MachineExtraInfo) {
         this.MachineExtraInfo = MachineExtraInfo;
     }
 
     /**
-     * Get Request destination port
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Port Request destination port
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Request destination port. 
+     * @return Port Request destination port.
      */
     public Long getPort() {
         return this.Port;
     }
 
     /**
-     * Set Request destination port
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Port Request destination port
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Request destination port.
+     * @param Port Request destination port.
      */
     public void setPort(Long Port) {
         this.Port = Port;
+    }
+
+    /**
+     * Get ip analysis 
+     * @return IPAnalyse ip analysis
+     */
+    public IPAnalyse getIPAnalyse() {
+        return this.IPAnalyse;
+    }
+
+    /**
+     * Set ip analysis
+     * @param IPAnalyse ip analysis
+     */
+    public void setIPAnalyse(IPAnalyse IPAnalyse) {
+        this.IPAnalyse = IPAnalyse;
     }
 
     public HostLoginList() {
@@ -723,6 +646,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.Port != null) {
             this.Port = new Long(source.Port);
         }
+        if (source.IPAnalyse != null) {
+            this.IPAnalyse = new IPAnalyse(source.IPAnalyse);
+        }
     }
 
 
@@ -752,6 +678,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "Desc", this.Desc);
         this.setParamObj(map, prefix + "MachineExtraInfo.", this.MachineExtraInfo);
         this.setParamSimple(map, prefix + "Port", this.Port);
+        this.setParamObj(map, prefix + "IPAnalyse.", this.IPAnalyse);
 
     }
 }

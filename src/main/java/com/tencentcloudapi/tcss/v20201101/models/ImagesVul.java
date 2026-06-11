@@ -129,20 +129,25 @@ public class ImagesVul extends AbstractModel {
     private Boolean IsSuggest;
 
     /**
-    * Number of the fixed version
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Repair Version Number
     */
     @SerializedName("FixedVersions")
     @Expose
     private String FixedVersions;
 
     /**
-    * Vulnerability tag. Valid values: `CanBeFixed`, `DynamicLevelPoc`, `DynamicLevelExp`.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Vulnerability Tag: "CanBeFixed", "DynamicLevelPoc", and "DynamicLevelExp"
     */
     @SerializedName("Tag")
     @Expose
     private String [] Tag;
+
+    /**
+    * Attack Heat
+    */
+    @SerializedName("AttackLevel")
+    @Expose
+    private Long AttackLevel;
 
     /**
      * Get Vulnerability ID 
@@ -385,43 +390,51 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Number of the fixed version
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return FixedVersions Number of the fixed version
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Repair Version Number 
+     * @return FixedVersions Repair Version Number
      */
     public String getFixedVersions() {
         return this.FixedVersions;
     }
 
     /**
-     * Set Number of the fixed version
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param FixedVersions Number of the fixed version
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Repair Version Number
+     * @param FixedVersions Repair Version Number
      */
     public void setFixedVersions(String FixedVersions) {
         this.FixedVersions = FixedVersions;
     }
 
     /**
-     * Get Vulnerability tag. Valid values: `CanBeFixed`, `DynamicLevelPoc`, `DynamicLevelExp`.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Tag Vulnerability tag. Valid values: `CanBeFixed`, `DynamicLevelPoc`, `DynamicLevelExp`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Vulnerability Tag: "CanBeFixed", "DynamicLevelPoc", and "DynamicLevelExp" 
+     * @return Tag Vulnerability Tag: "CanBeFixed", "DynamicLevelPoc", and "DynamicLevelExp"
      */
     public String [] getTag() {
         return this.Tag;
     }
 
     /**
-     * Set Vulnerability tag. Valid values: `CanBeFixed`, `DynamicLevelPoc`, `DynamicLevelExp`.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Tag Vulnerability tag. Valid values: `CanBeFixed`, `DynamicLevelPoc`, `DynamicLevelExp`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Vulnerability Tag: "CanBeFixed", "DynamicLevelPoc", and "DynamicLevelExp"
+     * @param Tag Vulnerability Tag: "CanBeFixed", "DynamicLevelPoc", and "DynamicLevelExp"
      */
     public void setTag(String [] Tag) {
         this.Tag = Tag;
+    }
+
+    /**
+     * Get Attack Heat 
+     * @return AttackLevel Attack Heat
+     */
+    public Long getAttackLevel() {
+        return this.AttackLevel;
+    }
+
+    /**
+     * Set Attack Heat
+     * @param AttackLevel Attack Heat
+     */
+    public void setAttackLevel(Long AttackLevel) {
+        this.AttackLevel = AttackLevel;
     }
 
     public ImagesVul() {
@@ -486,6 +499,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 this.Tag[i] = new String(source.Tag[i]);
             }
         }
+        if (source.AttackLevel != null) {
+            this.AttackLevel = new Long(source.AttackLevel);
+        }
     }
 
 
@@ -510,6 +526,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "IsSuggest", this.IsSuggest);
         this.setParamSimple(map, prefix + "FixedVersions", this.FixedVersions);
         this.setParamArraySimple(map, prefix + "Tag.", this.Tag);
+        this.setParamSimple(map, prefix + "AttackLevel", this.AttackLevel);
 
     }
 }

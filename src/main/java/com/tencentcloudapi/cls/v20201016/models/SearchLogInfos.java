@@ -38,7 +38,7 @@ public class SearchLogInfos extends AbstractModel {
     private Long Period;
 
     /**
-    * You can pass through the Context value returned by this API to continue to get more logs. Expire time: 1 hour.Note: This field may return null, indicating that no valid values can be obtained.
+    * Pass through the Context value returned by this API, which can access more logs later, with an expiration time of 1 hour.
     */
     @SerializedName("Context")
     @Expose
@@ -77,16 +77,16 @@ public class SearchLogInfos extends AbstractModel {
     }
 
     /**
-     * Get You can pass through the Context value returned by this API to continue to get more logs. Expire time: 1 hour.Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Context You can pass through the Context value returned by this API to continue to get more logs. Expire time: 1 hour.Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Pass through the Context value returned by this API, which can access more logs later, with an expiration time of 1 hour. 
+     * @return Context Pass through the Context value returned by this API, which can access more logs later, with an expiration time of 1 hour.
      */
     public String getContext() {
         return this.Context;
     }
 
     /**
-     * Set You can pass through the Context value returned by this API to continue to get more logs. Expire time: 1 hour.Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Context You can pass through the Context value returned by this API to continue to get more logs. Expire time: 1 hour.Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Pass through the Context value returned by this API, which can access more logs later, with an expiration time of 1 hour.
+     * @param Context Pass through the Context value returned by this API, which can access more logs later, with an expiration time of 1 hour.
      */
     public void setContext(String Context) {
         this.Context = Context;

@@ -25,7 +25,6 @@ public class DescribeAssetInitServiceListResponse extends AbstractModel {
 
     /**
     * List
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Services")
     @Expose
@@ -46,10 +45,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get List
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get List 
      * @return Services List
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public AssetInitServiceBaseInfo [] getServices() {
         return this.Services;
@@ -57,9 +54,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set List
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Services List
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setServices(AssetInitServiceBaseInfo [] Services) {
         this.Services = Services;

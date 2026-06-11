@@ -24,8 +24,7 @@ import java.util.HashMap;
 public class DescribeRansomDefenseStrategyListResponse extends AbstractModel {
 
     /**
-    * Policy list
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Policy List
     */
     @SerializedName("List")
     @Expose
@@ -33,7 +32,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Total number of pagination query records
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("TotalCount")
     @Expose
@@ -47,30 +45,24 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Policy list
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return List Policy list
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Policy List 
+     * @return List Policy List
      */
     public RansomDefenseStrategy [] getList() {
         return this.List;
     }
 
     /**
-     * Set Policy list
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param List Policy list
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Policy List
+     * @param List Policy List
      */
     public void setList(RansomDefenseStrategy [] List) {
         this.List = List;
     }
 
     /**
-     * Get Total number of pagination query records
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Total number of pagination query records 
      * @return TotalCount Total number of pagination query records
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getTotalCount() {
         return this.TotalCount;
@@ -78,9 +70,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Total number of pagination query records
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param TotalCount Total number of pagination query records
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

@@ -32,7 +32,6 @@ public class DescribeLoginWhiteCombinedListResponse extends AbstractModel {
 
     /**
     * List of allowlists after merge
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("LoginWhiteCombinedInfos")
     @Expose
@@ -62,10 +61,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get List of allowlists after merge
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get List of allowlists after merge 
      * @return LoginWhiteCombinedInfos List of allowlists after merge
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public LoginWhiteCombinedInfo [] getLoginWhiteCombinedInfos() {
         return this.LoginWhiteCombinedInfos;
@@ -73,9 +70,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set List of allowlists after merge
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param LoginWhiteCombinedInfos List of allowlists after merge
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setLoginWhiteCombinedInfos(LoginWhiteCombinedInfo [] LoginWhiteCombinedInfos) {
         this.LoginWhiteCombinedInfos = LoginWhiteCombinedInfos;

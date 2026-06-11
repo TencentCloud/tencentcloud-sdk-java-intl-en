@@ -24,11 +24,20 @@ import java.util.HashMap;
 public class DescribeShippersRequest extends AbstractModel {
 
     /**
-    * - shipperName: Filter by **shipping rule name**. Type: String. Required: No.
-- shipperId: Filter by **shipping rule ID**. Type: String. Required: No.
-- topicId: Filter by **log topic**. Type: String. Required: No.
+    * -shipperName: Filter by [delivery rule name].
+Type: String.
+    Required: No
+-shipperId: Filter by [Delivery Rule ID].
+Type: String.
+    Required: No
+-topicId: Filter by [log topic].
+Type: String.
+    Required: No
+-taskStatus: Filter by [task running status]. Supported values: `0`: stop, `1`: running, `2`: exception.
+Type: String
+    Required: No
 
-Each request can have up to 10 `Filters` and 100 `Filter.Values`.
+Each request can have up to 10 Filters. The upper limit of Filter.Values is 10.
     */
     @SerializedName("Filters")
     @Expose
@@ -49,32 +58,75 @@ Each request can have up to 10 `Filters` and 100 `Filter.Values`.
     private Long Limit;
 
     /**
-     * Get - shipperName: Filter by **shipping rule name**. Type: String. Required: No.
-- shipperId: Filter by **shipping rule ID**. Type: String. Required: No.
-- topicId: Filter by **log topic**. Type: String. Required: No.
+    * Control whether the relevant fields in Filters use exact matching. 0: Default value, fuzzy matching for shipperName. 1: Exact match for shipperName.
+    */
+    @SerializedName("PreciseSearch")
+    @Expose
+    private Long PreciseSearch;
 
-Each request can have up to 10 `Filters` and 100 `Filter.Values`. 
-     * @return Filters - shipperName: Filter by **shipping rule name**. Type: String. Required: No.
-- shipperId: Filter by **shipping rule ID**. Type: String. Required: No.
-- topicId: Filter by **log topic**. Type: String. Required: No.
+    /**
+     * Get -shipperName: Filter by [delivery rule name].
+Type: String.
+    Required: No
+-shipperId: Filter by [Delivery Rule ID].
+Type: String.
+    Required: No
+-topicId: Filter by [log topic].
+Type: String.
+    Required: No
+-taskStatus: Filter by [task running status]. Supported values: `0`: stop, `1`: running, `2`: exception.
+Type: String
+    Required: No
 
-Each request can have up to 10 `Filters` and 100 `Filter.Values`.
+Each request can have up to 10 Filters. The upper limit of Filter.Values is 10. 
+     * @return Filters -shipperName: Filter by [delivery rule name].
+Type: String.
+    Required: No
+-shipperId: Filter by [Delivery Rule ID].
+Type: String.
+    Required: No
+-topicId: Filter by [log topic].
+Type: String.
+    Required: No
+-taskStatus: Filter by [task running status]. Supported values: `0`: stop, `1`: running, `2`: exception.
+Type: String
+    Required: No
+
+Each request can have up to 10 Filters. The upper limit of Filter.Values is 10.
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set - shipperName: Filter by **shipping rule name**. Type: String. Required: No.
-- shipperId: Filter by **shipping rule ID**. Type: String. Required: No.
-- topicId: Filter by **log topic**. Type: String. Required: No.
+     * Set -shipperName: Filter by [delivery rule name].
+Type: String.
+    Required: No
+-shipperId: Filter by [Delivery Rule ID].
+Type: String.
+    Required: No
+-topicId: Filter by [log topic].
+Type: String.
+    Required: No
+-taskStatus: Filter by [task running status]. Supported values: `0`: stop, `1`: running, `2`: exception.
+Type: String
+    Required: No
 
-Each request can have up to 10 `Filters` and 100 `Filter.Values`.
-     * @param Filters - shipperName: Filter by **shipping rule name**. Type: String. Required: No.
-- shipperId: Filter by **shipping rule ID**. Type: String. Required: No.
-- topicId: Filter by **log topic**. Type: String. Required: No.
+Each request can have up to 10 Filters. The upper limit of Filter.Values is 10.
+     * @param Filters -shipperName: Filter by [delivery rule name].
+Type: String.
+    Required: No
+-shipperId: Filter by [Delivery Rule ID].
+Type: String.
+    Required: No
+-topicId: Filter by [log topic].
+Type: String.
+    Required: No
+-taskStatus: Filter by [task running status]. Supported values: `0`: stop, `1`: running, `2`: exception.
+Type: String
+    Required: No
 
-Each request can have up to 10 `Filters` and 100 `Filter.Values`.
+Each request can have up to 10 Filters. The upper limit of Filter.Values is 10.
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;
@@ -112,6 +164,22 @@ Each request can have up to 10 `Filters` and 100 `Filter.Values`.
         this.Limit = Limit;
     }
 
+    /**
+     * Get Control whether the relevant fields in Filters use exact matching. 0: Default value, fuzzy matching for shipperName. 1: Exact match for shipperName. 
+     * @return PreciseSearch Control whether the relevant fields in Filters use exact matching. 0: Default value, fuzzy matching for shipperName. 1: Exact match for shipperName.
+     */
+    public Long getPreciseSearch() {
+        return this.PreciseSearch;
+    }
+
+    /**
+     * Set Control whether the relevant fields in Filters use exact matching. 0: Default value, fuzzy matching for shipperName. 1: Exact match for shipperName.
+     * @param PreciseSearch Control whether the relevant fields in Filters use exact matching. 0: Default value, fuzzy matching for shipperName. 1: Exact match for shipperName.
+     */
+    public void setPreciseSearch(Long PreciseSearch) {
+        this.PreciseSearch = PreciseSearch;
+    }
+
     public DescribeShippersRequest() {
     }
 
@@ -132,6 +200,9 @@ Each request can have up to 10 `Filters` and 100 `Filter.Values`.
         if (source.Limit != null) {
             this.Limit = new Long(source.Limit);
         }
+        if (source.PreciseSearch != null) {
+            this.PreciseSearch = new Long(source.PreciseSearch);
+        }
     }
 
 
@@ -142,6 +213,7 @@ Each request can have up to 10 `Filters` and 100 `Filter.Values`.
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamSimple(map, prefix + "PreciseSearch", this.PreciseSearch);
 
     }
 }

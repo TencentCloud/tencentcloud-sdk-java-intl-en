@@ -67,7 +67,6 @@ public class AssetDatabaseBaseInfo extends AbstractModel {
 
     /**
     * Host tag
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Tag")
     @Expose
@@ -180,7 +179,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Data update time
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("UpdateTime")
     @Expose
@@ -208,8 +206,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String MachineName;
 
     /**
-    * Additional information
-Note: This field may return null, indicating that no valid values can be obtained.
+    *  Additional information
     */
     @SerializedName("MachineExtraInfo")
     @Expose
@@ -312,10 +309,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Host tag
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Host tag 
      * @return Tag Host tag
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public MachineTag [] getTag() {
         return this.Tag;
@@ -323,9 +318,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Host tag
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Tag Host tag
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setTag(MachineTag [] Tag) {
         this.Tag = Tag;
@@ -572,10 +565,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Data update time
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Data update time 
      * @return UpdateTime Data update time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getUpdateTime() {
         return this.UpdateTime;
@@ -583,9 +574,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Data update time
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param UpdateTime Data update time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;
@@ -640,20 +629,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Additional information
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return MachineExtraInfo Additional information
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  Additional information 
+     * @return MachineExtraInfo  Additional information
      */
     public MachineExtraInfo getMachineExtraInfo() {
         return this.MachineExtraInfo;
     }
 
     /**
-     * Set Additional information
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param MachineExtraInfo Additional information
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set  Additional information
+     * @param MachineExtraInfo  Additional information
      */
     public void setMachineExtraInfo(MachineExtraInfo MachineExtraInfo) {
         this.MachineExtraInfo = MachineExtraInfo;

@@ -24,28 +24,23 @@ import java.util.HashMap;
 public class DynamicIndex extends AbstractModel {
 
     /**
-    * Key-Value Index Auto-Config Switch
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Automatic configuration switch of the key-value index.
     */
     @SerializedName("Status")
     @Expose
     private Boolean Status;
 
     /**
-     * Get Key-Value Index Auto-Config Switch
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Status Key-Value Index Auto-Config Switch
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Automatic configuration switch of the key-value index. 
+     * @return Status Automatic configuration switch of the key-value index.
      */
     public Boolean getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Key-Value Index Auto-Config Switch
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Status Key-Value Index Auto-Config Switch
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Automatic configuration switch of the key-value index.
+     * @param Status Automatic configuration switch of the key-value index.
      */
     public void setStatus(Boolean Status) {
         this.Status = Status;

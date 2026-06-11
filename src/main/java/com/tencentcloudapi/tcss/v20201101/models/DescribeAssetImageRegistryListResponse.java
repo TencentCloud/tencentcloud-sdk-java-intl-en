@@ -24,16 +24,14 @@ import java.util.HashMap;
 public class DescribeAssetImageRegistryListResponse extends AbstractModel {
 
     /**
-    * List of image repositories
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Image repository list.</p>
     */
     @SerializedName("List")
     @Expose
     private ImageRepoInfo [] List;
 
     /**
-    * Total number
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Total quantity.</p>
     */
     @SerializedName("TotalCount")
     @Expose
@@ -47,40 +45,32 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get List of image repositories
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return List List of image repositories
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Image repository list.</p> 
+     * @return List <p>Image repository list.</p>
      */
     public ImageRepoInfo [] getList() {
         return this.List;
     }
 
     /**
-     * Set List of image repositories
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param List List of image repositories
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Image repository list.</p>
+     * @param List <p>Image repository list.</p>
      */
     public void setList(ImageRepoInfo [] List) {
         this.List = List;
     }
 
     /**
-     * Get Total number
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return TotalCount Total number
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Total quantity.</p> 
+     * @return TotalCount <p>Total quantity.</p>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set Total number
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param TotalCount Total number
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Total quantity.</p>
+     * @param TotalCount <p>Total quantity.</p>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

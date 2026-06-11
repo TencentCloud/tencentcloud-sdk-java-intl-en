@@ -73,32 +73,35 @@ public class LogInfo extends AbstractModel {
     private String PkgLogId;
 
     /**
-    * Serialized JSON string of log content
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * Keywords that meet search criteria are generally highlighted. Only key-value search is supported, not full-text search.	
+    */
+    @SerializedName("HighLights")
+    @Expose
+    private HighLightItem [] HighLights;
+
+    /**
+    * JSON serialized string of the log content
     */
     @SerializedName("LogJson")
     @Expose
     private String LogJson;
 
     /**
-    * Source host name of logs
-Note: This field may return `null`, indicating that no valid value was found.
+    * Log source host name
     */
     @SerializedName("HostName")
     @Expose
     private String HostName;
 
     /**
-    * Raw log (this parameter has a value only when an exception occurred while creating indexes for logs).
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Raw log (only available when there is an error in creating the log index).
     */
     @SerializedName("RawLog")
     @Expose
     private String RawLog;
 
     /**
-    * The cause of index creation exception (this parameter has a value only when an exception occurred while creating indexes for logs).
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Cause for log index creation exception. It has a value only when a log index creation exception occurs.
     */
     @SerializedName("IndexStatus")
     @Expose
@@ -217,80 +220,80 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Serialized JSON string of log content
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return LogJson Serialized JSON string of log content
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get Keywords that meet search criteria are generally highlighted. Only key-value search is supported, not full-text search.	 
+     * @return HighLights Keywords that meet search criteria are generally highlighted. Only key-value search is supported, not full-text search.	
+     */
+    public HighLightItem [] getHighLights() {
+        return this.HighLights;
+    }
+
+    /**
+     * Set Keywords that meet search criteria are generally highlighted. Only key-value search is supported, not full-text search.	
+     * @param HighLights Keywords that meet search criteria are generally highlighted. Only key-value search is supported, not full-text search.	
+     */
+    public void setHighLights(HighLightItem [] HighLights) {
+        this.HighLights = HighLights;
+    }
+
+    /**
+     * Get JSON serialized string of the log content 
+     * @return LogJson JSON serialized string of the log content
      */
     public String getLogJson() {
         return this.LogJson;
     }
 
     /**
-     * Set Serialized JSON string of log content
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param LogJson Serialized JSON string of log content
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set JSON serialized string of the log content
+     * @param LogJson JSON serialized string of the log content
      */
     public void setLogJson(String LogJson) {
         this.LogJson = LogJson;
     }
 
     /**
-     * Get Source host name of logs
-Note: This field may return `null`, indicating that no valid value was found. 
-     * @return HostName Source host name of logs
-Note: This field may return `null`, indicating that no valid value was found.
+     * Get Log source host name 
+     * @return HostName Log source host name
      */
     public String getHostName() {
         return this.HostName;
     }
 
     /**
-     * Set Source host name of logs
-Note: This field may return `null`, indicating that no valid value was found.
-     * @param HostName Source host name of logs
-Note: This field may return `null`, indicating that no valid value was found.
+     * Set Log source host name
+     * @param HostName Log source host name
      */
     public void setHostName(String HostName) {
         this.HostName = HostName;
     }
 
     /**
-     * Get Raw log (this parameter has a value only when an exception occurred while creating indexes for logs).
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return RawLog Raw log (this parameter has a value only when an exception occurred while creating indexes for logs).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Raw log (only available when there is an error in creating the log index). 
+     * @return RawLog Raw log (only available when there is an error in creating the log index).
      */
     public String getRawLog() {
         return this.RawLog;
     }
 
     /**
-     * Set Raw log (this parameter has a value only when an exception occurred while creating indexes for logs).
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param RawLog Raw log (this parameter has a value only when an exception occurred while creating indexes for logs).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Raw log (only available when there is an error in creating the log index).
+     * @param RawLog Raw log (only available when there is an error in creating the log index).
      */
     public void setRawLog(String RawLog) {
         this.RawLog = RawLog;
     }
 
     /**
-     * Get The cause of index creation exception (this parameter has a value only when an exception occurred while creating indexes for logs).
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return IndexStatus The cause of index creation exception (this parameter has a value only when an exception occurred while creating indexes for logs).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Cause for log index creation exception. It has a value only when a log index creation exception occurs. 
+     * @return IndexStatus Cause for log index creation exception. It has a value only when a log index creation exception occurs.
      */
     public String getIndexStatus() {
         return this.IndexStatus;
     }
 
     /**
-     * Set The cause of index creation exception (this parameter has a value only when an exception occurred while creating indexes for logs).
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param IndexStatus The cause of index creation exception (this parameter has a value only when an exception occurred while creating indexes for logs).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Cause for log index creation exception. It has a value only when a log index creation exception occurs.
+     * @param IndexStatus Cause for log index creation exception. It has a value only when a log index creation exception occurs.
      */
     public void setIndexStatus(String IndexStatus) {
         this.IndexStatus = IndexStatus;
@@ -325,6 +328,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.PkgLogId != null) {
             this.PkgLogId = new String(source.PkgLogId);
         }
+        if (source.HighLights != null) {
+            this.HighLights = new HighLightItem[source.HighLights.length];
+            for (int i = 0; i < source.HighLights.length; i++) {
+                this.HighLights[i] = new HighLightItem(source.HighLights[i]);
+            }
+        }
         if (source.LogJson != null) {
             this.LogJson = new String(source.LogJson);
         }
@@ -351,6 +360,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "FileName", this.FileName);
         this.setParamSimple(map, prefix + "PkgId", this.PkgId);
         this.setParamSimple(map, prefix + "PkgLogId", this.PkgLogId);
+        this.setParamArrayObj(map, prefix + "HighLights.", this.HighLights);
         this.setParamSimple(map, prefix + "LogJson", this.LogJson);
         this.setParamSimple(map, prefix + "HostName", this.HostName);
         this.setParamSimple(map, prefix + "RawLog", this.RawLog);

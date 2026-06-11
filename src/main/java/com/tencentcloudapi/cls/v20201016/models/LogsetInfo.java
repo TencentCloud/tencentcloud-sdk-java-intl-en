@@ -38,23 +38,28 @@ public class LogsetInfo extends AbstractModel {
     private String LogsetName;
 
     /**
-    * Creation time
+    * Creation time. Format `YYYY-MM-DD HH:MM:SS`
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * Cloud product identifier. If the logset is created by another cloud product, this field returns the name of the cloud product, such as `CDN` or `TKE`.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * If AssumerUin is not empty, it indicates the Uin of the service provider that created the log set.
+    */
+    @SerializedName("AssumerUin")
+    @Expose
+    private Long AssumerUin;
+
+    /**
+    * Cloud product identifier. When the logset is created by other cloud products, this field displays the cloud product name, such as CDN and TKE.
     */
     @SerializedName("AssumerName")
     @Expose
     private String AssumerName;
 
     /**
-    * Tag bound to logset
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * Tag bound to log set
     */
     @SerializedName("Tags")
     @Expose
@@ -73,6 +78,13 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     @SerializedName("RoleName")
     @Expose
     private String RoleName;
+
+    /**
+    * Number of metric topics under log sets
+    */
+    @SerializedName("MetricTopicCount")
+    @Expose
+    private Long MetricTopicCount;
 
     /**
      * Get Logset ID 
@@ -107,56 +119,64 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Get Creation time 
-     * @return CreateTime Creation time
+     * Get Creation time. Format `YYYY-MM-DD HH:MM:SS` 
+     * @return CreateTime Creation time. Format `YYYY-MM-DD HH:MM:SS`
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set Creation time
-     * @param CreateTime Creation time
+     * Set Creation time. Format `YYYY-MM-DD HH:MM:SS`
+     * @param CreateTime Creation time. Format `YYYY-MM-DD HH:MM:SS`
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get Cloud product identifier. If the logset is created by another cloud product, this field returns the name of the cloud product, such as `CDN` or `TKE`.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return AssumerName Cloud product identifier. If the logset is created by another cloud product, this field returns the name of the cloud product, such as `CDN` or `TKE`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get If AssumerUin is not empty, it indicates the Uin of the service provider that created the log set. 
+     * @return AssumerUin If AssumerUin is not empty, it indicates the Uin of the service provider that created the log set.
+     */
+    public Long getAssumerUin() {
+        return this.AssumerUin;
+    }
+
+    /**
+     * Set If AssumerUin is not empty, it indicates the Uin of the service provider that created the log set.
+     * @param AssumerUin If AssumerUin is not empty, it indicates the Uin of the service provider that created the log set.
+     */
+    public void setAssumerUin(Long AssumerUin) {
+        this.AssumerUin = AssumerUin;
+    }
+
+    /**
+     * Get Cloud product identifier. When the logset is created by other cloud products, this field displays the cloud product name, such as CDN and TKE. 
+     * @return AssumerName Cloud product identifier. When the logset is created by other cloud products, this field displays the cloud product name, such as CDN and TKE.
      */
     public String getAssumerName() {
         return this.AssumerName;
     }
 
     /**
-     * Set Cloud product identifier. If the logset is created by another cloud product, this field returns the name of the cloud product, such as `CDN` or `TKE`.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param AssumerName Cloud product identifier. If the logset is created by another cloud product, this field returns the name of the cloud product, such as `CDN` or `TKE`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Cloud product identifier. When the logset is created by other cloud products, this field displays the cloud product name, such as CDN and TKE.
+     * @param AssumerName Cloud product identifier. When the logset is created by other cloud products, this field displays the cloud product name, such as CDN and TKE.
      */
     public void setAssumerName(String AssumerName) {
         this.AssumerName = AssumerName;
     }
 
     /**
-     * Get Tag bound to logset
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return Tags Tag bound to logset
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get Tag bound to log set 
+     * @return Tags Tag bound to log set
      */
     public Tag [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set Tag bound to logset
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param Tags Tag bound to logset
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set Tag bound to log set
+     * @param Tags Tag bound to log set
      */
     public void setTags(Tag [] Tags) {
         this.Tags = Tags;
@@ -194,6 +214,22 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.RoleName = RoleName;
     }
 
+    /**
+     * Get Number of metric topics under log sets 
+     * @return MetricTopicCount Number of metric topics under log sets
+     */
+    public Long getMetricTopicCount() {
+        return this.MetricTopicCount;
+    }
+
+    /**
+     * Set Number of metric topics under log sets
+     * @param MetricTopicCount Number of metric topics under log sets
+     */
+    public void setMetricTopicCount(Long MetricTopicCount) {
+        this.MetricTopicCount = MetricTopicCount;
+    }
+
     public LogsetInfo() {
     }
 
@@ -211,6 +247,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         if (source.CreateTime != null) {
             this.CreateTime = new String(source.CreateTime);
         }
+        if (source.AssumerUin != null) {
+            this.AssumerUin = new Long(source.AssumerUin);
+        }
         if (source.AssumerName != null) {
             this.AssumerName = new String(source.AssumerName);
         }
@@ -226,6 +265,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         if (source.RoleName != null) {
             this.RoleName = new String(source.RoleName);
         }
+        if (source.MetricTopicCount != null) {
+            this.MetricTopicCount = new Long(source.MetricTopicCount);
+        }
     }
 
 
@@ -236,10 +278,12 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.setParamSimple(map, prefix + "LogsetId", this.LogsetId);
         this.setParamSimple(map, prefix + "LogsetName", this.LogsetName);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
+        this.setParamSimple(map, prefix + "AssumerUin", this.AssumerUin);
         this.setParamSimple(map, prefix + "AssumerName", this.AssumerName);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "TopicCount", this.TopicCount);
         this.setParamSimple(map, prefix + "RoleName", this.RoleName);
+        this.setParamSimple(map, prefix + "MetricTopicCount", this.MetricTopicCount);
 
     }
 }

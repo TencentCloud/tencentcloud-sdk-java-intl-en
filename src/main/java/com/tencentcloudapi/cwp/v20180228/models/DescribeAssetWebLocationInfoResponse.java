@@ -24,8 +24,7 @@ import java.util.HashMap;
 public class DescribeAssetWebLocationInfoResponse extends AbstractModel {
 
     /**
-    * Site information
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Site information.
     */
     @SerializedName("WebLocation")
     @Expose
@@ -39,20 +38,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Site information
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return WebLocation Site information
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Site information. 
+     * @return WebLocation Site information.
      */
     public AssetWebLocationInfo getWebLocation() {
         return this.WebLocation;
     }
 
     /**
-     * Set Site information
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param WebLocation Site information
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Site information.
+     * @param WebLocation Site information.
      */
     public void setWebLocation(AssetWebLocationInfo WebLocation) {
         this.WebLocation = WebLocation;

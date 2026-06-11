@@ -45,8 +45,7 @@ public class DescribeNetAttackSettingResponse extends AbstractModel {
     private Long Scope;
 
     /**
-    * Selected hosts
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Specified hosts
     */
     @SerializedName("InstanceIds")
     @Expose
@@ -54,7 +53,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Custom Hosts to Exclude
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ExcludeInstanceIds")
     @Expose
@@ -123,30 +121,24 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Selected hosts
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return InstanceIds Selected hosts
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Specified hosts 
+     * @return InstanceIds Specified hosts
      */
     public String [] getInstanceIds() {
         return this.InstanceIds;
     }
 
     /**
-     * Set Selected hosts
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param InstanceIds Selected hosts
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Specified hosts
+     * @param InstanceIds Specified hosts
      */
     public void setInstanceIds(String [] InstanceIds) {
         this.InstanceIds = InstanceIds;
     }
 
     /**
-     * Get Custom Hosts to Exclude
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Custom Hosts to Exclude 
      * @return ExcludeInstanceIds Custom Hosts to Exclude
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String [] getExcludeInstanceIds() {
         return this.ExcludeInstanceIds;
@@ -154,9 +146,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Custom Hosts to Exclude
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param ExcludeInstanceIds Custom Hosts to Exclude
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setExcludeInstanceIds(String [] ExcludeInstanceIds) {
         this.ExcludeInstanceIds = ExcludeInstanceIds;

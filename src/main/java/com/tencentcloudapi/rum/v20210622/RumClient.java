@@ -768,7 +768,7 @@ Default API request rate limit: 20 requests/sec.
     }
 
     /**
-     *This API is used to query instance information.
+     *Query instance information.
      * @param req DescribeTawInstancesRequest
      * @return DescribeTawInstancesResponse
      * @throws TencentCloudSDKException

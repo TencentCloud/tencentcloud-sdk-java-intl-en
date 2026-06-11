@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class SearchCosRechargeInfoResponse extends AbstractModel {
 
     /**
-    * The first few lines of a file under a matched bucketNote: This field may return null, indicating that no valid values can be obtained.
+    * First few lines of data from a certain file under the matched bucket
     */
     @SerializedName("Data")
     @Expose
@@ -39,21 +39,29 @@ public class SearchCosRechargeInfoResponse extends AbstractModel {
 
     /**
     * Current preview file path
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Path")
     @Expose
     private String Path;
 
     /**
-    * Reason for preview data retrieval failureNote: This field may return null, indicating that no valid values can be obtained.
+    * Reason for preview data fetch failure
     */
     @SerializedName("Msg")
     @Expose
     private String Msg;
 
     /**
-    * Status
+    * Status.
+-0: Success
+-10000: Parameter error. Parameter confirmation.
+-10001: Authorization failure. Please confirm authorization.
+-10002: Failed to get file list. Try again later. If the problem persists, consult [online support](https://andon.tencentcloud.com/online-service?from=doc_614) or [submit a ticket](https://console.cloud.tencent.com/workorder/category?level1_id=83&level2_id=469&source=14&data_title=%E6%97%A5%E5%BF%97%E6%9C%8D%E5%8A%A1&step=1) to fix it.
+-10003: No corresponding prefix files in the bucket. Use the correct bucket, file prefix, and compression method.
+-10004: File download failed. Try again later. If the problem persists, consult [online support](https://andon.tencentcloud.com/online-service?from=doc_614) or [submit a ticket](https://console.cloud.tencent.com/workorder/category?level1_id=83&level2_id=469&source=14&data_title=%E6%97%A5%E5%BF%97%E6%9C%8D%E5%8A%A1&step=1) to fix it.
+-10005: File decompression failed. Select the correct compression method and try again.
+-10006: Failed to read file content. Please confirm the file is readable.
+-10007: File preview failed, try again later. If the problem persists, consult [online support](https://andon.tencentcloud.com/online-service?from=doc_614) or [submit a ticket](https://console.cloud.tencent.com/workorder/category?level1_id=83&level2_id=469&source=14&data_title=%E6%97%A5%E5%BF%97%E6%9C%8D%E5%8A%A1&step=1) to fix it.
     */
     @SerializedName("Status")
     @Expose
@@ -67,16 +75,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get The first few lines of a file under a matched bucketNote: This field may return null, indicating that no valid values can be obtained. 
-     * @return Data The first few lines of a file under a matched bucketNote: This field may return null, indicating that no valid values can be obtained.
+     * Get First few lines of data from a certain file under the matched bucket 
+     * @return Data First few lines of data from a certain file under the matched bucket
      */
     public String [] getData() {
         return this.Data;
     }
 
     /**
-     * Set The first few lines of a file under a matched bucketNote: This field may return null, indicating that no valid values can be obtained.
-     * @param Data The first few lines of a file under a matched bucketNote: This field may return null, indicating that no valid values can be obtained.
+     * Set First few lines of data from a certain file under the matched bucket
+     * @param Data First few lines of data from a certain file under the matched bucket
      */
     public void setData(String [] Data) {
         this.Data = Data;
@@ -99,10 +107,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Current preview file path
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Current preview file path 
      * @return Path Current preview file path
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getPath() {
         return this.Path;
@@ -110,41 +116,75 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Current preview file path
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Path Current preview file path
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setPath(String Path) {
         this.Path = Path;
     }
 
     /**
-     * Get Reason for preview data retrieval failureNote: This field may return null, indicating that no valid values can be obtained. 
-     * @return Msg Reason for preview data retrieval failureNote: This field may return null, indicating that no valid values can be obtained.
+     * Get Reason for preview data fetch failure 
+     * @return Msg Reason for preview data fetch failure
      */
     public String getMsg() {
         return this.Msg;
     }
 
     /**
-     * Set Reason for preview data retrieval failureNote: This field may return null, indicating that no valid values can be obtained.
-     * @param Msg Reason for preview data retrieval failureNote: This field may return null, indicating that no valid values can be obtained.
+     * Set Reason for preview data fetch failure
+     * @param Msg Reason for preview data fetch failure
      */
     public void setMsg(String Msg) {
         this.Msg = Msg;
     }
 
     /**
-     * Get Status 
-     * @return Status Status
+     * Get Status.
+-0: Success
+-10000: Parameter error. Parameter confirmation.
+-10001: Authorization failure. Please confirm authorization.
+-10002: Failed to get file list. Try again later. If the problem persists, consult [online support](https://andon.tencentcloud.com/online-service?from=doc_614) or [submit a ticket](https://console.cloud.tencent.com/workorder/category?level1_id=83&level2_id=469&source=14&data_title=%E6%97%A5%E5%BF%97%E6%9C%8D%E5%8A%A1&step=1) to fix it.
+-10003: No corresponding prefix files in the bucket. Use the correct bucket, file prefix, and compression method.
+-10004: File download failed. Try again later. If the problem persists, consult [online support](https://andon.tencentcloud.com/online-service?from=doc_614) or [submit a ticket](https://console.cloud.tencent.com/workorder/category?level1_id=83&level2_id=469&source=14&data_title=%E6%97%A5%E5%BF%97%E6%9C%8D%E5%8A%A1&step=1) to fix it.
+-10005: File decompression failed. Select the correct compression method and try again.
+-10006: Failed to read file content. Please confirm the file is readable.
+-10007: File preview failed, try again later. If the problem persists, consult [online support](https://andon.tencentcloud.com/online-service?from=doc_614) or [submit a ticket](https://console.cloud.tencent.com/workorder/category?level1_id=83&level2_id=469&source=14&data_title=%E6%97%A5%E5%BF%97%E6%9C%8D%E5%8A%A1&step=1) to fix it. 
+     * @return Status Status.
+-0: Success
+-10000: Parameter error. Parameter confirmation.
+-10001: Authorization failure. Please confirm authorization.
+-10002: Failed to get file list. Try again later. If the problem persists, consult [online support](https://andon.tencentcloud.com/online-service?from=doc_614) or [submit a ticket](https://console.cloud.tencent.com/workorder/category?level1_id=83&level2_id=469&source=14&data_title=%E6%97%A5%E5%BF%97%E6%9C%8D%E5%8A%A1&step=1) to fix it.
+-10003: No corresponding prefix files in the bucket. Use the correct bucket, file prefix, and compression method.
+-10004: File download failed. Try again later. If the problem persists, consult [online support](https://andon.tencentcloud.com/online-service?from=doc_614) or [submit a ticket](https://console.cloud.tencent.com/workorder/category?level1_id=83&level2_id=469&source=14&data_title=%E6%97%A5%E5%BF%97%E6%9C%8D%E5%8A%A1&step=1) to fix it.
+-10005: File decompression failed. Select the correct compression method and try again.
+-10006: Failed to read file content. Please confirm the file is readable.
+-10007: File preview failed, try again later. If the problem persists, consult [online support](https://andon.tencentcloud.com/online-service?from=doc_614) or [submit a ticket](https://console.cloud.tencent.com/workorder/category?level1_id=83&level2_id=469&source=14&data_title=%E6%97%A5%E5%BF%97%E6%9C%8D%E5%8A%A1&step=1) to fix it.
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Status
-     * @param Status Status
+     * Set Status.
+-0: Success
+-10000: Parameter error. Parameter confirmation.
+-10001: Authorization failure. Please confirm authorization.
+-10002: Failed to get file list. Try again later. If the problem persists, consult [online support](https://andon.tencentcloud.com/online-service?from=doc_614) or [submit a ticket](https://console.cloud.tencent.com/workorder/category?level1_id=83&level2_id=469&source=14&data_title=%E6%97%A5%E5%BF%97%E6%9C%8D%E5%8A%A1&step=1) to fix it.
+-10003: No corresponding prefix files in the bucket. Use the correct bucket, file prefix, and compression method.
+-10004: File download failed. Try again later. If the problem persists, consult [online support](https://andon.tencentcloud.com/online-service?from=doc_614) or [submit a ticket](https://console.cloud.tencent.com/workorder/category?level1_id=83&level2_id=469&source=14&data_title=%E6%97%A5%E5%BF%97%E6%9C%8D%E5%8A%A1&step=1) to fix it.
+-10005: File decompression failed. Select the correct compression method and try again.
+-10006: Failed to read file content. Please confirm the file is readable.
+-10007: File preview failed, try again later. If the problem persists, consult [online support](https://andon.tencentcloud.com/online-service?from=doc_614) or [submit a ticket](https://console.cloud.tencent.com/workorder/category?level1_id=83&level2_id=469&source=14&data_title=%E6%97%A5%E5%BF%97%E6%9C%8D%E5%8A%A1&step=1) to fix it.
+     * @param Status Status.
+-0: Success
+-10000: Parameter error. Parameter confirmation.
+-10001: Authorization failure. Please confirm authorization.
+-10002: Failed to get file list. Try again later. If the problem persists, consult [online support](https://andon.tencentcloud.com/online-service?from=doc_614) or [submit a ticket](https://console.cloud.tencent.com/workorder/category?level1_id=83&level2_id=469&source=14&data_title=%E6%97%A5%E5%BF%97%E6%9C%8D%E5%8A%A1&step=1) to fix it.
+-10003: No corresponding prefix files in the bucket. Use the correct bucket, file prefix, and compression method.
+-10004: File download failed. Try again later. If the problem persists, consult [online support](https://andon.tencentcloud.com/online-service?from=doc_614) or [submit a ticket](https://console.cloud.tencent.com/workorder/category?level1_id=83&level2_id=469&source=14&data_title=%E6%97%A5%E5%BF%97%E6%9C%8D%E5%8A%A1&step=1) to fix it.
+-10005: File decompression failed. Select the correct compression method and try again.
+-10006: Failed to read file content. Please confirm the file is readable.
+-10007: File preview failed, try again later. If the problem persists, consult [online support](https://andon.tencentcloud.com/online-service?from=doc_614) or [submit a ticket](https://console.cloud.tencent.com/workorder/category?level1_id=83&level2_id=469&source=14&data_title=%E6%97%A5%E5%BF%97%E6%9C%8D%E5%8A%A1&step=1) to fix it.
      */
     public void setStatus(Long Status) {
         this.Status = Status;

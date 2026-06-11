@@ -73,7 +73,7 @@ public class CreateMNPRequest extends AbstractModel {
     private String TeamId;
 
     /**
-    * <p>The mini program name and description in multiple languages.</p>
+    * <p>Mini program name and introduction in multiple languages.</p>
     */
     @SerializedName("I18nList")
     @Expose
@@ -192,16 +192,16 @@ public class CreateMNPRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>The mini program name and description in multiple languages.</p> 
-     * @return I18nList <p>The mini program name and description in multiple languages.</p>
+     * Get <p>Mini program name and introduction in multiple languages.</p> 
+     * @return I18nList <p>Mini program name and introduction in multiple languages.</p>
      */
     public MNPI18NSyncDto [] getI18nList() {
         return this.I18nList;
     }
 
     /**
-     * Set <p>The mini program name and description in multiple languages.</p>
-     * @param I18nList <p>The mini program name and description in multiple languages.</p>
+     * Set <p>Mini program name and introduction in multiple languages.</p>
+     * @param I18nList <p>Mini program name and introduction in multiple languages.</p>
      */
     public void setI18nList(MNPI18NSyncDto [] I18nList) {
         this.I18nList = I18nList;

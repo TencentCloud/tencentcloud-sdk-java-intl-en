@@ -25,7 +25,6 @@ public class DescribeVulInfoCvssResponse extends AbstractModel {
 
     /**
     * Vulnerability ID
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("VulId")
     @Expose
@@ -33,7 +32,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Vulnerability name
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("VulName")
     @Expose
@@ -41,7 +39,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Hazard level: 1-Low-risk; 2-Medium-risk; 3-High-risk; 4-Critical
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("VulLevel")
     @Expose
@@ -49,7 +46,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Vulnerability Classification: 1: Web-CMS Vulnerability 2: Application Vulnerabilities 4: Linux Software Vulnerabilities 5: Windows System Vulnerabilities
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("VulType")
     @Expose
@@ -57,7 +53,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Vulnerability Description Information
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Description")
     @Expose
@@ -65,15 +60,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Fixing solution
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("RepairPlan")
     @Expose
     private String RepairPlan;
 
     /**
-    * Vulnerability CVE ID
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Vulnerability CVEID
     */
     @SerializedName("CveId")
     @Expose
@@ -81,7 +74,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Reference link
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Reference")
     @Expose
@@ -89,15 +81,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * CVSS Information
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("CVSS")
     @Expose
     private String CVSS;
 
     /**
-    * Release date
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Release time
     */
     @SerializedName("PublicDate")
     @Expose
@@ -105,7 +95,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * CVSS Score
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("CvssScore")
     @Expose
@@ -113,7 +102,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * CVSS Details
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("CveInfo")
     @Expose
@@ -121,7 +109,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * CVSS score, floating point type
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("CvssScoreFloat")
     @Expose
@@ -129,7 +116,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Vulnerability Tags, Separated by Multiple Commas
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Labels")
     @Expose
@@ -137,7 +123,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Number of Attacks Defended
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("DefenseAttackCount")
     @Expose
@@ -145,7 +130,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Total Number of Successful Network Repairs. Returns 0 by default for unsupported auto-repair vulnerabilities.
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("SuccessFixCount")
     @Expose
@@ -153,11 +137,17 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Repair support: 0 - Neither Windows nor Linux supports for repair; 1 - Both Windows and Linux support for repair; 2 - Only Linux supports for repair; 3 - Only Windows supports for repair.
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("FixSwitch")
     @Expose
     private Long FixSwitch;
+
+    /**
+    * Support defense: 0-no support 1-support
+    */
+    @SerializedName("SupportDefence")
+    @Expose
+    private Long SupportDefence;
 
     /**
     * The unique request ID, generated by the server, will be returned for every request (if the request fails to reach the server for other reasons, the request will not obtain a RequestId). RequestId is required for locating a problem.
@@ -167,10 +157,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Vulnerability ID
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Vulnerability ID 
      * @return VulId Vulnerability ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getVulId() {
         return this.VulId;
@@ -178,19 +166,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Vulnerability ID
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param VulId Vulnerability ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setVulId(Long VulId) {
         this.VulId = VulId;
     }
 
     /**
-     * Get Vulnerability name
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Vulnerability name 
      * @return VulName Vulnerability name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getVulName() {
         return this.VulName;
@@ -198,19 +182,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Vulnerability name
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param VulName Vulnerability name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setVulName(String VulName) {
         this.VulName = VulName;
     }
 
     /**
-     * Get Hazard level: 1-Low-risk; 2-Medium-risk; 3-High-risk; 4-Critical
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Hazard level: 1-Low-risk; 2-Medium-risk; 3-High-risk; 4-Critical 
      * @return VulLevel Hazard level: 1-Low-risk; 2-Medium-risk; 3-High-risk; 4-Critical
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getVulLevel() {
         return this.VulLevel;
@@ -218,19 +198,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Hazard level: 1-Low-risk; 2-Medium-risk; 3-High-risk; 4-Critical
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param VulLevel Hazard level: 1-Low-risk; 2-Medium-risk; 3-High-risk; 4-Critical
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setVulLevel(Long VulLevel) {
         this.VulLevel = VulLevel;
     }
 
     /**
-     * Get Vulnerability Classification: 1: Web-CMS Vulnerability 2: Application Vulnerabilities 4: Linux Software Vulnerabilities 5: Windows System Vulnerabilities
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Vulnerability Classification: 1: Web-CMS Vulnerability 2: Application Vulnerabilities 4: Linux Software Vulnerabilities 5: Windows System Vulnerabilities 
      * @return VulType Vulnerability Classification: 1: Web-CMS Vulnerability 2: Application Vulnerabilities 4: Linux Software Vulnerabilities 5: Windows System Vulnerabilities
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getVulType() {
         return this.VulType;
@@ -238,19 +214,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Vulnerability Classification: 1: Web-CMS Vulnerability 2: Application Vulnerabilities 4: Linux Software Vulnerabilities 5: Windows System Vulnerabilities
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param VulType Vulnerability Classification: 1: Web-CMS Vulnerability 2: Application Vulnerabilities 4: Linux Software Vulnerabilities 5: Windows System Vulnerabilities
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setVulType(Long VulType) {
         this.VulType = VulType;
     }
 
     /**
-     * Get Vulnerability Description Information
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Vulnerability Description Information 
      * @return Description Vulnerability Description Information
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getDescription() {
         return this.Description;
@@ -258,19 +230,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Vulnerability Description Information
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Description Vulnerability Description Information
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get Fixing solution
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Fixing solution 
      * @return RepairPlan Fixing solution
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getRepairPlan() {
         return this.RepairPlan;
@@ -278,39 +246,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Fixing solution
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param RepairPlan Fixing solution
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setRepairPlan(String RepairPlan) {
         this.RepairPlan = RepairPlan;
     }
 
     /**
-     * Get Vulnerability CVE ID
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return CveId Vulnerability CVE ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Vulnerability CVEID 
+     * @return CveId Vulnerability CVEID
      */
     public String getCveId() {
         return this.CveId;
     }
 
     /**
-     * Set Vulnerability CVE ID
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param CveId Vulnerability CVE ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Vulnerability CVEID
+     * @param CveId Vulnerability CVEID
      */
     public void setCveId(String CveId) {
         this.CveId = CveId;
     }
 
     /**
-     * Get Reference link
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Reference link 
      * @return Reference Reference link
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getReference() {
         return this.Reference;
@@ -318,19 +278,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Reference link
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Reference Reference link
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setReference(String Reference) {
         this.Reference = Reference;
     }
 
     /**
-     * Get CVSS Information
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get CVSS Information 
      * @return CVSS CVSS Information
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getCVSS() {
         return this.CVSS;
@@ -338,39 +294,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set CVSS Information
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param CVSS CVSS Information
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setCVSS(String CVSS) {
         this.CVSS = CVSS;
     }
 
     /**
-     * Get Release date
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return PublicDate Release date
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Release time 
+     * @return PublicDate Release time
      */
     public String getPublicDate() {
         return this.PublicDate;
     }
 
     /**
-     * Set Release date
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param PublicDate Release date
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Release time
+     * @param PublicDate Release time
      */
     public void setPublicDate(String PublicDate) {
         this.PublicDate = PublicDate;
     }
 
     /**
-     * Get CVSS Score
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get CVSS Score 
      * @return CvssScore CVSS Score
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getCvssScore() {
         return this.CvssScore;
@@ -378,19 +326,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set CVSS Score
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param CvssScore CVSS Score
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setCvssScore(Long CvssScore) {
         this.CvssScore = CvssScore;
     }
 
     /**
-     * Get CVSS Details
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get CVSS Details 
      * @return CveInfo CVSS Details
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getCveInfo() {
         return this.CveInfo;
@@ -398,19 +342,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set CVSS Details
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param CveInfo CVSS Details
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setCveInfo(String CveInfo) {
         this.CveInfo = CveInfo;
     }
 
     /**
-     * Get CVSS score, floating point type
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get CVSS score, floating point type 
      * @return CvssScoreFloat CVSS score, floating point type
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Float getCvssScoreFloat() {
         return this.CvssScoreFloat;
@@ -418,19 +358,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set CVSS score, floating point type
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param CvssScoreFloat CVSS score, floating point type
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setCvssScoreFloat(Float CvssScoreFloat) {
         this.CvssScoreFloat = CvssScoreFloat;
     }
 
     /**
-     * Get Vulnerability Tags, Separated by Multiple Commas
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Vulnerability Tags, Separated by Multiple Commas 
      * @return Labels Vulnerability Tags, Separated by Multiple Commas
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getLabels() {
         return this.Labels;
@@ -438,19 +374,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Vulnerability Tags, Separated by Multiple Commas
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Labels Vulnerability Tags, Separated by Multiple Commas
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setLabels(String Labels) {
         this.Labels = Labels;
     }
 
     /**
-     * Get Number of Attacks Defended
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Number of Attacks Defended 
      * @return DefenseAttackCount Number of Attacks Defended
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getDefenseAttackCount() {
         return this.DefenseAttackCount;
@@ -458,19 +390,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Number of Attacks Defended
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param DefenseAttackCount Number of Attacks Defended
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setDefenseAttackCount(Long DefenseAttackCount) {
         this.DefenseAttackCount = DefenseAttackCount;
     }
 
     /**
-     * Get Total Number of Successful Network Repairs. Returns 0 by default for unsupported auto-repair vulnerabilities.
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Total Number of Successful Network Repairs. Returns 0 by default for unsupported auto-repair vulnerabilities. 
      * @return SuccessFixCount Total Number of Successful Network Repairs. Returns 0 by default for unsupported auto-repair vulnerabilities.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getSuccessFixCount() {
         return this.SuccessFixCount;
@@ -478,19 +406,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Total Number of Successful Network Repairs. Returns 0 by default for unsupported auto-repair vulnerabilities.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param SuccessFixCount Total Number of Successful Network Repairs. Returns 0 by default for unsupported auto-repair vulnerabilities.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setSuccessFixCount(Long SuccessFixCount) {
         this.SuccessFixCount = SuccessFixCount;
     }
 
     /**
-     * Get Repair support: 0 - Neither Windows nor Linux supports for repair; 1 - Both Windows and Linux support for repair; 2 - Only Linux supports for repair; 3 - Only Windows supports for repair.
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Repair support: 0 - Neither Windows nor Linux supports for repair; 1 - Both Windows and Linux support for repair; 2 - Only Linux supports for repair; 3 - Only Windows supports for repair. 
      * @return FixSwitch Repair support: 0 - Neither Windows nor Linux supports for repair; 1 - Both Windows and Linux support for repair; 2 - Only Linux supports for repair; 3 - Only Windows supports for repair.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getFixSwitch() {
         return this.FixSwitch;
@@ -498,12 +422,26 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Repair support: 0 - Neither Windows nor Linux supports for repair; 1 - Both Windows and Linux support for repair; 2 - Only Linux supports for repair; 3 - Only Windows supports for repair.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param FixSwitch Repair support: 0 - Neither Windows nor Linux supports for repair; 1 - Both Windows and Linux support for repair; 2 - Only Linux supports for repair; 3 - Only Windows supports for repair.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setFixSwitch(Long FixSwitch) {
         this.FixSwitch = FixSwitch;
+    }
+
+    /**
+     * Get Support defense: 0-no support 1-support 
+     * @return SupportDefence Support defense: 0-no support 1-support
+     */
+    public Long getSupportDefence() {
+        return this.SupportDefence;
+    }
+
+    /**
+     * Set Support defense: 0-no support 1-support
+     * @param SupportDefence Support defense: 0-no support 1-support
+     */
+    public void setSupportDefence(Long SupportDefence) {
+        this.SupportDefence = SupportDefence;
     }
 
     /**
@@ -581,6 +519,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.FixSwitch != null) {
             this.FixSwitch = new Long(source.FixSwitch);
         }
+        if (source.SupportDefence != null) {
+            this.SupportDefence = new Long(source.SupportDefence);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -608,6 +549,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "DefenseAttackCount", this.DefenseAttackCount);
         this.setParamSimple(map, prefix + "SuccessFixCount", this.SuccessFixCount);
         this.setParamSimple(map, prefix + "FixSwitch", this.FixSwitch);
+        this.setParamSimple(map, prefix + "SupportDefence", this.SupportDefence);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

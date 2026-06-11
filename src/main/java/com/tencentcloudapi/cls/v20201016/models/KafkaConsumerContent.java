@@ -48,16 +48,15 @@ This parameter does not need to be set when `Format` is set to `0`.
     private String [] MetaFields;
 
     /**
-    * Tag data processing mode: 1: Do not tile (default); 2: Tile.
+    * tag data processing method: 1: Not Tiled (default value); 2: Tile.
 
 Untiled example:
 TAG information: `{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
-Untiled: `{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
+No tiling: `{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
 
 Tiled example:
 TAG information: `{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
 Tiled: `{"__TAG__.fieldA":200,"__TAG__.fieldB":"text"}`
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("TagTransaction")
     @Expose
@@ -138,52 +137,48 @@ This parameter does not need to be set when `Format` is set to `0`.
     }
 
     /**
-     * Get Tag data processing mode: 1: Do not tile (default); 2: Tile.
+     * Get tag data processing method: 1: Not Tiled (default value); 2: Tile.
 
 Untiled example:
 TAG information: `{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
-Untiled: `{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
+No tiling: `{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
+
+Tiled example:
+TAG information: `{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
+Tiled: `{"__TAG__.fieldA":200,"__TAG__.fieldB":"text"}` 
+     * @return TagTransaction tag data processing method: 1: Not Tiled (default value); 2: Tile.
+
+Untiled example:
+TAG information: `{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
+No tiling: `{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
 
 Tiled example:
 TAG information: `{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
 Tiled: `{"__TAG__.fieldA":200,"__TAG__.fieldB":"text"}`
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return TagTransaction Tag data processing mode: 1: Do not tile (default); 2: Tile.
-
-Untiled example:
-TAG information: `{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
-Untiled: `{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
-
-Tiled example:
-TAG information: `{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
-Tiled: `{"__TAG__.fieldA":200,"__TAG__.fieldB":"text"}`
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getTagTransaction() {
         return this.TagTransaction;
     }
 
     /**
-     * Set Tag data processing mode: 1: Do not tile (default); 2: Tile.
+     * Set tag data processing method: 1: Not Tiled (default value); 2: Tile.
 
 Untiled example:
 TAG information: `{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
-Untiled: `{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
+No tiling: `{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
 
 Tiled example:
 TAG information: `{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
 Tiled: `{"__TAG__.fieldA":200,"__TAG__.fieldB":"text"}`
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param TagTransaction Tag data processing mode: 1: Do not tile (default); 2: Tile.
+     * @param TagTransaction tag data processing method: 1: Not Tiled (default value); 2: Tile.
 
 Untiled example:
 TAG information: `{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
-Untiled: `{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
+No tiling: `{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
 
 Tiled example:
 TAG information: `{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
 Tiled: `{"__TAG__.fieldA":200,"__TAG__.fieldB":"text"}`
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setTagTransaction(Long TagTransaction) {
         this.TagTransaction = TagTransaction;

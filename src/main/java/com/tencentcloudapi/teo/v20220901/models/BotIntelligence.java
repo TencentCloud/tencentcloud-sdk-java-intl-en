@@ -24,13 +24,6 @@ import java.util.HashMap;
 public class BotIntelligence extends AbstractModel {
 
     /**
-    * Based on client and request features, divides request sources into human requests, legitimate Bot requests, suspected Bot requests, and high-risk Bot requests, and provides request handling options.
-    */
-    @SerializedName("BotRatings")
-    @Expose
-    private BotRatings BotRatings;
-
-    /**
     * Specifies the switch for Bot intelligent analysis configuration. valid values:.
 
 on: enabled.
@@ -41,20 +34,18 @@ off: disabled.
     private String Enabled;
 
     /**
-     * Get Based on client and request features, divides request sources into human requests, legitimate Bot requests, suspected Bot requests, and high-risk Bot requests, and provides request handling options. 
-     * @return BotRatings Based on client and request features, divides request sources into human requests, legitimate Bot requests, suspected Bot requests, and high-risk Bot requests, and provides request handling options.
-     */
-    public BotRatings getBotRatings() {
-        return this.BotRatings;
-    }
+    * Rule ID of Bot intelligent analysis, returned as an output parameter.
+    */
+    @SerializedName("Id")
+    @Expose
+    private String Id;
 
     /**
-     * Set Based on client and request features, divides request sources into human requests, legitimate Bot requests, suspected Bot requests, and high-risk Bot requests, and provides request handling options.
-     * @param BotRatings Based on client and request features, divides request sources into human requests, legitimate Bot requests, suspected Bot requests, and high-risk Bot requests, and provides request handling options.
-     */
-    public void setBotRatings(BotRatings BotRatings) {
-        this.BotRatings = BotRatings;
-    }
+    * Based on client and request features, divides request sources into human requests, legitimate Bot requests, suspected Bot requests, and high-risk Bot requests, and provides request handling options.
+    */
+    @SerializedName("BotRatings")
+    @Expose
+    private BotRatings BotRatings;
 
     /**
      * Get Specifies the switch for Bot intelligent analysis configuration. valid values:.
@@ -84,6 +75,38 @@ off: disabled.
         this.Enabled = Enabled;
     }
 
+    /**
+     * Get Rule ID of Bot intelligent analysis, returned as an output parameter. 
+     * @return Id Rule ID of Bot intelligent analysis, returned as an output parameter.
+     */
+    public String getId() {
+        return this.Id;
+    }
+
+    /**
+     * Set Rule ID of Bot intelligent analysis, returned as an output parameter.
+     * @param Id Rule ID of Bot intelligent analysis, returned as an output parameter.
+     */
+    public void setId(String Id) {
+        this.Id = Id;
+    }
+
+    /**
+     * Get Based on client and request features, divides request sources into human requests, legitimate Bot requests, suspected Bot requests, and high-risk Bot requests, and provides request handling options. 
+     * @return BotRatings Based on client and request features, divides request sources into human requests, legitimate Bot requests, suspected Bot requests, and high-risk Bot requests, and provides request handling options.
+     */
+    public BotRatings getBotRatings() {
+        return this.BotRatings;
+    }
+
+    /**
+     * Set Based on client and request features, divides request sources into human requests, legitimate Bot requests, suspected Bot requests, and high-risk Bot requests, and provides request handling options.
+     * @param BotRatings Based on client and request features, divides request sources into human requests, legitimate Bot requests, suspected Bot requests, and high-risk Bot requests, and provides request handling options.
+     */
+    public void setBotRatings(BotRatings BotRatings) {
+        this.BotRatings = BotRatings;
+    }
+
     public BotIntelligence() {
     }
 
@@ -92,11 +115,14 @@ off: disabled.
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public BotIntelligence(BotIntelligence source) {
-        if (source.BotRatings != null) {
-            this.BotRatings = new BotRatings(source.BotRatings);
-        }
         if (source.Enabled != null) {
             this.Enabled = new String(source.Enabled);
+        }
+        if (source.Id != null) {
+            this.Id = new String(source.Id);
+        }
+        if (source.BotRatings != null) {
+            this.BotRatings = new BotRatings(source.BotRatings);
         }
     }
 
@@ -105,8 +131,9 @@ off: disabled.
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamObj(map, prefix + "BotRatings.", this.BotRatings);
         this.setParamSimple(map, prefix + "Enabled", this.Enabled);
+        this.setParamSimple(map, prefix + "Id", this.Id);
+        this.setParamObj(map, prefix + "BotRatings.", this.BotRatings);
 
     }
 }

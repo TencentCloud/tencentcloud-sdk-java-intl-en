@@ -31,7 +31,12 @@ public class JsonInfo extends AbstractModel {
     private Boolean EnableTag;
 
     /**
-    * List of metadata. Supported metadata types: __SOURCE__, __FILENAME__, __TIMESTAMP__, __HOSTNAME__.
+    * Metadata information list, available values are __SOURCE__, __FILENAME__, __TIMESTAMP__, __HOSTNAME__.
+
+-SOURCE IP for log collection, for example: 10.0.1.2
+-__FILENAME__: Log collection file name, for example: /data/log/nginx/access.log
+-__TIMESTAMP__: Log timestamp (millisecond-level Unix timestamp). When retrieving logs by time range, the time is automatically used to retrieve logs. It is displayed on the console as "log time", for example: 1640005601188.
+-__HOSTNAME__: Log source machine name. Need to use Loglistener 2.7.4 and above versions to capture this field, for example: localhost.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("MetaFields")
@@ -39,8 +44,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String [] MetaFields;
 
     /**
-    * JSON format for shipping. `0`: String format; `1`: Structured format.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * JSON format for shipping. 0: shipped as a string; 1: shipped in a structured way.
     */
     @SerializedName("JsonType")
     @Expose
@@ -63,9 +67,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get List of metadata. Supported metadata types: __SOURCE__, __FILENAME__, __TIMESTAMP__, __HOSTNAME__.
+     * Get Metadata information list, available values are __SOURCE__, __FILENAME__, __TIMESTAMP__, __HOSTNAME__.
+
+-SOURCE IP for log collection, for example: 10.0.1.2
+-__FILENAME__: Log collection file name, for example: /data/log/nginx/access.log
+-__TIMESTAMP__: Log timestamp (millisecond-level Unix timestamp). When retrieving logs by time range, the time is automatically used to retrieve logs. It is displayed on the console as "log time", for example: 1640005601188.
+-__HOSTNAME__: Log source machine name. Need to use Loglistener 2.7.4 and above versions to capture this field, for example: localhost.
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return MetaFields List of metadata. Supported metadata types: __SOURCE__, __FILENAME__, __TIMESTAMP__, __HOSTNAME__.
+     * @return MetaFields Metadata information list, available values are __SOURCE__, __FILENAME__, __TIMESTAMP__, __HOSTNAME__.
+
+-SOURCE IP for log collection, for example: 10.0.1.2
+-__FILENAME__: Log collection file name, for example: /data/log/nginx/access.log
+-__TIMESTAMP__: Log timestamp (millisecond-level Unix timestamp). When retrieving logs by time range, the time is automatically used to retrieve logs. It is displayed on the console as "log time", for example: 1640005601188.
+-__HOSTNAME__: Log source machine name. Need to use Loglistener 2.7.4 and above versions to capture this field, for example: localhost.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String [] getMetaFields() {
@@ -73,9 +87,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set List of metadata. Supported metadata types: __SOURCE__, __FILENAME__, __TIMESTAMP__, __HOSTNAME__.
+     * Set Metadata information list, available values are __SOURCE__, __FILENAME__, __TIMESTAMP__, __HOSTNAME__.
+
+-SOURCE IP for log collection, for example: 10.0.1.2
+-__FILENAME__: Log collection file name, for example: /data/log/nginx/access.log
+-__TIMESTAMP__: Log timestamp (millisecond-level Unix timestamp). When retrieving logs by time range, the time is automatically used to retrieve logs. It is displayed on the console as "log time", for example: 1640005601188.
+-__HOSTNAME__: Log source machine name. Need to use Loglistener 2.7.4 and above versions to capture this field, for example: localhost.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param MetaFields List of metadata. Supported metadata types: __SOURCE__, __FILENAME__, __TIMESTAMP__, __HOSTNAME__.
+     * @param MetaFields Metadata information list, available values are __SOURCE__, __FILENAME__, __TIMESTAMP__, __HOSTNAME__.
+
+-SOURCE IP for log collection, for example: 10.0.1.2
+-__FILENAME__: Log collection file name, for example: /data/log/nginx/access.log
+-__TIMESTAMP__: Log timestamp (millisecond-level Unix timestamp). When retrieving logs by time range, the time is automatically used to retrieve logs. It is displayed on the console as "log time", for example: 1640005601188.
+-__HOSTNAME__: Log source machine name. Need to use Loglistener 2.7.4 and above versions to capture this field, for example: localhost.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setMetaFields(String [] MetaFields) {
@@ -83,20 +107,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get JSON format for shipping. `0`: String format; `1`: Structured format.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return JsonType JSON format for shipping. `0`: String format; `1`: Structured format.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get JSON format for shipping. 0: shipped as a string; 1: shipped in a structured way. 
+     * @return JsonType JSON format for shipping. 0: shipped as a string; 1: shipped in a structured way.
      */
     public Long getJsonType() {
         return this.JsonType;
     }
 
     /**
-     * Set JSON format for shipping. `0`: String format; `1`: Structured format.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param JsonType JSON format for shipping. `0`: String format; `1`: Structured format.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set JSON format for shipping. 0: shipped as a string; 1: shipped in a structured way.
+     * @param JsonType JSON format for shipping. 0: shipped as a string; 1: shipped in a structured way.
      */
     public void setJsonType(Long JsonType) {
         this.JsonType = JsonType;

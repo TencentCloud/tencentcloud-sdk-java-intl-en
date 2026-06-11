@@ -24,14 +24,16 @@ import java.util.HashMap;
 public class ModifyIndexRequest extends AbstractModel {
 
     /**
-    * Log topic ID
+    * Log topic Id.
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
     */
     @SerializedName("TopicId")
     @Expose
     private String TopicId;
 
     /**
-    * It does not take effect by default
+    * Index status. false: close index, true: enable index.
+Once enabled, retrieval and analysis of logs will generate indexing traffic, index storage and corresponding fees. [Billing details](https://www.tencentcloud.com/document/product/614/45802?from_cn_redirect=1#.E8.AE.A1.E8.B4.B9.E9.A1.B9)
     */
     @SerializedName("Status")
     @Expose
@@ -64,32 +66,47 @@ public class ModifyIndexRequest extends AbstractModel {
     private Long MetadataFlag;
 
     /**
-     * Get Log topic ID 
-     * @return TopicId Log topic ID
+    * Custom log parsing exception storage fields
+    */
+    @SerializedName("CoverageField")
+    @Expose
+    private String CoverageField;
+
+    /**
+     * Get Log topic Id.
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1). 
+     * @return TopicId Log topic Id.
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
      */
     public String getTopicId() {
         return this.TopicId;
     }
 
     /**
-     * Set Log topic ID
-     * @param TopicId Log topic ID
+     * Set Log topic Id.
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
+     * @param TopicId Log topic Id.
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
      */
     public void setTopicId(String TopicId) {
         this.TopicId = TopicId;
     }
 
     /**
-     * Get It does not take effect by default 
-     * @return Status It does not take effect by default
+     * Get Index status. false: close index, true: enable index.
+Once enabled, retrieval and analysis of logs will generate indexing traffic, index storage and corresponding fees. [Billing details](https://www.tencentcloud.com/document/product/614/45802?from_cn_redirect=1#.E8.AE.A1.E8.B4.B9.E9.A1.B9) 
+     * @return Status Index status. false: close index, true: enable index.
+Once enabled, retrieval and analysis of logs will generate indexing traffic, index storage and corresponding fees. [Billing details](https://www.tencentcloud.com/document/product/614/45802?from_cn_redirect=1#.E8.AE.A1.E8.B4.B9.E9.A1.B9)
      */
     public Boolean getStatus() {
         return this.Status;
     }
 
     /**
-     * Set It does not take effect by default
-     * @param Status It does not take effect by default
+     * Set Index status. false: close index, true: enable index.
+Once enabled, retrieval and analysis of logs will generate indexing traffic, index storage and corresponding fees. [Billing details](https://www.tencentcloud.com/document/product/614/45802?from_cn_redirect=1#.E8.AE.A1.E8.B4.B9.E9.A1.B9)
+     * @param Status Index status. false: close index, true: enable index.
+Once enabled, retrieval and analysis of logs will generate indexing traffic, index storage and corresponding fees. [Billing details](https://www.tencentcloud.com/document/product/614/45802?from_cn_redirect=1#.E8.AE.A1.E8.B4.B9.E9.A1.B9)
      */
     public void setStatus(Boolean Status) {
         this.Status = Status;
@@ -163,6 +180,22 @@ public class ModifyIndexRequest extends AbstractModel {
         this.MetadataFlag = MetadataFlag;
     }
 
+    /**
+     * Get Custom log parsing exception storage fields 
+     * @return CoverageField Custom log parsing exception storage fields
+     */
+    public String getCoverageField() {
+        return this.CoverageField;
+    }
+
+    /**
+     * Set Custom log parsing exception storage fields
+     * @param CoverageField Custom log parsing exception storage fields
+     */
+    public void setCoverageField(String CoverageField) {
+        this.CoverageField = CoverageField;
+    }
+
     public ModifyIndexRequest() {
     }
 
@@ -186,6 +219,9 @@ public class ModifyIndexRequest extends AbstractModel {
         if (source.MetadataFlag != null) {
             this.MetadataFlag = new Long(source.MetadataFlag);
         }
+        if (source.CoverageField != null) {
+            this.CoverageField = new String(source.CoverageField);
+        }
     }
 
 
@@ -198,6 +234,7 @@ public class ModifyIndexRequest extends AbstractModel {
         this.setParamObj(map, prefix + "Rule.", this.Rule);
         this.setParamSimple(map, prefix + "IncludeInternalFields", this.IncludeInternalFields);
         this.setParamSimple(map, prefix + "MetadataFlag", this.MetadataFlag);
+        this.setParamSimple(map, prefix + "CoverageField", this.CoverageField);
 
     }
 }

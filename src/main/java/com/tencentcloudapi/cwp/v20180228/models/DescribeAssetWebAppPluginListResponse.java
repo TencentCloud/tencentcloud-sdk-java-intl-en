@@ -24,8 +24,7 @@ import java.util.HashMap;
 public class DescribeAssetWebAppPluginListResponse extends AbstractModel {
 
     /**
-    * Data list
-Note: This field may return null, indicating that no valid values can be obtained.
+    * List
     */
     @SerializedName("Plugins")
     @Expose
@@ -46,20 +45,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Data list
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Plugins Data list
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get List 
+     * @return Plugins List
      */
     public AssetWebAppPluginInfo [] getPlugins() {
         return this.Plugins;
     }
 
     /**
-     * Set Data list
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Plugins Data list
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set List
+     * @param Plugins List
      */
     public void setPlugins(AssetWebAppPluginInfo [] Plugins) {
         this.Plugins = Plugins;

@@ -73,6 +73,13 @@ public class VulDefenceRangeDetail extends AbstractModel {
     private Long VulId;
 
     /**
+    * Status. 0: defending; 1: allowlisted. It indicates that the vulnerability is included in an allowlist, which may not be a global allowlist.
+    */
+    @SerializedName("Status")
+    @Expose
+    private Long Status;
+
+    /**
      * Get Vulnerability name 
      * @return VulName Vulnerability name
      */
@@ -184,6 +191,22 @@ public class VulDefenceRangeDetail extends AbstractModel {
         this.VulId = VulId;
     }
 
+    /**
+     * Get Status. 0: defending; 1: allowlisted. It indicates that the vulnerability is included in an allowlist, which may not be a global allowlist. 
+     * @return Status Status. 0: defending; 1: allowlisted. It indicates that the vulnerability is included in an allowlist, which may not be a global allowlist.
+     */
+    public Long getStatus() {
+        return this.Status;
+    }
+
+    /**
+     * Set Status. 0: defending; 1: allowlisted. It indicates that the vulnerability is included in an allowlist, which may not be a global allowlist.
+     * @param Status Status. 0: defending; 1: allowlisted. It indicates that the vulnerability is included in an allowlist, which may not be a global allowlist.
+     */
+    public void setStatus(Long Status) {
+        this.Status = Status;
+    }
+
     public VulDefenceRangeDetail() {
     }
 
@@ -213,6 +236,9 @@ public class VulDefenceRangeDetail extends AbstractModel {
         if (source.VulId != null) {
             this.VulId = new Long(source.VulId);
         }
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
     }
 
 
@@ -227,6 +253,7 @@ public class VulDefenceRangeDetail extends AbstractModel {
         this.setParamSimple(map, prefix + "CveId", this.CveId);
         this.setParamSimple(map, prefix + "PublishTime", this.PublishTime);
         this.setParamSimple(map, prefix + "VulId", this.VulId);
+        this.setParamSimple(map, prefix + "Status", this.Status);
 
     }
 }

@@ -39,15 +39,13 @@ public class AssetKeyVal extends AbstractModel {
 
     /**
     * Description information
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Desc")
     @Expose
     private String Desc;
 
     /**
-    * Number of additions today
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Number of new key-value pairs today
     */
     @SerializedName("NewCount")
     @Expose
@@ -86,10 +84,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Description information
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Description information 
      * @return Desc Description information
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getDesc() {
         return this.Desc;
@@ -97,29 +93,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Description information
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Desc Description information
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setDesc(String Desc) {
         this.Desc = Desc;
     }
 
     /**
-     * Get Number of additions today
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return NewCount Number of additions today
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Number of new key-value pairs today 
+     * @return NewCount Number of new key-value pairs today
      */
     public Long getNewCount() {
         return this.NewCount;
     }
 
     /**
-     * Set Number of additions today
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param NewCount Number of additions today
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Number of new key-value pairs today
+     * @param NewCount Number of new key-value pairs today
      */
     public void setNewCount(Long NewCount) {
         this.NewCount = NewCount;

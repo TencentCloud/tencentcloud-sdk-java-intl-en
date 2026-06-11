@@ -24,16 +24,14 @@ import java.util.HashMap;
 public class ImageProgress extends AbstractModel {
 
     /**
-    * Image ID
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Image id
     */
     @SerializedName("ImageId")
     @Expose
     private String ImageId;
 
     /**
-    * Repository type
-Note: This field may return null, indicating that no valid values can be obtained.
+    * repository type
     */
     @SerializedName("RegistryType")
     @Expose
@@ -41,23 +39,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Image repository address
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ImageRepoAddress")
     @Expose
     private String ImageRepoAddress;
 
     /**
-    * Instance ID
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Instance ID.
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Instance name
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Instance name.
     */
     @SerializedName("InstanceName")
     @Expose
@@ -65,15 +60,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Namespace
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Namespace")
     @Expose
     private String Namespace;
 
     /**
-    * Repository name
-Note: This field may return null, indicating that no valid values can be obtained.
+    * repository name
     */
     @SerializedName("ImageName")
     @Expose
@@ -81,89 +74,74 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Image tag
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ImageTag")
     @Expose
     private String ImageTag;
 
     /**
-    * Image scanning status
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Image scan status
     */
     @SerializedName("ScanStatus")
     @Expose
     private String ScanStatus;
 
     /**
-    * CVE scanning progress of the image
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Mirror cve scan progress
     */
     @SerializedName("CveProgress")
     @Expose
     private Long CveProgress;
 
     /**
-    * Sensitive data scanning progress of the image
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Mirror sensitivity scan progress
     */
     @SerializedName("RiskProgress")
     @Expose
     private Long RiskProgress;
 
     /**
-    * Trojan scanning progress of the image
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Trojan mirror scan progress
     */
     @SerializedName("VirusProgress")
     @Expose
     private Long VirusProgress;
 
     /**
-     * Get Image ID
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ImageId Image ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Image id 
+     * @return ImageId Image id
      */
     public String getImageId() {
         return this.ImageId;
     }
 
     /**
-     * Set Image ID
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ImageId Image ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Image id
+     * @param ImageId Image id
      */
     public void setImageId(String ImageId) {
         this.ImageId = ImageId;
     }
 
     /**
-     * Get Repository type
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return RegistryType Repository type
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get repository type 
+     * @return RegistryType repository type
      */
     public String getRegistryType() {
         return this.RegistryType;
     }
 
     /**
-     * Set Repository type
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param RegistryType Repository type
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set repository type
+     * @param RegistryType repository type
      */
     public void setRegistryType(String RegistryType) {
         this.RegistryType = RegistryType;
     }
 
     /**
-     * Get Image repository address
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Image repository address 
      * @return ImageRepoAddress Image repository address
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getImageRepoAddress() {
         return this.ImageRepoAddress;
@@ -171,59 +149,47 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Image repository address
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param ImageRepoAddress Image repository address
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setImageRepoAddress(String ImageRepoAddress) {
         this.ImageRepoAddress = ImageRepoAddress;
     }
 
     /**
-     * Get Instance ID
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return InstanceId Instance ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Instance ID. 
+     * @return InstanceId Instance ID.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Instance ID
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param InstanceId Instance ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Instance ID.
+     * @param InstanceId Instance ID.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Instance name
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return InstanceName Instance name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Instance name. 
+     * @return InstanceName Instance name.
      */
     public String getInstanceName() {
         return this.InstanceName;
     }
 
     /**
-     * Set Instance name
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param InstanceName Instance name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Instance name.
+     * @param InstanceName Instance name.
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;
     }
 
     /**
-     * Get Namespace
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Namespace 
      * @return Namespace Namespace
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getNamespace() {
         return this.Namespace;
@@ -231,39 +197,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Namespace
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Namespace Namespace
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setNamespace(String Namespace) {
         this.Namespace = Namespace;
     }
 
     /**
-     * Get Repository name
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ImageName Repository name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get repository name 
+     * @return ImageName repository name
      */
     public String getImageName() {
         return this.ImageName;
     }
 
     /**
-     * Set Repository name
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ImageName Repository name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set repository name
+     * @param ImageName repository name
      */
     public void setImageName(String ImageName) {
         this.ImageName = ImageName;
     }
 
     /**
-     * Get Image tag
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Image tag 
      * @return ImageTag Image tag
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getImageTag() {
         return this.ImageTag;
@@ -271,89 +229,71 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Image tag
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param ImageTag Image tag
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setImageTag(String ImageTag) {
         this.ImageTag = ImageTag;
     }
 
     /**
-     * Get Image scanning status
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ScanStatus Image scanning status
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Image scan status 
+     * @return ScanStatus Image scan status
      */
     public String getScanStatus() {
         return this.ScanStatus;
     }
 
     /**
-     * Set Image scanning status
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ScanStatus Image scanning status
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Image scan status
+     * @param ScanStatus Image scan status
      */
     public void setScanStatus(String ScanStatus) {
         this.ScanStatus = ScanStatus;
     }
 
     /**
-     * Get CVE scanning progress of the image
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return CveProgress CVE scanning progress of the image
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Mirror cve scan progress 
+     * @return CveProgress Mirror cve scan progress
      */
     public Long getCveProgress() {
         return this.CveProgress;
     }
 
     /**
-     * Set CVE scanning progress of the image
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param CveProgress CVE scanning progress of the image
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Mirror cve scan progress
+     * @param CveProgress Mirror cve scan progress
      */
     public void setCveProgress(Long CveProgress) {
         this.CveProgress = CveProgress;
     }
 
     /**
-     * Get Sensitive data scanning progress of the image
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return RiskProgress Sensitive data scanning progress of the image
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Mirror sensitivity scan progress 
+     * @return RiskProgress Mirror sensitivity scan progress
      */
     public Long getRiskProgress() {
         return this.RiskProgress;
     }
 
     /**
-     * Set Sensitive data scanning progress of the image
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param RiskProgress Sensitive data scanning progress of the image
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Mirror sensitivity scan progress
+     * @param RiskProgress Mirror sensitivity scan progress
      */
     public void setRiskProgress(Long RiskProgress) {
         this.RiskProgress = RiskProgress;
     }
 
     /**
-     * Get Trojan scanning progress of the image
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return VirusProgress Trojan scanning progress of the image
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Trojan mirror scan progress 
+     * @return VirusProgress Trojan mirror scan progress
      */
     public Long getVirusProgress() {
         return this.VirusProgress;
     }
 
     /**
-     * Set Trojan scanning progress of the image
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param VirusProgress Trojan scanning progress of the image
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Trojan mirror scan progress
+     * @param VirusProgress Trojan mirror scan progress
      */
     public void setVirusProgress(Long VirusProgress) {
         this.VirusProgress = VirusProgress;

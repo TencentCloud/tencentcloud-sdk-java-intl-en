@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class AnonymousInfo extends AbstractModel {
 
     /**
-    * Operation list supports trackLog (JS/HTTP log upload) and realtimeProducer (kafka protocol log upload).
+    * Operation list. Valid values: trackLog: log upload through JS/HTTP; realtimeProducer: log upload through Kafka protocol.
     */
     @SerializedName("Operations")
     @Expose
     private String [] Operations;
 
     /**
-    * Condition list
+    * List of conditions.
     */
     @SerializedName("Conditions")
     @Expose
     private ConditionInfo [] Conditions;
 
     /**
-     * Get Operation list supports trackLog (JS/HTTP log upload) and realtimeProducer (kafka protocol log upload). 
-     * @return Operations Operation list supports trackLog (JS/HTTP log upload) and realtimeProducer (kafka protocol log upload).
+     * Get Operation list. Valid values: trackLog: log upload through JS/HTTP; realtimeProducer: log upload through Kafka protocol. 
+     * @return Operations Operation list. Valid values: trackLog: log upload through JS/HTTP; realtimeProducer: log upload through Kafka protocol.
      */
     public String [] getOperations() {
         return this.Operations;
     }
 
     /**
-     * Set Operation list supports trackLog (JS/HTTP log upload) and realtimeProducer (kafka protocol log upload).
-     * @param Operations Operation list supports trackLog (JS/HTTP log upload) and realtimeProducer (kafka protocol log upload).
+     * Set Operation list. Valid values: trackLog: log upload through JS/HTTP; realtimeProducer: log upload through Kafka protocol.
+     * @param Operations Operation list. Valid values: trackLog: log upload through JS/HTTP; realtimeProducer: log upload through Kafka protocol.
      */
     public void setOperations(String [] Operations) {
         this.Operations = Operations;
     }
 
     /**
-     * Get Condition list 
-     * @return Conditions Condition list
+     * Get List of conditions. 
+     * @return Conditions List of conditions.
      */
     public ConditionInfo [] getConditions() {
         return this.Conditions;
     }
 
     /**
-     * Set Condition list
-     * @param Conditions Condition list
+     * Set List of conditions.
+     * @param Conditions List of conditions.
      */
     public void setConditions(ConditionInfo [] Conditions) {
         this.Conditions = Conditions;

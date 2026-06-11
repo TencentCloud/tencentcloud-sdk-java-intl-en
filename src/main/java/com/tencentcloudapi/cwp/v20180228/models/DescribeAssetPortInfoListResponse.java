@@ -32,7 +32,6 @@ public class DescribeAssetPortInfoListResponse extends AbstractModel {
 
     /**
     * List
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Ports")
     @Expose
@@ -62,10 +61,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get List
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get List 
      * @return Ports List
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public AssetPortBaseInfo [] getPorts() {
         return this.Ports;
@@ -73,9 +70,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set List
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Ports List
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setPorts(AssetPortBaseInfo [] Ports) {
         this.Ports = Ports;

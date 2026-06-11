@@ -24,390 +24,348 @@ import java.util.HashMap;
 public class MediaTranscodeItem extends AbstractModel {
 
     /**
-    * Address of output video file.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * <p>File URL of the transcoded video.</p>
     */
     @SerializedName("Url")
     @Expose
     private String Url;
 
     /**
-    * For transcoding specification ID, see [Transcoding Parameter Template](https://intl.cloud.tencent.com/document/product/266/33476?from_cn_redirect=1). 
-<font color=red>Note: A value of 0 represents the original file. </font>
+    * <p>Transcoding specification ID. Please refer to <a href="https://www.tencentcloud.com/document/product/266/33476?from_cn_redirect=1">transcoding parameter template</a>.<br><font color="red">Note: A value of 0 means the raw file.</font></p>
     */
     @SerializedName("Definition")
     @Expose
     private Long Definition;
 
     /**
-    * Sum of the average bitrate of a video stream and that of an audio stream in bps.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * <p>Sum of the mean bitrate of a stream and the mean audio stream bit rate, unit: bps.</p>
     */
     @SerializedName("Bitrate")
     @Expose
     private Long Bitrate;
 
     /**
-    * Maximum value of the height of a video stream in px.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * <p>Maximum value of video stream height. Unit: px.</p>
     */
     @SerializedName("Height")
     @Expose
     private Long Height;
 
     /**
-    * Maximum value of the width of a video stream in px.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * <p>Maximum value of video stream width. Unit: px.</p>
     */
     @SerializedName("Width")
     @Expose
     private Long Width;
 
     /**
-    * The file size (bytes).
-<li>If the file is an HLS file, the value of this parameter is the sum of the size of the M3U8 and TS files.</li>
+    * <p>Total size of media files, measurement unit: byte.</p><li>When the media file is HLS, the size is the sum of m3u8 and ts file sizes.</li>
     */
     @SerializedName("Size")
     @Expose
     private Long Size;
 
     /**
-    * Video duration in seconds.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * <p>Video duration, in seconds.</p>
     */
     @SerializedName("Duration")
     @Expose
     private Float Duration;
 
     /**
-    * MD5 value of video.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * <p>md5 value of the video.</p>
     */
     @SerializedName("Md5")
     @Expose
     private String Md5;
 
     /**
-    * Container, such as m4a and mp4.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * <p>Container type, such as m4a, mp4.</p>
     */
     @SerializedName("Container")
     @Expose
     private String Container;
 
     /**
-    * Video stream information.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * <p>Video stream information.</p>
     */
     @SerializedName("VideoStreamSet")
     @Expose
     private MediaVideoStreamItem [] VideoStreamSet;
 
     /**
-    * Audio stream information.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * <p>Audio stream information.</p>
     */
     @SerializedName("AudioStreamSet")
     @Expose
     private MediaAudioStreamItem [] AudioStreamSet;
 
     /**
-    * The watermark type. Valid values:
-<li>Trace: Digital watermark</li>
-<li>None: Regular watermark</li>
+    * <p>Digital watermark type. Available values:</p><li>Trace means transit watermark processing;</li><li>CopyRight means copyright watermark processing;</li><li>None means no digital watermark processing.</li>
     */
     @SerializedName("DigitalWatermarkType")
     @Expose
     private String DigitalWatermarkType;
 
     /**
-    * 
+    * <p>Copyright information.</p>
     */
     @SerializedName("CopyRightWatermarkText")
     @Expose
     private String CopyRightWatermarkText;
 
     /**
-    * Digital watermark template id.
+    * <p>Digital watermark template id.</p>
     */
     @SerializedName("BlindWatermarkDefinition")
     @Expose
     private Long BlindWatermarkDefinition;
 
     /**
-     * Get Address of output video file.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return Url Address of output video file.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * <p>Generated new FileId for transcoding. Valid when requesting to enable independence media output.</p>
+    */
+    @SerializedName("FileId")
+    @Expose
+    private String FileId;
+
+    /**
+     * Get <p>File URL of the transcoded video.</p> 
+     * @return Url <p>File URL of the transcoded video.</p>
      */
     public String getUrl() {
         return this.Url;
     }
 
     /**
-     * Set Address of output video file.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Url Address of output video file.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set <p>File URL of the transcoded video.</p>
+     * @param Url <p>File URL of the transcoded video.</p>
      */
     public void setUrl(String Url) {
         this.Url = Url;
     }
 
     /**
-     * Get For transcoding specification ID, see [Transcoding Parameter Template](https://intl.cloud.tencent.com/document/product/266/33476?from_cn_redirect=1). 
-<font color=red>Note: A value of 0 represents the original file. </font> 
-     * @return Definition For transcoding specification ID, see [Transcoding Parameter Template](https://intl.cloud.tencent.com/document/product/266/33476?from_cn_redirect=1). 
-<font color=red>Note: A value of 0 represents the original file. </font>
+     * Get <p>Transcoding specification ID. Please refer to <a href="https://www.tencentcloud.com/document/product/266/33476?from_cn_redirect=1">transcoding parameter template</a>.<br><font color="red">Note: A value of 0 means the raw file.</font></p> 
+     * @return Definition <p>Transcoding specification ID. Please refer to <a href="https://www.tencentcloud.com/document/product/266/33476?from_cn_redirect=1">transcoding parameter template</a>.<br><font color="red">Note: A value of 0 means the raw file.</font></p>
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set For transcoding specification ID, see [Transcoding Parameter Template](https://intl.cloud.tencent.com/document/product/266/33476?from_cn_redirect=1). 
-<font color=red>Note: A value of 0 represents the original file. </font>
-     * @param Definition For transcoding specification ID, see [Transcoding Parameter Template](https://intl.cloud.tencent.com/document/product/266/33476?from_cn_redirect=1). 
-<font color=red>Note: A value of 0 represents the original file. </font>
+     * Set <p>Transcoding specification ID. Please refer to <a href="https://www.tencentcloud.com/document/product/266/33476?from_cn_redirect=1">transcoding parameter template</a>.<br><font color="red">Note: A value of 0 means the raw file.</font></p>
+     * @param Definition <p>Transcoding specification ID. Please refer to <a href="https://www.tencentcloud.com/document/product/266/33476?from_cn_redirect=1">transcoding parameter template</a>.<br><font color="red">Note: A value of 0 means the raw file.</font></p>
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;
     }
 
     /**
-     * Get Sum of the average bitrate of a video stream and that of an audio stream in bps.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return Bitrate Sum of the average bitrate of a video stream and that of an audio stream in bps.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get <p>Sum of the mean bitrate of a stream and the mean audio stream bit rate, unit: bps.</p> 
+     * @return Bitrate <p>Sum of the mean bitrate of a stream and the mean audio stream bit rate, unit: bps.</p>
      */
     public Long getBitrate() {
         return this.Bitrate;
     }
 
     /**
-     * Set Sum of the average bitrate of a video stream and that of an audio stream in bps.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Bitrate Sum of the average bitrate of a video stream and that of an audio stream in bps.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set <p>Sum of the mean bitrate of a stream and the mean audio stream bit rate, unit: bps.</p>
+     * @param Bitrate <p>Sum of the mean bitrate of a stream and the mean audio stream bit rate, unit: bps.</p>
      */
     public void setBitrate(Long Bitrate) {
         this.Bitrate = Bitrate;
     }
 
     /**
-     * Get Maximum value of the height of a video stream in px.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return Height Maximum value of the height of a video stream in px.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get <p>Maximum value of video stream height. Unit: px.</p> 
+     * @return Height <p>Maximum value of video stream height. Unit: px.</p>
      */
     public Long getHeight() {
         return this.Height;
     }
 
     /**
-     * Set Maximum value of the height of a video stream in px.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Height Maximum value of the height of a video stream in px.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set <p>Maximum value of video stream height. Unit: px.</p>
+     * @param Height <p>Maximum value of video stream height. Unit: px.</p>
      */
     public void setHeight(Long Height) {
         this.Height = Height;
     }
 
     /**
-     * Get Maximum value of the width of a video stream in px.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return Width Maximum value of the width of a video stream in px.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get <p>Maximum value of video stream width. Unit: px.</p> 
+     * @return Width <p>Maximum value of video stream width. Unit: px.</p>
      */
     public Long getWidth() {
         return this.Width;
     }
 
     /**
-     * Set Maximum value of the width of a video stream in px.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Width Maximum value of the width of a video stream in px.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set <p>Maximum value of video stream width. Unit: px.</p>
+     * @param Width <p>Maximum value of video stream width. Unit: px.</p>
      */
     public void setWidth(Long Width) {
         this.Width = Width;
     }
 
     /**
-     * Get The file size (bytes).
-<li>If the file is an HLS file, the value of this parameter is the sum of the size of the M3U8 and TS files.</li> 
-     * @return Size The file size (bytes).
-<li>If the file is an HLS file, the value of this parameter is the sum of the size of the M3U8 and TS files.</li>
+     * Get <p>Total size of media files, measurement unit: byte.</p><li>When the media file is HLS, the size is the sum of m3u8 and ts file sizes.</li> 
+     * @return Size <p>Total size of media files, measurement unit: byte.</p><li>When the media file is HLS, the size is the sum of m3u8 and ts file sizes.</li>
      */
     public Long getSize() {
         return this.Size;
     }
 
     /**
-     * Set The file size (bytes).
-<li>If the file is an HLS file, the value of this parameter is the sum of the size of the M3U8 and TS files.</li>
-     * @param Size The file size (bytes).
-<li>If the file is an HLS file, the value of this parameter is the sum of the size of the M3U8 and TS files.</li>
+     * Set <p>Total size of media files, measurement unit: byte.</p><li>When the media file is HLS, the size is the sum of m3u8 and ts file sizes.</li>
+     * @param Size <p>Total size of media files, measurement unit: byte.</p><li>When the media file is HLS, the size is the sum of m3u8 and ts file sizes.</li>
      */
     public void setSize(Long Size) {
         this.Size = Size;
     }
 
     /**
-     * Get Video duration in seconds.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return Duration Video duration in seconds.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get <p>Video duration, in seconds.</p> 
+     * @return Duration <p>Video duration, in seconds.</p>
      */
     public Float getDuration() {
         return this.Duration;
     }
 
     /**
-     * Set Video duration in seconds.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Duration Video duration in seconds.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set <p>Video duration, in seconds.</p>
+     * @param Duration <p>Video duration, in seconds.</p>
      */
     public void setDuration(Float Duration) {
         this.Duration = Duration;
     }
 
     /**
-     * Get MD5 value of video.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return Md5 MD5 value of video.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get <p>md5 value of the video.</p> 
+     * @return Md5 <p>md5 value of the video.</p>
      */
     public String getMd5() {
         return this.Md5;
     }
 
     /**
-     * Set MD5 value of video.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Md5 MD5 value of video.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set <p>md5 value of the video.</p>
+     * @param Md5 <p>md5 value of the video.</p>
      */
     public void setMd5(String Md5) {
         this.Md5 = Md5;
     }
 
     /**
-     * Get Container, such as m4a and mp4.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return Container Container, such as m4a and mp4.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get <p>Container type, such as m4a, mp4.</p> 
+     * @return Container <p>Container type, such as m4a, mp4.</p>
      */
     public String getContainer() {
         return this.Container;
     }
 
     /**
-     * Set Container, such as m4a and mp4.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Container Container, such as m4a and mp4.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set <p>Container type, such as m4a, mp4.</p>
+     * @param Container <p>Container type, such as m4a, mp4.</p>
      */
     public void setContainer(String Container) {
         this.Container = Container;
     }
 
     /**
-     * Get Video stream information.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return VideoStreamSet Video stream information.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get <p>Video stream information.</p> 
+     * @return VideoStreamSet <p>Video stream information.</p>
      */
     public MediaVideoStreamItem [] getVideoStreamSet() {
         return this.VideoStreamSet;
     }
 
     /**
-     * Set Video stream information.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param VideoStreamSet Video stream information.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set <p>Video stream information.</p>
+     * @param VideoStreamSet <p>Video stream information.</p>
      */
     public void setVideoStreamSet(MediaVideoStreamItem [] VideoStreamSet) {
         this.VideoStreamSet = VideoStreamSet;
     }
 
     /**
-     * Get Audio stream information.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return AudioStreamSet Audio stream information.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get <p>Audio stream information.</p> 
+     * @return AudioStreamSet <p>Audio stream information.</p>
      */
     public MediaAudioStreamItem [] getAudioStreamSet() {
         return this.AudioStreamSet;
     }
 
     /**
-     * Set Audio stream information.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param AudioStreamSet Audio stream information.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set <p>Audio stream information.</p>
+     * @param AudioStreamSet <p>Audio stream information.</p>
      */
     public void setAudioStreamSet(MediaAudioStreamItem [] AudioStreamSet) {
         this.AudioStreamSet = AudioStreamSet;
     }
 
     /**
-     * Get The watermark type. Valid values:
-<li>Trace: Digital watermark</li>
-<li>None: Regular watermark</li> 
-     * @return DigitalWatermarkType The watermark type. Valid values:
-<li>Trace: Digital watermark</li>
-<li>None: Regular watermark</li>
+     * Get <p>Digital watermark type. Available values:</p><li>Trace means transit watermark processing;</li><li>CopyRight means copyright watermark processing;</li><li>None means no digital watermark processing.</li> 
+     * @return DigitalWatermarkType <p>Digital watermark type. Available values:</p><li>Trace means transit watermark processing;</li><li>CopyRight means copyright watermark processing;</li><li>None means no digital watermark processing.</li>
      */
     public String getDigitalWatermarkType() {
         return this.DigitalWatermarkType;
     }
 
     /**
-     * Set The watermark type. Valid values:
-<li>Trace: Digital watermark</li>
-<li>None: Regular watermark</li>
-     * @param DigitalWatermarkType The watermark type. Valid values:
-<li>Trace: Digital watermark</li>
-<li>None: Regular watermark</li>
+     * Set <p>Digital watermark type. Available values:</p><li>Trace means transit watermark processing;</li><li>CopyRight means copyright watermark processing;</li><li>None means no digital watermark processing.</li>
+     * @param DigitalWatermarkType <p>Digital watermark type. Available values:</p><li>Trace means transit watermark processing;</li><li>CopyRight means copyright watermark processing;</li><li>None means no digital watermark processing.</li>
      */
     public void setDigitalWatermarkType(String DigitalWatermarkType) {
         this.DigitalWatermarkType = DigitalWatermarkType;
     }
 
     /**
-     * Get  
-     * @return CopyRightWatermarkText 
+     * Get <p>Copyright information.</p> 
+     * @return CopyRightWatermarkText <p>Copyright information.</p>
      */
     public String getCopyRightWatermarkText() {
         return this.CopyRightWatermarkText;
     }
 
     /**
-     * Set 
-     * @param CopyRightWatermarkText 
+     * Set <p>Copyright information.</p>
+     * @param CopyRightWatermarkText <p>Copyright information.</p>
      */
     public void setCopyRightWatermarkText(String CopyRightWatermarkText) {
         this.CopyRightWatermarkText = CopyRightWatermarkText;
     }
 
     /**
-     * Get Digital watermark template id. 
-     * @return BlindWatermarkDefinition Digital watermark template id.
+     * Get <p>Digital watermark template id.</p> 
+     * @return BlindWatermarkDefinition <p>Digital watermark template id.</p>
      */
     public Long getBlindWatermarkDefinition() {
         return this.BlindWatermarkDefinition;
     }
 
     /**
-     * Set Digital watermark template id.
-     * @param BlindWatermarkDefinition Digital watermark template id.
+     * Set <p>Digital watermark template id.</p>
+     * @param BlindWatermarkDefinition <p>Digital watermark template id.</p>
      */
     public void setBlindWatermarkDefinition(Long BlindWatermarkDefinition) {
         this.BlindWatermarkDefinition = BlindWatermarkDefinition;
+    }
+
+    /**
+     * Get <p>Generated new FileId for transcoding. Valid when requesting to enable independence media output.</p> 
+     * @return FileId <p>Generated new FileId for transcoding. Valid when requesting to enable independence media output.</p>
+     */
+    public String getFileId() {
+        return this.FileId;
+    }
+
+    /**
+     * Set <p>Generated new FileId for transcoding. Valid when requesting to enable independence media output.</p>
+     * @param FileId <p>Generated new FileId for transcoding. Valid when requesting to enable independence media output.</p>
+     */
+    public void setFileId(String FileId) {
+        this.FileId = FileId;
     }
 
     public MediaTranscodeItem() {
@@ -466,6 +424,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
         if (source.BlindWatermarkDefinition != null) {
             this.BlindWatermarkDefinition = new Long(source.BlindWatermarkDefinition);
         }
+        if (source.FileId != null) {
+            this.FileId = new String(source.FileId);
+        }
     }
 
 
@@ -487,6 +448,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "DigitalWatermarkType", this.DigitalWatermarkType);
         this.setParamSimple(map, prefix + "CopyRightWatermarkText", this.CopyRightWatermarkText);
         this.setParamSimple(map, prefix + "BlindWatermarkDefinition", this.BlindWatermarkDefinition);
+        this.setParamSimple(map, prefix + "FileId", this.FileId);
 
     }
 }

@@ -115,16 +115,14 @@ public class BashEvent extends AbstractModel {
     private String MachineName;
 
     /**
-    * 0: bash log; 1: real-time monitoring (thunder edition)
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 0: bash log; 1: real-time monitoring (Thunder Edition)
     */
     @SerializedName("DetectBy")
     @Expose
     private Long DetectBy;
 
     /**
-    * Process ID
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Process id
     */
     @SerializedName("Pid")
     @Expose
@@ -132,7 +130,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Process name
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Exe")
     @Expose
@@ -140,30 +137,27 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Processing time
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ModifyTime")
     @Expose
     private String ModifyTime;
 
     /**
-    * Rule category: 0 - system rule; 1 - user rule
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Rule category. 0: system rule; 1: user rule
     */
     @SerializedName("RuleCategory")
     @Expose
     private Long RuleCategory;
 
     /**
-    * Automatically generated regular expression\nNote: This field may return null, indicating that no valid values can be obtained.
+    * Automatically generated regular expression
     */
     @SerializedName("RegexBashCmd")
     @Expose
     private String RegexBashCmd;
 
     /**
-    * Host HostName
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Host name.
     */
     @SerializedName("HostName")
     @Expose
@@ -378,50 +372,40 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get 0: bash log; 1: real-time monitoring (thunder edition)
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return DetectBy 0: bash log; 1: real-time monitoring (thunder edition)
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get 0: bash log; 1: real-time monitoring (Thunder Edition) 
+     * @return DetectBy 0: bash log; 1: real-time monitoring (Thunder Edition)
      */
     public Long getDetectBy() {
         return this.DetectBy;
     }
 
     /**
-     * Set 0: bash log; 1: real-time monitoring (thunder edition)
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param DetectBy 0: bash log; 1: real-time monitoring (thunder edition)
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 0: bash log; 1: real-time monitoring (Thunder Edition)
+     * @param DetectBy 0: bash log; 1: real-time monitoring (Thunder Edition)
      */
     public void setDetectBy(Long DetectBy) {
         this.DetectBy = DetectBy;
     }
 
     /**
-     * Get Process ID
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Pid Process ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Process id 
+     * @return Pid Process id
      */
     public String getPid() {
         return this.Pid;
     }
 
     /**
-     * Set Process ID
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Pid Process ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Process id
+     * @param Pid Process id
      */
     public void setPid(String Pid) {
         this.Pid = Pid;
     }
 
     /**
-     * Get Process name
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Process name 
      * @return Exe Process name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getExe() {
         return this.Exe;
@@ -429,19 +413,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Process name
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Exe Process name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setExe(String Exe) {
         this.Exe = Exe;
     }
 
     /**
-     * Get Processing time
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Processing time 
      * @return ModifyTime Processing time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getModifyTime() {
         return this.ModifyTime;
@@ -449,65 +429,55 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Processing time
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param ModifyTime Processing time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setModifyTime(String ModifyTime) {
         this.ModifyTime = ModifyTime;
     }
 
     /**
-     * Get Rule category: 0 - system rule; 1 - user rule
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return RuleCategory Rule category: 0 - system rule; 1 - user rule
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Rule category. 0: system rule; 1: user rule 
+     * @return RuleCategory Rule category. 0: system rule; 1: user rule
      */
     public Long getRuleCategory() {
         return this.RuleCategory;
     }
 
     /**
-     * Set Rule category: 0 - system rule; 1 - user rule
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param RuleCategory Rule category: 0 - system rule; 1 - user rule
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Rule category. 0: system rule; 1: user rule
+     * @param RuleCategory Rule category. 0: system rule; 1: user rule
      */
     public void setRuleCategory(Long RuleCategory) {
         this.RuleCategory = RuleCategory;
     }
 
     /**
-     * Get Automatically generated regular expression\nNote: This field may return null, indicating that no valid values can be obtained. 
-     * @return RegexBashCmd Automatically generated regular expression\nNote: This field may return null, indicating that no valid values can be obtained.
+     * Get Automatically generated regular expression 
+     * @return RegexBashCmd Automatically generated regular expression
      */
     public String getRegexBashCmd() {
         return this.RegexBashCmd;
     }
 
     /**
-     * Set Automatically generated regular expression\nNote: This field may return null, indicating that no valid values can be obtained.
-     * @param RegexBashCmd Automatically generated regular expression\nNote: This field may return null, indicating that no valid values can be obtained.
+     * Set Automatically generated regular expression
+     * @param RegexBashCmd Automatically generated regular expression
      */
     public void setRegexBashCmd(String RegexBashCmd) {
         this.RegexBashCmd = RegexBashCmd;
     }
 
     /**
-     * Get Host HostName
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return HostName Host HostName
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Host name. 
+     * @return HostName Host name.
      */
     public String getHostName() {
         return this.HostName;
     }
 
     /**
-     * Set Host HostName
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param HostName Host HostName
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Host name.
+     * @param HostName Host name.
      */
     public void setHostName(String HostName) {
         this.HostName = HostName;

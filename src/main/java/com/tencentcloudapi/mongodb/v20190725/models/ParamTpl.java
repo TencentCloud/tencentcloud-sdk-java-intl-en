@@ -56,7 +56,7 @@ public class ParamTpl extends AbstractModel {
     * Database type that the parameter template applies to.
 - REPLSET: replica set instance.
 - SHARD: shard instance.
--STANDALONE: Single-node instance.
+- STANDALONE: Single-node instance.
     */
     @SerializedName("ClusterType")
     @Expose
@@ -71,8 +71,8 @@ public class ParamTpl extends AbstractModel {
 
     /**
     * Template type.
--DEFAULT: System default template.
--CUSTOMIZE: custom template.
+- DEFAULT: System default template.
+- CUSTOMIZE: custom template.
     */
     @SerializedName("TplType")
     @Expose
@@ -162,11 +162,11 @@ public class ParamTpl extends AbstractModel {
      * Get Database type that the parameter template applies to.
 - REPLSET: replica set instance.
 - SHARD: shard instance.
--STANDALONE: Single-node instance. 
+- STANDALONE: Single-node instance. 
      * @return ClusterType Database type that the parameter template applies to.
 - REPLSET: replica set instance.
 - SHARD: shard instance.
--STANDALONE: Single-node instance.
+- STANDALONE: Single-node instance.
      */
     public String getClusterType() {
         return this.ClusterType;
@@ -176,11 +176,11 @@ public class ParamTpl extends AbstractModel {
      * Set Database type that the parameter template applies to.
 - REPLSET: replica set instance.
 - SHARD: shard instance.
--STANDALONE: Single-node instance.
+- STANDALONE: Single-node instance.
      * @param ClusterType Database type that the parameter template applies to.
 - REPLSET: replica set instance.
 - SHARD: shard instance.
--STANDALONE: Single-node instance.
+- STANDALONE: Single-node instance.
      */
     public void setClusterType(String ClusterType) {
         this.ClusterType = ClusterType;
@@ -204,11 +204,11 @@ public class ParamTpl extends AbstractModel {
 
     /**
      * Get Template type.
--DEFAULT: System default template.
--CUSTOMIZE: custom template. 
+- DEFAULT: System default template.
+- CUSTOMIZE: custom template. 
      * @return TplType Template type.
--DEFAULT: System default template.
--CUSTOMIZE: custom template.
+- DEFAULT: System default template.
+- CUSTOMIZE: custom template.
      */
     public String getTplType() {
         return this.TplType;
@@ -216,11 +216,11 @@ public class ParamTpl extends AbstractModel {
 
     /**
      * Set Template type.
--DEFAULT: System default template.
--CUSTOMIZE: custom template.
+- DEFAULT: System default template.
+- CUSTOMIZE: custom template.
      * @param TplType Template type.
--DEFAULT: System default template.
--CUSTOMIZE: custom template.
+- DEFAULT: System default template.
+- CUSTOMIZE: custom template.
      */
     public void setTplType(String TplType) {
         this.TplType = TplType;

@@ -24,8 +24,7 @@ import java.util.HashMap;
 public class DescribeVulLevelCountResponse extends AbstractModel {
 
     /**
-    * Statistical result
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Statistical Result
     */
     @SerializedName("VulLevelList")
     @Expose
@@ -39,20 +38,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Statistical result
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return VulLevelList Statistical result
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Statistical Result 
+     * @return VulLevelList Statistical Result
      */
     public VulLevelInfo [] getVulLevelList() {
         return this.VulLevelList;
     }
 
     /**
-     * Set Statistical result
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param VulLevelList Statistical result
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Statistical Result
+     * @param VulLevelList Statistical Result
      */
     public void setVulLevelList(VulLevelInfo [] VulLevelList) {
         this.VulLevelList = VulLevelList;

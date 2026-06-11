@@ -24,279 +24,302 @@ import java.util.HashMap;
 public class ProxyGroupRwInfo extends AbstractModel {
 
     /**
-    * Consistency type. Valid values: `eventual` (eventual consistency), `session` (session consistency), `global` (global consistency).
+    * <p>Consistency Type eventual-final consistency,global-global consistency,session-session consistency</p>
     */
     @SerializedName("ConsistencyType")
     @Expose
     private String ConsistencyType;
 
     /**
-    * Consistency timeout period
+    * <p>Consistency timeout</p>
     */
     @SerializedName("ConsistencyTimeOut")
     @Expose
     private Long ConsistencyTimeOut;
 
     /**
-    * Weight mode. Valid values: `system` (auto-assigned), `custom`.
+    * <p>Weight mode system-system-assigned, custom-custom</p>
     */
     @SerializedName("WeightMode")
     @Expose
     private String WeightMode;
 
     /**
-    * Whether to enable failover
+    * <p>Whether fault migration is enabled</p>
     */
     @SerializedName("FailOver")
     @Expose
     private String FailOver;
 
     /**
-    * Whether to automatically add read-only instance. Valid value: `yes`, `no`.
+    * <p>Automatically add read-only instance, yes-yes, no-no</p>
     */
     @SerializedName("AutoAddRo")
     @Expose
     private String AutoAddRo;
 
     /**
-    * Instance weight array
+    * <p>Instance weight array</p>
     */
     @SerializedName("InstanceWeights")
     @Expose
     private ProxyInstanceWeight [] InstanceWeights;
 
     /**
-    * Whether to enable read-write nodes. valid values: yes, no.
+    * <p>Whether to enable the read-write node, yes - enable, no - disable</p>
     */
     @SerializedName("OpenRw")
     @Expose
     private String OpenRw;
 
     /**
-    * Read/write attribute. Valid values: `READWRITE`, `READONLY`.
+    * <p>Read-write attribute, value range: READWRITE, READONLY</p>
     */
     @SerializedName("RwType")
     @Expose
     private String RwType;
 
     /**
-    * Transaction split
+    * <p>Transaction split</p>
     */
     @SerializedName("TransSplit")
     @Expose
     private Boolean TransSplit;
 
     /**
-    * Connection mode. Valid values: `balance`, `nearby`.
+    * <p>Connection mode, available values: balance, nearby</p>
     */
     @SerializedName("AccessMode")
     @Expose
     private String AccessMode;
 
     /**
-    * Whether to treat the libra node as an ordinary RO node
+    * <p>Whether to treat the libra node as an ordinary RO node</p>
     */
     @SerializedName("ApNodeAsRoNode")
     @Expose
     private Boolean ApNodeAsRoNode;
 
     /**
-    * libra node fault, whether to forward to other nodes
+    * <p>Whether to forward to other nodes when a libra node fault occurs</p>
     */
     @SerializedName("ApQueryToOtherNode")
     @Expose
     private Boolean ApQueryToOtherNode;
 
     /**
-     * Get Consistency type. Valid values: `eventual` (eventual consistency), `session` (session consistency), `global` (global consistency). 
-     * @return ConsistencyType Consistency type. Valid values: `eventual` (eventual consistency), `session` (session consistency), `global` (global consistency).
+    * 
+    */
+    @SerializedName("LoadBalanceMode")
+    @Expose
+    private String LoadBalanceMode;
+
+    /**
+     * Get <p>Consistency Type eventual-final consistency,global-global consistency,session-session consistency</p> 
+     * @return ConsistencyType <p>Consistency Type eventual-final consistency,global-global consistency,session-session consistency</p>
      */
     public String getConsistencyType() {
         return this.ConsistencyType;
     }
 
     /**
-     * Set Consistency type. Valid values: `eventual` (eventual consistency), `session` (session consistency), `global` (global consistency).
-     * @param ConsistencyType Consistency type. Valid values: `eventual` (eventual consistency), `session` (session consistency), `global` (global consistency).
+     * Set <p>Consistency Type eventual-final consistency,global-global consistency,session-session consistency</p>
+     * @param ConsistencyType <p>Consistency Type eventual-final consistency,global-global consistency,session-session consistency</p>
      */
     public void setConsistencyType(String ConsistencyType) {
         this.ConsistencyType = ConsistencyType;
     }
 
     /**
-     * Get Consistency timeout period 
-     * @return ConsistencyTimeOut Consistency timeout period
+     * Get <p>Consistency timeout</p> 
+     * @return ConsistencyTimeOut <p>Consistency timeout</p>
      */
     public Long getConsistencyTimeOut() {
         return this.ConsistencyTimeOut;
     }
 
     /**
-     * Set Consistency timeout period
-     * @param ConsistencyTimeOut Consistency timeout period
+     * Set <p>Consistency timeout</p>
+     * @param ConsistencyTimeOut <p>Consistency timeout</p>
      */
     public void setConsistencyTimeOut(Long ConsistencyTimeOut) {
         this.ConsistencyTimeOut = ConsistencyTimeOut;
     }
 
     /**
-     * Get Weight mode. Valid values: `system` (auto-assigned), `custom`. 
-     * @return WeightMode Weight mode. Valid values: `system` (auto-assigned), `custom`.
+     * Get <p>Weight mode system-system-assigned, custom-custom</p> 
+     * @return WeightMode <p>Weight mode system-system-assigned, custom-custom</p>
      */
     public String getWeightMode() {
         return this.WeightMode;
     }
 
     /**
-     * Set Weight mode. Valid values: `system` (auto-assigned), `custom`.
-     * @param WeightMode Weight mode. Valid values: `system` (auto-assigned), `custom`.
+     * Set <p>Weight mode system-system-assigned, custom-custom</p>
+     * @param WeightMode <p>Weight mode system-system-assigned, custom-custom</p>
      */
     public void setWeightMode(String WeightMode) {
         this.WeightMode = WeightMode;
     }
 
     /**
-     * Get Whether to enable failover 
-     * @return FailOver Whether to enable failover
+     * Get <p>Whether fault migration is enabled</p> 
+     * @return FailOver <p>Whether fault migration is enabled</p>
      */
     public String getFailOver() {
         return this.FailOver;
     }
 
     /**
-     * Set Whether to enable failover
-     * @param FailOver Whether to enable failover
+     * Set <p>Whether fault migration is enabled</p>
+     * @param FailOver <p>Whether fault migration is enabled</p>
      */
     public void setFailOver(String FailOver) {
         this.FailOver = FailOver;
     }
 
     /**
-     * Get Whether to automatically add read-only instance. Valid value: `yes`, `no`. 
-     * @return AutoAddRo Whether to automatically add read-only instance. Valid value: `yes`, `no`.
+     * Get <p>Automatically add read-only instance, yes-yes, no-no</p> 
+     * @return AutoAddRo <p>Automatically add read-only instance, yes-yes, no-no</p>
      */
     public String getAutoAddRo() {
         return this.AutoAddRo;
     }
 
     /**
-     * Set Whether to automatically add read-only instance. Valid value: `yes`, `no`.
-     * @param AutoAddRo Whether to automatically add read-only instance. Valid value: `yes`, `no`.
+     * Set <p>Automatically add read-only instance, yes-yes, no-no</p>
+     * @param AutoAddRo <p>Automatically add read-only instance, yes-yes, no-no</p>
      */
     public void setAutoAddRo(String AutoAddRo) {
         this.AutoAddRo = AutoAddRo;
     }
 
     /**
-     * Get Instance weight array 
-     * @return InstanceWeights Instance weight array
+     * Get <p>Instance weight array</p> 
+     * @return InstanceWeights <p>Instance weight array</p>
      */
     public ProxyInstanceWeight [] getInstanceWeights() {
         return this.InstanceWeights;
     }
 
     /**
-     * Set Instance weight array
-     * @param InstanceWeights Instance weight array
+     * Set <p>Instance weight array</p>
+     * @param InstanceWeights <p>Instance weight array</p>
      */
     public void setInstanceWeights(ProxyInstanceWeight [] InstanceWeights) {
         this.InstanceWeights = InstanceWeights;
     }
 
     /**
-     * Get Whether to enable read-write nodes. valid values: yes, no. 
-     * @return OpenRw Whether to enable read-write nodes. valid values: yes, no.
+     * Get <p>Whether to enable the read-write node, yes - enable, no - disable</p> 
+     * @return OpenRw <p>Whether to enable the read-write node, yes - enable, no - disable</p>
      */
     public String getOpenRw() {
         return this.OpenRw;
     }
 
     /**
-     * Set Whether to enable read-write nodes. valid values: yes, no.
-     * @param OpenRw Whether to enable read-write nodes. valid values: yes, no.
+     * Set <p>Whether to enable the read-write node, yes - enable, no - disable</p>
+     * @param OpenRw <p>Whether to enable the read-write node, yes - enable, no - disable</p>
      */
     public void setOpenRw(String OpenRw) {
         this.OpenRw = OpenRw;
     }
 
     /**
-     * Get Read/write attribute. Valid values: `READWRITE`, `READONLY`. 
-     * @return RwType Read/write attribute. Valid values: `READWRITE`, `READONLY`.
+     * Get <p>Read-write attribute, value range: READWRITE, READONLY</p> 
+     * @return RwType <p>Read-write attribute, value range: READWRITE, READONLY</p>
      */
     public String getRwType() {
         return this.RwType;
     }
 
     /**
-     * Set Read/write attribute. Valid values: `READWRITE`, `READONLY`.
-     * @param RwType Read/write attribute. Valid values: `READWRITE`, `READONLY`.
+     * Set <p>Read-write attribute, value range: READWRITE, READONLY</p>
+     * @param RwType <p>Read-write attribute, value range: READWRITE, READONLY</p>
      */
     public void setRwType(String RwType) {
         this.RwType = RwType;
     }
 
     /**
-     * Get Transaction split 
-     * @return TransSplit Transaction split
+     * Get <p>Transaction split</p> 
+     * @return TransSplit <p>Transaction split</p>
      */
     public Boolean getTransSplit() {
         return this.TransSplit;
     }
 
     /**
-     * Set Transaction split
-     * @param TransSplit Transaction split
+     * Set <p>Transaction split</p>
+     * @param TransSplit <p>Transaction split</p>
      */
     public void setTransSplit(Boolean TransSplit) {
         this.TransSplit = TransSplit;
     }
 
     /**
-     * Get Connection mode. Valid values: `balance`, `nearby`. 
-     * @return AccessMode Connection mode. Valid values: `balance`, `nearby`.
+     * Get <p>Connection mode, available values: balance, nearby</p> 
+     * @return AccessMode <p>Connection mode, available values: balance, nearby</p>
      */
     public String getAccessMode() {
         return this.AccessMode;
     }
 
     /**
-     * Set Connection mode. Valid values: `balance`, `nearby`.
-     * @param AccessMode Connection mode. Valid values: `balance`, `nearby`.
+     * Set <p>Connection mode, available values: balance, nearby</p>
+     * @param AccessMode <p>Connection mode, available values: balance, nearby</p>
      */
     public void setAccessMode(String AccessMode) {
         this.AccessMode = AccessMode;
     }
 
     /**
-     * Get Whether to treat the libra node as an ordinary RO node 
-     * @return ApNodeAsRoNode Whether to treat the libra node as an ordinary RO node
+     * Get <p>Whether to treat the libra node as an ordinary RO node</p> 
+     * @return ApNodeAsRoNode <p>Whether to treat the libra node as an ordinary RO node</p>
      */
     public Boolean getApNodeAsRoNode() {
         return this.ApNodeAsRoNode;
     }
 
     /**
-     * Set Whether to treat the libra node as an ordinary RO node
-     * @param ApNodeAsRoNode Whether to treat the libra node as an ordinary RO node
+     * Set <p>Whether to treat the libra node as an ordinary RO node</p>
+     * @param ApNodeAsRoNode <p>Whether to treat the libra node as an ordinary RO node</p>
      */
     public void setApNodeAsRoNode(Boolean ApNodeAsRoNode) {
         this.ApNodeAsRoNode = ApNodeAsRoNode;
     }
 
     /**
-     * Get libra node fault, whether to forward to other nodes 
-     * @return ApQueryToOtherNode libra node fault, whether to forward to other nodes
+     * Get <p>Whether to forward to other nodes when a libra node fault occurs</p> 
+     * @return ApQueryToOtherNode <p>Whether to forward to other nodes when a libra node fault occurs</p>
      */
     public Boolean getApQueryToOtherNode() {
         return this.ApQueryToOtherNode;
     }
 
     /**
-     * Set libra node fault, whether to forward to other nodes
-     * @param ApQueryToOtherNode libra node fault, whether to forward to other nodes
+     * Set <p>Whether to forward to other nodes when a libra node fault occurs</p>
+     * @param ApQueryToOtherNode <p>Whether to forward to other nodes when a libra node fault occurs</p>
      */
     public void setApQueryToOtherNode(Boolean ApQueryToOtherNode) {
         this.ApQueryToOtherNode = ApQueryToOtherNode;
+    }
+
+    /**
+     * Get  
+     * @return LoadBalanceMode 
+     */
+    public String getLoadBalanceMode() {
+        return this.LoadBalanceMode;
+    }
+
+    /**
+     * Set 
+     * @param LoadBalanceMode 
+     */
+    public void setLoadBalanceMode(String LoadBalanceMode) {
+        this.LoadBalanceMode = LoadBalanceMode;
     }
 
     public ProxyGroupRwInfo() {
@@ -346,6 +369,9 @@ public class ProxyGroupRwInfo extends AbstractModel {
         if (source.ApQueryToOtherNode != null) {
             this.ApQueryToOtherNode = new Boolean(source.ApQueryToOtherNode);
         }
+        if (source.LoadBalanceMode != null) {
+            this.LoadBalanceMode = new String(source.LoadBalanceMode);
+        }
     }
 
 
@@ -365,6 +391,7 @@ public class ProxyGroupRwInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "AccessMode", this.AccessMode);
         this.setParamSimple(map, prefix + "ApNodeAsRoNode", this.ApNodeAsRoNode);
         this.setParamSimple(map, prefix + "ApQueryToOtherNode", this.ApQueryToOtherNode);
+        this.setParamSimple(map, prefix + "LoadBalanceMode", this.LoadBalanceMode);
 
     }
 }

@@ -24,8 +24,7 @@ import java.util.HashMap;
 public class DescribeSecurityBroadcastInfoResponse extends AbstractModel {
 
     /**
-    * Security broadcasting article details
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Security report article details
     */
     @SerializedName("BroadcastInfo")
     @Expose
@@ -39,20 +38,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Security broadcasting article details
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return BroadcastInfo Security broadcasting article details
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Security report article details 
+     * @return BroadcastInfo Security report article details
      */
     public BroadcastInfo getBroadcastInfo() {
         return this.BroadcastInfo;
     }
 
     /**
-     * Set Security broadcasting article details
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param BroadcastInfo Security broadcasting article details
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Security report article details
+     * @param BroadcastInfo Security report article details
      */
     public void setBroadcastInfo(BroadcastInfo BroadcastInfo) {
         this.BroadcastInfo = BroadcastInfo;

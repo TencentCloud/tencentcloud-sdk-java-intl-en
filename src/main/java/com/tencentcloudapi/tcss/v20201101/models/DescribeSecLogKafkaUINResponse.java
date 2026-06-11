@@ -25,15 +25,13 @@ public class DescribeSecLogKafkaUINResponse extends AbstractModel {
 
     /**
     * Target UIN
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("DstUIN")
     @Expose
     private String DstUIN;
 
     /**
-    * Licensing status
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Authorization status
     */
     @SerializedName("Status")
     @Expose
@@ -47,10 +45,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Target UIN
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Target UIN 
      * @return DstUIN Target UIN
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getDstUIN() {
         return this.DstUIN;
@@ -58,29 +54,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Target UIN
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param DstUIN Target UIN
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setDstUIN(String DstUIN) {
         this.DstUIN = DstUIN;
     }
 
     /**
-     * Get Licensing status
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Status Licensing status
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Authorization status 
+     * @return Status Authorization status
      */
     public Boolean getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Licensing status
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Status Licensing status
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Authorization status
+     * @param Status Authorization status
      */
     public void setStatus(Boolean Status) {
         this.Status = Status;

@@ -122,7 +122,7 @@ public class AssetMachineDetail extends AbstractModel {
     private String CpuLoad;
 
     /**
-    * Protection Level. 0 Basic Edition; 1 Professional Edition; 2 Premium Edition; 3 General Discount Edition
+    * Protection level: 0 Basic version, 1 Pro edition, 2 Flagship edition, 3 Lightweight edition
     */
     @SerializedName("ProtectLevel")
     @Expose
@@ -164,7 +164,7 @@ public class AssetMachineDetail extends AbstractModel {
     private String CoreVersion;
 
     /**
-    * linux/windows
+    * Linux/Windows
     */
     @SerializedName("OsType")
     @Expose
@@ -250,7 +250,6 @@ public class AssetMachineDetail extends AbstractModel {
 
     /**
     * Offline time
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("OfflineTime")
     @Expose
@@ -258,7 +257,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Host ID
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("InstanceId")
     @Expose
@@ -266,7 +264,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Data update time
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("UpdateTime")
     @Expose
@@ -274,7 +271,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Host Additional Information
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("MachineExtraInfo")
     @Expose
@@ -282,7 +278,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * CpuLoadVul
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("CpuLoadVul")
     @Expose
@@ -290,7 +285,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Time
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("FirstTime")
     @Expose
@@ -521,16 +515,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Protection Level. 0 Basic Edition; 1 Professional Edition; 2 Premium Edition; 3 General Discount Edition 
-     * @return ProtectLevel Protection Level. 0 Basic Edition; 1 Professional Edition; 2 Premium Edition; 3 General Discount Edition
+     * Get Protection level: 0 Basic version, 1 Pro edition, 2 Flagship edition, 3 Lightweight edition 
+     * @return ProtectLevel Protection level: 0 Basic version, 1 Pro edition, 2 Flagship edition, 3 Lightweight edition
      */
     public Long getProtectLevel() {
         return this.ProtectLevel;
     }
 
     /**
-     * Set Protection Level. 0 Basic Edition; 1 Professional Edition; 2 Premium Edition; 3 General Discount Edition
-     * @param ProtectLevel Protection Level. 0 Basic Edition; 1 Professional Edition; 2 Premium Edition; 3 General Discount Edition
+     * Set Protection level: 0 Basic version, 1 Pro edition, 2 Flagship edition, 3 Lightweight edition
+     * @param ProtectLevel Protection level: 0 Basic version, 1 Pro edition, 2 Flagship edition, 3 Lightweight edition
      */
     public void setProtectLevel(Long ProtectLevel) {
         this.ProtectLevel = ProtectLevel;
@@ -617,16 +611,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get linux/windows 
-     * @return OsType linux/windows
+     * Get Linux/Windows 
+     * @return OsType Linux/Windows
      */
     public String getOsType() {
         return this.OsType;
     }
 
     /**
-     * Set linux/windows
-     * @param OsType linux/windows
+     * Set Linux/Windows
+     * @param OsType Linux/Windows
      */
     public void setOsType(String OsType) {
         this.OsType = OsType;
@@ -813,10 +807,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Offline time
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Offline time 
      * @return OfflineTime Offline time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getOfflineTime() {
         return this.OfflineTime;
@@ -824,19 +816,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Offline time
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param OfflineTime Offline time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setOfflineTime(String OfflineTime) {
         this.OfflineTime = OfflineTime;
     }
 
     /**
-     * Get Host ID
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Host ID 
      * @return InstanceId Host ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getInstanceId() {
         return this.InstanceId;
@@ -844,19 +832,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Host ID
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param InstanceId Host ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Data update time
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Data update time 
      * @return UpdateTime Data update time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getUpdateTime() {
         return this.UpdateTime;
@@ -864,19 +848,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Data update time
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param UpdateTime Data update time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;
     }
 
     /**
-     * Get Host Additional Information
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Host Additional Information 
      * @return MachineExtraInfo Host Additional Information
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public MachineExtraInfo getMachineExtraInfo() {
         return this.MachineExtraInfo;
@@ -884,19 +864,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Host Additional Information
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param MachineExtraInfo Host Additional Information
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setMachineExtraInfo(MachineExtraInfo MachineExtraInfo) {
         this.MachineExtraInfo = MachineExtraInfo;
     }
 
     /**
-     * Get CpuLoadVul
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get CpuLoadVul 
      * @return CpuLoadVul CpuLoadVul
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getCpuLoadVul() {
         return this.CpuLoadVul;
@@ -904,19 +880,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set CpuLoadVul
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param CpuLoadVul CpuLoadVul
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setCpuLoadVul(String CpuLoadVul) {
         this.CpuLoadVul = CpuLoadVul;
     }
 
     /**
-     * Get Time
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Time 
      * @return FirstTime Time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getFirstTime() {
         return this.FirstTime;
@@ -924,9 +896,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Time
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param FirstTime Time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setFirstTime(String FirstTime) {
         this.FirstTime = FirstTime;

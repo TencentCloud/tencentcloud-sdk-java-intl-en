@@ -25,7 +25,6 @@ public class NetAttackTopInfo extends AbstractModel {
 
     /**
     * Top Statistical Data on Network Attack Host Dimension
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Agent")
     @Expose
@@ -33,7 +32,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Top Statistical Data on Network Attack IP Source Dimension
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("SrcIp")
     @Expose
@@ -41,7 +39,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Top Statistical Data on Network Attack Target Port Dimension
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("DstPort")
     @Expose
@@ -49,17 +46,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Top Statistical Data on Network Attack Vulnerability Dimension
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Vul")
     @Expose
     private TopInfo [] Vul;
 
     /**
-     * Get Top Statistical Data on Network Attack Host Dimension
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Top Statistical Data on Network Attack Host Dimension 
      * @return Agent Top Statistical Data on Network Attack Host Dimension
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public TopInfo [] getAgent() {
         return this.Agent;
@@ -67,19 +61,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Top Statistical Data on Network Attack Host Dimension
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Agent Top Statistical Data on Network Attack Host Dimension
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setAgent(TopInfo [] Agent) {
         this.Agent = Agent;
     }
 
     /**
-     * Get Top Statistical Data on Network Attack IP Source Dimension
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Top Statistical Data on Network Attack IP Source Dimension 
      * @return SrcIp Top Statistical Data on Network Attack IP Source Dimension
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public TopInfo [] getSrcIp() {
         return this.SrcIp;
@@ -87,19 +77,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Top Statistical Data on Network Attack IP Source Dimension
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param SrcIp Top Statistical Data on Network Attack IP Source Dimension
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setSrcIp(TopInfo [] SrcIp) {
         this.SrcIp = SrcIp;
     }
 
     /**
-     * Get Top Statistical Data on Network Attack Target Port Dimension
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Top Statistical Data on Network Attack Target Port Dimension 
      * @return DstPort Top Statistical Data on Network Attack Target Port Dimension
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public TopInfo [] getDstPort() {
         return this.DstPort;
@@ -107,19 +93,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Top Statistical Data on Network Attack Target Port Dimension
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param DstPort Top Statistical Data on Network Attack Target Port Dimension
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setDstPort(TopInfo [] DstPort) {
         this.DstPort = DstPort;
     }
 
     /**
-     * Get Top Statistical Data on Network Attack Vulnerability Dimension
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Top Statistical Data on Network Attack Vulnerability Dimension 
      * @return Vul Top Statistical Data on Network Attack Vulnerability Dimension
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public TopInfo [] getVul() {
         return this.Vul;
@@ -127,9 +109,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Top Statistical Data on Network Attack Vulnerability Dimension
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Vul Top Statistical Data on Network Attack Vulnerability Dimension
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setVul(TopInfo [] Vul) {
         this.Vul = Vul;

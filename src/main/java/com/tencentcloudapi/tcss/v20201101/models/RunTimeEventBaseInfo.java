@@ -124,53 +124,48 @@ File tampering
     private String LatestFoundTime;
 
     /**
-    * Private IP
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Private IP address
     */
     @SerializedName("HostIP")
     @Expose
     private String HostIP;
 
     /**
-    * Public IP
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Public IP address
     */
     @SerializedName("ClientIP")
     @Expose
     private String ClientIP;
 
     /**
-    * Network status
-`NORMAL`: 	Not isolated.
-`ISOLATED`: 		Isolated.
-`ISOLATING`: 		Isolating.
-`ISOLATE_FAILED`: 	Isolation failed.
-`RESTORING`: Recovering.
-`RESTORE_FAILED`: Recovery failed.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Network status.
+Unisolated  NORMAL
+ISOLATED
+isolated
+Isolation FAILED
+RESTORING isolation
+Isolation restoration failed RESTORE_FAILED
     */
     @SerializedName("ContainerNetStatus")
     @Expose
     private String ContainerNetStatus;
 
     /**
-    * Sub-status of the container
-"AGENT_OFFLINE"       // The agent is offline.
-"NODE_DESTROYED"      // The node is terminated.
-"CONTAINER_EXITED"    // The container exited.
-"CONTAINER_DESTROYED" // The container was terminated.
-"SHARED_HOST"         // The container shares the network with the server.
-"RESOURCE_LIMIT"      // The number of resources to be isolated exceeds the limit.
-"UNKNOW"              // The reason is unknown.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * container sub-status
+AGENT_OFFLINE
+NODE_DESTROYED
+CONTAINER_EXITED
+CONTAINER_DESTROYED
+"SHARED_HOST"         // Container shares network with host
+RESOURCE_LIMIT
+"UNKNOW": Unknown
     */
     @SerializedName("ContainerNetSubStatus")
     @Expose
     private String ContainerNetSubStatus;
 
     /**
-    * Container isolation operation source
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Container Isolation Operation Source
     */
     @SerializedName("ContainerIsolateOperationSrc")
     @Expose
@@ -261,18 +256,25 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String HostID;
 
     /**
-    * Namespace
+    * 
     */
     @SerializedName("Namespace")
     @Expose
     private String Namespace;
 
     /**
-    * WorkloadType
+    * 
     */
     @SerializedName("WorkloadType")
     @Expose
     private String WorkloadType;
+
+    /**
+    * Container running status
+    */
+    @SerializedName("ContainerStatus")
+    @Expose
+    private String ContainerStatus;
 
     /**
      * Get Unique event ID 
@@ -531,152 +533,132 @@ File tampering
     }
 
     /**
-     * Get Private IP
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return HostIP Private IP
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Private IP address 
+     * @return HostIP Private IP address
      */
     public String getHostIP() {
         return this.HostIP;
     }
 
     /**
-     * Set Private IP
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param HostIP Private IP
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Private IP address
+     * @param HostIP Private IP address
      */
     public void setHostIP(String HostIP) {
         this.HostIP = HostIP;
     }
 
     /**
-     * Get Public IP
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ClientIP Public IP
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Public IP address 
+     * @return ClientIP Public IP address
      */
     public String getClientIP() {
         return this.ClientIP;
     }
 
     /**
-     * Set Public IP
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ClientIP Public IP
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Public IP address
+     * @param ClientIP Public IP address
      */
     public void setClientIP(String ClientIP) {
         this.ClientIP = ClientIP;
     }
 
     /**
-     * Get Network status
-`NORMAL`: 	Not isolated.
-`ISOLATED`: 		Isolated.
-`ISOLATING`: 		Isolating.
-`ISOLATE_FAILED`: 	Isolation failed.
-`RESTORING`: Recovering.
-`RESTORE_FAILED`: Recovery failed.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ContainerNetStatus Network status
-`NORMAL`: 	Not isolated.
-`ISOLATED`: 		Isolated.
-`ISOLATING`: 		Isolating.
-`ISOLATE_FAILED`: 	Isolation failed.
-`RESTORING`: Recovering.
-`RESTORE_FAILED`: Recovery failed.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Network status.
+Unisolated  NORMAL
+ISOLATED
+isolated
+Isolation FAILED
+RESTORING isolation
+Isolation restoration failed RESTORE_FAILED 
+     * @return ContainerNetStatus Network status.
+Unisolated  NORMAL
+ISOLATED
+isolated
+Isolation FAILED
+RESTORING isolation
+Isolation restoration failed RESTORE_FAILED
      */
     public String getContainerNetStatus() {
         return this.ContainerNetStatus;
     }
 
     /**
-     * Set Network status
-`NORMAL`: 	Not isolated.
-`ISOLATED`: 		Isolated.
-`ISOLATING`: 		Isolating.
-`ISOLATE_FAILED`: 	Isolation failed.
-`RESTORING`: Recovering.
-`RESTORE_FAILED`: Recovery failed.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ContainerNetStatus Network status
-`NORMAL`: 	Not isolated.
-`ISOLATED`: 		Isolated.
-`ISOLATING`: 		Isolating.
-`ISOLATE_FAILED`: 	Isolation failed.
-`RESTORING`: Recovering.
-`RESTORE_FAILED`: Recovery failed.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Network status.
+Unisolated  NORMAL
+ISOLATED
+isolated
+Isolation FAILED
+RESTORING isolation
+Isolation restoration failed RESTORE_FAILED
+     * @param ContainerNetStatus Network status.
+Unisolated  NORMAL
+ISOLATED
+isolated
+Isolation FAILED
+RESTORING isolation
+Isolation restoration failed RESTORE_FAILED
      */
     public void setContainerNetStatus(String ContainerNetStatus) {
         this.ContainerNetStatus = ContainerNetStatus;
     }
 
     /**
-     * Get Sub-status of the container
-"AGENT_OFFLINE"       // The agent is offline.
-"NODE_DESTROYED"      // The node is terminated.
-"CONTAINER_EXITED"    // The container exited.
-"CONTAINER_DESTROYED" // The container was terminated.
-"SHARED_HOST"         // The container shares the network with the server.
-"RESOURCE_LIMIT"      // The number of resources to be isolated exceeds the limit.
-"UNKNOW"              // The reason is unknown.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ContainerNetSubStatus Sub-status of the container
-"AGENT_OFFLINE"       // The agent is offline.
-"NODE_DESTROYED"      // The node is terminated.
-"CONTAINER_EXITED"    // The container exited.
-"CONTAINER_DESTROYED" // The container was terminated.
-"SHARED_HOST"         // The container shares the network with the server.
-"RESOURCE_LIMIT"      // The number of resources to be isolated exceeds the limit.
-"UNKNOW"              // The reason is unknown.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get container sub-status
+AGENT_OFFLINE
+NODE_DESTROYED
+CONTAINER_EXITED
+CONTAINER_DESTROYED
+"SHARED_HOST"         // Container shares network with host
+RESOURCE_LIMIT
+"UNKNOW": Unknown 
+     * @return ContainerNetSubStatus container sub-status
+AGENT_OFFLINE
+NODE_DESTROYED
+CONTAINER_EXITED
+CONTAINER_DESTROYED
+"SHARED_HOST"         // Container shares network with host
+RESOURCE_LIMIT
+"UNKNOW": Unknown
      */
     public String getContainerNetSubStatus() {
         return this.ContainerNetSubStatus;
     }
 
     /**
-     * Set Sub-status of the container
-"AGENT_OFFLINE"       // The agent is offline.
-"NODE_DESTROYED"      // The node is terminated.
-"CONTAINER_EXITED"    // The container exited.
-"CONTAINER_DESTROYED" // The container was terminated.
-"SHARED_HOST"         // The container shares the network with the server.
-"RESOURCE_LIMIT"      // The number of resources to be isolated exceeds the limit.
-"UNKNOW"              // The reason is unknown.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ContainerNetSubStatus Sub-status of the container
-"AGENT_OFFLINE"       // The agent is offline.
-"NODE_DESTROYED"      // The node is terminated.
-"CONTAINER_EXITED"    // The container exited.
-"CONTAINER_DESTROYED" // The container was terminated.
-"SHARED_HOST"         // The container shares the network with the server.
-"RESOURCE_LIMIT"      // The number of resources to be isolated exceeds the limit.
-"UNKNOW"              // The reason is unknown.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set container sub-status
+AGENT_OFFLINE
+NODE_DESTROYED
+CONTAINER_EXITED
+CONTAINER_DESTROYED
+"SHARED_HOST"         // Container shares network with host
+RESOURCE_LIMIT
+"UNKNOW": Unknown
+     * @param ContainerNetSubStatus container sub-status
+AGENT_OFFLINE
+NODE_DESTROYED
+CONTAINER_EXITED
+CONTAINER_DESTROYED
+"SHARED_HOST"         // Container shares network with host
+RESOURCE_LIMIT
+"UNKNOW": Unknown
      */
     public void setContainerNetSubStatus(String ContainerNetSubStatus) {
         this.ContainerNetSubStatus = ContainerNetSubStatus;
     }
 
     /**
-     * Get Container isolation operation source
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ContainerIsolateOperationSrc Container isolation operation source
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Container Isolation Operation Source 
+     * @return ContainerIsolateOperationSrc Container Isolation Operation Source
      */
     public String getContainerIsolateOperationSrc() {
         return this.ContainerIsolateOperationSrc;
     }
 
     /**
-     * Set Container isolation operation source
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ContainerIsolateOperationSrc Container isolation operation source
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Container Isolation Operation Source
+     * @param ContainerIsolateOperationSrc Container Isolation Operation Source
      */
     public void setContainerIsolateOperationSrc(String ContainerIsolateOperationSrc) {
         this.ContainerIsolateOperationSrc = ContainerIsolateOperationSrc;
@@ -875,35 +857,51 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Namespace 
-     * @return Namespace Namespace
+     * Get  
+     * @return Namespace 
      */
     public String getNamespace() {
         return this.Namespace;
     }
 
     /**
-     * Set Namespace
-     * @param Namespace Namespace
+     * Set 
+     * @param Namespace 
      */
     public void setNamespace(String Namespace) {
         this.Namespace = Namespace;
     }
 
     /**
-     * Get WorkloadType 
-     * @return WorkloadType WorkloadType
+     * Get  
+     * @return WorkloadType 
      */
     public String getWorkloadType() {
         return this.WorkloadType;
     }
 
     /**
-     * Set WorkloadType
-     * @param WorkloadType WorkloadType
+     * Set 
+     * @param WorkloadType 
      */
     public void setWorkloadType(String WorkloadType) {
         this.WorkloadType = WorkloadType;
+    }
+
+    /**
+     * Get Container running status 
+     * @return ContainerStatus Container running status
+     */
+    public String getContainerStatus() {
+        return this.ContainerStatus;
+    }
+
+    /**
+     * Set Container running status
+     * @param ContainerStatus Container running status
+     */
+    public void setContainerStatus(String ContainerStatus) {
+        this.ContainerStatus = ContainerStatus;
     }
 
     public RunTimeEventBaseInfo() {
@@ -1007,6 +1005,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.WorkloadType != null) {
             this.WorkloadType = new String(source.WorkloadType);
         }
+        if (source.ContainerStatus != null) {
+            this.ContainerStatus = new String(source.ContainerStatus);
+        }
     }
 
 
@@ -1045,6 +1046,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "HostID", this.HostID);
         this.setParamSimple(map, prefix + "Namespace", this.Namespace);
         this.setParamSimple(map, prefix + "WorkloadType", this.WorkloadType);
+        this.setParamSimple(map, prefix + "ContainerStatus", this.ContainerStatus);
 
     }
 }

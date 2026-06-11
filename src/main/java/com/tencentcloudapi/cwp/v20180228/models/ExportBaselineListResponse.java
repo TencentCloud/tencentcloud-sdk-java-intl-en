@@ -25,7 +25,6 @@ public class ExportBaselineListResponse extends AbstractModel {
 
     /**
     * Download URL of exported file (deprecated)
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("DownloadUrl")
     @Expose
@@ -46,10 +45,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Download URL of exported file (deprecated)
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Download URL of exported file (deprecated) 
      * @return DownloadUrl Download URL of exported file (deprecated)
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getDownloadUrl() {
         return this.DownloadUrl;
@@ -57,9 +54,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Download URL of exported file (deprecated)
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param DownloadUrl Download URL of exported file (deprecated)
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setDownloadUrl(String DownloadUrl) {
         this.DownloadUrl = DownloadUrl;

@@ -24,69 +24,89 @@ import java.util.HashMap;
 public class DescribeShipperTasksRequest extends AbstractModel {
 
     /**
-    * Shipping rule ID
+    * Shipping Rule Id.
+
+-Obtain the ShipperId by [obtaining the shipping task list](https://www.tencentcloud.com/document/product/614/58745?from_cn_redirect=1).
     */
     @SerializedName("ShipperId")
     @Expose
     private String ShipperId;
 
     /**
-    * Query start timestamp in milliseconds, which can be within the last three days
+    * Start timestamp for the query. Supports queries within the most recent 3 days in ms.
+StartTime must be less than EndTime
     */
     @SerializedName("StartTime")
     @Expose
     private Long StartTime;
 
     /**
-    * Query end timestamp in milliseconds
+    * Query end timestamp, in ms.
+StartTime must be less than EndTime
     */
     @SerializedName("EndTime")
     @Expose
     private Long EndTime;
 
     /**
-     * Get Shipping rule ID 
-     * @return ShipperId Shipping rule ID
+     * Get Shipping Rule Id.
+
+-Obtain the ShipperId by [obtaining the shipping task list](https://www.tencentcloud.com/document/product/614/58745?from_cn_redirect=1). 
+     * @return ShipperId Shipping Rule Id.
+
+-Obtain the ShipperId by [obtaining the shipping task list](https://www.tencentcloud.com/document/product/614/58745?from_cn_redirect=1).
      */
     public String getShipperId() {
         return this.ShipperId;
     }
 
     /**
-     * Set Shipping rule ID
-     * @param ShipperId Shipping rule ID
+     * Set Shipping Rule Id.
+
+-Obtain the ShipperId by [obtaining the shipping task list](https://www.tencentcloud.com/document/product/614/58745?from_cn_redirect=1).
+     * @param ShipperId Shipping Rule Id.
+
+-Obtain the ShipperId by [obtaining the shipping task list](https://www.tencentcloud.com/document/product/614/58745?from_cn_redirect=1).
      */
     public void setShipperId(String ShipperId) {
         this.ShipperId = ShipperId;
     }
 
     /**
-     * Get Query start timestamp in milliseconds, which can be within the last three days 
-     * @return StartTime Query start timestamp in milliseconds, which can be within the last three days
+     * Get Start timestamp for the query. Supports queries within the most recent 3 days in ms.
+StartTime must be less than EndTime 
+     * @return StartTime Start timestamp for the query. Supports queries within the most recent 3 days in ms.
+StartTime must be less than EndTime
      */
     public Long getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set Query start timestamp in milliseconds, which can be within the last three days
-     * @param StartTime Query start timestamp in milliseconds, which can be within the last three days
+     * Set Start timestamp for the query. Supports queries within the most recent 3 days in ms.
+StartTime must be less than EndTime
+     * @param StartTime Start timestamp for the query. Supports queries within the most recent 3 days in ms.
+StartTime must be less than EndTime
      */
     public void setStartTime(Long StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get Query end timestamp in milliseconds 
-     * @return EndTime Query end timestamp in milliseconds
+     * Get Query end timestamp, in ms.
+StartTime must be less than EndTime 
+     * @return EndTime Query end timestamp, in ms.
+StartTime must be less than EndTime
      */
     public Long getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set Query end timestamp in milliseconds
-     * @param EndTime Query end timestamp in milliseconds
+     * Set Query end timestamp, in ms.
+StartTime must be less than EndTime
+     * @param EndTime Query end timestamp, in ms.
+StartTime must be less than EndTime
      */
     public void setEndTime(Long EndTime) {
         this.EndTime = EndTime;

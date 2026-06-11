@@ -31,7 +31,7 @@ public class VulEmergentMsgInfo extends AbstractModel {
     private Long VulId;
 
     /**
-    * Vulnerability publish time
+    * Vulnerability disclosure time
     */
     @SerializedName("PublishTime")
     @Expose
@@ -43,6 +43,41 @@ public class VulEmergentMsgInfo extends AbstractModel {
     @SerializedName("Name")
     @Expose
     private String Name;
+
+    /**
+    * Vulnerability name, English description
+    */
+    @SerializedName("NameEn")
+    @Expose
+    private String NameEn;
+
+    /**
+    * Is auto-repair supported 0: not supported >0: supported
+    */
+    @SerializedName("SupportFix")
+    @Expose
+    private Long SupportFix;
+
+    /**
+    * Whether automatic defense is supported 0: no support 1: support
+    */
+    @SerializedName("SupportDefense")
+    @Expose
+    private Long SupportDefense;
+
+    /**
+    * KB ID
+    */
+    @SerializedName("KbId")
+    @Expose
+    private Long KbId;
+
+    /**
+    * KB number
+    */
+    @SerializedName("KbNumber")
+    @Expose
+    private String KbNumber;
 
     /**
      * Get Vulnerability ID 
@@ -61,16 +96,16 @@ public class VulEmergentMsgInfo extends AbstractModel {
     }
 
     /**
-     * Get Vulnerability publish time 
-     * @return PublishTime Vulnerability publish time
+     * Get Vulnerability disclosure time 
+     * @return PublishTime Vulnerability disclosure time
      */
     public String getPublishTime() {
         return this.PublishTime;
     }
 
     /**
-     * Set Vulnerability publish time
-     * @param PublishTime Vulnerability publish time
+     * Set Vulnerability disclosure time
+     * @param PublishTime Vulnerability disclosure time
      */
     public void setPublishTime(String PublishTime) {
         this.PublishTime = PublishTime;
@@ -92,6 +127,86 @@ public class VulEmergentMsgInfo extends AbstractModel {
         this.Name = Name;
     }
 
+    /**
+     * Get Vulnerability name, English description 
+     * @return NameEn Vulnerability name, English description
+     */
+    public String getNameEn() {
+        return this.NameEn;
+    }
+
+    /**
+     * Set Vulnerability name, English description
+     * @param NameEn Vulnerability name, English description
+     */
+    public void setNameEn(String NameEn) {
+        this.NameEn = NameEn;
+    }
+
+    /**
+     * Get Is auto-repair supported 0: not supported >0: supported 
+     * @return SupportFix Is auto-repair supported 0: not supported >0: supported
+     */
+    public Long getSupportFix() {
+        return this.SupportFix;
+    }
+
+    /**
+     * Set Is auto-repair supported 0: not supported >0: supported
+     * @param SupportFix Is auto-repair supported 0: not supported >0: supported
+     */
+    public void setSupportFix(Long SupportFix) {
+        this.SupportFix = SupportFix;
+    }
+
+    /**
+     * Get Whether automatic defense is supported 0: no support 1: support 
+     * @return SupportDefense Whether automatic defense is supported 0: no support 1: support
+     */
+    public Long getSupportDefense() {
+        return this.SupportDefense;
+    }
+
+    /**
+     * Set Whether automatic defense is supported 0: no support 1: support
+     * @param SupportDefense Whether automatic defense is supported 0: no support 1: support
+     */
+    public void setSupportDefense(Long SupportDefense) {
+        this.SupportDefense = SupportDefense;
+    }
+
+    /**
+     * Get KB ID 
+     * @return KbId KB ID
+     */
+    public Long getKbId() {
+        return this.KbId;
+    }
+
+    /**
+     * Set KB ID
+     * @param KbId KB ID
+     */
+    public void setKbId(Long KbId) {
+        this.KbId = KbId;
+    }
+
+    /**
+     * Get KB number 
+     * @return KbNumber KB number
+     */
+    public String getKbNumber() {
+        return this.KbNumber;
+    }
+
+    /**
+     * Set KB number
+     * @param KbNumber KB number
+     */
+    public void setKbNumber(String KbNumber) {
+        this.KbNumber = KbNumber;
+    }
+
     public VulEmergentMsgInfo() {
     }
 
@@ -109,6 +224,21 @@ public class VulEmergentMsgInfo extends AbstractModel {
         if (source.Name != null) {
             this.Name = new String(source.Name);
         }
+        if (source.NameEn != null) {
+            this.NameEn = new String(source.NameEn);
+        }
+        if (source.SupportFix != null) {
+            this.SupportFix = new Long(source.SupportFix);
+        }
+        if (source.SupportDefense != null) {
+            this.SupportDefense = new Long(source.SupportDefense);
+        }
+        if (source.KbId != null) {
+            this.KbId = new Long(source.KbId);
+        }
+        if (source.KbNumber != null) {
+            this.KbNumber = new String(source.KbNumber);
+        }
     }
 
 
@@ -119,6 +249,11 @@ public class VulEmergentMsgInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "VulId", this.VulId);
         this.setParamSimple(map, prefix + "PublishTime", this.PublishTime);
         this.setParamSimple(map, prefix + "Name", this.Name);
+        this.setParamSimple(map, prefix + "NameEn", this.NameEn);
+        this.setParamSimple(map, prefix + "SupportFix", this.SupportFix);
+        this.setParamSimple(map, prefix + "SupportDefense", this.SupportDefense);
+        this.setParamSimple(map, prefix + "KbId", this.KbId);
+        this.setParamSimple(map, prefix + "KbNumber", this.KbNumber);
 
     }
 }

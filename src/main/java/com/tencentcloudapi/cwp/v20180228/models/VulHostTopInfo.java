@@ -24,8 +24,7 @@ import java.util.HashMap;
 public class VulHostTopInfo extends AbstractModel {
 
     /**
-    * Host name
-Note: This field may return null, indicating that no valid values can be obtained.
+    * host name
     */
     @SerializedName("HostName")
     @Expose
@@ -33,7 +32,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Vulnerability level and quantity statistics list
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("VulLevelList")
     @Expose
@@ -41,45 +39,37 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Host QUUID
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Quuid")
     @Expose
     private String Quuid;
 
     /**
-    * Top ratings
-Note: This field may return null, indicating that no valid values can be obtained.
+    * top rating
     */
     @SerializedName("Score")
     @Expose
     private Long Score;
 
     /**
-     * Get Host name
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return HostName Host name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get host name 
+     * @return HostName host name
      */
     public String getHostName() {
         return this.HostName;
     }
 
     /**
-     * Set Host name
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param HostName Host name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set host name
+     * @param HostName host name
      */
     public void setHostName(String HostName) {
         this.HostName = HostName;
     }
 
     /**
-     * Get Vulnerability level and quantity statistics list
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Vulnerability level and quantity statistics list 
      * @return VulLevelList Vulnerability level and quantity statistics list
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public VulLevelCountInfo [] getVulLevelList() {
         return this.VulLevelList;
@@ -87,19 +77,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Vulnerability level and quantity statistics list
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param VulLevelList Vulnerability level and quantity statistics list
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setVulLevelList(VulLevelCountInfo [] VulLevelList) {
         this.VulLevelList = VulLevelList;
     }
 
     /**
-     * Get Host QUUID
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Host QUUID 
      * @return Quuid Host QUUID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getQuuid() {
         return this.Quuid;
@@ -107,29 +93,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Host QUUID
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Quuid Host QUUID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setQuuid(String Quuid) {
         this.Quuid = Quuid;
     }
 
     /**
-     * Get Top ratings
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Score Top ratings
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get top rating 
+     * @return Score top rating
      */
     public Long getScore() {
         return this.Score;
     }
 
     /**
-     * Set Top ratings
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Score Top ratings
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set top rating
+     * @param Score top rating
      */
     public void setScore(Long Score) {
         this.Score = Score;

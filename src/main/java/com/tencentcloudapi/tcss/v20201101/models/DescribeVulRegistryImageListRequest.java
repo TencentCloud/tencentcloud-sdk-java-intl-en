@@ -38,7 +38,7 @@ public class DescribeVulRegistryImageListRequest extends AbstractModel {
     private Long Limit;
 
     /**
-    * Offset, defaults to 0.
+    * 
     */
     @SerializedName("Offset")
     @Expose
@@ -106,16 +106,16 @@ public class DescribeVulRegistryImageListRequest extends AbstractModel {
     }
 
     /**
-     * Get Offset, defaults to 0. 
-     * @return Offset Offset, defaults to 0.
+     * Get  
+     * @return Offset 
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Offset, defaults to 0.
-     * @param Offset Offset, defaults to 0.
+     * Set 
+     * @param Offset 
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;

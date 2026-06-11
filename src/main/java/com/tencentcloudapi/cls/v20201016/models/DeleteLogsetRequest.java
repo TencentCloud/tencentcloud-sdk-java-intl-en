@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DeleteLogsetRequest extends AbstractModel {
 
     /**
-    * Logset ID
+    * Log Set Id. It can be obtained through the [logset list](https://www.tencentcloud.com/document/product/614/58624?from_cn_redirect=1).
     */
     @SerializedName("LogsetId")
     @Expose
     private String LogsetId;
 
     /**
-     * Get Logset ID 
-     * @return LogsetId Logset ID
+     * Get Log Set Id. It can be obtained through the [logset list](https://www.tencentcloud.com/document/product/614/58624?from_cn_redirect=1). 
+     * @return LogsetId Log Set Id. It can be obtained through the [logset list](https://www.tencentcloud.com/document/product/614/58624?from_cn_redirect=1).
      */
     public String getLogsetId() {
         return this.LogsetId;
     }
 
     /**
-     * Set Logset ID
-     * @param LogsetId Logset ID
+     * Set Log Set Id. It can be obtained through the [logset list](https://www.tencentcloud.com/document/product/614/58624?from_cn_redirect=1).
+     * @param LogsetId Log Set Id. It can be obtained through the [logset list](https://www.tencentcloud.com/document/product/614/58624?from_cn_redirect=1).
      */
     public void setLogsetId(String LogsetId) {
         this.LogsetId = LogsetId;

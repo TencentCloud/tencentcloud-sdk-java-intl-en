@@ -31,7 +31,7 @@ public class LoginWhiteLists extends AbstractModel {
     private Long Id;
 
     /**
-    * Yunjing client ID
+    * Host Security UUID
     */
     @SerializedName("Uuid")
     @Expose
@@ -124,16 +124,16 @@ public class LoginWhiteLists extends AbstractModel {
     }
 
     /**
-     * Get Yunjing client ID 
-     * @return Uuid Yunjing client ID
+     * Get Host Security UUID 
+     * @return Uuid Host Security UUID
      */
     public String getUuid() {
         return this.Uuid;
     }
 
     /**
-     * Set Yunjing client ID
-     * @param Uuid Yunjing client ID
+     * Set Host Security UUID
+     * @param Uuid Host Security UUID
      */
     public void setUuid(String Uuid) {
         this.Uuid = Uuid;

@@ -31,6 +31,13 @@ public class SlowAttackDefense extends AbstractModel {
     private String Enabled;
 
     /**
+    * Rule ID of slow attack protection, returned as an output parameter.
+    */
+    @SerializedName("Id")
+    @Expose
+    private String Id;
+
+    /**
     * Slow attack protection handling method. required when Enabled is on. valid values for SecurityAction Name: <li>Monitor: observation;</li> <li>Deny: block;</li>.
     */
     @SerializedName("Action")
@@ -65,6 +72,22 @@ public class SlowAttackDefense extends AbstractModel {
      */
     public void setEnabled(String Enabled) {
         this.Enabled = Enabled;
+    }
+
+    /**
+     * Get Rule ID of slow attack protection, returned as an output parameter. 
+     * @return Id Rule ID of slow attack protection, returned as an output parameter.
+     */
+    public String getId() {
+        return this.Id;
+    }
+
+    /**
+     * Set Rule ID of slow attack protection, returned as an output parameter.
+     * @param Id Rule ID of slow attack protection, returned as an output parameter.
+     */
+    public void setId(String Id) {
+        this.Id = Id;
     }
 
     /**
@@ -126,6 +149,9 @@ public class SlowAttackDefense extends AbstractModel {
         if (source.Enabled != null) {
             this.Enabled = new String(source.Enabled);
         }
+        if (source.Id != null) {
+            this.Id = new String(source.Id);
+        }
         if (source.Action != null) {
             this.Action = new SecurityAction(source.Action);
         }
@@ -143,6 +169,7 @@ public class SlowAttackDefense extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Enabled", this.Enabled);
+        this.setParamSimple(map, prefix + "Id", this.Id);
         this.setParamObj(map, prefix + "Action.", this.Action);
         this.setParamObj(map, prefix + "MinimalRequestBodyTransferRate.", this.MinimalRequestBodyTransferRate);
         this.setParamObj(map, prefix + "RequestBodyTransferTimeout.", this.RequestBodyTransferTimeout);

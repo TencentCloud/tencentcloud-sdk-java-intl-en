@@ -25,9 +25,9 @@ public class DescribeAutoScalingInstancesRequest extends AbstractModel {
 
     /**
     * IDs of the CVM instances to query. the instance ID list has a length limit of 100. `InstanceIds` and `Filters` cannot be specified simultaneously.
-You can get available instance ids in the following ways:.
-<li>Query instance ID by logging in to the <a href="https://console.cloud.tencent.com/cvm/index">console</a>.</li>.
-<li>Get the instance ID by calling the api [DescribeInstances](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1) and retrieving the `InstanceId` from the returned information.</li>.
+You can get available instance ids in the following ways:
+<li>Query instance ID by logging in to the [console](https://console.cloud.tencent.com/cvm/index).</li>
+<li>Get the instance ID by calling the api [DescribeInstances](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1) and retrieving the `InstanceId` from the returned information.</li>
     */
     @SerializedName("InstanceIds")
     @Expose
@@ -35,10 +35,10 @@ You can get available instance ids in the following ways:.
 
     /**
     * Filter criteria
-
-<li> instance-id - String - required: no - (filter condition) filter by instance id. get the instance id by logging in to the [console](https://console.cloud.tencent.com/cvm/index) or making an api call to [DescribeInstances](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1), and retrieve the `InstanceId` from the returned information.</li>.
-<li> auto-scaling-group-id - String - required: no - (filter) filter by auto scaling group id. you can obtain the scaling group id by logging in to the [console](https://console.cloud.tencent.com/autoscaling/group) or making an api call to [DescribeAutoScalingGroups](https://intl.cloud.tencent.com/document/api/377/20438?from_cn_redirect=1) and retrieving the AutoScalingGroupId from the returned information.</li>.
-The maximum number of `Filters` per request is 10, and the maximum number of `Filter.Values` is 5. parameters do not support specifying both `InstanceIds` and `Filters`.
+<li> instance-id - String - required: no - (filter condition) filter by instance id. get the instance id by logging in to the console (https://console.cloud.tencent.com/cvm/index) or calling the api DescribeInstances (https://www.tencentcloud.com/document/api/213/15728?from_cn_redirect=1), and retrieve the `InstanceId` from the returned information.</li>.
+<li> auto-scaling-group-id - String - required: no - (filter) filter by auto scaling group id. obtain the scaling group id by logging in to the [console](https://console.cloud.tencent.com/autoscaling/group) or calling the api [DescribeAutoScalingGroups](https://www.tencentcloud.com/document/api/377/20438?from_cn_redirect=1) and retrieving the AutoScalingGroupId from the returned information.</li>.
+<li>private-ip-address - String - required: no - (filter condition) filters instances by private ip address. you can obtain the private ip address by logging in to the [console](https://console.cloud.tencent.com/autoscaling/group) or calling the api [DescribeInstances](https://www.tencentcloud.com/document/api/213/15728?from_cn_redirect=1), and retrieving the `PrivateIpAddresses` from the returned information.</li>.
+The maximum number of `Filters` per request is 10, and the maximum number of `Filter.Values` is 5. the parameter does not support specifying both `InstanceIds` and `Filters`.
     */
     @SerializedName("Filters")
     @Expose
@@ -60,13 +60,13 @@ The maximum number of `Filters` per request is 10, and the maximum number of `Fi
 
     /**
      * Get IDs of the CVM instances to query. the instance ID list has a length limit of 100. `InstanceIds` and `Filters` cannot be specified simultaneously.
-You can get available instance ids in the following ways:.
-<li>Query instance ID by logging in to the <a href="https://console.cloud.tencent.com/cvm/index">console</a>.</li>.
-<li>Get the instance ID by calling the api [DescribeInstances](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1) and retrieving the `InstanceId` from the returned information.</li>. 
+You can get available instance ids in the following ways:
+<li>Query instance ID by logging in to the [console](https://console.cloud.tencent.com/cvm/index).</li>
+<li>Get the instance ID by calling the api [DescribeInstances](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1) and retrieving the `InstanceId` from the returned information.</li> 
      * @return InstanceIds IDs of the CVM instances to query. the instance ID list has a length limit of 100. `InstanceIds` and `Filters` cannot be specified simultaneously.
-You can get available instance ids in the following ways:.
-<li>Query instance ID by logging in to the <a href="https://console.cloud.tencent.com/cvm/index">console</a>.</li>.
-<li>Get the instance ID by calling the api [DescribeInstances](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1) and retrieving the `InstanceId` from the returned information.</li>.
+You can get available instance ids in the following ways:
+<li>Query instance ID by logging in to the [console](https://console.cloud.tencent.com/cvm/index).</li>
+<li>Get the instance ID by calling the api [DescribeInstances](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1) and retrieving the `InstanceId` from the returned information.</li>
      */
     public String [] getInstanceIds() {
         return this.InstanceIds;
@@ -74,13 +74,13 @@ You can get available instance ids in the following ways:.
 
     /**
      * Set IDs of the CVM instances to query. the instance ID list has a length limit of 100. `InstanceIds` and `Filters` cannot be specified simultaneously.
-You can get available instance ids in the following ways:.
-<li>Query instance ID by logging in to the <a href="https://console.cloud.tencent.com/cvm/index">console</a>.</li>.
-<li>Get the instance ID by calling the api [DescribeInstances](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1) and retrieving the `InstanceId` from the returned information.</li>.
+You can get available instance ids in the following ways:
+<li>Query instance ID by logging in to the [console](https://console.cloud.tencent.com/cvm/index).</li>
+<li>Get the instance ID by calling the api [DescribeInstances](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1) and retrieving the `InstanceId` from the returned information.</li>
      * @param InstanceIds IDs of the CVM instances to query. the instance ID list has a length limit of 100. `InstanceIds` and `Filters` cannot be specified simultaneously.
-You can get available instance ids in the following ways:.
-<li>Query instance ID by logging in to the <a href="https://console.cloud.tencent.com/cvm/index">console</a>.</li>.
-<li>Get the instance ID by calling the api [DescribeInstances](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1) and retrieving the `InstanceId` from the returned information.</li>.
+You can get available instance ids in the following ways:
+<li>Query instance ID by logging in to the [console](https://console.cloud.tencent.com/cvm/index).</li>
+<li>Get the instance ID by calling the api [DescribeInstances](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1) and retrieving the `InstanceId` from the returned information.</li>
      */
     public void setInstanceIds(String [] InstanceIds) {
         this.InstanceIds = InstanceIds;
@@ -88,15 +88,15 @@ You can get available instance ids in the following ways:.
 
     /**
      * Get Filter criteria
-
-<li> instance-id - String - required: no - (filter condition) filter by instance id. get the instance id by logging in to the [console](https://console.cloud.tencent.com/cvm/index) or making an api call to [DescribeInstances](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1), and retrieve the `InstanceId` from the returned information.</li>.
-<li> auto-scaling-group-id - String - required: no - (filter) filter by auto scaling group id. you can obtain the scaling group id by logging in to the [console](https://console.cloud.tencent.com/autoscaling/group) or making an api call to [DescribeAutoScalingGroups](https://intl.cloud.tencent.com/document/api/377/20438?from_cn_redirect=1) and retrieving the AutoScalingGroupId from the returned information.</li>.
-The maximum number of `Filters` per request is 10, and the maximum number of `Filter.Values` is 5. parameters do not support specifying both `InstanceIds` and `Filters`. 
+<li> instance-id - String - required: no - (filter condition) filter by instance id. get the instance id by logging in to the console (https://console.cloud.tencent.com/cvm/index) or calling the api DescribeInstances (https://www.tencentcloud.com/document/api/213/15728?from_cn_redirect=1), and retrieve the `InstanceId` from the returned information.</li>.
+<li> auto-scaling-group-id - String - required: no - (filter) filter by auto scaling group id. obtain the scaling group id by logging in to the [console](https://console.cloud.tencent.com/autoscaling/group) or calling the api [DescribeAutoScalingGroups](https://www.tencentcloud.com/document/api/377/20438?from_cn_redirect=1) and retrieving the AutoScalingGroupId from the returned information.</li>.
+<li>private-ip-address - String - required: no - (filter condition) filters instances by private ip address. you can obtain the private ip address by logging in to the [console](https://console.cloud.tencent.com/autoscaling/group) or calling the api [DescribeInstances](https://www.tencentcloud.com/document/api/213/15728?from_cn_redirect=1), and retrieving the `PrivateIpAddresses` from the returned information.</li>.
+The maximum number of `Filters` per request is 10, and the maximum number of `Filter.Values` is 5. the parameter does not support specifying both `InstanceIds` and `Filters`. 
      * @return Filters Filter criteria
-
-<li> instance-id - String - required: no - (filter condition) filter by instance id. get the instance id by logging in to the [console](https://console.cloud.tencent.com/cvm/index) or making an api call to [DescribeInstances](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1), and retrieve the `InstanceId` from the returned information.</li>.
-<li> auto-scaling-group-id - String - required: no - (filter) filter by auto scaling group id. you can obtain the scaling group id by logging in to the [console](https://console.cloud.tencent.com/autoscaling/group) or making an api call to [DescribeAutoScalingGroups](https://intl.cloud.tencent.com/document/api/377/20438?from_cn_redirect=1) and retrieving the AutoScalingGroupId from the returned information.</li>.
-The maximum number of `Filters` per request is 10, and the maximum number of `Filter.Values` is 5. parameters do not support specifying both `InstanceIds` and `Filters`.
+<li> instance-id - String - required: no - (filter condition) filter by instance id. get the instance id by logging in to the console (https://console.cloud.tencent.com/cvm/index) or calling the api DescribeInstances (https://www.tencentcloud.com/document/api/213/15728?from_cn_redirect=1), and retrieve the `InstanceId` from the returned information.</li>.
+<li> auto-scaling-group-id - String - required: no - (filter) filter by auto scaling group id. obtain the scaling group id by logging in to the [console](https://console.cloud.tencent.com/autoscaling/group) or calling the api [DescribeAutoScalingGroups](https://www.tencentcloud.com/document/api/377/20438?from_cn_redirect=1) and retrieving the AutoScalingGroupId from the returned information.</li>.
+<li>private-ip-address - String - required: no - (filter condition) filters instances by private ip address. you can obtain the private ip address by logging in to the [console](https://console.cloud.tencent.com/autoscaling/group) or calling the api [DescribeInstances](https://www.tencentcloud.com/document/api/213/15728?from_cn_redirect=1), and retrieving the `PrivateIpAddresses` from the returned information.</li>.
+The maximum number of `Filters` per request is 10, and the maximum number of `Filter.Values` is 5. the parameter does not support specifying both `InstanceIds` and `Filters`.
      */
     public Filter [] getFilters() {
         return this.Filters;
@@ -104,15 +104,15 @@ The maximum number of `Filters` per request is 10, and the maximum number of `Fi
 
     /**
      * Set Filter criteria
-
-<li> instance-id - String - required: no - (filter condition) filter by instance id. get the instance id by logging in to the [console](https://console.cloud.tencent.com/cvm/index) or making an api call to [DescribeInstances](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1), and retrieve the `InstanceId` from the returned information.</li>.
-<li> auto-scaling-group-id - String - required: no - (filter) filter by auto scaling group id. you can obtain the scaling group id by logging in to the [console](https://console.cloud.tencent.com/autoscaling/group) or making an api call to [DescribeAutoScalingGroups](https://intl.cloud.tencent.com/document/api/377/20438?from_cn_redirect=1) and retrieving the AutoScalingGroupId from the returned information.</li>.
-The maximum number of `Filters` per request is 10, and the maximum number of `Filter.Values` is 5. parameters do not support specifying both `InstanceIds` and `Filters`.
+<li> instance-id - String - required: no - (filter condition) filter by instance id. get the instance id by logging in to the console (https://console.cloud.tencent.com/cvm/index) or calling the api DescribeInstances (https://www.tencentcloud.com/document/api/213/15728?from_cn_redirect=1), and retrieve the `InstanceId` from the returned information.</li>.
+<li> auto-scaling-group-id - String - required: no - (filter) filter by auto scaling group id. obtain the scaling group id by logging in to the [console](https://console.cloud.tencent.com/autoscaling/group) or calling the api [DescribeAutoScalingGroups](https://www.tencentcloud.com/document/api/377/20438?from_cn_redirect=1) and retrieving the AutoScalingGroupId from the returned information.</li>.
+<li>private-ip-address - String - required: no - (filter condition) filters instances by private ip address. you can obtain the private ip address by logging in to the [console](https://console.cloud.tencent.com/autoscaling/group) or calling the api [DescribeInstances](https://www.tencentcloud.com/document/api/213/15728?from_cn_redirect=1), and retrieving the `PrivateIpAddresses` from the returned information.</li>.
+The maximum number of `Filters` per request is 10, and the maximum number of `Filter.Values` is 5. the parameter does not support specifying both `InstanceIds` and `Filters`.
      * @param Filters Filter criteria
-
-<li> instance-id - String - required: no - (filter condition) filter by instance id. get the instance id by logging in to the [console](https://console.cloud.tencent.com/cvm/index) or making an api call to [DescribeInstances](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1), and retrieve the `InstanceId` from the returned information.</li>.
-<li> auto-scaling-group-id - String - required: no - (filter) filter by auto scaling group id. you can obtain the scaling group id by logging in to the [console](https://console.cloud.tencent.com/autoscaling/group) or making an api call to [DescribeAutoScalingGroups](https://intl.cloud.tencent.com/document/api/377/20438?from_cn_redirect=1) and retrieving the AutoScalingGroupId from the returned information.</li>.
-The maximum number of `Filters` per request is 10, and the maximum number of `Filter.Values` is 5. parameters do not support specifying both `InstanceIds` and `Filters`.
+<li> instance-id - String - required: no - (filter condition) filter by instance id. get the instance id by logging in to the console (https://console.cloud.tencent.com/cvm/index) or calling the api DescribeInstances (https://www.tencentcloud.com/document/api/213/15728?from_cn_redirect=1), and retrieve the `InstanceId` from the returned information.</li>.
+<li> auto-scaling-group-id - String - required: no - (filter) filter by auto scaling group id. obtain the scaling group id by logging in to the [console](https://console.cloud.tencent.com/autoscaling/group) or calling the api [DescribeAutoScalingGroups](https://www.tencentcloud.com/document/api/377/20438?from_cn_redirect=1) and retrieving the AutoScalingGroupId from the returned information.</li>.
+<li>private-ip-address - String - required: no - (filter condition) filters instances by private ip address. you can obtain the private ip address by logging in to the [console](https://console.cloud.tencent.com/autoscaling/group) or calling the api [DescribeInstances](https://www.tencentcloud.com/document/api/213/15728?from_cn_redirect=1), and retrieving the `PrivateIpAddresses` from the returned information.</li>.
+The maximum number of `Filters` per request is 10, and the maximum number of `Filter.Values` is 5. the parameter does not support specifying both `InstanceIds` and `Filters`.
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;

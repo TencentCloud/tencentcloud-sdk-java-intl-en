@@ -25,7 +25,6 @@ public class DescribeScreenAttackHotspotResponse extends AbstractModel {
 
     /**
     * Attack hotspot list
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("List")
     @Expose
@@ -39,10 +38,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Attack hotspot list
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Attack hotspot list 
      * @return List Attack hotspot list
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public ScreenAttackHotspot [] getList() {
         return this.List;
@@ -50,9 +47,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Attack hotspot list
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param List Attack hotspot list
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setList(ScreenAttackHotspot [] List) {
         this.List = List;

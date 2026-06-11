@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeAlertRecordHistoryRequest extends AbstractModel {
 
     /**
-    * Start time of the query range, which is a Unix timestamp in ms
+    * Start time of the query time range, unix timestamp in milliseconds (ms)
     */
     @SerializedName("From")
     @Expose
     private Long From;
 
     /**
-    * End time of the query range, which is a Unix timestamp in ms
+    * End time of query time range, unix timestamp in milliseconds (ms)
     */
     @SerializedName("To")
     @Expose
@@ -64,32 +64,32 @@ Each request can have up to 10 `Filters` and 100 `Filter.Values`.
     private Filter [] Filters;
 
     /**
-     * Get Start time of the query range, which is a Unix timestamp in ms 
-     * @return From Start time of the query range, which is a Unix timestamp in ms
+     * Get Start time of the query time range, unix timestamp in milliseconds (ms) 
+     * @return From Start time of the query time range, unix timestamp in milliseconds (ms)
      */
     public Long getFrom() {
         return this.From;
     }
 
     /**
-     * Set Start time of the query range, which is a Unix timestamp in ms
-     * @param From Start time of the query range, which is a Unix timestamp in ms
+     * Set Start time of the query time range, unix timestamp in milliseconds (ms)
+     * @param From Start time of the query time range, unix timestamp in milliseconds (ms)
      */
     public void setFrom(Long From) {
         this.From = From;
     }
 
     /**
-     * Get End time of the query range, which is a Unix timestamp in ms 
-     * @return To End time of the query range, which is a Unix timestamp in ms
+     * Get End time of query time range, unix timestamp in milliseconds (ms) 
+     * @return To End time of query time range, unix timestamp in milliseconds (ms)
      */
     public Long getTo() {
         return this.To;
     }
 
     /**
-     * Set End time of the query range, which is a Unix timestamp in ms
-     * @param To End time of the query range, which is a Unix timestamp in ms
+     * Set End time of query time range, unix timestamp in milliseconds (ms)
+     * @param To End time of query time range, unix timestamp in milliseconds (ms)
      */
     public void setTo(Long To) {
         this.To = To;

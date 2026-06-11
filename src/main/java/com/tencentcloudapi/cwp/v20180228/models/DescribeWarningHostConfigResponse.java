@@ -32,7 +32,6 @@ public class DescribeWarningHostConfigResponse extends AbstractModel {
 
     /**
     * List of Project or Tag Names, empty for custom hosts
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ItemLabels")
     @Expose
@@ -40,7 +39,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Machine list
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Quuids")
     @Expose
@@ -48,7 +46,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Total Number of Machine Lists
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("TotalCount")
     @Expose
@@ -56,14 +53,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * List of Project or Tag IDs, empty for custom hosts
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ItemLabelIds")
     @Expose
     private String [] ItemLabelIds;
 
     /**
-    * 
+    * List of machines to be excluded.
     */
     @SerializedName("ExcludedQuuids")
     @Expose
@@ -93,10 +89,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get List of Project or Tag Names, empty for custom hosts
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get List of Project or Tag Names, empty for custom hosts 
      * @return ItemLabels List of Project or Tag Names, empty for custom hosts
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String [] getItemLabels() {
         return this.ItemLabels;
@@ -104,19 +98,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set List of Project or Tag Names, empty for custom hosts
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param ItemLabels List of Project or Tag Names, empty for custom hosts
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setItemLabels(String [] ItemLabels) {
         this.ItemLabels = ItemLabels;
     }
 
     /**
-     * Get Machine list
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Machine list 
      * @return Quuids Machine list
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String [] getQuuids() {
         return this.Quuids;
@@ -124,19 +114,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Machine list
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Quuids Machine list
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setQuuids(String [] Quuids) {
         this.Quuids = Quuids;
     }
 
     /**
-     * Get Total Number of Machine Lists
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Total Number of Machine Lists 
      * @return TotalCount Total Number of Machine Lists
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getTotalCount() {
         return this.TotalCount;
@@ -144,19 +130,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Total Number of Machine Lists
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param TotalCount Total Number of Machine Lists
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get List of Project or Tag IDs, empty for custom hosts
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get List of Project or Tag IDs, empty for custom hosts 
      * @return ItemLabelIds List of Project or Tag IDs, empty for custom hosts
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String [] getItemLabelIds() {
         return this.ItemLabelIds;
@@ -164,25 +146,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set List of Project or Tag IDs, empty for custom hosts
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param ItemLabelIds List of Project or Tag IDs, empty for custom hosts
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setItemLabelIds(String [] ItemLabelIds) {
         this.ItemLabelIds = ItemLabelIds;
     }
 
     /**
-     * Get  
-     * @return ExcludedQuuids 
+     * Get List of machines to be excluded. 
+     * @return ExcludedQuuids List of machines to be excluded.
      */
     public String [] getExcludedQuuids() {
         return this.ExcludedQuuids;
     }
 
     /**
-     * Set 
-     * @param ExcludedQuuids 
+     * Set List of machines to be excluded.
+     * @param ExcludedQuuids List of machines to be excluded.
      */
     public void setExcludedQuuids(String [] ExcludedQuuids) {
         this.ExcludedQuuids = ExcludedQuuids;

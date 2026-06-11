@@ -24,7 +24,8 @@ import java.util.HashMap;
 public class DescribeCosRechargesRequest extends AbstractModel {
 
     /**
-    * ID of the log topic.
+    * Log topic Id.
+- Get the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/api/614/56454?from_cn_redirect=1).
     */
     @SerializedName("TopicId")
     @Expose
@@ -45,16 +46,20 @@ public class DescribeCosRechargesRequest extends AbstractModel {
     private Long Enable;
 
     /**
-     * Get ID of the log topic. 
-     * @return TopicId ID of the log topic.
+     * Get Log topic Id.
+- Get the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/api/614/56454?from_cn_redirect=1). 
+     * @return TopicId Log topic Id.
+- Get the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/api/614/56454?from_cn_redirect=1).
      */
     public String getTopicId() {
         return this.TopicId;
     }
 
     /**
-     * Set ID of the log topic.
-     * @param TopicId ID of the log topic.
+     * Set Log topic Id.
+- Get the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/api/614/56454?from_cn_redirect=1).
+     * @param TopicId Log topic Id.
+- Get the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/api/614/56454?from_cn_redirect=1).
      */
     public void setTopicId(String TopicId) {
         this.TopicId = TopicId;

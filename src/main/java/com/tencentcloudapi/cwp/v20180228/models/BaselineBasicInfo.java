@@ -25,7 +25,6 @@ public class BaselineBasicInfo extends AbstractModel {
 
     /**
     * Baseline name
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Name")
     @Expose
@@ -33,25 +32,21 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Baseline ID
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("BaselineId")
     @Expose
     private Long BaselineId;
 
     /**
-    * Parent ID
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Parent id
     */
     @SerializedName("ParentId")
     @Expose
     private Long ParentId;
 
     /**
-     * Get Baseline name
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Baseline name 
      * @return Name Baseline name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getName() {
         return this.Name;
@@ -59,19 +54,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Baseline name
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Name Baseline name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get Baseline ID
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Baseline ID 
      * @return BaselineId Baseline ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getBaselineId() {
         return this.BaselineId;
@@ -79,29 +70,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Baseline ID
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param BaselineId Baseline ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setBaselineId(Long BaselineId) {
         this.BaselineId = BaselineId;
     }
 
     /**
-     * Get Parent ID
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ParentId Parent ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Parent id 
+     * @return ParentId Parent id
      */
     public Long getParentId() {
         return this.ParentId;
     }
 
     /**
-     * Set Parent ID
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ParentId Parent ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Parent id
+     * @param ParentId Parent id
      */
     public void setParentId(Long ParentId) {
         this.ParentId = ParentId;

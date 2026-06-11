@@ -25,7 +25,6 @@ public class DescribeAssetUserKeyListResponse extends AbstractModel {
 
     /**
     * Public key list
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Keys")
     @Expose
@@ -46,10 +45,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Public key list
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Public key list 
      * @return Keys Public key list
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public AssetUserKeyInfo [] getKeys() {
         return this.Keys;
@@ -57,9 +54,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Public key list
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Keys Public key list
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setKeys(AssetUserKeyInfo [] Keys) {
         this.Keys = Keys;

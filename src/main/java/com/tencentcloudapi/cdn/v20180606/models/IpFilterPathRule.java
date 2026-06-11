@@ -34,10 +34,10 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     private String FilterType;
 
     /**
-    * IP blocklist/allowlist list
-Supports IPs in X.X.X.X format, or /8, /16, /24 format IP ranges.
-Up to 50 allowlists or blocklists can be entered.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+    * IP blocklist/allowlist configuration.
+Supports IPV4 addresses in X.X.X.X format, IPV6 addresses in X:X:X:X:X:X:X:X format, or network segments in /X format (IPV4: 1≤X≤32; IPV6: 1≤X≤128).
+Specifies a maximum of 500 allowlist or 200 blocklist entries.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Filters")
     @Expose
@@ -68,6 +68,13 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     private String [] RulePaths;
 
     /**
+    * Remark information. supports up to 50 characters.
+    */
+    @SerializedName("Remark")
+    @Expose
+    private String Remark;
+
+    /**
      * Get IP blocklist/allowlist type
 `whitelist`: allowlist IPs
 `blacklist`: blocklist IPs
@@ -96,28 +103,28 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     }
 
     /**
-     * Get IP blocklist/allowlist list
-Supports IPs in X.X.X.X format, or /8, /16, /24 format IP ranges.
-Up to 50 allowlists or blocklists can be entered.
-Note: This field may return `null`, indicating that no valid value can be obtained. 
-     * @return Filters IP blocklist/allowlist list
-Supports IPs in X.X.X.X format, or /8, /16, /24 format IP ranges.
-Up to 50 allowlists or blocklists can be entered.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Get IP blocklist/allowlist configuration.
+Supports IPV4 addresses in X.X.X.X format, IPV6 addresses in X:X:X:X:X:X:X:X format, or network segments in /X format (IPV4: 1≤X≤32; IPV6: 1≤X≤128).
+Specifies a maximum of 500 allowlist or 200 blocklist entries.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Filters IP blocklist/allowlist configuration.
+Supports IPV4 addresses in X.X.X.X format, IPV6 addresses in X:X:X:X:X:X:X:X format, or network segments in /X format (IPV4: 1≤X≤32; IPV6: 1≤X≤128).
+Specifies a maximum of 500 allowlist or 200 blocklist entries.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set IP blocklist/allowlist list
-Supports IPs in X.X.X.X format, or /8, /16, /24 format IP ranges.
-Up to 50 allowlists or blocklists can be entered.
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param Filters IP blocklist/allowlist list
-Supports IPs in X.X.X.X format, or /8, /16, /24 format IP ranges.
-Up to 50 allowlists or blocklists can be entered.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Set IP blocklist/allowlist configuration.
+Supports IPV4 addresses in X.X.X.X format, IPV6 addresses in X:X:X:X:X:X:X:X format, or network segments in /X format (IPV4: 1≤X≤32; IPV6: 1≤X≤128).
+Specifies a maximum of 500 allowlist or 200 blocklist entries.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Filters IP blocklist/allowlist configuration.
+Supports IPV4 addresses in X.X.X.X format, IPV6 addresses in X:X:X:X:X:X:X:X format, or network segments in /X format (IPV4: 1≤X≤32; IPV6: 1≤X≤128).
+Specifies a maximum of 500 allowlist or 200 blocklist entries.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setFilters(String [] Filters) {
         this.Filters = Filters;
@@ -195,6 +202,22 @@ Note: This field may return `null`, indicating that no valid value can be obtain
         this.RulePaths = RulePaths;
     }
 
+    /**
+     * Get Remark information. supports up to 50 characters. 
+     * @return Remark Remark information. supports up to 50 characters.
+     */
+    public String getRemark() {
+        return this.Remark;
+    }
+
+    /**
+     * Set Remark information. supports up to 50 characters.
+     * @param Remark Remark information. supports up to 50 characters.
+     */
+    public void setRemark(String Remark) {
+        this.Remark = Remark;
+    }
+
     public IpFilterPathRule() {
     }
 
@@ -221,6 +244,9 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                 this.RulePaths[i] = new String(source.RulePaths[i]);
             }
         }
+        if (source.Remark != null) {
+            this.Remark = new String(source.Remark);
+        }
     }
 
 
@@ -232,6 +258,7 @@ Note: This field may return `null`, indicating that no valid value can be obtain
         this.setParamArraySimple(map, prefix + "Filters.", this.Filters);
         this.setParamSimple(map, prefix + "RuleType", this.RuleType);
         this.setParamArraySimple(map, prefix + "RulePaths.", this.RulePaths);
+        this.setParamSimple(map, prefix + "Remark", this.Remark);
 
     }
 }

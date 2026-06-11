@@ -45,7 +45,7 @@ Note: NoCheck means the health check policy is not enabled.
     private Long Port;
 
     /**
-    * Check frequency, in seconds. It indicates how often a health check task is initiated. Valid values: 30, 60, 180, 300, 600.
+    * Check frequency, in seconds. It indicates how often a health check task is initiated. Configurable range: 10-600 seconds.
     */
     @SerializedName("Interval")
     @Expose
@@ -185,16 +185,16 @@ Note: NoCheck means the health check policy is not enabled.
     }
 
     /**
-     * Get Check frequency, in seconds. It indicates how often a health check task is initiated. Valid values: 30, 60, 180, 300, 600. 
-     * @return Interval Check frequency, in seconds. It indicates how often a health check task is initiated. Valid values: 30, 60, 180, 300, 600.
+     * Get Check frequency, in seconds. It indicates how often a health check task is initiated. Configurable range: 10-600 seconds. 
+     * @return Interval Check frequency, in seconds. It indicates how often a health check task is initiated. Configurable range: 10-600 seconds.
      */
     public Long getInterval() {
         return this.Interval;
     }
 
     /**
-     * Set Check frequency, in seconds. It indicates how often a health check task is initiated. Valid values: 30, 60, 180, 300, 600.
-     * @param Interval Check frequency, in seconds. It indicates how often a health check task is initiated. Valid values: 30, 60, 180, 300, 600.
+     * Set Check frequency, in seconds. It indicates how often a health check task is initiated. Configurable range: 10-600 seconds.
+     * @param Interval Check frequency, in seconds. It indicates how often a health check task is initiated. Configurable range: 10-600 seconds.
      */
     public void setInterval(Long Interval) {
         this.Interval = Interval;

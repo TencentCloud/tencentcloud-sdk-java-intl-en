@@ -25,7 +25,6 @@ public class DescribeScreenMachineRegionsResponse extends AbstractModel {
 
     /**
     * List details
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("List")
     @Expose
@@ -39,10 +38,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get List details
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get List details 
      * @return List List details
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public ScreenRegionInfo [] getList() {
         return this.List;
@@ -50,9 +47,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set List details
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param List List details
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setList(ScreenRegionInfo [] List) {
         this.List = List;

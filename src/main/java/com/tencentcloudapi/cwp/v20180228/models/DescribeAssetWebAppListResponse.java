@@ -31,8 +31,7 @@ public class DescribeAssetWebAppListResponse extends AbstractModel {
     private Long Total;
 
     /**
-    * Data list
-Note: This field may return null, indicating that no valid values can be obtained.
+    * List
     */
     @SerializedName("WebApps")
     @Expose
@@ -62,20 +61,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Data list
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return WebApps Data list
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get List 
+     * @return WebApps List
      */
     public AssetWebAppBaseInfo [] getWebApps() {
         return this.WebApps;
     }
 
     /**
-     * Set Data list
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param WebApps Data list
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set List
+     * @param WebApps List
      */
     public void setWebApps(AssetWebAppBaseInfo [] WebApps) {
         this.WebApps = WebApps;

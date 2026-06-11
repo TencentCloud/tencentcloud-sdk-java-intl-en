@@ -24,23 +24,33 @@ import java.util.HashMap;
 public class CloseKafkaConsumerRequest extends AbstractModel {
 
     /**
-    * Log topic ID
+    * Log topic Id.
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
+- Obtain the log topic Id through [Create Log Topic](https://www.tencentcloud.com/document/product/614/56456?from_cn_redirect=1).
     */
     @SerializedName("FromTopicId")
     @Expose
     private String FromTopicId;
 
     /**
-     * Get Log topic ID 
-     * @return FromTopicId Log topic ID
+     * Get Log topic Id.
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
+- Obtain the log topic Id through [Create Log Topic](https://www.tencentcloud.com/document/product/614/56456?from_cn_redirect=1). 
+     * @return FromTopicId Log topic Id.
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
+- Obtain the log topic Id through [Create Log Topic](https://www.tencentcloud.com/document/product/614/56456?from_cn_redirect=1).
      */
     public String getFromTopicId() {
         return this.FromTopicId;
     }
 
     /**
-     * Set Log topic ID
-     * @param FromTopicId Log topic ID
+     * Set Log topic Id.
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
+- Obtain the log topic Id through [Create Log Topic](https://www.tencentcloud.com/document/product/614/56456?from_cn_redirect=1).
+     * @param FromTopicId Log topic Id.
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
+- Obtain the log topic Id through [Create Log Topic](https://www.tencentcloud.com/document/product/614/56456?from_cn_redirect=1).
      */
     public void setFromTopicId(String FromTopicId) {
         this.FromTopicId = FromTopicId;

@@ -178,15 +178,14 @@ public class JavaMemShellDetail extends AbstractModel {
     private String SecurityAdvice;
 
     /**
-    * Additional host information
-Note: This field may return null, indicating that no valid values can be obtained.
+    *  Host Additional Information
     */
     @SerializedName("MachineExtraInfo")
     @Expose
     private MachineExtraInfo MachineExtraInfo;
 
     /**
-    * Instance status: RUNNING, STOPPED, SHUTDOWN...
+    * Agent status: OFFLINE; ONLINE.
     */
     @SerializedName("MachineState")
     @Expose
@@ -545,36 +544,32 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Additional host information
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return MachineExtraInfo Additional host information
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  Host Additional Information 
+     * @return MachineExtraInfo  Host Additional Information
      */
     public MachineExtraInfo getMachineExtraInfo() {
         return this.MachineExtraInfo;
     }
 
     /**
-     * Set Additional host information
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param MachineExtraInfo Additional host information
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set  Host Additional Information
+     * @param MachineExtraInfo  Host Additional Information
      */
     public void setMachineExtraInfo(MachineExtraInfo MachineExtraInfo) {
         this.MachineExtraInfo = MachineExtraInfo;
     }
 
     /**
-     * Get Instance status: RUNNING, STOPPED, SHUTDOWN... 
-     * @return MachineState Instance status: RUNNING, STOPPED, SHUTDOWN...
+     * Get Agent status: OFFLINE; ONLINE. 
+     * @return MachineState Agent status: OFFLINE; ONLINE.
      */
     public String getMachineState() {
         return this.MachineState;
     }
 
     /**
-     * Set Instance status: RUNNING, STOPPED, SHUTDOWN...
-     * @param MachineState Instance status: RUNNING, STOPPED, SHUTDOWN...
+     * Set Agent status: OFFLINE; ONLINE.
+     * @param MachineState Agent status: OFFLINE; ONLINE.
      */
     public void setMachineState(String MachineState) {
         this.MachineState = MachineState;

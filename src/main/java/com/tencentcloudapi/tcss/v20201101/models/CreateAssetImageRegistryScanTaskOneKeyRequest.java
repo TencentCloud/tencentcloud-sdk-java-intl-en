@@ -52,6 +52,55 @@ public class CreateAssetImageRegistryScanTaskOneKeyRequest extends AbstractModel
     private Long [] Id;
 
     /**
+    * List of image IDs excluded from scanning.
+    */
+    @SerializedName("ExcludeIDs")
+    @Expose
+    private Long [] ExcludeIDs;
+
+    /**
+    * 
+    */
+    @SerializedName("IsLatest")
+    @Expose
+    private Boolean IsLatest;
+
+    /**
+    * 
+    */
+    @SerializedName("ScanScope")
+    @Expose
+    private Long ScanScope;
+
+    /**
+    * 
+    */
+    @SerializedName("RegistryType")
+    @Expose
+    private String [] RegistryType;
+
+    /**
+    * 
+    */
+    @SerializedName("Namespace")
+    @Expose
+    private String [] Namespace;
+
+    /**
+    * 
+    */
+    @SerializedName("ContainerRunning")
+    @Expose
+    private Boolean ContainerRunning;
+
+    /**
+    * 
+    */
+    @SerializedName("Timeout")
+    @Expose
+    private Long Timeout;
+
+    /**
      * Get Whether to scan all images 
      * @return All Whether to scan all images
      * @deprecated
@@ -119,6 +168,118 @@ public class CreateAssetImageRegistryScanTaskOneKeyRequest extends AbstractModel
         this.Id = Id;
     }
 
+    /**
+     * Get List of image IDs excluded from scanning. 
+     * @return ExcludeIDs List of image IDs excluded from scanning.
+     */
+    public Long [] getExcludeIDs() {
+        return this.ExcludeIDs;
+    }
+
+    /**
+     * Set List of image IDs excluded from scanning.
+     * @param ExcludeIDs List of image IDs excluded from scanning.
+     */
+    public void setExcludeIDs(Long [] ExcludeIDs) {
+        this.ExcludeIDs = ExcludeIDs;
+    }
+
+    /**
+     * Get  
+     * @return IsLatest 
+     */
+    public Boolean getIsLatest() {
+        return this.IsLatest;
+    }
+
+    /**
+     * Set 
+     * @param IsLatest 
+     */
+    public void setIsLatest(Boolean IsLatest) {
+        this.IsLatest = IsLatest;
+    }
+
+    /**
+     * Get  
+     * @return ScanScope 
+     */
+    public Long getScanScope() {
+        return this.ScanScope;
+    }
+
+    /**
+     * Set 
+     * @param ScanScope 
+     */
+    public void setScanScope(Long ScanScope) {
+        this.ScanScope = ScanScope;
+    }
+
+    /**
+     * Get  
+     * @return RegistryType 
+     */
+    public String [] getRegistryType() {
+        return this.RegistryType;
+    }
+
+    /**
+     * Set 
+     * @param RegistryType 
+     */
+    public void setRegistryType(String [] RegistryType) {
+        this.RegistryType = RegistryType;
+    }
+
+    /**
+     * Get  
+     * @return Namespace 
+     */
+    public String [] getNamespace() {
+        return this.Namespace;
+    }
+
+    /**
+     * Set 
+     * @param Namespace 
+     */
+    public void setNamespace(String [] Namespace) {
+        this.Namespace = Namespace;
+    }
+
+    /**
+     * Get  
+     * @return ContainerRunning 
+     */
+    public Boolean getContainerRunning() {
+        return this.ContainerRunning;
+    }
+
+    /**
+     * Set 
+     * @param ContainerRunning 
+     */
+    public void setContainerRunning(Boolean ContainerRunning) {
+        this.ContainerRunning = ContainerRunning;
+    }
+
+    /**
+     * Get  
+     * @return Timeout 
+     */
+    public Long getTimeout() {
+        return this.Timeout;
+    }
+
+    /**
+     * Set 
+     * @param Timeout 
+     */
+    public void setTimeout(Long Timeout) {
+        this.Timeout = Timeout;
+    }
+
     public CreateAssetImageRegistryScanTaskOneKeyRequest() {
     }
 
@@ -148,6 +309,36 @@ public class CreateAssetImageRegistryScanTaskOneKeyRequest extends AbstractModel
                 this.Id[i] = new Long(source.Id[i]);
             }
         }
+        if (source.ExcludeIDs != null) {
+            this.ExcludeIDs = new Long[source.ExcludeIDs.length];
+            for (int i = 0; i < source.ExcludeIDs.length; i++) {
+                this.ExcludeIDs[i] = new Long(source.ExcludeIDs[i]);
+            }
+        }
+        if (source.IsLatest != null) {
+            this.IsLatest = new Boolean(source.IsLatest);
+        }
+        if (source.ScanScope != null) {
+            this.ScanScope = new Long(source.ScanScope);
+        }
+        if (source.RegistryType != null) {
+            this.RegistryType = new String[source.RegistryType.length];
+            for (int i = 0; i < source.RegistryType.length; i++) {
+                this.RegistryType[i] = new String(source.RegistryType[i]);
+            }
+        }
+        if (source.Namespace != null) {
+            this.Namespace = new String[source.Namespace.length];
+            for (int i = 0; i < source.Namespace.length; i++) {
+                this.Namespace[i] = new String(source.Namespace[i]);
+            }
+        }
+        if (source.ContainerRunning != null) {
+            this.ContainerRunning = new Boolean(source.ContainerRunning);
+        }
+        if (source.Timeout != null) {
+            this.Timeout = new Long(source.Timeout);
+        }
     }
 
 
@@ -159,6 +350,13 @@ public class CreateAssetImageRegistryScanTaskOneKeyRequest extends AbstractModel
         this.setParamArrayObj(map, prefix + "Images.", this.Images);
         this.setParamArraySimple(map, prefix + "ScanType.", this.ScanType);
         this.setParamArraySimple(map, prefix + "Id.", this.Id);
+        this.setParamArraySimple(map, prefix + "ExcludeIDs.", this.ExcludeIDs);
+        this.setParamSimple(map, prefix + "IsLatest", this.IsLatest);
+        this.setParamSimple(map, prefix + "ScanScope", this.ScanScope);
+        this.setParamArraySimple(map, prefix + "RegistryType.", this.RegistryType);
+        this.setParamArraySimple(map, prefix + "Namespace.", this.Namespace);
+        this.setParamSimple(map, prefix + "ContainerRunning", this.ContainerRunning);
+        this.setParamSimple(map, prefix + "Timeout", this.Timeout);
 
     }
 }

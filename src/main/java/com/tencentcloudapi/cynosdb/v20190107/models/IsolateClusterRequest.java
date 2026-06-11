@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class IsolateClusterRequest extends AbstractModel {
 
     /**
-    * Cluster ID
+    * Cluster ID.
     */
     @SerializedName("ClusterId")
     @Expose
@@ -38,37 +38,37 @@ public class IsolateClusterRequest extends AbstractModel {
     private String DbType;
 
     /**
-    * 
+    * Instance return reason type.
     */
     @SerializedName("IsolateReasonTypes")
     @Expose
     private Long [] IsolateReasonTypes;
 
     /**
-    * 
+    * Instance return reason supplement.
     */
     @SerializedName("IsolateReason")
     @Expose
     private String IsolateReason;
 
     /**
-    * Retain backup, true - Retained (incur fees)
+    * Retain backup, true - Retained (incur fees).
     */
     @SerializedName("SaveBackup")
     @Expose
     private Boolean SaveBackup;
 
     /**
-     * Get Cluster ID 
-     * @return ClusterId Cluster ID
+     * Get Cluster ID. 
+     * @return ClusterId Cluster ID.
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set Cluster ID
-     * @param ClusterId Cluster ID
+     * Set Cluster ID.
+     * @param ClusterId Cluster ID.
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
@@ -91,48 +91,48 @@ public class IsolateClusterRequest extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return IsolateReasonTypes 
+     * Get Instance return reason type. 
+     * @return IsolateReasonTypes Instance return reason type.
      */
     public Long [] getIsolateReasonTypes() {
         return this.IsolateReasonTypes;
     }
 
     /**
-     * Set 
-     * @param IsolateReasonTypes 
+     * Set Instance return reason type.
+     * @param IsolateReasonTypes Instance return reason type.
      */
     public void setIsolateReasonTypes(Long [] IsolateReasonTypes) {
         this.IsolateReasonTypes = IsolateReasonTypes;
     }
 
     /**
-     * Get  
-     * @return IsolateReason 
+     * Get Instance return reason supplement. 
+     * @return IsolateReason Instance return reason supplement.
      */
     public String getIsolateReason() {
         return this.IsolateReason;
     }
 
     /**
-     * Set 
-     * @param IsolateReason 
+     * Set Instance return reason supplement.
+     * @param IsolateReason Instance return reason supplement.
      */
     public void setIsolateReason(String IsolateReason) {
         this.IsolateReason = IsolateReason;
     }
 
     /**
-     * Get Retain backup, true - Retained (incur fees) 
-     * @return SaveBackup Retain backup, true - Retained (incur fees)
+     * Get Retain backup, true - Retained (incur fees). 
+     * @return SaveBackup Retain backup, true - Retained (incur fees).
      */
     public Boolean getSaveBackup() {
         return this.SaveBackup;
     }
 
     /**
-     * Set Retain backup, true - Retained (incur fees)
-     * @param SaveBackup Retain backup, true - Retained (incur fees)
+     * Set Retain backup, true - Retained (incur fees).
+     * @param SaveBackup Retain backup, true - Retained (incur fees).
      */
     public void setSaveBackup(Boolean SaveBackup) {
         this.SaveBackup = SaveBackup;

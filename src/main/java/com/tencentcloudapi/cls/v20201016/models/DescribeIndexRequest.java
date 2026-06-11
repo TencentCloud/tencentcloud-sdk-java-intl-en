@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DescribeIndexRequest extends AbstractModel {
 
     /**
-    * Log topic ID
+    * <p>log topic Id</p><ul><li>Obtain the log topic Id through <a href="https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1">Get Log Topic List</a>.</li></ul>
     */
     @SerializedName("TopicId")
     @Expose
     private String TopicId;
 
     /**
-     * Get Log topic ID 
-     * @return TopicId Log topic ID
+     * Get <p>log topic Id</p><ul><li>Obtain the log topic Id through <a href="https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1">Get Log Topic List</a>.</li></ul> 
+     * @return TopicId <p>log topic Id</p><ul><li>Obtain the log topic Id through <a href="https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1">Get Log Topic List</a>.</li></ul>
      */
     public String getTopicId() {
         return this.TopicId;
     }
 
     /**
-     * Set Log topic ID
-     * @param TopicId Log topic ID
+     * Set <p>log topic Id</p><ul><li>Obtain the log topic Id through <a href="https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1">Get Log Topic List</a>.</li></ul>
+     * @param TopicId <p>log topic Id</p><ul><li>Obtain the log topic Id through <a href="https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1">Get Log Topic List</a>.</li></ul>
      */
     public void setTopicId(String TopicId) {
         this.TopicId = TopicId;

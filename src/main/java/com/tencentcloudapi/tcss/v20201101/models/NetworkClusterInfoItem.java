@@ -101,16 +101,14 @@ public class NetworkClusterInfoItem extends AbstractModel {
     private String NetworkPolicyPluginStatus;
 
     /**
-    * Error message of the cluster network plugin
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Cluster Network Plugin Error Message
     */
     @SerializedName("NetworkPolicyPluginError")
     @Expose
     private String NetworkPolicyPluginError;
 
     /**
-    * Cluster network plugin
-Note: This field may return·`null`, indicating that no valid values can be obtained.
+    * container network plugin
     */
     @SerializedName("ClusterNetworkSettings")
     @Expose
@@ -293,40 +291,32 @@ Note: This field may return·`null`, indicating that no valid values can be obta
     }
 
     /**
-     * Get Error message of the cluster network plugin
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return NetworkPolicyPluginError Error message of the cluster network plugin
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Cluster Network Plugin Error Message 
+     * @return NetworkPolicyPluginError Cluster Network Plugin Error Message
      */
     public String getNetworkPolicyPluginError() {
         return this.NetworkPolicyPluginError;
     }
 
     /**
-     * Set Error message of the cluster network plugin
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param NetworkPolicyPluginError Error message of the cluster network plugin
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Cluster Network Plugin Error Message
+     * @param NetworkPolicyPluginError Cluster Network Plugin Error Message
      */
     public void setNetworkPolicyPluginError(String NetworkPolicyPluginError) {
         this.NetworkPolicyPluginError = NetworkPolicyPluginError;
     }
 
     /**
-     * Get Cluster network plugin
-Note: This field may return·`null`, indicating that no valid values can be obtained. 
-     * @return ClusterNetworkSettings Cluster network plugin
-Note: This field may return·`null`, indicating that no valid values can be obtained.
+     * Get container network plugin 
+     * @return ClusterNetworkSettings container network plugin
      */
     public String getClusterNetworkSettings() {
         return this.ClusterNetworkSettings;
     }
 
     /**
-     * Set Cluster network plugin
-Note: This field may return·`null`, indicating that no valid values can be obtained.
-     * @param ClusterNetworkSettings Cluster network plugin
-Note: This field may return·`null`, indicating that no valid values can be obtained.
+     * Set container network plugin
+     * @param ClusterNetworkSettings container network plugin
      */
     public void setClusterNetworkSettings(String ClusterNetworkSettings) {
         this.ClusterNetworkSettings = ClusterNetworkSettings;

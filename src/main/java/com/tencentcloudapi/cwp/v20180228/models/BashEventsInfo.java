@@ -31,7 +31,7 @@ public class BashEventsInfo extends AbstractModel {
     private Long Id;
 
     /**
-    * Yunjing ID
+    * Host UUID
     */
     @SerializedName("Uuid")
     @Expose
@@ -109,7 +109,6 @@ public class BashEventsInfo extends AbstractModel {
 
     /**
     * Process name
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Exe")
     @Expose
@@ -117,15 +116,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Processing time
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ModifyTime")
     @Expose
     private String ModifyTime;
 
     /**
-    * Rule category: 0 - system rule; 1 - user rule
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Rule category. 0: system rule; 1: user rule
     */
     @SerializedName("RuleCategory")
     @Expose
@@ -133,15 +130,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Automatically generated regular expression
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("RegexBashCmd")
     @Expose
     private String RegexBashCmd;
 
     /**
-    * Process tree json  pid: process ID; exe: file path; account: groups and users to which the process belongs; cmdline: command execution; ssh_service: ssh service IP, ssh_source: log-in source
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Process tree json pid: process ID; exe: file path; account: groups and users to which the process belongs; cmdline: execute commands; ssh_service: SSH service IP; ssh_source: log-in source
     */
     @SerializedName("PsTree")
     @Expose
@@ -149,7 +144,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Recommended solution
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("SuggestScheme")
     @Expose
@@ -157,15 +151,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Description
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("HarmDescribe")
     @Expose
     private String HarmDescribe;
 
     /**
-    * Tag
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Tag.
     */
     @SerializedName("Tags")
     @Expose
@@ -173,7 +165,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Reference link
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("References")
     @Expose
@@ -181,15 +172,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Host public IP address
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("MachineWanIp")
     @Expose
     private String MachineWanIp;
 
     /**
-    * Host online status: OFFLINE  ONLINE
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Host online status: OFFLINE; ONLINE
     */
     @SerializedName("MachineStatus")
     @Expose
@@ -197,7 +186,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Log-in user
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("User")
     @Expose
@@ -205,7 +193,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Process ID
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Pid")
     @Expose
@@ -213,7 +200,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Data source
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("DetectBy")
     @Expose
@@ -236,16 +222,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Yunjing ID 
-     * @return Uuid Yunjing ID
+     * Get Host UUID 
+     * @return Uuid Host UUID
      */
     public String getUuid() {
         return this.Uuid;
     }
 
     /**
-     * Set Yunjing ID
-     * @param Uuid Yunjing ID
+     * Set Host UUID
+     * @param Uuid Host UUID
      */
     public void setUuid(String Uuid) {
         this.Uuid = Uuid;
@@ -412,10 +398,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Process name
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Process name 
      * @return Exe Process name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getExe() {
         return this.Exe;
@@ -423,19 +407,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Process name
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Exe Process name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setExe(String Exe) {
         this.Exe = Exe;
     }
 
     /**
-     * Get Processing time
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Processing time 
      * @return ModifyTime Processing time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getModifyTime() {
         return this.ModifyTime;
@@ -443,39 +423,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Processing time
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param ModifyTime Processing time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setModifyTime(String ModifyTime) {
         this.ModifyTime = ModifyTime;
     }
 
     /**
-     * Get Rule category: 0 - system rule; 1 - user rule
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return RuleCategory Rule category: 0 - system rule; 1 - user rule
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Rule category. 0: system rule; 1: user rule 
+     * @return RuleCategory Rule category. 0: system rule; 1: user rule
      */
     public Long getRuleCategory() {
         return this.RuleCategory;
     }
 
     /**
-     * Set Rule category: 0 - system rule; 1 - user rule
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param RuleCategory Rule category: 0 - system rule; 1 - user rule
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Rule category. 0: system rule; 1: user rule
+     * @param RuleCategory Rule category. 0: system rule; 1: user rule
      */
     public void setRuleCategory(Long RuleCategory) {
         this.RuleCategory = RuleCategory;
     }
 
     /**
-     * Get Automatically generated regular expression
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Automatically generated regular expression 
      * @return RegexBashCmd Automatically generated regular expression
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getRegexBashCmd() {
         return this.RegexBashCmd;
@@ -483,39 +455,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Automatically generated regular expression
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param RegexBashCmd Automatically generated regular expression
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setRegexBashCmd(String RegexBashCmd) {
         this.RegexBashCmd = RegexBashCmd;
     }
 
     /**
-     * Get Process tree json  pid: process ID; exe: file path; account: groups and users to which the process belongs; cmdline: command execution; ssh_service: ssh service IP, ssh_source: log-in source
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return PsTree Process tree json  pid: process ID; exe: file path; account: groups and users to which the process belongs; cmdline: command execution; ssh_service: ssh service IP, ssh_source: log-in source
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Process tree json pid: process ID; exe: file path; account: groups and users to which the process belongs; cmdline: execute commands; ssh_service: SSH service IP; ssh_source: log-in source 
+     * @return PsTree Process tree json pid: process ID; exe: file path; account: groups and users to which the process belongs; cmdline: execute commands; ssh_service: SSH service IP; ssh_source: log-in source
      */
     public String getPsTree() {
         return this.PsTree;
     }
 
     /**
-     * Set Process tree json  pid: process ID; exe: file path; account: groups and users to which the process belongs; cmdline: command execution; ssh_service: ssh service IP, ssh_source: log-in source
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param PsTree Process tree json  pid: process ID; exe: file path; account: groups and users to which the process belongs; cmdline: command execution; ssh_service: ssh service IP, ssh_source: log-in source
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Process tree json pid: process ID; exe: file path; account: groups and users to which the process belongs; cmdline: execute commands; ssh_service: SSH service IP; ssh_source: log-in source
+     * @param PsTree Process tree json pid: process ID; exe: file path; account: groups and users to which the process belongs; cmdline: execute commands; ssh_service: SSH service IP; ssh_source: log-in source
      */
     public void setPsTree(String PsTree) {
         this.PsTree = PsTree;
     }
 
     /**
-     * Get Recommended solution
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Recommended solution 
      * @return SuggestScheme Recommended solution
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getSuggestScheme() {
         return this.SuggestScheme;
@@ -523,19 +487,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Recommended solution
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param SuggestScheme Recommended solution
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setSuggestScheme(String SuggestScheme) {
         this.SuggestScheme = SuggestScheme;
     }
 
     /**
-     * Get Description
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Description 
      * @return HarmDescribe Description
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getHarmDescribe() {
         return this.HarmDescribe;
@@ -543,39 +503,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Description
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param HarmDescribe Description
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setHarmDescribe(String HarmDescribe) {
         this.HarmDescribe = HarmDescribe;
     }
 
     /**
-     * Get Tag
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Tags Tag
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Tag. 
+     * @return Tags Tag.
      */
     public String [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set Tag
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Tags Tag
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Tag.
+     * @param Tags Tag.
      */
     public void setTags(String [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get Reference link
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Reference link 
      * @return References Reference link
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String [] getReferences() {
         return this.References;
@@ -583,19 +535,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Reference link
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param References Reference link
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setReferences(String [] References) {
         this.References = References;
     }
 
     /**
-     * Get Host public IP address
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Host public IP address 
      * @return MachineWanIp Host public IP address
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getMachineWanIp() {
         return this.MachineWanIp;
@@ -603,39 +551,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Host public IP address
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param MachineWanIp Host public IP address
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setMachineWanIp(String MachineWanIp) {
         this.MachineWanIp = MachineWanIp;
     }
 
     /**
-     * Get Host online status: OFFLINE  ONLINE
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return MachineStatus Host online status: OFFLINE  ONLINE
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Host online status: OFFLINE; ONLINE 
+     * @return MachineStatus Host online status: OFFLINE; ONLINE
      */
     public String getMachineStatus() {
         return this.MachineStatus;
     }
 
     /**
-     * Set Host online status: OFFLINE  ONLINE
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param MachineStatus Host online status: OFFLINE  ONLINE
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Host online status: OFFLINE; ONLINE
+     * @param MachineStatus Host online status: OFFLINE; ONLINE
      */
     public void setMachineStatus(String MachineStatus) {
         this.MachineStatus = MachineStatus;
     }
 
     /**
-     * Get Log-in user
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Log-in user 
      * @return User Log-in user
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getUser() {
         return this.User;
@@ -643,19 +583,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Log-in user
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param User Log-in user
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setUser(String User) {
         this.User = User;
     }
 
     /**
-     * Get Process ID
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Process ID 
      * @return Pid Process ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getPid() {
         return this.Pid;
@@ -663,19 +599,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Process ID
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Pid Process ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setPid(String Pid) {
         this.Pid = Pid;
     }
 
     /**
-     * Get Data source
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Data source 
      * @return DetectBy Data source
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getDetectBy() {
         return this.DetectBy;
@@ -683,9 +615,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Data source
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param DetectBy Data source
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setDetectBy(String DetectBy) {
         this.DetectBy = DetectBy;

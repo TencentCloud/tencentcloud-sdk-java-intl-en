@@ -38,7 +38,7 @@ public class MachineSimple extends AbstractModel {
     private String MachineOs;
 
     /**
-    * Yunjing client UUID. If the client is offline for a long time, an empty string is returned.
+    * CWP UUID. If the CWP client is offline for a long time, an empty character is returned.
     */
     @SerializedName("Uuid")
     @Expose
@@ -98,7 +98,8 @@ public class MachineSimple extends AbstractModel {
     private RegionInfo RegionInfo;
 
     /**
-    * Instance status. TERMINATED_PRO_VERSION: terminated.
+    * Refer to the instance status in the CVM instance list for the InstanceState value.
+https://www.tencentcloud.com/document/api/213/15753?from_cn_redirect=1#Instance
     */
     @SerializedName("InstanceState")
     @Expose
@@ -126,7 +127,7 @@ public class MachineSimple extends AbstractModel {
     private String KernelVersion;
 
     /**
-    * Protection Edition. BASIC_VERSION: Basic Edition; PRO_VERSION: Professional Edition; Flagship: Premium Edition; GENERAL_DISCOUNT: General Discount Edition
+    * Protection version: BASIC_VERSION - Basic Edition; PRO_VERSION - Professional Edition; Flagship - Ultimate Edition; GENERAL_DISCOUNT - Lightweight Edition
     */
     @SerializedName("ProtectType")
     @Expose
@@ -134,7 +135,6 @@ public class MachineSimple extends AbstractModel {
 
     /**
     * Authorization order object
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("LicenseOrder")
     @Expose
@@ -142,7 +142,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Cloud Tag Information
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("CloudTags")
     @Expose
@@ -150,7 +149,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Instance ID
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("InstanceId")
     @Expose
@@ -189,16 +187,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Yunjing client UUID. If the client is offline for a long time, an empty string is returned. 
-     * @return Uuid Yunjing client UUID. If the client is offline for a long time, an empty string is returned.
+     * Get CWP UUID. If the CWP client is offline for a long time, an empty character is returned. 
+     * @return Uuid CWP UUID. If the CWP client is offline for a long time, an empty character is returned.
      */
     public String getUuid() {
         return this.Uuid;
     }
 
     /**
-     * Set Yunjing client UUID. If the client is offline for a long time, an empty string is returned.
-     * @param Uuid Yunjing client UUID. If the client is offline for a long time, an empty string is returned.
+     * Set CWP UUID. If the CWP client is offline for a long time, an empty character is returned.
+     * @param Uuid CWP UUID. If the CWP client is offline for a long time, an empty character is returned.
      */
     public void setUuid(String Uuid) {
         this.Uuid = Uuid;
@@ -333,16 +331,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Instance status. TERMINATED_PRO_VERSION: terminated. 
-     * @return InstanceState Instance status. TERMINATED_PRO_VERSION: terminated.
+     * Get Refer to the instance status in the CVM instance list for the InstanceState value.
+https://www.tencentcloud.com/document/api/213/15753?from_cn_redirect=1#Instance 
+     * @return InstanceState Refer to the instance status in the CVM instance list for the InstanceState value.
+https://www.tencentcloud.com/document/api/213/15753?from_cn_redirect=1#Instance
      */
     public String getInstanceState() {
         return this.InstanceState;
     }
 
     /**
-     * Set Instance status. TERMINATED_PRO_VERSION: terminated.
-     * @param InstanceState Instance status. TERMINATED_PRO_VERSION: terminated.
+     * Set Refer to the instance status in the CVM instance list for the InstanceState value.
+https://www.tencentcloud.com/document/api/213/15753?from_cn_redirect=1#Instance
+     * @param InstanceState Refer to the instance status in the CVM instance list for the InstanceState value.
+https://www.tencentcloud.com/document/api/213/15753?from_cn_redirect=1#Instance
      */
     public void setInstanceState(String InstanceState) {
         this.InstanceState = InstanceState;
@@ -397,26 +399,24 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Protection Edition. BASIC_VERSION: Basic Edition; PRO_VERSION: Professional Edition; Flagship: Premium Edition; GENERAL_DISCOUNT: General Discount Edition 
-     * @return ProtectType Protection Edition. BASIC_VERSION: Basic Edition; PRO_VERSION: Professional Edition; Flagship: Premium Edition; GENERAL_DISCOUNT: General Discount Edition
+     * Get Protection version: BASIC_VERSION - Basic Edition; PRO_VERSION - Professional Edition; Flagship - Ultimate Edition; GENERAL_DISCOUNT - Lightweight Edition 
+     * @return ProtectType Protection version: BASIC_VERSION - Basic Edition; PRO_VERSION - Professional Edition; Flagship - Ultimate Edition; GENERAL_DISCOUNT - Lightweight Edition
      */
     public String getProtectType() {
         return this.ProtectType;
     }
 
     /**
-     * Set Protection Edition. BASIC_VERSION: Basic Edition; PRO_VERSION: Professional Edition; Flagship: Premium Edition; GENERAL_DISCOUNT: General Discount Edition
-     * @param ProtectType Protection Edition. BASIC_VERSION: Basic Edition; PRO_VERSION: Professional Edition; Flagship: Premium Edition; GENERAL_DISCOUNT: General Discount Edition
+     * Set Protection version: BASIC_VERSION - Basic Edition; PRO_VERSION - Professional Edition; Flagship - Ultimate Edition; GENERAL_DISCOUNT - Lightweight Edition
+     * @param ProtectType Protection version: BASIC_VERSION - Basic Edition; PRO_VERSION - Professional Edition; Flagship - Ultimate Edition; GENERAL_DISCOUNT - Lightweight Edition
      */
     public void setProtectType(String ProtectType) {
         this.ProtectType = ProtectType;
     }
 
     /**
-     * Get Authorization order object
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Authorization order object 
      * @return LicenseOrder Authorization order object
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public LicenseOrder getLicenseOrder() {
         return this.LicenseOrder;
@@ -424,19 +424,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Authorization order object
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param LicenseOrder Authorization order object
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setLicenseOrder(LicenseOrder LicenseOrder) {
         this.LicenseOrder = LicenseOrder;
     }
 
     /**
-     * Get Cloud Tag Information
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Cloud Tag Information 
      * @return CloudTags Cloud Tag Information
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Tags [] getCloudTags() {
         return this.CloudTags;
@@ -444,19 +440,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Cloud Tag Information
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param CloudTags Cloud Tag Information
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setCloudTags(Tags [] CloudTags) {
         this.CloudTags = CloudTags;
     }
 
     /**
-     * Get Instance ID
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Instance ID 
      * @return InstanceId Instance ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getInstanceId() {
         return this.InstanceId;
@@ -464,9 +456,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Instance ID
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param InstanceId Instance ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;

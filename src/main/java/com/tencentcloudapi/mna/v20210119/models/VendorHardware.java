@@ -89,9 +89,9 @@ Note: When the device is paid by the tenant and inactive (not selected for month
 
     /**
     * Authorization validity period
-Monthly authorization
+0: Monthly authorization
 1: Permanent license
--Unknown
+-1: Unknown
     */
     @SerializedName("LicensePayMode")
     @Expose
@@ -256,13 +256,13 @@ Note: When the device is paid by the tenant and inactive (not selected for month
 
     /**
      * Get Authorization validity period
-Monthly authorization
+0: Monthly authorization
 1: Permanent license
--Unknown 
+-1: Unknown 
      * @return LicensePayMode Authorization validity period
-Monthly authorization
+0: Monthly authorization
 1: Permanent license
--Unknown
+-1: Unknown
      */
     public Long getLicensePayMode() {
         return this.LicensePayMode;
@@ -270,13 +270,13 @@ Monthly authorization
 
     /**
      * Set Authorization validity period
-Monthly authorization
+0: Monthly authorization
 1: Permanent license
--Unknown
+-1: Unknown
      * @param LicensePayMode Authorization validity period
-Monthly authorization
+0: Monthly authorization
 1: Permanent license
--Unknown
+-1: Unknown
      */
     public void setLicensePayMode(Long LicensePayMode) {
         this.LicensePayMode = LicensePayMode;

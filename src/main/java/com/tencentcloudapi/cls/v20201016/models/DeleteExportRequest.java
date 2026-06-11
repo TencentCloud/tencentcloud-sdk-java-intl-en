@@ -24,23 +24,33 @@ import java.util.HashMap;
 public class DeleteExportRequest extends AbstractModel {
 
     /**
-    * Log export ID
+    * Log export task ID.
+-Obtain the log export task Id through [Get Log Download Task List](https://www.tencentcloud.com/document/product/614/56449?from_cn_redirect=1).
+
     */
     @SerializedName("ExportId")
     @Expose
     private String ExportId;
 
     /**
-     * Get Log export ID 
-     * @return ExportId Log export ID
+     * Get Log export task ID.
+-Obtain the log export task Id through [Get Log Download Task List](https://www.tencentcloud.com/document/product/614/56449?from_cn_redirect=1).
+ 
+     * @return ExportId Log export task ID.
+-Obtain the log export task Id through [Get Log Download Task List](https://www.tencentcloud.com/document/product/614/56449?from_cn_redirect=1).
+
      */
     public String getExportId() {
         return this.ExportId;
     }
 
     /**
-     * Set Log export ID
-     * @param ExportId Log export ID
+     * Set Log export task ID.
+-Obtain the log export task Id through [Get Log Download Task List](https://www.tencentcloud.com/document/product/614/56449?from_cn_redirect=1).
+
+     * @param ExportId Log export task ID.
+-Obtain the log export task Id through [Get Log Download Task List](https://www.tencentcloud.com/document/product/614/56449?from_cn_redirect=1).
+
      */
     public void setExportId(String ExportId) {
         this.ExportId = ExportId;

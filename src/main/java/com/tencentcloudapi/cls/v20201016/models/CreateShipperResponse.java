@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateShipperResponse extends AbstractModel {
 
     /**
-    * Shipping task ID.
+    * <p>Delivery task ID</p>
     */
     @SerializedName("ShipperId")
     @Expose
@@ -38,16 +38,16 @@ public class CreateShipperResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Shipping task ID. 
-     * @return ShipperId Shipping task ID.
+     * Get <p>Delivery task ID</p> 
+     * @return ShipperId <p>Delivery task ID</p>
      */
     public String getShipperId() {
         return this.ShipperId;
     }
 
     /**
-     * Set Shipping task ID.
-     * @param ShipperId Shipping task ID.
+     * Set <p>Delivery task ID</p>
+     * @param ShipperId <p>Delivery task ID</p>
      */
     public void setShipperId(String ShipperId) {
         this.ShipperId = ShipperId;

@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class AuditInstanceFilters extends AbstractModel {
 
     /**
-    * 
+    * Filter condition values. Supported values include: InstanceId - Instance ID, InstanceName - Instance name, ProjectId - Project ID, TagKey - Tag key, Tag - Tag (separated by vertical bar, e.g., TagKey|TagValue).
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 
+    * True indicates exact match, false indicates fuzzy match.
     */
     @SerializedName("ExactMatch")
     @Expose
     private Boolean ExactMatch;
 
     /**
-    * 
+    * Filter value.
     */
     @SerializedName("Values")
     @Expose
     private String [] Values;
 
     /**
-     * Get  
-     * @return Name 
+     * Get Filter condition values. Supported values include: InstanceId - Instance ID, InstanceName - Instance name, ProjectId - Project ID, TagKey - Tag key, Tag - Tag (separated by vertical bar, e.g., TagKey|TagValue). 
+     * @return Name Filter condition values. Supported values include: InstanceId - Instance ID, InstanceName - Instance name, ProjectId - Project ID, TagKey - Tag key, Tag - Tag (separated by vertical bar, e.g., TagKey|TagValue).
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 
-     * @param Name 
+     * Set Filter condition values. Supported values include: InstanceId - Instance ID, InstanceName - Instance name, ProjectId - Project ID, TagKey - Tag key, Tag - Tag (separated by vertical bar, e.g., TagKey|TagValue).
+     * @param Name Filter condition values. Supported values include: InstanceId - Instance ID, InstanceName - Instance name, ProjectId - Project ID, TagKey - Tag key, Tag - Tag (separated by vertical bar, e.g., TagKey|TagValue).
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get  
-     * @return ExactMatch 
+     * Get True indicates exact match, false indicates fuzzy match. 
+     * @return ExactMatch True indicates exact match, false indicates fuzzy match.
      */
     public Boolean getExactMatch() {
         return this.ExactMatch;
     }
 
     /**
-     * Set 
-     * @param ExactMatch 
+     * Set True indicates exact match, false indicates fuzzy match.
+     * @param ExactMatch True indicates exact match, false indicates fuzzy match.
      */
     public void setExactMatch(Boolean ExactMatch) {
         this.ExactMatch = ExactMatch;
     }
 
     /**
-     * Get  
-     * @return Values 
+     * Get Filter value. 
+     * @return Values Filter value.
      */
     public String [] getValues() {
         return this.Values;
     }
 
     /**
-     * Set 
-     * @param Values 
+     * Set Filter value.
+     * @param Values Filter value.
      */
     public void setValues(String [] Values) {
         this.Values = Values;

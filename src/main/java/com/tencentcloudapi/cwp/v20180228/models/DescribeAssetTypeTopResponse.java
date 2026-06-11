@@ -25,7 +25,6 @@ public class DescribeAssetTypeTopResponse extends AbstractModel {
 
     /**
     * Top 5 accounts
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("User")
     @Expose
@@ -33,7 +32,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Top 5 ports
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Port")
     @Expose
@@ -41,7 +39,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Top 5 processes
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Process")
     @Expose
@@ -49,7 +46,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Top 5 software
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Software")
     @Expose
@@ -57,39 +53,34 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Top 5 databases
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Database")
     @Expose
     private AssetKeyVal [] Database;
 
     /**
-    * Top 5 web applications
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Top 5 Web Applications
     */
     @SerializedName("WebApp")
     @Expose
     private AssetKeyVal [] WebApp;
 
     /**
-    * Top 5 web sites
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Top 5 Websites
     */
     @SerializedName("WebLocation")
     @Expose
     private AssetKeyVal [] WebLocation;
 
     /**
-    * Top 5 web frameworks
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Top 5 Web frameworks
     */
     @SerializedName("WebFrame")
     @Expose
     private AssetKeyVal [] WebFrame;
 
     /**
-    * Top 5 web services
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Top 5 Web Services
     */
     @SerializedName("WebService")
     @Expose
@@ -103,10 +94,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Top 5 accounts
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Top 5 accounts 
      * @return User Top 5 accounts
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public AssetKeyVal [] getUser() {
         return this.User;
@@ -114,19 +103,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Top 5 accounts
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param User Top 5 accounts
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setUser(AssetKeyVal [] User) {
         this.User = User;
     }
 
     /**
-     * Get Top 5 ports
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Top 5 ports 
      * @return Port Top 5 ports
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public AssetKeyVal [] getPort() {
         return this.Port;
@@ -134,19 +119,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Top 5 ports
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Port Top 5 ports
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setPort(AssetKeyVal [] Port) {
         this.Port = Port;
     }
 
     /**
-     * Get Top 5 processes
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Top 5 processes 
      * @return Process Top 5 processes
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public AssetKeyVal [] getProcess() {
         return this.Process;
@@ -154,19 +135,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Top 5 processes
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Process Top 5 processes
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setProcess(AssetKeyVal [] Process) {
         this.Process = Process;
     }
 
     /**
-     * Get Top 5 software
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Top 5 software 
      * @return Software Top 5 software
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public AssetKeyVal [] getSoftware() {
         return this.Software;
@@ -174,19 +151,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Top 5 software
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Software Top 5 software
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setSoftware(AssetKeyVal [] Software) {
         this.Software = Software;
     }
 
     /**
-     * Get Top 5 databases
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Top 5 databases 
      * @return Database Top 5 databases
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public AssetKeyVal [] getDatabase() {
         return this.Database;
@@ -194,89 +167,71 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Top 5 databases
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Database Top 5 databases
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setDatabase(AssetKeyVal [] Database) {
         this.Database = Database;
     }
 
     /**
-     * Get Top 5 web applications
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return WebApp Top 5 web applications
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Top 5 Web Applications 
+     * @return WebApp Top 5 Web Applications
      */
     public AssetKeyVal [] getWebApp() {
         return this.WebApp;
     }
 
     /**
-     * Set Top 5 web applications
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param WebApp Top 5 web applications
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Top 5 Web Applications
+     * @param WebApp Top 5 Web Applications
      */
     public void setWebApp(AssetKeyVal [] WebApp) {
         this.WebApp = WebApp;
     }
 
     /**
-     * Get Top 5 web sites
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return WebLocation Top 5 web sites
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Top 5 Websites 
+     * @return WebLocation Top 5 Websites
      */
     public AssetKeyVal [] getWebLocation() {
         return this.WebLocation;
     }
 
     /**
-     * Set Top 5 web sites
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param WebLocation Top 5 web sites
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Top 5 Websites
+     * @param WebLocation Top 5 Websites
      */
     public void setWebLocation(AssetKeyVal [] WebLocation) {
         this.WebLocation = WebLocation;
     }
 
     /**
-     * Get Top 5 web frameworks
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return WebFrame Top 5 web frameworks
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Top 5 Web frameworks 
+     * @return WebFrame Top 5 Web frameworks
      */
     public AssetKeyVal [] getWebFrame() {
         return this.WebFrame;
     }
 
     /**
-     * Set Top 5 web frameworks
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param WebFrame Top 5 web frameworks
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Top 5 Web frameworks
+     * @param WebFrame Top 5 Web frameworks
      */
     public void setWebFrame(AssetKeyVal [] WebFrame) {
         this.WebFrame = WebFrame;
     }
 
     /**
-     * Get Top 5 web services
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return WebService Top 5 web services
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Top 5 Web Services 
+     * @return WebService Top 5 Web Services
      */
     public AssetKeyVal [] getWebService() {
         return this.WebService;
     }
 
     /**
-     * Set Top 5 web services
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param WebService Top 5 web services
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Top 5 Web Services
+     * @param WebService Top 5 Web Services
      */
     public void setWebService(AssetKeyVal [] WebService) {
         this.WebService = WebService;

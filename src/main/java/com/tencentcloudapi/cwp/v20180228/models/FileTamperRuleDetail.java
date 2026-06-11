@@ -25,7 +25,6 @@ public class FileTamperRuleDetail extends AbstractModel {
 
     /**
     * Rule name
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Name")
     @Expose
@@ -61,7 +60,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Effective Host UUID. Empty means all hosts, and returned number of entries can be controlled through parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Uuids")
     @Expose
@@ -96,20 +94,17 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long UuidTotalCount;
 
     /**
-    * Allowlisted processing type
-<li>cur: add the current items to the allowlist</li>
-<li>all: add all items that meet the conditions to the allowlist</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Allowlist processing type
+<li>cur: add only the current item to an allowlist</li>
+<li>all: add all objects that meet the conditions to the allowlist</li>
     */
     @SerializedName("AddWhiteType")
     @Expose
     private String AddWhiteType;
 
     /**
-     * Get Rule name
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Rule name 
      * @return Name Rule name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getName() {
         return this.Name;
@@ -117,9 +112,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Rule name
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Name Rule name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setName(String Name) {
         this.Name = Name;
@@ -190,10 +183,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Effective Host UUID. Empty means all hosts, and returned number of entries can be controlled through parameters.
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Effective Host UUID. Empty means all hosts, and returned number of entries can be controlled through parameters. 
      * @return Uuids Effective Host UUID. Empty means all hosts, and returned number of entries can be controlled through parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String [] getUuids() {
         return this.Uuids;
@@ -201,9 +192,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Effective Host UUID. Empty means all hosts, and returned number of entries can be controlled through parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Uuids Effective Host UUID. Empty means all hosts, and returned number of entries can be controlled through parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setUuids(String [] Uuids) {
         this.Uuids = Uuids;
@@ -274,28 +263,24 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Allowlisted processing type
-<li>cur: add the current items to the allowlist</li>
-<li>all: add all items that meet the conditions to the allowlist</li>
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return AddWhiteType Allowlisted processing type
-<li>cur: add the current items to the allowlist</li>
-<li>all: add all items that meet the conditions to the allowlist</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Allowlist processing type
+<li>cur: add only the current item to an allowlist</li>
+<li>all: add all objects that meet the conditions to the allowlist</li> 
+     * @return AddWhiteType Allowlist processing type
+<li>cur: add only the current item to an allowlist</li>
+<li>all: add all objects that meet the conditions to the allowlist</li>
      */
     public String getAddWhiteType() {
         return this.AddWhiteType;
     }
 
     /**
-     * Set Allowlisted processing type
-<li>cur: add the current items to the allowlist</li>
-<li>all: add all items that meet the conditions to the allowlist</li>
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param AddWhiteType Allowlisted processing type
-<li>cur: add the current items to the allowlist</li>
-<li>all: add all items that meet the conditions to the allowlist</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Allowlist processing type
+<li>cur: add only the current item to an allowlist</li>
+<li>all: add all objects that meet the conditions to the allowlist</li>
+     * @param AddWhiteType Allowlist processing type
+<li>cur: add only the current item to an allowlist</li>
+<li>all: add all objects that meet the conditions to the allowlist</li>
      */
     public void setAddWhiteType(String AddWhiteType) {
         this.AddWhiteType = AddWhiteType;

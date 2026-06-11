@@ -41,7 +41,6 @@ Note: \n\t\r can be directly enclosed in double quotes as the input parameter wi
 
     /**
     * Whether Chinese characters are contained
-Note: this field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("ContainZH")
     @Expose
@@ -88,10 +87,8 @@ Note: \n\t\r can be directly enclosed in double quotes as the input parameter wi
     }
 
     /**
-     * Get Whether Chinese characters are contained
-Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * Get Whether Chinese characters are contained 
      * @return ContainZH Whether Chinese characters are contained
-Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public Boolean getContainZH() {
         return this.ContainZH;
@@ -99,9 +96,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
     /**
      * Set Whether Chinese characters are contained
-Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param ContainZH Whether Chinese characters are contained
-Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public void setContainZH(Boolean ContainZH) {
         this.ContainZH = ContainZH;

@@ -24,46 +24,66 @@ import java.util.HashMap;
 public class DeleteKafkaRechargeRequest extends AbstractModel {
 
     /**
-    * Kafka data import configuration ID
+    * Kafka import configuration Id.
+
+-Create a Kafka Data Subscription Task (https://www.tencentcloud.com/document/product/614/94448?from_cn_redirect=1) to obtain the Kafka import configuration Id.
+-Get the Kafka import configuration Id by [searching the Kafka Data Subscription Task list](https://www.tencentcloud.com/document/product/614/94446?from_cn_redirect=1).
     */
     @SerializedName("Id")
     @Expose
     private String Id;
 
     /**
-    * Target CLS log topic ID
+    * Import the target log topic Id of CLS.
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
     */
     @SerializedName("TopicId")
     @Expose
     private String TopicId;
 
     /**
-     * Get Kafka data import configuration ID 
-     * @return Id Kafka data import configuration ID
+     * Get Kafka import configuration Id.
+
+-Create a Kafka Data Subscription Task (https://www.tencentcloud.com/document/product/614/94448?from_cn_redirect=1) to obtain the Kafka import configuration Id.
+-Get the Kafka import configuration Id by [searching the Kafka Data Subscription Task list](https://www.tencentcloud.com/document/product/614/94446?from_cn_redirect=1). 
+     * @return Id Kafka import configuration Id.
+
+-Create a Kafka Data Subscription Task (https://www.tencentcloud.com/document/product/614/94448?from_cn_redirect=1) to obtain the Kafka import configuration Id.
+-Get the Kafka import configuration Id by [searching the Kafka Data Subscription Task list](https://www.tencentcloud.com/document/product/614/94446?from_cn_redirect=1).
      */
     public String getId() {
         return this.Id;
     }
 
     /**
-     * Set Kafka data import configuration ID
-     * @param Id Kafka data import configuration ID
+     * Set Kafka import configuration Id.
+
+-Create a Kafka Data Subscription Task (https://www.tencentcloud.com/document/product/614/94448?from_cn_redirect=1) to obtain the Kafka import configuration Id.
+-Get the Kafka import configuration Id by [searching the Kafka Data Subscription Task list](https://www.tencentcloud.com/document/product/614/94446?from_cn_redirect=1).
+     * @param Id Kafka import configuration Id.
+
+-Create a Kafka Data Subscription Task (https://www.tencentcloud.com/document/product/614/94448?from_cn_redirect=1) to obtain the Kafka import configuration Id.
+-Get the Kafka import configuration Id by [searching the Kafka Data Subscription Task list](https://www.tencentcloud.com/document/product/614/94446?from_cn_redirect=1).
      */
     public void setId(String Id) {
         this.Id = Id;
     }
 
     /**
-     * Get Target CLS log topic ID 
-     * @return TopicId Target CLS log topic ID
+     * Get Import the target log topic Id of CLS.
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1). 
+     * @return TopicId Import the target log topic Id of CLS.
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
      */
     public String getTopicId() {
         return this.TopicId;
     }
 
     /**
-     * Set Target CLS log topic ID
-     * @param TopicId Target CLS log topic ID
+     * Set Import the target log topic Id of CLS.
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
+     * @param TopicId Import the target log topic Id of CLS.
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
      */
     public void setTopicId(String TopicId) {
         this.TopicId = TopicId;

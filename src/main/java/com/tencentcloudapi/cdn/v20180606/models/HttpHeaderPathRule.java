@@ -43,10 +43,10 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     private String HeaderName;
 
     /**
-    * HTTP header value. Up to 1000 characters can be set.
-Not required when Mode is del
-Required when Mode is add/set
-Note: This field may return `null`, indicating that no valid value can be obtained.
+    * http header value. custom request header supports up to 1000 characters. custom response header can be set up to 2000 characters.
+Optional when Mode is del.
+Required when Mode is add/set.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("HeaderValue")
     @Expose
@@ -129,28 +129,28 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     }
 
     /**
-     * Get HTTP header value. Up to 1000 characters can be set.
-Not required when Mode is del
-Required when Mode is add/set
-Note: This field may return `null`, indicating that no valid value can be obtained. 
-     * @return HeaderValue HTTP header value. Up to 1000 characters can be set.
-Not required when Mode is del
-Required when Mode is add/set
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Get http header value. custom request header supports up to 1000 characters. custom response header can be set up to 2000 characters.
+Optional when Mode is del.
+Required when Mode is add/set.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return HeaderValue http header value. custom request header supports up to 1000 characters. custom response header can be set up to 2000 characters.
+Optional when Mode is del.
+Required when Mode is add/set.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getHeaderValue() {
         return this.HeaderValue;
     }
 
     /**
-     * Set HTTP header value. Up to 1000 characters can be set.
-Not required when Mode is del
-Required when Mode is add/set
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param HeaderValue HTTP header value. Up to 1000 characters can be set.
-Not required when Mode is del
-Required when Mode is add/set
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Set http header value. custom request header supports up to 1000 characters. custom response header can be set up to 2000 characters.
+Optional when Mode is del.
+Required when Mode is add/set.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param HeaderValue http header value. custom request header supports up to 1000 characters. custom response header can be set up to 2000 characters.
+Optional when Mode is del.
+Required when Mode is add/set.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setHeaderValue(String HeaderValue) {
         this.HeaderValue = HeaderValue;

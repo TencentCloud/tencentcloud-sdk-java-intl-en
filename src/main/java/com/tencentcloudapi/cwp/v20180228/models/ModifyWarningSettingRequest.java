@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class ModifyWarningSettingRequest extends AbstractModel {
 
     /**
-    * Modified alarm setting content
+    * Modify alarm settings.
     */
     @SerializedName("WarningObjects")
     @Expose
     private WarningObject [] WarningObjects;
 
     /**
-     * Get Modified alarm setting content 
-     * @return WarningObjects Modified alarm setting content
+     * Get Modify alarm settings. 
+     * @return WarningObjects Modify alarm settings.
      */
     public WarningObject [] getWarningObjects() {
         return this.WarningObjects;
     }
 
     /**
-     * Set Modified alarm setting content
-     * @param WarningObjects Modified alarm setting content
+     * Set Modify alarm settings.
+     * @param WarningObjects Modify alarm settings.
      */
     public void setWarningObjects(WarningObject [] WarningObjects) {
         this.WarningObjects = WarningObjects;

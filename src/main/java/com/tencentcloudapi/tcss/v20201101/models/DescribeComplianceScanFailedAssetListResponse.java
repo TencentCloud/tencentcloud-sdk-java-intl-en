@@ -31,8 +31,7 @@ public class DescribeComplianceScanFailedAssetListResponse extends AbstractModel
     private Long TotalCount;
 
     /**
-    * List of aggregated information of each type of asset that failed the check
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Return the list of summary information for assets with various types of detection failures.
     */
     @SerializedName("ScanFailedAssetList")
     @Expose
@@ -62,20 +61,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get List of aggregated information of each type of asset that failed the check
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ScanFailedAssetList List of aggregated information of each type of asset that failed the check
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Return the list of summary information for assets with various types of detection failures. 
+     * @return ScanFailedAssetList Return the list of summary information for assets with various types of detection failures.
      */
     public ComplianceScanFailedAsset [] getScanFailedAssetList() {
         return this.ScanFailedAssetList;
     }
 
     /**
-     * Set List of aggregated information of each type of asset that failed the check
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ScanFailedAssetList List of aggregated information of each type of asset that failed the check
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Return the list of summary information for assets with various types of detection failures.
+     * @param ScanFailedAssetList Return the list of summary information for assets with various types of detection failures.
      */
     public void setScanFailedAssetList(ComplianceScanFailedAsset [] ScanFailedAssetList) {
         this.ScanFailedAssetList = ScanFailedAssetList;

@@ -25,7 +25,6 @@ public class DescribeIgnoreHostAndItemConfigResponse extends AbstractModel {
 
     /**
     * Affected detection items
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ItemSet")
     @Expose
@@ -33,7 +32,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Affected hosts
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("HostSet")
     @Expose
@@ -47,10 +45,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Affected detection items
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Affected detection items 
      * @return ItemSet Affected detection items
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public BaselineItemInfo [] getItemSet() {
         return this.ItemSet;
@@ -58,19 +54,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Affected detection items
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param ItemSet Affected detection items
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setItemSet(BaselineItemInfo [] ItemSet) {
         this.ItemSet = ItemSet;
     }
 
     /**
-     * Get Affected hosts
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Affected hosts 
      * @return HostSet Affected hosts
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public BaselineHost [] getHostSet() {
         return this.HostSet;
@@ -78,9 +70,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Affected hosts
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param HostSet Affected hosts
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setHostSet(BaselineHost [] HostSet) {
         this.HostSet = HostSet;

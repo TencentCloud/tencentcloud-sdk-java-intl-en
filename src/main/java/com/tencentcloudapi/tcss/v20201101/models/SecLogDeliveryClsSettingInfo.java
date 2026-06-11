@@ -59,8 +59,7 @@ public class SecLogDeliveryClsSettingInfo extends AbstractModel {
     private String TopicID;
 
     /**
-    * Logset name
-Note: This field may return null, indicating that no valid values can be obtained.
+    * logset name
     */
     @SerializedName("LogSetName")
     @Expose
@@ -68,11 +67,24 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Topic name
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("TopicName")
     @Expose
     private String TopicName;
+
+    /**
+    * Log type	
+    */
+    @SerializedName("SubLogType")
+    @Expose
+    private String [] SubLogType;
+
+    /**
+    * Error message
+    */
+    @SerializedName("ErrMsg")
+    @Expose
+    private String ErrMsg;
 
     /**
      * Get Log type 
@@ -155,30 +167,24 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Logset name
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return LogSetName Logset name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get logset name 
+     * @return LogSetName logset name
      */
     public String getLogSetName() {
         return this.LogSetName;
     }
 
     /**
-     * Set Logset name
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param LogSetName Logset name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set logset name
+     * @param LogSetName logset name
      */
     public void setLogSetName(String LogSetName) {
         this.LogSetName = LogSetName;
     }
 
     /**
-     * Get Topic name
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Topic name 
      * @return TopicName Topic name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getTopicName() {
         return this.TopicName;
@@ -186,12 +192,42 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Topic name
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param TopicName Topic name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setTopicName(String TopicName) {
         this.TopicName = TopicName;
+    }
+
+    /**
+     * Get Log type	 
+     * @return SubLogType Log type	
+     */
+    public String [] getSubLogType() {
+        return this.SubLogType;
+    }
+
+    /**
+     * Set Log type	
+     * @param SubLogType Log type	
+     */
+    public void setSubLogType(String [] SubLogType) {
+        this.SubLogType = SubLogType;
+    }
+
+    /**
+     * Get Error message 
+     * @return ErrMsg Error message
+     */
+    public String getErrMsg() {
+        return this.ErrMsg;
+    }
+
+    /**
+     * Set Error message
+     * @param ErrMsg Error message
+     */
+    public void setErrMsg(String ErrMsg) {
+        this.ErrMsg = ErrMsg;
     }
 
     public SecLogDeliveryClsSettingInfo() {
@@ -223,6 +259,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.TopicName != null) {
             this.TopicName = new String(source.TopicName);
         }
+        if (source.SubLogType != null) {
+            this.SubLogType = new String[source.SubLogType.length];
+            for (int i = 0; i < source.SubLogType.length; i++) {
+                this.SubLogType[i] = new String(source.SubLogType[i]);
+            }
+        }
+        if (source.ErrMsg != null) {
+            this.ErrMsg = new String(source.ErrMsg);
+        }
     }
 
 
@@ -237,6 +282,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "TopicID", this.TopicID);
         this.setParamSimple(map, prefix + "LogSetName", this.LogSetName);
         this.setParamSimple(map, prefix + "TopicName", this.TopicName);
+        this.setParamArraySimple(map, prefix + "SubLogType.", this.SubLogType);
+        this.setParamSimple(map, prefix + "ErrMsg", this.ErrMsg);
 
     }
 }

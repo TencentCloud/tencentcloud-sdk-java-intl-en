@@ -24,28 +24,33 @@ import java.util.HashMap;
 public class SearchCosRechargeInfoRequest extends AbstractModel {
 
     /**
-    * Log topic ID
+    * Log topic Id.
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
     */
     @SerializedName("TopicId")
     @Expose
     private String TopicId;
 
     /**
-    * Logset ID
+    * FL instance set ID.
+
+-Obtain the logset Id by searching the [logset list](https://www.tencentcloud.com/document/product/614/58624?from_cn_redirect=1).
     */
     @SerializedName("LogsetId")
     @Expose
     private String LogsetId;
 
     /**
-    * Delivery Task Name
+    * COS import task name, supports up to 128 bytes.
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * COS bucket, see the supported [bucket naming conventions](https://intl.cloud.tencent.com/document/product/436/13312?from_cn_redirect=1).
+    * COS bucket, see the supported [bucket naming conventions](https://www.tencentcloud.com/document/product/436/13312?from_cn_redirect=1).	
+
+-Get COS buckets via [GET Service (List Buckets)](https://www.tencentcloud.com/document/product/436/8291?from_cn_redirect=1).
     */
     @SerializedName("Bucket")
     @Expose
@@ -59,78 +64,98 @@ public class SearchCosRechargeInfoRequest extends AbstractModel {
     private String BucketRegion;
 
     /**
-    * The prefix of the folder where COS files are located
+    * The prefix of the folder where COS files are located. By default, it is null, meaning that all files under the bucket will be shipped.
     */
     @SerializedName("Prefix")
     @Expose
     private String Prefix;
 
     /**
-    * Compression mode: "", "gzip", "lzop", and "snappy". The default mode is "".
+    * Compression mode: "", "gzip", "lzop", "snappy". Default: ""; no compression.
     */
     @SerializedName("Compress")
     @Expose
     private String Compress;
 
     /**
-     * Get Log topic ID 
-     * @return TopicId Log topic ID
+     * Get Log topic Id.
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1). 
+     * @return TopicId Log topic Id.
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
      */
     public String getTopicId() {
         return this.TopicId;
     }
 
     /**
-     * Set Log topic ID
-     * @param TopicId Log topic ID
+     * Set Log topic Id.
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
+     * @param TopicId Log topic Id.
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
      */
     public void setTopicId(String TopicId) {
         this.TopicId = TopicId;
     }
 
     /**
-     * Get Logset ID 
-     * @return LogsetId Logset ID
+     * Get FL instance set ID.
+
+-Obtain the logset Id by searching the [logset list](https://www.tencentcloud.com/document/product/614/58624?from_cn_redirect=1). 
+     * @return LogsetId FL instance set ID.
+
+-Obtain the logset Id by searching the [logset list](https://www.tencentcloud.com/document/product/614/58624?from_cn_redirect=1).
      */
     public String getLogsetId() {
         return this.LogsetId;
     }
 
     /**
-     * Set Logset ID
-     * @param LogsetId Logset ID
+     * Set FL instance set ID.
+
+-Obtain the logset Id by searching the [logset list](https://www.tencentcloud.com/document/product/614/58624?from_cn_redirect=1).
+     * @param LogsetId FL instance set ID.
+
+-Obtain the logset Id by searching the [logset list](https://www.tencentcloud.com/document/product/614/58624?from_cn_redirect=1).
      */
     public void setLogsetId(String LogsetId) {
         this.LogsetId = LogsetId;
     }
 
     /**
-     * Get Delivery Task Name 
-     * @return Name Delivery Task Name
+     * Get COS import task name, supports up to 128 bytes. 
+     * @return Name COS import task name, supports up to 128 bytes.
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Delivery Task Name
-     * @param Name Delivery Task Name
+     * Set COS import task name, supports up to 128 bytes.
+     * @param Name COS import task name, supports up to 128 bytes.
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get COS bucket, see the supported [bucket naming conventions](https://intl.cloud.tencent.com/document/product/436/13312?from_cn_redirect=1). 
-     * @return Bucket COS bucket, see the supported [bucket naming conventions](https://intl.cloud.tencent.com/document/product/436/13312?from_cn_redirect=1).
+     * Get COS bucket, see the supported [bucket naming conventions](https://www.tencentcloud.com/document/product/436/13312?from_cn_redirect=1).	
+
+-Get COS buckets via [GET Service (List Buckets)](https://www.tencentcloud.com/document/product/436/8291?from_cn_redirect=1). 
+     * @return Bucket COS bucket, see the supported [bucket naming conventions](https://www.tencentcloud.com/document/product/436/13312?from_cn_redirect=1).	
+
+-Get COS buckets via [GET Service (List Buckets)](https://www.tencentcloud.com/document/product/436/8291?from_cn_redirect=1).
      */
     public String getBucket() {
         return this.Bucket;
     }
 
     /**
-     * Set COS bucket, see the supported [bucket naming conventions](https://intl.cloud.tencent.com/document/product/436/13312?from_cn_redirect=1).
-     * @param Bucket COS bucket, see the supported [bucket naming conventions](https://intl.cloud.tencent.com/document/product/436/13312?from_cn_redirect=1).
+     * Set COS bucket, see the supported [bucket naming conventions](https://www.tencentcloud.com/document/product/436/13312?from_cn_redirect=1).	
+
+-Get COS buckets via [GET Service (List Buckets)](https://www.tencentcloud.com/document/product/436/8291?from_cn_redirect=1).
+     * @param Bucket COS bucket, see the supported [bucket naming conventions](https://www.tencentcloud.com/document/product/436/13312?from_cn_redirect=1).	
+
+-Get COS buckets via [GET Service (List Buckets)](https://www.tencentcloud.com/document/product/436/8291?from_cn_redirect=1).
      */
     public void setBucket(String Bucket) {
         this.Bucket = Bucket;
@@ -153,32 +178,32 @@ public class SearchCosRechargeInfoRequest extends AbstractModel {
     }
 
     /**
-     * Get The prefix of the folder where COS files are located 
-     * @return Prefix The prefix of the folder where COS files are located
+     * Get The prefix of the folder where COS files are located. By default, it is null, meaning that all files under the bucket will be shipped. 
+     * @return Prefix The prefix of the folder where COS files are located. By default, it is null, meaning that all files under the bucket will be shipped.
      */
     public String getPrefix() {
         return this.Prefix;
     }
 
     /**
-     * Set The prefix of the folder where COS files are located
-     * @param Prefix The prefix of the folder where COS files are located
+     * Set The prefix of the folder where COS files are located. By default, it is null, meaning that all files under the bucket will be shipped.
+     * @param Prefix The prefix of the folder where COS files are located. By default, it is null, meaning that all files under the bucket will be shipped.
      */
     public void setPrefix(String Prefix) {
         this.Prefix = Prefix;
     }
 
     /**
-     * Get Compression mode: "", "gzip", "lzop", and "snappy". The default mode is "". 
-     * @return Compress Compression mode: "", "gzip", "lzop", and "snappy". The default mode is "".
+     * Get Compression mode: "", "gzip", "lzop", "snappy". Default: ""; no compression. 
+     * @return Compress Compression mode: "", "gzip", "lzop", "snappy". Default: ""; no compression.
      */
     public String getCompress() {
         return this.Compress;
     }
 
     /**
-     * Set Compression mode: "", "gzip", "lzop", and "snappy". The default mode is "".
-     * @param Compress Compression mode: "", "gzip", "lzop", and "snappy". The default mode is "".
+     * Set Compression mode: "", "gzip", "lzop", "snappy". Default: ""; no compression.
+     * @param Compress Compression mode: "", "gzip", "lzop", "snappy". Default: ""; no compression.
      */
     public void setCompress(String Compress) {
         this.Compress = Compress;

@@ -21,7 +21,7 @@ public enum MongodbErrorCode {
      /* Physical backup is not supported when transparent data encryption is enabled for the instance. */
      FAILEDOPERATION_TRANSPARENTDATAENCRYPTIONALREADYOPEN("FailedOperation.TransparentDataEncryptionAlreadyOpen"),
      
-     /* Internal error */
+     /* Internal error. */
      INTERNALERROR("InternalError"),
      
      /* Error creating an audit log file. */

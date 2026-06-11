@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DescribeK8sApiAbnormalTendencyRequest extends AbstractModel {
 
     /**
-    * Trend period (default value: 7 days)
+    * <p>Trend period (the default is 7 days).</p>
     */
     @SerializedName("TendencyPeriod")
     @Expose
     private Long TendencyPeriod;
 
     /**
-     * Get Trend period (default value: 7 days) 
-     * @return TendencyPeriod Trend period (default value: 7 days)
+     * Get <p>Trend period (the default is 7 days).</p> 
+     * @return TendencyPeriod <p>Trend period (the default is 7 days).</p>
      */
     public Long getTendencyPeriod() {
         return this.TendencyPeriod;
     }
 
     /**
-     * Set Trend period (default value: 7 days)
-     * @param TendencyPeriod Trend period (default value: 7 days)
+     * Set <p>Trend period (the default is 7 days).</p>
+     * @param TendencyPeriod <p>Trend period (the default is 7 days).</p>
      */
     public void setTendencyPeriod(Long TendencyPeriod) {
         this.TendencyPeriod = TendencyPeriod;

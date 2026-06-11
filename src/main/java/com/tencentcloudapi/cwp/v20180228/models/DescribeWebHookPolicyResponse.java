@@ -24,8 +24,7 @@ import java.util.HashMap;
 public class DescribeWebHookPolicyResponse extends AbstractModel {
 
     /**
-    * Policy list
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Policy List
     */
     @SerializedName("List")
     @Expose
@@ -46,20 +45,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Policy list
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return List Policy list
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Policy List 
+     * @return List Policy List
      */
     public WebHookPolicy [] getList() {
         return this.List;
     }
 
     /**
-     * Set Policy list
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param List Policy list
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Policy List
+     * @param List Policy List
      */
     public void setList(WebHookPolicy [] List) {
         this.List = List;

@@ -50,17 +50,6 @@ public class CwpClient extends AbstractClient{
     }
 
     /**
-     *This API is used to unignore the vulnerabilities.
-     * @param req CancelIgnoreVulRequest
-     * @return CancelIgnoreVulResponse
-     * @throws TencentCloudSDKException
-     */
-    public CancelIgnoreVulResponse CancelIgnoreVul(CancelIgnoreVulRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "CancelIgnoreVul", CancelIgnoreVulResponse.class);
-    }
-
-    /**
      *This API is used to ignore events or cancel ignoring in batches based on check item ID or event ID.
      * @param req ChangeRuleEventsIgnoreStatusRequest
      * @return ChangeRuleEventsIgnoreStatusResponse
@@ -251,7 +240,7 @@ This API is used to call the billing payment API for payment since prepaid order
     }
 
     /**
-     *This API is used to create a network attack allowlist.
+     *This API is used to create a network attack allowlist.
      * @param req CreateNetAttackWhiteListRequest
      * @return CreateNetAttackWhiteListResponse
      * @throws TencentCloudSDKException
@@ -592,6 +581,17 @@ This API is used to call the billing payment API for payment since prepaid order
     }
 
     /**
+     *Deleting Entries from the Vulnerability Defense Allowlist
+     * @param req DeleteRaspRulesRequest
+     * @return DeleteRaspRulesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteRaspRulesResponse DeleteRaspRules(DeleteRaspRulesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteRaspRules", DeleteRaspRulesResponse.class);
+    }
+
+    /**
      *This API is used to delete Reverse Shell events based on IDs.
      * @param req DeleteReverseShellEventsRequest
      * @return DeleteReverseShellEventsResponse
@@ -724,7 +724,7 @@ This API is used to call the billing payment API for payment since prepaid order
     }
 
     /**
-     *This API is used to obtain the account statistics data.
+     *This API is used to obtain account statistics list data.
      * @param req DescribeAccountStatisticsRequest
      * @return DescribeAccountStatisticsResponse
      * @throws TencentCloudSDKException
@@ -1296,45 +1296,6 @@ This API is used to call the billing payment API for payment since prepaid order
     }
 
     /**
-     *DescribeAttackEvents 代替
-
-This API is used to display the list of network attack logs in pagination.
-     * @param req DescribeAttackLogsRequest
-     * @return DescribeAttackLogsResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeAttackLogsResponse DescribeAttackLogs(DescribeAttackLogsRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeAttackLogs", DescribeAttackLogsResponse.class);
-    }
-
-    /**
-     *已废弃
-
-This API is used to backtrack attacks.
-     * @param req DescribeAttackSourceRequest
-     * @return DescribeAttackSourceResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeAttackSourceResponse DescribeAttackSource(DescribeAttackSourceRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeAttackSource", DescribeAttackSourceResponse.class);
-    }
-
-    /**
-     *已废弃
-
-This API is used to query attack backtracking events.
-     * @param req DescribeAttackSourceEventsRequest
-     * @return DescribeAttackSourceEventsResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeAttackSourceEventsResponse DescribeAttackSourceEvents(DescribeAttackSourceEventsRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeAttackSourceEvents", DescribeAttackSourceEventsResponse.class);
-    }
-
-    /**
      *This API is used to obtain the statistics of network attack data.
      * @param req DescribeAttackStatisticsRequest
      * @return DescribeAttackStatisticsResponse
@@ -1368,6 +1329,17 @@ This API is used to query attack backtracking events.
     }
 
     /**
+     *This API is used to query the application protection allowlist attack type list.
+     * @param req DescribeAttackTypeRequest
+     * @return DescribeAttackTypeResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAttackTypeResponse DescribeAttackType(DescribeAttackTypeRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAttackType", DescribeAttackTypeResponse.class);
+    }
+
+    /**
      *This API is used to obtain the list of network attack threat types.
      * @param req DescribeAttackVulTypeListRequest
      * @return DescribeAttackVulTypeListResponse
@@ -1376,17 +1348,6 @@ This API is used to query attack backtracking events.
     public DescribeAttackVulTypeListResponse DescribeAttackVulTypeList(DescribeAttackVulTypeListRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeAttackVulTypeList", DescribeAttackVulTypeListResponse.class);
-    }
-
-    /**
-     *This API is used to obtain available order details.
-     * @param req DescribeAvailableExpertServiceDetailRequest
-     * @return DescribeAvailableExpertServiceDetailResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeAvailableExpertServiceDetailResponse DescribeAvailableExpertServiceDetail(DescribeAvailableExpertServiceDetailRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeAvailableExpertServiceDetail", DescribeAvailableExpertServiceDetailResponse.class);
     }
 
     /**
@@ -1731,19 +1692,6 @@ This API is used to query attack backtracking events.
     }
 
     /**
-     *接口已无效
-
-This API is used to obtain the data of the component statistics list.
-     * @param req DescribeComponentStatisticsRequest
-     * @return DescribeComponentStatisticsResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeComponentStatisticsResponse DescribeComponentStatistics(DescribeComponentStatisticsRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeComponentStatistics", DescribeComponentStatisticsResponse.class);
-    }
-
-    /**
      *This API is used to obtain vulnerability defense event details.
      * @param req DescribeDefenceEventDetailRequest
      * @return DescribeDefenceEventDetailResponse
@@ -1777,17 +1725,6 @@ This API is used to obtain the data of the component statistics list.
     }
 
     /**
-     *This API is used to obtain the emergency response list.
-     * @param req DescribeEmergencyResponseListRequest
-     * @return DescribeEmergencyResponseListResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeEmergencyResponseListResponse DescribeEmergencyResponseList(DescribeEmergencyResponseListRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeEmergencyResponseList", DescribeEmergencyResponseListResponse.class);
-    }
-
-    /**
      *This API is used to obtain the list of emergency vulnerabilities.
      * @param req DescribeEmergencyVulListRequest
      * @return DescribeEmergencyVulListResponse
@@ -1807,28 +1744,6 @@ This API is used to obtain the data of the component statistics list.
     public DescribeEventByTableResponse DescribeEventByTable(DescribeEventByTableRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeEventByTable", DescribeEventByTableResponse.class);
-    }
-
-    /**
-     *This API is used to obtain the security manager list.
-     * @param req DescribeExpertServiceListRequest
-     * @return DescribeExpertServiceListResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeExpertServiceListResponse DescribeExpertServiceList(DescribeExpertServiceListRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeExpertServiceList", DescribeExpertServiceListResponse.class);
-    }
-
-    /**
-     *This API is used to obtain the expert service order list.
-     * @param req DescribeExpertServiceOrderListRequest
-     * @return DescribeExpertServiceOrderListResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeExpertServiceOrderListResponse DescribeExpertServiceOrderList(DescribeExpertServiceOrderListRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeExpertServiceOrderList", DescribeExpertServiceOrderListResponse.class);
     }
 
     /**
@@ -1920,7 +1835,7 @@ This API is used to obtain the data of the component statistics list.
     }
 
     /**
-     *This API is used to obtain the data of the account change history list.
+     *This API is used to obtain the account change history list data.
      * @param req DescribeHistoryAccountsRequest
      * @return DescribeHistoryAccountsResponse
      * @throws TencentCloudSDKException
@@ -1953,7 +1868,7 @@ This API is used to obtain the data of the component statistics list.
     }
 
     /**
-     *This API is used to retrieve the log-in audit list.
+     *Retrieve the abnormal login list
      * @param req DescribeHostLoginListRequest
      * @return DescribeHostLoginListResponse
      * @throws TencentCloudSDKException
@@ -2008,16 +1923,14 @@ This API is used to obtain the data of the component statistics list.
     }
 
     /**
-     *接口已废弃
-
-This API is used to obtain the index list.
-     * @param req DescribeIndexListRequest
-     * @return DescribeIndexListResponse
+     *Query java memory horse and rasp whether inject risk service configuration
+     * @param req DescribeInjectRiskyServiceSwitchRequest
+     * @return DescribeInjectRiskyServiceSwitchResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeIndexListResponse DescribeIndexList(DescribeIndexListRequest req) throws TencentCloudSDKException{
+    public DescribeInjectRiskyServiceSwitchResponse DescribeInjectRiskyServiceSwitch(DescribeInjectRiskyServiceSwitchRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeIndexList", DescribeIndexListResponse.class);
+        return this.internalRequest(req, "DescribeInjectRiskyServiceSwitch", DescribeInjectRiskyServiceSwitchResponse.class);
     }
 
     /**
@@ -2227,6 +2140,28 @@ This API is used to obtain the index list.
     public DescribeLogTypeResponse DescribeLogType(DescribeLogTypeRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeLogType", DescribeLogTypeResponse.class);
+    }
+
+    /**
+     *Retrieve the global configuration for uninstall protection
+     * @param req DescribeLoginTypeGlobalConfRequest
+     * @return DescribeLoginTypeGlobalConfResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLoginTypeGlobalConfResponse DescribeLoginTypeGlobalConf(DescribeLoginTypeGlobalConfRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeLoginTypeGlobalConf", DescribeLoginTypeGlobalConfResponse.class);
+    }
+
+    /**
+     *Retrieve the host list via QR code log-in
+     * @param req DescribeLoginTypeHostRequest
+     * @return DescribeLoginTypeHostResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLoginTypeHostResponse DescribeLoginTypeHost(DescribeLoginTypeHostRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeLoginTypeHost", DescribeLoginTypeHostResponse.class);
     }
 
     /**
@@ -2494,14 +2429,14 @@ This API is used to obtain the index list.
     }
 
     /**
-     *This API is used to download the monthly inspection report of the security manager.
-     * @param req DescribeMonthInspectionReportRequest
-     * @return DescribeMonthInspectionReportResponse
+     *This API is used to obtain the list of Reverse Shell rules.
+     * @param req DescribeMemShellRulesRequest
+     * @return DescribeMemShellRulesResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeMonthInspectionReportResponse DescribeMonthInspectionReport(DescribeMonthInspectionReportRequest req) throws TencentCloudSDKException{
+    public DescribeMemShellRulesResponse DescribeMemShellRules(DescribeMemShellRulesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeMonthInspectionReport", DescribeMonthInspectionReportResponse.class);
+        return this.internalRequest(req, "DescribeMemShellRules", DescribeMemShellRulesResponse.class);
     }
 
     /**
@@ -2546,6 +2481,28 @@ This API is used to obtain the index list.
     public DescribeOverviewStatisticsResponse DescribeOverviewStatistics(DescribeOverviewStatisticsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeOverviewStatistics", DescribeOverviewStatisticsResponse.class);
+    }
+
+    /**
+     *Query the information list of affected hosts by a patch
+     * @param req DescribePatchEffectHostListRequest
+     * @return DescribePatchEffectHostListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePatchEffectHostListResponse DescribePatchEffectHostList(DescribePatchEffectHostListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribePatchEffectHostList", DescribePatchEffectHostListResponse.class);
+    }
+
+    /**
+     *Patch details
+     * @param req DescribePatchInfoRequest
+     * @return DescribePatchInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePatchInfoResponse DescribePatchInfo(DescribePatchInfoRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribePatchInfo", DescribePatchInfoResponse.class);
     }
 
     /**
@@ -2736,6 +2693,127 @@ This API is used to obtain the index list.
     }
 
     /**
+     *This API is used to query application protection event lists
+     * @param req DescribeRaspEventCWPRequest
+     * @return DescribeRaspEventCWPResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRaspEventCWPResponse DescribeRaspEventCWP(DescribeRaspEventCWPRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeRaspEventCWP", DescribeRaspEventCWPResponse.class);
+    }
+
+    /**
+     *Application defense event details
+     * @param req DescribeRaspEventDetailCWPRequest
+     * @return DescribeRaspEventDetailCWPResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRaspEventDetailCWPResponse DescribeRaspEventDetailCWP(DescribeRaspEventDetailCWPRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeRaspEventDetailCWP", DescribeRaspEventDetailCWPResponse.class);
+    }
+
+    /**
+     *Application defense event details
+     * @param req DescribeRaspEventDetailTCSSRequest
+     * @return DescribeRaspEventDetailTCSSResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRaspEventDetailTCSSResponse DescribeRaspEventDetailTCSS(DescribeRaspEventDetailTCSSRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeRaspEventDetailTCSS", DescribeRaspEventDetailTCSSResponse.class);
+    }
+
+    /**
+     *This API is used to query application protection event lists
+     * @param req DescribeRaspEventTCSSRequest
+     * @return DescribeRaspEventTCSSResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRaspEventTCSSResponse DescribeRaspEventTCSS(DescribeRaspEventTCSSRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeRaspEventTCSS", DescribeRaspEventTCSSResponse.class);
+    }
+
+    /**
+     *Query the application protection license list
+     * @param req DescribeRaspLicenseListRequest
+     * @return DescribeRaspLicenseListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRaspLicenseListResponse DescribeRaspLicenseList(DescribeRaspLicenseListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeRaspLicenseList", DescribeRaspLicenseListResponse.class);
+    }
+
+    /**
+     *View the maximum cpu limitation for vulnerability defense
+     * @param req DescribeRaspMaxCpuRequest
+     * @return DescribeRaspMaxCpuResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRaspMaxCpuResponse DescribeRaspMaxCpu(DescribeRaspMaxCpuRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeRaspMaxCpu", DescribeRaspMaxCpuResponse.class);
+    }
+
+    /**
+     *Retrieve application protection Java Webshell scan event details from container perspective
+     * @param req DescribeRaspMemShellDetailTCSSRequest
+     * @return DescribeRaspMemShellDetailTCSSResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRaspMemShellDetailTCSSResponse DescribeRaspMemShellDetailTCSS(DescribeRaspMemShellDetailTCSSRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeRaspMemShellDetailTCSS", DescribeRaspMemShellDetailTCSSResponse.class);
+    }
+
+    /**
+     *Retrieve Java Webshell scan event list from container perspective
+     * @param req DescribeRaspMemShellListTCSSRequest
+     * @return DescribeRaspMemShellListTCSSResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRaspMemShellListTCSSResponse DescribeRaspMemShellListTCSS(DescribeRaspMemShellListTCSSRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeRaspMemShellListTCSS", DescribeRaspMemShellListTCSSResponse.class);
+    }
+
+    /**
+     *Important Period Guarantee Protection License Plugin Detail List
+     * @param req DescribeRaspPluginListRequest
+     * @return DescribeRaspPluginListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRaspPluginListResponse DescribeRaspPluginList(DescribeRaspPluginListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeRaspPluginList", DescribeRaspPluginListResponse.class);
+    }
+
+    /**
+     *Retrieve the vulnerability list of the vulnerability defense allowlist
+     * @param req DescribeRaspRuleVulsRequest
+     * @return DescribeRaspRuleVulsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRaspRuleVulsResponse DescribeRaspRuleVuls(DescribeRaspRuleVulsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeRaspRuleVuls", DescribeRaspRuleVulsResponse.class);
+    }
+
+    /**
+     *This example shows you how to query the vulnerability defense allowlist.
+     * @param req DescribeRaspRulesRequest
+     * @return DescribeRaspRulesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRaspRulesResponse DescribeRaspRules(DescribeRaspRulesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeRaspRules", DescribeRaspRulesResponse.class);
+    }
+
+    /**
      *This API is used to query the recommended number of protection cores for purchase.
      * @param req DescribeRecommendedProtectCpuRequest
      * @return DescribeRecommendedProtectCpuResponse
@@ -2777,6 +2855,28 @@ This API is used to obtain the index list.
     public DescribeReverseShellRulesResponse DescribeReverseShellRules(DescribeReverseShellRulesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeReverseShellRules", DescribeReverseShellRulesResponse.class);
+    }
+
+    /**
+     *This API is used to obtain the list of Reverse Shell rules.
+     * @param req DescribeReverseShellRulesAggregationRequest
+     * @return DescribeReverseShellRulesAggregationResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeReverseShellRulesAggregationResponse DescribeReverseShellRulesAggregation(DescribeReverseShellRulesAggregationRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeReverseShellRulesAggregation", DescribeReverseShellRulesAggregationResponse.class);
+    }
+
+    /**
+     *Query the configuration of the reverse shell system policy.
+     * @param req DescribeReverseShellSystemPolicyConfigRequest
+     * @return DescribeReverseShellSystemPolicyConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeReverseShellSystemPolicyConfigResponse DescribeReverseShellSystemPolicyConfig(DescribeReverseShellSystemPolicyConfigRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeReverseShellSystemPolicyConfig", DescribeReverseShellSystemPolicyConfigResponse.class);
     }
 
     /**
@@ -3143,19 +3243,6 @@ This API is used to obtain the index list.
     }
 
     /**
-     *接口已无效
-
-This API is used to obtain the summary of security protection statuses.
-     * @param req DescribeSecurityProtectionStatRequest
-     * @return DescribeSecurityProtectionStatResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeSecurityProtectionStatResponse DescribeSecurityProtectionStat(DescribeSecurityProtectionStatRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeSecurityProtectionStat", DescribeSecurityProtectionStatResponse.class);
-    }
-
-    /**
      *This API is used to obtain the security event statistics data.
      * @param req DescribeSecurityTrendsRequest
      * @return DescribeSecurityTrendsResponse
@@ -3175,6 +3262,28 @@ This API is used to obtain the summary of security protection statuses.
     public DescribeServersAndRiskAndFirstInfoResponse DescribeServersAndRiskAndFirstInfo(DescribeServersAndRiskAndFirstInfoRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeServersAndRiskAndFirstInfo", DescribeServersAndRiskAndFirstInfoResponse.class);
+    }
+
+    /**
+     *This API is used to query the list of reverse shell policies.
+     * @param req DescribeShellPolicyListRequest
+     * @return DescribeShellPolicyListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeShellPolicyListResponse DescribeShellPolicyList(DescribeShellPolicyListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeShellPolicyList", DescribeShellPolicyListResponse.class);
+    }
+
+    /**
+     *Patch details
+     * @param req DescribeSkillInfoRequest
+     * @return DescribeSkillInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSkillInfoResponse DescribeSkillInfo(DescribeSkillInfoRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeSkillInfo", DescribeSkillInfoResponse.class);
     }
 
     /**
@@ -3354,6 +3463,17 @@ This API is used to obtain the summary of security protection statuses.
     }
 
     /**
+     *This API is used to obtain vulnerability defense policies and event statistics.
+     * @param req DescribeVulDefenceOverviewCountRequest
+     * @return DescribeVulDefenceOverviewCountResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeVulDefenceOverviewCountResponse DescribeVulDefenceOverviewCount(DescribeVulDefenceOverviewCountRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeVulDefenceOverviewCount", DescribeVulDefenceOverviewCountResponse.class);
+    }
+
+    /**
      *This API is used to obtain the vulnerability defense plugin information on a single host.
      * @param req DescribeVulDefencePluginDetailRequest
      * @return DescribeVulDefencePluginDetailResponse
@@ -3395,6 +3515,17 @@ This API is used to obtain the summary of security protection statuses.
     public DescribeVulDefenceSettingResponse DescribeVulDefenceSetting(DescribeVulDefenceSettingRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeVulDefenceSetting", DescribeVulDefenceSettingResponse.class);
+    }
+
+    /**
+     *This API is used to query the list of vulnerability defense settings.
+     * @param req DescribeVulDefenceSettingListRequest
+     * @return DescribeVulDefenceSettingListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeVulDefenceSettingListResponse DescribeVulDefenceSettingList(DescribeVulDefenceSettingListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeVulDefenceSettingList", DescribeVulDefenceSettingListResponse.class);
     }
 
     /**
@@ -3629,6 +3760,28 @@ This API is used to obtain the summary of security protection statuses.
     }
 
     /**
+     *Search patch information list
+     * @param req DescribeWindowsPatchListRequest
+     * @return DescribeWindowsPatchListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeWindowsPatchListResponse DescribeWindowsPatchList(DescribeWindowsPatchListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeWindowsPatchList", DescribeWindowsPatchListResponse.class);
+    }
+
+    /**
+     *Query application protection allowlist rules
+     * @param req DescribeYDRaspBlackWhiteRequest
+     * @return DescribeYDRaspBlackWhiteResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeYDRaspBlackWhiteResponse DescribeYDRaspBlackWhite(DescribeYDRaspBlackWhiteRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeYDRaspBlackWhite", DescribeYDRaspBlackWhiteResponse.class);
+    }
+
+    /**
      *This API is used to terminate resources.
      * @param req DestroyOrderRequest
      * @return DestroyOrderResponse
@@ -3662,8 +3815,7 @@ This API is used to obtain the summary of security protection statuses.
     }
 
     /**
-     *This API is used to edit reverse shell rules (multiple servers supported).
-
+     *Editing Reverse Shell Rules. (Supporting Selecting Multiple Servers)
      * @param req EditReverseShellRulesRequest
      * @return EditReverseShellRulesResponse
      * @throws TencentCloudSDKException
@@ -4103,6 +4255,17 @@ This API is used to obtain the summary of security protection statuses.
     }
 
     /**
+     *Export the affected host list of a patch
+     * @param req ExportPatchEffectHostListRequest
+     * @return ExportPatchEffectHostListResponse
+     * @throws TencentCloudSDKException
+     */
+    public ExportPatchEffectHostListResponse ExportPatchEffectHostList(ExportPatchEffectHostListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ExportPatchEffectHostList", ExportPatchEffectHostListResponse.class);
+    }
+
+    /**
      *This API is used to export local privilege escalation events.
      * @param req ExportPrivilegeEventsRequest
      * @return ExportPrivilegeEventsResponse
@@ -4334,6 +4497,17 @@ This API is used to obtain the summary of security protection statuses.
     }
 
     /**
+     *Export Windows patch list
+     * @param req ExportWindowsPatchListRequest
+     * @return ExportWindowsPatchListResponse
+     * @throws TencentCloudSDKException
+     */
+    public ExportWindowsPatchListResponse ExportWindowsPatchList(ExportWindowsPatchListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ExportWindowsPatchList", ExportWindowsPatchListResponse.class);
+    }
+
+    /**
      *This API is used to obtain the locally stored data.
      * @param req GetLocalStorageItemRequest
      * @return GetLocalStorageItemResponse
@@ -4342,17 +4516,6 @@ This API is used to obtain the summary of security protection statuses.
     public GetLocalStorageItemResponse GetLocalStorageItem(GetLocalStorageItemRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "GetLocalStorageItem", GetLocalStorageItemResponse.class);
-    }
-
-    /**
-     *This API is used to ignore vulnerabilities.
-     * @param req IgnoreImpactedHostsRequest
-     * @return IgnoreImpactedHostsResponse
-     * @throws TencentCloudSDKException
-     */
-    public IgnoreImpactedHostsResponse IgnoreImpactedHosts(IgnoreImpactedHostsRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "IgnoreImpactedHosts", IgnoreImpactedHostsResponse.class);
     }
 
     /**
@@ -4697,6 +4860,39 @@ This API is used to obtain the summary of security protection statuses.
     }
 
     /**
+     *Edit the maximum cpu configuration for vulnerability defense
+     * @param req ModifyRaspMaxCpuRequest
+     * @return ModifyRaspMaxCpuResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyRaspMaxCpuResponse ModifyRaspMaxCpu(ModifyRaspMaxCpuRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyRaspMaxCpu", ModifyRaspMaxCpuResponse.class);
+    }
+
+    /**
+     *This example shows you how to add entries to the vulnerability defense allowlist.
+     * @param req ModifyRaspRulesRequest
+     * @return ModifyRaspRulesResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyRaspRulesResponse ModifyRaspRules(ModifyRaspRulesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyRaspRules", ModifyRaspRulesResponse.class);
+    }
+
+    /**
+     *Editing Reverse Shell Rules. (Supporting Selecting Multiple Servers)
+     * @param req ModifyReverseShellRulesAggregationRequest
+     * @return ModifyReverseShellRulesAggregationResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyReverseShellRulesAggregationResponse ModifyReverseShellRulesAggregation(ModifyReverseShellRulesAggregationRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyReverseShellRulesAggregation", ModifyReverseShellRulesAggregationResponse.class);
+    }
+
+    /**
      *This API is used to modify malicious request policies.
      * @param req ModifyRiskDnsPolicyRequest
      * @return ModifyRiskDnsPolicyResponse
@@ -4862,6 +5058,17 @@ This API is used to obtain the summary of security protection statuses.
     public RansomDefenseRollbackResponse RansomDefenseRollback(RansomDefenseRollbackRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "RansomDefenseRollback", RansomDefenseRollbackResponse.class);
+    }
+
+    /**
+     *This API is used to obtain the vulnerability defense overview information, including event trend and plugin enabling status.
+     * @param req RaspEventOverviewRequest
+     * @return RaspEventOverviewResponse
+     * @throws TencentCloudSDKException
+     */
+    public RaspEventOverviewResponse RaspEventOverview(RaspEventOverviewRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "RaspEventOverview", RaspEventOverviewResponse.class);
     }
 
     /**

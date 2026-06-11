@@ -129,7 +129,7 @@ public class ReverseShell extends AbstractModel {
     private String ParentProcPath;
 
     /**
-    * Processing status: 0 - pending; 2 - allowlisted; 3 - processed; 4 - ignored
+    * Processing status. 0 - pending processing; 2 - allowlisted; 3 - processed; 4 - ignored; 6 - blocked.
     */
     @SerializedName("Status")
     @Expose
@@ -165,27 +165,31 @@ public class ReverseShell extends AbstractModel {
 
     /**
     *  Host Additional Information
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("MachineExtraInfo")
     @Expose
     private MachineExtraInfo MachineExtraInfo;
 
     /**
-    * Process ID
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Process id
     */
     @SerializedName("Pid")
     @Expose
     private Long Pid;
 
     /**
-    * Threat level: 0 - medium-risk; 1 - high-risk
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Threat level. 0: medium risk, 1: high risk.
     */
     @SerializedName("RiskLevel")
     @Expose
     private Long RiskLevel;
+
+    /**
+    * Escaped content of command details. It is used when regular expressions match allowlisted full strings.	
+    */
+    @SerializedName("CmdLineQuote")
+    @Expose
+    private String CmdLineQuote;
 
     /**
      * Get ID primary key 
@@ -428,16 +432,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Processing status: 0 - pending; 2 - allowlisted; 3 - processed; 4 - ignored 
-     * @return Status Processing status: 0 - pending; 2 - allowlisted; 3 - processed; 4 - ignored
+     * Get Processing status. 0 - pending processing; 2 - allowlisted; 3 - processed; 4 - ignored; 6 - blocked. 
+     * @return Status Processing status. 0 - pending processing; 2 - allowlisted; 3 - processed; 4 - ignored; 6 - blocked.
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Processing status: 0 - pending; 2 - allowlisted; 3 - processed; 4 - ignored
-     * @param Status Processing status: 0 - pending; 2 - allowlisted; 3 - processed; 4 - ignored
+     * Set Processing status. 0 - pending processing; 2 - allowlisted; 3 - processed; 4 - ignored; 6 - blocked.
+     * @param Status Processing status. 0 - pending processing; 2 - allowlisted; 3 - processed; 4 - ignored; 6 - blocked.
      */
     public void setStatus(Long Status) {
         this.Status = Status;
@@ -508,10 +512,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get  Host Additional Information
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get  Host Additional Information 
      * @return MachineExtraInfo  Host Additional Information
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public MachineExtraInfo getMachineExtraInfo() {
         return this.MachineExtraInfo;
@@ -519,52 +521,58 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set  Host Additional Information
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param MachineExtraInfo  Host Additional Information
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setMachineExtraInfo(MachineExtraInfo MachineExtraInfo) {
         this.MachineExtraInfo = MachineExtraInfo;
     }
 
     /**
-     * Get Process ID
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Pid Process ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Process id 
+     * @return Pid Process id
      */
     public Long getPid() {
         return this.Pid;
     }
 
     /**
-     * Set Process ID
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Pid Process ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Process id
+     * @param Pid Process id
      */
     public void setPid(Long Pid) {
         this.Pid = Pid;
     }
 
     /**
-     * Get Threat level: 0 - medium-risk; 1 - high-risk
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return RiskLevel Threat level: 0 - medium-risk; 1 - high-risk
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Threat level. 0: medium risk, 1: high risk. 
+     * @return RiskLevel Threat level. 0: medium risk, 1: high risk.
      */
     public Long getRiskLevel() {
         return this.RiskLevel;
     }
 
     /**
-     * Set Threat level: 0 - medium-risk; 1 - high-risk
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param RiskLevel Threat level: 0 - medium-risk; 1 - high-risk
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Threat level. 0: medium risk, 1: high risk.
+     * @param RiskLevel Threat level. 0: medium risk, 1: high risk.
      */
     public void setRiskLevel(Long RiskLevel) {
         this.RiskLevel = RiskLevel;
+    }
+
+    /**
+     * Get Escaped content of command details. It is used when regular expressions match allowlisted full strings.	 
+     * @return CmdLineQuote Escaped content of command details. It is used when regular expressions match allowlisted full strings.	
+     */
+    public String getCmdLineQuote() {
+        return this.CmdLineQuote;
+    }
+
+    /**
+     * Set Escaped content of command details. It is used when regular expressions match allowlisted full strings.	
+     * @param CmdLineQuote Escaped content of command details. It is used when regular expressions match allowlisted full strings.	
+     */
+    public void setCmdLineQuote(String CmdLineQuote) {
+        this.CmdLineQuote = CmdLineQuote;
     }
 
     public ReverseShell() {
@@ -644,6 +652,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.RiskLevel != null) {
             this.RiskLevel = new Long(source.RiskLevel);
         }
+        if (source.CmdLineQuote != null) {
+            this.CmdLineQuote = new String(source.CmdLineQuote);
+        }
     }
 
 
@@ -674,6 +685,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamObj(map, prefix + "MachineExtraInfo.", this.MachineExtraInfo);
         this.setParamSimple(map, prefix + "Pid", this.Pid);
         this.setParamSimple(map, prefix + "RiskLevel", this.RiskLevel);
+        this.setParamSimple(map, prefix + "CmdLineQuote", this.CmdLineQuote);
 
     }
 }

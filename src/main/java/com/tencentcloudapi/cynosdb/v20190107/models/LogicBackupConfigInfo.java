@@ -61,7 +61,7 @@ Valid values: ON/OFF.
     private String LogicCrossRegionsEnable;
 
     /**
-    * 
+    * Regions covered by logical backup.
     */
     @SerializedName("LogicCrossRegions")
     @Expose
@@ -163,16 +163,16 @@ Valid values: ON/OFF.
     }
 
     /**
-     * Get  
-     * @return LogicCrossRegions 
+     * Get Regions covered by logical backup. 
+     * @return LogicCrossRegions Regions covered by logical backup.
      */
     public String [] getLogicCrossRegions() {
         return this.LogicCrossRegions;
     }
 
     /**
-     * Set 
-     * @param LogicCrossRegions 
+     * Set Regions covered by logical backup.
+     * @param LogicCrossRegions Regions covered by logical backup.
      */
     public void setLogicCrossRegions(String [] LogicCrossRegions) {
         this.LogicCrossRegions = LogicCrossRegions;

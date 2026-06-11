@@ -25,7 +25,6 @@ public class DescribeReverseShellEventInfoResponse extends AbstractModel {
 
     /**
     * Reverse shell details
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ReverseShellEventInfo")
     @Expose
@@ -39,10 +38,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Reverse shell details
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Reverse shell details 
      * @return ReverseShellEventInfo Reverse shell details
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public ReverseShellEventInfo getReverseShellEventInfo() {
         return this.ReverseShellEventInfo;
@@ -50,9 +47,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Reverse shell details
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param ReverseShellEventInfo Reverse shell details
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setReverseShellEventInfo(ReverseShellEventInfo ReverseShellEventInfo) {
         this.ReverseShellEventInfo = ReverseShellEventInfo;

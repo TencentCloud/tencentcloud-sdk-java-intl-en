@@ -31,6 +31,13 @@ public class DeleteBruteAttacksRequest extends AbstractModel {
     private Long [] Ids;
 
     /**
+    * Whether to delete all.
+    */
+    @SerializedName("All")
+    @Expose
+    private Boolean All;
+
+    /**
      * Get Array of brute force cracking event IDs (maximum: 100) 
      * @return Ids Array of brute force cracking event IDs (maximum: 100)
      */
@@ -44,6 +51,22 @@ public class DeleteBruteAttacksRequest extends AbstractModel {
      */
     public void setIds(Long [] Ids) {
         this.Ids = Ids;
+    }
+
+    /**
+     * Get Whether to delete all. 
+     * @return All Whether to delete all.
+     */
+    public Boolean getAll() {
+        return this.All;
+    }
+
+    /**
+     * Set Whether to delete all.
+     * @param All Whether to delete all.
+     */
+    public void setAll(Boolean All) {
+        this.All = All;
     }
 
     public DeleteBruteAttacksRequest() {
@@ -60,6 +83,9 @@ public class DeleteBruteAttacksRequest extends AbstractModel {
                 this.Ids[i] = new Long(source.Ids[i]);
             }
         }
+        if (source.All != null) {
+            this.All = new Boolean(source.All);
+        }
     }
 
 
@@ -68,6 +94,7 @@ public class DeleteBruteAttacksRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "Ids.", this.Ids);
+        this.setParamSimple(map, prefix + "All", this.All);
 
     }
 }

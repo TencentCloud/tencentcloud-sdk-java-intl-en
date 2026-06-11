@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ModifyVirusAutoIsolateExampleSwitchRequest extends AbstractModel {
 
     /**
-    * MD5 checksum of the file
+    * File MD5 Value
     */
     @SerializedName("MD5")
     @Expose
@@ -38,16 +38,16 @@ public class ModifyVirusAutoIsolateExampleSwitchRequest extends AbstractModel {
     private Boolean Status;
 
     /**
-     * Get MD5 checksum of the file 
-     * @return MD5 MD5 checksum of the file
+     * Get File MD5 Value 
+     * @return MD5 File MD5 Value
      */
     public String getMD5() {
         return this.MD5;
     }
 
     /**
-     * Set MD5 checksum of the file
-     * @param MD5 MD5 checksum of the file
+     * Set File MD5 Value
+     * @param MD5 File MD5 Value
      */
     public void setMD5(String MD5) {
         this.MD5 = MD5;

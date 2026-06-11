@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeClusterParamsResponse extends AbstractModel {
 
     /**
-    * Number of parameters
+    * Number of parameters.
     */
     @SerializedName("TotalCount")
     @Expose
@@ -45,16 +45,16 @@ public class DescribeClusterParamsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Number of parameters 
-     * @return TotalCount Number of parameters
+     * Get Number of parameters. 
+     * @return TotalCount Number of parameters.
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set Number of parameters
-     * @param TotalCount Number of parameters
+     * Set Number of parameters.
+     * @param TotalCount Number of parameters.
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

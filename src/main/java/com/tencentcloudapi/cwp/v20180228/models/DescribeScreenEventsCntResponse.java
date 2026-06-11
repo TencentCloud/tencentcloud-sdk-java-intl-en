@@ -25,7 +25,6 @@ public class DescribeScreenEventsCntResponse extends AbstractModel {
 
     /**
     * Event statistics details
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Info")
     @Expose
@@ -39,10 +38,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Event statistics details
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Event statistics details 
      * @return Info Event statistics details
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public ScreenEventsCnt [] getInfo() {
         return this.Info;
@@ -50,9 +47,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Event statistics details
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Info Event statistics details
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setInfo(ScreenEventsCnt [] Info) {
         this.Info = Info;

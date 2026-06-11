@@ -24,80 +24,108 @@ import java.util.HashMap;
 public class WebCallback extends AbstractModel {
 
     /**
-    * Callback address
-    */
-    @SerializedName("Url")
-    @Expose
-    private String Url;
-
-    /**
     * Callback type. Valid values:
-<li> WeCom
-<li> Http
+-Http (custom webhook configuration)
+-WeCom
+-DingTalk
+-Lark
     */
     @SerializedName("CallbackType")
     @Expose
     private String CallbackType;
 
     /**
+    * Callback URL, supports a maximum of 1024 bytes.
+You can also use WebCallbackId to refer to the URL in the integration configuration. At this point, please enter an empty string for this field.
+    */
+    @SerializedName("Url")
+    @Expose
+    private String Url;
+
+    /**
+    * Integration configuration ID. Obtain the integration configuration ID by searching the alarm channel callback configuration list (https://www.tencentcloud.com/document/product/614/115229?from_cn_redirect=1).
+    */
+    @SerializedName("WebCallbackId")
+    @Expose
+    private String WebCallbackId;
+
+    /**
     * Callback method. Valid values:
-<li> POST
-<li> PUT
-Default value: `POST`. This parameter is required if `CallbackType` is `Http`.
-Note: This field may return `null`, indicating that no valid value was found.
+-POST (default value)
+- PUT
+
+Note:
+-Required when CallbackType is Http. No need to specify for other callback methods.
     */
     @SerializedName("Method")
     @Expose
     private String Method;
 
     /**
-    * Request header
-Note: This parameter is disused. To specify request headers, see `CallBack` in <a href="https://intl.cloud.tencent.com/document/product/614/56466?from_cn_redirect=1">CreateAlarmNotice</a>.
-Note: This field may return `null`, indicating that no valid value was found.
+    * Notification content template ID. When Default-zh is used, DefaultTemplate (Chinese) is referenced. When Default-en is used, DefaultTemplate (English) is referenced.
+    */
+    @SerializedName("NoticeContentId")
+    @Expose
+    private String NoticeContentId;
+
+    /**
+    * Reminder type.
+
+0: No reminder; 1: Specified individual; 2: Everyone
+    */
+    @SerializedName("RemindType")
+    @Expose
+    private Long RemindType;
+
+    /**
+    * Mobile phone list.
+    */
+    @SerializedName("Mobiles")
+    @Expose
+    private String [] Mobiles;
+
+    /**
+    * User ID list.
+    */
+    @SerializedName("UserIds")
+    @Expose
+    private String [] UserIds;
+
+    /**
+    * This parameter is deprecated. Please use NoticeContentId.
     */
     @SerializedName("Headers")
     @Expose
     private String [] Headers;
 
     /**
-    * Request content
-Note: This parameter is disused. To specify request content, see `CallBack` in <a href="https://intl.cloud.tencent.com/document/product/614/56466?from_cn_redirect=1">CreateAlarmNotice</a>.
-Note: This field may return `null`, indicating that no valid value was found.
+    * This parameter is deprecated. Please use NoticeContentId.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Body")
     @Expose
     private String Body;
 
     /**
-    * Number
+    * Serial number.
+-Invalid input parameter.
+-Output parameter is valid.
     */
     @SerializedName("Index")
     @Expose
     private Long Index;
 
     /**
-     * Get Callback address 
-     * @return Url Callback address
-     */
-    public String getUrl() {
-        return this.Url;
-    }
-
-    /**
-     * Set Callback address
-     * @param Url Callback address
-     */
-    public void setUrl(String Url) {
-        this.Url = Url;
-    }
-
-    /**
      * Get Callback type. Valid values:
-<li> WeCom
-<li> Http 
+-Http (custom webhook configuration)
+-WeCom
+-DingTalk
+-Lark 
      * @return CallbackType Callback type. Valid values:
-<li> WeCom
-<li> Http
+-Http (custom webhook configuration)
+-WeCom
+-DingTalk
+-Lark
      */
     public String getCallbackType() {
         return this.CallbackType;
@@ -105,27 +133,69 @@ Note: This field may return `null`, indicating that no valid value was found.
 
     /**
      * Set Callback type. Valid values:
-<li> WeCom
-<li> Http
+-Http (custom webhook configuration)
+-WeCom
+-DingTalk
+-Lark
      * @param CallbackType Callback type. Valid values:
-<li> WeCom
-<li> Http
+-Http (custom webhook configuration)
+-WeCom
+-DingTalk
+-Lark
      */
     public void setCallbackType(String CallbackType) {
         this.CallbackType = CallbackType;
     }
 
     /**
+     * Get Callback URL, supports a maximum of 1024 bytes.
+You can also use WebCallbackId to refer to the URL in the integration configuration. At this point, please enter an empty string for this field. 
+     * @return Url Callback URL, supports a maximum of 1024 bytes.
+You can also use WebCallbackId to refer to the URL in the integration configuration. At this point, please enter an empty string for this field.
+     */
+    public String getUrl() {
+        return this.Url;
+    }
+
+    /**
+     * Set Callback URL, supports a maximum of 1024 bytes.
+You can also use WebCallbackId to refer to the URL in the integration configuration. At this point, please enter an empty string for this field.
+     * @param Url Callback URL, supports a maximum of 1024 bytes.
+You can also use WebCallbackId to refer to the URL in the integration configuration. At this point, please enter an empty string for this field.
+     */
+    public void setUrl(String Url) {
+        this.Url = Url;
+    }
+
+    /**
+     * Get Integration configuration ID. Obtain the integration configuration ID by searching the alarm channel callback configuration list (https://www.tencentcloud.com/document/product/614/115229?from_cn_redirect=1). 
+     * @return WebCallbackId Integration configuration ID. Obtain the integration configuration ID by searching the alarm channel callback configuration list (https://www.tencentcloud.com/document/product/614/115229?from_cn_redirect=1).
+     */
+    public String getWebCallbackId() {
+        return this.WebCallbackId;
+    }
+
+    /**
+     * Set Integration configuration ID. Obtain the integration configuration ID by searching the alarm channel callback configuration list (https://www.tencentcloud.com/document/product/614/115229?from_cn_redirect=1).
+     * @param WebCallbackId Integration configuration ID. Obtain the integration configuration ID by searching the alarm channel callback configuration list (https://www.tencentcloud.com/document/product/614/115229?from_cn_redirect=1).
+     */
+    public void setWebCallbackId(String WebCallbackId) {
+        this.WebCallbackId = WebCallbackId;
+    }
+
+    /**
      * Get Callback method. Valid values:
-<li> POST
-<li> PUT
-Default value: `POST`. This parameter is required if `CallbackType` is `Http`.
-Note: This field may return `null`, indicating that no valid value was found. 
+-POST (default value)
+- PUT
+
+Note:
+-Required when CallbackType is Http. No need to specify for other callback methods. 
      * @return Method Callback method. Valid values:
-<li> POST
-<li> PUT
-Default value: `POST`. This parameter is required if `CallbackType` is `Http`.
-Note: This field may return `null`, indicating that no valid value was found.
+-POST (default value)
+- PUT
+
+Note:
+-Required when CallbackType is Http. No need to specify for other callback methods.
      */
     public String getMethod() {
         return this.Method;
@@ -133,79 +203,157 @@ Note: This field may return `null`, indicating that no valid value was found.
 
     /**
      * Set Callback method. Valid values:
-<li> POST
-<li> PUT
-Default value: `POST`. This parameter is required if `CallbackType` is `Http`.
-Note: This field may return `null`, indicating that no valid value was found.
+-POST (default value)
+- PUT
+
+Note:
+-Required when CallbackType is Http. No need to specify for other callback methods.
      * @param Method Callback method. Valid values:
-<li> POST
-<li> PUT
-Default value: `POST`. This parameter is required if `CallbackType` is `Http`.
-Note: This field may return `null`, indicating that no valid value was found.
+-POST (default value)
+- PUT
+
+Note:
+-Required when CallbackType is Http. No need to specify for other callback methods.
      */
     public void setMethod(String Method) {
         this.Method = Method;
     }
 
     /**
-     * Get Request header
-Note: This parameter is disused. To specify request headers, see `CallBack` in <a href="https://intl.cloud.tencent.com/document/product/614/56466?from_cn_redirect=1">CreateAlarmNotice</a>.
-Note: This field may return `null`, indicating that no valid value was found. 
-     * @return Headers Request header
-Note: This parameter is disused. To specify request headers, see `CallBack` in <a href="https://intl.cloud.tencent.com/document/product/614/56466?from_cn_redirect=1">CreateAlarmNotice</a>.
-Note: This field may return `null`, indicating that no valid value was found.
+     * Get Notification content template ID. When Default-zh is used, DefaultTemplate (Chinese) is referenced. When Default-en is used, DefaultTemplate (English) is referenced. 
+     * @return NoticeContentId Notification content template ID. When Default-zh is used, DefaultTemplate (Chinese) is referenced. When Default-en is used, DefaultTemplate (English) is referenced.
      */
+    public String getNoticeContentId() {
+        return this.NoticeContentId;
+    }
+
+    /**
+     * Set Notification content template ID. When Default-zh is used, DefaultTemplate (Chinese) is referenced. When Default-en is used, DefaultTemplate (English) is referenced.
+     * @param NoticeContentId Notification content template ID. When Default-zh is used, DefaultTemplate (Chinese) is referenced. When Default-en is used, DefaultTemplate (English) is referenced.
+     */
+    public void setNoticeContentId(String NoticeContentId) {
+        this.NoticeContentId = NoticeContentId;
+    }
+
+    /**
+     * Get Reminder type.
+
+0: No reminder; 1: Specified individual; 2: Everyone 
+     * @return RemindType Reminder type.
+
+0: No reminder; 1: Specified individual; 2: Everyone
+     */
+    public Long getRemindType() {
+        return this.RemindType;
+    }
+
+    /**
+     * Set Reminder type.
+
+0: No reminder; 1: Specified individual; 2: Everyone
+     * @param RemindType Reminder type.
+
+0: No reminder; 1: Specified individual; 2: Everyone
+     */
+    public void setRemindType(Long RemindType) {
+        this.RemindType = RemindType;
+    }
+
+    /**
+     * Get Mobile phone list. 
+     * @return Mobiles Mobile phone list.
+     */
+    public String [] getMobiles() {
+        return this.Mobiles;
+    }
+
+    /**
+     * Set Mobile phone list.
+     * @param Mobiles Mobile phone list.
+     */
+    public void setMobiles(String [] Mobiles) {
+        this.Mobiles = Mobiles;
+    }
+
+    /**
+     * Get User ID list. 
+     * @return UserIds User ID list.
+     */
+    public String [] getUserIds() {
+        return this.UserIds;
+    }
+
+    /**
+     * Set User ID list.
+     * @param UserIds User ID list.
+     */
+    public void setUserIds(String [] UserIds) {
+        this.UserIds = UserIds;
+    }
+
+    /**
+     * Get This parameter is deprecated. Please use NoticeContentId. 
+     * @return Headers This parameter is deprecated. Please use NoticeContentId.
+     * @deprecated
+     */
+    @Deprecated
     public String [] getHeaders() {
         return this.Headers;
     }
 
     /**
-     * Set Request header
-Note: This parameter is disused. To specify request headers, see `CallBack` in <a href="https://intl.cloud.tencent.com/document/product/614/56466?from_cn_redirect=1">CreateAlarmNotice</a>.
-Note: This field may return `null`, indicating that no valid value was found.
-     * @param Headers Request header
-Note: This parameter is disused. To specify request headers, see `CallBack` in <a href="https://intl.cloud.tencent.com/document/product/614/56466?from_cn_redirect=1">CreateAlarmNotice</a>.
-Note: This field may return `null`, indicating that no valid value was found.
+     * Set This parameter is deprecated. Please use NoticeContentId.
+     * @param Headers This parameter is deprecated. Please use NoticeContentId.
+     * @deprecated
      */
+    @Deprecated
     public void setHeaders(String [] Headers) {
         this.Headers = Headers;
     }
 
     /**
-     * Get Request content
-Note: This parameter is disused. To specify request content, see `CallBack` in <a href="https://intl.cloud.tencent.com/document/product/614/56466?from_cn_redirect=1">CreateAlarmNotice</a>.
-Note: This field may return `null`, indicating that no valid value was found. 
-     * @return Body Request content
-Note: This parameter is disused. To specify request content, see `CallBack` in <a href="https://intl.cloud.tencent.com/document/product/614/56466?from_cn_redirect=1">CreateAlarmNotice</a>.
-Note: This field may return `null`, indicating that no valid value was found.
+     * Get This parameter is deprecated. Please use NoticeContentId.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Body This parameter is deprecated. Please use NoticeContentId.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @deprecated
      */
+    @Deprecated
     public String getBody() {
         return this.Body;
     }
 
     /**
-     * Set Request content
-Note: This parameter is disused. To specify request content, see `CallBack` in <a href="https://intl.cloud.tencent.com/document/product/614/56466?from_cn_redirect=1">CreateAlarmNotice</a>.
-Note: This field may return `null`, indicating that no valid value was found.
-     * @param Body Request content
-Note: This parameter is disused. To specify request content, see `CallBack` in <a href="https://intl.cloud.tencent.com/document/product/614/56466?from_cn_redirect=1">CreateAlarmNotice</a>.
-Note: This field may return `null`, indicating that no valid value was found.
+     * Set This parameter is deprecated. Please use NoticeContentId.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Body This parameter is deprecated. Please use NoticeContentId.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @deprecated
      */
+    @Deprecated
     public void setBody(String Body) {
         this.Body = Body;
     }
 
     /**
-     * Get Number 
-     * @return Index Number
+     * Get Serial number.
+-Invalid input parameter.
+-Output parameter is valid. 
+     * @return Index Serial number.
+-Invalid input parameter.
+-Output parameter is valid.
      */
     public Long getIndex() {
         return this.Index;
     }
 
     /**
-     * Set Number
-     * @param Index Number
+     * Set Serial number.
+-Invalid input parameter.
+-Output parameter is valid.
+     * @param Index Serial number.
+-Invalid input parameter.
+-Output parameter is valid.
      */
     public void setIndex(Long Index) {
         this.Index = Index;
@@ -219,14 +367,35 @@ Note: This field may return `null`, indicating that no valid value was found.
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public WebCallback(WebCallback source) {
-        if (source.Url != null) {
-            this.Url = new String(source.Url);
-        }
         if (source.CallbackType != null) {
             this.CallbackType = new String(source.CallbackType);
         }
+        if (source.Url != null) {
+            this.Url = new String(source.Url);
+        }
+        if (source.WebCallbackId != null) {
+            this.WebCallbackId = new String(source.WebCallbackId);
+        }
         if (source.Method != null) {
             this.Method = new String(source.Method);
+        }
+        if (source.NoticeContentId != null) {
+            this.NoticeContentId = new String(source.NoticeContentId);
+        }
+        if (source.RemindType != null) {
+            this.RemindType = new Long(source.RemindType);
+        }
+        if (source.Mobiles != null) {
+            this.Mobiles = new String[source.Mobiles.length];
+            for (int i = 0; i < source.Mobiles.length; i++) {
+                this.Mobiles[i] = new String(source.Mobiles[i]);
+            }
+        }
+        if (source.UserIds != null) {
+            this.UserIds = new String[source.UserIds.length];
+            for (int i = 0; i < source.UserIds.length; i++) {
+                this.UserIds[i] = new String(source.UserIds[i]);
+            }
         }
         if (source.Headers != null) {
             this.Headers = new String[source.Headers.length];
@@ -247,9 +416,14 @@ Note: This field may return `null`, indicating that no valid value was found.
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Url", this.Url);
         this.setParamSimple(map, prefix + "CallbackType", this.CallbackType);
+        this.setParamSimple(map, prefix + "Url", this.Url);
+        this.setParamSimple(map, prefix + "WebCallbackId", this.WebCallbackId);
         this.setParamSimple(map, prefix + "Method", this.Method);
+        this.setParamSimple(map, prefix + "NoticeContentId", this.NoticeContentId);
+        this.setParamSimple(map, prefix + "RemindType", this.RemindType);
+        this.setParamArraySimple(map, prefix + "Mobiles.", this.Mobiles);
+        this.setParamArraySimple(map, prefix + "UserIds.", this.UserIds);
         this.setParamArraySimple(map, prefix + "Headers.", this.Headers);
         this.setParamSimple(map, prefix + "Body", this.Body);
         this.setParamSimple(map, prefix + "Index", this.Index);

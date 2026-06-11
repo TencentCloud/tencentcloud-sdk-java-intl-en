@@ -24,221 +24,235 @@ import java.util.HashMap;
 public class DescribeAssetImageDetailResponse extends AbstractModel {
 
     /**
-    * Image ID
+    * <p>Image ID.</p>
     */
     @SerializedName("ImageID")
     @Expose
     private String ImageID;
 
     /**
-    * Image name
+    * <p>Image name.</p>
     */
     @SerializedName("ImageName")
     @Expose
     private String ImageName;
 
     /**
-    * Creation time
+    * <p>Image digests.</p>
+    */
+    @SerializedName("ImageDigest")
+    @Expose
+    private String ImageDigest;
+
+    /**
+    * <p>Creation time.</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * Image size
+    * <p>Image size.</p>
     */
     @SerializedName("Size")
     @Expose
     private Long Size;
 
     /**
-    * Number of associated servers
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Number of associated hosts (including normal nodes and super nodes).</p>
     */
     @SerializedName("HostCnt")
     @Expose
     private Long HostCnt;
 
     /**
-    * Number of associated containers
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Number of associated containers.</p>
     */
     @SerializedName("ContainerCnt")
     @Expose
     private Long ContainerCnt;
 
     /**
-    * Last scan time
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Number of super nodes.</p>
+    */
+    @SerializedName("SuperNodeCnt")
+    @Expose
+    private Long SuperNodeCnt;
+
+    /**
+    * <p>Last scan time.</p>
     */
     @SerializedName("ScanTime")
     @Expose
     private String ScanTime;
 
     /**
-    * Number of vulnerabilities
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Number of vulnerabilities.</p>
     */
     @SerializedName("VulCnt")
     @Expose
     private Long VulCnt;
 
     /**
-    * Number of risky behaviors
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Number of risky behaviors.</p>
     */
     @SerializedName("RiskCnt")
     @Expose
     private Long RiskCnt;
 
     /**
-    * Number of sensitive data items
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Number of sensitive information entries.</p>
     */
     @SerializedName("SensitiveInfoCnt")
     @Expose
     private Long SensitiveInfoCnt;
 
     /**
-    * Whether it is a trusted image
+    * <p>Whether the image is trusted.</p>
     */
     @SerializedName("IsTrustImage")
     @Expose
     private Boolean IsTrustImage;
 
     /**
-    * Image system
+    * <p>Image OS.</p>
     */
     @SerializedName("OsName")
     @Expose
     private String OsName;
 
     /**
-    * Image scan error in the agent
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Agent image scan error.</p>
     */
     @SerializedName("AgentError")
     @Expose
     private String AgentError;
 
     /**
-    * Image scan error on the backend
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Backend image scan error.</p>
     */
     @SerializedName("ScanError")
     @Expose
     private String ScanError;
 
     /**
-    * System architecture
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>System architecture.</p>
     */
     @SerializedName("Architecture")
     @Expose
     private String Architecture;
 
     /**
-    * Author
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Author.</p>
     */
     @SerializedName("Author")
     @Expose
     private String Author;
 
     /**
-    * Build history
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Build history.</p>
     */
     @SerializedName("BuildHistory")
     @Expose
     private String BuildHistory;
 
     /**
-    * Trojan scanning progress
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Trojan scan progress.</p>
     */
     @SerializedName("ScanVirusProgress")
     @Expose
     private Long ScanVirusProgress;
 
     /**
-    * Vulnerability scan progress
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Vulnerability scan progress.</p>
     */
     @SerializedName("ScanVulProgress")
     @Expose
     private Long ScanVulProgress;
 
     /**
-    * Sensitive data scanning progress
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Sensitive information scan progress.</p>
     */
     @SerializedName("ScanRiskProgress")
     @Expose
     private Long ScanRiskProgress;
 
     /**
-    * Trojan scan error
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Trojan scan error.</p>
     */
     @SerializedName("ScanVirusError")
     @Expose
     private String ScanVirusError;
 
     /**
-    * Vulnerability scan error
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Vulnerability scan error.</p>
     */
     @SerializedName("ScanVulError")
     @Expose
     private String ScanVulError;
 
     /**
-    * Sensitive data error
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Sensitive information error.</p>
     */
     @SerializedName("ScanRiskError")
     @Expose
     private String ScanRiskError;
 
     /**
-    * Image scanning status
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Image scan status.</p>
     */
     @SerializedName("ScanStatus")
     @Expose
     private String ScanStatus;
 
     /**
-    * Number of viruses and trojans
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Number of Trojans and viruses.</p>
     */
     @SerializedName("VirusCnt")
     @Expose
     private Long VirusCnt;
 
     /**
-    * Image scanning status
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Image scan status.</p>
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * Remaining scan time
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Remaining scan time.</p>
     */
     @SerializedName("RemainScanTime")
     @Expose
     private Long RemainScanTime;
 
     /**
-    * Valid values: `1` (licensed); `0` (unlicensed).
+    * <p>Whether authorization is performed. 1 indicates authorized and 0 indicates unauthorized.</p>
     */
     @SerializedName("IsAuthorized")
     @Expose
     private Long IsAuthorized;
+
+    /**
+    * <p>Solution.</p>
+    */
+    @SerializedName("Solution")
+    @Expose
+    private String Solution;
+
+    /**
+    * <p>Reason.</p>
+    */
+    @SerializedName("Reason")
+    @Expose
+    private String Reason;
+
+    /**
+    * <p>Repository digests.</p>
+    */
+    @SerializedName("RepoDigests")
+    @Expose
+    private String [] RepoDigests;
 
     /**
     * The unique request ID, generated by the server, will be returned for every request (if the request fails to reach the server for other reasons, the request will not obtain a RequestId). RequestId is required for locating a problem.
@@ -248,535 +262,531 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Image ID 
-     * @return ImageID Image ID
+     * Get <p>Image ID.</p> 
+     * @return ImageID <p>Image ID.</p>
      */
     public String getImageID() {
         return this.ImageID;
     }
 
     /**
-     * Set Image ID
-     * @param ImageID Image ID
+     * Set <p>Image ID.</p>
+     * @param ImageID <p>Image ID.</p>
      */
     public void setImageID(String ImageID) {
         this.ImageID = ImageID;
     }
 
     /**
-     * Get Image name 
-     * @return ImageName Image name
+     * Get <p>Image name.</p> 
+     * @return ImageName <p>Image name.</p>
      */
     public String getImageName() {
         return this.ImageName;
     }
 
     /**
-     * Set Image name
-     * @param ImageName Image name
+     * Set <p>Image name.</p>
+     * @param ImageName <p>Image name.</p>
      */
     public void setImageName(String ImageName) {
         this.ImageName = ImageName;
     }
 
     /**
-     * Get Creation time 
-     * @return CreateTime Creation time
+     * Get <p>Image digests.</p> 
+     * @return ImageDigest <p>Image digests.</p>
+     */
+    public String getImageDigest() {
+        return this.ImageDigest;
+    }
+
+    /**
+     * Set <p>Image digests.</p>
+     * @param ImageDigest <p>Image digests.</p>
+     */
+    public void setImageDigest(String ImageDigest) {
+        this.ImageDigest = ImageDigest;
+    }
+
+    /**
+     * Get <p>Creation time.</p> 
+     * @return CreateTime <p>Creation time.</p>
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set Creation time
-     * @param CreateTime Creation time
+     * Set <p>Creation time.</p>
+     * @param CreateTime <p>Creation time.</p>
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get Image size 
-     * @return Size Image size
+     * Get <p>Image size.</p> 
+     * @return Size <p>Image size.</p>
      */
     public Long getSize() {
         return this.Size;
     }
 
     /**
-     * Set Image size
-     * @param Size Image size
+     * Set <p>Image size.</p>
+     * @param Size <p>Image size.</p>
      */
     public void setSize(Long Size) {
         this.Size = Size;
     }
 
     /**
-     * Get Number of associated servers
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return HostCnt Number of associated servers
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Number of associated hosts (including normal nodes and super nodes).</p> 
+     * @return HostCnt <p>Number of associated hosts (including normal nodes and super nodes).</p>
      */
     public Long getHostCnt() {
         return this.HostCnt;
     }
 
     /**
-     * Set Number of associated servers
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param HostCnt Number of associated servers
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Number of associated hosts (including normal nodes and super nodes).</p>
+     * @param HostCnt <p>Number of associated hosts (including normal nodes and super nodes).</p>
      */
     public void setHostCnt(Long HostCnt) {
         this.HostCnt = HostCnt;
     }
 
     /**
-     * Get Number of associated containers
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ContainerCnt Number of associated containers
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Number of associated containers.</p> 
+     * @return ContainerCnt <p>Number of associated containers.</p>
      */
     public Long getContainerCnt() {
         return this.ContainerCnt;
     }
 
     /**
-     * Set Number of associated containers
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ContainerCnt Number of associated containers
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Number of associated containers.</p>
+     * @param ContainerCnt <p>Number of associated containers.</p>
      */
     public void setContainerCnt(Long ContainerCnt) {
         this.ContainerCnt = ContainerCnt;
     }
 
     /**
-     * Get Last scan time
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ScanTime Last scan time
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Number of super nodes.</p> 
+     * @return SuperNodeCnt <p>Number of super nodes.</p>
+     */
+    public Long getSuperNodeCnt() {
+        return this.SuperNodeCnt;
+    }
+
+    /**
+     * Set <p>Number of super nodes.</p>
+     * @param SuperNodeCnt <p>Number of super nodes.</p>
+     */
+    public void setSuperNodeCnt(Long SuperNodeCnt) {
+        this.SuperNodeCnt = SuperNodeCnt;
+    }
+
+    /**
+     * Get <p>Last scan time.</p> 
+     * @return ScanTime <p>Last scan time.</p>
      */
     public String getScanTime() {
         return this.ScanTime;
     }
 
     /**
-     * Set Last scan time
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ScanTime Last scan time
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Last scan time.</p>
+     * @param ScanTime <p>Last scan time.</p>
      */
     public void setScanTime(String ScanTime) {
         this.ScanTime = ScanTime;
     }
 
     /**
-     * Get Number of vulnerabilities
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return VulCnt Number of vulnerabilities
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Number of vulnerabilities.</p> 
+     * @return VulCnt <p>Number of vulnerabilities.</p>
      */
     public Long getVulCnt() {
         return this.VulCnt;
     }
 
     /**
-     * Set Number of vulnerabilities
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param VulCnt Number of vulnerabilities
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Number of vulnerabilities.</p>
+     * @param VulCnt <p>Number of vulnerabilities.</p>
      */
     public void setVulCnt(Long VulCnt) {
         this.VulCnt = VulCnt;
     }
 
     /**
-     * Get Number of risky behaviors
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return RiskCnt Number of risky behaviors
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Number of risky behaviors.</p> 
+     * @return RiskCnt <p>Number of risky behaviors.</p>
      */
     public Long getRiskCnt() {
         return this.RiskCnt;
     }
 
     /**
-     * Set Number of risky behaviors
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param RiskCnt Number of risky behaviors
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Number of risky behaviors.</p>
+     * @param RiskCnt <p>Number of risky behaviors.</p>
      */
     public void setRiskCnt(Long RiskCnt) {
         this.RiskCnt = RiskCnt;
     }
 
     /**
-     * Get Number of sensitive data items
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return SensitiveInfoCnt Number of sensitive data items
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Number of sensitive information entries.</p> 
+     * @return SensitiveInfoCnt <p>Number of sensitive information entries.</p>
      */
     public Long getSensitiveInfoCnt() {
         return this.SensitiveInfoCnt;
     }
 
     /**
-     * Set Number of sensitive data items
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param SensitiveInfoCnt Number of sensitive data items
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Number of sensitive information entries.</p>
+     * @param SensitiveInfoCnt <p>Number of sensitive information entries.</p>
      */
     public void setSensitiveInfoCnt(Long SensitiveInfoCnt) {
         this.SensitiveInfoCnt = SensitiveInfoCnt;
     }
 
     /**
-     * Get Whether it is a trusted image 
-     * @return IsTrustImage Whether it is a trusted image
+     * Get <p>Whether the image is trusted.</p> 
+     * @return IsTrustImage <p>Whether the image is trusted.</p>
      */
     public Boolean getIsTrustImage() {
         return this.IsTrustImage;
     }
 
     /**
-     * Set Whether it is a trusted image
-     * @param IsTrustImage Whether it is a trusted image
+     * Set <p>Whether the image is trusted.</p>
+     * @param IsTrustImage <p>Whether the image is trusted.</p>
      */
     public void setIsTrustImage(Boolean IsTrustImage) {
         this.IsTrustImage = IsTrustImage;
     }
 
     /**
-     * Get Image system 
-     * @return OsName Image system
+     * Get <p>Image OS.</p> 
+     * @return OsName <p>Image OS.</p>
      */
     public String getOsName() {
         return this.OsName;
     }
 
     /**
-     * Set Image system
-     * @param OsName Image system
+     * Set <p>Image OS.</p>
+     * @param OsName <p>Image OS.</p>
      */
     public void setOsName(String OsName) {
         this.OsName = OsName;
     }
 
     /**
-     * Get Image scan error in the agent
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return AgentError Image scan error in the agent
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Agent image scan error.</p> 
+     * @return AgentError <p>Agent image scan error.</p>
      */
     public String getAgentError() {
         return this.AgentError;
     }
 
     /**
-     * Set Image scan error in the agent
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param AgentError Image scan error in the agent
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Agent image scan error.</p>
+     * @param AgentError <p>Agent image scan error.</p>
      */
     public void setAgentError(String AgentError) {
         this.AgentError = AgentError;
     }
 
     /**
-     * Get Image scan error on the backend
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ScanError Image scan error on the backend
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Backend image scan error.</p> 
+     * @return ScanError <p>Backend image scan error.</p>
      */
     public String getScanError() {
         return this.ScanError;
     }
 
     /**
-     * Set Image scan error on the backend
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ScanError Image scan error on the backend
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Backend image scan error.</p>
+     * @param ScanError <p>Backend image scan error.</p>
      */
     public void setScanError(String ScanError) {
         this.ScanError = ScanError;
     }
 
     /**
-     * Get System architecture
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Architecture System architecture
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>System architecture.</p> 
+     * @return Architecture <p>System architecture.</p>
      */
     public String getArchitecture() {
         return this.Architecture;
     }
 
     /**
-     * Set System architecture
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Architecture System architecture
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>System architecture.</p>
+     * @param Architecture <p>System architecture.</p>
      */
     public void setArchitecture(String Architecture) {
         this.Architecture = Architecture;
     }
 
     /**
-     * Get Author
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Author Author
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Author.</p> 
+     * @return Author <p>Author.</p>
      */
     public String getAuthor() {
         return this.Author;
     }
 
     /**
-     * Set Author
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Author Author
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Author.</p>
+     * @param Author <p>Author.</p>
      */
     public void setAuthor(String Author) {
         this.Author = Author;
     }
 
     /**
-     * Get Build history
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return BuildHistory Build history
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Build history.</p> 
+     * @return BuildHistory <p>Build history.</p>
      */
     public String getBuildHistory() {
         return this.BuildHistory;
     }
 
     /**
-     * Set Build history
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param BuildHistory Build history
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Build history.</p>
+     * @param BuildHistory <p>Build history.</p>
      */
     public void setBuildHistory(String BuildHistory) {
         this.BuildHistory = BuildHistory;
     }
 
     /**
-     * Get Trojan scanning progress
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ScanVirusProgress Trojan scanning progress
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Trojan scan progress.</p> 
+     * @return ScanVirusProgress <p>Trojan scan progress.</p>
      */
     public Long getScanVirusProgress() {
         return this.ScanVirusProgress;
     }
 
     /**
-     * Set Trojan scanning progress
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ScanVirusProgress Trojan scanning progress
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Trojan scan progress.</p>
+     * @param ScanVirusProgress <p>Trojan scan progress.</p>
      */
     public void setScanVirusProgress(Long ScanVirusProgress) {
         this.ScanVirusProgress = ScanVirusProgress;
     }
 
     /**
-     * Get Vulnerability scan progress
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ScanVulProgress Vulnerability scan progress
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Vulnerability scan progress.</p> 
+     * @return ScanVulProgress <p>Vulnerability scan progress.</p>
      */
     public Long getScanVulProgress() {
         return this.ScanVulProgress;
     }
 
     /**
-     * Set Vulnerability scan progress
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ScanVulProgress Vulnerability scan progress
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Vulnerability scan progress.</p>
+     * @param ScanVulProgress <p>Vulnerability scan progress.</p>
      */
     public void setScanVulProgress(Long ScanVulProgress) {
         this.ScanVulProgress = ScanVulProgress;
     }
 
     /**
-     * Get Sensitive data scanning progress
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ScanRiskProgress Sensitive data scanning progress
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Sensitive information scan progress.</p> 
+     * @return ScanRiskProgress <p>Sensitive information scan progress.</p>
      */
     public Long getScanRiskProgress() {
         return this.ScanRiskProgress;
     }
 
     /**
-     * Set Sensitive data scanning progress
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ScanRiskProgress Sensitive data scanning progress
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Sensitive information scan progress.</p>
+     * @param ScanRiskProgress <p>Sensitive information scan progress.</p>
      */
     public void setScanRiskProgress(Long ScanRiskProgress) {
         this.ScanRiskProgress = ScanRiskProgress;
     }
 
     /**
-     * Get Trojan scan error
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ScanVirusError Trojan scan error
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Trojan scan error.</p> 
+     * @return ScanVirusError <p>Trojan scan error.</p>
      */
     public String getScanVirusError() {
         return this.ScanVirusError;
     }
 
     /**
-     * Set Trojan scan error
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ScanVirusError Trojan scan error
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Trojan scan error.</p>
+     * @param ScanVirusError <p>Trojan scan error.</p>
      */
     public void setScanVirusError(String ScanVirusError) {
         this.ScanVirusError = ScanVirusError;
     }
 
     /**
-     * Get Vulnerability scan error
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ScanVulError Vulnerability scan error
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Vulnerability scan error.</p> 
+     * @return ScanVulError <p>Vulnerability scan error.</p>
      */
     public String getScanVulError() {
         return this.ScanVulError;
     }
 
     /**
-     * Set Vulnerability scan error
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ScanVulError Vulnerability scan error
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Vulnerability scan error.</p>
+     * @param ScanVulError <p>Vulnerability scan error.</p>
      */
     public void setScanVulError(String ScanVulError) {
         this.ScanVulError = ScanVulError;
     }
 
     /**
-     * Get Sensitive data error
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ScanRiskError Sensitive data error
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Sensitive information error.</p> 
+     * @return ScanRiskError <p>Sensitive information error.</p>
      */
     public String getScanRiskError() {
         return this.ScanRiskError;
     }
 
     /**
-     * Set Sensitive data error
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ScanRiskError Sensitive data error
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Sensitive information error.</p>
+     * @param ScanRiskError <p>Sensitive information error.</p>
      */
     public void setScanRiskError(String ScanRiskError) {
         this.ScanRiskError = ScanRiskError;
     }
 
     /**
-     * Get Image scanning status
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ScanStatus Image scanning status
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Image scan status.</p> 
+     * @return ScanStatus <p>Image scan status.</p>
      */
     public String getScanStatus() {
         return this.ScanStatus;
     }
 
     /**
-     * Set Image scanning status
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ScanStatus Image scanning status
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Image scan status.</p>
+     * @param ScanStatus <p>Image scan status.</p>
      */
     public void setScanStatus(String ScanStatus) {
         this.ScanStatus = ScanStatus;
     }
 
     /**
-     * Get Number of viruses and trojans
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return VirusCnt Number of viruses and trojans
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Number of Trojans and viruses.</p> 
+     * @return VirusCnt <p>Number of Trojans and viruses.</p>
      */
     public Long getVirusCnt() {
         return this.VirusCnt;
     }
 
     /**
-     * Set Number of viruses and trojans
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param VirusCnt Number of viruses and trojans
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Number of Trojans and viruses.</p>
+     * @param VirusCnt <p>Number of Trojans and viruses.</p>
      */
     public void setVirusCnt(Long VirusCnt) {
         this.VirusCnt = VirusCnt;
     }
 
     /**
-     * Get Image scanning status
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Status Image scanning status
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Image scan status.</p> 
+     * @return Status <p>Image scan status.</p>
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Image scanning status
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Status Image scanning status
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Image scan status.</p>
+     * @param Status <p>Image scan status.</p>
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get Remaining scan time
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return RemainScanTime Remaining scan time
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Remaining scan time.</p> 
+     * @return RemainScanTime <p>Remaining scan time.</p>
      */
     public Long getRemainScanTime() {
         return this.RemainScanTime;
     }
 
     /**
-     * Set Remaining scan time
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param RemainScanTime Remaining scan time
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Remaining scan time.</p>
+     * @param RemainScanTime <p>Remaining scan time.</p>
      */
     public void setRemainScanTime(Long RemainScanTime) {
         this.RemainScanTime = RemainScanTime;
     }
 
     /**
-     * Get Valid values: `1` (licensed); `0` (unlicensed). 
-     * @return IsAuthorized Valid values: `1` (licensed); `0` (unlicensed).
+     * Get <p>Whether authorization is performed. 1 indicates authorized and 0 indicates unauthorized.</p> 
+     * @return IsAuthorized <p>Whether authorization is performed. 1 indicates authorized and 0 indicates unauthorized.</p>
      */
     public Long getIsAuthorized() {
         return this.IsAuthorized;
     }
 
     /**
-     * Set Valid values: `1` (licensed); `0` (unlicensed).
-     * @param IsAuthorized Valid values: `1` (licensed); `0` (unlicensed).
+     * Set <p>Whether authorization is performed. 1 indicates authorized and 0 indicates unauthorized.</p>
+     * @param IsAuthorized <p>Whether authorization is performed. 1 indicates authorized and 0 indicates unauthorized.</p>
      */
     public void setIsAuthorized(Long IsAuthorized) {
         this.IsAuthorized = IsAuthorized;
+    }
+
+    /**
+     * Get <p>Solution.</p> 
+     * @return Solution <p>Solution.</p>
+     */
+    public String getSolution() {
+        return this.Solution;
+    }
+
+    /**
+     * Set <p>Solution.</p>
+     * @param Solution <p>Solution.</p>
+     */
+    public void setSolution(String Solution) {
+        this.Solution = Solution;
+    }
+
+    /**
+     * Get <p>Reason.</p> 
+     * @return Reason <p>Reason.</p>
+     */
+    public String getReason() {
+        return this.Reason;
+    }
+
+    /**
+     * Set <p>Reason.</p>
+     * @param Reason <p>Reason.</p>
+     */
+    public void setReason(String Reason) {
+        this.Reason = Reason;
+    }
+
+    /**
+     * Get <p>Repository digests.</p> 
+     * @return RepoDigests <p>Repository digests.</p>
+     */
+    public String [] getRepoDigests() {
+        return this.RepoDigests;
+    }
+
+    /**
+     * Set <p>Repository digests.</p>
+     * @param RepoDigests <p>Repository digests.</p>
+     */
+    public void setRepoDigests(String [] RepoDigests) {
+        this.RepoDigests = RepoDigests;
     }
 
     /**
@@ -809,6 +819,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.ImageName != null) {
             this.ImageName = new String(source.ImageName);
         }
+        if (source.ImageDigest != null) {
+            this.ImageDigest = new String(source.ImageDigest);
+        }
         if (source.CreateTime != null) {
             this.CreateTime = new String(source.CreateTime);
         }
@@ -820,6 +833,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         }
         if (source.ContainerCnt != null) {
             this.ContainerCnt = new Long(source.ContainerCnt);
+        }
+        if (source.SuperNodeCnt != null) {
+            this.SuperNodeCnt = new Long(source.SuperNodeCnt);
         }
         if (source.ScanTime != null) {
             this.ScanTime = new String(source.ScanTime);
@@ -887,6 +903,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.IsAuthorized != null) {
             this.IsAuthorized = new Long(source.IsAuthorized);
         }
+        if (source.Solution != null) {
+            this.Solution = new String(source.Solution);
+        }
+        if (source.Reason != null) {
+            this.Reason = new String(source.Reason);
+        }
+        if (source.RepoDigests != null) {
+            this.RepoDigests = new String[source.RepoDigests.length];
+            for (int i = 0; i < source.RepoDigests.length; i++) {
+                this.RepoDigests[i] = new String(source.RepoDigests[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -899,10 +927,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ImageID", this.ImageID);
         this.setParamSimple(map, prefix + "ImageName", this.ImageName);
+        this.setParamSimple(map, prefix + "ImageDigest", this.ImageDigest);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "Size", this.Size);
         this.setParamSimple(map, prefix + "HostCnt", this.HostCnt);
         this.setParamSimple(map, prefix + "ContainerCnt", this.ContainerCnt);
+        this.setParamSimple(map, prefix + "SuperNodeCnt", this.SuperNodeCnt);
         this.setParamSimple(map, prefix + "ScanTime", this.ScanTime);
         this.setParamSimple(map, prefix + "VulCnt", this.VulCnt);
         this.setParamSimple(map, prefix + "RiskCnt", this.RiskCnt);
@@ -925,6 +955,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "RemainScanTime", this.RemainScanTime);
         this.setParamSimple(map, prefix + "IsAuthorized", this.IsAuthorized);
+        this.setParamSimple(map, prefix + "Solution", this.Solution);
+        this.setParamSimple(map, prefix + "Reason", this.Reason);
+        this.setParamArraySimple(map, prefix + "RepoDigests.", this.RepoDigests);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

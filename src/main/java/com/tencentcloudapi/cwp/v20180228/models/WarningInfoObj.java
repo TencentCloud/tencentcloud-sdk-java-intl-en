@@ -74,7 +74,6 @@ public class WarningInfoObj extends AbstractModel {
 
     /**
     * Alarm Host Range Type. 0: All Hosts; 1: By Project; 2: By Tencent Cloud Tag; 3: By Host Security Tag; 4: Custom Hosts
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("HostRange")
     @Expose
@@ -82,7 +81,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Configured Number of Hosts in the Range of Alarm, used by the frontend to decide when to display prompt information.
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Count")
     @Expose
@@ -201,10 +199,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Alarm Host Range Type. 0: All Hosts; 1: By Project; 2: By Tencent Cloud Tag; 3: By Host Security Tag; 4: Custom Hosts
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Alarm Host Range Type. 0: All Hosts; 1: By Project; 2: By Tencent Cloud Tag; 3: By Host Security Tag; 4: Custom Hosts 
      * @return HostRange Alarm Host Range Type. 0: All Hosts; 1: By Project; 2: By Tencent Cloud Tag; 3: By Host Security Tag; 4: Custom Hosts
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getHostRange() {
         return this.HostRange;
@@ -212,19 +208,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Alarm Host Range Type. 0: All Hosts; 1: By Project; 2: By Tencent Cloud Tag; 3: By Host Security Tag; 4: Custom Hosts
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param HostRange Alarm Host Range Type. 0: All Hosts; 1: By Project; 2: By Tencent Cloud Tag; 3: By Host Security Tag; 4: Custom Hosts
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setHostRange(Long HostRange) {
         this.HostRange = HostRange;
     }
 
     /**
-     * Get Configured Number of Hosts in the Range of Alarm, used by the frontend to decide when to display prompt information.
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Configured Number of Hosts in the Range of Alarm, used by the frontend to decide when to display prompt information. 
      * @return Count Configured Number of Hosts in the Range of Alarm, used by the frontend to decide when to display prompt information.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getCount() {
         return this.Count;
@@ -232,9 +224,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Configured Number of Hosts in the Range of Alarm, used by the frontend to decide when to display prompt information.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Count Configured Number of Hosts in the Range of Alarm, used by the frontend to decide when to display prompt information.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setCount(Long Count) {
         this.Count = Count;

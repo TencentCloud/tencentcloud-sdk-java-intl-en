@@ -40,6 +40,20 @@ MachineName host name for fuzzy query; Type, status for precise match; CreateBeg
     private String [] Where;
 
     /**
+    * Sorting method (case insensitive): asc for ascending order; desc for descending order
+    */
+    @SerializedName("Order")
+    @Expose
+    private String Order;
+
+    /**
+    * Sort column, strictly equal: latest detection time RecentFoundTime
+    */
+    @SerializedName("By")
+    @Expose
+    private String By;
+
+    /**
      * Get Filtering criteria: InstanceID and IP
 
 MachineName host name for fuzzy query; Type, status for precise match; CreateBeginTime, CreateEndTime for time period 
@@ -79,6 +93,38 @@ MachineName host name for fuzzy query; Type, status for precise match; CreateBeg
         this.Where = Where;
     }
 
+    /**
+     * Get Sorting method (case insensitive): asc for ascending order; desc for descending order 
+     * @return Order Sorting method (case insensitive): asc for ascending order; desc for descending order
+     */
+    public String getOrder() {
+        return this.Order;
+    }
+
+    /**
+     * Set Sorting method (case insensitive): asc for ascending order; desc for descending order
+     * @param Order Sorting method (case insensitive): asc for ascending order; desc for descending order
+     */
+    public void setOrder(String Order) {
+        this.Order = Order;
+    }
+
+    /**
+     * Get Sort column, strictly equal: latest detection time RecentFoundTime 
+     * @return By Sort column, strictly equal: latest detection time RecentFoundTime
+     */
+    public String getBy() {
+        return this.By;
+    }
+
+    /**
+     * Set Sort column, strictly equal: latest detection time RecentFoundTime
+     * @param By Sort column, strictly equal: latest detection time RecentFoundTime
+     */
+    public void setBy(String By) {
+        this.By = By;
+    }
+
     public ExportJavaMemShellsRequest() {
     }
 
@@ -99,6 +145,12 @@ MachineName host name for fuzzy query; Type, status for precise match; CreateBeg
                 this.Where[i] = new String(source.Where[i]);
             }
         }
+        if (source.Order != null) {
+            this.Order = new String(source.Order);
+        }
+        if (source.By != null) {
+            this.By = new String(source.By);
+        }
     }
 
 
@@ -108,6 +160,8 @@ MachineName host name for fuzzy query; Type, status for precise match; CreateBeg
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
         this.setParamArraySimple(map, prefix + "Where.", this.Where);
+        this.setParamSimple(map, prefix + "Order", this.Order);
+        this.setParamSimple(map, prefix + "By", this.By);
 
     }
 }

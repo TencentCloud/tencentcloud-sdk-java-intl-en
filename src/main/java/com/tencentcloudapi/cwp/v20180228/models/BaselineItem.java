@@ -67,7 +67,6 @@ public class BaselineItem extends AbstractModel {
 
     /**
     * Check result description
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("DetectResultDesc")
     @Expose
@@ -75,7 +74,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Risk level
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Level")
     @Expose
@@ -83,7 +81,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Detection Status. 0: Failed; 1: Ignored; 3: Passed; 5: Under detection
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("DetectStatus")
     @Expose
@@ -91,15 +88,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Host ID
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("HostId")
     @Expose
     private String HostId;
 
     /**
-    * Host name
-Note: This field may return null, indicating that no valid values can be obtained.
+    * host name
     */
     @SerializedName("HostName")
     @Expose
@@ -107,7 +102,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Host IP address
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("HostIp")
     @Expose
@@ -115,7 +109,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Public IP address
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("WanIp")
     @Expose
@@ -123,7 +116,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * First Occurrence Time
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("FirstTime")
     @Expose
@@ -131,7 +123,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Last Occurrence Time
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("LastTime")
     @Expose
@@ -139,7 +130,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Can Be Fixed or Not
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("CanBeFixed")
     @Expose
@@ -147,7 +137,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Host Security UUID
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Uuid")
     @Expose
@@ -155,7 +144,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Host Additional Information
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("MachineExtraInfo")
     @Expose
@@ -258,10 +246,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Check result description
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Check result description 
      * @return DetectResultDesc Check result description
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getDetectResultDesc() {
         return this.DetectResultDesc;
@@ -269,19 +255,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Check result description
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param DetectResultDesc Check result description
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setDetectResultDesc(String DetectResultDesc) {
         this.DetectResultDesc = DetectResultDesc;
     }
 
     /**
-     * Get Risk level
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Risk level 
      * @return Level Risk level
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getLevel() {
         return this.Level;
@@ -289,19 +271,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Risk level
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Level Risk level
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setLevel(Long Level) {
         this.Level = Level;
     }
 
     /**
-     * Get Detection Status. 0: Failed; 1: Ignored; 3: Passed; 5: Under detection
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Detection Status. 0: Failed; 1: Ignored; 3: Passed; 5: Under detection 
      * @return DetectStatus Detection Status. 0: Failed; 1: Ignored; 3: Passed; 5: Under detection
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getDetectStatus() {
         return this.DetectStatus;
@@ -309,19 +287,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Detection Status. 0: Failed; 1: Ignored; 3: Passed; 5: Under detection
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param DetectStatus Detection Status. 0: Failed; 1: Ignored; 3: Passed; 5: Under detection
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setDetectStatus(Long DetectStatus) {
         this.DetectStatus = DetectStatus;
     }
 
     /**
-     * Get Host ID
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Host ID 
      * @return HostId Host ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getHostId() {
         return this.HostId;
@@ -329,39 +303,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Host ID
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param HostId Host ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setHostId(String HostId) {
         this.HostId = HostId;
     }
 
     /**
-     * Get Host name
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return HostName Host name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get host name 
+     * @return HostName host name
      */
     public String getHostName() {
         return this.HostName;
     }
 
     /**
-     * Set Host name
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param HostName Host name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set host name
+     * @param HostName host name
      */
     public void setHostName(String HostName) {
         this.HostName = HostName;
     }
 
     /**
-     * Get Host IP address
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Host IP address 
      * @return HostIp Host IP address
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getHostIp() {
         return this.HostIp;
@@ -369,19 +335,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Host IP address
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param HostIp Host IP address
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setHostIp(String HostIp) {
         this.HostIp = HostIp;
     }
 
     /**
-     * Get Public IP address
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Public IP address 
      * @return WanIp Public IP address
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getWanIp() {
         return this.WanIp;
@@ -389,19 +351,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Public IP address
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param WanIp Public IP address
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setWanIp(String WanIp) {
         this.WanIp = WanIp;
     }
 
     /**
-     * Get First Occurrence Time
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get First Occurrence Time 
      * @return FirstTime First Occurrence Time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getFirstTime() {
         return this.FirstTime;
@@ -409,19 +367,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set First Occurrence Time
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param FirstTime First Occurrence Time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setFirstTime(String FirstTime) {
         this.FirstTime = FirstTime;
     }
 
     /**
-     * Get Last Occurrence Time
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Last Occurrence Time 
      * @return LastTime Last Occurrence Time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getLastTime() {
         return this.LastTime;
@@ -429,19 +383,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Last Occurrence Time
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param LastTime Last Occurrence Time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setLastTime(String LastTime) {
         this.LastTime = LastTime;
     }
 
     /**
-     * Get Can Be Fixed or Not
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Can Be Fixed or Not 
      * @return CanBeFixed Can Be Fixed or Not
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getCanBeFixed() {
         return this.CanBeFixed;
@@ -449,19 +399,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Can Be Fixed or Not
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param CanBeFixed Can Be Fixed or Not
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setCanBeFixed(Long CanBeFixed) {
         this.CanBeFixed = CanBeFixed;
     }
 
     /**
-     * Get Host Security UUID
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Host Security UUID 
      * @return Uuid Host Security UUID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getUuid() {
         return this.Uuid;
@@ -469,19 +415,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Host Security UUID
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Uuid Host Security UUID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setUuid(String Uuid) {
         this.Uuid = Uuid;
     }
 
     /**
-     * Get Host Additional Information
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Host Additional Information 
      * @return MachineExtraInfo Host Additional Information
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public MachineExtraInfo getMachineExtraInfo() {
         return this.MachineExtraInfo;
@@ -489,9 +431,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Host Additional Information
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param MachineExtraInfo Host Additional Information
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setMachineExtraInfo(MachineExtraInfo MachineExtraInfo) {
         this.MachineExtraInfo = MachineExtraInfo;

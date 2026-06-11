@@ -108,7 +108,7 @@ public class DescribeMNGManagerDetailData extends AbstractModel {
     private Long Status;
 
     /**
-    * The mini game name and description in multiple languages.
+    * <p>Mini game information in multiple languages.</p>
     */
     @SerializedName("I18nList")
     @Expose
@@ -307,16 +307,16 @@ public class DescribeMNGManagerDetailData extends AbstractModel {
     }
 
     /**
-     * Get The mini game name and description in multiple languages. 
-     * @return I18nList The mini game name and description in multiple languages.
+     * Get <p>Mini game information in multiple languages.</p> 
+     * @return I18nList <p>Mini game information in multiple languages.</p>
      */
     public MNPDetailI18nVO [] getI18nList() {
         return this.I18nList;
     }
 
     /**
-     * Set The mini game name and description in multiple languages.
-     * @param I18nList The mini game name and description in multiple languages.
+     * Set <p>Mini game information in multiple languages.</p>
+     * @param I18nList <p>Mini game information in multiple languages.</p>
      */
     public void setI18nList(MNPDetailI18nVO [] I18nList) {
         this.I18nList = I18nList;

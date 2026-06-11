@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeAssetImageRegistryRegistryListResponse extends AbstractModel {
 
     /**
-    * Mirror repository list
+    * Image repository list
     */
     @SerializedName("List")
     @Expose
     private ImageRepoRegistryInfo [] List;
 
     /**
-    * Total quantity
+    * Total number.
     */
     @SerializedName("TotalCount")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeAssetImageRegistryRegistryListResponse extends AbstractMode
     private String RequestId;
 
     /**
-     * Get Mirror repository list 
-     * @return List Mirror repository list
+     * Get Image repository list 
+     * @return List Image repository list
      */
     public ImageRepoRegistryInfo [] getList() {
         return this.List;
     }
 
     /**
-     * Set Mirror repository list
-     * @param List Mirror repository list
+     * Set Image repository list
+     * @param List Image repository list
      */
     public void setList(ImageRepoRegistryInfo [] List) {
         this.List = List;
     }
 
     /**
-     * Get Total quantity 
-     * @return TotalCount Total quantity
+     * Get Total number. 
+     * @return TotalCount Total number.
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set Total quantity
-     * @param TotalCount Total quantity
+     * Set Total number.
+     * @param TotalCount Total number.
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

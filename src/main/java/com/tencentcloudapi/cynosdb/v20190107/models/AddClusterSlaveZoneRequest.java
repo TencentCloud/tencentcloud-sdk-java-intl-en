@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class AddClusterSlaveZoneRequest extends AbstractModel {
 
     /**
-    * Cluster ID
+    * Cluster ID.
     */
     @SerializedName("ClusterId")
     @Expose
     private String ClusterId;
 
     /**
-    * Replica AZ
+    * Replica AZ.
     */
     @SerializedName("SlaveZone")
     @Expose
     private String SlaveZone;
 
     /**
-    * 
+    * Binlog sync mode. Default value: async. Optional values: sync, semisync, async.
     */
     @SerializedName("BinlogSyncWay")
     @Expose
@@ -52,48 +52,48 @@ public class AddClusterSlaveZoneRequest extends AbstractModel {
     private Long SemiSyncTimeout;
 
     /**
-     * Get Cluster ID 
-     * @return ClusterId Cluster ID
+     * Get Cluster ID. 
+     * @return ClusterId Cluster ID.
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set Cluster ID
-     * @param ClusterId Cluster ID
+     * Set Cluster ID.
+     * @param ClusterId Cluster ID.
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
     }
 
     /**
-     * Get Replica AZ 
-     * @return SlaveZone Replica AZ
+     * Get Replica AZ. 
+     * @return SlaveZone Replica AZ.
      */
     public String getSlaveZone() {
         return this.SlaveZone;
     }
 
     /**
-     * Set Replica AZ
-     * @param SlaveZone Replica AZ
+     * Set Replica AZ.
+     * @param SlaveZone Replica AZ.
      */
     public void setSlaveZone(String SlaveZone) {
         this.SlaveZone = SlaveZone;
     }
 
     /**
-     * Get  
-     * @return BinlogSyncWay 
+     * Get Binlog sync mode. Default value: async. Optional values: sync, semisync, async. 
+     * @return BinlogSyncWay Binlog sync mode. Default value: async. Optional values: sync, semisync, async.
      */
     public String getBinlogSyncWay() {
         return this.BinlogSyncWay;
     }
 
     /**
-     * Set 
-     * @param BinlogSyncWay 
+     * Set Binlog sync mode. Default value: async. Optional values: sync, semisync, async.
+     * @param BinlogSyncWay Binlog sync mode. Default value: async. Optional values: sync, semisync, async.
      */
     public void setBinlogSyncWay(String BinlogSyncWay) {
         this.BinlogSyncWay = BinlogSyncWay;

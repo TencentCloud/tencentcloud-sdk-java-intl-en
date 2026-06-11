@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateIntegrateClusterRequest extends AbstractModel {
 
     /**
-    * Availability zone
+    * Availability zone.
     */
     @SerializedName("Zone")
     @Expose
@@ -53,7 +53,7 @@ public class CreateIntegrateClusterRequest extends AbstractModel {
     private String DbVersion;
 
     /**
-    * Project ID
+    * Project ID.
     */
     @SerializedName("ProjectId")
     @Expose
@@ -67,7 +67,7 @@ public class CreateIntegrateClusterRequest extends AbstractModel {
     private String ClusterName;
 
     /**
-    * Account password (8-64 characters, a combination of uppercase and lowercase letters, digits and symbols ~!@#$%^&*_-+=`|\(){}[]:;'<>,.?/ with any three types).
+    * Account password (8-64 characters, a combination of uppercase and lowercase letters, digits and symbols ~!@#$%^&*_-+=|\(){}[]:;'<>,.?/ with any three types).
     */
     @SerializedName("AdminPassword")
     @Expose
@@ -246,16 +246,16 @@ Rollback and clone do not support monthly subscription storage.
     private String StorageVersion;
 
     /**
-     * Get Availability zone 
-     * @return Zone Availability zone
+     * Get Availability zone. 
+     * @return Zone Availability zone.
      */
     public String getZone() {
         return this.Zone;
     }
 
     /**
-     * Set Availability zone
-     * @param Zone Availability zone
+     * Set Availability zone.
+     * @param Zone Availability zone.
      */
     public void setZone(String Zone) {
         this.Zone = Zone;
@@ -314,16 +314,16 @@ Rollback and clone do not support monthly subscription storage.
     }
 
     /**
-     * Get Project ID 
-     * @return ProjectId Project ID
+     * Get Project ID. 
+     * @return ProjectId Project ID.
      */
     public Long getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set Project ID
-     * @param ProjectId Project ID
+     * Set Project ID.
+     * @param ProjectId Project ID.
      */
     public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;
@@ -346,16 +346,16 @@ Rollback and clone do not support monthly subscription storage.
     }
 
     /**
-     * Get Account password (8-64 characters, a combination of uppercase and lowercase letters, digits and symbols ~!@#$%^&*_-+=`|\(){}[]:;'<>,.?/ with any three types). 
-     * @return AdminPassword Account password (8-64 characters, a combination of uppercase and lowercase letters, digits and symbols ~!@#$%^&*_-+=`|\(){}[]:;'<>,.?/ with any three types).
+     * Get Account password (8-64 characters, a combination of uppercase and lowercase letters, digits and symbols ~!@#$%^&*_-+=|\(){}[]:;'<>,.?/ with any three types). 
+     * @return AdminPassword Account password (8-64 characters, a combination of uppercase and lowercase letters, digits and symbols ~!@#$%^&*_-+=|\(){}[]:;'<>,.?/ with any three types).
      */
     public String getAdminPassword() {
         return this.AdminPassword;
     }
 
     /**
-     * Set Account password (8-64 characters, a combination of uppercase and lowercase letters, digits and symbols ~!@#$%^&*_-+=`|\(){}[]:;'<>,.?/ with any three types).
-     * @param AdminPassword Account password (8-64 characters, a combination of uppercase and lowercase letters, digits and symbols ~!@#$%^&*_-+=`|\(){}[]:;'<>,.?/ with any three types).
+     * Set Account password (8-64 characters, a combination of uppercase and lowercase letters, digits and symbols ~!@#$%^&*_-+=|\(){}[]:;'<>,.?/ with any three types).
+     * @param AdminPassword Account password (8-64 characters, a combination of uppercase and lowercase letters, digits and symbols ~!@#$%^&*_-+=|\(){}[]:;'<>,.?/ with any three types).
      */
     public void setAdminPassword(String AdminPassword) {
         this.AdminPassword = AdminPassword;

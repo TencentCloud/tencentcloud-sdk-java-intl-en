@@ -24,28 +24,28 @@ import java.util.HashMap;
 public class OpenReadOnlyInstanceExclusiveAccessRequest extends AbstractModel {
 
     /**
-    * Please use the cluster information description (https://intl.cloud.tencent.com/document/api/1003/48086?from_cn_redirect=1) to obtain the clusterId.
+    * Please use the [cluster information description](https://www.tencentcloud.com/document/product/1098/40752) to obtain the clusterId.
     */
     @SerializedName("ClusterId")
     @Expose
     private String ClusterId;
 
     /**
-    * Please use the cluster information description (https://intl.cloud.tencent.com/document/api/1003/48086?from_cn_redirect=1) to obtain the instanceId.
+    * Please use the [cluster information description](https://www.tencentcloud.com/document/product/1098/40752) to obtain the instanceId.
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Specifies the designated vpc ID. please use the "query vpc list" to obtain the vpc ID.
+    * Specifies the designated vpc ID. please use the [query vpc list](https://www.tencentcloud.com/document/product/215/15778) to obtain the vpc ID.
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * Specified subnet ID. if vpc ID is set, SubnetId is required. please use query subnet list (https://intl.cloud.tencent.com/document/api/215/15784?from_cn_redirect=1) to get SubnetId.
+    * Specified subnet ID. if vpc ID is set, SubnetId is required. please use [query subnet list](https://intl.cloud.tencent.com/document/api/215/15784?from_cn_redirect=1) to get SubnetId.
     */
     @SerializedName("SubnetId")
     @Expose
@@ -66,64 +66,64 @@ public class OpenReadOnlyInstanceExclusiveAccessRequest extends AbstractModel {
     private String [] SecurityGroupIds;
 
     /**
-     * Get Please use the cluster information description (https://intl.cloud.tencent.com/document/api/1003/48086?from_cn_redirect=1) to obtain the clusterId. 
-     * @return ClusterId Please use the cluster information description (https://intl.cloud.tencent.com/document/api/1003/48086?from_cn_redirect=1) to obtain the clusterId.
+     * Get Please use the [cluster information description](https://www.tencentcloud.com/document/product/1098/40752) to obtain the clusterId. 
+     * @return ClusterId Please use the [cluster information description](https://www.tencentcloud.com/document/product/1098/40752) to obtain the clusterId.
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set Please use the cluster information description (https://intl.cloud.tencent.com/document/api/1003/48086?from_cn_redirect=1) to obtain the clusterId.
-     * @param ClusterId Please use the cluster information description (https://intl.cloud.tencent.com/document/api/1003/48086?from_cn_redirect=1) to obtain the clusterId.
+     * Set Please use the [cluster information description](https://www.tencentcloud.com/document/product/1098/40752) to obtain the clusterId.
+     * @param ClusterId Please use the [cluster information description](https://www.tencentcloud.com/document/product/1098/40752) to obtain the clusterId.
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
     }
 
     /**
-     * Get Please use the cluster information description (https://intl.cloud.tencent.com/document/api/1003/48086?from_cn_redirect=1) to obtain the instanceId. 
-     * @return InstanceId Please use the cluster information description (https://intl.cloud.tencent.com/document/api/1003/48086?from_cn_redirect=1) to obtain the instanceId.
+     * Get Please use the [cluster information description](https://www.tencentcloud.com/document/product/1098/40752) to obtain the instanceId. 
+     * @return InstanceId Please use the [cluster information description](https://www.tencentcloud.com/document/product/1098/40752) to obtain the instanceId.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Please use the cluster information description (https://intl.cloud.tencent.com/document/api/1003/48086?from_cn_redirect=1) to obtain the instanceId.
-     * @param InstanceId Please use the cluster information description (https://intl.cloud.tencent.com/document/api/1003/48086?from_cn_redirect=1) to obtain the instanceId.
+     * Set Please use the [cluster information description](https://www.tencentcloud.com/document/product/1098/40752) to obtain the instanceId.
+     * @param InstanceId Please use the [cluster information description](https://www.tencentcloud.com/document/product/1098/40752) to obtain the instanceId.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Specifies the designated vpc ID. please use the "query vpc list" to obtain the vpc ID. 
-     * @return VpcId Specifies the designated vpc ID. please use the "query vpc list" to obtain the vpc ID.
+     * Get Specifies the designated vpc ID. please use the [query vpc list](https://www.tencentcloud.com/document/product/215/15778) to obtain the vpc ID. 
+     * @return VpcId Specifies the designated vpc ID. please use the [query vpc list](https://www.tencentcloud.com/document/product/215/15778) to obtain the vpc ID.
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set Specifies the designated vpc ID. please use the "query vpc list" to obtain the vpc ID.
-     * @param VpcId Specifies the designated vpc ID. please use the "query vpc list" to obtain the vpc ID.
+     * Set Specifies the designated vpc ID. please use the [query vpc list](https://www.tencentcloud.com/document/product/215/15778) to obtain the vpc ID.
+     * @param VpcId Specifies the designated vpc ID. please use the [query vpc list](https://www.tencentcloud.com/document/product/215/15778) to obtain the vpc ID.
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get Specified subnet ID. if vpc ID is set, SubnetId is required. please use query subnet list (https://intl.cloud.tencent.com/document/api/215/15784?from_cn_redirect=1) to get SubnetId. 
-     * @return SubnetId Specified subnet ID. if vpc ID is set, SubnetId is required. please use query subnet list (https://intl.cloud.tencent.com/document/api/215/15784?from_cn_redirect=1) to get SubnetId.
+     * Get Specified subnet ID. if vpc ID is set, SubnetId is required. please use [query subnet list](https://intl.cloud.tencent.com/document/api/215/15784?from_cn_redirect=1) to get SubnetId. 
+     * @return SubnetId Specified subnet ID. if vpc ID is set, SubnetId is required. please use [query subnet list](https://intl.cloud.tencent.com/document/api/215/15784?from_cn_redirect=1) to get SubnetId.
      */
     public String getSubnetId() {
         return this.SubnetId;
     }
 
     /**
-     * Set Specified subnet ID. if vpc ID is set, SubnetId is required. please use query subnet list (https://intl.cloud.tencent.com/document/api/215/15784?from_cn_redirect=1) to get SubnetId.
-     * @param SubnetId Specified subnet ID. if vpc ID is set, SubnetId is required. please use query subnet list (https://intl.cloud.tencent.com/document/api/215/15784?from_cn_redirect=1) to get SubnetId.
+     * Set Specified subnet ID. if vpc ID is set, SubnetId is required. please use [query subnet list](https://intl.cloud.tencent.com/document/api/215/15784?from_cn_redirect=1) to get SubnetId.
+     * @param SubnetId Specified subnet ID. if vpc ID is set, SubnetId is required. please use [query subnet list](https://intl.cloud.tencent.com/document/api/215/15784?from_cn_redirect=1) to get SubnetId.
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;

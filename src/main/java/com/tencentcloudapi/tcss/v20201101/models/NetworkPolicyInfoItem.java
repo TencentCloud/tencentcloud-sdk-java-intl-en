@@ -31,8 +31,7 @@ public class NetworkPolicyInfoItem extends AbstractModel {
     private String Name;
 
     /**
-    * Network policy description
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Network Policy Description
     */
     @SerializedName("Description")
     @Expose
@@ -92,8 +91,7 @@ cilium: Cilium
     private String NetworkPolicyPlugin;
 
     /**
-    * Policy publishing result
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Policy Distribution Result
     */
     @SerializedName("PublishResult")
     @Expose
@@ -126,8 +124,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long ToPolicyRule;
 
     /**
-    * Object
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Target Object
     */
     @SerializedName("PodSelector")
     @Expose
@@ -157,20 +154,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Network policy description
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Description Network policy description
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Network Policy Description 
+     * @return Description Network Policy Description
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set Network policy description
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Description Network policy description
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Network Policy Description
+     * @param Description Network Policy Description
      */
     public void setDescription(String Description) {
         this.Description = Description;
@@ -329,20 +322,16 @@ cilium: Cilium
     }
 
     /**
-     * Get Policy publishing result
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return PublishResult Policy publishing result
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Policy Distribution Result 
+     * @return PublishResult Policy Distribution Result
      */
     public String getPublishResult() {
         return this.PublishResult;
     }
 
     /**
-     * Set Policy publishing result
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param PublishResult Policy publishing result
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Policy Distribution Result
+     * @param PublishResult Policy Distribution Result
      */
     public void setPublishResult(String PublishResult) {
         this.PublishResult = PublishResult;
@@ -429,20 +418,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Object
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return PodSelector Object
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Target Object 
+     * @return PodSelector Target Object
      */
     public String getPodSelector() {
         return this.PodSelector;
     }
 
     /**
-     * Set Object
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param PodSelector Object
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Target Object
+     * @param PodSelector Target Object
      */
     public void setPodSelector(String PodSelector) {
         this.PodSelector = PodSelector;

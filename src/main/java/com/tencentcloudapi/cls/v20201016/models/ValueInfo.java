@@ -24,7 +24,8 @@ import java.util.HashMap;
 public class ValueInfo extends AbstractModel {
 
     /**
-    * Field type. Valid values: `long`, `text`, `double`
+    * Field type. Supported types: long, text, double, json.
+Note: The json data type is currently supported by partial users or log topics. If needed, contact us to enable the allowlist.
     */
     @SerializedName("Type")
     @Expose
@@ -48,24 +49,50 @@ Note: \n\t\r can be directly enclosed in double quotes as the input parameter wi
     private Boolean SqlFlag;
 
     /**
-    * Whether Chinese characters are contained. For `long` and `double` fields, set them to `false`.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Whether to include node data. Set this parameter to false for the long and double fields.
     */
     @SerializedName("ContainZH")
     @Expose
     private Boolean ContainZH;
 
     /**
-     * Get Field type. Valid values: `long`, `text`, `double` 
-     * @return Type Field type. Valid values: `long`, `text`, `double`
+    * field alias
+    */
+    @SerializedName("Alias")
+    @Expose
+    private String Alias;
+
+    /**
+    * Enable index only for sub-node. This field is not enabled.
+Note: Only json type fields can configure this parameter.
+    */
+    @SerializedName("OpenIndexForChildOnly")
+    @Expose
+    private Boolean OpenIndexForChildOnly;
+
+    /**
+    * subnode list
+Note: Only json type fields can configure this parameter.
+    */
+    @SerializedName("ChildNode")
+    @Expose
+    private KeyValueInfo [] ChildNode;
+
+    /**
+     * Get Field type. Supported types: long, text, double, json.
+Note: The json data type is currently supported by partial users or log topics. If needed, contact us to enable the allowlist. 
+     * @return Type Field type. Supported types: long, text, double, json.
+Note: The json data type is currently supported by partial users or log topics. If needed, contact us to enable the allowlist.
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set Field type. Valid values: `long`, `text`, `double`
-     * @param Type Field type. Valid values: `long`, `text`, `double`
+     * Set Field type. Supported types: long, text, double, json.
+Note: The json data type is currently supported by partial users or log topics. If needed, contact us to enable the allowlist.
+     * @param Type Field type. Supported types: long, text, double, json.
+Note: The json data type is currently supported by partial users or log topics. If needed, contact us to enable the allowlist.
      */
     public void setType(String Type) {
         this.Type = Type;
@@ -116,23 +143,75 @@ Note: \n\t\r can be directly enclosed in double quotes as the input parameter wi
     }
 
     /**
-     * Get Whether Chinese characters are contained. For `long` and `double` fields, set them to `false`.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ContainZH Whether Chinese characters are contained. For `long` and `double` fields, set them to `false`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Whether to include node data. Set this parameter to false for the long and double fields. 
+     * @return ContainZH Whether to include node data. Set this parameter to false for the long and double fields.
      */
     public Boolean getContainZH() {
         return this.ContainZH;
     }
 
     /**
-     * Set Whether Chinese characters are contained. For `long` and `double` fields, set them to `false`.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ContainZH Whether Chinese characters are contained. For `long` and `double` fields, set them to `false`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Whether to include node data. Set this parameter to false for the long and double fields.
+     * @param ContainZH Whether to include node data. Set this parameter to false for the long and double fields.
      */
     public void setContainZH(Boolean ContainZH) {
         this.ContainZH = ContainZH;
+    }
+
+    /**
+     * Get field alias 
+     * @return Alias field alias
+     */
+    public String getAlias() {
+        return this.Alias;
+    }
+
+    /**
+     * Set field alias
+     * @param Alias field alias
+     */
+    public void setAlias(String Alias) {
+        this.Alias = Alias;
+    }
+
+    /**
+     * Get Enable index only for sub-node. This field is not enabled.
+Note: Only json type fields can configure this parameter. 
+     * @return OpenIndexForChildOnly Enable index only for sub-node. This field is not enabled.
+Note: Only json type fields can configure this parameter.
+     */
+    public Boolean getOpenIndexForChildOnly() {
+        return this.OpenIndexForChildOnly;
+    }
+
+    /**
+     * Set Enable index only for sub-node. This field is not enabled.
+Note: Only json type fields can configure this parameter.
+     * @param OpenIndexForChildOnly Enable index only for sub-node. This field is not enabled.
+Note: Only json type fields can configure this parameter.
+     */
+    public void setOpenIndexForChildOnly(Boolean OpenIndexForChildOnly) {
+        this.OpenIndexForChildOnly = OpenIndexForChildOnly;
+    }
+
+    /**
+     * Get subnode list
+Note: Only json type fields can configure this parameter. 
+     * @return ChildNode subnode list
+Note: Only json type fields can configure this parameter.
+     */
+    public KeyValueInfo [] getChildNode() {
+        return this.ChildNode;
+    }
+
+    /**
+     * Set subnode list
+Note: Only json type fields can configure this parameter.
+     * @param ChildNode subnode list
+Note: Only json type fields can configure this parameter.
+     */
+    public void setChildNode(KeyValueInfo [] ChildNode) {
+        this.ChildNode = ChildNode;
     }
 
     public ValueInfo() {
@@ -155,6 +234,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.ContainZH != null) {
             this.ContainZH = new Boolean(source.ContainZH);
         }
+        if (source.Alias != null) {
+            this.Alias = new String(source.Alias);
+        }
+        if (source.OpenIndexForChildOnly != null) {
+            this.OpenIndexForChildOnly = new Boolean(source.OpenIndexForChildOnly);
+        }
+        if (source.ChildNode != null) {
+            this.ChildNode = new KeyValueInfo[source.ChildNode.length];
+            for (int i = 0; i < source.ChildNode.length; i++) {
+                this.ChildNode[i] = new KeyValueInfo(source.ChildNode[i]);
+            }
+        }
     }
 
 
@@ -166,6 +257,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "Tokenizer", this.Tokenizer);
         this.setParamSimple(map, prefix + "SqlFlag", this.SqlFlag);
         this.setParamSimple(map, prefix + "ContainZH", this.ContainZH);
+        this.setParamSimple(map, prefix + "Alias", this.Alias);
+        this.setParamSimple(map, prefix + "OpenIndexForChildOnly", this.OpenIndexForChildOnly);
+        this.setParamArrayObj(map, prefix + "ChildNode.", this.ChildNode);
 
     }
 }

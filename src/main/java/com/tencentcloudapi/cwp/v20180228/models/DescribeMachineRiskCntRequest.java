@@ -25,7 +25,7 @@ public class DescribeMachineRiskCntRequest extends AbstractModel {
 
     /**
     * Filter criteria
-<li>Uuids- String - required: no - host uuid</li>
+<li>Uuids- String - required: no - host uuid</li>
     */
     @SerializedName("Filters")
     @Expose
@@ -33,9 +33,9 @@ public class DescribeMachineRiskCntRequest extends AbstractModel {
 
     /**
      * Get Filter criteria
-<li>Uuids- String - required: no - host uuid</li> 
+<li>Uuids- String - required: no - host uuid</li> 
      * @return Filters Filter criteria
-<li>Uuids- String - required: no - host uuid</li>
+<li>Uuids- String - required: no - host uuid</li>
      */
     public Filter [] getFilters() {
         return this.Filters;
@@ -43,9 +43,9 @@ public class DescribeMachineRiskCntRequest extends AbstractModel {
 
     /**
      * Set Filter criteria
-<li>Uuids- String - required: no - host uuid</li>
+<li>Uuids- String - required: no - host uuid</li>
      * @param Filters Filter criteria
-<li>Uuids- String - required: no - host uuid</li>
+<li>Uuids- String - required: no - host uuid</li>
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;

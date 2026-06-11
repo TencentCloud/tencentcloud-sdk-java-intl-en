@@ -24,14 +24,18 @@ import java.util.HashMap;
 public class ModifyKafkaRechargeRequest extends AbstractModel {
 
     /**
-    * Kafka data import configuration ID
+    * Import configuration Id.
+-Create a Kafka Data Subscription Task (https://www.tencentcloud.com/document/product/614/94448?from_cn_redirect=1) to obtain the Kafka import configuration Id.
+-Get the Kafka import configuration Id by searching the [Kafka Data Subscription Task list](https://www.tencentcloud.com/document/product/614/94446?from_cn_redirect=1).
     */
     @SerializedName("Id")
     @Expose
     private String Id;
 
     /**
-    * Target topic ID
+    * Import the target topic ID of CLS.
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
+- Obtain the log topic Id through [Create Log Topic](https://www.tencentcloud.com/document/product/614/56456?from_cn_redirect=1).
     */
     @SerializedName("TopicId")
     @Expose
@@ -45,42 +49,45 @@ public class ModifyKafkaRechargeRequest extends AbstractModel {
     private String Name;
 
     /**
-    * Kafka type. Valid values: 0 (Tencent Cloud CKafka) and 1 (customer's Kafka)
+    * Import Kafka type. 0: Tencent Cloud CKafka; 1: user-built kafka.
     */
     @SerializedName("KafkaType")
     @Expose
     private Long KafkaType;
 
     /**
-    * CKafka instance ID, which is required when `KafkaType` is set to `0`
+    * Tencent Cloud CKafka instance ID. Required when KafkaType is 0.
+- Obtain the instance id by searching the instance list information (https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1).
     */
     @SerializedName("KafkaInstance")
     @Expose
     private String KafkaInstance;
 
     /**
-    * Service address
+    * Service address, which is required when KafkaType is 1.
     */
     @SerializedName("ServerAddr")
     @Expose
     private String ServerAddr;
 
     /**
-    * Whether the service address uses an encrypted connection
+    * Whether ServerAddr is an encrypted connection. Required when KafkaType is 1.
     */
     @SerializedName("IsEncryptionAddr")
     @Expose
     private Boolean IsEncryptionAddr;
 
     /**
-    * Encryption access protocol, which is required when IsEncryptionAddr` is set to `true`
+    * Encrypted access protocol. It is required when the parameter KafkaType is 1 and the parameter IsEncryptionAddr is true.
     */
     @SerializedName("Protocol")
     @Expose
     private KafkaProtocolInfo Protocol;
 
     /**
-    * List of Kafka topics to import data from. Separate multiple topics with commas (,).
+    * List of Kafka-related topics to be imported by the user, separated by commas.
+
+-When Kafka Type is Tencent Cloud CKafka: Get TopicName by searching the topic list (https://www.tencentcloud.com/document/product/597/40847?from_cn_redirect=1).
     */
     @SerializedName("UserKafkaTopics")
     @Expose
@@ -101,39 +108,62 @@ public class ModifyKafkaRechargeRequest extends AbstractModel {
     private LogRechargeRuleInfo LogRechargeRule;
 
     /**
-    * Import control. Valid values: 1 (suspend) and 2 (resume).
+    * Import control, 1: suspend; 2: start.
     */
     @SerializedName("StatusControl")
     @Expose
     private Long StatusControl;
 
     /**
-     * Get Kafka data import configuration ID 
-     * @return Id Kafka data import configuration ID
+    * User kafka extended information
+    */
+    @SerializedName("UserKafkaMeta")
+    @Expose
+    private UserKafkaMeta UserKafkaMeta;
+
+    /**
+     * Get Import configuration Id.
+-Create a Kafka Data Subscription Task (https://www.tencentcloud.com/document/product/614/94448?from_cn_redirect=1) to obtain the Kafka import configuration Id.
+-Get the Kafka import configuration Id by searching the [Kafka Data Subscription Task list](https://www.tencentcloud.com/document/product/614/94446?from_cn_redirect=1). 
+     * @return Id Import configuration Id.
+-Create a Kafka Data Subscription Task (https://www.tencentcloud.com/document/product/614/94448?from_cn_redirect=1) to obtain the Kafka import configuration Id.
+-Get the Kafka import configuration Id by searching the [Kafka Data Subscription Task list](https://www.tencentcloud.com/document/product/614/94446?from_cn_redirect=1).
      */
     public String getId() {
         return this.Id;
     }
 
     /**
-     * Set Kafka data import configuration ID
-     * @param Id Kafka data import configuration ID
+     * Set Import configuration Id.
+-Create a Kafka Data Subscription Task (https://www.tencentcloud.com/document/product/614/94448?from_cn_redirect=1) to obtain the Kafka import configuration Id.
+-Get the Kafka import configuration Id by searching the [Kafka Data Subscription Task list](https://www.tencentcloud.com/document/product/614/94446?from_cn_redirect=1).
+     * @param Id Import configuration Id.
+-Create a Kafka Data Subscription Task (https://www.tencentcloud.com/document/product/614/94448?from_cn_redirect=1) to obtain the Kafka import configuration Id.
+-Get the Kafka import configuration Id by searching the [Kafka Data Subscription Task list](https://www.tencentcloud.com/document/product/614/94446?from_cn_redirect=1).
      */
     public void setId(String Id) {
         this.Id = Id;
     }
 
     /**
-     * Get Target topic ID 
-     * @return TopicId Target topic ID
+     * Get Import the target topic ID of CLS.
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
+- Obtain the log topic Id through [Create Log Topic](https://www.tencentcloud.com/document/product/614/56456?from_cn_redirect=1). 
+     * @return TopicId Import the target topic ID of CLS.
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
+- Obtain the log topic Id through [Create Log Topic](https://www.tencentcloud.com/document/product/614/56456?from_cn_redirect=1).
      */
     public String getTopicId() {
         return this.TopicId;
     }
 
     /**
-     * Set Target topic ID
-     * @param TopicId Target topic ID
+     * Set Import the target topic ID of CLS.
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
+- Obtain the log topic Id through [Create Log Topic](https://www.tencentcloud.com/document/product/614/56456?from_cn_redirect=1).
+     * @param TopicId Import the target topic ID of CLS.
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
+- Obtain the log topic Id through [Create Log Topic](https://www.tencentcloud.com/document/product/614/56456?from_cn_redirect=1).
      */
     public void setTopicId(String TopicId) {
         this.TopicId = TopicId;
@@ -156,96 +186,108 @@ public class ModifyKafkaRechargeRequest extends AbstractModel {
     }
 
     /**
-     * Get Kafka type. Valid values: 0 (Tencent Cloud CKafka) and 1 (customer's Kafka) 
-     * @return KafkaType Kafka type. Valid values: 0 (Tencent Cloud CKafka) and 1 (customer's Kafka)
+     * Get Import Kafka type. 0: Tencent Cloud CKafka; 1: user-built kafka. 
+     * @return KafkaType Import Kafka type. 0: Tencent Cloud CKafka; 1: user-built kafka.
      */
     public Long getKafkaType() {
         return this.KafkaType;
     }
 
     /**
-     * Set Kafka type. Valid values: 0 (Tencent Cloud CKafka) and 1 (customer's Kafka)
-     * @param KafkaType Kafka type. Valid values: 0 (Tencent Cloud CKafka) and 1 (customer's Kafka)
+     * Set Import Kafka type. 0: Tencent Cloud CKafka; 1: user-built kafka.
+     * @param KafkaType Import Kafka type. 0: Tencent Cloud CKafka; 1: user-built kafka.
      */
     public void setKafkaType(Long KafkaType) {
         this.KafkaType = KafkaType;
     }
 
     /**
-     * Get CKafka instance ID, which is required when `KafkaType` is set to `0` 
-     * @return KafkaInstance CKafka instance ID, which is required when `KafkaType` is set to `0`
+     * Get Tencent Cloud CKafka instance ID. Required when KafkaType is 0.
+- Obtain the instance id by searching the instance list information (https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1). 
+     * @return KafkaInstance Tencent Cloud CKafka instance ID. Required when KafkaType is 0.
+- Obtain the instance id by searching the instance list information (https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1).
      */
     public String getKafkaInstance() {
         return this.KafkaInstance;
     }
 
     /**
-     * Set CKafka instance ID, which is required when `KafkaType` is set to `0`
-     * @param KafkaInstance CKafka instance ID, which is required when `KafkaType` is set to `0`
+     * Set Tencent Cloud CKafka instance ID. Required when KafkaType is 0.
+- Obtain the instance id by searching the instance list information (https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1).
+     * @param KafkaInstance Tencent Cloud CKafka instance ID. Required when KafkaType is 0.
+- Obtain the instance id by searching the instance list information (https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1).
      */
     public void setKafkaInstance(String KafkaInstance) {
         this.KafkaInstance = KafkaInstance;
     }
 
     /**
-     * Get Service address 
-     * @return ServerAddr Service address
+     * Get Service address, which is required when KafkaType is 1. 
+     * @return ServerAddr Service address, which is required when KafkaType is 1.
      */
     public String getServerAddr() {
         return this.ServerAddr;
     }
 
     /**
-     * Set Service address
-     * @param ServerAddr Service address
+     * Set Service address, which is required when KafkaType is 1.
+     * @param ServerAddr Service address, which is required when KafkaType is 1.
      */
     public void setServerAddr(String ServerAddr) {
         this.ServerAddr = ServerAddr;
     }
 
     /**
-     * Get Whether the service address uses an encrypted connection 
-     * @return IsEncryptionAddr Whether the service address uses an encrypted connection
+     * Get Whether ServerAddr is an encrypted connection. Required when KafkaType is 1. 
+     * @return IsEncryptionAddr Whether ServerAddr is an encrypted connection. Required when KafkaType is 1.
      */
     public Boolean getIsEncryptionAddr() {
         return this.IsEncryptionAddr;
     }
 
     /**
-     * Set Whether the service address uses an encrypted connection
-     * @param IsEncryptionAddr Whether the service address uses an encrypted connection
+     * Set Whether ServerAddr is an encrypted connection. Required when KafkaType is 1.
+     * @param IsEncryptionAddr Whether ServerAddr is an encrypted connection. Required when KafkaType is 1.
      */
     public void setIsEncryptionAddr(Boolean IsEncryptionAddr) {
         this.IsEncryptionAddr = IsEncryptionAddr;
     }
 
     /**
-     * Get Encryption access protocol, which is required when IsEncryptionAddr` is set to `true` 
-     * @return Protocol Encryption access protocol, which is required when IsEncryptionAddr` is set to `true`
+     * Get Encrypted access protocol. It is required when the parameter KafkaType is 1 and the parameter IsEncryptionAddr is true. 
+     * @return Protocol Encrypted access protocol. It is required when the parameter KafkaType is 1 and the parameter IsEncryptionAddr is true.
      */
     public KafkaProtocolInfo getProtocol() {
         return this.Protocol;
     }
 
     /**
-     * Set Encryption access protocol, which is required when IsEncryptionAddr` is set to `true`
-     * @param Protocol Encryption access protocol, which is required when IsEncryptionAddr` is set to `true`
+     * Set Encrypted access protocol. It is required when the parameter KafkaType is 1 and the parameter IsEncryptionAddr is true.
+     * @param Protocol Encrypted access protocol. It is required when the parameter KafkaType is 1 and the parameter IsEncryptionAddr is true.
      */
     public void setProtocol(KafkaProtocolInfo Protocol) {
         this.Protocol = Protocol;
     }
 
     /**
-     * Get List of Kafka topics to import data from. Separate multiple topics with commas (,). 
-     * @return UserKafkaTopics List of Kafka topics to import data from. Separate multiple topics with commas (,).
+     * Get List of Kafka-related topics to be imported by the user, separated by commas.
+
+-When Kafka Type is Tencent Cloud CKafka: Get TopicName by searching the topic list (https://www.tencentcloud.com/document/product/597/40847?from_cn_redirect=1). 
+     * @return UserKafkaTopics List of Kafka-related topics to be imported by the user, separated by commas.
+
+-When Kafka Type is Tencent Cloud CKafka: Get TopicName by searching the topic list (https://www.tencentcloud.com/document/product/597/40847?from_cn_redirect=1).
      */
     public String getUserKafkaTopics() {
         return this.UserKafkaTopics;
     }
 
     /**
-     * Set List of Kafka topics to import data from. Separate multiple topics with commas (,).
-     * @param UserKafkaTopics List of Kafka topics to import data from. Separate multiple topics with commas (,).
+     * Set List of Kafka-related topics to be imported by the user, separated by commas.
+
+-When Kafka Type is Tencent Cloud CKafka: Get TopicName by searching the topic list (https://www.tencentcloud.com/document/product/597/40847?from_cn_redirect=1).
+     * @param UserKafkaTopics List of Kafka-related topics to be imported by the user, separated by commas.
+
+-When Kafka Type is Tencent Cloud CKafka: Get TopicName by searching the topic list (https://www.tencentcloud.com/document/product/597/40847?from_cn_redirect=1).
      */
     public void setUserKafkaTopics(String UserKafkaTopics) {
         this.UserKafkaTopics = UserKafkaTopics;
@@ -284,19 +326,35 @@ public class ModifyKafkaRechargeRequest extends AbstractModel {
     }
 
     /**
-     * Get Import control. Valid values: 1 (suspend) and 2 (resume). 
-     * @return StatusControl Import control. Valid values: 1 (suspend) and 2 (resume).
+     * Get Import control, 1: suspend; 2: start. 
+     * @return StatusControl Import control, 1: suspend; 2: start.
      */
     public Long getStatusControl() {
         return this.StatusControl;
     }
 
     /**
-     * Set Import control. Valid values: 1 (suspend) and 2 (resume).
-     * @param StatusControl Import control. Valid values: 1 (suspend) and 2 (resume).
+     * Set Import control, 1: suspend; 2: start.
+     * @param StatusControl Import control, 1: suspend; 2: start.
      */
     public void setStatusControl(Long StatusControl) {
         this.StatusControl = StatusControl;
+    }
+
+    /**
+     * Get User kafka extended information 
+     * @return UserKafkaMeta User kafka extended information
+     */
+    public UserKafkaMeta getUserKafkaMeta() {
+        return this.UserKafkaMeta;
+    }
+
+    /**
+     * Set User kafka extended information
+     * @param UserKafkaMeta User kafka extended information
+     */
+    public void setUserKafkaMeta(UserKafkaMeta UserKafkaMeta) {
+        this.UserKafkaMeta = UserKafkaMeta;
     }
 
     public ModifyKafkaRechargeRequest() {
@@ -343,6 +401,9 @@ public class ModifyKafkaRechargeRequest extends AbstractModel {
         if (source.StatusControl != null) {
             this.StatusControl = new Long(source.StatusControl);
         }
+        if (source.UserKafkaMeta != null) {
+            this.UserKafkaMeta = new UserKafkaMeta(source.UserKafkaMeta);
+        }
     }
 
 
@@ -362,6 +423,7 @@ public class ModifyKafkaRechargeRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ConsumerGroupName", this.ConsumerGroupName);
         this.setParamObj(map, prefix + "LogRechargeRule.", this.LogRechargeRule);
         this.setParamSimple(map, prefix + "StatusControl", this.StatusControl);
+        this.setParamObj(map, prefix + "UserKafkaMeta.", this.UserKafkaMeta);
 
     }
 }

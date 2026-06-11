@@ -24,69 +24,84 @@ import java.util.HashMap;
 public class DescribeKafkaRechargesRequest extends AbstractModel {
 
     /**
-    * Log topic ID
+    * Log topic Id.
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
     */
     @SerializedName("TopicId")
     @Expose
     private String TopicId;
 
     /**
-    * Import configuration ID
+    * Import configuration Id.
+-Create a Kafka Data Subscription Task (https://www.tencentcloud.com/document/product/614/94448?from_cn_redirect=1) to obtain the Kafka import configuration Id.
+-Get the Kafka import configuration Id by [searching the Kafka Data Subscription Task list](https://www.tencentcloud.com/document/product/614/94446?from_cn_redirect=1).
     */
     @SerializedName("Id")
     @Expose
     private String Id;
 
     /**
-    * Status. Valid values: 1 (running) and 2 (suspended).
+    * Status. 1: Running, 2: Suspension, 3: Error.
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-     * Get Log topic ID 
-     * @return TopicId Log topic ID
+     * Get Log topic Id.
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1). 
+     * @return TopicId Log topic Id.
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
      */
     public String getTopicId() {
         return this.TopicId;
     }
 
     /**
-     * Set Log topic ID
-     * @param TopicId Log topic ID
+     * Set Log topic Id.
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
+     * @param TopicId Log topic Id.
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
      */
     public void setTopicId(String TopicId) {
         this.TopicId = TopicId;
     }
 
     /**
-     * Get Import configuration ID 
-     * @return Id Import configuration ID
+     * Get Import configuration Id.
+-Create a Kafka Data Subscription Task (https://www.tencentcloud.com/document/product/614/94448?from_cn_redirect=1) to obtain the Kafka import configuration Id.
+-Get the Kafka import configuration Id by [searching the Kafka Data Subscription Task list](https://www.tencentcloud.com/document/product/614/94446?from_cn_redirect=1). 
+     * @return Id Import configuration Id.
+-Create a Kafka Data Subscription Task (https://www.tencentcloud.com/document/product/614/94448?from_cn_redirect=1) to obtain the Kafka import configuration Id.
+-Get the Kafka import configuration Id by [searching the Kafka Data Subscription Task list](https://www.tencentcloud.com/document/product/614/94446?from_cn_redirect=1).
      */
     public String getId() {
         return this.Id;
     }
 
     /**
-     * Set Import configuration ID
-     * @param Id Import configuration ID
+     * Set Import configuration Id.
+-Create a Kafka Data Subscription Task (https://www.tencentcloud.com/document/product/614/94448?from_cn_redirect=1) to obtain the Kafka import configuration Id.
+-Get the Kafka import configuration Id by [searching the Kafka Data Subscription Task list](https://www.tencentcloud.com/document/product/614/94446?from_cn_redirect=1).
+     * @param Id Import configuration Id.
+-Create a Kafka Data Subscription Task (https://www.tencentcloud.com/document/product/614/94448?from_cn_redirect=1) to obtain the Kafka import configuration Id.
+-Get the Kafka import configuration Id by [searching the Kafka Data Subscription Task list](https://www.tencentcloud.com/document/product/614/94446?from_cn_redirect=1).
      */
     public void setId(String Id) {
         this.Id = Id;
     }
 
     /**
-     * Get Status. Valid values: 1 (running) and 2 (suspended). 
-     * @return Status Status. Valid values: 1 (running) and 2 (suspended).
+     * Get Status. 1: Running, 2: Suspension, 3: Error. 
+     * @return Status Status. 1: Running, 2: Suspension, 3: Error.
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Status. Valid values: 1 (running) and 2 (suspended).
-     * @param Status Status. Valid values: 1 (running) and 2 (suspended).
+     * Set Status. 1: Running, 2: Suspension, 3: Error.
+     * @param Status Status. 1: Running, 2: Suspension, 3: Error.
      */
     public void setStatus(Long Status) {
         this.Status = Status;

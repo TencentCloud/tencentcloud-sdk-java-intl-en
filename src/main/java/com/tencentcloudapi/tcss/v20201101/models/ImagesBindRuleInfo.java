@@ -45,8 +45,7 @@ public class ImagesBindRuleInfo extends AbstractModel {
     private Long ContainerCnt;
 
     /**
-    * Bound rule ID
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Binding rule id
     */
     @SerializedName("RuleId")
     @Expose
@@ -54,15 +53,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Rule name
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("RuleName")
     @Expose
     private String RuleName;
 
     /**
-    * Image size
-Note: This field may return null, indicating that no valid values can be obtained.
+    * image size
     */
     @SerializedName("ImageSize")
     @Expose
@@ -70,7 +67,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Last scan time
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ScanTime")
     @Expose
@@ -125,30 +121,24 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Bound rule ID
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return RuleId Bound rule ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Binding rule id 
+     * @return RuleId Binding rule id
      */
     public String getRuleId() {
         return this.RuleId;
     }
 
     /**
-     * Set Bound rule ID
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param RuleId Bound rule ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Binding rule id
+     * @param RuleId Binding rule id
      */
     public void setRuleId(String RuleId) {
         this.RuleId = RuleId;
     }
 
     /**
-     * Get Rule name
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Rule name 
      * @return RuleName Rule name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getRuleName() {
         return this.RuleName;
@@ -156,39 +146,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Rule name
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param RuleName Rule name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setRuleName(String RuleName) {
         this.RuleName = RuleName;
     }
 
     /**
-     * Get Image size
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ImageSize Image size
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get image size 
+     * @return ImageSize image size
      */
     public Long getImageSize() {
         return this.ImageSize;
     }
 
     /**
-     * Set Image size
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ImageSize Image size
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set image size
+     * @param ImageSize image size
      */
     public void setImageSize(Long ImageSize) {
         this.ImageSize = ImageSize;
     }
 
     /**
-     * Get Last scan time
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Last scan time 
      * @return ScanTime Last scan time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getScanTime() {
         return this.ScanTime;
@@ -196,9 +178,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Last scan time
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param ScanTime Last scan time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setScanTime(String ScanTime) {
         this.ScanTime = ScanTime;

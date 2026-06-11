@@ -25,7 +25,6 @@ public class DescribeAssetDatabaseListResponse extends AbstractModel {
 
     /**
     * List
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Databases")
     @Expose
@@ -46,10 +45,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get List
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get List 
      * @return Databases List
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public AssetDatabaseBaseInfo [] getDatabases() {
         return this.Databases;
@@ -57,9 +54,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set List
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Databases List
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setDatabases(AssetDatabaseBaseInfo [] Databases) {
         this.Databases = Databases;

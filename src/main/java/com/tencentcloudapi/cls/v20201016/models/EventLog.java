@@ -24,7 +24,12 @@ import java.util.HashMap;
 public class EventLog extends AbstractModel {
 
     /**
-    * Event channel, supports Application, Security, Setup, System, ALL
+    * Event channel, support
+-Application log
+-Security log
+-Startup log
+-System log
+-ALL logs
 
     */
     @SerializedName("EventChannel")
@@ -32,14 +37,17 @@ public class EventLog extends AbstractModel {
     private String EventChannel;
 
     /**
-    * Time type, 1: User-defined, 2: Current time
+    * Supported types of the time field (Timestamp)
+-1 (User-customized time)
+-2 (current time)
     */
     @SerializedName("TimeType")
     @Expose
     private Long TimeType;
 
     /**
-    * Time, when choosing custom time type, a specific time is required
+    * Time, when users choose custom time type, specify the time in seconds
+Format: timestamp, 1754897446
     */
     @SerializedName("Timestamp")
     @Expose
@@ -47,15 +55,29 @@ public class EventLog extends AbstractModel {
 
     /**
     * Event ID filter list
+	
+Optional. Being empty indicates no filtering is applied.
+Support forward filtering for a single value (for example: 20) or a range (for example: 0-20), also support reverse filtering for a single value (for example: -20).
+Multiple filter items can be separated by commas, for example: 1-200,-100 means collect event logs within the range of 1-200 except 100.
     */
     @SerializedName("EventIDs")
     @Expose
     private String [] EventIDs;
 
     /**
-     * Get Event channel, supports Application, Security, Setup, System, ALL
+     * Get Event channel, support
+-Application log
+-Security log
+-Startup log
+-System log
+-ALL logs
  
-     * @return EventChannel Event channel, supports Application, Security, Setup, System, ALL
+     * @return EventChannel Event channel, support
+-Application log
+-Security log
+-Startup log
+-System log
+-ALL logs
 
      */
     public String getEventChannel() {
@@ -63,9 +85,19 @@ public class EventLog extends AbstractModel {
     }
 
     /**
-     * Set Event channel, supports Application, Security, Setup, System, ALL
+     * Set Event channel, support
+-Application log
+-Security log
+-Startup log
+-System log
+-ALL logs
 
-     * @param EventChannel Event channel, supports Application, Security, Setup, System, ALL
+     * @param EventChannel Event channel, support
+-Application log
+-Security log
+-Startup log
+-System log
+-ALL logs
 
      */
     public void setEventChannel(String EventChannel) {
@@ -73,40 +105,60 @@ public class EventLog extends AbstractModel {
     }
 
     /**
-     * Get Time type, 1: User-defined, 2: Current time 
-     * @return TimeType Time type, 1: User-defined, 2: Current time
+     * Get Supported types of the time field (Timestamp)
+-1 (User-customized time)
+-2 (current time) 
+     * @return TimeType Supported types of the time field (Timestamp)
+-1 (User-customized time)
+-2 (current time)
      */
     public Long getTimeType() {
         return this.TimeType;
     }
 
     /**
-     * Set Time type, 1: User-defined, 2: Current time
-     * @param TimeType Time type, 1: User-defined, 2: Current time
+     * Set Supported types of the time field (Timestamp)
+-1 (User-customized time)
+-2 (current time)
+     * @param TimeType Supported types of the time field (Timestamp)
+-1 (User-customized time)
+-2 (current time)
      */
     public void setTimeType(Long TimeType) {
         this.TimeType = TimeType;
     }
 
     /**
-     * Get Time, when choosing custom time type, a specific time is required 
-     * @return Timestamp Time, when choosing custom time type, a specific time is required
+     * Get Time, when users choose custom time type, specify the time in seconds
+Format: timestamp, 1754897446 
+     * @return Timestamp Time, when users choose custom time type, specify the time in seconds
+Format: timestamp, 1754897446
      */
     public Long getTimestamp() {
         return this.Timestamp;
     }
 
     /**
-     * Set Time, when choosing custom time type, a specific time is required
-     * @param Timestamp Time, when choosing custom time type, a specific time is required
+     * Set Time, when users choose custom time type, specify the time in seconds
+Format: timestamp, 1754897446
+     * @param Timestamp Time, when users choose custom time type, specify the time in seconds
+Format: timestamp, 1754897446
      */
     public void setTimestamp(Long Timestamp) {
         this.Timestamp = Timestamp;
     }
 
     /**
-     * Get Event ID filter list 
+     * Get Event ID filter list
+	
+Optional. Being empty indicates no filtering is applied.
+Support forward filtering for a single value (for example: 20) or a range (for example: 0-20), also support reverse filtering for a single value (for example: -20).
+Multiple filter items can be separated by commas, for example: 1-200,-100 means collect event logs within the range of 1-200 except 100. 
      * @return EventIDs Event ID filter list
+	
+Optional. Being empty indicates no filtering is applied.
+Support forward filtering for a single value (for example: 20) or a range (for example: 0-20), also support reverse filtering for a single value (for example: -20).
+Multiple filter items can be separated by commas, for example: 1-200,-100 means collect event logs within the range of 1-200 except 100.
      */
     public String [] getEventIDs() {
         return this.EventIDs;
@@ -114,7 +166,15 @@ public class EventLog extends AbstractModel {
 
     /**
      * Set Event ID filter list
+	
+Optional. Being empty indicates no filtering is applied.
+Support forward filtering for a single value (for example: 20) or a range (for example: 0-20), also support reverse filtering for a single value (for example: -20).
+Multiple filter items can be separated by commas, for example: 1-200,-100 means collect event logs within the range of 1-200 except 100.
      * @param EventIDs Event ID filter list
+	
+Optional. Being empty indicates no filtering is applied.
+Support forward filtering for a single value (for example: 20) or a range (for example: 0-20), also support reverse filtering for a single value (for example: -20).
+Multiple filter items can be separated by commas, for example: 1-200,-100 means collect event logs within the range of 1-200 except 100.
      */
     public void setEventIDs(String [] EventIDs) {
         this.EventIDs = EventIDs;

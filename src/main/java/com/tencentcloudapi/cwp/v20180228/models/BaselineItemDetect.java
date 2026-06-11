@@ -25,7 +25,6 @@ public class BaselineItemDetect extends AbstractModel {
 
     /**
     * Item ID
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ItemId")
     @Expose
@@ -33,7 +32,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Item Name
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ItemName")
     @Expose
@@ -41,7 +39,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Item Description
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ItemDesc")
     @Expose
@@ -49,7 +46,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Fixing Method
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("FixMethod")
     @Expose
@@ -57,7 +53,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Rule
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("RuleName")
     @Expose
@@ -65,7 +60,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * 0: Failed; 1: Ignored; 3: Passed; 5: Under detection
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("DetectStatus")
     @Expose
@@ -73,7 +67,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Risk level
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Level")
     @Expose
@@ -81,7 +74,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Number of affected servers
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("HostCount")
     @Expose
@@ -89,57 +81,49 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * First detection time
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("FirstTime")
     @Expose
     private String FirstTime;
 
     /**
-    * Last Detection Time
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Last detection time
     */
     @SerializedName("LastTime")
     @Expose
     private String LastTime;
 
     /**
-    * Detection result, JSON string
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Detection result; JSON string.
     */
     @SerializedName("DetectResult")
     @Expose
     private String DetectResult;
 
     /**
-    * Rule ID
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Rule ID.
     */
     @SerializedName("RuleId")
     @Expose
     private Long RuleId;
 
     /**
-    * Number of servers passed
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Number of servers passed.
     */
     @SerializedName("PassedHostCount")
     @Expose
     private Long PassedHostCount;
 
     /**
-    * Number of servers failed
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Number of servers failed.
     */
     @SerializedName("NotPassedHostCount")
     @Expose
     private Long NotPassedHostCount;
 
     /**
-     * Get Item ID
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Item ID 
      * @return ItemId Item ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getItemId() {
         return this.ItemId;
@@ -147,19 +131,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Item ID
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param ItemId Item ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setItemId(Long ItemId) {
         this.ItemId = ItemId;
     }
 
     /**
-     * Get Item Name
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Item Name 
      * @return ItemName Item Name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getItemName() {
         return this.ItemName;
@@ -167,19 +147,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Item Name
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param ItemName Item Name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setItemName(String ItemName) {
         this.ItemName = ItemName;
     }
 
     /**
-     * Get Item Description
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Item Description 
      * @return ItemDesc Item Description
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getItemDesc() {
         return this.ItemDesc;
@@ -187,19 +163,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Item Description
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param ItemDesc Item Description
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setItemDesc(String ItemDesc) {
         this.ItemDesc = ItemDesc;
     }
 
     /**
-     * Get Fixing Method
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Fixing Method 
      * @return FixMethod Fixing Method
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getFixMethod() {
         return this.FixMethod;
@@ -207,19 +179,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Fixing Method
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param FixMethod Fixing Method
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setFixMethod(String FixMethod) {
         this.FixMethod = FixMethod;
     }
 
     /**
-     * Get Rule
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Rule 
      * @return RuleName Rule
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getRuleName() {
         return this.RuleName;
@@ -227,19 +195,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Rule
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param RuleName Rule
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setRuleName(String RuleName) {
         this.RuleName = RuleName;
     }
 
     /**
-     * Get 0: Failed; 1: Ignored; 3: Passed; 5: Under detection
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get 0: Failed; 1: Ignored; 3: Passed; 5: Under detection 
      * @return DetectStatus 0: Failed; 1: Ignored; 3: Passed; 5: Under detection
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getDetectStatus() {
         return this.DetectStatus;
@@ -247,19 +211,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set 0: Failed; 1: Ignored; 3: Passed; 5: Under detection
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param DetectStatus 0: Failed; 1: Ignored; 3: Passed; 5: Under detection
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setDetectStatus(Long DetectStatus) {
         this.DetectStatus = DetectStatus;
     }
 
     /**
-     * Get Risk level
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Risk level 
      * @return Level Risk level
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getLevel() {
         return this.Level;
@@ -267,19 +227,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Risk level
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Level Risk level
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setLevel(Long Level) {
         this.Level = Level;
     }
 
     /**
-     * Get Number of affected servers
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Number of affected servers 
      * @return HostCount Number of affected servers
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getHostCount() {
         return this.HostCount;
@@ -287,19 +243,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Number of affected servers
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param HostCount Number of affected servers
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setHostCount(Long HostCount) {
         this.HostCount = HostCount;
     }
 
     /**
-     * Get First detection time
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get First detection time 
      * @return FirstTime First detection time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getFirstTime() {
         return this.FirstTime;
@@ -307,109 +259,87 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set First detection time
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param FirstTime First detection time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setFirstTime(String FirstTime) {
         this.FirstTime = FirstTime;
     }
 
     /**
-     * Get Last Detection Time
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return LastTime Last Detection Time
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Last detection time 
+     * @return LastTime Last detection time
      */
     public String getLastTime() {
         return this.LastTime;
     }
 
     /**
-     * Set Last Detection Time
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param LastTime Last Detection Time
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Last detection time
+     * @param LastTime Last detection time
      */
     public void setLastTime(String LastTime) {
         this.LastTime = LastTime;
     }
 
     /**
-     * Get Detection result, JSON string
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return DetectResult Detection result, JSON string
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Detection result; JSON string. 
+     * @return DetectResult Detection result; JSON string.
      */
     public String getDetectResult() {
         return this.DetectResult;
     }
 
     /**
-     * Set Detection result, JSON string
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param DetectResult Detection result, JSON string
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Detection result; JSON string.
+     * @param DetectResult Detection result; JSON string.
      */
     public void setDetectResult(String DetectResult) {
         this.DetectResult = DetectResult;
     }
 
     /**
-     * Get Rule ID
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return RuleId Rule ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Rule ID. 
+     * @return RuleId Rule ID.
      */
     public Long getRuleId() {
         return this.RuleId;
     }
 
     /**
-     * Set Rule ID
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param RuleId Rule ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Rule ID.
+     * @param RuleId Rule ID.
      */
     public void setRuleId(Long RuleId) {
         this.RuleId = RuleId;
     }
 
     /**
-     * Get Number of servers passed
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return PassedHostCount Number of servers passed
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Number of servers passed. 
+     * @return PassedHostCount Number of servers passed.
      */
     public Long getPassedHostCount() {
         return this.PassedHostCount;
     }
 
     /**
-     * Set Number of servers passed
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param PassedHostCount Number of servers passed
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Number of servers passed.
+     * @param PassedHostCount Number of servers passed.
      */
     public void setPassedHostCount(Long PassedHostCount) {
         this.PassedHostCount = PassedHostCount;
     }
 
     /**
-     * Get Number of servers failed
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return NotPassedHostCount Number of servers failed
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Number of servers failed. 
+     * @return NotPassedHostCount Number of servers failed.
      */
     public Long getNotPassedHostCount() {
         return this.NotPassedHostCount;
     }
 
     /**
-     * Set Number of servers failed
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param NotPassedHostCount Number of servers failed
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Number of servers failed.
+     * @param NotPassedHostCount Number of servers failed.
      */
     public void setNotPassedHostCount(Long NotPassedHostCount) {
         this.NotPassedHostCount = NotPassedHostCount;

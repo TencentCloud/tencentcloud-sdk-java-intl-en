@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class MetricLabel extends AbstractModel {
 
     /**
-    * Metric NameNote: This field may return null, indicating that no valid values can be obtained.
+    * Metric name
     */
     @SerializedName("Key")
     @Expose
     private String Key;
 
     /**
-    * Metric content Note: This field may return null, indicating that no valid values can be obtained.
+    * Metric content.
     */
     @SerializedName("Value")
     @Expose
     private String Value;
 
     /**
-     * Get Metric NameNote: This field may return null, indicating that no valid values can be obtained. 
-     * @return Key Metric NameNote: This field may return null, indicating that no valid values can be obtained.
+     * Get Metric name 
+     * @return Key Metric name
      */
     public String getKey() {
         return this.Key;
     }
 
     /**
-     * Set Metric NameNote: This field may return null, indicating that no valid values can be obtained.
-     * @param Key Metric NameNote: This field may return null, indicating that no valid values can be obtained.
+     * Set Metric name
+     * @param Key Metric name
      */
     public void setKey(String Key) {
         this.Key = Key;
     }
 
     /**
-     * Get Metric content Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Value Metric content Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Metric content. 
+     * @return Value Metric content.
      */
     public String getValue() {
         return this.Value;
     }
 
     /**
-     * Set Metric content Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Value Metric content Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Metric content.
+     * @param Value Metric content.
      */
     public void setValue(String Value) {
         this.Value = Value;

@@ -38,7 +38,7 @@ public class EdgeKVPutRequest extends AbstractModel {
     private String Namespace;
 
     /**
-    * Key name. The length is 1-512 characters. Allowed characters include letters, digits, hyphens, and underscores.
+    * Key name, with a length of 1-512 characters, supports valid UTF-8 characters.
     */
     @SerializedName("Key")
     @Expose
@@ -52,14 +52,14 @@ public class EdgeKVPutRequest extends AbstractModel {
     private String Value;
 
     /**
-    * Expiration time, absolute time. It means the seconds elapsed since midnight (UTC/GMT) on January 1, 1970, and cannot be earlier than the current time. If both Expiration and ExpirationTTL are filled in, ExpirationTTL takes precedence. If neither Expiration nor ExpirationTTL is specified, the key-value pair will never expire.
+    * Expiry date of the key-value pair, absolute time in seconds, represents the seconds elapsed since 00:00:00 on January 1, 1970 (UTC) (Unix timestamp). The value must be greater than or equal to current time + 60, meaning the expiry date is at least 60 seconds from now. When both Expiration and ExpirationTTL are filled, ExpirationTTL takes precedence. If left empty, the key-value pair will never expire.
     */
     @SerializedName("Expiration")
     @Expose
     private Long Expiration;
 
     /**
-    * Expiration time, relative time, in seconds. Indicates the data will expire after the specified seconds, must be greater than 0. If both Expiration and ExpirationTTL are filled in, ExpirationTTL takes precedence. If neither Expiration nor ExpirationTTL is specified, the key-value pair will never expire.
+    * The survival time of the key-value pair is a relative time in seconds, indicating that the data will expire after transit of specified seconds. Value ranges from 60. When both Expiration and ExpirationTTL are filled, ExpirationTTL takes precedence; if left empty, the key-value pair will never expire.
     */
     @SerializedName("ExpirationTTL")
     @Expose
@@ -98,16 +98,16 @@ public class EdgeKVPutRequest extends AbstractModel {
     }
 
     /**
-     * Get Key name. The length is 1-512 characters. Allowed characters include letters, digits, hyphens, and underscores. 
-     * @return Key Key name. The length is 1-512 characters. Allowed characters include letters, digits, hyphens, and underscores.
+     * Get Key name, with a length of 1-512 characters, supports valid UTF-8 characters. 
+     * @return Key Key name, with a length of 1-512 characters, supports valid UTF-8 characters.
      */
     public String getKey() {
         return this.Key;
     }
 
     /**
-     * Set Key name. The length is 1-512 characters. Allowed characters include letters, digits, hyphens, and underscores.
-     * @param Key Key name. The length is 1-512 characters. Allowed characters include letters, digits, hyphens, and underscores.
+     * Set Key name, with a length of 1-512 characters, supports valid UTF-8 characters.
+     * @param Key Key name, with a length of 1-512 characters, supports valid UTF-8 characters.
      */
     public void setKey(String Key) {
         this.Key = Key;
@@ -130,32 +130,32 @@ public class EdgeKVPutRequest extends AbstractModel {
     }
 
     /**
-     * Get Expiration time, absolute time. It means the seconds elapsed since midnight (UTC/GMT) on January 1, 1970, and cannot be earlier than the current time. If both Expiration and ExpirationTTL are filled in, ExpirationTTL takes precedence. If neither Expiration nor ExpirationTTL is specified, the key-value pair will never expire. 
-     * @return Expiration Expiration time, absolute time. It means the seconds elapsed since midnight (UTC/GMT) on January 1, 1970, and cannot be earlier than the current time. If both Expiration and ExpirationTTL are filled in, ExpirationTTL takes precedence. If neither Expiration nor ExpirationTTL is specified, the key-value pair will never expire.
+     * Get Expiry date of the key-value pair, absolute time in seconds, represents the seconds elapsed since 00:00:00 on January 1, 1970 (UTC) (Unix timestamp). The value must be greater than or equal to current time + 60, meaning the expiry date is at least 60 seconds from now. When both Expiration and ExpirationTTL are filled, ExpirationTTL takes precedence. If left empty, the key-value pair will never expire. 
+     * @return Expiration Expiry date of the key-value pair, absolute time in seconds, represents the seconds elapsed since 00:00:00 on January 1, 1970 (UTC) (Unix timestamp). The value must be greater than or equal to current time + 60, meaning the expiry date is at least 60 seconds from now. When both Expiration and ExpirationTTL are filled, ExpirationTTL takes precedence. If left empty, the key-value pair will never expire.
      */
     public Long getExpiration() {
         return this.Expiration;
     }
 
     /**
-     * Set Expiration time, absolute time. It means the seconds elapsed since midnight (UTC/GMT) on January 1, 1970, and cannot be earlier than the current time. If both Expiration and ExpirationTTL are filled in, ExpirationTTL takes precedence. If neither Expiration nor ExpirationTTL is specified, the key-value pair will never expire.
-     * @param Expiration Expiration time, absolute time. It means the seconds elapsed since midnight (UTC/GMT) on January 1, 1970, and cannot be earlier than the current time. If both Expiration and ExpirationTTL are filled in, ExpirationTTL takes precedence. If neither Expiration nor ExpirationTTL is specified, the key-value pair will never expire.
+     * Set Expiry date of the key-value pair, absolute time in seconds, represents the seconds elapsed since 00:00:00 on January 1, 1970 (UTC) (Unix timestamp). The value must be greater than or equal to current time + 60, meaning the expiry date is at least 60 seconds from now. When both Expiration and ExpirationTTL are filled, ExpirationTTL takes precedence. If left empty, the key-value pair will never expire.
+     * @param Expiration Expiry date of the key-value pair, absolute time in seconds, represents the seconds elapsed since 00:00:00 on January 1, 1970 (UTC) (Unix timestamp). The value must be greater than or equal to current time + 60, meaning the expiry date is at least 60 seconds from now. When both Expiration and ExpirationTTL are filled, ExpirationTTL takes precedence. If left empty, the key-value pair will never expire.
      */
     public void setExpiration(Long Expiration) {
         this.Expiration = Expiration;
     }
 
     /**
-     * Get Expiration time, relative time, in seconds. Indicates the data will expire after the specified seconds, must be greater than 0. If both Expiration and ExpirationTTL are filled in, ExpirationTTL takes precedence. If neither Expiration nor ExpirationTTL is specified, the key-value pair will never expire. 
-     * @return ExpirationTTL Expiration time, relative time, in seconds. Indicates the data will expire after the specified seconds, must be greater than 0. If both Expiration and ExpirationTTL are filled in, ExpirationTTL takes precedence. If neither Expiration nor ExpirationTTL is specified, the key-value pair will never expire.
+     * Get The survival time of the key-value pair is a relative time in seconds, indicating that the data will expire after transit of specified seconds. Value ranges from 60. When both Expiration and ExpirationTTL are filled, ExpirationTTL takes precedence; if left empty, the key-value pair will never expire. 
+     * @return ExpirationTTL The survival time of the key-value pair is a relative time in seconds, indicating that the data will expire after transit of specified seconds. Value ranges from 60. When both Expiration and ExpirationTTL are filled, ExpirationTTL takes precedence; if left empty, the key-value pair will never expire.
      */
     public Long getExpirationTTL() {
         return this.ExpirationTTL;
     }
 
     /**
-     * Set Expiration time, relative time, in seconds. Indicates the data will expire after the specified seconds, must be greater than 0. If both Expiration and ExpirationTTL are filled in, ExpirationTTL takes precedence. If neither Expiration nor ExpirationTTL is specified, the key-value pair will never expire.
-     * @param ExpirationTTL Expiration time, relative time, in seconds. Indicates the data will expire after the specified seconds, must be greater than 0. If both Expiration and ExpirationTTL are filled in, ExpirationTTL takes precedence. If neither Expiration nor ExpirationTTL is specified, the key-value pair will never expire.
+     * Set The survival time of the key-value pair is a relative time in seconds, indicating that the data will expire after transit of specified seconds. Value ranges from 60. When both Expiration and ExpirationTTL are filled, ExpirationTTL takes precedence; if left empty, the key-value pair will never expire.
+     * @param ExpirationTTL The survival time of the key-value pair is a relative time in seconds, indicating that the data will expire after transit of specified seconds. Value ranges from 60. When both Expiration and ExpirationTTL are filled, ExpirationTTL takes precedence; if left empty, the key-value pair will never expire.
      */
     public void setExpirationTTL(Long ExpirationTTL) {
         this.ExpirationTTL = ExpirationTTL;

@@ -24,8 +24,7 @@ import java.util.HashMap;
 public class DescribeFastAnalysisResponse extends AbstractModel {
 
     /**
-    * Statistical data after analysis
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Analyze statistical information
     */
     @SerializedName("FieldValueRatioInfos")
     @Expose
@@ -46,20 +45,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Statistical data after analysis
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return FieldValueRatioInfos Statistical data after analysis
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Analyze statistical information 
+     * @return FieldValueRatioInfos Analyze statistical information
      */
     public FieldValueRatioInfo [] getFieldValueRatioInfos() {
         return this.FieldValueRatioInfos;
     }
 
     /**
-     * Set Statistical data after analysis
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param FieldValueRatioInfos Statistical data after analysis
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Analyze statistical information
+     * @param FieldValueRatioInfos Analyze statistical information
      */
     public void setFieldValueRatioInfos(FieldValueRatioInfo [] FieldValueRatioInfos) {
         this.FieldValueRatioInfos = FieldValueRatioInfos;

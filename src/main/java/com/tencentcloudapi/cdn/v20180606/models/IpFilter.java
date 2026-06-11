@@ -43,25 +43,25 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     private String FilterType;
 
     /**
-    * IP blocklist/allowlist
-Supports IPs in X.X.X.X format, or IP ranges in /8, /16, /24 format.
-Up to 50 whitelists or blacklists can be entered
-Note: This field may return `null`, indicating that no valid value can be obtained.
+    * IP blocklist/allowlist configuration.
+Supports IPV4 addresses in X.X.X.X format, IPV6 addresses in X:X:X:X:X:X:X:X format, or network segments in /X format (IPV4: 1≤X≤32; IPV6: 1≤X≤128).
+Specifies a maximum of 200 allowlist or blocklist entries.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Filters")
     @Expose
     private String [] Filters;
 
     /**
-    * IP blocklist/allowlist path-based configuration. This feature is only available to selected beta customers.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+    * IP blocklist and allowlist path-specific configuration. the total count of blocklist and allowlist ips must not exceed 1000.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("FilterRules")
     @Expose
     private IpFilterPathRule [] FilterRules;
 
     /**
-    * (Disused) Expected HTTP code to return when the IP allowlist/blocklist verification fails. <br><font color=red>The 514 code is used instead.</font>
+    * (Disused) Expected HTTP code to return when the IP allowlist/blocklist verification fails. 
 Note: this field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("ReturnCode")
@@ -121,57 +121,57 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     }
 
     /**
-     * Get IP blocklist/allowlist
-Supports IPs in X.X.X.X format, or IP ranges in /8, /16, /24 format.
-Up to 50 whitelists or blacklists can be entered
-Note: This field may return `null`, indicating that no valid value can be obtained. 
-     * @return Filters IP blocklist/allowlist
-Supports IPs in X.X.X.X format, or IP ranges in /8, /16, /24 format.
-Up to 50 whitelists or blacklists can be entered
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Get IP blocklist/allowlist configuration.
+Supports IPV4 addresses in X.X.X.X format, IPV6 addresses in X:X:X:X:X:X:X:X format, or network segments in /X format (IPV4: 1≤X≤32; IPV6: 1≤X≤128).
+Specifies a maximum of 200 allowlist or blocklist entries.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Filters IP blocklist/allowlist configuration.
+Supports IPV4 addresses in X.X.X.X format, IPV6 addresses in X:X:X:X:X:X:X:X format, or network segments in /X format (IPV4: 1≤X≤32; IPV6: 1≤X≤128).
+Specifies a maximum of 200 allowlist or blocklist entries.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set IP blocklist/allowlist
-Supports IPs in X.X.X.X format, or IP ranges in /8, /16, /24 format.
-Up to 50 whitelists or blacklists can be entered
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param Filters IP blocklist/allowlist
-Supports IPs in X.X.X.X format, or IP ranges in /8, /16, /24 format.
-Up to 50 whitelists or blacklists can be entered
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Set IP blocklist/allowlist configuration.
+Supports IPV4 addresses in X.X.X.X format, IPV6 addresses in X:X:X:X:X:X:X:X format, or network segments in /X format (IPV4: 1≤X≤32; IPV6: 1≤X≤128).
+Specifies a maximum of 200 allowlist or blocklist entries.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Filters IP blocklist/allowlist configuration.
+Supports IPV4 addresses in X.X.X.X format, IPV6 addresses in X:X:X:X:X:X:X:X format, or network segments in /X format (IPV4: 1≤X≤32; IPV6: 1≤X≤128).
+Specifies a maximum of 200 allowlist or blocklist entries.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setFilters(String [] Filters) {
         this.Filters = Filters;
     }
 
     /**
-     * Get IP blocklist/allowlist path-based configuration. This feature is only available to selected beta customers.
-Note: This field may return `null`, indicating that no valid value can be obtained. 
-     * @return FilterRules IP blocklist/allowlist path-based configuration. This feature is only available to selected beta customers.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Get IP blocklist and allowlist path-specific configuration. the total count of blocklist and allowlist ips must not exceed 1000.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return FilterRules IP blocklist and allowlist path-specific configuration. the total count of blocklist and allowlist ips must not exceed 1000.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public IpFilterPathRule [] getFilterRules() {
         return this.FilterRules;
     }
 
     /**
-     * Set IP blocklist/allowlist path-based configuration. This feature is only available to selected beta customers.
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param FilterRules IP blocklist/allowlist path-based configuration. This feature is only available to selected beta customers.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Set IP blocklist and allowlist path-specific configuration. the total count of blocklist and allowlist ips must not exceed 1000.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param FilterRules IP blocklist and allowlist path-specific configuration. the total count of blocklist and allowlist ips must not exceed 1000.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setFilterRules(IpFilterPathRule [] FilterRules) {
         this.FilterRules = FilterRules;
     }
 
     /**
-     * Get (Disused) Expected HTTP code to return when the IP allowlist/blocklist verification fails. <br><font color=red>The 514 code is used instead.</font>
+     * Get (Disused) Expected HTTP code to return when the IP allowlist/blocklist verification fails. 
 Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return ReturnCode (Disused) Expected HTTP code to return when the IP allowlist/blocklist verification fails. <br><font color=red>The 514 code is used instead.</font>
+     * @return ReturnCode (Disused) Expected HTTP code to return when the IP allowlist/blocklist verification fails. 
 Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public Long getReturnCode() {
@@ -179,9 +179,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Set (Disused) Expected HTTP code to return when the IP allowlist/blocklist verification fails. <br><font color=red>The 514 code is used instead.</font>
+     * Set (Disused) Expected HTTP code to return when the IP allowlist/blocklist verification fails. 
 Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param ReturnCode (Disused) Expected HTTP code to return when the IP allowlist/blocklist verification fails. <br><font color=red>The 514 code is used instead.</font>
+     * @param ReturnCode (Disused) Expected HTTP code to return when the IP allowlist/blocklist verification fails. 
 Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public void setReturnCode(Long ReturnCode) {

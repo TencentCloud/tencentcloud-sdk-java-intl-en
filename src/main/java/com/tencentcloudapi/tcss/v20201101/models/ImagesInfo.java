@@ -52,11 +52,18 @@ public class ImagesInfo extends AbstractModel {
     private Long Size;
 
     /**
-    * Number of servers
+    * Number of hosts (includes regular nodes and super nodes).
     */
     @SerializedName("HostCnt")
     @Expose
     private Long HostCnt;
+
+    /**
+    * Number of super nodes.
+    */
+    @SerializedName("SuperNodeCnt")
+    @Expose
+    private Long SuperNodeCnt;
 
     /**
     * Number of containers
@@ -171,6 +178,63 @@ public class ImagesInfo extends AbstractModel {
     private Long ComponentCnt;
 
     /**
+    * 
+    */
+    @SerializedName("CriticalLevelVulCnt")
+    @Expose
+    private Long CriticalLevelVulCnt;
+
+    /**
+    * 
+    */
+    @SerializedName("HighLevelVulCnt")
+    @Expose
+    private Long HighLevelVulCnt;
+
+    /**
+    * 
+    */
+    @SerializedName("MediumLevelVulCnt")
+    @Expose
+    private Long MediumLevelVulCnt;
+
+    /**
+    * 
+    */
+    @SerializedName("LowLevelVulCnt")
+    @Expose
+    private Long LowLevelVulCnt;
+
+    /**
+    * 
+    */
+    @SerializedName("IsLatestImage")
+    @Expose
+    private Boolean IsLatestImage;
+
+    /**
+    * 
+    */
+    @SerializedName("RecommendedFix")
+    @Expose
+    private Boolean RecommendedFix;
+
+    /**
+    * Solution
+    */
+    @SerializedName("Solution")
+    @Expose
+    private String Solution;
+
+    /**
+    * Reason
+
+    */
+    @SerializedName("Reason")
+    @Expose
+    private String Reason;
+
+    /**
      * Get Image ID 
      * @return ImageID Image ID
      */
@@ -235,19 +299,35 @@ public class ImagesInfo extends AbstractModel {
     }
 
     /**
-     * Get Number of servers 
-     * @return HostCnt Number of servers
+     * Get Number of hosts (includes regular nodes and super nodes). 
+     * @return HostCnt Number of hosts (includes regular nodes and super nodes).
      */
     public Long getHostCnt() {
         return this.HostCnt;
     }
 
     /**
-     * Set Number of servers
-     * @param HostCnt Number of servers
+     * Set Number of hosts (includes regular nodes and super nodes).
+     * @param HostCnt Number of hosts (includes regular nodes and super nodes).
      */
     public void setHostCnt(Long HostCnt) {
         this.HostCnt = HostCnt;
+    }
+
+    /**
+     * Get Number of super nodes. 
+     * @return SuperNodeCnt Number of super nodes.
+     */
+    public Long getSuperNodeCnt() {
+        return this.SuperNodeCnt;
+    }
+
+    /**
+     * Set Number of super nodes.
+     * @param SuperNodeCnt Number of super nodes.
+     */
+    public void setSuperNodeCnt(Long SuperNodeCnt) {
+        this.SuperNodeCnt = SuperNodeCnt;
     }
 
     /**
@@ -506,6 +586,138 @@ public class ImagesInfo extends AbstractModel {
         this.ComponentCnt = ComponentCnt;
     }
 
+    /**
+     * Get  
+     * @return CriticalLevelVulCnt 
+     */
+    public Long getCriticalLevelVulCnt() {
+        return this.CriticalLevelVulCnt;
+    }
+
+    /**
+     * Set 
+     * @param CriticalLevelVulCnt 
+     */
+    public void setCriticalLevelVulCnt(Long CriticalLevelVulCnt) {
+        this.CriticalLevelVulCnt = CriticalLevelVulCnt;
+    }
+
+    /**
+     * Get  
+     * @return HighLevelVulCnt 
+     */
+    public Long getHighLevelVulCnt() {
+        return this.HighLevelVulCnt;
+    }
+
+    /**
+     * Set 
+     * @param HighLevelVulCnt 
+     */
+    public void setHighLevelVulCnt(Long HighLevelVulCnt) {
+        this.HighLevelVulCnt = HighLevelVulCnt;
+    }
+
+    /**
+     * Get  
+     * @return MediumLevelVulCnt 
+     */
+    public Long getMediumLevelVulCnt() {
+        return this.MediumLevelVulCnt;
+    }
+
+    /**
+     * Set 
+     * @param MediumLevelVulCnt 
+     */
+    public void setMediumLevelVulCnt(Long MediumLevelVulCnt) {
+        this.MediumLevelVulCnt = MediumLevelVulCnt;
+    }
+
+    /**
+     * Get  
+     * @return LowLevelVulCnt 
+     */
+    public Long getLowLevelVulCnt() {
+        return this.LowLevelVulCnt;
+    }
+
+    /**
+     * Set 
+     * @param LowLevelVulCnt 
+     */
+    public void setLowLevelVulCnt(Long LowLevelVulCnt) {
+        this.LowLevelVulCnt = LowLevelVulCnt;
+    }
+
+    /**
+     * Get  
+     * @return IsLatestImage 
+     */
+    public Boolean getIsLatestImage() {
+        return this.IsLatestImage;
+    }
+
+    /**
+     * Set 
+     * @param IsLatestImage 
+     */
+    public void setIsLatestImage(Boolean IsLatestImage) {
+        this.IsLatestImage = IsLatestImage;
+    }
+
+    /**
+     * Get  
+     * @return RecommendedFix 
+     */
+    public Boolean getRecommendedFix() {
+        return this.RecommendedFix;
+    }
+
+    /**
+     * Set 
+     * @param RecommendedFix 
+     */
+    public void setRecommendedFix(Boolean RecommendedFix) {
+        this.RecommendedFix = RecommendedFix;
+    }
+
+    /**
+     * Get Solution 
+     * @return Solution Solution
+     */
+    public String getSolution() {
+        return this.Solution;
+    }
+
+    /**
+     * Set Solution
+     * @param Solution Solution
+     */
+    public void setSolution(String Solution) {
+        this.Solution = Solution;
+    }
+
+    /**
+     * Get Reason
+ 
+     * @return Reason Reason
+
+     */
+    public String getReason() {
+        return this.Reason;
+    }
+
+    /**
+     * Set Reason
+
+     * @param Reason Reason
+
+     */
+    public void setReason(String Reason) {
+        this.Reason = Reason;
+    }
+
     public ImagesInfo() {
     }
 
@@ -528,6 +740,9 @@ public class ImagesInfo extends AbstractModel {
         }
         if (source.HostCnt != null) {
             this.HostCnt = new Long(source.HostCnt);
+        }
+        if (source.SuperNodeCnt != null) {
+            this.SuperNodeCnt = new Long(source.SuperNodeCnt);
         }
         if (source.ContainerCnt != null) {
             this.ContainerCnt = new Long(source.ContainerCnt);
@@ -577,6 +792,30 @@ public class ImagesInfo extends AbstractModel {
         if (source.ComponentCnt != null) {
             this.ComponentCnt = new Long(source.ComponentCnt);
         }
+        if (source.CriticalLevelVulCnt != null) {
+            this.CriticalLevelVulCnt = new Long(source.CriticalLevelVulCnt);
+        }
+        if (source.HighLevelVulCnt != null) {
+            this.HighLevelVulCnt = new Long(source.HighLevelVulCnt);
+        }
+        if (source.MediumLevelVulCnt != null) {
+            this.MediumLevelVulCnt = new Long(source.MediumLevelVulCnt);
+        }
+        if (source.LowLevelVulCnt != null) {
+            this.LowLevelVulCnt = new Long(source.LowLevelVulCnt);
+        }
+        if (source.IsLatestImage != null) {
+            this.IsLatestImage = new Boolean(source.IsLatestImage);
+        }
+        if (source.RecommendedFix != null) {
+            this.RecommendedFix = new Boolean(source.RecommendedFix);
+        }
+        if (source.Solution != null) {
+            this.Solution = new String(source.Solution);
+        }
+        if (source.Reason != null) {
+            this.Reason = new String(source.Reason);
+        }
     }
 
 
@@ -589,6 +828,7 @@ public class ImagesInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "Size", this.Size);
         this.setParamSimple(map, prefix + "HostCnt", this.HostCnt);
+        this.setParamSimple(map, prefix + "SuperNodeCnt", this.SuperNodeCnt);
         this.setParamSimple(map, prefix + "ContainerCnt", this.ContainerCnt);
         this.setParamSimple(map, prefix + "ScanTime", this.ScanTime);
         this.setParamSimple(map, prefix + "VulCnt", this.VulCnt);
@@ -605,6 +845,14 @@ public class ImagesInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "IsSuggest", this.IsSuggest);
         this.setParamSimple(map, prefix + "IsAuthorized", this.IsAuthorized);
         this.setParamSimple(map, prefix + "ComponentCnt", this.ComponentCnt);
+        this.setParamSimple(map, prefix + "CriticalLevelVulCnt", this.CriticalLevelVulCnt);
+        this.setParamSimple(map, prefix + "HighLevelVulCnt", this.HighLevelVulCnt);
+        this.setParamSimple(map, prefix + "MediumLevelVulCnt", this.MediumLevelVulCnt);
+        this.setParamSimple(map, prefix + "LowLevelVulCnt", this.LowLevelVulCnt);
+        this.setParamSimple(map, prefix + "IsLatestImage", this.IsLatestImage);
+        this.setParamSimple(map, prefix + "RecommendedFix", this.RecommendedFix);
+        this.setParamSimple(map, prefix + "Solution", this.Solution);
+        this.setParamSimple(map, prefix + "Reason", this.Reason);
 
     }
 }

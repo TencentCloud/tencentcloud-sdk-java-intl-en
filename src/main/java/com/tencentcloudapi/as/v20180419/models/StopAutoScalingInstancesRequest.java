@@ -34,8 +34,8 @@ public class StopAutoScalingInstancesRequest extends AbstractModel {
 
     /**
     * List of CVM instance ids to be closed. you can obtain available instance ids in the following ways:.
-<li>Query instance ID by logging in to the <a href="https://console.cloud.tencent.com/cvm/index">console</a>.</li>.
-<li>Specifies the instance ID by calling the api [DescribeInstances](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1) and getting `InstanceId` from the return information.</li>.
+<li>Query instance ID by logging in to the [console](https://console.cloud.tencent.com/cvm/index).</li>
+<li>Specifies the instance ID by calling the api [DescribeInstances](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1) and getting `InstanceId` from the return information.</li>
     */
     @SerializedName("InstanceIds")
     @Expose
@@ -77,11 +77,11 @@ Default value: KEEP_CHARGING.
 
     /**
      * Get List of CVM instance ids to be closed. you can obtain available instance ids in the following ways:.
-<li>Query instance ID by logging in to the <a href="https://console.cloud.tencent.com/cvm/index">console</a>.</li>.
-<li>Specifies the instance ID by calling the api [DescribeInstances](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1) and getting `InstanceId` from the return information.</li>. 
+<li>Query instance ID by logging in to the [console](https://console.cloud.tencent.com/cvm/index).</li>
+<li>Specifies the instance ID by calling the api [DescribeInstances](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1) and getting `InstanceId` from the return information.</li> 
      * @return InstanceIds List of CVM instance ids to be closed. you can obtain available instance ids in the following ways:.
-<li>Query instance ID by logging in to the <a href="https://console.cloud.tencent.com/cvm/index">console</a>.</li>.
-<li>Specifies the instance ID by calling the api [DescribeInstances](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1) and getting `InstanceId` from the return information.</li>.
+<li>Query instance ID by logging in to the [console](https://console.cloud.tencent.com/cvm/index).</li>
+<li>Specifies the instance ID by calling the api [DescribeInstances](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1) and getting `InstanceId` from the return information.</li>
      */
     public String [] getInstanceIds() {
         return this.InstanceIds;
@@ -89,11 +89,11 @@ Default value: KEEP_CHARGING.
 
     /**
      * Set List of CVM instance ids to be closed. you can obtain available instance ids in the following ways:.
-<li>Query instance ID by logging in to the <a href="https://console.cloud.tencent.com/cvm/index">console</a>.</li>.
-<li>Specifies the instance ID by calling the api [DescribeInstances](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1) and getting `InstanceId` from the return information.</li>.
+<li>Query instance ID by logging in to the [console](https://console.cloud.tencent.com/cvm/index).</li>
+<li>Specifies the instance ID by calling the api [DescribeInstances](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1) and getting `InstanceId` from the return information.</li>
      * @param InstanceIds List of CVM instance ids to be closed. you can obtain available instance ids in the following ways:.
-<li>Query instance ID by logging in to the <a href="https://console.cloud.tencent.com/cvm/index">console</a>.</li>.
-<li>Specifies the instance ID by calling the api [DescribeInstances](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1) and getting `InstanceId` from the return information.</li>.
+<li>Query instance ID by logging in to the [console](https://console.cloud.tencent.com/cvm/index).</li>
+<li>Specifies the instance ID by calling the api [DescribeInstances](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1) and getting `InstanceId` from the return information.</li>
      */
     public void setInstanceIds(String [] InstanceIds) {
         this.InstanceIds = InstanceIds;

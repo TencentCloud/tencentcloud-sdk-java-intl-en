@@ -59,16 +59,14 @@ public class BanWhiteList extends AbstractModel {
     private String CreateTime;
 
     /**
-    * Machine associated with the allowlist
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Machine associated with the allowlist.
     */
     @SerializedName("Uuid")
     @Expose
     private String Uuid;
 
     /**
-    * Whether the allowlist is global
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Whether the allowlist takes effect globally
     */
     @SerializedName("IsGlobal")
     @Expose
@@ -76,7 +74,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Machine list associated with the allowlist
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Quuids")
     @Expose
@@ -163,50 +160,40 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Machine associated with the allowlist
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Uuid Machine associated with the allowlist
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Machine associated with the allowlist. 
+     * @return Uuid Machine associated with the allowlist.
      */
     public String getUuid() {
         return this.Uuid;
     }
 
     /**
-     * Set Machine associated with the allowlist
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Uuid Machine associated with the allowlist
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Machine associated with the allowlist.
+     * @param Uuid Machine associated with the allowlist.
      */
     public void setUuid(String Uuid) {
         this.Uuid = Uuid;
     }
 
     /**
-     * Get Whether the allowlist is global
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return IsGlobal Whether the allowlist is global
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Whether the allowlist takes effect globally 
+     * @return IsGlobal Whether the allowlist takes effect globally
      */
     public Boolean getIsGlobal() {
         return this.IsGlobal;
     }
 
     /**
-     * Set Whether the allowlist is global
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param IsGlobal Whether the allowlist is global
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Whether the allowlist takes effect globally
+     * @param IsGlobal Whether the allowlist takes effect globally
      */
     public void setIsGlobal(Boolean IsGlobal) {
         this.IsGlobal = IsGlobal;
     }
 
     /**
-     * Get Machine list associated with the allowlist
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Machine list associated with the allowlist 
      * @return Quuids Machine list associated with the allowlist
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String [] getQuuids() {
         return this.Quuids;
@@ -214,9 +201,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Machine list associated with the allowlist
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Quuids Machine list associated with the allowlist
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setQuuids(String [] Quuids) {
         this.Quuids = Quuids;

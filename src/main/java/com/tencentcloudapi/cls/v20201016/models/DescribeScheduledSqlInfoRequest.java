@@ -52,7 +52,14 @@ public class DescribeScheduledSqlInfoRequest extends AbstractModel {
     private String TaskId;
 
     /**
-    * <li>srcTopicName: Filter by Source Log Topic Name, fuzzy match. Type: String. Required: No</li><li>dstTopicName: Filter by Destination Log Topic Name, fuzzy match. Type: String. Required: No</li><li>srcTopicId: Filter by Source Log Topic ID. Type: String. Required: No</li><li>dstTopicId: Filter by Destination Log Topic ID. Type: String. Required: No</li><li>bizType: Filter by Topic Type, 0: log topic; 1: metric topic. Type: String. Required: No</li><li>status: Filter by Task Status, 1: running; 2: stopped. Type: String. Required: No</li><li>taskName: Filter by Task Name, fuzzy match. Type: String. Required: No</li><li>taskId: Filter by Task ID, fuzzy match. Type: String. Required: No</li>
+    * -srcTopicName is filtered by [source log topic name] with fuzzy matching. Type: String. Required: No. Example: business log topic 1. Get the log topic name by [get log topic list](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
+-Filter dstTopicName by [target log topic name] with fuzzy matching. Type: String. Required: No. Example: Business log topic 2. Get the log topic name by [getting the log topic list](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
+- srcTopicId is filtered by [source log topic ID]. Type: String. Required: No. Example: a4478687-2382-4486-9692-de7986350f6b. Get the log topic id by [get log topic list](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
+-dstTopicId is filtered by [target log topic ID]. Type: String. Required: No. Example: bd4d3375-d72a-4cd2-988d-d8eda2bd62b0. Get log topic ID by [get log topic list](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
+-bizType is filtered by [topic type], 0: log topic; 1: metric topic. Type: String. Required: No.
+-Status is filtered by [task status]: 1: running; 2: stop; 3: exception. Type: String. Required: no.
+-Filter the taskName by [task name] with fuzzy matching. Type: String. Required: No. Example: metricTask. Search the task name by [retrieving the scheduled SQL analysis task list](https://www.tencentcloud.com/document/product/614/95519?from_cn_redirect=1).
+-taskId is filtered by [task ID] with fuzzy matching. Type: String. Required: No. Example: 9c64f9c1-a14e-4b59-b074-5b73cac3dd66. Obtain the task ID by [retrieving the scheduled SQL analysis task list](https://www.tencentcloud.com/document/product/614/95519?from_cn_redirect=1).
     */
     @SerializedName("Filters")
     @Expose
@@ -123,16 +130,44 @@ public class DescribeScheduledSqlInfoRequest extends AbstractModel {
     }
 
     /**
-     * Get <li>srcTopicName: Filter by Source Log Topic Name, fuzzy match. Type: String. Required: No</li><li>dstTopicName: Filter by Destination Log Topic Name, fuzzy match. Type: String. Required: No</li><li>srcTopicId: Filter by Source Log Topic ID. Type: String. Required: No</li><li>dstTopicId: Filter by Destination Log Topic ID. Type: String. Required: No</li><li>bizType: Filter by Topic Type, 0: log topic; 1: metric topic. Type: String. Required: No</li><li>status: Filter by Task Status, 1: running; 2: stopped. Type: String. Required: No</li><li>taskName: Filter by Task Name, fuzzy match. Type: String. Required: No</li><li>taskId: Filter by Task ID, fuzzy match. Type: String. Required: No</li> 
-     * @return Filters <li>srcTopicName: Filter by Source Log Topic Name, fuzzy match. Type: String. Required: No</li><li>dstTopicName: Filter by Destination Log Topic Name, fuzzy match. Type: String. Required: No</li><li>srcTopicId: Filter by Source Log Topic ID. Type: String. Required: No</li><li>dstTopicId: Filter by Destination Log Topic ID. Type: String. Required: No</li><li>bizType: Filter by Topic Type, 0: log topic; 1: metric topic. Type: String. Required: No</li><li>status: Filter by Task Status, 1: running; 2: stopped. Type: String. Required: No</li><li>taskName: Filter by Task Name, fuzzy match. Type: String. Required: No</li><li>taskId: Filter by Task ID, fuzzy match. Type: String. Required: No</li>
+     * Get -srcTopicName is filtered by [source log topic name] with fuzzy matching. Type: String. Required: No. Example: business log topic 1. Get the log topic name by [get log topic list](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
+-Filter dstTopicName by [target log topic name] with fuzzy matching. Type: String. Required: No. Example: Business log topic 2. Get the log topic name by [getting the log topic list](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
+- srcTopicId is filtered by [source log topic ID]. Type: String. Required: No. Example: a4478687-2382-4486-9692-de7986350f6b. Get the log topic id by [get log topic list](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
+-dstTopicId is filtered by [target log topic ID]. Type: String. Required: No. Example: bd4d3375-d72a-4cd2-988d-d8eda2bd62b0. Get log topic ID by [get log topic list](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
+-bizType is filtered by [topic type], 0: log topic; 1: metric topic. Type: String. Required: No.
+-Status is filtered by [task status]: 1: running; 2: stop; 3: exception. Type: String. Required: no.
+-Filter the taskName by [task name] with fuzzy matching. Type: String. Required: No. Example: metricTask. Search the task name by [retrieving the scheduled SQL analysis task list](https://www.tencentcloud.com/document/product/614/95519?from_cn_redirect=1).
+-taskId is filtered by [task ID] with fuzzy matching. Type: String. Required: No. Example: 9c64f9c1-a14e-4b59-b074-5b73cac3dd66. Obtain the task ID by [retrieving the scheduled SQL analysis task list](https://www.tencentcloud.com/document/product/614/95519?from_cn_redirect=1). 
+     * @return Filters -srcTopicName is filtered by [source log topic name] with fuzzy matching. Type: String. Required: No. Example: business log topic 1. Get the log topic name by [get log topic list](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
+-Filter dstTopicName by [target log topic name] with fuzzy matching. Type: String. Required: No. Example: Business log topic 2. Get the log topic name by [getting the log topic list](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
+- srcTopicId is filtered by [source log topic ID]. Type: String. Required: No. Example: a4478687-2382-4486-9692-de7986350f6b. Get the log topic id by [get log topic list](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
+-dstTopicId is filtered by [target log topic ID]. Type: String. Required: No. Example: bd4d3375-d72a-4cd2-988d-d8eda2bd62b0. Get log topic ID by [get log topic list](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
+-bizType is filtered by [topic type], 0: log topic; 1: metric topic. Type: String. Required: No.
+-Status is filtered by [task status]: 1: running; 2: stop; 3: exception. Type: String. Required: no.
+-Filter the taskName by [task name] with fuzzy matching. Type: String. Required: No. Example: metricTask. Search the task name by [retrieving the scheduled SQL analysis task list](https://www.tencentcloud.com/document/product/614/95519?from_cn_redirect=1).
+-taskId is filtered by [task ID] with fuzzy matching. Type: String. Required: No. Example: 9c64f9c1-a14e-4b59-b074-5b73cac3dd66. Obtain the task ID by [retrieving the scheduled SQL analysis task list](https://www.tencentcloud.com/document/product/614/95519?from_cn_redirect=1).
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set <li>srcTopicName: Filter by Source Log Topic Name, fuzzy match. Type: String. Required: No</li><li>dstTopicName: Filter by Destination Log Topic Name, fuzzy match. Type: String. Required: No</li><li>srcTopicId: Filter by Source Log Topic ID. Type: String. Required: No</li><li>dstTopicId: Filter by Destination Log Topic ID. Type: String. Required: No</li><li>bizType: Filter by Topic Type, 0: log topic; 1: metric topic. Type: String. Required: No</li><li>status: Filter by Task Status, 1: running; 2: stopped. Type: String. Required: No</li><li>taskName: Filter by Task Name, fuzzy match. Type: String. Required: No</li><li>taskId: Filter by Task ID, fuzzy match. Type: String. Required: No</li>
-     * @param Filters <li>srcTopicName: Filter by Source Log Topic Name, fuzzy match. Type: String. Required: No</li><li>dstTopicName: Filter by Destination Log Topic Name, fuzzy match. Type: String. Required: No</li><li>srcTopicId: Filter by Source Log Topic ID. Type: String. Required: No</li><li>dstTopicId: Filter by Destination Log Topic ID. Type: String. Required: No</li><li>bizType: Filter by Topic Type, 0: log topic; 1: metric topic. Type: String. Required: No</li><li>status: Filter by Task Status, 1: running; 2: stopped. Type: String. Required: No</li><li>taskName: Filter by Task Name, fuzzy match. Type: String. Required: No</li><li>taskId: Filter by Task ID, fuzzy match. Type: String. Required: No</li>
+     * Set -srcTopicName is filtered by [source log topic name] with fuzzy matching. Type: String. Required: No. Example: business log topic 1. Get the log topic name by [get log topic list](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
+-Filter dstTopicName by [target log topic name] with fuzzy matching. Type: String. Required: No. Example: Business log topic 2. Get the log topic name by [getting the log topic list](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
+- srcTopicId is filtered by [source log topic ID]. Type: String. Required: No. Example: a4478687-2382-4486-9692-de7986350f6b. Get the log topic id by [get log topic list](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
+-dstTopicId is filtered by [target log topic ID]. Type: String. Required: No. Example: bd4d3375-d72a-4cd2-988d-d8eda2bd62b0. Get log topic ID by [get log topic list](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
+-bizType is filtered by [topic type], 0: log topic; 1: metric topic. Type: String. Required: No.
+-Status is filtered by [task status]: 1: running; 2: stop; 3: exception. Type: String. Required: no.
+-Filter the taskName by [task name] with fuzzy matching. Type: String. Required: No. Example: metricTask. Search the task name by [retrieving the scheduled SQL analysis task list](https://www.tencentcloud.com/document/product/614/95519?from_cn_redirect=1).
+-taskId is filtered by [task ID] with fuzzy matching. Type: String. Required: No. Example: 9c64f9c1-a14e-4b59-b074-5b73cac3dd66. Obtain the task ID by [retrieving the scheduled SQL analysis task list](https://www.tencentcloud.com/document/product/614/95519?from_cn_redirect=1).
+     * @param Filters -srcTopicName is filtered by [source log topic name] with fuzzy matching. Type: String. Required: No. Example: business log topic 1. Get the log topic name by [get log topic list](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
+-Filter dstTopicName by [target log topic name] with fuzzy matching. Type: String. Required: No. Example: Business log topic 2. Get the log topic name by [getting the log topic list](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
+- srcTopicId is filtered by [source log topic ID]. Type: String. Required: No. Example: a4478687-2382-4486-9692-de7986350f6b. Get the log topic id by [get log topic list](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
+-dstTopicId is filtered by [target log topic ID]. Type: String. Required: No. Example: bd4d3375-d72a-4cd2-988d-d8eda2bd62b0. Get log topic ID by [get log topic list](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
+-bizType is filtered by [topic type], 0: log topic; 1: metric topic. Type: String. Required: No.
+-Status is filtered by [task status]: 1: running; 2: stop; 3: exception. Type: String. Required: no.
+-Filter the taskName by [task name] with fuzzy matching. Type: String. Required: No. Example: metricTask. Search the task name by [retrieving the scheduled SQL analysis task list](https://www.tencentcloud.com/document/product/614/95519?from_cn_redirect=1).
+-taskId is filtered by [task ID] with fuzzy matching. Type: String. Required: No. Example: 9c64f9c1-a14e-4b59-b074-5b73cac3dd66. Obtain the task ID by [retrieving the scheduled SQL analysis task list](https://www.tencentcloud.com/document/product/614/95519?from_cn_redirect=1).
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;

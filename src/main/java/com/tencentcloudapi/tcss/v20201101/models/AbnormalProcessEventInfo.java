@@ -24,1014 +24,877 @@ import java.util.HashMap;
 public class AbnormalProcessEventInfo extends AbstractModel {
 
     /**
-    * Process directory
+    * <p>Process directory.</p>
     */
     @SerializedName("ProcessPath")
     @Expose
     private String ProcessPath;
 
     /**
-    * Event type. `MALICE_PROCESS_START`: Malicious process startup.
+    * <p>Event type. MALICE_PROCESS_START: malicious process startup.</p>
     */
     @SerializedName("EventType")
     @Expose
     private String EventType;
 
     /**
-    * Name of the hit rule. Valid values: `PROXY_TOOL` (proxy); `TRANSFER_CONTROL` (lateral movement); `ATTACK_CMD` (malicious command); `REVERSE_SHELL` (reverse shell); `FILELESS` (fileless execution); `RISK_CMD` (high-risk command); `ABNORMAL_CHILD_PROC` (unusual start found in the child process of the sensitive service); `USER_DEFINED_RULE` (custom rule).
+    * <p>Hit rule name. PROXY_TOOL: proxy software; TRANSFER_CONTROL: lateral movement; ATTACK_CMD: malicious command; REVERSE_SHELL: reverse shell; FILELESS: fileless execution; RISK_CMD: high-risk command; ABNORMAL_CHILD_PROC: abnormal child process startup of sensitive service; USER_DEFINED_RULE: user-defined rule</p>
     */
     @SerializedName("MatchRuleName")
     @Expose
     private String MatchRuleName;
 
     /**
-    * Generation time
+    * <p>Generation time.</p>
     */
     @SerializedName("FoundTime")
     @Expose
     private String FoundTime;
 
     /**
-    * Container name
+    * <p>Container name.</p>
     */
     @SerializedName("ContainerName")
     @Expose
     private String ContainerName;
 
     /**
-    * Image name
+    * <p>Image name.</p>
     */
     @SerializedName("ImageName")
     @Expose
     private String ImageName;
 
     /**
-    * Action execution result. `BEHAVIOR_NONE`: None.
-    `BEHAVIOR_ALERT`: Alert.
-    `BEHAVIOR_RELEASE`: Allow.
-    `BEHAVIOR_HOLDUP_FAILED`: Failed to block.
-    `BEHAVIOR_HOLDUP_SUCCESSED`: Blocked.
+    * <p>Action execution result: BEHAVIOR_NONE: none<br>BEHAVIOR_ALERT: alarm<br>BEHAVIOR_RELEASE: allow<br>BEHAVIOR_HOLDUP_FAILED: block failed<br>BEHAVIOR_HOLDUP_SUCCESSED: block succeeded</p>
     */
     @SerializedName("Behavior")
     @Expose
     private String Behavior;
 
     /**
-    * Status. `EVENT_UNDEAL`: Pending.
-    `EVENT_DEALED`: Processed.
-    `EVENT_INGNORE`: Ignored.
+    * <p>Status: EVENT_UNDEAL: event unhandled<br>    EVENT_DEALED: event handled<br>    EVENT_INGNORE: event ignored</p>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * Unique event ID
+    * <p>Unique ID of the event record.</p>
     */
     @SerializedName("Id")
     @Expose
     private String Id;
 
     /**
-    * Image ID, which is used for redirect.
+    * <p>Image ID, used for redirection.</p>
     */
     @SerializedName("ImageId")
     @Expose
     private String ImageId;
 
     /**
-    * Container ID, which is used for redirect.
+    * <p>Container ID, used for redirection.</p>
     */
     @SerializedName("ContainerId")
     @Expose
     private String ContainerId;
 
     /**
-    * Event solution
+    * <p>Event solution.</p>
     */
     @SerializedName("Solution")
     @Expose
     private String Solution;
 
     /**
-    * Event description
+    * <p>Event detailed description.</p>
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * Hit policy ID
+    * <p>Hit policy ID.</p>
     */
     @SerializedName("MatchRuleId")
     @Expose
     private String MatchRuleId;
 
     /**
-    * Action of the hit rule:
-`RULE_MODE_RELEASE`: Allow.
-`RULE_MODE_ALERT`: Alert.
-`RULE_MODE_HOLDUP`: Block.
+    * <p>Hit rule action:<br>RULE_MODE_RELEASE: allow<br>RULE_MODE_ALERT: alarm<br>RULE_MODE_HOLDUP: block</p>
     */
     @SerializedName("MatchAction")
     @Expose
     private String MatchAction;
 
     /**
-    * Information of the process that hits the rule
+    * <p>Hit rule process information.</p>
     */
     @SerializedName("MatchProcessPath")
     @Expose
     private String MatchProcessPath;
 
     /**
-    * Whether the rule exists
+    * <p>Whether the rule exists.</p>
     */
     @SerializedName("RuleExist")
     @Expose
     private Boolean RuleExist;
 
     /**
-    * Number of events
+    * <p>Number of events.</p>
     */
     @SerializedName("EventCount")
     @Expose
     private Long EventCount;
 
     /**
-    * Last generation time
+    * <p>Last generation time.</p>
     */
     @SerializedName("LatestFoundTime")
     @Expose
     private String LatestFoundTime;
 
     /**
-    * Rule group ID
+    * <p>Rule group ID.</p>
     */
     @SerializedName("RuleId")
     @Expose
     private String RuleId;
 
     /**
-    * Name of the hit policy. Valid values: `SYSTEM_DEFINED_RULE` (preset policy); name of the custom policy.
+    * <p>Hit policy name: SYSTEM_DEFINED_RULE (system policy) or user-defined policy name.</p>
     */
     @SerializedName("MatchGroupName")
     @Expose
     private String MatchGroupName;
 
     /**
-    * Level of the hit rule. Valid values: `HIGH` (high); `MIDDLE` (medium); `LOW` (low).
+    * <p>Hit rule level: HIGH, MIDDLE, and LOW.</p>
     */
     @SerializedName("MatchRuleLevel")
     @Expose
     private String MatchRuleLevel;
 
     /**
-    * Network status
-`NORMAL`: 	Not isolated.
-`ISOLATED`: 		Isolated.
-`ISOLATING`: 		Isolating.
-`ISOLATE_FAILED`: 	Isolation failed.
-`RESTORING`: Recovering.
-`RESTORE_FAILED`: Recovery failed.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Network status<br>Not isolated: NORMAL<br>Isolated: ISOLATED<br>Isolating: ISOLATING<br>Isolation failed: ISOLATE_FAILED<br>Restoring: RESTORING<br>Restoring failed: RESTORE_FAILED</p>
     */
     @SerializedName("ContainerNetStatus")
     @Expose
     private String ContainerNetStatus;
 
     /**
-    * Sub-status of the container
-"AGENT_OFFLINE"       // The agent is offline.
-"NODE_DESTROYED"      // The node is terminated.
-"CONTAINER_EXITED"    // The container exited.
-"CONTAINER_DESTROYED" // The container was terminated.
-"SHARED_HOST"         // The container shares the network with the server.
-"RESOURCE_LIMIT"      // The number of resources to be isolated exceeds the limit.
-"UNKNOW"              // The reason is unknown.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Container sub-status.<br>&quot;AGENT_OFFLINE&quot;       //Agent offline<br>&quot;NODE_DESTROYED&quot;      //Node destroyed<br>&quot;CONTAINER_EXITED&quot;    //Container exited<br>&quot;CONTAINER_DESTROYED&quot; //Container destroyed<br>&quot;SHARED_HOST&quot;         //Container and host sharing the network<br>&quot;RESOURCE_LIMIT&quot;      //Resource limit exceeded for the isolation operation<br>&quot;UNKNOW&quot;              //Unknown reason</p>
     */
     @SerializedName("ContainerNetSubStatus")
     @Expose
     private String ContainerNetSubStatus;
 
     /**
-    * Container isolation operation source
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Source of container isolation operation.</p>
     */
     @SerializedName("ContainerIsolateOperationSrc")
     @Expose
     private String ContainerIsolateOperationSrc;
 
     /**
-    * Container status
-`RUNNING`: Running.
-`PAUSED`: Paused.
-`STOPPED`: Stopped.
-`CREATED`: Created.
-`DESTROYED`: Terminated.
-`RESTARTING`: Restarting.
-`REMOVING`: Removing.
+    * <p>Container status.<br>RUNNING<br>PAUSED<br>STOPPED<br>CREATED<br>DESTROYED<br>RESTARTING<br>REMOVING</p>
     */
     @SerializedName("ContainerStatus")
     @Expose
     private String ContainerStatus;
 
     /**
-    * Cluster ID
+    * <p>Cluster ID.</p>
     */
     @SerializedName("ClusterID")
     @Expose
     private String ClusterID;
 
     /**
-    * Node type. Values: `NORMAL` (general node), `SUPER` (super node).
+    * <p>Node type: NORMAL (normal node) and SUPER (super node).</p>
     */
     @SerializedName("NodeType")
     @Expose
     private String NodeType;
 
     /**
-    * Pod name
+    * <p>Pod name.</p>
     */
     @SerializedName("PodName")
     @Expose
     private String PodName;
 
     /**
-    * Pod IP
+    * <p>pod ip</p>
     */
     @SerializedName("PodIP")
     @Expose
     private String PodIP;
 
     /**
-    * Cluster ID
+    * <p>Cluster ID.</p>
     */
     @SerializedName("NodeUniqueID")
     @Expose
     private String NodeUniqueID;
 
     /**
-    * Node public IP
+    * <p>Node public IP address.</p>
     */
     @SerializedName("PublicIP")
     @Expose
     private String PublicIP;
 
     /**
-    * Node name
+    * <p>Node name.</p>
     */
     @SerializedName("NodeName")
     @Expose
     private String NodeName;
 
     /**
-    * Node ID
+    * <p>Node ID.</p>
     */
     @SerializedName("NodeID")
     @Expose
     private String NodeID;
 
     /**
-    * uuid
+    * <p>uuid</p>
     */
     @SerializedName("HostID")
     @Expose
     private String HostID;
 
     /**
-    * Private IP of the node
+    * <p>Node private IP address.</p>
     */
     @SerializedName("HostIP")
     @Expose
     private String HostIP;
 
     /**
-    * Cluster name
+    * <p>Cluster name.</p>
     */
     @SerializedName("ClusterName")
     @Expose
     private String ClusterName;
 
     /**
-     * Get Process directory 
-     * @return ProcessPath Process directory
+    * <p>Command line parameters.</p>
+    */
+    @SerializedName("CmdLine")
+    @Expose
+    private String CmdLine;
+
+    /**
+     * Get <p>Process directory.</p> 
+     * @return ProcessPath <p>Process directory.</p>
      */
     public String getProcessPath() {
         return this.ProcessPath;
     }
 
     /**
-     * Set Process directory
-     * @param ProcessPath Process directory
+     * Set <p>Process directory.</p>
+     * @param ProcessPath <p>Process directory.</p>
      */
     public void setProcessPath(String ProcessPath) {
         this.ProcessPath = ProcessPath;
     }
 
     /**
-     * Get Event type. `MALICE_PROCESS_START`: Malicious process startup. 
-     * @return EventType Event type. `MALICE_PROCESS_START`: Malicious process startup.
+     * Get <p>Event type. MALICE_PROCESS_START: malicious process startup.</p> 
+     * @return EventType <p>Event type. MALICE_PROCESS_START: malicious process startup.</p>
      */
     public String getEventType() {
         return this.EventType;
     }
 
     /**
-     * Set Event type. `MALICE_PROCESS_START`: Malicious process startup.
-     * @param EventType Event type. `MALICE_PROCESS_START`: Malicious process startup.
+     * Set <p>Event type. MALICE_PROCESS_START: malicious process startup.</p>
+     * @param EventType <p>Event type. MALICE_PROCESS_START: malicious process startup.</p>
      */
     public void setEventType(String EventType) {
         this.EventType = EventType;
     }
 
     /**
-     * Get Name of the hit rule. Valid values: `PROXY_TOOL` (proxy); `TRANSFER_CONTROL` (lateral movement); `ATTACK_CMD` (malicious command); `REVERSE_SHELL` (reverse shell); `FILELESS` (fileless execution); `RISK_CMD` (high-risk command); `ABNORMAL_CHILD_PROC` (unusual start found in the child process of the sensitive service); `USER_DEFINED_RULE` (custom rule). 
-     * @return MatchRuleName Name of the hit rule. Valid values: `PROXY_TOOL` (proxy); `TRANSFER_CONTROL` (lateral movement); `ATTACK_CMD` (malicious command); `REVERSE_SHELL` (reverse shell); `FILELESS` (fileless execution); `RISK_CMD` (high-risk command); `ABNORMAL_CHILD_PROC` (unusual start found in the child process of the sensitive service); `USER_DEFINED_RULE` (custom rule).
+     * Get <p>Hit rule name. PROXY_TOOL: proxy software; TRANSFER_CONTROL: lateral movement; ATTACK_CMD: malicious command; REVERSE_SHELL: reverse shell; FILELESS: fileless execution; RISK_CMD: high-risk command; ABNORMAL_CHILD_PROC: abnormal child process startup of sensitive service; USER_DEFINED_RULE: user-defined rule</p> 
+     * @return MatchRuleName <p>Hit rule name. PROXY_TOOL: proxy software; TRANSFER_CONTROL: lateral movement; ATTACK_CMD: malicious command; REVERSE_SHELL: reverse shell; FILELESS: fileless execution; RISK_CMD: high-risk command; ABNORMAL_CHILD_PROC: abnormal child process startup of sensitive service; USER_DEFINED_RULE: user-defined rule</p>
      */
     public String getMatchRuleName() {
         return this.MatchRuleName;
     }
 
     /**
-     * Set Name of the hit rule. Valid values: `PROXY_TOOL` (proxy); `TRANSFER_CONTROL` (lateral movement); `ATTACK_CMD` (malicious command); `REVERSE_SHELL` (reverse shell); `FILELESS` (fileless execution); `RISK_CMD` (high-risk command); `ABNORMAL_CHILD_PROC` (unusual start found in the child process of the sensitive service); `USER_DEFINED_RULE` (custom rule).
-     * @param MatchRuleName Name of the hit rule. Valid values: `PROXY_TOOL` (proxy); `TRANSFER_CONTROL` (lateral movement); `ATTACK_CMD` (malicious command); `REVERSE_SHELL` (reverse shell); `FILELESS` (fileless execution); `RISK_CMD` (high-risk command); `ABNORMAL_CHILD_PROC` (unusual start found in the child process of the sensitive service); `USER_DEFINED_RULE` (custom rule).
+     * Set <p>Hit rule name. PROXY_TOOL: proxy software; TRANSFER_CONTROL: lateral movement; ATTACK_CMD: malicious command; REVERSE_SHELL: reverse shell; FILELESS: fileless execution; RISK_CMD: high-risk command; ABNORMAL_CHILD_PROC: abnormal child process startup of sensitive service; USER_DEFINED_RULE: user-defined rule</p>
+     * @param MatchRuleName <p>Hit rule name. PROXY_TOOL: proxy software; TRANSFER_CONTROL: lateral movement; ATTACK_CMD: malicious command; REVERSE_SHELL: reverse shell; FILELESS: fileless execution; RISK_CMD: high-risk command; ABNORMAL_CHILD_PROC: abnormal child process startup of sensitive service; USER_DEFINED_RULE: user-defined rule</p>
      */
     public void setMatchRuleName(String MatchRuleName) {
         this.MatchRuleName = MatchRuleName;
     }
 
     /**
-     * Get Generation time 
-     * @return FoundTime Generation time
+     * Get <p>Generation time.</p> 
+     * @return FoundTime <p>Generation time.</p>
      */
     public String getFoundTime() {
         return this.FoundTime;
     }
 
     /**
-     * Set Generation time
-     * @param FoundTime Generation time
+     * Set <p>Generation time.</p>
+     * @param FoundTime <p>Generation time.</p>
      */
     public void setFoundTime(String FoundTime) {
         this.FoundTime = FoundTime;
     }
 
     /**
-     * Get Container name 
-     * @return ContainerName Container name
+     * Get <p>Container name.</p> 
+     * @return ContainerName <p>Container name.</p>
      */
     public String getContainerName() {
         return this.ContainerName;
     }
 
     /**
-     * Set Container name
-     * @param ContainerName Container name
+     * Set <p>Container name.</p>
+     * @param ContainerName <p>Container name.</p>
      */
     public void setContainerName(String ContainerName) {
         this.ContainerName = ContainerName;
     }
 
     /**
-     * Get Image name 
-     * @return ImageName Image name
+     * Get <p>Image name.</p> 
+     * @return ImageName <p>Image name.</p>
      */
     public String getImageName() {
         return this.ImageName;
     }
 
     /**
-     * Set Image name
-     * @param ImageName Image name
+     * Set <p>Image name.</p>
+     * @param ImageName <p>Image name.</p>
      */
     public void setImageName(String ImageName) {
         this.ImageName = ImageName;
     }
 
     /**
-     * Get Action execution result. `BEHAVIOR_NONE`: None.
-    `BEHAVIOR_ALERT`: Alert.
-    `BEHAVIOR_RELEASE`: Allow.
-    `BEHAVIOR_HOLDUP_FAILED`: Failed to block.
-    `BEHAVIOR_HOLDUP_SUCCESSED`: Blocked. 
-     * @return Behavior Action execution result. `BEHAVIOR_NONE`: None.
-    `BEHAVIOR_ALERT`: Alert.
-    `BEHAVIOR_RELEASE`: Allow.
-    `BEHAVIOR_HOLDUP_FAILED`: Failed to block.
-    `BEHAVIOR_HOLDUP_SUCCESSED`: Blocked.
+     * Get <p>Action execution result: BEHAVIOR_NONE: none<br>BEHAVIOR_ALERT: alarm<br>BEHAVIOR_RELEASE: allow<br>BEHAVIOR_HOLDUP_FAILED: block failed<br>BEHAVIOR_HOLDUP_SUCCESSED: block succeeded</p> 
+     * @return Behavior <p>Action execution result: BEHAVIOR_NONE: none<br>BEHAVIOR_ALERT: alarm<br>BEHAVIOR_RELEASE: allow<br>BEHAVIOR_HOLDUP_FAILED: block failed<br>BEHAVIOR_HOLDUP_SUCCESSED: block succeeded</p>
      */
     public String getBehavior() {
         return this.Behavior;
     }
 
     /**
-     * Set Action execution result. `BEHAVIOR_NONE`: None.
-    `BEHAVIOR_ALERT`: Alert.
-    `BEHAVIOR_RELEASE`: Allow.
-    `BEHAVIOR_HOLDUP_FAILED`: Failed to block.
-    `BEHAVIOR_HOLDUP_SUCCESSED`: Blocked.
-     * @param Behavior Action execution result. `BEHAVIOR_NONE`: None.
-    `BEHAVIOR_ALERT`: Alert.
-    `BEHAVIOR_RELEASE`: Allow.
-    `BEHAVIOR_HOLDUP_FAILED`: Failed to block.
-    `BEHAVIOR_HOLDUP_SUCCESSED`: Blocked.
+     * Set <p>Action execution result: BEHAVIOR_NONE: none<br>BEHAVIOR_ALERT: alarm<br>BEHAVIOR_RELEASE: allow<br>BEHAVIOR_HOLDUP_FAILED: block failed<br>BEHAVIOR_HOLDUP_SUCCESSED: block succeeded</p>
+     * @param Behavior <p>Action execution result: BEHAVIOR_NONE: none<br>BEHAVIOR_ALERT: alarm<br>BEHAVIOR_RELEASE: allow<br>BEHAVIOR_HOLDUP_FAILED: block failed<br>BEHAVIOR_HOLDUP_SUCCESSED: block succeeded</p>
      */
     public void setBehavior(String Behavior) {
         this.Behavior = Behavior;
     }
 
     /**
-     * Get Status. `EVENT_UNDEAL`: Pending.
-    `EVENT_DEALED`: Processed.
-    `EVENT_INGNORE`: Ignored. 
-     * @return Status Status. `EVENT_UNDEAL`: Pending.
-    `EVENT_DEALED`: Processed.
-    `EVENT_INGNORE`: Ignored.
+     * Get <p>Status: EVENT_UNDEAL: event unhandled<br>    EVENT_DEALED: event handled<br>    EVENT_INGNORE: event ignored</p> 
+     * @return Status <p>Status: EVENT_UNDEAL: event unhandled<br>    EVENT_DEALED: event handled<br>    EVENT_INGNORE: event ignored</p>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Status. `EVENT_UNDEAL`: Pending.
-    `EVENT_DEALED`: Processed.
-    `EVENT_INGNORE`: Ignored.
-     * @param Status Status. `EVENT_UNDEAL`: Pending.
-    `EVENT_DEALED`: Processed.
-    `EVENT_INGNORE`: Ignored.
+     * Set <p>Status: EVENT_UNDEAL: event unhandled<br>    EVENT_DEALED: event handled<br>    EVENT_INGNORE: event ignored</p>
+     * @param Status <p>Status: EVENT_UNDEAL: event unhandled<br>    EVENT_DEALED: event handled<br>    EVENT_INGNORE: event ignored</p>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get Unique event ID 
-     * @return Id Unique event ID
+     * Get <p>Unique ID of the event record.</p> 
+     * @return Id <p>Unique ID of the event record.</p>
      */
     public String getId() {
         return this.Id;
     }
 
     /**
-     * Set Unique event ID
-     * @param Id Unique event ID
+     * Set <p>Unique ID of the event record.</p>
+     * @param Id <p>Unique ID of the event record.</p>
      */
     public void setId(String Id) {
         this.Id = Id;
     }
 
     /**
-     * Get Image ID, which is used for redirect. 
-     * @return ImageId Image ID, which is used for redirect.
+     * Get <p>Image ID, used for redirection.</p> 
+     * @return ImageId <p>Image ID, used for redirection.</p>
      */
     public String getImageId() {
         return this.ImageId;
     }
 
     /**
-     * Set Image ID, which is used for redirect.
-     * @param ImageId Image ID, which is used for redirect.
+     * Set <p>Image ID, used for redirection.</p>
+     * @param ImageId <p>Image ID, used for redirection.</p>
      */
     public void setImageId(String ImageId) {
         this.ImageId = ImageId;
     }
 
     /**
-     * Get Container ID, which is used for redirect. 
-     * @return ContainerId Container ID, which is used for redirect.
+     * Get <p>Container ID, used for redirection.</p> 
+     * @return ContainerId <p>Container ID, used for redirection.</p>
      */
     public String getContainerId() {
         return this.ContainerId;
     }
 
     /**
-     * Set Container ID, which is used for redirect.
-     * @param ContainerId Container ID, which is used for redirect.
+     * Set <p>Container ID, used for redirection.</p>
+     * @param ContainerId <p>Container ID, used for redirection.</p>
      */
     public void setContainerId(String ContainerId) {
         this.ContainerId = ContainerId;
     }
 
     /**
-     * Get Event solution 
-     * @return Solution Event solution
+     * Get <p>Event solution.</p> 
+     * @return Solution <p>Event solution.</p>
      */
     public String getSolution() {
         return this.Solution;
     }
 
     /**
-     * Set Event solution
-     * @param Solution Event solution
+     * Set <p>Event solution.</p>
+     * @param Solution <p>Event solution.</p>
      */
     public void setSolution(String Solution) {
         this.Solution = Solution;
     }
 
     /**
-     * Get Event description 
-     * @return Description Event description
+     * Get <p>Event detailed description.</p> 
+     * @return Description <p>Event detailed description.</p>
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set Event description
-     * @param Description Event description
+     * Set <p>Event detailed description.</p>
+     * @param Description <p>Event detailed description.</p>
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get Hit policy ID 
-     * @return MatchRuleId Hit policy ID
+     * Get <p>Hit policy ID.</p> 
+     * @return MatchRuleId <p>Hit policy ID.</p>
      */
     public String getMatchRuleId() {
         return this.MatchRuleId;
     }
 
     /**
-     * Set Hit policy ID
-     * @param MatchRuleId Hit policy ID
+     * Set <p>Hit policy ID.</p>
+     * @param MatchRuleId <p>Hit policy ID.</p>
      */
     public void setMatchRuleId(String MatchRuleId) {
         this.MatchRuleId = MatchRuleId;
     }
 
     /**
-     * Get Action of the hit rule:
-`RULE_MODE_RELEASE`: Allow.
-`RULE_MODE_ALERT`: Alert.
-`RULE_MODE_HOLDUP`: Block. 
-     * @return MatchAction Action of the hit rule:
-`RULE_MODE_RELEASE`: Allow.
-`RULE_MODE_ALERT`: Alert.
-`RULE_MODE_HOLDUP`: Block.
+     * Get <p>Hit rule action:<br>RULE_MODE_RELEASE: allow<br>RULE_MODE_ALERT: alarm<br>RULE_MODE_HOLDUP: block</p> 
+     * @return MatchAction <p>Hit rule action:<br>RULE_MODE_RELEASE: allow<br>RULE_MODE_ALERT: alarm<br>RULE_MODE_HOLDUP: block</p>
      */
     public String getMatchAction() {
         return this.MatchAction;
     }
 
     /**
-     * Set Action of the hit rule:
-`RULE_MODE_RELEASE`: Allow.
-`RULE_MODE_ALERT`: Alert.
-`RULE_MODE_HOLDUP`: Block.
-     * @param MatchAction Action of the hit rule:
-`RULE_MODE_RELEASE`: Allow.
-`RULE_MODE_ALERT`: Alert.
-`RULE_MODE_HOLDUP`: Block.
+     * Set <p>Hit rule action:<br>RULE_MODE_RELEASE: allow<br>RULE_MODE_ALERT: alarm<br>RULE_MODE_HOLDUP: block</p>
+     * @param MatchAction <p>Hit rule action:<br>RULE_MODE_RELEASE: allow<br>RULE_MODE_ALERT: alarm<br>RULE_MODE_HOLDUP: block</p>
      */
     public void setMatchAction(String MatchAction) {
         this.MatchAction = MatchAction;
     }
 
     /**
-     * Get Information of the process that hits the rule 
-     * @return MatchProcessPath Information of the process that hits the rule
+     * Get <p>Hit rule process information.</p> 
+     * @return MatchProcessPath <p>Hit rule process information.</p>
      */
     public String getMatchProcessPath() {
         return this.MatchProcessPath;
     }
 
     /**
-     * Set Information of the process that hits the rule
-     * @param MatchProcessPath Information of the process that hits the rule
+     * Set <p>Hit rule process information.</p>
+     * @param MatchProcessPath <p>Hit rule process information.</p>
      */
     public void setMatchProcessPath(String MatchProcessPath) {
         this.MatchProcessPath = MatchProcessPath;
     }
 
     /**
-     * Get Whether the rule exists 
-     * @return RuleExist Whether the rule exists
+     * Get <p>Whether the rule exists.</p> 
+     * @return RuleExist <p>Whether the rule exists.</p>
      */
     public Boolean getRuleExist() {
         return this.RuleExist;
     }
 
     /**
-     * Set Whether the rule exists
-     * @param RuleExist Whether the rule exists
+     * Set <p>Whether the rule exists.</p>
+     * @param RuleExist <p>Whether the rule exists.</p>
      */
     public void setRuleExist(Boolean RuleExist) {
         this.RuleExist = RuleExist;
     }
 
     /**
-     * Get Number of events 
-     * @return EventCount Number of events
+     * Get <p>Number of events.</p> 
+     * @return EventCount <p>Number of events.</p>
      */
     public Long getEventCount() {
         return this.EventCount;
     }
 
     /**
-     * Set Number of events
-     * @param EventCount Number of events
+     * Set <p>Number of events.</p>
+     * @param EventCount <p>Number of events.</p>
      */
     public void setEventCount(Long EventCount) {
         this.EventCount = EventCount;
     }
 
     /**
-     * Get Last generation time 
-     * @return LatestFoundTime Last generation time
+     * Get <p>Last generation time.</p> 
+     * @return LatestFoundTime <p>Last generation time.</p>
      */
     public String getLatestFoundTime() {
         return this.LatestFoundTime;
     }
 
     /**
-     * Set Last generation time
-     * @param LatestFoundTime Last generation time
+     * Set <p>Last generation time.</p>
+     * @param LatestFoundTime <p>Last generation time.</p>
      */
     public void setLatestFoundTime(String LatestFoundTime) {
         this.LatestFoundTime = LatestFoundTime;
     }
 
     /**
-     * Get Rule group ID 
-     * @return RuleId Rule group ID
+     * Get <p>Rule group ID.</p> 
+     * @return RuleId <p>Rule group ID.</p>
      */
     public String getRuleId() {
         return this.RuleId;
     }
 
     /**
-     * Set Rule group ID
-     * @param RuleId Rule group ID
+     * Set <p>Rule group ID.</p>
+     * @param RuleId <p>Rule group ID.</p>
      */
     public void setRuleId(String RuleId) {
         this.RuleId = RuleId;
     }
 
     /**
-     * Get Name of the hit policy. Valid values: `SYSTEM_DEFINED_RULE` (preset policy); name of the custom policy. 
-     * @return MatchGroupName Name of the hit policy. Valid values: `SYSTEM_DEFINED_RULE` (preset policy); name of the custom policy.
+     * Get <p>Hit policy name: SYSTEM_DEFINED_RULE (system policy) or user-defined policy name.</p> 
+     * @return MatchGroupName <p>Hit policy name: SYSTEM_DEFINED_RULE (system policy) or user-defined policy name.</p>
      */
     public String getMatchGroupName() {
         return this.MatchGroupName;
     }
 
     /**
-     * Set Name of the hit policy. Valid values: `SYSTEM_DEFINED_RULE` (preset policy); name of the custom policy.
-     * @param MatchGroupName Name of the hit policy. Valid values: `SYSTEM_DEFINED_RULE` (preset policy); name of the custom policy.
+     * Set <p>Hit policy name: SYSTEM_DEFINED_RULE (system policy) or user-defined policy name.</p>
+     * @param MatchGroupName <p>Hit policy name: SYSTEM_DEFINED_RULE (system policy) or user-defined policy name.</p>
      */
     public void setMatchGroupName(String MatchGroupName) {
         this.MatchGroupName = MatchGroupName;
     }
 
     /**
-     * Get Level of the hit rule. Valid values: `HIGH` (high); `MIDDLE` (medium); `LOW` (low). 
-     * @return MatchRuleLevel Level of the hit rule. Valid values: `HIGH` (high); `MIDDLE` (medium); `LOW` (low).
+     * Get <p>Hit rule level: HIGH, MIDDLE, and LOW.</p> 
+     * @return MatchRuleLevel <p>Hit rule level: HIGH, MIDDLE, and LOW.</p>
      */
     public String getMatchRuleLevel() {
         return this.MatchRuleLevel;
     }
 
     /**
-     * Set Level of the hit rule. Valid values: `HIGH` (high); `MIDDLE` (medium); `LOW` (low).
-     * @param MatchRuleLevel Level of the hit rule. Valid values: `HIGH` (high); `MIDDLE` (medium); `LOW` (low).
+     * Set <p>Hit rule level: HIGH, MIDDLE, and LOW.</p>
+     * @param MatchRuleLevel <p>Hit rule level: HIGH, MIDDLE, and LOW.</p>
      */
     public void setMatchRuleLevel(String MatchRuleLevel) {
         this.MatchRuleLevel = MatchRuleLevel;
     }
 
     /**
-     * Get Network status
-`NORMAL`: 	Not isolated.
-`ISOLATED`: 		Isolated.
-`ISOLATING`: 		Isolating.
-`ISOLATE_FAILED`: 	Isolation failed.
-`RESTORING`: Recovering.
-`RESTORE_FAILED`: Recovery failed.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ContainerNetStatus Network status
-`NORMAL`: 	Not isolated.
-`ISOLATED`: 		Isolated.
-`ISOLATING`: 		Isolating.
-`ISOLATE_FAILED`: 	Isolation failed.
-`RESTORING`: Recovering.
-`RESTORE_FAILED`: Recovery failed.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Network status<br>Not isolated: NORMAL<br>Isolated: ISOLATED<br>Isolating: ISOLATING<br>Isolation failed: ISOLATE_FAILED<br>Restoring: RESTORING<br>Restoring failed: RESTORE_FAILED</p> 
+     * @return ContainerNetStatus <p>Network status<br>Not isolated: NORMAL<br>Isolated: ISOLATED<br>Isolating: ISOLATING<br>Isolation failed: ISOLATE_FAILED<br>Restoring: RESTORING<br>Restoring failed: RESTORE_FAILED</p>
      */
     public String getContainerNetStatus() {
         return this.ContainerNetStatus;
     }
 
     /**
-     * Set Network status
-`NORMAL`: 	Not isolated.
-`ISOLATED`: 		Isolated.
-`ISOLATING`: 		Isolating.
-`ISOLATE_FAILED`: 	Isolation failed.
-`RESTORING`: Recovering.
-`RESTORE_FAILED`: Recovery failed.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ContainerNetStatus Network status
-`NORMAL`: 	Not isolated.
-`ISOLATED`: 		Isolated.
-`ISOLATING`: 		Isolating.
-`ISOLATE_FAILED`: 	Isolation failed.
-`RESTORING`: Recovering.
-`RESTORE_FAILED`: Recovery failed.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Network status<br>Not isolated: NORMAL<br>Isolated: ISOLATED<br>Isolating: ISOLATING<br>Isolation failed: ISOLATE_FAILED<br>Restoring: RESTORING<br>Restoring failed: RESTORE_FAILED</p>
+     * @param ContainerNetStatus <p>Network status<br>Not isolated: NORMAL<br>Isolated: ISOLATED<br>Isolating: ISOLATING<br>Isolation failed: ISOLATE_FAILED<br>Restoring: RESTORING<br>Restoring failed: RESTORE_FAILED</p>
      */
     public void setContainerNetStatus(String ContainerNetStatus) {
         this.ContainerNetStatus = ContainerNetStatus;
     }
 
     /**
-     * Get Sub-status of the container
-"AGENT_OFFLINE"       // The agent is offline.
-"NODE_DESTROYED"      // The node is terminated.
-"CONTAINER_EXITED"    // The container exited.
-"CONTAINER_DESTROYED" // The container was terminated.
-"SHARED_HOST"         // The container shares the network with the server.
-"RESOURCE_LIMIT"      // The number of resources to be isolated exceeds the limit.
-"UNKNOW"              // The reason is unknown.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ContainerNetSubStatus Sub-status of the container
-"AGENT_OFFLINE"       // The agent is offline.
-"NODE_DESTROYED"      // The node is terminated.
-"CONTAINER_EXITED"    // The container exited.
-"CONTAINER_DESTROYED" // The container was terminated.
-"SHARED_HOST"         // The container shares the network with the server.
-"RESOURCE_LIMIT"      // The number of resources to be isolated exceeds the limit.
-"UNKNOW"              // The reason is unknown.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Container sub-status.<br>&quot;AGENT_OFFLINE&quot;       //Agent offline<br>&quot;NODE_DESTROYED&quot;      //Node destroyed<br>&quot;CONTAINER_EXITED&quot;    //Container exited<br>&quot;CONTAINER_DESTROYED&quot; //Container destroyed<br>&quot;SHARED_HOST&quot;         //Container and host sharing the network<br>&quot;RESOURCE_LIMIT&quot;      //Resource limit exceeded for the isolation operation<br>&quot;UNKNOW&quot;              //Unknown reason</p> 
+     * @return ContainerNetSubStatus <p>Container sub-status.<br>&quot;AGENT_OFFLINE&quot;       //Agent offline<br>&quot;NODE_DESTROYED&quot;      //Node destroyed<br>&quot;CONTAINER_EXITED&quot;    //Container exited<br>&quot;CONTAINER_DESTROYED&quot; //Container destroyed<br>&quot;SHARED_HOST&quot;         //Container and host sharing the network<br>&quot;RESOURCE_LIMIT&quot;      //Resource limit exceeded for the isolation operation<br>&quot;UNKNOW&quot;              //Unknown reason</p>
      */
     public String getContainerNetSubStatus() {
         return this.ContainerNetSubStatus;
     }
 
     /**
-     * Set Sub-status of the container
-"AGENT_OFFLINE"       // The agent is offline.
-"NODE_DESTROYED"      // The node is terminated.
-"CONTAINER_EXITED"    // The container exited.
-"CONTAINER_DESTROYED" // The container was terminated.
-"SHARED_HOST"         // The container shares the network with the server.
-"RESOURCE_LIMIT"      // The number of resources to be isolated exceeds the limit.
-"UNKNOW"              // The reason is unknown.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ContainerNetSubStatus Sub-status of the container
-"AGENT_OFFLINE"       // The agent is offline.
-"NODE_DESTROYED"      // The node is terminated.
-"CONTAINER_EXITED"    // The container exited.
-"CONTAINER_DESTROYED" // The container was terminated.
-"SHARED_HOST"         // The container shares the network with the server.
-"RESOURCE_LIMIT"      // The number of resources to be isolated exceeds the limit.
-"UNKNOW"              // The reason is unknown.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Container sub-status.<br>&quot;AGENT_OFFLINE&quot;       //Agent offline<br>&quot;NODE_DESTROYED&quot;      //Node destroyed<br>&quot;CONTAINER_EXITED&quot;    //Container exited<br>&quot;CONTAINER_DESTROYED&quot; //Container destroyed<br>&quot;SHARED_HOST&quot;         //Container and host sharing the network<br>&quot;RESOURCE_LIMIT&quot;      //Resource limit exceeded for the isolation operation<br>&quot;UNKNOW&quot;              //Unknown reason</p>
+     * @param ContainerNetSubStatus <p>Container sub-status.<br>&quot;AGENT_OFFLINE&quot;       //Agent offline<br>&quot;NODE_DESTROYED&quot;      //Node destroyed<br>&quot;CONTAINER_EXITED&quot;    //Container exited<br>&quot;CONTAINER_DESTROYED&quot; //Container destroyed<br>&quot;SHARED_HOST&quot;         //Container and host sharing the network<br>&quot;RESOURCE_LIMIT&quot;      //Resource limit exceeded for the isolation operation<br>&quot;UNKNOW&quot;              //Unknown reason</p>
      */
     public void setContainerNetSubStatus(String ContainerNetSubStatus) {
         this.ContainerNetSubStatus = ContainerNetSubStatus;
     }
 
     /**
-     * Get Container isolation operation source
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ContainerIsolateOperationSrc Container isolation operation source
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Source of container isolation operation.</p> 
+     * @return ContainerIsolateOperationSrc <p>Source of container isolation operation.</p>
      */
     public String getContainerIsolateOperationSrc() {
         return this.ContainerIsolateOperationSrc;
     }
 
     /**
-     * Set Container isolation operation source
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ContainerIsolateOperationSrc Container isolation operation source
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Source of container isolation operation.</p>
+     * @param ContainerIsolateOperationSrc <p>Source of container isolation operation.</p>
      */
     public void setContainerIsolateOperationSrc(String ContainerIsolateOperationSrc) {
         this.ContainerIsolateOperationSrc = ContainerIsolateOperationSrc;
     }
 
     /**
-     * Get Container status
-`RUNNING`: Running.
-`PAUSED`: Paused.
-`STOPPED`: Stopped.
-`CREATED`: Created.
-`DESTROYED`: Terminated.
-`RESTARTING`: Restarting.
-`REMOVING`: Removing. 
-     * @return ContainerStatus Container status
-`RUNNING`: Running.
-`PAUSED`: Paused.
-`STOPPED`: Stopped.
-`CREATED`: Created.
-`DESTROYED`: Terminated.
-`RESTARTING`: Restarting.
-`REMOVING`: Removing.
+     * Get <p>Container status.<br>RUNNING<br>PAUSED<br>STOPPED<br>CREATED<br>DESTROYED<br>RESTARTING<br>REMOVING</p> 
+     * @return ContainerStatus <p>Container status.<br>RUNNING<br>PAUSED<br>STOPPED<br>CREATED<br>DESTROYED<br>RESTARTING<br>REMOVING</p>
      */
     public String getContainerStatus() {
         return this.ContainerStatus;
     }
 
     /**
-     * Set Container status
-`RUNNING`: Running.
-`PAUSED`: Paused.
-`STOPPED`: Stopped.
-`CREATED`: Created.
-`DESTROYED`: Terminated.
-`RESTARTING`: Restarting.
-`REMOVING`: Removing.
-     * @param ContainerStatus Container status
-`RUNNING`: Running.
-`PAUSED`: Paused.
-`STOPPED`: Stopped.
-`CREATED`: Created.
-`DESTROYED`: Terminated.
-`RESTARTING`: Restarting.
-`REMOVING`: Removing.
+     * Set <p>Container status.<br>RUNNING<br>PAUSED<br>STOPPED<br>CREATED<br>DESTROYED<br>RESTARTING<br>REMOVING</p>
+     * @param ContainerStatus <p>Container status.<br>RUNNING<br>PAUSED<br>STOPPED<br>CREATED<br>DESTROYED<br>RESTARTING<br>REMOVING</p>
      */
     public void setContainerStatus(String ContainerStatus) {
         this.ContainerStatus = ContainerStatus;
     }
 
     /**
-     * Get Cluster ID 
-     * @return ClusterID Cluster ID
+     * Get <p>Cluster ID.</p> 
+     * @return ClusterID <p>Cluster ID.</p>
      */
     public String getClusterID() {
         return this.ClusterID;
     }
 
     /**
-     * Set Cluster ID
-     * @param ClusterID Cluster ID
+     * Set <p>Cluster ID.</p>
+     * @param ClusterID <p>Cluster ID.</p>
      */
     public void setClusterID(String ClusterID) {
         this.ClusterID = ClusterID;
     }
 
     /**
-     * Get Node type. Values: `NORMAL` (general node), `SUPER` (super node). 
-     * @return NodeType Node type. Values: `NORMAL` (general node), `SUPER` (super node).
+     * Get <p>Node type: NORMAL (normal node) and SUPER (super node).</p> 
+     * @return NodeType <p>Node type: NORMAL (normal node) and SUPER (super node).</p>
      */
     public String getNodeType() {
         return this.NodeType;
     }
 
     /**
-     * Set Node type. Values: `NORMAL` (general node), `SUPER` (super node).
-     * @param NodeType Node type. Values: `NORMAL` (general node), `SUPER` (super node).
+     * Set <p>Node type: NORMAL (normal node) and SUPER (super node).</p>
+     * @param NodeType <p>Node type: NORMAL (normal node) and SUPER (super node).</p>
      */
     public void setNodeType(String NodeType) {
         this.NodeType = NodeType;
     }
 
     /**
-     * Get Pod name 
-     * @return PodName Pod name
+     * Get <p>Pod name.</p> 
+     * @return PodName <p>Pod name.</p>
      */
     public String getPodName() {
         return this.PodName;
     }
 
     /**
-     * Set Pod name
-     * @param PodName Pod name
+     * Set <p>Pod name.</p>
+     * @param PodName <p>Pod name.</p>
      */
     public void setPodName(String PodName) {
         this.PodName = PodName;
     }
 
     /**
-     * Get Pod IP 
-     * @return PodIP Pod IP
+     * Get <p>pod ip</p> 
+     * @return PodIP <p>pod ip</p>
      */
     public String getPodIP() {
         return this.PodIP;
     }
 
     /**
-     * Set Pod IP
-     * @param PodIP Pod IP
+     * Set <p>pod ip</p>
+     * @param PodIP <p>pod ip</p>
      */
     public void setPodIP(String PodIP) {
         this.PodIP = PodIP;
     }
 
     /**
-     * Get Cluster ID 
-     * @return NodeUniqueID Cluster ID
+     * Get <p>Cluster ID.</p> 
+     * @return NodeUniqueID <p>Cluster ID.</p>
      */
     public String getNodeUniqueID() {
         return this.NodeUniqueID;
     }
 
     /**
-     * Set Cluster ID
-     * @param NodeUniqueID Cluster ID
+     * Set <p>Cluster ID.</p>
+     * @param NodeUniqueID <p>Cluster ID.</p>
      */
     public void setNodeUniqueID(String NodeUniqueID) {
         this.NodeUniqueID = NodeUniqueID;
     }
 
     /**
-     * Get Node public IP 
-     * @return PublicIP Node public IP
+     * Get <p>Node public IP address.</p> 
+     * @return PublicIP <p>Node public IP address.</p>
      */
     public String getPublicIP() {
         return this.PublicIP;
     }
 
     /**
-     * Set Node public IP
-     * @param PublicIP Node public IP
+     * Set <p>Node public IP address.</p>
+     * @param PublicIP <p>Node public IP address.</p>
      */
     public void setPublicIP(String PublicIP) {
         this.PublicIP = PublicIP;
     }
 
     /**
-     * Get Node name 
-     * @return NodeName Node name
+     * Get <p>Node name.</p> 
+     * @return NodeName <p>Node name.</p>
      */
     public String getNodeName() {
         return this.NodeName;
     }
 
     /**
-     * Set Node name
-     * @param NodeName Node name
+     * Set <p>Node name.</p>
+     * @param NodeName <p>Node name.</p>
      */
     public void setNodeName(String NodeName) {
         this.NodeName = NodeName;
     }
 
     /**
-     * Get Node ID 
-     * @return NodeID Node ID
+     * Get <p>Node ID.</p> 
+     * @return NodeID <p>Node ID.</p>
      */
     public String getNodeID() {
         return this.NodeID;
     }
 
     /**
-     * Set Node ID
-     * @param NodeID Node ID
+     * Set <p>Node ID.</p>
+     * @param NodeID <p>Node ID.</p>
      */
     public void setNodeID(String NodeID) {
         this.NodeID = NodeID;
     }
 
     /**
-     * Get uuid 
-     * @return HostID uuid
+     * Get <p>uuid</p> 
+     * @return HostID <p>uuid</p>
      */
     public String getHostID() {
         return this.HostID;
     }
 
     /**
-     * Set uuid
-     * @param HostID uuid
+     * Set <p>uuid</p>
+     * @param HostID <p>uuid</p>
      */
     public void setHostID(String HostID) {
         this.HostID = HostID;
     }
 
     /**
-     * Get Private IP of the node 
-     * @return HostIP Private IP of the node
+     * Get <p>Node private IP address.</p> 
+     * @return HostIP <p>Node private IP address.</p>
      */
     public String getHostIP() {
         return this.HostIP;
     }
 
     /**
-     * Set Private IP of the node
-     * @param HostIP Private IP of the node
+     * Set <p>Node private IP address.</p>
+     * @param HostIP <p>Node private IP address.</p>
      */
     public void setHostIP(String HostIP) {
         this.HostIP = HostIP;
     }
 
     /**
-     * Get Cluster name 
-     * @return ClusterName Cluster name
+     * Get <p>Cluster name.</p> 
+     * @return ClusterName <p>Cluster name.</p>
      */
     public String getClusterName() {
         return this.ClusterName;
     }
 
     /**
-     * Set Cluster name
-     * @param ClusterName Cluster name
+     * Set <p>Cluster name.</p>
+     * @param ClusterName <p>Cluster name.</p>
      */
     public void setClusterName(String ClusterName) {
         this.ClusterName = ClusterName;
+    }
+
+    /**
+     * Get <p>Command line parameters.</p> 
+     * @return CmdLine <p>Command line parameters.</p>
+     */
+    public String getCmdLine() {
+        return this.CmdLine;
+    }
+
+    /**
+     * Set <p>Command line parameters.</p>
+     * @param CmdLine <p>Command line parameters.</p>
+     */
+    public void setCmdLine(String CmdLine) {
+        this.CmdLine = CmdLine;
     }
 
     public AbnormalProcessEventInfo() {
@@ -1153,6 +1016,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.ClusterName != null) {
             this.ClusterName = new String(source.ClusterName);
         }
+        if (source.CmdLine != null) {
+            this.CmdLine = new String(source.CmdLine);
+        }
     }
 
 
@@ -1197,6 +1063,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "HostID", this.HostID);
         this.setParamSimple(map, prefix + "HostIP", this.HostIP);
         this.setParamSimple(map, prefix + "ClusterName", this.ClusterName);
+        this.setParamSimple(map, prefix + "CmdLine", this.CmdLine);
 
     }
 }

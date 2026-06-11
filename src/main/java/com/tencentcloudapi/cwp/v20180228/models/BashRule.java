@@ -108,16 +108,14 @@ public class BashRule extends AbstractModel {
     private String Hostip;
 
     /**
-    * Arrays of UUIDs for servers to be effective
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Array of UUIDs for active servers
     */
     @SerializedName("Uuids")
     @Expose
     private String [] Uuids;
 
     /**
-    * 0= blocklist; 1= allowlist
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 0: blocklist 1: allowlist
     */
     @SerializedName("White")
     @Expose
@@ -125,7 +123,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Whether to process previous events: 0: do not process; 1: process
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("DealOldEvents")
     @Expose
@@ -133,7 +130,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Rule description
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Description")
     @Expose
@@ -336,50 +332,40 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Arrays of UUIDs for servers to be effective
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Uuids Arrays of UUIDs for servers to be effective
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Array of UUIDs for active servers 
+     * @return Uuids Array of UUIDs for active servers
      */
     public String [] getUuids() {
         return this.Uuids;
     }
 
     /**
-     * Set Arrays of UUIDs for servers to be effective
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Uuids Arrays of UUIDs for servers to be effective
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Array of UUIDs for active servers
+     * @param Uuids Array of UUIDs for active servers
      */
     public void setUuids(String [] Uuids) {
         this.Uuids = Uuids;
     }
 
     /**
-     * Get 0= blocklist; 1= allowlist
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return White 0= blocklist; 1= allowlist
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get 0: blocklist 1: allowlist 
+     * @return White 0: blocklist 1: allowlist
      */
     public Long getWhite() {
         return this.White;
     }
 
     /**
-     * Set 0= blocklist; 1= allowlist
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param White 0= blocklist; 1= allowlist
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 0: blocklist 1: allowlist
+     * @param White 0: blocklist 1: allowlist
      */
     public void setWhite(Long White) {
         this.White = White;
     }
 
     /**
-     * Get Whether to process previous events: 0: do not process; 1: process
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Whether to process previous events: 0: do not process; 1: process 
      * @return DealOldEvents Whether to process previous events: 0: do not process; 1: process
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getDealOldEvents() {
         return this.DealOldEvents;
@@ -387,19 +373,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Whether to process previous events: 0: do not process; 1: process
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param DealOldEvents Whether to process previous events: 0: do not process; 1: process
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setDealOldEvents(Long DealOldEvents) {
         this.DealOldEvents = DealOldEvents;
     }
 
     /**
-     * Get Rule description
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Rule description 
      * @return Description Rule description
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getDescription() {
         return this.Description;
@@ -407,9 +389,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Rule description
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Description Rule description
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setDescription(String Description) {
         this.Description = Description;

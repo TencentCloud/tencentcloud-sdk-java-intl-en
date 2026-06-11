@@ -31,7 +31,7 @@ public class CreateIntegrateClusterResponse extends AbstractModel {
     private String TranId;
 
     /**
-    * Order ID
+    * Order ID.
     */
     @SerializedName("DealNames")
     @Expose
@@ -84,16 +84,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Order ID 
-     * @return DealNames Order ID
+     * Get Order ID. 
+     * @return DealNames Order ID.
      */
     public String [] getDealNames() {
         return this.DealNames;
     }
 
     /**
-     * Set Order ID
-     * @param DealNames Order ID
+     * Set Order ID.
+     * @param DealNames Order ID.
      */
     public void setDealNames(String [] DealNames) {
         this.DealNames = DealNames;

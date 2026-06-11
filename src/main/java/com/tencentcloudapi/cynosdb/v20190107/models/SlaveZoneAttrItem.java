@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class SlaveZoneAttrItem extends AbstractModel {
 
     /**
-    * Availability zone
+    * Availability zone.
     */
     @SerializedName("Zone")
     @Expose
@@ -45,16 +45,16 @@ public class SlaveZoneAttrItem extends AbstractModel {
     private Long SemiSyncTimeout;
 
     /**
-     * Get Availability zone 
-     * @return Zone Availability zone
+     * Get Availability zone. 
+     * @return Zone Availability zone.
      */
     public String getZone() {
         return this.Zone;
     }
 
     /**
-     * Set Availability zone
-     * @param Zone Availability zone
+     * Set Availability zone.
+     * @param Zone Availability zone.
      */
     public void setZone(String Zone) {
         this.Zone = Zone;

@@ -66,7 +66,7 @@ public class SearchClsLogRequest extends AbstractModel {
     private String Channel;
 
     /**
-    * Query statement. For more details, see [https://intl.cloud.tencent.com/document/product/614/16982?from_cn_redirect=1].
+    * Query statement. For more details, see [Syntax Rules](https://www.tencentcloud.com/document/product/614/37803).
     */
     @SerializedName("Query")
     @Expose
@@ -183,16 +183,16 @@ public class SearchClsLogRequest extends AbstractModel {
     }
 
     /**
-     * Get Query statement. For more details, see [https://intl.cloud.tencent.com/document/product/614/16982?from_cn_redirect=1]. 
-     * @return Query Query statement. For more details, see [https://intl.cloud.tencent.com/document/product/614/16982?from_cn_redirect=1].
+     * Get Query statement. For more details, see [Syntax Rules](https://www.tencentcloud.com/document/product/614/37803). 
+     * @return Query Query statement. For more details, see [Syntax Rules](https://www.tencentcloud.com/document/product/614/37803).
      */
     public String getQuery() {
         return this.Query;
     }
 
     /**
-     * Set Query statement. For more details, see [https://intl.cloud.tencent.com/document/product/614/16982?from_cn_redirect=1].
-     * @param Query Query statement. For more details, see [https://intl.cloud.tencent.com/document/product/614/16982?from_cn_redirect=1].
+     * Set Query statement. For more details, see [Syntax Rules](https://www.tencentcloud.com/document/product/614/37803).
+     * @param Query Query statement. For more details, see [Syntax Rules](https://www.tencentcloud.com/document/product/614/37803).
      */
     public void setQuery(String Query) {
         this.Query = Query;

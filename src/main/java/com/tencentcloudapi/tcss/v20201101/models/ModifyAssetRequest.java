@@ -24,49 +24,118 @@ import java.util.HashMap;
 public class ModifyAssetRequest extends AbstractModel {
 
     /**
-    * Sync all
+    * Synchronizes all regular nodes.
     */
     @SerializedName("All")
     @Expose
     private Boolean All;
 
     /**
-    * List of servers to be synced. Either this parameter or `All` (preferred) must be selected.
+    * List of UUIDs of hosts to be synchronized. 
     */
     @SerializedName("Hosts")
     @Expose
     private String [] Hosts;
 
     /**
-     * Get Sync all 
-     * @return All Sync all
+    * Synchronizes all super nodes.
+    */
+    @SerializedName("AllSuperHost")
+    @Expose
+    private Boolean AllSuperHost;
+
+    /**
+    * Unique IDs of super nodes to be synchronized.
+    */
+    @SerializedName("NodeUniqueIds")
+    @Expose
+    private String [] NodeUniqueIds;
+
+    /**
+    * Timeout (in seconds). Minimum value: 3600.
+    */
+    @SerializedName("TimeoutSec")
+    @Expose
+    private Long TimeoutSec;
+
+    /**
+     * Get Synchronizes all regular nodes. 
+     * @return All Synchronizes all regular nodes.
      */
     public Boolean getAll() {
         return this.All;
     }
 
     /**
-     * Set Sync all
-     * @param All Sync all
+     * Set Synchronizes all regular nodes.
+     * @param All Synchronizes all regular nodes.
      */
     public void setAll(Boolean All) {
         this.All = All;
     }
 
     /**
-     * Get List of servers to be synced. Either this parameter or `All` (preferred) must be selected. 
-     * @return Hosts List of servers to be synced. Either this parameter or `All` (preferred) must be selected.
+     * Get List of UUIDs of hosts to be synchronized.  
+     * @return Hosts List of UUIDs of hosts to be synchronized. 
      */
     public String [] getHosts() {
         return this.Hosts;
     }
 
     /**
-     * Set List of servers to be synced. Either this parameter or `All` (preferred) must be selected.
-     * @param Hosts List of servers to be synced. Either this parameter or `All` (preferred) must be selected.
+     * Set List of UUIDs of hosts to be synchronized. 
+     * @param Hosts List of UUIDs of hosts to be synchronized. 
      */
     public void setHosts(String [] Hosts) {
         this.Hosts = Hosts;
+    }
+
+    /**
+     * Get Synchronizes all super nodes. 
+     * @return AllSuperHost Synchronizes all super nodes.
+     */
+    public Boolean getAllSuperHost() {
+        return this.AllSuperHost;
+    }
+
+    /**
+     * Set Synchronizes all super nodes.
+     * @param AllSuperHost Synchronizes all super nodes.
+     */
+    public void setAllSuperHost(Boolean AllSuperHost) {
+        this.AllSuperHost = AllSuperHost;
+    }
+
+    /**
+     * Get Unique IDs of super nodes to be synchronized. 
+     * @return NodeUniqueIds Unique IDs of super nodes to be synchronized.
+     */
+    public String [] getNodeUniqueIds() {
+        return this.NodeUniqueIds;
+    }
+
+    /**
+     * Set Unique IDs of super nodes to be synchronized.
+     * @param NodeUniqueIds Unique IDs of super nodes to be synchronized.
+     */
+    public void setNodeUniqueIds(String [] NodeUniqueIds) {
+        this.NodeUniqueIds = NodeUniqueIds;
+    }
+
+    /**
+     * Get Timeout (in seconds). Minimum value: 3600. 
+     * @return TimeoutSec Timeout (in seconds). Minimum value: 3600.
+     */
+    public Long getTimeoutSec() {
+        return this.TimeoutSec;
+    }
+
+    /**
+     * Set Timeout (in seconds). Minimum value: 3600.
+     * @param TimeoutSec Timeout (in seconds). Minimum value: 3600.
+     */
+    public void setTimeoutSec(Long TimeoutSec) {
+        this.TimeoutSec = TimeoutSec;
     }
 
     public ModifyAssetRequest() {
@@ -86,6 +155,18 @@ public class ModifyAssetRequest extends AbstractModel {
                 this.Hosts[i] = new String(source.Hosts[i]);
             }
         }
+        if (source.AllSuperHost != null) {
+            this.AllSuperHost = new Boolean(source.AllSuperHost);
+        }
+        if (source.NodeUniqueIds != null) {
+            this.NodeUniqueIds = new String[source.NodeUniqueIds.length];
+            for (int i = 0; i < source.NodeUniqueIds.length; i++) {
+                this.NodeUniqueIds[i] = new String(source.NodeUniqueIds[i]);
+            }
+        }
+        if (source.TimeoutSec != null) {
+            this.TimeoutSec = new Long(source.TimeoutSec);
+        }
     }
 
 
@@ -95,6 +176,9 @@ public class ModifyAssetRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "All", this.All);
         this.setParamArraySimple(map, prefix + "Hosts.", this.Hosts);
+        this.setParamSimple(map, prefix + "AllSuperHost", this.AllSuperHost);
+        this.setParamArraySimple(map, prefix + "NodeUniqueIds.", this.NodeUniqueIds);
+        this.setParamSimple(map, prefix + "TimeoutSec", this.TimeoutSec);
 
     }
 }

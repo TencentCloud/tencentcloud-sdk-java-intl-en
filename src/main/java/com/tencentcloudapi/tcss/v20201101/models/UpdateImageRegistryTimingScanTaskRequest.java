@@ -80,35 +80,35 @@ public class UpdateImageRegistryTimingScanTaskRequest extends AbstractModel {
     private Boolean Latest;
 
     /**
-    * Whether running containers exist
+    * 
     */
     @SerializedName("ContainerRunning")
     @Expose
     private Boolean ContainerRunning;
 
     /**
-    * Scan End Time
+    * 
     */
     @SerializedName("ScanEndTime")
     @Expose
     private String ScanEndTime;
 
     /**
-    * Scan Scope: 0 All Images, 1 Custom Images, 2 Recommended Scan Images
+    * 
     */
     @SerializedName("ScanScope")
     @Expose
     private Long ScanScope;
 
     /**
-    * Repository Type tcr,ccr,harbor
+    * 
     */
     @SerializedName("RegistryType")
     @Expose
     private String [] RegistryType;
 
     /**
-    * Namespace
+    * 
     */
     @SerializedName("Namespace")
     @Expose
@@ -247,80 +247,80 @@ public class UpdateImageRegistryTimingScanTaskRequest extends AbstractModel {
     }
 
     /**
-     * Get Whether running containers exist 
-     * @return ContainerRunning Whether running containers exist
+     * Get  
+     * @return ContainerRunning 
      */
     public Boolean getContainerRunning() {
         return this.ContainerRunning;
     }
 
     /**
-     * Set Whether running containers exist
-     * @param ContainerRunning Whether running containers exist
+     * Set 
+     * @param ContainerRunning 
      */
     public void setContainerRunning(Boolean ContainerRunning) {
         this.ContainerRunning = ContainerRunning;
     }
 
     /**
-     * Get Scan End Time 
-     * @return ScanEndTime Scan End Time
+     * Get  
+     * @return ScanEndTime 
      */
     public String getScanEndTime() {
         return this.ScanEndTime;
     }
 
     /**
-     * Set Scan End Time
-     * @param ScanEndTime Scan End Time
+     * Set 
+     * @param ScanEndTime 
      */
     public void setScanEndTime(String ScanEndTime) {
         this.ScanEndTime = ScanEndTime;
     }
 
     /**
-     * Get Scan Scope: 0 All Images, 1 Custom Images, 2 Recommended Scan Images 
-     * @return ScanScope Scan Scope: 0 All Images, 1 Custom Images, 2 Recommended Scan Images
+     * Get  
+     * @return ScanScope 
      */
     public Long getScanScope() {
         return this.ScanScope;
     }
 
     /**
-     * Set Scan Scope: 0 All Images, 1 Custom Images, 2 Recommended Scan Images
-     * @param ScanScope Scan Scope: 0 All Images, 1 Custom Images, 2 Recommended Scan Images
+     * Set 
+     * @param ScanScope 
      */
     public void setScanScope(Long ScanScope) {
         this.ScanScope = ScanScope;
     }
 
     /**
-     * Get Repository Type tcr,ccr,harbor 
-     * @return RegistryType Repository Type tcr,ccr,harbor
+     * Get  
+     * @return RegistryType 
      */
     public String [] getRegistryType() {
         return this.RegistryType;
     }
 
     /**
-     * Set Repository Type tcr,ccr,harbor
-     * @param RegistryType Repository Type tcr,ccr,harbor
+     * Set 
+     * @param RegistryType 
      */
     public void setRegistryType(String [] RegistryType) {
         this.RegistryType = RegistryType;
     }
 
     /**
-     * Get Namespace 
-     * @return Namespace Namespace
+     * Get  
+     * @return Namespace 
      */
     public String [] getNamespace() {
         return this.Namespace;
     }
 
     /**
-     * Set Namespace
-     * @param Namespace Namespace
+     * Set 
+     * @param Namespace 
      */
     public void setNamespace(String [] Namespace) {
         this.Namespace = Namespace;

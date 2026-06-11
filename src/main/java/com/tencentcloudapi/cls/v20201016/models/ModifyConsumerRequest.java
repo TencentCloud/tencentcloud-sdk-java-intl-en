@@ -24,7 +24,9 @@ import java.util.HashMap;
 public class ModifyConsumerRequest extends AbstractModel {
 
     /**
-    * Log topic ID bound to the task
+    * Log topic Id bound to the delivery task.
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
+- Obtain the log topic Id through [Create Log Topic](https://www.tencentcloud.com/document/product/614/56456?from_cn_redirect=1).
     */
     @SerializedName("TopicId")
     @Expose
@@ -66,16 +68,45 @@ public class ModifyConsumerRequest extends AbstractModel {
     private Long Compression;
 
     /**
-     * Get Log topic ID bound to the task 
-     * @return TopicId Log topic ID bound to the task
+    * ARN [Create role](https://www.tencentcloud.com/document/product/598/19381?from_cn_redirect=1)
+    */
+    @SerializedName("RoleArn")
+    @Expose
+    private String RoleArn;
+
+    /**
+    * external ID
+    */
+    @SerializedName("ExternalId")
+    @Expose
+    private String ExternalId;
+
+    /**
+    * Advanced configuration
+    */
+    @SerializedName("AdvancedConfig")
+    @Expose
+    private AdvancedConsumerConfiguration AdvancedConfig;
+
+    /**
+     * Get Log topic Id bound to the delivery task.
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
+- Obtain the log topic Id through [Create Log Topic](https://www.tencentcloud.com/document/product/614/56456?from_cn_redirect=1). 
+     * @return TopicId Log topic Id bound to the delivery task.
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
+- Obtain the log topic Id through [Create Log Topic](https://www.tencentcloud.com/document/product/614/56456?from_cn_redirect=1).
      */
     public String getTopicId() {
         return this.TopicId;
     }
 
     /**
-     * Set Log topic ID bound to the task
-     * @param TopicId Log topic ID bound to the task
+     * Set Log topic Id bound to the delivery task.
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
+- Obtain the log topic Id through [Create Log Topic](https://www.tencentcloud.com/document/product/614/56456?from_cn_redirect=1).
+     * @param TopicId Log topic Id bound to the delivery task.
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
+- Obtain the log topic Id through [Create Log Topic](https://www.tencentcloud.com/document/product/614/56456?from_cn_redirect=1).
      */
     public void setTopicId(String TopicId) {
         this.TopicId = TopicId;
@@ -161,6 +192,54 @@ public class ModifyConsumerRequest extends AbstractModel {
         this.Compression = Compression;
     }
 
+    /**
+     * Get ARN [Create role](https://www.tencentcloud.com/document/product/598/19381?from_cn_redirect=1) 
+     * @return RoleArn ARN [Create role](https://www.tencentcloud.com/document/product/598/19381?from_cn_redirect=1)
+     */
+    public String getRoleArn() {
+        return this.RoleArn;
+    }
+
+    /**
+     * Set ARN [Create role](https://www.tencentcloud.com/document/product/598/19381?from_cn_redirect=1)
+     * @param RoleArn ARN [Create role](https://www.tencentcloud.com/document/product/598/19381?from_cn_redirect=1)
+     */
+    public void setRoleArn(String RoleArn) {
+        this.RoleArn = RoleArn;
+    }
+
+    /**
+     * Get external ID 
+     * @return ExternalId external ID
+     */
+    public String getExternalId() {
+        return this.ExternalId;
+    }
+
+    /**
+     * Set external ID
+     * @param ExternalId external ID
+     */
+    public void setExternalId(String ExternalId) {
+        this.ExternalId = ExternalId;
+    }
+
+    /**
+     * Get Advanced configuration 
+     * @return AdvancedConfig Advanced configuration
+     */
+    public AdvancedConsumerConfiguration getAdvancedConfig() {
+        return this.AdvancedConfig;
+    }
+
+    /**
+     * Set Advanced configuration
+     * @param AdvancedConfig Advanced configuration
+     */
+    public void setAdvancedConfig(AdvancedConsumerConfiguration AdvancedConfig) {
+        this.AdvancedConfig = AdvancedConfig;
+    }
+
     public ModifyConsumerRequest() {
     }
 
@@ -187,6 +266,15 @@ public class ModifyConsumerRequest extends AbstractModel {
         if (source.Compression != null) {
             this.Compression = new Long(source.Compression);
         }
+        if (source.RoleArn != null) {
+            this.RoleArn = new String(source.RoleArn);
+        }
+        if (source.ExternalId != null) {
+            this.ExternalId = new String(source.ExternalId);
+        }
+        if (source.AdvancedConfig != null) {
+            this.AdvancedConfig = new AdvancedConsumerConfiguration(source.AdvancedConfig);
+        }
     }
 
 
@@ -200,6 +288,9 @@ public class ModifyConsumerRequest extends AbstractModel {
         this.setParamObj(map, prefix + "Content.", this.Content);
         this.setParamObj(map, prefix + "Ckafka.", this.Ckafka);
         this.setParamSimple(map, prefix + "Compression", this.Compression);
+        this.setParamSimple(map, prefix + "RoleArn", this.RoleArn);
+        this.setParamSimple(map, prefix + "ExternalId", this.ExternalId);
+        this.setParamObj(map, prefix + "AdvancedConfig.", this.AdvancedConfig);
 
     }
 }

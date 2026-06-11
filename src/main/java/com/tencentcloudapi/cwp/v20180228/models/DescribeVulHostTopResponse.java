@@ -25,7 +25,6 @@ public class DescribeVulHostTopResponse extends AbstractModel {
 
     /**
     * List of top server risks
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("VulHostTopList")
     @Expose
@@ -39,10 +38,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get List of top server risks
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get List of top server risks 
      * @return VulHostTopList List of top server risks
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public VulHostTopInfo [] getVulHostTopList() {
         return this.VulHostTopList;
@@ -50,9 +47,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set List of top server risks
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param VulHostTopList List of top server risks
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setVulHostTopList(VulHostTopInfo [] VulHostTopList) {
         this.VulHostTopList = VulHostTopList;

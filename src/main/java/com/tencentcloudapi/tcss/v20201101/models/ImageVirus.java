@@ -24,8 +24,7 @@ import java.util.HashMap;
 public class ImageVirus extends AbstractModel {
 
     /**
-    * Path
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Path.
     */
     @SerializedName("Path")
     @Expose
@@ -33,15 +32,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Risk level
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("RiskLevel")
     @Expose
     private String RiskLevel;
 
     /**
-    * Category
-Note: This field may return null, indicating that no valid values can be obtained.
+    * category
     */
     @SerializedName("Category")
     @Expose
@@ -49,15 +46,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Virus name
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("VirusName")
     @Expose
     private String VirusName;
 
     /**
-    * Tag
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Tag.
     */
     @SerializedName("Tags")
     @Expose
@@ -65,7 +60,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Description
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Desc")
     @Expose
@@ -73,7 +67,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Solution
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Solution")
     @Expose
@@ -81,7 +74,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * File type
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("FileType")
     @Expose
@@ -89,15 +81,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * File path
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("FileName")
     @Expose
     private String FileName;
 
     /**
-    * MD5 checksum of the file
-Note: This field may return null, indicating that no valid values can be obtained.
+    * File md5
     */
     @SerializedName("FileMd5")
     @Expose
@@ -105,15 +95,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Size
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("FileSize")
     @Expose
     private Long FileSize;
 
     /**
-    * First discovery time
-Note: This field may return null, indicating that no valid values can be obtained.
+    * First detection time
     */
     @SerializedName("FirstScanTime")
     @Expose
@@ -121,37 +109,30 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Last scan time
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("LatestScanTime")
     @Expose
     private String LatestScanTime;
 
     /**
-     * Get Path
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Path Path
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Path. 
+     * @return Path Path.
      */
     public String getPath() {
         return this.Path;
     }
 
     /**
-     * Set Path
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Path Path
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Path.
+     * @param Path Path.
      */
     public void setPath(String Path) {
         this.Path = Path;
     }
 
     /**
-     * Get Risk level
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Risk level 
      * @return RiskLevel Risk level
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getRiskLevel() {
         return this.RiskLevel;
@@ -159,39 +140,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Risk level
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param RiskLevel Risk level
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setRiskLevel(String RiskLevel) {
         this.RiskLevel = RiskLevel;
     }
 
     /**
-     * Get Category
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Category Category
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get category 
+     * @return Category category
      */
     public String getCategory() {
         return this.Category;
     }
 
     /**
-     * Set Category
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Category Category
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set category
+     * @param Category category
      */
     public void setCategory(String Category) {
         this.Category = Category;
     }
 
     /**
-     * Get Virus name
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Virus name 
      * @return VirusName Virus name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getVirusName() {
         return this.VirusName;
@@ -199,39 +172,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Virus name
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param VirusName Virus name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setVirusName(String VirusName) {
         this.VirusName = VirusName;
     }
 
     /**
-     * Get Tag
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Tags Tag
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Tag. 
+     * @return Tags Tag.
      */
     public String [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set Tag
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Tags Tag
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Tag.
+     * @param Tags Tag.
      */
     public void setTags(String [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get Description
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Description 
      * @return Desc Description
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getDesc() {
         return this.Desc;
@@ -239,19 +204,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Description
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Desc Description
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setDesc(String Desc) {
         this.Desc = Desc;
     }
 
     /**
-     * Get Solution
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Solution 
      * @return Solution Solution
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getSolution() {
         return this.Solution;
@@ -259,19 +220,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Solution
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Solution Solution
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setSolution(String Solution) {
         this.Solution = Solution;
     }
 
     /**
-     * Get File type
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get File type 
      * @return FileType File type
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getFileType() {
         return this.FileType;
@@ -279,19 +236,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set File type
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param FileType File type
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setFileType(String FileType) {
         this.FileType = FileType;
     }
 
     /**
-     * Get File path
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get File path 
      * @return FileName File path
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getFileName() {
         return this.FileName;
@@ -299,39 +252,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set File path
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param FileName File path
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setFileName(String FileName) {
         this.FileName = FileName;
     }
 
     /**
-     * Get MD5 checksum of the file
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return FileMd5 MD5 checksum of the file
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get File md5 
+     * @return FileMd5 File md5
      */
     public String getFileMd5() {
         return this.FileMd5;
     }
 
     /**
-     * Set MD5 checksum of the file
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param FileMd5 MD5 checksum of the file
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set File md5
+     * @param FileMd5 File md5
      */
     public void setFileMd5(String FileMd5) {
         this.FileMd5 = FileMd5;
     }
 
     /**
-     * Get Size
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Size 
      * @return FileSize Size
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getFileSize() {
         return this.FileSize;
@@ -339,39 +284,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Size
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param FileSize Size
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setFileSize(Long FileSize) {
         this.FileSize = FileSize;
     }
 
     /**
-     * Get First discovery time
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return FirstScanTime First discovery time
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get First detection time 
+     * @return FirstScanTime First detection time
      */
     public String getFirstScanTime() {
         return this.FirstScanTime;
     }
 
     /**
-     * Set First discovery time
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param FirstScanTime First discovery time
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set First detection time
+     * @param FirstScanTime First detection time
      */
     public void setFirstScanTime(String FirstScanTime) {
         this.FirstScanTime = FirstScanTime;
     }
 
     /**
-     * Get Last scan time
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Last scan time 
      * @return LatestScanTime Last scan time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getLatestScanTime() {
         return this.LatestScanTime;
@@ -379,9 +316,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Last scan time
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param LatestScanTime Last scan time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setLatestScanTime(String LatestScanTime) {
         this.LatestScanTime = LatestScanTime;

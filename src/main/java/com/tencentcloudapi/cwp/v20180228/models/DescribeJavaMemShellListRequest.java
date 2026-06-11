@@ -24,7 +24,9 @@ import java.util.HashMap;
 public class DescribeJavaMemShellListRequest extends AbstractModel {
 
     /**
-    * Filtering criteria: Keywords: IP or host name for fuzzy query; Type or status for precise match; CreateBeginTime, CreateEndTime for time period query
+    * Filtering criteria: InstanceID and IP
+
+MachineName host name for fuzzy query; Type, status for precise match; CreateBeginTime, CreateEndTime for time period
     */
     @SerializedName("Filters")
     @Expose
@@ -45,16 +47,38 @@ public class DescribeJavaMemShellListRequest extends AbstractModel {
     private Long Limit;
 
     /**
-     * Get Filtering criteria: Keywords: IP or host name for fuzzy query; Type or status for precise match; CreateBeginTime, CreateEndTime for time period query 
-     * @return Filters Filtering criteria: Keywords: IP or host name for fuzzy query; Type or status for precise match; CreateBeginTime, CreateEndTime for time period query
+    * Sorting method (case insensitive): asc for ascending order; desc for descending order
+    */
+    @SerializedName("Order")
+    @Expose
+    private String Order;
+
+    /**
+    * Sort column, strictly equal: Latest detection time RecentFoundTime
+    */
+    @SerializedName("By")
+    @Expose
+    private String By;
+
+    /**
+     * Get Filtering criteria: InstanceID and IP
+
+MachineName host name for fuzzy query; Type, status for precise match; CreateBeginTime, CreateEndTime for time period 
+     * @return Filters Filtering criteria: InstanceID and IP
+
+MachineName host name for fuzzy query; Type, status for precise match; CreateBeginTime, CreateEndTime for time period
      */
     public Filters [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set Filtering criteria: Keywords: IP or host name for fuzzy query; Type or status for precise match; CreateBeginTime, CreateEndTime for time period query
-     * @param Filters Filtering criteria: Keywords: IP or host name for fuzzy query; Type or status for precise match; CreateBeginTime, CreateEndTime for time period query
+     * Set Filtering criteria: InstanceID and IP
+
+MachineName host name for fuzzy query; Type, status for precise match; CreateBeginTime, CreateEndTime for time period
+     * @param Filters Filtering criteria: InstanceID and IP
+
+MachineName host name for fuzzy query; Type, status for precise match; CreateBeginTime, CreateEndTime for time period
      */
     public void setFilters(Filters [] Filters) {
         this.Filters = Filters;
@@ -92,6 +116,38 @@ public class DescribeJavaMemShellListRequest extends AbstractModel {
         this.Limit = Limit;
     }
 
+    /**
+     * Get Sorting method (case insensitive): asc for ascending order; desc for descending order 
+     * @return Order Sorting method (case insensitive): asc for ascending order; desc for descending order
+     */
+    public String getOrder() {
+        return this.Order;
+    }
+
+    /**
+     * Set Sorting method (case insensitive): asc for ascending order; desc for descending order
+     * @param Order Sorting method (case insensitive): asc for ascending order; desc for descending order
+     */
+    public void setOrder(String Order) {
+        this.Order = Order;
+    }
+
+    /**
+     * Get Sort column, strictly equal: Latest detection time RecentFoundTime 
+     * @return By Sort column, strictly equal: Latest detection time RecentFoundTime
+     */
+    public String getBy() {
+        return this.By;
+    }
+
+    /**
+     * Set Sort column, strictly equal: Latest detection time RecentFoundTime
+     * @param By Sort column, strictly equal: Latest detection time RecentFoundTime
+     */
+    public void setBy(String By) {
+        this.By = By;
+    }
+
     public DescribeJavaMemShellListRequest() {
     }
 
@@ -112,6 +168,12 @@ public class DescribeJavaMemShellListRequest extends AbstractModel {
         if (source.Limit != null) {
             this.Limit = new Long(source.Limit);
         }
+        if (source.Order != null) {
+            this.Order = new String(source.Order);
+        }
+        if (source.By != null) {
+            this.By = new String(source.By);
+        }
     }
 
 
@@ -122,6 +184,8 @@ public class DescribeJavaMemShellListRequest extends AbstractModel {
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamSimple(map, prefix + "Order", this.Order);
+        this.setParamSimple(map, prefix + "By", this.By);
 
     }
 }

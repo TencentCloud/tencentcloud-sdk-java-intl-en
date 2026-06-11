@@ -24,63 +24,63 @@ import java.util.HashMap;
 public class RollbackData extends AbstractModel {
 
     /**
-    * 
+    * Instance CPU.
     */
     @SerializedName("Cpu")
     @Expose
     private Long Cpu;
 
     /**
-    * 
+    * Instance memory.
     */
     @SerializedName("Memory")
     @Expose
     private Long Memory;
 
     /**
-    * 
+    * Cluster storage upper limit.
     */
     @SerializedName("StorageLimit")
     @Expose
     private Long StorageLimit;
 
     /**
-    * 
+    * Original cluster ID.
     */
     @SerializedName("OriginalClusterId")
     @Expose
     private String OriginalClusterId;
 
     /**
-    * 
+    * Original cluster name.
     */
     @SerializedName("OriginalClusterName")
     @Expose
     private String OriginalClusterName;
 
     /**
-    * 
+    * Rollback method.
     */
     @SerializedName("RollbackStrategy")
     @Expose
     private String RollbackStrategy;
 
     /**
-    * 
+    * Snapshot time.
     */
     @SerializedName("SnapshotTime")
     @Expose
     private String SnapshotTime;
 
     /**
-    * Roll back to the Serverless cluster with minimum CPU
+    * Roll back to the Serverless cluster with minimum CPU.
     */
     @SerializedName("MinCpu")
     @Expose
     private Long MinCpu;
 
     /**
-    * Roll back to the Serverless cluster with maximum CPU
+    * Roll back to the Serverless cluster with maximum CPU.
     */
     @SerializedName("MaxCpu")
     @Expose
@@ -94,14 +94,14 @@ public class RollbackData extends AbstractModel {
     private Long SnapShotId;
 
     /**
-    * 
+    * Rollback database.
     */
     @SerializedName("RollbackDatabases")
     @Expose
     private RollbackDatabase [] RollbackDatabases;
 
     /**
-    * 
+    * Rollback data table.
     */
     @SerializedName("RollbackTables")
     @Expose
@@ -122,144 +122,144 @@ public class RollbackData extends AbstractModel {
     private RollbackProcessInfo RollbackProcess;
 
     /**
-     * Get  
-     * @return Cpu 
+     * Get Instance CPU. 
+     * @return Cpu Instance CPU.
      */
     public Long getCpu() {
         return this.Cpu;
     }
 
     /**
-     * Set 
-     * @param Cpu 
+     * Set Instance CPU.
+     * @param Cpu Instance CPU.
      */
     public void setCpu(Long Cpu) {
         this.Cpu = Cpu;
     }
 
     /**
-     * Get  
-     * @return Memory 
+     * Get Instance memory. 
+     * @return Memory Instance memory.
      */
     public Long getMemory() {
         return this.Memory;
     }
 
     /**
-     * Set 
-     * @param Memory 
+     * Set Instance memory.
+     * @param Memory Instance memory.
      */
     public void setMemory(Long Memory) {
         this.Memory = Memory;
     }
 
     /**
-     * Get  
-     * @return StorageLimit 
+     * Get Cluster storage upper limit. 
+     * @return StorageLimit Cluster storage upper limit.
      */
     public Long getStorageLimit() {
         return this.StorageLimit;
     }
 
     /**
-     * Set 
-     * @param StorageLimit 
+     * Set Cluster storage upper limit.
+     * @param StorageLimit Cluster storage upper limit.
      */
     public void setStorageLimit(Long StorageLimit) {
         this.StorageLimit = StorageLimit;
     }
 
     /**
-     * Get  
-     * @return OriginalClusterId 
+     * Get Original cluster ID. 
+     * @return OriginalClusterId Original cluster ID.
      */
     public String getOriginalClusterId() {
         return this.OriginalClusterId;
     }
 
     /**
-     * Set 
-     * @param OriginalClusterId 
+     * Set Original cluster ID.
+     * @param OriginalClusterId Original cluster ID.
      */
     public void setOriginalClusterId(String OriginalClusterId) {
         this.OriginalClusterId = OriginalClusterId;
     }
 
     /**
-     * Get  
-     * @return OriginalClusterName 
+     * Get Original cluster name. 
+     * @return OriginalClusterName Original cluster name.
      */
     public String getOriginalClusterName() {
         return this.OriginalClusterName;
     }
 
     /**
-     * Set 
-     * @param OriginalClusterName 
+     * Set Original cluster name.
+     * @param OriginalClusterName Original cluster name.
      */
     public void setOriginalClusterName(String OriginalClusterName) {
         this.OriginalClusterName = OriginalClusterName;
     }
 
     /**
-     * Get  
-     * @return RollbackStrategy 
+     * Get Rollback method. 
+     * @return RollbackStrategy Rollback method.
      */
     public String getRollbackStrategy() {
         return this.RollbackStrategy;
     }
 
     /**
-     * Set 
-     * @param RollbackStrategy 
+     * Set Rollback method.
+     * @param RollbackStrategy Rollback method.
      */
     public void setRollbackStrategy(String RollbackStrategy) {
         this.RollbackStrategy = RollbackStrategy;
     }
 
     /**
-     * Get  
-     * @return SnapshotTime 
+     * Get Snapshot time. 
+     * @return SnapshotTime Snapshot time.
      */
     public String getSnapshotTime() {
         return this.SnapshotTime;
     }
 
     /**
-     * Set 
-     * @param SnapshotTime 
+     * Set Snapshot time.
+     * @param SnapshotTime Snapshot time.
      */
     public void setSnapshotTime(String SnapshotTime) {
         this.SnapshotTime = SnapshotTime;
     }
 
     /**
-     * Get Roll back to the Serverless cluster with minimum CPU 
-     * @return MinCpu Roll back to the Serverless cluster with minimum CPU
+     * Get Roll back to the Serverless cluster with minimum CPU. 
+     * @return MinCpu Roll back to the Serverless cluster with minimum CPU.
      */
     public Long getMinCpu() {
         return this.MinCpu;
     }
 
     /**
-     * Set Roll back to the Serverless cluster with minimum CPU
-     * @param MinCpu Roll back to the Serverless cluster with minimum CPU
+     * Set Roll back to the Serverless cluster with minimum CPU.
+     * @param MinCpu Roll back to the Serverless cluster with minimum CPU.
      */
     public void setMinCpu(Long MinCpu) {
         this.MinCpu = MinCpu;
     }
 
     /**
-     * Get Roll back to the Serverless cluster with maximum CPU 
-     * @return MaxCpu Roll back to the Serverless cluster with maximum CPU
+     * Get Roll back to the Serverless cluster with maximum CPU. 
+     * @return MaxCpu Roll back to the Serverless cluster with maximum CPU.
      */
     public Long getMaxCpu() {
         return this.MaxCpu;
     }
 
     /**
-     * Set Roll back to the Serverless cluster with maximum CPU
-     * @param MaxCpu Roll back to the Serverless cluster with maximum CPU
+     * Set Roll back to the Serverless cluster with maximum CPU.
+     * @param MaxCpu Roll back to the Serverless cluster with maximum CPU.
      */
     public void setMaxCpu(Long MaxCpu) {
         this.MaxCpu = MaxCpu;
@@ -282,32 +282,32 @@ public class RollbackData extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return RollbackDatabases 
+     * Get Rollback database. 
+     * @return RollbackDatabases Rollback database.
      */
     public RollbackDatabase [] getRollbackDatabases() {
         return this.RollbackDatabases;
     }
 
     /**
-     * Set 
-     * @param RollbackDatabases 
+     * Set Rollback database.
+     * @param RollbackDatabases Rollback database.
      */
     public void setRollbackDatabases(RollbackDatabase [] RollbackDatabases) {
         this.RollbackDatabases = RollbackDatabases;
     }
 
     /**
-     * Get  
-     * @return RollbackTables 
+     * Get Rollback data table. 
+     * @return RollbackTables Rollback data table.
      */
     public RollbackTable [] getRollbackTables() {
         return this.RollbackTables;
     }
 
     /**
-     * Set 
-     * @param RollbackTables 
+     * Set Rollback data table.
+     * @param RollbackTables Rollback data table.
      */
     public void setRollbackTables(RollbackTable [] RollbackTables) {
         this.RollbackTables = RollbackTables;

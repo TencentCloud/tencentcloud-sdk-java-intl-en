@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ModifyRiskEventsStatusRequest extends AbstractModel {
 
     /**
-    * Operations - 0: Mark as Handled, 1: Ignore, 2: Delete Record, 3: Trojan Isolation, 4: Isolated Trojan Resumption, 5: Trojan Trust, 6: Trojan Untrust, 7: Kill Exceptional Process.
+    * Operation. 0: mark as handled; 1: ignore; 2: delete records; 3: isolate Trojan viruses; 4: recover isolating Trojan viruses; 5: add files to the trusted list; 6: delete files from the trusted list; 7: scan abnormal processes; 8: add to the allowlist.
     */
     @SerializedName("Operate")
     @Expose
@@ -94,16 +94,24 @@ Filter criteria
     private Filters [] Filters;
 
     /**
-     * Get Operations - 0: Mark as Handled, 1: Ignore, 2: Delete Record, 3: Trojan Isolation, 4: Isolated Trojan Resumption, 5: Trojan Trust, 6: Trojan Untrust, 7: Kill Exceptional Process. 
-     * @return Operate Operations - 0: Mark as Handled, 1: Ignore, 2: Delete Record, 3: Trojan Isolation, 4: Isolated Trojan Resumption, 5: Trojan Trust, 6: Trojan Untrust, 7: Kill Exceptional Process.
+    * When Operate is Trojan isolation
+<li>This operation will fix tampered system commands, scheduled tasks, and other system files. Please ensure that yum/apt is available during the operation.</li>
+    */
+    @SerializedName("DoClean")
+    @Expose
+    private Boolean DoClean;
+
+    /**
+     * Get Operation. 0: mark as handled; 1: ignore; 2: delete records; 3: isolate Trojan viruses; 4: recover isolating Trojan viruses; 5: add files to the trusted list; 6: delete files from the trusted list; 7: scan abnormal processes; 8: add to the allowlist. 
+     * @return Operate Operation. 0: mark as handled; 1: ignore; 2: delete records; 3: isolate Trojan viruses; 4: recover isolating Trojan viruses; 5: add files to the trusted list; 6: delete files from the trusted list; 7: scan abnormal processes; 8: add to the allowlist.
      */
     public Long getOperate() {
         return this.Operate;
     }
 
     /**
-     * Set Operations - 0: Mark as Handled, 1: Ignore, 2: Delete Record, 3: Trojan Isolation, 4: Isolated Trojan Resumption, 5: Trojan Trust, 6: Trojan Untrust, 7: Kill Exceptional Process.
-     * @param Operate Operations - 0: Mark as Handled, 1: Ignore, 2: Delete Record, 3: Trojan Isolation, 4: Isolated Trojan Resumption, 5: Trojan Trust, 6: Trojan Untrust, 7: Kill Exceptional Process.
+     * Set Operation. 0: mark as handled; 1: ignore; 2: delete records; 3: isolate Trojan viruses; 4: recover isolating Trojan viruses; 5: add files to the trusted list; 6: delete files from the trusted list; 7: scan abnormal processes; 8: add to the allowlist.
+     * @param Operate Operation. 0: mark as handled; 1: ignore; 2: delete records; 3: isolate Trojan viruses; 4: recover isolating Trojan viruses; 5: add files to the trusted list; 6: delete files from the trusted list; 7: scan abnormal processes; 8: add to the allowlist.
      */
     public void setOperate(Long Operate) {
         this.Operate = Operate;
@@ -277,6 +285,26 @@ Filter criteria
         this.Filters = Filters;
     }
 
+    /**
+     * Get When Operate is Trojan isolation
+<li>This operation will fix tampered system commands, scheduled tasks, and other system files. Please ensure that yum/apt is available during the operation.</li> 
+     * @return DoClean When Operate is Trojan isolation
+<li>This operation will fix tampered system commands, scheduled tasks, and other system files. Please ensure that yum/apt is available during the operation.</li>
+     */
+    public Boolean getDoClean() {
+        return this.DoClean;
+    }
+
+    /**
+     * Set When Operate is Trojan isolation
+<li>This operation will fix tampered system commands, scheduled tasks, and other system files. Please ensure that yum/apt is available during the operation.</li>
+     * @param DoClean When Operate is Trojan isolation
+<li>This operation will fix tampered system commands, scheduled tasks, and other system files. Please ensure that yum/apt is available during the operation.</li>
+     */
+    public void setDoClean(Boolean DoClean) {
+        this.DoClean = DoClean;
+    }
+
     public ModifyRiskEventsStatusRequest() {
     }
 
@@ -321,6 +349,9 @@ Filter criteria
                 this.Filters[i] = new Filters(source.Filters[i]);
             }
         }
+        if (source.DoClean != null) {
+            this.DoClean = new Boolean(source.DoClean);
+        }
     }
 
 
@@ -336,6 +367,7 @@ Filter criteria
         this.setParamSimple(map, prefix + "KillProcess", this.KillProcess);
         this.setParamArraySimple(map, prefix + "Ip.", this.Ip);
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
+        this.setParamSimple(map, prefix + "DoClean", this.DoClean);
 
     }
 }

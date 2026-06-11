@@ -46,7 +46,6 @@ public class SyncAssetScanResponse extends AbstractModel {
 
     /**
     * Task ID
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("TaskId")
     @Expose
@@ -108,10 +107,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Task ID
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Task ID 
      * @return TaskId Task ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getTaskId() {
         return this.TaskId;
@@ -119,9 +116,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Task ID
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param TaskId Task ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setTaskId(Long TaskId) {
         this.TaskId = TaskId;

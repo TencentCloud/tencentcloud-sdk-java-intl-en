@@ -59,14 +59,14 @@ public class ScheduledSqlTaskInfo extends AbstractModel {
     private ScheduledSqlResouceInfo DstResource;
 
     /**
-    * Creation Time
+    * Task creation time. Format: yyyy-MM-dd HH:mm:ss
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * Task Update Time
+    * Task update time. Format: yyyy-MM-dd HH:mm:ss
     */
     @SerializedName("UpdateTime")
     @Expose
@@ -94,7 +94,7 @@ public class ScheduledSqlTaskInfo extends AbstractModel {
     private String ScheduledSqlContent;
 
     /**
-    * Schedule Start Time
+    * Schedule start time. Format: yyyy-MM-dd HH:mm:ss
     */
     @SerializedName("ProcessStartTime")
     @Expose
@@ -108,14 +108,14 @@ public class ScheduledSqlTaskInfo extends AbstractModel {
     private Long ProcessType;
 
     /**
-    * Schedule End Time, required when process_type=2
+    * Schedule End Time, format: yyyy-MM-dd HH:mm:ss, required when process_type=2
     */
     @SerializedName("ProcessEndTime")
     @Expose
     private String ProcessEndTime;
 
     /**
-    * Scheduling Interval (Minutes)
+    * Scheduling cycle (minutes), 1-1440 minutes
     */
     @SerializedName("ProcessPeriod")
     @Expose
@@ -129,25 +129,39 @@ public class ScheduledSqlTaskInfo extends AbstractModel {
     private String ProcessTimeWindow;
 
     /**
-    * Execution Delay (Seconds)
+    * Execution delay (seconds), 0-120 seconds, default 60
     */
     @SerializedName("ProcessDelay")
     @Expose
     private Long ProcessDelay;
 
     /**
-    * Source Topic ID Region Information
+    * Regional information of the source topicId. Supported regions are listed in the region list document (https://www.tencentcloud.com/document/api/614/56474?from_cn_redirect=1#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8).
     */
     @SerializedName("SrcTopicRegion")
     @Expose
     private String SrcTopicRegion;
 
     /**
-    * Syntax Rules: 0 Lucene syntax, 1 CQL syntaxNote: This field may return null, indicating that no valid values can be obtained.
+    * Syntax rules. 0: Lucene syntax; 1: CQL syntax.
     */
     @SerializedName("SyntaxRule")
     @Expose
     private Long SyntaxRule;
+
+    /**
+    * Whether to enable service log shipping. Valid values: 1: disable; 2: enable.
+    */
+    @SerializedName("HasServicesLog")
+    @Expose
+    private Long HasServicesLog;
+
+    /**
+    * Full-text search tag. 1: Off, 2: On.
+    */
+    @SerializedName("FullQuery")
+    @Expose
+    private Long FullQuery;
 
     /**
      * Get ScheduledSql task id 
@@ -230,32 +244,32 @@ public class ScheduledSqlTaskInfo extends AbstractModel {
     }
 
     /**
-     * Get Creation Time 
-     * @return CreateTime Creation Time
+     * Get Task creation time. Format: yyyy-MM-dd HH:mm:ss 
+     * @return CreateTime Task creation time. Format: yyyy-MM-dd HH:mm:ss
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set Creation Time
-     * @param CreateTime Creation Time
+     * Set Task creation time. Format: yyyy-MM-dd HH:mm:ss
+     * @param CreateTime Task creation time. Format: yyyy-MM-dd HH:mm:ss
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get Task Update Time 
-     * @return UpdateTime Task Update Time
+     * Get Task update time. Format: yyyy-MM-dd HH:mm:ss 
+     * @return UpdateTime Task update time. Format: yyyy-MM-dd HH:mm:ss
      */
     public String getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set Task Update Time
-     * @param UpdateTime Task Update Time
+     * Set Task update time. Format: yyyy-MM-dd HH:mm:ss
+     * @param UpdateTime Task update time. Format: yyyy-MM-dd HH:mm:ss
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;
@@ -310,16 +324,16 @@ public class ScheduledSqlTaskInfo extends AbstractModel {
     }
 
     /**
-     * Get Schedule Start Time 
-     * @return ProcessStartTime Schedule Start Time
+     * Get Schedule start time. Format: yyyy-MM-dd HH:mm:ss 
+     * @return ProcessStartTime Schedule start time. Format: yyyy-MM-dd HH:mm:ss
      */
     public String getProcessStartTime() {
         return this.ProcessStartTime;
     }
 
     /**
-     * Set Schedule Start Time
-     * @param ProcessStartTime Schedule Start Time
+     * Set Schedule start time. Format: yyyy-MM-dd HH:mm:ss
+     * @param ProcessStartTime Schedule start time. Format: yyyy-MM-dd HH:mm:ss
      */
     public void setProcessStartTime(String ProcessStartTime) {
         this.ProcessStartTime = ProcessStartTime;
@@ -342,32 +356,32 @@ public class ScheduledSqlTaskInfo extends AbstractModel {
     }
 
     /**
-     * Get Schedule End Time, required when process_type=2 
-     * @return ProcessEndTime Schedule End Time, required when process_type=2
+     * Get Schedule End Time, format: yyyy-MM-dd HH:mm:ss, required when process_type=2 
+     * @return ProcessEndTime Schedule End Time, format: yyyy-MM-dd HH:mm:ss, required when process_type=2
      */
     public String getProcessEndTime() {
         return this.ProcessEndTime;
     }
 
     /**
-     * Set Schedule End Time, required when process_type=2
-     * @param ProcessEndTime Schedule End Time, required when process_type=2
+     * Set Schedule End Time, format: yyyy-MM-dd HH:mm:ss, required when process_type=2
+     * @param ProcessEndTime Schedule End Time, format: yyyy-MM-dd HH:mm:ss, required when process_type=2
      */
     public void setProcessEndTime(String ProcessEndTime) {
         this.ProcessEndTime = ProcessEndTime;
     }
 
     /**
-     * Get Scheduling Interval (Minutes) 
-     * @return ProcessPeriod Scheduling Interval (Minutes)
+     * Get Scheduling cycle (minutes), 1-1440 minutes 
+     * @return ProcessPeriod Scheduling cycle (minutes), 1-1440 minutes
      */
     public Long getProcessPeriod() {
         return this.ProcessPeriod;
     }
 
     /**
-     * Set Scheduling Interval (Minutes)
-     * @param ProcessPeriod Scheduling Interval (Minutes)
+     * Set Scheduling cycle (minutes), 1-1440 minutes
+     * @param ProcessPeriod Scheduling cycle (minutes), 1-1440 minutes
      */
     public void setProcessPeriod(Long ProcessPeriod) {
         this.ProcessPeriod = ProcessPeriod;
@@ -390,51 +404,83 @@ public class ScheduledSqlTaskInfo extends AbstractModel {
     }
 
     /**
-     * Get Execution Delay (Seconds) 
-     * @return ProcessDelay Execution Delay (Seconds)
+     * Get Execution delay (seconds), 0-120 seconds, default 60 
+     * @return ProcessDelay Execution delay (seconds), 0-120 seconds, default 60
      */
     public Long getProcessDelay() {
         return this.ProcessDelay;
     }
 
     /**
-     * Set Execution Delay (Seconds)
-     * @param ProcessDelay Execution Delay (Seconds)
+     * Set Execution delay (seconds), 0-120 seconds, default 60
+     * @param ProcessDelay Execution delay (seconds), 0-120 seconds, default 60
      */
     public void setProcessDelay(Long ProcessDelay) {
         this.ProcessDelay = ProcessDelay;
     }
 
     /**
-     * Get Source Topic ID Region Information 
-     * @return SrcTopicRegion Source Topic ID Region Information
+     * Get Regional information of the source topicId. Supported regions are listed in the region list document (https://www.tencentcloud.com/document/api/614/56474?from_cn_redirect=1#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8). 
+     * @return SrcTopicRegion Regional information of the source topicId. Supported regions are listed in the region list document (https://www.tencentcloud.com/document/api/614/56474?from_cn_redirect=1#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8).
      */
     public String getSrcTopicRegion() {
         return this.SrcTopicRegion;
     }
 
     /**
-     * Set Source Topic ID Region Information
-     * @param SrcTopicRegion Source Topic ID Region Information
+     * Set Regional information of the source topicId. Supported regions are listed in the region list document (https://www.tencentcloud.com/document/api/614/56474?from_cn_redirect=1#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8).
+     * @param SrcTopicRegion Regional information of the source topicId. Supported regions are listed in the region list document (https://www.tencentcloud.com/document/api/614/56474?from_cn_redirect=1#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8).
      */
     public void setSrcTopicRegion(String SrcTopicRegion) {
         this.SrcTopicRegion = SrcTopicRegion;
     }
 
     /**
-     * Get Syntax Rules: 0 Lucene syntax, 1 CQL syntaxNote: This field may return null, indicating that no valid values can be obtained. 
-     * @return SyntaxRule Syntax Rules: 0 Lucene syntax, 1 CQL syntaxNote: This field may return null, indicating that no valid values can be obtained.
+     * Get Syntax rules. 0: Lucene syntax; 1: CQL syntax. 
+     * @return SyntaxRule Syntax rules. 0: Lucene syntax; 1: CQL syntax.
      */
     public Long getSyntaxRule() {
         return this.SyntaxRule;
     }
 
     /**
-     * Set Syntax Rules: 0 Lucene syntax, 1 CQL syntaxNote: This field may return null, indicating that no valid values can be obtained.
-     * @param SyntaxRule Syntax Rules: 0 Lucene syntax, 1 CQL syntaxNote: This field may return null, indicating that no valid values can be obtained.
+     * Set Syntax rules. 0: Lucene syntax; 1: CQL syntax.
+     * @param SyntaxRule Syntax rules. 0: Lucene syntax; 1: CQL syntax.
      */
     public void setSyntaxRule(Long SyntaxRule) {
         this.SyntaxRule = SyntaxRule;
+    }
+
+    /**
+     * Get Whether to enable service log shipping. Valid values: 1: disable; 2: enable. 
+     * @return HasServicesLog Whether to enable service log shipping. Valid values: 1: disable; 2: enable.
+     */
+    public Long getHasServicesLog() {
+        return this.HasServicesLog;
+    }
+
+    /**
+     * Set Whether to enable service log shipping. Valid values: 1: disable; 2: enable.
+     * @param HasServicesLog Whether to enable service log shipping. Valid values: 1: disable; 2: enable.
+     */
+    public void setHasServicesLog(Long HasServicesLog) {
+        this.HasServicesLog = HasServicesLog;
+    }
+
+    /**
+     * Get Full-text search tag. 1: Off, 2: On. 
+     * @return FullQuery Full-text search tag. 1: Off, 2: On.
+     */
+    public Long getFullQuery() {
+        return this.FullQuery;
+    }
+
+    /**
+     * Set Full-text search tag. 1: Off, 2: On.
+     * @param FullQuery Full-text search tag. 1: Off, 2: On.
+     */
+    public void setFullQuery(Long FullQuery) {
+        this.FullQuery = FullQuery;
     }
 
     public ScheduledSqlTaskInfo() {
@@ -499,6 +545,12 @@ public class ScheduledSqlTaskInfo extends AbstractModel {
         if (source.SyntaxRule != null) {
             this.SyntaxRule = new Long(source.SyntaxRule);
         }
+        if (source.HasServicesLog != null) {
+            this.HasServicesLog = new Long(source.HasServicesLog);
+        }
+        if (source.FullQuery != null) {
+            this.FullQuery = new Long(source.FullQuery);
+        }
     }
 
 
@@ -524,6 +576,8 @@ public class ScheduledSqlTaskInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "ProcessDelay", this.ProcessDelay);
         this.setParamSimple(map, prefix + "SrcTopicRegion", this.SrcTopicRegion);
         this.setParamSimple(map, prefix + "SyntaxRule", this.SyntaxRule);
+        this.setParamSimple(map, prefix + "HasServicesLog", this.HasServicesLog);
+        this.setParamSimple(map, prefix + "FullQuery", this.FullQuery);
 
     }
 }

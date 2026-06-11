@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class OpenAuditServiceRequest extends AbstractModel {
 
     /**
-    * Instance ID
+    * Instance ID.
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Log retention period
+    * Log retention period.
     */
     @SerializedName("LogExpireDay")
     @Expose
     private Long LogExpireDay;
 
     /**
-    * Frequent log retention period
+    * Frequent log retention period.
     */
     @SerializedName("HighLogExpireDay")
     @Expose
@@ -59,55 +59,55 @@ public class OpenAuditServiceRequest extends AbstractModel {
     private String [] RuleTemplateIds;
 
     /**
-    * 
+    * Audit type. true - Full audit; default false - Rule-based audit.
     */
     @SerializedName("AuditAll")
     @Expose
     private Boolean AuditAll;
 
     /**
-     * Get Instance ID 
-     * @return InstanceId Instance ID
+     * Get Instance ID. 
+     * @return InstanceId Instance ID.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Instance ID
-     * @param InstanceId Instance ID
+     * Set Instance ID.
+     * @param InstanceId Instance ID.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Log retention period 
-     * @return LogExpireDay Log retention period
+     * Get Log retention period. 
+     * @return LogExpireDay Log retention period.
      */
     public Long getLogExpireDay() {
         return this.LogExpireDay;
     }
 
     /**
-     * Set Log retention period
-     * @param LogExpireDay Log retention period
+     * Set Log retention period.
+     * @param LogExpireDay Log retention period.
      */
     public void setLogExpireDay(Long LogExpireDay) {
         this.LogExpireDay = LogExpireDay;
     }
 
     /**
-     * Get Frequent log retention period 
-     * @return HighLogExpireDay Frequent log retention period
+     * Get Frequent log retention period. 
+     * @return HighLogExpireDay Frequent log retention period.
      */
     public Long getHighLogExpireDay() {
         return this.HighLogExpireDay;
     }
 
     /**
-     * Set Frequent log retention period
-     * @param HighLogExpireDay Frequent log retention period
+     * Set Frequent log retention period.
+     * @param HighLogExpireDay Frequent log retention period.
      */
     public void setHighLogExpireDay(Long HighLogExpireDay) {
         this.HighLogExpireDay = HighLogExpireDay;
@@ -150,16 +150,16 @@ public class OpenAuditServiceRequest extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return AuditAll 
+     * Get Audit type. true - Full audit; default false - Rule-based audit. 
+     * @return AuditAll Audit type. true - Full audit; default false - Rule-based audit.
      */
     public Boolean getAuditAll() {
         return this.AuditAll;
     }
 
     /**
-     * Set 
-     * @param AuditAll 
+     * Set Audit type. true - Full audit; default false - Rule-based audit.
+     * @param AuditAll Audit type. true - Full audit; default false - Rule-based audit.
      */
     public void setAuditAll(Boolean AuditAll) {
         this.AuditAll = AuditAll;

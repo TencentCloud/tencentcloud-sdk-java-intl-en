@@ -25,7 +25,6 @@ public class DescribeBaselineHostTopResponse extends AbstractModel {
 
     /**
     * Top host baseline policy events
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("BaselineHostTopList")
     @Expose
@@ -39,10 +38,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Top host baseline policy events
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Top host baseline policy events 
      * @return BaselineHostTopList Top host baseline policy events
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public BaselineHostTopList [] getBaselineHostTopList() {
         return this.BaselineHostTopList;
@@ -50,9 +47,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Top host baseline policy events
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param BaselineHostTopList Top host baseline policy events
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setBaselineHostTopList(BaselineHostTopList [] BaselineHostTopList) {
         this.BaselineHostTopList = BaselineHostTopList;

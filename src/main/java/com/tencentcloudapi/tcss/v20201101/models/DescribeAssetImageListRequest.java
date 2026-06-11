@@ -24,135 +24,115 @@ import java.util.HashMap;
 public class DescribeAssetImageListRequest extends AbstractModel {
 
     /**
-    * Number of results to be returned. Default value: `10`. Maximum value: `100`.
+    * <p>Number of items to return. The default number is 10, and the maximum number is 100.</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * Offset. Default value: `0`.
+    * <p>Offset. Default value: 0.</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * Filter
-<li>ImageName- String - Required: No - Image name</li>
-<li>ScanStatus - String - Required: No - Image scanning status. Valid values: `notScan`, `scanning`, `scanned`, `scanErr`.</li>
-<li>ImageID- String - Required: No - Image ID</li>
-<li>SecurityRisk- String - Required: No - Security risks. Valid values: `VulCnt`, `VirusCnt`, `RiskCnt`, `IsTrustImage`.</li>
+    * <p>Filter conditions.</p><li>ImageName - String - Required: No - Image name filter;</li><li>ScanStatus - String - Required: No - Image scan status: notScan, scanning, scanned, and scanErr</li><li>ImageID - String - Required: No - Image ID filter;</li><li>SecurityRisk - String - Required: No - Security risk: VirusCnt, RiskCnt, IsTrustImage, CriticalLevelVul, HighLevelVul, MediumLevelVul, and LowLevelVul.</li>
     */
     @SerializedName("Filters")
     @Expose
     private AssetFilters [] Filters;
 
     /**
-    * Sorting field
+    * <p>Sorting field.</p>
     */
     @SerializedName("By")
     @Expose
     private String By;
 
     /**
-    * Sorting order. Valid values: `asc`, `desc`.
+    * <p>Sorting method. Valid values: asc and desc.</p>
     */
     @SerializedName("Order")
     @Expose
     private String Order;
 
     /**
-     * Get Number of results to be returned. Default value: `10`. Maximum value: `100`. 
-     * @return Limit Number of results to be returned. Default value: `10`. Maximum value: `100`.
+     * Get <p>Number of items to return. The default number is 10, and the maximum number is 100.</p> 
+     * @return Limit <p>Number of items to return. The default number is 10, and the maximum number is 100.</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Number of results to be returned. Default value: `10`. Maximum value: `100`.
-     * @param Limit Number of results to be returned. Default value: `10`. Maximum value: `100`.
+     * Set <p>Number of items to return. The default number is 10, and the maximum number is 100.</p>
+     * @param Limit <p>Number of items to return. The default number is 10, and the maximum number is 100.</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get Offset. Default value: `0`. 
-     * @return Offset Offset. Default value: `0`.
+     * Get <p>Offset. Default value: 0.</p> 
+     * @return Offset <p>Offset. Default value: 0.</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Offset. Default value: `0`.
-     * @param Offset Offset. Default value: `0`.
+     * Set <p>Offset. Default value: 0.</p>
+     * @param Offset <p>Offset. Default value: 0.</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get Filter
-<li>ImageName- String - Required: No - Image name</li>
-<li>ScanStatus - String - Required: No - Image scanning status. Valid values: `notScan`, `scanning`, `scanned`, `scanErr`.</li>
-<li>ImageID- String - Required: No - Image ID</li>
-<li>SecurityRisk- String - Required: No - Security risks. Valid values: `VulCnt`, `VirusCnt`, `RiskCnt`, `IsTrustImage`.</li> 
-     * @return Filters Filter
-<li>ImageName- String - Required: No - Image name</li>
-<li>ScanStatus - String - Required: No - Image scanning status. Valid values: `notScan`, `scanning`, `scanned`, `scanErr`.</li>
-<li>ImageID- String - Required: No - Image ID</li>
-<li>SecurityRisk- String - Required: No - Security risks. Valid values: `VulCnt`, `VirusCnt`, `RiskCnt`, `IsTrustImage`.</li>
+     * Get <p>Filter conditions.</p><li>ImageName - String - Required: No - Image name filter;</li><li>ScanStatus - String - Required: No - Image scan status: notScan, scanning, scanned, and scanErr</li><li>ImageID - String - Required: No - Image ID filter;</li><li>SecurityRisk - String - Required: No - Security risk: VirusCnt, RiskCnt, IsTrustImage, CriticalLevelVul, HighLevelVul, MediumLevelVul, and LowLevelVul.</li> 
+     * @return Filters <p>Filter conditions.</p><li>ImageName - String - Required: No - Image name filter;</li><li>ScanStatus - String - Required: No - Image scan status: notScan, scanning, scanned, and scanErr</li><li>ImageID - String - Required: No - Image ID filter;</li><li>SecurityRisk - String - Required: No - Security risk: VirusCnt, RiskCnt, IsTrustImage, CriticalLevelVul, HighLevelVul, MediumLevelVul, and LowLevelVul.</li>
      */
     public AssetFilters [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set Filter
-<li>ImageName- String - Required: No - Image name</li>
-<li>ScanStatus - String - Required: No - Image scanning status. Valid values: `notScan`, `scanning`, `scanned`, `scanErr`.</li>
-<li>ImageID- String - Required: No - Image ID</li>
-<li>SecurityRisk- String - Required: No - Security risks. Valid values: `VulCnt`, `VirusCnt`, `RiskCnt`, `IsTrustImage`.</li>
-     * @param Filters Filter
-<li>ImageName- String - Required: No - Image name</li>
-<li>ScanStatus - String - Required: No - Image scanning status. Valid values: `notScan`, `scanning`, `scanned`, `scanErr`.</li>
-<li>ImageID- String - Required: No - Image ID</li>
-<li>SecurityRisk- String - Required: No - Security risks. Valid values: `VulCnt`, `VirusCnt`, `RiskCnt`, `IsTrustImage`.</li>
+     * Set <p>Filter conditions.</p><li>ImageName - String - Required: No - Image name filter;</li><li>ScanStatus - String - Required: No - Image scan status: notScan, scanning, scanned, and scanErr</li><li>ImageID - String - Required: No - Image ID filter;</li><li>SecurityRisk - String - Required: No - Security risk: VirusCnt, RiskCnt, IsTrustImage, CriticalLevelVul, HighLevelVul, MediumLevelVul, and LowLevelVul.</li>
+     * @param Filters <p>Filter conditions.</p><li>ImageName - String - Required: No - Image name filter;</li><li>ScanStatus - String - Required: No - Image scan status: notScan, scanning, scanned, and scanErr</li><li>ImageID - String - Required: No - Image ID filter;</li><li>SecurityRisk - String - Required: No - Security risk: VirusCnt, RiskCnt, IsTrustImage, CriticalLevelVul, HighLevelVul, MediumLevelVul, and LowLevelVul.</li>
      */
     public void setFilters(AssetFilters [] Filters) {
         this.Filters = Filters;
     }
 
     /**
-     * Get Sorting field 
-     * @return By Sorting field
+     * Get <p>Sorting field.</p> 
+     * @return By <p>Sorting field.</p>
      */
     public String getBy() {
         return this.By;
     }
 
     /**
-     * Set Sorting field
-     * @param By Sorting field
+     * Set <p>Sorting field.</p>
+     * @param By <p>Sorting field.</p>
      */
     public void setBy(String By) {
         this.By = By;
     }
 
     /**
-     * Get Sorting order. Valid values: `asc`, `desc`. 
-     * @return Order Sorting order. Valid values: `asc`, `desc`.
+     * Get <p>Sorting method. Valid values: asc and desc.</p> 
+     * @return Order <p>Sorting method. Valid values: asc and desc.</p>
      */
     public String getOrder() {
         return this.Order;
     }
 
     /**
-     * Set Sorting order. Valid values: `asc`, `desc`.
-     * @param Order Sorting order. Valid values: `asc`, `desc`.
+     * Set <p>Sorting method. Valid values: asc and desc.</p>
+     * @param Order <p>Sorting method. Valid values: asc and desc.</p>
      */
     public void setOrder(String Order) {
         this.Order = Order;

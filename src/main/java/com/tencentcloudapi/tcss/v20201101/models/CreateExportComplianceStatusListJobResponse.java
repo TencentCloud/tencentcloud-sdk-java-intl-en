@@ -24,8 +24,7 @@ import java.util.HashMap;
 public class CreateExportComplianceStatusListJobResponse extends AbstractModel {
 
     /**
-    * ID of the created export task
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Return to create the ID of the export task
     */
     @SerializedName("JobId")
     @Expose
@@ -39,20 +38,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get ID of the created export task
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return JobId ID of the created export task
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Return to create the ID of the export task 
+     * @return JobId Return to create the ID of the export task
      */
     public String getJobId() {
         return this.JobId;
     }
 
     /**
-     * Set ID of the created export task
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param JobId ID of the created export task
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Return to create the ID of the export task
+     * @param JobId Return to create the ID of the export task
      */
     public void setJobId(String JobId) {
         this.JobId = JobId;

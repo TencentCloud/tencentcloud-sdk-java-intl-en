@@ -38,14 +38,14 @@ public class UpgradeProxy extends AbstractModel {
     private Long Mem;
 
     /**
-    * 
+    * Proxy node information
     */
     @SerializedName("ProxyZones")
     @Expose
     private ProxyZone [] ProxyZones;
 
     /**
-    * 
+    * Rebalance
     */
     @SerializedName("ReloadBalance")
     @Expose
@@ -84,32 +84,32 @@ public class UpgradeProxy extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return ProxyZones 
+     * Get Proxy node information 
+     * @return ProxyZones Proxy node information
      */
     public ProxyZone [] getProxyZones() {
         return this.ProxyZones;
     }
 
     /**
-     * Set 
-     * @param ProxyZones 
+     * Set Proxy node information
+     * @param ProxyZones Proxy node information
      */
     public void setProxyZones(ProxyZone [] ProxyZones) {
         this.ProxyZones = ProxyZones;
     }
 
     /**
-     * Get  
-     * @return ReloadBalance 
+     * Get Rebalance 
+     * @return ReloadBalance Rebalance
      */
     public String getReloadBalance() {
         return this.ReloadBalance;
     }
 
     /**
-     * Set 
-     * @param ReloadBalance 
+     * Set Rebalance
+     * @param ReloadBalance Rebalance
      */
     public void setReloadBalance(String ReloadBalance) {
         this.ReloadBalance = ReloadBalance;

@@ -25,7 +25,6 @@ public class BaselineRuleTopInfo extends AbstractModel {
 
     /**
     * Baseline detection item name
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("RuleName")
     @Expose
@@ -33,7 +32,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Detection item hazard level
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Level")
     @Expose
@@ -41,25 +39,21 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Total number of events
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("EventCount")
     @Expose
     private Long EventCount;
 
     /**
-    * Detection Item ID
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Detection item ID
     */
     @SerializedName("RuleId")
     @Expose
     private Long RuleId;
 
     /**
-     * Get Baseline detection item name
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Baseline detection item name 
      * @return RuleName Baseline detection item name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getRuleName() {
         return this.RuleName;
@@ -67,19 +61,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Baseline detection item name
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param RuleName Baseline detection item name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setRuleName(String RuleName) {
         this.RuleName = RuleName;
     }
 
     /**
-     * Get Detection item hazard level
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Detection item hazard level 
      * @return Level Detection item hazard level
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getLevel() {
         return this.Level;
@@ -87,19 +77,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Detection item hazard level
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Level Detection item hazard level
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setLevel(Long Level) {
         this.Level = Level;
     }
 
     /**
-     * Get Total number of events
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Total number of events 
      * @return EventCount Total number of events
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getEventCount() {
         return this.EventCount;
@@ -107,29 +93,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Total number of events
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param EventCount Total number of events
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setEventCount(Long EventCount) {
         this.EventCount = EventCount;
     }
 
     /**
-     * Get Detection Item ID
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return RuleId Detection Item ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Detection item ID 
+     * @return RuleId Detection item ID
      */
     public Long getRuleId() {
         return this.RuleId;
     }
 
     /**
-     * Set Detection Item ID
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param RuleId Detection Item ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Detection item ID
+     * @param RuleId Detection item ID
      */
     public void setRuleId(Long RuleId) {
         this.RuleId = RuleId;

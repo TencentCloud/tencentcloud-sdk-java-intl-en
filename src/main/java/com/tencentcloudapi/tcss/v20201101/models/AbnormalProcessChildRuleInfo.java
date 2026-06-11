@@ -24,112 +24,115 @@ import java.util.HashMap;
 public class AbnormalProcessChildRuleInfo extends AbstractModel {
 
     /**
-    * Policy mode. `RULE_MODE_RELEASE`: Allow.
-   `RULE_MODE_ALERT`: Alert.
-   `RULE_MODE_HOLDUP`: Block.
-    */
-    @SerializedName("RuleMode")
-    @Expose
-    private String RuleMode;
-
-    /**
-    * Process path
+    * <p>Process path.</p>
     */
     @SerializedName("ProcessPath")
     @Expose
     private String ProcessPath;
 
     /**
-    * Sub-policy ID
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Policy mode: RULE_MODE_RELEASE: allow<br>   RULE_MODE_ALERT: alarm<br>   RULE_MODE_HOLDUP: block</p>
+    */
+    @SerializedName("RuleMode")
+    @Expose
+    private String RuleMode;
+
+    /**
+    * <p>Command line parameters.</p>
+    */
+    @SerializedName("CmdLine")
+    @Expose
+    private String CmdLine;
+
+    /**
+    * <p>Sub-policy ID.</p>
     */
     @SerializedName("RuleId")
     @Expose
     private String RuleId;
 
     /**
-    * Severity. Valid values: `HIGH` (high); `MIDDLE` (medium); `LOW` (low).
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Threat level: HIGH, MIDDLE, and LOW.</p>
     */
     @SerializedName("RuleLevel")
     @Expose
     private String RuleLevel;
 
     /**
-     * Get Policy mode. `RULE_MODE_RELEASE`: Allow.
-   `RULE_MODE_ALERT`: Alert.
-   `RULE_MODE_HOLDUP`: Block. 
-     * @return RuleMode Policy mode. `RULE_MODE_RELEASE`: Allow.
-   `RULE_MODE_ALERT`: Alert.
-   `RULE_MODE_HOLDUP`: Block.
-     */
-    public String getRuleMode() {
-        return this.RuleMode;
-    }
-
-    /**
-     * Set Policy mode. `RULE_MODE_RELEASE`: Allow.
-   `RULE_MODE_ALERT`: Alert.
-   `RULE_MODE_HOLDUP`: Block.
-     * @param RuleMode Policy mode. `RULE_MODE_RELEASE`: Allow.
-   `RULE_MODE_ALERT`: Alert.
-   `RULE_MODE_HOLDUP`: Block.
-     */
-    public void setRuleMode(String RuleMode) {
-        this.RuleMode = RuleMode;
-    }
-
-    /**
-     * Get Process path 
-     * @return ProcessPath Process path
+     * Get <p>Process path.</p> 
+     * @return ProcessPath <p>Process path.</p>
      */
     public String getProcessPath() {
         return this.ProcessPath;
     }
 
     /**
-     * Set Process path
-     * @param ProcessPath Process path
+     * Set <p>Process path.</p>
+     * @param ProcessPath <p>Process path.</p>
      */
     public void setProcessPath(String ProcessPath) {
         this.ProcessPath = ProcessPath;
     }
 
     /**
-     * Get Sub-policy ID
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return RuleId Sub-policy ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Policy mode: RULE_MODE_RELEASE: allow<br>   RULE_MODE_ALERT: alarm<br>   RULE_MODE_HOLDUP: block</p> 
+     * @return RuleMode <p>Policy mode: RULE_MODE_RELEASE: allow<br>   RULE_MODE_ALERT: alarm<br>   RULE_MODE_HOLDUP: block</p>
+     */
+    public String getRuleMode() {
+        return this.RuleMode;
+    }
+
+    /**
+     * Set <p>Policy mode: RULE_MODE_RELEASE: allow<br>   RULE_MODE_ALERT: alarm<br>   RULE_MODE_HOLDUP: block</p>
+     * @param RuleMode <p>Policy mode: RULE_MODE_RELEASE: allow<br>   RULE_MODE_ALERT: alarm<br>   RULE_MODE_HOLDUP: block</p>
+     */
+    public void setRuleMode(String RuleMode) {
+        this.RuleMode = RuleMode;
+    }
+
+    /**
+     * Get <p>Command line parameters.</p> 
+     * @return CmdLine <p>Command line parameters.</p>
+     */
+    public String getCmdLine() {
+        return this.CmdLine;
+    }
+
+    /**
+     * Set <p>Command line parameters.</p>
+     * @param CmdLine <p>Command line parameters.</p>
+     */
+    public void setCmdLine(String CmdLine) {
+        this.CmdLine = CmdLine;
+    }
+
+    /**
+     * Get <p>Sub-policy ID.</p> 
+     * @return RuleId <p>Sub-policy ID.</p>
      */
     public String getRuleId() {
         return this.RuleId;
     }
 
     /**
-     * Set Sub-policy ID
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param RuleId Sub-policy ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Sub-policy ID.</p>
+     * @param RuleId <p>Sub-policy ID.</p>
      */
     public void setRuleId(String RuleId) {
         this.RuleId = RuleId;
     }
 
     /**
-     * Get Severity. Valid values: `HIGH` (high); `MIDDLE` (medium); `LOW` (low).
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return RuleLevel Severity. Valid values: `HIGH` (high); `MIDDLE` (medium); `LOW` (low).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Threat level: HIGH, MIDDLE, and LOW.</p> 
+     * @return RuleLevel <p>Threat level: HIGH, MIDDLE, and LOW.</p>
      */
     public String getRuleLevel() {
         return this.RuleLevel;
     }
 
     /**
-     * Set Severity. Valid values: `HIGH` (high); `MIDDLE` (medium); `LOW` (low).
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param RuleLevel Severity. Valid values: `HIGH` (high); `MIDDLE` (medium); `LOW` (low).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Threat level: HIGH, MIDDLE, and LOW.</p>
+     * @param RuleLevel <p>Threat level: HIGH, MIDDLE, and LOW.</p>
      */
     public void setRuleLevel(String RuleLevel) {
         this.RuleLevel = RuleLevel;
@@ -143,11 +146,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public AbnormalProcessChildRuleInfo(AbnormalProcessChildRuleInfo source) {
+        if (source.ProcessPath != null) {
+            this.ProcessPath = new String(source.ProcessPath);
+        }
         if (source.RuleMode != null) {
             this.RuleMode = new String(source.RuleMode);
         }
-        if (source.ProcessPath != null) {
-            this.ProcessPath = new String(source.ProcessPath);
+        if (source.CmdLine != null) {
+            this.CmdLine = new String(source.CmdLine);
         }
         if (source.RuleId != null) {
             this.RuleId = new String(source.RuleId);
@@ -162,8 +168,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "RuleMode", this.RuleMode);
         this.setParamSimple(map, prefix + "ProcessPath", this.ProcessPath);
+        this.setParamSimple(map, prefix + "RuleMode", this.RuleMode);
+        this.setParamSimple(map, prefix + "CmdLine", this.CmdLine);
         this.setParamSimple(map, prefix + "RuleId", this.RuleId);
         this.setParamSimple(map, prefix + "RuleLevel", this.RuleLevel);
 

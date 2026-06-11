@@ -32,7 +32,6 @@ public class DescribePublicProxyInstallCommandResponse extends AbstractModel {
 
     /**
     * Keepalived Installation Command
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("KeepAliveCommand")
     @Expose
@@ -62,10 +61,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Keepalived Installation Command
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Keepalived Installation Command 
      * @return KeepAliveCommand Keepalived Installation Command
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getKeepAliveCommand() {
         return this.KeepAliveCommand;
@@ -73,9 +70,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Keepalived Installation Command
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param KeepAliveCommand Keepalived Installation Command
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setKeepAliveCommand(String KeepAliveCommand) {
         this.KeepAliveCommand = KeepAliveCommand;

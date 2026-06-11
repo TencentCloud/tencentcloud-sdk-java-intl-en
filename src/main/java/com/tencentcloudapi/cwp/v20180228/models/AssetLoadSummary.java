@@ -39,7 +39,6 @@ public class AssetLoadSummary extends AbstractModel {
 
     /**
     * Top 5 Load
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Top5")
     @Expose
@@ -90,10 +89,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Top 5 Load
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Top 5 Load 
      * @return Top5 Top 5 Load
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public AssetLoadDetail [] getTop5() {
         return this.Top5;
@@ -101,9 +98,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Top 5 Load
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Top5 Top 5 Load
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setTop5(AssetLoadDetail [] Top5) {
         this.Top5 = Top5;

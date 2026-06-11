@@ -81,7 +81,6 @@ public class NetAttackEvent extends AbstractModel {
 
     /**
     * Host Additional Information
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("MachineExtraInfo")
     @Expose
@@ -116,7 +115,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long VulDefenceStatus;
 
     /**
-    * Machine payment edition. 0: Basic Edition; 1: Professional Edition; 2: Premium Edition; 3: General Discount Edition
+    * Machine payment version, 0 Basic version, 1 Pro edition, 2 Flagship edition, 3 Lightweight edition
     */
     @SerializedName("PayVersion")
     @Expose
@@ -142,6 +141,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
     @SerializedName("New")
     @Expose
     private Boolean New;
+
+    /**
+    * Whether application protection is enabled. 0: disabled, 1: enabled
+    */
+    @SerializedName("RaspOpen")
+    @Expose
+    private Long RaspOpen;
+
+    /**
+    * ip analysis
+    */
+    @SerializedName("IPAnalyse")
+    @Expose
+    private IPAnalyse IPAnalyse;
 
     /**
      * Get Log ID 
@@ -272,10 +285,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Host Additional Information
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Host Additional Information 
      * @return MachineExtraInfo Host Additional Information
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public MachineExtraInfo getMachineExtraInfo() {
         return this.MachineExtraInfo;
@@ -283,9 +294,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Host Additional Information
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param MachineExtraInfo Host Additional Information
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setMachineExtraInfo(MachineExtraInfo MachineExtraInfo) {
         this.MachineExtraInfo = MachineExtraInfo;
@@ -356,16 +365,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Machine payment edition. 0: Basic Edition; 1: Professional Edition; 2: Premium Edition; 3: General Discount Edition 
-     * @return PayVersion Machine payment edition. 0: Basic Edition; 1: Professional Edition; 2: Premium Edition; 3: General Discount Edition
+     * Get Machine payment version, 0 Basic version, 1 Pro edition, 2 Flagship edition, 3 Lightweight edition 
+     * @return PayVersion Machine payment version, 0 Basic version, 1 Pro edition, 2 Flagship edition, 3 Lightweight edition
      */
     public Long getPayVersion() {
         return this.PayVersion;
     }
 
     /**
-     * Set Machine payment edition. 0: Basic Edition; 1: Professional Edition; 2: Premium Edition; 3: General Discount Edition
-     * @param PayVersion Machine payment edition. 0: Basic Edition; 1: Professional Edition; 2: Premium Edition; 3: General Discount Edition
+     * Set Machine payment version, 0 Basic version, 1 Pro edition, 2 Flagship edition, 3 Lightweight edition
+     * @param PayVersion Machine payment version, 0 Basic version, 1 Pro edition, 2 Flagship edition, 3 Lightweight edition
      */
     public void setPayVersion(Long PayVersion) {
         this.PayVersion = PayVersion;
@@ -417,6 +426,38 @@ Note: This field may return null, indicating that no valid values can be obtaine
      */
     public void setNew(Boolean New) {
         this.New = New;
+    }
+
+    /**
+     * Get Whether application protection is enabled. 0: disabled, 1: enabled 
+     * @return RaspOpen Whether application protection is enabled. 0: disabled, 1: enabled
+     */
+    public Long getRaspOpen() {
+        return this.RaspOpen;
+    }
+
+    /**
+     * Set Whether application protection is enabled. 0: disabled, 1: enabled
+     * @param RaspOpen Whether application protection is enabled. 0: disabled, 1: enabled
+     */
+    public void setRaspOpen(Long RaspOpen) {
+        this.RaspOpen = RaspOpen;
+    }
+
+    /**
+     * Get ip analysis 
+     * @return IPAnalyse ip analysis
+     */
+    public IPAnalyse getIPAnalyse() {
+        return this.IPAnalyse;
+    }
+
+    /**
+     * Set ip analysis
+     * @param IPAnalyse ip analysis
+     */
+    public void setIPAnalyse(IPAnalyse IPAnalyse) {
+        this.IPAnalyse = IPAnalyse;
     }
 
     public NetAttackEvent() {
@@ -478,6 +519,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.New != null) {
             this.New = new Boolean(source.New);
         }
+        if (source.RaspOpen != null) {
+            this.RaspOpen = new Long(source.RaspOpen);
+        }
+        if (source.IPAnalyse != null) {
+            this.IPAnalyse = new IPAnalyse(source.IPAnalyse);
+        }
     }
 
 
@@ -502,6 +549,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "Quuid", this.Quuid);
         this.setParamSimple(map, prefix + "Count", this.Count);
         this.setParamSimple(map, prefix + "New", this.New);
+        this.setParamSimple(map, prefix + "RaspOpen", this.RaspOpen);
+        this.setParamObj(map, prefix + "IPAnalyse.", this.IPAnalyse);
 
     }
 }

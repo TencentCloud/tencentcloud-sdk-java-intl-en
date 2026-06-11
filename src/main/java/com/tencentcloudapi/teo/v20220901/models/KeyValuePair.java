@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class KeyValuePair extends AbstractModel {
 
     /**
-    * Key name. Each key name cannot be empty, with a length of 1-512 characters. Allowed characters include letters, digits, hyphens, and underscores.
+    * Key name. Each key name cannot be empty, with a length of 1-512 characters, and supports valid UTF-8 characters.
     */
     @SerializedName("Key")
     @Expose
@@ -45,16 +45,16 @@ public class KeyValuePair extends AbstractModel {
     private String Expiration;
 
     /**
-     * Get Key name. Each key name cannot be empty, with a length of 1-512 characters. Allowed characters include letters, digits, hyphens, and underscores. 
-     * @return Key Key name. Each key name cannot be empty, with a length of 1-512 characters. Allowed characters include letters, digits, hyphens, and underscores.
+     * Get Key name. Each key name cannot be empty, with a length of 1-512 characters, and supports valid UTF-8 characters. 
+     * @return Key Key name. Each key name cannot be empty, with a length of 1-512 characters, and supports valid UTF-8 characters.
      */
     public String getKey() {
         return this.Key;
     }
 
     /**
-     * Set Key name. Each key name cannot be empty, with a length of 1-512 characters. Allowed characters include letters, digits, hyphens, and underscores.
-     * @param Key Key name. Each key name cannot be empty, with a length of 1-512 characters. Allowed characters include letters, digits, hyphens, and underscores.
+     * Set Key name. Each key name cannot be empty, with a length of 1-512 characters, and supports valid UTF-8 characters.
+     * @param Key Key name. Each key name cannot be empty, with a length of 1-512 characters, and supports valid UTF-8 characters.
      */
     public void setKey(String Key) {
         this.Key = Key;

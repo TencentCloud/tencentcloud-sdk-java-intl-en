@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class CreateVulScanTaskResponse extends AbstractModel {
 
     /**
-    * ID of the task to scan local images again for vulnerabilities
+    * <p>Task ID for local image re-vulnerability scanning</p>
     */
     @SerializedName("LocalTaskID")
     @Expose
     private Long LocalTaskID;
 
     /**
-    * ID of the task to scan repository images again for vulnerabilities
+    * <p>Task ID for repository image re-vulnerability scanning</p>
     */
     @SerializedName("RegistryTaskID")
     @Expose
@@ -45,32 +45,32 @@ public class CreateVulScanTaskResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get ID of the task to scan local images again for vulnerabilities 
-     * @return LocalTaskID ID of the task to scan local images again for vulnerabilities
+     * Get <p>Task ID for local image re-vulnerability scanning</p> 
+     * @return LocalTaskID <p>Task ID for local image re-vulnerability scanning</p>
      */
     public Long getLocalTaskID() {
         return this.LocalTaskID;
     }
 
     /**
-     * Set ID of the task to scan local images again for vulnerabilities
-     * @param LocalTaskID ID of the task to scan local images again for vulnerabilities
+     * Set <p>Task ID for local image re-vulnerability scanning</p>
+     * @param LocalTaskID <p>Task ID for local image re-vulnerability scanning</p>
      */
     public void setLocalTaskID(Long LocalTaskID) {
         this.LocalTaskID = LocalTaskID;
     }
 
     /**
-     * Get ID of the task to scan repository images again for vulnerabilities 
-     * @return RegistryTaskID ID of the task to scan repository images again for vulnerabilities
+     * Get <p>Task ID for repository image re-vulnerability scanning</p> 
+     * @return RegistryTaskID <p>Task ID for repository image re-vulnerability scanning</p>
      */
     public Long getRegistryTaskID() {
         return this.RegistryTaskID;
     }
 
     /**
-     * Set ID of the task to scan repository images again for vulnerabilities
-     * @param RegistryTaskID ID of the task to scan repository images again for vulnerabilities
+     * Set <p>Task ID for repository image re-vulnerability scanning</p>
+     * @param RegistryTaskID <p>Task ID for repository image re-vulnerability scanning</p>
      */
     public void setRegistryTaskID(Long RegistryTaskID) {
         this.RegistryTaskID = RegistryTaskID;

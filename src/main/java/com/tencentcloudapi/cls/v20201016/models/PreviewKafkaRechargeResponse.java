@@ -31,8 +31,7 @@ public class PreviewKafkaRechargeResponse extends AbstractModel {
     private String LogSample;
 
     /**
-    * Log preview result
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Log preview results
     */
     @SerializedName("LogData")
     @Expose
@@ -62,20 +61,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Log preview result
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return LogData Log preview result
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Log preview results 
+     * @return LogData Log preview results
      */
     public String getLogData() {
         return this.LogData;
     }
 
     /**
-     * Set Log preview result
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param LogData Log preview result
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Log preview results
+     * @param LogData Log preview results
      */
     public void setLogData(String LogData) {
         this.LogData = LogData;

@@ -66,6 +66,13 @@ public class ModifyNetAttackSettingRequest extends AbstractModel {
     private Long AutoInclude;
 
     /**
+    * 
+    */
+    @SerializedName("ProductType")
+    @Expose
+    private Long ProductType;
+
+    /**
      * Get 0 - Disable Network Attack Detection; 1 - Enable Network Attack Detection. 
      * @return NetAttackEnable 0 - Disable Network Attack Detection; 1 - Enable Network Attack Detection.
      */
@@ -161,6 +168,22 @@ public class ModifyNetAttackSettingRequest extends AbstractModel {
         this.AutoInclude = AutoInclude;
     }
 
+    /**
+     * Get  
+     * @return ProductType 
+     */
+    public Long getProductType() {
+        return this.ProductType;
+    }
+
+    /**
+     * Set 
+     * @param ProductType 
+     */
+    public void setProductType(Long ProductType) {
+        this.ProductType = ProductType;
+    }
+
     public ModifyNetAttackSettingRequest() {
     }
 
@@ -193,6 +216,9 @@ public class ModifyNetAttackSettingRequest extends AbstractModel {
         if (source.AutoInclude != null) {
             this.AutoInclude = new Long(source.AutoInclude);
         }
+        if (source.ProductType != null) {
+            this.ProductType = new Long(source.ProductType);
+        }
     }
 
 
@@ -206,6 +232,7 @@ public class ModifyNetAttackSettingRequest extends AbstractModel {
         this.setParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);
         this.setParamArraySimple(map, prefix + "ExcludeInstanceIds.", this.ExcludeInstanceIds);
         this.setParamSimple(map, prefix + "AutoInclude", this.AutoInclude);
+        this.setParamSimple(map, prefix + "ProductType", this.ProductType);
 
     }
 }

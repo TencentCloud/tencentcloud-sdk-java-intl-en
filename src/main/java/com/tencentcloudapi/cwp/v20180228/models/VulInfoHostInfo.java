@@ -24,16 +24,14 @@ import java.util.HashMap;
 public class VulInfoHostInfo extends AbstractModel {
 
     /**
-    * Host name
-Note: This field may return null, indicating that no valid values can be obtained.
+    * host name
     */
     @SerializedName("HostName")
     @Expose
     private String HostName;
 
     /**
-    * Host IP
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Host IP address
     */
     @SerializedName("HostIp")
     @Expose
@@ -41,7 +39,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Host tag
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Tags")
     @Expose
@@ -49,15 +46,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Host QUUID
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Quuid")
     @Expose
     private String Quuid;
 
     /**
-    * 0 - the vulnerability cannot be fixed automatically; 1 - the vulnerability can be fixed automatically; 2 - the client has been offline; 3 - the host is not the ultimate edition and can only be fixed manually; 4 - the model does not allow automatic fix; 5 - fixing; 6 - fixed; 7 - under detection; 9 - fix failed; 10 - ignored; 11 - the vulnerability is supported only on Linux, not on Windows; 12 - the vulnerability is supported only on Windows, not on Linux.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 0: Vulnerability cannot be automatically repaired, 1: Can be automatically repaired, 2: Client offline, 3: Manual fixing supported for non-flagship hosts, 4: Not supported for this model, 5: In remediation, 6: Fixed, 7: Detecting, 9: Fix failed, 10: Ignored, 11: Vulnerability supported only on linux, not Windows, 12: Vulnerability supported only on Windows, not linux.
     */
     @SerializedName("IsSupportAutoFix")
     @Expose
@@ -65,65 +60,67 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Host UUID
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Uuid")
     @Expose
     private String Uuid;
 
     /**
-    * Host InstanceId
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Host instance ID.
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-     * Get Host name
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return HostName Host name
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Host type
+    */
+    @SerializedName("MachineType")
+    @Expose
+    private String MachineType;
+
+    /**
+    * agent online status; 0 for offline, 1 for online.
+    */
+    @SerializedName("AgentStatus")
+    @Expose
+    private Long AgentStatus;
+
+    /**
+     * Get host name 
+     * @return HostName host name
      */
     public String getHostName() {
         return this.HostName;
     }
 
     /**
-     * Set Host name
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param HostName Host name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set host name
+     * @param HostName host name
      */
     public void setHostName(String HostName) {
         this.HostName = HostName;
     }
 
     /**
-     * Get Host IP
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return HostIp Host IP
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Host IP address 
+     * @return HostIp Host IP address
      */
     public String getHostIp() {
         return this.HostIp;
     }
 
     /**
-     * Set Host IP
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param HostIp Host IP
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Host IP address
+     * @param HostIp Host IP address
      */
     public void setHostIp(String HostIp) {
         this.HostIp = HostIp;
     }
 
     /**
-     * Get Host tag
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Host tag 
      * @return Tags Host tag
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String [] getTags() {
         return this.Tags;
@@ -131,19 +128,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Host tag
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Tags Host tag
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setTags(String [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get Host QUUID
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Host QUUID 
      * @return Quuid Host QUUID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getQuuid() {
         return this.Quuid;
@@ -151,39 +144,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Host QUUID
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Quuid Host QUUID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setQuuid(String Quuid) {
         this.Quuid = Quuid;
     }
 
     /**
-     * Get 0 - the vulnerability cannot be fixed automatically; 1 - the vulnerability can be fixed automatically; 2 - the client has been offline; 3 - the host is not the ultimate edition and can only be fixed manually; 4 - the model does not allow automatic fix; 5 - fixing; 6 - fixed; 7 - under detection; 9 - fix failed; 10 - ignored; 11 - the vulnerability is supported only on Linux, not on Windows; 12 - the vulnerability is supported only on Windows, not on Linux.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return IsSupportAutoFix 0 - the vulnerability cannot be fixed automatically; 1 - the vulnerability can be fixed automatically; 2 - the client has been offline; 3 - the host is not the ultimate edition and can only be fixed manually; 4 - the model does not allow automatic fix; 5 - fixing; 6 - fixed; 7 - under detection; 9 - fix failed; 10 - ignored; 11 - the vulnerability is supported only on Linux, not on Windows; 12 - the vulnerability is supported only on Windows, not on Linux.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get 0: Vulnerability cannot be automatically repaired, 1: Can be automatically repaired, 2: Client offline, 3: Manual fixing supported for non-flagship hosts, 4: Not supported for this model, 5: In remediation, 6: Fixed, 7: Detecting, 9: Fix failed, 10: Ignored, 11: Vulnerability supported only on linux, not Windows, 12: Vulnerability supported only on Windows, not linux. 
+     * @return IsSupportAutoFix 0: Vulnerability cannot be automatically repaired, 1: Can be automatically repaired, 2: Client offline, 3: Manual fixing supported for non-flagship hosts, 4: Not supported for this model, 5: In remediation, 6: Fixed, 7: Detecting, 9: Fix failed, 10: Ignored, 11: Vulnerability supported only on linux, not Windows, 12: Vulnerability supported only on Windows, not linux.
      */
     public Long getIsSupportAutoFix() {
         return this.IsSupportAutoFix;
     }
 
     /**
-     * Set 0 - the vulnerability cannot be fixed automatically; 1 - the vulnerability can be fixed automatically; 2 - the client has been offline; 3 - the host is not the ultimate edition and can only be fixed manually; 4 - the model does not allow automatic fix; 5 - fixing; 6 - fixed; 7 - under detection; 9 - fix failed; 10 - ignored; 11 - the vulnerability is supported only on Linux, not on Windows; 12 - the vulnerability is supported only on Windows, not on Linux.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param IsSupportAutoFix 0 - the vulnerability cannot be fixed automatically; 1 - the vulnerability can be fixed automatically; 2 - the client has been offline; 3 - the host is not the ultimate edition and can only be fixed manually; 4 - the model does not allow automatic fix; 5 - fixing; 6 - fixed; 7 - under detection; 9 - fix failed; 10 - ignored; 11 - the vulnerability is supported only on Linux, not on Windows; 12 - the vulnerability is supported only on Windows, not on Linux.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 0: Vulnerability cannot be automatically repaired, 1: Can be automatically repaired, 2: Client offline, 3: Manual fixing supported for non-flagship hosts, 4: Not supported for this model, 5: In remediation, 6: Fixed, 7: Detecting, 9: Fix failed, 10: Ignored, 11: Vulnerability supported only on linux, not Windows, 12: Vulnerability supported only on Windows, not linux.
+     * @param IsSupportAutoFix 0: Vulnerability cannot be automatically repaired, 1: Can be automatically repaired, 2: Client offline, 3: Manual fixing supported for non-flagship hosts, 4: Not supported for this model, 5: In remediation, 6: Fixed, 7: Detecting, 9: Fix failed, 10: Ignored, 11: Vulnerability supported only on linux, not Windows, 12: Vulnerability supported only on Windows, not linux.
      */
     public void setIsSupportAutoFix(Long IsSupportAutoFix) {
         this.IsSupportAutoFix = IsSupportAutoFix;
     }
 
     /**
-     * Get Host UUID
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Host UUID 
      * @return Uuid Host UUID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getUuid() {
         return this.Uuid;
@@ -191,32 +176,58 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Host UUID
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Uuid Host UUID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setUuid(String Uuid) {
         this.Uuid = Uuid;
     }
 
     /**
-     * Get Host InstanceId
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return InstanceId Host InstanceId
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Host instance ID. 
+     * @return InstanceId Host instance ID.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Host InstanceId
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param InstanceId Host InstanceId
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Host instance ID.
+     * @param InstanceId Host instance ID.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
+    }
+
+    /**
+     * Get Host type 
+     * @return MachineType Host type
+     */
+    public String getMachineType() {
+        return this.MachineType;
+    }
+
+    /**
+     * Set Host type
+     * @param MachineType Host type
+     */
+    public void setMachineType(String MachineType) {
+        this.MachineType = MachineType;
+    }
+
+    /**
+     * Get agent online status; 0 for offline, 1 for online. 
+     * @return AgentStatus agent online status; 0 for offline, 1 for online.
+     */
+    public Long getAgentStatus() {
+        return this.AgentStatus;
+    }
+
+    /**
+     * Set agent online status; 0 for offline, 1 for online.
+     * @param AgentStatus agent online status; 0 for offline, 1 for online.
+     */
+    public void setAgentStatus(Long AgentStatus) {
+        this.AgentStatus = AgentStatus;
     }
 
     public VulInfoHostInfo() {
@@ -251,6 +262,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.InstanceId != null) {
             this.InstanceId = new String(source.InstanceId);
         }
+        if (source.MachineType != null) {
+            this.MachineType = new String(source.MachineType);
+        }
+        if (source.AgentStatus != null) {
+            this.AgentStatus = new Long(source.AgentStatus);
+        }
     }
 
 
@@ -265,6 +282,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "IsSupportAutoFix", this.IsSupportAutoFix);
         this.setParamSimple(map, prefix + "Uuid", this.Uuid);
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
+        this.setParamSimple(map, prefix + "MachineType", this.MachineType);
+        this.setParamSimple(map, prefix + "AgentStatus", this.AgentStatus);
 
     }
 }

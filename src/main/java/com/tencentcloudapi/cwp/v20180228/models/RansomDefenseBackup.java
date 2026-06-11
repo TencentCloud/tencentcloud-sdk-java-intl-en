@@ -38,7 +38,7 @@ public class RansomDefenseBackup extends AbstractModel {
     private Long EventStatus;
 
     /**
-    * Backup Status: 0 - Backing up, 1 - Normal, 2, 3 - Failed, 4 - Snapshot expired, 9 - Snapshot deleted
+    * Backup status: 0 backup in progress, 1 normal, 2, 3 failure, 4 snapshot expired, 5 number of snapshots exceed the limit, 9 snapshot deleted.
     */
     @SerializedName("BackupStatus")
     @Expose
@@ -119,16 +119,16 @@ public class RansomDefenseBackup extends AbstractModel {
     }
 
     /**
-     * Get Backup Status: 0 - Backing up, 1 - Normal, 2, 3 - Failed, 4 - Snapshot expired, 9 - Snapshot deleted 
-     * @return BackupStatus Backup Status: 0 - Backing up, 1 - Normal, 2, 3 - Failed, 4 - Snapshot expired, 9 - Snapshot deleted
+     * Get Backup status: 0 backup in progress, 1 normal, 2, 3 failure, 4 snapshot expired, 5 number of snapshots exceed the limit, 9 snapshot deleted. 
+     * @return BackupStatus Backup status: 0 backup in progress, 1 normal, 2, 3 failure, 4 snapshot expired, 5 number of snapshots exceed the limit, 9 snapshot deleted.
      */
     public Long getBackupStatus() {
         return this.BackupStatus;
     }
 
     /**
-     * Set Backup Status: 0 - Backing up, 1 - Normal, 2, 3 - Failed, 4 - Snapshot expired, 9 - Snapshot deleted
-     * @param BackupStatus Backup Status: 0 - Backing up, 1 - Normal, 2, 3 - Failed, 4 - Snapshot expired, 9 - Snapshot deleted
+     * Set Backup status: 0 backup in progress, 1 normal, 2, 3 failure, 4 snapshot expired, 5 number of snapshots exceed the limit, 9 snapshot deleted.
+     * @param BackupStatus Backup status: 0 backup in progress, 1 normal, 2, 3 failure, 4 snapshot expired, 5 number of snapshots exceed the limit, 9 snapshot deleted.
      */
     public void setBackupStatus(Long BackupStatus) {
         this.BackupStatus = BackupStatus;

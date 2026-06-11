@@ -25,7 +25,6 @@ public class VulFixStatusInfo extends AbstractModel {
 
     /**
     * Vulnerability ID
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("VulId")
     @Expose
@@ -33,7 +32,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Vulnerability name
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("VulName")
     @Expose
@@ -48,7 +46,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Vulnerability fixing status for corresponding hosts
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("HostList")
     @Expose
@@ -56,32 +53,56 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Number of hosts with failed vulnerability fixing
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("FailCnt")
     @Expose
     private Long FailCnt;
 
     /**
-    * Number of hosts with successful vulnerability fixing
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Number of successful repairs
     */
     @SerializedName("FixSuccessCnt")
     @Expose
     private Long FixSuccessCnt;
 
     /**
-    * Repair method: 0 component update or patch installation, 1 disable service
+    * Repair method. 0: Update components or install patches. 1: Disable service.
     */
     @SerializedName("FixMethod")
     @Expose
     private Long FixMethod;
 
     /**
-     * Get Vulnerability ID
-Note: This field may return null, indicating that no valid values can be obtained. 
+    * kb ID
+    */
+    @SerializedName("KbId")
+    @Expose
+    private Long KbId;
+
+    /**
+    * kb number
+    */
+    @SerializedName("KbNumber")
+    @Expose
+    private String KbNumber;
+
+    /**
+    * kb name
+    */
+    @SerializedName("KbName")
+    @Expose
+    private String KbName;
+
+    /**
+    * Pre kb list
+    */
+    @SerializedName("PreKbList")
+    @Expose
+    private String [] PreKbList;
+
+    /**
+     * Get Vulnerability ID 
      * @return VulId Vulnerability ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getVulId() {
         return this.VulId;
@@ -89,19 +110,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Vulnerability ID
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param VulId Vulnerability ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setVulId(Long VulId) {
         this.VulId = VulId;
     }
 
     /**
-     * Get Vulnerability name
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Vulnerability name 
      * @return VulName Vulnerability name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getVulName() {
         return this.VulName;
@@ -109,9 +126,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Vulnerability name
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param VulName Vulnerability name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setVulName(String VulName) {
         this.VulName = VulName;
@@ -134,10 +149,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Vulnerability fixing status for corresponding hosts
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Vulnerability fixing status for corresponding hosts 
      * @return HostList Vulnerability fixing status for corresponding hosts
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public VulFixStatusHostInfo [] getHostList() {
         return this.HostList;
@@ -145,19 +158,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Vulnerability fixing status for corresponding hosts
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param HostList Vulnerability fixing status for corresponding hosts
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setHostList(VulFixStatusHostInfo [] HostList) {
         this.HostList = HostList;
     }
 
     /**
-     * Get Number of hosts with failed vulnerability fixing
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Number of hosts with failed vulnerability fixing 
      * @return FailCnt Number of hosts with failed vulnerability fixing
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getFailCnt() {
         return this.FailCnt;
@@ -165,48 +174,106 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Number of hosts with failed vulnerability fixing
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param FailCnt Number of hosts with failed vulnerability fixing
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setFailCnt(Long FailCnt) {
         this.FailCnt = FailCnt;
     }
 
     /**
-     * Get Number of hosts with successful vulnerability fixing
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return FixSuccessCnt Number of hosts with successful vulnerability fixing
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Number of successful repairs 
+     * @return FixSuccessCnt Number of successful repairs
      */
     public Long getFixSuccessCnt() {
         return this.FixSuccessCnt;
     }
 
     /**
-     * Set Number of hosts with successful vulnerability fixing
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param FixSuccessCnt Number of hosts with successful vulnerability fixing
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Number of successful repairs
+     * @param FixSuccessCnt Number of successful repairs
      */
     public void setFixSuccessCnt(Long FixSuccessCnt) {
         this.FixSuccessCnt = FixSuccessCnt;
     }
 
     /**
-     * Get Repair method: 0 component update or patch installation, 1 disable service 
-     * @return FixMethod Repair method: 0 component update or patch installation, 1 disable service
+     * Get Repair method. 0: Update components or install patches. 1: Disable service. 
+     * @return FixMethod Repair method. 0: Update components or install patches. 1: Disable service.
      */
     public Long getFixMethod() {
         return this.FixMethod;
     }
 
     /**
-     * Set Repair method: 0 component update or patch installation, 1 disable service
-     * @param FixMethod Repair method: 0 component update or patch installation, 1 disable service
+     * Set Repair method. 0: Update components or install patches. 1: Disable service.
+     * @param FixMethod Repair method. 0: Update components or install patches. 1: Disable service.
      */
     public void setFixMethod(Long FixMethod) {
         this.FixMethod = FixMethod;
+    }
+
+    /**
+     * Get kb ID 
+     * @return KbId kb ID
+     */
+    public Long getKbId() {
+        return this.KbId;
+    }
+
+    /**
+     * Set kb ID
+     * @param KbId kb ID
+     */
+    public void setKbId(Long KbId) {
+        this.KbId = KbId;
+    }
+
+    /**
+     * Get kb number 
+     * @return KbNumber kb number
+     */
+    public String getKbNumber() {
+        return this.KbNumber;
+    }
+
+    /**
+     * Set kb number
+     * @param KbNumber kb number
+     */
+    public void setKbNumber(String KbNumber) {
+        this.KbNumber = KbNumber;
+    }
+
+    /**
+     * Get kb name 
+     * @return KbName kb name
+     */
+    public String getKbName() {
+        return this.KbName;
+    }
+
+    /**
+     * Set kb name
+     * @param KbName kb name
+     */
+    public void setKbName(String KbName) {
+        this.KbName = KbName;
+    }
+
+    /**
+     * Get Pre kb list 
+     * @return PreKbList Pre kb list
+     */
+    public String [] getPreKbList() {
+        return this.PreKbList;
+    }
+
+    /**
+     * Set Pre kb list
+     * @param PreKbList Pre kb list
+     */
+    public void setPreKbList(String [] PreKbList) {
+        this.PreKbList = PreKbList;
     }
 
     public VulFixStatusInfo() {
@@ -241,6 +308,21 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.FixMethod != null) {
             this.FixMethod = new Long(source.FixMethod);
         }
+        if (source.KbId != null) {
+            this.KbId = new Long(source.KbId);
+        }
+        if (source.KbNumber != null) {
+            this.KbNumber = new String(source.KbNumber);
+        }
+        if (source.KbName != null) {
+            this.KbName = new String(source.KbName);
+        }
+        if (source.PreKbList != null) {
+            this.PreKbList = new String[source.PreKbList.length];
+            for (int i = 0; i < source.PreKbList.length; i++) {
+                this.PreKbList[i] = new String(source.PreKbList[i]);
+            }
+        }
     }
 
 
@@ -255,6 +337,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "FailCnt", this.FailCnt);
         this.setParamSimple(map, prefix + "FixSuccessCnt", this.FixSuccessCnt);
         this.setParamSimple(map, prefix + "FixMethod", this.FixMethod);
+        this.setParamSimple(map, prefix + "KbId", this.KbId);
+        this.setParamSimple(map, prefix + "KbNumber", this.KbNumber);
+        this.setParamSimple(map, prefix + "KbName", this.KbName);
+        this.setParamArraySimple(map, prefix + "PreKbList.", this.PreKbList);
 
     }
 }

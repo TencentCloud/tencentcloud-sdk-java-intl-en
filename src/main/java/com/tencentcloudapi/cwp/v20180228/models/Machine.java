@@ -38,32 +38,28 @@ public class Machine extends AbstractModel {
     private String MachineOs;
 
     /**
-    * Host status
-<li>OFFLINE: Offline</li>
-<li>ONLINE: Online</li>
-<li>SHUTDOWN: Shut down</li>
-<li>UNINSTALLED: Unprotected</li>
+    * Host status. <li>OFFLINE: Offline</li> <li>ONLINE: Online</li> <li>SHUTDOWN: Shutdown</li> <li>UNINSTALLED: No protection</li>	
     */
     @SerializedName("MachineStatus")
     @Expose
     private String MachineStatus;
 
     /**
-    * 
+    * ONLINE Under protection; OFFLINE OFFLINE; UNINStALLED Not installed
     */
     @SerializedName("AgentStatus")
     @Expose
     private String AgentStatus;
 
     /**
-    * 
+    * RUNNING; is shut down; to be recycled	
     */
     @SerializedName("InstanceStatus")
     @Expose
     private String InstanceStatus;
 
     /**
-    * Yunjing client UUID. If the client is offline for a long time, an empty string is returned.
+    * CWP UUID. If the CWP client is offline for a long time, an empty character is returned.
     */
     @SerializedName("Uuid")
     @Expose
@@ -210,7 +206,7 @@ public class Machine extends AbstractModel {
     private String KernelVersion;
 
     /**
-    * Protection version: BASIC_VERSION - Basic Edition; PRO_VERSION - Professional Edition; Flagship - Ultimate Edition; GENERAL_DISCOUNT - Inclusive Edition
+    * Protection version: BASIC_VERSION - Basic Edition; PRO_VERSION - Professional Edition; Flagship - Ultimate Edition; GENERAL_DISCOUNT - Lightweight Edition
     */
     @SerializedName("ProtectType")
     @Expose
@@ -218,15 +214,13 @@ public class Machine extends AbstractModel {
 
     /**
     * Cloud Tag Information
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("CloudTags")
     @Expose
     private Tags [] CloudTags;
 
     /**
-    * Whether a host added within the last 15 days: 0: no; 1: yes
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Whether the host is added within 15 days. 0: Host not added within 15 days. 1: Host added within 15 days.
     */
     @SerializedName("IsAddedOnTheFifteen")
     @Expose
@@ -234,7 +228,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Host IP List
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("IpList")
     @Expose
@@ -242,7 +235,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Network
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("VpcId")
     @Expose
@@ -250,7 +242,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Additional information
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("MachineExtraInfo")
     @Expose
@@ -265,18 +256,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Remarks
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Remark")
     @Expose
     private String Remark;
 
     /**
-    * 
+    * Host security agent version
     */
     @SerializedName("AgentVersion")
     @Expose
     private String AgentVersion;
+
+    /**
+    * 
+    */
+    @SerializedName("AppId")
+    @Expose
+    private Long AppId;
+
+    /**
+    * 
+    */
+    @SerializedName("CSIPProtectType")
+    @Expose
+    private String CSIPProtectType;
 
     /**
      * Get Host name. 
@@ -311,80 +315,64 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Host status
-<li>OFFLINE: Offline</li>
-<li>ONLINE: Online</li>
-<li>SHUTDOWN: Shut down</li>
-<li>UNINSTALLED: Unprotected</li> 
-     * @return MachineStatus Host status
-<li>OFFLINE: Offline</li>
-<li>ONLINE: Online</li>
-<li>SHUTDOWN: Shut down</li>
-<li>UNINSTALLED: Unprotected</li>
+     * Get Host status. <li>OFFLINE: Offline</li> <li>ONLINE: Online</li> <li>SHUTDOWN: Shutdown</li> <li>UNINSTALLED: No protection</li>	 
+     * @return MachineStatus Host status. <li>OFFLINE: Offline</li> <li>ONLINE: Online</li> <li>SHUTDOWN: Shutdown</li> <li>UNINSTALLED: No protection</li>	
      */
     public String getMachineStatus() {
         return this.MachineStatus;
     }
 
     /**
-     * Set Host status
-<li>OFFLINE: Offline</li>
-<li>ONLINE: Online</li>
-<li>SHUTDOWN: Shut down</li>
-<li>UNINSTALLED: Unprotected</li>
-     * @param MachineStatus Host status
-<li>OFFLINE: Offline</li>
-<li>ONLINE: Online</li>
-<li>SHUTDOWN: Shut down</li>
-<li>UNINSTALLED: Unprotected</li>
+     * Set Host status. <li>OFFLINE: Offline</li> <li>ONLINE: Online</li> <li>SHUTDOWN: Shutdown</li> <li>UNINSTALLED: No protection</li>	
+     * @param MachineStatus Host status. <li>OFFLINE: Offline</li> <li>ONLINE: Online</li> <li>SHUTDOWN: Shutdown</li> <li>UNINSTALLED: No protection</li>	
      */
     public void setMachineStatus(String MachineStatus) {
         this.MachineStatus = MachineStatus;
     }
 
     /**
-     * Get  
-     * @return AgentStatus 
+     * Get ONLINE Under protection; OFFLINE OFFLINE; UNINStALLED Not installed 
+     * @return AgentStatus ONLINE Under protection; OFFLINE OFFLINE; UNINStALLED Not installed
      */
     public String getAgentStatus() {
         return this.AgentStatus;
     }
 
     /**
-     * Set 
-     * @param AgentStatus 
+     * Set ONLINE Under protection; OFFLINE OFFLINE; UNINStALLED Not installed
+     * @param AgentStatus ONLINE Under protection; OFFLINE OFFLINE; UNINStALLED Not installed
      */
     public void setAgentStatus(String AgentStatus) {
         this.AgentStatus = AgentStatus;
     }
 
     /**
-     * Get  
-     * @return InstanceStatus 
+     * Get RUNNING; is shut down; to be recycled	 
+     * @return InstanceStatus RUNNING; is shut down; to be recycled	
      */
     public String getInstanceStatus() {
         return this.InstanceStatus;
     }
 
     /**
-     * Set 
-     * @param InstanceStatus 
+     * Set RUNNING; is shut down; to be recycled	
+     * @param InstanceStatus RUNNING; is shut down; to be recycled	
      */
     public void setInstanceStatus(String InstanceStatus) {
         this.InstanceStatus = InstanceStatus;
     }
 
     /**
-     * Get Yunjing client UUID. If the client is offline for a long time, an empty string is returned. 
-     * @return Uuid Yunjing client UUID. If the client is offline for a long time, an empty string is returned.
+     * Get CWP UUID. If the CWP client is offline for a long time, an empty character is returned. 
+     * @return Uuid CWP UUID. If the CWP client is offline for a long time, an empty character is returned.
      */
     public String getUuid() {
         return this.Uuid;
     }
 
     /**
-     * Set Yunjing client UUID. If the client is offline for a long time, an empty string is returned.
-     * @param Uuid Yunjing client UUID. If the client is offline for a long time, an empty string is returned.
+     * Set CWP UUID. If the CWP client is offline for a long time, an empty character is returned.
+     * @param Uuid CWP UUID. If the CWP client is offline for a long time, an empty character is returned.
      */
     public void setUuid(String Uuid) {
         this.Uuid = Uuid;
@@ -723,26 +711,24 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Protection version: BASIC_VERSION - Basic Edition; PRO_VERSION - Professional Edition; Flagship - Ultimate Edition; GENERAL_DISCOUNT - Inclusive Edition 
-     * @return ProtectType Protection version: BASIC_VERSION - Basic Edition; PRO_VERSION - Professional Edition; Flagship - Ultimate Edition; GENERAL_DISCOUNT - Inclusive Edition
+     * Get Protection version: BASIC_VERSION - Basic Edition; PRO_VERSION - Professional Edition; Flagship - Ultimate Edition; GENERAL_DISCOUNT - Lightweight Edition 
+     * @return ProtectType Protection version: BASIC_VERSION - Basic Edition; PRO_VERSION - Professional Edition; Flagship - Ultimate Edition; GENERAL_DISCOUNT - Lightweight Edition
      */
     public String getProtectType() {
         return this.ProtectType;
     }
 
     /**
-     * Set Protection version: BASIC_VERSION - Basic Edition; PRO_VERSION - Professional Edition; Flagship - Ultimate Edition; GENERAL_DISCOUNT - Inclusive Edition
-     * @param ProtectType Protection version: BASIC_VERSION - Basic Edition; PRO_VERSION - Professional Edition; Flagship - Ultimate Edition; GENERAL_DISCOUNT - Inclusive Edition
+     * Set Protection version: BASIC_VERSION - Basic Edition; PRO_VERSION - Professional Edition; Flagship - Ultimate Edition; GENERAL_DISCOUNT - Lightweight Edition
+     * @param ProtectType Protection version: BASIC_VERSION - Basic Edition; PRO_VERSION - Professional Edition; Flagship - Ultimate Edition; GENERAL_DISCOUNT - Lightweight Edition
      */
     public void setProtectType(String ProtectType) {
         this.ProtectType = ProtectType;
     }
 
     /**
-     * Get Cloud Tag Information
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Cloud Tag Information 
      * @return CloudTags Cloud Tag Information
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Tags [] getCloudTags() {
         return this.CloudTags;
@@ -750,39 +736,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Cloud Tag Information
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param CloudTags Cloud Tag Information
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setCloudTags(Tags [] CloudTags) {
         this.CloudTags = CloudTags;
     }
 
     /**
-     * Get Whether a host added within the last 15 days: 0: no; 1: yes
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return IsAddedOnTheFifteen Whether a host added within the last 15 days: 0: no; 1: yes
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Whether the host is added within 15 days. 0: Host not added within 15 days. 1: Host added within 15 days. 
+     * @return IsAddedOnTheFifteen Whether the host is added within 15 days. 0: Host not added within 15 days. 1: Host added within 15 days.
      */
     public Long getIsAddedOnTheFifteen() {
         return this.IsAddedOnTheFifteen;
     }
 
     /**
-     * Set Whether a host added within the last 15 days: 0: no; 1: yes
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param IsAddedOnTheFifteen Whether a host added within the last 15 days: 0: no; 1: yes
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Whether the host is added within 15 days. 0: Host not added within 15 days. 1: Host added within 15 days.
+     * @param IsAddedOnTheFifteen Whether the host is added within 15 days. 0: Host not added within 15 days. 1: Host added within 15 days.
      */
     public void setIsAddedOnTheFifteen(Long IsAddedOnTheFifteen) {
         this.IsAddedOnTheFifteen = IsAddedOnTheFifteen;
     }
 
     /**
-     * Get Host IP List
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Host IP List 
      * @return IpList Host IP List
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getIpList() {
         return this.IpList;
@@ -790,19 +768,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Host IP List
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param IpList Host IP List
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setIpList(String IpList) {
         this.IpList = IpList;
     }
 
     /**
-     * Get Network
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Network 
      * @return VpcId Network
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getVpcId() {
         return this.VpcId;
@@ -810,19 +784,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Network
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param VpcId Network
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get Additional information
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Additional information 
      * @return MachineExtraInfo Additional information
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public MachineExtraInfo getMachineExtraInfo() {
         return this.MachineExtraInfo;
@@ -830,9 +800,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Additional information
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param MachineExtraInfo Additional information
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setMachineExtraInfo(MachineExtraInfo MachineExtraInfo) {
         this.MachineExtraInfo = MachineExtraInfo;
@@ -855,10 +823,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Remarks
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Remarks 
      * @return Remark Remarks
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getRemark() {
         return this.Remark;
@@ -866,28 +832,58 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Remarks
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Remark Remarks
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;
     }
 
     /**
-     * Get  
-     * @return AgentVersion 
+     * Get Host security agent version 
+     * @return AgentVersion Host security agent version
      */
     public String getAgentVersion() {
         return this.AgentVersion;
     }
 
     /**
-     * Set 
-     * @param AgentVersion 
+     * Set Host security agent version
+     * @param AgentVersion Host security agent version
      */
     public void setAgentVersion(String AgentVersion) {
         this.AgentVersion = AgentVersion;
+    }
+
+    /**
+     * Get  
+     * @return AppId 
+     */
+    public Long getAppId() {
+        return this.AppId;
+    }
+
+    /**
+     * Set 
+     * @param AppId 
+     */
+    public void setAppId(Long AppId) {
+        this.AppId = AppId;
+    }
+
+    /**
+     * Get  
+     * @return CSIPProtectType 
+     */
+    public String getCSIPProtectType() {
+        return this.CSIPProtectType;
+    }
+
+    /**
+     * Set 
+     * @param CSIPProtectType 
+     */
+    public void setCSIPProtectType(String CSIPProtectType) {
+        this.CSIPProtectType = CSIPProtectType;
     }
 
     public Machine() {
@@ -1006,6 +1002,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.AgentVersion != null) {
             this.AgentVersion = new String(source.AgentVersion);
         }
+        if (source.AppId != null) {
+            this.AppId = new Long(source.AppId);
+        }
+        if (source.CSIPProtectType != null) {
+            this.CSIPProtectType = new String(source.CSIPProtectType);
+        }
     }
 
 
@@ -1047,6 +1049,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "Remark", this.Remark);
         this.setParamSimple(map, prefix + "AgentVersion", this.AgentVersion);
+        this.setParamSimple(map, prefix + "AppId", this.AppId);
+        this.setParamSimple(map, prefix + "CSIPProtectType", this.CSIPProtectType);
 
     }
 }

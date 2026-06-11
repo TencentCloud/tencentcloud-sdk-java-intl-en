@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class CreateProxyEndPointResponse extends AbstractModel {
 
     /**
-    * asynchronous process ID.
+    * <p>Async process ID.</p>
     */
     @SerializedName("FlowId")
     @Expose
     private Long FlowId;
 
     /**
-    * Asynchronous task ID.
+    * <p>Asynchronous Task ID.</p>
     */
     @SerializedName("TaskId")
     @Expose
     private Long TaskId;
 
     /**
-    * ID of the Database proxy group.
+    * <p>Database Proxy Group ID.</p>
     */
     @SerializedName("ProxyGroupId")
     @Expose
@@ -52,48 +52,48 @@ public class CreateProxyEndPointResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get asynchronous process ID. 
-     * @return FlowId asynchronous process ID.
+     * Get <p>Async process ID.</p> 
+     * @return FlowId <p>Async process ID.</p>
      */
     public Long getFlowId() {
         return this.FlowId;
     }
 
     /**
-     * Set asynchronous process ID.
-     * @param FlowId asynchronous process ID.
+     * Set <p>Async process ID.</p>
+     * @param FlowId <p>Async process ID.</p>
      */
     public void setFlowId(Long FlowId) {
         this.FlowId = FlowId;
     }
 
     /**
-     * Get Asynchronous task ID. 
-     * @return TaskId Asynchronous task ID.
+     * Get <p>Asynchronous Task ID.</p> 
+     * @return TaskId <p>Asynchronous Task ID.</p>
      */
     public Long getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set Asynchronous task ID.
-     * @param TaskId Asynchronous task ID.
+     * Set <p>Asynchronous Task ID.</p>
+     * @param TaskId <p>Asynchronous Task ID.</p>
      */
     public void setTaskId(Long TaskId) {
         this.TaskId = TaskId;
     }
 
     /**
-     * Get ID of the Database proxy group. 
-     * @return ProxyGroupId ID of the Database proxy group.
+     * Get <p>Database Proxy Group ID.</p> 
+     * @return ProxyGroupId <p>Database Proxy Group ID.</p>
      */
     public String getProxyGroupId() {
         return this.ProxyGroupId;
     }
 
     /**
-     * Set ID of the Database proxy group.
-     * @param ProxyGroupId ID of the Database proxy group.
+     * Set <p>Database Proxy Group ID.</p>
+     * @param ProxyGroupId <p>Database Proxy Group ID.</p>
      */
     public void setProxyGroupId(String ProxyGroupId) {
         this.ProxyGroupId = ProxyGroupId;

@@ -24,8 +24,7 @@ import java.util.HashMap;
 public class DescribeEmergencyVulListResponse extends AbstractModel {
 
     /**
-    * Vulnerability list
-Note: This field may return null, indicating that no valid values can be obtained.
+    * List of vulnerabilities
     */
     @SerializedName("List")
     @Expose
@@ -33,15 +32,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Total number of vulnerabilities
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * Whether there is any risk
-Note: This field may return null, indicating that no valid values can be obtained.
+    * is there a risk?
     */
     @SerializedName("ExistsRisk")
     @Expose
@@ -55,30 +52,24 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Vulnerability list
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return List Vulnerability list
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get List of vulnerabilities 
+     * @return List List of vulnerabilities
      */
     public EmergencyVul [] getList() {
         return this.List;
     }
 
     /**
-     * Set Vulnerability list
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param List Vulnerability list
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set List of vulnerabilities
+     * @param List List of vulnerabilities
      */
     public void setList(EmergencyVul [] List) {
         this.List = List;
     }
 
     /**
-     * Get Total number of vulnerabilities
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Total number of vulnerabilities 
      * @return TotalCount Total number of vulnerabilities
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getTotalCount() {
         return this.TotalCount;
@@ -86,29 +77,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Total number of vulnerabilities
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param TotalCount Total number of vulnerabilities
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get Whether there is any risk
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ExistsRisk Whether there is any risk
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get is there a risk? 
+     * @return ExistsRisk is there a risk?
      */
     public Boolean getExistsRisk() {
         return this.ExistsRisk;
     }
 
     /**
-     * Set Whether there is any risk
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ExistsRisk Whether there is any risk
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set is there a risk?
+     * @param ExistsRisk is there a risk?
      */
     public void setExistsRisk(Boolean ExistsRisk) {
         this.ExistsRisk = ExistsRisk;

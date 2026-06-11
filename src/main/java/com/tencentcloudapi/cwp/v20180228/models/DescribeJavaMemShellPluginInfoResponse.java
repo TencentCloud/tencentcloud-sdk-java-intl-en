@@ -25,7 +25,6 @@ public class DescribeJavaMemShellPluginInfoResponse extends AbstractModel {
 
     /**
     * Java Memory Trojan Plugin List
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("List")
     @Expose
@@ -46,10 +45,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Java Memory Trojan Plugin List
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Java Memory Trojan Plugin List 
      * @return List Java Memory Trojan Plugin List
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public JavaMemShellPluginInfo [] getList() {
         return this.List;
@@ -57,9 +54,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Java Memory Trojan Plugin List
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param List Java Memory Trojan Plugin List
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setList(JavaMemShellPluginInfo [] List) {
         this.List = List;

@@ -12,7 +12,7 @@ public enum TatErrorCode {
      /* Failed to access the Lighthouse instance. */
      FAILEDOPERATION_LIGHTHOUSEERROR("FailedOperation.LighthouseError"),
      
-     /*  */
+     /* Tag operation failed. */
      FAILEDOPERATION_TAGOPERATIONFAILED("FailedOperation.TagOperationFailed"),
      
      /* Internal error. */

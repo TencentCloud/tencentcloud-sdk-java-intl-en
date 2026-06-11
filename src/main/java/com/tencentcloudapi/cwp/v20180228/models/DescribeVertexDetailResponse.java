@@ -24,8 +24,7 @@ import java.util.HashMap;
 public class DescribeVertexDetailResponse extends AbstractModel {
 
     /**
-    * Attribute information of specified point list
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Attribute information of the specified node list.
     */
     @SerializedName("VertexDetails")
     @Expose
@@ -39,20 +38,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Attribute information of specified point list
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return VertexDetails Attribute information of specified point list
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Attribute information of the specified node list. 
+     * @return VertexDetails Attribute information of the specified node list.
      */
     public VertexDetail [] getVertexDetails() {
         return this.VertexDetails;
     }
 
     /**
-     * Set Attribute information of specified point list
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param VertexDetails Attribute information of specified point list
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Attribute information of the specified node list.
+     * @param VertexDetails Attribute information of the specified node list.
      */
     public void setVertexDetails(VertexDetail [] VertexDetails) {
         this.VertexDetails = VertexDetails;

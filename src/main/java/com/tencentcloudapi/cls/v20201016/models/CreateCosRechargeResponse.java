@@ -24,8 +24,7 @@ import java.util.HashMap;
 public class CreateCosRechargeResponse extends AbstractModel {
 
     /**
-    * cos_recharge record ID
-Note: This field may return null, indicating that no valid values can be obtained.
+    * COS import task ID.
     */
     @SerializedName("Id")
     @Expose
@@ -39,20 +38,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get cos_recharge record ID
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Id cos_recharge record ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get COS import task ID. 
+     * @return Id COS import task ID.
      */
     public String getId() {
         return this.Id;
     }
 
     /**
-     * Set cos_recharge record ID
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Id cos_recharge record ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set COS import task ID.
+     * @param Id COS import task ID.
      */
     public void setId(String Id) {
         this.Id = Id;

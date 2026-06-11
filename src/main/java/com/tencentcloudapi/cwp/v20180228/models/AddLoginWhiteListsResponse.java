@@ -25,7 +25,6 @@ public class AddLoginWhiteListsResponse extends AbstractModel {
 
     /**
     * Prompt list of duplicate addition
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("DuplicateHosts")
     @Expose
@@ -39,10 +38,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Prompt list of duplicate addition
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Prompt list of duplicate addition 
      * @return DuplicateHosts Prompt list of duplicate addition
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public DuplicateHosts [] getDuplicateHosts() {
         return this.DuplicateHosts;
@@ -50,9 +47,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Prompt list of duplicate addition
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param DuplicateHosts Prompt list of duplicate addition
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setDuplicateHosts(DuplicateHosts [] DuplicateHosts) {
         this.DuplicateHosts = DuplicateHosts;

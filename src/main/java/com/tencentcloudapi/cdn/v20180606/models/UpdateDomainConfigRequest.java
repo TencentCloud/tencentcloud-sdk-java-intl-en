@@ -375,6 +375,20 @@ After switching to global acceleration, configurations of the domain name will b
     private HttpsBilling HttpsBilling;
 
     /**
+    * Specifies the blocklist parameter.
+    */
+    @SerializedName("ParamFilter")
+    @Expose
+    private ParamFilter ParamFilter;
+
+    /**
+    * 
+    */
+    @SerializedName("AutoGuard")
+    @Expose
+    private AutoGuard AutoGuard;
+
+    /**
      * Get Domain name 
      * @return Domain Domain name
      */
@@ -1190,6 +1204,38 @@ After switching to global acceleration, configurations of the domain name will b
         this.HttpsBilling = HttpsBilling;
     }
 
+    /**
+     * Get Specifies the blocklist parameter. 
+     * @return ParamFilter Specifies the blocklist parameter.
+     */
+    public ParamFilter getParamFilter() {
+        return this.ParamFilter;
+    }
+
+    /**
+     * Set Specifies the blocklist parameter.
+     * @param ParamFilter Specifies the blocklist parameter.
+     */
+    public void setParamFilter(ParamFilter ParamFilter) {
+        this.ParamFilter = ParamFilter;
+    }
+
+    /**
+     * Get  
+     * @return AutoGuard 
+     */
+    public AutoGuard getAutoGuard() {
+        return this.AutoGuard;
+    }
+
+    /**
+     * Set 
+     * @param AutoGuard 
+     */
+    public void setAutoGuard(AutoGuard AutoGuard) {
+        this.AutoGuard = AutoGuard;
+    }
+
     public UpdateDomainConfigRequest() {
     }
 
@@ -1348,6 +1394,12 @@ After switching to global acceleration, configurations of the domain name will b
         if (source.HttpsBilling != null) {
             this.HttpsBilling = new HttpsBilling(source.HttpsBilling);
         }
+        if (source.ParamFilter != null) {
+            this.ParamFilter = new ParamFilter(source.ParamFilter);
+        }
+        if (source.AutoGuard != null) {
+            this.AutoGuard = new AutoGuard(source.AutoGuard);
+        }
     }
 
 
@@ -1404,6 +1456,8 @@ After switching to global acceleration, configurations of the domain name will b
         this.setParamObj(map, prefix + "QnPrivateAccess.", this.QnPrivateAccess);
         this.setParamObj(map, prefix + "OthersPrivateAccess.", this.OthersPrivateAccess);
         this.setParamObj(map, prefix + "HttpsBilling.", this.HttpsBilling);
+        this.setParamObj(map, prefix + "ParamFilter.", this.ParamFilter);
+        this.setParamObj(map, prefix + "AutoGuard.", this.AutoGuard);
 
     }
 }

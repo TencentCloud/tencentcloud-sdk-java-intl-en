@@ -136,7 +136,7 @@ public class RiskDnsEvent extends AbstractModel {
     private String ReferenceLink;
 
     /**
-    * Processing status [0: pending|2: allowlisted|3: untrusted status|4: processed|5: ignored]
+    * Processing status [0: pending|2: allowlisted|3: untrusted status|4: processed|5: ignored|6: blocked]
     */
     @SerializedName("HandleStatus")
     @Expose
@@ -193,7 +193,6 @@ public class RiskDnsEvent extends AbstractModel {
 
     /**
     * Additional information
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("MachineExtraInfo")
     @Expose
@@ -463,16 +462,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Processing status [0: pending|2: allowlisted|3: untrusted status|4: processed|5: ignored] 
-     * @return HandleStatus Processing status [0: pending|2: allowlisted|3: untrusted status|4: processed|5: ignored]
+     * Get Processing status [0: pending|2: allowlisted|3: untrusted status|4: processed|5: ignored|6: blocked] 
+     * @return HandleStatus Processing status [0: pending|2: allowlisted|3: untrusted status|4: processed|5: ignored|6: blocked]
      */
     public Long getHandleStatus() {
         return this.HandleStatus;
     }
 
     /**
-     * Set Processing status [0: pending|2: allowlisted|3: untrusted status|4: processed|5: ignored]
-     * @param HandleStatus Processing status [0: pending|2: allowlisted|3: untrusted status|4: processed|5: ignored]
+     * Set Processing status [0: pending|2: allowlisted|3: untrusted status|4: processed|5: ignored|6: blocked]
+     * @param HandleStatus Processing status [0: pending|2: allowlisted|3: untrusted status|4: processed|5: ignored|6: blocked]
      */
     public void setHandleStatus(Long HandleStatus) {
         this.HandleStatus = HandleStatus;
@@ -591,10 +590,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Additional information
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Additional information 
      * @return MachineExtraInfo Additional information
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public MachineExtraInfo getMachineExtraInfo() {
         return this.MachineExtraInfo;
@@ -602,9 +599,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Additional information
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param MachineExtraInfo Additional information
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setMachineExtraInfo(MachineExtraInfo MachineExtraInfo) {
         this.MachineExtraInfo = MachineExtraInfo;

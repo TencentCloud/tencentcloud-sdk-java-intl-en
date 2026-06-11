@@ -73,8 +73,7 @@ public class AssetCoreModuleDetail extends AbstractModel {
     private String Modules;
 
     /**
-    * Parameter information
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Parameter information.
     */
     @SerializedName("Params")
     @Expose
@@ -82,7 +81,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Data update time
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("UpdateTime")
     @Expose
@@ -201,30 +199,24 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Parameter information
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Params Parameter information
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Parameter information. 
+     * @return Params Parameter information.
      */
     public AssetCoreModuleParam [] getParams() {
         return this.Params;
     }
 
     /**
-     * Set Parameter information
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Params Parameter information
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Parameter information.
+     * @param Params Parameter information.
      */
     public void setParams(AssetCoreModuleParam [] Params) {
         this.Params = Params;
     }
 
     /**
-     * Get Data update time
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Data update time 
      * @return UpdateTime Data update time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getUpdateTime() {
         return this.UpdateTime;
@@ -232,9 +224,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Data update time
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param UpdateTime Data update time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;

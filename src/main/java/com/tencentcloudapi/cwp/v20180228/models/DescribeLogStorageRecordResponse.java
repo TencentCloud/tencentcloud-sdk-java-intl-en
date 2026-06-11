@@ -24,8 +24,7 @@ import java.util.HashMap;
 public class DescribeLogStorageRecordResponse extends AbstractModel {
 
     /**
-    * Storage amount record
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Storage record.
     */
     @SerializedName("Records")
     @Expose
@@ -39,20 +38,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Storage amount record
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Records Storage amount record
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Storage record. 
+     * @return Records Storage record.
      */
     public LogStorageRecord [] getRecords() {
         return this.Records;
     }
 
     /**
-     * Set Storage amount record
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Records Storage amount record
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Storage record.
+     * @param Records Storage record.
      */
     public void setRecords(LogStorageRecord [] Records) {
         this.Records = Records;

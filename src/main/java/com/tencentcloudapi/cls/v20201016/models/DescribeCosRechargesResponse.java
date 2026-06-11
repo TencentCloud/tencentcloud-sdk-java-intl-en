@@ -24,8 +24,7 @@ import java.util.HashMap;
 public class DescribeCosRechargesResponse extends AbstractModel {
 
     /**
-    * See the description of the `CosRechargeInfo` structure.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * See CosRechargeInfo structural description.
     */
     @SerializedName("Data")
     @Expose
@@ -39,20 +38,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get See the description of the `CosRechargeInfo` structure.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Data See the description of the `CosRechargeInfo` structure.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get See CosRechargeInfo structural description. 
+     * @return Data See CosRechargeInfo structural description.
      */
     public CosRechargeInfo [] getData() {
         return this.Data;
     }
 
     /**
-     * Set See the description of the `CosRechargeInfo` structure.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Data See the description of the `CosRechargeInfo` structure.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set See CosRechargeInfo structural description.
+     * @param Data See CosRechargeInfo structural description.
      */
     public void setData(CosRechargeInfo [] Data) {
         this.Data = Data;

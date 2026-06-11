@@ -94,8 +94,7 @@ public class BaselineHostDetect extends AbstractModel {
     private String LastTime;
 
     /**
-    * CWPP UUID
-Note: This field may return null, indicating that no valid values can be obtained.
+    * CWP UUID
     */
     @SerializedName("Uuid")
     @Expose
@@ -103,7 +102,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Host Additional Information
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("MachineExtraInfo")
     @Expose
@@ -270,30 +268,24 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get CWPP UUID
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Uuid CWPP UUID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get CWP UUID 
+     * @return Uuid CWP UUID
      */
     public String getUuid() {
         return this.Uuid;
     }
 
     /**
-     * Set CWPP UUID
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Uuid CWPP UUID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set CWP UUID
+     * @param Uuid CWP UUID
      */
     public void setUuid(String Uuid) {
         this.Uuid = Uuid;
     }
 
     /**
-     * Get Host Additional Information
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Host Additional Information 
      * @return MachineExtraInfo Host Additional Information
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public MachineExtraInfo getMachineExtraInfo() {
         return this.MachineExtraInfo;
@@ -301,9 +293,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Host Additional Information
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param MachineExtraInfo Host Additional Information
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setMachineExtraInfo(MachineExtraInfo MachineExtraInfo) {
         this.MachineExtraInfo = MachineExtraInfo;

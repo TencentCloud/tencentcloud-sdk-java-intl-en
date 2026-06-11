@@ -24,8 +24,7 @@ import java.util.HashMap;
 public class DescribeBaselineTopResponse extends AbstractModel {
 
     /**
-    * List of top check items
-Note: This field may return null, indicating that no valid values can be obtained.
+    * List of Top check items
     */
     @SerializedName("RuleTopList")
     @Expose
@@ -39,20 +38,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get List of top check items
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return RuleTopList List of top check items
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get List of Top check items 
+     * @return RuleTopList List of Top check items
      */
     public BaselineRuleTopInfo [] getRuleTopList() {
         return this.RuleTopList;
     }
 
     /**
-     * Set List of top check items
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param RuleTopList List of top check items
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set List of Top check items
+     * @param RuleTopList List of Top check items
      */
     public void setRuleTopList(BaselineRuleTopInfo [] RuleTopList) {
         this.RuleTopList = RuleTopList;

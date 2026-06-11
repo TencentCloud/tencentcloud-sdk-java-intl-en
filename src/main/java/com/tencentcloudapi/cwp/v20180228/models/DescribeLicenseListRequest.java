@@ -61,14 +61,14 @@ public class DescribeLicenseListRequest extends AbstractModel {
     private Tags [] Tags;
 
     /**
-    * 
+    * ASC for ascending order; DESC for descending order.
     */
     @SerializedName("Order")
     @Expose
     private String Order;
 
     /**
-    * 
+    * Number of LicenseCnt authorizations.
     */
     @SerializedName("By")
     @Expose
@@ -175,32 +175,32 @@ public class DescribeLicenseListRequest extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return Order 
+     * Get ASC for ascending order; DESC for descending order. 
+     * @return Order ASC for ascending order; DESC for descending order.
      */
     public String getOrder() {
         return this.Order;
     }
 
     /**
-     * Set 
-     * @param Order 
+     * Set ASC for ascending order; DESC for descending order.
+     * @param Order ASC for ascending order; DESC for descending order.
      */
     public void setOrder(String Order) {
         this.Order = Order;
     }
 
     /**
-     * Get  
-     * @return By 
+     * Get Number of LicenseCnt authorizations. 
+     * @return By Number of LicenseCnt authorizations.
      */
     public String getBy() {
         return this.By;
     }
 
     /**
-     * Set 
-     * @param By 
+     * Set Number of LicenseCnt authorizations.
+     * @param By Number of LicenseCnt authorizations.
      */
     public void setBy(String By) {
         this.By = By;

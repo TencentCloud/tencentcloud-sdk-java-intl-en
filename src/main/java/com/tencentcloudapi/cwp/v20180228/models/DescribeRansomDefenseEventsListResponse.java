@@ -25,7 +25,6 @@ public class DescribeRansomDefenseEventsListResponse extends AbstractModel {
 
     /**
     * Event list
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("List")
     @Expose
@@ -33,7 +32,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Total number of pagination query records
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("TotalCount")
     @Expose
@@ -47,10 +45,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Event list
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Event list 
      * @return List Event list
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public RansomDefenseEvent [] getList() {
         return this.List;
@@ -58,19 +54,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Event list
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param List Event list
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setList(RansomDefenseEvent [] List) {
         this.List = List;
     }
 
     /**
-     * Get Total number of pagination query records
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Total number of pagination query records 
      * @return TotalCount Total number of pagination query records
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getTotalCount() {
         return this.TotalCount;
@@ -78,9 +70,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Total number of pagination query records
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param TotalCount Total number of pagination query records
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

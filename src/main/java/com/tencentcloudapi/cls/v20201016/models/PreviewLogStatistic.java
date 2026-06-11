@@ -31,28 +31,32 @@ public class PreviewLogStatistic extends AbstractModel {
     private String LogContent;
 
     /**
-    * Line number
+    * Line number. Starts from 0.
     */
     @SerializedName("LineNum")
     @Expose
     private Long LineNum;
 
     /**
-    * Target log topic
+    * target log topic ID
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
     */
     @SerializedName("DstTopicId")
     @Expose
     private String DstTopicId;
 
     /**
-    * Error code. An empty string "" indicates no error.
+    * Error message for failure. A null string "" indicates normal.
     */
     @SerializedName("FailReason")
     @Expose
     private String FailReason;
 
     /**
-    * Log timestamp
+    * Log time, format: `2024-05-07 17:13:17.105`
+
+-Invalid input parameter
+-Valid at that time, the time format in logs
     */
     @SerializedName("Time")
     @Expose
@@ -83,64 +87,80 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Line number 
-     * @return LineNum Line number
+     * Get Line number. Starts from 0. 
+     * @return LineNum Line number. Starts from 0.
      */
     public Long getLineNum() {
         return this.LineNum;
     }
 
     /**
-     * Set Line number
-     * @param LineNum Line number
+     * Set Line number. Starts from 0.
+     * @param LineNum Line number. Starts from 0.
      */
     public void setLineNum(Long LineNum) {
         this.LineNum = LineNum;
     }
 
     /**
-     * Get Target log topic 
-     * @return DstTopicId Target log topic
+     * Get target log topic ID
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1). 
+     * @return DstTopicId target log topic ID
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
      */
     public String getDstTopicId() {
         return this.DstTopicId;
     }
 
     /**
-     * Set Target log topic
-     * @param DstTopicId Target log topic
+     * Set target log topic ID
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
+     * @param DstTopicId target log topic ID
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
      */
     public void setDstTopicId(String DstTopicId) {
         this.DstTopicId = DstTopicId;
     }
 
     /**
-     * Get Error code. An empty string "" indicates no error. 
-     * @return FailReason Error code. An empty string "" indicates no error.
+     * Get Error message for failure. A null string "" indicates normal. 
+     * @return FailReason Error message for failure. A null string "" indicates normal.
      */
     public String getFailReason() {
         return this.FailReason;
     }
 
     /**
-     * Set Error code. An empty string "" indicates no error.
-     * @param FailReason Error code. An empty string "" indicates no error.
+     * Set Error message for failure. A null string "" indicates normal.
+     * @param FailReason Error message for failure. A null string "" indicates normal.
      */
     public void setFailReason(String FailReason) {
         this.FailReason = FailReason;
     }
 
     /**
-     * Get Log timestamp 
-     * @return Time Log timestamp
+     * Get Log time, format: `2024-05-07 17:13:17.105`
+
+-Invalid input parameter
+-Valid at that time, the time format in logs 
+     * @return Time Log time, format: `2024-05-07 17:13:17.105`
+
+-Invalid input parameter
+-Valid at that time, the time format in logs
      */
     public String getTime() {
         return this.Time;
     }
 
     /**
-     * Set Log timestamp
-     * @param Time Log timestamp
+     * Set Log time, format: `2024-05-07 17:13:17.105`
+
+-Invalid input parameter
+-Valid at that time, the time format in logs
+     * @param Time Log time, format: `2024-05-07 17:13:17.105`
+
+-Invalid input parameter
+-Valid at that time, the time format in logs
      */
     public void setTime(String Time) {
         this.Time = Time;
@@ -151,7 +171,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained. 
      * @return DstTopicName Target topic name
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @deprecated
      */
+    @Deprecated
     public String getDstTopicName() {
         return this.DstTopicName;
     }
@@ -161,7 +183,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param DstTopicName Target topic name
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @deprecated
      */
+    @Deprecated
     public void setDstTopicName(String DstTopicName) {
         this.DstTopicName = DstTopicName;
     }

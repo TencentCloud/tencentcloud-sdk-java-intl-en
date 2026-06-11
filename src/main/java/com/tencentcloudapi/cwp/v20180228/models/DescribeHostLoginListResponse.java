@@ -31,8 +31,7 @@ public class DescribeHostLoginListResponse extends AbstractModel {
     private Long TotalCount;
 
     /**
-    * Log-in an audit list
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Obtaining the List of Abnormal Logins
     */
     @SerializedName("HostLoginList")
     @Expose
@@ -62,20 +61,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Log-in an audit list
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return HostLoginList Log-in an audit list
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Obtaining the List of Abnormal Logins 
+     * @return HostLoginList Obtaining the List of Abnormal Logins
      */
     public HostLoginList [] getHostLoginList() {
         return this.HostLoginList;
     }
 
     /**
-     * Set Log-in an audit list
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param HostLoginList Log-in an audit list
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Obtaining the List of Abnormal Logins
+     * @param HostLoginList Obtaining the List of Abnormal Logins
      */
     public void setHostLoginList(HostLoginList [] HostLoginList) {
         this.HostLoginList = HostLoginList;

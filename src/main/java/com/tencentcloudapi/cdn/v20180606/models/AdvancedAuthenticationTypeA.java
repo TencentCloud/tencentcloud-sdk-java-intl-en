@@ -59,7 +59,7 @@ public class AdvancedAuthenticationTypeA extends AbstractModel {
     private Boolean ExpireTimeRequired;
 
     /**
-    * URL composition, e.g., `${private_key}${schema}${host}${full_uri}`.
+    * URL format, for example: ${private_key}${schema}${host}${full_uri}.
     */
     @SerializedName("Format")
     @Expose
@@ -181,16 +181,16 @@ public class AdvancedAuthenticationTypeA extends AbstractModel {
     }
 
     /**
-     * Get URL composition, e.g., `${private_key}${schema}${host}${full_uri}`. 
-     * @return Format URL composition, e.g., `${private_key}${schema}${host}${full_uri}`.
+     * Get URL format, for example: ${private_key}${schema}${host}${full_uri}. 
+     * @return Format URL format, for example: ${private_key}${schema}${host}${full_uri}.
      */
     public String getFormat() {
         return this.Format;
     }
 
     /**
-     * Set URL composition, e.g., `${private_key}${schema}${host}${full_uri}`.
-     * @param Format URL composition, e.g., `${private_key}${schema}${host}${full_uri}`.
+     * Set URL format, for example: ${private_key}${schema}${host}${full_uri}.
+     * @param Format URL format, for example: ${private_key}${schema}${host}${full_uri}.
      */
     public void setFormat(String Format) {
         this.Format = Format;

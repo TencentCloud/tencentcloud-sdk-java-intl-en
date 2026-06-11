@@ -25,7 +25,6 @@ public class VulAffectedComponentInfo extends AbstractModel {
 
     /**
     * Component name
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Name")
     @Expose
@@ -33,25 +32,21 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Component version
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Version")
     @Expose
     private String [] Version;
 
     /**
-    * Fixed component version
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Component Repair Version
     */
     @SerializedName("FixedVersion")
     @Expose
     private String [] FixedVersion;
 
     /**
-     * Get Component name
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Component name 
      * @return Name Component name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getName() {
         return this.Name;
@@ -59,19 +54,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Component name
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Name Component name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get Component version
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Component version 
      * @return Version Component version
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String [] getVersion() {
         return this.Version;
@@ -79,29 +70,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Component version
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Version Component version
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setVersion(String [] Version) {
         this.Version = Version;
     }
 
     /**
-     * Get Fixed component version
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return FixedVersion Fixed component version
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Component Repair Version 
+     * @return FixedVersion Component Repair Version
      */
     public String [] getFixedVersion() {
         return this.FixedVersion;
     }
 
     /**
-     * Set Fixed component version
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param FixedVersion Fixed component version
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Component Repair Version
+     * @param FixedVersion Component Repair Version
      */
     public void setFixedVersion(String [] FixedVersion) {
         this.FixedVersion = FixedVersion;

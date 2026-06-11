@@ -38,7 +38,7 @@ public class CreateK8sApiAbnormalRuleInfoRequest extends AbstractModel {
     private String CopySrcRuleID;
 
     /**
-    * Event ID (for adding events to an allowlist)
+    * Event ID (abandoned, retained for compatibility. To add an event to the allowlist, use the API ModifyK8sApiAbnormalWhitelist).
     */
     @SerializedName("EventID")
     @Expose
@@ -77,16 +77,16 @@ public class CreateK8sApiAbnormalRuleInfoRequest extends AbstractModel {
     }
 
     /**
-     * Get Event ID (for adding events to an allowlist) 
-     * @return EventID Event ID (for adding events to an allowlist)
+     * Get Event ID (abandoned, retained for compatibility. To add an event to the allowlist, use the API ModifyK8sApiAbnormalWhitelist). 
+     * @return EventID Event ID (abandoned, retained for compatibility. To add an event to the allowlist, use the API ModifyK8sApiAbnormalWhitelist).
      */
     public Long getEventID() {
         return this.EventID;
     }
 
     /**
-     * Set Event ID (for adding events to an allowlist)
-     * @param EventID Event ID (for adding events to an allowlist)
+     * Set Event ID (abandoned, retained for compatibility. To add an event to the allowlist, use the API ModifyK8sApiAbnormalWhitelist).
+     * @param EventID Event ID (abandoned, retained for compatibility. To add an event to the allowlist, use the API ModifyK8sApiAbnormalWhitelist).
      */
     public void setEventID(Long EventID) {
         this.EventID = EventID;

@@ -24,16 +24,14 @@ import java.util.HashMap;
 public class CKafkaInstanceInfo extends AbstractModel {
 
     /**
-    * Instance ID
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Instance ID.
     */
     @SerializedName("InstanceID")
     @Expose
     private String InstanceID;
 
     /**
-    * Instance name
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Instance name.
     */
     @SerializedName("InstanceName")
     @Expose
@@ -41,73 +39,60 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Topic list
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("TopicList")
     @Expose
     private CKafkaTopicInfo [] TopicList;
 
     /**
-    * Route list
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Routing List
     */
     @SerializedName("RouteList")
     @Expose
     private CkafkaRouteInfo [] RouteList;
 
     /**
-    * Kafka version number
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Kafka Version Number
     */
     @SerializedName("KafkaVersion")
     @Expose
     private String KafkaVersion;
 
     /**
-     * Get Instance ID
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return InstanceID Instance ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Instance ID. 
+     * @return InstanceID Instance ID.
      */
     public String getInstanceID() {
         return this.InstanceID;
     }
 
     /**
-     * Set Instance ID
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param InstanceID Instance ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Instance ID.
+     * @param InstanceID Instance ID.
      */
     public void setInstanceID(String InstanceID) {
         this.InstanceID = InstanceID;
     }
 
     /**
-     * Get Instance name
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return InstanceName Instance name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Instance name. 
+     * @return InstanceName Instance name.
      */
     public String getInstanceName() {
         return this.InstanceName;
     }
 
     /**
-     * Set Instance name
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param InstanceName Instance name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Instance name.
+     * @param InstanceName Instance name.
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;
     }
 
     /**
-     * Get Topic list
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Topic list 
      * @return TopicList Topic list
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public CKafkaTopicInfo [] getTopicList() {
         return this.TopicList;
@@ -115,49 +100,39 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Topic list
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param TopicList Topic list
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setTopicList(CKafkaTopicInfo [] TopicList) {
         this.TopicList = TopicList;
     }
 
     /**
-     * Get Route list
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return RouteList Route list
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Routing List 
+     * @return RouteList Routing List
      */
     public CkafkaRouteInfo [] getRouteList() {
         return this.RouteList;
     }
 
     /**
-     * Set Route list
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param RouteList Route list
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Routing List
+     * @param RouteList Routing List
      */
     public void setRouteList(CkafkaRouteInfo [] RouteList) {
         this.RouteList = RouteList;
     }
 
     /**
-     * Get Kafka version number
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return KafkaVersion Kafka version number
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Kafka Version Number 
+     * @return KafkaVersion Kafka Version Number
      */
     public String getKafkaVersion() {
         return this.KafkaVersion;
     }
 
     /**
-     * Set Kafka version number
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param KafkaVersion Kafka version number
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Kafka Version Number
+     * @param KafkaVersion Kafka Version Number
      */
     public void setKafkaVersion(String KafkaVersion) {
         this.KafkaVersion = KafkaVersion;

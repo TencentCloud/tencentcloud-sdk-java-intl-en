@@ -38,8 +38,7 @@ public class DescribeAssetImageRegistryScanStatusOneKeyResponse extends Abstract
     private Long ImageScanCnt;
 
     /**
-    * Scanning progress list
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Scan progress list
     */
     @SerializedName("ImageStatus")
     @Expose
@@ -75,7 +74,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Remaining scan time
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ScanRemainTime")
     @Expose
@@ -121,20 +119,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Scanning progress list
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ImageStatus Scanning progress list
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Scan progress list 
+     * @return ImageStatus Scan progress list
      */
     public ImageProgress [] getImageStatus() {
         return this.ImageStatus;
     }
 
     /**
-     * Set Scanning progress list
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ImageStatus Scanning progress list
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Scan progress list
+     * @param ImageStatus Scan progress list
      */
     public void setImageStatus(ImageProgress [] ImageStatus) {
         this.ImageStatus = ImageStatus;
@@ -205,10 +199,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Remaining scan time
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Remaining scan time 
      * @return ScanRemainTime Remaining scan time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getScanRemainTime() {
         return this.ScanRemainTime;
@@ -216,9 +208,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Remaining scan time
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param ScanRemainTime Remaining scan time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setScanRemainTime(Long ScanRemainTime) {
         this.ScanRemainTime = ScanRemainTime;

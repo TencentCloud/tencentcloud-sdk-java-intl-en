@@ -25,7 +25,6 @@ public class DescribeFileTamperEventsResponse extends AbstractModel {
 
     /**
     * Core File Event List
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("List")
     @Expose
@@ -46,10 +45,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Core File Event List
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Core File Event List 
      * @return List Core File Event List
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public FileTamperEvent [] getList() {
         return this.List;
@@ -57,9 +54,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Core File Event List
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param List Core File Event List
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setList(FileTamperEvent [] List) {
         this.List = List;

@@ -24,13 +24,6 @@ import java.util.HashMap;
 public class DescribeAssetImageRegistryVirusListExportRequest extends AbstractModel {
 
     /**
-    * Export field
-    */
-    @SerializedName("ExportField")
-    @Expose
-    private String [] ExportField;
-
-    /**
     * Number of results to be returned. Default value: `10`. Maximum value: `100`.
     */
     @SerializedName("Limit")
@@ -61,27 +54,18 @@ public class DescribeAssetImageRegistryVirusListExportRequest extends AbstractMo
     private ImageInfo ImageInfo;
 
     /**
+    * Export field
+    */
+    @SerializedName("ExportField")
+    @Expose
+    private String [] ExportField;
+
+    /**
     * Image ID
     */
     @SerializedName("Id")
     @Expose
     private Long Id;
-
-    /**
-     * Get Export field 
-     * @return ExportField Export field
-     */
-    public String [] getExportField() {
-        return this.ExportField;
-    }
-
-    /**
-     * Set Export field
-     * @param ExportField Export field
-     */
-    public void setExportField(String [] ExportField) {
-        this.ExportField = ExportField;
-    }
 
     /**
      * Get Number of results to be returned. Default value: `10`. Maximum value: `100`. 
@@ -156,6 +140,22 @@ public class DescribeAssetImageRegistryVirusListExportRequest extends AbstractMo
     }
 
     /**
+     * Get Export field 
+     * @return ExportField Export field
+     */
+    public String [] getExportField() {
+        return this.ExportField;
+    }
+
+    /**
+     * Set Export field
+     * @param ExportField Export field
+     */
+    public void setExportField(String [] ExportField) {
+        this.ExportField = ExportField;
+    }
+
+    /**
      * Get Image ID 
      * @return Id Image ID
      */
@@ -179,12 +179,6 @@ public class DescribeAssetImageRegistryVirusListExportRequest extends AbstractMo
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeAssetImageRegistryVirusListExportRequest(DescribeAssetImageRegistryVirusListExportRequest source) {
-        if (source.ExportField != null) {
-            this.ExportField = new String[source.ExportField.length];
-            for (int i = 0; i < source.ExportField.length; i++) {
-                this.ExportField[i] = new String(source.ExportField[i]);
-            }
-        }
         if (source.Limit != null) {
             this.Limit = new Long(source.Limit);
         }
@@ -200,6 +194,12 @@ public class DescribeAssetImageRegistryVirusListExportRequest extends AbstractMo
         if (source.ImageInfo != null) {
             this.ImageInfo = new ImageInfo(source.ImageInfo);
         }
+        if (source.ExportField != null) {
+            this.ExportField = new String[source.ExportField.length];
+            for (int i = 0; i < source.ExportField.length; i++) {
+                this.ExportField[i] = new String(source.ExportField[i]);
+            }
+        }
         if (source.Id != null) {
             this.Id = new Long(source.Id);
         }
@@ -210,11 +210,11 @@ public class DescribeAssetImageRegistryVirusListExportRequest extends AbstractMo
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArraySimple(map, prefix + "ExportField.", this.ExportField);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
         this.setParamObj(map, prefix + "ImageInfo.", this.ImageInfo);
+        this.setParamArraySimple(map, prefix + "ExportField.", this.ExportField);
         this.setParamSimple(map, prefix + "Id", this.Id);
 
     }

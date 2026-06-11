@@ -38,14 +38,17 @@ public class DescribeLogHistogramRequest extends AbstractModel {
     private Long To;
 
     /**
-    * Query statement
+    * Retrieval analysis statement.
+The statement consists of [retrieval condition] | [SQL statement]. When there is no need to perform statistical analysis on logs, the pipe character | and SQL statement can be omitted.
+Use * or an empty string to search all logs.
     */
     @SerializedName("Query")
     @Expose
     private String Query;
 
     /**
-    * ID of the log topic to be queried
+    * Log topic ID to query
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
     */
     @SerializedName("TopicId")
     @Expose
@@ -100,32 +103,44 @@ For more information, see <a href="https://intl.cloud.tencent.com/document/produ
     }
 
     /**
-     * Get Query statement 
-     * @return Query Query statement
+     * Get Retrieval analysis statement.
+The statement consists of [retrieval condition] | [SQL statement]. When there is no need to perform statistical analysis on logs, the pipe character | and SQL statement can be omitted.
+Use * or an empty string to search all logs. 
+     * @return Query Retrieval analysis statement.
+The statement consists of [retrieval condition] | [SQL statement]. When there is no need to perform statistical analysis on logs, the pipe character | and SQL statement can be omitted.
+Use * or an empty string to search all logs.
      */
     public String getQuery() {
         return this.Query;
     }
 
     /**
-     * Set Query statement
-     * @param Query Query statement
+     * Set Retrieval analysis statement.
+The statement consists of [retrieval condition] | [SQL statement]. When there is no need to perform statistical analysis on logs, the pipe character | and SQL statement can be omitted.
+Use * or an empty string to search all logs.
+     * @param Query Retrieval analysis statement.
+The statement consists of [retrieval condition] | [SQL statement]. When there is no need to perform statistical analysis on logs, the pipe character | and SQL statement can be omitted.
+Use * or an empty string to search all logs.
      */
     public void setQuery(String Query) {
         this.Query = Query;
     }
 
     /**
-     * Get ID of the log topic to be queried 
-     * @return TopicId ID of the log topic to be queried
+     * Get Log topic ID to query
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1). 
+     * @return TopicId Log topic ID to query
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
      */
     public String getTopicId() {
         return this.TopicId;
     }
 
     /**
-     * Set ID of the log topic to be queried
-     * @param TopicId ID of the log topic to be queried
+     * Set Log topic ID to query
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
+     * @param TopicId Log topic ID to query
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
      */
     public void setTopicId(String TopicId) {
         this.TopicId = TopicId;

@@ -31,8 +31,7 @@ public class BruteAttackInfo extends AbstractModel {
     private Long Id;
 
     /**
-    * CWPP client UUID
-Note: This field may return null, indicating that no valid values can be obtained.
+    * CWP client UUID.
     */
     @SerializedName("Uuid")
     @Expose
@@ -40,31 +39,27 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Host IP address
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("MachineIp")
     @Expose
     private String MachineIp;
 
     /**
-    * Host name
-Note: This field may return null, indicating that no valid values can be obtained.
+    * host name
     */
     @SerializedName("MachineName")
     @Expose
     private String MachineName;
 
     /**
-    * Username
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Username.
     */
     @SerializedName("UserName")
     @Expose
     private String UserName;
 
     /**
-    * Source IP address
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Source IP
     */
     @SerializedName("SrcIp")
     @Expose
@@ -72,7 +67,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * SUCCESS: cracking successful; FAILED: cracking failed
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Status")
     @Expose
@@ -80,7 +74,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Country/Region ID
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Country")
     @Expose
@@ -88,15 +81,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * City ID
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("City")
     @Expose
     private Long City;
 
     /**
-    * Province ID
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Province id
     */
     @SerializedName("Province")
     @Expose
@@ -104,31 +95,32 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Creation time
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * 0: no blocking (not supported for the client version)1: blocked
-2: blocking failed (program exception)
-3: no blocking (do not block for the private network)
-4: availability zone does not support blocking
+    * 0 - No blocking (not supported by the client version)
+1: blocked
+2: Blocking failed (program exception)
+3: No blocking (No blocking for the private network)
+4: Availability zone does not support blocking
 10: blocking
 81: no blocking (blocking disabled)
-82: no blocking (non-Pro Edition)
+82-No Blocking (Non-Pro Edition)
 83: no blocking (added to the allowlist)
 86: no blocking (system allowlist)
-87: no blocking (client offline)
-Note: This field may return null, indicating that no valid values can be obtained.
+87: No blocking (client offline)
+88-No blocking (Source Ip belongs to the same customer)
+89: no blocking (blocking is not supported for ipv6)
     */
     @SerializedName("BanStatus")
     @Expose
     private Long BanStatus;
 
     /**
-    * Event type. 200: brute force cracking event; 300: event of successful brute force cracking (page display); 400: event of brute force cracking on a non-existent account.Note: This field may return null, indicating that no valid values can be obtained.
+    * Event type: 200 - brute force cracking event; 300 - successful brute force cracking event (the status is displayed on the page); 400 - brute force cracking event for non-existent accounts.
     */
     @SerializedName("EventType")
     @Expose
@@ -136,23 +128,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Occurrence count
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Count")
     @Expose
     private Long Count;
 
     /**
-    * Machine UUID
-Note: This field may return null, indicating that no valid values can be obtained.
+    * CVM instance UUID.
     */
     @SerializedName("Quuid")
     @Expose
     private String Quuid;
 
     /**
-    * Whether it is of the Pro Edition (true/false)
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Whether it is the Pro Edition (true/false)
     */
     @SerializedName("IsProVersion")
     @Expose
@@ -160,7 +149,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Username of the attacked service
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Protocol")
     @Expose
@@ -168,7 +156,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Port
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Port")
     @Expose
@@ -176,7 +163,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Last attack time
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ModifyTime")
     @Expose
@@ -184,7 +170,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Instance ID
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("InstanceId")
     @Expose
@@ -192,7 +177,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * 0: pending; 1: ignored; 5: fixed; 6: added to allowlist
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("DataStatus")
     @Expose
@@ -200,49 +184,52 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Additional information
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("MachineExtraInfo")
     @Expose
     private MachineExtraInfo MachineExtraInfo;
 
     /**
-    * Geo-location in Chinese
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Chinese name of a geo location.
     */
     @SerializedName("Location")
     @Expose
     private String Location;
 
     /**
-    * Threat level. 0: low-risk; 1: medium-risk; 2: high-risk.Note: This field may return null, indicating that no valid values can be obtained.
+    * Threat level. 0: low risk, 1: medium risk, 2: high risk.
     */
     @SerializedName("RiskLevel")
     @Expose
     private Long RiskLevel;
 
     /**
-    * Event source. 0: blocking rule; 1: threat intelligence.Note: This field may return null, indicating that no valid values can be obtained.
+    * Event source. 0: blocking rule, 1: threat intelligence.
     */
     @SerializedName("DataFrom")
     @Expose
     private Long DataFrom;
 
     /**
-    * Description of the brute force cracking status
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Cracking status description.
     */
     @SerializedName("AttackStatusDesc")
     @Expose
     private String AttackStatusDesc;
 
     /**
-    * Blocking expiration time (valid only for events in blocking status)
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Block expiration time (only valid for blocked events).
     */
     @SerializedName("BanExpiredTime")
     @Expose
     private String BanExpiredTime;
+
+    /**
+    * IP analysis
+    */
+    @SerializedName("IPAnalyse")
+    @Expose
+    private IPAnalyse IPAnalyse;
 
     /**
      * Get Unique ID 
@@ -261,30 +248,24 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get CWPP client UUID
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Uuid CWPP client UUID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get CWP client UUID. 
+     * @return Uuid CWP client UUID.
      */
     public String getUuid() {
         return this.Uuid;
     }
 
     /**
-     * Set CWPP client UUID
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Uuid CWPP client UUID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set CWP client UUID.
+     * @param Uuid CWP client UUID.
      */
     public void setUuid(String Uuid) {
         this.Uuid = Uuid;
     }
 
     /**
-     * Get Host IP address
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Host IP address 
      * @return MachineIp Host IP address
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getMachineIp() {
         return this.MachineIp;
@@ -292,79 +273,63 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Host IP address
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param MachineIp Host IP address
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setMachineIp(String MachineIp) {
         this.MachineIp = MachineIp;
     }
 
     /**
-     * Get Host name
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return MachineName Host name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get host name 
+     * @return MachineName host name
      */
     public String getMachineName() {
         return this.MachineName;
     }
 
     /**
-     * Set Host name
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param MachineName Host name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set host name
+     * @param MachineName host name
      */
     public void setMachineName(String MachineName) {
         this.MachineName = MachineName;
     }
 
     /**
-     * Get Username
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return UserName Username
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Username. 
+     * @return UserName Username.
      */
     public String getUserName() {
         return this.UserName;
     }
 
     /**
-     * Set Username
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param UserName Username
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Username.
+     * @param UserName Username.
      */
     public void setUserName(String UserName) {
         this.UserName = UserName;
     }
 
     /**
-     * Get Source IP address
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return SrcIp Source IP address
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Source IP 
+     * @return SrcIp Source IP
      */
     public String getSrcIp() {
         return this.SrcIp;
     }
 
     /**
-     * Set Source IP address
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param SrcIp Source IP address
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Source IP
+     * @param SrcIp Source IP
      */
     public void setSrcIp(String SrcIp) {
         this.SrcIp = SrcIp;
     }
 
     /**
-     * Get SUCCESS: cracking successful; FAILED: cracking failed
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get SUCCESS: cracking successful; FAILED: cracking failed 
      * @return Status SUCCESS: cracking successful; FAILED: cracking failed
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getStatus() {
         return this.Status;
@@ -372,19 +337,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set SUCCESS: cracking successful; FAILED: cracking failed
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Status SUCCESS: cracking successful; FAILED: cracking failed
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get Country/Region ID
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Country/Region ID 
      * @return Country Country/Region ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getCountry() {
         return this.Country;
@@ -392,19 +353,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Country/Region ID
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Country Country/Region ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setCountry(Long Country) {
         this.Country = Country;
     }
 
     /**
-     * Get City ID
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get City ID 
      * @return City City ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getCity() {
         return this.City;
@@ -412,39 +369,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set City ID
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param City City ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setCity(Long City) {
         this.City = City;
     }
 
     /**
-     * Get Province ID
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Province Province ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Province id 
+     * @return Province Province id
      */
     public Long getProvince() {
         return this.Province;
     }
 
     /**
-     * Set Province ID
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Province Province ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Province id
+     * @param Province Province id
      */
     public void setProvince(Long Province) {
         this.Province = Province;
     }
 
     /**
-     * Get Creation time
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Creation time 
      * @return CreateTime Creation time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getCreateTime() {
         return this.CreateTime;
@@ -452,91 +401,95 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Creation time
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param CreateTime Creation time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 0: no blocking (not supported for the client version)1: blocked
-2: blocking failed (program exception)
-3: no blocking (do not block for the private network)
-4: availability zone does not support blocking
+     * Get 0 - No blocking (not supported by the client version)
+1: blocked
+2: Blocking failed (program exception)
+3: No blocking (No blocking for the private network)
+4: Availability zone does not support blocking
 10: blocking
 81: no blocking (blocking disabled)
-82: no blocking (non-Pro Edition)
+82-No Blocking (Non-Pro Edition)
 83: no blocking (added to the allowlist)
 86: no blocking (system allowlist)
-87: no blocking (client offline)
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return BanStatus 0: no blocking (not supported for the client version)1: blocked
-2: blocking failed (program exception)
-3: no blocking (do not block for the private network)
-4: availability zone does not support blocking
+87: No blocking (client offline)
+88-No blocking (Source Ip belongs to the same customer)
+89: no blocking (blocking is not supported for ipv6) 
+     * @return BanStatus 0 - No blocking (not supported by the client version)
+1: blocked
+2: Blocking failed (program exception)
+3: No blocking (No blocking for the private network)
+4: Availability zone does not support blocking
 10: blocking
 81: no blocking (blocking disabled)
-82: no blocking (non-Pro Edition)
+82-No Blocking (Non-Pro Edition)
 83: no blocking (added to the allowlist)
 86: no blocking (system allowlist)
-87: no blocking (client offline)
-Note: This field may return null, indicating that no valid values can be obtained.
+87: No blocking (client offline)
+88-No blocking (Source Ip belongs to the same customer)
+89: no blocking (blocking is not supported for ipv6)
      */
     public Long getBanStatus() {
         return this.BanStatus;
     }
 
     /**
-     * Set 0: no blocking (not supported for the client version)1: blocked
-2: blocking failed (program exception)
-3: no blocking (do not block for the private network)
-4: availability zone does not support blocking
+     * Set 0 - No blocking (not supported by the client version)
+1: blocked
+2: Blocking failed (program exception)
+3: No blocking (No blocking for the private network)
+4: Availability zone does not support blocking
 10: blocking
 81: no blocking (blocking disabled)
-82: no blocking (non-Pro Edition)
+82-No Blocking (Non-Pro Edition)
 83: no blocking (added to the allowlist)
 86: no blocking (system allowlist)
-87: no blocking (client offline)
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param BanStatus 0: no blocking (not supported for the client version)1: blocked
-2: blocking failed (program exception)
-3: no blocking (do not block for the private network)
-4: availability zone does not support blocking
+87: No blocking (client offline)
+88-No blocking (Source Ip belongs to the same customer)
+89: no blocking (blocking is not supported for ipv6)
+     * @param BanStatus 0 - No blocking (not supported by the client version)
+1: blocked
+2: Blocking failed (program exception)
+3: No blocking (No blocking for the private network)
+4: Availability zone does not support blocking
 10: blocking
 81: no blocking (blocking disabled)
-82: no blocking (non-Pro Edition)
+82-No Blocking (Non-Pro Edition)
 83: no blocking (added to the allowlist)
 86: no blocking (system allowlist)
-87: no blocking (client offline)
-Note: This field may return null, indicating that no valid values can be obtained.
+87: No blocking (client offline)
+88-No blocking (Source Ip belongs to the same customer)
+89: no blocking (blocking is not supported for ipv6)
      */
     public void setBanStatus(Long BanStatus) {
         this.BanStatus = BanStatus;
     }
 
     /**
-     * Get Event type. 200: brute force cracking event; 300: event of successful brute force cracking (page display); 400: event of brute force cracking on a non-existent account.Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return EventType Event type. 200: brute force cracking event; 300: event of successful brute force cracking (page display); 400: event of brute force cracking on a non-existent account.Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Event type: 200 - brute force cracking event; 300 - successful brute force cracking event (the status is displayed on the page); 400 - brute force cracking event for non-existent accounts. 
+     * @return EventType Event type: 200 - brute force cracking event; 300 - successful brute force cracking event (the status is displayed on the page); 400 - brute force cracking event for non-existent accounts.
      */
     public Long getEventType() {
         return this.EventType;
     }
 
     /**
-     * Set Event type. 200: brute force cracking event; 300: event of successful brute force cracking (page display); 400: event of brute force cracking on a non-existent account.Note: This field may return null, indicating that no valid values can be obtained.
-     * @param EventType Event type. 200: brute force cracking event; 300: event of successful brute force cracking (page display); 400: event of brute force cracking on a non-existent account.Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Event type: 200 - brute force cracking event; 300 - successful brute force cracking event (the status is displayed on the page); 400 - brute force cracking event for non-existent accounts.
+     * @param EventType Event type: 200 - brute force cracking event; 300 - successful brute force cracking event (the status is displayed on the page); 400 - brute force cracking event for non-existent accounts.
      */
     public void setEventType(Long EventType) {
         this.EventType = EventType;
     }
 
     /**
-     * Get Occurrence count
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Occurrence count 
      * @return Count Occurrence count
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getCount() {
         return this.Count;
@@ -544,59 +497,47 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Occurrence count
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Count Occurrence count
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setCount(Long Count) {
         this.Count = Count;
     }
 
     /**
-     * Get Machine UUID
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Quuid Machine UUID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get CVM instance UUID. 
+     * @return Quuid CVM instance UUID.
      */
     public String getQuuid() {
         return this.Quuid;
     }
 
     /**
-     * Set Machine UUID
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Quuid Machine UUID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set CVM instance UUID.
+     * @param Quuid CVM instance UUID.
      */
     public void setQuuid(String Quuid) {
         this.Quuid = Quuid;
     }
 
     /**
-     * Get Whether it is of the Pro Edition (true/false)
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return IsProVersion Whether it is of the Pro Edition (true/false)
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Whether it is the Pro Edition (true/false) 
+     * @return IsProVersion Whether it is the Pro Edition (true/false)
      */
     public Boolean getIsProVersion() {
         return this.IsProVersion;
     }
 
     /**
-     * Set Whether it is of the Pro Edition (true/false)
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param IsProVersion Whether it is of the Pro Edition (true/false)
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Whether it is the Pro Edition (true/false)
+     * @param IsProVersion Whether it is the Pro Edition (true/false)
      */
     public void setIsProVersion(Boolean IsProVersion) {
         this.IsProVersion = IsProVersion;
     }
 
     /**
-     * Get Username of the attacked service
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Username of the attacked service 
      * @return Protocol Username of the attacked service
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getProtocol() {
         return this.Protocol;
@@ -604,19 +545,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Username of the attacked service
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Protocol Username of the attacked service
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setProtocol(String Protocol) {
         this.Protocol = Protocol;
     }
 
     /**
-     * Get Port
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Port 
      * @return Port Port
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getPort() {
         return this.Port;
@@ -624,19 +561,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Port
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Port Port
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setPort(Long Port) {
         this.Port = Port;
     }
 
     /**
-     * Get Last attack time
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Last attack time 
      * @return ModifyTime Last attack time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getModifyTime() {
         return this.ModifyTime;
@@ -644,19 +577,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Last attack time
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param ModifyTime Last attack time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setModifyTime(String ModifyTime) {
         this.ModifyTime = ModifyTime;
     }
 
     /**
-     * Get Instance ID
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Instance ID 
      * @return InstanceId Instance ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getInstanceId() {
         return this.InstanceId;
@@ -664,19 +593,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Instance ID
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param InstanceId Instance ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 0: pending; 1: ignored; 5: fixed; 6: added to allowlist
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get 0: pending; 1: ignored; 5: fixed; 6: added to allowlist 
      * @return DataStatus 0: pending; 1: ignored; 5: fixed; 6: added to allowlist
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getDataStatus() {
         return this.DataStatus;
@@ -684,19 +609,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set 0: pending; 1: ignored; 5: fixed; 6: added to allowlist
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param DataStatus 0: pending; 1: ignored; 5: fixed; 6: added to allowlist
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setDataStatus(Long DataStatus) {
         this.DataStatus = DataStatus;
     }
 
     /**
-     * Get Additional information
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Additional information 
      * @return MachineExtraInfo Additional information
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public MachineExtraInfo getMachineExtraInfo() {
         return this.MachineExtraInfo;
@@ -704,104 +625,106 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Additional information
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param MachineExtraInfo Additional information
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setMachineExtraInfo(MachineExtraInfo MachineExtraInfo) {
         this.MachineExtraInfo = MachineExtraInfo;
     }
 
     /**
-     * Get Geo-location in Chinese
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Location Geo-location in Chinese
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Chinese name of a geo location. 
+     * @return Location Chinese name of a geo location.
      */
     public String getLocation() {
         return this.Location;
     }
 
     /**
-     * Set Geo-location in Chinese
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Location Geo-location in Chinese
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Chinese name of a geo location.
+     * @param Location Chinese name of a geo location.
      */
     public void setLocation(String Location) {
         this.Location = Location;
     }
 
     /**
-     * Get Threat level. 0: low-risk; 1: medium-risk; 2: high-risk.Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return RiskLevel Threat level. 0: low-risk; 1: medium-risk; 2: high-risk.Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Threat level. 0: low risk, 1: medium risk, 2: high risk. 
+     * @return RiskLevel Threat level. 0: low risk, 1: medium risk, 2: high risk.
      */
     public Long getRiskLevel() {
         return this.RiskLevel;
     }
 
     /**
-     * Set Threat level. 0: low-risk; 1: medium-risk; 2: high-risk.Note: This field may return null, indicating that no valid values can be obtained.
-     * @param RiskLevel Threat level. 0: low-risk; 1: medium-risk; 2: high-risk.Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Threat level. 0: low risk, 1: medium risk, 2: high risk.
+     * @param RiskLevel Threat level. 0: low risk, 1: medium risk, 2: high risk.
      */
     public void setRiskLevel(Long RiskLevel) {
         this.RiskLevel = RiskLevel;
     }
 
     /**
-     * Get Event source. 0: blocking rule; 1: threat intelligence.Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return DataFrom Event source. 0: blocking rule; 1: threat intelligence.Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Event source. 0: blocking rule, 1: threat intelligence. 
+     * @return DataFrom Event source. 0: blocking rule, 1: threat intelligence.
      */
     public Long getDataFrom() {
         return this.DataFrom;
     }
 
     /**
-     * Set Event source. 0: blocking rule; 1: threat intelligence.Note: This field may return null, indicating that no valid values can be obtained.
-     * @param DataFrom Event source. 0: blocking rule; 1: threat intelligence.Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Event source. 0: blocking rule, 1: threat intelligence.
+     * @param DataFrom Event source. 0: blocking rule, 1: threat intelligence.
      */
     public void setDataFrom(Long DataFrom) {
         this.DataFrom = DataFrom;
     }
 
     /**
-     * Get Description of the brute force cracking status
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return AttackStatusDesc Description of the brute force cracking status
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Cracking status description. 
+     * @return AttackStatusDesc Cracking status description.
      */
     public String getAttackStatusDesc() {
         return this.AttackStatusDesc;
     }
 
     /**
-     * Set Description of the brute force cracking status
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param AttackStatusDesc Description of the brute force cracking status
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Cracking status description.
+     * @param AttackStatusDesc Cracking status description.
      */
     public void setAttackStatusDesc(String AttackStatusDesc) {
         this.AttackStatusDesc = AttackStatusDesc;
     }
 
     /**
-     * Get Blocking expiration time (valid only for events in blocking status)
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return BanExpiredTime Blocking expiration time (valid only for events in blocking status)
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Block expiration time (only valid for blocked events). 
+     * @return BanExpiredTime Block expiration time (only valid for blocked events).
      */
     public String getBanExpiredTime() {
         return this.BanExpiredTime;
     }
 
     /**
-     * Set Blocking expiration time (valid only for events in blocking status)
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param BanExpiredTime Blocking expiration time (valid only for events in blocking status)
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Block expiration time (only valid for blocked events).
+     * @param BanExpiredTime Block expiration time (only valid for blocked events).
      */
     public void setBanExpiredTime(String BanExpiredTime) {
         this.BanExpiredTime = BanExpiredTime;
+    }
+
+    /**
+     * Get IP analysis 
+     * @return IPAnalyse IP analysis
+     */
+    public IPAnalyse getIPAnalyse() {
+        return this.IPAnalyse;
+    }
+
+    /**
+     * Set IP analysis
+     * @param IPAnalyse IP analysis
+     */
+    public void setIPAnalyse(IPAnalyse IPAnalyse) {
+        this.IPAnalyse = IPAnalyse;
     }
 
     public BruteAttackInfo() {
@@ -893,6 +816,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.BanExpiredTime != null) {
             this.BanExpiredTime = new String(source.BanExpiredTime);
         }
+        if (source.IPAnalyse != null) {
+            this.IPAnalyse = new IPAnalyse(source.IPAnalyse);
+        }
     }
 
 
@@ -927,6 +853,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "DataFrom", this.DataFrom);
         this.setParamSimple(map, prefix + "AttackStatusDesc", this.AttackStatusDesc);
         this.setParamSimple(map, prefix + "BanExpiredTime", this.BanExpiredTime);
+        this.setParamObj(map, prefix + "IPAnalyse.", this.IPAnalyse);
 
     }
 }

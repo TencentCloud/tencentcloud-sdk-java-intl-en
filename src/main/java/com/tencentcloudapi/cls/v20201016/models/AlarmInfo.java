@@ -45,7 +45,7 @@ public class AlarmInfo extends AbstractModel {
     private MonitorTime MonitorTime;
 
     /**
-    * Single trigger condition. Mutually exclusive with the MultiConditions parameter.
+    * Single trigger condition for whether to trigger alarm. Mutually exclusive with the MultiConditions parameter.
     */
     @SerializedName("Condition")
     @Expose
@@ -66,7 +66,7 @@ public class AlarmInfo extends AbstractModel {
     private Long AlarmPeriod;
 
     /**
-    * List of associated alarm notification templates
+    * List of associated alarm notification channel groups. - Search the list of associated alarm notification channel groups via [Query notification channel group list](https://www.tencentcloud.com/document/product/614/56462?from_cn_redirect=1). It is mutually exclusive with MonitorNotice.
     */
     @SerializedName("AlarmNoticeIds")
     @Expose
@@ -87,14 +87,14 @@ public class AlarmInfo extends AbstractModel {
     private String AlarmId;
 
     /**
-    * Creation time
+    * Creation time. Format: YYYY-MM-DD HH:MM:SS
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * Last update time
+    * Latest update time. Format: YYYY-MM-DD HH:MM:SS
     */
     @SerializedName("UpdateTime")
     @Expose
@@ -110,55 +110,74 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
     /**
     * Custom callback template
-Note: this field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("CallBack")
     @Expose
     private CallBackInfo CallBack;
 
     /**
-    * Multi-Dimensional analysis settings
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * Multidimensional analysis settings
     */
     @SerializedName("Analysis")
     @Expose
     private AnalysisDimensional [] Analysis;
 
     /**
-    * Group trigger status. 1: Enabled, 0: Disabled (default)
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Group trigger status. true: enabled, false: disabled (default)
     */
     @SerializedName("GroupTriggerStatus")
     @Expose
     private Boolean GroupTriggerStatus;
 
     /**
-    * Group Trigger ConditionsNote: This field may return null, indicating that no valid values can be obtained.
+    * Grouping Trigger Conditions.
     */
     @SerializedName("GroupTriggerCondition")
     @Expose
     private String [] GroupTriggerCondition;
 
     /**
-    * Type of the monitored object. 0: common monitoring objects for execution statements; 1: separately selected monitoring objects for each execution statement.Note: This field may return null, indicating that no valid values can be obtained.
+    * Tag information bound to the alarm policy.
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
+    * Monitored object type. 0: shared monitored object for execution statements; 1: separate monitored object for each execution statement. 
     */
     @SerializedName("MonitorObjectType")
     @Expose
     private Long MonitorObjectType;
 
     /**
-    * Alarm severity. 0: warning (Warn); 1: Reminder (Info); 2: urgent (Critical).Note: This field may return null, indicating that no valid values can be obtained.
+    * Alarm level. 0: Warn; 1: Information; 2: Critical.
     */
     @SerializedName("AlarmLevel")
     @Expose
     private Long AlarmLevel;
 
     /**
-    * Multiple trigger conditions. Exclusive with Condition.Note: This field may return null, indicating that no valid values can be obtained.
+    * Additional classification field for alerts.
+    */
+    @SerializedName("Classifications")
+    @Expose
+    private AlarmClassification [] Classifications;
+
+    /**
+    * Multiple trigger conditions.
+Mutually exclusive conditions.
     */
     @SerializedName("MultiConditions")
     @Expose
     private MultiCondition [] MultiConditions;
+
+    /**
+    * Tencent Cloud observability platform channel-related information, mutually exclusive with AlarmNoticeIds
+    */
+    @SerializedName("MonitorNotice")
+    @Expose
+    private MonitorNotice MonitorNotice;
 
     /**
      * Get Alarm policy name 
@@ -209,16 +228,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Single trigger condition. Mutually exclusive with the MultiConditions parameter. 
-     * @return Condition Single trigger condition. Mutually exclusive with the MultiConditions parameter.
+     * Get Single trigger condition for whether to trigger alarm. Mutually exclusive with the MultiConditions parameter. 
+     * @return Condition Single trigger condition for whether to trigger alarm. Mutually exclusive with the MultiConditions parameter.
      */
     public String getCondition() {
         return this.Condition;
     }
 
     /**
-     * Set Single trigger condition. Mutually exclusive with the MultiConditions parameter.
-     * @param Condition Single trigger condition. Mutually exclusive with the MultiConditions parameter.
+     * Set Single trigger condition for whether to trigger alarm. Mutually exclusive with the MultiConditions parameter.
+     * @param Condition Single trigger condition for whether to trigger alarm. Mutually exclusive with the MultiConditions parameter.
      */
     public void setCondition(String Condition) {
         this.Condition = Condition;
@@ -257,16 +276,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get List of associated alarm notification templates 
-     * @return AlarmNoticeIds List of associated alarm notification templates
+     * Get List of associated alarm notification channel groups. - Search the list of associated alarm notification channel groups via [Query notification channel group list](https://www.tencentcloud.com/document/product/614/56462?from_cn_redirect=1). It is mutually exclusive with MonitorNotice. 
+     * @return AlarmNoticeIds List of associated alarm notification channel groups. - Search the list of associated alarm notification channel groups via [Query notification channel group list](https://www.tencentcloud.com/document/product/614/56462?from_cn_redirect=1). It is mutually exclusive with MonitorNotice.
      */
     public String [] getAlarmNoticeIds() {
         return this.AlarmNoticeIds;
     }
 
     /**
-     * Set List of associated alarm notification templates
-     * @param AlarmNoticeIds List of associated alarm notification templates
+     * Set List of associated alarm notification channel groups. - Search the list of associated alarm notification channel groups via [Query notification channel group list](https://www.tencentcloud.com/document/product/614/56462?from_cn_redirect=1). It is mutually exclusive with MonitorNotice.
+     * @param AlarmNoticeIds List of associated alarm notification channel groups. - Search the list of associated alarm notification channel groups via [Query notification channel group list](https://www.tencentcloud.com/document/product/614/56462?from_cn_redirect=1). It is mutually exclusive with MonitorNotice.
      */
     public void setAlarmNoticeIds(String [] AlarmNoticeIds) {
         this.AlarmNoticeIds = AlarmNoticeIds;
@@ -305,32 +324,32 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Creation time 
-     * @return CreateTime Creation time
+     * Get Creation time. Format: YYYY-MM-DD HH:MM:SS 
+     * @return CreateTime Creation time. Format: YYYY-MM-DD HH:MM:SS
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set Creation time
-     * @param CreateTime Creation time
+     * Set Creation time. Format: YYYY-MM-DD HH:MM:SS
+     * @param CreateTime Creation time. Format: YYYY-MM-DD HH:MM:SS
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get Last update time 
-     * @return UpdateTime Last update time
+     * Get Latest update time. Format: YYYY-MM-DD HH:MM:SS 
+     * @return UpdateTime Latest update time. Format: YYYY-MM-DD HH:MM:SS
      */
     public String getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set Last update time
-     * @param UpdateTime Last update time
+     * Set Latest update time. Format: YYYY-MM-DD HH:MM:SS
+     * @param UpdateTime Latest update time. Format: YYYY-MM-DD HH:MM:SS
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;
@@ -357,10 +376,8 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Get Custom callback template
-Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * Get Custom callback template 
      * @return CallBack Custom callback template
-Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public CallBackInfo getCallBack() {
         return this.CallBack;
@@ -368,116 +385,158 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
     /**
      * Set Custom callback template
-Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param CallBack Custom callback template
-Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public void setCallBack(CallBackInfo CallBack) {
         this.CallBack = CallBack;
     }
 
     /**
-     * Get Multi-Dimensional analysis settings
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return Analysis Multi-Dimensional analysis settings
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get Multidimensional analysis settings 
+     * @return Analysis Multidimensional analysis settings
      */
     public AnalysisDimensional [] getAnalysis() {
         return this.Analysis;
     }
 
     /**
-     * Set Multi-Dimensional analysis settings
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param Analysis Multi-Dimensional analysis settings
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set Multidimensional analysis settings
+     * @param Analysis Multidimensional analysis settings
      */
     public void setAnalysis(AnalysisDimensional [] Analysis) {
         this.Analysis = Analysis;
     }
 
     /**
-     * Get Group trigger status. 1: Enabled, 0: Disabled (default)
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return GroupTriggerStatus Group trigger status. 1: Enabled, 0: Disabled (default)
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Group trigger status. true: enabled, false: disabled (default) 
+     * @return GroupTriggerStatus Group trigger status. true: enabled, false: disabled (default)
      */
     public Boolean getGroupTriggerStatus() {
         return this.GroupTriggerStatus;
     }
 
     /**
-     * Set Group trigger status. 1: Enabled, 0: Disabled (default)
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param GroupTriggerStatus Group trigger status. 1: Enabled, 0: Disabled (default)
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Group trigger status. true: enabled, false: disabled (default)
+     * @param GroupTriggerStatus Group trigger status. true: enabled, false: disabled (default)
      */
     public void setGroupTriggerStatus(Boolean GroupTriggerStatus) {
         this.GroupTriggerStatus = GroupTriggerStatus;
     }
 
     /**
-     * Get Group Trigger ConditionsNote: This field may return null, indicating that no valid values can be obtained. 
-     * @return GroupTriggerCondition Group Trigger ConditionsNote: This field may return null, indicating that no valid values can be obtained.
+     * Get Grouping Trigger Conditions. 
+     * @return GroupTriggerCondition Grouping Trigger Conditions.
      */
     public String [] getGroupTriggerCondition() {
         return this.GroupTriggerCondition;
     }
 
     /**
-     * Set Group Trigger ConditionsNote: This field may return null, indicating that no valid values can be obtained.
-     * @param GroupTriggerCondition Group Trigger ConditionsNote: This field may return null, indicating that no valid values can be obtained.
+     * Set Grouping Trigger Conditions.
+     * @param GroupTriggerCondition Grouping Trigger Conditions.
      */
     public void setGroupTriggerCondition(String [] GroupTriggerCondition) {
         this.GroupTriggerCondition = GroupTriggerCondition;
     }
 
     /**
-     * Get Type of the monitored object. 0: common monitoring objects for execution statements; 1: separately selected monitoring objects for each execution statement.Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return MonitorObjectType Type of the monitored object. 0: common monitoring objects for execution statements; 1: separately selected monitoring objects for each execution statement.Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Tag information bound to the alarm policy. 
+     * @return Tags Tag information bound to the alarm policy.
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set Tag information bound to the alarm policy.
+     * @param Tags Tag information bound to the alarm policy.
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
+    /**
+     * Get Monitored object type. 0: shared monitored object for execution statements; 1: separate monitored object for each execution statement.  
+     * @return MonitorObjectType Monitored object type. 0: shared monitored object for execution statements; 1: separate monitored object for each execution statement. 
      */
     public Long getMonitorObjectType() {
         return this.MonitorObjectType;
     }
 
     /**
-     * Set Type of the monitored object. 0: common monitoring objects for execution statements; 1: separately selected monitoring objects for each execution statement.Note: This field may return null, indicating that no valid values can be obtained.
-     * @param MonitorObjectType Type of the monitored object. 0: common monitoring objects for execution statements; 1: separately selected monitoring objects for each execution statement.Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Monitored object type. 0: shared monitored object for execution statements; 1: separate monitored object for each execution statement. 
+     * @param MonitorObjectType Monitored object type. 0: shared monitored object for execution statements; 1: separate monitored object for each execution statement. 
      */
     public void setMonitorObjectType(Long MonitorObjectType) {
         this.MonitorObjectType = MonitorObjectType;
     }
 
     /**
-     * Get Alarm severity. 0: warning (Warn); 1: Reminder (Info); 2: urgent (Critical).Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return AlarmLevel Alarm severity. 0: warning (Warn); 1: Reminder (Info); 2: urgent (Critical).Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Alarm level. 0: Warn; 1: Information; 2: Critical. 
+     * @return AlarmLevel Alarm level. 0: Warn; 1: Information; 2: Critical.
      */
     public Long getAlarmLevel() {
         return this.AlarmLevel;
     }
 
     /**
-     * Set Alarm severity. 0: warning (Warn); 1: Reminder (Info); 2: urgent (Critical).Note: This field may return null, indicating that no valid values can be obtained.
-     * @param AlarmLevel Alarm severity. 0: warning (Warn); 1: Reminder (Info); 2: urgent (Critical).Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Alarm level. 0: Warn; 1: Information; 2: Critical.
+     * @param AlarmLevel Alarm level. 0: Warn; 1: Information; 2: Critical.
      */
     public void setAlarmLevel(Long AlarmLevel) {
         this.AlarmLevel = AlarmLevel;
     }
 
     /**
-     * Get Multiple trigger conditions. Exclusive with Condition.Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return MultiConditions Multiple trigger conditions. Exclusive with Condition.Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Additional classification field for alerts. 
+     * @return Classifications Additional classification field for alerts.
+     */
+    public AlarmClassification [] getClassifications() {
+        return this.Classifications;
+    }
+
+    /**
+     * Set Additional classification field for alerts.
+     * @param Classifications Additional classification field for alerts.
+     */
+    public void setClassifications(AlarmClassification [] Classifications) {
+        this.Classifications = Classifications;
+    }
+
+    /**
+     * Get Multiple trigger conditions.
+Mutually exclusive conditions. 
+     * @return MultiConditions Multiple trigger conditions.
+Mutually exclusive conditions.
      */
     public MultiCondition [] getMultiConditions() {
         return this.MultiConditions;
     }
 
     /**
-     * Set Multiple trigger conditions. Exclusive with Condition.Note: This field may return null, indicating that no valid values can be obtained.
-     * @param MultiConditions Multiple trigger conditions. Exclusive with Condition.Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Multiple trigger conditions.
+Mutually exclusive conditions.
+     * @param MultiConditions Multiple trigger conditions.
+Mutually exclusive conditions.
      */
     public void setMultiConditions(MultiCondition [] MultiConditions) {
         this.MultiConditions = MultiConditions;
+    }
+
+    /**
+     * Get Tencent Cloud observability platform channel-related information, mutually exclusive with AlarmNoticeIds 
+     * @return MonitorNotice Tencent Cloud observability platform channel-related information, mutually exclusive with AlarmNoticeIds
+     */
+    public MonitorNotice getMonitorNotice() {
+        return this.MonitorNotice;
+    }
+
+    /**
+     * Set Tencent Cloud observability platform channel-related information, mutually exclusive with AlarmNoticeIds
+     * @param MonitorNotice Tencent Cloud observability platform channel-related information, mutually exclusive with AlarmNoticeIds
+     */
+    public void setMonitorNotice(MonitorNotice MonitorNotice) {
+        this.MonitorNotice = MonitorNotice;
     }
 
     public AlarmInfo() {
@@ -548,17 +607,32 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 this.GroupTriggerCondition[i] = new String(source.GroupTriggerCondition[i]);
             }
         }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
         if (source.MonitorObjectType != null) {
             this.MonitorObjectType = new Long(source.MonitorObjectType);
         }
         if (source.AlarmLevel != null) {
             this.AlarmLevel = new Long(source.AlarmLevel);
         }
+        if (source.Classifications != null) {
+            this.Classifications = new AlarmClassification[source.Classifications.length];
+            for (int i = 0; i < source.Classifications.length; i++) {
+                this.Classifications[i] = new AlarmClassification(source.Classifications[i]);
+            }
+        }
         if (source.MultiConditions != null) {
             this.MultiConditions = new MultiCondition[source.MultiConditions.length];
             for (int i = 0; i < source.MultiConditions.length; i++) {
                 this.MultiConditions[i] = new MultiCondition(source.MultiConditions[i]);
             }
+        }
+        if (source.MonitorNotice != null) {
+            this.MonitorNotice = new MonitorNotice(source.MonitorNotice);
         }
     }
 
@@ -583,9 +657,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamArrayObj(map, prefix + "Analysis.", this.Analysis);
         this.setParamSimple(map, prefix + "GroupTriggerStatus", this.GroupTriggerStatus);
         this.setParamArraySimple(map, prefix + "GroupTriggerCondition.", this.GroupTriggerCondition);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "MonitorObjectType", this.MonitorObjectType);
         this.setParamSimple(map, prefix + "AlarmLevel", this.AlarmLevel);
+        this.setParamArrayObj(map, prefix + "Classifications.", this.Classifications);
         this.setParamArrayObj(map, prefix + "MultiConditions.", this.MultiConditions);
+        this.setParamObj(map, prefix + "MonitorNotice.", this.MonitorNotice);
 
     }
 }

@@ -24,8 +24,7 @@ import java.util.HashMap;
 public class DescribeVulCountByDatesResponse extends AbstractModel {
 
     /**
-    * Obtain the number of vulnerabilities for corresponding days in batch
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Obtain the vulnerability count for corresponding days in batch
     */
     @SerializedName("VulCount")
     @Expose
@@ -46,20 +45,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Obtain the number of vulnerabilities for corresponding days in batch
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return VulCount Obtain the number of vulnerabilities for corresponding days in batch
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Obtain the vulnerability count for corresponding days in batch 
+     * @return VulCount Obtain the vulnerability count for corresponding days in batch
      */
     public Long [] getVulCount() {
         return this.VulCount;
     }
 
     /**
-     * Set Obtain the number of vulnerabilities for corresponding days in batch
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param VulCount Obtain the number of vulnerabilities for corresponding days in batch
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Obtain the vulnerability count for corresponding days in batch
+     * @param VulCount Obtain the vulnerability count for corresponding days in batch
      */
     public void setVulCount(Long [] VulCount) {
         this.VulCount = VulCount;

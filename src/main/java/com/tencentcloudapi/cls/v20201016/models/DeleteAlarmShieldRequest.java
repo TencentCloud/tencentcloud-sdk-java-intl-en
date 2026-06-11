@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class DeleteAlarmShieldRequest extends AbstractModel {
 
     /**
-    * Blocking rule ID.
+    * Blocking rule id. Retrieve the blocking rule id by [searching for alert masking configuration rules](https://www.tencentcloud.com/document/api/614/103650?from_cn_redirect=1).
     */
     @SerializedName("TaskId")
     @Expose
     private String TaskId;
 
     /**
-    * Notification channel group ID.
+    * Notification channel group id. Retrieve the notification channel group id by [searching alert masking configuration rules](https://www.tencentcloud.com/document/api/614/103650?from_cn_redirect=1).
     */
     @SerializedName("AlarmNoticeId")
     @Expose
     private String AlarmNoticeId;
 
     /**
-     * Get Blocking rule ID. 
-     * @return TaskId Blocking rule ID.
+     * Get Blocking rule id. Retrieve the blocking rule id by [searching for alert masking configuration rules](https://www.tencentcloud.com/document/api/614/103650?from_cn_redirect=1). 
+     * @return TaskId Blocking rule id. Retrieve the blocking rule id by [searching for alert masking configuration rules](https://www.tencentcloud.com/document/api/614/103650?from_cn_redirect=1).
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set Blocking rule ID.
-     * @param TaskId Blocking rule ID.
+     * Set Blocking rule id. Retrieve the blocking rule id by [searching for alert masking configuration rules](https://www.tencentcloud.com/document/api/614/103650?from_cn_redirect=1).
+     * @param TaskId Blocking rule id. Retrieve the blocking rule id by [searching for alert masking configuration rules](https://www.tencentcloud.com/document/api/614/103650?from_cn_redirect=1).
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;
     }
 
     /**
-     * Get Notification channel group ID. 
-     * @return AlarmNoticeId Notification channel group ID.
+     * Get Notification channel group id. Retrieve the notification channel group id by [searching alert masking configuration rules](https://www.tencentcloud.com/document/api/614/103650?from_cn_redirect=1). 
+     * @return AlarmNoticeId Notification channel group id. Retrieve the notification channel group id by [searching alert masking configuration rules](https://www.tencentcloud.com/document/api/614/103650?from_cn_redirect=1).
      */
     public String getAlarmNoticeId() {
         return this.AlarmNoticeId;
     }
 
     /**
-     * Set Notification channel group ID.
-     * @param AlarmNoticeId Notification channel group ID.
+     * Set Notification channel group id. Retrieve the notification channel group id by [searching alert masking configuration rules](https://www.tencentcloud.com/document/api/614/103650?from_cn_redirect=1).
+     * @param AlarmNoticeId Notification channel group id. Retrieve the notification channel group id by [searching alert masking configuration rules](https://www.tencentcloud.com/document/api/614/103650?from_cn_redirect=1).
      */
     public void setAlarmNoticeId(String AlarmNoticeId) {
         this.AlarmNoticeId = AlarmNoticeId;

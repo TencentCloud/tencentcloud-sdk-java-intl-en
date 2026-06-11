@@ -73,8 +73,7 @@ public class DescribeContainerSecEventSummaryResponse extends AbstractModel {
     private Long UnhandledMaliciousConnectionEventCnt;
 
     /**
-    * Unhandled K8sApi events
-Note: This field may return `null`, indicating that no valid value was found.
+    * Unresolved Kubernetes API Events
     */
     @SerializedName("UnhandledK8sApiEventCnt")
     @Expose
@@ -200,20 +199,16 @@ Note: This field may return `null`, indicating that no valid value was found.
     }
 
     /**
-     * Get Unhandled K8sApi events
-Note: This field may return `null`, indicating that no valid value was found. 
-     * @return UnhandledK8sApiEventCnt Unhandled K8sApi events
-Note: This field may return `null`, indicating that no valid value was found.
+     * Get Unresolved Kubernetes API Events 
+     * @return UnhandledK8sApiEventCnt Unresolved Kubernetes API Events
      */
     public Long getUnhandledK8sApiEventCnt() {
         return this.UnhandledK8sApiEventCnt;
     }
 
     /**
-     * Set Unhandled K8sApi events
-Note: This field may return `null`, indicating that no valid value was found.
-     * @param UnhandledK8sApiEventCnt Unhandled K8sApi events
-Note: This field may return `null`, indicating that no valid value was found.
+     * Set Unresolved Kubernetes API Events
+     * @param UnhandledK8sApiEventCnt Unresolved Kubernetes API Events
      */
     public void setUnhandledK8sApiEventCnt(Long UnhandledK8sApiEventCnt) {
         this.UnhandledK8sApiEventCnt = UnhandledK8sApiEventCnt;

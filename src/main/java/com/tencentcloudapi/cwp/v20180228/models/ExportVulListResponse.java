@@ -24,8 +24,7 @@ import java.util.HashMap;
 public class ExportVulListResponse extends AbstractModel {
 
     /**
-    * Download URL of the exported file (deprecated)
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Download url of the exported file (deprecated).
     */
     @SerializedName("DownloadUrl")
     @Expose
@@ -46,20 +45,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Download URL of the exported file (deprecated)
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return DownloadUrl Download URL of the exported file (deprecated)
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Download url of the exported file (deprecated). 
+     * @return DownloadUrl Download url of the exported file (deprecated).
      */
     public String getDownloadUrl() {
         return this.DownloadUrl;
     }
 
     /**
-     * Set Download URL of the exported file (deprecated)
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param DownloadUrl Download URL of the exported file (deprecated)
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Download url of the exported file (deprecated).
+     * @param DownloadUrl Download url of the exported file (deprecated).
      */
     public void setDownloadUrl(String DownloadUrl) {
         this.DownloadUrl = DownloadUrl;

@@ -24,8 +24,7 @@ import java.util.HashMap;
 public class DescribeAlarmIncidentNodesResponse extends AbstractModel {
 
     /**
-    * All node information on the event corresponding to an alarm. Multiple events may be involved.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * All node information on the event corresponding to an alarm, which may include multiple events.
     */
     @SerializedName("IncidentNodes")
     @Expose
@@ -39,20 +38,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get All node information on the event corresponding to an alarm. Multiple events may be involved.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return IncidentNodes All node information on the event corresponding to an alarm. Multiple events may be involved.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get All node information on the event corresponding to an alarm, which may include multiple events. 
+     * @return IncidentNodes All node information on the event corresponding to an alarm, which may include multiple events.
      */
     public IncidentVertexInfo [] getIncidentNodes() {
         return this.IncidentNodes;
     }
 
     /**
-     * Set All node information on the event corresponding to an alarm. Multiple events may be involved.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param IncidentNodes All node information on the event corresponding to an alarm. Multiple events may be involved.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set All node information on the event corresponding to an alarm, which may include multiple events.
+     * @param IncidentNodes All node information on the event corresponding to an alarm, which may include multiple events.
      */
     public void setIncidentNodes(IncidentVertexInfo [] IncidentNodes) {
         this.IncidentNodes = IncidentNodes;

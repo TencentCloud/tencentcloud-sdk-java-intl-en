@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeAssetImageListResponse extends AbstractModel {
 
     /**
-    * List of images
+    * <p>Image list.</p>
     */
     @SerializedName("List")
     @Expose
     private ImagesInfo [] List;
 
     /**
-    * Total number
+    * <p>Total quantity.</p>
     */
     @SerializedName("TotalCount")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeAssetImageListResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get List of images 
-     * @return List List of images
+     * Get <p>Image list.</p> 
+     * @return List <p>Image list.</p>
      */
     public ImagesInfo [] getList() {
         return this.List;
     }
 
     /**
-     * Set List of images
-     * @param List List of images
+     * Set <p>Image list.</p>
+     * @param List <p>Image list.</p>
      */
     public void setList(ImagesInfo [] List) {
         this.List = List;
     }
 
     /**
-     * Get Total number 
-     * @return TotalCount Total number
+     * Get <p>Total quantity.</p> 
+     * @return TotalCount <p>Total quantity.</p>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set Total number
-     * @param TotalCount Total number
+     * Set <p>Total quantity.</p>
+     * @param TotalCount <p>Total quantity.</p>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

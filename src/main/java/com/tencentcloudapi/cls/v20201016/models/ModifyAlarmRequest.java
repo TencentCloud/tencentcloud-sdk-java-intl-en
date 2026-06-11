@@ -24,483 +24,490 @@ import java.util.HashMap;
 public class ModifyAlarmRequest extends AbstractModel {
 
     /**
-    * Alarm policy ID
+    * <p>Alert policy ID. - Search the alert policy ID by <a href="https://www.tencentcloud.com/document/product/614/56461?from_cn_redirect=1">obtaining the alarm policy list</a>.</p>
     */
     @SerializedName("AlarmId")
     @Expose
     private String AlarmId;
 
     /**
-    * Alarm policy name
+    * <p>Alarm policy name. Supports a maximum of 255 bytes. The '|' character is unsupported.</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * Monitoring task running time point
+    * <p>Monitoring task execution time point.</p>
     */
     @SerializedName("MonitorTime")
     @Expose
     private MonitorTime MonitorTime;
 
     /**
-    * Trigger condition. Note: - Condition and AlarmLevel are one set of configurations, MultiConditions is another set of configurations. The two sets of configurations are mutually exclusive.
+    * <p>Trigger condition for sending alarm information.</p><p>Note:</p><ul><li>Condition and AlarmLevel are one set of configurations, and MultiConditions is another set of configurations. The two sets are mutually exclusive.</li></ul>
     */
     @SerializedName("Condition")
     @Expose
     private String Condition;
 
     /**
-    * Alarm level.0: Warning (Warn); 1: Reminder (Info); 2: Urgent (Critical)
-
-Note: - Condition and AlarmLevel are one set of configurations, MultiConditions is another set of configurations. The two sets of configurations are mutually exclusive.
+    * <p>Alarm level.</p><p>0: Warning (Warn); 1: Reminder (Info); 2: Emergency (Critical)</p><p>Note:</p><ul><li>Condition and AlarmLevel are one set of configurations, and MultiConditions are another set of configurations. The two sets are mutually exclusive.</li></ul>
     */
     @SerializedName("AlarmLevel")
     @Expose
     private Long AlarmLevel;
 
     /**
-    * Multiple trigger conditions. Note: - Condition and AlarmLevel are one set of configurations, MultiConditions is another set of configurations. The two sets of configurations are mutually exclusive.
+    * <p>Multiple trigger conditions.</p><p>Note:</p><ul><li>Condition and AlarmLevel are one set of configurations, and MultiConditions are another set of configurations. The two sets of configurations are mutually exclusive.</li></ul>
     */
     @SerializedName("MultiConditions")
     @Expose
     private MultiCondition [] MultiConditions;
 
     /**
-    * Alarm persistence cycle. An alarm will be triggered only after the corresponding trigger condition is met for the number of times specified by `TriggerCount`. Value range: 1 to 10
+    * <p>Duration cycle. An alarm is triggered after the trigger conditions are constantly met for TriggerCount cycles. The minimum value is 1, and the maximum value is 2000.</p>
     */
     @SerializedName("TriggerCount")
     @Expose
     private Long TriggerCount;
 
     /**
-    * Repeated alarm interval in minutes. Value range: 0 to 1440
+    * <p>Alarm repeat cycle. In minutes. Value ranges from 0 to 1440.</p>
     */
     @SerializedName("AlarmPeriod")
     @Expose
     private Long AlarmPeriod;
 
     /**
-    * List of associated alarm notification templates
-    */
-    @SerializedName("AlarmNoticeIds")
-    @Expose
-    private String [] AlarmNoticeIds;
-
-    /**
-    * Monitoring object list
+    * <p>Monitoring object list.</p>
     */
     @SerializedName("AlarmTargets")
     @Expose
     private AlarmTarget [] AlarmTargets;
 
     /**
-    * Whether to enable the alarm policy
+    * <p>Whether to enable alarm policy.</p>
     */
     @SerializedName("Status")
     @Expose
     private Boolean Status;
 
     /**
-    * This parameter has been deprecated. Use the Status parameter to control whether to enable the alarm policy.
+    * <p>This parameter has been deprecated, please use the Status parameter to control whether to enable the alarm policy.</p>
     */
     @SerializedName("Enable")
     @Expose
     private Boolean Enable;
 
     /**
-    * Custom alarm content
+    * <p>User-defined alarm content</p>
     */
     @SerializedName("MessageTemplate")
     @Expose
     private String MessageTemplate;
 
     /**
-    * Custom callback
+    * <p>user-defined callback</p>
     */
     @SerializedName("CallBack")
     @Expose
     private CallBackInfo CallBack;
 
     /**
-    * Multi-Dimensional analysis
+    * <p>Multi-dimensional analysis</p>
     */
     @SerializedName("Analysis")
     @Expose
     private AnalysisDimensional [] Analysis;
 
     /**
-    * Group trigger status. true: enabled; false: disabled (default)
+    * <p>Group trigger status. true: enabled, false: disabled (default)</p>
     */
     @SerializedName("GroupTriggerStatus")
     @Expose
     private Boolean GroupTriggerStatus;
 
     /**
-    * Grouping trigger conditions.
+    * <p>Group trigger conditions.</p>
     */
     @SerializedName("GroupTriggerCondition")
     @Expose
     private String [] GroupTriggerCondition;
 
     /**
-    * Tag description list, by specifying this parameter, you can simultaneously bind a Tag to the corresponding alarm policy. Up to 10 Tag key-value pairs are supported, and they must be unique.
+    * <p>Tag description list, by specifying this parameter, you can simultaneously bind a tag to the corresponding alarm policy. Up to 10 tag key-value pairs are supported, and no duplicate key-value pairs are allowed.</p>
     */
     @SerializedName("Tags")
     @Expose
     private Tag [] Tags;
 
     /**
-    * Monitored Object Type. 0: common monitoring objects for execution statements; 1: separately selected monitoring objects for each execution statement.When the value is 1, the number of AlarmTargets Elements (XML) cannot exceed 10, and the Numbers in AlarmTargets must be continuous positive integers starting from 1, without duplication.
-
+    * <p>Monitored object type. 0: Common monitoring object for execution statements; 1: Each execution statement selects its own monitored object.<br>When the value is 1, the number of elements in AlarmTargets cannot exceed 10. The Number in AlarmTargets must be consecutive positive integers starting from 1 and must be unique.</p>
     */
     @SerializedName("MonitorObjectType")
     @Expose
     private Long MonitorObjectType;
 
     /**
-    * Alarm additional classification information list.
-The number of Classifications elements cannot exceed 20.The Key of Classifications element must not be empty and duplicated, and its length cannot exceed 50 characters, complying with the regular expression ^[a-z]([a-z0-9_]{0,49})$.The Value length of Classifications element cannot exceed 200 characters.
+    * <p>Alert additional classification information list.<br>Number of Classifications Elements cannot exceed 20.<br>The Key of Classifications elements cannot be empty, must be unique, length cannot exceed 50 characters, and complies with the regular expression <code>^[a-z]([a-z0-9_]{0,49})$</code>.<br>Value of Classifications elements cannot exceed 200 characters.</p>
     */
     @SerializedName("Classifications")
     @Expose
     private AlarmClassification [] Classifications;
 
     /**
-     * Get Alarm policy ID 
-     * @return AlarmId Alarm policy ID
+    * <p>List of associated CLS alarm notification channel groups. - Search the list of associated alarm notification channel groups via <a href="https://www.tencentcloud.com/document/product/614/56462?from_cn_redirect=1">Query notification channel group list</a>. It is mutually exclusive with MonitorNotice.</p>
+    */
+    @SerializedName("AlarmNoticeIds")
+    @Expose
+    private String [] AlarmNoticeIds;
+
+    /**
+    * <p>The associated observability platform notification template is mutually exclusive with the AlarmNoticeIds parameter and cannot include both.</p>
+    */
+    @SerializedName("MonitorNotice")
+    @Expose
+    private MonitorNotice MonitorNotice;
+
+    /**
+     * Get <p>Alert policy ID. - Search the alert policy ID by <a href="https://www.tencentcloud.com/document/product/614/56461?from_cn_redirect=1">obtaining the alarm policy list</a>.</p> 
+     * @return AlarmId <p>Alert policy ID. - Search the alert policy ID by <a href="https://www.tencentcloud.com/document/product/614/56461?from_cn_redirect=1">obtaining the alarm policy list</a>.</p>
      */
     public String getAlarmId() {
         return this.AlarmId;
     }
 
     /**
-     * Set Alarm policy ID
-     * @param AlarmId Alarm policy ID
+     * Set <p>Alert policy ID. - Search the alert policy ID by <a href="https://www.tencentcloud.com/document/product/614/56461?from_cn_redirect=1">obtaining the alarm policy list</a>.</p>
+     * @param AlarmId <p>Alert policy ID. - Search the alert policy ID by <a href="https://www.tencentcloud.com/document/product/614/56461?from_cn_redirect=1">obtaining the alarm policy list</a>.</p>
      */
     public void setAlarmId(String AlarmId) {
         this.AlarmId = AlarmId;
     }
 
     /**
-     * Get Alarm policy name 
-     * @return Name Alarm policy name
+     * Get <p>Alarm policy name. Supports a maximum of 255 bytes. The '|' character is unsupported.</p> 
+     * @return Name <p>Alarm policy name. Supports a maximum of 255 bytes. The '|' character is unsupported.</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Alarm policy name
-     * @param Name Alarm policy name
+     * Set <p>Alarm policy name. Supports a maximum of 255 bytes. The '|' character is unsupported.</p>
+     * @param Name <p>Alarm policy name. Supports a maximum of 255 bytes. The '|' character is unsupported.</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get Monitoring task running time point 
-     * @return MonitorTime Monitoring task running time point
+     * Get <p>Monitoring task execution time point.</p> 
+     * @return MonitorTime <p>Monitoring task execution time point.</p>
      */
     public MonitorTime getMonitorTime() {
         return this.MonitorTime;
     }
 
     /**
-     * Set Monitoring task running time point
-     * @param MonitorTime Monitoring task running time point
+     * Set <p>Monitoring task execution time point.</p>
+     * @param MonitorTime <p>Monitoring task execution time point.</p>
      */
     public void setMonitorTime(MonitorTime MonitorTime) {
         this.MonitorTime = MonitorTime;
     }
 
     /**
-     * Get Trigger condition. Note: - Condition and AlarmLevel are one set of configurations, MultiConditions is another set of configurations. The two sets of configurations are mutually exclusive. 
-     * @return Condition Trigger condition. Note: - Condition and AlarmLevel are one set of configurations, MultiConditions is another set of configurations. The two sets of configurations are mutually exclusive.
+     * Get <p>Trigger condition for sending alarm information.</p><p>Note:</p><ul><li>Condition and AlarmLevel are one set of configurations, and MultiConditions is another set of configurations. The two sets are mutually exclusive.</li></ul> 
+     * @return Condition <p>Trigger condition for sending alarm information.</p><p>Note:</p><ul><li>Condition and AlarmLevel are one set of configurations, and MultiConditions is another set of configurations. The two sets are mutually exclusive.</li></ul>
      */
     public String getCondition() {
         return this.Condition;
     }
 
     /**
-     * Set Trigger condition. Note: - Condition and AlarmLevel are one set of configurations, MultiConditions is another set of configurations. The two sets of configurations are mutually exclusive.
-     * @param Condition Trigger condition. Note: - Condition and AlarmLevel are one set of configurations, MultiConditions is another set of configurations. The two sets of configurations are mutually exclusive.
+     * Set <p>Trigger condition for sending alarm information.</p><p>Note:</p><ul><li>Condition and AlarmLevel are one set of configurations, and MultiConditions is another set of configurations. The two sets are mutually exclusive.</li></ul>
+     * @param Condition <p>Trigger condition for sending alarm information.</p><p>Note:</p><ul><li>Condition and AlarmLevel are one set of configurations, and MultiConditions is another set of configurations. The two sets are mutually exclusive.</li></ul>
      */
     public void setCondition(String Condition) {
         this.Condition = Condition;
     }
 
     /**
-     * Get Alarm level.0: Warning (Warn); 1: Reminder (Info); 2: Urgent (Critical)
-
-Note: - Condition and AlarmLevel are one set of configurations, MultiConditions is another set of configurations. The two sets of configurations are mutually exclusive. 
-     * @return AlarmLevel Alarm level.0: Warning (Warn); 1: Reminder (Info); 2: Urgent (Critical)
-
-Note: - Condition and AlarmLevel are one set of configurations, MultiConditions is another set of configurations. The two sets of configurations are mutually exclusive.
+     * Get <p>Alarm level.</p><p>0: Warning (Warn); 1: Reminder (Info); 2: Emergency (Critical)</p><p>Note:</p><ul><li>Condition and AlarmLevel are one set of configurations, and MultiConditions are another set of configurations. The two sets are mutually exclusive.</li></ul> 
+     * @return AlarmLevel <p>Alarm level.</p><p>0: Warning (Warn); 1: Reminder (Info); 2: Emergency (Critical)</p><p>Note:</p><ul><li>Condition and AlarmLevel are one set of configurations, and MultiConditions are another set of configurations. The two sets are mutually exclusive.</li></ul>
      */
     public Long getAlarmLevel() {
         return this.AlarmLevel;
     }
 
     /**
-     * Set Alarm level.0: Warning (Warn); 1: Reminder (Info); 2: Urgent (Critical)
-
-Note: - Condition and AlarmLevel are one set of configurations, MultiConditions is another set of configurations. The two sets of configurations are mutually exclusive.
-     * @param AlarmLevel Alarm level.0: Warning (Warn); 1: Reminder (Info); 2: Urgent (Critical)
-
-Note: - Condition and AlarmLevel are one set of configurations, MultiConditions is another set of configurations. The two sets of configurations are mutually exclusive.
+     * Set <p>Alarm level.</p><p>0: Warning (Warn); 1: Reminder (Info); 2: Emergency (Critical)</p><p>Note:</p><ul><li>Condition and AlarmLevel are one set of configurations, and MultiConditions are another set of configurations. The two sets are mutually exclusive.</li></ul>
+     * @param AlarmLevel <p>Alarm level.</p><p>0: Warning (Warn); 1: Reminder (Info); 2: Emergency (Critical)</p><p>Note:</p><ul><li>Condition and AlarmLevel are one set of configurations, and MultiConditions are another set of configurations. The two sets are mutually exclusive.</li></ul>
      */
     public void setAlarmLevel(Long AlarmLevel) {
         this.AlarmLevel = AlarmLevel;
     }
 
     /**
-     * Get Multiple trigger conditions. Note: - Condition and AlarmLevel are one set of configurations, MultiConditions is another set of configurations. The two sets of configurations are mutually exclusive. 
-     * @return MultiConditions Multiple trigger conditions. Note: - Condition and AlarmLevel are one set of configurations, MultiConditions is another set of configurations. The two sets of configurations are mutually exclusive.
+     * Get <p>Multiple trigger conditions.</p><p>Note:</p><ul><li>Condition and AlarmLevel are one set of configurations, and MultiConditions are another set of configurations. The two sets of configurations are mutually exclusive.</li></ul> 
+     * @return MultiConditions <p>Multiple trigger conditions.</p><p>Note:</p><ul><li>Condition and AlarmLevel are one set of configurations, and MultiConditions are another set of configurations. The two sets of configurations are mutually exclusive.</li></ul>
      */
     public MultiCondition [] getMultiConditions() {
         return this.MultiConditions;
     }
 
     /**
-     * Set Multiple trigger conditions. Note: - Condition and AlarmLevel are one set of configurations, MultiConditions is another set of configurations. The two sets of configurations are mutually exclusive.
-     * @param MultiConditions Multiple trigger conditions. Note: - Condition and AlarmLevel are one set of configurations, MultiConditions is another set of configurations. The two sets of configurations are mutually exclusive.
+     * Set <p>Multiple trigger conditions.</p><p>Note:</p><ul><li>Condition and AlarmLevel are one set of configurations, and MultiConditions are another set of configurations. The two sets of configurations are mutually exclusive.</li></ul>
+     * @param MultiConditions <p>Multiple trigger conditions.</p><p>Note:</p><ul><li>Condition and AlarmLevel are one set of configurations, and MultiConditions are another set of configurations. The two sets of configurations are mutually exclusive.</li></ul>
      */
     public void setMultiConditions(MultiCondition [] MultiConditions) {
         this.MultiConditions = MultiConditions;
     }
 
     /**
-     * Get Alarm persistence cycle. An alarm will be triggered only after the corresponding trigger condition is met for the number of times specified by `TriggerCount`. Value range: 1 to 10 
-     * @return TriggerCount Alarm persistence cycle. An alarm will be triggered only after the corresponding trigger condition is met for the number of times specified by `TriggerCount`. Value range: 1 to 10
+     * Get <p>Duration cycle. An alarm is triggered after the trigger conditions are constantly met for TriggerCount cycles. The minimum value is 1, and the maximum value is 2000.</p> 
+     * @return TriggerCount <p>Duration cycle. An alarm is triggered after the trigger conditions are constantly met for TriggerCount cycles. The minimum value is 1, and the maximum value is 2000.</p>
      */
     public Long getTriggerCount() {
         return this.TriggerCount;
     }
 
     /**
-     * Set Alarm persistence cycle. An alarm will be triggered only after the corresponding trigger condition is met for the number of times specified by `TriggerCount`. Value range: 1 to 10
-     * @param TriggerCount Alarm persistence cycle. An alarm will be triggered only after the corresponding trigger condition is met for the number of times specified by `TriggerCount`. Value range: 1 to 10
+     * Set <p>Duration cycle. An alarm is triggered after the trigger conditions are constantly met for TriggerCount cycles. The minimum value is 1, and the maximum value is 2000.</p>
+     * @param TriggerCount <p>Duration cycle. An alarm is triggered after the trigger conditions are constantly met for TriggerCount cycles. The minimum value is 1, and the maximum value is 2000.</p>
      */
     public void setTriggerCount(Long TriggerCount) {
         this.TriggerCount = TriggerCount;
     }
 
     /**
-     * Get Repeated alarm interval in minutes. Value range: 0 to 1440 
-     * @return AlarmPeriod Repeated alarm interval in minutes. Value range: 0 to 1440
+     * Get <p>Alarm repeat cycle. In minutes. Value ranges from 0 to 1440.</p> 
+     * @return AlarmPeriod <p>Alarm repeat cycle. In minutes. Value ranges from 0 to 1440.</p>
      */
     public Long getAlarmPeriod() {
         return this.AlarmPeriod;
     }
 
     /**
-     * Set Repeated alarm interval in minutes. Value range: 0 to 1440
-     * @param AlarmPeriod Repeated alarm interval in minutes. Value range: 0 to 1440
+     * Set <p>Alarm repeat cycle. In minutes. Value ranges from 0 to 1440.</p>
+     * @param AlarmPeriod <p>Alarm repeat cycle. In minutes. Value ranges from 0 to 1440.</p>
      */
     public void setAlarmPeriod(Long AlarmPeriod) {
         this.AlarmPeriod = AlarmPeriod;
     }
 
     /**
-     * Get List of associated alarm notification templates 
-     * @return AlarmNoticeIds List of associated alarm notification templates
-     */
-    public String [] getAlarmNoticeIds() {
-        return this.AlarmNoticeIds;
-    }
-
-    /**
-     * Set List of associated alarm notification templates
-     * @param AlarmNoticeIds List of associated alarm notification templates
-     */
-    public void setAlarmNoticeIds(String [] AlarmNoticeIds) {
-        this.AlarmNoticeIds = AlarmNoticeIds;
-    }
-
-    /**
-     * Get Monitoring object list 
-     * @return AlarmTargets Monitoring object list
+     * Get <p>Monitoring object list.</p> 
+     * @return AlarmTargets <p>Monitoring object list.</p>
      */
     public AlarmTarget [] getAlarmTargets() {
         return this.AlarmTargets;
     }
 
     /**
-     * Set Monitoring object list
-     * @param AlarmTargets Monitoring object list
+     * Set <p>Monitoring object list.</p>
+     * @param AlarmTargets <p>Monitoring object list.</p>
      */
     public void setAlarmTargets(AlarmTarget [] AlarmTargets) {
         this.AlarmTargets = AlarmTargets;
     }
 
     /**
-     * Get Whether to enable the alarm policy 
-     * @return Status Whether to enable the alarm policy
+     * Get <p>Whether to enable alarm policy.</p> 
+     * @return Status <p>Whether to enable alarm policy.</p>
      */
     public Boolean getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Whether to enable the alarm policy
-     * @param Status Whether to enable the alarm policy
+     * Set <p>Whether to enable alarm policy.</p>
+     * @param Status <p>Whether to enable alarm policy.</p>
      */
     public void setStatus(Boolean Status) {
         this.Status = Status;
     }
 
     /**
-     * Get This parameter has been deprecated. Use the Status parameter to control whether to enable the alarm policy. 
-     * @return Enable This parameter has been deprecated. Use the Status parameter to control whether to enable the alarm policy.
+     * Get <p>This parameter has been deprecated, please use the Status parameter to control whether to enable the alarm policy.</p> 
+     * @return Enable <p>This parameter has been deprecated, please use the Status parameter to control whether to enable the alarm policy.</p>
+     * @deprecated
      */
+    @Deprecated
     public Boolean getEnable() {
         return this.Enable;
     }
 
     /**
-     * Set This parameter has been deprecated. Use the Status parameter to control whether to enable the alarm policy.
-     * @param Enable This parameter has been deprecated. Use the Status parameter to control whether to enable the alarm policy.
+     * Set <p>This parameter has been deprecated, please use the Status parameter to control whether to enable the alarm policy.</p>
+     * @param Enable <p>This parameter has been deprecated, please use the Status parameter to control whether to enable the alarm policy.</p>
+     * @deprecated
      */
+    @Deprecated
     public void setEnable(Boolean Enable) {
         this.Enable = Enable;
     }
 
     /**
-     * Get Custom alarm content 
-     * @return MessageTemplate Custom alarm content
+     * Get <p>User-defined alarm content</p> 
+     * @return MessageTemplate <p>User-defined alarm content</p>
      */
     public String getMessageTemplate() {
         return this.MessageTemplate;
     }
 
     /**
-     * Set Custom alarm content
-     * @param MessageTemplate Custom alarm content
+     * Set <p>User-defined alarm content</p>
+     * @param MessageTemplate <p>User-defined alarm content</p>
      */
     public void setMessageTemplate(String MessageTemplate) {
         this.MessageTemplate = MessageTemplate;
     }
 
     /**
-     * Get Custom callback 
-     * @return CallBack Custom callback
+     * Get <p>user-defined callback</p> 
+     * @return CallBack <p>user-defined callback</p>
      */
     public CallBackInfo getCallBack() {
         return this.CallBack;
     }
 
     /**
-     * Set Custom callback
-     * @param CallBack Custom callback
+     * Set <p>user-defined callback</p>
+     * @param CallBack <p>user-defined callback</p>
      */
     public void setCallBack(CallBackInfo CallBack) {
         this.CallBack = CallBack;
     }
 
     /**
-     * Get Multi-Dimensional analysis 
-     * @return Analysis Multi-Dimensional analysis
+     * Get <p>Multi-dimensional analysis</p> 
+     * @return Analysis <p>Multi-dimensional analysis</p>
      */
     public AnalysisDimensional [] getAnalysis() {
         return this.Analysis;
     }
 
     /**
-     * Set Multi-Dimensional analysis
-     * @param Analysis Multi-Dimensional analysis
+     * Set <p>Multi-dimensional analysis</p>
+     * @param Analysis <p>Multi-dimensional analysis</p>
      */
     public void setAnalysis(AnalysisDimensional [] Analysis) {
         this.Analysis = Analysis;
     }
 
     /**
-     * Get Group trigger status. true: enabled; false: disabled (default) 
-     * @return GroupTriggerStatus Group trigger status. true: enabled; false: disabled (default)
+     * Get <p>Group trigger status. true: enabled, false: disabled (default)</p> 
+     * @return GroupTriggerStatus <p>Group trigger status. true: enabled, false: disabled (default)</p>
      */
     public Boolean getGroupTriggerStatus() {
         return this.GroupTriggerStatus;
     }
 
     /**
-     * Set Group trigger status. true: enabled; false: disabled (default)
-     * @param GroupTriggerStatus Group trigger status. true: enabled; false: disabled (default)
+     * Set <p>Group trigger status. true: enabled, false: disabled (default)</p>
+     * @param GroupTriggerStatus <p>Group trigger status. true: enabled, false: disabled (default)</p>
      */
     public void setGroupTriggerStatus(Boolean GroupTriggerStatus) {
         this.GroupTriggerStatus = GroupTriggerStatus;
     }
 
     /**
-     * Get Grouping trigger conditions. 
-     * @return GroupTriggerCondition Grouping trigger conditions.
+     * Get <p>Group trigger conditions.</p> 
+     * @return GroupTriggerCondition <p>Group trigger conditions.</p>
      */
     public String [] getGroupTriggerCondition() {
         return this.GroupTriggerCondition;
     }
 
     /**
-     * Set Grouping trigger conditions.
-     * @param GroupTriggerCondition Grouping trigger conditions.
+     * Set <p>Group trigger conditions.</p>
+     * @param GroupTriggerCondition <p>Group trigger conditions.</p>
      */
     public void setGroupTriggerCondition(String [] GroupTriggerCondition) {
         this.GroupTriggerCondition = GroupTriggerCondition;
     }
 
     /**
-     * Get Tag description list, by specifying this parameter, you can simultaneously bind a Tag to the corresponding alarm policy. Up to 10 Tag key-value pairs are supported, and they must be unique. 
-     * @return Tags Tag description list, by specifying this parameter, you can simultaneously bind a Tag to the corresponding alarm policy. Up to 10 Tag key-value pairs are supported, and they must be unique.
+     * Get <p>Tag description list, by specifying this parameter, you can simultaneously bind a tag to the corresponding alarm policy. Up to 10 tag key-value pairs are supported, and no duplicate key-value pairs are allowed.</p> 
+     * @return Tags <p>Tag description list, by specifying this parameter, you can simultaneously bind a tag to the corresponding alarm policy. Up to 10 tag key-value pairs are supported, and no duplicate key-value pairs are allowed.</p>
      */
     public Tag [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set Tag description list, by specifying this parameter, you can simultaneously bind a Tag to the corresponding alarm policy. Up to 10 Tag key-value pairs are supported, and they must be unique.
-     * @param Tags Tag description list, by specifying this parameter, you can simultaneously bind a Tag to the corresponding alarm policy. Up to 10 Tag key-value pairs are supported, and they must be unique.
+     * Set <p>Tag description list, by specifying this parameter, you can simultaneously bind a tag to the corresponding alarm policy. Up to 10 tag key-value pairs are supported, and no duplicate key-value pairs are allowed.</p>
+     * @param Tags <p>Tag description list, by specifying this parameter, you can simultaneously bind a tag to the corresponding alarm policy. Up to 10 tag key-value pairs are supported, and no duplicate key-value pairs are allowed.</p>
      */
     public void setTags(Tag [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get Monitored Object Type. 0: common monitoring objects for execution statements; 1: separately selected monitoring objects for each execution statement.When the value is 1, the number of AlarmTargets Elements (XML) cannot exceed 10, and the Numbers in AlarmTargets must be continuous positive integers starting from 1, without duplication.
- 
-     * @return MonitorObjectType Monitored Object Type. 0: common monitoring objects for execution statements; 1: separately selected monitoring objects for each execution statement.When the value is 1, the number of AlarmTargets Elements (XML) cannot exceed 10, and the Numbers in AlarmTargets must be continuous positive integers starting from 1, without duplication.
-
+     * Get <p>Monitored object type. 0: Common monitoring object for execution statements; 1: Each execution statement selects its own monitored object.<br>When the value is 1, the number of elements in AlarmTargets cannot exceed 10. The Number in AlarmTargets must be consecutive positive integers starting from 1 and must be unique.</p> 
+     * @return MonitorObjectType <p>Monitored object type. 0: Common monitoring object for execution statements; 1: Each execution statement selects its own monitored object.<br>When the value is 1, the number of elements in AlarmTargets cannot exceed 10. The Number in AlarmTargets must be consecutive positive integers starting from 1 and must be unique.</p>
      */
     public Long getMonitorObjectType() {
         return this.MonitorObjectType;
     }
 
     /**
-     * Set Monitored Object Type. 0: common monitoring objects for execution statements; 1: separately selected monitoring objects for each execution statement.When the value is 1, the number of AlarmTargets Elements (XML) cannot exceed 10, and the Numbers in AlarmTargets must be continuous positive integers starting from 1, without duplication.
-
-     * @param MonitorObjectType Monitored Object Type. 0: common monitoring objects for execution statements; 1: separately selected monitoring objects for each execution statement.When the value is 1, the number of AlarmTargets Elements (XML) cannot exceed 10, and the Numbers in AlarmTargets must be continuous positive integers starting from 1, without duplication.
-
+     * Set <p>Monitored object type. 0: Common monitoring object for execution statements; 1: Each execution statement selects its own monitored object.<br>When the value is 1, the number of elements in AlarmTargets cannot exceed 10. The Number in AlarmTargets must be consecutive positive integers starting from 1 and must be unique.</p>
+     * @param MonitorObjectType <p>Monitored object type. 0: Common monitoring object for execution statements; 1: Each execution statement selects its own monitored object.<br>When the value is 1, the number of elements in AlarmTargets cannot exceed 10. The Number in AlarmTargets must be consecutive positive integers starting from 1 and must be unique.</p>
      */
     public void setMonitorObjectType(Long MonitorObjectType) {
         this.MonitorObjectType = MonitorObjectType;
     }
 
     /**
-     * Get Alarm additional classification information list.
-The number of Classifications elements cannot exceed 20.The Key of Classifications element must not be empty and duplicated, and its length cannot exceed 50 characters, complying with the regular expression ^[a-z]([a-z0-9_]{0,49})$.The Value length of Classifications element cannot exceed 200 characters. 
-     * @return Classifications Alarm additional classification information list.
-The number of Classifications elements cannot exceed 20.The Key of Classifications element must not be empty and duplicated, and its length cannot exceed 50 characters, complying with the regular expression ^[a-z]([a-z0-9_]{0,49})$.The Value length of Classifications element cannot exceed 200 characters.
+     * Get <p>Alert additional classification information list.<br>Number of Classifications Elements cannot exceed 20.<br>The Key of Classifications elements cannot be empty, must be unique, length cannot exceed 50 characters, and complies with the regular expression <code>^[a-z]([a-z0-9_]{0,49})$</code>.<br>Value of Classifications elements cannot exceed 200 characters.</p> 
+     * @return Classifications <p>Alert additional classification information list.<br>Number of Classifications Elements cannot exceed 20.<br>The Key of Classifications elements cannot be empty, must be unique, length cannot exceed 50 characters, and complies with the regular expression <code>^[a-z]([a-z0-9_]{0,49})$</code>.<br>Value of Classifications elements cannot exceed 200 characters.</p>
      */
     public AlarmClassification [] getClassifications() {
         return this.Classifications;
     }
 
     /**
-     * Set Alarm additional classification information list.
-The number of Classifications elements cannot exceed 20.The Key of Classifications element must not be empty and duplicated, and its length cannot exceed 50 characters, complying with the regular expression ^[a-z]([a-z0-9_]{0,49})$.The Value length of Classifications element cannot exceed 200 characters.
-     * @param Classifications Alarm additional classification information list.
-The number of Classifications elements cannot exceed 20.The Key of Classifications element must not be empty and duplicated, and its length cannot exceed 50 characters, complying with the regular expression ^[a-z]([a-z0-9_]{0,49})$.The Value length of Classifications element cannot exceed 200 characters.
+     * Set <p>Alert additional classification information list.<br>Number of Classifications Elements cannot exceed 20.<br>The Key of Classifications elements cannot be empty, must be unique, length cannot exceed 50 characters, and complies with the regular expression <code>^[a-z]([a-z0-9_]{0,49})$</code>.<br>Value of Classifications elements cannot exceed 200 characters.</p>
+     * @param Classifications <p>Alert additional classification information list.<br>Number of Classifications Elements cannot exceed 20.<br>The Key of Classifications elements cannot be empty, must be unique, length cannot exceed 50 characters, and complies with the regular expression <code>^[a-z]([a-z0-9_]{0,49})$</code>.<br>Value of Classifications elements cannot exceed 200 characters.</p>
      */
     public void setClassifications(AlarmClassification [] Classifications) {
         this.Classifications = Classifications;
+    }
+
+    /**
+     * Get <p>List of associated CLS alarm notification channel groups. - Search the list of associated alarm notification channel groups via <a href="https://www.tencentcloud.com/document/product/614/56462?from_cn_redirect=1">Query notification channel group list</a>. It is mutually exclusive with MonitorNotice.</p> 
+     * @return AlarmNoticeIds <p>List of associated CLS alarm notification channel groups. - Search the list of associated alarm notification channel groups via <a href="https://www.tencentcloud.com/document/product/614/56462?from_cn_redirect=1">Query notification channel group list</a>. It is mutually exclusive with MonitorNotice.</p>
+     */
+    public String [] getAlarmNoticeIds() {
+        return this.AlarmNoticeIds;
+    }
+
+    /**
+     * Set <p>List of associated CLS alarm notification channel groups. - Search the list of associated alarm notification channel groups via <a href="https://www.tencentcloud.com/document/product/614/56462?from_cn_redirect=1">Query notification channel group list</a>. It is mutually exclusive with MonitorNotice.</p>
+     * @param AlarmNoticeIds <p>List of associated CLS alarm notification channel groups. - Search the list of associated alarm notification channel groups via <a href="https://www.tencentcloud.com/document/product/614/56462?from_cn_redirect=1">Query notification channel group list</a>. It is mutually exclusive with MonitorNotice.</p>
+     */
+    public void setAlarmNoticeIds(String [] AlarmNoticeIds) {
+        this.AlarmNoticeIds = AlarmNoticeIds;
+    }
+
+    /**
+     * Get <p>The associated observability platform notification template is mutually exclusive with the AlarmNoticeIds parameter and cannot include both.</p> 
+     * @return MonitorNotice <p>The associated observability platform notification template is mutually exclusive with the AlarmNoticeIds parameter and cannot include both.</p>
+     */
+    public MonitorNotice getMonitorNotice() {
+        return this.MonitorNotice;
+    }
+
+    /**
+     * Set <p>The associated observability platform notification template is mutually exclusive with the AlarmNoticeIds parameter and cannot include both.</p>
+     * @param MonitorNotice <p>The associated observability platform notification template is mutually exclusive with the AlarmNoticeIds parameter and cannot include both.</p>
+     */
+    public void setMonitorNotice(MonitorNotice MonitorNotice) {
+        this.MonitorNotice = MonitorNotice;
     }
 
     public ModifyAlarmRequest() {
@@ -537,12 +544,6 @@ The number of Classifications elements cannot exceed 20.The Key of Classificatio
         }
         if (source.AlarmPeriod != null) {
             this.AlarmPeriod = new Long(source.AlarmPeriod);
-        }
-        if (source.AlarmNoticeIds != null) {
-            this.AlarmNoticeIds = new String[source.AlarmNoticeIds.length];
-            for (int i = 0; i < source.AlarmNoticeIds.length; i++) {
-                this.AlarmNoticeIds[i] = new String(source.AlarmNoticeIds[i]);
-            }
         }
         if (source.AlarmTargets != null) {
             this.AlarmTargets = new AlarmTarget[source.AlarmTargets.length];
@@ -592,6 +593,15 @@ The number of Classifications elements cannot exceed 20.The Key of Classificatio
                 this.Classifications[i] = new AlarmClassification(source.Classifications[i]);
             }
         }
+        if (source.AlarmNoticeIds != null) {
+            this.AlarmNoticeIds = new String[source.AlarmNoticeIds.length];
+            for (int i = 0; i < source.AlarmNoticeIds.length; i++) {
+                this.AlarmNoticeIds[i] = new String(source.AlarmNoticeIds[i]);
+            }
+        }
+        if (source.MonitorNotice != null) {
+            this.MonitorNotice = new MonitorNotice(source.MonitorNotice);
+        }
     }
 
 
@@ -607,7 +617,6 @@ The number of Classifications elements cannot exceed 20.The Key of Classificatio
         this.setParamArrayObj(map, prefix + "MultiConditions.", this.MultiConditions);
         this.setParamSimple(map, prefix + "TriggerCount", this.TriggerCount);
         this.setParamSimple(map, prefix + "AlarmPeriod", this.AlarmPeriod);
-        this.setParamArraySimple(map, prefix + "AlarmNoticeIds.", this.AlarmNoticeIds);
         this.setParamArrayObj(map, prefix + "AlarmTargets.", this.AlarmTargets);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "Enable", this.Enable);
@@ -619,6 +628,8 @@ The number of Classifications elements cannot exceed 20.The Key of Classificatio
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "MonitorObjectType", this.MonitorObjectType);
         this.setParamArrayObj(map, prefix + "Classifications.", this.Classifications);
+        this.setParamArraySimple(map, prefix + "AlarmNoticeIds.", this.AlarmNoticeIds);
+        this.setParamObj(map, prefix + "MonitorNotice.", this.MonitorNotice);
 
     }
 }

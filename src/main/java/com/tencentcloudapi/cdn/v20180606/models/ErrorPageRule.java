@@ -41,7 +41,7 @@ Supports 301 or 302.
 
     /**
     * Redirect URL
-Requires a full redirect path, such as https://www.test.com/error.html.
+Requires a full redirect path, such as `https://www.test.com/error.html`.
     */
     @SerializedName("RedirectUrl")
     @Expose
@@ -89,9 +89,9 @@ Supports 301 or 302.
 
     /**
      * Get Redirect URL
-Requires a full redirect path, such as https://www.test.com/error.html. 
+Requires a full redirect path, such as `https://www.test.com/error.html`. 
      * @return RedirectUrl Redirect URL
-Requires a full redirect path, such as https://www.test.com/error.html.
+Requires a full redirect path, such as `https://www.test.com/error.html`.
      */
     public String getRedirectUrl() {
         return this.RedirectUrl;
@@ -99,9 +99,9 @@ Requires a full redirect path, such as https://www.test.com/error.html.
 
     /**
      * Set Redirect URL
-Requires a full redirect path, such as https://www.test.com/error.html.
+Requires a full redirect path, such as `https://www.test.com/error.html`.
      * @param RedirectUrl Redirect URL
-Requires a full redirect path, such as https://www.test.com/error.html.
+Requires a full redirect path, such as `https://www.test.com/error.html`.
      */
     public void setRedirectUrl(String RedirectUrl) {
         this.RedirectUrl = RedirectUrl;

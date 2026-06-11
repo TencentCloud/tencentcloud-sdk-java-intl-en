@@ -25,12 +25,13 @@ public class EscapeRuleEnabled extends AbstractModel {
 
     /**
     * Rule type
-   `ESCAPE_HOST_ACESS_FILE`: Host file access escape.
-   `ESCAPE_MOUNT_NAMESPACE`: Mount namespace escape.
-   `ESCAPE_PRIVILEDGE`: Program privilege escalation escape.
-   `ESCAPE_PRIVILEDGE_CONTAINER_START`: Privileged container startup escape.
-   `ESCAPE_MOUNT_SENSITIVE_PTAH`: Sensitive path mount.
-   `ESCAPE_SYSCALL`: Syscall escape.
+ESCAPE_CGROUPS: Escape by using the cgroup mechanism
+ESCAPE_TAMPER_SENSITIVE_FILE: Escape by tampering with sensitive files
+ESCAPE_DOCKER_API: Escape by accessing the Docker API
+ESCAPE_VUL_OCCURRED: Escape vulnerability exploitation.
+MOUNT_SENSITIVE_PATH: MOUNT SENSITIVE path
+PRIVILEGE_CONTAINER_START: Privilege container
+PRIVILEGE: Escape by program privilege escalation
     */
     @SerializedName("Type")
     @Expose
@@ -45,19 +46,21 @@ public class EscapeRuleEnabled extends AbstractModel {
 
     /**
      * Get Rule type
-   `ESCAPE_HOST_ACESS_FILE`: Host file access escape.
-   `ESCAPE_MOUNT_NAMESPACE`: Mount namespace escape.
-   `ESCAPE_PRIVILEDGE`: Program privilege escalation escape.
-   `ESCAPE_PRIVILEDGE_CONTAINER_START`: Privileged container startup escape.
-   `ESCAPE_MOUNT_SENSITIVE_PTAH`: Sensitive path mount.
-   `ESCAPE_SYSCALL`: Syscall escape. 
+ESCAPE_CGROUPS: Escape by using the cgroup mechanism
+ESCAPE_TAMPER_SENSITIVE_FILE: Escape by tampering with sensitive files
+ESCAPE_DOCKER_API: Escape by accessing the Docker API
+ESCAPE_VUL_OCCURRED: Escape vulnerability exploitation.
+MOUNT_SENSITIVE_PATH: MOUNT SENSITIVE path
+PRIVILEGE_CONTAINER_START: Privilege container
+PRIVILEGE: Escape by program privilege escalation 
      * @return Type Rule type
-   `ESCAPE_HOST_ACESS_FILE`: Host file access escape.
-   `ESCAPE_MOUNT_NAMESPACE`: Mount namespace escape.
-   `ESCAPE_PRIVILEDGE`: Program privilege escalation escape.
-   `ESCAPE_PRIVILEDGE_CONTAINER_START`: Privileged container startup escape.
-   `ESCAPE_MOUNT_SENSITIVE_PTAH`: Sensitive path mount.
-   `ESCAPE_SYSCALL`: Syscall escape.
+ESCAPE_CGROUPS: Escape by using the cgroup mechanism
+ESCAPE_TAMPER_SENSITIVE_FILE: Escape by tampering with sensitive files
+ESCAPE_DOCKER_API: Escape by accessing the Docker API
+ESCAPE_VUL_OCCURRED: Escape vulnerability exploitation.
+MOUNT_SENSITIVE_PATH: MOUNT SENSITIVE path
+PRIVILEGE_CONTAINER_START: Privilege container
+PRIVILEGE: Escape by program privilege escalation
      */
     public String getType() {
         return this.Type;
@@ -65,19 +68,21 @@ public class EscapeRuleEnabled extends AbstractModel {
 
     /**
      * Set Rule type
-   `ESCAPE_HOST_ACESS_FILE`: Host file access escape.
-   `ESCAPE_MOUNT_NAMESPACE`: Mount namespace escape.
-   `ESCAPE_PRIVILEDGE`: Program privilege escalation escape.
-   `ESCAPE_PRIVILEDGE_CONTAINER_START`: Privileged container startup escape.
-   `ESCAPE_MOUNT_SENSITIVE_PTAH`: Sensitive path mount.
-   `ESCAPE_SYSCALL`: Syscall escape.
+ESCAPE_CGROUPS: Escape by using the cgroup mechanism
+ESCAPE_TAMPER_SENSITIVE_FILE: Escape by tampering with sensitive files
+ESCAPE_DOCKER_API: Escape by accessing the Docker API
+ESCAPE_VUL_OCCURRED: Escape vulnerability exploitation.
+MOUNT_SENSITIVE_PATH: MOUNT SENSITIVE path
+PRIVILEGE_CONTAINER_START: Privilege container
+PRIVILEGE: Escape by program privilege escalation
      * @param Type Rule type
-   `ESCAPE_HOST_ACESS_FILE`: Host file access escape.
-   `ESCAPE_MOUNT_NAMESPACE`: Mount namespace escape.
-   `ESCAPE_PRIVILEDGE`: Program privilege escalation escape.
-   `ESCAPE_PRIVILEDGE_CONTAINER_START`: Privileged container startup escape.
-   `ESCAPE_MOUNT_SENSITIVE_PTAH`: Sensitive path mount.
-   `ESCAPE_SYSCALL`: Syscall escape.
+ESCAPE_CGROUPS: Escape by using the cgroup mechanism
+ESCAPE_TAMPER_SENSITIVE_FILE: Escape by tampering with sensitive files
+ESCAPE_DOCKER_API: Escape by accessing the Docker API
+ESCAPE_VUL_OCCURRED: Escape vulnerability exploitation.
+MOUNT_SENSITIVE_PATH: MOUNT SENSITIVE path
+PRIVILEGE_CONTAINER_START: Privilege container
+PRIVILEGE: Escape by program privilege escalation
      */
     public void setType(String Type) {
         this.Type = Type;

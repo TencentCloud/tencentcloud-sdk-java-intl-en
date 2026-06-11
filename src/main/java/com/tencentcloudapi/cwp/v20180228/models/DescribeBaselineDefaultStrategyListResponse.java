@@ -25,7 +25,6 @@ public class DescribeBaselineDefaultStrategyListResponse extends AbstractModel {
 
     /**
     * List of the basic default policy information
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("StrategyList")
     @Expose
@@ -39,10 +38,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get List of the basic default policy information
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get List of the basic default policy information 
      * @return StrategyList List of the basic default policy information
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public DefaultStrategyInfo [] getStrategyList() {
         return this.StrategyList;
@@ -50,9 +47,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set List of the basic default policy information
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param StrategyList List of the basic default policy information
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setStrategyList(DefaultStrategyInfo [] StrategyList) {
         this.StrategyList = StrategyList;

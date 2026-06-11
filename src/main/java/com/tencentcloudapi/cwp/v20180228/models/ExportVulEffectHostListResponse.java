@@ -25,7 +25,6 @@ public class ExportVulEffectHostListResponse extends AbstractModel {
 
     /**
     * This parameter has been deprecated.
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("DownloadUrl")
     @Expose
@@ -46,10 +45,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get This parameter has been deprecated.
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get This parameter has been deprecated. 
      * @return DownloadUrl This parameter has been deprecated.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getDownloadUrl() {
         return this.DownloadUrl;
@@ -57,9 +54,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set This parameter has been deprecated.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param DownloadUrl This parameter has been deprecated.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setDownloadUrl(String DownloadUrl) {
         this.DownloadUrl = DownloadUrl;

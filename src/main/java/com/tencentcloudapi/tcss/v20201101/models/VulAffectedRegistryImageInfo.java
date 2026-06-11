@@ -31,49 +31,49 @@ public class VulAffectedRegistryImageInfo extends AbstractModel {
     private String ImageID;
 
     /**
-    * Image name
+    * Image Name
     */
     @SerializedName("ImageName")
     @Expose
     private String ImageName;
 
     /**
-    * Image tag
+    * Mirror version
     */
     @SerializedName("ImageTag")
     @Expose
     private String ImageTag;
 
     /**
-    * Image namespace
+    * Image Namespace
     */
     @SerializedName("Namespace")
     @Expose
     private String Namespace;
 
     /**
-    * Image address
+    * Image address.
     */
     @SerializedName("ImageRepoAddress")
     @Expose
     private String ImageRepoAddress;
 
     /**
-    * List of components
+    * Component List
     */
     @SerializedName("ComponentList")
     @Expose
     private VulAffectedImageComponentInfo [] ComponentList;
 
     /**
-    * Whether it is the latest image tag
+    * Whether the Latest Version of the Image
     */
     @SerializedName("IsLatestImage")
     @Expose
     private Boolean IsLatestImage;
 
     /**
-    * Internal image asset ID
+    * Internal Image Asset ID
     */
     @SerializedName("ImageAssetId")
     @Expose
@@ -96,112 +96,112 @@ public class VulAffectedRegistryImageInfo extends AbstractModel {
     }
 
     /**
-     * Get Image name 
-     * @return ImageName Image name
+     * Get Image Name 
+     * @return ImageName Image Name
      */
     public String getImageName() {
         return this.ImageName;
     }
 
     /**
-     * Set Image name
-     * @param ImageName Image name
+     * Set Image Name
+     * @param ImageName Image Name
      */
     public void setImageName(String ImageName) {
         this.ImageName = ImageName;
     }
 
     /**
-     * Get Image tag 
-     * @return ImageTag Image tag
+     * Get Mirror version 
+     * @return ImageTag Mirror version
      */
     public String getImageTag() {
         return this.ImageTag;
     }
 
     /**
-     * Set Image tag
-     * @param ImageTag Image tag
+     * Set Mirror version
+     * @param ImageTag Mirror version
      */
     public void setImageTag(String ImageTag) {
         this.ImageTag = ImageTag;
     }
 
     /**
-     * Get Image namespace 
-     * @return Namespace Image namespace
+     * Get Image Namespace 
+     * @return Namespace Image Namespace
      */
     public String getNamespace() {
         return this.Namespace;
     }
 
     /**
-     * Set Image namespace
-     * @param Namespace Image namespace
+     * Set Image Namespace
+     * @param Namespace Image Namespace
      */
     public void setNamespace(String Namespace) {
         this.Namespace = Namespace;
     }
 
     /**
-     * Get Image address 
-     * @return ImageRepoAddress Image address
+     * Get Image address. 
+     * @return ImageRepoAddress Image address.
      */
     public String getImageRepoAddress() {
         return this.ImageRepoAddress;
     }
 
     /**
-     * Set Image address
-     * @param ImageRepoAddress Image address
+     * Set Image address.
+     * @param ImageRepoAddress Image address.
      */
     public void setImageRepoAddress(String ImageRepoAddress) {
         this.ImageRepoAddress = ImageRepoAddress;
     }
 
     /**
-     * Get List of components 
-     * @return ComponentList List of components
+     * Get Component List 
+     * @return ComponentList Component List
      */
     public VulAffectedImageComponentInfo [] getComponentList() {
         return this.ComponentList;
     }
 
     /**
-     * Set List of components
-     * @param ComponentList List of components
+     * Set Component List
+     * @param ComponentList Component List
      */
     public void setComponentList(VulAffectedImageComponentInfo [] ComponentList) {
         this.ComponentList = ComponentList;
     }
 
     /**
-     * Get Whether it is the latest image tag 
-     * @return IsLatestImage Whether it is the latest image tag
+     * Get Whether the Latest Version of the Image 
+     * @return IsLatestImage Whether the Latest Version of the Image
      */
     public Boolean getIsLatestImage() {
         return this.IsLatestImage;
     }
 
     /**
-     * Set Whether it is the latest image tag
-     * @param IsLatestImage Whether it is the latest image tag
+     * Set Whether the Latest Version of the Image
+     * @param IsLatestImage Whether the Latest Version of the Image
      */
     public void setIsLatestImage(Boolean IsLatestImage) {
         this.IsLatestImage = IsLatestImage;
     }
 
     /**
-     * Get Internal image asset ID 
-     * @return ImageAssetId Internal image asset ID
+     * Get Internal Image Asset ID 
+     * @return ImageAssetId Internal Image Asset ID
      */
     public Long getImageAssetId() {
         return this.ImageAssetId;
     }
 
     /**
-     * Set Internal image asset ID
-     * @param ImageAssetId Internal image asset ID
+     * Set Internal Image Asset ID
+     * @param ImageAssetId Internal Image Asset ID
      */
     public void setImageAssetId(Long ImageAssetId) {
         this.ImageAssetId = ImageAssetId;

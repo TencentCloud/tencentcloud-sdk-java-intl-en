@@ -38,7 +38,7 @@ public class UpgradeInstanceResponse extends AbstractModel {
     private String [] BigDealIds;
 
     /**
-    * Order ID
+    * Order ID.
     */
     @SerializedName("DealNames")
     @Expose
@@ -84,16 +84,16 @@ public class UpgradeInstanceResponse extends AbstractModel {
     }
 
     /**
-     * Get Order ID 
-     * @return DealNames Order ID
+     * Get Order ID. 
+     * @return DealNames Order ID.
      */
     public String [] getDealNames() {
         return this.DealNames;
     }
 
     /**
-     * Set Order ID
-     * @param DealNames Order ID
+     * Set Order ID.
+     * @param DealNames Order ID.
      */
     public void setDealNames(String [] DealNames) {
         this.DealNames = DealNames;

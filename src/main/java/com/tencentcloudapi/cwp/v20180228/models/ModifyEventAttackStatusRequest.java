@@ -38,7 +38,7 @@ public class ModifyEventAttackStatusRequest extends AbstractModel {
     private Boolean All;
 
     /**
-    * 0: Pending 1: Processed 2: Allowlisted 3: Ignored 4: Deleted 
+    * 0: pending processing; 1: processed; 3: ignored; 4: deleted. 
     */
     @SerializedName("Status")
     @Expose
@@ -50,7 +50,7 @@ public class ModifyEventAttackStatusRequest extends AbstractModel {
 <li>Status: String event processing status: 0: pending 1: processed; 2: allowlisted; 3: ignored; 4: deleted: required: no</li>
 <li>SrcIP - String source IP - required: no</li>
 <li>DstPort - String attack target port - required: no</li>
-<li>MachineName - String host name - required: no</li>
+<li>MachineName - String host name - required: no</li>
 <li>InstanceID - String host instance ID - required: no</li>
 <li>Quuids - String host CVM UUID - required: no</li>
 
@@ -99,16 +99,16 @@ public class ModifyEventAttackStatusRequest extends AbstractModel {
     }
 
     /**
-     * Get 0: Pending 1: Processed 2: Allowlisted 3: Ignored 4: Deleted  
-     * @return Status 0: Pending 1: Processed 2: Allowlisted 3: Ignored 4: Deleted 
+     * Get 0: pending processing; 1: processed; 3: ignored; 4: deleted.  
+     * @return Status 0: pending processing; 1: processed; 3: ignored; 4: deleted. 
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 0: Pending 1: Processed 2: Allowlisted 3: Ignored 4: Deleted 
-     * @param Status 0: Pending 1: Processed 2: Allowlisted 3: Ignored 4: Deleted 
+     * Set 0: pending processing; 1: processed; 3: ignored; 4: deleted. 
+     * @param Status 0: pending processing; 1: processed; 3: ignored; 4: deleted. 
      */
     public void setStatus(Long Status) {
         this.Status = Status;
@@ -120,7 +120,7 @@ public class ModifyEventAttackStatusRequest extends AbstractModel {
 <li>Status: String event processing status: 0: pending 1: processed; 2: allowlisted; 3: ignored; 4: deleted: required: no</li>
 <li>SrcIP - String source IP - required: no</li>
 <li>DstPort - String attack target port - required: no</li>
-<li>MachineName - String host name - required: no</li>
+<li>MachineName - String host name - required: no</li>
 <li>InstanceID - String host instance ID - required: no</li>
 <li>Quuids - String host CVM UUID - required: no</li>
  
@@ -129,7 +129,7 @@ public class ModifyEventAttackStatusRequest extends AbstractModel {
 <li>Status: String event processing status: 0: pending 1: processed; 2: allowlisted; 3: ignored; 4: deleted: required: no</li>
 <li>SrcIP - String source IP - required: no</li>
 <li>DstPort - String attack target port - required: no</li>
-<li>MachineName - String host name - required: no</li>
+<li>MachineName - String host name - required: no</li>
 <li>InstanceID - String host instance ID - required: no</li>
 <li>Quuids - String host CVM UUID - required: no</li>
 
@@ -144,7 +144,7 @@ public class ModifyEventAttackStatusRequest extends AbstractModel {
 <li>Status: String event processing status: 0: pending 1: processed; 2: allowlisted; 3: ignored; 4: deleted: required: no</li>
 <li>SrcIP - String source IP - required: no</li>
 <li>DstPort - String attack target port - required: no</li>
-<li>MachineName - String host name - required: no</li>
+<li>MachineName - String host name - required: no</li>
 <li>InstanceID - String host instance ID - required: no</li>
 <li>Quuids - String host CVM UUID - required: no</li>
 
@@ -153,7 +153,7 @@ public class ModifyEventAttackStatusRequest extends AbstractModel {
 <li>Status: String event processing status: 0: pending 1: processed; 2: allowlisted; 3: ignored; 4: deleted: required: no</li>
 <li>SrcIP - String source IP - required: no</li>
 <li>DstPort - String attack target port - required: no</li>
-<li>MachineName - String host name - required: no</li>
+<li>MachineName - String host name - required: no</li>
 <li>InstanceID - String host instance ID - required: no</li>
 <li>Quuids - String host CVM UUID - required: no</li>
 

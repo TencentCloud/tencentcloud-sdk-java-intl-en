@@ -32,7 +32,6 @@ public class DescribeAssetSystemPackageListResponse extends AbstractModel {
 
     /**
     * List
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Packages")
     @Expose
@@ -62,10 +61,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get List
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get List 
      * @return Packages List
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public AssetSystemPackageInfo [] getPackages() {
         return this.Packages;
@@ -73,9 +70,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set List
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Packages List
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setPackages(AssetSystemPackageInfo [] Packages) {
         this.Packages = Packages;

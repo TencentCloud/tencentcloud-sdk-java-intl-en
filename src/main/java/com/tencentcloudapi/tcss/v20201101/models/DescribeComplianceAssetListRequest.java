@@ -24,7 +24,11 @@ import java.util.HashMap;
 public class DescribeComplianceAssetListRequest extends AbstractModel {
 
     /**
-    * List of asset types
+    * Asset type list.
+ASSET_CONTAINER, container
+ASSET_IMAGE - Mirror
+ASSET_HOST, Host
+ASSET_K8S, K8S asset
     */
     @SerializedName("AssetTypeSet")
     @Expose
@@ -52,16 +56,32 @@ public class DescribeComplianceAssetListRequest extends AbstractModel {
     private ComplianceFilters [] Filters;
 
     /**
-     * Get List of asset types 
-     * @return AssetTypeSet List of asset types
+     * Get Asset type list.
+ASSET_CONTAINER, container
+ASSET_IMAGE - Mirror
+ASSET_HOST, Host
+ASSET_K8S, K8S asset 
+     * @return AssetTypeSet Asset type list.
+ASSET_CONTAINER, container
+ASSET_IMAGE - Mirror
+ASSET_HOST, Host
+ASSET_K8S, K8S asset
      */
     public String [] getAssetTypeSet() {
         return this.AssetTypeSet;
     }
 
     /**
-     * Set List of asset types
-     * @param AssetTypeSet List of asset types
+     * Set Asset type list.
+ASSET_CONTAINER, container
+ASSET_IMAGE - Mirror
+ASSET_HOST, Host
+ASSET_K8S, K8S asset
+     * @param AssetTypeSet Asset type list.
+ASSET_CONTAINER, container
+ASSET_IMAGE - Mirror
+ASSET_HOST, Host
+ASSET_K8S, K8S asset
      */
     public void setAssetTypeSet(String [] AssetTypeSet) {
         this.AssetTypeSet = AssetTypeSet;

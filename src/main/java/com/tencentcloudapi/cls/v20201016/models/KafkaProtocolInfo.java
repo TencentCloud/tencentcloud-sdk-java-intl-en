@@ -24,97 +24,172 @@ import java.util.HashMap;
 public class KafkaProtocolInfo extends AbstractModel {
 
     /**
-    * Protocol type, including plaintext, sasl_plaintext, or sasl_ssl. sasl_ssl is recommended for encrypted connections and user authentication.Required input parameters
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Protocol type. Supported protocol types include plaintext, sasl_plaintext, or sasl_ssl. Recommend using sasl_ssl. Protocol enables encrypted connection and also requires user authentication.
+
+-Protocol is required when IsEncryptionAddr is true.
+-Supported protocol types are as follows:
+-plaintext: Plaintext without encryption protocol
+-sasl_ssl: sasl authentication + ssl encryption
+-ssl: Pure ssl/TLS encryption protocol
+-sasl_plaintext: SASL authentication + unencrypted tunnel
+
     */
     @SerializedName("Protocol")
     @Expose
     private String Protocol;
 
     /**
-    * Encryption type, supports PLAIN, SCRAM-SHA-256, or SCRAM-SHA-512.Required when the Protocol is sasl_plaintext or sasl_ssl.Note: This field may return null, indicating that no valid values can be obtained.
+    * Encryption type, supports PLAIN, SCRAM-SHA-256, or SCRAM-SHA-512.
+
+-Mechanism is required when Protocol is `sasl_plaintext` or `sasl_ssl`.
+-Supported encryption types are as follows.
+-PLAIN: plaintext authentication
+-SCRAM-SHA-256: Based on challenge-response mechanism, uses PBKDF2-HMAC-SHA256 algorithm.
+-SCRAM-SHA-512: Enhanced SCRAM that uses the PBKDF2-HMAC-SHA512 algorithm.
     */
     @SerializedName("Mechanism")
     @Expose
     private String Mechanism;
 
     /**
-    * UsernameRequired when the Protocol is sasl_plaintext or sasl_ssl.Note: This field may return null, indicating that no valid values can be obtained.
+    * Username.
+Required when Protocol is sasl_plaintext or sasl_ssl
     */
     @SerializedName("UserName")
     @Expose
     private String UserName;
 
     /**
-    * User PasswordRequired when the Protocol is sasl_plaintext or sasl_ssl.Note: This field may return null, indicating that no valid values can be obtained.
+    * User password.
+Required when Protocol is sasl_plaintext or sasl_ssl
     */
     @SerializedName("Password")
     @Expose
     private String Password;
 
     /**
-     * Get Protocol type, including plaintext, sasl_plaintext, or sasl_ssl. sasl_ssl is recommended for encrypted connections and user authentication.Required input parameters
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Protocol Protocol type, including plaintext, sasl_plaintext, or sasl_ssl. sasl_ssl is recommended for encrypted connections and user authentication.Required input parameters
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Protocol type. Supported protocol types include plaintext, sasl_plaintext, or sasl_ssl. Recommend using sasl_ssl. Protocol enables encrypted connection and also requires user authentication.
+
+-Protocol is required when IsEncryptionAddr is true.
+-Supported protocol types are as follows:
+-plaintext: Plaintext without encryption protocol
+-sasl_ssl: sasl authentication + ssl encryption
+-ssl: Pure ssl/TLS encryption protocol
+-sasl_plaintext: SASL authentication + unencrypted tunnel
+ 
+     * @return Protocol Protocol type. Supported protocol types include plaintext, sasl_plaintext, or sasl_ssl. Recommend using sasl_ssl. Protocol enables encrypted connection and also requires user authentication.
+
+-Protocol is required when IsEncryptionAddr is true.
+-Supported protocol types are as follows:
+-plaintext: Plaintext without encryption protocol
+-sasl_ssl: sasl authentication + ssl encryption
+-ssl: Pure ssl/TLS encryption protocol
+-sasl_plaintext: SASL authentication + unencrypted tunnel
+
      */
     public String getProtocol() {
         return this.Protocol;
     }
 
     /**
-     * Set Protocol type, including plaintext, sasl_plaintext, or sasl_ssl. sasl_ssl is recommended for encrypted connections and user authentication.Required input parameters
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Protocol Protocol type, including plaintext, sasl_plaintext, or sasl_ssl. sasl_ssl is recommended for encrypted connections and user authentication.Required input parameters
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Protocol type. Supported protocol types include plaintext, sasl_plaintext, or sasl_ssl. Recommend using sasl_ssl. Protocol enables encrypted connection and also requires user authentication.
+
+-Protocol is required when IsEncryptionAddr is true.
+-Supported protocol types are as follows:
+-plaintext: Plaintext without encryption protocol
+-sasl_ssl: sasl authentication + ssl encryption
+-ssl: Pure ssl/TLS encryption protocol
+-sasl_plaintext: SASL authentication + unencrypted tunnel
+
+     * @param Protocol Protocol type. Supported protocol types include plaintext, sasl_plaintext, or sasl_ssl. Recommend using sasl_ssl. Protocol enables encrypted connection and also requires user authentication.
+
+-Protocol is required when IsEncryptionAddr is true.
+-Supported protocol types are as follows:
+-plaintext: Plaintext without encryption protocol
+-sasl_ssl: sasl authentication + ssl encryption
+-ssl: Pure ssl/TLS encryption protocol
+-sasl_plaintext: SASL authentication + unencrypted tunnel
+
      */
     public void setProtocol(String Protocol) {
         this.Protocol = Protocol;
     }
 
     /**
-     * Get Encryption type, supports PLAIN, SCRAM-SHA-256, or SCRAM-SHA-512.Required when the Protocol is sasl_plaintext or sasl_ssl.Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Mechanism Encryption type, supports PLAIN, SCRAM-SHA-256, or SCRAM-SHA-512.Required when the Protocol is sasl_plaintext or sasl_ssl.Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Encryption type, supports PLAIN, SCRAM-SHA-256, or SCRAM-SHA-512.
+
+-Mechanism is required when Protocol is `sasl_plaintext` or `sasl_ssl`.
+-Supported encryption types are as follows.
+-PLAIN: plaintext authentication
+-SCRAM-SHA-256: Based on challenge-response mechanism, uses PBKDF2-HMAC-SHA256 algorithm.
+-SCRAM-SHA-512: Enhanced SCRAM that uses the PBKDF2-HMAC-SHA512 algorithm. 
+     * @return Mechanism Encryption type, supports PLAIN, SCRAM-SHA-256, or SCRAM-SHA-512.
+
+-Mechanism is required when Protocol is `sasl_plaintext` or `sasl_ssl`.
+-Supported encryption types are as follows.
+-PLAIN: plaintext authentication
+-SCRAM-SHA-256: Based on challenge-response mechanism, uses PBKDF2-HMAC-SHA256 algorithm.
+-SCRAM-SHA-512: Enhanced SCRAM that uses the PBKDF2-HMAC-SHA512 algorithm.
      */
     public String getMechanism() {
         return this.Mechanism;
     }
 
     /**
-     * Set Encryption type, supports PLAIN, SCRAM-SHA-256, or SCRAM-SHA-512.Required when the Protocol is sasl_plaintext or sasl_ssl.Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Mechanism Encryption type, supports PLAIN, SCRAM-SHA-256, or SCRAM-SHA-512.Required when the Protocol is sasl_plaintext or sasl_ssl.Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Encryption type, supports PLAIN, SCRAM-SHA-256, or SCRAM-SHA-512.
+
+-Mechanism is required when Protocol is `sasl_plaintext` or `sasl_ssl`.
+-Supported encryption types are as follows.
+-PLAIN: plaintext authentication
+-SCRAM-SHA-256: Based on challenge-response mechanism, uses PBKDF2-HMAC-SHA256 algorithm.
+-SCRAM-SHA-512: Enhanced SCRAM that uses the PBKDF2-HMAC-SHA512 algorithm.
+     * @param Mechanism Encryption type, supports PLAIN, SCRAM-SHA-256, or SCRAM-SHA-512.
+
+-Mechanism is required when Protocol is `sasl_plaintext` or `sasl_ssl`.
+-Supported encryption types are as follows.
+-PLAIN: plaintext authentication
+-SCRAM-SHA-256: Based on challenge-response mechanism, uses PBKDF2-HMAC-SHA256 algorithm.
+-SCRAM-SHA-512: Enhanced SCRAM that uses the PBKDF2-HMAC-SHA512 algorithm.
      */
     public void setMechanism(String Mechanism) {
         this.Mechanism = Mechanism;
     }
 
     /**
-     * Get UsernameRequired when the Protocol is sasl_plaintext or sasl_ssl.Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return UserName UsernameRequired when the Protocol is sasl_plaintext or sasl_ssl.Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Username.
+Required when Protocol is sasl_plaintext or sasl_ssl 
+     * @return UserName Username.
+Required when Protocol is sasl_plaintext or sasl_ssl
      */
     public String getUserName() {
         return this.UserName;
     }
 
     /**
-     * Set UsernameRequired when the Protocol is sasl_plaintext or sasl_ssl.Note: This field may return null, indicating that no valid values can be obtained.
-     * @param UserName UsernameRequired when the Protocol is sasl_plaintext or sasl_ssl.Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Username.
+Required when Protocol is sasl_plaintext or sasl_ssl
+     * @param UserName Username.
+Required when Protocol is sasl_plaintext or sasl_ssl
      */
     public void setUserName(String UserName) {
         this.UserName = UserName;
     }
 
     /**
-     * Get User PasswordRequired when the Protocol is sasl_plaintext or sasl_ssl.Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Password User PasswordRequired when the Protocol is sasl_plaintext or sasl_ssl.Note: This field may return null, indicating that no valid values can be obtained.
+     * Get User password.
+Required when Protocol is sasl_plaintext or sasl_ssl 
+     * @return Password User password.
+Required when Protocol is sasl_plaintext or sasl_ssl
      */
     public String getPassword() {
         return this.Password;
     }
 
     /**
-     * Set User PasswordRequired when the Protocol is sasl_plaintext or sasl_ssl.Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Password User PasswordRequired when the Protocol is sasl_plaintext or sasl_ssl.Note: This field may return null, indicating that no valid values can be obtained.
+     * Set User password.
+Required when Protocol is sasl_plaintext or sasl_ssl
+     * @param Password User password.
+Required when Protocol is sasl_plaintext or sasl_ssl
      */
     public void setPassword(String Password) {
         this.Password = Password;

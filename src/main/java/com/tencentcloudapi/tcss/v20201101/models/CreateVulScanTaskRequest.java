@@ -24,141 +24,279 @@ import java.util.HashMap;
 public class CreateVulScanTaskRequest extends AbstractModel {
 
     /**
-    * Local image scan scope. Valid values: `ALL` (all local images); `NOT_SCAN` (all licensed but not scanned local images); `IMAGEIDS` (IDs of specified local images).
+    * <p>Local image scan range type</p><p>Enumeration value:</p><ul><li>ALL: All local images</li><li>NOT_SCAN: All authorized unscanned local images</li><li>IMAGEIDS: Selected local image IDs</li><li>CLUSTER: Cluster filtering</li></ul>
     */
     @SerializedName("LocalImageScanType")
     @Expose
     private String LocalImageScanType;
 
     /**
-    * Scan by licensed local image ID, with a higher priority than scan by licensed local image that meets the condition.
+    * <p>Scan by authorized local image IDs, which takes precedence over scanning by authorized local images that meet the conditions.</p>
     */
     @SerializedName("LocalImageIDs")
     @Expose
     private String [] LocalImageIDs;
 
     /**
-    * Repository image scan scope. Valid values: `ALL` (all repository images); `NOT_SCAN` (all licensed but not scanned repository images); `IMAGEIDS` (IDs of specified repository images).
+    * <p>Repository image scan range type. ALL: All repository images. NOT_SCAN: Total authorized unscanned repository images. IMAGEIDS: Selected repository image IDs.</p>
     */
     @SerializedName("RegistryImageScanType")
     @Expose
     private String RegistryImageScanType;
 
     /**
-    * Scan by licensed repository image ID, with a higher priority than scan by licensed repository image that meets the condition.
+    * <p>Scan by authorized repository image IDs, which takes precedence over scanning by authorized repository images that meet the conditions.</p>
     */
     @SerializedName("RegistryImageIDs")
     @Expose
     private Long [] RegistryImageIDs;
 
     /**
-    * ID of the task to scan local images again for vulnerabilities
+    * <p>Task ID for local image re-vulnerability scanning</p>
     */
     @SerializedName("LocalTaskID")
     @Expose
     private Long LocalTaskID;
 
     /**
-    * ID of the task to scan repository images again for vulnerabilities
+    * <p>Task ID for repository image re-vulnerability scanning</p>
     */
     @SerializedName("RegistryTaskID")
     @Expose
     private Long RegistryTaskID;
 
     /**
-     * Get Local image scan scope. Valid values: `ALL` (all local images); `NOT_SCAN` (all licensed but not scanned local images); `IMAGEIDS` (IDs of specified local images). 
-     * @return LocalImageScanType Local image scan scope. Valid values: `ALL` (all local images); `NOT_SCAN` (all licensed but not scanned local images); `IMAGEIDS` (IDs of specified local images).
+    * <p>Local image container runtime</p>
+    */
+    @SerializedName("LocalImageContainerRunning")
+    @Expose
+    private Boolean LocalImageContainerRunning;
+
+    /**
+    * <p>Image Container in repository is running</p>
+    */
+    @SerializedName("RegistryImageContainerRunning")
+    @Expose
+    private Boolean RegistryImageContainerRunning;
+
+    /**
+    * <p>Whether the repository image is the latest</p>
+    */
+    @SerializedName("IsLatest")
+    @Expose
+    private Boolean IsLatest;
+
+    /**
+    * <p>Local image id to remove</p>
+    */
+    @SerializedName("ExcludeLocalImageIDs")
+    @Expose
+    private String [] ExcludeLocalImageIDs;
+
+    /**
+    * <p>id of the repository image to remove</p>
+    */
+    @SerializedName("ExcludeRegistryImageIDs")
+    @Expose
+    private Long [] ExcludeRegistryImageIDs;
+
+    /**
+    * <p>Cluster ID.</p>
+    */
+    @SerializedName("LocalClusterIDs")
+    @Expose
+    private String [] LocalClusterIDs;
+
+    /**
+     * Get <p>Local image scan range type</p><p>Enumeration value:</p><ul><li>ALL: All local images</li><li>NOT_SCAN: All authorized unscanned local images</li><li>IMAGEIDS: Selected local image IDs</li><li>CLUSTER: Cluster filtering</li></ul> 
+     * @return LocalImageScanType <p>Local image scan range type</p><p>Enumeration value:</p><ul><li>ALL: All local images</li><li>NOT_SCAN: All authorized unscanned local images</li><li>IMAGEIDS: Selected local image IDs</li><li>CLUSTER: Cluster filtering</li></ul>
      */
     public String getLocalImageScanType() {
         return this.LocalImageScanType;
     }
 
     /**
-     * Set Local image scan scope. Valid values: `ALL` (all local images); `NOT_SCAN` (all licensed but not scanned local images); `IMAGEIDS` (IDs of specified local images).
-     * @param LocalImageScanType Local image scan scope. Valid values: `ALL` (all local images); `NOT_SCAN` (all licensed but not scanned local images); `IMAGEIDS` (IDs of specified local images).
+     * Set <p>Local image scan range type</p><p>Enumeration value:</p><ul><li>ALL: All local images</li><li>NOT_SCAN: All authorized unscanned local images</li><li>IMAGEIDS: Selected local image IDs</li><li>CLUSTER: Cluster filtering</li></ul>
+     * @param LocalImageScanType <p>Local image scan range type</p><p>Enumeration value:</p><ul><li>ALL: All local images</li><li>NOT_SCAN: All authorized unscanned local images</li><li>IMAGEIDS: Selected local image IDs</li><li>CLUSTER: Cluster filtering</li></ul>
      */
     public void setLocalImageScanType(String LocalImageScanType) {
         this.LocalImageScanType = LocalImageScanType;
     }
 
     /**
-     * Get Scan by licensed local image ID, with a higher priority than scan by licensed local image that meets the condition. 
-     * @return LocalImageIDs Scan by licensed local image ID, with a higher priority than scan by licensed local image that meets the condition.
+     * Get <p>Scan by authorized local image IDs, which takes precedence over scanning by authorized local images that meet the conditions.</p> 
+     * @return LocalImageIDs <p>Scan by authorized local image IDs, which takes precedence over scanning by authorized local images that meet the conditions.</p>
      */
     public String [] getLocalImageIDs() {
         return this.LocalImageIDs;
     }
 
     /**
-     * Set Scan by licensed local image ID, with a higher priority than scan by licensed local image that meets the condition.
-     * @param LocalImageIDs Scan by licensed local image ID, with a higher priority than scan by licensed local image that meets the condition.
+     * Set <p>Scan by authorized local image IDs, which takes precedence over scanning by authorized local images that meet the conditions.</p>
+     * @param LocalImageIDs <p>Scan by authorized local image IDs, which takes precedence over scanning by authorized local images that meet the conditions.</p>
      */
     public void setLocalImageIDs(String [] LocalImageIDs) {
         this.LocalImageIDs = LocalImageIDs;
     }
 
     /**
-     * Get Repository image scan scope. Valid values: `ALL` (all repository images); `NOT_SCAN` (all licensed but not scanned repository images); `IMAGEIDS` (IDs of specified repository images). 
-     * @return RegistryImageScanType Repository image scan scope. Valid values: `ALL` (all repository images); `NOT_SCAN` (all licensed but not scanned repository images); `IMAGEIDS` (IDs of specified repository images).
+     * Get <p>Repository image scan range type. ALL: All repository images. NOT_SCAN: Total authorized unscanned repository images. IMAGEIDS: Selected repository image IDs.</p> 
+     * @return RegistryImageScanType <p>Repository image scan range type. ALL: All repository images. NOT_SCAN: Total authorized unscanned repository images. IMAGEIDS: Selected repository image IDs.</p>
      */
     public String getRegistryImageScanType() {
         return this.RegistryImageScanType;
     }
 
     /**
-     * Set Repository image scan scope. Valid values: `ALL` (all repository images); `NOT_SCAN` (all licensed but not scanned repository images); `IMAGEIDS` (IDs of specified repository images).
-     * @param RegistryImageScanType Repository image scan scope. Valid values: `ALL` (all repository images); `NOT_SCAN` (all licensed but not scanned repository images); `IMAGEIDS` (IDs of specified repository images).
+     * Set <p>Repository image scan range type. ALL: All repository images. NOT_SCAN: Total authorized unscanned repository images. IMAGEIDS: Selected repository image IDs.</p>
+     * @param RegistryImageScanType <p>Repository image scan range type. ALL: All repository images. NOT_SCAN: Total authorized unscanned repository images. IMAGEIDS: Selected repository image IDs.</p>
      */
     public void setRegistryImageScanType(String RegistryImageScanType) {
         this.RegistryImageScanType = RegistryImageScanType;
     }
 
     /**
-     * Get Scan by licensed repository image ID, with a higher priority than scan by licensed repository image that meets the condition. 
-     * @return RegistryImageIDs Scan by licensed repository image ID, with a higher priority than scan by licensed repository image that meets the condition.
+     * Get <p>Scan by authorized repository image IDs, which takes precedence over scanning by authorized repository images that meet the conditions.</p> 
+     * @return RegistryImageIDs <p>Scan by authorized repository image IDs, which takes precedence over scanning by authorized repository images that meet the conditions.</p>
      */
     public Long [] getRegistryImageIDs() {
         return this.RegistryImageIDs;
     }
 
     /**
-     * Set Scan by licensed repository image ID, with a higher priority than scan by licensed repository image that meets the condition.
-     * @param RegistryImageIDs Scan by licensed repository image ID, with a higher priority than scan by licensed repository image that meets the condition.
+     * Set <p>Scan by authorized repository image IDs, which takes precedence over scanning by authorized repository images that meet the conditions.</p>
+     * @param RegistryImageIDs <p>Scan by authorized repository image IDs, which takes precedence over scanning by authorized repository images that meet the conditions.</p>
      */
     public void setRegistryImageIDs(Long [] RegistryImageIDs) {
         this.RegistryImageIDs = RegistryImageIDs;
     }
 
     /**
-     * Get ID of the task to scan local images again for vulnerabilities 
-     * @return LocalTaskID ID of the task to scan local images again for vulnerabilities
+     * Get <p>Task ID for local image re-vulnerability scanning</p> 
+     * @return LocalTaskID <p>Task ID for local image re-vulnerability scanning</p>
      */
     public Long getLocalTaskID() {
         return this.LocalTaskID;
     }
 
     /**
-     * Set ID of the task to scan local images again for vulnerabilities
-     * @param LocalTaskID ID of the task to scan local images again for vulnerabilities
+     * Set <p>Task ID for local image re-vulnerability scanning</p>
+     * @param LocalTaskID <p>Task ID for local image re-vulnerability scanning</p>
      */
     public void setLocalTaskID(Long LocalTaskID) {
         this.LocalTaskID = LocalTaskID;
     }
 
     /**
-     * Get ID of the task to scan repository images again for vulnerabilities 
-     * @return RegistryTaskID ID of the task to scan repository images again for vulnerabilities
+     * Get <p>Task ID for repository image re-vulnerability scanning</p> 
+     * @return RegistryTaskID <p>Task ID for repository image re-vulnerability scanning</p>
      */
     public Long getRegistryTaskID() {
         return this.RegistryTaskID;
     }
 
     /**
-     * Set ID of the task to scan repository images again for vulnerabilities
-     * @param RegistryTaskID ID of the task to scan repository images again for vulnerabilities
+     * Set <p>Task ID for repository image re-vulnerability scanning</p>
+     * @param RegistryTaskID <p>Task ID for repository image re-vulnerability scanning</p>
      */
     public void setRegistryTaskID(Long RegistryTaskID) {
         this.RegistryTaskID = RegistryTaskID;
+    }
+
+    /**
+     * Get <p>Local image container runtime</p> 
+     * @return LocalImageContainerRunning <p>Local image container runtime</p>
+     */
+    public Boolean getLocalImageContainerRunning() {
+        return this.LocalImageContainerRunning;
+    }
+
+    /**
+     * Set <p>Local image container runtime</p>
+     * @param LocalImageContainerRunning <p>Local image container runtime</p>
+     */
+    public void setLocalImageContainerRunning(Boolean LocalImageContainerRunning) {
+        this.LocalImageContainerRunning = LocalImageContainerRunning;
+    }
+
+    /**
+     * Get <p>Image Container in repository is running</p> 
+     * @return RegistryImageContainerRunning <p>Image Container in repository is running</p>
+     */
+    public Boolean getRegistryImageContainerRunning() {
+        return this.RegistryImageContainerRunning;
+    }
+
+    /**
+     * Set <p>Image Container in repository is running</p>
+     * @param RegistryImageContainerRunning <p>Image Container in repository is running</p>
+     */
+    public void setRegistryImageContainerRunning(Boolean RegistryImageContainerRunning) {
+        this.RegistryImageContainerRunning = RegistryImageContainerRunning;
+    }
+
+    /**
+     * Get <p>Whether the repository image is the latest</p> 
+     * @return IsLatest <p>Whether the repository image is the latest</p>
+     */
+    public Boolean getIsLatest() {
+        return this.IsLatest;
+    }
+
+    /**
+     * Set <p>Whether the repository image is the latest</p>
+     * @param IsLatest <p>Whether the repository image is the latest</p>
+     */
+    public void setIsLatest(Boolean IsLatest) {
+        this.IsLatest = IsLatest;
+    }
+
+    /**
+     * Get <p>Local image id to remove</p> 
+     * @return ExcludeLocalImageIDs <p>Local image id to remove</p>
+     */
+    public String [] getExcludeLocalImageIDs() {
+        return this.ExcludeLocalImageIDs;
+    }
+
+    /**
+     * Set <p>Local image id to remove</p>
+     * @param ExcludeLocalImageIDs <p>Local image id to remove</p>
+     */
+    public void setExcludeLocalImageIDs(String [] ExcludeLocalImageIDs) {
+        this.ExcludeLocalImageIDs = ExcludeLocalImageIDs;
+    }
+
+    /**
+     * Get <p>id of the repository image to remove</p> 
+     * @return ExcludeRegistryImageIDs <p>id of the repository image to remove</p>
+     */
+    public Long [] getExcludeRegistryImageIDs() {
+        return this.ExcludeRegistryImageIDs;
+    }
+
+    /**
+     * Set <p>id of the repository image to remove</p>
+     * @param ExcludeRegistryImageIDs <p>id of the repository image to remove</p>
+     */
+    public void setExcludeRegistryImageIDs(Long [] ExcludeRegistryImageIDs) {
+        this.ExcludeRegistryImageIDs = ExcludeRegistryImageIDs;
+    }
+
+    /**
+     * Get <p>Cluster ID.</p> 
+     * @return LocalClusterIDs <p>Cluster ID.</p>
+     */
+    public String [] getLocalClusterIDs() {
+        return this.LocalClusterIDs;
+    }
+
+    /**
+     * Set <p>Cluster ID.</p>
+     * @param LocalClusterIDs <p>Cluster ID.</p>
+     */
+    public void setLocalClusterIDs(String [] LocalClusterIDs) {
+        this.LocalClusterIDs = LocalClusterIDs;
     }
 
     public CreateVulScanTaskRequest() {
@@ -193,6 +331,33 @@ public class CreateVulScanTaskRequest extends AbstractModel {
         if (source.RegistryTaskID != null) {
             this.RegistryTaskID = new Long(source.RegistryTaskID);
         }
+        if (source.LocalImageContainerRunning != null) {
+            this.LocalImageContainerRunning = new Boolean(source.LocalImageContainerRunning);
+        }
+        if (source.RegistryImageContainerRunning != null) {
+            this.RegistryImageContainerRunning = new Boolean(source.RegistryImageContainerRunning);
+        }
+        if (source.IsLatest != null) {
+            this.IsLatest = new Boolean(source.IsLatest);
+        }
+        if (source.ExcludeLocalImageIDs != null) {
+            this.ExcludeLocalImageIDs = new String[source.ExcludeLocalImageIDs.length];
+            for (int i = 0; i < source.ExcludeLocalImageIDs.length; i++) {
+                this.ExcludeLocalImageIDs[i] = new String(source.ExcludeLocalImageIDs[i]);
+            }
+        }
+        if (source.ExcludeRegistryImageIDs != null) {
+            this.ExcludeRegistryImageIDs = new Long[source.ExcludeRegistryImageIDs.length];
+            for (int i = 0; i < source.ExcludeRegistryImageIDs.length; i++) {
+                this.ExcludeRegistryImageIDs[i] = new Long(source.ExcludeRegistryImageIDs[i]);
+            }
+        }
+        if (source.LocalClusterIDs != null) {
+            this.LocalClusterIDs = new String[source.LocalClusterIDs.length];
+            for (int i = 0; i < source.LocalClusterIDs.length; i++) {
+                this.LocalClusterIDs[i] = new String(source.LocalClusterIDs[i]);
+            }
+        }
     }
 
 
@@ -206,6 +371,12 @@ public class CreateVulScanTaskRequest extends AbstractModel {
         this.setParamArraySimple(map, prefix + "RegistryImageIDs.", this.RegistryImageIDs);
         this.setParamSimple(map, prefix + "LocalTaskID", this.LocalTaskID);
         this.setParamSimple(map, prefix + "RegistryTaskID", this.RegistryTaskID);
+        this.setParamSimple(map, prefix + "LocalImageContainerRunning", this.LocalImageContainerRunning);
+        this.setParamSimple(map, prefix + "RegistryImageContainerRunning", this.RegistryImageContainerRunning);
+        this.setParamSimple(map, prefix + "IsLatest", this.IsLatest);
+        this.setParamArraySimple(map, prefix + "ExcludeLocalImageIDs.", this.ExcludeLocalImageIDs);
+        this.setParamArraySimple(map, prefix + "ExcludeRegistryImageIDs.", this.ExcludeRegistryImageIDs);
+        this.setParamArraySimple(map, prefix + "LocalClusterIDs.", this.LocalClusterIDs);
 
     }
 }

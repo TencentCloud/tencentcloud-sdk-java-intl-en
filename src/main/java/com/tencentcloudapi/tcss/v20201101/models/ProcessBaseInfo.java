@@ -24,8 +24,7 @@ import java.util.HashMap;
 public class ProcessBaseInfo extends AbstractModel {
 
     /**
-    * Process initiator
-Note: This field may return null, indicating that no valid values can be obtained.
+    * process startup user
     */
     @SerializedName("ProcessStartUser")
     @Expose
@@ -33,7 +32,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Process user group
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ProcessUserGroup")
     @Expose
@@ -41,45 +39,37 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Process path
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ProcessPath")
     @Expose
     private String ProcessPath;
 
     /**
-    * Process command line parameter
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Process command line parameters
     */
     @SerializedName("ProcessParam")
     @Expose
     private String ProcessParam;
 
     /**
-     * Get Process initiator
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ProcessStartUser Process initiator
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get process startup user 
+     * @return ProcessStartUser process startup user
      */
     public String getProcessStartUser() {
         return this.ProcessStartUser;
     }
 
     /**
-     * Set Process initiator
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ProcessStartUser Process initiator
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set process startup user
+     * @param ProcessStartUser process startup user
      */
     public void setProcessStartUser(String ProcessStartUser) {
         this.ProcessStartUser = ProcessStartUser;
     }
 
     /**
-     * Get Process user group
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Process user group 
      * @return ProcessUserGroup Process user group
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getProcessUserGroup() {
         return this.ProcessUserGroup;
@@ -87,19 +77,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Process user group
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param ProcessUserGroup Process user group
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setProcessUserGroup(String ProcessUserGroup) {
         this.ProcessUserGroup = ProcessUserGroup;
     }
 
     /**
-     * Get Process path
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Process path 
      * @return ProcessPath Process path
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getProcessPath() {
         return this.ProcessPath;
@@ -107,29 +93,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Process path
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param ProcessPath Process path
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setProcessPath(String ProcessPath) {
         this.ProcessPath = ProcessPath;
     }
 
     /**
-     * Get Process command line parameter
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ProcessParam Process command line parameter
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Process command line parameters 
+     * @return ProcessParam Process command line parameters
      */
     public String getProcessParam() {
         return this.ProcessParam;
     }
 
     /**
-     * Set Process command line parameter
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ProcessParam Process command line parameter
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Process command line parameters
+     * @param ProcessParam Process command line parameters
      */
     public void setProcessParam(String ProcessParam) {
         this.ProcessParam = ProcessParam;

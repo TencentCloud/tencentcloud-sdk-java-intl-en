@@ -24,138 +24,163 @@ import java.util.HashMap;
 public class CreateDeliverCloudFunctionRequest extends AbstractModel {
 
     /**
-    * Topic id belonging to the delivery rule
+    * TopicId to which the Shipping Rule belongs.
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
+-Obtain the log topic Id through [Create Log Topic](https://www.tencentcloud.com/document/product/614/56456?from_cn_redirect=1).
     */
     @SerializedName("TopicId")
     @Expose
     private String TopicId;
 
     /**
-    * Cloud Function name for delivery
+    * Name of the cloud function for delivery. Only event functions (https://www.tencentcloud.com/document/product/583/9694?from_cn_redirect=1#scf-.E4.BA.8B.E4.BB.B6.E5.87.BD.E6.95.B0) (function type selection (https://www.tencentcloud.com/document/product/583/73483?from_cn_redirect=1)) are supported.
+Get function information by [getting the function list](https://www.tencentcloud.com/document/product/583/18582?from_cn_redirect=1).
     */
     @SerializedName("FunctionName")
     @Expose
     private String FunctionName;
 
     /**
-    * Namespace
+    * Namespace. See [Namespace management](https://www.tencentcloud.com/document/product/583/35913?from_cn_redirect=1).
+-Obtain the Name by listing the namespace list (https://www.tencentcloud.com/document/product/583/37158?from_cn_redirect=1).
     */
     @SerializedName("Namespace")
     @Expose
     private String Namespace;
 
     /**
-    * Function version
+    * Function version.
+-Get the function version by [querying the function version](https://www.tencentcloud.com/document/product/583/37162?from_cn_redirect=1).
     */
     @SerializedName("Qualifier")
     @Expose
     private String Qualifier;
 
     /**
-    * Maximum waiting time for delivery. Unit: seconds
+    * Maximum waiting time for delivery. Unit: seconds. Default: 60.
     */
     @SerializedName("Timeout")
     @Expose
     private Long Timeout;
 
     /**
-    * Maximum number of messages to deliver
+    * Maximum number of messages to deliver. Default is 100. Supported range [1,10000].
     */
     @SerializedName("MaxMsgNum")
     @Expose
     private Long MaxMsgNum;
 
     /**
-     * Get Topic id belonging to the delivery rule 
-     * @return TopicId Topic id belonging to the delivery rule
+     * Get TopicId to which the Shipping Rule belongs.
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
+-Obtain the log topic Id through [Create Log Topic](https://www.tencentcloud.com/document/product/614/56456?from_cn_redirect=1). 
+     * @return TopicId TopicId to which the Shipping Rule belongs.
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
+-Obtain the log topic Id through [Create Log Topic](https://www.tencentcloud.com/document/product/614/56456?from_cn_redirect=1).
      */
     public String getTopicId() {
         return this.TopicId;
     }
 
     /**
-     * Set Topic id belonging to the delivery rule
-     * @param TopicId Topic id belonging to the delivery rule
+     * Set TopicId to which the Shipping Rule belongs.
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
+-Obtain the log topic Id through [Create Log Topic](https://www.tencentcloud.com/document/product/614/56456?from_cn_redirect=1).
+     * @param TopicId TopicId to which the Shipping Rule belongs.
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
+-Obtain the log topic Id through [Create Log Topic](https://www.tencentcloud.com/document/product/614/56456?from_cn_redirect=1).
      */
     public void setTopicId(String TopicId) {
         this.TopicId = TopicId;
     }
 
     /**
-     * Get Cloud Function name for delivery 
-     * @return FunctionName Cloud Function name for delivery
+     * Get Name of the cloud function for delivery. Only event functions (https://www.tencentcloud.com/document/product/583/9694?from_cn_redirect=1#scf-.E4.BA.8B.E4.BB.B6.E5.87.BD.E6.95.B0) (function type selection (https://www.tencentcloud.com/document/product/583/73483?from_cn_redirect=1)) are supported.
+Get function information by [getting the function list](https://www.tencentcloud.com/document/product/583/18582?from_cn_redirect=1). 
+     * @return FunctionName Name of the cloud function for delivery. Only event functions (https://www.tencentcloud.com/document/product/583/9694?from_cn_redirect=1#scf-.E4.BA.8B.E4.BB.B6.E5.87.BD.E6.95.B0) (function type selection (https://www.tencentcloud.com/document/product/583/73483?from_cn_redirect=1)) are supported.
+Get function information by [getting the function list](https://www.tencentcloud.com/document/product/583/18582?from_cn_redirect=1).
      */
     public String getFunctionName() {
         return this.FunctionName;
     }
 
     /**
-     * Set Cloud Function name for delivery
-     * @param FunctionName Cloud Function name for delivery
+     * Set Name of the cloud function for delivery. Only event functions (https://www.tencentcloud.com/document/product/583/9694?from_cn_redirect=1#scf-.E4.BA.8B.E4.BB.B6.E5.87.BD.E6.95.B0) (function type selection (https://www.tencentcloud.com/document/product/583/73483?from_cn_redirect=1)) are supported.
+Get function information by [getting the function list](https://www.tencentcloud.com/document/product/583/18582?from_cn_redirect=1).
+     * @param FunctionName Name of the cloud function for delivery. Only event functions (https://www.tencentcloud.com/document/product/583/9694?from_cn_redirect=1#scf-.E4.BA.8B.E4.BB.B6.E5.87.BD.E6.95.B0) (function type selection (https://www.tencentcloud.com/document/product/583/73483?from_cn_redirect=1)) are supported.
+Get function information by [getting the function list](https://www.tencentcloud.com/document/product/583/18582?from_cn_redirect=1).
      */
     public void setFunctionName(String FunctionName) {
         this.FunctionName = FunctionName;
     }
 
     /**
-     * Get Namespace 
-     * @return Namespace Namespace
+     * Get Namespace. See [Namespace management](https://www.tencentcloud.com/document/product/583/35913?from_cn_redirect=1).
+-Obtain the Name by listing the namespace list (https://www.tencentcloud.com/document/product/583/37158?from_cn_redirect=1). 
+     * @return Namespace Namespace. See [Namespace management](https://www.tencentcloud.com/document/product/583/35913?from_cn_redirect=1).
+-Obtain the Name by listing the namespace list (https://www.tencentcloud.com/document/product/583/37158?from_cn_redirect=1).
      */
     public String getNamespace() {
         return this.Namespace;
     }
 
     /**
-     * Set Namespace
-     * @param Namespace Namespace
+     * Set Namespace. See [Namespace management](https://www.tencentcloud.com/document/product/583/35913?from_cn_redirect=1).
+-Obtain the Name by listing the namespace list (https://www.tencentcloud.com/document/product/583/37158?from_cn_redirect=1).
+     * @param Namespace Namespace. See [Namespace management](https://www.tencentcloud.com/document/product/583/35913?from_cn_redirect=1).
+-Obtain the Name by listing the namespace list (https://www.tencentcloud.com/document/product/583/37158?from_cn_redirect=1).
      */
     public void setNamespace(String Namespace) {
         this.Namespace = Namespace;
     }
 
     /**
-     * Get Function version 
-     * @return Qualifier Function version
+     * Get Function version.
+-Get the function version by [querying the function version](https://www.tencentcloud.com/document/product/583/37162?from_cn_redirect=1). 
+     * @return Qualifier Function version.
+-Get the function version by [querying the function version](https://www.tencentcloud.com/document/product/583/37162?from_cn_redirect=1).
      */
     public String getQualifier() {
         return this.Qualifier;
     }
 
     /**
-     * Set Function version
-     * @param Qualifier Function version
+     * Set Function version.
+-Get the function version by [querying the function version](https://www.tencentcloud.com/document/product/583/37162?from_cn_redirect=1).
+     * @param Qualifier Function version.
+-Get the function version by [querying the function version](https://www.tencentcloud.com/document/product/583/37162?from_cn_redirect=1).
      */
     public void setQualifier(String Qualifier) {
         this.Qualifier = Qualifier;
     }
 
     /**
-     * Get Maximum waiting time for delivery. Unit: seconds 
-     * @return Timeout Maximum waiting time for delivery. Unit: seconds
+     * Get Maximum waiting time for delivery. Unit: seconds. Default: 60. 
+     * @return Timeout Maximum waiting time for delivery. Unit: seconds. Default: 60.
      */
     public Long getTimeout() {
         return this.Timeout;
     }
 
     /**
-     * Set Maximum waiting time for delivery. Unit: seconds
-     * @param Timeout Maximum waiting time for delivery. Unit: seconds
+     * Set Maximum waiting time for delivery. Unit: seconds. Default: 60.
+     * @param Timeout Maximum waiting time for delivery. Unit: seconds. Default: 60.
      */
     public void setTimeout(Long Timeout) {
         this.Timeout = Timeout;
     }
 
     /**
-     * Get Maximum number of messages to deliver 
-     * @return MaxMsgNum Maximum number of messages to deliver
+     * Get Maximum number of messages to deliver. Default is 100. Supported range [1,10000]. 
+     * @return MaxMsgNum Maximum number of messages to deliver. Default is 100. Supported range [1,10000].
      */
     public Long getMaxMsgNum() {
         return this.MaxMsgNum;
     }
 
     /**
-     * Set Maximum number of messages to deliver
-     * @param MaxMsgNum Maximum number of messages to deliver
+     * Set Maximum number of messages to deliver. Default is 100. Supported range [1,10000].
+     * @param MaxMsgNum Maximum number of messages to deliver. Default is 100. Supported range [1,10000].
      */
     public void setMaxMsgNum(Long MaxMsgNum) {
         this.MaxMsgNum = MaxMsgNum;

@@ -24,107 +24,115 @@ import java.util.HashMap;
 public class AccessControlChildRuleInfo extends AbstractModel {
 
     /**
-    * Policy mode. `RULE_MODE_RELEASE`: Allow.
-   `RULE_MODE_ALERT`: Alert.
-   `RULE_MODE_HOLDUP`: Block.
-    */
-    @SerializedName("RuleMode")
-    @Expose
-    private String RuleMode;
-
-    /**
-    * Process path
+    * <p>Process path.</p>
     */
     @SerializedName("ProcessPath")
     @Expose
     private String ProcessPath;
 
     /**
-    * Accessed file path, which is valid only for access control.
+    * <p>Policy mode: RULE_MODE_RELEASE: allow<br>   RULE_MODE_ALERT: alarm<br>   RULE_MODE_HOLDUP: block</p>
+    */
+    @SerializedName("RuleMode")
+    @Expose
+    private String RuleMode;
+
+    /**
+    * <p>Accessed file path, only effective during access control.</p>
     */
     @SerializedName("TargetFilePath")
     @Expose
     private String TargetFilePath;
 
     /**
-    * Sub-policy ID
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Command line parameters.</p>
+    */
+    @SerializedName("CmdLine")
+    @Expose
+    private String CmdLine;
+
+    /**
+    * <p>Sub-policy ID.</p>
     */
     @SerializedName("RuleId")
     @Expose
     private String RuleId;
 
     /**
-     * Get Policy mode. `RULE_MODE_RELEASE`: Allow.
-   `RULE_MODE_ALERT`: Alert.
-   `RULE_MODE_HOLDUP`: Block. 
-     * @return RuleMode Policy mode. `RULE_MODE_RELEASE`: Allow.
-   `RULE_MODE_ALERT`: Alert.
-   `RULE_MODE_HOLDUP`: Block.
-     */
-    public String getRuleMode() {
-        return this.RuleMode;
-    }
-
-    /**
-     * Set Policy mode. `RULE_MODE_RELEASE`: Allow.
-   `RULE_MODE_ALERT`: Alert.
-   `RULE_MODE_HOLDUP`: Block.
-     * @param RuleMode Policy mode. `RULE_MODE_RELEASE`: Allow.
-   `RULE_MODE_ALERT`: Alert.
-   `RULE_MODE_HOLDUP`: Block.
-     */
-    public void setRuleMode(String RuleMode) {
-        this.RuleMode = RuleMode;
-    }
-
-    /**
-     * Get Process path 
-     * @return ProcessPath Process path
+     * Get <p>Process path.</p> 
+     * @return ProcessPath <p>Process path.</p>
      */
     public String getProcessPath() {
         return this.ProcessPath;
     }
 
     /**
-     * Set Process path
-     * @param ProcessPath Process path
+     * Set <p>Process path.</p>
+     * @param ProcessPath <p>Process path.</p>
      */
     public void setProcessPath(String ProcessPath) {
         this.ProcessPath = ProcessPath;
     }
 
     /**
-     * Get Accessed file path, which is valid only for access control. 
-     * @return TargetFilePath Accessed file path, which is valid only for access control.
+     * Get <p>Policy mode: RULE_MODE_RELEASE: allow<br>   RULE_MODE_ALERT: alarm<br>   RULE_MODE_HOLDUP: block</p> 
+     * @return RuleMode <p>Policy mode: RULE_MODE_RELEASE: allow<br>   RULE_MODE_ALERT: alarm<br>   RULE_MODE_HOLDUP: block</p>
+     */
+    public String getRuleMode() {
+        return this.RuleMode;
+    }
+
+    /**
+     * Set <p>Policy mode: RULE_MODE_RELEASE: allow<br>   RULE_MODE_ALERT: alarm<br>   RULE_MODE_HOLDUP: block</p>
+     * @param RuleMode <p>Policy mode: RULE_MODE_RELEASE: allow<br>   RULE_MODE_ALERT: alarm<br>   RULE_MODE_HOLDUP: block</p>
+     */
+    public void setRuleMode(String RuleMode) {
+        this.RuleMode = RuleMode;
+    }
+
+    /**
+     * Get <p>Accessed file path, only effective during access control.</p> 
+     * @return TargetFilePath <p>Accessed file path, only effective during access control.</p>
      */
     public String getTargetFilePath() {
         return this.TargetFilePath;
     }
 
     /**
-     * Set Accessed file path, which is valid only for access control.
-     * @param TargetFilePath Accessed file path, which is valid only for access control.
+     * Set <p>Accessed file path, only effective during access control.</p>
+     * @param TargetFilePath <p>Accessed file path, only effective during access control.</p>
      */
     public void setTargetFilePath(String TargetFilePath) {
         this.TargetFilePath = TargetFilePath;
     }
 
     /**
-     * Get Sub-policy ID
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return RuleId Sub-policy ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Command line parameters.</p> 
+     * @return CmdLine <p>Command line parameters.</p>
+     */
+    public String getCmdLine() {
+        return this.CmdLine;
+    }
+
+    /**
+     * Set <p>Command line parameters.</p>
+     * @param CmdLine <p>Command line parameters.</p>
+     */
+    public void setCmdLine(String CmdLine) {
+        this.CmdLine = CmdLine;
+    }
+
+    /**
+     * Get <p>Sub-policy ID.</p> 
+     * @return RuleId <p>Sub-policy ID.</p>
      */
     public String getRuleId() {
         return this.RuleId;
     }
 
     /**
-     * Set Sub-policy ID
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param RuleId Sub-policy ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Sub-policy ID.</p>
+     * @param RuleId <p>Sub-policy ID.</p>
      */
     public void setRuleId(String RuleId) {
         this.RuleId = RuleId;
@@ -138,14 +146,17 @@ Note: This field may return null, indicating that no valid values can be obtaine
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public AccessControlChildRuleInfo(AccessControlChildRuleInfo source) {
-        if (source.RuleMode != null) {
-            this.RuleMode = new String(source.RuleMode);
-        }
         if (source.ProcessPath != null) {
             this.ProcessPath = new String(source.ProcessPath);
         }
+        if (source.RuleMode != null) {
+            this.RuleMode = new String(source.RuleMode);
+        }
         if (source.TargetFilePath != null) {
             this.TargetFilePath = new String(source.TargetFilePath);
+        }
+        if (source.CmdLine != null) {
+            this.CmdLine = new String(source.CmdLine);
         }
         if (source.RuleId != null) {
             this.RuleId = new String(source.RuleId);
@@ -157,9 +168,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "RuleMode", this.RuleMode);
         this.setParamSimple(map, prefix + "ProcessPath", this.ProcessPath);
+        this.setParamSimple(map, prefix + "RuleMode", this.RuleMode);
         this.setParamSimple(map, prefix + "TargetFilePath", this.TargetFilePath);
+        this.setParamSimple(map, prefix + "CmdLine", this.CmdLine);
         this.setParamSimple(map, prefix + "RuleId", this.RuleId);
 
     }

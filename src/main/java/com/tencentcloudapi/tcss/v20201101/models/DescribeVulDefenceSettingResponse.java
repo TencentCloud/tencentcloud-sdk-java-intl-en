@@ -52,24 +52,21 @@ public class DescribeVulDefenceSettingResponse extends AbstractModel {
     private Long ExceptionHostCount;
 
     /**
-    * Specified servers with exploit prevention enabled
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Custom Vulnerability Defense Hosts
     */
     @SerializedName("HostIDs")
     @Expose
     private String [] HostIDs;
 
     /**
-    * Total number of servers with TCSS activated
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Total Number of Hosts with Container Security Enabled
     */
     @SerializedName("HostTotalCount")
     @Expose
     private Long HostTotalCount;
 
     /**
-    * Number of vulnerabilities that can be prevented
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Supported Defense Vulnerability Count
     */
     @SerializedName("SupportDefenseVulCount")
     @Expose
@@ -182,60 +179,48 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Specified servers with exploit prevention enabled
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return HostIDs Specified servers with exploit prevention enabled
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Custom Vulnerability Defense Hosts 
+     * @return HostIDs Custom Vulnerability Defense Hosts
      */
     public String [] getHostIDs() {
         return this.HostIDs;
     }
 
     /**
-     * Set Specified servers with exploit prevention enabled
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param HostIDs Specified servers with exploit prevention enabled
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Custom Vulnerability Defense Hosts
+     * @param HostIDs Custom Vulnerability Defense Hosts
      */
     public void setHostIDs(String [] HostIDs) {
         this.HostIDs = HostIDs;
     }
 
     /**
-     * Get Total number of servers with TCSS activated
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return HostTotalCount Total number of servers with TCSS activated
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Total Number of Hosts with Container Security Enabled 
+     * @return HostTotalCount Total Number of Hosts with Container Security Enabled
      */
     public Long getHostTotalCount() {
         return this.HostTotalCount;
     }
 
     /**
-     * Set Total number of servers with TCSS activated
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param HostTotalCount Total number of servers with TCSS activated
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Total Number of Hosts with Container Security Enabled
+     * @param HostTotalCount Total Number of Hosts with Container Security Enabled
      */
     public void setHostTotalCount(Long HostTotalCount) {
         this.HostTotalCount = HostTotalCount;
     }
 
     /**
-     * Get Number of vulnerabilities that can be prevented
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return SupportDefenseVulCount Number of vulnerabilities that can be prevented
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Supported Defense Vulnerability Count 
+     * @return SupportDefenseVulCount Supported Defense Vulnerability Count
      */
     public Long getSupportDefenseVulCount() {
         return this.SupportDefenseVulCount;
     }
 
     /**
-     * Set Number of vulnerabilities that can be prevented
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param SupportDefenseVulCount Number of vulnerabilities that can be prevented
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Supported Defense Vulnerability Count
+     * @param SupportDefenseVulCount Supported Defense Vulnerability Count
      */
     public void setSupportDefenseVulCount(Long SupportDefenseVulCount) {
         this.SupportDefenseVulCount = SupportDefenseVulCount;

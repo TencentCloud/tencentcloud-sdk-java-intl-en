@@ -55,7 +55,7 @@ The maximum number of `Filters` per request is 10. the upper limit for `Filter.V
     private Long Offset;
 
     /**
-    * The earliest start time of the scaling activity, which will be ignored if ActivityIds is specified. The value is in `UTC time` in the format of `YYYY-MM-DDThh:mm:ssZ` according to the `ISO8601` standard.
+    * The earliest start time of the scaling operation. if ActivityIds is specified, this parameter will be ignored. value is in UTC time, following the ISO8601 standard, format: YYYY-MM-DDThh:MM:ssZ. note: currently, only scaling operations from the past two years are saved.
     */
     @SerializedName("StartTime")
     @Expose
@@ -145,16 +145,16 @@ The maximum number of `Filters` per request is 10. the upper limit for `Filter.V
     }
 
     /**
-     * Get The earliest start time of the scaling activity, which will be ignored if ActivityIds is specified. The value is in `UTC time` in the format of `YYYY-MM-DDThh:mm:ssZ` according to the `ISO8601` standard. 
-     * @return StartTime The earliest start time of the scaling activity, which will be ignored if ActivityIds is specified. The value is in `UTC time` in the format of `YYYY-MM-DDThh:mm:ssZ` according to the `ISO8601` standard.
+     * Get The earliest start time of the scaling operation. if ActivityIds is specified, this parameter will be ignored. value is in UTC time, following the ISO8601 standard, format: YYYY-MM-DDThh:MM:ssZ. note: currently, only scaling operations from the past two years are saved. 
+     * @return StartTime The earliest start time of the scaling operation. if ActivityIds is specified, this parameter will be ignored. value is in UTC time, following the ISO8601 standard, format: YYYY-MM-DDThh:MM:ssZ. note: currently, only scaling operations from the past two years are saved.
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set The earliest start time of the scaling activity, which will be ignored if ActivityIds is specified. The value is in `UTC time` in the format of `YYYY-MM-DDThh:mm:ssZ` according to the `ISO8601` standard.
-     * @param StartTime The earliest start time of the scaling activity, which will be ignored if ActivityIds is specified. The value is in `UTC time` in the format of `YYYY-MM-DDThh:mm:ssZ` according to the `ISO8601` standard.
+     * Set The earliest start time of the scaling operation. if ActivityIds is specified, this parameter will be ignored. value is in UTC time, following the ISO8601 standard, format: YYYY-MM-DDThh:MM:ssZ. note: currently, only scaling operations from the past two years are saved.
+     * @param StartTime The earliest start time of the scaling operation. if ActivityIds is specified, this parameter will be ignored. value is in UTC time, following the ISO8601 standard, format: YYYY-MM-DDThh:MM:ssZ. note: currently, only scaling operations from the past two years are saved.
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;

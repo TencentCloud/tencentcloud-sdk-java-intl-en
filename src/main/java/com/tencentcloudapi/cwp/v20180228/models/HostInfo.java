@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class HostInfo extends AbstractModel {
 
     /**
-    * Quuid
+    * Host QUUID
     */
     @SerializedName("Quuid")
     @Expose
     private String Quuid;
 
     /**
-    * Uuid
+    * Host UUID.
     */
     @SerializedName("Uuid")
     @Expose
     private String Uuid;
 
     /**
-     * Get Quuid 
-     * @return Quuid Quuid
+     * Get Host QUUID 
+     * @return Quuid Host QUUID
      */
     public String getQuuid() {
         return this.Quuid;
     }
 
     /**
-     * Set Quuid
-     * @param Quuid Quuid
+     * Set Host QUUID
+     * @param Quuid Host QUUID
      */
     public void setQuuid(String Quuid) {
         this.Quuid = Quuid;
     }
 
     /**
-     * Get Uuid 
-     * @return Uuid Uuid
+     * Get Host UUID. 
+     * @return Uuid Host UUID.
      */
     public String getUuid() {
         return this.Uuid;
     }
 
     /**
-     * Set Uuid
-     * @param Uuid Uuid
+     * Set Host UUID.
+     * @param Uuid Host UUID.
      */
     public void setUuid(String Uuid) {
         this.Uuid = Uuid;

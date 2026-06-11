@@ -31,8 +31,7 @@ public class DescribeVulDefenceEventResponse extends AbstractModel {
     private Long TotalCount;
 
     /**
-    * List of vulnerability defense events
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Vulnerability Defense Event List
     */
     @SerializedName("List")
     @Expose
@@ -62,20 +61,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get List of vulnerability defense events
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return List List of vulnerability defense events
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Vulnerability Defense Event List 
+     * @return List Vulnerability Defense Event List
      */
     public VulDefenceEvent [] getList() {
         return this.List;
     }
 
     /**
-     * Set List of vulnerability defense events
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param List List of vulnerability defense events
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Vulnerability Defense Event List
+     * @param List Vulnerability Defense Event List
      */
     public void setList(VulDefenceEvent [] List) {
         this.List = List;

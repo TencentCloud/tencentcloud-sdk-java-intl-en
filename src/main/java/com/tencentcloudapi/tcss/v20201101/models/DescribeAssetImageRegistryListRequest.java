@@ -24,146 +24,164 @@ import java.util.HashMap;
 public class DescribeAssetImageRegistryListRequest extends AbstractModel {
 
     /**
-    * Number of results to be returned. Default value: `10`. Maximum value: `100`.
+    * <p>Number of items to return. The default number is 10, and the maximum number is 100.</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * Offset. Default value: `0`.
+    * <p>Offset. Default value: 0.</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * Filter field
-`IsAuthorized` (whether licensed). Valid values: `all` (all); `0` (unlicensed); `1` (licensed).
+    * <p>Filter field.<br>IsAuthorized can be set to all, 0 (unauthorized), and 1 (authorized).</p>
     */
     @SerializedName("Filters")
     @Expose
     private AssetFilters [] Filters;
 
     /**
-    * Sorting field
+    * <p>Sorting field.</p>
     */
     @SerializedName("By")
     @Expose
     private String By;
 
     /**
-    * Sorting order. Valid values: `asc`, `desc`.
+    * <p>Sorting method. Valid values: asc and desc.</p>
     */
     @SerializedName("Order")
     @Expose
     private String Order;
 
     /**
-    * Whether to show only the latest repository images. Default value: `false`.
+    * <p>Whether to display only the latest image of each repository. Default value: false.</p>
     */
     @SerializedName("OnlyShowLatest")
     @Expose
     private Boolean OnlyShowLatest;
 
     /**
-     * Get Number of results to be returned. Default value: `10`. Maximum value: `100`. 
-     * @return Limit Number of results to be returned. Default value: `10`. Maximum value: `100`.
+    * <p>Whether to display only running container images.</p>
+    */
+    @SerializedName("IsRunning")
+    @Expose
+    private Boolean IsRunning;
+
+    /**
+     * Get <p>Number of items to return. The default number is 10, and the maximum number is 100.</p> 
+     * @return Limit <p>Number of items to return. The default number is 10, and the maximum number is 100.</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Number of results to be returned. Default value: `10`. Maximum value: `100`.
-     * @param Limit Number of results to be returned. Default value: `10`. Maximum value: `100`.
+     * Set <p>Number of items to return. The default number is 10, and the maximum number is 100.</p>
+     * @param Limit <p>Number of items to return. The default number is 10, and the maximum number is 100.</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get Offset. Default value: `0`. 
-     * @return Offset Offset. Default value: `0`.
+     * Get <p>Offset. Default value: 0.</p> 
+     * @return Offset <p>Offset. Default value: 0.</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Offset. Default value: `0`.
-     * @param Offset Offset. Default value: `0`.
+     * Set <p>Offset. Default value: 0.</p>
+     * @param Offset <p>Offset. Default value: 0.</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get Filter field
-`IsAuthorized` (whether licensed). Valid values: `all` (all); `0` (unlicensed); `1` (licensed). 
-     * @return Filters Filter field
-`IsAuthorized` (whether licensed). Valid values: `all` (all); `0` (unlicensed); `1` (licensed).
+     * Get <p>Filter field.<br>IsAuthorized can be set to all, 0 (unauthorized), and 1 (authorized).</p> 
+     * @return Filters <p>Filter field.<br>IsAuthorized can be set to all, 0 (unauthorized), and 1 (authorized).</p>
      */
     public AssetFilters [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set Filter field
-`IsAuthorized` (whether licensed). Valid values: `all` (all); `0` (unlicensed); `1` (licensed).
-     * @param Filters Filter field
-`IsAuthorized` (whether licensed). Valid values: `all` (all); `0` (unlicensed); `1` (licensed).
+     * Set <p>Filter field.<br>IsAuthorized can be set to all, 0 (unauthorized), and 1 (authorized).</p>
+     * @param Filters <p>Filter field.<br>IsAuthorized can be set to all, 0 (unauthorized), and 1 (authorized).</p>
      */
     public void setFilters(AssetFilters [] Filters) {
         this.Filters = Filters;
     }
 
     /**
-     * Get Sorting field 
-     * @return By Sorting field
+     * Get <p>Sorting field.</p> 
+     * @return By <p>Sorting field.</p>
      */
     public String getBy() {
         return this.By;
     }
 
     /**
-     * Set Sorting field
-     * @param By Sorting field
+     * Set <p>Sorting field.</p>
+     * @param By <p>Sorting field.</p>
      */
     public void setBy(String By) {
         this.By = By;
     }
 
     /**
-     * Get Sorting order. Valid values: `asc`, `desc`. 
-     * @return Order Sorting order. Valid values: `asc`, `desc`.
+     * Get <p>Sorting method. Valid values: asc and desc.</p> 
+     * @return Order <p>Sorting method. Valid values: asc and desc.</p>
      */
     public String getOrder() {
         return this.Order;
     }
 
     /**
-     * Set Sorting order. Valid values: `asc`, `desc`.
-     * @param Order Sorting order. Valid values: `asc`, `desc`.
+     * Set <p>Sorting method. Valid values: asc and desc.</p>
+     * @param Order <p>Sorting method. Valid values: asc and desc.</p>
      */
     public void setOrder(String Order) {
         this.Order = Order;
     }
 
     /**
-     * Get Whether to show only the latest repository images. Default value: `false`. 
-     * @return OnlyShowLatest Whether to show only the latest repository images. Default value: `false`.
+     * Get <p>Whether to display only the latest image of each repository. Default value: false.</p> 
+     * @return OnlyShowLatest <p>Whether to display only the latest image of each repository. Default value: false.</p>
      */
     public Boolean getOnlyShowLatest() {
         return this.OnlyShowLatest;
     }
 
     /**
-     * Set Whether to show only the latest repository images. Default value: `false`.
-     * @param OnlyShowLatest Whether to show only the latest repository images. Default value: `false`.
+     * Set <p>Whether to display only the latest image of each repository. Default value: false.</p>
+     * @param OnlyShowLatest <p>Whether to display only the latest image of each repository. Default value: false.</p>
      */
     public void setOnlyShowLatest(Boolean OnlyShowLatest) {
         this.OnlyShowLatest = OnlyShowLatest;
+    }
+
+    /**
+     * Get <p>Whether to display only running container images.</p> 
+     * @return IsRunning <p>Whether to display only running container images.</p>
+     */
+    public Boolean getIsRunning() {
+        return this.IsRunning;
+    }
+
+    /**
+     * Set <p>Whether to display only running container images.</p>
+     * @param IsRunning <p>Whether to display only running container images.</p>
+     */
+    public void setIsRunning(Boolean IsRunning) {
+        this.IsRunning = IsRunning;
     }
 
     public DescribeAssetImageRegistryListRequest() {
@@ -195,6 +213,9 @@ public class DescribeAssetImageRegistryListRequest extends AbstractModel {
         if (source.OnlyShowLatest != null) {
             this.OnlyShowLatest = new Boolean(source.OnlyShowLatest);
         }
+        if (source.IsRunning != null) {
+            this.IsRunning = new Boolean(source.IsRunning);
+        }
     }
 
 
@@ -208,6 +229,7 @@ public class DescribeAssetImageRegistryListRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "By", this.By);
         this.setParamSimple(map, prefix + "Order", this.Order);
         this.setParamSimple(map, prefix + "OnlyShowLatest", this.OnlyShowLatest);
+        this.setParamSimple(map, prefix + "IsRunning", this.IsRunning);
 
     }
 }

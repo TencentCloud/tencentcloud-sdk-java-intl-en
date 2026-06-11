@@ -24,10 +24,10 @@ import java.util.HashMap;
 public class HeuristicCache extends AbstractModel {
 
     /**
-    * Whether to enable heuristic caching. Values:
-`on`: Enable
-`off`: Disable
-Note: This field may return·`null`, indicating that no valid values can be obtained.
+    * Specifies the heuristic cache configuration switch. valid values:.
+on: enable.
+Off: turn off the switch (default).
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Switch")
     @Expose
@@ -42,28 +42,28 @@ Note: This field may return·`null`, indicating that no valid values can be obta
     private CacheConfig CacheConfig;
 
     /**
-     * Get Whether to enable heuristic caching. Values:
-`on`: Enable
-`off`: Disable
-Note: This field may return·`null`, indicating that no valid values can be obtained. 
-     * @return Switch Whether to enable heuristic caching. Values:
-`on`: Enable
-`off`: Disable
-Note: This field may return·`null`, indicating that no valid values can be obtained.
+     * Get Specifies the heuristic cache configuration switch. valid values:.
+on: enable.
+Off: turn off the switch (default).
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Switch Specifies the heuristic cache configuration switch. valid values:.
+on: enable.
+Off: turn off the switch (default).
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set Whether to enable heuristic caching. Values:
-`on`: Enable
-`off`: Disable
-Note: This field may return·`null`, indicating that no valid values can be obtained.
-     * @param Switch Whether to enable heuristic caching. Values:
-`on`: Enable
-`off`: Disable
-Note: This field may return·`null`, indicating that no valid values can be obtained.
+     * Set Specifies the heuristic cache configuration switch. valid values:.
+on: enable.
+Off: turn off the switch (default).
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Switch Specifies the heuristic cache configuration switch. valid values:.
+on: enable.
+Off: turn off the switch (default).
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;

@@ -25,7 +25,6 @@ public class DescribeHostInfoResponse extends AbstractModel {
 
     /**
     * Host and tag information
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("HostInfoList")
     @Expose
@@ -39,10 +38,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Host and tag information
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Host and tag information 
      * @return HostInfoList Host and tag information
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public HostTagInfo [] getHostInfoList() {
         return this.HostInfoList;
@@ -50,9 +47,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Host and tag information
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param HostInfoList Host and tag information
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setHostInfoList(HostTagInfo [] HostInfoList) {
         this.HostInfoList = HostInfoList;

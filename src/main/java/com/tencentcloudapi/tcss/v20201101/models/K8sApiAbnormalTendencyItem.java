@@ -24,279 +24,302 @@ import java.util.HashMap;
 public class K8sApiAbnormalTendencyItem extends AbstractModel {
 
     /**
-    * Date
+    * <p>Date</p>
     */
     @SerializedName("Date")
     @Expose
     private String Date;
 
     /**
-    * The number of abnormal UA request events
+    * <p>Number of abnormal UA request events.</p>
     */
     @SerializedName("ExceptionUARequestCount")
     @Expose
     private Long ExceptionUARequestCount;
 
     /**
-    * The number of anonymous user permission events
+    * <p>Number of anonymous user permission events.</p>
     */
     @SerializedName("AnonymousUserRightCount")
     @Expose
     private Long AnonymousUserRightCount;
 
     /**
-    * The number of credential information acquisition events
+    * <p>Number of credential information acquisition events.</p>
     */
     @SerializedName("CredentialInformationObtainCount")
     @Expose
     private Long CredentialInformationObtainCount;
 
     /**
-    * The number of sensitive data mounting events
+    * <p>Number of sensitive data mount events.</p>
     */
     @SerializedName("SensitiveDataMountCount")
     @Expose
     private Long SensitiveDataMountCount;
 
     /**
-    * The number of command execution events
+    * <p>Number of command execution events.</p>
     */
     @SerializedName("CmdExecCount")
     @Expose
     private Long CmdExecCount;
 
     /**
-    * The number of abnormal scheduled task events
+    * <p>Number of abnormal scheduled task events.</p>
     */
     @SerializedName("AbnormalScheduledTaskCount")
     @Expose
     private Long AbnormalScheduledTaskCount;
 
     /**
-    * The number of static pods created
+    * <p>Number of static Pod creations.</p>
     */
     @SerializedName("StaticsPodCreateCount")
     @Expose
     private Long StaticsPodCreateCount;
 
     /**
-    * The number of suspicious containers created
+    * <p>Number of suspicious container creations.</p>
     */
     @SerializedName("DoubtfulContainerCreateCount")
     @Expose
     private Long DoubtfulContainerCreateCount;
 
     /**
-    * The number of custom rule events
+    * <p>Number of custom rule events.</p>
     */
     @SerializedName("UserDefinedRuleCount")
     @Expose
     private Long UserDefinedRuleCount;
 
     /**
-    * The number of anonymous access events
+    * <p>Number of anonymous access events.</p>
     */
     @SerializedName("AnonymousAccessCount")
     @Expose
     private Long AnonymousAccessCount;
 
     /**
-    * The number of privilege container events
+    * <p>Number of privileged container events.</p>
     */
     @SerializedName("PrivilegeContainerCount")
     @Expose
     private Long PrivilegeContainerCount;
 
     /**
-     * Get Date 
-     * @return Date Date
+    * <p>Number of alarms corresponding to the rule type.</p>
+    */
+    @SerializedName("RuleTypeCountSet")
+    @Expose
+    private K8SAPIRuleTypeCountItem [] RuleTypeCountSet;
+
+    /**
+     * Get <p>Date</p> 
+     * @return Date <p>Date</p>
      */
     public String getDate() {
         return this.Date;
     }
 
     /**
-     * Set Date
-     * @param Date Date
+     * Set <p>Date</p>
+     * @param Date <p>Date</p>
      */
     public void setDate(String Date) {
         this.Date = Date;
     }
 
     /**
-     * Get The number of abnormal UA request events 
-     * @return ExceptionUARequestCount The number of abnormal UA request events
+     * Get <p>Number of abnormal UA request events.</p> 
+     * @return ExceptionUARequestCount <p>Number of abnormal UA request events.</p>
      */
     public Long getExceptionUARequestCount() {
         return this.ExceptionUARequestCount;
     }
 
     /**
-     * Set The number of abnormal UA request events
-     * @param ExceptionUARequestCount The number of abnormal UA request events
+     * Set <p>Number of abnormal UA request events.</p>
+     * @param ExceptionUARequestCount <p>Number of abnormal UA request events.</p>
      */
     public void setExceptionUARequestCount(Long ExceptionUARequestCount) {
         this.ExceptionUARequestCount = ExceptionUARequestCount;
     }
 
     /**
-     * Get The number of anonymous user permission events 
-     * @return AnonymousUserRightCount The number of anonymous user permission events
+     * Get <p>Number of anonymous user permission events.</p> 
+     * @return AnonymousUserRightCount <p>Number of anonymous user permission events.</p>
      */
     public Long getAnonymousUserRightCount() {
         return this.AnonymousUserRightCount;
     }
 
     /**
-     * Set The number of anonymous user permission events
-     * @param AnonymousUserRightCount The number of anonymous user permission events
+     * Set <p>Number of anonymous user permission events.</p>
+     * @param AnonymousUserRightCount <p>Number of anonymous user permission events.</p>
      */
     public void setAnonymousUserRightCount(Long AnonymousUserRightCount) {
         this.AnonymousUserRightCount = AnonymousUserRightCount;
     }
 
     /**
-     * Get The number of credential information acquisition events 
-     * @return CredentialInformationObtainCount The number of credential information acquisition events
+     * Get <p>Number of credential information acquisition events.</p> 
+     * @return CredentialInformationObtainCount <p>Number of credential information acquisition events.</p>
      */
     public Long getCredentialInformationObtainCount() {
         return this.CredentialInformationObtainCount;
     }
 
     /**
-     * Set The number of credential information acquisition events
-     * @param CredentialInformationObtainCount The number of credential information acquisition events
+     * Set <p>Number of credential information acquisition events.</p>
+     * @param CredentialInformationObtainCount <p>Number of credential information acquisition events.</p>
      */
     public void setCredentialInformationObtainCount(Long CredentialInformationObtainCount) {
         this.CredentialInformationObtainCount = CredentialInformationObtainCount;
     }
 
     /**
-     * Get The number of sensitive data mounting events 
-     * @return SensitiveDataMountCount The number of sensitive data mounting events
+     * Get <p>Number of sensitive data mount events.</p> 
+     * @return SensitiveDataMountCount <p>Number of sensitive data mount events.</p>
      */
     public Long getSensitiveDataMountCount() {
         return this.SensitiveDataMountCount;
     }
 
     /**
-     * Set The number of sensitive data mounting events
-     * @param SensitiveDataMountCount The number of sensitive data mounting events
+     * Set <p>Number of sensitive data mount events.</p>
+     * @param SensitiveDataMountCount <p>Number of sensitive data mount events.</p>
      */
     public void setSensitiveDataMountCount(Long SensitiveDataMountCount) {
         this.SensitiveDataMountCount = SensitiveDataMountCount;
     }
 
     /**
-     * Get The number of command execution events 
-     * @return CmdExecCount The number of command execution events
+     * Get <p>Number of command execution events.</p> 
+     * @return CmdExecCount <p>Number of command execution events.</p>
      */
     public Long getCmdExecCount() {
         return this.CmdExecCount;
     }
 
     /**
-     * Set The number of command execution events
-     * @param CmdExecCount The number of command execution events
+     * Set <p>Number of command execution events.</p>
+     * @param CmdExecCount <p>Number of command execution events.</p>
      */
     public void setCmdExecCount(Long CmdExecCount) {
         this.CmdExecCount = CmdExecCount;
     }
 
     /**
-     * Get The number of abnormal scheduled task events 
-     * @return AbnormalScheduledTaskCount The number of abnormal scheduled task events
+     * Get <p>Number of abnormal scheduled task events.</p> 
+     * @return AbnormalScheduledTaskCount <p>Number of abnormal scheduled task events.</p>
      */
     public Long getAbnormalScheduledTaskCount() {
         return this.AbnormalScheduledTaskCount;
     }
 
     /**
-     * Set The number of abnormal scheduled task events
-     * @param AbnormalScheduledTaskCount The number of abnormal scheduled task events
+     * Set <p>Number of abnormal scheduled task events.</p>
+     * @param AbnormalScheduledTaskCount <p>Number of abnormal scheduled task events.</p>
      */
     public void setAbnormalScheduledTaskCount(Long AbnormalScheduledTaskCount) {
         this.AbnormalScheduledTaskCount = AbnormalScheduledTaskCount;
     }
 
     /**
-     * Get The number of static pods created 
-     * @return StaticsPodCreateCount The number of static pods created
+     * Get <p>Number of static Pod creations.</p> 
+     * @return StaticsPodCreateCount <p>Number of static Pod creations.</p>
      */
     public Long getStaticsPodCreateCount() {
         return this.StaticsPodCreateCount;
     }
 
     /**
-     * Set The number of static pods created
-     * @param StaticsPodCreateCount The number of static pods created
+     * Set <p>Number of static Pod creations.</p>
+     * @param StaticsPodCreateCount <p>Number of static Pod creations.</p>
      */
     public void setStaticsPodCreateCount(Long StaticsPodCreateCount) {
         this.StaticsPodCreateCount = StaticsPodCreateCount;
     }
 
     /**
-     * Get The number of suspicious containers created 
-     * @return DoubtfulContainerCreateCount The number of suspicious containers created
+     * Get <p>Number of suspicious container creations.</p> 
+     * @return DoubtfulContainerCreateCount <p>Number of suspicious container creations.</p>
      */
     public Long getDoubtfulContainerCreateCount() {
         return this.DoubtfulContainerCreateCount;
     }
 
     /**
-     * Set The number of suspicious containers created
-     * @param DoubtfulContainerCreateCount The number of suspicious containers created
+     * Set <p>Number of suspicious container creations.</p>
+     * @param DoubtfulContainerCreateCount <p>Number of suspicious container creations.</p>
      */
     public void setDoubtfulContainerCreateCount(Long DoubtfulContainerCreateCount) {
         this.DoubtfulContainerCreateCount = DoubtfulContainerCreateCount;
     }
 
     /**
-     * Get The number of custom rule events 
-     * @return UserDefinedRuleCount The number of custom rule events
+     * Get <p>Number of custom rule events.</p> 
+     * @return UserDefinedRuleCount <p>Number of custom rule events.</p>
      */
     public Long getUserDefinedRuleCount() {
         return this.UserDefinedRuleCount;
     }
 
     /**
-     * Set The number of custom rule events
-     * @param UserDefinedRuleCount The number of custom rule events
+     * Set <p>Number of custom rule events.</p>
+     * @param UserDefinedRuleCount <p>Number of custom rule events.</p>
      */
     public void setUserDefinedRuleCount(Long UserDefinedRuleCount) {
         this.UserDefinedRuleCount = UserDefinedRuleCount;
     }
 
     /**
-     * Get The number of anonymous access events 
-     * @return AnonymousAccessCount The number of anonymous access events
+     * Get <p>Number of anonymous access events.</p> 
+     * @return AnonymousAccessCount <p>Number of anonymous access events.</p>
      */
     public Long getAnonymousAccessCount() {
         return this.AnonymousAccessCount;
     }
 
     /**
-     * Set The number of anonymous access events
-     * @param AnonymousAccessCount The number of anonymous access events
+     * Set <p>Number of anonymous access events.</p>
+     * @param AnonymousAccessCount <p>Number of anonymous access events.</p>
      */
     public void setAnonymousAccessCount(Long AnonymousAccessCount) {
         this.AnonymousAccessCount = AnonymousAccessCount;
     }
 
     /**
-     * Get The number of privilege container events 
-     * @return PrivilegeContainerCount The number of privilege container events
+     * Get <p>Number of privileged container events.</p> 
+     * @return PrivilegeContainerCount <p>Number of privileged container events.</p>
      */
     public Long getPrivilegeContainerCount() {
         return this.PrivilegeContainerCount;
     }
 
     /**
-     * Set The number of privilege container events
-     * @param PrivilegeContainerCount The number of privilege container events
+     * Set <p>Number of privileged container events.</p>
+     * @param PrivilegeContainerCount <p>Number of privileged container events.</p>
      */
     public void setPrivilegeContainerCount(Long PrivilegeContainerCount) {
         this.PrivilegeContainerCount = PrivilegeContainerCount;
+    }
+
+    /**
+     * Get <p>Number of alarms corresponding to the rule type.</p> 
+     * @return RuleTypeCountSet <p>Number of alarms corresponding to the rule type.</p>
+     */
+    public K8SAPIRuleTypeCountItem [] getRuleTypeCountSet() {
+        return this.RuleTypeCountSet;
+    }
+
+    /**
+     * Set <p>Number of alarms corresponding to the rule type.</p>
+     * @param RuleTypeCountSet <p>Number of alarms corresponding to the rule type.</p>
+     */
+    public void setRuleTypeCountSet(K8SAPIRuleTypeCountItem [] RuleTypeCountSet) {
+        this.RuleTypeCountSet = RuleTypeCountSet;
     }
 
     public K8sApiAbnormalTendencyItem() {
@@ -343,6 +366,12 @@ public class K8sApiAbnormalTendencyItem extends AbstractModel {
         if (source.PrivilegeContainerCount != null) {
             this.PrivilegeContainerCount = new Long(source.PrivilegeContainerCount);
         }
+        if (source.RuleTypeCountSet != null) {
+            this.RuleTypeCountSet = new K8SAPIRuleTypeCountItem[source.RuleTypeCountSet.length];
+            for (int i = 0; i < source.RuleTypeCountSet.length; i++) {
+                this.RuleTypeCountSet[i] = new K8SAPIRuleTypeCountItem(source.RuleTypeCountSet[i]);
+            }
+        }
     }
 
 
@@ -362,6 +391,7 @@ public class K8sApiAbnormalTendencyItem extends AbstractModel {
         this.setParamSimple(map, prefix + "UserDefinedRuleCount", this.UserDefinedRuleCount);
         this.setParamSimple(map, prefix + "AnonymousAccessCount", this.AnonymousAccessCount);
         this.setParamSimple(map, prefix + "PrivilegeContainerCount", this.PrivilegeContainerCount);
+        this.setParamArrayObj(map, prefix + "RuleTypeCountSet.", this.RuleTypeCountSet);
 
     }
 }

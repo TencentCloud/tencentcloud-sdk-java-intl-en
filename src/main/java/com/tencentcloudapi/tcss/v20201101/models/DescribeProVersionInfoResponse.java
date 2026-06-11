@@ -24,16 +24,14 @@ import java.util.HashMap;
 public class DescribeProVersionInfoResponse extends AbstractModel {
 
     /**
-    * Start time of the Pro Edition, which is not empty only when the edition is purchased.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Pro Edition start time, not null during supplement purchase
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * End time of the Pro Edition, which is not empty only when more resources are purchased.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Pro Edition end time, not null when supplement purchase is made
     */
     @SerializedName("EndTime")
     @Expose
@@ -55,7 +53,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Resource ID
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ResourceId")
     @Expose
@@ -86,40 +83,32 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Start time of the Pro Edition, which is not empty only when the edition is purchased.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return StartTime Start time of the Pro Edition, which is not empty only when the edition is purchased.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Pro Edition start time, not null during supplement purchase 
+     * @return StartTime Pro Edition start time, not null during supplement purchase
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set Start time of the Pro Edition, which is not empty only when the edition is purchased.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param StartTime Start time of the Pro Edition, which is not empty only when the edition is purchased.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Pro Edition start time, not null during supplement purchase
+     * @param StartTime Pro Edition start time, not null during supplement purchase
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get End time of the Pro Edition, which is not empty only when more resources are purchased.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return EndTime End time of the Pro Edition, which is not empty only when more resources are purchased.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Pro Edition end time, not null when supplement purchase is made 
+     * @return EndTime Pro Edition end time, not null when supplement purchase is made
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set End time of the Pro Edition, which is not empty only when more resources are purchased.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param EndTime End time of the Pro Edition, which is not empty only when more resources are purchased.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Pro Edition end time, not null when supplement purchase is made
+     * @param EndTime Pro Edition end time, not null when supplement purchase is made
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
@@ -158,10 +147,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Resource ID
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Resource ID 
      * @return ResourceId Resource ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getResourceId() {
         return this.ResourceId;
@@ -169,9 +156,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Resource ID
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param ResourceId Resource ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setResourceId(String ResourceId) {
         this.ResourceId = ResourceId;

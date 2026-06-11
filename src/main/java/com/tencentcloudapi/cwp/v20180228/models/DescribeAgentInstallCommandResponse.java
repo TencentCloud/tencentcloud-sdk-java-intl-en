@@ -60,7 +60,6 @@ public class DescribeAgentInstallCommandResponse extends AbstractModel {
 
     /**
     * Arm installation command
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ARMCommand")
     @Expose
@@ -154,10 +153,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Arm installation command
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Arm installation command 
      * @return ARMCommand Arm installation command
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getARMCommand() {
         return this.ARMCommand;
@@ -165,9 +162,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Arm installation command
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param ARMCommand Arm installation command
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setARMCommand(String ARMCommand) {
         this.ARMCommand = ARMCommand;

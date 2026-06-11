@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class ModifyProxyRwSplitResponse extends AbstractModel {
 
     /**
-    * Async FlowId
+    * <p>Async FlowId</p>
     */
     @SerializedName("FlowId")
     @Expose
     private Long FlowId;
 
     /**
-    * Async task ID
+    * <p>Asynchronous task ID.</p>
     */
     @SerializedName("TaskId")
     @Expose
@@ -45,32 +45,32 @@ public class ModifyProxyRwSplitResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Async FlowId 
-     * @return FlowId Async FlowId
+     * Get <p>Async FlowId</p> 
+     * @return FlowId <p>Async FlowId</p>
      */
     public Long getFlowId() {
         return this.FlowId;
     }
 
     /**
-     * Set Async FlowId
-     * @param FlowId Async FlowId
+     * Set <p>Async FlowId</p>
+     * @param FlowId <p>Async FlowId</p>
      */
     public void setFlowId(Long FlowId) {
         this.FlowId = FlowId;
     }
 
     /**
-     * Get Async task ID 
-     * @return TaskId Async task ID
+     * Get <p>Asynchronous task ID.</p> 
+     * @return TaskId <p>Asynchronous task ID.</p>
      */
     public Long getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set Async task ID
-     * @param TaskId Async task ID
+     * Set <p>Asynchronous task ID.</p>
+     * @param TaskId <p>Asynchronous task ID.</p>
      */
     public void setTaskId(Long TaskId) {
         this.TaskId = TaskId;

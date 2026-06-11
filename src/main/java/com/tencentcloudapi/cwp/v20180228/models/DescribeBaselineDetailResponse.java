@@ -25,7 +25,6 @@ public class DescribeBaselineDetailResponse extends AbstractModel {
 
     /**
     * Baseline details
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("BaselineDetail")
     @Expose
@@ -39,10 +38,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Baseline details
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Baseline details 
      * @return BaselineDetail Baseline details
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public BaselineDetail getBaselineDetail() {
         return this.BaselineDetail;
@@ -50,9 +47,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Baseline details
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param BaselineDetail Baseline details
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setBaselineDetail(BaselineDetail BaselineDetail) {
         this.BaselineDetail = BaselineDetail;

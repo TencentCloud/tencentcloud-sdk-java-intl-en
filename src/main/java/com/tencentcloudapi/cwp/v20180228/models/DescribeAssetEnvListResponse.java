@@ -25,7 +25,6 @@ public class DescribeAssetEnvListResponse extends AbstractModel {
 
     /**
     * List
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Envs")
     @Expose
@@ -46,10 +45,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get List
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get List 
      * @return Envs List
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public AssetEnvBaseInfo [] getEnvs() {
         return this.Envs;
@@ -57,9 +54,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set List
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Envs List
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setEnvs(AssetEnvBaseInfo [] Envs) {
         this.Envs = Envs;

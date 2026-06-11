@@ -24,59 +24,72 @@ import java.util.HashMap;
 public class MonitorTime extends AbstractModel {
 
     /**
-    * Valid values:
-<br><li> `Period`: periodic execution
-<br><li> `Fixed`: scheduled execution
+    * <p>Execution cycle. Value range: <code>Period</code>, <code>Fixed</code>, <code>Cron</code>.</p><ul><li>Period: at a fixed frequency</li><li>Fixed: fixed time</li><li>Cron: cron expression</li></ul>
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * Execution interval or scheduled time point in minutes. Value range: 1–1440.
+    * <p>Execution period or custom execution time point. Unit: minutes, value range: 1-1440.<br>When type is <code>Period</code> or <code>Fixed</code>, the time field takes effect.</p>
     */
     @SerializedName("Time")
     @Expose
     private Long Time;
 
     /**
-     * Get Valid values:
-<br><li> `Period`: periodic execution
-<br><li> `Fixed`: scheduled execution 
-     * @return Type Valid values:
-<br><li> `Period`: periodic execution
-<br><li> `Fixed`: scheduled execution
+    * <p>The cron expression for the execution period. Example: <code>0/1 * * * *</code>. From left to right, each field represents Minutes field, Hours field, Day of month field, Month field, Day of week field. No support for second level. When the type is <code>Cron</code>, the CronExpression field takes effect.</p>
+    */
+    @SerializedName("CronExpression")
+    @Expose
+    private String CronExpression;
+
+    /**
+     * Get <p>Execution cycle. Value range: <code>Period</code>, <code>Fixed</code>, <code>Cron</code>.</p><ul><li>Period: at a fixed frequency</li><li>Fixed: fixed time</li><li>Cron: cron expression</li></ul> 
+     * @return Type <p>Execution cycle. Value range: <code>Period</code>, <code>Fixed</code>, <code>Cron</code>.</p><ul><li>Period: at a fixed frequency</li><li>Fixed: fixed time</li><li>Cron: cron expression</li></ul>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set Valid values:
-<br><li> `Period`: periodic execution
-<br><li> `Fixed`: scheduled execution
-     * @param Type Valid values:
-<br><li> `Period`: periodic execution
-<br><li> `Fixed`: scheduled execution
+     * Set <p>Execution cycle. Value range: <code>Period</code>, <code>Fixed</code>, <code>Cron</code>.</p><ul><li>Period: at a fixed frequency</li><li>Fixed: fixed time</li><li>Cron: cron expression</li></ul>
+     * @param Type <p>Execution cycle. Value range: <code>Period</code>, <code>Fixed</code>, <code>Cron</code>.</p><ul><li>Period: at a fixed frequency</li><li>Fixed: fixed time</li><li>Cron: cron expression</li></ul>
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get Execution interval or scheduled time point in minutes. Value range: 1–1440. 
-     * @return Time Execution interval or scheduled time point in minutes. Value range: 1–1440.
+     * Get <p>Execution period or custom execution time point. Unit: minutes, value range: 1-1440.<br>When type is <code>Period</code> or <code>Fixed</code>, the time field takes effect.</p> 
+     * @return Time <p>Execution period or custom execution time point. Unit: minutes, value range: 1-1440.<br>When type is <code>Period</code> or <code>Fixed</code>, the time field takes effect.</p>
      */
     public Long getTime() {
         return this.Time;
     }
 
     /**
-     * Set Execution interval or scheduled time point in minutes. Value range: 1–1440.
-     * @param Time Execution interval or scheduled time point in minutes. Value range: 1–1440.
+     * Set <p>Execution period or custom execution time point. Unit: minutes, value range: 1-1440.<br>When type is <code>Period</code> or <code>Fixed</code>, the time field takes effect.</p>
+     * @param Time <p>Execution period or custom execution time point. Unit: minutes, value range: 1-1440.<br>When type is <code>Period</code> or <code>Fixed</code>, the time field takes effect.</p>
      */
     public void setTime(Long Time) {
         this.Time = Time;
+    }
+
+    /**
+     * Get <p>The cron expression for the execution period. Example: <code>0/1 * * * *</code>. From left to right, each field represents Minutes field, Hours field, Day of month field, Month field, Day of week field. No support for second level. When the type is <code>Cron</code>, the CronExpression field takes effect.</p> 
+     * @return CronExpression <p>The cron expression for the execution period. Example: <code>0/1 * * * *</code>. From left to right, each field represents Minutes field, Hours field, Day of month field, Month field, Day of week field. No support for second level. When the type is <code>Cron</code>, the CronExpression field takes effect.</p>
+     */
+    public String getCronExpression() {
+        return this.CronExpression;
+    }
+
+    /**
+     * Set <p>The cron expression for the execution period. Example: <code>0/1 * * * *</code>. From left to right, each field represents Minutes field, Hours field, Day of month field, Month field, Day of week field. No support for second level. When the type is <code>Cron</code>, the CronExpression field takes effect.</p>
+     * @param CronExpression <p>The cron expression for the execution period. Example: <code>0/1 * * * *</code>. From left to right, each field represents Minutes field, Hours field, Day of month field, Month field, Day of week field. No support for second level. When the type is <code>Cron</code>, the CronExpression field takes effect.</p>
+     */
+    public void setCronExpression(String CronExpression) {
+        this.CronExpression = CronExpression;
     }
 
     public MonitorTime() {
@@ -93,6 +106,9 @@ public class MonitorTime extends AbstractModel {
         if (source.Time != null) {
             this.Time = new Long(source.Time);
         }
+        if (source.CronExpression != null) {
+            this.CronExpression = new String(source.CronExpression);
+        }
     }
 
 
@@ -102,6 +118,7 @@ public class MonitorTime extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamSimple(map, prefix + "Time", this.Time);
+        this.setParamSimple(map, prefix + "CronExpression", this.CronExpression);
 
     }
 }

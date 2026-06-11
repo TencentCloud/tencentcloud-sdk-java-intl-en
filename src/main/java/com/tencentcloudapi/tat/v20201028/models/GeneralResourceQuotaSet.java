@@ -29,7 +29,7 @@ public class GeneralResourceQuotaSet extends AbstractModel {
 Value is:.
 
 - COMMAND: COMMAND.
--REGISTER_CODE: managed instance registration code.
+- REGISTER_CODE: managed instance registration code.
     */
     @SerializedName("ResourceName")
     @Expose
@@ -55,13 +55,13 @@ Value is:.
 Value is:.
 
 - COMMAND: COMMAND.
--REGISTER_CODE: managed instance registration code. 
+- REGISTER_CODE: managed instance registration code. 
      * @return ResourceName Resource name
 
 Value is:.
 
 - COMMAND: COMMAND.
--REGISTER_CODE: managed instance registration code.
+- REGISTER_CODE: managed instance registration code.
      */
     public String getResourceName() {
         return this.ResourceName;
@@ -73,13 +73,13 @@ Value is:.
 Value is:.
 
 - COMMAND: COMMAND.
--REGISTER_CODE: managed instance registration code.
+- REGISTER_CODE: managed instance registration code.
      * @param ResourceName Resource name
 
 Value is:.
 
 - COMMAND: COMMAND.
--REGISTER_CODE: managed instance registration code.
+- REGISTER_CODE: managed instance registration code.
      */
     public void setResourceName(String ResourceName) {
         this.ResourceName = ResourceName;

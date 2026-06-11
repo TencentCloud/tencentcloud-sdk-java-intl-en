@@ -94,6 +94,20 @@ public class RansomDefenseRollbackTask extends AbstractModel {
     private RegionInfo RegionInfo;
 
     /**
+    * Host example ID
+    */
+    @SerializedName("InstanceId")
+    @Expose
+    private String InstanceId;
+
+    /**
+    * Host type
+    */
+    @SerializedName("MachineType")
+    @Expose
+    private String MachineType;
+
+    /**
      * Get Task ID 
      * @return Id Task ID
      */
@@ -253,6 +267,38 @@ public class RansomDefenseRollbackTask extends AbstractModel {
         this.RegionInfo = RegionInfo;
     }
 
+    /**
+     * Get Host example ID 
+     * @return InstanceId Host example ID
+     */
+    public String getInstanceId() {
+        return this.InstanceId;
+    }
+
+    /**
+     * Set Host example ID
+     * @param InstanceId Host example ID
+     */
+    public void setInstanceId(String InstanceId) {
+        this.InstanceId = InstanceId;
+    }
+
+    /**
+     * Get Host type 
+     * @return MachineType Host type
+     */
+    public String getMachineType() {
+        return this.MachineType;
+    }
+
+    /**
+     * Set Host type
+     * @param MachineType Host type
+     */
+    public void setMachineType(String MachineType) {
+        this.MachineType = MachineType;
+    }
+
     public RansomDefenseRollbackTask() {
     }
 
@@ -291,6 +337,12 @@ public class RansomDefenseRollbackTask extends AbstractModel {
         if (source.RegionInfo != null) {
             this.RegionInfo = new RegionInfo(source.RegionInfo);
         }
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.MachineType != null) {
+            this.MachineType = new String(source.MachineType);
+        }
     }
 
 
@@ -308,6 +360,8 @@ public class RansomDefenseRollbackTask extends AbstractModel {
         this.setParamSimple(map, prefix + "BackupTime", this.BackupTime);
         this.setParamSimple(map, prefix + "ModifyTime", this.ModifyTime);
         this.setParamObj(map, prefix + "RegionInfo.", this.RegionInfo);
+        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
+        this.setParamSimple(map, prefix + "MachineType", this.MachineType);
 
     }
 }

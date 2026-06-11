@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ExportBaselineFixListRequest extends AbstractModel {
 
     /**
-    * <li>ItemName - String - required: no - item name</li>
+    * <li>ItemName - String - required: no - item name</li>
     */
     @SerializedName("Filters")
     @Expose
@@ -38,16 +38,16 @@ public class ExportBaselineFixListRequest extends AbstractModel {
     private Long ExportAll;
 
     /**
-     * Get <li>ItemName - String - required: no - item name</li> 
-     * @return Filters <li>ItemName - String - required: no - item name</li>
+     * Get <li>ItemName - String - required: no - item name</li> 
+     * @return Filters <li>ItemName - String - required: no - item name</li>
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set <li>ItemName - String - required: no - item name</li>
-     * @param Filters <li>ItemName - String - required: no - item name</li>
+     * Set <li>ItemName - String - required: no - item name</li>
+     * @param Filters <li>ItemName - String - required: no - item name</li>
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;

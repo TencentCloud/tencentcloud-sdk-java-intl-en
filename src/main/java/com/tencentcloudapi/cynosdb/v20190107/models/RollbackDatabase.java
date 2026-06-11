@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class RollbackDatabase extends AbstractModel {
 
     /**
-    * 
+    * Old database name.
     */
     @SerializedName("OldDatabase")
     @Expose
     private String OldDatabase;
 
     /**
-    * 
+    * New database name.
     */
     @SerializedName("NewDatabase")
     @Expose
     private String NewDatabase;
 
     /**
-     * Get  
-     * @return OldDatabase 
+     * Get Old database name. 
+     * @return OldDatabase Old database name.
      */
     public String getOldDatabase() {
         return this.OldDatabase;
     }
 
     /**
-     * Set 
-     * @param OldDatabase 
+     * Set Old database name.
+     * @param OldDatabase Old database name.
      */
     public void setOldDatabase(String OldDatabase) {
         this.OldDatabase = OldDatabase;
     }
 
     /**
-     * Get  
-     * @return NewDatabase 
+     * Get New database name. 
+     * @return NewDatabase New database name.
      */
     public String getNewDatabase() {
         return this.NewDatabase;
     }
 
     /**
-     * Set 
-     * @param NewDatabase 
+     * Set New database name.
+     * @param NewDatabase New database name.
      */
     public void setNewDatabase(String NewDatabase) {
         this.NewDatabase = NewDatabase;

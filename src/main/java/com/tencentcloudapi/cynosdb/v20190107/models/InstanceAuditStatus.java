@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class InstanceAuditStatus extends AbstractModel {
 
     /**
-    * 
+    * Instance ID.
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 
+    * Audit status. ON - Indicates audit is enabled, OFF - Indicates audit is disabled.
     */
     @SerializedName("AuditStatus")
     @Expose
@@ -129,32 +129,32 @@ public class InstanceAuditStatus extends AbstractModel {
     private DeliverSummary [] DeliverSummary;
 
     /**
-     * Get  
-     * @return InstanceId 
+     * Get Instance ID. 
+     * @return InstanceId Instance ID.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 
-     * @param InstanceId 
+     * Set Instance ID.
+     * @param InstanceId Instance ID.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get  
-     * @return AuditStatus 
+     * Get Audit status. ON - Indicates audit is enabled, OFF - Indicates audit is disabled. 
+     * @return AuditStatus Audit status. ON - Indicates audit is enabled, OFF - Indicates audit is disabled.
      */
     public String getAuditStatus() {
         return this.AuditStatus;
     }
 
     /**
-     * Set 
-     * @param AuditStatus 
+     * Set Audit status. ON - Indicates audit is enabled, OFF - Indicates audit is disabled.
+     * @param AuditStatus Audit status. ON - Indicates audit is enabled, OFF - Indicates audit is disabled.
      */
     public void setAuditStatus(String AuditStatus) {
         this.AuditStatus = AuditStatus;

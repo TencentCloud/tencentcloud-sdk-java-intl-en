@@ -25,15 +25,13 @@ public class NetAttackTrend extends AbstractModel {
 
     /**
     * Time Point, e.g., 2023-05-06
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("DateTime")
     @Expose
     private String DateTime;
 
     /**
-    * Number of attacks
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Attack count
     */
     @SerializedName("AttackCount")
     @Expose
@@ -41,7 +39,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Attack Attempts
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("TryAttackCount")
     @Expose
@@ -49,17 +46,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Attack Success Count
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("SuccAttackCount")
     @Expose
     private Long SuccAttackCount;
 
     /**
-     * Get Time Point, e.g., 2023-05-06
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Time Point, e.g., 2023-05-06 
      * @return DateTime Time Point, e.g., 2023-05-06
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getDateTime() {
         return this.DateTime;
@@ -67,39 +61,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Time Point, e.g., 2023-05-06
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param DateTime Time Point, e.g., 2023-05-06
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setDateTime(String DateTime) {
         this.DateTime = DateTime;
     }
 
     /**
-     * Get Number of attacks
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return AttackCount Number of attacks
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Attack count 
+     * @return AttackCount Attack count
      */
     public Long getAttackCount() {
         return this.AttackCount;
     }
 
     /**
-     * Set Number of attacks
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param AttackCount Number of attacks
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Attack count
+     * @param AttackCount Attack count
      */
     public void setAttackCount(Long AttackCount) {
         this.AttackCount = AttackCount;
     }
 
     /**
-     * Get Attack Attempts
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Attack Attempts 
      * @return TryAttackCount Attack Attempts
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getTryAttackCount() {
         return this.TryAttackCount;
@@ -107,19 +93,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Attack Attempts
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param TryAttackCount Attack Attempts
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setTryAttackCount(Long TryAttackCount) {
         this.TryAttackCount = TryAttackCount;
     }
 
     /**
-     * Get Attack Success Count
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Attack Success Count 
      * @return SuccAttackCount Attack Success Count
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getSuccAttackCount() {
         return this.SuccAttackCount;
@@ -127,9 +109,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Attack Success Count
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param SuccAttackCount Attack Success Count
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setSuccAttackCount(Long SuccAttackCount) {
         this.SuccAttackCount = SuccAttackCount;

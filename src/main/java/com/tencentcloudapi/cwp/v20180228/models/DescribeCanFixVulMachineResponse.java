@@ -25,7 +25,6 @@ public class DescribeCanFixVulMachineResponse extends AbstractModel {
 
     /**
     * Host vulnerability fixing information list
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("VulInfo")
     @Expose
@@ -39,10 +38,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Host vulnerability fixing information list
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Host vulnerability fixing information list 
      * @return VulInfo Host vulnerability fixing information list
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public CanFixVulInfo [] getVulInfo() {
         return this.VulInfo;
@@ -50,9 +47,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Host vulnerability fixing information list
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param VulInfo Host vulnerability fixing information list
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setVulInfo(CanFixVulInfo [] VulInfo) {
         this.VulInfo = VulInfo;

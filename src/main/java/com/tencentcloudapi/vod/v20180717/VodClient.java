@@ -207,7 +207,7 @@ The output file is in MP4 or MP3 format. In the callback for media composition, 
     }
 
     /**
-     *This API is used to create custom voice types for AIGC.
+     *This API is used to create custom voice types. Note that calling this API will incur customization fees. See the billing documentation (https://www.tencentcloud.com/document/product/266/95125?from_cn_redirect=1#5e5217e8-29fc-467e-ac2d-853648f988b7).
      * @param req CreateAigcCustomVoiceRequest
      * @return CreateAigcCustomVoiceResponse
      * @throws TencentCloudSDKException
@@ -1107,6 +1107,17 @@ This API is used to delete a player configuration.
     public DescribeAigcFaceInfoResponse DescribeAigcFaceInfo(DescribeAigcFaceInfoRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeAigcFaceInfo", DescribeAigcFaceInfoResponse.class);
+    }
+
+    /**
+     *This API is used to asynchronously fetch AIGC face information. Note that calling this API incurs face recognition fees. Refer to the billing documentation (https://www.tencentcloud.com/document/product/266/95125?from_cn_redirect=1#96b3b59a-f9e1-49e9-966a-bedb70a4bf12).
+     * @param req DescribeAigcFaceInfoAsyncRequest
+     * @return DescribeAigcFaceInfoAsyncResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAigcFaceInfoAsyncResponse DescribeAigcFaceInfoAsync(DescribeAigcFaceInfoAsyncRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAigcFaceInfoAsync", DescribeAigcFaceInfoAsyncResponse.class);
     }
 
     /**

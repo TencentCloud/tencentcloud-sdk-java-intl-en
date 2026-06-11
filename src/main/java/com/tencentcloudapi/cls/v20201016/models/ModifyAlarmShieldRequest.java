@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class ModifyAlarmShieldRequest extends AbstractModel {
 
     /**
-    * Blocking rule ID.
+    * Blocking rule ID. Retrieve the blocking rule ID via [retrieve alert masking configuration rules](https://www.tencentcloud.com/document/api/614/103650?from_cn_redirect=1).
     */
     @SerializedName("TaskId")
     @Expose
     private String TaskId;
 
     /**
-    * Notification channel group ID.
+    * id of the notification channel group. Retrieve alert masking configuration rules (https://www.tencentcloud.com/document/api/614/103650?from_cn_redirect=1) to get the id of the notification channel group.
     */
     @SerializedName("AlarmNoticeId")
     @Expose
     private String AlarmNoticeId;
 
     /**
-    * Block start time (second-level timestamp).
+    * Block start time, second-level (s) timestamp.
     */
     @SerializedName("StartTime")
     @Expose
@@ -74,54 +74,55 @@ public class ModifyAlarmShieldRequest extends AbstractModel {
 
     /**
     * Rule status. Only when the rule status is in effect (status:1) can it be modified to expired (status:2).
+Enumerate: 0 (inactive), 1 (active), 2 (invalid)
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-     * Get Blocking rule ID. 
-     * @return TaskId Blocking rule ID.
+     * Get Blocking rule ID. Retrieve the blocking rule ID via [retrieve alert masking configuration rules](https://www.tencentcloud.com/document/api/614/103650?from_cn_redirect=1). 
+     * @return TaskId Blocking rule ID. Retrieve the blocking rule ID via [retrieve alert masking configuration rules](https://www.tencentcloud.com/document/api/614/103650?from_cn_redirect=1).
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set Blocking rule ID.
-     * @param TaskId Blocking rule ID.
+     * Set Blocking rule ID. Retrieve the blocking rule ID via [retrieve alert masking configuration rules](https://www.tencentcloud.com/document/api/614/103650?from_cn_redirect=1).
+     * @param TaskId Blocking rule ID. Retrieve the blocking rule ID via [retrieve alert masking configuration rules](https://www.tencentcloud.com/document/api/614/103650?from_cn_redirect=1).
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;
     }
 
     /**
-     * Get Notification channel group ID. 
-     * @return AlarmNoticeId Notification channel group ID.
+     * Get id of the notification channel group. Retrieve alert masking configuration rules (https://www.tencentcloud.com/document/api/614/103650?from_cn_redirect=1) to get the id of the notification channel group. 
+     * @return AlarmNoticeId id of the notification channel group. Retrieve alert masking configuration rules (https://www.tencentcloud.com/document/api/614/103650?from_cn_redirect=1) to get the id of the notification channel group.
      */
     public String getAlarmNoticeId() {
         return this.AlarmNoticeId;
     }
 
     /**
-     * Set Notification channel group ID.
-     * @param AlarmNoticeId Notification channel group ID.
+     * Set id of the notification channel group. Retrieve alert masking configuration rules (https://www.tencentcloud.com/document/api/614/103650?from_cn_redirect=1) to get the id of the notification channel group.
+     * @param AlarmNoticeId id of the notification channel group. Retrieve alert masking configuration rules (https://www.tencentcloud.com/document/api/614/103650?from_cn_redirect=1) to get the id of the notification channel group.
      */
     public void setAlarmNoticeId(String AlarmNoticeId) {
         this.AlarmNoticeId = AlarmNoticeId;
     }
 
     /**
-     * Get Block start time (second-level timestamp). 
-     * @return StartTime Block start time (second-level timestamp).
+     * Get Block start time, second-level (s) timestamp. 
+     * @return StartTime Block start time, second-level (s) timestamp.
      */
     public Long getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set Block start time (second-level timestamp).
-     * @param StartTime Block start time (second-level timestamp).
+     * Set Block start time, second-level (s) timestamp.
+     * @param StartTime Block start time, second-level (s) timestamp.
      */
     public void setStartTime(Long StartTime) {
         this.StartTime = StartTime;
@@ -192,8 +193,10 @@ public class ModifyAlarmShieldRequest extends AbstractModel {
     }
 
     /**
-     * Get Rule status. Only when the rule status is in effect (status:1) can it be modified to expired (status:2). 
+     * Get Rule status. Only when the rule status is in effect (status:1) can it be modified to expired (status:2).
+Enumerate: 0 (inactive), 1 (active), 2 (invalid) 
      * @return Status Rule status. Only when the rule status is in effect (status:1) can it be modified to expired (status:2).
+Enumerate: 0 (inactive), 1 (active), 2 (invalid)
      */
     public Long getStatus() {
         return this.Status;
@@ -201,7 +204,9 @@ public class ModifyAlarmShieldRequest extends AbstractModel {
 
     /**
      * Set Rule status. Only when the rule status is in effect (status:1) can it be modified to expired (status:2).
+Enumerate: 0 (inactive), 1 (active), 2 (invalid)
      * @param Status Rule status. Only when the rule status is in effect (status:1) can it be modified to expired (status:2).
+Enumerate: 0 (inactive), 1 (active), 2 (invalid)
      */
     public void setStatus(Long Status) {
         this.Status = Status;

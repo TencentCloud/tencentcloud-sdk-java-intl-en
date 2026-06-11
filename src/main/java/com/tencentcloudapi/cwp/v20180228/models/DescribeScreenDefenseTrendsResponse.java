@@ -25,7 +25,6 @@ public class DescribeScreenDefenseTrendsResponse extends AbstractModel {
 
     /**
     * Trend charts of detailed statistics data
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("TrendsChart")
     @Expose
@@ -39,10 +38,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Trend charts of detailed statistics data
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Trend charts of detailed statistics data 
      * @return TrendsChart Trend charts of detailed statistics data
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public ScreenTrendsChart [] getTrendsChart() {
         return this.TrendsChart;
@@ -50,9 +47,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Trend charts of detailed statistics data
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param TrendsChart Trend charts of detailed statistics data
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setTrendsChart(ScreenTrendsChart [] TrendsChart) {
         this.TrendsChart = TrendsChart;

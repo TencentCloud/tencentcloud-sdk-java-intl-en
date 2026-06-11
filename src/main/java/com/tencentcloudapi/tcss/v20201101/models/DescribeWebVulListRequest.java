@@ -52,7 +52,7 @@ public class DescribeWebVulListRequest extends AbstractModel {
 <li>ComponentName- string - Required: No - Component name</li>
 <li>ComponentVersion- string - Required: No - Component version</li>
 <li>Name- string - Required: No - Vulnerability name</li>
-<li>FocusOnType - string - Required: No - Urgency. Valid values: `ALL` (all); `SERIOUS_LEVEL (critical and high risks); `IS_SUGGEST` (high-priority); `POC_EXP` (POC/EXP); `NETWORK_EXP` (remote EXP).</li>
+<li>FocusOnType - string - Required: No - Urgency. Valid values: `ALL` (all); `SERIOUS_LEVEL` (critical and high risks); `IS_SUGGEST` (high-priority); `POC_EXP` (POC/EXP); `NETWORK_EXP` (remote EXP).</li>
     */
     @SerializedName("Filters")
     @Expose
@@ -119,7 +119,7 @@ public class DescribeWebVulListRequest extends AbstractModel {
 <li>ComponentName- string - Required: No - Component name</li>
 <li>ComponentVersion- string - Required: No - Component version</li>
 <li>Name- string - Required: No - Vulnerability name</li>
-<li>FocusOnType - string - Required: No - Urgency. Valid values: `ALL` (all); `SERIOUS_LEVEL (critical and high risks); `IS_SUGGEST` (high-priority); `POC_EXP` (POC/EXP); `NETWORK_EXP` (remote EXP).</li> 
+<li>FocusOnType - string - Required: No - Urgency. Valid values: `ALL` (all); `SERIOUS_LEVEL` (critical and high risks); `IS_SUGGEST` (high-priority); `POC_EXP` (POC/EXP); `NETWORK_EXP` (remote EXP).</li> 
      * @return Filters Filter
 <li>OnlyAffectedContainer- string - Required: No - Show only vulnerabilities that affect containers. Valid values: `true`, `false`.</li>
 <li>OnlyAffectedNewestImage-string - Required: No - Show only vulnerabilities that affect the latest image tags. Valid values: `true`, `false`.</li>
@@ -134,7 +134,7 @@ public class DescribeWebVulListRequest extends AbstractModel {
 <li>ComponentName- string - Required: No - Component name</li>
 <li>ComponentVersion- string - Required: No - Component version</li>
 <li>Name- string - Required: No - Vulnerability name</li>
-<li>FocusOnType - string - Required: No - Urgency. Valid values: `ALL` (all); `SERIOUS_LEVEL (critical and high risks); `IS_SUGGEST` (high-priority); `POC_EXP` (POC/EXP); `NETWORK_EXP` (remote EXP).</li>
+<li>FocusOnType - string - Required: No - Urgency. Valid values: `ALL` (all); `SERIOUS_LEVEL` (critical and high risks); `IS_SUGGEST` (high-priority); `POC_EXP` (POC/EXP); `NETWORK_EXP` (remote EXP).</li>
      */
     public RunTimeFilters [] getFilters() {
         return this.Filters;
@@ -155,7 +155,7 @@ public class DescribeWebVulListRequest extends AbstractModel {
 <li>ComponentName- string - Required: No - Component name</li>
 <li>ComponentVersion- string - Required: No - Component version</li>
 <li>Name- string - Required: No - Vulnerability name</li>
-<li>FocusOnType - string - Required: No - Urgency. Valid values: `ALL` (all); `SERIOUS_LEVEL (critical and high risks); `IS_SUGGEST` (high-priority); `POC_EXP` (POC/EXP); `NETWORK_EXP` (remote EXP).</li>
+<li>FocusOnType - string - Required: No - Urgency. Valid values: `ALL` (all); `SERIOUS_LEVEL` (critical and high risks); `IS_SUGGEST` (high-priority); `POC_EXP` (POC/EXP); `NETWORK_EXP` (remote EXP).</li>
      * @param Filters Filter
 <li>OnlyAffectedContainer- string - Required: No - Show only vulnerabilities that affect containers. Valid values: `true`, `false`.</li>
 <li>OnlyAffectedNewestImage-string - Required: No - Show only vulnerabilities that affect the latest image tags. Valid values: `true`, `false`.</li>
@@ -170,7 +170,7 @@ public class DescribeWebVulListRequest extends AbstractModel {
 <li>ComponentName- string - Required: No - Component name</li>
 <li>ComponentVersion- string - Required: No - Component version</li>
 <li>Name- string - Required: No - Vulnerability name</li>
-<li>FocusOnType - string - Required: No - Urgency. Valid values: `ALL` (all); `SERIOUS_LEVEL (critical and high risks); `IS_SUGGEST` (high-priority); `POC_EXP` (POC/EXP); `NETWORK_EXP` (remote EXP).</li>
+<li>FocusOnType - string - Required: No - Urgency. Valid values: `ALL` (all); `SERIOUS_LEVEL` (critical and high risks); `IS_SUGGEST` (high-priority); `POC_EXP` (POC/EXP); `NETWORK_EXP` (remote EXP).</li>
      */
     public void setFilters(RunTimeFilters [] Filters) {
         this.Filters = Filters;

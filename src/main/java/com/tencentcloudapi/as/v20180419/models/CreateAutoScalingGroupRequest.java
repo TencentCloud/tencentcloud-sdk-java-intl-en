@@ -52,7 +52,7 @@ public class CreateAutoScalingGroupRequest extends AbstractModel {
     private Long MinSize;
 
     /**
-    * vpc ID. a valid vpc ID can be queried by logging in to the console (https://console.cloud.tencent.com/vpc/vpc). you can also call the api DescribeVpc (https://intl.cloud.tencent.com/document/api/215/15778?from_cn_redirect=1) and obtain it from the VpcId field in the api response.
+    * vpc ID. a valid vpc ID can be queried by logging in to the [console](https://console.cloud.tencent.com/vpc/vpc). you can also call the api [DescribeVpc](https://intl.cloud.tencent.com/document/api/215/15778?from_cn_redirect=1) and obtain it from the VpcId field in the api response.
     */
     @SerializedName("VpcId")
     @Expose
@@ -94,7 +94,7 @@ public class CreateAutoScalingGroupRequest extends AbstractModel {
     private ForwardLoadBalancer [] ForwardLoadBalancers;
 
     /**
-    * The subnet ID list must specify a subnet in VPC scenarios. multiple subnets are attempted sequentially based on the fill-in order as priority until successful instance creation. effective VPC subnet ids can be queried by logging in to the console (https://console.cloud.tencent.com/VPC/subnet) or obtained from the SubnetId field in the API response by calling the DescribeSubnets API (https://intl.cloud.tencent.com/document/product/215/15784?from_cn_redirect=1).
+    * The subnet ID list must specify a subnet in VPC scenarios. multiple subnets are attempted sequentially based on the fill-in order as priority until successful instance creation. effective VPC subnet ids can be queried by logging in to the [console](https://console.cloud.tencent.com/VPC/subnet) or obtained from the SubnetId field in the API response by calling the [DescribeSubnets](https://intl.cloud.tencent.com/document/product/215/15784?from_cn_redirect=1) API.
     */
     @SerializedName("SubnetIds")
     @Expose
@@ -309,16 +309,16 @@ Default: FALSE(indicating that concurrent scaling is disabled).
     }
 
     /**
-     * Get vpc ID. a valid vpc ID can be queried by logging in to the console (https://console.cloud.tencent.com/vpc/vpc). you can also call the api DescribeVpc (https://intl.cloud.tencent.com/document/api/215/15778?from_cn_redirect=1) and obtain it from the VpcId field in the api response. 
-     * @return VpcId vpc ID. a valid vpc ID can be queried by logging in to the console (https://console.cloud.tencent.com/vpc/vpc). you can also call the api DescribeVpc (https://intl.cloud.tencent.com/document/api/215/15778?from_cn_redirect=1) and obtain it from the VpcId field in the api response.
+     * Get vpc ID. a valid vpc ID can be queried by logging in to the [console](https://console.cloud.tencent.com/vpc/vpc). you can also call the api [DescribeVpc](https://intl.cloud.tencent.com/document/api/215/15778?from_cn_redirect=1) and obtain it from the VpcId field in the api response. 
+     * @return VpcId vpc ID. a valid vpc ID can be queried by logging in to the [console](https://console.cloud.tencent.com/vpc/vpc). you can also call the api [DescribeVpc](https://intl.cloud.tencent.com/document/api/215/15778?from_cn_redirect=1) and obtain it from the VpcId field in the api response.
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set vpc ID. a valid vpc ID can be queried by logging in to the console (https://console.cloud.tencent.com/vpc/vpc). you can also call the api DescribeVpc (https://intl.cloud.tencent.com/document/api/215/15778?from_cn_redirect=1) and obtain it from the VpcId field in the api response.
-     * @param VpcId vpc ID. a valid vpc ID can be queried by logging in to the console (https://console.cloud.tencent.com/vpc/vpc). you can also call the api DescribeVpc (https://intl.cloud.tencent.com/document/api/215/15778?from_cn_redirect=1) and obtain it from the VpcId field in the api response.
+     * Set vpc ID. a valid vpc ID can be queried by logging in to the [console](https://console.cloud.tencent.com/vpc/vpc). you can also call the api [DescribeVpc](https://intl.cloud.tencent.com/document/api/215/15778?from_cn_redirect=1) and obtain it from the VpcId field in the api response.
+     * @param VpcId vpc ID. a valid vpc ID can be queried by logging in to the [console](https://console.cloud.tencent.com/vpc/vpc). you can also call the api [DescribeVpc](https://intl.cloud.tencent.com/document/api/215/15778?from_cn_redirect=1) and obtain it from the VpcId field in the api response.
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
@@ -405,16 +405,16 @@ Default: FALSE(indicating that concurrent scaling is disabled).
     }
 
     /**
-     * Get The subnet ID list must specify a subnet in VPC scenarios. multiple subnets are attempted sequentially based on the fill-in order as priority until successful instance creation. effective VPC subnet ids can be queried by logging in to the console (https://console.cloud.tencent.com/VPC/subnet) or obtained from the SubnetId field in the API response by calling the DescribeSubnets API (https://intl.cloud.tencent.com/document/product/215/15784?from_cn_redirect=1). 
-     * @return SubnetIds The subnet ID list must specify a subnet in VPC scenarios. multiple subnets are attempted sequentially based on the fill-in order as priority until successful instance creation. effective VPC subnet ids can be queried by logging in to the console (https://console.cloud.tencent.com/VPC/subnet) or obtained from the SubnetId field in the API response by calling the DescribeSubnets API (https://intl.cloud.tencent.com/document/product/215/15784?from_cn_redirect=1).
+     * Get The subnet ID list must specify a subnet in VPC scenarios. multiple subnets are attempted sequentially based on the fill-in order as priority until successful instance creation. effective VPC subnet ids can be queried by logging in to the [console](https://console.cloud.tencent.com/VPC/subnet) or obtained from the SubnetId field in the API response by calling the [DescribeSubnets](https://intl.cloud.tencent.com/document/product/215/15784?from_cn_redirect=1) API. 
+     * @return SubnetIds The subnet ID list must specify a subnet in VPC scenarios. multiple subnets are attempted sequentially based on the fill-in order as priority until successful instance creation. effective VPC subnet ids can be queried by logging in to the [console](https://console.cloud.tencent.com/VPC/subnet) or obtained from the SubnetId field in the API response by calling the [DescribeSubnets](https://intl.cloud.tencent.com/document/product/215/15784?from_cn_redirect=1) API.
      */
     public String [] getSubnetIds() {
         return this.SubnetIds;
     }
 
     /**
-     * Set The subnet ID list must specify a subnet in VPC scenarios. multiple subnets are attempted sequentially based on the fill-in order as priority until successful instance creation. effective VPC subnet ids can be queried by logging in to the console (https://console.cloud.tencent.com/VPC/subnet) or obtained from the SubnetId field in the API response by calling the DescribeSubnets API (https://intl.cloud.tencent.com/document/product/215/15784?from_cn_redirect=1).
-     * @param SubnetIds The subnet ID list must specify a subnet in VPC scenarios. multiple subnets are attempted sequentially based on the fill-in order as priority until successful instance creation. effective VPC subnet ids can be queried by logging in to the console (https://console.cloud.tencent.com/VPC/subnet) or obtained from the SubnetId field in the API response by calling the DescribeSubnets API (https://intl.cloud.tencent.com/document/product/215/15784?from_cn_redirect=1).
+     * Set The subnet ID list must specify a subnet in VPC scenarios. multiple subnets are attempted sequentially based on the fill-in order as priority until successful instance creation. effective VPC subnet ids can be queried by logging in to the [console](https://console.cloud.tencent.com/VPC/subnet) or obtained from the SubnetId field in the API response by calling the [DescribeSubnets](https://intl.cloud.tencent.com/document/product/215/15784?from_cn_redirect=1) API.
+     * @param SubnetIds The subnet ID list must specify a subnet in VPC scenarios. multiple subnets are attempted sequentially based on the fill-in order as priority until successful instance creation. effective VPC subnet ids can be queried by logging in to the [console](https://console.cloud.tencent.com/VPC/subnet) or obtained from the SubnetId field in the API response by calling the [DescribeSubnets](https://intl.cloud.tencent.com/document/product/215/15784?from_cn_redirect=1) API.
      */
     public void setSubnetIds(String [] SubnetIds) {
         this.SubnetIds = SubnetIds;

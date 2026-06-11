@@ -38,7 +38,7 @@ public class SearchLogRequest extends AbstractModel {
     private Long EndTime;
 
     /**
-    * Statement for search and analysis, with a maximum length of 12 KB
+    * The retrieval analysis statement has a maximum length of 12KB. Refer to the query syntax in the referenced document https://www.tencentcloud.com/document/product/296/50508.?from_cn_redirect=1
     */
     @SerializedName("QueryString")
     @Expose
@@ -98,16 +98,16 @@ public class SearchLogRequest extends AbstractModel {
     }
 
     /**
-     * Get Statement for search and analysis, with a maximum length of 12 KB 
-     * @return QueryString Statement for search and analysis, with a maximum length of 12 KB
+     * Get The retrieval analysis statement has a maximum length of 12KB. Refer to the query syntax in the referenced document https://www.tencentcloud.com/document/product/296/50508.?from_cn_redirect=1 
+     * @return QueryString The retrieval analysis statement has a maximum length of 12KB. Refer to the query syntax in the referenced document https://www.tencentcloud.com/document/product/296/50508.?from_cn_redirect=1
      */
     public String getQueryString() {
         return this.QueryString;
     }
 
     /**
-     * Set Statement for search and analysis, with a maximum length of 12 KB
-     * @param QueryString Statement for search and analysis, with a maximum length of 12 KB
+     * Set The retrieval analysis statement has a maximum length of 12KB. Refer to the query syntax in the referenced document https://www.tencentcloud.com/document/product/296/50508.?from_cn_redirect=1
+     * @param QueryString The retrieval analysis statement has a maximum length of 12KB. Refer to the query syntax in the referenced document https://www.tencentcloud.com/document/product/296/50508.?from_cn_redirect=1
      */
     public void setQueryString(String QueryString) {
         this.QueryString = QueryString;

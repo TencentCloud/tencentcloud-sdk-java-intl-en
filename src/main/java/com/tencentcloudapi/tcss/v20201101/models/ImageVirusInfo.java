@@ -24,8 +24,7 @@ import java.util.HashMap;
 public class ImageVirusInfo extends AbstractModel {
 
     /**
-    * Path
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Path.
     */
     @SerializedName("Path")
     @Expose
@@ -33,7 +32,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Risk level
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("RiskLevel")
     @Expose
@@ -41,15 +39,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Virus name
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("VirusName")
     @Expose
     private String VirusName;
 
     /**
-    * Tag
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Tag.
     */
     @SerializedName("Tags")
     @Expose
@@ -57,15 +53,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Description
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Desc")
     @Expose
     private String Desc;
 
     /**
-    * Fix suggestion
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Remediation Suggestions
     */
     @SerializedName("Solution")
     @Expose
@@ -73,15 +67,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Size
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Size")
     @Expose
     private Long Size;
 
     /**
-    * First discovery time
-Note: This field may return null, indicating that no valid values can be obtained.
+    * First detection time
     */
     @SerializedName("FirstScanTime")
     @Expose
@@ -89,66 +81,56 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Last scan time
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("LatestScanTime")
     @Expose
     private String LatestScanTime;
 
     /**
-    * MD5 checksum of the file
-Note: This field may return null, indicating that no valid values can be obtained.
+    * File md5
     */
     @SerializedName("Md5")
     @Expose
     private String Md5;
 
     /**
-    * Filename
-Note: This field may return null, indicating that no valid values can be obtained.
+    * File name
     */
     @SerializedName("FileName")
     @Expose
     private String FileName;
 
     /**
-    * Check platform
-`1`: Tencent Cloud Security Engine.
-`2`: tav.
-`3`: binaryAi.
-`4`: Unusual behavior.
-`5`: Threat intelligence.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Detection platform
+1: Cloud Killing Engine
+2: tav
+3: binaryAi
+4: Abnormal behavior
+5: Threat Intelligence
     */
     @SerializedName("CheckPlatform")
     @Expose
     private String [] CheckPlatform;
 
     /**
-     * Get Path
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Path Path
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Path. 
+     * @return Path Path.
      */
     public String getPath() {
         return this.Path;
     }
 
     /**
-     * Set Path
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Path Path
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Path.
+     * @param Path Path.
      */
     public void setPath(String Path) {
         this.Path = Path;
     }
 
     /**
-     * Get Risk level
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Risk level 
      * @return RiskLevel Risk level
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getRiskLevel() {
         return this.RiskLevel;
@@ -156,19 +138,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Risk level
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param RiskLevel Risk level
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setRiskLevel(Long RiskLevel) {
         this.RiskLevel = RiskLevel;
     }
 
     /**
-     * Get Virus name
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Virus name 
      * @return VirusName Virus name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getVirusName() {
         return this.VirusName;
@@ -176,39 +154,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Virus name
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param VirusName Virus name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setVirusName(String VirusName) {
         this.VirusName = VirusName;
     }
 
     /**
-     * Get Tag
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Tags Tag
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Tag. 
+     * @return Tags Tag.
      */
     public String [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set Tag
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Tags Tag
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Tag.
+     * @param Tags Tag.
      */
     public void setTags(String [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get Description
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Description 
      * @return Desc Description
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getDesc() {
         return this.Desc;
@@ -216,39 +186,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Description
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Desc Description
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setDesc(String Desc) {
         this.Desc = Desc;
     }
 
     /**
-     * Get Fix suggestion
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Solution Fix suggestion
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Remediation Suggestions 
+     * @return Solution Remediation Suggestions
      */
     public String getSolution() {
         return this.Solution;
     }
 
     /**
-     * Set Fix suggestion
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Solution Fix suggestion
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Remediation Suggestions
+     * @param Solution Remediation Suggestions
      */
     public void setSolution(String Solution) {
         this.Solution = Solution;
     }
 
     /**
-     * Get Size
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Size 
      * @return Size Size
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getSize() {
         return this.Size;
@@ -256,39 +218,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Size
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Size Size
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setSize(Long Size) {
         this.Size = Size;
     }
 
     /**
-     * Get First discovery time
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return FirstScanTime First discovery time
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get First detection time 
+     * @return FirstScanTime First detection time
      */
     public String getFirstScanTime() {
         return this.FirstScanTime;
     }
 
     /**
-     * Set First discovery time
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param FirstScanTime First discovery time
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set First detection time
+     * @param FirstScanTime First detection time
      */
     public void setFirstScanTime(String FirstScanTime) {
         this.FirstScanTime = FirstScanTime;
     }
 
     /**
-     * Get Last scan time
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Last scan time 
      * @return LatestScanTime Last scan time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getLatestScanTime() {
         return this.LatestScanTime;
@@ -296,89 +250,75 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Last scan time
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param LatestScanTime Last scan time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setLatestScanTime(String LatestScanTime) {
         this.LatestScanTime = LatestScanTime;
     }
 
     /**
-     * Get MD5 checksum of the file
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Md5 MD5 checksum of the file
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get File md5 
+     * @return Md5 File md5
      */
     public String getMd5() {
         return this.Md5;
     }
 
     /**
-     * Set MD5 checksum of the file
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Md5 MD5 checksum of the file
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set File md5
+     * @param Md5 File md5
      */
     public void setMd5(String Md5) {
         this.Md5 = Md5;
     }
 
     /**
-     * Get Filename
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return FileName Filename
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get File name 
+     * @return FileName File name
      */
     public String getFileName() {
         return this.FileName;
     }
 
     /**
-     * Set Filename
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param FileName Filename
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set File name
+     * @param FileName File name
      */
     public void setFileName(String FileName) {
         this.FileName = FileName;
     }
 
     /**
-     * Get Check platform
-`1`: Tencent Cloud Security Engine.
-`2`: tav.
-`3`: binaryAi.
-`4`: Unusual behavior.
-`5`: Threat intelligence.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return CheckPlatform Check platform
-`1`: Tencent Cloud Security Engine.
-`2`: tav.
-`3`: binaryAi.
-`4`: Unusual behavior.
-`5`: Threat intelligence.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Detection platform
+1: Cloud Killing Engine
+2: tav
+3: binaryAi
+4: Abnormal behavior
+5: Threat Intelligence 
+     * @return CheckPlatform Detection platform
+1: Cloud Killing Engine
+2: tav
+3: binaryAi
+4: Abnormal behavior
+5: Threat Intelligence
      */
     public String [] getCheckPlatform() {
         return this.CheckPlatform;
     }
 
     /**
-     * Set Check platform
-`1`: Tencent Cloud Security Engine.
-`2`: tav.
-`3`: binaryAi.
-`4`: Unusual behavior.
-`5`: Threat intelligence.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param CheckPlatform Check platform
-`1`: Tencent Cloud Security Engine.
-`2`: tav.
-`3`: binaryAi.
-`4`: Unusual behavior.
-`5`: Threat intelligence.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Detection platform
+1: Cloud Killing Engine
+2: tav
+3: binaryAi
+4: Abnormal behavior
+5: Threat Intelligence
+     * @param CheckPlatform Detection platform
+1: Cloud Killing Engine
+2: tav
+3: binaryAi
+4: Abnormal behavior
+5: Threat Intelligence
      */
     public void setCheckPlatform(String [] CheckPlatform) {
         this.CheckPlatform = CheckPlatform;

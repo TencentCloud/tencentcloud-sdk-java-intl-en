@@ -52,6 +52,48 @@ public class ModifyWebHookReceiverRequest extends AbstractModel {
     private Boolean IsModify;
 
     /**
+    * Type
+    */
+    @SerializedName("Type")
+    @Expose
+    private Long Type;
+
+    /**
+    * target region
+    */
+    @SerializedName("SCFRegion")
+    @Expose
+    private String SCFRegion;
+
+    /**
+    * Namespace
+    */
+    @SerializedName("Namespace")
+    @Expose
+    private String Namespace;
+
+    /**
+    * function name
+    */
+    @SerializedName("FunctionName")
+    @Expose
+    private String FunctionName;
+
+    /**
+    * Function version
+    */
+    @SerializedName("FunctionVersion")
+    @Expose
+    private String FunctionVersion;
+
+    /**
+    * Alias
+    */
+    @SerializedName("Alias")
+    @Expose
+    private String Alias;
+
+    /**
      * Get id 
      * @return Id id
      */
@@ -115,6 +157,102 @@ public class ModifyWebHookReceiverRequest extends AbstractModel {
         this.IsModify = IsModify;
     }
 
+    /**
+     * Get Type 
+     * @return Type Type
+     */
+    public Long getType() {
+        return this.Type;
+    }
+
+    /**
+     * Set Type
+     * @param Type Type
+     */
+    public void setType(Long Type) {
+        this.Type = Type;
+    }
+
+    /**
+     * Get target region 
+     * @return SCFRegion target region
+     */
+    public String getSCFRegion() {
+        return this.SCFRegion;
+    }
+
+    /**
+     * Set target region
+     * @param SCFRegion target region
+     */
+    public void setSCFRegion(String SCFRegion) {
+        this.SCFRegion = SCFRegion;
+    }
+
+    /**
+     * Get Namespace 
+     * @return Namespace Namespace
+     */
+    public String getNamespace() {
+        return this.Namespace;
+    }
+
+    /**
+     * Set Namespace
+     * @param Namespace Namespace
+     */
+    public void setNamespace(String Namespace) {
+        this.Namespace = Namespace;
+    }
+
+    /**
+     * Get function name 
+     * @return FunctionName function name
+     */
+    public String getFunctionName() {
+        return this.FunctionName;
+    }
+
+    /**
+     * Set function name
+     * @param FunctionName function name
+     */
+    public void setFunctionName(String FunctionName) {
+        this.FunctionName = FunctionName;
+    }
+
+    /**
+     * Get Function version 
+     * @return FunctionVersion Function version
+     */
+    public String getFunctionVersion() {
+        return this.FunctionVersion;
+    }
+
+    /**
+     * Set Function version
+     * @param FunctionVersion Function version
+     */
+    public void setFunctionVersion(String FunctionVersion) {
+        this.FunctionVersion = FunctionVersion;
+    }
+
+    /**
+     * Get Alias 
+     * @return Alias Alias
+     */
+    public String getAlias() {
+        return this.Alias;
+    }
+
+    /**
+     * Set Alias
+     * @param Alias Alias
+     */
+    public void setAlias(String Alias) {
+        this.Alias = Alias;
+    }
+
     public ModifyWebHookReceiverRequest() {
     }
 
@@ -135,6 +273,24 @@ public class ModifyWebHookReceiverRequest extends AbstractModel {
         if (source.IsModify != null) {
             this.IsModify = new Boolean(source.IsModify);
         }
+        if (source.Type != null) {
+            this.Type = new Long(source.Type);
+        }
+        if (source.SCFRegion != null) {
+            this.SCFRegion = new String(source.SCFRegion);
+        }
+        if (source.Namespace != null) {
+            this.Namespace = new String(source.Namespace);
+        }
+        if (source.FunctionName != null) {
+            this.FunctionName = new String(source.FunctionName);
+        }
+        if (source.FunctionVersion != null) {
+            this.FunctionVersion = new String(source.FunctionVersion);
+        }
+        if (source.Alias != null) {
+            this.Alias = new String(source.Alias);
+        }
     }
 
 
@@ -146,6 +302,12 @@ public class ModifyWebHookReceiverRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "Addr", this.Addr);
         this.setParamSimple(map, prefix + "IsModify", this.IsModify);
+        this.setParamSimple(map, prefix + "Type", this.Type);
+        this.setParamSimple(map, prefix + "SCFRegion", this.SCFRegion);
+        this.setParamSimple(map, prefix + "Namespace", this.Namespace);
+        this.setParamSimple(map, prefix + "FunctionName", this.FunctionName);
+        this.setParamSimple(map, prefix + "FunctionVersion", this.FunctionVersion);
+        this.setParamSimple(map, prefix + "Alias", this.Alias);
 
     }
 }

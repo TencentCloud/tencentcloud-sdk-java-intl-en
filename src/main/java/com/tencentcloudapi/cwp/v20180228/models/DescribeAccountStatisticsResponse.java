@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeAccountStatisticsResponse extends AbstractModel {
 
     /**
-    * Total number of account statistics list records
+    * Total number of account statistics list records.
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * Account statistics list
+    * Account statistics list.
     */
     @SerializedName("AccountStatistics")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeAccountStatisticsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Total number of account statistics list records 
-     * @return TotalCount Total number of account statistics list records
+     * Get Total number of account statistics list records. 
+     * @return TotalCount Total number of account statistics list records.
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set Total number of account statistics list records
-     * @param TotalCount Total number of account statistics list records
+     * Set Total number of account statistics list records.
+     * @param TotalCount Total number of account statistics list records.
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get Account statistics list 
-     * @return AccountStatistics Account statistics list
+     * Get Account statistics list. 
+     * @return AccountStatistics Account statistics list.
      */
     public AccountStatistics [] getAccountStatistics() {
         return this.AccountStatistics;
     }
 
     /**
-     * Set Account statistics list
-     * @param AccountStatistics Account statistics list
+     * Set Account statistics list.
+     * @param AccountStatistics Account statistics list.
      */
     public void setAccountStatistics(AccountStatistics [] AccountStatistics) {
         this.AccountStatistics = AccountStatistics;

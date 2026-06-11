@@ -24,7 +24,9 @@ import java.util.HashMap;
 public class CreateLogsetRequest extends AbstractModel {
 
     /**
-    * Logset name, which must be unique
+    * Log set name.
+
+-Supports a maximum of 255 characters. The `|` character is not supported.
     */
     @SerializedName("LogsetName")
     @Expose
@@ -38,16 +40,35 @@ public class CreateLogsetRequest extends AbstractModel {
     private Tag [] Tags;
 
     /**
-     * Get Logset name, which must be unique 
-     * @return LogsetName Logset name, which must be unique
+    * Logset ID, format: custom part-User APPID. Automatically generate ID if left empty.
+
+-The custom part only supports lowercase letters, digits, and -, cannot start or end with -, and has a length of 3 to 40 characters.
+-The end requires the use of - to concatenate the User APPID, which can be queried on the https://console.cloud.tencent.com/developer page.
+-If you specify this field, ensure uniqueness across all regions.
+    */
+    @SerializedName("LogsetId")
+    @Expose
+    private String LogsetId;
+
+    /**
+     * Get Log set name.
+
+-Supports a maximum of 255 characters. The `|` character is not supported. 
+     * @return LogsetName Log set name.
+
+-Supports a maximum of 255 characters. The `|` character is not supported.
      */
     public String getLogsetName() {
         return this.LogsetName;
     }
 
     /**
-     * Set Logset name, which must be unique
-     * @param LogsetName Logset name, which must be unique
+     * Set Log set name.
+
+-Supports a maximum of 255 characters. The `|` character is not supported.
+     * @param LogsetName Log set name.
+
+-Supports a maximum of 255 characters. The `|` character is not supported.
      */
     public void setLogsetName(String LogsetName) {
         this.LogsetName = LogsetName;
@@ -69,6 +90,38 @@ public class CreateLogsetRequest extends AbstractModel {
         this.Tags = Tags;
     }
 
+    /**
+     * Get Logset ID, format: custom part-User APPID. Automatically generate ID if left empty.
+
+-The custom part only supports lowercase letters, digits, and -, cannot start or end with -, and has a length of 3 to 40 characters.
+-The end requires the use of - to concatenate the User APPID, which can be queried on the https://console.cloud.tencent.com/developer page.
+-If you specify this field, ensure uniqueness across all regions. 
+     * @return LogsetId Logset ID, format: custom part-User APPID. Automatically generate ID if left empty.
+
+-The custom part only supports lowercase letters, digits, and -, cannot start or end with -, and has a length of 3 to 40 characters.
+-The end requires the use of - to concatenate the User APPID, which can be queried on the https://console.cloud.tencent.com/developer page.
+-If you specify this field, ensure uniqueness across all regions.
+     */
+    public String getLogsetId() {
+        return this.LogsetId;
+    }
+
+    /**
+     * Set Logset ID, format: custom part-User APPID. Automatically generate ID if left empty.
+
+-The custom part only supports lowercase letters, digits, and -, cannot start or end with -, and has a length of 3 to 40 characters.
+-The end requires the use of - to concatenate the User APPID, which can be queried on the https://console.cloud.tencent.com/developer page.
+-If you specify this field, ensure uniqueness across all regions.
+     * @param LogsetId Logset ID, format: custom part-User APPID. Automatically generate ID if left empty.
+
+-The custom part only supports lowercase letters, digits, and -, cannot start or end with -, and has a length of 3 to 40 characters.
+-The end requires the use of - to concatenate the User APPID, which can be queried on the https://console.cloud.tencent.com/developer page.
+-If you specify this field, ensure uniqueness across all regions.
+     */
+    public void setLogsetId(String LogsetId) {
+        this.LogsetId = LogsetId;
+    }
+
     public CreateLogsetRequest() {
     }
 
@@ -86,6 +139,9 @@ public class CreateLogsetRequest extends AbstractModel {
                 this.Tags[i] = new Tag(source.Tags[i]);
             }
         }
+        if (source.LogsetId != null) {
+            this.LogsetId = new String(source.LogsetId);
+        }
     }
 
 
@@ -95,6 +151,7 @@ public class CreateLogsetRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "LogsetName", this.LogsetName);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "LogsetId", this.LogsetId);
 
     }
 }

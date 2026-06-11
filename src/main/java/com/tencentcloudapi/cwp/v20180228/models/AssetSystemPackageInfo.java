@@ -81,7 +81,6 @@ public class AssetSystemPackageInfo extends AbstractModel {
 
     /**
     * Data update time
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("UpdateTime")
     @Expose
@@ -251,10 +250,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Data update time
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Data update time 
      * @return UpdateTime Data update time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getUpdateTime() {
         return this.UpdateTime;
@@ -262,9 +259,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Data update time
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param UpdateTime Data update time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;

@@ -45,6 +45,13 @@ public class DescribeESHitsRequest extends AbstractModel {
     private Long Limit;
 
     /**
+    * Log Type List
+    */
+    @SerializedName("LogTypes")
+    @Expose
+    private String [] LogTypes;
+
+    /**
      * Get ES query condition in JSON 
      * @return Query ES query condition in JSON
      */
@@ -92,6 +99,22 @@ public class DescribeESHitsRequest extends AbstractModel {
         this.Limit = Limit;
     }
 
+    /**
+     * Get Log Type List 
+     * @return LogTypes Log Type List
+     */
+    public String [] getLogTypes() {
+        return this.LogTypes;
+    }
+
+    /**
+     * Set Log Type List
+     * @param LogTypes Log Type List
+     */
+    public void setLogTypes(String [] LogTypes) {
+        this.LogTypes = LogTypes;
+    }
+
     public DescribeESHitsRequest() {
     }
 
@@ -109,6 +132,12 @@ public class DescribeESHitsRequest extends AbstractModel {
         if (source.Limit != null) {
             this.Limit = new Long(source.Limit);
         }
+        if (source.LogTypes != null) {
+            this.LogTypes = new String[source.LogTypes.length];
+            for (int i = 0; i < source.LogTypes.length; i++) {
+                this.LogTypes[i] = new String(source.LogTypes[i]);
+            }
+        }
     }
 
 
@@ -119,6 +148,7 @@ public class DescribeESHitsRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Query", this.Query);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamArraySimple(map, prefix + "LogTypes.", this.LogTypes);
 
     }
 }

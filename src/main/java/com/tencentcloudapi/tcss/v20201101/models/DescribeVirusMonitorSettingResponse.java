@@ -31,24 +31,21 @@ public class DescribeVirusMonitorSettingResponse extends AbstractModel {
     private Boolean EnableScan;
 
     /**
-    * Scan all paths
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Scan all paths.
     */
     @SerializedName("ScanPathAll")
     @Expose
     private Boolean ScanPathAll;
 
     /**
-    * Valid when `ScanPathAll` is `true`. Valid values of `ScanPathAll`: `0` (scan the following paths); `1` (scan all paths except the following).
-Note: This field may return null, indicating that no valid values can be obtained.
+    * It is effective when ScanPathAll is true. 0: Scan the following paths; 1: Scan the following paths.
     */
     @SerializedName("ScanPathType")
     @Expose
     private Long ScanPathType;
 
     /**
-    * Specified path to be excluded or scanned
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Custom Excluded or Scanned Address
     */
     @SerializedName("ScanPath")
     @Expose
@@ -89,60 +86,48 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Scan all paths
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ScanPathAll Scan all paths
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Scan all paths. 
+     * @return ScanPathAll Scan all paths.
      */
     public Boolean getScanPathAll() {
         return this.ScanPathAll;
     }
 
     /**
-     * Set Scan all paths
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ScanPathAll Scan all paths
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Scan all paths.
+     * @param ScanPathAll Scan all paths.
      */
     public void setScanPathAll(Boolean ScanPathAll) {
         this.ScanPathAll = ScanPathAll;
     }
 
     /**
-     * Get Valid when `ScanPathAll` is `true`. Valid values of `ScanPathAll`: `0` (scan the following paths); `1` (scan all paths except the following).
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ScanPathType Valid when `ScanPathAll` is `true`. Valid values of `ScanPathAll`: `0` (scan the following paths); `1` (scan all paths except the following).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get It is effective when ScanPathAll is true. 0: Scan the following paths; 1: Scan the following paths. 
+     * @return ScanPathType It is effective when ScanPathAll is true. 0: Scan the following paths; 1: Scan the following paths.
      */
     public Long getScanPathType() {
         return this.ScanPathType;
     }
 
     /**
-     * Set Valid when `ScanPathAll` is `true`. Valid values of `ScanPathAll`: `0` (scan the following paths); `1` (scan all paths except the following).
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ScanPathType Valid when `ScanPathAll` is `true`. Valid values of `ScanPathAll`: `0` (scan the following paths); `1` (scan all paths except the following).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set It is effective when ScanPathAll is true. 0: Scan the following paths; 1: Scan the following paths.
+     * @param ScanPathType It is effective when ScanPathAll is true. 0: Scan the following paths; 1: Scan the following paths.
      */
     public void setScanPathType(Long ScanPathType) {
         this.ScanPathType = ScanPathType;
     }
 
     /**
-     * Get Specified path to be excluded or scanned
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ScanPath Specified path to be excluded or scanned
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Custom Excluded or Scanned Address 
+     * @return ScanPath Custom Excluded or Scanned Address
      */
     public String [] getScanPath() {
         return this.ScanPath;
     }
 
     /**
-     * Set Specified path to be excluded or scanned
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ScanPath Specified path to be excluded or scanned
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Custom Excluded or Scanned Address
+     * @param ScanPath Custom Excluded or Scanned Address
      */
     public void setScanPath(String [] ScanPath) {
         this.ScanPath = ScanPath;

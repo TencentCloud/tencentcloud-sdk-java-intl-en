@@ -52,7 +52,7 @@ public class HistoryAccount extends AbstractModel {
     private String MachineName;
 
     /**
-    * Username
+    * Account name.
     */
     @SerializedName("Username")
     @Expose
@@ -140,16 +140,16 @@ public class HistoryAccount extends AbstractModel {
     }
 
     /**
-     * Get Username 
-     * @return Username Username
+     * Get Account name. 
+     * @return Username Account name.
      */
     public String getUsername() {
         return this.Username;
     }
 
     /**
-     * Set Username
-     * @param Username Username
+     * Set Account name.
+     * @param Username Account name.
      */
     public void setUsername(String Username) {
         this.Username = Username;

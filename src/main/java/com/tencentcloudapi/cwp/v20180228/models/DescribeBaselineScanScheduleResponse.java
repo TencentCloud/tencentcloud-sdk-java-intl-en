@@ -24,8 +24,7 @@ import java.util.HashMap;
 public class DescribeBaselineScanScheduleResponse extends AbstractModel {
 
     /**
-    * Check progress (percentage)
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Detection progress (percentage)
     */
     @SerializedName("Schedule")
     @Expose
@@ -39,20 +38,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Check progress (percentage)
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Schedule Check progress (percentage)
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Detection progress (percentage) 
+     * @return Schedule Detection progress (percentage)
      */
     public Long getSchedule() {
         return this.Schedule;
     }
 
     /**
-     * Set Check progress (percentage)
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Schedule Check progress (percentage)
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Detection progress (percentage)
+     * @param Schedule Detection progress (percentage)
      */
     public void setSchedule(Long Schedule) {
         this.Schedule = Schedule;

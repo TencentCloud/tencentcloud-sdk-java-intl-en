@@ -66,42 +66,42 @@ public class RollbackInstanceInfo extends AbstractModel {
     private Long Vport;
 
     /**
-    * Instance ID
+    * Instance ID.
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Instance name
+    * Instance name.
     */
     @SerializedName("InstanceName")
     @Expose
     private String InstanceName;
 
     /**
-    * Status
+    * Status.
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * CPU Size
+    * CPU Size.
     */
     @SerializedName("Cpu")
     @Expose
     private Long Cpu;
 
     /**
-    * Memory Size
+    * Memory Size.
     */
     @SerializedName("Mem")
     @Expose
     private Long Mem;
 
     /**
-    * Storage size
+    * Storage size.
     */
     @SerializedName("StorageLimit")
     @Expose
@@ -204,96 +204,96 @@ public class RollbackInstanceInfo extends AbstractModel {
     }
 
     /**
-     * Get Instance ID 
-     * @return InstanceId Instance ID
+     * Get Instance ID. 
+     * @return InstanceId Instance ID.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Instance ID
-     * @param InstanceId Instance ID
+     * Set Instance ID.
+     * @param InstanceId Instance ID.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Instance name 
-     * @return InstanceName Instance name
+     * Get Instance name. 
+     * @return InstanceName Instance name.
      */
     public String getInstanceName() {
         return this.InstanceName;
     }
 
     /**
-     * Set Instance name
-     * @param InstanceName Instance name
+     * Set Instance name.
+     * @param InstanceName Instance name.
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;
     }
 
     /**
-     * Get Status 
-     * @return Status Status
+     * Get Status. 
+     * @return Status Status.
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Status
-     * @param Status Status
+     * Set Status.
+     * @param Status Status.
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get CPU Size 
-     * @return Cpu CPU Size
+     * Get CPU Size. 
+     * @return Cpu CPU Size.
      */
     public Long getCpu() {
         return this.Cpu;
     }
 
     /**
-     * Set CPU Size
-     * @param Cpu CPU Size
+     * Set CPU Size.
+     * @param Cpu CPU Size.
      */
     public void setCpu(Long Cpu) {
         this.Cpu = Cpu;
     }
 
     /**
-     * Get Memory Size 
-     * @return Mem Memory Size
+     * Get Memory Size. 
+     * @return Mem Memory Size.
      */
     public Long getMem() {
         return this.Mem;
     }
 
     /**
-     * Set Memory Size
-     * @param Mem Memory Size
+     * Set Memory Size.
+     * @param Mem Memory Size.
      */
     public void setMem(Long Mem) {
         this.Mem = Mem;
     }
 
     /**
-     * Get Storage size 
-     * @return StorageLimit Storage size
+     * Get Storage size. 
+     * @return StorageLimit Storage size.
      */
     public Long getStorageLimit() {
         return this.StorageLimit;
     }
 
     /**
-     * Set Storage size
-     * @param StorageLimit Storage size
+     * Set Storage size.
+     * @param StorageLimit Storage size.
      */
     public void setStorageLimit(Long StorageLimit) {
         this.StorageLimit = StorageLimit;

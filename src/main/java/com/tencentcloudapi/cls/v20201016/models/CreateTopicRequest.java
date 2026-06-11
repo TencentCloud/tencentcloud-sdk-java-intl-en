@@ -24,256 +24,394 @@ import java.util.HashMap;
 public class CreateTopicRequest extends AbstractModel {
 
     /**
-    * Logset ID
+    * <p>Logset ID</p><ul><li>Obtain the logset Id through <a href="https://www.tencentcloud.com/document/product/614/58624?from_cn_redirect=1">Get Logset List</a>.</li></ul>
     */
     @SerializedName("LogsetId")
     @Expose
     private String LogsetId;
 
     /**
-    * Log topic name
+    * <p>Topic name<br>Name limitation</p><ul><li>Cannot be an empty string</li><li>Cannot contain character '|'</li><li>Cannot use the following names ["cls_service_log","loglistener_status","loglistener_alarm","loglistener_business","cls_service_metric"]</li></ul>
     */
     @SerializedName("TopicName")
     @Expose
     private String TopicName;
 
     /**
-    * Number of log topic partitions. Default value: 1. Maximum value: 10
+    * <p>Topic partition count. Default creation is 1 partition. Supports a maximum of 10 partitions.</p>
     */
     @SerializedName("PartitionCount")
     @Expose
     private Long PartitionCount;
 
     /**
-    * Tag description list. This parameter is used to bind a tag to a log topic. Up to 10 tag key-value pairs are supported, and a resource can be bound to only one tag key.
+    * <p>Tag description list, by specifying this parameter, you can simultaneously bind a tag to the corresponding topic. Up to 10 tag key-value pairs are supported, and the same resource can only be bound to the same tag key.</p>
     */
     @SerializedName("Tags")
     @Expose
     private Tag [] Tags;
 
     /**
-    * Whether to enable automatic split. Default value: true
+    * <p>Whether to enable auto-split, true by default</p>
     */
     @SerializedName("AutoSplit")
     @Expose
     private Boolean AutoSplit;
 
     /**
-    * Maximum number of partitions to split into for this topic if automatic split is enabled. Default value: 50
+    * <p>When auto-split is enabled, the maximum number of partitions allowed for each topic is 50 by default.</p>
     */
     @SerializedName("MaxSplitPartitions")
     @Expose
     private Long MaxSplitPartitions;
 
     /**
-    * Log topic storage type. Valid values: `hot` (STANDARD storage); `cold` (IA storage). Default value: `hot`.
+    * <p>Log topic storage type. Available values: hot (standard storage), cold (infrequent storage). Default hot. This configuration is not supported for metric topics.</p>
     */
     @SerializedName("StorageType")
     @Expose
     private String StorageType;
 
     /**
-    * lifetime. Unit: days. Standard storage value range: 1 to 3600. Infrequent storage value range: 7 to 3600 days. A value of 3640 indicates permanent retention.If this value is not input, it defaults to the Period value of the log set corresponding to the accessed log topic (defaults to 30 days in case of access failure).
+    * <p>Storage time, in days.</p><ul><li>Log topic: When logs are collected to standard storage, the supported range is 1 to 3600 days. A value of 3640 indicates permanent retention.</li><li>Log topic: When logs are collected to infrequently accessed storage, the supported range is 7 to 3600 days. A value of 3640 indicates permanent retention.</li><li>Metric topic: The supported range is 1 to 3600 days. A value of 3640 indicates permanent retention.</li></ul>
     */
     @SerializedName("Period")
     @Expose
     private Long Period;
 
     /**
-    * Log topic description
+    * <p>Topic description</p>
     */
     @SerializedName("Describes")
     @Expose
     private String Describes;
 
     /**
-    * 0: Disable log settlement.Non-zero: The number of Standard Storage days after enabling log settlement. HotPeriod needs to be greater than or equal to 7, and less than Period.Effective only when StorageType is hot.
+    * <p>0: Log topic disables log settlement.<br>Non-0: Number of days for standard storage after log settlement is enabled in the log topic. HotPeriod needs to be greater than or equal to 7 and less than Period.<br>Effective only when StorageType is hot. This configuration is not supported for metric topics.</p>
     */
     @SerializedName("HotPeriod")
     @Expose
     private Long HotPeriod;
 
     /**
-    * Authentication switch. false: off; true: on. Default is false.Once enabled, it will support specified operations for anonymous access to this log topic. For details, please see [log Topic](https://intl.cloud.tencent.com/document/product/614/41035?from_cn_redirect=1).
+    * <p>Encryption-related parameters. Encrypted regions and allowlisted users can pass this parameter, which cannot be passed in other scenarios.<br>0 or not passed: no encryption<br>1: kms-cls cloud service key encryption</p><p>Supported regions: ap-beijing, ap-guangzhou, ap-shanghai, ap-singapore, ap-bangkok, ap-jakarta, eu-frankfurt, ap-seoul, ap-tokyo</p>
+    */
+    @SerializedName("Encryption")
+    @Expose
+    private Long Encryption;
+
+    /**
+    * <p>Topic type</p><ul><li>0: Log topic, default value</li><li>1: Metric topic</li></ul>
+    */
+    @SerializedName("BizType")
+    @Expose
+    private Long BizType;
+
+    /**
+    * <p>Custom topic ID, format: custom part-User APPID. If this parameter is left empty, ID will be automatically generated.</p><ul><li>The custom part only supports lowercase letters, digits, and -, cannot start or end with -, and must be 3 to 40 characters in length.</li><li>The trailing part requires the use of - to concatenate User APPID. APPID can be queried on the page https://console.cloud.tencent.com/developer.</li><li>If this field is specified, ensure uniqueness across all regions.</li></ul>
+    */
+    @SerializedName("TopicId")
+    @Expose
+    private String TopicId;
+
+    /**
+    * <p>Free authentication switch. False: turned off; true: turned on. Default false.<br>When enabled, anonymous access to the log topic will be supported for designated operations. For details, see <a href="https://www.tencentcloud.com/document/product/614/41035?from_cn_redirect=1">log topic</a>. This configuration is not supported for metric topics.</p>
     */
     @SerializedName("IsWebTracking")
     @Expose
     private Boolean IsWebTracking;
 
     /**
-     * Get Logset ID 
-     * @return LogsetId Logset ID
+    * <p>Topic extended information</p>
+    */
+    @SerializedName("Extends")
+    @Expose
+    private TopicExtendInfo Extends;
+
+    /**
+    * <p>Enable logging of public network source IP and server receipt time</p>
+    */
+    @SerializedName("IsSourceFrom")
+    @Expose
+    private Boolean IsSourceFrom;
+
+    /**
+    * <p>Billing mode</p><p>Enumeration value:</p><ul><li>0: Function billing by usage</li><li>1: Raw log size billing (currently only supported for some customers)</li></ul><p>Default value: 0</p>
+    */
+    @SerializedName("BillingMode")
+    @Expose
+    private Long BillingMode;
+
+    /**
+     * Get <p>Logset ID</p><ul><li>Obtain the logset Id through <a href="https://www.tencentcloud.com/document/product/614/58624?from_cn_redirect=1">Get Logset List</a>.</li></ul> 
+     * @return LogsetId <p>Logset ID</p><ul><li>Obtain the logset Id through <a href="https://www.tencentcloud.com/document/product/614/58624?from_cn_redirect=1">Get Logset List</a>.</li></ul>
      */
     public String getLogsetId() {
         return this.LogsetId;
     }
 
     /**
-     * Set Logset ID
-     * @param LogsetId Logset ID
+     * Set <p>Logset ID</p><ul><li>Obtain the logset Id through <a href="https://www.tencentcloud.com/document/product/614/58624?from_cn_redirect=1">Get Logset List</a>.</li></ul>
+     * @param LogsetId <p>Logset ID</p><ul><li>Obtain the logset Id through <a href="https://www.tencentcloud.com/document/product/614/58624?from_cn_redirect=1">Get Logset List</a>.</li></ul>
      */
     public void setLogsetId(String LogsetId) {
         this.LogsetId = LogsetId;
     }
 
     /**
-     * Get Log topic name 
-     * @return TopicName Log topic name
+     * Get <p>Topic name<br>Name limitation</p><ul><li>Cannot be an empty string</li><li>Cannot contain character '|'</li><li>Cannot use the following names ["cls_service_log","loglistener_status","loglistener_alarm","loglistener_business","cls_service_metric"]</li></ul> 
+     * @return TopicName <p>Topic name<br>Name limitation</p><ul><li>Cannot be an empty string</li><li>Cannot contain character '|'</li><li>Cannot use the following names ["cls_service_log","loglistener_status","loglistener_alarm","loglistener_business","cls_service_metric"]</li></ul>
      */
     public String getTopicName() {
         return this.TopicName;
     }
 
     /**
-     * Set Log topic name
-     * @param TopicName Log topic name
+     * Set <p>Topic name<br>Name limitation</p><ul><li>Cannot be an empty string</li><li>Cannot contain character '|'</li><li>Cannot use the following names ["cls_service_log","loglistener_status","loglistener_alarm","loglistener_business","cls_service_metric"]</li></ul>
+     * @param TopicName <p>Topic name<br>Name limitation</p><ul><li>Cannot be an empty string</li><li>Cannot contain character '|'</li><li>Cannot use the following names ["cls_service_log","loglistener_status","loglistener_alarm","loglistener_business","cls_service_metric"]</li></ul>
      */
     public void setTopicName(String TopicName) {
         this.TopicName = TopicName;
     }
 
     /**
-     * Get Number of log topic partitions. Default value: 1. Maximum value: 10 
-     * @return PartitionCount Number of log topic partitions. Default value: 1. Maximum value: 10
+     * Get <p>Topic partition count. Default creation is 1 partition. Supports a maximum of 10 partitions.</p> 
+     * @return PartitionCount <p>Topic partition count. Default creation is 1 partition. Supports a maximum of 10 partitions.</p>
      */
     public Long getPartitionCount() {
         return this.PartitionCount;
     }
 
     /**
-     * Set Number of log topic partitions. Default value: 1. Maximum value: 10
-     * @param PartitionCount Number of log topic partitions. Default value: 1. Maximum value: 10
+     * Set <p>Topic partition count. Default creation is 1 partition. Supports a maximum of 10 partitions.</p>
+     * @param PartitionCount <p>Topic partition count. Default creation is 1 partition. Supports a maximum of 10 partitions.</p>
      */
     public void setPartitionCount(Long PartitionCount) {
         this.PartitionCount = PartitionCount;
     }
 
     /**
-     * Get Tag description list. This parameter is used to bind a tag to a log topic. Up to 10 tag key-value pairs are supported, and a resource can be bound to only one tag key. 
-     * @return Tags Tag description list. This parameter is used to bind a tag to a log topic. Up to 10 tag key-value pairs are supported, and a resource can be bound to only one tag key.
+     * Get <p>Tag description list, by specifying this parameter, you can simultaneously bind a tag to the corresponding topic. Up to 10 tag key-value pairs are supported, and the same resource can only be bound to the same tag key.</p> 
+     * @return Tags <p>Tag description list, by specifying this parameter, you can simultaneously bind a tag to the corresponding topic. Up to 10 tag key-value pairs are supported, and the same resource can only be bound to the same tag key.</p>
      */
     public Tag [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set Tag description list. This parameter is used to bind a tag to a log topic. Up to 10 tag key-value pairs are supported, and a resource can be bound to only one tag key.
-     * @param Tags Tag description list. This parameter is used to bind a tag to a log topic. Up to 10 tag key-value pairs are supported, and a resource can be bound to only one tag key.
+     * Set <p>Tag description list, by specifying this parameter, you can simultaneously bind a tag to the corresponding topic. Up to 10 tag key-value pairs are supported, and the same resource can only be bound to the same tag key.</p>
+     * @param Tags <p>Tag description list, by specifying this parameter, you can simultaneously bind a tag to the corresponding topic. Up to 10 tag key-value pairs are supported, and the same resource can only be bound to the same tag key.</p>
      */
     public void setTags(Tag [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get Whether to enable automatic split. Default value: true 
-     * @return AutoSplit Whether to enable automatic split. Default value: true
+     * Get <p>Whether to enable auto-split, true by default</p> 
+     * @return AutoSplit <p>Whether to enable auto-split, true by default</p>
      */
     public Boolean getAutoSplit() {
         return this.AutoSplit;
     }
 
     /**
-     * Set Whether to enable automatic split. Default value: true
-     * @param AutoSplit Whether to enable automatic split. Default value: true
+     * Set <p>Whether to enable auto-split, true by default</p>
+     * @param AutoSplit <p>Whether to enable auto-split, true by default</p>
      */
     public void setAutoSplit(Boolean AutoSplit) {
         this.AutoSplit = AutoSplit;
     }
 
     /**
-     * Get Maximum number of partitions to split into for this topic if automatic split is enabled. Default value: 50 
-     * @return MaxSplitPartitions Maximum number of partitions to split into for this topic if automatic split is enabled. Default value: 50
+     * Get <p>When auto-split is enabled, the maximum number of partitions allowed for each topic is 50 by default.</p> 
+     * @return MaxSplitPartitions <p>When auto-split is enabled, the maximum number of partitions allowed for each topic is 50 by default.</p>
      */
     public Long getMaxSplitPartitions() {
         return this.MaxSplitPartitions;
     }
 
     /**
-     * Set Maximum number of partitions to split into for this topic if automatic split is enabled. Default value: 50
-     * @param MaxSplitPartitions Maximum number of partitions to split into for this topic if automatic split is enabled. Default value: 50
+     * Set <p>When auto-split is enabled, the maximum number of partitions allowed for each topic is 50 by default.</p>
+     * @param MaxSplitPartitions <p>When auto-split is enabled, the maximum number of partitions allowed for each topic is 50 by default.</p>
      */
     public void setMaxSplitPartitions(Long MaxSplitPartitions) {
         this.MaxSplitPartitions = MaxSplitPartitions;
     }
 
     /**
-     * Get Log topic storage type. Valid values: `hot` (STANDARD storage); `cold` (IA storage). Default value: `hot`. 
-     * @return StorageType Log topic storage type. Valid values: `hot` (STANDARD storage); `cold` (IA storage). Default value: `hot`.
+     * Get <p>Log topic storage type. Available values: hot (standard storage), cold (infrequent storage). Default hot. This configuration is not supported for metric topics.</p> 
+     * @return StorageType <p>Log topic storage type. Available values: hot (standard storage), cold (infrequent storage). Default hot. This configuration is not supported for metric topics.</p>
      */
     public String getStorageType() {
         return this.StorageType;
     }
 
     /**
-     * Set Log topic storage type. Valid values: `hot` (STANDARD storage); `cold` (IA storage). Default value: `hot`.
-     * @param StorageType Log topic storage type. Valid values: `hot` (STANDARD storage); `cold` (IA storage). Default value: `hot`.
+     * Set <p>Log topic storage type. Available values: hot (standard storage), cold (infrequent storage). Default hot. This configuration is not supported for metric topics.</p>
+     * @param StorageType <p>Log topic storage type. Available values: hot (standard storage), cold (infrequent storage). Default hot. This configuration is not supported for metric topics.</p>
      */
     public void setStorageType(String StorageType) {
         this.StorageType = StorageType;
     }
 
     /**
-     * Get lifetime. Unit: days. Standard storage value range: 1 to 3600. Infrequent storage value range: 7 to 3600 days. A value of 3640 indicates permanent retention.If this value is not input, it defaults to the Period value of the log set corresponding to the accessed log topic (defaults to 30 days in case of access failure). 
-     * @return Period lifetime. Unit: days. Standard storage value range: 1 to 3600. Infrequent storage value range: 7 to 3600 days. A value of 3640 indicates permanent retention.If this value is not input, it defaults to the Period value of the log set corresponding to the accessed log topic (defaults to 30 days in case of access failure).
+     * Get <p>Storage time, in days.</p><ul><li>Log topic: When logs are collected to standard storage, the supported range is 1 to 3600 days. A value of 3640 indicates permanent retention.</li><li>Log topic: When logs are collected to infrequently accessed storage, the supported range is 7 to 3600 days. A value of 3640 indicates permanent retention.</li><li>Metric topic: The supported range is 1 to 3600 days. A value of 3640 indicates permanent retention.</li></ul> 
+     * @return Period <p>Storage time, in days.</p><ul><li>Log topic: When logs are collected to standard storage, the supported range is 1 to 3600 days. A value of 3640 indicates permanent retention.</li><li>Log topic: When logs are collected to infrequently accessed storage, the supported range is 7 to 3600 days. A value of 3640 indicates permanent retention.</li><li>Metric topic: The supported range is 1 to 3600 days. A value of 3640 indicates permanent retention.</li></ul>
      */
     public Long getPeriod() {
         return this.Period;
     }
 
     /**
-     * Set lifetime. Unit: days. Standard storage value range: 1 to 3600. Infrequent storage value range: 7 to 3600 days. A value of 3640 indicates permanent retention.If this value is not input, it defaults to the Period value of the log set corresponding to the accessed log topic (defaults to 30 days in case of access failure).
-     * @param Period lifetime. Unit: days. Standard storage value range: 1 to 3600. Infrequent storage value range: 7 to 3600 days. A value of 3640 indicates permanent retention.If this value is not input, it defaults to the Period value of the log set corresponding to the accessed log topic (defaults to 30 days in case of access failure).
+     * Set <p>Storage time, in days.</p><ul><li>Log topic: When logs are collected to standard storage, the supported range is 1 to 3600 days. A value of 3640 indicates permanent retention.</li><li>Log topic: When logs are collected to infrequently accessed storage, the supported range is 7 to 3600 days. A value of 3640 indicates permanent retention.</li><li>Metric topic: The supported range is 1 to 3600 days. A value of 3640 indicates permanent retention.</li></ul>
+     * @param Period <p>Storage time, in days.</p><ul><li>Log topic: When logs are collected to standard storage, the supported range is 1 to 3600 days. A value of 3640 indicates permanent retention.</li><li>Log topic: When logs are collected to infrequently accessed storage, the supported range is 7 to 3600 days. A value of 3640 indicates permanent retention.</li><li>Metric topic: The supported range is 1 to 3600 days. A value of 3640 indicates permanent retention.</li></ul>
      */
     public void setPeriod(Long Period) {
         this.Period = Period;
     }
 
     /**
-     * Get Log topic description 
-     * @return Describes Log topic description
+     * Get <p>Topic description</p> 
+     * @return Describes <p>Topic description</p>
      */
     public String getDescribes() {
         return this.Describes;
     }
 
     /**
-     * Set Log topic description
-     * @param Describes Log topic description
+     * Set <p>Topic description</p>
+     * @param Describes <p>Topic description</p>
      */
     public void setDescribes(String Describes) {
         this.Describes = Describes;
     }
 
     /**
-     * Get 0: Disable log settlement.Non-zero: The number of Standard Storage days after enabling log settlement. HotPeriod needs to be greater than or equal to 7, and less than Period.Effective only when StorageType is hot. 
-     * @return HotPeriod 0: Disable log settlement.Non-zero: The number of Standard Storage days after enabling log settlement. HotPeriod needs to be greater than or equal to 7, and less than Period.Effective only when StorageType is hot.
+     * Get <p>0: Log topic disables log settlement.<br>Non-0: Number of days for standard storage after log settlement is enabled in the log topic. HotPeriod needs to be greater than or equal to 7 and less than Period.<br>Effective only when StorageType is hot. This configuration is not supported for metric topics.</p> 
+     * @return HotPeriod <p>0: Log topic disables log settlement.<br>Non-0: Number of days for standard storage after log settlement is enabled in the log topic. HotPeriod needs to be greater than or equal to 7 and less than Period.<br>Effective only when StorageType is hot. This configuration is not supported for metric topics.</p>
      */
     public Long getHotPeriod() {
         return this.HotPeriod;
     }
 
     /**
-     * Set 0: Disable log settlement.Non-zero: The number of Standard Storage days after enabling log settlement. HotPeriod needs to be greater than or equal to 7, and less than Period.Effective only when StorageType is hot.
-     * @param HotPeriod 0: Disable log settlement.Non-zero: The number of Standard Storage days after enabling log settlement. HotPeriod needs to be greater than or equal to 7, and less than Period.Effective only when StorageType is hot.
+     * Set <p>0: Log topic disables log settlement.<br>Non-0: Number of days for standard storage after log settlement is enabled in the log topic. HotPeriod needs to be greater than or equal to 7 and less than Period.<br>Effective only when StorageType is hot. This configuration is not supported for metric topics.</p>
+     * @param HotPeriod <p>0: Log topic disables log settlement.<br>Non-0: Number of days for standard storage after log settlement is enabled in the log topic. HotPeriod needs to be greater than or equal to 7 and less than Period.<br>Effective only when StorageType is hot. This configuration is not supported for metric topics.</p>
      */
     public void setHotPeriod(Long HotPeriod) {
         this.HotPeriod = HotPeriod;
     }
 
     /**
-     * Get Authentication switch. false: off; true: on. Default is false.Once enabled, it will support specified operations for anonymous access to this log topic. For details, please see [log Topic](https://intl.cloud.tencent.com/document/product/614/41035?from_cn_redirect=1). 
-     * @return IsWebTracking Authentication switch. false: off; true: on. Default is false.Once enabled, it will support specified operations for anonymous access to this log topic. For details, please see [log Topic](https://intl.cloud.tencent.com/document/product/614/41035?from_cn_redirect=1).
+     * Get <p>Encryption-related parameters. Encrypted regions and allowlisted users can pass this parameter, which cannot be passed in other scenarios.<br>0 or not passed: no encryption<br>1: kms-cls cloud service key encryption</p><p>Supported regions: ap-beijing, ap-guangzhou, ap-shanghai, ap-singapore, ap-bangkok, ap-jakarta, eu-frankfurt, ap-seoul, ap-tokyo</p> 
+     * @return Encryption <p>Encryption-related parameters. Encrypted regions and allowlisted users can pass this parameter, which cannot be passed in other scenarios.<br>0 or not passed: no encryption<br>1: kms-cls cloud service key encryption</p><p>Supported regions: ap-beijing, ap-guangzhou, ap-shanghai, ap-singapore, ap-bangkok, ap-jakarta, eu-frankfurt, ap-seoul, ap-tokyo</p>
+     */
+    public Long getEncryption() {
+        return this.Encryption;
+    }
+
+    /**
+     * Set <p>Encryption-related parameters. Encrypted regions and allowlisted users can pass this parameter, which cannot be passed in other scenarios.<br>0 or not passed: no encryption<br>1: kms-cls cloud service key encryption</p><p>Supported regions: ap-beijing, ap-guangzhou, ap-shanghai, ap-singapore, ap-bangkok, ap-jakarta, eu-frankfurt, ap-seoul, ap-tokyo</p>
+     * @param Encryption <p>Encryption-related parameters. Encrypted regions and allowlisted users can pass this parameter, which cannot be passed in other scenarios.<br>0 or not passed: no encryption<br>1: kms-cls cloud service key encryption</p><p>Supported regions: ap-beijing, ap-guangzhou, ap-shanghai, ap-singapore, ap-bangkok, ap-jakarta, eu-frankfurt, ap-seoul, ap-tokyo</p>
+     */
+    public void setEncryption(Long Encryption) {
+        this.Encryption = Encryption;
+    }
+
+    /**
+     * Get <p>Topic type</p><ul><li>0: Log topic, default value</li><li>1: Metric topic</li></ul> 
+     * @return BizType <p>Topic type</p><ul><li>0: Log topic, default value</li><li>1: Metric topic</li></ul>
+     */
+    public Long getBizType() {
+        return this.BizType;
+    }
+
+    /**
+     * Set <p>Topic type</p><ul><li>0: Log topic, default value</li><li>1: Metric topic</li></ul>
+     * @param BizType <p>Topic type</p><ul><li>0: Log topic, default value</li><li>1: Metric topic</li></ul>
+     */
+    public void setBizType(Long BizType) {
+        this.BizType = BizType;
+    }
+
+    /**
+     * Get <p>Custom topic ID, format: custom part-User APPID. If this parameter is left empty, ID will be automatically generated.</p><ul><li>The custom part only supports lowercase letters, digits, and -, cannot start or end with -, and must be 3 to 40 characters in length.</li><li>The trailing part requires the use of - to concatenate User APPID. APPID can be queried on the page https://console.cloud.tencent.com/developer.</li><li>If this field is specified, ensure uniqueness across all regions.</li></ul> 
+     * @return TopicId <p>Custom topic ID, format: custom part-User APPID. If this parameter is left empty, ID will be automatically generated.</p><ul><li>The custom part only supports lowercase letters, digits, and -, cannot start or end with -, and must be 3 to 40 characters in length.</li><li>The trailing part requires the use of - to concatenate User APPID. APPID can be queried on the page https://console.cloud.tencent.com/developer.</li><li>If this field is specified, ensure uniqueness across all regions.</li></ul>
+     */
+    public String getTopicId() {
+        return this.TopicId;
+    }
+
+    /**
+     * Set <p>Custom topic ID, format: custom part-User APPID. If this parameter is left empty, ID will be automatically generated.</p><ul><li>The custom part only supports lowercase letters, digits, and -, cannot start or end with -, and must be 3 to 40 characters in length.</li><li>The trailing part requires the use of - to concatenate User APPID. APPID can be queried on the page https://console.cloud.tencent.com/developer.</li><li>If this field is specified, ensure uniqueness across all regions.</li></ul>
+     * @param TopicId <p>Custom topic ID, format: custom part-User APPID. If this parameter is left empty, ID will be automatically generated.</p><ul><li>The custom part only supports lowercase letters, digits, and -, cannot start or end with -, and must be 3 to 40 characters in length.</li><li>The trailing part requires the use of - to concatenate User APPID. APPID can be queried on the page https://console.cloud.tencent.com/developer.</li><li>If this field is specified, ensure uniqueness across all regions.</li></ul>
+     */
+    public void setTopicId(String TopicId) {
+        this.TopicId = TopicId;
+    }
+
+    /**
+     * Get <p>Free authentication switch. False: turned off; true: turned on. Default false.<br>When enabled, anonymous access to the log topic will be supported for designated operations. For details, see <a href="https://www.tencentcloud.com/document/product/614/41035?from_cn_redirect=1">log topic</a>. This configuration is not supported for metric topics.</p> 
+     * @return IsWebTracking <p>Free authentication switch. False: turned off; true: turned on. Default false.<br>When enabled, anonymous access to the log topic will be supported for designated operations. For details, see <a href="https://www.tencentcloud.com/document/product/614/41035?from_cn_redirect=1">log topic</a>. This configuration is not supported for metric topics.</p>
      */
     public Boolean getIsWebTracking() {
         return this.IsWebTracking;
     }
 
     /**
-     * Set Authentication switch. false: off; true: on. Default is false.Once enabled, it will support specified operations for anonymous access to this log topic. For details, please see [log Topic](https://intl.cloud.tencent.com/document/product/614/41035?from_cn_redirect=1).
-     * @param IsWebTracking Authentication switch. false: off; true: on. Default is false.Once enabled, it will support specified operations for anonymous access to this log topic. For details, please see [log Topic](https://intl.cloud.tencent.com/document/product/614/41035?from_cn_redirect=1).
+     * Set <p>Free authentication switch. False: turned off; true: turned on. Default false.<br>When enabled, anonymous access to the log topic will be supported for designated operations. For details, see <a href="https://www.tencentcloud.com/document/product/614/41035?from_cn_redirect=1">log topic</a>. This configuration is not supported for metric topics.</p>
+     * @param IsWebTracking <p>Free authentication switch. False: turned off; true: turned on. Default false.<br>When enabled, anonymous access to the log topic will be supported for designated operations. For details, see <a href="https://www.tencentcloud.com/document/product/614/41035?from_cn_redirect=1">log topic</a>. This configuration is not supported for metric topics.</p>
      */
     public void setIsWebTracking(Boolean IsWebTracking) {
         this.IsWebTracking = IsWebTracking;
+    }
+
+    /**
+     * Get <p>Topic extended information</p> 
+     * @return Extends <p>Topic extended information</p>
+     */
+    public TopicExtendInfo getExtends() {
+        return this.Extends;
+    }
+
+    /**
+     * Set <p>Topic extended information</p>
+     * @param Extends <p>Topic extended information</p>
+     */
+    public void setExtends(TopicExtendInfo Extends) {
+        this.Extends = Extends;
+    }
+
+    /**
+     * Get <p>Enable logging of public network source IP and server receipt time</p> 
+     * @return IsSourceFrom <p>Enable logging of public network source IP and server receipt time</p>
+     */
+    public Boolean getIsSourceFrom() {
+        return this.IsSourceFrom;
+    }
+
+    /**
+     * Set <p>Enable logging of public network source IP and server receipt time</p>
+     * @param IsSourceFrom <p>Enable logging of public network source IP and server receipt time</p>
+     */
+    public void setIsSourceFrom(Boolean IsSourceFrom) {
+        this.IsSourceFrom = IsSourceFrom;
+    }
+
+    /**
+     * Get <p>Billing mode</p><p>Enumeration value:</p><ul><li>0: Function billing by usage</li><li>1: Raw log size billing (currently only supported for some customers)</li></ul><p>Default value: 0</p> 
+     * @return BillingMode <p>Billing mode</p><p>Enumeration value:</p><ul><li>0: Function billing by usage</li><li>1: Raw log size billing (currently only supported for some customers)</li></ul><p>Default value: 0</p>
+     */
+    public Long getBillingMode() {
+        return this.BillingMode;
+    }
+
+    /**
+     * Set <p>Billing mode</p><p>Enumeration value:</p><ul><li>0: Function billing by usage</li><li>1: Raw log size billing (currently only supported for some customers)</li></ul><p>Default value: 0</p>
+     * @param BillingMode <p>Billing mode</p><p>Enumeration value:</p><ul><li>0: Function billing by usage</li><li>1: Raw log size billing (currently only supported for some customers)</li></ul><p>Default value: 0</p>
+     */
+    public void setBillingMode(Long BillingMode) {
+        this.BillingMode = BillingMode;
     }
 
     public CreateTopicRequest() {
@@ -317,8 +455,26 @@ public class CreateTopicRequest extends AbstractModel {
         if (source.HotPeriod != null) {
             this.HotPeriod = new Long(source.HotPeriod);
         }
+        if (source.Encryption != null) {
+            this.Encryption = new Long(source.Encryption);
+        }
+        if (source.BizType != null) {
+            this.BizType = new Long(source.BizType);
+        }
+        if (source.TopicId != null) {
+            this.TopicId = new String(source.TopicId);
+        }
         if (source.IsWebTracking != null) {
             this.IsWebTracking = new Boolean(source.IsWebTracking);
+        }
+        if (source.Extends != null) {
+            this.Extends = new TopicExtendInfo(source.Extends);
+        }
+        if (source.IsSourceFrom != null) {
+            this.IsSourceFrom = new Boolean(source.IsSourceFrom);
+        }
+        if (source.BillingMode != null) {
+            this.BillingMode = new Long(source.BillingMode);
         }
     }
 
@@ -337,7 +493,13 @@ public class CreateTopicRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Period", this.Period);
         this.setParamSimple(map, prefix + "Describes", this.Describes);
         this.setParamSimple(map, prefix + "HotPeriod", this.HotPeriod);
+        this.setParamSimple(map, prefix + "Encryption", this.Encryption);
+        this.setParamSimple(map, prefix + "BizType", this.BizType);
+        this.setParamSimple(map, prefix + "TopicId", this.TopicId);
         this.setParamSimple(map, prefix + "IsWebTracking", this.IsWebTracking);
+        this.setParamObj(map, prefix + "Extends.", this.Extends);
+        this.setParamSimple(map, prefix + "IsSourceFrom", this.IsSourceFrom);
+        this.setParamSimple(map, prefix + "BillingMode", this.BillingMode);
 
     }
 }

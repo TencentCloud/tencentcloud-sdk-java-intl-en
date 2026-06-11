@@ -24,8 +24,7 @@ import java.util.HashMap;
 public class CkafkaRouteInfo extends AbstractModel {
 
     /**
-    * Route ID
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Routing ID
     */
     @SerializedName("RouteID")
     @Expose
@@ -33,31 +32,27 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Domain name
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Domain")
     @Expose
     private String Domain;
 
     /**
-    * Domain port
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Domain Port
     */
     @SerializedName("DomainPort")
     @Expose
     private Long DomainPort;
 
     /**
-    * VIP
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Virtual IP
     */
     @SerializedName("Vip")
     @Expose
     private String Vip;
 
     /**
-    * VIP type
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Virtual IP Type
     */
     @SerializedName("VipType")
     @Expose
@@ -65,41 +60,34 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Access type
-// `0`: PLAINTEXT (plaintext method, which does not carry user information and is supported for legacy versions and Community Edition)
-	// `1`: SASL_PLAINTEXT (plaintext method, which authenticates the login through SASL before data start and is supported only for Community Edition)
-	// `2`: SSL (SSL-encrypted communication, which does not carry user information and is supported for legacy versions and Community Edition)
-	// `3`: SASL_SSL (SSL-encrypted communication, which authenticates the login through SASL before data start and is supported only for Community Edition)
-Note: This field may return null, indicating that no valid values can be obtained.
+0: PLAINTEXT (plaintext mode, no user information included, supported by older versions and community edition)
+	SASL_PLAINTEXT (plaintext mode, however, login authentication with SASL is performed at the start of data transmission, only supported by community version).
+	2: SSL (SSL encrypted communication, no user information included, supported by older versions and community edition)
+	3: SASL_SSL (SSL encrypted communication. Authenticate the login with SASL when data transmission starts. Only supported by community version)
     */
     @SerializedName("AccessType")
     @Expose
     private Long AccessType;
 
     /**
-     * Get Route ID
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return RouteID Route ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Routing ID 
+     * @return RouteID Routing ID
      */
     public Long getRouteID() {
         return this.RouteID;
     }
 
     /**
-     * Set Route ID
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param RouteID Route ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Routing ID
+     * @param RouteID Routing ID
      */
     public void setRouteID(Long RouteID) {
         this.RouteID = RouteID;
     }
 
     /**
-     * Get Domain name
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Domain name 
      * @return Domain Domain name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getDomain() {
         return this.Domain;
@@ -107,69 +95,55 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Domain name
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Domain Domain name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setDomain(String Domain) {
         this.Domain = Domain;
     }
 
     /**
-     * Get Domain port
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return DomainPort Domain port
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Domain Port 
+     * @return DomainPort Domain Port
      */
     public Long getDomainPort() {
         return this.DomainPort;
     }
 
     /**
-     * Set Domain port
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param DomainPort Domain port
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Domain Port
+     * @param DomainPort Domain Port
      */
     public void setDomainPort(Long DomainPort) {
         this.DomainPort = DomainPort;
     }
 
     /**
-     * Get VIP
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Vip VIP
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Virtual IP 
+     * @return Vip Virtual IP
      */
     public String getVip() {
         return this.Vip;
     }
 
     /**
-     * Set VIP
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Vip VIP
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Virtual IP
+     * @param Vip Virtual IP
      */
     public void setVip(String Vip) {
         this.Vip = Vip;
     }
 
     /**
-     * Get VIP type
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return VipType VIP type
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Virtual IP Type 
+     * @return VipType Virtual IP Type
      */
     public Long getVipType() {
         return this.VipType;
     }
 
     /**
-     * Set VIP type
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param VipType VIP type
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Virtual IP Type
+     * @param VipType Virtual IP Type
      */
     public void setVipType(Long VipType) {
         this.VipType = VipType;
@@ -177,17 +151,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get Access type
-// `0`: PLAINTEXT (plaintext method, which does not carry user information and is supported for legacy versions and Community Edition)
-	// `1`: SASL_PLAINTEXT (plaintext method, which authenticates the login through SASL before data start and is supported only for Community Edition)
-	// `2`: SSL (SSL-encrypted communication, which does not carry user information and is supported for legacy versions and Community Edition)
-	// `3`: SASL_SSL (SSL-encrypted communication, which authenticates the login through SASL before data start and is supported only for Community Edition)
-Note: This field may return null, indicating that no valid values can be obtained. 
+0: PLAINTEXT (plaintext mode, no user information included, supported by older versions and community edition)
+	SASL_PLAINTEXT (plaintext mode, however, login authentication with SASL is performed at the start of data transmission, only supported by community version).
+	2: SSL (SSL encrypted communication, no user information included, supported by older versions and community edition)
+	3: SASL_SSL (SSL encrypted communication. Authenticate the login with SASL when data transmission starts. Only supported by community version) 
      * @return AccessType Access type
-// `0`: PLAINTEXT (plaintext method, which does not carry user information and is supported for legacy versions and Community Edition)
-	// `1`: SASL_PLAINTEXT (plaintext method, which authenticates the login through SASL before data start and is supported only for Community Edition)
-	// `2`: SSL (SSL-encrypted communication, which does not carry user information and is supported for legacy versions and Community Edition)
-	// `3`: SASL_SSL (SSL-encrypted communication, which authenticates the login through SASL before data start and is supported only for Community Edition)
-Note: This field may return null, indicating that no valid values can be obtained.
+0: PLAINTEXT (plaintext mode, no user information included, supported by older versions and community edition)
+	SASL_PLAINTEXT (plaintext mode, however, login authentication with SASL is performed at the start of data transmission, only supported by community version).
+	2: SSL (SSL encrypted communication, no user information included, supported by older versions and community edition)
+	3: SASL_SSL (SSL encrypted communication. Authenticate the login with SASL when data transmission starts. Only supported by community version)
      */
     public Long getAccessType() {
         return this.AccessType;
@@ -195,17 +167,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Access type
-// `0`: PLAINTEXT (plaintext method, which does not carry user information and is supported for legacy versions and Community Edition)
-	// `1`: SASL_PLAINTEXT (plaintext method, which authenticates the login through SASL before data start and is supported only for Community Edition)
-	// `2`: SSL (SSL-encrypted communication, which does not carry user information and is supported for legacy versions and Community Edition)
-	// `3`: SASL_SSL (SSL-encrypted communication, which authenticates the login through SASL before data start and is supported only for Community Edition)
-Note: This field may return null, indicating that no valid values can be obtained.
+0: PLAINTEXT (plaintext mode, no user information included, supported by older versions and community edition)
+	SASL_PLAINTEXT (plaintext mode, however, login authentication with SASL is performed at the start of data transmission, only supported by community version).
+	2: SSL (SSL encrypted communication, no user information included, supported by older versions and community edition)
+	3: SASL_SSL (SSL encrypted communication. Authenticate the login with SASL when data transmission starts. Only supported by community version)
      * @param AccessType Access type
-// `0`: PLAINTEXT (plaintext method, which does not carry user information and is supported for legacy versions and Community Edition)
-	// `1`: SASL_PLAINTEXT (plaintext method, which authenticates the login through SASL before data start and is supported only for Community Edition)
-	// `2`: SSL (SSL-encrypted communication, which does not carry user information and is supported for legacy versions and Community Edition)
-	// `3`: SASL_SSL (SSL-encrypted communication, which authenticates the login through SASL before data start and is supported only for Community Edition)
-Note: This field may return null, indicating that no valid values can be obtained.
+0: PLAINTEXT (plaintext mode, no user information included, supported by older versions and community edition)
+	SASL_PLAINTEXT (plaintext mode, however, login authentication with SASL is performed at the start of data transmission, only supported by community version).
+	2: SSL (SSL encrypted communication, no user information included, supported by older versions and community edition)
+	3: SASL_SSL (SSL encrypted communication. Authenticate the login with SASL when data transmission starts. Only supported by community version)
      */
     public void setAccessType(Long AccessType) {
         this.AccessType = AccessType;

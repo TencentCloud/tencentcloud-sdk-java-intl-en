@@ -24,59 +24,72 @@ import java.util.HashMap;
 public class ComplianceHostDetailInfo extends AbstractModel {
 
     /**
-    * Docker version on the server
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Docker version on the host.
     */
     @SerializedName("DockerVersion")
     @Expose
     private String DockerVersion;
 
     /**
-    * K8s version on the server
-Note: This field may return null, indicating that no valid values can be obtained.
+    * K8S version on the host.
     */
     @SerializedName("K8SVersion")
     @Expose
     private String K8SVersion;
 
     /**
-     * Get Docker version on the server
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return DockerVersion Docker version on the server
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Containerd Version on Host
+    */
+    @SerializedName("ContainerdVersion")
+    @Expose
+    private String ContainerdVersion;
+
+    /**
+     * Get Docker version on the host. 
+     * @return DockerVersion Docker version on the host.
      */
     public String getDockerVersion() {
         return this.DockerVersion;
     }
 
     /**
-     * Set Docker version on the server
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param DockerVersion Docker version on the server
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Docker version on the host.
+     * @param DockerVersion Docker version on the host.
      */
     public void setDockerVersion(String DockerVersion) {
         this.DockerVersion = DockerVersion;
     }
 
     /**
-     * Get K8s version on the server
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return K8SVersion K8s version on the server
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get K8S version on the host. 
+     * @return K8SVersion K8S version on the host.
      */
     public String getK8SVersion() {
         return this.K8SVersion;
     }
 
     /**
-     * Set K8s version on the server
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param K8SVersion K8s version on the server
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set K8S version on the host.
+     * @param K8SVersion K8S version on the host.
      */
     public void setK8SVersion(String K8SVersion) {
         this.K8SVersion = K8SVersion;
+    }
+
+    /**
+     * Get Containerd Version on Host 
+     * @return ContainerdVersion Containerd Version on Host
+     */
+    public String getContainerdVersion() {
+        return this.ContainerdVersion;
+    }
+
+    /**
+     * Set Containerd Version on Host
+     * @param ContainerdVersion Containerd Version on Host
+     */
+    public void setContainerdVersion(String ContainerdVersion) {
+        this.ContainerdVersion = ContainerdVersion;
     }
 
     public ComplianceHostDetailInfo() {
@@ -93,6 +106,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.K8SVersion != null) {
             this.K8SVersion = new String(source.K8SVersion);
         }
+        if (source.ContainerdVersion != null) {
+            this.ContainerdVersion = new String(source.ContainerdVersion);
+        }
     }
 
 
@@ -102,6 +118,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DockerVersion", this.DockerVersion);
         this.setParamSimple(map, prefix + "K8SVersion", this.K8SVersion);
+        this.setParamSimple(map, prefix + "ContainerdVersion", this.ContainerdVersion);
 
     }
 }

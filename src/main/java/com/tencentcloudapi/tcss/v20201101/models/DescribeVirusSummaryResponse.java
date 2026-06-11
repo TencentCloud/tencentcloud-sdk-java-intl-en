@@ -31,56 +31,49 @@ public class DescribeVirusSummaryResponse extends AbstractModel {
     private String TaskId;
 
     /**
-    * Number of containers affected by the trojan
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Number of Containers Affected by Trojans
     */
     @SerializedName("RiskContainerCnt")
     @Expose
     private Long RiskContainerCnt;
 
     /**
-    * Number of pending risks
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Number of Pending Risks
     */
     @SerializedName("RiskCnt")
     @Expose
     private Long RiskCnt;
 
     /**
-    * Update time of the virus library
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Virus database update time
     */
     @SerializedName("VirusDataBaseModifyTime")
     @Expose
     private String VirusDataBaseModifyTime;
 
     /**
-    * Increase in the number of containers affected by trojans from yesterday
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Increase in the Number of Containers Affected by Trojans Compared to Yesterday
     */
     @SerializedName("RiskContainerIncrease")
     @Expose
     private Long RiskContainerIncrease;
 
     /**
-    * Increase in the number of pending risks from yesterday
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Number of Pending Risks Increased Compared to Yesterday
     */
     @SerializedName("RiskIncrease")
     @Expose
     private Long RiskIncrease;
 
     /**
-    * Increase in the number of isolated events from yesterday
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Isolation Event Count Increased Compared to Yesterday
     */
     @SerializedName("IsolateIncrease")
     @Expose
     private Long IsolateIncrease;
 
     /**
-    * Total number of isolated events
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Total Number of Isolation Events
     */
     @SerializedName("IsolateCnt")
     @Expose
@@ -110,140 +103,112 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Number of containers affected by the trojan
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return RiskContainerCnt Number of containers affected by the trojan
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Number of Containers Affected by Trojans 
+     * @return RiskContainerCnt Number of Containers Affected by Trojans
      */
     public Long getRiskContainerCnt() {
         return this.RiskContainerCnt;
     }
 
     /**
-     * Set Number of containers affected by the trojan
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param RiskContainerCnt Number of containers affected by the trojan
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Number of Containers Affected by Trojans
+     * @param RiskContainerCnt Number of Containers Affected by Trojans
      */
     public void setRiskContainerCnt(Long RiskContainerCnt) {
         this.RiskContainerCnt = RiskContainerCnt;
     }
 
     /**
-     * Get Number of pending risks
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return RiskCnt Number of pending risks
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Number of Pending Risks 
+     * @return RiskCnt Number of Pending Risks
      */
     public Long getRiskCnt() {
         return this.RiskCnt;
     }
 
     /**
-     * Set Number of pending risks
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param RiskCnt Number of pending risks
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Number of Pending Risks
+     * @param RiskCnt Number of Pending Risks
      */
     public void setRiskCnt(Long RiskCnt) {
         this.RiskCnt = RiskCnt;
     }
 
     /**
-     * Get Update time of the virus library
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return VirusDataBaseModifyTime Update time of the virus library
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Virus database update time 
+     * @return VirusDataBaseModifyTime Virus database update time
      */
     public String getVirusDataBaseModifyTime() {
         return this.VirusDataBaseModifyTime;
     }
 
     /**
-     * Set Update time of the virus library
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param VirusDataBaseModifyTime Update time of the virus library
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Virus database update time
+     * @param VirusDataBaseModifyTime Virus database update time
      */
     public void setVirusDataBaseModifyTime(String VirusDataBaseModifyTime) {
         this.VirusDataBaseModifyTime = VirusDataBaseModifyTime;
     }
 
     /**
-     * Get Increase in the number of containers affected by trojans from yesterday
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return RiskContainerIncrease Increase in the number of containers affected by trojans from yesterday
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Increase in the Number of Containers Affected by Trojans Compared to Yesterday 
+     * @return RiskContainerIncrease Increase in the Number of Containers Affected by Trojans Compared to Yesterday
      */
     public Long getRiskContainerIncrease() {
         return this.RiskContainerIncrease;
     }
 
     /**
-     * Set Increase in the number of containers affected by trojans from yesterday
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param RiskContainerIncrease Increase in the number of containers affected by trojans from yesterday
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Increase in the Number of Containers Affected by Trojans Compared to Yesterday
+     * @param RiskContainerIncrease Increase in the Number of Containers Affected by Trojans Compared to Yesterday
      */
     public void setRiskContainerIncrease(Long RiskContainerIncrease) {
         this.RiskContainerIncrease = RiskContainerIncrease;
     }
 
     /**
-     * Get Increase in the number of pending risks from yesterday
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return RiskIncrease Increase in the number of pending risks from yesterday
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Number of Pending Risks Increased Compared to Yesterday 
+     * @return RiskIncrease Number of Pending Risks Increased Compared to Yesterday
      */
     public Long getRiskIncrease() {
         return this.RiskIncrease;
     }
 
     /**
-     * Set Increase in the number of pending risks from yesterday
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param RiskIncrease Increase in the number of pending risks from yesterday
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Number of Pending Risks Increased Compared to Yesterday
+     * @param RiskIncrease Number of Pending Risks Increased Compared to Yesterday
      */
     public void setRiskIncrease(Long RiskIncrease) {
         this.RiskIncrease = RiskIncrease;
     }
 
     /**
-     * Get Increase in the number of isolated events from yesterday
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return IsolateIncrease Increase in the number of isolated events from yesterday
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Isolation Event Count Increased Compared to Yesterday 
+     * @return IsolateIncrease Isolation Event Count Increased Compared to Yesterday
      */
     public Long getIsolateIncrease() {
         return this.IsolateIncrease;
     }
 
     /**
-     * Set Increase in the number of isolated events from yesterday
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param IsolateIncrease Increase in the number of isolated events from yesterday
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Isolation Event Count Increased Compared to Yesterday
+     * @param IsolateIncrease Isolation Event Count Increased Compared to Yesterday
      */
     public void setIsolateIncrease(Long IsolateIncrease) {
         this.IsolateIncrease = IsolateIncrease;
     }
 
     /**
-     * Get Total number of isolated events
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return IsolateCnt Total number of isolated events
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Total Number of Isolation Events 
+     * @return IsolateCnt Total Number of Isolation Events
      */
     public Long getIsolateCnt() {
         return this.IsolateCnt;
     }
 
     /**
-     * Set Total number of isolated events
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param IsolateCnt Total number of isolated events
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Total Number of Isolation Events
+     * @param IsolateCnt Total Number of Isolation Events
      */
     public void setIsolateCnt(Long IsolateCnt) {
         this.IsolateCnt = IsolateCnt;

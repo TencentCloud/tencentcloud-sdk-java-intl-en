@@ -31,24 +31,21 @@ public class NetworkClusterPodInfo extends AbstractModel {
     private String PodName;
 
     /**
-    * Pod space
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Pod Space
     */
     @SerializedName("Namespace")
     @Expose
     private String Namespace;
 
     /**
-    * Pod label
-Note: This field may return null, indicating that no valid values can be obtained.
+    * pod tag
     */
     @SerializedName("Labels")
     @Expose
     private String Labels;
 
     /**
-    * Pod type
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Pod Type
     */
     @SerializedName("WorkloadKind")
     @Expose
@@ -71,60 +68,48 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Pod space
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Namespace Pod space
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Pod Space 
+     * @return Namespace Pod Space
      */
     public String getNamespace() {
         return this.Namespace;
     }
 
     /**
-     * Set Pod space
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Namespace Pod space
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Pod Space
+     * @param Namespace Pod Space
      */
     public void setNamespace(String Namespace) {
         this.Namespace = Namespace;
     }
 
     /**
-     * Get Pod label
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Labels Pod label
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get pod tag 
+     * @return Labels pod tag
      */
     public String getLabels() {
         return this.Labels;
     }
 
     /**
-     * Set Pod label
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Labels Pod label
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set pod tag
+     * @param Labels pod tag
      */
     public void setLabels(String Labels) {
         this.Labels = Labels;
     }
 
     /**
-     * Get Pod type
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return WorkloadKind Pod type
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Pod Type 
+     * @return WorkloadKind Pod Type
      */
     public String getWorkloadKind() {
         return this.WorkloadKind;
     }
 
     /**
-     * Set Pod type
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param WorkloadKind Pod type
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Pod Type
+     * @param WorkloadKind Pod Type
      */
     public void setWorkloadKind(String WorkloadKind) {
         this.WorkloadKind = WorkloadKind;

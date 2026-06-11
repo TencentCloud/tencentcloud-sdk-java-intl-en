@@ -31,7 +31,7 @@ public class VulInfoByCveId extends AbstractModel {
     private Long VulId;
 
     /**
-    * Repair Support Status. 0-Neither Windows nor Linux supports for repair; 1-Both Windows and Linux support for repair; 2-Only Linux supports for repair; 3-Only Windows supports for repair.
+    * Fixing support status: 0 - not support fixing for Windows and Linux; 1 - support fixing for both Windows and Linux; 2 - support fixing for Linux only; 3 - support fixing for Windows only.
     */
     @SerializedName("FixSwitch")
     @Expose
@@ -54,16 +54,16 @@ public class VulInfoByCveId extends AbstractModel {
     }
 
     /**
-     * Get Repair Support Status. 0-Neither Windows nor Linux supports for repair; 1-Both Windows and Linux support for repair; 2-Only Linux supports for repair; 3-Only Windows supports for repair. 
-     * @return FixSwitch Repair Support Status. 0-Neither Windows nor Linux supports for repair; 1-Both Windows and Linux support for repair; 2-Only Linux supports for repair; 3-Only Windows supports for repair.
+     * Get Fixing support status: 0 - not support fixing for Windows and Linux; 1 - support fixing for both Windows and Linux; 2 - support fixing for Linux only; 3 - support fixing for Windows only. 
+     * @return FixSwitch Fixing support status: 0 - not support fixing for Windows and Linux; 1 - support fixing for both Windows and Linux; 2 - support fixing for Linux only; 3 - support fixing for Windows only.
      */
     public Long getFixSwitch() {
         return this.FixSwitch;
     }
 
     /**
-     * Set Repair Support Status. 0-Neither Windows nor Linux supports for repair; 1-Both Windows and Linux support for repair; 2-Only Linux supports for repair; 3-Only Windows supports for repair.
-     * @param FixSwitch Repair Support Status. 0-Neither Windows nor Linux supports for repair; 1-Both Windows and Linux support for repair; 2-Only Linux supports for repair; 3-Only Windows supports for repair.
+     * Set Fixing support status: 0 - not support fixing for Windows and Linux; 1 - support fixing for both Windows and Linux; 2 - support fixing for Linux only; 3 - support fixing for Windows only.
+     * @param FixSwitch Fixing support status: 0 - not support fixing for Windows and Linux; 1 - support fixing for both Windows and Linux; 2 - support fixing for Linux only; 3 - support fixing for Windows only.
      */
     public void setFixSwitch(Long FixSwitch) {
         this.FixSwitch = FixSwitch;

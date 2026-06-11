@@ -45,8 +45,7 @@ public class ComplianceImageDetailInfo extends AbstractModel {
     private String ImageTag;
 
     /**
-    * Path of the remote repository of the image
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Path of the remote repository where the mirror resides.
     */
     @SerializedName("Repository")
     @Expose
@@ -101,20 +100,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Path of the remote repository of the image
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Repository Path of the remote repository of the image
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Path of the remote repository where the mirror resides. 
+     * @return Repository Path of the remote repository where the mirror resides.
      */
     public String getRepository() {
         return this.Repository;
     }
 
     /**
-     * Set Path of the remote repository of the image
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Repository Path of the remote repository of the image
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Path of the remote repository where the mirror resides.
+     * @param Repository Path of the remote repository where the mirror resides.
      */
     public void setRepository(String Repository) {
         this.Repository = Repository;

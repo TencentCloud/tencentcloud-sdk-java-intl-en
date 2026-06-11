@@ -32,7 +32,6 @@ public class DescribeAssetUserListResponse extends AbstractModel {
 
     /**
     * Account list
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Users")
     @Expose
@@ -62,10 +61,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Account list
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Account list 
      * @return Users Account list
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public AssetUserBaseInfo [] getUsers() {
         return this.Users;
@@ -73,9 +70,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Account list
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Users Account list
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setUsers(AssetUserBaseInfo [] Users) {
         this.Users = Users;

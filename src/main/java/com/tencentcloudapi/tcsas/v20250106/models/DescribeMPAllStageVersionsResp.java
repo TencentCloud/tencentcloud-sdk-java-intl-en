@@ -101,7 +101,7 @@ public class DescribeMPAllStageVersionsResp extends AbstractModel {
     private String MNPVersionIntro;
 
     /**
-    * Stage: Develop, preview, released.
+    * Phase: Valid values: Develop; Platform; Online.
     */
     @SerializedName("Phase")
     @Expose
@@ -326,16 +326,16 @@ public class DescribeMPAllStageVersionsResp extends AbstractModel {
     }
 
     /**
-     * Get Stage: Develop, preview, released. 
-     * @return Phase Stage: Develop, preview, released.
+     * Get Phase: Valid values: Develop; Platform; Online. 
+     * @return Phase Phase: Valid values: Develop; Platform; Online.
      */
     public String getPhase() {
         return this.Phase;
     }
 
     /**
-     * Set Stage: Develop, preview, released.
-     * @param Phase Stage: Develop, preview, released.
+     * Set Phase: Valid values: Develop; Platform; Online.
+     * @param Phase Phase: Valid values: Develop; Platform; Online.
      */
     public void setPhase(String Phase) {
         this.Phase = Phase;

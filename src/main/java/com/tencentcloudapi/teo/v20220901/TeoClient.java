@@ -46,7 +46,7 @@ Step 3: Call CheckFreeCertificateVerification to verify. After verification pass
 Step 4: Call ModifyHostsCertificate to issue a domain certificate configured to use the EdgeOne free certificate.
 
 The application method introduction in the document: [Free Certificate Application Description](https://www.tencentcloud.com/document/product/1552/90437?from_cn_redirect=1). 
-description:.
+description:
 - Only CNAME access mode can call this API to specify the free certificate application method. NS/DNSPod hosting access modes use automatic validation to apply for free certificates with no need to call this API.
 - If you need to switch the free certificate authentication method, you can call this API again by changing the VerificationMethod field to update it.
 - A domain name can only apply for one free certificate. After calling this API, the backend will trigger the free certificate application task. You need to complete the domain name verification info configuration within 2 days, then finish certificate authentication.
@@ -263,6 +263,17 @@ The feature is only supported by the enterprise plan and is currently in closed 
     }
 
     /**
+     *This API is used to create copies of specified edge functions. After creating copies, when client requests match configured trigger rules or the default domain name, you can access specific function copies by adding EO-Function-Replica-Name:[copy name] to the request header. Each function supports creating two copies by default.
+     * @param req CreateFunctionReplicaRequest
+     * @return CreateFunctionReplicaResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateFunctionReplicaResponse CreateFunctionReplica(CreateFunctionReplicaRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateFunctionReplica", CreateFunctionReplicaResponse.class);
+    }
+
+    /**
      *This API is used to create trigger rules for edge functions. It supports determining whether to execute the function via customized filter conditions. When execution is required, it provides multiple ways to select the target function, including directly specifying, selecting based on client region, and selecting based on weight.
      * @param req CreateFunctionRuleRequest
      * @return CreateFunctionRuleResponse
@@ -422,14 +433,14 @@ This API is used to learn about the detailed capacity of JIT transcoding. EdgeOn
     }
 
     /**
-     *This API is used to create a real-time log delivery task. The following limits apply.
--When the data delivery type (LogType) is site acceleration log (Layer 7 Access Logs), L4 proxy logs, or edge function logs, an entity (L7 domain, L4 proxy instance, or edge function instance) under the same combination of data delivery type (LogType) and data delivery area (Area) can only be added to the following real-time log delivery task type (TaskType) combinations:.
--A task to push to Tencent Cloud CLS, add another task to push to a custom HTTP(S) address;.
--A task to push to Tencent Cloud CLS, add another task to push to AWS S3-compatible Cloud Object Storage;.
--When the data delivery type (LogType) is rate limit and CC attack defense log, managed rule log, custom rule log, or Bot Management Log, an entity can only be added to one real-time log delivery task under the same combination of data delivery type (LogType) and data delivery Area.
--When the real-time log delivery task type (TaskType) is EdgeOne log analysis (log_analysis), it supports only the data delivery type (LogType) as site acceleration log (domain). Under the combination of the same site (ZoneId) and data delivery area (Area), you can only add one real-time log delivery task for EdgeOne log analysis.
+     *This API is used to create a real-time log delivery task. The following limits apply:
+-When the data delivery type (LogType) is site acceleration log (Layer 7 Access Logs), four-layer proxy logs, or edge function logs, the same entity (L7 domain, L4 proxy instance, or edge function instance) under the same combination of data delivery type (LogType) and data delivery area (Area) can only be added to the following real-time log delivery task type (TaskType) combinations:
+-A task to push to Tencent Cloud CLS, add another task to push to a custom HTTP(S) address.
+-A task to push to Tencent Cloud CLS, add another task to push to S3-compatible object storage.
+-When the data delivery type (LogType) is rate limit and CC attack defense log, managed rule log, custom rule log, or Bot Management Log, an entity can only be added to one real-time log delivery task under the combination of the same data delivery type (LogType) and data delivery area (Area).
+-When the real-time log delivery task type (TaskType) is EdgeOne log analysis (log_analysis), it supports only data delivery type (LogType) as site acceleration log (domain) or managed rule log (web-attack). Under the same site (ZoneId), same data delivery area (Area), and data combination, each data delivery type (LogType) can only add one real-time log delivery task pushed to EdgeOne log analysis.
 
-This API is used to query the real-time log delivery task list based on the entity to check whether the entity has been added to another real-time log delivery task. It is advisable to use the [DescribeRealtimeLogDeliveryTasks](https://www.tencentcloud.com/document/product/1552/104110?from_cn_redirect=1) API first.
+It is recommended to first query the real-time log delivery task list according to the entity via the [DescribeRealtimeLogDeliveryTasks](https://www.tencentcloud.com/document/product/1552/104110?from_cn_redirect=1) API, and check whether the entity has been added to another real-time log delivery task.
      * @param req CreateRealtimeLogDeliveryTaskRequest
      * @return CreateRealtimeLogDeliveryTaskResponse
      * @throws TencentCloudSDKException
@@ -638,6 +649,17 @@ The feature is only supported by the enterprise plan and is currently in closed 
     public DeleteFunctionResponse DeleteFunction(DeleteFunctionRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteFunction", DeleteFunctionResponse.class);
+    }
+
+    /**
+     *This API is used to delete specified edge function replicas.
+     * @param req DeleteFunctionReplicaRequest
+     * @return DeleteFunctionReplicaResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteFunctionReplicaResponse DeleteFunctionReplica(DeleteFunctionReplicaRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteFunctionReplica", DeleteFunctionReplicaResponse.class);
     }
 
     /**
@@ -1079,6 +1101,17 @@ The feature is only supported in the enterprise plan and is currently in closed 
     public DescribeFunctionComponentBindingsResponse DescribeFunctionComponentBindings(DescribeFunctionComponentBindingsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeFunctionComponentBindings", DescribeFunctionComponentBindingsResponse.class);
+    }
+
+    /**
+     *This API is used to query the replica list of edge functions.
+     * @param req DescribeFunctionReplicasRequest
+     * @return DescribeFunctionReplicasResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeFunctionReplicasResponse DescribeFunctionReplicas(DescribeFunctionReplicasRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeFunctionReplicas", DescribeFunctionReplicasResponse.class);
     }
 
     /**
@@ -1564,8 +1597,8 @@ This API is used to return post-protection traffic request data by default. User
     }
 
     /**
-     *This API is used to query time series data of origin-pull for L7 domains. 
-Group aggregation can be performed by specifying the query dimension <code>DimensionName</code>, returning multiple groups of time series data. For detailed guide and limits, see [How to Use API to Implement Grouping Aggregation in a Single Call](https://www.tencentcloud.com/document/product/1145/77047?lang=en&pg=).
+     *This API is used to query time series data of the layer-7 domain name business.
+You can choose to perform grouping queries by specifying the query dimension <code>DimensionName</code>, returning multiple groups of time series data. For detailed directions and usage limits, see [How to Implement Group Query in a Single Call Using API](https://www.tencentcloud.com/document/product/1552/127501?from_cn_redirect=1).
      * @param req DescribeTimingL7OriginPullDataRequest
      * @return DescribeTimingL7OriginPullDataResponse
      * @throws TencentCloudSDKException
@@ -2000,6 +2033,17 @@ The feature is only supported in the enterprise plan and is currently in closed 
     public ModifyFunctionComponentBindingsResponse ModifyFunctionComponentBindings(ModifyFunctionComponentBindingsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyFunctionComponentBindings", ModifyFunctionComponentBindingsResponse.class);
+    }
+
+    /**
+     *This API is used to modify the content and description of a specified edge function replica.
+     * @param req ModifyFunctionReplicaRequest
+     * @return ModifyFunctionReplicaResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyFunctionReplicaResponse ModifyFunctionReplica(ModifyFunctionReplicaRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyFunctionReplica", ModifyFunctionReplicaResponse.class);
     }
 
     /**

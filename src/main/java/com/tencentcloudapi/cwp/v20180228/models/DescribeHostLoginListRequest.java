@@ -38,18 +38,7 @@ public class DescribeHostLoginListRequest extends AbstractModel {
     private Long Offset;
 
     /**
-    * Filter criteria
-<li>Quuid - String - required: no - CVM UUID</li>
-<li>Uuid - String - required: no - CWPP unique UUID</li>
-<li>MachineName - String - required: no - host alias</li>
-<li>Ip - String - required: no - host IP</li>
-<li>InstanceID - String - required: no - host instance ID</li>
-<li>SrcIp - String - required: no - filter by source IP</li>
-<li>UserName - String - required: no - filter by username</li>
-<li>Status - int - required: no - status filtering: 1: normal log-in; 5: whitelisted; 14: processed; 15: ignored</li>
-<li>LoginTimeBegin - String - required: no - filter by modification time; start time</li>
-<li>LoginTimeEnd - String - required: no - filter by modification time; end time</li>
-<li>RiskLevel - int - required: no - status filtering: 0: high-risk; 1: suspicious</li>
+    * Filter criteria. <li>Quuid - String - Required: No - CVM uuid</li> <li>uuid - String - Required: No - Host security unique uuid</li> <li>MachineName - String - Required: No - Host alias</li> <li>Ip - String - Required: No - Host Ip address</li> <li>InstanceID - String - Required: No - Host instance ID</li> <li>SrcIp - String - Required: No - Source Ip filter</li> <li>UserName - String - Required: No - UserName filter</li> <li>Status - String - Required: No - Status filtering: 2: Pending; 5: Whitelisted; 14: Fixed; 15: Ignored</li> <li>LoginTimeBegin - String - Required: No - Filter by modification time range, start time</li> <li>LoginTimeEnd - String - Required: No - Filter by modification time range, end time</li> <li>RiskLevel - String - Required: No - Status filtering: 0: High risk; 1: Suspicious</li>
     */
     @SerializedName("Filters")
     @Expose
@@ -102,60 +91,16 @@ public class DescribeHostLoginListRequest extends AbstractModel {
     }
 
     /**
-     * Get Filter criteria
-<li>Quuid - String - required: no - CVM UUID</li>
-<li>Uuid - String - required: no - CWPP unique UUID</li>
-<li>MachineName - String - required: no - host alias</li>
-<li>Ip - String - required: no - host IP</li>
-<li>InstanceID - String - required: no - host instance ID</li>
-<li>SrcIp - String - required: no - filter by source IP</li>
-<li>UserName - String - required: no - filter by username</li>
-<li>Status - int - required: no - status filtering: 1: normal log-in; 5: whitelisted; 14: processed; 15: ignored</li>
-<li>LoginTimeBegin - String - required: no - filter by modification time; start time</li>
-<li>LoginTimeEnd - String - required: no - filter by modification time; end time</li>
-<li>RiskLevel - int - required: no - status filtering: 0: high-risk; 1: suspicious</li> 
-     * @return Filters Filter criteria
-<li>Quuid - String - required: no - CVM UUID</li>
-<li>Uuid - String - required: no - CWPP unique UUID</li>
-<li>MachineName - String - required: no - host alias</li>
-<li>Ip - String - required: no - host IP</li>
-<li>InstanceID - String - required: no - host instance ID</li>
-<li>SrcIp - String - required: no - filter by source IP</li>
-<li>UserName - String - required: no - filter by username</li>
-<li>Status - int - required: no - status filtering: 1: normal log-in; 5: whitelisted; 14: processed; 15: ignored</li>
-<li>LoginTimeBegin - String - required: no - filter by modification time; start time</li>
-<li>LoginTimeEnd - String - required: no - filter by modification time; end time</li>
-<li>RiskLevel - int - required: no - status filtering: 0: high-risk; 1: suspicious</li>
+     * Get Filter criteria. <li>Quuid - String - Required: No - CVM uuid</li> <li>uuid - String - Required: No - Host security unique uuid</li> <li>MachineName - String - Required: No - Host alias</li> <li>Ip - String - Required: No - Host Ip address</li> <li>InstanceID - String - Required: No - Host instance ID</li> <li>SrcIp - String - Required: No - Source Ip filter</li> <li>UserName - String - Required: No - UserName filter</li> <li>Status - String - Required: No - Status filtering: 2: Pending; 5: Whitelisted; 14: Fixed; 15: Ignored</li> <li>LoginTimeBegin - String - Required: No - Filter by modification time range, start time</li> <li>LoginTimeEnd - String - Required: No - Filter by modification time range, end time</li> <li>RiskLevel - String - Required: No - Status filtering: 0: High risk; 1: Suspicious</li> 
+     * @return Filters Filter criteria. <li>Quuid - String - Required: No - CVM uuid</li> <li>uuid - String - Required: No - Host security unique uuid</li> <li>MachineName - String - Required: No - Host alias</li> <li>Ip - String - Required: No - Host Ip address</li> <li>InstanceID - String - Required: No - Host instance ID</li> <li>SrcIp - String - Required: No - Source Ip filter</li> <li>UserName - String - Required: No - UserName filter</li> <li>Status - String - Required: No - Status filtering: 2: Pending; 5: Whitelisted; 14: Fixed; 15: Ignored</li> <li>LoginTimeBegin - String - Required: No - Filter by modification time range, start time</li> <li>LoginTimeEnd - String - Required: No - Filter by modification time range, end time</li> <li>RiskLevel - String - Required: No - Status filtering: 0: High risk; 1: Suspicious</li>
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set Filter criteria
-<li>Quuid - String - required: no - CVM UUID</li>
-<li>Uuid - String - required: no - CWPP unique UUID</li>
-<li>MachineName - String - required: no - host alias</li>
-<li>Ip - String - required: no - host IP</li>
-<li>InstanceID - String - required: no - host instance ID</li>
-<li>SrcIp - String - required: no - filter by source IP</li>
-<li>UserName - String - required: no - filter by username</li>
-<li>Status - int - required: no - status filtering: 1: normal log-in; 5: whitelisted; 14: processed; 15: ignored</li>
-<li>LoginTimeBegin - String - required: no - filter by modification time; start time</li>
-<li>LoginTimeEnd - String - required: no - filter by modification time; end time</li>
-<li>RiskLevel - int - required: no - status filtering: 0: high-risk; 1: suspicious</li>
-     * @param Filters Filter criteria
-<li>Quuid - String - required: no - CVM UUID</li>
-<li>Uuid - String - required: no - CWPP unique UUID</li>
-<li>MachineName - String - required: no - host alias</li>
-<li>Ip - String - required: no - host IP</li>
-<li>InstanceID - String - required: no - host instance ID</li>
-<li>SrcIp - String - required: no - filter by source IP</li>
-<li>UserName - String - required: no - filter by username</li>
-<li>Status - int - required: no - status filtering: 1: normal log-in; 5: whitelisted; 14: processed; 15: ignored</li>
-<li>LoginTimeBegin - String - required: no - filter by modification time; start time</li>
-<li>LoginTimeEnd - String - required: no - filter by modification time; end time</li>
-<li>RiskLevel - int - required: no - status filtering: 0: high-risk; 1: suspicious</li>
+     * Set Filter criteria. <li>Quuid - String - Required: No - CVM uuid</li> <li>uuid - String - Required: No - Host security unique uuid</li> <li>MachineName - String - Required: No - Host alias</li> <li>Ip - String - Required: No - Host Ip address</li> <li>InstanceID - String - Required: No - Host instance ID</li> <li>SrcIp - String - Required: No - Source Ip filter</li> <li>UserName - String - Required: No - UserName filter</li> <li>Status - String - Required: No - Status filtering: 2: Pending; 5: Whitelisted; 14: Fixed; 15: Ignored</li> <li>LoginTimeBegin - String - Required: No - Filter by modification time range, start time</li> <li>LoginTimeEnd - String - Required: No - Filter by modification time range, end time</li> <li>RiskLevel - String - Required: No - Status filtering: 0: High risk; 1: Suspicious</li>
+     * @param Filters Filter criteria. <li>Quuid - String - Required: No - CVM uuid</li> <li>uuid - String - Required: No - Host security unique uuid</li> <li>MachineName - String - Required: No - Host alias</li> <li>Ip - String - Required: No - Host Ip address</li> <li>InstanceID - String - Required: No - Host instance ID</li> <li>SrcIp - String - Required: No - Source Ip filter</li> <li>UserName - String - Required: No - UserName filter</li> <li>Status - String - Required: No - Status filtering: 2: Pending; 5: Whitelisted; 14: Fixed; 15: Ignored</li> <li>LoginTimeBegin - String - Required: No - Filter by modification time range, start time</li> <li>LoginTimeEnd - String - Required: No - Filter by modification time range, end time</li> <li>RiskLevel - String - Required: No - Status filtering: 0: High risk; 1: Suspicious</li>
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;

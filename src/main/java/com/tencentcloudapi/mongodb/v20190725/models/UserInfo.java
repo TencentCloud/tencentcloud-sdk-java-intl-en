@@ -24,138 +24,138 @@ import java.util.HashMap;
 public class UserInfo extends AbstractModel {
 
     /**
-    * 
+    * The account name.
     */
     @SerializedName("UserName")
     @Expose
     private String UserName;
 
     /**
-    * 
+    * The account permission details.
     */
     @SerializedName("AuthRole")
     @Expose
     private Auth [] AuthRole;
 
     /**
-    * 
+    * The time when the account was created.
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * 
+    * The time when the account was last updated.
     */
     @SerializedName("UpdateTime")
     @Expose
     private String UpdateTime;
 
     /**
-    * 
+    * The remarks for the account.
     */
     @SerializedName("UserDesc")
     @Expose
     private String UserDesc;
 
     /**
-    * Console password update time.
+    * The time when the console password was last updated.
     */
     @SerializedName("ConsolePassUpdateTime")
     @Expose
     private String ConsolePassUpdateTime;
 
     /**
-     * Get  
-     * @return UserName 
+     * Get The account name. 
+     * @return UserName The account name.
      */
     public String getUserName() {
         return this.UserName;
     }
 
     /**
-     * Set 
-     * @param UserName 
+     * Set The account name.
+     * @param UserName The account name.
      */
     public void setUserName(String UserName) {
         this.UserName = UserName;
     }
 
     /**
-     * Get  
-     * @return AuthRole 
+     * Get The account permission details. 
+     * @return AuthRole The account permission details.
      */
     public Auth [] getAuthRole() {
         return this.AuthRole;
     }
 
     /**
-     * Set 
-     * @param AuthRole 
+     * Set The account permission details.
+     * @param AuthRole The account permission details.
      */
     public void setAuthRole(Auth [] AuthRole) {
         this.AuthRole = AuthRole;
     }
 
     /**
-     * Get  
-     * @return CreateTime 
+     * Get The time when the account was created. 
+     * @return CreateTime The time when the account was created.
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 
-     * @param CreateTime 
+     * Set The time when the account was created.
+     * @param CreateTime The time when the account was created.
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get  
-     * @return UpdateTime 
+     * Get The time when the account was last updated. 
+     * @return UpdateTime The time when the account was last updated.
      */
     public String getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set 
-     * @param UpdateTime 
+     * Set The time when the account was last updated.
+     * @param UpdateTime The time when the account was last updated.
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;
     }
 
     /**
-     * Get  
-     * @return UserDesc 
+     * Get The remarks for the account. 
+     * @return UserDesc The remarks for the account.
      */
     public String getUserDesc() {
         return this.UserDesc;
     }
 
     /**
-     * Set 
-     * @param UserDesc 
+     * Set The remarks for the account.
+     * @param UserDesc The remarks for the account.
      */
     public void setUserDesc(String UserDesc) {
         this.UserDesc = UserDesc;
     }
 
     /**
-     * Get Console password update time. 
-     * @return ConsolePassUpdateTime Console password update time.
+     * Get The time when the console password was last updated. 
+     * @return ConsolePassUpdateTime The time when the console password was last updated.
      */
     public String getConsolePassUpdateTime() {
         return this.ConsolePassUpdateTime;
     }
 
     /**
-     * Set Console password update time.
-     * @param ConsolePassUpdateTime Console password update time.
+     * Set The time when the console password was last updated.
+     * @param ConsolePassUpdateTime The time when the console password was last updated.
      */
     public void setConsolePassUpdateTime(String ConsolePassUpdateTime) {
         this.ConsolePassUpdateTime = ConsolePassUpdateTime;

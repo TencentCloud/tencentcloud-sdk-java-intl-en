@@ -24,8 +24,7 @@ import java.util.HashMap;
 public class Broadcasts extends AbstractModel {
 
     /**
-    * Article name
-Note: This field may return null, indicating that no valid values can be obtained.
+    * article name
     */
     @SerializedName("Title")
     @Expose
@@ -33,7 +32,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Type: 0: emergency notification; 1: feature update; 2: industry honor; 3: version release
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Type")
     @Expose
@@ -68,30 +66,24 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long Level;
 
     /**
-     * Get Article name
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Title Article name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get article name 
+     * @return Title article name
      */
     public String getTitle() {
         return this.Title;
     }
 
     /**
-     * Set Article name
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Title Article name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set article name
+     * @param Title article name
      */
     public void setTitle(String Title) {
         this.Title = Title;
     }
 
     /**
-     * Get Type: 0: emergency notification; 1: feature update; 2: industry honor; 3: version release
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Type: 0: emergency notification; 1: feature update; 2: industry honor; 3: version release 
      * @return Type Type: 0: emergency notification; 1: feature update; 2: industry honor; 3: version release
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getType() {
         return this.Type;
@@ -99,9 +91,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Type: 0: emergency notification; 1: feature update; 2: industry honor; 3: version release
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Type Type: 0: emergency notification; 1: feature update; 2: industry honor; 3: version release
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setType(Long Type) {
         this.Type = Type;

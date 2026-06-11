@@ -60,15 +60,13 @@ public class RansomDefenseStrategyMachineBackupInfo extends AbstractModel {
 
     /**
     * Public IP address
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("MachineWanIp")
     @Expose
     private String MachineWanIp;
 
     /**
-    * Cloud tag
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Cloud Tag
     */
     @SerializedName("CloudTags")
     @Expose
@@ -76,15 +74,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Availability zone information
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("RegionInfo")
     @Expose
     private RegionInfo RegionInfo;
 
     /**
-    * CWPP tag
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Host security tag
     */
     @SerializedName("Tag")
     @Expose
@@ -92,7 +88,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Protection status: 0 Disabled, 1 Enabled.
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Status")
     @Expose
@@ -100,7 +95,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Policy ID. 0 indicates no binding to any policy.
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("StrategyId")
     @Expose
@@ -109,7 +103,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
     /**
     * Hard disk information, all hard disks take effect when left blank:
 Separate diskId1|diskName1;diskId2|diskName2
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("DiskInfo")
     @Expose
@@ -117,7 +110,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Policy name
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("StrategyName")
     @Expose
@@ -125,7 +117,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Number of Backups
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("BackupCount")
     @Expose
@@ -133,7 +124,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Latest Backup Status: 0 - Backing Up, 1 - Normal, 2 - Failed, 9 - No Backup Yet
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("LastBackupStatus")
     @Expose
@@ -141,7 +131,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Reason for the Last Backup Failure
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("LastBackupMessage")
     @Expose
@@ -149,7 +138,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Last Backup Time
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("LastBackupTime")
     @Expose
@@ -157,7 +145,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Latest Rollback Progress Percentage
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("RollBackPercent")
     @Expose
@@ -165,7 +152,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Latest Rollback Status: 0 - In Progress, 1 - Succeeded, 2 - Failed
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("RollBackStatus")
     @Expose
@@ -173,11 +159,24 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Backup Success Count
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("BackupSuccessCount")
     @Expose
     private Long BackupSuccessCount;
+
+    /**
+    * Version information: 0-Basic version, 1-Pro edition, 2-Flagship edition, 3-Lightweight edition
+    */
+    @SerializedName("HostVersion")
+    @Expose
+    private Long HostVersion;
+
+    /**
+    * Machine Zone Type. CVM - Cloud Virtual Machine; BM: Bare Metal; ECM: Edge Computing Machine; LH: Lightweight Application Server; Other: Hybrid Cloud Zone
+    */
+    @SerializedName("MachineType")
+    @Expose
+    private String MachineType;
 
     /**
      * Get Host UUID 
@@ -260,10 +259,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Public IP address
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Public IP address 
      * @return MachineWanIp Public IP address
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getMachineWanIp() {
         return this.MachineWanIp;
@@ -271,39 +268,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Public IP address
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param MachineWanIp Public IP address
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setMachineWanIp(String MachineWanIp) {
         this.MachineWanIp = MachineWanIp;
     }
 
     /**
-     * Get Cloud tag
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return CloudTags Cloud tag
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Cloud Tag 
+     * @return CloudTags Cloud Tag
      */
     public Tag [] getCloudTags() {
         return this.CloudTags;
     }
 
     /**
-     * Set Cloud tag
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param CloudTags Cloud tag
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Cloud Tag
+     * @param CloudTags Cloud Tag
      */
     public void setCloudTags(Tag [] CloudTags) {
         this.CloudTags = CloudTags;
     }
 
     /**
-     * Get Availability zone information
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Availability zone information 
      * @return RegionInfo Availability zone information
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public RegionInfo getRegionInfo() {
         return this.RegionInfo;
@@ -311,39 +300,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Availability zone information
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param RegionInfo Availability zone information
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setRegionInfo(RegionInfo RegionInfo) {
         this.RegionInfo = RegionInfo;
     }
 
     /**
-     * Get CWPP tag
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Tag CWPP tag
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Host security tag 
+     * @return Tag Host security tag
      */
     public MachineTag [] getTag() {
         return this.Tag;
     }
 
     /**
-     * Set CWPP tag
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Tag CWPP tag
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Host security tag
+     * @param Tag Host security tag
      */
     public void setTag(MachineTag [] Tag) {
         this.Tag = Tag;
     }
 
     /**
-     * Get Protection status: 0 Disabled, 1 Enabled.
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Protection status: 0 Disabled, 1 Enabled. 
      * @return Status Protection status: 0 Disabled, 1 Enabled.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getStatus() {
         return this.Status;
@@ -351,19 +332,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Protection status: 0 Disabled, 1 Enabled.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Status Protection status: 0 Disabled, 1 Enabled.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get Policy ID. 0 indicates no binding to any policy.
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Policy ID. 0 indicates no binding to any policy. 
      * @return StrategyId Policy ID. 0 indicates no binding to any policy.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getStrategyId() {
         return this.StrategyId;
@@ -371,9 +348,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Policy ID. 0 indicates no binding to any policy.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param StrategyId Policy ID. 0 indicates no binding to any policy.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setStrategyId(Long StrategyId) {
         this.StrategyId = StrategyId;
@@ -381,11 +356,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get Hard disk information, all hard disks take effect when left blank:
-Separate diskId1|diskName1;diskId2|diskName2
-Note: This field may return null, indicating that no valid values can be obtained. 
+Separate diskId1|diskName1;diskId2|diskName2 
      * @return DiskInfo Hard disk information, all hard disks take effect when left blank:
 Separate diskId1|diskName1;diskId2|diskName2
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getDiskInfo() {
         return this.DiskInfo;
@@ -394,20 +367,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     /**
      * Set Hard disk information, all hard disks take effect when left blank:
 Separate diskId1|diskName1;diskId2|diskName2
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param DiskInfo Hard disk information, all hard disks take effect when left blank:
 Separate diskId1|diskName1;diskId2|diskName2
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setDiskInfo(String DiskInfo) {
         this.DiskInfo = DiskInfo;
     }
 
     /**
-     * Get Policy name
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Policy name 
      * @return StrategyName Policy name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getStrategyName() {
         return this.StrategyName;
@@ -415,19 +384,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Policy name
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param StrategyName Policy name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setStrategyName(String StrategyName) {
         this.StrategyName = StrategyName;
     }
 
     /**
-     * Get Number of Backups
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Number of Backups 
      * @return BackupCount Number of Backups
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getBackupCount() {
         return this.BackupCount;
@@ -435,19 +400,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Number of Backups
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param BackupCount Number of Backups
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setBackupCount(Long BackupCount) {
         this.BackupCount = BackupCount;
     }
 
     /**
-     * Get Latest Backup Status: 0 - Backing Up, 1 - Normal, 2 - Failed, 9 - No Backup Yet
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Latest Backup Status: 0 - Backing Up, 1 - Normal, 2 - Failed, 9 - No Backup Yet 
      * @return LastBackupStatus Latest Backup Status: 0 - Backing Up, 1 - Normal, 2 - Failed, 9 - No Backup Yet
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getLastBackupStatus() {
         return this.LastBackupStatus;
@@ -455,19 +416,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Latest Backup Status: 0 - Backing Up, 1 - Normal, 2 - Failed, 9 - No Backup Yet
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param LastBackupStatus Latest Backup Status: 0 - Backing Up, 1 - Normal, 2 - Failed, 9 - No Backup Yet
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setLastBackupStatus(Long LastBackupStatus) {
         this.LastBackupStatus = LastBackupStatus;
     }
 
     /**
-     * Get Reason for the Last Backup Failure
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Reason for the Last Backup Failure 
      * @return LastBackupMessage Reason for the Last Backup Failure
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getLastBackupMessage() {
         return this.LastBackupMessage;
@@ -475,19 +432,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Reason for the Last Backup Failure
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param LastBackupMessage Reason for the Last Backup Failure
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setLastBackupMessage(String LastBackupMessage) {
         this.LastBackupMessage = LastBackupMessage;
     }
 
     /**
-     * Get Last Backup Time
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Last Backup Time 
      * @return LastBackupTime Last Backup Time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getLastBackupTime() {
         return this.LastBackupTime;
@@ -495,19 +448,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Last Backup Time
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param LastBackupTime Last Backup Time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setLastBackupTime(String LastBackupTime) {
         this.LastBackupTime = LastBackupTime;
     }
 
     /**
-     * Get Latest Rollback Progress Percentage
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Latest Rollback Progress Percentage 
      * @return RollBackPercent Latest Rollback Progress Percentage
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getRollBackPercent() {
         return this.RollBackPercent;
@@ -515,19 +464,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Latest Rollback Progress Percentage
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param RollBackPercent Latest Rollback Progress Percentage
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setRollBackPercent(Long RollBackPercent) {
         this.RollBackPercent = RollBackPercent;
     }
 
     /**
-     * Get Latest Rollback Status: 0 - In Progress, 1 - Succeeded, 2 - Failed
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Latest Rollback Status: 0 - In Progress, 1 - Succeeded, 2 - Failed 
      * @return RollBackStatus Latest Rollback Status: 0 - In Progress, 1 - Succeeded, 2 - Failed
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getRollBackStatus() {
         return this.RollBackStatus;
@@ -535,19 +480,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Latest Rollback Status: 0 - In Progress, 1 - Succeeded, 2 - Failed
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param RollBackStatus Latest Rollback Status: 0 - In Progress, 1 - Succeeded, 2 - Failed
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setRollBackStatus(Long RollBackStatus) {
         this.RollBackStatus = RollBackStatus;
     }
 
     /**
-     * Get Backup Success Count
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Backup Success Count 
      * @return BackupSuccessCount Backup Success Count
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getBackupSuccessCount() {
         return this.BackupSuccessCount;
@@ -555,12 +496,42 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Backup Success Count
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param BackupSuccessCount Backup Success Count
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setBackupSuccessCount(Long BackupSuccessCount) {
         this.BackupSuccessCount = BackupSuccessCount;
+    }
+
+    /**
+     * Get Version information: 0-Basic version, 1-Pro edition, 2-Flagship edition, 3-Lightweight edition 
+     * @return HostVersion Version information: 0-Basic version, 1-Pro edition, 2-Flagship edition, 3-Lightweight edition
+     */
+    public Long getHostVersion() {
+        return this.HostVersion;
+    }
+
+    /**
+     * Set Version information: 0-Basic version, 1-Pro edition, 2-Flagship edition, 3-Lightweight edition
+     * @param HostVersion Version information: 0-Basic version, 1-Pro edition, 2-Flagship edition, 3-Lightweight edition
+     */
+    public void setHostVersion(Long HostVersion) {
+        this.HostVersion = HostVersion;
+    }
+
+    /**
+     * Get Machine Zone Type. CVM - Cloud Virtual Machine; BM: Bare Metal; ECM: Edge Computing Machine; LH: Lightweight Application Server; Other: Hybrid Cloud Zone 
+     * @return MachineType Machine Zone Type. CVM - Cloud Virtual Machine; BM: Bare Metal; ECM: Edge Computing Machine; LH: Lightweight Application Server; Other: Hybrid Cloud Zone
+     */
+    public String getMachineType() {
+        return this.MachineType;
+    }
+
+    /**
+     * Set Machine Zone Type. CVM - Cloud Virtual Machine; BM: Bare Metal; ECM: Edge Computing Machine; LH: Lightweight Application Server; Other: Hybrid Cloud Zone
+     * @param MachineType Machine Zone Type. CVM - Cloud Virtual Machine; BM: Bare Metal; ECM: Edge Computing Machine; LH: Lightweight Application Server; Other: Hybrid Cloud Zone
+     */
+    public void setMachineType(String MachineType) {
+        this.MachineType = MachineType;
     }
 
     public RansomDefenseStrategyMachineBackupInfo() {
@@ -637,6 +608,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.BackupSuccessCount != null) {
             this.BackupSuccessCount = new Long(source.BackupSuccessCount);
         }
+        if (source.HostVersion != null) {
+            this.HostVersion = new Long(source.HostVersion);
+        }
+        if (source.MachineType != null) {
+            this.MachineType = new String(source.MachineType);
+        }
     }
 
 
@@ -664,6 +641,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "RollBackPercent", this.RollBackPercent);
         this.setParamSimple(map, prefix + "RollBackStatus", this.RollBackStatus);
         this.setParamSimple(map, prefix + "BackupSuccessCount", this.BackupSuccessCount);
+        this.setParamSimple(map, prefix + "HostVersion", this.HostVersion);
+        this.setParamSimple(map, prefix + "MachineType", this.MachineType);
 
     }
 }

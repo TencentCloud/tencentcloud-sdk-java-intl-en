@@ -38,8 +38,7 @@ public class DescribeVulDefenceSettingResponse extends AbstractModel {
     private Long Scope;
 
     /**
-    * List of affected host QUUIDs
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Affected host quuid list
     */
     @SerializedName("Quuids")
     @Expose
@@ -53,8 +52,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long FlagshipCount;
 
     /**
-    * List of affected host IDs
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Affected host ID list.
     */
     @SerializedName("InstanceIds")
     @Expose
@@ -68,8 +66,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long AutoInclude;
 
     /**
-    * List of excluded host IDs
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Excluded host ID list.
     */
     @SerializedName("ExcludeInstanceIds")
     @Expose
@@ -115,20 +112,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get List of affected host QUUIDs
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Quuids List of affected host QUUIDs
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Affected host quuid list 
+     * @return Quuids Affected host quuid list
      */
     public String [] getQuuids() {
         return this.Quuids;
     }
 
     /**
-     * Set List of affected host QUUIDs
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Quuids List of affected host QUUIDs
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Affected host quuid list
+     * @param Quuids Affected host quuid list
      */
     public void setQuuids(String [] Quuids) {
         this.Quuids = Quuids;
@@ -151,20 +144,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get List of affected host IDs
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return InstanceIds List of affected host IDs
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Affected host ID list. 
+     * @return InstanceIds Affected host ID list.
      */
     public String [] getInstanceIds() {
         return this.InstanceIds;
     }
 
     /**
-     * Set List of affected host IDs
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param InstanceIds List of affected host IDs
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Affected host ID list.
+     * @param InstanceIds Affected host ID list.
      */
     public void setInstanceIds(String [] InstanceIds) {
         this.InstanceIds = InstanceIds;
@@ -187,20 +176,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get List of excluded host IDs
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ExcludeInstanceIds List of excluded host IDs
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Excluded host ID list. 
+     * @return ExcludeInstanceIds Excluded host ID list.
      */
     public String [] getExcludeInstanceIds() {
         return this.ExcludeInstanceIds;
     }
 
     /**
-     * Set List of excluded host IDs
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ExcludeInstanceIds List of excluded host IDs
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Excluded host ID list.
+     * @param ExcludeInstanceIds Excluded host ID list.
      */
     public void setExcludeInstanceIds(String [] ExcludeInstanceIds) {
         this.ExcludeInstanceIds = ExcludeInstanceIds;

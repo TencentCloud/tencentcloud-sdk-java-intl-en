@@ -31,6 +31,13 @@ public class DescribeSearchExportListRequest extends AbstractModel {
     private String Query;
 
     /**
+    * Log Type List
+    */
+    @SerializedName("LogTypes")
+    @Expose
+    private String [] LogTypes;
+
+    /**
      * Get ES query condition in JSON 
      * @return Query ES query condition in JSON
      */
@@ -46,6 +53,22 @@ public class DescribeSearchExportListRequest extends AbstractModel {
         this.Query = Query;
     }
 
+    /**
+     * Get Log Type List 
+     * @return LogTypes Log Type List
+     */
+    public String [] getLogTypes() {
+        return this.LogTypes;
+    }
+
+    /**
+     * Set Log Type List
+     * @param LogTypes Log Type List
+     */
+    public void setLogTypes(String [] LogTypes) {
+        this.LogTypes = LogTypes;
+    }
+
     public DescribeSearchExportListRequest() {
     }
 
@@ -57,6 +80,12 @@ public class DescribeSearchExportListRequest extends AbstractModel {
         if (source.Query != null) {
             this.Query = new String(source.Query);
         }
+        if (source.LogTypes != null) {
+            this.LogTypes = new String[source.LogTypes.length];
+            for (int i = 0; i < source.LogTypes.length; i++) {
+                this.LogTypes[i] = new String(source.LogTypes[i]);
+            }
+        }
     }
 
 
@@ -65,6 +94,7 @@ public class DescribeSearchExportListRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Query", this.Query);
+        this.setParamArraySimple(map, prefix + "LogTypes.", this.LogTypes);
 
     }
 }

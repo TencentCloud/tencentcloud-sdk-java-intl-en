@@ -25,7 +25,6 @@ public class DescribeScanScheduleResponse extends AbstractModel {
 
     /**
     * Detection progress
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Schedule")
     @Expose
@@ -39,10 +38,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Detection progress
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Detection progress 
      * @return Schedule Detection progress
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getSchedule() {
         return this.Schedule;
@@ -50,9 +47,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Detection progress
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Schedule Detection progress
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setSchedule(Long Schedule) {
         this.Schedule = Schedule;

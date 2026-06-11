@@ -46,7 +46,13 @@ public class DescribeBashRulesRequest extends AbstractModel {
 
     /**
     * Filter criteria
-<li>Keywords - String - required: no - keyword (rule name)</li>
+<li>Name - String - required: no - rule name</li>
+<li>Rule - String - Required: no - Rule content</li>
+<li>Level - Int - required: no - threat level</li>
+<li>White - Int - Required: no - Type of allowlist</li>
+<li>RuleCategory - Int - required: no - policy type</li>
+<li>BashAction - Int - required: no - action</li>
+<li>Status - Int - required: no - effective status</li>
     */
     @SerializedName("Filters")
     @Expose
@@ -102,9 +108,21 @@ public class DescribeBashRulesRequest extends AbstractModel {
 
     /**
      * Get Filter criteria
-<li>Keywords - String - required: no - keyword (rule name)</li> 
+<li>Name - String - required: no - rule name</li>
+<li>Rule - String - Required: no - Rule content</li>
+<li>Level - Int - required: no - threat level</li>
+<li>White - Int - Required: no - Type of allowlist</li>
+<li>RuleCategory - Int - required: no - policy type</li>
+<li>BashAction - Int - required: no - action</li>
+<li>Status - Int - required: no - effective status</li> 
      * @return Filters Filter criteria
-<li>Keywords - String - required: no - keyword (rule name)</li>
+<li>Name - String - required: no - rule name</li>
+<li>Rule - String - Required: no - Rule content</li>
+<li>Level - Int - required: no - threat level</li>
+<li>White - Int - Required: no - Type of allowlist</li>
+<li>RuleCategory - Int - required: no - policy type</li>
+<li>BashAction - Int - required: no - action</li>
+<li>Status - Int - required: no - effective status</li>
      */
     public Filter [] getFilters() {
         return this.Filters;
@@ -112,9 +130,21 @@ public class DescribeBashRulesRequest extends AbstractModel {
 
     /**
      * Set Filter criteria
-<li>Keywords - String - required: no - keyword (rule name)</li>
+<li>Name - String - required: no - rule name</li>
+<li>Rule - String - Required: no - Rule content</li>
+<li>Level - Int - required: no - threat level</li>
+<li>White - Int - Required: no - Type of allowlist</li>
+<li>RuleCategory - Int - required: no - policy type</li>
+<li>BashAction - Int - required: no - action</li>
+<li>Status - Int - required: no - effective status</li>
      * @param Filters Filter criteria
-<li>Keywords - String - required: no - keyword (rule name)</li>
+<li>Name - String - required: no - rule name</li>
+<li>Rule - String - Required: no - Rule content</li>
+<li>Level - Int - required: no - threat level</li>
+<li>White - Int - Required: no - Type of allowlist</li>
+<li>RuleCategory - Int - required: no - policy type</li>
+<li>BashAction - Int - required: no - action</li>
+<li>Status - Int - required: no - effective status</li>
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;

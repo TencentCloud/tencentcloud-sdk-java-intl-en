@@ -31,8 +31,7 @@ public class DescribeComplianceAssetListResponse extends AbstractModel {
     private Long TotalCount;
 
     /**
-    * List of assets
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Return a list of various assets.
     */
     @SerializedName("AssetInfoList")
     @Expose
@@ -62,20 +61,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get List of assets
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return AssetInfoList List of assets
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Return a list of various assets. 
+     * @return AssetInfoList Return a list of various assets.
      */
     public ComplianceAssetInfo [] getAssetInfoList() {
         return this.AssetInfoList;
     }
 
     /**
-     * Set List of assets
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param AssetInfoList List of assets
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Return a list of various assets.
+     * @param AssetInfoList Return a list of various assets.
      */
     public void setAssetInfoList(ComplianceAssetInfo [] AssetInfoList) {
         this.AssetInfoList = AssetInfoList;

@@ -123,15 +123,13 @@ public class ImageRepoInfo extends AbstractModel {
 
     /**
     * Trojan scan error
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ScanVirusError")
     @Expose
     private String ScanVirusError;
 
     /**
-    * Vulnerability scan error
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Vulnerability scan error.
     */
     @SerializedName("ScanVulError")
     @Expose
@@ -159,64 +157,56 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String Namespace;
 
     /**
-    * High-risk scan error
-Note: This field may return null, indicating that no valid values can be obtained.
+    * High risk scan error
     */
     @SerializedName("ScanRiskError")
     @Expose
     private String ScanRiskError;
 
     /**
-    * Sensitive data scanning progress
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Sensitive information scan progress
     */
     @SerializedName("ScanVirusProgress")
     @Expose
     private Long ScanVirusProgress;
 
     /**
-    * Trojan scanning progress
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Trojan scan progress.
     */
     @SerializedName("ScanVulProgress")
     @Expose
     private Long ScanVulProgress;
 
     /**
-    * Vulnerability scanning progress
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Vulnerability scan progress.
     */
     @SerializedName("ScanRiskProgress")
     @Expose
     private Long ScanRiskProgress;
 
     /**
-    * Remaining scan time in seconds
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Remaining scan time (seconds)
     */
     @SerializedName("ScanRemainTime")
     @Expose
     private Long ScanRemainTime;
 
     /**
-    * CVE scanning status
-Note: This field may return null, indicating that no valid values can be obtained.
+    * cve scan status
     */
     @SerializedName("CveStatus")
     @Expose
     private String CveStatus;
 
     /**
-    * High-risk scanning status
-Note: This field may return null, indicating that no valid values can be obtained.
+    * High risk scan status
     */
     @SerializedName("RiskStatus")
     @Expose
     private String RiskStatus;
 
     /**
-    * Trojan scanning status
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Trojan scan status
     */
     @SerializedName("VirusStatus")
     @Expose
@@ -224,7 +214,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Overall progress
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Progress")
     @Expose
@@ -252,28 +241,109 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long Id;
 
     /**
-    * Image ID
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Image ID.
     */
     @SerializedName("ImageId")
     @Expose
     private String ImageId;
 
     /**
-    * Image creation time
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Image Creation Time
     */
     @SerializedName("ImageCreateTime")
     @Expose
     private String ImageCreateTime;
 
     /**
-    * Whether it is the latest image tag
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Whether the Latest Version of the Image
     */
     @SerializedName("IsLatestImage")
     @Expose
     private Boolean IsLatestImage;
+
+    /**
+    * 
+    */
+    @SerializedName("LowLevelVulCnt")
+    @Expose
+    private Long LowLevelVulCnt;
+
+    /**
+    * 
+    */
+    @SerializedName("MediumLevelVulCnt")
+    @Expose
+    private Long MediumLevelVulCnt;
+
+    /**
+    * 
+    */
+    @SerializedName("HighLevelVulCnt")
+    @Expose
+    private Long HighLevelVulCnt;
+
+    /**
+    * 
+    */
+    @SerializedName("CriticalLevelVulCnt")
+    @Expose
+    private Long CriticalLevelVulCnt;
+
+    /**
+    * 
+    */
+    @SerializedName("ContainerCnt")
+    @Expose
+    private Long ContainerCnt;
+
+    /**
+    * 
+    */
+    @SerializedName("ComponentCnt")
+    @Expose
+    private Long ComponentCnt;
+
+    /**
+    * 
+    */
+    @SerializedName("IsRunning")
+    @Expose
+    private Boolean IsRunning;
+
+    /**
+    * 
+    */
+    @SerializedName("HasNeedFixVul")
+    @Expose
+    private Boolean HasNeedFixVul;
+
+    /**
+    * Sensitive information
+    */
+    @SerializedName("SensitiveInfoCnt")
+    @Expose
+    private Long SensitiveInfoCnt;
+
+    /**
+    * 
+    */
+    @SerializedName("RecommendedFix")
+    @Expose
+    private Boolean RecommendedFix;
+
+    /**
+    * Solution
+    */
+    @SerializedName("Solution")
+    @Expose
+    private String Solution;
+
+    /**
+    * <p>Reason.</p>
+    */
+    @SerializedName("Reason")
+    @Expose
+    private String Reason;
 
     /**
      * Get Image digest 
@@ -504,10 +574,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Trojan scan error
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Trojan scan error 
      * @return ScanVirusError Trojan scan error
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getScanVirusError() {
         return this.ScanVirusError;
@@ -515,29 +583,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Trojan scan error
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param ScanVirusError Trojan scan error
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setScanVirusError(String ScanVirusError) {
         this.ScanVirusError = ScanVirusError;
     }
 
     /**
-     * Get Vulnerability scan error
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ScanVulError Vulnerability scan error
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Vulnerability scan error. 
+     * @return ScanVulError Vulnerability scan error.
      */
     public String getScanVulError() {
         return this.ScanVulError;
     }
 
     /**
-     * Set Vulnerability scan error
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ScanVulError Vulnerability scan error
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Vulnerability scan error.
+     * @param ScanVulError Vulnerability scan error.
      */
     public void setScanVulError(String ScanVulError) {
         this.ScanVulError = ScanVulError;
@@ -592,170 +654,136 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get High-risk scan error
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ScanRiskError High-risk scan error
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get High risk scan error 
+     * @return ScanRiskError High risk scan error
      */
     public String getScanRiskError() {
         return this.ScanRiskError;
     }
 
     /**
-     * Set High-risk scan error
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ScanRiskError High-risk scan error
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set High risk scan error
+     * @param ScanRiskError High risk scan error
      */
     public void setScanRiskError(String ScanRiskError) {
         this.ScanRiskError = ScanRiskError;
     }
 
     /**
-     * Get Sensitive data scanning progress
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ScanVirusProgress Sensitive data scanning progress
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Sensitive information scan progress 
+     * @return ScanVirusProgress Sensitive information scan progress
      */
     public Long getScanVirusProgress() {
         return this.ScanVirusProgress;
     }
 
     /**
-     * Set Sensitive data scanning progress
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ScanVirusProgress Sensitive data scanning progress
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Sensitive information scan progress
+     * @param ScanVirusProgress Sensitive information scan progress
      */
     public void setScanVirusProgress(Long ScanVirusProgress) {
         this.ScanVirusProgress = ScanVirusProgress;
     }
 
     /**
-     * Get Trojan scanning progress
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ScanVulProgress Trojan scanning progress
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Trojan scan progress. 
+     * @return ScanVulProgress Trojan scan progress.
      */
     public Long getScanVulProgress() {
         return this.ScanVulProgress;
     }
 
     /**
-     * Set Trojan scanning progress
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ScanVulProgress Trojan scanning progress
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Trojan scan progress.
+     * @param ScanVulProgress Trojan scan progress.
      */
     public void setScanVulProgress(Long ScanVulProgress) {
         this.ScanVulProgress = ScanVulProgress;
     }
 
     /**
-     * Get Vulnerability scanning progress
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ScanRiskProgress Vulnerability scanning progress
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Vulnerability scan progress. 
+     * @return ScanRiskProgress Vulnerability scan progress.
      */
     public Long getScanRiskProgress() {
         return this.ScanRiskProgress;
     }
 
     /**
-     * Set Vulnerability scanning progress
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ScanRiskProgress Vulnerability scanning progress
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Vulnerability scan progress.
+     * @param ScanRiskProgress Vulnerability scan progress.
      */
     public void setScanRiskProgress(Long ScanRiskProgress) {
         this.ScanRiskProgress = ScanRiskProgress;
     }
 
     /**
-     * Get Remaining scan time in seconds
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ScanRemainTime Remaining scan time in seconds
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Remaining scan time (seconds) 
+     * @return ScanRemainTime Remaining scan time (seconds)
      */
     public Long getScanRemainTime() {
         return this.ScanRemainTime;
     }
 
     /**
-     * Set Remaining scan time in seconds
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ScanRemainTime Remaining scan time in seconds
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Remaining scan time (seconds)
+     * @param ScanRemainTime Remaining scan time (seconds)
      */
     public void setScanRemainTime(Long ScanRemainTime) {
         this.ScanRemainTime = ScanRemainTime;
     }
 
     /**
-     * Get CVE scanning status
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return CveStatus CVE scanning status
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get cve scan status 
+     * @return CveStatus cve scan status
      */
     public String getCveStatus() {
         return this.CveStatus;
     }
 
     /**
-     * Set CVE scanning status
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param CveStatus CVE scanning status
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set cve scan status
+     * @param CveStatus cve scan status
      */
     public void setCveStatus(String CveStatus) {
         this.CveStatus = CveStatus;
     }
 
     /**
-     * Get High-risk scanning status
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return RiskStatus High-risk scanning status
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get High risk scan status 
+     * @return RiskStatus High risk scan status
      */
     public String getRiskStatus() {
         return this.RiskStatus;
     }
 
     /**
-     * Set High-risk scanning status
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param RiskStatus High-risk scanning status
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set High risk scan status
+     * @param RiskStatus High risk scan status
      */
     public void setRiskStatus(String RiskStatus) {
         this.RiskStatus = RiskStatus;
     }
 
     /**
-     * Get Trojan scanning status
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return VirusStatus Trojan scanning status
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Trojan scan status 
+     * @return VirusStatus Trojan scan status
      */
     public String getVirusStatus() {
         return this.VirusStatus;
     }
 
     /**
-     * Set Trojan scanning status
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param VirusStatus Trojan scanning status
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Trojan scan status
+     * @param VirusStatus Trojan scan status
      */
     public void setVirusStatus(String VirusStatus) {
         this.VirusStatus = VirusStatus;
     }
 
     /**
-     * Get Overall progress
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Overall progress 
      * @return Progress Overall progress
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getProgress() {
         return this.Progress;
@@ -763,9 +791,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Overall progress
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Progress Overall progress
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setProgress(Long Progress) {
         this.Progress = Progress;
@@ -820,63 +846,243 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Image ID
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ImageId Image ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Image ID. 
+     * @return ImageId Image ID.
      */
     public String getImageId() {
         return this.ImageId;
     }
 
     /**
-     * Set Image ID
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ImageId Image ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Image ID.
+     * @param ImageId Image ID.
      */
     public void setImageId(String ImageId) {
         this.ImageId = ImageId;
     }
 
     /**
-     * Get Image creation time
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ImageCreateTime Image creation time
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Image Creation Time 
+     * @return ImageCreateTime Image Creation Time
      */
     public String getImageCreateTime() {
         return this.ImageCreateTime;
     }
 
     /**
-     * Set Image creation time
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ImageCreateTime Image creation time
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Image Creation Time
+     * @param ImageCreateTime Image Creation Time
      */
     public void setImageCreateTime(String ImageCreateTime) {
         this.ImageCreateTime = ImageCreateTime;
     }
 
     /**
-     * Get Whether it is the latest image tag
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return IsLatestImage Whether it is the latest image tag
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Whether the Latest Version of the Image 
+     * @return IsLatestImage Whether the Latest Version of the Image
      */
     public Boolean getIsLatestImage() {
         return this.IsLatestImage;
     }
 
     /**
-     * Set Whether it is the latest image tag
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param IsLatestImage Whether it is the latest image tag
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Whether the Latest Version of the Image
+     * @param IsLatestImage Whether the Latest Version of the Image
      */
     public void setIsLatestImage(Boolean IsLatestImage) {
         this.IsLatestImage = IsLatestImage;
+    }
+
+    /**
+     * Get  
+     * @return LowLevelVulCnt 
+     */
+    public Long getLowLevelVulCnt() {
+        return this.LowLevelVulCnt;
+    }
+
+    /**
+     * Set 
+     * @param LowLevelVulCnt 
+     */
+    public void setLowLevelVulCnt(Long LowLevelVulCnt) {
+        this.LowLevelVulCnt = LowLevelVulCnt;
+    }
+
+    /**
+     * Get  
+     * @return MediumLevelVulCnt 
+     */
+    public Long getMediumLevelVulCnt() {
+        return this.MediumLevelVulCnt;
+    }
+
+    /**
+     * Set 
+     * @param MediumLevelVulCnt 
+     */
+    public void setMediumLevelVulCnt(Long MediumLevelVulCnt) {
+        this.MediumLevelVulCnt = MediumLevelVulCnt;
+    }
+
+    /**
+     * Get  
+     * @return HighLevelVulCnt 
+     */
+    public Long getHighLevelVulCnt() {
+        return this.HighLevelVulCnt;
+    }
+
+    /**
+     * Set 
+     * @param HighLevelVulCnt 
+     */
+    public void setHighLevelVulCnt(Long HighLevelVulCnt) {
+        this.HighLevelVulCnt = HighLevelVulCnt;
+    }
+
+    /**
+     * Get  
+     * @return CriticalLevelVulCnt 
+     */
+    public Long getCriticalLevelVulCnt() {
+        return this.CriticalLevelVulCnt;
+    }
+
+    /**
+     * Set 
+     * @param CriticalLevelVulCnt 
+     */
+    public void setCriticalLevelVulCnt(Long CriticalLevelVulCnt) {
+        this.CriticalLevelVulCnt = CriticalLevelVulCnt;
+    }
+
+    /**
+     * Get  
+     * @return ContainerCnt 
+     */
+    public Long getContainerCnt() {
+        return this.ContainerCnt;
+    }
+
+    /**
+     * Set 
+     * @param ContainerCnt 
+     */
+    public void setContainerCnt(Long ContainerCnt) {
+        this.ContainerCnt = ContainerCnt;
+    }
+
+    /**
+     * Get  
+     * @return ComponentCnt 
+     */
+    public Long getComponentCnt() {
+        return this.ComponentCnt;
+    }
+
+    /**
+     * Set 
+     * @param ComponentCnt 
+     */
+    public void setComponentCnt(Long ComponentCnt) {
+        this.ComponentCnt = ComponentCnt;
+    }
+
+    /**
+     * Get  
+     * @return IsRunning 
+     */
+    public Boolean getIsRunning() {
+        return this.IsRunning;
+    }
+
+    /**
+     * Set 
+     * @param IsRunning 
+     */
+    public void setIsRunning(Boolean IsRunning) {
+        this.IsRunning = IsRunning;
+    }
+
+    /**
+     * Get  
+     * @return HasNeedFixVul 
+     */
+    public Boolean getHasNeedFixVul() {
+        return this.HasNeedFixVul;
+    }
+
+    /**
+     * Set 
+     * @param HasNeedFixVul 
+     */
+    public void setHasNeedFixVul(Boolean HasNeedFixVul) {
+        this.HasNeedFixVul = HasNeedFixVul;
+    }
+
+    /**
+     * Get Sensitive information 
+     * @return SensitiveInfoCnt Sensitive information
+     */
+    public Long getSensitiveInfoCnt() {
+        return this.SensitiveInfoCnt;
+    }
+
+    /**
+     * Set Sensitive information
+     * @param SensitiveInfoCnt Sensitive information
+     */
+    public void setSensitiveInfoCnt(Long SensitiveInfoCnt) {
+        this.SensitiveInfoCnt = SensitiveInfoCnt;
+    }
+
+    /**
+     * Get  
+     * @return RecommendedFix 
+     */
+    public Boolean getRecommendedFix() {
+        return this.RecommendedFix;
+    }
+
+    /**
+     * Set 
+     * @param RecommendedFix 
+     */
+    public void setRecommendedFix(Boolean RecommendedFix) {
+        this.RecommendedFix = RecommendedFix;
+    }
+
+    /**
+     * Get Solution 
+     * @return Solution Solution
+     */
+    public String getSolution() {
+        return this.Solution;
+    }
+
+    /**
+     * Set Solution
+     * @param Solution Solution
+     */
+    public void setSolution(String Solution) {
+        this.Solution = Solution;
+    }
+
+    /**
+     * Get <p>Reason.</p> 
+     * @return Reason <p>Reason.</p>
+     */
+    public String getReason() {
+        return this.Reason;
+    }
+
+    /**
+     * Set <p>Reason.</p>
+     * @param Reason <p>Reason.</p>
+     */
+    public void setReason(String Reason) {
+        this.Reason = Reason;
     }
 
     public ImageRepoInfo() {
@@ -989,6 +1195,42 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.IsLatestImage != null) {
             this.IsLatestImage = new Boolean(source.IsLatestImage);
         }
+        if (source.LowLevelVulCnt != null) {
+            this.LowLevelVulCnt = new Long(source.LowLevelVulCnt);
+        }
+        if (source.MediumLevelVulCnt != null) {
+            this.MediumLevelVulCnt = new Long(source.MediumLevelVulCnt);
+        }
+        if (source.HighLevelVulCnt != null) {
+            this.HighLevelVulCnt = new Long(source.HighLevelVulCnt);
+        }
+        if (source.CriticalLevelVulCnt != null) {
+            this.CriticalLevelVulCnt = new Long(source.CriticalLevelVulCnt);
+        }
+        if (source.ContainerCnt != null) {
+            this.ContainerCnt = new Long(source.ContainerCnt);
+        }
+        if (source.ComponentCnt != null) {
+            this.ComponentCnt = new Long(source.ComponentCnt);
+        }
+        if (source.IsRunning != null) {
+            this.IsRunning = new Boolean(source.IsRunning);
+        }
+        if (source.HasNeedFixVul != null) {
+            this.HasNeedFixVul = new Boolean(source.HasNeedFixVul);
+        }
+        if (source.SensitiveInfoCnt != null) {
+            this.SensitiveInfoCnt = new Long(source.SensitiveInfoCnt);
+        }
+        if (source.RecommendedFix != null) {
+            this.RecommendedFix = new Boolean(source.RecommendedFix);
+        }
+        if (source.Solution != null) {
+            this.Solution = new String(source.Solution);
+        }
+        if (source.Reason != null) {
+            this.Reason = new String(source.Reason);
+        }
     }
 
 
@@ -1030,6 +1272,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "ImageId", this.ImageId);
         this.setParamSimple(map, prefix + "ImageCreateTime", this.ImageCreateTime);
         this.setParamSimple(map, prefix + "IsLatestImage", this.IsLatestImage);
+        this.setParamSimple(map, prefix + "LowLevelVulCnt", this.LowLevelVulCnt);
+        this.setParamSimple(map, prefix + "MediumLevelVulCnt", this.MediumLevelVulCnt);
+        this.setParamSimple(map, prefix + "HighLevelVulCnt", this.HighLevelVulCnt);
+        this.setParamSimple(map, prefix + "CriticalLevelVulCnt", this.CriticalLevelVulCnt);
+        this.setParamSimple(map, prefix + "ContainerCnt", this.ContainerCnt);
+        this.setParamSimple(map, prefix + "ComponentCnt", this.ComponentCnt);
+        this.setParamSimple(map, prefix + "IsRunning", this.IsRunning);
+        this.setParamSimple(map, prefix + "HasNeedFixVul", this.HasNeedFixVul);
+        this.setParamSimple(map, prefix + "SensitiveInfoCnt", this.SensitiveInfoCnt);
+        this.setParamSimple(map, prefix + "RecommendedFix", this.RecommendedFix);
+        this.setParamSimple(map, prefix + "Solution", this.Solution);
+        this.setParamSimple(map, prefix + "Reason", this.Reason);
 
     }
 }

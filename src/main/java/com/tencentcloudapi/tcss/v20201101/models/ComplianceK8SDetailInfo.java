@@ -24,56 +24,46 @@ import java.util.HashMap;
 public class ComplianceK8SDetailInfo extends AbstractModel {
 
     /**
-    * K8s cluster name
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Name of the K8S cluster.
     */
     @SerializedName("ClusterName")
     @Expose
     private String ClusterName;
 
     /**
-    * K8s cluster version
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Kubernetes Cluster Version
     */
     @SerializedName("ClusterVersion")
     @Expose
     private String ClusterVersion;
 
     /**
-     * Get K8s cluster name
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ClusterName K8s cluster name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Name of the K8S cluster. 
+     * @return ClusterName Name of the K8S cluster.
      */
     public String getClusterName() {
         return this.ClusterName;
     }
 
     /**
-     * Set K8s cluster name
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ClusterName K8s cluster name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Name of the K8S cluster.
+     * @param ClusterName Name of the K8S cluster.
      */
     public void setClusterName(String ClusterName) {
         this.ClusterName = ClusterName;
     }
 
     /**
-     * Get K8s cluster version
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ClusterVersion K8s cluster version
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Kubernetes Cluster Version 
+     * @return ClusterVersion Kubernetes Cluster Version
      */
     public String getClusterVersion() {
         return this.ClusterVersion;
     }
 
     /**
-     * Set K8s cluster version
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ClusterVersion K8s cluster version
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Kubernetes Cluster Version
+     * @param ClusterVersion Kubernetes Cluster Version
      */
     public void setClusterVersion(String ClusterVersion) {
         this.ClusterVersion = ClusterVersion;

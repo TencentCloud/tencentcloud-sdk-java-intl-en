@@ -277,7 +277,9 @@ public class FunctionLog extends AbstractModel {
     /**
      * Get Log level 
      * @return Level Log level
+     * @deprecated
      */
+    @Deprecated
     public String getLevel() {
         return this.Level;
     }
@@ -285,7 +287,9 @@ public class FunctionLog extends AbstractModel {
     /**
      * Set Log level
      * @param Level Log level
+     * @deprecated
      */
+    @Deprecated
     public void setLevel(String Level) {
         this.Level = Level;
     }
@@ -293,7 +297,9 @@ public class FunctionLog extends AbstractModel {
     /**
      * Get Log source 
      * @return Source Log source
+     * @deprecated
      */
+    @Deprecated
     public String getSource() {
         return this.Source;
     }
@@ -301,7 +307,9 @@ public class FunctionLog extends AbstractModel {
     /**
      * Set Log source
      * @param Source Log source
+     * @deprecated
      */
+    @Deprecated
     public void setSource(String Source) {
         this.Source = Source;
     }

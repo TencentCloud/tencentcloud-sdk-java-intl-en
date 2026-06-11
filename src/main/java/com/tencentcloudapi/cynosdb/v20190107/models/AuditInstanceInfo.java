@@ -31,7 +31,7 @@ public class AuditInstanceInfo extends AbstractModel {
     private Long ProjectId;
 
     /**
-    * Tag information
+    * Tag information.
     */
     @SerializedName("TagList")
     @Expose
@@ -54,16 +54,16 @@ public class AuditInstanceInfo extends AbstractModel {
     }
 
     /**
-     * Get Tag information 
-     * @return TagList Tag information
+     * Get Tag information. 
+     * @return TagList Tag information.
      */
     public Tag [] getTagList() {
         return this.TagList;
     }
 
     /**
-     * Set Tag information
-     * @param TagList Tag information
+     * Set Tag information.
+     * @param TagList Tag information.
      */
     public void setTagList(Tag [] TagList) {
         this.TagList = TagList;

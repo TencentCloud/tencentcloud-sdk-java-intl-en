@@ -25,7 +25,6 @@ public class DescribeAttackStatisticsResponse extends AbstractModel {
 
     /**
     * Total Number of Attacks
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("PendingAttackCount")
     @Expose
@@ -33,7 +32,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Total Attack Attempts
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("PendingTryAttackCount")
     @Expose
@@ -41,7 +39,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Total Number of Successful Attacks
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("PendingSuccAttackCount")
     @Expose
@@ -49,7 +46,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Number of New Attacks Today
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("PendingNewAttackCount")
     @Expose
@@ -57,7 +53,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Total Number of Assets Under Attack
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("AttackedAssetCount")
     @Expose
@@ -65,7 +60,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Number of New Attacked Assets Today
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("NewAttackedAssetCount")
     @Expose
@@ -73,7 +67,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Total Number of Attacked Ports
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("AttackedPortCount")
     @Expose
@@ -81,7 +74,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Number of New Attacked Ports Today
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("NewAttackedPortCount")
     @Expose
@@ -89,7 +81,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Total Number of Attack Source IPs
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("AttackSrcIpCount")
     @Expose
@@ -97,7 +88,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Number of New Attacking Source IPs Today
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("NewAttackSrcIpCount")
     @Expose
@@ -111,10 +101,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Total Number of Attacks
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Total Number of Attacks 
      * @return PendingAttackCount Total Number of Attacks
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getPendingAttackCount() {
         return this.PendingAttackCount;
@@ -122,19 +110,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Total Number of Attacks
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param PendingAttackCount Total Number of Attacks
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setPendingAttackCount(Long PendingAttackCount) {
         this.PendingAttackCount = PendingAttackCount;
     }
 
     /**
-     * Get Total Attack Attempts
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Total Attack Attempts 
      * @return PendingTryAttackCount Total Attack Attempts
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getPendingTryAttackCount() {
         return this.PendingTryAttackCount;
@@ -142,19 +126,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Total Attack Attempts
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param PendingTryAttackCount Total Attack Attempts
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setPendingTryAttackCount(Long PendingTryAttackCount) {
         this.PendingTryAttackCount = PendingTryAttackCount;
     }
 
     /**
-     * Get Total Number of Successful Attacks
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Total Number of Successful Attacks 
      * @return PendingSuccAttackCount Total Number of Successful Attacks
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getPendingSuccAttackCount() {
         return this.PendingSuccAttackCount;
@@ -162,19 +142,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Total Number of Successful Attacks
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param PendingSuccAttackCount Total Number of Successful Attacks
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setPendingSuccAttackCount(Long PendingSuccAttackCount) {
         this.PendingSuccAttackCount = PendingSuccAttackCount;
     }
 
     /**
-     * Get Number of New Attacks Today
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Number of New Attacks Today 
      * @return PendingNewAttackCount Number of New Attacks Today
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getPendingNewAttackCount() {
         return this.PendingNewAttackCount;
@@ -182,19 +158,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Number of New Attacks Today
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param PendingNewAttackCount Number of New Attacks Today
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setPendingNewAttackCount(Long PendingNewAttackCount) {
         this.PendingNewAttackCount = PendingNewAttackCount;
     }
 
     /**
-     * Get Total Number of Assets Under Attack
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Total Number of Assets Under Attack 
      * @return AttackedAssetCount Total Number of Assets Under Attack
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getAttackedAssetCount() {
         return this.AttackedAssetCount;
@@ -202,19 +174,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Total Number of Assets Under Attack
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param AttackedAssetCount Total Number of Assets Under Attack
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setAttackedAssetCount(Long AttackedAssetCount) {
         this.AttackedAssetCount = AttackedAssetCount;
     }
 
     /**
-     * Get Number of New Attacked Assets Today
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Number of New Attacked Assets Today 
      * @return NewAttackedAssetCount Number of New Attacked Assets Today
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getNewAttackedAssetCount() {
         return this.NewAttackedAssetCount;
@@ -222,19 +190,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Number of New Attacked Assets Today
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param NewAttackedAssetCount Number of New Attacked Assets Today
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setNewAttackedAssetCount(Long NewAttackedAssetCount) {
         this.NewAttackedAssetCount = NewAttackedAssetCount;
     }
 
     /**
-     * Get Total Number of Attacked Ports
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Total Number of Attacked Ports 
      * @return AttackedPortCount Total Number of Attacked Ports
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getAttackedPortCount() {
         return this.AttackedPortCount;
@@ -242,19 +206,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Total Number of Attacked Ports
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param AttackedPortCount Total Number of Attacked Ports
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setAttackedPortCount(Long AttackedPortCount) {
         this.AttackedPortCount = AttackedPortCount;
     }
 
     /**
-     * Get Number of New Attacked Ports Today
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Number of New Attacked Ports Today 
      * @return NewAttackedPortCount Number of New Attacked Ports Today
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getNewAttackedPortCount() {
         return this.NewAttackedPortCount;
@@ -262,19 +222,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Number of New Attacked Ports Today
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param NewAttackedPortCount Number of New Attacked Ports Today
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setNewAttackedPortCount(Long NewAttackedPortCount) {
         this.NewAttackedPortCount = NewAttackedPortCount;
     }
 
     /**
-     * Get Total Number of Attack Source IPs
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Total Number of Attack Source IPs 
      * @return AttackSrcIpCount Total Number of Attack Source IPs
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getAttackSrcIpCount() {
         return this.AttackSrcIpCount;
@@ -282,19 +238,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Total Number of Attack Source IPs
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param AttackSrcIpCount Total Number of Attack Source IPs
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setAttackSrcIpCount(Long AttackSrcIpCount) {
         this.AttackSrcIpCount = AttackSrcIpCount;
     }
 
     /**
-     * Get Number of New Attacking Source IPs Today
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Number of New Attacking Source IPs Today 
      * @return NewAttackSrcIpCount Number of New Attacking Source IPs Today
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getNewAttackSrcIpCount() {
         return this.NewAttackSrcIpCount;
@@ -302,9 +254,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Number of New Attacking Source IPs Today
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param NewAttackSrcIpCount Number of New Attacking Source IPs Today
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setNewAttackSrcIpCount(Long NewAttackSrcIpCount) {
         this.NewAttackSrcIpCount = NewAttackSrcIpCount;

@@ -24,8 +24,7 @@ import java.util.HashMap;
 public class ImageRisk extends AbstractModel {
 
     /**
-    * High-risk behavior
-Note: This field may return null, indicating that no valid values can be obtained.
+    * high-risk behavior
     */
     @SerializedName("Behavior")
     @Expose
@@ -33,7 +32,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Type
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Type")
     @Expose
@@ -41,7 +39,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Risk level
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Level")
     @Expose
@@ -49,7 +46,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Description
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Desc")
     @Expose
@@ -57,37 +53,30 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Solution
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("InstructionContent")
     @Expose
     private String InstructionContent;
 
     /**
-     * Get High-risk behavior
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Behavior High-risk behavior
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get high-risk behavior 
+     * @return Behavior high-risk behavior
      */
     public Long getBehavior() {
         return this.Behavior;
     }
 
     /**
-     * Set High-risk behavior
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Behavior High-risk behavior
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set high-risk behavior
+     * @param Behavior high-risk behavior
      */
     public void setBehavior(Long Behavior) {
         this.Behavior = Behavior;
     }
 
     /**
-     * Get Type
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Type 
      * @return Type Type
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getType() {
         return this.Type;
@@ -95,19 +84,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Type
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Type Type
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setType(Long Type) {
         this.Type = Type;
     }
 
     /**
-     * Get Risk level
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Risk level 
      * @return Level Risk level
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getLevel() {
         return this.Level;
@@ -115,19 +100,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Risk level
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Level Risk level
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setLevel(String Level) {
         this.Level = Level;
     }
 
     /**
-     * Get Description
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Description 
      * @return Desc Description
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getDesc() {
         return this.Desc;
@@ -135,19 +116,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Description
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Desc Description
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setDesc(String Desc) {
         this.Desc = Desc;
     }
 
     /**
-     * Get Solution
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Solution 
      * @return InstructionContent Solution
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getInstructionContent() {
         return this.InstructionContent;
@@ -155,9 +132,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Solution
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param InstructionContent Solution
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setInstructionContent(String InstructionContent) {
         this.InstructionContent = InstructionContent;

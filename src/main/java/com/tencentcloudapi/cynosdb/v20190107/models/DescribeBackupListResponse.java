@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeBackupListResponse extends AbstractModel {
 
     /**
-    * Total number of backup files
+    * Total number of backup files.
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * Backup file list
+    * Backup file list.
     */
     @SerializedName("BackupList")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeBackupListResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Total number of backup files 
-     * @return TotalCount Total number of backup files
+     * Get Total number of backup files. 
+     * @return TotalCount Total number of backup files.
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set Total number of backup files
-     * @param TotalCount Total number of backup files
+     * Set Total number of backup files.
+     * @param TotalCount Total number of backup files.
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get Backup file list 
-     * @return BackupList Backup file list
+     * Get Backup file list. 
+     * @return BackupList Backup file list.
      */
     public BackupFileInfo [] getBackupList() {
         return this.BackupList;
     }
 
     /**
-     * Set Backup file list
-     * @param BackupList Backup file list
+     * Set Backup file list.
+     * @param BackupList Backup file list.
      */
     public void setBackupList(BackupFileInfo [] BackupList) {
         this.BackupList = BackupList;

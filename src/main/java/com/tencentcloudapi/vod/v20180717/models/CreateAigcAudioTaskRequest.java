@@ -24,6 +24,13 @@ import java.util.HashMap;
 public class CreateAigcAudioTaskRequest extends AbstractModel {
 
     /**
+    * <p>VOD app ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created application).</p>
+    */
+    @SerializedName("SubAppId")
+    @Expose
+    private Long SubAppId;
+
+    /**
     * <p>Model name.</p>
     */
     @SerializedName("ModelName")
@@ -38,7 +45,7 @@ public class CreateAigcAudioTaskRequest extends AbstractModel {
     private String ModelVersion;
 
     /**
-    * <p>Designated scenarios currently support sfx (sound effects).</p>
+    * <p>Designated scenarios currently support sfx (sound effects) and music.</p>
     */
     @SerializedName("SceneType")
     @Expose
@@ -80,6 +87,22 @@ public class CreateAigcAudioTaskRequest extends AbstractModel {
     private String AdditionalParameters;
 
     /**
+     * Get <p>VOD app ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created application).</p> 
+     * @return SubAppId <p>VOD app ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created application).</p>
+     */
+    public Long getSubAppId() {
+        return this.SubAppId;
+    }
+
+    /**
+     * Set <p>VOD app ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created application).</p>
+     * @param SubAppId <p>VOD app ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created application).</p>
+     */
+    public void setSubAppId(Long SubAppId) {
+        this.SubAppId = SubAppId;
+    }
+
+    /**
      * Get <p>Model name.</p> 
      * @return ModelName <p>Model name.</p>
      */
@@ -112,16 +135,16 @@ public class CreateAigcAudioTaskRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>Designated scenarios currently support sfx (sound effects).</p> 
-     * @return SceneType <p>Designated scenarios currently support sfx (sound effects).</p>
+     * Get <p>Designated scenarios currently support sfx (sound effects) and music.</p> 
+     * @return SceneType <p>Designated scenarios currently support sfx (sound effects) and music.</p>
      */
     public String getSceneType() {
         return this.SceneType;
     }
 
     /**
-     * Set <p>Designated scenarios currently support sfx (sound effects).</p>
-     * @param SceneType <p>Designated scenarios currently support sfx (sound effects).</p>
+     * Set <p>Designated scenarios currently support sfx (sound effects) and music.</p>
+     * @param SceneType <p>Designated scenarios currently support sfx (sound effects) and music.</p>
      */
     public void setSceneType(String SceneType) {
         this.SceneType = SceneType;
@@ -215,6 +238,9 @@ public class CreateAigcAudioTaskRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public CreateAigcAudioTaskRequest(CreateAigcAudioTaskRequest source) {
+        if (source.SubAppId != null) {
+            this.SubAppId = new Long(source.SubAppId);
+        }
         if (source.ModelName != null) {
             this.ModelName = new String(source.ModelName);
         }
@@ -252,6 +278,7 @@ public class CreateAigcAudioTaskRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "SubAppId", this.SubAppId);
         this.setParamSimple(map, prefix + "ModelName", this.ModelName);
         this.setParamSimple(map, prefix + "ModelVersion", this.ModelVersion);
         this.setParamSimple(map, prefix + "SceneType", this.SceneType);

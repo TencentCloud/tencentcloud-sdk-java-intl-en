@@ -25,7 +25,6 @@ public class DescribeAssetPlanTaskListResponse extends AbstractModel {
 
     /**
     * List
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Tasks")
     @Expose
@@ -46,10 +45,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get List
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get List 
      * @return Tasks List
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public AssetPlanTask [] getTasks() {
         return this.Tasks;
@@ -57,9 +54,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set List
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Tasks List
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setTasks(AssetPlanTask [] Tasks) {
         this.Tasks = Tasks;

@@ -32,31 +32,27 @@ public class DescribeComplianceAssetDetailInfoResponse extends AbstractModel {
 
     /**
     * This field is returned when the asset is a container.
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ContainerDetailInfo")
     @Expose
     private ComplianceContainerDetailInfo ContainerDetailInfo;
 
     /**
-    * This field is returned when the asset is an image.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * When the asset is a mirror, return this field.
     */
     @SerializedName("ImageDetailInfo")
     @Expose
     private ComplianceImageDetailInfo ImageDetailInfo;
 
     /**
-    * This field is returned when the asset is a server.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * This field is returned when the asset is a host.
     */
     @SerializedName("HostDetailInfo")
     @Expose
     private ComplianceHostDetailInfo HostDetailInfo;
 
     /**
-    * This field is returned when the asset is a K8s asset.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * When the asset is K8S, return this field.
     */
     @SerializedName("K8SDetailInfo")
     @Expose
@@ -86,10 +82,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get This field is returned when the asset is a container.
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get This field is returned when the asset is a container. 
      * @return ContainerDetailInfo This field is returned when the asset is a container.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public ComplianceContainerDetailInfo getContainerDetailInfo() {
         return this.ContainerDetailInfo;
@@ -97,69 +91,55 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set This field is returned when the asset is a container.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param ContainerDetailInfo This field is returned when the asset is a container.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setContainerDetailInfo(ComplianceContainerDetailInfo ContainerDetailInfo) {
         this.ContainerDetailInfo = ContainerDetailInfo;
     }
 
     /**
-     * Get This field is returned when the asset is an image.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ImageDetailInfo This field is returned when the asset is an image.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get When the asset is a mirror, return this field. 
+     * @return ImageDetailInfo When the asset is a mirror, return this field.
      */
     public ComplianceImageDetailInfo getImageDetailInfo() {
         return this.ImageDetailInfo;
     }
 
     /**
-     * Set This field is returned when the asset is an image.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ImageDetailInfo This field is returned when the asset is an image.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set When the asset is a mirror, return this field.
+     * @param ImageDetailInfo When the asset is a mirror, return this field.
      */
     public void setImageDetailInfo(ComplianceImageDetailInfo ImageDetailInfo) {
         this.ImageDetailInfo = ImageDetailInfo;
     }
 
     /**
-     * Get This field is returned when the asset is a server.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return HostDetailInfo This field is returned when the asset is a server.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get This field is returned when the asset is a host. 
+     * @return HostDetailInfo This field is returned when the asset is a host.
      */
     public ComplianceHostDetailInfo getHostDetailInfo() {
         return this.HostDetailInfo;
     }
 
     /**
-     * Set This field is returned when the asset is a server.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param HostDetailInfo This field is returned when the asset is a server.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set This field is returned when the asset is a host.
+     * @param HostDetailInfo This field is returned when the asset is a host.
      */
     public void setHostDetailInfo(ComplianceHostDetailInfo HostDetailInfo) {
         this.HostDetailInfo = HostDetailInfo;
     }
 
     /**
-     * Get This field is returned when the asset is a K8s asset.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return K8SDetailInfo This field is returned when the asset is a K8s asset.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get When the asset is K8S, return this field. 
+     * @return K8SDetailInfo When the asset is K8S, return this field.
      */
     public ComplianceK8SDetailInfo getK8SDetailInfo() {
         return this.K8SDetailInfo;
     }
 
     /**
-     * Set This field is returned when the asset is a K8s asset.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param K8SDetailInfo This field is returned when the asset is a K8s asset.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set When the asset is K8S, return this field.
+     * @param K8SDetailInfo When the asset is K8S, return this field.
      */
     public void setK8SDetailInfo(ComplianceK8SDetailInfo K8SDetailInfo) {
         this.K8SDetailInfo = K8SDetailInfo;

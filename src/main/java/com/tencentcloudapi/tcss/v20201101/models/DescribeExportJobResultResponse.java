@@ -31,24 +31,21 @@ public class DescribeExportJobResultResponse extends AbstractModel {
     private String ExportStatus;
 
     /**
-    * Download URL
-Note: This field may return null, indicating that no valid values can be obtained.
+    * return download URL
     */
     @SerializedName("DownloadURL")
     @Expose
     private String DownloadURL;
 
     /**
-    * Export progress when `ExportStatus` is `RUNNING`. Value range: Floating points between `0` and `100`.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * When ExportStatus is RUNNING, return the export progress. A floating-point number in the range of 0 to 100.
     */
     @SerializedName("ExportProgress")
     @Expose
     private Float ExportProgress;
 
     /**
-    * Failure cause
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Reason for failure
     */
     @SerializedName("FailureMsg")
     @Expose
@@ -78,60 +75,48 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Download URL
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return DownloadURL Download URL
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get return download URL 
+     * @return DownloadURL return download URL
      */
     public String getDownloadURL() {
         return this.DownloadURL;
     }
 
     /**
-     * Set Download URL
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param DownloadURL Download URL
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set return download URL
+     * @param DownloadURL return download URL
      */
     public void setDownloadURL(String DownloadURL) {
         this.DownloadURL = DownloadURL;
     }
 
     /**
-     * Get Export progress when `ExportStatus` is `RUNNING`. Value range: Floating points between `0` and `100`.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ExportProgress Export progress when `ExportStatus` is `RUNNING`. Value range: Floating points between `0` and `100`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get When ExportStatus is RUNNING, return the export progress. A floating-point number in the range of 0 to 100. 
+     * @return ExportProgress When ExportStatus is RUNNING, return the export progress. A floating-point number in the range of 0 to 100.
      */
     public Float getExportProgress() {
         return this.ExportProgress;
     }
 
     /**
-     * Set Export progress when `ExportStatus` is `RUNNING`. Value range: Floating points between `0` and `100`.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ExportProgress Export progress when `ExportStatus` is `RUNNING`. Value range: Floating points between `0` and `100`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set When ExportStatus is RUNNING, return the export progress. A floating-point number in the range of 0 to 100.
+     * @param ExportProgress When ExportStatus is RUNNING, return the export progress. A floating-point number in the range of 0 to 100.
      */
     public void setExportProgress(Float ExportProgress) {
         this.ExportProgress = ExportProgress;
     }
 
     /**
-     * Get Failure cause
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return FailureMsg Failure cause
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Reason for failure 
+     * @return FailureMsg Reason for failure
      */
     public String getFailureMsg() {
         return this.FailureMsg;
     }
 
     /**
-     * Set Failure cause
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param FailureMsg Failure cause
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Reason for failure
+     * @param FailureMsg Reason for failure
      */
     public void setFailureMsg(String FailureMsg) {
         this.FailureMsg = FailureMsg;

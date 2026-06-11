@@ -24,23 +24,28 @@ import java.util.HashMap;
 public class TopicExtendInfo extends AbstractModel {
 
     /**
-    * Log topic authentication-free configuration information
+    * Log topic authentication-free configuration information.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("AnonymousAccess")
     @Expose
     private AnonymousInfo AnonymousAccess;
 
     /**
-     * Get Log topic authentication-free configuration information 
-     * @return AnonymousAccess Log topic authentication-free configuration information
+     * Get Log topic authentication-free configuration information.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return AnonymousAccess Log topic authentication-free configuration information.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public AnonymousInfo getAnonymousAccess() {
         return this.AnonymousAccess;
     }
 
     /**
-     * Set Log topic authentication-free configuration information
-     * @param AnonymousAccess Log topic authentication-free configuration information
+     * Set Log topic authentication-free configuration information.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param AnonymousAccess Log topic authentication-free configuration information.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setAnonymousAccess(AnonymousInfo AnonymousAccess) {
         this.AnonymousAccess = AnonymousAccess;

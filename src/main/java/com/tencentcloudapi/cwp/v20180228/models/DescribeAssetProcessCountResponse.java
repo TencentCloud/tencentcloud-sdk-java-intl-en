@@ -24,8 +24,7 @@ import java.util.HashMap;
 public class DescribeAssetProcessCountResponse extends AbstractModel {
 
     /**
-    * Number of individual processes
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Number of processes
     */
     @SerializedName("Process")
     @Expose
@@ -39,20 +38,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Number of individual processes
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Process Number of individual processes
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Number of processes 
+     * @return Process Number of processes
      */
     public AssetKeyVal [] getProcess() {
         return this.Process;
     }
 
     /**
-     * Set Number of individual processes
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Process Number of individual processes
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Number of processes
+     * @param Process Number of processes
      */
     public void setProcess(AssetKeyVal [] Process) {
         this.Process = Process;

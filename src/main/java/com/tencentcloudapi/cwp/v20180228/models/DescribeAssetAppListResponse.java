@@ -25,7 +25,6 @@ public class DescribeAssetAppListResponse extends AbstractModel {
 
     /**
     * Application list
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Apps")
     @Expose
@@ -46,10 +45,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Application list
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Application list 
      * @return Apps Application list
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public AssetAppBaseInfo [] getApps() {
         return this.Apps;
@@ -57,9 +54,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Application list
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Apps Application list
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setApps(AssetAppBaseInfo [] Apps) {
         this.Apps = Apps;

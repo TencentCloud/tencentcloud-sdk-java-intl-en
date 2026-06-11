@@ -25,6 +25,7 @@ public class CreateExportRequest extends AbstractModel {
 
     /**
     * Log topic ID
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
     */
     @SerializedName("TopicId")
     @Expose
@@ -80,8 +81,17 @@ public class CreateExportRequest extends AbstractModel {
     private Long SyntaxRule;
 
     /**
-     * Get Log topic ID 
+    * Export fields
+    */
+    @SerializedName("DerivedFields")
+    @Expose
+    private String [] DerivedFields;
+
+    /**
+     * Get Log topic ID
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1). 
      * @return TopicId Log topic ID
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
      */
     public String getTopicId() {
         return this.TopicId;
@@ -89,7 +99,9 @@ public class CreateExportRequest extends AbstractModel {
 
     /**
      * Set Log topic ID
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
      * @param TopicId Log topic ID
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
      */
     public void setTopicId(String TopicId) {
         this.TopicId = TopicId;
@@ -207,6 +219,22 @@ public class CreateExportRequest extends AbstractModel {
         this.SyntaxRule = SyntaxRule;
     }
 
+    /**
+     * Get Export fields 
+     * @return DerivedFields Export fields
+     */
+    public String [] getDerivedFields() {
+        return this.DerivedFields;
+    }
+
+    /**
+     * Set Export fields
+     * @param DerivedFields Export fields
+     */
+    public void setDerivedFields(String [] DerivedFields) {
+        this.DerivedFields = DerivedFields;
+    }
+
     public CreateExportRequest() {
     }
 
@@ -239,6 +267,12 @@ public class CreateExportRequest extends AbstractModel {
         if (source.SyntaxRule != null) {
             this.SyntaxRule = new Long(source.SyntaxRule);
         }
+        if (source.DerivedFields != null) {
+            this.DerivedFields = new String[source.DerivedFields.length];
+            for (int i = 0; i < source.DerivedFields.length; i++) {
+                this.DerivedFields[i] = new String(source.DerivedFields[i]);
+            }
+        }
     }
 
 
@@ -254,6 +288,7 @@ public class CreateExportRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Order", this.Order);
         this.setParamSimple(map, prefix + "Format", this.Format);
         this.setParamSimple(map, prefix + "SyntaxRule", this.SyntaxRule);
+        this.setParamArraySimple(map, prefix + "DerivedFields.", this.DerivedFields);
 
     }
 }

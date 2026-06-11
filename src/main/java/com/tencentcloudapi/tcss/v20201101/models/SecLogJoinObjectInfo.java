@@ -31,16 +31,14 @@ public class SecLogJoinObjectInfo extends AbstractModel {
     private String HostID;
 
     /**
-    * Server name
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Host name
     */
     @SerializedName("HostName")
     @Expose
     private String HostName;
 
     /**
-    * Server IP
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Host IP address
     */
     @SerializedName("HostIP")
     @Expose
@@ -55,23 +53,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Cluster ID
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ClusterID")
     @Expose
     private String ClusterID;
 
     /**
-    * Cluster name
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Cluster name.
     */
     @SerializedName("ClusterName")
     @Expose
     private String ClusterName;
 
     /**
-    * Public IP
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Public IP address
     */
     @SerializedName("PublicIP")
     @Expose
@@ -85,8 +80,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Boolean JoinState;
 
     /**
-    * Cluster version
-Note: This field may return null, indicating that no valid values can be obtained.
+    * cluster edition
     */
     @SerializedName("ClusterVersion")
     @Expose
@@ -98,6 +92,27 @@ Note: This field may return null, indicating that no valid values can be obtaine
     @SerializedName("ClusterMainAddress")
     @Expose
     private String ClusterMainAddress;
+
+    /**
+    * Number of containers
+    */
+    @SerializedName("ContainerCnt")
+    @Expose
+    private Long ContainerCnt;
+
+    /**
+    * Cluster type.
+    */
+    @SerializedName("ClusterType")
+    @Expose
+    private String ClusterType;
+
+    /**
+    * Cluster status
+    */
+    @SerializedName("ClusterStatus")
+    @Expose
+    private String ClusterStatus;
 
     /**
      * Get Server ID 
@@ -116,40 +131,32 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Server name
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return HostName Server name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Host name 
+     * @return HostName Host name
      */
     public String getHostName() {
         return this.HostName;
     }
 
     /**
-     * Set Server name
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param HostName Server name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Host name
+     * @param HostName Host name
      */
     public void setHostName(String HostName) {
         this.HostName = HostName;
     }
 
     /**
-     * Get Server IP
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return HostIP Server IP
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Host IP address 
+     * @return HostIP Host IP address
      */
     public String getHostIP() {
         return this.HostIP;
     }
 
     /**
-     * Set Server IP
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param HostIP Server IP
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Host IP address
+     * @param HostIP Host IP address
      */
     public void setHostIP(String HostIP) {
         this.HostIP = HostIP;
@@ -172,10 +179,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Cluster ID
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Cluster ID 
      * @return ClusterID Cluster ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getClusterID() {
         return this.ClusterID;
@@ -183,49 +188,39 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Cluster ID
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param ClusterID Cluster ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setClusterID(String ClusterID) {
         this.ClusterID = ClusterID;
     }
 
     /**
-     * Get Cluster name
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ClusterName Cluster name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Cluster name. 
+     * @return ClusterName Cluster name.
      */
     public String getClusterName() {
         return this.ClusterName;
     }
 
     /**
-     * Set Cluster name
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ClusterName Cluster name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Cluster name.
+     * @param ClusterName Cluster name.
      */
     public void setClusterName(String ClusterName) {
         this.ClusterName = ClusterName;
     }
 
     /**
-     * Get Public IP
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return PublicIP Public IP
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Public IP address 
+     * @return PublicIP Public IP address
      */
     public String getPublicIP() {
         return this.PublicIP;
     }
 
     /**
-     * Set Public IP
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param PublicIP Public IP
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Public IP address
+     * @param PublicIP Public IP address
      */
     public void setPublicIP(String PublicIP) {
         this.PublicIP = PublicIP;
@@ -248,20 +243,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Cluster version
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ClusterVersion Cluster version
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get cluster edition 
+     * @return ClusterVersion cluster edition
      */
     public String getClusterVersion() {
         return this.ClusterVersion;
     }
 
     /**
-     * Set Cluster version
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ClusterVersion Cluster version
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set cluster edition
+     * @param ClusterVersion cluster edition
      */
     public void setClusterVersion(String ClusterVersion) {
         this.ClusterVersion = ClusterVersion;
@@ -281,6 +272,54 @@ Note: This field may return null, indicating that no valid values can be obtaine
      */
     public void setClusterMainAddress(String ClusterMainAddress) {
         this.ClusterMainAddress = ClusterMainAddress;
+    }
+
+    /**
+     * Get Number of containers 
+     * @return ContainerCnt Number of containers
+     */
+    public Long getContainerCnt() {
+        return this.ContainerCnt;
+    }
+
+    /**
+     * Set Number of containers
+     * @param ContainerCnt Number of containers
+     */
+    public void setContainerCnt(Long ContainerCnt) {
+        this.ContainerCnt = ContainerCnt;
+    }
+
+    /**
+     * Get Cluster type. 
+     * @return ClusterType Cluster type.
+     */
+    public String getClusterType() {
+        return this.ClusterType;
+    }
+
+    /**
+     * Set Cluster type.
+     * @param ClusterType Cluster type.
+     */
+    public void setClusterType(String ClusterType) {
+        this.ClusterType = ClusterType;
+    }
+
+    /**
+     * Get Cluster status 
+     * @return ClusterStatus Cluster status
+     */
+    public String getClusterStatus() {
+        return this.ClusterStatus;
+    }
+
+    /**
+     * Set Cluster status
+     * @param ClusterStatus Cluster status
+     */
+    public void setClusterStatus(String ClusterStatus) {
+        this.ClusterStatus = ClusterStatus;
     }
 
     public SecLogJoinObjectInfo() {
@@ -321,6 +360,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.ClusterMainAddress != null) {
             this.ClusterMainAddress = new String(source.ClusterMainAddress);
         }
+        if (source.ContainerCnt != null) {
+            this.ContainerCnt = new Long(source.ContainerCnt);
+        }
+        if (source.ClusterType != null) {
+            this.ClusterType = new String(source.ClusterType);
+        }
+        if (source.ClusterStatus != null) {
+            this.ClusterStatus = new String(source.ClusterStatus);
+        }
     }
 
 
@@ -338,6 +386,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "JoinState", this.JoinState);
         this.setParamSimple(map, prefix + "ClusterVersion", this.ClusterVersion);
         this.setParamSimple(map, prefix + "ClusterMainAddress", this.ClusterMainAddress);
+        this.setParamSimple(map, prefix + "ContainerCnt", this.ContainerCnt);
+        this.setParamSimple(map, prefix + "ClusterType", this.ClusterType);
+        this.setParamSimple(map, prefix + "ClusterStatus", this.ClusterStatus);
 
     }
 }

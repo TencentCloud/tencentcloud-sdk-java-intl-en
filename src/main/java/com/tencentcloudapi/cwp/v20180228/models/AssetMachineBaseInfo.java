@@ -129,8 +129,7 @@ public class AssetMachineBaseInfo extends AbstractModel {
     private String CpuLoad;
 
     /**
-    * Tag
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Tag.
     */
     @SerializedName("Tag")
     @Expose
@@ -138,7 +137,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Data update time
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("UpdateTime")
     @Expose
@@ -160,15 +158,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Additional information
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("MachineExtraInfo")
     @Expose
     private MachineExtraInfo MachineExtraInfo;
 
     /**
-    * CPU load readings (only valid for Linux systems)
-Note: This field may return null, indicating that no valid values can be obtained.
+    * CPU load readings (only valid for Linux systems).
     */
     @SerializedName("CpuLoadNum")
     @Expose
@@ -415,30 +411,24 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Tag
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Tag Tag
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Tag. 
+     * @return Tag Tag.
      */
     public MachineTag [] getTag() {
         return this.Tag;
     }
 
     /**
-     * Set Tag
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Tag Tag
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Tag.
+     * @param Tag Tag.
      */
     public void setTag(MachineTag [] Tag) {
         this.Tag = Tag;
     }
 
     /**
-     * Get Data update time
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Data update time 
      * @return UpdateTime Data update time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getUpdateTime() {
         return this.UpdateTime;
@@ -446,9 +436,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Data update time
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param UpdateTime Data update time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;
@@ -487,10 +475,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Additional information
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Additional information 
      * @return MachineExtraInfo Additional information
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public MachineExtraInfo getMachineExtraInfo() {
         return this.MachineExtraInfo;
@@ -498,29 +484,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Additional information
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param MachineExtraInfo Additional information
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setMachineExtraInfo(MachineExtraInfo MachineExtraInfo) {
         this.MachineExtraInfo = MachineExtraInfo;
     }
 
     /**
-     * Get CPU load readings (only valid for Linux systems)
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return CpuLoadNum CPU load readings (only valid for Linux systems)
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get CPU load readings (only valid for Linux systems). 
+     * @return CpuLoadNum CPU load readings (only valid for Linux systems).
      */
     public String getCpuLoadNum() {
         return this.CpuLoadNum;
     }
 
     /**
-     * Set CPU load readings (only valid for Linux systems)
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param CpuLoadNum CPU load readings (only valid for Linux systems)
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set CPU load readings (only valid for Linux systems).
+     * @param CpuLoadNum CPU load readings (only valid for Linux systems).
      */
     public void setCpuLoadNum(String CpuLoadNum) {
         this.CpuLoadNum = CpuLoadNum;

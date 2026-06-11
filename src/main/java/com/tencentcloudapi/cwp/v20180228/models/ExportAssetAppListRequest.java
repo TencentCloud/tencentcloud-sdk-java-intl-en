@@ -31,22 +31,7 @@ public class ExportAssetAppListRequest extends AbstractModel {
     private String Quuid;
 
     /**
-    * Filter criteria
-<li>AppName - string - required: no - application name for search</li>
-<li>IP - String - required: no - host IP address</li>
-<li>MachineName - String - required: no - host name</li>
-<li>InstanceID - string - required: no - instance ID</li>
-<li>Type - int - required: no - type	: Linux only
-0: all
-1: operations
-2: database
-3: Security
-4: suspicious application
-5: system architecture
-6: system application
-7: web service
-99: other</li>
-<li>OsType - uint64 - required: no - Windows/Linux</li>
+    * Filtering conditions.<li>AppName - string - required: no - application name for search.</li><li>IP - String - required: no - host IP address.</li><li>MachineName - String - required: no - host name.</li><li>InstanceID - string - required: no - instance ID.</li><li>Type - int - required: no - Type	: for Linux only. 0: all; 1: Ops; 2: database; 3: security; 4: suspicious application; 5: system architecture; 6: system application; 7: web service; 99: others.</li><li>OsType - uint64 - required: no - Windows or Linux.</li>
     */
     @SerializedName("Filters")
     @Expose
@@ -83,76 +68,16 @@ public class ExportAssetAppListRequest extends AbstractModel {
     }
 
     /**
-     * Get Filter criteria
-<li>AppName - string - required: no - application name for search</li>
-<li>IP - String - required: no - host IP address</li>
-<li>MachineName - String - required: no - host name</li>
-<li>InstanceID - string - required: no - instance ID</li>
-<li>Type - int - required: no - type	: Linux only
-0: all
-1: operations
-2: database
-3: Security
-4: suspicious application
-5: system architecture
-6: system application
-7: web service
-99: other</li>
-<li>OsType - uint64 - required: no - Windows/Linux</li> 
-     * @return Filters Filter criteria
-<li>AppName - string - required: no - application name for search</li>
-<li>IP - String - required: no - host IP address</li>
-<li>MachineName - String - required: no - host name</li>
-<li>InstanceID - string - required: no - instance ID</li>
-<li>Type - int - required: no - type	: Linux only
-0: all
-1: operations
-2: database
-3: Security
-4: suspicious application
-5: system architecture
-6: system application
-7: web service
-99: other</li>
-<li>OsType - uint64 - required: no - Windows/Linux</li>
+     * Get Filtering conditions.<li>AppName - string - required: no - application name for search.</li><li>IP - String - required: no - host IP address.</li><li>MachineName - String - required: no - host name.</li><li>InstanceID - string - required: no - instance ID.</li><li>Type - int - required: no - Type	: for Linux only. 0: all; 1: Ops; 2: database; 3: security; 4: suspicious application; 5: system architecture; 6: system application; 7: web service; 99: others.</li><li>OsType - uint64 - required: no - Windows or Linux.</li> 
+     * @return Filters Filtering conditions.<li>AppName - string - required: no - application name for search.</li><li>IP - String - required: no - host IP address.</li><li>MachineName - String - required: no - host name.</li><li>InstanceID - string - required: no - instance ID.</li><li>Type - int - required: no - Type	: for Linux only. 0: all; 1: Ops; 2: database; 3: security; 4: suspicious application; 5: system architecture; 6: system application; 7: web service; 99: others.</li><li>OsType - uint64 - required: no - Windows or Linux.</li>
      */
     public AssetFilters [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set Filter criteria
-<li>AppName - string - required: no - application name for search</li>
-<li>IP - String - required: no - host IP address</li>
-<li>MachineName - String - required: no - host name</li>
-<li>InstanceID - string - required: no - instance ID</li>
-<li>Type - int - required: no - type	: Linux only
-0: all
-1: operations
-2: database
-3: Security
-4: suspicious application
-5: system architecture
-6: system application
-7: web service
-99: other</li>
-<li>OsType - uint64 - required: no - Windows/Linux</li>
-     * @param Filters Filter criteria
-<li>AppName - string - required: no - application name for search</li>
-<li>IP - String - required: no - host IP address</li>
-<li>MachineName - String - required: no - host name</li>
-<li>InstanceID - string - required: no - instance ID</li>
-<li>Type - int - required: no - type	: Linux only
-0: all
-1: operations
-2: database
-3: Security
-4: suspicious application
-5: system architecture
-6: system application
-7: web service
-99: other</li>
-<li>OsType - uint64 - required: no - Windows/Linux</li>
+     * Set Filtering conditions.<li>AppName - string - required: no - application name for search.</li><li>IP - String - required: no - host IP address.</li><li>MachineName - String - required: no - host name.</li><li>InstanceID - string - required: no - instance ID.</li><li>Type - int - required: no - Type	: for Linux only. 0: all; 1: Ops; 2: database; 3: security; 4: suspicious application; 5: system architecture; 6: system application; 7: web service; 99: others.</li><li>OsType - uint64 - required: no - Windows or Linux.</li>
+     * @param Filters Filtering conditions.<li>AppName - string - required: no - application name for search.</li><li>IP - String - required: no - host IP address.</li><li>MachineName - String - required: no - host name.</li><li>InstanceID - string - required: no - instance ID.</li><li>Type - int - required: no - Type	: for Linux only. 0: all; 1: Ops; 2: database; 3: security; 4: suspicious application; 5: system architecture; 6: system application; 7: web service; 99: others.</li><li>OsType - uint64 - required: no - Windows or Linux.</li>
      */
     public void setFilters(AssetFilters [] Filters) {
         this.Filters = Filters;

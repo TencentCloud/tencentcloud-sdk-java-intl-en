@@ -94,6 +94,41 @@ public class UpdateAssetImageRegistryRegistryDetailRequest extends AbstractModel
     private Long Insecure;
 
     /**
+    * 
+    */
+    @SerializedName("ConnDetectConfig")
+    @Expose
+    private ConnDetectConfig [] ConnDetectConfig;
+
+    /**
+    * Repository unique id
+    */
+    @SerializedName("RegistryId")
+    @Expose
+    private Long RegistryId;
+
+    /**
+    * Synchronization method. 0: full synchronization; 1: incremental synchronization.
+    */
+    @SerializedName("SyncMode")
+    @Expose
+    private Long SyncMode;
+
+    /**
+    * Whether to perform authorization and scanning automatically. This parameter is valid for incremental synchronization, which involves all new images.
+    */
+    @SerializedName("NeedScan")
+    @Expose
+    private Boolean NeedScan;
+
+    /**
+    * TCR instance ID.
+    */
+    @SerializedName("InstanceId")
+    @Expose
+    private String InstanceId;
+
+    /**
      * Get Repository name 
      * @return Name Repository name
      */
@@ -253,6 +288,86 @@ public class UpdateAssetImageRegistryRegistryDetailRequest extends AbstractModel
         this.Insecure = Insecure;
     }
 
+    /**
+     * Get  
+     * @return ConnDetectConfig 
+     */
+    public ConnDetectConfig [] getConnDetectConfig() {
+        return this.ConnDetectConfig;
+    }
+
+    /**
+     * Set 
+     * @param ConnDetectConfig 
+     */
+    public void setConnDetectConfig(ConnDetectConfig [] ConnDetectConfig) {
+        this.ConnDetectConfig = ConnDetectConfig;
+    }
+
+    /**
+     * Get Repository unique id 
+     * @return RegistryId Repository unique id
+     */
+    public Long getRegistryId() {
+        return this.RegistryId;
+    }
+
+    /**
+     * Set Repository unique id
+     * @param RegistryId Repository unique id
+     */
+    public void setRegistryId(Long RegistryId) {
+        this.RegistryId = RegistryId;
+    }
+
+    /**
+     * Get Synchronization method. 0: full synchronization; 1: incremental synchronization. 
+     * @return SyncMode Synchronization method. 0: full synchronization; 1: incremental synchronization.
+     */
+    public Long getSyncMode() {
+        return this.SyncMode;
+    }
+
+    /**
+     * Set Synchronization method. 0: full synchronization; 1: incremental synchronization.
+     * @param SyncMode Synchronization method. 0: full synchronization; 1: incremental synchronization.
+     */
+    public void setSyncMode(Long SyncMode) {
+        this.SyncMode = SyncMode;
+    }
+
+    /**
+     * Get Whether to perform authorization and scanning automatically. This parameter is valid for incremental synchronization, which involves all new images. 
+     * @return NeedScan Whether to perform authorization and scanning automatically. This parameter is valid for incremental synchronization, which involves all new images.
+     */
+    public Boolean getNeedScan() {
+        return this.NeedScan;
+    }
+
+    /**
+     * Set Whether to perform authorization and scanning automatically. This parameter is valid for incremental synchronization, which involves all new images.
+     * @param NeedScan Whether to perform authorization and scanning automatically. This parameter is valid for incremental synchronization, which involves all new images.
+     */
+    public void setNeedScan(Boolean NeedScan) {
+        this.NeedScan = NeedScan;
+    }
+
+    /**
+     * Get TCR instance ID. 
+     * @return InstanceId TCR instance ID.
+     */
+    public String getInstanceId() {
+        return this.InstanceId;
+    }
+
+    /**
+     * Set TCR instance ID.
+     * @param InstanceId TCR instance ID.
+     */
+    public void setInstanceId(String InstanceId) {
+        this.InstanceId = InstanceId;
+    }
+
     public UpdateAssetImageRegistryRegistryDetailRequest() {
     }
 
@@ -291,6 +406,24 @@ public class UpdateAssetImageRegistryRegistryDetailRequest extends AbstractModel
         if (source.Insecure != null) {
             this.Insecure = new Long(source.Insecure);
         }
+        if (source.ConnDetectConfig != null) {
+            this.ConnDetectConfig = new ConnDetectConfig[source.ConnDetectConfig.length];
+            for (int i = 0; i < source.ConnDetectConfig.length; i++) {
+                this.ConnDetectConfig[i] = new ConnDetectConfig(source.ConnDetectConfig[i]);
+            }
+        }
+        if (source.RegistryId != null) {
+            this.RegistryId = new Long(source.RegistryId);
+        }
+        if (source.SyncMode != null) {
+            this.SyncMode = new Long(source.SyncMode);
+        }
+        if (source.NeedScan != null) {
+            this.NeedScan = new Boolean(source.NeedScan);
+        }
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
     }
 
 
@@ -308,6 +441,11 @@ public class UpdateAssetImageRegistryRegistryDetailRequest extends AbstractModel
         this.setParamSimple(map, prefix + "RegistryRegion", this.RegistryRegion);
         this.setParamSimple(map, prefix + "SpeedLimit", this.SpeedLimit);
         this.setParamSimple(map, prefix + "Insecure", this.Insecure);
+        this.setParamArrayObj(map, prefix + "ConnDetectConfig.", this.ConnDetectConfig);
+        this.setParamSimple(map, prefix + "RegistryId", this.RegistryId);
+        this.setParamSimple(map, prefix + "SyncMode", this.SyncMode);
+        this.setParamSimple(map, prefix + "NeedScan", this.NeedScan);
+        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
 
     }
 }

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class KafkaRechargeInfo extends AbstractModel {
 
     /**
-    * ID of the Kafka data subscription configuration.Note: This field may return null, indicating that no valid values can be obtained.
+    * ID of Kafka data subscription configuration.
     */
     @SerializedName("Id")
     @Expose
@@ -32,31 +32,27 @@ public class KafkaRechargeInfo extends AbstractModel {
 
     /**
     * Log topic ID
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("TopicId")
     @Expose
     private String TopicId;
 
     /**
-    * Kafka data import task name
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Name of the Kafka import task
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * Kafka type. Valid values: 0 (Tencent Cloud CKafka) and 1 (customer's Kafka).
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Imports Kafka type. 0: Cloud CKafka; 1: user-built Kafka
     */
     @SerializedName("KafkaType")
     @Expose
     private Long KafkaType;
 
     /**
-    * CKafka instance ID, which is required when `KafkaType` is set to `0`
-Note: This field may return null, indicating that no valid values can be obtained.
+    * CKafka instance ID of cloud platform, required when KafkaType is 0.
     */
     @SerializedName("KafkaInstance")
     @Expose
@@ -64,15 +60,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Service address
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ServerAddr")
     @Expose
     private String ServerAddr;
 
     /**
-    * Whether the service address uses an encrypted connection	
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Whether ServerAddr is an encrypted connection	
     */
     @SerializedName("IsEncryptionAddr")
     @Expose
@@ -86,46 +80,42 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private KafkaProtocolInfo Protocol;
 
     /**
-    * List of Kafka topics to import data from. Separate multiple topics with commas (,).
-Note: This field may return null, indicating that no valid values can be obtained.
+    * The list of Kafka-related topics that the user needs to import. Separate multiple topics by commas.
     */
     @SerializedName("UserKafkaTopics")
     @Expose
     private String UserKafkaTopics;
 
     /**
-    * Kafka consumer group name	
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Kafka consumer group name of the user	
     */
     @SerializedName("ConsumerGroupName")
     @Expose
     private String ConsumerGroupName;
 
     /**
-    * Status, 1: running; 2: paused.Note: This field may return null, indicating that no valid values can be obtained.
+    * Status. 1: Running; 2: Suspension.
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * Import data position, -2: earliest (default), -1: latestNote: This field may return null, indicating that no valid values can be obtained.
+    * Data import position. -2: earliest (default); -1: latest
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * Creation time
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Creation time. Format `YYYY-MM-DD HH:MM:SS`
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * Update time
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Update time. Format: `YYYY-MM-DD HH:MM:SS`
     */
     @SerializedName("UpdateTime")
     @Expose
@@ -133,33 +123,37 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Log import rule
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("LogRechargeRule")
     @Expose
     private LogRechargeRuleInfo LogRechargeRule;
 
     /**
-     * Get ID of the Kafka data subscription configuration.Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Id ID of the Kafka data subscription configuration.Note: This field may return null, indicating that no valid values can be obtained.
+    * User kafka extended information
+    */
+    @SerializedName("UserKafkaMeta")
+    @Expose
+    private UserKafkaMeta UserKafkaMeta;
+
+    /**
+     * Get ID of Kafka data subscription configuration. 
+     * @return Id ID of Kafka data subscription configuration.
      */
     public String getId() {
         return this.Id;
     }
 
     /**
-     * Set ID of the Kafka data subscription configuration.Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Id ID of the Kafka data subscription configuration.Note: This field may return null, indicating that no valid values can be obtained.
+     * Set ID of Kafka data subscription configuration.
+     * @param Id ID of Kafka data subscription configuration.
      */
     public void setId(String Id) {
         this.Id = Id;
     }
 
     /**
-     * Get Log topic ID
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Log topic ID 
      * @return TopicId Log topic ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getTopicId() {
         return this.TopicId;
@@ -167,79 +161,63 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Log topic ID
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param TopicId Log topic ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setTopicId(String TopicId) {
         this.TopicId = TopicId;
     }
 
     /**
-     * Get Kafka data import task name
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Name Kafka data import task name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Name of the Kafka import task 
+     * @return Name Name of the Kafka import task
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Kafka data import task name
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Name Kafka data import task name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Name of the Kafka import task
+     * @param Name Name of the Kafka import task
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get Kafka type. Valid values: 0 (Tencent Cloud CKafka) and 1 (customer's Kafka).
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return KafkaType Kafka type. Valid values: 0 (Tencent Cloud CKafka) and 1 (customer's Kafka).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Imports Kafka type. 0: Cloud CKafka; 1: user-built Kafka 
+     * @return KafkaType Imports Kafka type. 0: Cloud CKafka; 1: user-built Kafka
      */
     public Long getKafkaType() {
         return this.KafkaType;
     }
 
     /**
-     * Set Kafka type. Valid values: 0 (Tencent Cloud CKafka) and 1 (customer's Kafka).
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param KafkaType Kafka type. Valid values: 0 (Tencent Cloud CKafka) and 1 (customer's Kafka).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Imports Kafka type. 0: Cloud CKafka; 1: user-built Kafka
+     * @param KafkaType Imports Kafka type. 0: Cloud CKafka; 1: user-built Kafka
      */
     public void setKafkaType(Long KafkaType) {
         this.KafkaType = KafkaType;
     }
 
     /**
-     * Get CKafka instance ID, which is required when `KafkaType` is set to `0`
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return KafkaInstance CKafka instance ID, which is required when `KafkaType` is set to `0`
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get CKafka instance ID of cloud platform, required when KafkaType is 0. 
+     * @return KafkaInstance CKafka instance ID of cloud platform, required when KafkaType is 0.
      */
     public String getKafkaInstance() {
         return this.KafkaInstance;
     }
 
     /**
-     * Set CKafka instance ID, which is required when `KafkaType` is set to `0`
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param KafkaInstance CKafka instance ID, which is required when `KafkaType` is set to `0`
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set CKafka instance ID of cloud platform, required when KafkaType is 0.
+     * @param KafkaInstance CKafka instance ID of cloud platform, required when KafkaType is 0.
      */
     public void setKafkaInstance(String KafkaInstance) {
         this.KafkaInstance = KafkaInstance;
     }
 
     /**
-     * Get Service address
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Service address 
      * @return ServerAddr Service address
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getServerAddr() {
         return this.ServerAddr;
@@ -247,29 +225,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Service address
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param ServerAddr Service address
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setServerAddr(String ServerAddr) {
         this.ServerAddr = ServerAddr;
     }
 
     /**
-     * Get Whether the service address uses an encrypted connection	
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return IsEncryptionAddr Whether the service address uses an encrypted connection	
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Whether ServerAddr is an encrypted connection	 
+     * @return IsEncryptionAddr Whether ServerAddr is an encrypted connection	
      */
     public Boolean getIsEncryptionAddr() {
         return this.IsEncryptionAddr;
     }
 
     /**
-     * Set Whether the service address uses an encrypted connection	
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param IsEncryptionAddr Whether the service address uses an encrypted connection	
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Whether ServerAddr is an encrypted connection	
+     * @param IsEncryptionAddr Whether ServerAddr is an encrypted connection	
      */
     public void setIsEncryptionAddr(Boolean IsEncryptionAddr) {
         this.IsEncryptionAddr = IsEncryptionAddr;
@@ -292,122 +264,104 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get List of Kafka topics to import data from. Separate multiple topics with commas (,).
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return UserKafkaTopics List of Kafka topics to import data from. Separate multiple topics with commas (,).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get The list of Kafka-related topics that the user needs to import. Separate multiple topics by commas. 
+     * @return UserKafkaTopics The list of Kafka-related topics that the user needs to import. Separate multiple topics by commas.
      */
     public String getUserKafkaTopics() {
         return this.UserKafkaTopics;
     }
 
     /**
-     * Set List of Kafka topics to import data from. Separate multiple topics with commas (,).
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param UserKafkaTopics List of Kafka topics to import data from. Separate multiple topics with commas (,).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set The list of Kafka-related topics that the user needs to import. Separate multiple topics by commas.
+     * @param UserKafkaTopics The list of Kafka-related topics that the user needs to import. Separate multiple topics by commas.
      */
     public void setUserKafkaTopics(String UserKafkaTopics) {
         this.UserKafkaTopics = UserKafkaTopics;
     }
 
     /**
-     * Get Kafka consumer group name	
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ConsumerGroupName Kafka consumer group name	
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Kafka consumer group name of the user	 
+     * @return ConsumerGroupName Kafka consumer group name of the user	
      */
     public String getConsumerGroupName() {
         return this.ConsumerGroupName;
     }
 
     /**
-     * Set Kafka consumer group name	
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ConsumerGroupName Kafka consumer group name	
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Kafka consumer group name of the user	
+     * @param ConsumerGroupName Kafka consumer group name of the user	
      */
     public void setConsumerGroupName(String ConsumerGroupName) {
         this.ConsumerGroupName = ConsumerGroupName;
     }
 
     /**
-     * Get Status, 1: running; 2: paused.Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Status Status, 1: running; 2: paused.Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Status. 1: Running; 2: Suspension. 
+     * @return Status Status. 1: Running; 2: Suspension.
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Status, 1: running; 2: paused.Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Status Status, 1: running; 2: paused.Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Status. 1: Running; 2: Suspension.
+     * @param Status Status. 1: Running; 2: Suspension.
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get Import data position, -2: earliest (default), -1: latestNote: This field may return null, indicating that no valid values can be obtained. 
-     * @return Offset Import data position, -2: earliest (default), -1: latestNote: This field may return null, indicating that no valid values can be obtained.
+     * Get Data import position. -2: earliest (default); -1: latest 
+     * @return Offset Data import position. -2: earliest (default); -1: latest
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Import data position, -2: earliest (default), -1: latestNote: This field may return null, indicating that no valid values can be obtained.
-     * @param Offset Import data position, -2: earliest (default), -1: latestNote: This field may return null, indicating that no valid values can be obtained.
+     * Set Data import position. -2: earliest (default); -1: latest
+     * @param Offset Data import position. -2: earliest (default); -1: latest
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get Creation time
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return CreateTime Creation time
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Creation time. Format `YYYY-MM-DD HH:MM:SS` 
+     * @return CreateTime Creation time. Format `YYYY-MM-DD HH:MM:SS`
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set Creation time
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param CreateTime Creation time
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Creation time. Format `YYYY-MM-DD HH:MM:SS`
+     * @param CreateTime Creation time. Format `YYYY-MM-DD HH:MM:SS`
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get Update time
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return UpdateTime Update time
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Update time. Format: `YYYY-MM-DD HH:MM:SS` 
+     * @return UpdateTime Update time. Format: `YYYY-MM-DD HH:MM:SS`
      */
     public String getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set Update time
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param UpdateTime Update time
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Update time. Format: `YYYY-MM-DD HH:MM:SS`
+     * @param UpdateTime Update time. Format: `YYYY-MM-DD HH:MM:SS`
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;
     }
 
     /**
-     * Get Log import rule
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Log import rule 
      * @return LogRechargeRule Log import rule
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public LogRechargeRuleInfo getLogRechargeRule() {
         return this.LogRechargeRule;
@@ -415,12 +369,26 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Log import rule
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param LogRechargeRule Log import rule
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setLogRechargeRule(LogRechargeRuleInfo LogRechargeRule) {
         this.LogRechargeRule = LogRechargeRule;
+    }
+
+    /**
+     * Get User kafka extended information 
+     * @return UserKafkaMeta User kafka extended information
+     */
+    public UserKafkaMeta getUserKafkaMeta() {
+        return this.UserKafkaMeta;
+    }
+
+    /**
+     * Set User kafka extended information
+     * @param UserKafkaMeta User kafka extended information
+     */
+    public void setUserKafkaMeta(UserKafkaMeta UserKafkaMeta) {
+        this.UserKafkaMeta = UserKafkaMeta;
     }
 
     public KafkaRechargeInfo() {
@@ -476,6 +444,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.LogRechargeRule != null) {
             this.LogRechargeRule = new LogRechargeRuleInfo(source.LogRechargeRule);
         }
+        if (source.UserKafkaMeta != null) {
+            this.UserKafkaMeta = new UserKafkaMeta(source.UserKafkaMeta);
+        }
     }
 
 
@@ -498,6 +469,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
         this.setParamObj(map, prefix + "LogRechargeRule.", this.LogRechargeRule);
+        this.setParamObj(map, prefix + "UserKafkaMeta.", this.UserKafkaMeta);
 
     }
 }

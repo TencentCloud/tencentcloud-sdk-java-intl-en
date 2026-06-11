@@ -24,8 +24,7 @@ import java.util.HashMap;
 public class DescribeAssetAppCountResponse extends AbstractModel {
 
     /**
-    * Number of software applications
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Number of all software applications.
     */
     @SerializedName("Apps")
     @Expose
@@ -39,20 +38,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Number of software applications
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Apps Number of software applications
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Number of all software applications. 
+     * @return Apps Number of all software applications.
      */
     public AssetKeyVal [] getApps() {
         return this.Apps;
     }
 
     /**
-     * Set Number of software applications
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Apps Number of software applications
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Number of all software applications.
+     * @param Apps Number of all software applications.
      */
     public void setApps(AssetKeyVal [] Apps) {
         this.Apps = Apps;

@@ -25,7 +25,6 @@ public class DescribeVulCveIdInfoResponse extends AbstractModel {
 
     /**
     * Detail list
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("List")
     @Expose
@@ -39,10 +38,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Detail list
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Detail list 
      * @return List Detail list
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public VulInfoByCveId [] getList() {
         return this.List;
@@ -50,9 +47,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Detail list
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param List Detail list
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setList(VulInfoByCveId [] List) {
         this.List = List;

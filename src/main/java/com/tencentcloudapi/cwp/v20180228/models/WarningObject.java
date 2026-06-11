@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class WarningObject extends AbstractModel {
 
     /**
-    * Event Alarm Type. 1: Offline; 2: Trojan; 3: Exceptional login; 4: Brute force; 5: Vulnerability (split into four types ranging from 9 to 12); 6: High-risk command; 7: Reverse sell; 8: Local privilege escalation;, 9: System component vulnerabilities; 10: Web application vulnerabilities; 11: Emergency vulnerabilities; 12: Security baseline; 14: Malicious request; 15: Network attack; 16: Windows system vulnerabilities; 17: Linux software vulnerabilities
+    * Event alarm type: 1: offline, 2: Trojan, 3: abnormal login, 4: crack, 5: vulnerability (split into four types 9-12), 6: high-risk command, 7: rebound shell, 8: local privilege escalation, 9: system component vulnerability, 10: web application vulnerability, 11: emergency vulnerability, 12: security baseline, 14: malicious request, 15: network attack, 16: Windows system vulnerability, 17: Linux software vulnerability.
     */
     @SerializedName("Type")
     @Expose
@@ -66,16 +66,23 @@ public class WarningObject extends AbstractModel {
     private Long HostRange;
 
     /**
-     * Get Event Alarm Type. 1: Offline; 2: Trojan; 3: Exceptional login; 4: Brute force; 5: Vulnerability (split into four types ranging from 9 to 12); 6: High-risk command; 7: Reverse sell; 8: Local privilege escalation;, 9: System component vulnerabilities; 10: Web application vulnerabilities; 11: Emergency vulnerabilities; 12: Security baseline; 14: Malicious request; 15: Network attack; 16: Windows system vulnerabilities; 17: Linux software vulnerabilities 
-     * @return Type Event Alarm Type. 1: Offline; 2: Trojan; 3: Exceptional login; 4: Brute force; 5: Vulnerability (split into four types ranging from 9 to 12); 6: High-risk command; 7: Reverse sell; 8: Local privilege escalation;, 9: System component vulnerabilities; 10: Web application vulnerabilities; 11: Emergency vulnerabilities; 12: Security baseline; 14: Malicious request; 15: Network attack; 16: Windows system vulnerabilities; 17: Linux software vulnerabilities
+    * Unit.
+    */
+    @SerializedName("Unit")
+    @Expose
+    private String Unit;
+
+    /**
+     * Get Event alarm type: 1: offline, 2: Trojan, 3: abnormal login, 4: crack, 5: vulnerability (split into four types 9-12), 6: high-risk command, 7: rebound shell, 8: local privilege escalation, 9: system component vulnerability, 10: web application vulnerability, 11: emergency vulnerability, 12: security baseline, 14: malicious request, 15: network attack, 16: Windows system vulnerability, 17: Linux software vulnerability. 
+     * @return Type Event alarm type: 1: offline, 2: Trojan, 3: abnormal login, 4: crack, 5: vulnerability (split into four types 9-12), 6: high-risk command, 7: rebound shell, 8: local privilege escalation, 9: system component vulnerability, 10: web application vulnerability, 11: emergency vulnerability, 12: security baseline, 14: malicious request, 15: network attack, 16: Windows system vulnerability, 17: Linux software vulnerability.
      */
     public Long getType() {
         return this.Type;
     }
 
     /**
-     * Set Event Alarm Type. 1: Offline; 2: Trojan; 3: Exceptional login; 4: Brute force; 5: Vulnerability (split into four types ranging from 9 to 12); 6: High-risk command; 7: Reverse sell; 8: Local privilege escalation;, 9: System component vulnerabilities; 10: Web application vulnerabilities; 11: Emergency vulnerabilities; 12: Security baseline; 14: Malicious request; 15: Network attack; 16: Windows system vulnerabilities; 17: Linux software vulnerabilities
-     * @param Type Event Alarm Type. 1: Offline; 2: Trojan; 3: Exceptional login; 4: Brute force; 5: Vulnerability (split into four types ranging from 9 to 12); 6: High-risk command; 7: Reverse sell; 8: Local privilege escalation;, 9: System component vulnerabilities; 10: Web application vulnerabilities; 11: Emergency vulnerabilities; 12: Security baseline; 14: Malicious request; 15: Network attack; 16: Windows system vulnerabilities; 17: Linux software vulnerabilities
+     * Set Event alarm type: 1: offline, 2: Trojan, 3: abnormal login, 4: crack, 5: vulnerability (split into four types 9-12), 6: high-risk command, 7: rebound shell, 8: local privilege escalation, 9: system component vulnerability, 10: web application vulnerability, 11: emergency vulnerability, 12: security baseline, 14: malicious request, 15: network attack, 16: Windows system vulnerability, 17: Linux software vulnerability.
+     * @param Type Event alarm type: 1: offline, 2: Trojan, 3: abnormal login, 4: crack, 5: vulnerability (split into four types 9-12), 6: high-risk command, 7: rebound shell, 8: local privilege escalation, 9: system component vulnerability, 10: web application vulnerability, 11: emergency vulnerability, 12: security baseline, 14: malicious request, 15: network attack, 16: Windows system vulnerability, 17: Linux software vulnerability.
      */
     public void setType(Long Type) {
         this.Type = Type;
@@ -161,6 +168,22 @@ public class WarningObject extends AbstractModel {
         this.HostRange = HostRange;
     }
 
+    /**
+     * Get Unit. 
+     * @return Unit Unit.
+     */
+    public String getUnit() {
+        return this.Unit;
+    }
+
+    /**
+     * Set Unit.
+     * @param Unit Unit.
+     */
+    public void setUnit(String Unit) {
+        this.Unit = Unit;
+    }
+
     public WarningObject() {
     }
 
@@ -187,6 +210,9 @@ public class WarningObject extends AbstractModel {
         if (source.HostRange != null) {
             this.HostRange = new Long(source.HostRange);
         }
+        if (source.Unit != null) {
+            this.Unit = new String(source.Unit);
+        }
     }
 
 
@@ -200,6 +226,7 @@ public class WarningObject extends AbstractModel {
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
         this.setParamSimple(map, prefix + "ControlBits", this.ControlBits);
         this.setParamSimple(map, prefix + "HostRange", this.HostRange);
+        this.setParamSimple(map, prefix + "Unit", this.Unit);
 
     }
 }

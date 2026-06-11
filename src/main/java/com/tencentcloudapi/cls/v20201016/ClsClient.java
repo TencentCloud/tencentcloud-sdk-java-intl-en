@@ -61,6 +61,30 @@ public class ClsClient extends AbstractClient{
     }
 
     /**
+     *This API is used to cancel creating a reindexing task.
+     * @param req CancelRebuildIndexTaskRequest
+     * @return CancelRebuildIndexTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public CancelRebuildIndexTaskResponse CancelRebuildIndexTask(CancelRebuildIndexTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CancelRebuildIndexTask", CancelRebuildIndexTaskResponse.class);
+    }
+
+    /**
+     *Call the API to initiate a dialogue request.
+This API supports AI-powered logging features such as intelligently generating retrieval analysis statements.
+Note: When calling this API via SSE streaming, ensure the request domain name is set to cls.ai.tencentcloudapi.com (configurable as cls.ai.internal.tencentcloudapi.com in a private network environment).
+     * @param req ChatCompletionsRequest
+     * @return ChatCompletionsResponse
+     * @throws TencentCloudSDKException
+     */
+    public ChatCompletionsResponse ChatCompletions(ChatCompletionsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ChatCompletions", ChatCompletionsResponse.class);
+    }
+
+    /**
      *This API is used to verify the syntax of data processing DSL functions.
      * @param req CheckFunctionRequest
      * @return CheckFunctionResponse
@@ -94,6 +118,17 @@ public class ClsClient extends AbstractClient{
     }
 
     /**
+     *This API is used to submit a consumption offset.
+     * @param req CommitConsumerOffsetsRequest
+     * @return CommitConsumerOffsetsResponse
+     * @throws TencentCloudSDKException
+     */
+    public CommitConsumerOffsetsResponse CommitConsumerOffsets(CommitConsumerOffsetsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CommitConsumerOffsets", CommitConsumerOffsetsResponse.class);
+    }
+
+    /**
      *This API is used to create an alarm policy.
      * @param req CreateAlarmRequest
      * @return CreateAlarmResponse
@@ -105,7 +140,14 @@ public class ClsClient extends AbstractClient{
     }
 
     /**
-     *This API is used to create a notification group.
+     *This API is used to create a notification channel group with two configuration modes to choose from.
+1. Easy mode provides the most basic notification channel function. The following parameters are required:
+- Type
+- NoticeReceivers
+- WebCallbacks
+
+2. Advanced mode: On the basis of easy mode, it supports setting rules, setting notification channels for different types of alarms, and escalating alarms. The following parameters are required:
+- NoticeRules
      * @param req CreateAlarmNoticeRequest
      * @return CreateAlarmNoticeResponse
      * @throws TencentCloudSDKException
@@ -127,6 +169,17 @@ public class ClsClient extends AbstractClient{
     }
 
     /**
+     *Cloud product integration uses internal APIs
+     * @param req CreateCloudProductLogCollectionRequest
+     * @return CreateCloudProductLogCollectionResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateCloudProductLogCollectionResponse CreateCloudProductLogCollection(CreateCloudProductLogCollectionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateCloudProductLogCollection", CreateCloudProductLogCollectionResponse.class);
+    }
+
+    /**
      *This API is used to create collection rule configuration.
      * @param req CreateConfigRequest
      * @return CreateConfigResponse
@@ -135,6 +188,17 @@ public class ClsClient extends AbstractClient{
     public CreateConfigResponse CreateConfig(CreateConfigRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CreateConfig", CreateConfigResponse.class);
+    }
+
+    /**
+     *This API is used to create the DataSight Console
+     * @param req CreateConsoleRequest
+     * @return CreateConsoleResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateConsoleResponse CreateConsole(CreateConsoleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateConsole", CreateConsoleResponse.class);
     }
 
     /**
@@ -149,6 +213,17 @@ public class ClsClient extends AbstractClient{
     }
 
     /**
+     *This API is used to check the heartbeat of a consumer group.
+     * @param req CreateConsumerGroupRequest
+     * @return CreateConsumerGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateConsumerGroupResponse CreateConsumerGroup(CreateConsumerGroupRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateConsumerGroup", CreateConsumerGroupResponse.class);
+    }
+
+    /**
      *This API is used to create a COS import task.
      * @param req CreateCosRechargeRequest
      * @return CreateCosRechargeResponse
@@ -157,6 +232,28 @@ public class ClsClient extends AbstractClient{
     public CreateCosRechargeResponse CreateCosRecharge(CreateCosRechargeRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CreateCosRecharge", CreateCosRechargeResponse.class);
+    }
+
+    /**
+     *This API is used to create a dashboard.
+     * @param req CreateDashboardRequest
+     * @return CreateDashboardResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateDashboardResponse CreateDashboard(CreateDashboardRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateDashboard", CreateDashboardResponse.class);
+    }
+
+    /**
+     *This API is used to create a dashboard subscription.
+     * @param req CreateDashboardSubscribeRequest
+     * @return CreateDashboardSubscribeResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateDashboardSubscribeResponse CreateDashboardSubscribe(CreateDashboardSubscribeRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateDashboardSubscribe", CreateDashboardSubscribeResponse.class);
     }
 
     /**
@@ -182,7 +279,29 @@ public class ClsClient extends AbstractClient{
     }
 
     /**
-     *This API is used to create a download task. To get the returned download address, call DescribeExports to view the task list. The CosPath parameter is also included for download address. For more information, visit https://intl.cloud.tencent.com/document/product/614/56449.?from_cn_redirect=1
+     *Create a DLC delivery task
+     * @param req CreateDlcDeliverRequest
+     * @return CreateDlcDeliverResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateDlcDeliverResponse CreateDlcDeliver(CreateDlcDeliverRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateDlcDeliver", CreateDlcDeliverResponse.class);
+    }
+
+    /**
+     *This API is used to create an es import configuration
+     * @param req CreateEsRechargeRequest
+     * @return CreateEsRechargeResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateEsRechargeResponse CreateEsRecharge(CreateEsRechargeRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateEsRecharge", CreateEsRechargeResponse.class);
+    }
+
+    /**
+     *This API only creates download tasks. The download address returned by the task can be obtained by user invocation of [DescribeExports](https://www.tencentcloud.com/document/product/614/56449?from_cn_redirect=1) to view task list, which includes the CosPath parameter for the download address.
      * @param req CreateExportRequest
      * @return CreateExportResponse
      * @throws TencentCloudSDKException
@@ -190,6 +309,17 @@ public class ClsClient extends AbstractClient{
     public CreateExportResponse CreateExport(CreateExportRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CreateExport", CreateExportResponse.class);
+    }
+
+    /**
+     *This API is used to create host metric collection configurations.
+     * @param req CreateHostMetricConfigRequest
+     * @return CreateHostMetricConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateHostMetricConfigResponse CreateHostMetricConfig(CreateHostMetricConfigRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateHostMetricConfig", CreateHostMetricConfigResponse.class);
     }
 
     /**
@@ -237,6 +367,89 @@ public class ClsClient extends AbstractClient{
     }
 
     /**
+     *This API is used to create metric collection configurations.
+     * @param req CreateMetricConfigRequest
+     * @return CreateMetricConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateMetricConfigResponse CreateMetricConfig(CreateMetricConfigRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateMetricConfig", CreateMetricConfigResponse.class);
+    }
+
+    /**
+     *This API is used to create metric subscription configurations.
+     * @param req CreateMetricSubscribeRequest
+     * @return CreateMetricSubscribeResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateMetricSubscribeResponse CreateMetricSubscribe(CreateMetricSubscribeRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateMetricSubscribe", CreateMetricSubscribeResponse.class);
+    }
+
+    /**
+     *This API is used to create a network application.
+     * @param req CreateNetworkApplicationRequest
+     * @return CreateNetworkApplicationResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateNetworkApplicationResponse CreateNetworkApplication(CreateNetworkApplicationRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateNetworkApplication", CreateNetworkApplicationResponse.class);
+    }
+
+    /**
+     *This API is used to create notification content.
+     * @param req CreateNoticeContentRequest
+     * @return CreateNoticeContentResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateNoticeContentResponse CreateNoticeContent(CreateNoticeContentRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateNoticeContent", CreateNoticeContentResponse.class);
+    }
+
+    /**
+     *This API is used to creates rebuild index tasks.
+Note:
+-A single log topic allows only one index reconstruction task at a time and can have up to 10 rebuild index task records. Delete task records that are no longer needed before creating an index task.
+-Logs within the same time range only allow rebuilding indexes once. Delete previous task records before rebuilding again.
+-Deleting a rebuild index task record restores the index data before rebuilding an index.
+-The log write traffic of the selected time range cannot exceed 5TB.
+-The index rebuilding time range is subject to the log time. When the log uploading time has a deviation exceeding one hour from the index rebuilding time range (for example, reporting a new log at 16:00 for 02:00 to CLS and rebuilding the log index for 00:00–12:00), the logs will not be rebuilt and cannot be retrieved subsequently. When reporting a new log to the reconstructed log time range, it will not be rebuilt and cannot be retrieved subsequently.
+     * @param req CreateRebuildIndexTaskRequest
+     * @return CreateRebuildIndexTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateRebuildIndexTaskResponse CreateRebuildIndexTask(CreateRebuildIndexTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateRebuildIndexTask", CreateRebuildIndexTaskResponse.class);
+    }
+
+    /**
+     *Creating a Metric Pre-Aggregation Task
+     * @param req CreateRecordingRuleTaskRequest
+     * @return CreateRecordingRuleTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateRecordingRuleTaskResponse CreateRecordingRuleTask(CreateRecordingRuleTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateRecordingRuleTask", CreateRecordingRuleTaskResponse.class);
+    }
+
+    /**
+     *Creating a Metric Pre-Aggregation Task Through a YAML File
+     * @param req CreateRecordingRuleYamlTaskRequest
+     * @return CreateRecordingRuleYamlTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateRecordingRuleYamlTaskResponse CreateRecordingRuleYamlTask(CreateRecordingRuleYamlTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateRecordingRuleYamlTask", CreateRecordingRuleYamlTaskResponse.class);
+    }
+
+    /**
      *This API is used to create a scheduled SQL analysis task.
      * @param req CreateScheduledSqlRequest
      * @return CreateScheduledSqlResponse
@@ -245,6 +458,17 @@ public class ClsClient extends AbstractClient{
     public CreateScheduledSqlResponse CreateScheduledSql(CreateScheduledSqlRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CreateScheduledSql", CreateScheduledSqlResponse.class);
+    }
+
+    /**
+     *Create a query view
+     * @param req CreateSearchViewRequest
+     * @return CreateSearchViewResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateSearchViewResponse CreateSearchView(CreateSearchViewRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateSearchView", CreateSearchViewResponse.class);
     }
 
     /**
@@ -259,7 +483,18 @@ public class ClsClient extends AbstractClient{
     }
 
     /**
-     *This API is used to create a log topic.
+     *Create a Splunk delivery task
+     * @param req CreateSplunkDeliverRequest
+     * @return CreateSplunkDeliverResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateSplunkDeliverResponse CreateSplunkDeliver(CreateSplunkDeliverRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateSplunkDeliver", CreateSplunkDeliverResponse.class);
+    }
+
+    /**
+     *This API is used to create logs or metric topics.
      * @param req CreateTopicRequest
      * @return CreateTopicResponse
      * @throws TencentCloudSDKException
@@ -267,6 +502,17 @@ public class ClsClient extends AbstractClient{
     public CreateTopicResponse CreateTopic(CreateTopicRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CreateTopic", CreateTopicResponse.class);
+    }
+
+    /**
+     *This API is used to create alarm channel callback configurations.
+     * @param req CreateWebCallbackRequest
+     * @return CreateWebCallbackResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateWebCallbackResponse CreateWebCallback(CreateWebCallbackRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateWebCallback", CreateWebCallbackResponse.class);
     }
 
     /**
@@ -292,7 +538,7 @@ public class ClsClient extends AbstractClient{
     }
 
     /**
-     *This API is used to delete an alarm blocking rule.
+     *This API is used to delete an alarm blocking rule. When the alarm blocking rule is active or invalid, it cannot be deleted.
      * @param req DeleteAlarmShieldRequest
      * @return DeleteAlarmShieldResponse
      * @throws TencentCloudSDKException
@@ -300,6 +546,17 @@ public class ClsClient extends AbstractClient{
     public DeleteAlarmShieldResponse DeleteAlarmShield(DeleteAlarmShieldRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteAlarmShield", DeleteAlarmShieldResponse.class);
+    }
+
+    /**
+     *Cloud product integration uses internal APIs
+     * @param req DeleteCloudProductLogCollectionRequest
+     * @return DeleteCloudProductLogCollectionResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteCloudProductLogCollectionResponse DeleteCloudProductLogCollection(DeleteCloudProductLogCollectionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteCloudProductLogCollection", DeleteCloudProductLogCollectionResponse.class);
     }
 
     /**
@@ -325,7 +582,18 @@ public class ClsClient extends AbstractClient{
     }
 
     /**
-     *This API is used to delete a shipping task.
+     *This API is used to delete the DataSight Console
+     * @param req DeleteConsoleRequest
+     * @return DeleteConsoleResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteConsoleResponse DeleteConsole(DeleteConsoleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteConsole", DeleteConsoleResponse.class);
+    }
+
+    /**
+     *Deleting a CKafka Delivery Task
      * @param req DeleteConsumerRequest
      * @return DeleteConsumerResponse
      * @throws TencentCloudSDKException
@@ -333,6 +601,50 @@ public class ClsClient extends AbstractClient{
     public DeleteConsumerResponse DeleteConsumer(DeleteConsumerRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteConsumer", DeleteConsumerResponse.class);
+    }
+
+    /**
+     *Delete consumer groups.
+     * @param req DeleteConsumerGroupRequest
+     * @return DeleteConsumerGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteConsumerGroupResponse DeleteConsumerGroup(DeleteConsumerGroupRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteConsumerGroup", DeleteConsumerGroupResponse.class);
+    }
+
+    /**
+     *This API is used to delete a cos Import Task.
+     * @param req DeleteCosRechargeRequest
+     * @return DeleteCosRechargeResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteCosRechargeResponse DeleteCosRecharge(DeleteCosRechargeRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteCosRecharge", DeleteCosRechargeResponse.class);
+    }
+
+    /**
+     *This API is used to delete dashboards.
+     * @param req DeleteDashboardRequest
+     * @return DeleteDashboardResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteDashboardResponse DeleteDashboard(DeleteDashboardRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteDashboard", DeleteDashboardResponse.class);
+    }
+
+    /**
+     *This API is used to delete dashboard subscriptions.
+     * @param req DeleteDashboardSubscribeRequest
+     * @return DeleteDashboardSubscribeResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteDashboardSubscribeResponse DeleteDashboardSubscribe(DeleteDashboardSubscribeRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteDashboardSubscribe", DeleteDashboardSubscribeResponse.class);
     }
 
     /**
@@ -347,6 +659,28 @@ public class ClsClient extends AbstractClient{
     }
 
     /**
+     *Delete a DLC delivery task
+     * @param req DeleteDlcDeliverRequest
+     * @return DeleteDlcDeliverResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteDlcDeliverResponse DeleteDlcDeliver(DeleteDlcDeliverRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteDlcDeliver", DeleteDlcDeliverResponse.class);
+    }
+
+    /**
+     *Delete es import configuration
+     * @param req DeleteEsRechargeRequest
+     * @return DeleteEsRechargeResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteEsRechargeResponse DeleteEsRecharge(DeleteEsRechargeRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteEsRecharge", DeleteEsRechargeResponse.class);
+    }
+
+    /**
      *This API is used to delete a log download task.
      * @param req DeleteExportRequest
      * @return DeleteExportResponse
@@ -355,6 +689,17 @@ public class ClsClient extends AbstractClient{
     public DeleteExportResponse DeleteExport(DeleteExportRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteExport", DeleteExportResponse.class);
+    }
+
+    /**
+     *Delete host metric collection configuration
+     * @param req DeleteHostMetricConfigRequest
+     * @return DeleteHostMetricConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteHostMetricConfigResponse DeleteHostMetricConfig(DeleteHostMetricConfigRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteHostMetricConfig", DeleteHostMetricConfigResponse.class);
     }
 
     /**
@@ -413,6 +758,72 @@ public class ClsClient extends AbstractClient{
     }
 
     /**
+     *This API is used to delete metric collection configurations.
+     * @param req DeleteMetricConfigRequest
+     * @return DeleteMetricConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteMetricConfigResponse DeleteMetricConfig(DeleteMetricConfigRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteMetricConfig", DeleteMetricConfigResponse.class);
+    }
+
+    /**
+     *This API is used to delete metric subscription configurations.
+     * @param req DeleteMetricSubscribeRequest
+     * @return DeleteMetricSubscribeResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteMetricSubscribeResponse DeleteMetricSubscribe(DeleteMetricSubscribeRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteMetricSubscribe", DeleteMetricSubscribeResponse.class);
+    }
+
+    /**
+     *Delete a web application
+     * @param req DeleteNetworkApplicationRequest
+     * @return DeleteNetworkApplicationResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteNetworkApplicationResponse DeleteNetworkApplication(DeleteNetworkApplicationRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteNetworkApplication", DeleteNetworkApplicationResponse.class);
+    }
+
+    /**
+     *This API is used to delete notification content configuration.
+     * @param req DeleteNoticeContentRequest
+     * @return DeleteNoticeContentResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteNoticeContentResponse DeleteNoticeContent(DeleteNoticeContentRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteNoticeContent", DeleteNoticeContentResponse.class);
+    }
+
+    /**
+     *This API is used to delete a pre-aggregation analysis task.
+     * @param req DeleteRecordingRuleTaskRequest
+     * @return DeleteRecordingRuleTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteRecordingRuleTaskResponse DeleteRecordingRuleTask(DeleteRecordingRuleTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteRecordingRuleTask", DeleteRecordingRuleTaskResponse.class);
+    }
+
+    /**
+     *This API is used to delete the pre-aggregation task in yaml.
+     * @param req DeleteRecordingRuleYamlTaskRequest
+     * @return DeleteRecordingRuleYamlTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteRecordingRuleYamlTaskResponse DeleteRecordingRuleYamlTask(DeleteRecordingRuleYamlTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteRecordingRuleYamlTask", DeleteRecordingRuleYamlTaskResponse.class);
+    }
+
+    /**
      *This API is used to delete a scheduled SQL analysis task.
      * @param req DeleteScheduledSqlRequest
      * @return DeleteScheduledSqlResponse
@@ -421,6 +832,17 @@ public class ClsClient extends AbstractClient{
     public DeleteScheduledSqlResponse DeleteScheduledSql(DeleteScheduledSqlRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteScheduledSql", DeleteScheduledSqlResponse.class);
+    }
+
+    /**
+     *This API is used to delete a query view.
+     * @param req DeleteSearchViewRequest
+     * @return DeleteSearchViewResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteSearchViewResponse DeleteSearchView(DeleteSearchViewRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteSearchView", DeleteSearchViewResponse.class);
     }
 
     /**
@@ -435,7 +857,18 @@ public class ClsClient extends AbstractClient{
     }
 
     /**
-     *This API is used to delete a log topic.
+     *Delete a Splunk delivery task
+     * @param req DeleteSplunkDeliverRequest
+     * @return DeleteSplunkDeliverResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteSplunkDeliverResponse DeleteSplunkDeliver(DeleteSplunkDeliverRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteSplunkDeliver", DeleteSplunkDeliverResponse.class);
+    }
+
+    /**
+     *This API is used to delete logs or metric topics.
      * @param req DeleteTopicRequest
      * @return DeleteTopicResponse
      * @throws TencentCloudSDKException
@@ -443,6 +876,17 @@ public class ClsClient extends AbstractClient{
     public DeleteTopicResponse DeleteTopic(DeleteTopicRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteTopic", DeleteTopicResponse.class);
+    }
+
+    /**
+     *This API is used to delete alarm channel callback configurations.
+     * @param req DeleteWebCallbackRequest
+     * @return DeleteWebCallbackResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteWebCallbackResponse DeleteWebCallback(DeleteWebCallbackRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteWebCallback", DeleteWebCallbackResponse.class);
     }
 
     /**
@@ -490,6 +934,39 @@ public class ClsClient extends AbstractClient{
     }
 
     /**
+     *Cloud product integration uses relevant APIs
+     * @param req DescribeCloudProductLogTasksRequest
+     * @return DescribeCloudProductLogTasksResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCloudProductLogTasksResponse DescribeCloudProductLogTasks(DescribeCloudProductLogTasksRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCloudProductLogTasks", DescribeCloudProductLogTasksResponse.class);
+    }
+
+    /**
+     *This API is used to obtain metric subscription configurations.
+     * @param req DescribeClusterBaseMetricConfigsRequest
+     * @return DescribeClusterBaseMetricConfigsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeClusterBaseMetricConfigsResponse DescribeClusterBaseMetricConfigs(DescribeClusterBaseMetricConfigsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeClusterBaseMetricConfigs", DescribeClusterBaseMetricConfigsResponse.class);
+    }
+
+    /**
+     *This API is used to obtain metric subscription configurations.
+     * @param req DescribeClusterMetricConfigsRequest
+     * @return DescribeClusterMetricConfigsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeClusterMetricConfigsResponse DescribeClusterMetricConfigs(DescribeClusterMetricConfigsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeClusterMetricConfigs", DescribeClusterMetricConfigsResponse.class);
+    }
+
+    /**
      *This API is used to get the machine group bound to collection rule configuration.
      * @param req DescribeConfigMachineGroupsRequest
      * @return DescribeConfigMachineGroupsResponse
@@ -512,6 +989,17 @@ public class ClsClient extends AbstractClient{
     }
 
     /**
+     *Query the DataSight console instance list
+     * @param req DescribeConsolesRequest
+     * @return DescribeConsolesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeConsolesResponse DescribeConsoles(DescribeConsolesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeConsoles", DescribeConsolesResponse.class);
+    }
+
+    /**
      *This API is used to query a shipping task.
      * @param req DescribeConsumerRequest
      * @return DescribeConsumerResponse
@@ -520,6 +1008,50 @@ public class ClsClient extends AbstractClient{
     public DescribeConsumerResponse DescribeConsumer(DescribeConsumerRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeConsumer", DescribeConsumerResponse.class);
+    }
+
+    /**
+     *This API is used to obtain the consumer group list.
+     * @param req DescribeConsumerGroupsRequest
+     * @return DescribeConsumerGroupsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeConsumerGroupsResponse DescribeConsumerGroups(DescribeConsumerGroupsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeConsumerGroups", DescribeConsumerGroupsResponse.class);
+    }
+
+    /**
+     *Obtaining the Consumer Group Point Information
+     * @param req DescribeConsumerOffsetsRequest
+     * @return DescribeConsumerOffsetsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeConsumerOffsetsResponse DescribeConsumerOffsets(DescribeConsumerOffsetsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeConsumerOffsets", DescribeConsumerOffsetsResponse.class);
+    }
+
+    /**
+     *This API is used to preview Kafka shipping data.
+     * @param req DescribeConsumerPreviewRequest
+     * @return DescribeConsumerPreviewResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeConsumerPreviewResponse DescribeConsumerPreview(DescribeConsumerPreviewRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeConsumerPreview", DescribeConsumerPreviewResponse.class);
+    }
+
+    /**
+     *This API is used to obtain the shipping rule information list.
+     * @param req DescribeConsumersRequest
+     * @return DescribeConsumersResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeConsumersResponse DescribeConsumers(DescribeConsumersRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeConsumers", DescribeConsumersResponse.class);
     }
 
     /**
@@ -534,6 +1066,17 @@ public class ClsClient extends AbstractClient{
     }
 
     /**
+     *This API is used to obtain the dashboard subscription list, and supports paging.
+     * @param req DescribeDashboardSubscribesRequest
+     * @return DescribeDashboardSubscribesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDashboardSubscribesResponse DescribeDashboardSubscribes(DescribeDashboardSubscribesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDashboardSubscribes", DescribeDashboardSubscribesResponse.class);
+    }
+
+    /**
      *This API is used to get the basic information of data processing tasks.
      * @param req DescribeDataTransformInfoRequest
      * @return DescribeDataTransformInfoResponse
@@ -545,6 +1088,39 @@ public class ClsClient extends AbstractClient{
     }
 
     /**
+     *This API is used to search alarm channel callback configuration lists.
+     * @param req DescribeDlcDeliversRequest
+     * @return DescribeDlcDeliversResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDlcDeliversResponse DescribeDlcDelivers(DescribeDlcDeliversRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDlcDelivers", DescribeDlcDeliversResponse.class);
+    }
+
+    /**
+     *Import Preview
+     * @param req DescribeEsRechargePreviewRequest
+     * @return DescribeEsRechargePreviewResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeEsRechargePreviewResponse DescribeEsRechargePreview(DescribeEsRechargePreviewRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeEsRechargePreview", DescribeEsRechargePreviewResponse.class);
+    }
+
+    /**
+     *Retrieve the es import configuration
+     * @param req DescribeEsRechargesRequest
+     * @return DescribeEsRechargesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeEsRechargesResponse DescribeEsRecharges(DescribeEsRechargesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeEsRecharges", DescribeEsRechargesResponse.class);
+    }
+
+    /**
      *This API is used to get the list of log download tasks.
      * @param req DescribeExportsRequest
      * @return DescribeExportsResponse
@@ -553,6 +1129,17 @@ public class ClsClient extends AbstractClient{
     public DescribeExportsResponse DescribeExports(DescribeExportsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeExports", DescribeExportsResponse.class);
+    }
+
+    /**
+     *This API is used to obtain metric subscription configurations.
+     * @param req DescribeHostMetricConfigsRequest
+     * @return DescribeHostMetricConfigsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeHostMetricConfigsResponse DescribeHostMetricConfigs(DescribeHostMetricConfigsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeHostMetricConfigs", DescribeHostMetricConfigsResponse.class);
     }
 
     /**
@@ -575,6 +1162,50 @@ public class ClsClient extends AbstractClient{
     public DescribeKafkaConsumerResponse DescribeKafkaConsumer(DescribeKafkaConsumerRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeKafkaConsumer", DescribeKafkaConsumerResponse.class);
+    }
+
+    /**
+     *Retrieve Kafka protocol consumption group details
+     * @param req DescribeKafkaConsumerGroupDetailRequest
+     * @return DescribeKafkaConsumerGroupDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeKafkaConsumerGroupDetailResponse DescribeKafkaConsumerGroupDetail(DescribeKafkaConsumerGroupDetailRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeKafkaConsumerGroupDetail", DescribeKafkaConsumerGroupDetailResponse.class);
+    }
+
+    /**
+     *Retrieve the information list of Kafka protocol consumption groups
+     * @param req DescribeKafkaConsumerGroupListRequest
+     * @return DescribeKafkaConsumerGroupListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeKafkaConsumerGroupListResponse DescribeKafkaConsumerGroupList(DescribeKafkaConsumerGroupListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeKafkaConsumerGroupList", DescribeKafkaConsumerGroupListResponse.class);
+    }
+
+    /**
+     *This API is used to preview the Kafka consumption.
+     * @param req DescribeKafkaConsumerPreviewRequest
+     * @return DescribeKafkaConsumerPreviewResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeKafkaConsumerPreviewResponse DescribeKafkaConsumerPreview(DescribeKafkaConsumerPreviewRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeKafkaConsumerPreview", DescribeKafkaConsumerPreviewResponse.class);
+    }
+
+    /**
+     *This API is used to obtain the topic information list of Kafka consumption.
+     * @param req DescribeKafkaConsumerTopicsRequest
+     * @return DescribeKafkaConsumerTopicsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeKafkaConsumerTopicsResponse DescribeKafkaConsumerTopics(DescribeKafkaConsumerTopicsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeKafkaConsumerTopics", DescribeKafkaConsumerTopicsResponse.class);
     }
 
     /**
@@ -655,7 +1286,73 @@ public class ClsClient extends AbstractClient{
     }
 
     /**
-     *This API is used to get the list of topic partitions.
+     *This API is used to obtain metric subscription configurations.
+     * @param req DescribeMetricCorrectDimensionRequest
+     * @return DescribeMetricCorrectDimensionResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeMetricCorrectDimensionResponse DescribeMetricCorrectDimension(DescribeMetricCorrectDimensionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeMetricCorrectDimension", DescribeMetricCorrectDimensionResponse.class);
+    }
+
+    /**
+     *This API is used to create metric subscription configurations.
+     * @param req DescribeMetricSubscribePreviewRequest
+     * @return DescribeMetricSubscribePreviewResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeMetricSubscribePreviewResponse DescribeMetricSubscribePreview(DescribeMetricSubscribePreviewRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeMetricSubscribePreview", DescribeMetricSubscribePreviewResponse.class);
+    }
+
+    /**
+     *This API is used to obtain metric subscription configurations.
+     * @param req DescribeMetricSubscribesRequest
+     * @return DescribeMetricSubscribesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeMetricSubscribesResponse DescribeMetricSubscribes(DescribeMetricSubscribesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeMetricSubscribes", DescribeMetricSubscribesResponse.class);
+    }
+
+    /**
+     *Retrieve web application details
+     * @param req DescribeNetworkApplicationDetailRequest
+     * @return DescribeNetworkApplicationDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeNetworkApplicationDetailResponse DescribeNetworkApplicationDetail(DescribeNetworkApplicationDetailRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeNetworkApplicationDetail", DescribeNetworkApplicationDetailResponse.class);
+    }
+
+    /**
+     *Retrieve the network application list
+     * @param req DescribeNetworkApplicationsRequest
+     * @return DescribeNetworkApplicationsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeNetworkApplicationsResponse DescribeNetworkApplications(DescribeNetworkApplicationsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeNetworkApplications", DescribeNetworkApplicationsResponse.class);
+    }
+
+    /**
+     *This API is used to obtain the notification content list.
+     * @param req DescribeNoticeContentsRequest
+     * @return DescribeNoticeContentsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeNoticeContentsResponse DescribeNoticeContents(DescribeNoticeContentsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeNoticeContents", DescribeNoticeContentsResponse.class);
+    }
+
+    /**
+     *This API is deprecated. If needed, please use the DescribeTopics API to get the number of partitions.
      * @param req DescribePartitionsRequest
      * @return DescribePartitionsResponse
      * @throws TencentCloudSDKException
@@ -663,6 +1360,39 @@ public class ClsClient extends AbstractClient{
     public DescribePartitionsResponse DescribePartitions(DescribePartitionsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribePartitions", DescribePartitionsResponse.class);
+    }
+
+    /**
+     *This API is used to obtain the list of rebuild index tasks.
+     * @param req DescribeRebuildIndexTasksRequest
+     * @return DescribeRebuildIndexTasksResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRebuildIndexTasksResponse DescribeRebuildIndexTasks(DescribeRebuildIndexTasksRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeRebuildIndexTasks", DescribeRebuildIndexTasksResponse.class);
+    }
+
+    /**
+     *This API is used to retrieve the pre-aggregation task list.
+     * @param req DescribeRecordingRuleTaskRequest
+     * @return DescribeRecordingRuleTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRecordingRuleTaskResponse DescribeRecordingRuleTask(DescribeRecordingRuleTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeRecordingRuleTask", DescribeRecordingRuleTaskResponse.class);
+    }
+
+    /**
+     *This API is used to retrieve the pre-aggregation task list in yaml.
+     * @param req DescribeRecordingRuleYamlTaskRequest
+     * @return DescribeRecordingRuleYamlTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRecordingRuleYamlTaskResponse DescribeRecordingRuleYamlTask(DescribeRecordingRuleYamlTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeRecordingRuleYamlTask", DescribeRecordingRuleYamlTaskResponse.class);
     }
 
     /**
@@ -674,6 +1404,17 @@ public class ClsClient extends AbstractClient{
     public DescribeScheduledSqlInfoResponse DescribeScheduledSqlInfo(DescribeScheduledSqlInfoRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeScheduledSqlInfo", DescribeScheduledSqlInfoResponse.class);
+    }
+
+    /**
+     *Query view list
+     * @param req DescribeSearchViewsRequest
+     * @return DescribeSearchViewsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSearchViewsResponse DescribeSearchViews(DescribeSearchViewsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeSearchViews", DescribeSearchViewsResponse.class);
     }
 
     /**
@@ -699,7 +1440,51 @@ public class ClsClient extends AbstractClient{
     }
 
     /**
-     *This API is used to get the list of log topics and supports pagination.
+     *Retrieve the Splunk delivery task list
+     * @param req DescribeSplunkDeliversRequest
+     * @return DescribeSplunkDeliversResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSplunkDeliversResponse DescribeSplunkDelivers(DescribeSplunkDeliversRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeSplunkDelivers", DescribeSplunkDeliversResponse.class);
+    }
+
+    /**
+     *splunk delivery task preview
+     * @param req DescribeSplunkPreviewRequest
+     * @return DescribeSplunkPreviewResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSplunkPreviewResponse DescribeSplunkPreview(DescribeSplunkPreviewRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeSplunkPreview", DescribeSplunkPreviewResponse.class);
+    }
+
+    /**
+     *This API is used to obtain metric subscription configurations.
+     * @param req DescribeTopicBaseMetricConfigsRequest
+     * @return DescribeTopicBaseMetricConfigsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTopicBaseMetricConfigsResponse DescribeTopicBaseMetricConfigs(DescribeTopicBaseMetricConfigsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeTopicBaseMetricConfigs", DescribeTopicBaseMetricConfigsResponse.class);
+    }
+
+    /**
+     *This API is used to obtain metric subscription configurations.
+     * @param req DescribeTopicMetricConfigsRequest
+     * @return DescribeTopicMetricConfigsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTopicMetricConfigsResponse DescribeTopicMetricConfigs(DescribeTopicMetricConfigsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeTopicMetricConfigs", DescribeTopicMetricConfigsResponse.class);
+    }
+
+    /**
+     *This API is used to obtain logs or metric topic lists and supports pagination.
      * @param req DescribeTopicsRequest
      * @return DescribeTopicsResponse
      * @throws TencentCloudSDKException
@@ -707,6 +1492,28 @@ public class ClsClient extends AbstractClient{
     public DescribeTopicsResponse DescribeTopics(DescribeTopicsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeTopics", DescribeTopicsResponse.class);
+    }
+
+    /**
+     *This API is used to search alarm channel callback configuration lists.
+     * @param req DescribeWebCallbacksRequest
+     * @return DescribeWebCallbacksResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeWebCallbacksResponse DescribeWebCallbacks(DescribeWebCallbacksRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeWebCallbacks", DescribeWebCallbacksResponse.class);
+    }
+
+    /**
+     *This API is used to estimate rebuild index tasks.
+     * @param req EstimateRebuildIndexTaskRequest
+     * @return EstimateRebuildIndexTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public EstimateRebuildIndexTaskResponse EstimateRebuildIndexTask(EstimateRebuildIndexTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "EstimateRebuildIndexTask", EstimateRebuildIndexTaskResponse.class);
     }
 
     /**
@@ -721,7 +1528,30 @@ public class ClsClient extends AbstractClient{
     }
 
     /**
-     *This API is used to merge a topic partition in read/write state. During merge, a topic partition ID can be specified, and CLS will automatically merge the partition adjacent to the right of the range.
+     *This API is used to check whether CLS is enabled.
+This API is used to fill in any region for Region, recommend using Guangzhou (ap-guangzhou).
+     * @param req GetClsServiceRequest
+     * @return GetClsServiceResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetClsServiceResponse GetClsService(GetClsServiceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetClsService", GetClsServiceResponse.class);
+    }
+
+    /**
+     *This API is used to obtain the list of time series label values.
+     * @param req GetMetricLabelValuesRequest
+     * @return GetMetricLabelValuesResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetMetricLabelValuesResponse GetMetricLabelValues(GetMetricLabelValuesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetMetricLabelValues", GetMetricLabelValuesResponse.class);
+    }
+
+    /**
+     *This API is deprecated. If needed, please use the ModifyTopic API to change the number of partitions.
      * @param req MergePartitionRequest
      * @return MergePartitionResponse
      * @throws TencentCloudSDKException
@@ -754,7 +1584,7 @@ public class ClsClient extends AbstractClient{
     }
 
     /**
-     *This API is used to modify alarm blocking rules.
+     *This API is used to modify alarm blocking rules. When the alarm blocking rule is invalid, it cannot be modified.
      * @param req ModifyAlarmShieldRequest
      * @return ModifyAlarmShieldResponse
      * @throws TencentCloudSDKException
@@ -762,6 +1592,17 @@ public class ClsClient extends AbstractClient{
     public ModifyAlarmShieldResponse ModifyAlarmShield(ModifyAlarmShieldRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyAlarmShield", ModifyAlarmShieldResponse.class);
+    }
+
+    /**
+     *Cloud product integration uses internal APIs
+     * @param req ModifyCloudProductLogCollectionRequest
+     * @return ModifyCloudProductLogCollectionResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyCloudProductLogCollectionResponse ModifyCloudProductLogCollection(ModifyCloudProductLogCollectionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyCloudProductLogCollection", ModifyCloudProductLogCollectionResponse.class);
     }
 
     /**
@@ -776,6 +1617,17 @@ public class ClsClient extends AbstractClient{
     }
 
     /**
+     *This API is used to edit the DataSight Console
+     * @param req ModifyConsoleRequest
+     * @return ModifyConsoleResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyConsoleResponse ModifyConsole(ModifyConsoleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyConsole", ModifyConsoleResponse.class);
+    }
+
+    /**
      *This API is used to modify a CKafka delivery task.
      * @param req ModifyConsumerRequest
      * @return ModifyConsumerResponse
@@ -784,6 +1636,17 @@ public class ClsClient extends AbstractClient{
     public ModifyConsumerResponse ModifyConsumer(ModifyConsumerRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyConsumer", ModifyConsumerResponse.class);
+    }
+
+    /**
+     *This API is used to update the consumer group information.
+     * @param req ModifyConsumerGroupRequest
+     * @return ModifyConsumerGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyConsumerGroupResponse ModifyConsumerGroup(ModifyConsumerGroupRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyConsumerGroup", ModifyConsumerGroupResponse.class);
     }
 
     /**
@@ -798,6 +1661,28 @@ public class ClsClient extends AbstractClient{
     }
 
     /**
+     *This API is used to modify the dashboard.
+     * @param req ModifyDashboardRequest
+     * @return ModifyDashboardResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyDashboardResponse ModifyDashboard(ModifyDashboardRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyDashboard", ModifyDashboardResponse.class);
+    }
+
+    /**
+     *This API is used to modify dashboard subscriptions.
+     * @param req ModifyDashboardSubscribeRequest
+     * @return ModifyDashboardSubscribeResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyDashboardSubscribeResponse ModifyDashboardSubscribe(ModifyDashboardSubscribeRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyDashboardSubscribe", ModifyDashboardSubscribeResponse.class);
+    }
+
+    /**
      *This API is used to modify a data processing task.
      * @param req ModifyDataTransformRequest
      * @return ModifyDataTransformResponse
@@ -806,6 +1691,39 @@ public class ClsClient extends AbstractClient{
     public ModifyDataTransformResponse ModifyDataTransform(ModifyDataTransformRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyDataTransform", ModifyDataTransformResponse.class);
+    }
+
+    /**
+     *Modify a DLC delivery task
+     * @param req ModifyDlcDeliverRequest
+     * @return ModifyDlcDeliverResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyDlcDeliverResponse ModifyDlcDeliver(ModifyDlcDeliverRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyDlcDeliver", ModifyDlcDeliverResponse.class);
+    }
+
+    /**
+     *Modify es import configuration
+     * @param req ModifyEsRechargeRequest
+     * @return ModifyEsRechargeResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyEsRechargeResponse ModifyEsRecharge(ModifyEsRechargeRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyEsRecharge", ModifyEsRechargeResponse.class);
+    }
+
+    /**
+     *Modify host metric collection configuration
+     * @param req ModifyHostMetricConfigRequest
+     * @return ModifyHostMetricConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyHostMetricConfigResponse ModifyHostMetricConfig(ModifyHostMetricConfigRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyHostMetricConfig", ModifyHostMetricConfigResponse.class);
     }
 
     /**
@@ -831,6 +1749,17 @@ public class ClsClient extends AbstractClient{
     }
 
     /**
+     *This API is used to modify Kafka protocol consumption group offsets.
+     * @param req ModifyKafkaConsumerGroupOffsetRequest
+     * @return ModifyKafkaConsumerGroupOffsetResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyKafkaConsumerGroupOffsetResponse ModifyKafkaConsumerGroupOffset(ModifyKafkaConsumerGroupOffsetRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyKafkaConsumerGroupOffset", ModifyKafkaConsumerGroupOffsetResponse.class);
+    }
+
+    /**
      *This API is used to modify a Kafka data subscription task.
      * @param req ModifyKafkaRechargeRequest
      * @return ModifyKafkaRechargeResponse
@@ -853,7 +1782,8 @@ public class ClsClient extends AbstractClient{
     }
 
     /**
-     *This API is used to modify a machine group.
+     *Modify machine group.
+Note: Modifying the interface will directly overwrite historical data and change it to valid input parameters this time. Please be cautious when calling this API.
      * @param req ModifyMachineGroupRequest
      * @return ModifyMachineGroupResponse
      * @throws TencentCloudSDKException
@@ -861,6 +1791,72 @@ public class ClsClient extends AbstractClient{
     public ModifyMachineGroupResponse ModifyMachineGroup(ModifyMachineGroupRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyMachineGroup", ModifyMachineGroupResponse.class);
+    }
+
+    /**
+     *This API is used to create metric collection configurations.
+     * @param req ModifyMetricConfigRequest
+     * @return ModifyMetricConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyMetricConfigResponse ModifyMetricConfig(ModifyMetricConfigRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyMetricConfig", ModifyMetricConfigResponse.class);
+    }
+
+    /**
+     *This API is used to modify metric subscription configurations.
+     * @param req ModifyMetricSubscribeRequest
+     * @return ModifyMetricSubscribeResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyMetricSubscribeResponse ModifyMetricSubscribe(ModifyMetricSubscribeRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyMetricSubscribe", ModifyMetricSubscribeResponse.class);
+    }
+
+    /**
+     *Modify a web application
+     * @param req ModifyNetworkApplicationRequest
+     * @return ModifyNetworkApplicationResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyNetworkApplicationResponse ModifyNetworkApplication(ModifyNetworkApplicationRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyNetworkApplication", ModifyNetworkApplicationResponse.class);
+    }
+
+    /**
+     *This API is used to modify notification content configuration.
+     * @param req ModifyNoticeContentRequest
+     * @return ModifyNoticeContentResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyNoticeContentResponse ModifyNoticeContent(ModifyNoticeContentRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyNoticeContent", ModifyNoticeContentResponse.class);
+    }
+
+    /**
+     *This API is used to modify a scheduled pre-aggregation task.
+     * @param req ModifyRecordingRuleTaskRequest
+     * @return ModifyRecordingRuleTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyRecordingRuleTaskResponse ModifyRecordingRuleTask(ModifyRecordingRuleTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyRecordingRuleTask", ModifyRecordingRuleTaskResponse.class);
+    }
+
+    /**
+     *Modifying a Metric Pre-Aggregation Task Through a YAML File
+     * @param req ModifyRecordingRuleYamlTaskRequest
+     * @return ModifyRecordingRuleYamlTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyRecordingRuleYamlTaskResponse ModifyRecordingRuleYamlTask(ModifyRecordingRuleYamlTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyRecordingRuleYamlTask", ModifyRecordingRuleYamlTaskResponse.class);
     }
 
     /**
@@ -875,6 +1871,17 @@ public class ClsClient extends AbstractClient{
     }
 
     /**
+     *This API is used to modify a query view.
+     * @param req ModifySearchViewRequest
+     * @return ModifySearchViewResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifySearchViewResponse ModifySearchView(ModifySearchViewRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifySearchView", ModifySearchViewResponse.class);
+    }
+
+    /**
      *This API is used to modify an existing shipping rule. To use this API, you need to grant CLS the write permission of the specified bucket.
      * @param req ModifyShipperRequest
      * @return ModifyShipperResponse
@@ -886,7 +1893,18 @@ public class ClsClient extends AbstractClient{
     }
 
     /**
-     *This API is used to modify a log topic.
+     *Modify information related to splunk delivery task
+     * @param req ModifySplunkDeliverRequest
+     * @return ModifySplunkDeliverResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifySplunkDeliverResponse ModifySplunkDeliver(ModifySplunkDeliverRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifySplunkDeliver", ModifySplunkDeliverResponse.class);
+    }
+
+    /**
+     *This API is used to modify logs or metric topics.
      * @param req ModifyTopicRequest
      * @return ModifyTopicResponse
      * @throws TencentCloudSDKException
@@ -894,6 +1912,40 @@ public class ClsClient extends AbstractClient{
     public ModifyTopicResponse ModifyTopic(ModifyTopicRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyTopic", ModifyTopicResponse.class);
+    }
+
+    /**
+     *This API is used to modify alarm channel callback configurations.
+     * @param req ModifyWebCallbackRequest
+     * @return ModifyWebCallbackResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyWebCallbackResponse ModifyWebCallback(ModifyWebCallbackRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyWebCallback", ModifyWebCallbackResponse.class);
+    }
+
+    /**
+     *This API is used to create resources and indexes dependent on OpenClaw.
+     * @param req OpenClawServiceRequest
+     * @return OpenClawServiceResponse
+     * @throws TencentCloudSDKException
+     */
+    public OpenClawServiceResponse OpenClawService(OpenClawServiceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "OpenClawService", OpenClawServiceResponse.class);
+    }
+
+    /**
+     *Enable logging
+This API is used to enable CLS in all regions by filling any region for Region, recommend using Guangzhou (ap-guangzhou).
+     * @param req OpenClsServiceRequest
+     * @return OpenClsServiceResponse
+     * @throws TencentCloudSDKException
+     */
+    public OpenClsServiceResponse OpenClsService(OpenClsServiceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "OpenClsService", OpenClsServiceResponse.class);
     }
 
     /**
@@ -919,7 +1971,8 @@ public class ClsClient extends AbstractClient{
     }
 
     /**
-     *This API is used to query the latest metric value at a specified time.
+     *Query the latest metric value at a specified time.
+If there is no metric data in the 5 minutes before that moment, there will be no query result.
      * @param req QueryMetricRequest
      * @return QueryMetricResponse
      * @throws TencentCloudSDKException
@@ -963,8 +2016,20 @@ public class ClsClient extends AbstractClient{
     }
 
     /**
-     *This API is used to search and analyze logs. When using this API, please note the following:1. Besides being subject to the default API request frequency limit by this API, for a single log topic, the concurrency number cannot exceed 15. 2. For search syntax, it's recommended to use the CQL syntax rule. Please use the SyntaxRule parameter and set its value to 1.
-3. The maximum value of API's response data packet is 49MB. It is recommended to enable gzip compression (HTTP Request Header Accept-Encoding: gzip).
+     *This API is used to preview the dashboard subscription.
+     * @param req SearchDashboardSubscribeRequest
+     * @return SearchDashboardSubscribeResponse
+     * @throws TencentCloudSDKException
+     */
+    public SearchDashboardSubscribeResponse SearchDashboardSubscribe(SearchDashboardSubscribeRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "SearchDashboardSubscribe", SearchDashboardSubscribeResponse.class);
+    }
+
+    /**
+     *This API is used to retrieve and analyze logs. Please note the following matters when using this API.
+1. Besides being subject to the default API request rate limit, for a single log topic, the number of concurrent queries cannot exceed 15.
+2. The API's return data packet maximum is 49MB. It is recommended to enable gzip compression (HTTP Request Header Accept-Encoding: gzip).
      * @param req SearchLogRequest
      * @return SearchLogResponse
      * @throws TencentCloudSDKException
@@ -975,7 +2040,18 @@ public class ClsClient extends AbstractClient{
     }
 
     /**
-     *This API is used to split a topic partition.
+     *This API is used to check the heartbeat of a consumer group.
+     * @param req SendConsumerHeartbeatRequest
+     * @return SendConsumerHeartbeatResponse
+     * @throws TencentCloudSDKException
+     */
+    public SendConsumerHeartbeatResponse SendConsumerHeartbeat(SendConsumerHeartbeatRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "SendConsumerHeartbeat", SendConsumerHeartbeatResponse.class);
+    }
+
+    /**
+     *This API is deprecated. If needed, please use the ModifyTopic API to change the number of partitions.
      * @param req SplitPartitionRequest
      * @return SplitPartitionResponse
      * @throws TencentCloudSDKException
@@ -986,81 +2062,69 @@ public class ClsClient extends AbstractClient{
     }
 
     /**
-     *## Note
-To ensure log data reliability and help you use CLS more efficiently, we recommend you use the optimized API to upload logs. For more information about the API, see [Uploading Log via API](https://intl.cloud.tencent.com/document/product/614/16873?from_cn_redirect=1).
+     *## Notification
+To ensure the reliability of your log data and use the log service more efficiently, we recommend that you use the CLS-optimized API to upload structured logs (https://www.tencentcloud.com/document/product/614/16873?from_cn_redirect=1).
 
-For the optimized API, we have developed an SDK (available in multiple languages) that provides features including async sending, resource control, automatic retry, graceful shutdown, and detection-based reporting. For details, see [Uploading Log via SDK](https://intl.cloud.tencent.com/document/product/614/67157?from_cn_redirect=1).
+Meanwhile, we have specially optimized and customized SDKs in multiple languages for this API for you to choose from. The SDK provides unified async sending, resource control, automatic retry, graceful shutdown, perception reporting, and other features to improve the log reporting function. For details, refer to [SDK Collection](https://www.tencentcloud.com/document/product/614/67157?from_cn_redirect=1).
 
-`UploadLog` allows you to synchronously upload log data. If you still want to continue to use this API instead of the optimized one, read this document.
+Meanwhile, the log upload API also supports synchronous log data upload. If you select to continue using this API, refer to the following text.
 
 ## Feature Description
 
-This API is used to write logs to a specified log topic.
+This API is used to write logs to the designated log topic.
 
-CLS provides the following two modes:
+#### Input parameter (pb binary stream, located in body)
 
-#### Load balancing mode
-
-In this mode, logs will be automatically written to a target partition among all readable/writable partitions under the current log topic based on the load balancing principle. This mode is suitable for scenarios where sequential consumption is not needed.
-
-#### Hash routing mode
-
-In this mode, data will be written to a target partition that meets the range requirements based on the carried hash value (`X-CLS-HashKey`). For example, a log source can be bound to a topic partition through `HashKey`, strictly guaranteeing the sequence of the data written to and consumed in this partition.
-
-                 
-
-#### Input parameters (pb binary streams in `body`)
-
-| Parameter       | Type    | Location | Required | Description                                                         |
+| Field name | Data type | Location | Must | Description |
 | ------------ | ------- | ---- | ---- | ------------------------------------------------------------ |
-| logGroupList | message | pb   | Yes   | The `logGroup` list, which describes the encapsulated log groups. We recommend you enter up to five `logGroup` values. |
+| logGroupList | message | pb   | Yes | logGroup list, encapsulated content of the log group list. It is advisable not to exceed 5 logGroups. |
 
-`LogGroup` description:
+Group description:
 
-| Parameter      | Required | Description                                                         |
+| Field name | Required or optional | Description |
 | ----------- | -------- | ------------------------------------------------------------ |
-| logs        | Yes       | Log array consisting of multiple `Log` values. The `Log` indicates a log, and a `LogGroup` can contain up to 10,000 `Log` values. |
-| contextFlow | No       | Unique `LogGroup` ID, which should be passed in if the context feature needs to be used. Format: "{Context ID}-{LogGroupID}". <br>Context ID: Uniquely identifies the context (a series of log files that are continuously scrolling or a series of logs that need to be sequenced), which is a 64-bit integer hex string. <br>LogGroupID: A 64-bit integer hex string that continuously increases, such as `102700A66102516A-59F59`.                        |
-| filename    | No       | Log filename                                                   |
-| source      | No       | Log source, which is generally the machine IP                           |
-| logTags     | No       | List of log tags                                               |
+| logs        | is       | a log array, which means a set of multiple logs. One Log represents one log, and the number of logs in one LogGroup cannot exceed 10000 |
+| contextFlow | No | The unique ID of LogGroup, which must be imported when using context features. Format: "{context ID}-{LogGroupID}".<br>Context ID: A unique identifier for a context (a series of consecutively scrolled log files or a sequence of logs requiring order preservation), a 64-bit integer string in base 16.<br>LogGroupID: A consecutively incremental integer string in base 16. Example: "102700A66102516A-59F59".
+| filename    | No       | Log file name |
+| source      | No       | Log source, using machine IP as a label in general use       |
+| logTags     | No       | Log tag list                                               |
 
-`Log` description:
+Log description:
 
-| Parameter   | Required | Description                                                         |
+| field name | Required or optional | Description |
 | -------- | -------- | ------------------------------------------------------------ |
-| time     | Yes       | Unix timestamp of log time in seconds or milliseconds (recommended)      |
-| contents | No       | Log content in key-value format. A log can contain multiple key-value pairs. |
+| time     | is       | log time (Unix timestamp), supports second, millisecond, microsecond, milliseconds is recommended |
+| contents | No | Key-value formatted log content, representing multiple key-value composites in a log |
 
-`Content` description:
+Content description:
 
-| Parameter | Required | Description                                                         |
+| Field name | Required or optional | Description |
 | ------ | -------- | ------------------------------------------------------------ |
-| key    | Yes       | Key of a field group in one log, which cannot start with `_`.                 |
-| value  | Yes       | Value of a field group. The `value` of one log cannot exceed 1 MB and the total `value` in `LogGroup` cannot exceed 5 MB. |
+| key    | Yes       | The key value of a field group in a single-line log. It cannot start with `_` |
+| value  | Yes       | The value of a field group in a single-line log. The value of a single-line log must not exceed 1MB, and the sum of ALL values in a LogGroup cannot exceed 5MB. |
 
-`LogTag` description:
+LogTag description:
 
-| Parameter | Required | Description                             |
+| Field name | Required or optional | Description |
 | ------ | -------- | -------------------------------- |
-| key    | Yes       | Key of a custom tag                 |
-| value  | Yes       | Value corresponding to the custom tag key |
+| key    | Yes      | Custom tag key                 |
+| value  | is       | value corresponding to the custom tag key |
 
-## pb Compilation Example
+## PB Compilation Example
 
-This example shows you how to use the protoc compiler to compile a pb description file into a log upload API in C++.
+This example shows how to use the official protoc compiler to compile and generate a C++ language adjustable log upload API from a description file.
 
-> ?Currently, protoc supports compilation in multiple programming languages such as Java, C++, and Python. For more information, see [protoc](https://github.com/protocolbuffers/protobuf).
+Currently protoc officially supports compilation for languages such as Java, C++, and Python. For details, see [protoc](https://github.com/protocolbuffers/protobuf).
 
-#### 1. Install protocol buffers
+#### 1. Protocol Buffer installation
 
-Download [Protocol Buffers](https://main.qcloudimg.com/raw/d7810aaf8b3073fbbc9d4049c21532aa/protobuf-2.6.1.tar.gz), decompress the package, and install the tool. The version used in the example is protobuf 2.6.1 running on CentOS 7.3. Run the following command to decompress the `protobuf-2.6.1.tar.gz` package to the `/usr/local` directory and go to the directory:
+Download [Protocol Buffer](https://main.qcloudimg.com/raw/d7810aaf8b3073fbbc9d4049c21532aa/protobuf-2.6.1.tar.gz), unzip and install. The example version is protobuf 2.6.1, and the environment is Centos 7.3 system. Decompress the `protobuf-2.6.1.tar.gz` compressed package to the `/usr/local` directory and enter the directory. Execute the command as follows:
 
 ```
 tar -zxvf protobuf-2.6.1.tar.gz -C /usr/local/ && cd /usr/local/protobuf-2.6.1
 ```
 
-Run the following commands to start compilation and installation and configure the environment variables:
+Start compilation and installation, configure environment variables, execute the command as follows:
 
 ```
 [root@VM_0_8_centos protobuf-2.6.1]# ./configure 
@@ -1068,22 +2132,22 @@ Run the following commands to start compilation and installation and configure t
 [root@VM_0_8_centos protobuf-2.6.1]# export PATH=$PATH:/usr/local/protobuf-2.6.1/bin
 ```
 
-After the compilation succeeds, run the following command to check the version:
+After successful compilation, view the version using the following command:
 
 ```
 [root@VM_0_8_centos protobuf-2.6.1]# protoc --version
 liprotoc 2.6.1
 ```
 
-#### 2. Create a pb description file
+#### 2. Create PB description file
 
-A pb description file is an agreed-on data interchange format for communication. To upload logs, compile the specified protocol format to an API in the target programming language and add the API to the project code. For more information, see [protoc](https://github.com/protocolbuffers/protobuf).
+The PB description file is the data interchange format agreed by the communication parties. When uploading logs, compile the specified protocol format into the calling interface of the corresponding language version, then add to engineering code. For details, see [protoc](https://github.com/protocolbuffers/protobuf).
 
-Create a pb message description file `cls.proto` based on the pb data format content specified by CLS.
+Create a local PB message description file cls.proto based on the PB data format specified by the log service.
 
-> !The pb description file content cannot be modified, and the filename must end with `.proto`.
+!PB description file content immutable, and the file name must end with `.proto`.
 
-The content of `cls.proto` (pb description file) is as follows:
+The content of cls.proto (PB description file) is as follows:
 
 ```
 package cls;
@@ -1092,11 +2156,11 @@ message Log
 {
     message Content
     {
-        required string key   = 1; // Key of each field group
-        required string value = 2; // Value of each field group
+required string key = 1; // key for each group of fields
+required string value = 2; // The value of the group field
     }
-    required int64   time     = 1; // Unix timestamp
-    repeated Content contents = 2; // Multiple key-value pairs in one log
+required int64   time     = 1; // A timestamp in UNIX time format
+repeated Content contents = 2; // multiple kv combinations in a log
 }
 
 message LogTag
@@ -1107,30 +2171,30 @@ message LogTag
 
 message LogGroup
 {
-    repeated Log    logs        = 1; // Log array consisting of multiple logs
-    optional string contextFlow = 2; // This parameter does not take effect currently
-    optional string filename    = 3; // Log filename
-    optional string source      = 4; // Log source, which is generally the machine IP
+repeated Log    logs        = 1; // log array composed of multiple logs
+optional string contextFlow = 2; // Currently no utility
+optional string filename = 3; // log file name
+optional string source      = 4; // log source, general use machine IP
     repeated LogTag logTags     = 5;
 }
 
 message LogGroupList
 {
-    repeated LogGroup logGroupList = 1; // Log group list
+repeated LogGroup logGroupList = 1; // log group list
 }
 ```
 
-#### 3. Compile and generate the API
+#### 3. Compile and generate
 
-This example uses the proto compiler to generate a C++ file in the same directory as the `cls.proto` file. Run the following compilation command:
+In this example, use the proto compiler to generate C++ language files under the same directory as the cls.proto file and execute the following compilation command:
 
 ```
 protoc --cpp_out=./ ./cls.proto 
 ```
 
-> ?`--cpp_out=./` indicates that the file will be compiled in cpp format and output to the current directory. `./cls.proto` indicates the `cls.proto` description file in the current directory.
+`--cpp_out=./` means compile to cpp format and output in the current directory. `./cls.proto` refers to the cls.proto description file located in the current directory.
 
-After the compilation succeeds, the code file in the corresponding programming language will be generated. This example generates the `cls.pb.h` header file and [cls.pb.cc](http://cls.pb.cc) code implementation file as shown below:
+After successful compilation, it will output the code file in the corresponding language. This routine generates the cls.pb.h header file and the cls.pb.cc code implementation file, as shown below:
 
 ```
 [root@VM_0_8_centos protobuf-2.6.1]# protoc --cpp_out=./ ./cls.proto
@@ -1138,9 +2202,9 @@ After the compilation succeeds, the code file in the corresponding programming l
 cls.pb.cc cls.pb.h cls.proto
 ```
 
-#### 4. Call the API
+#### 4. Call
 
-Import the generated `cls.pb.h` header file into the code and call the API for data encapsulation.
+Import the generated cls.pb.h header file into the code and call the interface to encapsulate the data format.
      * @param req UploadLogRequest
      * @return UploadLogResponse
      * @throws TencentCloudSDKException

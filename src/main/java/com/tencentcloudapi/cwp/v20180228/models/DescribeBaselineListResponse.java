@@ -25,15 +25,13 @@ public class DescribeBaselineListResponse extends AbstractModel {
 
     /**
     * List of baseline information
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("BaselineList")
     @Expose
     private BaselineInfo [] BaselineList;
 
     /**
-    * Total number of records for paging query
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Total number of pagination query records
     */
     @SerializedName("TotalCount")
     @Expose
@@ -47,10 +45,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get List of baseline information
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get List of baseline information 
      * @return BaselineList List of baseline information
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public BaselineInfo [] getBaselineList() {
         return this.BaselineList;
@@ -58,29 +54,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set List of baseline information
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param BaselineList List of baseline information
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setBaselineList(BaselineInfo [] BaselineList) {
         this.BaselineList = BaselineList;
     }
 
     /**
-     * Get Total number of records for paging query
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return TotalCount Total number of records for paging query
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Total number of pagination query records 
+     * @return TotalCount Total number of pagination query records
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set Total number of records for paging query
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param TotalCount Total number of records for paging query
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Total number of pagination query records
+     * @param TotalCount Total number of pagination query records
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

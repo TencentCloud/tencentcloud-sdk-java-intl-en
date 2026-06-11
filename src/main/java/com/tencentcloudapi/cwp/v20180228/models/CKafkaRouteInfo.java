@@ -52,7 +52,7 @@ public class CKafkaRouteInfo extends AbstractModel {
     private String Vip;
 
     /**
-    * Virtual IP Type
+    * Virtual IP address type. 1: public network TGW; 2: basic network; 3: VPC; 4: supporting network (standard edition); 5: SSL public network access; 6: VPC in the bare metal environment; 7: supporting network (Pro).
     */
     @SerializedName("VipType")
     @Expose
@@ -60,6 +60,10 @@ public class CKafkaRouteInfo extends AbstractModel {
 
     /**
     * Access type
+0: PLAINTEXT (plaintext mode, no user information included, supported by older versions and community edition)
+1: SASL_PLAINTEXT (plaintext mode, however, login authentication with SASL is performed at the start of data transmission, only supported by community version)
+2: SSL (SSL encrypted communication, no user information included, supported by older versions and community edition)
+3: SASL_SSL (SSL encrypted communication. Authenticate the login with SASL when data transmission starts. Only supported by community version)
     */
     @SerializedName("AccessType")
     @Expose
@@ -130,24 +134,32 @@ public class CKafkaRouteInfo extends AbstractModel {
     }
 
     /**
-     * Get Virtual IP Type 
-     * @return VipType Virtual IP Type
+     * Get Virtual IP address type. 1: public network TGW; 2: basic network; 3: VPC; 4: supporting network (standard edition); 5: SSL public network access; 6: VPC in the bare metal environment; 7: supporting network (Pro). 
+     * @return VipType Virtual IP address type. 1: public network TGW; 2: basic network; 3: VPC; 4: supporting network (standard edition); 5: SSL public network access; 6: VPC in the bare metal environment; 7: supporting network (Pro).
      */
     public Long getVipType() {
         return this.VipType;
     }
 
     /**
-     * Set Virtual IP Type
-     * @param VipType Virtual IP Type
+     * Set Virtual IP address type. 1: public network TGW; 2: basic network; 3: VPC; 4: supporting network (standard edition); 5: SSL public network access; 6: VPC in the bare metal environment; 7: supporting network (Pro).
+     * @param VipType Virtual IP address type. 1: public network TGW; 2: basic network; 3: VPC; 4: supporting network (standard edition); 5: SSL public network access; 6: VPC in the bare metal environment; 7: supporting network (Pro).
      */
     public void setVipType(Long VipType) {
         this.VipType = VipType;
     }
 
     /**
-     * Get Access type 
+     * Get Access type
+0: PLAINTEXT (plaintext mode, no user information included, supported by older versions and community edition)
+1: SASL_PLAINTEXT (plaintext mode, however, login authentication with SASL is performed at the start of data transmission, only supported by community version)
+2: SSL (SSL encrypted communication, no user information included, supported by older versions and community edition)
+3: SASL_SSL (SSL encrypted communication. Authenticate the login with SASL when data transmission starts. Only supported by community version) 
      * @return AccessType Access type
+0: PLAINTEXT (plaintext mode, no user information included, supported by older versions and community edition)
+1: SASL_PLAINTEXT (plaintext mode, however, login authentication with SASL is performed at the start of data transmission, only supported by community version)
+2: SSL (SSL encrypted communication, no user information included, supported by older versions and community edition)
+3: SASL_SSL (SSL encrypted communication. Authenticate the login with SASL when data transmission starts. Only supported by community version)
      */
     public Long getAccessType() {
         return this.AccessType;
@@ -155,7 +167,15 @@ public class CKafkaRouteInfo extends AbstractModel {
 
     /**
      * Set Access type
+0: PLAINTEXT (plaintext mode, no user information included, supported by older versions and community edition)
+1: SASL_PLAINTEXT (plaintext mode, however, login authentication with SASL is performed at the start of data transmission, only supported by community version)
+2: SSL (SSL encrypted communication, no user information included, supported by older versions and community edition)
+3: SASL_SSL (SSL encrypted communication. Authenticate the login with SASL when data transmission starts. Only supported by community version)
      * @param AccessType Access type
+0: PLAINTEXT (plaintext mode, no user information included, supported by older versions and community edition)
+1: SASL_PLAINTEXT (plaintext mode, however, login authentication with SASL is performed at the start of data transmission, only supported by community version)
+2: SSL (SSL encrypted communication, no user information included, supported by older versions and community edition)
+3: SASL_SSL (SSL encrypted communication. Authenticate the login with SASL when data transmission starts. Only supported by community version)
      */
     public void setAccessType(Long AccessType) {
         this.AccessType = AccessType;

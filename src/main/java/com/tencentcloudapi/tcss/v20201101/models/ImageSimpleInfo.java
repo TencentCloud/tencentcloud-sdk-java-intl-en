@@ -59,6 +59,13 @@ public class ImageSimpleInfo extends AbstractModel {
     private Long ContainerCnt;
 
     /**
+    * Associated hosts
+    */
+    @SerializedName("HostCnt")
+    @Expose
+    private Long HostCnt;
+
+    /**
      * Get Image ID 
      * @return ImageID Image ID
      */
@@ -138,6 +145,22 @@ public class ImageSimpleInfo extends AbstractModel {
         this.ContainerCnt = ContainerCnt;
     }
 
+    /**
+     * Get Associated hosts 
+     * @return HostCnt Associated hosts
+     */
+    public Long getHostCnt() {
+        return this.HostCnt;
+    }
+
+    /**
+     * Set Associated hosts
+     * @param HostCnt Associated hosts
+     */
+    public void setHostCnt(Long HostCnt) {
+        this.HostCnt = HostCnt;
+    }
+
     public ImageSimpleInfo() {
     }
 
@@ -161,6 +184,9 @@ public class ImageSimpleInfo extends AbstractModel {
         if (source.ContainerCnt != null) {
             this.ContainerCnt = new Long(source.ContainerCnt);
         }
+        if (source.HostCnt != null) {
+            this.HostCnt = new Long(source.HostCnt);
+        }
     }
 
 
@@ -173,6 +199,7 @@ public class ImageSimpleInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "Size", this.Size);
         this.setParamSimple(map, prefix + "ImageType", this.ImageType);
         this.setParamSimple(map, prefix + "ContainerCnt", this.ContainerCnt);
+        this.setParamSimple(map, prefix + "HostCnt", this.HostCnt);
 
     }
 }

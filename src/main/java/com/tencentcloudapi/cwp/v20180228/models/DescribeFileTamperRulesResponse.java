@@ -25,7 +25,6 @@ public class DescribeFileTamperRulesResponse extends AbstractModel {
 
     /**
     * List of rules
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("List")
     @Expose
@@ -46,10 +45,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get List of rules
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get List of rules 
      * @return List List of rules
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public FileTamperRuleInfo [] getList() {
         return this.List;
@@ -57,9 +54,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set List of rules
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param List List of rules
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setList(FileTamperRuleInfo [] List) {
         this.List = List;

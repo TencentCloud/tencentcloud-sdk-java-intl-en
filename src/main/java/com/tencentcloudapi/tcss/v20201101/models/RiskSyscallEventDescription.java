@@ -38,8 +38,7 @@ public class RiskSyscallEventDescription extends AbstractModel {
     private String Solution;
 
     /**
-    * Event remarks
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Event remark information
     */
     @SerializedName("Remark")
     @Expose
@@ -53,8 +52,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String SyscallName;
 
     /**
-    * Last processing time of the event
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Last Time for Event Handling
     */
     @SerializedName("OperationTime")
     @Expose
@@ -93,20 +91,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Event remarks
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Remark Event remarks
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Event remark information 
+     * @return Remark Event remark information
      */
     public String getRemark() {
         return this.Remark;
     }
 
     /**
-     * Set Event remarks
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Remark Event remarks
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Event remark information
+     * @param Remark Event remark information
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;
@@ -129,20 +123,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Last processing time of the event
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return OperationTime Last processing time of the event
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Last Time for Event Handling 
+     * @return OperationTime Last Time for Event Handling
      */
     public String getOperationTime() {
         return this.OperationTime;
     }
 
     /**
-     * Set Last processing time of the event
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param OperationTime Last processing time of the event
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Last Time for Event Handling
+     * @param OperationTime Last Time for Event Handling
      */
     public void setOperationTime(String OperationTime) {
         this.OperationTime = OperationTime;

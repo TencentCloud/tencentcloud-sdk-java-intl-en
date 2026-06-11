@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class ConditionInfo extends AbstractModel {
 
     /**
-    * Condition attribute, currently supports only VpcID
+    * Condition attribute. Currently, only VpcID is supported.
     */
     @SerializedName("Attributes")
     @Expose
     private String Attributes;
 
     /**
-    * Condition rule, 1: equal to, 2: not equal to
+    * Conditional rule. 1: equal to; 2: not equal to.
     */
     @SerializedName("Rule")
     @Expose
     private Long Rule;
 
     /**
-    * Value of the corresponding condition attribute
+    * Value corresponding to the condition attribute.
     */
     @SerializedName("ConditionValue")
     @Expose
     private String ConditionValue;
 
     /**
-     * Get Condition attribute, currently supports only VpcID 
-     * @return Attributes Condition attribute, currently supports only VpcID
+     * Get Condition attribute. Currently, only VpcID is supported. 
+     * @return Attributes Condition attribute. Currently, only VpcID is supported.
      */
     public String getAttributes() {
         return this.Attributes;
     }
 
     /**
-     * Set Condition attribute, currently supports only VpcID
-     * @param Attributes Condition attribute, currently supports only VpcID
+     * Set Condition attribute. Currently, only VpcID is supported.
+     * @param Attributes Condition attribute. Currently, only VpcID is supported.
      */
     public void setAttributes(String Attributes) {
         this.Attributes = Attributes;
     }
 
     /**
-     * Get Condition rule, 1: equal to, 2: not equal to 
-     * @return Rule Condition rule, 1: equal to, 2: not equal to
+     * Get Conditional rule. 1: equal to; 2: not equal to. 
+     * @return Rule Conditional rule. 1: equal to; 2: not equal to.
      */
     public Long getRule() {
         return this.Rule;
     }
 
     /**
-     * Set Condition rule, 1: equal to, 2: not equal to
-     * @param Rule Condition rule, 1: equal to, 2: not equal to
+     * Set Conditional rule. 1: equal to; 2: not equal to.
+     * @param Rule Conditional rule. 1: equal to; 2: not equal to.
      */
     public void setRule(Long Rule) {
         this.Rule = Rule;
     }
 
     /**
-     * Get Value of the corresponding condition attribute 
-     * @return ConditionValue Value of the corresponding condition attribute
+     * Get Value corresponding to the condition attribute. 
+     * @return ConditionValue Value corresponding to the condition attribute.
      */
     public String getConditionValue() {
         return this.ConditionValue;
     }
 
     /**
-     * Set Value of the corresponding condition attribute
-     * @param ConditionValue Value of the corresponding condition attribute
+     * Set Value corresponding to the condition attribute.
+     * @param ConditionValue Value corresponding to the condition attribute.
      */
     public void setConditionValue(String ConditionValue) {
         this.ConditionValue = ConditionValue;

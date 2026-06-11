@@ -25,7 +25,6 @@ public class DescribeAssetWebLocationPathListResponse extends AbstractModel {
 
     /**
     * Total number
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Total")
     @Expose
@@ -33,7 +32,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * List
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Paths")
     @Expose
@@ -47,10 +45,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Total number
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Total number 
      * @return Total Total number
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getTotal() {
         return this.Total;
@@ -58,19 +54,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Total number
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Total Total number
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setTotal(Long Total) {
         this.Total = Total;
     }
 
     /**
-     * Get List
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get List 
      * @return Paths List
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public AssetWebLocationPath [] getPaths() {
         return this.Paths;
@@ -78,9 +70,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set List
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Paths List
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setPaths(AssetWebLocationPath [] Paths) {
         this.Paths = Paths;

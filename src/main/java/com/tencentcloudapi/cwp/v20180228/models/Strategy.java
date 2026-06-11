@@ -25,7 +25,6 @@ public class Strategy extends AbstractModel {
 
     /**
     * Policy name
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("StrategyName")
     @Expose
@@ -33,7 +32,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Policy ID
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("StrategyId")
     @Expose
@@ -41,15 +39,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Total number of baseline detection items
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("RuleCount")
     @Expose
     private Long RuleCount;
 
     /**
-    * Number of Hosts
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Number of hosts
     */
     @SerializedName("HostCount")
     @Expose
@@ -57,7 +53,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Scan cycle
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ScanCycle")
     @Expose
@@ -65,7 +60,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Scan time
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ScanAt")
     @Expose
@@ -73,15 +67,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Available or not?
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Enabled")
     @Expose
     private Long Enabled;
 
     /**
-    * Pass rate
-Note: This field may return null, indicating that no valid values can be obtained.
+    * pass rate
     */
     @SerializedName("PassRate")
     @Expose
@@ -89,7 +81,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Baseline ID
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("CategoryIds")
     @Expose
@@ -97,17 +88,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Whether a default policy
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("IsDefault")
     @Expose
     private Long IsDefault;
 
     /**
-     * Get Policy name
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Policy name 
      * @return StrategyName Policy name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getStrategyName() {
         return this.StrategyName;
@@ -115,19 +103,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Policy name
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param StrategyName Policy name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setStrategyName(String StrategyName) {
         this.StrategyName = StrategyName;
     }
 
     /**
-     * Get Policy ID
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Policy ID 
      * @return StrategyId Policy ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getStrategyId() {
         return this.StrategyId;
@@ -135,19 +119,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Policy ID
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param StrategyId Policy ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setStrategyId(Long StrategyId) {
         this.StrategyId = StrategyId;
     }
 
     /**
-     * Get Total number of baseline detection items
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Total number of baseline detection items 
      * @return RuleCount Total number of baseline detection items
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getRuleCount() {
         return this.RuleCount;
@@ -155,39 +135,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Total number of baseline detection items
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param RuleCount Total number of baseline detection items
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setRuleCount(Long RuleCount) {
         this.RuleCount = RuleCount;
     }
 
     /**
-     * Get Number of Hosts
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return HostCount Number of Hosts
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Number of hosts 
+     * @return HostCount Number of hosts
      */
     public Long getHostCount() {
         return this.HostCount;
     }
 
     /**
-     * Set Number of Hosts
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param HostCount Number of Hosts
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Number of hosts
+     * @param HostCount Number of hosts
      */
     public void setHostCount(Long HostCount) {
         this.HostCount = HostCount;
     }
 
     /**
-     * Get Scan cycle
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Scan cycle 
      * @return ScanCycle Scan cycle
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getScanCycle() {
         return this.ScanCycle;
@@ -195,19 +167,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Scan cycle
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param ScanCycle Scan cycle
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setScanCycle(Long ScanCycle) {
         this.ScanCycle = ScanCycle;
     }
 
     /**
-     * Get Scan time
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Scan time 
      * @return ScanAt Scan time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getScanAt() {
         return this.ScanAt;
@@ -215,19 +183,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Scan time
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param ScanAt Scan time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setScanAt(String ScanAt) {
         this.ScanAt = ScanAt;
     }
 
     /**
-     * Get Available or not?
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Available or not? 
      * @return Enabled Available or not?
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getEnabled() {
         return this.Enabled;
@@ -235,39 +199,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Available or not?
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Enabled Available or not?
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setEnabled(Long Enabled) {
         this.Enabled = Enabled;
     }
 
     /**
-     * Get Pass rate
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return PassRate Pass rate
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get pass rate 
+     * @return PassRate pass rate
      */
     public Long getPassRate() {
         return this.PassRate;
     }
 
     /**
-     * Set Pass rate
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param PassRate Pass rate
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set pass rate
+     * @param PassRate pass rate
      */
     public void setPassRate(Long PassRate) {
         this.PassRate = PassRate;
     }
 
     /**
-     * Get Baseline ID
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Baseline ID 
      * @return CategoryIds Baseline ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getCategoryIds() {
         return this.CategoryIds;
@@ -275,19 +231,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Baseline ID
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param CategoryIds Baseline ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setCategoryIds(String CategoryIds) {
         this.CategoryIds = CategoryIds;
     }
 
     /**
-     * Get Whether a default policy
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Whether a default policy 
      * @return IsDefault Whether a default policy
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getIsDefault() {
         return this.IsDefault;
@@ -295,9 +247,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Whether a default policy
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param IsDefault Whether a default policy
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setIsDefault(Long IsDefault) {
         this.IsDefault = IsDefault;

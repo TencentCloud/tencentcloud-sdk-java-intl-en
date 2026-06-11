@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class ModifyParamsData extends AbstractModel {
 
     /**
-    * 
+    * Parameter name.
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 
+    * Parameter value before modification.
     */
     @SerializedName("OldValue")
     @Expose
     private String OldValue;
 
     /**
-    * 
+    * Parameter value after modification.
     */
     @SerializedName("CurValue")
     @Expose
     private String CurValue;
 
     /**
-     * Get  
-     * @return Name 
+     * Get Parameter name. 
+     * @return Name Parameter name.
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 
-     * @param Name 
+     * Set Parameter name.
+     * @param Name Parameter name.
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get  
-     * @return OldValue 
+     * Get Parameter value before modification. 
+     * @return OldValue Parameter value before modification.
      */
     public String getOldValue() {
         return this.OldValue;
     }
 
     /**
-     * Set 
-     * @param OldValue 
+     * Set Parameter value before modification.
+     * @param OldValue Parameter value before modification.
      */
     public void setOldValue(String OldValue) {
         this.OldValue = OldValue;
     }
 
     /**
-     * Get  
-     * @return CurValue 
+     * Get Parameter value after modification. 
+     * @return CurValue Parameter value after modification.
      */
     public String getCurValue() {
         return this.CurValue;
     }
 
     /**
-     * Set 
-     * @param CurValue 
+     * Set Parameter value after modification.
+     * @param CurValue Parameter value after modification.
      */
     public void setCurValue(String CurValue) {
         this.CurValue = CurValue;

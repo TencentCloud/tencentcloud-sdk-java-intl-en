@@ -25,15 +25,13 @@ public class ImageVul extends AbstractModel {
 
     /**
     * Vulnerability ID
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("CVEID")
     @Expose
     private String CVEID;
 
     /**
-    * POC ID
-Note: This field may return null, indicating that no valid values can be obtained.
+    * viewpoint validation program ID
     */
     @SerializedName("POCID")
     @Expose
@@ -41,23 +39,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Vulnerability name
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * Component information
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Component Information
     */
     @SerializedName("Components")
     @Expose
     private ComponentsInfo [] Components;
 
     /**
-    * Category
-Note: This field may return null, indicating that no valid values can be obtained.
+    * category
     */
     @SerializedName("Category")
     @Expose
@@ -65,7 +60,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Category 2
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("CategoryType")
     @Expose
@@ -73,7 +67,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Risk level
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Level")
     @Expose
@@ -81,7 +74,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Description
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Des")
     @Expose
@@ -89,23 +81,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Solution
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("OfficialSolution")
     @Expose
     private String OfficialSolution;
 
     /**
-    * Reference
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Refer
     */
     @SerializedName("Reference")
     @Expose
     private String Reference;
 
     /**
-    * Defense solution
-Note: This field may return null, indicating that no valid values can be obtained.
+    * defense solution
     */
     @SerializedName("DefenseSolution")
     @Expose
@@ -113,55 +102,48 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Submission time
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("SubmitTime")
     @Expose
     private String SubmitTime;
 
     /**
-    * CVSS score
-Note: This field may return null, indicating that no valid values can be obtained.
+    * CVSS Score
     */
     @SerializedName("CvssScore")
     @Expose
     private String CvssScore;
 
     /**
-    * CVSS information
-Note: This field may return null, indicating that no valid values can be obtained.
+    * CVSS information.
     */
     @SerializedName("CvssVector")
     @Expose
     private String CvssVector;
 
     /**
-    * Whether fix is suggested
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Whether repair is suggested.
     */
     @SerializedName("IsSuggest")
     @Expose
     private String IsSuggest;
 
     /**
-    * Number of the fixed version
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Repair Version Number
     */
     @SerializedName("FixedVersions")
     @Expose
     private String FixedVersions;
 
     /**
-    * Vulnerability tag. Valid values: `CanBeFixed`, `DynamicLevelPoc`, `DynamicLevelExp`.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Vulnerability Tag: "CanBeFixed", "DynamicLevelPoc", and "DynamicLevelExp"
     */
     @SerializedName("Tag")
     @Expose
     private String [] Tag;
 
     /**
-    * Component name
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Component name.
     */
     @SerializedName("Component")
     @Expose
@@ -169,17 +151,28 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Component version
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Version")
     @Expose
     private String Version;
 
     /**
-     * Get Vulnerability ID
-Note: This field may return null, indicating that no valid values can be obtained. 
+    * Attack Heat 0-3
+    */
+    @SerializedName("AttackLevel")
+    @Expose
+    private Long AttackLevel;
+
+    /**
+    * Image Layer Information List
+    */
+    @SerializedName("LayerInfos")
+    @Expose
+    private ImageVulLayerInfo [] LayerInfos;
+
+    /**
+     * Get Vulnerability ID 
      * @return CVEID Vulnerability ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getCVEID() {
         return this.CVEID;
@@ -187,39 +180,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Vulnerability ID
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param CVEID Vulnerability ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setCVEID(String CVEID) {
         this.CVEID = CVEID;
     }
 
     /**
-     * Get POC ID
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return POCID POC ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get viewpoint validation program ID 
+     * @return POCID viewpoint validation program ID
      */
     public String getPOCID() {
         return this.POCID;
     }
 
     /**
-     * Set POC ID
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param POCID POC ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set viewpoint validation program ID
+     * @param POCID viewpoint validation program ID
      */
     public void setPOCID(String POCID) {
         this.POCID = POCID;
     }
 
     /**
-     * Get Vulnerability name
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Vulnerability name 
      * @return Name Vulnerability name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getName() {
         return this.Name;
@@ -227,59 +212,47 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Vulnerability name
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Name Vulnerability name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get Component information
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Components Component information
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Component Information 
+     * @return Components Component Information
      */
     public ComponentsInfo [] getComponents() {
         return this.Components;
     }
 
     /**
-     * Set Component information
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Components Component information
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Component Information
+     * @param Components Component Information
      */
     public void setComponents(ComponentsInfo [] Components) {
         this.Components = Components;
     }
 
     /**
-     * Get Category
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Category Category
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get category 
+     * @return Category category
      */
     public String getCategory() {
         return this.Category;
     }
 
     /**
-     * Set Category
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Category Category
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set category
+     * @param Category category
      */
     public void setCategory(String Category) {
         this.Category = Category;
     }
 
     /**
-     * Get Category 2
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Category 2 
      * @return CategoryType Category 2
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getCategoryType() {
         return this.CategoryType;
@@ -287,19 +260,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Category 2
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param CategoryType Category 2
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setCategoryType(String CategoryType) {
         this.CategoryType = CategoryType;
     }
 
     /**
-     * Get Risk level
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Risk level 
      * @return Level Risk level
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getLevel() {
         return this.Level;
@@ -307,19 +276,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Risk level
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Level Risk level
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setLevel(String Level) {
         this.Level = Level;
     }
 
     /**
-     * Get Description
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Description 
      * @return Des Description
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getDes() {
         return this.Des;
@@ -327,19 +292,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Description
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Des Description
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setDes(String Des) {
         this.Des = Des;
     }
 
     /**
-     * Get Solution
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Solution 
      * @return OfficialSolution Solution
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getOfficialSolution() {
         return this.OfficialSolution;
@@ -347,59 +308,47 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Solution
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param OfficialSolution Solution
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setOfficialSolution(String OfficialSolution) {
         this.OfficialSolution = OfficialSolution;
     }
 
     /**
-     * Get Reference
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Reference Reference
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Refer 
+     * @return Reference Refer
      */
     public String getReference() {
         return this.Reference;
     }
 
     /**
-     * Set Reference
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Reference Reference
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Refer
+     * @param Reference Refer
      */
     public void setReference(String Reference) {
         this.Reference = Reference;
     }
 
     /**
-     * Get Defense solution
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return DefenseSolution Defense solution
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get defense solution 
+     * @return DefenseSolution defense solution
      */
     public String getDefenseSolution() {
         return this.DefenseSolution;
     }
 
     /**
-     * Set Defense solution
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param DefenseSolution Defense solution
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set defense solution
+     * @param DefenseSolution defense solution
      */
     public void setDefenseSolution(String DefenseSolution) {
         this.DefenseSolution = DefenseSolution;
     }
 
     /**
-     * Get Submission time
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Submission time 
      * @return SubmitTime Submission time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getSubmitTime() {
         return this.SubmitTime;
@@ -407,139 +356,111 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Submission time
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param SubmitTime Submission time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setSubmitTime(String SubmitTime) {
         this.SubmitTime = SubmitTime;
     }
 
     /**
-     * Get CVSS score
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return CvssScore CVSS score
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get CVSS Score 
+     * @return CvssScore CVSS Score
      */
     public String getCvssScore() {
         return this.CvssScore;
     }
 
     /**
-     * Set CVSS score
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param CvssScore CVSS score
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set CVSS Score
+     * @param CvssScore CVSS Score
      */
     public void setCvssScore(String CvssScore) {
         this.CvssScore = CvssScore;
     }
 
     /**
-     * Get CVSS information
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return CvssVector CVSS information
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get CVSS information. 
+     * @return CvssVector CVSS information.
      */
     public String getCvssVector() {
         return this.CvssVector;
     }
 
     /**
-     * Set CVSS information
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param CvssVector CVSS information
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set CVSS information.
+     * @param CvssVector CVSS information.
      */
     public void setCvssVector(String CvssVector) {
         this.CvssVector = CvssVector;
     }
 
     /**
-     * Get Whether fix is suggested
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return IsSuggest Whether fix is suggested
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Whether repair is suggested. 
+     * @return IsSuggest Whether repair is suggested.
      */
     public String getIsSuggest() {
         return this.IsSuggest;
     }
 
     /**
-     * Set Whether fix is suggested
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param IsSuggest Whether fix is suggested
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Whether repair is suggested.
+     * @param IsSuggest Whether repair is suggested.
      */
     public void setIsSuggest(String IsSuggest) {
         this.IsSuggest = IsSuggest;
     }
 
     /**
-     * Get Number of the fixed version
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return FixedVersions Number of the fixed version
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Repair Version Number 
+     * @return FixedVersions Repair Version Number
      */
     public String getFixedVersions() {
         return this.FixedVersions;
     }
 
     /**
-     * Set Number of the fixed version
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param FixedVersions Number of the fixed version
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Repair Version Number
+     * @param FixedVersions Repair Version Number
      */
     public void setFixedVersions(String FixedVersions) {
         this.FixedVersions = FixedVersions;
     }
 
     /**
-     * Get Vulnerability tag. Valid values: `CanBeFixed`, `DynamicLevelPoc`, `DynamicLevelExp`.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Tag Vulnerability tag. Valid values: `CanBeFixed`, `DynamicLevelPoc`, `DynamicLevelExp`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Vulnerability Tag: "CanBeFixed", "DynamicLevelPoc", and "DynamicLevelExp" 
+     * @return Tag Vulnerability Tag: "CanBeFixed", "DynamicLevelPoc", and "DynamicLevelExp"
      */
     public String [] getTag() {
         return this.Tag;
     }
 
     /**
-     * Set Vulnerability tag. Valid values: `CanBeFixed`, `DynamicLevelPoc`, `DynamicLevelExp`.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Tag Vulnerability tag. Valid values: `CanBeFixed`, `DynamicLevelPoc`, `DynamicLevelExp`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Vulnerability Tag: "CanBeFixed", "DynamicLevelPoc", and "DynamicLevelExp"
+     * @param Tag Vulnerability Tag: "CanBeFixed", "DynamicLevelPoc", and "DynamicLevelExp"
      */
     public void setTag(String [] Tag) {
         this.Tag = Tag;
     }
 
     /**
-     * Get Component name
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Component Component name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Component name. 
+     * @return Component Component name.
      */
     public String getComponent() {
         return this.Component;
     }
 
     /**
-     * Set Component name
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Component Component name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Component name.
+     * @param Component Component name.
      */
     public void setComponent(String Component) {
         this.Component = Component;
     }
 
     /**
-     * Get Component version
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Component version 
      * @return Version Component version
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getVersion() {
         return this.Version;
@@ -547,12 +468,42 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Component version
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Version Component version
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setVersion(String Version) {
         this.Version = Version;
+    }
+
+    /**
+     * Get Attack Heat 0-3 
+     * @return AttackLevel Attack Heat 0-3
+     */
+    public Long getAttackLevel() {
+        return this.AttackLevel;
+    }
+
+    /**
+     * Set Attack Heat 0-3
+     * @param AttackLevel Attack Heat 0-3
+     */
+    public void setAttackLevel(Long AttackLevel) {
+        this.AttackLevel = AttackLevel;
+    }
+
+    /**
+     * Get Image Layer Information List 
+     * @return LayerInfos Image Layer Information List
+     */
+    public ImageVulLayerInfo [] getLayerInfos() {
+        return this.LayerInfos;
+    }
+
+    /**
+     * Set Image Layer Information List
+     * @param LayerInfos Image Layer Information List
+     */
+    public void setLayerInfos(ImageVulLayerInfo [] LayerInfos) {
+        this.LayerInfos = LayerInfos;
     }
 
     public ImageVul() {
@@ -626,6 +577,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.Version != null) {
             this.Version = new String(source.Version);
         }
+        if (source.AttackLevel != null) {
+            this.AttackLevel = new Long(source.AttackLevel);
+        }
+        if (source.LayerInfos != null) {
+            this.LayerInfos = new ImageVulLayerInfo[source.LayerInfos.length];
+            for (int i = 0; i < source.LayerInfos.length; i++) {
+                this.LayerInfos[i] = new ImageVulLayerInfo(source.LayerInfos[i]);
+            }
+        }
     }
 
 
@@ -652,6 +612,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamArraySimple(map, prefix + "Tag.", this.Tag);
         this.setParamSimple(map, prefix + "Component", this.Component);
         this.setParamSimple(map, prefix + "Version", this.Version);
+        this.setParamSimple(map, prefix + "AttackLevel", this.AttackLevel);
+        this.setParamArrayObj(map, prefix + "LayerInfos.", this.LayerInfos);
 
     }
 }

@@ -25,7 +25,6 @@ public class DescribeVulEmergentMsgResponse extends AbstractModel {
 
     /**
     * Vulnerability emergency notification data
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("EmergentMsgList")
     @Expose
@@ -39,10 +38,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Vulnerability emergency notification data
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Vulnerability emergency notification data 
      * @return EmergentMsgList Vulnerability emergency notification data
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public VulEmergentMsgInfo [] getEmergentMsgList() {
         return this.EmergentMsgList;
@@ -50,9 +47,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Vulnerability emergency notification data
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param EmergentMsgList Vulnerability emergency notification data
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setEmergentMsgList(VulEmergentMsgInfo [] EmergentMsgList) {
         this.EmergentMsgList = EmergentMsgList;

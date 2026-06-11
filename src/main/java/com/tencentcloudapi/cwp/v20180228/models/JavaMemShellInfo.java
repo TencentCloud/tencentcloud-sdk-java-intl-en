@@ -32,7 +32,6 @@ public class JavaMemShellInfo extends AbstractModel {
 
     /**
     * Server name
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Alias")
     @Expose
@@ -40,7 +39,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Server IP address
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("HostIp")
     @Expose
@@ -90,7 +88,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Host Additional Information
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("MachineExtraInfo")
     @Expose
@@ -98,11 +95,45 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Server UUID
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Uuid")
     @Expose
     private String Uuid;
+
+    /**
+    * Class name
+    */
+    @SerializedName("ClassName")
+    @Expose
+    private String ClassName;
+
+    /**
+    * Parent class name
+    */
+    @SerializedName("SuperClassName")
+    @Expose
+    private String SuperClassName;
+
+    /**
+    * Inherited API
+    */
+    @SerializedName("Interfaces")
+    @Expose
+    private String Interfaces;
+
+    /**
+    * Annotation
+    */
+    @SerializedName("Annotations")
+    @Expose
+    private String Annotations;
+
+    /**
+    * Associated class loader.
+    */
+    @SerializedName("LoaderClassName")
+    @Expose
+    private String LoaderClassName;
 
     /**
      * Get Event ID 
@@ -121,10 +152,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Server name
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Server name 
      * @return Alias Server name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getAlias() {
         return this.Alias;
@@ -132,19 +161,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Server name
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Alias Server name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setAlias(String Alias) {
         this.Alias = Alias;
     }
 
     /**
-     * Get Server IP address
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Server IP address 
      * @return HostIp Server IP address
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getHostIp() {
         return this.HostIp;
@@ -152,9 +177,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Server IP address
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param HostIp Server IP address
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setHostIp(String HostIp) {
         this.HostIp = HostIp;
@@ -257,10 +280,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Host Additional Information
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Host Additional Information 
      * @return MachineExtraInfo Host Additional Information
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public MachineExtraInfo getMachineExtraInfo() {
         return this.MachineExtraInfo;
@@ -268,19 +289,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Host Additional Information
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param MachineExtraInfo Host Additional Information
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setMachineExtraInfo(MachineExtraInfo MachineExtraInfo) {
         this.MachineExtraInfo = MachineExtraInfo;
     }
 
     /**
-     * Get Server UUID
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Server UUID 
      * @return Uuid Server UUID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getUuid() {
         return this.Uuid;
@@ -288,12 +305,90 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Server UUID
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Uuid Server UUID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setUuid(String Uuid) {
         this.Uuid = Uuid;
+    }
+
+    /**
+     * Get Class name 
+     * @return ClassName Class name
+     */
+    public String getClassName() {
+        return this.ClassName;
+    }
+
+    /**
+     * Set Class name
+     * @param ClassName Class name
+     */
+    public void setClassName(String ClassName) {
+        this.ClassName = ClassName;
+    }
+
+    /**
+     * Get Parent class name 
+     * @return SuperClassName Parent class name
+     */
+    public String getSuperClassName() {
+        return this.SuperClassName;
+    }
+
+    /**
+     * Set Parent class name
+     * @param SuperClassName Parent class name
+     */
+    public void setSuperClassName(String SuperClassName) {
+        this.SuperClassName = SuperClassName;
+    }
+
+    /**
+     * Get Inherited API 
+     * @return Interfaces Inherited API
+     */
+    public String getInterfaces() {
+        return this.Interfaces;
+    }
+
+    /**
+     * Set Inherited API
+     * @param Interfaces Inherited API
+     */
+    public void setInterfaces(String Interfaces) {
+        this.Interfaces = Interfaces;
+    }
+
+    /**
+     * Get Annotation 
+     * @return Annotations Annotation
+     */
+    public String getAnnotations() {
+        return this.Annotations;
+    }
+
+    /**
+     * Set Annotation
+     * @param Annotations Annotation
+     */
+    public void setAnnotations(String Annotations) {
+        this.Annotations = Annotations;
+    }
+
+    /**
+     * Get Associated class loader. 
+     * @return LoaderClassName Associated class loader.
+     */
+    public String getLoaderClassName() {
+        return this.LoaderClassName;
+    }
+
+    /**
+     * Set Associated class loader.
+     * @param LoaderClassName Associated class loader.
+     */
+    public void setLoaderClassName(String LoaderClassName) {
+        this.LoaderClassName = LoaderClassName;
     }
 
     public JavaMemShellInfo() {
@@ -337,6 +432,21 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.Uuid != null) {
             this.Uuid = new String(source.Uuid);
         }
+        if (source.ClassName != null) {
+            this.ClassName = new String(source.ClassName);
+        }
+        if (source.SuperClassName != null) {
+            this.SuperClassName = new String(source.SuperClassName);
+        }
+        if (source.Interfaces != null) {
+            this.Interfaces = new String(source.Interfaces);
+        }
+        if (source.Annotations != null) {
+            this.Annotations = new String(source.Annotations);
+        }
+        if (source.LoaderClassName != null) {
+            this.LoaderClassName = new String(source.LoaderClassName);
+        }
     }
 
 
@@ -355,6 +465,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "Quuid", this.Quuid);
         this.setParamObj(map, prefix + "MachineExtraInfo.", this.MachineExtraInfo);
         this.setParamSimple(map, prefix + "Uuid", this.Uuid);
+        this.setParamSimple(map, prefix + "ClassName", this.ClassName);
+        this.setParamSimple(map, prefix + "SuperClassName", this.SuperClassName);
+        this.setParamSimple(map, prefix + "Interfaces", this.Interfaces);
+        this.setParamSimple(map, prefix + "Annotations", this.Annotations);
+        this.setParamSimple(map, prefix + "LoaderClassName", this.LoaderClassName);
 
     }
 }

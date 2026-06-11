@@ -123,15 +123,13 @@ public class DescribeSecurityEventsCntResponse extends AbstractModel {
 
     /**
     * Total of Windows system vulnerability events
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("WindowVul")
     @Expose
     private SecurityEventInfo WindowVul;
 
     /**
-    * Total of Linux system vulnerability events
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Total of linux system vulnerability events
     */
     @SerializedName("LinuxVul")
     @Expose
@@ -369,10 +367,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Total of Windows system vulnerability events
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Total of Windows system vulnerability events 
      * @return WindowVul Total of Windows system vulnerability events
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public SecurityEventInfo getWindowVul() {
         return this.WindowVul;
@@ -380,29 +376,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Total of Windows system vulnerability events
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param WindowVul Total of Windows system vulnerability events
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setWindowVul(SecurityEventInfo WindowVul) {
         this.WindowVul = WindowVul;
     }
 
     /**
-     * Get Total of Linux system vulnerability events
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return LinuxVul Total of Linux system vulnerability events
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Total of linux system vulnerability events 
+     * @return LinuxVul Total of linux system vulnerability events
      */
     public SecurityEventInfo getLinuxVul() {
         return this.LinuxVul;
     }
 
     /**
-     * Set Total of Linux system vulnerability events
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param LinuxVul Total of Linux system vulnerability events
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Total of linux system vulnerability events
+     * @param LinuxVul Total of linux system vulnerability events
      */
     public void setLinuxVul(SecurityEventInfo LinuxVul) {
         this.LinuxVul = LinuxVul;

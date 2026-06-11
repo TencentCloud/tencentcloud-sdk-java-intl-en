@@ -26,8 +26,8 @@ public class ScheduleSettings extends AbstractModel {
     /**
     * Execution policy.
 
--ONCE: one-time execution.
--RECURRENCE: execute periodically.
+- ONCE: one-time execution.
+- RECURRENCE: execute periodically.
     */
     @SerializedName("Policy")
     @Expose
@@ -52,12 +52,12 @@ The time format is YYYY-MM-DDThh:MM:ssZ.
     /**
      * Get Execution policy.
 
--ONCE: one-time execution.
--RECURRENCE: execute periodically. 
+- ONCE: one-time execution.
+- RECURRENCE: execute periodically. 
      * @return Policy Execution policy.
 
--ONCE: one-time execution.
--RECURRENCE: execute periodically.
+- ONCE: one-time execution.
+- RECURRENCE: execute periodically.
      */
     public String getPolicy() {
         return this.Policy;
@@ -66,12 +66,12 @@ The time format is YYYY-MM-DDThh:MM:ssZ.
     /**
      * Set Execution policy.
 
--ONCE: one-time execution.
--RECURRENCE: execute periodically.
+- ONCE: one-time execution.
+- RECURRENCE: execute periodically.
      * @param Policy Execution policy.
 
--ONCE: one-time execution.
--RECURRENCE: execute periodically.
+- ONCE: one-time execution.
+- RECURRENCE: execute periodically.
      */
     public void setPolicy(String Policy) {
         this.Policy = Policy;

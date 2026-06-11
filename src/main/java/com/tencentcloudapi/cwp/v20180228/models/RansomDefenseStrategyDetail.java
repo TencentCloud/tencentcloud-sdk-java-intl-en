@@ -32,7 +32,6 @@ public class RansomDefenseStrategyDetail extends AbstractModel {
 
     /**
     * Operating UIN
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Uin")
     @Expose
@@ -47,7 +46,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Policy Remarks
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Description")
     @Expose
@@ -69,7 +67,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Includes directories, separated by semicolons (;).
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("IncludeDir")
     @Expose
@@ -77,7 +74,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Includes directories, separated by semicolons (;).
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ExcludeDir")
     @Expose
@@ -85,7 +81,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Backup pattern: 0 weekly, 1 daily.
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("BackupType")
     @Expose
@@ -93,7 +88,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Backup days in a week (1-7): 1; 2; 3; 4.
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Weekday")
     @Expose
@@ -115,7 +109,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Creation time
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("CreateTime")
     @Expose
@@ -123,7 +116,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Last modification time
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ModifyTime")
     @Expose
@@ -131,7 +123,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Number of Bound Machines
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("MachineCount")
     @Expose
@@ -139,7 +130,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Policy Associated Event Count
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("EventCount")
     @Expose
@@ -162,10 +152,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Operating UIN
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Operating UIN 
      * @return Uin Operating UIN
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getUin() {
         return this.Uin;
@@ -173,9 +161,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Operating UIN
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Uin Operating UIN
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setUin(String Uin) {
         this.Uin = Uin;
@@ -198,10 +184,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Policy Remarks
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Policy Remarks 
      * @return Description Policy Remarks
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getDescription() {
         return this.Description;
@@ -209,9 +193,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Policy Remarks
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Description Policy Remarks
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setDescription(String Description) {
         this.Description = Description;
@@ -250,10 +232,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Includes directories, separated by semicolons (;).
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Includes directories, separated by semicolons (;). 
      * @return IncludeDir Includes directories, separated by semicolons (;).
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getIncludeDir() {
         return this.IncludeDir;
@@ -261,19 +241,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Includes directories, separated by semicolons (;).
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param IncludeDir Includes directories, separated by semicolons (;).
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setIncludeDir(String IncludeDir) {
         this.IncludeDir = IncludeDir;
     }
 
     /**
-     * Get Includes directories, separated by semicolons (;).
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Includes directories, separated by semicolons (;). 
      * @return ExcludeDir Includes directories, separated by semicolons (;).
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getExcludeDir() {
         return this.ExcludeDir;
@@ -281,19 +257,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Includes directories, separated by semicolons (;).
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param ExcludeDir Includes directories, separated by semicolons (;).
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setExcludeDir(String ExcludeDir) {
         this.ExcludeDir = ExcludeDir;
     }
 
     /**
-     * Get Backup pattern: 0 weekly, 1 daily.
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Backup pattern: 0 weekly, 1 daily. 
      * @return BackupType Backup pattern: 0 weekly, 1 daily.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getBackupType() {
         return this.BackupType;
@@ -301,19 +273,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Backup pattern: 0 weekly, 1 daily.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param BackupType Backup pattern: 0 weekly, 1 daily.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setBackupType(Long BackupType) {
         this.BackupType = BackupType;
     }
 
     /**
-     * Get Backup days in a week (1-7): 1; 2; 3; 4.
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Backup days in a week (1-7): 1; 2; 3; 4. 
      * @return Weekday Backup days in a week (1-7): 1; 2; 3; 4.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getWeekday() {
         return this.Weekday;
@@ -321,9 +289,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Backup days in a week (1-7): 1; 2; 3; 4.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Weekday Backup days in a week (1-7): 1; 2; 3; 4.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setWeekday(String Weekday) {
         this.Weekday = Weekday;
@@ -362,10 +328,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Creation time
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Creation time 
      * @return CreateTime Creation time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getCreateTime() {
         return this.CreateTime;
@@ -373,19 +337,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Creation time
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param CreateTime Creation time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get Last modification time
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Last modification time 
      * @return ModifyTime Last modification time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getModifyTime() {
         return this.ModifyTime;
@@ -393,19 +353,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Last modification time
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param ModifyTime Last modification time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setModifyTime(String ModifyTime) {
         this.ModifyTime = ModifyTime;
     }
 
     /**
-     * Get Number of Bound Machines
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Number of Bound Machines 
      * @return MachineCount Number of Bound Machines
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getMachineCount() {
         return this.MachineCount;
@@ -413,19 +369,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Number of Bound Machines
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param MachineCount Number of Bound Machines
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setMachineCount(Long MachineCount) {
         this.MachineCount = MachineCount;
     }
 
     /**
-     * Get Policy Associated Event Count
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Policy Associated Event Count 
      * @return EventCount Policy Associated Event Count
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getEventCount() {
         return this.EventCount;
@@ -433,9 +385,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Policy Associated Event Count
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param EventCount Policy Associated Event Count
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setEventCount(Long EventCount) {
         this.EventCount = EventCount;

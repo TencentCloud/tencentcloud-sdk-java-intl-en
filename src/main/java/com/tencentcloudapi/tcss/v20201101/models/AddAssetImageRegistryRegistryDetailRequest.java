@@ -52,7 +52,7 @@ public class AddAssetImageRegistryRegistryDetailRequest extends AbstractModel {
     private String Url;
 
     /**
-    * Repository type, which can be `harbor`.
+    * Repository type. Valid values: harbor, quay, jfrog, aws, azure, and other-tcr.
     */
     @SerializedName("RegistryType")
     @Expose
@@ -92,6 +92,48 @@ public class AddAssetImageRegistryRegistryDetailRequest extends AbstractModel {
     @SerializedName("Insecure")
     @Expose
     private Long Insecure;
+
+    /**
+    * 
+    */
+    @SerializedName("ConnDetectConfig")
+    @Expose
+    private ConnDetectConfig [] ConnDetectConfig;
+
+    /**
+    * Whether authorization and scanning are performed automatically. For full synchronization, only images of the latest version are involved. For incremental synchronization, all new images are involved.
+    */
+    @SerializedName("NeedScan")
+    @Expose
+    private Boolean NeedScan;
+
+    /**
+    * Synchronization method. 0: full synchronization; 1: incremental synchronization.
+    */
+    @SerializedName("SyncMode")
+    @Expose
+    private Long SyncMode;
+
+    /**
+    * Webhook access address.
+    */
+    @SerializedName("WebhookUrl")
+    @Expose
+    private String WebhookUrl;
+
+    /**
+    * Webhook access token.
+    */
+    @SerializedName("WebhookToken")
+    @Expose
+    private String WebhookToken;
+
+    /**
+    * TCR instance ID.
+    */
+    @SerializedName("InstanceId")
+    @Expose
+    private String InstanceId;
 
     /**
      * Get Repository name 
@@ -158,16 +200,16 @@ public class AddAssetImageRegistryRegistryDetailRequest extends AbstractModel {
     }
 
     /**
-     * Get Repository type, which can be `harbor`. 
-     * @return RegistryType Repository type, which can be `harbor`.
+     * Get Repository type. Valid values: harbor, quay, jfrog, aws, azure, and other-tcr. 
+     * @return RegistryType Repository type. Valid values: harbor, quay, jfrog, aws, azure, and other-tcr.
      */
     public String getRegistryType() {
         return this.RegistryType;
     }
 
     /**
-     * Set Repository type, which can be `harbor`.
-     * @param RegistryType Repository type, which can be `harbor`.
+     * Set Repository type. Valid values: harbor, quay, jfrog, aws, azure, and other-tcr.
+     * @param RegistryType Repository type. Valid values: harbor, quay, jfrog, aws, azure, and other-tcr.
      */
     public void setRegistryType(String RegistryType) {
         this.RegistryType = RegistryType;
@@ -253,6 +295,102 @@ public class AddAssetImageRegistryRegistryDetailRequest extends AbstractModel {
         this.Insecure = Insecure;
     }
 
+    /**
+     * Get  
+     * @return ConnDetectConfig 
+     */
+    public ConnDetectConfig [] getConnDetectConfig() {
+        return this.ConnDetectConfig;
+    }
+
+    /**
+     * Set 
+     * @param ConnDetectConfig 
+     */
+    public void setConnDetectConfig(ConnDetectConfig [] ConnDetectConfig) {
+        this.ConnDetectConfig = ConnDetectConfig;
+    }
+
+    /**
+     * Get Whether authorization and scanning are performed automatically. For full synchronization, only images of the latest version are involved. For incremental synchronization, all new images are involved. 
+     * @return NeedScan Whether authorization and scanning are performed automatically. For full synchronization, only images of the latest version are involved. For incremental synchronization, all new images are involved.
+     */
+    public Boolean getNeedScan() {
+        return this.NeedScan;
+    }
+
+    /**
+     * Set Whether authorization and scanning are performed automatically. For full synchronization, only images of the latest version are involved. For incremental synchronization, all new images are involved.
+     * @param NeedScan Whether authorization and scanning are performed automatically. For full synchronization, only images of the latest version are involved. For incremental synchronization, all new images are involved.
+     */
+    public void setNeedScan(Boolean NeedScan) {
+        this.NeedScan = NeedScan;
+    }
+
+    /**
+     * Get Synchronization method. 0: full synchronization; 1: incremental synchronization. 
+     * @return SyncMode Synchronization method. 0: full synchronization; 1: incremental synchronization.
+     */
+    public Long getSyncMode() {
+        return this.SyncMode;
+    }
+
+    /**
+     * Set Synchronization method. 0: full synchronization; 1: incremental synchronization.
+     * @param SyncMode Synchronization method. 0: full synchronization; 1: incremental synchronization.
+     */
+    public void setSyncMode(Long SyncMode) {
+        this.SyncMode = SyncMode;
+    }
+
+    /**
+     * Get Webhook access address. 
+     * @return WebhookUrl Webhook access address.
+     */
+    public String getWebhookUrl() {
+        return this.WebhookUrl;
+    }
+
+    /**
+     * Set Webhook access address.
+     * @param WebhookUrl Webhook access address.
+     */
+    public void setWebhookUrl(String WebhookUrl) {
+        this.WebhookUrl = WebhookUrl;
+    }
+
+    /**
+     * Get Webhook access token. 
+     * @return WebhookToken Webhook access token.
+     */
+    public String getWebhookToken() {
+        return this.WebhookToken;
+    }
+
+    /**
+     * Set Webhook access token.
+     * @param WebhookToken Webhook access token.
+     */
+    public void setWebhookToken(String WebhookToken) {
+        this.WebhookToken = WebhookToken;
+    }
+
+    /**
+     * Get TCR instance ID. 
+     * @return InstanceId TCR instance ID.
+     */
+    public String getInstanceId() {
+        return this.InstanceId;
+    }
+
+    /**
+     * Set TCR instance ID.
+     * @param InstanceId TCR instance ID.
+     */
+    public void setInstanceId(String InstanceId) {
+        this.InstanceId = InstanceId;
+    }
+
     public AddAssetImageRegistryRegistryDetailRequest() {
     }
 
@@ -291,6 +429,27 @@ public class AddAssetImageRegistryRegistryDetailRequest extends AbstractModel {
         if (source.Insecure != null) {
             this.Insecure = new Long(source.Insecure);
         }
+        if (source.ConnDetectConfig != null) {
+            this.ConnDetectConfig = new ConnDetectConfig[source.ConnDetectConfig.length];
+            for (int i = 0; i < source.ConnDetectConfig.length; i++) {
+                this.ConnDetectConfig[i] = new ConnDetectConfig(source.ConnDetectConfig[i]);
+            }
+        }
+        if (source.NeedScan != null) {
+            this.NeedScan = new Boolean(source.NeedScan);
+        }
+        if (source.SyncMode != null) {
+            this.SyncMode = new Long(source.SyncMode);
+        }
+        if (source.WebhookUrl != null) {
+            this.WebhookUrl = new String(source.WebhookUrl);
+        }
+        if (source.WebhookToken != null) {
+            this.WebhookToken = new String(source.WebhookToken);
+        }
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
     }
 
 
@@ -308,6 +467,12 @@ public class AddAssetImageRegistryRegistryDetailRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "RegistryRegion", this.RegistryRegion);
         this.setParamSimple(map, prefix + "SpeedLimit", this.SpeedLimit);
         this.setParamSimple(map, prefix + "Insecure", this.Insecure);
+        this.setParamArrayObj(map, prefix + "ConnDetectConfig.", this.ConnDetectConfig);
+        this.setParamSimple(map, prefix + "NeedScan", this.NeedScan);
+        this.setParamSimple(map, prefix + "SyncMode", this.SyncMode);
+        this.setParamSimple(map, prefix + "WebhookUrl", this.WebhookUrl);
+        this.setParamSimple(map, prefix + "WebhookToken", this.WebhookToken);
+        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
 
     }
 }

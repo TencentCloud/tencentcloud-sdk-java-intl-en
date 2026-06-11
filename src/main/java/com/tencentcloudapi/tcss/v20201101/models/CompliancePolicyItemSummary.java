@@ -73,8 +73,7 @@ public class CompliancePolicyItemSummary extends AbstractModel {
     private String AssetType;
 
     /**
-    * Last check time
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Last detection time
     */
     @SerializedName("LastCheckTime")
     @Expose
@@ -96,34 +95,30 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String CheckStatus;
 
     /**
-    * Check result. Valid values: `RESULT_PASSED`: Passed.
+    * Detection result. RESULT_PASSED: Passed.
 
-`RESULT_FAILED`: Failed.
-Note: This field may return null, indicating that no valid values can be obtained.
+RESULT_FAILED: failed
     */
     @SerializedName("CheckResult")
     @Expose
     private String CheckResult;
 
     /**
-    * Number of assets that passed the check
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Number of assets passed detection
     */
     @SerializedName("PassedAssetCount")
     @Expose
     private Long PassedAssetCount;
 
     /**
-    * Number of assets that failed the check
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Number of assets with detection failed
     */
     @SerializedName("FailedAssetCount")
     @Expose
     private Long FailedAssetCount;
 
     /**
-    * Allowed item ID of the check item. If it exists and is not `0`, the check item is ignored.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * ID of the allowlist item corresponding to the detection item. If it exists and is not 0, it means the detection item is ignored by the user.
     */
     @SerializedName("WhitelistId")
     @Expose
@@ -144,12 +139,34 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long BenchmarkStandardId;
 
     /**
-    * TCSS editions that support this check item
-Note: This field may return `null`, indicating that no valid value was found.
+    * Applicable Version for Check Items
     */
     @SerializedName("ApplicableVersion")
     @Expose
     private String ApplicableVersion;
+
+    /**
+    * Check Item Description
+    */
+    @SerializedName("Description")
+    @Expose
+    private String Description;
+
+    /**
+    * Check Item Audit Method
+    */
+    @SerializedName("AuditProcedure")
+    @Expose
+    private String AuditProcedure;
+
+    /**
+    * Whether enabled
+<li>0 Off</li>
+<li>1 Enable</li>
+    */
+    @SerializedName("IsEnable")
+    @Expose
+    private Long IsEnable;
 
     /**
      * Get Unique ID of the customer check item 
@@ -264,20 +281,16 @@ Note: This field may return `null`, indicating that no valid value was found.
     }
 
     /**
-     * Get Last check time
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return LastCheckTime Last check time
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Last detection time 
+     * @return LastCheckTime Last detection time
      */
     public String getLastCheckTime() {
         return this.LastCheckTime;
     }
 
     /**
-     * Set Last check time
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param LastCheckTime Last check time
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Last detection time
+     * @param LastCheckTime Last detection time
      */
     public void setLastCheckTime(String LastCheckTime) {
         this.LastCheckTime = LastCheckTime;
@@ -332,88 +345,72 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Check result. Valid values: `RESULT_PASSED`: Passed.
+     * Get Detection result. RESULT_PASSED: Passed.
 
-`RESULT_FAILED`: Failed.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return CheckResult Check result. Valid values: `RESULT_PASSED`: Passed.
+RESULT_FAILED: failed 
+     * @return CheckResult Detection result. RESULT_PASSED: Passed.
 
-`RESULT_FAILED`: Failed.
-Note: This field may return null, indicating that no valid values can be obtained.
+RESULT_FAILED: failed
      */
     public String getCheckResult() {
         return this.CheckResult;
     }
 
     /**
-     * Set Check result. Valid values: `RESULT_PASSED`: Passed.
+     * Set Detection result. RESULT_PASSED: Passed.
 
-`RESULT_FAILED`: Failed.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param CheckResult Check result. Valid values: `RESULT_PASSED`: Passed.
+RESULT_FAILED: failed
+     * @param CheckResult Detection result. RESULT_PASSED: Passed.
 
-`RESULT_FAILED`: Failed.
-Note: This field may return null, indicating that no valid values can be obtained.
+RESULT_FAILED: failed
      */
     public void setCheckResult(String CheckResult) {
         this.CheckResult = CheckResult;
     }
 
     /**
-     * Get Number of assets that passed the check
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return PassedAssetCount Number of assets that passed the check
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Number of assets passed detection 
+     * @return PassedAssetCount Number of assets passed detection
      */
     public Long getPassedAssetCount() {
         return this.PassedAssetCount;
     }
 
     /**
-     * Set Number of assets that passed the check
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param PassedAssetCount Number of assets that passed the check
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Number of assets passed detection
+     * @param PassedAssetCount Number of assets passed detection
      */
     public void setPassedAssetCount(Long PassedAssetCount) {
         this.PassedAssetCount = PassedAssetCount;
     }
 
     /**
-     * Get Number of assets that failed the check
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return FailedAssetCount Number of assets that failed the check
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Number of assets with detection failed 
+     * @return FailedAssetCount Number of assets with detection failed
      */
     public Long getFailedAssetCount() {
         return this.FailedAssetCount;
     }
 
     /**
-     * Set Number of assets that failed the check
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param FailedAssetCount Number of assets that failed the check
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Number of assets with detection failed
+     * @param FailedAssetCount Number of assets with detection failed
      */
     public void setFailedAssetCount(Long FailedAssetCount) {
         this.FailedAssetCount = FailedAssetCount;
     }
 
     /**
-     * Get Allowed item ID of the check item. If it exists and is not `0`, the check item is ignored.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return WhitelistId Allowed item ID of the check item. If it exists and is not `0`, the check item is ignored.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get ID of the allowlist item corresponding to the detection item. If it exists and is not 0, it means the detection item is ignored by the user. 
+     * @return WhitelistId ID of the allowlist item corresponding to the detection item. If it exists and is not 0, it means the detection item is ignored by the user.
      */
     public Long getWhitelistId() {
         return this.WhitelistId;
     }
 
     /**
-     * Set Allowed item ID of the check item. If it exists and is not `0`, the check item is ignored.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param WhitelistId Allowed item ID of the check item. If it exists and is not `0`, the check item is ignored.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set ID of the allowlist item corresponding to the detection item. If it exists and is not 0, it means the detection item is ignored by the user.
+     * @param WhitelistId ID of the allowlist item corresponding to the detection item. If it exists and is not 0, it means the detection item is ignored by the user.
      */
     public void setWhitelistId(Long WhitelistId) {
         this.WhitelistId = WhitelistId;
@@ -452,23 +449,75 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get TCSS editions that support this check item
-Note: This field may return `null`, indicating that no valid value was found. 
-     * @return ApplicableVersion TCSS editions that support this check item
-Note: This field may return `null`, indicating that no valid value was found.
+     * Get Applicable Version for Check Items 
+     * @return ApplicableVersion Applicable Version for Check Items
      */
     public String getApplicableVersion() {
         return this.ApplicableVersion;
     }
 
     /**
-     * Set TCSS editions that support this check item
-Note: This field may return `null`, indicating that no valid value was found.
-     * @param ApplicableVersion TCSS editions that support this check item
-Note: This field may return `null`, indicating that no valid value was found.
+     * Set Applicable Version for Check Items
+     * @param ApplicableVersion Applicable Version for Check Items
      */
     public void setApplicableVersion(String ApplicableVersion) {
         this.ApplicableVersion = ApplicableVersion;
+    }
+
+    /**
+     * Get Check Item Description 
+     * @return Description Check Item Description
+     */
+    public String getDescription() {
+        return this.Description;
+    }
+
+    /**
+     * Set Check Item Description
+     * @param Description Check Item Description
+     */
+    public void setDescription(String Description) {
+        this.Description = Description;
+    }
+
+    /**
+     * Get Check Item Audit Method 
+     * @return AuditProcedure Check Item Audit Method
+     */
+    public String getAuditProcedure() {
+        return this.AuditProcedure;
+    }
+
+    /**
+     * Set Check Item Audit Method
+     * @param AuditProcedure Check Item Audit Method
+     */
+    public void setAuditProcedure(String AuditProcedure) {
+        this.AuditProcedure = AuditProcedure;
+    }
+
+    /**
+     * Get Whether enabled
+<li>0 Off</li>
+<li>1 Enable</li> 
+     * @return IsEnable Whether enabled
+<li>0 Off</li>
+<li>1 Enable</li>
+     */
+    public Long getIsEnable() {
+        return this.IsEnable;
+    }
+
+    /**
+     * Set Whether enabled
+<li>0 Off</li>
+<li>1 Enable</li>
+     * @param IsEnable Whether enabled
+<li>0 Off</li>
+<li>1 Enable</li>
+     */
+    public void setIsEnable(Long IsEnable) {
+        this.IsEnable = IsEnable;
     }
 
     public CompliancePolicyItemSummary() {
@@ -527,6 +576,15 @@ Note: This field may return `null`, indicating that no valid value was found.
         if (source.ApplicableVersion != null) {
             this.ApplicableVersion = new String(source.ApplicableVersion);
         }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
+        if (source.AuditProcedure != null) {
+            this.AuditProcedure = new String(source.AuditProcedure);
+        }
+        if (source.IsEnable != null) {
+            this.IsEnable = new Long(source.IsEnable);
+        }
     }
 
 
@@ -550,6 +608,9 @@ Note: This field may return `null`, indicating that no valid value was found.
         this.setParamSimple(map, prefix + "FixSuggestion", this.FixSuggestion);
         this.setParamSimple(map, prefix + "BenchmarkStandardId", this.BenchmarkStandardId);
         this.setParamSimple(map, prefix + "ApplicableVersion", this.ApplicableVersion);
+        this.setParamSimple(map, prefix + "Description", this.Description);
+        this.setParamSimple(map, prefix + "AuditProcedure", this.AuditProcedure);
+        this.setParamSimple(map, prefix + "IsEnable", this.IsEnable);
 
     }
 }

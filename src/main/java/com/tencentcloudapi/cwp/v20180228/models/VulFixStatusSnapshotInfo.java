@@ -32,7 +32,6 @@ public class VulFixStatusSnapshotInfo extends AbstractModel {
 
     /**
     * Host name
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("HostName")
     @Expose
@@ -40,7 +39,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Host IP address
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("HostIp")
     @Expose
@@ -48,7 +46,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Snapshot name
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("SnapshotName")
     @Expose
@@ -56,7 +53,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Snapshot creation time
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ModifyTime")
     @Expose
@@ -64,7 +60,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Snapshot ID
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("SnapshotId")
     @Expose
@@ -78,7 +73,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long Id;
 
     /**
-    * Snapshot status. 0: initial; 1: created successfully; 2: creation failed.
+    * Snapshot status. 0: initial; 1: created successfully; 2: creation failed; 10: unsupported; 11: no need to create.
     */
     @SerializedName("Status")
     @Expose
@@ -86,11 +81,17 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Snapshot creation failure reason
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("FailReason")
     @Expose
     private String FailReason;
+
+    /**
+    * Host type
+    */
+    @SerializedName("MachineType")
+    @Expose
+    private String MachineType;
 
     /**
      * Get cvm id 
@@ -109,10 +110,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Host name
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Host name 
      * @return HostName Host name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getHostName() {
         return this.HostName;
@@ -120,19 +119,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Host name
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param HostName Host name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setHostName(String HostName) {
         this.HostName = HostName;
     }
 
     /**
-     * Get Host IP address
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Host IP address 
      * @return HostIp Host IP address
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getHostIp() {
         return this.HostIp;
@@ -140,19 +135,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Host IP address
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param HostIp Host IP address
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setHostIp(String HostIp) {
         this.HostIp = HostIp;
     }
 
     /**
-     * Get Snapshot name
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Snapshot name 
      * @return SnapshotName Snapshot name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getSnapshotName() {
         return this.SnapshotName;
@@ -160,19 +151,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Snapshot name
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param SnapshotName Snapshot name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setSnapshotName(String SnapshotName) {
         this.SnapshotName = SnapshotName;
     }
 
     /**
-     * Get Snapshot creation time
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Snapshot creation time 
      * @return ModifyTime Snapshot creation time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getModifyTime() {
         return this.ModifyTime;
@@ -180,19 +167,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Snapshot creation time
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param ModifyTime Snapshot creation time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setModifyTime(String ModifyTime) {
         this.ModifyTime = ModifyTime;
     }
 
     /**
-     * Get Snapshot ID
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Snapshot ID 
      * @return SnapshotId Snapshot ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getSnapshotId() {
         return this.SnapshotId;
@@ -200,9 +183,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Snapshot ID
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param SnapshotId Snapshot ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setSnapshotId(String SnapshotId) {
         this.SnapshotId = SnapshotId;
@@ -225,26 +206,24 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Snapshot status. 0: initial; 1: created successfully; 2: creation failed. 
-     * @return Status Snapshot status. 0: initial; 1: created successfully; 2: creation failed.
+     * Get Snapshot status. 0: initial; 1: created successfully; 2: creation failed; 10: unsupported; 11: no need to create. 
+     * @return Status Snapshot status. 0: initial; 1: created successfully; 2: creation failed; 10: unsupported; 11: no need to create.
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Snapshot status. 0: initial; 1: created successfully; 2: creation failed.
-     * @param Status Snapshot status. 0: initial; 1: created successfully; 2: creation failed.
+     * Set Snapshot status. 0: initial; 1: created successfully; 2: creation failed; 10: unsupported; 11: no need to create.
+     * @param Status Snapshot status. 0: initial; 1: created successfully; 2: creation failed; 10: unsupported; 11: no need to create.
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get Snapshot creation failure reason
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Snapshot creation failure reason 
      * @return FailReason Snapshot creation failure reason
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getFailReason() {
         return this.FailReason;
@@ -252,12 +231,26 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Snapshot creation failure reason
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param FailReason Snapshot creation failure reason
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setFailReason(String FailReason) {
         this.FailReason = FailReason;
+    }
+
+    /**
+     * Get Host type 
+     * @return MachineType Host type
+     */
+    public String getMachineType() {
+        return this.MachineType;
+    }
+
+    /**
+     * Set Host type
+     * @param MachineType Host type
+     */
+    public void setMachineType(String MachineType) {
+        this.MachineType = MachineType;
     }
 
     public VulFixStatusSnapshotInfo() {
@@ -295,6 +288,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.FailReason != null) {
             this.FailReason = new String(source.FailReason);
         }
+        if (source.MachineType != null) {
+            this.MachineType = new String(source.MachineType);
+        }
     }
 
 
@@ -311,6 +307,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "Id", this.Id);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "FailReason", this.FailReason);
+        this.setParamSimple(map, prefix + "MachineType", this.MachineType);
 
     }
 }

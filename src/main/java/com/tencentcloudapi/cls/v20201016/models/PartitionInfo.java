@@ -52,15 +52,17 @@ public class PartitionInfo extends AbstractModel {
     private String ExclusiveEndKey;
 
     /**
-    * Partition creation time
+    * Partition Creation Time
+Time format: yyyy-MM-dd HH:mm:ss
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * Last modified of read-only partition
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * Time to stop writing data to the read-only partition
+Time format: yyyy-MM-dd HH:mm:ss
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("LastWriteTime")
     @Expose
@@ -131,36 +133,44 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Get Partition creation time 
-     * @return CreateTime Partition creation time
+     * Get Partition Creation Time
+Time format: yyyy-MM-dd HH:mm:ss 
+     * @return CreateTime Partition Creation Time
+Time format: yyyy-MM-dd HH:mm:ss
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set Partition creation time
-     * @param CreateTime Partition creation time
+     * Set Partition Creation Time
+Time format: yyyy-MM-dd HH:mm:ss
+     * @param CreateTime Partition Creation Time
+Time format: yyyy-MM-dd HH:mm:ss
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get Last modified of read-only partition
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return LastWriteTime Last modified of read-only partition
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get Time to stop writing data to the read-only partition
+Time format: yyyy-MM-dd HH:mm:ss
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return LastWriteTime Time to stop writing data to the read-only partition
+Time format: yyyy-MM-dd HH:mm:ss
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getLastWriteTime() {
         return this.LastWriteTime;
     }
 
     /**
-     * Set Last modified of read-only partition
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param LastWriteTime Last modified of read-only partition
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set Time to stop writing data to the read-only partition
+Time format: yyyy-MM-dd HH:mm:ss
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param LastWriteTime Time to stop writing data to the read-only partition
+Time format: yyyy-MM-dd HH:mm:ss
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setLastWriteTime(String LastWriteTime) {
         this.LastWriteTime = LastWriteTime;

@@ -38,15 +38,14 @@ public class LogRechargeRuleInfo extends AbstractModel {
     private Long EncodingFormat;
 
     /**
-    * Whether to use the default time. Valid values: `true` (default) and `false`.
+    * Use default time status. true: when enabled, current system time or Kafka message timestamp will be used as log timestamp. false: when disabled, time field in the log will be used as log timestamp. Default: true.
     */
     @SerializedName("DefaultTimeSwitch")
     @Expose
     private Boolean DefaultTimeSwitch;
 
     /**
-    * Full log matching rule, which is valid only if `RechargeType` is `fullregex_log`.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Full log matching rule. It is valid only when RechargeType is fullregex_log.
     */
     @SerializedName("LogRegex")
     @Expose
@@ -60,76 +59,170 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Boolean UnMatchLogSwitch;
 
     /**
-    * Key of the log that failed to be parsed
-Note: This field may return null, indicating that no valid values can be obtained.
+    * key name of parsing-failed logs
     */
     @SerializedName("UnMatchLogKey")
     @Expose
     private String UnMatchLogKey;
 
     /**
-    * Time source of the log that failed to be parsed. Valid values: 0 (current system time) and 1 (Kafka message timestamp).
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Time source for parsing failure logs. 0: current time of the system; 1: Kafka message timestamp.
     */
     @SerializedName("UnMatchLogTimeSrc")
     @Expose
     private Long UnMatchLogTimeSrc;
 
     /**
-    * Default time source. Valid values: 0 (current system time) and 1 (Kafka message timestamp).
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Default time source. 0: Current system time; 1: Kafka message timestamp.
     */
     @SerializedName("DefaultTimeSrc")
     @Expose
     private Long DefaultTimeSrc;
 
     /**
-    * Time field
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Time field. Field name representing time in logs.
+
+-When DefaultTimeSwitch is false and RechargeType data extraction mode is `json_log` JSON file log or `fullregex_log` single-line full regex file log, TimeKey cannot be empty.
     */
     @SerializedName("TimeKey")
     @Expose
     private String TimeKey;
 
     /**
-    * Time regular expression
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Time extraction regular expression.
+-When DefaultTimeSwitch is false and the data extraction mode of RechargeType is `minimalist_log` (single-line full text - file log), TimeRegex cannot be empty.
+-Only need to input the regular expression representing the time field in logs. If multiple fields are matched to, the first will be used.
+Example: The original log is "message with time 2022-08-08 14:20:20". You can set the retrieval time regex to \d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d.
+
     */
     @SerializedName("TimeRegex")
     @Expose
     private String TimeRegex;
 
     /**
-    * Time field format
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Time field format.
+-When DefaultTimeSwitch is false, TimeFormat cannot be empty.
     */
     @SerializedName("TimeFormat")
     @Expose
     private String TimeFormat;
 
     /**
-    * Time zone
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Time field time zone.
+-When DefaultTimeSwitch is false, TimeZone cannot be empty.
+-Time zone format rule
+Prefix: Use GMT or UTC as the time zone benchmark.
+Offset:
+-`-` indicates a western time zone (later than the benchmark time).
+-`+` means the east time zone (earlier than the benchmark time).
+-Format ±HH:MM (hr:min)
+
+-Currently supported:
+```
+"GMT-12:00" 
+"GMT-11:00" 
+"GMT-10:00" 
+"GMT-09:30" 
+"GMT-09:00" 
+"GMT-08:00" 
+"GMT-07:00" 
+"GMT-06:00" 
+"GMT-05:00" 
+"GMT-04:00" 
+"GMT-03:30" 
+"GMT-03:00" 
+"GMT-02:00" 
+"GMT-01:00" 
+"GMT+00:00"
+"GMT+01:00"
+"GMT+02:00"
+"GMT+03:30"
+"GMT+04:00"
+"GMT+04:30"
+"GMT+05:00"
+"GMT+05:30"
+"GMT+05:45"
+"GMT+06:00"
+"GMT+06:30"
+"GMT+07:00"
+"GMT+08:00"
+"GMT+09:00"
+"GMT+09:30"
+"GMT+10:00"
+"GMT+10:30"
+"GMT+11:00"
+"GMT+11:30"
+"GMT+12:00"
+"GMT+12:45"
+"GMT+13:00"
+"GMT+14:00"
+"UTC-11:00"
+"UTC-10:00"
+"UTC-09:00"
+"UTC-08:00"
+"UTC-12:00"
+"UTC-07:00"
+"UTC-06:00"
+"UTC-05:00"
+"UTC-04:30"
+"UTC-04:00"
+"UTC-03:30"
+"UTC-03:00"
+"UTC-02:00"
+"UTC-01:00"
+"UTC+00:00"
+"UTC+01:00"
+"UTC+02:00"
+"UTC+03:00"
+"UTC+03:30"
+"UTC+04:00"
+"UTC+04:30"
+"UTC+05:00"
+"UTC+05:45"
+"UTC+06:00"
+"UTC+06:30"
+"UTC+07:00"
+"UTC+08:00"
+"UTC+09:00"
+"UTC+09:30"
+"UTC+10:00"
+"UTC+11:00"
+"UTC+12:00"
+"UTC+13:00"
+```
     */
     @SerializedName("TimeZone")
     @Expose
     private String TimeZone;
 
     /**
-    * Metadata information. Kafka supports import of kafka_topic, kafka_partition, kafka_offset, and kafka_timestamp.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Metadata information. Kafka import supports kafka_topic, kafka_partition, kafka_offset, and kafka_timestamp.
     */
     @SerializedName("Metadata")
     @Expose
     private String [] Metadata;
 
     /**
-    * List of log keys, which is required when `RechargeType` is set to `full_regex_log`
-Note: This field may return null, indicating that no valid values can be obtained.
+    * log Key list. It is required when RechargeType is full_regex_log or delimiter_log.
     */
     @SerializedName("Keys")
     @Expose
     private String [] Keys;
+
+    /**
+    * JSON parsing mode. The first-level data parsing is enabled.
+    */
+    @SerializedName("ParseArray")
+    @Expose
+    private Boolean ParseArray;
+
+    /**
+    * Delimiter parsing mode - Separator
+This field is required when the parsing format is delimiter extraction.
+    */
+    @SerializedName("Delimiter")
+    @Expose
+    private String Delimiter;
 
     /**
      * Get Import type. Valid values: `json_log` (JSON logs), `minimalist_log` (single-line full text), and fullregex_log (single-line full regex) 
@@ -164,36 +257,32 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Whether to use the default time. Valid values: `true` (default) and `false`. 
-     * @return DefaultTimeSwitch Whether to use the default time. Valid values: `true` (default) and `false`.
+     * Get Use default time status. true: when enabled, current system time or Kafka message timestamp will be used as log timestamp. false: when disabled, time field in the log will be used as log timestamp. Default: true. 
+     * @return DefaultTimeSwitch Use default time status. true: when enabled, current system time or Kafka message timestamp will be used as log timestamp. false: when disabled, time field in the log will be used as log timestamp. Default: true.
      */
     public Boolean getDefaultTimeSwitch() {
         return this.DefaultTimeSwitch;
     }
 
     /**
-     * Set Whether to use the default time. Valid values: `true` (default) and `false`.
-     * @param DefaultTimeSwitch Whether to use the default time. Valid values: `true` (default) and `false`.
+     * Set Use default time status. true: when enabled, current system time or Kafka message timestamp will be used as log timestamp. false: when disabled, time field in the log will be used as log timestamp. Default: true.
+     * @param DefaultTimeSwitch Use default time status. true: when enabled, current system time or Kafka message timestamp will be used as log timestamp. false: when disabled, time field in the log will be used as log timestamp. Default: true.
      */
     public void setDefaultTimeSwitch(Boolean DefaultTimeSwitch) {
         this.DefaultTimeSwitch = DefaultTimeSwitch;
     }
 
     /**
-     * Get Full log matching rule, which is valid only if `RechargeType` is `fullregex_log`.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return LogRegex Full log matching rule, which is valid only if `RechargeType` is `fullregex_log`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Full log matching rule. It is valid only when RechargeType is fullregex_log. 
+     * @return LogRegex Full log matching rule. It is valid only when RechargeType is fullregex_log.
      */
     public String getLogRegex() {
         return this.LogRegex;
     }
 
     /**
-     * Set Full log matching rule, which is valid only if `RechargeType` is `fullregex_log`.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param LogRegex Full log matching rule, which is valid only if `RechargeType` is `fullregex_log`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Full log matching rule. It is valid only when RechargeType is fullregex_log.
+     * @param LogRegex Full log matching rule. It is valid only when RechargeType is fullregex_log.
      */
     public void setLogRegex(String LogRegex) {
         this.LogRegex = LogRegex;
@@ -216,183 +305,535 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Key of the log that failed to be parsed
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return UnMatchLogKey Key of the log that failed to be parsed
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get key name of parsing-failed logs 
+     * @return UnMatchLogKey key name of parsing-failed logs
      */
     public String getUnMatchLogKey() {
         return this.UnMatchLogKey;
     }
 
     /**
-     * Set Key of the log that failed to be parsed
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param UnMatchLogKey Key of the log that failed to be parsed
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set key name of parsing-failed logs
+     * @param UnMatchLogKey key name of parsing-failed logs
      */
     public void setUnMatchLogKey(String UnMatchLogKey) {
         this.UnMatchLogKey = UnMatchLogKey;
     }
 
     /**
-     * Get Time source of the log that failed to be parsed. Valid values: 0 (current system time) and 1 (Kafka message timestamp).
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return UnMatchLogTimeSrc Time source of the log that failed to be parsed. Valid values: 0 (current system time) and 1 (Kafka message timestamp).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Time source for parsing failure logs. 0: current time of the system; 1: Kafka message timestamp. 
+     * @return UnMatchLogTimeSrc Time source for parsing failure logs. 0: current time of the system; 1: Kafka message timestamp.
      */
     public Long getUnMatchLogTimeSrc() {
         return this.UnMatchLogTimeSrc;
     }
 
     /**
-     * Set Time source of the log that failed to be parsed. Valid values: 0 (current system time) and 1 (Kafka message timestamp).
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param UnMatchLogTimeSrc Time source of the log that failed to be parsed. Valid values: 0 (current system time) and 1 (Kafka message timestamp).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Time source for parsing failure logs. 0: current time of the system; 1: Kafka message timestamp.
+     * @param UnMatchLogTimeSrc Time source for parsing failure logs. 0: current time of the system; 1: Kafka message timestamp.
      */
     public void setUnMatchLogTimeSrc(Long UnMatchLogTimeSrc) {
         this.UnMatchLogTimeSrc = UnMatchLogTimeSrc;
     }
 
     /**
-     * Get Default time source. Valid values: 0 (current system time) and 1 (Kafka message timestamp).
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return DefaultTimeSrc Default time source. Valid values: 0 (current system time) and 1 (Kafka message timestamp).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Default time source. 0: Current system time; 1: Kafka message timestamp. 
+     * @return DefaultTimeSrc Default time source. 0: Current system time; 1: Kafka message timestamp.
      */
     public Long getDefaultTimeSrc() {
         return this.DefaultTimeSrc;
     }
 
     /**
-     * Set Default time source. Valid values: 0 (current system time) and 1 (Kafka message timestamp).
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param DefaultTimeSrc Default time source. Valid values: 0 (current system time) and 1 (Kafka message timestamp).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Default time source. 0: Current system time; 1: Kafka message timestamp.
+     * @param DefaultTimeSrc Default time source. 0: Current system time; 1: Kafka message timestamp.
      */
     public void setDefaultTimeSrc(Long DefaultTimeSrc) {
         this.DefaultTimeSrc = DefaultTimeSrc;
     }
 
     /**
-     * Get Time field
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return TimeKey Time field
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Time field. Field name representing time in logs.
+
+-When DefaultTimeSwitch is false and RechargeType data extraction mode is `json_log` JSON file log or `fullregex_log` single-line full regex file log, TimeKey cannot be empty. 
+     * @return TimeKey Time field. Field name representing time in logs.
+
+-When DefaultTimeSwitch is false and RechargeType data extraction mode is `json_log` JSON file log or `fullregex_log` single-line full regex file log, TimeKey cannot be empty.
      */
     public String getTimeKey() {
         return this.TimeKey;
     }
 
     /**
-     * Set Time field
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param TimeKey Time field
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Time field. Field name representing time in logs.
+
+-When DefaultTimeSwitch is false and RechargeType data extraction mode is `json_log` JSON file log or `fullregex_log` single-line full regex file log, TimeKey cannot be empty.
+     * @param TimeKey Time field. Field name representing time in logs.
+
+-When DefaultTimeSwitch is false and RechargeType data extraction mode is `json_log` JSON file log or `fullregex_log` single-line full regex file log, TimeKey cannot be empty.
      */
     public void setTimeKey(String TimeKey) {
         this.TimeKey = TimeKey;
     }
 
     /**
-     * Get Time regular expression
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return TimeRegex Time regular expression
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Time extraction regular expression.
+-When DefaultTimeSwitch is false and the data extraction mode of RechargeType is `minimalist_log` (single-line full text - file log), TimeRegex cannot be empty.
+-Only need to input the regular expression representing the time field in logs. If multiple fields are matched to, the first will be used.
+Example: The original log is "message with time 2022-08-08 14:20:20". You can set the retrieval time regex to \d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d.
+ 
+     * @return TimeRegex Time extraction regular expression.
+-When DefaultTimeSwitch is false and the data extraction mode of RechargeType is `minimalist_log` (single-line full text - file log), TimeRegex cannot be empty.
+-Only need to input the regular expression representing the time field in logs. If multiple fields are matched to, the first will be used.
+Example: The original log is "message with time 2022-08-08 14:20:20". You can set the retrieval time regex to \d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d.
+
      */
     public String getTimeRegex() {
         return this.TimeRegex;
     }
 
     /**
-     * Set Time regular expression
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param TimeRegex Time regular expression
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Time extraction regular expression.
+-When DefaultTimeSwitch is false and the data extraction mode of RechargeType is `minimalist_log` (single-line full text - file log), TimeRegex cannot be empty.
+-Only need to input the regular expression representing the time field in logs. If multiple fields are matched to, the first will be used.
+Example: The original log is "message with time 2022-08-08 14:20:20". You can set the retrieval time regex to \d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d.
+
+     * @param TimeRegex Time extraction regular expression.
+-When DefaultTimeSwitch is false and the data extraction mode of RechargeType is `minimalist_log` (single-line full text - file log), TimeRegex cannot be empty.
+-Only need to input the regular expression representing the time field in logs. If multiple fields are matched to, the first will be used.
+Example: The original log is "message with time 2022-08-08 14:20:20". You can set the retrieval time regex to \d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d.
+
      */
     public void setTimeRegex(String TimeRegex) {
         this.TimeRegex = TimeRegex;
     }
 
     /**
-     * Get Time field format
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return TimeFormat Time field format
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Time field format.
+-When DefaultTimeSwitch is false, TimeFormat cannot be empty. 
+     * @return TimeFormat Time field format.
+-When DefaultTimeSwitch is false, TimeFormat cannot be empty.
      */
     public String getTimeFormat() {
         return this.TimeFormat;
     }
 
     /**
-     * Set Time field format
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param TimeFormat Time field format
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Time field format.
+-When DefaultTimeSwitch is false, TimeFormat cannot be empty.
+     * @param TimeFormat Time field format.
+-When DefaultTimeSwitch is false, TimeFormat cannot be empty.
      */
     public void setTimeFormat(String TimeFormat) {
         this.TimeFormat = TimeFormat;
     }
 
     /**
-     * Get Time zone
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return TimeZone Time zone
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Time field time zone.
+-When DefaultTimeSwitch is false, TimeZone cannot be empty.
+-Time zone format rule
+Prefix: Use GMT or UTC as the time zone benchmark.
+Offset:
+-`-` indicates a western time zone (later than the benchmark time).
+-`+` means the east time zone (earlier than the benchmark time).
+-Format ±HH:MM (hr:min)
+
+-Currently supported:
+```
+"GMT-12:00" 
+"GMT-11:00" 
+"GMT-10:00" 
+"GMT-09:30" 
+"GMT-09:00" 
+"GMT-08:00" 
+"GMT-07:00" 
+"GMT-06:00" 
+"GMT-05:00" 
+"GMT-04:00" 
+"GMT-03:30" 
+"GMT-03:00" 
+"GMT-02:00" 
+"GMT-01:00" 
+"GMT+00:00"
+"GMT+01:00"
+"GMT+02:00"
+"GMT+03:30"
+"GMT+04:00"
+"GMT+04:30"
+"GMT+05:00"
+"GMT+05:30"
+"GMT+05:45"
+"GMT+06:00"
+"GMT+06:30"
+"GMT+07:00"
+"GMT+08:00"
+"GMT+09:00"
+"GMT+09:30"
+"GMT+10:00"
+"GMT+10:30"
+"GMT+11:00"
+"GMT+11:30"
+"GMT+12:00"
+"GMT+12:45"
+"GMT+13:00"
+"GMT+14:00"
+"UTC-11:00"
+"UTC-10:00"
+"UTC-09:00"
+"UTC-08:00"
+"UTC-12:00"
+"UTC-07:00"
+"UTC-06:00"
+"UTC-05:00"
+"UTC-04:30"
+"UTC-04:00"
+"UTC-03:30"
+"UTC-03:00"
+"UTC-02:00"
+"UTC-01:00"
+"UTC+00:00"
+"UTC+01:00"
+"UTC+02:00"
+"UTC+03:00"
+"UTC+03:30"
+"UTC+04:00"
+"UTC+04:30"
+"UTC+05:00"
+"UTC+05:45"
+"UTC+06:00"
+"UTC+06:30"
+"UTC+07:00"
+"UTC+08:00"
+"UTC+09:00"
+"UTC+09:30"
+"UTC+10:00"
+"UTC+11:00"
+"UTC+12:00"
+"UTC+13:00"
+``` 
+     * @return TimeZone Time field time zone.
+-When DefaultTimeSwitch is false, TimeZone cannot be empty.
+-Time zone format rule
+Prefix: Use GMT or UTC as the time zone benchmark.
+Offset:
+-`-` indicates a western time zone (later than the benchmark time).
+-`+` means the east time zone (earlier than the benchmark time).
+-Format ±HH:MM (hr:min)
+
+-Currently supported:
+```
+"GMT-12:00" 
+"GMT-11:00" 
+"GMT-10:00" 
+"GMT-09:30" 
+"GMT-09:00" 
+"GMT-08:00" 
+"GMT-07:00" 
+"GMT-06:00" 
+"GMT-05:00" 
+"GMT-04:00" 
+"GMT-03:30" 
+"GMT-03:00" 
+"GMT-02:00" 
+"GMT-01:00" 
+"GMT+00:00"
+"GMT+01:00"
+"GMT+02:00"
+"GMT+03:30"
+"GMT+04:00"
+"GMT+04:30"
+"GMT+05:00"
+"GMT+05:30"
+"GMT+05:45"
+"GMT+06:00"
+"GMT+06:30"
+"GMT+07:00"
+"GMT+08:00"
+"GMT+09:00"
+"GMT+09:30"
+"GMT+10:00"
+"GMT+10:30"
+"GMT+11:00"
+"GMT+11:30"
+"GMT+12:00"
+"GMT+12:45"
+"GMT+13:00"
+"GMT+14:00"
+"UTC-11:00"
+"UTC-10:00"
+"UTC-09:00"
+"UTC-08:00"
+"UTC-12:00"
+"UTC-07:00"
+"UTC-06:00"
+"UTC-05:00"
+"UTC-04:30"
+"UTC-04:00"
+"UTC-03:30"
+"UTC-03:00"
+"UTC-02:00"
+"UTC-01:00"
+"UTC+00:00"
+"UTC+01:00"
+"UTC+02:00"
+"UTC+03:00"
+"UTC+03:30"
+"UTC+04:00"
+"UTC+04:30"
+"UTC+05:00"
+"UTC+05:45"
+"UTC+06:00"
+"UTC+06:30"
+"UTC+07:00"
+"UTC+08:00"
+"UTC+09:00"
+"UTC+09:30"
+"UTC+10:00"
+"UTC+11:00"
+"UTC+12:00"
+"UTC+13:00"
+```
      */
     public String getTimeZone() {
         return this.TimeZone;
     }
 
     /**
-     * Set Time zone
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param TimeZone Time zone
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Time field time zone.
+-When DefaultTimeSwitch is false, TimeZone cannot be empty.
+-Time zone format rule
+Prefix: Use GMT or UTC as the time zone benchmark.
+Offset:
+-`-` indicates a western time zone (later than the benchmark time).
+-`+` means the east time zone (earlier than the benchmark time).
+-Format ±HH:MM (hr:min)
+
+-Currently supported:
+```
+"GMT-12:00" 
+"GMT-11:00" 
+"GMT-10:00" 
+"GMT-09:30" 
+"GMT-09:00" 
+"GMT-08:00" 
+"GMT-07:00" 
+"GMT-06:00" 
+"GMT-05:00" 
+"GMT-04:00" 
+"GMT-03:30" 
+"GMT-03:00" 
+"GMT-02:00" 
+"GMT-01:00" 
+"GMT+00:00"
+"GMT+01:00"
+"GMT+02:00"
+"GMT+03:30"
+"GMT+04:00"
+"GMT+04:30"
+"GMT+05:00"
+"GMT+05:30"
+"GMT+05:45"
+"GMT+06:00"
+"GMT+06:30"
+"GMT+07:00"
+"GMT+08:00"
+"GMT+09:00"
+"GMT+09:30"
+"GMT+10:00"
+"GMT+10:30"
+"GMT+11:00"
+"GMT+11:30"
+"GMT+12:00"
+"GMT+12:45"
+"GMT+13:00"
+"GMT+14:00"
+"UTC-11:00"
+"UTC-10:00"
+"UTC-09:00"
+"UTC-08:00"
+"UTC-12:00"
+"UTC-07:00"
+"UTC-06:00"
+"UTC-05:00"
+"UTC-04:30"
+"UTC-04:00"
+"UTC-03:30"
+"UTC-03:00"
+"UTC-02:00"
+"UTC-01:00"
+"UTC+00:00"
+"UTC+01:00"
+"UTC+02:00"
+"UTC+03:00"
+"UTC+03:30"
+"UTC+04:00"
+"UTC+04:30"
+"UTC+05:00"
+"UTC+05:45"
+"UTC+06:00"
+"UTC+06:30"
+"UTC+07:00"
+"UTC+08:00"
+"UTC+09:00"
+"UTC+09:30"
+"UTC+10:00"
+"UTC+11:00"
+"UTC+12:00"
+"UTC+13:00"
+```
+     * @param TimeZone Time field time zone.
+-When DefaultTimeSwitch is false, TimeZone cannot be empty.
+-Time zone format rule
+Prefix: Use GMT or UTC as the time zone benchmark.
+Offset:
+-`-` indicates a western time zone (later than the benchmark time).
+-`+` means the east time zone (earlier than the benchmark time).
+-Format ±HH:MM (hr:min)
+
+-Currently supported:
+```
+"GMT-12:00" 
+"GMT-11:00" 
+"GMT-10:00" 
+"GMT-09:30" 
+"GMT-09:00" 
+"GMT-08:00" 
+"GMT-07:00" 
+"GMT-06:00" 
+"GMT-05:00" 
+"GMT-04:00" 
+"GMT-03:30" 
+"GMT-03:00" 
+"GMT-02:00" 
+"GMT-01:00" 
+"GMT+00:00"
+"GMT+01:00"
+"GMT+02:00"
+"GMT+03:30"
+"GMT+04:00"
+"GMT+04:30"
+"GMT+05:00"
+"GMT+05:30"
+"GMT+05:45"
+"GMT+06:00"
+"GMT+06:30"
+"GMT+07:00"
+"GMT+08:00"
+"GMT+09:00"
+"GMT+09:30"
+"GMT+10:00"
+"GMT+10:30"
+"GMT+11:00"
+"GMT+11:30"
+"GMT+12:00"
+"GMT+12:45"
+"GMT+13:00"
+"GMT+14:00"
+"UTC-11:00"
+"UTC-10:00"
+"UTC-09:00"
+"UTC-08:00"
+"UTC-12:00"
+"UTC-07:00"
+"UTC-06:00"
+"UTC-05:00"
+"UTC-04:30"
+"UTC-04:00"
+"UTC-03:30"
+"UTC-03:00"
+"UTC-02:00"
+"UTC-01:00"
+"UTC+00:00"
+"UTC+01:00"
+"UTC+02:00"
+"UTC+03:00"
+"UTC+03:30"
+"UTC+04:00"
+"UTC+04:30"
+"UTC+05:00"
+"UTC+05:45"
+"UTC+06:00"
+"UTC+06:30"
+"UTC+07:00"
+"UTC+08:00"
+"UTC+09:00"
+"UTC+09:30"
+"UTC+10:00"
+"UTC+11:00"
+"UTC+12:00"
+"UTC+13:00"
+```
      */
     public void setTimeZone(String TimeZone) {
         this.TimeZone = TimeZone;
     }
 
     /**
-     * Get Metadata information. Kafka supports import of kafka_topic, kafka_partition, kafka_offset, and kafka_timestamp.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Metadata Metadata information. Kafka supports import of kafka_topic, kafka_partition, kafka_offset, and kafka_timestamp.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Metadata information. Kafka import supports kafka_topic, kafka_partition, kafka_offset, and kafka_timestamp. 
+     * @return Metadata Metadata information. Kafka import supports kafka_topic, kafka_partition, kafka_offset, and kafka_timestamp.
      */
     public String [] getMetadata() {
         return this.Metadata;
     }
 
     /**
-     * Set Metadata information. Kafka supports import of kafka_topic, kafka_partition, kafka_offset, and kafka_timestamp.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Metadata Metadata information. Kafka supports import of kafka_topic, kafka_partition, kafka_offset, and kafka_timestamp.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Metadata information. Kafka import supports kafka_topic, kafka_partition, kafka_offset, and kafka_timestamp.
+     * @param Metadata Metadata information. Kafka import supports kafka_topic, kafka_partition, kafka_offset, and kafka_timestamp.
      */
     public void setMetadata(String [] Metadata) {
         this.Metadata = Metadata;
     }
 
     /**
-     * Get List of log keys, which is required when `RechargeType` is set to `full_regex_log`
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Keys List of log keys, which is required when `RechargeType` is set to `full_regex_log`
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get log Key list. It is required when RechargeType is full_regex_log or delimiter_log. 
+     * @return Keys log Key list. It is required when RechargeType is full_regex_log or delimiter_log.
      */
     public String [] getKeys() {
         return this.Keys;
     }
 
     /**
-     * Set List of log keys, which is required when `RechargeType` is set to `full_regex_log`
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Keys List of log keys, which is required when `RechargeType` is set to `full_regex_log`
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set log Key list. It is required when RechargeType is full_regex_log or delimiter_log.
+     * @param Keys log Key list. It is required when RechargeType is full_regex_log or delimiter_log.
      */
     public void setKeys(String [] Keys) {
         this.Keys = Keys;
+    }
+
+    /**
+     * Get JSON parsing mode. The first-level data parsing is enabled. 
+     * @return ParseArray JSON parsing mode. The first-level data parsing is enabled.
+     */
+    public Boolean getParseArray() {
+        return this.ParseArray;
+    }
+
+    /**
+     * Set JSON parsing mode. The first-level data parsing is enabled.
+     * @param ParseArray JSON parsing mode. The first-level data parsing is enabled.
+     */
+    public void setParseArray(Boolean ParseArray) {
+        this.ParseArray = ParseArray;
+    }
+
+    /**
+     * Get Delimiter parsing mode - Separator
+This field is required when the parsing format is delimiter extraction. 
+     * @return Delimiter Delimiter parsing mode - Separator
+This field is required when the parsing format is delimiter extraction.
+     */
+    public String getDelimiter() {
+        return this.Delimiter;
+    }
+
+    /**
+     * Set Delimiter parsing mode - Separator
+This field is required when the parsing format is delimiter extraction.
+     * @param Delimiter Delimiter parsing mode - Separator
+This field is required when the parsing format is delimiter extraction.
+     */
+    public void setDelimiter(String Delimiter) {
+        this.Delimiter = Delimiter;
     }
 
     public LogRechargeRuleInfo() {
@@ -451,6 +892,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 this.Keys[i] = new String(source.Keys[i]);
             }
         }
+        if (source.ParseArray != null) {
+            this.ParseArray = new Boolean(source.ParseArray);
+        }
+        if (source.Delimiter != null) {
+            this.Delimiter = new String(source.Delimiter);
+        }
     }
 
 
@@ -472,6 +919,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "TimeZone", this.TimeZone);
         this.setParamArraySimple(map, prefix + "Metadata.", this.Metadata);
         this.setParamArraySimple(map, prefix + "Keys.", this.Keys);
+        this.setParamSimple(map, prefix + "ParseArray", this.ParseArray);
+        this.setParamSimple(map, prefix + "Delimiter", this.Delimiter);
 
     }
 }

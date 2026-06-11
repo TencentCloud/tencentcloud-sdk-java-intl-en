@@ -25,7 +25,6 @@ public class DescribeRiskDnsEventListResponse extends AbstractModel {
 
     /**
     * Malicious Request Event List
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("List")
     @Expose
@@ -46,10 +45,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Malicious Request Event List
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Malicious Request Event List 
      * @return List Malicious Request Event List
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public RiskDnsEvent [] getList() {
         return this.List;
@@ -57,9 +54,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Malicious Request Event List
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param List Malicious Request Event List
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setList(RiskDnsEvent [] List) {
         this.List = List;

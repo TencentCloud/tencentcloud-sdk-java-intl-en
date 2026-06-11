@@ -25,7 +25,6 @@ public class DescribeFileTamperRuleCountResponse extends AbstractModel {
 
     /**
     * Information on Number of Host-associated Core File Rules
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("List")
     @Expose
@@ -39,10 +38,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Information on Number of Host-associated Core File Rules
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Information on Number of Host-associated Core File Rules 
      * @return List Information on Number of Host-associated Core File Rules
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public FileTamperRuleCount [] getList() {
         return this.List;
@@ -50,9 +47,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Information on Number of Host-associated Core File Rules
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param List Information on Number of Host-associated Core File Rules
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setList(FileTamperRuleCount [] List) {
         this.List = List;

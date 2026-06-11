@@ -24,485 +24,647 @@ import java.util.HashMap;
 public class TopicInfo extends AbstractModel {
 
     /**
-    * Logset ID
+    * <p>Logset ID</p>
     */
     @SerializedName("LogsetId")
     @Expose
     private String LogsetId;
 
     /**
-    *  Topic ID
+    * <p>Topic ID</p>
     */
     @SerializedName("TopicId")
     @Expose
     private String TopicId;
 
     /**
-    * Topic Name
+    * <p>Topic name</p>
     */
     @SerializedName("TopicName")
     @Expose
     private String TopicName;
 
     /**
-    * Number of topic partitions
+    * <p>Topic partition count</p>
     */
     @SerializedName("PartitionCount")
     @Expose
     private Long PartitionCount;
 
     /**
-    * Whether the topic has indexing enabled (the topic type must be log topic)
+    * <p>Whether the topic has indexing enabled (the topic type must be log topic)</p>
     */
     @SerializedName("Index")
     @Expose
     private Boolean Index;
 
     /**
-    * Cloud product identifier. When the topic is created by other cloud products, this field displays the name of the cloud product, such as CDN, TKE.Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>If AssumerUin is not empty, it indicates the Uin of the service provider creating the log topic</p>
+    */
+    @SerializedName("AssumerUin")
+    @Expose
+    private Long AssumerUin;
+
+    /**
+    * <p>Cloud product identifier. When the topic is created by other cloud products, this field displays the cloud product name, such as CDN, TKE.</p>
     */
     @SerializedName("AssumerName")
     @Expose
     private String AssumerName;
 
     /**
-    * Creation time
+    * <p>Creation time. Format: yyyy-MM-dd HH:mm:ss</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * Whether the topic has log collection enabled. true: collection enabled; false: collection disabled.Log collection is enabled by default when creating a log topic, and this field can be modified by calling ModifyTopic through the SDK.The console currently does not support modifying this parameter.
+    * <p>Whether the topic has log collection enabled. true: enable collection; false: disable collection.<br>Enabled by default during log topic creation. You can modify this field via SDK invocation of ModifyTopic.<br>The console currently does not support modification of this parameter.</p>
     */
     @SerializedName("Status")
     @Expose
     private Boolean Status;
 
     /**
-    * Tag information bound to the topicNote: This field may return null, indicating that no valid values can be obtained.
+    * <p>Tag information bound to the topic</p>
     */
     @SerializedName("Tags")
     @Expose
     private Tag [] Tags;
 
     /**
-    * Whether automatic split is enabled for this topic
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * <p>If RoleName is not empty, it indicates the role used by the service provider creating the log topic</p>
+    */
+    @SerializedName("RoleName")
+    @Expose
+    private String RoleName;
+
+    /**
+    * <p>Whether the topic has auto-split enabled</p>
     */
     @SerializedName("AutoSplit")
     @Expose
     private Boolean AutoSplit;
 
     /**
-    * Maximum number of partitions to split into for this topic if automatic split is enabled
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * <p>Maximum number of partitions allowed for the topic if auto-split is enabled</p>
     */
     @SerializedName("MaxSplitPartitions")
     @Expose
     private Long MaxSplitPartitions;
 
     /**
-    * Storage type of the topicNote: This field may return null, indicating that no valid values can be obtained.
+    * <p>Storage type of the topic</p><ul><li>hot: standard storage</li><li>cold: infrequent storage</li></ul>
     */
     @SerializedName("StorageType")
     @Expose
     private String StorageType;
 
     /**
-    * Lifecycle in days. Value range: 1-3600 (3640 indicates permanent retention)
-Note: This field may return `null`, indicating that no valid value was found.
+    * <p>Lifecycle in days, valid values 1~3600. A value of 3640 indicates permanent retention.</p>
     */
     @SerializedName("Period")
     @Expose
     private Long Period;
 
     /**
-    * Cloud product sub-identifier. If the log topic is created by another cloud product, this field returns the name of the cloud product and its log type, such as `TKE-Audit` or `TKE-Event`. Some products only return the cloud product identifier (`AssumerName`), without this field.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Cloud product sub-identifier. When the log topic is created by other cloud products, this field displays the cloud product name and its log type sub-category, such as TKE-Audit, TKE-Event. Some cloud products only have the cloud product identifier (AssumerName) without this field.</p>
     */
     @SerializedName("SubAssumerName")
     @Expose
     private String SubAssumerName;
 
     /**
-    * Topic description
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Topic description</p>
     */
     @SerializedName("Describes")
     @Expose
     private String Describes;
 
     /**
-    * Enable log sinking, with the lifecycle of standard storage, where hotPeriod < Period.For standard storage, hotPeriod is used, and for infrequent access storage, it is Period-hotPeriod. (The topic type must be a log topic)HotPeriod=0 indicates that log sinking is not enabled.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Enable log settlement, lifecycle of standard storage, hotPeriod &lt; Period.<br>Standard storage is hotPeriod, infrequent storage is Period-hotPeriod. (Topic type must be log topic)<br>HotPeriod=0 means log settlement is not enabled.</p>
     */
     @SerializedName("HotPeriod")
     @Expose
     private Long HotPeriod;
 
     /**
-    * Topic type.
-- 0:  log  Topic  
-- 1: Metric Topic
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>kms-cls service key id</p>
+    */
+    @SerializedName("KeyId")
+    @Expose
+    private String KeyId;
+
+    /**
+    * <p>Topic type.</p><ul><li>0: Log topic</li><li>1: Metric topic</li></ul>
     */
     @SerializedName("BizType")
     @Expose
     private Long BizType;
 
     /**
-    * Free authentication switch. false: disabled; true: enabled.After enabling, anonymous access to the log topic will be supported for specified operations. For details, please refer to Log Topic (https://intl.cloud.tencent.com/document/product/614/41035?from_cn_redirect=1).Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Free authentication switch. false: disabled; true: enabled.<br>Once enabled, designated operations will be supported for anonymous access to the log topic. See <a href="https://www.tencentcloud.com/document/product/614/41035?from_cn_redirect=1">log topic</a> for details.</p>
     */
     @SerializedName("IsWebTracking")
     @Expose
     private Boolean IsWebTracking;
 
     /**
-    * Log topic extended information
+    * <p>Log topic extended information</p>
     */
     @SerializedName("Extends")
     @Expose
     private TopicExtendInfo Extends;
 
     /**
-     * Get Logset ID 
-     * @return LogsetId Logset ID
+    * <p>Async migration task ID</p>
+    */
+    @SerializedName("TopicAsyncTaskID")
+    @Expose
+    private String TopicAsyncTaskID;
+
+    /**
+    * <p>Asynchronous migration status</p><ul><li>1: In progress</li><li>2: Completed</li><li>3: Failure</li><li>4: Canceled</li></ul>
+    */
+    @SerializedName("MigrationStatus")
+    @Expose
+    private Long MigrationStatus;
+
+    /**
+    * <p>After async migration, expected effective date<br>Time format: yyyy-MM-dd HH:mm:ss</p>
+    */
+    @SerializedName("EffectiveDate")
+    @Expose
+    private String EffectiveDate;
+
+    /**
+    * <p>IsSourceFrom Enable recording public network source IP and server receipt time</p>
+    */
+    @SerializedName("IsSourceFrom")
+    @Expose
+    private Boolean IsSourceFrom;
+
+    /**
+    * <p>Current billing mode</p><p>Enumeration value:</p><ul><li>0: Function billing by usage</li><li>1: Billing by raw log size (currently supported for some customers only)</li></ul>
+    */
+    @SerializedName("BillingMode")
+    @Expose
+    private Long BillingMode;
+
+    /**
+    * <p>If there is an async task, the new billing model after the task succeeds</p><p>Enumeration value:</p><ul><li>0: Function billing by usage</li><li>1: Billing by raw log size (currently only supported for some customers)</li></ul>
+    */
+    @SerializedName("NewBillingMode")
+    @Expose
+    private Long NewBillingMode;
+
+    /**
+     * Get <p>Logset ID</p> 
+     * @return LogsetId <p>Logset ID</p>
      */
     public String getLogsetId() {
         return this.LogsetId;
     }
 
     /**
-     * Set Logset ID
-     * @param LogsetId Logset ID
+     * Set <p>Logset ID</p>
+     * @param LogsetId <p>Logset ID</p>
      */
     public void setLogsetId(String LogsetId) {
         this.LogsetId = LogsetId;
     }
 
     /**
-     * Get  Topic ID 
-     * @return TopicId  Topic ID
+     * Get <p>Topic ID</p> 
+     * @return TopicId <p>Topic ID</p>
      */
     public String getTopicId() {
         return this.TopicId;
     }
 
     /**
-     * Set  Topic ID
-     * @param TopicId  Topic ID
+     * Set <p>Topic ID</p>
+     * @param TopicId <p>Topic ID</p>
      */
     public void setTopicId(String TopicId) {
         this.TopicId = TopicId;
     }
 
     /**
-     * Get Topic Name 
-     * @return TopicName Topic Name
+     * Get <p>Topic name</p> 
+     * @return TopicName <p>Topic name</p>
      */
     public String getTopicName() {
         return this.TopicName;
     }
 
     /**
-     * Set Topic Name
-     * @param TopicName Topic Name
+     * Set <p>Topic name</p>
+     * @param TopicName <p>Topic name</p>
      */
     public void setTopicName(String TopicName) {
         this.TopicName = TopicName;
     }
 
     /**
-     * Get Number of topic partitions 
-     * @return PartitionCount Number of topic partitions
+     * Get <p>Topic partition count</p> 
+     * @return PartitionCount <p>Topic partition count</p>
      */
     public Long getPartitionCount() {
         return this.PartitionCount;
     }
 
     /**
-     * Set Number of topic partitions
-     * @param PartitionCount Number of topic partitions
+     * Set <p>Topic partition count</p>
+     * @param PartitionCount <p>Topic partition count</p>
      */
     public void setPartitionCount(Long PartitionCount) {
         this.PartitionCount = PartitionCount;
     }
 
     /**
-     * Get Whether the topic has indexing enabled (the topic type must be log topic) 
-     * @return Index Whether the topic has indexing enabled (the topic type must be log topic)
+     * Get <p>Whether the topic has indexing enabled (the topic type must be log topic)</p> 
+     * @return Index <p>Whether the topic has indexing enabled (the topic type must be log topic)</p>
      */
     public Boolean getIndex() {
         return this.Index;
     }
 
     /**
-     * Set Whether the topic has indexing enabled (the topic type must be log topic)
-     * @param Index Whether the topic has indexing enabled (the topic type must be log topic)
+     * Set <p>Whether the topic has indexing enabled (the topic type must be log topic)</p>
+     * @param Index <p>Whether the topic has indexing enabled (the topic type must be log topic)</p>
      */
     public void setIndex(Boolean Index) {
         this.Index = Index;
     }
 
     /**
-     * Get Cloud product identifier. When the topic is created by other cloud products, this field displays the name of the cloud product, such as CDN, TKE.Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return AssumerName Cloud product identifier. When the topic is created by other cloud products, this field displays the name of the cloud product, such as CDN, TKE.Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>If AssumerUin is not empty, it indicates the Uin of the service provider creating the log topic</p> 
+     * @return AssumerUin <p>If AssumerUin is not empty, it indicates the Uin of the service provider creating the log topic</p>
+     */
+    public Long getAssumerUin() {
+        return this.AssumerUin;
+    }
+
+    /**
+     * Set <p>If AssumerUin is not empty, it indicates the Uin of the service provider creating the log topic</p>
+     * @param AssumerUin <p>If AssumerUin is not empty, it indicates the Uin of the service provider creating the log topic</p>
+     */
+    public void setAssumerUin(Long AssumerUin) {
+        this.AssumerUin = AssumerUin;
+    }
+
+    /**
+     * Get <p>Cloud product identifier. When the topic is created by other cloud products, this field displays the cloud product name, such as CDN, TKE.</p> 
+     * @return AssumerName <p>Cloud product identifier. When the topic is created by other cloud products, this field displays the cloud product name, such as CDN, TKE.</p>
      */
     public String getAssumerName() {
         return this.AssumerName;
     }
 
     /**
-     * Set Cloud product identifier. When the topic is created by other cloud products, this field displays the name of the cloud product, such as CDN, TKE.Note: This field may return null, indicating that no valid values can be obtained.
-     * @param AssumerName Cloud product identifier. When the topic is created by other cloud products, this field displays the name of the cloud product, such as CDN, TKE.Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Cloud product identifier. When the topic is created by other cloud products, this field displays the cloud product name, such as CDN, TKE.</p>
+     * @param AssumerName <p>Cloud product identifier. When the topic is created by other cloud products, this field displays the cloud product name, such as CDN, TKE.</p>
      */
     public void setAssumerName(String AssumerName) {
         this.AssumerName = AssumerName;
     }
 
     /**
-     * Get Creation time 
-     * @return CreateTime Creation time
+     * Get <p>Creation time. Format: yyyy-MM-dd HH:mm:ss</p> 
+     * @return CreateTime <p>Creation time. Format: yyyy-MM-dd HH:mm:ss</p>
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set Creation time
-     * @param CreateTime Creation time
+     * Set <p>Creation time. Format: yyyy-MM-dd HH:mm:ss</p>
+     * @param CreateTime <p>Creation time. Format: yyyy-MM-dd HH:mm:ss</p>
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get Whether the topic has log collection enabled. true: collection enabled; false: collection disabled.Log collection is enabled by default when creating a log topic, and this field can be modified by calling ModifyTopic through the SDK.The console currently does not support modifying this parameter. 
-     * @return Status Whether the topic has log collection enabled. true: collection enabled; false: collection disabled.Log collection is enabled by default when creating a log topic, and this field can be modified by calling ModifyTopic through the SDK.The console currently does not support modifying this parameter.
+     * Get <p>Whether the topic has log collection enabled. true: enable collection; false: disable collection.<br>Enabled by default during log topic creation. You can modify this field via SDK invocation of ModifyTopic.<br>The console currently does not support modification of this parameter.</p> 
+     * @return Status <p>Whether the topic has log collection enabled. true: enable collection; false: disable collection.<br>Enabled by default during log topic creation. You can modify this field via SDK invocation of ModifyTopic.<br>The console currently does not support modification of this parameter.</p>
      */
     public Boolean getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Whether the topic has log collection enabled. true: collection enabled; false: collection disabled.Log collection is enabled by default when creating a log topic, and this field can be modified by calling ModifyTopic through the SDK.The console currently does not support modifying this parameter.
-     * @param Status Whether the topic has log collection enabled. true: collection enabled; false: collection disabled.Log collection is enabled by default when creating a log topic, and this field can be modified by calling ModifyTopic through the SDK.The console currently does not support modifying this parameter.
+     * Set <p>Whether the topic has log collection enabled. true: enable collection; false: disable collection.<br>Enabled by default during log topic creation. You can modify this field via SDK invocation of ModifyTopic.<br>The console currently does not support modification of this parameter.</p>
+     * @param Status <p>Whether the topic has log collection enabled. true: enable collection; false: disable collection.<br>Enabled by default during log topic creation. You can modify this field via SDK invocation of ModifyTopic.<br>The console currently does not support modification of this parameter.</p>
      */
     public void setStatus(Boolean Status) {
         this.Status = Status;
     }
 
     /**
-     * Get Tag information bound to the topicNote: This field may return null, indicating that no valid values can be obtained. 
-     * @return Tags Tag information bound to the topicNote: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Tag information bound to the topic</p> 
+     * @return Tags <p>Tag information bound to the topic</p>
      */
     public Tag [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set Tag information bound to the topicNote: This field may return null, indicating that no valid values can be obtained.
-     * @param Tags Tag information bound to the topicNote: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Tag information bound to the topic</p>
+     * @param Tags <p>Tag information bound to the topic</p>
      */
     public void setTags(Tag [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get Whether automatic split is enabled for this topic
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return AutoSplit Whether automatic split is enabled for this topic
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get <p>If RoleName is not empty, it indicates the role used by the service provider creating the log topic</p> 
+     * @return RoleName <p>If RoleName is not empty, it indicates the role used by the service provider creating the log topic</p>
+     */
+    public String getRoleName() {
+        return this.RoleName;
+    }
+
+    /**
+     * Set <p>If RoleName is not empty, it indicates the role used by the service provider creating the log topic</p>
+     * @param RoleName <p>If RoleName is not empty, it indicates the role used by the service provider creating the log topic</p>
+     */
+    public void setRoleName(String RoleName) {
+        this.RoleName = RoleName;
+    }
+
+    /**
+     * Get <p>Whether the topic has auto-split enabled</p> 
+     * @return AutoSplit <p>Whether the topic has auto-split enabled</p>
      */
     public Boolean getAutoSplit() {
         return this.AutoSplit;
     }
 
     /**
-     * Set Whether automatic split is enabled for this topic
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param AutoSplit Whether automatic split is enabled for this topic
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set <p>Whether the topic has auto-split enabled</p>
+     * @param AutoSplit <p>Whether the topic has auto-split enabled</p>
      */
     public void setAutoSplit(Boolean AutoSplit) {
         this.AutoSplit = AutoSplit;
     }
 
     /**
-     * Get Maximum number of partitions to split into for this topic if automatic split is enabled
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return MaxSplitPartitions Maximum number of partitions to split into for this topic if automatic split is enabled
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get <p>Maximum number of partitions allowed for the topic if auto-split is enabled</p> 
+     * @return MaxSplitPartitions <p>Maximum number of partitions allowed for the topic if auto-split is enabled</p>
      */
     public Long getMaxSplitPartitions() {
         return this.MaxSplitPartitions;
     }
 
     /**
-     * Set Maximum number of partitions to split into for this topic if automatic split is enabled
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param MaxSplitPartitions Maximum number of partitions to split into for this topic if automatic split is enabled
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set <p>Maximum number of partitions allowed for the topic if auto-split is enabled</p>
+     * @param MaxSplitPartitions <p>Maximum number of partitions allowed for the topic if auto-split is enabled</p>
      */
     public void setMaxSplitPartitions(Long MaxSplitPartitions) {
         this.MaxSplitPartitions = MaxSplitPartitions;
     }
 
     /**
-     * Get Storage type of the topicNote: This field may return null, indicating that no valid values can be obtained. 
-     * @return StorageType Storage type of the topicNote: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Storage type of the topic</p><ul><li>hot: standard storage</li><li>cold: infrequent storage</li></ul> 
+     * @return StorageType <p>Storage type of the topic</p><ul><li>hot: standard storage</li><li>cold: infrequent storage</li></ul>
      */
     public String getStorageType() {
         return this.StorageType;
     }
 
     /**
-     * Set Storage type of the topicNote: This field may return null, indicating that no valid values can be obtained.
-     * @param StorageType Storage type of the topicNote: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Storage type of the topic</p><ul><li>hot: standard storage</li><li>cold: infrequent storage</li></ul>
+     * @param StorageType <p>Storage type of the topic</p><ul><li>hot: standard storage</li><li>cold: infrequent storage</li></ul>
      */
     public void setStorageType(String StorageType) {
         this.StorageType = StorageType;
     }
 
     /**
-     * Get Lifecycle in days. Value range: 1-3600 (3640 indicates permanent retention)
-Note: This field may return `null`, indicating that no valid value was found. 
-     * @return Period Lifecycle in days. Value range: 1-3600 (3640 indicates permanent retention)
-Note: This field may return `null`, indicating that no valid value was found.
+     * Get <p>Lifecycle in days, valid values 1~3600. A value of 3640 indicates permanent retention.</p> 
+     * @return Period <p>Lifecycle in days, valid values 1~3600. A value of 3640 indicates permanent retention.</p>
      */
     public Long getPeriod() {
         return this.Period;
     }
 
     /**
-     * Set Lifecycle in days. Value range: 1-3600 (3640 indicates permanent retention)
-Note: This field may return `null`, indicating that no valid value was found.
-     * @param Period Lifecycle in days. Value range: 1-3600 (3640 indicates permanent retention)
-Note: This field may return `null`, indicating that no valid value was found.
+     * Set <p>Lifecycle in days, valid values 1~3600. A value of 3640 indicates permanent retention.</p>
+     * @param Period <p>Lifecycle in days, valid values 1~3600. A value of 3640 indicates permanent retention.</p>
      */
     public void setPeriod(Long Period) {
         this.Period = Period;
     }
 
     /**
-     * Get Cloud product sub-identifier. If the log topic is created by another cloud product, this field returns the name of the cloud product and its log type, such as `TKE-Audit` or `TKE-Event`. Some products only return the cloud product identifier (`AssumerName`), without this field.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return SubAssumerName Cloud product sub-identifier. If the log topic is created by another cloud product, this field returns the name of the cloud product and its log type, such as `TKE-Audit` or `TKE-Event`. Some products only return the cloud product identifier (`AssumerName`), without this field.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Cloud product sub-identifier. When the log topic is created by other cloud products, this field displays the cloud product name and its log type sub-category, such as TKE-Audit, TKE-Event. Some cloud products only have the cloud product identifier (AssumerName) without this field.</p> 
+     * @return SubAssumerName <p>Cloud product sub-identifier. When the log topic is created by other cloud products, this field displays the cloud product name and its log type sub-category, such as TKE-Audit, TKE-Event. Some cloud products only have the cloud product identifier (AssumerName) without this field.</p>
      */
     public String getSubAssumerName() {
         return this.SubAssumerName;
     }
 
     /**
-     * Set Cloud product sub-identifier. If the log topic is created by another cloud product, this field returns the name of the cloud product and its log type, such as `TKE-Audit` or `TKE-Event`. Some products only return the cloud product identifier (`AssumerName`), without this field.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param SubAssumerName Cloud product sub-identifier. If the log topic is created by another cloud product, this field returns the name of the cloud product and its log type, such as `TKE-Audit` or `TKE-Event`. Some products only return the cloud product identifier (`AssumerName`), without this field.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Cloud product sub-identifier. When the log topic is created by other cloud products, this field displays the cloud product name and its log type sub-category, such as TKE-Audit, TKE-Event. Some cloud products only have the cloud product identifier (AssumerName) without this field.</p>
+     * @param SubAssumerName <p>Cloud product sub-identifier. When the log topic is created by other cloud products, this field displays the cloud product name and its log type sub-category, such as TKE-Audit, TKE-Event. Some cloud products only have the cloud product identifier (AssumerName) without this field.</p>
      */
     public void setSubAssumerName(String SubAssumerName) {
         this.SubAssumerName = SubAssumerName;
     }
 
     /**
-     * Get Topic description
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Describes Topic description
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Topic description</p> 
+     * @return Describes <p>Topic description</p>
      */
     public String getDescribes() {
         return this.Describes;
     }
 
     /**
-     * Set Topic description
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Describes Topic description
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Topic description</p>
+     * @param Describes <p>Topic description</p>
      */
     public void setDescribes(String Describes) {
         this.Describes = Describes;
     }
 
     /**
-     * Get Enable log sinking, with the lifecycle of standard storage, where hotPeriod < Period.For standard storage, hotPeriod is used, and for infrequent access storage, it is Period-hotPeriod. (The topic type must be a log topic)HotPeriod=0 indicates that log sinking is not enabled.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return HotPeriod Enable log sinking, with the lifecycle of standard storage, where hotPeriod < Period.For standard storage, hotPeriod is used, and for infrequent access storage, it is Period-hotPeriod. (The topic type must be a log topic)HotPeriod=0 indicates that log sinking is not enabled.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Enable log settlement, lifecycle of standard storage, hotPeriod &lt; Period.<br>Standard storage is hotPeriod, infrequent storage is Period-hotPeriod. (Topic type must be log topic)<br>HotPeriod=0 means log settlement is not enabled.</p> 
+     * @return HotPeriod <p>Enable log settlement, lifecycle of standard storage, hotPeriod &lt; Period.<br>Standard storage is hotPeriod, infrequent storage is Period-hotPeriod. (Topic type must be log topic)<br>HotPeriod=0 means log settlement is not enabled.</p>
      */
     public Long getHotPeriod() {
         return this.HotPeriod;
     }
 
     /**
-     * Set Enable log sinking, with the lifecycle of standard storage, where hotPeriod < Period.For standard storage, hotPeriod is used, and for infrequent access storage, it is Period-hotPeriod. (The topic type must be a log topic)HotPeriod=0 indicates that log sinking is not enabled.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param HotPeriod Enable log sinking, with the lifecycle of standard storage, where hotPeriod < Period.For standard storage, hotPeriod is used, and for infrequent access storage, it is Period-hotPeriod. (The topic type must be a log topic)HotPeriod=0 indicates that log sinking is not enabled.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Enable log settlement, lifecycle of standard storage, hotPeriod &lt; Period.<br>Standard storage is hotPeriod, infrequent storage is Period-hotPeriod. (Topic type must be log topic)<br>HotPeriod=0 means log settlement is not enabled.</p>
+     * @param HotPeriod <p>Enable log settlement, lifecycle of standard storage, hotPeriod &lt; Period.<br>Standard storage is hotPeriod, infrequent storage is Period-hotPeriod. (Topic type must be log topic)<br>HotPeriod=0 means log settlement is not enabled.</p>
      */
     public void setHotPeriod(Long HotPeriod) {
         this.HotPeriod = HotPeriod;
     }
 
     /**
-     * Get Topic type.
-- 0:  log  Topic  
-- 1: Metric Topic
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return BizType Topic type.
-- 0:  log  Topic  
-- 1: Metric Topic
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>kms-cls service key id</p> 
+     * @return KeyId <p>kms-cls service key id</p>
+     */
+    public String getKeyId() {
+        return this.KeyId;
+    }
+
+    /**
+     * Set <p>kms-cls service key id</p>
+     * @param KeyId <p>kms-cls service key id</p>
+     */
+    public void setKeyId(String KeyId) {
+        this.KeyId = KeyId;
+    }
+
+    /**
+     * Get <p>Topic type.</p><ul><li>0: Log topic</li><li>1: Metric topic</li></ul> 
+     * @return BizType <p>Topic type.</p><ul><li>0: Log topic</li><li>1: Metric topic</li></ul>
      */
     public Long getBizType() {
         return this.BizType;
     }
 
     /**
-     * Set Topic type.
-- 0:  log  Topic  
-- 1: Metric Topic
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param BizType Topic type.
-- 0:  log  Topic  
-- 1: Metric Topic
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Topic type.</p><ul><li>0: Log topic</li><li>1: Metric topic</li></ul>
+     * @param BizType <p>Topic type.</p><ul><li>0: Log topic</li><li>1: Metric topic</li></ul>
      */
     public void setBizType(Long BizType) {
         this.BizType = BizType;
     }
 
     /**
-     * Get Free authentication switch. false: disabled; true: enabled.After enabling, anonymous access to the log topic will be supported for specified operations. For details, please refer to Log Topic (https://intl.cloud.tencent.com/document/product/614/41035?from_cn_redirect=1).Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return IsWebTracking Free authentication switch. false: disabled; true: enabled.After enabling, anonymous access to the log topic will be supported for specified operations. For details, please refer to Log Topic (https://intl.cloud.tencent.com/document/product/614/41035?from_cn_redirect=1).Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Free authentication switch. false: disabled; true: enabled.<br>Once enabled, designated operations will be supported for anonymous access to the log topic. See <a href="https://www.tencentcloud.com/document/product/614/41035?from_cn_redirect=1">log topic</a> for details.</p> 
+     * @return IsWebTracking <p>Free authentication switch. false: disabled; true: enabled.<br>Once enabled, designated operations will be supported for anonymous access to the log topic. See <a href="https://www.tencentcloud.com/document/product/614/41035?from_cn_redirect=1">log topic</a> for details.</p>
      */
     public Boolean getIsWebTracking() {
         return this.IsWebTracking;
     }
 
     /**
-     * Set Free authentication switch. false: disabled; true: enabled.After enabling, anonymous access to the log topic will be supported for specified operations. For details, please refer to Log Topic (https://intl.cloud.tencent.com/document/product/614/41035?from_cn_redirect=1).Note: This field may return null, indicating that no valid values can be obtained.
-     * @param IsWebTracking Free authentication switch. false: disabled; true: enabled.After enabling, anonymous access to the log topic will be supported for specified operations. For details, please refer to Log Topic (https://intl.cloud.tencent.com/document/product/614/41035?from_cn_redirect=1).Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Free authentication switch. false: disabled; true: enabled.<br>Once enabled, designated operations will be supported for anonymous access to the log topic. See <a href="https://www.tencentcloud.com/document/product/614/41035?from_cn_redirect=1">log topic</a> for details.</p>
+     * @param IsWebTracking <p>Free authentication switch. false: disabled; true: enabled.<br>Once enabled, designated operations will be supported for anonymous access to the log topic. See <a href="https://www.tencentcloud.com/document/product/614/41035?from_cn_redirect=1">log topic</a> for details.</p>
      */
     public void setIsWebTracking(Boolean IsWebTracking) {
         this.IsWebTracking = IsWebTracking;
     }
 
     /**
-     * Get Log topic extended information 
-     * @return Extends Log topic extended information
+     * Get <p>Log topic extended information</p> 
+     * @return Extends <p>Log topic extended information</p>
      */
     public TopicExtendInfo getExtends() {
         return this.Extends;
     }
 
     /**
-     * Set Log topic extended information
-     * @param Extends Log topic extended information
+     * Set <p>Log topic extended information</p>
+     * @param Extends <p>Log topic extended information</p>
      */
     public void setExtends(TopicExtendInfo Extends) {
         this.Extends = Extends;
+    }
+
+    /**
+     * Get <p>Async migration task ID</p> 
+     * @return TopicAsyncTaskID <p>Async migration task ID</p>
+     */
+    public String getTopicAsyncTaskID() {
+        return this.TopicAsyncTaskID;
+    }
+
+    /**
+     * Set <p>Async migration task ID</p>
+     * @param TopicAsyncTaskID <p>Async migration task ID</p>
+     */
+    public void setTopicAsyncTaskID(String TopicAsyncTaskID) {
+        this.TopicAsyncTaskID = TopicAsyncTaskID;
+    }
+
+    /**
+     * Get <p>Asynchronous migration status</p><ul><li>1: In progress</li><li>2: Completed</li><li>3: Failure</li><li>4: Canceled</li></ul> 
+     * @return MigrationStatus <p>Asynchronous migration status</p><ul><li>1: In progress</li><li>2: Completed</li><li>3: Failure</li><li>4: Canceled</li></ul>
+     */
+    public Long getMigrationStatus() {
+        return this.MigrationStatus;
+    }
+
+    /**
+     * Set <p>Asynchronous migration status</p><ul><li>1: In progress</li><li>2: Completed</li><li>3: Failure</li><li>4: Canceled</li></ul>
+     * @param MigrationStatus <p>Asynchronous migration status</p><ul><li>1: In progress</li><li>2: Completed</li><li>3: Failure</li><li>4: Canceled</li></ul>
+     */
+    public void setMigrationStatus(Long MigrationStatus) {
+        this.MigrationStatus = MigrationStatus;
+    }
+
+    /**
+     * Get <p>After async migration, expected effective date<br>Time format: yyyy-MM-dd HH:mm:ss</p> 
+     * @return EffectiveDate <p>After async migration, expected effective date<br>Time format: yyyy-MM-dd HH:mm:ss</p>
+     */
+    public String getEffectiveDate() {
+        return this.EffectiveDate;
+    }
+
+    /**
+     * Set <p>After async migration, expected effective date<br>Time format: yyyy-MM-dd HH:mm:ss</p>
+     * @param EffectiveDate <p>After async migration, expected effective date<br>Time format: yyyy-MM-dd HH:mm:ss</p>
+     */
+    public void setEffectiveDate(String EffectiveDate) {
+        this.EffectiveDate = EffectiveDate;
+    }
+
+    /**
+     * Get <p>IsSourceFrom Enable recording public network source IP and server receipt time</p> 
+     * @return IsSourceFrom <p>IsSourceFrom Enable recording public network source IP and server receipt time</p>
+     */
+    public Boolean getIsSourceFrom() {
+        return this.IsSourceFrom;
+    }
+
+    /**
+     * Set <p>IsSourceFrom Enable recording public network source IP and server receipt time</p>
+     * @param IsSourceFrom <p>IsSourceFrom Enable recording public network source IP and server receipt time</p>
+     */
+    public void setIsSourceFrom(Boolean IsSourceFrom) {
+        this.IsSourceFrom = IsSourceFrom;
+    }
+
+    /**
+     * Get <p>Current billing mode</p><p>Enumeration value:</p><ul><li>0: Function billing by usage</li><li>1: Billing by raw log size (currently supported for some customers only)</li></ul> 
+     * @return BillingMode <p>Current billing mode</p><p>Enumeration value:</p><ul><li>0: Function billing by usage</li><li>1: Billing by raw log size (currently supported for some customers only)</li></ul>
+     */
+    public Long getBillingMode() {
+        return this.BillingMode;
+    }
+
+    /**
+     * Set <p>Current billing mode</p><p>Enumeration value:</p><ul><li>0: Function billing by usage</li><li>1: Billing by raw log size (currently supported for some customers only)</li></ul>
+     * @param BillingMode <p>Current billing mode</p><p>Enumeration value:</p><ul><li>0: Function billing by usage</li><li>1: Billing by raw log size (currently supported for some customers only)</li></ul>
+     */
+    public void setBillingMode(Long BillingMode) {
+        this.BillingMode = BillingMode;
+    }
+
+    /**
+     * Get <p>If there is an async task, the new billing model after the task succeeds</p><p>Enumeration value:</p><ul><li>0: Function billing by usage</li><li>1: Billing by raw log size (currently only supported for some customers)</li></ul> 
+     * @return NewBillingMode <p>If there is an async task, the new billing model after the task succeeds</p><p>Enumeration value:</p><ul><li>0: Function billing by usage</li><li>1: Billing by raw log size (currently only supported for some customers)</li></ul>
+     */
+    public Long getNewBillingMode() {
+        return this.NewBillingMode;
+    }
+
+    /**
+     * Set <p>If there is an async task, the new billing model after the task succeeds</p><p>Enumeration value:</p><ul><li>0: Function billing by usage</li><li>1: Billing by raw log size (currently only supported for some customers)</li></ul>
+     * @param NewBillingMode <p>If there is an async task, the new billing model after the task succeeds</p><p>Enumeration value:</p><ul><li>0: Function billing by usage</li><li>1: Billing by raw log size (currently only supported for some customers)</li></ul>
+     */
+    public void setNewBillingMode(Long NewBillingMode) {
+        this.NewBillingMode = NewBillingMode;
     }
 
     public TopicInfo() {
@@ -528,6 +690,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.Index != null) {
             this.Index = new Boolean(source.Index);
         }
+        if (source.AssumerUin != null) {
+            this.AssumerUin = new Long(source.AssumerUin);
+        }
         if (source.AssumerName != null) {
             this.AssumerName = new String(source.AssumerName);
         }
@@ -542,6 +707,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
             for (int i = 0; i < source.Tags.length; i++) {
                 this.Tags[i] = new Tag(source.Tags[i]);
             }
+        }
+        if (source.RoleName != null) {
+            this.RoleName = new String(source.RoleName);
         }
         if (source.AutoSplit != null) {
             this.AutoSplit = new Boolean(source.AutoSplit);
@@ -564,6 +732,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.HotPeriod != null) {
             this.HotPeriod = new Long(source.HotPeriod);
         }
+        if (source.KeyId != null) {
+            this.KeyId = new String(source.KeyId);
+        }
         if (source.BizType != null) {
             this.BizType = new Long(source.BizType);
         }
@@ -572,6 +743,24 @@ Note: This field may return null, indicating that no valid values can be obtaine
         }
         if (source.Extends != null) {
             this.Extends = new TopicExtendInfo(source.Extends);
+        }
+        if (source.TopicAsyncTaskID != null) {
+            this.TopicAsyncTaskID = new String(source.TopicAsyncTaskID);
+        }
+        if (source.MigrationStatus != null) {
+            this.MigrationStatus = new Long(source.MigrationStatus);
+        }
+        if (source.EffectiveDate != null) {
+            this.EffectiveDate = new String(source.EffectiveDate);
+        }
+        if (source.IsSourceFrom != null) {
+            this.IsSourceFrom = new Boolean(source.IsSourceFrom);
+        }
+        if (source.BillingMode != null) {
+            this.BillingMode = new Long(source.BillingMode);
+        }
+        if (source.NewBillingMode != null) {
+            this.NewBillingMode = new Long(source.NewBillingMode);
         }
     }
 
@@ -585,10 +774,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "TopicName", this.TopicName);
         this.setParamSimple(map, prefix + "PartitionCount", this.PartitionCount);
         this.setParamSimple(map, prefix + "Index", this.Index);
+        this.setParamSimple(map, prefix + "AssumerUin", this.AssumerUin);
         this.setParamSimple(map, prefix + "AssumerName", this.AssumerName);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "RoleName", this.RoleName);
         this.setParamSimple(map, prefix + "AutoSplit", this.AutoSplit);
         this.setParamSimple(map, prefix + "MaxSplitPartitions", this.MaxSplitPartitions);
         this.setParamSimple(map, prefix + "StorageType", this.StorageType);
@@ -596,9 +787,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "SubAssumerName", this.SubAssumerName);
         this.setParamSimple(map, prefix + "Describes", this.Describes);
         this.setParamSimple(map, prefix + "HotPeriod", this.HotPeriod);
+        this.setParamSimple(map, prefix + "KeyId", this.KeyId);
         this.setParamSimple(map, prefix + "BizType", this.BizType);
         this.setParamSimple(map, prefix + "IsWebTracking", this.IsWebTracking);
         this.setParamObj(map, prefix + "Extends.", this.Extends);
+        this.setParamSimple(map, prefix + "TopicAsyncTaskID", this.TopicAsyncTaskID);
+        this.setParamSimple(map, prefix + "MigrationStatus", this.MigrationStatus);
+        this.setParamSimple(map, prefix + "EffectiveDate", this.EffectiveDate);
+        this.setParamSimple(map, prefix + "IsSourceFrom", this.IsSourceFrom);
+        this.setParamSimple(map, prefix + "BillingMode", this.BillingMode);
+        this.setParamSimple(map, prefix + "NewBillingMode", this.NewBillingMode);
 
     }
 }

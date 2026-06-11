@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class RollbackRoGroupInfo extends AbstractModel {
 
     /**
-    * Instance group ID
+    * Instance group ID.
     */
     @SerializedName("InstanceGroupId")
     @Expose
     private String InstanceGroupId;
 
     /**
-    * VPC information
+    * VPC information.
     */
     @SerializedName("UniqVpcId")
     @Expose
@@ -59,32 +59,32 @@ public class RollbackRoGroupInfo extends AbstractModel {
     private Long Vport;
 
     /**
-     * Get Instance group ID 
-     * @return InstanceGroupId Instance group ID
+     * Get Instance group ID. 
+     * @return InstanceGroupId Instance group ID.
      */
     public String getInstanceGroupId() {
         return this.InstanceGroupId;
     }
 
     /**
-     * Set Instance group ID
-     * @param InstanceGroupId Instance group ID
+     * Set Instance group ID.
+     * @param InstanceGroupId Instance group ID.
      */
     public void setInstanceGroupId(String InstanceGroupId) {
         this.InstanceGroupId = InstanceGroupId;
     }
 
     /**
-     * Get VPC information 
-     * @return UniqVpcId VPC information
+     * Get VPC information. 
+     * @return UniqVpcId VPC information.
      */
     public String getUniqVpcId() {
         return this.UniqVpcId;
     }
 
     /**
-     * Set VPC information
-     * @param UniqVpcId VPC information
+     * Set VPC information.
+     * @param UniqVpcId VPC information.
      */
     public void setUniqVpcId(String UniqVpcId) {
         this.UniqVpcId = UniqVpcId;

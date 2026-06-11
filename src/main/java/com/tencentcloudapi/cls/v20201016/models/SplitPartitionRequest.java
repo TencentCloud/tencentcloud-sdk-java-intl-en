@@ -25,13 +25,15 @@ public class SplitPartitionRequest extends AbstractModel {
 
     /**
     * Log topic ID
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
     */
     @SerializedName("TopicId")
     @Expose
     private String TopicId;
 
     /**
-    * ID of the partition to be split
+    * Partition Id to split
+-Get the Id of the partition to be split by [getting the partition list](https://www.tencentcloud.com/document/product/614/56470?from_cn_redirect=1).
     */
     @SerializedName("PartitionId")
     @Expose
@@ -52,8 +54,10 @@ public class SplitPartitionRequest extends AbstractModel {
     private Long Number;
 
     /**
-     * Get Log topic ID 
+     * Get Log topic ID
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1). 
      * @return TopicId Log topic ID
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
      */
     public String getTopicId() {
         return this.TopicId;
@@ -61,23 +65,29 @@ public class SplitPartitionRequest extends AbstractModel {
 
     /**
      * Set Log topic ID
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
      * @param TopicId Log topic ID
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
      */
     public void setTopicId(String TopicId) {
         this.TopicId = TopicId;
     }
 
     /**
-     * Get ID of the partition to be split 
-     * @return PartitionId ID of the partition to be split
+     * Get Partition Id to split
+-Get the Id of the partition to be split by [getting the partition list](https://www.tencentcloud.com/document/product/614/56470?from_cn_redirect=1). 
+     * @return PartitionId Partition Id to split
+-Get the Id of the partition to be split by [getting the partition list](https://www.tencentcloud.com/document/product/614/56470?from_cn_redirect=1).
      */
     public Long getPartitionId() {
         return this.PartitionId;
     }
 
     /**
-     * Set ID of the partition to be split
-     * @param PartitionId ID of the partition to be split
+     * Set Partition Id to split
+-Get the Id of the partition to be split by [getting the partition list](https://www.tencentcloud.com/document/product/614/56470?from_cn_redirect=1).
+     * @param PartitionId Partition Id to split
+-Get the Id of the partition to be split by [getting the partition list](https://www.tencentcloud.com/document/product/614/56470?from_cn_redirect=1).
      */
     public void setPartitionId(Long PartitionId) {
         this.PartitionId = PartitionId;

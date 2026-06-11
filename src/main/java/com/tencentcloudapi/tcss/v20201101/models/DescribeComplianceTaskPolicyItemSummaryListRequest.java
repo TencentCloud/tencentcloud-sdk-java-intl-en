@@ -53,10 +53,7 @@ public class DescribeComplianceTaskPolicyItemSummaryListRequest extends Abstract
     private Long Limit;
 
     /**
-    * Filter
-Name - String
-Name. Valid values: `ItemType`, `StandardId`, `RiskLevel`.
-`ClusterName` is also available for K8s assets.
+    * Filtering conditions. <li>Name      string Detection item name.</li> <li>ItemType  string Detection item type.</li> <li>RiskLevel string Risk level.</li> <li>IsOpen    int    Enabling status.</li>
     */
     @SerializedName("Filters")
     @Expose
@@ -143,28 +140,16 @@ Name. Valid values: `ItemType`, `StandardId`, `RiskLevel`.
     }
 
     /**
-     * Get Filter
-Name - String
-Name. Valid values: `ItemType`, `StandardId`, `RiskLevel`.
-`ClusterName` is also available for K8s assets. 
-     * @return Filters Filter
-Name - String
-Name. Valid values: `ItemType`, `StandardId`, `RiskLevel`.
-`ClusterName` is also available for K8s assets.
+     * Get Filtering conditions. <li>Name      string Detection item name.</li> <li>ItemType  string Detection item type.</li> <li>RiskLevel string Risk level.</li> <li>IsOpen    int    Enabling status.</li> 
+     * @return Filters Filtering conditions. <li>Name      string Detection item name.</li> <li>ItemType  string Detection item type.</li> <li>RiskLevel string Risk level.</li> <li>IsOpen    int    Enabling status.</li>
      */
     public ComplianceFilters [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set Filter
-Name - String
-Name. Valid values: `ItemType`, `StandardId`, `RiskLevel`.
-`ClusterName` is also available for K8s assets.
-     * @param Filters Filter
-Name - String
-Name. Valid values: `ItemType`, `StandardId`, `RiskLevel`.
-`ClusterName` is also available for K8s assets.
+     * Set Filtering conditions. <li>Name      string Detection item name.</li> <li>ItemType  string Detection item type.</li> <li>RiskLevel string Risk level.</li> <li>IsOpen    int    Enabling status.</li>
+     * @param Filters Filtering conditions. <li>Name      string Detection item name.</li> <li>ItemType  string Detection item type.</li> <li>RiskLevel string Risk level.</li> <li>IsOpen    int    Enabling status.</li>
      */
     public void setFilters(ComplianceFilters [] Filters) {
         this.Filters = Filters;

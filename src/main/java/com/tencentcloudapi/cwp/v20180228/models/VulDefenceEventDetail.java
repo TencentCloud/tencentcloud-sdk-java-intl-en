@@ -95,7 +95,6 @@ public class VulDefenceEventDetail extends AbstractModel {
 
     /**
     * Attack source port
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("SourcePort")
     @Expose
@@ -194,7 +193,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Host Additional Information
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("MachineExtraInfo")
     @Expose
@@ -361,10 +359,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Attack source port
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Attack source port 
      * @return SourcePort Attack source port
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long [] getSourcePort() {
         return this.SourcePort;
@@ -372,9 +368,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Attack source port
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param SourcePort Attack source port
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setSourcePort(Long [] SourcePort) {
         this.SourcePort = SourcePort;
@@ -589,10 +583,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Host Additional Information
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Host Additional Information 
      * @return MachineExtraInfo Host Additional Information
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public MachineExtraInfo getMachineExtraInfo() {
         return this.MachineExtraInfo;
@@ -600,9 +592,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Host Additional Information
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param MachineExtraInfo Host Additional Information
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setMachineExtraInfo(MachineExtraInfo MachineExtraInfo) {
         this.MachineExtraInfo = MachineExtraInfo;

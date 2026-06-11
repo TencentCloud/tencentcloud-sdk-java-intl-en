@@ -59,8 +59,7 @@ public class VulFixStatusHostInfo extends AbstractModel {
     private String ModifyTime;
 
     /**
-    * Fixing failure cause
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Fix failure cause
     */
     @SerializedName("FailReason")
     @Expose
@@ -147,20 +146,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Fixing failure cause
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return FailReason Fixing failure cause
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Fix failure cause 
+     * @return FailReason Fix failure cause
      */
     public String getFailReason() {
         return this.FailReason;
     }
 
     /**
-     * Set Fixing failure cause
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param FailReason Fixing failure cause
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Fix failure cause
+     * @param FailReason Fix failure cause
      */
     public void setFailReason(String FailReason) {
         this.FailReason = FailReason;

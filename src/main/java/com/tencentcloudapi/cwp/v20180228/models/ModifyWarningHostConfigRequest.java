@@ -59,7 +59,7 @@ public class ModifyWarningHostConfigRequest extends AbstractModel {
     private String [] ItemLabelIds;
 
     /**
-    * Machines to be excluded
+    * List of machines to be excluded.
     */
     @SerializedName("ExcludedQuuids")
     @Expose
@@ -146,16 +146,16 @@ public class ModifyWarningHostConfigRequest extends AbstractModel {
     }
 
     /**
-     * Get Machines to be excluded 
-     * @return ExcludedQuuids Machines to be excluded
+     * Get List of machines to be excluded. 
+     * @return ExcludedQuuids List of machines to be excluded.
      */
     public String [] getExcludedQuuids() {
         return this.ExcludedQuuids;
     }
 
     /**
-     * Set Machines to be excluded
-     * @param ExcludedQuuids Machines to be excluded
+     * Set List of machines to be excluded.
+     * @param ExcludedQuuids List of machines to be excluded.
      */
     public void setExcludedQuuids(String [] ExcludedQuuids) {
         this.ExcludedQuuids = ExcludedQuuids;

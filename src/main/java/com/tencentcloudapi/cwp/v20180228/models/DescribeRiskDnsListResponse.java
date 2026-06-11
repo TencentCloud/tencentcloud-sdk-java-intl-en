@@ -25,7 +25,6 @@ public class DescribeRiskDnsListResponse extends AbstractModel {
 
     /**
     * Arrays of malicious request lists
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("RiskDnsList")
     @Expose
@@ -46,10 +45,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Arrays of malicious request lists
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Arrays of malicious request lists 
      * @return RiskDnsList Arrays of malicious request lists
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public RiskDnsList [] getRiskDnsList() {
         return this.RiskDnsList;
@@ -57,9 +54,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Arrays of malicious request lists
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param RiskDnsList Arrays of malicious request lists
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setRiskDnsList(RiskDnsList [] RiskDnsList) {
         this.RiskDnsList = RiskDnsList;

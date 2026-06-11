@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class PushUrlsCacheRequest extends AbstractModel {
 
     /**
-    * List of URLs. The protocol header such as "http://" or "https://" needs to be included.
+    * List of URLs. The protocol header such as `http://` or `https://` needs to be included.
     */
     @SerializedName("Urls")
     @Expose
@@ -92,16 +92,16 @@ This feature is in beta test.
     private Boolean UrlEncode;
 
     /**
-     * Get List of URLs. The protocol header such as "http://" or "https://" needs to be included. 
-     * @return Urls List of URLs. The protocol header such as "http://" or "https://" needs to be included.
+     * Get List of URLs. The protocol header such as `http://` or `https://` needs to be included. 
+     * @return Urls List of URLs. The protocol header such as `http://` or `https://` needs to be included.
      */
     public String [] getUrls() {
         return this.Urls;
     }
 
     /**
-     * Set List of URLs. The protocol header such as "http://" or "https://" needs to be included.
-     * @param Urls List of URLs. The protocol header such as "http://" or "https://" needs to be included.
+     * Set List of URLs. The protocol header such as `http://` or `https://` needs to be included.
+     * @param Urls List of URLs. The protocol header such as `http://` or `https://` needs to be included.
      */
     public void setUrls(String [] Urls) {
         this.Urls = Urls;

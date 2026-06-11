@@ -24,7 +24,9 @@ import java.util.HashMap;
 public class CreateKafkaRechargeRequest extends AbstractModel {
 
     /**
-    * Target topic ID
+    * Import the target topic ID of CLS.
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
+- Obtain the log topic Id through [Create Log Topic](https://www.tencentcloud.com/document/product/614/56456?from_cn_redirect=1).
     */
     @SerializedName("TopicId")
     @Expose
@@ -66,51 +68,69 @@ public class CreateKafkaRechargeRequest extends AbstractModel {
     private LogRechargeRuleInfo LogRechargeRule;
 
     /**
-    * CKafka instance ID, which is required when `KafkaType` is set to `0`
+    * Tencent Cloud CKafka instance ID. Required when KafkaType is 0.
+-Obtain the instance id through [Get Instance List Information](https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1).
     */
     @SerializedName("KafkaInstance")
     @Expose
     private String KafkaInstance;
 
     /**
-    * Service address, which is required when `KafkaType` is set to `1`
+    * Service address, which is required when KafkaType is 1.
     */
     @SerializedName("ServerAddr")
     @Expose
     private String ServerAddr;
 
     /**
-    * Whether the service address uses an encrypted connection, which is required when `KafkaType` is set to `1`
+    * Whether ServerAddr is an encrypted connection. Required when KafkaType is 1.
     */
     @SerializedName("IsEncryptionAddr")
     @Expose
     private Boolean IsEncryptionAddr;
 
     /**
-    * Encrypted Access ProtocolWhen KafkaType is 1 and IsEncryptionAddr is true, Protocol is required
+    * Encrypted Access Protocol.
+When KafkaType is 1 and IsEncryptionAddr is true, Protocol is required.
     */
     @SerializedName("Protocol")
     @Expose
     private KafkaProtocolInfo Protocol;
 
     /**
-    * Kafka consumer group name
+    * User Kafka consumer group name.
+-A consumption group is a scalable and fault-tolerant consumer mechanism provided by Kafka. Multiple consumers exist in a consumption group, and all consumers in the group consume subscribed messages of the Topic. A consumer can consume multiple partitions simultaneously, but one Partition can only be consumed by one consumer in the group.
     */
     @SerializedName("ConsumerGroupName")
     @Expose
     private String ConsumerGroupName;
 
     /**
-     * Get Target topic ID 
-     * @return TopicId Target topic ID
+    * User kafka extended information
+    */
+    @SerializedName("UserKafkaMeta")
+    @Expose
+    private UserKafkaMeta UserKafkaMeta;
+
+    /**
+     * Get Import the target topic ID of CLS.
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
+- Obtain the log topic Id through [Create Log Topic](https://www.tencentcloud.com/document/product/614/56456?from_cn_redirect=1). 
+     * @return TopicId Import the target topic ID of CLS.
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
+- Obtain the log topic Id through [Create Log Topic](https://www.tencentcloud.com/document/product/614/56456?from_cn_redirect=1).
      */
     public String getTopicId() {
         return this.TopicId;
     }
 
     /**
-     * Set Target topic ID
-     * @param TopicId Target topic ID
+     * Set Import the target topic ID of CLS.
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
+- Obtain the log topic Id through [Create Log Topic](https://www.tencentcloud.com/document/product/614/56456?from_cn_redirect=1).
+     * @param TopicId Import the target topic ID of CLS.
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
+- Obtain the log topic Id through [Create Log Topic](https://www.tencentcloud.com/document/product/614/56456?from_cn_redirect=1).
      */
     public void setTopicId(String TopicId) {
         this.TopicId = TopicId;
@@ -197,83 +217,111 @@ public class CreateKafkaRechargeRequest extends AbstractModel {
     }
 
     /**
-     * Get CKafka instance ID, which is required when `KafkaType` is set to `0` 
-     * @return KafkaInstance CKafka instance ID, which is required when `KafkaType` is set to `0`
+     * Get Tencent Cloud CKafka instance ID. Required when KafkaType is 0.
+-Obtain the instance id through [Get Instance List Information](https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1). 
+     * @return KafkaInstance Tencent Cloud CKafka instance ID. Required when KafkaType is 0.
+-Obtain the instance id through [Get Instance List Information](https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1).
      */
     public String getKafkaInstance() {
         return this.KafkaInstance;
     }
 
     /**
-     * Set CKafka instance ID, which is required when `KafkaType` is set to `0`
-     * @param KafkaInstance CKafka instance ID, which is required when `KafkaType` is set to `0`
+     * Set Tencent Cloud CKafka instance ID. Required when KafkaType is 0.
+-Obtain the instance id through [Get Instance List Information](https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1).
+     * @param KafkaInstance Tencent Cloud CKafka instance ID. Required when KafkaType is 0.
+-Obtain the instance id through [Get Instance List Information](https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1).
      */
     public void setKafkaInstance(String KafkaInstance) {
         this.KafkaInstance = KafkaInstance;
     }
 
     /**
-     * Get Service address, which is required when `KafkaType` is set to `1` 
-     * @return ServerAddr Service address, which is required when `KafkaType` is set to `1`
+     * Get Service address, which is required when KafkaType is 1. 
+     * @return ServerAddr Service address, which is required when KafkaType is 1.
      */
     public String getServerAddr() {
         return this.ServerAddr;
     }
 
     /**
-     * Set Service address, which is required when `KafkaType` is set to `1`
-     * @param ServerAddr Service address, which is required when `KafkaType` is set to `1`
+     * Set Service address, which is required when KafkaType is 1.
+     * @param ServerAddr Service address, which is required when KafkaType is 1.
      */
     public void setServerAddr(String ServerAddr) {
         this.ServerAddr = ServerAddr;
     }
 
     /**
-     * Get Whether the service address uses an encrypted connection, which is required when `KafkaType` is set to `1` 
-     * @return IsEncryptionAddr Whether the service address uses an encrypted connection, which is required when `KafkaType` is set to `1`
+     * Get Whether ServerAddr is an encrypted connection. Required when KafkaType is 1. 
+     * @return IsEncryptionAddr Whether ServerAddr is an encrypted connection. Required when KafkaType is 1.
      */
     public Boolean getIsEncryptionAddr() {
         return this.IsEncryptionAddr;
     }
 
     /**
-     * Set Whether the service address uses an encrypted connection, which is required when `KafkaType` is set to `1`
-     * @param IsEncryptionAddr Whether the service address uses an encrypted connection, which is required when `KafkaType` is set to `1`
+     * Set Whether ServerAddr is an encrypted connection. Required when KafkaType is 1.
+     * @param IsEncryptionAddr Whether ServerAddr is an encrypted connection. Required when KafkaType is 1.
      */
     public void setIsEncryptionAddr(Boolean IsEncryptionAddr) {
         this.IsEncryptionAddr = IsEncryptionAddr;
     }
 
     /**
-     * Get Encrypted Access ProtocolWhen KafkaType is 1 and IsEncryptionAddr is true, Protocol is required 
-     * @return Protocol Encrypted Access ProtocolWhen KafkaType is 1 and IsEncryptionAddr is true, Protocol is required
+     * Get Encrypted Access Protocol.
+When KafkaType is 1 and IsEncryptionAddr is true, Protocol is required. 
+     * @return Protocol Encrypted Access Protocol.
+When KafkaType is 1 and IsEncryptionAddr is true, Protocol is required.
      */
     public KafkaProtocolInfo getProtocol() {
         return this.Protocol;
     }
 
     /**
-     * Set Encrypted Access ProtocolWhen KafkaType is 1 and IsEncryptionAddr is true, Protocol is required
-     * @param Protocol Encrypted Access ProtocolWhen KafkaType is 1 and IsEncryptionAddr is true, Protocol is required
+     * Set Encrypted Access Protocol.
+When KafkaType is 1 and IsEncryptionAddr is true, Protocol is required.
+     * @param Protocol Encrypted Access Protocol.
+When KafkaType is 1 and IsEncryptionAddr is true, Protocol is required.
      */
     public void setProtocol(KafkaProtocolInfo Protocol) {
         this.Protocol = Protocol;
     }
 
     /**
-     * Get Kafka consumer group name 
-     * @return ConsumerGroupName Kafka consumer group name
+     * Get User Kafka consumer group name.
+-A consumption group is a scalable and fault-tolerant consumer mechanism provided by Kafka. Multiple consumers exist in a consumption group, and all consumers in the group consume subscribed messages of the Topic. A consumer can consume multiple partitions simultaneously, but one Partition can only be consumed by one consumer in the group. 
+     * @return ConsumerGroupName User Kafka consumer group name.
+-A consumption group is a scalable and fault-tolerant consumer mechanism provided by Kafka. Multiple consumers exist in a consumption group, and all consumers in the group consume subscribed messages of the Topic. A consumer can consume multiple partitions simultaneously, but one Partition can only be consumed by one consumer in the group.
      */
     public String getConsumerGroupName() {
         return this.ConsumerGroupName;
     }
 
     /**
-     * Set Kafka consumer group name
-     * @param ConsumerGroupName Kafka consumer group name
+     * Set User Kafka consumer group name.
+-A consumption group is a scalable and fault-tolerant consumer mechanism provided by Kafka. Multiple consumers exist in a consumption group, and all consumers in the group consume subscribed messages of the Topic. A consumer can consume multiple partitions simultaneously, but one Partition can only be consumed by one consumer in the group.
+     * @param ConsumerGroupName User Kafka consumer group name.
+-A consumption group is a scalable and fault-tolerant consumer mechanism provided by Kafka. Multiple consumers exist in a consumption group, and all consumers in the group consume subscribed messages of the Topic. A consumer can consume multiple partitions simultaneously, but one Partition can only be consumed by one consumer in the group.
      */
     public void setConsumerGroupName(String ConsumerGroupName) {
         this.ConsumerGroupName = ConsumerGroupName;
+    }
+
+    /**
+     * Get User kafka extended information 
+     * @return UserKafkaMeta User kafka extended information
+     */
+    public UserKafkaMeta getUserKafkaMeta() {
+        return this.UserKafkaMeta;
+    }
+
+    /**
+     * Set User kafka extended information
+     * @param UserKafkaMeta User kafka extended information
+     */
+    public void setUserKafkaMeta(UserKafkaMeta UserKafkaMeta) {
+        this.UserKafkaMeta = UserKafkaMeta;
     }
 
     public CreateKafkaRechargeRequest() {
@@ -317,6 +365,9 @@ public class CreateKafkaRechargeRequest extends AbstractModel {
         if (source.ConsumerGroupName != null) {
             this.ConsumerGroupName = new String(source.ConsumerGroupName);
         }
+        if (source.UserKafkaMeta != null) {
+            this.UserKafkaMeta = new UserKafkaMeta(source.UserKafkaMeta);
+        }
     }
 
 
@@ -335,6 +386,7 @@ public class CreateKafkaRechargeRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "IsEncryptionAddr", this.IsEncryptionAddr);
         this.setParamObj(map, prefix + "Protocol.", this.Protocol);
         this.setParamSimple(map, prefix + "ConsumerGroupName", this.ConsumerGroupName);
+        this.setParamObj(map, prefix + "UserKafkaMeta.", this.UserKafkaMeta);
 
     }
 }

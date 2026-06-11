@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ImageRepoRegistryInfo extends AbstractModel {
 
     /**
-    * Repository id
+    * Repository ID
     */
     @SerializedName("RegistryId")
     @Expose
@@ -38,21 +38,21 @@ public class ImageRepoRegistryInfo extends AbstractModel {
     private String Name;
 
     /**
-    * Repository Type, list: harbor, tcr
+    * Repository type, list: harbor, tcr
     */
     @SerializedName("RegistryType")
     @Expose
     private String RegistryType;
 
     /**
-    * Repository url
+    * Warehouse url
     */
     @SerializedName("Url")
     @Expose
     private String Url;
 
     /**
-    * Network Type, list: public
+    * Network type, list: public
     */
     @SerializedName("NetType")
     @Expose
@@ -66,56 +66,56 @@ public class ImageRepoRegistryInfo extends AbstractModel {
     private String RegistryRegion;
 
     /**
-    * Repository Version
+    * warehouse version
     */
     @SerializedName("RegistryVersion")
     @Expose
     private String RegistryVersion;
 
     /**
-    * Repository connection error message (to be deprecated, use ConnDetectException instead)
+    * Repository connection error message (to be deprecated). Use ConnDetectException.
     */
     @SerializedName("ConnectMsg")
     @Expose
     private String ConnectMsg;
 
     /**
-    * Connectivity Detection Method
+    * Connectivity Check Method
     */
     @SerializedName("ConnDetectType")
     @Expose
     private String ConnDetectType;
 
     /**
-    * Connectivity Detection Host Count
+    * Connectivity Check Host Count
     */
     @SerializedName("ConnDetectHostCount")
     @Expose
     private Long ConnDetectHostCount;
 
     /**
-    * Connectivity Detection Details
+    * Connectivity Check Details
     */
     @SerializedName("ConnDetectDetail")
     @Expose
     private RegistryConnDetectResult [] ConnDetectDetail;
 
     /**
-    * instance_id in tcr
+    * Instance ID in TCR Scenario
     */
     @SerializedName("InstanceID")
     @Expose
     private String InstanceID;
 
     /**
-    * Latest Successful Synchronization Time
+    * Most Recent Time for Successful Synchronization
     */
     @SerializedName("LatestSyncTime")
     @Expose
     private String LatestSyncTime;
 
     /**
-    * Synchronization Status
+    * Synchronization status
     */
     @SerializedName("SyncStatus")
     @Expose
@@ -136,23 +136,30 @@ public class ImageRepoRegistryInfo extends AbstractModel {
     private String SyncSolution;
 
     /**
-    * Synchronization Failure Message
+    * Synchronization Failure Information
     */
     @SerializedName("SyncMessage")
     @Expose
     private String SyncMessage;
 
     /**
-     * Get Repository id 
-     * @return RegistryId Repository id
+    * Synchronization method. 0: full synchronization; 1: incremental synchronization.	
+    */
+    @SerializedName("SyncMode")
+    @Expose
+    private Long SyncMode;
+
+    /**
+     * Get Repository ID 
+     * @return RegistryId Repository ID
      */
     public Long getRegistryId() {
         return this.RegistryId;
     }
 
     /**
-     * Set Repository id
-     * @param RegistryId Repository id
+     * Set Repository ID
+     * @param RegistryId Repository ID
      */
     public void setRegistryId(Long RegistryId) {
         this.RegistryId = RegistryId;
@@ -175,48 +182,48 @@ public class ImageRepoRegistryInfo extends AbstractModel {
     }
 
     /**
-     * Get Repository Type, list: harbor, tcr 
-     * @return RegistryType Repository Type, list: harbor, tcr
+     * Get Repository type, list: harbor, tcr 
+     * @return RegistryType Repository type, list: harbor, tcr
      */
     public String getRegistryType() {
         return this.RegistryType;
     }
 
     /**
-     * Set Repository Type, list: harbor, tcr
-     * @param RegistryType Repository Type, list: harbor, tcr
+     * Set Repository type, list: harbor, tcr
+     * @param RegistryType Repository type, list: harbor, tcr
      */
     public void setRegistryType(String RegistryType) {
         this.RegistryType = RegistryType;
     }
 
     /**
-     * Get Repository url 
-     * @return Url Repository url
+     * Get Warehouse url 
+     * @return Url Warehouse url
      */
     public String getUrl() {
         return this.Url;
     }
 
     /**
-     * Set Repository url
-     * @param Url Repository url
+     * Set Warehouse url
+     * @param Url Warehouse url
      */
     public void setUrl(String Url) {
         this.Url = Url;
     }
 
     /**
-     * Get Network Type, list: public 
-     * @return NetType Network Type, list: public
+     * Get Network type, list: public 
+     * @return NetType Network type, list: public
      */
     public String getNetType() {
         return this.NetType;
     }
 
     /**
-     * Set Network Type, list: public
-     * @param NetType Network Type, list: public
+     * Set Network type, list: public
+     * @param NetType Network type, list: public
      */
     public void setNetType(String NetType) {
         this.NetType = NetType;
@@ -239,128 +246,128 @@ public class ImageRepoRegistryInfo extends AbstractModel {
     }
 
     /**
-     * Get Repository Version 
-     * @return RegistryVersion Repository Version
+     * Get warehouse version 
+     * @return RegistryVersion warehouse version
      */
     public String getRegistryVersion() {
         return this.RegistryVersion;
     }
 
     /**
-     * Set Repository Version
-     * @param RegistryVersion Repository Version
+     * Set warehouse version
+     * @param RegistryVersion warehouse version
      */
     public void setRegistryVersion(String RegistryVersion) {
         this.RegistryVersion = RegistryVersion;
     }
 
     /**
-     * Get Repository connection error message (to be deprecated, use ConnDetectException instead) 
-     * @return ConnectMsg Repository connection error message (to be deprecated, use ConnDetectException instead)
+     * Get Repository connection error message (to be deprecated). Use ConnDetectException. 
+     * @return ConnectMsg Repository connection error message (to be deprecated). Use ConnDetectException.
      */
     public String getConnectMsg() {
         return this.ConnectMsg;
     }
 
     /**
-     * Set Repository connection error message (to be deprecated, use ConnDetectException instead)
-     * @param ConnectMsg Repository connection error message (to be deprecated, use ConnDetectException instead)
+     * Set Repository connection error message (to be deprecated). Use ConnDetectException.
+     * @param ConnectMsg Repository connection error message (to be deprecated). Use ConnDetectException.
      */
     public void setConnectMsg(String ConnectMsg) {
         this.ConnectMsg = ConnectMsg;
     }
 
     /**
-     * Get Connectivity Detection Method 
-     * @return ConnDetectType Connectivity Detection Method
+     * Get Connectivity Check Method 
+     * @return ConnDetectType Connectivity Check Method
      */
     public String getConnDetectType() {
         return this.ConnDetectType;
     }
 
     /**
-     * Set Connectivity Detection Method
-     * @param ConnDetectType Connectivity Detection Method
+     * Set Connectivity Check Method
+     * @param ConnDetectType Connectivity Check Method
      */
     public void setConnDetectType(String ConnDetectType) {
         this.ConnDetectType = ConnDetectType;
     }
 
     /**
-     * Get Connectivity Detection Host Count 
-     * @return ConnDetectHostCount Connectivity Detection Host Count
+     * Get Connectivity Check Host Count 
+     * @return ConnDetectHostCount Connectivity Check Host Count
      */
     public Long getConnDetectHostCount() {
         return this.ConnDetectHostCount;
     }
 
     /**
-     * Set Connectivity Detection Host Count
-     * @param ConnDetectHostCount Connectivity Detection Host Count
+     * Set Connectivity Check Host Count
+     * @param ConnDetectHostCount Connectivity Check Host Count
      */
     public void setConnDetectHostCount(Long ConnDetectHostCount) {
         this.ConnDetectHostCount = ConnDetectHostCount;
     }
 
     /**
-     * Get Connectivity Detection Details 
-     * @return ConnDetectDetail Connectivity Detection Details
+     * Get Connectivity Check Details 
+     * @return ConnDetectDetail Connectivity Check Details
      */
     public RegistryConnDetectResult [] getConnDetectDetail() {
         return this.ConnDetectDetail;
     }
 
     /**
-     * Set Connectivity Detection Details
-     * @param ConnDetectDetail Connectivity Detection Details
+     * Set Connectivity Check Details
+     * @param ConnDetectDetail Connectivity Check Details
      */
     public void setConnDetectDetail(RegistryConnDetectResult [] ConnDetectDetail) {
         this.ConnDetectDetail = ConnDetectDetail;
     }
 
     /**
-     * Get instance_id in tcr 
-     * @return InstanceID instance_id in tcr
+     * Get Instance ID in TCR Scenario 
+     * @return InstanceID Instance ID in TCR Scenario
      */
     public String getInstanceID() {
         return this.InstanceID;
     }
 
     /**
-     * Set instance_id in tcr
-     * @param InstanceID instance_id in tcr
+     * Set Instance ID in TCR Scenario
+     * @param InstanceID Instance ID in TCR Scenario
      */
     public void setInstanceID(String InstanceID) {
         this.InstanceID = InstanceID;
     }
 
     /**
-     * Get Latest Successful Synchronization Time 
-     * @return LatestSyncTime Latest Successful Synchronization Time
+     * Get Most Recent Time for Successful Synchronization 
+     * @return LatestSyncTime Most Recent Time for Successful Synchronization
      */
     public String getLatestSyncTime() {
         return this.LatestSyncTime;
     }
 
     /**
-     * Set Latest Successful Synchronization Time
-     * @param LatestSyncTime Latest Successful Synchronization Time
+     * Set Most Recent Time for Successful Synchronization
+     * @param LatestSyncTime Most Recent Time for Successful Synchronization
      */
     public void setLatestSyncTime(String LatestSyncTime) {
         this.LatestSyncTime = LatestSyncTime;
     }
 
     /**
-     * Get Synchronization Status 
-     * @return SyncStatus Synchronization Status
+     * Get Synchronization status 
+     * @return SyncStatus Synchronization status
      */
     public String getSyncStatus() {
         return this.SyncStatus;
     }
 
     /**
-     * Set Synchronization Status
-     * @param SyncStatus Synchronization Status
+     * Set Synchronization status
+     * @param SyncStatus Synchronization status
      */
     public void setSyncStatus(String SyncStatus) {
         this.SyncStatus = SyncStatus;
@@ -399,19 +406,35 @@ public class ImageRepoRegistryInfo extends AbstractModel {
     }
 
     /**
-     * Get Synchronization Failure Message 
-     * @return SyncMessage Synchronization Failure Message
+     * Get Synchronization Failure Information 
+     * @return SyncMessage Synchronization Failure Information
      */
     public String getSyncMessage() {
         return this.SyncMessage;
     }
 
     /**
-     * Set Synchronization Failure Message
-     * @param SyncMessage Synchronization Failure Message
+     * Set Synchronization Failure Information
+     * @param SyncMessage Synchronization Failure Information
      */
     public void setSyncMessage(String SyncMessage) {
         this.SyncMessage = SyncMessage;
+    }
+
+    /**
+     * Get Synchronization method. 0: full synchronization; 1: incremental synchronization.	 
+     * @return SyncMode Synchronization method. 0: full synchronization; 1: incremental synchronization.	
+     */
+    public Long getSyncMode() {
+        return this.SyncMode;
+    }
+
+    /**
+     * Set Synchronization method. 0: full synchronization; 1: incremental synchronization.	
+     * @param SyncMode Synchronization method. 0: full synchronization; 1: incremental synchronization.	
+     */
+    public void setSyncMode(Long SyncMode) {
+        this.SyncMode = SyncMode;
     }
 
     public ImageRepoRegistryInfo() {
@@ -476,6 +499,9 @@ public class ImageRepoRegistryInfo extends AbstractModel {
         if (source.SyncMessage != null) {
             this.SyncMessage = new String(source.SyncMessage);
         }
+        if (source.SyncMode != null) {
+            this.SyncMode = new Long(source.SyncMode);
+        }
     }
 
 
@@ -500,6 +526,7 @@ public class ImageRepoRegistryInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "SyncFailReason", this.SyncFailReason);
         this.setParamSimple(map, prefix + "SyncSolution", this.SyncSolution);
         this.setParamSimple(map, prefix + "SyncMessage", this.SyncMessage);
+        this.setParamSimple(map, prefix + "SyncMode", this.SyncMode);
 
     }
 }

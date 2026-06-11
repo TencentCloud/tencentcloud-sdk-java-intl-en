@@ -44,9 +44,9 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     private String RedirectType;
 
     /**
-    * Status code returned for forced redirect 
-Supports 301, 302.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+    * Specifies the return status code for forced redirection. 
+Supports 301, 302, 307, and 308.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("RedirectStatusCode")
     @Expose
@@ -117,24 +117,24 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     }
 
     /**
-     * Get Status code returned for forced redirect 
-Supports 301, 302.
-Note: This field may return `null`, indicating that no valid value can be obtained. 
-     * @return RedirectStatusCode Status code returned for forced redirect 
-Supports 301, 302.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Get Specifies the return status code for forced redirection. 
+Supports 301, 302, 307, and 308.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return RedirectStatusCode Specifies the return status code for forced redirection. 
+Supports 301, 302, 307, and 308.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getRedirectStatusCode() {
         return this.RedirectStatusCode;
     }
 
     /**
-     * Set Status code returned for forced redirect 
-Supports 301, 302.
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param RedirectStatusCode Status code returned for forced redirect 
-Supports 301, 302.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Set Specifies the return status code for forced redirection. 
+Supports 301, 302, 307, and 308.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param RedirectStatusCode Specifies the return status code for forced redirection. 
+Supports 301, 302, 307, and 308.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setRedirectStatusCode(Long RedirectStatusCode) {
         this.RedirectStatusCode = RedirectStatusCode;

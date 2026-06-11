@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class SearchLogErrors extends AbstractModel {
 
     /**
-    * Log topic IDNote: This field may return null, indicating that no valid values can be obtained.
+    * Log topic ID
     */
     @SerializedName("TopicId")
     @Expose
     private String TopicId;
 
     /**
-    * Error MessageNote: This field may return null, indicating that no valid values can be obtained.
+    * Error message
     */
     @SerializedName("ErrorMsg")
     @Expose
     private String ErrorMsg;
 
     /**
-    * Error CodeNote: This field may return null, indicating that no valid values can be obtained.
+    * Error code.
     */
     @SerializedName("ErrorCodeStr")
     @Expose
     private String ErrorCodeStr;
 
     /**
-     * Get Log topic IDNote: This field may return null, indicating that no valid values can be obtained. 
-     * @return TopicId Log topic IDNote: This field may return null, indicating that no valid values can be obtained.
+     * Get Log topic ID 
+     * @return TopicId Log topic ID
      */
     public String getTopicId() {
         return this.TopicId;
     }
 
     /**
-     * Set Log topic IDNote: This field may return null, indicating that no valid values can be obtained.
-     * @param TopicId Log topic IDNote: This field may return null, indicating that no valid values can be obtained.
+     * Set Log topic ID
+     * @param TopicId Log topic ID
      */
     public void setTopicId(String TopicId) {
         this.TopicId = TopicId;
     }
 
     /**
-     * Get Error MessageNote: This field may return null, indicating that no valid values can be obtained. 
-     * @return ErrorMsg Error MessageNote: This field may return null, indicating that no valid values can be obtained.
+     * Get Error message 
+     * @return ErrorMsg Error message
      */
     public String getErrorMsg() {
         return this.ErrorMsg;
     }
 
     /**
-     * Set Error MessageNote: This field may return null, indicating that no valid values can be obtained.
-     * @param ErrorMsg Error MessageNote: This field may return null, indicating that no valid values can be obtained.
+     * Set Error message
+     * @param ErrorMsg Error message
      */
     public void setErrorMsg(String ErrorMsg) {
         this.ErrorMsg = ErrorMsg;
     }
 
     /**
-     * Get Error CodeNote: This field may return null, indicating that no valid values can be obtained. 
-     * @return ErrorCodeStr Error CodeNote: This field may return null, indicating that no valid values can be obtained.
+     * Get Error code. 
+     * @return ErrorCodeStr Error code.
      */
     public String getErrorCodeStr() {
         return this.ErrorCodeStr;
     }
 
     /**
-     * Set Error CodeNote: This field may return null, indicating that no valid values can be obtained.
-     * @param ErrorCodeStr Error CodeNote: This field may return null, indicating that no valid values can be obtained.
+     * Set Error code.
+     * @param ErrorCodeStr Error code.
      */
     public void setErrorCodeStr(String ErrorCodeStr) {
         this.ErrorCodeStr = ErrorCodeStr;

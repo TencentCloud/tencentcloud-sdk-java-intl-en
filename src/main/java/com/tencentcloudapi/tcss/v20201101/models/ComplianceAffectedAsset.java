@@ -24,346 +24,348 @@ import java.util.HashMap;
 public class ComplianceAffectedAsset extends AbstractModel {
 
     /**
-    * Unique ID of the customer asset
+    * <p>Unique asset item ID allocated to the customer.</p>
     */
     @SerializedName("CustomerAssetId")
     @Expose
     private Long CustomerAssetId;
 
     /**
-    * Asset name
+    * <p>Asset item name.</p>
     */
     @SerializedName("AssetName")
     @Expose
     private String AssetName;
 
     /**
-    * Asset type
+    * <p>Asset item type.</p>
     */
     @SerializedName("AssetType")
     @Expose
     private String AssetType;
 
     /**
-    * Check status
-
-`CHECK_INIT`: To be checked.
-
-`CHECK_RUNNING`: Checking.
-
-`CHECK_FINISHED`: Checked.
-
-`CHECK_FAILED`: Check failed.
+    * <p>Check status.</p><p>CHECK_INIT: pending check</p><p>CHECK_RUNNING: checking</p><p>CHECK_FINISHED: check completed</p><p>CHECK_FAILED: check failed</p>
     */
     @SerializedName("CheckStatus")
     @Expose
     private String CheckStatus;
 
     /**
-    * Node name
+    * <p>Node name.</p>
     */
     @SerializedName("NodeName")
     @Expose
     private String NodeName;
 
     /**
-    * Last check time in the format of "YYYY-MM-DD HH:m::SS"
-
-It is "0000-00-00 00:00:00" if no check has been performed.
+    * <p>Last check time in the format of YYYY-MM-DD HH:m::SS.</p><p>If never checked, this field will be 0000-00-00 00:00:00.</p>
     */
     @SerializedName("LastCheckTime")
     @Expose
     private String LastCheckTime;
 
     /**
-    * Check result. Valid values:
-
-`RESULT_FAILED`: Failed.
-
-`RESULT_PASSED`: Passed.
+    * <p>Check result. Valid values:</p><p>RESULT_FAILED: failed</p><p>RESULT_PASSED: passed</p>
     */
     @SerializedName("CheckResult")
     @Expose
     private String CheckResult;
 
     /**
-    * Server IP
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Host IP address.</p>
     */
     @SerializedName("HostIP")
     @Expose
     private String HostIP;
 
     /**
-    * Image tag
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Image tag.</p>
     */
     @SerializedName("ImageTag")
     @Expose
     private String ImageTag;
 
     /**
-    * Verification information of the check item
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Check item verification information.</p>
     */
     @SerializedName("VerifyInfo")
     @Expose
     private String VerifyInfo;
 
     /**
-    * Instance ID
-Note: This field may return `null`, indicating that no valid values can be obtained.
+    * <p>Host instance ID.</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-     * Get Unique ID of the customer asset 
-     * @return CustomerAssetId Unique ID of the customer asset
+    * <p>Image repository information.</p>
+    */
+    @SerializedName("ImageRegistryInfo")
+    @Expose
+    private ImageRegistryInfo ImageRegistryInfo;
+
+    /**
+    * <p>Cluster ID.</p>
+    */
+    @SerializedName("ClusterID")
+    @Expose
+    private String ClusterID;
+
+    /**
+    * <p>Cluster name.</p>
+    */
+    @SerializedName("ClusterName")
+    @Expose
+    private String ClusterName;
+
+    /**
+    * <p>Unique asset ID.</p><p>Default value: -</p>
+    */
+    @SerializedName("AssetUniqueID")
+    @Expose
+    private String AssetUniqueID;
+
+    /**
+     * Get <p>Unique asset item ID allocated to the customer.</p> 
+     * @return CustomerAssetId <p>Unique asset item ID allocated to the customer.</p>
      */
     public Long getCustomerAssetId() {
         return this.CustomerAssetId;
     }
 
     /**
-     * Set Unique ID of the customer asset
-     * @param CustomerAssetId Unique ID of the customer asset
+     * Set <p>Unique asset item ID allocated to the customer.</p>
+     * @param CustomerAssetId <p>Unique asset item ID allocated to the customer.</p>
      */
     public void setCustomerAssetId(Long CustomerAssetId) {
         this.CustomerAssetId = CustomerAssetId;
     }
 
     /**
-     * Get Asset name 
-     * @return AssetName Asset name
+     * Get <p>Asset item name.</p> 
+     * @return AssetName <p>Asset item name.</p>
      */
     public String getAssetName() {
         return this.AssetName;
     }
 
     /**
-     * Set Asset name
-     * @param AssetName Asset name
+     * Set <p>Asset item name.</p>
+     * @param AssetName <p>Asset item name.</p>
      */
     public void setAssetName(String AssetName) {
         this.AssetName = AssetName;
     }
 
     /**
-     * Get Asset type 
-     * @return AssetType Asset type
+     * Get <p>Asset item type.</p> 
+     * @return AssetType <p>Asset item type.</p>
      */
     public String getAssetType() {
         return this.AssetType;
     }
 
     /**
-     * Set Asset type
-     * @param AssetType Asset type
+     * Set <p>Asset item type.</p>
+     * @param AssetType <p>Asset item type.</p>
      */
     public void setAssetType(String AssetType) {
         this.AssetType = AssetType;
     }
 
     /**
-     * Get Check status
-
-`CHECK_INIT`: To be checked.
-
-`CHECK_RUNNING`: Checking.
-
-`CHECK_FINISHED`: Checked.
-
-`CHECK_FAILED`: Check failed. 
-     * @return CheckStatus Check status
-
-`CHECK_INIT`: To be checked.
-
-`CHECK_RUNNING`: Checking.
-
-`CHECK_FINISHED`: Checked.
-
-`CHECK_FAILED`: Check failed.
+     * Get <p>Check status.</p><p>CHECK_INIT: pending check</p><p>CHECK_RUNNING: checking</p><p>CHECK_FINISHED: check completed</p><p>CHECK_FAILED: check failed</p> 
+     * @return CheckStatus <p>Check status.</p><p>CHECK_INIT: pending check</p><p>CHECK_RUNNING: checking</p><p>CHECK_FINISHED: check completed</p><p>CHECK_FAILED: check failed</p>
      */
     public String getCheckStatus() {
         return this.CheckStatus;
     }
 
     /**
-     * Set Check status
-
-`CHECK_INIT`: To be checked.
-
-`CHECK_RUNNING`: Checking.
-
-`CHECK_FINISHED`: Checked.
-
-`CHECK_FAILED`: Check failed.
-     * @param CheckStatus Check status
-
-`CHECK_INIT`: To be checked.
-
-`CHECK_RUNNING`: Checking.
-
-`CHECK_FINISHED`: Checked.
-
-`CHECK_FAILED`: Check failed.
+     * Set <p>Check status.</p><p>CHECK_INIT: pending check</p><p>CHECK_RUNNING: checking</p><p>CHECK_FINISHED: check completed</p><p>CHECK_FAILED: check failed</p>
+     * @param CheckStatus <p>Check status.</p><p>CHECK_INIT: pending check</p><p>CHECK_RUNNING: checking</p><p>CHECK_FINISHED: check completed</p><p>CHECK_FAILED: check failed</p>
      */
     public void setCheckStatus(String CheckStatus) {
         this.CheckStatus = CheckStatus;
     }
 
     /**
-     * Get Node name 
-     * @return NodeName Node name
+     * Get <p>Node name.</p> 
+     * @return NodeName <p>Node name.</p>
      */
     public String getNodeName() {
         return this.NodeName;
     }
 
     /**
-     * Set Node name
-     * @param NodeName Node name
+     * Set <p>Node name.</p>
+     * @param NodeName <p>Node name.</p>
      */
     public void setNodeName(String NodeName) {
         this.NodeName = NodeName;
     }
 
     /**
-     * Get Last check time in the format of "YYYY-MM-DD HH:m::SS"
-
-It is "0000-00-00 00:00:00" if no check has been performed. 
-     * @return LastCheckTime Last check time in the format of "YYYY-MM-DD HH:m::SS"
-
-It is "0000-00-00 00:00:00" if no check has been performed.
+     * Get <p>Last check time in the format of YYYY-MM-DD HH:m::SS.</p><p>If never checked, this field will be 0000-00-00 00:00:00.</p> 
+     * @return LastCheckTime <p>Last check time in the format of YYYY-MM-DD HH:m::SS.</p><p>If never checked, this field will be 0000-00-00 00:00:00.</p>
      */
     public String getLastCheckTime() {
         return this.LastCheckTime;
     }
 
     /**
-     * Set Last check time in the format of "YYYY-MM-DD HH:m::SS"
-
-It is "0000-00-00 00:00:00" if no check has been performed.
-     * @param LastCheckTime Last check time in the format of "YYYY-MM-DD HH:m::SS"
-
-It is "0000-00-00 00:00:00" if no check has been performed.
+     * Set <p>Last check time in the format of YYYY-MM-DD HH:m::SS.</p><p>If never checked, this field will be 0000-00-00 00:00:00.</p>
+     * @param LastCheckTime <p>Last check time in the format of YYYY-MM-DD HH:m::SS.</p><p>If never checked, this field will be 0000-00-00 00:00:00.</p>
      */
     public void setLastCheckTime(String LastCheckTime) {
         this.LastCheckTime = LastCheckTime;
     }
 
     /**
-     * Get Check result. Valid values:
-
-`RESULT_FAILED`: Failed.
-
-`RESULT_PASSED`: Passed. 
-     * @return CheckResult Check result. Valid values:
-
-`RESULT_FAILED`: Failed.
-
-`RESULT_PASSED`: Passed.
+     * Get <p>Check result. Valid values:</p><p>RESULT_FAILED: failed</p><p>RESULT_PASSED: passed</p> 
+     * @return CheckResult <p>Check result. Valid values:</p><p>RESULT_FAILED: failed</p><p>RESULT_PASSED: passed</p>
      */
     public String getCheckResult() {
         return this.CheckResult;
     }
 
     /**
-     * Set Check result. Valid values:
-
-`RESULT_FAILED`: Failed.
-
-`RESULT_PASSED`: Passed.
-     * @param CheckResult Check result. Valid values:
-
-`RESULT_FAILED`: Failed.
-
-`RESULT_PASSED`: Passed.
+     * Set <p>Check result. Valid values:</p><p>RESULT_FAILED: failed</p><p>RESULT_PASSED: passed</p>
+     * @param CheckResult <p>Check result. Valid values:</p><p>RESULT_FAILED: failed</p><p>RESULT_PASSED: passed</p>
      */
     public void setCheckResult(String CheckResult) {
         this.CheckResult = CheckResult;
     }
 
     /**
-     * Get Server IP
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return HostIP Server IP
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Host IP address.</p> 
+     * @return HostIP <p>Host IP address.</p>
      */
     public String getHostIP() {
         return this.HostIP;
     }
 
     /**
-     * Set Server IP
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param HostIP Server IP
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Host IP address.</p>
+     * @param HostIP <p>Host IP address.</p>
      */
     public void setHostIP(String HostIP) {
         this.HostIP = HostIP;
     }
 
     /**
-     * Get Image tag
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ImageTag Image tag
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Image tag.</p> 
+     * @return ImageTag <p>Image tag.</p>
      */
     public String getImageTag() {
         return this.ImageTag;
     }
 
     /**
-     * Set Image tag
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ImageTag Image tag
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Image tag.</p>
+     * @param ImageTag <p>Image tag.</p>
      */
     public void setImageTag(String ImageTag) {
         this.ImageTag = ImageTag;
     }
 
     /**
-     * Get Verification information of the check item
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return VerifyInfo Verification information of the check item
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Check item verification information.</p> 
+     * @return VerifyInfo <p>Check item verification information.</p>
      */
     public String getVerifyInfo() {
         return this.VerifyInfo;
     }
 
     /**
-     * Set Verification information of the check item
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param VerifyInfo Verification information of the check item
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Check item verification information.</p>
+     * @param VerifyInfo <p>Check item verification information.</p>
      */
     public void setVerifyInfo(String VerifyInfo) {
         this.VerifyInfo = VerifyInfo;
     }
 
     /**
-     * Get Instance ID
-Note: This field may return `null`, indicating that no valid values can be obtained. 
-     * @return InstanceId Instance ID
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * Get <p>Host instance ID.</p> 
+     * @return InstanceId <p>Host instance ID.</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Instance ID
-Note: This field may return `null`, indicating that no valid values can be obtained.
-     * @param InstanceId Instance ID
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * Set <p>Host instance ID.</p>
+     * @param InstanceId <p>Host instance ID.</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
+    }
+
+    /**
+     * Get <p>Image repository information.</p> 
+     * @return ImageRegistryInfo <p>Image repository information.</p>
+     */
+    public ImageRegistryInfo getImageRegistryInfo() {
+        return this.ImageRegistryInfo;
+    }
+
+    /**
+     * Set <p>Image repository information.</p>
+     * @param ImageRegistryInfo <p>Image repository information.</p>
+     */
+    public void setImageRegistryInfo(ImageRegistryInfo ImageRegistryInfo) {
+        this.ImageRegistryInfo = ImageRegistryInfo;
+    }
+
+    /**
+     * Get <p>Cluster ID.</p> 
+     * @return ClusterID <p>Cluster ID.</p>
+     */
+    public String getClusterID() {
+        return this.ClusterID;
+    }
+
+    /**
+     * Set <p>Cluster ID.</p>
+     * @param ClusterID <p>Cluster ID.</p>
+     */
+    public void setClusterID(String ClusterID) {
+        this.ClusterID = ClusterID;
+    }
+
+    /**
+     * Get <p>Cluster name.</p> 
+     * @return ClusterName <p>Cluster name.</p>
+     */
+    public String getClusterName() {
+        return this.ClusterName;
+    }
+
+    /**
+     * Set <p>Cluster name.</p>
+     * @param ClusterName <p>Cluster name.</p>
+     */
+    public void setClusterName(String ClusterName) {
+        this.ClusterName = ClusterName;
+    }
+
+    /**
+     * Get <p>Unique asset ID.</p><p>Default value: -</p> 
+     * @return AssetUniqueID <p>Unique asset ID.</p><p>Default value: -</p>
+     */
+    public String getAssetUniqueID() {
+        return this.AssetUniqueID;
+    }
+
+    /**
+     * Set <p>Unique asset ID.</p><p>Default value: -</p>
+     * @param AssetUniqueID <p>Unique asset ID.</p><p>Default value: -</p>
+     */
+    public void setAssetUniqueID(String AssetUniqueID) {
+        this.AssetUniqueID = AssetUniqueID;
     }
 
     public ComplianceAffectedAsset() {
@@ -407,6 +409,18 @@ Note: This field may return `null`, indicating that no valid values can be obtai
         if (source.InstanceId != null) {
             this.InstanceId = new String(source.InstanceId);
         }
+        if (source.ImageRegistryInfo != null) {
+            this.ImageRegistryInfo = new ImageRegistryInfo(source.ImageRegistryInfo);
+        }
+        if (source.ClusterID != null) {
+            this.ClusterID = new String(source.ClusterID);
+        }
+        if (source.ClusterName != null) {
+            this.ClusterName = new String(source.ClusterName);
+        }
+        if (source.AssetUniqueID != null) {
+            this.AssetUniqueID = new String(source.AssetUniqueID);
+        }
     }
 
 
@@ -425,6 +439,10 @@ Note: This field may return `null`, indicating that no valid values can be obtai
         this.setParamSimple(map, prefix + "ImageTag", this.ImageTag);
         this.setParamSimple(map, prefix + "VerifyInfo", this.VerifyInfo);
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
+        this.setParamObj(map, prefix + "ImageRegistryInfo.", this.ImageRegistryInfo);
+        this.setParamSimple(map, prefix + "ClusterID", this.ClusterID);
+        this.setParamSimple(map, prefix + "ClusterName", this.ClusterName);
+        this.setParamSimple(map, prefix + "AssetUniqueID", this.AssetUniqueID);
 
     }
 }

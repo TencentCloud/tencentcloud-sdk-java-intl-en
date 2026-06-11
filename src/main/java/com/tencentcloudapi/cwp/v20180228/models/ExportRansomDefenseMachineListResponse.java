@@ -24,8 +24,7 @@ import java.util.HashMap;
 public class ExportRansomDefenseMachineListResponse extends AbstractModel {
 
     /**
-    * Task ID, which is used to obtain the download URL (DownloadUrl) using the asynchronous task export API ExportTasks.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Task ID, required for obtaining the DownloadURL at API Asynchronous Export Task ExportTasks
     */
     @SerializedName("TaskId")
     @Expose
@@ -39,20 +38,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Task ID, which is used to obtain the download URL (DownloadUrl) using the asynchronous task export API ExportTasks.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return TaskId Task ID, which is used to obtain the download URL (DownloadUrl) using the asynchronous task export API ExportTasks.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Task ID, required for obtaining the DownloadURL at API Asynchronous Export Task ExportTasks 
+     * @return TaskId Task ID, required for obtaining the DownloadURL at API Asynchronous Export Task ExportTasks
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set Task ID, which is used to obtain the download URL (DownloadUrl) using the asynchronous task export API ExportTasks.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param TaskId Task ID, which is used to obtain the download URL (DownloadUrl) using the asynchronous task export API ExportTasks.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Task ID, required for obtaining the DownloadURL at API Asynchronous Export Task ExportTasks
+     * @param TaskId Task ID, required for obtaining the DownloadURL at API Asynchronous Export Task ExportTasks
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;

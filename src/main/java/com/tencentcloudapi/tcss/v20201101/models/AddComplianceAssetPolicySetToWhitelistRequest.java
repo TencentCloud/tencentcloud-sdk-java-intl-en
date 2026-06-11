@@ -31,6 +31,13 @@ public class AddComplianceAssetPolicySetToWhitelistRequest extends AbstractModel
     private ComplianceAssetPolicySetItem [] AssetPolicySetList;
 
     /**
+    * Type of assets to be scanned. <li>ASSET_CONTAINER: Docker container.</li> <li>ASSET_IMAGE: Docker image.</li> <li>ASSET_HOST: Docker host.</li> <li>ASSET_K8S: Kubernetes.</li> <li>ASSET_CONTAINERD: containerd host.</li> <li>ASSET_CONTAINERD_CONTAINER: containerd container.</li>
+    */
+    @SerializedName("AssetType")
+    @Expose
+    private String AssetType;
+
+    /**
      * Get List of asset IDs and check item IDs 
      * @return AssetPolicySetList List of asset IDs and check item IDs
      */
@@ -44,6 +51,22 @@ public class AddComplianceAssetPolicySetToWhitelistRequest extends AbstractModel
      */
     public void setAssetPolicySetList(ComplianceAssetPolicySetItem [] AssetPolicySetList) {
         this.AssetPolicySetList = AssetPolicySetList;
+    }
+
+    /**
+     * Get Type of assets to be scanned. <li>ASSET_CONTAINER: Docker container.</li> <li>ASSET_IMAGE: Docker image.</li> <li>ASSET_HOST: Docker host.</li> <li>ASSET_K8S: Kubernetes.</li> <li>ASSET_CONTAINERD: containerd host.</li> <li>ASSET_CONTAINERD_CONTAINER: containerd container.</li> 
+     * @return AssetType Type of assets to be scanned. <li>ASSET_CONTAINER: Docker container.</li> <li>ASSET_IMAGE: Docker image.</li> <li>ASSET_HOST: Docker host.</li> <li>ASSET_K8S: Kubernetes.</li> <li>ASSET_CONTAINERD: containerd host.</li> <li>ASSET_CONTAINERD_CONTAINER: containerd container.</li>
+     */
+    public String getAssetType() {
+        return this.AssetType;
+    }
+
+    /**
+     * Set Type of assets to be scanned. <li>ASSET_CONTAINER: Docker container.</li> <li>ASSET_IMAGE: Docker image.</li> <li>ASSET_HOST: Docker host.</li> <li>ASSET_K8S: Kubernetes.</li> <li>ASSET_CONTAINERD: containerd host.</li> <li>ASSET_CONTAINERD_CONTAINER: containerd container.</li>
+     * @param AssetType Type of assets to be scanned. <li>ASSET_CONTAINER: Docker container.</li> <li>ASSET_IMAGE: Docker image.</li> <li>ASSET_HOST: Docker host.</li> <li>ASSET_K8S: Kubernetes.</li> <li>ASSET_CONTAINERD: containerd host.</li> <li>ASSET_CONTAINERD_CONTAINER: containerd container.</li>
+     */
+    public void setAssetType(String AssetType) {
+        this.AssetType = AssetType;
     }
 
     public AddComplianceAssetPolicySetToWhitelistRequest() {
@@ -60,6 +83,9 @@ public class AddComplianceAssetPolicySetToWhitelistRequest extends AbstractModel
                 this.AssetPolicySetList[i] = new ComplianceAssetPolicySetItem(source.AssetPolicySetList[i]);
             }
         }
+        if (source.AssetType != null) {
+            this.AssetType = new String(source.AssetType);
+        }
     }
 
 
@@ -68,6 +94,7 @@ public class AddComplianceAssetPolicySetToWhitelistRequest extends AbstractModel
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "AssetPolicySetList.", this.AssetPolicySetList);
+        this.setParamSimple(map, prefix + "AssetType", this.AssetType);
 
     }
 }

@@ -73,7 +73,7 @@ public class ModifyMNGRequest extends AbstractModel {
     private String MNPIcon;
 
     /**
-    * <p>The mini game name and description in multiple languages.	</p>
+    * <p>Mini game name and introduction in multiple languages.</p>
     */
     @SerializedName("I18nList")
     @Expose
@@ -192,16 +192,16 @@ public class ModifyMNGRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>The mini game name and description in multiple languages.	</p> 
-     * @return I18nList <p>The mini game name and description in multiple languages.	</p>
+     * Get <p>Mini game name and introduction in multiple languages.</p> 
+     * @return I18nList <p>Mini game name and introduction in multiple languages.</p>
      */
     public MNPI18NSyncDto [] getI18nList() {
         return this.I18nList;
     }
 
     /**
-     * Set <p>The mini game name and description in multiple languages.	</p>
-     * @param I18nList <p>The mini game name and description in multiple languages.	</p>
+     * Set <p>Mini game name and introduction in multiple languages.</p>
+     * @param I18nList <p>Mini game name and introduction in multiple languages.</p>
      */
     public void setI18nList(MNPI18NSyncDto [] I18nList) {
         this.I18nList = I18nList;

@@ -31,6 +31,13 @@ public class FrequentScanningProtection extends AbstractModel {
     private String Enabled;
 
     /**
+    * Rule ID of high frequency scan protection, returned as an output parameter.
+    */
+    @SerializedName("Id")
+    @Expose
+    private String Id;
+
+    /**
     * The handling action for high-frequency scan protection. required when Enabled is on. valid values for SecurityAction Name: <li>Deny: block and respond with an interception page;</li> <li>Monitor: observe without processing requests, log security events in logs;</li> <li>JSChallenge: respond with a JavaScript challenge page.</li>.
     */
     @SerializedName("Action")
@@ -79,6 +86,22 @@ public class FrequentScanningProtection extends AbstractModel {
      */
     public void setEnabled(String Enabled) {
         this.Enabled = Enabled;
+    }
+
+    /**
+     * Get Rule ID of high frequency scan protection, returned as an output parameter. 
+     * @return Id Rule ID of high frequency scan protection, returned as an output parameter.
+     */
+    public String getId() {
+        return this.Id;
+    }
+
+    /**
+     * Set Rule ID of high frequency scan protection, returned as an output parameter.
+     * @param Id Rule ID of high frequency scan protection, returned as an output parameter.
+     */
+    public void setId(String Id) {
+        this.Id = Id;
     }
 
     /**
@@ -172,6 +195,9 @@ public class FrequentScanningProtection extends AbstractModel {
         if (source.Enabled != null) {
             this.Enabled = new String(source.Enabled);
         }
+        if (source.Id != null) {
+            this.Id = new String(source.Id);
+        }
         if (source.Action != null) {
             this.Action = new SecurityAction(source.Action);
         }
@@ -195,6 +221,7 @@ public class FrequentScanningProtection extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Enabled", this.Enabled);
+        this.setParamSimple(map, prefix + "Id", this.Id);
         this.setParamObj(map, prefix + "Action.", this.Action);
         this.setParamSimple(map, prefix + "CountBy", this.CountBy);
         this.setParamSimple(map, prefix + "BlockThreshold", this.BlockThreshold);

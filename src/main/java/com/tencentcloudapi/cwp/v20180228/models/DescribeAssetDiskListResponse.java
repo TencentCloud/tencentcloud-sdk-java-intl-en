@@ -25,7 +25,6 @@ public class DescribeAssetDiskListResponse extends AbstractModel {
 
     /**
     * Disk partition list
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Disks")
     @Expose
@@ -46,10 +45,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Disk partition list
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Disk partition list 
      * @return Disks Disk partition list
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public AssetDiskPartitionInfo [] getDisks() {
         return this.Disks;
@@ -57,9 +54,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Disk partition list
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Disks Disk partition list
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setDisks(AssetDiskPartitionInfo [] Disks) {
         this.Disks = Disks;

@@ -24,16 +24,14 @@ import java.util.HashMap;
 public class DescribeAssetImageRegistryRiskInfoListResponse extends AbstractModel {
 
     /**
-    * List of image vulnerabilities
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Image vulnerability list
     */
     @SerializedName("List")
     @Expose
     private ImageRisk [] List;
 
     /**
-    * Total number
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Total number.
     */
     @SerializedName("TotalCount")
     @Expose
@@ -47,40 +45,32 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get List of image vulnerabilities
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return List List of image vulnerabilities
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Image vulnerability list 
+     * @return List Image vulnerability list
      */
     public ImageRisk [] getList() {
         return this.List;
     }
 
     /**
-     * Set List of image vulnerabilities
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param List List of image vulnerabilities
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Image vulnerability list
+     * @param List Image vulnerability list
      */
     public void setList(ImageRisk [] List) {
         this.List = List;
     }
 
     /**
-     * Get Total number
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return TotalCount Total number
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Total number. 
+     * @return TotalCount Total number.
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set Total number
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param TotalCount Total number
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Total number.
+     * @param TotalCount Total number.
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

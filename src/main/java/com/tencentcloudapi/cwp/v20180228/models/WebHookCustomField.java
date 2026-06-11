@@ -25,7 +25,6 @@ public class WebHookCustomField extends AbstractModel {
 
     /**
     * key
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Key")
     @Expose
@@ -33,17 +32,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * value
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Value")
     @Expose
     private String Value;
 
     /**
-     * Get key
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get key 
      * @return Key key
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getKey() {
         return this.Key;
@@ -51,19 +47,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set key
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Key key
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setKey(String Key) {
         this.Key = Key;
     }
 
     /**
-     * Get value
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get value 
      * @return Value value
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getValue() {
         return this.Value;
@@ -71,9 +63,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set value
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Value value
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setValue(String Value) {
         this.Value = Value;

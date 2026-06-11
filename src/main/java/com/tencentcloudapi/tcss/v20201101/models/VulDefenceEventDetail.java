@@ -172,15 +172,13 @@ public class VulDefenceEventDetail extends AbstractModel {
 
     /**
     * Process PID
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("PID")
     @Expose
     private Long PID;
 
     /**
-    * Main class name of the process
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Main class name of process
     */
     @SerializedName("MainClass")
     @Expose
@@ -188,23 +186,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Stack information
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("StackTrace")
     @Expose
     private String StackTrace;
 
     /**
-    * Listened account
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Listen to account
     */
     @SerializedName("ServerAccount")
     @Expose
     private String ServerAccount;
 
     /**
-    * Listened port
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Listening port
     */
     @SerializedName("ServerPort")
     @Expose
@@ -212,7 +207,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Process path
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ServerExe")
     @Expose
@@ -220,15 +214,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Process command line parameter
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ServerArg")
     @Expose
     private String ServerArg;
 
     /**
-    * Node QUuid/Super node ID
-Note: This field may return·`null`, indicating that no valid values can be obtained.
+    * Host QUUID/Super Node ID
     */
     @SerializedName("QUUID")
     @Expose
@@ -236,51 +228,47 @@ Note: This field may return·`null`, indicating that no valid values can be obta
 
     /**
     * Isolation status
-`NORMAL`: 	Not isolated.
-`ISOLATED`: 		Isolated.
-`ISOLATING`: 		Isolating.
-`ISOLATE_FAILED`: 	Isolation failed.
-`RESTORING`: Recovering.
-`RESTORE_FAILED`: Recovery failed.
-Note: This field may return null, indicating that no valid values can be obtained.
+UNISOLATED NORMAL
+ISOLATED
+ISOLATING
+Isolation FAILED
+RESTORING isolation
+Isolation restoration failed RESTORE_FAILED
     */
     @SerializedName("ContainerNetStatus")
     @Expose
     private String ContainerNetStatus;
 
     /**
-    * Sub-status of the container
-"AGENT_OFFLINE"       // The agent is offline.
-	"NODE_DESTROYED"      // The node is terminated.
-	"CONTAINER_EXITED"    // The container exited.
-	"CONTAINER_DESTROYED" // The container was terminated.
-	"SHARED_HOST"         // The container shares the network with the server.
-	"RESOURCE_LIMIT"      // The number of resources to be isolated exceeds the limit.
-	"UNKNOW"              // The reason is unknown.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Container sub-status
+AGENT_OFFLINE
+	NODE_DESTROYED
+	CONTAINER_EXITED
+	"CONTAINER_DESTROYED" //Container destroyed
+	"SHARED_HOST"         // Container shares network with host
+	RESOURCE_LIMIT
+	"UNKNOW"              // Reason unknown
     */
     @SerializedName("ContainerNetSubStatus")
     @Expose
     private String ContainerNetSubStatus;
 
     /**
-    * Container isolation operation source
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Container Isolation Operation Source
     */
     @SerializedName("ContainerIsolateOperationSrc")
     @Expose
     private String ContainerIsolateOperationSrc;
 
     /**
-    * Container status
-`RUNNING`: Running.
-`PAUSED`: Paused.
-`STOPPED`: Stopped.
-`CREATED`: Created.
-`DESTROYED`: Terminated.
-`RESTARTING`: Restarting.
-`REMOVING`: Removing.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Container status.
+RUNNING: running
+PAUSED
+Stop: STOPPED
+CREATED
+DESTROYED
+RESTARTING
+Migrating: REMOVING
     */
     @SerializedName("ContainerStatus")
     @Expose
@@ -288,15 +276,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * API URL
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("JNDIUrl")
     @Expose
     private String JNDIUrl;
 
     /**
-    * RASP details
-Note: This field may return `null`, indicating that no valid value was found.
+    * rasp detail
     */
     @SerializedName("RaspDetail")
     @Expose
@@ -366,14 +352,14 @@ Note: This field may return `null`, indicating that no valid value was found.
     private String ClusterName;
 
     /**
-    * Namespace
+    * 
     */
     @SerializedName("Namespace")
     @Expose
     private String Namespace;
 
     /**
-    * Workload
+    * 
     */
     @SerializedName("WorkloadType")
     @Expose
@@ -716,10 +702,8 @@ Note: This field may return `null`, indicating that no valid value was found.
     }
 
     /**
-     * Get Process PID
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Process PID 
      * @return PID Process PID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getPID() {
         return this.PID;
@@ -727,39 +711,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Process PID
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param PID Process PID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setPID(Long PID) {
         this.PID = PID;
     }
 
     /**
-     * Get Main class name of the process
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return MainClass Main class name of the process
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Main class name of process 
+     * @return MainClass Main class name of process
      */
     public String getMainClass() {
         return this.MainClass;
     }
 
     /**
-     * Set Main class name of the process
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param MainClass Main class name of the process
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Main class name of process
+     * @param MainClass Main class name of process
      */
     public void setMainClass(String MainClass) {
         this.MainClass = MainClass;
     }
 
     /**
-     * Get Stack information
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Stack information 
      * @return StackTrace Stack information
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getStackTrace() {
         return this.StackTrace;
@@ -767,59 +743,47 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Stack information
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param StackTrace Stack information
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setStackTrace(String StackTrace) {
         this.StackTrace = StackTrace;
     }
 
     /**
-     * Get Listened account
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ServerAccount Listened account
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Listen to account 
+     * @return ServerAccount Listen to account
      */
     public String getServerAccount() {
         return this.ServerAccount;
     }
 
     /**
-     * Set Listened account
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ServerAccount Listened account
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Listen to account
+     * @param ServerAccount Listen to account
      */
     public void setServerAccount(String ServerAccount) {
         this.ServerAccount = ServerAccount;
     }
 
     /**
-     * Get Listened port
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ServerPort Listened port
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Listening port 
+     * @return ServerPort Listening port
      */
     public String getServerPort() {
         return this.ServerPort;
     }
 
     /**
-     * Set Listened port
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ServerPort Listened port
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Listening port
+     * @param ServerPort Listening port
      */
     public void setServerPort(String ServerPort) {
         this.ServerPort = ServerPort;
     }
 
     /**
-     * Get Process path
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Process path 
      * @return ServerExe Process path
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getServerExe() {
         return this.ServerExe;
@@ -827,19 +791,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Process path
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param ServerExe Process path
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setServerExe(String ServerExe) {
         this.ServerExe = ServerExe;
     }
 
     /**
-     * Get Process command line parameter
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Process command line parameter 
      * @return ServerArg Process command line parameter
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getServerArg() {
         return this.ServerArg;
@@ -847,29 +807,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Process command line parameter
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param ServerArg Process command line parameter
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setServerArg(String ServerArg) {
         this.ServerArg = ServerArg;
     }
 
     /**
-     * Get Node QUuid/Super node ID
-Note: This field may return·`null`, indicating that no valid values can be obtained. 
-     * @return QUUID Node QUuid/Super node ID
-Note: This field may return·`null`, indicating that no valid values can be obtained.
+     * Get Host QUUID/Super Node ID 
+     * @return QUUID Host QUUID/Super Node ID
      */
     public String getQUUID() {
         return this.QUUID;
     }
 
     /**
-     * Set Node QUuid/Super node ID
-Note: This field may return·`null`, indicating that no valid values can be obtained.
-     * @param QUUID Node QUuid/Super node ID
-Note: This field may return·`null`, indicating that no valid values can be obtained.
+     * Set Host QUUID/Super Node ID
+     * @param QUUID Host QUUID/Super Node ID
      */
     public void setQUUID(String QUUID) {
         this.QUUID = QUUID;
@@ -877,21 +831,19 @@ Note: This field may return·`null`, indicating that no valid values can be obta
 
     /**
      * Get Isolation status
-`NORMAL`: 	Not isolated.
-`ISOLATED`: 		Isolated.
-`ISOLATING`: 		Isolating.
-`ISOLATE_FAILED`: 	Isolation failed.
-`RESTORING`: Recovering.
-`RESTORE_FAILED`: Recovery failed.
-Note: This field may return null, indicating that no valid values can be obtained. 
+UNISOLATED NORMAL
+ISOLATED
+ISOLATING
+Isolation FAILED
+RESTORING isolation
+Isolation restoration failed RESTORE_FAILED 
      * @return ContainerNetStatus Isolation status
-`NORMAL`: 	Not isolated.
-`ISOLATED`: 		Isolated.
-`ISOLATING`: 		Isolating.
-`ISOLATE_FAILED`: 	Isolation failed.
-`RESTORING`: Recovering.
-`RESTORE_FAILED`: Recovery failed.
-Note: This field may return null, indicating that no valid values can be obtained.
+UNISOLATED NORMAL
+ISOLATED
+ISOLATING
+Isolation FAILED
+RESTORING isolation
+Isolation restoration failed RESTORE_FAILED
      */
     public String getContainerNetStatus() {
         return this.ContainerNetStatus;
@@ -899,147 +851,131 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Isolation status
-`NORMAL`: 	Not isolated.
-`ISOLATED`: 		Isolated.
-`ISOLATING`: 		Isolating.
-`ISOLATE_FAILED`: 	Isolation failed.
-`RESTORING`: Recovering.
-`RESTORE_FAILED`: Recovery failed.
-Note: This field may return null, indicating that no valid values can be obtained.
+UNISOLATED NORMAL
+ISOLATED
+ISOLATING
+Isolation FAILED
+RESTORING isolation
+Isolation restoration failed RESTORE_FAILED
      * @param ContainerNetStatus Isolation status
-`NORMAL`: 	Not isolated.
-`ISOLATED`: 		Isolated.
-`ISOLATING`: 		Isolating.
-`ISOLATE_FAILED`: 	Isolation failed.
-`RESTORING`: Recovering.
-`RESTORE_FAILED`: Recovery failed.
-Note: This field may return null, indicating that no valid values can be obtained.
+UNISOLATED NORMAL
+ISOLATED
+ISOLATING
+Isolation FAILED
+RESTORING isolation
+Isolation restoration failed RESTORE_FAILED
      */
     public void setContainerNetStatus(String ContainerNetStatus) {
         this.ContainerNetStatus = ContainerNetStatus;
     }
 
     /**
-     * Get Sub-status of the container
-"AGENT_OFFLINE"       // The agent is offline.
-	"NODE_DESTROYED"      // The node is terminated.
-	"CONTAINER_EXITED"    // The container exited.
-	"CONTAINER_DESTROYED" // The container was terminated.
-	"SHARED_HOST"         // The container shares the network with the server.
-	"RESOURCE_LIMIT"      // The number of resources to be isolated exceeds the limit.
-	"UNKNOW"              // The reason is unknown.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ContainerNetSubStatus Sub-status of the container
-"AGENT_OFFLINE"       // The agent is offline.
-	"NODE_DESTROYED"      // The node is terminated.
-	"CONTAINER_EXITED"    // The container exited.
-	"CONTAINER_DESTROYED" // The container was terminated.
-	"SHARED_HOST"         // The container shares the network with the server.
-	"RESOURCE_LIMIT"      // The number of resources to be isolated exceeds the limit.
-	"UNKNOW"              // The reason is unknown.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Container sub-status
+AGENT_OFFLINE
+	NODE_DESTROYED
+	CONTAINER_EXITED
+	"CONTAINER_DESTROYED" //Container destroyed
+	"SHARED_HOST"         // Container shares network with host
+	RESOURCE_LIMIT
+	"UNKNOW"              // Reason unknown 
+     * @return ContainerNetSubStatus Container sub-status
+AGENT_OFFLINE
+	NODE_DESTROYED
+	CONTAINER_EXITED
+	"CONTAINER_DESTROYED" //Container destroyed
+	"SHARED_HOST"         // Container shares network with host
+	RESOURCE_LIMIT
+	"UNKNOW"              // Reason unknown
      */
     public String getContainerNetSubStatus() {
         return this.ContainerNetSubStatus;
     }
 
     /**
-     * Set Sub-status of the container
-"AGENT_OFFLINE"       // The agent is offline.
-	"NODE_DESTROYED"      // The node is terminated.
-	"CONTAINER_EXITED"    // The container exited.
-	"CONTAINER_DESTROYED" // The container was terminated.
-	"SHARED_HOST"         // The container shares the network with the server.
-	"RESOURCE_LIMIT"      // The number of resources to be isolated exceeds the limit.
-	"UNKNOW"              // The reason is unknown.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ContainerNetSubStatus Sub-status of the container
-"AGENT_OFFLINE"       // The agent is offline.
-	"NODE_DESTROYED"      // The node is terminated.
-	"CONTAINER_EXITED"    // The container exited.
-	"CONTAINER_DESTROYED" // The container was terminated.
-	"SHARED_HOST"         // The container shares the network with the server.
-	"RESOURCE_LIMIT"      // The number of resources to be isolated exceeds the limit.
-	"UNKNOW"              // The reason is unknown.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Container sub-status
+AGENT_OFFLINE
+	NODE_DESTROYED
+	CONTAINER_EXITED
+	"CONTAINER_DESTROYED" //Container destroyed
+	"SHARED_HOST"         // Container shares network with host
+	RESOURCE_LIMIT
+	"UNKNOW"              // Reason unknown
+     * @param ContainerNetSubStatus Container sub-status
+AGENT_OFFLINE
+	NODE_DESTROYED
+	CONTAINER_EXITED
+	"CONTAINER_DESTROYED" //Container destroyed
+	"SHARED_HOST"         // Container shares network with host
+	RESOURCE_LIMIT
+	"UNKNOW"              // Reason unknown
      */
     public void setContainerNetSubStatus(String ContainerNetSubStatus) {
         this.ContainerNetSubStatus = ContainerNetSubStatus;
     }
 
     /**
-     * Get Container isolation operation source
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ContainerIsolateOperationSrc Container isolation operation source
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Container Isolation Operation Source 
+     * @return ContainerIsolateOperationSrc Container Isolation Operation Source
      */
     public String getContainerIsolateOperationSrc() {
         return this.ContainerIsolateOperationSrc;
     }
 
     /**
-     * Set Container isolation operation source
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ContainerIsolateOperationSrc Container isolation operation source
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Container Isolation Operation Source
+     * @param ContainerIsolateOperationSrc Container Isolation Operation Source
      */
     public void setContainerIsolateOperationSrc(String ContainerIsolateOperationSrc) {
         this.ContainerIsolateOperationSrc = ContainerIsolateOperationSrc;
     }
 
     /**
-     * Get Container status
-`RUNNING`: Running.
-`PAUSED`: Paused.
-`STOPPED`: Stopped.
-`CREATED`: Created.
-`DESTROYED`: Terminated.
-`RESTARTING`: Restarting.
-`REMOVING`: Removing.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ContainerStatus Container status
-`RUNNING`: Running.
-`PAUSED`: Paused.
-`STOPPED`: Stopped.
-`CREATED`: Created.
-`DESTROYED`: Terminated.
-`RESTARTING`: Restarting.
-`REMOVING`: Removing.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Container status.
+RUNNING: running
+PAUSED
+Stop: STOPPED
+CREATED
+DESTROYED
+RESTARTING
+Migrating: REMOVING 
+     * @return ContainerStatus Container status.
+RUNNING: running
+PAUSED
+Stop: STOPPED
+CREATED
+DESTROYED
+RESTARTING
+Migrating: REMOVING
      */
     public String getContainerStatus() {
         return this.ContainerStatus;
     }
 
     /**
-     * Set Container status
-`RUNNING`: Running.
-`PAUSED`: Paused.
-`STOPPED`: Stopped.
-`CREATED`: Created.
-`DESTROYED`: Terminated.
-`RESTARTING`: Restarting.
-`REMOVING`: Removing.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ContainerStatus Container status
-`RUNNING`: Running.
-`PAUSED`: Paused.
-`STOPPED`: Stopped.
-`CREATED`: Created.
-`DESTROYED`: Terminated.
-`RESTARTING`: Restarting.
-`REMOVING`: Removing.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Container status.
+RUNNING: running
+PAUSED
+Stop: STOPPED
+CREATED
+DESTROYED
+RESTARTING
+Migrating: REMOVING
+     * @param ContainerStatus Container status.
+RUNNING: running
+PAUSED
+Stop: STOPPED
+CREATED
+DESTROYED
+RESTARTING
+Migrating: REMOVING
      */
     public void setContainerStatus(String ContainerStatus) {
         this.ContainerStatus = ContainerStatus;
     }
 
     /**
-     * Get API URL
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get API URL 
      * @return JNDIUrl API URL
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getJNDIUrl() {
         return this.JNDIUrl;
@@ -1047,29 +983,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set API URL
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param JNDIUrl API URL
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setJNDIUrl(String JNDIUrl) {
         this.JNDIUrl = JNDIUrl;
     }
 
     /**
-     * Get RASP details
-Note: This field may return `null`, indicating that no valid value was found. 
-     * @return RaspDetail RASP details
-Note: This field may return `null`, indicating that no valid value was found.
+     * Get rasp detail 
+     * @return RaspDetail rasp detail
      */
     public RaspInfo [] getRaspDetail() {
         return this.RaspDetail;
     }
 
     /**
-     * Set RASP details
-Note: This field may return `null`, indicating that no valid value was found.
-     * @param RaspDetail RASP details
-Note: This field may return `null`, indicating that no valid value was found.
+     * Set rasp detail
+     * @param RaspDetail rasp detail
      */
     public void setRaspDetail(RaspInfo [] RaspDetail) {
         this.RaspDetail = RaspDetail;
@@ -1220,32 +1150,32 @@ Note: This field may return `null`, indicating that no valid value was found.
     }
 
     /**
-     * Get Namespace 
-     * @return Namespace Namespace
+     * Get  
+     * @return Namespace 
      */
     public String getNamespace() {
         return this.Namespace;
     }
 
     /**
-     * Set Namespace
-     * @param Namespace Namespace
+     * Set 
+     * @param Namespace 
      */
     public void setNamespace(String Namespace) {
         this.Namespace = Namespace;
     }
 
     /**
-     * Get Workload 
-     * @return WorkloadType Workload
+     * Get  
+     * @return WorkloadType 
      */
     public String getWorkloadType() {
         return this.WorkloadType;
     }
 
     /**
-     * Set Workload
-     * @param WorkloadType Workload
+     * Set 
+     * @param WorkloadType 
      */
     public void setWorkloadType(String WorkloadType) {
         this.WorkloadType = WorkloadType;

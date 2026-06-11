@@ -25,7 +25,6 @@ public class DescribeAttackTrendsResponse extends AbstractModel {
 
     /**
     * Attack Trend Statistics (Days)
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("NetAttackTrend")
     @Expose
@@ -39,10 +38,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Attack Trend Statistics (Days)
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Attack Trend Statistics (Days) 
      * @return NetAttackTrend Attack Trend Statistics (Days)
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public NetAttackTrend [] getNetAttackTrend() {
         return this.NetAttackTrend;
@@ -50,9 +47,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Attack Trend Statistics (Days)
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param NetAttackTrend Attack Trend Statistics (Days)
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setNetAttackTrend(NetAttackTrend [] NetAttackTrend) {
         this.NetAttackTrend = NetAttackTrend;

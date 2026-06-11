@@ -24,16 +24,14 @@ import java.util.HashMap;
 public class ScanBaselineResponse extends AbstractModel {
 
     /**
-    * QUUID of the host being scanned
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Host Quuid being scanned
     */
     @SerializedName("ScanningQuuids")
     @Expose
     private String [] ScanningQuuids;
 
     /**
-    * TaskId returned upon successful task distribution
-Note: This field may return null, indicating that no valid values can be obtained.
+    * TaskId returned upon successful task issuance
     */
     @SerializedName("TaskId")
     @Expose
@@ -47,40 +45,32 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get QUUID of the host being scanned
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ScanningQuuids QUUID of the host being scanned
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Host Quuid being scanned 
+     * @return ScanningQuuids Host Quuid being scanned
      */
     public String [] getScanningQuuids() {
         return this.ScanningQuuids;
     }
 
     /**
-     * Set QUUID of the host being scanned
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ScanningQuuids QUUID of the host being scanned
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Host Quuid being scanned
+     * @param ScanningQuuids Host Quuid being scanned
      */
     public void setScanningQuuids(String [] ScanningQuuids) {
         this.ScanningQuuids = ScanningQuuids;
     }
 
     /**
-     * Get TaskId returned upon successful task distribution
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return TaskId TaskId returned upon successful task distribution
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get TaskId returned upon successful task issuance 
+     * @return TaskId TaskId returned upon successful task issuance
      */
     public Long getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set TaskId returned upon successful task distribution
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param TaskId TaskId returned upon successful task distribution
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set TaskId returned upon successful task issuance
+     * @param TaskId TaskId returned upon successful task issuance
      */
     public void setTaskId(Long TaskId) {
         this.TaskId = TaskId;

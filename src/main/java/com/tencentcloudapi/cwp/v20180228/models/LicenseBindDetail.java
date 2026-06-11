@@ -88,11 +88,28 @@ public class LicenseBindDetail extends AbstractModel {
 
     /**
     * Host Additional Information
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("MachineExtraInfo")
     @Expose
     private MachineExtraInfo MachineExtraInfo;
+
+    /**
+    * <li>RUNNING: running</li>
+<li>STOPPED: Shut down</li>
+<li> EXPIRED To be recycled</li>
+    */
+    @SerializedName("InstanceState")
+    @Expose
+    private String InstanceState;
+
+    /**
+    * <li>ONLINE Offline</li>
+<li>OFFLINE: Under protection</li>
+<li>UNINSTALLED Client not installed</li>
+    */
+    @SerializedName("AgentState")
+    @Expose
+    private String AgentState;
 
     /**
      * Get Machine Alias 
@@ -239,10 +256,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Host Additional Information
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Host Additional Information 
      * @return MachineExtraInfo Host Additional Information
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public MachineExtraInfo getMachineExtraInfo() {
         return this.MachineExtraInfo;
@@ -250,12 +265,58 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Host Additional Information
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param MachineExtraInfo Host Additional Information
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setMachineExtraInfo(MachineExtraInfo MachineExtraInfo) {
         this.MachineExtraInfo = MachineExtraInfo;
+    }
+
+    /**
+     * Get <li>RUNNING: running</li>
+<li>STOPPED: Shut down</li>
+<li> EXPIRED To be recycled</li> 
+     * @return InstanceState <li>RUNNING: running</li>
+<li>STOPPED: Shut down</li>
+<li> EXPIRED To be recycled</li>
+     */
+    public String getInstanceState() {
+        return this.InstanceState;
+    }
+
+    /**
+     * Set <li>RUNNING: running</li>
+<li>STOPPED: Shut down</li>
+<li> EXPIRED To be recycled</li>
+     * @param InstanceState <li>RUNNING: running</li>
+<li>STOPPED: Shut down</li>
+<li> EXPIRED To be recycled</li>
+     */
+    public void setInstanceState(String InstanceState) {
+        this.InstanceState = InstanceState;
+    }
+
+    /**
+     * Get <li>ONLINE Offline</li>
+<li>OFFLINE: Under protection</li>
+<li>UNINSTALLED Client not installed</li> 
+     * @return AgentState <li>ONLINE Offline</li>
+<li>OFFLINE: Under protection</li>
+<li>UNINSTALLED Client not installed</li>
+     */
+    public String getAgentState() {
+        return this.AgentState;
+    }
+
+    /**
+     * Set <li>ONLINE Offline</li>
+<li>OFFLINE: Under protection</li>
+<li>UNINSTALLED Client not installed</li>
+     * @param AgentState <li>ONLINE Offline</li>
+<li>OFFLINE: Under protection</li>
+<li>UNINSTALLED Client not installed</li>
+     */
+    public void setAgentState(String AgentState) {
+        this.AgentState = AgentState;
     }
 
     public LicenseBindDetail() {
@@ -299,6 +360,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.MachineExtraInfo != null) {
             this.MachineExtraInfo = new MachineExtraInfo(source.MachineExtraInfo);
         }
+        if (source.InstanceState != null) {
+            this.InstanceState = new String(source.InstanceState);
+        }
+        if (source.AgentState != null) {
+            this.AgentState = new String(source.AgentState);
+        }
     }
 
 
@@ -316,6 +383,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "IsUnBind", this.IsUnBind);
         this.setParamSimple(map, prefix + "IsSwitchBind", this.IsSwitchBind);
         this.setParamObj(map, prefix + "MachineExtraInfo.", this.MachineExtraInfo);
+        this.setParamSimple(map, prefix + "InstanceState", this.InstanceState);
+        this.setParamSimple(map, prefix + "AgentState", this.AgentState);
 
     }
 }

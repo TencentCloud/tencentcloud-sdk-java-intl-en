@@ -24,56 +24,46 @@ import java.util.HashMap;
 public class NetworkPorts extends AbstractModel {
 
     /**
-    * Protocol of the network policy
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Network Policy Protocol
     */
     @SerializedName("Protocol")
     @Expose
     private String Protocol;
 
     /**
-    * Port of the network policy
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Network Policy Port
     */
     @SerializedName("Port")
     @Expose
     private String Port;
 
     /**
-     * Get Protocol of the network policy
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Protocol Protocol of the network policy
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Network Policy Protocol 
+     * @return Protocol Network Policy Protocol
      */
     public String getProtocol() {
         return this.Protocol;
     }
 
     /**
-     * Set Protocol of the network policy
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Protocol Protocol of the network policy
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Network Policy Protocol
+     * @param Protocol Network Policy Protocol
      */
     public void setProtocol(String Protocol) {
         this.Protocol = Protocol;
     }
 
     /**
-     * Get Port of the network policy
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Port Port of the network policy
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Network Policy Port 
+     * @return Port Network Policy Port
      */
     public String getPort() {
         return this.Port;
     }
 
     /**
-     * Set Port of the network policy
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Port Port of the network policy
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Network Policy Port
+     * @param Port Network Policy Port
      */
     public void setPort(String Port) {
         this.Port = Port;

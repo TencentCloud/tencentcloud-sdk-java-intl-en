@@ -25,7 +25,6 @@ public class DescribeAlarmNoticesResponse extends AbstractModel {
 
     /**
     * Alarm notification template list
-Note: this field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("AlarmNotices")
     @Expose
@@ -46,10 +45,8 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private String RequestId;
 
     /**
-     * Get Alarm notification template list
-Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * Get Alarm notification template list 
      * @return AlarmNotices Alarm notification template list
-Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public AlarmNotice [] getAlarmNotices() {
         return this.AlarmNotices;
@@ -57,9 +54,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
     /**
      * Set Alarm notification template list
-Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param AlarmNotices Alarm notification template list
-Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public void setAlarmNotices(AlarmNotice [] AlarmNotices) {
         this.AlarmNotices = AlarmNotices;

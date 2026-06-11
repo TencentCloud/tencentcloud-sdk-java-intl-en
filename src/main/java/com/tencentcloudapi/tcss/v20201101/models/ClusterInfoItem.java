@@ -73,7 +73,10 @@ public class ClusterInfoItem extends AbstractModel {
     private String Region;
 
     /**
-    * Status of the monitoring component. Valid values: `Defender_Uninstall`, `Defender_Normal`, `Defender_Error`, `Defender_Installing`.
+    * Protection Status 
+Defended 
+Unprotected
+Partially defended
     */
     @SerializedName("DefenderStatus")
     @Expose
@@ -85,6 +88,13 @@ public class ClusterInfoItem extends AbstractModel {
     @SerializedName("ClusterStatus")
     @Expose
     private String ClusterStatus;
+
+    /**
+    * Cluster operation sub-status.
+    */
+    @SerializedName("ClusterSubStatus")
+    @Expose
+    private String ClusterSubStatus;
 
     /**
     * Cluster check mode. Valid values: `Cluster_Normal`, `Cluster_Actived`.
@@ -162,6 +172,99 @@ public class ClusterInfoItem extends AbstractModel {
     @SerializedName("TaskCreateTime")
     @Expose
     private String TaskCreateTime;
+
+    /**
+    * Access status
+Not connected
+Defended
+Unprotected: AccessedInstalled
+Partial protection: AccessedPartialDefence
+Access exception: AccessedException
+Uninstallation Exception: AccessedUninstallException
+ACCESSING: installing
+Uninstalling: AccessedUninstalling
+    */
+    @SerializedName("AccessedStatus")
+    @Expose
+    private String AccessedStatus;
+
+    /**
+    * Reason for Access Failure
+    */
+    @SerializedName("AccessedSubStatus")
+    @Expose
+    private String AccessedSubStatus;
+
+    /**
+    * Access/Uninstallation failure reason.
+    */
+    @SerializedName("AccessedErrorReason")
+    @Expose
+    private String AccessedErrorReason;
+
+    /**
+    * Total number of nodes
+    */
+    @SerializedName("NodeCount")
+    @Expose
+    private Long NodeCount;
+
+    /**
+    * Offline Node Count
+    */
+    @SerializedName("OffLineNodeCount")
+    @Expose
+    private Long OffLineNodeCount;
+
+    /**
+    * Number of Nodes Without Agent Installed
+    */
+    @SerializedName("UnInstallAgentNodeCount")
+    @Expose
+    private Long UnInstallAgentNodeCount;
+
+    /**
+    * Number of billing cores (elastic billing cores + regular billing cores).
+    */
+    @SerializedName("ChargeCoresCnt")
+    @Expose
+    private Long ChargeCoresCnt;
+
+    /**
+    * 
+    */
+    @SerializedName("MasterAddresses")
+    @Expose
+    private String [] MasterAddresses;
+
+    /**
+    * 
+    */
+    @SerializedName("CoresCnt")
+    @Expose
+    private Long CoresCnt;
+
+    /**
+    * Cluster audit switch status:
+Closed / Closing / CloseFailed / Opened / Opening / OpenFailed
+    */
+    @SerializedName("ClusterAuditStatus")
+    @Expose
+    private String ClusterAuditStatus;
+
+    /**
+    * Information on the failure to enable/disable cluster audit.
+    */
+    @SerializedName("ClusterAuditFailedInfo")
+    @Expose
+    private String ClusterAuditFailedInfo;
+
+    /**
+    * Owner name.
+    */
+    @SerializedName("OwnerName")
+    @Expose
+    private String OwnerName;
 
     /**
      * Get Cluster ID 
@@ -276,16 +379,28 @@ public class ClusterInfoItem extends AbstractModel {
     }
 
     /**
-     * Get Status of the monitoring component. Valid values: `Defender_Uninstall`, `Defender_Normal`, `Defender_Error`, `Defender_Installing`. 
-     * @return DefenderStatus Status of the monitoring component. Valid values: `Defender_Uninstall`, `Defender_Normal`, `Defender_Error`, `Defender_Installing`.
+     * Get Protection Status 
+Defended 
+Unprotected
+Partially defended 
+     * @return DefenderStatus Protection Status 
+Defended 
+Unprotected
+Partially defended
      */
     public String getDefenderStatus() {
         return this.DefenderStatus;
     }
 
     /**
-     * Set Status of the monitoring component. Valid values: `Defender_Uninstall`, `Defender_Normal`, `Defender_Error`, `Defender_Installing`.
-     * @param DefenderStatus Status of the monitoring component. Valid values: `Defender_Uninstall`, `Defender_Normal`, `Defender_Error`, `Defender_Installing`.
+     * Set Protection Status 
+Defended 
+Unprotected
+Partially defended
+     * @param DefenderStatus Protection Status 
+Defended 
+Unprotected
+Partially defended
      */
     public void setDefenderStatus(String DefenderStatus) {
         this.DefenderStatus = DefenderStatus;
@@ -305,6 +420,22 @@ public class ClusterInfoItem extends AbstractModel {
      */
     public void setClusterStatus(String ClusterStatus) {
         this.ClusterStatus = ClusterStatus;
+    }
+
+    /**
+     * Get Cluster operation sub-status. 
+     * @return ClusterSubStatus Cluster operation sub-status.
+     */
+    public String getClusterSubStatus() {
+        return this.ClusterSubStatus;
+    }
+
+    /**
+     * Set Cluster operation sub-status.
+     * @param ClusterSubStatus Cluster operation sub-status.
+     */
+    public void setClusterSubStatus(String ClusterSubStatus) {
+        this.ClusterSubStatus = ClusterSubStatus;
     }
 
     /**
@@ -483,6 +614,234 @@ public class ClusterInfoItem extends AbstractModel {
         this.TaskCreateTime = TaskCreateTime;
     }
 
+    /**
+     * Get Access status
+Not connected
+Defended
+Unprotected: AccessedInstalled
+Partial protection: AccessedPartialDefence
+Access exception: AccessedException
+Uninstallation Exception: AccessedUninstallException
+ACCESSING: installing
+Uninstalling: AccessedUninstalling 
+     * @return AccessedStatus Access status
+Not connected
+Defended
+Unprotected: AccessedInstalled
+Partial protection: AccessedPartialDefence
+Access exception: AccessedException
+Uninstallation Exception: AccessedUninstallException
+ACCESSING: installing
+Uninstalling: AccessedUninstalling
+     */
+    public String getAccessedStatus() {
+        return this.AccessedStatus;
+    }
+
+    /**
+     * Set Access status
+Not connected
+Defended
+Unprotected: AccessedInstalled
+Partial protection: AccessedPartialDefence
+Access exception: AccessedException
+Uninstallation Exception: AccessedUninstallException
+ACCESSING: installing
+Uninstalling: AccessedUninstalling
+     * @param AccessedStatus Access status
+Not connected
+Defended
+Unprotected: AccessedInstalled
+Partial protection: AccessedPartialDefence
+Access exception: AccessedException
+Uninstallation Exception: AccessedUninstallException
+ACCESSING: installing
+Uninstalling: AccessedUninstalling
+     */
+    public void setAccessedStatus(String AccessedStatus) {
+        this.AccessedStatus = AccessedStatus;
+    }
+
+    /**
+     * Get Reason for Access Failure 
+     * @return AccessedSubStatus Reason for Access Failure
+     */
+    public String getAccessedSubStatus() {
+        return this.AccessedSubStatus;
+    }
+
+    /**
+     * Set Reason for Access Failure
+     * @param AccessedSubStatus Reason for Access Failure
+     */
+    public void setAccessedSubStatus(String AccessedSubStatus) {
+        this.AccessedSubStatus = AccessedSubStatus;
+    }
+
+    /**
+     * Get Access/Uninstallation failure reason. 
+     * @return AccessedErrorReason Access/Uninstallation failure reason.
+     */
+    public String getAccessedErrorReason() {
+        return this.AccessedErrorReason;
+    }
+
+    /**
+     * Set Access/Uninstallation failure reason.
+     * @param AccessedErrorReason Access/Uninstallation failure reason.
+     */
+    public void setAccessedErrorReason(String AccessedErrorReason) {
+        this.AccessedErrorReason = AccessedErrorReason;
+    }
+
+    /**
+     * Get Total number of nodes 
+     * @return NodeCount Total number of nodes
+     */
+    public Long getNodeCount() {
+        return this.NodeCount;
+    }
+
+    /**
+     * Set Total number of nodes
+     * @param NodeCount Total number of nodes
+     */
+    public void setNodeCount(Long NodeCount) {
+        this.NodeCount = NodeCount;
+    }
+
+    /**
+     * Get Offline Node Count 
+     * @return OffLineNodeCount Offline Node Count
+     */
+    public Long getOffLineNodeCount() {
+        return this.OffLineNodeCount;
+    }
+
+    /**
+     * Set Offline Node Count
+     * @param OffLineNodeCount Offline Node Count
+     */
+    public void setOffLineNodeCount(Long OffLineNodeCount) {
+        this.OffLineNodeCount = OffLineNodeCount;
+    }
+
+    /**
+     * Get Number of Nodes Without Agent Installed 
+     * @return UnInstallAgentNodeCount Number of Nodes Without Agent Installed
+     */
+    public Long getUnInstallAgentNodeCount() {
+        return this.UnInstallAgentNodeCount;
+    }
+
+    /**
+     * Set Number of Nodes Without Agent Installed
+     * @param UnInstallAgentNodeCount Number of Nodes Without Agent Installed
+     */
+    public void setUnInstallAgentNodeCount(Long UnInstallAgentNodeCount) {
+        this.UnInstallAgentNodeCount = UnInstallAgentNodeCount;
+    }
+
+    /**
+     * Get Number of billing cores (elastic billing cores + regular billing cores). 
+     * @return ChargeCoresCnt Number of billing cores (elastic billing cores + regular billing cores).
+     */
+    public Long getChargeCoresCnt() {
+        return this.ChargeCoresCnt;
+    }
+
+    /**
+     * Set Number of billing cores (elastic billing cores + regular billing cores).
+     * @param ChargeCoresCnt Number of billing cores (elastic billing cores + regular billing cores).
+     */
+    public void setChargeCoresCnt(Long ChargeCoresCnt) {
+        this.ChargeCoresCnt = ChargeCoresCnt;
+    }
+
+    /**
+     * Get  
+     * @return MasterAddresses 
+     */
+    public String [] getMasterAddresses() {
+        return this.MasterAddresses;
+    }
+
+    /**
+     * Set 
+     * @param MasterAddresses 
+     */
+    public void setMasterAddresses(String [] MasterAddresses) {
+        this.MasterAddresses = MasterAddresses;
+    }
+
+    /**
+     * Get  
+     * @return CoresCnt 
+     */
+    public Long getCoresCnt() {
+        return this.CoresCnt;
+    }
+
+    /**
+     * Set 
+     * @param CoresCnt 
+     */
+    public void setCoresCnt(Long CoresCnt) {
+        this.CoresCnt = CoresCnt;
+    }
+
+    /**
+     * Get Cluster audit switch status:
+Closed / Closing / CloseFailed / Opened / Opening / OpenFailed 
+     * @return ClusterAuditStatus Cluster audit switch status:
+Closed / Closing / CloseFailed / Opened / Opening / OpenFailed
+     */
+    public String getClusterAuditStatus() {
+        return this.ClusterAuditStatus;
+    }
+
+    /**
+     * Set Cluster audit switch status:
+Closed / Closing / CloseFailed / Opened / Opening / OpenFailed
+     * @param ClusterAuditStatus Cluster audit switch status:
+Closed / Closing / CloseFailed / Opened / Opening / OpenFailed
+     */
+    public void setClusterAuditStatus(String ClusterAuditStatus) {
+        this.ClusterAuditStatus = ClusterAuditStatus;
+    }
+
+    /**
+     * Get Information on the failure to enable/disable cluster audit. 
+     * @return ClusterAuditFailedInfo Information on the failure to enable/disable cluster audit.
+     */
+    public String getClusterAuditFailedInfo() {
+        return this.ClusterAuditFailedInfo;
+    }
+
+    /**
+     * Set Information on the failure to enable/disable cluster audit.
+     * @param ClusterAuditFailedInfo Information on the failure to enable/disable cluster audit.
+     */
+    public void setClusterAuditFailedInfo(String ClusterAuditFailedInfo) {
+        this.ClusterAuditFailedInfo = ClusterAuditFailedInfo;
+    }
+
+    /**
+     * Get Owner name. 
+     * @return OwnerName Owner name.
+     */
+    public String getOwnerName() {
+        return this.OwnerName;
+    }
+
+    /**
+     * Set Owner name.
+     * @param OwnerName Owner name.
+     */
+    public void setOwnerName(String OwnerName) {
+        this.OwnerName = OwnerName;
+    }
+
     public ClusterInfoItem() {
     }
 
@@ -518,6 +877,9 @@ public class ClusterInfoItem extends AbstractModel {
         if (source.ClusterStatus != null) {
             this.ClusterStatus = new String(source.ClusterStatus);
         }
+        if (source.ClusterSubStatus != null) {
+            this.ClusterSubStatus = new String(source.ClusterSubStatus);
+        }
         if (source.ClusterCheckMode != null) {
             this.ClusterCheckMode = new String(source.ClusterCheckMode);
         }
@@ -551,6 +913,45 @@ public class ClusterInfoItem extends AbstractModel {
         if (source.TaskCreateTime != null) {
             this.TaskCreateTime = new String(source.TaskCreateTime);
         }
+        if (source.AccessedStatus != null) {
+            this.AccessedStatus = new String(source.AccessedStatus);
+        }
+        if (source.AccessedSubStatus != null) {
+            this.AccessedSubStatus = new String(source.AccessedSubStatus);
+        }
+        if (source.AccessedErrorReason != null) {
+            this.AccessedErrorReason = new String(source.AccessedErrorReason);
+        }
+        if (source.NodeCount != null) {
+            this.NodeCount = new Long(source.NodeCount);
+        }
+        if (source.OffLineNodeCount != null) {
+            this.OffLineNodeCount = new Long(source.OffLineNodeCount);
+        }
+        if (source.UnInstallAgentNodeCount != null) {
+            this.UnInstallAgentNodeCount = new Long(source.UnInstallAgentNodeCount);
+        }
+        if (source.ChargeCoresCnt != null) {
+            this.ChargeCoresCnt = new Long(source.ChargeCoresCnt);
+        }
+        if (source.MasterAddresses != null) {
+            this.MasterAddresses = new String[source.MasterAddresses.length];
+            for (int i = 0; i < source.MasterAddresses.length; i++) {
+                this.MasterAddresses[i] = new String(source.MasterAddresses[i]);
+            }
+        }
+        if (source.CoresCnt != null) {
+            this.CoresCnt = new Long(source.CoresCnt);
+        }
+        if (source.ClusterAuditStatus != null) {
+            this.ClusterAuditStatus = new String(source.ClusterAuditStatus);
+        }
+        if (source.ClusterAuditFailedInfo != null) {
+            this.ClusterAuditFailedInfo = new String(source.ClusterAuditFailedInfo);
+        }
+        if (source.OwnerName != null) {
+            this.OwnerName = new String(source.OwnerName);
+        }
     }
 
 
@@ -567,6 +968,7 @@ public class ClusterInfoItem extends AbstractModel {
         this.setParamSimple(map, prefix + "Region", this.Region);
         this.setParamSimple(map, prefix + "DefenderStatus", this.DefenderStatus);
         this.setParamSimple(map, prefix + "ClusterStatus", this.ClusterStatus);
+        this.setParamSimple(map, prefix + "ClusterSubStatus", this.ClusterSubStatus);
         this.setParamSimple(map, prefix + "ClusterCheckMode", this.ClusterCheckMode);
         this.setParamSimple(map, prefix + "ClusterAutoCheck", this.ClusterAutoCheck);
         this.setParamSimple(map, prefix + "DefenderErrorReason", this.DefenderErrorReason);
@@ -578,6 +980,18 @@ public class ClusterInfoItem extends AbstractModel {
         this.setParamSimple(map, prefix + "CheckFailReason", this.CheckFailReason);
         this.setParamSimple(map, prefix + "CheckStatus", this.CheckStatus);
         this.setParamSimple(map, prefix + "TaskCreateTime", this.TaskCreateTime);
+        this.setParamSimple(map, prefix + "AccessedStatus", this.AccessedStatus);
+        this.setParamSimple(map, prefix + "AccessedSubStatus", this.AccessedSubStatus);
+        this.setParamSimple(map, prefix + "AccessedErrorReason", this.AccessedErrorReason);
+        this.setParamSimple(map, prefix + "NodeCount", this.NodeCount);
+        this.setParamSimple(map, prefix + "OffLineNodeCount", this.OffLineNodeCount);
+        this.setParamSimple(map, prefix + "UnInstallAgentNodeCount", this.UnInstallAgentNodeCount);
+        this.setParamSimple(map, prefix + "ChargeCoresCnt", this.ChargeCoresCnt);
+        this.setParamArraySimple(map, prefix + "MasterAddresses.", this.MasterAddresses);
+        this.setParamSimple(map, prefix + "CoresCnt", this.CoresCnt);
+        this.setParamSimple(map, prefix + "ClusterAuditStatus", this.ClusterAuditStatus);
+        this.setParamSimple(map, prefix + "ClusterAuditFailedInfo", this.ClusterAuditFailedInfo);
+        this.setParamSimple(map, prefix + "OwnerName", this.OwnerName);
 
     }
 }

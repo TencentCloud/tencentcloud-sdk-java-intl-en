@@ -24,43 +24,45 @@ import java.util.HashMap;
 public class PreviewKafkaRechargeRequest extends AbstractModel {
 
     /**
-    * Preview type. Valid values: 1 (source data preview) and 2 (result preview).
+    * Preview type. 1: preview of source data; 2: preview of exported results.
     */
     @SerializedName("PreviewType")
     @Expose
     private Long PreviewType;
 
     /**
-    * Kafka type. Valid values: 0 (Tencent Cloud CKafka) and 1 (customer's Kafka)
+    * Import Kafka type. 0: Tencent Cloud CKafka; 1: user-built kafka.
     */
     @SerializedName("KafkaType")
     @Expose
     private Long KafkaType;
 
     /**
-    * List of Kafka-related topics that the user needs to import, separated by commas. Supports up to 100 topics.
+    * List of Kafka-related topics to be imported by the user, topics separated by commas.
+Supports up to 100.
     */
     @SerializedName("UserKafkaTopics")
     @Expose
     private String UserKafkaTopics;
 
     /**
-    * Position for data import. Valid values: -2 (earliest, default) and -1 (latest).
+    * Import data location. -2: earliest; -1: latest.
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * Tencent Cloud CKafka instance ID.
-KafkaInstance is required when KafkaType is 0
+    * Tencent Cloud CKafka instance ID. The parameter KafkaInstance is valid and required when KafkaType is 0.
+-Get the instance id through [Get Instance List](https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1).
     */
     @SerializedName("KafkaInstance")
     @Expose
     private String KafkaInstance;
 
     /**
-    * Service AddressServerAddr is required when KafkaType is 1
+    * Service address.
+When KafkaType is 1, ServerAddr is required.
     */
     @SerializedName("ServerAddr")
     @Expose
@@ -75,14 +77,17 @@ Valid when KafkaType is 1.
     private Boolean IsEncryptionAddr;
 
     /**
-    * Encrypted Access ProtocolWhen KafkaType is 1 and IsEncryptionAddr is true, Protocol is required
+    * Encrypted Access Protocol.
+When KafkaType is 1 and IsEncryptionAddr is true, Protocol is required.
     */
     @SerializedName("Protocol")
     @Expose
     private KafkaProtocolInfo Protocol;
 
     /**
-    * Kafka consumer group name
+    * User Kafka consumer group.
+
+-A consumption group is a scalable and fault-tolerant consumer mechanism provided by Kafka. Multiple consumers exist in a consumption group, and all consumers in the group consume subscribed data of messages in the Topic. A consumer can consume multiple partitions simultaneously, but one Partition can only be consumed by a single consumer in the group.
     */
     @SerializedName("ConsumerGroupName")
     @Expose
@@ -96,100 +101,115 @@ Valid when KafkaType is 1.
     private LogRechargeRuleInfo LogRechargeRule;
 
     /**
-     * Get Preview type. Valid values: 1 (source data preview) and 2 (result preview). 
-     * @return PreviewType Preview type. Valid values: 1 (source data preview) and 2 (result preview).
+    * User kafka extended information
+    */
+    @SerializedName("UserKafkaMeta")
+    @Expose
+    private UserKafkaMeta UserKafkaMeta;
+
+    /**
+     * Get Preview type. 1: preview of source data; 2: preview of exported results. 
+     * @return PreviewType Preview type. 1: preview of source data; 2: preview of exported results.
      */
     public Long getPreviewType() {
         return this.PreviewType;
     }
 
     /**
-     * Set Preview type. Valid values: 1 (source data preview) and 2 (result preview).
-     * @param PreviewType Preview type. Valid values: 1 (source data preview) and 2 (result preview).
+     * Set Preview type. 1: preview of source data; 2: preview of exported results.
+     * @param PreviewType Preview type. 1: preview of source data; 2: preview of exported results.
      */
     public void setPreviewType(Long PreviewType) {
         this.PreviewType = PreviewType;
     }
 
     /**
-     * Get Kafka type. Valid values: 0 (Tencent Cloud CKafka) and 1 (customer's Kafka) 
-     * @return KafkaType Kafka type. Valid values: 0 (Tencent Cloud CKafka) and 1 (customer's Kafka)
+     * Get Import Kafka type. 0: Tencent Cloud CKafka; 1: user-built kafka. 
+     * @return KafkaType Import Kafka type. 0: Tencent Cloud CKafka; 1: user-built kafka.
      */
     public Long getKafkaType() {
         return this.KafkaType;
     }
 
     /**
-     * Set Kafka type. Valid values: 0 (Tencent Cloud CKafka) and 1 (customer's Kafka)
-     * @param KafkaType Kafka type. Valid values: 0 (Tencent Cloud CKafka) and 1 (customer's Kafka)
+     * Set Import Kafka type. 0: Tencent Cloud CKafka; 1: user-built kafka.
+     * @param KafkaType Import Kafka type. 0: Tencent Cloud CKafka; 1: user-built kafka.
      */
     public void setKafkaType(Long KafkaType) {
         this.KafkaType = KafkaType;
     }
 
     /**
-     * Get List of Kafka-related topics that the user needs to import, separated by commas. Supports up to 100 topics. 
-     * @return UserKafkaTopics List of Kafka-related topics that the user needs to import, separated by commas. Supports up to 100 topics.
+     * Get List of Kafka-related topics to be imported by the user, topics separated by commas.
+Supports up to 100. 
+     * @return UserKafkaTopics List of Kafka-related topics to be imported by the user, topics separated by commas.
+Supports up to 100.
      */
     public String getUserKafkaTopics() {
         return this.UserKafkaTopics;
     }
 
     /**
-     * Set List of Kafka-related topics that the user needs to import, separated by commas. Supports up to 100 topics.
-     * @param UserKafkaTopics List of Kafka-related topics that the user needs to import, separated by commas. Supports up to 100 topics.
+     * Set List of Kafka-related topics to be imported by the user, topics separated by commas.
+Supports up to 100.
+     * @param UserKafkaTopics List of Kafka-related topics to be imported by the user, topics separated by commas.
+Supports up to 100.
      */
     public void setUserKafkaTopics(String UserKafkaTopics) {
         this.UserKafkaTopics = UserKafkaTopics;
     }
 
     /**
-     * Get Position for data import. Valid values: -2 (earliest, default) and -1 (latest). 
-     * @return Offset Position for data import. Valid values: -2 (earliest, default) and -1 (latest).
+     * Get Import data location. -2: earliest; -1: latest. 
+     * @return Offset Import data location. -2: earliest; -1: latest.
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Position for data import. Valid values: -2 (earliest, default) and -1 (latest).
-     * @param Offset Position for data import. Valid values: -2 (earliest, default) and -1 (latest).
+     * Set Import data location. -2: earliest; -1: latest.
+     * @param Offset Import data location. -2: earliest; -1: latest.
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get Tencent Cloud CKafka instance ID.
-KafkaInstance is required when KafkaType is 0 
-     * @return KafkaInstance Tencent Cloud CKafka instance ID.
-KafkaInstance is required when KafkaType is 0
+     * Get Tencent Cloud CKafka instance ID. The parameter KafkaInstance is valid and required when KafkaType is 0.
+-Get the instance id through [Get Instance List](https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1). 
+     * @return KafkaInstance Tencent Cloud CKafka instance ID. The parameter KafkaInstance is valid and required when KafkaType is 0.
+-Get the instance id through [Get Instance List](https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1).
      */
     public String getKafkaInstance() {
         return this.KafkaInstance;
     }
 
     /**
-     * Set Tencent Cloud CKafka instance ID.
-KafkaInstance is required when KafkaType is 0
-     * @param KafkaInstance Tencent Cloud CKafka instance ID.
-KafkaInstance is required when KafkaType is 0
+     * Set Tencent Cloud CKafka instance ID. The parameter KafkaInstance is valid and required when KafkaType is 0.
+-Get the instance id through [Get Instance List](https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1).
+     * @param KafkaInstance Tencent Cloud CKafka instance ID. The parameter KafkaInstance is valid and required when KafkaType is 0.
+-Get the instance id through [Get Instance List](https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1).
      */
     public void setKafkaInstance(String KafkaInstance) {
         this.KafkaInstance = KafkaInstance;
     }
 
     /**
-     * Get Service AddressServerAddr is required when KafkaType is 1 
-     * @return ServerAddr Service AddressServerAddr is required when KafkaType is 1
+     * Get Service address.
+When KafkaType is 1, ServerAddr is required. 
+     * @return ServerAddr Service address.
+When KafkaType is 1, ServerAddr is required.
      */
     public String getServerAddr() {
         return this.ServerAddr;
     }
 
     /**
-     * Set Service AddressServerAddr is required when KafkaType is 1
-     * @param ServerAddr Service AddressServerAddr is required when KafkaType is 1
+     * Set Service address.
+When KafkaType is 1, ServerAddr is required.
+     * @param ServerAddr Service address.
+When KafkaType is 1, ServerAddr is required.
      */
     public void setServerAddr(String ServerAddr) {
         this.ServerAddr = ServerAddr;
@@ -216,32 +236,44 @@ Valid when KafkaType is 1.
     }
 
     /**
-     * Get Encrypted Access ProtocolWhen KafkaType is 1 and IsEncryptionAddr is true, Protocol is required 
-     * @return Protocol Encrypted Access ProtocolWhen KafkaType is 1 and IsEncryptionAddr is true, Protocol is required
+     * Get Encrypted Access Protocol.
+When KafkaType is 1 and IsEncryptionAddr is true, Protocol is required. 
+     * @return Protocol Encrypted Access Protocol.
+When KafkaType is 1 and IsEncryptionAddr is true, Protocol is required.
      */
     public KafkaProtocolInfo getProtocol() {
         return this.Protocol;
     }
 
     /**
-     * Set Encrypted Access ProtocolWhen KafkaType is 1 and IsEncryptionAddr is true, Protocol is required
-     * @param Protocol Encrypted Access ProtocolWhen KafkaType is 1 and IsEncryptionAddr is true, Protocol is required
+     * Set Encrypted Access Protocol.
+When KafkaType is 1 and IsEncryptionAddr is true, Protocol is required.
+     * @param Protocol Encrypted Access Protocol.
+When KafkaType is 1 and IsEncryptionAddr is true, Protocol is required.
      */
     public void setProtocol(KafkaProtocolInfo Protocol) {
         this.Protocol = Protocol;
     }
 
     /**
-     * Get Kafka consumer group name 
-     * @return ConsumerGroupName Kafka consumer group name
+     * Get User Kafka consumer group.
+
+-A consumption group is a scalable and fault-tolerant consumer mechanism provided by Kafka. Multiple consumers exist in a consumption group, and all consumers in the group consume subscribed data of messages in the Topic. A consumer can consume multiple partitions simultaneously, but one Partition can only be consumed by a single consumer in the group. 
+     * @return ConsumerGroupName User Kafka consumer group.
+
+-A consumption group is a scalable and fault-tolerant consumer mechanism provided by Kafka. Multiple consumers exist in a consumption group, and all consumers in the group consume subscribed data of messages in the Topic. A consumer can consume multiple partitions simultaneously, but one Partition can only be consumed by a single consumer in the group.
      */
     public String getConsumerGroupName() {
         return this.ConsumerGroupName;
     }
 
     /**
-     * Set Kafka consumer group name
-     * @param ConsumerGroupName Kafka consumer group name
+     * Set User Kafka consumer group.
+
+-A consumption group is a scalable and fault-tolerant consumer mechanism provided by Kafka. Multiple consumers exist in a consumption group, and all consumers in the group consume subscribed data of messages in the Topic. A consumer can consume multiple partitions simultaneously, but one Partition can only be consumed by a single consumer in the group.
+     * @param ConsumerGroupName User Kafka consumer group.
+
+-A consumption group is a scalable and fault-tolerant consumer mechanism provided by Kafka. Multiple consumers exist in a consumption group, and all consumers in the group consume subscribed data of messages in the Topic. A consumer can consume multiple partitions simultaneously, but one Partition can only be consumed by a single consumer in the group.
      */
     public void setConsumerGroupName(String ConsumerGroupName) {
         this.ConsumerGroupName = ConsumerGroupName;
@@ -261,6 +293,22 @@ Valid when KafkaType is 1.
      */
     public void setLogRechargeRule(LogRechargeRuleInfo LogRechargeRule) {
         this.LogRechargeRule = LogRechargeRule;
+    }
+
+    /**
+     * Get User kafka extended information 
+     * @return UserKafkaMeta User kafka extended information
+     */
+    public UserKafkaMeta getUserKafkaMeta() {
+        return this.UserKafkaMeta;
+    }
+
+    /**
+     * Set User kafka extended information
+     * @param UserKafkaMeta User kafka extended information
+     */
+    public void setUserKafkaMeta(UserKafkaMeta UserKafkaMeta) {
+        this.UserKafkaMeta = UserKafkaMeta;
     }
 
     public PreviewKafkaRechargeRequest() {
@@ -301,6 +349,9 @@ Valid when KafkaType is 1.
         if (source.LogRechargeRule != null) {
             this.LogRechargeRule = new LogRechargeRuleInfo(source.LogRechargeRule);
         }
+        if (source.UserKafkaMeta != null) {
+            this.UserKafkaMeta = new UserKafkaMeta(source.UserKafkaMeta);
+        }
     }
 
 
@@ -318,6 +369,7 @@ Valid when KafkaType is 1.
         this.setParamObj(map, prefix + "Protocol.", this.Protocol);
         this.setParamSimple(map, prefix + "ConsumerGroupName", this.ConsumerGroupName);
         this.setParamObj(map, prefix + "LogRechargeRule.", this.LogRechargeRule);
+        this.setParamObj(map, prefix + "UserKafkaMeta.", this.UserKafkaMeta);
 
     }
 }

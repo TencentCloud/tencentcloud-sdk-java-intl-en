@@ -39,7 +39,9 @@ public class TcssClient extends AbstractClient{
     }
 
     /**
-     *This API is used to create a task to add and publish a network policy in the container network.
+     *deprecated pending reconstruction
+
+Create a network policy and add and distribute tasks for the container network.
      * @param req AddAndPublishNetworkFirewallPolicyDetailRequest
      * @return AddAndPublishNetworkFirewallPolicyDetailResponse
      * @throws TencentCloudSDKException
@@ -50,7 +52,9 @@ public class TcssClient extends AbstractClient{
     }
 
     /**
-     *This API is used to create a task to configure and publish a YAML network policy in the container network.
+     *This feature is deprecated pending tripartite reconstruction
+
+Create a YAML network policy and distribute tasks for the container network.
      * @param req AddAndPublishNetworkFirewallPolicyYamlDetailRequest
      * @return AddAndPublishNetworkFirewallPolicyYamlDetailResponse
      * @throws TencentCloudSDKException
@@ -195,7 +199,9 @@ public class TcssClient extends AbstractClient{
     }
 
     /**
-     *This API is used to create a task to add a network policy in the container network.
+     *This feature is deprecated pending tripartite reconstruction
+
+Create a network policy and add tasks for the container network.
      * @param req AddNetworkFirewallPolicyDetailRequest
      * @return AddNetworkFirewallPolicyDetailResponse
      * @throws TencentCloudSDKException
@@ -206,7 +212,9 @@ public class TcssClient extends AbstractClient{
     }
 
     /**
-     *This API is used to create a task to add a YAML network policy in the container network.
+     *deprecated pending reconstruction
+
+Create a YAML network policy and add tasks for the container network.
      * @param req AddNetworkFirewallPolicyYamlDetailRequest
      * @return AddNetworkFirewallPolicyYamlDetailResponse
      * @throws TencentCloudSDKException
@@ -217,7 +225,31 @@ public class TcssClient extends AbstractClient{
     }
 
     /**
-     *This API is used to create a task to check a YAML network policy in the container network.
+     *Add or modify the allowlist for malicious external connections.
+     * @param req AddOrModifyMaliciousConnectionWhiteListRequest
+     * @return AddOrModifyMaliciousConnectionWhiteListResponse
+     * @throws TencentCloudSDKException
+     */
+    public AddOrModifyMaliciousConnectionWhiteListResponse AddOrModifyMaliciousConnectionWhiteList(AddOrModifyMaliciousConnectionWhiteListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "AddOrModifyMaliciousConnectionWhiteList", AddOrModifyMaliciousConnectionWhiteListResponse.class);
+    }
+
+    /**
+     *This API is used to add or modify Trojan allowlist rules.
+     * @param req AddOrModifyVirusWhiteListRuleRequest
+     * @return AddOrModifyVirusWhiteListRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public AddOrModifyVirusWhiteListRuleResponse AddOrModifyVirusWhiteListRule(AddOrModifyVirusWhiteListRuleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "AddOrModifyVirusWhiteListRule", AddOrModifyVirusWhiteListRuleResponse.class);
+    }
+
+    /**
+     *deprecated pending reconstruction
+
+Create a task of check the YAML network policy for the container network.
      * @param req CheckNetworkFirewallPolicyYamlRequest
      * @return CheckNetworkFirewallPolicyYamlResponse
      * @throws TencentCloudSDKException
@@ -239,7 +271,9 @@ public class TcssClient extends AbstractClient{
     }
 
     /**
-     *This API is used to create a task to confirm a network policy in the container network.
+     *deprecated pending reconstruction
+
+Create a network policy and confirm tasks for the container network.
      * @param req ConfirmNetworkFirewallPolicyRequest
      * @return ConfirmNetworkFirewallPolicyResponse
      * @throws TencentCloudSDKException
@@ -335,6 +369,17 @@ public class TcssClient extends AbstractClient{
     public CreateCheckComponentResponse CreateCheckComponent(CreateCheckComponentRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CreateCheckComponent", CreateCheckComponentResponse.class);
+    }
+
+    /**
+     *Create cluster access.
+     * @param req CreateClusterAccessRequest
+     * @return CreateClusterAccessResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateClusterAccessResponse CreateClusterAccess(CreateClusterAccessRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateClusterAccess", CreateClusterAccessResponse.class);
     }
 
     /**
@@ -470,7 +515,7 @@ public class TcssClient extends AbstractClient{
     }
 
     /**
-     *This API is used to create K8sApi abnormal event rules.
+     *Create a k8s API exception event RULE. The Action in RuleInfoList only supports RULE_MODE_ALERT (ALERT) and no longer supports RULE_MODE_RELEASE/PASS (allow). The EventID parameter has been removed. To add an event to the allowlist, use the ModifyK8sApiAbnormalWhitelist API.
      * @param req CreateK8sApiAbnormalRuleInfoRequest
      * @return CreateK8sApiAbnormalRuleInfoResponse
      * @throws TencentCloudSDKException
@@ -481,7 +526,9 @@ public class TcssClient extends AbstractClient{
     }
 
     /**
-     *This API is used to distribute a refresh task in the container network cluster.
+     *This feature is deprecated pending tripartite reconstruction
+
+Distribute refresh tasks of clusters for the container network.
      * @param req CreateNetworkFirewallClusterRefreshRequest
      * @return CreateNetworkFirewallClusterRefreshResponse
      * @throws TencentCloudSDKException
@@ -492,7 +539,9 @@ public class TcssClient extends AbstractClient{
     }
 
     /**
-     *This API is used to create a task to sync a network policy from the container network cluster.
+     *deprecated pending reconstruction
+
+Create an auto-discovery task according to the container network and cluster network policies.
      * @param req CreateNetworkFirewallPolicyDiscoverRequest
      * @return CreateNetworkFirewallPolicyDiscoverResponse
      * @throws TencentCloudSDKException
@@ -503,7 +552,9 @@ public class TcssClient extends AbstractClient{
     }
 
     /**
-     *This API is used to create a task to publish a network policy in the container network.
+     *deprecated pending reconstruction
+
+Create a network policy and distribute tasks for the container network.
      * @param req CreateNetworkFirewallPublishRequest
      * @return CreateNetworkFirewallPublishResponse
      * @throws TencentCloudSDKException
@@ -514,7 +565,9 @@ public class TcssClient extends AbstractClient{
     }
 
     /**
-     *This API is used to create a task to revoke a network policy in the container network.
+     *deprecated pending reconstruction
+
+Create a network policy and cancel tasks for the container network.
      * @param req CreateNetworkFirewallUndoPublishRequest
      * @return CreateNetworkFirewallUndoPublishResponse
      * @throws TencentCloudSDKException
@@ -735,7 +788,9 @@ public class TcssClient extends AbstractClient{
     }
 
     /**
-     *This API is used to remove the specified check item from the allowlist.
+     *Product refactoring and optimization, none of these APIs are called.
+
+Remove the designated detection item from the allowlist.
      * @param req DeleteCompliancePolicyItemFromWhitelistRequest
      * @return DeleteCompliancePolicyItemFromWhitelistResponse
      * @throws TencentCloudSDKException
@@ -790,7 +845,9 @@ public class TcssClient extends AbstractClient{
     }
 
     /**
-     *This API is used to create a task to delete a network policy in the container network.
+     *deprecated pending reconstruction
+
+Create a network policy and delete tasks for the container network.
      * @param req DeleteNetworkFirewallPolicyDetailRequest
      * @return DeleteNetworkFirewallPolicyDetailResponse
      * @throws TencentCloudSDKException
@@ -798,6 +855,17 @@ public class TcssClient extends AbstractClient{
     public DeleteNetworkFirewallPolicyDetailResponse DeleteNetworkFirewallPolicyDetail(DeleteNetworkFirewallPolicyDetailRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteNetworkFirewallPolicyDetail", DeleteNetworkFirewallPolicyDetailResponse.class);
+    }
+
+    /**
+     *Deleting Entries from the Vulnerability Defense Allowlist
+     * @param req DeleteRaspRulesRequest
+     * @return DeleteRaspRulesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteRaspRulesResponse DeleteRaspRules(DeleteRaspRulesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteRaspRules", DeleteRaspRulesResponse.class);
     }
 
     /**
@@ -856,6 +924,17 @@ public class TcssClient extends AbstractClient{
     }
 
     /**
+     *This API is used to delete Trojan allowlist rules.
+     * @param req DeleteVirusWhiteListRuleRequest
+     * @return DeleteVirusWhiteListRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteVirusWhiteListRuleResponse DeleteVirusWhiteListRule(DeleteVirusWhiteListRuleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteVirusWhiteListRule", DeleteVirusWhiteListRuleResponse.class);
+    }
+
+    /**
      *This API is used to get the current canary configuration of the user.
      * @param req DescribeABTestConfigRequest
      * @return DescribeABTestConfigResponse
@@ -900,19 +979,6 @@ public class TcssClient extends AbstractClient{
     }
 
     /**
-     *接口已废弃
-
-This API is used to query and export the list of abnormal process events at runtime.
-     * @param req DescribeAbnormalProcessEventsExportRequest
-     * @return DescribeAbnormalProcessEventsExportResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeAbnormalProcessEventsExportResponse DescribeAbnormalProcessEventsExport(DescribeAbnormalProcessEventsExportRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeAbnormalProcessEventsExport", DescribeAbnormalProcessEventsExportResponse.class);
-    }
-
-    /**
      *This API is used to count the number of pending abnormal process events at each severity level.
      * @param req DescribeAbnormalProcessLevelSummaryRequest
      * @return DescribeAbnormalProcessLevelSummaryResponse
@@ -943,19 +1009,6 @@ This API is used to query and export the list of abnormal process events at runt
     public DescribeAbnormalProcessRulesResponse DescribeAbnormalProcessRules(DescribeAbnormalProcessRulesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeAbnormalProcessRules", DescribeAbnormalProcessRulesResponse.class);
-    }
-
-    /**
-     *接口已废弃
-
-This API is used to query and export the list of abnormal process policies at runtime.
-     * @param req DescribeAbnormalProcessRulesExportRequest
-     * @return DescribeAbnormalProcessRulesExportResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeAbnormalProcessRulesExportResponse DescribeAbnormalProcessRulesExport(DescribeAbnormalProcessRulesExportRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeAbnormalProcessRulesExport", DescribeAbnormalProcessRulesExportResponse.class);
     }
 
     /**
@@ -1011,19 +1064,6 @@ This API is used to query and export the list of abnormal process policies at ru
     public DescribeAccessControlRulesResponse DescribeAccessControlRules(DescribeAccessControlRulesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeAccessControlRules", DescribeAccessControlRulesResponse.class);
-    }
-
-    /**
-     *接口已废弃
-
-This API is used to export the list of access control policies at runtime.
-     * @param req DescribeAccessControlRulesExportRequest
-     * @return DescribeAccessControlRulesExportResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeAccessControlRulesExportResponse DescribeAccessControlRulesExport(DescribeAccessControlRulesExportRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeAccessControlRulesExport", DescribeAccessControlRulesExportResponse.class);
     }
 
     /**
@@ -1211,19 +1251,6 @@ This API is used to export the list of access control policies at runtime.
     public DescribeAssetImageListResponse DescribeAssetImageList(DescribeAssetImageListRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeAssetImageList", DescribeAssetImageListResponse.class);
-    }
-
-    /**
-     *接口已废弃
-
-This API is used to export the list of images.
-     * @param req DescribeAssetImageListExportRequest
-     * @return DescribeAssetImageListExportResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeAssetImageListExportResponse DescribeAssetImageListExport(DescribeAssetImageListExportRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeAssetImageListExport", DescribeAssetImageListExportResponse.class);
     }
 
     /**
@@ -1799,19 +1826,6 @@ This API is used to export the list of images.
     }
 
     /**
-     *接口已废弃
-
-This API is used to export the list of container escape events.
-     * @param req DescribeEscapeEventsExportRequest
-     * @return DescribeEscapeEventsExportResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeEscapeEventsExportResponse DescribeEscapeEventsExport(DescribeEscapeEventsExportRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeEscapeEventsExport", DescribeEscapeEventsExportResponse.class);
-    }
-
-    /**
      *This API is used to query the information of a container escape scan rule.
      * @param req DescribeEscapeRuleInfoRequest
      * @return DescribeEscapeRuleInfoResponse
@@ -1867,7 +1881,7 @@ This API is used to export the list of container escape events.
     }
 
     /**
-     *This API is used to query the result of an export task.
+     *Query the progress of the export interface
      * @param req DescribeExportJobResultRequest
      * @return DescribeExportJobResultResponse
      * @throws TencentCloudSDKException
@@ -1930,6 +1944,72 @@ This API is used to export the list of container escape events.
     public DescribeImageComponentListResponse DescribeImageComponentList(DescribeImageComponentListRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeImageComponentList", DescribeImageComponentListResponse.class);
+    }
+
+    /**
+     *Query image interception event details.
+     * @param req DescribeImageDenyEventDetailRequest
+     * @return DescribeImageDenyEventDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeImageDenyEventDetailResponse DescribeImageDenyEventDetail(DescribeImageDenyEventDetailRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeImageDenyEventDetail", DescribeImageDenyEventDetailResponse.class);
+    }
+
+    /**
+     *Query the list of image interception events.
+     * @param req DescribeImageDenyEventListRequest
+     * @return DescribeImageDenyEventListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeImageDenyEventListResponse DescribeImageDenyEventList(DescribeImageDenyEventListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeImageDenyEventList", DescribeImageDenyEventListResponse.class);
+    }
+
+    /**
+     *Query the trend of image interception events.
+     * @param req DescribeImageDenyEventTendencyRequest
+     * @return DescribeImageDenyEventTendencyResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeImageDenyEventTendencyResponse DescribeImageDenyEventTendency(DescribeImageDenyEventTendencyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeImageDenyEventTendency", DescribeImageDenyEventTendencyResponse.class);
+    }
+
+    /**
+     *Query image interception rule details.
+     * @param req DescribeImageDenyRuleDetailRequest
+     * @return DescribeImageDenyRuleDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeImageDenyRuleDetailResponse DescribeImageDenyRuleDetail(DescribeImageDenyRuleDetailRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeImageDenyRuleDetail", DescribeImageDenyRuleDetailResponse.class);
+    }
+
+    /**
+     *Query the image interception rule list.
+     * @param req DescribeImageDenyRuleListRequest
+     * @return DescribeImageDenyRuleListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeImageDenyRuleListResponse DescribeImageDenyRuleList(DescribeImageDenyRuleListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeImageDenyRuleList", DescribeImageDenyRuleListResponse.class);
+    }
+
+    /**
+     *Query image interception rule statistics.
+     * @param req DescribeImageDenyRuleSummaryRequest
+     * @return DescribeImageDenyRuleSummaryResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeImageDenyRuleSummaryResponse DescribeImageDenyRuleSummary(DescribeImageDenyRuleSummaryRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeImageDenyRuleSummary", DescribeImageDenyRuleSummaryResponse.class);
     }
 
     /**
@@ -2043,7 +2123,7 @@ This API is used to export the list of container escape events.
     }
 
     /**
-     *This API is used to the K8sApi abnormal request rule list.
+     *This API is used to query the list of abnormal request rules for k8sapi. It supports fuzzy search by cluster name (ClusterName) and Cluster ID, with cluster rules (is_all=1) always returned. The response includes newly-added RuleInfoList (sub-rule content), RuleActions (deduplicated execution action list), and the EffectAllCluster field.
      * @param req DescribeK8sApiAbnormalRuleListRequest
      * @return DescribeK8sApiAbnormalRuleListResponse
      * @throws TencentCloudSDKException
@@ -2098,7 +2178,31 @@ This API is used to export the list of container escape events.
     }
 
     /**
-     *This API is used to query the list of cluster policy audits.
+     *Query the malicious external connection blocklist.
+     * @param req DescribeMaliciousConnectionBlackListRequest
+     * @return DescribeMaliciousConnectionBlackListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeMaliciousConnectionBlackListResponse DescribeMaliciousConnectionBlackList(DescribeMaliciousConnectionBlackListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeMaliciousConnectionBlackList", DescribeMaliciousConnectionBlackListResponse.class);
+    }
+
+    /**
+     *Query the allowlist for malicious external connections.
+     * @param req DescribeMaliciousConnectionWhiteListRequest
+     * @return DescribeMaliciousConnectionWhiteListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeMaliciousConnectionWhiteListResponse DescribeMaliciousConnectionWhiteList(DescribeMaliciousConnectionWhiteListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeMaliciousConnectionWhiteList", DescribeMaliciousConnectionWhiteListResponse.class);
+    }
+
+    /**
+     *This feature is deprecated pending tripartite reconstruction
+
+Query the cluster policy audit list.
      * @param req DescribeNetworkFirewallAuditRecordRequest
      * @return DescribeNetworkFirewallAuditRecordResponse
      * @throws TencentCloudSDKException
@@ -2109,7 +2213,7 @@ This API is used to export the list of container escape events.
     }
 
     /**
-     *This API is used to query the list of clusters.
+     *Query the network firewall cluster policy list.
      * @param req DescribeNetworkFirewallClusterListRequest
      * @return DescribeNetworkFirewallClusterListResponse
      * @throws TencentCloudSDKException
@@ -2120,7 +2224,9 @@ This API is used to export the list of container escape events.
     }
 
     /**
-     *This API is used to query the progress of the asset query task in the container network.
+     *This feature is deprecated pending tripartite reconstruction
+
+Query the asset task progress for the container network.
      * @param req DescribeNetworkFirewallClusterRefreshStatusRequest
      * @return DescribeNetworkFirewallClusterRefreshStatusResponse
      * @throws TencentCloudSDKException
@@ -2131,7 +2237,9 @@ This API is used to export the list of container escape events.
     }
 
     /**
-     *This API is used to query the list of cluster network namespace labels.
+     *This feature is deprecated pending tripartite reconstruction
+
+Query the cluster network space tag list.
      * @param req DescribeNetworkFirewallNamespaceLabelListRequest
      * @return DescribeNetworkFirewallNamespaceLabelListResponse
      * @throws TencentCloudSDKException
@@ -2142,7 +2250,9 @@ This API is used to export the list of container escape events.
     }
 
     /**
-     *This API is used to query cluster network Pod labels.
+     *deprecated pending reconstruction
+
+Query the cluster network pod tags.
      * @param req DescribeNetworkFirewallPodLabelsListRequest
      * @return DescribeNetworkFirewallPodLabelsListResponse
      * @throws TencentCloudSDKException
@@ -2153,7 +2263,9 @@ This API is used to export the list of container escape events.
     }
 
     /**
-     *This API is used to view the details of a policy in the container network cluster.
+     *deprecated pending reconstruction
+
+View policy details of clusters for the container network.
      * @param req DescribeNetworkFirewallPolicyDetailRequest
      * @return DescribeNetworkFirewallPolicyDetailResponse
      * @throws TencentCloudSDKException
@@ -2164,7 +2276,9 @@ This API is used to export the list of container escape events.
     }
 
     /**
-     *This API is used to query the progress of a network policy sync task in the container network.
+     *This feature is deprecated pending tripartite reconstruction
+
+Query the auto-discovery task process of the network policy for the network policy.
      * @param req DescribeNetworkFirewallPolicyDiscoverRequest
      * @return DescribeNetworkFirewallPolicyDiscoverResponse
      * @throws TencentCloudSDKException
@@ -2175,7 +2289,9 @@ This API is used to export the list of container escape events.
     }
 
     /**
-     *This API is used to query the list of cluster network policies.
+     *deprecated pending reconstruction
+
+Query the cluster network policy list.
      * @param req DescribeNetworkFirewallPolicyListRequest
      * @return DescribeNetworkFirewallPolicyListResponse
      * @throws TencentCloudSDKException
@@ -2186,7 +2302,9 @@ This API is used to export the list of container escape events.
     }
 
     /**
-     *This API is used to query the execution status of a network policy in the container network.
+     *This feature is deprecated pending tripartite reconstruction
+
+Query the network policy execution status for the container network.
      * @param req DescribeNetworkFirewallPolicyStatusRequest
      * @return DescribeNetworkFirewallPolicyStatusResponse
      * @throws TencentCloudSDKException
@@ -2197,7 +2315,9 @@ This API is used to export the list of container escape events.
     }
 
     /**
-     *This API is used to view the details of a YAML network policy in the container network cluster.
+     *deprecated pending reconstruction
+
+View YAML network policy details of clusters for the container network.
      * @param req DescribeNetworkFirewallPolicyYamlDetailRequest
      * @return DescribeNetworkFirewallPolicyYamlDetailResponse
      * @throws TencentCloudSDKException
@@ -2274,6 +2394,28 @@ This API is used to export the list of container escape events.
     }
 
     /**
+     *Retrieve the list of vulnerabilities in the Vulnerability Defense Allowlist
+     * @param req DescribeRaspRuleVulsRequest
+     * @return DescribeRaspRuleVulsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRaspRuleVulsResponse DescribeRaspRuleVuls(DescribeRaspRuleVulsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeRaspRuleVuls", DescribeRaspRuleVulsResponse.class);
+    }
+
+    /**
+     *Query the list of vulnerabilities that can be defensed.
+     * @param req DescribeRaspRulesRequest
+     * @return DescribeRaspRulesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRaspRulesResponse DescribeRaspRules(DescribeRaspRulesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeRaspRules", DescribeRaspRulesResponse.class);
+    }
+
+    /**
      *This API is used to query a refresh task.
      * @param req DescribeRefreshTaskRequest
      * @return DescribeRefreshTaskResponse
@@ -2315,6 +2457,28 @@ This API is used to export the list of container escape events.
     public DescribeReverseShellEventsExportResponse DescribeReverseShellEventsExport(DescribeReverseShellEventsExportRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeReverseShellEventsExport", DescribeReverseShellEventsExportResponse.class);
+    }
+
+    /**
+     *Query the reverse shell regular expression allowlist.
+     * @param req DescribeReverseShellRegexpWhiteListRequest
+     * @return DescribeReverseShellRegexpWhiteListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeReverseShellRegexpWhiteListResponse DescribeReverseShellRegexpWhiteList(DescribeReverseShellRegexpWhiteListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeReverseShellRegexpWhiteList", DescribeReverseShellRegexpWhiteListResponse.class);
+    }
+
+    /**
+     *Query details of the reverse shell regular expression allowlist.
+     * @param req DescribeReverseShellRegexpWhiteListInfoRequest
+     * @return DescribeReverseShellRegexpWhiteListInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeReverseShellRegexpWhiteListInfoResponse DescribeReverseShellRegexpWhiteListInfo(DescribeReverseShellRegexpWhiteListInfoRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeReverseShellRegexpWhiteListInfo", DescribeReverseShellRegexpWhiteListInfoResponse.class);
     }
 
     /**
@@ -2758,6 +2922,17 @@ This API is used to export the list of container escape events.
     }
 
     /**
+     *Query real-time monitoring settings of file scan at runtime.
+     * @param req DescribeVirusMonitorConfigRequest
+     * @return DescribeVirusMonitorConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeVirusMonitorConfigResponse DescribeVirusMonitorConfig(DescribeVirusMonitorConfigRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeVirusMonitorConfig", DescribeVirusMonitorConfigResponse.class);
+    }
+
+    /**
      *This API is used to query the real-time monitoring settings of virus scanning at runtime.
      * @param req DescribeVirusMonitorSettingRequest
      * @return DescribeVirusMonitorSettingResponse
@@ -2777,6 +2952,17 @@ This API is used to export the list of container escape events.
     public DescribeVirusSampleDownloadUrlResponse DescribeVirusSampleDownloadUrl(DescribeVirusSampleDownloadUrlRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeVirusSampleDownloadUrl", DescribeVirusSampleDownloadUrlResponse.class);
+    }
+
+    /**
+     *Query new settings of file scan at runtime.
+     * @param req DescribeVirusScanConfigRequest
+     * @return DescribeVirusScanConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeVirusScanConfigResponse DescribeVirusScanConfig(DescribeVirusScanConfigRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeVirusScanConfig", DescribeVirusScanConfigResponse.class);
     }
 
     /**
@@ -2832,6 +3018,17 @@ This API is used to export the list of container escape events.
     public DescribeVirusTaskListResponse DescribeVirusTaskList(DescribeVirusTaskListRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeVirusTaskList", DescribeVirusTaskListResponse.class);
+    }
+
+    /**
+     *This API is used to query the Trojan allowlist rule list.
+     * @param req DescribeVirusWhiteListRulesRequest
+     * @return DescribeVirusWhiteListRulesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeVirusWhiteListRulesResponse DescribeVirusWhiteListRules(DescribeVirusWhiteListRulesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeVirusWhiteListRules", DescribeVirusWhiteListRulesResponse.class);
     }
 
     /**
@@ -3220,6 +3417,17 @@ This API is used to export the list of container escape events.
     }
 
     /**
+     *This API is used to modify the protection status.
+     * @param req ModifyDefendStatusRequest
+     * @return ModifyDefendStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyDefendStatusResponse ModifyDefendStatus(ModifyDefendStatusRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyDefendStatus", ModifyDefendStatusResponse.class);
+    }
+
+    /**
      *This API is used to change the status of a container escape scan event.
      * @param req ModifyEscapeEventStatusRequest
      * @return ModifyEscapeEventStatusResponse
@@ -3275,7 +3483,7 @@ This API is used to export the list of container escape events.
     }
 
     /**
-     *This API is used to modify the information of K8sApi abnormal rules.
+     *Modify the exception rule info of k8sapi. The Action in RuleInfoList only supports RULE_MODE_ALERT and no longer supports RULE_MODE_RELEASE/PASS.
      * @param req ModifyK8sApiAbnormalRuleInfoRequest
      * @return ModifyK8sApiAbnormalRuleInfoResponse
      * @throws TencentCloudSDKException
@@ -3297,6 +3505,17 @@ This API is used to export the list of container escape events.
     }
 
     /**
+     *Edit or create a java Memory Trojan allowlist
+     * @param req ModifyRaspRulesRequest
+     * @return ModifyRaspRulesResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyRaspRulesResponse ModifyRaspRules(ModifyRaspRulesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyRaspRules", ModifyRaspRulesResponse.class);
+    }
+
+    /**
      *This API is used to change the status of a reverse shell event.
      * @param req ModifyReverseShellStatusRequest
      * @return ModifyReverseShellStatusResponse
@@ -3305,6 +3524,17 @@ This API is used to export the list of container escape events.
     public ModifyReverseShellStatusResponse ModifyReverseShellStatus(ModifyReverseShellStatusRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyReverseShellStatus", ModifyReverseShellStatusResponse.class);
+    }
+
+    /**
+     *Edit the malicious request event status.
+     * @param req ModifyRiskDnsEventStatusRequest
+     * @return ModifyRiskDnsEventStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyRiskDnsEventStatusResponse ModifyRiskDnsEventStatus(ModifyRiskDnsEventStatusRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyRiskDnsEventStatus", ModifyRiskDnsEventStatusResponse.class);
     }
 
     /**
@@ -3616,7 +3846,20 @@ This API is used to export the list of container escape events.
     }
 
     /**
-     *This API is used to create a task to update and publish a network policy in the container network.
+     *Uninstall cluster container security.
+     * @param req UninstallClusterContainerSecurityRequest
+     * @return UninstallClusterContainerSecurityResponse
+     * @throws TencentCloudSDKException
+     */
+    public UninstallClusterContainerSecurityResponse UninstallClusterContainerSecurity(UninstallClusterContainerSecurityRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UninstallClusterContainerSecurity", UninstallClusterContainerSecurityResponse.class);
+    }
+
+    /**
+     *This feature is deprecated pending tripartite reconstruction
+
+Create a network policy and update and distribute tasks for the container network.
      * @param req UpdateAndPublishNetworkFirewallPolicyDetailRequest
      * @return UpdateAndPublishNetworkFirewallPolicyDetailResponse
      * @throws TencentCloudSDKException
@@ -3627,7 +3870,9 @@ This API is used to export the list of container escape events.
     }
 
     /**
-     *This API is used to create a task to update and publish a YAML network policy in the container network.
+     *deprecated pending reconstruction
+
+Update the YAML network policy and distribute tasks for the container network.
      * @param req UpdateAndPublishNetworkFirewallPolicyYamlDetailRequest
      * @return UpdateAndPublishNetworkFirewallPolicyYamlDetailResponse
      * @throws TencentCloudSDKException
@@ -3660,7 +3905,9 @@ This API is used to export the list of container escape events.
     }
 
     /**
-     *This API is used to create a task to update a network policy in the container network.
+     *This feature is deprecated pending tripartite reconstruction
+
+Create a network policy update task for the container network.
      * @param req UpdateNetworkFirewallPolicyDetailRequest
      * @return UpdateNetworkFirewallPolicyDetailResponse
      * @throws TencentCloudSDKException
@@ -3671,7 +3918,9 @@ This API is used to export the list of container escape events.
     }
 
     /**
-     *This API is used to create a task to update a YAML network policy in the container network.
+     *deprecated pending reconstruction
+
+Update the YAML network policy task for the container network.
      * @param req UpdateNetworkFirewallPolicyYamlDetailRequest
      * @return UpdateNetworkFirewallPolicyYamlDetailResponse
      * @throws TencentCloudSDKException

@@ -24,164 +24,187 @@ import java.util.HashMap;
 public class CreateAssetImageRegistryScanTaskRequest extends AbstractModel {
 
     /**
-    * Whether to scan all images
+    * <p>Whether to scan all images.</p>
     */
     @SerializedName("All")
     @Expose
     private Boolean All;
 
     /**
-    * List of scanned images
+    * <p>List of images to be scanned.</p>
     */
     @SerializedName("Images")
     @Expose
     private ImageInfo [] Images;
 
     /**
-    * Array of scan types
+    * <p>Scan type array.</p>
     */
     @SerializedName("ScanType")
     @Expose
     private String [] ScanType;
 
     /**
-    * List of scanned images
+    * <p>List of images to be scanned.</p>
     */
     @SerializedName("Id")
     @Expose
     private Long [] Id;
 
     /**
-    * Filter
+    * <p>Filter conditions.</p>
     */
     @SerializedName("Filters")
     @Expose
     private AssetFilters [] Filters;
 
     /**
-    * List of images not to be scanned, which is used together with `Filters`.
+    * <p>List of images that do not need to be scanned, used in conjunction with Filters.</p>
     */
     @SerializedName("ExcludeImageList")
     @Expose
     private Long [] ExcludeImageList;
 
     /**
-    * Whether to scan only the latest repository images, which is used together with `Filters`.
+    * <p>Whether to scan only the latest version of the image in each repository, used in conjunction with Filters.</p>
     */
     @SerializedName("OnlyScanLatest")
     @Expose
     private Boolean OnlyScanLatest;
 
     /**
-     * Get Whether to scan all images 
-     * @return All Whether to scan all images
+    * <p>Task timeout duration.</p><p>Unit: seconds.</p>
+    */
+    @SerializedName("Timeout")
+    @Expose
+    private Long Timeout;
+
+    /**
+     * Get <p>Whether to scan all images.</p> 
+     * @return All <p>Whether to scan all images.</p>
      */
     public Boolean getAll() {
         return this.All;
     }
 
     /**
-     * Set Whether to scan all images
-     * @param All Whether to scan all images
+     * Set <p>Whether to scan all images.</p>
+     * @param All <p>Whether to scan all images.</p>
      */
     public void setAll(Boolean All) {
         this.All = All;
     }
 
     /**
-     * Get List of scanned images 
-     * @return Images List of scanned images
+     * Get <p>List of images to be scanned.</p> 
+     * @return Images <p>List of images to be scanned.</p>
      */
     public ImageInfo [] getImages() {
         return this.Images;
     }
 
     /**
-     * Set List of scanned images
-     * @param Images List of scanned images
+     * Set <p>List of images to be scanned.</p>
+     * @param Images <p>List of images to be scanned.</p>
      */
     public void setImages(ImageInfo [] Images) {
         this.Images = Images;
     }
 
     /**
-     * Get Array of scan types 
-     * @return ScanType Array of scan types
+     * Get <p>Scan type array.</p> 
+     * @return ScanType <p>Scan type array.</p>
      */
     public String [] getScanType() {
         return this.ScanType;
     }
 
     /**
-     * Set Array of scan types
-     * @param ScanType Array of scan types
+     * Set <p>Scan type array.</p>
+     * @param ScanType <p>Scan type array.</p>
      */
     public void setScanType(String [] ScanType) {
         this.ScanType = ScanType;
     }
 
     /**
-     * Get List of scanned images 
-     * @return Id List of scanned images
+     * Get <p>List of images to be scanned.</p> 
+     * @return Id <p>List of images to be scanned.</p>
      */
     public Long [] getId() {
         return this.Id;
     }
 
     /**
-     * Set List of scanned images
-     * @param Id List of scanned images
+     * Set <p>List of images to be scanned.</p>
+     * @param Id <p>List of images to be scanned.</p>
      */
     public void setId(Long [] Id) {
         this.Id = Id;
     }
 
     /**
-     * Get Filter 
-     * @return Filters Filter
+     * Get <p>Filter conditions.</p> 
+     * @return Filters <p>Filter conditions.</p>
      */
     public AssetFilters [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set Filter
-     * @param Filters Filter
+     * Set <p>Filter conditions.</p>
+     * @param Filters <p>Filter conditions.</p>
      */
     public void setFilters(AssetFilters [] Filters) {
         this.Filters = Filters;
     }
 
     /**
-     * Get List of images not to be scanned, which is used together with `Filters`. 
-     * @return ExcludeImageList List of images not to be scanned, which is used together with `Filters`.
+     * Get <p>List of images that do not need to be scanned, used in conjunction with Filters.</p> 
+     * @return ExcludeImageList <p>List of images that do not need to be scanned, used in conjunction with Filters.</p>
      */
     public Long [] getExcludeImageList() {
         return this.ExcludeImageList;
     }
 
     /**
-     * Set List of images not to be scanned, which is used together with `Filters`.
-     * @param ExcludeImageList List of images not to be scanned, which is used together with `Filters`.
+     * Set <p>List of images that do not need to be scanned, used in conjunction with Filters.</p>
+     * @param ExcludeImageList <p>List of images that do not need to be scanned, used in conjunction with Filters.</p>
      */
     public void setExcludeImageList(Long [] ExcludeImageList) {
         this.ExcludeImageList = ExcludeImageList;
     }
 
     /**
-     * Get Whether to scan only the latest repository images, which is used together with `Filters`. 
-     * @return OnlyScanLatest Whether to scan only the latest repository images, which is used together with `Filters`.
+     * Get <p>Whether to scan only the latest version of the image in each repository, used in conjunction with Filters.</p> 
+     * @return OnlyScanLatest <p>Whether to scan only the latest version of the image in each repository, used in conjunction with Filters.</p>
      */
     public Boolean getOnlyScanLatest() {
         return this.OnlyScanLatest;
     }
 
     /**
-     * Set Whether to scan only the latest repository images, which is used together with `Filters`.
-     * @param OnlyScanLatest Whether to scan only the latest repository images, which is used together with `Filters`.
+     * Set <p>Whether to scan only the latest version of the image in each repository, used in conjunction with Filters.</p>
+     * @param OnlyScanLatest <p>Whether to scan only the latest version of the image in each repository, used in conjunction with Filters.</p>
      */
     public void setOnlyScanLatest(Boolean OnlyScanLatest) {
         this.OnlyScanLatest = OnlyScanLatest;
+    }
+
+    /**
+     * Get <p>Task timeout duration.</p><p>Unit: seconds.</p> 
+     * @return Timeout <p>Task timeout duration.</p><p>Unit: seconds.</p>
+     */
+    public Long getTimeout() {
+        return this.Timeout;
+    }
+
+    /**
+     * Set <p>Task timeout duration.</p><p>Unit: seconds.</p>
+     * @param Timeout <p>Task timeout duration.</p><p>Unit: seconds.</p>
+     */
+    public void setTimeout(Long Timeout) {
+        this.Timeout = Timeout;
     }
 
     public CreateAssetImageRegistryScanTaskRequest() {
@@ -228,6 +251,9 @@ public class CreateAssetImageRegistryScanTaskRequest extends AbstractModel {
         if (source.OnlyScanLatest != null) {
             this.OnlyScanLatest = new Boolean(source.OnlyScanLatest);
         }
+        if (source.Timeout != null) {
+            this.Timeout = new Long(source.Timeout);
+        }
     }
 
 
@@ -242,6 +268,7 @@ public class CreateAssetImageRegistryScanTaskRequest extends AbstractModel {
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
         this.setParamArraySimple(map, prefix + "ExcludeImageList.", this.ExcludeImageList);
         this.setParamSimple(map, prefix + "OnlyScanLatest", this.OnlyScanLatest);
+        this.setParamSimple(map, prefix + "Timeout", this.Timeout);
 
     }
 }

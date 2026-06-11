@@ -25,7 +25,6 @@ public class DescribeMachineLicenseDetailResponse extends AbstractModel {
 
     /**
     * Authorization information
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("MachineLicense")
     @Expose
@@ -33,7 +32,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Total number
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("TotalCount")
     @Expose
@@ -47,10 +45,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Authorization information
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Authorization information 
      * @return MachineLicense Authorization information
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public MachineLicenseDetail [] getMachineLicense() {
         return this.MachineLicense;
@@ -58,19 +54,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Authorization information
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param MachineLicense Authorization information
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setMachineLicense(MachineLicenseDetail [] MachineLicense) {
         this.MachineLicense = MachineLicense;
     }
 
     /**
-     * Get Total number
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Total number 
      * @return TotalCount Total number
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getTotalCount() {
         return this.TotalCount;
@@ -78,9 +70,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Total number
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param TotalCount Total number
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

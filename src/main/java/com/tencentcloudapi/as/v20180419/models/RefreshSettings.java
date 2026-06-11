@@ -24,49 +24,87 @@ import java.util.HashMap;
 public class RefreshSettings extends AbstractModel {
 
     /**
-    * Rolling update settings parameters. RefreshMode is rolling update. this parameter must be filled in.
+    * Rolling update settings. This parameter group must be configured if the RefreshMode parameter starts with ROLLING_UPDATE(e.g., ROLLING_UPDATE_RESET).
     */
     @SerializedName("RollingUpdateSettings")
     @Expose
     private RollingUpdateSettings RollingUpdateSettings;
 
     /**
-    * Whether to enable the backend service health check for the instance. Default value: FALSE. This parameter is valid only for the scaling group bound to an application-based CLB. After this feature is enabled, if the instance fails the check after refresh, the port weight of the CLB will be always 0, and it will be marked as a refresh failure. Valid values: <li>TRUE: enable;</li> <li>FALSE: disable.</li>
+    * Whether to enable the backend service health check for the instance. Default value: FALSE. 
+This parameter is valid only for the scaling group bound to CLB. After this feature is enabled, if the instance fails the check after refresh, the port weight of the CLB will be always 0, and it will be marked as a refresh failure. Valid values: <li>TRUE: enable;</li> <li>FALSE: disable.</li>
     */
     @SerializedName("CheckInstanceTargetHealth")
     @Expose
     private Boolean CheckInstanceTargetHealth;
 
     /**
-     * Get Rolling update settings parameters. RefreshMode is rolling update. this parameter must be filled in. 
-     * @return RollingUpdateSettings Rolling update settings parameters. RefreshMode is rolling update. this parameter must be filled in.
+    * Specifies the timeout period for instance backend service health check, in seconds. 
+Value range: [60,7200]. Default value: 1800 seconds. 
+This parameter takes effect only when the CheckInstanceTargetHealth parameter is enabled.  If an instance health check times out, the instance will be marked as a refresh failure.
+    */
+    @SerializedName("CheckInstanceTargetHealthTimeout")
+    @Expose
+    private Long CheckInstanceTargetHealthTimeout;
+
+    /**
+     * Get Rolling update settings. This parameter group must be configured if the RefreshMode parameter starts with ROLLING_UPDATE(e.g., ROLLING_UPDATE_RESET). 
+     * @return RollingUpdateSettings Rolling update settings. This parameter group must be configured if the RefreshMode parameter starts with ROLLING_UPDATE(e.g., ROLLING_UPDATE_RESET).
      */
     public RollingUpdateSettings getRollingUpdateSettings() {
         return this.RollingUpdateSettings;
     }
 
     /**
-     * Set Rolling update settings parameters. RefreshMode is rolling update. this parameter must be filled in.
-     * @param RollingUpdateSettings Rolling update settings parameters. RefreshMode is rolling update. this parameter must be filled in.
+     * Set Rolling update settings. This parameter group must be configured if the RefreshMode parameter starts with ROLLING_UPDATE(e.g., ROLLING_UPDATE_RESET).
+     * @param RollingUpdateSettings Rolling update settings. This parameter group must be configured if the RefreshMode parameter starts with ROLLING_UPDATE(e.g., ROLLING_UPDATE_RESET).
      */
     public void setRollingUpdateSettings(RollingUpdateSettings RollingUpdateSettings) {
         this.RollingUpdateSettings = RollingUpdateSettings;
     }
 
     /**
-     * Get Whether to enable the backend service health check for the instance. Default value: FALSE. This parameter is valid only for the scaling group bound to an application-based CLB. After this feature is enabled, if the instance fails the check after refresh, the port weight of the CLB will be always 0, and it will be marked as a refresh failure. Valid values: <li>TRUE: enable;</li> <li>FALSE: disable.</li> 
-     * @return CheckInstanceTargetHealth Whether to enable the backend service health check for the instance. Default value: FALSE. This parameter is valid only for the scaling group bound to an application-based CLB. After this feature is enabled, if the instance fails the check after refresh, the port weight of the CLB will be always 0, and it will be marked as a refresh failure. Valid values: <li>TRUE: enable;</li> <li>FALSE: disable.</li>
+     * Get Whether to enable the backend service health check for the instance. Default value: FALSE. 
+This parameter is valid only for the scaling group bound to CLB. After this feature is enabled, if the instance fails the check after refresh, the port weight of the CLB will be always 0, and it will be marked as a refresh failure. Valid values: <li>TRUE: enable;</li> <li>FALSE: disable.</li> 
+     * @return CheckInstanceTargetHealth Whether to enable the backend service health check for the instance. Default value: FALSE. 
+This parameter is valid only for the scaling group bound to CLB. After this feature is enabled, if the instance fails the check after refresh, the port weight of the CLB will be always 0, and it will be marked as a refresh failure. Valid values: <li>TRUE: enable;</li> <li>FALSE: disable.</li>
      */
     public Boolean getCheckInstanceTargetHealth() {
         return this.CheckInstanceTargetHealth;
     }
 
     /**
-     * Set Whether to enable the backend service health check for the instance. Default value: FALSE. This parameter is valid only for the scaling group bound to an application-based CLB. After this feature is enabled, if the instance fails the check after refresh, the port weight of the CLB will be always 0, and it will be marked as a refresh failure. Valid values: <li>TRUE: enable;</li> <li>FALSE: disable.</li>
-     * @param CheckInstanceTargetHealth Whether to enable the backend service health check for the instance. Default value: FALSE. This parameter is valid only for the scaling group bound to an application-based CLB. After this feature is enabled, if the instance fails the check after refresh, the port weight of the CLB will be always 0, and it will be marked as a refresh failure. Valid values: <li>TRUE: enable;</li> <li>FALSE: disable.</li>
+     * Set Whether to enable the backend service health check for the instance. Default value: FALSE. 
+This parameter is valid only for the scaling group bound to CLB. After this feature is enabled, if the instance fails the check after refresh, the port weight of the CLB will be always 0, and it will be marked as a refresh failure. Valid values: <li>TRUE: enable;</li> <li>FALSE: disable.</li>
+     * @param CheckInstanceTargetHealth Whether to enable the backend service health check for the instance. Default value: FALSE. 
+This parameter is valid only for the scaling group bound to CLB. After this feature is enabled, if the instance fails the check after refresh, the port weight of the CLB will be always 0, and it will be marked as a refresh failure. Valid values: <li>TRUE: enable;</li> <li>FALSE: disable.</li>
      */
     public void setCheckInstanceTargetHealth(Boolean CheckInstanceTargetHealth) {
         this.CheckInstanceTargetHealth = CheckInstanceTargetHealth;
+    }
+
+    /**
+     * Get Specifies the timeout period for instance backend service health check, in seconds. 
+Value range: [60,7200]. Default value: 1800 seconds. 
+This parameter takes effect only when the CheckInstanceTargetHealth parameter is enabled.  If an instance health check times out, the instance will be marked as a refresh failure. 
+     * @return CheckInstanceTargetHealthTimeout Specifies the timeout period for instance backend service health check, in seconds. 
+Value range: [60,7200]. Default value: 1800 seconds. 
+This parameter takes effect only when the CheckInstanceTargetHealth parameter is enabled.  If an instance health check times out, the instance will be marked as a refresh failure.
+     */
+    public Long getCheckInstanceTargetHealthTimeout() {
+        return this.CheckInstanceTargetHealthTimeout;
+    }
+
+    /**
+     * Set Specifies the timeout period for instance backend service health check, in seconds. 
+Value range: [60,7200]. Default value: 1800 seconds. 
+This parameter takes effect only when the CheckInstanceTargetHealth parameter is enabled.  If an instance health check times out, the instance will be marked as a refresh failure.
+     * @param CheckInstanceTargetHealthTimeout Specifies the timeout period for instance backend service health check, in seconds. 
+Value range: [60,7200]. Default value: 1800 seconds. 
+This parameter takes effect only when the CheckInstanceTargetHealth parameter is enabled.  If an instance health check times out, the instance will be marked as a refresh failure.
+     */
+    public void setCheckInstanceTargetHealthTimeout(Long CheckInstanceTargetHealthTimeout) {
+        this.CheckInstanceTargetHealthTimeout = CheckInstanceTargetHealthTimeout;
     }
 
     public RefreshSettings() {
@@ -83,6 +121,9 @@ public class RefreshSettings extends AbstractModel {
         if (source.CheckInstanceTargetHealth != null) {
             this.CheckInstanceTargetHealth = new Boolean(source.CheckInstanceTargetHealth);
         }
+        if (source.CheckInstanceTargetHealthTimeout != null) {
+            this.CheckInstanceTargetHealthTimeout = new Long(source.CheckInstanceTargetHealthTimeout);
+        }
     }
 
 
@@ -92,6 +133,7 @@ public class RefreshSettings extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "RollingUpdateSettings.", this.RollingUpdateSettings);
         this.setParamSimple(map, prefix + "CheckInstanceTargetHealth", this.CheckInstanceTargetHealth);
+        this.setParamSimple(map, prefix + "CheckInstanceTargetHealthTimeout", this.CheckInstanceTargetHealthTimeout);
 
     }
 }

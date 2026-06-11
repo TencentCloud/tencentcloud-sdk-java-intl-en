@@ -74,7 +74,6 @@ public class JavaMemShellPluginSetting extends AbstractModel {
 
     /**
     * Server UUID
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Uuid")
     @Expose
@@ -82,7 +81,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Host Additional Information
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("MachineExtraInfo")
     @Expose
@@ -201,10 +199,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Server UUID
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Server UUID 
      * @return Uuid Server UUID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getUuid() {
         return this.Uuid;
@@ -212,19 +208,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Server UUID
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Uuid Server UUID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setUuid(String Uuid) {
         this.Uuid = Uuid;
     }
 
     /**
-     * Get Host Additional Information
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Host Additional Information 
      * @return MachineExtraInfo Host Additional Information
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public MachineExtraInfo getMachineExtraInfo() {
         return this.MachineExtraInfo;
@@ -232,9 +224,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Host Additional Information
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param MachineExtraInfo Host Additional Information
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setMachineExtraInfo(MachineExtraInfo MachineExtraInfo) {
         this.MachineExtraInfo = MachineExtraInfo;

@@ -113,8 +113,8 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     private Hsts Hsts;
 
     /**
-    * TLS version settings, which only support certain advanced domain names. Valid values: `TLSv1`, `TLSV1.1`, `TLSV1.2`, and `TLSv1.3`. Only consecutive versions can be enabled at the same time.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+    * Specifies the Tls version setting, which has partial support for Advance domain names and can be set to TLSv1, TLSv1.1, TLSv1.2, or TLSv1.3. consecutive versions must be enabled when modifying.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("TlsVersion")
     @Expose
@@ -369,20 +369,20 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     }
 
     /**
-     * Get TLS version settings, which only support certain advanced domain names. Valid values: `TLSv1`, `TLSV1.1`, `TLSV1.2`, and `TLSv1.3`. Only consecutive versions can be enabled at the same time.
-Note: This field may return `null`, indicating that no valid value can be obtained. 
-     * @return TlsVersion TLS version settings, which only support certain advanced domain names. Valid values: `TLSv1`, `TLSV1.1`, `TLSV1.2`, and `TLSv1.3`. Only consecutive versions can be enabled at the same time.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Get Specifies the Tls version setting, which has partial support for Advance domain names and can be set to TLSv1, TLSv1.1, TLSv1.2, or TLSv1.3. consecutive versions must be enabled when modifying.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return TlsVersion Specifies the Tls version setting, which has partial support for Advance domain names and can be set to TLSv1, TLSv1.1, TLSv1.2, or TLSv1.3. consecutive versions must be enabled when modifying.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String [] getTlsVersion() {
         return this.TlsVersion;
     }
 
     /**
-     * Set TLS version settings, which only support certain advanced domain names. Valid values: `TLSv1`, `TLSV1.1`, `TLSV1.2`, and `TLSv1.3`. Only consecutive versions can be enabled at the same time.
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param TlsVersion TLS version settings, which only support certain advanced domain names. Valid values: `TLSv1`, `TLSV1.1`, `TLSV1.2`, and `TLSv1.3`. Only consecutive versions can be enabled at the same time.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Set Specifies the Tls version setting, which has partial support for Advance domain names and can be set to TLSv1, TLSv1.1, TLSv1.2, or TLSv1.3. consecutive versions must be enabled when modifying.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param TlsVersion Specifies the Tls version setting, which has partial support for Advance domain names and can be set to TLSv1, TLSv1.1, TLSv1.2, or TLSv1.3. consecutive versions must be enabled when modifying.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setTlsVersion(String [] TlsVersion) {
         this.TlsVersion = TlsVersion;

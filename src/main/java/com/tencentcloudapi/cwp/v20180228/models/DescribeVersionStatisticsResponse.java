@@ -45,7 +45,7 @@ public class DescribeVersionStatisticsResponse extends AbstractModel {
     private Long UltimateVersionNum;
 
     /**
-    * Number of General Discount Editions
+    * Number of lightweight editions
     */
     @SerializedName("GeneralVersionNum")
     @Expose
@@ -107,16 +107,16 @@ public class DescribeVersionStatisticsResponse extends AbstractModel {
     }
 
     /**
-     * Get Number of General Discount Editions 
-     * @return GeneralVersionNum Number of General Discount Editions
+     * Get Number of lightweight editions 
+     * @return GeneralVersionNum Number of lightweight editions
      */
     public Long getGeneralVersionNum() {
         return this.GeneralVersionNum;
     }
 
     /**
-     * Set Number of General Discount Editions
-     * @param GeneralVersionNum Number of General Discount Editions
+     * Set Number of lightweight editions
+     * @param GeneralVersionNum Number of lightweight editions
      */
     public void setGeneralVersionNum(Long GeneralVersionNum) {
         this.GeneralVersionNum = GeneralVersionNum;

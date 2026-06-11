@@ -39,7 +39,6 @@ public class LicenseDetail extends AbstractModel {
 
     /**
     * Authorization status. 0: not in use; 1: partially in use; 2: used up; 3: unavailable.
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("LicenseStatus")
     @Expose
@@ -123,16 +122,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String Alias;
 
     /**
-    * Platform Tag
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Platform tag
     */
     @SerializedName("Tags")
     @Expose
     private Tags [] Tags;
 
     /**
-    * Number of frozen authorizations. 0: no authorization is frozen; other values: actual number of frozen authorizations.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Number of frozen licenses. 0: unfrozen, values other than 0: number of frozen licenses.
     */
     @SerializedName("FreezeNum")
     @Expose
@@ -171,10 +168,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Authorization status. 0: not in use; 1: partially in use; 2: used up; 3: unavailable.
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Authorization status. 0: not in use; 1: partially in use; 2: used up; 3: unavailable. 
      * @return LicenseStatus Authorization status. 0: not in use; 1: partially in use; 2: used up; 3: unavailable.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getLicenseStatus() {
         return this.LicenseStatus;
@@ -182,9 +177,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Authorization status. 0: not in use; 1: partially in use; 2: used up; 3: unavailable.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param LicenseStatus Authorization status. 0: not in use; 1: partially in use; 2: used up; 3: unavailable.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setLicenseStatus(Long LicenseStatus) {
         this.LicenseStatus = LicenseStatus;
@@ -367,40 +360,32 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Platform Tag
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Tags Platform Tag
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Platform tag 
+     * @return Tags Platform tag
      */
     public Tags [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set Platform Tag
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Tags Platform Tag
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Platform tag
+     * @param Tags Platform tag
      */
     public void setTags(Tags [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get Number of frozen authorizations. 0: no authorization is frozen; other values: actual number of frozen authorizations.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return FreezeNum Number of frozen authorizations. 0: no authorization is frozen; other values: actual number of frozen authorizations.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Number of frozen licenses. 0: unfrozen, values other than 0: number of frozen licenses. 
+     * @return FreezeNum Number of frozen licenses. 0: unfrozen, values other than 0: number of frozen licenses.
      */
     public Long getFreezeNum() {
         return this.FreezeNum;
     }
 
     /**
-     * Set Number of frozen authorizations. 0: no authorization is frozen; other values: actual number of frozen authorizations.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param FreezeNum Number of frozen authorizations. 0: no authorization is frozen; other values: actual number of frozen authorizations.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Number of frozen licenses. 0: unfrozen, values other than 0: number of frozen licenses.
+     * @param FreezeNum Number of frozen licenses. 0: unfrozen, values other than 0: number of frozen licenses.
      */
     public void setFreezeNum(Long FreezeNum) {
         this.FreezeNum = FreezeNum;

@@ -24,49 +24,72 @@ import java.util.HashMap;
 public class DescribeClusterParamsRequest extends AbstractModel {
 
     /**
-    * Cluster ID
+    * Cluster ID.
     */
     @SerializedName("ClusterId")
     @Expose
     private String ClusterId;
 
     /**
-    * Parameter name
+    * Parameter name.
     */
     @SerializedName("ParamName")
     @Expose
     private String ParamName;
 
     /**
-     * Get Cluster ID 
-     * @return ClusterId Cluster ID
+    * Whether it is a global parameter.
+    */
+    @SerializedName("IsGlobal")
+    @Expose
+    private String IsGlobal;
+
+    /**
+     * Get Cluster ID. 
+     * @return ClusterId Cluster ID.
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set Cluster ID
-     * @param ClusterId Cluster ID
+     * Set Cluster ID.
+     * @param ClusterId Cluster ID.
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
     }
 
     /**
-     * Get Parameter name 
-     * @return ParamName Parameter name
+     * Get Parameter name. 
+     * @return ParamName Parameter name.
      */
     public String getParamName() {
         return this.ParamName;
     }
 
     /**
-     * Set Parameter name
-     * @param ParamName Parameter name
+     * Set Parameter name.
+     * @param ParamName Parameter name.
      */
     public void setParamName(String ParamName) {
         this.ParamName = ParamName;
+    }
+
+    /**
+     * Get Whether it is a global parameter. 
+     * @return IsGlobal Whether it is a global parameter.
+     */
+    public String getIsGlobal() {
+        return this.IsGlobal;
+    }
+
+    /**
+     * Set Whether it is a global parameter.
+     * @param IsGlobal Whether it is a global parameter.
+     */
+    public void setIsGlobal(String IsGlobal) {
+        this.IsGlobal = IsGlobal;
     }
 
     public DescribeClusterParamsRequest() {
@@ -83,6 +106,9 @@ public class DescribeClusterParamsRequest extends AbstractModel {
         if (source.ParamName != null) {
             this.ParamName = new String(source.ParamName);
         }
+        if (source.IsGlobal != null) {
+            this.IsGlobal = new String(source.IsGlobal);
+        }
     }
 
 
@@ -92,6 +118,7 @@ public class DescribeClusterParamsRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
         this.setParamSimple(map, prefix + "ParamName", this.ParamName);
+        this.setParamSimple(map, prefix + "IsGlobal", this.IsGlobal);
 
     }
 }

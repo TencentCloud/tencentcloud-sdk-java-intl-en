@@ -24,8 +24,7 @@ import java.util.HashMap;
 public class DescribeVulTopResponse extends AbstractModel {
 
     /**
-    * List of top vulnerabilities
-Note: This field may return null, indicating that no valid values can be obtained.
+    * List of top vulnerabilities.
     */
     @SerializedName("VulTopList")
     @Expose
@@ -39,20 +38,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get List of top vulnerabilities
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return VulTopList List of top vulnerabilities
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get List of top vulnerabilities. 
+     * @return VulTopList List of top vulnerabilities.
      */
     public VulTopInfo [] getVulTopList() {
         return this.VulTopList;
     }
 
     /**
-     * Set List of top vulnerabilities
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param VulTopList List of top vulnerabilities
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set List of top vulnerabilities.
+     * @param VulTopList List of top vulnerabilities.
      */
     public void setVulTopList(VulTopInfo [] VulTopList) {
         this.VulTopList = VulTopList;

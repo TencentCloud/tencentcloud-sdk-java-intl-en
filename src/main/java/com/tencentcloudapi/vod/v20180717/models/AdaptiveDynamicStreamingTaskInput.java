@@ -73,6 +73,13 @@ public class AdaptiveDynamicStreamingTaskInput extends AbstractModel {
     private SubtitleInfoInput [] SubtitleInfoSet;
 
     /**
+    * <p>Third-party DRM encrypted information. Task flow is not currently supported to initiate task via third-party DRM information.</p>
+    */
+    @SerializedName("DrmInfo")
+    @Expose
+    private ThirdPartyDrmInfo DrmInfo;
+
+    /**
      * Get <p>Adaptive bitrate streaming template ID.</p> 
      * @return Definition <p>Adaptive bitrate streaming template ID.</p>
      */
@@ -184,6 +191,22 @@ public class AdaptiveDynamicStreamingTaskInput extends AbstractModel {
         this.SubtitleInfoSet = SubtitleInfoSet;
     }
 
+    /**
+     * Get <p>Third-party DRM encrypted information. Task flow is not currently supported to initiate task via third-party DRM information.</p> 
+     * @return DrmInfo <p>Third-party DRM encrypted information. Task flow is not currently supported to initiate task via third-party DRM information.</p>
+     */
+    public ThirdPartyDrmInfo getDrmInfo() {
+        return this.DrmInfo;
+    }
+
+    /**
+     * Set <p>Third-party DRM encrypted information. Task flow is not currently supported to initiate task via third-party DRM information.</p>
+     * @param DrmInfo <p>Third-party DRM encrypted information. Task flow is not currently supported to initiate task via third-party DRM information.</p>
+     */
+    public void setDrmInfo(ThirdPartyDrmInfo DrmInfo) {
+        this.DrmInfo = DrmInfo;
+    }
+
     public AdaptiveDynamicStreamingTaskInput() {
     }
 
@@ -222,6 +245,9 @@ public class AdaptiveDynamicStreamingTaskInput extends AbstractModel {
                 this.SubtitleInfoSet[i] = new SubtitleInfoInput(source.SubtitleInfoSet[i]);
             }
         }
+        if (source.DrmInfo != null) {
+            this.DrmInfo = new ThirdPartyDrmInfo(source.DrmInfo);
+        }
     }
 
 
@@ -236,6 +262,7 @@ public class AdaptiveDynamicStreamingTaskInput extends AbstractModel {
         this.setParamObj(map, prefix + "BlindWatermark.", this.BlindWatermark);
         this.setParamArraySimple(map, prefix + "SubtitleSet.", this.SubtitleSet);
         this.setParamArrayObj(map, prefix + "SubtitleInfoSet.", this.SubtitleInfoSet);
+        this.setParamObj(map, prefix + "DrmInfo.", this.DrmInfo);
 
     }
 }

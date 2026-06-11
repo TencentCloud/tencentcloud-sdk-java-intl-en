@@ -24,193 +24,141 @@ import java.util.HashMap;
 public class K8sApiAbnormalRuleScopeInfo extends AbstractModel {
 
     /**
-    * Range
-System event:
-ANONYMOUS_ACCESS: Anonymous access
-ABNORMAL_UA_REQ: Abnormal UA request
-ANONYMOUS_ABNORMAL_PERMISSION: Abnormal changes on permissions of an anonymous user
-GET_CREDENTIALS: Credential information acquisition
-MOUNT_SENSITIVE_PATH: Sensitive path mounting
-COMMAND_RUN: Command execution
-PRIVILEGE_CONTAINER: Privilege container
-EXCEPTION_CRONTAB_TASK: Aabnormal scheduled task
-STATICS_POD: Static pod creation
-ABNORMAL_CREATE_POD: Abnormal pod creation
-USER_DEFINED: User defined
-    */
-    @SerializedName("Scope")
-    @Expose
-    private String Scope;
-
-    /**
-    * Action (RULE_MODE_ALERT: Alarm RULE_MODE_RELEASE: Release)
+    * <p>Execution action. The blocklist rule only supports RULE_MODE_ALERT (alert) and no longer supports RULE_MODE_RELEASE/PASS (allow). To allow, use the allowlist API ModifyK8sApiAbnormalWhitelist.</p>
     */
     @SerializedName("Action")
     @Expose
     private String Action;
 
     /**
-    * Threat level: "HIGH": High-risk level; "MIDDLE": Middle-risk level; "LOW": Low-risk level; "NOTICE": Notice level
-Note: This field may return `null`, indicating that no valid value was found.
+    * <p>Scope.<br>System events:<br>ANONYMOUS_ACCESS: anonymous access<br>ABNORMAL_UA_REQ: abnormal UA request<br>ANONYMOUS_ABNORMAL_PERMISSION: anonymous user permission change<br>GET_CREDENTIALS: credential information acquisition<br>MOUNT_SENSITIVE_PATH: sensitive path mounting<br>COMMAND_RUN: command execution<br>PRIVILEGE_CONTAINER: privileged container<br>EXCEPTION_CRONTAB_TASK: abnormal scheduled task<br>STATICS_POD: static Pod creation<br>ABNORMAL_CREATE_POD: abnormal Pod creation<br>USER_DEFINED: user-defined</p>
     */
-    @SerializedName("RiskLevel")
+    @SerializedName("Scope")
     @Expose
-    private String RiskLevel;
+    private String Scope;
 
     /**
-    * Switch status (true: On; false: Off): applicable to system rules.
-Note: This field may return `null`, indicating that no valid value was found.
-    */
-    @SerializedName("Status")
-    @Expose
-    private Boolean Status;
-
-    /**
-    * Whether to delete: applicable to custom rule input parameters.
-Note: This field may return `null`, indicating that no valid value was found.
+    * <p>Whether it has been deleted.</p>
     */
     @SerializedName("IsDelete")
     @Expose
     private Boolean IsDelete;
 
     /**
-     * Get Range
-System event:
-ANONYMOUS_ACCESS: Anonymous access
-ABNORMAL_UA_REQ: Abnormal UA request
-ANONYMOUS_ABNORMAL_PERMISSION: Abnormal changes on permissions of an anonymous user
-GET_CREDENTIALS: Credential information acquisition
-MOUNT_SENSITIVE_PATH: Sensitive path mounting
-COMMAND_RUN: Command execution
-PRIVILEGE_CONTAINER: Privilege container
-EXCEPTION_CRONTAB_TASK: Aabnormal scheduled task
-STATICS_POD: Static pod creation
-ABNORMAL_CREATE_POD: Abnormal pod creation
-USER_DEFINED: User defined 
-     * @return Scope Range
-System event:
-ANONYMOUS_ACCESS: Anonymous access
-ABNORMAL_UA_REQ: Abnormal UA request
-ANONYMOUS_ABNORMAL_PERMISSION: Abnormal changes on permissions of an anonymous user
-GET_CREDENTIALS: Credential information acquisition
-MOUNT_SENSITIVE_PATH: Sensitive path mounting
-COMMAND_RUN: Command execution
-PRIVILEGE_CONTAINER: Privilege container
-EXCEPTION_CRONTAB_TASK: Aabnormal scheduled task
-STATICS_POD: Static pod creation
-ABNORMAL_CREATE_POD: Abnormal pod creation
-USER_DEFINED: User defined
-     */
-    public String getScope() {
-        return this.Scope;
-    }
+    * <p>Threat level: HIGH, MIDDLE, LOW, and NOTICE.</p>
+    */
+    @SerializedName("RiskLevel")
+    @Expose
+    private String RiskLevel;
 
     /**
-     * Set Range
-System event:
-ANONYMOUS_ACCESS: Anonymous access
-ABNORMAL_UA_REQ: Abnormal UA request
-ANONYMOUS_ABNORMAL_PERMISSION: Abnormal changes on permissions of an anonymous user
-GET_CREDENTIALS: Credential information acquisition
-MOUNT_SENSITIVE_PATH: Sensitive path mounting
-COMMAND_RUN: Command execution
-PRIVILEGE_CONTAINER: Privilege container
-EXCEPTION_CRONTAB_TASK: Aabnormal scheduled task
-STATICS_POD: Static pod creation
-ABNORMAL_CREATE_POD: Abnormal pod creation
-USER_DEFINED: User defined
-     * @param Scope Range
-System event:
-ANONYMOUS_ACCESS: Anonymous access
-ABNORMAL_UA_REQ: Abnormal UA request
-ANONYMOUS_ABNORMAL_PERMISSION: Abnormal changes on permissions of an anonymous user
-GET_CREDENTIALS: Credential information acquisition
-MOUNT_SENSITIVE_PATH: Sensitive path mounting
-COMMAND_RUN: Command execution
-PRIVILEGE_CONTAINER: Privilege container
-EXCEPTION_CRONTAB_TASK: Aabnormal scheduled task
-STATICS_POD: Static pod creation
-ABNORMAL_CREATE_POD: Abnormal pod creation
-USER_DEFINED: User defined
-     */
-    public void setScope(String Scope) {
-        this.Scope = Scope;
-    }
+    * <p>Description of the rule type.</p>
+    */
+    @SerializedName("RuleTypeZH")
+    @Expose
+    private String RuleTypeZH;
 
     /**
-     * Get Action (RULE_MODE_ALERT: Alarm RULE_MODE_RELEASE: Release) 
-     * @return Action Action (RULE_MODE_ALERT: Alarm RULE_MODE_RELEASE: Release)
+    * <p>Switch status (true: on, false: off) applicable to system rules.</p>
+    */
+    @SerializedName("Status")
+    @Expose
+    private Boolean Status;
+
+    /**
+     * Get <p>Execution action. The blocklist rule only supports RULE_MODE_ALERT (alert) and no longer supports RULE_MODE_RELEASE/PASS (allow). To allow, use the allowlist API ModifyK8sApiAbnormalWhitelist.</p> 
+     * @return Action <p>Execution action. The blocklist rule only supports RULE_MODE_ALERT (alert) and no longer supports RULE_MODE_RELEASE/PASS (allow). To allow, use the allowlist API ModifyK8sApiAbnormalWhitelist.</p>
      */
     public String getAction() {
         return this.Action;
     }
 
     /**
-     * Set Action (RULE_MODE_ALERT: Alarm RULE_MODE_RELEASE: Release)
-     * @param Action Action (RULE_MODE_ALERT: Alarm RULE_MODE_RELEASE: Release)
+     * Set <p>Execution action. The blocklist rule only supports RULE_MODE_ALERT (alert) and no longer supports RULE_MODE_RELEASE/PASS (allow). To allow, use the allowlist API ModifyK8sApiAbnormalWhitelist.</p>
+     * @param Action <p>Execution action. The blocklist rule only supports RULE_MODE_ALERT (alert) and no longer supports RULE_MODE_RELEASE/PASS (allow). To allow, use the allowlist API ModifyK8sApiAbnormalWhitelist.</p>
      */
     public void setAction(String Action) {
         this.Action = Action;
     }
 
     /**
-     * Get Threat level: "HIGH": High-risk level; "MIDDLE": Middle-risk level; "LOW": Low-risk level; "NOTICE": Notice level
-Note: This field may return `null`, indicating that no valid value was found. 
-     * @return RiskLevel Threat level: "HIGH": High-risk level; "MIDDLE": Middle-risk level; "LOW": Low-risk level; "NOTICE": Notice level
-Note: This field may return `null`, indicating that no valid value was found.
+     * Get <p>Scope.<br>System events:<br>ANONYMOUS_ACCESS: anonymous access<br>ABNORMAL_UA_REQ: abnormal UA request<br>ANONYMOUS_ABNORMAL_PERMISSION: anonymous user permission change<br>GET_CREDENTIALS: credential information acquisition<br>MOUNT_SENSITIVE_PATH: sensitive path mounting<br>COMMAND_RUN: command execution<br>PRIVILEGE_CONTAINER: privileged container<br>EXCEPTION_CRONTAB_TASK: abnormal scheduled task<br>STATICS_POD: static Pod creation<br>ABNORMAL_CREATE_POD: abnormal Pod creation<br>USER_DEFINED: user-defined</p> 
+     * @return Scope <p>Scope.<br>System events:<br>ANONYMOUS_ACCESS: anonymous access<br>ABNORMAL_UA_REQ: abnormal UA request<br>ANONYMOUS_ABNORMAL_PERMISSION: anonymous user permission change<br>GET_CREDENTIALS: credential information acquisition<br>MOUNT_SENSITIVE_PATH: sensitive path mounting<br>COMMAND_RUN: command execution<br>PRIVILEGE_CONTAINER: privileged container<br>EXCEPTION_CRONTAB_TASK: abnormal scheduled task<br>STATICS_POD: static Pod creation<br>ABNORMAL_CREATE_POD: abnormal Pod creation<br>USER_DEFINED: user-defined</p>
      */
-    public String getRiskLevel() {
-        return this.RiskLevel;
+    public String getScope() {
+        return this.Scope;
     }
 
     /**
-     * Set Threat level: "HIGH": High-risk level; "MIDDLE": Middle-risk level; "LOW": Low-risk level; "NOTICE": Notice level
-Note: This field may return `null`, indicating that no valid value was found.
-     * @param RiskLevel Threat level: "HIGH": High-risk level; "MIDDLE": Middle-risk level; "LOW": Low-risk level; "NOTICE": Notice level
-Note: This field may return `null`, indicating that no valid value was found.
+     * Set <p>Scope.<br>System events:<br>ANONYMOUS_ACCESS: anonymous access<br>ABNORMAL_UA_REQ: abnormal UA request<br>ANONYMOUS_ABNORMAL_PERMISSION: anonymous user permission change<br>GET_CREDENTIALS: credential information acquisition<br>MOUNT_SENSITIVE_PATH: sensitive path mounting<br>COMMAND_RUN: command execution<br>PRIVILEGE_CONTAINER: privileged container<br>EXCEPTION_CRONTAB_TASK: abnormal scheduled task<br>STATICS_POD: static Pod creation<br>ABNORMAL_CREATE_POD: abnormal Pod creation<br>USER_DEFINED: user-defined</p>
+     * @param Scope <p>Scope.<br>System events:<br>ANONYMOUS_ACCESS: anonymous access<br>ABNORMAL_UA_REQ: abnormal UA request<br>ANONYMOUS_ABNORMAL_PERMISSION: anonymous user permission change<br>GET_CREDENTIALS: credential information acquisition<br>MOUNT_SENSITIVE_PATH: sensitive path mounting<br>COMMAND_RUN: command execution<br>PRIVILEGE_CONTAINER: privileged container<br>EXCEPTION_CRONTAB_TASK: abnormal scheduled task<br>STATICS_POD: static Pod creation<br>ABNORMAL_CREATE_POD: abnormal Pod creation<br>USER_DEFINED: user-defined</p>
      */
-    public void setRiskLevel(String RiskLevel) {
-        this.RiskLevel = RiskLevel;
+    public void setScope(String Scope) {
+        this.Scope = Scope;
     }
 
     /**
-     * Get Switch status (true: On; false: Off): applicable to system rules.
-Note: This field may return `null`, indicating that no valid value was found. 
-     * @return Status Switch status (true: On; false: Off): applicable to system rules.
-Note: This field may return `null`, indicating that no valid value was found.
-     */
-    public Boolean getStatus() {
-        return this.Status;
-    }
-
-    /**
-     * Set Switch status (true: On; false: Off): applicable to system rules.
-Note: This field may return `null`, indicating that no valid value was found.
-     * @param Status Switch status (true: On; false: Off): applicable to system rules.
-Note: This field may return `null`, indicating that no valid value was found.
-     */
-    public void setStatus(Boolean Status) {
-        this.Status = Status;
-    }
-
-    /**
-     * Get Whether to delete: applicable to custom rule input parameters.
-Note: This field may return `null`, indicating that no valid value was found. 
-     * @return IsDelete Whether to delete: applicable to custom rule input parameters.
-Note: This field may return `null`, indicating that no valid value was found.
+     * Get <p>Whether it has been deleted.</p> 
+     * @return IsDelete <p>Whether it has been deleted.</p>
      */
     public Boolean getIsDelete() {
         return this.IsDelete;
     }
 
     /**
-     * Set Whether to delete: applicable to custom rule input parameters.
-Note: This field may return `null`, indicating that no valid value was found.
-     * @param IsDelete Whether to delete: applicable to custom rule input parameters.
-Note: This field may return `null`, indicating that no valid value was found.
+     * Set <p>Whether it has been deleted.</p>
+     * @param IsDelete <p>Whether it has been deleted.</p>
      */
     public void setIsDelete(Boolean IsDelete) {
         this.IsDelete = IsDelete;
+    }
+
+    /**
+     * Get <p>Threat level: HIGH, MIDDLE, LOW, and NOTICE.</p> 
+     * @return RiskLevel <p>Threat level: HIGH, MIDDLE, LOW, and NOTICE.</p>
+     */
+    public String getRiskLevel() {
+        return this.RiskLevel;
+    }
+
+    /**
+     * Set <p>Threat level: HIGH, MIDDLE, LOW, and NOTICE.</p>
+     * @param RiskLevel <p>Threat level: HIGH, MIDDLE, LOW, and NOTICE.</p>
+     */
+    public void setRiskLevel(String RiskLevel) {
+        this.RiskLevel = RiskLevel;
+    }
+
+    /**
+     * Get <p>Description of the rule type.</p> 
+     * @return RuleTypeZH <p>Description of the rule type.</p>
+     */
+    public String getRuleTypeZH() {
+        return this.RuleTypeZH;
+    }
+
+    /**
+     * Set <p>Description of the rule type.</p>
+     * @param RuleTypeZH <p>Description of the rule type.</p>
+     */
+    public void setRuleTypeZH(String RuleTypeZH) {
+        this.RuleTypeZH = RuleTypeZH;
+    }
+
+    /**
+     * Get <p>Switch status (true: on, false: off) applicable to system rules.</p> 
+     * @return Status <p>Switch status (true: on, false: off) applicable to system rules.</p>
+     */
+    public Boolean getStatus() {
+        return this.Status;
+    }
+
+    /**
+     * Set <p>Switch status (true: on, false: off) applicable to system rules.</p>
+     * @param Status <p>Switch status (true: on, false: off) applicable to system rules.</p>
+     */
+    public void setStatus(Boolean Status) {
+        this.Status = Status;
     }
 
     public K8sApiAbnormalRuleScopeInfo() {
@@ -221,20 +169,23 @@ Note: This field may return `null`, indicating that no valid value was found.
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public K8sApiAbnormalRuleScopeInfo(K8sApiAbnormalRuleScopeInfo source) {
+        if (source.Action != null) {
+            this.Action = new String(source.Action);
+        }
         if (source.Scope != null) {
             this.Scope = new String(source.Scope);
         }
-        if (source.Action != null) {
-            this.Action = new String(source.Action);
+        if (source.IsDelete != null) {
+            this.IsDelete = new Boolean(source.IsDelete);
         }
         if (source.RiskLevel != null) {
             this.RiskLevel = new String(source.RiskLevel);
         }
+        if (source.RuleTypeZH != null) {
+            this.RuleTypeZH = new String(source.RuleTypeZH);
+        }
         if (source.Status != null) {
             this.Status = new Boolean(source.Status);
-        }
-        if (source.IsDelete != null) {
-            this.IsDelete = new Boolean(source.IsDelete);
         }
     }
 
@@ -243,11 +194,12 @@ Note: This field may return `null`, indicating that no valid value was found.
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Scope", this.Scope);
         this.setParamSimple(map, prefix + "Action", this.Action);
-        this.setParamSimple(map, prefix + "RiskLevel", this.RiskLevel);
-        this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "Scope", this.Scope);
         this.setParamSimple(map, prefix + "IsDelete", this.IsDelete);
+        this.setParamSimple(map, prefix + "RiskLevel", this.RiskLevel);
+        this.setParamSimple(map, prefix + "RuleTypeZH", this.RuleTypeZH);
+        this.setParamSimple(map, prefix + "Status", this.Status);
 
     }
 }

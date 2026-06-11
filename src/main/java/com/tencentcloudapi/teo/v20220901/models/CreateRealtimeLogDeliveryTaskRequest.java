@@ -31,6 +31,20 @@ public class CreateRealtimeLogDeliveryTaskRequest extends AbstractModel {
     private String ZoneId;
 
     /**
+    * Data shipping area. Available values:<ul><li>mainland: within the Chinese mainland;</li><li>overseas: global (excluding the Chinese mainland).</li></ul>
+    */
+    @SerializedName("Area")
+    @Expose
+    private String Area;
+
+    /**
+    * Data delivery type. Available values: <ul><li>domain: site acceleration log;</li><li>application: four-layer proxy logs;</li><li>function: edge function logs;</li><li>web-rateLiming: rate limit and CC attack defense log;</li><li>web-attack: managed rule log;</li><li>web-rule: custom rule logs;</li><li>web-bot: bot management log.</li></ul>
+    */
+    @SerializedName("LogType")
+    @Expose
+    private String LogType;
+
+    /**
     * Name of a real-time log delivery task, which can contain up to 200 characters, including digits, English letters, hyphens (-) and underscores (_).
     */
     @SerializedName("TaskName")
@@ -38,54 +52,21 @@ public class CreateRealtimeLogDeliveryTaskRequest extends AbstractModel {
     private String TaskName;
 
     /**
-    * Type of a real-time log shipping task. valid values:.
-<li>cls: push to tencent cloud cls.</li>.
-<li>custom_endpoint: push to a custom HTTP(S) address.</li>.
-<li>s3: push to an AWS s3-compatible bucket address.</li>.
-<li>log_analysis: pushes to EdgeOne log analytics. this task type only supports the "site acceleration log" data delivery type.</li>.
+    * Type of a real-time log shipping task. Valid values:<ul><li>cls: push to Tencent Cloud CLS;</li><li>custom_endpoint: push to a custom HTTP(S) address;</li><li>s3: push to an AWS S3-compatible bucket address;</li><li>log_analysis: push to EdgeOne log analytics. Only supported when LogType = domain or web-attack.</li></ul>
     */
     @SerializedName("TaskType")
     @Expose
     private String TaskType;
 
     /**
-    * Entity list corresponding to the real-time log delivery task. example values:.
-<Li>Specifies the layer-7 domain name: domain.example.com.</li>.
-<Li>Specifies the l4 proxy instance: sid-2s69eb5wcms7.</li>.
-<Li>Edge function instance: test-zone-2mxigizoh9l9-1257626257.</li>.
+    * List of entities corresponding to the real-time log delivery task. Example values are as follows: <ul><li>Layer 7 domain: domain.example.com</li><li>L4 proxy instance: sid-2s69eb5wcms7</li><li>Cloud function instance: test-zone-2mxigizoh9l9-1257626257</li></ul>
     */
     @SerializedName("EntityList")
     @Expose
     private String [] EntityList;
 
     /**
-    * Data delivery type. valid values:.
-<li>domain: specifies the site acceleration logs.</li>.
-<li>application: four-layer proxy logs.</li>.
-<Li>Function: specifies the edge function logs.</li>.
-<li>web-rateLiming: specifies the rate limit and CC attack defense logs.</li>.
-<li>web-attack: managed rule logs;</li>.
-<li>web-rule: custom rule logs;</li>.
-<li>web-bot: Bot management logs.</li>
-    */
-    @SerializedName("LogType")
-    @Expose
-    private String LogType;
-
-    /**
-    * Data area. Valid values:
-<li>mainland: within the Chinese mainland;</li>
-<li>overseas: global (excluding the Chinese mainland).</li>
-    */
-    @SerializedName("Area")
-    @Expose
-    private String Area;
-
-    /**
-    * Predefined fields for delivery. valid values:.
-<Li>[Site acceleration log (l7 access log)](https://www.tencentcloud.com/document/product/1552/105791?from_cn_redirect=1)</li>.
-<Li><A href="https://www.tencentcloud.com/document/product/1552/105792?from_cn_redirect=1">four-layer proxy logs</a></li>.
-<Li>Specifies the edge function logs (https://www.tencentcloud.com/document/product/1552/115585?from_cn_redirect=1).</li>.
+    * Predefined fields for delivery. Value reference: <ul><li>[Site acceleration log (Layer 7 Access Logs)](https://www.tencentcloud.com/document/product/1552/105791?from_cn_redirect=1)</li><li>[Four-layer proxy logs](https://www.tencentcloud.com/document/product/1552/105792?from_cn_redirect=1)</li><li>[Edge Function logs](https://www.tencentcloud.com/document/product/1552/115585?from_cn_redirect=1)</li></ul>
     */
     @SerializedName("Fields")
     @Expose
@@ -113,9 +94,7 @@ public class CreateRealtimeLogDeliveryTaskRequest extends AbstractModel {
     private Long Sample;
 
     /**
-    * Output format for log delivery. if this field is not specified, the default format is used, which works as follows:.
-<li>When TaskType is 'custom_endpoint', the default format is an array of JSON objects, with each JSON object representing a log entry;</li>.
-<li>When TaskType is 's3', the default format is JSON Lines;</li>specifically, when TaskType is 'cls' or 'log_analysis', the only allowed value for LogFormat.FormatType is 'JSON', and other parameters in LogFormat will be ignored. it is recommended not to transfer LogFormat.
+    * Output format for log delivery. If left empty, the default format is used. The default format logic is as follows:<ul><li>When TaskType is 'custom_endpoint', the default format is an array of JSON objects, each JSON object represents a log entry;</li><li>When TaskType is 's3', the default format is JSON Lines;</li></ul>Particularly, when TaskType is 'cls' or 'log_analysis', the only allowed value for LogFormat.FormatType is 'json', and other parameters in LogFormat will be ignored. It is recommended not to transfer LogFormat.
     */
     @SerializedName("LogFormat")
     @Expose
@@ -159,6 +138,38 @@ public class CreateRealtimeLogDeliveryTaskRequest extends AbstractModel {
     }
 
     /**
+     * Get Data shipping area. Available values:<ul><li>mainland: within the Chinese mainland;</li><li>overseas: global (excluding the Chinese mainland).</li></ul> 
+     * @return Area Data shipping area. Available values:<ul><li>mainland: within the Chinese mainland;</li><li>overseas: global (excluding the Chinese mainland).</li></ul>
+     */
+    public String getArea() {
+        return this.Area;
+    }
+
+    /**
+     * Set Data shipping area. Available values:<ul><li>mainland: within the Chinese mainland;</li><li>overseas: global (excluding the Chinese mainland).</li></ul>
+     * @param Area Data shipping area. Available values:<ul><li>mainland: within the Chinese mainland;</li><li>overseas: global (excluding the Chinese mainland).</li></ul>
+     */
+    public void setArea(String Area) {
+        this.Area = Area;
+    }
+
+    /**
+     * Get Data delivery type. Available values: <ul><li>domain: site acceleration log;</li><li>application: four-layer proxy logs;</li><li>function: edge function logs;</li><li>web-rateLiming: rate limit and CC attack defense log;</li><li>web-attack: managed rule log;</li><li>web-rule: custom rule logs;</li><li>web-bot: bot management log.</li></ul> 
+     * @return LogType Data delivery type. Available values: <ul><li>domain: site acceleration log;</li><li>application: four-layer proxy logs;</li><li>function: edge function logs;</li><li>web-rateLiming: rate limit and CC attack defense log;</li><li>web-attack: managed rule log;</li><li>web-rule: custom rule logs;</li><li>web-bot: bot management log.</li></ul>
+     */
+    public String getLogType() {
+        return this.LogType;
+    }
+
+    /**
+     * Set Data delivery type. Available values: <ul><li>domain: site acceleration log;</li><li>application: four-layer proxy logs;</li><li>function: edge function logs;</li><li>web-rateLiming: rate limit and CC attack defense log;</li><li>web-attack: managed rule log;</li><li>web-rule: custom rule logs;</li><li>web-bot: bot management log.</li></ul>
+     * @param LogType Data delivery type. Available values: <ul><li>domain: site acceleration log;</li><li>application: four-layer proxy logs;</li><li>function: edge function logs;</li><li>web-rateLiming: rate limit and CC attack defense log;</li><li>web-attack: managed rule log;</li><li>web-rule: custom rule logs;</li><li>web-bot: bot management log.</li></ul>
+     */
+    public void setLogType(String LogType) {
+        this.LogType = LogType;
+    }
+
+    /**
      * Get Name of a real-time log delivery task, which can contain up to 200 characters, including digits, English letters, hyphens (-) and underscores (_). 
      * @return TaskName Name of a real-time log delivery task, which can contain up to 200 characters, including digits, English letters, hyphens (-) and underscores (_).
      */
@@ -175,156 +186,48 @@ public class CreateRealtimeLogDeliveryTaskRequest extends AbstractModel {
     }
 
     /**
-     * Get Type of a real-time log shipping task. valid values:.
-<li>cls: push to tencent cloud cls.</li>.
-<li>custom_endpoint: push to a custom HTTP(S) address.</li>.
-<li>s3: push to an AWS s3-compatible bucket address.</li>.
-<li>log_analysis: pushes to EdgeOne log analytics. this task type only supports the "site acceleration log" data delivery type.</li>. 
-     * @return TaskType Type of a real-time log shipping task. valid values:.
-<li>cls: push to tencent cloud cls.</li>.
-<li>custom_endpoint: push to a custom HTTP(S) address.</li>.
-<li>s3: push to an AWS s3-compatible bucket address.</li>.
-<li>log_analysis: pushes to EdgeOne log analytics. this task type only supports the "site acceleration log" data delivery type.</li>.
+     * Get Type of a real-time log shipping task. Valid values:<ul><li>cls: push to Tencent Cloud CLS;</li><li>custom_endpoint: push to a custom HTTP(S) address;</li><li>s3: push to an AWS S3-compatible bucket address;</li><li>log_analysis: push to EdgeOne log analytics. Only supported when LogType = domain or web-attack.</li></ul> 
+     * @return TaskType Type of a real-time log shipping task. Valid values:<ul><li>cls: push to Tencent Cloud CLS;</li><li>custom_endpoint: push to a custom HTTP(S) address;</li><li>s3: push to an AWS S3-compatible bucket address;</li><li>log_analysis: push to EdgeOne log analytics. Only supported when LogType = domain or web-attack.</li></ul>
      */
     public String getTaskType() {
         return this.TaskType;
     }
 
     /**
-     * Set Type of a real-time log shipping task. valid values:.
-<li>cls: push to tencent cloud cls.</li>.
-<li>custom_endpoint: push to a custom HTTP(S) address.</li>.
-<li>s3: push to an AWS s3-compatible bucket address.</li>.
-<li>log_analysis: pushes to EdgeOne log analytics. this task type only supports the "site acceleration log" data delivery type.</li>.
-     * @param TaskType Type of a real-time log shipping task. valid values:.
-<li>cls: push to tencent cloud cls.</li>.
-<li>custom_endpoint: push to a custom HTTP(S) address.</li>.
-<li>s3: push to an AWS s3-compatible bucket address.</li>.
-<li>log_analysis: pushes to EdgeOne log analytics. this task type only supports the "site acceleration log" data delivery type.</li>.
+     * Set Type of a real-time log shipping task. Valid values:<ul><li>cls: push to Tencent Cloud CLS;</li><li>custom_endpoint: push to a custom HTTP(S) address;</li><li>s3: push to an AWS S3-compatible bucket address;</li><li>log_analysis: push to EdgeOne log analytics. Only supported when LogType = domain or web-attack.</li></ul>
+     * @param TaskType Type of a real-time log shipping task. Valid values:<ul><li>cls: push to Tencent Cloud CLS;</li><li>custom_endpoint: push to a custom HTTP(S) address;</li><li>s3: push to an AWS S3-compatible bucket address;</li><li>log_analysis: push to EdgeOne log analytics. Only supported when LogType = domain or web-attack.</li></ul>
      */
     public void setTaskType(String TaskType) {
         this.TaskType = TaskType;
     }
 
     /**
-     * Get Entity list corresponding to the real-time log delivery task. example values:.
-<Li>Specifies the layer-7 domain name: domain.example.com.</li>.
-<Li>Specifies the l4 proxy instance: sid-2s69eb5wcms7.</li>.
-<Li>Edge function instance: test-zone-2mxigizoh9l9-1257626257.</li>. 
-     * @return EntityList Entity list corresponding to the real-time log delivery task. example values:.
-<Li>Specifies the layer-7 domain name: domain.example.com.</li>.
-<Li>Specifies the l4 proxy instance: sid-2s69eb5wcms7.</li>.
-<Li>Edge function instance: test-zone-2mxigizoh9l9-1257626257.</li>.
+     * Get List of entities corresponding to the real-time log delivery task. Example values are as follows: <ul><li>Layer 7 domain: domain.example.com</li><li>L4 proxy instance: sid-2s69eb5wcms7</li><li>Cloud function instance: test-zone-2mxigizoh9l9-1257626257</li></ul> 
+     * @return EntityList List of entities corresponding to the real-time log delivery task. Example values are as follows: <ul><li>Layer 7 domain: domain.example.com</li><li>L4 proxy instance: sid-2s69eb5wcms7</li><li>Cloud function instance: test-zone-2mxigizoh9l9-1257626257</li></ul>
      */
     public String [] getEntityList() {
         return this.EntityList;
     }
 
     /**
-     * Set Entity list corresponding to the real-time log delivery task. example values:.
-<Li>Specifies the layer-7 domain name: domain.example.com.</li>.
-<Li>Specifies the l4 proxy instance: sid-2s69eb5wcms7.</li>.
-<Li>Edge function instance: test-zone-2mxigizoh9l9-1257626257.</li>.
-     * @param EntityList Entity list corresponding to the real-time log delivery task. example values:.
-<Li>Specifies the layer-7 domain name: domain.example.com.</li>.
-<Li>Specifies the l4 proxy instance: sid-2s69eb5wcms7.</li>.
-<Li>Edge function instance: test-zone-2mxigizoh9l9-1257626257.</li>.
+     * Set List of entities corresponding to the real-time log delivery task. Example values are as follows: <ul><li>Layer 7 domain: domain.example.com</li><li>L4 proxy instance: sid-2s69eb5wcms7</li><li>Cloud function instance: test-zone-2mxigizoh9l9-1257626257</li></ul>
+     * @param EntityList List of entities corresponding to the real-time log delivery task. Example values are as follows: <ul><li>Layer 7 domain: domain.example.com</li><li>L4 proxy instance: sid-2s69eb5wcms7</li><li>Cloud function instance: test-zone-2mxigizoh9l9-1257626257</li></ul>
      */
     public void setEntityList(String [] EntityList) {
         this.EntityList = EntityList;
     }
 
     /**
-     * Get Data delivery type. valid values:.
-<li>domain: specifies the site acceleration logs.</li>.
-<li>application: four-layer proxy logs.</li>.
-<Li>Function: specifies the edge function logs.</li>.
-<li>web-rateLiming: specifies the rate limit and CC attack defense logs.</li>.
-<li>web-attack: managed rule logs;</li>.
-<li>web-rule: custom rule logs;</li>.
-<li>web-bot: Bot management logs.</li> 
-     * @return LogType Data delivery type. valid values:.
-<li>domain: specifies the site acceleration logs.</li>.
-<li>application: four-layer proxy logs.</li>.
-<Li>Function: specifies the edge function logs.</li>.
-<li>web-rateLiming: specifies the rate limit and CC attack defense logs.</li>.
-<li>web-attack: managed rule logs;</li>.
-<li>web-rule: custom rule logs;</li>.
-<li>web-bot: Bot management logs.</li>
-     */
-    public String getLogType() {
-        return this.LogType;
-    }
-
-    /**
-     * Set Data delivery type. valid values:.
-<li>domain: specifies the site acceleration logs.</li>.
-<li>application: four-layer proxy logs.</li>.
-<Li>Function: specifies the edge function logs.</li>.
-<li>web-rateLiming: specifies the rate limit and CC attack defense logs.</li>.
-<li>web-attack: managed rule logs;</li>.
-<li>web-rule: custom rule logs;</li>.
-<li>web-bot: Bot management logs.</li>
-     * @param LogType Data delivery type. valid values:.
-<li>domain: specifies the site acceleration logs.</li>.
-<li>application: four-layer proxy logs.</li>.
-<Li>Function: specifies the edge function logs.</li>.
-<li>web-rateLiming: specifies the rate limit and CC attack defense logs.</li>.
-<li>web-attack: managed rule logs;</li>.
-<li>web-rule: custom rule logs;</li>.
-<li>web-bot: Bot management logs.</li>
-     */
-    public void setLogType(String LogType) {
-        this.LogType = LogType;
-    }
-
-    /**
-     * Get Data area. Valid values:
-<li>mainland: within the Chinese mainland;</li>
-<li>overseas: global (excluding the Chinese mainland).</li> 
-     * @return Area Data area. Valid values:
-<li>mainland: within the Chinese mainland;</li>
-<li>overseas: global (excluding the Chinese mainland).</li>
-     */
-    public String getArea() {
-        return this.Area;
-    }
-
-    /**
-     * Set Data area. Valid values:
-<li>mainland: within the Chinese mainland;</li>
-<li>overseas: global (excluding the Chinese mainland).</li>
-     * @param Area Data area. Valid values:
-<li>mainland: within the Chinese mainland;</li>
-<li>overseas: global (excluding the Chinese mainland).</li>
-     */
-    public void setArea(String Area) {
-        this.Area = Area;
-    }
-
-    /**
-     * Get Predefined fields for delivery. valid values:.
-<Li>[Site acceleration log (l7 access log)](https://www.tencentcloud.com/document/product/1552/105791?from_cn_redirect=1)</li>.
-<Li><A href="https://www.tencentcloud.com/document/product/1552/105792?from_cn_redirect=1">four-layer proxy logs</a></li>.
-<Li>Specifies the edge function logs (https://www.tencentcloud.com/document/product/1552/115585?from_cn_redirect=1).</li>. 
-     * @return Fields Predefined fields for delivery. valid values:.
-<Li>[Site acceleration log (l7 access log)](https://www.tencentcloud.com/document/product/1552/105791?from_cn_redirect=1)</li>.
-<Li><A href="https://www.tencentcloud.com/document/product/1552/105792?from_cn_redirect=1">four-layer proxy logs</a></li>.
-<Li>Specifies the edge function logs (https://www.tencentcloud.com/document/product/1552/115585?from_cn_redirect=1).</li>.
+     * Get Predefined fields for delivery. Value reference: <ul><li>[Site acceleration log (Layer 7 Access Logs)](https://www.tencentcloud.com/document/product/1552/105791?from_cn_redirect=1)</li><li>[Four-layer proxy logs](https://www.tencentcloud.com/document/product/1552/105792?from_cn_redirect=1)</li><li>[Edge Function logs](https://www.tencentcloud.com/document/product/1552/115585?from_cn_redirect=1)</li></ul> 
+     * @return Fields Predefined fields for delivery. Value reference: <ul><li>[Site acceleration log (Layer 7 Access Logs)](https://www.tencentcloud.com/document/product/1552/105791?from_cn_redirect=1)</li><li>[Four-layer proxy logs](https://www.tencentcloud.com/document/product/1552/105792?from_cn_redirect=1)</li><li>[Edge Function logs](https://www.tencentcloud.com/document/product/1552/115585?from_cn_redirect=1)</li></ul>
      */
     public String [] getFields() {
         return this.Fields;
     }
 
     /**
-     * Set Predefined fields for delivery. valid values:.
-<Li>[Site acceleration log (l7 access log)](https://www.tencentcloud.com/document/product/1552/105791?from_cn_redirect=1)</li>.
-<Li><A href="https://www.tencentcloud.com/document/product/1552/105792?from_cn_redirect=1">four-layer proxy logs</a></li>.
-<Li>Specifies the edge function logs (https://www.tencentcloud.com/document/product/1552/115585?from_cn_redirect=1).</li>.
-     * @param Fields Predefined fields for delivery. valid values:.
-<Li>[Site acceleration log (l7 access log)](https://www.tencentcloud.com/document/product/1552/105791?from_cn_redirect=1)</li>.
-<Li><A href="https://www.tencentcloud.com/document/product/1552/105792?from_cn_redirect=1">four-layer proxy logs</a></li>.
-<Li>Specifies the edge function logs (https://www.tencentcloud.com/document/product/1552/115585?from_cn_redirect=1).</li>.
+     * Set Predefined fields for delivery. Value reference: <ul><li>[Site acceleration log (Layer 7 Access Logs)](https://www.tencentcloud.com/document/product/1552/105791?from_cn_redirect=1)</li><li>[Four-layer proxy logs](https://www.tencentcloud.com/document/product/1552/105792?from_cn_redirect=1)</li><li>[Edge Function logs](https://www.tencentcloud.com/document/product/1552/115585?from_cn_redirect=1)</li></ul>
+     * @param Fields Predefined fields for delivery. Value reference: <ul><li>[Site acceleration log (Layer 7 Access Logs)](https://www.tencentcloud.com/document/product/1552/105791?from_cn_redirect=1)</li><li>[Four-layer proxy logs](https://www.tencentcloud.com/document/product/1552/105792?from_cn_redirect=1)</li><li>[Edge Function logs](https://www.tencentcloud.com/document/product/1552/115585?from_cn_redirect=1)</li></ul>
      */
     public void setFields(String [] Fields) {
         this.Fields = Fields;
@@ -379,24 +282,16 @@ public class CreateRealtimeLogDeliveryTaskRequest extends AbstractModel {
     }
 
     /**
-     * Get Output format for log delivery. if this field is not specified, the default format is used, which works as follows:.
-<li>When TaskType is 'custom_endpoint', the default format is an array of JSON objects, with each JSON object representing a log entry;</li>.
-<li>When TaskType is 's3', the default format is JSON Lines;</li>specifically, when TaskType is 'cls' or 'log_analysis', the only allowed value for LogFormat.FormatType is 'JSON', and other parameters in LogFormat will be ignored. it is recommended not to transfer LogFormat. 
-     * @return LogFormat Output format for log delivery. if this field is not specified, the default format is used, which works as follows:.
-<li>When TaskType is 'custom_endpoint', the default format is an array of JSON objects, with each JSON object representing a log entry;</li>.
-<li>When TaskType is 's3', the default format is JSON Lines;</li>specifically, when TaskType is 'cls' or 'log_analysis', the only allowed value for LogFormat.FormatType is 'JSON', and other parameters in LogFormat will be ignored. it is recommended not to transfer LogFormat.
+     * Get Output format for log delivery. If left empty, the default format is used. The default format logic is as follows:<ul><li>When TaskType is 'custom_endpoint', the default format is an array of JSON objects, each JSON object represents a log entry;</li><li>When TaskType is 's3', the default format is JSON Lines;</li></ul>Particularly, when TaskType is 'cls' or 'log_analysis', the only allowed value for LogFormat.FormatType is 'json', and other parameters in LogFormat will be ignored. It is recommended not to transfer LogFormat. 
+     * @return LogFormat Output format for log delivery. If left empty, the default format is used. The default format logic is as follows:<ul><li>When TaskType is 'custom_endpoint', the default format is an array of JSON objects, each JSON object represents a log entry;</li><li>When TaskType is 's3', the default format is JSON Lines;</li></ul>Particularly, when TaskType is 'cls' or 'log_analysis', the only allowed value for LogFormat.FormatType is 'json', and other parameters in LogFormat will be ignored. It is recommended not to transfer LogFormat.
      */
     public LogFormat getLogFormat() {
         return this.LogFormat;
     }
 
     /**
-     * Set Output format for log delivery. if this field is not specified, the default format is used, which works as follows:.
-<li>When TaskType is 'custom_endpoint', the default format is an array of JSON objects, with each JSON object representing a log entry;</li>.
-<li>When TaskType is 's3', the default format is JSON Lines;</li>specifically, when TaskType is 'cls' or 'log_analysis', the only allowed value for LogFormat.FormatType is 'JSON', and other parameters in LogFormat will be ignored. it is recommended not to transfer LogFormat.
-     * @param LogFormat Output format for log delivery. if this field is not specified, the default format is used, which works as follows:.
-<li>When TaskType is 'custom_endpoint', the default format is an array of JSON objects, with each JSON object representing a log entry;</li>.
-<li>When TaskType is 's3', the default format is JSON Lines;</li>specifically, when TaskType is 'cls' or 'log_analysis', the only allowed value for LogFormat.FormatType is 'JSON', and other parameters in LogFormat will be ignored. it is recommended not to transfer LogFormat.
+     * Set Output format for log delivery. If left empty, the default format is used. The default format logic is as follows:<ul><li>When TaskType is 'custom_endpoint', the default format is an array of JSON objects, each JSON object represents a log entry;</li><li>When TaskType is 's3', the default format is JSON Lines;</li></ul>Particularly, when TaskType is 'cls' or 'log_analysis', the only allowed value for LogFormat.FormatType is 'json', and other parameters in LogFormat will be ignored. It is recommended not to transfer LogFormat.
+     * @param LogFormat Output format for log delivery. If left empty, the default format is used. The default format logic is as follows:<ul><li>When TaskType is 'custom_endpoint', the default format is an array of JSON objects, each JSON object represents a log entry;</li><li>When TaskType is 's3', the default format is JSON Lines;</li></ul>Particularly, when TaskType is 'cls' or 'log_analysis', the only allowed value for LogFormat.FormatType is 'json', and other parameters in LogFormat will be ignored. It is recommended not to transfer LogFormat.
      */
     public void setLogFormat(LogFormat LogFormat) {
         this.LogFormat = LogFormat;
@@ -461,6 +356,12 @@ public class CreateRealtimeLogDeliveryTaskRequest extends AbstractModel {
         if (source.ZoneId != null) {
             this.ZoneId = new String(source.ZoneId);
         }
+        if (source.Area != null) {
+            this.Area = new String(source.Area);
+        }
+        if (source.LogType != null) {
+            this.LogType = new String(source.LogType);
+        }
         if (source.TaskName != null) {
             this.TaskName = new String(source.TaskName);
         }
@@ -472,12 +373,6 @@ public class CreateRealtimeLogDeliveryTaskRequest extends AbstractModel {
             for (int i = 0; i < source.EntityList.length; i++) {
                 this.EntityList[i] = new String(source.EntityList[i]);
             }
-        }
-        if (source.LogType != null) {
-            this.LogType = new String(source.LogType);
-        }
-        if (source.Area != null) {
-            this.Area = new String(source.Area);
         }
         if (source.Fields != null) {
             this.Fields = new String[source.Fields.length];
@@ -520,11 +415,11 @@ public class CreateRealtimeLogDeliveryTaskRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ZoneId", this.ZoneId);
+        this.setParamSimple(map, prefix + "Area", this.Area);
+        this.setParamSimple(map, prefix + "LogType", this.LogType);
         this.setParamSimple(map, prefix + "TaskName", this.TaskName);
         this.setParamSimple(map, prefix + "TaskType", this.TaskType);
         this.setParamArraySimple(map, prefix + "EntityList.", this.EntityList);
-        this.setParamSimple(map, prefix + "LogType", this.LogType);
-        this.setParamSimple(map, prefix + "Area", this.Area);
         this.setParamArraySimple(map, prefix + "Fields.", this.Fields);
         this.setParamArrayObj(map, prefix + "CustomFields.", this.CustomFields);
         this.setParamArrayObj(map, prefix + "DeliveryConditions.", this.DeliveryConditions);

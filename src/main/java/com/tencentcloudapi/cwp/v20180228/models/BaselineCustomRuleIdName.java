@@ -25,7 +25,6 @@ public class BaselineCustomRuleIdName extends AbstractModel {
 
     /**
     * Custom rule ID　
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("RuleId")
     @Expose
@@ -33,17 +32,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Custom Rule Name
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("RuleName")
     @Expose
     private String RuleName;
 
     /**
-     * Get Custom rule ID　
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Custom rule ID　 
      * @return RuleId Custom rule ID　
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getRuleId() {
         return this.RuleId;
@@ -51,19 +47,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Custom rule ID　
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param RuleId Custom rule ID　
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setRuleId(Long RuleId) {
         this.RuleId = RuleId;
     }
 
     /**
-     * Get Custom Rule Name
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Custom Rule Name 
      * @return RuleName Custom Rule Name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getRuleName() {
         return this.RuleName;
@@ -71,9 +63,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Custom Rule Name
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param RuleName Custom Rule Name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setRuleName(String RuleName) {
         this.RuleName = RuleName;

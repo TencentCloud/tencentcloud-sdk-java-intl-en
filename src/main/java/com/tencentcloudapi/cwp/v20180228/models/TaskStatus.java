@@ -45,8 +45,7 @@ public class TaskStatus extends AbstractModel {
     private String Fail;
 
     /**
-    * Scan failed, with specific reason displayed: scan timeout, low client version, or client offline
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Scan failed, with specific reason displayed: scan timeout, low client version, or client offline.
     */
     @SerializedName("Stop")
     @Expose
@@ -101,20 +100,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Scan failed, with specific reason displayed: scan timeout, low client version, or client offline
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Stop Scan failed, with specific reason displayed: scan timeout, low client version, or client offline
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Scan failed, with specific reason displayed: scan timeout, low client version, or client offline. 
+     * @return Stop Scan failed, with specific reason displayed: scan timeout, low client version, or client offline.
      */
     public String getStop() {
         return this.Stop;
     }
 
     /**
-     * Set Scan failed, with specific reason displayed: scan timeout, low client version, or client offline
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Stop Scan failed, with specific reason displayed: scan timeout, low client version, or client offline
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Scan failed, with specific reason displayed: scan timeout, low client version, or client offline.
+     * @param Stop Scan failed, with specific reason displayed: scan timeout, low client version, or client offline.
      */
     public void setStop(String Stop) {
         this.Stop = Stop;

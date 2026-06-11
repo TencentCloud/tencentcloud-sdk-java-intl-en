@@ -67,14 +67,13 @@ public class AssetWebServiceBaseInfo extends AbstractModel {
 
     /**
     * Host tag
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Tag")
     @Expose
     private MachineTag [] Tag;
 
     /**
-    * Database name
+    * Service name
     */
     @SerializedName("Name")
     @Expose
@@ -145,7 +144,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Data update time
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("UpdateTime")
     @Expose
@@ -166,8 +164,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long IsNew;
 
     /**
-    * Additional information
-Note: This field may return null, indicating that no valid values can be obtained.
+    *  Additional information
     */
     @SerializedName("MachineExtraInfo")
     @Expose
@@ -270,10 +267,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Host tag
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Host tag 
      * @return Tag Host tag
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public MachineTag [] getTag() {
         return this.Tag;
@@ -281,25 +276,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Host tag
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Tag Host tag
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setTag(MachineTag [] Tag) {
         this.Tag = Tag;
     }
 
     /**
-     * Get Database name 
-     * @return Name Database name
+     * Get Service name 
+     * @return Name Service name
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Database name
-     * @param Name Database name
+     * Set Service name
+     * @param Name Service name
      */
     public void setName(String Name) {
         this.Name = Name;
@@ -450,10 +443,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Data update time
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Data update time 
      * @return UpdateTime Data update time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getUpdateTime() {
         return this.UpdateTime;
@@ -461,9 +452,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Data update time
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param UpdateTime Data update time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;
@@ -502,20 +491,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Additional information
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return MachineExtraInfo Additional information
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  Additional information 
+     * @return MachineExtraInfo  Additional information
      */
     public MachineExtraInfo getMachineExtraInfo() {
         return this.MachineExtraInfo;
     }
 
     /**
-     * Set Additional information
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param MachineExtraInfo Additional information
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set  Additional information
+     * @param MachineExtraInfo  Additional information
      */
     public void setMachineExtraInfo(MachineExtraInfo MachineExtraInfo) {
         this.MachineExtraInfo = MachineExtraInfo;

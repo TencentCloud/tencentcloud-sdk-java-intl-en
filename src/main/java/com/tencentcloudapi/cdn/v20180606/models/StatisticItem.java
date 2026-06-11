@@ -48,8 +48,8 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     private Long BpsThreshold;
 
     /**
-    * Specifies how to disable CDN service when the threshold is exceeded. `RETURN_404`: Return 404; `RESOLVE_DNS_TO_ORIGIN`: Forward to origin server.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+    * Shutdown method RETURN 404: RETURN_404.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("CounterMeasure")
     @Expose
@@ -82,7 +82,7 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     private String Metric;
 
     /**
-    * Detection Cycle, Unit: Minutes, 60 or 1440
+    * 
     */
     @SerializedName("Cycle")
     @Expose
@@ -159,20 +159,20 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     }
 
     /**
-     * Get Specifies how to disable CDN service when the threshold is exceeded. `RETURN_404`: Return 404; `RESOLVE_DNS_TO_ORIGIN`: Forward to origin server.
-Note: This field may return `null`, indicating that no valid value can be obtained. 
-     * @return CounterMeasure Specifies how to disable CDN service when the threshold is exceeded. `RETURN_404`: Return 404; `RESOLVE_DNS_TO_ORIGIN`: Forward to origin server.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Get Shutdown method RETURN 404: RETURN_404.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return CounterMeasure Shutdown method RETURN 404: RETURN_404.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getCounterMeasure() {
         return this.CounterMeasure;
     }
 
     /**
-     * Set Specifies how to disable CDN service when the threshold is exceeded. `RETURN_404`: Return 404; `RESOLVE_DNS_TO_ORIGIN`: Forward to origin server.
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param CounterMeasure Specifies how to disable CDN service when the threshold is exceeded. `RETURN_404`: Return 404; `RESOLVE_DNS_TO_ORIGIN`: Forward to origin server.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Set Shutdown method RETURN 404: RETURN_404.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param CounterMeasure Shutdown method RETURN 404: RETURN_404.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setCounterMeasure(String CounterMeasure) {
         this.CounterMeasure = CounterMeasure;
@@ -247,16 +247,16 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     }
 
     /**
-     * Get Detection Cycle, Unit: Minutes, 60 or 1440 
-     * @return Cycle Detection Cycle, Unit: Minutes, 60 or 1440
+     * Get  
+     * @return Cycle 
      */
     public Long getCycle() {
         return this.Cycle;
     }
 
     /**
-     * Set Detection Cycle, Unit: Minutes, 60 or 1440
-     * @param Cycle Detection Cycle, Unit: Minutes, 60 or 1440
+     * Set 
+     * @param Cycle 
      */
     public void setCycle(Long Cycle) {
         this.Cycle = Cycle;

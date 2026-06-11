@@ -52,7 +52,8 @@ public class LivenessCompareResponse extends AbstractModel {
     private String Description;
 
     /**
-    * 
+    * Best screenshot list.
+Returned only when multiple best screenshots are configured to be returned.
     */
     @SerializedName("BestFrameList")
     @Expose
@@ -130,16 +131,20 @@ public class LivenessCompareResponse extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return BestFrameList 
+     * Get Best screenshot list.
+Returned only when multiple best screenshots are configured to be returned. 
+     * @return BestFrameList Best screenshot list.
+Returned only when multiple best screenshots are configured to be returned.
      */
     public String [] getBestFrameList() {
         return this.BestFrameList;
     }
 
     /**
-     * Set 
-     * @param BestFrameList 
+     * Set Best screenshot list.
+Returned only when multiple best screenshots are configured to be returned.
+     * @param BestFrameList Best screenshot list.
+Returned only when multiple best screenshots are configured to be returned.
      */
     public void setBestFrameList(String [] BestFrameList) {
         this.BestFrameList = BestFrameList;

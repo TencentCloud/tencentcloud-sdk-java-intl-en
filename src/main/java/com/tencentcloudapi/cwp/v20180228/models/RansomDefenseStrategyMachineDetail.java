@@ -60,15 +60,13 @@ public class RansomDefenseStrategyMachineDetail extends AbstractModel {
 
     /**
     * Public IP address
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("MachineWanIp")
     @Expose
     private String MachineWanIp;
 
     /**
-    * Cloud tag
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Cloud Tag
     */
     @SerializedName("CloudTags")
     @Expose
@@ -76,15 +74,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Availability zone information
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("RegionInfo")
     @Expose
     private RegionInfo RegionInfo;
 
     /**
-    * CWPP tag
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Host security tag
     */
     @SerializedName("Tag")
     @Expose
@@ -92,7 +88,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Protection status: 0 Disabled, 1 Enabled.
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Status")
     @Expose
@@ -100,7 +95,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Policy ID. 0 indicates no binding to any policy.
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("StrategyId")
     @Expose
@@ -109,14 +103,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
     /**
     * Hard disk information, all hard disks take effect when left blank:
 Separate diskId1|diskName1;diskId2|diskName2
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("DiskInfo")
     @Expose
     private String DiskInfo;
 
     /**
-    * Edition information. 0: Basic Edition; 1: Pro Edition; 2: Ultimate Edition; 3: Inclusive Edition.Note: This field may return null, indicating that no valid values can be obtained.
+    * Version information: 0-Basic version, 1-Pro edition, 2-Flagship edition, 3-Lightweight edition
     */
     @SerializedName("HostVersion")
     @Expose
@@ -124,11 +117,17 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Policy name
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("StrategyName")
     @Expose
     private String StrategyName;
+
+    /**
+    * Machine Zone Type. CVM - Cloud Virtual Machine; BM: Bare Metal; ECM: Edge Computing Machine; LH: Lightweight Application Server; Other: Hybrid Cloud Zone
+    */
+    @SerializedName("MachineType")
+    @Expose
+    private String MachineType;
 
     /**
      * Get Host UUID 
@@ -211,10 +210,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Public IP address
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Public IP address 
      * @return MachineWanIp Public IP address
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getMachineWanIp() {
         return this.MachineWanIp;
@@ -222,39 +219,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Public IP address
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param MachineWanIp Public IP address
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setMachineWanIp(String MachineWanIp) {
         this.MachineWanIp = MachineWanIp;
     }
 
     /**
-     * Get Cloud tag
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return CloudTags Cloud tag
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Cloud Tag 
+     * @return CloudTags Cloud Tag
      */
     public Tag [] getCloudTags() {
         return this.CloudTags;
     }
 
     /**
-     * Set Cloud tag
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param CloudTags Cloud tag
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Cloud Tag
+     * @param CloudTags Cloud Tag
      */
     public void setCloudTags(Tag [] CloudTags) {
         this.CloudTags = CloudTags;
     }
 
     /**
-     * Get Availability zone information
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Availability zone information 
      * @return RegionInfo Availability zone information
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public RegionInfo getRegionInfo() {
         return this.RegionInfo;
@@ -262,39 +251,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Availability zone information
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param RegionInfo Availability zone information
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setRegionInfo(RegionInfo RegionInfo) {
         this.RegionInfo = RegionInfo;
     }
 
     /**
-     * Get CWPP tag
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Tag CWPP tag
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Host security tag 
+     * @return Tag Host security tag
      */
     public MachineTag [] getTag() {
         return this.Tag;
     }
 
     /**
-     * Set CWPP tag
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Tag CWPP tag
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Host security tag
+     * @param Tag Host security tag
      */
     public void setTag(MachineTag [] Tag) {
         this.Tag = Tag;
     }
 
     /**
-     * Get Protection status: 0 Disabled, 1 Enabled.
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Protection status: 0 Disabled, 1 Enabled. 
      * @return Status Protection status: 0 Disabled, 1 Enabled.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getStatus() {
         return this.Status;
@@ -302,19 +283,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Protection status: 0 Disabled, 1 Enabled.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Status Protection status: 0 Disabled, 1 Enabled.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get Policy ID. 0 indicates no binding to any policy.
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Policy ID. 0 indicates no binding to any policy. 
      * @return StrategyId Policy ID. 0 indicates no binding to any policy.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getStrategyId() {
         return this.StrategyId;
@@ -322,9 +299,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Policy ID. 0 indicates no binding to any policy.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param StrategyId Policy ID. 0 indicates no binding to any policy.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setStrategyId(Long StrategyId) {
         this.StrategyId = StrategyId;
@@ -332,11 +307,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get Hard disk information, all hard disks take effect when left blank:
-Separate diskId1|diskName1;diskId2|diskName2
-Note: This field may return null, indicating that no valid values can be obtained. 
+Separate diskId1|diskName1;diskId2|diskName2 
      * @return DiskInfo Hard disk information, all hard disks take effect when left blank:
 Separate diskId1|diskName1;diskId2|diskName2
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getDiskInfo() {
         return this.DiskInfo;
@@ -345,36 +318,32 @@ Note: This field may return null, indicating that no valid values can be obtaine
     /**
      * Set Hard disk information, all hard disks take effect when left blank:
 Separate diskId1|diskName1;diskId2|diskName2
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param DiskInfo Hard disk information, all hard disks take effect when left blank:
 Separate diskId1|diskName1;diskId2|diskName2
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setDiskInfo(String DiskInfo) {
         this.DiskInfo = DiskInfo;
     }
 
     /**
-     * Get Edition information. 0: Basic Edition; 1: Pro Edition; 2: Ultimate Edition; 3: Inclusive Edition.Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return HostVersion Edition information. 0: Basic Edition; 1: Pro Edition; 2: Ultimate Edition; 3: Inclusive Edition.Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Version information: 0-Basic version, 1-Pro edition, 2-Flagship edition, 3-Lightweight edition 
+     * @return HostVersion Version information: 0-Basic version, 1-Pro edition, 2-Flagship edition, 3-Lightweight edition
      */
     public Long getHostVersion() {
         return this.HostVersion;
     }
 
     /**
-     * Set Edition information. 0: Basic Edition; 1: Pro Edition; 2: Ultimate Edition; 3: Inclusive Edition.Note: This field may return null, indicating that no valid values can be obtained.
-     * @param HostVersion Edition information. 0: Basic Edition; 1: Pro Edition; 2: Ultimate Edition; 3: Inclusive Edition.Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Version information: 0-Basic version, 1-Pro edition, 2-Flagship edition, 3-Lightweight edition
+     * @param HostVersion Version information: 0-Basic version, 1-Pro edition, 2-Flagship edition, 3-Lightweight edition
      */
     public void setHostVersion(Long HostVersion) {
         this.HostVersion = HostVersion;
     }
 
     /**
-     * Get Policy name
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Policy name 
      * @return StrategyName Policy name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getStrategyName() {
         return this.StrategyName;
@@ -382,12 +351,26 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Policy name
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param StrategyName Policy name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setStrategyName(String StrategyName) {
         this.StrategyName = StrategyName;
+    }
+
+    /**
+     * Get Machine Zone Type. CVM - Cloud Virtual Machine; BM: Bare Metal; ECM: Edge Computing Machine; LH: Lightweight Application Server; Other: Hybrid Cloud Zone 
+     * @return MachineType Machine Zone Type. CVM - Cloud Virtual Machine; BM: Bare Metal; ECM: Edge Computing Machine; LH: Lightweight Application Server; Other: Hybrid Cloud Zone
+     */
+    public String getMachineType() {
+        return this.MachineType;
+    }
+
+    /**
+     * Set Machine Zone Type. CVM - Cloud Virtual Machine; BM: Bare Metal; ECM: Edge Computing Machine; LH: Lightweight Application Server; Other: Hybrid Cloud Zone
+     * @param MachineType Machine Zone Type. CVM - Cloud Virtual Machine; BM: Bare Metal; ECM: Edge Computing Machine; LH: Lightweight Application Server; Other: Hybrid Cloud Zone
+     */
+    public void setMachineType(String MachineType) {
+        this.MachineType = MachineType;
     }
 
     public RansomDefenseStrategyMachineDetail() {
@@ -446,6 +429,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.StrategyName != null) {
             this.StrategyName = new String(source.StrategyName);
         }
+        if (source.MachineType != null) {
+            this.MachineType = new String(source.MachineType);
+        }
     }
 
 
@@ -467,6 +453,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "DiskInfo", this.DiskInfo);
         this.setParamSimple(map, prefix + "HostVersion", this.HostVersion);
         this.setParamSimple(map, prefix + "StrategyName", this.StrategyName);
+        this.setParamSimple(map, prefix + "MachineType", this.MachineType);
 
     }
 }

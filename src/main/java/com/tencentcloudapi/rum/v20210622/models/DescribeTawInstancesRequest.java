@@ -52,35 +52,35 @@ public class DescribeTawInstancesRequest extends AbstractModel {
     private Long Offset;
 
     /**
-    * Region ID
+    * Region Id
     */
     @SerializedName("AreaIds")
     @Expose
     private Long [] AreaIds;
 
     /**
-    * Instance status (1: creating; 2: running; 3: exceptional; 4: restarting; 5: stopping; 6: stopped; 7: terminating; 8: terminated)
+    * Instance status (1=creating, 2=running, 3=abnormal, 4=restarting, 5=stopping, 6=stopped, 7=being destroyed, 8=terminated). Deprecated. Please note in Filters.
     */
     @SerializedName("InstanceStatuses")
     @Expose
     private Long [] InstanceStatuses;
 
     /**
-    * Instance ID
+    * Instance Id, deprecated. Please note in Filters.
     */
     @SerializedName("InstanceIds")
     @Expose
     private String [] InstanceIds;
 
     /**
-    * Filter parameter
+    * Filter parameters; In demo mode, pass {"Name": "IsDemo", "Values":["1"]}.
     */
     @SerializedName("Filters")
     @Expose
     private Filter [] Filters;
 
     /**
-    * Whether it is in the demo mode. `1`: Yes; `2`: No.
+    * Deprecated. For demo mode, please note in Filters.
     */
     @SerializedName("IsDemo")
     @Expose
@@ -151,24 +151,24 @@ public class DescribeTawInstancesRequest extends AbstractModel {
     }
 
     /**
-     * Get Region ID 
-     * @return AreaIds Region ID
+     * Get Region Id 
+     * @return AreaIds Region Id
      */
     public Long [] getAreaIds() {
         return this.AreaIds;
     }
 
     /**
-     * Set Region ID
-     * @param AreaIds Region ID
+     * Set Region Id
+     * @param AreaIds Region Id
      */
     public void setAreaIds(Long [] AreaIds) {
         this.AreaIds = AreaIds;
     }
 
     /**
-     * Get Instance status (1: creating; 2: running; 3: exceptional; 4: restarting; 5: stopping; 6: stopped; 7: terminating; 8: terminated) 
-     * @return InstanceStatuses Instance status (1: creating; 2: running; 3: exceptional; 4: restarting; 5: stopping; 6: stopped; 7: terminating; 8: terminated)
+     * Get Instance status (1=creating, 2=running, 3=abnormal, 4=restarting, 5=stopping, 6=stopped, 7=being destroyed, 8=terminated). Deprecated. Please note in Filters. 
+     * @return InstanceStatuses Instance status (1=creating, 2=running, 3=abnormal, 4=restarting, 5=stopping, 6=stopped, 7=being destroyed, 8=terminated). Deprecated. Please note in Filters.
      * @deprecated
      */
     @Deprecated
@@ -177,8 +177,8 @@ public class DescribeTawInstancesRequest extends AbstractModel {
     }
 
     /**
-     * Set Instance status (1: creating; 2: running; 3: exceptional; 4: restarting; 5: stopping; 6: stopped; 7: terminating; 8: terminated)
-     * @param InstanceStatuses Instance status (1: creating; 2: running; 3: exceptional; 4: restarting; 5: stopping; 6: stopped; 7: terminating; 8: terminated)
+     * Set Instance status (1=creating, 2=running, 3=abnormal, 4=restarting, 5=stopping, 6=stopped, 7=being destroyed, 8=terminated). Deprecated. Please note in Filters.
+     * @param InstanceStatuses Instance status (1=creating, 2=running, 3=abnormal, 4=restarting, 5=stopping, 6=stopped, 7=being destroyed, 8=terminated). Deprecated. Please note in Filters.
      * @deprecated
      */
     @Deprecated
@@ -187,8 +187,8 @@ public class DescribeTawInstancesRequest extends AbstractModel {
     }
 
     /**
-     * Get Instance ID 
-     * @return InstanceIds Instance ID
+     * Get Instance Id, deprecated. Please note in Filters. 
+     * @return InstanceIds Instance Id, deprecated. Please note in Filters.
      * @deprecated
      */
     @Deprecated
@@ -197,8 +197,8 @@ public class DescribeTawInstancesRequest extends AbstractModel {
     }
 
     /**
-     * Set Instance ID
-     * @param InstanceIds Instance ID
+     * Set Instance Id, deprecated. Please note in Filters.
+     * @param InstanceIds Instance Id, deprecated. Please note in Filters.
      * @deprecated
      */
     @Deprecated
@@ -207,24 +207,24 @@ public class DescribeTawInstancesRequest extends AbstractModel {
     }
 
     /**
-     * Get Filter parameter 
-     * @return Filters Filter parameter
+     * Get Filter parameters; In demo mode, pass {"Name": "IsDemo", "Values":["1"]}. 
+     * @return Filters Filter parameters; In demo mode, pass {"Name": "IsDemo", "Values":["1"]}.
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set Filter parameter
-     * @param Filters Filter parameter
+     * Set Filter parameters; In demo mode, pass {"Name": "IsDemo", "Values":["1"]}.
+     * @param Filters Filter parameters; In demo mode, pass {"Name": "IsDemo", "Values":["1"]}.
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;
     }
 
     /**
-     * Get Whether it is in the demo mode. `1`: Yes; `2`: No. 
-     * @return IsDemo Whether it is in the demo mode. `1`: Yes; `2`: No.
+     * Get Deprecated. For demo mode, please note in Filters. 
+     * @return IsDemo Deprecated. For demo mode, please note in Filters.
      * @deprecated
      */
     @Deprecated
@@ -233,8 +233,8 @@ public class DescribeTawInstancesRequest extends AbstractModel {
     }
 
     /**
-     * Set Whether it is in the demo mode. `1`: Yes; `2`: No.
-     * @param IsDemo Whether it is in the demo mode. `1`: Yes; `2`: No.
+     * Set Deprecated. For demo mode, please note in Filters.
+     * @param IsDemo Deprecated. For demo mode, please note in Filters.
      * @deprecated
      */
     @Deprecated

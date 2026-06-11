@@ -25,7 +25,6 @@ public class DescribeStrategyExistResponse extends AbstractModel {
 
     /**
     * Whether the policy exists. 1: yes; 0: no.
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("IfExist")
     @Expose
@@ -39,10 +38,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Whether the policy exists. 1: yes; 0: no.
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Whether the policy exists. 1: yes; 0: no. 
      * @return IfExist Whether the policy exists. 1: yes; 0: no.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getIfExist() {
         return this.IfExist;
@@ -50,9 +47,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Whether the policy exists. 1: yes; 0: no.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param IfExist Whether the policy exists. 1: yes; 0: no.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setIfExist(Long IfExist) {
         this.IfExist = IfExist;

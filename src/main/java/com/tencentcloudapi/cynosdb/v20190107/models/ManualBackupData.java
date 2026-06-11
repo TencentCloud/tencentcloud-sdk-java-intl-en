@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class ManualBackupData extends AbstractModel {
 
     /**
-    * 
+    * Backup type. snapshot - Snapshot backup.
     */
     @SerializedName("BackupType")
     @Expose
     private String BackupType;
 
     /**
-    * 
+    * Backup method. auto - Automatic backup, manual - Manual backup.
     */
     @SerializedName("BackupMethod")
     @Expose
     private String BackupMethod;
 
     /**
-    * 
+    * Backup time.
     */
     @SerializedName("SnapshotTime")
     @Expose
@@ -53,48 +53,48 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private CrossRegionBackupItem [] CrossRegionBackupInfos;
 
     /**
-     * Get  
-     * @return BackupType 
+     * Get Backup type. snapshot - Snapshot backup. 
+     * @return BackupType Backup type. snapshot - Snapshot backup.
      */
     public String getBackupType() {
         return this.BackupType;
     }
 
     /**
-     * Set 
-     * @param BackupType 
+     * Set Backup type. snapshot - Snapshot backup.
+     * @param BackupType Backup type. snapshot - Snapshot backup.
      */
     public void setBackupType(String BackupType) {
         this.BackupType = BackupType;
     }
 
     /**
-     * Get  
-     * @return BackupMethod 
+     * Get Backup method. auto - Automatic backup, manual - Manual backup. 
+     * @return BackupMethod Backup method. auto - Automatic backup, manual - Manual backup.
      */
     public String getBackupMethod() {
         return this.BackupMethod;
     }
 
     /**
-     * Set 
-     * @param BackupMethod 
+     * Set Backup method. auto - Automatic backup, manual - Manual backup.
+     * @param BackupMethod Backup method. auto - Automatic backup, manual - Manual backup.
      */
     public void setBackupMethod(String BackupMethod) {
         this.BackupMethod = BackupMethod;
     }
 
     /**
-     * Get  
-     * @return SnapshotTime 
+     * Get Backup time. 
+     * @return SnapshotTime Backup time.
      */
     public String getSnapshotTime() {
         return this.SnapshotTime;
     }
 
     /**
-     * Set 
-     * @param SnapshotTime 
+     * Set Backup time.
+     * @param SnapshotTime Backup time.
      */
     public void setSnapshotTime(String SnapshotTime) {
         this.SnapshotTime = SnapshotTime;

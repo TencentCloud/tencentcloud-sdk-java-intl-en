@@ -24,368 +24,368 @@ import java.util.HashMap;
 public class DescribeApplicationSensitiveAPIListData extends AbstractModel {
 
     /**
-    * API ID.
+    * <p>APIID</p>
     */
     @SerializedName("APIId")
     @Expose
     private String APIId;
 
     /**
-    * API name.
+    * <p>API name.</p>
     */
     @SerializedName("APIName")
     @Expose
     private String APIName;
 
     /**
-    * API request method.
+    * <p>API method.</p>
     */
     @SerializedName("APIMethod")
     @Expose
     private String APIMethod;
 
     /**
-    * API description.
+    * <p>API description.</p>
     */
     @SerializedName("APIDesc")
     @Expose
     private String APIDesc;
 
     /**
-    * Creator.
+    * <p>Creator.</p>
     */
     @SerializedName("CreateUser")
     @Expose
     private String CreateUser;
 
     /**
-    * Creation time.
+    * <p>Creation time.</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * Last modifier.
+    * <p>Last modifier.</p>
     */
     @SerializedName("UpdateUser")
     @Expose
     private String UpdateUser;
 
     /**
-    * Last modified time.
+    * <p>Last modified time.</p>
     */
     @SerializedName("UpdateTime")
     @Expose
     private String UpdateTime;
 
     /**
-    * Superapp ID.
+    * <p>Superapp ID.</p>
     */
     @SerializedName("ApplicationId")
     @Expose
     private String ApplicationId;
 
     /**
-    * Superapp name.
+    * <p>Superapp name.</p>
     */
     @SerializedName("ApplicationName")
     @Expose
     private String ApplicationName;
 
     /**
-    * Team ID.
+    * <p>Team ID.</p>
     */
     @SerializedName("TeamId")
     @Expose
     private String TeamId;
 
     /**
-    * Team name.
+    * <p>Team name.</p>
     */
     @SerializedName("TeamName")
     @Expose
     private String TeamName;
 
     /**
-    * Superapp icon.
+    * <p>Superapp icon.</p>
     */
     @SerializedName("ApplicationLogo")
     @Expose
     private String ApplicationLogo;
 
     /**
-    * API type. Valid values: 1: System; 2: Custom.
+    * <p>API type. Valid values: 1: System; 2: Custom.</p>
     */
     @SerializedName("APIType")
     @Expose
     private Long APIType;
 
     /**
-    * API status. Valid values: 0: Public; 1: Restricted.
+    * <p>API status. Valid values: 0: Public; 1: Restricted.</p>
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * Applicable scope: Valid values: 0: Mini program; 1: Mini game; 100: Both.
+    * <p>Applicable scope: Valid values: 0: Mini program; 1: Mini game; 100: Both.</p>
     */
     @SerializedName("UseScope")
     @Expose
     private Long UseScope;
 
     /**
-     * Get API ID. 
-     * @return APIId API ID.
+     * Get <p>APIID</p> 
+     * @return APIId <p>APIID</p>
      */
     public String getAPIId() {
         return this.APIId;
     }
 
     /**
-     * Set API ID.
-     * @param APIId API ID.
+     * Set <p>APIID</p>
+     * @param APIId <p>APIID</p>
      */
     public void setAPIId(String APIId) {
         this.APIId = APIId;
     }
 
     /**
-     * Get API name. 
-     * @return APIName API name.
+     * Get <p>API name.</p> 
+     * @return APIName <p>API name.</p>
      */
     public String getAPIName() {
         return this.APIName;
     }
 
     /**
-     * Set API name.
-     * @param APIName API name.
+     * Set <p>API name.</p>
+     * @param APIName <p>API name.</p>
      */
     public void setAPIName(String APIName) {
         this.APIName = APIName;
     }
 
     /**
-     * Get API request method. 
-     * @return APIMethod API request method.
+     * Get <p>API method.</p> 
+     * @return APIMethod <p>API method.</p>
      */
     public String getAPIMethod() {
         return this.APIMethod;
     }
 
     /**
-     * Set API request method.
-     * @param APIMethod API request method.
+     * Set <p>API method.</p>
+     * @param APIMethod <p>API method.</p>
      */
     public void setAPIMethod(String APIMethod) {
         this.APIMethod = APIMethod;
     }
 
     /**
-     * Get API description. 
-     * @return APIDesc API description.
+     * Get <p>API description.</p> 
+     * @return APIDesc <p>API description.</p>
      */
     public String getAPIDesc() {
         return this.APIDesc;
     }
 
     /**
-     * Set API description.
-     * @param APIDesc API description.
+     * Set <p>API description.</p>
+     * @param APIDesc <p>API description.</p>
      */
     public void setAPIDesc(String APIDesc) {
         this.APIDesc = APIDesc;
     }
 
     /**
-     * Get Creator. 
-     * @return CreateUser Creator.
+     * Get <p>Creator.</p> 
+     * @return CreateUser <p>Creator.</p>
      */
     public String getCreateUser() {
         return this.CreateUser;
     }
 
     /**
-     * Set Creator.
-     * @param CreateUser Creator.
+     * Set <p>Creator.</p>
+     * @param CreateUser <p>Creator.</p>
      */
     public void setCreateUser(String CreateUser) {
         this.CreateUser = CreateUser;
     }
 
     /**
-     * Get Creation time. 
-     * @return CreateTime Creation time.
+     * Get <p>Creation time.</p> 
+     * @return CreateTime <p>Creation time.</p>
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set Creation time.
-     * @param CreateTime Creation time.
+     * Set <p>Creation time.</p>
+     * @param CreateTime <p>Creation time.</p>
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get Last modifier. 
-     * @return UpdateUser Last modifier.
+     * Get <p>Last modifier.</p> 
+     * @return UpdateUser <p>Last modifier.</p>
      */
     public String getUpdateUser() {
         return this.UpdateUser;
     }
 
     /**
-     * Set Last modifier.
-     * @param UpdateUser Last modifier.
+     * Set <p>Last modifier.</p>
+     * @param UpdateUser <p>Last modifier.</p>
      */
     public void setUpdateUser(String UpdateUser) {
         this.UpdateUser = UpdateUser;
     }
 
     /**
-     * Get Last modified time. 
-     * @return UpdateTime Last modified time.
+     * Get <p>Last modified time.</p> 
+     * @return UpdateTime <p>Last modified time.</p>
      */
     public String getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set Last modified time.
-     * @param UpdateTime Last modified time.
+     * Set <p>Last modified time.</p>
+     * @param UpdateTime <p>Last modified time.</p>
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;
     }
 
     /**
-     * Get Superapp ID. 
-     * @return ApplicationId Superapp ID.
+     * Get <p>Superapp ID.</p> 
+     * @return ApplicationId <p>Superapp ID.</p>
      */
     public String getApplicationId() {
         return this.ApplicationId;
     }
 
     /**
-     * Set Superapp ID.
-     * @param ApplicationId Superapp ID.
+     * Set <p>Superapp ID.</p>
+     * @param ApplicationId <p>Superapp ID.</p>
      */
     public void setApplicationId(String ApplicationId) {
         this.ApplicationId = ApplicationId;
     }
 
     /**
-     * Get Superapp name. 
-     * @return ApplicationName Superapp name.
+     * Get <p>Superapp name.</p> 
+     * @return ApplicationName <p>Superapp name.</p>
      */
     public String getApplicationName() {
         return this.ApplicationName;
     }
 
     /**
-     * Set Superapp name.
-     * @param ApplicationName Superapp name.
+     * Set <p>Superapp name.</p>
+     * @param ApplicationName <p>Superapp name.</p>
      */
     public void setApplicationName(String ApplicationName) {
         this.ApplicationName = ApplicationName;
     }
 
     /**
-     * Get Team ID. 
-     * @return TeamId Team ID.
+     * Get <p>Team ID.</p> 
+     * @return TeamId <p>Team ID.</p>
      */
     public String getTeamId() {
         return this.TeamId;
     }
 
     /**
-     * Set Team ID.
-     * @param TeamId Team ID.
+     * Set <p>Team ID.</p>
+     * @param TeamId <p>Team ID.</p>
      */
     public void setTeamId(String TeamId) {
         this.TeamId = TeamId;
     }
 
     /**
-     * Get Team name. 
-     * @return TeamName Team name.
+     * Get <p>Team name.</p> 
+     * @return TeamName <p>Team name.</p>
      */
     public String getTeamName() {
         return this.TeamName;
     }
 
     /**
-     * Set Team name.
-     * @param TeamName Team name.
+     * Set <p>Team name.</p>
+     * @param TeamName <p>Team name.</p>
      */
     public void setTeamName(String TeamName) {
         this.TeamName = TeamName;
     }
 
     /**
-     * Get Superapp icon. 
-     * @return ApplicationLogo Superapp icon.
+     * Get <p>Superapp icon.</p> 
+     * @return ApplicationLogo <p>Superapp icon.</p>
      */
     public String getApplicationLogo() {
         return this.ApplicationLogo;
     }
 
     /**
-     * Set Superapp icon.
-     * @param ApplicationLogo Superapp icon.
+     * Set <p>Superapp icon.</p>
+     * @param ApplicationLogo <p>Superapp icon.</p>
      */
     public void setApplicationLogo(String ApplicationLogo) {
         this.ApplicationLogo = ApplicationLogo;
     }
 
     /**
-     * Get API type. Valid values: 1: System; 2: Custom. 
-     * @return APIType API type. Valid values: 1: System; 2: Custom.
+     * Get <p>API type. Valid values: 1: System; 2: Custom.</p> 
+     * @return APIType <p>API type. Valid values: 1: System; 2: Custom.</p>
      */
     public Long getAPIType() {
         return this.APIType;
     }
 
     /**
-     * Set API type. Valid values: 1: System; 2: Custom.
-     * @param APIType API type. Valid values: 1: System; 2: Custom.
+     * Set <p>API type. Valid values: 1: System; 2: Custom.</p>
+     * @param APIType <p>API type. Valid values: 1: System; 2: Custom.</p>
      */
     public void setAPIType(Long APIType) {
         this.APIType = APIType;
     }
 
     /**
-     * Get API status. Valid values: 0: Public; 1: Restricted. 
-     * @return Status API status. Valid values: 0: Public; 1: Restricted.
+     * Get <p>API status. Valid values: 0: Public; 1: Restricted.</p> 
+     * @return Status <p>API status. Valid values: 0: Public; 1: Restricted.</p>
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set API status. Valid values: 0: Public; 1: Restricted.
-     * @param Status API status. Valid values: 0: Public; 1: Restricted.
+     * Set <p>API status. Valid values: 0: Public; 1: Restricted.</p>
+     * @param Status <p>API status. Valid values: 0: Public; 1: Restricted.</p>
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get Applicable scope: Valid values: 0: Mini program; 1: Mini game; 100: Both. 
-     * @return UseScope Applicable scope: Valid values: 0: Mini program; 1: Mini game; 100: Both.
+     * Get <p>Applicable scope: Valid values: 0: Mini program; 1: Mini game; 100: Both.</p> 
+     * @return UseScope <p>Applicable scope: Valid values: 0: Mini program; 1: Mini game; 100: Both.</p>
      */
     public Long getUseScope() {
         return this.UseScope;
     }
 
     /**
-     * Set Applicable scope: Valid values: 0: Mini program; 1: Mini game; 100: Both.
-     * @param UseScope Applicable scope: Valid values: 0: Mini program; 1: Mini game; 100: Both.
+     * Set <p>Applicable scope: Valid values: 0: Mini program; 1: Mini game; 100: Both.</p>
+     * @param UseScope <p>Applicable scope: Valid values: 0: Mini program; 1: Mini game; 100: Both.</p>
      */
     public void setUseScope(Long UseScope) {
         this.UseScope = UseScope;

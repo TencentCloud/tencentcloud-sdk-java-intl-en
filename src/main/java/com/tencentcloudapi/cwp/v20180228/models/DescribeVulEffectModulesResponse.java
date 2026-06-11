@@ -32,7 +32,6 @@ public class DescribeVulEffectModulesResponse extends AbstractModel {
 
     /**
     * List of affected hosts
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("VulEffectModuleInfo")
     @Expose
@@ -62,10 +61,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get List of affected hosts
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get List of affected hosts 
      * @return VulEffectModuleInfo List of affected hosts
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public VulEffectModuleInfo [] getVulEffectModuleInfo() {
         return this.VulEffectModuleInfo;
@@ -73,9 +70,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set List of affected hosts
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param VulEffectModuleInfo List of affected hosts
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setVulEffectModuleInfo(VulEffectModuleInfo [] VulEffectModuleInfo) {
         this.VulEffectModuleInfo = VulEffectModuleInfo;

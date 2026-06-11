@@ -55,8 +55,7 @@ public class ComplianceAssetSummary extends AbstractModel {
     private String CheckStatus;
 
     /**
-    * Check progress. Value range: 0-100. This field is valid only if the check is running.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * The detection progress of this category is a number between 0 and 100. If not in progress, field not found.
     */
     @SerializedName("CheckProgress")
     @Expose
@@ -140,16 +139,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long ScanFailedAssetCount;
 
     /**
-    * Last check duration in seconds
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Time taken for last detection, in seconds.
     */
     @SerializedName("CheckCostTime")
     @Expose
     private Float CheckCostTime;
 
     /**
-    * Last check time
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Last detection time.
     */
     @SerializedName("LastCheckTime")
     @Expose
@@ -163,20 +160,39 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private CompliancePeriodTaskRule PeriodRule;
 
     /**
-    * Total number of enabled check items
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Total Number of Enabled Check Items
     */
     @SerializedName("OpenPolicyItemCount")
     @Expose
     private Long OpenPolicyItemCount;
 
     /**
-    * Total number of ignored check items
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Total Number of Ignored Check Items
     */
     @SerializedName("IgnoredPolicyItemCount")
     @Expose
     private Long IgnoredPolicyItemCount;
+
+    /**
+    * Total number of detection items.
+    */
+    @SerializedName("TotalPolicyItemCount")
+    @Expose
+    private Long TotalPolicyItemCount;
+
+    /**
+    * Detection hosts
+    */
+    @SerializedName("DetectHostCount")
+    @Expose
+    private Long DetectHostCount;
+
+    /**
+    * Remaining time of the current task, in seconds.
+    */
+    @SerializedName("LeftTime")
+    @Expose
+    private Long LeftTime;
 
     /**
      * Get Asset type 
@@ -267,20 +283,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Check progress. Value range: 0-100. This field is valid only if the check is running.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return CheckProgress Check progress. Value range: 0-100. This field is valid only if the check is running.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get The detection progress of this category is a number between 0 and 100. If not in progress, field not found. 
+     * @return CheckProgress The detection progress of this category is a number between 0 and 100. If not in progress, field not found.
      */
     public Float getCheckProgress() {
         return this.CheckProgress;
     }
 
     /**
-     * Set Check progress. Value range: 0-100. This field is valid only if the check is running.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param CheckProgress Check progress. Value range: 0-100. This field is valid only if the check is running.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set The detection progress of this category is a number between 0 and 100. If not in progress, field not found.
+     * @param CheckProgress The detection progress of this category is a number between 0 and 100. If not in progress, field not found.
      */
     public void setCheckProgress(Float CheckProgress) {
         this.CheckProgress = CheckProgress;
@@ -463,40 +475,32 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Last check duration in seconds
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return CheckCostTime Last check duration in seconds
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Time taken for last detection, in seconds. 
+     * @return CheckCostTime Time taken for last detection, in seconds.
      */
     public Float getCheckCostTime() {
         return this.CheckCostTime;
     }
 
     /**
-     * Set Last check duration in seconds
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param CheckCostTime Last check duration in seconds
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Time taken for last detection, in seconds.
+     * @param CheckCostTime Time taken for last detection, in seconds.
      */
     public void setCheckCostTime(Float CheckCostTime) {
         this.CheckCostTime = CheckCostTime;
     }
 
     /**
-     * Get Last check time
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return LastCheckTime Last check time
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Last detection time. 
+     * @return LastCheckTime Last detection time.
      */
     public String getLastCheckTime() {
         return this.LastCheckTime;
     }
 
     /**
-     * Set Last check time
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param LastCheckTime Last check time
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Last detection time.
+     * @param LastCheckTime Last detection time.
      */
     public void setLastCheckTime(String LastCheckTime) {
         this.LastCheckTime = LastCheckTime;
@@ -519,43 +523,83 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Total number of enabled check items
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return OpenPolicyItemCount Total number of enabled check items
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Total Number of Enabled Check Items 
+     * @return OpenPolicyItemCount Total Number of Enabled Check Items
      */
     public Long getOpenPolicyItemCount() {
         return this.OpenPolicyItemCount;
     }
 
     /**
-     * Set Total number of enabled check items
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param OpenPolicyItemCount Total number of enabled check items
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Total Number of Enabled Check Items
+     * @param OpenPolicyItemCount Total Number of Enabled Check Items
      */
     public void setOpenPolicyItemCount(Long OpenPolicyItemCount) {
         this.OpenPolicyItemCount = OpenPolicyItemCount;
     }
 
     /**
-     * Get Total number of ignored check items
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return IgnoredPolicyItemCount Total number of ignored check items
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Total Number of Ignored Check Items 
+     * @return IgnoredPolicyItemCount Total Number of Ignored Check Items
      */
     public Long getIgnoredPolicyItemCount() {
         return this.IgnoredPolicyItemCount;
     }
 
     /**
-     * Set Total number of ignored check items
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param IgnoredPolicyItemCount Total number of ignored check items
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Total Number of Ignored Check Items
+     * @param IgnoredPolicyItemCount Total Number of Ignored Check Items
      */
     public void setIgnoredPolicyItemCount(Long IgnoredPolicyItemCount) {
         this.IgnoredPolicyItemCount = IgnoredPolicyItemCount;
+    }
+
+    /**
+     * Get Total number of detection items. 
+     * @return TotalPolicyItemCount Total number of detection items.
+     */
+    public Long getTotalPolicyItemCount() {
+        return this.TotalPolicyItemCount;
+    }
+
+    /**
+     * Set Total number of detection items.
+     * @param TotalPolicyItemCount Total number of detection items.
+     */
+    public void setTotalPolicyItemCount(Long TotalPolicyItemCount) {
+        this.TotalPolicyItemCount = TotalPolicyItemCount;
+    }
+
+    /**
+     * Get Detection hosts 
+     * @return DetectHostCount Detection hosts
+     */
+    public Long getDetectHostCount() {
+        return this.DetectHostCount;
+    }
+
+    /**
+     * Set Detection hosts
+     * @param DetectHostCount Detection hosts
+     */
+    public void setDetectHostCount(Long DetectHostCount) {
+        this.DetectHostCount = DetectHostCount;
+    }
+
+    /**
+     * Get Remaining time of the current task, in seconds. 
+     * @return LeftTime Remaining time of the current task, in seconds.
+     */
+    public Long getLeftTime() {
+        return this.LeftTime;
+    }
+
+    /**
+     * Set Remaining time of the current task, in seconds.
+     * @param LeftTime Remaining time of the current task, in seconds.
+     */
+    public void setLeftTime(Long LeftTime) {
+        this.LeftTime = LeftTime;
     }
 
     public ComplianceAssetSummary() {
@@ -626,6 +670,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.IgnoredPolicyItemCount != null) {
             this.IgnoredPolicyItemCount = new Long(source.IgnoredPolicyItemCount);
         }
+        if (source.TotalPolicyItemCount != null) {
+            this.TotalPolicyItemCount = new Long(source.TotalPolicyItemCount);
+        }
+        if (source.DetectHostCount != null) {
+            this.DetectHostCount = new Long(source.DetectHostCount);
+        }
+        if (source.LeftTime != null) {
+            this.LeftTime = new Long(source.LeftTime);
+        }
     }
 
 
@@ -653,6 +706,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamObj(map, prefix + "PeriodRule.", this.PeriodRule);
         this.setParamSimple(map, prefix + "OpenPolicyItemCount", this.OpenPolicyItemCount);
         this.setParamSimple(map, prefix + "IgnoredPolicyItemCount", this.IgnoredPolicyItemCount);
+        this.setParamSimple(map, prefix + "TotalPolicyItemCount", this.TotalPolicyItemCount);
+        this.setParamSimple(map, prefix + "DetectHostCount", this.DetectHostCount);
+        this.setParamSimple(map, prefix + "LeftTime", this.LeftTime);
 
     }
 }

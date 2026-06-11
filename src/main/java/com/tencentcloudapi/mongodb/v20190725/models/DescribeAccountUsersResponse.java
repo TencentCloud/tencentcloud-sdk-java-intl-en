@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeAccountUsersResponse extends AbstractModel {
 
     /**
-    * 
+    * The list of instance accounts.
     */
     @SerializedName("Users")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeAccountUsersResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get  
-     * @return Users 
+     * Get The list of instance accounts. 
+     * @return Users The list of instance accounts.
      */
     public UserInfo [] getUsers() {
         return this.Users;
     }
 
     /**
-     * Set 
-     * @param Users 
+     * Set The list of instance accounts.
+     * @param Users The list of instance accounts.
      */
     public void setUsers(UserInfo [] Users) {
         this.Users = Users;

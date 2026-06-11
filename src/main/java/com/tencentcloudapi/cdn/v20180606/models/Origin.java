@@ -86,11 +86,11 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     private String CosPrivateAccess;
 
     /**
-    * Origin-pull protocol configuration
-http: forced HTTP origin-pull
-follow: protocol follow origin-pull
-https: forced HTTPS origin-pull. This only supports origin server port 443 for origin-pull.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+    * Configures the origin-pull protocol.
+Http: force http origin-pull.
+follow protocol for origin pull.
+Https: enforce https origin-pull.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("OriginPullProtocol")
     @Expose
@@ -106,17 +106,16 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     private String [] BackupOrigins;
 
     /**
-    * Secondary origin type
-<font color=red>This field is used together with `BackupOrigins`.</font>
-Values:
-`domain`: Domain name
-`ip`: IP address
-The following secondary origin types are only available to beta users. Submit a ticket to use it.
-`ipv6_domain`: Multiple IPv6 addresses and one domain name
-`ip_ipv6`: Multiple IPv4 addresses and one IPv6 address
-`ipv6_domain`: Multiple IPv6 addresses and one domain name
-`ip_ipv6_domain`: Multiple IPv4 and IPv6 addresses and one domain name
-Note: This field may return `null`, indicating that no valid values can be obtained.
+    * Secondary origin type. valid values:.
+BackupOrigins specifies the backup origin list. required when not empty.
+Supports the following types.
+domain type.
+ip: ip list as the origin server.
+The following backup origin server types are not fully available yet and require trial use application.
+ipv6_domain: specifies the origin server list containing multiple ipv6 addresses and domain names.
+ip_ipv6: specifies the origin server list containing multiple ipv4 addresses and ipv6 addresses.
+ip_ipv6_domain: specifies the origin server list containing multiple ipv4 addresses, ipv6 addresses, and domain names.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("BackupOriginType")
     @Expose
@@ -386,32 +385,32 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     }
 
     /**
-     * Get Origin-pull protocol configuration
-http: forced HTTP origin-pull
-follow: protocol follow origin-pull
-https: forced HTTPS origin-pull. This only supports origin server port 443 for origin-pull.
-Note: This field may return `null`, indicating that no valid value can be obtained. 
-     * @return OriginPullProtocol Origin-pull protocol configuration
-http: forced HTTP origin-pull
-follow: protocol follow origin-pull
-https: forced HTTPS origin-pull. This only supports origin server port 443 for origin-pull.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Get Configures the origin-pull protocol.
+Http: force http origin-pull.
+follow protocol for origin pull.
+Https: enforce https origin-pull.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return OriginPullProtocol Configures the origin-pull protocol.
+Http: force http origin-pull.
+follow protocol for origin pull.
+Https: enforce https origin-pull.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getOriginPullProtocol() {
         return this.OriginPullProtocol;
     }
 
     /**
-     * Set Origin-pull protocol configuration
-http: forced HTTP origin-pull
-follow: protocol follow origin-pull
-https: forced HTTPS origin-pull. This only supports origin server port 443 for origin-pull.
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param OriginPullProtocol Origin-pull protocol configuration
-http: forced HTTP origin-pull
-follow: protocol follow origin-pull
-https: forced HTTPS origin-pull. This only supports origin server port 443 for origin-pull.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Set Configures the origin-pull protocol.
+Http: force http origin-pull.
+follow protocol for origin pull.
+Https: enforce https origin-pull.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param OriginPullProtocol Configures the origin-pull protocol.
+Http: force http origin-pull.
+follow protocol for origin pull.
+Https: enforce https origin-pull.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setOriginPullProtocol(String OriginPullProtocol) {
         this.OriginPullProtocol = OriginPullProtocol;
@@ -442,56 +441,52 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Get Secondary origin type
-<font color=red>This field is used together with `BackupOrigins`.</font>
-Values:
-`domain`: Domain name
-`ip`: IP address
-The following secondary origin types are only available to beta users. Submit a ticket to use it.
-`ipv6_domain`: Multiple IPv6 addresses and one domain name
-`ip_ipv6`: Multiple IPv4 addresses and one IPv6 address
-`ipv6_domain`: Multiple IPv6 addresses and one domain name
-`ip_ipv6_domain`: Multiple IPv4 and IPv6 addresses and one domain name
-Note: This field may return `null`, indicating that no valid values can be obtained. 
-     * @return BackupOriginType Secondary origin type
-<font color=red>This field is used together with `BackupOrigins`.</font>
-Values:
-`domain`: Domain name
-`ip`: IP address
-The following secondary origin types are only available to beta users. Submit a ticket to use it.
-`ipv6_domain`: Multiple IPv6 addresses and one domain name
-`ip_ipv6`: Multiple IPv4 addresses and one IPv6 address
-`ipv6_domain`: Multiple IPv6 addresses and one domain name
-`ip_ipv6_domain`: Multiple IPv4 and IPv6 addresses and one domain name
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * Get Secondary origin type. valid values:.
+BackupOrigins specifies the backup origin list. required when not empty.
+Supports the following types.
+domain type.
+ip: ip list as the origin server.
+The following backup origin server types are not fully available yet and require trial use application.
+ipv6_domain: specifies the origin server list containing multiple ipv6 addresses and domain names.
+ip_ipv6: specifies the origin server list containing multiple ipv4 addresses and ipv6 addresses.
+ip_ipv6_domain: specifies the origin server list containing multiple ipv4 addresses, ipv6 addresses, and domain names.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return BackupOriginType Secondary origin type. valid values:.
+BackupOrigins specifies the backup origin list. required when not empty.
+Supports the following types.
+domain type.
+ip: ip list as the origin server.
+The following backup origin server types are not fully available yet and require trial use application.
+ipv6_domain: specifies the origin server list containing multiple ipv6 addresses and domain names.
+ip_ipv6: specifies the origin server list containing multiple ipv4 addresses and ipv6 addresses.
+ip_ipv6_domain: specifies the origin server list containing multiple ipv4 addresses, ipv6 addresses, and domain names.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getBackupOriginType() {
         return this.BackupOriginType;
     }
 
     /**
-     * Set Secondary origin type
-<font color=red>This field is used together with `BackupOrigins`.</font>
-Values:
-`domain`: Domain name
-`ip`: IP address
-The following secondary origin types are only available to beta users. Submit a ticket to use it.
-`ipv6_domain`: Multiple IPv6 addresses and one domain name
-`ip_ipv6`: Multiple IPv4 addresses and one IPv6 address
-`ipv6_domain`: Multiple IPv6 addresses and one domain name
-`ip_ipv6_domain`: Multiple IPv4 and IPv6 addresses and one domain name
-Note: This field may return `null`, indicating that no valid values can be obtained.
-     * @param BackupOriginType Secondary origin type
-<font color=red>This field is used together with `BackupOrigins`.</font>
-Values:
-`domain`: Domain name
-`ip`: IP address
-The following secondary origin types are only available to beta users. Submit a ticket to use it.
-`ipv6_domain`: Multiple IPv6 addresses and one domain name
-`ip_ipv6`: Multiple IPv4 addresses and one IPv6 address
-`ipv6_domain`: Multiple IPv6 addresses and one domain name
-`ip_ipv6_domain`: Multiple IPv4 and IPv6 addresses and one domain name
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * Set Secondary origin type. valid values:.
+BackupOrigins specifies the backup origin list. required when not empty.
+Supports the following types.
+domain type.
+ip: ip list as the origin server.
+The following backup origin server types are not fully available yet and require trial use application.
+ipv6_domain: specifies the origin server list containing multiple ipv6 addresses and domain names.
+ip_ipv6: specifies the origin server list containing multiple ipv4 addresses and ipv6 addresses.
+ip_ipv6_domain: specifies the origin server list containing multiple ipv4 addresses, ipv6 addresses, and domain names.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param BackupOriginType Secondary origin type. valid values:.
+BackupOrigins specifies the backup origin list. required when not empty.
+Supports the following types.
+domain type.
+ip: ip list as the origin server.
+The following backup origin server types are not fully available yet and require trial use application.
+ipv6_domain: specifies the origin server list containing multiple ipv6 addresses and domain names.
+ip_ipv6: specifies the origin server list containing multiple ipv4 addresses and ipv6 addresses.
+ip_ipv6_domain: specifies the origin server list containing multiple ipv4 addresses, ipv6 addresses, and domain names.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setBackupOriginType(String BackupOriginType) {
         this.BackupOriginType = BackupOriginType;

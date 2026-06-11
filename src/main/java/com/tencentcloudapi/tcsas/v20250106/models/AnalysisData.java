@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class AnalysisData extends AbstractModel {
 
     /**
-    * Data time.
+    * <p>Data time.</p>
     */
     @SerializedName("DataTime")
     @Expose
     private String DataTime;
 
     /**
-    * Data value.
+    * <p>Data value.</p>
     */
     @SerializedName("Number")
     @Expose
     private String Number;
 
     /**
-     * Get Data time. 
-     * @return DataTime Data time.
+     * Get <p>Data time.</p> 
+     * @return DataTime <p>Data time.</p>
      */
     public String getDataTime() {
         return this.DataTime;
     }
 
     /**
-     * Set Data time.
-     * @param DataTime Data time.
+     * Set <p>Data time.</p>
+     * @param DataTime <p>Data time.</p>
      */
     public void setDataTime(String DataTime) {
         this.DataTime = DataTime;
     }
 
     /**
-     * Get Data value. 
-     * @return Number Data value.
+     * Get <p>Data value.</p> 
+     * @return Number <p>Data value.</p>
      */
     public String getNumber() {
         return this.Number;
     }
 
     /**
-     * Set Data value.
-     * @param Number Data value.
+     * Set <p>Data value.</p>
+     * @param Number <p>Data value.</p>
      */
     public void setNumber(String Number) {
         this.Number = Number;

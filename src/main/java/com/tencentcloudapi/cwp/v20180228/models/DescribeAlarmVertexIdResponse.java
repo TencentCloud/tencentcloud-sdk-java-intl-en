@@ -24,8 +24,7 @@ import java.util.HashMap;
 public class DescribeAlarmVertexIdResponse extends AbstractModel {
 
     /**
-    * List of alarm IDs
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Alarm node ID list.
     */
     @SerializedName("AlarmVertexIds")
     @Expose
@@ -39,20 +38,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get List of alarm IDs
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return AlarmVertexIds List of alarm IDs
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Alarm node ID list. 
+     * @return AlarmVertexIds Alarm node ID list.
      */
     public String [] getAlarmVertexIds() {
         return this.AlarmVertexIds;
     }
 
     /**
-     * Set List of alarm IDs
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param AlarmVertexIds List of alarm IDs
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Alarm node ID list.
+     * @param AlarmVertexIds Alarm node ID list.
      */
     public void setAlarmVertexIds(String [] AlarmVertexIds) {
         this.AlarmVertexIds = AlarmVertexIds;

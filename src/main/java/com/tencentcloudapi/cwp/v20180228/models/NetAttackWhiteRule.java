@@ -25,7 +25,6 @@ public class NetAttackWhiteRule extends AbstractModel {
 
     /**
     * Rule ID
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Id")
     @Expose
@@ -33,7 +32,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Rule description
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Description")
     @Expose
@@ -41,7 +39,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * 0: A group of Quuid 1: All hosts
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Scope")
     @Expose
@@ -49,7 +46,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Whether to process previous events: 0: do not process; 1: process
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("DealOldEvents")
     @Expose
@@ -57,7 +53,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Host QUUIDs, separated by semicolons (;).
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Quuids")
     @Expose
@@ -65,7 +60,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Source IP. Single IP: 1.1.1.1, IP Range: 1.1.1.1-1.1.2.1, IP Range: 1.1.1.0/24, separated by semicolons (;)
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("SrcIP")
     @Expose
@@ -73,7 +67,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Creation time
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("CreateTime")
     @Expose
@@ -81,17 +74,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Modification time
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ModifyTime")
     @Expose
     private String ModifyTime;
 
     /**
-     * Get Rule ID
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Rule ID 
      * @return Id Rule ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getId() {
         return this.Id;
@@ -99,19 +89,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Rule ID
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Id Rule ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setId(Long Id) {
         this.Id = Id;
     }
 
     /**
-     * Get Rule description
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Rule description 
      * @return Description Rule description
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getDescription() {
         return this.Description;
@@ -119,19 +105,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Rule description
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Description Rule description
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get 0: A group of Quuid 1: All hosts
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get 0: A group of Quuid 1: All hosts 
      * @return Scope 0: A group of Quuid 1: All hosts
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getScope() {
         return this.Scope;
@@ -139,19 +121,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set 0: A group of Quuid 1: All hosts
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Scope 0: A group of Quuid 1: All hosts
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setScope(Long Scope) {
         this.Scope = Scope;
     }
 
     /**
-     * Get Whether to process previous events: 0: do not process; 1: process
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Whether to process previous events: 0: do not process; 1: process 
      * @return DealOldEvents Whether to process previous events: 0: do not process; 1: process
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getDealOldEvents() {
         return this.DealOldEvents;
@@ -159,19 +137,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Whether to process previous events: 0: do not process; 1: process
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param DealOldEvents Whether to process previous events: 0: do not process; 1: process
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setDealOldEvents(Long DealOldEvents) {
         this.DealOldEvents = DealOldEvents;
     }
 
     /**
-     * Get Host QUUIDs, separated by semicolons (;).
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Host QUUIDs, separated by semicolons (;). 
      * @return Quuids Host QUUIDs, separated by semicolons (;).
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getQuuids() {
         return this.Quuids;
@@ -179,19 +153,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Host QUUIDs, separated by semicolons (;).
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Quuids Host QUUIDs, separated by semicolons (;).
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setQuuids(String Quuids) {
         this.Quuids = Quuids;
     }
 
     /**
-     * Get Source IP. Single IP: 1.1.1.1, IP Range: 1.1.1.1-1.1.2.1, IP Range: 1.1.1.0/24, separated by semicolons (;)
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Source IP. Single IP: 1.1.1.1, IP Range: 1.1.1.1-1.1.2.1, IP Range: 1.1.1.0/24, separated by semicolons (;) 
      * @return SrcIP Source IP. Single IP: 1.1.1.1, IP Range: 1.1.1.1-1.1.2.1, IP Range: 1.1.1.0/24, separated by semicolons (;)
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getSrcIP() {
         return this.SrcIP;
@@ -199,19 +169,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Source IP. Single IP: 1.1.1.1, IP Range: 1.1.1.1-1.1.2.1, IP Range: 1.1.1.0/24, separated by semicolons (;)
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param SrcIP Source IP. Single IP: 1.1.1.1, IP Range: 1.1.1.1-1.1.2.1, IP Range: 1.1.1.0/24, separated by semicolons (;)
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setSrcIP(String SrcIP) {
         this.SrcIP = SrcIP;
     }
 
     /**
-     * Get Creation time
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Creation time 
      * @return CreateTime Creation time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getCreateTime() {
         return this.CreateTime;
@@ -219,19 +185,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Creation time
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param CreateTime Creation time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get Modification time
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Modification time 
      * @return ModifyTime Modification time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getModifyTime() {
         return this.ModifyTime;
@@ -239,9 +201,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Modification time
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param ModifyTime Modification time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setModifyTime(String ModifyTime) {
         this.ModifyTime = ModifyTime;

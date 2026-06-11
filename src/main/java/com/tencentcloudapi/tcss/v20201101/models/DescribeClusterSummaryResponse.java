@@ -108,21 +108,21 @@ public class DescribeClusterSummaryResponse extends AbstractModel {
     private Long ServerlessClusterCount;
 
     /**
-    * 
+    * TKE Cluster Count
     */
     @SerializedName("TkeClusterCount")
     @Expose
     private Long TkeClusterCount;
 
     /**
-    * 
+    * Number of User-Built Tencent Cloud Clusters
     */
     @SerializedName("UserCreateTencentClusterCount")
     @Expose
     private Long UserCreateTencentClusterCount;
 
     /**
-    * 
+    * Number of User-Built Cluster Hybrid Clouds
     */
     @SerializedName("UserCreateHybridClusterCount")
     @Expose
@@ -328,48 +328,48 @@ public class DescribeClusterSummaryResponse extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return TkeClusterCount 
+     * Get TKE Cluster Count 
+     * @return TkeClusterCount TKE Cluster Count
      */
     public Long getTkeClusterCount() {
         return this.TkeClusterCount;
     }
 
     /**
-     * Set 
-     * @param TkeClusterCount 
+     * Set TKE Cluster Count
+     * @param TkeClusterCount TKE Cluster Count
      */
     public void setTkeClusterCount(Long TkeClusterCount) {
         this.TkeClusterCount = TkeClusterCount;
     }
 
     /**
-     * Get  
-     * @return UserCreateTencentClusterCount 
+     * Get Number of User-Built Tencent Cloud Clusters 
+     * @return UserCreateTencentClusterCount Number of User-Built Tencent Cloud Clusters
      */
     public Long getUserCreateTencentClusterCount() {
         return this.UserCreateTencentClusterCount;
     }
 
     /**
-     * Set 
-     * @param UserCreateTencentClusterCount 
+     * Set Number of User-Built Tencent Cloud Clusters
+     * @param UserCreateTencentClusterCount Number of User-Built Tencent Cloud Clusters
      */
     public void setUserCreateTencentClusterCount(Long UserCreateTencentClusterCount) {
         this.UserCreateTencentClusterCount = UserCreateTencentClusterCount;
     }
 
     /**
-     * Get  
-     * @return UserCreateHybridClusterCount 
+     * Get Number of User-Built Cluster Hybrid Clouds 
+     * @return UserCreateHybridClusterCount Number of User-Built Cluster Hybrid Clouds
      */
     public Long getUserCreateHybridClusterCount() {
         return this.UserCreateHybridClusterCount;
     }
 
     /**
-     * Set 
-     * @param UserCreateHybridClusterCount 
+     * Set Number of User-Built Cluster Hybrid Clouds
+     * @param UserCreateHybridClusterCount Number of User-Built Cluster Hybrid Clouds
      */
     public void setUserCreateHybridClusterCount(Long UserCreateHybridClusterCount) {
         this.UserCreateHybridClusterCount = UserCreateHybridClusterCount;

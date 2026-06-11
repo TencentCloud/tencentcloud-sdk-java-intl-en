@@ -81,7 +81,6 @@ public class EmergencyVul extends AbstractModel {
 
     /**
     * CVE ID
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("CveId")
     @Expose
@@ -89,7 +88,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * CVSS score
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("CvssScore")
     @Expose
@@ -97,7 +95,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Vulnerability Tags, Separated by Multiple Commas
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Labels")
     @Expose
@@ -105,15 +102,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Number of affected machines
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("HostCount")
     @Expose
     private Long HostCount;
 
     /**
-    * Whether to support defense: 0: no; 1: yes
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Support defense: 0-no support 1-support
     */
     @SerializedName("IsSupportDefense")
     @Expose
@@ -121,31 +116,27 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Number of Attacks Defended
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("DefenseAttackCount")
     @Expose
     private Long DefenseAttackCount;
 
     /**
-    * Detection rule: 0: version comparison; 1: POC verification
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Detection rule. 0: version comparison, 1: POC verification.
     */
     @SerializedName("Method")
     @Expose
     private Long Method;
 
     /**
-    * Attack intensity level
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Attack intensity level.
     */
     @SerializedName("AttackLevel")
     @Expose
     private Long AttackLevel;
 
     /**
-    * Whether vulnerability defense is enabled on hosts with vulnerabilities
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Whether vulnerable hosts are enabled with vulnerability defense.
     */
     @SerializedName("DefenseState")
     @Expose
@@ -280,10 +271,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get CVE ID
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get CVE ID 
      * @return CveId CVE ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getCveId() {
         return this.CveId;
@@ -291,19 +280,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set CVE ID
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param CveId CVE ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setCveId(String CveId) {
         this.CveId = CveId;
     }
 
     /**
-     * Get CVSS score
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get CVSS score 
      * @return CvssScore CVSS score
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Float getCvssScore() {
         return this.CvssScore;
@@ -311,19 +296,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set CVSS score
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param CvssScore CVSS score
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setCvssScore(Float CvssScore) {
         this.CvssScore = CvssScore;
     }
 
     /**
-     * Get Vulnerability Tags, Separated by Multiple Commas
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Vulnerability Tags, Separated by Multiple Commas 
      * @return Labels Vulnerability Tags, Separated by Multiple Commas
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getLabels() {
         return this.Labels;
@@ -331,19 +312,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Vulnerability Tags, Separated by Multiple Commas
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Labels Vulnerability Tags, Separated by Multiple Commas
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setLabels(String Labels) {
         this.Labels = Labels;
     }
 
     /**
-     * Get Number of affected machines
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Number of affected machines 
      * @return HostCount Number of affected machines
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getHostCount() {
         return this.HostCount;
@@ -351,39 +328,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Number of affected machines
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param HostCount Number of affected machines
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setHostCount(Long HostCount) {
         this.HostCount = HostCount;
     }
 
     /**
-     * Get Whether to support defense: 0: no; 1: yes
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return IsSupportDefense Whether to support defense: 0: no; 1: yes
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Support defense: 0-no support 1-support 
+     * @return IsSupportDefense Support defense: 0-no support 1-support
      */
     public Long getIsSupportDefense() {
         return this.IsSupportDefense;
     }
 
     /**
-     * Set Whether to support defense: 0: no; 1: yes
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param IsSupportDefense Whether to support defense: 0: no; 1: yes
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Support defense: 0-no support 1-support
+     * @param IsSupportDefense Support defense: 0-no support 1-support
      */
     public void setIsSupportDefense(Long IsSupportDefense) {
         this.IsSupportDefense = IsSupportDefense;
     }
 
     /**
-     * Get Number of Attacks Defended
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Number of Attacks Defended 
      * @return DefenseAttackCount Number of Attacks Defended
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getDefenseAttackCount() {
         return this.DefenseAttackCount;
@@ -391,69 +360,55 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Number of Attacks Defended
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param DefenseAttackCount Number of Attacks Defended
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setDefenseAttackCount(Long DefenseAttackCount) {
         this.DefenseAttackCount = DefenseAttackCount;
     }
 
     /**
-     * Get Detection rule: 0: version comparison; 1: POC verification
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Method Detection rule: 0: version comparison; 1: POC verification
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Detection rule. 0: version comparison, 1: POC verification. 
+     * @return Method Detection rule. 0: version comparison, 1: POC verification.
      */
     public Long getMethod() {
         return this.Method;
     }
 
     /**
-     * Set Detection rule: 0: version comparison; 1: POC verification
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Method Detection rule: 0: version comparison; 1: POC verification
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Detection rule. 0: version comparison, 1: POC verification.
+     * @param Method Detection rule. 0: version comparison, 1: POC verification.
      */
     public void setMethod(Long Method) {
         this.Method = Method;
     }
 
     /**
-     * Get Attack intensity level
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return AttackLevel Attack intensity level
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Attack intensity level. 
+     * @return AttackLevel Attack intensity level.
      */
     public Long getAttackLevel() {
         return this.AttackLevel;
     }
 
     /**
-     * Set Attack intensity level
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param AttackLevel Attack intensity level
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Attack intensity level.
+     * @param AttackLevel Attack intensity level.
      */
     public void setAttackLevel(Long AttackLevel) {
         this.AttackLevel = AttackLevel;
     }
 
     /**
-     * Get Whether vulnerability defense is enabled on hosts with vulnerabilities
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return DefenseState Whether vulnerability defense is enabled on hosts with vulnerabilities
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Whether vulnerable hosts are enabled with vulnerability defense. 
+     * @return DefenseState Whether vulnerable hosts are enabled with vulnerability defense.
      */
     public Boolean getDefenseState() {
         return this.DefenseState;
     }
 
     /**
-     * Set Whether vulnerability defense is enabled on hosts with vulnerabilities
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param DefenseState Whether vulnerability defense is enabled on hosts with vulnerabilities
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Whether vulnerable hosts are enabled with vulnerability defense.
+     * @param DefenseState Whether vulnerable hosts are enabled with vulnerability defense.
      */
     public void setDefenseState(Boolean DefenseState) {
         this.DefenseState = DefenseState;

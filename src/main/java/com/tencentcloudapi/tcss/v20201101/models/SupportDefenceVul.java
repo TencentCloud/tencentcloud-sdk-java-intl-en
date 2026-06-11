@@ -73,6 +73,20 @@ public class SupportDefenceVul extends AbstractModel {
     private String SubmitTime;
 
     /**
+    * Vulnerability ID
+    */
+    @SerializedName("VulId")
+    @Expose
+    private Long VulId;
+
+    /**
+    * Status. 0: defending; 1: allowlisted. It indicates that the vulnerability is included in an allowlist, which may not be a global allowlist.
+    */
+    @SerializedName("Status")
+    @Expose
+    private Long Status;
+
+    /**
      * Get POC ID 
      * @return PocID POC ID
      */
@@ -184,6 +198,38 @@ public class SupportDefenceVul extends AbstractModel {
         this.SubmitTime = SubmitTime;
     }
 
+    /**
+     * Get Vulnerability ID 
+     * @return VulId Vulnerability ID
+     */
+    public Long getVulId() {
+        return this.VulId;
+    }
+
+    /**
+     * Set Vulnerability ID
+     * @param VulId Vulnerability ID
+     */
+    public void setVulId(Long VulId) {
+        this.VulId = VulId;
+    }
+
+    /**
+     * Get Status. 0: defending; 1: allowlisted. It indicates that the vulnerability is included in an allowlist, which may not be a global allowlist. 
+     * @return Status Status. 0: defending; 1: allowlisted. It indicates that the vulnerability is included in an allowlist, which may not be a global allowlist.
+     */
+    public Long getStatus() {
+        return this.Status;
+    }
+
+    /**
+     * Set Status. 0: defending; 1: allowlisted. It indicates that the vulnerability is included in an allowlist, which may not be a global allowlist.
+     * @param Status Status. 0: defending; 1: allowlisted. It indicates that the vulnerability is included in an allowlist, which may not be a global allowlist.
+     */
+    public void setStatus(Long Status) {
+        this.Status = Status;
+    }
+
     public SupportDefenceVul() {
     }
 
@@ -216,6 +262,12 @@ public class SupportDefenceVul extends AbstractModel {
         if (source.SubmitTime != null) {
             this.SubmitTime = new String(source.SubmitTime);
         }
+        if (source.VulId != null) {
+            this.VulId = new Long(source.VulId);
+        }
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
     }
 
 
@@ -230,6 +282,8 @@ public class SupportDefenceVul extends AbstractModel {
         this.setParamSimple(map, prefix + "Level", this.Level);
         this.setParamSimple(map, prefix + "CVEID", this.CVEID);
         this.setParamSimple(map, prefix + "SubmitTime", this.SubmitTime);
+        this.setParamSimple(map, prefix + "VulId", this.VulId);
+        this.setParamSimple(map, prefix + "Status", this.Status);
 
     }
 }

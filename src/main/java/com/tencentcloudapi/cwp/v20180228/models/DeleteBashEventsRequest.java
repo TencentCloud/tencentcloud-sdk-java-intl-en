@@ -24,26 +24,49 @@ import java.util.HashMap;
 public class DeleteBashEventsRequest extends AbstractModel {
 
     /**
-    * ID array. Maximum number of IDs: 100.
+    * ID array. Up to 1,000 items are allowed.
     */
     @SerializedName("Ids")
     @Expose
     private Long [] Ids;
 
     /**
-     * Get ID array. Maximum number of IDs: 100. 
-     * @return Ids ID array. Maximum number of IDs: 100.
+    * Whether to delete all.
+    */
+    @SerializedName("All")
+    @Expose
+    private Boolean All;
+
+    /**
+     * Get ID array. Up to 1,000 items are allowed. 
+     * @return Ids ID array. Up to 1,000 items are allowed.
      */
     public Long [] getIds() {
         return this.Ids;
     }
 
     /**
-     * Set ID array. Maximum number of IDs: 100.
-     * @param Ids ID array. Maximum number of IDs: 100.
+     * Set ID array. Up to 1,000 items are allowed.
+     * @param Ids ID array. Up to 1,000 items are allowed.
      */
     public void setIds(Long [] Ids) {
         this.Ids = Ids;
+    }
+
+    /**
+     * Get Whether to delete all. 
+     * @return All Whether to delete all.
+     */
+    public Boolean getAll() {
+        return this.All;
+    }
+
+    /**
+     * Set Whether to delete all.
+     * @param All Whether to delete all.
+     */
+    public void setAll(Boolean All) {
+        this.All = All;
     }
 
     public DeleteBashEventsRequest() {
@@ -60,6 +83,9 @@ public class DeleteBashEventsRequest extends AbstractModel {
                 this.Ids[i] = new Long(source.Ids[i]);
             }
         }
+        if (source.All != null) {
+            this.All = new Boolean(source.All);
+        }
     }
 
 
@@ -68,6 +94,7 @@ public class DeleteBashEventsRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "Ids.", this.Ids);
+        this.setParamSimple(map, prefix + "All", this.All);
 
     }
 }

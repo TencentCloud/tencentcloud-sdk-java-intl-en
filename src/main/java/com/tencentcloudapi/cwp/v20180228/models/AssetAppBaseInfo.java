@@ -67,7 +67,6 @@ public class AssetAppBaseInfo extends AbstractModel {
 
     /**
     * Host tag
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Tag")
     @Expose
@@ -146,15 +145,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Data update time
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("UpdateTime")
     @Expose
     private String UpdateTime;
 
     /**
-    * Whether the web service is newly added [0: no|1: yes]
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Whether it is newly added [0: no | 1: yes]
     */
     @SerializedName("IsNew")
     @Expose
@@ -162,7 +159,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Additional information
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("MachineExtraInfo")
     @Expose
@@ -265,10 +261,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Host tag
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Host tag 
      * @return Tag Host tag
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public MachineTag [] getTag() {
         return this.Tag;
@@ -276,9 +270,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Host tag
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Tag Host tag
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setTag(MachineTag [] Tag) {
         this.Tag = Tag;
@@ -461,10 +453,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Data update time
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Data update time 
      * @return UpdateTime Data update time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getUpdateTime() {
         return this.UpdateTime;
@@ -472,39 +462,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Data update time
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param UpdateTime Data update time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;
     }
 
     /**
-     * Get Whether the web service is newly added [0: no|1: yes]
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return IsNew Whether the web service is newly added [0: no|1: yes]
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Whether it is newly added [0: no | 1: yes] 
+     * @return IsNew Whether it is newly added [0: no | 1: yes]
      */
     public Long getIsNew() {
         return this.IsNew;
     }
 
     /**
-     * Set Whether the web service is newly added [0: no|1: yes]
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param IsNew Whether the web service is newly added [0: no|1: yes]
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Whether it is newly added [0: no | 1: yes]
+     * @param IsNew Whether it is newly added [0: no | 1: yes]
      */
     public void setIsNew(Long IsNew) {
         this.IsNew = IsNew;
     }
 
     /**
-     * Get Additional information
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Additional information 
      * @return MachineExtraInfo Additional information
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public MachineExtraInfo getMachineExtraInfo() {
         return this.MachineExtraInfo;
@@ -512,9 +494,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Additional information
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param MachineExtraInfo Additional information
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setMachineExtraInfo(MachineExtraInfo MachineExtraInfo) {
         this.MachineExtraInfo = MachineExtraInfo;

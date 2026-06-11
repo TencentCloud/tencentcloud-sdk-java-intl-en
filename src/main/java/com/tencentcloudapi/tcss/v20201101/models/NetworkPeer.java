@@ -37,24 +37,21 @@ IP type: `IPBlock`, which indicates that only `IPBlock` has a value.
     private String PeerType;
 
     /**
-    * Namespace selector
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Namespace Selector
     */
     @SerializedName("NamespaceSelector")
     @Expose
     private String NamespaceSelector;
 
     /**
-    * Pod selector
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Pod Selector
     */
     @SerializedName("PodSelector")
     @Expose
     private String PodSelector;
 
     /**
-    * IP selector
-Note: This field may return null, indicating that no valid values can be obtained.
+    * IP Selector
     */
     @SerializedName("IPBlock")
     @Expose
@@ -101,60 +98,48 @@ IP type: `IPBlock`, which indicates that only `IPBlock` has a value.
     }
 
     /**
-     * Get Namespace selector
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return NamespaceSelector Namespace selector
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Namespace Selector 
+     * @return NamespaceSelector Namespace Selector
      */
     public String getNamespaceSelector() {
         return this.NamespaceSelector;
     }
 
     /**
-     * Set Namespace selector
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param NamespaceSelector Namespace selector
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Namespace Selector
+     * @param NamespaceSelector Namespace Selector
      */
     public void setNamespaceSelector(String NamespaceSelector) {
         this.NamespaceSelector = NamespaceSelector;
     }
 
     /**
-     * Get Pod selector
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return PodSelector Pod selector
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Pod Selector 
+     * @return PodSelector Pod Selector
      */
     public String getPodSelector() {
         return this.PodSelector;
     }
 
     /**
-     * Set Pod selector
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param PodSelector Pod selector
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Pod Selector
+     * @param PodSelector Pod Selector
      */
     public void setPodSelector(String PodSelector) {
         this.PodSelector = PodSelector;
     }
 
     /**
-     * Get IP selector
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return IPBlock IP selector
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get IP Selector 
+     * @return IPBlock IP Selector
      */
     public String getIPBlock() {
         return this.IPBlock;
     }
 
     /**
-     * Set IP selector
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param IPBlock IP selector
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set IP Selector
+     * @param IPBlock IP Selector
      */
     public void setIPBlock(String IPBlock) {
         this.IPBlock = IPBlock;

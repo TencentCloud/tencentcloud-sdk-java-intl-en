@@ -24,16 +24,14 @@ import java.util.HashMap;
 public class BroadcastInfo extends AbstractModel {
 
     /**
-    * Article name
-Note: This field may return null, indicating that no valid values can be obtained.
+    * article name
     */
     @SerializedName("Title")
     @Expose
     private String Title;
 
     /**
-    * Redirection location: 0: no redirection; 1: virus scanning; 2: vulnerability scan; 3: security baseline
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Redirection location: 0: no redirection; 1: malicious file scan; 2: vulnerability scanning; 3: security baseline
     */
     @SerializedName("GotoType")
     @Expose
@@ -75,40 +73,32 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long Type;
 
     /**
-     * Get Article name
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Title Article name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get article name 
+     * @return Title article name
      */
     public String getTitle() {
         return this.Title;
     }
 
     /**
-     * Set Article name
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Title Article name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set article name
+     * @param Title article name
      */
     public void setTitle(String Title) {
         this.Title = Title;
     }
 
     /**
-     * Get Redirection location: 0: no redirection; 1: virus scanning; 2: vulnerability scan; 3: security baseline
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return GotoType Redirection location: 0: no redirection; 1: virus scanning; 2: vulnerability scan; 3: security baseline
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Redirection location: 0: no redirection; 1: malicious file scan; 2: vulnerability scanning; 3: security baseline 
+     * @return GotoType Redirection location: 0: no redirection; 1: malicious file scan; 2: vulnerability scanning; 3: security baseline
      */
     public Long getGotoType() {
         return this.GotoType;
     }
 
     /**
-     * Set Redirection location: 0: no redirection; 1: virus scanning; 2: vulnerability scan; 3: security baseline
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param GotoType Redirection location: 0: no redirection; 1: virus scanning; 2: vulnerability scan; 3: security baseline
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Redirection location: 0: no redirection; 1: malicious file scan; 2: vulnerability scanning; 3: security baseline
+     * @param GotoType Redirection location: 0: no redirection; 1: malicious file scan; 2: vulnerability scanning; 3: security baseline
      */
     public void setGotoType(Long GotoType) {
         this.GotoType = GotoType;

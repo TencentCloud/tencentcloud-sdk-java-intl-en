@@ -32,7 +32,6 @@ public class BaselineHost extends AbstractModel {
 
     /**
     * Host name
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("HostName")
     @Expose
@@ -40,7 +39,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Host tag
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("HostTag")
     @Expose
@@ -48,7 +46,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Private IP address
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("HostIp")
     @Expose
@@ -56,7 +53,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Public IP address
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("WanIp")
     @Expose
@@ -64,7 +60,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Host Additional Information
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("MachineExtraInfo")
     @Expose
@@ -87,10 +82,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Host name
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Host name 
      * @return HostName Host name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getHostName() {
         return this.HostName;
@@ -98,19 +91,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Host name
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param HostName Host name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setHostName(String HostName) {
         this.HostName = HostName;
     }
 
     /**
-     * Get Host tag
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Host tag 
      * @return HostTag Host tag
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getHostTag() {
         return this.HostTag;
@@ -118,19 +107,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Host tag
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param HostTag Host tag
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setHostTag(String HostTag) {
         this.HostTag = HostTag;
     }
 
     /**
-     * Get Private IP address
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Private IP address 
      * @return HostIp Private IP address
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getHostIp() {
         return this.HostIp;
@@ -138,19 +123,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Private IP address
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param HostIp Private IP address
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setHostIp(String HostIp) {
         this.HostIp = HostIp;
     }
 
     /**
-     * Get Public IP address
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Public IP address 
      * @return WanIp Public IP address
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getWanIp() {
         return this.WanIp;
@@ -158,19 +139,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Public IP address
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param WanIp Public IP address
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setWanIp(String WanIp) {
         this.WanIp = WanIp;
     }
 
     /**
-     * Get Host Additional Information
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Host Additional Information 
      * @return MachineExtraInfo Host Additional Information
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public MachineExtraInfo getMachineExtraInfo() {
         return this.MachineExtraInfo;
@@ -178,9 +155,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Host Additional Information
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param MachineExtraInfo Host Additional Information
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setMachineExtraInfo(MachineExtraInfo MachineExtraInfo) {
         this.MachineExtraInfo = MachineExtraInfo;

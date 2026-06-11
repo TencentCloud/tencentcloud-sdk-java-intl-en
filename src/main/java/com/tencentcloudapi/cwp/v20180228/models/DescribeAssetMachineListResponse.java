@@ -32,7 +32,6 @@ public class DescribeAssetMachineListResponse extends AbstractModel {
 
     /**
     * Record list
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Machines")
     @Expose
@@ -62,10 +61,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Record list
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Record list 
      * @return Machines Record list
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public AssetMachineBaseInfo [] getMachines() {
         return this.Machines;
@@ -73,9 +70,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Record list
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Machines Record list
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setMachines(AssetMachineBaseInfo [] Machines) {
         this.Machines = Machines;

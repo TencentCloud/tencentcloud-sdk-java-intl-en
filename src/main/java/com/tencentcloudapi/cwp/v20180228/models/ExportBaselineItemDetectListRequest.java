@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ExportBaselineItemDetectListRequest extends AbstractModel {
 
     /**
-    * <li>HostId - string - required: no - host ID</li> <li>RuleId - int64 - required: no - rule ID</li> <li>IsPassed - int - required: no - pass or not</li> <li>RiskTier - int - required: no - risk level</li>
+    * <li>HostId - string - required: no - host ID</li> <li>RuleId - int64 - required: no - rule ID</li> <li>IsPassed - int - required: no - pass or not</li> <li>RiskTier - int - required: no - risk level</li>
     */
     @SerializedName("Filters")
     @Expose
@@ -45,16 +45,16 @@ public class ExportBaselineItemDetectListRequest extends AbstractModel {
     private Long IsExportDetail;
 
     /**
-     * Get <li>HostId - string - required: no - host ID</li> <li>RuleId - int64 - required: no - rule ID</li> <li>IsPassed - int - required: no - pass or not</li> <li>RiskTier - int - required: no - risk level</li> 
-     * @return Filters <li>HostId - string - required: no - host ID</li> <li>RuleId - int64 - required: no - rule ID</li> <li>IsPassed - int - required: no - pass or not</li> <li>RiskTier - int - required: no - risk level</li>
+     * Get <li>HostId - string - required: no - host ID</li> <li>RuleId - int64 - required: no - rule ID</li> <li>IsPassed - int - required: no - pass or not</li> <li>RiskTier - int - required: no - risk level</li> 
+     * @return Filters <li>HostId - string - required: no - host ID</li> <li>RuleId - int64 - required: no - rule ID</li> <li>IsPassed - int - required: no - pass or not</li> <li>RiskTier - int - required: no - risk level</li>
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set <li>HostId - string - required: no - host ID</li> <li>RuleId - int64 - required: no - rule ID</li> <li>IsPassed - int - required: no - pass or not</li> <li>RiskTier - int - required: no - risk level</li>
-     * @param Filters <li>HostId - string - required: no - host ID</li> <li>RuleId - int64 - required: no - rule ID</li> <li>IsPassed - int - required: no - pass or not</li> <li>RiskTier - int - required: no - risk level</li>
+     * Set <li>HostId - string - required: no - host ID</li> <li>RuleId - int64 - required: no - rule ID</li> <li>IsPassed - int - required: no - pass or not</li> <li>RiskTier - int - required: no - risk level</li>
+     * @param Filters <li>HostId - string - required: no - host ID</li> <li>RuleId - int64 - required: no - rule ID</li> <li>IsPassed - int - required: no - pass or not</li> <li>RiskTier - int - required: no - risk level</li>
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;

@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DescribeAssetImageDetailRequest extends AbstractModel {
 
     /**
-    * Image ID
+    * <p>Image ID.</p>
     */
     @SerializedName("ImageID")
     @Expose
     private String ImageID;
 
     /**
-     * Get Image ID 
-     * @return ImageID Image ID
+     * Get <p>Image ID.</p> 
+     * @return ImageID <p>Image ID.</p>
      */
     public String getImageID() {
         return this.ImageID;
     }
 
     /**
-     * Set Image ID
-     * @param ImageID Image ID
+     * Set <p>Image ID.</p>
+     * @param ImageID <p>Image ID.</p>
      */
     public void setImageID(String ImageID) {
         this.ImageID = ImageID;

@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class SyncAssetImageRegistryAssetRequest extends AbstractModel {
 
     /**
-    * Whether to synchronize all image repositories
+    * 
     */
     @SerializedName("All")
     @Expose
     private Boolean All;
 
     /**
-    * Partial image repositories requiring synchronization
+    * 
     */
     @SerializedName("RegistryIds")
     @Expose
     private Long [] RegistryIds;
 
     /**
-     * Get Whether to synchronize all image repositories 
-     * @return All Whether to synchronize all image repositories
+     * Get  
+     * @return All 
      */
     public Boolean getAll() {
         return this.All;
     }
 
     /**
-     * Set Whether to synchronize all image repositories
-     * @param All Whether to synchronize all image repositories
+     * Set 
+     * @param All 
      */
     public void setAll(Boolean All) {
         this.All = All;
     }
 
     /**
-     * Get Partial image repositories requiring synchronization 
-     * @return RegistryIds Partial image repositories requiring synchronization
+     * Get  
+     * @return RegistryIds 
      */
     public Long [] getRegistryIds() {
         return this.RegistryIds;
     }
 
     /**
-     * Set Partial image repositories requiring synchronization
-     * @param RegistryIds Partial image repositories requiring synchronization
+     * Set 
+     * @param RegistryIds 
      */
     public void setRegistryIds(Long [] RegistryIds) {
         this.RegistryIds = RegistryIds;

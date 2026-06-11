@@ -33,9 +33,9 @@ public class ExitStandbyRequest extends AbstractModel {
     private String AutoScalingGroupId;
 
     /**
-    * List of CVM instances in standby status. you can obtain available instance ID in the following ways:.
-<li>Query instance ID by logging in to the <a href="https://console.cloud.tencent.com/cvm/index">console</a>.</li>.
-<li>Get the instance ID by calling the api [DescribeInstances](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1) and retrieving the `InstanceId` from the returned information.</li>.
+    * List of CVM instances in standby status. you can obtain available instance ID in the following ways:
+<li>Query instance ID by logging in to the [console](https://console.cloud.tencent.com/cvm/index).</li>
+<li>Get the instance ID by calling the api [DescribeInstances](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1) and retrieving the `InstanceId` from the returned information.</li>
     */
     @SerializedName("InstanceIds")
     @Expose
@@ -66,24 +66,24 @@ public class ExitStandbyRequest extends AbstractModel {
     }
 
     /**
-     * Get List of CVM instances in standby status. you can obtain available instance ID in the following ways:.
-<li>Query instance ID by logging in to the <a href="https://console.cloud.tencent.com/cvm/index">console</a>.</li>.
-<li>Get the instance ID by calling the api [DescribeInstances](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1) and retrieving the `InstanceId` from the returned information.</li>. 
-     * @return InstanceIds List of CVM instances in standby status. you can obtain available instance ID in the following ways:.
-<li>Query instance ID by logging in to the <a href="https://console.cloud.tencent.com/cvm/index">console</a>.</li>.
-<li>Get the instance ID by calling the api [DescribeInstances](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1) and retrieving the `InstanceId` from the returned information.</li>.
+     * Get List of CVM instances in standby status. you can obtain available instance ID in the following ways:
+<li>Query instance ID by logging in to the [console](https://console.cloud.tencent.com/cvm/index).</li>
+<li>Get the instance ID by calling the api [DescribeInstances](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1) and retrieving the `InstanceId` from the returned information.</li> 
+     * @return InstanceIds List of CVM instances in standby status. you can obtain available instance ID in the following ways:
+<li>Query instance ID by logging in to the [console](https://console.cloud.tencent.com/cvm/index).</li>
+<li>Get the instance ID by calling the api [DescribeInstances](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1) and retrieving the `InstanceId` from the returned information.</li>
      */
     public String [] getInstanceIds() {
         return this.InstanceIds;
     }
 
     /**
-     * Set List of CVM instances in standby status. you can obtain available instance ID in the following ways:.
-<li>Query instance ID by logging in to the <a href="https://console.cloud.tencent.com/cvm/index">console</a>.</li>.
-<li>Get the instance ID by calling the api [DescribeInstances](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1) and retrieving the `InstanceId` from the returned information.</li>.
-     * @param InstanceIds List of CVM instances in standby status. you can obtain available instance ID in the following ways:.
-<li>Query instance ID by logging in to the <a href="https://console.cloud.tencent.com/cvm/index">console</a>.</li>.
-<li>Get the instance ID by calling the api [DescribeInstances](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1) and retrieving the `InstanceId` from the returned information.</li>.
+     * Set List of CVM instances in standby status. you can obtain available instance ID in the following ways:
+<li>Query instance ID by logging in to the [console](https://console.cloud.tencent.com/cvm/index).</li>
+<li>Get the instance ID by calling the api [DescribeInstances](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1) and retrieving the `InstanceId` from the returned information.</li>
+     * @param InstanceIds List of CVM instances in standby status. you can obtain available instance ID in the following ways:
+<li>Query instance ID by logging in to the [console](https://console.cloud.tencent.com/cvm/index).</li>
+<li>Get the instance ID by calling the api [DescribeInstances](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1) and retrieving the `InstanceId` from the returned information.</li>
      */
     public void setInstanceIds(String [] InstanceIds) {
         this.InstanceIds = InstanceIds;

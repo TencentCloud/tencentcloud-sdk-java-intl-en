@@ -24,21 +24,27 @@ import java.util.HashMap;
 public class ModifyMachineGroupRequest extends AbstractModel {
 
     /**
-    * Machine group ID
+    * Machine group Id
+-Obtain the machine group Id through [Get Machine Group List](https://www.tencentcloud.com/document/product/614/56438?from_cn_redirect=1).
     */
     @SerializedName("GroupId")
     @Expose
     private String GroupId;
 
     /**
-    * Machine group name
+    * machine group name
+Input limit:
+-Cannot be an empty string
+-Cannot contain character '|'
     */
     @SerializedName("GroupName")
     @Expose
     private String GroupName;
 
     /**
-    * Machine group type
+    * Machine group type. 
+Type: ip; Values contains the string list of IP machines.
+Type: label. Values contains the string list of tag machine groups.
     */
     @SerializedName("MachineGroupType")
     @Expose
@@ -59,14 +65,16 @@ public class ModifyMachineGroupRequest extends AbstractModel {
     private Boolean AutoUpdate;
 
     /**
-    * Update start time. We recommend you update LogListener during off-peak hours.
+    * Start time of upgrade. It is suggested to upgrade LogListener in the off-peak period of the business.
+Time format: HH:mm:ss.
     */
     @SerializedName("UpdateStartTime")
     @Expose
     private String UpdateStartTime;
 
     /**
-    * Update end time. We recommend you update LogListener during off-peak hours.
+    * End time of upgrade. It is suggested to upgrade LogListener in the off-peak period of the business.
+Time format: HH:mm:ss.
     */
     @SerializedName("UpdateEndTime")
     @Expose
@@ -80,7 +88,7 @@ public class ModifyMachineGroupRequest extends AbstractModel {
     private Boolean ServiceLogging;
 
     /**
-    * Regular offline cleaning time for machines in machine group
+    * Periodic offline cleanup time for machines in a machine group. Unit: day
     */
     @SerializedName("DelayCleanupTime")
     @Expose
@@ -94,48 +102,72 @@ public class ModifyMachineGroupRequest extends AbstractModel {
     private MetaTagInfo [] MetaTags;
 
     /**
-     * Get Machine group ID 
-     * @return GroupId Machine group ID
+     * Get Machine group Id
+-Obtain the machine group Id through [Get Machine Group List](https://www.tencentcloud.com/document/product/614/56438?from_cn_redirect=1). 
+     * @return GroupId Machine group Id
+-Obtain the machine group Id through [Get Machine Group List](https://www.tencentcloud.com/document/product/614/56438?from_cn_redirect=1).
      */
     public String getGroupId() {
         return this.GroupId;
     }
 
     /**
-     * Set Machine group ID
-     * @param GroupId Machine group ID
+     * Set Machine group Id
+-Obtain the machine group Id through [Get Machine Group List](https://www.tencentcloud.com/document/product/614/56438?from_cn_redirect=1).
+     * @param GroupId Machine group Id
+-Obtain the machine group Id through [Get Machine Group List](https://www.tencentcloud.com/document/product/614/56438?from_cn_redirect=1).
      */
     public void setGroupId(String GroupId) {
         this.GroupId = GroupId;
     }
 
     /**
-     * Get Machine group name 
-     * @return GroupName Machine group name
+     * Get machine group name
+Input limit:
+-Cannot be an empty string
+-Cannot contain character '|' 
+     * @return GroupName machine group name
+Input limit:
+-Cannot be an empty string
+-Cannot contain character '|'
      */
     public String getGroupName() {
         return this.GroupName;
     }
 
     /**
-     * Set Machine group name
-     * @param GroupName Machine group name
+     * Set machine group name
+Input limit:
+-Cannot be an empty string
+-Cannot contain character '|'
+     * @param GroupName machine group name
+Input limit:
+-Cannot be an empty string
+-Cannot contain character '|'
      */
     public void setGroupName(String GroupName) {
         this.GroupName = GroupName;
     }
 
     /**
-     * Get Machine group type 
-     * @return MachineGroupType Machine group type
+     * Get Machine group type. 
+Type: ip; Values contains the string list of IP machines.
+Type: label. Values contains the string list of tag machine groups. 
+     * @return MachineGroupType Machine group type. 
+Type: ip; Values contains the string list of IP machines.
+Type: label. Values contains the string list of tag machine groups.
      */
     public MachineGroupTypeInfo getMachineGroupType() {
         return this.MachineGroupType;
     }
 
     /**
-     * Set Machine group type
-     * @param MachineGroupType Machine group type
+     * Set Machine group type. 
+Type: ip; Values contains the string list of IP machines.
+Type: label. Values contains the string list of tag machine groups.
+     * @param MachineGroupType Machine group type. 
+Type: ip; Values contains the string list of IP machines.
+Type: label. Values contains the string list of tag machine groups.
      */
     public void setMachineGroupType(MachineGroupTypeInfo MachineGroupType) {
         this.MachineGroupType = MachineGroupType;
@@ -174,32 +206,40 @@ public class ModifyMachineGroupRequest extends AbstractModel {
     }
 
     /**
-     * Get Update start time. We recommend you update LogListener during off-peak hours. 
-     * @return UpdateStartTime Update start time. We recommend you update LogListener during off-peak hours.
+     * Get Start time of upgrade. It is suggested to upgrade LogListener in the off-peak period of the business.
+Time format: HH:mm:ss. 
+     * @return UpdateStartTime Start time of upgrade. It is suggested to upgrade LogListener in the off-peak period of the business.
+Time format: HH:mm:ss.
      */
     public String getUpdateStartTime() {
         return this.UpdateStartTime;
     }
 
     /**
-     * Set Update start time. We recommend you update LogListener during off-peak hours.
-     * @param UpdateStartTime Update start time. We recommend you update LogListener during off-peak hours.
+     * Set Start time of upgrade. It is suggested to upgrade LogListener in the off-peak period of the business.
+Time format: HH:mm:ss.
+     * @param UpdateStartTime Start time of upgrade. It is suggested to upgrade LogListener in the off-peak period of the business.
+Time format: HH:mm:ss.
      */
     public void setUpdateStartTime(String UpdateStartTime) {
         this.UpdateStartTime = UpdateStartTime;
     }
 
     /**
-     * Get Update end time. We recommend you update LogListener during off-peak hours. 
-     * @return UpdateEndTime Update end time. We recommend you update LogListener during off-peak hours.
+     * Get End time of upgrade. It is suggested to upgrade LogListener in the off-peak period of the business.
+Time format: HH:mm:ss. 
+     * @return UpdateEndTime End time of upgrade. It is suggested to upgrade LogListener in the off-peak period of the business.
+Time format: HH:mm:ss.
      */
     public String getUpdateEndTime() {
         return this.UpdateEndTime;
     }
 
     /**
-     * Set Update end time. We recommend you update LogListener during off-peak hours.
-     * @param UpdateEndTime Update end time. We recommend you update LogListener during off-peak hours.
+     * Set End time of upgrade. It is suggested to upgrade LogListener in the off-peak period of the business.
+Time format: HH:mm:ss.
+     * @param UpdateEndTime End time of upgrade. It is suggested to upgrade LogListener in the off-peak period of the business.
+Time format: HH:mm:ss.
      */
     public void setUpdateEndTime(String UpdateEndTime) {
         this.UpdateEndTime = UpdateEndTime;
@@ -222,16 +262,16 @@ public class ModifyMachineGroupRequest extends AbstractModel {
     }
 
     /**
-     * Get Regular offline cleaning time for machines in machine group 
-     * @return DelayCleanupTime Regular offline cleaning time for machines in machine group
+     * Get Periodic offline cleanup time for machines in a machine group. Unit: day 
+     * @return DelayCleanupTime Periodic offline cleanup time for machines in a machine group. Unit: day
      */
     public Long getDelayCleanupTime() {
         return this.DelayCleanupTime;
     }
 
     /**
-     * Set Regular offline cleaning time for machines in machine group
-     * @param DelayCleanupTime Regular offline cleaning time for machines in machine group
+     * Set Periodic offline cleanup time for machines in a machine group. Unit: day
+     * @param DelayCleanupTime Periodic offline cleanup time for machines in a machine group. Unit: day
      */
     public void setDelayCleanupTime(Long DelayCleanupTime) {
         this.DelayCleanupTime = DelayCleanupTime;

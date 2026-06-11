@@ -52,7 +52,7 @@ public class DescribeSecurityBroadcastsRequest extends AbstractModel {
     private String EndDate;
 
     /**
-    * Filter security report type: 0 - emergency notification; 1 - feature update; 2 - industry honor; 3 - version release
+    * Filter by security report type. 0 - emergency notification; 1 - feature update; 2 - industry honor; 3 - version release; 4 - practical tutorial.
     */
     @SerializedName("BroadcastType")
     @Expose
@@ -123,16 +123,16 @@ public class DescribeSecurityBroadcastsRequest extends AbstractModel {
     }
 
     /**
-     * Get Filter security report type: 0 - emergency notification; 1 - feature update; 2 - industry honor; 3 - version release 
-     * @return BroadcastType Filter security report type: 0 - emergency notification; 1 - feature update; 2 - industry honor; 3 - version release
+     * Get Filter by security report type. 0 - emergency notification; 1 - feature update; 2 - industry honor; 3 - version release; 4 - practical tutorial. 
+     * @return BroadcastType Filter by security report type. 0 - emergency notification; 1 - feature update; 2 - industry honor; 3 - version release; 4 - practical tutorial.
      */
     public String getBroadcastType() {
         return this.BroadcastType;
     }
 
     /**
-     * Set Filter security report type: 0 - emergency notification; 1 - feature update; 2 - industry honor; 3 - version release
-     * @param BroadcastType Filter security report type: 0 - emergency notification; 1 - feature update; 2 - industry honor; 3 - version release
+     * Set Filter by security report type. 0 - emergency notification; 1 - feature update; 2 - industry honor; 3 - version release; 4 - practical tutorial.
+     * @param BroadcastType Filter by security report type. 0 - emergency notification; 1 - feature update; 2 - industry honor; 3 - version release; 4 - practical tutorial.
      */
     public void setBroadcastType(String BroadcastType) {
         this.BroadcastType = BroadcastType;

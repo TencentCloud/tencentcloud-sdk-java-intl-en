@@ -62,6 +62,20 @@ public class DescribeRansomDefenseEventsListRequest extends AbstractModel {
     private String By;
 
     /**
+    * Event Creation Start Time
+    */
+    @SerializedName("CreateBeginTime")
+    @Expose
+    private String CreateBeginTime;
+
+    /**
+    * Incident creation end time
+    */
+    @SerializedName("CreateEndTime")
+    @Expose
+    private String CreateEndTime;
+
+    /**
      * Get Pagination parameters (The maximum quantity is 100) 
      * @return Limit Pagination parameters (The maximum quantity is 100)
      */
@@ -153,6 +167,38 @@ public class DescribeRansomDefenseEventsListRequest extends AbstractModel {
         this.By = By;
     }
 
+    /**
+     * Get Event Creation Start Time 
+     * @return CreateBeginTime Event Creation Start Time
+     */
+    public String getCreateBeginTime() {
+        return this.CreateBeginTime;
+    }
+
+    /**
+     * Set Event Creation Start Time
+     * @param CreateBeginTime Event Creation Start Time
+     */
+    public void setCreateBeginTime(String CreateBeginTime) {
+        this.CreateBeginTime = CreateBeginTime;
+    }
+
+    /**
+     * Get Incident creation end time 
+     * @return CreateEndTime Incident creation end time
+     */
+    public String getCreateEndTime() {
+        return this.CreateEndTime;
+    }
+
+    /**
+     * Set Incident creation end time
+     * @param CreateEndTime Incident creation end time
+     */
+    public void setCreateEndTime(String CreateEndTime) {
+        this.CreateEndTime = CreateEndTime;
+    }
+
     public DescribeRansomDefenseEventsListRequest() {
     }
 
@@ -179,6 +225,12 @@ public class DescribeRansomDefenseEventsListRequest extends AbstractModel {
         if (source.By != null) {
             this.By = new String(source.By);
         }
+        if (source.CreateBeginTime != null) {
+            this.CreateBeginTime = new String(source.CreateBeginTime);
+        }
+        if (source.CreateEndTime != null) {
+            this.CreateEndTime = new String(source.CreateEndTime);
+        }
     }
 
 
@@ -191,6 +243,8 @@ public class DescribeRansomDefenseEventsListRequest extends AbstractModel {
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
         this.setParamSimple(map, prefix + "Order", this.Order);
         this.setParamSimple(map, prefix + "By", this.By);
+        this.setParamSimple(map, prefix + "CreateBeginTime", this.CreateBeginTime);
+        this.setParamSimple(map, prefix + "CreateEndTime", this.CreateEndTime);
 
     }
 }

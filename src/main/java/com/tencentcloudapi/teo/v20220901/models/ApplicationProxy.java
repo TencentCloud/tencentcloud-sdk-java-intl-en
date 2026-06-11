@@ -99,7 +99,7 @@ Default value: overseas.
     private Long AccelerateType;
 
     /**
-    * The session persistence duration.
+    * Session hold time, unit: seconds.
     */
     @SerializedName("SessionPersistTime")
     @Expose
@@ -364,16 +364,16 @@ Default value: overseas.
     }
 
     /**
-     * Get The session persistence duration. 
-     * @return SessionPersistTime The session persistence duration.
+     * Get Session hold time, unit: seconds. 
+     * @return SessionPersistTime Session hold time, unit: seconds.
      */
     public Long getSessionPersistTime() {
         return this.SessionPersistTime;
     }
 
     /**
-     * Set The session persistence duration.
-     * @param SessionPersistTime The session persistence duration.
+     * Set Session hold time, unit: seconds.
+     * @param SessionPersistTime Session hold time, unit: seconds.
      */
     public void setSessionPersistTime(Long SessionPersistTime) {
         this.SessionPersistTime = SessionPersistTime;

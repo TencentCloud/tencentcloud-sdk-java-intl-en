@@ -24,141 +24,211 @@ import java.util.HashMap;
 public class Ckafka extends AbstractModel {
 
     /**
-    * CKafka VIP
-    */
-    @SerializedName("Vip")
-    @Expose
-    private String Vip;
-
-    /**
-    * CKafka Vport
-    */
-    @SerializedName("Vport")
-    @Expose
-    private String Vport;
-
-    /**
-    * CKafka instance ID
+    * InstanceId of Ckafka.
+- Obtain the instance id by searching the instance list information (https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1).
+- Obtain the instance id by [creating an instance](https://www.tencentcloud.com/document/product/597/53207?from_cn_redirect=1).
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * CKafka instance name
-    */
-    @SerializedName("InstanceName")
-    @Expose
-    private String InstanceName;
-
-    /**
-    * CKafka topic ID
-    */
-    @SerializedName("TopicId")
-    @Expose
-    private String TopicId;
-
-    /**
-    * CKafka topic name
+    * TopicName of Ckafka
+-Obtain the TopicName by creating a topic (https://www.tencentcloud.com/document/product/597/73566?from_cn_redirect=1).
+-Obtain the TopicName through [Get Topic List](https://www.tencentcloud.com/document/product/597/40847?from_cn_redirect=1).
     */
     @SerializedName("TopicName")
     @Expose
     private String TopicName;
 
     /**
-     * Get CKafka VIP 
-     * @return Vip CKafka VIP
-     */
-    public String getVip() {
-        return this.Vip;
-    }
+    * Vip of Ckafka.
+- Obtain vip information by searching the instance attributes (https://www.tencentcloud.com/document/product/597/40836?from_cn_redirect=1).
+-If the delivery task is created via the role ARN method, the Vip field can be empty.
+    */
+    @SerializedName("Vip")
+    @Expose
+    private String Vip;
 
     /**
-     * Set CKafka VIP
-     * @param Vip CKafka VIP
-     */
-    public void setVip(String Vip) {
-        this.Vip = Vip;
-    }
+    * Vport of Ckafka.
+-Obtain vip port information by [obtaining instance attributes](https://www.tencentcloud.com/document/product/597/40836?from_cn_redirect=1).
+-If it is created by the role ARN method, the Vport field can be empty.
+    */
+    @SerializedName("Vport")
+    @Expose
+    private String Vport;
 
     /**
-     * Get CKafka Vport 
-     * @return Vport CKafka Vport
-     */
-    public String getVport() {
-        return this.Vport;
-    }
+    * InstanceName of Ckafka.
+- Obtain the InstanceName by searching the instance list information (https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1).
+-Get InstanceName by [creating an instance](https://www.tencentcloud.com/document/product/597/53207?from_cn_redirect=1).
+- If the delivery task is created via the role ARN method, the InstanceName field can be empty.
+    */
+    @SerializedName("InstanceName")
+    @Expose
+    private String InstanceName;
 
     /**
-     * Set CKafka Vport
-     * @param Vport CKafka Vport
-     */
-    public void setVport(String Vport) {
-        this.Vport = Vport;
-    }
+    * Topic ID of Ckafka.
+-Obtain the TopicId by creating a topic (https://www.tencentcloud.com/document/product/597/73566?from_cn_redirect=1).
+-Obtain the TopicId through [Get Topic List](https://www.tencentcloud.com/document/product/597/40847?from_cn_redirect=1).
+- If the delivery task is created via the role ARN method, the TopicId field can be empty.
+    */
+    @SerializedName("TopicId")
+    @Expose
+    private String TopicId;
 
     /**
-     * Get CKafka instance ID 
-     * @return InstanceId CKafka instance ID
+     * Get InstanceId of Ckafka.
+- Obtain the instance id by searching the instance list information (https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1).
+- Obtain the instance id by [creating an instance](https://www.tencentcloud.com/document/product/597/53207?from_cn_redirect=1). 
+     * @return InstanceId InstanceId of Ckafka.
+- Obtain the instance id by searching the instance list information (https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1).
+- Obtain the instance id by [creating an instance](https://www.tencentcloud.com/document/product/597/53207?from_cn_redirect=1).
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set CKafka instance ID
-     * @param InstanceId CKafka instance ID
+     * Set InstanceId of Ckafka.
+- Obtain the instance id by searching the instance list information (https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1).
+- Obtain the instance id by [creating an instance](https://www.tencentcloud.com/document/product/597/53207?from_cn_redirect=1).
+     * @param InstanceId InstanceId of Ckafka.
+- Obtain the instance id by searching the instance list information (https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1).
+- Obtain the instance id by [creating an instance](https://www.tencentcloud.com/document/product/597/53207?from_cn_redirect=1).
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get CKafka instance name 
-     * @return InstanceName CKafka instance name
-     */
-    public String getInstanceName() {
-        return this.InstanceName;
-    }
-
-    /**
-     * Set CKafka instance name
-     * @param InstanceName CKafka instance name
-     */
-    public void setInstanceName(String InstanceName) {
-        this.InstanceName = InstanceName;
-    }
-
-    /**
-     * Get CKafka topic ID 
-     * @return TopicId CKafka topic ID
-     */
-    public String getTopicId() {
-        return this.TopicId;
-    }
-
-    /**
-     * Set CKafka topic ID
-     * @param TopicId CKafka topic ID
-     */
-    public void setTopicId(String TopicId) {
-        this.TopicId = TopicId;
-    }
-
-    /**
-     * Get CKafka topic name 
-     * @return TopicName CKafka topic name
+     * Get TopicName of Ckafka
+-Obtain the TopicName by creating a topic (https://www.tencentcloud.com/document/product/597/73566?from_cn_redirect=1).
+-Obtain the TopicName through [Get Topic List](https://www.tencentcloud.com/document/product/597/40847?from_cn_redirect=1). 
+     * @return TopicName TopicName of Ckafka
+-Obtain the TopicName by creating a topic (https://www.tencentcloud.com/document/product/597/73566?from_cn_redirect=1).
+-Obtain the TopicName through [Get Topic List](https://www.tencentcloud.com/document/product/597/40847?from_cn_redirect=1).
      */
     public String getTopicName() {
         return this.TopicName;
     }
 
     /**
-     * Set CKafka topic name
-     * @param TopicName CKafka topic name
+     * Set TopicName of Ckafka
+-Obtain the TopicName by creating a topic (https://www.tencentcloud.com/document/product/597/73566?from_cn_redirect=1).
+-Obtain the TopicName through [Get Topic List](https://www.tencentcloud.com/document/product/597/40847?from_cn_redirect=1).
+     * @param TopicName TopicName of Ckafka
+-Obtain the TopicName by creating a topic (https://www.tencentcloud.com/document/product/597/73566?from_cn_redirect=1).
+-Obtain the TopicName through [Get Topic List](https://www.tencentcloud.com/document/product/597/40847?from_cn_redirect=1).
      */
     public void setTopicName(String TopicName) {
         this.TopicName = TopicName;
+    }
+
+    /**
+     * Get Vip of Ckafka.
+- Obtain vip information by searching the instance attributes (https://www.tencentcloud.com/document/product/597/40836?from_cn_redirect=1).
+-If the delivery task is created via the role ARN method, the Vip field can be empty. 
+     * @return Vip Vip of Ckafka.
+- Obtain vip information by searching the instance attributes (https://www.tencentcloud.com/document/product/597/40836?from_cn_redirect=1).
+-If the delivery task is created via the role ARN method, the Vip field can be empty.
+     */
+    public String getVip() {
+        return this.Vip;
+    }
+
+    /**
+     * Set Vip of Ckafka.
+- Obtain vip information by searching the instance attributes (https://www.tencentcloud.com/document/product/597/40836?from_cn_redirect=1).
+-If the delivery task is created via the role ARN method, the Vip field can be empty.
+     * @param Vip Vip of Ckafka.
+- Obtain vip information by searching the instance attributes (https://www.tencentcloud.com/document/product/597/40836?from_cn_redirect=1).
+-If the delivery task is created via the role ARN method, the Vip field can be empty.
+     */
+    public void setVip(String Vip) {
+        this.Vip = Vip;
+    }
+
+    /**
+     * Get Vport of Ckafka.
+-Obtain vip port information by [obtaining instance attributes](https://www.tencentcloud.com/document/product/597/40836?from_cn_redirect=1).
+-If it is created by the role ARN method, the Vport field can be empty. 
+     * @return Vport Vport of Ckafka.
+-Obtain vip port information by [obtaining instance attributes](https://www.tencentcloud.com/document/product/597/40836?from_cn_redirect=1).
+-If it is created by the role ARN method, the Vport field can be empty.
+     */
+    public String getVport() {
+        return this.Vport;
+    }
+
+    /**
+     * Set Vport of Ckafka.
+-Obtain vip port information by [obtaining instance attributes](https://www.tencentcloud.com/document/product/597/40836?from_cn_redirect=1).
+-If it is created by the role ARN method, the Vport field can be empty.
+     * @param Vport Vport of Ckafka.
+-Obtain vip port information by [obtaining instance attributes](https://www.tencentcloud.com/document/product/597/40836?from_cn_redirect=1).
+-If it is created by the role ARN method, the Vport field can be empty.
+     */
+    public void setVport(String Vport) {
+        this.Vport = Vport;
+    }
+
+    /**
+     * Get InstanceName of Ckafka.
+- Obtain the InstanceName by searching the instance list information (https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1).
+-Get InstanceName by [creating an instance](https://www.tencentcloud.com/document/product/597/53207?from_cn_redirect=1).
+- If the delivery task is created via the role ARN method, the InstanceName field can be empty. 
+     * @return InstanceName InstanceName of Ckafka.
+- Obtain the InstanceName by searching the instance list information (https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1).
+-Get InstanceName by [creating an instance](https://www.tencentcloud.com/document/product/597/53207?from_cn_redirect=1).
+- If the delivery task is created via the role ARN method, the InstanceName field can be empty.
+     */
+    public String getInstanceName() {
+        return this.InstanceName;
+    }
+
+    /**
+     * Set InstanceName of Ckafka.
+- Obtain the InstanceName by searching the instance list information (https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1).
+-Get InstanceName by [creating an instance](https://www.tencentcloud.com/document/product/597/53207?from_cn_redirect=1).
+- If the delivery task is created via the role ARN method, the InstanceName field can be empty.
+     * @param InstanceName InstanceName of Ckafka.
+- Obtain the InstanceName by searching the instance list information (https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1).
+-Get InstanceName by [creating an instance](https://www.tencentcloud.com/document/product/597/53207?from_cn_redirect=1).
+- If the delivery task is created via the role ARN method, the InstanceName field can be empty.
+     */
+    public void setInstanceName(String InstanceName) {
+        this.InstanceName = InstanceName;
+    }
+
+    /**
+     * Get Topic ID of Ckafka.
+-Obtain the TopicId by creating a topic (https://www.tencentcloud.com/document/product/597/73566?from_cn_redirect=1).
+-Obtain the TopicId through [Get Topic List](https://www.tencentcloud.com/document/product/597/40847?from_cn_redirect=1).
+- If the delivery task is created via the role ARN method, the TopicId field can be empty. 
+     * @return TopicId Topic ID of Ckafka.
+-Obtain the TopicId by creating a topic (https://www.tencentcloud.com/document/product/597/73566?from_cn_redirect=1).
+-Obtain the TopicId through [Get Topic List](https://www.tencentcloud.com/document/product/597/40847?from_cn_redirect=1).
+- If the delivery task is created via the role ARN method, the TopicId field can be empty.
+     */
+    public String getTopicId() {
+        return this.TopicId;
+    }
+
+    /**
+     * Set Topic ID of Ckafka.
+-Obtain the TopicId by creating a topic (https://www.tencentcloud.com/document/product/597/73566?from_cn_redirect=1).
+-Obtain the TopicId through [Get Topic List](https://www.tencentcloud.com/document/product/597/40847?from_cn_redirect=1).
+- If the delivery task is created via the role ARN method, the TopicId field can be empty.
+     * @param TopicId Topic ID of Ckafka.
+-Obtain the TopicId by creating a topic (https://www.tencentcloud.com/document/product/597/73566?from_cn_redirect=1).
+-Obtain the TopicId through [Get Topic List](https://www.tencentcloud.com/document/product/597/40847?from_cn_redirect=1).
+- If the delivery task is created via the role ARN method, the TopicId field can be empty.
+     */
+    public void setTopicId(String TopicId) {
+        this.TopicId = TopicId;
     }
 
     public Ckafka() {
@@ -169,23 +239,23 @@ public class Ckafka extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public Ckafka(Ckafka source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.TopicName != null) {
+            this.TopicName = new String(source.TopicName);
+        }
         if (source.Vip != null) {
             this.Vip = new String(source.Vip);
         }
         if (source.Vport != null) {
             this.Vport = new String(source.Vport);
         }
-        if (source.InstanceId != null) {
-            this.InstanceId = new String(source.InstanceId);
-        }
         if (source.InstanceName != null) {
             this.InstanceName = new String(source.InstanceName);
         }
         if (source.TopicId != null) {
             this.TopicId = new String(source.TopicId);
-        }
-        if (source.TopicName != null) {
-            this.TopicName = new String(source.TopicName);
         }
     }
 
@@ -194,12 +264,12 @@ public class Ckafka extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
+        this.setParamSimple(map, prefix + "TopicName", this.TopicName);
         this.setParamSimple(map, prefix + "Vip", this.Vip);
         this.setParamSimple(map, prefix + "Vport", this.Vport);
-        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "InstanceName", this.InstanceName);
         this.setParamSimple(map, prefix + "TopicId", this.TopicId);
-        this.setParamSimple(map, prefix + "TopicName", this.TopicName);
 
     }
 }

@@ -44,8 +44,8 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     private String [] RulePaths;
 
     /**
-    * `UserAgent` list
-Note: This field may return `null`, indicating that no valid value can be obtained.
+    * UserAgent list. the count cannot exceed 10.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("UserAgents")
     @Expose
@@ -116,20 +116,20 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     }
 
     /**
-     * Get `UserAgent` list
-Note: This field may return `null`, indicating that no valid value can be obtained. 
-     * @return UserAgents `UserAgent` list
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Get UserAgent list. the count cannot exceed 10.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return UserAgents UserAgent list. the count cannot exceed 10.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String [] getUserAgents() {
         return this.UserAgents;
     }
 
     /**
-     * Set `UserAgent` list
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param UserAgents `UserAgent` list
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Set UserAgent list. the count cannot exceed 10.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param UserAgents UserAgent list. the count cannot exceed 10.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setUserAgents(String [] UserAgents) {
         this.UserAgents = UserAgents;

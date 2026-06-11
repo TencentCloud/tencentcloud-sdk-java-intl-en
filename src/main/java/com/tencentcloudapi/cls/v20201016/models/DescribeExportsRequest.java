@@ -25,6 +25,7 @@ public class DescribeExportsRequest extends AbstractModel {
 
     /**
     * Log topic ID
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
     */
     @SerializedName("TopicId")
     @Expose
@@ -45,8 +46,10 @@ public class DescribeExportsRequest extends AbstractModel {
     private Long Limit;
 
     /**
-     * Get Log topic ID 
+     * Get Log topic ID
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1). 
      * @return TopicId Log topic ID
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
      */
     public String getTopicId() {
         return this.TopicId;
@@ -54,7 +57,9 @@ public class DescribeExportsRequest extends AbstractModel {
 
     /**
      * Set Log topic ID
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
      * @param TopicId Log topic ID
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
      */
     public void setTopicId(String TopicId) {
         this.TopicId = TopicId;

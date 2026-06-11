@@ -24,325 +24,348 @@ import java.util.HashMap;
 public class ExportInfo extends AbstractModel {
 
     /**
-    * Log topic ID
+    * <p>Log topic ID.</p>
     */
     @SerializedName("TopicId")
     @Expose
     private String TopicId;
 
     /**
-    * Log export task ID
+    * <p>Log export task ID</p>
     */
     @SerializedName("ExportId")
     @Expose
     private String ExportId;
 
     /**
-    * Log export query statement
+    * <p>Query statements of log export</p>
     */
     @SerializedName("Query")
     @Expose
     private String Query;
 
     /**
-    * Log export filename
+    * <p>Filenames of exported logs</p>
     */
     @SerializedName("FileName")
     @Expose
     private String FileName;
 
     /**
-    * Log file size
+    * <p>Log file size</p><p>Unit: Byte</p>
     */
     @SerializedName("FileSize")
     @Expose
     private Long FileSize;
 
     /**
-    * Log export time sorting
+    * <p>Sorting of log export time</p>
     */
     @SerializedName("Order")
     @Expose
     private String Order;
 
     /**
-    * Log export format
+    * <p>Log export format</p>
     */
     @SerializedName("Format")
     @Expose
     private String Format;
 
     /**
-    * Number of logs to be exported
+    * <p>Number of logs to be exported</p>
     */
     @SerializedName("Count")
     @Expose
     private Long Count;
 
     /**
-    * Log download status. Valid values: `Processing`, `Completed`, `Failed`, `Expired` (three-day validity period), and `Queuing`.
+    * <p>Log download status. Processing: export in progress, Completed: export completed, Failed: export failure, Expired: log export expired (valid for 3 days), Queuing: queuing</p>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * Log export start time
+    * <p>Start time of log export, with a timestamp in milliseconds</p>
     */
     @SerializedName("From")
     @Expose
     private Long From;
 
     /**
-    * Log export end time
+    * <p>End time of log export, timestamp in milliseconds</p>
     */
     @SerializedName("To")
     @Expose
     private Long To;
 
     /**
-    * Log export path, valid for one hour. Please download using this path as soon as possible.
+    * <p>Log export path, valid for one hour. Please download using this path as soon as possible.</p>
     */
     @SerializedName("CosPath")
     @Expose
     private String CosPath;
 
     /**
-    * Log export creation time
+    * <p>Log export creation time<br>Date and Time Formats: yyyy-MM-dd HH:mm:ss</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * Syntax rules. The default value is 0.0: Lucene syntax, 1: CQL syntax.
+    * <p>Syntax rule. Default value is 0.<br>0: Lucene syntax, 1: CQL syntax.</p>
     */
     @SerializedName("SyntaxRule")
     @Expose
     private Long SyntaxRule;
 
     /**
-     * Get Log topic ID 
-     * @return TopicId Log topic ID
+    * <p>Export fields</p>
+    */
+    @SerializedName("DerivedFields")
+    @Expose
+    private String [] DerivedFields;
+
+    /**
+     * Get <p>Log topic ID.</p> 
+     * @return TopicId <p>Log topic ID.</p>
      */
     public String getTopicId() {
         return this.TopicId;
     }
 
     /**
-     * Set Log topic ID
-     * @param TopicId Log topic ID
+     * Set <p>Log topic ID.</p>
+     * @param TopicId <p>Log topic ID.</p>
      */
     public void setTopicId(String TopicId) {
         this.TopicId = TopicId;
     }
 
     /**
-     * Get Log export task ID 
-     * @return ExportId Log export task ID
+     * Get <p>Log export task ID</p> 
+     * @return ExportId <p>Log export task ID</p>
      */
     public String getExportId() {
         return this.ExportId;
     }
 
     /**
-     * Set Log export task ID
-     * @param ExportId Log export task ID
+     * Set <p>Log export task ID</p>
+     * @param ExportId <p>Log export task ID</p>
      */
     public void setExportId(String ExportId) {
         this.ExportId = ExportId;
     }
 
     /**
-     * Get Log export query statement 
-     * @return Query Log export query statement
+     * Get <p>Query statements of log export</p> 
+     * @return Query <p>Query statements of log export</p>
      */
     public String getQuery() {
         return this.Query;
     }
 
     /**
-     * Set Log export query statement
-     * @param Query Log export query statement
+     * Set <p>Query statements of log export</p>
+     * @param Query <p>Query statements of log export</p>
      */
     public void setQuery(String Query) {
         this.Query = Query;
     }
 
     /**
-     * Get Log export filename 
-     * @return FileName Log export filename
+     * Get <p>Filenames of exported logs</p> 
+     * @return FileName <p>Filenames of exported logs</p>
      */
     public String getFileName() {
         return this.FileName;
     }
 
     /**
-     * Set Log export filename
-     * @param FileName Log export filename
+     * Set <p>Filenames of exported logs</p>
+     * @param FileName <p>Filenames of exported logs</p>
      */
     public void setFileName(String FileName) {
         this.FileName = FileName;
     }
 
     /**
-     * Get Log file size 
-     * @return FileSize Log file size
+     * Get <p>Log file size</p><p>Unit: Byte</p> 
+     * @return FileSize <p>Log file size</p><p>Unit: Byte</p>
      */
     public Long getFileSize() {
         return this.FileSize;
     }
 
     /**
-     * Set Log file size
-     * @param FileSize Log file size
+     * Set <p>Log file size</p><p>Unit: Byte</p>
+     * @param FileSize <p>Log file size</p><p>Unit: Byte</p>
      */
     public void setFileSize(Long FileSize) {
         this.FileSize = FileSize;
     }
 
     /**
-     * Get Log export time sorting 
-     * @return Order Log export time sorting
+     * Get <p>Sorting of log export time</p> 
+     * @return Order <p>Sorting of log export time</p>
      */
     public String getOrder() {
         return this.Order;
     }
 
     /**
-     * Set Log export time sorting
-     * @param Order Log export time sorting
+     * Set <p>Sorting of log export time</p>
+     * @param Order <p>Sorting of log export time</p>
      */
     public void setOrder(String Order) {
         this.Order = Order;
     }
 
     /**
-     * Get Log export format 
-     * @return Format Log export format
+     * Get <p>Log export format</p> 
+     * @return Format <p>Log export format</p>
      */
     public String getFormat() {
         return this.Format;
     }
 
     /**
-     * Set Log export format
-     * @param Format Log export format
+     * Set <p>Log export format</p>
+     * @param Format <p>Log export format</p>
      */
     public void setFormat(String Format) {
         this.Format = Format;
     }
 
     /**
-     * Get Number of logs to be exported 
-     * @return Count Number of logs to be exported
+     * Get <p>Number of logs to be exported</p> 
+     * @return Count <p>Number of logs to be exported</p>
      */
     public Long getCount() {
         return this.Count;
     }
 
     /**
-     * Set Number of logs to be exported
-     * @param Count Number of logs to be exported
+     * Set <p>Number of logs to be exported</p>
+     * @param Count <p>Number of logs to be exported</p>
      */
     public void setCount(Long Count) {
         this.Count = Count;
     }
 
     /**
-     * Get Log download status. Valid values: `Processing`, `Completed`, `Failed`, `Expired` (three-day validity period), and `Queuing`. 
-     * @return Status Log download status. Valid values: `Processing`, `Completed`, `Failed`, `Expired` (three-day validity period), and `Queuing`.
+     * Get <p>Log download status. Processing: export in progress, Completed: export completed, Failed: export failure, Expired: log export expired (valid for 3 days), Queuing: queuing</p> 
+     * @return Status <p>Log download status. Processing: export in progress, Completed: export completed, Failed: export failure, Expired: log export expired (valid for 3 days), Queuing: queuing</p>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Log download status. Valid values: `Processing`, `Completed`, `Failed`, `Expired` (three-day validity period), and `Queuing`.
-     * @param Status Log download status. Valid values: `Processing`, `Completed`, `Failed`, `Expired` (three-day validity period), and `Queuing`.
+     * Set <p>Log download status. Processing: export in progress, Completed: export completed, Failed: export failure, Expired: log export expired (valid for 3 days), Queuing: queuing</p>
+     * @param Status <p>Log download status. Processing: export in progress, Completed: export completed, Failed: export failure, Expired: log export expired (valid for 3 days), Queuing: queuing</p>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get Log export start time 
-     * @return From Log export start time
+     * Get <p>Start time of log export, with a timestamp in milliseconds</p> 
+     * @return From <p>Start time of log export, with a timestamp in milliseconds</p>
      */
     public Long getFrom() {
         return this.From;
     }
 
     /**
-     * Set Log export start time
-     * @param From Log export start time
+     * Set <p>Start time of log export, with a timestamp in milliseconds</p>
+     * @param From <p>Start time of log export, with a timestamp in milliseconds</p>
      */
     public void setFrom(Long From) {
         this.From = From;
     }
 
     /**
-     * Get Log export end time 
-     * @return To Log export end time
+     * Get <p>End time of log export, timestamp in milliseconds</p> 
+     * @return To <p>End time of log export, timestamp in milliseconds</p>
      */
     public Long getTo() {
         return this.To;
     }
 
     /**
-     * Set Log export end time
-     * @param To Log export end time
+     * Set <p>End time of log export, timestamp in milliseconds</p>
+     * @param To <p>End time of log export, timestamp in milliseconds</p>
      */
     public void setTo(Long To) {
         this.To = To;
     }
 
     /**
-     * Get Log export path, valid for one hour. Please download using this path as soon as possible. 
-     * @return CosPath Log export path, valid for one hour. Please download using this path as soon as possible.
+     * Get <p>Log export path, valid for one hour. Please download using this path as soon as possible.</p> 
+     * @return CosPath <p>Log export path, valid for one hour. Please download using this path as soon as possible.</p>
      */
     public String getCosPath() {
         return this.CosPath;
     }
 
     /**
-     * Set Log export path, valid for one hour. Please download using this path as soon as possible.
-     * @param CosPath Log export path, valid for one hour. Please download using this path as soon as possible.
+     * Set <p>Log export path, valid for one hour. Please download using this path as soon as possible.</p>
+     * @param CosPath <p>Log export path, valid for one hour. Please download using this path as soon as possible.</p>
      */
     public void setCosPath(String CosPath) {
         this.CosPath = CosPath;
     }
 
     /**
-     * Get Log export creation time 
-     * @return CreateTime Log export creation time
+     * Get <p>Log export creation time<br>Date and Time Formats: yyyy-MM-dd HH:mm:ss</p> 
+     * @return CreateTime <p>Log export creation time<br>Date and Time Formats: yyyy-MM-dd HH:mm:ss</p>
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set Log export creation time
-     * @param CreateTime Log export creation time
+     * Set <p>Log export creation time<br>Date and Time Formats: yyyy-MM-dd HH:mm:ss</p>
+     * @param CreateTime <p>Log export creation time<br>Date and Time Formats: yyyy-MM-dd HH:mm:ss</p>
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get Syntax rules. The default value is 0.0: Lucene syntax, 1: CQL syntax. 
-     * @return SyntaxRule Syntax rules. The default value is 0.0: Lucene syntax, 1: CQL syntax.
+     * Get <p>Syntax rule. Default value is 0.<br>0: Lucene syntax, 1: CQL syntax.</p> 
+     * @return SyntaxRule <p>Syntax rule. Default value is 0.<br>0: Lucene syntax, 1: CQL syntax.</p>
      */
     public Long getSyntaxRule() {
         return this.SyntaxRule;
     }
 
     /**
-     * Set Syntax rules. The default value is 0.0: Lucene syntax, 1: CQL syntax.
-     * @param SyntaxRule Syntax rules. The default value is 0.0: Lucene syntax, 1: CQL syntax.
+     * Set <p>Syntax rule. Default value is 0.<br>0: Lucene syntax, 1: CQL syntax.</p>
+     * @param SyntaxRule <p>Syntax rule. Default value is 0.<br>0: Lucene syntax, 1: CQL syntax.</p>
      */
     public void setSyntaxRule(Long SyntaxRule) {
         this.SyntaxRule = SyntaxRule;
+    }
+
+    /**
+     * Get <p>Export fields</p> 
+     * @return DerivedFields <p>Export fields</p>
+     */
+    public String [] getDerivedFields() {
+        return this.DerivedFields;
+    }
+
+    /**
+     * Set <p>Export fields</p>
+     * @param DerivedFields <p>Export fields</p>
+     */
+    public void setDerivedFields(String [] DerivedFields) {
+        this.DerivedFields = DerivedFields;
     }
 
     public ExportInfo() {
@@ -395,6 +418,12 @@ public class ExportInfo extends AbstractModel {
         if (source.SyntaxRule != null) {
             this.SyntaxRule = new Long(source.SyntaxRule);
         }
+        if (source.DerivedFields != null) {
+            this.DerivedFields = new String[source.DerivedFields.length];
+            for (int i = 0; i < source.DerivedFields.length; i++) {
+                this.DerivedFields[i] = new String(source.DerivedFields[i]);
+            }
+        }
     }
 
 
@@ -416,6 +445,7 @@ public class ExportInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "CosPath", this.CosPath);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "SyntaxRule", this.SyntaxRule);
+        this.setParamArraySimple(map, prefix + "DerivedFields.", this.DerivedFields);
 
     }
 }

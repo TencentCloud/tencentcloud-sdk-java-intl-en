@@ -24,8 +24,7 @@ import java.util.HashMap;
 public class DescribeVulDefencePluginExceptionCountResponse extends AbstractModel {
 
     /**
-    * Current number of abnormal plugins
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Number of plugin exceptions
     */
     @SerializedName("Count")
     @Expose
@@ -39,20 +38,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Current number of abnormal plugins
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Count Current number of abnormal plugins
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Number of plugin exceptions 
+     * @return Count Number of plugin exceptions
      */
     public Long getCount() {
         return this.Count;
     }
 
     /**
-     * Set Current number of abnormal plugins
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Count Current number of abnormal plugins
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Number of plugin exceptions
+     * @param Count Number of plugin exceptions
      */
     public void setCount(Long Count) {
         this.Count = Count;

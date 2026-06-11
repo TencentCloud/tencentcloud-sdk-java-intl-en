@@ -38,6 +38,13 @@ public class ScanVulAgainRequest extends AbstractModel {
     private String Uuids;
 
     /**
+    * 0 vulnerabilities, 1 windows patch
+    */
+    @SerializedName("EventType")
+    @Expose
+    private Long EventType;
+
+    /**
      * Get Vulnerability event ID string (Multiple entries are separated by English commas.) 
      * @return EventIds Vulnerability event ID string (Multiple entries are separated by English commas.)
      */
@@ -69,6 +76,22 @@ public class ScanVulAgainRequest extends AbstractModel {
         this.Uuids = Uuids;
     }
 
+    /**
+     * Get 0 vulnerabilities, 1 windows patch 
+     * @return EventType 0 vulnerabilities, 1 windows patch
+     */
+    public Long getEventType() {
+        return this.EventType;
+    }
+
+    /**
+     * Set 0 vulnerabilities, 1 windows patch
+     * @param EventType 0 vulnerabilities, 1 windows patch
+     */
+    public void setEventType(Long EventType) {
+        this.EventType = EventType;
+    }
+
     public ScanVulAgainRequest() {
     }
 
@@ -83,6 +106,9 @@ public class ScanVulAgainRequest extends AbstractModel {
         if (source.Uuids != null) {
             this.Uuids = new String(source.Uuids);
         }
+        if (source.EventType != null) {
+            this.EventType = new Long(source.EventType);
+        }
     }
 
 
@@ -92,6 +118,7 @@ public class ScanVulAgainRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "EventIds", this.EventIds);
         this.setParamSimple(map, prefix + "Uuids", this.Uuids);
+        this.setParamSimple(map, prefix + "EventType", this.EventType);
 
     }
 }

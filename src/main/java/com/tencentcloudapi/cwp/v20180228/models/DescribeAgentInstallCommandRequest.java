@@ -59,7 +59,7 @@ public class DescribeAgentInstallCommandRequest extends AbstractModel {
     private Long [] TagIds;
 
     /**
-    * Command validity period, required for non-Tencent Cloud instances
+    * Command validity period, required for non-Tencent Cloud instances (abandoned, takes effect permanently).
     */
     @SerializedName("ExpireDate")
     @Expose
@@ -153,16 +153,16 @@ public class DescribeAgentInstallCommandRequest extends AbstractModel {
     }
 
     /**
-     * Get Command validity period, required for non-Tencent Cloud instances 
-     * @return ExpireDate Command validity period, required for non-Tencent Cloud instances
+     * Get Command validity period, required for non-Tencent Cloud instances (abandoned, takes effect permanently). 
+     * @return ExpireDate Command validity period, required for non-Tencent Cloud instances (abandoned, takes effect permanently).
      */
     public String getExpireDate() {
         return this.ExpireDate;
     }
 
     /**
-     * Set Command validity period, required for non-Tencent Cloud instances
-     * @param ExpireDate Command validity period, required for non-Tencent Cloud instances
+     * Set Command validity period, required for non-Tencent Cloud instances (abandoned, takes effect permanently).
+     * @param ExpireDate Command validity period, required for non-Tencent Cloud instances (abandoned, takes effect permanently).
      */
     public void setExpireDate(String ExpireDate) {
         this.ExpireDate = ExpireDate;

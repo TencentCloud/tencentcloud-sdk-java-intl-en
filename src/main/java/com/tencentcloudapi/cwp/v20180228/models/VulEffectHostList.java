@@ -25,14 +25,13 @@ public class VulEffectHostList extends AbstractModel {
 
     /**
     * Event ID
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("EventId")
     @Expose
     private Long EventId;
 
     /**
-    * Status. 0: pending; 1: ignored; 3: fixed; 5: detecting; 6: fixing; 7: rolling back; 8: fixing failed.Note: This field may return null, indicating that no valid values can be obtained.
+    * Status: 0 - pending processing; 1 - ignored; 3 - fixed; 5 - detecting; 6 - in remediation; 7 - rolling back; 8 - fix failed.
     */
     @SerializedName("Status")
     @Expose
@@ -40,7 +39,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Last detection time
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("LastTime")
     @Expose
@@ -48,7 +46,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Hazard level: 1-Low-risk; 2-Medium-risk; 3-High-risk; 4-Critical
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Level")
     @Expose
@@ -56,7 +53,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Host QUUID
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Quuid")
     @Expose
@@ -64,7 +60,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Host UUID
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Uuid")
     @Expose
@@ -72,7 +67,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Host IP address
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("HostIp")
     @Expose
@@ -80,7 +74,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Host alias
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("AliasName")
     @Expose
@@ -88,7 +81,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Host tag
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Tags")
     @Expose
@@ -96,29 +88,27 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Description
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * Edition information. 0: Basic Edition; 1: Pro Edition; 2: Ultimate Edition; 3: Inclusive Edition.Note: This field may return null, indicating that no valid values can be obtained.
+    * Version information: 0-Basic version, 1-Pro edition, 2-Flagship edition, 3-Lightweight edition
     */
     @SerializedName("HostVersion")
     @Expose
     private Long HostVersion;
 
     /**
-    * Whether automatic fixing is supported. 0: not supported; 1: supported; 2: client offline; 3: manual fixing supported for Ultimate Edition hosts; 4: not supported for this model; 5: fixing, 6: fixed; 7: detecting; 9: fixing failed; 10: ignored; 11: supported for Linux but not Windows; 12: supported for Windows but not Linux; 13: fixing failed but host is offline; 14: fixing failed but host is not of the Ultimate edition; 15: manually fixed.Note: This field may return null, indicating that no valid values can be obtained.
+    * Whether automatic fixing is supported 0: Cannot be automatically repaired, 1: Can be automatically repaired, 2: Client offline, 3: Host can only be manually repaired if not flagship, 4: Not supported for this model, 5: In remediation, 6: Fixed, 7: In-progress detection, 9: Fix failed, 10: Ignored, 11: Vulnerability supported only on linux, not Windows, 12: Vulnerability supported only on Windows, not on linux, 13: Fixing failed but host is offline, 14: Fixing failed but host is not flagship, 15: Manually fixed
     */
     @SerializedName("IsSupportAutoFix")
     @Expose
     private Long IsSupportAutoFix;
 
     /**
-    * Failure cause
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Reason for failure
     */
     @SerializedName("FixStatusMsg")
     @Expose
@@ -126,14 +116,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * First detection time
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("FirstDiscoveryTime")
     @Expose
     private String FirstDiscoveryTime;
 
     /**
-    * Instance status. "PENDING": creating; "LAUNCH_FAILED" : creation failed; "RUNNING": running; "STOPPED": shut down; "STARTING": starting; "STOPPING": shutting down; "REBOOTING": restarting; "SHUTDOWN": shut down and pending termination; "TERMINATING": terminating.Note: This field may return null, indicating that no valid values can be obtained.
+    * Instance status: "PENDING" - creating, "LAUNCH_FAILED" - creation failed, "RUNNING" - running, "STOPPED" - shutdown, "STARTING" - starting, "STOPPING" - indicates shutdown in progress, "REBOOTING" - restarting, "SHUTDOWN" - indicate shutdown and pending termination, "TERMINATING" - indicates terminating in progress.
     */
     @SerializedName("InstanceState")
     @Expose
@@ -141,33 +130,63 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Public IP address
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("PublicIpAddresses")
     @Expose
     private String PublicIpAddresses;
 
     /**
-    * Cloud tag information
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Cloud Tag Information
     */
     @SerializedName("CloudTags")
     @Expose
     private Tags [] CloudTags;
 
     /**
-    * Host additional information
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Host Additional Information
     */
     @SerializedName("MachineExtraInfo")
     @Expose
     private MachineExtraInfo MachineExtraInfo;
 
     /**
-     * Get Event ID
-Note: This field may return null, indicating that no valid values can be obtained. 
+    * Host type
+    */
+    @SerializedName("MachineType")
+    @Expose
+    private String MachineType;
+
+    /**
+    * Availability zone ID.
+    */
+    @SerializedName("RegionId")
+    @Expose
+    private Long RegionId;
+
+    /**
+    * Whether to create a snapshot for the fix task: 0: not created; other: created.
+    */
+    @SerializedName("HasSnapshot")
+    @Expose
+    private Long HasSnapshot;
+
+    /**
+    * Last repair time
+    */
+    @SerializedName("LatestFixTime")
+    @Expose
+    private String LatestFixTime;
+
+    /**
+    * Description
+    */
+    @SerializedName("DescriptionEn")
+    @Expose
+    private String DescriptionEn;
+
+    /**
+     * Get Event ID 
      * @return EventId Event ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getEventId() {
         return this.EventId;
@@ -175,35 +194,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Event ID
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param EventId Event ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setEventId(Long EventId) {
         this.EventId = EventId;
     }
 
     /**
-     * Get Status. 0: pending; 1: ignored; 3: fixed; 5: detecting; 6: fixing; 7: rolling back; 8: fixing failed.Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Status Status. 0: pending; 1: ignored; 3: fixed; 5: detecting; 6: fixing; 7: rolling back; 8: fixing failed.Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Status: 0 - pending processing; 1 - ignored; 3 - fixed; 5 - detecting; 6 - in remediation; 7 - rolling back; 8 - fix failed. 
+     * @return Status Status: 0 - pending processing; 1 - ignored; 3 - fixed; 5 - detecting; 6 - in remediation; 7 - rolling back; 8 - fix failed.
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Status. 0: pending; 1: ignored; 3: fixed; 5: detecting; 6: fixing; 7: rolling back; 8: fixing failed.Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Status Status. 0: pending; 1: ignored; 3: fixed; 5: detecting; 6: fixing; 7: rolling back; 8: fixing failed.Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Status: 0 - pending processing; 1 - ignored; 3 - fixed; 5 - detecting; 6 - in remediation; 7 - rolling back; 8 - fix failed.
+     * @param Status Status: 0 - pending processing; 1 - ignored; 3 - fixed; 5 - detecting; 6 - in remediation; 7 - rolling back; 8 - fix failed.
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get Last detection time
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Last detection time 
      * @return LastTime Last detection time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getLastTime() {
         return this.LastTime;
@@ -211,19 +226,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Last detection time
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param LastTime Last detection time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setLastTime(String LastTime) {
         this.LastTime = LastTime;
     }
 
     /**
-     * Get Hazard level: 1-Low-risk; 2-Medium-risk; 3-High-risk; 4-Critical
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Hazard level: 1-Low-risk; 2-Medium-risk; 3-High-risk; 4-Critical 
      * @return Level Hazard level: 1-Low-risk; 2-Medium-risk; 3-High-risk; 4-Critical
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getLevel() {
         return this.Level;
@@ -231,19 +242,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Hazard level: 1-Low-risk; 2-Medium-risk; 3-High-risk; 4-Critical
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Level Hazard level: 1-Low-risk; 2-Medium-risk; 3-High-risk; 4-Critical
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setLevel(Long Level) {
         this.Level = Level;
     }
 
     /**
-     * Get Host QUUID
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Host QUUID 
      * @return Quuid Host QUUID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getQuuid() {
         return this.Quuid;
@@ -251,19 +258,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Host QUUID
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Quuid Host QUUID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setQuuid(String Quuid) {
         this.Quuid = Quuid;
     }
 
     /**
-     * Get Host UUID
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Host UUID 
      * @return Uuid Host UUID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getUuid() {
         return this.Uuid;
@@ -271,19 +274,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Host UUID
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Uuid Host UUID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setUuid(String Uuid) {
         this.Uuid = Uuid;
     }
 
     /**
-     * Get Host IP address
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Host IP address 
      * @return HostIp Host IP address
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getHostIp() {
         return this.HostIp;
@@ -291,19 +290,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Host IP address
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param HostIp Host IP address
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setHostIp(String HostIp) {
         this.HostIp = HostIp;
     }
 
     /**
-     * Get Host alias
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Host alias 
      * @return AliasName Host alias
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getAliasName() {
         return this.AliasName;
@@ -311,19 +306,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Host alias
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param AliasName Host alias
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setAliasName(String AliasName) {
         this.AliasName = AliasName;
     }
 
     /**
-     * Get Host tag
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Host tag 
      * @return Tags Host tag
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String [] getTags() {
         return this.Tags;
@@ -331,19 +322,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Host tag
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Tags Host tag
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setTags(String [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get Description
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Description 
      * @return Description Description
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getDescription() {
         return this.Description;
@@ -351,71 +338,63 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Description
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Description Description
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get Edition information. 0: Basic Edition; 1: Pro Edition; 2: Ultimate Edition; 3: Inclusive Edition.Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return HostVersion Edition information. 0: Basic Edition; 1: Pro Edition; 2: Ultimate Edition; 3: Inclusive Edition.Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Version information: 0-Basic version, 1-Pro edition, 2-Flagship edition, 3-Lightweight edition 
+     * @return HostVersion Version information: 0-Basic version, 1-Pro edition, 2-Flagship edition, 3-Lightweight edition
      */
     public Long getHostVersion() {
         return this.HostVersion;
     }
 
     /**
-     * Set Edition information. 0: Basic Edition; 1: Pro Edition; 2: Ultimate Edition; 3: Inclusive Edition.Note: This field may return null, indicating that no valid values can be obtained.
-     * @param HostVersion Edition information. 0: Basic Edition; 1: Pro Edition; 2: Ultimate Edition; 3: Inclusive Edition.Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Version information: 0-Basic version, 1-Pro edition, 2-Flagship edition, 3-Lightweight edition
+     * @param HostVersion Version information: 0-Basic version, 1-Pro edition, 2-Flagship edition, 3-Lightweight edition
      */
     public void setHostVersion(Long HostVersion) {
         this.HostVersion = HostVersion;
     }
 
     /**
-     * Get Whether automatic fixing is supported. 0: not supported; 1: supported; 2: client offline; 3: manual fixing supported for Ultimate Edition hosts; 4: not supported for this model; 5: fixing, 6: fixed; 7: detecting; 9: fixing failed; 10: ignored; 11: supported for Linux but not Windows; 12: supported for Windows but not Linux; 13: fixing failed but host is offline; 14: fixing failed but host is not of the Ultimate edition; 15: manually fixed.Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return IsSupportAutoFix Whether automatic fixing is supported. 0: not supported; 1: supported; 2: client offline; 3: manual fixing supported for Ultimate Edition hosts; 4: not supported for this model; 5: fixing, 6: fixed; 7: detecting; 9: fixing failed; 10: ignored; 11: supported for Linux but not Windows; 12: supported for Windows but not Linux; 13: fixing failed but host is offline; 14: fixing failed but host is not of the Ultimate edition; 15: manually fixed.Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Whether automatic fixing is supported 0: Cannot be automatically repaired, 1: Can be automatically repaired, 2: Client offline, 3: Host can only be manually repaired if not flagship, 4: Not supported for this model, 5: In remediation, 6: Fixed, 7: In-progress detection, 9: Fix failed, 10: Ignored, 11: Vulnerability supported only on linux, not Windows, 12: Vulnerability supported only on Windows, not on linux, 13: Fixing failed but host is offline, 14: Fixing failed but host is not flagship, 15: Manually fixed 
+     * @return IsSupportAutoFix Whether automatic fixing is supported 0: Cannot be automatically repaired, 1: Can be automatically repaired, 2: Client offline, 3: Host can only be manually repaired if not flagship, 4: Not supported for this model, 5: In remediation, 6: Fixed, 7: In-progress detection, 9: Fix failed, 10: Ignored, 11: Vulnerability supported only on linux, not Windows, 12: Vulnerability supported only on Windows, not on linux, 13: Fixing failed but host is offline, 14: Fixing failed but host is not flagship, 15: Manually fixed
      */
     public Long getIsSupportAutoFix() {
         return this.IsSupportAutoFix;
     }
 
     /**
-     * Set Whether automatic fixing is supported. 0: not supported; 1: supported; 2: client offline; 3: manual fixing supported for Ultimate Edition hosts; 4: not supported for this model; 5: fixing, 6: fixed; 7: detecting; 9: fixing failed; 10: ignored; 11: supported for Linux but not Windows; 12: supported for Windows but not Linux; 13: fixing failed but host is offline; 14: fixing failed but host is not of the Ultimate edition; 15: manually fixed.Note: This field may return null, indicating that no valid values can be obtained.
-     * @param IsSupportAutoFix Whether automatic fixing is supported. 0: not supported; 1: supported; 2: client offline; 3: manual fixing supported for Ultimate Edition hosts; 4: not supported for this model; 5: fixing, 6: fixed; 7: detecting; 9: fixing failed; 10: ignored; 11: supported for Linux but not Windows; 12: supported for Windows but not Linux; 13: fixing failed but host is offline; 14: fixing failed but host is not of the Ultimate edition; 15: manually fixed.Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Whether automatic fixing is supported 0: Cannot be automatically repaired, 1: Can be automatically repaired, 2: Client offline, 3: Host can only be manually repaired if not flagship, 4: Not supported for this model, 5: In remediation, 6: Fixed, 7: In-progress detection, 9: Fix failed, 10: Ignored, 11: Vulnerability supported only on linux, not Windows, 12: Vulnerability supported only on Windows, not on linux, 13: Fixing failed but host is offline, 14: Fixing failed but host is not flagship, 15: Manually fixed
+     * @param IsSupportAutoFix Whether automatic fixing is supported 0: Cannot be automatically repaired, 1: Can be automatically repaired, 2: Client offline, 3: Host can only be manually repaired if not flagship, 4: Not supported for this model, 5: In remediation, 6: Fixed, 7: In-progress detection, 9: Fix failed, 10: Ignored, 11: Vulnerability supported only on linux, not Windows, 12: Vulnerability supported only on Windows, not on linux, 13: Fixing failed but host is offline, 14: Fixing failed but host is not flagship, 15: Manually fixed
      */
     public void setIsSupportAutoFix(Long IsSupportAutoFix) {
         this.IsSupportAutoFix = IsSupportAutoFix;
     }
 
     /**
-     * Get Failure cause
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return FixStatusMsg Failure cause
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Reason for failure 
+     * @return FixStatusMsg Reason for failure
      */
     public String getFixStatusMsg() {
         return this.FixStatusMsg;
     }
 
     /**
-     * Set Failure cause
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param FixStatusMsg Failure cause
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Reason for failure
+     * @param FixStatusMsg Reason for failure
      */
     public void setFixStatusMsg(String FixStatusMsg) {
         this.FixStatusMsg = FixStatusMsg;
     }
 
     /**
-     * Get First detection time
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get First detection time 
      * @return FirstDiscoveryTime First detection time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getFirstDiscoveryTime() {
         return this.FirstDiscoveryTime;
@@ -423,35 +402,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set First detection time
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param FirstDiscoveryTime First detection time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setFirstDiscoveryTime(String FirstDiscoveryTime) {
         this.FirstDiscoveryTime = FirstDiscoveryTime;
     }
 
     /**
-     * Get Instance status. "PENDING": creating; "LAUNCH_FAILED" : creation failed; "RUNNING": running; "STOPPED": shut down; "STARTING": starting; "STOPPING": shutting down; "REBOOTING": restarting; "SHUTDOWN": shut down and pending termination; "TERMINATING": terminating.Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return InstanceState Instance status. "PENDING": creating; "LAUNCH_FAILED" : creation failed; "RUNNING": running; "STOPPED": shut down; "STARTING": starting; "STOPPING": shutting down; "REBOOTING": restarting; "SHUTDOWN": shut down and pending termination; "TERMINATING": terminating.Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Instance status: "PENDING" - creating, "LAUNCH_FAILED" - creation failed, "RUNNING" - running, "STOPPED" - shutdown, "STARTING" - starting, "STOPPING" - indicates shutdown in progress, "REBOOTING" - restarting, "SHUTDOWN" - indicate shutdown and pending termination, "TERMINATING" - indicates terminating in progress. 
+     * @return InstanceState Instance status: "PENDING" - creating, "LAUNCH_FAILED" - creation failed, "RUNNING" - running, "STOPPED" - shutdown, "STARTING" - starting, "STOPPING" - indicates shutdown in progress, "REBOOTING" - restarting, "SHUTDOWN" - indicate shutdown and pending termination, "TERMINATING" - indicates terminating in progress.
      */
     public String getInstanceState() {
         return this.InstanceState;
     }
 
     /**
-     * Set Instance status. "PENDING": creating; "LAUNCH_FAILED" : creation failed; "RUNNING": running; "STOPPED": shut down; "STARTING": starting; "STOPPING": shutting down; "REBOOTING": restarting; "SHUTDOWN": shut down and pending termination; "TERMINATING": terminating.Note: This field may return null, indicating that no valid values can be obtained.
-     * @param InstanceState Instance status. "PENDING": creating; "LAUNCH_FAILED" : creation failed; "RUNNING": running; "STOPPED": shut down; "STARTING": starting; "STOPPING": shutting down; "REBOOTING": restarting; "SHUTDOWN": shut down and pending termination; "TERMINATING": terminating.Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Instance status: "PENDING" - creating, "LAUNCH_FAILED" - creation failed, "RUNNING" - running, "STOPPED" - shutdown, "STARTING" - starting, "STOPPING" - indicates shutdown in progress, "REBOOTING" - restarting, "SHUTDOWN" - indicate shutdown and pending termination, "TERMINATING" - indicates terminating in progress.
+     * @param InstanceState Instance status: "PENDING" - creating, "LAUNCH_FAILED" - creation failed, "RUNNING" - running, "STOPPED" - shutdown, "STARTING" - starting, "STOPPING" - indicates shutdown in progress, "REBOOTING" - restarting, "SHUTDOWN" - indicate shutdown and pending termination, "TERMINATING" - indicates terminating in progress.
      */
     public void setInstanceState(String InstanceState) {
         this.InstanceState = InstanceState;
     }
 
     /**
-     * Get Public IP address
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Public IP address 
      * @return PublicIpAddresses Public IP address
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getPublicIpAddresses() {
         return this.PublicIpAddresses;
@@ -459,52 +434,122 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Public IP address
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param PublicIpAddresses Public IP address
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setPublicIpAddresses(String PublicIpAddresses) {
         this.PublicIpAddresses = PublicIpAddresses;
     }
 
     /**
-     * Get Cloud tag information
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return CloudTags Cloud tag information
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Cloud Tag Information 
+     * @return CloudTags Cloud Tag Information
      */
     public Tags [] getCloudTags() {
         return this.CloudTags;
     }
 
     /**
-     * Set Cloud tag information
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param CloudTags Cloud tag information
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Cloud Tag Information
+     * @param CloudTags Cloud Tag Information
      */
     public void setCloudTags(Tags [] CloudTags) {
         this.CloudTags = CloudTags;
     }
 
     /**
-     * Get Host additional information
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return MachineExtraInfo Host additional information
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Host Additional Information 
+     * @return MachineExtraInfo Host Additional Information
      */
     public MachineExtraInfo getMachineExtraInfo() {
         return this.MachineExtraInfo;
     }
 
     /**
-     * Set Host additional information
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param MachineExtraInfo Host additional information
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Host Additional Information
+     * @param MachineExtraInfo Host Additional Information
      */
     public void setMachineExtraInfo(MachineExtraInfo MachineExtraInfo) {
         this.MachineExtraInfo = MachineExtraInfo;
+    }
+
+    /**
+     * Get Host type 
+     * @return MachineType Host type
+     */
+    public String getMachineType() {
+        return this.MachineType;
+    }
+
+    /**
+     * Set Host type
+     * @param MachineType Host type
+     */
+    public void setMachineType(String MachineType) {
+        this.MachineType = MachineType;
+    }
+
+    /**
+     * Get Availability zone ID. 
+     * @return RegionId Availability zone ID.
+     */
+    public Long getRegionId() {
+        return this.RegionId;
+    }
+
+    /**
+     * Set Availability zone ID.
+     * @param RegionId Availability zone ID.
+     */
+    public void setRegionId(Long RegionId) {
+        this.RegionId = RegionId;
+    }
+
+    /**
+     * Get Whether to create a snapshot for the fix task: 0: not created; other: created. 
+     * @return HasSnapshot Whether to create a snapshot for the fix task: 0: not created; other: created.
+     */
+    public Long getHasSnapshot() {
+        return this.HasSnapshot;
+    }
+
+    /**
+     * Set Whether to create a snapshot for the fix task: 0: not created; other: created.
+     * @param HasSnapshot Whether to create a snapshot for the fix task: 0: not created; other: created.
+     */
+    public void setHasSnapshot(Long HasSnapshot) {
+        this.HasSnapshot = HasSnapshot;
+    }
+
+    /**
+     * Get Last repair time 
+     * @return LatestFixTime Last repair time
+     */
+    public String getLatestFixTime() {
+        return this.LatestFixTime;
+    }
+
+    /**
+     * Set Last repair time
+     * @param LatestFixTime Last repair time
+     */
+    public void setLatestFixTime(String LatestFixTime) {
+        this.LatestFixTime = LatestFixTime;
+    }
+
+    /**
+     * Get Description 
+     * @return DescriptionEn Description
+     */
+    public String getDescriptionEn() {
+        return this.DescriptionEn;
+    }
+
+    /**
+     * Set Description
+     * @param DescriptionEn Description
+     */
+    public void setDescriptionEn(String DescriptionEn) {
+        this.DescriptionEn = DescriptionEn;
     }
 
     public VulEffectHostList() {
@@ -575,6 +620,21 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.MachineExtraInfo != null) {
             this.MachineExtraInfo = new MachineExtraInfo(source.MachineExtraInfo);
         }
+        if (source.MachineType != null) {
+            this.MachineType = new String(source.MachineType);
+        }
+        if (source.RegionId != null) {
+            this.RegionId = new Long(source.RegionId);
+        }
+        if (source.HasSnapshot != null) {
+            this.HasSnapshot = new Long(source.HasSnapshot);
+        }
+        if (source.LatestFixTime != null) {
+            this.LatestFixTime = new String(source.LatestFixTime);
+        }
+        if (source.DescriptionEn != null) {
+            this.DescriptionEn = new String(source.DescriptionEn);
+        }
     }
 
 
@@ -600,6 +660,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "PublicIpAddresses", this.PublicIpAddresses);
         this.setParamArrayObj(map, prefix + "CloudTags.", this.CloudTags);
         this.setParamObj(map, prefix + "MachineExtraInfo.", this.MachineExtraInfo);
+        this.setParamSimple(map, prefix + "MachineType", this.MachineType);
+        this.setParamSimple(map, prefix + "RegionId", this.RegionId);
+        this.setParamSimple(map, prefix + "HasSnapshot", this.HasSnapshot);
+        this.setParamSimple(map, prefix + "LatestFixTime", this.LatestFixTime);
+        this.setParamSimple(map, prefix + "DescriptionEn", this.DescriptionEn);
 
     }
 }

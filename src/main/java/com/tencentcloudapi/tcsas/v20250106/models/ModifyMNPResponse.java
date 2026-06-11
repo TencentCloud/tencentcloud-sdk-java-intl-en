@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ModifyMNPResponse extends AbstractModel {
 
     /**
-    * Response data.
+    * <p>Response data.</p>
     */
     @SerializedName("Data")
     @Expose
@@ -38,16 +38,16 @@ public class ModifyMNPResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Response data. 
-     * @return Data Response data.
+     * Get <p>Response data.</p> 
+     * @return Data <p>Response data.</p>
      */
     public ResourceIdInfo getData() {
         return this.Data;
     }
 
     /**
-     * Set Response data.
-     * @param Data Response data.
+     * Set <p>Response data.</p>
+     * @param Data <p>Response data.</p>
      */
     public void setData(ResourceIdInfo Data) {
         this.Data = Data;

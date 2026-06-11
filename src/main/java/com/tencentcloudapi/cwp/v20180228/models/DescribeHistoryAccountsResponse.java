@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeHistoryAccountsResponse extends AbstractModel {
 
     /**
-    * Total number of records in the history account list
+    * Total number of records in the account change history list.
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * Array of history accounts
+    * Array of account change history data.
     */
     @SerializedName("HistoryAccounts")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeHistoryAccountsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Total number of records in the history account list 
-     * @return TotalCount Total number of records in the history account list
+     * Get Total number of records in the account change history list. 
+     * @return TotalCount Total number of records in the account change history list.
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set Total number of records in the history account list
-     * @param TotalCount Total number of records in the history account list
+     * Set Total number of records in the account change history list.
+     * @param TotalCount Total number of records in the account change history list.
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get Array of history accounts 
-     * @return HistoryAccounts Array of history accounts
+     * Get Array of account change history data. 
+     * @return HistoryAccounts Array of account change history data.
      */
     public HistoryAccount [] getHistoryAccounts() {
         return this.HistoryAccounts;
     }
 
     /**
-     * Set Array of history accounts
-     * @param HistoryAccounts Array of history accounts
+     * Set Array of account change history data.
+     * @param HistoryAccounts Array of account change history data.
      */
     public void setHistoryAccounts(HistoryAccount [] HistoryAccounts) {
         this.HistoryAccounts = HistoryAccounts;

@@ -73,11 +73,18 @@ public class ScanVulRequest extends AbstractModel {
     private Long [] VulIds;
 
     /**
-    * 0 version comparison, 2 version comparison + poc
+    * 0: version comparison, 2: version comparison + POC.
     */
     @SerializedName("ScanMethod")
     @Expose
     private Long ScanMethod;
+
+    /**
+    * kb No.
+    */
+    @SerializedName("KBNumber")
+    @Expose
+    private String [] KBNumber;
 
     /**
      * Get Whether to count only critical vulnerabilities. 1: only critical vulnerabilities; 0: all vulnerabilities. 
@@ -192,19 +199,35 @@ public class ScanVulRequest extends AbstractModel {
     }
 
     /**
-     * Get 0 version comparison, 2 version comparison + poc 
-     * @return ScanMethod 0 version comparison, 2 version comparison + poc
+     * Get 0: version comparison, 2: version comparison + POC. 
+     * @return ScanMethod 0: version comparison, 2: version comparison + POC.
      */
     public Long getScanMethod() {
         return this.ScanMethod;
     }
 
     /**
-     * Set 0 version comparison, 2 version comparison + poc
-     * @param ScanMethod 0 version comparison, 2 version comparison + poc
+     * Set 0: version comparison, 2: version comparison + POC.
+     * @param ScanMethod 0: version comparison, 2: version comparison + POC.
      */
     public void setScanMethod(Long ScanMethod) {
         this.ScanMethod = ScanMethod;
+    }
+
+    /**
+     * Get kb No. 
+     * @return KBNumber kb No.
+     */
+    public String [] getKBNumber() {
+        return this.KBNumber;
+    }
+
+    /**
+     * Set kb No.
+     * @param KBNumber kb No.
+     */
+    public void setKBNumber(String [] KBNumber) {
+        this.KBNumber = KBNumber;
     }
 
     public ScanVulRequest() {
@@ -245,6 +268,12 @@ public class ScanVulRequest extends AbstractModel {
         if (source.ScanMethod != null) {
             this.ScanMethod = new Long(source.ScanMethod);
         }
+        if (source.KBNumber != null) {
+            this.KBNumber = new String[source.KBNumber.length];
+            for (int i = 0; i < source.KBNumber.length; i++) {
+                this.KBNumber[i] = new String(source.KBNumber[i]);
+            }
+        }
     }
 
 
@@ -260,6 +289,7 @@ public class ScanVulRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "TimeoutPeriod", this.TimeoutPeriod);
         this.setParamArraySimple(map, prefix + "VulIds.", this.VulIds);
         this.setParamSimple(map, prefix + "ScanMethod", this.ScanMethod);
+        this.setParamArraySimple(map, prefix + "KBNumber.", this.KBNumber);
 
     }
 }

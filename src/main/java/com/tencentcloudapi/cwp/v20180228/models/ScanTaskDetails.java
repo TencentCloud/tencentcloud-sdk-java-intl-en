@@ -80,7 +80,7 @@ public class ScanTaskDetails extends AbstractModel {
     private String Quuid;
 
     /**
-    * Status code
+    * Status code: Scanning; Ok; Fail.
     */
     @SerializedName("Status")
     @Expose
@@ -101,7 +101,7 @@ public class ScanTaskDetails extends AbstractModel {
     private Long Id;
 
     /**
-    * Failure details
+    * Failure type. 3: offline; 4: timeout; 5: failed; 8: early agent version.
     */
     @SerializedName("FailType")
     @Expose
@@ -116,7 +116,6 @@ public class ScanTaskDetails extends AbstractModel {
 
     /**
     * Additional information
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("MachineExtraInfo")
     @Expose
@@ -251,16 +250,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Status code 
-     * @return Status Status code
+     * Get Status code: Scanning; Ok; Fail. 
+     * @return Status Status code: Scanning; Ok; Fail.
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Status code
-     * @param Status Status code
+     * Set Status code: Scanning; Ok; Fail.
+     * @param Status Status code: Scanning; Ok; Fail.
      */
     public void setStatus(String Status) {
         this.Status = Status;
@@ -299,16 +298,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Failure details 
-     * @return FailType Failure details
+     * Get Failure type. 3: offline; 4: timeout; 5: failed; 8: early agent version. 
+     * @return FailType Failure type. 3: offline; 4: timeout; 5: failed; 8: early agent version.
      */
     public Long getFailType() {
         return this.FailType;
     }
 
     /**
-     * Set Failure details
-     * @param FailType Failure details
+     * Set Failure type. 3: offline; 4: timeout; 5: failed; 8: early agent version.
+     * @param FailType Failure type. 3: offline; 4: timeout; 5: failed; 8: early agent version.
      */
     public void setFailType(Long FailType) {
         this.FailType = FailType;
@@ -331,10 +330,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Additional information
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Additional information 
      * @return MachineExtraInfo Additional information
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public MachineExtraInfo getMachineExtraInfo() {
         return this.MachineExtraInfo;
@@ -342,9 +339,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Additional information
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param MachineExtraInfo Additional information
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setMachineExtraInfo(MachineExtraInfo MachineExtraInfo) {
         this.MachineExtraInfo = MachineExtraInfo;

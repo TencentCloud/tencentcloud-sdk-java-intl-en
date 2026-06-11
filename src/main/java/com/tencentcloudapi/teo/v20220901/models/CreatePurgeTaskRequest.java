@@ -67,7 +67,7 @@ Note that if it’s enabled, the purging is based on the converted URLs.
     private Boolean EncodeUrl;
 
     /**
-    * The information attached when the node cache purge type is set to purge_cache_tag.
+    * The parameter is required when the node cache clearing type is set to purge_cache_tag, and the input value is the domain name.
     */
     @SerializedName("CacheTag")
     @Expose
@@ -190,16 +190,16 @@ Note that if it’s enabled, the purging is based on the converted URLs.
     }
 
     /**
-     * Get The information attached when the node cache purge type is set to purge_cache_tag. 
-     * @return CacheTag The information attached when the node cache purge type is set to purge_cache_tag.
+     * Get The parameter is required when the node cache clearing type is set to purge_cache_tag, and the input value is the domain name. 
+     * @return CacheTag The parameter is required when the node cache clearing type is set to purge_cache_tag, and the input value is the domain name.
      */
     public CacheTag getCacheTag() {
         return this.CacheTag;
     }
 
     /**
-     * Set The information attached when the node cache purge type is set to purge_cache_tag.
-     * @param CacheTag The information attached when the node cache purge type is set to purge_cache_tag.
+     * Set The parameter is required when the node cache clearing type is set to purge_cache_tag, and the input value is the domain name.
+     * @param CacheTag The parameter is required when the node cache clearing type is set to purge_cache_tag, and the input value is the domain name.
      */
     public void setCacheTag(CacheTag CacheTag) {
         this.CacheTag = CacheTag;

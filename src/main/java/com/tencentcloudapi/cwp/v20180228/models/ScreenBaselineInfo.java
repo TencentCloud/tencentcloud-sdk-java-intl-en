@@ -25,7 +25,6 @@ public class ScreenBaselineInfo extends AbstractModel {
 
     /**
     * Baseline name
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Name")
     @Expose
@@ -33,7 +32,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Hazard level: 1-Low-risk; 2-Medium-risk; 3-High-risk; 4-Critical
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Level")
     @Expose
@@ -41,23 +39,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Baseline ID
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("CategoryId")
     @Expose
     private Long CategoryId;
 
     /**
-    * Last check time
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Last detection time
     */
     @SerializedName("LastScanTime")
     @Expose
     private String LastScanTime;
 
     /**
-    * Baseline check items with risks
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Baseline risk items
     */
     @SerializedName("BaselineFailCount")
     @Expose
@@ -65,17 +60,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Host UUID
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Uuid")
     @Expose
     private String Uuid;
 
     /**
-     * Get Baseline name
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Baseline name 
      * @return Name Baseline name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getName() {
         return this.Name;
@@ -83,19 +75,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Baseline name
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Name Baseline name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get Hazard level: 1-Low-risk; 2-Medium-risk; 3-High-risk; 4-Critical
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Hazard level: 1-Low-risk; 2-Medium-risk; 3-High-risk; 4-Critical 
      * @return Level Hazard level: 1-Low-risk; 2-Medium-risk; 3-High-risk; 4-Critical
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getLevel() {
         return this.Level;
@@ -103,19 +91,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Hazard level: 1-Low-risk; 2-Medium-risk; 3-High-risk; 4-Critical
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Level Hazard level: 1-Low-risk; 2-Medium-risk; 3-High-risk; 4-Critical
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setLevel(Long Level) {
         this.Level = Level;
     }
 
     /**
-     * Get Baseline ID
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Baseline ID 
      * @return CategoryId Baseline ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getCategoryId() {
         return this.CategoryId;
@@ -123,59 +107,47 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Baseline ID
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param CategoryId Baseline ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setCategoryId(Long CategoryId) {
         this.CategoryId = CategoryId;
     }
 
     /**
-     * Get Last check time
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return LastScanTime Last check time
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Last detection time 
+     * @return LastScanTime Last detection time
      */
     public String getLastScanTime() {
         return this.LastScanTime;
     }
 
     /**
-     * Set Last check time
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param LastScanTime Last check time
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Last detection time
+     * @param LastScanTime Last detection time
      */
     public void setLastScanTime(String LastScanTime) {
         this.LastScanTime = LastScanTime;
     }
 
     /**
-     * Get Baseline check items with risks
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return BaselineFailCount Baseline check items with risks
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Baseline risk items 
+     * @return BaselineFailCount Baseline risk items
      */
     public Long getBaselineFailCount() {
         return this.BaselineFailCount;
     }
 
     /**
-     * Set Baseline check items with risks
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param BaselineFailCount Baseline check items with risks
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Baseline risk items
+     * @param BaselineFailCount Baseline risk items
      */
     public void setBaselineFailCount(Long BaselineFailCount) {
         this.BaselineFailCount = BaselineFailCount;
     }
 
     /**
-     * Get Host UUID
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Host UUID 
      * @return Uuid Host UUID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getUuid() {
         return this.Uuid;
@@ -183,9 +155,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Host UUID
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Uuid Host UUID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setUuid(String Uuid) {
         this.Uuid = Uuid;

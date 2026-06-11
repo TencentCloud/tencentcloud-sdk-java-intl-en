@@ -25,7 +25,6 @@ public class DescribeAssetCoreModuleListResponse extends AbstractModel {
 
     /**
     * List
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Modules")
     @Expose
@@ -46,10 +45,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get List
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get List 
      * @return Modules List
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public AssetCoreModuleBaseInfo [] getModules() {
         return this.Modules;
@@ -57,9 +54,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set List
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Modules List
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setModules(AssetCoreModuleBaseInfo [] Modules) {
         this.Modules = Modules;

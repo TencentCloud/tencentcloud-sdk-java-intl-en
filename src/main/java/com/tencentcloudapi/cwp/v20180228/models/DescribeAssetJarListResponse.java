@@ -25,7 +25,6 @@ public class DescribeAssetJarListResponse extends AbstractModel {
 
     /**
     * Application list
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Jars")
     @Expose
@@ -46,10 +45,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Application list
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Application list 
      * @return Jars Application list
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public AssetJarBaseInfo [] getJars() {
         return this.Jars;
@@ -57,9 +54,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Application list
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Jars Application list
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setJars(AssetJarBaseInfo [] Jars) {
         this.Jars = Jars;

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ModifyLogStorageConfigRequest extends AbstractModel {
 
     /**
-    * Whether to modify the validity period
+    * Whether to modify the validity period (deprecated).
     */
     @SerializedName("IsModifyPeriod")
     @Expose
@@ -38,23 +38,37 @@ public class ModifyLogStorageConfigRequest extends AbstractModel {
     private String [] Type;
 
     /**
-    * Log retention days. The value 3640 indicates that the number of days is unlimited.
+    * Log retention time. The value 3640 indicates that the time is unlimited.
     */
     @SerializedName("Period")
     @Expose
     private Long Period;
 
     /**
-     * Get Whether to modify the validity period 
-     * @return IsModifyPeriod Whether to modify the validity period
+    * Log storage duration unit: year/month/day
+    */
+    @SerializedName("Granularity")
+    @Expose
+    private String Granularity;
+
+    /**
+    * Language type
+    */
+    @SerializedName("MsgLanguage")
+    @Expose
+    private String MsgLanguage;
+
+    /**
+     * Get Whether to modify the validity period (deprecated). 
+     * @return IsModifyPeriod Whether to modify the validity period (deprecated).
      */
     public Boolean getIsModifyPeriod() {
         return this.IsModifyPeriod;
     }
 
     /**
-     * Set Whether to modify the validity period
-     * @param IsModifyPeriod Whether to modify the validity period
+     * Set Whether to modify the validity period (deprecated).
+     * @param IsModifyPeriod Whether to modify the validity period (deprecated).
      */
     public void setIsModifyPeriod(Boolean IsModifyPeriod) {
         this.IsModifyPeriod = IsModifyPeriod;
@@ -77,19 +91,51 @@ public class ModifyLogStorageConfigRequest extends AbstractModel {
     }
 
     /**
-     * Get Log retention days. The value 3640 indicates that the number of days is unlimited. 
-     * @return Period Log retention days. The value 3640 indicates that the number of days is unlimited.
+     * Get Log retention time. The value 3640 indicates that the time is unlimited. 
+     * @return Period Log retention time. The value 3640 indicates that the time is unlimited.
      */
     public Long getPeriod() {
         return this.Period;
     }
 
     /**
-     * Set Log retention days. The value 3640 indicates that the number of days is unlimited.
-     * @param Period Log retention days. The value 3640 indicates that the number of days is unlimited.
+     * Set Log retention time. The value 3640 indicates that the time is unlimited.
+     * @param Period Log retention time. The value 3640 indicates that the time is unlimited.
      */
     public void setPeriod(Long Period) {
         this.Period = Period;
+    }
+
+    /**
+     * Get Log storage duration unit: year/month/day 
+     * @return Granularity Log storage duration unit: year/month/day
+     */
+    public String getGranularity() {
+        return this.Granularity;
+    }
+
+    /**
+     * Set Log storage duration unit: year/month/day
+     * @param Granularity Log storage duration unit: year/month/day
+     */
+    public void setGranularity(String Granularity) {
+        this.Granularity = Granularity;
+    }
+
+    /**
+     * Get Language type 
+     * @return MsgLanguage Language type
+     */
+    public String getMsgLanguage() {
+        return this.MsgLanguage;
+    }
+
+    /**
+     * Set Language type
+     * @param MsgLanguage Language type
+     */
+    public void setMsgLanguage(String MsgLanguage) {
+        this.MsgLanguage = MsgLanguage;
     }
 
     public ModifyLogStorageConfigRequest() {
@@ -112,6 +158,12 @@ public class ModifyLogStorageConfigRequest extends AbstractModel {
         if (source.Period != null) {
             this.Period = new Long(source.Period);
         }
+        if (source.Granularity != null) {
+            this.Granularity = new String(source.Granularity);
+        }
+        if (source.MsgLanguage != null) {
+            this.MsgLanguage = new String(source.MsgLanguage);
+        }
     }
 
 
@@ -122,6 +174,8 @@ public class ModifyLogStorageConfigRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "IsModifyPeriod", this.IsModifyPeriod);
         this.setParamArraySimple(map, prefix + "Type.", this.Type);
         this.setParamSimple(map, prefix + "Period", this.Period);
+        this.setParamSimple(map, prefix + "Granularity", this.Granularity);
+        this.setParamSimple(map, prefix + "MsgLanguage", this.MsgLanguage);
 
     }
 }

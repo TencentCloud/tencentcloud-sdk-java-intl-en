@@ -25,7 +25,6 @@ public class DescribeAssetWebServiceInfoListResponse extends AbstractModel {
 
     /**
     * List
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("WebServices")
     @Expose
@@ -46,10 +45,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get List
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get List 
      * @return WebServices List
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public AssetWebServiceBaseInfo [] getWebServices() {
         return this.WebServices;
@@ -57,9 +54,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set List
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param WebServices List
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setWebServices(AssetWebServiceBaseInfo [] WebServices) {
         this.WebServices = WebServices;

@@ -24,8 +24,7 @@ import java.util.HashMap;
 public class DescribeVirusScanTimeoutSettingResponse extends AbstractModel {
 
     /**
-    * Timeout period in hours
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Timeout Duration (Hours)
     */
     @SerializedName("Timeout")
     @Expose
@@ -39,20 +38,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Timeout period in hours
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Timeout Timeout period in hours
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Timeout Duration (Hours) 
+     * @return Timeout Timeout Duration (Hours)
      */
     public Long getTimeout() {
         return this.Timeout;
     }
 
     /**
-     * Set Timeout period in hours
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Timeout Timeout period in hours
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Timeout Duration (Hours)
+     * @param Timeout Timeout Duration (Hours)
      */
     public void setTimeout(Long Timeout) {
         this.Timeout = Timeout;

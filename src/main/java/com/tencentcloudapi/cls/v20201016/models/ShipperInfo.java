@@ -24,538 +24,578 @@ import java.util.HashMap;
 public class ShipperInfo extends AbstractModel {
 
     /**
-    * Shipping rule ID
+    * <p>Delivery Rule ID</p>
     */
     @SerializedName("ShipperId")
     @Expose
     private String ShipperId;
 
     /**
-    * Log topic ID
+    * <p>Log topic ID.</p>
     */
     @SerializedName("TopicId")
     @Expose
     private String TopicId;
 
     /**
-    * Bucket address shipped to
+    * <p>bucket address for shipping</p>
     */
     @SerializedName("Bucket")
     @Expose
     private String Bucket;
 
     /**
-    * Shipping prefix directory
+    * <p>Delivery prefix directory</p>
     */
     @SerializedName("Prefix")
     @Expose
     private String Prefix;
 
     /**
-    * Shipping rule name
+    * <p>Shipping rule name</p>
     */
     @SerializedName("ShipperName")
     @Expose
     private String ShipperName;
 
     /**
-    * Shipping time interval in seconds
+    * <p>Shipping time interval. Unit: seconds</p>
     */
     @SerializedName("Interval")
     @Expose
     private Long Interval;
 
     /**
-    * Maximum size of shipped file in MB
+    * <p>Maximum value of delivered files in MB</p>
     */
     @SerializedName("MaxSize")
     @Expose
     private Long MaxSize;
 
     /**
-    * Whether it takes effect
+    * <p>Whether effective</p>
     */
     @SerializedName("Status")
     @Expose
     private Boolean Status;
 
     /**
-    * Filter rule for shipped log
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * <p>Filter rules for log shipping</p>
     */
     @SerializedName("FilterRules")
     @Expose
     private FilterRuleInfo [] FilterRules;
 
     /**
-    * Partition rule of shipped log, which can be represented in `strftime` time format
+    * <p>Partition rules for log shipping support strftime time format representation</p>
     */
     @SerializedName("Partition")
     @Expose
     private String Partition;
 
     /**
-    * Compression configuration of shipped log
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * <p>Compression configuration of shipped logs</p>
     */
     @SerializedName("Compress")
     @Expose
     private CompressInfo Compress;
 
     /**
-    * Format configuration of shipped log content
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * <p>Content format configuration for shipped logs</p>
     */
     @SerializedName("Content")
     @Expose
     private ContentInfo Content;
 
     /**
-    * Creation time of shipped log
+    * <p>Creation time of shipped logs. Format: YYYY-MM-DD HH:MM:SS</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * Shipping file naming configuration. Valid values: `0` (by random number); `1` (by shipping time). Default value: `0`.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Delivery file naming configuration. 0: Random number naming, 1: Delivery time naming. Default: 0 (Random number naming).</p>
     */
     @SerializedName("FilenameMode")
     @Expose
     private Long FilenameMode;
 
     /**
-    * Start time for data shipping
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Start time of the data shipping range</p>
     */
     @SerializedName("StartTime")
     @Expose
     private Long StartTime;
 
     /**
-    * End time for data shipping
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>End time of the data delivery range</p>
     */
     @SerializedName("EndTime")
     @Expose
     private Long EndTime;
 
     /**
-    * Progress of historical data shipping (valid only when the selected data scope contains historical data)
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Progress of historical data delivery (valid only when users select historical data within the dataset)</p>
     */
     @SerializedName("Progress")
     @Expose
     private Float Progress;
 
     /**
-    * Remaining time required for shipping all historical data (valid only when the selected data scope contains historical data)
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Remaining time for all historical data delivery completion (valid only when there is historical data in the selected data)</p><p>Unit: second</p>
     */
     @SerializedName("RemainTime")
     @Expose
     private Long RemainTime;
 
     /**
-    * Status of historical data shipping. Valid values:
-0: Real-time data is being shipped.
-1: The system is preparing for historical data shipping.
-2: Historical data is being shipped.
-3: An error occurred while shipping historical data.
-4: Historical data shipping ended.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Historical task status:<br>0: Real-time task<br>1: Task preparing<br>2: Task running<br>3: Task execution exception<br>4: Task execution complete</p>
     */
     @SerializedName("HistoryStatus")
     @Expose
     private Long HistoryStatus;
 
     /**
-    * COS bucket type
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Storage type. Default value is STANDARD. For enumeration values, see the <a href="https://www.tencentcloud.com/document/product/436/33417?from_cn_redirect=1">storage type overview</a> document.<br>Reference values:<br>STANDARD: standard storage<br>STANDARD_IA: infrequent storage<br>ARCHIVE: archive storage<br>DEEP_ARCHIVE: deep archive storage<br>MAZ_STANDARD: standard storage (multi-AZ)<br>MAZ_STANDARD_IA: infrequent storage (multi-AZ)<br>INTELLIGENT_TIERING: intelligent tiering storage<br>MAZ_INTELLIGENT_TIERING: intelligent tiering storage (multi-AZ)</p>
     */
     @SerializedName("StorageType")
     @Expose
     private String StorageType;
 
     /**
-     * Get Shipping rule ID 
-     * @return ShipperId Shipping rule ID
+    * <p>ARN <a href="https://www.tencentcloud.com/document/product/598/19381?from_cn_redirect=1">Create role</a></p>
+    */
+    @SerializedName("RoleArn")
+    @Expose
+    private String RoleArn;
+
+    /**
+    * <p>External ID</p>
+    */
+    @SerializedName("ExternalId")
+    @Expose
+    private String ExternalId;
+
+    /**
+    * <p>Task running status. Supports <code>0</code>, <code>1</code>, <code>2</code></p><ul><li><code>0</code>: Stop</li><li><code>1</code>: Running</li><li><code>2</code>: Exception</li></ul>
+    */
+    @SerializedName("TaskStatus")
+    @Expose
+    private Long TaskStatus;
+
+    /**
+    * <p>Time variable used to generate the file path shipped to COS</p>
+    */
+    @SerializedName("TimeZone")
+    @Expose
+    private String TimeZone;
+
+    /**
+    * <p>Pre-filtering process - filter out original data before writing to COS</p>
+    */
+    @SerializedName("DSLFilter")
+    @Expose
+    private String DSLFilter;
+
+    /**
+     * Get <p>Delivery Rule ID</p> 
+     * @return ShipperId <p>Delivery Rule ID</p>
      */
     public String getShipperId() {
         return this.ShipperId;
     }
 
     /**
-     * Set Shipping rule ID
-     * @param ShipperId Shipping rule ID
+     * Set <p>Delivery Rule ID</p>
+     * @param ShipperId <p>Delivery Rule ID</p>
      */
     public void setShipperId(String ShipperId) {
         this.ShipperId = ShipperId;
     }
 
     /**
-     * Get Log topic ID 
-     * @return TopicId Log topic ID
+     * Get <p>Log topic ID.</p> 
+     * @return TopicId <p>Log topic ID.</p>
      */
     public String getTopicId() {
         return this.TopicId;
     }
 
     /**
-     * Set Log topic ID
-     * @param TopicId Log topic ID
+     * Set <p>Log topic ID.</p>
+     * @param TopicId <p>Log topic ID.</p>
      */
     public void setTopicId(String TopicId) {
         this.TopicId = TopicId;
     }
 
     /**
-     * Get Bucket address shipped to 
-     * @return Bucket Bucket address shipped to
+     * Get <p>bucket address for shipping</p> 
+     * @return Bucket <p>bucket address for shipping</p>
      */
     public String getBucket() {
         return this.Bucket;
     }
 
     /**
-     * Set Bucket address shipped to
-     * @param Bucket Bucket address shipped to
+     * Set <p>bucket address for shipping</p>
+     * @param Bucket <p>bucket address for shipping</p>
      */
     public void setBucket(String Bucket) {
         this.Bucket = Bucket;
     }
 
     /**
-     * Get Shipping prefix directory 
-     * @return Prefix Shipping prefix directory
+     * Get <p>Delivery prefix directory</p> 
+     * @return Prefix <p>Delivery prefix directory</p>
      */
     public String getPrefix() {
         return this.Prefix;
     }
 
     /**
-     * Set Shipping prefix directory
-     * @param Prefix Shipping prefix directory
+     * Set <p>Delivery prefix directory</p>
+     * @param Prefix <p>Delivery prefix directory</p>
      */
     public void setPrefix(String Prefix) {
         this.Prefix = Prefix;
     }
 
     /**
-     * Get Shipping rule name 
-     * @return ShipperName Shipping rule name
+     * Get <p>Shipping rule name</p> 
+     * @return ShipperName <p>Shipping rule name</p>
      */
     public String getShipperName() {
         return this.ShipperName;
     }
 
     /**
-     * Set Shipping rule name
-     * @param ShipperName Shipping rule name
+     * Set <p>Shipping rule name</p>
+     * @param ShipperName <p>Shipping rule name</p>
      */
     public void setShipperName(String ShipperName) {
         this.ShipperName = ShipperName;
     }
 
     /**
-     * Get Shipping time interval in seconds 
-     * @return Interval Shipping time interval in seconds
+     * Get <p>Shipping time interval. Unit: seconds</p> 
+     * @return Interval <p>Shipping time interval. Unit: seconds</p>
      */
     public Long getInterval() {
         return this.Interval;
     }
 
     /**
-     * Set Shipping time interval in seconds
-     * @param Interval Shipping time interval in seconds
+     * Set <p>Shipping time interval. Unit: seconds</p>
+     * @param Interval <p>Shipping time interval. Unit: seconds</p>
      */
     public void setInterval(Long Interval) {
         this.Interval = Interval;
     }
 
     /**
-     * Get Maximum size of shipped file in MB 
-     * @return MaxSize Maximum size of shipped file in MB
+     * Get <p>Maximum value of delivered files in MB</p> 
+     * @return MaxSize <p>Maximum value of delivered files in MB</p>
      */
     public Long getMaxSize() {
         return this.MaxSize;
     }
 
     /**
-     * Set Maximum size of shipped file in MB
-     * @param MaxSize Maximum size of shipped file in MB
+     * Set <p>Maximum value of delivered files in MB</p>
+     * @param MaxSize <p>Maximum value of delivered files in MB</p>
      */
     public void setMaxSize(Long MaxSize) {
         this.MaxSize = MaxSize;
     }
 
     /**
-     * Get Whether it takes effect 
-     * @return Status Whether it takes effect
+     * Get <p>Whether effective</p> 
+     * @return Status <p>Whether effective</p>
      */
     public Boolean getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Whether it takes effect
-     * @param Status Whether it takes effect
+     * Set <p>Whether effective</p>
+     * @param Status <p>Whether effective</p>
      */
     public void setStatus(Boolean Status) {
         this.Status = Status;
     }
 
     /**
-     * Get Filter rule for shipped log
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return FilterRules Filter rule for shipped log
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get <p>Filter rules for log shipping</p> 
+     * @return FilterRules <p>Filter rules for log shipping</p>
      */
     public FilterRuleInfo [] getFilterRules() {
         return this.FilterRules;
     }
 
     /**
-     * Set Filter rule for shipped log
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param FilterRules Filter rule for shipped log
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set <p>Filter rules for log shipping</p>
+     * @param FilterRules <p>Filter rules for log shipping</p>
      */
     public void setFilterRules(FilterRuleInfo [] FilterRules) {
         this.FilterRules = FilterRules;
     }
 
     /**
-     * Get Partition rule of shipped log, which can be represented in `strftime` time format 
-     * @return Partition Partition rule of shipped log, which can be represented in `strftime` time format
+     * Get <p>Partition rules for log shipping support strftime time format representation</p> 
+     * @return Partition <p>Partition rules for log shipping support strftime time format representation</p>
      */
     public String getPartition() {
         return this.Partition;
     }
 
     /**
-     * Set Partition rule of shipped log, which can be represented in `strftime` time format
-     * @param Partition Partition rule of shipped log, which can be represented in `strftime` time format
+     * Set <p>Partition rules for log shipping support strftime time format representation</p>
+     * @param Partition <p>Partition rules for log shipping support strftime time format representation</p>
      */
     public void setPartition(String Partition) {
         this.Partition = Partition;
     }
 
     /**
-     * Get Compression configuration of shipped log
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return Compress Compression configuration of shipped log
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get <p>Compression configuration of shipped logs</p> 
+     * @return Compress <p>Compression configuration of shipped logs</p>
      */
     public CompressInfo getCompress() {
         return this.Compress;
     }
 
     /**
-     * Set Compression configuration of shipped log
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param Compress Compression configuration of shipped log
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set <p>Compression configuration of shipped logs</p>
+     * @param Compress <p>Compression configuration of shipped logs</p>
      */
     public void setCompress(CompressInfo Compress) {
         this.Compress = Compress;
     }
 
     /**
-     * Get Format configuration of shipped log content
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return Content Format configuration of shipped log content
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get <p>Content format configuration for shipped logs</p> 
+     * @return Content <p>Content format configuration for shipped logs</p>
      */
     public ContentInfo getContent() {
         return this.Content;
     }
 
     /**
-     * Set Format configuration of shipped log content
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param Content Format configuration of shipped log content
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set <p>Content format configuration for shipped logs</p>
+     * @param Content <p>Content format configuration for shipped logs</p>
      */
     public void setContent(ContentInfo Content) {
         this.Content = Content;
     }
 
     /**
-     * Get Creation time of shipped log 
-     * @return CreateTime Creation time of shipped log
+     * Get <p>Creation time of shipped logs. Format: YYYY-MM-DD HH:MM:SS</p> 
+     * @return CreateTime <p>Creation time of shipped logs. Format: YYYY-MM-DD HH:MM:SS</p>
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set Creation time of shipped log
-     * @param CreateTime Creation time of shipped log
+     * Set <p>Creation time of shipped logs. Format: YYYY-MM-DD HH:MM:SS</p>
+     * @param CreateTime <p>Creation time of shipped logs. Format: YYYY-MM-DD HH:MM:SS</p>
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get Shipping file naming configuration. Valid values: `0` (by random number); `1` (by shipping time). Default value: `0`.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return FilenameMode Shipping file naming configuration. Valid values: `0` (by random number); `1` (by shipping time). Default value: `0`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Delivery file naming configuration. 0: Random number naming, 1: Delivery time naming. Default: 0 (Random number naming).</p> 
+     * @return FilenameMode <p>Delivery file naming configuration. 0: Random number naming, 1: Delivery time naming. Default: 0 (Random number naming).</p>
      */
     public Long getFilenameMode() {
         return this.FilenameMode;
     }
 
     /**
-     * Set Shipping file naming configuration. Valid values: `0` (by random number); `1` (by shipping time). Default value: `0`.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param FilenameMode Shipping file naming configuration. Valid values: `0` (by random number); `1` (by shipping time). Default value: `0`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Delivery file naming configuration. 0: Random number naming, 1: Delivery time naming. Default: 0 (Random number naming).</p>
+     * @param FilenameMode <p>Delivery file naming configuration. 0: Random number naming, 1: Delivery time naming. Default: 0 (Random number naming).</p>
      */
     public void setFilenameMode(Long FilenameMode) {
         this.FilenameMode = FilenameMode;
     }
 
     /**
-     * Get Start time for data shipping
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return StartTime Start time for data shipping
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Start time of the data shipping range</p> 
+     * @return StartTime <p>Start time of the data shipping range</p>
      */
     public Long getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set Start time for data shipping
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param StartTime Start time for data shipping
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Start time of the data shipping range</p>
+     * @param StartTime <p>Start time of the data shipping range</p>
      */
     public void setStartTime(Long StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get End time for data shipping
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return EndTime End time for data shipping
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>End time of the data delivery range</p> 
+     * @return EndTime <p>End time of the data delivery range</p>
      */
     public Long getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set End time for data shipping
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param EndTime End time for data shipping
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>End time of the data delivery range</p>
+     * @param EndTime <p>End time of the data delivery range</p>
      */
     public void setEndTime(Long EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get Progress of historical data shipping (valid only when the selected data scope contains historical data)
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Progress Progress of historical data shipping (valid only when the selected data scope contains historical data)
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Progress of historical data delivery (valid only when users select historical data within the dataset)</p> 
+     * @return Progress <p>Progress of historical data delivery (valid only when users select historical data within the dataset)</p>
      */
     public Float getProgress() {
         return this.Progress;
     }
 
     /**
-     * Set Progress of historical data shipping (valid only when the selected data scope contains historical data)
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Progress Progress of historical data shipping (valid only when the selected data scope contains historical data)
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Progress of historical data delivery (valid only when users select historical data within the dataset)</p>
+     * @param Progress <p>Progress of historical data delivery (valid only when users select historical data within the dataset)</p>
      */
     public void setProgress(Float Progress) {
         this.Progress = Progress;
     }
 
     /**
-     * Get Remaining time required for shipping all historical data (valid only when the selected data scope contains historical data)
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return RemainTime Remaining time required for shipping all historical data (valid only when the selected data scope contains historical data)
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Remaining time for all historical data delivery completion (valid only when there is historical data in the selected data)</p><p>Unit: second</p> 
+     * @return RemainTime <p>Remaining time for all historical data delivery completion (valid only when there is historical data in the selected data)</p><p>Unit: second</p>
      */
     public Long getRemainTime() {
         return this.RemainTime;
     }
 
     /**
-     * Set Remaining time required for shipping all historical data (valid only when the selected data scope contains historical data)
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param RemainTime Remaining time required for shipping all historical data (valid only when the selected data scope contains historical data)
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Remaining time for all historical data delivery completion (valid only when there is historical data in the selected data)</p><p>Unit: second</p>
+     * @param RemainTime <p>Remaining time for all historical data delivery completion (valid only when there is historical data in the selected data)</p><p>Unit: second</p>
      */
     public void setRemainTime(Long RemainTime) {
         this.RemainTime = RemainTime;
     }
 
     /**
-     * Get Status of historical data shipping. Valid values:
-0: Real-time data is being shipped.
-1: The system is preparing for historical data shipping.
-2: Historical data is being shipped.
-3: An error occurred while shipping historical data.
-4: Historical data shipping ended.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return HistoryStatus Status of historical data shipping. Valid values:
-0: Real-time data is being shipped.
-1: The system is preparing for historical data shipping.
-2: Historical data is being shipped.
-3: An error occurred while shipping historical data.
-4: Historical data shipping ended.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Historical task status:<br>0: Real-time task<br>1: Task preparing<br>2: Task running<br>3: Task execution exception<br>4: Task execution complete</p> 
+     * @return HistoryStatus <p>Historical task status:<br>0: Real-time task<br>1: Task preparing<br>2: Task running<br>3: Task execution exception<br>4: Task execution complete</p>
      */
     public Long getHistoryStatus() {
         return this.HistoryStatus;
     }
 
     /**
-     * Set Status of historical data shipping. Valid values:
-0: Real-time data is being shipped.
-1: The system is preparing for historical data shipping.
-2: Historical data is being shipped.
-3: An error occurred while shipping historical data.
-4: Historical data shipping ended.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param HistoryStatus Status of historical data shipping. Valid values:
-0: Real-time data is being shipped.
-1: The system is preparing for historical data shipping.
-2: Historical data is being shipped.
-3: An error occurred while shipping historical data.
-4: Historical data shipping ended.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Historical task status:<br>0: Real-time task<br>1: Task preparing<br>2: Task running<br>3: Task execution exception<br>4: Task execution complete</p>
+     * @param HistoryStatus <p>Historical task status:<br>0: Real-time task<br>1: Task preparing<br>2: Task running<br>3: Task execution exception<br>4: Task execution complete</p>
      */
     public void setHistoryStatus(Long HistoryStatus) {
         this.HistoryStatus = HistoryStatus;
     }
 
     /**
-     * Get COS bucket type
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return StorageType COS bucket type
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Storage type. Default value is STANDARD. For enumeration values, see the <a href="https://www.tencentcloud.com/document/product/436/33417?from_cn_redirect=1">storage type overview</a> document.<br>Reference values:<br>STANDARD: standard storage<br>STANDARD_IA: infrequent storage<br>ARCHIVE: archive storage<br>DEEP_ARCHIVE: deep archive storage<br>MAZ_STANDARD: standard storage (multi-AZ)<br>MAZ_STANDARD_IA: infrequent storage (multi-AZ)<br>INTELLIGENT_TIERING: intelligent tiering storage<br>MAZ_INTELLIGENT_TIERING: intelligent tiering storage (multi-AZ)</p> 
+     * @return StorageType <p>Storage type. Default value is STANDARD. For enumeration values, see the <a href="https://www.tencentcloud.com/document/product/436/33417?from_cn_redirect=1">storage type overview</a> document.<br>Reference values:<br>STANDARD: standard storage<br>STANDARD_IA: infrequent storage<br>ARCHIVE: archive storage<br>DEEP_ARCHIVE: deep archive storage<br>MAZ_STANDARD: standard storage (multi-AZ)<br>MAZ_STANDARD_IA: infrequent storage (multi-AZ)<br>INTELLIGENT_TIERING: intelligent tiering storage<br>MAZ_INTELLIGENT_TIERING: intelligent tiering storage (multi-AZ)</p>
      */
     public String getStorageType() {
         return this.StorageType;
     }
 
     /**
-     * Set COS bucket type
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param StorageType COS bucket type
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Storage type. Default value is STANDARD. For enumeration values, see the <a href="https://www.tencentcloud.com/document/product/436/33417?from_cn_redirect=1">storage type overview</a> document.<br>Reference values:<br>STANDARD: standard storage<br>STANDARD_IA: infrequent storage<br>ARCHIVE: archive storage<br>DEEP_ARCHIVE: deep archive storage<br>MAZ_STANDARD: standard storage (multi-AZ)<br>MAZ_STANDARD_IA: infrequent storage (multi-AZ)<br>INTELLIGENT_TIERING: intelligent tiering storage<br>MAZ_INTELLIGENT_TIERING: intelligent tiering storage (multi-AZ)</p>
+     * @param StorageType <p>Storage type. Default value is STANDARD. For enumeration values, see the <a href="https://www.tencentcloud.com/document/product/436/33417?from_cn_redirect=1">storage type overview</a> document.<br>Reference values:<br>STANDARD: standard storage<br>STANDARD_IA: infrequent storage<br>ARCHIVE: archive storage<br>DEEP_ARCHIVE: deep archive storage<br>MAZ_STANDARD: standard storage (multi-AZ)<br>MAZ_STANDARD_IA: infrequent storage (multi-AZ)<br>INTELLIGENT_TIERING: intelligent tiering storage<br>MAZ_INTELLIGENT_TIERING: intelligent tiering storage (multi-AZ)</p>
      */
     public void setStorageType(String StorageType) {
         this.StorageType = StorageType;
+    }
+
+    /**
+     * Get <p>ARN <a href="https://www.tencentcloud.com/document/product/598/19381?from_cn_redirect=1">Create role</a></p> 
+     * @return RoleArn <p>ARN <a href="https://www.tencentcloud.com/document/product/598/19381?from_cn_redirect=1">Create role</a></p>
+     */
+    public String getRoleArn() {
+        return this.RoleArn;
+    }
+
+    /**
+     * Set <p>ARN <a href="https://www.tencentcloud.com/document/product/598/19381?from_cn_redirect=1">Create role</a></p>
+     * @param RoleArn <p>ARN <a href="https://www.tencentcloud.com/document/product/598/19381?from_cn_redirect=1">Create role</a></p>
+     */
+    public void setRoleArn(String RoleArn) {
+        this.RoleArn = RoleArn;
+    }
+
+    /**
+     * Get <p>External ID</p> 
+     * @return ExternalId <p>External ID</p>
+     */
+    public String getExternalId() {
+        return this.ExternalId;
+    }
+
+    /**
+     * Set <p>External ID</p>
+     * @param ExternalId <p>External ID</p>
+     */
+    public void setExternalId(String ExternalId) {
+        this.ExternalId = ExternalId;
+    }
+
+    /**
+     * Get <p>Task running status. Supports <code>0</code>, <code>1</code>, <code>2</code></p><ul><li><code>0</code>: Stop</li><li><code>1</code>: Running</li><li><code>2</code>: Exception</li></ul> 
+     * @return TaskStatus <p>Task running status. Supports <code>0</code>, <code>1</code>, <code>2</code></p><ul><li><code>0</code>: Stop</li><li><code>1</code>: Running</li><li><code>2</code>: Exception</li></ul>
+     */
+    public Long getTaskStatus() {
+        return this.TaskStatus;
+    }
+
+    /**
+     * Set <p>Task running status. Supports <code>0</code>, <code>1</code>, <code>2</code></p><ul><li><code>0</code>: Stop</li><li><code>1</code>: Running</li><li><code>2</code>: Exception</li></ul>
+     * @param TaskStatus <p>Task running status. Supports <code>0</code>, <code>1</code>, <code>2</code></p><ul><li><code>0</code>: Stop</li><li><code>1</code>: Running</li><li><code>2</code>: Exception</li></ul>
+     */
+    public void setTaskStatus(Long TaskStatus) {
+        this.TaskStatus = TaskStatus;
+    }
+
+    /**
+     * Get <p>Time variable used to generate the file path shipped to COS</p> 
+     * @return TimeZone <p>Time variable used to generate the file path shipped to COS</p>
+     */
+    public String getTimeZone() {
+        return this.TimeZone;
+    }
+
+    /**
+     * Set <p>Time variable used to generate the file path shipped to COS</p>
+     * @param TimeZone <p>Time variable used to generate the file path shipped to COS</p>
+     */
+    public void setTimeZone(String TimeZone) {
+        this.TimeZone = TimeZone;
+    }
+
+    /**
+     * Get <p>Pre-filtering process - filter out original data before writing to COS</p> 
+     * @return DSLFilter <p>Pre-filtering process - filter out original data before writing to COS</p>
+     */
+    public String getDSLFilter() {
+        return this.DSLFilter;
+    }
+
+    /**
+     * Set <p>Pre-filtering process - filter out original data before writing to COS</p>
+     * @param DSLFilter <p>Pre-filtering process - filter out original data before writing to COS</p>
+     */
+    public void setDSLFilter(String DSLFilter) {
+        this.DSLFilter = DSLFilter;
     }
 
     public ShipperInfo() {
@@ -629,6 +669,21 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.StorageType != null) {
             this.StorageType = new String(source.StorageType);
         }
+        if (source.RoleArn != null) {
+            this.RoleArn = new String(source.RoleArn);
+        }
+        if (source.ExternalId != null) {
+            this.ExternalId = new String(source.ExternalId);
+        }
+        if (source.TaskStatus != null) {
+            this.TaskStatus = new Long(source.TaskStatus);
+        }
+        if (source.TimeZone != null) {
+            this.TimeZone = new String(source.TimeZone);
+        }
+        if (source.DSLFilter != null) {
+            this.DSLFilter = new String(source.DSLFilter);
+        }
     }
 
 
@@ -656,6 +711,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "RemainTime", this.RemainTime);
         this.setParamSimple(map, prefix + "HistoryStatus", this.HistoryStatus);
         this.setParamSimple(map, prefix + "StorageType", this.StorageType);
+        this.setParamSimple(map, prefix + "RoleArn", this.RoleArn);
+        this.setParamSimple(map, prefix + "ExternalId", this.ExternalId);
+        this.setParamSimple(map, prefix + "TaskStatus", this.TaskStatus);
+        this.setParamSimple(map, prefix + "TimeZone", this.TimeZone);
+        this.setParamSimple(map, prefix + "DSLFilter", this.DSLFilter);
 
     }
 }

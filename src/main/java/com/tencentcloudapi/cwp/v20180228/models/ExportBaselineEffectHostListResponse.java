@@ -24,8 +24,7 @@ import java.util.HashMap;
 public class ExportBaselineEffectHostListResponse extends AbstractModel {
 
     /**
-    * This parameter has been discarded.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * This parameter has been deprecated.
     */
     @SerializedName("DownloadUrl")
     @Expose
@@ -46,20 +45,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get This parameter has been discarded.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return DownloadUrl This parameter has been discarded.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get This parameter has been deprecated. 
+     * @return DownloadUrl This parameter has been deprecated.
      */
     public String getDownloadUrl() {
         return this.DownloadUrl;
     }
 
     /**
-     * Set This parameter has been discarded.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param DownloadUrl This parameter has been discarded.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set This parameter has been deprecated.
+     * @param DownloadUrl This parameter has been deprecated.
      */
     public void setDownloadUrl(String DownloadUrl) {
         this.DownloadUrl = DownloadUrl;

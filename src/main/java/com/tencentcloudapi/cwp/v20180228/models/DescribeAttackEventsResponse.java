@@ -25,7 +25,6 @@ public class DescribeAttackEventsResponse extends AbstractModel {
 
     /**
     * Attack Event List
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("List")
     @Expose
@@ -46,10 +45,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Attack Event List
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Attack Event List 
      * @return List Attack Event List
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public NetAttackEvent [] getList() {
         return this.List;
@@ -57,9 +54,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Attack Event List
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param List Attack Event List
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setList(NetAttackEvent [] List) {
         this.List = List;

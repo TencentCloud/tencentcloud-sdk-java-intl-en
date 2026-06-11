@@ -24,23 +24,28 @@ import java.util.HashMap;
 public class DeleteShipperRequest extends AbstractModel {
 
     /**
-    * Shipping rule ID
+    * Shipping Rule Id.
+-Obtain the ShipperId by [obtaining the shipping task list](https://www.tencentcloud.com/document/product/614/58745?from_cn_redirect=1).
     */
     @SerializedName("ShipperId")
     @Expose
     private String ShipperId;
 
     /**
-     * Get Shipping rule ID 
-     * @return ShipperId Shipping rule ID
+     * Get Shipping Rule Id.
+-Obtain the ShipperId by [obtaining the shipping task list](https://www.tencentcloud.com/document/product/614/58745?from_cn_redirect=1). 
+     * @return ShipperId Shipping Rule Id.
+-Obtain the ShipperId by [obtaining the shipping task list](https://www.tencentcloud.com/document/product/614/58745?from_cn_redirect=1).
      */
     public String getShipperId() {
         return this.ShipperId;
     }
 
     /**
-     * Set Shipping rule ID
-     * @param ShipperId Shipping rule ID
+     * Set Shipping Rule Id.
+-Obtain the ShipperId by [obtaining the shipping task list](https://www.tencentcloud.com/document/product/614/58745?from_cn_redirect=1).
+     * @param ShipperId Shipping Rule Id.
+-Obtain the ShipperId by [obtaining the shipping task list](https://www.tencentcloud.com/document/product/614/58745?from_cn_redirect=1).
      */
     public void setShipperId(String ShipperId) {
         this.ShipperId = ShipperId;

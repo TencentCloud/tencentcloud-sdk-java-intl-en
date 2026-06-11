@@ -25,7 +25,6 @@ public class MachineFileTamperRule extends AbstractModel {
 
     /**
     * Rule name
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Name")
     @Expose
@@ -53,10 +52,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long Id;
 
     /**
-     * Get Rule name
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Rule name 
      * @return Name Rule name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getName() {
         return this.Name;
@@ -64,9 +61,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Rule name
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Name Rule name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setName(String Name) {
         this.Name = Name;

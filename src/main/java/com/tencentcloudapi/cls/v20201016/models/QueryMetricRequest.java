@@ -24,7 +24,8 @@ import java.util.HashMap;
 public class QueryMetricRequest extends AbstractModel {
 
     /**
-    * Query statement, using PromQL syntax	
+    * Queries statements; using PromQL syntax	
+-Refer to the [Syntax Rules](https://www.tencentcloud.com/document/product/614/90334?from_cn_redirect=1) document
     */
     @SerializedName("Query")
     @Expose
@@ -32,37 +33,45 @@ public class QueryMetricRequest extends AbstractModel {
 
     /**
     * Metric Topic ID
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
     */
     @SerializedName("TopicId")
     @Expose
     private String TopicId;
 
     /**
-    * Query time, Unix Timestamp in seconds	
+    * Query time, Unix timestamp in seconds. When empty, it represents the current timestamp.
+
     */
     @SerializedName("Time")
     @Expose
     private Long Time;
 
     /**
-     * Get Query statement, using PromQL syntax	 
-     * @return Query Query statement, using PromQL syntax	
+     * Get Queries statements; using PromQL syntax	
+-Refer to the [Syntax Rules](https://www.tencentcloud.com/document/product/614/90334?from_cn_redirect=1) document 
+     * @return Query Queries statements; using PromQL syntax	
+-Refer to the [Syntax Rules](https://www.tencentcloud.com/document/product/614/90334?from_cn_redirect=1) document
      */
     public String getQuery() {
         return this.Query;
     }
 
     /**
-     * Set Query statement, using PromQL syntax	
-     * @param Query Query statement, using PromQL syntax	
+     * Set Queries statements; using PromQL syntax	
+-Refer to the [Syntax Rules](https://www.tencentcloud.com/document/product/614/90334?from_cn_redirect=1) document
+     * @param Query Queries statements; using PromQL syntax	
+-Refer to the [Syntax Rules](https://www.tencentcloud.com/document/product/614/90334?from_cn_redirect=1) document
      */
     public void setQuery(String Query) {
         this.Query = Query;
     }
 
     /**
-     * Get Metric Topic ID 
+     * Get Metric Topic ID
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1). 
      * @return TopicId Metric Topic ID
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
      */
     public String getTopicId() {
         return this.TopicId;
@@ -70,23 +79,29 @@ public class QueryMetricRequest extends AbstractModel {
 
     /**
      * Set Metric Topic ID
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
      * @param TopicId Metric Topic ID
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
      */
     public void setTopicId(String TopicId) {
         this.TopicId = TopicId;
     }
 
     /**
-     * Get Query time, Unix Timestamp in seconds	 
-     * @return Time Query time, Unix Timestamp in seconds	
+     * Get Query time, Unix timestamp in seconds. When empty, it represents the current timestamp.
+ 
+     * @return Time Query time, Unix timestamp in seconds. When empty, it represents the current timestamp.
+
      */
     public Long getTime() {
         return this.Time;
     }
 
     /**
-     * Set Query time, Unix Timestamp in seconds	
-     * @param Time Query time, Unix Timestamp in seconds	
+     * Set Query time, Unix timestamp in seconds. When empty, it represents the current timestamp.
+
+     * @param Time Query time, Unix timestamp in seconds. When empty, it represents the current timestamp.
+
      */
     public void setTime(Long Time) {
         this.Time = Time;

@@ -25,7 +25,6 @@ public class WebHookPolicy extends AbstractModel {
 
     /**
     * id
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Id")
     @Expose
@@ -33,7 +32,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Policy name
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Name")
     @Expose
@@ -41,15 +39,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Event type
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Events")
     @Expose
     private WebHookEventKv [] Events;
 
     /**
-    * Host range
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Host scope
     */
     @SerializedName("HostLabels")
     @Expose
@@ -57,7 +53,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Recipient
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Receivers")
     @Expose
@@ -65,7 +60,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Format. 0: text; 1: JSON.
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Format")
     @Expose
@@ -73,23 +67,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Custom passthrough field
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("CustomFields")
     @Expose
     private WebHookCustomField [] CustomFields;
 
     /**
-    * Enable/Disable [1-Disable, 0-Enable]
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Whether it is disabled [1: disabled|0: enabled]
     */
     @SerializedName("IsDisabled")
     @Expose
     private Long IsDisabled;
 
     /**
-    * Host list
-Note: This field may return null, indicating that no valid values can be obtained.
+    * List of hosts
     */
     @SerializedName("Quuids")
     @Expose
@@ -97,17 +88,28 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Number of hosts
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("HostCount")
     @Expose
     private Long HostCount;
 
     /**
-     * Get id
-Note: This field may return null, indicating that no valid values can be obtained. 
+    * List of machines to be excluded.
+    */
+    @SerializedName("ExcludedQuuids")
+    @Expose
+    private String [] ExcludedQuuids;
+
+    /**
+    * Push language type, Chinese zh, English en	
+    */
+    @SerializedName("MsgLanguage")
+    @Expose
+    private String MsgLanguage;
+
+    /**
+     * Get id 
      * @return Id id
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getId() {
         return this.Id;
@@ -115,19 +117,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set id
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Id id
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setId(Long Id) {
         this.Id = Id;
     }
 
     /**
-     * Get Policy name
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Policy name 
      * @return Name Policy name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getName() {
         return this.Name;
@@ -135,19 +133,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Policy name
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Name Policy name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get Event type
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Event type 
      * @return Events Event type
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public WebHookEventKv [] getEvents() {
         return this.Events;
@@ -155,39 +149,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Event type
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Events Event type
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setEvents(WebHookEventKv [] Events) {
         this.Events = Events;
     }
 
     /**
-     * Get Host range
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return HostLabels Host range
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Host scope 
+     * @return HostLabels Host scope
      */
     public WebHookHostLabel [] getHostLabels() {
         return this.HostLabels;
     }
 
     /**
-     * Set Host range
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param HostLabels Host range
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Host scope
+     * @param HostLabels Host scope
      */
     public void setHostLabels(WebHookHostLabel [] HostLabels) {
         this.HostLabels = HostLabels;
     }
 
     /**
-     * Get Recipient
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Recipient 
      * @return Receivers Recipient
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public WebHookReceiver [] getReceivers() {
         return this.Receivers;
@@ -195,19 +181,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Recipient
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Receivers Recipient
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setReceivers(WebHookReceiver [] Receivers) {
         this.Receivers = Receivers;
     }
 
     /**
-     * Get Format. 0: text; 1: JSON.
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Format. 0: text; 1: JSON. 
      * @return Format Format. 0: text; 1: JSON.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getFormat() {
         return this.Format;
@@ -215,19 +197,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Format. 0: text; 1: JSON.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Format Format. 0: text; 1: JSON.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setFormat(Long Format) {
         this.Format = Format;
     }
 
     /**
-     * Get Custom passthrough field
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Custom passthrough field 
      * @return CustomFields Custom passthrough field
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public WebHookCustomField [] getCustomFields() {
         return this.CustomFields;
@@ -235,59 +213,47 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Custom passthrough field
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param CustomFields Custom passthrough field
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setCustomFields(WebHookCustomField [] CustomFields) {
         this.CustomFields = CustomFields;
     }
 
     /**
-     * Get Enable/Disable [1-Disable, 0-Enable]
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return IsDisabled Enable/Disable [1-Disable, 0-Enable]
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Whether it is disabled [1: disabled|0: enabled] 
+     * @return IsDisabled Whether it is disabled [1: disabled|0: enabled]
      */
     public Long getIsDisabled() {
         return this.IsDisabled;
     }
 
     /**
-     * Set Enable/Disable [1-Disable, 0-Enable]
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param IsDisabled Enable/Disable [1-Disable, 0-Enable]
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Whether it is disabled [1: disabled|0: enabled]
+     * @param IsDisabled Whether it is disabled [1: disabled|0: enabled]
      */
     public void setIsDisabled(Long IsDisabled) {
         this.IsDisabled = IsDisabled;
     }
 
     /**
-     * Get Host list
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Quuids Host list
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get List of hosts 
+     * @return Quuids List of hosts
      */
     public String [] getQuuids() {
         return this.Quuids;
     }
 
     /**
-     * Set Host list
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Quuids Host list
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set List of hosts
+     * @param Quuids List of hosts
      */
     public void setQuuids(String [] Quuids) {
         this.Quuids = Quuids;
     }
 
     /**
-     * Get Number of hosts
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Number of hosts 
      * @return HostCount Number of hosts
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getHostCount() {
         return this.HostCount;
@@ -295,12 +261,42 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Number of hosts
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param HostCount Number of hosts
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setHostCount(Long HostCount) {
         this.HostCount = HostCount;
+    }
+
+    /**
+     * Get List of machines to be excluded. 
+     * @return ExcludedQuuids List of machines to be excluded.
+     */
+    public String [] getExcludedQuuids() {
+        return this.ExcludedQuuids;
+    }
+
+    /**
+     * Set List of machines to be excluded.
+     * @param ExcludedQuuids List of machines to be excluded.
+     */
+    public void setExcludedQuuids(String [] ExcludedQuuids) {
+        this.ExcludedQuuids = ExcludedQuuids;
+    }
+
+    /**
+     * Get Push language type, Chinese zh, English en	 
+     * @return MsgLanguage Push language type, Chinese zh, English en	
+     */
+    public String getMsgLanguage() {
+        return this.MsgLanguage;
+    }
+
+    /**
+     * Set Push language type, Chinese zh, English en	
+     * @param MsgLanguage Push language type, Chinese zh, English en	
+     */
+    public void setMsgLanguage(String MsgLanguage) {
+        this.MsgLanguage = MsgLanguage;
     }
 
     public WebHookPolicy() {
@@ -356,6 +352,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.HostCount != null) {
             this.HostCount = new Long(source.HostCount);
         }
+        if (source.ExcludedQuuids != null) {
+            this.ExcludedQuuids = new String[source.ExcludedQuuids.length];
+            for (int i = 0; i < source.ExcludedQuuids.length; i++) {
+                this.ExcludedQuuids[i] = new String(source.ExcludedQuuids[i]);
+            }
+        }
+        if (source.MsgLanguage != null) {
+            this.MsgLanguage = new String(source.MsgLanguage);
+        }
     }
 
 
@@ -373,6 +378,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "IsDisabled", this.IsDisabled);
         this.setParamArraySimple(map, prefix + "Quuids.", this.Quuids);
         this.setParamSimple(map, prefix + "HostCount", this.HostCount);
+        this.setParamArraySimple(map, prefix + "ExcludedQuuids.", this.ExcludedQuuids);
+        this.setParamSimple(map, prefix + "MsgLanguage", this.MsgLanguage);
 
     }
 }

@@ -24,7 +24,9 @@ import java.util.HashMap;
 public class ModifyAutoScalingGroupRequest extends AbstractModel {
 
     /**
-    * <p>Scaling group ID. obtain available scaling group ids in the following ways:</p><li>query scaling group ids by logging in to the <a href="https://console.cloud.tencent.com/autoscaling/group">console</a>.</li><li>obtain scaling group ids by calling the <a href="https://www.tencentcloud.com/document/api/377/20438?from_cn_redirect=1">DescribeAutoScalingGroups</a> api and retrieving AutoScalingGroupId from the returned information.</li>.
+    * <p>Scaling group ID. obtain available scaling group ids in the following ways:</p>
+<li>query scaling group ids by logging in to the [console](https://console.cloud.tencent.com/autoscaling/group).</li>
+<li>obtain scaling group ids by calling the [DescribeAutoScalingGroups](https://www.tencentcloud.com/document/api/377/20438?from_cn_redirect=1) api and retrieving AutoScalingGroupId from the returned information.</li>
     */
     @SerializedName("AutoScalingGroupId")
     @Expose
@@ -52,7 +54,9 @@ public class ModifyAutoScalingGroupRequest extends AbstractModel {
     private Long DesiredCapacity;
 
     /**
-    * <p>Launch configuration ID. obtain available launch configuration ids in the following ways:</p><li>query the launch configuration ID by logging in to the <a href="https://console.cloud.tencent.com/autoscaling/config">console</a>.</li><li>obtain the launch configuration ID by calling the <a href="https://www.tencentcloud.com/document/api/377/20445?from_cn_redirect=1">DescribeLaunchConfigurations</a> api and retrieving the LaunchConfigurationId from the returned information.</li>.
+    * <p>Launch configuration ID. obtain available launch configuration ids in the following ways:</p>
+<li>query the launch configuration ID by logging in to the [console](https://console.cloud.tencent.com/autoscaling/config).</li>
+<li>obtain the launch configuration ID by calling the [DescribeLaunchConfigurations](https://www.tencentcloud.com/document/api/377/20445?from_cn_redirect=1) api and retrieving the LaunchConfigurationId from the returned information.</li>
     */
     @SerializedName("LaunchConfigurationId")
     @Expose
@@ -73,14 +77,14 @@ public class ModifyAutoScalingGroupRequest extends AbstractModel {
     private Long MinSize;
 
     /**
-    * <p>Project ID. obtain this parameter by calling the `ProjectId` field in the return value of <a href="https://www.tencentcloud.com/document/api/651/78725?from_cn_redirect=1">DescribeProject</a>. default value is 0, indicating usage of the default project.</p>.
+    * <p>Project ID. obtain this parameter by calling the `ProjectId` field in the return value of [DescribeProject](https://www.tencentcloud.com/document/api/651/78725?from_cn_redirect=1). Default value is 0, indicating usage of the default project.</p>.
     */
     @SerializedName("ProjectId")
     @Expose
     private Long ProjectId;
 
     /**
-    * <p>subnet ID list. valid vpc subnet ids can be obtained by logging in to the <a href="https://console.cloud.tencent.com/vpc/subnet">console</a> for querying. you can also call the API <a href="https://www.tencentcloud.com/document/product/215/15784?from_cn_redirect=1">DescribeSubnets</a> and retrieve them from the SubnetId field in the API response.</p>.
+    * subnet ID list. valid vpc subnet ids can be obtained by logging in to the [console](https://console.cloud.tencent.com/vpc/subnet) for querying. you can also call the API [DescribeSubnets](https://www.tencentcloud.com/document/product/215/15784?from_cn_redirect=1) and retrieve them from the SubnetId field in the API response.
     */
     @SerializedName("SubnetIds")
     @Expose
@@ -94,7 +98,7 @@ public class ModifyAutoScalingGroupRequest extends AbstractModel {
     private String [] TerminationPolicies;
 
     /**
-    * <p>vpc ID. when modifying the vpc, you need to change the SubnetIds parameter to the subnet of this vpc. effective VpcId can be queried by logging in to the <a href="https://console.cloud.tencent.com/vpc/vpc">console</a>; you can also call the <a href="https://www.tencentcloud.com/document/api/215/15778?from_cn_redirect=1">DescribeVpc</a> api and get the VpcId field from the api response.</p>.
+    * vpc ID. when modifying the vpc, you need to change the SubnetIds parameter to the subnet of this vpc. effective VpcId can be queried by logging in to the [console](https://console.cloud.tencent.com/vpc/vpc); you can also call the [DescribeVpc](https://www.tencentcloud.com/document/api/215/15778?from_cn_redirect=1) api and get the VpcId field from the api response.
     */
     @SerializedName("VpcId")
     @Expose
@@ -199,16 +203,24 @@ public class ModifyAutoScalingGroupRequest extends AbstractModel {
     private Boolean ConcurrentScaleOutForDesiredCapacity;
 
     /**
-     * Get <p>Scaling group ID. obtain available scaling group ids in the following ways:</p><li>query scaling group ids by logging in to the <a href="https://console.cloud.tencent.com/autoscaling/group">console</a>.</li><li>obtain scaling group ids by calling the <a href="https://www.tencentcloud.com/document/api/377/20438?from_cn_redirect=1">DescribeAutoScalingGroups</a> api and retrieving AutoScalingGroupId from the returned information.</li>. 
-     * @return AutoScalingGroupId <p>Scaling group ID. obtain available scaling group ids in the following ways:</p><li>query scaling group ids by logging in to the <a href="https://console.cloud.tencent.com/autoscaling/group">console</a>.</li><li>obtain scaling group ids by calling the <a href="https://www.tencentcloud.com/document/api/377/20438?from_cn_redirect=1">DescribeAutoScalingGroups</a> api and retrieving AutoScalingGroupId from the returned information.</li>.
+     * Get <p>Scaling group ID. obtain available scaling group ids in the following ways:</p>
+<li>query scaling group ids by logging in to the [console](https://console.cloud.tencent.com/autoscaling/group).</li>
+<li>obtain scaling group ids by calling the [DescribeAutoScalingGroups](https://www.tencentcloud.com/document/api/377/20438?from_cn_redirect=1) api and retrieving AutoScalingGroupId from the returned information.</li> 
+     * @return AutoScalingGroupId <p>Scaling group ID. obtain available scaling group ids in the following ways:</p>
+<li>query scaling group ids by logging in to the [console](https://console.cloud.tencent.com/autoscaling/group).</li>
+<li>obtain scaling group ids by calling the [DescribeAutoScalingGroups](https://www.tencentcloud.com/document/api/377/20438?from_cn_redirect=1) api and retrieving AutoScalingGroupId from the returned information.</li>
      */
     public String getAutoScalingGroupId() {
         return this.AutoScalingGroupId;
     }
 
     /**
-     * Set <p>Scaling group ID. obtain available scaling group ids in the following ways:</p><li>query scaling group ids by logging in to the <a href="https://console.cloud.tencent.com/autoscaling/group">console</a>.</li><li>obtain scaling group ids by calling the <a href="https://www.tencentcloud.com/document/api/377/20438?from_cn_redirect=1">DescribeAutoScalingGroups</a> api and retrieving AutoScalingGroupId from the returned information.</li>.
-     * @param AutoScalingGroupId <p>Scaling group ID. obtain available scaling group ids in the following ways:</p><li>query scaling group ids by logging in to the <a href="https://console.cloud.tencent.com/autoscaling/group">console</a>.</li><li>obtain scaling group ids by calling the <a href="https://www.tencentcloud.com/document/api/377/20438?from_cn_redirect=1">DescribeAutoScalingGroups</a> api and retrieving AutoScalingGroupId from the returned information.</li>.
+     * Set <p>Scaling group ID. obtain available scaling group ids in the following ways:</p>
+<li>query scaling group ids by logging in to the [console](https://console.cloud.tencent.com/autoscaling/group).</li>
+<li>obtain scaling group ids by calling the [DescribeAutoScalingGroups](https://www.tencentcloud.com/document/api/377/20438?from_cn_redirect=1) api and retrieving AutoScalingGroupId from the returned information.</li>
+     * @param AutoScalingGroupId <p>Scaling group ID. obtain available scaling group ids in the following ways:</p>
+<li>query scaling group ids by logging in to the [console](https://console.cloud.tencent.com/autoscaling/group).</li>
+<li>obtain scaling group ids by calling the [DescribeAutoScalingGroups](https://www.tencentcloud.com/document/api/377/20438?from_cn_redirect=1) api and retrieving AutoScalingGroupId from the returned information.</li>
      */
     public void setAutoScalingGroupId(String AutoScalingGroupId) {
         this.AutoScalingGroupId = AutoScalingGroupId;
@@ -263,16 +275,24 @@ public class ModifyAutoScalingGroupRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>Launch configuration ID. obtain available launch configuration ids in the following ways:</p><li>query the launch configuration ID by logging in to the <a href="https://console.cloud.tencent.com/autoscaling/config">console</a>.</li><li>obtain the launch configuration ID by calling the <a href="https://www.tencentcloud.com/document/api/377/20445?from_cn_redirect=1">DescribeLaunchConfigurations</a> api and retrieving the LaunchConfigurationId from the returned information.</li>. 
-     * @return LaunchConfigurationId <p>Launch configuration ID. obtain available launch configuration ids in the following ways:</p><li>query the launch configuration ID by logging in to the <a href="https://console.cloud.tencent.com/autoscaling/config">console</a>.</li><li>obtain the launch configuration ID by calling the <a href="https://www.tencentcloud.com/document/api/377/20445?from_cn_redirect=1">DescribeLaunchConfigurations</a> api and retrieving the LaunchConfigurationId from the returned information.</li>.
+     * Get <p>Launch configuration ID. obtain available launch configuration ids in the following ways:</p>
+<li>query the launch configuration ID by logging in to the [console](https://console.cloud.tencent.com/autoscaling/config).</li>
+<li>obtain the launch configuration ID by calling the [DescribeLaunchConfigurations](https://www.tencentcloud.com/document/api/377/20445?from_cn_redirect=1) api and retrieving the LaunchConfigurationId from the returned information.</li> 
+     * @return LaunchConfigurationId <p>Launch configuration ID. obtain available launch configuration ids in the following ways:</p>
+<li>query the launch configuration ID by logging in to the [console](https://console.cloud.tencent.com/autoscaling/config).</li>
+<li>obtain the launch configuration ID by calling the [DescribeLaunchConfigurations](https://www.tencentcloud.com/document/api/377/20445?from_cn_redirect=1) api and retrieving the LaunchConfigurationId from the returned information.</li>
      */
     public String getLaunchConfigurationId() {
         return this.LaunchConfigurationId;
     }
 
     /**
-     * Set <p>Launch configuration ID. obtain available launch configuration ids in the following ways:</p><li>query the launch configuration ID by logging in to the <a href="https://console.cloud.tencent.com/autoscaling/config">console</a>.</li><li>obtain the launch configuration ID by calling the <a href="https://www.tencentcloud.com/document/api/377/20445?from_cn_redirect=1">DescribeLaunchConfigurations</a> api and retrieving the LaunchConfigurationId from the returned information.</li>.
-     * @param LaunchConfigurationId <p>Launch configuration ID. obtain available launch configuration ids in the following ways:</p><li>query the launch configuration ID by logging in to the <a href="https://console.cloud.tencent.com/autoscaling/config">console</a>.</li><li>obtain the launch configuration ID by calling the <a href="https://www.tencentcloud.com/document/api/377/20445?from_cn_redirect=1">DescribeLaunchConfigurations</a> api and retrieving the LaunchConfigurationId from the returned information.</li>.
+     * Set <p>Launch configuration ID. obtain available launch configuration ids in the following ways:</p>
+<li>query the launch configuration ID by logging in to the [console](https://console.cloud.tencent.com/autoscaling/config).</li>
+<li>obtain the launch configuration ID by calling the [DescribeLaunchConfigurations](https://www.tencentcloud.com/document/api/377/20445?from_cn_redirect=1) api and retrieving the LaunchConfigurationId from the returned information.</li>
+     * @param LaunchConfigurationId <p>Launch configuration ID. obtain available launch configuration ids in the following ways:</p>
+<li>query the launch configuration ID by logging in to the [console](https://console.cloud.tencent.com/autoscaling/config).</li>
+<li>obtain the launch configuration ID by calling the [DescribeLaunchConfigurations](https://www.tencentcloud.com/document/api/377/20445?from_cn_redirect=1) api and retrieving the LaunchConfigurationId from the returned information.</li>
      */
     public void setLaunchConfigurationId(String LaunchConfigurationId) {
         this.LaunchConfigurationId = LaunchConfigurationId;
@@ -311,32 +331,32 @@ public class ModifyAutoScalingGroupRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>Project ID. obtain this parameter by calling the `ProjectId` field in the return value of <a href="https://www.tencentcloud.com/document/api/651/78725?from_cn_redirect=1">DescribeProject</a>. default value is 0, indicating usage of the default project.</p>. 
-     * @return ProjectId <p>Project ID. obtain this parameter by calling the `ProjectId` field in the return value of <a href="https://www.tencentcloud.com/document/api/651/78725?from_cn_redirect=1">DescribeProject</a>. default value is 0, indicating usage of the default project.</p>.
+     * Get <p>Project ID. obtain this parameter by calling the `ProjectId` field in the return value of [DescribeProject](https://www.tencentcloud.com/document/api/651/78725?from_cn_redirect=1). Default value is 0, indicating usage of the default project.</p>. 
+     * @return ProjectId <p>Project ID. obtain this parameter by calling the `ProjectId` field in the return value of [DescribeProject](https://www.tencentcloud.com/document/api/651/78725?from_cn_redirect=1). Default value is 0, indicating usage of the default project.</p>.
      */
     public Long getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set <p>Project ID. obtain this parameter by calling the `ProjectId` field in the return value of <a href="https://www.tencentcloud.com/document/api/651/78725?from_cn_redirect=1">DescribeProject</a>. default value is 0, indicating usage of the default project.</p>.
-     * @param ProjectId <p>Project ID. obtain this parameter by calling the `ProjectId` field in the return value of <a href="https://www.tencentcloud.com/document/api/651/78725?from_cn_redirect=1">DescribeProject</a>. default value is 0, indicating usage of the default project.</p>.
+     * Set <p>Project ID. obtain this parameter by calling the `ProjectId` field in the return value of [DescribeProject](https://www.tencentcloud.com/document/api/651/78725?from_cn_redirect=1). Default value is 0, indicating usage of the default project.</p>.
+     * @param ProjectId <p>Project ID. obtain this parameter by calling the `ProjectId` field in the return value of [DescribeProject](https://www.tencentcloud.com/document/api/651/78725?from_cn_redirect=1). Default value is 0, indicating usage of the default project.</p>.
      */
     public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;
     }
 
     /**
-     * Get <p>subnet ID list. valid vpc subnet ids can be obtained by logging in to the <a href="https://console.cloud.tencent.com/vpc/subnet">console</a> for querying. you can also call the API <a href="https://www.tencentcloud.com/document/product/215/15784?from_cn_redirect=1">DescribeSubnets</a> and retrieve them from the SubnetId field in the API response.</p>. 
-     * @return SubnetIds <p>subnet ID list. valid vpc subnet ids can be obtained by logging in to the <a href="https://console.cloud.tencent.com/vpc/subnet">console</a> for querying. you can also call the API <a href="https://www.tencentcloud.com/document/product/215/15784?from_cn_redirect=1">DescribeSubnets</a> and retrieve them from the SubnetId field in the API response.</p>.
+     * Get subnet ID list. valid vpc subnet ids can be obtained by logging in to the [console](https://console.cloud.tencent.com/vpc/subnet) for querying. you can also call the API [DescribeSubnets](https://www.tencentcloud.com/document/product/215/15784?from_cn_redirect=1) and retrieve them from the SubnetId field in the API response. 
+     * @return SubnetIds subnet ID list. valid vpc subnet ids can be obtained by logging in to the [console](https://console.cloud.tencent.com/vpc/subnet) for querying. you can also call the API [DescribeSubnets](https://www.tencentcloud.com/document/product/215/15784?from_cn_redirect=1) and retrieve them from the SubnetId field in the API response.
      */
     public String [] getSubnetIds() {
         return this.SubnetIds;
     }
 
     /**
-     * Set <p>subnet ID list. valid vpc subnet ids can be obtained by logging in to the <a href="https://console.cloud.tencent.com/vpc/subnet">console</a> for querying. you can also call the API <a href="https://www.tencentcloud.com/document/product/215/15784?from_cn_redirect=1">DescribeSubnets</a> and retrieve them from the SubnetId field in the API response.</p>.
-     * @param SubnetIds <p>subnet ID list. valid vpc subnet ids can be obtained by logging in to the <a href="https://console.cloud.tencent.com/vpc/subnet">console</a> for querying. you can also call the API <a href="https://www.tencentcloud.com/document/product/215/15784?from_cn_redirect=1">DescribeSubnets</a> and retrieve them from the SubnetId field in the API response.</p>.
+     * Set subnet ID list. valid vpc subnet ids can be obtained by logging in to the [console](https://console.cloud.tencent.com/vpc/subnet) for querying. you can also call the API [DescribeSubnets](https://www.tencentcloud.com/document/product/215/15784?from_cn_redirect=1) and retrieve them from the SubnetId field in the API response.
+     * @param SubnetIds subnet ID list. valid vpc subnet ids can be obtained by logging in to the [console](https://console.cloud.tencent.com/vpc/subnet) for querying. you can also call the API [DescribeSubnets](https://www.tencentcloud.com/document/product/215/15784?from_cn_redirect=1) and retrieve them from the SubnetId field in the API response.
      */
     public void setSubnetIds(String [] SubnetIds) {
         this.SubnetIds = SubnetIds;
@@ -359,16 +379,16 @@ public class ModifyAutoScalingGroupRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>vpc ID. when modifying the vpc, you need to change the SubnetIds parameter to the subnet of this vpc. effective VpcId can be queried by logging in to the <a href="https://console.cloud.tencent.com/vpc/vpc">console</a>; you can also call the <a href="https://www.tencentcloud.com/document/api/215/15778?from_cn_redirect=1">DescribeVpc</a> api and get the VpcId field from the api response.</p>. 
-     * @return VpcId <p>vpc ID. when modifying the vpc, you need to change the SubnetIds parameter to the subnet of this vpc. effective VpcId can be queried by logging in to the <a href="https://console.cloud.tencent.com/vpc/vpc">console</a>; you can also call the <a href="https://www.tencentcloud.com/document/api/215/15778?from_cn_redirect=1">DescribeVpc</a> api and get the VpcId field from the api response.</p>.
+     * Get vpc ID. when modifying the vpc, you need to change the SubnetIds parameter to the subnet of this vpc. effective VpcId can be queried by logging in to the [console](https://console.cloud.tencent.com/vpc/vpc); you can also call the [DescribeVpc](https://www.tencentcloud.com/document/api/215/15778?from_cn_redirect=1) api and get the VpcId field from the api response. 
+     * @return VpcId vpc ID. when modifying the vpc, you need to change the SubnetIds parameter to the subnet of this vpc. effective VpcId can be queried by logging in to the [console](https://console.cloud.tencent.com/vpc/vpc); you can also call the [DescribeVpc](https://www.tencentcloud.com/document/api/215/15778?from_cn_redirect=1) api and get the VpcId field from the api response.
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set <p>vpc ID. when modifying the vpc, you need to change the SubnetIds parameter to the subnet of this vpc. effective VpcId can be queried by logging in to the <a href="https://console.cloud.tencent.com/vpc/vpc">console</a>; you can also call the <a href="https://www.tencentcloud.com/document/api/215/15778?from_cn_redirect=1">DescribeVpc</a> api and get the VpcId field from the api response.</p>.
-     * @param VpcId <p>vpc ID. when modifying the vpc, you need to change the SubnetIds parameter to the subnet of this vpc. effective VpcId can be queried by logging in to the <a href="https://console.cloud.tencent.com/vpc/vpc">console</a>; you can also call the <a href="https://www.tencentcloud.com/document/api/215/15778?from_cn_redirect=1">DescribeVpc</a> api and get the VpcId field from the api response.</p>.
+     * Set vpc ID. when modifying the vpc, you need to change the SubnetIds parameter to the subnet of this vpc. effective VpcId can be queried by logging in to the [console](https://console.cloud.tencent.com/vpc/vpc); you can also call the [DescribeVpc](https://www.tencentcloud.com/document/api/215/15778?from_cn_redirect=1) api and get the VpcId field from the api response.
+     * @param VpcId vpc ID. when modifying the vpc, you need to change the SubnetIds parameter to the subnet of this vpc. effective VpcId can be queried by logging in to the [console](https://console.cloud.tencent.com/vpc/vpc); you can also call the [DescribeVpc](https://www.tencentcloud.com/document/api/215/15778?from_cn_redirect=1) api and get the VpcId field from the api response.
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;

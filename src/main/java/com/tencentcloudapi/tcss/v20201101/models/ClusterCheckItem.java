@@ -24,8 +24,7 @@ import java.util.HashMap;
 public class ClusterCheckItem extends AbstractModel {
 
     /**
-    * Unique ID of the check item
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Unique Check Item ID
     */
     @SerializedName("CheckItemId")
     @Expose
@@ -39,56 +38,57 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String Name;
 
     /**
-    * Detailed description of the check item
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Check Item Details
     */
     @SerializedName("ItemDetail")
     @Expose
     private String ItemDetail;
 
     /**
-    * Severity. Valid values: `Serious` (critical); `High` (high); `Middle` (medium); `Hint` (prompt).
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Threat Level: Serious, High, Medium, Hint
     */
     @SerializedName("RiskLevel")
     @Expose
     private String RiskLevel;
 
     /**
-    * Check target and risky target. Valid values: `Runc`, `Kubelet`, `Containerd`, `Pods`.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Check Object and Risk Object: Runc, Kubelet, Containerd, and Pods
     */
     @SerializedName("RiskTarget")
     @Expose
     private String RiskTarget;
 
     /**
-    * Risk type. Valid values: `CVERisk` (vulnerability risk); `ConfigRisk` (configuration risk).
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Risk Category. CVERisk: Vulnerability Risk; ConfigRisk: Configuration Risk
     */
     @SerializedName("RiskType")
     @Expose
     private String RiskType;
 
     /**
-    * Risk type of the check item. Valid values: `PrivilegePromotion` (privilege escalation); `RefuseService` (service rejected); `DirectoryEscape` (directory traversal); `UnauthorizedAccess` (unauthorized access); `PrivilegeAndAccessControl` (permissions, privileges, and access controls); `SensitiveInfoLeak` (sensitive data leakage).
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Risk Type of Check Item. PrivilegePromotion: Privilege Promotion; RefuseService: Refuse of Service; DirectoryEscape: Directory Traversal; UnauthorizedAccess: Unauthorized Access; PrivilegeAndAccessControl: Permission and Access Control Issues; SensitiveInfoLeak: Sensitive Information Leakage
     */
     @SerializedName("RiskAttribute")
     @Expose
     private String RiskAttribute;
 
     /**
-    * Risk characteristic and tag. Valid values: `ExistEXP` (an EXP exists); `ExistPOC` (a POC exists); `NoNeedReboot` (restart not required); `ServerRestart` (service restart); `RemoteInfoLeak` (remote information leakage); `RemoteRefuseService` (remote denial of service); `RemoteExploit` (remote exploit); `RemoteExecute` (remote execution).
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Risk Characteristics Tag
+ExistEXP: With EXP
+ExistPOC: With POD
+NoNeedReboot: No Need of Reboot
+ServerRestart: Service Reboot
+RemoteInfoLeak: Remote Information Leakage
+RemoteRefuseService: Remote Refuse Service
+RemoteExploit: Remote Exploitation
+RemoteExecute: Remote Execution
     */
     @SerializedName("RiskProperty")
     @Expose
     private String RiskProperty;
 
     /**
-    * CVE No.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * CVE id
     */
     @SerializedName("CVENumber")
     @Expose
@@ -96,7 +96,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Disclosure time
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("DiscoverTime")
     @Expose
@@ -104,15 +103,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Solution
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Solution")
     @Expose
     private String Solution;
 
     /**
-    * CVSS information, which is used for drawing.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * CVSS Information, Used for Drawing
     */
     @SerializedName("CVSS")
     @Expose
@@ -120,7 +117,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * CVSS score
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("CVSSScore")
     @Expose
@@ -128,67 +124,57 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Reference link
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("RelateLink")
     @Expose
     private String RelateLink;
 
     /**
-    * Affected type. Valid values: `Node`, `Workload`.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Impact Type: Node or Workload
     */
     @SerializedName("AffectedType")
     @Expose
     private String AffectedType;
 
     /**
-    * Affected version information
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Affected Version Information
     */
     @SerializedName("AffectedVersion")
     @Expose
     private String AffectedVersion;
 
     /**
-    * Number of ignored assets
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Number of Ignored Assets
     */
     @SerializedName("IgnoredAssetNum")
     @Expose
     private Long IgnoredAssetNum;
 
     /**
-    * Whether to ignore the check item
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Whether to Ignore the Check Item
     */
     @SerializedName("IsIgnored")
     @Expose
     private Boolean IsIgnored;
 
     /**
-    * Impact assessment
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Affected Critique
     */
     @SerializedName("RiskAssessment")
     @Expose
     private String RiskAssessment;
 
     /**
-     * Get Unique ID of the check item
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return CheckItemId Unique ID of the check item
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Unique Check Item ID 
+     * @return CheckItemId Unique Check Item ID
      */
     public Long getCheckItemId() {
         return this.CheckItemId;
     }
 
     /**
-     * Set Unique ID of the check item
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param CheckItemId Unique ID of the check item
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Unique Check Item ID
+     * @param CheckItemId Unique Check Item ID
      */
     public void setCheckItemId(Long CheckItemId) {
         this.CheckItemId = CheckItemId;
@@ -211,150 +197,152 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Detailed description of the check item
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ItemDetail Detailed description of the check item
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Check Item Details 
+     * @return ItemDetail Check Item Details
      */
     public String getItemDetail() {
         return this.ItemDetail;
     }
 
     /**
-     * Set Detailed description of the check item
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ItemDetail Detailed description of the check item
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Check Item Details
+     * @param ItemDetail Check Item Details
      */
     public void setItemDetail(String ItemDetail) {
         this.ItemDetail = ItemDetail;
     }
 
     /**
-     * Get Severity. Valid values: `Serious` (critical); `High` (high); `Middle` (medium); `Hint` (prompt).
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return RiskLevel Severity. Valid values: `Serious` (critical); `High` (high); `Middle` (medium); `Hint` (prompt).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Threat Level: Serious, High, Medium, Hint 
+     * @return RiskLevel Threat Level: Serious, High, Medium, Hint
      */
     public String getRiskLevel() {
         return this.RiskLevel;
     }
 
     /**
-     * Set Severity. Valid values: `Serious` (critical); `High` (high); `Middle` (medium); `Hint` (prompt).
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param RiskLevel Severity. Valid values: `Serious` (critical); `High` (high); `Middle` (medium); `Hint` (prompt).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Threat Level: Serious, High, Medium, Hint
+     * @param RiskLevel Threat Level: Serious, High, Medium, Hint
      */
     public void setRiskLevel(String RiskLevel) {
         this.RiskLevel = RiskLevel;
     }
 
     /**
-     * Get Check target and risky target. Valid values: `Runc`, `Kubelet`, `Containerd`, `Pods`.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return RiskTarget Check target and risky target. Valid values: `Runc`, `Kubelet`, `Containerd`, `Pods`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Check Object and Risk Object: Runc, Kubelet, Containerd, and Pods 
+     * @return RiskTarget Check Object and Risk Object: Runc, Kubelet, Containerd, and Pods
      */
     public String getRiskTarget() {
         return this.RiskTarget;
     }
 
     /**
-     * Set Check target and risky target. Valid values: `Runc`, `Kubelet`, `Containerd`, `Pods`.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param RiskTarget Check target and risky target. Valid values: `Runc`, `Kubelet`, `Containerd`, `Pods`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Check Object and Risk Object: Runc, Kubelet, Containerd, and Pods
+     * @param RiskTarget Check Object and Risk Object: Runc, Kubelet, Containerd, and Pods
      */
     public void setRiskTarget(String RiskTarget) {
         this.RiskTarget = RiskTarget;
     }
 
     /**
-     * Get Risk type. Valid values: `CVERisk` (vulnerability risk); `ConfigRisk` (configuration risk).
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return RiskType Risk type. Valid values: `CVERisk` (vulnerability risk); `ConfigRisk` (configuration risk).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Risk Category. CVERisk: Vulnerability Risk; ConfigRisk: Configuration Risk 
+     * @return RiskType Risk Category. CVERisk: Vulnerability Risk; ConfigRisk: Configuration Risk
      */
     public String getRiskType() {
         return this.RiskType;
     }
 
     /**
-     * Set Risk type. Valid values: `CVERisk` (vulnerability risk); `ConfigRisk` (configuration risk).
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param RiskType Risk type. Valid values: `CVERisk` (vulnerability risk); `ConfigRisk` (configuration risk).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Risk Category. CVERisk: Vulnerability Risk; ConfigRisk: Configuration Risk
+     * @param RiskType Risk Category. CVERisk: Vulnerability Risk; ConfigRisk: Configuration Risk
      */
     public void setRiskType(String RiskType) {
         this.RiskType = RiskType;
     }
 
     /**
-     * Get Risk type of the check item. Valid values: `PrivilegePromotion` (privilege escalation); `RefuseService` (service rejected); `DirectoryEscape` (directory traversal); `UnauthorizedAccess` (unauthorized access); `PrivilegeAndAccessControl` (permissions, privileges, and access controls); `SensitiveInfoLeak` (sensitive data leakage).
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return RiskAttribute Risk type of the check item. Valid values: `PrivilegePromotion` (privilege escalation); `RefuseService` (service rejected); `DirectoryEscape` (directory traversal); `UnauthorizedAccess` (unauthorized access); `PrivilegeAndAccessControl` (permissions, privileges, and access controls); `SensitiveInfoLeak` (sensitive data leakage).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Risk Type of Check Item. PrivilegePromotion: Privilege Promotion; RefuseService: Refuse of Service; DirectoryEscape: Directory Traversal; UnauthorizedAccess: Unauthorized Access; PrivilegeAndAccessControl: Permission and Access Control Issues; SensitiveInfoLeak: Sensitive Information Leakage 
+     * @return RiskAttribute Risk Type of Check Item. PrivilegePromotion: Privilege Promotion; RefuseService: Refuse of Service; DirectoryEscape: Directory Traversal; UnauthorizedAccess: Unauthorized Access; PrivilegeAndAccessControl: Permission and Access Control Issues; SensitiveInfoLeak: Sensitive Information Leakage
      */
     public String getRiskAttribute() {
         return this.RiskAttribute;
     }
 
     /**
-     * Set Risk type of the check item. Valid values: `PrivilegePromotion` (privilege escalation); `RefuseService` (service rejected); `DirectoryEscape` (directory traversal); `UnauthorizedAccess` (unauthorized access); `PrivilegeAndAccessControl` (permissions, privileges, and access controls); `SensitiveInfoLeak` (sensitive data leakage).
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param RiskAttribute Risk type of the check item. Valid values: `PrivilegePromotion` (privilege escalation); `RefuseService` (service rejected); `DirectoryEscape` (directory traversal); `UnauthorizedAccess` (unauthorized access); `PrivilegeAndAccessControl` (permissions, privileges, and access controls); `SensitiveInfoLeak` (sensitive data leakage).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Risk Type of Check Item. PrivilegePromotion: Privilege Promotion; RefuseService: Refuse of Service; DirectoryEscape: Directory Traversal; UnauthorizedAccess: Unauthorized Access; PrivilegeAndAccessControl: Permission and Access Control Issues; SensitiveInfoLeak: Sensitive Information Leakage
+     * @param RiskAttribute Risk Type of Check Item. PrivilegePromotion: Privilege Promotion; RefuseService: Refuse of Service; DirectoryEscape: Directory Traversal; UnauthorizedAccess: Unauthorized Access; PrivilegeAndAccessControl: Permission and Access Control Issues; SensitiveInfoLeak: Sensitive Information Leakage
      */
     public void setRiskAttribute(String RiskAttribute) {
         this.RiskAttribute = RiskAttribute;
     }
 
     /**
-     * Get Risk characteristic and tag. Valid values: `ExistEXP` (an EXP exists); `ExistPOC` (a POC exists); `NoNeedReboot` (restart not required); `ServerRestart` (service restart); `RemoteInfoLeak` (remote information leakage); `RemoteRefuseService` (remote denial of service); `RemoteExploit` (remote exploit); `RemoteExecute` (remote execution).
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return RiskProperty Risk characteristic and tag. Valid values: `ExistEXP` (an EXP exists); `ExistPOC` (a POC exists); `NoNeedReboot` (restart not required); `ServerRestart` (service restart); `RemoteInfoLeak` (remote information leakage); `RemoteRefuseService` (remote denial of service); `RemoteExploit` (remote exploit); `RemoteExecute` (remote execution).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Risk Characteristics Tag
+ExistEXP: With EXP
+ExistPOC: With POD
+NoNeedReboot: No Need of Reboot
+ServerRestart: Service Reboot
+RemoteInfoLeak: Remote Information Leakage
+RemoteRefuseService: Remote Refuse Service
+RemoteExploit: Remote Exploitation
+RemoteExecute: Remote Execution 
+     * @return RiskProperty Risk Characteristics Tag
+ExistEXP: With EXP
+ExistPOC: With POD
+NoNeedReboot: No Need of Reboot
+ServerRestart: Service Reboot
+RemoteInfoLeak: Remote Information Leakage
+RemoteRefuseService: Remote Refuse Service
+RemoteExploit: Remote Exploitation
+RemoteExecute: Remote Execution
      */
     public String getRiskProperty() {
         return this.RiskProperty;
     }
 
     /**
-     * Set Risk characteristic and tag. Valid values: `ExistEXP` (an EXP exists); `ExistPOC` (a POC exists); `NoNeedReboot` (restart not required); `ServerRestart` (service restart); `RemoteInfoLeak` (remote information leakage); `RemoteRefuseService` (remote denial of service); `RemoteExploit` (remote exploit); `RemoteExecute` (remote execution).
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param RiskProperty Risk characteristic and tag. Valid values: `ExistEXP` (an EXP exists); `ExistPOC` (a POC exists); `NoNeedReboot` (restart not required); `ServerRestart` (service restart); `RemoteInfoLeak` (remote information leakage); `RemoteRefuseService` (remote denial of service); `RemoteExploit` (remote exploit); `RemoteExecute` (remote execution).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Risk Characteristics Tag
+ExistEXP: With EXP
+ExistPOC: With POD
+NoNeedReboot: No Need of Reboot
+ServerRestart: Service Reboot
+RemoteInfoLeak: Remote Information Leakage
+RemoteRefuseService: Remote Refuse Service
+RemoteExploit: Remote Exploitation
+RemoteExecute: Remote Execution
+     * @param RiskProperty Risk Characteristics Tag
+ExistEXP: With EXP
+ExistPOC: With POD
+NoNeedReboot: No Need of Reboot
+ServerRestart: Service Reboot
+RemoteInfoLeak: Remote Information Leakage
+RemoteRefuseService: Remote Refuse Service
+RemoteExploit: Remote Exploitation
+RemoteExecute: Remote Execution
      */
     public void setRiskProperty(String RiskProperty) {
         this.RiskProperty = RiskProperty;
     }
 
     /**
-     * Get CVE No.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return CVENumber CVE No.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get CVE id 
+     * @return CVENumber CVE id
      */
     public String getCVENumber() {
         return this.CVENumber;
     }
 
     /**
-     * Set CVE No.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param CVENumber CVE No.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set CVE id
+     * @param CVENumber CVE id
      */
     public void setCVENumber(String CVENumber) {
         this.CVENumber = CVENumber;
     }
 
     /**
-     * Get Disclosure time
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Disclosure time 
      * @return DiscoverTime Disclosure time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getDiscoverTime() {
         return this.DiscoverTime;
@@ -362,19 +350,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Disclosure time
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param DiscoverTime Disclosure time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setDiscoverTime(String DiscoverTime) {
         this.DiscoverTime = DiscoverTime;
     }
 
     /**
-     * Get Solution
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Solution 
      * @return Solution Solution
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getSolution() {
         return this.Solution;
@@ -382,39 +366,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Solution
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Solution Solution
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setSolution(String Solution) {
         this.Solution = Solution;
     }
 
     /**
-     * Get CVSS information, which is used for drawing.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return CVSS CVSS information, which is used for drawing.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get CVSS Information, Used for Drawing 
+     * @return CVSS CVSS Information, Used for Drawing
      */
     public String getCVSS() {
         return this.CVSS;
     }
 
     /**
-     * Set CVSS information, which is used for drawing.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param CVSS CVSS information, which is used for drawing.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set CVSS Information, Used for Drawing
+     * @param CVSS CVSS Information, Used for Drawing
      */
     public void setCVSS(String CVSS) {
         this.CVSS = CVSS;
     }
 
     /**
-     * Get CVSS score
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get CVSS score 
      * @return CVSSScore CVSS score
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getCVSSScore() {
         return this.CVSSScore;
@@ -422,19 +398,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set CVSS score
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param CVSSScore CVSS score
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setCVSSScore(String CVSSScore) {
         this.CVSSScore = CVSSScore;
     }
 
     /**
-     * Get Reference link
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Reference link 
      * @return RelateLink Reference link
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getRelateLink() {
         return this.RelateLink;
@@ -442,109 +414,87 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Reference link
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param RelateLink Reference link
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setRelateLink(String RelateLink) {
         this.RelateLink = RelateLink;
     }
 
     /**
-     * Get Affected type. Valid values: `Node`, `Workload`.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return AffectedType Affected type. Valid values: `Node`, `Workload`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Impact Type: Node or Workload 
+     * @return AffectedType Impact Type: Node or Workload
      */
     public String getAffectedType() {
         return this.AffectedType;
     }
 
     /**
-     * Set Affected type. Valid values: `Node`, `Workload`.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param AffectedType Affected type. Valid values: `Node`, `Workload`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Impact Type: Node or Workload
+     * @param AffectedType Impact Type: Node or Workload
      */
     public void setAffectedType(String AffectedType) {
         this.AffectedType = AffectedType;
     }
 
     /**
-     * Get Affected version information
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return AffectedVersion Affected version information
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Affected Version Information 
+     * @return AffectedVersion Affected Version Information
      */
     public String getAffectedVersion() {
         return this.AffectedVersion;
     }
 
     /**
-     * Set Affected version information
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param AffectedVersion Affected version information
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Affected Version Information
+     * @param AffectedVersion Affected Version Information
      */
     public void setAffectedVersion(String AffectedVersion) {
         this.AffectedVersion = AffectedVersion;
     }
 
     /**
-     * Get Number of ignored assets
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return IgnoredAssetNum Number of ignored assets
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Number of Ignored Assets 
+     * @return IgnoredAssetNum Number of Ignored Assets
      */
     public Long getIgnoredAssetNum() {
         return this.IgnoredAssetNum;
     }
 
     /**
-     * Set Number of ignored assets
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param IgnoredAssetNum Number of ignored assets
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Number of Ignored Assets
+     * @param IgnoredAssetNum Number of Ignored Assets
      */
     public void setIgnoredAssetNum(Long IgnoredAssetNum) {
         this.IgnoredAssetNum = IgnoredAssetNum;
     }
 
     /**
-     * Get Whether to ignore the check item
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return IsIgnored Whether to ignore the check item
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Whether to Ignore the Check Item 
+     * @return IsIgnored Whether to Ignore the Check Item
      */
     public Boolean getIsIgnored() {
         return this.IsIgnored;
     }
 
     /**
-     * Set Whether to ignore the check item
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param IsIgnored Whether to ignore the check item
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Whether to Ignore the Check Item
+     * @param IsIgnored Whether to Ignore the Check Item
      */
     public void setIsIgnored(Boolean IsIgnored) {
         this.IsIgnored = IsIgnored;
     }
 
     /**
-     * Get Impact assessment
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return RiskAssessment Impact assessment
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Affected Critique 
+     * @return RiskAssessment Affected Critique
      */
     public String getRiskAssessment() {
         return this.RiskAssessment;
     }
 
     /**
-     * Set Impact assessment
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param RiskAssessment Impact assessment
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Affected Critique
+     * @param RiskAssessment Affected Critique
      */
     public void setRiskAssessment(String RiskAssessment) {
         this.RiskAssessment = RiskAssessment;

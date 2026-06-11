@@ -24,8 +24,7 @@ import java.util.HashMap;
 public class DescribeScreenRiskAssetsTopResponse extends AbstractModel {
 
     /**
-    * Statistical details icon data. Name: display the host IP and region; value: number of events
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Name: Display host ip and region. value: Number of events.
     */
     @SerializedName("Chart")
     @Expose
@@ -39,20 +38,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Statistical details icon data. Name: display the host IP and region; value: number of events
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Chart Statistical details icon data. Name: display the host IP and region; value: number of events
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Name: Display host ip and region. value: Number of events. 
+     * @return Chart Name: Display host ip and region. value: Number of events.
      */
     public ScreenNameValue [] getChart() {
         return this.Chart;
     }
 
     /**
-     * Set Statistical details icon data. Name: display the host IP and region; value: number of events
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Chart Statistical details icon data. Name: display the host IP and region; value: number of events
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Name: Display host ip and region. value: Number of events.
+     * @param Chart Name: Display host ip and region. value: Number of events.
      */
     public void setChart(ScreenNameValue [] Chart) {
         this.Chart = Chart;

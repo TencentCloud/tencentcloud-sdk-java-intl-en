@@ -24,21 +24,24 @@ import java.util.HashMap;
 public class CreateConfigRequest extends AbstractModel {
 
     /**
-    * Collection configuration name
+    * collection configuration name
+-Names do not contain special characters
+- Name can be up to 255 characters, exceeding which will be truncated
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * Log topic ID (TopicId) of collection configuration
+    * Log topic ID to which the collection configuration belongs, i.e., topic ID
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
     */
     @SerializedName("Output")
     @Expose
     private String Output;
 
     /**
-    * Log collection path containing the filename
+    * Log collection path, which contains the file name. Multiple paths are supported and should be separated by English commas. It is required for file collection.
     */
     @SerializedName("Path")
     @Expose
@@ -83,48 +86,70 @@ Default placeholder value in console: `{\"ClsAgentDefault\":0}`
     private String AdvancedConfig;
 
     /**
-     * Get Collection configuration name 
-     * @return Name Collection configuration name
+    * Log input type (<span style="color:red; font-weight:bold">Note: Required for Windows scenario and only supports file and windows_event type</span>)
+-file type collection
+-windows event collection
+-syslog: System log collection
+    */
+    @SerializedName("InputType")
+    @Expose
+    private String InputType;
+
+    /**
+     * Get collection configuration name
+-Names do not contain special characters
+- Name can be up to 255 characters, exceeding which will be truncated 
+     * @return Name collection configuration name
+-Names do not contain special characters
+- Name can be up to 255 characters, exceeding which will be truncated
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Collection configuration name
-     * @param Name Collection configuration name
+     * Set collection configuration name
+-Names do not contain special characters
+- Name can be up to 255 characters, exceeding which will be truncated
+     * @param Name collection configuration name
+-Names do not contain special characters
+- Name can be up to 255 characters, exceeding which will be truncated
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get Log topic ID (TopicId) of collection configuration 
-     * @return Output Log topic ID (TopicId) of collection configuration
+     * Get Log topic ID to which the collection configuration belongs, i.e., topic ID
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1). 
+     * @return Output Log topic ID to which the collection configuration belongs, i.e., topic ID
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
      */
     public String getOutput() {
         return this.Output;
     }
 
     /**
-     * Set Log topic ID (TopicId) of collection configuration
-     * @param Output Log topic ID (TopicId) of collection configuration
+     * Set Log topic ID to which the collection configuration belongs, i.e., topic ID
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
+     * @param Output Log topic ID to which the collection configuration belongs, i.e., topic ID
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
      */
     public void setOutput(String Output) {
         this.Output = Output;
     }
 
     /**
-     * Get Log collection path containing the filename 
-     * @return Path Log collection path containing the filename
+     * Get Log collection path, which contains the file name. Multiple paths are supported and should be separated by English commas. It is required for file collection. 
+     * @return Path Log collection path, which contains the file name. Multiple paths are supported and should be separated by English commas. It is required for file collection.
      */
     public String getPath() {
         return this.Path;
     }
 
     /**
-     * Set Log collection path containing the filename
-     * @param Path Log collection path containing the filename
+     * Set Log collection path, which contains the file name. Multiple paths are supported and should be separated by English commas. It is required for file collection.
+     * @param Path Log collection path, which contains the file name. Multiple paths are supported and should be separated by English commas. It is required for file collection.
      */
     public void setPath(String Path) {
         this.Path = Path;
@@ -222,6 +247,34 @@ Default placeholder value in console: `{\"ClsAgentDefault\":0}`
         this.AdvancedConfig = AdvancedConfig;
     }
 
+    /**
+     * Get Log input type (<span style="color:red; font-weight:bold">Note: Required for Windows scenario and only supports file and windows_event type</span>)
+-file type collection
+-windows event collection
+-syslog: System log collection 
+     * @return InputType Log input type (<span style="color:red; font-weight:bold">Note: Required for Windows scenario and only supports file and windows_event type</span>)
+-file type collection
+-windows event collection
+-syslog: System log collection
+     */
+    public String getInputType() {
+        return this.InputType;
+    }
+
+    /**
+     * Set Log input type (<span style="color:red; font-weight:bold">Note: Required for Windows scenario and only supports file and windows_event type</span>)
+-file type collection
+-windows event collection
+-syslog: System log collection
+     * @param InputType Log input type (<span style="color:red; font-weight:bold">Note: Required for Windows scenario and only supports file and windows_event type</span>)
+-file type collection
+-windows event collection
+-syslog: System log collection
+     */
+    public void setInputType(String InputType) {
+        this.InputType = InputType;
+    }
+
     public CreateConfigRequest() {
     }
 
@@ -257,6 +310,9 @@ Default placeholder value in console: `{\"ClsAgentDefault\":0}`
         if (source.AdvancedConfig != null) {
             this.AdvancedConfig = new String(source.AdvancedConfig);
         }
+        if (source.InputType != null) {
+            this.InputType = new String(source.InputType);
+        }
     }
 
 
@@ -272,6 +328,7 @@ Default placeholder value in console: `{\"ClsAgentDefault\":0}`
         this.setParamArrayObj(map, prefix + "ExcludePaths.", this.ExcludePaths);
         this.setParamSimple(map, prefix + "UserDefineRule", this.UserDefineRule);
         this.setParamSimple(map, prefix + "AdvancedConfig", this.AdvancedConfig);
+        this.setParamSimple(map, prefix + "InputType", this.InputType);
 
     }
 }

@@ -24,28 +24,28 @@ import java.util.HashMap;
 public class CynosdbClusterDetail extends AbstractModel {
 
     /**
-    * Cluster ID
+    * Cluster ID.
     */
     @SerializedName("ClusterId")
     @Expose
     private String ClusterId;
 
     /**
-    * Cluster name
+    * Cluster name.
     */
     @SerializedName("ClusterName")
     @Expose
     private String ClusterName;
 
     /**
-    * Region
+    * Region.
     */
     @SerializedName("Region")
     @Expose
     private String Region;
 
     /**
-    * AZ
+    * AZ.
     */
     @SerializedName("Zone")
     @Expose
@@ -60,13 +60,13 @@ public class CynosdbClusterDetail extends AbstractModel {
 
     /**
     * Status. supported values are as follows:.
--Creating: creating.
+- Creating: creating.
 - running: running.
--isolating.
--Isolated: isolated.
--activating: restore from recycle bin.
--offlining: offline.
--offlined: offline.
+- isolating.
+- Isolated: isolated.
+- activating: restore from recycle bin.
+- offlining: offline.
+- offlined: offline.
 - deleting: deleting.
 - deleted: deleted.
     */
@@ -128,49 +128,49 @@ pausing
     private Long StoragePayMode;
 
     /**
-    * VPC name
+    * VPC name.
     */
     @SerializedName("VpcName")
     @Expose
     private String VpcName;
 
     /**
-    * Unique VPC ID
+    * Unique VPC ID.
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * Subnet name
+    * Subnet name.
     */
     @SerializedName("SubnetName")
     @Expose
     private String SubnetName;
 
     /**
-    * Subnet ID
+    * Subnet ID.
     */
     @SerializedName("SubnetId")
     @Expose
     private String SubnetId;
 
     /**
-    * Character set
+    * Character set.
     */
     @SerializedName("Charset")
     @Expose
     private String Charset;
 
     /**
-    * Creation time
+    * Creation time.
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * Database type
+    * Database type.
     */
     @SerializedName("DbType")
     @Expose
@@ -184,7 +184,7 @@ pausing
     private String DbMode;
 
     /**
-    * Database version
+    * Database version.
     */
     @SerializedName("DbVersion")
     @Expose
@@ -198,21 +198,21 @@ pausing
     private Long StorageLimit;
 
     /**
-    * Used capacity
+    * Used capacity.
     */
     @SerializedName("UsedStorage")
     @Expose
     private Long UsedStorage;
 
     /**
-    * VIP
+    * VIP.
     */
     @SerializedName("Vip")
     @Expose
     private String Vip;
 
     /**
-    * vport
+    * vport.
     */
     @SerializedName("Vport")
     @Expose
@@ -282,35 +282,35 @@ pausing
     private String [] SlaveZones;
 
     /**
-    * Instance information
+    * Instance information.
     */
     @SerializedName("InstanceSet")
     @Expose
     private ClusterInstanceDetail [] InstanceSet;
 
     /**
-    * Billing mode
+    * Billing mode.
     */
     @SerializedName("PayMode")
     @Expose
     private Long PayMode;
 
     /**
-    * Expiration time
+    * Expiration time.
     */
     @SerializedName("PeriodEndTime")
     @Expose
     private String PeriodEndTime;
 
     /**
-    * Project ID
+    * Project ID.
     */
     @SerializedName("ProjectID")
     @Expose
     private Long ProjectID;
 
     /**
-    * Array of tags bound to instance
+    * Array of tags bound to instance.
     */
     @SerializedName("ResourceTags")
     @Expose
@@ -439,64 +439,64 @@ If empty, the field is invalid.
     private Boolean IsOpenTDE;
 
     /**
-     * Get Cluster ID 
-     * @return ClusterId Cluster ID
+     * Get Cluster ID. 
+     * @return ClusterId Cluster ID.
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set Cluster ID
-     * @param ClusterId Cluster ID
+     * Set Cluster ID.
+     * @param ClusterId Cluster ID.
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
     }
 
     /**
-     * Get Cluster name 
-     * @return ClusterName Cluster name
+     * Get Cluster name. 
+     * @return ClusterName Cluster name.
      */
     public String getClusterName() {
         return this.ClusterName;
     }
 
     /**
-     * Set Cluster name
-     * @param ClusterName Cluster name
+     * Set Cluster name.
+     * @param ClusterName Cluster name.
      */
     public void setClusterName(String ClusterName) {
         this.ClusterName = ClusterName;
     }
 
     /**
-     * Get Region 
-     * @return Region Region
+     * Get Region. 
+     * @return Region Region.
      */
     public String getRegion() {
         return this.Region;
     }
 
     /**
-     * Set Region
-     * @param Region Region
+     * Set Region.
+     * @param Region Region.
      */
     public void setRegion(String Region) {
         this.Region = Region;
     }
 
     /**
-     * Get AZ 
-     * @return Zone AZ
+     * Get AZ. 
+     * @return Zone AZ.
      */
     public String getZone() {
         return this.Zone;
     }
 
     /**
-     * Set AZ
-     * @param Zone AZ
+     * Set AZ.
+     * @param Zone AZ.
      */
     public void setZone(String Zone) {
         this.Zone = Zone;
@@ -520,23 +520,23 @@ If empty, the field is invalid.
 
     /**
      * Get Status. supported values are as follows:.
--Creating: creating.
+- Creating: creating.
 - running: running.
--isolating.
--Isolated: isolated.
--activating: restore from recycle bin.
--offlining: offline.
--offlined: offline.
+- isolating.
+- Isolated: isolated.
+- activating: restore from recycle bin.
+- offlining: offline.
+- offlined: offline.
 - deleting: deleting.
 - deleted: deleted. 
      * @return Status Status. supported values are as follows:.
--Creating: creating.
+- Creating: creating.
 - running: running.
--isolating.
--Isolated: isolated.
--activating: restore from recycle bin.
--offlining: offline.
--offlined: offline.
+- isolating.
+- Isolated: isolated.
+- activating: restore from recycle bin.
+- offlining: offline.
+- offlined: offline.
 - deleting: deleting.
 - deleted: deleted.
      */
@@ -546,23 +546,23 @@ If empty, the field is invalid.
 
     /**
      * Set Status. supported values are as follows:.
--Creating: creating.
+- Creating: creating.
 - running: running.
--isolating.
--Isolated: isolated.
--activating: restore from recycle bin.
--offlining: offline.
--offlined: offline.
+- isolating.
+- Isolated: isolated.
+- activating: restore from recycle bin.
+- offlining: offline.
+- offlined: offline.
 - deleting: deleting.
 - deleted: deleted.
      * @param Status Status. supported values are as follows:.
--Creating: creating.
+- Creating: creating.
 - running: running.
--isolating.
--Isolated: isolated.
--activating: restore from recycle bin.
--offlining: offline.
--offlined: offline.
+- isolating.
+- Isolated: isolated.
+- activating: restore from recycle bin.
+- offlining: offline.
+- offlined: offline.
 - deleting: deleting.
 - deleted: deleted.
      */
@@ -699,112 +699,112 @@ pausing
     }
 
     /**
-     * Get VPC name 
-     * @return VpcName VPC name
+     * Get VPC name. 
+     * @return VpcName VPC name.
      */
     public String getVpcName() {
         return this.VpcName;
     }
 
     /**
-     * Set VPC name
-     * @param VpcName VPC name
+     * Set VPC name.
+     * @param VpcName VPC name.
      */
     public void setVpcName(String VpcName) {
         this.VpcName = VpcName;
     }
 
     /**
-     * Get Unique VPC ID 
-     * @return VpcId Unique VPC ID
+     * Get Unique VPC ID. 
+     * @return VpcId Unique VPC ID.
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set Unique VPC ID
-     * @param VpcId Unique VPC ID
+     * Set Unique VPC ID.
+     * @param VpcId Unique VPC ID.
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get Subnet name 
-     * @return SubnetName Subnet name
+     * Get Subnet name. 
+     * @return SubnetName Subnet name.
      */
     public String getSubnetName() {
         return this.SubnetName;
     }
 
     /**
-     * Set Subnet name
-     * @param SubnetName Subnet name
+     * Set Subnet name.
+     * @param SubnetName Subnet name.
      */
     public void setSubnetName(String SubnetName) {
         this.SubnetName = SubnetName;
     }
 
     /**
-     * Get Subnet ID 
-     * @return SubnetId Subnet ID
+     * Get Subnet ID. 
+     * @return SubnetId Subnet ID.
      */
     public String getSubnetId() {
         return this.SubnetId;
     }
 
     /**
-     * Set Subnet ID
-     * @param SubnetId Subnet ID
+     * Set Subnet ID.
+     * @param SubnetId Subnet ID.
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;
     }
 
     /**
-     * Get Character set 
-     * @return Charset Character set
+     * Get Character set. 
+     * @return Charset Character set.
      */
     public String getCharset() {
         return this.Charset;
     }
 
     /**
-     * Set Character set
-     * @param Charset Character set
+     * Set Character set.
+     * @param Charset Character set.
      */
     public void setCharset(String Charset) {
         this.Charset = Charset;
     }
 
     /**
-     * Get Creation time 
-     * @return CreateTime Creation time
+     * Get Creation time. 
+     * @return CreateTime Creation time.
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set Creation time
-     * @param CreateTime Creation time
+     * Set Creation time.
+     * @param CreateTime Creation time.
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get Database type 
-     * @return DbType Database type
+     * Get Database type. 
+     * @return DbType Database type.
      */
     public String getDbType() {
         return this.DbType;
     }
 
     /**
-     * Set Database type
-     * @param DbType Database type
+     * Set Database type.
+     * @param DbType Database type.
      */
     public void setDbType(String DbType) {
         this.DbType = DbType;
@@ -827,16 +827,16 @@ pausing
     }
 
     /**
-     * Get Database version 
-     * @return DbVersion Database version
+     * Get Database version. 
+     * @return DbVersion Database version.
      */
     public String getDbVersion() {
         return this.DbVersion;
     }
 
     /**
-     * Set Database version
-     * @param DbVersion Database version
+     * Set Database version.
+     * @param DbVersion Database version.
      */
     public void setDbVersion(String DbVersion) {
         this.DbVersion = DbVersion;
@@ -859,48 +859,48 @@ pausing
     }
 
     /**
-     * Get Used capacity 
-     * @return UsedStorage Used capacity
+     * Get Used capacity. 
+     * @return UsedStorage Used capacity.
      */
     public Long getUsedStorage() {
         return this.UsedStorage;
     }
 
     /**
-     * Set Used capacity
-     * @param UsedStorage Used capacity
+     * Set Used capacity.
+     * @param UsedStorage Used capacity.
      */
     public void setUsedStorage(Long UsedStorage) {
         this.UsedStorage = UsedStorage;
     }
 
     /**
-     * Get VIP 
-     * @return Vip VIP
+     * Get VIP. 
+     * @return Vip VIP.
      */
     public String getVip() {
         return this.Vip;
     }
 
     /**
-     * Set VIP
-     * @param Vip VIP
+     * Set VIP.
+     * @param Vip VIP.
      */
     public void setVip(String Vip) {
         this.Vip = Vip;
     }
 
     /**
-     * Get vport 
-     * @return Vport vport
+     * Get vport. 
+     * @return Vport vport.
      */
     public Long getVport() {
         return this.Vport;
     }
 
     /**
-     * Set vport
-     * @param Vport vport
+     * Set vport.
+     * @param Vport vport.
      */
     public void setVport(Long Vport) {
         this.Vport = Vport;
@@ -1051,80 +1051,80 @@ pausing
     }
 
     /**
-     * Get Instance information 
-     * @return InstanceSet Instance information
+     * Get Instance information. 
+     * @return InstanceSet Instance information.
      */
     public ClusterInstanceDetail [] getInstanceSet() {
         return this.InstanceSet;
     }
 
     /**
-     * Set Instance information
-     * @param InstanceSet Instance information
+     * Set Instance information.
+     * @param InstanceSet Instance information.
      */
     public void setInstanceSet(ClusterInstanceDetail [] InstanceSet) {
         this.InstanceSet = InstanceSet;
     }
 
     /**
-     * Get Billing mode 
-     * @return PayMode Billing mode
+     * Get Billing mode. 
+     * @return PayMode Billing mode.
      */
     public Long getPayMode() {
         return this.PayMode;
     }
 
     /**
-     * Set Billing mode
-     * @param PayMode Billing mode
+     * Set Billing mode.
+     * @param PayMode Billing mode.
      */
     public void setPayMode(Long PayMode) {
         this.PayMode = PayMode;
     }
 
     /**
-     * Get Expiration time 
-     * @return PeriodEndTime Expiration time
+     * Get Expiration time. 
+     * @return PeriodEndTime Expiration time.
      */
     public String getPeriodEndTime() {
         return this.PeriodEndTime;
     }
 
     /**
-     * Set Expiration time
-     * @param PeriodEndTime Expiration time
+     * Set Expiration time.
+     * @param PeriodEndTime Expiration time.
      */
     public void setPeriodEndTime(String PeriodEndTime) {
         this.PeriodEndTime = PeriodEndTime;
     }
 
     /**
-     * Get Project ID 
-     * @return ProjectID Project ID
+     * Get Project ID. 
+     * @return ProjectID Project ID.
      */
     public Long getProjectID() {
         return this.ProjectID;
     }
 
     /**
-     * Set Project ID
-     * @param ProjectID Project ID
+     * Set Project ID.
+     * @param ProjectID Project ID.
      */
     public void setProjectID(Long ProjectID) {
         this.ProjectID = ProjectID;
     }
 
     /**
-     * Get Array of tags bound to instance 
-     * @return ResourceTags Array of tags bound to instance
+     * Get Array of tags bound to instance. 
+     * @return ResourceTags Array of tags bound to instance.
      */
     public Tag [] getResourceTags() {
         return this.ResourceTags;
     }
 
     /**
-     * Set Array of tags bound to instance
-     * @param ResourceTags Array of tags bound to instance
+     * Set Array of tags bound to instance.
+     * @param ResourceTags Array of tags bound to instance.
      */
     public void setResourceTags(Tag [] ResourceTags) {
         this.ResourceTags = ResourceTags;

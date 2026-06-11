@@ -31,7 +31,7 @@ public class MachineInfo extends AbstractModel {
     private String Ip;
 
     /**
-    * Machine instance IDNote: This field may return null, indicating that no valid values can be obtained.
+    * Machine instance ID.
     */
     @SerializedName("InstanceID")
     @Expose
@@ -45,7 +45,7 @@ public class MachineInfo extends AbstractModel {
     private Long Status;
 
     /**
-    * Machine disconnection time. If the value is empty, the machine is normal. If the machine is exceptional, a specific value will be returned.
+    * Machine offline time. Null indicates normal. Return a specific time in case of exceptions. Time format: YYYY-MM-DD HH:mm:ss.
     */
     @SerializedName("OfflineTime")
     @Expose
@@ -103,16 +103,16 @@ public class MachineInfo extends AbstractModel {
     }
 
     /**
-     * Get Machine instance IDNote: This field may return null, indicating that no valid values can be obtained. 
-     * @return InstanceID Machine instance IDNote: This field may return null, indicating that no valid values can be obtained.
+     * Get Machine instance ID. 
+     * @return InstanceID Machine instance ID.
      */
     public String getInstanceID() {
         return this.InstanceID;
     }
 
     /**
-     * Set Machine instance IDNote: This field may return null, indicating that no valid values can be obtained.
-     * @param InstanceID Machine instance IDNote: This field may return null, indicating that no valid values can be obtained.
+     * Set Machine instance ID.
+     * @param InstanceID Machine instance ID.
      */
     public void setInstanceID(String InstanceID) {
         this.InstanceID = InstanceID;
@@ -135,16 +135,16 @@ public class MachineInfo extends AbstractModel {
     }
 
     /**
-     * Get Machine disconnection time. If the value is empty, the machine is normal. If the machine is exceptional, a specific value will be returned. 
-     * @return OfflineTime Machine disconnection time. If the value is empty, the machine is normal. If the machine is exceptional, a specific value will be returned.
+     * Get Machine offline time. Null indicates normal. Return a specific time in case of exceptions. Time format: YYYY-MM-DD HH:mm:ss. 
+     * @return OfflineTime Machine offline time. Null indicates normal. Return a specific time in case of exceptions. Time format: YYYY-MM-DD HH:mm:ss.
      */
     public String getOfflineTime() {
         return this.OfflineTime;
     }
 
     /**
-     * Set Machine disconnection time. If the value is empty, the machine is normal. If the machine is exceptional, a specific value will be returned.
-     * @param OfflineTime Machine disconnection time. If the value is empty, the machine is normal. If the machine is exceptional, a specific value will be returned.
+     * Set Machine offline time. Null indicates normal. Return a specific time in case of exceptions. Time format: YYYY-MM-DD HH:mm:ss.
+     * @param OfflineTime Machine offline time. Null indicates normal. Return a specific time in case of exceptions. Time format: YYYY-MM-DD HH:mm:ss.
      */
     public void setOfflineTime(String OfflineTime) {
         this.OfflineTime = OfflineTime;

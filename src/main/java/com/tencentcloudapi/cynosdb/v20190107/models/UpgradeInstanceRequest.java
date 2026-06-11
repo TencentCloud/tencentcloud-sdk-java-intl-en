@@ -31,21 +31,21 @@ public class UpgradeInstanceRequest extends AbstractModel {
     private String InstanceId;
 
     /**
-    * Database CPU
+    * Database CPU.
     */
     @SerializedName("Cpu")
     @Expose
     private Long Cpu;
 
     /**
-    * Database memory in GB
+    * Database memory in GB.
     */
     @SerializedName("Memory")
     @Expose
     private Long Memory;
 
     /**
-    * Upgrade type. Valid values: upgradeImmediate, upgradeInMaintain
+    * Upgrade type. Valid values: upgradeImmediate, upgradeInMaintain.
     */
     @SerializedName("UpgradeType")
     @Expose
@@ -68,7 +68,7 @@ public class UpgradeInstanceRequest extends AbstractModel {
     private Long StorageLimit;
 
     /**
-    * Whether to automatically select a voucher. 1: yes; 0: no. Default value: 0
+    * Whether to automatically select a voucher. 1: yes; 0: no. Default value: 0.
     */
     @SerializedName("AutoVoucher")
     @Expose
@@ -82,7 +82,7 @@ public class UpgradeInstanceRequest extends AbstractModel {
     private String DbType;
 
     /**
-    * Transaction mode. Valid values: `0` (place and pay for an order), `1` (place an order)
+    * Transaction mode. Valid values: `0` (place and pay for an order), `1` (place an order).
     */
     @SerializedName("DealMode")
     @Expose
@@ -96,7 +96,7 @@ public class UpgradeInstanceRequest extends AbstractModel {
     private String UpgradeMode;
 
     /**
-    * 
+    * Proxy synchronous upgrade.
     */
     @SerializedName("UpgradeProxy")
     @Expose
@@ -119,48 +119,48 @@ public class UpgradeInstanceRequest extends AbstractModel {
     }
 
     /**
-     * Get Database CPU 
-     * @return Cpu Database CPU
+     * Get Database CPU. 
+     * @return Cpu Database CPU.
      */
     public Long getCpu() {
         return this.Cpu;
     }
 
     /**
-     * Set Database CPU
-     * @param Cpu Database CPU
+     * Set Database CPU.
+     * @param Cpu Database CPU.
      */
     public void setCpu(Long Cpu) {
         this.Cpu = Cpu;
     }
 
     /**
-     * Get Database memory in GB 
-     * @return Memory Database memory in GB
+     * Get Database memory in GB. 
+     * @return Memory Database memory in GB.
      */
     public Long getMemory() {
         return this.Memory;
     }
 
     /**
-     * Set Database memory in GB
-     * @param Memory Database memory in GB
+     * Set Database memory in GB.
+     * @param Memory Database memory in GB.
      */
     public void setMemory(Long Memory) {
         this.Memory = Memory;
     }
 
     /**
-     * Get Upgrade type. Valid values: upgradeImmediate, upgradeInMaintain 
-     * @return UpgradeType Upgrade type. Valid values: upgradeImmediate, upgradeInMaintain
+     * Get Upgrade type. Valid values: upgradeImmediate, upgradeInMaintain. 
+     * @return UpgradeType Upgrade type. Valid values: upgradeImmediate, upgradeInMaintain.
      */
     public String getUpgradeType() {
         return this.UpgradeType;
     }
 
     /**
-     * Set Upgrade type. Valid values: upgradeImmediate, upgradeInMaintain
-     * @param UpgradeType Upgrade type. Valid values: upgradeImmediate, upgradeInMaintain
+     * Set Upgrade type. Valid values: upgradeImmediate, upgradeInMaintain.
+     * @param UpgradeType Upgrade type. Valid values: upgradeImmediate, upgradeInMaintain.
      */
     public void setUpgradeType(String UpgradeType) {
         this.UpgradeType = UpgradeType;
@@ -207,16 +207,16 @@ public class UpgradeInstanceRequest extends AbstractModel {
     }
 
     /**
-     * Get Whether to automatically select a voucher. 1: yes; 0: no. Default value: 0 
-     * @return AutoVoucher Whether to automatically select a voucher. 1: yes; 0: no. Default value: 0
+     * Get Whether to automatically select a voucher. 1: yes; 0: no. Default value: 0. 
+     * @return AutoVoucher Whether to automatically select a voucher. 1: yes; 0: no. Default value: 0.
      */
     public Long getAutoVoucher() {
         return this.AutoVoucher;
     }
 
     /**
-     * Set Whether to automatically select a voucher. 1: yes; 0: no. Default value: 0
-     * @param AutoVoucher Whether to automatically select a voucher. 1: yes; 0: no. Default value: 0
+     * Set Whether to automatically select a voucher. 1: yes; 0: no. Default value: 0.
+     * @param AutoVoucher Whether to automatically select a voucher. 1: yes; 0: no. Default value: 0.
      */
     public void setAutoVoucher(Long AutoVoucher) {
         this.AutoVoucher = AutoVoucher;
@@ -239,16 +239,16 @@ public class UpgradeInstanceRequest extends AbstractModel {
     }
 
     /**
-     * Get Transaction mode. Valid values: `0` (place and pay for an order), `1` (place an order) 
-     * @return DealMode Transaction mode. Valid values: `0` (place and pay for an order), `1` (place an order)
+     * Get Transaction mode. Valid values: `0` (place and pay for an order), `1` (place an order). 
+     * @return DealMode Transaction mode. Valid values: `0` (place and pay for an order), `1` (place an order).
      */
     public Long getDealMode() {
         return this.DealMode;
     }
 
     /**
-     * Set Transaction mode. Valid values: `0` (place and pay for an order), `1` (place an order)
-     * @param DealMode Transaction mode. Valid values: `0` (place and pay for an order), `1` (place an order)
+     * Set Transaction mode. Valid values: `0` (place and pay for an order), `1` (place an order).
+     * @param DealMode Transaction mode. Valid values: `0` (place and pay for an order), `1` (place an order).
      */
     public void setDealMode(Long DealMode) {
         this.DealMode = DealMode;
@@ -271,16 +271,16 @@ public class UpgradeInstanceRequest extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return UpgradeProxy 
+     * Get Proxy synchronous upgrade. 
+     * @return UpgradeProxy Proxy synchronous upgrade.
      */
     public UpgradeProxy getUpgradeProxy() {
         return this.UpgradeProxy;
     }
 
     /**
-     * Set 
-     * @param UpgradeProxy 
+     * Set Proxy synchronous upgrade.
+     * @param UpgradeProxy Proxy synchronous upgrade.
      */
     public void setUpgradeProxy(UpgradeProxy UpgradeProxy) {
         this.UpgradeProxy = UpgradeProxy;

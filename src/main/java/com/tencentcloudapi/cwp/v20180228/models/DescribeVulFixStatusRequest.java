@@ -45,6 +45,13 @@ public class DescribeVulFixStatusRequest extends AbstractModel {
     private String Quuid;
 
     /**
+    * Patch id
+    */
+    @SerializedName("KbId")
+    @Expose
+    private Long KbId;
+
+    /**
      * Get Task ID. This parameter can be left blank if VulId is specified. 
      * @return FixId Task ID. This parameter can be left blank if VulId is specified.
      */
@@ -92,6 +99,22 @@ public class DescribeVulFixStatusRequest extends AbstractModel {
         this.Quuid = Quuid;
     }
 
+    /**
+     * Get Patch id 
+     * @return KbId Patch id
+     */
+    public Long getKbId() {
+        return this.KbId;
+    }
+
+    /**
+     * Set Patch id
+     * @param KbId Patch id
+     */
+    public void setKbId(Long KbId) {
+        this.KbId = KbId;
+    }
+
     public DescribeVulFixStatusRequest() {
     }
 
@@ -109,6 +132,9 @@ public class DescribeVulFixStatusRequest extends AbstractModel {
         if (source.Quuid != null) {
             this.Quuid = new String(source.Quuid);
         }
+        if (source.KbId != null) {
+            this.KbId = new Long(source.KbId);
+        }
     }
 
 
@@ -119,6 +145,7 @@ public class DescribeVulFixStatusRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "FixId", this.FixId);
         this.setParamSimple(map, prefix + "VulId", this.VulId);
         this.setParamSimple(map, prefix + "Quuid", this.Quuid);
+        this.setParamSimple(map, prefix + "KbId", this.KbId);
 
     }
 }

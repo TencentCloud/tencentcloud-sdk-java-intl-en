@@ -46,7 +46,6 @@ public class CKafkaInstanceInfo extends AbstractModel {
 
     /**
     * Topic list
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("TopicList")
     @Expose
@@ -157,10 +156,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Topic list
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Topic list 
      * @return TopicList Topic list
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public CKafkaTopicInfo [] getTopicList() {
         return this.TopicList;
@@ -168,9 +165,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Topic list
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param TopicList Topic list
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setTopicList(CKafkaTopicInfo [] TopicList) {
         this.TopicList = TopicList;

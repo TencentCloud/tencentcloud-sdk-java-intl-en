@@ -24,16 +24,14 @@ import java.util.HashMap;
 public class DescribeSecLogDeliveryKafkaSettingResponse extends AbstractModel {
 
     /**
-    * Message queue instance ID
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Message Queue Instance ID
     */
     @SerializedName("InstanceID")
     @Expose
     private String InstanceID;
 
     /**
-    * Message queue instance name
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Message Queue Instance Name
     */
     @SerializedName("InstanceName")
     @Expose
@@ -41,31 +39,27 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Domain
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Domain")
     @Expose
     private String Domain;
 
     /**
-    * List of log types
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Log Type Queue
     */
     @SerializedName("LogTypeList")
     @Expose
     private SecLogDeliveryKafkaSettingInfo [] LogTypeList;
 
     /**
-    * Username
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Username.
     */
     @SerializedName("User")
     @Expose
     private String User;
 
     /**
-    * Region ID
-Note: This field may return `null`, indicating that no valid value was found.
+    * Region ID.
     */
     @SerializedName("RegionID")
     @Expose
@@ -79,50 +73,40 @@ Note: This field may return `null`, indicating that no valid value was found.
     private String RequestId;
 
     /**
-     * Get Message queue instance ID
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return InstanceID Message queue instance ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Message Queue Instance ID 
+     * @return InstanceID Message Queue Instance ID
      */
     public String getInstanceID() {
         return this.InstanceID;
     }
 
     /**
-     * Set Message queue instance ID
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param InstanceID Message queue instance ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Message Queue Instance ID
+     * @param InstanceID Message Queue Instance ID
      */
     public void setInstanceID(String InstanceID) {
         this.InstanceID = InstanceID;
     }
 
     /**
-     * Get Message queue instance name
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return InstanceName Message queue instance name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Message Queue Instance Name 
+     * @return InstanceName Message Queue Instance Name
      */
     public String getInstanceName() {
         return this.InstanceName;
     }
 
     /**
-     * Set Message queue instance name
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param InstanceName Message queue instance name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Message Queue Instance Name
+     * @param InstanceName Message Queue Instance Name
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;
     }
 
     /**
-     * Get Domain
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Domain 
      * @return Domain Domain
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getDomain() {
         return this.Domain;
@@ -130,69 +114,55 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Domain
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Domain Domain
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setDomain(String Domain) {
         this.Domain = Domain;
     }
 
     /**
-     * Get List of log types
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return LogTypeList List of log types
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Log Type Queue 
+     * @return LogTypeList Log Type Queue
      */
     public SecLogDeliveryKafkaSettingInfo [] getLogTypeList() {
         return this.LogTypeList;
     }
 
     /**
-     * Set List of log types
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param LogTypeList List of log types
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Log Type Queue
+     * @param LogTypeList Log Type Queue
      */
     public void setLogTypeList(SecLogDeliveryKafkaSettingInfo [] LogTypeList) {
         this.LogTypeList = LogTypeList;
     }
 
     /**
-     * Get Username
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return User Username
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Username. 
+     * @return User Username.
      */
     public String getUser() {
         return this.User;
     }
 
     /**
-     * Set Username
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param User Username
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Username.
+     * @param User Username.
      */
     public void setUser(String User) {
         this.User = User;
     }
 
     /**
-     * Get Region ID
-Note: This field may return `null`, indicating that no valid value was found. 
-     * @return RegionID Region ID
-Note: This field may return `null`, indicating that no valid value was found.
+     * Get Region ID. 
+     * @return RegionID Region ID.
      */
     public String getRegionID() {
         return this.RegionID;
     }
 
     /**
-     * Set Region ID
-Note: This field may return `null`, indicating that no valid value was found.
-     * @param RegionID Region ID
-Note: This field may return `null`, indicating that no valid value was found.
+     * Set Region ID.
+     * @param RegionID Region ID.
      */
     public void setRegionID(String RegionID) {
         this.RegionID = RegionID;

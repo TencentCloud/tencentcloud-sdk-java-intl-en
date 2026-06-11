@@ -38,7 +38,7 @@ public class DescribeAigcUsageDataRequest extends AbstractModel {
     private String EndTime;
 
     /**
-    * <p>AIGC type.</p><p>Enumeration value:</p><ul><li>Video: Video</li><li>Image: Image</li><li>Text: Text</li><li>SceneAigcVideo: Scenario-based video processing</li><li>SceneAigcImage: Scenario-based image processing</li><li>SceneAigcTime: Scenario-based processing times</li></ul>
+    * <p>AIGC type.</p><p>Enumeration value:</p><ul><li>Video: video</li><li>Image: image</li><li>Text: text</li><li>Audio: audio</li><li>SceneAigcVideo: scenario-based video processing</li><li>SceneAigcImage: scenario-based image processing</li><li>SceneAigcTime: scenario-based processing times</li></ul>
     */
     @SerializedName("AigcType")
     @Expose
@@ -50,6 +50,20 @@ public class DescribeAigcUsageDataRequest extends AbstractModel {
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
+
+    /**
+    * <p>API Key</p>
+    */
+    @SerializedName("APIKey")
+    @Expose
+    private String APIKey;
+
+    /**
+    * <p>API Key</p>
+    */
+    @SerializedName("APIKeys")
+    @Expose
+    private String [] APIKeys;
 
     /**
      * Get <p>Start date. Use the <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52">ISO date format</a>.</p> 
@@ -84,16 +98,16 @@ public class DescribeAigcUsageDataRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>AIGC type.</p><p>Enumeration value:</p><ul><li>Video: Video</li><li>Image: Image</li><li>Text: Text</li><li>SceneAigcVideo: Scenario-based video processing</li><li>SceneAigcImage: Scenario-based image processing</li><li>SceneAigcTime: Scenario-based processing times</li></ul> 
-     * @return AigcType <p>AIGC type.</p><p>Enumeration value:</p><ul><li>Video: Video</li><li>Image: Image</li><li>Text: Text</li><li>SceneAigcVideo: Scenario-based video processing</li><li>SceneAigcImage: Scenario-based image processing</li><li>SceneAigcTime: Scenario-based processing times</li></ul>
+     * Get <p>AIGC type.</p><p>Enumeration value:</p><ul><li>Video: video</li><li>Image: image</li><li>Text: text</li><li>Audio: audio</li><li>SceneAigcVideo: scenario-based video processing</li><li>SceneAigcImage: scenario-based image processing</li><li>SceneAigcTime: scenario-based processing times</li></ul> 
+     * @return AigcType <p>AIGC type.</p><p>Enumeration value:</p><ul><li>Video: video</li><li>Image: image</li><li>Text: text</li><li>Audio: audio</li><li>SceneAigcVideo: scenario-based video processing</li><li>SceneAigcImage: scenario-based image processing</li><li>SceneAigcTime: scenario-based processing times</li></ul>
      */
     public String getAigcType() {
         return this.AigcType;
     }
 
     /**
-     * Set <p>AIGC type.</p><p>Enumeration value:</p><ul><li>Video: Video</li><li>Image: Image</li><li>Text: Text</li><li>SceneAigcVideo: Scenario-based video processing</li><li>SceneAigcImage: Scenario-based image processing</li><li>SceneAigcTime: Scenario-based processing times</li></ul>
-     * @param AigcType <p>AIGC type.</p><p>Enumeration value:</p><ul><li>Video: Video</li><li>Image: Image</li><li>Text: Text</li><li>SceneAigcVideo: Scenario-based video processing</li><li>SceneAigcImage: Scenario-based image processing</li><li>SceneAigcTime: Scenario-based processing times</li></ul>
+     * Set <p>AIGC type.</p><p>Enumeration value:</p><ul><li>Video: video</li><li>Image: image</li><li>Text: text</li><li>Audio: audio</li><li>SceneAigcVideo: scenario-based video processing</li><li>SceneAigcImage: scenario-based image processing</li><li>SceneAigcTime: scenario-based processing times</li></ul>
+     * @param AigcType <p>AIGC type.</p><p>Enumeration value:</p><ul><li>Video: video</li><li>Image: image</li><li>Text: text</li><li>Audio: audio</li><li>SceneAigcVideo: scenario-based video processing</li><li>SceneAigcImage: scenario-based image processing</li><li>SceneAigcTime: scenario-based processing times</li></ul>
      */
     public void setAigcType(String AigcType) {
         this.AigcType = AigcType;
@@ -113,6 +127,38 @@ public class DescribeAigcUsageDataRequest extends AbstractModel {
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
+    }
+
+    /**
+     * Get <p>API Key</p> 
+     * @return APIKey <p>API Key</p>
+     */
+    public String getAPIKey() {
+        return this.APIKey;
+    }
+
+    /**
+     * Set <p>API Key</p>
+     * @param APIKey <p>API Key</p>
+     */
+    public void setAPIKey(String APIKey) {
+        this.APIKey = APIKey;
+    }
+
+    /**
+     * Get <p>API Key</p> 
+     * @return APIKeys <p>API Key</p>
+     */
+    public String [] getAPIKeys() {
+        return this.APIKeys;
+    }
+
+    /**
+     * Set <p>API Key</p>
+     * @param APIKeys <p>API Key</p>
+     */
+    public void setAPIKeys(String [] APIKeys) {
+        this.APIKeys = APIKeys;
     }
 
     public DescribeAigcUsageDataRequest() {
@@ -135,6 +181,15 @@ public class DescribeAigcUsageDataRequest extends AbstractModel {
         if (source.SubAppId != null) {
             this.SubAppId = new Long(source.SubAppId);
         }
+        if (source.APIKey != null) {
+            this.APIKey = new String(source.APIKey);
+        }
+        if (source.APIKeys != null) {
+            this.APIKeys = new String[source.APIKeys.length];
+            for (int i = 0; i < source.APIKeys.length; i++) {
+                this.APIKeys[i] = new String(source.APIKeys[i]);
+            }
+        }
     }
 
 
@@ -146,6 +201,8 @@ public class DescribeAigcUsageDataRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
         this.setParamSimple(map, prefix + "AigcType", this.AigcType);
         this.setParamSimple(map, prefix + "SubAppId", this.SubAppId);
+        this.setParamSimple(map, prefix + "APIKey", this.APIKey);
+        this.setParamArraySimple(map, prefix + "APIKeys.", this.APIKeys);
 
     }
 }

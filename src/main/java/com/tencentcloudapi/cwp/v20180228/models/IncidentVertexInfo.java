@@ -25,7 +25,6 @@ public class IncidentVertexInfo extends AbstractModel {
 
     /**
     * Event ID
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("IncidentId")
     @Expose
@@ -33,33 +32,28 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * The name of the table where the event occurred
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("TableName")
     @Expose
     private String TableName;
 
     /**
-    * A list of node information, with array items containing detailed node information
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Node information list, in an array including detailed node information.
     */
     @SerializedName("Vertex")
     @Expose
     private VertexInfo [] Vertex;
 
     /**
-    * Total number of nodes
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Total number of nodes.
     */
     @SerializedName("VertexCount")
     @Expose
     private Long VertexCount;
 
     /**
-     * Get Event ID
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Event ID 
      * @return IncidentId Event ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getIncidentId() {
         return this.IncidentId;
@@ -67,19 +61,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Event ID
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param IncidentId Event ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setIncidentId(String IncidentId) {
         this.IncidentId = IncidentId;
     }
 
     /**
-     * Get The name of the table where the event occurred
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get The name of the table where the event occurred 
      * @return TableName The name of the table where the event occurred
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getTableName() {
         return this.TableName;
@@ -87,49 +77,39 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set The name of the table where the event occurred
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param TableName The name of the table where the event occurred
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setTableName(String TableName) {
         this.TableName = TableName;
     }
 
     /**
-     * Get A list of node information, with array items containing detailed node information
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Vertex A list of node information, with array items containing detailed node information
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Node information list, in an array including detailed node information. 
+     * @return Vertex Node information list, in an array including detailed node information.
      */
     public VertexInfo [] getVertex() {
         return this.Vertex;
     }
 
     /**
-     * Set A list of node information, with array items containing detailed node information
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Vertex A list of node information, with array items containing detailed node information
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Node information list, in an array including detailed node information.
+     * @param Vertex Node information list, in an array including detailed node information.
      */
     public void setVertex(VertexInfo [] Vertex) {
         this.Vertex = Vertex;
     }
 
     /**
-     * Get Total number of nodes
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return VertexCount Total number of nodes
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Total number of nodes. 
+     * @return VertexCount Total number of nodes.
      */
     public Long getVertexCount() {
         return this.VertexCount;
     }
 
     /**
-     * Set Total number of nodes
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param VertexCount Total number of nodes
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Total number of nodes.
+     * @param VertexCount Total number of nodes.
      */
     public void setVertexCount(Long VertexCount) {
         this.VertexCount = VertexCount;

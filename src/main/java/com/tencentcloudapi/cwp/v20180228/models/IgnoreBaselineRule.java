@@ -25,15 +25,13 @@ public class IgnoreBaselineRule extends AbstractModel {
 
     /**
     * Baseline check item name
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("RuleName")
     @Expose
     private String RuleName;
 
     /**
-    * Baseline check item ID
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Baseline detection item id
     */
     @SerializedName("RuleId")
     @Expose
@@ -41,15 +39,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Update time
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ModifyTime")
     @Expose
     private String ModifyTime;
 
     /**
-    * Fixing suggestions
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Fixing suggestion
     */
     @SerializedName("Fix")
     @Expose
@@ -57,17 +53,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Number of affected hosts
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("EffectHostCount")
     @Expose
     private Long EffectHostCount;
 
     /**
-     * Get Baseline check item name
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Baseline check item name 
      * @return RuleName Baseline check item name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getRuleName() {
         return this.RuleName;
@@ -75,39 +68,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Baseline check item name
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param RuleName Baseline check item name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setRuleName(String RuleName) {
         this.RuleName = RuleName;
     }
 
     /**
-     * Get Baseline check item ID
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return RuleId Baseline check item ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Baseline detection item id 
+     * @return RuleId Baseline detection item id
      */
     public Long getRuleId() {
         return this.RuleId;
     }
 
     /**
-     * Set Baseline check item ID
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param RuleId Baseline check item ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Baseline detection item id
+     * @param RuleId Baseline detection item id
      */
     public void setRuleId(Long RuleId) {
         this.RuleId = RuleId;
     }
 
     /**
-     * Get Update time
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Update time 
      * @return ModifyTime Update time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getModifyTime() {
         return this.ModifyTime;
@@ -115,39 +100,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Update time
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param ModifyTime Update time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setModifyTime(String ModifyTime) {
         this.ModifyTime = ModifyTime;
     }
 
     /**
-     * Get Fixing suggestions
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Fix Fixing suggestions
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Fixing suggestion 
+     * @return Fix Fixing suggestion
      */
     public String getFix() {
         return this.Fix;
     }
 
     /**
-     * Set Fixing suggestions
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Fix Fixing suggestions
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Fixing suggestion
+     * @param Fix Fixing suggestion
      */
     public void setFix(String Fix) {
         this.Fix = Fix;
     }
 
     /**
-     * Get Number of affected hosts
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Number of affected hosts 
      * @return EffectHostCount Number of affected hosts
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getEffectHostCount() {
         return this.EffectHostCount;
@@ -155,9 +132,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Number of affected hosts
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param EffectHostCount Number of affected hosts
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setEffectHostCount(Long EffectHostCount) {
         this.EffectHostCount = EffectHostCount;

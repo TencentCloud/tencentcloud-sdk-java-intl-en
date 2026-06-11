@@ -52,8 +52,7 @@ public class ImageComponent extends AbstractModel {
     private String Type;
 
     /**
-    * Number of component vulnerabilities
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Number of Component Vulnerabilities
     */
     @SerializedName("VulCount")
     @Expose
@@ -61,7 +60,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Image ID
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ImageID")
     @Expose
@@ -132,30 +130,24 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Number of component vulnerabilities
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return VulCount Number of component vulnerabilities
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Number of Component Vulnerabilities 
+     * @return VulCount Number of Component Vulnerabilities
      */
     public Long getVulCount() {
         return this.VulCount;
     }
 
     /**
-     * Set Number of component vulnerabilities
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param VulCount Number of component vulnerabilities
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Number of Component Vulnerabilities
+     * @param VulCount Number of Component Vulnerabilities
      */
     public void setVulCount(Long VulCount) {
         this.VulCount = VulCount;
     }
 
     /**
-     * Get Image ID
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Image ID 
      * @return ImageID Image ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getImageID() {
         return this.ImageID;
@@ -163,9 +155,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Image ID
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param ImageID Image ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setImageID(String ImageID) {
         this.ImageID = ImageID;

@@ -25,7 +25,6 @@ public class DescribeBashEventsInfoNewResponse extends AbstractModel {
 
     /**
     * Event details
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("BashEventsInfo")
     @Expose
@@ -39,10 +38,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Event details
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Event details 
      * @return BashEventsInfo Event details
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public BashEventsInfoNew getBashEventsInfo() {
         return this.BashEventsInfo;
@@ -50,9 +47,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Event details
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param BashEventsInfo Event details
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setBashEventsInfo(BashEventsInfoNew BashEventsInfo) {
         this.BashEventsInfo = BashEventsInfo;

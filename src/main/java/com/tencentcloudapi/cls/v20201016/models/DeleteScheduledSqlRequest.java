@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class DeleteScheduledSqlRequest extends AbstractModel {
 
     /**
-    * Task ID
+    * Task ID, which can be obtained through [Scheduled SQL Analysis Task List](https://www.tencentcloud.com/document/product/614/95519?from_cn_redirect=1).
     */
     @SerializedName("TaskId")
     @Expose
     private String TaskId;
 
     /**
-    * Source Log Topic ID
+    * Source log topic ID. Search the scheduled SQL analysis task list (https://www.tencentcloud.com/document/product/614/95519?from_cn_redirect=1) to obtain it.
     */
     @SerializedName("SrcTopicId")
     @Expose
     private String SrcTopicId;
 
     /**
-     * Get Task ID 
-     * @return TaskId Task ID
+     * Get Task ID, which can be obtained through [Scheduled SQL Analysis Task List](https://www.tencentcloud.com/document/product/614/95519?from_cn_redirect=1). 
+     * @return TaskId Task ID, which can be obtained through [Scheduled SQL Analysis Task List](https://www.tencentcloud.com/document/product/614/95519?from_cn_redirect=1).
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set Task ID
-     * @param TaskId Task ID
+     * Set Task ID, which can be obtained through [Scheduled SQL Analysis Task List](https://www.tencentcloud.com/document/product/614/95519?from_cn_redirect=1).
+     * @param TaskId Task ID, which can be obtained through [Scheduled SQL Analysis Task List](https://www.tencentcloud.com/document/product/614/95519?from_cn_redirect=1).
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;
     }
 
     /**
-     * Get Source Log Topic ID 
-     * @return SrcTopicId Source Log Topic ID
+     * Get Source log topic ID. Search the scheduled SQL analysis task list (https://www.tencentcloud.com/document/product/614/95519?from_cn_redirect=1) to obtain it. 
+     * @return SrcTopicId Source log topic ID. Search the scheduled SQL analysis task list (https://www.tencentcloud.com/document/product/614/95519?from_cn_redirect=1) to obtain it.
      */
     public String getSrcTopicId() {
         return this.SrcTopicId;
     }
 
     /**
-     * Set Source Log Topic ID
-     * @param SrcTopicId Source Log Topic ID
+     * Set Source log topic ID. Search the scheduled SQL analysis task list (https://www.tencentcloud.com/document/product/614/95519?from_cn_redirect=1) to obtain it.
+     * @param SrcTopicId Source log topic ID. Search the scheduled SQL analysis task list (https://www.tencentcloud.com/document/product/614/95519?from_cn_redirect=1) to obtain it.
      */
     public void setSrcTopicId(String SrcTopicId) {
         this.SrcTopicId = SrcTopicId;

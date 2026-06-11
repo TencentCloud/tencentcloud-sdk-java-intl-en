@@ -24,23 +24,28 @@ import java.util.HashMap;
 public class DeleteConfigRequest extends AbstractModel {
 
     /**
-    * Collection rule configuration ID
+    * Collection Configuration ID
+-Obtain the collection configuration Id through [Access collection rule configuration](https://www.tencentcloud.com/document/product/614/58616?from_cn_redirect=1).
     */
     @SerializedName("ConfigId")
     @Expose
     private String ConfigId;
 
     /**
-     * Get Collection rule configuration ID 
-     * @return ConfigId Collection rule configuration ID
+     * Get Collection Configuration ID
+-Obtain the collection configuration Id through [Access collection rule configuration](https://www.tencentcloud.com/document/product/614/58616?from_cn_redirect=1). 
+     * @return ConfigId Collection Configuration ID
+-Obtain the collection configuration Id through [Access collection rule configuration](https://www.tencentcloud.com/document/product/614/58616?from_cn_redirect=1).
      */
     public String getConfigId() {
         return this.ConfigId;
     }
 
     /**
-     * Set Collection rule configuration ID
-     * @param ConfigId Collection rule configuration ID
+     * Set Collection Configuration ID
+-Obtain the collection configuration Id through [Access collection rule configuration](https://www.tencentcloud.com/document/product/614/58616?from_cn_redirect=1).
+     * @param ConfigId Collection Configuration ID
+-Obtain the collection configuration Id through [Access collection rule configuration](https://www.tencentcloud.com/document/product/614/58616?from_cn_redirect=1).
      */
     public void setConfigId(String ConfigId) {
         this.ConfigId = ConfigId;

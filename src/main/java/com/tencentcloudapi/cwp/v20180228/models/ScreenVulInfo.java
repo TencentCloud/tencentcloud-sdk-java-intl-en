@@ -60,15 +60,13 @@ public class ScreenVulInfo extends AbstractModel {
 
     /**
     * Vulnerability type: 1 - web-cms vulnerabilities; 2 - application vulnerabilities; 4 - Linux software vulnerabilities; 5 - Windows system vulnerabilities
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Category")
     @Expose
     private Long Category;
 
     /**
-    * Host UUID
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Host UUID.
     */
     @SerializedName("Uuid")
     @Expose
@@ -155,10 +153,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Vulnerability type: 1 - web-cms vulnerabilities; 2 - application vulnerabilities; 4 - Linux software vulnerabilities; 5 - Windows system vulnerabilities
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Vulnerability type: 1 - web-cms vulnerabilities; 2 - application vulnerabilities; 4 - Linux software vulnerabilities; 5 - Windows system vulnerabilities 
      * @return Category Vulnerability type: 1 - web-cms vulnerabilities; 2 - application vulnerabilities; 4 - Linux software vulnerabilities; 5 - Windows system vulnerabilities
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getCategory() {
         return this.Category;
@@ -166,29 +162,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Vulnerability type: 1 - web-cms vulnerabilities; 2 - application vulnerabilities; 4 - Linux software vulnerabilities; 5 - Windows system vulnerabilities
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Category Vulnerability type: 1 - web-cms vulnerabilities; 2 - application vulnerabilities; 4 - Linux software vulnerabilities; 5 - Windows system vulnerabilities
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setCategory(Long Category) {
         this.Category = Category;
     }
 
     /**
-     * Get Host UUID
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Uuid Host UUID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Host UUID. 
+     * @return Uuid Host UUID.
      */
     public String getUuid() {
         return this.Uuid;
     }
 
     /**
-     * Set Host UUID
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Uuid Host UUID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Host UUID.
+     * @param Uuid Host UUID.
      */
     public void setUuid(String Uuid) {
         this.Uuid = Uuid;

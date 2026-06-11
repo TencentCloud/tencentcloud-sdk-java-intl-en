@@ -25,7 +25,6 @@ public class DescribeBaselineStrategyListResponse extends AbstractModel {
 
     /**
     * Total number of pagination query records
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("TotalCount")
     @Expose
@@ -33,7 +32,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * User policy information list
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("StrategyList")
     @Expose
@@ -47,10 +45,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Total number of pagination query records
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Total number of pagination query records 
      * @return TotalCount Total number of pagination query records
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getTotalCount() {
         return this.TotalCount;
@@ -58,19 +54,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Total number of pagination query records
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param TotalCount Total number of pagination query records
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get User policy information list
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get User policy information list 
      * @return StrategyList User policy information list
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Strategy [] getStrategyList() {
         return this.StrategyList;
@@ -78,9 +70,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set User policy information list
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param StrategyList User policy information list
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setStrategyList(Strategy [] StrategyList) {
         this.StrategyList = StrategyList;

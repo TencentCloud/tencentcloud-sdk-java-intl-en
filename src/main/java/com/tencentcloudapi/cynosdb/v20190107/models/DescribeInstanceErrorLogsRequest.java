@@ -24,35 +24,35 @@ import java.util.HashMap;
 public class DescribeInstanceErrorLogsRequest extends AbstractModel {
 
     /**
-    * Instance ID
+    * Instance ID.
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Limit on the number of logs
+    * Limit on the number of logs.
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * Offset of the log number
+    * Offset of the log number.
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * Start time
+    * Start time.
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * End time
+    * End time.
     */
     @SerializedName("EndTime")
     @Expose
@@ -80,87 +80,87 @@ public class DescribeInstanceErrorLogsRequest extends AbstractModel {
     private String [] LogLevels;
 
     /**
-    * 
+    * Keywords, supports fuzzy search.
     */
     @SerializedName("KeyWords")
     @Expose
     private String [] KeyWords;
 
     /**
-     * Get Instance ID 
-     * @return InstanceId Instance ID
+     * Get Instance ID. 
+     * @return InstanceId Instance ID.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Instance ID
-     * @param InstanceId Instance ID
+     * Set Instance ID.
+     * @param InstanceId Instance ID.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Limit on the number of logs 
-     * @return Limit Limit on the number of logs
+     * Get Limit on the number of logs. 
+     * @return Limit Limit on the number of logs.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Limit on the number of logs
-     * @param Limit Limit on the number of logs
+     * Set Limit on the number of logs.
+     * @param Limit Limit on the number of logs.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get Offset of the log number 
-     * @return Offset Offset of the log number
+     * Get Offset of the log number. 
+     * @return Offset Offset of the log number.
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Offset of the log number
-     * @param Offset Offset of the log number
+     * Set Offset of the log number.
+     * @param Offset Offset of the log number.
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get Start time 
-     * @return StartTime Start time
+     * Get Start time. 
+     * @return StartTime Start time.
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set Start time
-     * @param StartTime Start time
+     * Set Start time.
+     * @param StartTime Start time.
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get End time 
-     * @return EndTime End time
+     * Get End time. 
+     * @return EndTime End time.
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set End time
-     * @param EndTime End time
+     * Set End time.
+     * @param EndTime End time.
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
@@ -215,16 +215,16 @@ public class DescribeInstanceErrorLogsRequest extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return KeyWords 
+     * Get Keywords, supports fuzzy search. 
+     * @return KeyWords Keywords, supports fuzzy search.
      */
     public String [] getKeyWords() {
         return this.KeyWords;
     }
 
     /**
-     * Set 
-     * @param KeyWords 
+     * Set Keywords, supports fuzzy search.
+     * @param KeyWords Keywords, supports fuzzy search.
      */
     public void setKeyWords(String [] KeyWords) {
         this.KeyWords = KeyWords;

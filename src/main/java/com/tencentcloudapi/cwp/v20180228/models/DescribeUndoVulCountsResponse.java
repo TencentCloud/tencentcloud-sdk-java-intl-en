@@ -25,15 +25,13 @@ public class DescribeUndoVulCountsResponse extends AbstractModel {
 
     /**
     * Number of unfixed vulnerabilities
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("UndoVulCount")
     @Expose
     private Long UndoVulCount;
 
     /**
-    * Number of unfixed hosts
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Number of Unprocessed Hosts
     */
     @SerializedName("UndoHostCount")
     @Expose
@@ -41,7 +39,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Number of Standard Edition hosts
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("NotProfessionCount")
     @Expose
@@ -55,10 +52,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Number of unfixed vulnerabilities
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Number of unfixed vulnerabilities 
      * @return UndoVulCount Number of unfixed vulnerabilities
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getUndoVulCount() {
         return this.UndoVulCount;
@@ -66,39 +61,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Number of unfixed vulnerabilities
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param UndoVulCount Number of unfixed vulnerabilities
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setUndoVulCount(Long UndoVulCount) {
         this.UndoVulCount = UndoVulCount;
     }
 
     /**
-     * Get Number of unfixed hosts
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return UndoHostCount Number of unfixed hosts
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Number of Unprocessed Hosts 
+     * @return UndoHostCount Number of Unprocessed Hosts
      */
     public Long getUndoHostCount() {
         return this.UndoHostCount;
     }
 
     /**
-     * Set Number of unfixed hosts
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param UndoHostCount Number of unfixed hosts
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Number of Unprocessed Hosts
+     * @param UndoHostCount Number of Unprocessed Hosts
      */
     public void setUndoHostCount(Long UndoHostCount) {
         this.UndoHostCount = UndoHostCount;
     }
 
     /**
-     * Get Number of Standard Edition hosts
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Number of Standard Edition hosts 
      * @return NotProfessionCount Number of Standard Edition hosts
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getNotProfessionCount() {
         return this.NotProfessionCount;
@@ -106,9 +93,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Number of Standard Edition hosts
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param NotProfessionCount Number of Standard Edition hosts
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setNotProfessionCount(Long NotProfessionCount) {
         this.NotProfessionCount = NotProfessionCount;

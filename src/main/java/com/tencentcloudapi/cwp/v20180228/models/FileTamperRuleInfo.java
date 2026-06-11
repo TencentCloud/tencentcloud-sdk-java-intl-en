@@ -25,7 +25,6 @@ public class FileTamperRuleInfo extends AbstractModel {
 
     /**
     * Rule name
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Name")
     @Expose
@@ -40,7 +39,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Number of affected hosts
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("HostCount")
     @Expose
@@ -89,24 +87,21 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long Level;
 
     /**
-    * Number of write entries for the sub-rule
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Number of write entries for a subrule.
     */
     @SerializedName("WriteRuleCount")
     @Expose
     private Long WriteRuleCount;
 
     /**
-    * Number of read entries for the sub-rule
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Number of read entries for a subrule.
     */
     @SerializedName("ReadRuleCount")
     @Expose
     private Long ReadRuleCount;
 
     /**
-    * Number of read and write entries for the sub-rule
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Number of read and write entries for a subrule.
     */
     @SerializedName("ReadWriteRuleCount")
     @Expose
@@ -117,7 +112,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>read: read file</li>
 <li>write: modify file</li>
 <li>read-write: read and modify file</li>
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("FileAction")
     @Expose
@@ -125,19 +119,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Allowlisted processing type
-<li>cur: add the current items to the allowlist</li>
-<li>all: add all items that meet the conditions to the allowlist</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+<li>cur: add only the current item to an allowlist</li>
+<li>all: add all objects that meet the conditions to the allowlist</li>
     */
     @SerializedName("AddWhiteType")
     @Expose
     private String AddWhiteType;
 
     /**
-     * Get Rule name
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Rule name 
      * @return Name Rule name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getName() {
         return this.Name;
@@ -145,9 +136,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Rule name
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Name Rule name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setName(String Name) {
         this.Name = Name;
@@ -170,10 +159,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Number of affected hosts
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Number of affected hosts 
      * @return HostCount Number of affected hosts
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getHostCount() {
         return this.HostCount;
@@ -181,9 +168,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Number of affected hosts
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param HostCount Number of affected hosts
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setHostCount(Long HostCount) {
         this.HostCount = HostCount;
@@ -286,60 +271,48 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Number of write entries for the sub-rule
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return WriteRuleCount Number of write entries for the sub-rule
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Number of write entries for a subrule. 
+     * @return WriteRuleCount Number of write entries for a subrule.
      */
     public Long getWriteRuleCount() {
         return this.WriteRuleCount;
     }
 
     /**
-     * Set Number of write entries for the sub-rule
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param WriteRuleCount Number of write entries for the sub-rule
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Number of write entries for a subrule.
+     * @param WriteRuleCount Number of write entries for a subrule.
      */
     public void setWriteRuleCount(Long WriteRuleCount) {
         this.WriteRuleCount = WriteRuleCount;
     }
 
     /**
-     * Get Number of read entries for the sub-rule
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ReadRuleCount Number of read entries for the sub-rule
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Number of read entries for a subrule. 
+     * @return ReadRuleCount Number of read entries for a subrule.
      */
     public Long getReadRuleCount() {
         return this.ReadRuleCount;
     }
 
     /**
-     * Set Number of read entries for the sub-rule
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ReadRuleCount Number of read entries for the sub-rule
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Number of read entries for a subrule.
+     * @param ReadRuleCount Number of read entries for a subrule.
      */
     public void setReadRuleCount(Long ReadRuleCount) {
         this.ReadRuleCount = ReadRuleCount;
     }
 
     /**
-     * Get Number of read and write entries for the sub-rule
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ReadWriteRuleCount Number of read and write entries for the sub-rule
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Number of read and write entries for a subrule. 
+     * @return ReadWriteRuleCount Number of read and write entries for a subrule.
      */
     public Long getReadWriteRuleCount() {
         return this.ReadWriteRuleCount;
     }
 
     /**
-     * Set Number of read and write entries for the sub-rule
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ReadWriteRuleCount Number of read and write entries for the sub-rule
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Number of read and write entries for a subrule.
+     * @param ReadWriteRuleCount Number of read and write entries for a subrule.
      */
     public void setReadWriteRuleCount(Long ReadWriteRuleCount) {
         this.ReadWriteRuleCount = ReadWriteRuleCount;
@@ -349,13 +322,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * Get Monitoring behavior
 <li>read: read file</li>
 <li>write: modify file</li>
-<li>read-write: read and modify file</li>
-Note: This field may return null, indicating that no valid values can be obtained. 
+<li>read-write: read and modify file</li> 
      * @return FileAction Monitoring behavior
 <li>read: read file</li>
 <li>write: modify file</li>
 <li>read-write: read and modify file</li>
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getFileAction() {
         return this.FileAction;
@@ -366,12 +337,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>read: read file</li>
 <li>write: modify file</li>
 <li>read-write: read and modify file</li>
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param FileAction Monitoring behavior
 <li>read: read file</li>
 <li>write: modify file</li>
 <li>read-write: read and modify file</li>
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setFileAction(String FileAction) {
         this.FileAction = FileAction;
@@ -379,13 +348,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get Allowlisted processing type
-<li>cur: add the current items to the allowlist</li>
-<li>all: add all items that meet the conditions to the allowlist</li>
-Note: This field may return null, indicating that no valid values can be obtained. 
+<li>cur: add only the current item to an allowlist</li>
+<li>all: add all objects that meet the conditions to the allowlist</li> 
      * @return AddWhiteType Allowlisted processing type
-<li>cur: add the current items to the allowlist</li>
-<li>all: add all items that meet the conditions to the allowlist</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+<li>cur: add only the current item to an allowlist</li>
+<li>all: add all objects that meet the conditions to the allowlist</li>
      */
     public String getAddWhiteType() {
         return this.AddWhiteType;
@@ -393,13 +360,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Allowlisted processing type
-<li>cur: add the current items to the allowlist</li>
-<li>all: add all items that meet the conditions to the allowlist</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+<li>cur: add only the current item to an allowlist</li>
+<li>all: add all objects that meet the conditions to the allowlist</li>
      * @param AddWhiteType Allowlisted processing type
-<li>cur: add the current items to the allowlist</li>
-<li>all: add all items that meet the conditions to the allowlist</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+<li>cur: add only the current item to an allowlist</li>
+<li>all: add all objects that meet the conditions to the allowlist</li>
      */
     public void setAddWhiteType(String AddWhiteType) {
         this.AddWhiteType = AddWhiteType;

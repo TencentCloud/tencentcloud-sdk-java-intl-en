@@ -58,8 +58,10 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     private String FullUrlCache;
 
     /**
-    * Whether caches are case insensitive
-Note: This field may return `null`, indicating that no valid value can be obtained.
+    * Specifies whether to use case-insensitive cache.
+on: enable.
+Off: turn off the switch.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("IgnoreCase")
     @Expose
@@ -182,20 +184,28 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     }
 
     /**
-     * Get Whether caches are case insensitive
-Note: This field may return `null`, indicating that no valid value can be obtained. 
-     * @return IgnoreCase Whether caches are case insensitive
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Get Specifies whether to use case-insensitive cache.
+on: enable.
+Off: turn off the switch.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return IgnoreCase Specifies whether to use case-insensitive cache.
+on: enable.
+Off: turn off the switch.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getIgnoreCase() {
         return this.IgnoreCase;
     }
 
     /**
-     * Set Whether caches are case insensitive
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param IgnoreCase Whether caches are case insensitive
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Set Specifies whether to use case-insensitive cache.
+on: enable.
+Off: turn off the switch.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param IgnoreCase Specifies whether to use case-insensitive cache.
+on: enable.
+Off: turn off the switch.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setIgnoreCase(String IgnoreCase) {
         this.IgnoreCase = IgnoreCase;

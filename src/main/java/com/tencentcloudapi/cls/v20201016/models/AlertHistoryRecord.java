@@ -80,7 +80,7 @@ public class AlertHistoryRecord extends AbstractModel {
     private Long TriggerCount;
 
     /**
-    * Alarm notification frequency (minutes)
+    * Alert notification sent frequency, in minutes
     */
     @SerializedName("AlarmPeriod")
     @Expose
@@ -94,7 +94,7 @@ public class AlertHistoryRecord extends AbstractModel {
     private AlertHistoryNotice [] Notices;
 
     /**
-    * Alarm duration (minutes)
+    * Duration of the alarm in minutes
     */
     @SerializedName("Duration")
     @Expose
@@ -108,36 +108,40 @@ public class AlertHistoryRecord extends AbstractModel {
     private Long Status;
 
     /**
-    * Alarm generation time, which is a Unix timestamp in ms
+    * Alarm occurrence time, Unix timestamp in milliseconds (ms)
     */
     @SerializedName("CreateTime")
     @Expose
     private Long CreateTime;
 
     /**
-    * Group information corresponding to triggering by group
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Corresponding group information when alarm grouping is triggered
     */
     @SerializedName("GroupTriggerCondition")
     @Expose
     private GroupTriggerConditionInfo [] GroupTriggerCondition;
 
     /**
-    * Alarm severity. Valid values: `0` (Warn), `1` (Info), `2` (Critical)
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Alarm level. 0: warning (Warn); 1: reminder (Info); 2: urgent (Critical).
     */
     @SerializedName("AlarmLevel")
     @Expose
     private Long AlarmLevel;
 
     /**
-    * Type of the monitored object
-`0`: The same object is specified for all statements. `1`: An object is separately specified for each statement. 
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Monitored object type.
+`0`: The same object is specified for all statements. `1`: An object is separately specified for each statement.
     */
     @SerializedName("MonitorObjectType")
     @Expose
     private Long MonitorObjectType;
+
+    /**
+    * Notification channel type. 0 represents the internal notification channel of cls. 1 represents the Tencent Cloud observability platform notification channel.
+    */
+    @SerializedName("SendType")
+    @Expose
+    private Long SendType;
 
     /**
      * Get Alarm record ID 
@@ -268,16 +272,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Alarm notification frequency (minutes) 
-     * @return AlarmPeriod Alarm notification frequency (minutes)
+     * Get Alert notification sent frequency, in minutes 
+     * @return AlarmPeriod Alert notification sent frequency, in minutes
      */
     public Long getAlarmPeriod() {
         return this.AlarmPeriod;
     }
 
     /**
-     * Set Alarm notification frequency (minutes)
-     * @param AlarmPeriod Alarm notification frequency (minutes)
+     * Set Alert notification sent frequency, in minutes
+     * @param AlarmPeriod Alert notification sent frequency, in minutes
      */
     public void setAlarmPeriod(Long AlarmPeriod) {
         this.AlarmPeriod = AlarmPeriod;
@@ -300,16 +304,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Alarm duration (minutes) 
-     * @return Duration Alarm duration (minutes)
+     * Get Duration of the alarm in minutes 
+     * @return Duration Duration of the alarm in minutes
      */
     public Long getDuration() {
         return this.Duration;
     }
 
     /**
-     * Set Alarm duration (minutes)
-     * @param Duration Alarm duration (minutes)
+     * Set Duration of the alarm in minutes
+     * @param Duration Duration of the alarm in minutes
      */
     public void setDuration(Long Duration) {
         this.Duration = Duration;
@@ -332,83 +336,87 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Alarm generation time, which is a Unix timestamp in ms 
-     * @return CreateTime Alarm generation time, which is a Unix timestamp in ms
+     * Get Alarm occurrence time, Unix timestamp in milliseconds (ms) 
+     * @return CreateTime Alarm occurrence time, Unix timestamp in milliseconds (ms)
      */
     public Long getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set Alarm generation time, which is a Unix timestamp in ms
-     * @param CreateTime Alarm generation time, which is a Unix timestamp in ms
+     * Set Alarm occurrence time, Unix timestamp in milliseconds (ms)
+     * @param CreateTime Alarm occurrence time, Unix timestamp in milliseconds (ms)
      */
     public void setCreateTime(Long CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get Group information corresponding to triggering by group
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return GroupTriggerCondition Group information corresponding to triggering by group
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Corresponding group information when alarm grouping is triggered 
+     * @return GroupTriggerCondition Corresponding group information when alarm grouping is triggered
      */
     public GroupTriggerConditionInfo [] getGroupTriggerCondition() {
         return this.GroupTriggerCondition;
     }
 
     /**
-     * Set Group information corresponding to triggering by group
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param GroupTriggerCondition Group information corresponding to triggering by group
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Corresponding group information when alarm grouping is triggered
+     * @param GroupTriggerCondition Corresponding group information when alarm grouping is triggered
      */
     public void setGroupTriggerCondition(GroupTriggerConditionInfo [] GroupTriggerCondition) {
         this.GroupTriggerCondition = GroupTriggerCondition;
     }
 
     /**
-     * Get Alarm severity. Valid values: `0` (Warn), `1` (Info), `2` (Critical)
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return AlarmLevel Alarm severity. Valid values: `0` (Warn), `1` (Info), `2` (Critical)
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Alarm level. 0: warning (Warn); 1: reminder (Info); 2: urgent (Critical). 
+     * @return AlarmLevel Alarm level. 0: warning (Warn); 1: reminder (Info); 2: urgent (Critical).
      */
     public Long getAlarmLevel() {
         return this.AlarmLevel;
     }
 
     /**
-     * Set Alarm severity. Valid values: `0` (Warn), `1` (Info), `2` (Critical)
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param AlarmLevel Alarm severity. Valid values: `0` (Warn), `1` (Info), `2` (Critical)
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Alarm level. 0: warning (Warn); 1: reminder (Info); 2: urgent (Critical).
+     * @param AlarmLevel Alarm level. 0: warning (Warn); 1: reminder (Info); 2: urgent (Critical).
      */
     public void setAlarmLevel(Long AlarmLevel) {
         this.AlarmLevel = AlarmLevel;
     }
 
     /**
-     * Get Type of the monitored object
+     * Get Monitored object type.
 `0`: The same object is specified for all statements. `1`: An object is separately specified for each statement. 
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return MonitorObjectType Type of the monitored object
-`0`: The same object is specified for all statements. `1`: An object is separately specified for each statement. 
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @return MonitorObjectType Monitored object type.
+`0`: The same object is specified for all statements. `1`: An object is separately specified for each statement.
      */
     public Long getMonitorObjectType() {
         return this.MonitorObjectType;
     }
 
     /**
-     * Set Type of the monitored object
-`0`: The same object is specified for all statements. `1`: An object is separately specified for each statement. 
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param MonitorObjectType Type of the monitored object
-`0`: The same object is specified for all statements. `1`: An object is separately specified for each statement. 
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Monitored object type.
+`0`: The same object is specified for all statements. `1`: An object is separately specified for each statement.
+     * @param MonitorObjectType Monitored object type.
+`0`: The same object is specified for all statements. `1`: An object is separately specified for each statement.
      */
     public void setMonitorObjectType(Long MonitorObjectType) {
         this.MonitorObjectType = MonitorObjectType;
+    }
+
+    /**
+     * Get Notification channel type. 0 represents the internal notification channel of cls. 1 represents the Tencent Cloud observability platform notification channel. 
+     * @return SendType Notification channel type. 0 represents the internal notification channel of cls. 1 represents the Tencent Cloud observability platform notification channel.
+     */
+    public Long getSendType() {
+        return this.SendType;
+    }
+
+    /**
+     * Set Notification channel type. 0 represents the internal notification channel of cls. 1 represents the Tencent Cloud observability platform notification channel.
+     * @param SendType Notification channel type. 0 represents the internal notification channel of cls. 1 represents the Tencent Cloud observability platform notification channel.
+     */
+    public void setSendType(Long SendType) {
+        this.SendType = SendType;
     }
 
     public AlertHistoryRecord() {
@@ -473,6 +481,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.MonitorObjectType != null) {
             this.MonitorObjectType = new Long(source.MonitorObjectType);
         }
+        if (source.SendType != null) {
+            this.SendType = new Long(source.SendType);
+        }
     }
 
 
@@ -496,6 +507,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamArrayObj(map, prefix + "GroupTriggerCondition.", this.GroupTriggerCondition);
         this.setParamSimple(map, prefix + "AlarmLevel", this.AlarmLevel);
         this.setParamSimple(map, prefix + "MonitorObjectType", this.MonitorObjectType);
+        this.setParamSimple(map, prefix + "SendType", this.SendType);
 
     }
 }

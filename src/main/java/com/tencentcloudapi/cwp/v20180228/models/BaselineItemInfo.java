@@ -39,7 +39,6 @@ public class BaselineItemInfo extends AbstractModel {
 
     /**
     * ID of the Rule to Which the Detection Item Belongs
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("RuleId")
     @Expose
@@ -75,7 +74,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * System Rule ID
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("SysRuleId")
     @Expose
@@ -83,7 +81,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Referenced Custom Rule Information
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("RelatedCustomRuleInfo")
     @Expose
@@ -122,10 +119,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get ID of the Rule to Which the Detection Item Belongs
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get ID of the Rule to Which the Detection Item Belongs 
      * @return RuleId ID of the Rule to Which the Detection Item Belongs
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getRuleId() {
         return this.RuleId;
@@ -133,9 +128,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set ID of the Rule to Which the Detection Item Belongs
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param RuleId ID of the Rule to Which the Detection Item Belongs
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setRuleId(Long RuleId) {
         this.RuleId = RuleId;
@@ -206,10 +199,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get System Rule ID
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get System Rule ID 
      * @return SysRuleId System Rule ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getSysRuleId() {
         return this.SysRuleId;
@@ -217,19 +208,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set System Rule ID
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param SysRuleId System Rule ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setSysRuleId(Long SysRuleId) {
         this.SysRuleId = SysRuleId;
     }
 
     /**
-     * Get Referenced Custom Rule Information
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Referenced Custom Rule Information 
      * @return RelatedCustomRuleInfo Referenced Custom Rule Information
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public BaselineCustomRuleIdName [] getRelatedCustomRuleInfo() {
         return this.RelatedCustomRuleInfo;
@@ -237,9 +224,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Referenced Custom Rule Information
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param RelatedCustomRuleInfo Referenced Custom Rule Information
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setRelatedCustomRuleInfo(BaselineCustomRuleIdName [] RelatedCustomRuleInfo) {
         this.RelatedCustomRuleInfo = RelatedCustomRuleInfo;

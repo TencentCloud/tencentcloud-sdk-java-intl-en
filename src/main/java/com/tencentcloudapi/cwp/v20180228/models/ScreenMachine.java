@@ -38,7 +38,7 @@ public class ScreenMachine extends AbstractModel {
     private String MachineOs;
 
     /**
-    * Yunjing client UUID. If the client is offline for a long time, an empty string is returned.
+    * CWP UUID. If the CWP client is offline for a long time, an empty character is returned.
     */
     @SerializedName("Uuid")
     @Expose
@@ -171,7 +171,6 @@ public class ScreenMachine extends AbstractModel {
 
     /**
     * Additional information
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("MachineExtraInfo")
     @Expose
@@ -210,16 +209,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Yunjing client UUID. If the client is offline for a long time, an empty string is returned. 
-     * @return Uuid Yunjing client UUID. If the client is offline for a long time, an empty string is returned.
+     * Get CWP UUID. If the CWP client is offline for a long time, an empty character is returned. 
+     * @return Uuid CWP UUID. If the CWP client is offline for a long time, an empty character is returned.
      */
     public String getUuid() {
         return this.Uuid;
     }
 
     /**
-     * Set Yunjing client UUID. If the client is offline for a long time, an empty string is returned.
-     * @param Uuid Yunjing client UUID. If the client is offline for a long time, an empty string is returned.
+     * Set CWP UUID. If the CWP client is offline for a long time, an empty character is returned.
+     * @param Uuid CWP UUID. If the CWP client is offline for a long time, an empty character is returned.
      */
     public void setUuid(String Uuid) {
         this.Uuid = Uuid;
@@ -522,10 +521,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Additional information
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Additional information 
      * @return MachineExtraInfo Additional information
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public MachineExtraInfo getMachineExtraInfo() {
         return this.MachineExtraInfo;
@@ -533,9 +530,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Additional information
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param MachineExtraInfo Additional information
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setMachineExtraInfo(MachineExtraInfo MachineExtraInfo) {
         this.MachineExtraInfo = MachineExtraInfo;

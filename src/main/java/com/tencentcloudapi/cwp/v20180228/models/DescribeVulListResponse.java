@@ -24,8 +24,7 @@ import java.util.HashMap;
 public class DescribeVulListResponse extends AbstractModel {
 
     /**
-    * Vulnerability list
-Note: This field may return null, indicating that no valid values can be obtained.
+    * List of vulnerabilities
     */
     @SerializedName("VulInfoList")
     @Expose
@@ -33,15 +32,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Total number of vulnerabilities
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * Total number of focused vulnerabilities
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Total number of key vulnerabilities
     */
     @SerializedName("FollowVulCount")
     @Expose
@@ -55,30 +52,24 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Vulnerability list
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return VulInfoList Vulnerability list
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get List of vulnerabilities 
+     * @return VulInfoList List of vulnerabilities
      */
     public VulInfoList [] getVulInfoList() {
         return this.VulInfoList;
     }
 
     /**
-     * Set Vulnerability list
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param VulInfoList Vulnerability list
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set List of vulnerabilities
+     * @param VulInfoList List of vulnerabilities
      */
     public void setVulInfoList(VulInfoList [] VulInfoList) {
         this.VulInfoList = VulInfoList;
     }
 
     /**
-     * Get Total number of vulnerabilities
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Total number of vulnerabilities 
      * @return TotalCount Total number of vulnerabilities
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getTotalCount() {
         return this.TotalCount;
@@ -86,29 +77,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Total number of vulnerabilities
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param TotalCount Total number of vulnerabilities
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get Total number of focused vulnerabilities
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return FollowVulCount Total number of focused vulnerabilities
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Total number of key vulnerabilities 
+     * @return FollowVulCount Total number of key vulnerabilities
      */
     public Long getFollowVulCount() {
         return this.FollowVulCount;
     }
 
     /**
-     * Set Total number of focused vulnerabilities
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param FollowVulCount Total number of focused vulnerabilities
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Total number of key vulnerabilities
+     * @param FollowVulCount Total number of key vulnerabilities
      */
     public void setFollowVulCount(Long FollowVulCount) {
         this.FollowVulCount = FollowVulCount;

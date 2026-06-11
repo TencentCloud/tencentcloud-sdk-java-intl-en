@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DeleteDataTransformRequest extends AbstractModel {
 
     /**
-    * Data processing task ID
+    * Data processing task ID - Search the data processing task list basic information (https://www.tencentcloud.com/document/product/614/72182?from_cn_redirect=1) to get the data processing task ID.
     */
     @SerializedName("TaskId")
     @Expose
     private String TaskId;
 
     /**
-     * Get Data processing task ID 
-     * @return TaskId Data processing task ID
+     * Get Data processing task ID - Search the data processing task list basic information (https://www.tencentcloud.com/document/product/614/72182?from_cn_redirect=1) to get the data processing task ID. 
+     * @return TaskId Data processing task ID - Search the data processing task list basic information (https://www.tencentcloud.com/document/product/614/72182?from_cn_redirect=1) to get the data processing task ID.
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set Data processing task ID
-     * @param TaskId Data processing task ID
+     * Set Data processing task ID - Search the data processing task list basic information (https://www.tencentcloud.com/document/product/614/72182?from_cn_redirect=1) to get the data processing task ID.
+     * @param TaskId Data processing task ID - Search the data processing task list basic information (https://www.tencentcloud.com/document/product/614/72182?from_cn_redirect=1) to get the data processing task ID.
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;

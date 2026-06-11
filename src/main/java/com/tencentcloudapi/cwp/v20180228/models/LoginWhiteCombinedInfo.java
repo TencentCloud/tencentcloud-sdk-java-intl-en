@@ -24,8 +24,7 @@ import java.util.HashMap;
 public class LoginWhiteCombinedInfo extends AbstractModel {
 
     /**
-    * Allowlist region
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Allowlisted regions
     */
     @SerializedName("Places")
     @Expose
@@ -123,27 +122,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String Uuid;
 
     /**
-    * Login Location
+    * Login location
     */
     @SerializedName("Locations")
     @Expose
     private String Locations;
 
     /**
-     * Get Allowlist region
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Places Allowlist region
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Allowlisted regions 
+     * @return Places Allowlisted regions
      */
     public Place [] getPlaces() {
         return this.Places;
     }
 
     /**
-     * Set Allowlist region
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Places Allowlist region
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Allowlisted regions
+     * @param Places Allowlisted regions
      */
     public void setPlaces(Place [] Places) {
         this.Places = Places;
@@ -358,16 +353,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Login Location 
-     * @return Locations Login Location
+     * Get Login location 
+     * @return Locations Login location
      */
     public String getLocations() {
         return this.Locations;
     }
 
     /**
-     * Set Login Location
-     * @param Locations Login Location
+     * Set Login location
+     * @param Locations Login location
      */
     public void setLocations(String Locations) {
         this.Locations = Locations;

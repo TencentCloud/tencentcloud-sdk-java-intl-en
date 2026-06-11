@@ -24,42 +24,42 @@ import java.util.HashMap;
 public class ModifyInstanceData extends AbstractModel {
 
     /**
-    * 
+    * CPU after resizing.
     */
     @SerializedName("Cpu")
     @Expose
     private Long Cpu;
 
     /**
-    * 
+    * Memory after resizing.
     */
     @SerializedName("Memory")
     @Expose
     private Long Memory;
 
     /**
-    * 
+    * Storage upper limit after resizing.
     */
     @SerializedName("StorageLimit")
     @Expose
     private Long StorageLimit;
 
     /**
-    * 
+    * CPU before resizing.
     */
     @SerializedName("OldCpu")
     @Expose
     private Long OldCpu;
 
     /**
-    * 
+    * Memory before resizing.
     */
     @SerializedName("OldMemory")
     @Expose
     private Long OldMemory;
 
     /**
-    * 
+    * Storage upper limit before resizing.
     */
     @SerializedName("OldStorageLimit")
     @Expose
@@ -84,7 +84,7 @@ public class ModifyInstanceData extends AbstractModel {
     private String DeviceType;
 
     /**
-    * 
+    * Upgrade method. Switch after upgrade completes or switch within maintenance window.
     */
     @SerializedName("UpgradeType")
     @Expose
@@ -105,96 +105,96 @@ public class ModifyInstanceData extends AbstractModel {
     private Long OldLibraNodeCount;
 
     /**
-     * Get  
-     * @return Cpu 
+     * Get CPU after resizing. 
+     * @return Cpu CPU after resizing.
      */
     public Long getCpu() {
         return this.Cpu;
     }
 
     /**
-     * Set 
-     * @param Cpu 
+     * Set CPU after resizing.
+     * @param Cpu CPU after resizing.
      */
     public void setCpu(Long Cpu) {
         this.Cpu = Cpu;
     }
 
     /**
-     * Get  
-     * @return Memory 
+     * Get Memory after resizing. 
+     * @return Memory Memory after resizing.
      */
     public Long getMemory() {
         return this.Memory;
     }
 
     /**
-     * Set 
-     * @param Memory 
+     * Set Memory after resizing.
+     * @param Memory Memory after resizing.
      */
     public void setMemory(Long Memory) {
         this.Memory = Memory;
     }
 
     /**
-     * Get  
-     * @return StorageLimit 
+     * Get Storage upper limit after resizing. 
+     * @return StorageLimit Storage upper limit after resizing.
      */
     public Long getStorageLimit() {
         return this.StorageLimit;
     }
 
     /**
-     * Set 
-     * @param StorageLimit 
+     * Set Storage upper limit after resizing.
+     * @param StorageLimit Storage upper limit after resizing.
      */
     public void setStorageLimit(Long StorageLimit) {
         this.StorageLimit = StorageLimit;
     }
 
     /**
-     * Get  
-     * @return OldCpu 
+     * Get CPU before resizing. 
+     * @return OldCpu CPU before resizing.
      */
     public Long getOldCpu() {
         return this.OldCpu;
     }
 
     /**
-     * Set 
-     * @param OldCpu 
+     * Set CPU before resizing.
+     * @param OldCpu CPU before resizing.
      */
     public void setOldCpu(Long OldCpu) {
         this.OldCpu = OldCpu;
     }
 
     /**
-     * Get  
-     * @return OldMemory 
+     * Get Memory before resizing. 
+     * @return OldMemory Memory before resizing.
      */
     public Long getOldMemory() {
         return this.OldMemory;
     }
 
     /**
-     * Set 
-     * @param OldMemory 
+     * Set Memory before resizing.
+     * @param OldMemory Memory before resizing.
      */
     public void setOldMemory(Long OldMemory) {
         this.OldMemory = OldMemory;
     }
 
     /**
-     * Get  
-     * @return OldStorageLimit 
+     * Get Storage upper limit before resizing. 
+     * @return OldStorageLimit Storage upper limit before resizing.
      */
     public Long getOldStorageLimit() {
         return this.OldStorageLimit;
     }
 
     /**
-     * Set 
-     * @param OldStorageLimit 
+     * Set Storage upper limit before resizing.
+     * @param OldStorageLimit Storage upper limit before resizing.
      */
     public void setOldStorageLimit(Long OldStorageLimit) {
         this.OldStorageLimit = OldStorageLimit;
@@ -249,16 +249,16 @@ public class ModifyInstanceData extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return UpgradeType 
+     * Get Upgrade method. Switch after upgrade completes or switch within maintenance window. 
+     * @return UpgradeType Upgrade method. Switch after upgrade completes or switch within maintenance window.
      */
     public String getUpgradeType() {
         return this.UpgradeType;
     }
 
     /**
-     * Set 
-     * @param UpgradeType 
+     * Set Upgrade method. Switch after upgrade completes or switch within maintenance window.
+     * @param UpgradeType Upgrade method. Switch after upgrade completes or switch within maintenance window.
      */
     public void setUpgradeType(String UpgradeType) {
         this.UpgradeType = UpgradeType;

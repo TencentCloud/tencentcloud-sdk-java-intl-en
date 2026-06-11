@@ -122,14 +122,14 @@ public class AssetUserBaseInfo extends AbstractModel {
     private Long ProjectId;
 
     /**
-    * Account type. 0: guest user; 1: standard user; 2: administrator user; 999: null (Windows only)
+    * Account type. 0: guest user; 1: standard user; 2: administrator user; 999: null (for Windows only).
     */
     @SerializedName("UserType")
     @Expose
     private Long UserType;
 
     /**
-    * Whether a domain account. 0: no; 1: yes; 2: no; 999: null (Windows only)
+    * Whether it is a domain account: 0: no; 1: yes; 2: no; 999: null (for Windows only).
     */
     @SerializedName("IsDomain")
     @Expose
@@ -200,7 +200,6 @@ public class AssetUserBaseInfo extends AbstractModel {
 
     /**
     * Update time
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("UpdateTime")
     @Expose
@@ -221,8 +220,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long IsNew;
 
     /**
-    * Additional information
-Note: This field may return null, indicating that no valid values can be obtained.
+    *  Additional information
     */
     @SerializedName("MachineExtraInfo")
     @Expose
@@ -453,32 +451,32 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Account type. 0: guest user; 1: standard user; 2: administrator user; 999: null (Windows only) 
-     * @return UserType Account type. 0: guest user; 1: standard user; 2: administrator user; 999: null (Windows only)
+     * Get Account type. 0: guest user; 1: standard user; 2: administrator user; 999: null (for Windows only). 
+     * @return UserType Account type. 0: guest user; 1: standard user; 2: administrator user; 999: null (for Windows only).
      */
     public Long getUserType() {
         return this.UserType;
     }
 
     /**
-     * Set Account type. 0: guest user; 1: standard user; 2: administrator user; 999: null (Windows only)
-     * @param UserType Account type. 0: guest user; 1: standard user; 2: administrator user; 999: null (Windows only)
+     * Set Account type. 0: guest user; 1: standard user; 2: administrator user; 999: null (for Windows only).
+     * @param UserType Account type. 0: guest user; 1: standard user; 2: administrator user; 999: null (for Windows only).
      */
     public void setUserType(Long UserType) {
         this.UserType = UserType;
     }
 
     /**
-     * Get Whether a domain account. 0: no; 1: yes; 2: no; 999: null (Windows only) 
-     * @return IsDomain Whether a domain account. 0: no; 1: yes; 2: no; 999: null (Windows only)
+     * Get Whether it is a domain account: 0: no; 1: yes; 2: no; 999: null (for Windows only). 
+     * @return IsDomain Whether it is a domain account: 0: no; 1: yes; 2: no; 999: null (for Windows only).
      */
     public Long getIsDomain() {
         return this.IsDomain;
     }
 
     /**
-     * Set Whether a domain account. 0: no; 1: yes; 2: no; 999: null (Windows only)
-     * @param IsDomain Whether a domain account. 0: no; 1: yes; 2: no; 999: null (Windows only)
+     * Set Whether it is a domain account: 0: no; 1: yes; 2: no; 999: null (for Windows only).
+     * @param IsDomain Whether it is a domain account: 0: no; 1: yes; 2: no; 999: null (for Windows only).
      */
     public void setIsDomain(Long IsDomain) {
         this.IsDomain = IsDomain;
@@ -629,10 +627,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Update time
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Update time 
      * @return UpdateTime Update time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getUpdateTime() {
         return this.UpdateTime;
@@ -640,9 +636,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Update time
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param UpdateTime Update time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;
@@ -681,20 +675,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Additional information
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return MachineExtraInfo Additional information
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  Additional information 
+     * @return MachineExtraInfo  Additional information
      */
     public MachineExtraInfo getMachineExtraInfo() {
         return this.MachineExtraInfo;
     }
 
     /**
-     * Set Additional information
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param MachineExtraInfo Additional information
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set  Additional information
+     * @param MachineExtraInfo  Additional information
      */
     public void setMachineExtraInfo(MachineExtraInfo MachineExtraInfo) {
         this.MachineExtraInfo = MachineExtraInfo;

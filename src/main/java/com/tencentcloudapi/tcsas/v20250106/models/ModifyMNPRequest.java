@@ -24,184 +24,184 @@ import java.util.HashMap;
 public class ModifyMNPRequest extends AbstractModel {
 
     /**
-    * Mini program category.
+    * <p>Mini program category.</p>
     */
     @SerializedName("MNPType")
     @Expose
     private String MNPType;
 
     /**
-    * Mini program name.
+    * <p>Mini program name.</p>
     */
     @SerializedName("MNPName")
     @Expose
     private String MNPName;
 
     /**
-    * Mini program introduction.
+    * <p>Mini program introduction.</p>
     */
     @SerializedName("MNPIntro")
     @Expose
     private String MNPIntro;
 
     /**
-    * Mini program description.
+    * <p>Mini program description.</p>
     */
     @SerializedName("MNPDesc")
     @Expose
     private String MNPDesc;
 
     /**
-    * Mini program appid.
+    * <p>Mini program appid.</p>
     */
     @SerializedName("MNPId")
     @Expose
     private String MNPId;
 
     /**
-    * Platform ID.
+    * <p>Platform ID.</p>
     */
     @SerializedName("PlatformId")
     @Expose
     private String PlatformId;
 
     /**
-    * Mini program icon.
+    * <p>Mini program icon.</p>
     */
     @SerializedName("MNPIcon")
     @Expose
     private String MNPIcon;
 
     /**
-    * <p>The mini program name and description in multiple languages.</p>
+    * <p>Mini program name and introduction in multiple languages.</p>
     */
     @SerializedName("I18nList")
     @Expose
     private MNPI18NSyncDto [] I18nList;
 
     /**
-     * Get Mini program category. 
-     * @return MNPType Mini program category.
+     * Get <p>Mini program category.</p> 
+     * @return MNPType <p>Mini program category.</p>
      */
     public String getMNPType() {
         return this.MNPType;
     }
 
     /**
-     * Set Mini program category.
-     * @param MNPType Mini program category.
+     * Set <p>Mini program category.</p>
+     * @param MNPType <p>Mini program category.</p>
      */
     public void setMNPType(String MNPType) {
         this.MNPType = MNPType;
     }
 
     /**
-     * Get Mini program name. 
-     * @return MNPName Mini program name.
+     * Get <p>Mini program name.</p> 
+     * @return MNPName <p>Mini program name.</p>
      */
     public String getMNPName() {
         return this.MNPName;
     }
 
     /**
-     * Set Mini program name.
-     * @param MNPName Mini program name.
+     * Set <p>Mini program name.</p>
+     * @param MNPName <p>Mini program name.</p>
      */
     public void setMNPName(String MNPName) {
         this.MNPName = MNPName;
     }
 
     /**
-     * Get Mini program introduction. 
-     * @return MNPIntro Mini program introduction.
+     * Get <p>Mini program introduction.</p> 
+     * @return MNPIntro <p>Mini program introduction.</p>
      */
     public String getMNPIntro() {
         return this.MNPIntro;
     }
 
     /**
-     * Set Mini program introduction.
-     * @param MNPIntro Mini program introduction.
+     * Set <p>Mini program introduction.</p>
+     * @param MNPIntro <p>Mini program introduction.</p>
      */
     public void setMNPIntro(String MNPIntro) {
         this.MNPIntro = MNPIntro;
     }
 
     /**
-     * Get Mini program description. 
-     * @return MNPDesc Mini program description.
+     * Get <p>Mini program description.</p> 
+     * @return MNPDesc <p>Mini program description.</p>
      */
     public String getMNPDesc() {
         return this.MNPDesc;
     }
 
     /**
-     * Set Mini program description.
-     * @param MNPDesc Mini program description.
+     * Set <p>Mini program description.</p>
+     * @param MNPDesc <p>Mini program description.</p>
      */
     public void setMNPDesc(String MNPDesc) {
         this.MNPDesc = MNPDesc;
     }
 
     /**
-     * Get Mini program appid. 
-     * @return MNPId Mini program appid.
+     * Get <p>Mini program appid.</p> 
+     * @return MNPId <p>Mini program appid.</p>
      */
     public String getMNPId() {
         return this.MNPId;
     }
 
     /**
-     * Set Mini program appid.
-     * @param MNPId Mini program appid.
+     * Set <p>Mini program appid.</p>
+     * @param MNPId <p>Mini program appid.</p>
      */
     public void setMNPId(String MNPId) {
         this.MNPId = MNPId;
     }
 
     /**
-     * Get Platform ID. 
-     * @return PlatformId Platform ID.
+     * Get <p>Platform ID.</p> 
+     * @return PlatformId <p>Platform ID.</p>
      */
     public String getPlatformId() {
         return this.PlatformId;
     }
 
     /**
-     * Set Platform ID.
-     * @param PlatformId Platform ID.
+     * Set <p>Platform ID.</p>
+     * @param PlatformId <p>Platform ID.</p>
      */
     public void setPlatformId(String PlatformId) {
         this.PlatformId = PlatformId;
     }
 
     /**
-     * Get Mini program icon. 
-     * @return MNPIcon Mini program icon.
+     * Get <p>Mini program icon.</p> 
+     * @return MNPIcon <p>Mini program icon.</p>
      */
     public String getMNPIcon() {
         return this.MNPIcon;
     }
 
     /**
-     * Set Mini program icon.
-     * @param MNPIcon Mini program icon.
+     * Set <p>Mini program icon.</p>
+     * @param MNPIcon <p>Mini program icon.</p>
      */
     public void setMNPIcon(String MNPIcon) {
         this.MNPIcon = MNPIcon;
     }
 
     /**
-     * Get <p>The mini program name and description in multiple languages.</p> 
-     * @return I18nList <p>The mini program name and description in multiple languages.</p>
+     * Get <p>Mini program name and introduction in multiple languages.</p> 
+     * @return I18nList <p>Mini program name and introduction in multiple languages.</p>
      */
     public MNPI18NSyncDto [] getI18nList() {
         return this.I18nList;
     }
 
     /**
-     * Set <p>The mini program name and description in multiple languages.</p>
-     * @param I18nList <p>The mini program name and description in multiple languages.</p>
+     * Set <p>Mini program name and introduction in multiple languages.</p>
+     * @param I18nList <p>Mini program name and introduction in multiple languages.</p>
      */
     public void setI18nList(MNPI18NSyncDto [] I18nList) {
         this.I18nList = I18nList;

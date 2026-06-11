@@ -25,7 +25,6 @@ public class DescribeScreenBroadcastsResponse extends AbstractModel {
 
     /**
     * Broadcasting article list
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("List")
     @Expose
@@ -39,10 +38,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Broadcasting article list
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Broadcasting article list 
      * @return List Broadcasting article list
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public ScreenBroadcasts [] getList() {
         return this.List;
@@ -50,9 +47,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Broadcasting article list
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param List Broadcasting article list
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setList(ScreenBroadcasts [] List) {
         this.List = List;

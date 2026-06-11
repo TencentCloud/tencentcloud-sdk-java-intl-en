@@ -91,18 +91,16 @@ public class ComplianceAssetDetailInfo extends AbstractModel {
     private Long FailedPolicyItemCount;
 
     /**
-    * Last check time
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Last detection time.
     */
     @SerializedName("LastCheckTime")
     @Expose
     private String LastCheckTime;
 
     /**
-    * Check result. Valid values:
-`RESULT_FAILED`: Failed.
-`RESULT_PASSED`: Passed.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Detection result:
+RESULT_FAILED: failed.
+RESULT_PASSED: Passed.
     */
     @SerializedName("CheckResult")
     @Expose
@@ -287,48 +285,40 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Last check time
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return LastCheckTime Last check time
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Last detection time. 
+     * @return LastCheckTime Last detection time.
      */
     public String getLastCheckTime() {
         return this.LastCheckTime;
     }
 
     /**
-     * Set Last check time
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param LastCheckTime Last check time
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Last detection time.
+     * @param LastCheckTime Last detection time.
      */
     public void setLastCheckTime(String LastCheckTime) {
         this.LastCheckTime = LastCheckTime;
     }
 
     /**
-     * Get Check result. Valid values:
-`RESULT_FAILED`: Failed.
-`RESULT_PASSED`: Passed.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return CheckResult Check result. Valid values:
-`RESULT_FAILED`: Failed.
-`RESULT_PASSED`: Passed.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Detection result:
+RESULT_FAILED: failed.
+RESULT_PASSED: Passed. 
+     * @return CheckResult Detection result:
+RESULT_FAILED: failed.
+RESULT_PASSED: Passed.
      */
     public String getCheckResult() {
         return this.CheckResult;
     }
 
     /**
-     * Set Check result. Valid values:
-`RESULT_FAILED`: Failed.
-`RESULT_PASSED`: Passed.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param CheckResult Check result. Valid values:
-`RESULT_FAILED`: Failed.
-`RESULT_PASSED`: Passed.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Detection result:
+RESULT_FAILED: failed.
+RESULT_PASSED: Passed.
+     * @param CheckResult Detection result:
+RESULT_FAILED: failed.
+RESULT_PASSED: Passed.
      */
     public void setCheckResult(String CheckResult) {
         this.CheckResult = CheckResult;

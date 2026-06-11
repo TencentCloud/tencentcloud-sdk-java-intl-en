@@ -195,6 +195,9 @@ public enum ScfErrorCode {
      /* Internal service error */
      INTERNALERROR_EXCEPTION("InternalError.Exception"),
      
+     /*  */
+     INTERNALERROR_SEARCHFAILED("InternalError.SearchFailed"),
+     
      /* Internal system error. */
      INTERNALERROR_SYSTEM("InternalError.System"),
      

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class VirusInfo extends AbstractModel {
 
     /**
-    * Filename
+    * File name
     */
     @SerializedName("FileName")
     @Expose
@@ -45,7 +45,7 @@ public class VirusInfo extends AbstractModel {
     private String VirusName;
 
     /**
-    * Creation time
+    * Creation time.
     */
     @SerializedName("CreateTime")
     @Expose
@@ -66,50 +66,50 @@ public class VirusInfo extends AbstractModel {
     private String ContainerName;
 
     /**
-    * Container ID
+    * container id
     */
     @SerializedName("ContainerId")
     @Expose
     private String ContainerId;
 
     /**
-    * Container status
-`RUNNING`: Running.
-`PAUSED`: Paused.
-`STOPPED`: Stopped.
-`CREATED`: Created.
-`DESTROYED`: Terminated.
-`RESTARTING`: Restarting.
-`REMOVING`: Removing.
+    * Container status.
+RUNNING: running
+Suspend: PAUSED
+Stop: STOPPED
+CREATED
+DESTROYED
+RESTARTING
+Migrating: REMOVING
     */
     @SerializedName("ContainerStatus")
     @Expose
     private String ContainerStatus;
 
     /**
-    * Image name
+    * Image Name
     */
     @SerializedName("ImageName")
     @Expose
     private String ImageName;
 
     /**
-    * Image ID
+    * Image id
     */
     @SerializedName("ImageId")
     @Expose
     private String ImageId;
 
     /**
-    * `DEAL_NONE`: Pending.
-`DEAL_IGNORE`: Ignored.
-`DEAL_ADD_WHITELIST`: Allowed.
-`DEAL_DEL`: Deleted.
-`DEAL_ISOLATE`: Isolated.
-`DEAL_ISOLATING`: Isolating.
-`DEAL_ISOLATE_FAILED`: Isolation failed.
-`DEAL_RECOVERING`: Recovering.
-`DEAL_RECOVER_FAILED`: Recovery failed.
+    * DEAL_NONE: File pending
+DEAL_IGNORE: Already ignored
+DEAL_ADD_WHITELIST: Add to whitelist
+DEAL_DEL: File deleted
+DEAL_ISOLATE: Has been isolated
+DEAL_ISOLATING: Isolated
+DEAL_ISOLATE_FAILED: Isolation failed
+DEAL_RECOVERING: Recovering
+DEAL_RECOVER_FAILED: Recovery failed
     */
     @SerializedName("Status")
     @Expose
@@ -130,130 +130,127 @@ public class VirusInfo extends AbstractModel {
     private String HarmDescribe;
 
     /**
-    * Solution
+    * Recommended solution
     */
     @SerializedName("SuggestScheme")
     @Expose
     private String SuggestScheme;
 
     /**
-    * Sub-status of the failure:
-`FILE_NOT_FOUND`: The file does not exist.
-`FILE_ABNORMAL`: The file is abnormal.
-`FILE_ABNORMAL_DEAL_RECOVER`: The file is abnormal when recovered.
-`BACKUP_FILE_NOT_FOUND`: The backup file does not exist.
-`CONTAINER_NOT_FOUND_DEAL_ISOLATE`: The container does not exist during isolation.
-`CONTAINER_NOT_FOUND_DEAL_RECOVER`: The container does not exist during recovery.
-`TIMEOUT`: Timed out.
-`TOO_MANY`: Too many tasks.
-`OFFLINE`: Offline.
-`INTERNAL`: Internal service error.
-`VALIDATION`: Invalid parameter.
+    * Failed sub-status
+FILE_NOT_FOUND: File does not exist
+FILE_ABNORMAL: abnormal file
+FILE_ABNORMAL_DEAL_RECOVER: Abnormal file when recovering file.
+BACKUP_FILE_NOT_FOUND: Backup file not found
+CONTAINER_NOT_FOUND_DEAL_ISOLATE: Container not found in isolation
+CONTAINER_NOT_FOUND_DEAL_RECOVER: Container not found when recovering
+TIMEOUT: Timeout
+TOO_MANY: Too many tasks
+OFFLINE: Offline
+INTERNAL Server Error
+VALIDATION: Invalid parameter
     */
     @SerializedName("SubStatus")
     @Expose
     private String SubStatus;
 
     /**
-    * Network status
-`NORMAL`: 	Not isolated.
-`ISOLATED`: 		Isolated.
-`ISOLATING`: 		Isolating.
-`ISOLATE_FAILED`: 	Isolation failed.
-`RESTORING`: Recovering.
-`RESTORE_FAILED`: Recovery failed.
+    * Network status.
+Unisolated  NORMAL
+ISOLATED
+isolated
+Isolation FAILED
+RESTORING isolation
+Isolation restoration failed RESTORE_FAILED
     */
     @SerializedName("ContainerNetStatus")
     @Expose
     private String ContainerNetStatus;
 
     /**
-    * Sub-status of the container
-"AGENT_OFFLINE"       // The agent is offline.
-	"NODE_DESTROYED"      // The node is terminated.
-	"CONTAINER_EXITED"    // The container exited.
-	"CONTAINER_DESTROYED" // The container was terminated.
-	"SHARED_HOST"         // The container shares the network with the server.
-	"RESOURCE_LIMIT"      // The number of resources to be isolated exceeds the limit.
-	"UNKNOW"              // The reason is unknown.
+    * container sub-status
+AGENT_OFFLINE
+	NODE_DESTROYED
+	CONTAINER_EXITED
+	"CONTAINER_DESTROYED" //Container destroyed
+	SHARED_HOST
+	RESOURCE_LIMIT
+	"UNKNOW": Unknown
     */
     @SerializedName("ContainerNetSubStatus")
     @Expose
     private String ContainerNetSubStatus;
 
     /**
-    * Container isolation operation source
+    * Container Isolation Operation Source
     */
     @SerializedName("ContainerIsolateOperationSrc")
     @Expose
     private String ContainerIsolateOperationSrc;
 
     /**
-    * MD5 checksum
-Note: This field may return null, indicating that no valid values can be obtained.
+    * MD5 Value
     */
     @SerializedName("MD5")
     @Expose
     private String MD5;
 
     /**
-    * Risk level. Valid values: `RISK_CRITICAL`, `RISK_HIGH`, `RISK_MEDIUM`, `RISK_LOW`, `RISK_NOTICE`.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Risk Level: RISK_CRITICAL, RISK_HIGH, RISK_MEDIUM, RISK_LOW, and RISK_NOTICE
     */
     @SerializedName("RiskLevel")
     @Expose
     private String RiskLevel;
 
     /**
-    * Check platform
-`1`: Tencent Cloud Security Engine.
-`2`: tav.
-`3`: binaryAi.
-`4`: Unusual behavior.
-`5`: Threat intelligence.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Detection platform
+1: Cloud Killing Engine
+2: tav
+3: binaryAi
+4: Abnormal behavior
+5: Threat Intelligence
     */
     @SerializedName("CheckPlatform")
     @Expose
     private String [] CheckPlatform;
 
     /**
-    * Node ID.
+    * Node ID
     */
     @SerializedName("NodeID")
     @Expose
     private String NodeID;
 
     /**
-    * Node name
+    * Node name.
     */
     @SerializedName("NodeName")
     @Expose
     private String NodeName;
 
     /**
-    * Pod IP
+    * pod ip
     */
     @SerializedName("PodIP")
     @Expose
     private String PodIP;
 
     /**
-    * Pod (instance) name
+    * Name of the pod (instance)
     */
     @SerializedName("PodName")
     @Expose
     private String PodName;
 
     /**
-    * ID of the cluster where the node resides
+    * Node Cluster ID
     */
     @SerializedName("ClusterID")
     @Expose
     private String ClusterID;
 
     /**
-    * Node type. Values: `NORMAL` (general node), `SUPER` (super node).
+    * Node Type. NORMAL: Common Node; SUPER: Super Node
     */
     @SerializedName("NodeType")
     @Expose
@@ -267,44 +264,51 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String PublicIP;
 
     /**
-    * Node private IP
+    * Node private network IP
     */
     @SerializedName("InnerIP")
     @Expose
     private String InnerIP;
 
     /**
-    * UID of the node
+    * Node Unique ID
     */
     @SerializedName("NodeUniqueID")
     @Expose
     private String NodeUniqueID;
 
     /**
-    * ID for the general node
+    * Common Node ID
     */
     @SerializedName("HostID")
     @Expose
     private String HostID;
 
     /**
-    * Cluster name
+    * Cluster name.
     */
     @SerializedName("ClusterName")
     @Expose
     private String ClusterName;
 
     /**
-     * Get Filename 
-     * @return FileName Filename
+    * Private IP address of the node, which is the same as the value of InnerIP.
+    */
+    @SerializedName("HostIP")
+    @Expose
+    private String HostIP;
+
+    /**
+     * Get File name 
+     * @return FileName File name
      */
     public String getFileName() {
         return this.FileName;
     }
 
     /**
-     * Set Filename
-     * @param FileName Filename
+     * Set File name
+     * @param FileName File name
      */
     public void setFileName(String FileName) {
         this.FileName = FileName;
@@ -343,16 +347,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Creation time 
-     * @return CreateTime Creation time
+     * Get Creation time. 
+     * @return CreateTime Creation time.
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set Creation time
-     * @param CreateTime Creation time
+     * Set Creation time.
+     * @param CreateTime Creation time.
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
@@ -391,140 +395,140 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Container ID 
-     * @return ContainerId Container ID
+     * Get container id 
+     * @return ContainerId container id
      */
     public String getContainerId() {
         return this.ContainerId;
     }
 
     /**
-     * Set Container ID
-     * @param ContainerId Container ID
+     * Set container id
+     * @param ContainerId container id
      */
     public void setContainerId(String ContainerId) {
         this.ContainerId = ContainerId;
     }
 
     /**
-     * Get Container status
-`RUNNING`: Running.
-`PAUSED`: Paused.
-`STOPPED`: Stopped.
-`CREATED`: Created.
-`DESTROYED`: Terminated.
-`RESTARTING`: Restarting.
-`REMOVING`: Removing. 
-     * @return ContainerStatus Container status
-`RUNNING`: Running.
-`PAUSED`: Paused.
-`STOPPED`: Stopped.
-`CREATED`: Created.
-`DESTROYED`: Terminated.
-`RESTARTING`: Restarting.
-`REMOVING`: Removing.
+     * Get Container status.
+RUNNING: running
+Suspend: PAUSED
+Stop: STOPPED
+CREATED
+DESTROYED
+RESTARTING
+Migrating: REMOVING 
+     * @return ContainerStatus Container status.
+RUNNING: running
+Suspend: PAUSED
+Stop: STOPPED
+CREATED
+DESTROYED
+RESTARTING
+Migrating: REMOVING
      */
     public String getContainerStatus() {
         return this.ContainerStatus;
     }
 
     /**
-     * Set Container status
-`RUNNING`: Running.
-`PAUSED`: Paused.
-`STOPPED`: Stopped.
-`CREATED`: Created.
-`DESTROYED`: Terminated.
-`RESTARTING`: Restarting.
-`REMOVING`: Removing.
-     * @param ContainerStatus Container status
-`RUNNING`: Running.
-`PAUSED`: Paused.
-`STOPPED`: Stopped.
-`CREATED`: Created.
-`DESTROYED`: Terminated.
-`RESTARTING`: Restarting.
-`REMOVING`: Removing.
+     * Set Container status.
+RUNNING: running
+Suspend: PAUSED
+Stop: STOPPED
+CREATED
+DESTROYED
+RESTARTING
+Migrating: REMOVING
+     * @param ContainerStatus Container status.
+RUNNING: running
+Suspend: PAUSED
+Stop: STOPPED
+CREATED
+DESTROYED
+RESTARTING
+Migrating: REMOVING
      */
     public void setContainerStatus(String ContainerStatus) {
         this.ContainerStatus = ContainerStatus;
     }
 
     /**
-     * Get Image name 
-     * @return ImageName Image name
+     * Get Image Name 
+     * @return ImageName Image Name
      */
     public String getImageName() {
         return this.ImageName;
     }
 
     /**
-     * Set Image name
-     * @param ImageName Image name
+     * Set Image Name
+     * @param ImageName Image Name
      */
     public void setImageName(String ImageName) {
         this.ImageName = ImageName;
     }
 
     /**
-     * Get Image ID 
-     * @return ImageId Image ID
+     * Get Image id 
+     * @return ImageId Image id
      */
     public String getImageId() {
         return this.ImageId;
     }
 
     /**
-     * Set Image ID
-     * @param ImageId Image ID
+     * Set Image id
+     * @param ImageId Image id
      */
     public void setImageId(String ImageId) {
         this.ImageId = ImageId;
     }
 
     /**
-     * Get `DEAL_NONE`: Pending.
-`DEAL_IGNORE`: Ignored.
-`DEAL_ADD_WHITELIST`: Allowed.
-`DEAL_DEL`: Deleted.
-`DEAL_ISOLATE`: Isolated.
-`DEAL_ISOLATING`: Isolating.
-`DEAL_ISOLATE_FAILED`: Isolation failed.
-`DEAL_RECOVERING`: Recovering.
-`DEAL_RECOVER_FAILED`: Recovery failed. 
-     * @return Status `DEAL_NONE`: Pending.
-`DEAL_IGNORE`: Ignored.
-`DEAL_ADD_WHITELIST`: Allowed.
-`DEAL_DEL`: Deleted.
-`DEAL_ISOLATE`: Isolated.
-`DEAL_ISOLATING`: Isolating.
-`DEAL_ISOLATE_FAILED`: Isolation failed.
-`DEAL_RECOVERING`: Recovering.
-`DEAL_RECOVER_FAILED`: Recovery failed.
+     * Get DEAL_NONE: File pending
+DEAL_IGNORE: Already ignored
+DEAL_ADD_WHITELIST: Add to whitelist
+DEAL_DEL: File deleted
+DEAL_ISOLATE: Has been isolated
+DEAL_ISOLATING: Isolated
+DEAL_ISOLATE_FAILED: Isolation failed
+DEAL_RECOVERING: Recovering
+DEAL_RECOVER_FAILED: Recovery failed 
+     * @return Status DEAL_NONE: File pending
+DEAL_IGNORE: Already ignored
+DEAL_ADD_WHITELIST: Add to whitelist
+DEAL_DEL: File deleted
+DEAL_ISOLATE: Has been isolated
+DEAL_ISOLATING: Isolated
+DEAL_ISOLATE_FAILED: Isolation failed
+DEAL_RECOVERING: Recovering
+DEAL_RECOVER_FAILED: Recovery failed
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set `DEAL_NONE`: Pending.
-`DEAL_IGNORE`: Ignored.
-`DEAL_ADD_WHITELIST`: Allowed.
-`DEAL_DEL`: Deleted.
-`DEAL_ISOLATE`: Isolated.
-`DEAL_ISOLATING`: Isolating.
-`DEAL_ISOLATE_FAILED`: Isolation failed.
-`DEAL_RECOVERING`: Recovering.
-`DEAL_RECOVER_FAILED`: Recovery failed.
-     * @param Status `DEAL_NONE`: Pending.
-`DEAL_IGNORE`: Ignored.
-`DEAL_ADD_WHITELIST`: Allowed.
-`DEAL_DEL`: Deleted.
-`DEAL_ISOLATE`: Isolated.
-`DEAL_ISOLATING`: Isolating.
-`DEAL_ISOLATE_FAILED`: Isolation failed.
-`DEAL_RECOVERING`: Recovering.
-`DEAL_RECOVER_FAILED`: Recovery failed.
+     * Set DEAL_NONE: File pending
+DEAL_IGNORE: Already ignored
+DEAL_ADD_WHITELIST: Add to whitelist
+DEAL_DEL: File deleted
+DEAL_ISOLATE: Has been isolated
+DEAL_ISOLATING: Isolated
+DEAL_ISOLATE_FAILED: Isolation failed
+DEAL_RECOVERING: Recovering
+DEAL_RECOVER_FAILED: Recovery failed
+     * @param Status DEAL_NONE: File pending
+DEAL_IGNORE: Already ignored
+DEAL_ADD_WHITELIST: Add to whitelist
+DEAL_DEL: File deleted
+DEAL_ISOLATE: Has been isolated
+DEAL_ISOLATING: Isolated
+DEAL_ISOLATE_FAILED: Isolation failed
+DEAL_RECOVERING: Recovering
+DEAL_RECOVER_FAILED: Recovery failed
      */
     public void setStatus(String Status) {
         this.Status = Status;
@@ -563,352 +567,340 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Solution 
-     * @return SuggestScheme Solution
+     * Get Recommended solution 
+     * @return SuggestScheme Recommended solution
      */
     public String getSuggestScheme() {
         return this.SuggestScheme;
     }
 
     /**
-     * Set Solution
-     * @param SuggestScheme Solution
+     * Set Recommended solution
+     * @param SuggestScheme Recommended solution
      */
     public void setSuggestScheme(String SuggestScheme) {
         this.SuggestScheme = SuggestScheme;
     }
 
     /**
-     * Get Sub-status of the failure:
-`FILE_NOT_FOUND`: The file does not exist.
-`FILE_ABNORMAL`: The file is abnormal.
-`FILE_ABNORMAL_DEAL_RECOVER`: The file is abnormal when recovered.
-`BACKUP_FILE_NOT_FOUND`: The backup file does not exist.
-`CONTAINER_NOT_FOUND_DEAL_ISOLATE`: The container does not exist during isolation.
-`CONTAINER_NOT_FOUND_DEAL_RECOVER`: The container does not exist during recovery.
-`TIMEOUT`: Timed out.
-`TOO_MANY`: Too many tasks.
-`OFFLINE`: Offline.
-`INTERNAL`: Internal service error.
-`VALIDATION`: Invalid parameter. 
-     * @return SubStatus Sub-status of the failure:
-`FILE_NOT_FOUND`: The file does not exist.
-`FILE_ABNORMAL`: The file is abnormal.
-`FILE_ABNORMAL_DEAL_RECOVER`: The file is abnormal when recovered.
-`BACKUP_FILE_NOT_FOUND`: The backup file does not exist.
-`CONTAINER_NOT_FOUND_DEAL_ISOLATE`: The container does not exist during isolation.
-`CONTAINER_NOT_FOUND_DEAL_RECOVER`: The container does not exist during recovery.
-`TIMEOUT`: Timed out.
-`TOO_MANY`: Too many tasks.
-`OFFLINE`: Offline.
-`INTERNAL`: Internal service error.
-`VALIDATION`: Invalid parameter.
+     * Get Failed sub-status
+FILE_NOT_FOUND: File does not exist
+FILE_ABNORMAL: abnormal file
+FILE_ABNORMAL_DEAL_RECOVER: Abnormal file when recovering file.
+BACKUP_FILE_NOT_FOUND: Backup file not found
+CONTAINER_NOT_FOUND_DEAL_ISOLATE: Container not found in isolation
+CONTAINER_NOT_FOUND_DEAL_RECOVER: Container not found when recovering
+TIMEOUT: Timeout
+TOO_MANY: Too many tasks
+OFFLINE: Offline
+INTERNAL Server Error
+VALIDATION: Invalid parameter 
+     * @return SubStatus Failed sub-status
+FILE_NOT_FOUND: File does not exist
+FILE_ABNORMAL: abnormal file
+FILE_ABNORMAL_DEAL_RECOVER: Abnormal file when recovering file.
+BACKUP_FILE_NOT_FOUND: Backup file not found
+CONTAINER_NOT_FOUND_DEAL_ISOLATE: Container not found in isolation
+CONTAINER_NOT_FOUND_DEAL_RECOVER: Container not found when recovering
+TIMEOUT: Timeout
+TOO_MANY: Too many tasks
+OFFLINE: Offline
+INTERNAL Server Error
+VALIDATION: Invalid parameter
      */
     public String getSubStatus() {
         return this.SubStatus;
     }
 
     /**
-     * Set Sub-status of the failure:
-`FILE_NOT_FOUND`: The file does not exist.
-`FILE_ABNORMAL`: The file is abnormal.
-`FILE_ABNORMAL_DEAL_RECOVER`: The file is abnormal when recovered.
-`BACKUP_FILE_NOT_FOUND`: The backup file does not exist.
-`CONTAINER_NOT_FOUND_DEAL_ISOLATE`: The container does not exist during isolation.
-`CONTAINER_NOT_FOUND_DEAL_RECOVER`: The container does not exist during recovery.
-`TIMEOUT`: Timed out.
-`TOO_MANY`: Too many tasks.
-`OFFLINE`: Offline.
-`INTERNAL`: Internal service error.
-`VALIDATION`: Invalid parameter.
-     * @param SubStatus Sub-status of the failure:
-`FILE_NOT_FOUND`: The file does not exist.
-`FILE_ABNORMAL`: The file is abnormal.
-`FILE_ABNORMAL_DEAL_RECOVER`: The file is abnormal when recovered.
-`BACKUP_FILE_NOT_FOUND`: The backup file does not exist.
-`CONTAINER_NOT_FOUND_DEAL_ISOLATE`: The container does not exist during isolation.
-`CONTAINER_NOT_FOUND_DEAL_RECOVER`: The container does not exist during recovery.
-`TIMEOUT`: Timed out.
-`TOO_MANY`: Too many tasks.
-`OFFLINE`: Offline.
-`INTERNAL`: Internal service error.
-`VALIDATION`: Invalid parameter.
+     * Set Failed sub-status
+FILE_NOT_FOUND: File does not exist
+FILE_ABNORMAL: abnormal file
+FILE_ABNORMAL_DEAL_RECOVER: Abnormal file when recovering file.
+BACKUP_FILE_NOT_FOUND: Backup file not found
+CONTAINER_NOT_FOUND_DEAL_ISOLATE: Container not found in isolation
+CONTAINER_NOT_FOUND_DEAL_RECOVER: Container not found when recovering
+TIMEOUT: Timeout
+TOO_MANY: Too many tasks
+OFFLINE: Offline
+INTERNAL Server Error
+VALIDATION: Invalid parameter
+     * @param SubStatus Failed sub-status
+FILE_NOT_FOUND: File does not exist
+FILE_ABNORMAL: abnormal file
+FILE_ABNORMAL_DEAL_RECOVER: Abnormal file when recovering file.
+BACKUP_FILE_NOT_FOUND: Backup file not found
+CONTAINER_NOT_FOUND_DEAL_ISOLATE: Container not found in isolation
+CONTAINER_NOT_FOUND_DEAL_RECOVER: Container not found when recovering
+TIMEOUT: Timeout
+TOO_MANY: Too many tasks
+OFFLINE: Offline
+INTERNAL Server Error
+VALIDATION: Invalid parameter
      */
     public void setSubStatus(String SubStatus) {
         this.SubStatus = SubStatus;
     }
 
     /**
-     * Get Network status
-`NORMAL`: 	Not isolated.
-`ISOLATED`: 		Isolated.
-`ISOLATING`: 		Isolating.
-`ISOLATE_FAILED`: 	Isolation failed.
-`RESTORING`: Recovering.
-`RESTORE_FAILED`: Recovery failed. 
-     * @return ContainerNetStatus Network status
-`NORMAL`: 	Not isolated.
-`ISOLATED`: 		Isolated.
-`ISOLATING`: 		Isolating.
-`ISOLATE_FAILED`: 	Isolation failed.
-`RESTORING`: Recovering.
-`RESTORE_FAILED`: Recovery failed.
+     * Get Network status.
+Unisolated  NORMAL
+ISOLATED
+isolated
+Isolation FAILED
+RESTORING isolation
+Isolation restoration failed RESTORE_FAILED 
+     * @return ContainerNetStatus Network status.
+Unisolated  NORMAL
+ISOLATED
+isolated
+Isolation FAILED
+RESTORING isolation
+Isolation restoration failed RESTORE_FAILED
      */
     public String getContainerNetStatus() {
         return this.ContainerNetStatus;
     }
 
     /**
-     * Set Network status
-`NORMAL`: 	Not isolated.
-`ISOLATED`: 		Isolated.
-`ISOLATING`: 		Isolating.
-`ISOLATE_FAILED`: 	Isolation failed.
-`RESTORING`: Recovering.
-`RESTORE_FAILED`: Recovery failed.
-     * @param ContainerNetStatus Network status
-`NORMAL`: 	Not isolated.
-`ISOLATED`: 		Isolated.
-`ISOLATING`: 		Isolating.
-`ISOLATE_FAILED`: 	Isolation failed.
-`RESTORING`: Recovering.
-`RESTORE_FAILED`: Recovery failed.
+     * Set Network status.
+Unisolated  NORMAL
+ISOLATED
+isolated
+Isolation FAILED
+RESTORING isolation
+Isolation restoration failed RESTORE_FAILED
+     * @param ContainerNetStatus Network status.
+Unisolated  NORMAL
+ISOLATED
+isolated
+Isolation FAILED
+RESTORING isolation
+Isolation restoration failed RESTORE_FAILED
      */
     public void setContainerNetStatus(String ContainerNetStatus) {
         this.ContainerNetStatus = ContainerNetStatus;
     }
 
     /**
-     * Get Sub-status of the container
-"AGENT_OFFLINE"       // The agent is offline.
-	"NODE_DESTROYED"      // The node is terminated.
-	"CONTAINER_EXITED"    // The container exited.
-	"CONTAINER_DESTROYED" // The container was terminated.
-	"SHARED_HOST"         // The container shares the network with the server.
-	"RESOURCE_LIMIT"      // The number of resources to be isolated exceeds the limit.
-	"UNKNOW"              // The reason is unknown. 
-     * @return ContainerNetSubStatus Sub-status of the container
-"AGENT_OFFLINE"       // The agent is offline.
-	"NODE_DESTROYED"      // The node is terminated.
-	"CONTAINER_EXITED"    // The container exited.
-	"CONTAINER_DESTROYED" // The container was terminated.
-	"SHARED_HOST"         // The container shares the network with the server.
-	"RESOURCE_LIMIT"      // The number of resources to be isolated exceeds the limit.
-	"UNKNOW"              // The reason is unknown.
+     * Get container sub-status
+AGENT_OFFLINE
+	NODE_DESTROYED
+	CONTAINER_EXITED
+	"CONTAINER_DESTROYED" //Container destroyed
+	SHARED_HOST
+	RESOURCE_LIMIT
+	"UNKNOW": Unknown 
+     * @return ContainerNetSubStatus container sub-status
+AGENT_OFFLINE
+	NODE_DESTROYED
+	CONTAINER_EXITED
+	"CONTAINER_DESTROYED" //Container destroyed
+	SHARED_HOST
+	RESOURCE_LIMIT
+	"UNKNOW": Unknown
      */
     public String getContainerNetSubStatus() {
         return this.ContainerNetSubStatus;
     }
 
     /**
-     * Set Sub-status of the container
-"AGENT_OFFLINE"       // The agent is offline.
-	"NODE_DESTROYED"      // The node is terminated.
-	"CONTAINER_EXITED"    // The container exited.
-	"CONTAINER_DESTROYED" // The container was terminated.
-	"SHARED_HOST"         // The container shares the network with the server.
-	"RESOURCE_LIMIT"      // The number of resources to be isolated exceeds the limit.
-	"UNKNOW"              // The reason is unknown.
-     * @param ContainerNetSubStatus Sub-status of the container
-"AGENT_OFFLINE"       // The agent is offline.
-	"NODE_DESTROYED"      // The node is terminated.
-	"CONTAINER_EXITED"    // The container exited.
-	"CONTAINER_DESTROYED" // The container was terminated.
-	"SHARED_HOST"         // The container shares the network with the server.
-	"RESOURCE_LIMIT"      // The number of resources to be isolated exceeds the limit.
-	"UNKNOW"              // The reason is unknown.
+     * Set container sub-status
+AGENT_OFFLINE
+	NODE_DESTROYED
+	CONTAINER_EXITED
+	"CONTAINER_DESTROYED" //Container destroyed
+	SHARED_HOST
+	RESOURCE_LIMIT
+	"UNKNOW": Unknown
+     * @param ContainerNetSubStatus container sub-status
+AGENT_OFFLINE
+	NODE_DESTROYED
+	CONTAINER_EXITED
+	"CONTAINER_DESTROYED" //Container destroyed
+	SHARED_HOST
+	RESOURCE_LIMIT
+	"UNKNOW": Unknown
      */
     public void setContainerNetSubStatus(String ContainerNetSubStatus) {
         this.ContainerNetSubStatus = ContainerNetSubStatus;
     }
 
     /**
-     * Get Container isolation operation source 
-     * @return ContainerIsolateOperationSrc Container isolation operation source
+     * Get Container Isolation Operation Source 
+     * @return ContainerIsolateOperationSrc Container Isolation Operation Source
      */
     public String getContainerIsolateOperationSrc() {
         return this.ContainerIsolateOperationSrc;
     }
 
     /**
-     * Set Container isolation operation source
-     * @param ContainerIsolateOperationSrc Container isolation operation source
+     * Set Container Isolation Operation Source
+     * @param ContainerIsolateOperationSrc Container Isolation Operation Source
      */
     public void setContainerIsolateOperationSrc(String ContainerIsolateOperationSrc) {
         this.ContainerIsolateOperationSrc = ContainerIsolateOperationSrc;
     }
 
     /**
-     * Get MD5 checksum
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return MD5 MD5 checksum
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get MD5 Value 
+     * @return MD5 MD5 Value
      */
     public String getMD5() {
         return this.MD5;
     }
 
     /**
-     * Set MD5 checksum
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param MD5 MD5 checksum
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set MD5 Value
+     * @param MD5 MD5 Value
      */
     public void setMD5(String MD5) {
         this.MD5 = MD5;
     }
 
     /**
-     * Get Risk level. Valid values: `RISK_CRITICAL`, `RISK_HIGH`, `RISK_MEDIUM`, `RISK_LOW`, `RISK_NOTICE`.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return RiskLevel Risk level. Valid values: `RISK_CRITICAL`, `RISK_HIGH`, `RISK_MEDIUM`, `RISK_LOW`, `RISK_NOTICE`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Risk Level: RISK_CRITICAL, RISK_HIGH, RISK_MEDIUM, RISK_LOW, and RISK_NOTICE 
+     * @return RiskLevel Risk Level: RISK_CRITICAL, RISK_HIGH, RISK_MEDIUM, RISK_LOW, and RISK_NOTICE
      */
     public String getRiskLevel() {
         return this.RiskLevel;
     }
 
     /**
-     * Set Risk level. Valid values: `RISK_CRITICAL`, `RISK_HIGH`, `RISK_MEDIUM`, `RISK_LOW`, `RISK_NOTICE`.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param RiskLevel Risk level. Valid values: `RISK_CRITICAL`, `RISK_HIGH`, `RISK_MEDIUM`, `RISK_LOW`, `RISK_NOTICE`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Risk Level: RISK_CRITICAL, RISK_HIGH, RISK_MEDIUM, RISK_LOW, and RISK_NOTICE
+     * @param RiskLevel Risk Level: RISK_CRITICAL, RISK_HIGH, RISK_MEDIUM, RISK_LOW, and RISK_NOTICE
      */
     public void setRiskLevel(String RiskLevel) {
         this.RiskLevel = RiskLevel;
     }
 
     /**
-     * Get Check platform
-`1`: Tencent Cloud Security Engine.
-`2`: tav.
-`3`: binaryAi.
-`4`: Unusual behavior.
-`5`: Threat intelligence.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return CheckPlatform Check platform
-`1`: Tencent Cloud Security Engine.
-`2`: tav.
-`3`: binaryAi.
-`4`: Unusual behavior.
-`5`: Threat intelligence.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Detection platform
+1: Cloud Killing Engine
+2: tav
+3: binaryAi
+4: Abnormal behavior
+5: Threat Intelligence 
+     * @return CheckPlatform Detection platform
+1: Cloud Killing Engine
+2: tav
+3: binaryAi
+4: Abnormal behavior
+5: Threat Intelligence
      */
     public String [] getCheckPlatform() {
         return this.CheckPlatform;
     }
 
     /**
-     * Set Check platform
-`1`: Tencent Cloud Security Engine.
-`2`: tav.
-`3`: binaryAi.
-`4`: Unusual behavior.
-`5`: Threat intelligence.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param CheckPlatform Check platform
-`1`: Tencent Cloud Security Engine.
-`2`: tav.
-`3`: binaryAi.
-`4`: Unusual behavior.
-`5`: Threat intelligence.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Detection platform
+1: Cloud Killing Engine
+2: tav
+3: binaryAi
+4: Abnormal behavior
+5: Threat Intelligence
+     * @param CheckPlatform Detection platform
+1: Cloud Killing Engine
+2: tav
+3: binaryAi
+4: Abnormal behavior
+5: Threat Intelligence
      */
     public void setCheckPlatform(String [] CheckPlatform) {
         this.CheckPlatform = CheckPlatform;
     }
 
     /**
-     * Get Node ID. 
-     * @return NodeID Node ID.
+     * Get Node ID 
+     * @return NodeID Node ID
      */
     public String getNodeID() {
         return this.NodeID;
     }
 
     /**
-     * Set Node ID.
-     * @param NodeID Node ID.
+     * Set Node ID
+     * @param NodeID Node ID
      */
     public void setNodeID(String NodeID) {
         this.NodeID = NodeID;
     }
 
     /**
-     * Get Node name 
-     * @return NodeName Node name
+     * Get Node name. 
+     * @return NodeName Node name.
      */
     public String getNodeName() {
         return this.NodeName;
     }
 
     /**
-     * Set Node name
-     * @param NodeName Node name
+     * Set Node name.
+     * @param NodeName Node name.
      */
     public void setNodeName(String NodeName) {
         this.NodeName = NodeName;
     }
 
     /**
-     * Get Pod IP 
-     * @return PodIP Pod IP
+     * Get pod ip 
+     * @return PodIP pod ip
      */
     public String getPodIP() {
         return this.PodIP;
     }
 
     /**
-     * Set Pod IP
-     * @param PodIP Pod IP
+     * Set pod ip
+     * @param PodIP pod ip
      */
     public void setPodIP(String PodIP) {
         this.PodIP = PodIP;
     }
 
     /**
-     * Get Pod (instance) name 
-     * @return PodName Pod (instance) name
+     * Get Name of the pod (instance) 
+     * @return PodName Name of the pod (instance)
      */
     public String getPodName() {
         return this.PodName;
     }
 
     /**
-     * Set Pod (instance) name
-     * @param PodName Pod (instance) name
+     * Set Name of the pod (instance)
+     * @param PodName Name of the pod (instance)
      */
     public void setPodName(String PodName) {
         this.PodName = PodName;
     }
 
     /**
-     * Get ID of the cluster where the node resides 
-     * @return ClusterID ID of the cluster where the node resides
+     * Get Node Cluster ID 
+     * @return ClusterID Node Cluster ID
      */
     public String getClusterID() {
         return this.ClusterID;
     }
 
     /**
-     * Set ID of the cluster where the node resides
-     * @param ClusterID ID of the cluster where the node resides
+     * Set Node Cluster ID
+     * @param ClusterID Node Cluster ID
      */
     public void setClusterID(String ClusterID) {
         this.ClusterID = ClusterID;
     }
 
     /**
-     * Get Node type. Values: `NORMAL` (general node), `SUPER` (super node). 
-     * @return NodeType Node type. Values: `NORMAL` (general node), `SUPER` (super node).
+     * Get Node Type. NORMAL: Common Node; SUPER: Super Node 
+     * @return NodeType Node Type. NORMAL: Common Node; SUPER: Super Node
      */
     public String getNodeType() {
         return this.NodeType;
     }
 
     /**
-     * Set Node type. Values: `NORMAL` (general node), `SUPER` (super node).
-     * @param NodeType Node type. Values: `NORMAL` (general node), `SUPER` (super node).
+     * Set Node Type. NORMAL: Common Node; SUPER: Super Node
+     * @param NodeType Node Type. NORMAL: Common Node; SUPER: Super Node
      */
     public void setNodeType(String NodeType) {
         this.NodeType = NodeType;
@@ -931,67 +923,83 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Node private IP 
-     * @return InnerIP Node private IP
+     * Get Node private network IP 
+     * @return InnerIP Node private network IP
      */
     public String getInnerIP() {
         return this.InnerIP;
     }
 
     /**
-     * Set Node private IP
-     * @param InnerIP Node private IP
+     * Set Node private network IP
+     * @param InnerIP Node private network IP
      */
     public void setInnerIP(String InnerIP) {
         this.InnerIP = InnerIP;
     }
 
     /**
-     * Get UID of the node 
-     * @return NodeUniqueID UID of the node
+     * Get Node Unique ID 
+     * @return NodeUniqueID Node Unique ID
      */
     public String getNodeUniqueID() {
         return this.NodeUniqueID;
     }
 
     /**
-     * Set UID of the node
-     * @param NodeUniqueID UID of the node
+     * Set Node Unique ID
+     * @param NodeUniqueID Node Unique ID
      */
     public void setNodeUniqueID(String NodeUniqueID) {
         this.NodeUniqueID = NodeUniqueID;
     }
 
     /**
-     * Get ID for the general node 
-     * @return HostID ID for the general node
+     * Get Common Node ID 
+     * @return HostID Common Node ID
      */
     public String getHostID() {
         return this.HostID;
     }
 
     /**
-     * Set ID for the general node
-     * @param HostID ID for the general node
+     * Set Common Node ID
+     * @param HostID Common Node ID
      */
     public void setHostID(String HostID) {
         this.HostID = HostID;
     }
 
     /**
-     * Get Cluster name 
-     * @return ClusterName Cluster name
+     * Get Cluster name. 
+     * @return ClusterName Cluster name.
      */
     public String getClusterName() {
         return this.ClusterName;
     }
 
     /**
-     * Set Cluster name
-     * @param ClusterName Cluster name
+     * Set Cluster name.
+     * @param ClusterName Cluster name.
      */
     public void setClusterName(String ClusterName) {
         this.ClusterName = ClusterName;
+    }
+
+    /**
+     * Get Private IP address of the node, which is the same as the value of InnerIP. 
+     * @return HostIP Private IP address of the node, which is the same as the value of InnerIP.
+     */
+    public String getHostIP() {
+        return this.HostIP;
+    }
+
+    /**
+     * Set Private IP address of the node, which is the same as the value of InnerIP.
+     * @param HostIP Private IP address of the node, which is the same as the value of InnerIP.
+     */
+    public void setHostIP(String HostIP) {
+        this.HostIP = HostIP;
     }
 
     public VirusInfo() {
@@ -1101,6 +1109,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.ClusterName != null) {
             this.ClusterName = new String(source.ClusterName);
         }
+        if (source.HostIP != null) {
+            this.HostIP = new String(source.HostIP);
+        }
     }
 
 
@@ -1140,6 +1151,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "NodeUniqueID", this.NodeUniqueID);
         this.setParamSimple(map, prefix + "HostID", this.HostID);
         this.setParamSimple(map, prefix + "ClusterName", this.ClusterName);
+        this.setParamSimple(map, prefix + "HostIP", this.HostIP);
 
     }
 }

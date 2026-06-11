@@ -81,7 +81,7 @@ public class VulStoreListInfo extends AbstractModel {
 
     /**
     * Whether automatic vulnerability fixing is supported
-0: not supported on Windows/Linux; 1: supported on Windows/Linux; 2: supported on Linux only; 3: supported on Windows only.
+0 - Windows/Linux both off; 1 - Windows/Linux both on; 2 - Linux only; 3 - Windows only
     */
     @SerializedName("FixSwitch")
     @Expose
@@ -225,9 +225,9 @@ public class VulStoreListInfo extends AbstractModel {
 
     /**
      * Get Whether automatic vulnerability fixing is supported
-0: not supported on Windows/Linux; 1: supported on Windows/Linux; 2: supported on Linux only; 3: supported on Windows only. 
+0 - Windows/Linux both off; 1 - Windows/Linux both on; 2 - Linux only; 3 - Windows only 
      * @return FixSwitch Whether automatic vulnerability fixing is supported
-0: not supported on Windows/Linux; 1: supported on Windows/Linux; 2: supported on Linux only; 3: supported on Windows only.
+0 - Windows/Linux both off; 1 - Windows/Linux both on; 2 - Linux only; 3 - Windows only
      */
     public Long getFixSwitch() {
         return this.FixSwitch;
@@ -235,9 +235,9 @@ public class VulStoreListInfo extends AbstractModel {
 
     /**
      * Set Whether automatic vulnerability fixing is supported
-0: not supported on Windows/Linux; 1: supported on Windows/Linux; 2: supported on Linux only; 3: supported on Windows only.
+0 - Windows/Linux both off; 1 - Windows/Linux both on; 2 - Linux only; 3 - Windows only
      * @param FixSwitch Whether automatic vulnerability fixing is supported
-0: not supported on Windows/Linux; 1: supported on Windows/Linux; 2: supported on Linux only; 3: supported on Windows only.
+0 - Windows/Linux both off; 1 - Windows/Linux both on; 2 - Linux only; 3 - Windows only
      */
     public void setFixSwitch(Long FixSwitch) {
         this.FixSwitch = FixSwitch;

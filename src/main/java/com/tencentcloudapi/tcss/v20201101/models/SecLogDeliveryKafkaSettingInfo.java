@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class SecLogDeliveryKafkaSettingInfo extends AbstractModel {
 
     /**
-    * Log type
+    * Security log module.
     */
     @SerializedName("LogType")
     @Expose
@@ -39,7 +39,6 @@ public class SecLogDeliveryKafkaSettingInfo extends AbstractModel {
 
     /**
     * Topic name
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("TopicName")
     @Expose
@@ -53,16 +52,30 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Boolean State;
 
     /**
-     * Get Log type 
-     * @return LogType Log type
+    * Log type
+    */
+    @SerializedName("SubLogType")
+    @Expose
+    private String [] SubLogType;
+
+    /**
+    * Error message
+    */
+    @SerializedName("ErrMsg")
+    @Expose
+    private String ErrMsg;
+
+    /**
+     * Get Security log module. 
+     * @return LogType Security log module.
      */
     public String getLogType() {
         return this.LogType;
     }
 
     /**
-     * Set Log type
-     * @param LogType Log type
+     * Set Security log module.
+     * @param LogType Security log module.
      */
     public void setLogType(String LogType) {
         this.LogType = LogType;
@@ -85,10 +98,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Topic name
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Topic name 
      * @return TopicName Topic name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getTopicName() {
         return this.TopicName;
@@ -96,9 +107,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Topic name
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param TopicName Topic name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setTopicName(String TopicName) {
         this.TopicName = TopicName;
@@ -118,6 +127,38 @@ Note: This field may return null, indicating that no valid values can be obtaine
      */
     public void setState(Boolean State) {
         this.State = State;
+    }
+
+    /**
+     * Get Log type 
+     * @return SubLogType Log type
+     */
+    public String [] getSubLogType() {
+        return this.SubLogType;
+    }
+
+    /**
+     * Set Log type
+     * @param SubLogType Log type
+     */
+    public void setSubLogType(String [] SubLogType) {
+        this.SubLogType = SubLogType;
+    }
+
+    /**
+     * Get Error message 
+     * @return ErrMsg Error message
+     */
+    public String getErrMsg() {
+        return this.ErrMsg;
+    }
+
+    /**
+     * Set Error message
+     * @param ErrMsg Error message
+     */
+    public void setErrMsg(String ErrMsg) {
+        this.ErrMsg = ErrMsg;
     }
 
     public SecLogDeliveryKafkaSettingInfo() {
@@ -140,6 +181,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.State != null) {
             this.State = new Boolean(source.State);
         }
+        if (source.SubLogType != null) {
+            this.SubLogType = new String[source.SubLogType.length];
+            for (int i = 0; i < source.SubLogType.length; i++) {
+                this.SubLogType[i] = new String(source.SubLogType[i]);
+            }
+        }
+        if (source.ErrMsg != null) {
+            this.ErrMsg = new String(source.ErrMsg);
+        }
     }
 
 
@@ -151,6 +201,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "TopicID", this.TopicID);
         this.setParamSimple(map, prefix + "TopicName", this.TopicName);
         this.setParamSimple(map, prefix + "State", this.State);
+        this.setParamArraySimple(map, prefix + "SubLogType.", this.SubLogType);
+        this.setParamSimple(map, prefix + "ErrMsg", this.ErrMsg);
 
     }
 }

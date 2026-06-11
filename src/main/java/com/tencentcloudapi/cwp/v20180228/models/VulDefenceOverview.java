@@ -45,8 +45,7 @@ public class VulDefenceOverview extends AbstractModel {
     private Long ExceptionCount;
 
     /**
-    * Daily attack trends
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Daily attack trend
     */
     @SerializedName("AttackCounts")
     @Expose
@@ -54,7 +53,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Daily defense trends
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("DefendCounts")
     @Expose
@@ -62,7 +60,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Date
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Date")
     @Expose
@@ -117,30 +114,24 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Daily attack trends
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return AttackCounts Daily attack trends
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Daily attack trend 
+     * @return AttackCounts Daily attack trend
      */
     public Long [] getAttackCounts() {
         return this.AttackCounts;
     }
 
     /**
-     * Set Daily attack trends
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param AttackCounts Daily attack trends
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Daily attack trend
+     * @param AttackCounts Daily attack trend
      */
     public void setAttackCounts(Long [] AttackCounts) {
         this.AttackCounts = AttackCounts;
     }
 
     /**
-     * Get Daily defense trends
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Daily defense trends 
      * @return DefendCounts Daily defense trends
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long [] getDefendCounts() {
         return this.DefendCounts;
@@ -148,19 +139,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Daily defense trends
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param DefendCounts Daily defense trends
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setDefendCounts(Long [] DefendCounts) {
         this.DefendCounts = DefendCounts;
     }
 
     /**
-     * Get Date
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Date 
      * @return Date Date
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String [] getDate() {
         return this.Date;
@@ -168,9 +155,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Date
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Date Date
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setDate(String [] Date) {
         this.Date = Date;

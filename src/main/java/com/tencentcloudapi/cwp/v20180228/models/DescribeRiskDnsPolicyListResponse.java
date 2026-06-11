@@ -31,8 +31,7 @@ public class DescribeRiskDnsPolicyListResponse extends AbstractModel {
     private Long TotalCount;
 
     /**
-    * Data list
-Note: This field may return null, indicating that no valid values can be obtained.
+    * List
     */
     @SerializedName("List")
     @Expose
@@ -62,20 +61,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Data list
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return List Data list
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get List 
+     * @return List List
      */
     public RiskDnsPolicy [] getList() {
         return this.List;
     }
 
     /**
-     * Set Data list
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param List Data list
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set List
+     * @param List List
      */
     public void setList(RiskDnsPolicy [] List) {
         this.List = List;

@@ -25,7 +25,6 @@ public class DescribeVulFixStatusResponse extends AbstractModel {
 
     /**
     * Fixing start time
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("FixStartTime")
     @Expose
@@ -33,7 +32,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Fixing end time. If this parameter is left blank, fixing is not ended.
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("FixEndTime")
     @Expose
@@ -41,7 +39,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Number of successfully fixed hosts
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("FixSuccessCnt")
     @Expose
@@ -70,7 +67,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Status list of snapshots to be fixed
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("SnapshotList")
     @Expose
@@ -78,7 +74,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Details list of vulnerabilities to be fixed
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("VulFixList")
     @Expose
@@ -92,7 +87,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long SnapshotProgress;
 
     /**
-    * Fixing progress (0-100)
+    * Fixing progress (0-100).
     */
     @SerializedName("FixProgress")
     @Expose
@@ -113,15 +108,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long IsRetrySnapshot;
 
     /**
-    * Number of snapshots failed to be created
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Snapshot creation failures
     */
     @SerializedName("SnapshotFailCnt")
     @Expose
     private Long SnapshotFailCnt;
 
     /**
-    * Whether retry is allowed. 0: not allowed; 1: allowed.Note: This field may return null, indicating that no valid values can be obtained.
+    * Whether to allow retry 0: not allowed 1: allowed
     */
     @SerializedName("IsAllowRetry")
     @Expose
@@ -135,10 +129,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Fixing start time
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Fixing start time 
      * @return FixStartTime Fixing start time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getFixStartTime() {
         return this.FixStartTime;
@@ -146,19 +138,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Fixing start time
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param FixStartTime Fixing start time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setFixStartTime(String FixStartTime) {
         this.FixStartTime = FixStartTime;
     }
 
     /**
-     * Get Fixing end time. If this parameter is left blank, fixing is not ended.
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Fixing end time. If this parameter is left blank, fixing is not ended. 
      * @return FixEndTime Fixing end time. If this parameter is left blank, fixing is not ended.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getFixEndTime() {
         return this.FixEndTime;
@@ -166,19 +154,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Fixing end time. If this parameter is left blank, fixing is not ended.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param FixEndTime Fixing end time. If this parameter is left blank, fixing is not ended.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setFixEndTime(String FixEndTime) {
         this.FixEndTime = FixEndTime;
     }
 
     /**
-     * Get Number of successfully fixed hosts
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Number of successfully fixed hosts 
      * @return FixSuccessCnt Number of successfully fixed hosts
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getFixSuccessCnt() {
         return this.FixSuccessCnt;
@@ -186,9 +170,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Number of successfully fixed hosts
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param FixSuccessCnt Number of successfully fixed hosts
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setFixSuccessCnt(Long FixSuccessCnt) {
         this.FixSuccessCnt = FixSuccessCnt;
@@ -243,10 +225,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Status list of snapshots to be fixed
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Status list of snapshots to be fixed 
      * @return SnapshotList Status list of snapshots to be fixed
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public VulFixStatusSnapshotInfo [] getSnapshotList() {
         return this.SnapshotList;
@@ -254,19 +234,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Status list of snapshots to be fixed
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param SnapshotList Status list of snapshots to be fixed
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setSnapshotList(VulFixStatusSnapshotInfo [] SnapshotList) {
         this.SnapshotList = SnapshotList;
     }
 
     /**
-     * Get Details list of vulnerabilities to be fixed
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Details list of vulnerabilities to be fixed 
      * @return VulFixList Details list of vulnerabilities to be fixed
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public VulFixStatusInfo [] getVulFixList() {
         return this.VulFixList;
@@ -274,9 +250,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Details list of vulnerabilities to be fixed
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param VulFixList Details list of vulnerabilities to be fixed
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setVulFixList(VulFixStatusInfo [] VulFixList) {
         this.VulFixList = VulFixList;
@@ -299,16 +273,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Fixing progress (0-100) 
-     * @return FixProgress Fixing progress (0-100)
+     * Get Fixing progress (0-100). 
+     * @return FixProgress Fixing progress (0-100).
      */
     public Long getFixProgress() {
         return this.FixProgress;
     }
 
     /**
-     * Set Fixing progress (0-100)
-     * @param FixProgress Fixing progress (0-100)
+     * Set Fixing progress (0-100).
+     * @param FixProgress Fixing progress (0-100).
      */
     public void setFixProgress(Long FixProgress) {
         this.FixProgress = FixProgress;
@@ -347,36 +321,32 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Number of snapshots failed to be created
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return SnapshotFailCnt Number of snapshots failed to be created
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Snapshot creation failures 
+     * @return SnapshotFailCnt Snapshot creation failures
      */
     public Long getSnapshotFailCnt() {
         return this.SnapshotFailCnt;
     }
 
     /**
-     * Set Number of snapshots failed to be created
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param SnapshotFailCnt Number of snapshots failed to be created
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Snapshot creation failures
+     * @param SnapshotFailCnt Snapshot creation failures
      */
     public void setSnapshotFailCnt(Long SnapshotFailCnt) {
         this.SnapshotFailCnt = SnapshotFailCnt;
     }
 
     /**
-     * Get Whether retry is allowed. 0: not allowed; 1: allowed.Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return IsAllowRetry Whether retry is allowed. 0: not allowed; 1: allowed.Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Whether to allow retry 0: not allowed 1: allowed 
+     * @return IsAllowRetry Whether to allow retry 0: not allowed 1: allowed
      */
     public Long getIsAllowRetry() {
         return this.IsAllowRetry;
     }
 
     /**
-     * Set Whether retry is allowed. 0: not allowed; 1: allowed.Note: This field may return null, indicating that no valid values can be obtained.
-     * @param IsAllowRetry Whether retry is allowed. 0: not allowed; 1: allowed.Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Whether to allow retry 0: not allowed 1: allowed
+     * @param IsAllowRetry Whether to allow retry 0: not allowed 1: allowed
      */
     public void setIsAllowRetry(Long IsAllowRetry) {
         this.IsAllowRetry = IsAllowRetry;

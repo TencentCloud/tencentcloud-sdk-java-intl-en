@@ -25,33 +25,70 @@ public class WebHookReceiver extends AbstractModel {
 
     /**
     * id
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Id")
     @Expose
     private Long Id;
 
     /**
-    * Recipient name
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Receiver name
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * Webhook URL
-Note: This field may return null, indicating that no valid values can be obtained.
+    * webhook URL
     */
     @SerializedName("Addr")
     @Expose
     private String Addr;
 
     /**
-     * Get id
-Note: This field may return null, indicating that no valid values can be obtained. 
+    * Type
+    */
+    @SerializedName("Type")
+    @Expose
+    private Long Type;
+
+    /**
+    * target region
+    */
+    @SerializedName("SCFRegion")
+    @Expose
+    private String SCFRegion;
+
+    /**
+    * Namespace
+    */
+    @SerializedName("Namespace")
+    @Expose
+    private String Namespace;
+
+    /**
+    * function name
+    */
+    @SerializedName("FunctionName")
+    @Expose
+    private String FunctionName;
+
+    /**
+    * Version
+    */
+    @SerializedName("FunctionVersion")
+    @Expose
+    private String FunctionVersion;
+
+    /**
+    * Alias
+    */
+    @SerializedName("Alias")
+    @Expose
+    private String Alias;
+
+    /**
+     * Get id 
      * @return Id id
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getId() {
         return this.Id;
@@ -59,52 +96,138 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set id
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Id id
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setId(Long Id) {
         this.Id = Id;
     }
 
     /**
-     * Get Recipient name
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Name Recipient name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Receiver name 
+     * @return Name Receiver name
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Recipient name
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Name Recipient name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Receiver name
+     * @param Name Receiver name
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get Webhook URL
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Addr Webhook URL
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get webhook URL 
+     * @return Addr webhook URL
      */
     public String getAddr() {
         return this.Addr;
     }
 
     /**
-     * Set Webhook URL
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Addr Webhook URL
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set webhook URL
+     * @param Addr webhook URL
      */
     public void setAddr(String Addr) {
         this.Addr = Addr;
+    }
+
+    /**
+     * Get Type 
+     * @return Type Type
+     */
+    public Long getType() {
+        return this.Type;
+    }
+
+    /**
+     * Set Type
+     * @param Type Type
+     */
+    public void setType(Long Type) {
+        this.Type = Type;
+    }
+
+    /**
+     * Get target region 
+     * @return SCFRegion target region
+     */
+    public String getSCFRegion() {
+        return this.SCFRegion;
+    }
+
+    /**
+     * Set target region
+     * @param SCFRegion target region
+     */
+    public void setSCFRegion(String SCFRegion) {
+        this.SCFRegion = SCFRegion;
+    }
+
+    /**
+     * Get Namespace 
+     * @return Namespace Namespace
+     */
+    public String getNamespace() {
+        return this.Namespace;
+    }
+
+    /**
+     * Set Namespace
+     * @param Namespace Namespace
+     */
+    public void setNamespace(String Namespace) {
+        this.Namespace = Namespace;
+    }
+
+    /**
+     * Get function name 
+     * @return FunctionName function name
+     */
+    public String getFunctionName() {
+        return this.FunctionName;
+    }
+
+    /**
+     * Set function name
+     * @param FunctionName function name
+     */
+    public void setFunctionName(String FunctionName) {
+        this.FunctionName = FunctionName;
+    }
+
+    /**
+     * Get Version 
+     * @return FunctionVersion Version
+     */
+    public String getFunctionVersion() {
+        return this.FunctionVersion;
+    }
+
+    /**
+     * Set Version
+     * @param FunctionVersion Version
+     */
+    public void setFunctionVersion(String FunctionVersion) {
+        this.FunctionVersion = FunctionVersion;
+    }
+
+    /**
+     * Get Alias 
+     * @return Alias Alias
+     */
+    public String getAlias() {
+        return this.Alias;
+    }
+
+    /**
+     * Set Alias
+     * @param Alias Alias
+     */
+    public void setAlias(String Alias) {
+        this.Alias = Alias;
     }
 
     public WebHookReceiver() {
@@ -124,6 +247,24 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.Addr != null) {
             this.Addr = new String(source.Addr);
         }
+        if (source.Type != null) {
+            this.Type = new Long(source.Type);
+        }
+        if (source.SCFRegion != null) {
+            this.SCFRegion = new String(source.SCFRegion);
+        }
+        if (source.Namespace != null) {
+            this.Namespace = new String(source.Namespace);
+        }
+        if (source.FunctionName != null) {
+            this.FunctionName = new String(source.FunctionName);
+        }
+        if (source.FunctionVersion != null) {
+            this.FunctionVersion = new String(source.FunctionVersion);
+        }
+        if (source.Alias != null) {
+            this.Alias = new String(source.Alias);
+        }
     }
 
 
@@ -134,6 +275,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "Id", this.Id);
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "Addr", this.Addr);
+        this.setParamSimple(map, prefix + "Type", this.Type);
+        this.setParamSimple(map, prefix + "SCFRegion", this.SCFRegion);
+        this.setParamSimple(map, prefix + "Namespace", this.Namespace);
+        this.setParamSimple(map, prefix + "FunctionName", this.FunctionName);
+        this.setParamSimple(map, prefix + "FunctionVersion", this.FunctionVersion);
+        this.setParamSimple(map, prefix + "Alias", this.Alias);
 
     }
 }

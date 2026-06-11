@@ -38,7 +38,7 @@ public class EdgeKVGetRequest extends AbstractModel {
     private String Namespace;
 
     /**
-    * Name list. Maximum array length is 20. Each key cannot be empty, with a length of 1-512 characters. Allowed characters include letters, numbers, hyphens, and underscores. To query a single key, input an array with one element.
+    * Name list. Maximum array length is 20. Each key cannot be empty, with a length of 1-512 characters, and supports valid UTF-8 characters. When querying a single key, input an array with one element.
     */
     @SerializedName("Keys")
     @Expose
@@ -77,16 +77,16 @@ public class EdgeKVGetRequest extends AbstractModel {
     }
 
     /**
-     * Get Name list. Maximum array length is 20. Each key cannot be empty, with a length of 1-512 characters. Allowed characters include letters, numbers, hyphens, and underscores. To query a single key, input an array with one element. 
-     * @return Keys Name list. Maximum array length is 20. Each key cannot be empty, with a length of 1-512 characters. Allowed characters include letters, numbers, hyphens, and underscores. To query a single key, input an array with one element.
+     * Get Name list. Maximum array length is 20. Each key cannot be empty, with a length of 1-512 characters, and supports valid UTF-8 characters. When querying a single key, input an array with one element. 
+     * @return Keys Name list. Maximum array length is 20. Each key cannot be empty, with a length of 1-512 characters, and supports valid UTF-8 characters. When querying a single key, input an array with one element.
      */
     public String [] getKeys() {
         return this.Keys;
     }
 
     /**
-     * Set Name list. Maximum array length is 20. Each key cannot be empty, with a length of 1-512 characters. Allowed characters include letters, numbers, hyphens, and underscores. To query a single key, input an array with one element.
-     * @param Keys Name list. Maximum array length is 20. Each key cannot be empty, with a length of 1-512 characters. Allowed characters include letters, numbers, hyphens, and underscores. To query a single key, input an array with one element.
+     * Set Name list. Maximum array length is 20. Each key cannot be empty, with a length of 1-512 characters, and supports valid UTF-8 characters. When querying a single key, input an array with one element.
+     * @param Keys Name list. Maximum array length is 20. Each key cannot be empty, with a length of 1-512 characters, and supports valid UTF-8 characters. When querying a single key, input an array with one element.
      */
     public void setKeys(String [] Keys) {
         this.Keys = Keys;

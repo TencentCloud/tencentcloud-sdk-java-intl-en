@@ -45,14 +45,14 @@ public class DescribeImageSimpleListRequest extends AbstractModel {
     private Long Offset;
 
     /**
-    * Sorting order
+    * Sorting method. Valid values: asc and desc.
     */
     @SerializedName("Order")
     @Expose
     private String Order;
 
     /**
-    * Sorting field
+    * Sorting field. For example, ContainerCnt.
     */
     @SerializedName("By")
     @Expose
@@ -107,32 +107,32 @@ public class DescribeImageSimpleListRequest extends AbstractModel {
     }
 
     /**
-     * Get Sorting order 
-     * @return Order Sorting order
+     * Get Sorting method. Valid values: asc and desc. 
+     * @return Order Sorting method. Valid values: asc and desc.
      */
     public String getOrder() {
         return this.Order;
     }
 
     /**
-     * Set Sorting order
-     * @param Order Sorting order
+     * Set Sorting method. Valid values: asc and desc.
+     * @param Order Sorting method. Valid values: asc and desc.
      */
     public void setOrder(String Order) {
         this.Order = Order;
     }
 
     /**
-     * Get Sorting field 
-     * @return By Sorting field
+     * Get Sorting field. For example, ContainerCnt. 
+     * @return By Sorting field. For example, ContainerCnt.
      */
     public String getBy() {
         return this.By;
     }
 
     /**
-     * Set Sorting field
-     * @param By Sorting field
+     * Set Sorting field. For example, ContainerCnt.
+     * @param By Sorting field. For example, ContainerCnt.
      */
     public void setBy(String By) {
         this.By = By;

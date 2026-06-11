@@ -31,14 +31,14 @@ public class ReverseShellEventInfo extends AbstractModel {
     private Long Id;
 
     /**
-    * Yunjing UUID
+    * Host Security UUID
     */
     @SerializedName("Uuid")
     @Expose
     private String Uuid;
 
     /**
-    * Host ID
+    * Host UUID
     */
     @SerializedName("Quuid")
     @Expose
@@ -157,8 +157,7 @@ public class ReverseShellEventInfo extends AbstractModel {
     private Long DetectBy;
 
     /**
-    * Process tree json; pid: process ID; exe: file path; account: groups and users to which the process belongs; cmdline: execute commands; ssh_service: ssh service IP, ssh_source: log-in source
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Process tree json pid: process ID; exe: file path; account: groups and users to which the process belongs; cmdline: execute commands; ssh_service: SSH service IP; ssh_source: log-in source
     */
     @SerializedName("PsTree")
     @Expose
@@ -214,6 +213,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String ModifyTime;
 
     /**
+    * Escaped content of command details. It is used when regular expressions match allowlisted full strings.
+    */
+    @SerializedName("CmdLineQuote")
+    @Expose
+    private String CmdLineQuote;
+
+    /**
+    * Risk level
+    */
+    @SerializedName("RiskLevel")
+    @Expose
+    private Long RiskLevel;
+
+    /**
      * Get ID primary key 
      * @return Id ID primary key
      */
@@ -230,32 +243,32 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Yunjing UUID 
-     * @return Uuid Yunjing UUID
+     * Get Host Security UUID 
+     * @return Uuid Host Security UUID
      */
     public String getUuid() {
         return this.Uuid;
     }
 
     /**
-     * Set Yunjing UUID
-     * @param Uuid Yunjing UUID
+     * Set Host Security UUID
+     * @param Uuid Host Security UUID
      */
     public void setUuid(String Uuid) {
         this.Uuid = Uuid;
     }
 
     /**
-     * Get Host ID 
-     * @return Quuid Host ID
+     * Get Host UUID 
+     * @return Quuid Host UUID
      */
     public String getQuuid() {
         return this.Quuid;
     }
 
     /**
-     * Set Host ID
-     * @param Quuid Host ID
+     * Set Host UUID
+     * @param Quuid Host UUID
      */
     public void setQuuid(String Quuid) {
         this.Quuid = Quuid;
@@ -518,20 +531,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Process tree json; pid: process ID; exe: file path; account: groups and users to which the process belongs; cmdline: execute commands; ssh_service: ssh service IP, ssh_source: log-in source
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return PsTree Process tree json; pid: process ID; exe: file path; account: groups and users to which the process belongs; cmdline: execute commands; ssh_service: ssh service IP, ssh_source: log-in source
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Process tree json pid: process ID; exe: file path; account: groups and users to which the process belongs; cmdline: execute commands; ssh_service: SSH service IP; ssh_source: log-in source 
+     * @return PsTree Process tree json pid: process ID; exe: file path; account: groups and users to which the process belongs; cmdline: execute commands; ssh_service: SSH service IP; ssh_source: log-in source
      */
     public String getPsTree() {
         return this.PsTree;
     }
 
     /**
-     * Set Process tree json; pid: process ID; exe: file path; account: groups and users to which the process belongs; cmdline: execute commands; ssh_service: ssh service IP, ssh_source: log-in source
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param PsTree Process tree json; pid: process ID; exe: file path; account: groups and users to which the process belongs; cmdline: execute commands; ssh_service: ssh service IP, ssh_source: log-in source
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Process tree json pid: process ID; exe: file path; account: groups and users to which the process belongs; cmdline: execute commands; ssh_service: SSH service IP; ssh_source: log-in source
+     * @param PsTree Process tree json pid: process ID; exe: file path; account: groups and users to which the process belongs; cmdline: execute commands; ssh_service: SSH service IP; ssh_source: log-in source
      */
     public void setPsTree(String PsTree) {
         this.PsTree = PsTree;
@@ -649,6 +658,38 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.ModifyTime = ModifyTime;
     }
 
+    /**
+     * Get Escaped content of command details. It is used when regular expressions match allowlisted full strings. 
+     * @return CmdLineQuote Escaped content of command details. It is used when regular expressions match allowlisted full strings.
+     */
+    public String getCmdLineQuote() {
+        return this.CmdLineQuote;
+    }
+
+    /**
+     * Set Escaped content of command details. It is used when regular expressions match allowlisted full strings.
+     * @param CmdLineQuote Escaped content of command details. It is used when regular expressions match allowlisted full strings.
+     */
+    public void setCmdLineQuote(String CmdLineQuote) {
+        this.CmdLineQuote = CmdLineQuote;
+    }
+
+    /**
+     * Get Risk level 
+     * @return RiskLevel Risk level
+     */
+    public Long getRiskLevel() {
+        return this.RiskLevel;
+    }
+
+    /**
+     * Set Risk level
+     * @param RiskLevel Risk level
+     */
+    public void setRiskLevel(Long RiskLevel) {
+        this.RiskLevel = RiskLevel;
+    }
+
     public ReverseShellEventInfo() {
     }
 
@@ -744,6 +785,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.ModifyTime != null) {
             this.ModifyTime = new String(source.ModifyTime);
         }
+        if (source.CmdLineQuote != null) {
+            this.CmdLineQuote = new String(source.CmdLineQuote);
+        }
+        if (source.RiskLevel != null) {
+            this.RiskLevel = new Long(source.RiskLevel);
+        }
     }
 
 
@@ -778,6 +825,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "MachineWanIp", this.MachineWanIp);
         this.setParamSimple(map, prefix + "MachineStatus", this.MachineStatus);
         this.setParamSimple(map, prefix + "ModifyTime", this.ModifyTime);
+        this.setParamSimple(map, prefix + "CmdLineQuote", this.CmdLineQuote);
+        this.setParamSimple(map, prefix + "RiskLevel", this.RiskLevel);
 
     }
 }

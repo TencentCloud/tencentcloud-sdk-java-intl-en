@@ -73,7 +73,7 @@ public class LiveRealTimeClipRequest extends AbstractModel {
     private String Procedure;
 
     /**
-    * Category ID, used to categorize and manage media. You can create a category and obtain the category ID via the [Create Category](https://www.tencentcloud.com/document/product/266/7812?from_cn_redirect=1) API.
+    * Category ID, used to categorize and manage media. You can create a category and obtain the category ID via the [Create Category](https://www.tencentcloud.com/document/product/266/31772?from_cn_redirect=1) API.
 <li>Default value: 0, indicating other categories.</li>
 Valid when IsPersistence is 1.
     */
@@ -238,10 +238,10 @@ Valid when IsPersistence is 1.
     }
 
     /**
-     * Get Category ID, used to categorize and manage media. You can create a category and obtain the category ID via the [Create Category](https://www.tencentcloud.com/document/product/266/7812?from_cn_redirect=1) API.
+     * Get Category ID, used to categorize and manage media. You can create a category and obtain the category ID via the [Create Category](https://www.tencentcloud.com/document/product/266/31772?from_cn_redirect=1) API.
 <li>Default value: 0, indicating other categories.</li>
 Valid when IsPersistence is 1. 
-     * @return ClassId Category ID, used to categorize and manage media. You can create a category and obtain the category ID via the [Create Category](https://www.tencentcloud.com/document/product/266/7812?from_cn_redirect=1) API.
+     * @return ClassId Category ID, used to categorize and manage media. You can create a category and obtain the category ID via the [Create Category](https://www.tencentcloud.com/document/product/266/31772?from_cn_redirect=1) API.
 <li>Default value: 0, indicating other categories.</li>
 Valid when IsPersistence is 1.
      */
@@ -250,10 +250,10 @@ Valid when IsPersistence is 1.
     }
 
     /**
-     * Set Category ID, used to categorize and manage media. You can create a category and obtain the category ID via the [Create Category](https://www.tencentcloud.com/document/product/266/7812?from_cn_redirect=1) API.
+     * Set Category ID, used to categorize and manage media. You can create a category and obtain the category ID via the [Create Category](https://www.tencentcloud.com/document/product/266/31772?from_cn_redirect=1) API.
 <li>Default value: 0, indicating other categories.</li>
 Valid when IsPersistence is 1.
-     * @param ClassId Category ID, used to categorize and manage media. You can create a category and obtain the category ID via the [Create Category](https://www.tencentcloud.com/document/product/266/7812?from_cn_redirect=1) API.
+     * @param ClassId Category ID, used to categorize and manage media. You can create a category and obtain the category ID via the [Create Category](https://www.tencentcloud.com/document/product/266/31772?from_cn_redirect=1) API.
 <li>Default value: 0, indicating other categories.</li>
 Valid when IsPersistence is 1.
      */

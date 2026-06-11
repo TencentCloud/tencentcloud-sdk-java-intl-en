@@ -156,8 +156,7 @@ public class ContainerInfo extends AbstractModel {
     private String NetSubStatus;
 
     /**
-    * Isolation source
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Isolate source
     */
     @SerializedName("IsolateSource")
     @Expose
@@ -165,7 +164,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Isolation time
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("IsolateTime")
     @Expose
@@ -221,14 +219,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long PodMem;
 
     /**
-    * Cluster Name
+    * 
     */
     @SerializedName("ClusterName")
     @Expose
     private String ClusterName;
 
     /**
-    * Cluster ID
+    * 
     */
     @SerializedName("ClusterID")
     @Expose
@@ -554,30 +552,24 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Isolation source
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return IsolateSource Isolation source
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Isolate source 
+     * @return IsolateSource Isolate source
      */
     public String getIsolateSource() {
         return this.IsolateSource;
     }
 
     /**
-     * Set Isolation source
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param IsolateSource Isolation source
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Isolate source
+     * @param IsolateSource Isolate source
      */
     public void setIsolateSource(String IsolateSource) {
         this.IsolateSource = IsolateSource;
     }
 
     /**
-     * Get Isolation time
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Isolation time 
      * @return IsolateTime Isolation time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getIsolateTime() {
         return this.IsolateTime;
@@ -585,9 +577,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Isolation time
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param IsolateTime Isolation time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setIsolateTime(String IsolateTime) {
         this.IsolateTime = IsolateTime;
@@ -706,32 +696,32 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Cluster Name 
-     * @return ClusterName Cluster Name
+     * Get  
+     * @return ClusterName 
      */
     public String getClusterName() {
         return this.ClusterName;
     }
 
     /**
-     * Set Cluster Name
-     * @param ClusterName Cluster Name
+     * Set 
+     * @param ClusterName 
      */
     public void setClusterName(String ClusterName) {
         this.ClusterName = ClusterName;
     }
 
     /**
-     * Get Cluster ID 
-     * @return ClusterID Cluster ID
+     * Get  
+     * @return ClusterID 
      */
     public String getClusterID() {
         return this.ClusterID;
     }
 
     /**
-     * Set Cluster ID
-     * @param ClusterID Cluster ID
+     * Set 
+     * @param ClusterID 
      */
     public void setClusterID(String ClusterID) {
         this.ClusterID = ClusterID;

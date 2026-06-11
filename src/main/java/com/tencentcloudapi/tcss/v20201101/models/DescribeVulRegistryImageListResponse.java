@@ -31,7 +31,7 @@ public class DescribeVulRegistryImageListResponse extends AbstractModel {
     private Long TotalCount;
 
     /**
-    * 
+    * Result list
     */
     @SerializedName("List")
     @Expose
@@ -61,16 +61,16 @@ public class DescribeVulRegistryImageListResponse extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return List 
+     * Get Result list 
+     * @return List Result list
      */
     public VulAffectedRegistryImageInfo [] getList() {
         return this.List;
     }
 
     /**
-     * Set 
-     * @param List 
+     * Set Result list
+     * @param List Result list
      */
     public void setList(VulAffectedRegistryImageInfo [] List) {
         this.List = List;

@@ -41,8 +41,8 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private String AccessKey;
 
     /**
-    * Key.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * Key. the field is returned with masking.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("SecretKey")
     @Expose
@@ -109,20 +109,20 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Get Key.
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return SecretKey Key.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get Key. the field is returned with masking.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return SecretKey Key. the field is returned with masking.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getSecretKey() {
         return this.SecretKey;
     }
 
     /**
-     * Set Key.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param SecretKey Key.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set Key. the field is returned with masking.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param SecretKey Key. the field is returned with masking.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setSecretKey(String SecretKey) {
         this.SecretKey = SecretKey;

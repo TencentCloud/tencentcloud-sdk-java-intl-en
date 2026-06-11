@@ -24,13 +24,21 @@ import java.util.HashMap;
 public class ExportRiskDnsEventListRequest extends AbstractModel {
 
     /**
-    * <li>IpOrName - String - required: no - filter by host IP or alias</li>
+    * <li>MachineName  Host name</li>
+
+
+
+Instance ID  
+
+ 
+
+<li>IP - private IP address or public IP address - required: no - filter by host IP or alias</li>
 <li>HostId - String - required: no - host ID</li>
 <li>AgentId - String - required: no - client ID</li>
 <li>PolicyType - String - required: no - policy type: 0 - system policy; 1 - user-defined policy</li>
-<li>Domain - String - required: no - domain name (First convert the domain name into the urlencode format, and then encode it using base64.)</li>
+<li>Domain - String - Required: No - Domain name (URL-encode the Domain name first, then base64 it)</li>
 <li>HandleStatus - String - required: no - filter by status: 0 - pending; 2 - trusted; 3 - untrusted</li>
-<li>BeginTime - String - required: no - start time of last access</li>
+<li>BeginTime - String - Required: no - start time of last access</li>
 <li>EndTime - String - required: no - end time of last access</li>
     */
     @SerializedName("Filters")
@@ -52,21 +60,37 @@ public class ExportRiskDnsEventListRequest extends AbstractModel {
     private String By;
 
     /**
-     * Get <li>IpOrName - String - required: no - filter by host IP or alias</li>
+     * Get <li>MachineName  Host name</li>
+
+
+
+Instance ID  
+
+ 
+
+<li>IP - private IP address or public IP address - required: no - filter by host IP or alias</li>
 <li>HostId - String - required: no - host ID</li>
 <li>AgentId - String - required: no - client ID</li>
 <li>PolicyType - String - required: no - policy type: 0 - system policy; 1 - user-defined policy</li>
-<li>Domain - String - required: no - domain name (First convert the domain name into the urlencode format, and then encode it using base64.)</li>
+<li>Domain - String - Required: No - Domain name (URL-encode the Domain name first, then base64 it)</li>
 <li>HandleStatus - String - required: no - filter by status: 0 - pending; 2 - trusted; 3 - untrusted</li>
-<li>BeginTime - String - required: no - start time of last access</li>
+<li>BeginTime - String - Required: no - start time of last access</li>
 <li>EndTime - String - required: no - end time of last access</li> 
-     * @return Filters <li>IpOrName - String - required: no - filter by host IP or alias</li>
+     * @return Filters <li>MachineName  Host name</li>
+
+
+
+Instance ID  
+
+ 
+
+<li>IP - private IP address or public IP address - required: no - filter by host IP or alias</li>
 <li>HostId - String - required: no - host ID</li>
 <li>AgentId - String - required: no - client ID</li>
 <li>PolicyType - String - required: no - policy type: 0 - system policy; 1 - user-defined policy</li>
-<li>Domain - String - required: no - domain name (First convert the domain name into the urlencode format, and then encode it using base64.)</li>
+<li>Domain - String - Required: No - Domain name (URL-encode the Domain name first, then base64 it)</li>
 <li>HandleStatus - String - required: no - filter by status: 0 - pending; 2 - trusted; 3 - untrusted</li>
-<li>BeginTime - String - required: no - start time of last access</li>
+<li>BeginTime - String - Required: no - start time of last access</li>
 <li>EndTime - String - required: no - end time of last access</li>
      */
     public Filter [] getFilters() {
@@ -74,21 +98,37 @@ public class ExportRiskDnsEventListRequest extends AbstractModel {
     }
 
     /**
-     * Set <li>IpOrName - String - required: no - filter by host IP or alias</li>
+     * Set <li>MachineName  Host name</li>
+
+
+
+Instance ID  
+
+ 
+
+<li>IP - private IP address or public IP address - required: no - filter by host IP or alias</li>
 <li>HostId - String - required: no - host ID</li>
 <li>AgentId - String - required: no - client ID</li>
 <li>PolicyType - String - required: no - policy type: 0 - system policy; 1 - user-defined policy</li>
-<li>Domain - String - required: no - domain name (First convert the domain name into the urlencode format, and then encode it using base64.)</li>
+<li>Domain - String - Required: No - Domain name (URL-encode the Domain name first, then base64 it)</li>
 <li>HandleStatus - String - required: no - filter by status: 0 - pending; 2 - trusted; 3 - untrusted</li>
-<li>BeginTime - String - required: no - start time of last access</li>
+<li>BeginTime - String - Required: no - start time of last access</li>
 <li>EndTime - String - required: no - end time of last access</li>
-     * @param Filters <li>IpOrName - String - required: no - filter by host IP or alias</li>
+     * @param Filters <li>MachineName  Host name</li>
+
+
+
+Instance ID  
+
+ 
+
+<li>IP - private IP address or public IP address - required: no - filter by host IP or alias</li>
 <li>HostId - String - required: no - host ID</li>
 <li>AgentId - String - required: no - client ID</li>
 <li>PolicyType - String - required: no - policy type: 0 - system policy; 1 - user-defined policy</li>
-<li>Domain - String - required: no - domain name (First convert the domain name into the urlencode format, and then encode it using base64.)</li>
+<li>Domain - String - Required: No - Domain name (URL-encode the Domain name first, then base64 it)</li>
 <li>HandleStatus - String - required: no - filter by status: 0 - pending; 2 - trusted; 3 - untrusted</li>
-<li>BeginTime - String - required: no - start time of last access</li>
+<li>BeginTime - String - Required: no - start time of last access</li>
 <li>EndTime - String - required: no - end time of last access</li>
      */
     public void setFilters(Filter [] Filters) {

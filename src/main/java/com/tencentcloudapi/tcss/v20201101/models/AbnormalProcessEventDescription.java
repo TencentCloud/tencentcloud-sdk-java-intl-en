@@ -38,8 +38,7 @@ public class AbnormalProcessEventDescription extends AbstractModel {
     private String Solution;
 
     /**
-    * Event remarks
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Event remark information
     */
     @SerializedName("Remark")
     @Expose
@@ -67,16 +66,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RuleId;
 
     /**
-    * Last processing time of the event
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Last Time for Event Handling
     */
     @SerializedName("OperationTime")
     @Expose
     private String OperationTime;
 
     /**
-    * Name of the hit policy. Valid values: `SYSTEM_DEFINED_RULE` (preset policy); name of the custom policy.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Hit Policy Name: SYSTEM_DEFINED_RULE (System Policy) or Custom Policy Name
     */
     @SerializedName("GroupName")
     @Expose
@@ -115,20 +112,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Event remarks
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Remark Event remarks
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Event remark information 
+     * @return Remark Event remark information
      */
     public String getRemark() {
         return this.Remark;
     }
 
     /**
-     * Set Event remarks
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Remark Event remarks
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Event remark information
+     * @param Remark Event remark information
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;
@@ -183,40 +176,32 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Last processing time of the event
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return OperationTime Last processing time of the event
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Last Time for Event Handling 
+     * @return OperationTime Last Time for Event Handling
      */
     public String getOperationTime() {
         return this.OperationTime;
     }
 
     /**
-     * Set Last processing time of the event
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param OperationTime Last processing time of the event
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Last Time for Event Handling
+     * @param OperationTime Last Time for Event Handling
      */
     public void setOperationTime(String OperationTime) {
         this.OperationTime = OperationTime;
     }
 
     /**
-     * Get Name of the hit policy. Valid values: `SYSTEM_DEFINED_RULE` (preset policy); name of the custom policy.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return GroupName Name of the hit policy. Valid values: `SYSTEM_DEFINED_RULE` (preset policy); name of the custom policy.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Hit Policy Name: SYSTEM_DEFINED_RULE (System Policy) or Custom Policy Name 
+     * @return GroupName Hit Policy Name: SYSTEM_DEFINED_RULE (System Policy) or Custom Policy Name
      */
     public String getGroupName() {
         return this.GroupName;
     }
 
     /**
-     * Set Name of the hit policy. Valid values: `SYSTEM_DEFINED_RULE` (preset policy); name of the custom policy.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param GroupName Name of the hit policy. Valid values: `SYSTEM_DEFINED_RULE` (preset policy); name of the custom policy.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Hit Policy Name: SYSTEM_DEFINED_RULE (System Policy) or Custom Policy Name
+     * @param GroupName Hit Policy Name: SYSTEM_DEFINED_RULE (System Policy) or Custom Policy Name
      */
     public void setGroupName(String GroupName) {
         this.GroupName = GroupName;

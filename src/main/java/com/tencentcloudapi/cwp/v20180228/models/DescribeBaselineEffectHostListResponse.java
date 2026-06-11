@@ -25,7 +25,6 @@ public class DescribeBaselineEffectHostListResponse extends AbstractModel {
 
     /**
     * Total number of records
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("TotalCount")
     @Expose
@@ -33,7 +32,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * List of affected servers
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("EffectHostList")
     @Expose
@@ -47,10 +45,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Total number of records
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Total number of records 
      * @return TotalCount Total number of records
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getTotalCount() {
         return this.TotalCount;
@@ -58,19 +54,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Total number of records
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param TotalCount Total number of records
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get List of affected servers
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get List of affected servers 
      * @return EffectHostList List of affected servers
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public BaselineEffectHost [] getEffectHostList() {
         return this.EffectHostList;
@@ -78,9 +70,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set List of affected servers
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param EffectHostList List of affected servers
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setEffectHostList(BaselineEffectHost [] EffectHostList) {
         this.EffectHostList = EffectHostList;

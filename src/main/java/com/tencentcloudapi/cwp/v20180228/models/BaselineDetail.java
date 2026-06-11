@@ -25,7 +25,6 @@ public class BaselineDetail extends AbstractModel {
 
     /**
     * Baseline description
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Description")
     @Expose
@@ -33,23 +32,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Severity level
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Level")
     @Expose
     private Long Level;
 
     /**
-    * Package name
-Note: This field may return null, indicating that no valid values can be obtained.
+    * package name
     */
     @SerializedName("PackageName")
     @Expose
     private String PackageName;
 
     /**
-    * Parent ID
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Parent id
     */
     @SerializedName("ParentId")
     @Expose
@@ -57,17 +53,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Baseline name
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-     * Get Baseline description
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Baseline description 
      * @return Description Baseline description
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getDescription() {
         return this.Description;
@@ -75,19 +68,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Baseline description
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Description Baseline description
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get Severity level
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Severity level 
      * @return Level Severity level
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getLevel() {
         return this.Level;
@@ -95,59 +84,47 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Severity level
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Level Severity level
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setLevel(Long Level) {
         this.Level = Level;
     }
 
     /**
-     * Get Package name
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return PackageName Package name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get package name 
+     * @return PackageName package name
      */
     public String getPackageName() {
         return this.PackageName;
     }
 
     /**
-     * Set Package name
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param PackageName Package name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set package name
+     * @param PackageName package name
      */
     public void setPackageName(String PackageName) {
         this.PackageName = PackageName;
     }
 
     /**
-     * Get Parent ID
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ParentId Parent ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Parent id 
+     * @return ParentId Parent id
      */
     public Long getParentId() {
         return this.ParentId;
     }
 
     /**
-     * Set Parent ID
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ParentId Parent ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Parent id
+     * @param ParentId Parent id
      */
     public void setParentId(Long ParentId) {
         this.ParentId = ParentId;
     }
 
     /**
-     * Get Baseline name
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Baseline name 
      * @return Name Baseline name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getName() {
         return this.Name;
@@ -155,9 +132,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Baseline name
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Name Baseline name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setName(String Name) {
         this.Name = Name;

@@ -24,16 +24,14 @@ import java.util.HashMap;
 public class WebHookReceiverUsage extends AbstractModel {
 
     /**
-    * Recipient ID
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Recipient ID.
     */
     @SerializedName("ReceiverId")
     @Expose
     private Long ReceiverId;
 
     /**
-    * Recipient name
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Receiver name
     */
     @SerializedName("ReceiverName")
     @Expose
@@ -41,57 +39,46 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Policy name
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("PolicyName")
     @Expose
     private String PolicyName;
 
     /**
-     * Get Recipient ID
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ReceiverId Recipient ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Recipient ID. 
+     * @return ReceiverId Recipient ID.
      */
     public Long getReceiverId() {
         return this.ReceiverId;
     }
 
     /**
-     * Set Recipient ID
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ReceiverId Recipient ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Recipient ID.
+     * @param ReceiverId Recipient ID.
      */
     public void setReceiverId(Long ReceiverId) {
         this.ReceiverId = ReceiverId;
     }
 
     /**
-     * Get Recipient name
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ReceiverName Recipient name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Receiver name 
+     * @return ReceiverName Receiver name
      */
     public String getReceiverName() {
         return this.ReceiverName;
     }
 
     /**
-     * Set Recipient name
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ReceiverName Recipient name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Receiver name
+     * @param ReceiverName Receiver name
      */
     public void setReceiverName(String ReceiverName) {
         this.ReceiverName = ReceiverName;
     }
 
     /**
-     * Get Policy name
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Policy name 
      * @return PolicyName Policy name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getPolicyName() {
         return this.PolicyName;
@@ -99,9 +86,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Policy name
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param PolicyName Policy name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setPolicyName(String PolicyName) {
         this.PolicyName = PolicyName;

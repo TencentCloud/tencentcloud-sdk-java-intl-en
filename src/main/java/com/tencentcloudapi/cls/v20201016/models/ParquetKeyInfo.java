@@ -38,8 +38,7 @@ public class ParquetKeyInfo extends AbstractModel {
     private String KeyType;
 
     /**
-    * Assignment information returned upon resolution failure
-Note: This field may return `null`, indicating that no valid value can be obtained.
+    * Assigned value for parsing failure
     */
     @SerializedName("KeyNonExistingField")
     @Expose
@@ -78,20 +77,16 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     }
 
     /**
-     * Get Assignment information returned upon resolution failure
-Note: This field may return `null`, indicating that no valid value can be obtained. 
-     * @return KeyNonExistingField Assignment information returned upon resolution failure
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Get Assigned value for parsing failure 
+     * @return KeyNonExistingField Assigned value for parsing failure
      */
     public String getKeyNonExistingField() {
         return this.KeyNonExistingField;
     }
 
     /**
-     * Set Assignment information returned upon resolution failure
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param KeyNonExistingField Assignment information returned upon resolution failure
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Set Assigned value for parsing failure
+     * @param KeyNonExistingField Assigned value for parsing failure
      */
     public void setKeyNonExistingField(String KeyNonExistingField) {
         this.KeyNonExistingField = KeyNonExistingField;

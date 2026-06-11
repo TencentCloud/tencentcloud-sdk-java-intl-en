@@ -24,69 +24,88 @@ import java.util.HashMap;
 public class UploadLogRequest extends AbstractModel {
 
     /**
-    * Topic ID
+    * Log topic id
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
     */
     @SerializedName("TopicId")
     @Expose
     private String TopicId;
 
     /**
-    * Topic partition where data will be written into by `HashKey` 
+    * This parameter has been deprecated and should not be used.
     */
     @SerializedName("HashKey")
     @Expose
     private String HashKey;
 
     /**
-    * Compression type
+    * Compression method. Currently supports
+- lz4
+- zstd
     */
     @SerializedName("CompressType")
     @Expose
     private String CompressType;
 
     /**
-     * Get Topic ID 
-     * @return TopicId Topic ID
+     * Get Log topic id
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1). 
+     * @return TopicId Log topic id
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
      */
     public String getTopicId() {
         return this.TopicId;
     }
 
     /**
-     * Set Topic ID
-     * @param TopicId Topic ID
+     * Set Log topic id
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
+     * @param TopicId Log topic id
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
      */
     public void setTopicId(String TopicId) {
         this.TopicId = TopicId;
     }
 
     /**
-     * Get Topic partition where data will be written into by `HashKey`  
-     * @return HashKey Topic partition where data will be written into by `HashKey` 
+     * Get This parameter has been deprecated and should not be used. 
+     * @return HashKey This parameter has been deprecated and should not be used.
+     * @deprecated
      */
+    @Deprecated
     public String getHashKey() {
         return this.HashKey;
     }
 
     /**
-     * Set Topic partition where data will be written into by `HashKey` 
-     * @param HashKey Topic partition where data will be written into by `HashKey` 
+     * Set This parameter has been deprecated and should not be used.
+     * @param HashKey This parameter has been deprecated and should not be used.
+     * @deprecated
      */
+    @Deprecated
     public void setHashKey(String HashKey) {
         this.HashKey = HashKey;
     }
 
     /**
-     * Get Compression type 
-     * @return CompressType Compression type
+     * Get Compression method. Currently supports
+- lz4
+- zstd 
+     * @return CompressType Compression method. Currently supports
+- lz4
+- zstd
      */
     public String getCompressType() {
         return this.CompressType;
     }
 
     /**
-     * Set Compression type
-     * @param CompressType Compression type
+     * Set Compression method. Currently supports
+- lz4
+- zstd
+     * @param CompressType Compression method. Currently supports
+- lz4
+- zstd
      */
     public void setCompressType(String CompressType) {
         this.CompressType = CompressType;

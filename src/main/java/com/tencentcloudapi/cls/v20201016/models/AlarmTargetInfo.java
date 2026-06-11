@@ -80,6 +80,23 @@ public class AlarmTargetInfo extends AbstractModel {
     private Long EndTimeOffset;
 
     /**
+    * Retrieval syntax rules. Default value is 0.
+0: Lucene syntax; 1: CQL syntax.
+For detailed explanation, refer to <a href="https://www.tencentcloud.com/document/product/614/47044?from_cn_redirect=1#RetrievesConditionalRules" target="_blank">Retrieve Syntax Rules</a>
+    */
+    @SerializedName("SyntaxRule")
+    @Expose
+    private Long SyntaxRule;
+
+    /**
+    * Topic type.
+0: log topic; 1: metric topic
+    */
+    @SerializedName("BizType")
+    @Expose
+    private Long BizType;
+
+    /**
      * Get Logset ID 
      * @return LogsetId Logset ID
      */
@@ -207,6 +224,50 @@ public class AlarmTargetInfo extends AbstractModel {
         this.EndTimeOffset = EndTimeOffset;
     }
 
+    /**
+     * Get Retrieval syntax rules. Default value is 0.
+0: Lucene syntax; 1: CQL syntax.
+For detailed explanation, refer to <a href="https://www.tencentcloud.com/document/product/614/47044?from_cn_redirect=1#RetrievesConditionalRules" target="_blank">Retrieve Syntax Rules</a> 
+     * @return SyntaxRule Retrieval syntax rules. Default value is 0.
+0: Lucene syntax; 1: CQL syntax.
+For detailed explanation, refer to <a href="https://www.tencentcloud.com/document/product/614/47044?from_cn_redirect=1#RetrievesConditionalRules" target="_blank">Retrieve Syntax Rules</a>
+     */
+    public Long getSyntaxRule() {
+        return this.SyntaxRule;
+    }
+
+    /**
+     * Set Retrieval syntax rules. Default value is 0.
+0: Lucene syntax; 1: CQL syntax.
+For detailed explanation, refer to <a href="https://www.tencentcloud.com/document/product/614/47044?from_cn_redirect=1#RetrievesConditionalRules" target="_blank">Retrieve Syntax Rules</a>
+     * @param SyntaxRule Retrieval syntax rules. Default value is 0.
+0: Lucene syntax; 1: CQL syntax.
+For detailed explanation, refer to <a href="https://www.tencentcloud.com/document/product/614/47044?from_cn_redirect=1#RetrievesConditionalRules" target="_blank">Retrieve Syntax Rules</a>
+     */
+    public void setSyntaxRule(Long SyntaxRule) {
+        this.SyntaxRule = SyntaxRule;
+    }
+
+    /**
+     * Get Topic type.
+0: log topic; 1: metric topic 
+     * @return BizType Topic type.
+0: log topic; 1: metric topic
+     */
+    public Long getBizType() {
+        return this.BizType;
+    }
+
+    /**
+     * Set Topic type.
+0: log topic; 1: metric topic
+     * @param BizType Topic type.
+0: log topic; 1: metric topic
+     */
+    public void setBizType(Long BizType) {
+        this.BizType = BizType;
+    }
+
     public AlarmTargetInfo() {
     }
 
@@ -239,6 +300,12 @@ public class AlarmTargetInfo extends AbstractModel {
         if (source.EndTimeOffset != null) {
             this.EndTimeOffset = new Long(source.EndTimeOffset);
         }
+        if (source.SyntaxRule != null) {
+            this.SyntaxRule = new Long(source.SyntaxRule);
+        }
+        if (source.BizType != null) {
+            this.BizType = new Long(source.BizType);
+        }
     }
 
 
@@ -254,6 +321,8 @@ public class AlarmTargetInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "Number", this.Number);
         this.setParamSimple(map, prefix + "StartTimeOffset", this.StartTimeOffset);
         this.setParamSimple(map, prefix + "EndTimeOffset", this.EndTimeOffset);
+        this.setParamSimple(map, prefix + "SyntaxRule", this.SyntaxRule);
+        this.setParamSimple(map, prefix + "BizType", this.BizType);
 
     }
 }

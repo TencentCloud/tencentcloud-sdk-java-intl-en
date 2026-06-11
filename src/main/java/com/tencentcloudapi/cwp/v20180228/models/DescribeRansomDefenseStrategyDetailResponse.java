@@ -25,7 +25,6 @@ public class DescribeRansomDefenseStrategyDetailResponse extends AbstractModel {
 
     /**
     * Policy details
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Strategy")
     @Expose
@@ -39,10 +38,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Policy details
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Policy details 
      * @return Strategy Policy details
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public RansomDefenseStrategyDetail getStrategy() {
         return this.Strategy;
@@ -50,9 +47,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Policy details
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Strategy Policy details
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setStrategy(RansomDefenseStrategyDetail Strategy) {
         this.Strategy = Strategy;

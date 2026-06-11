@@ -53,7 +53,6 @@ public class VulScanImageInfo extends AbstractModel {
 
     /**
     * Scan duration
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ScanDuration")
     @Expose
@@ -180,10 +179,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Scan duration
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Scan duration 
      * @return ScanDuration Scan duration
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Float getScanDuration() {
         return this.ScanDuration;
@@ -191,9 +188,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Scan duration
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param ScanDuration Scan duration
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setScanDuration(Float ScanDuration) {
         this.ScanDuration = ScanDuration;

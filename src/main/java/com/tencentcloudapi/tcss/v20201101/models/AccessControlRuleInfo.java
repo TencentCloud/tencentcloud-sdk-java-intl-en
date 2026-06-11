@@ -24,11 +24,11 @@ import java.util.HashMap;
 public class AccessControlRuleInfo extends AbstractModel {
 
     /**
-    * Switch. Valid values: `true` (on); `false` (off).
+    * Array of sub-policies of the user policy
     */
-    @SerializedName("IsEnable")
+    @SerializedName("ChildRules")
     @Expose
-    private Boolean IsEnable;
+    private AccessControlChildRuleInfo [] ChildRules;
 
     /**
     * IDs of associated images. An empty array indicates all images.
@@ -38,11 +38,11 @@ public class AccessControlRuleInfo extends AbstractModel {
     private String [] ImageIds;
 
     /**
-    * Array of sub-policies of the user policy
+    * Switch. Valid values: `true` (on); `false` (off).
     */
-    @SerializedName("ChildRules")
+    @SerializedName("IsEnable")
     @Expose
-    private AccessControlChildRuleInfo [] ChildRules;
+    private Boolean IsEnable;
 
     /**
     * Policy name
@@ -52,8 +52,21 @@ public class AccessControlRuleInfo extends AbstractModel {
     private String RuleName;
 
     /**
+    * Whether it is the default preset policy
+    */
+    @SerializedName("IsDefault")
+    @Expose
+    private Boolean IsDefault;
+
+    /**
+    * true: all images, false: specified images. When IsGlobal=true, ImageIds returns an empty array.
+    */
+    @SerializedName("IsGlobal")
+    @Expose
+    private Boolean IsGlobal;
+
+    /**
     * Policy ID
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("RuleId")
     @Expose
@@ -67,26 +80,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private AccessControlSystemChildRuleInfo [] SystemChildRules;
 
     /**
-    * Whether it is the default preset policy
-    */
-    @SerializedName("IsDefault")
-    @Expose
-    private Boolean IsDefault;
-
-    /**
-     * Get Switch. Valid values: `true` (on); `false` (off). 
-     * @return IsEnable Switch. Valid values: `true` (on); `false` (off).
+     * Get Array of sub-policies of the user policy 
+     * @return ChildRules Array of sub-policies of the user policy
      */
-    public Boolean getIsEnable() {
-        return this.IsEnable;
+    public AccessControlChildRuleInfo [] getChildRules() {
+        return this.ChildRules;
     }
 
     /**
-     * Set Switch. Valid values: `true` (on); `false` (off).
-     * @param IsEnable Switch. Valid values: `true` (on); `false` (off).
+     * Set Array of sub-policies of the user policy
+     * @param ChildRules Array of sub-policies of the user policy
      */
-    public void setIsEnable(Boolean IsEnable) {
-        this.IsEnable = IsEnable;
+    public void setChildRules(AccessControlChildRuleInfo [] ChildRules) {
+        this.ChildRules = ChildRules;
     }
 
     /**
@@ -106,19 +112,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Array of sub-policies of the user policy 
-     * @return ChildRules Array of sub-policies of the user policy
+     * Get Switch. Valid values: `true` (on); `false` (off). 
+     * @return IsEnable Switch. Valid values: `true` (on); `false` (off).
      */
-    public AccessControlChildRuleInfo [] getChildRules() {
-        return this.ChildRules;
+    public Boolean getIsEnable() {
+        return this.IsEnable;
     }
 
     /**
-     * Set Array of sub-policies of the user policy
-     * @param ChildRules Array of sub-policies of the user policy
+     * Set Switch. Valid values: `true` (on); `false` (off).
+     * @param IsEnable Switch. Valid values: `true` (on); `false` (off).
      */
-    public void setChildRules(AccessControlChildRuleInfo [] ChildRules) {
-        this.ChildRules = ChildRules;
+    public void setIsEnable(Boolean IsEnable) {
+        this.IsEnable = IsEnable;
     }
 
     /**
@@ -138,10 +144,40 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Policy ID
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Whether it is the default preset policy 
+     * @return IsDefault Whether it is the default preset policy
+     */
+    public Boolean getIsDefault() {
+        return this.IsDefault;
+    }
+
+    /**
+     * Set Whether it is the default preset policy
+     * @param IsDefault Whether it is the default preset policy
+     */
+    public void setIsDefault(Boolean IsDefault) {
+        this.IsDefault = IsDefault;
+    }
+
+    /**
+     * Get true: all images, false: specified images. When IsGlobal=true, ImageIds returns an empty array. 
+     * @return IsGlobal true: all images, false: specified images. When IsGlobal=true, ImageIds returns an empty array.
+     */
+    public Boolean getIsGlobal() {
+        return this.IsGlobal;
+    }
+
+    /**
+     * Set true: all images, false: specified images. When IsGlobal=true, ImageIds returns an empty array.
+     * @param IsGlobal true: all images, false: specified images. When IsGlobal=true, ImageIds returns an empty array.
+     */
+    public void setIsGlobal(Boolean IsGlobal) {
+        this.IsGlobal = IsGlobal;
+    }
+
+    /**
+     * Get Policy ID 
      * @return RuleId Policy ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getRuleId() {
         return this.RuleId;
@@ -149,9 +185,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Policy ID
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param RuleId Policy ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setRuleId(String RuleId) {
         this.RuleId = RuleId;
@@ -173,22 +207,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.SystemChildRules = SystemChildRules;
     }
 
-    /**
-     * Get Whether it is the default preset policy 
-     * @return IsDefault Whether it is the default preset policy
-     */
-    public Boolean getIsDefault() {
-        return this.IsDefault;
-    }
-
-    /**
-     * Set Whether it is the default preset policy
-     * @param IsDefault Whether it is the default preset policy
-     */
-    public void setIsDefault(Boolean IsDefault) {
-        this.IsDefault = IsDefault;
-    }
-
     public AccessControlRuleInfo() {
     }
 
@@ -197,8 +215,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public AccessControlRuleInfo(AccessControlRuleInfo source) {
-        if (source.IsEnable != null) {
-            this.IsEnable = new Boolean(source.IsEnable);
+        if (source.ChildRules != null) {
+            this.ChildRules = new AccessControlChildRuleInfo[source.ChildRules.length];
+            for (int i = 0; i < source.ChildRules.length; i++) {
+                this.ChildRules[i] = new AccessControlChildRuleInfo(source.ChildRules[i]);
+            }
         }
         if (source.ImageIds != null) {
             this.ImageIds = new String[source.ImageIds.length];
@@ -206,14 +227,17 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 this.ImageIds[i] = new String(source.ImageIds[i]);
             }
         }
-        if (source.ChildRules != null) {
-            this.ChildRules = new AccessControlChildRuleInfo[source.ChildRules.length];
-            for (int i = 0; i < source.ChildRules.length; i++) {
-                this.ChildRules[i] = new AccessControlChildRuleInfo(source.ChildRules[i]);
-            }
+        if (source.IsEnable != null) {
+            this.IsEnable = new Boolean(source.IsEnable);
         }
         if (source.RuleName != null) {
             this.RuleName = new String(source.RuleName);
+        }
+        if (source.IsDefault != null) {
+            this.IsDefault = new Boolean(source.IsDefault);
+        }
+        if (source.IsGlobal != null) {
+            this.IsGlobal = new Boolean(source.IsGlobal);
         }
         if (source.RuleId != null) {
             this.RuleId = new String(source.RuleId);
@@ -224,9 +248,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 this.SystemChildRules[i] = new AccessControlSystemChildRuleInfo(source.SystemChildRules[i]);
             }
         }
-        if (source.IsDefault != null) {
-            this.IsDefault = new Boolean(source.IsDefault);
-        }
     }
 
 
@@ -234,13 +255,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "IsEnable", this.IsEnable);
-        this.setParamArraySimple(map, prefix + "ImageIds.", this.ImageIds);
         this.setParamArrayObj(map, prefix + "ChildRules.", this.ChildRules);
+        this.setParamArraySimple(map, prefix + "ImageIds.", this.ImageIds);
+        this.setParamSimple(map, prefix + "IsEnable", this.IsEnable);
         this.setParamSimple(map, prefix + "RuleName", this.RuleName);
+        this.setParamSimple(map, prefix + "IsDefault", this.IsDefault);
+        this.setParamSimple(map, prefix + "IsGlobal", this.IsGlobal);
         this.setParamSimple(map, prefix + "RuleId", this.RuleId);
         this.setParamArrayObj(map, prefix + "SystemChildRules.", this.SystemChildRules);
-        this.setParamSimple(map, prefix + "IsDefault", this.IsDefault);
 
     }
 }

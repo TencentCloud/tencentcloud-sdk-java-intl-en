@@ -25,7 +25,6 @@ public class DescribeIgnoreBaselineRuleResponse extends AbstractModel {
 
     /**
     * List of ignored baseline check items
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("IgnoreBaselineRuleList")
     @Expose
@@ -33,7 +32,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Total number of pagination query records
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("TotalCount")
     @Expose
@@ -47,10 +45,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get List of ignored baseline check items
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get List of ignored baseline check items 
      * @return IgnoreBaselineRuleList List of ignored baseline check items
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public IgnoreBaselineRule [] getIgnoreBaselineRuleList() {
         return this.IgnoreBaselineRuleList;
@@ -58,19 +54,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set List of ignored baseline check items
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param IgnoreBaselineRuleList List of ignored baseline check items
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setIgnoreBaselineRuleList(IgnoreBaselineRule [] IgnoreBaselineRuleList) {
         this.IgnoreBaselineRuleList = IgnoreBaselineRuleList;
     }
 
     /**
-     * Get Total number of pagination query records
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Total number of pagination query records 
      * @return TotalCount Total number of pagination query records
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getTotalCount() {
         return this.TotalCount;
@@ -78,9 +70,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Total number of pagination query records
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param TotalCount Total number of pagination query records
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

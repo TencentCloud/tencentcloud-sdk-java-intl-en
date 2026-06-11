@@ -25,7 +25,6 @@ public class BaselineHostTopList extends AbstractModel {
 
     /**
     * List of event levels and occurrences
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("EventLevelList")
     @Expose
@@ -33,7 +32,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Host name
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("HostName")
     @Expose
@@ -41,7 +39,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Host QUUID
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Quuid")
     @Expose
@@ -49,17 +46,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Score for calculating weight
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Score")
     @Expose
     private Long Score;
 
     /**
-     * Get List of event levels and occurrences
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get List of event levels and occurrences 
      * @return EventLevelList List of event levels and occurrences
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public BaselineEventLevelInfo [] getEventLevelList() {
         return this.EventLevelList;
@@ -67,19 +61,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set List of event levels and occurrences
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param EventLevelList List of event levels and occurrences
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setEventLevelList(BaselineEventLevelInfo [] EventLevelList) {
         this.EventLevelList = EventLevelList;
     }
 
     /**
-     * Get Host name
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Host name 
      * @return HostName Host name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getHostName() {
         return this.HostName;
@@ -87,19 +77,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Host name
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param HostName Host name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setHostName(String HostName) {
         this.HostName = HostName;
     }
 
     /**
-     * Get Host QUUID
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Host QUUID 
      * @return Quuid Host QUUID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getQuuid() {
         return this.Quuid;
@@ -107,19 +93,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Host QUUID
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Quuid Host QUUID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setQuuid(String Quuid) {
         this.Quuid = Quuid;
     }
 
     /**
-     * Get Score for calculating weight
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Score for calculating weight 
      * @return Score Score for calculating weight
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getScore() {
         return this.Score;
@@ -127,9 +109,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Score for calculating weight
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Score Score for calculating weight
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setScore(Long Score) {
         this.Score = Score;

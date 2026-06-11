@@ -38,11 +38,7 @@ public class DescribeLoginWhiteCombinedListRequest extends AbstractModel {
     private Long Offset;
 
     /**
-    * Filter criteria
-<li>IpOrAlias - String - required: no - filter by host IP or alias</li>
-<li>UserName - String - required: no - filter by username</li>
-<li>ModifyBeginTime - String - required: no - filter by modification time; start time</li>
-<li>ModifyEndTime - String - required: no - Filter by modification time; end time</li>
+    * Filtering conditions. <li>IpOrAlias - String - required: no - filter by host IP address or alias.</li> <li>UserName - String - required: no - filter by username.</li> <li>SrcIP - String - required: no - filter by source IP address.</li> <li>Location - String - required: no - filter by login location.</li> <li>ModifyBeginTime - String - required: no - filter by modification time; start time.</li> <li>ModifyEndTime - String - required: no - filter by modification time; end time.</li>
     */
     @SerializedName("Filters")
     @Expose
@@ -81,32 +77,16 @@ public class DescribeLoginWhiteCombinedListRequest extends AbstractModel {
     }
 
     /**
-     * Get Filter criteria
-<li>IpOrAlias - String - required: no - filter by host IP or alias</li>
-<li>UserName - String - required: no - filter by username</li>
-<li>ModifyBeginTime - String - required: no - filter by modification time; start time</li>
-<li>ModifyEndTime - String - required: no - Filter by modification time; end time</li> 
-     * @return Filters Filter criteria
-<li>IpOrAlias - String - required: no - filter by host IP or alias</li>
-<li>UserName - String - required: no - filter by username</li>
-<li>ModifyBeginTime - String - required: no - filter by modification time; start time</li>
-<li>ModifyEndTime - String - required: no - Filter by modification time; end time</li>
+     * Get Filtering conditions. <li>IpOrAlias - String - required: no - filter by host IP address or alias.</li> <li>UserName - String - required: no - filter by username.</li> <li>SrcIP - String - required: no - filter by source IP address.</li> <li>Location - String - required: no - filter by login location.</li> <li>ModifyBeginTime - String - required: no - filter by modification time; start time.</li> <li>ModifyEndTime - String - required: no - filter by modification time; end time.</li> 
+     * @return Filters Filtering conditions. <li>IpOrAlias - String - required: no - filter by host IP address or alias.</li> <li>UserName - String - required: no - filter by username.</li> <li>SrcIP - String - required: no - filter by source IP address.</li> <li>Location - String - required: no - filter by login location.</li> <li>ModifyBeginTime - String - required: no - filter by modification time; start time.</li> <li>ModifyEndTime - String - required: no - filter by modification time; end time.</li>
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set Filter criteria
-<li>IpOrAlias - String - required: no - filter by host IP or alias</li>
-<li>UserName - String - required: no - filter by username</li>
-<li>ModifyBeginTime - String - required: no - filter by modification time; start time</li>
-<li>ModifyEndTime - String - required: no - Filter by modification time; end time</li>
-     * @param Filters Filter criteria
-<li>IpOrAlias - String - required: no - filter by host IP or alias</li>
-<li>UserName - String - required: no - filter by username</li>
-<li>ModifyBeginTime - String - required: no - filter by modification time; start time</li>
-<li>ModifyEndTime - String - required: no - Filter by modification time; end time</li>
+     * Set Filtering conditions. <li>IpOrAlias - String - required: no - filter by host IP address or alias.</li> <li>UserName - String - required: no - filter by username.</li> <li>SrcIP - String - required: no - filter by source IP address.</li> <li>Location - String - required: no - filter by login location.</li> <li>ModifyBeginTime - String - required: no - filter by modification time; start time.</li> <li>ModifyEndTime - String - required: no - filter by modification time; end time.</li>
+     * @param Filters Filtering conditions. <li>IpOrAlias - String - required: no - filter by host IP address or alias.</li> <li>UserName - String - required: no - filter by username.</li> <li>SrcIP - String - required: no - filter by source IP address.</li> <li>Location - String - required: no - filter by login location.</li> <li>ModifyBeginTime - String - required: no - filter by modification time; start time.</li> <li>ModifyEndTime - String - required: no - filter by modification time; end time.</li>
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;

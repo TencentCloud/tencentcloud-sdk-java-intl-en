@@ -115,8 +115,7 @@ public class VulDefenceEvent extends AbstractModel {
     private Long EventID;
 
     /**
-    * First discovery time
-Note: This field may return null, indicating that no valid values can be obtained.
+    * First detection time
     */
     @SerializedName("CreateTime")
     @Expose
@@ -137,69 +136,62 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Last discovery time
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("MergeTime")
     @Expose
     private String MergeTime;
 
     /**
-    * Container status
-`RUNNING`: Running.
-`PAUSED`: Paused.
-`STOPPED`: Stopped.
-`CREATED`: Created.
-`DESTROYED`: Terminated.
-`RESTARTING`: Restarting.
-`REMOVING`: Removing.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Container status.
+RUNNING: running
+PAUSED
+Stop: STOPPED
+CREATED
+DESTROYED
+RESTARTING
+Migrating: REMOVING
     */
     @SerializedName("ContainerStatus")
     @Expose
     private String ContainerStatus;
 
     /**
-    * Sub-status of the container
-"AGENT_OFFLINE"       // The agent is offline.
-	"NODE_DESTROYED"      // The node is terminated.
-	"CONTAINER_EXITED"    // The container exited.
-	"CONTAINER_DESTROYED" // The container was terminated.
-	"SHARED_HOST"         // The container shares the network with the server.
-	"RESOURCE_LIMIT"      // The number of resources to be isolated exceeds the limit.
-	"UNKNOW"              // The reason is unknown.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Container sub-status
+AGENT_OFFLINE
+	NODE_DESTROYED
+	CONTAINER_EXITED
+	"CONTAINER_DESTROYED" //Container destroyed
+	"SHARED_HOST"         // Container shares network with host
+	RESOURCE_LIMIT
+	"UNKNOW"              // Reason unknown
     */
     @SerializedName("ContainerNetSubStatus")
     @Expose
     private String ContainerNetSubStatus;
 
     /**
-    * Container isolation operation source
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Container Isolation Operation Source
     */
     @SerializedName("ContainerIsolateOperationSrc")
     @Expose
     private String ContainerIsolateOperationSrc;
 
     /**
-    * Node QUuid/Super node ID
-Note: This field may return·`null`, indicating that no valid values can be obtained.
+    * Host QUUID/Super Node ID
     */
     @SerializedName("QUUID")
     @Expose
     private String QUUID;
 
     /**
-    * Server private IP
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Host private IP address
     */
     @SerializedName("HostIP")
     @Expose
     private String HostIP;
 
     /**
-    * General node/Super node name
-Note: This field may return·`null`, indicating that no valid values can be obtained.
+    * Host Name/Super Node Name
     */
     @SerializedName("HostName")
     @Expose
@@ -246,6 +238,20 @@ Note: This field may return·`null`, indicating that no valid values can be obta
     @SerializedName("ClusterName")
     @Expose
     private String ClusterName;
+
+    /**
+    * Pod name
+    */
+    @SerializedName("PodName")
+    @Expose
+    private String PodName;
+
+    /**
+    * pod ip
+    */
+    @SerializedName("PodIP")
+    @Expose
+    private String PodIP;
 
     /**
      * Get Vulnerability CVE ID 
@@ -456,20 +462,16 @@ Note: This field may return·`null`, indicating that no valid values can be obta
     }
 
     /**
-     * Get First discovery time
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return CreateTime First discovery time
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get First detection time 
+     * @return CreateTime First detection time
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set First discovery time
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param CreateTime First discovery time
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set First detection time
+     * @param CreateTime First detection time
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
@@ -516,10 +518,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Last discovery time
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Last discovery time 
      * @return MergeTime Last discovery time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getMergeTime() {
         return this.MergeTime;
@@ -527,185 +527,159 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Last discovery time
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param MergeTime Last discovery time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setMergeTime(String MergeTime) {
         this.MergeTime = MergeTime;
     }
 
     /**
-     * Get Container status
-`RUNNING`: Running.
-`PAUSED`: Paused.
-`STOPPED`: Stopped.
-`CREATED`: Created.
-`DESTROYED`: Terminated.
-`RESTARTING`: Restarting.
-`REMOVING`: Removing.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ContainerStatus Container status
-`RUNNING`: Running.
-`PAUSED`: Paused.
-`STOPPED`: Stopped.
-`CREATED`: Created.
-`DESTROYED`: Terminated.
-`RESTARTING`: Restarting.
-`REMOVING`: Removing.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Container status.
+RUNNING: running
+PAUSED
+Stop: STOPPED
+CREATED
+DESTROYED
+RESTARTING
+Migrating: REMOVING 
+     * @return ContainerStatus Container status.
+RUNNING: running
+PAUSED
+Stop: STOPPED
+CREATED
+DESTROYED
+RESTARTING
+Migrating: REMOVING
      */
     public String getContainerStatus() {
         return this.ContainerStatus;
     }
 
     /**
-     * Set Container status
-`RUNNING`: Running.
-`PAUSED`: Paused.
-`STOPPED`: Stopped.
-`CREATED`: Created.
-`DESTROYED`: Terminated.
-`RESTARTING`: Restarting.
-`REMOVING`: Removing.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ContainerStatus Container status
-`RUNNING`: Running.
-`PAUSED`: Paused.
-`STOPPED`: Stopped.
-`CREATED`: Created.
-`DESTROYED`: Terminated.
-`RESTARTING`: Restarting.
-`REMOVING`: Removing.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Container status.
+RUNNING: running
+PAUSED
+Stop: STOPPED
+CREATED
+DESTROYED
+RESTARTING
+Migrating: REMOVING
+     * @param ContainerStatus Container status.
+RUNNING: running
+PAUSED
+Stop: STOPPED
+CREATED
+DESTROYED
+RESTARTING
+Migrating: REMOVING
      */
     public void setContainerStatus(String ContainerStatus) {
         this.ContainerStatus = ContainerStatus;
     }
 
     /**
-     * Get Sub-status of the container
-"AGENT_OFFLINE"       // The agent is offline.
-	"NODE_DESTROYED"      // The node is terminated.
-	"CONTAINER_EXITED"    // The container exited.
-	"CONTAINER_DESTROYED" // The container was terminated.
-	"SHARED_HOST"         // The container shares the network with the server.
-	"RESOURCE_LIMIT"      // The number of resources to be isolated exceeds the limit.
-	"UNKNOW"              // The reason is unknown.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ContainerNetSubStatus Sub-status of the container
-"AGENT_OFFLINE"       // The agent is offline.
-	"NODE_DESTROYED"      // The node is terminated.
-	"CONTAINER_EXITED"    // The container exited.
-	"CONTAINER_DESTROYED" // The container was terminated.
-	"SHARED_HOST"         // The container shares the network with the server.
-	"RESOURCE_LIMIT"      // The number of resources to be isolated exceeds the limit.
-	"UNKNOW"              // The reason is unknown.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Container sub-status
+AGENT_OFFLINE
+	NODE_DESTROYED
+	CONTAINER_EXITED
+	"CONTAINER_DESTROYED" //Container destroyed
+	"SHARED_HOST"         // Container shares network with host
+	RESOURCE_LIMIT
+	"UNKNOW"              // Reason unknown 
+     * @return ContainerNetSubStatus Container sub-status
+AGENT_OFFLINE
+	NODE_DESTROYED
+	CONTAINER_EXITED
+	"CONTAINER_DESTROYED" //Container destroyed
+	"SHARED_HOST"         // Container shares network with host
+	RESOURCE_LIMIT
+	"UNKNOW"              // Reason unknown
      */
     public String getContainerNetSubStatus() {
         return this.ContainerNetSubStatus;
     }
 
     /**
-     * Set Sub-status of the container
-"AGENT_OFFLINE"       // The agent is offline.
-	"NODE_DESTROYED"      // The node is terminated.
-	"CONTAINER_EXITED"    // The container exited.
-	"CONTAINER_DESTROYED" // The container was terminated.
-	"SHARED_HOST"         // The container shares the network with the server.
-	"RESOURCE_LIMIT"      // The number of resources to be isolated exceeds the limit.
-	"UNKNOW"              // The reason is unknown.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ContainerNetSubStatus Sub-status of the container
-"AGENT_OFFLINE"       // The agent is offline.
-	"NODE_DESTROYED"      // The node is terminated.
-	"CONTAINER_EXITED"    // The container exited.
-	"CONTAINER_DESTROYED" // The container was terminated.
-	"SHARED_HOST"         // The container shares the network with the server.
-	"RESOURCE_LIMIT"      // The number of resources to be isolated exceeds the limit.
-	"UNKNOW"              // The reason is unknown.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Container sub-status
+AGENT_OFFLINE
+	NODE_DESTROYED
+	CONTAINER_EXITED
+	"CONTAINER_DESTROYED" //Container destroyed
+	"SHARED_HOST"         // Container shares network with host
+	RESOURCE_LIMIT
+	"UNKNOW"              // Reason unknown
+     * @param ContainerNetSubStatus Container sub-status
+AGENT_OFFLINE
+	NODE_DESTROYED
+	CONTAINER_EXITED
+	"CONTAINER_DESTROYED" //Container destroyed
+	"SHARED_HOST"         // Container shares network with host
+	RESOURCE_LIMIT
+	"UNKNOW"              // Reason unknown
      */
     public void setContainerNetSubStatus(String ContainerNetSubStatus) {
         this.ContainerNetSubStatus = ContainerNetSubStatus;
     }
 
     /**
-     * Get Container isolation operation source
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ContainerIsolateOperationSrc Container isolation operation source
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Container Isolation Operation Source 
+     * @return ContainerIsolateOperationSrc Container Isolation Operation Source
      */
     public String getContainerIsolateOperationSrc() {
         return this.ContainerIsolateOperationSrc;
     }
 
     /**
-     * Set Container isolation operation source
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ContainerIsolateOperationSrc Container isolation operation source
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Container Isolation Operation Source
+     * @param ContainerIsolateOperationSrc Container Isolation Operation Source
      */
     public void setContainerIsolateOperationSrc(String ContainerIsolateOperationSrc) {
         this.ContainerIsolateOperationSrc = ContainerIsolateOperationSrc;
     }
 
     /**
-     * Get Node QUuid/Super node ID
-Note: This field may return·`null`, indicating that no valid values can be obtained. 
-     * @return QUUID Node QUuid/Super node ID
-Note: This field may return·`null`, indicating that no valid values can be obtained.
+     * Get Host QUUID/Super Node ID 
+     * @return QUUID Host QUUID/Super Node ID
      */
     public String getQUUID() {
         return this.QUUID;
     }
 
     /**
-     * Set Node QUuid/Super node ID
-Note: This field may return·`null`, indicating that no valid values can be obtained.
-     * @param QUUID Node QUuid/Super node ID
-Note: This field may return·`null`, indicating that no valid values can be obtained.
+     * Set Host QUUID/Super Node ID
+     * @param QUUID Host QUUID/Super Node ID
      */
     public void setQUUID(String QUUID) {
         this.QUUID = QUUID;
     }
 
     /**
-     * Get Server private IP
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return HostIP Server private IP
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Host private IP address 
+     * @return HostIP Host private IP address
      */
     public String getHostIP() {
         return this.HostIP;
     }
 
     /**
-     * Set Server private IP
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param HostIP Server private IP
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Host private IP address
+     * @param HostIP Host private IP address
      */
     public void setHostIP(String HostIP) {
         this.HostIP = HostIP;
     }
 
     /**
-     * Get General node/Super node name
-Note: This field may return·`null`, indicating that no valid values can be obtained. 
-     * @return HostName General node/Super node name
-Note: This field may return·`null`, indicating that no valid values can be obtained.
+     * Get Host Name/Super Node Name 
+     * @return HostName Host Name/Super Node Name
      */
     public String getHostName() {
         return this.HostName;
     }
 
     /**
-     * Set General node/Super node name
-Note: This field may return·`null`, indicating that no valid values can be obtained.
-     * @param HostName General node/Super node name
-Note: This field may return·`null`, indicating that no valid values can be obtained.
+     * Set Host Name/Super Node Name
+     * @param HostName Host Name/Super Node Name
      */
     public void setHostName(String HostName) {
         this.HostName = HostName;
@@ -807,6 +781,38 @@ Note: This field may return·`null`, indicating that no valid values can be obta
         this.ClusterName = ClusterName;
     }
 
+    /**
+     * Get Pod name 
+     * @return PodName Pod name
+     */
+    public String getPodName() {
+        return this.PodName;
+    }
+
+    /**
+     * Set Pod name
+     * @param PodName Pod name
+     */
+    public void setPodName(String PodName) {
+        this.PodName = PodName;
+    }
+
+    /**
+     * Get pod ip 
+     * @return PodIP pod ip
+     */
+    public String getPodIP() {
+        return this.PodIP;
+    }
+
+    /**
+     * Set pod ip
+     * @param PodIP pod ip
+     */
+    public void setPodIP(String PodIP) {
+        this.PodIP = PodIP;
+    }
+
     public VulDefenceEvent() {
     }
 
@@ -899,6 +905,12 @@ Note: This field may return·`null`, indicating that no valid values can be obta
         if (source.ClusterName != null) {
             this.ClusterName = new String(source.ClusterName);
         }
+        if (source.PodName != null) {
+            this.PodName = new String(source.PodName);
+        }
+        if (source.PodIP != null) {
+            this.PodIP = new String(source.PodIP);
+        }
     }
 
 
@@ -934,6 +946,8 @@ Note: This field may return·`null`, indicating that no valid values can be obta
         this.setParamSimple(map, prefix + "NodeID", this.NodeID);
         this.setParamSimple(map, prefix + "ClusterID", this.ClusterID);
         this.setParamSimple(map, prefix + "ClusterName", this.ClusterName);
+        this.setParamSimple(map, prefix + "PodName", this.PodName);
+        this.setParamSimple(map, prefix + "PodIP", this.PodIP);
 
     }
 }

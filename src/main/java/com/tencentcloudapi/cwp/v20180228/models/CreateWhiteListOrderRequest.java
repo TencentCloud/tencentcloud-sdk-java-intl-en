@@ -45,18 +45,18 @@ public class CreateWhiteListOrderRequest extends AbstractModel {
     private Long Deadline;
 
     /**
-    * Rule name, big asset center: asset_center
-    */
-    @SerializedName("RuleName")
-    @Expose
-    private String RuleName;
-
-    /**
     * Order type. 1: trial; 2: free; 3: experience; 4: free SSL certificate gift; 5: free CVM
     */
     @SerializedName("SourceType")
     @Expose
     private Long SourceType;
+
+    /**
+    * Rule name, big asset center: asset_center
+    */
+    @SerializedName("RuleName")
+    @Expose
+    private String RuleName;
 
     /**
     * Region: 1 Guangzhou; 9 Singapore. The default is 1. Do not select 9 unless necessary.
@@ -121,22 +121,6 @@ public class CreateWhiteListOrderRequest extends AbstractModel {
     }
 
     /**
-     * Get Rule name, big asset center: asset_center 
-     * @return RuleName Rule name, big asset center: asset_center
-     */
-    public String getRuleName() {
-        return this.RuleName;
-    }
-
-    /**
-     * Set Rule name, big asset center: asset_center
-     * @param RuleName Rule name, big asset center: asset_center
-     */
-    public void setRuleName(String RuleName) {
-        this.RuleName = RuleName;
-    }
-
-    /**
      * Get Order type. 1: trial; 2: free; 3: experience; 4: free SSL certificate gift; 5: free CVM 
      * @return SourceType Order type. 1: trial; 2: free; 3: experience; 4: free SSL certificate gift; 5: free CVM
      */
@@ -150,6 +134,22 @@ public class CreateWhiteListOrderRequest extends AbstractModel {
      */
     public void setSourceType(Long SourceType) {
         this.SourceType = SourceType;
+    }
+
+    /**
+     * Get Rule name, big asset center: asset_center 
+     * @return RuleName Rule name, big asset center: asset_center
+     */
+    public String getRuleName() {
+        return this.RuleName;
+    }
+
+    /**
+     * Set Rule name, big asset center: asset_center
+     * @param RuleName Rule name, big asset center: asset_center
+     */
+    public void setRuleName(String RuleName) {
+        this.RuleName = RuleName;
     }
 
     /**
@@ -201,11 +201,11 @@ public class CreateWhiteListOrderRequest extends AbstractModel {
         if (source.Deadline != null) {
             this.Deadline = new Long(source.Deadline);
         }
-        if (source.RuleName != null) {
-            this.RuleName = new String(source.RuleName);
-        }
         if (source.SourceType != null) {
             this.SourceType = new Long(source.SourceType);
+        }
+        if (source.RuleName != null) {
+            this.RuleName = new String(source.RuleName);
         }
         if (source.RegionId != null) {
             this.RegionId = new Long(source.RegionId);
@@ -223,8 +223,8 @@ public class CreateWhiteListOrderRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "LicenseType", this.LicenseType);
         this.setParamSimple(map, prefix + "LicenseNum", this.LicenseNum);
         this.setParamSimple(map, prefix + "Deadline", this.Deadline);
-        this.setParamSimple(map, prefix + "RuleName", this.RuleName);
         this.setParamSimple(map, prefix + "SourceType", this.SourceType);
+        this.setParamSimple(map, prefix + "RuleName", this.RuleName);
         this.setParamSimple(map, prefix + "RegionId", this.RegionId);
         this.setParamSimple(map, prefix + "ExtraParam", this.ExtraParam);
 

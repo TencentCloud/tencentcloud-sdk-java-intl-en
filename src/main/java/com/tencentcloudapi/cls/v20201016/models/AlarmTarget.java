@@ -24,166 +24,171 @@ import java.util.HashMap;
 public class AlarmTarget extends AbstractModel {
 
     /**
-    * Log topic IDNote: This field may return null, indicating that no valid values can be obtained.
+    * Log topic ID. Obtain the log topic ID through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
     */
     @SerializedName("TopicId")
     @Expose
     private String TopicId;
 
     /**
-    * Query statementNote: This field may return null, indicating that no valid values can be obtained.
+    * Query statement.
     */
     @SerializedName("Query")
     @Expose
     private String Query;
 
     /**
-    * Serial number of alarm object, which is incremental from 1.Note: This field may return null, indicating that no valid values can be obtained.
+    * Alarm object SN. It starts from 1 and increments.
     */
     @SerializedName("Number")
     @Expose
     private Long Number;
 
     /**
-    * Offset of the query start time from the alarm execution time in minutes. The value cannot be positive. Maximum value: 0. Minimum value: -1440.Note: This field may return null, indicating that no valid values can be obtained.
+    * Offset of the start time of the query time range from alarm execution time, in minutes. The value cannot be positive. Maximum value: 0. Minimum value: -1,440.
     */
     @SerializedName("StartTimeOffset")
     @Expose
     private Long StartTimeOffset;
 
     /**
-    * Offset of the query end time from the alarm execution time in minutes. The value cannot be positive and must be greater than StartTimeOffset. Maximum value: 0. Minimum value: -1440.Note: This field may return null, indicating that no valid values can be obtained.
+    * Offset of the end time of the query time range from alarm execution time, in minutes. The value cannot be positive and should be greater than StartTimeOffset. Maximum value: 0. Minimum value: -1440.
     */
     @SerializedName("EndTimeOffset")
     @Expose
     private Long EndTimeOffset;
 
     /**
-    * Logset IDNote: This field may return null, indicating that no valid values can be obtained.
+    * Logset ID. Obtain the logset ID through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
     */
     @SerializedName("LogsetId")
     @Expose
     private String LogsetId;
 
     /**
-    * Search syntax rules; default value: 0.0: Lucene syntax; 1: CQL syntax.For detailed instructions, see <a href="https://intl.cloud.tencent.com/document/product/614/47044?from_cn_redirect=1#RetrievesConditionalRules" target="_blank">Search Condition Syntax Rules</a>
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Search syntax rules. Default value is 0.
+0: Lucene syntax; 1: CQL syntax.
+For detailed explanation, refer to <a href="https://www.tencentcloud.com/document/product/614/47044?from_cn_redirect=1#RetrievesConditionalRules" target="_blank">Retrieve Syntax Rules</a>
     */
     @SerializedName("SyntaxRule")
     @Expose
     private Long SyntaxRule;
 
     /**
-     * Get Log topic IDNote: This field may return null, indicating that no valid values can be obtained. 
-     * @return TopicId Log topic IDNote: This field may return null, indicating that no valid values can be obtained.
+     * Get Log topic ID. Obtain the log topic ID through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1). 
+     * @return TopicId Log topic ID. Obtain the log topic ID through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
      */
     public String getTopicId() {
         return this.TopicId;
     }
 
     /**
-     * Set Log topic IDNote: This field may return null, indicating that no valid values can be obtained.
-     * @param TopicId Log topic IDNote: This field may return null, indicating that no valid values can be obtained.
+     * Set Log topic ID. Obtain the log topic ID through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
+     * @param TopicId Log topic ID. Obtain the log topic ID through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
      */
     public void setTopicId(String TopicId) {
         this.TopicId = TopicId;
     }
 
     /**
-     * Get Query statementNote: This field may return null, indicating that no valid values can be obtained. 
-     * @return Query Query statementNote: This field may return null, indicating that no valid values can be obtained.
+     * Get Query statement. 
+     * @return Query Query statement.
      */
     public String getQuery() {
         return this.Query;
     }
 
     /**
-     * Set Query statementNote: This field may return null, indicating that no valid values can be obtained.
-     * @param Query Query statementNote: This field may return null, indicating that no valid values can be obtained.
+     * Set Query statement.
+     * @param Query Query statement.
      */
     public void setQuery(String Query) {
         this.Query = Query;
     }
 
     /**
-     * Get Serial number of alarm object, which is incremental from 1.Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Number Serial number of alarm object, which is incremental from 1.Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Alarm object SN. It starts from 1 and increments. 
+     * @return Number Alarm object SN. It starts from 1 and increments.
      */
     public Long getNumber() {
         return this.Number;
     }
 
     /**
-     * Set Serial number of alarm object, which is incremental from 1.Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Number Serial number of alarm object, which is incremental from 1.Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Alarm object SN. It starts from 1 and increments.
+     * @param Number Alarm object SN. It starts from 1 and increments.
      */
     public void setNumber(Long Number) {
         this.Number = Number;
     }
 
     /**
-     * Get Offset of the query start time from the alarm execution time in minutes. The value cannot be positive. Maximum value: 0. Minimum value: -1440.Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return StartTimeOffset Offset of the query start time from the alarm execution time in minutes. The value cannot be positive. Maximum value: 0. Minimum value: -1440.Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Offset of the start time of the query time range from alarm execution time, in minutes. The value cannot be positive. Maximum value: 0. Minimum value: -1,440. 
+     * @return StartTimeOffset Offset of the start time of the query time range from alarm execution time, in minutes. The value cannot be positive. Maximum value: 0. Minimum value: -1,440.
      */
     public Long getStartTimeOffset() {
         return this.StartTimeOffset;
     }
 
     /**
-     * Set Offset of the query start time from the alarm execution time in minutes. The value cannot be positive. Maximum value: 0. Minimum value: -1440.Note: This field may return null, indicating that no valid values can be obtained.
-     * @param StartTimeOffset Offset of the query start time from the alarm execution time in minutes. The value cannot be positive. Maximum value: 0. Minimum value: -1440.Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Offset of the start time of the query time range from alarm execution time, in minutes. The value cannot be positive. Maximum value: 0. Minimum value: -1,440.
+     * @param StartTimeOffset Offset of the start time of the query time range from alarm execution time, in minutes. The value cannot be positive. Maximum value: 0. Minimum value: -1,440.
      */
     public void setStartTimeOffset(Long StartTimeOffset) {
         this.StartTimeOffset = StartTimeOffset;
     }
 
     /**
-     * Get Offset of the query end time from the alarm execution time in minutes. The value cannot be positive and must be greater than StartTimeOffset. Maximum value: 0. Minimum value: -1440.Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return EndTimeOffset Offset of the query end time from the alarm execution time in minutes. The value cannot be positive and must be greater than StartTimeOffset. Maximum value: 0. Minimum value: -1440.Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Offset of the end time of the query time range from alarm execution time, in minutes. The value cannot be positive and should be greater than StartTimeOffset. Maximum value: 0. Minimum value: -1440. 
+     * @return EndTimeOffset Offset of the end time of the query time range from alarm execution time, in minutes. The value cannot be positive and should be greater than StartTimeOffset. Maximum value: 0. Minimum value: -1440.
      */
     public Long getEndTimeOffset() {
         return this.EndTimeOffset;
     }
 
     /**
-     * Set Offset of the query end time from the alarm execution time in minutes. The value cannot be positive and must be greater than StartTimeOffset. Maximum value: 0. Minimum value: -1440.Note: This field may return null, indicating that no valid values can be obtained.
-     * @param EndTimeOffset Offset of the query end time from the alarm execution time in minutes. The value cannot be positive and must be greater than StartTimeOffset. Maximum value: 0. Minimum value: -1440.Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Offset of the end time of the query time range from alarm execution time, in minutes. The value cannot be positive and should be greater than StartTimeOffset. Maximum value: 0. Minimum value: -1440.
+     * @param EndTimeOffset Offset of the end time of the query time range from alarm execution time, in minutes. The value cannot be positive and should be greater than StartTimeOffset. Maximum value: 0. Minimum value: -1440.
      */
     public void setEndTimeOffset(Long EndTimeOffset) {
         this.EndTimeOffset = EndTimeOffset;
     }
 
     /**
-     * Get Logset IDNote: This field may return null, indicating that no valid values can be obtained. 
-     * @return LogsetId Logset IDNote: This field may return null, indicating that no valid values can be obtained.
+     * Get Logset ID. Obtain the logset ID through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1). 
+     * @return LogsetId Logset ID. Obtain the logset ID through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
      */
     public String getLogsetId() {
         return this.LogsetId;
     }
 
     /**
-     * Set Logset IDNote: This field may return null, indicating that no valid values can be obtained.
-     * @param LogsetId Logset IDNote: This field may return null, indicating that no valid values can be obtained.
+     * Set Logset ID. Obtain the logset ID through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
+     * @param LogsetId Logset ID. Obtain the logset ID through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
      */
     public void setLogsetId(String LogsetId) {
         this.LogsetId = LogsetId;
     }
 
     /**
-     * Get Search syntax rules; default value: 0.0: Lucene syntax; 1: CQL syntax.For detailed instructions, see <a href="https://intl.cloud.tencent.com/document/product/614/47044?from_cn_redirect=1#RetrievesConditionalRules" target="_blank">Search Condition Syntax Rules</a>
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return SyntaxRule Search syntax rules; default value: 0.0: Lucene syntax; 1: CQL syntax.For detailed instructions, see <a href="https://intl.cloud.tencent.com/document/product/614/47044?from_cn_redirect=1#RetrievesConditionalRules" target="_blank">Search Condition Syntax Rules</a>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Search syntax rules. Default value is 0.
+0: Lucene syntax; 1: CQL syntax.
+For detailed explanation, refer to <a href="https://www.tencentcloud.com/document/product/614/47044?from_cn_redirect=1#RetrievesConditionalRules" target="_blank">Retrieve Syntax Rules</a> 
+     * @return SyntaxRule Search syntax rules. Default value is 0.
+0: Lucene syntax; 1: CQL syntax.
+For detailed explanation, refer to <a href="https://www.tencentcloud.com/document/product/614/47044?from_cn_redirect=1#RetrievesConditionalRules" target="_blank">Retrieve Syntax Rules</a>
      */
     public Long getSyntaxRule() {
         return this.SyntaxRule;
     }
 
     /**
-     * Set Search syntax rules; default value: 0.0: Lucene syntax; 1: CQL syntax.For detailed instructions, see <a href="https://intl.cloud.tencent.com/document/product/614/47044?from_cn_redirect=1#RetrievesConditionalRules" target="_blank">Search Condition Syntax Rules</a>
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param SyntaxRule Search syntax rules; default value: 0.0: Lucene syntax; 1: CQL syntax.For detailed instructions, see <a href="https://intl.cloud.tencent.com/document/product/614/47044?from_cn_redirect=1#RetrievesConditionalRules" target="_blank">Search Condition Syntax Rules</a>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Search syntax rules. Default value is 0.
+0: Lucene syntax; 1: CQL syntax.
+For detailed explanation, refer to <a href="https://www.tencentcloud.com/document/product/614/47044?from_cn_redirect=1#RetrievesConditionalRules" target="_blank">Retrieve Syntax Rules</a>
+     * @param SyntaxRule Search syntax rules. Default value is 0.
+0: Lucene syntax; 1: CQL syntax.
+For detailed explanation, refer to <a href="https://www.tencentcloud.com/document/product/614/47044?from_cn_redirect=1#RetrievesConditionalRules" target="_blank">Retrieve Syntax Rules</a>
      */
     public void setSyntaxRule(Long SyntaxRule) {
         this.SyntaxRule = SyntaxRule;

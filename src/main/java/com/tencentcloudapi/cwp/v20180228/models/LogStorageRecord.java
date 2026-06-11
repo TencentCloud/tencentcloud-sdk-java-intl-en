@@ -24,84 +24,69 @@ import java.util.HashMap;
 public class LogStorageRecord extends AbstractModel {
 
     /**
-    * Year and month
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Year and month.
     */
     @SerializedName("Month")
     @Expose
     private String Month;
 
     /**
-    * Used storage capacity, in bytes
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Storage amount, in bytes.
     */
     @SerializedName("UsedSize")
     @Expose
     private Long UsedSize;
 
     /**
-    * Total capacity, in bytes
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Total volume, in bytes.
     */
     @SerializedName("InquireSize")
     @Expose
     private Long InquireSize;
 
     /**
-     * Get Year and month
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Month Year and month
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Year and month. 
+     * @return Month Year and month.
      */
     public String getMonth() {
         return this.Month;
     }
 
     /**
-     * Set Year and month
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Month Year and month
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Year and month.
+     * @param Month Year and month.
      */
     public void setMonth(String Month) {
         this.Month = Month;
     }
 
     /**
-     * Get Used storage capacity, in bytes
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return UsedSize Used storage capacity, in bytes
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Storage amount, in bytes. 
+     * @return UsedSize Storage amount, in bytes.
      */
     public Long getUsedSize() {
         return this.UsedSize;
     }
 
     /**
-     * Set Used storage capacity, in bytes
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param UsedSize Used storage capacity, in bytes
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Storage amount, in bytes.
+     * @param UsedSize Storage amount, in bytes.
      */
     public void setUsedSize(Long UsedSize) {
         this.UsedSize = UsedSize;
     }
 
     /**
-     * Get Total capacity, in bytes
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return InquireSize Total capacity, in bytes
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Total volume, in bytes. 
+     * @return InquireSize Total volume, in bytes.
      */
     public Long getInquireSize() {
         return this.InquireSize;
     }
 
     /**
-     * Set Total capacity, in bytes
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param InquireSize Total capacity, in bytes
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Total volume, in bytes.
+     * @param InquireSize Total volume, in bytes.
      */
     public void setInquireSize(Long InquireSize) {
         this.InquireSize = InquireSize;

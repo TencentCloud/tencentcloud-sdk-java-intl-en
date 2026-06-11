@@ -25,7 +25,6 @@ public class BaselineEventLevelInfo extends AbstractModel {
 
     /**
     * Hazard level: 1-Low-risk; 2-Medium-risk; 3-High-risk; 4-Critical
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("EventLevel")
     @Expose
@@ -33,17 +32,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Number of vulnerabilities
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("EventCount")
     @Expose
     private Long EventCount;
 
     /**
-     * Get Hazard level: 1-Low-risk; 2-Medium-risk; 3-High-risk; 4-Critical
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Hazard level: 1-Low-risk; 2-Medium-risk; 3-High-risk; 4-Critical 
      * @return EventLevel Hazard level: 1-Low-risk; 2-Medium-risk; 3-High-risk; 4-Critical
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getEventLevel() {
         return this.EventLevel;
@@ -51,19 +47,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Hazard level: 1-Low-risk; 2-Medium-risk; 3-High-risk; 4-Critical
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param EventLevel Hazard level: 1-Low-risk; 2-Medium-risk; 3-High-risk; 4-Critical
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setEventLevel(Long EventLevel) {
         this.EventLevel = EventLevel;
     }
 
     /**
-     * Get Number of vulnerabilities
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Number of vulnerabilities 
      * @return EventCount Number of vulnerabilities
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getEventCount() {
         return this.EventCount;
@@ -71,9 +63,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Number of vulnerabilities
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param EventCount Number of vulnerabilities
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setEventCount(Long EventCount) {
         this.EventCount = EventCount;

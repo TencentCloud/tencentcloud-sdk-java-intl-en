@@ -31,8 +31,7 @@ public class VulInfo extends AbstractModel {
     private String Name;
 
     /**
-    * Vulnerability tag
-Note: This field may return null, indicating that no valid values can be obtained.
+    * vulnerability tag
     */
     @SerializedName("Tags")
     @Expose
@@ -40,7 +39,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * CVSS V3 score
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("CVSSV3Score")
     @Expose
@@ -48,7 +46,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Risk level
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Level")
     @Expose
@@ -62,16 +59,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String CVEID;
 
     /**
-    * Vulnerability sub-category
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Vulnerability Subtype
     */
     @SerializedName("Category")
     @Expose
     private String Category;
 
     /**
-    * First discovery time
-Note: This field may return null, indicating that no valid values can be obtained.
+    * First detection time
     */
     @SerializedName("FoundTime")
     @Expose
@@ -79,7 +74,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Last discovery time
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("LatestFoundTime")
     @Expose
@@ -100,60 +94,67 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long LocalImageCount;
 
     /**
-    * Number of affected containers
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Affected Container Count
     */
     @SerializedName("ContainerCount")
     @Expose
     private Long ContainerCount;
 
     /**
-    * Number of affected repository images
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Affected Repository Image Count
     */
     @SerializedName("RegistryImageCount")
     @Expose
     private Long RegistryImageCount;
 
     /**
-    * POC ID
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Vulnerability Poc ID
     */
     @SerializedName("PocID")
     @Expose
     private String PocID;
 
     /**
-    * Defense status. Valid values: `NO_DEFENDED`, `DEFENDED`.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Defense Status. NO_DEFENDED: Not Defended; DEFENDED: Defended
     */
     @SerializedName("DefenceStatus")
     @Expose
     private String DefenceStatus;
 
     /**
-    * Scope of servers with exploit prevention enabled. Valid values: `MANUAL` (specified servers); `ALL` (all servers).
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Vulnerability Defense Host Range. MANUAL: Selected Host Nodes; ALL: All
     */
     @SerializedName("DefenceScope")
     @Expose
     private String DefenceScope;
 
     /**
-    * Number of servers with exploit prevention enabled
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Number of Hosts Defended Against Vulnerabilities
     */
     @SerializedName("DefenceHostCount")
     @Expose
     private Long DefenceHostCount;
 
     /**
-    * Number of attacks defended against
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Number of Attacks Defended
     */
     @SerializedName("DefendedCount")
     @Expose
     private Long DefendedCount;
+
+    /**
+    * Number of hosts with application protection enabled for the vulnerability.
+    */
+    @SerializedName("RaspOpenNodeCount")
+    @Expose
+    private Long RaspOpenNodeCount;
+
+    /**
+    * Number of hosts with application protection disabled for the vulnerability.
+    */
+    @SerializedName("RaspClosedNodeCount")
+    @Expose
+    private Long RaspClosedNodeCount;
 
     /**
      * Get Vulnerability name 
@@ -172,30 +173,24 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Vulnerability tag
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Tags Vulnerability tag
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get vulnerability tag 
+     * @return Tags vulnerability tag
      */
     public String [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set Vulnerability tag
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Tags Vulnerability tag
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set vulnerability tag
+     * @param Tags vulnerability tag
      */
     public void setTags(String [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get CVSS V3 score
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get CVSS V3 score 
      * @return CVSSV3Score CVSS V3 score
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Float getCVSSV3Score() {
         return this.CVSSV3Score;
@@ -203,19 +198,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set CVSS V3 score
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param CVSSV3Score CVSS V3 score
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setCVSSV3Score(Float CVSSV3Score) {
         this.CVSSV3Score = CVSSV3Score;
     }
 
     /**
-     * Get Risk level
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Risk level 
      * @return Level Risk level
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getLevel() {
         return this.Level;
@@ -223,9 +214,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Risk level
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Level Risk level
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setLevel(String Level) {
         this.Level = Level;
@@ -248,50 +237,40 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Vulnerability sub-category
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Category Vulnerability sub-category
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Vulnerability Subtype 
+     * @return Category Vulnerability Subtype
      */
     public String getCategory() {
         return this.Category;
     }
 
     /**
-     * Set Vulnerability sub-category
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Category Vulnerability sub-category
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Vulnerability Subtype
+     * @param Category Vulnerability Subtype
      */
     public void setCategory(String Category) {
         this.Category = Category;
     }
 
     /**
-     * Get First discovery time
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return FoundTime First discovery time
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get First detection time 
+     * @return FoundTime First detection time
      */
     public String getFoundTime() {
         return this.FoundTime;
     }
 
     /**
-     * Set First discovery time
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param FoundTime First discovery time
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set First detection time
+     * @param FoundTime First detection time
      */
     public void setFoundTime(String FoundTime) {
         this.FoundTime = FoundTime;
     }
 
     /**
-     * Get Last discovery time
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Last discovery time 
      * @return LatestFoundTime Last discovery time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getLatestFoundTime() {
         return this.LatestFoundTime;
@@ -299,9 +278,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Last discovery time
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param LatestFoundTime Last discovery time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setLatestFoundTime(String LatestFoundTime) {
         this.LatestFoundTime = LatestFoundTime;
@@ -340,143 +317,147 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Number of affected containers
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ContainerCount Number of affected containers
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Affected Container Count 
+     * @return ContainerCount Affected Container Count
      */
     public Long getContainerCount() {
         return this.ContainerCount;
     }
 
     /**
-     * Set Number of affected containers
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ContainerCount Number of affected containers
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Affected Container Count
+     * @param ContainerCount Affected Container Count
      */
     public void setContainerCount(Long ContainerCount) {
         this.ContainerCount = ContainerCount;
     }
 
     /**
-     * Get Number of affected repository images
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return RegistryImageCount Number of affected repository images
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Affected Repository Image Count 
+     * @return RegistryImageCount Affected Repository Image Count
      */
     public Long getRegistryImageCount() {
         return this.RegistryImageCount;
     }
 
     /**
-     * Set Number of affected repository images
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param RegistryImageCount Number of affected repository images
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Affected Repository Image Count
+     * @param RegistryImageCount Affected Repository Image Count
      */
     public void setRegistryImageCount(Long RegistryImageCount) {
         this.RegistryImageCount = RegistryImageCount;
     }
 
     /**
-     * Get POC ID
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return PocID POC ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Vulnerability Poc ID 
+     * @return PocID Vulnerability Poc ID
      */
     public String getPocID() {
         return this.PocID;
     }
 
     /**
-     * Set POC ID
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param PocID POC ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Vulnerability Poc ID
+     * @param PocID Vulnerability Poc ID
      */
     public void setPocID(String PocID) {
         this.PocID = PocID;
     }
 
     /**
-     * Get Defense status. Valid values: `NO_DEFENDED`, `DEFENDED`.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return DefenceStatus Defense status. Valid values: `NO_DEFENDED`, `DEFENDED`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Defense Status. NO_DEFENDED: Not Defended; DEFENDED: Defended 
+     * @return DefenceStatus Defense Status. NO_DEFENDED: Not Defended; DEFENDED: Defended
      */
     public String getDefenceStatus() {
         return this.DefenceStatus;
     }
 
     /**
-     * Set Defense status. Valid values: `NO_DEFENDED`, `DEFENDED`.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param DefenceStatus Defense status. Valid values: `NO_DEFENDED`, `DEFENDED`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Defense Status. NO_DEFENDED: Not Defended; DEFENDED: Defended
+     * @param DefenceStatus Defense Status. NO_DEFENDED: Not Defended; DEFENDED: Defended
      */
     public void setDefenceStatus(String DefenceStatus) {
         this.DefenceStatus = DefenceStatus;
     }
 
     /**
-     * Get Scope of servers with exploit prevention enabled. Valid values: `MANUAL` (specified servers); `ALL` (all servers).
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return DefenceScope Scope of servers with exploit prevention enabled. Valid values: `MANUAL` (specified servers); `ALL` (all servers).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Vulnerability Defense Host Range. MANUAL: Selected Host Nodes; ALL: All 
+     * @return DefenceScope Vulnerability Defense Host Range. MANUAL: Selected Host Nodes; ALL: All
      */
     public String getDefenceScope() {
         return this.DefenceScope;
     }
 
     /**
-     * Set Scope of servers with exploit prevention enabled. Valid values: `MANUAL` (specified servers); `ALL` (all servers).
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param DefenceScope Scope of servers with exploit prevention enabled. Valid values: `MANUAL` (specified servers); `ALL` (all servers).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Vulnerability Defense Host Range. MANUAL: Selected Host Nodes; ALL: All
+     * @param DefenceScope Vulnerability Defense Host Range. MANUAL: Selected Host Nodes; ALL: All
      */
     public void setDefenceScope(String DefenceScope) {
         this.DefenceScope = DefenceScope;
     }
 
     /**
-     * Get Number of servers with exploit prevention enabled
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return DefenceHostCount Number of servers with exploit prevention enabled
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Number of Hosts Defended Against Vulnerabilities 
+     * @return DefenceHostCount Number of Hosts Defended Against Vulnerabilities
      */
     public Long getDefenceHostCount() {
         return this.DefenceHostCount;
     }
 
     /**
-     * Set Number of servers with exploit prevention enabled
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param DefenceHostCount Number of servers with exploit prevention enabled
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Number of Hosts Defended Against Vulnerabilities
+     * @param DefenceHostCount Number of Hosts Defended Against Vulnerabilities
      */
     public void setDefenceHostCount(Long DefenceHostCount) {
         this.DefenceHostCount = DefenceHostCount;
     }
 
     /**
-     * Get Number of attacks defended against
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return DefendedCount Number of attacks defended against
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Number of Attacks Defended 
+     * @return DefendedCount Number of Attacks Defended
      */
     public Long getDefendedCount() {
         return this.DefendedCount;
     }
 
     /**
-     * Set Number of attacks defended against
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param DefendedCount Number of attacks defended against
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Number of Attacks Defended
+     * @param DefendedCount Number of Attacks Defended
      */
     public void setDefendedCount(Long DefendedCount) {
         this.DefendedCount = DefendedCount;
+    }
+
+    /**
+     * Get Number of hosts with application protection enabled for the vulnerability. 
+     * @return RaspOpenNodeCount Number of hosts with application protection enabled for the vulnerability.
+     */
+    public Long getRaspOpenNodeCount() {
+        return this.RaspOpenNodeCount;
+    }
+
+    /**
+     * Set Number of hosts with application protection enabled for the vulnerability.
+     * @param RaspOpenNodeCount Number of hosts with application protection enabled for the vulnerability.
+     */
+    public void setRaspOpenNodeCount(Long RaspOpenNodeCount) {
+        this.RaspOpenNodeCount = RaspOpenNodeCount;
+    }
+
+    /**
+     * Get Number of hosts with application protection disabled for the vulnerability. 
+     * @return RaspClosedNodeCount Number of hosts with application protection disabled for the vulnerability.
+     */
+    public Long getRaspClosedNodeCount() {
+        return this.RaspClosedNodeCount;
+    }
+
+    /**
+     * Set Number of hosts with application protection disabled for the vulnerability.
+     * @param RaspClosedNodeCount Number of hosts with application protection disabled for the vulnerability.
+     */
+    public void setRaspClosedNodeCount(Long RaspClosedNodeCount) {
+        this.RaspClosedNodeCount = RaspClosedNodeCount;
     }
 
     public VulInfo() {
@@ -541,6 +522,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.DefendedCount != null) {
             this.DefendedCount = new Long(source.DefendedCount);
         }
+        if (source.RaspOpenNodeCount != null) {
+            this.RaspOpenNodeCount = new Long(source.RaspOpenNodeCount);
+        }
+        if (source.RaspClosedNodeCount != null) {
+            this.RaspClosedNodeCount = new Long(source.RaspClosedNodeCount);
+        }
     }
 
 
@@ -565,6 +552,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "DefenceScope", this.DefenceScope);
         this.setParamSimple(map, prefix + "DefenceHostCount", this.DefenceHostCount);
         this.setParamSimple(map, prefix + "DefendedCount", this.DefendedCount);
+        this.setParamSimple(map, prefix + "RaspOpenNodeCount", this.RaspOpenNodeCount);
+        this.setParamSimple(map, prefix + "RaspClosedNodeCount", this.RaspClosedNodeCount);
 
     }
 }

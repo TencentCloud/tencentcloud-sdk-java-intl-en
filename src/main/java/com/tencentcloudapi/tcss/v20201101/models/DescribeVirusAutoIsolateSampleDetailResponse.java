@@ -31,8 +31,7 @@ public class DescribeVirusAutoIsolateSampleDetailResponse extends AbstractModel 
     private String MD5;
 
     /**
-    * File size (B)
-Note: This field may return null, indicating that no valid values can be obtained.
+    * File Size (B)
     */
     @SerializedName("Size")
     @Expose
@@ -40,31 +39,27 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Virus name
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("VirusName")
     @Expose
     private String VirusName;
 
     /**
-    * Risk level. Valid values: `RISK_CRITICAL`, `RISK_HIGH`, `RISK_MEDIUM`, `RISK_LOW`, `RISK_NOTICE`.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Risk Level: RISK_CRITICAL, RISK_HIGH, RISK_MEDIUM, RISK_LOW, and RISK_NOTICE
     */
     @SerializedName("RiskLevel")
     @Expose
     private String RiskLevel;
 
     /**
-    * Anti-virus engine
-Note: This field may return null, indicating that no valid values can be obtained.
+    * antivirus engine
     */
     @SerializedName("KillEngine")
     @Expose
     private String [] KillEngine;
 
     /**
-    * Tag
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Tag.
     */
     @SerializedName("Tags")
     @Expose
@@ -72,15 +67,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Event description
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("HarmDescribe")
     @Expose
     private String HarmDescribe;
 
     /**
-    * Solution
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Recommended solution
     */
     @SerializedName("SuggestScheme")
     @Expose
@@ -88,7 +81,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Reference link
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ReferenceLink")
     @Expose
@@ -118,30 +110,24 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get File size (B)
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Size File size (B)
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get File Size (B) 
+     * @return Size File Size (B)
      */
     public Long getSize() {
         return this.Size;
     }
 
     /**
-     * Set File size (B)
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Size File size (B)
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set File Size (B)
+     * @param Size File Size (B)
      */
     public void setSize(Long Size) {
         this.Size = Size;
     }
 
     /**
-     * Get Virus name
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Virus name 
      * @return VirusName Virus name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getVirusName() {
         return this.VirusName;
@@ -149,79 +135,63 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Virus name
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param VirusName Virus name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setVirusName(String VirusName) {
         this.VirusName = VirusName;
     }
 
     /**
-     * Get Risk level. Valid values: `RISK_CRITICAL`, `RISK_HIGH`, `RISK_MEDIUM`, `RISK_LOW`, `RISK_NOTICE`.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return RiskLevel Risk level. Valid values: `RISK_CRITICAL`, `RISK_HIGH`, `RISK_MEDIUM`, `RISK_LOW`, `RISK_NOTICE`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Risk Level: RISK_CRITICAL, RISK_HIGH, RISK_MEDIUM, RISK_LOW, and RISK_NOTICE 
+     * @return RiskLevel Risk Level: RISK_CRITICAL, RISK_HIGH, RISK_MEDIUM, RISK_LOW, and RISK_NOTICE
      */
     public String getRiskLevel() {
         return this.RiskLevel;
     }
 
     /**
-     * Set Risk level. Valid values: `RISK_CRITICAL`, `RISK_HIGH`, `RISK_MEDIUM`, `RISK_LOW`, `RISK_NOTICE`.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param RiskLevel Risk level. Valid values: `RISK_CRITICAL`, `RISK_HIGH`, `RISK_MEDIUM`, `RISK_LOW`, `RISK_NOTICE`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Risk Level: RISK_CRITICAL, RISK_HIGH, RISK_MEDIUM, RISK_LOW, and RISK_NOTICE
+     * @param RiskLevel Risk Level: RISK_CRITICAL, RISK_HIGH, RISK_MEDIUM, RISK_LOW, and RISK_NOTICE
      */
     public void setRiskLevel(String RiskLevel) {
         this.RiskLevel = RiskLevel;
     }
 
     /**
-     * Get Anti-virus engine
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return KillEngine Anti-virus engine
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get antivirus engine 
+     * @return KillEngine antivirus engine
      */
     public String [] getKillEngine() {
         return this.KillEngine;
     }
 
     /**
-     * Set Anti-virus engine
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param KillEngine Anti-virus engine
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set antivirus engine
+     * @param KillEngine antivirus engine
      */
     public void setKillEngine(String [] KillEngine) {
         this.KillEngine = KillEngine;
     }
 
     /**
-     * Get Tag
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Tags Tag
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Tag. 
+     * @return Tags Tag.
      */
     public String [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set Tag
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Tags Tag
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Tag.
+     * @param Tags Tag.
      */
     public void setTags(String [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get Event description
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Event description 
      * @return HarmDescribe Event description
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getHarmDescribe() {
         return this.HarmDescribe;
@@ -229,39 +199,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Event description
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param HarmDescribe Event description
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setHarmDescribe(String HarmDescribe) {
         this.HarmDescribe = HarmDescribe;
     }
 
     /**
-     * Get Solution
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return SuggestScheme Solution
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Recommended solution 
+     * @return SuggestScheme Recommended solution
      */
     public String getSuggestScheme() {
         return this.SuggestScheme;
     }
 
     /**
-     * Set Solution
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param SuggestScheme Solution
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Recommended solution
+     * @param SuggestScheme Recommended solution
      */
     public void setSuggestScheme(String SuggestScheme) {
         this.SuggestScheme = SuggestScheme;
     }
 
     /**
-     * Get Reference link
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Reference link 
      * @return ReferenceLink Reference link
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getReferenceLink() {
         return this.ReferenceLink;
@@ -269,9 +231,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Reference link
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param ReferenceLink Reference link
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setReferenceLink(String ReferenceLink) {
         this.ReferenceLink = ReferenceLink;

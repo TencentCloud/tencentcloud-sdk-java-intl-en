@@ -25,7 +25,6 @@ public class DescribeVirusDetailResponse extends AbstractModel {
 
     /**
     * Image ID
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ImageId")
     @Expose
@@ -33,23 +32,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Image name
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ImageName")
     @Expose
     private String ImageName;
 
     /**
-    * Creation time
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Creation time.
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * Trojan file size
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Trojan File Size
     */
     @SerializedName("Size")
     @Expose
@@ -57,15 +53,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Trojan file path
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("FilePath")
     @Expose
     private String FilePath;
 
     /**
-    * Last generation time
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Latest creation time
     */
     @SerializedName("ModifyTime")
     @Expose
@@ -73,15 +67,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Virus name
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("VirusName")
     @Expose
     private String VirusName;
 
     /**
-    * Risk level. Valid values: `RISK_CRITICAL`, `RISK_HIGH`, `RISK_MEDIUM`, `RISK_LOW`, `RISK_NOTICE`.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Risk Level: RISK_CRITICAL, RISK_HIGH, RISK_MEDIUM, RISK_LOW, and RISK_NOTICE
     */
     @SerializedName("RiskLevel")
     @Expose
@@ -89,31 +81,27 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Container name
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ContainerName")
     @Expose
     private String ContainerName;
 
     /**
-    * Container ID
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Container id
     */
     @SerializedName("ContainerId")
     @Expose
     private String ContainerId;
 
     /**
-    * Server name
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Host name
     */
     @SerializedName("HostName")
     @Expose
     private String HostName;
 
     /**
-    * Server ID
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Host ID
     */
     @SerializedName("HostId")
     @Expose
@@ -121,7 +109,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Process name
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ProcessName")
     @Expose
@@ -129,23 +116,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Process path
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ProcessPath")
     @Expose
     private String ProcessPath;
 
     /**
-    * Process MD5
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Process md5
     */
     @SerializedName("ProcessMd5")
     @Expose
     private String ProcessMd5;
 
     /**
-    * Process ID
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Process id
     */
     @SerializedName("ProcessId")
     @Expose
@@ -153,7 +137,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Process parameter
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ProcessArgv")
     @Expose
@@ -161,23 +144,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Process chain
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ProcessChan")
     @Expose
     private String ProcessChan;
 
     /**
-    * Process group
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Process Group
     */
     @SerializedName("ProcessAccountGroup")
     @Expose
     private String ProcessAccountGroup;
 
     /**
-    * Process initiator
-Note: This field may return null, indicating that no valid values can be obtained.
+    * process initiator
     */
     @SerializedName("ProcessStartAccount")
     @Expose
@@ -185,23 +165,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Process file permission
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ProcessFileAuthority")
     @Expose
     private String ProcessFileAuthority;
 
     /**
-    * Source. Valid values: `0` (quick scan); `1` (scheduled scan); `2` (real-time monitoring).
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Source. 0: One-Click Scan; 1: Scheduled Scan; 2: Real-Time Monitoring
     */
     @SerializedName("SourceType")
     @Expose
     private Long SourceType;
 
     /**
-    * Tag
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Tag.
     */
     @SerializedName("Tags")
     @Expose
@@ -209,15 +186,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Event description
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("HarmDescribe")
     @Expose
     private String HarmDescribe;
 
     /**
-    * Solution
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Recommended solution
     */
     @SerializedName("SuggestScheme")
     @Expose
@@ -225,23 +200,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Remarks
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Mark")
     @Expose
     private String Mark;
 
     /**
-    * Suspicious file name
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Risk File Name
     */
     @SerializedName("FileName")
     @Expose
     private String FileName;
 
     /**
-    * MD5 checksum of the file
-Note: This field may return null, indicating that no valid values can be obtained.
+    * File MD5
     */
     @SerializedName("FileMd5")
     @Expose
@@ -249,109 +221,97 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Event type
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("EventType")
     @Expose
     private String EventType;
 
     /**
-    * Cluster name
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Cluster name.
     */
     @SerializedName("PodName")
     @Expose
     private String PodName;
 
     /**
-    * `DEAL_NONE`: Pending.
-`DEAL_IGNORE`: Ignored.
-`DEAL_ADD_WHITELIST`: Allowed.
-`DEAL_DEL`: Deleted.
-`DEAL_ISOLATE`: Isolated.
-`DEAL_ISOLATING`: Isolating.
-`DEAL_ISOLATE_FAILED`: Isolation failed.
-`DEAL_RECOVERING`: Recovering.
-`DEAL_RECOVER_FAILED`: Recovery failed.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * DEAL_NONE: File pending
+DEAL_IGNORE: Already ignored
+DEAL_ADD_WHITELIST: Add to whitelist
+DEAL_DEL: File deleted
+DEAL_ISOLATE: Has been isolated
+DEAL_ISOLATING: Isolated
+DEAL_ISOLATE_FAILED: Isolation failed
+DEAL_RECOVERING: Recovering
+DEAL_RECOVER_FAILED: Recovery failed
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * Sub-status of the failure:
-`FILE_NOT_FOUND`: The file does not exist.
-`FILE_ABNORMAL`: The file is abnormal.
-`FILE_ABNORMAL_DEAL_RECOVER`: The file is abnormal when recovered.
-`BACKUP_FILE_NOT_FOUND`: The backup file does not exist.
-`CONTAINER_NOT_FOUND_DEAL_ISOLATE`: The container does not exist during isolation.
-`CONTAINER_NOT_FOUND_DEAL_RECOVER`: The container does not exist during recovery.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Failed sub-status
+FILE_NOT_FOUND: File not found
+FILE_ABNORMAL: File abnormality
+FILE_ABNORMAL_DEAL_RECOVER: File abnormality when recovering file
+BACKUP FILE NOT FOUND
+CONTAINER_NOT_FOUND_DEAL_ISOLATE: Container not found in isolation
+CONTAINER_NOT_FOUND_DEAL_RECOVER: Container not found when recovering
     */
     @SerializedName("SubStatus")
     @Expose
     private String SubStatus;
 
     /**
-    * Private IP
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Private IP address
     */
     @SerializedName("HostIP")
     @Expose
     private String HostIP;
 
     /**
-    * Public IP
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Public IP address
     */
     @SerializedName("ClientIP")
     @Expose
     private String ClientIP;
 
     /**
-    * Parent process initiator
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Parent Process Startup User
     */
     @SerializedName("PProcessStartUser")
     @Expose
     private String PProcessStartUser;
 
     /**
-    * User group of the parent process
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Parent process user group
     */
     @SerializedName("PProcessUserGroup")
     @Expose
     private String PProcessUserGroup;
 
     /**
-    * Path of the parent process
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Parent process path
     */
     @SerializedName("PProcessPath")
     @Expose
     private String PProcessPath;
 
     /**
-    * Command line parameters of the parent process
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Parent Process Command Line Parameters
     */
     @SerializedName("PProcessParam")
     @Expose
     private String PProcessParam;
 
     /**
-    * Ancestor process initiator
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Ancestor Process Startup User
     */
     @SerializedName("AncestorProcessStartUser")
     @Expose
     private String AncestorProcessStartUser;
 
     /**
-    * Ancestor process user group
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Ancestor Process User Group
     */
     @SerializedName("AncestorProcessUserGroup")
     @Expose
@@ -359,23 +319,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Ancestor process path
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("AncestorProcessPath")
     @Expose
     private String AncestorProcessPath;
 
     /**
-    * Command line parameters of the ancestor process
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Ancestor Process Command Line Parameters
     */
     @SerializedName("AncestorProcessParam")
     @Expose
     private String AncestorProcessParam;
 
     /**
-    * Last processing time of the event
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Last Time for Event Handling
     */
     @SerializedName("OperationTime")
     @Expose
@@ -383,52 +340,46 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Container isolation status
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ContainerNetStatus")
     @Expose
     private String ContainerNetStatus;
 
     /**
-    * Sub-status of container isolation
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Container Isolation Sub-status
     */
     @SerializedName("ContainerNetSubStatus")
     @Expose
     private String ContainerNetSubStatus;
 
     /**
-    * Container isolation operation source
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Container Isolation Operation Source
     */
     @SerializedName("ContainerIsolateOperationSrc")
     @Expose
     private String ContainerIsolateOperationSrc;
 
     /**
-    * Check platform
-`1`: Tencent Cloud Security Engine.
-`2`: tav.
-`3`: binaryAi.
-`4`: Unusual behavior.
-`5`: Threat intelligence.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * detection platform
+1: Cloud Killing Engine
+2: tav
+3: binaryAi
+4: Abnormal behavior
+5: TI
     */
     @SerializedName("CheckPlatform")
     @Expose
     private String [] CheckPlatform;
 
     /**
-    * File accessed time
-Note: This field may return null, indicating that no valid values can be obtained.
+    * File Access Time
     */
     @SerializedName("FileAccessTime")
     @Expose
     private String FileAccessTime;
 
     /**
-    * File modified time
-Note: This field may return null, indicating that no valid values can be obtained.
+    * File Modification Time
     */
     @SerializedName("FileModifyTime")
     @Expose
@@ -505,18 +456,25 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String ClusterName;
 
     /**
-    * 
+    * Namespace
     */
     @SerializedName("Namespace")
     @Expose
     private String Namespace;
 
     /**
-    * 
+    * Workload type
     */
     @SerializedName("WorkloadType")
     @Expose
     private String WorkloadType;
+
+    /**
+    * Container status.
+    */
+    @SerializedName("ContainerStatus")
+    @Expose
+    private String ContainerStatus;
 
     /**
     * The unique request ID, generated by the server, will be returned for every request (if the request fails to reach the server for other reasons, the request will not obtain a RequestId). RequestId is required for locating a problem.
@@ -526,10 +484,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Image ID
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Image ID 
      * @return ImageId Image ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getImageId() {
         return this.ImageId;
@@ -537,19 +493,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Image ID
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param ImageId Image ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setImageId(String ImageId) {
         this.ImageId = ImageId;
     }
 
     /**
-     * Get Image name
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Image name 
      * @return ImageName Image name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getImageName() {
         return this.ImageName;
@@ -557,59 +509,47 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Image name
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param ImageName Image name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setImageName(String ImageName) {
         this.ImageName = ImageName;
     }
 
     /**
-     * Get Creation time
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return CreateTime Creation time
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Creation time. 
+     * @return CreateTime Creation time.
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set Creation time
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param CreateTime Creation time
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Creation time.
+     * @param CreateTime Creation time.
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get Trojan file size
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Size Trojan file size
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Trojan File Size 
+     * @return Size Trojan File Size
      */
     public Long getSize() {
         return this.Size;
     }
 
     /**
-     * Set Trojan file size
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Size Trojan file size
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Trojan File Size
+     * @param Size Trojan File Size
      */
     public void setSize(Long Size) {
         this.Size = Size;
     }
 
     /**
-     * Get Trojan file path
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Trojan file path 
      * @return FilePath Trojan file path
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getFilePath() {
         return this.FilePath;
@@ -617,39 +557,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Trojan file path
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param FilePath Trojan file path
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setFilePath(String FilePath) {
         this.FilePath = FilePath;
     }
 
     /**
-     * Get Last generation time
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ModifyTime Last generation time
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Latest creation time 
+     * @return ModifyTime Latest creation time
      */
     public String getModifyTime() {
         return this.ModifyTime;
     }
 
     /**
-     * Set Last generation time
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ModifyTime Last generation time
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Latest creation time
+     * @param ModifyTime Latest creation time
      */
     public void setModifyTime(String ModifyTime) {
         this.ModifyTime = ModifyTime;
     }
 
     /**
-     * Get Virus name
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Virus name 
      * @return VirusName Virus name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getVirusName() {
         return this.VirusName;
@@ -657,39 +589,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Virus name
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param VirusName Virus name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setVirusName(String VirusName) {
         this.VirusName = VirusName;
     }
 
     /**
-     * Get Risk level. Valid values: `RISK_CRITICAL`, `RISK_HIGH`, `RISK_MEDIUM`, `RISK_LOW`, `RISK_NOTICE`.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return RiskLevel Risk level. Valid values: `RISK_CRITICAL`, `RISK_HIGH`, `RISK_MEDIUM`, `RISK_LOW`, `RISK_NOTICE`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Risk Level: RISK_CRITICAL, RISK_HIGH, RISK_MEDIUM, RISK_LOW, and RISK_NOTICE 
+     * @return RiskLevel Risk Level: RISK_CRITICAL, RISK_HIGH, RISK_MEDIUM, RISK_LOW, and RISK_NOTICE
      */
     public String getRiskLevel() {
         return this.RiskLevel;
     }
 
     /**
-     * Set Risk level. Valid values: `RISK_CRITICAL`, `RISK_HIGH`, `RISK_MEDIUM`, `RISK_LOW`, `RISK_NOTICE`.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param RiskLevel Risk level. Valid values: `RISK_CRITICAL`, `RISK_HIGH`, `RISK_MEDIUM`, `RISK_LOW`, `RISK_NOTICE`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Risk Level: RISK_CRITICAL, RISK_HIGH, RISK_MEDIUM, RISK_LOW, and RISK_NOTICE
+     * @param RiskLevel Risk Level: RISK_CRITICAL, RISK_HIGH, RISK_MEDIUM, RISK_LOW, and RISK_NOTICE
      */
     public void setRiskLevel(String RiskLevel) {
         this.RiskLevel = RiskLevel;
     }
 
     /**
-     * Get Container name
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Container name 
      * @return ContainerName Container name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getContainerName() {
         return this.ContainerName;
@@ -697,79 +621,63 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Container name
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param ContainerName Container name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setContainerName(String ContainerName) {
         this.ContainerName = ContainerName;
     }
 
     /**
-     * Get Container ID
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ContainerId Container ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Container id 
+     * @return ContainerId Container id
      */
     public String getContainerId() {
         return this.ContainerId;
     }
 
     /**
-     * Set Container ID
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ContainerId Container ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Container id
+     * @param ContainerId Container id
      */
     public void setContainerId(String ContainerId) {
         this.ContainerId = ContainerId;
     }
 
     /**
-     * Get Server name
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return HostName Server name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Host name 
+     * @return HostName Host name
      */
     public String getHostName() {
         return this.HostName;
     }
 
     /**
-     * Set Server name
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param HostName Server name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Host name
+     * @param HostName Host name
      */
     public void setHostName(String HostName) {
         this.HostName = HostName;
     }
 
     /**
-     * Get Server ID
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return HostId Server ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Host ID 
+     * @return HostId Host ID
      */
     public String getHostId() {
         return this.HostId;
     }
 
     /**
-     * Set Server ID
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param HostId Server ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Host ID
+     * @param HostId Host ID
      */
     public void setHostId(String HostId) {
         this.HostId = HostId;
     }
 
     /**
-     * Get Process name
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Process name 
      * @return ProcessName Process name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getProcessName() {
         return this.ProcessName;
@@ -777,19 +685,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Process name
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param ProcessName Process name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setProcessName(String ProcessName) {
         this.ProcessName = ProcessName;
     }
 
     /**
-     * Get Process path
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Process path 
      * @return ProcessPath Process path
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getProcessPath() {
         return this.ProcessPath;
@@ -797,59 +701,47 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Process path
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param ProcessPath Process path
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setProcessPath(String ProcessPath) {
         this.ProcessPath = ProcessPath;
     }
 
     /**
-     * Get Process MD5
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ProcessMd5 Process MD5
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Process md5 
+     * @return ProcessMd5 Process md5
      */
     public String getProcessMd5() {
         return this.ProcessMd5;
     }
 
     /**
-     * Set Process MD5
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ProcessMd5 Process MD5
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Process md5
+     * @param ProcessMd5 Process md5
      */
     public void setProcessMd5(String ProcessMd5) {
         this.ProcessMd5 = ProcessMd5;
     }
 
     /**
-     * Get Process ID
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ProcessId Process ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Process id 
+     * @return ProcessId Process id
      */
     public Long getProcessId() {
         return this.ProcessId;
     }
 
     /**
-     * Set Process ID
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ProcessId Process ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Process id
+     * @param ProcessId Process id
      */
     public void setProcessId(Long ProcessId) {
         this.ProcessId = ProcessId;
     }
 
     /**
-     * Get Process parameter
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Process parameter 
      * @return ProcessArgv Process parameter
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getProcessArgv() {
         return this.ProcessArgv;
@@ -857,19 +749,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Process parameter
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param ProcessArgv Process parameter
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setProcessArgv(String ProcessArgv) {
         this.ProcessArgv = ProcessArgv;
     }
 
     /**
-     * Get Process chain
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Process chain 
      * @return ProcessChan Process chain
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getProcessChan() {
         return this.ProcessChan;
@@ -877,59 +765,47 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Process chain
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param ProcessChan Process chain
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setProcessChan(String ProcessChan) {
         this.ProcessChan = ProcessChan;
     }
 
     /**
-     * Get Process group
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ProcessAccountGroup Process group
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Process Group 
+     * @return ProcessAccountGroup Process Group
      */
     public String getProcessAccountGroup() {
         return this.ProcessAccountGroup;
     }
 
     /**
-     * Set Process group
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ProcessAccountGroup Process group
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Process Group
+     * @param ProcessAccountGroup Process Group
      */
     public void setProcessAccountGroup(String ProcessAccountGroup) {
         this.ProcessAccountGroup = ProcessAccountGroup;
     }
 
     /**
-     * Get Process initiator
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ProcessStartAccount Process initiator
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get process initiator 
+     * @return ProcessStartAccount process initiator
      */
     public String getProcessStartAccount() {
         return this.ProcessStartAccount;
     }
 
     /**
-     * Set Process initiator
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ProcessStartAccount Process initiator
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set process initiator
+     * @param ProcessStartAccount process initiator
      */
     public void setProcessStartAccount(String ProcessStartAccount) {
         this.ProcessStartAccount = ProcessStartAccount;
     }
 
     /**
-     * Get Process file permission
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Process file permission 
      * @return ProcessFileAuthority Process file permission
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getProcessFileAuthority() {
         return this.ProcessFileAuthority;
@@ -937,59 +813,47 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Process file permission
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param ProcessFileAuthority Process file permission
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setProcessFileAuthority(String ProcessFileAuthority) {
         this.ProcessFileAuthority = ProcessFileAuthority;
     }
 
     /**
-     * Get Source. Valid values: `0` (quick scan); `1` (scheduled scan); `2` (real-time monitoring).
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return SourceType Source. Valid values: `0` (quick scan); `1` (scheduled scan); `2` (real-time monitoring).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Source. 0: One-Click Scan; 1: Scheduled Scan; 2: Real-Time Monitoring 
+     * @return SourceType Source. 0: One-Click Scan; 1: Scheduled Scan; 2: Real-Time Monitoring
      */
     public Long getSourceType() {
         return this.SourceType;
     }
 
     /**
-     * Set Source. Valid values: `0` (quick scan); `1` (scheduled scan); `2` (real-time monitoring).
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param SourceType Source. Valid values: `0` (quick scan); `1` (scheduled scan); `2` (real-time monitoring).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Source. 0: One-Click Scan; 1: Scheduled Scan; 2: Real-Time Monitoring
+     * @param SourceType Source. 0: One-Click Scan; 1: Scheduled Scan; 2: Real-Time Monitoring
      */
     public void setSourceType(Long SourceType) {
         this.SourceType = SourceType;
     }
 
     /**
-     * Get Tag
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Tags Tag
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Tag. 
+     * @return Tags Tag.
      */
     public String [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set Tag
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Tags Tag
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Tag.
+     * @param Tags Tag.
      */
     public void setTags(String [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get Event description
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Event description 
      * @return HarmDescribe Event description
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getHarmDescribe() {
         return this.HarmDescribe;
@@ -997,39 +861,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Event description
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param HarmDescribe Event description
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setHarmDescribe(String HarmDescribe) {
         this.HarmDescribe = HarmDescribe;
     }
 
     /**
-     * Get Solution
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return SuggestScheme Solution
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Recommended solution 
+     * @return SuggestScheme Recommended solution
      */
     public String getSuggestScheme() {
         return this.SuggestScheme;
     }
 
     /**
-     * Set Solution
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param SuggestScheme Solution
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Recommended solution
+     * @param SuggestScheme Recommended solution
      */
     public void setSuggestScheme(String SuggestScheme) {
         this.SuggestScheme = SuggestScheme;
     }
 
     /**
-     * Get Remarks
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Remarks 
      * @return Mark Remarks
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getMark() {
         return this.Mark;
@@ -1037,59 +893,47 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Remarks
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Mark Remarks
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setMark(String Mark) {
         this.Mark = Mark;
     }
 
     /**
-     * Get Suspicious file name
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return FileName Suspicious file name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Risk File Name 
+     * @return FileName Risk File Name
      */
     public String getFileName() {
         return this.FileName;
     }
 
     /**
-     * Set Suspicious file name
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param FileName Suspicious file name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Risk File Name
+     * @param FileName Risk File Name
      */
     public void setFileName(String FileName) {
         this.FileName = FileName;
     }
 
     /**
-     * Get MD5 checksum of the file
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return FileMd5 MD5 checksum of the file
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get File MD5 
+     * @return FileMd5 File MD5
      */
     public String getFileMd5() {
         return this.FileMd5;
     }
 
     /**
-     * Set MD5 checksum of the file
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param FileMd5 MD5 checksum of the file
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set File MD5
+     * @param FileMd5 File MD5
      */
     public void setFileMd5(String FileMd5) {
         this.FileMd5 = FileMd5;
     }
 
     /**
-     * Get Event type
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Event type 
      * @return EventType Event type
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getEventType() {
         return this.EventType;
@@ -1097,295 +941,247 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Event type
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param EventType Event type
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setEventType(String EventType) {
         this.EventType = EventType;
     }
 
     /**
-     * Get Cluster name
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return PodName Cluster name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Cluster name. 
+     * @return PodName Cluster name.
      */
     public String getPodName() {
         return this.PodName;
     }
 
     /**
-     * Set Cluster name
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param PodName Cluster name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Cluster name.
+     * @param PodName Cluster name.
      */
     public void setPodName(String PodName) {
         this.PodName = PodName;
     }
 
     /**
-     * Get `DEAL_NONE`: Pending.
-`DEAL_IGNORE`: Ignored.
-`DEAL_ADD_WHITELIST`: Allowed.
-`DEAL_DEL`: Deleted.
-`DEAL_ISOLATE`: Isolated.
-`DEAL_ISOLATING`: Isolating.
-`DEAL_ISOLATE_FAILED`: Isolation failed.
-`DEAL_RECOVERING`: Recovering.
-`DEAL_RECOVER_FAILED`: Recovery failed.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Status `DEAL_NONE`: Pending.
-`DEAL_IGNORE`: Ignored.
-`DEAL_ADD_WHITELIST`: Allowed.
-`DEAL_DEL`: Deleted.
-`DEAL_ISOLATE`: Isolated.
-`DEAL_ISOLATING`: Isolating.
-`DEAL_ISOLATE_FAILED`: Isolation failed.
-`DEAL_RECOVERING`: Recovering.
-`DEAL_RECOVER_FAILED`: Recovery failed.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get DEAL_NONE: File pending
+DEAL_IGNORE: Already ignored
+DEAL_ADD_WHITELIST: Add to whitelist
+DEAL_DEL: File deleted
+DEAL_ISOLATE: Has been isolated
+DEAL_ISOLATING: Isolated
+DEAL_ISOLATE_FAILED: Isolation failed
+DEAL_RECOVERING: Recovering
+DEAL_RECOVER_FAILED: Recovery failed 
+     * @return Status DEAL_NONE: File pending
+DEAL_IGNORE: Already ignored
+DEAL_ADD_WHITELIST: Add to whitelist
+DEAL_DEL: File deleted
+DEAL_ISOLATE: Has been isolated
+DEAL_ISOLATING: Isolated
+DEAL_ISOLATE_FAILED: Isolation failed
+DEAL_RECOVERING: Recovering
+DEAL_RECOVER_FAILED: Recovery failed
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set `DEAL_NONE`: Pending.
-`DEAL_IGNORE`: Ignored.
-`DEAL_ADD_WHITELIST`: Allowed.
-`DEAL_DEL`: Deleted.
-`DEAL_ISOLATE`: Isolated.
-`DEAL_ISOLATING`: Isolating.
-`DEAL_ISOLATE_FAILED`: Isolation failed.
-`DEAL_RECOVERING`: Recovering.
-`DEAL_RECOVER_FAILED`: Recovery failed.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Status `DEAL_NONE`: Pending.
-`DEAL_IGNORE`: Ignored.
-`DEAL_ADD_WHITELIST`: Allowed.
-`DEAL_DEL`: Deleted.
-`DEAL_ISOLATE`: Isolated.
-`DEAL_ISOLATING`: Isolating.
-`DEAL_ISOLATE_FAILED`: Isolation failed.
-`DEAL_RECOVERING`: Recovering.
-`DEAL_RECOVER_FAILED`: Recovery failed.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set DEAL_NONE: File pending
+DEAL_IGNORE: Already ignored
+DEAL_ADD_WHITELIST: Add to whitelist
+DEAL_DEL: File deleted
+DEAL_ISOLATE: Has been isolated
+DEAL_ISOLATING: Isolated
+DEAL_ISOLATE_FAILED: Isolation failed
+DEAL_RECOVERING: Recovering
+DEAL_RECOVER_FAILED: Recovery failed
+     * @param Status DEAL_NONE: File pending
+DEAL_IGNORE: Already ignored
+DEAL_ADD_WHITELIST: Add to whitelist
+DEAL_DEL: File deleted
+DEAL_ISOLATE: Has been isolated
+DEAL_ISOLATING: Isolated
+DEAL_ISOLATE_FAILED: Isolation failed
+DEAL_RECOVERING: Recovering
+DEAL_RECOVER_FAILED: Recovery failed
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get Sub-status of the failure:
-`FILE_NOT_FOUND`: The file does not exist.
-`FILE_ABNORMAL`: The file is abnormal.
-`FILE_ABNORMAL_DEAL_RECOVER`: The file is abnormal when recovered.
-`BACKUP_FILE_NOT_FOUND`: The backup file does not exist.
-`CONTAINER_NOT_FOUND_DEAL_ISOLATE`: The container does not exist during isolation.
-`CONTAINER_NOT_FOUND_DEAL_RECOVER`: The container does not exist during recovery.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return SubStatus Sub-status of the failure:
-`FILE_NOT_FOUND`: The file does not exist.
-`FILE_ABNORMAL`: The file is abnormal.
-`FILE_ABNORMAL_DEAL_RECOVER`: The file is abnormal when recovered.
-`BACKUP_FILE_NOT_FOUND`: The backup file does not exist.
-`CONTAINER_NOT_FOUND_DEAL_ISOLATE`: The container does not exist during isolation.
-`CONTAINER_NOT_FOUND_DEAL_RECOVER`: The container does not exist during recovery.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Failed sub-status
+FILE_NOT_FOUND: File not found
+FILE_ABNORMAL: File abnormality
+FILE_ABNORMAL_DEAL_RECOVER: File abnormality when recovering file
+BACKUP FILE NOT FOUND
+CONTAINER_NOT_FOUND_DEAL_ISOLATE: Container not found in isolation
+CONTAINER_NOT_FOUND_DEAL_RECOVER: Container not found when recovering 
+     * @return SubStatus Failed sub-status
+FILE_NOT_FOUND: File not found
+FILE_ABNORMAL: File abnormality
+FILE_ABNORMAL_DEAL_RECOVER: File abnormality when recovering file
+BACKUP FILE NOT FOUND
+CONTAINER_NOT_FOUND_DEAL_ISOLATE: Container not found in isolation
+CONTAINER_NOT_FOUND_DEAL_RECOVER: Container not found when recovering
      */
     public String getSubStatus() {
         return this.SubStatus;
     }
 
     /**
-     * Set Sub-status of the failure:
-`FILE_NOT_FOUND`: The file does not exist.
-`FILE_ABNORMAL`: The file is abnormal.
-`FILE_ABNORMAL_DEAL_RECOVER`: The file is abnormal when recovered.
-`BACKUP_FILE_NOT_FOUND`: The backup file does not exist.
-`CONTAINER_NOT_FOUND_DEAL_ISOLATE`: The container does not exist during isolation.
-`CONTAINER_NOT_FOUND_DEAL_RECOVER`: The container does not exist during recovery.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param SubStatus Sub-status of the failure:
-`FILE_NOT_FOUND`: The file does not exist.
-`FILE_ABNORMAL`: The file is abnormal.
-`FILE_ABNORMAL_DEAL_RECOVER`: The file is abnormal when recovered.
-`BACKUP_FILE_NOT_FOUND`: The backup file does not exist.
-`CONTAINER_NOT_FOUND_DEAL_ISOLATE`: The container does not exist during isolation.
-`CONTAINER_NOT_FOUND_DEAL_RECOVER`: The container does not exist during recovery.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Failed sub-status
+FILE_NOT_FOUND: File not found
+FILE_ABNORMAL: File abnormality
+FILE_ABNORMAL_DEAL_RECOVER: File abnormality when recovering file
+BACKUP FILE NOT FOUND
+CONTAINER_NOT_FOUND_DEAL_ISOLATE: Container not found in isolation
+CONTAINER_NOT_FOUND_DEAL_RECOVER: Container not found when recovering
+     * @param SubStatus Failed sub-status
+FILE_NOT_FOUND: File not found
+FILE_ABNORMAL: File abnormality
+FILE_ABNORMAL_DEAL_RECOVER: File abnormality when recovering file
+BACKUP FILE NOT FOUND
+CONTAINER_NOT_FOUND_DEAL_ISOLATE: Container not found in isolation
+CONTAINER_NOT_FOUND_DEAL_RECOVER: Container not found when recovering
      */
     public void setSubStatus(String SubStatus) {
         this.SubStatus = SubStatus;
     }
 
     /**
-     * Get Private IP
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return HostIP Private IP
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Private IP address 
+     * @return HostIP Private IP address
      */
     public String getHostIP() {
         return this.HostIP;
     }
 
     /**
-     * Set Private IP
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param HostIP Private IP
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Private IP address
+     * @param HostIP Private IP address
      */
     public void setHostIP(String HostIP) {
         this.HostIP = HostIP;
     }
 
     /**
-     * Get Public IP
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ClientIP Public IP
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Public IP address 
+     * @return ClientIP Public IP address
      */
     public String getClientIP() {
         return this.ClientIP;
     }
 
     /**
-     * Set Public IP
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ClientIP Public IP
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Public IP address
+     * @param ClientIP Public IP address
      */
     public void setClientIP(String ClientIP) {
         this.ClientIP = ClientIP;
     }
 
     /**
-     * Get Parent process initiator
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return PProcessStartUser Parent process initiator
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Parent Process Startup User 
+     * @return PProcessStartUser Parent Process Startup User
      */
     public String getPProcessStartUser() {
         return this.PProcessStartUser;
     }
 
     /**
-     * Set Parent process initiator
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param PProcessStartUser Parent process initiator
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Parent Process Startup User
+     * @param PProcessStartUser Parent Process Startup User
      */
     public void setPProcessStartUser(String PProcessStartUser) {
         this.PProcessStartUser = PProcessStartUser;
     }
 
     /**
-     * Get User group of the parent process
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return PProcessUserGroup User group of the parent process
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Parent process user group 
+     * @return PProcessUserGroup Parent process user group
      */
     public String getPProcessUserGroup() {
         return this.PProcessUserGroup;
     }
 
     /**
-     * Set User group of the parent process
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param PProcessUserGroup User group of the parent process
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Parent process user group
+     * @param PProcessUserGroup Parent process user group
      */
     public void setPProcessUserGroup(String PProcessUserGroup) {
         this.PProcessUserGroup = PProcessUserGroup;
     }
 
     /**
-     * Get Path of the parent process
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return PProcessPath Path of the parent process
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Parent process path 
+     * @return PProcessPath Parent process path
      */
     public String getPProcessPath() {
         return this.PProcessPath;
     }
 
     /**
-     * Set Path of the parent process
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param PProcessPath Path of the parent process
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Parent process path
+     * @param PProcessPath Parent process path
      */
     public void setPProcessPath(String PProcessPath) {
         this.PProcessPath = PProcessPath;
     }
 
     /**
-     * Get Command line parameters of the parent process
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return PProcessParam Command line parameters of the parent process
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Parent Process Command Line Parameters 
+     * @return PProcessParam Parent Process Command Line Parameters
      */
     public String getPProcessParam() {
         return this.PProcessParam;
     }
 
     /**
-     * Set Command line parameters of the parent process
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param PProcessParam Command line parameters of the parent process
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Parent Process Command Line Parameters
+     * @param PProcessParam Parent Process Command Line Parameters
      */
     public void setPProcessParam(String PProcessParam) {
         this.PProcessParam = PProcessParam;
     }
 
     /**
-     * Get Ancestor process initiator
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return AncestorProcessStartUser Ancestor process initiator
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Ancestor Process Startup User 
+     * @return AncestorProcessStartUser Ancestor Process Startup User
      */
     public String getAncestorProcessStartUser() {
         return this.AncestorProcessStartUser;
     }
 
     /**
-     * Set Ancestor process initiator
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param AncestorProcessStartUser Ancestor process initiator
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Ancestor Process Startup User
+     * @param AncestorProcessStartUser Ancestor Process Startup User
      */
     public void setAncestorProcessStartUser(String AncestorProcessStartUser) {
         this.AncestorProcessStartUser = AncestorProcessStartUser;
     }
 
     /**
-     * Get Ancestor process user group
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return AncestorProcessUserGroup Ancestor process user group
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Ancestor Process User Group 
+     * @return AncestorProcessUserGroup Ancestor Process User Group
      */
     public String getAncestorProcessUserGroup() {
         return this.AncestorProcessUserGroup;
     }
 
     /**
-     * Set Ancestor process user group
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param AncestorProcessUserGroup Ancestor process user group
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Ancestor Process User Group
+     * @param AncestorProcessUserGroup Ancestor Process User Group
      */
     public void setAncestorProcessUserGroup(String AncestorProcessUserGroup) {
         this.AncestorProcessUserGroup = AncestorProcessUserGroup;
     }
 
     /**
-     * Get Ancestor process path
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Ancestor process path 
      * @return AncestorProcessPath Ancestor process path
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getAncestorProcessPath() {
         return this.AncestorProcessPath;
@@ -1393,59 +1189,47 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Ancestor process path
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param AncestorProcessPath Ancestor process path
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setAncestorProcessPath(String AncestorProcessPath) {
         this.AncestorProcessPath = AncestorProcessPath;
     }
 
     /**
-     * Get Command line parameters of the ancestor process
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return AncestorProcessParam Command line parameters of the ancestor process
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Ancestor Process Command Line Parameters 
+     * @return AncestorProcessParam Ancestor Process Command Line Parameters
      */
     public String getAncestorProcessParam() {
         return this.AncestorProcessParam;
     }
 
     /**
-     * Set Command line parameters of the ancestor process
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param AncestorProcessParam Command line parameters of the ancestor process
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Ancestor Process Command Line Parameters
+     * @param AncestorProcessParam Ancestor Process Command Line Parameters
      */
     public void setAncestorProcessParam(String AncestorProcessParam) {
         this.AncestorProcessParam = AncestorProcessParam;
     }
 
     /**
-     * Get Last processing time of the event
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return OperationTime Last processing time of the event
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Last Time for Event Handling 
+     * @return OperationTime Last Time for Event Handling
      */
     public String getOperationTime() {
         return this.OperationTime;
     }
 
     /**
-     * Set Last processing time of the event
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param OperationTime Last processing time of the event
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Last Time for Event Handling
+     * @param OperationTime Last Time for Event Handling
      */
     public void setOperationTime(String OperationTime) {
         this.OperationTime = OperationTime;
     }
 
     /**
-     * Get Container isolation status
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Container isolation status 
      * @return ContainerNetStatus Container isolation status
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getContainerNetStatus() {
         return this.ContainerNetStatus;
@@ -1453,129 +1237,107 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Container isolation status
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param ContainerNetStatus Container isolation status
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setContainerNetStatus(String ContainerNetStatus) {
         this.ContainerNetStatus = ContainerNetStatus;
     }
 
     /**
-     * Get Sub-status of container isolation
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ContainerNetSubStatus Sub-status of container isolation
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Container Isolation Sub-status 
+     * @return ContainerNetSubStatus Container Isolation Sub-status
      */
     public String getContainerNetSubStatus() {
         return this.ContainerNetSubStatus;
     }
 
     /**
-     * Set Sub-status of container isolation
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ContainerNetSubStatus Sub-status of container isolation
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Container Isolation Sub-status
+     * @param ContainerNetSubStatus Container Isolation Sub-status
      */
     public void setContainerNetSubStatus(String ContainerNetSubStatus) {
         this.ContainerNetSubStatus = ContainerNetSubStatus;
     }
 
     /**
-     * Get Container isolation operation source
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ContainerIsolateOperationSrc Container isolation operation source
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Container Isolation Operation Source 
+     * @return ContainerIsolateOperationSrc Container Isolation Operation Source
      */
     public String getContainerIsolateOperationSrc() {
         return this.ContainerIsolateOperationSrc;
     }
 
     /**
-     * Set Container isolation operation source
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ContainerIsolateOperationSrc Container isolation operation source
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Container Isolation Operation Source
+     * @param ContainerIsolateOperationSrc Container Isolation Operation Source
      */
     public void setContainerIsolateOperationSrc(String ContainerIsolateOperationSrc) {
         this.ContainerIsolateOperationSrc = ContainerIsolateOperationSrc;
     }
 
     /**
-     * Get Check platform
-`1`: Tencent Cloud Security Engine.
-`2`: tav.
-`3`: binaryAi.
-`4`: Unusual behavior.
-`5`: Threat intelligence.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return CheckPlatform Check platform
-`1`: Tencent Cloud Security Engine.
-`2`: tav.
-`3`: binaryAi.
-`4`: Unusual behavior.
-`5`: Threat intelligence.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get detection platform
+1: Cloud Killing Engine
+2: tav
+3: binaryAi
+4: Abnormal behavior
+5: TI 
+     * @return CheckPlatform detection platform
+1: Cloud Killing Engine
+2: tav
+3: binaryAi
+4: Abnormal behavior
+5: TI
      */
     public String [] getCheckPlatform() {
         return this.CheckPlatform;
     }
 
     /**
-     * Set Check platform
-`1`: Tencent Cloud Security Engine.
-`2`: tav.
-`3`: binaryAi.
-`4`: Unusual behavior.
-`5`: Threat intelligence.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param CheckPlatform Check platform
-`1`: Tencent Cloud Security Engine.
-`2`: tav.
-`3`: binaryAi.
-`4`: Unusual behavior.
-`5`: Threat intelligence.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set detection platform
+1: Cloud Killing Engine
+2: tav
+3: binaryAi
+4: Abnormal behavior
+5: TI
+     * @param CheckPlatform detection platform
+1: Cloud Killing Engine
+2: tav
+3: binaryAi
+4: Abnormal behavior
+5: TI
      */
     public void setCheckPlatform(String [] CheckPlatform) {
         this.CheckPlatform = CheckPlatform;
     }
 
     /**
-     * Get File accessed time
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return FileAccessTime File accessed time
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get File Access Time 
+     * @return FileAccessTime File Access Time
      */
     public String getFileAccessTime() {
         return this.FileAccessTime;
     }
 
     /**
-     * Set File accessed time
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param FileAccessTime File accessed time
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set File Access Time
+     * @param FileAccessTime File Access Time
      */
     public void setFileAccessTime(String FileAccessTime) {
         this.FileAccessTime = FileAccessTime;
     }
 
     /**
-     * Get File modified time
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return FileModifyTime File modified time
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get File Modification Time 
+     * @return FileModifyTime File Modification Time
      */
     public String getFileModifyTime() {
         return this.FileModifyTime;
     }
 
     /**
-     * Set File modified time
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param FileModifyTime File modified time
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set File Modification Time
+     * @param FileModifyTime File Modification Time
      */
     public void setFileModifyTime(String FileModifyTime) {
         this.FileModifyTime = FileModifyTime;
@@ -1742,35 +1504,51 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get  
-     * @return Namespace 
+     * Get Namespace 
+     * @return Namespace Namespace
      */
     public String getNamespace() {
         return this.Namespace;
     }
 
     /**
-     * Set 
-     * @param Namespace 
+     * Set Namespace
+     * @param Namespace Namespace
      */
     public void setNamespace(String Namespace) {
         this.Namespace = Namespace;
     }
 
     /**
-     * Get  
-     * @return WorkloadType 
+     * Get Workload type 
+     * @return WorkloadType Workload type
      */
     public String getWorkloadType() {
         return this.WorkloadType;
     }
 
     /**
-     * Set 
-     * @param WorkloadType 
+     * Set Workload type
+     * @param WorkloadType Workload type
      */
     public void setWorkloadType(String WorkloadType) {
         this.WorkloadType = WorkloadType;
+    }
+
+    /**
+     * Get Container status. 
+     * @return ContainerStatus Container status.
+     */
+    public String getContainerStatus() {
+        return this.ContainerStatus;
+    }
+
+    /**
+     * Set Container status.
+     * @param ContainerStatus Container status.
+     */
+    public void setContainerStatus(String ContainerStatus) {
+        this.ContainerStatus = ContainerStatus;
     }
 
     /**
@@ -1986,6 +1764,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.WorkloadType != null) {
             this.WorkloadType = new String(source.WorkloadType);
         }
+        if (source.ContainerStatus != null) {
+            this.ContainerStatus = new String(source.ContainerStatus);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -2057,6 +1838,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "ClusterName", this.ClusterName);
         this.setParamSimple(map, prefix + "Namespace", this.Namespace);
         this.setParamSimple(map, prefix + "WorkloadType", this.WorkloadType);
+        this.setParamSimple(map, prefix + "ContainerStatus", this.ContainerStatus);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

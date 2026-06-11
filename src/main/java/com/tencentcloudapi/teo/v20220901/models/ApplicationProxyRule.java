@@ -53,9 +53,9 @@ Note: Up to 20 ports can be input for each rule.
     private String OriginType;
 
     /**
-    * Origin server information.
+    * Details of the origin server:
 <li>When OriginType is custom, it indicates one or more origin servers, such as `["8.8.8.8","9.9.9.9"]` or `OriginValue=["test.com"]`;</li>
-<li>When OriginType is loadbalancer, it indicates a cloud load balancer, such as ["lb-xdffsfasdfs"];</li>
+<li>When OriginType is loadbalancer, it indicates a load balancer, such as ["lb-3pbiw4d9iqz0"];</li>
 <li>When OriginType is origins, it requires one and only one element, indicating the origin server group ID, such as ["origin-537f5b41-162a-11ed-abaa-525400c5da15"].</li>
     */
     @SerializedName("OriginValue")
@@ -102,7 +102,7 @@ Note: Up to 20 ports can be input for each rule.
     private Boolean SessionPersist;
 
     /**
-    * Duration for session persistence. the value takes effect only when SessionPersist is true.
+    * Duration for session persistence, in seconds. The value takes effect only when SessionPersist is true.
     */
     @SerializedName("SessionPersistTime")
     @Expose
@@ -205,13 +205,13 @@ Note: Up to 20 ports can be input for each rule.
     }
 
     /**
-     * Get Origin server information.
+     * Get Details of the origin server:
 <li>When OriginType is custom, it indicates one or more origin servers, such as `["8.8.8.8","9.9.9.9"]` or `OriginValue=["test.com"]`;</li>
-<li>When OriginType is loadbalancer, it indicates a cloud load balancer, such as ["lb-xdffsfasdfs"];</li>
+<li>When OriginType is loadbalancer, it indicates a load balancer, such as ["lb-3pbiw4d9iqz0"];</li>
 <li>When OriginType is origins, it requires one and only one element, indicating the origin server group ID, such as ["origin-537f5b41-162a-11ed-abaa-525400c5da15"].</li> 
-     * @return OriginValue Origin server information.
+     * @return OriginValue Details of the origin server:
 <li>When OriginType is custom, it indicates one or more origin servers, such as `["8.8.8.8","9.9.9.9"]` or `OriginValue=["test.com"]`;</li>
-<li>When OriginType is loadbalancer, it indicates a cloud load balancer, such as ["lb-xdffsfasdfs"];</li>
+<li>When OriginType is loadbalancer, it indicates a load balancer, such as ["lb-3pbiw4d9iqz0"];</li>
 <li>When OriginType is origins, it requires one and only one element, indicating the origin server group ID, such as ["origin-537f5b41-162a-11ed-abaa-525400c5da15"].</li>
      */
     public String [] getOriginValue() {
@@ -219,13 +219,13 @@ Note: Up to 20 ports can be input for each rule.
     }
 
     /**
-     * Set Origin server information.
+     * Set Details of the origin server:
 <li>When OriginType is custom, it indicates one or more origin servers, such as `["8.8.8.8","9.9.9.9"]` or `OriginValue=["test.com"]`;</li>
-<li>When OriginType is loadbalancer, it indicates a cloud load balancer, such as ["lb-xdffsfasdfs"];</li>
+<li>When OriginType is loadbalancer, it indicates a load balancer, such as ["lb-3pbiw4d9iqz0"];</li>
 <li>When OriginType is origins, it requires one and only one element, indicating the origin server group ID, such as ["origin-537f5b41-162a-11ed-abaa-525400c5da15"].</li>
-     * @param OriginValue Origin server information.
+     * @param OriginValue Details of the origin server:
 <li>When OriginType is custom, it indicates one or more origin servers, such as `["8.8.8.8","9.9.9.9"]` or `OriginValue=["test.com"]`;</li>
-<li>When OriginType is loadbalancer, it indicates a cloud load balancer, such as ["lb-xdffsfasdfs"];</li>
+<li>When OriginType is loadbalancer, it indicates a load balancer, such as ["lb-3pbiw4d9iqz0"];</li>
 <li>When OriginType is origins, it requires one and only one element, indicating the origin server group ID, such as ["origin-537f5b41-162a-11ed-abaa-525400c5da15"].</li>
      */
     public void setOriginValue(String [] OriginValue) {
@@ -341,16 +341,16 @@ Note: Up to 20 ports can be input for each rule.
     }
 
     /**
-     * Get Duration for session persistence. the value takes effect only when SessionPersist is true. 
-     * @return SessionPersistTime Duration for session persistence. the value takes effect only when SessionPersist is true.
+     * Get Duration for session persistence, in seconds. The value takes effect only when SessionPersist is true. 
+     * @return SessionPersistTime Duration for session persistence, in seconds. The value takes effect only when SessionPersist is true.
      */
     public Long getSessionPersistTime() {
         return this.SessionPersistTime;
     }
 
     /**
-     * Set Duration for session persistence. the value takes effect only when SessionPersist is true.
-     * @param SessionPersistTime Duration for session persistence. the value takes effect only when SessionPersist is true.
+     * Set Duration for session persistence, in seconds. The value takes effect only when SessionPersist is true.
+     * @param SessionPersistTime Duration for session persistence, in seconds. The value takes effect only when SessionPersist is true.
      */
     public void setSessionPersistTime(Long SessionPersistTime) {
         this.SessionPersistTime = SessionPersistTime;

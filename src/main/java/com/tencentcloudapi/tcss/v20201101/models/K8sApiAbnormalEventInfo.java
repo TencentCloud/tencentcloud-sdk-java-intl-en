@@ -24,465 +24,486 @@ import java.util.HashMap;
 public class K8sApiAbnormalEventInfo extends AbstractModel {
 
     /**
-    * Hit rule name
+    * <p>Hit rule name.</p>
     */
     @SerializedName("MatchRuleName")
     @Expose
     private String MatchRuleName;
 
     /**
-    * Hit rule type
+    * <p>Hit rule type.</p>
     */
     @SerializedName("MatchRuleType")
     @Expose
     private String MatchRuleType;
 
     /**
-    * Alarm level
+    * <p>Alarm level.</p>
     */
     @SerializedName("RiskLevel")
     @Expose
     private String RiskLevel;
 
     /**
-    * Cluster ID
+    * <p>Cluster ID.</p>
     */
     @SerializedName("ClusterID")
     @Expose
     private String ClusterID;
 
     /**
-    * Cluster name
+    * <p>Cluster name.</p>
     */
     @SerializedName("ClusterName")
     @Expose
     private String ClusterName;
 
     /**
-    * Cluster running status
+    * <p>Cluster running status: CSR_RUNNING, CSR_EXCEPTION, and CSR_CREATING</p>
     */
     @SerializedName("ClusterRunningStatus")
     @Expose
     private String ClusterRunningStatus;
 
     /**
-    * First creation time
+    * <p>Initial generation time.</p>
     */
     @SerializedName("FirstCreateTime")
     @Expose
     private String FirstCreateTime;
 
     /**
-    * Last creation time
+    * <p>Last generation time.</p>
     */
     @SerializedName("LastCreateTime")
     @Expose
     private String LastCreateTime;
 
     /**
-    * Number of alarms
+    * <p>Number of alarms.</p>
     */
     @SerializedName("AlarmCount")
     @Expose
     private Long AlarmCount;
 
     /**
-    * Status
-`EVENT_UNDEAL`: Unhandled
-`EVENT_DEALED`: Handled
-`EVENT_IGNORE`: Ignored
-`EVENT_DEL`: Deleted
-`EVENT_ADD_WHITE`: Added to an allowlist
+    * <p>Status.<br>&quot;EVENT_UNDEAL&quot;: unhandled<br>&quot;EVENT_DEALED&quot;: handled<br>&quot;EVENT_IGNORE&quot;: ignored<br>&quot;EVENT_DEL&quot;: deleted<br>&quot;EVENT_ADD_WHITE&quot;: allowlisted</p>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * The master IP of a cluster
+    * <p>Cluster master IP address.</p>
     */
     @SerializedName("ClusterMasterIP")
     @Expose
     private String ClusterMasterIP;
 
     /**
-    * K8s version
+    * <p>K8s version.</p>
     */
     @SerializedName("K8sVersion")
     @Expose
     private String K8sVersion;
 
     /**
-    * Runtime component
+    * <p>Runtime component.</p>
     */
     @SerializedName("RunningComponent")
     @Expose
     private String [] RunningComponent;
 
     /**
-    * Description
+    * <p>Description.</p>
     */
     @SerializedName("Desc")
     @Expose
     private String Desc;
 
     /**
-    * Suggestion
+    * <p>Suggestion.</p>
     */
     @SerializedName("Suggestion")
     @Expose
     private String Suggestion;
 
     /**
-    * Request information
+    * <p>Request information.</p>
     */
     @SerializedName("Info")
     @Expose
     private String Info;
 
     /**
-    * Rule ID
+    * <p>Rule ID.</p>
     */
     @SerializedName("MatchRuleID")
     @Expose
     private String MatchRuleID;
 
     /**
-    * An array of highlighted fields
+    * <p>Array of highlighted fields.</p>
     */
     @SerializedName("HighLightFields")
     @Expose
     private String [] HighLightFields;
 
     /**
-    * Hit rule
+    * <p>Hit rule.</p>
     */
     @SerializedName("MatchRule")
     @Expose
     private K8sApiAbnormalRuleScopeInfo MatchRule;
 
     /**
-     * Get Hit rule name 
-     * @return MatchRuleName Hit rule name
+    * <p>Hit rule content corresponding to highlighted fields (JSON string, such as {&quot;field1&quot;:&quot;value1&quot;,&quot;field2&quot;:&quot;value2&quot;})</p><p>Parameter format: {&quot;field1&quot;:&quot;value1&quot;,&quot;field2&quot;:&quot;value2&quot;}</p>
+    */
+    @SerializedName("HighLightFieldsVal")
+    @Expose
+    private String HighLightFieldsVal;
+
+    /**
+    * <p>Rule type.</p>
+    */
+    @SerializedName("RuleTypeZH")
+    @Expose
+    private String RuleTypeZH;
+
+    /**
+     * Get <p>Hit rule name.</p> 
+     * @return MatchRuleName <p>Hit rule name.</p>
      */
     public String getMatchRuleName() {
         return this.MatchRuleName;
     }
 
     /**
-     * Set Hit rule name
-     * @param MatchRuleName Hit rule name
+     * Set <p>Hit rule name.</p>
+     * @param MatchRuleName <p>Hit rule name.</p>
      */
     public void setMatchRuleName(String MatchRuleName) {
         this.MatchRuleName = MatchRuleName;
     }
 
     /**
-     * Get Hit rule type 
-     * @return MatchRuleType Hit rule type
+     * Get <p>Hit rule type.</p> 
+     * @return MatchRuleType <p>Hit rule type.</p>
      */
     public String getMatchRuleType() {
         return this.MatchRuleType;
     }
 
     /**
-     * Set Hit rule type
-     * @param MatchRuleType Hit rule type
+     * Set <p>Hit rule type.</p>
+     * @param MatchRuleType <p>Hit rule type.</p>
      */
     public void setMatchRuleType(String MatchRuleType) {
         this.MatchRuleType = MatchRuleType;
     }
 
     /**
-     * Get Alarm level 
-     * @return RiskLevel Alarm level
+     * Get <p>Alarm level.</p> 
+     * @return RiskLevel <p>Alarm level.</p>
      */
     public String getRiskLevel() {
         return this.RiskLevel;
     }
 
     /**
-     * Set Alarm level
-     * @param RiskLevel Alarm level
+     * Set <p>Alarm level.</p>
+     * @param RiskLevel <p>Alarm level.</p>
      */
     public void setRiskLevel(String RiskLevel) {
         this.RiskLevel = RiskLevel;
     }
 
     /**
-     * Get Cluster ID 
-     * @return ClusterID Cluster ID
+     * Get <p>Cluster ID.</p> 
+     * @return ClusterID <p>Cluster ID.</p>
      */
     public String getClusterID() {
         return this.ClusterID;
     }
 
     /**
-     * Set Cluster ID
-     * @param ClusterID Cluster ID
+     * Set <p>Cluster ID.</p>
+     * @param ClusterID <p>Cluster ID.</p>
      */
     public void setClusterID(String ClusterID) {
         this.ClusterID = ClusterID;
     }
 
     /**
-     * Get Cluster name 
-     * @return ClusterName Cluster name
+     * Get <p>Cluster name.</p> 
+     * @return ClusterName <p>Cluster name.</p>
      */
     public String getClusterName() {
         return this.ClusterName;
     }
 
     /**
-     * Set Cluster name
-     * @param ClusterName Cluster name
+     * Set <p>Cluster name.</p>
+     * @param ClusterName <p>Cluster name.</p>
      */
     public void setClusterName(String ClusterName) {
         this.ClusterName = ClusterName;
     }
 
     /**
-     * Get Cluster running status 
-     * @return ClusterRunningStatus Cluster running status
+     * Get <p>Cluster running status: CSR_RUNNING, CSR_EXCEPTION, and CSR_CREATING</p> 
+     * @return ClusterRunningStatus <p>Cluster running status: CSR_RUNNING, CSR_EXCEPTION, and CSR_CREATING</p>
      */
     public String getClusterRunningStatus() {
         return this.ClusterRunningStatus;
     }
 
     /**
-     * Set Cluster running status
-     * @param ClusterRunningStatus Cluster running status
+     * Set <p>Cluster running status: CSR_RUNNING, CSR_EXCEPTION, and CSR_CREATING</p>
+     * @param ClusterRunningStatus <p>Cluster running status: CSR_RUNNING, CSR_EXCEPTION, and CSR_CREATING</p>
      */
     public void setClusterRunningStatus(String ClusterRunningStatus) {
         this.ClusterRunningStatus = ClusterRunningStatus;
     }
 
     /**
-     * Get First creation time 
-     * @return FirstCreateTime First creation time
+     * Get <p>Initial generation time.</p> 
+     * @return FirstCreateTime <p>Initial generation time.</p>
      */
     public String getFirstCreateTime() {
         return this.FirstCreateTime;
     }
 
     /**
-     * Set First creation time
-     * @param FirstCreateTime First creation time
+     * Set <p>Initial generation time.</p>
+     * @param FirstCreateTime <p>Initial generation time.</p>
      */
     public void setFirstCreateTime(String FirstCreateTime) {
         this.FirstCreateTime = FirstCreateTime;
     }
 
     /**
-     * Get Last creation time 
-     * @return LastCreateTime Last creation time
+     * Get <p>Last generation time.</p> 
+     * @return LastCreateTime <p>Last generation time.</p>
      */
     public String getLastCreateTime() {
         return this.LastCreateTime;
     }
 
     /**
-     * Set Last creation time
-     * @param LastCreateTime Last creation time
+     * Set <p>Last generation time.</p>
+     * @param LastCreateTime <p>Last generation time.</p>
      */
     public void setLastCreateTime(String LastCreateTime) {
         this.LastCreateTime = LastCreateTime;
     }
 
     /**
-     * Get Number of alarms 
-     * @return AlarmCount Number of alarms
+     * Get <p>Number of alarms.</p> 
+     * @return AlarmCount <p>Number of alarms.</p>
      */
     public Long getAlarmCount() {
         return this.AlarmCount;
     }
 
     /**
-     * Set Number of alarms
-     * @param AlarmCount Number of alarms
+     * Set <p>Number of alarms.</p>
+     * @param AlarmCount <p>Number of alarms.</p>
      */
     public void setAlarmCount(Long AlarmCount) {
         this.AlarmCount = AlarmCount;
     }
 
     /**
-     * Get Status
-`EVENT_UNDEAL`: Unhandled
-`EVENT_DEALED`: Handled
-`EVENT_IGNORE`: Ignored
-`EVENT_DEL`: Deleted
-`EVENT_ADD_WHITE`: Added to an allowlist 
-     * @return Status Status
-`EVENT_UNDEAL`: Unhandled
-`EVENT_DEALED`: Handled
-`EVENT_IGNORE`: Ignored
-`EVENT_DEL`: Deleted
-`EVENT_ADD_WHITE`: Added to an allowlist
+     * Get <p>Status.<br>&quot;EVENT_UNDEAL&quot;: unhandled<br>&quot;EVENT_DEALED&quot;: handled<br>&quot;EVENT_IGNORE&quot;: ignored<br>&quot;EVENT_DEL&quot;: deleted<br>&quot;EVENT_ADD_WHITE&quot;: allowlisted</p> 
+     * @return Status <p>Status.<br>&quot;EVENT_UNDEAL&quot;: unhandled<br>&quot;EVENT_DEALED&quot;: handled<br>&quot;EVENT_IGNORE&quot;: ignored<br>&quot;EVENT_DEL&quot;: deleted<br>&quot;EVENT_ADD_WHITE&quot;: allowlisted</p>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Status
-`EVENT_UNDEAL`: Unhandled
-`EVENT_DEALED`: Handled
-`EVENT_IGNORE`: Ignored
-`EVENT_DEL`: Deleted
-`EVENT_ADD_WHITE`: Added to an allowlist
-     * @param Status Status
-`EVENT_UNDEAL`: Unhandled
-`EVENT_DEALED`: Handled
-`EVENT_IGNORE`: Ignored
-`EVENT_DEL`: Deleted
-`EVENT_ADD_WHITE`: Added to an allowlist
+     * Set <p>Status.<br>&quot;EVENT_UNDEAL&quot;: unhandled<br>&quot;EVENT_DEALED&quot;: handled<br>&quot;EVENT_IGNORE&quot;: ignored<br>&quot;EVENT_DEL&quot;: deleted<br>&quot;EVENT_ADD_WHITE&quot;: allowlisted</p>
+     * @param Status <p>Status.<br>&quot;EVENT_UNDEAL&quot;: unhandled<br>&quot;EVENT_DEALED&quot;: handled<br>&quot;EVENT_IGNORE&quot;: ignored<br>&quot;EVENT_DEL&quot;: deleted<br>&quot;EVENT_ADD_WHITE&quot;: allowlisted</p>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get The master IP of a cluster 
-     * @return ClusterMasterIP The master IP of a cluster
+     * Get <p>Cluster master IP address.</p> 
+     * @return ClusterMasterIP <p>Cluster master IP address.</p>
      */
     public String getClusterMasterIP() {
         return this.ClusterMasterIP;
     }
 
     /**
-     * Set The master IP of a cluster
-     * @param ClusterMasterIP The master IP of a cluster
+     * Set <p>Cluster master IP address.</p>
+     * @param ClusterMasterIP <p>Cluster master IP address.</p>
      */
     public void setClusterMasterIP(String ClusterMasterIP) {
         this.ClusterMasterIP = ClusterMasterIP;
     }
 
     /**
-     * Get K8s version 
-     * @return K8sVersion K8s version
+     * Get <p>K8s version.</p> 
+     * @return K8sVersion <p>K8s version.</p>
      */
     public String getK8sVersion() {
         return this.K8sVersion;
     }
 
     /**
-     * Set K8s version
-     * @param K8sVersion K8s version
+     * Set <p>K8s version.</p>
+     * @param K8sVersion <p>K8s version.</p>
      */
     public void setK8sVersion(String K8sVersion) {
         this.K8sVersion = K8sVersion;
     }
 
     /**
-     * Get Runtime component 
-     * @return RunningComponent Runtime component
+     * Get <p>Runtime component.</p> 
+     * @return RunningComponent <p>Runtime component.</p>
      */
     public String [] getRunningComponent() {
         return this.RunningComponent;
     }
 
     /**
-     * Set Runtime component
-     * @param RunningComponent Runtime component
+     * Set <p>Runtime component.</p>
+     * @param RunningComponent <p>Runtime component.</p>
      */
     public void setRunningComponent(String [] RunningComponent) {
         this.RunningComponent = RunningComponent;
     }
 
     /**
-     * Get Description 
-     * @return Desc Description
+     * Get <p>Description.</p> 
+     * @return Desc <p>Description.</p>
      */
     public String getDesc() {
         return this.Desc;
     }
 
     /**
-     * Set Description
-     * @param Desc Description
+     * Set <p>Description.</p>
+     * @param Desc <p>Description.</p>
      */
     public void setDesc(String Desc) {
         this.Desc = Desc;
     }
 
     /**
-     * Get Suggestion 
-     * @return Suggestion Suggestion
+     * Get <p>Suggestion.</p> 
+     * @return Suggestion <p>Suggestion.</p>
      */
     public String getSuggestion() {
         return this.Suggestion;
     }
 
     /**
-     * Set Suggestion
-     * @param Suggestion Suggestion
+     * Set <p>Suggestion.</p>
+     * @param Suggestion <p>Suggestion.</p>
      */
     public void setSuggestion(String Suggestion) {
         this.Suggestion = Suggestion;
     }
 
     /**
-     * Get Request information 
-     * @return Info Request information
+     * Get <p>Request information.</p> 
+     * @return Info <p>Request information.</p>
      */
     public String getInfo() {
         return this.Info;
     }
 
     /**
-     * Set Request information
-     * @param Info Request information
+     * Set <p>Request information.</p>
+     * @param Info <p>Request information.</p>
      */
     public void setInfo(String Info) {
         this.Info = Info;
     }
 
     /**
-     * Get Rule ID 
-     * @return MatchRuleID Rule ID
+     * Get <p>Rule ID.</p> 
+     * @return MatchRuleID <p>Rule ID.</p>
      */
     public String getMatchRuleID() {
         return this.MatchRuleID;
     }
 
     /**
-     * Set Rule ID
-     * @param MatchRuleID Rule ID
+     * Set <p>Rule ID.</p>
+     * @param MatchRuleID <p>Rule ID.</p>
      */
     public void setMatchRuleID(String MatchRuleID) {
         this.MatchRuleID = MatchRuleID;
     }
 
     /**
-     * Get An array of highlighted fields 
-     * @return HighLightFields An array of highlighted fields
+     * Get <p>Array of highlighted fields.</p> 
+     * @return HighLightFields <p>Array of highlighted fields.</p>
      */
     public String [] getHighLightFields() {
         return this.HighLightFields;
     }
 
     /**
-     * Set An array of highlighted fields
-     * @param HighLightFields An array of highlighted fields
+     * Set <p>Array of highlighted fields.</p>
+     * @param HighLightFields <p>Array of highlighted fields.</p>
      */
     public void setHighLightFields(String [] HighLightFields) {
         this.HighLightFields = HighLightFields;
     }
 
     /**
-     * Get Hit rule 
-     * @return MatchRule Hit rule
+     * Get <p>Hit rule.</p> 
+     * @return MatchRule <p>Hit rule.</p>
      */
     public K8sApiAbnormalRuleScopeInfo getMatchRule() {
         return this.MatchRule;
     }
 
     /**
-     * Set Hit rule
-     * @param MatchRule Hit rule
+     * Set <p>Hit rule.</p>
+     * @param MatchRule <p>Hit rule.</p>
      */
     public void setMatchRule(K8sApiAbnormalRuleScopeInfo MatchRule) {
         this.MatchRule = MatchRule;
+    }
+
+    /**
+     * Get <p>Hit rule content corresponding to highlighted fields (JSON string, such as {&quot;field1&quot;:&quot;value1&quot;,&quot;field2&quot;:&quot;value2&quot;})</p><p>Parameter format: {&quot;field1&quot;:&quot;value1&quot;,&quot;field2&quot;:&quot;value2&quot;}</p> 
+     * @return HighLightFieldsVal <p>Hit rule content corresponding to highlighted fields (JSON string, such as {&quot;field1&quot;:&quot;value1&quot;,&quot;field2&quot;:&quot;value2&quot;})</p><p>Parameter format: {&quot;field1&quot;:&quot;value1&quot;,&quot;field2&quot;:&quot;value2&quot;}</p>
+     */
+    public String getHighLightFieldsVal() {
+        return this.HighLightFieldsVal;
+    }
+
+    /**
+     * Set <p>Hit rule content corresponding to highlighted fields (JSON string, such as {&quot;field1&quot;:&quot;value1&quot;,&quot;field2&quot;:&quot;value2&quot;})</p><p>Parameter format: {&quot;field1&quot;:&quot;value1&quot;,&quot;field2&quot;:&quot;value2&quot;}</p>
+     * @param HighLightFieldsVal <p>Hit rule content corresponding to highlighted fields (JSON string, such as {&quot;field1&quot;:&quot;value1&quot;,&quot;field2&quot;:&quot;value2&quot;})</p><p>Parameter format: {&quot;field1&quot;:&quot;value1&quot;,&quot;field2&quot;:&quot;value2&quot;}</p>
+     */
+    public void setHighLightFieldsVal(String HighLightFieldsVal) {
+        this.HighLightFieldsVal = HighLightFieldsVal;
+    }
+
+    /**
+     * Get <p>Rule type.</p> 
+     * @return RuleTypeZH <p>Rule type.</p>
+     */
+    public String getRuleTypeZH() {
+        return this.RuleTypeZH;
+    }
+
+    /**
+     * Set <p>Rule type.</p>
+     * @param RuleTypeZH <p>Rule type.</p>
+     */
+    public void setRuleTypeZH(String RuleTypeZH) {
+        this.RuleTypeZH = RuleTypeZH;
     }
 
     public K8sApiAbnormalEventInfo() {
@@ -556,6 +577,12 @@ public class K8sApiAbnormalEventInfo extends AbstractModel {
         if (source.MatchRule != null) {
             this.MatchRule = new K8sApiAbnormalRuleScopeInfo(source.MatchRule);
         }
+        if (source.HighLightFieldsVal != null) {
+            this.HighLightFieldsVal = new String(source.HighLightFieldsVal);
+        }
+        if (source.RuleTypeZH != null) {
+            this.RuleTypeZH = new String(source.RuleTypeZH);
+        }
     }
 
 
@@ -582,6 +609,8 @@ public class K8sApiAbnormalEventInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "MatchRuleID", this.MatchRuleID);
         this.setParamArraySimple(map, prefix + "HighLightFields.", this.HighLightFields);
         this.setParamObj(map, prefix + "MatchRule.", this.MatchRule);
+        this.setParamSimple(map, prefix + "HighLightFieldsVal", this.HighLightFieldsVal);
+        this.setParamSimple(map, prefix + "RuleTypeZH", this.RuleTypeZH);
 
     }
 }

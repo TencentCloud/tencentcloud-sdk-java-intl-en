@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ContentInfo extends AbstractModel {
 
     /**
-    * Content format. Valid values: `json`, `csv`
+    * Content format, support json, csv, parquet
     */
     @SerializedName("Format")
     @Expose
@@ -55,16 +55,16 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     private ParquetInfo Parquet;
 
     /**
-     * Get Content format. Valid values: `json`, `csv` 
-     * @return Format Content format. Valid values: `json`, `csv`
+     * Get Content format, support json, csv, parquet 
+     * @return Format Content format, support json, csv, parquet
      */
     public String getFormat() {
         return this.Format;
     }
 
     /**
-     * Set Content format. Valid values: `json`, `csv`
-     * @param Format Content format. Valid values: `json`, `csv`
+     * Set Content format, support json, csv, parquet
+     * @param Format Content format, support json, csv, parquet
      */
     public void setFormat(String Format) {
         this.Format = Format;

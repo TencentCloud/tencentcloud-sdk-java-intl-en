@@ -38,8 +38,7 @@ public class CompliancePeriodTaskRule extends AbstractModel {
     private String ExecutionTime;
 
     /**
-    * Whether to enable
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Whether enabled
     */
     @SerializedName("Enable")
     @Expose
@@ -78,20 +77,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Whether to enable
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Enable Whether to enable
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Whether enabled 
+     * @return Enable Whether enabled
      */
     public Boolean getEnable() {
         return this.Enable;
     }
 
     /**
-     * Set Whether to enable
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Enable Whether to enable
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Whether enabled
+     * @param Enable Whether enabled
      */
     public void setEnable(Boolean Enable) {
         this.Enable = Enable;

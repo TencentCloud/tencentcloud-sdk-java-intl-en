@@ -38,8 +38,7 @@ public class DescribeNetworkFirewallPolicyYamlDetailResponse extends AbstractMod
     private String PolicyName;
 
     /**
-    * Base64-encoded YAML string
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Base64 Encoded YAML String
     */
     @SerializedName("Yaml")
     @Expose
@@ -47,7 +46,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Policy description
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Description")
     @Expose
@@ -68,8 +66,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String PolicySourceType;
 
     /**
-    * Network plugin of the network policy
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Network Plugins Corresponding to Network Policies
     */
     @SerializedName("NetworkPolicyPlugin")
     @Expose
@@ -83,8 +80,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String PublishStatus;
 
     /**
-    * Policy publishing result
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Network Distribution Result
     */
     @SerializedName("PublishResult")
     @Expose
@@ -130,30 +126,24 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Base64-encoded YAML string
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Yaml Base64-encoded YAML string
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Base64 Encoded YAML String 
+     * @return Yaml Base64 Encoded YAML String
      */
     public String getYaml() {
         return this.Yaml;
     }
 
     /**
-     * Set Base64-encoded YAML string
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Yaml Base64-encoded YAML string
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Base64 Encoded YAML String
+     * @param Yaml Base64 Encoded YAML String
      */
     public void setYaml(String Yaml) {
         this.Yaml = Yaml;
     }
 
     /**
-     * Get Policy description
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Policy description 
      * @return Description Policy description
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getDescription() {
         return this.Description;
@@ -161,9 +151,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Policy description
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Description Policy description
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setDescription(String Description) {
         this.Description = Description;
@@ -202,20 +190,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Network plugin of the network policy
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return NetworkPolicyPlugin Network plugin of the network policy
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Network Plugins Corresponding to Network Policies 
+     * @return NetworkPolicyPlugin Network Plugins Corresponding to Network Policies
      */
     public String getNetworkPolicyPlugin() {
         return this.NetworkPolicyPlugin;
     }
 
     /**
-     * Set Network plugin of the network policy
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param NetworkPolicyPlugin Network plugin of the network policy
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Network Plugins Corresponding to Network Policies
+     * @param NetworkPolicyPlugin Network Plugins Corresponding to Network Policies
      */
     public void setNetworkPolicyPlugin(String NetworkPolicyPlugin) {
         this.NetworkPolicyPlugin = NetworkPolicyPlugin;
@@ -238,20 +222,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Policy publishing result
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return PublishResult Policy publishing result
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Network Distribution Result 
+     * @return PublishResult Network Distribution Result
      */
     public String getPublishResult() {
         return this.PublishResult;
     }
 
     /**
-     * Set Policy publishing result
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param PublishResult Policy publishing result
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Network Distribution Result
+     * @param PublishResult Network Distribution Result
      */
     public void setPublishResult(String PublishResult) {
         this.PublishResult = PublishResult;

@@ -34,8 +34,8 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     private String Switch;
 
     /**
-    * UA blacklist/whitelist effect rule list
-Note: This field may return `null`, indicating that no valid value can be obtained.
+    * Effective rule list for UA blacklist and whitelist. must not exceed 10 rules.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("FilterRules")
     @Expose
@@ -70,20 +70,20 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Get UA blacklist/whitelist effect rule list
-Note: This field may return `null`, indicating that no valid value can be obtained. 
-     * @return FilterRules UA blacklist/whitelist effect rule list
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Get Effective rule list for UA blacklist and whitelist. must not exceed 10 rules.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return FilterRules Effective rule list for UA blacklist and whitelist. must not exceed 10 rules.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public UserAgentFilterRule [] getFilterRules() {
         return this.FilterRules;
     }
 
     /**
-     * Set UA blacklist/whitelist effect rule list
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param FilterRules UA blacklist/whitelist effect rule list
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Set Effective rule list for UA blacklist and whitelist. must not exceed 10 rules.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param FilterRules Effective rule list for UA blacklist and whitelist. must not exceed 10 rules.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setFilterRules(UserAgentFilterRule [] FilterRules) {
         this.FilterRules = FilterRules;

@@ -80,16 +80,14 @@ public class AssetJarDetail extends AbstractModel {
     private String OsInfo;
 
     /**
-    * Reference process list
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Reference process list.
     */
     @SerializedName("Process")
     @Expose
     private AssetAppProcessInfo [] Process;
 
     /**
-    * Jar package Md5
-Note: This field may return null, indicating that no valid values can be obtained.
+    * JAR package Md5
     */
     @SerializedName("Md5")
     @Expose
@@ -97,7 +95,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Data update time
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("UpdateTime")
     @Expose
@@ -232,50 +229,40 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Reference process list
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Process Reference process list
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Reference process list. 
+     * @return Process Reference process list.
      */
     public AssetAppProcessInfo [] getProcess() {
         return this.Process;
     }
 
     /**
-     * Set Reference process list
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Process Reference process list
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Reference process list.
+     * @param Process Reference process list.
      */
     public void setProcess(AssetAppProcessInfo [] Process) {
         this.Process = Process;
     }
 
     /**
-     * Get Jar package Md5
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Md5 Jar package Md5
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get JAR package Md5 
+     * @return Md5 JAR package Md5
      */
     public String getMd5() {
         return this.Md5;
     }
 
     /**
-     * Set Jar package Md5
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Md5 Jar package Md5
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set JAR package Md5
+     * @param Md5 JAR package Md5
      */
     public void setMd5(String Md5) {
         this.Md5 = Md5;
     }
 
     /**
-     * Get Data update time
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Data update time 
      * @return UpdateTime Data update time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getUpdateTime() {
         return this.UpdateTime;
@@ -283,9 +270,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Data update time
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param UpdateTime Data update time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;

@@ -127,6 +127,17 @@ public class TcsasClient extends AbstractClient{
     }
 
     /**
+     *This API is used to generate a mini game secret key.
+     * @param req CreateMNGAppSecretRequest
+     * @return CreateMNGAppSecretResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateMNGAppSecretResponse CreateMNGAppSecret(CreateMNGAppSecretRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateMNGAppSecret", CreateMNGAppSecretResponse.class);
+    }
+
+    /**
      *This API is used to create a mini game approval request.
      * @param req CreateMNGApprovalRequest
      * @return CreateMNGApprovalResponse
@@ -160,6 +171,17 @@ public class TcsasClient extends AbstractClient{
     }
 
     /**
+     *This API is used to create a mini game subscription message template.
+     * @param req CreateMNGSubscribeMessageTemplateRequest
+     * @return CreateMNGSubscribeMessageTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateMNGSubscribeMessageTemplateResponse CreateMNGSubscribeMessageTemplate(CreateMNGSubscribeMessageTemplateRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateMNGSubscribeMessageTemplate", CreateMNGSubscribeMessageTemplateResponse.class);
+    }
+
+    /**
      *This API is used to create a mini game version.
      * @param req CreateMNGVersionRequest
      * @return CreateMNGVersionResponse
@@ -179,6 +201,17 @@ public class TcsasClient extends AbstractClient{
     public CreateMNPResponse CreateMNP(CreateMNPRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CreateMNP", CreateMNPResponse.class);
+    }
+
+    /**
+     *This API is used to generate a mini program secret key.
+     * @param req CreateMNPAppSecretRequest
+     * @return CreateMNPAppSecretResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateMNPAppSecretResponse CreateMNPAppSecret(CreateMNPAppSecretRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateMNPAppSecret", CreateMNPAppSecretResponse.class);
     }
 
     /**
@@ -223,6 +256,17 @@ public class TcsasClient extends AbstractClient{
     public CreateMNPSensitiveAPIPermissionApprovalResponse CreateMNPSensitiveAPIPermissionApproval(CreateMNPSensitiveAPIPermissionApprovalRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CreateMNPSensitiveAPIPermissionApproval", CreateMNPSensitiveAPIPermissionApprovalResponse.class);
+    }
+
+    /**
+     *This API is used to create a mini program subscription message template.
+     * @param req CreateMNPSubscribeMessageTemplateRequest
+     * @return CreateMNPSubscribeMessageTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateMNPSubscribeMessageTemplateResponse CreateMNPSubscribeMessageTemplate(CreateMNPSubscribeMessageTemplateRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateMNPSubscribeMessageTemplate", CreateMNPSubscribeMessageTemplateResponse.class);
     }
 
     /**
@@ -314,6 +358,17 @@ public class TcsasClient extends AbstractClient{
     }
 
     /**
+     *This API is used to delete a mini game subscription message template.
+     * @param req DeleteMNGSubscribeMessageTemplateRequest
+     * @return DeleteMNGSubscribeMessageTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteMNGSubscribeMessageTemplateResponse DeleteMNGSubscribeMessageTemplate(DeleteMNGSubscribeMessageTemplateRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteMNGSubscribeMessageTemplate", DeleteMNGSubscribeMessageTemplateResponse.class);
+    }
+
+    /**
      *This API is used to delete a mini program.
      * @param req DeleteMNPRequest
      * @return DeleteMNPResponse
@@ -322,6 +377,17 @@ public class TcsasClient extends AbstractClient{
     public DeleteMNPResponse DeleteMNP(DeleteMNPRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteMNP", DeleteMNPResponse.class);
+    }
+
+    /**
+     *This API is used to delete a mini program subscription message template.
+     * @param req DeleteMNPSubscribeMessageTemplateRequest
+     * @return DeleteMNPSubscribeMessageTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteMNPSubscribeMessageTemplateResponse DeleteMNPSubscribeMessageTemplate(DeleteMNPSubscribeMessageTemplateRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteMNPSubscribeMessageTemplate", DeleteMNPSubscribeMessageTemplateResponse.class);
     }
 
     /**
@@ -589,7 +655,7 @@ public class TcsasClient extends AbstractClient{
     }
 
     /**
-     *This API is used to query the mini game version information.
+     *This API is used to query mini game version information across all phases.
      * @param req DescribeMNGAllStageVersionsRequest
      * @return DescribeMNGAllStageVersionsResponse
      * @throws TencentCloudSDKException
@@ -597,6 +663,17 @@ public class TcsasClient extends AbstractClient{
     public DescribeMNGAllStageVersionsResponse DescribeMNGAllStageVersions(DescribeMNGAllStageVersionsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeMNGAllStageVersions", DescribeMNGAllStageVersionsResponse.class);
+    }
+
+    /**
+     *This API is used to query mini game secret keys.
+     * @param req DescribeMNGAppSecretRequest
+     * @return DescribeMNGAppSecretResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeMNGAppSecretResponse DescribeMNGAppSecret(DescribeMNGAppSecretRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeMNGAppSecret", DescribeMNGAppSecretResponse.class);
     }
 
     /**
@@ -776,6 +853,50 @@ public class TcsasClient extends AbstractClient{
     }
 
     /**
+     *This API is used to query mini game subscription message template details.
+     * @param req DescribeMNGSubscribeMessageTemplateRequest
+     * @return DescribeMNGSubscribeMessageTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeMNGSubscribeMessageTemplateResponse DescribeMNGSubscribeMessageTemplate(DescribeMNGSubscribeMessageTemplateRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeMNGSubscribeMessageTemplate", DescribeMNGSubscribeMessageTemplateResponse.class);
+    }
+
+    /**
+     *This API is used to query mini game subscription message template library details.
+     * @param req DescribeMNGSubscribeMessageTemplateLibraryRequest
+     * @return DescribeMNGSubscribeMessageTemplateLibraryResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeMNGSubscribeMessageTemplateLibraryResponse DescribeMNGSubscribeMessageTemplateLibrary(DescribeMNGSubscribeMessageTemplateLibraryRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeMNGSubscribeMessageTemplateLibrary", DescribeMNGSubscribeMessageTemplateLibraryResponse.class);
+    }
+
+    /**
+     *This API is used to query the mini game subscription message template library list.
+     * @param req DescribeMNGSubscribeMessageTemplateLibraryListRequest
+     * @return DescribeMNGSubscribeMessageTemplateLibraryListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeMNGSubscribeMessageTemplateLibraryListResponse DescribeMNGSubscribeMessageTemplateLibraryList(DescribeMNGSubscribeMessageTemplateLibraryListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeMNGSubscribeMessageTemplateLibraryList", DescribeMNGSubscribeMessageTemplateLibraryListResponse.class);
+    }
+
+    /**
+     *This API is used to query the mini game subscription message template list.
+     * @param req DescribeMNGSubscribeMessageTemplateListRequest
+     * @return DescribeMNGSubscribeMessageTemplateListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeMNGSubscribeMessageTemplateListResponse DescribeMNGSubscribeMessageTemplateList(DescribeMNGSubscribeMessageTemplateListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeMNGSubscribeMessageTemplateList", DescribeMNGSubscribeMessageTemplateListResponse.class);
+    }
+
+    /**
      *This API is used to query the mini game version creation results.
      * @param req DescribeMNGVersionRequest
      * @return DescribeMNGVersionResponse
@@ -831,7 +952,7 @@ public class TcsasClient extends AbstractClient{
     }
 
     /**
-     *This API is used to query versions of a mini program across all stages.
+     *This API is used to query mini program version information across all phases.
      * @param req DescribeMNPAllStageVersionsRequest
      * @return DescribeMNPAllStageVersionsResponse
      * @throws TencentCloudSDKException
@@ -839,6 +960,17 @@ public class TcsasClient extends AbstractClient{
     public DescribeMNPAllStageVersionsResponse DescribeMNPAllStageVersions(DescribeMNPAllStageVersionsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeMNPAllStageVersions", DescribeMNPAllStageVersionsResponse.class);
+    }
+
+    /**
+     *This API is used to query mini program secret keys.
+     * @param req DescribeMNPAppSecretRequest
+     * @return DescribeMNPAppSecretResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeMNPAppSecretResponse DescribeMNPAppSecret(DescribeMNPAppSecretRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeMNPAppSecret", DescribeMNPAppSecretResponse.class);
     }
 
     /**
@@ -1029,6 +1161,50 @@ public class TcsasClient extends AbstractClient{
     }
 
     /**
+     *This API is used to query mini program subscription message template details.
+     * @param req DescribeMNPSubscribeMessageTemplateRequest
+     * @return DescribeMNPSubscribeMessageTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeMNPSubscribeMessageTemplateResponse DescribeMNPSubscribeMessageTemplate(DescribeMNPSubscribeMessageTemplateRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeMNPSubscribeMessageTemplate", DescribeMNPSubscribeMessageTemplateResponse.class);
+    }
+
+    /**
+     *This API is used to query mini program subscription message template library details.
+     * @param req DescribeMNPSubscribeMessageTemplateLibraryRequest
+     * @return DescribeMNPSubscribeMessageTemplateLibraryResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeMNPSubscribeMessageTemplateLibraryResponse DescribeMNPSubscribeMessageTemplateLibrary(DescribeMNPSubscribeMessageTemplateLibraryRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeMNPSubscribeMessageTemplateLibrary", DescribeMNPSubscribeMessageTemplateLibraryResponse.class);
+    }
+
+    /**
+     *This API is used to query the mini program subscription message template library list.
+     * @param req DescribeMNPSubscribeMessageTemplateLibraryListRequest
+     * @return DescribeMNPSubscribeMessageTemplateLibraryListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeMNPSubscribeMessageTemplateLibraryListResponse DescribeMNPSubscribeMessageTemplateLibraryList(DescribeMNPSubscribeMessageTemplateLibraryListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeMNPSubscribeMessageTemplateLibraryList", DescribeMNPSubscribeMessageTemplateLibraryListResponse.class);
+    }
+
+    /**
+     *This API is used to query the mini program subscription message template list.
+     * @param req DescribeMNPSubscribeMessageTemplateListRequest
+     * @return DescribeMNPSubscribeMessageTemplateListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeMNPSubscribeMessageTemplateListResponse DescribeMNPSubscribeMessageTemplateList(DescribeMNPSubscribeMessageTemplateListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeMNPSubscribeMessageTemplateList", DescribeMNPSubscribeMessageTemplateListResponse.class);
+    }
+
+    /**
      *This API is used to query the mini program version creation results.
      * @param req DescribeMNPVersionRequest
      * @return DescribeMNPVersionResponse
@@ -1216,6 +1392,17 @@ public class TcsasClient extends AbstractClient{
     }
 
     /**
+     *This API is used to modify the secret key status of a mini game.
+     * @param req ModifyMNGAppSecretStatusRequest
+     * @return ModifyMNGAppSecretStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyMNGAppSecretStatusResponse ModifyMNGAppSecretStatus(ModifyMNGAppSecretStatusRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyMNGAppSecretStatus", ModifyMNGAppSecretStatusResponse.class);
+    }
+
+    /**
      *This API is used to edit the mini game domain information.
      * @param req ModifyMNGDomainRequest
      * @return ModifyMNGDomainResponse
@@ -1235,6 +1422,17 @@ public class TcsasClient extends AbstractClient{
     public ModifyMNPResponse ModifyMNP(ModifyMNPRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyMNP", ModifyMNPResponse.class);
+    }
+
+    /**
+     *This API is used to modify the secret key status of a mini program.
+     * @param req ModifyMNPAppSecretStatusRequest
+     * @return ModifyMNPAppSecretStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyMNPAppSecretStatusResponse ModifyMNPAppSecretStatus(ModifyMNPAppSecretStatusRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyMNPAppSecretStatus", ModifyMNPAppSecretStatusResponse.class);
     }
 
     /**
@@ -1345,6 +1543,28 @@ public class TcsasClient extends AbstractClient{
     public RemoveMNPResponse RemoveMNP(RemoveMNPRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "RemoveMNP", RemoveMNPResponse.class);
+    }
+
+    /**
+     *This API is used to reset a mini game secret key.
+     * @param req ResetMNGAppSecretRequest
+     * @return ResetMNGAppSecretResponse
+     * @throws TencentCloudSDKException
+     */
+    public ResetMNGAppSecretResponse ResetMNGAppSecret(ResetMNGAppSecretRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ResetMNGAppSecret", ResetMNGAppSecretResponse.class);
+    }
+
+    /**
+     *This API is used to reset a mini program secret key.
+     * @param req ResetMNPAppSecretRequest
+     * @return ResetMNPAppSecretResponse
+     * @throws TencentCloudSDKException
+     */
+    public ResetMNPAppSecretResponse ResetMNPAppSecret(ResetMNPAppSecretRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ResetMNPAppSecret", ResetMNPAppSecretResponse.class);
     }
 
     /**

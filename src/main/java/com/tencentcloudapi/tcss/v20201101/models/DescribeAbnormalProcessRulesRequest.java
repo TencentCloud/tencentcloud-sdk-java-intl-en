@@ -24,6 +24,25 @@ import java.util.HashMap;
 public class DescribeAbnormalProcessRulesRequest extends AbstractModel {
 
     /**
+    * Sorting field
+    */
+    @SerializedName("By")
+    @Expose
+    private String By;
+
+    /**
+    * Filter parameters,"Filters":[{"Name":"Status","Values":["2"]}]
+<li>ImageName - String - required: no - mirror name, fuzzy search for rules bound to the image</li>
+<li>ImageId - String - required: no - image ID, fuzzy search for rules bound to the image</li>
+<li>RuleType - String - Required: No - Policy type filter. Value: system (system policy), user (user policy)</li>
+<li>RuleAction- String - Required: No - Execution action filter. Valid values: RULE_MODE_ALERT (alert), RULE_MODE_HOLDUP (block) </li>
+
+    */
+    @SerializedName("Filters")
+    @Expose
+    private RunTimeFilters [] Filters;
+
+    /**
     * Number of results to be returned. Default value: `10`. Maximum value: `100`.
     */
     @SerializedName("Limit")
@@ -38,13 +57,6 @@ public class DescribeAbnormalProcessRulesRequest extends AbstractModel {
     private Long Offset;
 
     /**
-    * Filter parameter. "Filters":[{"Name":"Status","Values":["2"]}]
-    */
-    @SerializedName("Filters")
-    @Expose
-    private RunTimeFilters [] Filters;
-
-    /**
     * Valid values: `asc`, `desc`.
     */
     @SerializedName("Order")
@@ -52,11 +64,56 @@ public class DescribeAbnormalProcessRulesRequest extends AbstractModel {
     private String Order;
 
     /**
-    * Sorting field
-    */
-    @SerializedName("By")
-    @Expose
-    private String By;
+     * Get Sorting field 
+     * @return By Sorting field
+     */
+    public String getBy() {
+        return this.By;
+    }
+
+    /**
+     * Set Sorting field
+     * @param By Sorting field
+     */
+    public void setBy(String By) {
+        this.By = By;
+    }
+
+    /**
+     * Get Filter parameters,"Filters":[{"Name":"Status","Values":["2"]}]
+<li>ImageName - String - required: no - mirror name, fuzzy search for rules bound to the image</li>
+<li>ImageId - String - required: no - image ID, fuzzy search for rules bound to the image</li>
+<li>RuleType - String - Required: No - Policy type filter. Value: system (system policy), user (user policy)</li>
+<li>RuleAction- String - Required: No - Execution action filter. Valid values: RULE_MODE_ALERT (alert), RULE_MODE_HOLDUP (block) </li>
+ 
+     * @return Filters Filter parameters,"Filters":[{"Name":"Status","Values":["2"]}]
+<li>ImageName - String - required: no - mirror name, fuzzy search for rules bound to the image</li>
+<li>ImageId - String - required: no - image ID, fuzzy search for rules bound to the image</li>
+<li>RuleType - String - Required: No - Policy type filter. Value: system (system policy), user (user policy)</li>
+<li>RuleAction- String - Required: No - Execution action filter. Valid values: RULE_MODE_ALERT (alert), RULE_MODE_HOLDUP (block) </li>
+
+     */
+    public RunTimeFilters [] getFilters() {
+        return this.Filters;
+    }
+
+    /**
+     * Set Filter parameters,"Filters":[{"Name":"Status","Values":["2"]}]
+<li>ImageName - String - required: no - mirror name, fuzzy search for rules bound to the image</li>
+<li>ImageId - String - required: no - image ID, fuzzy search for rules bound to the image</li>
+<li>RuleType - String - Required: No - Policy type filter. Value: system (system policy), user (user policy)</li>
+<li>RuleAction- String - Required: No - Execution action filter. Valid values: RULE_MODE_ALERT (alert), RULE_MODE_HOLDUP (block) </li>
+
+     * @param Filters Filter parameters,"Filters":[{"Name":"Status","Values":["2"]}]
+<li>ImageName - String - required: no - mirror name, fuzzy search for rules bound to the image</li>
+<li>ImageId - String - required: no - image ID, fuzzy search for rules bound to the image</li>
+<li>RuleType - String - Required: No - Policy type filter. Value: system (system policy), user (user policy)</li>
+<li>RuleAction- String - Required: No - Execution action filter. Valid values: RULE_MODE_ALERT (alert), RULE_MODE_HOLDUP (block) </li>
+
+     */
+    public void setFilters(RunTimeFilters [] Filters) {
+        this.Filters = Filters;
+    }
 
     /**
      * Get Number of results to be returned. Default value: `10`. Maximum value: `100`. 
@@ -91,22 +148,6 @@ public class DescribeAbnormalProcessRulesRequest extends AbstractModel {
     }
 
     /**
-     * Get Filter parameter. "Filters":[{"Name":"Status","Values":["2"]}] 
-     * @return Filters Filter parameter. "Filters":[{"Name":"Status","Values":["2"]}]
-     */
-    public RunTimeFilters [] getFilters() {
-        return this.Filters;
-    }
-
-    /**
-     * Set Filter parameter. "Filters":[{"Name":"Status","Values":["2"]}]
-     * @param Filters Filter parameter. "Filters":[{"Name":"Status","Values":["2"]}]
-     */
-    public void setFilters(RunTimeFilters [] Filters) {
-        this.Filters = Filters;
-    }
-
-    /**
      * Get Valid values: `asc`, `desc`. 
      * @return Order Valid values: `asc`, `desc`.
      */
@@ -122,22 +163,6 @@ public class DescribeAbnormalProcessRulesRequest extends AbstractModel {
         this.Order = Order;
     }
 
-    /**
-     * Get Sorting field 
-     * @return By Sorting field
-     */
-    public String getBy() {
-        return this.By;
-    }
-
-    /**
-     * Set Sorting field
-     * @param By Sorting field
-     */
-    public void setBy(String By) {
-        this.By = By;
-    }
-
     public DescribeAbnormalProcessRulesRequest() {
     }
 
@@ -146,11 +171,8 @@ public class DescribeAbnormalProcessRulesRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeAbnormalProcessRulesRequest(DescribeAbnormalProcessRulesRequest source) {
-        if (source.Limit != null) {
-            this.Limit = new Long(source.Limit);
-        }
-        if (source.Offset != null) {
-            this.Offset = new Long(source.Offset);
+        if (source.By != null) {
+            this.By = new String(source.By);
         }
         if (source.Filters != null) {
             this.Filters = new RunTimeFilters[source.Filters.length];
@@ -158,11 +180,14 @@ public class DescribeAbnormalProcessRulesRequest extends AbstractModel {
                 this.Filters[i] = new RunTimeFilters(source.Filters[i]);
             }
         }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
         if (source.Order != null) {
             this.Order = new String(source.Order);
-        }
-        if (source.By != null) {
-            this.By = new String(source.By);
         }
     }
 
@@ -171,11 +196,11 @@ public class DescribeAbnormalProcessRulesRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "By", this.By);
+        this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
-        this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
         this.setParamSimple(map, prefix + "Order", this.Order);
-        this.setParamSimple(map, prefix + "By", this.By);
 
     }
 }

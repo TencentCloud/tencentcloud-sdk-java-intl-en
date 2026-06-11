@@ -24,8 +24,7 @@ import java.util.HashMap;
 public class DescribeComplianceTaskPolicyItemSummaryListResponse extends AbstractModel {
 
     /**
-    * ID of the last compliance check task, which is the source of the displayed data.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Return the ID of the last compliance check task. This task is the source of the data display this time.
     */
     @SerializedName("TaskId")
     @Expose
@@ -53,20 +52,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get ID of the last compliance check task, which is the source of the displayed data.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return TaskId ID of the last compliance check task, which is the source of the displayed data.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Return the ID of the last compliance check task. This task is the source of the data display this time. 
+     * @return TaskId Return the ID of the last compliance check task. This task is the source of the data display this time.
      */
     public Long getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set ID of the last compliance check task, which is the source of the displayed data.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param TaskId ID of the last compliance check task, which is the source of the displayed data.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Return the ID of the last compliance check task. This task is the source of the data display this time.
+     * @param TaskId Return the ID of the last compliance check task. This task is the source of the data display this time.
      */
     public void setTaskId(Long TaskId) {
         this.TaskId = TaskId;

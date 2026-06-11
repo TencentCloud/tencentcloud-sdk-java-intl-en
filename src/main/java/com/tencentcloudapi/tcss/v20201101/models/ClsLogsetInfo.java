@@ -31,16 +31,14 @@ public class ClsLogsetInfo extends AbstractModel {
     private String LogsetID;
 
     /**
-    * Logset name
-Note: This field may return null, indicating that no valid values can be obtained.
+    * logset name
     */
     @SerializedName("LogsetName")
     @Expose
     private String LogsetName;
 
     /**
-    * List of CLS topics
-Note: This field may return null, indicating that no valid values can be obtained.
+    * CLS Topic List
     */
     @SerializedName("TopicList")
     @Expose
@@ -63,40 +61,32 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Logset name
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return LogsetName Logset name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get logset name 
+     * @return LogsetName logset name
      */
     public String getLogsetName() {
         return this.LogsetName;
     }
 
     /**
-     * Set Logset name
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param LogsetName Logset name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set logset name
+     * @param LogsetName logset name
      */
     public void setLogsetName(String LogsetName) {
         this.LogsetName = LogsetName;
     }
 
     /**
-     * Get List of CLS topics
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return TopicList List of CLS topics
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get CLS Topic List 
+     * @return TopicList CLS Topic List
      */
     public ClsTopicInfo [] getTopicList() {
         return this.TopicList;
     }
 
     /**
-     * Set List of CLS topics
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param TopicList List of CLS topics
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set CLS Topic List
+     * @param TopicList CLS Topic List
      */
     public void setTopicList(ClsTopicInfo [] TopicList) {
         this.TopicList = TopicList;

@@ -45,14 +45,14 @@ public class DDoSAttackEvent extends AbstractModel {
     private Long AttackStatus;
 
     /**
-    * The maximum attack bandwidth.
+    * Maximum bandwidth of the attack in bps.
     */
     @SerializedName("AttackMaxBandWidth")
     @Expose
     private Long AttackMaxBandWidth;
 
     /**
-    * The peak attack packet rate.
+    * Peak attack packet rate, unit: pps.
     */
     @SerializedName("AttackPacketMaxRate")
     @Expose
@@ -155,32 +155,32 @@ Note: This field may return `null`, indicating that no valid value was found.
     }
 
     /**
-     * Get The maximum attack bandwidth. 
-     * @return AttackMaxBandWidth The maximum attack bandwidth.
+     * Get Maximum bandwidth of the attack in bps. 
+     * @return AttackMaxBandWidth Maximum bandwidth of the attack in bps.
      */
     public Long getAttackMaxBandWidth() {
         return this.AttackMaxBandWidth;
     }
 
     /**
-     * Set The maximum attack bandwidth.
-     * @param AttackMaxBandWidth The maximum attack bandwidth.
+     * Set Maximum bandwidth of the attack in bps.
+     * @param AttackMaxBandWidth Maximum bandwidth of the attack in bps.
      */
     public void setAttackMaxBandWidth(Long AttackMaxBandWidth) {
         this.AttackMaxBandWidth = AttackMaxBandWidth;
     }
 
     /**
-     * Get The peak attack packet rate. 
-     * @return AttackPacketMaxRate The peak attack packet rate.
+     * Get Peak attack packet rate, unit: pps. 
+     * @return AttackPacketMaxRate Peak attack packet rate, unit: pps.
      */
     public Long getAttackPacketMaxRate() {
         return this.AttackPacketMaxRate;
     }
 
     /**
-     * Set The peak attack packet rate.
-     * @param AttackPacketMaxRate The peak attack packet rate.
+     * Set Peak attack packet rate, unit: pps.
+     * @param AttackPacketMaxRate Peak attack packet rate, unit: pps.
      */
     public void setAttackPacketMaxRate(Long AttackPacketMaxRate) {
         this.AttackPacketMaxRate = AttackPacketMaxRate;

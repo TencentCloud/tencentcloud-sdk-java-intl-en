@@ -25,7 +25,6 @@ public class ComponentsInfo extends AbstractModel {
 
     /**
     * Component name
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Component")
     @Expose
@@ -33,49 +32,42 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Component version information
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Version")
     @Expose
     private String Version;
 
     /**
-    * Fixed version
-Note: This field may return·`null`, indicating that no valid values can be obtained.
+    * Repairable Version
     */
     @SerializedName("FixedVersion")
     @Expose
     private String FixedVersion;
 
     /**
-    * Path
-Note: This field may return·`null`, indicating that no valid values can be obtained.
+    * Path.
     */
     @SerializedName("Path")
     @Expose
     private String Path;
 
     /**
-    * Type
-Note: This field may return·`null`, indicating that no valid values can be obtained.
+    * Type.
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * Add-on name
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Component name
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-     * Get Component name
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Component name 
      * @return Component Component name
-Note: This field may return null, indicating that no valid values can be obtained.
      * @deprecated
      */
     @Deprecated
@@ -85,9 +77,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Component name
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Component Component name
-Note: This field may return null, indicating that no valid values can be obtained.
      * @deprecated
      */
     @Deprecated
@@ -96,10 +86,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Component version information
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Component version information 
      * @return Version Component version information
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getVersion() {
         return this.Version;
@@ -107,89 +95,71 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Component version information
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Version Component version information
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setVersion(String Version) {
         this.Version = Version;
     }
 
     /**
-     * Get Fixed version
-Note: This field may return·`null`, indicating that no valid values can be obtained. 
-     * @return FixedVersion Fixed version
-Note: This field may return·`null`, indicating that no valid values can be obtained.
+     * Get Repairable Version 
+     * @return FixedVersion Repairable Version
      */
     public String getFixedVersion() {
         return this.FixedVersion;
     }
 
     /**
-     * Set Fixed version
-Note: This field may return·`null`, indicating that no valid values can be obtained.
-     * @param FixedVersion Fixed version
-Note: This field may return·`null`, indicating that no valid values can be obtained.
+     * Set Repairable Version
+     * @param FixedVersion Repairable Version
      */
     public void setFixedVersion(String FixedVersion) {
         this.FixedVersion = FixedVersion;
     }
 
     /**
-     * Get Path
-Note: This field may return·`null`, indicating that no valid values can be obtained. 
-     * @return Path Path
-Note: This field may return·`null`, indicating that no valid values can be obtained.
+     * Get Path. 
+     * @return Path Path.
      */
     public String getPath() {
         return this.Path;
     }
 
     /**
-     * Set Path
-Note: This field may return·`null`, indicating that no valid values can be obtained.
-     * @param Path Path
-Note: This field may return·`null`, indicating that no valid values can be obtained.
+     * Set Path.
+     * @param Path Path.
      */
     public void setPath(String Path) {
         this.Path = Path;
     }
 
     /**
-     * Get Type
-Note: This field may return·`null`, indicating that no valid values can be obtained. 
-     * @return Type Type
-Note: This field may return·`null`, indicating that no valid values can be obtained.
+     * Get Type. 
+     * @return Type Type.
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set Type
-Note: This field may return·`null`, indicating that no valid values can be obtained.
-     * @param Type Type
-Note: This field may return·`null`, indicating that no valid values can be obtained.
+     * Set Type.
+     * @param Type Type.
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get Add-on name
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Name Add-on name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Component name 
+     * @return Name Component name
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Add-on name
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Name Add-on name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Component name
+     * @param Name Component name
      */
     public void setName(String Name) {
         this.Name = Name;

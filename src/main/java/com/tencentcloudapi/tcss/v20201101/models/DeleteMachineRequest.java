@@ -31,6 +31,20 @@ public class DeleteMachineRequest extends AbstractModel {
     private String Uuid;
 
     /**
+    * Super Node Unique ID
+    */
+    @SerializedName("NodeUniqueIds")
+    @Expose
+    private String [] NodeUniqueIds;
+
+    /**
+    * UUID list
+    */
+    @SerializedName("UUIDs")
+    @Expose
+    private String [] UUIDs;
+
+    /**
      * Get Agent UUID 
      * @return Uuid Agent UUID
      */
@@ -46,6 +60,38 @@ public class DeleteMachineRequest extends AbstractModel {
         this.Uuid = Uuid;
     }
 
+    /**
+     * Get Super Node Unique ID 
+     * @return NodeUniqueIds Super Node Unique ID
+     */
+    public String [] getNodeUniqueIds() {
+        return this.NodeUniqueIds;
+    }
+
+    /**
+     * Set Super Node Unique ID
+     * @param NodeUniqueIds Super Node Unique ID
+     */
+    public void setNodeUniqueIds(String [] NodeUniqueIds) {
+        this.NodeUniqueIds = NodeUniqueIds;
+    }
+
+    /**
+     * Get UUID list 
+     * @return UUIDs UUID list
+     */
+    public String [] getUUIDs() {
+        return this.UUIDs;
+    }
+
+    /**
+     * Set UUID list
+     * @param UUIDs UUID list
+     */
+    public void setUUIDs(String [] UUIDs) {
+        this.UUIDs = UUIDs;
+    }
+
     public DeleteMachineRequest() {
     }
 
@@ -57,6 +103,18 @@ public class DeleteMachineRequest extends AbstractModel {
         if (source.Uuid != null) {
             this.Uuid = new String(source.Uuid);
         }
+        if (source.NodeUniqueIds != null) {
+            this.NodeUniqueIds = new String[source.NodeUniqueIds.length];
+            for (int i = 0; i < source.NodeUniqueIds.length; i++) {
+                this.NodeUniqueIds[i] = new String(source.NodeUniqueIds[i]);
+            }
+        }
+        if (source.UUIDs != null) {
+            this.UUIDs = new String[source.UUIDs.length];
+            for (int i = 0; i < source.UUIDs.length; i++) {
+                this.UUIDs[i] = new String(source.UUIDs[i]);
+            }
+        }
     }
 
 
@@ -65,6 +123,8 @@ public class DeleteMachineRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Uuid", this.Uuid);
+        this.setParamArraySimple(map, prefix + "NodeUniqueIds.", this.NodeUniqueIds);
+        this.setParamArraySimple(map, prefix + "UUIDs.", this.UUIDs);
 
     }
 }

@@ -24,8 +24,7 @@ import java.util.HashMap;
 public class CheckRepeatAssetImageRegistryResponse extends AbstractModel {
 
     /**
-    * Whether it is repeated
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Check for duplicates.
     */
     @SerializedName("IsRepeat")
     @Expose
@@ -39,20 +38,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Whether it is repeated
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return IsRepeat Whether it is repeated
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Check for duplicates. 
+     * @return IsRepeat Check for duplicates.
      */
     public Boolean getIsRepeat() {
         return this.IsRepeat;
     }
 
     /**
-     * Set Whether it is repeated
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param IsRepeat Whether it is repeated
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Check for duplicates.
+     * @param IsRepeat Check for duplicates.
      */
     public void setIsRepeat(Boolean IsRepeat) {
         this.IsRepeat = IsRepeat;

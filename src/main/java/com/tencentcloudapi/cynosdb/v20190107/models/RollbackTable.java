@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class RollbackTable extends AbstractModel {
 
     /**
-    * 
+    * Database name.
     */
     @SerializedName("Database")
     @Expose
     private String Database;
 
     /**
-    * 
+    * Database table.
     */
     @SerializedName("Tables")
     @Expose
     private RollbackTableInfo [] Tables;
 
     /**
-     * Get  
-     * @return Database 
+     * Get Database name. 
+     * @return Database Database name.
      */
     public String getDatabase() {
         return this.Database;
     }
 
     /**
-     * Set 
-     * @param Database 
+     * Set Database name.
+     * @param Database Database name.
      */
     public void setDatabase(String Database) {
         this.Database = Database;
     }
 
     /**
-     * Get  
-     * @return Tables 
+     * Get Database table. 
+     * @return Tables Database table.
      */
     public RollbackTableInfo [] getTables() {
         return this.Tables;
     }
 
     /**
-     * Set 
-     * @param Tables 
+     * Set Database table.
+     * @param Tables Database table.
      */
     public void setTables(RollbackTableInfo [] Tables) {
         this.Tables = Tables;

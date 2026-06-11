@@ -53,8 +53,7 @@ Note: This field may return `null`, indicating that no valid value was found.
     private Ckafka Ckafka;
 
     /**
-    * Compression mode. Valid values: `0` (no compression), `2` (snappy), `3` (LZ4).
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Compression mode [0:NONE；2:SNAPPY；3:LZ4]
     */
     @SerializedName("Compression")
     @Expose
@@ -136,20 +135,16 @@ Note: This field may return `null`, indicating that no valid value was found.
     }
 
     /**
-     * Get Compression mode. Valid values: `0` (no compression), `2` (snappy), `3` (LZ4).
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Compression Compression mode. Valid values: `0` (no compression), `2` (snappy), `3` (LZ4).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Compression mode [0:NONE；2:SNAPPY；3:LZ4] 
+     * @return Compression Compression mode [0:NONE；2:SNAPPY；3:LZ4]
      */
     public Long getCompression() {
         return this.Compression;
     }
 
     /**
-     * Set Compression mode. Valid values: `0` (no compression), `2` (snappy), `3` (LZ4).
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Compression Compression mode. Valid values: `0` (no compression), `2` (snappy), `3` (LZ4).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Compression mode [0:NONE；2:SNAPPY；3:LZ4]
+     * @param Compression Compression mode [0:NONE；2:SNAPPY；3:LZ4]
      */
     public void setCompression(Long Compression) {
         this.Compression = Compression;

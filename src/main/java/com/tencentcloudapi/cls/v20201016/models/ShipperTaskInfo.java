@@ -73,7 +73,11 @@ public class ShipperTaskInfo extends AbstractModel {
     private Long EndTime;
 
     /**
-    * Result of the current shipping task. Valid values: `success`, `running`, `failed`
+    * Result of this shipping: "success", "running", "failed".
+
+-success: Task successful.
+- running: Task processing.
+- failed: Task failure.
     */
     @SerializedName("Status")
     @Expose
@@ -199,16 +203,32 @@ public class ShipperTaskInfo extends AbstractModel {
     }
 
     /**
-     * Get Result of the current shipping task. Valid values: `success`, `running`, `failed` 
-     * @return Status Result of the current shipping task. Valid values: `success`, `running`, `failed`
+     * Get Result of this shipping: "success", "running", "failed".
+
+-success: Task successful.
+- running: Task processing.
+- failed: Task failure. 
+     * @return Status Result of this shipping: "success", "running", "failed".
+
+-success: Task successful.
+- running: Task processing.
+- failed: Task failure.
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Result of the current shipping task. Valid values: `success`, `running`, `failed`
-     * @param Status Result of the current shipping task. Valid values: `success`, `running`, `failed`
+     * Set Result of this shipping: "success", "running", "failed".
+
+-success: Task successful.
+- running: Task processing.
+- failed: Task failure.
+     * @param Status Result of this shipping: "success", "running", "failed".
+
+-success: Task successful.
+- running: Task processing.
+- failed: Task failure.
      */
     public void setStatus(String Status) {
         this.Status = Status;

@@ -25,7 +25,6 @@ public class DescribeBaselineStrategyDetailResponse extends AbstractModel {
 
     /**
     * Policy scan pass rate
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("PassRate")
     @Expose
@@ -33,15 +32,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Policy name
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("StrategyName")
     @Expose
     private String StrategyName;
 
     /**
-    * policy scan cycle (days)
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Policy scan cycle (days)
     */
     @SerializedName("ScanCycle")
     @Expose
@@ -49,14 +46,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Regular scan time. The scan task is triggered at this time.
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ScanAt")
     @Expose
     private String ScanAt;
 
     /**
-    * Whether all hosts are scanned. 1: yes; 0: no. If the value is 1, all Pro Edition hosts are scanned.Note: This field may return null, indicating that no valid values can be obtained.
+    * Whether all servers are scanned: 1: yes; 0 :no. If the value is 1, all Professional Edition hosts are scanned.
     */
     @SerializedName("IsGlobal")
     @Expose
@@ -65,11 +61,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
     /**
     * Machine type:
 cvm: Tencent Cloud Virtual Machine
-bm: BM
-ecm: Edge Computing Machine
-lh: Lighthouse
-other: Hybrid Cloud Machine
-Note: This field may return null, indicating that no valid values can be obtained.
+bm: bare metal server
+ecm: edge computing host
+Lightweight Application Server
+Hybrid cloud machine
     */
     @SerializedName("MachineType")
     @Expose
@@ -77,30 +72,27 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Host region
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Region")
     @Expose
     private String Region;
 
     /**
-    * IDs of all user hosts involved in this policy
-Note: This field may return null, indicating that no valid values can be obtained.
+    * IDs of all user hosts under this policy
     */
     @SerializedName("Quuids")
     @Expose
     private String [] Quuids;
 
     /**
-    * IDs of all user baselines involved in this policy
-Note: This field may return null, indicating that no valid values can be obtained.
+    * User baseline IDs under this policy
     */
     @SerializedName("CategoryIds")
     @Expose
     private String [] CategoryIds;
 
     /**
-    * 1: scanned; 0: not scanned.Note: This field may return null, indicating that no valid values can be obtained.
+    * 1 means scanned, 0 means not scanned
     */
     @SerializedName("IfScanned")
     @Expose
@@ -114,10 +106,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Policy scan pass rate
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Policy scan pass rate 
      * @return PassRate Policy scan pass rate
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getPassRate() {
         return this.PassRate;
@@ -125,19 +115,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Policy scan pass rate
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param PassRate Policy scan pass rate
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setPassRate(Long PassRate) {
         this.PassRate = PassRate;
     }
 
     /**
-     * Get Policy name
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Policy name 
      * @return StrategyName Policy name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getStrategyName() {
         return this.StrategyName;
@@ -145,39 +131,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Policy name
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param StrategyName Policy name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setStrategyName(String StrategyName) {
         this.StrategyName = StrategyName;
     }
 
     /**
-     * Get policy scan cycle (days)
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ScanCycle policy scan cycle (days)
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Policy scan cycle (days) 
+     * @return ScanCycle Policy scan cycle (days)
      */
     public String getScanCycle() {
         return this.ScanCycle;
     }
 
     /**
-     * Set policy scan cycle (days)
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ScanCycle policy scan cycle (days)
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Policy scan cycle (days)
+     * @param ScanCycle Policy scan cycle (days)
      */
     public void setScanCycle(String ScanCycle) {
         this.ScanCycle = ScanCycle;
     }
 
     /**
-     * Get Regular scan time. The scan task is triggered at this time.
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Regular scan time. The scan task is triggered at this time. 
      * @return ScanAt Regular scan time. The scan task is triggered at this time.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getScanAt() {
         return this.ScanAt;
@@ -185,25 +163,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Regular scan time. The scan task is triggered at this time.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param ScanAt Regular scan time. The scan task is triggered at this time.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setScanAt(String ScanAt) {
         this.ScanAt = ScanAt;
     }
 
     /**
-     * Get Whether all hosts are scanned. 1: yes; 0: no. If the value is 1, all Pro Edition hosts are scanned.Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return IsGlobal Whether all hosts are scanned. 1: yes; 0: no. If the value is 1, all Pro Edition hosts are scanned.Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Whether all servers are scanned: 1: yes; 0 :no. If the value is 1, all Professional Edition hosts are scanned. 
+     * @return IsGlobal Whether all servers are scanned: 1: yes; 0 :no. If the value is 1, all Professional Edition hosts are scanned.
      */
     public Long getIsGlobal() {
         return this.IsGlobal;
     }
 
     /**
-     * Set Whether all hosts are scanned. 1: yes; 0: no. If the value is 1, all Pro Edition hosts are scanned.Note: This field may return null, indicating that no valid values can be obtained.
-     * @param IsGlobal Whether all hosts are scanned. 1: yes; 0: no. If the value is 1, all Pro Edition hosts are scanned.Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Whether all servers are scanned: 1: yes; 0 :no. If the value is 1, all Professional Edition hosts are scanned.
+     * @param IsGlobal Whether all servers are scanned: 1: yes; 0 :no. If the value is 1, all Professional Edition hosts are scanned.
      */
     public void setIsGlobal(Long IsGlobal) {
         this.IsGlobal = IsGlobal;
@@ -212,18 +188,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     /**
      * Get Machine type:
 cvm: Tencent Cloud Virtual Machine
-bm: BM
-ecm: Edge Computing Machine
-lh: Lighthouse
-other: Hybrid Cloud Machine
-Note: This field may return null, indicating that no valid values can be obtained. 
+bm: bare metal server
+ecm: edge computing host
+Lightweight Application Server
+Hybrid cloud machine 
      * @return MachineType Machine type:
 cvm: Tencent Cloud Virtual Machine
-bm: BM
-ecm: Edge Computing Machine
-lh: Lighthouse
-other: Hybrid Cloud Machine
-Note: This field may return null, indicating that no valid values can be obtained.
+bm: bare metal server
+ecm: edge computing host
+Lightweight Application Server
+Hybrid cloud machine
      */
     public String getMachineType() {
         return this.MachineType;
@@ -232,28 +206,24 @@ Note: This field may return null, indicating that no valid values can be obtaine
     /**
      * Set Machine type:
 cvm: Tencent Cloud Virtual Machine
-bm: BM
-ecm: Edge Computing Machine
-lh: Lighthouse
-other: Hybrid Cloud Machine
-Note: This field may return null, indicating that no valid values can be obtained.
+bm: bare metal server
+ecm: edge computing host
+Lightweight Application Server
+Hybrid cloud machine
      * @param MachineType Machine type:
 cvm: Tencent Cloud Virtual Machine
-bm: BM
-ecm: Edge Computing Machine
-lh: Lighthouse
-other: Hybrid Cloud Machine
-Note: This field may return null, indicating that no valid values can be obtained.
+bm: bare metal server
+ecm: edge computing host
+Lightweight Application Server
+Hybrid cloud machine
      */
     public void setMachineType(String MachineType) {
         this.MachineType = MachineType;
     }
 
     /**
-     * Get Host region
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Host region 
      * @return Region Host region
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getRegion() {
         return this.Region;
@@ -261,65 +231,55 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Host region
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Region Host region
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setRegion(String Region) {
         this.Region = Region;
     }
 
     /**
-     * Get IDs of all user hosts involved in this policy
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Quuids IDs of all user hosts involved in this policy
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get IDs of all user hosts under this policy 
+     * @return Quuids IDs of all user hosts under this policy
      */
     public String [] getQuuids() {
         return this.Quuids;
     }
 
     /**
-     * Set IDs of all user hosts involved in this policy
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Quuids IDs of all user hosts involved in this policy
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set IDs of all user hosts under this policy
+     * @param Quuids IDs of all user hosts under this policy
      */
     public void setQuuids(String [] Quuids) {
         this.Quuids = Quuids;
     }
 
     /**
-     * Get IDs of all user baselines involved in this policy
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return CategoryIds IDs of all user baselines involved in this policy
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get User baseline IDs under this policy 
+     * @return CategoryIds User baseline IDs under this policy
      */
     public String [] getCategoryIds() {
         return this.CategoryIds;
     }
 
     /**
-     * Set IDs of all user baselines involved in this policy
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param CategoryIds IDs of all user baselines involved in this policy
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set User baseline IDs under this policy
+     * @param CategoryIds User baseline IDs under this policy
      */
     public void setCategoryIds(String [] CategoryIds) {
         this.CategoryIds = CategoryIds;
     }
 
     /**
-     * Get 1: scanned; 0: not scanned.Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return IfScanned 1: scanned; 0: not scanned.Note: This field may return null, indicating that no valid values can be obtained.
+     * Get 1 means scanned, 0 means not scanned 
+     * @return IfScanned 1 means scanned, 0 means not scanned
      */
     public Long getIfScanned() {
         return this.IfScanned;
     }
 
     /**
-     * Set 1: scanned; 0: not scanned.Note: This field may return null, indicating that no valid values can be obtained.
-     * @param IfScanned 1: scanned; 0: not scanned.Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 1 means scanned, 0 means not scanned
+     * @param IfScanned 1 means scanned, 0 means not scanned
      */
     public void setIfScanned(Long IfScanned) {
         this.IfScanned = IfScanned;

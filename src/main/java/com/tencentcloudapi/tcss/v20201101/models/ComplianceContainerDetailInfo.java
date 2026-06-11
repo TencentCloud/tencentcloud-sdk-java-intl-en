@@ -31,8 +31,7 @@ public class ComplianceContainerDetailInfo extends AbstractModel {
     private String ContainerId;
 
     /**
-    * Pod name of the container
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Name of the Pod the container belongs to.
     */
     @SerializedName("PodName")
     @Expose
@@ -55,20 +54,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Pod name of the container
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return PodName Pod name of the container
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Name of the Pod the container belongs to. 
+     * @return PodName Name of the Pod the container belongs to.
      */
     public String getPodName() {
         return this.PodName;
     }
 
     /**
-     * Set Pod name of the container
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param PodName Pod name of the container
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Name of the Pod the container belongs to.
+     * @param PodName Name of the Pod the container belongs to.
      */
     public void setPodName(String PodName) {
         this.PodName = PodName;

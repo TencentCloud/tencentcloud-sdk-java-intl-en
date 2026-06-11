@@ -25,7 +25,6 @@ public class DuplicateHosts extends AbstractModel {
 
     /**
     * Quuid
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Quuid")
     @Expose
@@ -33,7 +32,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Uuid
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Uuid")
     @Expose
@@ -47,10 +45,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long Id;
 
     /**
-     * Get Quuid
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Quuid 
      * @return Quuid Quuid
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getQuuid() {
         return this.Quuid;
@@ -58,19 +54,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Quuid
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Quuid Quuid
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setQuuid(String Quuid) {
         this.Quuid = Quuid;
     }
 
     /**
-     * Get Uuid
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Uuid 
      * @return Uuid Uuid
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getUuid() {
         return this.Uuid;
@@ -78,9 +70,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Uuid
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Uuid Uuid
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setUuid(String Uuid) {
         this.Uuid = Uuid;

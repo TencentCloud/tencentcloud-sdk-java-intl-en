@@ -32,7 +32,6 @@ public class DescribeVulDefencePluginStatusResponse extends AbstractModel {
 
     /**
     * List of host vulnerability defense plugin information
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("List")
     @Expose
@@ -62,10 +61,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get List of host vulnerability defense plugin information
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get List of host vulnerability defense plugin information 
      * @return List List of host vulnerability defense plugin information
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public VulDefencePluginStatus [] getList() {
         return this.List;
@@ -73,9 +70,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set List of host vulnerability defense plugin information
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param List List of host vulnerability defense plugin information
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setList(VulDefencePluginStatus [] List) {
         this.List = List;

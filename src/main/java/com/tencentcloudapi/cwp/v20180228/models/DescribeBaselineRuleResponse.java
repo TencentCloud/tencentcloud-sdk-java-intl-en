@@ -32,14 +32,13 @@ public class DescribeBaselineRuleResponse extends AbstractModel {
 
     /**
     * Baseline check item list
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("BaselineRuleList")
     @Expose
     private BaselineRuleInfo [] BaselineRuleList;
 
     /**
-    * Whether to display the description column. True: yes; false: no.Note: This field may return null, indicating that no valid values can be obtained.
+    * Whether to display the description column: true-yes, false-no
     */
     @SerializedName("ShowRuleRemark")
     @Expose
@@ -69,10 +68,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Baseline check item list
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Baseline check item list 
      * @return BaselineRuleList Baseline check item list
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public BaselineRuleInfo [] getBaselineRuleList() {
         return this.BaselineRuleList;
@@ -80,25 +77,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Baseline check item list
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param BaselineRuleList Baseline check item list
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setBaselineRuleList(BaselineRuleInfo [] BaselineRuleList) {
         this.BaselineRuleList = BaselineRuleList;
     }
 
     /**
-     * Get Whether to display the description column. True: yes; false: no.Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ShowRuleRemark Whether to display the description column. True: yes; false: no.Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Whether to display the description column: true-yes, false-no 
+     * @return ShowRuleRemark Whether to display the description column: true-yes, false-no
      */
     public Boolean getShowRuleRemark() {
         return this.ShowRuleRemark;
     }
 
     /**
-     * Set Whether to display the description column. True: yes; false: no.Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ShowRuleRemark Whether to display the description column. True: yes; false: no.Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Whether to display the description column: true-yes, false-no
+     * @param ShowRuleRemark Whether to display the description column: true-yes, false-no
      */
     public void setShowRuleRemark(Boolean ShowRuleRemark) {
         this.ShowRuleRemark = ShowRuleRemark;

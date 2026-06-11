@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class CreateRefreshTaskRequest extends AbstractModel {
 
     /**
-    * Specify the cluster list. If empty, it indicates synchronization of all clusters.
+    * 
     */
     @SerializedName("ClusterIDs")
     @Expose
     private String [] ClusterIDs;
 
     /**
-    * Whether to synchronize only the list
+    * 
     */
     @SerializedName("IsSyncListOnly")
     @Expose
     private Boolean IsSyncListOnly;
 
     /**
-     * Get Specify the cluster list. If empty, it indicates synchronization of all clusters. 
-     * @return ClusterIDs Specify the cluster list. If empty, it indicates synchronization of all clusters.
+     * Get  
+     * @return ClusterIDs 
      */
     public String [] getClusterIDs() {
         return this.ClusterIDs;
     }
 
     /**
-     * Set Specify the cluster list. If empty, it indicates synchronization of all clusters.
-     * @param ClusterIDs Specify the cluster list. If empty, it indicates synchronization of all clusters.
+     * Set 
+     * @param ClusterIDs 
      */
     public void setClusterIDs(String [] ClusterIDs) {
         this.ClusterIDs = ClusterIDs;
     }
 
     /**
-     * Get Whether to synchronize only the list 
-     * @return IsSyncListOnly Whether to synchronize only the list
+     * Get  
+     * @return IsSyncListOnly 
      */
     public Boolean getIsSyncListOnly() {
         return this.IsSyncListOnly;
     }
 
     /**
-     * Set Whether to synchronize only the list
-     * @param IsSyncListOnly Whether to synchronize only the list
+     * Set 
+     * @param IsSyncListOnly 
      */
     public void setIsSyncListOnly(Boolean IsSyncListOnly) {
         this.IsSyncListOnly = IsSyncListOnly;

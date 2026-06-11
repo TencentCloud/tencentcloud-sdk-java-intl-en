@@ -25,7 +25,6 @@ public class DescribeJavaMemShellListResponse extends AbstractModel {
 
     /**
     * Event list
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("List")
     @Expose
@@ -46,10 +45,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Event list
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Event list 
      * @return List Event list
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public JavaMemShellInfo [] getList() {
         return this.List;
@@ -57,9 +54,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Event list
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param List Event list
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setList(JavaMemShellInfo [] List) {
         this.List = List;

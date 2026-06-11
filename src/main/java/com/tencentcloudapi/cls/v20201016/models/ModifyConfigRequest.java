@@ -32,6 +32,8 @@ public class ModifyConfigRequest extends AbstractModel {
 
     /**
     * Collection rule configuration name
+- Cannot contain special character '|'
+-Length cannot exceed 255 characters. Excess will be truncated.
     */
     @SerializedName("Name")
     @Expose
@@ -67,7 +69,8 @@ public class ModifyConfigRequest extends AbstractModel {
     private ExcludePathInfo [] ExcludePaths;
 
     /**
-    * Log topic (TopicId) associated with collection configuration
+    * Log topic associated with collection configuration (TopicId)
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
     */
     @SerializedName("Output")
     @Expose
@@ -92,6 +95,16 @@ Sample:
     private String AdvancedConfig;
 
     /**
+    * Log input type (<span style="color:red; font-weight:bold">Note: required for Windows scenario and only supports file and windows_event type</span>)
+-file type collection
+-windows event collection
+-syslog: System log collection
+    */
+    @SerializedName("InputType")
+    @Expose
+    private String InputType;
+
+    /**
      * Get Collection rule configuration ID, accessed through [Access collection rule configuration](https://intl.cloud.tencent.com/document/product/614/58616?from_cn_redirect=1). 
      * @return ConfigId Collection rule configuration ID, accessed through [Access collection rule configuration](https://intl.cloud.tencent.com/document/product/614/58616?from_cn_redirect=1).
      */
@@ -108,8 +121,12 @@ Sample:
     }
 
     /**
-     * Get Collection rule configuration name 
+     * Get Collection rule configuration name
+- Cannot contain special character '|'
+-Length cannot exceed 255 characters. Excess will be truncated. 
      * @return Name Collection rule configuration name
+- Cannot contain special character '|'
+-Length cannot exceed 255 characters. Excess will be truncated.
      */
     public String getName() {
         return this.Name;
@@ -117,7 +134,11 @@ Sample:
 
     /**
      * Set Collection rule configuration name
+- Cannot contain special character '|'
+-Length cannot exceed 255 characters. Excess will be truncated.
      * @param Name Collection rule configuration name
+- Cannot contain special character '|'
+-Length cannot exceed 255 characters. Excess will be truncated.
      */
     public void setName(String Name) {
         this.Name = Name;
@@ -192,16 +213,20 @@ Sample:
     }
 
     /**
-     * Get Log topic (TopicId) associated with collection configuration 
-     * @return Output Log topic (TopicId) associated with collection configuration
+     * Get Log topic associated with collection configuration (TopicId)
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1). 
+     * @return Output Log topic associated with collection configuration (TopicId)
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
      */
     public String getOutput() {
         return this.Output;
     }
 
     /**
-     * Set Log topic (TopicId) associated with collection configuration
-     * @param Output Log topic (TopicId) associated with collection configuration
+     * Set Log topic associated with collection configuration (TopicId)
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
+     * @param Output Log topic associated with collection configuration (TopicId)
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
      */
     public void setOutput(String Output) {
         this.Output = Output;
@@ -255,6 +280,34 @@ Sample:
         this.AdvancedConfig = AdvancedConfig;
     }
 
+    /**
+     * Get Log input type (<span style="color:red; font-weight:bold">Note: required for Windows scenario and only supports file and windows_event type</span>)
+-file type collection
+-windows event collection
+-syslog: System log collection 
+     * @return InputType Log input type (<span style="color:red; font-weight:bold">Note: required for Windows scenario and only supports file and windows_event type</span>)
+-file type collection
+-windows event collection
+-syslog: System log collection
+     */
+    public String getInputType() {
+        return this.InputType;
+    }
+
+    /**
+     * Set Log input type (<span style="color:red; font-weight:bold">Note: required for Windows scenario and only supports file and windows_event type</span>)
+-file type collection
+-windows event collection
+-syslog: System log collection
+     * @param InputType Log input type (<span style="color:red; font-weight:bold">Note: required for Windows scenario and only supports file and windows_event type</span>)
+-file type collection
+-windows event collection
+-syslog: System log collection
+     */
+    public void setInputType(String InputType) {
+        this.InputType = InputType;
+    }
+
     public ModifyConfigRequest() {
     }
 
@@ -293,6 +346,9 @@ Sample:
         if (source.AdvancedConfig != null) {
             this.AdvancedConfig = new String(source.AdvancedConfig);
         }
+        if (source.InputType != null) {
+            this.InputType = new String(source.InputType);
+        }
     }
 
 
@@ -309,6 +365,7 @@ Sample:
         this.setParamSimple(map, prefix + "Output", this.Output);
         this.setParamSimple(map, prefix + "UserDefineRule", this.UserDefineRule);
         this.setParamSimple(map, prefix + "AdvancedConfig", this.AdvancedConfig);
+        this.setParamSimple(map, prefix + "InputType", this.InputType);
 
     }
 }

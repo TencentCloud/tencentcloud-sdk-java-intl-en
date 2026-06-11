@@ -24,26 +24,49 @@ import java.util.HashMap;
 public class AigcVideoTaskOutput extends AbstractModel {
 
     /**
-    * Output file information of the AIGC video task.	
+    * <p>Output file info of the AIGC video task.</p>
     */
     @SerializedName("FileInfos")
     @Expose
     private AigcVideoTaskOutputFileInfo [] FileInfos;
 
     /**
-     * Get Output file information of the AIGC video task.	 
-     * @return FileInfos Output file information of the AIGC video task.	
+    * <p>The task ID of the task type Procedure. If a task flow template (Procedure) is specified when initiating <a href="https://www.tencentcloud.com/document/product/266/126239?from_cn_redirect=1">AIGC video task creation</a>, the task is initiated when the task flow template specifies one or more of MediaProcessTask, AiAnalysisTask, or AiRecognitionTask.</p>
+    */
+    @SerializedName("ProcedureTaskIds")
+    @Expose
+    private String [] ProcedureTaskIds;
+
+    /**
+     * Get <p>Output file info of the AIGC video task.</p> 
+     * @return FileInfos <p>Output file info of the AIGC video task.</p>
      */
     public AigcVideoTaskOutputFileInfo [] getFileInfos() {
         return this.FileInfos;
     }
 
     /**
-     * Set Output file information of the AIGC video task.	
-     * @param FileInfos Output file information of the AIGC video task.	
+     * Set <p>Output file info of the AIGC video task.</p>
+     * @param FileInfos <p>Output file info of the AIGC video task.</p>
      */
     public void setFileInfos(AigcVideoTaskOutputFileInfo [] FileInfos) {
         this.FileInfos = FileInfos;
+    }
+
+    /**
+     * Get <p>The task ID of the task type Procedure. If a task flow template (Procedure) is specified when initiating <a href="https://www.tencentcloud.com/document/product/266/126239?from_cn_redirect=1">AIGC video task creation</a>, the task is initiated when the task flow template specifies one or more of MediaProcessTask, AiAnalysisTask, or AiRecognitionTask.</p> 
+     * @return ProcedureTaskIds <p>The task ID of the task type Procedure. If a task flow template (Procedure) is specified when initiating <a href="https://www.tencentcloud.com/document/product/266/126239?from_cn_redirect=1">AIGC video task creation</a>, the task is initiated when the task flow template specifies one or more of MediaProcessTask, AiAnalysisTask, or AiRecognitionTask.</p>
+     */
+    public String [] getProcedureTaskIds() {
+        return this.ProcedureTaskIds;
+    }
+
+    /**
+     * Set <p>The task ID of the task type Procedure. If a task flow template (Procedure) is specified when initiating <a href="https://www.tencentcloud.com/document/product/266/126239?from_cn_redirect=1">AIGC video task creation</a>, the task is initiated when the task flow template specifies one or more of MediaProcessTask, AiAnalysisTask, or AiRecognitionTask.</p>
+     * @param ProcedureTaskIds <p>The task ID of the task type Procedure. If a task flow template (Procedure) is specified when initiating <a href="https://www.tencentcloud.com/document/product/266/126239?from_cn_redirect=1">AIGC video task creation</a>, the task is initiated when the task flow template specifies one or more of MediaProcessTask, AiAnalysisTask, or AiRecognitionTask.</p>
+     */
+    public void setProcedureTaskIds(String [] ProcedureTaskIds) {
+        this.ProcedureTaskIds = ProcedureTaskIds;
     }
 
     public AigcVideoTaskOutput() {
@@ -60,6 +83,12 @@ public class AigcVideoTaskOutput extends AbstractModel {
                 this.FileInfos[i] = new AigcVideoTaskOutputFileInfo(source.FileInfos[i]);
             }
         }
+        if (source.ProcedureTaskIds != null) {
+            this.ProcedureTaskIds = new String[source.ProcedureTaskIds.length];
+            for (int i = 0; i < source.ProcedureTaskIds.length; i++) {
+                this.ProcedureTaskIds[i] = new String(source.ProcedureTaskIds[i]);
+            }
+        }
     }
 
 
@@ -68,6 +97,7 @@ public class AigcVideoTaskOutput extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "FileInfos.", this.FileInfos);
+        this.setParamArraySimple(map, prefix + "ProcedureTaskIds.", this.ProcedureTaskIds);
 
     }
 }

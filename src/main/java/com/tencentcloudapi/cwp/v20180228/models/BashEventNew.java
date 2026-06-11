@@ -115,16 +115,14 @@ public class BashEventNew extends AbstractModel {
     private String MachineName;
 
     /**
-    * 0: bash log; 1: real-time monitoring (Leiting edition)
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 0: bash log; 1: real-time monitoring (Thunder Edition)
     */
     @SerializedName("DetectBy")
     @Expose
     private Long DetectBy;
 
     /**
-    * Process ID
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Process id
     */
     @SerializedName("Pid")
     @Expose
@@ -132,7 +130,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Process name
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Exe")
     @Expose
@@ -140,7 +137,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Processing time
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ModifyTime")
     @Expose
@@ -148,23 +144,27 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Rule category. 0: system rule; 1: user rule
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("RuleCategory")
     @Expose
     private Long RuleCategory;
 
     /**
-    * Automatically generated regular expression
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Escaped regular expression.
     */
     @SerializedName("RegexBashCmd")
     @Expose
     private String RegexBashCmd;
 
     /**
-    * 0: normal; 1: Professional edition; 2: Ultimate edition
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Escaped regular expression.
+    */
+    @SerializedName("RegexExe")
+    @Expose
+    private String RegexExe;
+
+    /**
+    * 0: Normal; 1: Pro edition; 2: Flagship edition
     */
     @SerializedName("MachineType")
     @Expose
@@ -172,7 +172,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Additional Information on Machine
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("MachineExtraInfo")
     @Expose
@@ -387,50 +386,40 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get 0: bash log; 1: real-time monitoring (Leiting edition)
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return DetectBy 0: bash log; 1: real-time monitoring (Leiting edition)
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get 0: bash log; 1: real-time monitoring (Thunder Edition) 
+     * @return DetectBy 0: bash log; 1: real-time monitoring (Thunder Edition)
      */
     public Long getDetectBy() {
         return this.DetectBy;
     }
 
     /**
-     * Set 0: bash log; 1: real-time monitoring (Leiting edition)
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param DetectBy 0: bash log; 1: real-time monitoring (Leiting edition)
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 0: bash log; 1: real-time monitoring (Thunder Edition)
+     * @param DetectBy 0: bash log; 1: real-time monitoring (Thunder Edition)
      */
     public void setDetectBy(Long DetectBy) {
         this.DetectBy = DetectBy;
     }
 
     /**
-     * Get Process ID
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Pid Process ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Process id 
+     * @return Pid Process id
      */
     public String getPid() {
         return this.Pid;
     }
 
     /**
-     * Set Process ID
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Pid Process ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Process id
+     * @param Pid Process id
      */
     public void setPid(String Pid) {
         this.Pid = Pid;
     }
 
     /**
-     * Get Process name
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Process name 
      * @return Exe Process name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getExe() {
         return this.Exe;
@@ -438,19 +427,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Process name
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Exe Process name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setExe(String Exe) {
         this.Exe = Exe;
     }
 
     /**
-     * Get Processing time
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Processing time 
      * @return ModifyTime Processing time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getModifyTime() {
         return this.ModifyTime;
@@ -458,19 +443,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Processing time
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param ModifyTime Processing time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setModifyTime(String ModifyTime) {
         this.ModifyTime = ModifyTime;
     }
 
     /**
-     * Get Rule category. 0: system rule; 1: user rule
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Rule category. 0: system rule; 1: user rule 
      * @return RuleCategory Rule category. 0: system rule; 1: user rule
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getRuleCategory() {
         return this.RuleCategory;
@@ -478,59 +459,63 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Rule category. 0: system rule; 1: user rule
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param RuleCategory Rule category. 0: system rule; 1: user rule
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setRuleCategory(Long RuleCategory) {
         this.RuleCategory = RuleCategory;
     }
 
     /**
-     * Get Automatically generated regular expression
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return RegexBashCmd Automatically generated regular expression
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Escaped regular expression. 
+     * @return RegexBashCmd Escaped regular expression.
      */
     public String getRegexBashCmd() {
         return this.RegexBashCmd;
     }
 
     /**
-     * Set Automatically generated regular expression
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param RegexBashCmd Automatically generated regular expression
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Escaped regular expression.
+     * @param RegexBashCmd Escaped regular expression.
      */
     public void setRegexBashCmd(String RegexBashCmd) {
         this.RegexBashCmd = RegexBashCmd;
     }
 
     /**
-     * Get 0: normal; 1: Professional edition; 2: Ultimate edition
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return MachineType 0: normal; 1: Professional edition; 2: Ultimate edition
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Escaped regular expression. 
+     * @return RegexExe Escaped regular expression.
+     */
+    public String getRegexExe() {
+        return this.RegexExe;
+    }
+
+    /**
+     * Set Escaped regular expression.
+     * @param RegexExe Escaped regular expression.
+     */
+    public void setRegexExe(String RegexExe) {
+        this.RegexExe = RegexExe;
+    }
+
+    /**
+     * Get 0: Normal; 1: Pro edition; 2: Flagship edition 
+     * @return MachineType 0: Normal; 1: Pro edition; 2: Flagship edition
      */
     public Long getMachineType() {
         return this.MachineType;
     }
 
     /**
-     * Set 0: normal; 1: Professional edition; 2: Ultimate edition
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param MachineType 0: normal; 1: Professional edition; 2: Ultimate edition
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 0: Normal; 1: Pro edition; 2: Flagship edition
+     * @param MachineType 0: Normal; 1: Pro edition; 2: Flagship edition
      */
     public void setMachineType(Long MachineType) {
         this.MachineType = MachineType;
     }
 
     /**
-     * Get Additional Information on Machine
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Additional Information on Machine 
      * @return MachineExtraInfo Additional Information on Machine
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public MachineExtraInfo getMachineExtraInfo() {
         return this.MachineExtraInfo;
@@ -538,9 +523,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Additional Information on Machine
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param MachineExtraInfo Additional Information on Machine
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setMachineExtraInfo(MachineExtraInfo MachineExtraInfo) {
         this.MachineExtraInfo = MachineExtraInfo;
@@ -611,6 +594,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.RegexBashCmd != null) {
             this.RegexBashCmd = new String(source.RegexBashCmd);
         }
+        if (source.RegexExe != null) {
+            this.RegexExe = new String(source.RegexExe);
+        }
         if (source.MachineType != null) {
             this.MachineType = new Long(source.MachineType);
         }
@@ -643,6 +629,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "ModifyTime", this.ModifyTime);
         this.setParamSimple(map, prefix + "RuleCategory", this.RuleCategory);
         this.setParamSimple(map, prefix + "RegexBashCmd", this.RegexBashCmd);
+        this.setParamSimple(map, prefix + "RegexExe", this.RegexExe);
         this.setParamSimple(map, prefix + "MachineType", this.MachineType);
         this.setParamObj(map, prefix + "MachineExtraInfo.", this.MachineExtraInfo);
 

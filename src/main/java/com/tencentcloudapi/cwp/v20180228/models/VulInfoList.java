@@ -80,8 +80,7 @@ public class VulInfoList extends AbstractModel {
     private Long Level;
 
     /**
-    * This field has been deprecated.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Obsolete
     */
     @SerializedName("From")
     @Expose
@@ -89,31 +88,27 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Description
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Descript")
     @Expose
     private String Descript;
 
     /**
-    * This field has been deprecated.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Obsolete
     */
     @SerializedName("PublishTimeWisteria")
     @Expose
     private String PublishTimeWisteria;
 
     /**
-    * This field has been deprecated.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Obsolete
     */
     @SerializedName("NameWisteria")
     @Expose
     private String NameWisteria;
 
     /**
-    * This field has been deprecated.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Obsolete
     */
     @SerializedName("DescriptWisteria")
     @Expose
@@ -121,7 +116,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Event status after aggregation
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("StatusStr")
     @Expose
@@ -129,7 +123,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * CVE ID
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("CveId")
     @Expose
@@ -137,87 +130,116 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * CVSS score
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("CvssScore")
     @Expose
     private Float CvssScore;
 
     /**
-    * Vulnerability tags, separated by multiple commas
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Vulnerability Tags, Separated by Multiple Commas
+
+EXP exists
+Wild Attacks: KNOWN_EXPLOITED
+LOCAL: Local use
+Mandatory vulnerabilities: NEED_FIX
+RemoteExploit:NETWORK
+POC exists: POC
+System RESTART
     */
     @SerializedName("Labels")
     @Expose
     private String Labels;
 
     /**
-    * Whether automatic fixing is supported and hosts that support automatic fixing are included. 0: no; 1: yes.Note: This field may return null, indicating that no valid values can be obtained.
+    * Whether automatic fixing is supported and hosts that support automatic fixing, 0=No 1=Yes
     */
     @SerializedName("FixSwitch")
     @Expose
     private Long FixSwitch;
 
     /**
-    * ID of the last scan task
-Note: This field may return null, indicating that no valid values can be obtained.
+    * id of the last scan task
     */
     @SerializedName("TaskId")
     @Expose
     private Long TaskId;
 
     /**
-    * Whether defense is supported. 0: not supported; 1: supported.Note: This field may return null, indicating that no valid values can be obtained.
+    * Support defense, 0: no support 1: support
     */
     @SerializedName("IsSupportDefense")
     @Expose
     private Long IsSupportDefense;
 
     /**
-    * Number of attacks defended
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Number of Attacks Defended
     */
     @SerializedName("DefenseAttackCount")
     @Expose
     private Long DefenseAttackCount;
 
     /**
-    * First occurrence time
-Note: This field may return null, indicating that no valid values can be obtained.
+    * first occurrence time
     */
     @SerializedName("FirstAppearTime")
     @Expose
     private String FirstAppearTime;
 
     /**
-    * Vulnerability category. 1: web CMS vulnerability; 2: application vulnerability; 4: Linux software vulnerability; 5: Windows system vulnerability.Note: This field may return null, indicating that no valid values can be obtained.
+    * Vulnerability Category 1: web-cms Vulnerability 2: Application Vulnerability 4: Linux Software Vulnerability 5: Windows System Vulnerability
     */
     @SerializedName("VulCategory")
     @Expose
     private Long VulCategory;
 
     /**
-    * Attack intensity
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Attack intensity level.
     */
     @SerializedName("AttackLevel")
     @Expose
     private Long AttackLevel;
 
     /**
-    * Whether a restart is required after the vulnerability is fixed
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Whether a restart is required after vulnerability repair.
     */
     @SerializedName("FixNoNeedRestart")
     @Expose
     private Boolean FixNoNeedRestart;
 
     /**
-    * Detection method. 0: version comparison; 1: POC verification.Note: This field may return null, indicating that no valid values can be obtained.
+    * Detection method. 0: version comparison, 1: POC verification.
     */
     @SerializedName("Method")
     @Expose
     private Long Method;
+
+    /**
+    * Whether vulnerability fixing is supported. 0: not supported; 1: supported.
+    */
+    @SerializedName("VulFixSwitch")
+    @Expose
+    private Long VulFixSwitch;
+
+    /**
+    * Latest remediation time
+    */
+    @SerializedName("LatestFixTime")
+    @Expose
+    private String LatestFixTime;
+
+    /**
+    * Number of application protection activations for machines with vulnerability correspondence
+    */
+    @SerializedName("RaspOpenNodeCount")
+    @Expose
+    private Long RaspOpenNodeCount;
+
+    /**
+    * Number of application protection deactivations for machines with vulnerability correspondence
+    */
+    @SerializedName("RaspClosedNodeCount")
+    @Expose
+    private Long RaspClosedNodeCount;
 
     /**
      * Get IDs of events corresponding to a vulnerability, separated by commas (,) 
@@ -348,30 +370,24 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get This field has been deprecated.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return From This field has been deprecated.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Obsolete 
+     * @return From Obsolete
      */
     public Long getFrom() {
         return this.From;
     }
 
     /**
-     * Set This field has been deprecated.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param From This field has been deprecated.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Obsolete
+     * @param From Obsolete
      */
     public void setFrom(Long From) {
         this.From = From;
     }
 
     /**
-     * Get Description
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Description 
      * @return Descript Description
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getDescript() {
         return this.Descript;
@@ -379,79 +395,63 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Description
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Descript Description
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setDescript(String Descript) {
         this.Descript = Descript;
     }
 
     /**
-     * Get This field has been deprecated.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return PublishTimeWisteria This field has been deprecated.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Obsolete 
+     * @return PublishTimeWisteria Obsolete
      */
     public String getPublishTimeWisteria() {
         return this.PublishTimeWisteria;
     }
 
     /**
-     * Set This field has been deprecated.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param PublishTimeWisteria This field has been deprecated.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Obsolete
+     * @param PublishTimeWisteria Obsolete
      */
     public void setPublishTimeWisteria(String PublishTimeWisteria) {
         this.PublishTimeWisteria = PublishTimeWisteria;
     }
 
     /**
-     * Get This field has been deprecated.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return NameWisteria This field has been deprecated.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Obsolete 
+     * @return NameWisteria Obsolete
      */
     public String getNameWisteria() {
         return this.NameWisteria;
     }
 
     /**
-     * Set This field has been deprecated.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param NameWisteria This field has been deprecated.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Obsolete
+     * @param NameWisteria Obsolete
      */
     public void setNameWisteria(String NameWisteria) {
         this.NameWisteria = NameWisteria;
     }
 
     /**
-     * Get This field has been deprecated.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return DescriptWisteria This field has been deprecated.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Obsolete 
+     * @return DescriptWisteria Obsolete
      */
     public String getDescriptWisteria() {
         return this.DescriptWisteria;
     }
 
     /**
-     * Set This field has been deprecated.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param DescriptWisteria This field has been deprecated.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Obsolete
+     * @param DescriptWisteria Obsolete
      */
     public void setDescriptWisteria(String DescriptWisteria) {
         this.DescriptWisteria = DescriptWisteria;
     }
 
     /**
-     * Get Event status after aggregation
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Event status after aggregation 
      * @return StatusStr Event status after aggregation
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getStatusStr() {
         return this.StatusStr;
@@ -459,19 +459,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Event status after aggregation
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param StatusStr Event status after aggregation
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setStatusStr(String StatusStr) {
         this.StatusStr = StatusStr;
     }
 
     /**
-     * Get CVE ID
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get CVE ID 
      * @return CveId CVE ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getCveId() {
         return this.CveId;
@@ -479,19 +475,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set CVE ID
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param CveId CVE ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setCveId(String CveId) {
         this.CveId = CveId;
     }
 
     /**
-     * Get CVSS score
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get CVSS score 
      * @return CvssScore CVSS score
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Float getCvssScore() {
         return this.CvssScore;
@@ -499,196 +491,266 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set CVSS score
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param CvssScore CVSS score
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setCvssScore(Float CvssScore) {
         this.CvssScore = CvssScore;
     }
 
     /**
-     * Get Vulnerability tags, separated by multiple commas
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Labels Vulnerability tags, separated by multiple commas
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Vulnerability Tags, Separated by Multiple Commas
+
+EXP exists
+Wild Attacks: KNOWN_EXPLOITED
+LOCAL: Local use
+Mandatory vulnerabilities: NEED_FIX
+RemoteExploit:NETWORK
+POC exists: POC
+System RESTART 
+     * @return Labels Vulnerability Tags, Separated by Multiple Commas
+
+EXP exists
+Wild Attacks: KNOWN_EXPLOITED
+LOCAL: Local use
+Mandatory vulnerabilities: NEED_FIX
+RemoteExploit:NETWORK
+POC exists: POC
+System RESTART
      */
     public String getLabels() {
         return this.Labels;
     }
 
     /**
-     * Set Vulnerability tags, separated by multiple commas
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Labels Vulnerability tags, separated by multiple commas
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Vulnerability Tags, Separated by Multiple Commas
+
+EXP exists
+Wild Attacks: KNOWN_EXPLOITED
+LOCAL: Local use
+Mandatory vulnerabilities: NEED_FIX
+RemoteExploit:NETWORK
+POC exists: POC
+System RESTART
+     * @param Labels Vulnerability Tags, Separated by Multiple Commas
+
+EXP exists
+Wild Attacks: KNOWN_EXPLOITED
+LOCAL: Local use
+Mandatory vulnerabilities: NEED_FIX
+RemoteExploit:NETWORK
+POC exists: POC
+System RESTART
      */
     public void setLabels(String Labels) {
         this.Labels = Labels;
     }
 
     /**
-     * Get Whether automatic fixing is supported and hosts that support automatic fixing are included. 0: no; 1: yes.Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return FixSwitch Whether automatic fixing is supported and hosts that support automatic fixing are included. 0: no; 1: yes.Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Whether automatic fixing is supported and hosts that support automatic fixing, 0=No 1=Yes 
+     * @return FixSwitch Whether automatic fixing is supported and hosts that support automatic fixing, 0=No 1=Yes
      */
     public Long getFixSwitch() {
         return this.FixSwitch;
     }
 
     /**
-     * Set Whether automatic fixing is supported and hosts that support automatic fixing are included. 0: no; 1: yes.Note: This field may return null, indicating that no valid values can be obtained.
-     * @param FixSwitch Whether automatic fixing is supported and hosts that support automatic fixing are included. 0: no; 1: yes.Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Whether automatic fixing is supported and hosts that support automatic fixing, 0=No 1=Yes
+     * @param FixSwitch Whether automatic fixing is supported and hosts that support automatic fixing, 0=No 1=Yes
      */
     public void setFixSwitch(Long FixSwitch) {
         this.FixSwitch = FixSwitch;
     }
 
     /**
-     * Get ID of the last scan task
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return TaskId ID of the last scan task
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get id of the last scan task 
+     * @return TaskId id of the last scan task
      */
     public Long getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set ID of the last scan task
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param TaskId ID of the last scan task
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set id of the last scan task
+     * @param TaskId id of the last scan task
      */
     public void setTaskId(Long TaskId) {
         this.TaskId = TaskId;
     }
 
     /**
-     * Get Whether defense is supported. 0: not supported; 1: supported.Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return IsSupportDefense Whether defense is supported. 0: not supported; 1: supported.Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Support defense, 0: no support 1: support 
+     * @return IsSupportDefense Support defense, 0: no support 1: support
      */
     public Long getIsSupportDefense() {
         return this.IsSupportDefense;
     }
 
     /**
-     * Set Whether defense is supported. 0: not supported; 1: supported.Note: This field may return null, indicating that no valid values can be obtained.
-     * @param IsSupportDefense Whether defense is supported. 0: not supported; 1: supported.Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Support defense, 0: no support 1: support
+     * @param IsSupportDefense Support defense, 0: no support 1: support
      */
     public void setIsSupportDefense(Long IsSupportDefense) {
         this.IsSupportDefense = IsSupportDefense;
     }
 
     /**
-     * Get Number of attacks defended
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return DefenseAttackCount Number of attacks defended
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Number of Attacks Defended 
+     * @return DefenseAttackCount Number of Attacks Defended
      */
     public Long getDefenseAttackCount() {
         return this.DefenseAttackCount;
     }
 
     /**
-     * Set Number of attacks defended
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param DefenseAttackCount Number of attacks defended
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Number of Attacks Defended
+     * @param DefenseAttackCount Number of Attacks Defended
      */
     public void setDefenseAttackCount(Long DefenseAttackCount) {
         this.DefenseAttackCount = DefenseAttackCount;
     }
 
     /**
-     * Get First occurrence time
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return FirstAppearTime First occurrence time
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get first occurrence time 
+     * @return FirstAppearTime first occurrence time
      */
     public String getFirstAppearTime() {
         return this.FirstAppearTime;
     }
 
     /**
-     * Set First occurrence time
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param FirstAppearTime First occurrence time
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set first occurrence time
+     * @param FirstAppearTime first occurrence time
      */
     public void setFirstAppearTime(String FirstAppearTime) {
         this.FirstAppearTime = FirstAppearTime;
     }
 
     /**
-     * Get Vulnerability category. 1: web CMS vulnerability; 2: application vulnerability; 4: Linux software vulnerability; 5: Windows system vulnerability.Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return VulCategory Vulnerability category. 1: web CMS vulnerability; 2: application vulnerability; 4: Linux software vulnerability; 5: Windows system vulnerability.Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Vulnerability Category 1: web-cms Vulnerability 2: Application Vulnerability 4: Linux Software Vulnerability 5: Windows System Vulnerability 
+     * @return VulCategory Vulnerability Category 1: web-cms Vulnerability 2: Application Vulnerability 4: Linux Software Vulnerability 5: Windows System Vulnerability
      */
     public Long getVulCategory() {
         return this.VulCategory;
     }
 
     /**
-     * Set Vulnerability category. 1: web CMS vulnerability; 2: application vulnerability; 4: Linux software vulnerability; 5: Windows system vulnerability.Note: This field may return null, indicating that no valid values can be obtained.
-     * @param VulCategory Vulnerability category. 1: web CMS vulnerability; 2: application vulnerability; 4: Linux software vulnerability; 5: Windows system vulnerability.Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Vulnerability Category 1: web-cms Vulnerability 2: Application Vulnerability 4: Linux Software Vulnerability 5: Windows System Vulnerability
+     * @param VulCategory Vulnerability Category 1: web-cms Vulnerability 2: Application Vulnerability 4: Linux Software Vulnerability 5: Windows System Vulnerability
      */
     public void setVulCategory(Long VulCategory) {
         this.VulCategory = VulCategory;
     }
 
     /**
-     * Get Attack intensity
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return AttackLevel Attack intensity
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Attack intensity level. 
+     * @return AttackLevel Attack intensity level.
      */
     public Long getAttackLevel() {
         return this.AttackLevel;
     }
 
     /**
-     * Set Attack intensity
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param AttackLevel Attack intensity
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Attack intensity level.
+     * @param AttackLevel Attack intensity level.
      */
     public void setAttackLevel(Long AttackLevel) {
         this.AttackLevel = AttackLevel;
     }
 
     /**
-     * Get Whether a restart is required after the vulnerability is fixed
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return FixNoNeedRestart Whether a restart is required after the vulnerability is fixed
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Whether a restart is required after vulnerability repair. 
+     * @return FixNoNeedRestart Whether a restart is required after vulnerability repair.
      */
     public Boolean getFixNoNeedRestart() {
         return this.FixNoNeedRestart;
     }
 
     /**
-     * Set Whether a restart is required after the vulnerability is fixed
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param FixNoNeedRestart Whether a restart is required after the vulnerability is fixed
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Whether a restart is required after vulnerability repair.
+     * @param FixNoNeedRestart Whether a restart is required after vulnerability repair.
      */
     public void setFixNoNeedRestart(Boolean FixNoNeedRestart) {
         this.FixNoNeedRestart = FixNoNeedRestart;
     }
 
     /**
-     * Get Detection method. 0: version comparison; 1: POC verification.Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Method Detection method. 0: version comparison; 1: POC verification.Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Detection method. 0: version comparison, 1: POC verification. 
+     * @return Method Detection method. 0: version comparison, 1: POC verification.
      */
     public Long getMethod() {
         return this.Method;
     }
 
     /**
-     * Set Detection method. 0: version comparison; 1: POC verification.Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Method Detection method. 0: version comparison; 1: POC verification.Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Detection method. 0: version comparison, 1: POC verification.
+     * @param Method Detection method. 0: version comparison, 1: POC verification.
      */
     public void setMethod(Long Method) {
         this.Method = Method;
+    }
+
+    /**
+     * Get Whether vulnerability fixing is supported. 0: not supported; 1: supported. 
+     * @return VulFixSwitch Whether vulnerability fixing is supported. 0: not supported; 1: supported.
+     */
+    public Long getVulFixSwitch() {
+        return this.VulFixSwitch;
+    }
+
+    /**
+     * Set Whether vulnerability fixing is supported. 0: not supported; 1: supported.
+     * @param VulFixSwitch Whether vulnerability fixing is supported. 0: not supported; 1: supported.
+     */
+    public void setVulFixSwitch(Long VulFixSwitch) {
+        this.VulFixSwitch = VulFixSwitch;
+    }
+
+    /**
+     * Get Latest remediation time 
+     * @return LatestFixTime Latest remediation time
+     */
+    public String getLatestFixTime() {
+        return this.LatestFixTime;
+    }
+
+    /**
+     * Set Latest remediation time
+     * @param LatestFixTime Latest remediation time
+     */
+    public void setLatestFixTime(String LatestFixTime) {
+        this.LatestFixTime = LatestFixTime;
+    }
+
+    /**
+     * Get Number of application protection activations for machines with vulnerability correspondence 
+     * @return RaspOpenNodeCount Number of application protection activations for machines with vulnerability correspondence
+     */
+    public Long getRaspOpenNodeCount() {
+        return this.RaspOpenNodeCount;
+    }
+
+    /**
+     * Set Number of application protection activations for machines with vulnerability correspondence
+     * @param RaspOpenNodeCount Number of application protection activations for machines with vulnerability correspondence
+     */
+    public void setRaspOpenNodeCount(Long RaspOpenNodeCount) {
+        this.RaspOpenNodeCount = RaspOpenNodeCount;
+    }
+
+    /**
+     * Get Number of application protection deactivations for machines with vulnerability correspondence 
+     * @return RaspClosedNodeCount Number of application protection deactivations for machines with vulnerability correspondence
+     */
+    public Long getRaspClosedNodeCount() {
+        return this.RaspClosedNodeCount;
+    }
+
+    /**
+     * Set Number of application protection deactivations for machines with vulnerability correspondence
+     * @param RaspClosedNodeCount Number of application protection deactivations for machines with vulnerability correspondence
+     */
+    public void setRaspClosedNodeCount(Long RaspClosedNodeCount) {
+        this.RaspClosedNodeCount = RaspClosedNodeCount;
     }
 
     public VulInfoList() {
@@ -777,6 +839,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.Method != null) {
             this.Method = new Long(source.Method);
         }
+        if (source.VulFixSwitch != null) {
+            this.VulFixSwitch = new Long(source.VulFixSwitch);
+        }
+        if (source.LatestFixTime != null) {
+            this.LatestFixTime = new String(source.LatestFixTime);
+        }
+        if (source.RaspOpenNodeCount != null) {
+            this.RaspOpenNodeCount = new Long(source.RaspOpenNodeCount);
+        }
+        if (source.RaspClosedNodeCount != null) {
+            this.RaspClosedNodeCount = new Long(source.RaspClosedNodeCount);
+        }
     }
 
 
@@ -810,6 +884,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "AttackLevel", this.AttackLevel);
         this.setParamSimple(map, prefix + "FixNoNeedRestart", this.FixNoNeedRestart);
         this.setParamSimple(map, prefix + "Method", this.Method);
+        this.setParamSimple(map, prefix + "VulFixSwitch", this.VulFixSwitch);
+        this.setParamSimple(map, prefix + "LatestFixTime", this.LatestFixTime);
+        this.setParamSimple(map, prefix + "RaspOpenNodeCount", this.RaspOpenNodeCount);
+        this.setParamSimple(map, prefix + "RaspClosedNodeCount", this.RaspClosedNodeCount);
 
     }
 }

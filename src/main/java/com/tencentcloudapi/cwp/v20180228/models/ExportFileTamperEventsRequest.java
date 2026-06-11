@@ -48,6 +48,13 @@ public class ExportFileTamperEventsRequest extends AbstractModel {
     private String Fields;
 
     /**
+    * Fields to be exported
+    */
+    @SerializedName("Where")
+    @Expose
+    private String [] Where;
+
+    /**
      * Get Filtering criteria
 <li>Status - String - required: no - processing status: 0: pending; 1: added to allowlist; 2: deleted; 3: ignored</li><li>ModifyTime - string - required: no - last occurrence time</li>
 <li>Uuid - String - required: no - host UUID for querying</li>
@@ -98,7 +105,9 @@ public class ExportFileTamperEventsRequest extends AbstractModel {
     /**
      * Get Fields to be exported 
      * @return Fields Fields to be exported
+     * @deprecated
      */
+    @Deprecated
     public String getFields() {
         return this.Fields;
     }
@@ -106,9 +115,27 @@ public class ExportFileTamperEventsRequest extends AbstractModel {
     /**
      * Set Fields to be exported
      * @param Fields Fields to be exported
+     * @deprecated
      */
+    @Deprecated
     public void setFields(String Fields) {
         this.Fields = Fields;
+    }
+
+    /**
+     * Get Fields to be exported 
+     * @return Where Fields to be exported
+     */
+    public String [] getWhere() {
+        return this.Where;
+    }
+
+    /**
+     * Set Fields to be exported
+     * @param Where Fields to be exported
+     */
+    public void setWhere(String [] Where) {
+        this.Where = Where;
     }
 
     public ExportFileTamperEventsRequest() {
@@ -134,6 +161,12 @@ public class ExportFileTamperEventsRequest extends AbstractModel {
         if (source.Fields != null) {
             this.Fields = new String(source.Fields);
         }
+        if (source.Where != null) {
+            this.Where = new String[source.Where.length];
+            for (int i = 0; i < source.Where.length; i++) {
+                this.Where[i] = new String(source.Where[i]);
+            }
+        }
     }
 
 
@@ -144,6 +177,7 @@ public class ExportFileTamperEventsRequest extends AbstractModel {
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
         this.setParamArraySimple(map, prefix + "Fileds.", this.Fileds);
         this.setParamSimple(map, prefix + "Fields", this.Fields);
+        this.setParamArraySimple(map, prefix + "Where.", this.Where);
 
     }
 }

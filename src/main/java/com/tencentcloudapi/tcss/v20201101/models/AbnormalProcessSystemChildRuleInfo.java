@@ -24,18 +24,18 @@ import java.util.HashMap;
 public class AbnormalProcessSystemChildRuleInfo extends AbstractModel {
 
     /**
-    * Sub-policy ID
-    */
-    @SerializedName("RuleId")
-    @Expose
-    private String RuleId;
-
-    /**
     * Sub-policy status. Valid values: `true` (enabled); `false` (disabled).
     */
     @SerializedName("IsEnable")
     @Expose
     private Boolean IsEnable;
+
+    /**
+    * Sub-policy ID
+    */
+    @SerializedName("RuleId")
+    @Expose
+    private String RuleId;
 
     /**
     * Policy mode. `RULE_MODE_RELEASE`: Allow.
@@ -61,28 +61,11 @@ public class AbnormalProcessSystemChildRuleInfo extends AbstractModel {
     private String RuleType;
 
     /**
-    * Severity. Valid values: `HIGH` (high); `MIDDLE` (medium); `LOW` (low).
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Threat Level. HIGH: High; MIDDLE: Medium; LOW: Low
     */
     @SerializedName("RuleLevel")
     @Expose
     private String RuleLevel;
-
-    /**
-     * Get Sub-policy ID 
-     * @return RuleId Sub-policy ID
-     */
-    public String getRuleId() {
-        return this.RuleId;
-    }
-
-    /**
-     * Set Sub-policy ID
-     * @param RuleId Sub-policy ID
-     */
-    public void setRuleId(String RuleId) {
-        this.RuleId = RuleId;
-    }
 
     /**
      * Get Sub-policy status. Valid values: `true` (enabled); `false` (disabled). 
@@ -98,6 +81,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
      */
     public void setIsEnable(Boolean IsEnable) {
         this.IsEnable = IsEnable;
+    }
+
+    /**
+     * Get Sub-policy ID 
+     * @return RuleId Sub-policy ID
+     */
+    public String getRuleId() {
+        return this.RuleId;
+    }
+
+    /**
+     * Set Sub-policy ID
+     * @param RuleId Sub-policy ID
+     */
+    public void setRuleId(String RuleId) {
+        this.RuleId = RuleId;
     }
 
     /**
@@ -169,20 +168,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Severity. Valid values: `HIGH` (high); `MIDDLE` (medium); `LOW` (low).
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return RuleLevel Severity. Valid values: `HIGH` (high); `MIDDLE` (medium); `LOW` (low).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Threat Level. HIGH: High; MIDDLE: Medium; LOW: Low 
+     * @return RuleLevel Threat Level. HIGH: High; MIDDLE: Medium; LOW: Low
      */
     public String getRuleLevel() {
         return this.RuleLevel;
     }
 
     /**
-     * Set Severity. Valid values: `HIGH` (high); `MIDDLE` (medium); `LOW` (low).
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param RuleLevel Severity. Valid values: `HIGH` (high); `MIDDLE` (medium); `LOW` (low).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Threat Level. HIGH: High; MIDDLE: Medium; LOW: Low
+     * @param RuleLevel Threat Level. HIGH: High; MIDDLE: Medium; LOW: Low
      */
     public void setRuleLevel(String RuleLevel) {
         this.RuleLevel = RuleLevel;
@@ -196,11 +191,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public AbnormalProcessSystemChildRuleInfo(AbnormalProcessSystemChildRuleInfo source) {
-        if (source.RuleId != null) {
-            this.RuleId = new String(source.RuleId);
-        }
         if (source.IsEnable != null) {
             this.IsEnable = new Boolean(source.IsEnable);
+        }
+        if (source.RuleId != null) {
+            this.RuleId = new String(source.RuleId);
         }
         if (source.RuleMode != null) {
             this.RuleMode = new String(source.RuleMode);
@@ -218,8 +213,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "RuleId", this.RuleId);
         this.setParamSimple(map, prefix + "IsEnable", this.IsEnable);
+        this.setParamSimple(map, prefix + "RuleId", this.RuleId);
         this.setParamSimple(map, prefix + "RuleMode", this.RuleMode);
         this.setParamSimple(map, prefix + "RuleType", this.RuleType);
         this.setParamSimple(map, prefix + "RuleLevel", this.RuleLevel);

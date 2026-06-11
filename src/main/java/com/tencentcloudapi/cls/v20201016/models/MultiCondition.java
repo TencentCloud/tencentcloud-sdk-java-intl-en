@@ -24,51 +24,56 @@ import java.util.HashMap;
 public class MultiCondition extends AbstractModel {
 
     /**
-    * Trigger condition.Note: This field may return null, indicating that no valid values can be obtained.
+    * Trigger conditions
     */
     @SerializedName("Condition")
     @Expose
     private String Condition;
 
     /**
-    * Alarm severity. 0: Warning (Warn); 1: Reminder (Info); 2: Urgent (Critical).<li> If not specified, the default is 0.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Alarm severity. 0: Warning (Warn); 1: Reminder (Info); 2: Urgent (Critical).
+
+- If not specified, the default is 0.
     */
     @SerializedName("AlarmLevel")
     @Expose
     private Long AlarmLevel;
 
     /**
-     * Get Trigger condition.Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Condition Trigger condition.Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Trigger conditions 
+     * @return Condition Trigger conditions
      */
     public String getCondition() {
         return this.Condition;
     }
 
     /**
-     * Set Trigger condition.Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Condition Trigger condition.Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Trigger conditions
+     * @param Condition Trigger conditions
      */
     public void setCondition(String Condition) {
         this.Condition = Condition;
     }
 
     /**
-     * Get Alarm severity. 0: Warning (Warn); 1: Reminder (Info); 2: Urgent (Critical).<li> If not specified, the default is 0.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return AlarmLevel Alarm severity. 0: Warning (Warn); 1: Reminder (Info); 2: Urgent (Critical).<li> If not specified, the default is 0.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Alarm severity. 0: Warning (Warn); 1: Reminder (Info); 2: Urgent (Critical).
+
+- If not specified, the default is 0. 
+     * @return AlarmLevel Alarm severity. 0: Warning (Warn); 1: Reminder (Info); 2: Urgent (Critical).
+
+- If not specified, the default is 0.
      */
     public Long getAlarmLevel() {
         return this.AlarmLevel;
     }
 
     /**
-     * Set Alarm severity. 0: Warning (Warn); 1: Reminder (Info); 2: Urgent (Critical).<li> If not specified, the default is 0.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param AlarmLevel Alarm severity. 0: Warning (Warn); 1: Reminder (Info); 2: Urgent (Critical).<li> If not specified, the default is 0.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Alarm severity. 0: Warning (Warn); 1: Reminder (Info); 2: Urgent (Critical).
+
+- If not specified, the default is 0.
+     * @param AlarmLevel Alarm severity. 0: Warning (Warn); 1: Reminder (Info); 2: Urgent (Critical).
+
+- If not specified, the default is 0.
      */
     public void setAlarmLevel(Long AlarmLevel) {
         this.AlarmLevel = AlarmLevel;

@@ -24,46 +24,56 @@ import java.util.HashMap;
 public class MachineGroupTypeInfo extends AbstractModel {
 
     /**
-    * Machine group type. Valid values: `ip`: the IP addresses of collection machines are stored in `Values` of the machine group; `label`: the tags of the machines are stored in `Values` of the machine group
+    * Machine group type. Support ip and label.
+-ip: Indicates that Values in this machine group represent the ip address of the collection machine.
+-label: means the Values in this group contain machine tags
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * Machine description list
+    * Machine description list.
     */
     @SerializedName("Values")
     @Expose
     private String [] Values;
 
     /**
-     * Get Machine group type. Valid values: `ip`: the IP addresses of collection machines are stored in `Values` of the machine group; `label`: the tags of the machines are stored in `Values` of the machine group 
-     * @return Type Machine group type. Valid values: `ip`: the IP addresses of collection machines are stored in `Values` of the machine group; `label`: the tags of the machines are stored in `Values` of the machine group
+     * Get Machine group type. Support ip and label.
+-ip: Indicates that Values in this machine group represent the ip address of the collection machine.
+-label: means the Values in this group contain machine tags 
+     * @return Type Machine group type. Support ip and label.
+-ip: Indicates that Values in this machine group represent the ip address of the collection machine.
+-label: means the Values in this group contain machine tags
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set Machine group type. Valid values: `ip`: the IP addresses of collection machines are stored in `Values` of the machine group; `label`: the tags of the machines are stored in `Values` of the machine group
-     * @param Type Machine group type. Valid values: `ip`: the IP addresses of collection machines are stored in `Values` of the machine group; `label`: the tags of the machines are stored in `Values` of the machine group
+     * Set Machine group type. Support ip and label.
+-ip: Indicates that Values in this machine group represent the ip address of the collection machine.
+-label: means the Values in this group contain machine tags
+     * @param Type Machine group type. Support ip and label.
+-ip: Indicates that Values in this machine group represent the ip address of the collection machine.
+-label: means the Values in this group contain machine tags
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get Machine description list 
-     * @return Values Machine description list
+     * Get Machine description list. 
+     * @return Values Machine description list.
      */
     public String [] getValues() {
         return this.Values;
     }
 
     /**
-     * Set Machine description list
-     * @param Values Machine description list
+     * Set Machine description list.
+     * @param Values Machine description list.
      */
     public void setValues(String [] Values) {
         this.Values = Values;

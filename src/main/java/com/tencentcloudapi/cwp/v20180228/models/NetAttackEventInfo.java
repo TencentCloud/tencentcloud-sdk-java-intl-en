@@ -123,7 +123,6 @@ public class NetAttackEventInfo extends AbstractModel {
 
     /**
     * Host Additional Information
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("MachineExtraInfo")
     @Expose
@@ -144,7 +143,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long Count;
 
     /**
-    * Machine payment edition. 0: Basic Edition; 1: Professional Edition; 2: Premium Edition; 3: General Discount Edition
+    * Machine payment version, 0 Basic version, 1 Pro edition, 2 Flagship edition, 3 Lightweight edition
     */
     @SerializedName("PayVersion")
     @Expose
@@ -152,7 +151,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * cvm uuid
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Quuid")
     @Expose
@@ -160,7 +158,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Time of Attack
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("MergeTime")
     @Expose
@@ -168,7 +165,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * 0: Attack Attempt 1: Successful Attack
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Type")
     @Expose
@@ -176,7 +172,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * 0: No Compromised Behavior 1: RCE (command execution) 2: Dnslog 3: Writefile
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("HostOpType")
     @Expose
@@ -184,11 +179,24 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Process Tree, needs to be decoded with base64.
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("HostOpProcessTree")
     @Expose
     private String HostOpProcessTree;
+
+    /**
+    * IP analysis
+    */
+    @SerializedName("IPAnalyse")
+    @Expose
+    private IPAnalyse IPAnalyse;
+
+    /**
+    * Response packet base64 encoded
+    */
+    @SerializedName("NetResponsePayload")
+    @Expose
+    private String NetResponsePayload;
 
     /**
      * Get Processing Status: 0 Pending, 1 Processed, 2 Allowlisted, 3 Ignored, 4 Deleted, 5: Defense Enabled. 
@@ -415,10 +423,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Host Additional Information
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Host Additional Information 
      * @return MachineExtraInfo Host Additional Information
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public MachineExtraInfo getMachineExtraInfo() {
         return this.MachineExtraInfo;
@@ -426,9 +432,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Host Additional Information
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param MachineExtraInfo Host Additional Information
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setMachineExtraInfo(MachineExtraInfo MachineExtraInfo) {
         this.MachineExtraInfo = MachineExtraInfo;
@@ -467,26 +471,24 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Machine payment edition. 0: Basic Edition; 1: Professional Edition; 2: Premium Edition; 3: General Discount Edition 
-     * @return PayVersion Machine payment edition. 0: Basic Edition; 1: Professional Edition; 2: Premium Edition; 3: General Discount Edition
+     * Get Machine payment version, 0 Basic version, 1 Pro edition, 2 Flagship edition, 3 Lightweight edition 
+     * @return PayVersion Machine payment version, 0 Basic version, 1 Pro edition, 2 Flagship edition, 3 Lightweight edition
      */
     public Long getPayVersion() {
         return this.PayVersion;
     }
 
     /**
-     * Set Machine payment edition. 0: Basic Edition; 1: Professional Edition; 2: Premium Edition; 3: General Discount Edition
-     * @param PayVersion Machine payment edition. 0: Basic Edition; 1: Professional Edition; 2: Premium Edition; 3: General Discount Edition
+     * Set Machine payment version, 0 Basic version, 1 Pro edition, 2 Flagship edition, 3 Lightweight edition
+     * @param PayVersion Machine payment version, 0 Basic version, 1 Pro edition, 2 Flagship edition, 3 Lightweight edition
      */
     public void setPayVersion(Long PayVersion) {
         this.PayVersion = PayVersion;
     }
 
     /**
-     * Get cvm uuid
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get cvm uuid 
      * @return Quuid cvm uuid
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getQuuid() {
         return this.Quuid;
@@ -494,19 +496,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set cvm uuid
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Quuid cvm uuid
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setQuuid(String Quuid) {
         this.Quuid = Quuid;
     }
 
     /**
-     * Get Time of Attack
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Time of Attack 
      * @return MergeTime Time of Attack
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getMergeTime() {
         return this.MergeTime;
@@ -514,19 +512,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Time of Attack
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param MergeTime Time of Attack
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setMergeTime(String MergeTime) {
         this.MergeTime = MergeTime;
     }
 
     /**
-     * Get 0: Attack Attempt 1: Successful Attack
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get 0: Attack Attempt 1: Successful Attack 
      * @return Type 0: Attack Attempt 1: Successful Attack
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getType() {
         return this.Type;
@@ -534,19 +528,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set 0: Attack Attempt 1: Successful Attack
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Type 0: Attack Attempt 1: Successful Attack
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setType(Long Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 0: No Compromised Behavior 1: RCE (command execution) 2: Dnslog 3: Writefile
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get 0: No Compromised Behavior 1: RCE (command execution) 2: Dnslog 3: Writefile 
      * @return HostOpType 0: No Compromised Behavior 1: RCE (command execution) 2: Dnslog 3: Writefile
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getHostOpType() {
         return this.HostOpType;
@@ -554,19 +544,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set 0: No Compromised Behavior 1: RCE (command execution) 2: Dnslog 3: Writefile
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param HostOpType 0: No Compromised Behavior 1: RCE (command execution) 2: Dnslog 3: Writefile
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setHostOpType(Long HostOpType) {
         this.HostOpType = HostOpType;
     }
 
     /**
-     * Get Process Tree, needs to be decoded with base64.
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Process Tree, needs to be decoded with base64. 
      * @return HostOpProcessTree Process Tree, needs to be decoded with base64.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getHostOpProcessTree() {
         return this.HostOpProcessTree;
@@ -574,12 +560,42 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Process Tree, needs to be decoded with base64.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param HostOpProcessTree Process Tree, needs to be decoded with base64.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setHostOpProcessTree(String HostOpProcessTree) {
         this.HostOpProcessTree = HostOpProcessTree;
+    }
+
+    /**
+     * Get IP analysis 
+     * @return IPAnalyse IP analysis
+     */
+    public IPAnalyse getIPAnalyse() {
+        return this.IPAnalyse;
+    }
+
+    /**
+     * Set IP analysis
+     * @param IPAnalyse IP analysis
+     */
+    public void setIPAnalyse(IPAnalyse IPAnalyse) {
+        this.IPAnalyse = IPAnalyse;
+    }
+
+    /**
+     * Get Response packet base64 encoded 
+     * @return NetResponsePayload Response packet base64 encoded
+     */
+    public String getNetResponsePayload() {
+        return this.NetResponsePayload;
+    }
+
+    /**
+     * Set Response packet base64 encoded
+     * @param NetResponsePayload Response packet base64 encoded
+     */
+    public void setNetResponsePayload(String NetResponsePayload) {
+        this.NetResponsePayload = NetResponsePayload;
     }
 
     public NetAttackEventInfo() {
@@ -659,6 +675,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.HostOpProcessTree != null) {
             this.HostOpProcessTree = new String(source.HostOpProcessTree);
         }
+        if (source.IPAnalyse != null) {
+            this.IPAnalyse = new IPAnalyse(source.IPAnalyse);
+        }
+        if (source.NetResponsePayload != null) {
+            this.NetResponsePayload = new String(source.NetResponsePayload);
+        }
     }
 
 
@@ -689,6 +711,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamSimple(map, prefix + "HostOpType", this.HostOpType);
         this.setParamSimple(map, prefix + "HostOpProcessTree", this.HostOpProcessTree);
+        this.setParamObj(map, prefix + "IPAnalyse.", this.IPAnalyse);
+        this.setParamSimple(map, prefix + "NetResponsePayload", this.NetResponsePayload);
 
     }
 }

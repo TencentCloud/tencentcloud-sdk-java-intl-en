@@ -41,10 +41,7 @@ If this parameter is left empty, edge server information will be returned by def
     private String Layer;
 
     /**
-    * Specifies a region to query.
-`mainland`: Nodes in the Chinese mainland
-`overseas`: Nodes outside the Chinese mainland
-`global`: Global nodes
+    * Query region: mainland: node in chinese mainland; overseas: node outside the chinese mainland; global: global node.
     */
     @SerializedName("Area")
     @Expose
@@ -58,7 +55,7 @@ If this parameter is left empty, edge server information will be returned by def
     private Boolean Segment;
 
     /**
-    * whether to query node IPV6 information.
+    * 
     */
     @SerializedName("ShowIpv6")
     @Expose
@@ -116,28 +113,16 @@ If this parameter is left empty, edge server information will be returned by def
     }
 
     /**
-     * Get Specifies a region to query.
-`mainland`: Nodes in the Chinese mainland
-`overseas`: Nodes outside the Chinese mainland
-`global`: Global nodes 
-     * @return Area Specifies a region to query.
-`mainland`: Nodes in the Chinese mainland
-`overseas`: Nodes outside the Chinese mainland
-`global`: Global nodes
+     * Get Query region: mainland: node in chinese mainland; overseas: node outside the chinese mainland; global: global node. 
+     * @return Area Query region: mainland: node in chinese mainland; overseas: node outside the chinese mainland; global: global node.
      */
     public String getArea() {
         return this.Area;
     }
 
     /**
-     * Set Specifies a region to query.
-`mainland`: Nodes in the Chinese mainland
-`overseas`: Nodes outside the Chinese mainland
-`global`: Global nodes
-     * @param Area Specifies a region to query.
-`mainland`: Nodes in the Chinese mainland
-`overseas`: Nodes outside the Chinese mainland
-`global`: Global nodes
+     * Set Query region: mainland: node in chinese mainland; overseas: node outside the chinese mainland; global: global node.
+     * @param Area Query region: mainland: node in chinese mainland; overseas: node outside the chinese mainland; global: global node.
      */
     public void setArea(String Area) {
         this.Area = Area;
@@ -160,16 +145,16 @@ If this parameter is left empty, edge server information will be returned by def
     }
 
     /**
-     * Get whether to query node IPV6 information. 
-     * @return ShowIpv6 whether to query node IPV6 information.
+     * Get  
+     * @return ShowIpv6 
      */
     public Boolean getShowIpv6() {
         return this.ShowIpv6;
     }
 
     /**
-     * Set whether to query node IPV6 information.
-     * @param ShowIpv6 whether to query node IPV6 information.
+     * Set 
+     * @param ShowIpv6 
      */
     public void setShowIpv6(Boolean ShowIpv6) {
         this.ShowIpv6 = ShowIpv6;

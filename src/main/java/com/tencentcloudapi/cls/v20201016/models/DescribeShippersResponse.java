@@ -25,7 +25,6 @@ public class DescribeShippersResponse extends AbstractModel {
 
     /**
     * Shipping rule list
-Note: this field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("Shippers")
     @Expose
@@ -46,10 +45,8 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private String RequestId;
 
     /**
-     * Get Shipping rule list
-Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * Get Shipping rule list 
      * @return Shippers Shipping rule list
-Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public ShipperInfo [] getShippers() {
         return this.Shippers;
@@ -57,9 +54,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
     /**
      * Set Shipping rule list
-Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param Shippers Shipping rule list
-Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public void setShippers(ShipperInfo [] Shippers) {
         this.Shippers = Shippers;

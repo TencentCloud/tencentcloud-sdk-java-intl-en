@@ -38,6 +38,13 @@ public class ModifyJavaMemShellsStatusRequest extends AbstractModel {
     private Long [] Ids;
 
     /**
+    * Whether to update all statuses. This parameter takes effect only when the statuses are Ignored, Processed, and Deleted.
+    */
+    @SerializedName("UpdateAll")
+    @Expose
+    private Boolean UpdateAll;
+
+    /**
      * Get Target Processing Status: 0 - Pending, 1 - Allowlisted, 2 - Deleted, 3 - Ignored, 4 - Manually Processed 
      * @return Status Target Processing Status: 0 - Pending, 1 - Allowlisted, 2 - Deleted, 3 - Ignored, 4 - Manually Processed
      */
@@ -69,6 +76,22 @@ public class ModifyJavaMemShellsStatusRequest extends AbstractModel {
         this.Ids = Ids;
     }
 
+    /**
+     * Get Whether to update all statuses. This parameter takes effect only when the statuses are Ignored, Processed, and Deleted. 
+     * @return UpdateAll Whether to update all statuses. This parameter takes effect only when the statuses are Ignored, Processed, and Deleted.
+     */
+    public Boolean getUpdateAll() {
+        return this.UpdateAll;
+    }
+
+    /**
+     * Set Whether to update all statuses. This parameter takes effect only when the statuses are Ignored, Processed, and Deleted.
+     * @param UpdateAll Whether to update all statuses. This parameter takes effect only when the statuses are Ignored, Processed, and Deleted.
+     */
+    public void setUpdateAll(Boolean UpdateAll) {
+        this.UpdateAll = UpdateAll;
+    }
+
     public ModifyJavaMemShellsStatusRequest() {
     }
 
@@ -86,6 +109,9 @@ public class ModifyJavaMemShellsStatusRequest extends AbstractModel {
                 this.Ids[i] = new Long(source.Ids[i]);
             }
         }
+        if (source.UpdateAll != null) {
+            this.UpdateAll = new Boolean(source.UpdateAll);
+        }
     }
 
 
@@ -95,6 +121,7 @@ public class ModifyJavaMemShellsStatusRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamArraySimple(map, prefix + "Ids.", this.Ids);
+        this.setParamSimple(map, prefix + "UpdateAll", this.UpdateAll);
 
     }
 }

@@ -73,8 +73,7 @@ public class NetworkAuditRecord extends AbstractModel {
     private String OperationTime;
 
     /**
-    * Operator `appid`
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Operator App ID
     */
     @SerializedName("AppId")
     @Expose
@@ -88,8 +87,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String Uin;
 
     /**
-    * The policy ID.
-Note: This field may return·`null`, indicating that no valid values can be obtained.
+    * Policy ID
     */
     @SerializedName("PolicyId")
     @Expose
@@ -208,20 +206,16 @@ Note: This field may return·`null`, indicating that no valid values can be obta
     }
 
     /**
-     * Get Operator `appid`
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return AppId Operator `appid`
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Operator App ID 
+     * @return AppId Operator App ID
      */
     public Long getAppId() {
         return this.AppId;
     }
 
     /**
-     * Set Operator `appid`
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param AppId Operator `appid`
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Operator App ID
+     * @param AppId Operator App ID
      */
     public void setAppId(Long AppId) {
         this.AppId = AppId;
@@ -244,20 +238,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get The policy ID.
-Note: This field may return·`null`, indicating that no valid values can be obtained. 
-     * @return PolicyId The policy ID.
-Note: This field may return·`null`, indicating that no valid values can be obtained.
+     * Get Policy ID 
+     * @return PolicyId Policy ID
      */
     public Long getPolicyId() {
         return this.PolicyId;
     }
 
     /**
-     * Set The policy ID.
-Note: This field may return·`null`, indicating that no valid values can be obtained.
-     * @param PolicyId The policy ID.
-Note: This field may return·`null`, indicating that no valid values can be obtained.
+     * Set Policy ID
+     * @param PolicyId Policy ID
      */
     public void setPolicyId(Long PolicyId) {
         this.PolicyId = PolicyId;

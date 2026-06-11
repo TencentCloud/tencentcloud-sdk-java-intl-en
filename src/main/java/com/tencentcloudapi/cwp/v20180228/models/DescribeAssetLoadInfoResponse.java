@@ -25,15 +25,13 @@ public class DescribeAssetLoadInfoResponse extends AbstractModel {
 
     /**
     * System load
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("CpuLoad")
     @Expose
     private AssetLoadSummary CpuLoad;
 
     /**
-    * Memory utilization
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Memory usage rate
     */
     @SerializedName("MemLoad")
     @Expose
@@ -41,7 +39,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Hard disk utilization
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("DiskLoad")
     @Expose
@@ -55,10 +52,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get System load
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get System load 
      * @return CpuLoad System load
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public AssetLoadSummary getCpuLoad() {
         return this.CpuLoad;
@@ -66,39 +61,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set System load
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param CpuLoad System load
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setCpuLoad(AssetLoadSummary CpuLoad) {
         this.CpuLoad = CpuLoad;
     }
 
     /**
-     * Get Memory utilization
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return MemLoad Memory utilization
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Memory usage rate 
+     * @return MemLoad Memory usage rate
      */
     public AssetLoadSummary getMemLoad() {
         return this.MemLoad;
     }
 
     /**
-     * Set Memory utilization
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param MemLoad Memory utilization
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Memory usage rate
+     * @param MemLoad Memory usage rate
      */
     public void setMemLoad(AssetLoadSummary MemLoad) {
         this.MemLoad = MemLoad;
     }
 
     /**
-     * Get Hard disk utilization
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Hard disk utilization 
      * @return DiskLoad Hard disk utilization
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public AssetLoadSummary getDiskLoad() {
         return this.DiskLoad;
@@ -106,9 +93,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Hard disk utilization
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param DiskLoad Hard disk utilization
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setDiskLoad(AssetLoadSummary DiskLoad) {
         this.DiskLoad = DiskLoad;

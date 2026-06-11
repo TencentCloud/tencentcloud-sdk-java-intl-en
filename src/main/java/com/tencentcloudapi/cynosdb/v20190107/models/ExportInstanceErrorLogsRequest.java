@@ -24,49 +24,49 @@ import java.util.HashMap;
 public class ExportInstanceErrorLogsRequest extends AbstractModel {
 
     /**
-    * Instance ID
+    * Instance ID.
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Log start time
+    * Log start time.
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * Log end time
+    * Log end time.
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-    * The max number of returned results
+    * The max number of returned results.
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * Offset
+    * Offset.
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * Log level
+    * Log level.
     */
     @SerializedName("LogLevels")
     @Expose
     private String [] LogLevels;
 
     /**
-    * 
+    * KeyWords.
     */
     @SerializedName("KeyWords")
     @Expose
@@ -80,7 +80,7 @@ public class ExportInstanceErrorLogsRequest extends AbstractModel {
     private String FileType;
 
     /**
-    * Valid value: `Timestamp`
+    * Valid value: `Timestamp`.
     */
     @SerializedName("OrderBy")
     @Expose
@@ -94,112 +94,112 @@ public class ExportInstanceErrorLogsRequest extends AbstractModel {
     private String OrderByType;
 
     /**
-     * Get Instance ID 
-     * @return InstanceId Instance ID
+     * Get Instance ID. 
+     * @return InstanceId Instance ID.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Instance ID
-     * @param InstanceId Instance ID
+     * Set Instance ID.
+     * @param InstanceId Instance ID.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Log start time 
-     * @return StartTime Log start time
+     * Get Log start time. 
+     * @return StartTime Log start time.
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set Log start time
-     * @param StartTime Log start time
+     * Set Log start time.
+     * @param StartTime Log start time.
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get Log end time 
-     * @return EndTime Log end time
+     * Get Log end time. 
+     * @return EndTime Log end time.
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set Log end time
-     * @param EndTime Log end time
+     * Set Log end time.
+     * @param EndTime Log end time.
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get The max number of returned results 
-     * @return Limit The max number of returned results
+     * Get The max number of returned results. 
+     * @return Limit The max number of returned results.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set The max number of returned results
-     * @param Limit The max number of returned results
+     * Set The max number of returned results.
+     * @param Limit The max number of returned results.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get Offset 
-     * @return Offset Offset
+     * Get Offset. 
+     * @return Offset Offset.
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Offset
-     * @param Offset Offset
+     * Set Offset.
+     * @param Offset Offset.
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get Log level 
-     * @return LogLevels Log level
+     * Get Log level. 
+     * @return LogLevels Log level.
      */
     public String [] getLogLevels() {
         return this.LogLevels;
     }
 
     /**
-     * Set Log level
-     * @param LogLevels Log level
+     * Set Log level.
+     * @param LogLevels Log level.
      */
     public void setLogLevels(String [] LogLevels) {
         this.LogLevels = LogLevels;
     }
 
     /**
-     * Get  
-     * @return KeyWords 
+     * Get KeyWords. 
+     * @return KeyWords KeyWords.
      */
     public String [] getKeyWords() {
         return this.KeyWords;
     }
 
     /**
-     * Set 
-     * @param KeyWords 
+     * Set KeyWords.
+     * @param KeyWords KeyWords.
      */
     public void setKeyWords(String [] KeyWords) {
         this.KeyWords = KeyWords;
@@ -222,16 +222,16 @@ public class ExportInstanceErrorLogsRequest extends AbstractModel {
     }
 
     /**
-     * Get Valid value: `Timestamp` 
-     * @return OrderBy Valid value: `Timestamp`
+     * Get Valid value: `Timestamp`. 
+     * @return OrderBy Valid value: `Timestamp`.
      */
     public String getOrderBy() {
         return this.OrderBy;
     }
 
     /**
-     * Set Valid value: `Timestamp`
-     * @param OrderBy Valid value: `Timestamp`
+     * Set Valid value: `Timestamp`.
+     * @param OrderBy Valid value: `Timestamp`.
      */
     public void setOrderBy(String OrderBy) {
         this.OrderBy = OrderBy;

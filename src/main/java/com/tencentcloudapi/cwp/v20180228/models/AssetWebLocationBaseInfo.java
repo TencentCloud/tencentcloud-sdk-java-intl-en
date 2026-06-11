@@ -151,7 +151,6 @@ public class AssetWebLocationBaseInfo extends AbstractModel {
 
     /**
     * Data update time
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("UpdateTime")
     @Expose
@@ -165,16 +164,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String FirstTime;
 
     /**
-    * Whether the web service is newly added [0 - no|1 - yes]
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Whether it is newly added [0: no | 1: yes]
     */
     @SerializedName("IsNew")
     @Expose
     private Long IsNew;
 
     /**
-    * Additional information
-Note: This field may return null, indicating that no valid values can be obtained.
+    *  Additional information
     */
     @SerializedName("MachineExtraInfo")
     @Expose
@@ -469,10 +466,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Data update time
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Data update time 
      * @return UpdateTime Data update time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getUpdateTime() {
         return this.UpdateTime;
@@ -480,9 +475,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Data update time
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param UpdateTime Data update time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;
@@ -505,40 +498,32 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Whether the web service is newly added [0 - no|1 - yes]
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return IsNew Whether the web service is newly added [0 - no|1 - yes]
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Whether it is newly added [0: no | 1: yes] 
+     * @return IsNew Whether it is newly added [0: no | 1: yes]
      */
     public Long getIsNew() {
         return this.IsNew;
     }
 
     /**
-     * Set Whether the web service is newly added [0 - no|1 - yes]
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param IsNew Whether the web service is newly added [0 - no|1 - yes]
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Whether it is newly added [0: no | 1: yes]
+     * @param IsNew Whether it is newly added [0: no | 1: yes]
      */
     public void setIsNew(Long IsNew) {
         this.IsNew = IsNew;
     }
 
     /**
-     * Get Additional information
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return MachineExtraInfo Additional information
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  Additional information 
+     * @return MachineExtraInfo  Additional information
      */
     public MachineExtraInfo getMachineExtraInfo() {
         return this.MachineExtraInfo;
     }
 
     /**
-     * Set Additional information
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param MachineExtraInfo Additional information
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set  Additional information
+     * @param MachineExtraInfo  Additional information
      */
     public void setMachineExtraInfo(MachineExtraInfo MachineExtraInfo) {
         this.MachineExtraInfo = MachineExtraInfo;

@@ -52,48 +52,42 @@ public class VertexInfo extends AbstractModel {
     private Boolean IsLeaf;
 
     /**
-    * Process name, used when Type=1
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Process name. This parameter is used when Type is 1.
     */
     @SerializedName("ProcNamePrefix")
     @Expose
     private String ProcNamePrefix;
 
     /**
-    * Process name MD5, used when Type=1
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Process name MD5. This parameter is used when Type is 1.
     */
     @SerializedName("ProcNameMd5")
     @Expose
     private String ProcNameMd5;
 
     /**
-    * Command line, used when Type=1
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Command line. This parameter is used when Type is 1.
     */
     @SerializedName("CmdLinePrefix")
     @Expose
     private String CmdLinePrefix;
 
     /**
-    * Command line MD5, used when Type=1
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Command line MD5. This parameter is used when Type is 1.
     */
     @SerializedName("CmdLineMd5")
     @Expose
     private String CmdLineMd5;
 
     /**
-    * File path, used when Type=3
-Note: This field may return null, indicating that no valid values can be obtained.
+    * File path. This parameter is used when Type is 3.
     */
     @SerializedName("FilePathPrefix")
     @Expose
     private String FilePathPrefix;
 
     /**
-    * Request destination address, used when Type=2
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Request destination address. This parameter is used when Type is 2.
     */
     @SerializedName("AddressPrefix")
     @Expose
@@ -114,16 +108,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Boolean IsAlarm;
 
     /**
-    * File path MD5, used when Type=3
-Note: This field may return null, indicating that no valid values can be obtained.
+    * File path MD5. This parameter is used when Type is 3.
     */
     @SerializedName("FilePathMd5")
     @Expose
     private String FilePathMd5;
 
     /**
-    * Request destination address MD5, used when Type=2
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Request destination address MD5. This parameter is used when Type is 2.
     */
     @SerializedName("AddressMd5")
     @Expose
@@ -194,120 +186,96 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Process name, used when Type=1
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ProcNamePrefix Process name, used when Type=1
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Process name. This parameter is used when Type is 1. 
+     * @return ProcNamePrefix Process name. This parameter is used when Type is 1.
      */
     public String getProcNamePrefix() {
         return this.ProcNamePrefix;
     }
 
     /**
-     * Set Process name, used when Type=1
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ProcNamePrefix Process name, used when Type=1
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Process name. This parameter is used when Type is 1.
+     * @param ProcNamePrefix Process name. This parameter is used when Type is 1.
      */
     public void setProcNamePrefix(String ProcNamePrefix) {
         this.ProcNamePrefix = ProcNamePrefix;
     }
 
     /**
-     * Get Process name MD5, used when Type=1
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ProcNameMd5 Process name MD5, used when Type=1
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Process name MD5. This parameter is used when Type is 1. 
+     * @return ProcNameMd5 Process name MD5. This parameter is used when Type is 1.
      */
     public String getProcNameMd5() {
         return this.ProcNameMd5;
     }
 
     /**
-     * Set Process name MD5, used when Type=1
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ProcNameMd5 Process name MD5, used when Type=1
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Process name MD5. This parameter is used when Type is 1.
+     * @param ProcNameMd5 Process name MD5. This parameter is used when Type is 1.
      */
     public void setProcNameMd5(String ProcNameMd5) {
         this.ProcNameMd5 = ProcNameMd5;
     }
 
     /**
-     * Get Command line, used when Type=1
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return CmdLinePrefix Command line, used when Type=1
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Command line. This parameter is used when Type is 1. 
+     * @return CmdLinePrefix Command line. This parameter is used when Type is 1.
      */
     public String getCmdLinePrefix() {
         return this.CmdLinePrefix;
     }
 
     /**
-     * Set Command line, used when Type=1
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param CmdLinePrefix Command line, used when Type=1
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Command line. This parameter is used when Type is 1.
+     * @param CmdLinePrefix Command line. This parameter is used when Type is 1.
      */
     public void setCmdLinePrefix(String CmdLinePrefix) {
         this.CmdLinePrefix = CmdLinePrefix;
     }
 
     /**
-     * Get Command line MD5, used when Type=1
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return CmdLineMd5 Command line MD5, used when Type=1
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Command line MD5. This parameter is used when Type is 1. 
+     * @return CmdLineMd5 Command line MD5. This parameter is used when Type is 1.
      */
     public String getCmdLineMd5() {
         return this.CmdLineMd5;
     }
 
     /**
-     * Set Command line MD5, used when Type=1
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param CmdLineMd5 Command line MD5, used when Type=1
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Command line MD5. This parameter is used when Type is 1.
+     * @param CmdLineMd5 Command line MD5. This parameter is used when Type is 1.
      */
     public void setCmdLineMd5(String CmdLineMd5) {
         this.CmdLineMd5 = CmdLineMd5;
     }
 
     /**
-     * Get File path, used when Type=3
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return FilePathPrefix File path, used when Type=3
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get File path. This parameter is used when Type is 3. 
+     * @return FilePathPrefix File path. This parameter is used when Type is 3.
      */
     public String getFilePathPrefix() {
         return this.FilePathPrefix;
     }
 
     /**
-     * Set File path, used when Type=3
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param FilePathPrefix File path, used when Type=3
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set File path. This parameter is used when Type is 3.
+     * @param FilePathPrefix File path. This parameter is used when Type is 3.
      */
     public void setFilePathPrefix(String FilePathPrefix) {
         this.FilePathPrefix = FilePathPrefix;
     }
 
     /**
-     * Get Request destination address, used when Type=2
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return AddressPrefix Request destination address, used when Type=2
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Request destination address. This parameter is used when Type is 2. 
+     * @return AddressPrefix Request destination address. This parameter is used when Type is 2.
      */
     public String getAddressPrefix() {
         return this.AddressPrefix;
     }
 
     /**
-     * Set Request destination address, used when Type=2
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param AddressPrefix Request destination address, used when Type=2
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Request destination address. This parameter is used when Type is 2.
+     * @param AddressPrefix Request destination address. This parameter is used when Type is 2.
      */
     public void setAddressPrefix(String AddressPrefix) {
         this.AddressPrefix = AddressPrefix;
@@ -346,40 +314,32 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get File path MD5, used when Type=3
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return FilePathMd5 File path MD5, used when Type=3
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get File path MD5. This parameter is used when Type is 3. 
+     * @return FilePathMd5 File path MD5. This parameter is used when Type is 3.
      */
     public String getFilePathMd5() {
         return this.FilePathMd5;
     }
 
     /**
-     * Set File path MD5, used when Type=3
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param FilePathMd5 File path MD5, used when Type=3
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set File path MD5. This parameter is used when Type is 3.
+     * @param FilePathMd5 File path MD5. This parameter is used when Type is 3.
      */
     public void setFilePathMd5(String FilePathMd5) {
         this.FilePathMd5 = FilePathMd5;
     }
 
     /**
-     * Get Request destination address MD5, used when Type=2
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return AddressMd5 Request destination address MD5, used when Type=2
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Request destination address MD5. This parameter is used when Type is 2. 
+     * @return AddressMd5 Request destination address MD5. This parameter is used when Type is 2.
      */
     public String getAddressMd5() {
         return this.AddressMd5;
     }
 
     /**
-     * Set Request destination address MD5, used when Type=2
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param AddressMd5 Request destination address MD5, used when Type=2
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Request destination address MD5. This parameter is used when Type is 2.
+     * @param AddressMd5 Request destination address MD5. This parameter is used when Type is 2.
      */
     public void setAddressMd5(String AddressMd5) {
         this.AddressMd5 = AddressMd5;

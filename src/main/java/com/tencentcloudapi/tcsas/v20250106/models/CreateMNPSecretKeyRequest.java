@@ -31,7 +31,7 @@ public class CreateMNPSecretKeyRequest extends AbstractModel {
     private String PlatformId;
 
     /**
-    * <p>Mini program or mini game appid.</p>
+    * <p>Mini program appid.</p>
     */
     @SerializedName("MNPId")
     @Expose
@@ -54,16 +54,16 @@ public class CreateMNPSecretKeyRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>Mini program or mini game appid.</p> 
-     * @return MNPId <p>Mini program or mini game appid.</p>
+     * Get <p>Mini program appid.</p> 
+     * @return MNPId <p>Mini program appid.</p>
      */
     public String getMNPId() {
         return this.MNPId;
     }
 
     /**
-     * Set <p>Mini program or mini game appid.</p>
-     * @param MNPId <p>Mini program or mini game appid.</p>
+     * Set <p>Mini program appid.</p>
+     * @param MNPId <p>Mini program appid.</p>
      */
     public void setMNPId(String MNPId) {
         this.MNPId = MNPId;

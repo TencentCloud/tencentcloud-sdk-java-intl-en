@@ -80,7 +80,7 @@ public class CreateRansomDefenseStrategyRequest extends AbstractModel {
     private String ExcludeDir;
 
     /**
-    * Backup pattern: 0 weekly, 1 daily.
+    * Backup mode: 0 weekly, 1 daily, 2 do not backup.
     */
     @SerializedName("BackupType")
     @Expose
@@ -236,16 +236,16 @@ public class CreateRansomDefenseStrategyRequest extends AbstractModel {
     }
 
     /**
-     * Get Backup pattern: 0 weekly, 1 daily. 
-     * @return BackupType Backup pattern: 0 weekly, 1 daily.
+     * Get Backup mode: 0 weekly, 1 daily, 2 do not backup. 
+     * @return BackupType Backup mode: 0 weekly, 1 daily, 2 do not backup.
      */
     public Long getBackupType() {
         return this.BackupType;
     }
 
     /**
-     * Set Backup pattern: 0 weekly, 1 daily.
-     * @param BackupType Backup pattern: 0 weekly, 1 daily.
+     * Set Backup mode: 0 weekly, 1 daily, 2 do not backup.
+     * @param BackupType Backup mode: 0 weekly, 1 daily, 2 do not backup.
      */
     public void setBackupType(Long BackupType) {
         this.BackupType = BackupType;

@@ -31,8 +31,7 @@ public class NetworkCustomPolicy extends AbstractModel {
     private String Direction;
 
     /**
-    * Network policy port
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Network Policy Port
     */
     @SerializedName("Ports")
     @Expose
@@ -41,16 +40,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
     /**
     * Network policy object
 
-`PublishedNoConfirm`: Enabled and to be confirmed.
+Enable but not confirmed: PublishedNoConfirm
 
-`PublishedConfirmed`: Enabled and confirmed.
+Enabled and confirmed: PublishedConfirmed
 
-`unPublishing`: Disabled.
+Disabling: unPublishing
 
-`Publishing`: Enabled.
+Enabled: Publishing
 
-`unPublishEdit`: To be enabled.
-Note: This field may return null, indicating that no valid values can be obtained.
+Enable: unPublishEdit
     */
     @SerializedName("Peer")
     @Expose
@@ -73,20 +71,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Network policy port
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Ports Network policy port
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Network Policy Port 
+     * @return Ports Network Policy Port
      */
     public NetworkPorts [] getPorts() {
         return this.Ports;
     }
 
     /**
-     * Set Network policy port
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Ports Network policy port
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Network Policy Port
+     * @param Ports Network Policy Port
      */
     public void setPorts(NetworkPorts [] Ports) {
         this.Ports = Ports;
@@ -95,28 +89,26 @@ Note: This field may return null, indicating that no valid values can be obtaine
     /**
      * Get Network policy object
 
-`PublishedNoConfirm`: Enabled and to be confirmed.
+Enable but not confirmed: PublishedNoConfirm
 
-`PublishedConfirmed`: Enabled and confirmed.
+Enabled and confirmed: PublishedConfirmed
 
-`unPublishing`: Disabled.
+Disabling: unPublishing
 
-`Publishing`: Enabled.
+Enabled: Publishing
 
-`unPublishEdit`: To be enabled.
-Note: This field may return null, indicating that no valid values can be obtained. 
+Enable: unPublishEdit 
      * @return Peer Network policy object
 
-`PublishedNoConfirm`: Enabled and to be confirmed.
+Enable but not confirmed: PublishedNoConfirm
 
-`PublishedConfirmed`: Enabled and confirmed.
+Enabled and confirmed: PublishedConfirmed
 
-`unPublishing`: Disabled.
+Disabling: unPublishing
 
-`Publishing`: Enabled.
+Enabled: Publishing
 
-`unPublishEdit`: To be enabled.
-Note: This field may return null, indicating that no valid values can be obtained.
+Enable: unPublishEdit
      */
     public NetworkPeer [] getPeer() {
         return this.Peer;
@@ -125,28 +117,26 @@ Note: This field may return null, indicating that no valid values can be obtaine
     /**
      * Set Network policy object
 
-`PublishedNoConfirm`: Enabled and to be confirmed.
+Enable but not confirmed: PublishedNoConfirm
 
-`PublishedConfirmed`: Enabled and confirmed.
+Enabled and confirmed: PublishedConfirmed
 
-`unPublishing`: Disabled.
+Disabling: unPublishing
 
-`Publishing`: Enabled.
+Enabled: Publishing
 
-`unPublishEdit`: To be enabled.
-Note: This field may return null, indicating that no valid values can be obtained.
+Enable: unPublishEdit
      * @param Peer Network policy object
 
-`PublishedNoConfirm`: Enabled and to be confirmed.
+Enable but not confirmed: PublishedNoConfirm
 
-`PublishedConfirmed`: Enabled and confirmed.
+Enabled and confirmed: PublishedConfirmed
 
-`unPublishing`: Disabled.
+Disabling: unPublishing
 
-`Publishing`: Enabled.
+Enabled: Publishing
 
-`unPublishEdit`: To be enabled.
-Note: This field may return null, indicating that no valid values can be obtained.
+Enable: unPublishEdit
      */
     public void setPeer(NetworkPeer [] Peer) {
         this.Peer = Peer;

@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class DescribeBackupListRequest extends AbstractModel {
 
     /**
-    * Cluster ID
+    * Cluster ID.
     */
     @SerializedName("ClusterId")
     @Expose
     private String ClusterId;
 
     /**
-    * The number of results to be returned. Value range: (0,100]
+    * The number of results to be returned. Value range: (0,100].
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * Record offset. Value range: [0,INF)
+    * Record offset. Value range: [0,INF).
     */
     @SerializedName("Offset")
     @Expose
@@ -53,7 +53,7 @@ public class DescribeBackupListRequest extends AbstractModel {
     private String DbType;
 
     /**
-    * Backup ID
+    * Backup ID.
     */
     @SerializedName("BackupIds")
     @Expose
@@ -74,28 +74,28 @@ public class DescribeBackupListRequest extends AbstractModel {
     private String BackupMethod;
 
     /**
-    * 
+    * Snapshot type. Optional values: full - Full snapshot; increment - Incremental snapshot.
     */
     @SerializedName("SnapShotType")
     @Expose
     private String SnapShotType;
 
     /**
-    * Backup start time
+    * Backup start time.
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * Backup end time
+    * Backup end time.
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-    * 
+    * Backup file name, fuzzy search.
     */
     @SerializedName("FileNames")
     @Expose
@@ -109,76 +109,76 @@ public class DescribeBackupListRequest extends AbstractModel {
     private String [] BackupNames;
 
     /**
-    * ID list of the snapshot backup
+    * ID list of the snapshot backup.
     */
     @SerializedName("SnapshotIdList")
     @Expose
     private Long [] SnapshotIdList;
 
     /**
-    * 
+    * Backup region.
     */
     @SerializedName("BackupRegion")
     @Expose
     private String BackupRegion;
 
     /**
-    * 
+    * Whether cross-region backup.
     */
     @SerializedName("IsCrossRegionsBackup")
     @Expose
     private String IsCrossRegionsBackup;
 
     /**
-    * Status you want to query
+    * Status you want to query.
     */
     @SerializedName("BackupStatus")
     @Expose
     private String [] BackupStatus;
 
     /**
-     * Get Cluster ID 
-     * @return ClusterId Cluster ID
+     * Get Cluster ID. 
+     * @return ClusterId Cluster ID.
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set Cluster ID
-     * @param ClusterId Cluster ID
+     * Set Cluster ID.
+     * @param ClusterId Cluster ID.
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
     }
 
     /**
-     * Get The number of results to be returned. Value range: (0,100] 
-     * @return Limit The number of results to be returned. Value range: (0,100]
+     * Get The number of results to be returned. Value range: (0,100]. 
+     * @return Limit The number of results to be returned. Value range: (0,100].
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set The number of results to be returned. Value range: (0,100]
-     * @param Limit The number of results to be returned. Value range: (0,100]
+     * Set The number of results to be returned. Value range: (0,100].
+     * @param Limit The number of results to be returned. Value range: (0,100].
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get Record offset. Value range: [0,INF) 
-     * @return Offset Record offset. Value range: [0,INF)
+     * Get Record offset. Value range: [0,INF). 
+     * @return Offset Record offset. Value range: [0,INF).
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Record offset. Value range: [0,INF)
-     * @param Offset Record offset. Value range: [0,INF)
+     * Set Record offset. Value range: [0,INF).
+     * @param Offset Record offset. Value range: [0,INF).
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
@@ -205,16 +205,16 @@ public class DescribeBackupListRequest extends AbstractModel {
     }
 
     /**
-     * Get Backup ID 
-     * @return BackupIds Backup ID
+     * Get Backup ID. 
+     * @return BackupIds Backup ID.
      */
     public Long [] getBackupIds() {
         return this.BackupIds;
     }
 
     /**
-     * Set Backup ID
-     * @param BackupIds Backup ID
+     * Set Backup ID.
+     * @param BackupIds Backup ID.
      */
     public void setBackupIds(Long [] BackupIds) {
         this.BackupIds = BackupIds;
@@ -253,64 +253,64 @@ public class DescribeBackupListRequest extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return SnapShotType 
+     * Get Snapshot type. Optional values: full - Full snapshot; increment - Incremental snapshot. 
+     * @return SnapShotType Snapshot type. Optional values: full - Full snapshot; increment - Incremental snapshot.
      */
     public String getSnapShotType() {
         return this.SnapShotType;
     }
 
     /**
-     * Set 
-     * @param SnapShotType 
+     * Set Snapshot type. Optional values: full - Full snapshot; increment - Incremental snapshot.
+     * @param SnapShotType Snapshot type. Optional values: full - Full snapshot; increment - Incremental snapshot.
      */
     public void setSnapShotType(String SnapShotType) {
         this.SnapShotType = SnapShotType;
     }
 
     /**
-     * Get Backup start time 
-     * @return StartTime Backup start time
+     * Get Backup start time. 
+     * @return StartTime Backup start time.
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set Backup start time
-     * @param StartTime Backup start time
+     * Set Backup start time.
+     * @param StartTime Backup start time.
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get Backup end time 
-     * @return EndTime Backup end time
+     * Get Backup end time. 
+     * @return EndTime Backup end time.
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set Backup end time
-     * @param EndTime Backup end time
+     * Set Backup end time.
+     * @param EndTime Backup end time.
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get  
-     * @return FileNames 
+     * Get Backup file name, fuzzy search. 
+     * @return FileNames Backup file name, fuzzy search.
      */
     public String [] getFileNames() {
         return this.FileNames;
     }
 
     /**
-     * Set 
-     * @param FileNames 
+     * Set Backup file name, fuzzy search.
+     * @param FileNames Backup file name, fuzzy search.
      */
     public void setFileNames(String [] FileNames) {
         this.FileNames = FileNames;
@@ -333,64 +333,64 @@ public class DescribeBackupListRequest extends AbstractModel {
     }
 
     /**
-     * Get ID list of the snapshot backup 
-     * @return SnapshotIdList ID list of the snapshot backup
+     * Get ID list of the snapshot backup. 
+     * @return SnapshotIdList ID list of the snapshot backup.
      */
     public Long [] getSnapshotIdList() {
         return this.SnapshotIdList;
     }
 
     /**
-     * Set ID list of the snapshot backup
-     * @param SnapshotIdList ID list of the snapshot backup
+     * Set ID list of the snapshot backup.
+     * @param SnapshotIdList ID list of the snapshot backup.
      */
     public void setSnapshotIdList(Long [] SnapshotIdList) {
         this.SnapshotIdList = SnapshotIdList;
     }
 
     /**
-     * Get  
-     * @return BackupRegion 
+     * Get Backup region. 
+     * @return BackupRegion Backup region.
      */
     public String getBackupRegion() {
         return this.BackupRegion;
     }
 
     /**
-     * Set 
-     * @param BackupRegion 
+     * Set Backup region.
+     * @param BackupRegion Backup region.
      */
     public void setBackupRegion(String BackupRegion) {
         this.BackupRegion = BackupRegion;
     }
 
     /**
-     * Get  
-     * @return IsCrossRegionsBackup 
+     * Get Whether cross-region backup. 
+     * @return IsCrossRegionsBackup Whether cross-region backup.
      */
     public String getIsCrossRegionsBackup() {
         return this.IsCrossRegionsBackup;
     }
 
     /**
-     * Set 
-     * @param IsCrossRegionsBackup 
+     * Set Whether cross-region backup.
+     * @param IsCrossRegionsBackup Whether cross-region backup.
      */
     public void setIsCrossRegionsBackup(String IsCrossRegionsBackup) {
         this.IsCrossRegionsBackup = IsCrossRegionsBackup;
     }
 
     /**
-     * Get Status you want to query 
-     * @return BackupStatus Status you want to query
+     * Get Status you want to query. 
+     * @return BackupStatus Status you want to query.
      */
     public String [] getBackupStatus() {
         return this.BackupStatus;
     }
 
     /**
-     * Set Status you want to query
-     * @param BackupStatus Status you want to query
+     * Set Status you want to query.
+     * @param BackupStatus Status you want to query.
      */
     public void setBackupStatus(String [] BackupStatus) {
         this.BackupStatus = BackupStatus;

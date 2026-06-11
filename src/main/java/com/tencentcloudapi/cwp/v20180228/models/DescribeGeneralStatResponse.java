@@ -102,15 +102,13 @@ public class DescribeGeneralStatResponse extends AbstractModel {
 
     /**
     * Number of Ultimate Edition hosts
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("FlagshipMachineCnt")
     @Expose
     private Long FlagshipMachineCnt;
 
     /**
-    * Protection duration, in days
-Note: This field may return null, indicating that no valid values can be obtained.
+    * protection days
     */
     @SerializedName("ProtectDays")
     @Expose
@@ -118,7 +116,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Number of hosts added in the last 15 days
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("AddedOnTheFifteen")
     @Expose
@@ -308,10 +305,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Number of Ultimate Edition hosts
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Number of Ultimate Edition hosts 
      * @return FlagshipMachineCnt Number of Ultimate Edition hosts
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getFlagshipMachineCnt() {
         return this.FlagshipMachineCnt;
@@ -319,39 +314,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Number of Ultimate Edition hosts
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param FlagshipMachineCnt Number of Ultimate Edition hosts
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setFlagshipMachineCnt(Long FlagshipMachineCnt) {
         this.FlagshipMachineCnt = FlagshipMachineCnt;
     }
 
     /**
-     * Get Protection duration, in days
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ProtectDays Protection duration, in days
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get protection days 
+     * @return ProtectDays protection days
      */
     public Long getProtectDays() {
         return this.ProtectDays;
     }
 
     /**
-     * Set Protection duration, in days
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ProtectDays Protection duration, in days
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set protection days
+     * @param ProtectDays protection days
      */
     public void setProtectDays(Long ProtectDays) {
         this.ProtectDays = ProtectDays;
     }
 
     /**
-     * Get Number of hosts added in the last 15 days
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Number of hosts added in the last 15 days 
      * @return AddedOnTheFifteen Number of hosts added in the last 15 days
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getAddedOnTheFifteen() {
         return this.AddedOnTheFifteen;
@@ -359,9 +346,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Number of hosts added in the last 15 days
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param AddedOnTheFifteen Number of hosts added in the last 15 days
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setAddedOnTheFifteen(Long AddedOnTheFifteen) {
         this.AddedOnTheFifteen = AddedOnTheFifteen;

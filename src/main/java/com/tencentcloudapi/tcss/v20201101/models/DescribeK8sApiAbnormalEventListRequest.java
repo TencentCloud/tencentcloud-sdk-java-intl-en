@@ -24,165 +24,115 @@ import java.util.HashMap;
 public class DescribeK8sApiAbnormalEventListRequest extends AbstractModel {
 
     /**
-    * Filters.
-<li>TimeRange - String - Optional - Time range. Example: ["2022-03-31 16:55:00", "2022-03-31 17:00:00"]</li>
-<li>`MatchRules` - String - Optional - Hit rule</li>
-<li>`RiskLevel` - String - Optional - Threat level</li>
-<li>`Status` - String - Optional - Event status</li>
-<li>`MatchRuleType` - String - Optional - Hit rule type</li>
-<li>`ClusterRunningStatus` - String - Optional - Cluster running status</li>
-<li>`ClusterName` - String - Optional - Cluster name</li>
-<li>`ClusterID` - String - Optional - Cluster ID</li>
+    * <p>Filter conditions.</p><li>TimeRange - String - Required: No - Time range filter ["2022-03-31 16:55:00", "2022-03-31 17:00:00"];</li><li>MatchRules - String - Required: No - Hit rule filter;</li><li>RiskLevel - String - Required: No - Threat level filter;</li><li>Status - String - Required: No - Event status filter;</li><li>MatchRuleType - String - Required: No - Hit rule type filter;</li><li>ClusterRunningStatus - String - Required: No - Cluster running status;</li><li>ClusterName - String - Required: No - Cluster name;</li><li>ClusterID - String - Required: No - Cluster ID.</li>
     */
     @SerializedName("Filters")
     @Expose
     private RunTimeFilters [] Filters;
 
     /**
-    * The number of results returned. Default value: 10. Maximum value: 100.
+    * <p>Number of items to return. The default number is 10, and the maximum number is 100.</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * Offset. Default value: 0
+    * <p>Offset. Default value: 0.</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * Sort order
+    * <p>Sorting method.</p>
     */
     @SerializedName("Order")
     @Expose
     private String Order;
 
     /**
-    * Sorting field
-`LatestFoundTime`: Last creation time
-`AlarmCount`: Number of alarms
+    * <p>Sorting field.<br>LatestFoundTime: Last generation time.<br>AlarmCount: Number of alarms.</p>
     */
     @SerializedName("By")
     @Expose
     private String By;
 
     /**
-     * Get Filters.
-<li>TimeRange - String - Optional - Time range. Example: ["2022-03-31 16:55:00", "2022-03-31 17:00:00"]</li>
-<li>`MatchRules` - String - Optional - Hit rule</li>
-<li>`RiskLevel` - String - Optional - Threat level</li>
-<li>`Status` - String - Optional - Event status</li>
-<li>`MatchRuleType` - String - Optional - Hit rule type</li>
-<li>`ClusterRunningStatus` - String - Optional - Cluster running status</li>
-<li>`ClusterName` - String - Optional - Cluster name</li>
-<li>`ClusterID` - String - Optional - Cluster ID</li> 
-     * @return Filters Filters.
-<li>TimeRange - String - Optional - Time range. Example: ["2022-03-31 16:55:00", "2022-03-31 17:00:00"]</li>
-<li>`MatchRules` - String - Optional - Hit rule</li>
-<li>`RiskLevel` - String - Optional - Threat level</li>
-<li>`Status` - String - Optional - Event status</li>
-<li>`MatchRuleType` - String - Optional - Hit rule type</li>
-<li>`ClusterRunningStatus` - String - Optional - Cluster running status</li>
-<li>`ClusterName` - String - Optional - Cluster name</li>
-<li>`ClusterID` - String - Optional - Cluster ID</li>
+     * Get <p>Filter conditions.</p><li>TimeRange - String - Required: No - Time range filter ["2022-03-31 16:55:00", "2022-03-31 17:00:00"];</li><li>MatchRules - String - Required: No - Hit rule filter;</li><li>RiskLevel - String - Required: No - Threat level filter;</li><li>Status - String - Required: No - Event status filter;</li><li>MatchRuleType - String - Required: No - Hit rule type filter;</li><li>ClusterRunningStatus - String - Required: No - Cluster running status;</li><li>ClusterName - String - Required: No - Cluster name;</li><li>ClusterID - String - Required: No - Cluster ID.</li> 
+     * @return Filters <p>Filter conditions.</p><li>TimeRange - String - Required: No - Time range filter ["2022-03-31 16:55:00", "2022-03-31 17:00:00"];</li><li>MatchRules - String - Required: No - Hit rule filter;</li><li>RiskLevel - String - Required: No - Threat level filter;</li><li>Status - String - Required: No - Event status filter;</li><li>MatchRuleType - String - Required: No - Hit rule type filter;</li><li>ClusterRunningStatus - String - Required: No - Cluster running status;</li><li>ClusterName - String - Required: No - Cluster name;</li><li>ClusterID - String - Required: No - Cluster ID.</li>
      */
     public RunTimeFilters [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set Filters.
-<li>TimeRange - String - Optional - Time range. Example: ["2022-03-31 16:55:00", "2022-03-31 17:00:00"]</li>
-<li>`MatchRules` - String - Optional - Hit rule</li>
-<li>`RiskLevel` - String - Optional - Threat level</li>
-<li>`Status` - String - Optional - Event status</li>
-<li>`MatchRuleType` - String - Optional - Hit rule type</li>
-<li>`ClusterRunningStatus` - String - Optional - Cluster running status</li>
-<li>`ClusterName` - String - Optional - Cluster name</li>
-<li>`ClusterID` - String - Optional - Cluster ID</li>
-     * @param Filters Filters.
-<li>TimeRange - String - Optional - Time range. Example: ["2022-03-31 16:55:00", "2022-03-31 17:00:00"]</li>
-<li>`MatchRules` - String - Optional - Hit rule</li>
-<li>`RiskLevel` - String - Optional - Threat level</li>
-<li>`Status` - String - Optional - Event status</li>
-<li>`MatchRuleType` - String - Optional - Hit rule type</li>
-<li>`ClusterRunningStatus` - String - Optional - Cluster running status</li>
-<li>`ClusterName` - String - Optional - Cluster name</li>
-<li>`ClusterID` - String - Optional - Cluster ID</li>
+     * Set <p>Filter conditions.</p><li>TimeRange - String - Required: No - Time range filter ["2022-03-31 16:55:00", "2022-03-31 17:00:00"];</li><li>MatchRules - String - Required: No - Hit rule filter;</li><li>RiskLevel - String - Required: No - Threat level filter;</li><li>Status - String - Required: No - Event status filter;</li><li>MatchRuleType - String - Required: No - Hit rule type filter;</li><li>ClusterRunningStatus - String - Required: No - Cluster running status;</li><li>ClusterName - String - Required: No - Cluster name;</li><li>ClusterID - String - Required: No - Cluster ID.</li>
+     * @param Filters <p>Filter conditions.</p><li>TimeRange - String - Required: No - Time range filter ["2022-03-31 16:55:00", "2022-03-31 17:00:00"];</li><li>MatchRules - String - Required: No - Hit rule filter;</li><li>RiskLevel - String - Required: No - Threat level filter;</li><li>Status - String - Required: No - Event status filter;</li><li>MatchRuleType - String - Required: No - Hit rule type filter;</li><li>ClusterRunningStatus - String - Required: No - Cluster running status;</li><li>ClusterName - String - Required: No - Cluster name;</li><li>ClusterID - String - Required: No - Cluster ID.</li>
      */
     public void setFilters(RunTimeFilters [] Filters) {
         this.Filters = Filters;
     }
 
     /**
-     * Get The number of results returned. Default value: 10. Maximum value: 100. 
-     * @return Limit The number of results returned. Default value: 10. Maximum value: 100.
+     * Get <p>Number of items to return. The default number is 10, and the maximum number is 100.</p> 
+     * @return Limit <p>Number of items to return. The default number is 10, and the maximum number is 100.</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set The number of results returned. Default value: 10. Maximum value: 100.
-     * @param Limit The number of results returned. Default value: 10. Maximum value: 100.
+     * Set <p>Number of items to return. The default number is 10, and the maximum number is 100.</p>
+     * @param Limit <p>Number of items to return. The default number is 10, and the maximum number is 100.</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get Offset. Default value: 0 
-     * @return Offset Offset. Default value: 0
+     * Get <p>Offset. Default value: 0.</p> 
+     * @return Offset <p>Offset. Default value: 0.</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Offset. Default value: 0
-     * @param Offset Offset. Default value: 0
+     * Set <p>Offset. Default value: 0.</p>
+     * @param Offset <p>Offset. Default value: 0.</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get Sort order 
-     * @return Order Sort order
+     * Get <p>Sorting method.</p> 
+     * @return Order <p>Sorting method.</p>
      */
     public String getOrder() {
         return this.Order;
     }
 
     /**
-     * Set Sort order
-     * @param Order Sort order
+     * Set <p>Sorting method.</p>
+     * @param Order <p>Sorting method.</p>
      */
     public void setOrder(String Order) {
         this.Order = Order;
     }
 
     /**
-     * Get Sorting field
-`LatestFoundTime`: Last creation time
-`AlarmCount`: Number of alarms 
-     * @return By Sorting field
-`LatestFoundTime`: Last creation time
-`AlarmCount`: Number of alarms
+     * Get <p>Sorting field.<br>LatestFoundTime: Last generation time.<br>AlarmCount: Number of alarms.</p> 
+     * @return By <p>Sorting field.<br>LatestFoundTime: Last generation time.<br>AlarmCount: Number of alarms.</p>
      */
     public String getBy() {
         return this.By;
     }
 
     /**
-     * Set Sorting field
-`LatestFoundTime`: Last creation time
-`AlarmCount`: Number of alarms
-     * @param By Sorting field
-`LatestFoundTime`: Last creation time
-`AlarmCount`: Number of alarms
+     * Set <p>Sorting field.<br>LatestFoundTime: Last generation time.<br>AlarmCount: Number of alarms.</p>
+     * @param By <p>Sorting field.<br>LatestFoundTime: Last generation time.<br>AlarmCount: Number of alarms.</p>
      */
     public void setBy(String By) {
         this.By = By;

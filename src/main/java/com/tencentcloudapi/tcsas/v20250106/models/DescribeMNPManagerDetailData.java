@@ -24,299 +24,299 @@ import java.util.HashMap;
 public class DescribeMNPManagerDetailData extends AbstractModel {
 
     /**
-    * Mini program category.
+    * <p>Mini program category.</p>
     */
     @SerializedName("MNPType")
     @Expose
     private String MNPType;
 
     /**
-    * Mini program appid.
+    * <p>Mini program appid.</p>
     */
     @SerializedName("MNPId")
     @Expose
     private String MNPId;
 
     /**
-    * Mini program name.
+    * <p>Mini program name.</p>
     */
     @SerializedName("MNPName")
     @Expose
     private String MNPName;
 
     /**
-    * Mini program icon.
+    * <p>Mini program icon.</p>
     */
     @SerializedName("MNPIcon")
     @Expose
     private String MNPIcon;
 
     /**
-    * Mini program introduction.
+    * <p>Mini program introduction.</p>
     */
     @SerializedName("MNPIntro")
     @Expose
     private String MNPIntro;
 
     /**
-    * Mini program description.
+    * <p>Mini program description.</p>
     */
     @SerializedName("MNPDesc")
     @Expose
     private String MNPDesc;
 
     /**
-    * Creation time.
+    * <p>Creation time.</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * Creator.
+    * <p>Creator.</p>
     */
     @SerializedName("CreateUser")
     @Expose
     private String CreateUser;
 
     /**
-    * Access status. Valid values: 1: not connected; 2: connected.
+    * <p>Access status. Valid values: 1: Not connected; 2: Connected.</p>
     */
     @SerializedName("AccessStatus")
     @Expose
     private Long AccessStatus;
 
     /**
-    * Team name.
+    * <p>Team name.</p>
     */
     @SerializedName("TeamName")
     @Expose
     private String TeamName;
 
     /**
-    * Team ID.
+    * <p>Team ID.</p>
     */
     @SerializedName("TeamId")
     @Expose
     private String TeamId;
 
     /**
-    * Mini program available status. Valid values: 1: Available; 2: Removed.
+    * <p>Mini program available status. Valid values: 1: Available; 2: Not available.</p>
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * The mini program name and description in multiple languages.
+    * <p>The mini program name and description in multiple languages.</p>
     */
     @SerializedName("I18nList")
     @Expose
     private MNPDetailI18nVO [] I18nList;
 
     /**
-     * Get Mini program category. 
-     * @return MNPType Mini program category.
+     * Get <p>Mini program category.</p> 
+     * @return MNPType <p>Mini program category.</p>
      */
     public String getMNPType() {
         return this.MNPType;
     }
 
     /**
-     * Set Mini program category.
-     * @param MNPType Mini program category.
+     * Set <p>Mini program category.</p>
+     * @param MNPType <p>Mini program category.</p>
      */
     public void setMNPType(String MNPType) {
         this.MNPType = MNPType;
     }
 
     /**
-     * Get Mini program appid. 
-     * @return MNPId Mini program appid.
+     * Get <p>Mini program appid.</p> 
+     * @return MNPId <p>Mini program appid.</p>
      */
     public String getMNPId() {
         return this.MNPId;
     }
 
     /**
-     * Set Mini program appid.
-     * @param MNPId Mini program appid.
+     * Set <p>Mini program appid.</p>
+     * @param MNPId <p>Mini program appid.</p>
      */
     public void setMNPId(String MNPId) {
         this.MNPId = MNPId;
     }
 
     /**
-     * Get Mini program name. 
-     * @return MNPName Mini program name.
+     * Get <p>Mini program name.</p> 
+     * @return MNPName <p>Mini program name.</p>
      */
     public String getMNPName() {
         return this.MNPName;
     }
 
     /**
-     * Set Mini program name.
-     * @param MNPName Mini program name.
+     * Set <p>Mini program name.</p>
+     * @param MNPName <p>Mini program name.</p>
      */
     public void setMNPName(String MNPName) {
         this.MNPName = MNPName;
     }
 
     /**
-     * Get Mini program icon. 
-     * @return MNPIcon Mini program icon.
+     * Get <p>Mini program icon.</p> 
+     * @return MNPIcon <p>Mini program icon.</p>
      */
     public String getMNPIcon() {
         return this.MNPIcon;
     }
 
     /**
-     * Set Mini program icon.
-     * @param MNPIcon Mini program icon.
+     * Set <p>Mini program icon.</p>
+     * @param MNPIcon <p>Mini program icon.</p>
      */
     public void setMNPIcon(String MNPIcon) {
         this.MNPIcon = MNPIcon;
     }
 
     /**
-     * Get Mini program introduction. 
-     * @return MNPIntro Mini program introduction.
+     * Get <p>Mini program introduction.</p> 
+     * @return MNPIntro <p>Mini program introduction.</p>
      */
     public String getMNPIntro() {
         return this.MNPIntro;
     }
 
     /**
-     * Set Mini program introduction.
-     * @param MNPIntro Mini program introduction.
+     * Set <p>Mini program introduction.</p>
+     * @param MNPIntro <p>Mini program introduction.</p>
      */
     public void setMNPIntro(String MNPIntro) {
         this.MNPIntro = MNPIntro;
     }
 
     /**
-     * Get Mini program description. 
-     * @return MNPDesc Mini program description.
+     * Get <p>Mini program description.</p> 
+     * @return MNPDesc <p>Mini program description.</p>
      */
     public String getMNPDesc() {
         return this.MNPDesc;
     }
 
     /**
-     * Set Mini program description.
-     * @param MNPDesc Mini program description.
+     * Set <p>Mini program description.</p>
+     * @param MNPDesc <p>Mini program description.</p>
      */
     public void setMNPDesc(String MNPDesc) {
         this.MNPDesc = MNPDesc;
     }
 
     /**
-     * Get Creation time. 
-     * @return CreateTime Creation time.
+     * Get <p>Creation time.</p> 
+     * @return CreateTime <p>Creation time.</p>
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set Creation time.
-     * @param CreateTime Creation time.
+     * Set <p>Creation time.</p>
+     * @param CreateTime <p>Creation time.</p>
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get Creator. 
-     * @return CreateUser Creator.
+     * Get <p>Creator.</p> 
+     * @return CreateUser <p>Creator.</p>
      */
     public String getCreateUser() {
         return this.CreateUser;
     }
 
     /**
-     * Set Creator.
-     * @param CreateUser Creator.
+     * Set <p>Creator.</p>
+     * @param CreateUser <p>Creator.</p>
      */
     public void setCreateUser(String CreateUser) {
         this.CreateUser = CreateUser;
     }
 
     /**
-     * Get Access status. Valid values: 1: not connected; 2: connected. 
-     * @return AccessStatus Access status. Valid values: 1: not connected; 2: connected.
+     * Get <p>Access status. Valid values: 1: Not connected; 2: Connected.</p> 
+     * @return AccessStatus <p>Access status. Valid values: 1: Not connected; 2: Connected.</p>
      */
     public Long getAccessStatus() {
         return this.AccessStatus;
     }
 
     /**
-     * Set Access status. Valid values: 1: not connected; 2: connected.
-     * @param AccessStatus Access status. Valid values: 1: not connected; 2: connected.
+     * Set <p>Access status. Valid values: 1: Not connected; 2: Connected.</p>
+     * @param AccessStatus <p>Access status. Valid values: 1: Not connected; 2: Connected.</p>
      */
     public void setAccessStatus(Long AccessStatus) {
         this.AccessStatus = AccessStatus;
     }
 
     /**
-     * Get Team name. 
-     * @return TeamName Team name.
+     * Get <p>Team name.</p> 
+     * @return TeamName <p>Team name.</p>
      */
     public String getTeamName() {
         return this.TeamName;
     }
 
     /**
-     * Set Team name.
-     * @param TeamName Team name.
+     * Set <p>Team name.</p>
+     * @param TeamName <p>Team name.</p>
      */
     public void setTeamName(String TeamName) {
         this.TeamName = TeamName;
     }
 
     /**
-     * Get Team ID. 
-     * @return TeamId Team ID.
+     * Get <p>Team ID.</p> 
+     * @return TeamId <p>Team ID.</p>
      */
     public String getTeamId() {
         return this.TeamId;
     }
 
     /**
-     * Set Team ID.
-     * @param TeamId Team ID.
+     * Set <p>Team ID.</p>
+     * @param TeamId <p>Team ID.</p>
      */
     public void setTeamId(String TeamId) {
         this.TeamId = TeamId;
     }
 
     /**
-     * Get Mini program available status. Valid values: 1: Available; 2: Removed. 
-     * @return Status Mini program available status. Valid values: 1: Available; 2: Removed.
+     * Get <p>Mini program available status. Valid values: 1: Available; 2: Not available.</p> 
+     * @return Status <p>Mini program available status. Valid values: 1: Available; 2: Not available.</p>
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Mini program available status. Valid values: 1: Available; 2: Removed.
-     * @param Status Mini program available status. Valid values: 1: Available; 2: Removed.
+     * Set <p>Mini program available status. Valid values: 1: Available; 2: Not available.</p>
+     * @param Status <p>Mini program available status. Valid values: 1: Available; 2: Not available.</p>
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get The mini program name and description in multiple languages. 
-     * @return I18nList The mini program name and description in multiple languages.
+     * Get <p>The mini program name and description in multiple languages.</p> 
+     * @return I18nList <p>The mini program name and description in multiple languages.</p>
      */
     public MNPDetailI18nVO [] getI18nList() {
         return this.I18nList;
     }
 
     /**
-     * Set The mini program name and description in multiple languages.
-     * @param I18nList The mini program name and description in multiple languages.
+     * Set <p>The mini program name and description in multiple languages.</p>
+     * @param I18nList <p>The mini program name and description in multiple languages.</p>
      */
     public void setI18nList(MNPDetailI18nVO [] I18nList) {
         this.I18nList = I18nList;

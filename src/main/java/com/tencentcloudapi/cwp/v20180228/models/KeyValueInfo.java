@@ -31,8 +31,7 @@ public class KeyValueInfo extends AbstractModel {
     private Boolean CaseSensitive;
 
     /**
-    * Information about the key-value pair to be indexed
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Information about the key-value pair that requires index creation.
     */
     @SerializedName("KeyValues")
     @Expose
@@ -55,20 +54,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Information about the key-value pair to be indexed
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return KeyValues Information about the key-value pair to be indexed
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Information about the key-value pair that requires index creation. 
+     * @return KeyValues Information about the key-value pair that requires index creation.
      */
     public KeyValueArrayInfo [] getKeyValues() {
         return this.KeyValues;
     }
 
     /**
-     * Set Information about the key-value pair to be indexed
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param KeyValues Information about the key-value pair to be indexed
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Information about the key-value pair that requires index creation.
+     * @param KeyValues Information about the key-value pair that requires index creation.
      */
     public void setKeyValues(KeyValueArrayInfo [] KeyValues) {
         this.KeyValues = KeyValues;

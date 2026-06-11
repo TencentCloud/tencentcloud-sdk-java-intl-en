@@ -24,9 +24,22 @@ import java.util.HashMap;
 public class DescribeK8sApiAbnormalRuleListRequest extends AbstractModel {
 
     /**
-    * Filters.
-<li>`RuleType` - String - Optional - Rule type</li>
-<li>`Status` - String - Optional - Status</li>
+    * Sorting field.
+<li>`UpdateTime` - String - Optional - Last updated</li>
+<li>`EffectClusterCount` - String - Optional - Number of clusters affected</li>
+    */
+    @SerializedName("By")
+    @Expose
+    private String By;
+
+    /**
+    * Filter criteria
+<li>RuleType - string - required: no - rule type</li>
+<li>Status - string - required: no - status</li>
+<li>RuleName - string - required: no - rule name (fuzzy query)</li>
+<li>ClusterName - string - Required: No - Cluster name. Fuzzy search for rules bound to the cluster (including full cluster rules).</li>
+<li>ClusterID - string - Required: No - Cluster ID. Fuzzy search for rules bound to the cluster (including cluster rules).</li>
+<li>RuleAction - string - Required: No - Execution action filter. Value: RULE_MODE_ALERT (alert), RULE_MODE_HOLDUP (intercept)</li>
     */
     @SerializedName("Filters")
     @Expose
@@ -54,33 +67,64 @@ public class DescribeK8sApiAbnormalRuleListRequest extends AbstractModel {
     private String Order;
 
     /**
-    * Sorting field.
+     * Get Sorting field.
+<li>`UpdateTime` - String - Optional - Last updated</li>
+<li>`EffectClusterCount` - String - Optional - Number of clusters affected</li> 
+     * @return By Sorting field.
 <li>`UpdateTime` - String - Optional - Last updated</li>
 <li>`EffectClusterCount` - String - Optional - Number of clusters affected</li>
-    */
-    @SerializedName("By")
-    @Expose
-    private String By;
+     */
+    public String getBy() {
+        return this.By;
+    }
 
     /**
-     * Get Filters.
-<li>`RuleType` - String - Optional - Rule type</li>
-<li>`Status` - String - Optional - Status</li> 
-     * @return Filters Filters.
-<li>`RuleType` - String - Optional - Rule type</li>
-<li>`Status` - String - Optional - Status</li>
+     * Set Sorting field.
+<li>`UpdateTime` - String - Optional - Last updated</li>
+<li>`EffectClusterCount` - String - Optional - Number of clusters affected</li>
+     * @param By Sorting field.
+<li>`UpdateTime` - String - Optional - Last updated</li>
+<li>`EffectClusterCount` - String - Optional - Number of clusters affected</li>
+     */
+    public void setBy(String By) {
+        this.By = By;
+    }
+
+    /**
+     * Get Filter criteria
+<li>RuleType - string - required: no - rule type</li>
+<li>Status - string - required: no - status</li>
+<li>RuleName - string - required: no - rule name (fuzzy query)</li>
+<li>ClusterName - string - Required: No - Cluster name. Fuzzy search for rules bound to the cluster (including full cluster rules).</li>
+<li>ClusterID - string - Required: No - Cluster ID. Fuzzy search for rules bound to the cluster (including cluster rules).</li>
+<li>RuleAction - string - Required: No - Execution action filter. Value: RULE_MODE_ALERT (alert), RULE_MODE_HOLDUP (intercept)</li> 
+     * @return Filters Filter criteria
+<li>RuleType - string - required: no - rule type</li>
+<li>Status - string - required: no - status</li>
+<li>RuleName - string - required: no - rule name (fuzzy query)</li>
+<li>ClusterName - string - Required: No - Cluster name. Fuzzy search for rules bound to the cluster (including full cluster rules).</li>
+<li>ClusterID - string - Required: No - Cluster ID. Fuzzy search for rules bound to the cluster (including cluster rules).</li>
+<li>RuleAction - string - Required: No - Execution action filter. Value: RULE_MODE_ALERT (alert), RULE_MODE_HOLDUP (intercept)</li>
      */
     public RunTimeFilters [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set Filters.
-<li>`RuleType` - String - Optional - Rule type</li>
-<li>`Status` - String - Optional - Status</li>
-     * @param Filters Filters.
-<li>`RuleType` - String - Optional - Rule type</li>
-<li>`Status` - String - Optional - Status</li>
+     * Set Filter criteria
+<li>RuleType - string - required: no - rule type</li>
+<li>Status - string - required: no - status</li>
+<li>RuleName - string - required: no - rule name (fuzzy query)</li>
+<li>ClusterName - string - Required: No - Cluster name. Fuzzy search for rules bound to the cluster (including full cluster rules).</li>
+<li>ClusterID - string - Required: No - Cluster ID. Fuzzy search for rules bound to the cluster (including cluster rules).</li>
+<li>RuleAction - string - Required: No - Execution action filter. Value: RULE_MODE_ALERT (alert), RULE_MODE_HOLDUP (intercept)</li>
+     * @param Filters Filter criteria
+<li>RuleType - string - required: no - rule type</li>
+<li>Status - string - required: no - status</li>
+<li>RuleName - string - required: no - rule name (fuzzy query)</li>
+<li>ClusterName - string - Required: No - Cluster name. Fuzzy search for rules bound to the cluster (including full cluster rules).</li>
+<li>ClusterID - string - Required: No - Cluster ID. Fuzzy search for rules bound to the cluster (including cluster rules).</li>
+<li>RuleAction - string - Required: No - Execution action filter. Value: RULE_MODE_ALERT (alert), RULE_MODE_HOLDUP (intercept)</li>
      */
     public void setFilters(RunTimeFilters [] Filters) {
         this.Filters = Filters;
@@ -134,30 +178,6 @@ public class DescribeK8sApiAbnormalRuleListRequest extends AbstractModel {
         this.Order = Order;
     }
 
-    /**
-     * Get Sorting field.
-<li>`UpdateTime` - String - Optional - Last updated</li>
-<li>`EffectClusterCount` - String - Optional - Number of clusters affected</li> 
-     * @return By Sorting field.
-<li>`UpdateTime` - String - Optional - Last updated</li>
-<li>`EffectClusterCount` - String - Optional - Number of clusters affected</li>
-     */
-    public String getBy() {
-        return this.By;
-    }
-
-    /**
-     * Set Sorting field.
-<li>`UpdateTime` - String - Optional - Last updated</li>
-<li>`EffectClusterCount` - String - Optional - Number of clusters affected</li>
-     * @param By Sorting field.
-<li>`UpdateTime` - String - Optional - Last updated</li>
-<li>`EffectClusterCount` - String - Optional - Number of clusters affected</li>
-     */
-    public void setBy(String By) {
-        this.By = By;
-    }
-
     public DescribeK8sApiAbnormalRuleListRequest() {
     }
 
@@ -166,6 +186,9 @@ public class DescribeK8sApiAbnormalRuleListRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeK8sApiAbnormalRuleListRequest(DescribeK8sApiAbnormalRuleListRequest source) {
+        if (source.By != null) {
+            this.By = new String(source.By);
+        }
         if (source.Filters != null) {
             this.Filters = new RunTimeFilters[source.Filters.length];
             for (int i = 0; i < source.Filters.length; i++) {
@@ -181,9 +204,6 @@ public class DescribeK8sApiAbnormalRuleListRequest extends AbstractModel {
         if (source.Order != null) {
             this.Order = new String(source.Order);
         }
-        if (source.By != null) {
-            this.By = new String(source.By);
-        }
     }
 
 
@@ -191,11 +211,11 @@ public class DescribeK8sApiAbnormalRuleListRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "By", this.By);
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Order", this.Order);
-        this.setParamSimple(map, prefix + "By", this.By);
 
     }
 }

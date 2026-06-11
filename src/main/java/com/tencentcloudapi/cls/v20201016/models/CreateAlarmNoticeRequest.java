@@ -24,118 +24,326 @@ import java.util.HashMap;
 public class CreateAlarmNoticeRequest extends AbstractModel {
 
     /**
-    * Notification group name
+    * Notification channel group name. Supports a maximum of 255 bytes. Does not support '|'.
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * Notification type. Optional Values:<li> Trigger - Alarm triggered </li><li> Recovery - Alarm recovery</li><li> All - Alarm triggered and alarm recovery</li>
+    * Tag description list. By specifying this parameter, you can bind multiple tags to the corresponding notification channel group. A maximum of 50 tag key-value pairs are supported, and there should not be duplicate key-value pairs.
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
+    * [Easy mode] (Select either easy mode or alarm mode and configure corresponding parameters)
+Alarm types that require sending notifications. Available values:
+- Trigger - Alarm trigger
+-Alarm Recovery
+-All - Alarm trigger and alarm recovery
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * Notification recipient
+    * [Easy mode] (Select either easy mode or alarm mode and configure corresponding parameters)
+Notification recipients
     */
     @SerializedName("NoticeReceivers")
     @Expose
     private NoticeReceiver [] NoticeReceivers;
 
     /**
-    * API callback information (including WeCom)
+    * [Easy mode] (Select either easy mode or alarm mode and configure corresponding parameters)
+Interface callback information (including WeCom, DingTalk, Lark).
     */
     @SerializedName("WebCallbacks")
     @Expose
     private WebCallback [] WebCallbacks;
 
     /**
-    * Notification RulesNote: - Type, NoticeReceivers, and WebCallbacks form one set of configurations, and NoticeRules form another set. The two sets of configurations are mutually exclusive.
+    * [Advanced mode] (Choose between easy mode and alarm mode, and configure corresponding parameters)
+Notification rules.
     */
     @SerializedName("NoticeRules")
     @Expose
     private NoticeRule [] NoticeRules;
 
     /**
-     * Get Notification group name 
-     * @return Name Notification group name
+    * Query data link. It should start with http:// or https:// and should not end with /.
+    */
+    @SerializedName("JumpDomain")
+    @Expose
+    private String JumpDomain;
+
+    /**
+    * Delivery log switch. Values are as follows:
+1: Off (default value).
+2: Enable 
+When the delivery log switch is enabled, the DeliverConfig parameter is required.
+    */
+    @SerializedName("DeliverStatus")
+    @Expose
+    private Long DeliverStatus;
+
+    /**
+    * Log shipping configuration parameter. It is required when DeliverStatus is enabled.
+    */
+    @SerializedName("DeliverConfig")
+    @Expose
+    private DeliverConfig DeliverConfig;
+
+    /**
+    * Login-free operation alarm switch. Values are as follows:
+- 1: disabled.
+-2: Enable (default value)
+    */
+    @SerializedName("AlarmShieldStatus")
+    @Expose
+    private Long AlarmShieldStatus;
+
+    /**
+    * Unify the custom callback parameter settings.
+-true: Use the custom callback parameters in the notification content template to override the request header and request body separately configured in the alarm policy.
+-false: Prioritize using the request header and request body separately configured in the alarm policy.
+    */
+    @SerializedName("CallbackPrioritize")
+    @Expose
+    private Boolean CallbackPrioritize;
+
+    /**
+     * Get Notification channel group name. Supports a maximum of 255 bytes. Does not support '|'. 
+     * @return Name Notification channel group name. Supports a maximum of 255 bytes. Does not support '|'.
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Notification group name
-     * @param Name Notification group name
+     * Set Notification channel group name. Supports a maximum of 255 bytes. Does not support '|'.
+     * @param Name Notification channel group name. Supports a maximum of 255 bytes. Does not support '|'.
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get Notification type. Optional Values:<li> Trigger - Alarm triggered </li><li> Recovery - Alarm recovery</li><li> All - Alarm triggered and alarm recovery</li> 
-     * @return Type Notification type. Optional Values:<li> Trigger - Alarm triggered </li><li> Recovery - Alarm recovery</li><li> All - Alarm triggered and alarm recovery</li>
+     * Get Tag description list. By specifying this parameter, you can bind multiple tags to the corresponding notification channel group. A maximum of 50 tag key-value pairs are supported, and there should not be duplicate key-value pairs. 
+     * @return Tags Tag description list. By specifying this parameter, you can bind multiple tags to the corresponding notification channel group. A maximum of 50 tag key-value pairs are supported, and there should not be duplicate key-value pairs.
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set Tag description list. By specifying this parameter, you can bind multiple tags to the corresponding notification channel group. A maximum of 50 tag key-value pairs are supported, and there should not be duplicate key-value pairs.
+     * @param Tags Tag description list. By specifying this parameter, you can bind multiple tags to the corresponding notification channel group. A maximum of 50 tag key-value pairs are supported, and there should not be duplicate key-value pairs.
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
+    /**
+     * Get [Easy mode] (Select either easy mode or alarm mode and configure corresponding parameters)
+Alarm types that require sending notifications. Available values:
+- Trigger - Alarm trigger
+-Alarm Recovery
+-All - Alarm trigger and alarm recovery 
+     * @return Type [Easy mode] (Select either easy mode or alarm mode and configure corresponding parameters)
+Alarm types that require sending notifications. Available values:
+- Trigger - Alarm trigger
+-Alarm Recovery
+-All - Alarm trigger and alarm recovery
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set Notification type. Optional Values:<li> Trigger - Alarm triggered </li><li> Recovery - Alarm recovery</li><li> All - Alarm triggered and alarm recovery</li>
-     * @param Type Notification type. Optional Values:<li> Trigger - Alarm triggered </li><li> Recovery - Alarm recovery</li><li> All - Alarm triggered and alarm recovery</li>
+     * Set [Easy mode] (Select either easy mode or alarm mode and configure corresponding parameters)
+Alarm types that require sending notifications. Available values:
+- Trigger - Alarm trigger
+-Alarm Recovery
+-All - Alarm trigger and alarm recovery
+     * @param Type [Easy mode] (Select either easy mode or alarm mode and configure corresponding parameters)
+Alarm types that require sending notifications. Available values:
+- Trigger - Alarm trigger
+-Alarm Recovery
+-All - Alarm trigger and alarm recovery
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get Notification recipient 
-     * @return NoticeReceivers Notification recipient
+     * Get [Easy mode] (Select either easy mode or alarm mode and configure corresponding parameters)
+Notification recipients 
+     * @return NoticeReceivers [Easy mode] (Select either easy mode or alarm mode and configure corresponding parameters)
+Notification recipients
      */
     public NoticeReceiver [] getNoticeReceivers() {
         return this.NoticeReceivers;
     }
 
     /**
-     * Set Notification recipient
-     * @param NoticeReceivers Notification recipient
+     * Set [Easy mode] (Select either easy mode or alarm mode and configure corresponding parameters)
+Notification recipients
+     * @param NoticeReceivers [Easy mode] (Select either easy mode or alarm mode and configure corresponding parameters)
+Notification recipients
      */
     public void setNoticeReceivers(NoticeReceiver [] NoticeReceivers) {
         this.NoticeReceivers = NoticeReceivers;
     }
 
     /**
-     * Get API callback information (including WeCom) 
-     * @return WebCallbacks API callback information (including WeCom)
+     * Get [Easy mode] (Select either easy mode or alarm mode and configure corresponding parameters)
+Interface callback information (including WeCom, DingTalk, Lark). 
+     * @return WebCallbacks [Easy mode] (Select either easy mode or alarm mode and configure corresponding parameters)
+Interface callback information (including WeCom, DingTalk, Lark).
      */
     public WebCallback [] getWebCallbacks() {
         return this.WebCallbacks;
     }
 
     /**
-     * Set API callback information (including WeCom)
-     * @param WebCallbacks API callback information (including WeCom)
+     * Set [Easy mode] (Select either easy mode or alarm mode and configure corresponding parameters)
+Interface callback information (including WeCom, DingTalk, Lark).
+     * @param WebCallbacks [Easy mode] (Select either easy mode or alarm mode and configure corresponding parameters)
+Interface callback information (including WeCom, DingTalk, Lark).
      */
     public void setWebCallbacks(WebCallback [] WebCallbacks) {
         this.WebCallbacks = WebCallbacks;
     }
 
     /**
-     * Get Notification RulesNote: - Type, NoticeReceivers, and WebCallbacks form one set of configurations, and NoticeRules form another set. The two sets of configurations are mutually exclusive. 
-     * @return NoticeRules Notification RulesNote: - Type, NoticeReceivers, and WebCallbacks form one set of configurations, and NoticeRules form another set. The two sets of configurations are mutually exclusive.
+     * Get [Advanced mode] (Choose between easy mode and alarm mode, and configure corresponding parameters)
+Notification rules. 
+     * @return NoticeRules [Advanced mode] (Choose between easy mode and alarm mode, and configure corresponding parameters)
+Notification rules.
      */
     public NoticeRule [] getNoticeRules() {
         return this.NoticeRules;
     }
 
     /**
-     * Set Notification RulesNote: - Type, NoticeReceivers, and WebCallbacks form one set of configurations, and NoticeRules form another set. The two sets of configurations are mutually exclusive.
-     * @param NoticeRules Notification RulesNote: - Type, NoticeReceivers, and WebCallbacks form one set of configurations, and NoticeRules form another set. The two sets of configurations are mutually exclusive.
+     * Set [Advanced mode] (Choose between easy mode and alarm mode, and configure corresponding parameters)
+Notification rules.
+     * @param NoticeRules [Advanced mode] (Choose between easy mode and alarm mode, and configure corresponding parameters)
+Notification rules.
      */
     public void setNoticeRules(NoticeRule [] NoticeRules) {
         this.NoticeRules = NoticeRules;
+    }
+
+    /**
+     * Get Query data link. It should start with http:// or https:// and should not end with /. 
+     * @return JumpDomain Query data link. It should start with http:// or https:// and should not end with /.
+     */
+    public String getJumpDomain() {
+        return this.JumpDomain;
+    }
+
+    /**
+     * Set Query data link. It should start with http:// or https:// and should not end with /.
+     * @param JumpDomain Query data link. It should start with http:// or https:// and should not end with /.
+     */
+    public void setJumpDomain(String JumpDomain) {
+        this.JumpDomain = JumpDomain;
+    }
+
+    /**
+     * Get Delivery log switch. Values are as follows:
+1: Off (default value).
+2: Enable 
+When the delivery log switch is enabled, the DeliverConfig parameter is required. 
+     * @return DeliverStatus Delivery log switch. Values are as follows:
+1: Off (default value).
+2: Enable 
+When the delivery log switch is enabled, the DeliverConfig parameter is required.
+     */
+    public Long getDeliverStatus() {
+        return this.DeliverStatus;
+    }
+
+    /**
+     * Set Delivery log switch. Values are as follows:
+1: Off (default value).
+2: Enable 
+When the delivery log switch is enabled, the DeliverConfig parameter is required.
+     * @param DeliverStatus Delivery log switch. Values are as follows:
+1: Off (default value).
+2: Enable 
+When the delivery log switch is enabled, the DeliverConfig parameter is required.
+     */
+    public void setDeliverStatus(Long DeliverStatus) {
+        this.DeliverStatus = DeliverStatus;
+    }
+
+    /**
+     * Get Log shipping configuration parameter. It is required when DeliverStatus is enabled. 
+     * @return DeliverConfig Log shipping configuration parameter. It is required when DeliverStatus is enabled.
+     */
+    public DeliverConfig getDeliverConfig() {
+        return this.DeliverConfig;
+    }
+
+    /**
+     * Set Log shipping configuration parameter. It is required when DeliverStatus is enabled.
+     * @param DeliverConfig Log shipping configuration parameter. It is required when DeliverStatus is enabled.
+     */
+    public void setDeliverConfig(DeliverConfig DeliverConfig) {
+        this.DeliverConfig = DeliverConfig;
+    }
+
+    /**
+     * Get Login-free operation alarm switch. Values are as follows:
+- 1: disabled.
+-2: Enable (default value) 
+     * @return AlarmShieldStatus Login-free operation alarm switch. Values are as follows:
+- 1: disabled.
+-2: Enable (default value)
+     */
+    public Long getAlarmShieldStatus() {
+        return this.AlarmShieldStatus;
+    }
+
+    /**
+     * Set Login-free operation alarm switch. Values are as follows:
+- 1: disabled.
+-2: Enable (default value)
+     * @param AlarmShieldStatus Login-free operation alarm switch. Values are as follows:
+- 1: disabled.
+-2: Enable (default value)
+     */
+    public void setAlarmShieldStatus(Long AlarmShieldStatus) {
+        this.AlarmShieldStatus = AlarmShieldStatus;
+    }
+
+    /**
+     * Get Unify the custom callback parameter settings.
+-true: Use the custom callback parameters in the notification content template to override the request header and request body separately configured in the alarm policy.
+-false: Prioritize using the request header and request body separately configured in the alarm policy. 
+     * @return CallbackPrioritize Unify the custom callback parameter settings.
+-true: Use the custom callback parameters in the notification content template to override the request header and request body separately configured in the alarm policy.
+-false: Prioritize using the request header and request body separately configured in the alarm policy.
+     */
+    public Boolean getCallbackPrioritize() {
+        return this.CallbackPrioritize;
+    }
+
+    /**
+     * Set Unify the custom callback parameter settings.
+-true: Use the custom callback parameters in the notification content template to override the request header and request body separately configured in the alarm policy.
+-false: Prioritize using the request header and request body separately configured in the alarm policy.
+     * @param CallbackPrioritize Unify the custom callback parameter settings.
+-true: Use the custom callback parameters in the notification content template to override the request header and request body separately configured in the alarm policy.
+-false: Prioritize using the request header and request body separately configured in the alarm policy.
+     */
+    public void setCallbackPrioritize(Boolean CallbackPrioritize) {
+        this.CallbackPrioritize = CallbackPrioritize;
     }
 
     public CreateAlarmNoticeRequest() {
@@ -148,6 +356,12 @@ public class CreateAlarmNoticeRequest extends AbstractModel {
     public CreateAlarmNoticeRequest(CreateAlarmNoticeRequest source) {
         if (source.Name != null) {
             this.Name = new String(source.Name);
+        }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
         }
         if (source.Type != null) {
             this.Type = new String(source.Type);
@@ -170,6 +384,21 @@ public class CreateAlarmNoticeRequest extends AbstractModel {
                 this.NoticeRules[i] = new NoticeRule(source.NoticeRules[i]);
             }
         }
+        if (source.JumpDomain != null) {
+            this.JumpDomain = new String(source.JumpDomain);
+        }
+        if (source.DeliverStatus != null) {
+            this.DeliverStatus = new Long(source.DeliverStatus);
+        }
+        if (source.DeliverConfig != null) {
+            this.DeliverConfig = new DeliverConfig(source.DeliverConfig);
+        }
+        if (source.AlarmShieldStatus != null) {
+            this.AlarmShieldStatus = new Long(source.AlarmShieldStatus);
+        }
+        if (source.CallbackPrioritize != null) {
+            this.CallbackPrioritize = new Boolean(source.CallbackPrioritize);
+        }
     }
 
 
@@ -178,10 +407,16 @@ public class CreateAlarmNoticeRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Name", this.Name);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamArrayObj(map, prefix + "NoticeReceivers.", this.NoticeReceivers);
         this.setParamArrayObj(map, prefix + "WebCallbacks.", this.WebCallbacks);
         this.setParamArrayObj(map, prefix + "NoticeRules.", this.NoticeRules);
+        this.setParamSimple(map, prefix + "JumpDomain", this.JumpDomain);
+        this.setParamSimple(map, prefix + "DeliverStatus", this.DeliverStatus);
+        this.setParamObj(map, prefix + "DeliverConfig.", this.DeliverConfig);
+        this.setParamSimple(map, prefix + "AlarmShieldStatus", this.AlarmShieldStatus);
+        this.setParamSimple(map, prefix + "CallbackPrioritize", this.CallbackPrioritize);
 
     }
 }

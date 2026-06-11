@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class DeleteClusterDatabaseRequest extends AbstractModel {
 
     /**
-    * Cluster ID
+    * Cluster ID.
     */
     @SerializedName("ClusterId")
     @Expose
     private String ClusterId;
 
     /**
-    * 
+    * Database name.
     */
     @SerializedName("DbNames")
     @Expose
     private String [] DbNames;
 
     /**
-     * Get Cluster ID 
-     * @return ClusterId Cluster ID
+     * Get Cluster ID. 
+     * @return ClusterId Cluster ID.
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set Cluster ID
-     * @param ClusterId Cluster ID
+     * Set Cluster ID.
+     * @param ClusterId Cluster ID.
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
     }
 
     /**
-     * Get  
-     * @return DbNames 
+     * Get Database name. 
+     * @return DbNames Database name.
      */
     public String [] getDbNames() {
         return this.DbNames;
     }
 
     /**
-     * Set 
-     * @param DbNames 
+     * Set Database name.
+     * @param DbNames Database name.
      */
     public void setDbNames(String [] DbNames) {
         this.DbNames = DbNames;

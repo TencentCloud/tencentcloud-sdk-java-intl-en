@@ -37,9 +37,18 @@ Parameters must not be specified simultaneously `InstanceIds` and `Filters`.
     private String [] InstanceIds;
 
     /**
-    * -agent-status - String - required: no - (filter condition) filters by agent status. valid values: Online, Offline. 
--environment - String - required: no - (filter condition) query by agent runtime environment. valid values: Linux, Windows.
--instance-id - String - required: no - (filter condition) filter by instance id. you can get the instance id through the query instance API of the corresponding cloud services. currently supports instance types: CVM, Lighthouse, and managed instances.
+    * - agent-status 
+    - String 
+    - required: no 
+    - (filter condition) filters by agent status. valid values: Online, Offline. 
+- environment 
+    - String 
+    - required: no 
+    - (filter condition) query by agent runtime environment. valid values: Linux, Windows.
+- instance-id 
+    - String 
+    - required: no 
+    - (filter condition) filter by instance id. you can get the instance id through the query instance API of the corresponding cloud services. currently supports instance types: CVM, Lighthouse, and managed instances.
 
 The maximum number of `Filters` per request is 10, and that of `Filter.Values` is 5. the `InstanceIds` and `Filters` parameters cannot be specified at the same time.
     */
@@ -102,14 +111,32 @@ Parameters must not be specified simultaneously `InstanceIds` and `Filters`.
     }
 
     /**
-     * Get -agent-status - String - required: no - (filter condition) filters by agent status. valid values: Online, Offline. 
--environment - String - required: no - (filter condition) query by agent runtime environment. valid values: Linux, Windows.
--instance-id - String - required: no - (filter condition) filter by instance id. you can get the instance id through the query instance API of the corresponding cloud services. currently supports instance types: CVM, Lighthouse, and managed instances.
+     * Get - agent-status 
+    - String 
+    - required: no 
+    - (filter condition) filters by agent status. valid values: Online, Offline. 
+- environment 
+    - String 
+    - required: no 
+    - (filter condition) query by agent runtime environment. valid values: Linux, Windows.
+- instance-id 
+    - String 
+    - required: no 
+    - (filter condition) filter by instance id. you can get the instance id through the query instance API of the corresponding cloud services. currently supports instance types: CVM, Lighthouse, and managed instances.
 
 The maximum number of `Filters` per request is 10, and that of `Filter.Values` is 5. the `InstanceIds` and `Filters` parameters cannot be specified at the same time. 
-     * @return Filters -agent-status - String - required: no - (filter condition) filters by agent status. valid values: Online, Offline. 
--environment - String - required: no - (filter condition) query by agent runtime environment. valid values: Linux, Windows.
--instance-id - String - required: no - (filter condition) filter by instance id. you can get the instance id through the query instance API of the corresponding cloud services. currently supports instance types: CVM, Lighthouse, and managed instances.
+     * @return Filters - agent-status 
+    - String 
+    - required: no 
+    - (filter condition) filters by agent status. valid values: Online, Offline. 
+- environment 
+    - String 
+    - required: no 
+    - (filter condition) query by agent runtime environment. valid values: Linux, Windows.
+- instance-id 
+    - String 
+    - required: no 
+    - (filter condition) filter by instance id. you can get the instance id through the query instance API of the corresponding cloud services. currently supports instance types: CVM, Lighthouse, and managed instances.
 
 The maximum number of `Filters` per request is 10, and that of `Filter.Values` is 5. the `InstanceIds` and `Filters` parameters cannot be specified at the same time.
      */
@@ -118,14 +145,32 @@ The maximum number of `Filters` per request is 10, and that of `Filter.Values` i
     }
 
     /**
-     * Set -agent-status - String - required: no - (filter condition) filters by agent status. valid values: Online, Offline. 
--environment - String - required: no - (filter condition) query by agent runtime environment. valid values: Linux, Windows.
--instance-id - String - required: no - (filter condition) filter by instance id. you can get the instance id through the query instance API of the corresponding cloud services. currently supports instance types: CVM, Lighthouse, and managed instances.
+     * Set - agent-status 
+    - String 
+    - required: no 
+    - (filter condition) filters by agent status. valid values: Online, Offline. 
+- environment 
+    - String 
+    - required: no 
+    - (filter condition) query by agent runtime environment. valid values: Linux, Windows.
+- instance-id 
+    - String 
+    - required: no 
+    - (filter condition) filter by instance id. you can get the instance id through the query instance API of the corresponding cloud services. currently supports instance types: CVM, Lighthouse, and managed instances.
 
 The maximum number of `Filters` per request is 10, and that of `Filter.Values` is 5. the `InstanceIds` and `Filters` parameters cannot be specified at the same time.
-     * @param Filters -agent-status - String - required: no - (filter condition) filters by agent status. valid values: Online, Offline. 
--environment - String - required: no - (filter condition) query by agent runtime environment. valid values: Linux, Windows.
--instance-id - String - required: no - (filter condition) filter by instance id. you can get the instance id through the query instance API of the corresponding cloud services. currently supports instance types: CVM, Lighthouse, and managed instances.
+     * @param Filters - agent-status 
+    - String 
+    - required: no 
+    - (filter condition) filters by agent status. valid values: Online, Offline. 
+- environment 
+    - String 
+    - required: no 
+    - (filter condition) query by agent runtime environment. valid values: Linux, Windows.
+- instance-id 
+    - String 
+    - required: no 
+    - (filter condition) filter by instance id. you can get the instance id through the query instance API of the corresponding cloud services. currently supports instance types: CVM, Lighthouse, and managed instances.
 
 The maximum number of `Filters` per request is 10, and that of `Filter.Values` is 5. the `InstanceIds` and `Filters` parameters cannot be specified at the same time.
      */

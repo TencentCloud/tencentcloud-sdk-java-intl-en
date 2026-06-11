@@ -24,15 +24,14 @@ import java.util.HashMap;
 public class InstanceCLSDeliveryInfo extends AbstractModel {
 
     /**
-    * Instance ID
+    * Instance ID.
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Instance name
-
+    * Instance name.
 
     */
     @SerializedName("InstanceName")
@@ -48,7 +47,7 @@ public class InstanceCLSDeliveryInfo extends AbstractModel {
     private String TopicId;
 
     /**
-    * Log topic name
+    * Log topic name.
     */
     @SerializedName("TopicName")
     @Expose
@@ -56,7 +55,6 @@ public class InstanceCLSDeliveryInfo extends AbstractModel {
 
     /**
     * Log set id.
-
     */
     @SerializedName("GroupId")
     @Expose
@@ -65,7 +63,6 @@ public class InstanceCLSDeliveryInfo extends AbstractModel {
     /**
     * Log set name.
 
-
     */
     @SerializedName("GroupName")
     @Expose
@@ -73,7 +70,6 @@ public class InstanceCLSDeliveryInfo extends AbstractModel {
 
     /**
     * Log delivery region.
-
     */
     @SerializedName("Region")
     @Expose
@@ -81,7 +77,6 @@ public class InstanceCLSDeliveryInfo extends AbstractModel {
 
     /**
     * Delivery status: creating, running, offlining, offlined.
-
     */
     @SerializedName("Status")
     @Expose
@@ -95,27 +90,25 @@ public class InstanceCLSDeliveryInfo extends AbstractModel {
     private String LogType;
 
     /**
-     * Get Instance ID 
-     * @return InstanceId Instance ID
+     * Get Instance ID. 
+     * @return InstanceId Instance ID.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Instance ID
-     * @param InstanceId Instance ID
+     * Set Instance ID.
+     * @param InstanceId Instance ID.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Instance name
-
+     * Get Instance name.
  
-     * @return InstanceName Instance name
-
+     * @return InstanceName Instance name.
 
      */
     public String getInstanceName() {
@@ -123,11 +116,9 @@ public class InstanceCLSDeliveryInfo extends AbstractModel {
     }
 
     /**
-     * Set Instance name
+     * Set Instance name.
 
-
-     * @param InstanceName Instance name
-
+     * @param InstanceName Instance name.
 
      */
     public void setInstanceName(String InstanceName) {
@@ -155,26 +146,24 @@ public class InstanceCLSDeliveryInfo extends AbstractModel {
     }
 
     /**
-     * Get Log topic name 
-     * @return TopicName Log topic name
+     * Get Log topic name. 
+     * @return TopicName Log topic name.
      */
     public String getTopicName() {
         return this.TopicName;
     }
 
     /**
-     * Set Log topic name
-     * @param TopicName Log topic name
+     * Set Log topic name.
+     * @param TopicName Log topic name.
      */
     public void setTopicName(String TopicName) {
         this.TopicName = TopicName;
     }
 
     /**
-     * Get Log set id.
- 
+     * Get Log set id. 
      * @return GroupId Log set id.
-
      */
     public String getGroupId() {
         return this.GroupId;
@@ -182,9 +171,7 @@ public class InstanceCLSDeliveryInfo extends AbstractModel {
 
     /**
      * Set Log set id.
-
      * @param GroupId Log set id.
-
      */
     public void setGroupId(String GroupId) {
         this.GroupId = GroupId;
@@ -192,10 +179,8 @@ public class InstanceCLSDeliveryInfo extends AbstractModel {
 
     /**
      * Get Log set name.
-
  
      * @return GroupName Log set name.
-
 
      */
     public String getGroupName() {
@@ -205,9 +190,7 @@ public class InstanceCLSDeliveryInfo extends AbstractModel {
     /**
      * Set Log set name.
 
-
      * @param GroupName Log set name.
-
 
      */
     public void setGroupName(String GroupName) {
@@ -215,10 +198,8 @@ public class InstanceCLSDeliveryInfo extends AbstractModel {
     }
 
     /**
-     * Get Log delivery region.
- 
+     * Get Log delivery region. 
      * @return Region Log delivery region.
-
      */
     public String getRegion() {
         return this.Region;
@@ -226,19 +207,15 @@ public class InstanceCLSDeliveryInfo extends AbstractModel {
 
     /**
      * Set Log delivery region.
-
      * @param Region Log delivery region.
-
      */
     public void setRegion(String Region) {
         this.Region = Region;
     }
 
     /**
-     * Get Delivery status: creating, running, offlining, offlined.
- 
+     * Get Delivery status: creating, running, offlining, offlined. 
      * @return Status Delivery status: creating, running, offlining, offlined.
-
      */
     public String getStatus() {
         return this.Status;
@@ -246,9 +223,7 @@ public class InstanceCLSDeliveryInfo extends AbstractModel {
 
     /**
      * Set Delivery status: creating, running, offlining, offlined.
-
      * @param Status Delivery status: creating, running, offlining, offlined.
-
      */
     public void setStatus(String Status) {
         this.Status = Status;

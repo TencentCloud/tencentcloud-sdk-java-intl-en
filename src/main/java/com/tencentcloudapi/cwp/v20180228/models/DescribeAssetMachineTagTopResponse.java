@@ -25,7 +25,6 @@ public class DescribeAssetMachineTagTopResponse extends AbstractModel {
 
     /**
     * Top 5 tags along with their counts
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Tags")
     @Expose
@@ -39,10 +38,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Top 5 tags along with their counts
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Top 5 tags along with their counts 
      * @return Tags Top 5 tags along with their counts
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public AssetKeyVal [] getTags() {
         return this.Tags;
@@ -50,9 +47,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Top 5 tags along with their counts
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Tags Top 5 tags along with their counts
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setTags(AssetKeyVal [] Tags) {
         this.Tags = Tags;

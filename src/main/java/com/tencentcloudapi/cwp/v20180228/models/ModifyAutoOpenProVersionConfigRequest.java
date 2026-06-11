@@ -33,6 +33,16 @@ public class ModifyAutoOpenProVersionConfigRequest extends AbstractModel {
     private String Status;
 
     /**
+    * Strengthen protection mode
+PROVERSION_POSTPAY indicates the Pro Edition pay-as-you-go mode.
+PROVERSION_PREPAY Professional Edition - Subscription
+FLAGSHIP_PREPAY Flagship Edition - Subscription
+    */
+    @SerializedName("ProtectType")
+    @Expose
+    private String ProtectType;
+
+    /**
     * Automatic purchase/expansion authorization switch, 1 by default, 0 for OFF, 1 for ON.
     */
     @SerializedName("AutoRepurchaseSwitch")
@@ -52,6 +62,27 @@ public class ModifyAutoOpenProVersionConfigRequest extends AbstractModel {
     @SerializedName("RepurchaseRenewSwitch")
     @Expose
     private Long RepurchaseRenewSwitch;
+
+    /**
+    * Automatically add machines and bind rasp. 0: Turn off. 1: Turn on.
+    */
+    @SerializedName("AutoBindRaspSwitch")
+    @Expose
+    private Long AutoBindRaspSwitch;
+
+    /**
+    * Automatically add machines with rasp protection enabled, off by default. 0: Off, 1: On
+    */
+    @SerializedName("AutoOpenRaspSwitch")
+    @Expose
+    private Long AutoOpenRaspSwitch;
+
+    /**
+    * Automatic scaling down switch, 0 for off and 1 for on
+    */
+    @SerializedName("AutoDowngradeSwitch")
+    @Expose
+    private Long AutoDowngradeSwitch;
 
     /**
      * Get Set the auto-activation status.
@@ -75,6 +106,34 @@ public class ModifyAutoOpenProVersionConfigRequest extends AbstractModel {
      */
     public void setStatus(String Status) {
         this.Status = Status;
+    }
+
+    /**
+     * Get Strengthen protection mode
+PROVERSION_POSTPAY indicates the Pro Edition pay-as-you-go mode.
+PROVERSION_PREPAY Professional Edition - Subscription
+FLAGSHIP_PREPAY Flagship Edition - Subscription 
+     * @return ProtectType Strengthen protection mode
+PROVERSION_POSTPAY indicates the Pro Edition pay-as-you-go mode.
+PROVERSION_PREPAY Professional Edition - Subscription
+FLAGSHIP_PREPAY Flagship Edition - Subscription
+     */
+    public String getProtectType() {
+        return this.ProtectType;
+    }
+
+    /**
+     * Set Strengthen protection mode
+PROVERSION_POSTPAY indicates the Pro Edition pay-as-you-go mode.
+PROVERSION_PREPAY Professional Edition - Subscription
+FLAGSHIP_PREPAY Flagship Edition - Subscription
+     * @param ProtectType Strengthen protection mode
+PROVERSION_POSTPAY indicates the Pro Edition pay-as-you-go mode.
+PROVERSION_PREPAY Professional Edition - Subscription
+FLAGSHIP_PREPAY Flagship Edition - Subscription
+     */
+    public void setProtectType(String ProtectType) {
+        this.ProtectType = ProtectType;
     }
 
     /**
@@ -125,6 +184,54 @@ public class ModifyAutoOpenProVersionConfigRequest extends AbstractModel {
         this.RepurchaseRenewSwitch = RepurchaseRenewSwitch;
     }
 
+    /**
+     * Get Automatically add machines and bind rasp. 0: Turn off. 1: Turn on. 
+     * @return AutoBindRaspSwitch Automatically add machines and bind rasp. 0: Turn off. 1: Turn on.
+     */
+    public Long getAutoBindRaspSwitch() {
+        return this.AutoBindRaspSwitch;
+    }
+
+    /**
+     * Set Automatically add machines and bind rasp. 0: Turn off. 1: Turn on.
+     * @param AutoBindRaspSwitch Automatically add machines and bind rasp. 0: Turn off. 1: Turn on.
+     */
+    public void setAutoBindRaspSwitch(Long AutoBindRaspSwitch) {
+        this.AutoBindRaspSwitch = AutoBindRaspSwitch;
+    }
+
+    /**
+     * Get Automatically add machines with rasp protection enabled, off by default. 0: Off, 1: On 
+     * @return AutoOpenRaspSwitch Automatically add machines with rasp protection enabled, off by default. 0: Off, 1: On
+     */
+    public Long getAutoOpenRaspSwitch() {
+        return this.AutoOpenRaspSwitch;
+    }
+
+    /**
+     * Set Automatically add machines with rasp protection enabled, off by default. 0: Off, 1: On
+     * @param AutoOpenRaspSwitch Automatically add machines with rasp protection enabled, off by default. 0: Off, 1: On
+     */
+    public void setAutoOpenRaspSwitch(Long AutoOpenRaspSwitch) {
+        this.AutoOpenRaspSwitch = AutoOpenRaspSwitch;
+    }
+
+    /**
+     * Get Automatic scaling down switch, 0 for off and 1 for on 
+     * @return AutoDowngradeSwitch Automatic scaling down switch, 0 for off and 1 for on
+     */
+    public Long getAutoDowngradeSwitch() {
+        return this.AutoDowngradeSwitch;
+    }
+
+    /**
+     * Set Automatic scaling down switch, 0 for off and 1 for on
+     * @param AutoDowngradeSwitch Automatic scaling down switch, 0 for off and 1 for on
+     */
+    public void setAutoDowngradeSwitch(Long AutoDowngradeSwitch) {
+        this.AutoDowngradeSwitch = AutoDowngradeSwitch;
+    }
+
     public ModifyAutoOpenProVersionConfigRequest() {
     }
 
@@ -136,6 +243,9 @@ public class ModifyAutoOpenProVersionConfigRequest extends AbstractModel {
         if (source.Status != null) {
             this.Status = new String(source.Status);
         }
+        if (source.ProtectType != null) {
+            this.ProtectType = new String(source.ProtectType);
+        }
         if (source.AutoRepurchaseSwitch != null) {
             this.AutoRepurchaseSwitch = new Long(source.AutoRepurchaseSwitch);
         }
@@ -145,6 +255,15 @@ public class ModifyAutoOpenProVersionConfigRequest extends AbstractModel {
         if (source.RepurchaseRenewSwitch != null) {
             this.RepurchaseRenewSwitch = new Long(source.RepurchaseRenewSwitch);
         }
+        if (source.AutoBindRaspSwitch != null) {
+            this.AutoBindRaspSwitch = new Long(source.AutoBindRaspSwitch);
+        }
+        if (source.AutoOpenRaspSwitch != null) {
+            this.AutoOpenRaspSwitch = new Long(source.AutoOpenRaspSwitch);
+        }
+        if (source.AutoDowngradeSwitch != null) {
+            this.AutoDowngradeSwitch = new Long(source.AutoDowngradeSwitch);
+        }
     }
 
 
@@ -153,9 +272,13 @@ public class ModifyAutoOpenProVersionConfigRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "ProtectType", this.ProtectType);
         this.setParamSimple(map, prefix + "AutoRepurchaseSwitch", this.AutoRepurchaseSwitch);
         this.setParamSimple(map, prefix + "AutoRepurchaseRenewSwitch", this.AutoRepurchaseRenewSwitch);
         this.setParamSimple(map, prefix + "RepurchaseRenewSwitch", this.RepurchaseRenewSwitch);
+        this.setParamSimple(map, prefix + "AutoBindRaspSwitch", this.AutoBindRaspSwitch);
+        this.setParamSimple(map, prefix + "AutoOpenRaspSwitch", this.AutoOpenRaspSwitch);
+        this.setParamSimple(map, prefix + "AutoDowngradeSwitch", this.AutoDowngradeSwitch);
 
     }
 }

@@ -45,8 +45,7 @@ public class DescribeScreenHostInvasionResponse extends AbstractModel {
     private ScreenVulInfo [] Vul;
 
     /**
-    * List of baseline event
-Note: This field may return null, indicating that no valid values can be obtained.
+    * List of baseline events
     */
     @SerializedName("Baseline")
     @Expose
@@ -108,20 +107,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get List of baseline event
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Baseline List of baseline event
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get List of baseline events 
+     * @return Baseline List of baseline events
      */
     public ScreenBaselineInfo [] getBaseline() {
         return this.Baseline;
     }
 
     /**
-     * Set List of baseline event
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Baseline List of baseline event
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set List of baseline events
+     * @param Baseline List of baseline events
      */
     public void setBaseline(ScreenBaselineInfo [] Baseline) {
         this.Baseline = Baseline;

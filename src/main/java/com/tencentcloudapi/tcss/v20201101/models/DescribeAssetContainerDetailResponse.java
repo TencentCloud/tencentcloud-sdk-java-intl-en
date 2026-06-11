@@ -205,8 +205,7 @@ public class DescribeAssetContainerDetailResponse extends AbstractModel {
     private String NetSubStatus;
 
     /**
-    * Isolation source
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Isolate source
     */
     @SerializedName("IsolateSource")
     @Expose
@@ -214,7 +213,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Isolation time
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("IsolateTime")
     @Expose
@@ -743,30 +741,24 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Isolation source
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return IsolateSource Isolation source
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Isolate source 
+     * @return IsolateSource Isolate source
      */
     public String getIsolateSource() {
         return this.IsolateSource;
     }
 
     /**
-     * Set Isolation source
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param IsolateSource Isolation source
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Isolate source
+     * @param IsolateSource Isolate source
      */
     public void setIsolateSource(String IsolateSource) {
         this.IsolateSource = IsolateSource;
     }
 
     /**
-     * Get Isolation time
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Isolation time 
      * @return IsolateTime Isolation time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getIsolateTime() {
         return this.IsolateTime;
@@ -774,9 +766,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Isolation time
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param IsolateTime Isolation time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setIsolateTime(String IsolateTime) {
         this.IsolateTime = IsolateTime;

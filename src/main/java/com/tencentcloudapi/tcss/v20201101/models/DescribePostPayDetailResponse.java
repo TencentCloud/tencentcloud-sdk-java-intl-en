@@ -24,8 +24,7 @@ import java.util.HashMap;
 public class DescribePostPayDetailResponse extends AbstractModel {
 
     /**
-    * Elastic billing details
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Elastic billing deduction details
     */
     @SerializedName("SoftQuotaDayDetail")
     @Expose
@@ -39,20 +38,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Elastic billing details
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return SoftQuotaDayDetail Elastic billing details
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Elastic billing deduction details 
+     * @return SoftQuotaDayDetail Elastic billing deduction details
      */
     public SoftQuotaDayInfo [] getSoftQuotaDayDetail() {
         return this.SoftQuotaDayDetail;
     }
 
     /**
-     * Set Elastic billing details
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param SoftQuotaDayDetail Elastic billing details
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Elastic billing deduction details
+     * @param SoftQuotaDayDetail Elastic billing deduction details
      */
     public void setSoftQuotaDayDetail(SoftQuotaDayInfo [] SoftQuotaDayDetail) {
         this.SoftQuotaDayDetail = SoftQuotaDayDetail;

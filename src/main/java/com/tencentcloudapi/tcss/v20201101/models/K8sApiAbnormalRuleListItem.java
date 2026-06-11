@@ -24,11 +24,48 @@ import java.util.HashMap;
 public class K8sApiAbnormalRuleListItem extends AbstractModel {
 
     /**
+    * Whether take effect on all clusters. true indicates all clusters take effect. false indicates only specified clusters take effect.
+    */
+    @SerializedName("EffectAllCluster")
+    @Expose
+    private Boolean EffectAllCluster;
+
+    /**
+    * Total number of affected clusters
+    */
+    @SerializedName("EffectClusterCount")
+    @Expose
+    private Long EffectClusterCount;
+
+    /**
+    * Edit account
+    */
+    @SerializedName("OprUin")
+    @Expose
+    private String OprUin;
+
+    /**
+    * Deduplicated list of ALL execution actions in the rule group. The present blocklist contains only RULE_MODE_ALERT (Alert).
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("RuleActions")
+    @Expose
+    private String [] RuleActions;
+
+    /**
     * Rule ID
     */
     @SerializedName("RuleID")
     @Expose
     private String RuleID;
+
+    /**
+    * Subrule content list, deserialized from rule_details JSON
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("RuleInfoList")
+    @Expose
+    private K8sApiAbnormalRuleScopeInfo [] RuleInfoList;
 
     /**
     * Rule name
@@ -47,11 +84,11 @@ RT_USER User defined
     private String RuleType;
 
     /**
-    * Total number of affected clusters
+    * Status
     */
-    @SerializedName("EffectClusterCount")
+    @SerializedName("Status")
     @Expose
-    private Long EffectClusterCount;
+    private Boolean Status;
 
     /**
     * Update time
@@ -61,18 +98,72 @@ RT_USER User defined
     private String UpdateTime;
 
     /**
-    * Edit account
-    */
-    @SerializedName("OprUin")
-    @Expose
-    private String OprUin;
+     * Get Whether take effect on all clusters. true indicates all clusters take effect. false indicates only specified clusters take effect. 
+     * @return EffectAllCluster Whether take effect on all clusters. true indicates all clusters take effect. false indicates only specified clusters take effect.
+     */
+    public Boolean getEffectAllCluster() {
+        return this.EffectAllCluster;
+    }
 
     /**
-    * Status
-    */
-    @SerializedName("Status")
-    @Expose
-    private Boolean Status;
+     * Set Whether take effect on all clusters. true indicates all clusters take effect. false indicates only specified clusters take effect.
+     * @param EffectAllCluster Whether take effect on all clusters. true indicates all clusters take effect. false indicates only specified clusters take effect.
+     */
+    public void setEffectAllCluster(Boolean EffectAllCluster) {
+        this.EffectAllCluster = EffectAllCluster;
+    }
+
+    /**
+     * Get Total number of affected clusters 
+     * @return EffectClusterCount Total number of affected clusters
+     */
+    public Long getEffectClusterCount() {
+        return this.EffectClusterCount;
+    }
+
+    /**
+     * Set Total number of affected clusters
+     * @param EffectClusterCount Total number of affected clusters
+     */
+    public void setEffectClusterCount(Long EffectClusterCount) {
+        this.EffectClusterCount = EffectClusterCount;
+    }
+
+    /**
+     * Get Edit account 
+     * @return OprUin Edit account
+     */
+    public String getOprUin() {
+        return this.OprUin;
+    }
+
+    /**
+     * Set Edit account
+     * @param OprUin Edit account
+     */
+    public void setOprUin(String OprUin) {
+        this.OprUin = OprUin;
+    }
+
+    /**
+     * Get Deduplicated list of ALL execution actions in the rule group. The present blocklist contains only RULE_MODE_ALERT (Alert).
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return RuleActions Deduplicated list of ALL execution actions in the rule group. The present blocklist contains only RULE_MODE_ALERT (Alert).
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String [] getRuleActions() {
+        return this.RuleActions;
+    }
+
+    /**
+     * Set Deduplicated list of ALL execution actions in the rule group. The present blocklist contains only RULE_MODE_ALERT (Alert).
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param RuleActions Deduplicated list of ALL execution actions in the rule group. The present blocklist contains only RULE_MODE_ALERT (Alert).
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setRuleActions(String [] RuleActions) {
+        this.RuleActions = RuleActions;
+    }
 
     /**
      * Get Rule ID 
@@ -88,6 +179,26 @@ RT_USER User defined
      */
     public void setRuleID(String RuleID) {
         this.RuleID = RuleID;
+    }
+
+    /**
+     * Get Subrule content list, deserialized from rule_details JSON
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return RuleInfoList Subrule content list, deserialized from rule_details JSON
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public K8sApiAbnormalRuleScopeInfo [] getRuleInfoList() {
+        return this.RuleInfoList;
+    }
+
+    /**
+     * Set Subrule content list, deserialized from rule_details JSON
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param RuleInfoList Subrule content list, deserialized from rule_details JSON
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setRuleInfoList(K8sApiAbnormalRuleScopeInfo [] RuleInfoList) {
+        this.RuleInfoList = RuleInfoList;
     }
 
     /**
@@ -131,19 +242,19 @@ RT_USER User defined
     }
 
     /**
-     * Get Total number of affected clusters 
-     * @return EffectClusterCount Total number of affected clusters
+     * Get Status 
+     * @return Status Status
      */
-    public Long getEffectClusterCount() {
-        return this.EffectClusterCount;
+    public Boolean getStatus() {
+        return this.Status;
     }
 
     /**
-     * Set Total number of affected clusters
-     * @param EffectClusterCount Total number of affected clusters
+     * Set Status
+     * @param Status Status
      */
-    public void setEffectClusterCount(Long EffectClusterCount) {
-        this.EffectClusterCount = EffectClusterCount;
+    public void setStatus(Boolean Status) {
+        this.Status = Status;
     }
 
     /**
@@ -162,38 +273,6 @@ RT_USER User defined
         this.UpdateTime = UpdateTime;
     }
 
-    /**
-     * Get Edit account 
-     * @return OprUin Edit account
-     */
-    public String getOprUin() {
-        return this.OprUin;
-    }
-
-    /**
-     * Set Edit account
-     * @param OprUin Edit account
-     */
-    public void setOprUin(String OprUin) {
-        this.OprUin = OprUin;
-    }
-
-    /**
-     * Get Status 
-     * @return Status Status
-     */
-    public Boolean getStatus() {
-        return this.Status;
-    }
-
-    /**
-     * Set Status
-     * @param Status Status
-     */
-    public void setStatus(Boolean Status) {
-        this.Status = Status;
-    }
-
     public K8sApiAbnormalRuleListItem() {
     }
 
@@ -202,8 +281,29 @@ RT_USER User defined
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public K8sApiAbnormalRuleListItem(K8sApiAbnormalRuleListItem source) {
+        if (source.EffectAllCluster != null) {
+            this.EffectAllCluster = new Boolean(source.EffectAllCluster);
+        }
+        if (source.EffectClusterCount != null) {
+            this.EffectClusterCount = new Long(source.EffectClusterCount);
+        }
+        if (source.OprUin != null) {
+            this.OprUin = new String(source.OprUin);
+        }
+        if (source.RuleActions != null) {
+            this.RuleActions = new String[source.RuleActions.length];
+            for (int i = 0; i < source.RuleActions.length; i++) {
+                this.RuleActions[i] = new String(source.RuleActions[i]);
+            }
+        }
         if (source.RuleID != null) {
             this.RuleID = new String(source.RuleID);
+        }
+        if (source.RuleInfoList != null) {
+            this.RuleInfoList = new K8sApiAbnormalRuleScopeInfo[source.RuleInfoList.length];
+            for (int i = 0; i < source.RuleInfoList.length; i++) {
+                this.RuleInfoList[i] = new K8sApiAbnormalRuleScopeInfo(source.RuleInfoList[i]);
+            }
         }
         if (source.RuleName != null) {
             this.RuleName = new String(source.RuleName);
@@ -211,17 +311,11 @@ RT_USER User defined
         if (source.RuleType != null) {
             this.RuleType = new String(source.RuleType);
         }
-        if (source.EffectClusterCount != null) {
-            this.EffectClusterCount = new Long(source.EffectClusterCount);
+        if (source.Status != null) {
+            this.Status = new Boolean(source.Status);
         }
         if (source.UpdateTime != null) {
             this.UpdateTime = new String(source.UpdateTime);
-        }
-        if (source.OprUin != null) {
-            this.OprUin = new String(source.OprUin);
-        }
-        if (source.Status != null) {
-            this.Status = new Boolean(source.Status);
         }
     }
 
@@ -230,13 +324,16 @@ RT_USER User defined
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "EffectAllCluster", this.EffectAllCluster);
+        this.setParamSimple(map, prefix + "EffectClusterCount", this.EffectClusterCount);
+        this.setParamSimple(map, prefix + "OprUin", this.OprUin);
+        this.setParamArraySimple(map, prefix + "RuleActions.", this.RuleActions);
         this.setParamSimple(map, prefix + "RuleID", this.RuleID);
+        this.setParamArrayObj(map, prefix + "RuleInfoList.", this.RuleInfoList);
         this.setParamSimple(map, prefix + "RuleName", this.RuleName);
         this.setParamSimple(map, prefix + "RuleType", this.RuleType);
-        this.setParamSimple(map, prefix + "EffectClusterCount", this.EffectClusterCount);
-        this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
-        this.setParamSimple(map, prefix + "OprUin", this.OprUin);
         this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
 
     }
 }

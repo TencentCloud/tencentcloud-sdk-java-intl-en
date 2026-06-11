@@ -38,11 +38,18 @@ public class VulAffectedImageInfo extends AbstractModel {
     private String ImageName;
 
     /**
-    * Number of associated servers
+    * Number of associated hosts (including regular nodes and super nodes).
     */
     @SerializedName("HostCount")
     @Expose
     private Long HostCount;
+
+    /**
+    * Number of associated super nodes.
+    */
+    @SerializedName("SuperNodeCount")
+    @Expose
+    private Long SuperNodeCount;
 
     /**
     * Number of associated containers
@@ -91,19 +98,35 @@ public class VulAffectedImageInfo extends AbstractModel {
     }
 
     /**
-     * Get Number of associated servers 
-     * @return HostCount Number of associated servers
+     * Get Number of associated hosts (including regular nodes and super nodes). 
+     * @return HostCount Number of associated hosts (including regular nodes and super nodes).
      */
     public Long getHostCount() {
         return this.HostCount;
     }
 
     /**
-     * Set Number of associated servers
-     * @param HostCount Number of associated servers
+     * Set Number of associated hosts (including regular nodes and super nodes).
+     * @param HostCount Number of associated hosts (including regular nodes and super nodes).
      */
     public void setHostCount(Long HostCount) {
         this.HostCount = HostCount;
+    }
+
+    /**
+     * Get Number of associated super nodes. 
+     * @return SuperNodeCount Number of associated super nodes.
+     */
+    public Long getSuperNodeCount() {
+        return this.SuperNodeCount;
+    }
+
+    /**
+     * Set Number of associated super nodes.
+     * @param SuperNodeCount Number of associated super nodes.
+     */
+    public void setSuperNodeCount(Long SuperNodeCount) {
+        this.SuperNodeCount = SuperNodeCount;
     }
 
     /**
@@ -155,6 +178,9 @@ public class VulAffectedImageInfo extends AbstractModel {
         if (source.HostCount != null) {
             this.HostCount = new Long(source.HostCount);
         }
+        if (source.SuperNodeCount != null) {
+            this.SuperNodeCount = new Long(source.SuperNodeCount);
+        }
         if (source.ContainerCount != null) {
             this.ContainerCount = new Long(source.ContainerCount);
         }
@@ -174,6 +200,7 @@ public class VulAffectedImageInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "ImageID", this.ImageID);
         this.setParamSimple(map, prefix + "ImageName", this.ImageName);
         this.setParamSimple(map, prefix + "HostCount", this.HostCount);
+        this.setParamSimple(map, prefix + "SuperNodeCount", this.SuperNodeCount);
         this.setParamSimple(map, prefix + "ContainerCount", this.ContainerCount);
         this.setParamArrayObj(map, prefix + "ComponentList.", this.ComponentList);
 

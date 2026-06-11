@@ -24,8 +24,7 @@ import java.util.HashMap;
 public class DescribeAssetRecentMachineInfoResponse extends AbstractModel {
 
     /**
-    * List of total assets
-Note: This field may return null, indicating that no valid values can be obtained.
+    * List of total quantities
     */
     @SerializedName("TotalList")
     @Expose
@@ -33,7 +32,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * List of online assets
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("LiveList")
     @Expose
@@ -41,7 +39,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * List of offline assets
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("OfflineList")
     @Expose
@@ -49,7 +46,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * List of risky assets
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("RiskList")
     @Expose
@@ -63,30 +59,24 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get List of total assets
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return TotalList List of total assets
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get List of total quantities 
+     * @return TotalList List of total quantities
      */
     public AssetKeyVal [] getTotalList() {
         return this.TotalList;
     }
 
     /**
-     * Set List of total assets
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param TotalList List of total assets
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set List of total quantities
+     * @param TotalList List of total quantities
      */
     public void setTotalList(AssetKeyVal [] TotalList) {
         this.TotalList = TotalList;
     }
 
     /**
-     * Get List of online assets
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get List of online assets 
      * @return LiveList List of online assets
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public AssetKeyVal [] getLiveList() {
         return this.LiveList;
@@ -94,19 +84,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set List of online assets
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param LiveList List of online assets
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setLiveList(AssetKeyVal [] LiveList) {
         this.LiveList = LiveList;
     }
 
     /**
-     * Get List of offline assets
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get List of offline assets 
      * @return OfflineList List of offline assets
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public AssetKeyVal [] getOfflineList() {
         return this.OfflineList;
@@ -114,19 +100,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set List of offline assets
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param OfflineList List of offline assets
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setOfflineList(AssetKeyVal [] OfflineList) {
         this.OfflineList = OfflineList;
     }
 
     /**
-     * Get List of risky assets
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get List of risky assets 
      * @return RiskList List of risky assets
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public AssetKeyVal [] getRiskList() {
         return this.RiskList;
@@ -134,9 +116,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set List of risky assets
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param RiskList List of risky assets
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setRiskList(AssetKeyVal [] RiskList) {
         this.RiskList = RiskList;

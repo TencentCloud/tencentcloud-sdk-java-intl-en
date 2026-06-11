@@ -32,7 +32,6 @@ public class DescribeAssetProcessInfoListResponse extends AbstractModel {
 
     /**
     * List
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Process")
     @Expose
@@ -62,10 +61,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get List
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get List 
      * @return Process List
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public AssetProcessBaseInfo [] getProcess() {
         return this.Process;
@@ -73,9 +70,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set List
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Process List
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setProcess(AssetProcessBaseInfo [] Process) {
         this.Process = Process;

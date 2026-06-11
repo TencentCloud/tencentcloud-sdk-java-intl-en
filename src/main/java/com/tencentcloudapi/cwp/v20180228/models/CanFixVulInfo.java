@@ -25,7 +25,6 @@ public class CanFixVulInfo extends AbstractModel {
 
     /**
     * Vulnerability ID
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("VulId")
     @Expose
@@ -33,7 +32,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Vulnerability name
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("VulName")
     @Expose
@@ -41,7 +39,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Information on hosts where this vulnerability can be fixed
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("HostList")
     @Expose
@@ -49,24 +46,21 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Fixing prompt tag
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("FixTag")
     @Expose
     private String [] FixTag;
 
     /**
-    * Vulnerability categories: 1 web cms vulnerabilities, 2 application vulnerabilities, 4 linux software vulnerabilities, 5 windows system vulnerabilities
+    * Vulnerability category. 1: web CMS vulnerability, 2: application vulnerability, 4: Linux software vulnerability, 5 Windows system vulnerability.
     */
     @SerializedName("VulCategory")
     @Expose
     private Long VulCategory;
 
     /**
-     * Get Vulnerability ID
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Vulnerability ID 
      * @return VulId Vulnerability ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getVulId() {
         return this.VulId;
@@ -74,19 +68,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Vulnerability ID
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param VulId Vulnerability ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setVulId(Long VulId) {
         this.VulId = VulId;
     }
 
     /**
-     * Get Vulnerability name
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Vulnerability name 
      * @return VulName Vulnerability name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getVulName() {
         return this.VulName;
@@ -94,19 +84,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Vulnerability name
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param VulName Vulnerability name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setVulName(String VulName) {
         this.VulName = VulName;
     }
 
     /**
-     * Get Information on hosts where this vulnerability can be fixed
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Information on hosts where this vulnerability can be fixed 
      * @return HostList Information on hosts where this vulnerability can be fixed
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public VulInfoHostInfo [] getHostList() {
         return this.HostList;
@@ -114,19 +100,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Information on hosts where this vulnerability can be fixed
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param HostList Information on hosts where this vulnerability can be fixed
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setHostList(VulInfoHostInfo [] HostList) {
         this.HostList = HostList;
     }
 
     /**
-     * Get Fixing prompt tag
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Fixing prompt tag 
      * @return FixTag Fixing prompt tag
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String [] getFixTag() {
         return this.FixTag;
@@ -134,25 +116,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Fixing prompt tag
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param FixTag Fixing prompt tag
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setFixTag(String [] FixTag) {
         this.FixTag = FixTag;
     }
 
     /**
-     * Get Vulnerability categories: 1 web cms vulnerabilities, 2 application vulnerabilities, 4 linux software vulnerabilities, 5 windows system vulnerabilities 
-     * @return VulCategory Vulnerability categories: 1 web cms vulnerabilities, 2 application vulnerabilities, 4 linux software vulnerabilities, 5 windows system vulnerabilities
+     * Get Vulnerability category. 1: web CMS vulnerability, 2: application vulnerability, 4: Linux software vulnerability, 5 Windows system vulnerability. 
+     * @return VulCategory Vulnerability category. 1: web CMS vulnerability, 2: application vulnerability, 4: Linux software vulnerability, 5 Windows system vulnerability.
      */
     public Long getVulCategory() {
         return this.VulCategory;
     }
 
     /**
-     * Set Vulnerability categories: 1 web cms vulnerabilities, 2 application vulnerabilities, 4 linux software vulnerabilities, 5 windows system vulnerabilities
-     * @param VulCategory Vulnerability categories: 1 web cms vulnerabilities, 2 application vulnerabilities, 4 linux software vulnerabilities, 5 windows system vulnerabilities
+     * Set Vulnerability category. 1: web CMS vulnerability, 2: application vulnerability, 4: Linux software vulnerability, 5 Windows system vulnerability.
+     * @param VulCategory Vulnerability category. 1: web CMS vulnerability, 2: application vulnerability, 4: Linux software vulnerability, 5 Windows system vulnerability.
      */
     public void setVulCategory(Long VulCategory) {
         this.VulCategory = VulCategory;

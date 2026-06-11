@@ -25,7 +25,6 @@ public class MachineExtraInfo extends AbstractModel {
 
     /**
     * Public IP address
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("WanIP")
     @Expose
@@ -33,7 +32,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Private IP address
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("PrivateIP")
     @Expose
@@ -41,7 +39,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Network Type. 1: VPC network; 2: Basic Network; 3: Non-Tencent Cloud Network
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("NetworkType")
     @Expose
@@ -49,7 +46,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Network Name, returns vpc_id in the case of a VPC network
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("NetworkName")
     @Expose
@@ -57,25 +53,21 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Instance ID
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("InstanceID")
     @Expose
     private String InstanceID;
 
     /**
-    * Host name
-Note: This field may return null, indicating that no valid values can be obtained.
+    * host name
     */
     @SerializedName("HostName")
     @Expose
     private String HostName;
 
     /**
-     * Get Public IP address
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Public IP address 
      * @return WanIP Public IP address
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getWanIP() {
         return this.WanIP;
@@ -83,19 +75,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Public IP address
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param WanIP Public IP address
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setWanIP(String WanIP) {
         this.WanIP = WanIP;
     }
 
     /**
-     * Get Private IP address
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Private IP address 
      * @return PrivateIP Private IP address
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getPrivateIP() {
         return this.PrivateIP;
@@ -103,19 +91,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Private IP address
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param PrivateIP Private IP address
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setPrivateIP(String PrivateIP) {
         this.PrivateIP = PrivateIP;
     }
 
     /**
-     * Get Network Type. 1: VPC network; 2: Basic Network; 3: Non-Tencent Cloud Network
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Network Type. 1: VPC network; 2: Basic Network; 3: Non-Tencent Cloud Network 
      * @return NetworkType Network Type. 1: VPC network; 2: Basic Network; 3: Non-Tencent Cloud Network
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getNetworkType() {
         return this.NetworkType;
@@ -123,19 +107,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Network Type. 1: VPC network; 2: Basic Network; 3: Non-Tencent Cloud Network
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param NetworkType Network Type. 1: VPC network; 2: Basic Network; 3: Non-Tencent Cloud Network
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setNetworkType(Long NetworkType) {
         this.NetworkType = NetworkType;
     }
 
     /**
-     * Get Network Name, returns vpc_id in the case of a VPC network
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Network Name, returns vpc_id in the case of a VPC network 
      * @return NetworkName Network Name, returns vpc_id in the case of a VPC network
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getNetworkName() {
         return this.NetworkName;
@@ -143,19 +123,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Network Name, returns vpc_id in the case of a VPC network
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param NetworkName Network Name, returns vpc_id in the case of a VPC network
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setNetworkName(String NetworkName) {
         this.NetworkName = NetworkName;
     }
 
     /**
-     * Get Instance ID
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Instance ID 
      * @return InstanceID Instance ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getInstanceID() {
         return this.InstanceID;
@@ -163,29 +139,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Instance ID
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param InstanceID Instance ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setInstanceID(String InstanceID) {
         this.InstanceID = InstanceID;
     }
 
     /**
-     * Get Host name
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return HostName Host name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get host name 
+     * @return HostName host name
      */
     public String getHostName() {
         return this.HostName;
     }
 
     /**
-     * Set Host name
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param HostName Host name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set host name
+     * @param HostName host name
      */
     public void setHostName(String HostName) {
         this.HostName = HostName;

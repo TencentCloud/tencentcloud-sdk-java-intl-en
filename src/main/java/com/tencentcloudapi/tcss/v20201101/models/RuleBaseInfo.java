@@ -24,11 +24,11 @@ import java.util.HashMap;
 public class RuleBaseInfo extends AbstractModel {
 
     /**
-    * Valid values: `true` (default policy); `false` (custom policy).
+    * Name of the editing user
     */
-    @SerializedName("IsDefault")
+    @SerializedName("EditUserName")
     @Expose
-    private Boolean IsDefault;
+    private String EditUserName;
 
     /**
     * Number of associated images
@@ -38,33 +38,18 @@ public class RuleBaseInfo extends AbstractModel {
     private Long EffectImageCount;
 
     /**
-    * Policy ID
+    * Valid values: `true` (default policy); `false` (custom policy).
     */
-    @SerializedName("RuleId")
+    @SerializedName("IsDefault")
     @Expose
-    private String RuleId;
+    private Boolean IsDefault;
 
     /**
-    * Policy update time, which can be empty.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Whether the rule applies to all images. true indicates it takes effect for all images.
     */
-    @SerializedName("UpdateTime")
+    @SerializedName("IsGlobal")
     @Expose
-    private String UpdateTime;
-
-    /**
-    * Policy name
-    */
-    @SerializedName("RuleName")
-    @Expose
-    private String RuleName;
-
-    /**
-    * Name of the editing user
-    */
-    @SerializedName("EditUserName")
-    @Expose
-    private String EditUserName;
+    private Boolean IsGlobal;
 
     /**
     * Valid values: `true` (enable the policy); `false` (disable the policy).
@@ -74,19 +59,40 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Boolean IsEnable;
 
     /**
-     * Get Valid values: `true` (default policy); `false` (custom policy). 
-     * @return IsDefault Valid values: `true` (default policy); `false` (custom policy).
+    * Policy ID
+    */
+    @SerializedName("RuleId")
+    @Expose
+    private String RuleId;
+
+    /**
+    * Policy name
+    */
+    @SerializedName("RuleName")
+    @Expose
+    private String RuleName;
+
+    /**
+    * Policy update time. Can be empty.
+    */
+    @SerializedName("UpdateTime")
+    @Expose
+    private String UpdateTime;
+
+    /**
+     * Get Name of the editing user 
+     * @return EditUserName Name of the editing user
      */
-    public Boolean getIsDefault() {
-        return this.IsDefault;
+    public String getEditUserName() {
+        return this.EditUserName;
     }
 
     /**
-     * Set Valid values: `true` (default policy); `false` (custom policy).
-     * @param IsDefault Valid values: `true` (default policy); `false` (custom policy).
+     * Set Name of the editing user
+     * @param EditUserName Name of the editing user
      */
-    public void setIsDefault(Boolean IsDefault) {
-        this.IsDefault = IsDefault;
+    public void setEditUserName(String EditUserName) {
+        this.EditUserName = EditUserName;
     }
 
     /**
@@ -106,6 +112,54 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
+     * Get Valid values: `true` (default policy); `false` (custom policy). 
+     * @return IsDefault Valid values: `true` (default policy); `false` (custom policy).
+     */
+    public Boolean getIsDefault() {
+        return this.IsDefault;
+    }
+
+    /**
+     * Set Valid values: `true` (default policy); `false` (custom policy).
+     * @param IsDefault Valid values: `true` (default policy); `false` (custom policy).
+     */
+    public void setIsDefault(Boolean IsDefault) {
+        this.IsDefault = IsDefault;
+    }
+
+    /**
+     * Get Whether the rule applies to all images. true indicates it takes effect for all images. 
+     * @return IsGlobal Whether the rule applies to all images. true indicates it takes effect for all images.
+     */
+    public Boolean getIsGlobal() {
+        return this.IsGlobal;
+    }
+
+    /**
+     * Set Whether the rule applies to all images. true indicates it takes effect for all images.
+     * @param IsGlobal Whether the rule applies to all images. true indicates it takes effect for all images.
+     */
+    public void setIsGlobal(Boolean IsGlobal) {
+        this.IsGlobal = IsGlobal;
+    }
+
+    /**
+     * Get Valid values: `true` (enable the policy); `false` (disable the policy). 
+     * @return IsEnable Valid values: `true` (enable the policy); `false` (disable the policy).
+     */
+    public Boolean getIsEnable() {
+        return this.IsEnable;
+    }
+
+    /**
+     * Set Valid values: `true` (enable the policy); `false` (disable the policy).
+     * @param IsEnable Valid values: `true` (enable the policy); `false` (disable the policy).
+     */
+    public void setIsEnable(Boolean IsEnable) {
+        this.IsEnable = IsEnable;
+    }
+
+    /**
      * Get Policy ID 
      * @return RuleId Policy ID
      */
@@ -119,26 +173,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
      */
     public void setRuleId(String RuleId) {
         this.RuleId = RuleId;
-    }
-
-    /**
-     * Get Policy update time, which can be empty.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return UpdateTime Policy update time, which can be empty.
-Note: This field may return null, indicating that no valid values can be obtained.
-     */
-    public String getUpdateTime() {
-        return this.UpdateTime;
-    }
-
-    /**
-     * Set Policy update time, which can be empty.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param UpdateTime Policy update time, which can be empty.
-Note: This field may return null, indicating that no valid values can be obtained.
-     */
-    public void setUpdateTime(String UpdateTime) {
-        this.UpdateTime = UpdateTime;
     }
 
     /**
@@ -158,35 +192,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Name of the editing user 
-     * @return EditUserName Name of the editing user
+     * Get Policy update time. Can be empty. 
+     * @return UpdateTime Policy update time. Can be empty.
      */
-    public String getEditUserName() {
-        return this.EditUserName;
+    public String getUpdateTime() {
+        return this.UpdateTime;
     }
 
     /**
-     * Set Name of the editing user
-     * @param EditUserName Name of the editing user
+     * Set Policy update time. Can be empty.
+     * @param UpdateTime Policy update time. Can be empty.
      */
-    public void setEditUserName(String EditUserName) {
-        this.EditUserName = EditUserName;
-    }
-
-    /**
-     * Get Valid values: `true` (enable the policy); `false` (disable the policy). 
-     * @return IsEnable Valid values: `true` (enable the policy); `false` (disable the policy).
-     */
-    public Boolean getIsEnable() {
-        return this.IsEnable;
-    }
-
-    /**
-     * Set Valid values: `true` (enable the policy); `false` (disable the policy).
-     * @param IsEnable Valid values: `true` (enable the policy); `false` (disable the policy).
-     */
-    public void setIsEnable(Boolean IsEnable) {
-        this.IsEnable = IsEnable;
+    public void setUpdateTime(String UpdateTime) {
+        this.UpdateTime = UpdateTime;
     }
 
     public RuleBaseInfo() {
@@ -197,26 +215,29 @@ Note: This field may return null, indicating that no valid values can be obtaine
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public RuleBaseInfo(RuleBaseInfo source) {
-        if (source.IsDefault != null) {
-            this.IsDefault = new Boolean(source.IsDefault);
+        if (source.EditUserName != null) {
+            this.EditUserName = new String(source.EditUserName);
         }
         if (source.EffectImageCount != null) {
             this.EffectImageCount = new Long(source.EffectImageCount);
         }
+        if (source.IsDefault != null) {
+            this.IsDefault = new Boolean(source.IsDefault);
+        }
+        if (source.IsGlobal != null) {
+            this.IsGlobal = new Boolean(source.IsGlobal);
+        }
+        if (source.IsEnable != null) {
+            this.IsEnable = new Boolean(source.IsEnable);
+        }
         if (source.RuleId != null) {
             this.RuleId = new String(source.RuleId);
-        }
-        if (source.UpdateTime != null) {
-            this.UpdateTime = new String(source.UpdateTime);
         }
         if (source.RuleName != null) {
             this.RuleName = new String(source.RuleName);
         }
-        if (source.EditUserName != null) {
-            this.EditUserName = new String(source.EditUserName);
-        }
-        if (source.IsEnable != null) {
-            this.IsEnable = new Boolean(source.IsEnable);
+        if (source.UpdateTime != null) {
+            this.UpdateTime = new String(source.UpdateTime);
         }
     }
 
@@ -225,13 +246,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "IsDefault", this.IsDefault);
-        this.setParamSimple(map, prefix + "EffectImageCount", this.EffectImageCount);
-        this.setParamSimple(map, prefix + "RuleId", this.RuleId);
-        this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
-        this.setParamSimple(map, prefix + "RuleName", this.RuleName);
         this.setParamSimple(map, prefix + "EditUserName", this.EditUserName);
+        this.setParamSimple(map, prefix + "EffectImageCount", this.EffectImageCount);
+        this.setParamSimple(map, prefix + "IsDefault", this.IsDefault);
+        this.setParamSimple(map, prefix + "IsGlobal", this.IsGlobal);
         this.setParamSimple(map, prefix + "IsEnable", this.IsEnable);
+        this.setParamSimple(map, prefix + "RuleId", this.RuleId);
+        this.setParamSimple(map, prefix + "RuleName", this.RuleName);
+        this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
 
     }
 }

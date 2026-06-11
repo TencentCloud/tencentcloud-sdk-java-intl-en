@@ -31,14 +31,14 @@ public class PrivilegeEventInfo extends AbstractModel {
     private Long Id;
 
     /**
-    * Yunjing ID
+    * Host Security UUID
     */
     @SerializedName("Uuid")
     @Expose
     private String Uuid;
 
     /**
-    * Host ID
+    * Host UUID
     */
     @SerializedName("Quuid")
     @Expose
@@ -206,6 +206,13 @@ public class PrivilegeEventInfo extends AbstractModel {
     private String ModifyTime;
 
     /**
+    * Alarm count
+    */
+    @SerializedName("Count")
+    @Expose
+    private Long Count;
+
+    /**
      * Get Data ID 
      * @return Id Data ID
      */
@@ -222,32 +229,32 @@ public class PrivilegeEventInfo extends AbstractModel {
     }
 
     /**
-     * Get Yunjing ID 
-     * @return Uuid Yunjing ID
+     * Get Host Security UUID 
+     * @return Uuid Host Security UUID
      */
     public String getUuid() {
         return this.Uuid;
     }
 
     /**
-     * Set Yunjing ID
-     * @param Uuid Yunjing ID
+     * Set Host Security UUID
+     * @param Uuid Host Security UUID
      */
     public void setUuid(String Uuid) {
         this.Uuid = Uuid;
     }
 
     /**
-     * Get Host ID 
-     * @return Quuid Host ID
+     * Get Host UUID 
+     * @return Quuid Host UUID
      */
     public String getQuuid() {
         return this.Quuid;
     }
 
     /**
-     * Set Host ID
-     * @param Quuid Host ID
+     * Set Host UUID
+     * @param Quuid Host UUID
      */
     public void setQuuid(String Quuid) {
         this.Quuid = Quuid;
@@ -621,6 +628,22 @@ public class PrivilegeEventInfo extends AbstractModel {
         this.ModifyTime = ModifyTime;
     }
 
+    /**
+     * Get Alarm count 
+     * @return Count Alarm count
+     */
+    public Long getCount() {
+        return this.Count;
+    }
+
+    /**
+     * Set Alarm count
+     * @param Count Alarm count
+     */
+    public void setCount(Long Count) {
+        this.Count = Count;
+    }
+
     public PrivilegeEventInfo() {
     }
 
@@ -713,6 +736,9 @@ public class PrivilegeEventInfo extends AbstractModel {
         if (source.ModifyTime != null) {
             this.ModifyTime = new String(source.ModifyTime);
         }
+        if (source.Count != null) {
+            this.Count = new Long(source.Count);
+        }
     }
 
 
@@ -746,6 +772,7 @@ public class PrivilegeEventInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "NewCaps", this.NewCaps);
         this.setParamSimple(map, prefix + "MachineStatus", this.MachineStatus);
         this.setParamSimple(map, prefix + "ModifyTime", this.ModifyTime);
+        this.setParamSimple(map, prefix + "Count", this.Count);
 
     }
 }

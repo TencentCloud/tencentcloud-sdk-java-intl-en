@@ -24,23 +24,28 @@ import java.util.HashMap;
 public class DescribeConfigMachineGroupsRequest extends AbstractModel {
 
     /**
-    * Collection configuration ID
+    * Collection Configuration ID
+-Obtain the collection configuration Id by accessing the collection rule configuration (https://www.tencentcloud.com/document/product/614/58616?from_cn_redirect=1).
     */
     @SerializedName("ConfigId")
     @Expose
     private String ConfigId;
 
     /**
-     * Get Collection configuration ID 
-     * @return ConfigId Collection configuration ID
+     * Get Collection Configuration ID
+-Obtain the collection configuration Id by accessing the collection rule configuration (https://www.tencentcloud.com/document/product/614/58616?from_cn_redirect=1). 
+     * @return ConfigId Collection Configuration ID
+-Obtain the collection configuration Id by accessing the collection rule configuration (https://www.tencentcloud.com/document/product/614/58616?from_cn_redirect=1).
      */
     public String getConfigId() {
         return this.ConfigId;
     }
 
     /**
-     * Set Collection configuration ID
-     * @param ConfigId Collection configuration ID
+     * Set Collection Configuration ID
+-Obtain the collection configuration Id by accessing the collection rule configuration (https://www.tencentcloud.com/document/product/614/58616?from_cn_redirect=1).
+     * @param ConfigId Collection Configuration ID
+-Obtain the collection configuration Id by accessing the collection rule configuration (https://www.tencentcloud.com/document/product/614/58616?from_cn_redirect=1).
      */
     public void setConfigId(String ConfigId) {
         this.ConfigId = ConfigId;

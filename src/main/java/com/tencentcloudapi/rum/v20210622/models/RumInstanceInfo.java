@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class RumInstanceInfo extends AbstractModel {
 
     /**
-    * Instance status (1: creating; 2: running; 3: exceptional; 4: restarting; 5: stopping; 6: stopped; 7: deleted)
+    * Instance status (1=creating, 2=running, 3=abnormal, 4=restarting, 5=stopping, 6=stopped, 7=deleted)
     */
     @SerializedName("InstanceStatus")
     @Expose
     private Long InstanceStatus;
 
     /**
-    * Region ID
+    * Zone Id
     */
     @SerializedName("AreaId")
     @Expose
@@ -45,7 +45,7 @@ public class RumInstanceInfo extends AbstractModel {
     private Tag [] Tags;
 
     /**
-    * Instance ID
+    * Instance ID.
     */
     @SerializedName("InstanceId")
     @Expose
@@ -66,14 +66,14 @@ public class RumInstanceInfo extends AbstractModel {
     private String InstanceDesc;
 
     /**
-    * Billing status (1: in use; 2: expired; 3: terminated; 4: assigning; 5: assignment failed)
+    * Billing status (1=Active, 2=Expired, 3=Terminated, 4=Allocating, 5=Allocation failure)
     */
     @SerializedName("ChargeStatus")
     @Expose
     private Long ChargeStatus;
 
     /**
-    * Billing type (1: free; 2: prepaid; 3: postpaid)
+    * Billing type (1=Free edition, 2=Prepayment, 3=Pay-as-you-go)
     */
     @SerializedName("ChargeType")
     @Expose
@@ -87,60 +87,60 @@ public class RumInstanceInfo extends AbstractModel {
     private String UpdatedAt;
 
     /**
-    * Data retention period (in days)
+    * Data retention time (days)
     */
     @SerializedName("DataRetentionDays")
     @Expose
     private Long DataRetentionDays;
 
     /**
-    * Instance name
+    * Instance name.
     */
     @SerializedName("InstanceName")
     @Expose
     private String InstanceName;
 
     /**
-    * Creation time
+    * Creation time.
     */
     @SerializedName("CreatedAt")
     @Expose
     private String CreatedAt;
 
     /**
-    * 
+    * Instance type 1: Original web-related class 2: app endpoint type
     */
     @SerializedName("InstanceType")
     @Expose
     private Long InstanceType;
 
     /**
-     * Get Instance status (1: creating; 2: running; 3: exceptional; 4: restarting; 5: stopping; 6: stopped; 7: deleted) 
-     * @return InstanceStatus Instance status (1: creating; 2: running; 3: exceptional; 4: restarting; 5: stopping; 6: stopped; 7: deleted)
+     * Get Instance status (1=creating, 2=running, 3=abnormal, 4=restarting, 5=stopping, 6=stopped, 7=deleted) 
+     * @return InstanceStatus Instance status (1=creating, 2=running, 3=abnormal, 4=restarting, 5=stopping, 6=stopped, 7=deleted)
      */
     public Long getInstanceStatus() {
         return this.InstanceStatus;
     }
 
     /**
-     * Set Instance status (1: creating; 2: running; 3: exceptional; 4: restarting; 5: stopping; 6: stopped; 7: deleted)
-     * @param InstanceStatus Instance status (1: creating; 2: running; 3: exceptional; 4: restarting; 5: stopping; 6: stopped; 7: deleted)
+     * Set Instance status (1=creating, 2=running, 3=abnormal, 4=restarting, 5=stopping, 6=stopped, 7=deleted)
+     * @param InstanceStatus Instance status (1=creating, 2=running, 3=abnormal, 4=restarting, 5=stopping, 6=stopped, 7=deleted)
      */
     public void setInstanceStatus(Long InstanceStatus) {
         this.InstanceStatus = InstanceStatus;
     }
 
     /**
-     * Get Region ID 
-     * @return AreaId Region ID
+     * Get Zone Id 
+     * @return AreaId Zone Id
      */
     public Long getAreaId() {
         return this.AreaId;
     }
 
     /**
-     * Set Region ID
-     * @param AreaId Region ID
+     * Set Zone Id
+     * @param AreaId Zone Id
      */
     public void setAreaId(Long AreaId) {
         this.AreaId = AreaId;
@@ -163,16 +163,16 @@ public class RumInstanceInfo extends AbstractModel {
     }
 
     /**
-     * Get Instance ID 
-     * @return InstanceId Instance ID
+     * Get Instance ID. 
+     * @return InstanceId Instance ID.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Instance ID
-     * @param InstanceId Instance ID
+     * Set Instance ID.
+     * @param InstanceId Instance ID.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
@@ -211,32 +211,32 @@ public class RumInstanceInfo extends AbstractModel {
     }
 
     /**
-     * Get Billing status (1: in use; 2: expired; 3: terminated; 4: assigning; 5: assignment failed) 
-     * @return ChargeStatus Billing status (1: in use; 2: expired; 3: terminated; 4: assigning; 5: assignment failed)
+     * Get Billing status (1=Active, 2=Expired, 3=Terminated, 4=Allocating, 5=Allocation failure) 
+     * @return ChargeStatus Billing status (1=Active, 2=Expired, 3=Terminated, 4=Allocating, 5=Allocation failure)
      */
     public Long getChargeStatus() {
         return this.ChargeStatus;
     }
 
     /**
-     * Set Billing status (1: in use; 2: expired; 3: terminated; 4: assigning; 5: assignment failed)
-     * @param ChargeStatus Billing status (1: in use; 2: expired; 3: terminated; 4: assigning; 5: assignment failed)
+     * Set Billing status (1=Active, 2=Expired, 3=Terminated, 4=Allocating, 5=Allocation failure)
+     * @param ChargeStatus Billing status (1=Active, 2=Expired, 3=Terminated, 4=Allocating, 5=Allocation failure)
      */
     public void setChargeStatus(Long ChargeStatus) {
         this.ChargeStatus = ChargeStatus;
     }
 
     /**
-     * Get Billing type (1: free; 2: prepaid; 3: postpaid) 
-     * @return ChargeType Billing type (1: free; 2: prepaid; 3: postpaid)
+     * Get Billing type (1=Free edition, 2=Prepayment, 3=Pay-as-you-go) 
+     * @return ChargeType Billing type (1=Free edition, 2=Prepayment, 3=Pay-as-you-go)
      */
     public Long getChargeType() {
         return this.ChargeType;
     }
 
     /**
-     * Set Billing type (1: free; 2: prepaid; 3: postpaid)
-     * @param ChargeType Billing type (1: free; 2: prepaid; 3: postpaid)
+     * Set Billing type (1=Free edition, 2=Prepayment, 3=Pay-as-you-go)
+     * @param ChargeType Billing type (1=Free edition, 2=Prepayment, 3=Pay-as-you-go)
      */
     public void setChargeType(Long ChargeType) {
         this.ChargeType = ChargeType;
@@ -259,64 +259,64 @@ public class RumInstanceInfo extends AbstractModel {
     }
 
     /**
-     * Get Data retention period (in days) 
-     * @return DataRetentionDays Data retention period (in days)
+     * Get Data retention time (days) 
+     * @return DataRetentionDays Data retention time (days)
      */
     public Long getDataRetentionDays() {
         return this.DataRetentionDays;
     }
 
     /**
-     * Set Data retention period (in days)
-     * @param DataRetentionDays Data retention period (in days)
+     * Set Data retention time (days)
+     * @param DataRetentionDays Data retention time (days)
      */
     public void setDataRetentionDays(Long DataRetentionDays) {
         this.DataRetentionDays = DataRetentionDays;
     }
 
     /**
-     * Get Instance name 
-     * @return InstanceName Instance name
+     * Get Instance name. 
+     * @return InstanceName Instance name.
      */
     public String getInstanceName() {
         return this.InstanceName;
     }
 
     /**
-     * Set Instance name
-     * @param InstanceName Instance name
+     * Set Instance name.
+     * @param InstanceName Instance name.
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;
     }
 
     /**
-     * Get Creation time 
-     * @return CreatedAt Creation time
+     * Get Creation time. 
+     * @return CreatedAt Creation time.
      */
     public String getCreatedAt() {
         return this.CreatedAt;
     }
 
     /**
-     * Set Creation time
-     * @param CreatedAt Creation time
+     * Set Creation time.
+     * @param CreatedAt Creation time.
      */
     public void setCreatedAt(String CreatedAt) {
         this.CreatedAt = CreatedAt;
     }
 
     /**
-     * Get  
-     * @return InstanceType 
+     * Get Instance type 1: Original web-related class 2: app endpoint type 
+     * @return InstanceType Instance type 1: Original web-related class 2: app endpoint type
      */
     public Long getInstanceType() {
         return this.InstanceType;
     }
 
     /**
-     * Set 
-     * @param InstanceType 
+     * Set Instance type 1: Original web-related class 2: app endpoint type
+     * @param InstanceType Instance type 1: Original web-related class 2: app endpoint type
      */
     public void setInstanceType(Long InstanceType) {
         this.InstanceType = InstanceType;

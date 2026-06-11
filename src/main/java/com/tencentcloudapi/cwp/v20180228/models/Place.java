@@ -38,7 +38,7 @@ public class Place extends AbstractModel {
     private Long ProvinceId;
 
     /**
-    * Country ID. Currently, only 1 is supported, indicating China.
+    * Country ID. Currently, only 1 is supported, indicating domestic.
     */
     @SerializedName("CountryId")
     @Expose
@@ -84,16 +84,16 @@ public class Place extends AbstractModel {
     }
 
     /**
-     * Get Country ID. Currently, only 1 is supported, indicating China. 
-     * @return CountryId Country ID. Currently, only 1 is supported, indicating China.
+     * Get Country ID. Currently, only 1 is supported, indicating domestic. 
+     * @return CountryId Country ID. Currently, only 1 is supported, indicating domestic.
      */
     public Long getCountryId() {
         return this.CountryId;
     }
 
     /**
-     * Set Country ID. Currently, only 1 is supported, indicating China.
-     * @param CountryId Country ID. Currently, only 1 is supported, indicating China.
+     * Set Country ID. Currently, only 1 is supported, indicating domestic.
+     * @param CountryId Country ID. Currently, only 1 is supported, indicating domestic.
      */
     public void setCountryId(Long CountryId) {
         this.CountryId = CountryId;

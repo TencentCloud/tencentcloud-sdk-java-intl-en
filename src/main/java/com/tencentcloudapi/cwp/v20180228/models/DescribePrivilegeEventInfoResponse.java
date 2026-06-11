@@ -25,7 +25,6 @@ public class DescribePrivilegeEventInfoResponse extends AbstractModel {
 
     /**
     * Local privilege escalation details
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("PrivilegeEventInfo")
     @Expose
@@ -39,10 +38,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Local privilege escalation details
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Local privilege escalation details 
      * @return PrivilegeEventInfo Local privilege escalation details
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public PrivilegeEventInfo getPrivilegeEventInfo() {
         return this.PrivilegeEventInfo;
@@ -50,9 +47,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Local privilege escalation details
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param PrivilegeEventInfo Local privilege escalation details
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setPrivilegeEventInfo(PrivilegeEventInfo PrivilegeEventInfo) {
         this.PrivilegeEventInfo = PrivilegeEventInfo;

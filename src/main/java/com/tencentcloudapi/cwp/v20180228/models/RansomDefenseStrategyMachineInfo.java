@@ -32,7 +32,6 @@ public class RansomDefenseStrategyMachineInfo extends AbstractModel {
 
     /**
     * Specified Hard Disk List. When it is empty, it means all hard disks: disk_id1|disk_name1;disk_id2|disk_name2.
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("DiskInfo")
     @Expose
@@ -55,10 +54,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Specified Hard Disk List. When it is empty, it means all hard disks: disk_id1|disk_name1;disk_id2|disk_name2.
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Specified Hard Disk List. When it is empty, it means all hard disks: disk_id1|disk_name1;disk_id2|disk_name2. 
      * @return DiskInfo Specified Hard Disk List. When it is empty, it means all hard disks: disk_id1|disk_name1;disk_id2|disk_name2.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getDiskInfo() {
         return this.DiskInfo;
@@ -66,9 +63,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Specified Hard Disk List. When it is empty, it means all hard disks: disk_id1|disk_name1;disk_id2|disk_name2.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param DiskInfo Specified Hard Disk List. When it is empty, it means all hard disks: disk_id1|disk_name1;disk_id2|disk_name2.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setDiskInfo(String DiskInfo) {
         this.DiskInfo = DiskInfo;

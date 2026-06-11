@@ -61,7 +61,7 @@ public class DescribeAssetImageRegistryVulListExportRequest extends AbstractMode
     private ImageInfo ImageInfo;
 
     /**
-    * Image ID
+    * Unique image ID, obtainable by calling the DescribeAssetImageRegistryList API.
     */
     @SerializedName("Id")
     @Expose
@@ -156,16 +156,16 @@ public class DescribeAssetImageRegistryVulListExportRequest extends AbstractMode
     }
 
     /**
-     * Get Image ID 
-     * @return Id Image ID
+     * Get Unique image ID, obtainable by calling the DescribeAssetImageRegistryList API. 
+     * @return Id Unique image ID, obtainable by calling the DescribeAssetImageRegistryList API.
      */
     public Long getId() {
         return this.Id;
     }
 
     /**
-     * Set Image ID
-     * @param Id Image ID
+     * Set Unique image ID, obtainable by calling the DescribeAssetImageRegistryList API.
+     * @param Id Unique image ID, obtainable by calling the DescribeAssetImageRegistryList API.
      */
     public void setId(Long Id) {
         this.Id = Id;

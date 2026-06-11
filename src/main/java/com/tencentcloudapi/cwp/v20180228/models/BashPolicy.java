@@ -52,7 +52,7 @@ public class BashPolicy extends AbstractModel {
     private Long BashAction;
 
     /**
-    * Regular expression
+    * Regular expression, encrypted with Base64. This field is deprecated. If you enter this parameter, it will be automatically replaced with Rules.Process.CmdLine.
     */
     @SerializedName("Rule")
     @Expose
@@ -81,30 +81,27 @@ public class BashPolicy extends AbstractModel {
 
     /**
     * Policy description
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Descript")
     @Expose
     private String Descript;
 
     /**
-    * When it is added to the allowlist, the EventId needs to be passed in.Note: This field may return null, indicating that no valid values can be obtained.
+    * When it is added to the allowlist, the event ID needs to be passed in.
     */
     @SerializedName("EventId")
     @Expose
     private Long EventId;
 
     /**
-    * Whether to process old events as allowlisted ones: 0 - no; 1 - yes
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Whether to add existing events to the allowlist. 0: no; 1: yes.
     */
     @SerializedName("DealOldEvents")
     @Expose
     private Long DealOldEvents;
 
     /**
-    * A collection of QUUIDs for effective hosts
-Note: This field may return null, indicating that no valid values can be obtained.
+    * QUUID set for effective hosts
     */
     @SerializedName("Quuids")
     @Expose
@@ -137,6 +134,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
     @SerializedName("Uuids")
     @Expose
     private String [] Uuids;
+
+    /**
+    * Rule expression
+    */
+    @SerializedName("Rules")
+    @Expose
+    private PolicyRules Rules;
 
     /**
      * Get Policy name 
@@ -203,16 +207,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Regular expression 
-     * @return Rule Regular expression
+     * Get Regular expression, encrypted with Base64. This field is deprecated. If you enter this parameter, it will be automatically replaced with Rules.Process.CmdLine. 
+     * @return Rule Regular expression, encrypted with Base64. This field is deprecated. If you enter this parameter, it will be automatically replaced with Rules.Process.CmdLine.
      */
     public String getRule() {
         return this.Rule;
     }
 
     /**
-     * Set Regular expression
-     * @param Rule Regular expression
+     * Set Regular expression, encrypted with Base64. This field is deprecated. If you enter this parameter, it will be automatically replaced with Rules.Process.CmdLine.
+     * @param Rule Regular expression, encrypted with Base64. This field is deprecated. If you enter this parameter, it will be automatically replaced with Rules.Process.CmdLine.
      */
     public void setRule(String Rule) {
         this.Rule = Rule;
@@ -267,10 +271,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Policy description
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Policy description 
      * @return Descript Policy description
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getDescript() {
         return this.Descript;
@@ -278,65 +280,55 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Policy description
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Descript Policy description
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setDescript(String Descript) {
         this.Descript = Descript;
     }
 
     /**
-     * Get When it is added to the allowlist, the EventId needs to be passed in.Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return EventId When it is added to the allowlist, the EventId needs to be passed in.Note: This field may return null, indicating that no valid values can be obtained.
+     * Get When it is added to the allowlist, the event ID needs to be passed in. 
+     * @return EventId When it is added to the allowlist, the event ID needs to be passed in.
      */
     public Long getEventId() {
         return this.EventId;
     }
 
     /**
-     * Set When it is added to the allowlist, the EventId needs to be passed in.Note: This field may return null, indicating that no valid values can be obtained.
-     * @param EventId When it is added to the allowlist, the EventId needs to be passed in.Note: This field may return null, indicating that no valid values can be obtained.
+     * Set When it is added to the allowlist, the event ID needs to be passed in.
+     * @param EventId When it is added to the allowlist, the event ID needs to be passed in.
      */
     public void setEventId(Long EventId) {
         this.EventId = EventId;
     }
 
     /**
-     * Get Whether to process old events as allowlisted ones: 0 - no; 1 - yes
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return DealOldEvents Whether to process old events as allowlisted ones: 0 - no; 1 - yes
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Whether to add existing events to the allowlist. 0: no; 1: yes. 
+     * @return DealOldEvents Whether to add existing events to the allowlist. 0: no; 1: yes.
      */
     public Long getDealOldEvents() {
         return this.DealOldEvents;
     }
 
     /**
-     * Set Whether to process old events as allowlisted ones: 0 - no; 1 - yes
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param DealOldEvents Whether to process old events as allowlisted ones: 0 - no; 1 - yes
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Whether to add existing events to the allowlist. 0: no; 1: yes.
+     * @param DealOldEvents Whether to add existing events to the allowlist. 0: no; 1: yes.
      */
     public void setDealOldEvents(Long DealOldEvents) {
         this.DealOldEvents = DealOldEvents;
     }
 
     /**
-     * Get A collection of QUUIDs for effective hosts
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Quuids A collection of QUUIDs for effective hosts
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get QUUID set for effective hosts 
+     * @return Quuids QUUID set for effective hosts
      */
     public String [] getQuuids() {
         return this.Quuids;
     }
 
     /**
-     * Set A collection of QUUIDs for effective hosts
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Quuids A collection of QUUIDs for effective hosts
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set QUUID set for effective hosts
+     * @param Quuids QUUID set for effective hosts
      */
     public void setQuuids(String [] Quuids) {
         this.Quuids = Quuids;
@@ -406,6 +398,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.Uuids = Uuids;
     }
 
+    /**
+     * Get Rule expression 
+     * @return Rules Rule expression
+     */
+    public PolicyRules getRules() {
+        return this.Rules;
+    }
+
+    /**
+     * Set Rule expression
+     * @param Rules Rule expression
+     */
+    public void setRules(PolicyRules Rules) {
+        this.Rules = Rules;
+    }
+
     public BashPolicy() {
     }
 
@@ -468,6 +476,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 this.Uuids[i] = new String(source.Uuids[i]);
             }
         }
+        if (source.Rules != null) {
+            this.Rules = new PolicyRules(source.Rules);
+        }
     }
 
 
@@ -491,6 +502,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "ModifyTime", this.ModifyTime);
         this.setParamArraySimple(map, prefix + "Uuids.", this.Uuids);
+        this.setParamObj(map, prefix + "Rules.", this.Rules);
 
     }
 }

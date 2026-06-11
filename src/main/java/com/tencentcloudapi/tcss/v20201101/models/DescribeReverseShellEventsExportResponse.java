@@ -24,16 +24,14 @@ import java.util.HashMap;
 public class DescribeReverseShellEventsExportResponse extends AbstractModel {
 
     /**
-    * Excel download URL
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Address for download the Excel file.
     */
     @SerializedName("DownloadUrl")
     @Expose
     private String DownloadUrl;
 
     /**
-    * Task ID
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Task ID.
     */
     @SerializedName("JobId")
     @Expose
@@ -47,40 +45,32 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Excel download URL
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return DownloadUrl Excel download URL
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Address for download the Excel file. 
+     * @return DownloadUrl Address for download the Excel file.
      */
     public String getDownloadUrl() {
         return this.DownloadUrl;
     }
 
     /**
-     * Set Excel download URL
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param DownloadUrl Excel download URL
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Address for download the Excel file.
+     * @param DownloadUrl Address for download the Excel file.
      */
     public void setDownloadUrl(String DownloadUrl) {
         this.DownloadUrl = DownloadUrl;
     }
 
     /**
-     * Get Task ID
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return JobId Task ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Task ID. 
+     * @return JobId Task ID.
      */
     public String getJobId() {
         return this.JobId;
     }
 
     /**
-     * Set Task ID
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param JobId Task ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Task ID.
+     * @param JobId Task ID.
      */
     public void setJobId(String JobId) {
         this.JobId = JobId;

@@ -25,7 +25,6 @@ public class BaselineInfo extends AbstractModel {
 
     /**
     * Baseline name
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Name")
     @Expose
@@ -33,7 +32,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Hazard level: 1-Low-risk; 2-Medium-risk; 3-High-risk; 4-Critical
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Level")
     @Expose
@@ -41,7 +39,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Number of check items
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("RuleCount")
     @Expose
@@ -49,14 +46,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Number of affected servers
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("HostCount")
     @Expose
     private Long HostCount;
 
     /**
-    * Pass status. 0: passed; 1: failed.Note: This field may return null, indicating that no valid values can be obtained.
+    * Pass status: 0: Failed, 1: Approved
     */
     @SerializedName("Status")
     @Expose
@@ -64,41 +60,35 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Baseline ID
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("CategoryId")
     @Expose
     private Long CategoryId;
 
     /**
-    * Last check time
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Last detection time
     */
     @SerializedName("LastScanTime")
     @Expose
     private String LastScanTime;
 
     /**
-    * 5: checking
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 5: detecting
     */
     @SerializedName("MaxStatus")
     @Expose
     private Long MaxStatus;
 
     /**
-    * Baseline check items with risks
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Baseline risk items
     */
     @SerializedName("BaselineFailCount")
     @Expose
     private Long BaselineFailCount;
 
     /**
-     * Get Baseline name
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Baseline name 
      * @return Name Baseline name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getName() {
         return this.Name;
@@ -106,19 +96,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Baseline name
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Name Baseline name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get Hazard level: 1-Low-risk; 2-Medium-risk; 3-High-risk; 4-Critical
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Hazard level: 1-Low-risk; 2-Medium-risk; 3-High-risk; 4-Critical 
      * @return Level Hazard level: 1-Low-risk; 2-Medium-risk; 3-High-risk; 4-Critical
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getLevel() {
         return this.Level;
@@ -126,19 +112,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Hazard level: 1-Low-risk; 2-Medium-risk; 3-High-risk; 4-Critical
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Level Hazard level: 1-Low-risk; 2-Medium-risk; 3-High-risk; 4-Critical
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setLevel(Long Level) {
         this.Level = Level;
     }
 
     /**
-     * Get Number of check items
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Number of check items 
      * @return RuleCount Number of check items
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getRuleCount() {
         return this.RuleCount;
@@ -146,19 +128,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Number of check items
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param RuleCount Number of check items
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setRuleCount(Long RuleCount) {
         this.RuleCount = RuleCount;
     }
 
     /**
-     * Get Number of affected servers
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Number of affected servers 
      * @return HostCount Number of affected servers
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getHostCount() {
         return this.HostCount;
@@ -166,35 +144,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Number of affected servers
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param HostCount Number of affected servers
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setHostCount(Long HostCount) {
         this.HostCount = HostCount;
     }
 
     /**
-     * Get Pass status. 0: passed; 1: failed.Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Status Pass status. 0: passed; 1: failed.Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Pass status: 0: Failed, 1: Approved 
+     * @return Status Pass status: 0: Failed, 1: Approved
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Pass status. 0: passed; 1: failed.Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Status Pass status. 0: passed; 1: failed.Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Pass status: 0: Failed, 1: Approved
+     * @param Status Pass status: 0: Failed, 1: Approved
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get Baseline ID
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Baseline ID 
      * @return CategoryId Baseline ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getCategoryId() {
         return this.CategoryId;
@@ -202,69 +176,55 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Baseline ID
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param CategoryId Baseline ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setCategoryId(Long CategoryId) {
         this.CategoryId = CategoryId;
     }
 
     /**
-     * Get Last check time
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return LastScanTime Last check time
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Last detection time 
+     * @return LastScanTime Last detection time
      */
     public String getLastScanTime() {
         return this.LastScanTime;
     }
 
     /**
-     * Set Last check time
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param LastScanTime Last check time
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Last detection time
+     * @param LastScanTime Last detection time
      */
     public void setLastScanTime(String LastScanTime) {
         this.LastScanTime = LastScanTime;
     }
 
     /**
-     * Get 5: checking
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return MaxStatus 5: checking
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get 5: detecting 
+     * @return MaxStatus 5: detecting
      */
     public Long getMaxStatus() {
         return this.MaxStatus;
     }
 
     /**
-     * Set 5: checking
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param MaxStatus 5: checking
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 5: detecting
+     * @param MaxStatus 5: detecting
      */
     public void setMaxStatus(Long MaxStatus) {
         this.MaxStatus = MaxStatus;
     }
 
     /**
-     * Get Baseline check items with risks
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return BaselineFailCount Baseline check items with risks
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Baseline risk items 
+     * @return BaselineFailCount Baseline risk items
      */
     public Long getBaselineFailCount() {
         return this.BaselineFailCount;
     }
 
     /**
-     * Set Baseline check items with risks
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param BaselineFailCount Baseline check items with risks
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Baseline risk items
+     * @param BaselineFailCount Baseline risk items
      */
     public void setBaselineFailCount(Long BaselineFailCount) {
         this.BaselineFailCount = BaselineFailCount;

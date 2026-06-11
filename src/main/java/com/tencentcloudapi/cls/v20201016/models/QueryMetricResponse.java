@@ -24,7 +24,11 @@ import java.util.HashMap;
 public class QueryMetricResponse extends AbstractModel {
 
     /**
-    * Metric Query Result Type
+    * Metric Query Result Type, Support
+-scalar value
+-string value
+-instantaneous vector
+-matrix interval vector
     */
     @SerializedName("ResultType")
     @Expose
@@ -45,16 +49,32 @@ public class QueryMetricResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Metric Query Result Type 
-     * @return ResultType Metric Query Result Type
+     * Get Metric Query Result Type, Support
+-scalar value
+-string value
+-instantaneous vector
+-matrix interval vector 
+     * @return ResultType Metric Query Result Type, Support
+-scalar value
+-string value
+-instantaneous vector
+-matrix interval vector
      */
     public String getResultType() {
         return this.ResultType;
     }
 
     /**
-     * Set Metric Query Result Type
-     * @param ResultType Metric Query Result Type
+     * Set Metric Query Result Type, Support
+-scalar value
+-string value
+-instantaneous vector
+-matrix interval vector
+     * @param ResultType Metric Query Result Type, Support
+-scalar value
+-string value
+-instantaneous vector
+-matrix interval vector
      */
     public void setResultType(String ResultType) {
         this.ResultType = ResultType;

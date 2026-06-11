@@ -31,8 +31,7 @@ public class DescribeRiskProcessEventsResponse extends AbstractModel {
     private Long TotalCount;
 
     /**
-    * List of exceptional processes
-Note: This field may return null, indicating that no valid values can be obtained.
+    * List of Exceptional Processes
     */
     @SerializedName("List")
     @Expose
@@ -62,20 +61,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get List of exceptional processes
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return List List of exceptional processes
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get List of Exceptional Processes 
+     * @return List List of Exceptional Processes
      */
     public RiskProcessEvent [] getList() {
         return this.List;
     }
 
     /**
-     * Set List of exceptional processes
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param List List of exceptional processes
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set List of Exceptional Processes
+     * @param List List of Exceptional Processes
      */
     public void setList(RiskProcessEvent [] List) {
         this.List = List;

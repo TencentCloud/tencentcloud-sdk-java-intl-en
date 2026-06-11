@@ -122,6 +122,13 @@ public class VulAffectedContainerInfo extends AbstractModel {
     private String NodeName;
 
     /**
+    * Container status. "RUNNING": running; "PAUSED": paused; "STOPPED": stopped; "CREATED": created; "DESTROYED": terminated; "RESTARTING": restarting; "REMOVING": migrating; "DEAD": dead; "UNKNOWN": unknown.
+    */
+    @SerializedName("ContainerStatus")
+    @Expose
+    private String ContainerStatus;
+
+    /**
      * Get Private IP 
      * @return HostIP Private IP
      */
@@ -345,6 +352,22 @@ public class VulAffectedContainerInfo extends AbstractModel {
         this.NodeName = NodeName;
     }
 
+    /**
+     * Get Container status. "RUNNING": running; "PAUSED": paused; "STOPPED": stopped; "CREATED": created; "DESTROYED": terminated; "RESTARTING": restarting; "REMOVING": migrating; "DEAD": dead; "UNKNOWN": unknown. 
+     * @return ContainerStatus Container status. "RUNNING": running; "PAUSED": paused; "STOPPED": stopped; "CREATED": created; "DESTROYED": terminated; "RESTARTING": restarting; "REMOVING": migrating; "DEAD": dead; "UNKNOWN": unknown.
+     */
+    public String getContainerStatus() {
+        return this.ContainerStatus;
+    }
+
+    /**
+     * Set Container status. "RUNNING": running; "PAUSED": paused; "STOPPED": stopped; "CREATED": created; "DESTROYED": terminated; "RESTARTING": restarting; "REMOVING": migrating; "DEAD": dead; "UNKNOWN": unknown.
+     * @param ContainerStatus Container status. "RUNNING": running; "PAUSED": paused; "STOPPED": stopped; "CREATED": created; "DESTROYED": terminated; "RESTARTING": restarting; "REMOVING": migrating; "DEAD": dead; "UNKNOWN": unknown.
+     */
+    public void setContainerStatus(String ContainerStatus) {
+        this.ContainerStatus = ContainerStatus;
+    }
+
     public VulAffectedContainerInfo() {
     }
 
@@ -395,6 +418,9 @@ public class VulAffectedContainerInfo extends AbstractModel {
         if (source.NodeName != null) {
             this.NodeName = new String(source.NodeName);
         }
+        if (source.ContainerStatus != null) {
+            this.ContainerStatus = new String(source.ContainerStatus);
+        }
     }
 
 
@@ -416,6 +442,7 @@ public class VulAffectedContainerInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "NodeUniqueID", this.NodeUniqueID);
         this.setParamSimple(map, prefix + "NodeID", this.NodeID);
         this.setParamSimple(map, prefix + "NodeName", this.NodeName);
+        this.setParamSimple(map, prefix + "ContainerStatus", this.ContainerStatus);
 
     }
 }

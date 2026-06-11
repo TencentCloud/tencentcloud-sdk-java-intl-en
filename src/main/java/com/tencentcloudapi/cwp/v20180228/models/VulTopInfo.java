@@ -24,8 +24,7 @@ import java.util.HashMap;
 public class VulTopInfo extends AbstractModel {
 
     /**
-    * Vulnerability name
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Vulnerability name.
     */
     @SerializedName("VulName")
     @Expose
@@ -33,7 +32,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Hazard level: 1-Low-risk; 2-Medium-risk; 3-High-risk; 4-Critical
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("VulLevel")
     @Expose
@@ -41,7 +39,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Number of vulnerabilities
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("VulCount")
     @Expose
@@ -49,37 +46,30 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Vulnerability ID
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("VulId")
     @Expose
     private Long VulId;
 
     /**
-     * Get Vulnerability name
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return VulName Vulnerability name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Vulnerability name. 
+     * @return VulName Vulnerability name.
      */
     public String getVulName() {
         return this.VulName;
     }
 
     /**
-     * Set Vulnerability name
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param VulName Vulnerability name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Vulnerability name.
+     * @param VulName Vulnerability name.
      */
     public void setVulName(String VulName) {
         this.VulName = VulName;
     }
 
     /**
-     * Get Hazard level: 1-Low-risk; 2-Medium-risk; 3-High-risk; 4-Critical
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Hazard level: 1-Low-risk; 2-Medium-risk; 3-High-risk; 4-Critical 
      * @return VulLevel Hazard level: 1-Low-risk; 2-Medium-risk; 3-High-risk; 4-Critical
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getVulLevel() {
         return this.VulLevel;
@@ -87,19 +77,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Hazard level: 1-Low-risk; 2-Medium-risk; 3-High-risk; 4-Critical
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param VulLevel Hazard level: 1-Low-risk; 2-Medium-risk; 3-High-risk; 4-Critical
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setVulLevel(Long VulLevel) {
         this.VulLevel = VulLevel;
     }
 
     /**
-     * Get Number of vulnerabilities
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Number of vulnerabilities 
      * @return VulCount Number of vulnerabilities
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getVulCount() {
         return this.VulCount;
@@ -107,19 +93,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Number of vulnerabilities
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param VulCount Number of vulnerabilities
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setVulCount(Long VulCount) {
         this.VulCount = VulCount;
     }
 
     /**
-     * Get Vulnerability ID
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Vulnerability ID 
      * @return VulId Vulnerability ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getVulId() {
         return this.VulId;
@@ -127,9 +109,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Vulnerability ID
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param VulId Vulnerability ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setVulId(Long VulId) {
         this.VulId = VulId;

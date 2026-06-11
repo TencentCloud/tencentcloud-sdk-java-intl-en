@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateTopicResponse extends AbstractModel {
 
     /**
-    * Log topic ID
+    * <p>Topic ID</p>
     */
     @SerializedName("TopicId")
     @Expose
@@ -38,16 +38,16 @@ public class CreateTopicResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Log topic ID 
-     * @return TopicId Log topic ID
+     * Get <p>Topic ID</p> 
+     * @return TopicId <p>Topic ID</p>
      */
     public String getTopicId() {
         return this.TopicId;
     }
 
     /**
-     * Set Log topic ID
-     * @param TopicId Log topic ID
+     * Set <p>Topic ID</p>
+     * @param TopicId <p>Topic ID</p>
      */
     public void setTopicId(String TopicId) {
         this.TopicId = TopicId;

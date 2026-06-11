@@ -80,14 +80,14 @@ public class ScanVulSettingRequest extends AbstractModel {
     private Long EnableScan;
 
     /**
-    * If empty, scan hosts with all Professional, Premium, and General Discount editions by default; if not empty, only scan the selected hosts.
+    * If empty, scan all Pro Edition, Flagship Edition, and Lite hosts by default. If not empty, only scan selected hosts.
     */
     @SerializedName("Uuids")
     @Expose
     private String [] Uuids;
 
     /**
-    * 0 version comparison, 2 version comparison + poc
+    * 0: version comparison, 2: version comparison + POC.
     */
     @SerializedName("ScanMethod")
     @Expose
@@ -222,32 +222,32 @@ public class ScanVulSettingRequest extends AbstractModel {
     }
 
     /**
-     * Get If empty, scan hosts with all Professional, Premium, and General Discount editions by default; if not empty, only scan the selected hosts. 
-     * @return Uuids If empty, scan hosts with all Professional, Premium, and General Discount editions by default; if not empty, only scan the selected hosts.
+     * Get If empty, scan all Pro Edition, Flagship Edition, and Lite hosts by default. If not empty, only scan selected hosts. 
+     * @return Uuids If empty, scan all Pro Edition, Flagship Edition, and Lite hosts by default. If not empty, only scan selected hosts.
      */
     public String [] getUuids() {
         return this.Uuids;
     }
 
     /**
-     * Set If empty, scan hosts with all Professional, Premium, and General Discount editions by default; if not empty, only scan the selected hosts.
-     * @param Uuids If empty, scan hosts with all Professional, Premium, and General Discount editions by default; if not empty, only scan the selected hosts.
+     * Set If empty, scan all Pro Edition, Flagship Edition, and Lite hosts by default. If not empty, only scan selected hosts.
+     * @param Uuids If empty, scan all Pro Edition, Flagship Edition, and Lite hosts by default. If not empty, only scan selected hosts.
      */
     public void setUuids(String [] Uuids) {
         this.Uuids = Uuids;
     }
 
     /**
-     * Get 0 version comparison, 2 version comparison + poc 
-     * @return ScanMethod 0 version comparison, 2 version comparison + poc
+     * Get 0: version comparison, 2: version comparison + POC. 
+     * @return ScanMethod 0: version comparison, 2: version comparison + POC.
      */
     public Long getScanMethod() {
         return this.ScanMethod;
     }
 
     /**
-     * Set 0 version comparison, 2 version comparison + poc
-     * @param ScanMethod 0 version comparison, 2 version comparison + poc
+     * Set 0: version comparison, 2: version comparison + POC.
+     * @param ScanMethod 0: version comparison, 2: version comparison + POC.
      */
     public void setScanMethod(Long ScanMethod) {
         this.ScanMethod = ScanMethod;

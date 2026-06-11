@@ -24,23 +24,28 @@ import java.util.HashMap;
 public class DeleteMachineGroupRequest extends AbstractModel {
 
     /**
-    * Machine group ID
+    * Machine group Id
+-Obtain the machine group Id by searching the machine group list (https://www.tencentcloud.com/document/product/614/56438?from_cn_redirect=1).
     */
     @SerializedName("GroupId")
     @Expose
     private String GroupId;
 
     /**
-     * Get Machine group ID 
-     * @return GroupId Machine group ID
+     * Get Machine group Id
+-Obtain the machine group Id by searching the machine group list (https://www.tencentcloud.com/document/product/614/56438?from_cn_redirect=1). 
+     * @return GroupId Machine group Id
+-Obtain the machine group Id by searching the machine group list (https://www.tencentcloud.com/document/product/614/56438?from_cn_redirect=1).
      */
     public String getGroupId() {
         return this.GroupId;
     }
 
     /**
-     * Set Machine group ID
-     * @param GroupId Machine group ID
+     * Set Machine group Id
+-Obtain the machine group Id by searching the machine group list (https://www.tencentcloud.com/document/product/614/56438?from_cn_redirect=1).
+     * @param GroupId Machine group Id
+-Obtain the machine group Id by searching the machine group list (https://www.tencentcloud.com/document/product/614/56438?from_cn_redirect=1).
      */
     public void setGroupId(String GroupId) {
         this.GroupId = GroupId;

@@ -24,17 +24,17 @@ import java.util.HashMap;
 public class DescribeScheduledActionsRequest extends AbstractModel {
 
     /**
-    * Query by one or more scheduled task ids. you can obtain the scheduled task ID by logging in to the console (https://console.cloud.tencent.com/autoscaling/group). the maximum number of instances per request is 100. parameters ScheduledActionIds and Filters must not be specified simultaneously.
+    * Query by one or more scheduled task ids. you can obtain the scheduled task ID by logging in to the [console](https://console.cloud.tencent.com/autoscaling/group). the maximum number of instances per request is 100. parameters ScheduledActionIds and Filters must not be specified simultaneously.
     */
     @SerializedName("ScheduledActionIds")
     @Expose
     private String [] ScheduledActionIds;
 
     /**
-    * Filter criteria. obtain the scheduled task ID, scheduled task name, and scaling group ID by logging in to the console (https://console.cloud.tencent.com/autoscaling/group).
-<li> scheduled-action-id - String - required: no - (filter) filter by scheduled task id.</li>.
-<li> scheduled-action-name - String - required: no - (filter criteria) filters by scheduled task name.</li>.
-<li> auto-scaling-group-id - String - required: no - (filter) filter by auto scaling group id.</li>.
+    * Filter criteria. obtain the scheduled task ID, scheduled task name, and scaling group ID by logging in to the [console](https://console.cloud.tencent.com/autoscaling/group).
+<li> scheduled-action-id - String - required: no - (filter) filter by scheduled task id.</li>
+<li> scheduled-action-name - String - required: no - (filter criteria) filters by scheduled task name.</li>
+<li> auto-scaling-group-id - String - required: no - (filter) filter by auto scaling group id.</li>
     */
     @SerializedName("Filters")
     @Expose
@@ -55,44 +55,44 @@ public class DescribeScheduledActionsRequest extends AbstractModel {
     private Long Limit;
 
     /**
-     * Get Query by one or more scheduled task ids. you can obtain the scheduled task ID by logging in to the console (https://console.cloud.tencent.com/autoscaling/group). the maximum number of instances per request is 100. parameters ScheduledActionIds and Filters must not be specified simultaneously. 
-     * @return ScheduledActionIds Query by one or more scheduled task ids. you can obtain the scheduled task ID by logging in to the console (https://console.cloud.tencent.com/autoscaling/group). the maximum number of instances per request is 100. parameters ScheduledActionIds and Filters must not be specified simultaneously.
+     * Get Query by one or more scheduled task ids. you can obtain the scheduled task ID by logging in to the [console](https://console.cloud.tencent.com/autoscaling/group). the maximum number of instances per request is 100. parameters ScheduledActionIds and Filters must not be specified simultaneously. 
+     * @return ScheduledActionIds Query by one or more scheduled task ids. you can obtain the scheduled task ID by logging in to the [console](https://console.cloud.tencent.com/autoscaling/group). the maximum number of instances per request is 100. parameters ScheduledActionIds and Filters must not be specified simultaneously.
      */
     public String [] getScheduledActionIds() {
         return this.ScheduledActionIds;
     }
 
     /**
-     * Set Query by one or more scheduled task ids. you can obtain the scheduled task ID by logging in to the console (https://console.cloud.tencent.com/autoscaling/group). the maximum number of instances per request is 100. parameters ScheduledActionIds and Filters must not be specified simultaneously.
-     * @param ScheduledActionIds Query by one or more scheduled task ids. you can obtain the scheduled task ID by logging in to the console (https://console.cloud.tencent.com/autoscaling/group). the maximum number of instances per request is 100. parameters ScheduledActionIds and Filters must not be specified simultaneously.
+     * Set Query by one or more scheduled task ids. you can obtain the scheduled task ID by logging in to the [console](https://console.cloud.tencent.com/autoscaling/group). the maximum number of instances per request is 100. parameters ScheduledActionIds and Filters must not be specified simultaneously.
+     * @param ScheduledActionIds Query by one or more scheduled task ids. you can obtain the scheduled task ID by logging in to the [console](https://console.cloud.tencent.com/autoscaling/group). the maximum number of instances per request is 100. parameters ScheduledActionIds and Filters must not be specified simultaneously.
      */
     public void setScheduledActionIds(String [] ScheduledActionIds) {
         this.ScheduledActionIds = ScheduledActionIds;
     }
 
     /**
-     * Get Filter criteria. obtain the scheduled task ID, scheduled task name, and scaling group ID by logging in to the console (https://console.cloud.tencent.com/autoscaling/group).
-<li> scheduled-action-id - String - required: no - (filter) filter by scheduled task id.</li>.
-<li> scheduled-action-name - String - required: no - (filter criteria) filters by scheduled task name.</li>.
-<li> auto-scaling-group-id - String - required: no - (filter) filter by auto scaling group id.</li>. 
-     * @return Filters Filter criteria. obtain the scheduled task ID, scheduled task name, and scaling group ID by logging in to the console (https://console.cloud.tencent.com/autoscaling/group).
-<li> scheduled-action-id - String - required: no - (filter) filter by scheduled task id.</li>.
-<li> scheduled-action-name - String - required: no - (filter criteria) filters by scheduled task name.</li>.
-<li> auto-scaling-group-id - String - required: no - (filter) filter by auto scaling group id.</li>.
+     * Get Filter criteria. obtain the scheduled task ID, scheduled task name, and scaling group ID by logging in to the [console](https://console.cloud.tencent.com/autoscaling/group).
+<li> scheduled-action-id - String - required: no - (filter) filter by scheduled task id.</li>
+<li> scheduled-action-name - String - required: no - (filter criteria) filters by scheduled task name.</li>
+<li> auto-scaling-group-id - String - required: no - (filter) filter by auto scaling group id.</li> 
+     * @return Filters Filter criteria. obtain the scheduled task ID, scheduled task name, and scaling group ID by logging in to the [console](https://console.cloud.tencent.com/autoscaling/group).
+<li> scheduled-action-id - String - required: no - (filter) filter by scheduled task id.</li>
+<li> scheduled-action-name - String - required: no - (filter criteria) filters by scheduled task name.</li>
+<li> auto-scaling-group-id - String - required: no - (filter) filter by auto scaling group id.</li>
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set Filter criteria. obtain the scheduled task ID, scheduled task name, and scaling group ID by logging in to the console (https://console.cloud.tencent.com/autoscaling/group).
-<li> scheduled-action-id - String - required: no - (filter) filter by scheduled task id.</li>.
-<li> scheduled-action-name - String - required: no - (filter criteria) filters by scheduled task name.</li>.
-<li> auto-scaling-group-id - String - required: no - (filter) filter by auto scaling group id.</li>.
-     * @param Filters Filter criteria. obtain the scheduled task ID, scheduled task name, and scaling group ID by logging in to the console (https://console.cloud.tencent.com/autoscaling/group).
-<li> scheduled-action-id - String - required: no - (filter) filter by scheduled task id.</li>.
-<li> scheduled-action-name - String - required: no - (filter criteria) filters by scheduled task name.</li>.
-<li> auto-scaling-group-id - String - required: no - (filter) filter by auto scaling group id.</li>.
+     * Set Filter criteria. obtain the scheduled task ID, scheduled task name, and scaling group ID by logging in to the [console](https://console.cloud.tencent.com/autoscaling/group).
+<li> scheduled-action-id - String - required: no - (filter) filter by scheduled task id.</li>
+<li> scheduled-action-name - String - required: no - (filter criteria) filters by scheduled task name.</li>
+<li> auto-scaling-group-id - String - required: no - (filter) filter by auto scaling group id.</li>
+     * @param Filters Filter criteria. obtain the scheduled task ID, scheduled task name, and scaling group ID by logging in to the [console](https://console.cloud.tencent.com/autoscaling/group).
+<li> scheduled-action-id - String - required: no - (filter) filter by scheduled task id.</li>
+<li> scheduled-action-name - String - required: no - (filter criteria) filters by scheduled task name.</li>
+<li> auto-scaling-group-id - String - required: no - (filter) filter by auto scaling group id.</li>
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;

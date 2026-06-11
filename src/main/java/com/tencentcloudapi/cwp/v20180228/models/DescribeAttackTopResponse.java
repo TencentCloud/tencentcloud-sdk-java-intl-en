@@ -25,7 +25,6 @@ public class DescribeAttackTopResponse extends AbstractModel {
 
     /**
     * Top Statistics
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("NetAttackTopInfo")
     @Expose
@@ -39,10 +38,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Top Statistics
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Top Statistics 
      * @return NetAttackTopInfo Top Statistics
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public NetAttackTopInfo getNetAttackTopInfo() {
         return this.NetAttackTopInfo;
@@ -50,9 +47,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Top Statistics
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param NetAttackTopInfo Top Statistics
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setNetAttackTopInfo(NetAttackTopInfo NetAttackTopInfo) {
         this.NetAttackTopInfo = NetAttackTopInfo;

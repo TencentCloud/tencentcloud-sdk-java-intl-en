@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class SearchLogTopics extends AbstractModel {
 
     /**
-    * Error information for multi-log topic searchNote: This field may return null, indicating that no valid values can be obtained.
+    * Error information corresponding to multi-log topic retrieval
     */
     @SerializedName("Errors")
     @Expose
     private SearchLogErrors [] Errors;
 
     /**
-    * Information for each log topic in multi-log topic searchNote: This field may return null, indicating that no valid values can be obtained.
+    * Information for each log topic during multi-log topic retrieval
     */
     @SerializedName("Infos")
     @Expose
     private SearchLogInfos [] Infos;
 
     /**
-     * Get Error information for multi-log topic searchNote: This field may return null, indicating that no valid values can be obtained. 
-     * @return Errors Error information for multi-log topic searchNote: This field may return null, indicating that no valid values can be obtained.
+     * Get Error information corresponding to multi-log topic retrieval 
+     * @return Errors Error information corresponding to multi-log topic retrieval
      */
     public SearchLogErrors [] getErrors() {
         return this.Errors;
     }
 
     /**
-     * Set Error information for multi-log topic searchNote: This field may return null, indicating that no valid values can be obtained.
-     * @param Errors Error information for multi-log topic searchNote: This field may return null, indicating that no valid values can be obtained.
+     * Set Error information corresponding to multi-log topic retrieval
+     * @param Errors Error information corresponding to multi-log topic retrieval
      */
     public void setErrors(SearchLogErrors [] Errors) {
         this.Errors = Errors;
     }
 
     /**
-     * Get Information for each log topic in multi-log topic searchNote: This field may return null, indicating that no valid values can be obtained. 
-     * @return Infos Information for each log topic in multi-log topic searchNote: This field may return null, indicating that no valid values can be obtained.
+     * Get Information for each log topic during multi-log topic retrieval 
+     * @return Infos Information for each log topic during multi-log topic retrieval
      */
     public SearchLogInfos [] getInfos() {
         return this.Infos;
     }
 
     /**
-     * Set Information for each log topic in multi-log topic searchNote: This field may return null, indicating that no valid values can be obtained.
-     * @param Infos Information for each log topic in multi-log topic searchNote: This field may return null, indicating that no valid values can be obtained.
+     * Set Information for each log topic during multi-log topic retrieval
+     * @param Infos Information for each log topic during multi-log topic retrieval
      */
     public void setInfos(SearchLogInfos [] Infos) {
         this.Infos = Infos;

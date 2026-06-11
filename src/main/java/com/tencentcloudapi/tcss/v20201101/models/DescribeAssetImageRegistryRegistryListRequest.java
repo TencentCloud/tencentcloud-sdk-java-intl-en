@@ -24,115 +24,120 @@ import java.util.HashMap;
 public class DescribeAssetImageRegistryRegistryListRequest extends AbstractModel {
 
     /**
-    * Number to return, default is 10, maximum is 100
+    * Number of entries to be returned. Default value: 10. Maximum value: 100.
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * Offset, the default is 0
+    * Offset. Default value: 0.
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * Filter field IsAuthorized Whether to authorize. The value can be all, 0 unauthorized, 1 authorized
+    * Filter fields
+Authorization status, with possible values: all, unauthorized (0), authorized (1)
     */
     @SerializedName("Filters")
     @Expose
     private AssetFilters [] Filters;
 
     /**
-    * Sort field
+    * Sorting field.
     */
     @SerializedName("By")
     @Expose
     private String By;
 
     /**
-    * Sort by asc, desc
+    * Sorting method: asc, desc
     */
     @SerializedName("Order")
     @Expose
     private String Order;
 
     /**
-     * Get Number to return, default is 10, maximum is 100 
-     * @return Limit Number to return, default is 10, maximum is 100
+     * Get Number of entries to be returned. Default value: 10. Maximum value: 100. 
+     * @return Limit Number of entries to be returned. Default value: 10. Maximum value: 100.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Number to return, default is 10, maximum is 100
-     * @param Limit Number to return, default is 10, maximum is 100
+     * Set Number of entries to be returned. Default value: 10. Maximum value: 100.
+     * @param Limit Number of entries to be returned. Default value: 10. Maximum value: 100.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get Offset, the default is 0 
-     * @return Offset Offset, the default is 0
+     * Get Offset. Default value: 0. 
+     * @return Offset Offset. Default value: 0.
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Offset, the default is 0
-     * @param Offset Offset, the default is 0
+     * Set Offset. Default value: 0.
+     * @param Offset Offset. Default value: 0.
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get Filter field IsAuthorized Whether to authorize. The value can be all, 0 unauthorized, 1 authorized 
-     * @return Filters Filter field IsAuthorized Whether to authorize. The value can be all, 0 unauthorized, 1 authorized
+     * Get Filter fields
+Authorization status, with possible values: all, unauthorized (0), authorized (1) 
+     * @return Filters Filter fields
+Authorization status, with possible values: all, unauthorized (0), authorized (1)
      */
     public AssetFilters [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set Filter field IsAuthorized Whether to authorize. The value can be all, 0 unauthorized, 1 authorized
-     * @param Filters Filter field IsAuthorized Whether to authorize. The value can be all, 0 unauthorized, 1 authorized
+     * Set Filter fields
+Authorization status, with possible values: all, unauthorized (0), authorized (1)
+     * @param Filters Filter fields
+Authorization status, with possible values: all, unauthorized (0), authorized (1)
      */
     public void setFilters(AssetFilters [] Filters) {
         this.Filters = Filters;
     }
 
     /**
-     * Get Sort field 
-     * @return By Sort field
+     * Get Sorting field. 
+     * @return By Sorting field.
      */
     public String getBy() {
         return this.By;
     }
 
     /**
-     * Set Sort field
-     * @param By Sort field
+     * Set Sorting field.
+     * @param By Sorting field.
      */
     public void setBy(String By) {
         this.By = By;
     }
 
     /**
-     * Get Sort by asc, desc 
-     * @return Order Sort by asc, desc
+     * Get Sorting method: asc, desc 
+     * @return Order Sorting method: asc, desc
      */
     public String getOrder() {
         return this.Order;
     }
 
     /**
-     * Set Sort by asc, desc
-     * @param Order Sort by asc, desc
+     * Set Sorting method: asc, desc
+     * @param Order Sorting method: asc, desc
      */
     public void setOrder(String Order) {
         this.Order = Order;

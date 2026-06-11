@@ -25,7 +25,6 @@ public class DescribeJavaMemShellInfoResponse extends AbstractModel {
 
     /**
     * Java webshell event details
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Info")
     @Expose
@@ -39,10 +38,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Java webshell event details
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Java webshell event details 
      * @return Info Java webshell event details
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public JavaMemShellDetail getInfo() {
         return this.Info;
@@ -50,9 +47,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Java webshell event details
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Info Java webshell event details
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setInfo(JavaMemShellDetail Info) {
         this.Info = Info;

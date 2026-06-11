@@ -52,8 +52,7 @@ public class LicenseBindTaskDetail extends AbstractModel {
     private String FixMessage;
 
     /**
-    * Additional information of machine
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Additional Information on Machine
     */
     @SerializedName("MachineExtraInfo")
     @Expose
@@ -124,20 +123,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Additional information of machine
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return MachineExtraInfo Additional information of machine
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Additional Information on Machine 
+     * @return MachineExtraInfo Additional Information on Machine
      */
     public MachineExtraInfo getMachineExtraInfo() {
         return this.MachineExtraInfo;
     }
 
     /**
-     * Set Additional information of machine
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param MachineExtraInfo Additional information of machine
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Additional Information on Machine
+     * @param MachineExtraInfo Additional Information on Machine
      */
     public void setMachineExtraInfo(MachineExtraInfo MachineExtraInfo) {
         this.MachineExtraInfo = MachineExtraInfo;

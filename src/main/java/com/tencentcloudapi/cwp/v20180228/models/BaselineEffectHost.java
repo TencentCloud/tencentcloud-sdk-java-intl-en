@@ -24,8 +24,7 @@ import java.util.HashMap;
 public class BaselineEffectHost extends AbstractModel {
 
     /**
-    * Passed item
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Passed items
     */
     @SerializedName("PassCount")
     @Expose
@@ -33,23 +32,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Risky item
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("FailCount")
     @Expose
     private Long FailCount;
 
     /**
-    * First check time
-Note: This field may return null, indicating that no valid values can be obtained.
+    * First detection event
     */
     @SerializedName("FirstScanTime")
     @Expose
     private String FirstScanTime;
 
     /**
-    * Last check time
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Last detection time
     */
     @SerializedName("LastScanTime")
     @Expose
@@ -57,7 +53,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Risky item processing status. 0: failed; 1: passed.
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Status")
     @Expose
@@ -65,7 +60,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Host QUUID
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Quuid")
     @Expose
@@ -73,7 +67,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Host IP address
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("HostIp")
     @Expose
@@ -81,7 +74,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Host alias
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("AliasName")
     @Expose
@@ -89,45 +81,37 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Host UUID
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Uuid")
     @Expose
     private String Uuid;
 
     /**
-    * Check status
-Note: This field may return null, indicating that no valid values can be obtained.
+    * detecting state
     */
     @SerializedName("MaxStatus")
     @Expose
     private Long MaxStatus;
 
     /**
-     * Get Passed item
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return PassCount Passed item
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Passed items 
+     * @return PassCount Passed items
      */
     public Long getPassCount() {
         return this.PassCount;
     }
 
     /**
-     * Set Passed item
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param PassCount Passed item
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Passed items
+     * @param PassCount Passed items
      */
     public void setPassCount(Long PassCount) {
         this.PassCount = PassCount;
     }
 
     /**
-     * Get Risky item
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Risky item 
      * @return FailCount Risky item
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getFailCount() {
         return this.FailCount;
@@ -135,59 +119,47 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Risky item
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param FailCount Risky item
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setFailCount(Long FailCount) {
         this.FailCount = FailCount;
     }
 
     /**
-     * Get First check time
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return FirstScanTime First check time
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get First detection event 
+     * @return FirstScanTime First detection event
      */
     public String getFirstScanTime() {
         return this.FirstScanTime;
     }
 
     /**
-     * Set First check time
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param FirstScanTime First check time
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set First detection event
+     * @param FirstScanTime First detection event
      */
     public void setFirstScanTime(String FirstScanTime) {
         this.FirstScanTime = FirstScanTime;
     }
 
     /**
-     * Get Last check time
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return LastScanTime Last check time
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Last detection time 
+     * @return LastScanTime Last detection time
      */
     public String getLastScanTime() {
         return this.LastScanTime;
     }
 
     /**
-     * Set Last check time
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param LastScanTime Last check time
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Last detection time
+     * @param LastScanTime Last detection time
      */
     public void setLastScanTime(String LastScanTime) {
         this.LastScanTime = LastScanTime;
     }
 
     /**
-     * Get Risky item processing status. 0: failed; 1: passed.
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Risky item processing status. 0: failed; 1: passed. 
      * @return Status Risky item processing status. 0: failed; 1: passed.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getStatus() {
         return this.Status;
@@ -195,19 +167,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Risky item processing status. 0: failed; 1: passed.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Status Risky item processing status. 0: failed; 1: passed.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get Host QUUID
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Host QUUID 
      * @return Quuid Host QUUID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getQuuid() {
         return this.Quuid;
@@ -215,19 +183,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Host QUUID
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Quuid Host QUUID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setQuuid(String Quuid) {
         this.Quuid = Quuid;
     }
 
     /**
-     * Get Host IP address
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Host IP address 
      * @return HostIp Host IP address
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getHostIp() {
         return this.HostIp;
@@ -235,19 +199,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Host IP address
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param HostIp Host IP address
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setHostIp(String HostIp) {
         this.HostIp = HostIp;
     }
 
     /**
-     * Get Host alias
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Host alias 
      * @return AliasName Host alias
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getAliasName() {
         return this.AliasName;
@@ -255,19 +215,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Host alias
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param AliasName Host alias
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setAliasName(String AliasName) {
         this.AliasName = AliasName;
     }
 
     /**
-     * Get Host UUID
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Host UUID 
      * @return Uuid Host UUID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getUuid() {
         return this.Uuid;
@@ -275,29 +231,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Host UUID
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Uuid Host UUID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setUuid(String Uuid) {
         this.Uuid = Uuid;
     }
 
     /**
-     * Get Check status
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return MaxStatus Check status
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get detecting state 
+     * @return MaxStatus detecting state
      */
     public Long getMaxStatus() {
         return this.MaxStatus;
     }
 
     /**
-     * Set Check status
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param MaxStatus Check status
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set detecting state
+     * @param MaxStatus detecting state
      */
     public void setMaxStatus(Long MaxStatus) {
         this.MaxStatus = MaxStatus;

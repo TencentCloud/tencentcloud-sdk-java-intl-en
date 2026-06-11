@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class ScheduledSqlResouceInfo extends AbstractModel {
 
     /**
-    * Target topic ID
+    * Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
     */
     @SerializedName("TopicId")
     @Expose
     private String TopicId;
 
     /**
-    * Region information for the topic
+    * Regional information of the topic. Cross-region selection is not supported currently. For supported regions, see the region list (https://www.tencentcloud.com/document/api/614/56474?from_cn_redirect=1#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8) document.
     */
     @SerializedName("Region")
     @Expose
@@ -81,32 +81,32 @@ Dimension names must start with a letter or underscore, followed by letters, dig
     private MetricLabel [] CustomMetricLabels;
 
     /**
-     * Get Target topic ID 
-     * @return TopicId Target topic ID
+     * Get Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1). 
+     * @return TopicId Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
      */
     public String getTopicId() {
         return this.TopicId;
     }
 
     /**
-     * Set Target topic ID
-     * @param TopicId Target topic ID
+     * Set Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
+     * @param TopicId Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
      */
     public void setTopicId(String TopicId) {
         this.TopicId = TopicId;
     }
 
     /**
-     * Get Region information for the topic 
-     * @return Region Region information for the topic
+     * Get Regional information of the topic. Cross-region selection is not supported currently. For supported regions, see the region list (https://www.tencentcloud.com/document/api/614/56474?from_cn_redirect=1#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8) document. 
+     * @return Region Regional information of the topic. Cross-region selection is not supported currently. For supported regions, see the region list (https://www.tencentcloud.com/document/api/614/56474?from_cn_redirect=1#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8) document.
      */
     public String getRegion() {
         return this.Region;
     }
 
     /**
-     * Set Region information for the topic
-     * @param Region Region information for the topic
+     * Set Regional information of the topic. Cross-region selection is not supported currently. For supported regions, see the region list (https://www.tencentcloud.com/document/api/614/56474?from_cn_redirect=1#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8) document.
+     * @param Region Regional information of the topic. Cross-region selection is not supported currently. For supported regions, see the region list (https://www.tencentcloud.com/document/api/614/56474?from_cn_redirect=1#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8) document.
      */
     public void setRegion(String Region) {
         this.Region = Region;

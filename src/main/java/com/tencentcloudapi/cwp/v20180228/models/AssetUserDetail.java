@@ -94,14 +94,14 @@ public class AssetUserDetail extends AbstractModel {
     private String Name;
 
     /**
-    * Account type. 0: guest user; 1: standard user; 2: administrator user; 999: null (Windows only).
+    * Account type. 0: guest user; 1: standard user; 2: administrator user; 999: null (for Windows only).
     */
     @SerializedName("UserType")
     @Expose
     private Long UserType;
 
     /**
-    * Whether the account is a domain account. 0: no; 1: yes; 999: null (Windows only).
+    * Whether it is a domain account: 0: no; 1: yes; 999: null (for Windows only).
     */
     @SerializedName("IsDomain")
     @Expose
@@ -213,7 +213,7 @@ public class AssetUserDetail extends AbstractModel {
     private Long PasswordChangeType;
 
     /**
-    * User public key listNote: This field may return null, indicating that no valid values can be obtained.
+    * User public key list.
     */
     @SerializedName("Keys")
     @Expose
@@ -221,7 +221,6 @@ public class AssetUserDetail extends AbstractModel {
 
     /**
     * Data update time
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("UpdateTime")
     @Expose
@@ -388,32 +387,32 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Account type. 0: guest user; 1: standard user; 2: administrator user; 999: null (Windows only). 
-     * @return UserType Account type. 0: guest user; 1: standard user; 2: administrator user; 999: null (Windows only).
+     * Get Account type. 0: guest user; 1: standard user; 2: administrator user; 999: null (for Windows only). 
+     * @return UserType Account type. 0: guest user; 1: standard user; 2: administrator user; 999: null (for Windows only).
      */
     public Long getUserType() {
         return this.UserType;
     }
 
     /**
-     * Set Account type. 0: guest user; 1: standard user; 2: administrator user; 999: null (Windows only).
-     * @param UserType Account type. 0: guest user; 1: standard user; 2: administrator user; 999: null (Windows only).
+     * Set Account type. 0: guest user; 1: standard user; 2: administrator user; 999: null (for Windows only).
+     * @param UserType Account type. 0: guest user; 1: standard user; 2: administrator user; 999: null (for Windows only).
      */
     public void setUserType(Long UserType) {
         this.UserType = UserType;
     }
 
     /**
-     * Get Whether the account is a domain account. 0: no; 1: yes; 999: null (Windows only). 
-     * @return IsDomain Whether the account is a domain account. 0: no; 1: yes; 999: null (Windows only).
+     * Get Whether it is a domain account: 0: no; 1: yes; 999: null (for Windows only). 
+     * @return IsDomain Whether it is a domain account: 0: no; 1: yes; 999: null (for Windows only).
      */
     public Long getIsDomain() {
         return this.IsDomain;
     }
 
     /**
-     * Set Whether the account is a domain account. 0: no; 1: yes; 999: null (Windows only).
-     * @param IsDomain Whether the account is a domain account. 0: no; 1: yes; 999: null (Windows only).
+     * Set Whether it is a domain account: 0: no; 1: yes; 999: null (for Windows only).
+     * @param IsDomain Whether it is a domain account: 0: no; 1: yes; 999: null (for Windows only).
      */
     public void setIsDomain(Long IsDomain) {
         this.IsDomain = IsDomain;
@@ -660,26 +659,24 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get User public key listNote: This field may return null, indicating that no valid values can be obtained. 
-     * @return Keys User public key listNote: This field may return null, indicating that no valid values can be obtained.
+     * Get User public key list. 
+     * @return Keys User public key list.
      */
     public AssetUserKeyInfo [] getKeys() {
         return this.Keys;
     }
 
     /**
-     * Set User public key listNote: This field may return null, indicating that no valid values can be obtained.
-     * @param Keys User public key listNote: This field may return null, indicating that no valid values can be obtained.
+     * Set User public key list.
+     * @param Keys User public key list.
      */
     public void setKeys(AssetUserKeyInfo [] Keys) {
         this.Keys = Keys;
     }
 
     /**
-     * Get Data update time
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Data update time 
      * @return UpdateTime Data update time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getUpdateTime() {
         return this.UpdateTime;
@@ -687,9 +684,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Data update time
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param UpdateTime Data update time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;

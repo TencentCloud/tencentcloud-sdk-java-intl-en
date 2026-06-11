@@ -38,6 +38,13 @@ public class ModifyVirusAutoIsolateSettingRequest extends AbstractModel {
     private Boolean IsKillProgress;
 
     /**
+    * Enabling status customized by the user.
+    */
+    @SerializedName("UserAutoIsolateKillSwitch")
+    @Expose
+    private Boolean UserAutoIsolateKillSwitch;
+
+    /**
      * Get Automatic isolation switch. Valid values: `true` (on); `false` (off). 
      * @return AutoIsolateSwitch Automatic isolation switch. Valid values: `true` (on); `false` (off).
      */
@@ -69,6 +76,22 @@ public class ModifyVirusAutoIsolateSettingRequest extends AbstractModel {
         this.IsKillProgress = IsKillProgress;
     }
 
+    /**
+     * Get Enabling status customized by the user. 
+     * @return UserAutoIsolateKillSwitch Enabling status customized by the user.
+     */
+    public Boolean getUserAutoIsolateKillSwitch() {
+        return this.UserAutoIsolateKillSwitch;
+    }
+
+    /**
+     * Set Enabling status customized by the user.
+     * @param UserAutoIsolateKillSwitch Enabling status customized by the user.
+     */
+    public void setUserAutoIsolateKillSwitch(Boolean UserAutoIsolateKillSwitch) {
+        this.UserAutoIsolateKillSwitch = UserAutoIsolateKillSwitch;
+    }
+
     public ModifyVirusAutoIsolateSettingRequest() {
     }
 
@@ -83,6 +106,9 @@ public class ModifyVirusAutoIsolateSettingRequest extends AbstractModel {
         if (source.IsKillProgress != null) {
             this.IsKillProgress = new Boolean(source.IsKillProgress);
         }
+        if (source.UserAutoIsolateKillSwitch != null) {
+            this.UserAutoIsolateKillSwitch = new Boolean(source.UserAutoIsolateKillSwitch);
+        }
     }
 
 
@@ -92,6 +118,7 @@ public class ModifyVirusAutoIsolateSettingRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "AutoIsolateSwitch", this.AutoIsolateSwitch);
         this.setParamSimple(map, prefix + "IsKillProgress", this.IsKillProgress);
+        this.setParamSimple(map, prefix + "UserAutoIsolateKillSwitch", this.UserAutoIsolateKillSwitch);
 
     }
 }

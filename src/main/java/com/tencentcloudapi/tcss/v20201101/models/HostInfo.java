@@ -24,473 +24,601 @@ import java.util.HashMap;
 public class HostInfo extends AbstractModel {
 
     /**
-    * Server ID
+    * <p>Host ID.</p>
     */
     @SerializedName("HostID")
     @Expose
     private String HostID;
 
     /**
-    * Server IP, which is the private IP
+    * <p>Host IP address, which is the private IP address.</p>
     */
     @SerializedName("HostIP")
     @Expose
     private String HostIP;
 
     /**
-    * Server name
+    * <p>Host name.</p>
     */
     @SerializedName("HostName")
     @Expose
     private String HostName;
 
     /**
-    * Project
+    * <p>Business group.</p>
     */
     @SerializedName("Group")
     @Expose
     private String Group;
 
     /**
-    * Docker version
+    * <p>Docker version.</p>
     */
     @SerializedName("DockerVersion")
     @Expose
     private String DockerVersion;
 
     /**
-    * Docker file system type
+    * <p>Docker file system type.</p>
     */
     @SerializedName("DockerFileSystemDriver")
     @Expose
     private String DockerFileSystemDriver;
 
     /**
-    * Number of images
+    * <p>Number of images.</p>
     */
     @SerializedName("ImageCnt")
     @Expose
     private Long ImageCnt;
 
     /**
-    * Number of containers
+    * <p>Number of containers.</p>
     */
     @SerializedName("ContainerCnt")
     @Expose
     private Long ContainerCnt;
 
     /**
-    * Agent status
+    * <p>Agent running status.</p>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * Whether it is Containerd
+    * <p>Whether it is containerd.</p>
     */
     @SerializedName("IsContainerd")
     @Expose
     private Boolean IsContainerd;
 
     /**
-    * Server source. Valid values: `CVM`, `ECM`, `LH`, `BM`, `Other`. The first four values indicate Tencent Cloud instances, while the last one indicates non-Tencent Cloud instances.
+    * <p>Server source: one of ["CVM", "ECM", "LH", "BM"] is a Tencent Cloud server; one of ["Other"] is a non-Tencent Cloud server;</p>
     */
     @SerializedName("MachineType")
     @Expose
     private String MachineType;
 
     /**
-    * Public IP
+    * <p>Public IP address.</p>
     */
     @SerializedName("PublicIp")
     @Expose
     private String PublicIp;
 
     /**
-    * Server UUID
+    * <p>Host UUID.</p>
     */
     @SerializedName("Uuid")
     @Expose
     private String Uuid;
 
     /**
-    * Server instance ID
+    * <p>Host instance ID.</p>
     */
     @SerializedName("InstanceID")
     @Expose
     private String InstanceID;
 
     /**
-    * Region ID
+    * <p>Region ID.</p>
     */
     @SerializedName("RegionID")
     @Expose
     private Long RegionID;
 
     /**
-    * Project
-Note: This field may return `null`, indicating that no valid value was found.
+    * <p>Project.</p>
     */
     @SerializedName("Project")
     @Expose
     private ProjectInfo Project;
 
     /**
-    * Tags
-Note: This field may return `null`, indicating that no valid value was found.
+    * <p>Tag.</p>
     */
     @SerializedName("Tags")
     @Expose
     private TagInfo [] Tags;
 
     /**
-    * Cluster ID
+    * <p>Cluster ID.</p>
     */
     @SerializedName("ClusterID")
     @Expose
     private String ClusterID;
 
     /**
-    * Cluster Name
+    * <p>Cluster name.</p>
     */
     @SerializedName("ClusterName")
     @Expose
     private String ClusterName;
 
     /**
-    * Cluster Access Status
+    * <p>Cluster access status.</p>
     */
     @SerializedName("ClusterAccessedStatus")
     @Expose
     private String ClusterAccessedStatus;
 
     /**
-     * Get Server ID 
-     * @return HostID Server ID
+    * <p>Cluster access sub-status.</p><p>Enumeration values:</p><ul><li>AccessedSubNone: none</li><li>AccessedSubUninstallException: uninstallation exception</li><li>AccessedSubTimeout: access timeout</li><li>AccessedSubUninstallTimeout: uninstallation timeout</li><li>AccessedSubResourceException: cluster component check exception, including Deployment and DaemonSet</li><li>AccessedSubCAMPermissionDenied: insufficient CAM permissions</li></ul>
+    */
+    @SerializedName("ClusterAccessedSubStatus")
+    @Expose
+    private String ClusterAccessedSubStatus;
+
+    /**
+    * <p>Detailed description of the failure reason.</p>
+    */
+    @SerializedName("ClusterAccessedErrorReason")
+    @Expose
+    private String ClusterAccessedErrorReason;
+
+    /**
+    * <p>Billable cores.</p>
+    */
+    @SerializedName("ChargeCoresCnt")
+    @Expose
+    private Long ChargeCoresCnt;
+
+    /**
+    * <p>Protection status:<br>Defended<br>Undefended</p>
+    */
+    @SerializedName("DefendStatus")
+    @Expose
+    private String DefendStatus;
+
+    /**
+    * <p>Number of cores.</p>
+    */
+    @SerializedName("CoresCnt")
+    @Expose
+    private Long CoresCnt;
+
+    /**
+    * <p>Last online time.</p>
+    */
+    @SerializedName("LastOnlineTime")
+    @Expose
+    private String LastOnlineTime;
+
+    /**
+     * Get <p>Host ID.</p> 
+     * @return HostID <p>Host ID.</p>
      */
     public String getHostID() {
         return this.HostID;
     }
 
     /**
-     * Set Server ID
-     * @param HostID Server ID
+     * Set <p>Host ID.</p>
+     * @param HostID <p>Host ID.</p>
      */
     public void setHostID(String HostID) {
         this.HostID = HostID;
     }
 
     /**
-     * Get Server IP, which is the private IP 
-     * @return HostIP Server IP, which is the private IP
+     * Get <p>Host IP address, which is the private IP address.</p> 
+     * @return HostIP <p>Host IP address, which is the private IP address.</p>
      */
     public String getHostIP() {
         return this.HostIP;
     }
 
     /**
-     * Set Server IP, which is the private IP
-     * @param HostIP Server IP, which is the private IP
+     * Set <p>Host IP address, which is the private IP address.</p>
+     * @param HostIP <p>Host IP address, which is the private IP address.</p>
      */
     public void setHostIP(String HostIP) {
         this.HostIP = HostIP;
     }
 
     /**
-     * Get Server name 
-     * @return HostName Server name
+     * Get <p>Host name.</p> 
+     * @return HostName <p>Host name.</p>
      */
     public String getHostName() {
         return this.HostName;
     }
 
     /**
-     * Set Server name
-     * @param HostName Server name
+     * Set <p>Host name.</p>
+     * @param HostName <p>Host name.</p>
      */
     public void setHostName(String HostName) {
         this.HostName = HostName;
     }
 
     /**
-     * Get Project 
-     * @return Group Project
+     * Get <p>Business group.</p> 
+     * @return Group <p>Business group.</p>
      */
     public String getGroup() {
         return this.Group;
     }
 
     /**
-     * Set Project
-     * @param Group Project
+     * Set <p>Business group.</p>
+     * @param Group <p>Business group.</p>
      */
     public void setGroup(String Group) {
         this.Group = Group;
     }
 
     /**
-     * Get Docker version 
-     * @return DockerVersion Docker version
+     * Get <p>Docker version.</p> 
+     * @return DockerVersion <p>Docker version.</p>
      */
     public String getDockerVersion() {
         return this.DockerVersion;
     }
 
     /**
-     * Set Docker version
-     * @param DockerVersion Docker version
+     * Set <p>Docker version.</p>
+     * @param DockerVersion <p>Docker version.</p>
      */
     public void setDockerVersion(String DockerVersion) {
         this.DockerVersion = DockerVersion;
     }
 
     /**
-     * Get Docker file system type 
-     * @return DockerFileSystemDriver Docker file system type
+     * Get <p>Docker file system type.</p> 
+     * @return DockerFileSystemDriver <p>Docker file system type.</p>
      */
     public String getDockerFileSystemDriver() {
         return this.DockerFileSystemDriver;
     }
 
     /**
-     * Set Docker file system type
-     * @param DockerFileSystemDriver Docker file system type
+     * Set <p>Docker file system type.</p>
+     * @param DockerFileSystemDriver <p>Docker file system type.</p>
      */
     public void setDockerFileSystemDriver(String DockerFileSystemDriver) {
         this.DockerFileSystemDriver = DockerFileSystemDriver;
     }
 
     /**
-     * Get Number of images 
-     * @return ImageCnt Number of images
+     * Get <p>Number of images.</p> 
+     * @return ImageCnt <p>Number of images.</p>
      */
     public Long getImageCnt() {
         return this.ImageCnt;
     }
 
     /**
-     * Set Number of images
-     * @param ImageCnt Number of images
+     * Set <p>Number of images.</p>
+     * @param ImageCnt <p>Number of images.</p>
      */
     public void setImageCnt(Long ImageCnt) {
         this.ImageCnt = ImageCnt;
     }
 
     /**
-     * Get Number of containers 
-     * @return ContainerCnt Number of containers
+     * Get <p>Number of containers.</p> 
+     * @return ContainerCnt <p>Number of containers.</p>
      */
     public Long getContainerCnt() {
         return this.ContainerCnt;
     }
 
     /**
-     * Set Number of containers
-     * @param ContainerCnt Number of containers
+     * Set <p>Number of containers.</p>
+     * @param ContainerCnt <p>Number of containers.</p>
      */
     public void setContainerCnt(Long ContainerCnt) {
         this.ContainerCnt = ContainerCnt;
     }
 
     /**
-     * Get Agent status 
-     * @return Status Agent status
+     * Get <p>Agent running status.</p> 
+     * @return Status <p>Agent running status.</p>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Agent status
-     * @param Status Agent status
+     * Set <p>Agent running status.</p>
+     * @param Status <p>Agent running status.</p>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get Whether it is Containerd 
-     * @return IsContainerd Whether it is Containerd
+     * Get <p>Whether it is containerd.</p> 
+     * @return IsContainerd <p>Whether it is containerd.</p>
      */
     public Boolean getIsContainerd() {
         return this.IsContainerd;
     }
 
     /**
-     * Set Whether it is Containerd
-     * @param IsContainerd Whether it is Containerd
+     * Set <p>Whether it is containerd.</p>
+     * @param IsContainerd <p>Whether it is containerd.</p>
      */
     public void setIsContainerd(Boolean IsContainerd) {
         this.IsContainerd = IsContainerd;
     }
 
     /**
-     * Get Server source. Valid values: `CVM`, `ECM`, `LH`, `BM`, `Other`. The first four values indicate Tencent Cloud instances, while the last one indicates non-Tencent Cloud instances. 
-     * @return MachineType Server source. Valid values: `CVM`, `ECM`, `LH`, `BM`, `Other`. The first four values indicate Tencent Cloud instances, while the last one indicates non-Tencent Cloud instances.
+     * Get <p>Server source: one of ["CVM", "ECM", "LH", "BM"] is a Tencent Cloud server; one of ["Other"] is a non-Tencent Cloud server;</p> 
+     * @return MachineType <p>Server source: one of ["CVM", "ECM", "LH", "BM"] is a Tencent Cloud server; one of ["Other"] is a non-Tencent Cloud server;</p>
      */
     public String getMachineType() {
         return this.MachineType;
     }
 
     /**
-     * Set Server source. Valid values: `CVM`, `ECM`, `LH`, `BM`, `Other`. The first four values indicate Tencent Cloud instances, while the last one indicates non-Tencent Cloud instances.
-     * @param MachineType Server source. Valid values: `CVM`, `ECM`, `LH`, `BM`, `Other`. The first four values indicate Tencent Cloud instances, while the last one indicates non-Tencent Cloud instances.
+     * Set <p>Server source: one of ["CVM", "ECM", "LH", "BM"] is a Tencent Cloud server; one of ["Other"] is a non-Tencent Cloud server;</p>
+     * @param MachineType <p>Server source: one of ["CVM", "ECM", "LH", "BM"] is a Tencent Cloud server; one of ["Other"] is a non-Tencent Cloud server;</p>
      */
     public void setMachineType(String MachineType) {
         this.MachineType = MachineType;
     }
 
     /**
-     * Get Public IP 
-     * @return PublicIp Public IP
+     * Get <p>Public IP address.</p> 
+     * @return PublicIp <p>Public IP address.</p>
      */
     public String getPublicIp() {
         return this.PublicIp;
     }
 
     /**
-     * Set Public IP
-     * @param PublicIp Public IP
+     * Set <p>Public IP address.</p>
+     * @param PublicIp <p>Public IP address.</p>
      */
     public void setPublicIp(String PublicIp) {
         this.PublicIp = PublicIp;
     }
 
     /**
-     * Get Server UUID 
-     * @return Uuid Server UUID
+     * Get <p>Host UUID.</p> 
+     * @return Uuid <p>Host UUID.</p>
      */
     public String getUuid() {
         return this.Uuid;
     }
 
     /**
-     * Set Server UUID
-     * @param Uuid Server UUID
+     * Set <p>Host UUID.</p>
+     * @param Uuid <p>Host UUID.</p>
      */
     public void setUuid(String Uuid) {
         this.Uuid = Uuid;
     }
 
     /**
-     * Get Server instance ID 
-     * @return InstanceID Server instance ID
+     * Get <p>Host instance ID.</p> 
+     * @return InstanceID <p>Host instance ID.</p>
      */
     public String getInstanceID() {
         return this.InstanceID;
     }
 
     /**
-     * Set Server instance ID
-     * @param InstanceID Server instance ID
+     * Set <p>Host instance ID.</p>
+     * @param InstanceID <p>Host instance ID.</p>
      */
     public void setInstanceID(String InstanceID) {
         this.InstanceID = InstanceID;
     }
 
     /**
-     * Get Region ID 
-     * @return RegionID Region ID
+     * Get <p>Region ID.</p> 
+     * @return RegionID <p>Region ID.</p>
      */
     public Long getRegionID() {
         return this.RegionID;
     }
 
     /**
-     * Set Region ID
-     * @param RegionID Region ID
+     * Set <p>Region ID.</p>
+     * @param RegionID <p>Region ID.</p>
      */
     public void setRegionID(Long RegionID) {
         this.RegionID = RegionID;
     }
 
     /**
-     * Get Project
-Note: This field may return `null`, indicating that no valid value was found. 
-     * @return Project Project
-Note: This field may return `null`, indicating that no valid value was found.
+     * Get <p>Project.</p> 
+     * @return Project <p>Project.</p>
      */
     public ProjectInfo getProject() {
         return this.Project;
     }
 
     /**
-     * Set Project
-Note: This field may return `null`, indicating that no valid value was found.
-     * @param Project Project
-Note: This field may return `null`, indicating that no valid value was found.
+     * Set <p>Project.</p>
+     * @param Project <p>Project.</p>
      */
     public void setProject(ProjectInfo Project) {
         this.Project = Project;
     }
 
     /**
-     * Get Tags
-Note: This field may return `null`, indicating that no valid value was found. 
-     * @return Tags Tags
-Note: This field may return `null`, indicating that no valid value was found.
+     * Get <p>Tag.</p> 
+     * @return Tags <p>Tag.</p>
      */
     public TagInfo [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set Tags
-Note: This field may return `null`, indicating that no valid value was found.
-     * @param Tags Tags
-Note: This field may return `null`, indicating that no valid value was found.
+     * Set <p>Tag.</p>
+     * @param Tags <p>Tag.</p>
      */
     public void setTags(TagInfo [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get Cluster ID 
-     * @return ClusterID Cluster ID
+     * Get <p>Cluster ID.</p> 
+     * @return ClusterID <p>Cluster ID.</p>
      */
     public String getClusterID() {
         return this.ClusterID;
     }
 
     /**
-     * Set Cluster ID
-     * @param ClusterID Cluster ID
+     * Set <p>Cluster ID.</p>
+     * @param ClusterID <p>Cluster ID.</p>
      */
     public void setClusterID(String ClusterID) {
         this.ClusterID = ClusterID;
     }
 
     /**
-     * Get Cluster Name 
-     * @return ClusterName Cluster Name
+     * Get <p>Cluster name.</p> 
+     * @return ClusterName <p>Cluster name.</p>
      */
     public String getClusterName() {
         return this.ClusterName;
     }
 
     /**
-     * Set Cluster Name
-     * @param ClusterName Cluster Name
+     * Set <p>Cluster name.</p>
+     * @param ClusterName <p>Cluster name.</p>
      */
     public void setClusterName(String ClusterName) {
         this.ClusterName = ClusterName;
     }
 
     /**
-     * Get Cluster Access Status 
-     * @return ClusterAccessedStatus Cluster Access Status
+     * Get <p>Cluster access status.</p> 
+     * @return ClusterAccessedStatus <p>Cluster access status.</p>
      */
     public String getClusterAccessedStatus() {
         return this.ClusterAccessedStatus;
     }
 
     /**
-     * Set Cluster Access Status
-     * @param ClusterAccessedStatus Cluster Access Status
+     * Set <p>Cluster access status.</p>
+     * @param ClusterAccessedStatus <p>Cluster access status.</p>
      */
     public void setClusterAccessedStatus(String ClusterAccessedStatus) {
         this.ClusterAccessedStatus = ClusterAccessedStatus;
+    }
+
+    /**
+     * Get <p>Cluster access sub-status.</p><p>Enumeration values:</p><ul><li>AccessedSubNone: none</li><li>AccessedSubUninstallException: uninstallation exception</li><li>AccessedSubTimeout: access timeout</li><li>AccessedSubUninstallTimeout: uninstallation timeout</li><li>AccessedSubResourceException: cluster component check exception, including Deployment and DaemonSet</li><li>AccessedSubCAMPermissionDenied: insufficient CAM permissions</li></ul> 
+     * @return ClusterAccessedSubStatus <p>Cluster access sub-status.</p><p>Enumeration values:</p><ul><li>AccessedSubNone: none</li><li>AccessedSubUninstallException: uninstallation exception</li><li>AccessedSubTimeout: access timeout</li><li>AccessedSubUninstallTimeout: uninstallation timeout</li><li>AccessedSubResourceException: cluster component check exception, including Deployment and DaemonSet</li><li>AccessedSubCAMPermissionDenied: insufficient CAM permissions</li></ul>
+     */
+    public String getClusterAccessedSubStatus() {
+        return this.ClusterAccessedSubStatus;
+    }
+
+    /**
+     * Set <p>Cluster access sub-status.</p><p>Enumeration values:</p><ul><li>AccessedSubNone: none</li><li>AccessedSubUninstallException: uninstallation exception</li><li>AccessedSubTimeout: access timeout</li><li>AccessedSubUninstallTimeout: uninstallation timeout</li><li>AccessedSubResourceException: cluster component check exception, including Deployment and DaemonSet</li><li>AccessedSubCAMPermissionDenied: insufficient CAM permissions</li></ul>
+     * @param ClusterAccessedSubStatus <p>Cluster access sub-status.</p><p>Enumeration values:</p><ul><li>AccessedSubNone: none</li><li>AccessedSubUninstallException: uninstallation exception</li><li>AccessedSubTimeout: access timeout</li><li>AccessedSubUninstallTimeout: uninstallation timeout</li><li>AccessedSubResourceException: cluster component check exception, including Deployment and DaemonSet</li><li>AccessedSubCAMPermissionDenied: insufficient CAM permissions</li></ul>
+     */
+    public void setClusterAccessedSubStatus(String ClusterAccessedSubStatus) {
+        this.ClusterAccessedSubStatus = ClusterAccessedSubStatus;
+    }
+
+    /**
+     * Get <p>Detailed description of the failure reason.</p> 
+     * @return ClusterAccessedErrorReason <p>Detailed description of the failure reason.</p>
+     */
+    public String getClusterAccessedErrorReason() {
+        return this.ClusterAccessedErrorReason;
+    }
+
+    /**
+     * Set <p>Detailed description of the failure reason.</p>
+     * @param ClusterAccessedErrorReason <p>Detailed description of the failure reason.</p>
+     */
+    public void setClusterAccessedErrorReason(String ClusterAccessedErrorReason) {
+        this.ClusterAccessedErrorReason = ClusterAccessedErrorReason;
+    }
+
+    /**
+     * Get <p>Billable cores.</p> 
+     * @return ChargeCoresCnt <p>Billable cores.</p>
+     */
+    public Long getChargeCoresCnt() {
+        return this.ChargeCoresCnt;
+    }
+
+    /**
+     * Set <p>Billable cores.</p>
+     * @param ChargeCoresCnt <p>Billable cores.</p>
+     */
+    public void setChargeCoresCnt(Long ChargeCoresCnt) {
+        this.ChargeCoresCnt = ChargeCoresCnt;
+    }
+
+    /**
+     * Get <p>Protection status:<br>Defended<br>Undefended</p> 
+     * @return DefendStatus <p>Protection status:<br>Defended<br>Undefended</p>
+     */
+    public String getDefendStatus() {
+        return this.DefendStatus;
+    }
+
+    /**
+     * Set <p>Protection status:<br>Defended<br>Undefended</p>
+     * @param DefendStatus <p>Protection status:<br>Defended<br>Undefended</p>
+     */
+    public void setDefendStatus(String DefendStatus) {
+        this.DefendStatus = DefendStatus;
+    }
+
+    /**
+     * Get <p>Number of cores.</p> 
+     * @return CoresCnt <p>Number of cores.</p>
+     */
+    public Long getCoresCnt() {
+        return this.CoresCnt;
+    }
+
+    /**
+     * Set <p>Number of cores.</p>
+     * @param CoresCnt <p>Number of cores.</p>
+     */
+    public void setCoresCnt(Long CoresCnt) {
+        this.CoresCnt = CoresCnt;
+    }
+
+    /**
+     * Get <p>Last online time.</p> 
+     * @return LastOnlineTime <p>Last online time.</p>
+     */
+    public String getLastOnlineTime() {
+        return this.LastOnlineTime;
+    }
+
+    /**
+     * Set <p>Last online time.</p>
+     * @param LastOnlineTime <p>Last online time.</p>
+     */
+    public void setLastOnlineTime(String LastOnlineTime) {
+        this.LastOnlineTime = LastOnlineTime;
     }
 
     public HostInfo() {
@@ -564,6 +692,24 @@ Note: This field may return `null`, indicating that no valid value was found.
         if (source.ClusterAccessedStatus != null) {
             this.ClusterAccessedStatus = new String(source.ClusterAccessedStatus);
         }
+        if (source.ClusterAccessedSubStatus != null) {
+            this.ClusterAccessedSubStatus = new String(source.ClusterAccessedSubStatus);
+        }
+        if (source.ClusterAccessedErrorReason != null) {
+            this.ClusterAccessedErrorReason = new String(source.ClusterAccessedErrorReason);
+        }
+        if (source.ChargeCoresCnt != null) {
+            this.ChargeCoresCnt = new Long(source.ChargeCoresCnt);
+        }
+        if (source.DefendStatus != null) {
+            this.DefendStatus = new String(source.DefendStatus);
+        }
+        if (source.CoresCnt != null) {
+            this.CoresCnt = new Long(source.CoresCnt);
+        }
+        if (source.LastOnlineTime != null) {
+            this.LastOnlineTime = new String(source.LastOnlineTime);
+        }
     }
 
 
@@ -591,6 +737,12 @@ Note: This field may return `null`, indicating that no valid value was found.
         this.setParamSimple(map, prefix + "ClusterID", this.ClusterID);
         this.setParamSimple(map, prefix + "ClusterName", this.ClusterName);
         this.setParamSimple(map, prefix + "ClusterAccessedStatus", this.ClusterAccessedStatus);
+        this.setParamSimple(map, prefix + "ClusterAccessedSubStatus", this.ClusterAccessedSubStatus);
+        this.setParamSimple(map, prefix + "ClusterAccessedErrorReason", this.ClusterAccessedErrorReason);
+        this.setParamSimple(map, prefix + "ChargeCoresCnt", this.ChargeCoresCnt);
+        this.setParamSimple(map, prefix + "DefendStatus", this.DefendStatus);
+        this.setParamSimple(map, prefix + "CoresCnt", this.CoresCnt);
+        this.setParamSimple(map, prefix + "LastOnlineTime", this.LastOnlineTime);
 
     }
 }

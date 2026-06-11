@@ -43,7 +43,6 @@ public class CompliancePeriodTask extends AbstractModel {
 
     /**
     * Last trigger time
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("LastTriggerTime")
     @Expose
@@ -119,10 +118,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Last trigger time
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Last trigger time 
      * @return LastTriggerTime Last trigger time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getLastTriggerTime() {
         return this.LastTriggerTime;
@@ -130,9 +127,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Last trigger time
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param LastTriggerTime Last trigger time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setLastTriggerTime(String LastTriggerTime) {
         this.LastTriggerTime = LastTriggerTime;

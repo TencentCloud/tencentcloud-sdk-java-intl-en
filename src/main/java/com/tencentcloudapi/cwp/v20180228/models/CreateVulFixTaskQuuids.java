@@ -24,13 +24,6 @@ import java.util.HashMap;
 public class CreateVulFixTaskQuuids extends AbstractModel {
 
     /**
-    * Vulnerability ID
-    */
-    @SerializedName("VulId")
-    @Expose
-    private Long VulId;
-
-    /**
     * Hosts that need to fix vulnerabilities. All hosts need to have the vulnerability with the ID of VulId and be in a pending fix status.
     */
     @SerializedName("Quuids")
@@ -38,27 +31,25 @@ public class CreateVulFixTaskQuuids extends AbstractModel {
     private String [] Quuids;
 
     /**
-    * Repair method: 0 component update or patch installation, 1 disable service
+    * Vulnerability ID
+    */
+    @SerializedName("VulId")
+    @Expose
+    private Long VulId;
+
+    /**
+    * Repair method. 0: Update components or install patches. 1: Disable service.
     */
     @SerializedName("FixMethod")
     @Expose
     private Long FixMethod;
 
     /**
-     * Get Vulnerability ID 
-     * @return VulId Vulnerability ID
-     */
-    public Long getVulId() {
-        return this.VulId;
-    }
-
-    /**
-     * Set Vulnerability ID
-     * @param VulId Vulnerability ID
-     */
-    public void setVulId(Long VulId) {
-        this.VulId = VulId;
-    }
+    * kb id
+    */
+    @SerializedName("KbId")
+    @Expose
+    private Long KbId;
 
     /**
      * Get Hosts that need to fix vulnerabilities. All hosts need to have the vulnerability with the ID of VulId and be in a pending fix status. 
@@ -77,19 +68,51 @@ public class CreateVulFixTaskQuuids extends AbstractModel {
     }
 
     /**
-     * Get Repair method: 0 component update or patch installation, 1 disable service 
-     * @return FixMethod Repair method: 0 component update or patch installation, 1 disable service
+     * Get Vulnerability ID 
+     * @return VulId Vulnerability ID
+     */
+    public Long getVulId() {
+        return this.VulId;
+    }
+
+    /**
+     * Set Vulnerability ID
+     * @param VulId Vulnerability ID
+     */
+    public void setVulId(Long VulId) {
+        this.VulId = VulId;
+    }
+
+    /**
+     * Get Repair method. 0: Update components or install patches. 1: Disable service. 
+     * @return FixMethod Repair method. 0: Update components or install patches. 1: Disable service.
      */
     public Long getFixMethod() {
         return this.FixMethod;
     }
 
     /**
-     * Set Repair method: 0 component update or patch installation, 1 disable service
-     * @param FixMethod Repair method: 0 component update or patch installation, 1 disable service
+     * Set Repair method. 0: Update components or install patches. 1: Disable service.
+     * @param FixMethod Repair method. 0: Update components or install patches. 1: Disable service.
      */
     public void setFixMethod(Long FixMethod) {
         this.FixMethod = FixMethod;
+    }
+
+    /**
+     * Get kb id 
+     * @return KbId kb id
+     */
+    public Long getKbId() {
+        return this.KbId;
+    }
+
+    /**
+     * Set kb id
+     * @param KbId kb id
+     */
+    public void setKbId(Long KbId) {
+        this.KbId = KbId;
     }
 
     public CreateVulFixTaskQuuids() {
@@ -100,17 +123,20 @@ public class CreateVulFixTaskQuuids extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public CreateVulFixTaskQuuids(CreateVulFixTaskQuuids source) {
-        if (source.VulId != null) {
-            this.VulId = new Long(source.VulId);
-        }
         if (source.Quuids != null) {
             this.Quuids = new String[source.Quuids.length];
             for (int i = 0; i < source.Quuids.length; i++) {
                 this.Quuids[i] = new String(source.Quuids[i]);
             }
         }
+        if (source.VulId != null) {
+            this.VulId = new Long(source.VulId);
+        }
         if (source.FixMethod != null) {
             this.FixMethod = new Long(source.FixMethod);
+        }
+        if (source.KbId != null) {
+            this.KbId = new Long(source.KbId);
         }
     }
 
@@ -119,9 +145,10 @@ public class CreateVulFixTaskQuuids extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "VulId", this.VulId);
         this.setParamArraySimple(map, prefix + "Quuids.", this.Quuids);
+        this.setParamSimple(map, prefix + "VulId", this.VulId);
         this.setParamSimple(map, prefix + "FixMethod", this.FixMethod);
+        this.setParamSimple(map, prefix + "KbId", this.KbId);
 
     }
 }

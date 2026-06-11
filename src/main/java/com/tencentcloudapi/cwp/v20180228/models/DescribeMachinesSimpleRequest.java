@@ -36,7 +36,7 @@ Other: Hybrid Cloud Zone
     private String MachineType;
 
     /**
-    * Machine region. For example, ap-guangzhou and ap-shanghai.
+    * Machine region. For example, ap-guangzhou, ap-shanghai. For non-Tencent Cloud hosts, use ap-others.
     */
     @SerializedName("MachineRegion")
     @Expose
@@ -110,16 +110,16 @@ Other: Hybrid Cloud Zone
     }
 
     /**
-     * Get Machine region. For example, ap-guangzhou and ap-shanghai. 
-     * @return MachineRegion Machine region. For example, ap-guangzhou and ap-shanghai.
+     * Get Machine region. For example, ap-guangzhou, ap-shanghai. For non-Tencent Cloud hosts, use ap-others. 
+     * @return MachineRegion Machine region. For example, ap-guangzhou, ap-shanghai. For non-Tencent Cloud hosts, use ap-others.
      */
     public String getMachineRegion() {
         return this.MachineRegion;
     }
 
     /**
-     * Set Machine region. For example, ap-guangzhou and ap-shanghai.
-     * @param MachineRegion Machine region. For example, ap-guangzhou and ap-shanghai.
+     * Set Machine region. For example, ap-guangzhou, ap-shanghai. For non-Tencent Cloud hosts, use ap-others.
+     * @param MachineRegion Machine region. For example, ap-guangzhou, ap-shanghai. For non-Tencent Cloud hosts, use ap-others.
      */
     public void setMachineRegion(String MachineRegion) {
         this.MachineRegion = MachineRegion;

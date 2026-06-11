@@ -25,7 +25,6 @@ public class DescribeBaselineBasicInfoResponse extends AbstractModel {
 
     /**
     * Baseline basic information list
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("BaselineBasicInfoList")
     @Expose
@@ -39,10 +38,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Baseline basic information list
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Baseline basic information list 
      * @return BaselineBasicInfoList Baseline basic information list
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public BaselineBasicInfo [] getBaselineBasicInfoList() {
         return this.BaselineBasicInfoList;
@@ -50,9 +47,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Baseline basic information list
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param BaselineBasicInfoList Baseline basic information list
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setBaselineBasicInfoList(BaselineBasicInfo [] BaselineBasicInfoList) {
         this.BaselineBasicInfoList = BaselineBasicInfoList;

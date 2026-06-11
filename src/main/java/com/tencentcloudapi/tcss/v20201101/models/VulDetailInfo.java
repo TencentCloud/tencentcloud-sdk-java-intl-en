@@ -38,8 +38,7 @@ public class VulDetailInfo extends AbstractModel {
     private String Name;
 
     /**
-    * Vulnerability tag
-Note: This field may return null, indicating that no valid values can be obtained.
+    * vulnerability tag
     */
     @SerializedName("Tags")
     @Expose
@@ -47,15 +46,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Vulnerability type
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("CategoryType")
     @Expose
     private String CategoryType;
 
     /**
-    * Vulnerability severity
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Vulnerability threat level
     */
     @SerializedName("Level")
     @Expose
@@ -63,7 +60,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Vulnerability disclosure time
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("SubmitTime")
     @Expose
@@ -168,40 +164,35 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String PocID;
 
     /**
-    * Defense status. Valid values: `NO_DEFENDED`, `DEFENDED`.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Defense Status. NO_DEFENDED: Not Defended; DEFENDED: Defended
     */
     @SerializedName("DefenceStatus")
     @Expose
     private String DefenceStatus;
 
     /**
-    * Scope of servers with exploit prevention enabled. Valid values: `MANUAL` (specified servers); `ALL` (all servers).
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Vulnerability Defense Host Range. MANUAL: Selected Host Nodes; ALL: All
     */
     @SerializedName("DefenceScope")
     @Expose
     private String DefenceScope;
 
     /**
-    * Number of servers with exploit prevention enabled
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Number of Hosts Defended Against Vulnerabilities
     */
     @SerializedName("DefenceHostCount")
     @Expose
     private Long DefenceHostCount;
 
     /**
-    * Number of attacks defended against
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Number of Attacks Defended
     */
     @SerializedName("DefendedCount")
     @Expose
     private Long DefendedCount;
 
     /**
-    * Whether it is scanned. Valid values: `NOT_SCAN` (not scanned); `SCANNED` (scanned).
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Scanned. NOT_SCAN: Not Scanned; SCANNED: Scanned
     */
     @SerializedName("ScanStatus")
     @Expose
@@ -240,30 +231,24 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Vulnerability tag
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Tags Vulnerability tag
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get vulnerability tag 
+     * @return Tags vulnerability tag
      */
     public String [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set Vulnerability tag
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Tags Vulnerability tag
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set vulnerability tag
+     * @param Tags vulnerability tag
      */
     public void setTags(String [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get Vulnerability type
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Vulnerability type 
      * @return CategoryType Vulnerability type
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getCategoryType() {
         return this.CategoryType;
@@ -271,39 +256,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Vulnerability type
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param CategoryType Vulnerability type
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setCategoryType(String CategoryType) {
         this.CategoryType = CategoryType;
     }
 
     /**
-     * Get Vulnerability severity
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Level Vulnerability severity
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Vulnerability threat level 
+     * @return Level Vulnerability threat level
      */
     public String getLevel() {
         return this.Level;
     }
 
     /**
-     * Set Vulnerability severity
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Level Vulnerability severity
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Vulnerability threat level
+     * @param Level Vulnerability threat level
      */
     public void setLevel(String Level) {
         this.Level = Level;
     }
 
     /**
-     * Get Vulnerability disclosure time
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Vulnerability disclosure time 
      * @return SubmitTime Vulnerability disclosure time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getSubmitTime() {
         return this.SubmitTime;
@@ -311,9 +288,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Vulnerability disclosure time
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param SubmitTime Vulnerability disclosure time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setSubmitTime(String SubmitTime) {
         this.SubmitTime = SubmitTime;
@@ -544,100 +519,80 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Defense status. Valid values: `NO_DEFENDED`, `DEFENDED`.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return DefenceStatus Defense status. Valid values: `NO_DEFENDED`, `DEFENDED`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Defense Status. NO_DEFENDED: Not Defended; DEFENDED: Defended 
+     * @return DefenceStatus Defense Status. NO_DEFENDED: Not Defended; DEFENDED: Defended
      */
     public String getDefenceStatus() {
         return this.DefenceStatus;
     }
 
     /**
-     * Set Defense status. Valid values: `NO_DEFENDED`, `DEFENDED`.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param DefenceStatus Defense status. Valid values: `NO_DEFENDED`, `DEFENDED`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Defense Status. NO_DEFENDED: Not Defended; DEFENDED: Defended
+     * @param DefenceStatus Defense Status. NO_DEFENDED: Not Defended; DEFENDED: Defended
      */
     public void setDefenceStatus(String DefenceStatus) {
         this.DefenceStatus = DefenceStatus;
     }
 
     /**
-     * Get Scope of servers with exploit prevention enabled. Valid values: `MANUAL` (specified servers); `ALL` (all servers).
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return DefenceScope Scope of servers with exploit prevention enabled. Valid values: `MANUAL` (specified servers); `ALL` (all servers).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Vulnerability Defense Host Range. MANUAL: Selected Host Nodes; ALL: All 
+     * @return DefenceScope Vulnerability Defense Host Range. MANUAL: Selected Host Nodes; ALL: All
      */
     public String getDefenceScope() {
         return this.DefenceScope;
     }
 
     /**
-     * Set Scope of servers with exploit prevention enabled. Valid values: `MANUAL` (specified servers); `ALL` (all servers).
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param DefenceScope Scope of servers with exploit prevention enabled. Valid values: `MANUAL` (specified servers); `ALL` (all servers).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Vulnerability Defense Host Range. MANUAL: Selected Host Nodes; ALL: All
+     * @param DefenceScope Vulnerability Defense Host Range. MANUAL: Selected Host Nodes; ALL: All
      */
     public void setDefenceScope(String DefenceScope) {
         this.DefenceScope = DefenceScope;
     }
 
     /**
-     * Get Number of servers with exploit prevention enabled
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return DefenceHostCount Number of servers with exploit prevention enabled
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Number of Hosts Defended Against Vulnerabilities 
+     * @return DefenceHostCount Number of Hosts Defended Against Vulnerabilities
      */
     public Long getDefenceHostCount() {
         return this.DefenceHostCount;
     }
 
     /**
-     * Set Number of servers with exploit prevention enabled
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param DefenceHostCount Number of servers with exploit prevention enabled
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Number of Hosts Defended Against Vulnerabilities
+     * @param DefenceHostCount Number of Hosts Defended Against Vulnerabilities
      */
     public void setDefenceHostCount(Long DefenceHostCount) {
         this.DefenceHostCount = DefenceHostCount;
     }
 
     /**
-     * Get Number of attacks defended against
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return DefendedCount Number of attacks defended against
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Number of Attacks Defended 
+     * @return DefendedCount Number of Attacks Defended
      */
     public Long getDefendedCount() {
         return this.DefendedCount;
     }
 
     /**
-     * Set Number of attacks defended against
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param DefendedCount Number of attacks defended against
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Number of Attacks Defended
+     * @param DefendedCount Number of Attacks Defended
      */
     public void setDefendedCount(Long DefendedCount) {
         this.DefendedCount = DefendedCount;
     }
 
     /**
-     * Get Whether it is scanned. Valid values: `NOT_SCAN` (not scanned); `SCANNED` (scanned).
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ScanStatus Whether it is scanned. Valid values: `NOT_SCAN` (not scanned); `SCANNED` (scanned).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Scanned. NOT_SCAN: Not Scanned; SCANNED: Scanned 
+     * @return ScanStatus Scanned. NOT_SCAN: Not Scanned; SCANNED: Scanned
      */
     public String getScanStatus() {
         return this.ScanStatus;
     }
 
     /**
-     * Set Whether it is scanned. Valid values: `NOT_SCAN` (not scanned); `SCANNED` (scanned).
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ScanStatus Whether it is scanned. Valid values: `NOT_SCAN` (not scanned); `SCANNED` (scanned).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Scanned. NOT_SCAN: Not Scanned; SCANNED: Scanned
+     * @param ScanStatus Scanned. NOT_SCAN: Not Scanned; SCANNED: Scanned
      */
     public void setScanStatus(String ScanStatus) {
         this.ScanStatus = ScanStatus;

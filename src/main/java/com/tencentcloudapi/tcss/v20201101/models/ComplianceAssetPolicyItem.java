@@ -84,18 +84,16 @@ public class ComplianceAssetPolicyItem extends AbstractModel {
     private String CheckStatus;
 
     /**
-    * Check result
-`RESULT_PASSED`: Passed.
-`RESULT_FAILED`: Failed.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * detection result
+RESULT_PASSED: Passed.
+RESULT_FAILED: failed
     */
     @SerializedName("CheckResult")
     @Expose
     private String CheckResult;
 
     /**
-    * Allowed item ID of the check item. If it exists and is not `0`, the check item is ignored.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * ID of the allowlist item corresponding to the detection item. If it exists and is not 0, it means the detection item is ignored by the user.
     */
     @SerializedName("WhitelistId")
     @Expose
@@ -109,8 +107,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String FixSuggestion;
 
     /**
-    * Last check time
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Last detection time.
     */
     @SerializedName("LastCheckTime")
     @Expose
@@ -118,7 +115,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Verification information
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("VerifyInfo")
     @Expose
@@ -269,48 +265,40 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Check result
-`RESULT_PASSED`: Passed.
-`RESULT_FAILED`: Failed.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return CheckResult Check result
-`RESULT_PASSED`: Passed.
-`RESULT_FAILED`: Failed.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get detection result
+RESULT_PASSED: Passed.
+RESULT_FAILED: failed 
+     * @return CheckResult detection result
+RESULT_PASSED: Passed.
+RESULT_FAILED: failed
      */
     public String getCheckResult() {
         return this.CheckResult;
     }
 
     /**
-     * Set Check result
-`RESULT_PASSED`: Passed.
-`RESULT_FAILED`: Failed.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param CheckResult Check result
-`RESULT_PASSED`: Passed.
-`RESULT_FAILED`: Failed.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set detection result
+RESULT_PASSED: Passed.
+RESULT_FAILED: failed
+     * @param CheckResult detection result
+RESULT_PASSED: Passed.
+RESULT_FAILED: failed
      */
     public void setCheckResult(String CheckResult) {
         this.CheckResult = CheckResult;
     }
 
     /**
-     * Get Allowed item ID of the check item. If it exists and is not `0`, the check item is ignored.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return WhitelistId Allowed item ID of the check item. If it exists and is not `0`, the check item is ignored.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get ID of the allowlist item corresponding to the detection item. If it exists and is not 0, it means the detection item is ignored by the user. 
+     * @return WhitelistId ID of the allowlist item corresponding to the detection item. If it exists and is not 0, it means the detection item is ignored by the user.
      */
     public Long getWhitelistId() {
         return this.WhitelistId;
     }
 
     /**
-     * Set Allowed item ID of the check item. If it exists and is not `0`, the check item is ignored.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param WhitelistId Allowed item ID of the check item. If it exists and is not `0`, the check item is ignored.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set ID of the allowlist item corresponding to the detection item. If it exists and is not 0, it means the detection item is ignored by the user.
+     * @param WhitelistId ID of the allowlist item corresponding to the detection item. If it exists and is not 0, it means the detection item is ignored by the user.
      */
     public void setWhitelistId(Long WhitelistId) {
         this.WhitelistId = WhitelistId;
@@ -333,30 +321,24 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Last check time
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return LastCheckTime Last check time
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Last detection time. 
+     * @return LastCheckTime Last detection time.
      */
     public String getLastCheckTime() {
         return this.LastCheckTime;
     }
 
     /**
-     * Set Last check time
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param LastCheckTime Last check time
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Last detection time.
+     * @param LastCheckTime Last detection time.
      */
     public void setLastCheckTime(String LastCheckTime) {
         this.LastCheckTime = LastCheckTime;
     }
 
     /**
-     * Get Verification information
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Verification information 
      * @return VerifyInfo Verification information
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getVerifyInfo() {
         return this.VerifyInfo;
@@ -364,9 +346,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Verification information
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param VerifyInfo Verification information
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setVerifyInfo(String VerifyInfo) {
         this.VerifyInfo = VerifyInfo;

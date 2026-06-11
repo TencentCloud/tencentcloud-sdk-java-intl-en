@@ -24,173 +24,221 @@ import java.util.HashMap;
 public class NoticeReceiver extends AbstractModel {
 
     /**
-    * Recipient type. Valid values:
-<br><li> `Uin`: user ID
-<br><li> `Group`: user group ID
-Currently, other recipient types are not supported.
+    * Recipient type. Available values:
+-Uin - User ID
+-Group - User group ID
+Other recipient types are not currently supported.
     */
     @SerializedName("ReceiverType")
     @Expose
     private String ReceiverType;
 
     /**
-    * Recipient
+    * Recipient.
+When ReceiverType is Uin, the value of ReceiverIds is the user uid. [Sub-user information query](https://www.tencentcloud.com/document/api/598/53486?from_cn_redirect=1)
+When ReceiverType is Group, ReceiverIds is the user Group id. [CAM User Group](https://www.tencentcloud.com/document/product/598/34589?from_cn_redirect=1)
     */
     @SerializedName("ReceiverIds")
     @Expose
     private Long [] ReceiverIds;
 
     /**
-    * Notification method
-<br><li> `Email`: email
-<br><li> `Sms`: SMS
-<br><li> `WeChat`: WeChat
-<br><li> `Phone`: phone
+    * Notification receiving channel
+-Mail
+-Sms
+-WeChat
+-Phone - phone
     */
     @SerializedName("ReceiverChannels")
     @Expose
     private String [] ReceiverChannels;
 
     /**
-    * Start time for allowed message receipt
+    * Notification content template ID. Use Default-zh to refer to the Default template (Chinese). Use Default-en to refer to DefaultTemplate (English). Get the notification content template ID by searching the notification content template (https://www.tencentcloud.com/document/product/614/111714?from_cn_redirect=1).
+    */
+    @SerializedName("NoticeContentId")
+    @Expose
+    private String NoticeContentId;
+
+    /**
+    * Start time to allow receipt of information. Format: `15:04:05`. Required.
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * End time for allowed message receipt
+    * Allow receipt of information end time. Format: `15:04:05`. Required
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-    * Index
+    * Bit order.
+
+-Invalid when passed as an input parameter.
+-Valid at that time.
     */
     @SerializedName("Index")
     @Expose
     private Long Index;
 
     /**
-     * Get Recipient type. Valid values:
-<br><li> `Uin`: user ID
-<br><li> `Group`: user group ID
-Currently, other recipient types are not supported. 
-     * @return ReceiverType Recipient type. Valid values:
-<br><li> `Uin`: user ID
-<br><li> `Group`: user group ID
-Currently, other recipient types are not supported.
+     * Get Recipient type. Available values:
+-Uin - User ID
+-Group - User group ID
+Other recipient types are not currently supported. 
+     * @return ReceiverType Recipient type. Available values:
+-Uin - User ID
+-Group - User group ID
+Other recipient types are not currently supported.
      */
     public String getReceiverType() {
         return this.ReceiverType;
     }
 
     /**
-     * Set Recipient type. Valid values:
-<br><li> `Uin`: user ID
-<br><li> `Group`: user group ID
-Currently, other recipient types are not supported.
-     * @param ReceiverType Recipient type. Valid values:
-<br><li> `Uin`: user ID
-<br><li> `Group`: user group ID
-Currently, other recipient types are not supported.
+     * Set Recipient type. Available values:
+-Uin - User ID
+-Group - User group ID
+Other recipient types are not currently supported.
+     * @param ReceiverType Recipient type. Available values:
+-Uin - User ID
+-Group - User group ID
+Other recipient types are not currently supported.
      */
     public void setReceiverType(String ReceiverType) {
         this.ReceiverType = ReceiverType;
     }
 
     /**
-     * Get Recipient 
-     * @return ReceiverIds Recipient
+     * Get Recipient.
+When ReceiverType is Uin, the value of ReceiverIds is the user uid. [Sub-user information query](https://www.tencentcloud.com/document/api/598/53486?from_cn_redirect=1)
+When ReceiverType is Group, ReceiverIds is the user Group id. [CAM User Group](https://www.tencentcloud.com/document/product/598/34589?from_cn_redirect=1) 
+     * @return ReceiverIds Recipient.
+When ReceiverType is Uin, the value of ReceiverIds is the user uid. [Sub-user information query](https://www.tencentcloud.com/document/api/598/53486?from_cn_redirect=1)
+When ReceiverType is Group, ReceiverIds is the user Group id. [CAM User Group](https://www.tencentcloud.com/document/product/598/34589?from_cn_redirect=1)
      */
     public Long [] getReceiverIds() {
         return this.ReceiverIds;
     }
 
     /**
-     * Set Recipient
-     * @param ReceiverIds Recipient
+     * Set Recipient.
+When ReceiverType is Uin, the value of ReceiverIds is the user uid. [Sub-user information query](https://www.tencentcloud.com/document/api/598/53486?from_cn_redirect=1)
+When ReceiverType is Group, ReceiverIds is the user Group id. [CAM User Group](https://www.tencentcloud.com/document/product/598/34589?from_cn_redirect=1)
+     * @param ReceiverIds Recipient.
+When ReceiverType is Uin, the value of ReceiverIds is the user uid. [Sub-user information query](https://www.tencentcloud.com/document/api/598/53486?from_cn_redirect=1)
+When ReceiverType is Group, ReceiverIds is the user Group id. [CAM User Group](https://www.tencentcloud.com/document/product/598/34589?from_cn_redirect=1)
      */
     public void setReceiverIds(Long [] ReceiverIds) {
         this.ReceiverIds = ReceiverIds;
     }
 
     /**
-     * Get Notification method
-<br><li> `Email`: email
-<br><li> `Sms`: SMS
-<br><li> `WeChat`: WeChat
-<br><li> `Phone`: phone 
-     * @return ReceiverChannels Notification method
-<br><li> `Email`: email
-<br><li> `Sms`: SMS
-<br><li> `WeChat`: WeChat
-<br><li> `Phone`: phone
+     * Get Notification receiving channel
+-Mail
+-Sms
+-WeChat
+-Phone - phone 
+     * @return ReceiverChannels Notification receiving channel
+-Mail
+-Sms
+-WeChat
+-Phone - phone
      */
     public String [] getReceiverChannels() {
         return this.ReceiverChannels;
     }
 
     /**
-     * Set Notification method
-<br><li> `Email`: email
-<br><li> `Sms`: SMS
-<br><li> `WeChat`: WeChat
-<br><li> `Phone`: phone
-     * @param ReceiverChannels Notification method
-<br><li> `Email`: email
-<br><li> `Sms`: SMS
-<br><li> `WeChat`: WeChat
-<br><li> `Phone`: phone
+     * Set Notification receiving channel
+-Mail
+-Sms
+-WeChat
+-Phone - phone
+     * @param ReceiverChannels Notification receiving channel
+-Mail
+-Sms
+-WeChat
+-Phone - phone
      */
     public void setReceiverChannels(String [] ReceiverChannels) {
         this.ReceiverChannels = ReceiverChannels;
     }
 
     /**
-     * Get Start time for allowed message receipt 
-     * @return StartTime Start time for allowed message receipt
+     * Get Notification content template ID. Use Default-zh to refer to the Default template (Chinese). Use Default-en to refer to DefaultTemplate (English). Get the notification content template ID by searching the notification content template (https://www.tencentcloud.com/document/product/614/111714?from_cn_redirect=1). 
+     * @return NoticeContentId Notification content template ID. Use Default-zh to refer to the Default template (Chinese). Use Default-en to refer to DefaultTemplate (English). Get the notification content template ID by searching the notification content template (https://www.tencentcloud.com/document/product/614/111714?from_cn_redirect=1).
+     */
+    public String getNoticeContentId() {
+        return this.NoticeContentId;
+    }
+
+    /**
+     * Set Notification content template ID. Use Default-zh to refer to the Default template (Chinese). Use Default-en to refer to DefaultTemplate (English). Get the notification content template ID by searching the notification content template (https://www.tencentcloud.com/document/product/614/111714?from_cn_redirect=1).
+     * @param NoticeContentId Notification content template ID. Use Default-zh to refer to the Default template (Chinese). Use Default-en to refer to DefaultTemplate (English). Get the notification content template ID by searching the notification content template (https://www.tencentcloud.com/document/product/614/111714?from_cn_redirect=1).
+     */
+    public void setNoticeContentId(String NoticeContentId) {
+        this.NoticeContentId = NoticeContentId;
+    }
+
+    /**
+     * Get Start time to allow receipt of information. Format: `15:04:05`. Required. 
+     * @return StartTime Start time to allow receipt of information. Format: `15:04:05`. Required.
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set Start time for allowed message receipt
-     * @param StartTime Start time for allowed message receipt
+     * Set Start time to allow receipt of information. Format: `15:04:05`. Required.
+     * @param StartTime Start time to allow receipt of information. Format: `15:04:05`. Required.
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get End time for allowed message receipt 
-     * @return EndTime End time for allowed message receipt
+     * Get Allow receipt of information end time. Format: `15:04:05`. Required 
+     * @return EndTime Allow receipt of information end time. Format: `15:04:05`. Required
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set End time for allowed message receipt
-     * @param EndTime End time for allowed message receipt
+     * Set Allow receipt of information end time. Format: `15:04:05`. Required
+     * @param EndTime Allow receipt of information end time. Format: `15:04:05`. Required
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get Index 
-     * @return Index Index
+     * Get Bit order.
+
+-Invalid when passed as an input parameter.
+-Valid at that time. 
+     * @return Index Bit order.
+
+-Invalid when passed as an input parameter.
+-Valid at that time.
      */
     public Long getIndex() {
         return this.Index;
     }
 
     /**
-     * Set Index
-     * @param Index Index
+     * Set Bit order.
+
+-Invalid when passed as an input parameter.
+-Valid at that time.
+     * @param Index Bit order.
+
+-Invalid when passed as an input parameter.
+-Valid at that time.
      */
     public void setIndex(Long Index) {
         this.Index = Index;
@@ -219,6 +267,9 @@ Currently, other recipient types are not supported.
                 this.ReceiverChannels[i] = new String(source.ReceiverChannels[i]);
             }
         }
+        if (source.NoticeContentId != null) {
+            this.NoticeContentId = new String(source.NoticeContentId);
+        }
         if (source.StartTime != null) {
             this.StartTime = new String(source.StartTime);
         }
@@ -238,6 +289,7 @@ Currently, other recipient types are not supported.
         this.setParamSimple(map, prefix + "ReceiverType", this.ReceiverType);
         this.setParamArraySimple(map, prefix + "ReceiverIds.", this.ReceiverIds);
         this.setParamArraySimple(map, prefix + "ReceiverChannels.", this.ReceiverChannels);
+        this.setParamSimple(map, prefix + "NoticeContentId", this.NoticeContentId);
         this.setParamSimple(map, prefix + "StartTime", this.StartTime);
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
         this.setParamSimple(map, prefix + "Index", this.Index);

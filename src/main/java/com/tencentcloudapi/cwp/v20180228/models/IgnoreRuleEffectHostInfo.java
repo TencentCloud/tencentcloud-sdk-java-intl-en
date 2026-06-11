@@ -25,15 +25,13 @@ public class IgnoreRuleEffectHostInfo extends AbstractModel {
 
     /**
     * Host name
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("HostName")
     @Expose
     private String HostName;
 
     /**
-    * Severity level: 1: low-risk; 2: medium-risk; 3: high-risk; 4: critical
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Severity level: 1-Low-risk; 2-Medium-risk; 3-High-risk; 4-Critical
     */
     @SerializedName("Level")
     @Expose
@@ -41,23 +39,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Host tag array
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("TagList")
     @Expose
     private String [] TagList;
 
     /**
-    * Status: 0: failed; 1: ignore; 3: passed; 5: detecting
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Status: 0: failed; 1: ignore; 3: approved; 5: detecting
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * Last check time
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Last detection time
     */
     @SerializedName("LastScanTime")
     @Expose
@@ -65,7 +60,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Event ID
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("EventId")
     @Expose
@@ -73,17 +67,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Host QUUID
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Quuid")
     @Expose
     private String Quuid;
 
     /**
-     * Get Host name
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Host name 
      * @return HostName Host name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getHostName() {
         return this.HostName;
@@ -91,39 +82,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Host name
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param HostName Host name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setHostName(String HostName) {
         this.HostName = HostName;
     }
 
     /**
-     * Get Severity level: 1: low-risk; 2: medium-risk; 3: high-risk; 4: critical
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Level Severity level: 1: low-risk; 2: medium-risk; 3: high-risk; 4: critical
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Severity level: 1-Low-risk; 2-Medium-risk; 3-High-risk; 4-Critical 
+     * @return Level Severity level: 1-Low-risk; 2-Medium-risk; 3-High-risk; 4-Critical
      */
     public Long getLevel() {
         return this.Level;
     }
 
     /**
-     * Set Severity level: 1: low-risk; 2: medium-risk; 3: high-risk; 4: critical
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Level Severity level: 1: low-risk; 2: medium-risk; 3: high-risk; 4: critical
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Severity level: 1-Low-risk; 2-Medium-risk; 3-High-risk; 4-Critical
+     * @param Level Severity level: 1-Low-risk; 2-Medium-risk; 3-High-risk; 4-Critical
      */
     public void setLevel(Long Level) {
         this.Level = Level;
     }
 
     /**
-     * Get Host tag array
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Host tag array 
      * @return TagList Host tag array
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String [] getTagList() {
         return this.TagList;
@@ -131,59 +114,47 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Host tag array
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param TagList Host tag array
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setTagList(String [] TagList) {
         this.TagList = TagList;
     }
 
     /**
-     * Get Status: 0: failed; 1: ignore; 3: passed; 5: detecting
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Status Status: 0: failed; 1: ignore; 3: passed; 5: detecting
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Status: 0: failed; 1: ignore; 3: approved; 5: detecting 
+     * @return Status Status: 0: failed; 1: ignore; 3: approved; 5: detecting
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Status: 0: failed; 1: ignore; 3: passed; 5: detecting
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Status Status: 0: failed; 1: ignore; 3: passed; 5: detecting
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Status: 0: failed; 1: ignore; 3: approved; 5: detecting
+     * @param Status Status: 0: failed; 1: ignore; 3: approved; 5: detecting
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get Last check time
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return LastScanTime Last check time
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Last detection time 
+     * @return LastScanTime Last detection time
      */
     public String getLastScanTime() {
         return this.LastScanTime;
     }
 
     /**
-     * Set Last check time
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param LastScanTime Last check time
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Last detection time
+     * @param LastScanTime Last detection time
      */
     public void setLastScanTime(String LastScanTime) {
         this.LastScanTime = LastScanTime;
     }
 
     /**
-     * Get Event ID
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Event ID 
      * @return EventId Event ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getEventId() {
         return this.EventId;
@@ -191,19 +162,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Event ID
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param EventId Event ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setEventId(Long EventId) {
         this.EventId = EventId;
     }
 
     /**
-     * Get Host QUUID
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Host QUUID 
      * @return Quuid Host QUUID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getQuuid() {
         return this.Quuid;
@@ -211,9 +178,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Host QUUID
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Quuid Host QUUID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setQuuid(String Quuid) {
         this.Quuid = Quuid;

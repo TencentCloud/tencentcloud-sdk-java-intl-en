@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeBaselineWeakPasswordListRequest extends AbstractModel {
 
     /**
-    * <li>WeakPassword - string - required: no - weak password</li>
+    * <li>WeakPassword - string - required: no - weak password</li>
     */
     @SerializedName("Filters")
     @Expose
@@ -45,30 +45,30 @@ public class DescribeBaselineWeakPasswordListRequest extends AbstractModel {
     private Long Offset;
 
     /**
-    * Sorting order [ASC: ascending|DESC: descending]
+    * Sorting order [ASC: ascending|DESC: descending]
     */
     @SerializedName("Order")
     @Expose
     private String Order;
 
     /**
-    * Sorting column [CreateTime|ModifyTime]
+    * Sorting column [CreateTime|ModifyTime]
     */
     @SerializedName("By")
     @Expose
     private String By;
 
     /**
-     * Get <li>WeakPassword - string - required: no - weak password</li> 
-     * @return Filters <li>WeakPassword - string - required: no - weak password</li>
+     * Get <li>WeakPassword - string - required: no - weak password</li> 
+     * @return Filters <li>WeakPassword - string - required: no - weak password</li>
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set <li>WeakPassword - string - required: no - weak password</li>
-     * @param Filters <li>WeakPassword - string - required: no - weak password</li>
+     * Set <li>WeakPassword - string - required: no - weak password</li>
+     * @param Filters <li>WeakPassword - string - required: no - weak password</li>
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;
@@ -107,32 +107,32 @@ public class DescribeBaselineWeakPasswordListRequest extends AbstractModel {
     }
 
     /**
-     * Get Sorting order [ASC: ascending|DESC: descending] 
-     * @return Order Sorting order [ASC: ascending|DESC: descending]
+     * Get Sorting order [ASC: ascending|DESC: descending] 
+     * @return Order Sorting order [ASC: ascending|DESC: descending]
      */
     public String getOrder() {
         return this.Order;
     }
 
     /**
-     * Set Sorting order [ASC: ascending|DESC: descending]
-     * @param Order Sorting order [ASC: ascending|DESC: descending]
+     * Set Sorting order [ASC: ascending|DESC: descending]
+     * @param Order Sorting order [ASC: ascending|DESC: descending]
      */
     public void setOrder(String Order) {
         this.Order = Order;
     }
 
     /**
-     * Get Sorting column [CreateTime|ModifyTime] 
-     * @return By Sorting column [CreateTime|ModifyTime]
+     * Get Sorting column [CreateTime|ModifyTime] 
+     * @return By Sorting column [CreateTime|ModifyTime]
      */
     public String getBy() {
         return this.By;
     }
 
     /**
-     * Set Sorting column [CreateTime|ModifyTime]
-     * @param By Sorting column [CreateTime|ModifyTime]
+     * Set Sorting column [CreateTime|ModifyTime]
+     * @param By Sorting column [CreateTime|ModifyTime]
      */
     public void setBy(String By) {
         this.By = By;

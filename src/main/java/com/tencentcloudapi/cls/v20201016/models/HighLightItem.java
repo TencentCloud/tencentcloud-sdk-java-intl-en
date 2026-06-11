@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class HighLightItem extends AbstractModel {
 
     /**
-    * Highlighted Log Key
+    * Highlighted log field name.
     */
     @SerializedName("Key")
     @Expose
     private String Key;
 
     /**
-    * Highlighted Syntax
+    * Highlighted keywords.
     */
     @SerializedName("Values")
     @Expose
     private String [] Values;
 
     /**
-     * Get Highlighted Log Key 
-     * @return Key Highlighted Log Key
+     * Get Highlighted log field name. 
+     * @return Key Highlighted log field name.
      */
     public String getKey() {
         return this.Key;
     }
 
     /**
-     * Set Highlighted Log Key
-     * @param Key Highlighted Log Key
+     * Set Highlighted log field name.
+     * @param Key Highlighted log field name.
      */
     public void setKey(String Key) {
         this.Key = Key;
     }
 
     /**
-     * Get Highlighted Syntax 
-     * @return Values Highlighted Syntax
+     * Get Highlighted keywords. 
+     * @return Values Highlighted keywords.
      */
     public String [] getValues() {
         return this.Values;
     }
 
     /**
-     * Set Highlighted Syntax
-     * @param Values Highlighted Syntax
+     * Set Highlighted keywords.
+     * @param Values Highlighted keywords.
      */
     public void setValues(String [] Values) {
         this.Values = Values;

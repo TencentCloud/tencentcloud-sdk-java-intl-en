@@ -31,6 +31,13 @@ public class DescribeVulInfoCvssRequest extends AbstractModel {
     private Long VulId;
 
     /**
+    * Compatible with application protection vulnerability defense container perspective alerts for vulnerability details. Host perspective is selected by default. Optional fields. Source=tcss indicates container perspective vulnerability details. The backend converts VulId to VulId in host vul_vuls.
+    */
+    @SerializedName("Source")
+    @Expose
+    private String Source;
+
+    /**
      * Get Vulnerability ID 
      * @return VulId Vulnerability ID
      */
@@ -46,6 +53,22 @@ public class DescribeVulInfoCvssRequest extends AbstractModel {
         this.VulId = VulId;
     }
 
+    /**
+     * Get Compatible with application protection vulnerability defense container perspective alerts for vulnerability details. Host perspective is selected by default. Optional fields. Source=tcss indicates container perspective vulnerability details. The backend converts VulId to VulId in host vul_vuls. 
+     * @return Source Compatible with application protection vulnerability defense container perspective alerts for vulnerability details. Host perspective is selected by default. Optional fields. Source=tcss indicates container perspective vulnerability details. The backend converts VulId to VulId in host vul_vuls.
+     */
+    public String getSource() {
+        return this.Source;
+    }
+
+    /**
+     * Set Compatible with application protection vulnerability defense container perspective alerts for vulnerability details. Host perspective is selected by default. Optional fields. Source=tcss indicates container perspective vulnerability details. The backend converts VulId to VulId in host vul_vuls.
+     * @param Source Compatible with application protection vulnerability defense container perspective alerts for vulnerability details. Host perspective is selected by default. Optional fields. Source=tcss indicates container perspective vulnerability details. The backend converts VulId to VulId in host vul_vuls.
+     */
+    public void setSource(String Source) {
+        this.Source = Source;
+    }
+
     public DescribeVulInfoCvssRequest() {
     }
 
@@ -57,6 +80,9 @@ public class DescribeVulInfoCvssRequest extends AbstractModel {
         if (source.VulId != null) {
             this.VulId = new Long(source.VulId);
         }
+        if (source.Source != null) {
+            this.Source = new String(source.Source);
+        }
     }
 
 
@@ -65,6 +91,7 @@ public class DescribeVulInfoCvssRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "VulId", this.VulId);
+        this.setParamSimple(map, prefix + "Source", this.Source);
 
     }
 }

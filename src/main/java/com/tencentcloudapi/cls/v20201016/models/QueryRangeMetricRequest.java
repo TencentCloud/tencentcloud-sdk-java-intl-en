@@ -25,6 +25,7 @@ public class QueryRangeMetricRequest extends AbstractModel {
 
     /**
     * Metric Topic ID
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
     */
     @SerializedName("TopicId")
     @Expose
@@ -32,6 +33,7 @@ public class QueryRangeMetricRequest extends AbstractModel {
 
     /**
     * Queries statements; using PromQL syntax
+-Refer to the [syntax rules](https://www.tencentcloud.com/document/product/614/90334?from_cn_redirect=1) document.
     */
     @SerializedName("Query")
     @Expose
@@ -59,8 +61,10 @@ public class QueryRangeMetricRequest extends AbstractModel {
     private Long Step;
 
     /**
-     * Get Metric Topic ID 
+     * Get Metric Topic ID
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1). 
      * @return TopicId Metric Topic ID
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
      */
     public String getTopicId() {
         return this.TopicId;
@@ -68,15 +72,19 @@ public class QueryRangeMetricRequest extends AbstractModel {
 
     /**
      * Set Metric Topic ID
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
      * @param TopicId Metric Topic ID
+-Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
      */
     public void setTopicId(String TopicId) {
         this.TopicId = TopicId;
     }
 
     /**
-     * Get Queries statements; using PromQL syntax 
+     * Get Queries statements; using PromQL syntax
+-Refer to the [syntax rules](https://www.tencentcloud.com/document/product/614/90334?from_cn_redirect=1) document. 
      * @return Query Queries statements; using PromQL syntax
+-Refer to the [syntax rules](https://www.tencentcloud.com/document/product/614/90334?from_cn_redirect=1) document.
      */
     public String getQuery() {
         return this.Query;
@@ -84,7 +92,9 @@ public class QueryRangeMetricRequest extends AbstractModel {
 
     /**
      * Set Queries statements; using PromQL syntax
+-Refer to the [syntax rules](https://www.tencentcloud.com/document/product/614/90334?from_cn_redirect=1) document.
      * @param Query Queries statements; using PromQL syntax
+-Refer to the [syntax rules](https://www.tencentcloud.com/document/product/614/90334?from_cn_redirect=1) document.
      */
     public void setQuery(String Query) {
         this.Query = Query;

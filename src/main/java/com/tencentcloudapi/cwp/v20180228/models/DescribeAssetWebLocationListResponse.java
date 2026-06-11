@@ -32,7 +32,6 @@ public class DescribeAssetWebLocationListResponse extends AbstractModel {
 
     /**
     * Site list
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Locations")
     @Expose
@@ -62,10 +61,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Site list
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Site list 
      * @return Locations Site list
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public AssetWebLocationBaseInfo [] getLocations() {
         return this.Locations;
@@ -73,9 +70,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Site list
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Locations Site list
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setLocations(AssetWebLocationBaseInfo [] Locations) {
         this.Locations = Locations;

@@ -24,7 +24,8 @@ import java.util.HashMap;
 public class ApplyConfigToMachineGroupRequest extends AbstractModel {
 
     /**
-    * Collection configuration ID
+    * Collection Configuration ID
+-Obtain the collection configuration Id through [Access collection rule configuration](https://www.tencentcloud.com/document/product/614/58616?from_cn_redirect=1).
     */
     @SerializedName("ConfigId")
     @Expose
@@ -32,30 +33,37 @@ public class ApplyConfigToMachineGroupRequest extends AbstractModel {
 
     /**
     * Machine group ID
+-Get the machine group Id by searching the [machine group list](https://www.tencentcloud.com/document/api/614/56438?from_cn_redirect=1).
     */
     @SerializedName("GroupId")
     @Expose
     private String GroupId;
 
     /**
-     * Get Collection configuration ID 
-     * @return ConfigId Collection configuration ID
+     * Get Collection Configuration ID
+-Obtain the collection configuration Id through [Access collection rule configuration](https://www.tencentcloud.com/document/product/614/58616?from_cn_redirect=1). 
+     * @return ConfigId Collection Configuration ID
+-Obtain the collection configuration Id through [Access collection rule configuration](https://www.tencentcloud.com/document/product/614/58616?from_cn_redirect=1).
      */
     public String getConfigId() {
         return this.ConfigId;
     }
 
     /**
-     * Set Collection configuration ID
-     * @param ConfigId Collection configuration ID
+     * Set Collection Configuration ID
+-Obtain the collection configuration Id through [Access collection rule configuration](https://www.tencentcloud.com/document/product/614/58616?from_cn_redirect=1).
+     * @param ConfigId Collection Configuration ID
+-Obtain the collection configuration Id through [Access collection rule configuration](https://www.tencentcloud.com/document/product/614/58616?from_cn_redirect=1).
      */
     public void setConfigId(String ConfigId) {
         this.ConfigId = ConfigId;
     }
 
     /**
-     * Get Machine group ID 
+     * Get Machine group ID
+-Get the machine group Id by searching the [machine group list](https://www.tencentcloud.com/document/api/614/56438?from_cn_redirect=1). 
      * @return GroupId Machine group ID
+-Get the machine group Id by searching the [machine group list](https://www.tencentcloud.com/document/api/614/56438?from_cn_redirect=1).
      */
     public String getGroupId() {
         return this.GroupId;
@@ -63,7 +71,9 @@ public class ApplyConfigToMachineGroupRequest extends AbstractModel {
 
     /**
      * Set Machine group ID
+-Get the machine group Id by searching the [machine group list](https://www.tencentcloud.com/document/api/614/56438?from_cn_redirect=1).
      * @param GroupId Machine group ID
+-Get the machine group Id by searching the [machine group list](https://www.tencentcloud.com/document/api/614/56438?from_cn_redirect=1).
      */
     public void setGroupId(String GroupId) {
         this.GroupId = GroupId;

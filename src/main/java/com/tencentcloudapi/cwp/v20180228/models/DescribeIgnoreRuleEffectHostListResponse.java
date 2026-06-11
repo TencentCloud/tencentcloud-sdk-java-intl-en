@@ -25,7 +25,6 @@ public class DescribeIgnoreRuleEffectHostListResponse extends AbstractModel {
 
     /**
     * List of hosts affected by ignored check items
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("IgnoreRuleEffectHostList")
     @Expose
@@ -46,10 +45,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get List of hosts affected by ignored check items
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get List of hosts affected by ignored check items 
      * @return IgnoreRuleEffectHostList List of hosts affected by ignored check items
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public IgnoreRuleEffectHostInfo [] getIgnoreRuleEffectHostList() {
         return this.IgnoreRuleEffectHostList;
@@ -57,9 +54,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set List of hosts affected by ignored check items
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param IgnoreRuleEffectHostList List of hosts affected by ignored check items
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setIgnoreRuleEffectHostList(IgnoreRuleEffectHostInfo [] IgnoreRuleEffectHostList) {
         this.IgnoreRuleEffectHostList = IgnoreRuleEffectHostList;

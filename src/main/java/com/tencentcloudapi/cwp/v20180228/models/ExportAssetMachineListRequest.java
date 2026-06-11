@@ -31,16 +31,16 @@ public class ExportAssetMachineListRequest extends AbstractModel {
 <li>OsType - String - required: no - Windows or Linux</li>
 <li>CpuLoad - Int - required: no - 
 0: 0% or unknown; 1: 0% to 20%
-2: 20%～50%  3: 50%～80%
-4: 80%～100%</li>
+2: 20%~50%  3: 50%~80%
+4: 80%~100%</li>
 <li>DiskLoad - Int - required: no - 
 0: 0% or unknown; 1: 0% to 20%
-2: 20%～50%  3: 50%～80%
-4: 80%～100%</li>
+2: 20%~50%  3: 50%=~80%
+4: 80%~100%</li>
 <li>MemLoad - Int - required: no - 
 0: 0% or unknown; 1: 0% to 20%
-2: 20%～50%  3: 50%～80%
-4: 80%～100%</li>
+2: 20%~50%  3: 50%~80%
+4: 80%~100%</li>
     */
     @SerializedName("Filters")
     @Expose
@@ -68,16 +68,16 @@ public class ExportAssetMachineListRequest extends AbstractModel {
 <li>OsType - String - required: no - Windows or Linux</li>
 <li>CpuLoad - Int - required: no - 
 0: 0% or unknown; 1: 0% to 20%
-2: 20%～50%  3: 50%～80%
-4: 80%～100%</li>
+2: 20%~50%  3: 50%~80%
+4: 80%~100%</li>
 <li>DiskLoad - Int - required: no - 
 0: 0% or unknown; 1: 0% to 20%
-2: 20%～50%  3: 50%～80%
-4: 80%～100%</li>
+2: 20%~50%  3: 50%=~80%
+4: 80%~100%</li>
 <li>MemLoad - Int - required: no - 
 0: 0% or unknown; 1: 0% to 20%
-2: 20%～50%  3: 50%～80%
-4: 80%～100%</li> 
+2: 20%~50%  3: 50%~80%
+4: 80%~100%</li> 
      * @return Filters Filter criteria
 <li>IP - String - Required: No - Host IP</li>
 <li>MachineName - String - Required: No - hostname</li>
@@ -85,16 +85,16 @@ public class ExportAssetMachineListRequest extends AbstractModel {
 <li>OsType - String - required: no - Windows or Linux</li>
 <li>CpuLoad - Int - required: no - 
 0: 0% or unknown; 1: 0% to 20%
-2: 20%～50%  3: 50%～80%
-4: 80%～100%</li>
+2: 20%~50%  3: 50%~80%
+4: 80%~100%</li>
 <li>DiskLoad - Int - required: no - 
 0: 0% or unknown; 1: 0% to 20%
-2: 20%～50%  3: 50%～80%
-4: 80%～100%</li>
+2: 20%~50%  3: 50%=~80%
+4: 80%~100%</li>
 <li>MemLoad - Int - required: no - 
 0: 0% or unknown; 1: 0% to 20%
-2: 20%～50%  3: 50%～80%
-4: 80%～100%</li>
+2: 20%~50%  3: 50%~80%
+4: 80%~100%</li>
      */
     public Filter [] getFilters() {
         return this.Filters;
@@ -108,16 +108,16 @@ public class ExportAssetMachineListRequest extends AbstractModel {
 <li>OsType - String - required: no - Windows or Linux</li>
 <li>CpuLoad - Int - required: no - 
 0: 0% or unknown; 1: 0% to 20%
-2: 20%～50%  3: 50%～80%
-4: 80%～100%</li>
+2: 20%~50%  3: 50%~80%
+4: 80%~100%</li>
 <li>DiskLoad - Int - required: no - 
 0: 0% or unknown; 1: 0% to 20%
-2: 20%～50%  3: 50%～80%
-4: 80%～100%</li>
+2: 20%~50%  3: 50%=~80%
+4: 80%~100%</li>
 <li>MemLoad - Int - required: no - 
 0: 0% or unknown; 1: 0% to 20%
-2: 20%～50%  3: 50%～80%
-4: 80%～100%</li>
+2: 20%~50%  3: 50%~80%
+4: 80%~100%</li>
      * @param Filters Filter criteria
 <li>IP - String - Required: No - Host IP</li>
 <li>MachineName - String - Required: No - hostname</li>
@@ -125,16 +125,16 @@ public class ExportAssetMachineListRequest extends AbstractModel {
 <li>OsType - String - required: no - Windows or Linux</li>
 <li>CpuLoad - Int - required: no - 
 0: 0% or unknown; 1: 0% to 20%
-2: 20%～50%  3: 50%～80%
-4: 80%～100%</li>
+2: 20%~50%  3: 50%~80%
+4: 80%~100%</li>
 <li>DiskLoad - Int - required: no - 
 0: 0% or unknown; 1: 0% to 20%
-2: 20%～50%  3: 50%～80%
-4: 80%～100%</li>
+2: 20%~50%  3: 50%=~80%
+4: 80%~100%</li>
 <li>MemLoad - Int - required: no - 
 0: 0% or unknown; 1: 0% to 20%
-2: 20%～50%  3: 50%～80%
-4: 80%～100%</li>
+2: 20%~50%  3: 50%~80%
+4: 80%~100%</li>
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;

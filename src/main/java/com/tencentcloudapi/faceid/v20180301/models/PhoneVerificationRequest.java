@@ -46,6 +46,7 @@ public class PhoneVerificationRequest extends AbstractModel {
 
     /**
     * Users with encryption requirements can import the CiphertextBlob of kms. Read the <a href="https://www.tencentcloud.com/document/product/1007/47180?from_cn_redirect=1">data encryption</a> document about encrypting data.
+
     */
     @SerializedName("CiphertextBlob")
     @Expose
@@ -115,8 +116,10 @@ public class PhoneVerificationRequest extends AbstractModel {
     }
 
     /**
-     * Get Users with encryption requirements can import the CiphertextBlob of kms. Read the <a href="https://www.tencentcloud.com/document/product/1007/47180?from_cn_redirect=1">data encryption</a> document about encrypting data. 
+     * Get Users with encryption requirements can import the CiphertextBlob of kms. Read the <a href="https://www.tencentcloud.com/document/product/1007/47180?from_cn_redirect=1">data encryption</a> document about encrypting data.
+ 
      * @return CiphertextBlob Users with encryption requirements can import the CiphertextBlob of kms. Read the <a href="https://www.tencentcloud.com/document/product/1007/47180?from_cn_redirect=1">data encryption</a> document about encrypting data.
+
      */
     public String getCiphertextBlob() {
         return this.CiphertextBlob;
@@ -124,7 +127,9 @@ public class PhoneVerificationRequest extends AbstractModel {
 
     /**
      * Set Users with encryption requirements can import the CiphertextBlob of kms. Read the <a href="https://www.tencentcloud.com/document/product/1007/47180?from_cn_redirect=1">data encryption</a> document about encrypting data.
+
      * @param CiphertextBlob Users with encryption requirements can import the CiphertextBlob of kms. Read the <a href="https://www.tencentcloud.com/document/product/1007/47180?from_cn_redirect=1">data encryption</a> document about encrypting data.
+
      */
     public void setCiphertextBlob(String CiphertextBlob) {
         this.CiphertextBlob = CiphertextBlob;

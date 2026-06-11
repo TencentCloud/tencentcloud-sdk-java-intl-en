@@ -38,7 +38,7 @@ public class CreateNetAttackWhiteListRequest extends AbstractModel {
     private String [] SrcIp;
 
     /**
-    * QUUID list
+    * QUUID list
     */
     @SerializedName("QuuidList")
     @Expose
@@ -98,16 +98,16 @@ public class CreateNetAttackWhiteListRequest extends AbstractModel {
     }
 
     /**
-     * Get QUUID list 
-     * @return QuuidList QUUID list
+     * Get QUUID list 
+     * @return QuuidList QUUID list
      */
     public String [] getQuuidList() {
         return this.QuuidList;
     }
 
     /**
-     * Set QUUID list
-     * @param QuuidList QUUID list
+     * Set QUUID list
+     * @param QuuidList QUUID list
      */
     public void setQuuidList(String [] QuuidList) {
         this.QuuidList = QuuidList;

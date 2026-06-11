@@ -67,7 +67,6 @@ public class AssetProcessBaseInfo extends AbstractModel {
 
     /**
     * Host tag
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Tag")
     @Expose
@@ -172,7 +171,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String Status;
 
     /**
-    * Digital signature. 0: no; 1: yes; 999: null (Windows only).
+    * Digital signature: 0: none; 1: yes; 999: null (for Windows only).
     */
     @SerializedName("HasSign")
     @Expose
@@ -201,7 +200,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Data update time
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("UpdateTime")
     @Expose
@@ -222,9 +220,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long IsNew;
 
     /**
-    * Additional information
+    *  Additional information
 
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("MachineExtraInfo")
     @Expose
@@ -327,10 +324,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Host tag
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Host tag 
      * @return Tag Host tag
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public MachineTag [] getTag() {
         return this.Tag;
@@ -338,9 +333,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Host tag
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Tag Host tag
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setTag(MachineTag [] Tag) {
         this.Tag = Tag;
@@ -571,16 +564,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Digital signature. 0: no; 1: yes; 999: null (Windows only). 
-     * @return HasSign Digital signature. 0: no; 1: yes; 999: null (Windows only).
+     * Get Digital signature: 0: none; 1: yes; 999: null (for Windows only). 
+     * @return HasSign Digital signature: 0: none; 1: yes; 999: null (for Windows only).
      */
     public Long getHasSign() {
         return this.HasSign;
     }
 
     /**
-     * Set Digital signature. 0: no; 1: yes; 999: null (Windows only).
-     * @param HasSign Digital signature. 0: no; 1: yes; 999: null (Windows only).
+     * Set Digital signature: 0: none; 1: yes; 999: null (for Windows only).
+     * @param HasSign Digital signature: 0: none; 1: yes; 999: null (for Windows only).
      */
     public void setHasSign(Long HasSign) {
         this.HasSign = HasSign;
@@ -635,10 +628,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Data update time
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Data update time 
      * @return UpdateTime Data update time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getUpdateTime() {
         return this.UpdateTime;
@@ -646,9 +637,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Data update time
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param UpdateTime Data update time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;
@@ -687,24 +676,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Additional information
+     * Get  Additional information
+ 
+     * @return MachineExtraInfo  Additional information
 
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return MachineExtraInfo Additional information
-
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public MachineExtraInfo getMachineExtraInfo() {
         return this.MachineExtraInfo;
     }
 
     /**
-     * Set Additional information
+     * Set  Additional information
 
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param MachineExtraInfo Additional information
+     * @param MachineExtraInfo  Additional information
 
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setMachineExtraInfo(MachineExtraInfo MachineExtraInfo) {
         this.MachineExtraInfo = MachineExtraInfo;

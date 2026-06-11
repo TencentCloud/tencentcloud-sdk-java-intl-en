@@ -39,7 +39,6 @@ public class DescribeNetworkFirewallPolicyDetailResponse extends AbstractModel {
 
     /**
     * Namespace
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Namespace")
     @Expose
@@ -61,7 +60,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Custom rule
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("CustomPolicy")
     @Expose
@@ -76,7 +74,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Policy description
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Description")
     @Expose
@@ -97,8 +94,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String PolicySourceType;
 
     /**
-    * Network plugin of the network policy
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Network Plugins Corresponding to Network Policies
     */
     @SerializedName("NetworkPolicyPlugin")
     @Expose
@@ -112,8 +108,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String PublishStatus;
 
     /**
-    * Policy publishing result
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Network Distribution Result
     */
     @SerializedName("PublishResult")
     @Expose
@@ -159,10 +154,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Namespace
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Namespace 
      * @return Namespace Namespace
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getNamespace() {
         return this.Namespace;
@@ -170,9 +163,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Namespace
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Namespace Namespace
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setNamespace(String Namespace) {
         this.Namespace = Namespace;
@@ -211,10 +202,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Custom rule
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Custom rule 
      * @return CustomPolicy Custom rule
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public NetworkCustomPolicy [] getCustomPolicy() {
         return this.CustomPolicy;
@@ -222,9 +211,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Custom rule
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param CustomPolicy Custom rule
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setCustomPolicy(NetworkCustomPolicy [] CustomPolicy) {
         this.CustomPolicy = CustomPolicy;
@@ -247,10 +234,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Policy description
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Policy description 
      * @return Description Policy description
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getDescription() {
         return this.Description;
@@ -258,9 +243,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Policy description
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Description Policy description
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setDescription(String Description) {
         this.Description = Description;
@@ -299,20 +282,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Network plugin of the network policy
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return NetworkPolicyPlugin Network plugin of the network policy
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Network Plugins Corresponding to Network Policies 
+     * @return NetworkPolicyPlugin Network Plugins Corresponding to Network Policies
      */
     public String getNetworkPolicyPlugin() {
         return this.NetworkPolicyPlugin;
     }
 
     /**
-     * Set Network plugin of the network policy
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param NetworkPolicyPlugin Network plugin of the network policy
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Network Plugins Corresponding to Network Policies
+     * @param NetworkPolicyPlugin Network Plugins Corresponding to Network Policies
      */
     public void setNetworkPolicyPlugin(String NetworkPolicyPlugin) {
         this.NetworkPolicyPlugin = NetworkPolicyPlugin;
@@ -335,20 +314,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Policy publishing result
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return PublishResult Policy publishing result
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Network Distribution Result 
+     * @return PublishResult Network Distribution Result
      */
     public String getPublishResult() {
         return this.PublishResult;
     }
 
     /**
-     * Set Policy publishing result
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param PublishResult Policy publishing result
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Network Distribution Result
+     * @param PublishResult Network Distribution Result
      */
     public void setPublishResult(String PublishResult) {
         this.PublishResult = PublishResult;

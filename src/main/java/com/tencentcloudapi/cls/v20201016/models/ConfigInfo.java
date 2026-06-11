@@ -31,8 +31,7 @@ public class ConfigInfo extends AbstractModel {
     private String ConfigId;
 
     /**
-    * Name of the collection rule configuration
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Collection rule configuration name
     */
     @SerializedName("Name")
     @Expose
@@ -40,30 +39,36 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Log formatting method
-Note: this field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("LogFormat")
     @Expose
     private String LogFormat;
 
     /**
-    * Log collection path
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * log collection path
     */
     @SerializedName("Path")
     @Expose
     private String Path;
 
     /**
-    * Type of collected logs.- json_log: JSON File Log (For more information, see [Using JSON pattern to collect logs](https://intl.cloud.tencent.com/document/product/614/17419?from_cn_redirect=1));- delimiter_log: Delimiter - File Logs (For more information, see [Using delimiter pattern to collect logs](https://intl.cloud.tencent.com/document/product/614/17420?from_cn_redirect=1));- minimalist_log: Single-line Full-text File Log (For more information, see [Using single-line full-text pattern to collect logs](https://intl.cloud.tencent.com/document/product/614/17421?from_cn_redirect=1));- fullregex_log: Single line full regular expression - File log (For more information, see [Using single-line - complete regular expression pattern to collect logs](https://intl.cloud.tencent.com/document/product/614/52365?from_cn_redirect=1));- multiline_log: Multiline Full-text File Log (For more information, see [Using multi-line full-text pattern to collect logs](https://intl.cloud.tencent.com/document/product/614/17422?from_cn_redirect=1));- multiline_fullregex_log: Multi-line complete regular expression - File Logs (For more information, see [Using multi-line - complete regular expression pattern to collect logs](https://intl.cloud.tencent.com/document/product/614/52366?from_cn_redirect=1));- user_define_log: Combined parsing (Suitable for logs with multiple nested formats, see [Using combined parsing pattern to collect logs](https://intl.cloud.tencent.com/document/product/614/61310?from_cn_redirect=1));- service_syslog: syslog collection (For more information, see [Collect Syslog](https://intl.cloud.tencent.com/document/product/614/81454?from_cn_redirect=1));- windows_event_log represents: Windows event logs (see Collecting Windows Event Logs (https://intl.cloud.tencent.com/document/product/614/96678?from_cn_redirect=1) for details.).Note: This field may return null, indicating that no valid values can be obtained.
+    * Type of log collected.
+-json_log represents JSON file logs (see [Use JSON extraction mode to collect logs](https://www.tencentcloud.com/document/product/614/17419?from_cn_redirect=1)).
+-delimiter_log represents: delimiter-file logs (see [use delimiter extraction mode to collect logs](https://www.tencentcloud.com/document/product/614/17420?from_cn_redirect=1)).
+-minimalist_log represents single-line full-text file logs (see [use single-line full-text extraction mode to collect logs](https://www.tencentcloud.com/document/product/614/17421?from_cn_redirect=1)).
+-fullregex_log represents single-line full regex-file logs (see [Collect logs using single-line full regex extraction mode](https://www.tencentcloud.com/document/product/614/52365?from_cn_redirect=1)).
+-multiline_log represents multi-line full-text file logs (see [use multi-line full-text extraction mode to collect logs](https://www.tencentcloud.com/document/product/614/17422?from_cn_redirect=1)).
+-multiline_fullregex_log represents: Multiline full regex-file log (see [Collect logs using multiline-full regex extraction mode](https://www.tencentcloud.com/document/product/614/52366?from_cn_redirect=1));
+-user_define_log represents: combined parsing mode (suitable for logs with multiple nested formats, see [Collecting logs using combined parsing extraction mode](https://www.tencentcloud.com/document/product/614/61310?from_cn_redirect=1));
+-service_syslog represents syslog collection (see [Collect Syslog](https://www.tencentcloud.com/document/product/614/81454?from_cn_redirect=1)).
+- windows_event_log: Windows event log (see [Collecting Windows Event Logs](https://www.tencentcloud.com/document/product/614/96678?from_cn_redirect=1)).
     */
     @SerializedName("LogType")
     @Expose
     private String LogType;
 
     /**
-    * Extraction rule. If `ExtractRule` is set, `LogType` must be set
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * Extraction rule. If ExtractRule is set, then LogType must be set.
     */
     @SerializedName("ExtractRule")
     @Expose
@@ -86,34 +91,50 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
     /**
     * Update time
-Note: this field may return `null`, indicating that no valid values can be obtained.
+-Time format: yyyy-MM-dd HH:mm:ss
     */
     @SerializedName("UpdateTime")
     @Expose
     private String UpdateTime;
 
     /**
-    * Creation time
+    * Creation time.
+-Time format: yyyy-MM-dd HH:mm:ss
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * User-defined parsing strings, see Collecting Logs Using Combined Parsing Extraction Mode (https://intl.cloud.tencent.com/document/product/614/61310?from_cn_redirect=1) for details.Note: This field may return null, indicating that no valid values can be obtained.
+    * Custom parsing string. For more information, see [Collecting logs using combined parsing extraction mode](https://www.tencentcloud.com/document/product/614/61310?from_cn_redirect=1).
     */
     @SerializedName("UserDefineRule")
     @Expose
     private String UserDefineRule;
 
     /**
-    * Advanced collection configuration. A JSON string, Key/Value definition as follows:- ClsAgentFileTimeout (timeout property), value range: an integer greater than or equal to 0, where 0 means no timeout- ClsAgentMaxDepth (maximum directory depth), value range: an integer greater than or equal to 0- ClsAgentParseFailMerge (merge logs that failed parsing), value range: true or falseSample:`{\"ClsAgentFileTimeout\":0,\"ClsAgentMaxDepth\":10,\"ClsAgentParseFailMerge\":true}`
+    * Advanced collection configuration. Json string, Key/Value is defined as follows:
+-ClsAgentFileTimeout (timeout attribute). Value ranges from 0 to integer. 0 means no timeout.
+-ClsAgentMaxDepth (maximum directory depth), value ranges from 0 to integer
+-ClsAgentParseFailMerge (merge parsing failure logs). Value ranges from true to false.
+Example:
+`{\"ClsAgentFileTimeout\":0,\"ClsAgentMaxDepth\":10,\"ClsAgentParseFailMerge\":true}`
 
-Default placeholder value in the console: `{"ClsAgentDefault":0}`Note: This field may return null, indicating that no valid values can be obtained.
+Default placeholder value in console: `{\"ClsAgentDefault\":0}`
     */
     @SerializedName("AdvancedConfig")
     @Expose
     private String AdvancedConfig;
+
+    /**
+    * Log input type (<span style="color:red; font-weight:bold">Note: required for Windows scenario and only supports file and windows_event event type</span>)
+-file type collection
+-windows event collection
+-syslog: System log collection
+    */
+    @SerializedName("InputType")
+    @Expose
+    private String InputType;
 
     /**
      * Get Collection rule configuration ID 
@@ -132,30 +153,24 @@ Default placeholder value in the console: `{"ClsAgentDefault":0}`Note: This fiel
     }
 
     /**
-     * Get Name of the collection rule configuration
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Name Name of the collection rule configuration
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Collection rule configuration name 
+     * @return Name Collection rule configuration name
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Name of the collection rule configuration
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Name Name of the collection rule configuration
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Collection rule configuration name
+     * @param Name Collection rule configuration name
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get Log formatting method
-Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * Get Log formatting method 
      * @return LogFormat Log formatting method
-Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public String getLogFormat() {
         return this.LogFormat;
@@ -163,65 +178,91 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
     /**
      * Set Log formatting method
-Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param LogFormat Log formatting method
-Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public void setLogFormat(String LogFormat) {
         this.LogFormat = LogFormat;
     }
 
     /**
-     * Get Log collection path
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return Path Log collection path
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get log collection path 
+     * @return Path log collection path
      */
     public String getPath() {
         return this.Path;
     }
 
     /**
-     * Set Log collection path
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param Path Log collection path
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set log collection path
+     * @param Path log collection path
      */
     public void setPath(String Path) {
         this.Path = Path;
     }
 
     /**
-     * Get Type of collected logs.- json_log: JSON File Log (For more information, see [Using JSON pattern to collect logs](https://intl.cloud.tencent.com/document/product/614/17419?from_cn_redirect=1));- delimiter_log: Delimiter - File Logs (For more information, see [Using delimiter pattern to collect logs](https://intl.cloud.tencent.com/document/product/614/17420?from_cn_redirect=1));- minimalist_log: Single-line Full-text File Log (For more information, see [Using single-line full-text pattern to collect logs](https://intl.cloud.tencent.com/document/product/614/17421?from_cn_redirect=1));- fullregex_log: Single line full regular expression - File log (For more information, see [Using single-line - complete regular expression pattern to collect logs](https://intl.cloud.tencent.com/document/product/614/52365?from_cn_redirect=1));- multiline_log: Multiline Full-text File Log (For more information, see [Using multi-line full-text pattern to collect logs](https://intl.cloud.tencent.com/document/product/614/17422?from_cn_redirect=1));- multiline_fullregex_log: Multi-line complete regular expression - File Logs (For more information, see [Using multi-line - complete regular expression pattern to collect logs](https://intl.cloud.tencent.com/document/product/614/52366?from_cn_redirect=1));- user_define_log: Combined parsing (Suitable for logs with multiple nested formats, see [Using combined parsing pattern to collect logs](https://intl.cloud.tencent.com/document/product/614/61310?from_cn_redirect=1));- service_syslog: syslog collection (For more information, see [Collect Syslog](https://intl.cloud.tencent.com/document/product/614/81454?from_cn_redirect=1));- windows_event_log represents: Windows event logs (see Collecting Windows Event Logs (https://intl.cloud.tencent.com/document/product/614/96678?from_cn_redirect=1) for details.).Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return LogType Type of collected logs.- json_log: JSON File Log (For more information, see [Using JSON pattern to collect logs](https://intl.cloud.tencent.com/document/product/614/17419?from_cn_redirect=1));- delimiter_log: Delimiter - File Logs (For more information, see [Using delimiter pattern to collect logs](https://intl.cloud.tencent.com/document/product/614/17420?from_cn_redirect=1));- minimalist_log: Single-line Full-text File Log (For more information, see [Using single-line full-text pattern to collect logs](https://intl.cloud.tencent.com/document/product/614/17421?from_cn_redirect=1));- fullregex_log: Single line full regular expression - File log (For more information, see [Using single-line - complete regular expression pattern to collect logs](https://intl.cloud.tencent.com/document/product/614/52365?from_cn_redirect=1));- multiline_log: Multiline Full-text File Log (For more information, see [Using multi-line full-text pattern to collect logs](https://intl.cloud.tencent.com/document/product/614/17422?from_cn_redirect=1));- multiline_fullregex_log: Multi-line complete regular expression - File Logs (For more information, see [Using multi-line - complete regular expression pattern to collect logs](https://intl.cloud.tencent.com/document/product/614/52366?from_cn_redirect=1));- user_define_log: Combined parsing (Suitable for logs with multiple nested formats, see [Using combined parsing pattern to collect logs](https://intl.cloud.tencent.com/document/product/614/61310?from_cn_redirect=1));- service_syslog: syslog collection (For more information, see [Collect Syslog](https://intl.cloud.tencent.com/document/product/614/81454?from_cn_redirect=1));- windows_event_log represents: Windows event logs (see Collecting Windows Event Logs (https://intl.cloud.tencent.com/document/product/614/96678?from_cn_redirect=1) for details.).Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Type of log collected.
+-json_log represents JSON file logs (see [Use JSON extraction mode to collect logs](https://www.tencentcloud.com/document/product/614/17419?from_cn_redirect=1)).
+-delimiter_log represents: delimiter-file logs (see [use delimiter extraction mode to collect logs](https://www.tencentcloud.com/document/product/614/17420?from_cn_redirect=1)).
+-minimalist_log represents single-line full-text file logs (see [use single-line full-text extraction mode to collect logs](https://www.tencentcloud.com/document/product/614/17421?from_cn_redirect=1)).
+-fullregex_log represents single-line full regex-file logs (see [Collect logs using single-line full regex extraction mode](https://www.tencentcloud.com/document/product/614/52365?from_cn_redirect=1)).
+-multiline_log represents multi-line full-text file logs (see [use multi-line full-text extraction mode to collect logs](https://www.tencentcloud.com/document/product/614/17422?from_cn_redirect=1)).
+-multiline_fullregex_log represents: Multiline full regex-file log (see [Collect logs using multiline-full regex extraction mode](https://www.tencentcloud.com/document/product/614/52366?from_cn_redirect=1));
+-user_define_log represents: combined parsing mode (suitable for logs with multiple nested formats, see [Collecting logs using combined parsing extraction mode](https://www.tencentcloud.com/document/product/614/61310?from_cn_redirect=1));
+-service_syslog represents syslog collection (see [Collect Syslog](https://www.tencentcloud.com/document/product/614/81454?from_cn_redirect=1)).
+- windows_event_log: Windows event log (see [Collecting Windows Event Logs](https://www.tencentcloud.com/document/product/614/96678?from_cn_redirect=1)). 
+     * @return LogType Type of log collected.
+-json_log represents JSON file logs (see [Use JSON extraction mode to collect logs](https://www.tencentcloud.com/document/product/614/17419?from_cn_redirect=1)).
+-delimiter_log represents: delimiter-file logs (see [use delimiter extraction mode to collect logs](https://www.tencentcloud.com/document/product/614/17420?from_cn_redirect=1)).
+-minimalist_log represents single-line full-text file logs (see [use single-line full-text extraction mode to collect logs](https://www.tencentcloud.com/document/product/614/17421?from_cn_redirect=1)).
+-fullregex_log represents single-line full regex-file logs (see [Collect logs using single-line full regex extraction mode](https://www.tencentcloud.com/document/product/614/52365?from_cn_redirect=1)).
+-multiline_log represents multi-line full-text file logs (see [use multi-line full-text extraction mode to collect logs](https://www.tencentcloud.com/document/product/614/17422?from_cn_redirect=1)).
+-multiline_fullregex_log represents: Multiline full regex-file log (see [Collect logs using multiline-full regex extraction mode](https://www.tencentcloud.com/document/product/614/52366?from_cn_redirect=1));
+-user_define_log represents: combined parsing mode (suitable for logs with multiple nested formats, see [Collecting logs using combined parsing extraction mode](https://www.tencentcloud.com/document/product/614/61310?from_cn_redirect=1));
+-service_syslog represents syslog collection (see [Collect Syslog](https://www.tencentcloud.com/document/product/614/81454?from_cn_redirect=1)).
+- windows_event_log: Windows event log (see [Collecting Windows Event Logs](https://www.tencentcloud.com/document/product/614/96678?from_cn_redirect=1)).
      */
     public String getLogType() {
         return this.LogType;
     }
 
     /**
-     * Set Type of collected logs.- json_log: JSON File Log (For more information, see [Using JSON pattern to collect logs](https://intl.cloud.tencent.com/document/product/614/17419?from_cn_redirect=1));- delimiter_log: Delimiter - File Logs (For more information, see [Using delimiter pattern to collect logs](https://intl.cloud.tencent.com/document/product/614/17420?from_cn_redirect=1));- minimalist_log: Single-line Full-text File Log (For more information, see [Using single-line full-text pattern to collect logs](https://intl.cloud.tencent.com/document/product/614/17421?from_cn_redirect=1));- fullregex_log: Single line full regular expression - File log (For more information, see [Using single-line - complete regular expression pattern to collect logs](https://intl.cloud.tencent.com/document/product/614/52365?from_cn_redirect=1));- multiline_log: Multiline Full-text File Log (For more information, see [Using multi-line full-text pattern to collect logs](https://intl.cloud.tencent.com/document/product/614/17422?from_cn_redirect=1));- multiline_fullregex_log: Multi-line complete regular expression - File Logs (For more information, see [Using multi-line - complete regular expression pattern to collect logs](https://intl.cloud.tencent.com/document/product/614/52366?from_cn_redirect=1));- user_define_log: Combined parsing (Suitable for logs with multiple nested formats, see [Using combined parsing pattern to collect logs](https://intl.cloud.tencent.com/document/product/614/61310?from_cn_redirect=1));- service_syslog: syslog collection (For more information, see [Collect Syslog](https://intl.cloud.tencent.com/document/product/614/81454?from_cn_redirect=1));- windows_event_log represents: Windows event logs (see Collecting Windows Event Logs (https://intl.cloud.tencent.com/document/product/614/96678?from_cn_redirect=1) for details.).Note: This field may return null, indicating that no valid values can be obtained.
-     * @param LogType Type of collected logs.- json_log: JSON File Log (For more information, see [Using JSON pattern to collect logs](https://intl.cloud.tencent.com/document/product/614/17419?from_cn_redirect=1));- delimiter_log: Delimiter - File Logs (For more information, see [Using delimiter pattern to collect logs](https://intl.cloud.tencent.com/document/product/614/17420?from_cn_redirect=1));- minimalist_log: Single-line Full-text File Log (For more information, see [Using single-line full-text pattern to collect logs](https://intl.cloud.tencent.com/document/product/614/17421?from_cn_redirect=1));- fullregex_log: Single line full regular expression - File log (For more information, see [Using single-line - complete regular expression pattern to collect logs](https://intl.cloud.tencent.com/document/product/614/52365?from_cn_redirect=1));- multiline_log: Multiline Full-text File Log (For more information, see [Using multi-line full-text pattern to collect logs](https://intl.cloud.tencent.com/document/product/614/17422?from_cn_redirect=1));- multiline_fullregex_log: Multi-line complete regular expression - File Logs (For more information, see [Using multi-line - complete regular expression pattern to collect logs](https://intl.cloud.tencent.com/document/product/614/52366?from_cn_redirect=1));- user_define_log: Combined parsing (Suitable for logs with multiple nested formats, see [Using combined parsing pattern to collect logs](https://intl.cloud.tencent.com/document/product/614/61310?from_cn_redirect=1));- service_syslog: syslog collection (For more information, see [Collect Syslog](https://intl.cloud.tencent.com/document/product/614/81454?from_cn_redirect=1));- windows_event_log represents: Windows event logs (see Collecting Windows Event Logs (https://intl.cloud.tencent.com/document/product/614/96678?from_cn_redirect=1) for details.).Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Type of log collected.
+-json_log represents JSON file logs (see [Use JSON extraction mode to collect logs](https://www.tencentcloud.com/document/product/614/17419?from_cn_redirect=1)).
+-delimiter_log represents: delimiter-file logs (see [use delimiter extraction mode to collect logs](https://www.tencentcloud.com/document/product/614/17420?from_cn_redirect=1)).
+-minimalist_log represents single-line full-text file logs (see [use single-line full-text extraction mode to collect logs](https://www.tencentcloud.com/document/product/614/17421?from_cn_redirect=1)).
+-fullregex_log represents single-line full regex-file logs (see [Collect logs using single-line full regex extraction mode](https://www.tencentcloud.com/document/product/614/52365?from_cn_redirect=1)).
+-multiline_log represents multi-line full-text file logs (see [use multi-line full-text extraction mode to collect logs](https://www.tencentcloud.com/document/product/614/17422?from_cn_redirect=1)).
+-multiline_fullregex_log represents: Multiline full regex-file log (see [Collect logs using multiline-full regex extraction mode](https://www.tencentcloud.com/document/product/614/52366?from_cn_redirect=1));
+-user_define_log represents: combined parsing mode (suitable for logs with multiple nested formats, see [Collecting logs using combined parsing extraction mode](https://www.tencentcloud.com/document/product/614/61310?from_cn_redirect=1));
+-service_syslog represents syslog collection (see [Collect Syslog](https://www.tencentcloud.com/document/product/614/81454?from_cn_redirect=1)).
+- windows_event_log: Windows event log (see [Collecting Windows Event Logs](https://www.tencentcloud.com/document/product/614/96678?from_cn_redirect=1)).
+     * @param LogType Type of log collected.
+-json_log represents JSON file logs (see [Use JSON extraction mode to collect logs](https://www.tencentcloud.com/document/product/614/17419?from_cn_redirect=1)).
+-delimiter_log represents: delimiter-file logs (see [use delimiter extraction mode to collect logs](https://www.tencentcloud.com/document/product/614/17420?from_cn_redirect=1)).
+-minimalist_log represents single-line full-text file logs (see [use single-line full-text extraction mode to collect logs](https://www.tencentcloud.com/document/product/614/17421?from_cn_redirect=1)).
+-fullregex_log represents single-line full regex-file logs (see [Collect logs using single-line full regex extraction mode](https://www.tencentcloud.com/document/product/614/52365?from_cn_redirect=1)).
+-multiline_log represents multi-line full-text file logs (see [use multi-line full-text extraction mode to collect logs](https://www.tencentcloud.com/document/product/614/17422?from_cn_redirect=1)).
+-multiline_fullregex_log represents: Multiline full regex-file log (see [Collect logs using multiline-full regex extraction mode](https://www.tencentcloud.com/document/product/614/52366?from_cn_redirect=1));
+-user_define_log represents: combined parsing mode (suitable for logs with multiple nested formats, see [Collecting logs using combined parsing extraction mode](https://www.tencentcloud.com/document/product/614/61310?from_cn_redirect=1));
+-service_syslog represents syslog collection (see [Collect Syslog](https://www.tencentcloud.com/document/product/614/81454?from_cn_redirect=1)).
+- windows_event_log: Windows event log (see [Collecting Windows Event Logs](https://www.tencentcloud.com/document/product/614/96678?from_cn_redirect=1)).
      */
     public void setLogType(String LogType) {
         this.LogType = LogType;
     }
 
     /**
-     * Get Extraction rule. If `ExtractRule` is set, `LogType` must be set
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return ExtractRule Extraction rule. If `ExtractRule` is set, `LogType` must be set
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get Extraction rule. If ExtractRule is set, then LogType must be set. 
+     * @return ExtractRule Extraction rule. If ExtractRule is set, then LogType must be set.
      */
     public ExtractRuleInfo getExtractRule() {
         return this.ExtractRule;
     }
 
     /**
-     * Set Extraction rule. If `ExtractRule` is set, `LogType` must be set
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param ExtractRule Extraction rule. If `ExtractRule` is set, `LogType` must be set
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set Extraction rule. If ExtractRule is set, then LogType must be set.
+     * @param ExtractRule Extraction rule. If ExtractRule is set, then LogType must be set.
      */
     public void setExtractRule(ExtractRuleInfo ExtractRule) {
         this.ExtractRule = ExtractRule;
@@ -265,9 +306,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
     /**
      * Get Update time
-Note: this field may return `null`, indicating that no valid values can be obtained. 
+-Time format: yyyy-MM-dd HH:mm:ss 
      * @return UpdateTime Update time
-Note: this field may return `null`, indicating that no valid values can be obtained.
+-Time format: yyyy-MM-dd HH:mm:ss
      */
     public String getUpdateTime() {
         return this.UpdateTime;
@@ -275,68 +316,120 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
     /**
      * Set Update time
-Note: this field may return `null`, indicating that no valid values can be obtained.
+-Time format: yyyy-MM-dd HH:mm:ss
      * @param UpdateTime Update time
-Note: this field may return `null`, indicating that no valid values can be obtained.
+-Time format: yyyy-MM-dd HH:mm:ss
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;
     }
 
     /**
-     * Get Creation time 
-     * @return CreateTime Creation time
+     * Get Creation time.
+-Time format: yyyy-MM-dd HH:mm:ss 
+     * @return CreateTime Creation time.
+-Time format: yyyy-MM-dd HH:mm:ss
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set Creation time
-     * @param CreateTime Creation time
+     * Set Creation time.
+-Time format: yyyy-MM-dd HH:mm:ss
+     * @param CreateTime Creation time.
+-Time format: yyyy-MM-dd HH:mm:ss
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get User-defined parsing strings, see Collecting Logs Using Combined Parsing Extraction Mode (https://intl.cloud.tencent.com/document/product/614/61310?from_cn_redirect=1) for details.Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return UserDefineRule User-defined parsing strings, see Collecting Logs Using Combined Parsing Extraction Mode (https://intl.cloud.tencent.com/document/product/614/61310?from_cn_redirect=1) for details.Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Custom parsing string. For more information, see [Collecting logs using combined parsing extraction mode](https://www.tencentcloud.com/document/product/614/61310?from_cn_redirect=1). 
+     * @return UserDefineRule Custom parsing string. For more information, see [Collecting logs using combined parsing extraction mode](https://www.tencentcloud.com/document/product/614/61310?from_cn_redirect=1).
      */
     public String getUserDefineRule() {
         return this.UserDefineRule;
     }
 
     /**
-     * Set User-defined parsing strings, see Collecting Logs Using Combined Parsing Extraction Mode (https://intl.cloud.tencent.com/document/product/614/61310?from_cn_redirect=1) for details.Note: This field may return null, indicating that no valid values can be obtained.
-     * @param UserDefineRule User-defined parsing strings, see Collecting Logs Using Combined Parsing Extraction Mode (https://intl.cloud.tencent.com/document/product/614/61310?from_cn_redirect=1) for details.Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Custom parsing string. For more information, see [Collecting logs using combined parsing extraction mode](https://www.tencentcloud.com/document/product/614/61310?from_cn_redirect=1).
+     * @param UserDefineRule Custom parsing string. For more information, see [Collecting logs using combined parsing extraction mode](https://www.tencentcloud.com/document/product/614/61310?from_cn_redirect=1).
      */
     public void setUserDefineRule(String UserDefineRule) {
         this.UserDefineRule = UserDefineRule;
     }
 
     /**
-     * Get Advanced collection configuration. A JSON string, Key/Value definition as follows:- ClsAgentFileTimeout (timeout property), value range: an integer greater than or equal to 0, where 0 means no timeout- ClsAgentMaxDepth (maximum directory depth), value range: an integer greater than or equal to 0- ClsAgentParseFailMerge (merge logs that failed parsing), value range: true or falseSample:`{\"ClsAgentFileTimeout\":0,\"ClsAgentMaxDepth\":10,\"ClsAgentParseFailMerge\":true}`
+     * Get Advanced collection configuration. Json string, Key/Value is defined as follows:
+-ClsAgentFileTimeout (timeout attribute). Value ranges from 0 to integer. 0 means no timeout.
+-ClsAgentMaxDepth (maximum directory depth), value ranges from 0 to integer
+-ClsAgentParseFailMerge (merge parsing failure logs). Value ranges from true to false.
+Example:
+`{\"ClsAgentFileTimeout\":0,\"ClsAgentMaxDepth\":10,\"ClsAgentParseFailMerge\":true}`
 
-Default placeholder value in the console: `{"ClsAgentDefault":0}`Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return AdvancedConfig Advanced collection configuration. A JSON string, Key/Value definition as follows:- ClsAgentFileTimeout (timeout property), value range: an integer greater than or equal to 0, where 0 means no timeout- ClsAgentMaxDepth (maximum directory depth), value range: an integer greater than or equal to 0- ClsAgentParseFailMerge (merge logs that failed parsing), value range: true or falseSample:`{\"ClsAgentFileTimeout\":0,\"ClsAgentMaxDepth\":10,\"ClsAgentParseFailMerge\":true}`
+Default placeholder value in console: `{\"ClsAgentDefault\":0}` 
+     * @return AdvancedConfig Advanced collection configuration. Json string, Key/Value is defined as follows:
+-ClsAgentFileTimeout (timeout attribute). Value ranges from 0 to integer. 0 means no timeout.
+-ClsAgentMaxDepth (maximum directory depth), value ranges from 0 to integer
+-ClsAgentParseFailMerge (merge parsing failure logs). Value ranges from true to false.
+Example:
+`{\"ClsAgentFileTimeout\":0,\"ClsAgentMaxDepth\":10,\"ClsAgentParseFailMerge\":true}`
 
-Default placeholder value in the console: `{"ClsAgentDefault":0}`Note: This field may return null, indicating that no valid values can be obtained.
+Default placeholder value in console: `{\"ClsAgentDefault\":0}`
      */
     public String getAdvancedConfig() {
         return this.AdvancedConfig;
     }
 
     /**
-     * Set Advanced collection configuration. A JSON string, Key/Value definition as follows:- ClsAgentFileTimeout (timeout property), value range: an integer greater than or equal to 0, where 0 means no timeout- ClsAgentMaxDepth (maximum directory depth), value range: an integer greater than or equal to 0- ClsAgentParseFailMerge (merge logs that failed parsing), value range: true or falseSample:`{\"ClsAgentFileTimeout\":0,\"ClsAgentMaxDepth\":10,\"ClsAgentParseFailMerge\":true}`
+     * Set Advanced collection configuration. Json string, Key/Value is defined as follows:
+-ClsAgentFileTimeout (timeout attribute). Value ranges from 0 to integer. 0 means no timeout.
+-ClsAgentMaxDepth (maximum directory depth), value ranges from 0 to integer
+-ClsAgentParseFailMerge (merge parsing failure logs). Value ranges from true to false.
+Example:
+`{\"ClsAgentFileTimeout\":0,\"ClsAgentMaxDepth\":10,\"ClsAgentParseFailMerge\":true}`
 
-Default placeholder value in the console: `{"ClsAgentDefault":0}`Note: This field may return null, indicating that no valid values can be obtained.
-     * @param AdvancedConfig Advanced collection configuration. A JSON string, Key/Value definition as follows:- ClsAgentFileTimeout (timeout property), value range: an integer greater than or equal to 0, where 0 means no timeout- ClsAgentMaxDepth (maximum directory depth), value range: an integer greater than or equal to 0- ClsAgentParseFailMerge (merge logs that failed parsing), value range: true or falseSample:`{\"ClsAgentFileTimeout\":0,\"ClsAgentMaxDepth\":10,\"ClsAgentParseFailMerge\":true}`
+Default placeholder value in console: `{\"ClsAgentDefault\":0}`
+     * @param AdvancedConfig Advanced collection configuration. Json string, Key/Value is defined as follows:
+-ClsAgentFileTimeout (timeout attribute). Value ranges from 0 to integer. 0 means no timeout.
+-ClsAgentMaxDepth (maximum directory depth), value ranges from 0 to integer
+-ClsAgentParseFailMerge (merge parsing failure logs). Value ranges from true to false.
+Example:
+`{\"ClsAgentFileTimeout\":0,\"ClsAgentMaxDepth\":10,\"ClsAgentParseFailMerge\":true}`
 
-Default placeholder value in the console: `{"ClsAgentDefault":0}`Note: This field may return null, indicating that no valid values can be obtained.
+Default placeholder value in console: `{\"ClsAgentDefault\":0}`
      */
     public void setAdvancedConfig(String AdvancedConfig) {
         this.AdvancedConfig = AdvancedConfig;
+    }
+
+    /**
+     * Get Log input type (<span style="color:red; font-weight:bold">Note: required for Windows scenario and only supports file and windows_event event type</span>)
+-file type collection
+-windows event collection
+-syslog: System log collection 
+     * @return InputType Log input type (<span style="color:red; font-weight:bold">Note: required for Windows scenario and only supports file and windows_event event type</span>)
+-file type collection
+-windows event collection
+-syslog: System log collection
+     */
+    public String getInputType() {
+        return this.InputType;
+    }
+
+    /**
+     * Set Log input type (<span style="color:red; font-weight:bold">Note: required for Windows scenario and only supports file and windows_event event type</span>)
+-file type collection
+-windows event collection
+-syslog: System log collection
+     * @param InputType Log input type (<span style="color:red; font-weight:bold">Note: required for Windows scenario and only supports file and windows_event event type</span>)
+-file type collection
+-windows event collection
+-syslog: System log collection
+     */
+    public void setInputType(String InputType) {
+        this.InputType = InputType;
     }
 
     public ConfigInfo() {
@@ -386,6 +479,9 @@ Default placeholder value in the console: `{"ClsAgentDefault":0}`Note: This fiel
         if (source.AdvancedConfig != null) {
             this.AdvancedConfig = new String(source.AdvancedConfig);
         }
+        if (source.InputType != null) {
+            this.InputType = new String(source.InputType);
+        }
     }
 
 
@@ -405,6 +501,7 @@ Default placeholder value in the console: `{"ClsAgentDefault":0}`Note: This fiel
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "UserDefineRule", this.UserDefineRule);
         this.setParamSimple(map, prefix + "AdvancedConfig", this.AdvancedConfig);
+        this.setParamSimple(map, prefix + "InputType", this.InputType);
 
     }
 }

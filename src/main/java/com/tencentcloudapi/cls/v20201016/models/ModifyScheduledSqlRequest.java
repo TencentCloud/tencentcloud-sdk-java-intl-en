@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class ModifyScheduledSqlRequest extends AbstractModel {
 
     /**
-    * Task ID
+    * Task ID, which can be obtained through [scheduled SQL analysis task list](https://www.tencentcloud.com/document/product/614/95519?from_cn_redirect=1).
     */
     @SerializedName("TaskId")
     @Expose
     private String TaskId;
 
     /**
-    * Source log topic
+    * Source log topic. Search the [scheduled SQL analysis task list](https://www.tencentcloud.com/document/product/614/95519?from_cn_redirect=1) to obtain it.
     */
     @SerializedName("SrcTopicId")
     @Expose
@@ -59,7 +59,7 @@ public class ModifyScheduledSqlRequest extends AbstractModel {
     private String ScheduledSqlContent;
 
     /**
-    * Scheduling interval (minutes)
+    * Scheduling cycle (minutes), 1-1440 minutes
     */
     @SerializedName("ProcessPeriod")
     @Expose
@@ -73,21 +73,21 @@ public class ModifyScheduledSqlRequest extends AbstractModel {
     private String ProcessTimeWindow;
 
     /**
-    * Execution delay (seconds)
+    * Execution delay (seconds), 0-120 seconds, default 60
     */
     @SerializedName("ProcessDelay")
     @Expose
     private Long ProcessDelay;
 
     /**
-    * Region information of source topic ID 
+    * Regional information of the source topicId. Supported regions are listed in the region list document (https://www.tencentcloud.com/document/api/614/56474?from_cn_redirect=1#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8).
     */
     @SerializedName("SrcTopicRegion")
     @Expose
     private String SrcTopicRegion;
 
     /**
-    * Task Name
+    * Task name, 0-255 characters
     */
     @SerializedName("Name")
     @Expose
@@ -101,32 +101,32 @@ public class ModifyScheduledSqlRequest extends AbstractModel {
     private Long SyntaxRule;
 
     /**
-     * Get Task ID 
-     * @return TaskId Task ID
+     * Get Task ID, which can be obtained through [scheduled SQL analysis task list](https://www.tencentcloud.com/document/product/614/95519?from_cn_redirect=1). 
+     * @return TaskId Task ID, which can be obtained through [scheduled SQL analysis task list](https://www.tencentcloud.com/document/product/614/95519?from_cn_redirect=1).
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set Task ID
-     * @param TaskId Task ID
+     * Set Task ID, which can be obtained through [scheduled SQL analysis task list](https://www.tencentcloud.com/document/product/614/95519?from_cn_redirect=1).
+     * @param TaskId Task ID, which can be obtained through [scheduled SQL analysis task list](https://www.tencentcloud.com/document/product/614/95519?from_cn_redirect=1).
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;
     }
 
     /**
-     * Get Source log topic 
-     * @return SrcTopicId Source log topic
+     * Get Source log topic. Search the [scheduled SQL analysis task list](https://www.tencentcloud.com/document/product/614/95519?from_cn_redirect=1) to obtain it. 
+     * @return SrcTopicId Source log topic. Search the [scheduled SQL analysis task list](https://www.tencentcloud.com/document/product/614/95519?from_cn_redirect=1) to obtain it.
      */
     public String getSrcTopicId() {
         return this.SrcTopicId;
     }
 
     /**
-     * Set Source log topic
-     * @param SrcTopicId Source log topic
+     * Set Source log topic. Search the [scheduled SQL analysis task list](https://www.tencentcloud.com/document/product/614/95519?from_cn_redirect=1) to obtain it.
+     * @param SrcTopicId Source log topic. Search the [scheduled SQL analysis task list](https://www.tencentcloud.com/document/product/614/95519?from_cn_redirect=1) to obtain it.
      */
     public void setSrcTopicId(String SrcTopicId) {
         this.SrcTopicId = SrcTopicId;
@@ -181,16 +181,16 @@ public class ModifyScheduledSqlRequest extends AbstractModel {
     }
 
     /**
-     * Get Scheduling interval (minutes) 
-     * @return ProcessPeriod Scheduling interval (minutes)
+     * Get Scheduling cycle (minutes), 1-1440 minutes 
+     * @return ProcessPeriod Scheduling cycle (minutes), 1-1440 minutes
      */
     public Long getProcessPeriod() {
         return this.ProcessPeriod;
     }
 
     /**
-     * Set Scheduling interval (minutes)
-     * @param ProcessPeriod Scheduling interval (minutes)
+     * Set Scheduling cycle (minutes), 1-1440 minutes
+     * @param ProcessPeriod Scheduling cycle (minutes), 1-1440 minutes
      */
     public void setProcessPeriod(Long ProcessPeriod) {
         this.ProcessPeriod = ProcessPeriod;
@@ -213,48 +213,48 @@ public class ModifyScheduledSqlRequest extends AbstractModel {
     }
 
     /**
-     * Get Execution delay (seconds) 
-     * @return ProcessDelay Execution delay (seconds)
+     * Get Execution delay (seconds), 0-120 seconds, default 60 
+     * @return ProcessDelay Execution delay (seconds), 0-120 seconds, default 60
      */
     public Long getProcessDelay() {
         return this.ProcessDelay;
     }
 
     /**
-     * Set Execution delay (seconds)
-     * @param ProcessDelay Execution delay (seconds)
+     * Set Execution delay (seconds), 0-120 seconds, default 60
+     * @param ProcessDelay Execution delay (seconds), 0-120 seconds, default 60
      */
     public void setProcessDelay(Long ProcessDelay) {
         this.ProcessDelay = ProcessDelay;
     }
 
     /**
-     * Get Region information of source topic ID  
-     * @return SrcTopicRegion Region information of source topic ID 
+     * Get Regional information of the source topicId. Supported regions are listed in the region list document (https://www.tencentcloud.com/document/api/614/56474?from_cn_redirect=1#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8). 
+     * @return SrcTopicRegion Regional information of the source topicId. Supported regions are listed in the region list document (https://www.tencentcloud.com/document/api/614/56474?from_cn_redirect=1#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8).
      */
     public String getSrcTopicRegion() {
         return this.SrcTopicRegion;
     }
 
     /**
-     * Set Region information of source topic ID 
-     * @param SrcTopicRegion Region information of source topic ID 
+     * Set Regional information of the source topicId. Supported regions are listed in the region list document (https://www.tencentcloud.com/document/api/614/56474?from_cn_redirect=1#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8).
+     * @param SrcTopicRegion Regional information of the source topicId. Supported regions are listed in the region list document (https://www.tencentcloud.com/document/api/614/56474?from_cn_redirect=1#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8).
      */
     public void setSrcTopicRegion(String SrcTopicRegion) {
         this.SrcTopicRegion = SrcTopicRegion;
     }
 
     /**
-     * Get Task Name 
-     * @return Name Task Name
+     * Get Task name, 0-255 characters 
+     * @return Name Task name, 0-255 characters
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Task Name
-     * @param Name Task Name
+     * Set Task name, 0-255 characters
+     * @param Name Task name, 0-255 characters
      */
     public void setName(String Name) {
         this.Name = Name;

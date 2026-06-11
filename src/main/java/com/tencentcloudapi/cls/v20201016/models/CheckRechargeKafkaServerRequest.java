@@ -24,14 +24,17 @@ import java.util.HashMap;
 public class CheckRechargeKafkaServerRequest extends AbstractModel {
 
     /**
-    * Kafka type. Valid values: 0 (Tencent Cloud CKafka) and 1 (customer's Kafka).
+    * Import Kafka type. 0: Tencent Cloud CKafka; 1: user-built kafka.
     */
     @SerializedName("KafkaType")
     @Expose
     private Long KafkaType;
 
     /**
-    * Tencent Cloud CKafka Instance IDWhen KafkaType is 0, KafkaInstance is required
+    * Tencent Cloud CKafka instance ID.
+When KafkaType is 0, KafkaInstance is required
+
+- Obtain the instance id by searching the instance list information (https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1).
     */
     @SerializedName("KafkaInstance")
     @Expose
@@ -45,46 +48,65 @@ public class CheckRechargeKafkaServerRequest extends AbstractModel {
     private String ServerAddr;
 
     /**
-    * Whether the service address uses an encrypted connection
+    * Whether ServerAddr is an encrypted connection. The default value is false. It is valid when KafkaType is 1, indicating a user self-built Kafka.
     */
     @SerializedName("IsEncryptionAddr")
     @Expose
     private Boolean IsEncryptionAddr;
 
     /**
-    * Encryption access protocol. Required when IsEncryptionAddr parameter is set to true
+    * Encrypted access protocol. It is required when the parameter KafkaType is 1 and the parameter IsEncryptionAddr is true.
     */
     @SerializedName("Protocol")
     @Expose
     private KafkaProtocolInfo Protocol;
 
     /**
-     * Get Kafka type. Valid values: 0 (Tencent Cloud CKafka) and 1 (customer's Kafka). 
-     * @return KafkaType Kafka type. Valid values: 0 (Tencent Cloud CKafka) and 1 (customer's Kafka).
+    * User kafka extended information
+    */
+    @SerializedName("UserKafkaMeta")
+    @Expose
+    private UserKafkaMeta UserKafkaMeta;
+
+    /**
+     * Get Import Kafka type. 0: Tencent Cloud CKafka; 1: user-built kafka. 
+     * @return KafkaType Import Kafka type. 0: Tencent Cloud CKafka; 1: user-built kafka.
      */
     public Long getKafkaType() {
         return this.KafkaType;
     }
 
     /**
-     * Set Kafka type. Valid values: 0 (Tencent Cloud CKafka) and 1 (customer's Kafka).
-     * @param KafkaType Kafka type. Valid values: 0 (Tencent Cloud CKafka) and 1 (customer's Kafka).
+     * Set Import Kafka type. 0: Tencent Cloud CKafka; 1: user-built kafka.
+     * @param KafkaType Import Kafka type. 0: Tencent Cloud CKafka; 1: user-built kafka.
      */
     public void setKafkaType(Long KafkaType) {
         this.KafkaType = KafkaType;
     }
 
     /**
-     * Get Tencent Cloud CKafka Instance IDWhen KafkaType is 0, KafkaInstance is required 
-     * @return KafkaInstance Tencent Cloud CKafka Instance IDWhen KafkaType is 0, KafkaInstance is required
+     * Get Tencent Cloud CKafka instance ID.
+When KafkaType is 0, KafkaInstance is required
+
+- Obtain the instance id by searching the instance list information (https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1). 
+     * @return KafkaInstance Tencent Cloud CKafka instance ID.
+When KafkaType is 0, KafkaInstance is required
+
+- Obtain the instance id by searching the instance list information (https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1).
      */
     public String getKafkaInstance() {
         return this.KafkaInstance;
     }
 
     /**
-     * Set Tencent Cloud CKafka Instance IDWhen KafkaType is 0, KafkaInstance is required
-     * @param KafkaInstance Tencent Cloud CKafka Instance IDWhen KafkaType is 0, KafkaInstance is required
+     * Set Tencent Cloud CKafka instance ID.
+When KafkaType is 0, KafkaInstance is required
+
+- Obtain the instance id by searching the instance list information (https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1).
+     * @param KafkaInstance Tencent Cloud CKafka instance ID.
+When KafkaType is 0, KafkaInstance is required
+
+- Obtain the instance id by searching the instance list information (https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1).
      */
     public void setKafkaInstance(String KafkaInstance) {
         this.KafkaInstance = KafkaInstance;
@@ -107,35 +129,51 @@ public class CheckRechargeKafkaServerRequest extends AbstractModel {
     }
 
     /**
-     * Get Whether the service address uses an encrypted connection 
-     * @return IsEncryptionAddr Whether the service address uses an encrypted connection
+     * Get Whether ServerAddr is an encrypted connection. The default value is false. It is valid when KafkaType is 1, indicating a user self-built Kafka. 
+     * @return IsEncryptionAddr Whether ServerAddr is an encrypted connection. The default value is false. It is valid when KafkaType is 1, indicating a user self-built Kafka.
      */
     public Boolean getIsEncryptionAddr() {
         return this.IsEncryptionAddr;
     }
 
     /**
-     * Set Whether the service address uses an encrypted connection
-     * @param IsEncryptionAddr Whether the service address uses an encrypted connection
+     * Set Whether ServerAddr is an encrypted connection. The default value is false. It is valid when KafkaType is 1, indicating a user self-built Kafka.
+     * @param IsEncryptionAddr Whether ServerAddr is an encrypted connection. The default value is false. It is valid when KafkaType is 1, indicating a user self-built Kafka.
      */
     public void setIsEncryptionAddr(Boolean IsEncryptionAddr) {
         this.IsEncryptionAddr = IsEncryptionAddr;
     }
 
     /**
-     * Get Encryption access protocol. Required when IsEncryptionAddr parameter is set to true 
-     * @return Protocol Encryption access protocol. Required when IsEncryptionAddr parameter is set to true
+     * Get Encrypted access protocol. It is required when the parameter KafkaType is 1 and the parameter IsEncryptionAddr is true. 
+     * @return Protocol Encrypted access protocol. It is required when the parameter KafkaType is 1 and the parameter IsEncryptionAddr is true.
      */
     public KafkaProtocolInfo getProtocol() {
         return this.Protocol;
     }
 
     /**
-     * Set Encryption access protocol. Required when IsEncryptionAddr parameter is set to true
-     * @param Protocol Encryption access protocol. Required when IsEncryptionAddr parameter is set to true
+     * Set Encrypted access protocol. It is required when the parameter KafkaType is 1 and the parameter IsEncryptionAddr is true.
+     * @param Protocol Encrypted access protocol. It is required when the parameter KafkaType is 1 and the parameter IsEncryptionAddr is true.
      */
     public void setProtocol(KafkaProtocolInfo Protocol) {
         this.Protocol = Protocol;
+    }
+
+    /**
+     * Get User kafka extended information 
+     * @return UserKafkaMeta User kafka extended information
+     */
+    public UserKafkaMeta getUserKafkaMeta() {
+        return this.UserKafkaMeta;
+    }
+
+    /**
+     * Set User kafka extended information
+     * @param UserKafkaMeta User kafka extended information
+     */
+    public void setUserKafkaMeta(UserKafkaMeta UserKafkaMeta) {
+        this.UserKafkaMeta = UserKafkaMeta;
     }
 
     public CheckRechargeKafkaServerRequest() {
@@ -161,6 +199,9 @@ public class CheckRechargeKafkaServerRequest extends AbstractModel {
         if (source.Protocol != null) {
             this.Protocol = new KafkaProtocolInfo(source.Protocol);
         }
+        if (source.UserKafkaMeta != null) {
+            this.UserKafkaMeta = new UserKafkaMeta(source.UserKafkaMeta);
+        }
     }
 
 
@@ -173,6 +214,7 @@ public class CheckRechargeKafkaServerRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ServerAddr", this.ServerAddr);
         this.setParamSimple(map, prefix + "IsEncryptionAddr", this.IsEncryptionAddr);
         this.setParamObj(map, prefix + "Protocol.", this.Protocol);
+        this.setParamObj(map, prefix + "UserKafkaMeta.", this.UserKafkaMeta);
 
     }
 }

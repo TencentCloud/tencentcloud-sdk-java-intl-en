@@ -25,20 +25,32 @@ public class ModifyDataTransformRequest extends AbstractModel {
 
     /**
     * Data processing task ID
+-Get the data processing task Id by [searching data processing task list basic information](https://www.tencentcloud.com/document/product/614/72182?from_cn_redirect=1).
     */
     @SerializedName("TaskId")
     @Expose
     private String TaskId;
 
     /**
-    * Data processing task name
+    * Processing task name
+-Get the name of a data processing task by [searching data processing task list basic information](https://www.tencentcloud.com/document/product/614/72182?from_cn_redirect=1).
+
+Name limit
+-Cannot be an empty string
+-Cannot contain character '|'
+-Up to 255 characters
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * Data processing statement
+    * Processing statement. When FuncType is 2, EtlContent must use [log_auto_output](https://www.tencentcloud.com/document/product/614/70733?from_cn_redirect=1#b3c58797-4825-4807-bef4-68106e25024f). 
+
+Other reference documents:
+
+-[Create a processing task](https://www.tencentcloud.com/document/product/614/63940?from_cn_redirect=1) 
+-[Function overview](https://www.tencentcloud.com/document/product/614/70395?from_cn_redirect=1)
     */
     @SerializedName("EtlContent")
     @Expose
@@ -59,6 +71,13 @@ public class ModifyDataTransformRequest extends AbstractModel {
     private DataTransformResouceInfo [] DstResources;
 
     /**
+    * Whether to discard log data after the limit is exceeded
+    */
+    @SerializedName("BackupGiveUpData")
+    @Expose
+    private Boolean BackupGiveUpData;
+
+    /**
     * Whether to enable delivery service log. 1 for disabled, 2 for enabled
     */
     @SerializedName("HasServicesLog")
@@ -66,8 +85,38 @@ public class ModifyDataTransformRequest extends AbstractModel {
     private Long HasServicesLog;
 
     /**
-     * Get Data processing task ID 
+    * Whether to keep the failure log status. Valid values: 1: no; 2: yes.
+    */
+    @SerializedName("KeepFailureLog")
+    @Expose
+    private Long KeepFailureLog;
+
+    /**
+    * Field name of a failed log.
+    */
+    @SerializedName("FailureLogKey")
+    @Expose
+    private String FailureLogKey;
+
+    /**
+    * External data source information
+    */
+    @SerializedName("DataTransformSqlDataSources")
+    @Expose
+    private DataTransformSqlDataSource [] DataTransformSqlDataSources;
+
+    /**
+    * Set environment variable
+    */
+    @SerializedName("EnvInfos")
+    @Expose
+    private EnvInfo [] EnvInfos;
+
+    /**
+     * Get Data processing task ID
+-Get the data processing task Id by [searching data processing task list basic information](https://www.tencentcloud.com/document/product/614/72182?from_cn_redirect=1). 
      * @return TaskId Data processing task ID
+-Get the data processing task Id by [searching data processing task list basic information](https://www.tencentcloud.com/document/product/614/72182?from_cn_redirect=1).
      */
     public String getTaskId() {
         return this.TaskId;
@@ -75,39 +124,85 @@ public class ModifyDataTransformRequest extends AbstractModel {
 
     /**
      * Set Data processing task ID
+-Get the data processing task Id by [searching data processing task list basic information](https://www.tencentcloud.com/document/product/614/72182?from_cn_redirect=1).
      * @param TaskId Data processing task ID
+-Get the data processing task Id by [searching data processing task list basic information](https://www.tencentcloud.com/document/product/614/72182?from_cn_redirect=1).
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;
     }
 
     /**
-     * Get Data processing task name 
-     * @return Name Data processing task name
+     * Get Processing task name
+-Get the name of a data processing task by [searching data processing task list basic information](https://www.tencentcloud.com/document/product/614/72182?from_cn_redirect=1).
+
+Name limit
+-Cannot be an empty string
+-Cannot contain character '|'
+-Up to 255 characters 
+     * @return Name Processing task name
+-Get the name of a data processing task by [searching data processing task list basic information](https://www.tencentcloud.com/document/product/614/72182?from_cn_redirect=1).
+
+Name limit
+-Cannot be an empty string
+-Cannot contain character '|'
+-Up to 255 characters
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Data processing task name
-     * @param Name Data processing task name
+     * Set Processing task name
+-Get the name of a data processing task by [searching data processing task list basic information](https://www.tencentcloud.com/document/product/614/72182?from_cn_redirect=1).
+
+Name limit
+-Cannot be an empty string
+-Cannot contain character '|'
+-Up to 255 characters
+     * @param Name Processing task name
+-Get the name of a data processing task by [searching data processing task list basic information](https://www.tencentcloud.com/document/product/614/72182?from_cn_redirect=1).
+
+Name limit
+-Cannot be an empty string
+-Cannot contain character '|'
+-Up to 255 characters
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get Data processing statement 
-     * @return EtlContent Data processing statement
+     * Get Processing statement. When FuncType is 2, EtlContent must use [log_auto_output](https://www.tencentcloud.com/document/product/614/70733?from_cn_redirect=1#b3c58797-4825-4807-bef4-68106e25024f). 
+
+Other reference documents:
+
+-[Create a processing task](https://www.tencentcloud.com/document/product/614/63940?from_cn_redirect=1) 
+-[Function overview](https://www.tencentcloud.com/document/product/614/70395?from_cn_redirect=1) 
+     * @return EtlContent Processing statement. When FuncType is 2, EtlContent must use [log_auto_output](https://www.tencentcloud.com/document/product/614/70733?from_cn_redirect=1#b3c58797-4825-4807-bef4-68106e25024f). 
+
+Other reference documents:
+
+-[Create a processing task](https://www.tencentcloud.com/document/product/614/63940?from_cn_redirect=1) 
+-[Function overview](https://www.tencentcloud.com/document/product/614/70395?from_cn_redirect=1)
      */
     public String getEtlContent() {
         return this.EtlContent;
     }
 
     /**
-     * Set Data processing statement
-     * @param EtlContent Data processing statement
+     * Set Processing statement. When FuncType is 2, EtlContent must use [log_auto_output](https://www.tencentcloud.com/document/product/614/70733?from_cn_redirect=1#b3c58797-4825-4807-bef4-68106e25024f). 
+
+Other reference documents:
+
+-[Create a processing task](https://www.tencentcloud.com/document/product/614/63940?from_cn_redirect=1) 
+-[Function overview](https://www.tencentcloud.com/document/product/614/70395?from_cn_redirect=1)
+     * @param EtlContent Processing statement. When FuncType is 2, EtlContent must use [log_auto_output](https://www.tencentcloud.com/document/product/614/70733?from_cn_redirect=1#b3c58797-4825-4807-bef4-68106e25024f). 
+
+Other reference documents:
+
+-[Create a processing task](https://www.tencentcloud.com/document/product/614/63940?from_cn_redirect=1) 
+-[Function overview](https://www.tencentcloud.com/document/product/614/70395?from_cn_redirect=1)
      */
     public void setEtlContent(String EtlContent) {
         this.EtlContent = EtlContent;
@@ -146,6 +241,22 @@ public class ModifyDataTransformRequest extends AbstractModel {
     }
 
     /**
+     * Get Whether to discard log data after the limit is exceeded 
+     * @return BackupGiveUpData Whether to discard log data after the limit is exceeded
+     */
+    public Boolean getBackupGiveUpData() {
+        return this.BackupGiveUpData;
+    }
+
+    /**
+     * Set Whether to discard log data after the limit is exceeded
+     * @param BackupGiveUpData Whether to discard log data after the limit is exceeded
+     */
+    public void setBackupGiveUpData(Boolean BackupGiveUpData) {
+        this.BackupGiveUpData = BackupGiveUpData;
+    }
+
+    /**
      * Get Whether to enable delivery service log. 1 for disabled, 2 for enabled 
      * @return HasServicesLog Whether to enable delivery service log. 1 for disabled, 2 for enabled
      */
@@ -159,6 +270,70 @@ public class ModifyDataTransformRequest extends AbstractModel {
      */
     public void setHasServicesLog(Long HasServicesLog) {
         this.HasServicesLog = HasServicesLog;
+    }
+
+    /**
+     * Get Whether to keep the failure log status. Valid values: 1: no; 2: yes. 
+     * @return KeepFailureLog Whether to keep the failure log status. Valid values: 1: no; 2: yes.
+     */
+    public Long getKeepFailureLog() {
+        return this.KeepFailureLog;
+    }
+
+    /**
+     * Set Whether to keep the failure log status. Valid values: 1: no; 2: yes.
+     * @param KeepFailureLog Whether to keep the failure log status. Valid values: 1: no; 2: yes.
+     */
+    public void setKeepFailureLog(Long KeepFailureLog) {
+        this.KeepFailureLog = KeepFailureLog;
+    }
+
+    /**
+     * Get Field name of a failed log. 
+     * @return FailureLogKey Field name of a failed log.
+     */
+    public String getFailureLogKey() {
+        return this.FailureLogKey;
+    }
+
+    /**
+     * Set Field name of a failed log.
+     * @param FailureLogKey Field name of a failed log.
+     */
+    public void setFailureLogKey(String FailureLogKey) {
+        this.FailureLogKey = FailureLogKey;
+    }
+
+    /**
+     * Get External data source information 
+     * @return DataTransformSqlDataSources External data source information
+     */
+    public DataTransformSqlDataSource [] getDataTransformSqlDataSources() {
+        return this.DataTransformSqlDataSources;
+    }
+
+    /**
+     * Set External data source information
+     * @param DataTransformSqlDataSources External data source information
+     */
+    public void setDataTransformSqlDataSources(DataTransformSqlDataSource [] DataTransformSqlDataSources) {
+        this.DataTransformSqlDataSources = DataTransformSqlDataSources;
+    }
+
+    /**
+     * Get Set environment variable 
+     * @return EnvInfos Set environment variable
+     */
+    public EnvInfo [] getEnvInfos() {
+        return this.EnvInfos;
+    }
+
+    /**
+     * Set Set environment variable
+     * @param EnvInfos Set environment variable
+     */
+    public void setEnvInfos(EnvInfo [] EnvInfos) {
+        this.EnvInfos = EnvInfos;
     }
 
     public ModifyDataTransformRequest() {
@@ -187,8 +362,29 @@ public class ModifyDataTransformRequest extends AbstractModel {
                 this.DstResources[i] = new DataTransformResouceInfo(source.DstResources[i]);
             }
         }
+        if (source.BackupGiveUpData != null) {
+            this.BackupGiveUpData = new Boolean(source.BackupGiveUpData);
+        }
         if (source.HasServicesLog != null) {
             this.HasServicesLog = new Long(source.HasServicesLog);
+        }
+        if (source.KeepFailureLog != null) {
+            this.KeepFailureLog = new Long(source.KeepFailureLog);
+        }
+        if (source.FailureLogKey != null) {
+            this.FailureLogKey = new String(source.FailureLogKey);
+        }
+        if (source.DataTransformSqlDataSources != null) {
+            this.DataTransformSqlDataSources = new DataTransformSqlDataSource[source.DataTransformSqlDataSources.length];
+            for (int i = 0; i < source.DataTransformSqlDataSources.length; i++) {
+                this.DataTransformSqlDataSources[i] = new DataTransformSqlDataSource(source.DataTransformSqlDataSources[i]);
+            }
+        }
+        if (source.EnvInfos != null) {
+            this.EnvInfos = new EnvInfo[source.EnvInfos.length];
+            for (int i = 0; i < source.EnvInfos.length; i++) {
+                this.EnvInfos[i] = new EnvInfo(source.EnvInfos[i]);
+            }
         }
     }
 
@@ -202,7 +398,12 @@ public class ModifyDataTransformRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "EtlContent", this.EtlContent);
         this.setParamSimple(map, prefix + "EnableFlag", this.EnableFlag);
         this.setParamArrayObj(map, prefix + "DstResources.", this.DstResources);
+        this.setParamSimple(map, prefix + "BackupGiveUpData", this.BackupGiveUpData);
         this.setParamSimple(map, prefix + "HasServicesLog", this.HasServicesLog);
+        this.setParamSimple(map, prefix + "KeepFailureLog", this.KeepFailureLog);
+        this.setParamSimple(map, prefix + "FailureLogKey", this.FailureLogKey);
+        this.setParamArrayObj(map, prefix + "DataTransformSqlDataSources.", this.DataTransformSqlDataSources);
+        this.setParamArrayObj(map, prefix + "EnvInfos.", this.EnvInfos);
 
     }
 }

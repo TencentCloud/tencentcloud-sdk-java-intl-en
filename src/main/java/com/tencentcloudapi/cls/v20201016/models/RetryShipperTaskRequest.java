@@ -24,46 +24,66 @@ import java.util.HashMap;
 public class RetryShipperTaskRequest extends AbstractModel {
 
     /**
-    * Shipping rule ID
+    * Shipping Rule Id.
+
+-Obtain the ShipperId by [obtaining the shipping task list](https://www.tencentcloud.com/document/product/614/58745?from_cn_redirect=1).
     */
     @SerializedName("ShipperId")
     @Expose
     private String ShipperId;
 
     /**
-    * Shipping task ID
+    * Delivery task Id.
+
+-Obtain the TaskId by searching the shipping task list (https://www.tencentcloud.com/document/product/614/58745?from_cn_redirect=1).
     */
     @SerializedName("TaskId")
     @Expose
     private String TaskId;
 
     /**
-     * Get Shipping rule ID 
-     * @return ShipperId Shipping rule ID
+     * Get Shipping Rule Id.
+
+-Obtain the ShipperId by [obtaining the shipping task list](https://www.tencentcloud.com/document/product/614/58745?from_cn_redirect=1). 
+     * @return ShipperId Shipping Rule Id.
+
+-Obtain the ShipperId by [obtaining the shipping task list](https://www.tencentcloud.com/document/product/614/58745?from_cn_redirect=1).
      */
     public String getShipperId() {
         return this.ShipperId;
     }
 
     /**
-     * Set Shipping rule ID
-     * @param ShipperId Shipping rule ID
+     * Set Shipping Rule Id.
+
+-Obtain the ShipperId by [obtaining the shipping task list](https://www.tencentcloud.com/document/product/614/58745?from_cn_redirect=1).
+     * @param ShipperId Shipping Rule Id.
+
+-Obtain the ShipperId by [obtaining the shipping task list](https://www.tencentcloud.com/document/product/614/58745?from_cn_redirect=1).
      */
     public void setShipperId(String ShipperId) {
         this.ShipperId = ShipperId;
     }
 
     /**
-     * Get Shipping task ID 
-     * @return TaskId Shipping task ID
+     * Get Delivery task Id.
+
+-Obtain the TaskId by searching the shipping task list (https://www.tencentcloud.com/document/product/614/58745?from_cn_redirect=1). 
+     * @return TaskId Delivery task Id.
+
+-Obtain the TaskId by searching the shipping task list (https://www.tencentcloud.com/document/product/614/58745?from_cn_redirect=1).
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set Shipping task ID
-     * @param TaskId Shipping task ID
+     * Set Delivery task Id.
+
+-Obtain the TaskId by searching the shipping task list (https://www.tencentcloud.com/document/product/614/58745?from_cn_redirect=1).
+     * @param TaskId Delivery task Id.
+
+-Obtain the TaskId by searching the shipping task list (https://www.tencentcloud.com/document/product/614/58745?from_cn_redirect=1).
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;

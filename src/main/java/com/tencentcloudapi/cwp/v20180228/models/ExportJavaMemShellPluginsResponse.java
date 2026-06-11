@@ -25,7 +25,6 @@ public class ExportJavaMemShellPluginsResponse extends AbstractModel {
 
     /**
     * Task ID, required for obtaining the DownloadURL at API Asynchronous Export Task ExportTasks
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("TaskId")
     @Expose
@@ -39,10 +38,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Task ID, required for obtaining the DownloadURL at API Asynchronous Export Task ExportTasks
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Task ID, required for obtaining the DownloadURL at API Asynchronous Export Task ExportTasks 
      * @return TaskId Task ID, required for obtaining the DownloadURL at API Asynchronous Export Task ExportTasks
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getTaskId() {
         return this.TaskId;
@@ -50,9 +47,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Task ID, required for obtaining the DownloadURL at API Asynchronous Export Task ExportTasks
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param TaskId Task ID, required for obtaining the DownloadURL at API Asynchronous Export Task ExportTasks
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;

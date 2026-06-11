@@ -144,7 +144,6 @@ public class RiskProcessEvent extends AbstractModel {
 
     /**
     * Additional information
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("MachineExtraInfo")
     @Expose
@@ -156,6 +155,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
     @SerializedName("Uuid")
     @Expose
     private String Uuid;
+
+    /**
+    * First time detection method 0 scan;1 real-time monitoring
+    */
+    @SerializedName("FirstDetectionMethod")
+    @Expose
+    private Long FirstDetectionMethod;
 
     /**
      * Get Event ID 
@@ -430,10 +436,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Additional information
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Additional information 
      * @return MachineExtraInfo Additional information
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public MachineExtraInfo getMachineExtraInfo() {
         return this.MachineExtraInfo;
@@ -441,9 +445,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Additional information
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param MachineExtraInfo Additional information
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setMachineExtraInfo(MachineExtraInfo MachineExtraInfo) {
         this.MachineExtraInfo = MachineExtraInfo;
@@ -463,6 +465,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
      */
     public void setUuid(String Uuid) {
         this.Uuid = Uuid;
+    }
+
+    /**
+     * Get First time detection method 0 scan;1 real-time monitoring 
+     * @return FirstDetectionMethod First time detection method 0 scan;1 real-time monitoring
+     */
+    public Long getFirstDetectionMethod() {
+        return this.FirstDetectionMethod;
+    }
+
+    /**
+     * Set First time detection method 0 scan;1 real-time monitoring
+     * @param FirstDetectionMethod First time detection method 0 scan;1 real-time monitoring
+     */
+    public void setFirstDetectionMethod(Long FirstDetectionMethod) {
+        this.FirstDetectionMethod = FirstDetectionMethod;
     }
 
     public RiskProcessEvent() {
@@ -536,6 +554,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.Uuid != null) {
             this.Uuid = new String(source.Uuid);
         }
+        if (source.FirstDetectionMethod != null) {
+            this.FirstDetectionMethod = new Long(source.FirstDetectionMethod);
+        }
     }
 
 
@@ -562,6 +583,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "OnlineStatus", this.OnlineStatus);
         this.setParamObj(map, prefix + "MachineExtraInfo.", this.MachineExtraInfo);
         this.setParamSimple(map, prefix + "Uuid", this.Uuid);
+        this.setParamSimple(map, prefix + "FirstDetectionMethod", this.FirstDetectionMethod);
 
     }
 }

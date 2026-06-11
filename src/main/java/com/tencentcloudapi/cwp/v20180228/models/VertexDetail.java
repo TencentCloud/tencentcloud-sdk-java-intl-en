@@ -24,532 +24,437 @@ import java.util.HashMap;
 public class VertexDetail extends AbstractModel {
 
     /**
-    * Node type. process - 1; network - 2; file - 3; SSH - 4
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Node type. 1: process, 2: network, 3: file, 4: SSH.
     */
     @SerializedName("Type")
     @Expose
     private Long Type;
 
     /**
-    * Time used for each node type, which is in the format of 2022-11-29 00:00:00.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Time used by each node type, in the format of 2022-11-29 00:00:00.
     */
     @SerializedName("Time")
     @Expose
     private String Time;
 
     /**
-    * Alarm information
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Alarm information.
     */
     @SerializedName("AlarmInfo")
     @Expose
     private AlarmInfo [] AlarmInfo;
 
     /**
-    * Process name, which is effective when the node type is process.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Process name. This parameter takes effect when this node is a process.
     */
     @SerializedName("ProcName")
     @Expose
     private String ProcName;
 
     /**
-    * Command line, which is effective when the node type is process.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Command line. This parameter takes effect when this node is a process.
     */
     @SerializedName("CmdLine")
     @Expose
     private String CmdLine;
 
     /**
-    * Process ID, which is effective when the node type is process.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Process ID. This parameter takes effect when this node is a process.
     */
     @SerializedName("Pid")
     @Expose
     private String Pid;
 
     /**
-    * File MD5, which is effective when the node type is file.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * File MD5. This parameter takes effect when this node is a file.
     */
     @SerializedName("FileMd5")
     @Expose
     private String FileMd5;
 
     /**
-    * Content written to the file, which is effective when the node type is file.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * File write content. This parameter takes effect when this node is a file.
     */
     @SerializedName("FileContent")
     @Expose
     private String FileContent;
 
     /**
-    * File path, which is effective when the node type is file.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * File path. This parameter takes effect when this node is a file.
     */
     @SerializedName("FilePath")
     @Expose
     private String FilePath;
 
     /**
-    * File creation time, which is effective when the node type is file.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * File creation time. This parameter takes effect when this node is a file.
     */
     @SerializedName("FileCreateTime")
     @Expose
     private String FileCreateTime;
 
     /**
-    * Request destination address, which is effective when the node type is network.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Request destination address. This parameter takes effect when this node is a network.
     */
     @SerializedName("Address")
     @Expose
     private String Address;
 
     /**
-    * Target port, which is effective when the node type is network.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Target port. This parameter takes effect when this node is a network.
     */
     @SerializedName("DstPort")
     @Expose
     private Long DstPort;
 
     /**
-    * Log-in source IP, which is effective when the node type is SSH.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Login source IP address. This parameter takes effect when this node is ssh.
     */
     @SerializedName("SrcIP")
     @Expose
     private String SrcIP;
 
     /**
-    * Log-in username and user group, which is effective when the node type is SSH.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Login username and user group. This parameter takes effect when this node is ssh.
     */
     @SerializedName("User")
     @Expose
     private String User;
 
     /**
-    * Vulnerability name, which is effective when the node type is vulnerability.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Vulnerability name. This parameter takes effect when this node is a vulnerability.
     */
     @SerializedName("VulName")
     @Expose
     private String VulName;
 
     /**
-    * Vulnerability exploitation time, which is effective when the node type is vulnerability.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Vulnerability exploitation time. This parameter takes effect when this node is a vulnerability.
     */
     @SerializedName("VulTime")
     @Expose
     private String VulTime;
 
     /**
-    * HTTP request content, which is effective when the node type is vulnerability.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * HTTP request content. This parameter takes effect when this node is a vulnerability.
     */
     @SerializedName("HttpContent")
     @Expose
     private String HttpContent;
 
     /**
-    * Vulnerability exploiter source IP, which is effective when the node type is vulnerability.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Source IP address of the vulnerability exploiter. This parameter takes effect when this node is a vulnerability.
     */
     @SerializedName("VulSrcIP")
     @Expose
     private String VulSrcIP;
 
     /**
-    * Node ID
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Node ID.
     */
     @SerializedName("VertexId")
     @Expose
     private String VertexId;
 
     /**
-     * Get Node type. process - 1; network - 2; file - 3; SSH - 4
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Type Node type. process - 1; network - 2; file - 3; SSH - 4
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Node type. 1: process, 2: network, 3: file, 4: SSH. 
+     * @return Type Node type. 1: process, 2: network, 3: file, 4: SSH.
      */
     public Long getType() {
         return this.Type;
     }
 
     /**
-     * Set Node type. process - 1; network - 2; file - 3; SSH - 4
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Type Node type. process - 1; network - 2; file - 3; SSH - 4
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Node type. 1: process, 2: network, 3: file, 4: SSH.
+     * @param Type Node type. 1: process, 2: network, 3: file, 4: SSH.
      */
     public void setType(Long Type) {
         this.Type = Type;
     }
 
     /**
-     * Get Time used for each node type, which is in the format of 2022-11-29 00:00:00.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Time Time used for each node type, which is in the format of 2022-11-29 00:00:00.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Time used by each node type, in the format of 2022-11-29 00:00:00. 
+     * @return Time Time used by each node type, in the format of 2022-11-29 00:00:00.
      */
     public String getTime() {
         return this.Time;
     }
 
     /**
-     * Set Time used for each node type, which is in the format of 2022-11-29 00:00:00.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Time Time used for each node type, which is in the format of 2022-11-29 00:00:00.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Time used by each node type, in the format of 2022-11-29 00:00:00.
+     * @param Time Time used by each node type, in the format of 2022-11-29 00:00:00.
      */
     public void setTime(String Time) {
         this.Time = Time;
     }
 
     /**
-     * Get Alarm information
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return AlarmInfo Alarm information
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Alarm information. 
+     * @return AlarmInfo Alarm information.
      */
     public AlarmInfo [] getAlarmInfo() {
         return this.AlarmInfo;
     }
 
     /**
-     * Set Alarm information
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param AlarmInfo Alarm information
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Alarm information.
+     * @param AlarmInfo Alarm information.
      */
     public void setAlarmInfo(AlarmInfo [] AlarmInfo) {
         this.AlarmInfo = AlarmInfo;
     }
 
     /**
-     * Get Process name, which is effective when the node type is process.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ProcName Process name, which is effective when the node type is process.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Process name. This parameter takes effect when this node is a process. 
+     * @return ProcName Process name. This parameter takes effect when this node is a process.
      */
     public String getProcName() {
         return this.ProcName;
     }
 
     /**
-     * Set Process name, which is effective when the node type is process.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ProcName Process name, which is effective when the node type is process.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Process name. This parameter takes effect when this node is a process.
+     * @param ProcName Process name. This parameter takes effect when this node is a process.
      */
     public void setProcName(String ProcName) {
         this.ProcName = ProcName;
     }
 
     /**
-     * Get Command line, which is effective when the node type is process.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return CmdLine Command line, which is effective when the node type is process.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Command line. This parameter takes effect when this node is a process. 
+     * @return CmdLine Command line. This parameter takes effect when this node is a process.
      */
     public String getCmdLine() {
         return this.CmdLine;
     }
 
     /**
-     * Set Command line, which is effective when the node type is process.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param CmdLine Command line, which is effective when the node type is process.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Command line. This parameter takes effect when this node is a process.
+     * @param CmdLine Command line. This parameter takes effect when this node is a process.
      */
     public void setCmdLine(String CmdLine) {
         this.CmdLine = CmdLine;
     }
 
     /**
-     * Get Process ID, which is effective when the node type is process.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Pid Process ID, which is effective when the node type is process.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Process ID. This parameter takes effect when this node is a process. 
+     * @return Pid Process ID. This parameter takes effect when this node is a process.
      */
     public String getPid() {
         return this.Pid;
     }
 
     /**
-     * Set Process ID, which is effective when the node type is process.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Pid Process ID, which is effective when the node type is process.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Process ID. This parameter takes effect when this node is a process.
+     * @param Pid Process ID. This parameter takes effect when this node is a process.
      */
     public void setPid(String Pid) {
         this.Pid = Pid;
     }
 
     /**
-     * Get File MD5, which is effective when the node type is file.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return FileMd5 File MD5, which is effective when the node type is file.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get File MD5. This parameter takes effect when this node is a file. 
+     * @return FileMd5 File MD5. This parameter takes effect when this node is a file.
      */
     public String getFileMd5() {
         return this.FileMd5;
     }
 
     /**
-     * Set File MD5, which is effective when the node type is file.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param FileMd5 File MD5, which is effective when the node type is file.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set File MD5. This parameter takes effect when this node is a file.
+     * @param FileMd5 File MD5. This parameter takes effect when this node is a file.
      */
     public void setFileMd5(String FileMd5) {
         this.FileMd5 = FileMd5;
     }
 
     /**
-     * Get Content written to the file, which is effective when the node type is file.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return FileContent Content written to the file, which is effective when the node type is file.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get File write content. This parameter takes effect when this node is a file. 
+     * @return FileContent File write content. This parameter takes effect when this node is a file.
      */
     public String getFileContent() {
         return this.FileContent;
     }
 
     /**
-     * Set Content written to the file, which is effective when the node type is file.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param FileContent Content written to the file, which is effective when the node type is file.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set File write content. This parameter takes effect when this node is a file.
+     * @param FileContent File write content. This parameter takes effect when this node is a file.
      */
     public void setFileContent(String FileContent) {
         this.FileContent = FileContent;
     }
 
     /**
-     * Get File path, which is effective when the node type is file.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return FilePath File path, which is effective when the node type is file.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get File path. This parameter takes effect when this node is a file. 
+     * @return FilePath File path. This parameter takes effect when this node is a file.
      */
     public String getFilePath() {
         return this.FilePath;
     }
 
     /**
-     * Set File path, which is effective when the node type is file.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param FilePath File path, which is effective when the node type is file.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set File path. This parameter takes effect when this node is a file.
+     * @param FilePath File path. This parameter takes effect when this node is a file.
      */
     public void setFilePath(String FilePath) {
         this.FilePath = FilePath;
     }
 
     /**
-     * Get File creation time, which is effective when the node type is file.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return FileCreateTime File creation time, which is effective when the node type is file.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get File creation time. This parameter takes effect when this node is a file. 
+     * @return FileCreateTime File creation time. This parameter takes effect when this node is a file.
      */
     public String getFileCreateTime() {
         return this.FileCreateTime;
     }
 
     /**
-     * Set File creation time, which is effective when the node type is file.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param FileCreateTime File creation time, which is effective when the node type is file.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set File creation time. This parameter takes effect when this node is a file.
+     * @param FileCreateTime File creation time. This parameter takes effect when this node is a file.
      */
     public void setFileCreateTime(String FileCreateTime) {
         this.FileCreateTime = FileCreateTime;
     }
 
     /**
-     * Get Request destination address, which is effective when the node type is network.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Address Request destination address, which is effective when the node type is network.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Request destination address. This parameter takes effect when this node is a network. 
+     * @return Address Request destination address. This parameter takes effect when this node is a network.
      */
     public String getAddress() {
         return this.Address;
     }
 
     /**
-     * Set Request destination address, which is effective when the node type is network.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Address Request destination address, which is effective when the node type is network.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Request destination address. This parameter takes effect when this node is a network.
+     * @param Address Request destination address. This parameter takes effect when this node is a network.
      */
     public void setAddress(String Address) {
         this.Address = Address;
     }
 
     /**
-     * Get Target port, which is effective when the node type is network.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return DstPort Target port, which is effective when the node type is network.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Target port. This parameter takes effect when this node is a network. 
+     * @return DstPort Target port. This parameter takes effect when this node is a network.
      */
     public Long getDstPort() {
         return this.DstPort;
     }
 
     /**
-     * Set Target port, which is effective when the node type is network.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param DstPort Target port, which is effective when the node type is network.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Target port. This parameter takes effect when this node is a network.
+     * @param DstPort Target port. This parameter takes effect when this node is a network.
      */
     public void setDstPort(Long DstPort) {
         this.DstPort = DstPort;
     }
 
     /**
-     * Get Log-in source IP, which is effective when the node type is SSH.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return SrcIP Log-in source IP, which is effective when the node type is SSH.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Login source IP address. This parameter takes effect when this node is ssh. 
+     * @return SrcIP Login source IP address. This parameter takes effect when this node is ssh.
      */
     public String getSrcIP() {
         return this.SrcIP;
     }
 
     /**
-     * Set Log-in source IP, which is effective when the node type is SSH.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param SrcIP Log-in source IP, which is effective when the node type is SSH.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Login source IP address. This parameter takes effect when this node is ssh.
+     * @param SrcIP Login source IP address. This parameter takes effect when this node is ssh.
      */
     public void setSrcIP(String SrcIP) {
         this.SrcIP = SrcIP;
     }
 
     /**
-     * Get Log-in username and user group, which is effective when the node type is SSH.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return User Log-in username and user group, which is effective when the node type is SSH.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Login username and user group. This parameter takes effect when this node is ssh. 
+     * @return User Login username and user group. This parameter takes effect when this node is ssh.
      */
     public String getUser() {
         return this.User;
     }
 
     /**
-     * Set Log-in username and user group, which is effective when the node type is SSH.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param User Log-in username and user group, which is effective when the node type is SSH.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Login username and user group. This parameter takes effect when this node is ssh.
+     * @param User Login username and user group. This parameter takes effect when this node is ssh.
      */
     public void setUser(String User) {
         this.User = User;
     }
 
     /**
-     * Get Vulnerability name, which is effective when the node type is vulnerability.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return VulName Vulnerability name, which is effective when the node type is vulnerability.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Vulnerability name. This parameter takes effect when this node is a vulnerability. 
+     * @return VulName Vulnerability name. This parameter takes effect when this node is a vulnerability.
      */
     public String getVulName() {
         return this.VulName;
     }
 
     /**
-     * Set Vulnerability name, which is effective when the node type is vulnerability.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param VulName Vulnerability name, which is effective when the node type is vulnerability.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Vulnerability name. This parameter takes effect when this node is a vulnerability.
+     * @param VulName Vulnerability name. This parameter takes effect when this node is a vulnerability.
      */
     public void setVulName(String VulName) {
         this.VulName = VulName;
     }
 
     /**
-     * Get Vulnerability exploitation time, which is effective when the node type is vulnerability.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return VulTime Vulnerability exploitation time, which is effective when the node type is vulnerability.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Vulnerability exploitation time. This parameter takes effect when this node is a vulnerability. 
+     * @return VulTime Vulnerability exploitation time. This parameter takes effect when this node is a vulnerability.
      */
     public String getVulTime() {
         return this.VulTime;
     }
 
     /**
-     * Set Vulnerability exploitation time, which is effective when the node type is vulnerability.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param VulTime Vulnerability exploitation time, which is effective when the node type is vulnerability.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Vulnerability exploitation time. This parameter takes effect when this node is a vulnerability.
+     * @param VulTime Vulnerability exploitation time. This parameter takes effect when this node is a vulnerability.
      */
     public void setVulTime(String VulTime) {
         this.VulTime = VulTime;
     }
 
     /**
-     * Get HTTP request content, which is effective when the node type is vulnerability.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return HttpContent HTTP request content, which is effective when the node type is vulnerability.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get HTTP request content. This parameter takes effect when this node is a vulnerability. 
+     * @return HttpContent HTTP request content. This parameter takes effect when this node is a vulnerability.
      */
     public String getHttpContent() {
         return this.HttpContent;
     }
 
     /**
-     * Set HTTP request content, which is effective when the node type is vulnerability.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param HttpContent HTTP request content, which is effective when the node type is vulnerability.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set HTTP request content. This parameter takes effect when this node is a vulnerability.
+     * @param HttpContent HTTP request content. This parameter takes effect when this node is a vulnerability.
      */
     public void setHttpContent(String HttpContent) {
         this.HttpContent = HttpContent;
     }
 
     /**
-     * Get Vulnerability exploiter source IP, which is effective when the node type is vulnerability.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return VulSrcIP Vulnerability exploiter source IP, which is effective when the node type is vulnerability.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Source IP address of the vulnerability exploiter. This parameter takes effect when this node is a vulnerability. 
+     * @return VulSrcIP Source IP address of the vulnerability exploiter. This parameter takes effect when this node is a vulnerability.
      */
     public String getVulSrcIP() {
         return this.VulSrcIP;
     }
 
     /**
-     * Set Vulnerability exploiter source IP, which is effective when the node type is vulnerability.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param VulSrcIP Vulnerability exploiter source IP, which is effective when the node type is vulnerability.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Source IP address of the vulnerability exploiter. This parameter takes effect when this node is a vulnerability.
+     * @param VulSrcIP Source IP address of the vulnerability exploiter. This parameter takes effect when this node is a vulnerability.
      */
     public void setVulSrcIP(String VulSrcIP) {
         this.VulSrcIP = VulSrcIP;
     }
 
     /**
-     * Get Node ID
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return VertexId Node ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Node ID. 
+     * @return VertexId Node ID.
      */
     public String getVertexId() {
         return this.VertexId;
     }
 
     /**
-     * Set Node ID
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param VertexId Node ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Node ID.
+     * @param VertexId Node ID.
      */
     public void setVertexId(String VertexId) {
         this.VertexId = VertexId;

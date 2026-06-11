@@ -39,7 +39,6 @@ public class FileTamperRuleCount extends AbstractModel {
 
     /**
     * Name of the Association Rule (Show Only One of Them)
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Name")
     @Expose
@@ -78,10 +77,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Name of the Association Rule (Show Only One of Them)
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Name of the Association Rule (Show Only One of Them) 
      * @return Name Name of the Association Rule (Show Only One of Them)
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getName() {
         return this.Name;
@@ -89,9 +86,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Name of the Association Rule (Show Only One of Them)
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Name Name of the Association Rule (Show Only One of Them)
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setName(String Name) {
         this.Name = Name;

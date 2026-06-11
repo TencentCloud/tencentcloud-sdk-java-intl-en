@@ -31,14 +31,7 @@ public class ModifyVirusFileStatusRequest extends AbstractModel {
     private String [] EventIdSet;
 
     /**
-    * Event status   
-    `EVENT_DEALED`: Processed.
-    `EVENT_INGNORE`: Ignored.
-    `EVENT_DEL`: Deleted.
-    `EVENT_ADD_WHITE`: Allowed.
-    `EVENT_PENDING`: Pending.
-	`EVENT_ISOLATE_CONTAINER`: Container isolated.
-	`EVENT_RESOTRE_CONTAINER`: Container recovered.
+    * Identifies the event status.       EVENT_DEALED: event handled; EVENT_IGNORE: event ignored; EVENT_DEL: event deleted; EVENT_ADD_WHITE: event allowlisted; EVENT_PENDING: event pending handling;	EVENT_ISOLATE_CONTAINER: container isolated;	EVENT_RESOTRE_CONTAINER: container restored.
     */
     @SerializedName("Status")
     @Expose
@@ -75,44 +68,16 @@ public class ModifyVirusFileStatusRequest extends AbstractModel {
     }
 
     /**
-     * Get Event status   
-    `EVENT_DEALED`: Processed.
-    `EVENT_INGNORE`: Ignored.
-    `EVENT_DEL`: Deleted.
-    `EVENT_ADD_WHITE`: Allowed.
-    `EVENT_PENDING`: Pending.
-	`EVENT_ISOLATE_CONTAINER`: Container isolated.
-	`EVENT_RESOTRE_CONTAINER`: Container recovered. 
-     * @return Status Event status   
-    `EVENT_DEALED`: Processed.
-    `EVENT_INGNORE`: Ignored.
-    `EVENT_DEL`: Deleted.
-    `EVENT_ADD_WHITE`: Allowed.
-    `EVENT_PENDING`: Pending.
-	`EVENT_ISOLATE_CONTAINER`: Container isolated.
-	`EVENT_RESOTRE_CONTAINER`: Container recovered.
+     * Get Identifies the event status.       EVENT_DEALED: event handled; EVENT_IGNORE: event ignored; EVENT_DEL: event deleted; EVENT_ADD_WHITE: event allowlisted; EVENT_PENDING: event pending handling;	EVENT_ISOLATE_CONTAINER: container isolated;	EVENT_RESOTRE_CONTAINER: container restored. 
+     * @return Status Identifies the event status.       EVENT_DEALED: event handled; EVENT_IGNORE: event ignored; EVENT_DEL: event deleted; EVENT_ADD_WHITE: event allowlisted; EVENT_PENDING: event pending handling;	EVENT_ISOLATE_CONTAINER: container isolated;	EVENT_RESOTRE_CONTAINER: container restored.
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Event status   
-    `EVENT_DEALED`: Processed.
-    `EVENT_INGNORE`: Ignored.
-    `EVENT_DEL`: Deleted.
-    `EVENT_ADD_WHITE`: Allowed.
-    `EVENT_PENDING`: Pending.
-	`EVENT_ISOLATE_CONTAINER`: Container isolated.
-	`EVENT_RESOTRE_CONTAINER`: Container recovered.
-     * @param Status Event status   
-    `EVENT_DEALED`: Processed.
-    `EVENT_INGNORE`: Ignored.
-    `EVENT_DEL`: Deleted.
-    `EVENT_ADD_WHITE`: Allowed.
-    `EVENT_PENDING`: Pending.
-	`EVENT_ISOLATE_CONTAINER`: Container isolated.
-	`EVENT_RESOTRE_CONTAINER`: Container recovered.
+     * Set Identifies the event status.       EVENT_DEALED: event handled; EVENT_IGNORE: event ignored; EVENT_DEL: event deleted; EVENT_ADD_WHITE: event allowlisted; EVENT_PENDING: event pending handling;	EVENT_ISOLATE_CONTAINER: container isolated;	EVENT_RESOTRE_CONTAINER: container restored.
+     * @param Status Identifies the event status.       EVENT_DEALED: event handled; EVENT_IGNORE: event ignored; EVENT_DEL: event deleted; EVENT_ADD_WHITE: event allowlisted; EVENT_PENDING: event pending handling;	EVENT_ISOLATE_CONTAINER: container isolated;	EVENT_RESOTRE_CONTAINER: container restored.
      */
     public void setStatus(String Status) {
         this.Status = Status;
