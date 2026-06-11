@@ -98,6 +98,30 @@ Supported languages for speech-to-text:
     private Long VadLevel;
 
     /**
+    * Whether to filter out dirty words (currently only support basic language engine and standard language engine). Range: [0, 2]. Default value: 0.
+0: Not filtering; 1: Filter out dirty words; 2: Replace dirty words with "*".
+    */
+    @SerializedName("FilterDirty")
+    @Expose
+    private Long FilterDirty;
+
+    /**
+    * Whether to filter filler words (currently only support basic language engine and standard language engine). Range:  [0, 2]. Default value 0.
+0:No filtering; 1: Partial filtering; 2: Strict filtering.
+    */
+    @SerializedName("FilterModal")
+    @Expose
+    private Long FilterModal;
+
+    /**
+    * Whether to filter periods at the end of sentences (currently only support basic language engine and standard language engine), range [0, 1], default value 0.
+0: Do not filter out periods at the end of sentences; 1: Filter out periods at the end of sentences.
+    */
+    @SerializedName("FilterPunc")
+    @Expose
+    private Long FilterPunc;
+
+    /**
      * Get The model type used for the transcription service. Example: <code>"zh"</code>.
 
 Supported languages for speech-to-text:
@@ -333,6 +357,66 @@ Supported languages for speech-to-text:
         this.VadLevel = VadLevel;
     }
 
+    /**
+     * Get Whether to filter out dirty words (currently only support basic language engine and standard language engine). Range: [0, 2]. Default value: 0.
+0: Not filtering; 1: Filter out dirty words; 2: Replace dirty words with "*". 
+     * @return FilterDirty Whether to filter out dirty words (currently only support basic language engine and standard language engine). Range: [0, 2]. Default value: 0.
+0: Not filtering; 1: Filter out dirty words; 2: Replace dirty words with "*".
+     */
+    public Long getFilterDirty() {
+        return this.FilterDirty;
+    }
+
+    /**
+     * Set Whether to filter out dirty words (currently only support basic language engine and standard language engine). Range: [0, 2]. Default value: 0.
+0: Not filtering; 1: Filter out dirty words; 2: Replace dirty words with "*".
+     * @param FilterDirty Whether to filter out dirty words (currently only support basic language engine and standard language engine). Range: [0, 2]. Default value: 0.
+0: Not filtering; 1: Filter out dirty words; 2: Replace dirty words with "*".
+     */
+    public void setFilterDirty(Long FilterDirty) {
+        this.FilterDirty = FilterDirty;
+    }
+
+    /**
+     * Get Whether to filter filler words (currently only support basic language engine and standard language engine). Range:  [0, 2]. Default value 0.
+0:No filtering; 1: Partial filtering; 2: Strict filtering. 
+     * @return FilterModal Whether to filter filler words (currently only support basic language engine and standard language engine). Range:  [0, 2]. Default value 0.
+0:No filtering; 1: Partial filtering; 2: Strict filtering.
+     */
+    public Long getFilterModal() {
+        return this.FilterModal;
+    }
+
+    /**
+     * Set Whether to filter filler words (currently only support basic language engine and standard language engine). Range:  [0, 2]. Default value 0.
+0:No filtering; 1: Partial filtering; 2: Strict filtering.
+     * @param FilterModal Whether to filter filler words (currently only support basic language engine and standard language engine). Range:  [0, 2]. Default value 0.
+0:No filtering; 1: Partial filtering; 2: Strict filtering.
+     */
+    public void setFilterModal(Long FilterModal) {
+        this.FilterModal = FilterModal;
+    }
+
+    /**
+     * Get Whether to filter periods at the end of sentences (currently only support basic language engine and standard language engine), range [0, 1], default value 0.
+0: Do not filter out periods at the end of sentences; 1: Filter out periods at the end of sentences. 
+     * @return FilterPunc Whether to filter periods at the end of sentences (currently only support basic language engine and standard language engine), range [0, 1], default value 0.
+0: Do not filter out periods at the end of sentences; 1: Filter out periods at the end of sentences.
+     */
+    public Long getFilterPunc() {
+        return this.FilterPunc;
+    }
+
+    /**
+     * Set Whether to filter periods at the end of sentences (currently only support basic language engine and standard language engine), range [0, 1], default value 0.
+0: Do not filter out periods at the end of sentences; 1: Filter out periods at the end of sentences.
+     * @param FilterPunc Whether to filter periods at the end of sentences (currently only support basic language engine and standard language engine), range [0, 1], default value 0.
+0: Do not filter out periods at the end of sentences; 1: Filter out periods at the end of sentences.
+     */
+    public void setFilterPunc(Long FilterPunc) {
+        this.FilterPunc = FilterPunc;
+    }
+
     public AsrParam() {
     }
 
@@ -359,6 +443,15 @@ Supported languages for speech-to-text:
         if (source.VadLevel != null) {
             this.VadLevel = new Long(source.VadLevel);
         }
+        if (source.FilterDirty != null) {
+            this.FilterDirty = new Long(source.FilterDirty);
+        }
+        if (source.FilterModal != null) {
+            this.FilterModal = new Long(source.FilterModal);
+        }
+        if (source.FilterPunc != null) {
+            this.FilterPunc = new Long(source.FilterPunc);
+        }
     }
 
 
@@ -371,6 +464,9 @@ Supported languages for speech-to-text:
         this.setParamSimple(map, prefix + "HotWordList", this.HotWordList);
         this.setParamArraySimple(map, prefix + "AlternativeLanguage.", this.AlternativeLanguage);
         this.setParamSimple(map, prefix + "VadLevel", this.VadLevel);
+        this.setParamSimple(map, prefix + "FilterDirty", this.FilterDirty);
+        this.setParamSimple(map, prefix + "FilterModal", this.FilterModal);
+        this.setParamSimple(map, prefix + "FilterPunc", this.FilterPunc);
 
     }
 }

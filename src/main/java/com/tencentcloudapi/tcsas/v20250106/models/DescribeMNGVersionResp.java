@@ -59,6 +59,27 @@ public class DescribeMNGVersionResp extends AbstractModel {
     private Long MNPVersionId;
 
     /**
+    * <p>QR code expiration time.</p>
+    */
+    @SerializedName("ExpireTime")
+    @Expose
+    private Long ExpireTime;
+
+    /**
+    * <p>Version QR code.</p>
+    */
+    @SerializedName("QRCode")
+    @Expose
+    private String QRCode;
+
+    /**
+    * <p>Compilation package information.</p>
+    */
+    @SerializedName("SubPackageInfos")
+    @Expose
+    private MNPVersionSubPackageInfo [] SubPackageInfos;
+
+    /**
      * Get <p>Mini game appid.</p> 
      * @return MNPId <p>Mini game appid.</p>
      */
@@ -138,6 +159,54 @@ public class DescribeMNGVersionResp extends AbstractModel {
         this.MNPVersionId = MNPVersionId;
     }
 
+    /**
+     * Get <p>QR code expiration time.</p> 
+     * @return ExpireTime <p>QR code expiration time.</p>
+     */
+    public Long getExpireTime() {
+        return this.ExpireTime;
+    }
+
+    /**
+     * Set <p>QR code expiration time.</p>
+     * @param ExpireTime <p>QR code expiration time.</p>
+     */
+    public void setExpireTime(Long ExpireTime) {
+        this.ExpireTime = ExpireTime;
+    }
+
+    /**
+     * Get <p>Version QR code.</p> 
+     * @return QRCode <p>Version QR code.</p>
+     */
+    public String getQRCode() {
+        return this.QRCode;
+    }
+
+    /**
+     * Set <p>Version QR code.</p>
+     * @param QRCode <p>Version QR code.</p>
+     */
+    public void setQRCode(String QRCode) {
+        this.QRCode = QRCode;
+    }
+
+    /**
+     * Get <p>Compilation package information.</p> 
+     * @return SubPackageInfos <p>Compilation package information.</p>
+     */
+    public MNPVersionSubPackageInfo [] getSubPackageInfos() {
+        return this.SubPackageInfos;
+    }
+
+    /**
+     * Set <p>Compilation package information.</p>
+     * @param SubPackageInfos <p>Compilation package information.</p>
+     */
+    public void setSubPackageInfos(MNPVersionSubPackageInfo [] SubPackageInfos) {
+        this.SubPackageInfos = SubPackageInfos;
+    }
+
     public DescribeMNGVersionResp() {
     }
 
@@ -161,6 +230,18 @@ public class DescribeMNGVersionResp extends AbstractModel {
         if (source.MNPVersionId != null) {
             this.MNPVersionId = new Long(source.MNPVersionId);
         }
+        if (source.ExpireTime != null) {
+            this.ExpireTime = new Long(source.ExpireTime);
+        }
+        if (source.QRCode != null) {
+            this.QRCode = new String(source.QRCode);
+        }
+        if (source.SubPackageInfos != null) {
+            this.SubPackageInfos = new MNPVersionSubPackageInfo[source.SubPackageInfos.length];
+            for (int i = 0; i < source.SubPackageInfos.length; i++) {
+                this.SubPackageInfos[i] = new MNPVersionSubPackageInfo(source.SubPackageInfos[i]);
+            }
+        }
     }
 
 
@@ -173,6 +254,9 @@ public class DescribeMNGVersionResp extends AbstractModel {
         this.setParamSimple(map, prefix + "TaskStatus", this.TaskStatus);
         this.setParamSimple(map, prefix + "TaskMsg", this.TaskMsg);
         this.setParamSimple(map, prefix + "MNPVersionId", this.MNPVersionId);
+        this.setParamSimple(map, prefix + "ExpireTime", this.ExpireTime);
+        this.setParamSimple(map, prefix + "QRCode", this.QRCode);
+        this.setParamArrayObj(map, prefix + "SubPackageInfos.", this.SubPackageInfos);
 
     }
 }

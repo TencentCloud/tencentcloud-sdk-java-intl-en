@@ -59,6 +59,41 @@ public class CreateMNPVersionRequest extends AbstractModel {
     private String MNPVersionIntro;
 
     /**
+    * <p>Version type. Valid values: 1: Debug; 2: Development. Default value: 2.</p>
+    */
+    @SerializedName("VersionType")
+    @Expose
+    private Long VersionType;
+
+    /**
+    * <p>Compilation condition.</p>
+    */
+    @SerializedName("CompileCondition")
+    @Expose
+    private String CompileCondition;
+
+    /**
+    * <p>Compilation configuration.</p>
+    */
+    @SerializedName("CompileConfig")
+    @Expose
+    private String CompileConfig;
+
+    /**
+    * <p>CI/CD key ID.</p>
+    */
+    @SerializedName("PipelineId")
+    @Expose
+    private String PipelineId;
+
+    /**
+    * <p>Internal file URL.</p>
+    */
+    @SerializedName("FileInnerUrl")
+    @Expose
+    private String FileInnerUrl;
+
+    /**
      * Get <p>Mini-program appid.</p> 
      * @return MNPId <p>Mini-program appid.</p>
      */
@@ -138,6 +173,86 @@ public class CreateMNPVersionRequest extends AbstractModel {
         this.MNPVersionIntro = MNPVersionIntro;
     }
 
+    /**
+     * Get <p>Version type. Valid values: 1: Debug; 2: Development. Default value: 2.</p> 
+     * @return VersionType <p>Version type. Valid values: 1: Debug; 2: Development. Default value: 2.</p>
+     */
+    public Long getVersionType() {
+        return this.VersionType;
+    }
+
+    /**
+     * Set <p>Version type. Valid values: 1: Debug; 2: Development. Default value: 2.</p>
+     * @param VersionType <p>Version type. Valid values: 1: Debug; 2: Development. Default value: 2.</p>
+     */
+    public void setVersionType(Long VersionType) {
+        this.VersionType = VersionType;
+    }
+
+    /**
+     * Get <p>Compilation condition.</p> 
+     * @return CompileCondition <p>Compilation condition.</p>
+     */
+    public String getCompileCondition() {
+        return this.CompileCondition;
+    }
+
+    /**
+     * Set <p>Compilation condition.</p>
+     * @param CompileCondition <p>Compilation condition.</p>
+     */
+    public void setCompileCondition(String CompileCondition) {
+        this.CompileCondition = CompileCondition;
+    }
+
+    /**
+     * Get <p>Compilation configuration.</p> 
+     * @return CompileConfig <p>Compilation configuration.</p>
+     */
+    public String getCompileConfig() {
+        return this.CompileConfig;
+    }
+
+    /**
+     * Set <p>Compilation configuration.</p>
+     * @param CompileConfig <p>Compilation configuration.</p>
+     */
+    public void setCompileConfig(String CompileConfig) {
+        this.CompileConfig = CompileConfig;
+    }
+
+    /**
+     * Get <p>CI/CD key ID.</p> 
+     * @return PipelineId <p>CI/CD key ID.</p>
+     */
+    public String getPipelineId() {
+        return this.PipelineId;
+    }
+
+    /**
+     * Set <p>CI/CD key ID.</p>
+     * @param PipelineId <p>CI/CD key ID.</p>
+     */
+    public void setPipelineId(String PipelineId) {
+        this.PipelineId = PipelineId;
+    }
+
+    /**
+     * Get <p>Internal file URL.</p> 
+     * @return FileInnerUrl <p>Internal file URL.</p>
+     */
+    public String getFileInnerUrl() {
+        return this.FileInnerUrl;
+    }
+
+    /**
+     * Set <p>Internal file URL.</p>
+     * @param FileInnerUrl <p>Internal file URL.</p>
+     */
+    public void setFileInnerUrl(String FileInnerUrl) {
+        this.FileInnerUrl = FileInnerUrl;
+    }
+
     public CreateMNPVersionRequest() {
     }
 
@@ -161,6 +276,21 @@ public class CreateMNPVersionRequest extends AbstractModel {
         if (source.MNPVersionIntro != null) {
             this.MNPVersionIntro = new String(source.MNPVersionIntro);
         }
+        if (source.VersionType != null) {
+            this.VersionType = new Long(source.VersionType);
+        }
+        if (source.CompileCondition != null) {
+            this.CompileCondition = new String(source.CompileCondition);
+        }
+        if (source.CompileConfig != null) {
+            this.CompileConfig = new String(source.CompileConfig);
+        }
+        if (source.PipelineId != null) {
+            this.PipelineId = new String(source.PipelineId);
+        }
+        if (source.FileInnerUrl != null) {
+            this.FileInnerUrl = new String(source.FileInnerUrl);
+        }
     }
 
 
@@ -173,6 +303,11 @@ public class CreateMNPVersionRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "FileUrl", this.FileUrl);
         this.setParamSimple(map, prefix + "PlatformId", this.PlatformId);
         this.setParamSimple(map, prefix + "MNPVersionIntro", this.MNPVersionIntro);
+        this.setParamSimple(map, prefix + "VersionType", this.VersionType);
+        this.setParamSimple(map, prefix + "CompileCondition", this.CompileCondition);
+        this.setParamSimple(map, prefix + "CompileConfig", this.CompileConfig);
+        this.setParamSimple(map, prefix + "PipelineId", this.PipelineId);
+        this.setParamSimple(map, prefix + "FileInnerUrl", this.FileInnerUrl);
 
     }
 }

@@ -59,7 +59,7 @@ public class DescribeDisasterRecoverGroupQuotaResponse extends AbstractModel {
     private Long CvmInRackGroupQuota;
 
     /**
-    * 
+    * Quota for instances in a disaster recovery group of the switch type.
     */
     @SerializedName("CvmInSwitchGroupQuota")
     @Expose
@@ -157,16 +157,16 @@ public class DescribeDisasterRecoverGroupQuotaResponse extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return CvmInSwitchGroupQuota 
+     * Get Quota for instances in a disaster recovery group of the switch type. 
+     * @return CvmInSwitchGroupQuota Quota for instances in a disaster recovery group of the switch type.
      */
     public Long getCvmInSwitchGroupQuota() {
         return this.CvmInSwitchGroupQuota;
     }
 
     /**
-     * Set 
-     * @param CvmInSwitchGroupQuota 
+     * Set Quota for instances in a disaster recovery group of the switch type.
+     * @param CvmInSwitchGroupQuota Quota for instances in a disaster recovery group of the switch type.
      */
     public void setCvmInSwitchGroupQuota(Long CvmInSwitchGroupQuota) {
         this.CvmInSwitchGroupQuota = CvmInSwitchGroupQuota;

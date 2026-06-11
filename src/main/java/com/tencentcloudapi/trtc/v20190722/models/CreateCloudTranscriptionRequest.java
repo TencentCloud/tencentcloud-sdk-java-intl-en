@@ -24,141 +24,164 @@ import java.util.HashMap;
 public class CreateCloudTranscriptionRequest extends AbstractModel {
 
     /**
-    * [SdkAppId](https://www.tencentcloud.com/document/product/647/46351?from_cn_redirect=1#sdkappid) of TRTC, which is the same as the SdkAppId corresponding to the transcribed room.
+    * <p>The <a href="https://www.tencentcloud.com/document/product/647/46351?from_cn_redirect=1#sdkappid">SdkAppId</a> of TRTC is the same as the SdkAppId corresponding to the transcribe room.</p>
     */
     @SerializedName("SdkAppId")
     @Expose
     private Long SdkAppId;
 
     /**
-    * [RoomId](https://www.tencentcloud.com/document/product/647/46351?from_cn_redirect=1#roomid) of TRTC, which is the RoomId corresponding to the transcribed TRTC room. Note: The room ID type defaults to integer. If the room ID type is string, specify it via RoomIdType.
+    * <p>The <a href="https://www.tencentcloud.com/document/product/647/46351?from_cn_redirect=1#roomid">RoomId</a> of TRTC, which is the RoomId corresponding to the transcribed TRTC room. Note: The room ID type defaults to integer. If the room ID type is string, specify it through RoomIdType.</p>
     */
     @SerializedName("RoomId")
     @Expose
     private String RoomId;
 
     /**
-    * Room information RoomType must be the same as the RoomId type of the corresponding transcribed room. 0 indicates an integer type room ID, and 1 indicates a string Room Number.
+    * <p>The room information RoomType must be identical to the data type of the RoomId corresponding to the transcribed room. 0 indicates an integer room number, and 1 indicates a string Room Number.</p>
     */
     @SerializedName("RoomIdType")
     @Expose
     private Long RoomIdType;
 
     /**
-    * Parameters for transcribe service to join TRTC room.
+    * <p>Parameters for the transcribe service to join TRTC room.</p>
     */
     @SerializedName("TranscriptionParam")
     @Expose
     private TranscriptionParam TranscriptionParam;
 
     /**
-    * Parameters used by the ASR transcribe service.
+    * <p>Parameters used by the ASR transcribe service.</p>
     */
     @SerializedName("AsrParam")
     @Expose
     private AsrParam AsrParam;
 
     /**
-    * Translation parameters used for transcription.
+    * <p>Parameters used to transcribe the translation service.</p>
     */
     @SerializedName("TranslationParam")
     @Expose
     private TranslationParam TranslationParam;
 
     /**
-     * Get [SdkAppId](https://www.tencentcloud.com/document/product/647/46351?from_cn_redirect=1#sdkappid) of TRTC, which is the same as the SdkAppId corresponding to the transcribed room. 
-     * @return SdkAppId [SdkAppId](https://www.tencentcloud.com/document/product/647/46351?from_cn_redirect=1#sdkappid) of TRTC, which is the same as the SdkAppId corresponding to the transcribed room.
+    * <p>Parameters used by the TTS transcribe service.</p>
+    */
+    @SerializedName("TTSParam")
+    @Expose
+    private TTSParam [] TTSParam;
+
+    /**
+     * Get <p>The <a href="https://www.tencentcloud.com/document/product/647/46351?from_cn_redirect=1#sdkappid">SdkAppId</a> of TRTC is the same as the SdkAppId corresponding to the transcribe room.</p> 
+     * @return SdkAppId <p>The <a href="https://www.tencentcloud.com/document/product/647/46351?from_cn_redirect=1#sdkappid">SdkAppId</a> of TRTC is the same as the SdkAppId corresponding to the transcribe room.</p>
      */
     public Long getSdkAppId() {
         return this.SdkAppId;
     }
 
     /**
-     * Set [SdkAppId](https://www.tencentcloud.com/document/product/647/46351?from_cn_redirect=1#sdkappid) of TRTC, which is the same as the SdkAppId corresponding to the transcribed room.
-     * @param SdkAppId [SdkAppId](https://www.tencentcloud.com/document/product/647/46351?from_cn_redirect=1#sdkappid) of TRTC, which is the same as the SdkAppId corresponding to the transcribed room.
+     * Set <p>The <a href="https://www.tencentcloud.com/document/product/647/46351?from_cn_redirect=1#sdkappid">SdkAppId</a> of TRTC is the same as the SdkAppId corresponding to the transcribe room.</p>
+     * @param SdkAppId <p>The <a href="https://www.tencentcloud.com/document/product/647/46351?from_cn_redirect=1#sdkappid">SdkAppId</a> of TRTC is the same as the SdkAppId corresponding to the transcribe room.</p>
      */
     public void setSdkAppId(Long SdkAppId) {
         this.SdkAppId = SdkAppId;
     }
 
     /**
-     * Get [RoomId](https://www.tencentcloud.com/document/product/647/46351?from_cn_redirect=1#roomid) of TRTC, which is the RoomId corresponding to the transcribed TRTC room. Note: The room ID type defaults to integer. If the room ID type is string, specify it via RoomIdType. 
-     * @return RoomId [RoomId](https://www.tencentcloud.com/document/product/647/46351?from_cn_redirect=1#roomid) of TRTC, which is the RoomId corresponding to the transcribed TRTC room. Note: The room ID type defaults to integer. If the room ID type is string, specify it via RoomIdType.
+     * Get <p>The <a href="https://www.tencentcloud.com/document/product/647/46351?from_cn_redirect=1#roomid">RoomId</a> of TRTC, which is the RoomId corresponding to the transcribed TRTC room. Note: The room ID type defaults to integer. If the room ID type is string, specify it through RoomIdType.</p> 
+     * @return RoomId <p>The <a href="https://www.tencentcloud.com/document/product/647/46351?from_cn_redirect=1#roomid">RoomId</a> of TRTC, which is the RoomId corresponding to the transcribed TRTC room. Note: The room ID type defaults to integer. If the room ID type is string, specify it through RoomIdType.</p>
      */
     public String getRoomId() {
         return this.RoomId;
     }
 
     /**
-     * Set [RoomId](https://www.tencentcloud.com/document/product/647/46351?from_cn_redirect=1#roomid) of TRTC, which is the RoomId corresponding to the transcribed TRTC room. Note: The room ID type defaults to integer. If the room ID type is string, specify it via RoomIdType.
-     * @param RoomId [RoomId](https://www.tencentcloud.com/document/product/647/46351?from_cn_redirect=1#roomid) of TRTC, which is the RoomId corresponding to the transcribed TRTC room. Note: The room ID type defaults to integer. If the room ID type is string, specify it via RoomIdType.
+     * Set <p>The <a href="https://www.tencentcloud.com/document/product/647/46351?from_cn_redirect=1#roomid">RoomId</a> of TRTC, which is the RoomId corresponding to the transcribed TRTC room. Note: The room ID type defaults to integer. If the room ID type is string, specify it through RoomIdType.</p>
+     * @param RoomId <p>The <a href="https://www.tencentcloud.com/document/product/647/46351?from_cn_redirect=1#roomid">RoomId</a> of TRTC, which is the RoomId corresponding to the transcribed TRTC room. Note: The room ID type defaults to integer. If the room ID type is string, specify it through RoomIdType.</p>
      */
     public void setRoomId(String RoomId) {
         this.RoomId = RoomId;
     }
 
     /**
-     * Get Room information RoomType must be the same as the RoomId type of the corresponding transcribed room. 0 indicates an integer type room ID, and 1 indicates a string Room Number. 
-     * @return RoomIdType Room information RoomType must be the same as the RoomId type of the corresponding transcribed room. 0 indicates an integer type room ID, and 1 indicates a string Room Number.
+     * Get <p>The room information RoomType must be identical to the data type of the RoomId corresponding to the transcribed room. 0 indicates an integer room number, and 1 indicates a string Room Number.</p> 
+     * @return RoomIdType <p>The room information RoomType must be identical to the data type of the RoomId corresponding to the transcribed room. 0 indicates an integer room number, and 1 indicates a string Room Number.</p>
      */
     public Long getRoomIdType() {
         return this.RoomIdType;
     }
 
     /**
-     * Set Room information RoomType must be the same as the RoomId type of the corresponding transcribed room. 0 indicates an integer type room ID, and 1 indicates a string Room Number.
-     * @param RoomIdType Room information RoomType must be the same as the RoomId type of the corresponding transcribed room. 0 indicates an integer type room ID, and 1 indicates a string Room Number.
+     * Set <p>The room information RoomType must be identical to the data type of the RoomId corresponding to the transcribed room. 0 indicates an integer room number, and 1 indicates a string Room Number.</p>
+     * @param RoomIdType <p>The room information RoomType must be identical to the data type of the RoomId corresponding to the transcribed room. 0 indicates an integer room number, and 1 indicates a string Room Number.</p>
      */
     public void setRoomIdType(Long RoomIdType) {
         this.RoomIdType = RoomIdType;
     }
 
     /**
-     * Get Parameters for transcribe service to join TRTC room. 
-     * @return TranscriptionParam Parameters for transcribe service to join TRTC room.
+     * Get <p>Parameters for the transcribe service to join TRTC room.</p> 
+     * @return TranscriptionParam <p>Parameters for the transcribe service to join TRTC room.</p>
      */
     public TranscriptionParam getTranscriptionParam() {
         return this.TranscriptionParam;
     }
 
     /**
-     * Set Parameters for transcribe service to join TRTC room.
-     * @param TranscriptionParam Parameters for transcribe service to join TRTC room.
+     * Set <p>Parameters for the transcribe service to join TRTC room.</p>
+     * @param TranscriptionParam <p>Parameters for the transcribe service to join TRTC room.</p>
      */
     public void setTranscriptionParam(TranscriptionParam TranscriptionParam) {
         this.TranscriptionParam = TranscriptionParam;
     }
 
     /**
-     * Get Parameters used by the ASR transcribe service. 
-     * @return AsrParam Parameters used by the ASR transcribe service.
+     * Get <p>Parameters used by the ASR transcribe service.</p> 
+     * @return AsrParam <p>Parameters used by the ASR transcribe service.</p>
      */
     public AsrParam getAsrParam() {
         return this.AsrParam;
     }
 
     /**
-     * Set Parameters used by the ASR transcribe service.
-     * @param AsrParam Parameters used by the ASR transcribe service.
+     * Set <p>Parameters used by the ASR transcribe service.</p>
+     * @param AsrParam <p>Parameters used by the ASR transcribe service.</p>
      */
     public void setAsrParam(AsrParam AsrParam) {
         this.AsrParam = AsrParam;
     }
 
     /**
-     * Get Translation parameters used for transcription. 
-     * @return TranslationParam Translation parameters used for transcription.
+     * Get <p>Parameters used to transcribe the translation service.</p> 
+     * @return TranslationParam <p>Parameters used to transcribe the translation service.</p>
      */
     public TranslationParam getTranslationParam() {
         return this.TranslationParam;
     }
 
     /**
-     * Set Translation parameters used for transcription.
-     * @param TranslationParam Translation parameters used for transcription.
+     * Set <p>Parameters used to transcribe the translation service.</p>
+     * @param TranslationParam <p>Parameters used to transcribe the translation service.</p>
      */
     public void setTranslationParam(TranslationParam TranslationParam) {
         this.TranslationParam = TranslationParam;
+    }
+
+    /**
+     * Get <p>Parameters used by the TTS transcribe service.</p> 
+     * @return TTSParam <p>Parameters used by the TTS transcribe service.</p>
+     */
+    public TTSParam [] getTTSParam() {
+        return this.TTSParam;
+    }
+
+    /**
+     * Set <p>Parameters used by the TTS transcribe service.</p>
+     * @param TTSParam <p>Parameters used by the TTS transcribe service.</p>
+     */
+    public void setTTSParam(TTSParam [] TTSParam) {
+        this.TTSParam = TTSParam;
     }
 
     public CreateCloudTranscriptionRequest() {
@@ -187,6 +210,12 @@ public class CreateCloudTranscriptionRequest extends AbstractModel {
         if (source.TranslationParam != null) {
             this.TranslationParam = new TranslationParam(source.TranslationParam);
         }
+        if (source.TTSParam != null) {
+            this.TTSParam = new TTSParam[source.TTSParam.length];
+            for (int i = 0; i < source.TTSParam.length; i++) {
+                this.TTSParam[i] = new TTSParam(source.TTSParam[i]);
+            }
+        }
     }
 
 
@@ -200,6 +229,7 @@ public class CreateCloudTranscriptionRequest extends AbstractModel {
         this.setParamObj(map, prefix + "TranscriptionParam.", this.TranscriptionParam);
         this.setParamObj(map, prefix + "AsrParam.", this.AsrParam);
         this.setParamObj(map, prefix + "TranslationParam.", this.TranslationParam);
+        this.setParamArrayObj(map, prefix + "TTSParam.", this.TTSParam);
 
     }
 }

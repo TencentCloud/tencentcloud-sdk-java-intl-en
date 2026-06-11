@@ -38,6 +38,13 @@ public class DescribeMNPVersionRequest extends AbstractModel {
     private String PlatformId;
 
     /**
+    * <p>CI/CD key ID.</p>
+    */
+    @SerializedName("PipelineId")
+    @Expose
+    private String PipelineId;
+
+    /**
      * Get <p>Task ID returned by the CreateMNPVersion API.</p> 
      * @return BusinessId <p>Task ID returned by the CreateMNPVersion API.</p>
      */
@@ -69,6 +76,22 @@ public class DescribeMNPVersionRequest extends AbstractModel {
         this.PlatformId = PlatformId;
     }
 
+    /**
+     * Get <p>CI/CD key ID.</p> 
+     * @return PipelineId <p>CI/CD key ID.</p>
+     */
+    public String getPipelineId() {
+        return this.PipelineId;
+    }
+
+    /**
+     * Set <p>CI/CD key ID.</p>
+     * @param PipelineId <p>CI/CD key ID.</p>
+     */
+    public void setPipelineId(String PipelineId) {
+        this.PipelineId = PipelineId;
+    }
+
     public DescribeMNPVersionRequest() {
     }
 
@@ -83,6 +106,9 @@ public class DescribeMNPVersionRequest extends AbstractModel {
         if (source.PlatformId != null) {
             this.PlatformId = new String(source.PlatformId);
         }
+        if (source.PipelineId != null) {
+            this.PipelineId = new String(source.PipelineId);
+        }
     }
 
 
@@ -92,6 +118,7 @@ public class DescribeMNPVersionRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "BusinessId", this.BusinessId);
         this.setParamSimple(map, prefix + "PlatformId", this.PlatformId);
+        this.setParamSimple(map, prefix + "PipelineId", this.PipelineId);
 
     }
 }

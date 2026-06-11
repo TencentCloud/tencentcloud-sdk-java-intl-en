@@ -38,6 +38,13 @@ public class CreateMNPSecretKeyRequest extends AbstractModel {
     private String MNPId;
 
     /**
+    * <p>CI/CD key ID.</p>
+    */
+    @SerializedName("PipelineId")
+    @Expose
+    private String PipelineId;
+
+    /**
      * Get <p>Platform ID.</p> 
      * @return PlatformId <p>Platform ID.</p>
      */
@@ -69,6 +76,22 @@ public class CreateMNPSecretKeyRequest extends AbstractModel {
         this.MNPId = MNPId;
     }
 
+    /**
+     * Get <p>CI/CD key ID.</p> 
+     * @return PipelineId <p>CI/CD key ID.</p>
+     */
+    public String getPipelineId() {
+        return this.PipelineId;
+    }
+
+    /**
+     * Set <p>CI/CD key ID.</p>
+     * @param PipelineId <p>CI/CD key ID.</p>
+     */
+    public void setPipelineId(String PipelineId) {
+        this.PipelineId = PipelineId;
+    }
+
     public CreateMNPSecretKeyRequest() {
     }
 
@@ -83,6 +106,9 @@ public class CreateMNPSecretKeyRequest extends AbstractModel {
         if (source.MNPId != null) {
             this.MNPId = new String(source.MNPId);
         }
+        if (source.PipelineId != null) {
+            this.PipelineId = new String(source.PipelineId);
+        }
     }
 
 
@@ -92,6 +118,7 @@ public class CreateMNPSecretKeyRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "PlatformId", this.PlatformId);
         this.setParamSimple(map, prefix + "MNPId", this.MNPId);
+        this.setParamSimple(map, prefix + "PipelineId", this.PipelineId);
 
     }
 }

@@ -31,7 +31,7 @@ public class DeleteAccountRequest extends AbstractModel {
     private String DBInstanceId;
 
     /**
-    * Account name to be deleted. obtain through the api [DescribeAccounts](https://www.tencentcloud.com/document/api/409/18109?from_cn_redirect=1).
+    * Account name to be deleted. obtain through the api [DescribeAccounts](https://www.tencentcloud.com/document/product/409/18109).
     */
     @SerializedName("UserName")
     @Expose
@@ -54,16 +54,16 @@ public class DeleteAccountRequest extends AbstractModel {
     }
 
     /**
-     * Get Account name to be deleted. obtain through the api [DescribeAccounts](https://www.tencentcloud.com/document/api/409/18109?from_cn_redirect=1). 
-     * @return UserName Account name to be deleted. obtain through the api [DescribeAccounts](https://www.tencentcloud.com/document/api/409/18109?from_cn_redirect=1).
+     * Get Account name to be deleted. obtain through the api [DescribeAccounts](https://www.tencentcloud.com/document/product/409/18109). 
+     * @return UserName Account name to be deleted. obtain through the api [DescribeAccounts](https://www.tencentcloud.com/document/product/409/18109).
      */
     public String getUserName() {
         return this.UserName;
     }
 
     /**
-     * Set Account name to be deleted. obtain through the api [DescribeAccounts](https://www.tencentcloud.com/document/api/409/18109?from_cn_redirect=1).
-     * @param UserName Account name to be deleted. obtain through the api [DescribeAccounts](https://www.tencentcloud.com/document/api/409/18109?from_cn_redirect=1).
+     * Set Account name to be deleted. obtain through the api [DescribeAccounts](https://www.tencentcloud.com/document/product/409/18109).
+     * @param UserName Account name to be deleted. obtain through the api [DescribeAccounts](https://www.tencentcloud.com/document/product/409/18109).
      */
     public void setUserName(String UserName) {
         this.UserName = UserName;

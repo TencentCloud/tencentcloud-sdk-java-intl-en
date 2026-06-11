@@ -24,69 +24,84 @@ import java.util.HashMap;
 public class SceneInfo extends AbstractModel {
 
     /**
-    * 
+    * RealTime: Real-time Voice Analysis; 
+VoiceMessage: Voice Message; 
+GMECloudApi: GME Cloud API; 
     */
     @SerializedName("SceneId")
     @Expose
     private String SceneId;
 
     /**
-    * 
+    * Switch state, true for on, false for off.
+
     */
     @SerializedName("Status")
     @Expose
     private Boolean Status;
 
     /**
-    * 
+    * callback URL
     */
     @SerializedName("CallbackUrl")
     @Expose
     private String CallbackUrl;
 
     /**
-     * Get  
-     * @return SceneId 
+     * Get RealTime: Real-time Voice Analysis; 
+VoiceMessage: Voice Message; 
+GMECloudApi: GME Cloud API;  
+     * @return SceneId RealTime: Real-time Voice Analysis; 
+VoiceMessage: Voice Message; 
+GMECloudApi: GME Cloud API; 
      */
     public String getSceneId() {
         return this.SceneId;
     }
 
     /**
-     * Set 
-     * @param SceneId 
+     * Set RealTime: Real-time Voice Analysis; 
+VoiceMessage: Voice Message; 
+GMECloudApi: GME Cloud API; 
+     * @param SceneId RealTime: Real-time Voice Analysis; 
+VoiceMessage: Voice Message; 
+GMECloudApi: GME Cloud API; 
      */
     public void setSceneId(String SceneId) {
         this.SceneId = SceneId;
     }
 
     /**
-     * Get  
-     * @return Status 
+     * Get Switch state, true for on, false for off.
+ 
+     * @return Status Switch state, true for on, false for off.
+
      */
     public Boolean getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 
-     * @param Status 
+     * Set Switch state, true for on, false for off.
+
+     * @param Status Switch state, true for on, false for off.
+
      */
     public void setStatus(Boolean Status) {
         this.Status = Status;
     }
 
     /**
-     * Get  
-     * @return CallbackUrl 
+     * Get callback URL 
+     * @return CallbackUrl callback URL
      */
     public String getCallbackUrl() {
         return this.CallbackUrl;
     }
 
     /**
-     * Set 
-     * @param CallbackUrl 
+     * Set callback URL
+     * @param CallbackUrl callback URL
      */
     public void setCallbackUrl(String CallbackUrl) {
         this.CallbackUrl = CallbackUrl;

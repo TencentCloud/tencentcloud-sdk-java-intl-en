@@ -258,7 +258,7 @@ public class GatherResourceSummary extends AbstractModel {
     private String PayMode;
 
     /**
-    * Billing mode: Resource billing mode, which can be monthly subscription or pay-as-you-go.
+    * Billing mode: Resource billing mode, which can be yearly/monthly subscription or pay-as-you-go.
     */
     @SerializedName("PayModeName")
     @Expose
@@ -835,16 +835,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Billing mode: Resource billing mode, which can be monthly subscription or pay-as-you-go. 
-     * @return PayModeName Billing mode: Resource billing mode, which can be monthly subscription or pay-as-you-go.
+     * Get Billing mode: Resource billing mode, which can be yearly/monthly subscription or pay-as-you-go. 
+     * @return PayModeName Billing mode: Resource billing mode, which can be yearly/monthly subscription or pay-as-you-go.
      */
     public String getPayModeName() {
         return this.PayModeName;
     }
 
     /**
-     * Set Billing mode: Resource billing mode, which can be monthly subscription or pay-as-you-go.
-     * @param PayModeName Billing mode: Resource billing mode, which can be monthly subscription or pay-as-you-go.
+     * Set Billing mode: Resource billing mode, which can be yearly/monthly subscription or pay-as-you-go.
+     * @param PayModeName Billing mode: Resource billing mode, which can be yearly/monthly subscription or pay-as-you-go.
      */
     public void setPayModeName(String PayModeName) {
         this.PayModeName = PayModeName;

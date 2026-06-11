@@ -52,6 +52,13 @@ public class DeleteRoomMemberRequest extends AbstractModel {
     private String [] Uids;
 
     /**
+    * List of users to exclude (string type)
+    */
+    @SerializedName("StrUids")
+    @Expose
+    private String [] StrUids;
+
+    /**
      * Get ID of the target room 
      * @return RoomId ID of the target room
      */
@@ -115,6 +122,22 @@ public class DeleteRoomMemberRequest extends AbstractModel {
         this.Uids = Uids;
     }
 
+    /**
+     * Get List of users to exclude (string type) 
+     * @return StrUids List of users to exclude (string type)
+     */
+    public String [] getStrUids() {
+        return this.StrUids;
+    }
+
+    /**
+     * Set List of users to exclude (string type)
+     * @param StrUids List of users to exclude (string type)
+     */
+    public void setStrUids(String [] StrUids) {
+        this.StrUids = StrUids;
+    }
+
     public DeleteRoomMemberRequest() {
     }
 
@@ -138,6 +161,12 @@ public class DeleteRoomMemberRequest extends AbstractModel {
                 this.Uids[i] = new String(source.Uids[i]);
             }
         }
+        if (source.StrUids != null) {
+            this.StrUids = new String[source.StrUids.length];
+            for (int i = 0; i < source.StrUids.length; i++) {
+                this.StrUids[i] = new String(source.StrUids[i]);
+            }
+        }
     }
 
 
@@ -149,6 +178,7 @@ public class DeleteRoomMemberRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "DeleteType", this.DeleteType);
         this.setParamSimple(map, prefix + "BizId", this.BizId);
         this.setParamArraySimple(map, prefix + "Uids.", this.Uids);
+        this.setParamArraySimple(map, prefix + "StrUids.", this.StrUids);
 
     }
 }

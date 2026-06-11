@@ -52,7 +52,7 @@ public class ModifyChcAttributeRequest extends AbstractModel {
     private String BmcUser;
 
     /**
-    * The password can contain 8 to 16 characters, including letters, numbers and special symbols (()`~!@#$%^&*-+=_|{}).
+    * The password can contain 8 to 16 characters, including letters, numbers and special symbols ()`~!@#$%^&*-+=_|{}[]:;'<>,.?/
     */
     @SerializedName("Password")
     @Expose
@@ -130,16 +130,16 @@ public class ModifyChcAttributeRequest extends AbstractModel {
     }
 
     /**
-     * Get The password can contain 8 to 16 characters, including letters, numbers and special symbols (()`~!@#$%^&*-+=_|{}). 
-     * @return Password The password can contain 8 to 16 characters, including letters, numbers and special symbols (()`~!@#$%^&*-+=_|{}).
+     * Get The password can contain 8 to 16 characters, including letters, numbers and special symbols ()`~!@#$%^&*-+=_|{}[]:;'<>,.?/ 
+     * @return Password The password can contain 8 to 16 characters, including letters, numbers and special symbols ()`~!@#$%^&*-+=_|{}[]:;'<>,.?/
      */
     public String getPassword() {
         return this.Password;
     }
 
     /**
-     * Set The password can contain 8 to 16 characters, including letters, numbers and special symbols (()`~!@#$%^&*-+=_|{}).
-     * @param Password The password can contain 8 to 16 characters, including letters, numbers and special symbols (()`~!@#$%^&*-+=_|{}).
+     * Set The password can contain 8 to 16 characters, including letters, numbers and special symbols ()`~!@#$%^&*-+=_|{}[]:;'<>,.?/
+     * @param Password The password can contain 8 to 16 characters, including letters, numbers and special symbols ()`~!@#$%^&*-+=_|{}[]:;'<>,.?/
      */
     public void setPassword(String Password) {
         this.Password = Password;

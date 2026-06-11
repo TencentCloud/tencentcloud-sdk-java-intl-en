@@ -31,7 +31,7 @@ public class ResetAccountPasswordRequest extends AbstractModel {
     private String DBInstanceId;
 
     /**
-    * Instance account name. obtain through the api [DescribeAccounts](https://www.tencentcloud.com/document/api/409/18109?from_cn_redirect=1).
+    * Instance account name. obtain through the api [DescribeAccounts](https://www.tencentcloud.com/document/product/409/18109).
     */
     @SerializedName("UserName")
     @Expose
@@ -41,10 +41,10 @@ public class ResetAccountPasswordRequest extends AbstractModel {
     * Specifies the new password for the UserName account.
 Password settings rule specifies the following:.
 - valid values: 8 to 32 characters. a password with more than 12 characters is recommended.
--Must not start with "/".
--Must include the following four items:.
-Lowercase letters a ~ z.
-Uppercase letters: A – Z.
+- Must not start with "/".
+- Must include the following four items:.
+Lowercase letters a - z.
+Uppercase letters: A - Z.
 Digits: 0-9.
 Special symbols: ()`~!@#$%^&*-+=_|{}[]:<>,.?/.
     */
@@ -69,16 +69,16 @@ Special symbols: ()`~!@#$%^&*-+=_|{}[]:<>,.?/.
     }
 
     /**
-     * Get Instance account name. obtain through the api [DescribeAccounts](https://www.tencentcloud.com/document/api/409/18109?from_cn_redirect=1). 
-     * @return UserName Instance account name. obtain through the api [DescribeAccounts](https://www.tencentcloud.com/document/api/409/18109?from_cn_redirect=1).
+     * Get Instance account name. obtain through the api [DescribeAccounts](https://www.tencentcloud.com/document/product/409/18109). 
+     * @return UserName Instance account name. obtain through the api [DescribeAccounts](https://www.tencentcloud.com/document/product/409/18109).
      */
     public String getUserName() {
         return this.UserName;
     }
 
     /**
-     * Set Instance account name. obtain through the api [DescribeAccounts](https://www.tencentcloud.com/document/api/409/18109?from_cn_redirect=1).
-     * @param UserName Instance account name. obtain through the api [DescribeAccounts](https://www.tencentcloud.com/document/api/409/18109?from_cn_redirect=1).
+     * Set Instance account name. obtain through the api [DescribeAccounts](https://www.tencentcloud.com/document/product/409/18109).
+     * @param UserName Instance account name. obtain through the api [DescribeAccounts](https://www.tencentcloud.com/document/product/409/18109).
      */
     public void setUserName(String UserName) {
         this.UserName = UserName;
@@ -88,19 +88,19 @@ Special symbols: ()`~!@#$%^&*-+=_|{}[]:<>,.?/.
      * Get Specifies the new password for the UserName account.
 Password settings rule specifies the following:.
 - valid values: 8 to 32 characters. a password with more than 12 characters is recommended.
--Must not start with "/".
--Must include the following four items:.
-Lowercase letters a ~ z.
-Uppercase letters: A – Z.
+- Must not start with "/".
+- Must include the following four items:.
+Lowercase letters a - z.
+Uppercase letters: A - Z.
 Digits: 0-9.
 Special symbols: ()`~!@#$%^&*-+=_|{}[]:<>,.?/. 
      * @return Password Specifies the new password for the UserName account.
 Password settings rule specifies the following:.
 - valid values: 8 to 32 characters. a password with more than 12 characters is recommended.
--Must not start with "/".
--Must include the following four items:.
-Lowercase letters a ~ z.
-Uppercase letters: A – Z.
+- Must not start with "/".
+- Must include the following four items:.
+Lowercase letters a - z.
+Uppercase letters: A - Z.
 Digits: 0-9.
 Special symbols: ()`~!@#$%^&*-+=_|{}[]:<>,.?/.
      */
@@ -112,19 +112,19 @@ Special symbols: ()`~!@#$%^&*-+=_|{}[]:<>,.?/.
      * Set Specifies the new password for the UserName account.
 Password settings rule specifies the following:.
 - valid values: 8 to 32 characters. a password with more than 12 characters is recommended.
--Must not start with "/".
--Must include the following four items:.
-Lowercase letters a ~ z.
-Uppercase letters: A – Z.
+- Must not start with "/".
+- Must include the following four items:.
+Lowercase letters a - z.
+Uppercase letters: A - Z.
 Digits: 0-9.
 Special symbols: ()`~!@#$%^&*-+=_|{}[]:<>,.?/.
      * @param Password Specifies the new password for the UserName account.
 Password settings rule specifies the following:.
 - valid values: 8 to 32 characters. a password with more than 12 characters is recommended.
--Must not start with "/".
--Must include the following four items:.
-Lowercase letters a ~ z.
-Uppercase letters: A – Z.
+- Must not start with "/".
+- Must include the following four items:.
+Lowercase letters a - z.
+Uppercase letters: A - Z.
 Digits: 0-9.
 Special symbols: ()`~!@#$%^&*-+=_|{}[]:<>,.?/.
      */

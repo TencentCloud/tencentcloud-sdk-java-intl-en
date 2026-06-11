@@ -24,116 +24,49 @@ import java.util.HashMap;
 public class TranslationParam extends AbstractModel {
 
     /**
-    * Target language for translation. Example: ["en", "ja"].
-
-Supported target languages:
-
-- <code>"zh"</code>: Chinese
-- <code>"en"</code>: English
-- <code>"vi"</code>: Vietnamese
-- <code>"ja"</code>: Japanese
-- <code>"ko"</code>: Korean
-- <code>"id"</code>: Indonesian
-- <code>"th"</code>: Thai
-- <code>"pt"</code>: Portuguese
-- <code>"ar"</code>: Arabic
-- <code>"es"</code>: Spanish
-- <code>"fr"</code>: French
-- <code>"ms"</code>: Malay
-- <code>"de"</code>: German
-- <code>"it"</code>: Italian
-- <code>"ru"</code>: Russian
+    * <p>Target language for translation, example value ["en", "ja"]. Target language list [Chinese "zh", English "en", Vietnamese "vi", Japanese "ja", Korean "ko", Indonesian "id", Thai "th", Portuguese "pt", Arabic "ar", Spanish "es", French "fr", Malay "ms", German "de", Italian "it", Russian "ru"].</p>
     */
     @SerializedName("TargetLang")
     @Expose
     private String [] TargetLang;
 
     /**
-     * Get Target language for translation. Example: ["en", "ja"].
+    * <p>Glossary configuration.</p>
+    */
+    @SerializedName("Terminologies")
+    @Expose
+    private TerminologyItem [] Terminologies;
 
-Supported target languages:
-
-- <code>"zh"</code>: Chinese
-- <code>"en"</code>: English
-- <code>"vi"</code>: Vietnamese
-- <code>"ja"</code>: Japanese
-- <code>"ko"</code>: Korean
-- <code>"id"</code>: Indonesian
-- <code>"th"</code>: Thai
-- <code>"pt"</code>: Portuguese
-- <code>"ar"</code>: Arabic
-- <code>"es"</code>: Spanish
-- <code>"fr"</code>: French
-- <code>"ms"</code>: Malay
-- <code>"de"</code>: German
-- <code>"it"</code>: Italian
-- <code>"ru"</code>: Russian 
-     * @return TargetLang Target language for translation. Example: ["en", "ja"].
-
-Supported target languages:
-
-- <code>"zh"</code>: Chinese
-- <code>"en"</code>: English
-- <code>"vi"</code>: Vietnamese
-- <code>"ja"</code>: Japanese
-- <code>"ko"</code>: Korean
-- <code>"id"</code>: Indonesian
-- <code>"th"</code>: Thai
-- <code>"pt"</code>: Portuguese
-- <code>"ar"</code>: Arabic
-- <code>"es"</code>: Spanish
-- <code>"fr"</code>: French
-- <code>"ms"</code>: Malay
-- <code>"de"</code>: German
-- <code>"it"</code>: Italian
-- <code>"ru"</code>: Russian
+    /**
+     * Get <p>Target language for translation, example value ["en", "ja"]. Target language list [Chinese "zh", English "en", Vietnamese "vi", Japanese "ja", Korean "ko", Indonesian "id", Thai "th", Portuguese "pt", Arabic "ar", Spanish "es", French "fr", Malay "ms", German "de", Italian "it", Russian "ru"].</p> 
+     * @return TargetLang <p>Target language for translation, example value ["en", "ja"]. Target language list [Chinese "zh", English "en", Vietnamese "vi", Japanese "ja", Korean "ko", Indonesian "id", Thai "th", Portuguese "pt", Arabic "ar", Spanish "es", French "fr", Malay "ms", German "de", Italian "it", Russian "ru"].</p>
      */
     public String [] getTargetLang() {
         return this.TargetLang;
     }
 
     /**
-     * Set Target language for translation. Example: ["en", "ja"].
-
-Supported target languages:
-
-- <code>"zh"</code>: Chinese
-- <code>"en"</code>: English
-- <code>"vi"</code>: Vietnamese
-- <code>"ja"</code>: Japanese
-- <code>"ko"</code>: Korean
-- <code>"id"</code>: Indonesian
-- <code>"th"</code>: Thai
-- <code>"pt"</code>: Portuguese
-- <code>"ar"</code>: Arabic
-- <code>"es"</code>: Spanish
-- <code>"fr"</code>: French
-- <code>"ms"</code>: Malay
-- <code>"de"</code>: German
-- <code>"it"</code>: Italian
-- <code>"ru"</code>: Russian
-     * @param TargetLang Target language for translation. Example: ["en", "ja"].
-
-Supported target languages:
-
-- <code>"zh"</code>: Chinese
-- <code>"en"</code>: English
-- <code>"vi"</code>: Vietnamese
-- <code>"ja"</code>: Japanese
-- <code>"ko"</code>: Korean
-- <code>"id"</code>: Indonesian
-- <code>"th"</code>: Thai
-- <code>"pt"</code>: Portuguese
-- <code>"ar"</code>: Arabic
-- <code>"es"</code>: Spanish
-- <code>"fr"</code>: French
-- <code>"ms"</code>: Malay
-- <code>"de"</code>: German
-- <code>"it"</code>: Italian
-- <code>"ru"</code>: Russian
+     * Set <p>Target language for translation, example value ["en", "ja"]. Target language list [Chinese "zh", English "en", Vietnamese "vi", Japanese "ja", Korean "ko", Indonesian "id", Thai "th", Portuguese "pt", Arabic "ar", Spanish "es", French "fr", Malay "ms", German "de", Italian "it", Russian "ru"].</p>
+     * @param TargetLang <p>Target language for translation, example value ["en", "ja"]. Target language list [Chinese "zh", English "en", Vietnamese "vi", Japanese "ja", Korean "ko", Indonesian "id", Thai "th", Portuguese "pt", Arabic "ar", Spanish "es", French "fr", Malay "ms", German "de", Italian "it", Russian "ru"].</p>
      */
     public void setTargetLang(String [] TargetLang) {
         this.TargetLang = TargetLang;
+    }
+
+    /**
+     * Get <p>Glossary configuration.</p> 
+     * @return Terminologies <p>Glossary configuration.</p>
+     */
+    public TerminologyItem [] getTerminologies() {
+        return this.Terminologies;
+    }
+
+    /**
+     * Set <p>Glossary configuration.</p>
+     * @param Terminologies <p>Glossary configuration.</p>
+     */
+    public void setTerminologies(TerminologyItem [] Terminologies) {
+        this.Terminologies = Terminologies;
     }
 
     public TranslationParam() {
@@ -150,6 +83,12 @@ Supported target languages:
                 this.TargetLang[i] = new String(source.TargetLang[i]);
             }
         }
+        if (source.Terminologies != null) {
+            this.Terminologies = new TerminologyItem[source.Terminologies.length];
+            for (int i = 0; i < source.Terminologies.length; i++) {
+                this.Terminologies[i] = new TerminologyItem(source.Terminologies[i]);
+            }
+        }
     }
 
 
@@ -158,6 +97,7 @@ Supported target languages:
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "TargetLang.", this.TargetLang);
+        this.setParamArrayObj(map, prefix + "Terminologies.", this.Terminologies);
 
     }
 }

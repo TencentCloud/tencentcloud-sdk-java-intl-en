@@ -27,7 +27,7 @@ public enum GmeErrorCode {
      /* Invalid BizId.(SDKAppid) */
      INVALIDPARAMETERVALUE_INVALIDBIZID("InvalidParameterValue.InvalidBizId"),
      
-     /*  */
+     /* The input deletion type must be 1 or 2. */
      INVALIDPARAMETERVALUE_INVALIDDELETETYPE("InvalidParameterValue.InvalidDeleteType"),
      
      /* Invalid RecordMode. */
@@ -36,7 +36,7 @@ public enum GmeErrorCode {
      /* Invalid RoomId. */
      INVALIDPARAMETERVALUE_INVALIDROOMID("InvalidParameterValue.InvalidRoomId"),
      
-     /*  */
+     /* There is no need to fill in StrUid; please fill in Uid. */
      INVALIDPARAMETERVALUE_INVALIDSTRUIN("InvalidParameterValue.InvalidStrUin"),
      
      /* Incorrect blocklist/allowlist format. */
@@ -51,7 +51,7 @@ public enum GmeErrorCode {
      /* The number of entries on the blocklist exceeds 20. */
      INVALIDPARAMETERVALUE_INVALIDUNSUBSCRIBEUSERIDS("InvalidParameterValue.InvalidUNSubscribeUserIds"),
      
-     /*  */
+     /* Cannot input both uid and strUid. */
      INVALIDPARAMETERVALUE_INVALIDUINORSTRUIN("InvalidParameterValue.InvalidUinOrStrUin"),
      
      /* The number of created applications has reached the upper limit. */
@@ -93,7 +93,7 @@ public enum GmeErrorCode {
      /* Operation unsupported. */
      UNSUPPORTEDOPERATION("UnsupportedOperation"),
      
-     /*  */
+     /* Maximum number of kicks exceeded */
      UNSUPPORTEDOPERATION_LIMITDELETEEXCEEDED("UnsupportedOperation.LimitDeleteExceeded"),
      
      /* The recording service is not activated. */

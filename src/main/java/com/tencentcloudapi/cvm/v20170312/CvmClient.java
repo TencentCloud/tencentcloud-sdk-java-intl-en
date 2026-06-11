@@ -152,7 +152,7 @@ If you currently use a password to log in, you will no longer be able to do so a
 
 An instance launch template is a configuration data and can be used to create instances. Its content includes configurations required to create instances, such as instance type, types and sizes of data disk and system disk, and security group and other information.
 
-This API is used to create an instance launch template. After the initial creation of the instance template, its template version is the default version 1. A new version can be created using CreateLaunchTemplateVersion (https://intl.cloud.tencent.com/document/product/213/66326?from_cn_redirect=1), and the version number will increment. By default, when specifying an instance launch template in RunInstances (https://intl.cloud.tencent.com/document/product/213/15730?from_cn_redirect=1), if the template version number is not specified, the default version will be used.
+This API is used to create an instance launch template. After the initial creation of the instance template, its template version is the default version 1. A new version can be created using [CreateLaunchTemplateVersion](https://www.tencentcloud.com/document/api/213/45361), and the version number will increment. By default, when specifying an instance launch template in [RunInstances](https://www.tencentcloud.com/document/api/213/33237), if the template version number is not specified, the default version will be used.
      * @param req CreateLaunchTemplateRequest
      * @return CreateLaunchTemplateResponse
      * @throws TencentCloudSDKException
@@ -272,7 +272,7 @@ This API is used to create an instance launch template. After the initial creati
     }
 
     /**
-     *This API is used to query the quota of [spread placement groups](https://intl.cloud.tencent.com/document/product/213/15486?from_cn_redirect=1).
+     *This API is used to query the quota of [spread placement groups](https://www.tencentcloud.com/document/product/213/15486).
      * @param req DescribeDisasterRecoverGroupQuotaRequest
      * @return DescribeDisasterRecoverGroupQuotaResponse
      * @throws TencentCloudSDKException
@@ -960,7 +960,7 @@ This API is used to perform operations that do not support instances with no cha
      *This API is used to renew annual and monthly subscription instances.
 
 This API is used to operate on monthly subscription instances only.
-This API is used to ensure your account balance is sufficient for renewal. You can check the balance via the DescribeAccountBalance API (https://www.tencentcloud.com/document/product/555/20253?from_cn_redirect=1).
+This API is used to ensure your account balance is sufficient for renewal. You can check the balance via the [DescribeAccountBalance API](https://www.tencentcloud.com/document/api/555/50284).
 * You can query the result of the instance operation by calling the API [DescribeInstances](https://www.tencentcloud.com/document/api/213/33258). If the latest operation status (LatestOperationState) of the instance is **SUCCESS**, the operation is successful.
      * @param req RenewInstancesRequest
      * @return RenewInstancesResponse
@@ -1036,7 +1036,7 @@ This API is used to ensure your account balance is sufficient for renewal. You c
     /**
      *This API (ResizeInstanceDisks) is used to expand the data disks of an instance.
 
-* Currently, you can only use the API to expand non-elastic data disks whose [disk type](https://www.tencentcloud.com/document/product/213/15753) is `CLOUD_BASIC`, `CLOUD_PREMIUM`, or `CLOUD_SSD`. You can use [`DescribeDisks`](https://intl.cloud.tencent.com/document/api/362/16315?from_cn_redirect=1) to check whether a disk is elastic. If the `Portable` field in the response is `false`, it means that the disk is non-elastic.
+* Currently, you can only use the API to expand non-elastic data disks whose [disk type](https://www.tencentcloud.com/document/product/213/15753) is `CLOUD_BASIC`, `CLOUD_PREMIUM`, or `CLOUD_SSD`. You can use [`DescribeDisks`](https://www.tencentcloud.com/document/api/362/16315) to check whether a disk is elastic. If the `Portable` field in the response is `false`, it means that the disk is non-elastic.
 * Currently, this API does not support [CDH](https://intl.cloud.tencent.com/document/product/416?from_cn_redirect=1) instances.
 * Currently, only one data disk can be expanded at a time.
      * @param req ResizeInstanceDisksRequest

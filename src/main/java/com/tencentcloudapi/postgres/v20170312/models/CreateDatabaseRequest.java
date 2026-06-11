@@ -39,7 +39,7 @@ Name specification: consists of letters (a-z, a-z), digits (0-9), and underscore
     private String DatabaseName;
 
     /**
-    * Owner of the database. obtain through the api [DescribeAccounts](https://www.tencentcloud.com/document/api/409/18109?from_cn_redirect=1).
+    * Owner of the database. obtain through the api [DescribeAccounts](https://www.tencentcloud.com/document/product/409/18109).
     */
     @SerializedName("DatabaseOwner")
     @Expose
@@ -105,16 +105,16 @@ Name specification: consists of letters (a-z, a-z), digits (0-9), and underscore
     }
 
     /**
-     * Get Owner of the database. obtain through the api [DescribeAccounts](https://www.tencentcloud.com/document/api/409/18109?from_cn_redirect=1). 
-     * @return DatabaseOwner Owner of the database. obtain through the api [DescribeAccounts](https://www.tencentcloud.com/document/api/409/18109?from_cn_redirect=1).
+     * Get Owner of the database. obtain through the api [DescribeAccounts](https://www.tencentcloud.com/document/product/409/18109). 
+     * @return DatabaseOwner Owner of the database. obtain through the api [DescribeAccounts](https://www.tencentcloud.com/document/product/409/18109).
      */
     public String getDatabaseOwner() {
         return this.DatabaseOwner;
     }
 
     /**
-     * Set Owner of the database. obtain through the api [DescribeAccounts](https://www.tencentcloud.com/document/api/409/18109?from_cn_redirect=1).
-     * @param DatabaseOwner Owner of the database. obtain through the api [DescribeAccounts](https://www.tencentcloud.com/document/api/409/18109?from_cn_redirect=1).
+     * Set Owner of the database. obtain through the api [DescribeAccounts](https://www.tencentcloud.com/document/product/409/18109).
+     * @param DatabaseOwner Owner of the database. obtain through the api [DescribeAccounts](https://www.tencentcloud.com/document/product/409/18109).
      */
     public void setDatabaseOwner(String DatabaseOwner) {
         this.DatabaseOwner = DatabaseOwner;

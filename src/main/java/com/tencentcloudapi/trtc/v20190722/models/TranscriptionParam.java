@@ -67,7 +67,8 @@ If all anchors being transcribed continuously leave the TRTC room or switch to t
     private Long MaxIdleTime;
 
     /**
-    * Controls whether the custom data channel is enabled. Accepted values: 0 (disabled) or 1 (enabled). Defaults to 0 if omitted.
+    * Custom data mode: 0 indicates disabled, 1 indicates enabled.
+Leave blank defaults to 0, meaning custom data is disabled.
     */
     @SerializedName("SendCustomMode")
     @Expose
@@ -186,16 +187,20 @@ If all anchors being transcribed continuously leave the TRTC room or switch to t
     }
 
     /**
-     * Get Controls whether the custom data channel is enabled. Accepted values: 0 (disabled) or 1 (enabled). Defaults to 0 if omitted. 
-     * @return SendCustomMode Controls whether the custom data channel is enabled. Accepted values: 0 (disabled) or 1 (enabled). Defaults to 0 if omitted.
+     * Get Custom data mode: 0 indicates disabled, 1 indicates enabled.
+Leave blank defaults to 0, meaning custom data is disabled. 
+     * @return SendCustomMode Custom data mode: 0 indicates disabled, 1 indicates enabled.
+Leave blank defaults to 0, meaning custom data is disabled.
      */
     public Long getSendCustomMode() {
         return this.SendCustomMode;
     }
 
     /**
-     * Set Controls whether the custom data channel is enabled. Accepted values: 0 (disabled) or 1 (enabled). Defaults to 0 if omitted.
-     * @param SendCustomMode Controls whether the custom data channel is enabled. Accepted values: 0 (disabled) or 1 (enabled). Defaults to 0 if omitted.
+     * Set Custom data mode: 0 indicates disabled, 1 indicates enabled.
+Leave blank defaults to 0, meaning custom data is disabled.
+     * @param SendCustomMode Custom data mode: 0 indicates disabled, 1 indicates enabled.
+Leave blank defaults to 0, meaning custom data is disabled.
      */
     public void setSendCustomMode(Long SendCustomMode) {
         this.SendCustomMode = SendCustomMode;

@@ -38,7 +38,7 @@ public class ModifyDatabaseOwnerRequest extends AbstractModel {
     private String DatabaseName;
 
     /**
-    * New owner of the database. obtain through the api [DescribeAccounts](https://www.tencentcloud.com/document/api/409/18109?from_cn_redirect=1).
+    * New owner of the database. obtain through the api [DescribeAccounts](https://www.tencentcloud.com/document/product/409/18109).
     */
     @SerializedName("DatabaseOwner")
     @Expose
@@ -77,16 +77,16 @@ public class ModifyDatabaseOwnerRequest extends AbstractModel {
     }
 
     /**
-     * Get New owner of the database. obtain through the api [DescribeAccounts](https://www.tencentcloud.com/document/api/409/18109?from_cn_redirect=1). 
-     * @return DatabaseOwner New owner of the database. obtain through the api [DescribeAccounts](https://www.tencentcloud.com/document/api/409/18109?from_cn_redirect=1).
+     * Get New owner of the database. obtain through the api [DescribeAccounts](https://www.tencentcloud.com/document/product/409/18109). 
+     * @return DatabaseOwner New owner of the database. obtain through the api [DescribeAccounts](https://www.tencentcloud.com/document/product/409/18109).
      */
     public String getDatabaseOwner() {
         return this.DatabaseOwner;
     }
 
     /**
-     * Set New owner of the database. obtain through the api [DescribeAccounts](https://www.tencentcloud.com/document/api/409/18109?from_cn_redirect=1).
-     * @param DatabaseOwner New owner of the database. obtain through the api [DescribeAccounts](https://www.tencentcloud.com/document/api/409/18109?from_cn_redirect=1).
+     * Set New owner of the database. obtain through the api [DescribeAccounts](https://www.tencentcloud.com/document/product/409/18109).
+     * @param DatabaseOwner New owner of the database. obtain through the api [DescribeAccounts](https://www.tencentcloud.com/document/product/409/18109).
      */
     public void setDatabaseOwner(String DatabaseOwner) {
         this.DatabaseOwner = DatabaseOwner;

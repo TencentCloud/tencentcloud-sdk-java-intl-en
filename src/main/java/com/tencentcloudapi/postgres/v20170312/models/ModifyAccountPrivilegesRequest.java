@@ -31,7 +31,7 @@ public class ModifyAccountPrivilegesRequest extends AbstractModel {
     private String DBInstanceId;
 
     /**
-    * Modify the permission of this account for a database object. obtain through the [DescribeAccounts](https://www.tencentcloud.com/document/api/409/18109?from_cn_redirect=1) api.
+    * Modify the permission of this account for a database object. obtain through the [DescribeAccounts](https://www.tencentcloud.com/document/product/409/18109) api.
     */
     @SerializedName("UserName")
     @Expose
@@ -61,16 +61,16 @@ public class ModifyAccountPrivilegesRequest extends AbstractModel {
     }
 
     /**
-     * Get Modify the permission of this account for a database object. obtain through the [DescribeAccounts](https://www.tencentcloud.com/document/api/409/18109?from_cn_redirect=1) api. 
-     * @return UserName Modify the permission of this account for a database object. obtain through the [DescribeAccounts](https://www.tencentcloud.com/document/api/409/18109?from_cn_redirect=1) api.
+     * Get Modify the permission of this account for a database object. obtain through the [DescribeAccounts](https://www.tencentcloud.com/document/product/409/18109) api. 
+     * @return UserName Modify the permission of this account for a database object. obtain through the [DescribeAccounts](https://www.tencentcloud.com/document/product/409/18109) api.
      */
     public String getUserName() {
         return this.UserName;
     }
 
     /**
-     * Set Modify the permission of this account for a database object. obtain through the [DescribeAccounts](https://www.tencentcloud.com/document/api/409/18109?from_cn_redirect=1) api.
-     * @param UserName Modify the permission of this account for a database object. obtain through the [DescribeAccounts](https://www.tencentcloud.com/document/api/409/18109?from_cn_redirect=1) api.
+     * Set Modify the permission of this account for a database object. obtain through the [DescribeAccounts](https://www.tencentcloud.com/document/product/409/18109) api.
+     * @param UserName Modify the permission of this account for a database object. obtain through the [DescribeAccounts](https://www.tencentcloud.com/document/product/409/18109) api.
      */
     public void setUserName(String UserName) {
         this.UserName = UserName;

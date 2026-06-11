@@ -38,7 +38,7 @@ public class BillDistributionResourceSummary extends AbstractModel {
     private String ProductCodeName;
 
     /**
-    * Billing mode: The billing mode, which can be monthly subscription or pay-as-you-go.
+    * Billing mode: The billing mode, which can be yearly/monthly subscription or pay-as-you-go.
     */
     @SerializedName("PayModeName")
     @Expose
@@ -80,14 +80,14 @@ public class BillDistributionResourceSummary extends AbstractModel {
     private String ResourceName;
 
     /**
-    * Transaction type, which can be monthly subscription purchase, monthly subscription renewal, pay-as-you-go deduction, etc.
+    * Transaction type, which can be yearly/monthly subscription purchase, yearly/monthly subscription renewal, pay-as-you-go deduction, etc.
     */
     @SerializedName("ActionTypeName")
     @Expose
     private String ActionTypeName;
 
     /**
-    * Order ID: The ID of a monthly subscription order.
+    * Order ID: The ID of a yearly/monthly subscription order.
     */
     @SerializedName("OrderId")
     @Expose
@@ -322,16 +322,16 @@ public class BillDistributionResourceSummary extends AbstractModel {
     }
 
     /**
-     * Get Billing mode: The billing mode, which can be monthly subscription or pay-as-you-go. 
-     * @return PayModeName Billing mode: The billing mode, which can be monthly subscription or pay-as-you-go.
+     * Get Billing mode: The billing mode, which can be yearly/monthly subscription or pay-as-you-go. 
+     * @return PayModeName Billing mode: The billing mode, which can be yearly/monthly subscription or pay-as-you-go.
      */
     public String getPayModeName() {
         return this.PayModeName;
     }
 
     /**
-     * Set Billing mode: The billing mode, which can be monthly subscription or pay-as-you-go.
-     * @param PayModeName Billing mode: The billing mode, which can be monthly subscription or pay-as-you-go.
+     * Set Billing mode: The billing mode, which can be yearly/monthly subscription or pay-as-you-go.
+     * @param PayModeName Billing mode: The billing mode, which can be yearly/monthly subscription or pay-as-you-go.
      */
     public void setPayModeName(String PayModeName) {
         this.PayModeName = PayModeName;
@@ -418,32 +418,32 @@ public class BillDistributionResourceSummary extends AbstractModel {
     }
 
     /**
-     * Get Transaction type, which can be monthly subscription purchase, monthly subscription renewal, pay-as-you-go deduction, etc. 
-     * @return ActionTypeName Transaction type, which can be monthly subscription purchase, monthly subscription renewal, pay-as-you-go deduction, etc.
+     * Get Transaction type, which can be yearly/monthly subscription purchase, yearly/monthly subscription renewal, pay-as-you-go deduction, etc. 
+     * @return ActionTypeName Transaction type, which can be yearly/monthly subscription purchase, yearly/monthly subscription renewal, pay-as-you-go deduction, etc.
      */
     public String getActionTypeName() {
         return this.ActionTypeName;
     }
 
     /**
-     * Set Transaction type, which can be monthly subscription purchase, monthly subscription renewal, pay-as-you-go deduction, etc.
-     * @param ActionTypeName Transaction type, which can be monthly subscription purchase, monthly subscription renewal, pay-as-you-go deduction, etc.
+     * Set Transaction type, which can be yearly/monthly subscription purchase, yearly/monthly subscription renewal, pay-as-you-go deduction, etc.
+     * @param ActionTypeName Transaction type, which can be yearly/monthly subscription purchase, yearly/monthly subscription renewal, pay-as-you-go deduction, etc.
      */
     public void setActionTypeName(String ActionTypeName) {
         this.ActionTypeName = ActionTypeName;
     }
 
     /**
-     * Get Order ID: The ID of a monthly subscription order. 
-     * @return OrderId Order ID: The ID of a monthly subscription order.
+     * Get Order ID: The ID of a yearly/monthly subscription order. 
+     * @return OrderId Order ID: The ID of a yearly/monthly subscription order.
      */
     public String getOrderId() {
         return this.OrderId;
     }
 
     /**
-     * Set Order ID: The ID of a monthly subscription order.
-     * @param OrderId Order ID: The ID of a monthly subscription order.
+     * Set Order ID: The ID of a yearly/monthly subscription order.
+     * @param OrderId Order ID: The ID of a yearly/monthly subscription order.
      */
     public void setOrderId(String OrderId) {
         this.OrderId = OrderId;

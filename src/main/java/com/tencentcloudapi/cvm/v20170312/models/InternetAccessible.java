@@ -34,7 +34,7 @@ public class InternetAccessible extends AbstractModel {
     private String InternetChargeType;
 
     /**
-    * The maximum outbound bandwidth of the public network, in Mbps. The default value is 0 Mbps. The upper limit of bandwidth varies for different models. For more information, see [Purchase Network Bandwidth](https://intl.cloud.tencent.com/document/product/213/12523?from_cn_redirect=1).
+    * The maximum outbound bandwidth of the public network, in Mbps. The default value is 0 Mbps. The upper limit of bandwidth varies for different models. For more information, see [Purchase Network Bandwidth](https://www.tencentcloud.com/document/product/213/12523).
     */
     @SerializedName("InternetMaxBandwidthOut")
     @Expose
@@ -77,7 +77,7 @@ Note: The static single-line IP is only supported in some regions.
 <li> AntiDDoSEIP: specifies the anti-ddos eip. only partial regions support anti-ddos eip. details visible in the [elastic IP product overview](https://www.tencentcloud.com/document/product/213/5733).</li>.
 If needed, assign a public IPv4 address to the resource by specifying the IPv4 address type.
 
-This feature is in beta test in selected regions. submit a ticket for consultation (https://console.cloud.tencent.com/workorder/category) if needed.
+This feature is in beta test in selected regions. [submit a ticket for consultation](https://console.tencentcloud.com/workorder/category) if needed.
     */
     @SerializedName("IPv4AddressType")
     @Expose
@@ -89,7 +89,7 @@ This feature is in beta test in selected regions. submit a ticket for consultati
 <Li>HighQualityEIPv6: specifies the high quality ipv6. highqualityeipv6 is only supported in hong kong (china).</li>.
 If needed, assign an elastic IPv6 address for resource allocation.
 
-This feature is in beta test in selected regions. submit a ticket for consultation (https://console.cloud.tencent.com/workorder/category) if needed.
+This feature is in beta test in selected regions. [submit a ticket for consultation](https://console.tencentcloud.com/workorder/category) if needed.
     */
     @SerializedName("IPv6AddressType")
     @Expose
@@ -132,16 +132,16 @@ This feature is in beta test in selected regions. submit a ticket for consultati
     }
 
     /**
-     * Get The maximum outbound bandwidth of the public network, in Mbps. The default value is 0 Mbps. The upper limit of bandwidth varies for different models. For more information, see [Purchase Network Bandwidth](https://intl.cloud.tencent.com/document/product/213/12523?from_cn_redirect=1). 
-     * @return InternetMaxBandwidthOut The maximum outbound bandwidth of the public network, in Mbps. The default value is 0 Mbps. The upper limit of bandwidth varies for different models. For more information, see [Purchase Network Bandwidth](https://intl.cloud.tencent.com/document/product/213/12523?from_cn_redirect=1).
+     * Get The maximum outbound bandwidth of the public network, in Mbps. The default value is 0 Mbps. The upper limit of bandwidth varies for different models. For more information, see [Purchase Network Bandwidth](https://www.tencentcloud.com/document/product/213/12523). 
+     * @return InternetMaxBandwidthOut The maximum outbound bandwidth of the public network, in Mbps. The default value is 0 Mbps. The upper limit of bandwidth varies for different models. For more information, see [Purchase Network Bandwidth](https://www.tencentcloud.com/document/product/213/12523).
      */
     public Long getInternetMaxBandwidthOut() {
         return this.InternetMaxBandwidthOut;
     }
 
     /**
-     * Set The maximum outbound bandwidth of the public network, in Mbps. The default value is 0 Mbps. The upper limit of bandwidth varies for different models. For more information, see [Purchase Network Bandwidth](https://intl.cloud.tencent.com/document/product/213/12523?from_cn_redirect=1).
-     * @param InternetMaxBandwidthOut The maximum outbound bandwidth of the public network, in Mbps. The default value is 0 Mbps. The upper limit of bandwidth varies for different models. For more information, see [Purchase Network Bandwidth](https://intl.cloud.tencent.com/document/product/213/12523?from_cn_redirect=1).
+     * Set The maximum outbound bandwidth of the public network, in Mbps. The default value is 0 Mbps. The upper limit of bandwidth varies for different models. For more information, see [Purchase Network Bandwidth](https://www.tencentcloud.com/document/product/213/12523).
+     * @param InternetMaxBandwidthOut The maximum outbound bandwidth of the public network, in Mbps. The default value is 0 Mbps. The upper limit of bandwidth varies for different models. For more information, see [Purchase Network Bandwidth](https://www.tencentcloud.com/document/product/213/12523).
      */
     public void setInternetMaxBandwidthOut(Long InternetMaxBandwidthOut) {
         this.InternetMaxBandwidthOut = InternetMaxBandwidthOut;
@@ -235,7 +235,7 @@ Note: The static single-line IP is only supported in some regions.
 <li> AntiDDoSEIP: specifies the anti-ddos eip. only partial regions support anti-ddos eip. details visible in the [elastic IP product overview](https://www.tencentcloud.com/document/product/213/5733).</li>.
 If needed, assign a public IPv4 address to the resource by specifying the IPv4 address type.
 
-This feature is in beta test in selected regions. submit a ticket for consultation (https://console.cloud.tencent.com/workorder/category) if needed. 
+This feature is in beta test in selected regions. [submit a ticket for consultation](https://console.tencentcloud.com/workorder/category) if needed. 
      * @return IPv4AddressType Specifies the public IP type.
 
 <Li>WanIP: specifies the public ip address.</li>.
@@ -243,7 +243,7 @@ This feature is in beta test in selected regions. submit a ticket for consultati
 <li> AntiDDoSEIP: specifies the anti-ddos eip. only partial regions support anti-ddos eip. details visible in the [elastic IP product overview](https://www.tencentcloud.com/document/product/213/5733).</li>.
 If needed, assign a public IPv4 address to the resource by specifying the IPv4 address type.
 
-This feature is in beta test in selected regions. submit a ticket for consultation (https://console.cloud.tencent.com/workorder/category) if needed.
+This feature is in beta test in selected regions. [submit a ticket for consultation](https://console.tencentcloud.com/workorder/category) if needed.
      */
     public String getIPv4AddressType() {
         return this.IPv4AddressType;
@@ -257,7 +257,7 @@ This feature is in beta test in selected regions. submit a ticket for consultati
 <li> AntiDDoSEIP: specifies the anti-ddos eip. only partial regions support anti-ddos eip. details visible in the [elastic IP product overview](https://www.tencentcloud.com/document/product/213/5733).</li>.
 If needed, assign a public IPv4 address to the resource by specifying the IPv4 address type.
 
-This feature is in beta test in selected regions. submit a ticket for consultation (https://console.cloud.tencent.com/workorder/category) if needed.
+This feature is in beta test in selected regions. [submit a ticket for consultation](https://console.tencentcloud.com/workorder/category) if needed.
      * @param IPv4AddressType Specifies the public IP type.
 
 <Li>WanIP: specifies the public ip address.</li>.
@@ -265,7 +265,7 @@ This feature is in beta test in selected regions. submit a ticket for consultati
 <li> AntiDDoSEIP: specifies the anti-ddos eip. only partial regions support anti-ddos eip. details visible in the [elastic IP product overview](https://www.tencentcloud.com/document/product/213/5733).</li>.
 If needed, assign a public IPv4 address to the resource by specifying the IPv4 address type.
 
-This feature is in beta test in selected regions. submit a ticket for consultation (https://console.cloud.tencent.com/workorder/category) if needed.
+This feature is in beta test in selected regions. [submit a ticket for consultation](https://console.tencentcloud.com/workorder/category) if needed.
      */
     public void setIPv4AddressType(String IPv4AddressType) {
         this.IPv4AddressType = IPv4AddressType;
@@ -277,13 +277,13 @@ This feature is in beta test in selected regions. submit a ticket for consultati
 <Li>HighQualityEIPv6: specifies the high quality ipv6. highqualityeipv6 is only supported in hong kong (china).</li>.
 If needed, assign an elastic IPv6 address for resource allocation.
 
-This feature is in beta test in selected regions. submit a ticket for consultation (https://console.cloud.tencent.com/workorder/category) if needed. 
+This feature is in beta test in selected regions. [submit a ticket for consultation](https://console.tencentcloud.com/workorder/category) if needed. 
      * @return IPv6AddressType Indicates the type of elastic public IPv6.
 <Li>EIPv6: elastic ip version 6.</li>.
 <Li>HighQualityEIPv6: specifies the high quality ipv6. highqualityeipv6 is only supported in hong kong (china).</li>.
 If needed, assign an elastic IPv6 address for resource allocation.
 
-This feature is in beta test in selected regions. submit a ticket for consultation (https://console.cloud.tencent.com/workorder/category) if needed.
+This feature is in beta test in selected regions. [submit a ticket for consultation](https://console.tencentcloud.com/workorder/category) if needed.
      */
     public String getIPv6AddressType() {
         return this.IPv6AddressType;
@@ -295,13 +295,13 @@ This feature is in beta test in selected regions. submit a ticket for consultati
 <Li>HighQualityEIPv6: specifies the high quality ipv6. highqualityeipv6 is only supported in hong kong (china).</li>.
 If needed, assign an elastic IPv6 address for resource allocation.
 
-This feature is in beta test in selected regions. submit a ticket for consultation (https://console.cloud.tencent.com/workorder/category) if needed.
+This feature is in beta test in selected regions. [submit a ticket for consultation](https://console.tencentcloud.com/workorder/category) if needed.
      * @param IPv6AddressType Indicates the type of elastic public IPv6.
 <Li>EIPv6: elastic ip version 6.</li>.
 <Li>HighQualityEIPv6: specifies the high quality ipv6. highqualityeipv6 is only supported in hong kong (china).</li>.
 If needed, assign an elastic IPv6 address for resource allocation.
 
-This feature is in beta test in selected regions. submit a ticket for consultation (https://console.cloud.tencent.com/workorder/category) if needed.
+This feature is in beta test in selected regions. [submit a ticket for consultation](https://console.tencentcloud.com/workorder/category) if needed.
      */
     public void setIPv6AddressType(String IPv6AddressType) {
         this.IPv6AddressType = IPv6AddressType;
