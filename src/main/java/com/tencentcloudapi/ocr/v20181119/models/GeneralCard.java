@@ -121,9 +121,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Gender on the document.
--M: man.
--F: woman.
--X: other gender identity.
+- M: man.
+- F: woman.
+- X: other gender identity.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Sex")
@@ -444,14 +444,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get Gender on the document.
--M: man.
--F: woman.
--X: other gender identity.
+- M: man.
+- F: woman.
+- X: other gender identity.
 Note: This field may return null, indicating that no valid values can be obtained. 
      * @return Sex Gender on the document.
--M: man.
--F: woman.
--X: other gender identity.
+- M: man.
+- F: woman.
+- X: other gender identity.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getSex() {
@@ -460,14 +460,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Gender on the document.
--M: man.
--F: woman.
--X: other gender identity.
+- M: man.
+- F: woman.
+- X: other gender identity.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param Sex Gender on the document.
--M: man.
--F: woman.
--X: other gender identity.
+- M: man.
+- F: woman.
+- X: other gender identity.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setSex(String Sex) {

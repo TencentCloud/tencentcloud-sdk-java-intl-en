@@ -87,14 +87,14 @@ public class RecognizeBrazilRNMOCRResponse extends AbstractModel {
     private String CPF;
 
     /**
-    * 
+    * Residence category
     */
     @SerializedName("CLASSIFICATION")
     @Expose
     private String CLASSIFICATION;
 
     /**
-    * 
+    * Residence validity term
     */
     @SerializedName("PRAZODERESIDENCIA")
     @Expose
@@ -287,32 +287,32 @@ public class RecognizeBrazilRNMOCRResponse extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return CLASSIFICATION 
+     * Get Residence category 
+     * @return CLASSIFICATION Residence category
      */
     public String getCLASSIFICATION() {
         return this.CLASSIFICATION;
     }
 
     /**
-     * Set 
-     * @param CLASSIFICATION 
+     * Set Residence category
+     * @param CLASSIFICATION Residence category
      */
     public void setCLASSIFICATION(String CLASSIFICATION) {
         this.CLASSIFICATION = CLASSIFICATION;
     }
 
     /**
-     * Get  
-     * @return PRAZODERESIDENCIA 
+     * Get Residence validity term 
+     * @return PRAZODERESIDENCIA Residence validity term
      */
     public String getPRAZODERESIDENCIA() {
         return this.PRAZODERESIDENCIA;
     }
 
     /**
-     * Set 
-     * @param PRAZODERESIDENCIA 
+     * Set Residence validity term
+     * @param PRAZODERESIDENCIA Residence validity term
      */
     public void setPRAZODERESIDENCIA(String PRAZODERESIDENCIA) {
         this.PRAZODERESIDENCIA = PRAZODERESIDENCIA;
