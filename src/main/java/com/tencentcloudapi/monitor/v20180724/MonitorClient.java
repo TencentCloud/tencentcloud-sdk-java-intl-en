@@ -162,6 +162,17 @@ Note that alert object and alert message are special fields of Prometheus Rule A
     }
 
     /**
+     *Creates an on-call schedule.
+     * @param req CreateOnCallFormRequest
+     * @return CreateOnCallFormResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateOnCallFormResponse CreateOnCallForm(CreateOnCallFormRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateOnCallForm", CreateOnCallFormResponse.class);
+    }
+
+    /**
      *This API is used to add a policy group.
      * @param req CreatePolicyGroupRequest
      * @return CreatePolicyGroupResponse
@@ -395,6 +406,17 @@ This API is used to enable individually creating enabled/disabled alert rules un
     public DeleteGrafanaNotificationChannelResponse DeleteGrafanaNotificationChannel(DeleteGrafanaNotificationChannelRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteGrafanaNotificationChannel", DeleteGrafanaNotificationChannelResponse.class);
+    }
+
+    /**
+     *Deletes an on-call schedule.
+     * @param req DeleteOnCallFormsRequest
+     * @return DeleteOnCallFormsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteOnCallFormsResponse DeleteOnCallForms(DeleteOnCallFormsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteOnCallForms", DeleteOnCallFormsResponse.class);
     }
 
     /**
@@ -815,6 +837,28 @@ Note: **If you use a sub-account, you can only query the alarm records of author
     public DescribeMonitorTypesResponse DescribeMonitorTypes(DescribeMonitorTypesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeMonitorTypes", DescribeMonitorTypesResponse.class);
+    }
+
+    /**
+     *Describes On-Call Schedule Details.
+     * @param req DescribeOnCallFormRequest
+     * @return DescribeOnCallFormResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeOnCallFormResponse DescribeOnCallForm(DescribeOnCallFormRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeOnCallForm", DescribeOnCallFormResponse.class);
+    }
+
+    /**
+     *Describes on-call schedule list.
+     * @param req DescribeOnCallFormsRequest
+     * @return DescribeOnCallFormsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeOnCallFormsResponse DescribeOnCallForms(DescribeOnCallFormsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeOnCallForms", DescribeOnCallFormsResponse.class);
     }
 
     /**
@@ -1609,6 +1653,17 @@ Note that alert object and alert message are special fields of Prometheus Rule A
     public UpdateGrafanaWhiteListResponse UpdateGrafanaWhiteList(UpdateGrafanaWhiteListRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "UpdateGrafanaWhiteList", UpdateGrafanaWhiteListResponse.class);
+    }
+
+    /**
+     *Modifies an on-call schedule.
+     * @param req UpdateOnCallFormRequest
+     * @return UpdateOnCallFormResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateOnCallFormResponse UpdateOnCallForm(UpdateOnCallFormRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpdateOnCallForm", UpdateOnCallFormResponse.class);
     }
 
     /**

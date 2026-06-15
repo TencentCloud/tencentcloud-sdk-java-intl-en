@@ -89,6 +89,13 @@ public class CreateCfsFileSystemRequest extends AbstractModel {
     private String FsName;
 
     /**
+    * 
+    */
+    @SerializedName("Encrypted")
+    @Expose
+    private Boolean Encrypted;
+
+    /**
     * File system tag
     */
     @SerializedName("ResourceTags")
@@ -319,6 +326,22 @@ Enhanced: creates enhanced metadata.
     }
 
     /**
+     * Get  
+     * @return Encrypted 
+     */
+    public Boolean getEncrypted() {
+        return this.Encrypted;
+    }
+
+    /**
+     * Set 
+     * @param Encrypted 
+     */
+    public void setEncrypted(Boolean Encrypted) {
+        this.Encrypted = Encrypted;
+    }
+
+    /**
      * Get File system tag 
      * @return ResourceTags File system tag
      */
@@ -545,6 +568,9 @@ Enhanced: creates enhanced metadata.
         if (source.FsName != null) {
             this.FsName = new String(source.FsName);
         }
+        if (source.Encrypted != null) {
+            this.Encrypted = new Boolean(source.Encrypted);
+        }
         if (source.ResourceTags != null) {
             this.ResourceTags = new TagInfo[source.ResourceTags.length];
             for (int i = 0; i < source.ResourceTags.length; i++) {
@@ -594,6 +620,7 @@ Enhanced: creates enhanced metadata.
         this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
         this.setParamSimple(map, prefix + "MountIP", this.MountIP);
         this.setParamSimple(map, prefix + "FsName", this.FsName);
+        this.setParamSimple(map, prefix + "Encrypted", this.Encrypted);
         this.setParamArrayObj(map, prefix + "ResourceTags.", this.ResourceTags);
         this.setParamSimple(map, prefix + "ClientToken", this.ClientToken);
         this.setParamSimple(map, prefix + "CcnId", this.CcnId);

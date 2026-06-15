@@ -38,18 +38,18 @@ public class CreateLifecycleDataTaskRequest extends AbstractModel {
     private String Type;
 
     /**
-    * The path or file to be settled supports passing only one path and cannot be empty.
-    */
-    @SerializedName("TaskPath")
-    @Expose
-    private String TaskPath;
-
-    /**
     * Task name.
     */
     @SerializedName("TaskName")
     @Expose
     private String TaskName;
+
+    /**
+    * The path or file to be settled supports passing only one path and cannot be empty.
+    */
+    @SerializedName("TaskPath")
+    @Expose
+    private String TaskPath;
 
     /**
     * Data flow ID. this api can be accessed through DescribeDataFlow.
@@ -98,22 +98,6 @@ public class CreateLifecycleDataTaskRequest extends AbstractModel {
     }
 
     /**
-     * Get The path or file to be settled supports passing only one path and cannot be empty. 
-     * @return TaskPath The path or file to be settled supports passing only one path and cannot be empty.
-     */
-    public String getTaskPath() {
-        return this.TaskPath;
-    }
-
-    /**
-     * Set The path or file to be settled supports passing only one path and cannot be empty.
-     * @param TaskPath The path or file to be settled supports passing only one path and cannot be empty.
-     */
-    public void setTaskPath(String TaskPath) {
-        this.TaskPath = TaskPath;
-    }
-
-    /**
      * Get Task name. 
      * @return TaskName Task name.
      */
@@ -127,6 +111,22 @@ public class CreateLifecycleDataTaskRequest extends AbstractModel {
      */
     public void setTaskName(String TaskName) {
         this.TaskName = TaskName;
+    }
+
+    /**
+     * Get The path or file to be settled supports passing only one path and cannot be empty. 
+     * @return TaskPath The path or file to be settled supports passing only one path and cannot be empty.
+     */
+    public String getTaskPath() {
+        return this.TaskPath;
+    }
+
+    /**
+     * Set The path or file to be settled supports passing only one path and cannot be empty.
+     * @param TaskPath The path or file to be settled supports passing only one path and cannot be empty.
+     */
+    public void setTaskPath(String TaskPath) {
+        this.TaskPath = TaskPath;
     }
 
     /**
@@ -175,11 +175,11 @@ public class CreateLifecycleDataTaskRequest extends AbstractModel {
         if (source.Type != null) {
             this.Type = new String(source.Type);
         }
-        if (source.TaskPath != null) {
-            this.TaskPath = new String(source.TaskPath);
-        }
         if (source.TaskName != null) {
             this.TaskName = new String(source.TaskName);
+        }
+        if (source.TaskPath != null) {
+            this.TaskPath = new String(source.TaskPath);
         }
         if (source.DataFlowId != null) {
             this.DataFlowId = new String(source.DataFlowId);
@@ -196,8 +196,8 @@ public class CreateLifecycleDataTaskRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "FileSystemId", this.FileSystemId);
         this.setParamSimple(map, prefix + "Type", this.Type);
-        this.setParamSimple(map, prefix + "TaskPath", this.TaskPath);
         this.setParamSimple(map, prefix + "TaskName", this.TaskName);
+        this.setParamSimple(map, prefix + "TaskPath", this.TaskPath);
         this.setParamSimple(map, prefix + "DataFlowId", this.DataFlowId);
         this.setParamSimple(map, prefix + "IsOverwrite", this.IsOverwrite);
 

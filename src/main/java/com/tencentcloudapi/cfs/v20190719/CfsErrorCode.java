@@ -69,6 +69,12 @@ public enum CfsErrorCode {
      /* The file system snapshot policy name is invalid. */
      INVALIDPARAMETER_INVALIDSNAPSHOTPOLICYNAME("InvalidParameter.InvalidSnapshotPolicyName"),
      
+     /*  */
+     INVALIDPARAMETER_LISTPATHANDTASKPATHCONFLICT("InvalidParameter.ListPathAndTaskPathConflict"),
+     
+     /*  */
+     INVALIDPARAMETER_LISTPATHINVALIDPREFIX("InvalidParameter.ListPathInvalidPrefix"),
+     
      /* The policy parameter is missing. */
      INVALIDPARAMETER_MISSINGPOLICYPARAM("InvalidParameter.MissingPolicyParam"),
      
@@ -258,6 +264,12 @@ public enum CfsErrorCode {
      /* Invalid AZ or AZ ID. */
      INVALIDPARAMETERVALUE_INVALIDZONEORZONEID("InvalidParameterValue.InvalidZoneOrZoneId"),
      
+     /*  */
+     INVALIDPARAMETERVALUE_LISTPATHFILEINVALID("InvalidParameterValue.ListPathFileInvalid"),
+     
+     /*  */
+     INVALIDPARAMETERVALUE_LISTPATHFILENOTFOUND("InvalidParameterValue.ListPathFileNotFound"),
+     
      /* `FileSystemId` is missing. */
      INVALIDPARAMETERVALUE_MISSINGFILESYSTEMID("InvalidParameterValue.MissingFileSystemId"),
      
@@ -422,6 +434,9 @@ public enum CfsErrorCode {
      
      /* The snapshot ID does not exist. */
      RESOURCENOTFOUND_SNAPSHOTNOTFOUND("ResourceNotFound.SnapshotNotFound"),
+     
+     /*  */
+     RESOURCESSOLDOUT("ResourcesSoldOut"),
      
      /* Unauthorized operation. */
      UNAUTHORIZEDOPERATION("UnauthorizedOperation"),
