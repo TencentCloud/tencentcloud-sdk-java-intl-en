@@ -21,215 +21,173 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class PermissionComponent extends AbstractModel {
+public class JoinRelation extends AbstractModel {
 
     /**
-    * Permission value.
+    * Association relationship id, used by the frontend
 Note: This field may return null, indicating that no valid values can be obtained.
     */
-    @SerializedName("ModuleId")
+    @SerializedName("JoinId")
     @Expose
-    private String ModuleId;
+    private String JoinId;
 
     /**
-    * Availability.
-Valid values:.
-
-- usable.
-- visible.
-- disabled: unavailable.
-- hidden: hide.
-
-Default value: disabled.
-Example value: disabled.
+    * Original table node id
 Note: This field may return null, indicating that no valid values can be obtained.
     */
-    @SerializedName("IncludeType")
+    @SerializedName("SourceTableNodeId")
     @Expose
-    private String IncludeType;
+    private String SourceTableNodeId;
 
     /**
-    * Target upgrade version.
+    * Target table node id
 Note: This field may return null, indicating that no valid values can be obtained.
     */
-    @SerializedName("UpgradeVersionType")
+    @SerializedName("TargetTableNodeId")
     @Expose
-    private String UpgradeVersionType;
+    private String TargetTableNodeId;
 
     /**
-    * Supplemental information.
+    * Association type of multi-table join
 Note: This field may return null, indicating that no valid values can be obtained.
     */
-    @SerializedName("Tips")
+    @SerializedName("JoinType")
     @Expose
-    private String Tips;
+    private String JoinType;
 
     /**
-    * Key for supplementary information.
+    * Field list for joined tables
 Note: This field may return null, indicating that no valid values can be obtained.
     */
-    @SerializedName("TipsKey")
+    @SerializedName("Fields")
     @Expose
-    private String TipsKey;
+    private JoinRelationField [] Fields;
 
     /**
-     * Get Permission value.
+     * Get Association relationship id, used by the frontend
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ModuleId Permission value.
+     * @return JoinId Association relationship id, used by the frontend
 Note: This field may return null, indicating that no valid values can be obtained.
      */
-    public String getModuleId() {
-        return this.ModuleId;
+    public String getJoinId() {
+        return this.JoinId;
     }
 
     /**
-     * Set Permission value.
+     * Set Association relationship id, used by the frontend
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ModuleId Permission value.
+     * @param JoinId Association relationship id, used by the frontend
 Note: This field may return null, indicating that no valid values can be obtained.
      */
-    public void setModuleId(String ModuleId) {
-        this.ModuleId = ModuleId;
+    public void setJoinId(String JoinId) {
+        this.JoinId = JoinId;
     }
 
     /**
-     * Get Availability.
-Valid values:.
-
-- usable.
-- visible.
-- disabled: unavailable.
-- hidden: hide.
-
-Default value: disabled.
-Example value: disabled.
+     * Get Original table node id
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return IncludeType Availability.
-Valid values:.
-
-- usable.
-- visible.
-- disabled: unavailable.
-- hidden: hide.
-
-Default value: disabled.
-Example value: disabled.
+     * @return SourceTableNodeId Original table node id
 Note: This field may return null, indicating that no valid values can be obtained.
      */
-    public String getIncludeType() {
-        return this.IncludeType;
+    public String getSourceTableNodeId() {
+        return this.SourceTableNodeId;
     }
 
     /**
-     * Set Availability.
-Valid values:.
-
-- usable.
-- visible.
-- disabled: unavailable.
-- hidden: hide.
-
-Default value: disabled.
-Example value: disabled.
+     * Set Original table node id
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param IncludeType Availability.
-Valid values:.
-
-- usable.
-- visible.
-- disabled: unavailable.
-- hidden: hide.
-
-Default value: disabled.
-Example value: disabled.
+     * @param SourceTableNodeId Original table node id
 Note: This field may return null, indicating that no valid values can be obtained.
      */
-    public void setIncludeType(String IncludeType) {
-        this.IncludeType = IncludeType;
+    public void setSourceTableNodeId(String SourceTableNodeId) {
+        this.SourceTableNodeId = SourceTableNodeId;
     }
 
     /**
-     * Get Target upgrade version.
+     * Get Target table node id
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return UpgradeVersionType Target upgrade version.
+     * @return TargetTableNodeId Target table node id
 Note: This field may return null, indicating that no valid values can be obtained.
      */
-    public String getUpgradeVersionType() {
-        return this.UpgradeVersionType;
+    public String getTargetTableNodeId() {
+        return this.TargetTableNodeId;
     }
 
     /**
-     * Set Target upgrade version.
+     * Set Target table node id
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param UpgradeVersionType Target upgrade version.
+     * @param TargetTableNodeId Target table node id
 Note: This field may return null, indicating that no valid values can be obtained.
      */
-    public void setUpgradeVersionType(String UpgradeVersionType) {
-        this.UpgradeVersionType = UpgradeVersionType;
+    public void setTargetTableNodeId(String TargetTableNodeId) {
+        this.TargetTableNodeId = TargetTableNodeId;
     }
 
     /**
-     * Get Supplemental information.
+     * Get Association type of multi-table join
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Tips Supplemental information.
+     * @return JoinType Association type of multi-table join
 Note: This field may return null, indicating that no valid values can be obtained.
      */
-    public String getTips() {
-        return this.Tips;
+    public String getJoinType() {
+        return this.JoinType;
     }
 
     /**
-     * Set Supplemental information.
+     * Set Association type of multi-table join
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Tips Supplemental information.
+     * @param JoinType Association type of multi-table join
 Note: This field may return null, indicating that no valid values can be obtained.
      */
-    public void setTips(String Tips) {
-        this.Tips = Tips;
+    public void setJoinType(String JoinType) {
+        this.JoinType = JoinType;
     }
 
     /**
-     * Get Key for supplementary information.
+     * Get Field list for joined tables
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return TipsKey Key for supplementary information.
+     * @return Fields Field list for joined tables
 Note: This field may return null, indicating that no valid values can be obtained.
      */
-    public String getTipsKey() {
-        return this.TipsKey;
+    public JoinRelationField [] getFields() {
+        return this.Fields;
     }
 
     /**
-     * Set Key for supplementary information.
+     * Set Field list for joined tables
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param TipsKey Key for supplementary information.
+     * @param Fields Field list for joined tables
 Note: This field may return null, indicating that no valid values can be obtained.
      */
-    public void setTipsKey(String TipsKey) {
-        this.TipsKey = TipsKey;
+    public void setFields(JoinRelationField [] Fields) {
+        this.Fields = Fields;
     }
 
-    public PermissionComponent() {
+    public JoinRelation() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public PermissionComponent(PermissionComponent source) {
-        if (source.ModuleId != null) {
-            this.ModuleId = new String(source.ModuleId);
+    public JoinRelation(JoinRelation source) {
+        if (source.JoinId != null) {
+            this.JoinId = new String(source.JoinId);
         }
-        if (source.IncludeType != null) {
-            this.IncludeType = new String(source.IncludeType);
+        if (source.SourceTableNodeId != null) {
+            this.SourceTableNodeId = new String(source.SourceTableNodeId);
         }
-        if (source.UpgradeVersionType != null) {
-            this.UpgradeVersionType = new String(source.UpgradeVersionType);
+        if (source.TargetTableNodeId != null) {
+            this.TargetTableNodeId = new String(source.TargetTableNodeId);
         }
-        if (source.Tips != null) {
-            this.Tips = new String(source.Tips);
+        if (source.JoinType != null) {
+            this.JoinType = new String(source.JoinType);
         }
-        if (source.TipsKey != null) {
-            this.TipsKey = new String(source.TipsKey);
+        if (source.Fields != null) {
+            this.Fields = new JoinRelationField[source.Fields.length];
+            for (int i = 0; i < source.Fields.length; i++) {
+                this.Fields[i] = new JoinRelationField(source.Fields[i]);
+            }
         }
     }
 
@@ -238,11 +196,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "ModuleId", this.ModuleId);
-        this.setParamSimple(map, prefix + "IncludeType", this.IncludeType);
-        this.setParamSimple(map, prefix + "UpgradeVersionType", this.UpgradeVersionType);
-        this.setParamSimple(map, prefix + "Tips", this.Tips);
-        this.setParamSimple(map, prefix + "TipsKey", this.TipsKey);
+        this.setParamSimple(map, prefix + "JoinId", this.JoinId);
+        this.setParamSimple(map, prefix + "SourceTableNodeId", this.SourceTableNodeId);
+        this.setParamSimple(map, prefix + "TargetTableNodeId", this.TargetTableNodeId);
+        this.setParamSimple(map, prefix + "JoinType", this.JoinType);
+        this.setParamArrayObj(map, prefix + "Fields.", this.Fields);
 
     }
 }

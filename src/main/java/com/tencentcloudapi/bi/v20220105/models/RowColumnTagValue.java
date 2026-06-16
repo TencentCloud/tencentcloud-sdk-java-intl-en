@@ -21,153 +21,111 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ProjectConfigResult extends AbstractModel {
+public class RowColumnTagValue extends AbstractModel {
 
     /**
-    * Configuration name.
+    * Tag ID.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
-    @SerializedName("ModuleId")
+    @SerializedName("Id")
     @Expose
-    private String ModuleId;
+    private Long Id;
 
     /**
-    * Configuration mode.
-Valid values:.
-
-- usable.
-- visible.
-- disabled: unavailable.
-- hidden: hide.
-
-Default value: disabled.
-Example value: disabled.
+    * Tag name.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
-    @SerializedName("IncludeType")
+    @SerializedName("Name")
     @Expose
-    private String IncludeType;
+    private String Name;
 
     /**
-    * Additional parameters.
+    * Tag value list
 Note: This field may return null, indicating that no valid values can be obtained.
     */
-    @SerializedName("Params")
+    @SerializedName("Values")
     @Expose
-    private String Params;
+    private String [] Values;
 
     /**
-     * Get Configuration name.
+     * Get Tag ID.
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ModuleId Configuration name.
+     * @return Id Tag ID.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
-    public String getModuleId() {
-        return this.ModuleId;
+    public Long getId() {
+        return this.Id;
     }
 
     /**
-     * Set Configuration name.
+     * Set Tag ID.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ModuleId Configuration name.
+     * @param Id Tag ID.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
-    public void setModuleId(String ModuleId) {
-        this.ModuleId = ModuleId;
+    public void setId(Long Id) {
+        this.Id = Id;
     }
 
     /**
-     * Get Configuration mode.
-Valid values:.
-
-- usable.
-- visible.
-- disabled: unavailable.
-- hidden: hide.
-
-Default value: disabled.
-Example value: disabled.
+     * Get Tag name.
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return IncludeType Configuration mode.
-Valid values:.
-
-- usable.
-- visible.
-- disabled: unavailable.
-- hidden: hide.
-
-Default value: disabled.
-Example value: disabled.
+     * @return Name Tag name.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
-    public String getIncludeType() {
-        return this.IncludeType;
+    public String getName() {
+        return this.Name;
     }
 
     /**
-     * Set Configuration mode.
-Valid values:.
-
-- usable.
-- visible.
-- disabled: unavailable.
-- hidden: hide.
-
-Default value: disabled.
-Example value: disabled.
+     * Set Tag name.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param IncludeType Configuration mode.
-Valid values:.
-
-- usable.
-- visible.
-- disabled: unavailable.
-- hidden: hide.
-
-Default value: disabled.
-Example value: disabled.
+     * @param Name Tag name.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
-    public void setIncludeType(String IncludeType) {
-        this.IncludeType = IncludeType;
+    public void setName(String Name) {
+        this.Name = Name;
     }
 
     /**
-     * Get Additional parameters.
+     * Get Tag value list
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Params Additional parameters.
+     * @return Values Tag value list
 Note: This field may return null, indicating that no valid values can be obtained.
      */
-    public String getParams() {
-        return this.Params;
+    public String [] getValues() {
+        return this.Values;
     }
 
     /**
-     * Set Additional parameters.
+     * Set Tag value list
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Params Additional parameters.
+     * @param Values Tag value list
 Note: This field may return null, indicating that no valid values can be obtained.
      */
-    public void setParams(String Params) {
-        this.Params = Params;
+    public void setValues(String [] Values) {
+        this.Values = Values;
     }
 
-    public ProjectConfigResult() {
+    public RowColumnTagValue() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public ProjectConfigResult(ProjectConfigResult source) {
-        if (source.ModuleId != null) {
-            this.ModuleId = new String(source.ModuleId);
+    public RowColumnTagValue(RowColumnTagValue source) {
+        if (source.Id != null) {
+            this.Id = new Long(source.Id);
         }
-        if (source.IncludeType != null) {
-            this.IncludeType = new String(source.IncludeType);
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
         }
-        if (source.Params != null) {
-            this.Params = new String(source.Params);
+        if (source.Values != null) {
+            this.Values = new String[source.Values.length];
+            for (int i = 0; i < source.Values.length; i++) {
+                this.Values[i] = new String(source.Values[i]);
+            }
         }
     }
 
@@ -176,9 +134,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "ModuleId", this.ModuleId);
-        this.setParamSimple(map, prefix + "IncludeType", this.IncludeType);
-        this.setParamSimple(map, prefix + "Params", this.Params);
+        this.setParamSimple(map, prefix + "Id", this.Id);
+        this.setParamSimple(map, prefix + "Name", this.Name);
+        this.setParamArraySimple(map, prefix + "Values.", this.Values);
 
     }
 }

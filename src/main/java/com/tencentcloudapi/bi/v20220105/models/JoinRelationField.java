@@ -21,153 +21,108 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ProjectConfigResult extends AbstractModel {
+public class JoinRelationField extends AbstractModel {
 
     /**
-    * Configuration name.
+    * Field association id, frontend usage
 Note: This field may return null, indicating that no valid values can be obtained.
     */
-    @SerializedName("ModuleId")
+    @SerializedName("FieldJoinId")
     @Expose
-    private String ModuleId;
+    private String FieldJoinId;
 
     /**
-    * Configuration mode.
-Valid values:.
-
-- usable.
-- visible.
-- disabled: unavailable.
-- hidden: hide.
-
-Default value: disabled.
-Example value: disabled.
+    * Original table field
 Note: This field may return null, indicating that no valid values can be obtained.
     */
-    @SerializedName("IncludeType")
+    @SerializedName("SourceField")
     @Expose
-    private String IncludeType;
+    private TableField SourceField;
 
     /**
-    * Additional parameters.
+    * Target table field
 Note: This field may return null, indicating that no valid values can be obtained.
     */
-    @SerializedName("Params")
+    @SerializedName("TargetField")
     @Expose
-    private String Params;
+    private TableField TargetField;
 
     /**
-     * Get Configuration name.
+     * Get Field association id, frontend usage
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ModuleId Configuration name.
+     * @return FieldJoinId Field association id, frontend usage
 Note: This field may return null, indicating that no valid values can be obtained.
      */
-    public String getModuleId() {
-        return this.ModuleId;
+    public String getFieldJoinId() {
+        return this.FieldJoinId;
     }
 
     /**
-     * Set Configuration name.
+     * Set Field association id, frontend usage
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ModuleId Configuration name.
+     * @param FieldJoinId Field association id, frontend usage
 Note: This field may return null, indicating that no valid values can be obtained.
      */
-    public void setModuleId(String ModuleId) {
-        this.ModuleId = ModuleId;
+    public void setFieldJoinId(String FieldJoinId) {
+        this.FieldJoinId = FieldJoinId;
     }
 
     /**
-     * Get Configuration mode.
-Valid values:.
-
-- usable.
-- visible.
-- disabled: unavailable.
-- hidden: hide.
-
-Default value: disabled.
-Example value: disabled.
+     * Get Original table field
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return IncludeType Configuration mode.
-Valid values:.
-
-- usable.
-- visible.
-- disabled: unavailable.
-- hidden: hide.
-
-Default value: disabled.
-Example value: disabled.
+     * @return SourceField Original table field
 Note: This field may return null, indicating that no valid values can be obtained.
      */
-    public String getIncludeType() {
-        return this.IncludeType;
+    public TableField getSourceField() {
+        return this.SourceField;
     }
 
     /**
-     * Set Configuration mode.
-Valid values:.
-
-- usable.
-- visible.
-- disabled: unavailable.
-- hidden: hide.
-
-Default value: disabled.
-Example value: disabled.
+     * Set Original table field
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param IncludeType Configuration mode.
-Valid values:.
-
-- usable.
-- visible.
-- disabled: unavailable.
-- hidden: hide.
-
-Default value: disabled.
-Example value: disabled.
+     * @param SourceField Original table field
 Note: This field may return null, indicating that no valid values can be obtained.
      */
-    public void setIncludeType(String IncludeType) {
-        this.IncludeType = IncludeType;
+    public void setSourceField(TableField SourceField) {
+        this.SourceField = SourceField;
     }
 
     /**
-     * Get Additional parameters.
+     * Get Target table field
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Params Additional parameters.
+     * @return TargetField Target table field
 Note: This field may return null, indicating that no valid values can be obtained.
      */
-    public String getParams() {
-        return this.Params;
+    public TableField getTargetField() {
+        return this.TargetField;
     }
 
     /**
-     * Set Additional parameters.
+     * Set Target table field
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Params Additional parameters.
+     * @param TargetField Target table field
 Note: This field may return null, indicating that no valid values can be obtained.
      */
-    public void setParams(String Params) {
-        this.Params = Params;
+    public void setTargetField(TableField TargetField) {
+        this.TargetField = TargetField;
     }
 
-    public ProjectConfigResult() {
+    public JoinRelationField() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public ProjectConfigResult(ProjectConfigResult source) {
-        if (source.ModuleId != null) {
-            this.ModuleId = new String(source.ModuleId);
+    public JoinRelationField(JoinRelationField source) {
+        if (source.FieldJoinId != null) {
+            this.FieldJoinId = new String(source.FieldJoinId);
         }
-        if (source.IncludeType != null) {
-            this.IncludeType = new String(source.IncludeType);
+        if (source.SourceField != null) {
+            this.SourceField = new TableField(source.SourceField);
         }
-        if (source.Params != null) {
-            this.Params = new String(source.Params);
+        if (source.TargetField != null) {
+            this.TargetField = new TableField(source.TargetField);
         }
     }
 
@@ -176,9 +131,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "ModuleId", this.ModuleId);
-        this.setParamSimple(map, prefix + "IncludeType", this.IncludeType);
-        this.setParamSimple(map, prefix + "Params", this.Params);
+        this.setParamSimple(map, prefix + "FieldJoinId", this.FieldJoinId);
+        this.setParamObj(map, prefix + "SourceField.", this.SourceField);
+        this.setParamObj(map, prefix + "TargetField.", this.TargetField);
 
     }
 }

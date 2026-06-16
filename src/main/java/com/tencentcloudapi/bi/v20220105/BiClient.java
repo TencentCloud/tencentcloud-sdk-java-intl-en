@@ -61,6 +61,17 @@ public class BiClient extends AbstractClient{
     }
 
     /**
+     *Add a data table
+     * @param req CreateDataTableRequest
+     * @return CreateDataTableResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateDataTableResponse CreateDataTable(CreateDataTableRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateDataTable", CreateDataTableResponse.class);
+    }
+
+    /**
      *This API is used to create a data source.
      * @param req CreateDatasourceRequest
      * @return CreateDatasourceResponse
@@ -91,6 +102,17 @@ public class BiClient extends AbstractClient{
     public CreateEmbedTokenResponse CreateEmbedToken(CreateEmbedTokenRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CreateEmbedToken", CreateEmbedTokenResponse.class);
+    }
+
+    /**
+     *Create row/column permissions
+     * @param req CreatePermissionRanksRequest
+     * @return CreatePermissionRanksResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreatePermissionRanksResponse CreatePermissionRanks(CreatePermissionRanksRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreatePermissionRanks", CreatePermissionRanksResponse.class);
     }
 
     /**
@@ -215,6 +237,17 @@ public class BiClient extends AbstractClient{
     }
 
     /**
+     *API information for raw data table fields
+     * @param req DescribeSourceFieldListRequest
+     * @return DescribeSourceFieldListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSourceFieldListResponse DescribeSourceFieldList(DescribeSourceFieldListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeSourceFieldList", DescribeSourceFieldListResponse.class);
+    }
+
+    /**
      *This API is used to obtain the user interface in the project.
      * @param req DescribeUserProjectListRequest
      * @return DescribeUserProjectListResponse
@@ -289,6 +322,28 @@ public class BiClient extends AbstractClient{
     public ModifyProjectResponse ModifyProject(ModifyProjectRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyProject", ModifyProjectResponse.class);
+    }
+
+    /**
+     *This API is used to modify by user resource.
+     * @param req ModifyResourceUserRequest
+     * @return ModifyResourceUserResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyResourceUserResponse ModifyResourceUser(ModifyResourceUserRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyResourceUser", ModifyResourceUserResponse.class);
+    }
+
+    /**
+     *Update user group permission based on resources
+     * @param req ModifyResourceUserGroupResourceRequest
+     * @return ModifyResourceUserGroupResourceResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyResourceUserGroupResourceResponse ModifyResourceUserGroupResource(ModifyResourceUserGroupResourceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyResourceUserGroupResource", ModifyResourceUserGroupResourceResponse.class);
     }
 
     /**

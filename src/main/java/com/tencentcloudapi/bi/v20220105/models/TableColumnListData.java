@@ -21,153 +21,111 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ProjectConfigResult extends AbstractModel {
+public class TableColumnListData extends AbstractModel {
 
     /**
-    * Configuration name.
+    * Column list in the table
 Note: This field may return null, indicating that no valid values can be obtained.
     */
-    @SerializedName("ModuleId")
+    @SerializedName("List")
     @Expose
-    private String ModuleId;
+    private TableColumn [] List;
 
     /**
-    * Configuration mode.
-Valid values:.
-
-- usable.
-- visible.
-- disabled: unavailable.
-- hidden: hide.
-
-Default value: disabled.
-Example value: disabled.
+    * async transaction id
 Note: This field may return null, indicating that no valid values can be obtained.
     */
-    @SerializedName("IncludeType")
+    @SerializedName("TranId")
     @Expose
-    private String IncludeType;
+    private String TranId;
 
     /**
-    * Additional parameters.
+    * Async transaction status
 Note: This field may return null, indicating that no valid values can be obtained.
     */
-    @SerializedName("Params")
+    @SerializedName("TranStatus")
     @Expose
-    private String Params;
+    private Long TranStatus;
 
     /**
-     * Get Configuration name.
+     * Get Column list in the table
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ModuleId Configuration name.
+     * @return List Column list in the table
 Note: This field may return null, indicating that no valid values can be obtained.
      */
-    public String getModuleId() {
-        return this.ModuleId;
+    public TableColumn [] getList() {
+        return this.List;
     }
 
     /**
-     * Set Configuration name.
+     * Set Column list in the table
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ModuleId Configuration name.
+     * @param List Column list in the table
 Note: This field may return null, indicating that no valid values can be obtained.
      */
-    public void setModuleId(String ModuleId) {
-        this.ModuleId = ModuleId;
+    public void setList(TableColumn [] List) {
+        this.List = List;
     }
 
     /**
-     * Get Configuration mode.
-Valid values:.
-
-- usable.
-- visible.
-- disabled: unavailable.
-- hidden: hide.
-
-Default value: disabled.
-Example value: disabled.
+     * Get async transaction id
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return IncludeType Configuration mode.
-Valid values:.
-
-- usable.
-- visible.
-- disabled: unavailable.
-- hidden: hide.
-
-Default value: disabled.
-Example value: disabled.
+     * @return TranId async transaction id
 Note: This field may return null, indicating that no valid values can be obtained.
      */
-    public String getIncludeType() {
-        return this.IncludeType;
+    public String getTranId() {
+        return this.TranId;
     }
 
     /**
-     * Set Configuration mode.
-Valid values:.
-
-- usable.
-- visible.
-- disabled: unavailable.
-- hidden: hide.
-
-Default value: disabled.
-Example value: disabled.
+     * Set async transaction id
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param IncludeType Configuration mode.
-Valid values:.
-
-- usable.
-- visible.
-- disabled: unavailable.
-- hidden: hide.
-
-Default value: disabled.
-Example value: disabled.
+     * @param TranId async transaction id
 Note: This field may return null, indicating that no valid values can be obtained.
      */
-    public void setIncludeType(String IncludeType) {
-        this.IncludeType = IncludeType;
+    public void setTranId(String TranId) {
+        this.TranId = TranId;
     }
 
     /**
-     * Get Additional parameters.
+     * Get Async transaction status
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Params Additional parameters.
+     * @return TranStatus Async transaction status
 Note: This field may return null, indicating that no valid values can be obtained.
      */
-    public String getParams() {
-        return this.Params;
+    public Long getTranStatus() {
+        return this.TranStatus;
     }
 
     /**
-     * Set Additional parameters.
+     * Set Async transaction status
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Params Additional parameters.
+     * @param TranStatus Async transaction status
 Note: This field may return null, indicating that no valid values can be obtained.
      */
-    public void setParams(String Params) {
-        this.Params = Params;
+    public void setTranStatus(Long TranStatus) {
+        this.TranStatus = TranStatus;
     }
 
-    public ProjectConfigResult() {
+    public TableColumnListData() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public ProjectConfigResult(ProjectConfigResult source) {
-        if (source.ModuleId != null) {
-            this.ModuleId = new String(source.ModuleId);
+    public TableColumnListData(TableColumnListData source) {
+        if (source.List != null) {
+            this.List = new TableColumn[source.List.length];
+            for (int i = 0; i < source.List.length; i++) {
+                this.List[i] = new TableColumn(source.List[i]);
+            }
         }
-        if (source.IncludeType != null) {
-            this.IncludeType = new String(source.IncludeType);
+        if (source.TranId != null) {
+            this.TranId = new String(source.TranId);
         }
-        if (source.Params != null) {
-            this.Params = new String(source.Params);
+        if (source.TranStatus != null) {
+            this.TranStatus = new Long(source.TranStatus);
         }
     }
 
@@ -176,9 +134,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "ModuleId", this.ModuleId);
-        this.setParamSimple(map, prefix + "IncludeType", this.IncludeType);
-        this.setParamSimple(map, prefix + "Params", this.Params);
+        this.setParamArrayObj(map, prefix + "List.", this.List);
+        this.setParamSimple(map, prefix + "TranId", this.TranId);
+        this.setParamSimple(map, prefix + "TranStatus", this.TranStatus);
 
     }
 }
