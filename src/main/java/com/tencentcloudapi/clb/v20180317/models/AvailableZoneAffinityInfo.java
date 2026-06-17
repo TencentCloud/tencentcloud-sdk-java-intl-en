@@ -24,69 +24,79 @@ import java.util.HashMap;
 public class AvailableZoneAffinityInfo extends AbstractModel {
 
     /**
-    * 
+    * Whether to enable availability zone forwarding affinity. true: enable availability zone forwarding affinity; false: enable availability zone forwarding affinity.
     */
     @SerializedName("Enable")
     @Expose
     private Boolean Enable;
 
     /**
-    * 
+    * The threshold for availability zone forwarding affinity failure. When the healthy ratio of backend services in an availability zone is less than this threshold, the Cloud Load Balancer will exit availability zone forwarding affinity and convert to forwarding across all availability zones.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ExitRatio")
     @Expose
     private Long ExitRatio;
 
     /**
-    * 
+    * The threshold for re-enabling availability zone affinity forwarding. When forwarding across all availability zones and the health ratio of backend services in the Cloud Load Balancer AZ is greater than or equal to this threshold, the CLB will enter availability zone affinity forwarding again.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ReentryRatio")
     @Expose
     private Long ReentryRatio;
 
     /**
-     * Get  
-     * @return Enable 
+     * Get Whether to enable availability zone forwarding affinity. true: enable availability zone forwarding affinity; false: enable availability zone forwarding affinity. 
+     * @return Enable Whether to enable availability zone forwarding affinity. true: enable availability zone forwarding affinity; false: enable availability zone forwarding affinity.
      */
     public Boolean getEnable() {
         return this.Enable;
     }
 
     /**
-     * Set 
-     * @param Enable 
+     * Set Whether to enable availability zone forwarding affinity. true: enable availability zone forwarding affinity; false: enable availability zone forwarding affinity.
+     * @param Enable Whether to enable availability zone forwarding affinity. true: enable availability zone forwarding affinity; false: enable availability zone forwarding affinity.
      */
     public void setEnable(Boolean Enable) {
         this.Enable = Enable;
     }
 
     /**
-     * Get  
-     * @return ExitRatio 
+     * Get The threshold for availability zone forwarding affinity failure. When the healthy ratio of backend services in an availability zone is less than this threshold, the Cloud Load Balancer will exit availability zone forwarding affinity and convert to forwarding across all availability zones.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return ExitRatio The threshold for availability zone forwarding affinity failure. When the healthy ratio of backend services in an availability zone is less than this threshold, the Cloud Load Balancer will exit availability zone forwarding affinity and convert to forwarding across all availability zones.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getExitRatio() {
         return this.ExitRatio;
     }
 
     /**
-     * Set 
-     * @param ExitRatio 
+     * Set The threshold for availability zone forwarding affinity failure. When the healthy ratio of backend services in an availability zone is less than this threshold, the Cloud Load Balancer will exit availability zone forwarding affinity and convert to forwarding across all availability zones.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ExitRatio The threshold for availability zone forwarding affinity failure. When the healthy ratio of backend services in an availability zone is less than this threshold, the Cloud Load Balancer will exit availability zone forwarding affinity and convert to forwarding across all availability zones.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setExitRatio(Long ExitRatio) {
         this.ExitRatio = ExitRatio;
     }
 
     /**
-     * Get  
-     * @return ReentryRatio 
+     * Get The threshold for re-enabling availability zone affinity forwarding. When forwarding across all availability zones and the health ratio of backend services in the Cloud Load Balancer AZ is greater than or equal to this threshold, the CLB will enter availability zone affinity forwarding again.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return ReentryRatio The threshold for re-enabling availability zone affinity forwarding. When forwarding across all availability zones and the health ratio of backend services in the Cloud Load Balancer AZ is greater than or equal to this threshold, the CLB will enter availability zone affinity forwarding again.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getReentryRatio() {
         return this.ReentryRatio;
     }
 
     /**
-     * Set 
-     * @param ReentryRatio 
+     * Set The threshold for re-enabling availability zone affinity forwarding. When forwarding across all availability zones and the health ratio of backend services in the Cloud Load Balancer AZ is greater than or equal to this threshold, the CLB will enter availability zone affinity forwarding again.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ReentryRatio The threshold for re-enabling availability zone affinity forwarding. When forwarding across all availability zones and the health ratio of backend services in the Cloud Load Balancer AZ is greater than or equal to this threshold, the CLB will enter availability zone affinity forwarding again.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setReentryRatio(Long ReentryRatio) {
         this.ReentryRatio = ReentryRatio;

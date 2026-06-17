@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeTargetHealthResponse extends AbstractModel {
 
     /**
-    * LoadBalancer list.
+    * <p>CLB list.</p>
     */
     @SerializedName("LoadBalancers")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeTargetHealthResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get LoadBalancer list. 
-     * @return LoadBalancers LoadBalancer list.
+     * Get <p>CLB list.</p> 
+     * @return LoadBalancers <p>CLB list.</p>
      */
     public LoadBalancerHealth [] getLoadBalancers() {
         return this.LoadBalancers;
     }
 
     /**
-     * Set LoadBalancer list.
-     * @param LoadBalancers LoadBalancer list.
+     * Set <p>CLB list.</p>
+     * @param LoadBalancers <p>CLB list.</p>
      */
     public void setLoadBalancers(LoadBalancerHealth [] LoadBalancers) {
         this.LoadBalancers = LoadBalancers;

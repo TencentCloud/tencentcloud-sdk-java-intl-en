@@ -24,414 +24,414 @@ import java.util.HashMap;
 public class ClassicalListener extends AbstractModel {
 
     /**
-    * CLB listener ID
+    * <p>CLB listener ID</p>
     */
     @SerializedName("ListenerId")
     @Expose
     private String ListenerId;
 
     /**
-    * CLB listener port
+    * <p>CLB listener port</p>
     */
     @SerializedName("ListenerPort")
     @Expose
     private Long ListenerPort;
 
     /**
-    * Backend forwarding port of a listener
+    * <p>listener backend forwarding port</p>
     */
     @SerializedName("InstancePort")
     @Expose
     private Long InstancePort;
 
     /**
-    * Listener name
+    * <p>Listener name</p>
     */
     @SerializedName("ListenerName")
     @Expose
     private String ListenerName;
 
     /**
-    * Listener protocol type
+    * <p>Listener protocol type</p>
     */
     @SerializedName("Protocol")
     @Expose
     private String Protocol;
 
     /**
-    * Session persistence time
+    * <p>Session persistence time</p>
     */
     @SerializedName("SessionExpire")
     @Expose
     private Long SessionExpire;
 
     /**
-    * Whether health check is enabled. 1: enabled; 0: disabled.
+    * <p>Whether health check is enabled: 1 (enabled), 0 (disabled)</p>
     */
     @SerializedName("HealthSwitch")
     @Expose
     private Long HealthSwitch;
 
     /**
-    * Response timeout period
+    * <p>Response timeout</p><p>Unit: second</p>
     */
     @SerializedName("TimeOut")
     @Expose
     private Long TimeOut;
 
     /**
-    * Check interval
+    * <p>Check interval</p><p>Unit: seconds</p>
     */
     @SerializedName("IntervalTime")
     @Expose
     private Long IntervalTime;
 
     /**
-    * Health threshold
+    * <p>Health threshold</p>
     */
     @SerializedName("HealthNum")
     @Expose
     private Long HealthNum;
 
     /**
-    * Unhealthy threshold
+    * <p>Unhealthy threshold</p>
     */
     @SerializedName("UnhealthNum")
     @Expose
     private Long UnhealthNum;
 
     /**
-    * Request balancing method for listeners of the classic public network CLB. An empty string or wrr indicates weighted round robin. ip_hash indicates consistent hashing based on the accessed source IP address. least_conn indicates least connections.
+    * <p>Request balancing method for listeners of the classic public network CLB. An empty string or wrr indicates weighted round robin. ip_hash indicates consistent hashing based on the accessed source IP address. least_conn indicates least connections.</p>
     */
     @SerializedName("HttpHash")
     @Expose
     private String HttpHash;
 
     /**
-    * Health check return code for HTTP and HTTPS listeners of a public network classic CLB. For more information, see the explanation of the field in the listener creating API.
+    * <p>Health check return code of HTTP and HTTPS listeners for public network CLB. For details, see the explanation of this field in listener creation API.</p>
     */
     @SerializedName("HttpCode")
     @Expose
     private Long HttpCode;
 
     /**
-    * Health check path for HTTP and HTTPS listeners of a public network classic CLB
+    * <p>Health check path of HTTP and HTTPS listeners for public network CLB</p>
     */
     @SerializedName("HttpCheckPath")
     @Expose
     private String HttpCheckPath;
 
     /**
-    * Authentication method for an HTTPS listener of a public network classic CLB
+    * <p>Authentication method of the HTTPS listener for public network CLB</p>
     */
     @SerializedName("SSLMode")
     @Expose
     private String SSLMode;
 
     /**
-    * Server certificate ID for an HTTPS listener of a public network classic CLB
+    * <p>Server certificate ID of the HTTPS listener for the public network CLB</p>
     */
     @SerializedName("CertId")
     @Expose
     private String CertId;
 
     /**
-    * Client certificate ID for an HTTPS listener of a public network classic CLB
+    * <p>Client certificate ID of the HTTPS listener for public network CLB</p>
     */
     @SerializedName("CertCaId")
     @Expose
     private String CertCaId;
 
     /**
-    * Listener status. Value range: 0 (creating), 1 (running)
+    * <p>Listener status. 0 indicates creating in progress, 1 indicates running.</p>
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-     * Get CLB listener ID 
-     * @return ListenerId CLB listener ID
+     * Get <p>CLB listener ID</p> 
+     * @return ListenerId <p>CLB listener ID</p>
      */
     public String getListenerId() {
         return this.ListenerId;
     }
 
     /**
-     * Set CLB listener ID
-     * @param ListenerId CLB listener ID
+     * Set <p>CLB listener ID</p>
+     * @param ListenerId <p>CLB listener ID</p>
      */
     public void setListenerId(String ListenerId) {
         this.ListenerId = ListenerId;
     }
 
     /**
-     * Get CLB listener port 
-     * @return ListenerPort CLB listener port
+     * Get <p>CLB listener port</p> 
+     * @return ListenerPort <p>CLB listener port</p>
      */
     public Long getListenerPort() {
         return this.ListenerPort;
     }
 
     /**
-     * Set CLB listener port
-     * @param ListenerPort CLB listener port
+     * Set <p>CLB listener port</p>
+     * @param ListenerPort <p>CLB listener port</p>
      */
     public void setListenerPort(Long ListenerPort) {
         this.ListenerPort = ListenerPort;
     }
 
     /**
-     * Get Backend forwarding port of a listener 
-     * @return InstancePort Backend forwarding port of a listener
+     * Get <p>listener backend forwarding port</p> 
+     * @return InstancePort <p>listener backend forwarding port</p>
      */
     public Long getInstancePort() {
         return this.InstancePort;
     }
 
     /**
-     * Set Backend forwarding port of a listener
-     * @param InstancePort Backend forwarding port of a listener
+     * Set <p>listener backend forwarding port</p>
+     * @param InstancePort <p>listener backend forwarding port</p>
      */
     public void setInstancePort(Long InstancePort) {
         this.InstancePort = InstancePort;
     }
 
     /**
-     * Get Listener name 
-     * @return ListenerName Listener name
+     * Get <p>Listener name</p> 
+     * @return ListenerName <p>Listener name</p>
      */
     public String getListenerName() {
         return this.ListenerName;
     }
 
     /**
-     * Set Listener name
-     * @param ListenerName Listener name
+     * Set <p>Listener name</p>
+     * @param ListenerName <p>Listener name</p>
      */
     public void setListenerName(String ListenerName) {
         this.ListenerName = ListenerName;
     }
 
     /**
-     * Get Listener protocol type 
-     * @return Protocol Listener protocol type
+     * Get <p>Listener protocol type</p> 
+     * @return Protocol <p>Listener protocol type</p>
      */
     public String getProtocol() {
         return this.Protocol;
     }
 
     /**
-     * Set Listener protocol type
-     * @param Protocol Listener protocol type
+     * Set <p>Listener protocol type</p>
+     * @param Protocol <p>Listener protocol type</p>
      */
     public void setProtocol(String Protocol) {
         this.Protocol = Protocol;
     }
 
     /**
-     * Get Session persistence time 
-     * @return SessionExpire Session persistence time
+     * Get <p>Session persistence time</p> 
+     * @return SessionExpire <p>Session persistence time</p>
      */
     public Long getSessionExpire() {
         return this.SessionExpire;
     }
 
     /**
-     * Set Session persistence time
-     * @param SessionExpire Session persistence time
+     * Set <p>Session persistence time</p>
+     * @param SessionExpire <p>Session persistence time</p>
      */
     public void setSessionExpire(Long SessionExpire) {
         this.SessionExpire = SessionExpire;
     }
 
     /**
-     * Get Whether health check is enabled. 1: enabled; 0: disabled. 
-     * @return HealthSwitch Whether health check is enabled. 1: enabled; 0: disabled.
+     * Get <p>Whether health check is enabled: 1 (enabled), 0 (disabled)</p> 
+     * @return HealthSwitch <p>Whether health check is enabled: 1 (enabled), 0 (disabled)</p>
      */
     public Long getHealthSwitch() {
         return this.HealthSwitch;
     }
 
     /**
-     * Set Whether health check is enabled. 1: enabled; 0: disabled.
-     * @param HealthSwitch Whether health check is enabled. 1: enabled; 0: disabled.
+     * Set <p>Whether health check is enabled: 1 (enabled), 0 (disabled)</p>
+     * @param HealthSwitch <p>Whether health check is enabled: 1 (enabled), 0 (disabled)</p>
      */
     public void setHealthSwitch(Long HealthSwitch) {
         this.HealthSwitch = HealthSwitch;
     }
 
     /**
-     * Get Response timeout period 
-     * @return TimeOut Response timeout period
+     * Get <p>Response timeout</p><p>Unit: second</p> 
+     * @return TimeOut <p>Response timeout</p><p>Unit: second</p>
      */
     public Long getTimeOut() {
         return this.TimeOut;
     }
 
     /**
-     * Set Response timeout period
-     * @param TimeOut Response timeout period
+     * Set <p>Response timeout</p><p>Unit: second</p>
+     * @param TimeOut <p>Response timeout</p><p>Unit: second</p>
      */
     public void setTimeOut(Long TimeOut) {
         this.TimeOut = TimeOut;
     }
 
     /**
-     * Get Check interval 
-     * @return IntervalTime Check interval
+     * Get <p>Check interval</p><p>Unit: seconds</p> 
+     * @return IntervalTime <p>Check interval</p><p>Unit: seconds</p>
      */
     public Long getIntervalTime() {
         return this.IntervalTime;
     }
 
     /**
-     * Set Check interval
-     * @param IntervalTime Check interval
+     * Set <p>Check interval</p><p>Unit: seconds</p>
+     * @param IntervalTime <p>Check interval</p><p>Unit: seconds</p>
      */
     public void setIntervalTime(Long IntervalTime) {
         this.IntervalTime = IntervalTime;
     }
 
     /**
-     * Get Health threshold 
-     * @return HealthNum Health threshold
+     * Get <p>Health threshold</p> 
+     * @return HealthNum <p>Health threshold</p>
      */
     public Long getHealthNum() {
         return this.HealthNum;
     }
 
     /**
-     * Set Health threshold
-     * @param HealthNum Health threshold
+     * Set <p>Health threshold</p>
+     * @param HealthNum <p>Health threshold</p>
      */
     public void setHealthNum(Long HealthNum) {
         this.HealthNum = HealthNum;
     }
 
     /**
-     * Get Unhealthy threshold 
-     * @return UnhealthNum Unhealthy threshold
+     * Get <p>Unhealthy threshold</p> 
+     * @return UnhealthNum <p>Unhealthy threshold</p>
      */
     public Long getUnhealthNum() {
         return this.UnhealthNum;
     }
 
     /**
-     * Set Unhealthy threshold
-     * @param UnhealthNum Unhealthy threshold
+     * Set <p>Unhealthy threshold</p>
+     * @param UnhealthNum <p>Unhealthy threshold</p>
      */
     public void setUnhealthNum(Long UnhealthNum) {
         this.UnhealthNum = UnhealthNum;
     }
 
     /**
-     * Get Request balancing method for listeners of the classic public network CLB. An empty string or wrr indicates weighted round robin. ip_hash indicates consistent hashing based on the accessed source IP address. least_conn indicates least connections. 
-     * @return HttpHash Request balancing method for listeners of the classic public network CLB. An empty string or wrr indicates weighted round robin. ip_hash indicates consistent hashing based on the accessed source IP address. least_conn indicates least connections.
+     * Get <p>Request balancing method for listeners of the classic public network CLB. An empty string or wrr indicates weighted round robin. ip_hash indicates consistent hashing based on the accessed source IP address. least_conn indicates least connections.</p> 
+     * @return HttpHash <p>Request balancing method for listeners of the classic public network CLB. An empty string or wrr indicates weighted round robin. ip_hash indicates consistent hashing based on the accessed source IP address. least_conn indicates least connections.</p>
      */
     public String getHttpHash() {
         return this.HttpHash;
     }
 
     /**
-     * Set Request balancing method for listeners of the classic public network CLB. An empty string or wrr indicates weighted round robin. ip_hash indicates consistent hashing based on the accessed source IP address. least_conn indicates least connections.
-     * @param HttpHash Request balancing method for listeners of the classic public network CLB. An empty string or wrr indicates weighted round robin. ip_hash indicates consistent hashing based on the accessed source IP address. least_conn indicates least connections.
+     * Set <p>Request balancing method for listeners of the classic public network CLB. An empty string or wrr indicates weighted round robin. ip_hash indicates consistent hashing based on the accessed source IP address. least_conn indicates least connections.</p>
+     * @param HttpHash <p>Request balancing method for listeners of the classic public network CLB. An empty string or wrr indicates weighted round robin. ip_hash indicates consistent hashing based on the accessed source IP address. least_conn indicates least connections.</p>
      */
     public void setHttpHash(String HttpHash) {
         this.HttpHash = HttpHash;
     }
 
     /**
-     * Get Health check return code for HTTP and HTTPS listeners of a public network classic CLB. For more information, see the explanation of the field in the listener creating API. 
-     * @return HttpCode Health check return code for HTTP and HTTPS listeners of a public network classic CLB. For more information, see the explanation of the field in the listener creating API.
+     * Get <p>Health check return code of HTTP and HTTPS listeners for public network CLB. For details, see the explanation of this field in listener creation API.</p> 
+     * @return HttpCode <p>Health check return code of HTTP and HTTPS listeners for public network CLB. For details, see the explanation of this field in listener creation API.</p>
      */
     public Long getHttpCode() {
         return this.HttpCode;
     }
 
     /**
-     * Set Health check return code for HTTP and HTTPS listeners of a public network classic CLB. For more information, see the explanation of the field in the listener creating API.
-     * @param HttpCode Health check return code for HTTP and HTTPS listeners of a public network classic CLB. For more information, see the explanation of the field in the listener creating API.
+     * Set <p>Health check return code of HTTP and HTTPS listeners for public network CLB. For details, see the explanation of this field in listener creation API.</p>
+     * @param HttpCode <p>Health check return code of HTTP and HTTPS listeners for public network CLB. For details, see the explanation of this field in listener creation API.</p>
      */
     public void setHttpCode(Long HttpCode) {
         this.HttpCode = HttpCode;
     }
 
     /**
-     * Get Health check path for HTTP and HTTPS listeners of a public network classic CLB 
-     * @return HttpCheckPath Health check path for HTTP and HTTPS listeners of a public network classic CLB
+     * Get <p>Health check path of HTTP and HTTPS listeners for public network CLB</p> 
+     * @return HttpCheckPath <p>Health check path of HTTP and HTTPS listeners for public network CLB</p>
      */
     public String getHttpCheckPath() {
         return this.HttpCheckPath;
     }
 
     /**
-     * Set Health check path for HTTP and HTTPS listeners of a public network classic CLB
-     * @param HttpCheckPath Health check path for HTTP and HTTPS listeners of a public network classic CLB
+     * Set <p>Health check path of HTTP and HTTPS listeners for public network CLB</p>
+     * @param HttpCheckPath <p>Health check path of HTTP and HTTPS listeners for public network CLB</p>
      */
     public void setHttpCheckPath(String HttpCheckPath) {
         this.HttpCheckPath = HttpCheckPath;
     }
 
     /**
-     * Get Authentication method for an HTTPS listener of a public network classic CLB 
-     * @return SSLMode Authentication method for an HTTPS listener of a public network classic CLB
+     * Get <p>Authentication method of the HTTPS listener for public network CLB</p> 
+     * @return SSLMode <p>Authentication method of the HTTPS listener for public network CLB</p>
      */
     public String getSSLMode() {
         return this.SSLMode;
     }
 
     /**
-     * Set Authentication method for an HTTPS listener of a public network classic CLB
-     * @param SSLMode Authentication method for an HTTPS listener of a public network classic CLB
+     * Set <p>Authentication method of the HTTPS listener for public network CLB</p>
+     * @param SSLMode <p>Authentication method of the HTTPS listener for public network CLB</p>
      */
     public void setSSLMode(String SSLMode) {
         this.SSLMode = SSLMode;
     }
 
     /**
-     * Get Server certificate ID for an HTTPS listener of a public network classic CLB 
-     * @return CertId Server certificate ID for an HTTPS listener of a public network classic CLB
+     * Get <p>Server certificate ID of the HTTPS listener for the public network CLB</p> 
+     * @return CertId <p>Server certificate ID of the HTTPS listener for the public network CLB</p>
      */
     public String getCertId() {
         return this.CertId;
     }
 
     /**
-     * Set Server certificate ID for an HTTPS listener of a public network classic CLB
-     * @param CertId Server certificate ID for an HTTPS listener of a public network classic CLB
+     * Set <p>Server certificate ID of the HTTPS listener for the public network CLB</p>
+     * @param CertId <p>Server certificate ID of the HTTPS listener for the public network CLB</p>
      */
     public void setCertId(String CertId) {
         this.CertId = CertId;
     }
 
     /**
-     * Get Client certificate ID for an HTTPS listener of a public network classic CLB 
-     * @return CertCaId Client certificate ID for an HTTPS listener of a public network classic CLB
+     * Get <p>Client certificate ID of the HTTPS listener for public network CLB</p> 
+     * @return CertCaId <p>Client certificate ID of the HTTPS listener for public network CLB</p>
      */
     public String getCertCaId() {
         return this.CertCaId;
     }
 
     /**
-     * Set Client certificate ID for an HTTPS listener of a public network classic CLB
-     * @param CertCaId Client certificate ID for an HTTPS listener of a public network classic CLB
+     * Set <p>Client certificate ID of the HTTPS listener for public network CLB</p>
+     * @param CertCaId <p>Client certificate ID of the HTTPS listener for public network CLB</p>
      */
     public void setCertCaId(String CertCaId) {
         this.CertCaId = CertCaId;
     }
 
     /**
-     * Get Listener status. Value range: 0 (creating), 1 (running) 
-     * @return Status Listener status. Value range: 0 (creating), 1 (running)
+     * Get <p>Listener status. 0 indicates creating in progress, 1 indicates running.</p> 
+     * @return Status <p>Listener status. 0 indicates creating in progress, 1 indicates running.</p>
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Listener status. Value range: 0 (creating), 1 (running)
-     * @param Status Listener status. Value range: 0 (creating), 1 (running)
+     * Set <p>Listener status. 0 indicates creating in progress, 1 indicates running.</p>
+     * @param Status <p>Listener status. 0 indicates creating in progress, 1 indicates running.</p>
      */
     public void setStatus(Long Status) {
         this.Status = Status;

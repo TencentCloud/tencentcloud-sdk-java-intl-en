@@ -24,28 +24,28 @@ import java.util.HashMap;
 public class Listener extends AbstractModel {
 
     /**
-    * CLB listener ID
+    * <p>CLB listener ID</p>
     */
     @SerializedName("ListenerId")
     @Expose
     private String ListenerId;
 
     /**
-    * Listener protocol. valid values: TCP, UDP, HTTP, HTTPS, TCP_SSL, QUIC.
+    * <p>Listener protocol. Available values: TCP, UDP, HTTP, HTTPS, TCP_SSL, QUIC</p>
     */
     @SerializedName("Protocol")
     @Expose
     private String Protocol;
 
     /**
-    * Listener port. value range: 1-65535.
+    * <p>Listener port, port range: 1–65535</p>
     */
     @SerializedName("Port")
     @Expose
     private Long Port;
 
     /**
-    * Information of certificates bound to the listener
+    * <p>Listener bound certificate information</p>
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Certificate")
@@ -53,7 +53,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private CertificateOutput Certificate;
 
     /**
-    * Health check information of the listener
+    * <p>Health check information of the listener</p>
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("HealthCheck")
@@ -61,14 +61,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private HealthCheck HealthCheck;
 
     /**
-    * Request scheduling method. WRR, LEAST_CONN, and IP_HASH respectively indicate weighted round robin, least connections, and IP hash.Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Requested scheduling method. WRR, LEAST_CONN, and IP_HASH indicate weighted round-robin, least connection, and IP Hash respectively.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Scheduler")
     @Expose
     private String Scheduler;
 
     /**
-    * Session persistence time, in seconds. value range: 30-3600. default value: 0, indicating that session persistence is not enabled by default. this parameter applies only to TCP and UDP listeners.
+    * <p>Session persistence time, unit: second. Available values: 30-3600, default 0, disabled by default. This parameter is applicable only to TCP/UDP listener.</p><p>Unit: second</p>
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("SessionExpireTime")
@@ -76,14 +77,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long SessionExpireTime;
 
     /**
-    * Specifies whether to enable the SNI feature. 1: enable; 0: disable. this parameter is applicable only to HTTPS listeners.
+    * <p>Whether to enable SNI feature. 1: enable, 0: disabled (this parameter is applicable only to HTTPS listeners)</p>
     */
     @SerializedName("SniSwitch")
     @Expose
     private Long SniSwitch;
 
     /**
-    * All forwarding rules under a listener (this parameter is meaningful only for HTTP/HTTPS listeners)
+    * <p>All forwarding rules under a listener (this parameter is only meaningful for HTTP/HTTPS listeners)</p>
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Rules")
@@ -91,28 +92,28 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private RuleOutput [] Rules;
 
     /**
-    * Listener name
+    * <p>Listener name</p>
     */
     @SerializedName("ListenerName")
     @Expose
     private String ListenerName;
 
     /**
-    * Listener creation time
+    * <p>Listener creation time.</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * End port of the port range. value range: 2-65535.
+    * <p>End port of the port range: 2–65535</p>
     */
     @SerializedName("EndPort")
     @Expose
     private Long EndPort;
 
     /**
-    * Backend server type. available values: NODE, POLARIS, TARGETGROUP, TARGETGROUP-V2.
+    * <p>Backend server type. Available values: NODE, POLARIS, TARGETGROUP, TARGETGROUP-V2.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("TargetType")
@@ -120,7 +121,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String TargetType;
 
     /**
-    * Basic information of a bound target group. This field will be returned when a target group is bound to a listener.
+    * <p>Bound target group basic information; return this field when listener binding target group.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("TargetGroup")
@@ -128,144 +129,144 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private BasicTargetGroupInfo TargetGroup;
 
     /**
-    * Session persistence type. NORMAL: Default session persistence type; QUIC_CID: Session persistence by Quic Connection ID.
+    * <p>Session persistence type. NORMAL means the default session persistence type. QUIC_CID refers to maintaining the session based on Quic Connection ID.</p>
     */
     @SerializedName("SessionType")
     @Expose
     private String SessionType;
 
     /**
-    * Whether a persistent connection is enabled (1: enabled; 0: disabled). This parameter can only be configured in HTTP/HTTPS listeners.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * <p>Whether to enable long connections. 1: enable, 0: disable (this parameter is applicable only to HTTP/HTTPS listeners)</p>
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("KeepaliveEnable")
     @Expose
     private Long KeepaliveEnable;
 
     /**
-    * Supports Nat64 CLB TCP listeners only
+    * <p>Only supports Nat64 CLB TCP listener</p>
     */
     @SerializedName("Toa")
     @Expose
     private Boolean Toa;
 
     /**
-    * Reschedules when unbinding real servers. only supported for TCP/UDP listeners. toggle on to enable this feature.
+    * <p>Rescheduling feature, which provides a switch for scaling out the backend service. If the switch is toggled on, rescheduling is triggered when the backend service is unbound. This parameter is applicable only to TCP/UDP listeners.</p>
     */
     @SerializedName("DeregisterTargetRst")
     @Expose
     private Boolean DeregisterTargetRst;
 
     /**
-    * Describes the attributes of the listener.
+    * <p>Listener attribute.</p>
     */
     @SerializedName("AttrFlags")
     @Expose
     private String [] AttrFlags;
 
     /**
-    * List of bound target groups
-Note: This field may return `null`, indicating that no valid values can be obtained.
+    * <p>List of bound target groups</p>
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("TargetGroupList")
     @Expose
     private BasicTargetGroupInfo [] TargetGroupList;
 
     /**
-    * Maximum number of connections to a listener. -1 indicates unlimited speed at the listener dimension.
+    * <p>Maximum number of connections to a listener. -1 means no speed limit at the listener dimension.</p>
     */
     @SerializedName("MaxConn")
     @Expose
     private Long MaxConn;
 
     /**
-    * Maximum number of new connections to a listener. -1 means no speed limit at the listener dimension.
+    * <p>Maximum number of new connections to a listener. -1 means no speed limit at the listener dimension.</p>
     */
     @SerializedName("MaxCps")
     @Expose
     private Long MaxCps;
 
     /**
-    * Connection idle timeout period (in seconds). It’s only available to TCP listeners. Value range: 300-900 for shared and dedicated instances; 300-2000 for LCU-supported CLB instances. It defaults to 900.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+    * <p>Idle connection timeout is only supported for TCP listeners. Default value: 900. Value range: 300–900 for shared instances and dedicated instances and 300–1980 for LCU-supported instances.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("IdleConnectTimeout")
     @Expose
     private Long IdleConnectTimeout;
 
     /**
-    * Rescheduling trigger duration, valid values: 0-3600s. only TCP/UDP listeners support this. after triggering rescheduling, persistent connections will disconnect and be reassigned within the set scheduling time.
+    * <p>Rescheduling trigger duration. Value range: 0–3600. Unit: s. This parameter is applicable only to TCP/UDP listeners. After rescheduling is triggered, persistent connections will be disconnected and reassigned within the scheduled time window. </p><p>Unit: s.</p>
     */
     @SerializedName("RescheduleInterval")
     @Expose
     private Long RescheduleInterval;
 
     /**
-    * Data compression mode.
+    * <p>Data compression mode</p>
     */
     @SerializedName("DataCompressMode")
     @Expose
     private String DataCompressMode;
 
     /**
-    * Reschedules the startup time. when configured, rescheduling will be triggered upon arrival of the start time.
+    * <p>Rescheduling startup time: After the rescheduling startup time is configured, rescheduling is triggered when the startup time is arrived.</p>
     */
     @SerializedName("RescheduleStartTime")
     @Expose
     private Long RescheduleStartTime;
 
     /**
-     * Get CLB listener ID 
-     * @return ListenerId CLB listener ID
+     * Get <p>CLB listener ID</p> 
+     * @return ListenerId <p>CLB listener ID</p>
      */
     public String getListenerId() {
         return this.ListenerId;
     }
 
     /**
-     * Set CLB listener ID
-     * @param ListenerId CLB listener ID
+     * Set <p>CLB listener ID</p>
+     * @param ListenerId <p>CLB listener ID</p>
      */
     public void setListenerId(String ListenerId) {
         this.ListenerId = ListenerId;
     }
 
     /**
-     * Get Listener protocol. valid values: TCP, UDP, HTTP, HTTPS, TCP_SSL, QUIC. 
-     * @return Protocol Listener protocol. valid values: TCP, UDP, HTTP, HTTPS, TCP_SSL, QUIC.
+     * Get <p>Listener protocol. Available values: TCP, UDP, HTTP, HTTPS, TCP_SSL, QUIC</p> 
+     * @return Protocol <p>Listener protocol. Available values: TCP, UDP, HTTP, HTTPS, TCP_SSL, QUIC</p>
      */
     public String getProtocol() {
         return this.Protocol;
     }
 
     /**
-     * Set Listener protocol. valid values: TCP, UDP, HTTP, HTTPS, TCP_SSL, QUIC.
-     * @param Protocol Listener protocol. valid values: TCP, UDP, HTTP, HTTPS, TCP_SSL, QUIC.
+     * Set <p>Listener protocol. Available values: TCP, UDP, HTTP, HTTPS, TCP_SSL, QUIC</p>
+     * @param Protocol <p>Listener protocol. Available values: TCP, UDP, HTTP, HTTPS, TCP_SSL, QUIC</p>
      */
     public void setProtocol(String Protocol) {
         this.Protocol = Protocol;
     }
 
     /**
-     * Get Listener port. value range: 1-65535. 
-     * @return Port Listener port. value range: 1-65535.
+     * Get <p>Listener port, port range: 1–65535</p> 
+     * @return Port <p>Listener port, port range: 1–65535</p>
      */
     public Long getPort() {
         return this.Port;
     }
 
     /**
-     * Set Listener port. value range: 1-65535.
-     * @param Port Listener port. value range: 1-65535.
+     * Set <p>Listener port, port range: 1–65535</p>
+     * @param Port <p>Listener port, port range: 1–65535</p>
      */
     public void setPort(Long Port) {
         this.Port = Port;
     }
 
     /**
-     * Get Information of certificates bound to the listener
+     * Get <p>Listener bound certificate information</p>
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Certificate Information of certificates bound to the listener
+     * @return Certificate <p>Listener bound certificate information</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public CertificateOutput getCertificate() {
@@ -273,9 +274,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Information of certificates bound to the listener
+     * Set <p>Listener bound certificate information</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Certificate Information of certificates bound to the listener
+     * @param Certificate <p>Listener bound certificate information</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setCertificate(CertificateOutput Certificate) {
@@ -283,9 +284,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Health check information of the listener
+     * Get <p>Health check information of the listener</p>
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return HealthCheck Health check information of the listener
+     * @return HealthCheck <p>Health check information of the listener</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public HealthCheck getHealthCheck() {
@@ -293,9 +294,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Health check information of the listener
+     * Set <p>Health check information of the listener</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param HealthCheck Health check information of the listener
+     * @param HealthCheck <p>Health check information of the listener</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setHealthCheck(HealthCheck HealthCheck) {
@@ -303,25 +304,29 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Request scheduling method. WRR, LEAST_CONN, and IP_HASH respectively indicate weighted round robin, least connections, and IP hash.Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Scheduler Request scheduling method. WRR, LEAST_CONN, and IP_HASH respectively indicate weighted round robin, least connections, and IP hash.Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Requested scheduling method. WRR, LEAST_CONN, and IP_HASH indicate weighted round-robin, least connection, and IP Hash respectively.</p>
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Scheduler <p>Requested scheduling method. WRR, LEAST_CONN, and IP_HASH indicate weighted round-robin, least connection, and IP Hash respectively.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getScheduler() {
         return this.Scheduler;
     }
 
     /**
-     * Set Request scheduling method. WRR, LEAST_CONN, and IP_HASH respectively indicate weighted round robin, least connections, and IP hash.Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Scheduler Request scheduling method. WRR, LEAST_CONN, and IP_HASH respectively indicate weighted round robin, least connections, and IP hash.Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Requested scheduling method. WRR, LEAST_CONN, and IP_HASH indicate weighted round-robin, least connection, and IP Hash respectively.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Scheduler <p>Requested scheduling method. WRR, LEAST_CONN, and IP_HASH indicate weighted round-robin, least connection, and IP Hash respectively.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setScheduler(String Scheduler) {
         this.Scheduler = Scheduler;
     }
 
     /**
-     * Get Session persistence time, in seconds. value range: 30-3600. default value: 0, indicating that session persistence is not enabled by default. this parameter applies only to TCP and UDP listeners.
+     * Get <p>Session persistence time, unit: second. Available values: 30-3600, default 0, disabled by default. This parameter is applicable only to TCP/UDP listener.</p><p>Unit: second</p>
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return SessionExpireTime Session persistence time, in seconds. value range: 30-3600. default value: 0, indicating that session persistence is not enabled by default. this parameter applies only to TCP and UDP listeners.
+     * @return SessionExpireTime <p>Session persistence time, unit: second. Available values: 30-3600, default 0, disabled by default. This parameter is applicable only to TCP/UDP listener.</p><p>Unit: second</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getSessionExpireTime() {
@@ -329,9 +334,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Session persistence time, in seconds. value range: 30-3600. default value: 0, indicating that session persistence is not enabled by default. this parameter applies only to TCP and UDP listeners.
+     * Set <p>Session persistence time, unit: second. Available values: 30-3600, default 0, disabled by default. This parameter is applicable only to TCP/UDP listener.</p><p>Unit: second</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param SessionExpireTime Session persistence time, in seconds. value range: 30-3600. default value: 0, indicating that session persistence is not enabled by default. this parameter applies only to TCP and UDP listeners.
+     * @param SessionExpireTime <p>Session persistence time, unit: second. Available values: 30-3600, default 0, disabled by default. This parameter is applicable only to TCP/UDP listener.</p><p>Unit: second</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setSessionExpireTime(Long SessionExpireTime) {
@@ -339,25 +344,25 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Specifies whether to enable the SNI feature. 1: enable; 0: disable. this parameter is applicable only to HTTPS listeners. 
-     * @return SniSwitch Specifies whether to enable the SNI feature. 1: enable; 0: disable. this parameter is applicable only to HTTPS listeners.
+     * Get <p>Whether to enable SNI feature. 1: enable, 0: disabled (this parameter is applicable only to HTTPS listeners)</p> 
+     * @return SniSwitch <p>Whether to enable SNI feature. 1: enable, 0: disabled (this parameter is applicable only to HTTPS listeners)</p>
      */
     public Long getSniSwitch() {
         return this.SniSwitch;
     }
 
     /**
-     * Set Specifies whether to enable the SNI feature. 1: enable; 0: disable. this parameter is applicable only to HTTPS listeners.
-     * @param SniSwitch Specifies whether to enable the SNI feature. 1: enable; 0: disable. this parameter is applicable only to HTTPS listeners.
+     * Set <p>Whether to enable SNI feature. 1: enable, 0: disabled (this parameter is applicable only to HTTPS listeners)</p>
+     * @param SniSwitch <p>Whether to enable SNI feature. 1: enable, 0: disabled (this parameter is applicable only to HTTPS listeners)</p>
      */
     public void setSniSwitch(Long SniSwitch) {
         this.SniSwitch = SniSwitch;
     }
 
     /**
-     * Get All forwarding rules under a listener (this parameter is meaningful only for HTTP/HTTPS listeners)
+     * Get <p>All forwarding rules under a listener (this parameter is only meaningful for HTTP/HTTPS listeners)</p>
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Rules All forwarding rules under a listener (this parameter is meaningful only for HTTP/HTTPS listeners)
+     * @return Rules <p>All forwarding rules under a listener (this parameter is only meaningful for HTTP/HTTPS listeners)</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public RuleOutput [] getRules() {
@@ -365,9 +370,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set All forwarding rules under a listener (this parameter is meaningful only for HTTP/HTTPS listeners)
+     * Set <p>All forwarding rules under a listener (this parameter is only meaningful for HTTP/HTTPS listeners)</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Rules All forwarding rules under a listener (this parameter is meaningful only for HTTP/HTTPS listeners)
+     * @param Rules <p>All forwarding rules under a listener (this parameter is only meaningful for HTTP/HTTPS listeners)</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setRules(RuleOutput [] Rules) {
@@ -375,57 +380,57 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Listener name 
-     * @return ListenerName Listener name
+     * Get <p>Listener name</p> 
+     * @return ListenerName <p>Listener name</p>
      */
     public String getListenerName() {
         return this.ListenerName;
     }
 
     /**
-     * Set Listener name
-     * @param ListenerName Listener name
+     * Set <p>Listener name</p>
+     * @param ListenerName <p>Listener name</p>
      */
     public void setListenerName(String ListenerName) {
         this.ListenerName = ListenerName;
     }
 
     /**
-     * Get Listener creation time 
-     * @return CreateTime Listener creation time
+     * Get <p>Listener creation time.</p> 
+     * @return CreateTime <p>Listener creation time.</p>
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set Listener creation time
-     * @param CreateTime Listener creation time
+     * Set <p>Listener creation time.</p>
+     * @param CreateTime <p>Listener creation time.</p>
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get End port of the port range. value range: 2-65535. 
-     * @return EndPort End port of the port range. value range: 2-65535.
+     * Get <p>End port of the port range: 2–65535</p> 
+     * @return EndPort <p>End port of the port range: 2–65535</p>
      */
     public Long getEndPort() {
         return this.EndPort;
     }
 
     /**
-     * Set End port of the port range. value range: 2-65535.
-     * @param EndPort End port of the port range. value range: 2-65535.
+     * Set <p>End port of the port range: 2–65535</p>
+     * @param EndPort <p>End port of the port range: 2–65535</p>
      */
     public void setEndPort(Long EndPort) {
         this.EndPort = EndPort;
     }
 
     /**
-     * Get Backend server type. available values: NODE, POLARIS, TARGETGROUP, TARGETGROUP-V2.
+     * Get <p>Backend server type. Available values: NODE, POLARIS, TARGETGROUP, TARGETGROUP-V2.</p>
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return TargetType Backend server type. available values: NODE, POLARIS, TARGETGROUP, TARGETGROUP-V2.
+     * @return TargetType <p>Backend server type. Available values: NODE, POLARIS, TARGETGROUP, TARGETGROUP-V2.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getTargetType() {
@@ -433,9 +438,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Backend server type. available values: NODE, POLARIS, TARGETGROUP, TARGETGROUP-V2.
+     * Set <p>Backend server type. Available values: NODE, POLARIS, TARGETGROUP, TARGETGROUP-V2.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param TargetType Backend server type. available values: NODE, POLARIS, TARGETGROUP, TARGETGROUP-V2.
+     * @param TargetType <p>Backend server type. Available values: NODE, POLARIS, TARGETGROUP, TARGETGROUP-V2.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setTargetType(String TargetType) {
@@ -443,9 +448,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Basic information of a bound target group. This field will be returned when a target group is bound to a listener.
+     * Get <p>Bound target group basic information; return this field when listener binding target group.</p>
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return TargetGroup Basic information of a bound target group. This field will be returned when a target group is bound to a listener.
+     * @return TargetGroup <p>Bound target group basic information; return this field when listener binding target group.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public BasicTargetGroupInfo getTargetGroup() {
@@ -453,9 +458,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Basic information of a bound target group. This field will be returned when a target group is bound to a listener.
+     * Set <p>Bound target group basic information; return this field when listener binding target group.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param TargetGroup Basic information of a bound target group. This field will be returned when a target group is bound to a listener.
+     * @param TargetGroup <p>Bound target group basic information; return this field when listener binding target group.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setTargetGroup(BasicTargetGroupInfo TargetGroup) {
@@ -463,204 +468,204 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Session persistence type. NORMAL: Default session persistence type; QUIC_CID: Session persistence by Quic Connection ID. 
-     * @return SessionType Session persistence type. NORMAL: Default session persistence type; QUIC_CID: Session persistence by Quic Connection ID.
+     * Get <p>Session persistence type. NORMAL means the default session persistence type. QUIC_CID refers to maintaining the session based on Quic Connection ID.</p> 
+     * @return SessionType <p>Session persistence type. NORMAL means the default session persistence type. QUIC_CID refers to maintaining the session based on Quic Connection ID.</p>
      */
     public String getSessionType() {
         return this.SessionType;
     }
 
     /**
-     * Set Session persistence type. NORMAL: Default session persistence type; QUIC_CID: Session persistence by Quic Connection ID.
-     * @param SessionType Session persistence type. NORMAL: Default session persistence type; QUIC_CID: Session persistence by Quic Connection ID.
+     * Set <p>Session persistence type. NORMAL means the default session persistence type. QUIC_CID refers to maintaining the session based on Quic Connection ID.</p>
+     * @param SessionType <p>Session persistence type. NORMAL means the default session persistence type. QUIC_CID refers to maintaining the session based on Quic Connection ID.</p>
      */
     public void setSessionType(String SessionType) {
         this.SessionType = SessionType;
     }
 
     /**
-     * Get Whether a persistent connection is enabled (1: enabled; 0: disabled). This parameter can only be configured in HTTP/HTTPS listeners.
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return KeepaliveEnable Whether a persistent connection is enabled (1: enabled; 0: disabled). This parameter can only be configured in HTTP/HTTPS listeners.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get <p>Whether to enable long connections. 1: enable, 0: disable (this parameter is applicable only to HTTP/HTTPS listeners)</p>
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return KeepaliveEnable <p>Whether to enable long connections. 1: enable, 0: disable (this parameter is applicable only to HTTP/HTTPS listeners)</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getKeepaliveEnable() {
         return this.KeepaliveEnable;
     }
 
     /**
-     * Set Whether a persistent connection is enabled (1: enabled; 0: disabled). This parameter can only be configured in HTTP/HTTPS listeners.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param KeepaliveEnable Whether a persistent connection is enabled (1: enabled; 0: disabled). This parameter can only be configured in HTTP/HTTPS listeners.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set <p>Whether to enable long connections. 1: enable, 0: disable (this parameter is applicable only to HTTP/HTTPS listeners)</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param KeepaliveEnable <p>Whether to enable long connections. 1: enable, 0: disable (this parameter is applicable only to HTTP/HTTPS listeners)</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setKeepaliveEnable(Long KeepaliveEnable) {
         this.KeepaliveEnable = KeepaliveEnable;
     }
 
     /**
-     * Get Supports Nat64 CLB TCP listeners only 
-     * @return Toa Supports Nat64 CLB TCP listeners only
+     * Get <p>Only supports Nat64 CLB TCP listener</p> 
+     * @return Toa <p>Only supports Nat64 CLB TCP listener</p>
      */
     public Boolean getToa() {
         return this.Toa;
     }
 
     /**
-     * Set Supports Nat64 CLB TCP listeners only
-     * @param Toa Supports Nat64 CLB TCP listeners only
+     * Set <p>Only supports Nat64 CLB TCP listener</p>
+     * @param Toa <p>Only supports Nat64 CLB TCP listener</p>
      */
     public void setToa(Boolean Toa) {
         this.Toa = Toa;
     }
 
     /**
-     * Get Reschedules when unbinding real servers. only supported for TCP/UDP listeners. toggle on to enable this feature. 
-     * @return DeregisterTargetRst Reschedules when unbinding real servers. only supported for TCP/UDP listeners. toggle on to enable this feature.
+     * Get <p>Rescheduling feature, which provides a switch for scaling out the backend service. If the switch is toggled on, rescheduling is triggered when the backend service is unbound. This parameter is applicable only to TCP/UDP listeners.</p> 
+     * @return DeregisterTargetRst <p>Rescheduling feature, which provides a switch for scaling out the backend service. If the switch is toggled on, rescheduling is triggered when the backend service is unbound. This parameter is applicable only to TCP/UDP listeners.</p>
      */
     public Boolean getDeregisterTargetRst() {
         return this.DeregisterTargetRst;
     }
 
     /**
-     * Set Reschedules when unbinding real servers. only supported for TCP/UDP listeners. toggle on to enable this feature.
-     * @param DeregisterTargetRst Reschedules when unbinding real servers. only supported for TCP/UDP listeners. toggle on to enable this feature.
+     * Set <p>Rescheduling feature, which provides a switch for scaling out the backend service. If the switch is toggled on, rescheduling is triggered when the backend service is unbound. This parameter is applicable only to TCP/UDP listeners.</p>
+     * @param DeregisterTargetRst <p>Rescheduling feature, which provides a switch for scaling out the backend service. If the switch is toggled on, rescheduling is triggered when the backend service is unbound. This parameter is applicable only to TCP/UDP listeners.</p>
      */
     public void setDeregisterTargetRst(Boolean DeregisterTargetRst) {
         this.DeregisterTargetRst = DeregisterTargetRst;
     }
 
     /**
-     * Get Describes the attributes of the listener. 
-     * @return AttrFlags Describes the attributes of the listener.
+     * Get <p>Listener attribute.</p> 
+     * @return AttrFlags <p>Listener attribute.</p>
      */
     public String [] getAttrFlags() {
         return this.AttrFlags;
     }
 
     /**
-     * Set Describes the attributes of the listener.
-     * @param AttrFlags Describes the attributes of the listener.
+     * Set <p>Listener attribute.</p>
+     * @param AttrFlags <p>Listener attribute.</p>
      */
     public void setAttrFlags(String [] AttrFlags) {
         this.AttrFlags = AttrFlags;
     }
 
     /**
-     * Get List of bound target groups
-Note: This field may return `null`, indicating that no valid values can be obtained. 
-     * @return TargetGroupList List of bound target groups
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * Get <p>List of bound target groups</p>
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return TargetGroupList <p>List of bound target groups</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public BasicTargetGroupInfo [] getTargetGroupList() {
         return this.TargetGroupList;
     }
 
     /**
-     * Set List of bound target groups
-Note: This field may return `null`, indicating that no valid values can be obtained.
-     * @param TargetGroupList List of bound target groups
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * Set <p>List of bound target groups</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param TargetGroupList <p>List of bound target groups</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setTargetGroupList(BasicTargetGroupInfo [] TargetGroupList) {
         this.TargetGroupList = TargetGroupList;
     }
 
     /**
-     * Get Maximum number of connections to a listener. -1 indicates unlimited speed at the listener dimension. 
-     * @return MaxConn Maximum number of connections to a listener. -1 indicates unlimited speed at the listener dimension.
+     * Get <p>Maximum number of connections to a listener. -1 means no speed limit at the listener dimension.</p> 
+     * @return MaxConn <p>Maximum number of connections to a listener. -1 means no speed limit at the listener dimension.</p>
      */
     public Long getMaxConn() {
         return this.MaxConn;
     }
 
     /**
-     * Set Maximum number of connections to a listener. -1 indicates unlimited speed at the listener dimension.
-     * @param MaxConn Maximum number of connections to a listener. -1 indicates unlimited speed at the listener dimension.
+     * Set <p>Maximum number of connections to a listener. -1 means no speed limit at the listener dimension.</p>
+     * @param MaxConn <p>Maximum number of connections to a listener. -1 means no speed limit at the listener dimension.</p>
      */
     public void setMaxConn(Long MaxConn) {
         this.MaxConn = MaxConn;
     }
 
     /**
-     * Get Maximum number of new connections to a listener. -1 means no speed limit at the listener dimension. 
-     * @return MaxCps Maximum number of new connections to a listener. -1 means no speed limit at the listener dimension.
+     * Get <p>Maximum number of new connections to a listener. -1 means no speed limit at the listener dimension.</p> 
+     * @return MaxCps <p>Maximum number of new connections to a listener. -1 means no speed limit at the listener dimension.</p>
      */
     public Long getMaxCps() {
         return this.MaxCps;
     }
 
     /**
-     * Set Maximum number of new connections to a listener. -1 means no speed limit at the listener dimension.
-     * @param MaxCps Maximum number of new connections to a listener. -1 means no speed limit at the listener dimension.
+     * Set <p>Maximum number of new connections to a listener. -1 means no speed limit at the listener dimension.</p>
+     * @param MaxCps <p>Maximum number of new connections to a listener. -1 means no speed limit at the listener dimension.</p>
      */
     public void setMaxCps(Long MaxCps) {
         this.MaxCps = MaxCps;
     }
 
     /**
-     * Get Connection idle timeout period (in seconds). It’s only available to TCP listeners. Value range: 300-900 for shared and dedicated instances; 300-2000 for LCU-supported CLB instances. It defaults to 900.
-Note: This field may return `null`, indicating that no valid values can be obtained. 
-     * @return IdleConnectTimeout Connection idle timeout period (in seconds). It’s only available to TCP listeners. Value range: 300-900 for shared and dedicated instances; 300-2000 for LCU-supported CLB instances. It defaults to 900.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * Get <p>Idle connection timeout is only supported for TCP listeners. Default value: 900. Value range: 300–900 for shared instances and dedicated instances and 300–1980 for LCU-supported instances.</p>
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return IdleConnectTimeout <p>Idle connection timeout is only supported for TCP listeners. Default value: 900. Value range: 300–900 for shared instances and dedicated instances and 300–1980 for LCU-supported instances.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getIdleConnectTimeout() {
         return this.IdleConnectTimeout;
     }
 
     /**
-     * Set Connection idle timeout period (in seconds). It’s only available to TCP listeners. Value range: 300-900 for shared and dedicated instances; 300-2000 for LCU-supported CLB instances. It defaults to 900.
-Note: This field may return `null`, indicating that no valid values can be obtained.
-     * @param IdleConnectTimeout Connection idle timeout period (in seconds). It’s only available to TCP listeners. Value range: 300-900 for shared and dedicated instances; 300-2000 for LCU-supported CLB instances. It defaults to 900.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * Set <p>Idle connection timeout is only supported for TCP listeners. Default value: 900. Value range: 300–900 for shared instances and dedicated instances and 300–1980 for LCU-supported instances.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param IdleConnectTimeout <p>Idle connection timeout is only supported for TCP listeners. Default value: 900. Value range: 300–900 for shared instances and dedicated instances and 300–1980 for LCU-supported instances.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setIdleConnectTimeout(Long IdleConnectTimeout) {
         this.IdleConnectTimeout = IdleConnectTimeout;
     }
 
     /**
-     * Get Rescheduling trigger duration, valid values: 0-3600s. only TCP/UDP listeners support this. after triggering rescheduling, persistent connections will disconnect and be reassigned within the set scheduling time. 
-     * @return RescheduleInterval Rescheduling trigger duration, valid values: 0-3600s. only TCP/UDP listeners support this. after triggering rescheduling, persistent connections will disconnect and be reassigned within the set scheduling time.
+     * Get <p>Rescheduling trigger duration. Value range: 0–3600. Unit: s. This parameter is applicable only to TCP/UDP listeners. After rescheduling is triggered, persistent connections will be disconnected and reassigned within the scheduled time window. </p><p>Unit: s.</p> 
+     * @return RescheduleInterval <p>Rescheduling trigger duration. Value range: 0–3600. Unit: s. This parameter is applicable only to TCP/UDP listeners. After rescheduling is triggered, persistent connections will be disconnected and reassigned within the scheduled time window. </p><p>Unit: s.</p>
      */
     public Long getRescheduleInterval() {
         return this.RescheduleInterval;
     }
 
     /**
-     * Set Rescheduling trigger duration, valid values: 0-3600s. only TCP/UDP listeners support this. after triggering rescheduling, persistent connections will disconnect and be reassigned within the set scheduling time.
-     * @param RescheduleInterval Rescheduling trigger duration, valid values: 0-3600s. only TCP/UDP listeners support this. after triggering rescheduling, persistent connections will disconnect and be reassigned within the set scheduling time.
+     * Set <p>Rescheduling trigger duration. Value range: 0–3600. Unit: s. This parameter is applicable only to TCP/UDP listeners. After rescheduling is triggered, persistent connections will be disconnected and reassigned within the scheduled time window. </p><p>Unit: s.</p>
+     * @param RescheduleInterval <p>Rescheduling trigger duration. Value range: 0–3600. Unit: s. This parameter is applicable only to TCP/UDP listeners. After rescheduling is triggered, persistent connections will be disconnected and reassigned within the scheduled time window. </p><p>Unit: s.</p>
      */
     public void setRescheduleInterval(Long RescheduleInterval) {
         this.RescheduleInterval = RescheduleInterval;
     }
 
     /**
-     * Get Data compression mode. 
-     * @return DataCompressMode Data compression mode.
+     * Get <p>Data compression mode</p> 
+     * @return DataCompressMode <p>Data compression mode</p>
      */
     public String getDataCompressMode() {
         return this.DataCompressMode;
     }
 
     /**
-     * Set Data compression mode.
-     * @param DataCompressMode Data compression mode.
+     * Set <p>Data compression mode</p>
+     * @param DataCompressMode <p>Data compression mode</p>
      */
     public void setDataCompressMode(String DataCompressMode) {
         this.DataCompressMode = DataCompressMode;
     }
 
     /**
-     * Get Reschedules the startup time. when configured, rescheduling will be triggered upon arrival of the start time. 
-     * @return RescheduleStartTime Reschedules the startup time. when configured, rescheduling will be triggered upon arrival of the start time.
+     * Get <p>Rescheduling startup time: After the rescheduling startup time is configured, rescheduling is triggered when the startup time is arrived.</p> 
+     * @return RescheduleStartTime <p>Rescheduling startup time: After the rescheduling startup time is configured, rescheduling is triggered when the startup time is arrived.</p>
      */
     public Long getRescheduleStartTime() {
         return this.RescheduleStartTime;
     }
 
     /**
-     * Set Reschedules the startup time. when configured, rescheduling will be triggered upon arrival of the start time.
-     * @param RescheduleStartTime Reschedules the startup time. when configured, rescheduling will be triggered upon arrival of the start time.
+     * Set <p>Rescheduling startup time: After the rescheduling startup time is configured, rescheduling is triggered when the startup time is arrived.</p>
+     * @param RescheduleStartTime <p>Rescheduling startup time: After the rescheduling startup time is configured, rescheduling is triggered when the startup time is arrived.</p>
      */
     public void setRescheduleStartTime(Long RescheduleStartTime) {
         this.RescheduleStartTime = RescheduleStartTime;

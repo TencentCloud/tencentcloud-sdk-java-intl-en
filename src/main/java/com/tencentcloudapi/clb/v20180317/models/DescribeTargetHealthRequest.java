@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class DescribeTargetHealthRequest extends AbstractModel {
 
     /**
-    * List of IDs of CLB instances to be queried
+    * <p>List of Cloud Load Balancer instance IDs to query. The array size supports up to 30.</p>
     */
     @SerializedName("LoadBalancerIds")
     @Expose
     private String [] LoadBalancerIds;
 
     /**
-    * Specifies the listener ID list to query.
+    * <p>Listener ID list to query.</p>
     */
     @SerializedName("ListenerIds")
     @Expose
     private String [] ListenerIds;
 
     /**
-    * Specifies the list of rule ids to be queried.
+    * <p>List of forwarding rule IDs to query.</p>
     */
     @SerializedName("LocationIds")
     @Expose
     private String [] LocationIds;
 
     /**
-     * Get List of IDs of CLB instances to be queried 
-     * @return LoadBalancerIds List of IDs of CLB instances to be queried
+     * Get <p>List of Cloud Load Balancer instance IDs to query. The array size supports up to 30.</p> 
+     * @return LoadBalancerIds <p>List of Cloud Load Balancer instance IDs to query. The array size supports up to 30.</p>
      */
     public String [] getLoadBalancerIds() {
         return this.LoadBalancerIds;
     }
 
     /**
-     * Set List of IDs of CLB instances to be queried
-     * @param LoadBalancerIds List of IDs of CLB instances to be queried
+     * Set <p>List of Cloud Load Balancer instance IDs to query. The array size supports up to 30.</p>
+     * @param LoadBalancerIds <p>List of Cloud Load Balancer instance IDs to query. The array size supports up to 30.</p>
      */
     public void setLoadBalancerIds(String [] LoadBalancerIds) {
         this.LoadBalancerIds = LoadBalancerIds;
     }
 
     /**
-     * Get Specifies the listener ID list to query. 
-     * @return ListenerIds Specifies the listener ID list to query.
+     * Get <p>Listener ID list to query.</p> 
+     * @return ListenerIds <p>Listener ID list to query.</p>
      */
     public String [] getListenerIds() {
         return this.ListenerIds;
     }
 
     /**
-     * Set Specifies the listener ID list to query.
-     * @param ListenerIds Specifies the listener ID list to query.
+     * Set <p>Listener ID list to query.</p>
+     * @param ListenerIds <p>Listener ID list to query.</p>
      */
     public void setListenerIds(String [] ListenerIds) {
         this.ListenerIds = ListenerIds;
     }
 
     /**
-     * Get Specifies the list of rule ids to be queried. 
-     * @return LocationIds Specifies the list of rule ids to be queried.
+     * Get <p>List of forwarding rule IDs to query.</p> 
+     * @return LocationIds <p>List of forwarding rule IDs to query.</p>
      */
     public String [] getLocationIds() {
         return this.LocationIds;
     }
 
     /**
-     * Set Specifies the list of rule ids to be queried.
-     * @param LocationIds Specifies the list of rule ids to be queried.
+     * Set <p>List of forwarding rule IDs to query.</p>
+     * @param LocationIds <p>List of forwarding rule IDs to query.</p>
      */
     public void setLocationIds(String [] LocationIds) {
         this.LocationIds = LocationIds;

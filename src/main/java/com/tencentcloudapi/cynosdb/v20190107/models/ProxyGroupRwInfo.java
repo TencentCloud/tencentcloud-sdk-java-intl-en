@@ -108,7 +108,7 @@ public class ProxyGroupRwInfo extends AbstractModel {
     private Boolean ApQueryToOtherNode;
 
     /**
-    * 
+    * <p>Auto load</p><p>Enumeration value:</p><ul><li>static: Static load</li><li>dynamic: Dynamic load</li></ul>
     */
     @SerializedName("LoadBalanceMode")
     @Expose
@@ -307,16 +307,16 @@ public class ProxyGroupRwInfo extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return LoadBalanceMode 
+     * Get <p>Auto load</p><p>Enumeration value:</p><ul><li>static: Static load</li><li>dynamic: Dynamic load</li></ul> 
+     * @return LoadBalanceMode <p>Auto load</p><p>Enumeration value:</p><ul><li>static: Static load</li><li>dynamic: Dynamic load</li></ul>
      */
     public String getLoadBalanceMode() {
         return this.LoadBalanceMode;
     }
 
     /**
-     * Set 
-     * @param LoadBalanceMode 
+     * Set <p>Auto load</p><p>Enumeration value:</p><ul><li>static: Static load</li><li>dynamic: Dynamic load</li></ul>
+     * @param LoadBalanceMode <p>Auto load</p><p>Enumeration value:</p><ul><li>static: Static load</li><li>dynamic: Dynamic load</li></ul>
      */
     public void setLoadBalanceMode(String LoadBalanceMode) {
         this.LoadBalanceMode = LoadBalanceMode;

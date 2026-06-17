@@ -24,77 +24,95 @@ import java.util.HashMap;
 public class DescribeInstanceSpecsRequest extends AbstractModel {
 
     /**
-    * Database type. Valid values: 
-<li> MYSQL </li>
+    * <p>Database type, value ranges from...to... </p><li> MYSQL </li>
     */
     @SerializedName("DbType")
     @Expose
     private String DbType;
 
     /**
-    * Whether to return the AZ information.
+    * <p>Whether required to return AZ information</p>
     */
     @SerializedName("IncludeZoneStocks")
     @Expose
     private Boolean IncludeZoneStocks;
 
     /**
-    * Instance machine type.
+    * <p>Instance machine type.</p>
     */
     @SerializedName("DeviceType")
     @Expose
     private String DeviceType;
 
     /**
-     * Get Database type. Valid values: 
-<li> MYSQL </li> 
-     * @return DbType Database type. Valid values: 
-<li> MYSQL </li>
+    * <p>Cluster level, optional. For example P0, P1</p>
+    */
+    @SerializedName("ClusterLevel")
+    @Expose
+    private String ClusterLevel;
+
+    /**
+     * Get <p>Database type, value ranges from...to... </p><li> MYSQL </li> 
+     * @return DbType <p>Database type, value ranges from...to... </p><li> MYSQL </li>
      */
     public String getDbType() {
         return this.DbType;
     }
 
     /**
-     * Set Database type. Valid values: 
-<li> MYSQL </li>
-     * @param DbType Database type. Valid values: 
-<li> MYSQL </li>
+     * Set <p>Database type, value ranges from...to... </p><li> MYSQL </li>
+     * @param DbType <p>Database type, value ranges from...to... </p><li> MYSQL </li>
      */
     public void setDbType(String DbType) {
         this.DbType = DbType;
     }
 
     /**
-     * Get Whether to return the AZ information. 
-     * @return IncludeZoneStocks Whether to return the AZ information.
+     * Get <p>Whether required to return AZ information</p> 
+     * @return IncludeZoneStocks <p>Whether required to return AZ information</p>
      */
     public Boolean getIncludeZoneStocks() {
         return this.IncludeZoneStocks;
     }
 
     /**
-     * Set Whether to return the AZ information.
-     * @param IncludeZoneStocks Whether to return the AZ information.
+     * Set <p>Whether required to return AZ information</p>
+     * @param IncludeZoneStocks <p>Whether required to return AZ information</p>
      */
     public void setIncludeZoneStocks(Boolean IncludeZoneStocks) {
         this.IncludeZoneStocks = IncludeZoneStocks;
     }
 
     /**
-     * Get Instance machine type. 
-     * @return DeviceType Instance machine type.
+     * Get <p>Instance machine type.</p> 
+     * @return DeviceType <p>Instance machine type.</p>
      */
     public String getDeviceType() {
         return this.DeviceType;
     }
 
     /**
-     * Set Instance machine type.
-     * @param DeviceType Instance machine type.
+     * Set <p>Instance machine type.</p>
+     * @param DeviceType <p>Instance machine type.</p>
      */
     public void setDeviceType(String DeviceType) {
         this.DeviceType = DeviceType;
+    }
+
+    /**
+     * Get <p>Cluster level, optional. For example P0, P1</p> 
+     * @return ClusterLevel <p>Cluster level, optional. For example P0, P1</p>
+     */
+    public String getClusterLevel() {
+        return this.ClusterLevel;
+    }
+
+    /**
+     * Set <p>Cluster level, optional. For example P0, P1</p>
+     * @param ClusterLevel <p>Cluster level, optional. For example P0, P1</p>
+     */
+    public void setClusterLevel(String ClusterLevel) {
+        this.ClusterLevel = ClusterLevel;
     }
 
     public DescribeInstanceSpecsRequest() {
@@ -114,6 +132,9 @@ public class DescribeInstanceSpecsRequest extends AbstractModel {
         if (source.DeviceType != null) {
             this.DeviceType = new String(source.DeviceType);
         }
+        if (source.ClusterLevel != null) {
+            this.ClusterLevel = new String(source.ClusterLevel);
+        }
     }
 
 
@@ -124,6 +145,7 @@ public class DescribeInstanceSpecsRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "DbType", this.DbType);
         this.setParamSimple(map, prefix + "IncludeZoneStocks", this.IncludeZoneStocks);
         this.setParamSimple(map, prefix + "DeviceType", this.DeviceType);
+        this.setParamSimple(map, prefix + "ClusterLevel", this.ClusterLevel);
 
     }
 }

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ModifyLoadBalancerSlaResponse extends AbstractModel {
 
     /**
-    * 
+    * Order number.
     */
     @SerializedName("DealName")
     @Expose
@@ -38,16 +38,16 @@ public class ModifyLoadBalancerSlaResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get  
-     * @return DealName 
+     * Get Order number. 
+     * @return DealName Order number.
      */
     public String getDealName() {
         return this.DealName;
     }
 
     /**
-     * Set 
-     * @param DealName 
+     * Set Order number.
+     * @param DealName Order number.
      */
     public void setDealName(String DealName) {
         this.DealName = DealName;

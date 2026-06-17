@@ -1,0 +1,125 @@
+/*
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+package com.tencentcloudapi.clb.v20230417.models;
+
+import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.annotations.Expose;
+import java.util.HashMap;
+
+public class TargetRegionInfo extends AbstractModel {
+
+    /**
+    * Region of the target, such as ap-guangzhou
+    */
+    @SerializedName("Region")
+    @Expose
+    private String Region;
+
+    /**
+    * Network of the target. For VPC, the format is vpc-abcd1234. For a basic network, the value is 0.
+    */
+    @SerializedName("VpcId")
+    @Expose
+    private String VpcId;
+
+    /**
+    * Target's network, in the format of 86323 for a private network, or 0 if it is a basic network
+    */
+    @SerializedName("NumericalVpcId")
+    @Expose
+    private Long NumericalVpcId;
+
+    /**
+     * Get Region of the target, such as ap-guangzhou 
+     * @return Region Region of the target, such as ap-guangzhou
+     */
+    public String getRegion() {
+        return this.Region;
+    }
+
+    /**
+     * Set Region of the target, such as ap-guangzhou
+     * @param Region Region of the target, such as ap-guangzhou
+     */
+    public void setRegion(String Region) {
+        this.Region = Region;
+    }
+
+    /**
+     * Get Network of the target. For VPC, the format is vpc-abcd1234. For a basic network, the value is 0. 
+     * @return VpcId Network of the target. For VPC, the format is vpc-abcd1234. For a basic network, the value is 0.
+     */
+    public String getVpcId() {
+        return this.VpcId;
+    }
+
+    /**
+     * Set Network of the target. For VPC, the format is vpc-abcd1234. For a basic network, the value is 0.
+     * @param VpcId Network of the target. For VPC, the format is vpc-abcd1234. For a basic network, the value is 0.
+     */
+    public void setVpcId(String VpcId) {
+        this.VpcId = VpcId;
+    }
+
+    /**
+     * Get Target's network, in the format of 86323 for a private network, or 0 if it is a basic network 
+     * @return NumericalVpcId Target's network, in the format of 86323 for a private network, or 0 if it is a basic network
+     */
+    public Long getNumericalVpcId() {
+        return this.NumericalVpcId;
+    }
+
+    /**
+     * Set Target's network, in the format of 86323 for a private network, or 0 if it is a basic network
+     * @param NumericalVpcId Target's network, in the format of 86323 for a private network, or 0 if it is a basic network
+     */
+    public void setNumericalVpcId(Long NumericalVpcId) {
+        this.NumericalVpcId = NumericalVpcId;
+    }
+
+    public TargetRegionInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public TargetRegionInfo(TargetRegionInfo source) {
+        if (source.Region != null) {
+            this.Region = new String(source.Region);
+        }
+        if (source.VpcId != null) {
+            this.VpcId = new String(source.VpcId);
+        }
+        if (source.NumericalVpcId != null) {
+            this.NumericalVpcId = new Long(source.NumericalVpcId);
+        }
+    }
+
+
+    /**
+     * Internal implementation, normal users should not use it.
+     */
+    public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "Region", this.Region);
+        this.setParamSimple(map, prefix + "VpcId", this.VpcId);
+        this.setParamSimple(map, prefix + "NumericalVpcId", this.NumericalVpcId);
+
+    }
+}
+

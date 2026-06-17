@@ -1,12 +1,12 @@
 package com.tencentcloudapi.clb.v20180317;
 public enum ClbErrorCode {
-     /* CAM signature/authentication error */
+     /* CAM signature/authentication error. */
      AUTHFAILURE("AuthFailure"),
      
      /* Token error. */
      AUTHFAILURE_TOKENFAILURE("AuthFailure.TokenFailure"),
      
-     /* DryRun operation, which means the DryRun parameter is passed in yet the request will still be successful. */
+     /* DryRun operation means the request will be successful, but the DryRun parameter is passed. */
      DRYRUNOPERATION("DryRunOperation"),
      
      /* Operation failed. */
@@ -18,7 +18,7 @@ public enum ClbErrorCode {
      /* Instance deletion is determined to be a high-risk operation through frequency verification. Please check the business or try again later. */
      FAILEDOPERATION_FREQUENCYCHECKRISK("FailedOperation.FrequencyCheckRisk"),
      
-     /* Exceptional CLB instance status */
+     /* LB status exception. */
      FAILEDOPERATION_INVALIDLBSTATUS("FailedOperation.InvalidLBStatus"),
      
      /* Instances without listeners cannot be stopped. */
@@ -45,61 +45,61 @@ public enum ClbErrorCode {
      /* To ensure no resource leakage and maintain the ID idempotence of created resources, ClientToken is used to create resources. If the order process has ended and shipment failed, or the order process has not been updated for a long time, a message will indicate that the current ClientToken has timed out. */
      INVALIDPARAMETER_CLIENTTOKENLIMITEXCEEDED("InvalidParameter.ClientTokenLimitExceeded"),
      
-     /* Wrong parameter format. */
+     /* Incorrect parameter format. */
      INVALIDPARAMETER_FORMATERROR("InvalidParameter.FormatError"),
      
      /* Failed to query the parameter */
      INVALIDPARAMETER_INVALIDFILTER("InvalidParameter.InvalidFilter"),
      
-     /* Wrong CLB instance ID. */
+     /* CLB instance ID error. */
      INVALIDPARAMETER_LBIDNOTFOUND("InvalidParameter.LBIdNotFound"),
      
-     /* Wrong listener ID. */
+     /* Listener ID error. */
      INVALIDPARAMETER_LISTENERIDNOTFOUND("InvalidParameter.ListenerIdNotFound"),
      
      /* Unable to find eligible forwarding rules. */
      INVALIDPARAMETER_LOCATIONNOTFOUND("InvalidParameter.LocationNotFound"),
      
-     /* Listener port checks failed due to port conflicts or other reasons. */
+     /* Listener port check due to port conflicts or other reasons. */
      INVALIDPARAMETER_PORTCHECKFAILED("InvalidParameter.PortCheckFailed"),
      
-     /* Listener protocol checks failed because the protocol used is incompatible with the corresponding operation. */
+     /* Listener protocol check failed because, for example, the protocol used is incompatible with the corresponding operation. */
      INVALIDPARAMETER_PROTOCOLCHECKFAILED("InvalidParameter.ProtocolCheckFailed"),
      
      /* Invalid region. */
      INVALIDPARAMETER_REGIONNOTFOUND("InvalidParameter.RegionNotFound"),
      
-     /* The forwarding rule has already been bound to a redirection relationship. */
+     /* The forwarding rule has been bound to a redirection relationship. */
      INVALIDPARAMETER_REWRITEALREADYEXIST("InvalidParameter.RewriteAlreadyExist"),
      
      /* Some redirection rules do not exist. */
      INVALIDPARAMETER_SOMEREWRITENOTFOUND("InvalidParameter.SomeRewriteNotFound"),
      
-     /* Incorrect parameter value. */
+     /* Parameter value error. */
      INVALIDPARAMETERVALUE("InvalidParameterValue"),
      
-     /* Duplicate parameter value. */
+     /* Duplicate parameter values. */
      INVALIDPARAMETERVALUE_DUPLICATE("InvalidParameterValue.Duplicate"),
      
-     /* Incorrect `Filter` parameter. */
+     /* Filter parameter input error. */
      INVALIDPARAMETERVALUE_INVALIDFILTER("InvalidParameterValue.InvalidFilter"),
      
-     /* Wrong parameter length. */
+     /* Invalid parameter length. */
      INVALIDPARAMETERVALUE_LENGTH("InvalidParameterValue.Length"),
      
-     /* Wrong parameter value range. */
+     /* Invalid parameter value range. */
      INVALIDPARAMETERVALUE_RANGE("InvalidParameterValue.Range"),
      
-     /* Quota exceeded. */
+     /* The quota limit is exceeded. */
      LIMITEXCEEDED("LimitExceeded"),
      
-     /* Missing parameter. */
+     /* Parameters are missing. */
      MISSINGPARAMETER("MissingParameter"),
      
      /* Operation denied. */
      OPERATIONDENIED("OperationDenied"),
      
-     /* The number of requests exceeds the frequency limit. */
+     /* Number of requests exceeds the frequency limit. */
      REQUESTLIMITEXCEEDED("RequestLimitExceeded"),
      
      /* The resource is occupied. */
@@ -111,13 +111,13 @@ public enum ClbErrorCode {
      /* Resources do not exist. */
      RESOURCENOTFOUND("ResourceNotFound"),
      
-     /* The resources have been sold out. */
+     /* Resources are sold out. */
      RESOURCESSOLDOUT("ResourcesSoldOut"),
      
      /* Unauthorized operation. */
      UNAUTHORIZEDOPERATION("UnauthorizedOperation"),
      
-     /* Unsupported operation. */
+     /* The operation is not supported. */
      UNSUPPORTEDOPERATION("UnsupportedOperation");
      
     private String value;

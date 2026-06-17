@@ -1,0 +1,128 @@
+/*
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+package com.tencentcloudapi.clb.v20230417.models;
+
+import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.annotations.Expose;
+import java.util.HashMap;
+
+public class LoadBalancerHealth extends AbstractModel {
+
+    /**
+    * CLB instance ID
+    */
+    @SerializedName("LoadBalancerId")
+    @Expose
+    private String LoadBalancerId;
+
+    /**
+    * Load balancing instance name
+    */
+    @SerializedName("LoadBalancerName")
+    @Expose
+    private String LoadBalancerName;
+
+    /**
+    * Listener list
+    */
+    @SerializedName("Listeners")
+    @Expose
+    private ListenerHealth [] Listeners;
+
+    /**
+     * Get CLB instance ID 
+     * @return LoadBalancerId CLB instance ID
+     */
+    public String getLoadBalancerId() {
+        return this.LoadBalancerId;
+    }
+
+    /**
+     * Set CLB instance ID
+     * @param LoadBalancerId CLB instance ID
+     */
+    public void setLoadBalancerId(String LoadBalancerId) {
+        this.LoadBalancerId = LoadBalancerId;
+    }
+
+    /**
+     * Get Load balancing instance name 
+     * @return LoadBalancerName Load balancing instance name
+     */
+    public String getLoadBalancerName() {
+        return this.LoadBalancerName;
+    }
+
+    /**
+     * Set Load balancing instance name
+     * @param LoadBalancerName Load balancing instance name
+     */
+    public void setLoadBalancerName(String LoadBalancerName) {
+        this.LoadBalancerName = LoadBalancerName;
+    }
+
+    /**
+     * Get Listener list 
+     * @return Listeners Listener list
+     */
+    public ListenerHealth [] getListeners() {
+        return this.Listeners;
+    }
+
+    /**
+     * Set Listener list
+     * @param Listeners Listener list
+     */
+    public void setListeners(ListenerHealth [] Listeners) {
+        this.Listeners = Listeners;
+    }
+
+    public LoadBalancerHealth() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public LoadBalancerHealth(LoadBalancerHealth source) {
+        if (source.LoadBalancerId != null) {
+            this.LoadBalancerId = new String(source.LoadBalancerId);
+        }
+        if (source.LoadBalancerName != null) {
+            this.LoadBalancerName = new String(source.LoadBalancerName);
+        }
+        if (source.Listeners != null) {
+            this.Listeners = new ListenerHealth[source.Listeners.length];
+            for (int i = 0; i < source.Listeners.length; i++) {
+                this.Listeners[i] = new ListenerHealth(source.Listeners[i]);
+            }
+        }
+    }
+
+
+    /**
+     * Internal implementation, normal users should not use it.
+     */
+    public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "LoadBalancerId", this.LoadBalancerId);
+        this.setParamSimple(map, prefix + "LoadBalancerName", this.LoadBalancerName);
+        this.setParamArrayObj(map, prefix + "Listeners.", this.Listeners);
+
+    }
+}
+

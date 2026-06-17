@@ -143,7 +143,7 @@ public class ModifyProxyRwSplitRequest extends AbstractModel {
     private Boolean ApQueryToOtherNode;
 
     /**
-    * 
+    * <p>Load balancing mode</p><p>Enumeration value:</p><ul><li>static: Static load</li><li>dynamic: Dynamic load</li></ul>
     */
     @SerializedName("LoadBalanceMode")
     @Expose
@@ -422,16 +422,16 @@ public class ModifyProxyRwSplitRequest extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return LoadBalanceMode 
+     * Get <p>Load balancing mode</p><p>Enumeration value:</p><ul><li>static: Static load</li><li>dynamic: Dynamic load</li></ul> 
+     * @return LoadBalanceMode <p>Load balancing mode</p><p>Enumeration value:</p><ul><li>static: Static load</li><li>dynamic: Dynamic load</li></ul>
      */
     public String getLoadBalanceMode() {
         return this.LoadBalanceMode;
     }
 
     /**
-     * Set 
-     * @param LoadBalanceMode 
+     * Set <p>Load balancing mode</p><p>Enumeration value:</p><ul><li>static: Static load</li><li>dynamic: Dynamic load</li></ul>
+     * @param LoadBalanceMode <p>Load balancing mode</p><p>Enumeration value:</p><ul><li>static: Static load</li><li>dynamic: Dynamic load</li></ul>
      */
     public void setLoadBalanceMode(String LoadBalanceMode) {
         this.LoadBalanceMode = LoadBalanceMode;

@@ -97,6 +97,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String Tag;
 
     /**
+    * The availability zone where the backend service resides, such as ap-guangzhou-1
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Zone")
+    @Expose
+    private String Zone;
+
+    /**
      * Get Specifies the backend service type. valid values: CVM, ENI, CCN, EVM, GLOBALROUTE, NAT, SRV. 
      * @return Type Specifies the backend service type. valid values: CVM, ENI, CCN, EVM, GLOBALROUTE, NAT, SRV.
      */
@@ -268,6 +276,26 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.Tag = Tag;
     }
 
+    /**
+     * Get The availability zone where the backend service resides, such as ap-guangzhou-1
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Zone The availability zone where the backend service resides, such as ap-guangzhou-1
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getZone() {
+        return this.Zone;
+    }
+
+    /**
+     * Set The availability zone where the backend service resides, such as ap-guangzhou-1
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Zone The availability zone where the backend service resides, such as ap-guangzhou-1
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setZone(String Zone) {
+        this.Zone = Zone;
+    }
+
     public Backend() {
     }
 
@@ -312,6 +340,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.Tag != null) {
             this.Tag = new String(source.Tag);
         }
+        if (source.Zone != null) {
+            this.Zone = new String(source.Zone);
+        }
     }
 
 
@@ -329,6 +360,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "RegisteredTime", this.RegisteredTime);
         this.setParamSimple(map, prefix + "EniId", this.EniId);
         this.setParamSimple(map, prefix + "Tag", this.Tag);
+        this.setParamSimple(map, prefix + "Zone", this.Zone);
 
     }
 }

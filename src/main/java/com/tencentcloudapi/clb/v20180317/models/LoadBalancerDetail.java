@@ -356,6 +356,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long Exclusive;
 
     /**
+    * Availability zone forwarding affinity info
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("AvailableZoneAffinityInfo")
+    @Expose
+    private AvailableZoneAffinityInfo AvailableZoneAffinityInfo;
+
+    /**
      * Get CLB instance ID. 
      * @return LoadBalancerId CLB instance ID.
      */
@@ -1179,6 +1187,26 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.Exclusive = Exclusive;
     }
 
+    /**
+     * Get Availability zone forwarding affinity info
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return AvailableZoneAffinityInfo Availability zone forwarding affinity info
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public AvailableZoneAffinityInfo getAvailableZoneAffinityInfo() {
+        return this.AvailableZoneAffinityInfo;
+    }
+
+    /**
+     * Set Availability zone forwarding affinity info
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param AvailableZoneAffinityInfo Availability zone forwarding affinity info
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setAvailableZoneAffinityInfo(AvailableZoneAffinityInfo AvailableZoneAffinityInfo) {
+        this.AvailableZoneAffinityInfo = AvailableZoneAffinityInfo;
+    }
+
     public LoadBalancerDetail() {
     }
 
@@ -1328,6 +1356,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.Exclusive != null) {
             this.Exclusive = new Long(source.Exclusive);
         }
+        if (source.AvailableZoneAffinityInfo != null) {
+            this.AvailableZoneAffinityInfo = new AvailableZoneAffinityInfo(source.AvailableZoneAffinityInfo);
+        }
     }
 
 
@@ -1377,6 +1408,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamArraySimple(map, prefix + "AttributeFlags.", this.AttributeFlags);
         this.setParamSimple(map, prefix + "SlaType", this.SlaType);
         this.setParamSimple(map, prefix + "Exclusive", this.Exclusive);
+        this.setParamObj(map, prefix + "AvailableZoneAffinityInfo.", this.AvailableZoneAffinityInfo);
 
     }
 }

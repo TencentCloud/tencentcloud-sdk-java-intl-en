@@ -44,7 +44,7 @@ public class SetCustomizedConfigForLoadBalancerRequest extends AbstractModel {
 
     /**
     * Specifies the personalized configuration content. this field is required when creating or modifying custom configuration.
-Specifies specific restrictions. view layer-7 personalized configuration (https://www.tencentcloud.com/document/product/214/15171?from_cn_redirect=1).
+Specifies specific restrictions. view [layer-7 personalized configuration](https://www.tencentcloud.com/document/product/214/15171?from_cn_redirect=1).
     */
     @SerializedName("ConfigContent")
     @Expose
@@ -119,9 +119,9 @@ Can be queried through the [DescribeLoadBalancers](https://www.tencentcloud.com/
 
     /**
      * Get Specifies the personalized configuration content. this field is required when creating or modifying custom configuration.
-Specifies specific restrictions. view layer-7 personalized configuration (https://www.tencentcloud.com/document/product/214/15171?from_cn_redirect=1). 
+Specifies specific restrictions. view [layer-7 personalized configuration](https://www.tencentcloud.com/document/product/214/15171?from_cn_redirect=1). 
      * @return ConfigContent Specifies the personalized configuration content. this field is required when creating or modifying custom configuration.
-Specifies specific restrictions. view layer-7 personalized configuration (https://www.tencentcloud.com/document/product/214/15171?from_cn_redirect=1).
+Specifies specific restrictions. view [layer-7 personalized configuration](https://www.tencentcloud.com/document/product/214/15171?from_cn_redirect=1).
      */
     public String getConfigContent() {
         return this.ConfigContent;
@@ -129,9 +129,9 @@ Specifies specific restrictions. view layer-7 personalized configuration (https:
 
     /**
      * Set Specifies the personalized configuration content. this field is required when creating or modifying custom configuration.
-Specifies specific restrictions. view layer-7 personalized configuration (https://www.tencentcloud.com/document/product/214/15171?from_cn_redirect=1).
+Specifies specific restrictions. view [layer-7 personalized configuration](https://www.tencentcloud.com/document/product/214/15171?from_cn_redirect=1).
      * @param ConfigContent Specifies the personalized configuration content. this field is required when creating or modifying custom configuration.
-Specifies specific restrictions. view layer-7 personalized configuration (https://www.tencentcloud.com/document/product/214/15171?from_cn_redirect=1).
+Specifies specific restrictions. view [layer-7 personalized configuration](https://www.tencentcloud.com/document/product/214/15171?from_cn_redirect=1).
      */
     public void setConfigContent(String ConfigContent) {
         this.ConfigContent = ConfigContent;

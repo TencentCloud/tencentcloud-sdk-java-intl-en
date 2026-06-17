@@ -24,28 +24,28 @@ import java.util.HashMap;
 public class TargetGroupInfo extends AbstractModel {
 
     /**
-    * Target group ID
+    * <p>Target group ID</p>
     */
     @SerializedName("TargetGroupId")
     @Expose
     private String TargetGroupId;
 
     /**
-    * `vpcid` of target group
+    * <p>VPC ID of the target group</p>
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * Target group name
+    * <p>Target group name</p>
     */
     @SerializedName("TargetGroupName")
     @Expose
     private String TargetGroupName;
 
     /**
-    * Specifies the default port of the target group. for a full listen target group, this field returns 0, indicating an invalid port.
+    * <p>Default port of target group. This field returns 0 for full listen target group, indicating an invalid port.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Port")
@@ -53,28 +53,29 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long Port;
 
     /**
-    * Target group creation time
+    * <p>Creation time of target group</p>
     */
     @SerializedName("CreatedTime")
     @Expose
     private String CreatedTime;
 
     /**
-    * Target group modification time
+    * <p>Target group modification time</p>
     */
     @SerializedName("UpdatedTime")
     @Expose
     private String UpdatedTime;
 
     /**
-    * Associated rule array. This parameter cannot be obtained when the DescribeTargetGroupList API is called.Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Associated rule array. This parameter cannot be obtained in the DescribeTargetGroupList API call.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("AssociatedRule")
     @Expose
     private AssociationItem [] AssociatedRule;
 
     /**
-    * Backend forwarding protocol of the target group. only returns valid values for the new version (v2) target group.
+    * <p>Backend forwarding protocol of the target group. Only the new version target group v2 returns a valid value.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Protocol")
@@ -82,13 +83,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String Protocol;
 
     /**
-    * Scheduling algorithm. returns a valid value only when the backend forwarding protocol is HTTP, HTTPS, or GRPC. available values:.
-<ur>
-<Li>WRR: weighted round-robin.</li>.
-<Li>LEAST_CONN: specifies the least connection.</li>.
-<Li>IP_HASH: based on ip hash.</li>.
-</ur>
-
+    * <p>Scheduling algorithm. This parameter returns valid values only for target groups with backend forwarding protocol (HTTP, HTTPS, GRPC). Available values:</p><ur></p><li>WRR: weighted round-robin.</li><li>LEAST_CONN: LEAST connection.</li><li>IP_HASH: based on IP HASH.</li></ur>
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ScheduleAlgorithm")
@@ -96,7 +91,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String ScheduleAlgorithm;
 
     /**
-    * Health check details.
+    * <p>Health check details.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("HealthCheck")
@@ -104,35 +99,35 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private TargetGroupHealthCheck HealthCheck;
 
     /**
-    * Target group type, currently supported v1 (legacy version target group) and v2 (new version target group). defaults to v1 (legacy version target group).
+    * <p>Target Group Type, currently supported v1 (legacy version target group), v2 (new version target group). Defaults to v1 (legacy version target group).</p>
     */
     @SerializedName("TargetGroupType")
     @Expose
     private String TargetGroupType;
 
     /**
-    * Number of rules associated with the target group.
+    * <p>Number of rules associated with the target group.</p>
     */
     @SerializedName("AssociatedRuleCount")
     @Expose
     private Long AssociatedRuleCount;
 
     /**
-    * Specifies the number of instances in the target group.
+    * <p>Number of instances in the target group.</p>
     */
     @SerializedName("RegisteredInstancesCount")
     @Expose
     private Long RegisteredInstancesCount;
 
     /**
-    * Tag.
+    * <p>Tag.</p>
     */
     @SerializedName("Tag")
     @Expose
     private TagInfo [] Tag;
 
     /**
-    * Default weight. only target groups of v2 type return this field. when NULL is returned, it means the default weight is not set.
+    * <p>Default weight. Only target groups of v2 type return this field. When NULL is returned, it means the default weight is not set.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Weight")
@@ -140,85 +135,92 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long Weight;
 
     /**
-    * Specifies whether to listen to all target groups.
+    * <p>Whether to listen to the target group.</p>
     */
     @SerializedName("FullListenSwitch")
     @Expose
     private Boolean FullListenSwitch;
 
     /**
-    * Whether to enable persistent connections. valid only when the backend forwarding protocol is HTTP/HTTPS/GRPC and returned by the target group.
+    * <p>Whether to enable long connections. Only target groups with HTTP/HTTPS/GRPC as the backend forwarding protocol return a valid value.</p>
     */
     @SerializedName("KeepaliveEnable")
     @Expose
     private Boolean KeepaliveEnable;
 
     /**
-    * Session persistence time. valid only when the backend forwarding protocol is HTTP/HTTPS/GRPC and the target group returns a valid value.
+    * <p>Session hold time. Only target groups with backend forwarding protocol set to HTTP/HTTPS/GRPC return a valid value.</p>
     */
     @SerializedName("SessionExpireTime")
     @Expose
     private Long SessionExpireTime;
 
     /**
-    * IP version.
+    * <p>IP version.</p>
     */
     @SerializedName("IpVersion")
     @Expose
     private String IpVersion;
 
     /**
-     * Get Target group ID 
-     * @return TargetGroupId Target group ID
+    * <p>Whether to enable SNAT</p>
+    */
+    @SerializedName("SnatEnable")
+    @Expose
+    private Boolean SnatEnable;
+
+    /**
+     * Get <p>Target group ID</p> 
+     * @return TargetGroupId <p>Target group ID</p>
      */
     public String getTargetGroupId() {
         return this.TargetGroupId;
     }
 
     /**
-     * Set Target group ID
-     * @param TargetGroupId Target group ID
+     * Set <p>Target group ID</p>
+     * @param TargetGroupId <p>Target group ID</p>
      */
     public void setTargetGroupId(String TargetGroupId) {
         this.TargetGroupId = TargetGroupId;
     }
 
     /**
-     * Get `vpcid` of target group 
-     * @return VpcId `vpcid` of target group
+     * Get <p>VPC ID of the target group</p> 
+     * @return VpcId <p>VPC ID of the target group</p>
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set `vpcid` of target group
-     * @param VpcId `vpcid` of target group
+     * Set <p>VPC ID of the target group</p>
+     * @param VpcId <p>VPC ID of the target group</p>
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get Target group name 
-     * @return TargetGroupName Target group name
+     * Get <p>Target group name</p> 
+     * @return TargetGroupName <p>Target group name</p>
      */
     public String getTargetGroupName() {
         return this.TargetGroupName;
     }
 
     /**
-     * Set Target group name
-     * @param TargetGroupName Target group name
+     * Set <p>Target group name</p>
+     * @param TargetGroupName <p>Target group name</p>
      */
     public void setTargetGroupName(String TargetGroupName) {
         this.TargetGroupName = TargetGroupName;
     }
 
     /**
-     * Get Specifies the default port of the target group. for a full listen target group, this field returns 0, indicating an invalid port.
+     * Get <p>Default port of target group. This field returns 0 for full listen target group, indicating an invalid port.</p>
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Port Specifies the default port of the target group. for a full listen target group, this field returns 0, indicating an invalid port.
+     * @return Port <p>Default port of target group. This field returns 0 for full listen target group, indicating an invalid port.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getPort() {
@@ -226,9 +228,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Specifies the default port of the target group. for a full listen target group, this field returns 0, indicating an invalid port.
+     * Set <p>Default port of target group. This field returns 0 for full listen target group, indicating an invalid port.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Port Specifies the default port of the target group. for a full listen target group, this field returns 0, indicating an invalid port.
+     * @param Port <p>Default port of target group. This field returns 0 for full listen target group, indicating an invalid port.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setPort(Long Port) {
@@ -236,57 +238,61 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Target group creation time 
-     * @return CreatedTime Target group creation time
+     * Get <p>Creation time of target group</p> 
+     * @return CreatedTime <p>Creation time of target group</p>
      */
     public String getCreatedTime() {
         return this.CreatedTime;
     }
 
     /**
-     * Set Target group creation time
-     * @param CreatedTime Target group creation time
+     * Set <p>Creation time of target group</p>
+     * @param CreatedTime <p>Creation time of target group</p>
      */
     public void setCreatedTime(String CreatedTime) {
         this.CreatedTime = CreatedTime;
     }
 
     /**
-     * Get Target group modification time 
-     * @return UpdatedTime Target group modification time
+     * Get <p>Target group modification time</p> 
+     * @return UpdatedTime <p>Target group modification time</p>
      */
     public String getUpdatedTime() {
         return this.UpdatedTime;
     }
 
     /**
-     * Set Target group modification time
-     * @param UpdatedTime Target group modification time
+     * Set <p>Target group modification time</p>
+     * @param UpdatedTime <p>Target group modification time</p>
      */
     public void setUpdatedTime(String UpdatedTime) {
         this.UpdatedTime = UpdatedTime;
     }
 
     /**
-     * Get Associated rule array. This parameter cannot be obtained when the DescribeTargetGroupList API is called.Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return AssociatedRule Associated rule array. This parameter cannot be obtained when the DescribeTargetGroupList API is called.Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Associated rule array. This parameter cannot be obtained in the DescribeTargetGroupList API call.</p>
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return AssociatedRule <p>Associated rule array. This parameter cannot be obtained in the DescribeTargetGroupList API call.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public AssociationItem [] getAssociatedRule() {
         return this.AssociatedRule;
     }
 
     /**
-     * Set Associated rule array. This parameter cannot be obtained when the DescribeTargetGroupList API is called.Note: This field may return null, indicating that no valid values can be obtained.
-     * @param AssociatedRule Associated rule array. This parameter cannot be obtained when the DescribeTargetGroupList API is called.Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Associated rule array. This parameter cannot be obtained in the DescribeTargetGroupList API call.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param AssociatedRule <p>Associated rule array. This parameter cannot be obtained in the DescribeTargetGroupList API call.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setAssociatedRule(AssociationItem [] AssociatedRule) {
         this.AssociatedRule = AssociatedRule;
     }
 
     /**
-     * Get Backend forwarding protocol of the target group. only returns valid values for the new version (v2) target group.
+     * Get <p>Backend forwarding protocol of the target group. Only the new version target group v2 returns a valid value.</p>
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Protocol Backend forwarding protocol of the target group. only returns valid values for the new version (v2) target group.
+     * @return Protocol <p>Backend forwarding protocol of the target group. Only the new version target group v2 returns a valid value.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getProtocol() {
@@ -294,9 +300,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Backend forwarding protocol of the target group. only returns valid values for the new version (v2) target group.
+     * Set <p>Backend forwarding protocol of the target group. Only the new version target group v2 returns a valid value.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Protocol Backend forwarding protocol of the target group. only returns valid values for the new version (v2) target group.
+     * @param Protocol <p>Backend forwarding protocol of the target group. Only the new version target group v2 returns a valid value.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setProtocol(String Protocol) {
@@ -304,21 +310,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Scheduling algorithm. returns a valid value only when the backend forwarding protocol is HTTP, HTTPS, or GRPC. available values:.
-<ur>
-<Li>WRR: weighted round-robin.</li>.
-<Li>LEAST_CONN: specifies the least connection.</li>.
-<Li>IP_HASH: based on ip hash.</li>.
-</ur>
-
+     * Get <p>Scheduling algorithm. This parameter returns valid values only for target groups with backend forwarding protocol (HTTP, HTTPS, GRPC). Available values:</p><ur></p><li>WRR: weighted round-robin.</li><li>LEAST_CONN: LEAST connection.</li><li>IP_HASH: based on IP HASH.</li></ur>
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ScheduleAlgorithm Scheduling algorithm. returns a valid value only when the backend forwarding protocol is HTTP, HTTPS, or GRPC. available values:.
-<ur>
-<Li>WRR: weighted round-robin.</li>.
-<Li>LEAST_CONN: specifies the least connection.</li>.
-<Li>IP_HASH: based on ip hash.</li>.
-</ur>
-
+     * @return ScheduleAlgorithm <p>Scheduling algorithm. This parameter returns valid values only for target groups with backend forwarding protocol (HTTP, HTTPS, GRPC). Available values:</p><ur></p><li>WRR: weighted round-robin.</li><li>LEAST_CONN: LEAST connection.</li><li>IP_HASH: based on IP HASH.</li></ur>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getScheduleAlgorithm() {
@@ -326,21 +320,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Scheduling algorithm. returns a valid value only when the backend forwarding protocol is HTTP, HTTPS, or GRPC. available values:.
-<ur>
-<Li>WRR: weighted round-robin.</li>.
-<Li>LEAST_CONN: specifies the least connection.</li>.
-<Li>IP_HASH: based on ip hash.</li>.
-</ur>
-
+     * Set <p>Scheduling algorithm. This parameter returns valid values only for target groups with backend forwarding protocol (HTTP, HTTPS, GRPC). Available values:</p><ur></p><li>WRR: weighted round-robin.</li><li>LEAST_CONN: LEAST connection.</li><li>IP_HASH: based on IP HASH.</li></ur>
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ScheduleAlgorithm Scheduling algorithm. returns a valid value only when the backend forwarding protocol is HTTP, HTTPS, or GRPC. available values:.
-<ur>
-<Li>WRR: weighted round-robin.</li>.
-<Li>LEAST_CONN: specifies the least connection.</li>.
-<Li>IP_HASH: based on ip hash.</li>.
-</ur>
-
+     * @param ScheduleAlgorithm <p>Scheduling algorithm. This parameter returns valid values only for target groups with backend forwarding protocol (HTTP, HTTPS, GRPC). Available values:</p><ur></p><li>WRR: weighted round-robin.</li><li>LEAST_CONN: LEAST connection.</li><li>IP_HASH: based on IP HASH.</li></ur>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setScheduleAlgorithm(String ScheduleAlgorithm) {
@@ -348,9 +330,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Health check details.
+     * Get <p>Health check details.</p>
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return HealthCheck Health check details.
+     * @return HealthCheck <p>Health check details.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public TargetGroupHealthCheck getHealthCheck() {
@@ -358,9 +340,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Health check details.
+     * Set <p>Health check details.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param HealthCheck Health check details.
+     * @param HealthCheck <p>Health check details.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setHealthCheck(TargetGroupHealthCheck HealthCheck) {
@@ -368,73 +350,73 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Target group type, currently supported v1 (legacy version target group) and v2 (new version target group). defaults to v1 (legacy version target group). 
-     * @return TargetGroupType Target group type, currently supported v1 (legacy version target group) and v2 (new version target group). defaults to v1 (legacy version target group).
+     * Get <p>Target Group Type, currently supported v1 (legacy version target group), v2 (new version target group). Defaults to v1 (legacy version target group).</p> 
+     * @return TargetGroupType <p>Target Group Type, currently supported v1 (legacy version target group), v2 (new version target group). Defaults to v1 (legacy version target group).</p>
      */
     public String getTargetGroupType() {
         return this.TargetGroupType;
     }
 
     /**
-     * Set Target group type, currently supported v1 (legacy version target group) and v2 (new version target group). defaults to v1 (legacy version target group).
-     * @param TargetGroupType Target group type, currently supported v1 (legacy version target group) and v2 (new version target group). defaults to v1 (legacy version target group).
+     * Set <p>Target Group Type, currently supported v1 (legacy version target group), v2 (new version target group). Defaults to v1 (legacy version target group).</p>
+     * @param TargetGroupType <p>Target Group Type, currently supported v1 (legacy version target group), v2 (new version target group). Defaults to v1 (legacy version target group).</p>
      */
     public void setTargetGroupType(String TargetGroupType) {
         this.TargetGroupType = TargetGroupType;
     }
 
     /**
-     * Get Number of rules associated with the target group. 
-     * @return AssociatedRuleCount Number of rules associated with the target group.
+     * Get <p>Number of rules associated with the target group.</p> 
+     * @return AssociatedRuleCount <p>Number of rules associated with the target group.</p>
      */
     public Long getAssociatedRuleCount() {
         return this.AssociatedRuleCount;
     }
 
     /**
-     * Set Number of rules associated with the target group.
-     * @param AssociatedRuleCount Number of rules associated with the target group.
+     * Set <p>Number of rules associated with the target group.</p>
+     * @param AssociatedRuleCount <p>Number of rules associated with the target group.</p>
      */
     public void setAssociatedRuleCount(Long AssociatedRuleCount) {
         this.AssociatedRuleCount = AssociatedRuleCount;
     }
 
     /**
-     * Get Specifies the number of instances in the target group. 
-     * @return RegisteredInstancesCount Specifies the number of instances in the target group.
+     * Get <p>Number of instances in the target group.</p> 
+     * @return RegisteredInstancesCount <p>Number of instances in the target group.</p>
      */
     public Long getRegisteredInstancesCount() {
         return this.RegisteredInstancesCount;
     }
 
     /**
-     * Set Specifies the number of instances in the target group.
-     * @param RegisteredInstancesCount Specifies the number of instances in the target group.
+     * Set <p>Number of instances in the target group.</p>
+     * @param RegisteredInstancesCount <p>Number of instances in the target group.</p>
      */
     public void setRegisteredInstancesCount(Long RegisteredInstancesCount) {
         this.RegisteredInstancesCount = RegisteredInstancesCount;
     }
 
     /**
-     * Get Tag. 
-     * @return Tag Tag.
+     * Get <p>Tag.</p> 
+     * @return Tag <p>Tag.</p>
      */
     public TagInfo [] getTag() {
         return this.Tag;
     }
 
     /**
-     * Set Tag.
-     * @param Tag Tag.
+     * Set <p>Tag.</p>
+     * @param Tag <p>Tag.</p>
      */
     public void setTag(TagInfo [] Tag) {
         this.Tag = Tag;
     }
 
     /**
-     * Get Default weight. only target groups of v2 type return this field. when NULL is returned, it means the default weight is not set.
+     * Get <p>Default weight. Only target groups of v2 type return this field. When NULL is returned, it means the default weight is not set.</p>
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Weight Default weight. only target groups of v2 type return this field. when NULL is returned, it means the default weight is not set.
+     * @return Weight <p>Default weight. Only target groups of v2 type return this field. When NULL is returned, it means the default weight is not set.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getWeight() {
@@ -442,9 +424,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Default weight. only target groups of v2 type return this field. when NULL is returned, it means the default weight is not set.
+     * Set <p>Default weight. Only target groups of v2 type return this field. When NULL is returned, it means the default weight is not set.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Weight Default weight. only target groups of v2 type return this field. when NULL is returned, it means the default weight is not set.
+     * @param Weight <p>Default weight. Only target groups of v2 type return this field. When NULL is returned, it means the default weight is not set.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setWeight(Long Weight) {
@@ -452,67 +434,83 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Specifies whether to listen to all target groups. 
-     * @return FullListenSwitch Specifies whether to listen to all target groups.
+     * Get <p>Whether to listen to the target group.</p> 
+     * @return FullListenSwitch <p>Whether to listen to the target group.</p>
      */
     public Boolean getFullListenSwitch() {
         return this.FullListenSwitch;
     }
 
     /**
-     * Set Specifies whether to listen to all target groups.
-     * @param FullListenSwitch Specifies whether to listen to all target groups.
+     * Set <p>Whether to listen to the target group.</p>
+     * @param FullListenSwitch <p>Whether to listen to the target group.</p>
      */
     public void setFullListenSwitch(Boolean FullListenSwitch) {
         this.FullListenSwitch = FullListenSwitch;
     }
 
     /**
-     * Get Whether to enable persistent connections. valid only when the backend forwarding protocol is HTTP/HTTPS/GRPC and returned by the target group. 
-     * @return KeepaliveEnable Whether to enable persistent connections. valid only when the backend forwarding protocol is HTTP/HTTPS/GRPC and returned by the target group.
+     * Get <p>Whether to enable long connections. Only target groups with HTTP/HTTPS/GRPC as the backend forwarding protocol return a valid value.</p> 
+     * @return KeepaliveEnable <p>Whether to enable long connections. Only target groups with HTTP/HTTPS/GRPC as the backend forwarding protocol return a valid value.</p>
      */
     public Boolean getKeepaliveEnable() {
         return this.KeepaliveEnable;
     }
 
     /**
-     * Set Whether to enable persistent connections. valid only when the backend forwarding protocol is HTTP/HTTPS/GRPC and returned by the target group.
-     * @param KeepaliveEnable Whether to enable persistent connections. valid only when the backend forwarding protocol is HTTP/HTTPS/GRPC and returned by the target group.
+     * Set <p>Whether to enable long connections. Only target groups with HTTP/HTTPS/GRPC as the backend forwarding protocol return a valid value.</p>
+     * @param KeepaliveEnable <p>Whether to enable long connections. Only target groups with HTTP/HTTPS/GRPC as the backend forwarding protocol return a valid value.</p>
      */
     public void setKeepaliveEnable(Boolean KeepaliveEnable) {
         this.KeepaliveEnable = KeepaliveEnable;
     }
 
     /**
-     * Get Session persistence time. valid only when the backend forwarding protocol is HTTP/HTTPS/GRPC and the target group returns a valid value. 
-     * @return SessionExpireTime Session persistence time. valid only when the backend forwarding protocol is HTTP/HTTPS/GRPC and the target group returns a valid value.
+     * Get <p>Session hold time. Only target groups with backend forwarding protocol set to HTTP/HTTPS/GRPC return a valid value.</p> 
+     * @return SessionExpireTime <p>Session hold time. Only target groups with backend forwarding protocol set to HTTP/HTTPS/GRPC return a valid value.</p>
      */
     public Long getSessionExpireTime() {
         return this.SessionExpireTime;
     }
 
     /**
-     * Set Session persistence time. valid only when the backend forwarding protocol is HTTP/HTTPS/GRPC and the target group returns a valid value.
-     * @param SessionExpireTime Session persistence time. valid only when the backend forwarding protocol is HTTP/HTTPS/GRPC and the target group returns a valid value.
+     * Set <p>Session hold time. Only target groups with backend forwarding protocol set to HTTP/HTTPS/GRPC return a valid value.</p>
+     * @param SessionExpireTime <p>Session hold time. Only target groups with backend forwarding protocol set to HTTP/HTTPS/GRPC return a valid value.</p>
      */
     public void setSessionExpireTime(Long SessionExpireTime) {
         this.SessionExpireTime = SessionExpireTime;
     }
 
     /**
-     * Get IP version. 
-     * @return IpVersion IP version.
+     * Get <p>IP version.</p> 
+     * @return IpVersion <p>IP version.</p>
      */
     public String getIpVersion() {
         return this.IpVersion;
     }
 
     /**
-     * Set IP version.
-     * @param IpVersion IP version.
+     * Set <p>IP version.</p>
+     * @param IpVersion <p>IP version.</p>
      */
     public void setIpVersion(String IpVersion) {
         this.IpVersion = IpVersion;
+    }
+
+    /**
+     * Get <p>Whether to enable SNAT</p> 
+     * @return SnatEnable <p>Whether to enable SNAT</p>
+     */
+    public Boolean getSnatEnable() {
+        return this.SnatEnable;
+    }
+
+    /**
+     * Set <p>Whether to enable SNAT</p>
+     * @param SnatEnable <p>Whether to enable SNAT</p>
+     */
+    public void setSnatEnable(Boolean SnatEnable) {
+        this.SnatEnable = SnatEnable;
     }
 
     public TargetGroupInfo() {
@@ -586,6 +584,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.IpVersion != null) {
             this.IpVersion = new String(source.IpVersion);
         }
+        if (source.SnatEnable != null) {
+            this.SnatEnable = new Boolean(source.SnatEnable);
+        }
     }
 
 
@@ -612,6 +613,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "KeepaliveEnable", this.KeepaliveEnable);
         this.setParamSimple(map, prefix + "SessionExpireTime", this.SessionExpireTime);
         this.setParamSimple(map, prefix + "IpVersion", this.IpVersion);
+        this.setParamSimple(map, prefix + "SnatEnable", this.SnatEnable);
 
     }
 }

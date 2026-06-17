@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class RsTagRule extends AbstractModel {
 
     /**
-    * CLB listener ID.
+    * <p>CLB listener ID.</p>
     */
     @SerializedName("ListenerId")
     @Expose
     private String ListenerId;
 
     /**
-    * List of real servers with tags to be modified.
+    * <p>List of real servers with tags to be modified.</p>
     */
     @SerializedName("Targets")
     @Expose
     private Target [] Targets;
 
     /**
-    * Forwarding rule ID, which is required only for Layer-7 rules but not for Layer-4 rules.
+    * <p>Forwarding rule ID, required for layer-7 rules, not required for layer-4 rules.</p>
     */
     @SerializedName("LocationId")
     @Expose
     private String LocationId;
 
     /**
-    * Modified Tag of the backend service. this parameter has a lower priority than the Tag parameter in the aforementioned [Target](https://www.tencentcloud.com/document/api/214/30694?from_cn_redirect=1#Target). the final Tag value is based on the Tag parameter in the Target. the Tag parameter in RsTagRule will be used only when the Tag parameter in the Target is empty.
+    * <p>Modified tag of the backend service. This parameter has a lower priority than the Tag parameter in the aforementioned <a href="https://www.tencentcloud.com/document/api/214/30694?from_cn_redirect=1#Target">Target</a>. The final tag value is based on the Tag parameter in the Target. The Tag parameter in RsTagRule will be used only when the Tag parameter in the Target is empty.</p>
     */
     @SerializedName("Tag")
     @Expose
     private String Tag;
 
     /**
-     * Get CLB listener ID. 
-     * @return ListenerId CLB listener ID.
+     * Get <p>CLB listener ID.</p> 
+     * @return ListenerId <p>CLB listener ID.</p>
      */
     public String getListenerId() {
         return this.ListenerId;
     }
 
     /**
-     * Set CLB listener ID.
-     * @param ListenerId CLB listener ID.
+     * Set <p>CLB listener ID.</p>
+     * @param ListenerId <p>CLB listener ID.</p>
      */
     public void setListenerId(String ListenerId) {
         this.ListenerId = ListenerId;
     }
 
     /**
-     * Get List of real servers with tags to be modified. 
-     * @return Targets List of real servers with tags to be modified.
+     * Get <p>List of real servers with tags to be modified.</p> 
+     * @return Targets <p>List of real servers with tags to be modified.</p>
      */
     public Target [] getTargets() {
         return this.Targets;
     }
 
     /**
-     * Set List of real servers with tags to be modified.
-     * @param Targets List of real servers with tags to be modified.
+     * Set <p>List of real servers with tags to be modified.</p>
+     * @param Targets <p>List of real servers with tags to be modified.</p>
      */
     public void setTargets(Target [] Targets) {
         this.Targets = Targets;
     }
 
     /**
-     * Get Forwarding rule ID, which is required only for Layer-7 rules but not for Layer-4 rules. 
-     * @return LocationId Forwarding rule ID, which is required only for Layer-7 rules but not for Layer-4 rules.
+     * Get <p>Forwarding rule ID, required for layer-7 rules, not required for layer-4 rules.</p> 
+     * @return LocationId <p>Forwarding rule ID, required for layer-7 rules, not required for layer-4 rules.</p>
      */
     public String getLocationId() {
         return this.LocationId;
     }
 
     /**
-     * Set Forwarding rule ID, which is required only for Layer-7 rules but not for Layer-4 rules.
-     * @param LocationId Forwarding rule ID, which is required only for Layer-7 rules but not for Layer-4 rules.
+     * Set <p>Forwarding rule ID, required for layer-7 rules, not required for layer-4 rules.</p>
+     * @param LocationId <p>Forwarding rule ID, required for layer-7 rules, not required for layer-4 rules.</p>
      */
     public void setLocationId(String LocationId) {
         this.LocationId = LocationId;
     }
 
     /**
-     * Get Modified Tag of the backend service. this parameter has a lower priority than the Tag parameter in the aforementioned [Target](https://www.tencentcloud.com/document/api/214/30694?from_cn_redirect=1#Target). the final Tag value is based on the Tag parameter in the Target. the Tag parameter in RsTagRule will be used only when the Tag parameter in the Target is empty. 
-     * @return Tag Modified Tag of the backend service. this parameter has a lower priority than the Tag parameter in the aforementioned [Target](https://www.tencentcloud.com/document/api/214/30694?from_cn_redirect=1#Target). the final Tag value is based on the Tag parameter in the Target. the Tag parameter in RsTagRule will be used only when the Tag parameter in the Target is empty.
+     * Get <p>Modified tag of the backend service. This parameter has a lower priority than the Tag parameter in the aforementioned <a href="https://www.tencentcloud.com/document/api/214/30694?from_cn_redirect=1#Target">Target</a>. The final tag value is based on the Tag parameter in the Target. The Tag parameter in RsTagRule will be used only when the Tag parameter in the Target is empty.</p> 
+     * @return Tag <p>Modified tag of the backend service. This parameter has a lower priority than the Tag parameter in the aforementioned <a href="https://www.tencentcloud.com/document/api/214/30694?from_cn_redirect=1#Target">Target</a>. The final tag value is based on the Tag parameter in the Target. The Tag parameter in RsTagRule will be used only when the Tag parameter in the Target is empty.</p>
      */
     public String getTag() {
         return this.Tag;
     }
 
     /**
-     * Set Modified Tag of the backend service. this parameter has a lower priority than the Tag parameter in the aforementioned [Target](https://www.tencentcloud.com/document/api/214/30694?from_cn_redirect=1#Target). the final Tag value is based on the Tag parameter in the Target. the Tag parameter in RsTagRule will be used only when the Tag parameter in the Target is empty.
-     * @param Tag Modified Tag of the backend service. this parameter has a lower priority than the Tag parameter in the aforementioned [Target](https://www.tencentcloud.com/document/api/214/30694?from_cn_redirect=1#Target). the final Tag value is based on the Tag parameter in the Target. the Tag parameter in RsTagRule will be used only when the Tag parameter in the Target is empty.
+     * Set <p>Modified tag of the backend service. This parameter has a lower priority than the Tag parameter in the aforementioned <a href="https://www.tencentcloud.com/document/api/214/30694?from_cn_redirect=1#Target">Target</a>. The final tag value is based on the Tag parameter in the Target. The Tag parameter in RsTagRule will be used only when the Tag parameter in the Target is empty.</p>
+     * @param Tag <p>Modified tag of the backend service. This parameter has a lower priority than the Tag parameter in the aforementioned <a href="https://www.tencentcloud.com/document/api/214/30694?from_cn_redirect=1#Target">Target</a>. The final tag value is based on the Tag parameter in the Target. The Tag parameter in RsTagRule will be used only when the Tag parameter in the Target is empty.</p>
      */
     public void setTag(String Tag) {
         this.Tag = Tag;

@@ -24,26 +24,49 @@ import java.util.HashMap;
 public class DescribeServerlessInstanceSpecsRequest extends AbstractModel {
 
     /**
-    * Availability zone
+    * <p>AZ.</p>
     */
     @SerializedName("Zone")
     @Expose
     private String Zone;
 
     /**
-     * Get Availability zone 
-     * @return Zone Availability zone
+    * <p>Cluster level</p>
+    */
+    @SerializedName("ClusterLevel")
+    @Expose
+    private String ClusterLevel;
+
+    /**
+     * Get <p>AZ.</p> 
+     * @return Zone <p>AZ.</p>
      */
     public String getZone() {
         return this.Zone;
     }
 
     /**
-     * Set Availability zone
-     * @param Zone Availability zone
+     * Set <p>AZ.</p>
+     * @param Zone <p>AZ.</p>
      */
     public void setZone(String Zone) {
         this.Zone = Zone;
+    }
+
+    /**
+     * Get <p>Cluster level</p> 
+     * @return ClusterLevel <p>Cluster level</p>
+     */
+    public String getClusterLevel() {
+        return this.ClusterLevel;
+    }
+
+    /**
+     * Set <p>Cluster level</p>
+     * @param ClusterLevel <p>Cluster level</p>
+     */
+    public void setClusterLevel(String ClusterLevel) {
+        this.ClusterLevel = ClusterLevel;
     }
 
     public DescribeServerlessInstanceSpecsRequest() {
@@ -57,6 +80,9 @@ public class DescribeServerlessInstanceSpecsRequest extends AbstractModel {
         if (source.Zone != null) {
             this.Zone = new String(source.Zone);
         }
+        if (source.ClusterLevel != null) {
+            this.ClusterLevel = new String(source.ClusterLevel);
+        }
     }
 
 
@@ -65,6 +91,7 @@ public class DescribeServerlessInstanceSpecsRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Zone", this.Zone);
+        this.setParamSimple(map, prefix + "ClusterLevel", this.ClusterLevel);
 
     }
 }

@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class BatchModifyTargetWeightRequest extends AbstractModel {
 
     /**
-    * CLB instance ID
+    * <p>CLB instance ID.</p>
     */
     @SerializedName("LoadBalancerId")
     @Expose
     private String LoadBalancerId;
 
     /**
-    * List of weights to be modified in batches
+    * <p>List of weights to be modified in batch. The ModifyList array can contain no more than 100 elements, ModifyList[i].Targets can have no more than 50, and the total number of Targets must not exceed 500.</p>
     */
     @SerializedName("ModifyList")
     @Expose
     private RsWeightRule [] ModifyList;
 
     /**
-     * Get CLB instance ID 
-     * @return LoadBalancerId CLB instance ID
+     * Get <p>CLB instance ID.</p> 
+     * @return LoadBalancerId <p>CLB instance ID.</p>
      */
     public String getLoadBalancerId() {
         return this.LoadBalancerId;
     }
 
     /**
-     * Set CLB instance ID
-     * @param LoadBalancerId CLB instance ID
+     * Set <p>CLB instance ID.</p>
+     * @param LoadBalancerId <p>CLB instance ID.</p>
      */
     public void setLoadBalancerId(String LoadBalancerId) {
         this.LoadBalancerId = LoadBalancerId;
     }
 
     /**
-     * Get List of weights to be modified in batches 
-     * @return ModifyList List of weights to be modified in batches
+     * Get <p>List of weights to be modified in batch. The ModifyList array can contain no more than 100 elements, ModifyList[i].Targets can have no more than 50, and the total number of Targets must not exceed 500.</p> 
+     * @return ModifyList <p>List of weights to be modified in batch. The ModifyList array can contain no more than 100 elements, ModifyList[i].Targets can have no more than 50, and the total number of Targets must not exceed 500.</p>
      */
     public RsWeightRule [] getModifyList() {
         return this.ModifyList;
     }
 
     /**
-     * Set List of weights to be modified in batches
-     * @param ModifyList List of weights to be modified in batches
+     * Set <p>List of weights to be modified in batch. The ModifyList array can contain no more than 100 elements, ModifyList[i].Targets can have no more than 50, and the total number of Targets must not exceed 500.</p>
+     * @param ModifyList <p>List of weights to be modified in batch. The ModifyList array can contain no more than 100 elements, ModifyList[i].Targets can have no more than 50, and the total number of Targets must not exceed 500.</p>
      */
     public void setModifyList(RsWeightRule [] ModifyList) {
         this.ModifyList = ModifyList;

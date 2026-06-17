@@ -24,1391 +24,1334 @@ import java.util.HashMap;
 public class CynosdbClusterDetail extends AbstractModel {
 
     /**
-    * Cluster ID.
+    * <p>Cluster ID.</p>
     */
     @SerializedName("ClusterId")
     @Expose
     private String ClusterId;
 
     /**
-    * Cluster name.
+    * <p>Cluster name.</p>
     */
     @SerializedName("ClusterName")
     @Expose
     private String ClusterName;
 
     /**
-    * Region.
+    * <p>Region</p>
     */
     @SerializedName("Region")
     @Expose
     private String Region;
 
     /**
-    * AZ.
+    * <p>AZ.</p>
     */
     @SerializedName("Zone")
     @Expose
     private String Zone;
 
     /**
-    * Physical availability zone.
+    * <p>Physical AZ</p>
     */
     @SerializedName("PhysicalZone")
     @Expose
     private String PhysicalZone;
 
     /**
-    * Status. supported values are as follows:.
-- Creating: creating.
-- running: running.
-- isolating.
-- Isolated: isolated.
-- activating: restore from recycle bin.
-- offlining: offline.
-- offlined: offline.
-- deleting: deleting.
-- deleted: deleted.
+    * <p>Status. Supported values are as follows:</p><ul><li>creating: Creating</li><li>running: Running</li><li>isolating: Isolation</li><li>isolated: Isolated</li><li>activating: Restore from recycle bin</li><li>offlining: Offline</li><li>offlined: Offline</li><li>deleting: Deleting</li><li>deleted: Deleted</li></ul>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * Status description
+    * <p>Status description</p>
     */
     @SerializedName("StatusDesc")
     @Expose
     private String StatusDesc;
 
     /**
-    * Serverless cluster status when the database type is `SERVERLESS`. Valid values:
-resume
-resuming
-pause
-pausing
+    * <p>When the Db type is SERVERLESS, the SERVERLESS cluster status. Available values:<br>resume<br>resuming<br>pause<br>pausing</p>
     */
     @SerializedName("ServerlessStatus")
     @Expose
     private String ServerlessStatus;
 
     /**
-    * Storage Id.
+    * <p>Storage Id</p>
     */
     @SerializedName("StorageId")
     @Expose
     private String StorageId;
 
     /**
-    * Storage size in gb.
+    * <p>Storage size in GB</p>
     */
     @SerializedName("Storage")
     @Expose
     private Long Storage;
 
     /**
-    * Maximum storage specification, in gb.
+    * <p>Maximum storage specification, in GB</p>
     */
     @SerializedName("MaxStorageSize")
     @Expose
     private Long MaxStorageSize;
 
     /**
-    * Specifies the minimum storage specification, in gb.
+    * <p>Minimum storage specification, in GB</p>
     */
     @SerializedName("MinStorageSize")
     @Expose
     private Long MinStorageSize;
 
     /**
-    * Storage billing type. 1 indicates yearly/monthly subscription, and 0 indicates pay-as-you-go.
+    * <p>Storage billing type. Valid values: 1 (yearly/monthly subscription); 0 (pay-as-you-go).</p>
     */
     @SerializedName("StoragePayMode")
     @Expose
     private Long StoragePayMode;
 
     /**
-    * VPC name.
+    * <p>VPC name</p>
     */
     @SerializedName("VpcName")
     @Expose
     private String VpcName;
 
     /**
-    * Unique VPC ID.
+    * <p>vpc Unique id</p>
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * Subnet name.
+    * <p>Subnet name.</p>
     */
     @SerializedName("SubnetName")
     @Expose
     private String SubnetName;
 
     /**
-    * Subnet ID.
+    * <p>Subnet ID.</p>
     */
     @SerializedName("SubnetId")
     @Expose
     private String SubnetId;
 
     /**
-    * Character set.
+    * <p>Character set.</p>
     */
     @SerializedName("Charset")
     @Expose
     private String Charset;
 
     /**
-    * Creation time.
+    * <p>Creation time.</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * Database type.
+    * <p>Database type</p>
     */
     @SerializedName("DbType")
     @Expose
     private String DbType;
 
     /**
-    * Db type: <li>NORMAL</li> <li>SERVERLESS</li>.
+    * <p>Db type: <li>NORMAL</li><li>SERVERLESS</li></p>
     */
     @SerializedName("DbMode")
     @Expose
     private String DbMode;
 
     /**
-    * Database version.
+    * <p>Database version</p>
     */
     @SerializedName("DbVersion")
     @Expose
     private String DbVersion;
 
     /**
-    * Specifies the maximum storage space.
+    * <p>Storage space limit</p>
     */
     @SerializedName("StorageLimit")
     @Expose
     private Long StorageLimit;
 
     /**
-    * Used capacity.
+    * <p>Used capacity</p>
     */
     @SerializedName("UsedStorage")
     @Expose
     private Long UsedStorage;
 
     /**
-    * VIP.
+    * <p>vip address</p>
     */
     @SerializedName("Vip")
     @Expose
     private String Vip;
 
     /**
-    * vport.
+    * <p>vport port</p>
     */
     @SerializedName("Vport")
     @Expose
     private Long Vport;
 
     /**
-    * VIP and vport of the read-only instance in a cluster.
+    * <p>vip address and vport of the cluster read-only instance</p>
     */
     @SerializedName("RoAddr")
     @Expose
     private Addr [] RoAddr;
 
     /**
-    * Functions supported by the cluster.
+    * <p>Functions supported by the cluster</p>
     */
     @SerializedName("Ability")
     @Expose
     private Ability Ability;
 
     /**
-    * Specifies the cynos version.
+    * <p>cynos version</p>
     */
     @SerializedName("CynosVersion")
     @Expose
     private String CynosVersion;
 
     /**
-    * Business type.
+    * <p>Business type</p>
     */
     @SerializedName("BusinessType")
     @Expose
     private String BusinessType;
 
     /**
-    * Whether there is an availability zone.
+    * <p>Whether there is a secondary AZ</p>
     */
     @SerializedName("HasSlaveZone")
     @Expose
     private String HasSlaveZone;
 
     /**
-    * Whether to freeze.
+    * <p>Freeze or not</p>
     */
     @SerializedName("IsFreeze")
     @Expose
     private String IsFreeze;
 
     /**
-    * Task list.
+    * <p>Task List</p>
     */
     @SerializedName("Tasks")
     @Expose
     private ObjectTask [] Tasks;
 
     /**
-    * Primary AZ.
+    * <p>Primary AZ</p>
     */
     @SerializedName("MasterZone")
     @Expose
     private String MasterZone;
 
     /**
-    * Availability zone list.
+    * <p>From the AZ list</p>
     */
     @SerializedName("SlaveZones")
     @Expose
     private String [] SlaveZones;
 
     /**
-    * Instance information.
+    * <p>Instance information</p>
     */
     @SerializedName("InstanceSet")
     @Expose
     private ClusterInstanceDetail [] InstanceSet;
 
     /**
-    * Billing mode.
+    * <p>Payment mode</p>
     */
     @SerializedName("PayMode")
     @Expose
     private Long PayMode;
 
     /**
-    * Expiration time.
+    * <p>Expiry time.</p>
     */
     @SerializedName("PeriodEndTime")
     @Expose
     private String PeriodEndTime;
 
     /**
-    * Project ID.
+    * <p>Project ID.</p>
     */
     @SerializedName("ProjectID")
     @Expose
     private Long ProjectID;
 
     /**
-    * Array of tags bound to instance.
+    * <p>tag Array information for instance binding</p>
     */
     @SerializedName("ResourceTags")
     @Expose
     private Tag [] ResourceTags;
 
     /**
-    * Proxy status.
+    * <p>Proxy status</p>
     */
     @SerializedName("ProxyStatus")
     @Expose
     private String ProxyStatus;
 
     /**
-    * binlog switch. valid values: ON, OFF.
+    * <p>binlog switch, available values: ON, OFF</p>
     */
     @SerializedName("LogBin")
     @Expose
     private String LogBin;
 
     /**
-    * Specifies whether to skip the transaction.
+    * <p>Skip transaction or not</p>
     */
     @SerializedName("IsSkipTrade")
     @Expose
     private String IsSkipTrade;
 
     /**
-    * PITR type: valid values: normal, redo_pitr.
+    * <p>PITR type, available values: normal, redo_pitr</p>
     */
     @SerializedName("PitrType")
     @Expose
     private String PitrType;
 
     /**
-    * Whether to enable password complexity.
+    * <p>Whether to toggle on password complexity</p>
     */
     @SerializedName("IsOpenPasswordComplexity")
     @Expose
     private String IsOpenPasswordComplexity;
 
     /**
-    * Network type.
+    * <p>Network type</p>
     */
     @SerializedName("NetworkStatus")
     @Expose
     private String NetworkStatus;
 
     /**
-    * The resource package information that is bound to the cluster.	
+    * <p>Package info of the bound resource for the cluster</p>
     */
     @SerializedName("ResourcePackages")
     @Expose
     private ResourcePackage [] ResourcePackages;
 
     /**
-    * Auto-Renewal flag. 1 indicates auto-renewal. 0 indicates non-renewal upon expiration.
+    * <p>Auto-renewal flag. 1 means auto-renewal, 0 means non-renewal upon expiration.</p>
     */
     @SerializedName("RenewFlag")
     @Expose
     private Long RenewFlag;
 
     /**
-    * Specifies the node network type.
+    * <p>Node network type</p>
     */
     @SerializedName("NetworkType")
     @Expose
     private String NetworkType;
 
     /**
-    * Secondary availability zone property.
+    * <p>Secondary availability zone property</p>
     */
     @SerializedName("SlaveZoneAttr")
     @Expose
     private SlaveZoneAttrItem [] SlaveZoneAttr;
 
     /**
-    * Version Tag.
+    * <p>Version tag</p>
     */
     @SerializedName("CynosVersionTag")
     @Expose
     private String CynosVersionTag;
 
     /**
-    * Global database network unique id.
+    * <p>Unique ID of the global database network</p>
     */
     @SerializedName("GdnId")
     @Expose
     private String GdnId;
 
     /**
-    * The role of clusters in the global data network.
-primary cluster.
-Slave cluster - standby.
-If empty, the field is invalid.
+    * <p>Role of the cluster in the global data network.<br>Primary cluster - primary<br>Slave cluster - standby<br>If empty, the field is invalid.</p>
     */
     @SerializedName("GdnRole")
     @Expose
     private String GdnRole;
 
     /**
-    * Secondary storage usage, unit: G.
+    * <p>Second-level storage usage in GB</p>
     */
     @SerializedName("UsedArchiveStorage")
     @Expose
     private Long UsedArchiveStorage;
 
     /**
-    * Archiving status, enumeration value <li>normal: normal</li><li>archiving: archiving</li><li>resuming: recovering</li><li>archived: archived</li>.
+    * <p>Archiving status. Enumeration value <li>normal: Normal</li><li>archiving: Archiving</li><li>resuming: Recovering</li><li>archived: Archived</li></p>
     */
     @SerializedName("ArchiveStatus")
     @Expose
     private String ArchiveStatus;
 
     /**
-    * Archive progress, percentage.
+    * <p>Archive progress, percentage.</p>
     */
     @SerializedName("ArchiveProgress")
     @Expose
     private Long ArchiveProgress;
 
     /**
-    * Whether transparent encryption is enabled.
+    * <p>Cluster level. For example P0, P1</p>
+    */
+    @SerializedName("ClusterLevel")
+    @Expose
+    private String ClusterLevel;
+
+    /**
+    * <p>Whether to enable transparent data encryption</p>
     */
     @SerializedName("IsOpenTDE")
     @Expose
     private Boolean IsOpenTDE;
 
     /**
-     * Get Cluster ID. 
-     * @return ClusterId Cluster ID.
+     * Get <p>Cluster ID.</p> 
+     * @return ClusterId <p>Cluster ID.</p>
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set Cluster ID.
-     * @param ClusterId Cluster ID.
+     * Set <p>Cluster ID.</p>
+     * @param ClusterId <p>Cluster ID.</p>
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
     }
 
     /**
-     * Get Cluster name. 
-     * @return ClusterName Cluster name.
+     * Get <p>Cluster name.</p> 
+     * @return ClusterName <p>Cluster name.</p>
      */
     public String getClusterName() {
         return this.ClusterName;
     }
 
     /**
-     * Set Cluster name.
-     * @param ClusterName Cluster name.
+     * Set <p>Cluster name.</p>
+     * @param ClusterName <p>Cluster name.</p>
      */
     public void setClusterName(String ClusterName) {
         this.ClusterName = ClusterName;
     }
 
     /**
-     * Get Region. 
-     * @return Region Region.
+     * Get <p>Region</p> 
+     * @return Region <p>Region</p>
      */
     public String getRegion() {
         return this.Region;
     }
 
     /**
-     * Set Region.
-     * @param Region Region.
+     * Set <p>Region</p>
+     * @param Region <p>Region</p>
      */
     public void setRegion(String Region) {
         this.Region = Region;
     }
 
     /**
-     * Get AZ. 
-     * @return Zone AZ.
+     * Get <p>AZ.</p> 
+     * @return Zone <p>AZ.</p>
      */
     public String getZone() {
         return this.Zone;
     }
 
     /**
-     * Set AZ.
-     * @param Zone AZ.
+     * Set <p>AZ.</p>
+     * @param Zone <p>AZ.</p>
      */
     public void setZone(String Zone) {
         this.Zone = Zone;
     }
 
     /**
-     * Get Physical availability zone. 
-     * @return PhysicalZone Physical availability zone.
+     * Get <p>Physical AZ</p> 
+     * @return PhysicalZone <p>Physical AZ</p>
      */
     public String getPhysicalZone() {
         return this.PhysicalZone;
     }
 
     /**
-     * Set Physical availability zone.
-     * @param PhysicalZone Physical availability zone.
+     * Set <p>Physical AZ</p>
+     * @param PhysicalZone <p>Physical AZ</p>
      */
     public void setPhysicalZone(String PhysicalZone) {
         this.PhysicalZone = PhysicalZone;
     }
 
     /**
-     * Get Status. supported values are as follows:.
-- Creating: creating.
-- running: running.
-- isolating.
-- Isolated: isolated.
-- activating: restore from recycle bin.
-- offlining: offline.
-- offlined: offline.
-- deleting: deleting.
-- deleted: deleted. 
-     * @return Status Status. supported values are as follows:.
-- Creating: creating.
-- running: running.
-- isolating.
-- Isolated: isolated.
-- activating: restore from recycle bin.
-- offlining: offline.
-- offlined: offline.
-- deleting: deleting.
-- deleted: deleted.
+     * Get <p>Status. Supported values are as follows:</p><ul><li>creating: Creating</li><li>running: Running</li><li>isolating: Isolation</li><li>isolated: Isolated</li><li>activating: Restore from recycle bin</li><li>offlining: Offline</li><li>offlined: Offline</li><li>deleting: Deleting</li><li>deleted: Deleted</li></ul> 
+     * @return Status <p>Status. Supported values are as follows:</p><ul><li>creating: Creating</li><li>running: Running</li><li>isolating: Isolation</li><li>isolated: Isolated</li><li>activating: Restore from recycle bin</li><li>offlining: Offline</li><li>offlined: Offline</li><li>deleting: Deleting</li><li>deleted: Deleted</li></ul>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Status. supported values are as follows:.
-- Creating: creating.
-- running: running.
-- isolating.
-- Isolated: isolated.
-- activating: restore from recycle bin.
-- offlining: offline.
-- offlined: offline.
-- deleting: deleting.
-- deleted: deleted.
-     * @param Status Status. supported values are as follows:.
-- Creating: creating.
-- running: running.
-- isolating.
-- Isolated: isolated.
-- activating: restore from recycle bin.
-- offlining: offline.
-- offlined: offline.
-- deleting: deleting.
-- deleted: deleted.
+     * Set <p>Status. Supported values are as follows:</p><ul><li>creating: Creating</li><li>running: Running</li><li>isolating: Isolation</li><li>isolated: Isolated</li><li>activating: Restore from recycle bin</li><li>offlining: Offline</li><li>offlined: Offline</li><li>deleting: Deleting</li><li>deleted: Deleted</li></ul>
+     * @param Status <p>Status. Supported values are as follows:</p><ul><li>creating: Creating</li><li>running: Running</li><li>isolating: Isolation</li><li>isolated: Isolated</li><li>activating: Restore from recycle bin</li><li>offlining: Offline</li><li>offlined: Offline</li><li>deleting: Deleting</li><li>deleted: Deleted</li></ul>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get Status description 
-     * @return StatusDesc Status description
+     * Get <p>Status description</p> 
+     * @return StatusDesc <p>Status description</p>
      */
     public String getStatusDesc() {
         return this.StatusDesc;
     }
 
     /**
-     * Set Status description
-     * @param StatusDesc Status description
+     * Set <p>Status description</p>
+     * @param StatusDesc <p>Status description</p>
      */
     public void setStatusDesc(String StatusDesc) {
         this.StatusDesc = StatusDesc;
     }
 
     /**
-     * Get Serverless cluster status when the database type is `SERVERLESS`. Valid values:
-resume
-resuming
-pause
-pausing 
-     * @return ServerlessStatus Serverless cluster status when the database type is `SERVERLESS`. Valid values:
-resume
-resuming
-pause
-pausing
+     * Get <p>When the Db type is SERVERLESS, the SERVERLESS cluster status. Available values:<br>resume<br>resuming<br>pause<br>pausing</p> 
+     * @return ServerlessStatus <p>When the Db type is SERVERLESS, the SERVERLESS cluster status. Available values:<br>resume<br>resuming<br>pause<br>pausing</p>
      */
     public String getServerlessStatus() {
         return this.ServerlessStatus;
     }
 
     /**
-     * Set Serverless cluster status when the database type is `SERVERLESS`. Valid values:
-resume
-resuming
-pause
-pausing
-     * @param ServerlessStatus Serverless cluster status when the database type is `SERVERLESS`. Valid values:
-resume
-resuming
-pause
-pausing
+     * Set <p>When the Db type is SERVERLESS, the SERVERLESS cluster status. Available values:<br>resume<br>resuming<br>pause<br>pausing</p>
+     * @param ServerlessStatus <p>When the Db type is SERVERLESS, the SERVERLESS cluster status. Available values:<br>resume<br>resuming<br>pause<br>pausing</p>
      */
     public void setServerlessStatus(String ServerlessStatus) {
         this.ServerlessStatus = ServerlessStatus;
     }
 
     /**
-     * Get Storage Id. 
-     * @return StorageId Storage Id.
+     * Get <p>Storage Id</p> 
+     * @return StorageId <p>Storage Id</p>
      */
     public String getStorageId() {
         return this.StorageId;
     }
 
     /**
-     * Set Storage Id.
-     * @param StorageId Storage Id.
+     * Set <p>Storage Id</p>
+     * @param StorageId <p>Storage Id</p>
      */
     public void setStorageId(String StorageId) {
         this.StorageId = StorageId;
     }
 
     /**
-     * Get Storage size in gb. 
-     * @return Storage Storage size in gb.
+     * Get <p>Storage size in GB</p> 
+     * @return Storage <p>Storage size in GB</p>
      */
     public Long getStorage() {
         return this.Storage;
     }
 
     /**
-     * Set Storage size in gb.
-     * @param Storage Storage size in gb.
+     * Set <p>Storage size in GB</p>
+     * @param Storage <p>Storage size in GB</p>
      */
     public void setStorage(Long Storage) {
         this.Storage = Storage;
     }
 
     /**
-     * Get Maximum storage specification, in gb. 
-     * @return MaxStorageSize Maximum storage specification, in gb.
+     * Get <p>Maximum storage specification, in GB</p> 
+     * @return MaxStorageSize <p>Maximum storage specification, in GB</p>
      */
     public Long getMaxStorageSize() {
         return this.MaxStorageSize;
     }
 
     /**
-     * Set Maximum storage specification, in gb.
-     * @param MaxStorageSize Maximum storage specification, in gb.
+     * Set <p>Maximum storage specification, in GB</p>
+     * @param MaxStorageSize <p>Maximum storage specification, in GB</p>
      */
     public void setMaxStorageSize(Long MaxStorageSize) {
         this.MaxStorageSize = MaxStorageSize;
     }
 
     /**
-     * Get Specifies the minimum storage specification, in gb. 
-     * @return MinStorageSize Specifies the minimum storage specification, in gb.
+     * Get <p>Minimum storage specification, in GB</p> 
+     * @return MinStorageSize <p>Minimum storage specification, in GB</p>
      */
     public Long getMinStorageSize() {
         return this.MinStorageSize;
     }
 
     /**
-     * Set Specifies the minimum storage specification, in gb.
-     * @param MinStorageSize Specifies the minimum storage specification, in gb.
+     * Set <p>Minimum storage specification, in GB</p>
+     * @param MinStorageSize <p>Minimum storage specification, in GB</p>
      */
     public void setMinStorageSize(Long MinStorageSize) {
         this.MinStorageSize = MinStorageSize;
     }
 
     /**
-     * Get Storage billing type. 1 indicates yearly/monthly subscription, and 0 indicates pay-as-you-go. 
-     * @return StoragePayMode Storage billing type. 1 indicates yearly/monthly subscription, and 0 indicates pay-as-you-go.
+     * Get <p>Storage billing type. Valid values: 1 (yearly/monthly subscription); 0 (pay-as-you-go).</p> 
+     * @return StoragePayMode <p>Storage billing type. Valid values: 1 (yearly/monthly subscription); 0 (pay-as-you-go).</p>
      */
     public Long getStoragePayMode() {
         return this.StoragePayMode;
     }
 
     /**
-     * Set Storage billing type. 1 indicates yearly/monthly subscription, and 0 indicates pay-as-you-go.
-     * @param StoragePayMode Storage billing type. 1 indicates yearly/monthly subscription, and 0 indicates pay-as-you-go.
+     * Set <p>Storage billing type. Valid values: 1 (yearly/monthly subscription); 0 (pay-as-you-go).</p>
+     * @param StoragePayMode <p>Storage billing type. Valid values: 1 (yearly/monthly subscription); 0 (pay-as-you-go).</p>
      */
     public void setStoragePayMode(Long StoragePayMode) {
         this.StoragePayMode = StoragePayMode;
     }
 
     /**
-     * Get VPC name. 
-     * @return VpcName VPC name.
+     * Get <p>VPC name</p> 
+     * @return VpcName <p>VPC name</p>
      */
     public String getVpcName() {
         return this.VpcName;
     }
 
     /**
-     * Set VPC name.
-     * @param VpcName VPC name.
+     * Set <p>VPC name</p>
+     * @param VpcName <p>VPC name</p>
      */
     public void setVpcName(String VpcName) {
         this.VpcName = VpcName;
     }
 
     /**
-     * Get Unique VPC ID. 
-     * @return VpcId Unique VPC ID.
+     * Get <p>vpc Unique id</p> 
+     * @return VpcId <p>vpc Unique id</p>
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set Unique VPC ID.
-     * @param VpcId Unique VPC ID.
+     * Set <p>vpc Unique id</p>
+     * @param VpcId <p>vpc Unique id</p>
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get Subnet name. 
-     * @return SubnetName Subnet name.
+     * Get <p>Subnet name.</p> 
+     * @return SubnetName <p>Subnet name.</p>
      */
     public String getSubnetName() {
         return this.SubnetName;
     }
 
     /**
-     * Set Subnet name.
-     * @param SubnetName Subnet name.
+     * Set <p>Subnet name.</p>
+     * @param SubnetName <p>Subnet name.</p>
      */
     public void setSubnetName(String SubnetName) {
         this.SubnetName = SubnetName;
     }
 
     /**
-     * Get Subnet ID. 
-     * @return SubnetId Subnet ID.
+     * Get <p>Subnet ID.</p> 
+     * @return SubnetId <p>Subnet ID.</p>
      */
     public String getSubnetId() {
         return this.SubnetId;
     }
 
     /**
-     * Set Subnet ID.
-     * @param SubnetId Subnet ID.
+     * Set <p>Subnet ID.</p>
+     * @param SubnetId <p>Subnet ID.</p>
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;
     }
 
     /**
-     * Get Character set. 
-     * @return Charset Character set.
+     * Get <p>Character set.</p> 
+     * @return Charset <p>Character set.</p>
      */
     public String getCharset() {
         return this.Charset;
     }
 
     /**
-     * Set Character set.
-     * @param Charset Character set.
+     * Set <p>Character set.</p>
+     * @param Charset <p>Character set.</p>
      */
     public void setCharset(String Charset) {
         this.Charset = Charset;
     }
 
     /**
-     * Get Creation time. 
-     * @return CreateTime Creation time.
+     * Get <p>Creation time.</p> 
+     * @return CreateTime <p>Creation time.</p>
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set Creation time.
-     * @param CreateTime Creation time.
+     * Set <p>Creation time.</p>
+     * @param CreateTime <p>Creation time.</p>
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get Database type. 
-     * @return DbType Database type.
+     * Get <p>Database type</p> 
+     * @return DbType <p>Database type</p>
      */
     public String getDbType() {
         return this.DbType;
     }
 
     /**
-     * Set Database type.
-     * @param DbType Database type.
+     * Set <p>Database type</p>
+     * @param DbType <p>Database type</p>
      */
     public void setDbType(String DbType) {
         this.DbType = DbType;
     }
 
     /**
-     * Get Db type: <li>NORMAL</li> <li>SERVERLESS</li>. 
-     * @return DbMode Db type: <li>NORMAL</li> <li>SERVERLESS</li>.
+     * Get <p>Db type: <li>NORMAL</li><li>SERVERLESS</li></p> 
+     * @return DbMode <p>Db type: <li>NORMAL</li><li>SERVERLESS</li></p>
      */
     public String getDbMode() {
         return this.DbMode;
     }
 
     /**
-     * Set Db type: <li>NORMAL</li> <li>SERVERLESS</li>.
-     * @param DbMode Db type: <li>NORMAL</li> <li>SERVERLESS</li>.
+     * Set <p>Db type: <li>NORMAL</li><li>SERVERLESS</li></p>
+     * @param DbMode <p>Db type: <li>NORMAL</li><li>SERVERLESS</li></p>
      */
     public void setDbMode(String DbMode) {
         this.DbMode = DbMode;
     }
 
     /**
-     * Get Database version. 
-     * @return DbVersion Database version.
+     * Get <p>Database version</p> 
+     * @return DbVersion <p>Database version</p>
      */
     public String getDbVersion() {
         return this.DbVersion;
     }
 
     /**
-     * Set Database version.
-     * @param DbVersion Database version.
+     * Set <p>Database version</p>
+     * @param DbVersion <p>Database version</p>
      */
     public void setDbVersion(String DbVersion) {
         this.DbVersion = DbVersion;
     }
 
     /**
-     * Get Specifies the maximum storage space. 
-     * @return StorageLimit Specifies the maximum storage space.
+     * Get <p>Storage space limit</p> 
+     * @return StorageLimit <p>Storage space limit</p>
      */
     public Long getStorageLimit() {
         return this.StorageLimit;
     }
 
     /**
-     * Set Specifies the maximum storage space.
-     * @param StorageLimit Specifies the maximum storage space.
+     * Set <p>Storage space limit</p>
+     * @param StorageLimit <p>Storage space limit</p>
      */
     public void setStorageLimit(Long StorageLimit) {
         this.StorageLimit = StorageLimit;
     }
 
     /**
-     * Get Used capacity. 
-     * @return UsedStorage Used capacity.
+     * Get <p>Used capacity</p> 
+     * @return UsedStorage <p>Used capacity</p>
      */
     public Long getUsedStorage() {
         return this.UsedStorage;
     }
 
     /**
-     * Set Used capacity.
-     * @param UsedStorage Used capacity.
+     * Set <p>Used capacity</p>
+     * @param UsedStorage <p>Used capacity</p>
      */
     public void setUsedStorage(Long UsedStorage) {
         this.UsedStorage = UsedStorage;
     }
 
     /**
-     * Get VIP. 
-     * @return Vip VIP.
+     * Get <p>vip address</p> 
+     * @return Vip <p>vip address</p>
      */
     public String getVip() {
         return this.Vip;
     }
 
     /**
-     * Set VIP.
-     * @param Vip VIP.
+     * Set <p>vip address</p>
+     * @param Vip <p>vip address</p>
      */
     public void setVip(String Vip) {
         this.Vip = Vip;
     }
 
     /**
-     * Get vport. 
-     * @return Vport vport.
+     * Get <p>vport port</p> 
+     * @return Vport <p>vport port</p>
      */
     public Long getVport() {
         return this.Vport;
     }
 
     /**
-     * Set vport.
-     * @param Vport vport.
+     * Set <p>vport port</p>
+     * @param Vport <p>vport port</p>
      */
     public void setVport(Long Vport) {
         this.Vport = Vport;
     }
 
     /**
-     * Get VIP and vport of the read-only instance in a cluster. 
-     * @return RoAddr VIP and vport of the read-only instance in a cluster.
+     * Get <p>vip address and vport of the cluster read-only instance</p> 
+     * @return RoAddr <p>vip address and vport of the cluster read-only instance</p>
      */
     public Addr [] getRoAddr() {
         return this.RoAddr;
     }
 
     /**
-     * Set VIP and vport of the read-only instance in a cluster.
-     * @param RoAddr VIP and vport of the read-only instance in a cluster.
+     * Set <p>vip address and vport of the cluster read-only instance</p>
+     * @param RoAddr <p>vip address and vport of the cluster read-only instance</p>
      */
     public void setRoAddr(Addr [] RoAddr) {
         this.RoAddr = RoAddr;
     }
 
     /**
-     * Get Functions supported by the cluster. 
-     * @return Ability Functions supported by the cluster.
+     * Get <p>Functions supported by the cluster</p> 
+     * @return Ability <p>Functions supported by the cluster</p>
      */
     public Ability getAbility() {
         return this.Ability;
     }
 
     /**
-     * Set Functions supported by the cluster.
-     * @param Ability Functions supported by the cluster.
+     * Set <p>Functions supported by the cluster</p>
+     * @param Ability <p>Functions supported by the cluster</p>
      */
     public void setAbility(Ability Ability) {
         this.Ability = Ability;
     }
 
     /**
-     * Get Specifies the cynos version. 
-     * @return CynosVersion Specifies the cynos version.
+     * Get <p>cynos version</p> 
+     * @return CynosVersion <p>cynos version</p>
      */
     public String getCynosVersion() {
         return this.CynosVersion;
     }
 
     /**
-     * Set Specifies the cynos version.
-     * @param CynosVersion Specifies the cynos version.
+     * Set <p>cynos version</p>
+     * @param CynosVersion <p>cynos version</p>
      */
     public void setCynosVersion(String CynosVersion) {
         this.CynosVersion = CynosVersion;
     }
 
     /**
-     * Get Business type. 
-     * @return BusinessType Business type.
+     * Get <p>Business type</p> 
+     * @return BusinessType <p>Business type</p>
      */
     public String getBusinessType() {
         return this.BusinessType;
     }
 
     /**
-     * Set Business type.
-     * @param BusinessType Business type.
+     * Set <p>Business type</p>
+     * @param BusinessType <p>Business type</p>
      */
     public void setBusinessType(String BusinessType) {
         this.BusinessType = BusinessType;
     }
 
     /**
-     * Get Whether there is an availability zone. 
-     * @return HasSlaveZone Whether there is an availability zone.
+     * Get <p>Whether there is a secondary AZ</p> 
+     * @return HasSlaveZone <p>Whether there is a secondary AZ</p>
      */
     public String getHasSlaveZone() {
         return this.HasSlaveZone;
     }
 
     /**
-     * Set Whether there is an availability zone.
-     * @param HasSlaveZone Whether there is an availability zone.
+     * Set <p>Whether there is a secondary AZ</p>
+     * @param HasSlaveZone <p>Whether there is a secondary AZ</p>
      */
     public void setHasSlaveZone(String HasSlaveZone) {
         this.HasSlaveZone = HasSlaveZone;
     }
 
     /**
-     * Get Whether to freeze. 
-     * @return IsFreeze Whether to freeze.
+     * Get <p>Freeze or not</p> 
+     * @return IsFreeze <p>Freeze or not</p>
      */
     public String getIsFreeze() {
         return this.IsFreeze;
     }
 
     /**
-     * Set Whether to freeze.
-     * @param IsFreeze Whether to freeze.
+     * Set <p>Freeze or not</p>
+     * @param IsFreeze <p>Freeze or not</p>
      */
     public void setIsFreeze(String IsFreeze) {
         this.IsFreeze = IsFreeze;
     }
 
     /**
-     * Get Task list. 
-     * @return Tasks Task list.
+     * Get <p>Task List</p> 
+     * @return Tasks <p>Task List</p>
      */
     public ObjectTask [] getTasks() {
         return this.Tasks;
     }
 
     /**
-     * Set Task list.
-     * @param Tasks Task list.
+     * Set <p>Task List</p>
+     * @param Tasks <p>Task List</p>
      */
     public void setTasks(ObjectTask [] Tasks) {
         this.Tasks = Tasks;
     }
 
     /**
-     * Get Primary AZ. 
-     * @return MasterZone Primary AZ.
+     * Get <p>Primary AZ</p> 
+     * @return MasterZone <p>Primary AZ</p>
      */
     public String getMasterZone() {
         return this.MasterZone;
     }
 
     /**
-     * Set Primary AZ.
-     * @param MasterZone Primary AZ.
+     * Set <p>Primary AZ</p>
+     * @param MasterZone <p>Primary AZ</p>
      */
     public void setMasterZone(String MasterZone) {
         this.MasterZone = MasterZone;
     }
 
     /**
-     * Get Availability zone list. 
-     * @return SlaveZones Availability zone list.
+     * Get <p>From the AZ list</p> 
+     * @return SlaveZones <p>From the AZ list</p>
      */
     public String [] getSlaveZones() {
         return this.SlaveZones;
     }
 
     /**
-     * Set Availability zone list.
-     * @param SlaveZones Availability zone list.
+     * Set <p>From the AZ list</p>
+     * @param SlaveZones <p>From the AZ list</p>
      */
     public void setSlaveZones(String [] SlaveZones) {
         this.SlaveZones = SlaveZones;
     }
 
     /**
-     * Get Instance information. 
-     * @return InstanceSet Instance information.
+     * Get <p>Instance information</p> 
+     * @return InstanceSet <p>Instance information</p>
      */
     public ClusterInstanceDetail [] getInstanceSet() {
         return this.InstanceSet;
     }
 
     /**
-     * Set Instance information.
-     * @param InstanceSet Instance information.
+     * Set <p>Instance information</p>
+     * @param InstanceSet <p>Instance information</p>
      */
     public void setInstanceSet(ClusterInstanceDetail [] InstanceSet) {
         this.InstanceSet = InstanceSet;
     }
 
     /**
-     * Get Billing mode. 
-     * @return PayMode Billing mode.
+     * Get <p>Payment mode</p> 
+     * @return PayMode <p>Payment mode</p>
      */
     public Long getPayMode() {
         return this.PayMode;
     }
 
     /**
-     * Set Billing mode.
-     * @param PayMode Billing mode.
+     * Set <p>Payment mode</p>
+     * @param PayMode <p>Payment mode</p>
      */
     public void setPayMode(Long PayMode) {
         this.PayMode = PayMode;
     }
 
     /**
-     * Get Expiration time. 
-     * @return PeriodEndTime Expiration time.
+     * Get <p>Expiry time.</p> 
+     * @return PeriodEndTime <p>Expiry time.</p>
      */
     public String getPeriodEndTime() {
         return this.PeriodEndTime;
     }
 
     /**
-     * Set Expiration time.
-     * @param PeriodEndTime Expiration time.
+     * Set <p>Expiry time.</p>
+     * @param PeriodEndTime <p>Expiry time.</p>
      */
     public void setPeriodEndTime(String PeriodEndTime) {
         this.PeriodEndTime = PeriodEndTime;
     }
 
     /**
-     * Get Project ID. 
-     * @return ProjectID Project ID.
+     * Get <p>Project ID.</p> 
+     * @return ProjectID <p>Project ID.</p>
      */
     public Long getProjectID() {
         return this.ProjectID;
     }
 
     /**
-     * Set Project ID.
-     * @param ProjectID Project ID.
+     * Set <p>Project ID.</p>
+     * @param ProjectID <p>Project ID.</p>
      */
     public void setProjectID(Long ProjectID) {
         this.ProjectID = ProjectID;
     }
 
     /**
-     * Get Array of tags bound to instance. 
-     * @return ResourceTags Array of tags bound to instance.
+     * Get <p>tag Array information for instance binding</p> 
+     * @return ResourceTags <p>tag Array information for instance binding</p>
      */
     public Tag [] getResourceTags() {
         return this.ResourceTags;
     }
 
     /**
-     * Set Array of tags bound to instance.
-     * @param ResourceTags Array of tags bound to instance.
+     * Set <p>tag Array information for instance binding</p>
+     * @param ResourceTags <p>tag Array information for instance binding</p>
      */
     public void setResourceTags(Tag [] ResourceTags) {
         this.ResourceTags = ResourceTags;
     }
 
     /**
-     * Get Proxy status. 
-     * @return ProxyStatus Proxy status.
+     * Get <p>Proxy status</p> 
+     * @return ProxyStatus <p>Proxy status</p>
      */
     public String getProxyStatus() {
         return this.ProxyStatus;
     }
 
     /**
-     * Set Proxy status.
-     * @param ProxyStatus Proxy status.
+     * Set <p>Proxy status</p>
+     * @param ProxyStatus <p>Proxy status</p>
      */
     public void setProxyStatus(String ProxyStatus) {
         this.ProxyStatus = ProxyStatus;
     }
 
     /**
-     * Get binlog switch. valid values: ON, OFF. 
-     * @return LogBin binlog switch. valid values: ON, OFF.
+     * Get <p>binlog switch, available values: ON, OFF</p> 
+     * @return LogBin <p>binlog switch, available values: ON, OFF</p>
      */
     public String getLogBin() {
         return this.LogBin;
     }
 
     /**
-     * Set binlog switch. valid values: ON, OFF.
-     * @param LogBin binlog switch. valid values: ON, OFF.
+     * Set <p>binlog switch, available values: ON, OFF</p>
+     * @param LogBin <p>binlog switch, available values: ON, OFF</p>
      */
     public void setLogBin(String LogBin) {
         this.LogBin = LogBin;
     }
 
     /**
-     * Get Specifies whether to skip the transaction. 
-     * @return IsSkipTrade Specifies whether to skip the transaction.
+     * Get <p>Skip transaction or not</p> 
+     * @return IsSkipTrade <p>Skip transaction or not</p>
      */
     public String getIsSkipTrade() {
         return this.IsSkipTrade;
     }
 
     /**
-     * Set Specifies whether to skip the transaction.
-     * @param IsSkipTrade Specifies whether to skip the transaction.
+     * Set <p>Skip transaction or not</p>
+     * @param IsSkipTrade <p>Skip transaction or not</p>
      */
     public void setIsSkipTrade(String IsSkipTrade) {
         this.IsSkipTrade = IsSkipTrade;
     }
 
     /**
-     * Get PITR type: valid values: normal, redo_pitr. 
-     * @return PitrType PITR type: valid values: normal, redo_pitr.
+     * Get <p>PITR type, available values: normal, redo_pitr</p> 
+     * @return PitrType <p>PITR type, available values: normal, redo_pitr</p>
      */
     public String getPitrType() {
         return this.PitrType;
     }
 
     /**
-     * Set PITR type: valid values: normal, redo_pitr.
-     * @param PitrType PITR type: valid values: normal, redo_pitr.
+     * Set <p>PITR type, available values: normal, redo_pitr</p>
+     * @param PitrType <p>PITR type, available values: normal, redo_pitr</p>
      */
     public void setPitrType(String PitrType) {
         this.PitrType = PitrType;
     }
 
     /**
-     * Get Whether to enable password complexity. 
-     * @return IsOpenPasswordComplexity Whether to enable password complexity.
+     * Get <p>Whether to toggle on password complexity</p> 
+     * @return IsOpenPasswordComplexity <p>Whether to toggle on password complexity</p>
      */
     public String getIsOpenPasswordComplexity() {
         return this.IsOpenPasswordComplexity;
     }
 
     /**
-     * Set Whether to enable password complexity.
-     * @param IsOpenPasswordComplexity Whether to enable password complexity.
+     * Set <p>Whether to toggle on password complexity</p>
+     * @param IsOpenPasswordComplexity <p>Whether to toggle on password complexity</p>
      */
     public void setIsOpenPasswordComplexity(String IsOpenPasswordComplexity) {
         this.IsOpenPasswordComplexity = IsOpenPasswordComplexity;
     }
 
     /**
-     * Get Network type. 
-     * @return NetworkStatus Network type.
+     * Get <p>Network type</p> 
+     * @return NetworkStatus <p>Network type</p>
      */
     public String getNetworkStatus() {
         return this.NetworkStatus;
     }
 
     /**
-     * Set Network type.
-     * @param NetworkStatus Network type.
+     * Set <p>Network type</p>
+     * @param NetworkStatus <p>Network type</p>
      */
     public void setNetworkStatus(String NetworkStatus) {
         this.NetworkStatus = NetworkStatus;
     }
 
     /**
-     * Get The resource package information that is bound to the cluster.	 
-     * @return ResourcePackages The resource package information that is bound to the cluster.	
+     * Get <p>Package info of the bound resource for the cluster</p> 
+     * @return ResourcePackages <p>Package info of the bound resource for the cluster</p>
      */
     public ResourcePackage [] getResourcePackages() {
         return this.ResourcePackages;
     }
 
     /**
-     * Set The resource package information that is bound to the cluster.	
-     * @param ResourcePackages The resource package information that is bound to the cluster.	
+     * Set <p>Package info of the bound resource for the cluster</p>
+     * @param ResourcePackages <p>Package info of the bound resource for the cluster</p>
      */
     public void setResourcePackages(ResourcePackage [] ResourcePackages) {
         this.ResourcePackages = ResourcePackages;
     }
 
     /**
-     * Get Auto-Renewal flag. 1 indicates auto-renewal. 0 indicates non-renewal upon expiration. 
-     * @return RenewFlag Auto-Renewal flag. 1 indicates auto-renewal. 0 indicates non-renewal upon expiration.
+     * Get <p>Auto-renewal flag. 1 means auto-renewal, 0 means non-renewal upon expiration.</p> 
+     * @return RenewFlag <p>Auto-renewal flag. 1 means auto-renewal, 0 means non-renewal upon expiration.</p>
      */
     public Long getRenewFlag() {
         return this.RenewFlag;
     }
 
     /**
-     * Set Auto-Renewal flag. 1 indicates auto-renewal. 0 indicates non-renewal upon expiration.
-     * @param RenewFlag Auto-Renewal flag. 1 indicates auto-renewal. 0 indicates non-renewal upon expiration.
+     * Set <p>Auto-renewal flag. 1 means auto-renewal, 0 means non-renewal upon expiration.</p>
+     * @param RenewFlag <p>Auto-renewal flag. 1 means auto-renewal, 0 means non-renewal upon expiration.</p>
      */
     public void setRenewFlag(Long RenewFlag) {
         this.RenewFlag = RenewFlag;
     }
 
     /**
-     * Get Specifies the node network type. 
-     * @return NetworkType Specifies the node network type.
+     * Get <p>Node network type</p> 
+     * @return NetworkType <p>Node network type</p>
      */
     public String getNetworkType() {
         return this.NetworkType;
     }
 
     /**
-     * Set Specifies the node network type.
-     * @param NetworkType Specifies the node network type.
+     * Set <p>Node network type</p>
+     * @param NetworkType <p>Node network type</p>
      */
     public void setNetworkType(String NetworkType) {
         this.NetworkType = NetworkType;
     }
 
     /**
-     * Get Secondary availability zone property. 
-     * @return SlaveZoneAttr Secondary availability zone property.
+     * Get <p>Secondary availability zone property</p> 
+     * @return SlaveZoneAttr <p>Secondary availability zone property</p>
      */
     public SlaveZoneAttrItem [] getSlaveZoneAttr() {
         return this.SlaveZoneAttr;
     }
 
     /**
-     * Set Secondary availability zone property.
-     * @param SlaveZoneAttr Secondary availability zone property.
+     * Set <p>Secondary availability zone property</p>
+     * @param SlaveZoneAttr <p>Secondary availability zone property</p>
      */
     public void setSlaveZoneAttr(SlaveZoneAttrItem [] SlaveZoneAttr) {
         this.SlaveZoneAttr = SlaveZoneAttr;
     }
 
     /**
-     * Get Version Tag. 
-     * @return CynosVersionTag Version Tag.
+     * Get <p>Version tag</p> 
+     * @return CynosVersionTag <p>Version tag</p>
      */
     public String getCynosVersionTag() {
         return this.CynosVersionTag;
     }
 
     /**
-     * Set Version Tag.
-     * @param CynosVersionTag Version Tag.
+     * Set <p>Version tag</p>
+     * @param CynosVersionTag <p>Version tag</p>
      */
     public void setCynosVersionTag(String CynosVersionTag) {
         this.CynosVersionTag = CynosVersionTag;
     }
 
     /**
-     * Get Global database network unique id. 
-     * @return GdnId Global database network unique id.
+     * Get <p>Unique ID of the global database network</p> 
+     * @return GdnId <p>Unique ID of the global database network</p>
      */
     public String getGdnId() {
         return this.GdnId;
     }
 
     /**
-     * Set Global database network unique id.
-     * @param GdnId Global database network unique id.
+     * Set <p>Unique ID of the global database network</p>
+     * @param GdnId <p>Unique ID of the global database network</p>
      */
     public void setGdnId(String GdnId) {
         this.GdnId = GdnId;
     }
 
     /**
-     * Get The role of clusters in the global data network.
-primary cluster.
-Slave cluster - standby.
-If empty, the field is invalid. 
-     * @return GdnRole The role of clusters in the global data network.
-primary cluster.
-Slave cluster - standby.
-If empty, the field is invalid.
+     * Get <p>Role of the cluster in the global data network.<br>Primary cluster - primary<br>Slave cluster - standby<br>If empty, the field is invalid.</p> 
+     * @return GdnRole <p>Role of the cluster in the global data network.<br>Primary cluster - primary<br>Slave cluster - standby<br>If empty, the field is invalid.</p>
      */
     public String getGdnRole() {
         return this.GdnRole;
     }
 
     /**
-     * Set The role of clusters in the global data network.
-primary cluster.
-Slave cluster - standby.
-If empty, the field is invalid.
-     * @param GdnRole The role of clusters in the global data network.
-primary cluster.
-Slave cluster - standby.
-If empty, the field is invalid.
+     * Set <p>Role of the cluster in the global data network.<br>Primary cluster - primary<br>Slave cluster - standby<br>If empty, the field is invalid.</p>
+     * @param GdnRole <p>Role of the cluster in the global data network.<br>Primary cluster - primary<br>Slave cluster - standby<br>If empty, the field is invalid.</p>
      */
     public void setGdnRole(String GdnRole) {
         this.GdnRole = GdnRole;
     }
 
     /**
-     * Get Secondary storage usage, unit: G. 
-     * @return UsedArchiveStorage Secondary storage usage, unit: G.
+     * Get <p>Second-level storage usage in GB</p> 
+     * @return UsedArchiveStorage <p>Second-level storage usage in GB</p>
      */
     public Long getUsedArchiveStorage() {
         return this.UsedArchiveStorage;
     }
 
     /**
-     * Set Secondary storage usage, unit: G.
-     * @param UsedArchiveStorage Secondary storage usage, unit: G.
+     * Set <p>Second-level storage usage in GB</p>
+     * @param UsedArchiveStorage <p>Second-level storage usage in GB</p>
      */
     public void setUsedArchiveStorage(Long UsedArchiveStorage) {
         this.UsedArchiveStorage = UsedArchiveStorage;
     }
 
     /**
-     * Get Archiving status, enumeration value <li>normal: normal</li><li>archiving: archiving</li><li>resuming: recovering</li><li>archived: archived</li>. 
-     * @return ArchiveStatus Archiving status, enumeration value <li>normal: normal</li><li>archiving: archiving</li><li>resuming: recovering</li><li>archived: archived</li>.
+     * Get <p>Archiving status. Enumeration value <li>normal: Normal</li><li>archiving: Archiving</li><li>resuming: Recovering</li><li>archived: Archived</li></p> 
+     * @return ArchiveStatus <p>Archiving status. Enumeration value <li>normal: Normal</li><li>archiving: Archiving</li><li>resuming: Recovering</li><li>archived: Archived</li></p>
      */
     public String getArchiveStatus() {
         return this.ArchiveStatus;
     }
 
     /**
-     * Set Archiving status, enumeration value <li>normal: normal</li><li>archiving: archiving</li><li>resuming: recovering</li><li>archived: archived</li>.
-     * @param ArchiveStatus Archiving status, enumeration value <li>normal: normal</li><li>archiving: archiving</li><li>resuming: recovering</li><li>archived: archived</li>.
+     * Set <p>Archiving status. Enumeration value <li>normal: Normal</li><li>archiving: Archiving</li><li>resuming: Recovering</li><li>archived: Archived</li></p>
+     * @param ArchiveStatus <p>Archiving status. Enumeration value <li>normal: Normal</li><li>archiving: Archiving</li><li>resuming: Recovering</li><li>archived: Archived</li></p>
      */
     public void setArchiveStatus(String ArchiveStatus) {
         this.ArchiveStatus = ArchiveStatus;
     }
 
     /**
-     * Get Archive progress, percentage. 
-     * @return ArchiveProgress Archive progress, percentage.
+     * Get <p>Archive progress, percentage.</p> 
+     * @return ArchiveProgress <p>Archive progress, percentage.</p>
      */
     public Long getArchiveProgress() {
         return this.ArchiveProgress;
     }
 
     /**
-     * Set Archive progress, percentage.
-     * @param ArchiveProgress Archive progress, percentage.
+     * Set <p>Archive progress, percentage.</p>
+     * @param ArchiveProgress <p>Archive progress, percentage.</p>
      */
     public void setArchiveProgress(Long ArchiveProgress) {
         this.ArchiveProgress = ArchiveProgress;
     }
 
     /**
-     * Get Whether transparent encryption is enabled. 
-     * @return IsOpenTDE Whether transparent encryption is enabled.
+     * Get <p>Cluster level. For example P0, P1</p> 
+     * @return ClusterLevel <p>Cluster level. For example P0, P1</p>
+     */
+    public String getClusterLevel() {
+        return this.ClusterLevel;
+    }
+
+    /**
+     * Set <p>Cluster level. For example P0, P1</p>
+     * @param ClusterLevel <p>Cluster level. For example P0, P1</p>
+     */
+    public void setClusterLevel(String ClusterLevel) {
+        this.ClusterLevel = ClusterLevel;
+    }
+
+    /**
+     * Get <p>Whether to enable transparent data encryption</p> 
+     * @return IsOpenTDE <p>Whether to enable transparent data encryption</p>
      */
     public Boolean getIsOpenTDE() {
         return this.IsOpenTDE;
     }
 
     /**
-     * Set Whether transparent encryption is enabled.
-     * @param IsOpenTDE Whether transparent encryption is enabled.
+     * Set <p>Whether to enable transparent data encryption</p>
+     * @param IsOpenTDE <p>Whether to enable transparent data encryption</p>
      */
     public void setIsOpenTDE(Boolean IsOpenTDE) {
         this.IsOpenTDE = IsOpenTDE;
@@ -1611,6 +1554,9 @@ If empty, the field is invalid.
         if (source.ArchiveProgress != null) {
             this.ArchiveProgress = new Long(source.ArchiveProgress);
         }
+        if (source.ClusterLevel != null) {
+            this.ClusterLevel = new String(source.ClusterLevel);
+        }
         if (source.IsOpenTDE != null) {
             this.IsOpenTDE = new Boolean(source.IsOpenTDE);
         }
@@ -1677,6 +1623,7 @@ If empty, the field is invalid.
         this.setParamSimple(map, prefix + "UsedArchiveStorage", this.UsedArchiveStorage);
         this.setParamSimple(map, prefix + "ArchiveStatus", this.ArchiveStatus);
         this.setParamSimple(map, prefix + "ArchiveProgress", this.ArchiveProgress);
+        this.setParamSimple(map, prefix + "ClusterLevel", this.ClusterLevel);
         this.setParamSimple(map, prefix + "IsOpenTDE", this.IsOpenTDE);
 
     }

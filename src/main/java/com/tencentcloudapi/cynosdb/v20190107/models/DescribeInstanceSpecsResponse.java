@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeInstanceSpecsResponse extends AbstractModel {
 
     /**
-    * Specification information
+    * <p>Specification information.</p>
     */
     @SerializedName("InstanceSpecSet")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeInstanceSpecsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Specification information 
-     * @return InstanceSpecSet Specification information
+     * Get <p>Specification information.</p> 
+     * @return InstanceSpecSet <p>Specification information.</p>
      */
     public InstanceSpec [] getInstanceSpecSet() {
         return this.InstanceSpecSet;
     }
 
     /**
-     * Set Specification information
-     * @param InstanceSpecSet Specification information
+     * Set <p>Specification information.</p>
+     * @param InstanceSpecSet <p>Specification information.</p>
      */
     public void setInstanceSpecSet(InstanceSpec [] InstanceSpecSet) {
         this.InstanceSpecSet = InstanceSpecSet;

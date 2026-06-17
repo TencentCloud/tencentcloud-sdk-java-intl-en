@@ -38,7 +38,7 @@ public class ModifyRuleRequest extends AbstractModel {
     private String ListenerId;
 
     /**
-    * Specifies the rule ID of the forwarding rule to be modified, which can be obtained through the DescribeListeners API (https://www.tencentcloud.com/document/product/214/30686?from_cn_redirect=1).
+    * Specifies the rule ID of the forwarding rule to be modified, which can be obtained through the [DescribeListeners](https://www.tencentcloud.com/document/product/214/30686?from_cn_redirect=1) API.
     */
     @SerializedName("LocationId")
     @Expose
@@ -142,16 +142,16 @@ Defaults to 0.
     }
 
     /**
-     * Get Specifies the rule ID of the forwarding rule to be modified, which can be obtained through the DescribeListeners API (https://www.tencentcloud.com/document/product/214/30686?from_cn_redirect=1). 
-     * @return LocationId Specifies the rule ID of the forwarding rule to be modified, which can be obtained through the DescribeListeners API (https://www.tencentcloud.com/document/product/214/30686?from_cn_redirect=1).
+     * Get Specifies the rule ID of the forwarding rule to be modified, which can be obtained through the [DescribeListeners](https://www.tencentcloud.com/document/product/214/30686?from_cn_redirect=1) API. 
+     * @return LocationId Specifies the rule ID of the forwarding rule to be modified, which can be obtained through the [DescribeListeners](https://www.tencentcloud.com/document/product/214/30686?from_cn_redirect=1) API.
      */
     public String getLocationId() {
         return this.LocationId;
     }
 
     /**
-     * Set Specifies the rule ID of the forwarding rule to be modified, which can be obtained through the DescribeListeners API (https://www.tencentcloud.com/document/product/214/30686?from_cn_redirect=1).
-     * @param LocationId Specifies the rule ID of the forwarding rule to be modified, which can be obtained through the DescribeListeners API (https://www.tencentcloud.com/document/product/214/30686?from_cn_redirect=1).
+     * Set Specifies the rule ID of the forwarding rule to be modified, which can be obtained through the [DescribeListeners](https://www.tencentcloud.com/document/product/214/30686?from_cn_redirect=1) API.
+     * @param LocationId Specifies the rule ID of the forwarding rule to be modified, which can be obtained through the [DescribeListeners](https://www.tencentcloud.com/document/product/214/30686?from_cn_redirect=1) API.
      */
     public void setLocationId(String LocationId) {
         this.LocationId = LocationId;

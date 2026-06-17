@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateListenerResponse extends AbstractModel {
 
     /**
-    * Array of the unique IDs of created listeners.
+    * <p>Array of the unique IDs of created listeners.</p>
     */
     @SerializedName("ListenerIds")
     @Expose
@@ -38,16 +38,16 @@ public class CreateListenerResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Array of the unique IDs of created listeners. 
-     * @return ListenerIds Array of the unique IDs of created listeners.
+     * Get <p>Array of the unique IDs of created listeners.</p> 
+     * @return ListenerIds <p>Array of the unique IDs of created listeners.</p>
      */
     public String [] getListenerIds() {
         return this.ListenerIds;
     }
 
     /**
-     * Set Array of the unique IDs of created listeners.
-     * @param ListenerIds Array of the unique IDs of created listeners.
+     * Set <p>Array of the unique IDs of created listeners.</p>
+     * @param ListenerIds <p>Array of the unique IDs of created listeners.</p>
      */
     public void setListenerIds(String [] ListenerIds) {
         this.ListenerIds = ListenerIds;

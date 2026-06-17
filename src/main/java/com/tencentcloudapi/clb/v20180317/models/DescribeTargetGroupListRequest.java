@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class DescribeTargetGroupListRequest extends AbstractModel {
 
     /**
-    * Target group ID array
+    * <p>Target group ID array.</p>
     */
     @SerializedName("TargetGroupIds")
     @Expose
     private String [] TargetGroupIds;
 
     /**
-    * Filter array, which is exclusive of `TargetGroupIds`. Valid values: `TargetGroupVpcId` and `TargetGroupName`. Target group ID will be used first.
+    * <p>Filter condition array. Support TargetGroupVpcId and TargetGroupName. Mutually exclusive with TargetGroupIds. Prioritize target group ID.</p>
     */
     @SerializedName("Filters")
     @Expose
     private Filter [] Filters;
 
     /**
-    * Starting display offset
+    * <p>Starting display offset.</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * Limit of the number of displayed results. Default value: 20.
+    * <p>Number of entries displayed per page.</p><p>Value ranges from 0 to 100.</p><p>The default value is 20.</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-     * Get Target group ID array 
-     * @return TargetGroupIds Target group ID array
+     * Get <p>Target group ID array.</p> 
+     * @return TargetGroupIds <p>Target group ID array.</p>
      */
     public String [] getTargetGroupIds() {
         return this.TargetGroupIds;
     }
 
     /**
-     * Set Target group ID array
-     * @param TargetGroupIds Target group ID array
+     * Set <p>Target group ID array.</p>
+     * @param TargetGroupIds <p>Target group ID array.</p>
      */
     public void setTargetGroupIds(String [] TargetGroupIds) {
         this.TargetGroupIds = TargetGroupIds;
     }
 
     /**
-     * Get Filter array, which is exclusive of `TargetGroupIds`. Valid values: `TargetGroupVpcId` and `TargetGroupName`. Target group ID will be used first. 
-     * @return Filters Filter array, which is exclusive of `TargetGroupIds`. Valid values: `TargetGroupVpcId` and `TargetGroupName`. Target group ID will be used first.
+     * Get <p>Filter condition array. Support TargetGroupVpcId and TargetGroupName. Mutually exclusive with TargetGroupIds. Prioritize target group ID.</p> 
+     * @return Filters <p>Filter condition array. Support TargetGroupVpcId and TargetGroupName. Mutually exclusive with TargetGroupIds. Prioritize target group ID.</p>
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set Filter array, which is exclusive of `TargetGroupIds`. Valid values: `TargetGroupVpcId` and `TargetGroupName`. Target group ID will be used first.
-     * @param Filters Filter array, which is exclusive of `TargetGroupIds`. Valid values: `TargetGroupVpcId` and `TargetGroupName`. Target group ID will be used first.
+     * Set <p>Filter condition array. Support TargetGroupVpcId and TargetGroupName. Mutually exclusive with TargetGroupIds. Prioritize target group ID.</p>
+     * @param Filters <p>Filter condition array. Support TargetGroupVpcId and TargetGroupName. Mutually exclusive with TargetGroupIds. Prioritize target group ID.</p>
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;
     }
 
     /**
-     * Get Starting display offset 
-     * @return Offset Starting display offset
+     * Get <p>Starting display offset.</p> 
+     * @return Offset <p>Starting display offset.</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Starting display offset
-     * @param Offset Starting display offset
+     * Set <p>Starting display offset.</p>
+     * @param Offset <p>Starting display offset.</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get Limit of the number of displayed results. Default value: 20. 
-     * @return Limit Limit of the number of displayed results. Default value: 20.
+     * Get <p>Number of entries displayed per page.</p><p>Value ranges from 0 to 100.</p><p>The default value is 20.</p> 
+     * @return Limit <p>Number of entries displayed per page.</p><p>Value ranges from 0 to 100.</p><p>The default value is 20.</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Limit of the number of displayed results. Default value: 20.
-     * @param Limit Limit of the number of displayed results. Default value: 20.
+     * Set <p>Number of entries displayed per page.</p><p>Value ranges from 0 to 100.</p><p>The default value is 20.</p>
+     * @param Limit <p>Number of entries displayed per page.</p><p>Value ranges from 0 to 100.</p><p>The default value is 20.</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

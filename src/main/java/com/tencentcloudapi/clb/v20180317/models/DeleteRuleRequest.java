@@ -52,7 +52,7 @@ public class DeleteRuleRequest extends AbstractModel {
     private String Domain;
 
     /**
-    * Forwarding path of the forwarding rule to be deleted can be accessed through the DescribeLoadBalancersDetail api (https://www.tencentcloud.com/document/api/214/46916?from_cn_redirect=1).
+    * Forwarding path of the forwarding rule to be deleted can be accessed through the [DescribeLoadBalancersDetail](https://www.tencentcloud.com/document/api/214/46916?from_cn_redirect=1) api.
     */
     @SerializedName("Url")
     @Expose
@@ -130,16 +130,16 @@ public class DeleteRuleRequest extends AbstractModel {
     }
 
     /**
-     * Get Forwarding path of the forwarding rule to be deleted can be accessed through the DescribeLoadBalancersDetail api (https://www.tencentcloud.com/document/api/214/46916?from_cn_redirect=1). 
-     * @return Url Forwarding path of the forwarding rule to be deleted can be accessed through the DescribeLoadBalancersDetail api (https://www.tencentcloud.com/document/api/214/46916?from_cn_redirect=1).
+     * Get Forwarding path of the forwarding rule to be deleted can be accessed through the [DescribeLoadBalancersDetail](https://www.tencentcloud.com/document/api/214/46916?from_cn_redirect=1) api. 
+     * @return Url Forwarding path of the forwarding rule to be deleted can be accessed through the [DescribeLoadBalancersDetail](https://www.tencentcloud.com/document/api/214/46916?from_cn_redirect=1) api.
      */
     public String getUrl() {
         return this.Url;
     }
 
     /**
-     * Set Forwarding path of the forwarding rule to be deleted can be accessed through the DescribeLoadBalancersDetail api (https://www.tencentcloud.com/document/api/214/46916?from_cn_redirect=1).
-     * @param Url Forwarding path of the forwarding rule to be deleted can be accessed through the DescribeLoadBalancersDetail api (https://www.tencentcloud.com/document/api/214/46916?from_cn_redirect=1).
+     * Set Forwarding path of the forwarding rule to be deleted can be accessed through the [DescribeLoadBalancersDetail](https://www.tencentcloud.com/document/api/214/46916?from_cn_redirect=1) api.
+     * @param Url Forwarding path of the forwarding rule to be deleted can be accessed through the [DescribeLoadBalancersDetail](https://www.tencentcloud.com/document/api/214/46916?from_cn_redirect=1) api.
      */
     public void setUrl(String Url) {
         this.Url = Url;

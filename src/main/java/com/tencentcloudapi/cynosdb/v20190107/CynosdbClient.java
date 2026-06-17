@@ -2041,6 +2041,17 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
+     *This API is used to start the optimizer switch of an instance.
+     * @param req OpenAIOptimizerRequest
+     * @return OpenAIOptimizerResponse
+     * @throws TencentCloudSDKException
+     */
+    public OpenAIOptimizerResponse OpenAIOptimizer(OpenAIOptimizerRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "OpenAIOptimizer", OpenAIOptimizerResponse.class);
+    }
+
+    /**
      *This API is used to enable database audit service for an instance.
      * @param req OpenAuditServiceRequest
      * @return OpenAuditServiceResponse

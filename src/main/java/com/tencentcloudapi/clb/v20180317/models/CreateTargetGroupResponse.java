@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateTargetGroupResponse extends AbstractModel {
 
     /**
-    * ID generated after target group creation
+    * <p>Generated id after target group creation</p>
     */
     @SerializedName("TargetGroupId")
     @Expose
@@ -38,16 +38,16 @@ public class CreateTargetGroupResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get ID generated after target group creation 
-     * @return TargetGroupId ID generated after target group creation
+     * Get <p>Generated id after target group creation</p> 
+     * @return TargetGroupId <p>Generated id after target group creation</p>
      */
     public String getTargetGroupId() {
         return this.TargetGroupId;
     }
 
     /**
-     * Set ID generated after target group creation
-     * @param TargetGroupId ID generated after target group creation
+     * Set <p>Generated id after target group creation</p>
+     * @param TargetGroupId <p>Generated id after target group creation</p>
      */
     public void setTargetGroupId(String TargetGroupId) {
         this.TargetGroupId = TargetGroupId;

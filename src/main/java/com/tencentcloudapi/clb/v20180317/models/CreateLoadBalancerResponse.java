@@ -24,17 +24,16 @@ import java.util.HashMap;
 public class CreateLoadBalancerResponse extends AbstractModel {
 
     /**
-    * Array of unique CLB instance IDs.
-This field may return `null` in some cases, such as there is delay during instance creation. You can query the IDs of the created instances by invoking `DescribeTaskStatus` with the `RequestId` or `DealName` returned by this API.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+    * <p>An array consisting of the unique IDs of Cloud Load Balancer instances.<br>In certain scenarios, such as delay in creation, this field may return null. At this point, you can query the created resource ID through the DescribeTaskStatus API using the RequestId or DealName parameter returned by the API.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("LoadBalancerIds")
     @Expose
     private String [] LoadBalancerIds;
 
     /**
-    * Order ID.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * <p>Order number.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("DealName")
     @Expose
@@ -48,44 +47,40 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private String RequestId;
 
     /**
-     * Get Array of unique CLB instance IDs.
-This field may return `null` in some cases, such as there is delay during instance creation. You can query the IDs of the created instances by invoking `DescribeTaskStatus` with the `RequestId` or `DealName` returned by this API.
-Note: This field may return `null`, indicating that no valid values can be obtained. 
-     * @return LoadBalancerIds Array of unique CLB instance IDs.
-This field may return `null` in some cases, such as there is delay during instance creation. You can query the IDs of the created instances by invoking `DescribeTaskStatus` with the `RequestId` or `DealName` returned by this API.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * Get <p>An array consisting of the unique IDs of Cloud Load Balancer instances.<br>In certain scenarios, such as delay in creation, this field may return null. At this point, you can query the created resource ID through the DescribeTaskStatus API using the RequestId or DealName parameter returned by the API.</p>
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return LoadBalancerIds <p>An array consisting of the unique IDs of Cloud Load Balancer instances.<br>In certain scenarios, such as delay in creation, this field may return null. At this point, you can query the created resource ID through the DescribeTaskStatus API using the RequestId or DealName parameter returned by the API.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String [] getLoadBalancerIds() {
         return this.LoadBalancerIds;
     }
 
     /**
-     * Set Array of unique CLB instance IDs.
-This field may return `null` in some cases, such as there is delay during instance creation. You can query the IDs of the created instances by invoking `DescribeTaskStatus` with the `RequestId` or `DealName` returned by this API.
-Note: This field may return `null`, indicating that no valid values can be obtained.
-     * @param LoadBalancerIds Array of unique CLB instance IDs.
-This field may return `null` in some cases, such as there is delay during instance creation. You can query the IDs of the created instances by invoking `DescribeTaskStatus` with the `RequestId` or `DealName` returned by this API.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * Set <p>An array consisting of the unique IDs of Cloud Load Balancer instances.<br>In certain scenarios, such as delay in creation, this field may return null. At this point, you can query the created resource ID through the DescribeTaskStatus API using the RequestId or DealName parameter returned by the API.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param LoadBalancerIds <p>An array consisting of the unique IDs of Cloud Load Balancer instances.<br>In certain scenarios, such as delay in creation, this field may return null. At this point, you can query the created resource ID through the DescribeTaskStatus API using the RequestId or DealName parameter returned by the API.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setLoadBalancerIds(String [] LoadBalancerIds) {
         this.LoadBalancerIds = LoadBalancerIds;
     }
 
     /**
-     * Get Order ID.
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return DealName Order ID.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get <p>Order number.</p>
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return DealName <p>Order number.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getDealName() {
         return this.DealName;
     }
 
     /**
-     * Set Order ID.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param DealName Order ID.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set <p>Order number.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param DealName <p>Order number.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setDealName(String DealName) {
         this.DealName = DealName;

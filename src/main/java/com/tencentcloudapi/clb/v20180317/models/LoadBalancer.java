@@ -39,7 +39,7 @@ public class LoadBalancer extends AbstractModel {
 
     /**
     * Network type of the load balancing instance.
-OPEN: public network attribute. INTERNAL: private network attribute. for a cloud load balancer with private network attribute, you can bind an EIP for public network access. for details, see the EIP document on binding elastic IP (https://www.tencentcloud.com/document/product/215/16700?from_cn_redirect=1).
+OPEN: public network attribute. INTERNAL: private network attribute. for a cloud load balancer with private network attribute, you can bind an EIP for public network access. for details, see the EIP document on [Binding Elastic IP](https://www.tencentcloud.com/document/product/215/16700?from_cn_redirect=1).
     */
     @SerializedName("LoadBalancerType")
     @Expose
@@ -176,7 +176,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String AddressIPVersion;
 
     /**
-    * Specifies the VPC ID in numerical form, obtainable through the DescribeVpcs API (https://www.tencentcloud.com/document/product/215/15778?from_cn_redirect=1).
+    * Specifies the VPC ID in numerical form, obtainable through the [DescribeVpcs]((https://www.tencentcloud.com/document/product/215/15778?from_cn_redirect=1)) API.
     */
     @SerializedName("NumericalVpcId")
     @Expose
@@ -185,9 +185,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     /**
     * Specifies the ISP of the load balancer IP address.
 
--BGP (multi-line).
+- BGP (multi-line).
 - CMCC: CMCC single line network.
--CTCC: ctcc single-line.
+- CTCC: ctcc single-line.
 - CUCC: china unicom single-line.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
@@ -482,7 +482,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String AssociateEndpoint;
 
     /**
-    * 
+    * Availability zone forwarding affinity info
     */
     @SerializedName("AvailableZoneAffinityInfo")
     @Expose
@@ -522,9 +522,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get Network type of the load balancing instance.
-OPEN: public network attribute. INTERNAL: private network attribute. for a cloud load balancer with private network attribute, you can bind an EIP for public network access. for details, see the EIP document on binding elastic IP (https://www.tencentcloud.com/document/product/215/16700?from_cn_redirect=1). 
+OPEN: public network attribute. INTERNAL: private network attribute. for a cloud load balancer with private network attribute, you can bind an EIP for public network access. for details, see the EIP document on [Binding Elastic IP](https://www.tencentcloud.com/document/product/215/16700?from_cn_redirect=1). 
      * @return LoadBalancerType Network type of the load balancing instance.
-OPEN: public network attribute. INTERNAL: private network attribute. for a cloud load balancer with private network attribute, you can bind an EIP for public network access. for details, see the EIP document on binding elastic IP (https://www.tencentcloud.com/document/product/215/16700?from_cn_redirect=1).
+OPEN: public network attribute. INTERNAL: private network attribute. for a cloud load balancer with private network attribute, you can bind an EIP for public network access. for details, see the EIP document on [Binding Elastic IP](https://www.tencentcloud.com/document/product/215/16700?from_cn_redirect=1).
      */
     public String getLoadBalancerType() {
         return this.LoadBalancerType;
@@ -532,9 +532,9 @@ OPEN: public network attribute. INTERNAL: private network attribute. for a cloud
 
     /**
      * Set Network type of the load balancing instance.
-OPEN: public network attribute. INTERNAL: private network attribute. for a cloud load balancer with private network attribute, you can bind an EIP for public network access. for details, see the EIP document on binding elastic IP (https://www.tencentcloud.com/document/product/215/16700?from_cn_redirect=1).
+OPEN: public network attribute. INTERNAL: private network attribute. for a cloud load balancer with private network attribute, you can bind an EIP for public network access. for details, see the EIP document on [Binding Elastic IP](https://www.tencentcloud.com/document/product/215/16700?from_cn_redirect=1).
      * @param LoadBalancerType Network type of the load balancing instance.
-OPEN: public network attribute. INTERNAL: private network attribute. for a cloud load balancer with private network attribute, you can bind an EIP for public network access. for details, see the EIP document on binding elastic IP (https://www.tencentcloud.com/document/product/215/16700?from_cn_redirect=1).
+OPEN: public network attribute. INTERNAL: private network attribute. for a cloud load balancer with private network attribute, you can bind an EIP for public network access. for details, see the EIP document on [Binding Elastic IP](https://www.tencentcloud.com/document/product/215/16700?from_cn_redirect=1).
      */
     public void setLoadBalancerType(String LoadBalancerType) {
         this.LoadBalancerType = LoadBalancerType;
@@ -849,16 +849,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Specifies the VPC ID in numerical form, obtainable through the DescribeVpcs API (https://www.tencentcloud.com/document/product/215/15778?from_cn_redirect=1). 
-     * @return NumericalVpcId Specifies the VPC ID in numerical form, obtainable through the DescribeVpcs API (https://www.tencentcloud.com/document/product/215/15778?from_cn_redirect=1).
+     * Get Specifies the VPC ID in numerical form, obtainable through the [DescribeVpcs]((https://www.tencentcloud.com/document/product/215/15778?from_cn_redirect=1)) API. 
+     * @return NumericalVpcId Specifies the VPC ID in numerical form, obtainable through the [DescribeVpcs]((https://www.tencentcloud.com/document/product/215/15778?from_cn_redirect=1)) API.
      */
     public Long getNumericalVpcId() {
         return this.NumericalVpcId;
     }
 
     /**
-     * Set Specifies the VPC ID in numerical form, obtainable through the DescribeVpcs API (https://www.tencentcloud.com/document/product/215/15778?from_cn_redirect=1).
-     * @param NumericalVpcId Specifies the VPC ID in numerical form, obtainable through the DescribeVpcs API (https://www.tencentcloud.com/document/product/215/15778?from_cn_redirect=1).
+     * Set Specifies the VPC ID in numerical form, obtainable through the [DescribeVpcs]((https://www.tencentcloud.com/document/product/215/15778?from_cn_redirect=1)) API.
+     * @param NumericalVpcId Specifies the VPC ID in numerical form, obtainable through the [DescribeVpcs]((https://www.tencentcloud.com/document/product/215/15778?from_cn_redirect=1)) API.
      */
     public void setNumericalVpcId(Long NumericalVpcId) {
         this.NumericalVpcId = NumericalVpcId;
@@ -867,16 +867,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     /**
      * Get Specifies the ISP of the load balancer IP address.
 
--BGP (multi-line).
+- BGP (multi-line).
 - CMCC: CMCC single line network.
--CTCC: ctcc single-line.
+- CTCC: ctcc single-line.
 - CUCC: china unicom single-line.
 Note: This field may return null, indicating that no valid values can be obtained. 
      * @return VipIsp Specifies the ISP of the load balancer IP address.
 
--BGP (multi-line).
+- BGP (multi-line).
 - CMCC: CMCC single line network.
--CTCC: ctcc single-line.
+- CTCC: ctcc single-line.
 - CUCC: china unicom single-line.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
@@ -887,16 +887,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     /**
      * Set Specifies the ISP of the load balancer IP address.
 
--BGP (multi-line).
+- BGP (multi-line).
 - CMCC: CMCC single line network.
--CTCC: ctcc single-line.
+- CTCC: ctcc single-line.
 - CUCC: china unicom single-line.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param VipIsp Specifies the ISP of the load balancer IP address.
 
--BGP (multi-line).
+- BGP (multi-line).
 - CMCC: CMCC single line network.
--CTCC: ctcc single-line.
+- CTCC: ctcc single-line.
 - CUCC: china unicom single-line.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
@@ -1629,16 +1629,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get  
-     * @return AvailableZoneAffinityInfo 
+     * Get Availability zone forwarding affinity info 
+     * @return AvailableZoneAffinityInfo Availability zone forwarding affinity info
      */
     public AvailableZoneAffinityInfo getAvailableZoneAffinityInfo() {
         return this.AvailableZoneAffinityInfo;
     }
 
     /**
-     * Set 
-     * @param AvailableZoneAffinityInfo 
+     * Set Availability zone forwarding affinity info
+     * @param AvailableZoneAffinityInfo Availability zone forwarding affinity info
      */
     public void setAvailableZoneAffinityInfo(AvailableZoneAffinityInfo AvailableZoneAffinityInfo) {
         this.AvailableZoneAffinityInfo = AvailableZoneAffinityInfo;

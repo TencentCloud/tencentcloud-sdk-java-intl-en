@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeTargetGroupListResponse extends AbstractModel {
 
     /**
-    * Number of displayed results
+    * <p>Number of displayed results.</p>
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * Information set of displayed target groups
+    * <p>Collection of displayed target group information.</p>
     */
     @SerializedName("TargetGroupSet")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeTargetGroupListResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Number of displayed results 
-     * @return TotalCount Number of displayed results
+     * Get <p>Number of displayed results.</p> 
+     * @return TotalCount <p>Number of displayed results.</p>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set Number of displayed results
-     * @param TotalCount Number of displayed results
+     * Set <p>Number of displayed results.</p>
+     * @param TotalCount <p>Number of displayed results.</p>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get Information set of displayed target groups 
-     * @return TargetGroupSet Information set of displayed target groups
+     * Get <p>Collection of displayed target group information.</p> 
+     * @return TargetGroupSet <p>Collection of displayed target group information.</p>
      */
     public TargetGroupInfo [] getTargetGroupSet() {
         return this.TargetGroupSet;
     }
 
     /**
-     * Set Information set of displayed target groups
-     * @param TargetGroupSet Information set of displayed target groups
+     * Set <p>Collection of displayed target group information.</p>
+     * @param TargetGroupSet <p>Collection of displayed target group information.</p>
      */
     public void setTargetGroupSet(TargetGroupInfo [] TargetGroupSet) {
         this.TargetGroupSet = TargetGroupSet;

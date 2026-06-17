@@ -24,8 +24,8 @@ import java.util.HashMap;
 public class ModifyLoadBalancerAttributesResponse extends AbstractModel {
 
     /**
-    * This parameter can be used to query whether CLB billing mode switch is successful.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * <p>When switching the billing mode of Cloud Load Balancer, you can use this parameter to check if the switch task is successful.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("DealName")
     @Expose
@@ -39,20 +39,20 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get This parameter can be used to query whether CLB billing mode switch is successful.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return DealName This parameter can be used to query whether CLB billing mode switch is successful.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get <p>When switching the billing mode of Cloud Load Balancer, you can use this parameter to check if the switch task is successful.</p>
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return DealName <p>When switching the billing mode of Cloud Load Balancer, you can use this parameter to check if the switch task is successful.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getDealName() {
         return this.DealName;
     }
 
     /**
-     * Set This parameter can be used to query whether CLB billing mode switch is successful.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param DealName This parameter can be used to query whether CLB billing mode switch is successful.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set <p>When switching the billing mode of Cloud Load Balancer, you can use this parameter to check if the switch task is successful.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param DealName <p>When switching the billing mode of Cloud Load Balancer, you can use this parameter to check if the switch task is successful.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setDealName(String DealName) {
         this.DealName = DealName;
