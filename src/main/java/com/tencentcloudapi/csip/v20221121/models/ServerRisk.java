@@ -31,8 +31,7 @@ public class ServerRisk extends AbstractModel {
     private String ServiceTag;
 
     /**
-    * Port
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * Port.
     */
     @SerializedName("Port")
     @Expose
@@ -67,7 +66,7 @@ Note: This field may return·null, indicating that no valid values can be obtain
     private String InstanceType;
 
     /**
-    * Risk level
+    * Risk level, low - low risk, high - high risk, middle - medium risk, info - notification, extreme - critical.
     */
     @SerializedName("Level")
     @Expose
@@ -109,8 +108,7 @@ Note: This field may return·null, indicating that no valid values can be obtain
     private String FirstTime;
 
     /**
-    * Risk Details
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * Risk details
     */
     @SerializedName("RiskDetails")
     @Expose
@@ -124,7 +122,7 @@ Note: This field may return·null, indicating that no valid values can be obtain
     private String Suggestion;
 
     /**
-    * Status of the risk. `0`: Not handled, `1`: Handled; `2`: Ignored
+    * Status, 0 unprocessed, 1 processed, 2 ignored, 3 defended by cloud protection
     */
     @SerializedName("Status")
     @Expose
@@ -145,68 +143,74 @@ Note: This field may return·null, indicating that no valid values can be obtain
     private String AppId;
 
     /**
-    * User name.
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * User Nickname
     */
     @SerializedName("Nick")
     @Expose
     private String Nick;
 
     /**
-    * User `uin`
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * User UIN
     */
     @SerializedName("Uin")
     @Expose
     private String Uin;
 
     /**
-    * Service snapshot
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * Service Snapshot
     */
     @SerializedName("ServiceSnapshot")
     @Expose
     private String ServiceSnapshot;
 
     /**
-    * Service access URL.
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * Service Access URL
     */
     @SerializedName("Url")
     @Expose
     private String Url;
 
     /**
-    * Data entry key
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * List Index Value
     */
     @SerializedName("Index")
     @Expose
     private String Index;
 
     /**
-    * List of risks
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * Risk list
     */
     @SerializedName("RiskList")
     @Expose
     private ServerRiskSuggestion [] RiskList;
 
     /**
-    * List of fix suggestions 
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * Recommendation List
     */
     @SerializedName("SuggestionList")
     @Expose
     private ServerRiskSuggestion [] SuggestionList;
 
     /**
-    * HTTP response code
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * HTTP Response Status Code
     */
     @SerializedName("StatusCode")
     @Expose
     private String StatusCode;
+
+    /**
+    * New risk level, high_risk high risk suspect Suspected Normal Does not have risks currently
+    */
+    @SerializedName("NewLevel")
+    @Expose
+    private String NewLevel;
+
+    /**
+    * Status, 0 unprocessed, 1 processed, 2 ignored, 3 defended by cloud protection, 4 no action is required
+    */
+    @SerializedName("XspmStatus")
+    @Expose
+    private Long XspmStatus;
 
     /**
      * Get Service tag 
@@ -225,20 +229,16 @@ Note: This field may return·null, indicating that no valid values can be obtain
     }
 
     /**
-     * Get Port
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return Port Port
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get Port. 
+     * @return Port Port.
      */
     public Long getPort() {
         return this.Port;
     }
 
     /**
-     * Set Port
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param Port Port
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set Port.
+     * @param Port Port.
      */
     public void setPort(Long Port) {
         this.Port = Port;
@@ -309,16 +309,16 @@ Note: This field may return·null, indicating that no valid values can be obtain
     }
 
     /**
-     * Get Risk level 
-     * @return Level Risk level
+     * Get Risk level, low - low risk, high - high risk, middle - medium risk, info - notification, extreme - critical. 
+     * @return Level Risk level, low - low risk, high - high risk, middle - medium risk, info - notification, extreme - critical.
      */
     public String getLevel() {
         return this.Level;
     }
 
     /**
-     * Set Risk level
-     * @param Level Risk level
+     * Set Risk level, low - low risk, high - high risk, middle - medium risk, info - notification, extreme - critical.
+     * @param Level Risk level, low - low risk, high - high risk, middle - medium risk, info - notification, extreme - critical.
      */
     public void setLevel(String Level) {
         this.Level = Level;
@@ -405,20 +405,16 @@ Note: This field may return·null, indicating that no valid values can be obtain
     }
 
     /**
-     * Get Risk Details
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return RiskDetails Risk Details
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get Risk details 
+     * @return RiskDetails Risk details
      */
     public String getRiskDetails() {
         return this.RiskDetails;
     }
 
     /**
-     * Set Risk Details
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param RiskDetails Risk Details
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set Risk details
+     * @param RiskDetails Risk details
      */
     public void setRiskDetails(String RiskDetails) {
         this.RiskDetails = RiskDetails;
@@ -441,16 +437,16 @@ Note: This field may return·null, indicating that no valid values can be obtain
     }
 
     /**
-     * Get Status of the risk. `0`: Not handled, `1`: Handled; `2`: Ignored 
-     * @return Status Status of the risk. `0`: Not handled, `1`: Handled; `2`: Ignored
+     * Get Status, 0 unprocessed, 1 processed, 2 ignored, 3 defended by cloud protection 
+     * @return Status Status, 0 unprocessed, 1 processed, 2 ignored, 3 defended by cloud protection
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Status of the risk. `0`: Not handled, `1`: Handled; `2`: Ignored
-     * @param Status Status of the risk. `0`: Not handled, `1`: Handled; `2`: Ignored
+     * Set Status, 0 unprocessed, 1 processed, 2 ignored, 3 defended by cloud protection
+     * @param Status Status, 0 unprocessed, 1 processed, 2 ignored, 3 defended by cloud protection
      */
     public void setStatus(Long Status) {
         this.Status = Status;
@@ -489,163 +485,163 @@ Note: This field may return·null, indicating that no valid values can be obtain
     }
 
     /**
-     * Get User name.
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return Nick User name.
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get User Nickname 
+     * @return Nick User Nickname
      */
     public String getNick() {
         return this.Nick;
     }
 
     /**
-     * Set User name.
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param Nick User name.
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set User Nickname
+     * @param Nick User Nickname
      */
     public void setNick(String Nick) {
         this.Nick = Nick;
     }
 
     /**
-     * Get User `uin`
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return Uin User `uin`
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get User UIN 
+     * @return Uin User UIN
      */
     public String getUin() {
         return this.Uin;
     }
 
     /**
-     * Set User `uin`
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param Uin User `uin`
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set User UIN
+     * @param Uin User UIN
      */
     public void setUin(String Uin) {
         this.Uin = Uin;
     }
 
     /**
-     * Get Service snapshot
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return ServiceSnapshot Service snapshot
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get Service Snapshot 
+     * @return ServiceSnapshot Service Snapshot
      */
     public String getServiceSnapshot() {
         return this.ServiceSnapshot;
     }
 
     /**
-     * Set Service snapshot
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param ServiceSnapshot Service snapshot
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set Service Snapshot
+     * @param ServiceSnapshot Service Snapshot
      */
     public void setServiceSnapshot(String ServiceSnapshot) {
         this.ServiceSnapshot = ServiceSnapshot;
     }
 
     /**
-     * Get Service access URL.
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return Url Service access URL.
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get Service Access URL 
+     * @return Url Service Access URL
      */
     public String getUrl() {
         return this.Url;
     }
 
     /**
-     * Set Service access URL.
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param Url Service access URL.
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set Service Access URL
+     * @param Url Service Access URL
      */
     public void setUrl(String Url) {
         this.Url = Url;
     }
 
     /**
-     * Get Data entry key
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return Index Data entry key
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get List Index Value 
+     * @return Index List Index Value
      */
     public String getIndex() {
         return this.Index;
     }
 
     /**
-     * Set Data entry key
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param Index Data entry key
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set List Index Value
+     * @param Index List Index Value
      */
     public void setIndex(String Index) {
         this.Index = Index;
     }
 
     /**
-     * Get List of risks
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return RiskList List of risks
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get Risk list 
+     * @return RiskList Risk list
      */
     public ServerRiskSuggestion [] getRiskList() {
         return this.RiskList;
     }
 
     /**
-     * Set List of risks
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param RiskList List of risks
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set Risk list
+     * @param RiskList Risk list
      */
     public void setRiskList(ServerRiskSuggestion [] RiskList) {
         this.RiskList = RiskList;
     }
 
     /**
-     * Get List of fix suggestions 
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return SuggestionList List of fix suggestions 
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get Recommendation List 
+     * @return SuggestionList Recommendation List
      */
     public ServerRiskSuggestion [] getSuggestionList() {
         return this.SuggestionList;
     }
 
     /**
-     * Set List of fix suggestions 
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param SuggestionList List of fix suggestions 
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set Recommendation List
+     * @param SuggestionList Recommendation List
      */
     public void setSuggestionList(ServerRiskSuggestion [] SuggestionList) {
         this.SuggestionList = SuggestionList;
     }
 
     /**
-     * Get HTTP response code
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return StatusCode HTTP response code
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get HTTP Response Status Code 
+     * @return StatusCode HTTP Response Status Code
      */
     public String getStatusCode() {
         return this.StatusCode;
     }
 
     /**
-     * Set HTTP response code
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param StatusCode HTTP response code
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set HTTP Response Status Code
+     * @param StatusCode HTTP Response Status Code
      */
     public void setStatusCode(String StatusCode) {
         this.StatusCode = StatusCode;
+    }
+
+    /**
+     * Get New risk level, high_risk high risk suspect Suspected Normal Does not have risks currently 
+     * @return NewLevel New risk level, high_risk high risk suspect Suspected Normal Does not have risks currently
+     */
+    public String getNewLevel() {
+        return this.NewLevel;
+    }
+
+    /**
+     * Set New risk level, high_risk high risk suspect Suspected Normal Does not have risks currently
+     * @param NewLevel New risk level, high_risk high risk suspect Suspected Normal Does not have risks currently
+     */
+    public void setNewLevel(String NewLevel) {
+        this.NewLevel = NewLevel;
+    }
+
+    /**
+     * Get Status, 0 unprocessed, 1 processed, 2 ignored, 3 defended by cloud protection, 4 no action is required 
+     * @return XspmStatus Status, 0 unprocessed, 1 processed, 2 ignored, 3 defended by cloud protection, 4 no action is required
+     */
+    public Long getXspmStatus() {
+        return this.XspmStatus;
+    }
+
+    /**
+     * Set Status, 0 unprocessed, 1 processed, 2 ignored, 3 defended by cloud protection, 4 no action is required
+     * @param XspmStatus Status, 0 unprocessed, 1 processed, 2 ignored, 3 defended by cloud protection, 4 no action is required
+     */
+    public void setXspmStatus(Long XspmStatus) {
+        this.XspmStatus = XspmStatus;
     }
 
     public ServerRisk() {
@@ -737,6 +733,12 @@ Note: This field may return·null, indicating that no valid values can be obtain
         if (source.StatusCode != null) {
             this.StatusCode = new String(source.StatusCode);
         }
+        if (source.NewLevel != null) {
+            this.NewLevel = new String(source.NewLevel);
+        }
+        if (source.XspmStatus != null) {
+            this.XspmStatus = new Long(source.XspmStatus);
+        }
     }
 
 
@@ -769,6 +771,8 @@ Note: This field may return·null, indicating that no valid values can be obtain
         this.setParamArrayObj(map, prefix + "RiskList.", this.RiskList);
         this.setParamArrayObj(map, prefix + "SuggestionList.", this.SuggestionList);
         this.setParamSimple(map, prefix + "StatusCode", this.StatusCode);
+        this.setParamSimple(map, prefix + "NewLevel", this.NewLevel);
+        this.setParamSimple(map, prefix + "XspmStatus", this.XspmStatus);
 
     }
 }

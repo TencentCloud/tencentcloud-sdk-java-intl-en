@@ -24,241 +24,161 @@ import java.util.HashMap;
 public class DescribeMachinesRequest extends AbstractModel {
 
     /**
-    * Type of the machine's zone
-CVM: Cloud Virtual Machine
-BM: BMECM: Edge Computing Machine
-LH: Lighthouse
-Other: Hybrid Cloud Zone
+    * <p>Machine zone type<br>CVM: Cloud Virtual Machine<br>BM: Blackstone<br>ECM: Edge Computing Machine<br>LH: Lighthouse<br>Other: Hybrid cloud zone</p>
     */
     @SerializedName("MachineType")
     @Expose
     private String MachineType;
 
     /**
-    * Machine region. For example, ap-guangzhou, ap-shanghai. For non-Tencent Cloud hosts, use ap-others.
+    * <p>Machine region, for example, ap-guangzhou or ap-shanghai. For non-Tencent Cloud hosts, use ap-others.</p>
     */
     @SerializedName("MachineRegion")
     @Expose
     private String MachineRegion;
 
     /**
-    * Number of returns. It is 10 by default, and the maximum value is 100.
+    * <p>Number of returned results. The default number is 10, and the maximum value is 100.</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * Offset. Default value: 0.
+    * <p>Offset. Default value: 0.</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * Filter criteria
-<li>Ips - String - Required: No - Query by ip</li>
-<li>Names - String - required: no - query by instance name</li>
-<li>InstanceIds - String - Required: No - Query by instance id</li>
-<li>Version - String required: no - current protection version ( PRO_VERSION: Pro Edition | BASIC_VERSION: Basic Edition | Flagship: Ultimate Edition | ProtectedMachines: Pro + Ultimate Editions)</li>
-<li>Risk - String - required: no - risky host (yes)</li>
-<li>Os - String - required: no - operating system (DescribeMachineOsList API value)</li>
-Each filtering criterion supports only one value; queries of multiple values with OR relationship are not supported.</li>
-<li>Quuid - String - Required: no - CVM instance UUID. Maximum value: 100.</li>
-<li>AddedOnTheFifteen - String required: no - whether to query only hosts added within the last 15 days (1: yes) </li>
-<li> TagId - String required: no - query the list of hosts associated with the specified tag </li>
-<li>AgentStatus - String - required: no - ALL total; ONLINE under protection; OFFLINE offline; UNINSTALLED not installed</li>
-<li>MachineStatus - String required: no - ALL all; RUNNING running; STOPPED is shut down; EXPIRED to be recycled</li>
+    * <p>Filter criteria.</p><li>Ips - String - Required: No - Query by IP</li><li>Names - String - Required: No - Query by instance name</li><li>InstanceIds - String - Required: No - Query by instance id</li><li>Version - String - Required: No - Current protection edition (PRO_VERSION: Pro Edition | BASIC_VERSION: Basic Version | Flagship: Ultimate Edition | ProtectedMachines: Pro Edition + Ultimate Edition)</li><li>Risk - String - Required: No - Risk host (yes)</li><li>Os - String - Required: No - Operating system (DescribeMachineOsList API value). Each filter criterion only supports one value and does not support multiple values or relationship query.</li><li>Quuid - String - Required: No - Cloud server UUID. Maximum 100 entries.</li><li>AddedOnTheFifteen - String - Required: No - Query only hosts added within the last 15 days (1: yes)</li><li>TagId - String - Required: No - Query host list associated with the specified tag</li><li>AgentStatus - String - Required: No - ALL: All; ONLINE: Under protection; OFFLINE: Offline; UNINSTALLED: Not installed</li><li>MachineStatus - String - Required: No - ALL: All; RUNNING: Running; STOPPED: Shut down; EXPIRED: Pending recycling</li>
     */
     @SerializedName("Filters")
     @Expose
     private Filter [] Filters;
 
     /**
-    * ID List of Businesses to which machines belong
+    * <p>List of business IDs to which the machines belong</p>
     */
     @SerializedName("ProjectIds")
     @Expose
     private Long [] ProjectIds;
 
     /**
-    * 
+    * <p>APPID of the machine</p>
     */
     @SerializedName("MachineAppId")
     @Expose
     private Long MachineAppId;
 
     /**
-     * Get Type of the machine's zone
-CVM: Cloud Virtual Machine
-BM: BMECM: Edge Computing Machine
-LH: Lighthouse
-Other: Hybrid Cloud Zone 
-     * @return MachineType Type of the machine's zone
-CVM: Cloud Virtual Machine
-BM: BMECM: Edge Computing Machine
-LH: Lighthouse
-Other: Hybrid Cloud Zone
+     * Get <p>Machine zone type<br>CVM: Cloud Virtual Machine<br>BM: Blackstone<br>ECM: Edge Computing Machine<br>LH: Lighthouse<br>Other: Hybrid cloud zone</p> 
+     * @return MachineType <p>Machine zone type<br>CVM: Cloud Virtual Machine<br>BM: Blackstone<br>ECM: Edge Computing Machine<br>LH: Lighthouse<br>Other: Hybrid cloud zone</p>
      */
     public String getMachineType() {
         return this.MachineType;
     }
 
     /**
-     * Set Type of the machine's zone
-CVM: Cloud Virtual Machine
-BM: BMECM: Edge Computing Machine
-LH: Lighthouse
-Other: Hybrid Cloud Zone
-     * @param MachineType Type of the machine's zone
-CVM: Cloud Virtual Machine
-BM: BMECM: Edge Computing Machine
-LH: Lighthouse
-Other: Hybrid Cloud Zone
+     * Set <p>Machine zone type<br>CVM: Cloud Virtual Machine<br>BM: Blackstone<br>ECM: Edge Computing Machine<br>LH: Lighthouse<br>Other: Hybrid cloud zone</p>
+     * @param MachineType <p>Machine zone type<br>CVM: Cloud Virtual Machine<br>BM: Blackstone<br>ECM: Edge Computing Machine<br>LH: Lighthouse<br>Other: Hybrid cloud zone</p>
      */
     public void setMachineType(String MachineType) {
         this.MachineType = MachineType;
     }
 
     /**
-     * Get Machine region. For example, ap-guangzhou, ap-shanghai. For non-Tencent Cloud hosts, use ap-others. 
-     * @return MachineRegion Machine region. For example, ap-guangzhou, ap-shanghai. For non-Tencent Cloud hosts, use ap-others.
+     * Get <p>Machine region, for example, ap-guangzhou or ap-shanghai. For non-Tencent Cloud hosts, use ap-others.</p> 
+     * @return MachineRegion <p>Machine region, for example, ap-guangzhou or ap-shanghai. For non-Tencent Cloud hosts, use ap-others.</p>
      */
     public String getMachineRegion() {
         return this.MachineRegion;
     }
 
     /**
-     * Set Machine region. For example, ap-guangzhou, ap-shanghai. For non-Tencent Cloud hosts, use ap-others.
-     * @param MachineRegion Machine region. For example, ap-guangzhou, ap-shanghai. For non-Tencent Cloud hosts, use ap-others.
+     * Set <p>Machine region, for example, ap-guangzhou or ap-shanghai. For non-Tencent Cloud hosts, use ap-others.</p>
+     * @param MachineRegion <p>Machine region, for example, ap-guangzhou or ap-shanghai. For non-Tencent Cloud hosts, use ap-others.</p>
      */
     public void setMachineRegion(String MachineRegion) {
         this.MachineRegion = MachineRegion;
     }
 
     /**
-     * Get Number of returns. It is 10 by default, and the maximum value is 100. 
-     * @return Limit Number of returns. It is 10 by default, and the maximum value is 100.
+     * Get <p>Number of returned results. The default number is 10, and the maximum value is 100.</p> 
+     * @return Limit <p>Number of returned results. The default number is 10, and the maximum value is 100.</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Number of returns. It is 10 by default, and the maximum value is 100.
-     * @param Limit Number of returns. It is 10 by default, and the maximum value is 100.
+     * Set <p>Number of returned results. The default number is 10, and the maximum value is 100.</p>
+     * @param Limit <p>Number of returned results. The default number is 10, and the maximum value is 100.</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get Offset. Default value: 0. 
-     * @return Offset Offset. Default value: 0.
+     * Get <p>Offset. Default value: 0.</p> 
+     * @return Offset <p>Offset. Default value: 0.</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Offset. Default value: 0.
-     * @param Offset Offset. Default value: 0.
+     * Set <p>Offset. Default value: 0.</p>
+     * @param Offset <p>Offset. Default value: 0.</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get Filter criteria
-<li>Ips - String - Required: No - Query by ip</li>
-<li>Names - String - required: no - query by instance name</li>
-<li>InstanceIds - String - Required: No - Query by instance id</li>
-<li>Version - String required: no - current protection version ( PRO_VERSION: Pro Edition | BASIC_VERSION: Basic Edition | Flagship: Ultimate Edition | ProtectedMachines: Pro + Ultimate Editions)</li>
-<li>Risk - String - required: no - risky host (yes)</li>
-<li>Os - String - required: no - operating system (DescribeMachineOsList API value)</li>
-Each filtering criterion supports only one value; queries of multiple values with OR relationship are not supported.</li>
-<li>Quuid - String - Required: no - CVM instance UUID. Maximum value: 100.</li>
-<li>AddedOnTheFifteen - String required: no - whether to query only hosts added within the last 15 days (1: yes) </li>
-<li> TagId - String required: no - query the list of hosts associated with the specified tag </li>
-<li>AgentStatus - String - required: no - ALL total; ONLINE under protection; OFFLINE offline; UNINSTALLED not installed</li>
-<li>MachineStatus - String required: no - ALL all; RUNNING running; STOPPED is shut down; EXPIRED to be recycled</li> 
-     * @return Filters Filter criteria
-<li>Ips - String - Required: No - Query by ip</li>
-<li>Names - String - required: no - query by instance name</li>
-<li>InstanceIds - String - Required: No - Query by instance id</li>
-<li>Version - String required: no - current protection version ( PRO_VERSION: Pro Edition | BASIC_VERSION: Basic Edition | Flagship: Ultimate Edition | ProtectedMachines: Pro + Ultimate Editions)</li>
-<li>Risk - String - required: no - risky host (yes)</li>
-<li>Os - String - required: no - operating system (DescribeMachineOsList API value)</li>
-Each filtering criterion supports only one value; queries of multiple values with OR relationship are not supported.</li>
-<li>Quuid - String - Required: no - CVM instance UUID. Maximum value: 100.</li>
-<li>AddedOnTheFifteen - String required: no - whether to query only hosts added within the last 15 days (1: yes) </li>
-<li> TagId - String required: no - query the list of hosts associated with the specified tag </li>
-<li>AgentStatus - String - required: no - ALL total; ONLINE under protection; OFFLINE offline; UNINSTALLED not installed</li>
-<li>MachineStatus - String required: no - ALL all; RUNNING running; STOPPED is shut down; EXPIRED to be recycled</li>
+     * Get <p>Filter criteria.</p><li>Ips - String - Required: No - Query by IP</li><li>Names - String - Required: No - Query by instance name</li><li>InstanceIds - String - Required: No - Query by instance id</li><li>Version - String - Required: No - Current protection edition (PRO_VERSION: Pro Edition | BASIC_VERSION: Basic Version | Flagship: Ultimate Edition | ProtectedMachines: Pro Edition + Ultimate Edition)</li><li>Risk - String - Required: No - Risk host (yes)</li><li>Os - String - Required: No - Operating system (DescribeMachineOsList API value). Each filter criterion only supports one value and does not support multiple values or relationship query.</li><li>Quuid - String - Required: No - Cloud server UUID. Maximum 100 entries.</li><li>AddedOnTheFifteen - String - Required: No - Query only hosts added within the last 15 days (1: yes)</li><li>TagId - String - Required: No - Query host list associated with the specified tag</li><li>AgentStatus - String - Required: No - ALL: All; ONLINE: Under protection; OFFLINE: Offline; UNINSTALLED: Not installed</li><li>MachineStatus - String - Required: No - ALL: All; RUNNING: Running; STOPPED: Shut down; EXPIRED: Pending recycling</li> 
+     * @return Filters <p>Filter criteria.</p><li>Ips - String - Required: No - Query by IP</li><li>Names - String - Required: No - Query by instance name</li><li>InstanceIds - String - Required: No - Query by instance id</li><li>Version - String - Required: No - Current protection edition (PRO_VERSION: Pro Edition | BASIC_VERSION: Basic Version | Flagship: Ultimate Edition | ProtectedMachines: Pro Edition + Ultimate Edition)</li><li>Risk - String - Required: No - Risk host (yes)</li><li>Os - String - Required: No - Operating system (DescribeMachineOsList API value). Each filter criterion only supports one value and does not support multiple values or relationship query.</li><li>Quuid - String - Required: No - Cloud server UUID. Maximum 100 entries.</li><li>AddedOnTheFifteen - String - Required: No - Query only hosts added within the last 15 days (1: yes)</li><li>TagId - String - Required: No - Query host list associated with the specified tag</li><li>AgentStatus - String - Required: No - ALL: All; ONLINE: Under protection; OFFLINE: Offline; UNINSTALLED: Not installed</li><li>MachineStatus - String - Required: No - ALL: All; RUNNING: Running; STOPPED: Shut down; EXPIRED: Pending recycling</li>
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set Filter criteria
-<li>Ips - String - Required: No - Query by ip</li>
-<li>Names - String - required: no - query by instance name</li>
-<li>InstanceIds - String - Required: No - Query by instance id</li>
-<li>Version - String required: no - current protection version ( PRO_VERSION: Pro Edition | BASIC_VERSION: Basic Edition | Flagship: Ultimate Edition | ProtectedMachines: Pro + Ultimate Editions)</li>
-<li>Risk - String - required: no - risky host (yes)</li>
-<li>Os - String - required: no - operating system (DescribeMachineOsList API value)</li>
-Each filtering criterion supports only one value; queries of multiple values with OR relationship are not supported.</li>
-<li>Quuid - String - Required: no - CVM instance UUID. Maximum value: 100.</li>
-<li>AddedOnTheFifteen - String required: no - whether to query only hosts added within the last 15 days (1: yes) </li>
-<li> TagId - String required: no - query the list of hosts associated with the specified tag </li>
-<li>AgentStatus - String - required: no - ALL total; ONLINE under protection; OFFLINE offline; UNINSTALLED not installed</li>
-<li>MachineStatus - String required: no - ALL all; RUNNING running; STOPPED is shut down; EXPIRED to be recycled</li>
-     * @param Filters Filter criteria
-<li>Ips - String - Required: No - Query by ip</li>
-<li>Names - String - required: no - query by instance name</li>
-<li>InstanceIds - String - Required: No - Query by instance id</li>
-<li>Version - String required: no - current protection version ( PRO_VERSION: Pro Edition | BASIC_VERSION: Basic Edition | Flagship: Ultimate Edition | ProtectedMachines: Pro + Ultimate Editions)</li>
-<li>Risk - String - required: no - risky host (yes)</li>
-<li>Os - String - required: no - operating system (DescribeMachineOsList API value)</li>
-Each filtering criterion supports only one value; queries of multiple values with OR relationship are not supported.</li>
-<li>Quuid - String - Required: no - CVM instance UUID. Maximum value: 100.</li>
-<li>AddedOnTheFifteen - String required: no - whether to query only hosts added within the last 15 days (1: yes) </li>
-<li> TagId - String required: no - query the list of hosts associated with the specified tag </li>
-<li>AgentStatus - String - required: no - ALL total; ONLINE under protection; OFFLINE offline; UNINSTALLED not installed</li>
-<li>MachineStatus - String required: no - ALL all; RUNNING running; STOPPED is shut down; EXPIRED to be recycled</li>
+     * Set <p>Filter criteria.</p><li>Ips - String - Required: No - Query by IP</li><li>Names - String - Required: No - Query by instance name</li><li>InstanceIds - String - Required: No - Query by instance id</li><li>Version - String - Required: No - Current protection edition (PRO_VERSION: Pro Edition | BASIC_VERSION: Basic Version | Flagship: Ultimate Edition | ProtectedMachines: Pro Edition + Ultimate Edition)</li><li>Risk - String - Required: No - Risk host (yes)</li><li>Os - String - Required: No - Operating system (DescribeMachineOsList API value). Each filter criterion only supports one value and does not support multiple values or relationship query.</li><li>Quuid - String - Required: No - Cloud server UUID. Maximum 100 entries.</li><li>AddedOnTheFifteen - String - Required: No - Query only hosts added within the last 15 days (1: yes)</li><li>TagId - String - Required: No - Query host list associated with the specified tag</li><li>AgentStatus - String - Required: No - ALL: All; ONLINE: Under protection; OFFLINE: Offline; UNINSTALLED: Not installed</li><li>MachineStatus - String - Required: No - ALL: All; RUNNING: Running; STOPPED: Shut down; EXPIRED: Pending recycling</li>
+     * @param Filters <p>Filter criteria.</p><li>Ips - String - Required: No - Query by IP</li><li>Names - String - Required: No - Query by instance name</li><li>InstanceIds - String - Required: No - Query by instance id</li><li>Version - String - Required: No - Current protection edition (PRO_VERSION: Pro Edition | BASIC_VERSION: Basic Version | Flagship: Ultimate Edition | ProtectedMachines: Pro Edition + Ultimate Edition)</li><li>Risk - String - Required: No - Risk host (yes)</li><li>Os - String - Required: No - Operating system (DescribeMachineOsList API value). Each filter criterion only supports one value and does not support multiple values or relationship query.</li><li>Quuid - String - Required: No - Cloud server UUID. Maximum 100 entries.</li><li>AddedOnTheFifteen - String - Required: No - Query only hosts added within the last 15 days (1: yes)</li><li>TagId - String - Required: No - Query host list associated with the specified tag</li><li>AgentStatus - String - Required: No - ALL: All; ONLINE: Under protection; OFFLINE: Offline; UNINSTALLED: Not installed</li><li>MachineStatus - String - Required: No - ALL: All; RUNNING: Running; STOPPED: Shut down; EXPIRED: Pending recycling</li>
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;
     }
 
     /**
-     * Get ID List of Businesses to which machines belong 
-     * @return ProjectIds ID List of Businesses to which machines belong
+     * Get <p>List of business IDs to which the machines belong</p> 
+     * @return ProjectIds <p>List of business IDs to which the machines belong</p>
      */
     public Long [] getProjectIds() {
         return this.ProjectIds;
     }
 
     /**
-     * Set ID List of Businesses to which machines belong
-     * @param ProjectIds ID List of Businesses to which machines belong
+     * Set <p>List of business IDs to which the machines belong</p>
+     * @param ProjectIds <p>List of business IDs to which the machines belong</p>
      */
     public void setProjectIds(Long [] ProjectIds) {
         this.ProjectIds = ProjectIds;
     }
 
     /**
-     * Get  
-     * @return MachineAppId 
+     * Get <p>APPID of the machine</p> 
+     * @return MachineAppId <p>APPID of the machine</p>
      */
     public Long getMachineAppId() {
         return this.MachineAppId;
     }
 
     /**
-     * Set 
-     * @param MachineAppId 
+     * Set <p>APPID of the machine</p>
+     * @param MachineAppId <p>APPID of the machine</p>
      */
     public void setMachineAppId(Long MachineAppId) {
         this.MachineAppId = MachineAppId;

@@ -24,161 +24,161 @@ import java.util.HashMap;
 public class ModifyNetAttackSettingRequest extends AbstractModel {
 
     /**
-    * 0 - Disable Network Attack Detection; 1 - Enable Network Attack Detection.
+    * <p>0: Disable network attack detection; 1: Enable network attack detection</p>
     */
     @SerializedName("NetAttackEnable")
     @Expose
     private Long NetAttackEnable;
 
     /**
-    * 0: New warning events pending processing by default, 1: New warning events processed by default, 3: New warning events ignored by default.
+    * <p>0: Newly added alert events are pending by default; 1: newly added alert events are processed by default; 3: newly added alert events are ignored by default</p>
     */
     @SerializedName("NetAttackAlarmStatus")
     @Expose
     private Long NetAttackAlarmStatus;
 
     /**
-    * 1 - All Ultimate edition hosts; 0 - list of hosts with Quuids
+    * <p>1: All Ultimate Edition hosts; 0: Hosts in the Quuids list</p>
     */
     @SerializedName("Scope")
     @Expose
     private Long Scope;
 
     /**
-    * Specified hosts
+    * <p>Selected hosts</p>
     */
     @SerializedName("InstanceIds")
     @Expose
     private String [] InstanceIds;
 
     /**
-    * Manually Excluded Hosts
+    * <p>Custom excluded hosts</p>
     */
     @SerializedName("ExcludeInstanceIds")
     @Expose
     private String [] ExcludeInstanceIds;
 
     /**
-    * New assets automatically include: 0 - Do not include, 1 - include.
+    * <p>Automatically include newly added assets. 0: No; 1: Yes</p>
     */
     @SerializedName("AutoInclude")
     @Expose
     private Long AutoInclude;
 
     /**
-    * 
+    * <p>Product type. 0: CWP; 1: CSC</p>
     */
     @SerializedName("ProductType")
     @Expose
     private Long ProductType;
 
     /**
-     * Get 0 - Disable Network Attack Detection; 1 - Enable Network Attack Detection. 
-     * @return NetAttackEnable 0 - Disable Network Attack Detection; 1 - Enable Network Attack Detection.
+     * Get <p>0: Disable network attack detection; 1: Enable network attack detection</p> 
+     * @return NetAttackEnable <p>0: Disable network attack detection; 1: Enable network attack detection</p>
      */
     public Long getNetAttackEnable() {
         return this.NetAttackEnable;
     }
 
     /**
-     * Set 0 - Disable Network Attack Detection; 1 - Enable Network Attack Detection.
-     * @param NetAttackEnable 0 - Disable Network Attack Detection; 1 - Enable Network Attack Detection.
+     * Set <p>0: Disable network attack detection; 1: Enable network attack detection</p>
+     * @param NetAttackEnable <p>0: Disable network attack detection; 1: Enable network attack detection</p>
      */
     public void setNetAttackEnable(Long NetAttackEnable) {
         this.NetAttackEnable = NetAttackEnable;
     }
 
     /**
-     * Get 0: New warning events pending processing by default, 1: New warning events processed by default, 3: New warning events ignored by default. 
-     * @return NetAttackAlarmStatus 0: New warning events pending processing by default, 1: New warning events processed by default, 3: New warning events ignored by default.
+     * Get <p>0: Newly added alert events are pending by default; 1: newly added alert events are processed by default; 3: newly added alert events are ignored by default</p> 
+     * @return NetAttackAlarmStatus <p>0: Newly added alert events are pending by default; 1: newly added alert events are processed by default; 3: newly added alert events are ignored by default</p>
      */
     public Long getNetAttackAlarmStatus() {
         return this.NetAttackAlarmStatus;
     }
 
     /**
-     * Set 0: New warning events pending processing by default, 1: New warning events processed by default, 3: New warning events ignored by default.
-     * @param NetAttackAlarmStatus 0: New warning events pending processing by default, 1: New warning events processed by default, 3: New warning events ignored by default.
+     * Set <p>0: Newly added alert events are pending by default; 1: newly added alert events are processed by default; 3: newly added alert events are ignored by default</p>
+     * @param NetAttackAlarmStatus <p>0: Newly added alert events are pending by default; 1: newly added alert events are processed by default; 3: newly added alert events are ignored by default</p>
      */
     public void setNetAttackAlarmStatus(Long NetAttackAlarmStatus) {
         this.NetAttackAlarmStatus = NetAttackAlarmStatus;
     }
 
     /**
-     * Get 1 - All Ultimate edition hosts; 0 - list of hosts with Quuids 
-     * @return Scope 1 - All Ultimate edition hosts; 0 - list of hosts with Quuids
+     * Get <p>1: All Ultimate Edition hosts; 0: Hosts in the Quuids list</p> 
+     * @return Scope <p>1: All Ultimate Edition hosts; 0: Hosts in the Quuids list</p>
      */
     public Long getScope() {
         return this.Scope;
     }
 
     /**
-     * Set 1 - All Ultimate edition hosts; 0 - list of hosts with Quuids
-     * @param Scope 1 - All Ultimate edition hosts; 0 - list of hosts with Quuids
+     * Set <p>1: All Ultimate Edition hosts; 0: Hosts in the Quuids list</p>
+     * @param Scope <p>1: All Ultimate Edition hosts; 0: Hosts in the Quuids list</p>
      */
     public void setScope(Long Scope) {
         this.Scope = Scope;
     }
 
     /**
-     * Get Specified hosts 
-     * @return InstanceIds Specified hosts
+     * Get <p>Selected hosts</p> 
+     * @return InstanceIds <p>Selected hosts</p>
      */
     public String [] getInstanceIds() {
         return this.InstanceIds;
     }
 
     /**
-     * Set Specified hosts
-     * @param InstanceIds Specified hosts
+     * Set <p>Selected hosts</p>
+     * @param InstanceIds <p>Selected hosts</p>
      */
     public void setInstanceIds(String [] InstanceIds) {
         this.InstanceIds = InstanceIds;
     }
 
     /**
-     * Get Manually Excluded Hosts 
-     * @return ExcludeInstanceIds Manually Excluded Hosts
+     * Get <p>Custom excluded hosts</p> 
+     * @return ExcludeInstanceIds <p>Custom excluded hosts</p>
      */
     public String [] getExcludeInstanceIds() {
         return this.ExcludeInstanceIds;
     }
 
     /**
-     * Set Manually Excluded Hosts
-     * @param ExcludeInstanceIds Manually Excluded Hosts
+     * Set <p>Custom excluded hosts</p>
+     * @param ExcludeInstanceIds <p>Custom excluded hosts</p>
      */
     public void setExcludeInstanceIds(String [] ExcludeInstanceIds) {
         this.ExcludeInstanceIds = ExcludeInstanceIds;
     }
 
     /**
-     * Get New assets automatically include: 0 - Do not include, 1 - include. 
-     * @return AutoInclude New assets automatically include: 0 - Do not include, 1 - include.
+     * Get <p>Automatically include newly added assets. 0: No; 1: Yes</p> 
+     * @return AutoInclude <p>Automatically include newly added assets. 0: No; 1: Yes</p>
      */
     public Long getAutoInclude() {
         return this.AutoInclude;
     }
 
     /**
-     * Set New assets automatically include: 0 - Do not include, 1 - include.
-     * @param AutoInclude New assets automatically include: 0 - Do not include, 1 - include.
+     * Set <p>Automatically include newly added assets. 0: No; 1: Yes</p>
+     * @param AutoInclude <p>Automatically include newly added assets. 0: No; 1: Yes</p>
      */
     public void setAutoInclude(Long AutoInclude) {
         this.AutoInclude = AutoInclude;
     }
 
     /**
-     * Get  
-     * @return ProductType 
+     * Get <p>Product type. 0: CWP; 1: CSC</p> 
+     * @return ProductType <p>Product type. 0: CWP; 1: CSC</p>
      */
     public Long getProductType() {
         return this.ProductType;
     }
 
     /**
-     * Set 
-     * @param ProductType 
+     * Set <p>Product type. 0: CWP; 1: CSC</p>
+     * @param ProductType <p>Product type. 0: CWP; 1: CSC</p>
      */
     public void setProductType(Long ProductType) {
         this.ProductType = ProductType;

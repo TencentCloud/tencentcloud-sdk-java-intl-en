@@ -24,48 +24,42 @@ import java.util.HashMap;
 public class DescribeDomainAssetsResponse extends AbstractModel {
 
     /**
-    * u200c-
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * Total number.
     */
     @SerializedName("Total")
     @Expose
     private Long Total;
 
     /**
-    * u200c-
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * Domain name list
     */
     @SerializedName("Data")
     @Expose
     private DomainAssetVO [] Data;
 
     /**
-    * List of WAF protection status
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * Protection Status List
     */
     @SerializedName("DefenseStatusList")
     @Expose
     private FilterDataObject [] DefenseStatusList;
 
     /**
-    * List of asset locations
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * Asset Attribution List
     */
     @SerializedName("AssetLocationList")
     @Expose
     private FilterDataObject [] AssetLocationList;
 
     /**
-    * List of asset types
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * Asset Type List
     */
     @SerializedName("SourceTypeList")
     @Expose
     private FilterDataObject [] SourceTypeList;
 
     /**
-    * List of regions
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * Region list
     */
     @SerializedName("RegionList")
     @Expose
@@ -79,120 +73,96 @@ Note: This field may return·null, indicating that no valid values can be obtain
     private String RequestId;
 
     /**
-     * Get u200c-
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return Total u200c-
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get Total number. 
+     * @return Total Total number.
      */
     public Long getTotal() {
         return this.Total;
     }
 
     /**
-     * Set u200c-
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param Total u200c-
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set Total number.
+     * @param Total Total number.
      */
     public void setTotal(Long Total) {
         this.Total = Total;
     }
 
     /**
-     * Get u200c-
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return Data u200c-
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get Domain name list 
+     * @return Data Domain name list
      */
     public DomainAssetVO [] getData() {
         return this.Data;
     }
 
     /**
-     * Set u200c-
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param Data u200c-
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set Domain name list
+     * @param Data Domain name list
      */
     public void setData(DomainAssetVO [] Data) {
         this.Data = Data;
     }
 
     /**
-     * Get List of WAF protection status
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return DefenseStatusList List of WAF protection status
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get Protection Status List 
+     * @return DefenseStatusList Protection Status List
      */
     public FilterDataObject [] getDefenseStatusList() {
         return this.DefenseStatusList;
     }
 
     /**
-     * Set List of WAF protection status
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param DefenseStatusList List of WAF protection status
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set Protection Status List
+     * @param DefenseStatusList Protection Status List
      */
     public void setDefenseStatusList(FilterDataObject [] DefenseStatusList) {
         this.DefenseStatusList = DefenseStatusList;
     }
 
     /**
-     * Get List of asset locations
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return AssetLocationList List of asset locations
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get Asset Attribution List 
+     * @return AssetLocationList Asset Attribution List
      */
     public FilterDataObject [] getAssetLocationList() {
         return this.AssetLocationList;
     }
 
     /**
-     * Set List of asset locations
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param AssetLocationList List of asset locations
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set Asset Attribution List
+     * @param AssetLocationList Asset Attribution List
      */
     public void setAssetLocationList(FilterDataObject [] AssetLocationList) {
         this.AssetLocationList = AssetLocationList;
     }
 
     /**
-     * Get List of asset types
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return SourceTypeList List of asset types
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get Asset Type List 
+     * @return SourceTypeList Asset Type List
      */
     public FilterDataObject [] getSourceTypeList() {
         return this.SourceTypeList;
     }
 
     /**
-     * Set List of asset types
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param SourceTypeList List of asset types
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set Asset Type List
+     * @param SourceTypeList Asset Type List
      */
     public void setSourceTypeList(FilterDataObject [] SourceTypeList) {
         this.SourceTypeList = SourceTypeList;
     }
 
     /**
-     * Get List of regions
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return RegionList List of regions
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get Region list 
+     * @return RegionList Region list
      */
     public FilterDataObject [] getRegionList() {
         return this.RegionList;
     }
 
     /**
-     * Set List of regions
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param RegionList List of regions
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set Region list
+     * @param RegionList Region list
      */
     public void setRegionList(FilterDataObject [] RegionList) {
         this.RegionList = RegionList;

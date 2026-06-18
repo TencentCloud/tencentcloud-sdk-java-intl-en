@@ -73,7 +73,7 @@ public class AssetViewCFGRisk extends AbstractModel {
     private String AffectAsset;
 
     /**
-    * Risk level
+    * Risk level, low - low risk, high - high risk, middle - medium risk, info - notification, extreme - critical.
     */
     @SerializedName("Level")
     @Expose
@@ -108,7 +108,7 @@ public class AssetViewCFGRisk extends AbstractModel {
     private Long Status;
 
     /**
-    * u200c-
+    * relevant standards
     */
     @SerializedName("CFGSTD")
     @Expose
@@ -150,8 +150,7 @@ public class AssetViewCFGRisk extends AbstractModel {
     private String AppId;
 
     /**
-    * User name.
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * User Nickname
     */
     @SerializedName("Nick")
     @Expose
@@ -159,11 +158,17 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
     /**
     * User UIN
-Note: This field may return·null, indicating that no valid values can be obtained.
     */
     @SerializedName("Uin")
     @Expose
     private String Uin;
+
+    /**
+    * When the asset type is LBL, show this field to locate the specific LB.
+    */
+    @SerializedName("ClbId")
+    @Expose
+    private String ClbId;
 
     /**
      * Get The unique ID. 
@@ -278,16 +283,16 @@ Note: This field may return·null, indicating that no valid values can be obtain
     }
 
     /**
-     * Get Risk level 
-     * @return Level Risk level
+     * Get Risk level, low - low risk, high - high risk, middle - medium risk, info - notification, extreme - critical. 
+     * @return Level Risk level, low - low risk, high - high risk, middle - medium risk, info - notification, extreme - critical.
      */
     public String getLevel() {
         return this.Level;
     }
 
     /**
-     * Set Risk level
-     * @param Level Risk level
+     * Set Risk level, low - low risk, high - high risk, middle - medium risk, info - notification, extreme - critical.
+     * @param Level Risk level, low - low risk, high - high risk, middle - medium risk, info - notification, extreme - critical.
      */
     public void setLevel(String Level) {
         this.Level = Level;
@@ -358,16 +363,16 @@ Note: This field may return·null, indicating that no valid values can be obtain
     }
 
     /**
-     * Get u200c- 
-     * @return CFGSTD u200c-
+     * Get relevant standards 
+     * @return CFGSTD relevant standards
      */
     public String getCFGSTD() {
         return this.CFGSTD;
     }
 
     /**
-     * Set u200c-
-     * @param CFGSTD u200c-
+     * Set relevant standards
+     * @param CFGSTD relevant standards
      */
     public void setCFGSTD(String CFGSTD) {
         this.CFGSTD = CFGSTD;
@@ -454,30 +459,24 @@ Note: This field may return·null, indicating that no valid values can be obtain
     }
 
     /**
-     * Get User name.
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return Nick User name.
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get User Nickname 
+     * @return Nick User Nickname
      */
     public String getNick() {
         return this.Nick;
     }
 
     /**
-     * Set User name.
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param Nick User name.
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set User Nickname
+     * @param Nick User Nickname
      */
     public void setNick(String Nick) {
         this.Nick = Nick;
     }
 
     /**
-     * Get User UIN
-Note: This field may return·null, indicating that no valid values can be obtained. 
+     * Get User UIN 
      * @return Uin User UIN
-Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public String getUin() {
         return this.Uin;
@@ -485,12 +484,26 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
     /**
      * Set User UIN
-Note: This field may return·null, indicating that no valid values can be obtained.
      * @param Uin User UIN
-Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public void setUin(String Uin) {
         this.Uin = Uin;
+    }
+
+    /**
+     * Get When the asset type is LBL, show this field to locate the specific LB. 
+     * @return ClbId When the asset type is LBL, show this field to locate the specific LB.
+     */
+    public String getClbId() {
+        return this.ClbId;
+    }
+
+    /**
+     * Set When the asset type is LBL, show this field to locate the specific LB.
+     * @param ClbId When the asset type is LBL, show this field to locate the specific LB.
+     */
+    public void setClbId(String ClbId) {
+        this.ClbId = ClbId;
     }
 
     public AssetViewCFGRisk() {
@@ -561,6 +574,9 @@ Note: This field may return·null, indicating that no valid values can be obtain
         if (source.Uin != null) {
             this.Uin = new String(source.Uin);
         }
+        if (source.ClbId != null) {
+            this.ClbId = new String(source.ClbId);
+        }
     }
 
 
@@ -588,6 +604,7 @@ Note: This field may return·null, indicating that no valid values can be obtain
         this.setParamSimple(map, prefix + "AppId", this.AppId);
         this.setParamSimple(map, prefix + "Nick", this.Nick);
         this.setParamSimple(map, prefix + "Uin", this.Uin);
+        this.setParamSimple(map, prefix + "ClbId", this.ClbId);
 
     }
 }

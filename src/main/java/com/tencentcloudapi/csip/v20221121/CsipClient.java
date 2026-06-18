@@ -83,6 +83,39 @@ public class CsipClient extends AbstractClient{
     }
 
     /**
+     *Create an IaC detection integration Token
+     * @param req CreateIaCAccessTokenRequest
+     * @return CreateIaCAccessTokenResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateIaCAccessTokenResponse CreateIaCAccessToken(CreateIaCAccessTokenRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateIaCAccessToken", CreateIaCAccessTokenResponse.class);
+    }
+
+    /**
+     *Create an IaC detection file export task
+     * @param req CreateIaCFileExportJobRequest
+     * @return CreateIaCFileExportJobResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateIaCFileExportJobResponse CreateIaCFileExportJob(CreateIaCFileExportJobRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateIaCFileExportJob", CreateIaCFileExportJobResponse.class);
+    }
+
+    /**
+     *Create an IaC detection file rescan task
+     * @param req CreateIaCFileReScanTaskRequest
+     * @return CreateIaCFileReScanTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateIaCFileReScanTaskResponse CreateIaCFileReScanTask(CreateIaCFileReScanTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateIaCFileReScanTask", CreateIaCFileReScanTaskResponse.class);
+    }
+
+    /**
      *This API is used to create a risk scan task. 
      * @param req CreateRiskCenterScanTaskRequest
      * @return CreateRiskCenterScanTaskResponse
@@ -91,6 +124,17 @@ public class CsipClient extends AbstractClient{
     public CreateRiskCenterScanTaskResponse CreateRiskCenterScanTask(CreateRiskCenterScanTaskRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CreateRiskCenterScanTask", CreateRiskCenterScanTaskResponse.class);
+    }
+
+    /**
+     *Upload the Skill ZIP file to trigger asynchronous security detection. After a successful upload, use the returned ContentHash and EngineVersion to poll the DescribeSkillScanResult API to obtain the result. The upload API is idempotent, and uploading the same file with an identical hash will not create a repetition task. The detection result is reserved for 90 days. If overdue, reupload the file for detection.
+     * @param req CreateSkillScanRequest
+     * @return CreateSkillScanResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateSkillScanResponse CreateSkillScan(CreateSkillScanRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateSkillScan", CreateSkillScanResponse.class);
     }
 
     /**
@@ -105,6 +149,28 @@ public class CsipClient extends AbstractClient{
     }
 
     /**
+     *Delete an IaC detection integration Token
+     * @param req DeleteIaCAccessTokenRequest
+     * @return DeleteIaCAccessTokenResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteIaCAccessTokenResponse DeleteIaCAccessToken(DeleteIaCAccessTokenRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteIaCAccessToken", DeleteIaCAccessTokenResponse.class);
+    }
+
+    /**
+     *Delete IaC detection file
+     * @param req DeleteIaCFileRequest
+     * @return DeleteIaCFileResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteIaCFileResponse DeleteIaCFile(DeleteIaCFileRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteIaCFile", DeleteIaCFileResponse.class);
+    }
+
+    /**
      *This API is used to delete a risk scan task.
      * @param req DeleteRiskScanTaskRequest
      * @return DeleteRiskScanTaskResponse
@@ -113,6 +179,28 @@ public class CsipClient extends AbstractClient{
     public DeleteRiskScanTaskResponse DeleteRiskScanTask(DeleteRiskScanTaskRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteRiskScanTask", DeleteRiskScanTaskResponse.class);
+    }
+
+    /**
+     *Retrieve the AI agent asset list
+     * @param req DescribeAIAgentAssetListRequest
+     * @return DescribeAIAgentAssetListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAIAgentAssetListResponse DescribeAIAgentAssetList(DescribeAIAgentAssetListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAIAgentAssetList", DescribeAIAgentAssetListResponse.class);
+    }
+
+    /**
+     *Access key alarm record AI analysis result details
+     * @param req DescribeAKAnalysisDetailRequest
+     * @return DescribeAKAnalysisDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAKAnalysisDetailResponse DescribeAKAnalysisDetail(DescribeAKAnalysisDetailRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAKAnalysisDetail", DescribeAKAnalysisDetailResponse.class);
     }
 
     /**
@@ -204,6 +292,17 @@ public class CsipClient extends AbstractClient{
     }
 
     /**
+     *This API is used to list all alarms in the alert center.
+     * @param req DescribeAlertListRequest
+     * @return DescribeAlertListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAlertListResponse DescribeAlertList(DescribeAlertListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAlertList", DescribeAlertListResponse.class);
+    }
+
+    /**
      *Query the process list of host nodes under the exposed path in cloud boundary analysis.
      * @param req DescribeAssetProcessListRequest
      * @return DescribeAssetProcessListResponse
@@ -212,6 +311,28 @@ public class CsipClient extends AbstractClient{
     public DescribeAssetProcessListResponse DescribeAssetProcessList(DescribeAssetProcessListRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeAssetProcessList", DescribeAssetProcessListResponse.class);
+    }
+
+    /**
+     *Cloud resource configuration risk list from asset perspective
+     * @param req DescribeAssetRiskListRequest
+     * @return DescribeAssetRiskListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAssetRiskListResponse DescribeAssetRiskList(DescribeAssetRiskListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAssetRiskList", DescribeAssetRiskListResponse.class);
+    }
+
+    /**
+     *Obtain Vulnerability Risk List from Asset's Perspective
+     * @param req DescribeAssetViewVulRiskListRequest
+     * @return DescribeAssetViewVulRiskListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAssetViewVulRiskListResponse DescribeAssetViewVulRiskList(DescribeAssetViewVulRiskListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAssetViewVulRiskList", DescribeAssetViewVulRiskListResponse.class);
     }
 
     /**
@@ -248,7 +369,7 @@ public class CsipClient extends AbstractClient{
     }
 
     /**
-     *This API is used to query the list of CVM assets.
+     *Retrieve the cvm list.
      * @param req DescribeCVMAssetsRequest
      * @return DescribeCVMAssetsResponse
      * @throws TencentCloudSDKException
@@ -267,6 +388,17 @@ public class CsipClient extends AbstractClient{
     public DescribeCallRecordResponse DescribeCallRecord(DescribeCallRecordRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeCallRecord", DescribeCallRecordResponse.class);
+    }
+
+    /**
+     *List of cloud resource configuration risks from a check perspective
+     * @param req DescribeCheckViewRisksRequest
+     * @return DescribeCheckViewRisksResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCheckViewRisksResponse DescribeCheckViewRisks(DescribeCheckViewRisksRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCheckViewRisks", DescribeCheckViewRisksResponse.class);
     }
 
     /**
@@ -289,6 +421,17 @@ public class CsipClient extends AbstractClient{
     public DescribeClusterPodAssetsResponse DescribeClusterPodAssets(DescribeClusterPodAssetsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeClusterPodAssets", DescribeClusterPodAssetsResponse.class);
+    }
+
+    /**
+     *Cloud Resource Configuration Risk Rule List Example
+     * @param req DescribeConfigCheckRulesRequest
+     * @return DescribeConfigCheckRulesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeConfigCheckRulesResponse DescribeConfigCheckRules(DescribeConfigCheckRulesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeConfigCheckRules", DescribeConfigCheckRulesResponse.class);
     }
 
     /**
@@ -380,6 +523,72 @@ public class CsipClient extends AbstractClient{
     }
 
     /**
+     *Retrieve the IaC detection file list
+     * @param req DescribeIaCFileListRequest
+     * @return DescribeIaCFileListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeIaCFileListResponse DescribeIaCFileList(DescribeIaCFileListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeIaCFileList", DescribeIaCFileListResponse.class);
+    }
+
+    /**
+     *Retrieve IaC detection file overview
+     * @param req DescribeIaCFileOverviewRequest
+     * @return DescribeIaCFileOverviewResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeIaCFileOverviewResponse DescribeIaCFileOverview(DescribeIaCFileOverviewRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeIaCFileOverview", DescribeIaCFileOverviewResponse.class);
+    }
+
+    /**
+     *Retrieve the IaC detection file report
+     * @param req DescribeIaCFileReportRequest
+     * @return DescribeIaCFileReportResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeIaCFileReportResponse DescribeIaCFileReport(DescribeIaCFileReportRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeIaCFileReport", DescribeIaCFileReportResponse.class);
+    }
+
+    /**
+     *Retrieve the IaC detection integration Token list
+     * @param req DescribeIaCTokenListRequest
+     * @return DescribeIaCTokenListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeIaCTokenListResponse DescribeIaCTokenList(DescribeIaCTokenListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeIaCTokenList", DescribeIaCTokenListResponse.class);
+    }
+
+    /**
+     *Query credential details and return credential metadata and masked credential data. The access kind returns an Access array (original Key, masked Value), and the sts kind returns an STS object (original System, masked SecretID and SecretKey).
+     * @param req DescribeKeySandboxCredentialRequest
+     * @return DescribeKeySandboxCredentialResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeKeySandboxCredentialResponse DescribeKeySandboxCredential(DescribeKeySandboxCredentialRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeKeySandboxCredential", DescribeKeySandboxCredentialResponse.class);
+    }
+
+    /**
+     *Query the voucher list
+     * @param req DescribeKeySandboxCredentialListRequest
+     * @return DescribeKeySandboxCredentialListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeKeySandboxCredentialListResponse DescribeKeySandboxCredentialList(DescribeKeySandboxCredentialListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeKeySandboxCredentialList", DescribeKeySandboxCredentialListResponse.class);
+    }
+
+    /**
      *This API is used to query the list of TCP listeners.
      * @param req DescribeListenerListRequest
      * @return DescribeListenerListResponse
@@ -402,7 +611,7 @@ public class CsipClient extends AbstractClient{
     }
 
     /**
-     *Check group account details
+     *Query Group Account Details
      * @param req DescribeOrganizationInfoRequest
      * @return DescribeOrganizationInfoResponse
      * @throws TencentCloudSDKException
@@ -413,7 +622,7 @@ public class CsipClient extends AbstractClient{
     }
 
     /**
-     *Query group account user list
+     *Query Group Account User List
      * @param req DescribeOrganizationUserInfoRequest
      * @return DescribeOrganizationUserInfoResponse
      * @throws TencentCloudSDKException
@@ -556,7 +765,7 @@ public class CsipClient extends AbstractClient{
     }
 
     /**
-     *This API is used to get the list of content risks.
+     *Obtain Content Risk List
      * @param req DescribeRiskCenterWebsiteRiskListRequest
      * @return DescribeRiskCenterWebsiteRiskListResponse
      * @throws TencentCloudSDKException
@@ -564,6 +773,39 @@ public class CsipClient extends AbstractClient{
     public DescribeRiskCenterWebsiteRiskListResponse DescribeRiskCenterWebsiteRiskList(DescribeRiskCenterWebsiteRiskListRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeRiskCenterWebsiteRiskList", DescribeRiskCenterWebsiteRiskListResponse.class);
+    }
+
+    /**
+     *Risk detail list example
+     * @param req DescribeRiskDetailListRequest
+     * @return DescribeRiskDetailListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRiskDetailListResponse DescribeRiskDetailList(DescribeRiskDetailListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeRiskDetailList", DescribeRiskDetailListResponse.class);
+    }
+
+    /**
+     *Query risk rule details example
+     * @param req DescribeRiskRuleDetailRequest
+     * @return DescribeRiskRuleDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRiskRuleDetailResponse DescribeRiskRuleDetail(DescribeRiskRuleDetailRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeRiskRuleDetail", DescribeRiskRuleDetailResponse.class);
+    }
+
+    /**
+     *Advanced configuration risk rule list illustrative example
+     * @param req DescribeRiskRulesRequest
+     * @return DescribeRiskRulesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRiskRulesResponse DescribeRiskRules(DescribeRiskRulesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeRiskRules", DescribeRiskRulesResponse.class);
     }
 
     /**
@@ -611,6 +853,28 @@ public class CsipClient extends AbstractClient{
     }
 
     /**
+     *This API is used to query the billing information of Skill security detection, including order status, total quota, consumed quota, expiry time, and payment mode. It returns zero values (only TimeNow and BetaEndTime included) when no order exists. Trial orders can be claimed via ModifyTrialStatus(Module=9), and official orders are generated by the billing system.
+     * @param req DescribeSkillScanPayInfoRequest
+     * @return DescribeSkillScanPayInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSkillScanPayInfoResponse DescribeSkillScanPayInfo(DescribeSkillScanPayInfoRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeSkillScanPayInfo", DescribeSkillScanPayInfoResponse.class);
+    }
+
+    /**
+     *Query the security detection result of Skill. After successfully calling CreateSkillScan, use the returned ContentHash + EngineVersion to poll this interface and obtain the result. For the first time, poll 5 minutes after successful upload. If detection is not completed, poll every 1 minute afterward. The response distinguishes four types of status via the Status field: detection complete (SUCCESS), in-progress detection (SCANNING), no record (NOT_FOUND), and detection failed (FAILED). Note: The detection result is retained for 90 days. It will return NOT_FOUND when overdue.
+     * @param req DescribeSkillScanResultRequest
+     * @return DescribeSkillScanResultResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSkillScanResultResponse DescribeSkillScanResult(DescribeSkillScanResultRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeSkillScanResult", DescribeSkillScanResultResponse.class);
+    }
+
+    /**
      *This API is used to obtain user access key asset list (source IP perspective).
      * @param req DescribeSourceIPAssetRequest
      * @return DescribeSourceIPAssetResponse
@@ -622,7 +886,7 @@ public class CsipClient extends AbstractClient{
     }
 
     /**
-     *Query the group's sub-account list
+     *Query the sub-account list of the group
      * @param req DescribeSubUserInfoRequest
      * @return DescribeSubUserInfoResponse
      * @throws TencentCloudSDKException
@@ -663,6 +927,28 @@ public class CsipClient extends AbstractClient{
     public DescribeTaskLogURLResponse DescribeTaskLogURL(DescribeTaskLogURLRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeTaskLogURL", DescribeTaskLogURLResponse.class);
+    }
+
+    /**
+     *Query TOP attack information
+     * @param req DescribeTopAttackInfoRequest
+     * @return DescribeTopAttackInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTopAttackInfoResponse DescribeTopAttackInfo(DescribeTopAttackInfoRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeTopAttackInfo", DescribeTopAttackInfoResponse.class);
+    }
+
+    /**
+     *Query the user behavior analysis policy list
+     * @param req DescribeUebaRuleRequest
+     * @return DescribeUebaRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeUebaRuleResponse DescribeUebaRule(DescribeUebaRuleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeUebaRule", DescribeUebaRuleResponse.class);
     }
 
     /**
@@ -743,6 +1029,17 @@ public class CsipClient extends AbstractClient{
     }
 
     /**
+     *This API is used to modify the storage cycle of the IaC detection integration Token.
+     * @param req ModifyIaCTokenPeriodRequest
+     * @return ModifyIaCTokenPeriodResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyIaCTokenPeriodResponse ModifyIaCTokenPeriod(ModifyIaCTokenPeriodRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyIaCTokenPeriod", ModifyIaCTokenPeriodResponse.class);
+    }
+
+    /**
      *Modify group account status
      * @param req ModifyOrganizationAccountStatusRequest
      * @return ModifyOrganizationAccountStatusResponse
@@ -776,6 +1073,17 @@ public class CsipClient extends AbstractClient{
     }
 
     /**
+     *Refresh the custom policy switch
+     * @param req ModifyUebaRuleSwitchRequest
+     * @return ModifyUebaRuleSwitchResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyUebaRuleSwitchResponse ModifyUebaRuleSwitch(ModifyUebaRuleSwitchRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyUebaRuleSwitch", ModifyUebaRuleSwitchResponse.class);
+    }
+
+    /**
      *This API is used to stop a scan task. 
      * @param req StopRiskCenterTaskRequest
      * @return StopRiskCenterTaskResponse
@@ -806,6 +1114,17 @@ public class CsipClient extends AbstractClient{
     public UpdateAccessKeyRemarkResponse UpdateAccessKeyRemark(UpdateAccessKeyRemarkRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "UpdateAccessKeyRemark", UpdateAccessKeyRemarkResponse.class);
+    }
+
+    /**
+     *Batch alarm status process API
+     * @param req UpdateAlertStatusListRequest
+     * @return UpdateAlertStatusListResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateAlertStatusListResponse UpdateAlertStatusList(UpdateAlertStatusListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpdateAlertStatusList", UpdateAlertStatusListResponse.class);
     }
 
 }

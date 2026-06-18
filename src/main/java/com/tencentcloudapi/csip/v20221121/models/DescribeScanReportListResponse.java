@@ -24,16 +24,14 @@ import java.util.HashMap;
 public class DescribeScanReportListResponse extends AbstractModel {
 
     /**
-    * Total number of entries
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Total quantity.
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * List of scan reports
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * Task Log List
     */
     @SerializedName("Data")
     @Expose
@@ -54,40 +52,32 @@ Note: This field may return·null, indicating that no valid values can be obtain
     private String RequestId;
 
     /**
-     * Get Total number of entries
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return TotalCount Total number of entries
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Total quantity. 
+     * @return TotalCount Total quantity.
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set Total number of entries
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param TotalCount Total number of entries
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Total quantity.
+     * @param TotalCount Total quantity.
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get List of scan reports
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return Data List of scan reports
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get Task Log List 
+     * @return Data Task Log List
      */
     public ScanTaskInfo [] getData() {
         return this.Data;
     }
 
     /**
-     * Set List of scan reports
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param Data List of scan reports
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set Task Log List
+     * @param Data Task Log List
      */
     public void setData(ScanTaskInfo [] Data) {
         this.Data = Data;

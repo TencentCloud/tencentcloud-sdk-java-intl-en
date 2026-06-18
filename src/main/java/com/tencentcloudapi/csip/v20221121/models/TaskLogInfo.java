@@ -24,8 +24,7 @@ import java.util.HashMap;
 public class TaskLogInfo extends AbstractModel {
 
     /**
-    * Report name
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * report name
     */
     @SerializedName("TaskLogName")
     @Expose
@@ -39,16 +38,14 @@ Note: This field may return·null, indicating that no valid values can be obtain
     private String TaskLogId;
 
     /**
-    * Number of associated assets
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * Associated Asset Count
     */
     @SerializedName("AssetsNumber")
     @Expose
     private Long AssetsNumber;
 
     /**
-    * Number of risks
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * Security Risk Count
     */
     @SerializedName("RiskNumber")
     @Expose
@@ -56,23 +53,20 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
     /**
     * Report generation time
-Note: This field may return·null, indicating that no valid values can be obtained.
     */
     @SerializedName("Time")
     @Expose
     private String Time;
 
     /**
-    * Task status. `0`: Initial value; `1`: Scanning; `2`: Completed; `3`: Failed; `4`: Stopped; `5`: Paused; `6`: Retried
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * Task Status Code. 0-Initial Value; 1-Scanning; 2-Scan Completed; 3-Scan Error; 4-Stopped; 5-Halted; 6-Task Has Been Restarted.
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * Name of the associated task
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * Associated Task Name
     */
     @SerializedName("TaskName")
     @Expose
@@ -80,75 +74,64 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
     /**
     * Scan start time
-Note: This field may return·null, indicating that no valid values can be obtained.
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * Scan task ID
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * Task Center Scan Task ID
     */
     @SerializedName("TaskCenterTaskId")
     @Expose
     private String TaskCenterTaskId;
 
     /**
-    * User AppId
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * Tenant ID
     */
     @SerializedName("AppId")
     @Expose
     private String AppId;
 
     /**
-    * User UIN
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * Host Account ID
     */
     @SerializedName("UIN")
     @Expose
     private String UIN;
 
     /**
-    * User name.
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * User name
     */
     @SerializedName("UserName")
     @Expose
     private String UserName;
 
     /**
-    * Report type: `1`: Health check report; `2`: Daily report; `3`: Weekly report; `4`: Monthly report
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * Report Type. 1: Security Checkup; 2: Daily Report; 3: Weekly Report; 4: Monthly Report.
     */
     @SerializedName("ReportType")
     @Expose
     private Long ReportType;
 
     /**
-    * Report template ID
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * Report Template ID
     */
     @SerializedName("TemplateId")
     @Expose
     private Long TemplateId;
 
     /**
-     * Get Report name
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return TaskLogName Report name
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get report name 
+     * @return TaskLogName report name
      */
     public String getTaskLogName() {
         return this.TaskLogName;
     }
 
     /**
-     * Set Report name
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param TaskLogName Report name
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set report name
+     * @param TaskLogName report name
      */
     public void setTaskLogName(String TaskLogName) {
         this.TaskLogName = TaskLogName;
@@ -171,50 +154,40 @@ Note: This field may return·null, indicating that no valid values can be obtain
     }
 
     /**
-     * Get Number of associated assets
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return AssetsNumber Number of associated assets
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get Associated Asset Count 
+     * @return AssetsNumber Associated Asset Count
      */
     public Long getAssetsNumber() {
         return this.AssetsNumber;
     }
 
     /**
-     * Set Number of associated assets
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param AssetsNumber Number of associated assets
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set Associated Asset Count
+     * @param AssetsNumber Associated Asset Count
      */
     public void setAssetsNumber(Long AssetsNumber) {
         this.AssetsNumber = AssetsNumber;
     }
 
     /**
-     * Get Number of risks
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return RiskNumber Number of risks
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get Security Risk Count 
+     * @return RiskNumber Security Risk Count
      */
     public Long getRiskNumber() {
         return this.RiskNumber;
     }
 
     /**
-     * Set Number of risks
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param RiskNumber Number of risks
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set Security Risk Count
+     * @param RiskNumber Security Risk Count
      */
     public void setRiskNumber(Long RiskNumber) {
         this.RiskNumber = RiskNumber;
     }
 
     /**
-     * Get Report generation time
-Note: This field may return·null, indicating that no valid values can be obtained. 
+     * Get Report generation time 
      * @return Time Report generation time
-Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public String getTime() {
         return this.Time;
@@ -222,59 +195,47 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
     /**
      * Set Report generation time
-Note: This field may return·null, indicating that no valid values can be obtained.
      * @param Time Report generation time
-Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public void setTime(String Time) {
         this.Time = Time;
     }
 
     /**
-     * Get Task status. `0`: Initial value; `1`: Scanning; `2`: Completed; `3`: Failed; `4`: Stopped; `5`: Paused; `6`: Retried
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return Status Task status. `0`: Initial value; `1`: Scanning; `2`: Completed; `3`: Failed; `4`: Stopped; `5`: Paused; `6`: Retried
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get Task Status Code. 0-Initial Value; 1-Scanning; 2-Scan Completed; 3-Scan Error; 4-Stopped; 5-Halted; 6-Task Has Been Restarted. 
+     * @return Status Task Status Code. 0-Initial Value; 1-Scanning; 2-Scan Completed; 3-Scan Error; 4-Stopped; 5-Halted; 6-Task Has Been Restarted.
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Task status. `0`: Initial value; `1`: Scanning; `2`: Completed; `3`: Failed; `4`: Stopped; `5`: Paused; `6`: Retried
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param Status Task status. `0`: Initial value; `1`: Scanning; `2`: Completed; `3`: Failed; `4`: Stopped; `5`: Paused; `6`: Retried
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set Task Status Code. 0-Initial Value; 1-Scanning; 2-Scan Completed; 3-Scan Error; 4-Stopped; 5-Halted; 6-Task Has Been Restarted.
+     * @param Status Task Status Code. 0-Initial Value; 1-Scanning; 2-Scan Completed; 3-Scan Error; 4-Stopped; 5-Halted; 6-Task Has Been Restarted.
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get Name of the associated task
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return TaskName Name of the associated task
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get Associated Task Name 
+     * @return TaskName Associated Task Name
      */
     public String getTaskName() {
         return this.TaskName;
     }
 
     /**
-     * Set Name of the associated task
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param TaskName Name of the associated task
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set Associated Task Name
+     * @param TaskName Associated Task Name
      */
     public void setTaskName(String TaskName) {
         this.TaskName = TaskName;
     }
 
     /**
-     * Get Scan start time
-Note: This field may return·null, indicating that no valid values can be obtained. 
+     * Get Scan start time 
      * @return StartTime Scan start time
-Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public String getStartTime() {
         return this.StartTime;
@@ -282,129 +243,103 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
     /**
      * Set Scan start time
-Note: This field may return·null, indicating that no valid values can be obtained.
      * @param StartTime Scan start time
-Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get Scan task ID
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return TaskCenterTaskId Scan task ID
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get Task Center Scan Task ID 
+     * @return TaskCenterTaskId Task Center Scan Task ID
      */
     public String getTaskCenterTaskId() {
         return this.TaskCenterTaskId;
     }
 
     /**
-     * Set Scan task ID
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param TaskCenterTaskId Scan task ID
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set Task Center Scan Task ID
+     * @param TaskCenterTaskId Task Center Scan Task ID
      */
     public void setTaskCenterTaskId(String TaskCenterTaskId) {
         this.TaskCenterTaskId = TaskCenterTaskId;
     }
 
     /**
-     * Get User AppId
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return AppId User AppId
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get Tenant ID 
+     * @return AppId Tenant ID
      */
     public String getAppId() {
         return this.AppId;
     }
 
     /**
-     * Set User AppId
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param AppId User AppId
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set Tenant ID
+     * @param AppId Tenant ID
      */
     public void setAppId(String AppId) {
         this.AppId = AppId;
     }
 
     /**
-     * Get User UIN
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return UIN User UIN
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get Host Account ID 
+     * @return UIN Host Account ID
      */
     public String getUIN() {
         return this.UIN;
     }
 
     /**
-     * Set User UIN
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param UIN User UIN
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set Host Account ID
+     * @param UIN Host Account ID
      */
     public void setUIN(String UIN) {
         this.UIN = UIN;
     }
 
     /**
-     * Get User name.
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return UserName User name.
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get User name 
+     * @return UserName User name
      */
     public String getUserName() {
         return this.UserName;
     }
 
     /**
-     * Set User name.
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param UserName User name.
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set User name
+     * @param UserName User name
      */
     public void setUserName(String UserName) {
         this.UserName = UserName;
     }
 
     /**
-     * Get Report type: `1`: Health check report; `2`: Daily report; `3`: Weekly report; `4`: Monthly report
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return ReportType Report type: `1`: Health check report; `2`: Daily report; `3`: Weekly report; `4`: Monthly report
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get Report Type. 1: Security Checkup; 2: Daily Report; 3: Weekly Report; 4: Monthly Report. 
+     * @return ReportType Report Type. 1: Security Checkup; 2: Daily Report; 3: Weekly Report; 4: Monthly Report.
      */
     public Long getReportType() {
         return this.ReportType;
     }
 
     /**
-     * Set Report type: `1`: Health check report; `2`: Daily report; `3`: Weekly report; `4`: Monthly report
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param ReportType Report type: `1`: Health check report; `2`: Daily report; `3`: Weekly report; `4`: Monthly report
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set Report Type. 1: Security Checkup; 2: Daily Report; 3: Weekly Report; 4: Monthly Report.
+     * @param ReportType Report Type. 1: Security Checkup; 2: Daily Report; 3: Weekly Report; 4: Monthly Report.
      */
     public void setReportType(Long ReportType) {
         this.ReportType = ReportType;
     }
 
     /**
-     * Get Report template ID
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return TemplateId Report template ID
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get Report Template ID 
+     * @return TemplateId Report Template ID
      */
     public Long getTemplateId() {
         return this.TemplateId;
     }
 
     /**
-     * Set Report template ID
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param TemplateId Report template ID
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set Report Template ID
+     * @param TemplateId Report Template ID
      */
     public void setTemplateId(Long TemplateId) {
         this.TemplateId = TemplateId;

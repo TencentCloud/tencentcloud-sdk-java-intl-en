@@ -24,8 +24,8 @@ import java.util.HashMap;
 public class DescribeCVMAssetInfoResponse extends AbstractModel {
 
     /**
-    * u200c-
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * Data.
+
     */
     @SerializedName("Data")
     @Expose
@@ -39,20 +39,20 @@ Note: This field may return·null, indicating that no valid values can be obtain
     private String RequestId;
 
     /**
-     * Get u200c-
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return Data u200c-
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get Data.
+ 
+     * @return Data Data.
+
      */
     public AssetBaseInfoResponse getData() {
         return this.Data;
     }
 
     /**
-     * Set u200c-
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param Data u200c-
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set Data.
+
+     * @param Data Data.
+
      */
     public void setData(AssetBaseInfoResponse Data) {
         this.Data = Data;

@@ -24,24 +24,21 @@ import java.util.HashMap;
 public class ScanTaskInfo extends AbstractModel {
 
     /**
-    * Task ID Id
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * Task ID
     */
     @SerializedName("TaskId")
     @Expose
     private String TaskId;
 
     /**
-    * Task name
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * Task name.
     */
     @SerializedName("TaskName")
     @Expose
     private String TaskName;
 
     /**
-    * Task status. `1`: Pending start; `2`: Scanning; `3`: Failed; `4`: Completed
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * Task Status Code: 1-Awaiting Start, 2-Scanning, 3-Scan Error, 4-Scan Completed.
     */
     @SerializedName("Status")
     @Expose
@@ -49,141 +46,118 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
     /**
     * Task progress
-Note: This field may return·null, indicating that no valid values can be obtained.
     */
     @SerializedName("Progress")
     @Expose
     private Long Progress;
 
     /**
-    * Displayed time point
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * Task Completion Time
     */
     @SerializedName("TaskTime")
     @Expose
     private String TaskTime;
 
     /**
-    * Report ID
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * report ID
     */
     @SerializedName("ReportId")
     @Expose
     private String ReportId;
 
     /**
-    * Report name
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * report name
     */
     @SerializedName("ReportName")
     @Expose
     private String ReportName;
 
     /**
-    * Task type. `0`: Scheduled task, `1`: Scan immediately; `2`: Scanned at the specified time; `3`: Custom. 
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * Scanning Schedule. 0-Periodic Task; 1-Scan Now; 2-Scheduled Scan; 3-Custom.
     */
     @SerializedName("ScanPlan")
     @Expose
     private Long ScanPlan;
 
     /**
-    * Number of associated assets
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * Number of Associated Assets
     */
     @SerializedName("AssetCount")
     @Expose
     private Long AssetCount;
 
     /**
-    * User AppId
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * APP ID
     */
     @SerializedName("AppId")
     @Expose
     private String AppId;
 
     /**
-    * User UIN
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * User Host Account ID
     */
     @SerializedName("UIN")
     @Expose
     private String UIN;
 
     /**
-    * User name.
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * User name
     */
     @SerializedName("UserName")
     @Expose
     private String UserName;
 
     /**
-     * Get Task ID Id
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return TaskId Task ID Id
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get Task ID 
+     * @return TaskId Task ID
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set Task ID Id
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param TaskId Task ID Id
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set Task ID
+     * @param TaskId Task ID
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;
     }
 
     /**
-     * Get Task name
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return TaskName Task name
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get Task name. 
+     * @return TaskName Task name.
      */
     public String getTaskName() {
         return this.TaskName;
     }
 
     /**
-     * Set Task name
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param TaskName Task name
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set Task name.
+     * @param TaskName Task name.
      */
     public void setTaskName(String TaskName) {
         this.TaskName = TaskName;
     }
 
     /**
-     * Get Task status. `1`: Pending start; `2`: Scanning; `3`: Failed; `4`: Completed
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return Status Task status. `1`: Pending start; `2`: Scanning; `3`: Failed; `4`: Completed
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get Task Status Code: 1-Awaiting Start, 2-Scanning, 3-Scan Error, 4-Scan Completed. 
+     * @return Status Task Status Code: 1-Awaiting Start, 2-Scanning, 3-Scan Error, 4-Scan Completed.
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Task status. `1`: Pending start; `2`: Scanning; `3`: Failed; `4`: Completed
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param Status Task status. `1`: Pending start; `2`: Scanning; `3`: Failed; `4`: Completed
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set Task Status Code: 1-Awaiting Start, 2-Scanning, 3-Scan Error, 4-Scan Completed.
+     * @param Status Task Status Code: 1-Awaiting Start, 2-Scanning, 3-Scan Error, 4-Scan Completed.
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get Task progress
-Note: This field may return·null, indicating that no valid values can be obtained. 
+     * Get Task progress 
      * @return Progress Task progress
-Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public Long getProgress() {
         return this.Progress;
@@ -191,169 +165,135 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
     /**
      * Set Task progress
-Note: This field may return·null, indicating that no valid values can be obtained.
      * @param Progress Task progress
-Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public void setProgress(Long Progress) {
         this.Progress = Progress;
     }
 
     /**
-     * Get Displayed time point
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return TaskTime Displayed time point
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get Task Completion Time 
+     * @return TaskTime Task Completion Time
      */
     public String getTaskTime() {
         return this.TaskTime;
     }
 
     /**
-     * Set Displayed time point
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param TaskTime Displayed time point
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set Task Completion Time
+     * @param TaskTime Task Completion Time
      */
     public void setTaskTime(String TaskTime) {
         this.TaskTime = TaskTime;
     }
 
     /**
-     * Get Report ID
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return ReportId Report ID
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get report ID 
+     * @return ReportId report ID
      */
     public String getReportId() {
         return this.ReportId;
     }
 
     /**
-     * Set Report ID
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param ReportId Report ID
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set report ID
+     * @param ReportId report ID
      */
     public void setReportId(String ReportId) {
         this.ReportId = ReportId;
     }
 
     /**
-     * Get Report name
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return ReportName Report name
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get report name 
+     * @return ReportName report name
      */
     public String getReportName() {
         return this.ReportName;
     }
 
     /**
-     * Set Report name
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param ReportName Report name
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set report name
+     * @param ReportName report name
      */
     public void setReportName(String ReportName) {
         this.ReportName = ReportName;
     }
 
     /**
-     * Get Task type. `0`: Scheduled task, `1`: Scan immediately; `2`: Scanned at the specified time; `3`: Custom. 
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return ScanPlan Task type. `0`: Scheduled task, `1`: Scan immediately; `2`: Scanned at the specified time; `3`: Custom. 
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get Scanning Schedule. 0-Periodic Task; 1-Scan Now; 2-Scheduled Scan; 3-Custom. 
+     * @return ScanPlan Scanning Schedule. 0-Periodic Task; 1-Scan Now; 2-Scheduled Scan; 3-Custom.
      */
     public Long getScanPlan() {
         return this.ScanPlan;
     }
 
     /**
-     * Set Task type. `0`: Scheduled task, `1`: Scan immediately; `2`: Scanned at the specified time; `3`: Custom. 
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param ScanPlan Task type. `0`: Scheduled task, `1`: Scan immediately; `2`: Scanned at the specified time; `3`: Custom. 
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set Scanning Schedule. 0-Periodic Task; 1-Scan Now; 2-Scheduled Scan; 3-Custom.
+     * @param ScanPlan Scanning Schedule. 0-Periodic Task; 1-Scan Now; 2-Scheduled Scan; 3-Custom.
      */
     public void setScanPlan(Long ScanPlan) {
         this.ScanPlan = ScanPlan;
     }
 
     /**
-     * Get Number of associated assets
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return AssetCount Number of associated assets
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get Number of Associated Assets 
+     * @return AssetCount Number of Associated Assets
      */
     public Long getAssetCount() {
         return this.AssetCount;
     }
 
     /**
-     * Set Number of associated assets
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param AssetCount Number of associated assets
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set Number of Associated Assets
+     * @param AssetCount Number of Associated Assets
      */
     public void setAssetCount(Long AssetCount) {
         this.AssetCount = AssetCount;
     }
 
     /**
-     * Get User AppId
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return AppId User AppId
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get APP ID 
+     * @return AppId APP ID
      */
     public String getAppId() {
         return this.AppId;
     }
 
     /**
-     * Set User AppId
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param AppId User AppId
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set APP ID
+     * @param AppId APP ID
      */
     public void setAppId(String AppId) {
         this.AppId = AppId;
     }
 
     /**
-     * Get User UIN
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return UIN User UIN
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get User Host Account ID 
+     * @return UIN User Host Account ID
      */
     public String getUIN() {
         return this.UIN;
     }
 
     /**
-     * Set User UIN
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param UIN User UIN
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set User Host Account ID
+     * @param UIN User Host Account ID
      */
     public void setUIN(String UIN) {
         this.UIN = UIN;
     }
 
     /**
-     * Get User name.
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return UserName User name.
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get User name 
+     * @return UserName User name
      */
     public String getUserName() {
         return this.UserName;
     }
 
     /**
-     * Set User name.
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param UserName User name.
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set User name
+     * @param UserName User name
      */
     public void setUserName(String UserName) {
         this.UserName = UserName;

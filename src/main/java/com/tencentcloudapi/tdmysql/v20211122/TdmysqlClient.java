@@ -83,6 +83,17 @@ public class TdmysqlClient extends AbstractClient{
     }
 
     /**
+     *This API is used to create users in batches.
+     * @param req CreateUsersRequest
+     * @return CreateUsersResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateUsersResponse CreateUsers(CreateUsersRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateUsers", CreateUsersResponse.class);
+    }
+
+    /**
      *This API is used to delete manual backups of instances.
      * @param req DeleteDBSBackupSetsRequest
      * @return DeleteDBSBackupSetsResponse
@@ -91,6 +102,17 @@ public class TdmysqlClient extends AbstractClient{
     public DeleteDBSBackupSetsResponse DeleteDBSBackupSets(DeleteDBSBackupSetsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteDBSBackupSets", DeleteDBSBackupSetsResponse.class);
+    }
+
+    /**
+     *This API is used to batch delete users.
+     * @param req DeleteUsersRequest
+     * @return DeleteUsersResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteUsersResponse DeleteUsers(DeleteUsersRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteUsers", DeleteUsersResponse.class);
     }
 
     /**
@@ -248,6 +270,28 @@ public class TdmysqlClient extends AbstractClient{
     }
 
     /**
+     *This API is used to query the SSL status of an instance.
+     * @param req DescribeInstanceSSLStatusRequest
+     * @return DescribeInstanceSSLStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeInstanceSSLStatusResponse DescribeInstanceSSLStatus(DescribeInstanceSSLStatusRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeInstanceSSLStatus", DescribeInstanceSSLStatusResponse.class);
+    }
+
+    /**
+     *Query maintenance time window configurations
+     * @param req DescribeMaintenanceWindowRequest
+     * @return DescribeMaintenanceWindowResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeMaintenanceWindowResponse DescribeMaintenanceWindow(DescribeMaintenanceWindowRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeMaintenanceWindow", DescribeMaintenanceWindowResponse.class);
+    }
+
+    /**
      *This API is used to query available regions.
      * @param req DescribeSaleInfoRequest
      * @return DescribeSaleInfoResponse
@@ -256,6 +300,17 @@ public class TdmysqlClient extends AbstractClient{
     public DescribeSaleInfoResponse DescribeSaleInfo(DescribeSaleInfoRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeSaleInfo", DescribeSaleInfoResponse.class);
+    }
+
+    /**
+     *This API is used to query slow logs.
+     * @param req DescribeSlowLogsRequest
+     * @return DescribeSlowLogsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSlowLogsResponse DescribeSlowLogs(DescribeSlowLogsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeSlowLogs", DescribeSlowLogsResponse.class);
     }
 
     /**
@@ -347,6 +402,17 @@ public class TdmysqlClient extends AbstractClient{
     }
 
     /**
+     *This API is used to modify the VPC port of an instance.
+     * @param req ModifyDBInstanceVPortRequest
+     * @return ModifyDBInstanceVPortResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyDBInstanceVPortResponse ModifyDBInstanceVPort(ModifyDBInstanceVPortRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyDBInstanceVPort", ModifyDBInstanceVPortResponse.class);
+    }
+
+    /**
      *This API is used to modify instance parameters.
      * @param req ModifyDBParametersRequest
      * @return ModifyDBParametersResponse
@@ -391,6 +457,39 @@ public class TdmysqlClient extends AbstractClient{
     }
 
     /**
+     *This API is used to modify the network to which the instance belongs.
+     * @param req ModifyInstanceNetworkRequest
+     * @return ModifyInstanceNetworkResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyInstanceNetworkResponse ModifyInstanceNetwork(ModifyInstanceNetworkRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyInstanceNetwork", ModifyInstanceNetworkResponse.class);
+    }
+
+    /**
+     *This API is used to enable or disable the SSL feature of an instance.
+     * @param req ModifyInstanceSSLStatusRequest
+     * @return ModifyInstanceSSLStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyInstanceSSLStatusResponse ModifyInstanceSSLStatus(ModifyInstanceSSLStatusRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyInstanceSSLStatus", ModifyInstanceSSLStatusResponse.class);
+    }
+
+    /**
+     *Add new or modify instance maintenance time window configurations
+     * @param req ModifyMaintenanceWindowRequest
+     * @return ModifyMaintenanceWindowResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyMaintenanceWindowResponse ModifyMaintenanceWindow(ModifyMaintenanceWindowRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyMaintenanceWindow", ModifyMaintenanceWindowResponse.class);
+    }
+
+    /**
      *This API is used to modify user permissions.
      * @param req ModifyUserPrivilegesRequest
      * @return ModifyUserPrivilegesResponse
@@ -399,6 +498,17 @@ public class TdmysqlClient extends AbstractClient{
     public ModifyUserPrivilegesResponse ModifyUserPrivileges(ModifyUserPrivilegesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyUserPrivileges", ModifyUserPrivilegesResponse.class);
+    }
+
+    /**
+     *This API is used to reset user password.
+     * @param req ResetUserPasswordRequest
+     * @return ResetUserPasswordResponse
+     * @throws TencentCloudSDKException
+     */
+    public ResetUserPasswordResponse ResetUserPassword(ResetUserPasswordRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ResetUserPassword", ResetUserPasswordResponse.class);
     }
 
     /**

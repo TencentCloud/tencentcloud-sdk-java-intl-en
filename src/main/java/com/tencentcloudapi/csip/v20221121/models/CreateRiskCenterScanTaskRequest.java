@@ -52,6 +52,13 @@ public class CreateRiskCenterScanTaskRequest extends AbstractModel {
     private Long ScanPlanType;
 
     /**
+    * Group Account Member ID
+    */
+    @SerializedName("MemberId")
+    @Expose
+    private String [] MemberId;
+
+    /**
     * List of assets to scan
     */
     @SerializedName("Assets")
@@ -73,7 +80,7 @@ public class CreateRiskCenterScanTaskRequest extends AbstractModel {
     private String [] SelfDefiningAssets;
 
     /**
-    * Request source. Values: `vss` (Vulnerability Scan Service), `csip` (Cloud Security Center). It defaults to `vss`.
+    * Request initiation source, vss means vulnerability scan service, the user of CSC fill in csip, default csip
     */
     @SerializedName("ScanFrom")
     @Expose
@@ -99,6 +106,13 @@ public class CreateRiskCenterScanTaskRequest extends AbstractModel {
     @SerializedName("Tags")
     @Expose
     private AssetTag Tags;
+
+    /**
+    * Task completed callback webhook url
+    */
+    @SerializedName("FinishWebHook")
+    @Expose
+    private String FinishWebHook;
 
     /**
      * Get Task name 
@@ -165,6 +179,22 @@ public class CreateRiskCenterScanTaskRequest extends AbstractModel {
     }
 
     /**
+     * Get Group Account Member ID 
+     * @return MemberId Group Account Member ID
+     */
+    public String [] getMemberId() {
+        return this.MemberId;
+    }
+
+    /**
+     * Set Group Account Member ID
+     * @param MemberId Group Account Member ID
+     */
+    public void setMemberId(String [] MemberId) {
+        this.MemberId = MemberId;
+    }
+
+    /**
      * Get List of assets to scan 
      * @return Assets List of assets to scan
      */
@@ -213,16 +243,16 @@ public class CreateRiskCenterScanTaskRequest extends AbstractModel {
     }
 
     /**
-     * Get Request source. Values: `vss` (Vulnerability Scan Service), `csip` (Cloud Security Center). It defaults to `vss`. 
-     * @return ScanFrom Request source. Values: `vss` (Vulnerability Scan Service), `csip` (Cloud Security Center). It defaults to `vss`.
+     * Get Request initiation source, vss means vulnerability scan service, the user of CSC fill in csip, default csip 
+     * @return ScanFrom Request initiation source, vss means vulnerability scan service, the user of CSC fill in csip, default csip
      */
     public String getScanFrom() {
         return this.ScanFrom;
     }
 
     /**
-     * Set Request source. Values: `vss` (Vulnerability Scan Service), `csip` (Cloud Security Center). It defaults to `vss`.
-     * @param ScanFrom Request source. Values: `vss` (Vulnerability Scan Service), `csip` (Cloud Security Center). It defaults to `vss`.
+     * Set Request initiation source, vss means vulnerability scan service, the user of CSC fill in csip, default csip
+     * @param ScanFrom Request initiation source, vss means vulnerability scan service, the user of CSC fill in csip, default csip
      */
     public void setScanFrom(String ScanFrom) {
         this.ScanFrom = ScanFrom;
@@ -276,6 +306,22 @@ public class CreateRiskCenterScanTaskRequest extends AbstractModel {
         this.Tags = Tags;
     }
 
+    /**
+     * Get Task completed callback webhook url 
+     * @return FinishWebHook Task completed callback webhook url
+     */
+    public String getFinishWebHook() {
+        return this.FinishWebHook;
+    }
+
+    /**
+     * Set Task completed callback webhook url
+     * @param FinishWebHook Task completed callback webhook url
+     */
+    public void setFinishWebHook(String FinishWebHook) {
+        this.FinishWebHook = FinishWebHook;
+    }
+
     public CreateRiskCenterScanTaskRequest() {
     }
 
@@ -298,6 +344,12 @@ public class CreateRiskCenterScanTaskRequest extends AbstractModel {
         }
         if (source.ScanPlanType != null) {
             this.ScanPlanType = new Long(source.ScanPlanType);
+        }
+        if (source.MemberId != null) {
+            this.MemberId = new String[source.MemberId.length];
+            for (int i = 0; i < source.MemberId.length; i++) {
+                this.MemberId[i] = new String(source.MemberId[i]);
+            }
         }
         if (source.Assets != null) {
             this.Assets = new TaskAssetObject[source.Assets.length];
@@ -326,6 +378,9 @@ public class CreateRiskCenterScanTaskRequest extends AbstractModel {
         if (source.Tags != null) {
             this.Tags = new AssetTag(source.Tags);
         }
+        if (source.FinishWebHook != null) {
+            this.FinishWebHook = new String(source.FinishWebHook);
+        }
     }
 
 
@@ -337,6 +392,7 @@ public class CreateRiskCenterScanTaskRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ScanAssetType", this.ScanAssetType);
         this.setParamArraySimple(map, prefix + "ScanItem.", this.ScanItem);
         this.setParamSimple(map, prefix + "ScanPlanType", this.ScanPlanType);
+        this.setParamArraySimple(map, prefix + "MemberId.", this.MemberId);
         this.setParamArrayObj(map, prefix + "Assets.", this.Assets);
         this.setParamSimple(map, prefix + "ScanPlanContent", this.ScanPlanContent);
         this.setParamArraySimple(map, prefix + "SelfDefiningAssets.", this.SelfDefiningAssets);
@@ -344,6 +400,7 @@ public class CreateRiskCenterScanTaskRequest extends AbstractModel {
         this.setParamObj(map, prefix + "TaskAdvanceCFG.", this.TaskAdvanceCFG);
         this.setParamSimple(map, prefix + "TaskMode", this.TaskMode);
         this.setParamObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "FinishWebHook", this.FinishWebHook);
 
     }
 }

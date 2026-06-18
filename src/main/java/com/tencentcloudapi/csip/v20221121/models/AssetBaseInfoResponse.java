@@ -32,7 +32,6 @@ public class AssetBaseInfoResponse extends AbstractModel {
 
     /**
     * vpc-name
-Note: This field may return·null, indicating that no valid values can be obtained.
     */
     @SerializedName("VpcName")
     @Expose
@@ -40,39 +39,34 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
     /**
     * Asset name
-Note: This field may return·null, indicating that no valid values can be obtained.
     */
     @SerializedName("AssetName")
     @Expose
     private String AssetName;
 
     /**
-    * Operating system
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * Operating system.
     */
     @SerializedName("Os")
     @Expose
     private String Os;
 
     /**
-    * Public IP
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * Public IP address
     */
     @SerializedName("PublicIp")
     @Expose
     private String PublicIp;
 
     /**
-    * Private IP
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * Private IP address
     */
     @SerializedName("PrivateIp")
     @Expose
     private String PrivateIp;
 
     /**
-    * Region
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * Region.
     */
     @SerializedName("Region")
     @Expose
@@ -80,7 +74,6 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
     /**
     * Asset type
-Note: This field may return·null, indicating that no valid values can be obtained.
     */
     @SerializedName("AssetType")
     @Expose
@@ -88,55 +81,48 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
     /**
     * Asset ID
-Note: This field may return·null, indicating that no valid values can be obtained.
     */
     @SerializedName("AssetId")
     @Expose
     private String AssetId;
 
     /**
-    * Total number of accounts
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * Number of accounts
     */
     @SerializedName("AccountNum")
     @Expose
     private Long AccountNum;
 
     /**
-    * Number of ports
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * Number of Ports
     */
     @SerializedName("PortNum")
     @Expose
     private Long PortNum;
 
     /**
-    * Number of processes
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * Process quantity
     */
     @SerializedName("ProcessNum")
     @Expose
     private Long ProcessNum;
 
     /**
-    * Numbernumb of software applications
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * Number of Software Applications
     */
     @SerializedName("SoftApplicationNum")
     @Expose
     private Long SoftApplicationNum;
 
     /**
-    * Number of databases
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * Database Count
     */
     @SerializedName("DatabaseNum")
     @Expose
     private Long DatabaseNum;
 
     /**
-    * Number of web applications
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * Number of Web Applications
     */
     @SerializedName("WebApplicationNum")
     @Expose
@@ -144,95 +130,83 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
     /**
     * Number of services
-Note: This field may return·null, indicating that no valid values can be obtained.
     */
     @SerializedName("ServiceNum")
     @Expose
     private Long ServiceNum;
 
     /**
-    * Number of web frameworks
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * Web Framework Count
     */
     @SerializedName("WebFrameworkNum")
     @Expose
     private Long WebFrameworkNum;
 
     /**
-    * Number of websites
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * Website Count
     */
     @SerializedName("WebSiteNum")
     @Expose
     private Long WebSiteNum;
 
     /**
-    * Number of JAR packages
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * Jar Package Count
     */
     @SerializedName("JarPackageNum")
     @Expose
     private Long JarPackageNum;
 
     /**
-    * Number of enabled services
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * Started Service Count
     */
     @SerializedName("StartServiceNum")
     @Expose
     private Long StartServiceNum;
 
     /**
-    * Number of scheduled tasks
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * Number of Scheduled Tasks
     */
     @SerializedName("ScheduledTaskNum")
     @Expose
     private Long ScheduledTaskNum;
 
     /**
-    * Number of environment variables
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * Number of Environment Variables
     */
     @SerializedName("EnvironmentVariableNum")
     @Expose
     private Long EnvironmentVariableNum;
 
     /**
-    * Number of kernel modules
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * Number of Kernel Modules
     */
     @SerializedName("KernelModuleNum")
     @Expose
     private Long KernelModuleNum;
 
     /**
-    * Number of system installation packages
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * System Installation Package Count
     */
     @SerializedName("SystemInstallationPackageNum")
     @Expose
     private Long SystemInstallationPackageNum;
 
     /**
-    * Remaining service validity in days
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * remaining protection duration
     */
     @SerializedName("SurplusProtectDay")
     @Expose
     private Long SurplusProtectDay;
 
     /**
-    * Whether the CWPP agent is installed. Values: `1` (installed) and `0` (not installed)
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * Whether client is installed. 1 for Installed, 0 for Not Installed.
     */
     @SerializedName("CWPStatus")
     @Expose
     private Long CWPStatus;
 
     /**
-    * Tags
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * Tag.
     */
     @SerializedName("Tag")
     @Expose
@@ -240,15 +214,13 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
     /**
     * Protection level
-Note: This field may return·null, indicating that no valid values can be obtained.
     */
     @SerializedName("ProtectLevel")
     @Expose
     private String ProtectLevel;
 
     /**
-    * Usage of CWPP service in days
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * protection duration
     */
     @SerializedName("ProtectedDay")
     @Expose
@@ -271,10 +243,8 @@ Note: This field may return·null, indicating that no valid values can be obtain
     }
 
     /**
-     * Get vpc-name
-Note: This field may return·null, indicating that no valid values can be obtained. 
+     * Get vpc-name 
      * @return VpcName vpc-name
-Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public String getVpcName() {
         return this.VpcName;
@@ -282,19 +252,15 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
     /**
      * Set vpc-name
-Note: This field may return·null, indicating that no valid values can be obtained.
      * @param VpcName vpc-name
-Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public void setVpcName(String VpcName) {
         this.VpcName = VpcName;
     }
 
     /**
-     * Get Asset name
-Note: This field may return·null, indicating that no valid values can be obtained. 
+     * Get Asset name 
      * @return AssetName Asset name
-Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public String getAssetName() {
         return this.AssetName;
@@ -302,99 +268,79 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
     /**
      * Set Asset name
-Note: This field may return·null, indicating that no valid values can be obtained.
      * @param AssetName Asset name
-Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public void setAssetName(String AssetName) {
         this.AssetName = AssetName;
     }
 
     /**
-     * Get Operating system
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return Os Operating system
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get Operating system. 
+     * @return Os Operating system.
      */
     public String getOs() {
         return this.Os;
     }
 
     /**
-     * Set Operating system
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param Os Operating system
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set Operating system.
+     * @param Os Operating system.
      */
     public void setOs(String Os) {
         this.Os = Os;
     }
 
     /**
-     * Get Public IP
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return PublicIp Public IP
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get Public IP address 
+     * @return PublicIp Public IP address
      */
     public String getPublicIp() {
         return this.PublicIp;
     }
 
     /**
-     * Set Public IP
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param PublicIp Public IP
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set Public IP address
+     * @param PublicIp Public IP address
      */
     public void setPublicIp(String PublicIp) {
         this.PublicIp = PublicIp;
     }
 
     /**
-     * Get Private IP
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return PrivateIp Private IP
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get Private IP address 
+     * @return PrivateIp Private IP address
      */
     public String getPrivateIp() {
         return this.PrivateIp;
     }
 
     /**
-     * Set Private IP
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param PrivateIp Private IP
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set Private IP address
+     * @param PrivateIp Private IP address
      */
     public void setPrivateIp(String PrivateIp) {
         this.PrivateIp = PrivateIp;
     }
 
     /**
-     * Get Region
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return Region Region
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get Region. 
+     * @return Region Region.
      */
     public String getRegion() {
         return this.Region;
     }
 
     /**
-     * Set Region
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param Region Region
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set Region.
+     * @param Region Region.
      */
     public void setRegion(String Region) {
         this.Region = Region;
     }
 
     /**
-     * Get Asset type
-Note: This field may return·null, indicating that no valid values can be obtained. 
+     * Get Asset type 
      * @return AssetType Asset type
-Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public String getAssetType() {
         return this.AssetType;
@@ -402,19 +348,15 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
     /**
      * Set Asset type
-Note: This field may return·null, indicating that no valid values can be obtained.
      * @param AssetType Asset type
-Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public void setAssetType(String AssetType) {
         this.AssetType = AssetType;
     }
 
     /**
-     * Get Asset ID
-Note: This field may return·null, indicating that no valid values can be obtained. 
+     * Get Asset ID 
      * @return AssetId Asset ID
-Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public String getAssetId() {
         return this.AssetId;
@@ -422,139 +364,111 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
     /**
      * Set Asset ID
-Note: This field may return·null, indicating that no valid values can be obtained.
      * @param AssetId Asset ID
-Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public void setAssetId(String AssetId) {
         this.AssetId = AssetId;
     }
 
     /**
-     * Get Total number of accounts
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return AccountNum Total number of accounts
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get Number of accounts 
+     * @return AccountNum Number of accounts
      */
     public Long getAccountNum() {
         return this.AccountNum;
     }
 
     /**
-     * Set Total number of accounts
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param AccountNum Total number of accounts
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set Number of accounts
+     * @param AccountNum Number of accounts
      */
     public void setAccountNum(Long AccountNum) {
         this.AccountNum = AccountNum;
     }
 
     /**
-     * Get Number of ports
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return PortNum Number of ports
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get Number of Ports 
+     * @return PortNum Number of Ports
      */
     public Long getPortNum() {
         return this.PortNum;
     }
 
     /**
-     * Set Number of ports
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param PortNum Number of ports
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set Number of Ports
+     * @param PortNum Number of Ports
      */
     public void setPortNum(Long PortNum) {
         this.PortNum = PortNum;
     }
 
     /**
-     * Get Number of processes
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return ProcessNum Number of processes
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get Process quantity 
+     * @return ProcessNum Process quantity
      */
     public Long getProcessNum() {
         return this.ProcessNum;
     }
 
     /**
-     * Set Number of processes
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param ProcessNum Number of processes
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set Process quantity
+     * @param ProcessNum Process quantity
      */
     public void setProcessNum(Long ProcessNum) {
         this.ProcessNum = ProcessNum;
     }
 
     /**
-     * Get Numbernumb of software applications
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return SoftApplicationNum Numbernumb of software applications
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get Number of Software Applications 
+     * @return SoftApplicationNum Number of Software Applications
      */
     public Long getSoftApplicationNum() {
         return this.SoftApplicationNum;
     }
 
     /**
-     * Set Numbernumb of software applications
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param SoftApplicationNum Numbernumb of software applications
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set Number of Software Applications
+     * @param SoftApplicationNum Number of Software Applications
      */
     public void setSoftApplicationNum(Long SoftApplicationNum) {
         this.SoftApplicationNum = SoftApplicationNum;
     }
 
     /**
-     * Get Number of databases
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return DatabaseNum Number of databases
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get Database Count 
+     * @return DatabaseNum Database Count
      */
     public Long getDatabaseNum() {
         return this.DatabaseNum;
     }
 
     /**
-     * Set Number of databases
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param DatabaseNum Number of databases
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set Database Count
+     * @param DatabaseNum Database Count
      */
     public void setDatabaseNum(Long DatabaseNum) {
         this.DatabaseNum = DatabaseNum;
     }
 
     /**
-     * Get Number of web applications
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return WebApplicationNum Number of web applications
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get Number of Web Applications 
+     * @return WebApplicationNum Number of Web Applications
      */
     public Long getWebApplicationNum() {
         return this.WebApplicationNum;
     }
 
     /**
-     * Set Number of web applications
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param WebApplicationNum Number of web applications
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set Number of Web Applications
+     * @param WebApplicationNum Number of Web Applications
      */
     public void setWebApplicationNum(Long WebApplicationNum) {
         this.WebApplicationNum = WebApplicationNum;
     }
 
     /**
-     * Get Number of services
-Note: This field may return·null, indicating that no valid values can be obtained. 
+     * Get Number of services 
      * @return ServiceNum Number of services
-Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public Long getServiceNum() {
         return this.ServiceNum;
@@ -562,239 +476,191 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
     /**
      * Set Number of services
-Note: This field may return·null, indicating that no valid values can be obtained.
      * @param ServiceNum Number of services
-Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public void setServiceNum(Long ServiceNum) {
         this.ServiceNum = ServiceNum;
     }
 
     /**
-     * Get Number of web frameworks
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return WebFrameworkNum Number of web frameworks
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get Web Framework Count 
+     * @return WebFrameworkNum Web Framework Count
      */
     public Long getWebFrameworkNum() {
         return this.WebFrameworkNum;
     }
 
     /**
-     * Set Number of web frameworks
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param WebFrameworkNum Number of web frameworks
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set Web Framework Count
+     * @param WebFrameworkNum Web Framework Count
      */
     public void setWebFrameworkNum(Long WebFrameworkNum) {
         this.WebFrameworkNum = WebFrameworkNum;
     }
 
     /**
-     * Get Number of websites
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return WebSiteNum Number of websites
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get Website Count 
+     * @return WebSiteNum Website Count
      */
     public Long getWebSiteNum() {
         return this.WebSiteNum;
     }
 
     /**
-     * Set Number of websites
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param WebSiteNum Number of websites
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set Website Count
+     * @param WebSiteNum Website Count
      */
     public void setWebSiteNum(Long WebSiteNum) {
         this.WebSiteNum = WebSiteNum;
     }
 
     /**
-     * Get Number of JAR packages
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return JarPackageNum Number of JAR packages
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get Jar Package Count 
+     * @return JarPackageNum Jar Package Count
      */
     public Long getJarPackageNum() {
         return this.JarPackageNum;
     }
 
     /**
-     * Set Number of JAR packages
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param JarPackageNum Number of JAR packages
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set Jar Package Count
+     * @param JarPackageNum Jar Package Count
      */
     public void setJarPackageNum(Long JarPackageNum) {
         this.JarPackageNum = JarPackageNum;
     }
 
     /**
-     * Get Number of enabled services
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return StartServiceNum Number of enabled services
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get Started Service Count 
+     * @return StartServiceNum Started Service Count
      */
     public Long getStartServiceNum() {
         return this.StartServiceNum;
     }
 
     /**
-     * Set Number of enabled services
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param StartServiceNum Number of enabled services
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set Started Service Count
+     * @param StartServiceNum Started Service Count
      */
     public void setStartServiceNum(Long StartServiceNum) {
         this.StartServiceNum = StartServiceNum;
     }
 
     /**
-     * Get Number of scheduled tasks
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return ScheduledTaskNum Number of scheduled tasks
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get Number of Scheduled Tasks 
+     * @return ScheduledTaskNum Number of Scheduled Tasks
      */
     public Long getScheduledTaskNum() {
         return this.ScheduledTaskNum;
     }
 
     /**
-     * Set Number of scheduled tasks
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param ScheduledTaskNum Number of scheduled tasks
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set Number of Scheduled Tasks
+     * @param ScheduledTaskNum Number of Scheduled Tasks
      */
     public void setScheduledTaskNum(Long ScheduledTaskNum) {
         this.ScheduledTaskNum = ScheduledTaskNum;
     }
 
     /**
-     * Get Number of environment variables
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return EnvironmentVariableNum Number of environment variables
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get Number of Environment Variables 
+     * @return EnvironmentVariableNum Number of Environment Variables
      */
     public Long getEnvironmentVariableNum() {
         return this.EnvironmentVariableNum;
     }
 
     /**
-     * Set Number of environment variables
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param EnvironmentVariableNum Number of environment variables
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set Number of Environment Variables
+     * @param EnvironmentVariableNum Number of Environment Variables
      */
     public void setEnvironmentVariableNum(Long EnvironmentVariableNum) {
         this.EnvironmentVariableNum = EnvironmentVariableNum;
     }
 
     /**
-     * Get Number of kernel modules
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return KernelModuleNum Number of kernel modules
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get Number of Kernel Modules 
+     * @return KernelModuleNum Number of Kernel Modules
      */
     public Long getKernelModuleNum() {
         return this.KernelModuleNum;
     }
 
     /**
-     * Set Number of kernel modules
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param KernelModuleNum Number of kernel modules
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set Number of Kernel Modules
+     * @param KernelModuleNum Number of Kernel Modules
      */
     public void setKernelModuleNum(Long KernelModuleNum) {
         this.KernelModuleNum = KernelModuleNum;
     }
 
     /**
-     * Get Number of system installation packages
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return SystemInstallationPackageNum Number of system installation packages
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get System Installation Package Count 
+     * @return SystemInstallationPackageNum System Installation Package Count
      */
     public Long getSystemInstallationPackageNum() {
         return this.SystemInstallationPackageNum;
     }
 
     /**
-     * Set Number of system installation packages
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param SystemInstallationPackageNum Number of system installation packages
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set System Installation Package Count
+     * @param SystemInstallationPackageNum System Installation Package Count
      */
     public void setSystemInstallationPackageNum(Long SystemInstallationPackageNum) {
         this.SystemInstallationPackageNum = SystemInstallationPackageNum;
     }
 
     /**
-     * Get Remaining service validity in days
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return SurplusProtectDay Remaining service validity in days
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get remaining protection duration 
+     * @return SurplusProtectDay remaining protection duration
      */
     public Long getSurplusProtectDay() {
         return this.SurplusProtectDay;
     }
 
     /**
-     * Set Remaining service validity in days
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param SurplusProtectDay Remaining service validity in days
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set remaining protection duration
+     * @param SurplusProtectDay remaining protection duration
      */
     public void setSurplusProtectDay(Long SurplusProtectDay) {
         this.SurplusProtectDay = SurplusProtectDay;
     }
 
     /**
-     * Get Whether the CWPP agent is installed. Values: `1` (installed) and `0` (not installed)
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return CWPStatus Whether the CWPP agent is installed. Values: `1` (installed) and `0` (not installed)
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get Whether client is installed. 1 for Installed, 0 for Not Installed. 
+     * @return CWPStatus Whether client is installed. 1 for Installed, 0 for Not Installed.
      */
     public Long getCWPStatus() {
         return this.CWPStatus;
     }
 
     /**
-     * Set Whether the CWPP agent is installed. Values: `1` (installed) and `0` (not installed)
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param CWPStatus Whether the CWPP agent is installed. Values: `1` (installed) and `0` (not installed)
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set Whether client is installed. 1 for Installed, 0 for Not Installed.
+     * @param CWPStatus Whether client is installed. 1 for Installed, 0 for Not Installed.
      */
     public void setCWPStatus(Long CWPStatus) {
         this.CWPStatus = CWPStatus;
     }
 
     /**
-     * Get Tags
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return Tag Tags
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get Tag. 
+     * @return Tag Tag.
      */
     public Tag [] getTag() {
         return this.Tag;
     }
 
     /**
-     * Set Tags
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param Tag Tags
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set Tag.
+     * @param Tag Tag.
      */
     public void setTag(Tag [] Tag) {
         this.Tag = Tag;
     }
 
     /**
-     * Get Protection level
-Note: This field may return·null, indicating that no valid values can be obtained. 
+     * Get Protection level 
      * @return ProtectLevel Protection level
-Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public String getProtectLevel() {
         return this.ProtectLevel;
@@ -802,29 +668,23 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
     /**
      * Set Protection level
-Note: This field may return·null, indicating that no valid values can be obtained.
      * @param ProtectLevel Protection level
-Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public void setProtectLevel(String ProtectLevel) {
         this.ProtectLevel = ProtectLevel;
     }
 
     /**
-     * Get Usage of CWPP service in days
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return ProtectedDay Usage of CWPP service in days
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get protection duration 
+     * @return ProtectedDay protection duration
      */
     public Long getProtectedDay() {
         return this.ProtectedDay;
     }
 
     /**
-     * Set Usage of CWPP service in days
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param ProtectedDay Usage of CWPP service in days
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set protection duration
+     * @param ProtectedDay protection duration
      */
     public void setProtectedDay(Long ProtectedDay) {
         this.ProtectedDay = ProtectedDay;

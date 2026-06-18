@@ -24,35 +24,35 @@ import java.util.HashMap;
 public class DescribeLicenseWhiteConfigResponse extends AbstractModel {
 
     /**
-    * Ultimate Edition configuration information
+    * <p>Ultimate Edition configuration information</p>
     */
     @SerializedName("FlagShip")
     @Expose
     private VersionWhiteConfig FlagShip;
 
     /**
-    * Pro Edition configuration information
+    * <p>Pro Edition configuration information</p>
     */
     @SerializedName("Professional")
     @Expose
     private VersionWhiteConfig Professional;
 
     /**
-    * Lightweight Edition configuration information
+    * <p>Lightweight Edition configuration information</p>
     */
     @SerializedName("PrattWhitney")
     @Expose
     private VersionWhiteConfig PrattWhitney;
 
     /**
-    * Authorization package configuration message
+    * <p>License package configuration message</p>
     */
     @SerializedName("RASP")
     @Expose
     private VersionWhiteConfig RASP;
 
     /**
-    * 
+    * <p>Log analysis configuration information</p>
     */
     @SerializedName("LOG")
     @Expose
@@ -66,80 +66,80 @@ public class DescribeLicenseWhiteConfigResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Ultimate Edition configuration information 
-     * @return FlagShip Ultimate Edition configuration information
+     * Get <p>Ultimate Edition configuration information</p> 
+     * @return FlagShip <p>Ultimate Edition configuration information</p>
      */
     public VersionWhiteConfig getFlagShip() {
         return this.FlagShip;
     }
 
     /**
-     * Set Ultimate Edition configuration information
-     * @param FlagShip Ultimate Edition configuration information
+     * Set <p>Ultimate Edition configuration information</p>
+     * @param FlagShip <p>Ultimate Edition configuration information</p>
      */
     public void setFlagShip(VersionWhiteConfig FlagShip) {
         this.FlagShip = FlagShip;
     }
 
     /**
-     * Get Pro Edition configuration information 
-     * @return Professional Pro Edition configuration information
+     * Get <p>Pro Edition configuration information</p> 
+     * @return Professional <p>Pro Edition configuration information</p>
      */
     public VersionWhiteConfig getProfessional() {
         return this.Professional;
     }
 
     /**
-     * Set Pro Edition configuration information
-     * @param Professional Pro Edition configuration information
+     * Set <p>Pro Edition configuration information</p>
+     * @param Professional <p>Pro Edition configuration information</p>
      */
     public void setProfessional(VersionWhiteConfig Professional) {
         this.Professional = Professional;
     }
 
     /**
-     * Get Lightweight Edition configuration information 
-     * @return PrattWhitney Lightweight Edition configuration information
+     * Get <p>Lightweight Edition configuration information</p> 
+     * @return PrattWhitney <p>Lightweight Edition configuration information</p>
      */
     public VersionWhiteConfig getPrattWhitney() {
         return this.PrattWhitney;
     }
 
     /**
-     * Set Lightweight Edition configuration information
-     * @param PrattWhitney Lightweight Edition configuration information
+     * Set <p>Lightweight Edition configuration information</p>
+     * @param PrattWhitney <p>Lightweight Edition configuration information</p>
      */
     public void setPrattWhitney(VersionWhiteConfig PrattWhitney) {
         this.PrattWhitney = PrattWhitney;
     }
 
     /**
-     * Get Authorization package configuration message 
-     * @return RASP Authorization package configuration message
+     * Get <p>License package configuration message</p> 
+     * @return RASP <p>License package configuration message</p>
      */
     public VersionWhiteConfig getRASP() {
         return this.RASP;
     }
 
     /**
-     * Set Authorization package configuration message
-     * @param RASP Authorization package configuration message
+     * Set <p>License package configuration message</p>
+     * @param RASP <p>License package configuration message</p>
      */
     public void setRASP(VersionWhiteConfig RASP) {
         this.RASP = RASP;
     }
 
     /**
-     * Get  
-     * @return LOG 
+     * Get <p>Log analysis configuration information</p> 
+     * @return LOG <p>Log analysis configuration information</p>
      */
     public VersionWhiteConfig getLOG() {
         return this.LOG;
     }
 
     /**
-     * Set 
-     * @param LOG 
+     * Set <p>Log analysis configuration information</p>
+     * @param LOG <p>Log analysis configuration information</p>
      */
     public void setLOG(VersionWhiteConfig LOG) {
         this.LOG = LOG;

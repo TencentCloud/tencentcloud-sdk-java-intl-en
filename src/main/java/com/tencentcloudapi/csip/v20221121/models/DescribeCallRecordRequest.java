@@ -52,6 +52,13 @@ public class DescribeCallRecordRequest extends AbstractModel {
     private String AccUin;
 
     /**
+    * Access key. Note: Temporary key is unsupported.
+    */
+    @SerializedName("AccessKey")
+    @Expose
+    private String AccessKey;
+
+    /**
     * Filter.
     */
     @SerializedName("Filter")
@@ -123,6 +130,22 @@ public class DescribeCallRecordRequest extends AbstractModel {
     }
 
     /**
+     * Get Access key. Note: Temporary key is unsupported. 
+     * @return AccessKey Access key. Note: Temporary key is unsupported.
+     */
+    public String getAccessKey() {
+        return this.AccessKey;
+    }
+
+    /**
+     * Set Access key. Note: Temporary key is unsupported.
+     * @param AccessKey Access key. Note: Temporary key is unsupported.
+     */
+    public void setAccessKey(String AccessKey) {
+        this.AccessKey = AccessKey;
+    }
+
+    /**
      * Get Filter. 
      * @return Filter Filter.
      */
@@ -161,6 +184,9 @@ public class DescribeCallRecordRequest extends AbstractModel {
         if (source.AccUin != null) {
             this.AccUin = new String(source.AccUin);
         }
+        if (source.AccessKey != null) {
+            this.AccessKey = new String(source.AccessKey);
+        }
         if (source.Filter != null) {
             this.Filter = new Filter(source.Filter);
         }
@@ -175,6 +201,7 @@ public class DescribeCallRecordRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "AccessKeyID", this.AccessKeyID);
         this.setParamSimple(map, prefix + "SourceIPID", this.SourceIPID);
         this.setParamSimple(map, prefix + "AccUin", this.AccUin);
+        this.setParamSimple(map, prefix + "AccessKey", this.AccessKey);
         this.setParamObj(map, prefix + "Filter.", this.Filter);
 
     }

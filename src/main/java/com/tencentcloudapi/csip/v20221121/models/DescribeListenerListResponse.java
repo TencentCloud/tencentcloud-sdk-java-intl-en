@@ -24,16 +24,14 @@ import java.util.HashMap;
 public class DescribeListenerListResponse extends AbstractModel {
 
     /**
-    * Total number of results
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * Total number.
     */
     @SerializedName("Total")
     @Expose
     private Long Total;
 
     /**
-    * List of listeners
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * Listener list
     */
     @SerializedName("Data")
     @Expose
@@ -47,40 +45,32 @@ Note: This field may return·null, indicating that no valid values can be obtain
     private String RequestId;
 
     /**
-     * Get Total number of results
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return Total Total number of results
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get Total number. 
+     * @return Total Total number.
      */
     public Long getTotal() {
         return this.Total;
     }
 
     /**
-     * Set Total number of results
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param Total Total number of results
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set Total number.
+     * @param Total Total number.
      */
     public void setTotal(Long Total) {
         this.Total = Total;
     }
 
     /**
-     * Get List of listeners
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return Data List of listeners
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get Listener list 
+     * @return Data Listener list
      */
     public ClbListenerListInfo [] getData() {
         return this.Data;
     }
 
     /**
-     * Set List of listeners
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param Data List of listeners
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set Listener list
+     * @param Data Listener list
      */
     public void setData(ClbListenerListInfo [] Data) {
         this.Data = Data;

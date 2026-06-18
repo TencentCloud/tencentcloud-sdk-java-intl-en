@@ -24,148 +24,138 @@ import java.util.HashMap;
 public class DescribeLicenseBindListRequest extends AbstractModel {
 
     /**
-    * Authorization ID
+    * <p>License ID. The value is the value of the LicenseId parameter under the List object of the DescribeLicenseList API.</p>
     */
     @SerializedName("LicenseId")
     @Expose
     private Long LicenseId;
 
     /**
-    * Authorization type
+    * <p>License type</p><p>Valid values:</p><ul><li>0: Pro Edition - pay-as-you-go</li><li>1: Pro Edition - monthly subscription (CWP)</li><li>2: Ultimate Edition - monthly subscription (CWP)</li><li>3: Lightweight Edition - LH monthly subscription</li><li>6: Pro Edition - monthly subscription (CSC)</li><li>7: Ultimate Edition - monthly subscription (CSC)</li></ul>
     */
     @SerializedName("LicenseType")
     @Expose
     private Long LicenseType;
 
     /**
-    * Resource ID
+    * <p>Resource ID. The value is the value of the ResourceId parameter under the List object of the DescribeLicenseList API.</p>
     */
     @SerializedName("ResourceId")
     @Expose
     private String ResourceId;
 
     /**
-    * <li>InstanceID, IP,
-
-and MachineName for fuzzy search</li>
+    * <li>Fuzzy search by InstanceID, IP, or <p>MachineName</p></li>
     */
     @SerializedName("Filters")
     @Expose
     private Filters [] Filters;
 
     /**
-    * Limit number, 10 by default.
+    * <p>The maximum number of entries. Default value: 10.</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * Offset. Default value: 0.
+    * <p>Offset. Default value: 0.</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-     * Get Authorization ID 
-     * @return LicenseId Authorization ID
+     * Get <p>License ID. The value is the value of the LicenseId parameter under the List object of the DescribeLicenseList API.</p> 
+     * @return LicenseId <p>License ID. The value is the value of the LicenseId parameter under the List object of the DescribeLicenseList API.</p>
      */
     public Long getLicenseId() {
         return this.LicenseId;
     }
 
     /**
-     * Set Authorization ID
-     * @param LicenseId Authorization ID
+     * Set <p>License ID. The value is the value of the LicenseId parameter under the List object of the DescribeLicenseList API.</p>
+     * @param LicenseId <p>License ID. The value is the value of the LicenseId parameter under the List object of the DescribeLicenseList API.</p>
      */
     public void setLicenseId(Long LicenseId) {
         this.LicenseId = LicenseId;
     }
 
     /**
-     * Get Authorization type 
-     * @return LicenseType Authorization type
+     * Get <p>License type</p><p>Valid values:</p><ul><li>0: Pro Edition - pay-as-you-go</li><li>1: Pro Edition - monthly subscription (CWP)</li><li>2: Ultimate Edition - monthly subscription (CWP)</li><li>3: Lightweight Edition - LH monthly subscription</li><li>6: Pro Edition - monthly subscription (CSC)</li><li>7: Ultimate Edition - monthly subscription (CSC)</li></ul> 
+     * @return LicenseType <p>License type</p><p>Valid values:</p><ul><li>0: Pro Edition - pay-as-you-go</li><li>1: Pro Edition - monthly subscription (CWP)</li><li>2: Ultimate Edition - monthly subscription (CWP)</li><li>3: Lightweight Edition - LH monthly subscription</li><li>6: Pro Edition - monthly subscription (CSC)</li><li>7: Ultimate Edition - monthly subscription (CSC)</li></ul>
      */
     public Long getLicenseType() {
         return this.LicenseType;
     }
 
     /**
-     * Set Authorization type
-     * @param LicenseType Authorization type
+     * Set <p>License type</p><p>Valid values:</p><ul><li>0: Pro Edition - pay-as-you-go</li><li>1: Pro Edition - monthly subscription (CWP)</li><li>2: Ultimate Edition - monthly subscription (CWP)</li><li>3: Lightweight Edition - LH monthly subscription</li><li>6: Pro Edition - monthly subscription (CSC)</li><li>7: Ultimate Edition - monthly subscription (CSC)</li></ul>
+     * @param LicenseType <p>License type</p><p>Valid values:</p><ul><li>0: Pro Edition - pay-as-you-go</li><li>1: Pro Edition - monthly subscription (CWP)</li><li>2: Ultimate Edition - monthly subscription (CWP)</li><li>3: Lightweight Edition - LH monthly subscription</li><li>6: Pro Edition - monthly subscription (CSC)</li><li>7: Ultimate Edition - monthly subscription (CSC)</li></ul>
      */
     public void setLicenseType(Long LicenseType) {
         this.LicenseType = LicenseType;
     }
 
     /**
-     * Get Resource ID 
-     * @return ResourceId Resource ID
+     * Get <p>Resource ID. The value is the value of the ResourceId parameter under the List object of the DescribeLicenseList API.</p> 
+     * @return ResourceId <p>Resource ID. The value is the value of the ResourceId parameter under the List object of the DescribeLicenseList API.</p>
      */
     public String getResourceId() {
         return this.ResourceId;
     }
 
     /**
-     * Set Resource ID
-     * @param ResourceId Resource ID
+     * Set <p>Resource ID. The value is the value of the ResourceId parameter under the List object of the DescribeLicenseList API.</p>
+     * @param ResourceId <p>Resource ID. The value is the value of the ResourceId parameter under the List object of the DescribeLicenseList API.</p>
      */
     public void setResourceId(String ResourceId) {
         this.ResourceId = ResourceId;
     }
 
     /**
-     * Get <li>InstanceID, IP,
-
-and MachineName for fuzzy search</li> 
-     * @return Filters <li>InstanceID, IP,
-
-and MachineName for fuzzy search</li>
+     * Get <li>Fuzzy search by InstanceID, IP, or <p>MachineName</p></li> 
+     * @return Filters <li>Fuzzy search by InstanceID, IP, or <p>MachineName</p></li>
      */
     public Filters [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set <li>InstanceID, IP,
-
-and MachineName for fuzzy search</li>
-     * @param Filters <li>InstanceID, IP,
-
-and MachineName for fuzzy search</li>
+     * Set <li>Fuzzy search by InstanceID, IP, or <p>MachineName</p></li>
+     * @param Filters <li>Fuzzy search by InstanceID, IP, or <p>MachineName</p></li>
      */
     public void setFilters(Filters [] Filters) {
         this.Filters = Filters;
     }
 
     /**
-     * Get Limit number, 10 by default. 
-     * @return Limit Limit number, 10 by default.
+     * Get <p>The maximum number of entries. Default value: 10.</p> 
+     * @return Limit <p>The maximum number of entries. Default value: 10.</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Limit number, 10 by default.
-     * @param Limit Limit number, 10 by default.
+     * Set <p>The maximum number of entries. Default value: 10.</p>
+     * @param Limit <p>The maximum number of entries. Default value: 10.</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get Offset. Default value: 0. 
-     * @return Offset Offset. Default value: 0.
+     * Get <p>Offset. Default value: 0.</p> 
+     * @return Offset <p>Offset. Default value: 0.</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Offset. Default value: 0.
-     * @param Offset Offset. Default value: 0.
+     * Set <p>Offset. Default value: 0.</p>
+     * @param Offset <p>Offset. Default value: 0.</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;

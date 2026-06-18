@@ -164,6 +164,13 @@ public class CreateCloneInstanceRequest extends AbstractModel {
     private String InstanceMode;
 
     /**
+    * <p>Security group id list</p>
+    */
+    @SerializedName("SecurityGroupIds")
+    @Expose
+    private String [] SecurityGroupIds;
+
+    /**
      * Get <p>Creating an Instance Region</p> 
      * @return Zone <p>Creating an Instance Region</p>
      */
@@ -483,6 +490,22 @@ public class CreateCloneInstanceRequest extends AbstractModel {
         this.InstanceMode = InstanceMode;
     }
 
+    /**
+     * Get <p>Security group id list</p> 
+     * @return SecurityGroupIds <p>Security group id list</p>
+     */
+    public String [] getSecurityGroupIds() {
+        return this.SecurityGroupIds;
+    }
+
+    /**
+     * Set <p>Security group id list</p>
+     * @param SecurityGroupIds <p>Security group id list</p>
+     */
+    public void setSecurityGroupIds(String [] SecurityGroupIds) {
+        this.SecurityGroupIds = SecurityGroupIds;
+    }
+
     public CreateCloneInstanceRequest() {
     }
 
@@ -557,6 +580,12 @@ public class CreateCloneInstanceRequest extends AbstractModel {
         if (source.InstanceMode != null) {
             this.InstanceMode = new String(source.InstanceMode);
         }
+        if (source.SecurityGroupIds != null) {
+            this.SecurityGroupIds = new String[source.SecurityGroupIds.length];
+            for (int i = 0; i < source.SecurityGroupIds.length; i++) {
+                this.SecurityGroupIds[i] = new String(source.SecurityGroupIds[i]);
+            }
+        }
     }
 
 
@@ -584,6 +613,7 @@ public class CreateCloneInstanceRequest extends AbstractModel {
         this.setParamArraySimple(map, prefix + "Zones.", this.Zones);
         this.setParamSimple(map, prefix + "FullReplications", this.FullReplications);
         this.setParamSimple(map, prefix + "InstanceMode", this.InstanceMode);
+        this.setParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
 
     }
 }

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeRiskCenterAssetViewCFGRiskListRequest extends AbstractModel {
 
     /**
-    * Group account member ID
+    * Group Account Member ID
     */
     @SerializedName("MemberId")
     @Expose
@@ -45,16 +45,16 @@ public class DescribeRiskCenterAssetViewCFGRiskListRequest extends AbstractModel
     private AssetTag [] Tags;
 
     /**
-     * Get Group account member ID 
-     * @return MemberId Group account member ID
+     * Get Group Account Member ID 
+     * @return MemberId Group Account Member ID
      */
     public String [] getMemberId() {
         return this.MemberId;
     }
 
     /**
-     * Set Group account member ID
-     * @param MemberId Group account member ID
+     * Set Group Account Member ID
+     * @param MemberId Group Account Member ID
      */
     public void setMemberId(String [] MemberId) {
         this.MemberId = MemberId;

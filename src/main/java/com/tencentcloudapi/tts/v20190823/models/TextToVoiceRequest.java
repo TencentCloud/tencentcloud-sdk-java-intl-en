@@ -78,7 +78,7 @@ It can contain up to 150 Chinese characters (a full-width punctuation as a Chine
     private Long VoiceType;
 
     /**
-    * 
+    * Instant Voice Clone Voice ID. Required when using Instant Voice Clone voices.
     */
     @SerializedName("FastVoiceType")
     @Expose
@@ -120,14 +120,14 @@ It can contain up to 150 Chinese characters (a full-width punctuation as a Chine
     private Long SegmentRate;
 
     /**
-    * 
+    * Controls the emotion of synthesized speech. This parameter is supported only by multi-emotion voices. Valid values: neutral, sad, happy, angry, fear, news, story, radio, poetry, call, sajiao, disgusted, amaze, peaceful, exciting, aojiao, jieshuo. <br>Example value: neutral.
     */
     @SerializedName("EmotionCategory")
     @Expose
     private String EmotionCategory;
 
     /**
-    * 
+    * Controls the intensity of emotion in synthesized speech. Valid values: [50, 200]. Default: 100. Takes effect only when EmotionCategoryis specified.
     */
     @SerializedName("EmotionIntensity")
     @Expose
@@ -266,16 +266,16 @@ It can contain up to 150 Chinese characters (a full-width punctuation as a Chine
     }
 
     /**
-     * Get  
-     * @return FastVoiceType 
+     * Get Instant Voice Clone Voice ID. Required when using Instant Voice Clone voices. 
+     * @return FastVoiceType Instant Voice Clone Voice ID. Required when using Instant Voice Clone voices.
      */
     public String getFastVoiceType() {
         return this.FastVoiceType;
     }
 
     /**
-     * Set 
-     * @param FastVoiceType 
+     * Set Instant Voice Clone Voice ID. Required when using Instant Voice Clone voices.
+     * @param FastVoiceType Instant Voice Clone Voice ID. Required when using Instant Voice Clone voices.
      */
     public void setFastVoiceType(String FastVoiceType) {
         this.FastVoiceType = FastVoiceType;
@@ -362,32 +362,32 @@ It can contain up to 150 Chinese characters (a full-width punctuation as a Chine
     }
 
     /**
-     * Get  
-     * @return EmotionCategory 
+     * Get Controls the emotion of synthesized speech. This parameter is supported only by multi-emotion voices. Valid values: neutral, sad, happy, angry, fear, news, story, radio, poetry, call, sajiao, disgusted, amaze, peaceful, exciting, aojiao, jieshuo. <br>Example value: neutral. 
+     * @return EmotionCategory Controls the emotion of synthesized speech. This parameter is supported only by multi-emotion voices. Valid values: neutral, sad, happy, angry, fear, news, story, radio, poetry, call, sajiao, disgusted, amaze, peaceful, exciting, aojiao, jieshuo. <br>Example value: neutral.
      */
     public String getEmotionCategory() {
         return this.EmotionCategory;
     }
 
     /**
-     * Set 
-     * @param EmotionCategory 
+     * Set Controls the emotion of synthesized speech. This parameter is supported only by multi-emotion voices. Valid values: neutral, sad, happy, angry, fear, news, story, radio, poetry, call, sajiao, disgusted, amaze, peaceful, exciting, aojiao, jieshuo. <br>Example value: neutral.
+     * @param EmotionCategory Controls the emotion of synthesized speech. This parameter is supported only by multi-emotion voices. Valid values: neutral, sad, happy, angry, fear, news, story, radio, poetry, call, sajiao, disgusted, amaze, peaceful, exciting, aojiao, jieshuo. <br>Example value: neutral.
      */
     public void setEmotionCategory(String EmotionCategory) {
         this.EmotionCategory = EmotionCategory;
     }
 
     /**
-     * Get  
-     * @return EmotionIntensity 
+     * Get Controls the intensity of emotion in synthesized speech. Valid values: [50, 200]. Default: 100. Takes effect only when EmotionCategoryis specified. 
+     * @return EmotionIntensity Controls the intensity of emotion in synthesized speech. Valid values: [50, 200]. Default: 100. Takes effect only when EmotionCategoryis specified.
      */
     public Long getEmotionIntensity() {
         return this.EmotionIntensity;
     }
 
     /**
-     * Set 
-     * @param EmotionIntensity 
+     * Set Controls the intensity of emotion in synthesized speech. Valid values: [50, 200]. Default: 100. Takes effect only when EmotionCategoryis specified.
+     * @param EmotionIntensity Controls the intensity of emotion in synthesized speech. Valid values: [50, 200]. Default: 100. Takes effect only when EmotionCategoryis specified.
      */
     public void setEmotionIntensity(Long EmotionIntensity) {
         this.EmotionIntensity = EmotionIntensity;

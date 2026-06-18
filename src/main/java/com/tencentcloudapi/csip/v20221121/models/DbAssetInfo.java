@@ -24,8 +24,7 @@ import java.util.HashMap;
 public class DbAssetInfo extends AbstractModel {
 
     /**
-    * CFW status
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * Cloud Defense Status
     */
     @SerializedName("CFWStatus")
     @Expose
@@ -33,7 +32,6 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
     /**
     * Asset ID
-Note: This field may return·null, indicating that no valid values can be obtained.
     */
     @SerializedName("AssetId")
     @Expose
@@ -41,7 +39,6 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
     /**
     * VPC information
-Note: This field may return·null, indicating that no valid values can be obtained.
     */
     @SerializedName("VpcName")
     @Expose
@@ -49,38 +46,34 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
     /**
     * Asset type
-Note: This field may return·null, indicating that no valid values can be obtained.
     */
     @SerializedName("AssetType")
     @Expose
     private String AssetType;
 
     /**
-    * Public IP
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * Public IP address
     */
     @SerializedName("PublicIp")
     @Expose
     private String PublicIp;
 
     /**
-    * Private IP
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * VPC IP
     */
     @SerializedName("PrivateIp")
     @Expose
     private String PrivateIp;
 
     /**
-    * Region
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * Region.
     */
     @SerializedName("Region")
     @Expose
     private String Region;
 
     /**
-    * vpc information
+    * VPC information
     */
     @SerializedName("VpcId")
     @Expose
@@ -88,53 +81,44 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
     /**
     * Asset name
-Note: This field may return·null, indicating that no valid values can be obtained.
     */
     @SerializedName("AssetName")
     @Expose
     private String AssetName;
 
     /**
-    * CFW edition
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * Cloud Defense Protection Edition
     */
     @SerializedName("CFWProtectLevel")
     @Expose
     private Long CFWProtectLevel;
 
     /**
-    * Tag information
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * Tag Information
     */
     @SerializedName("Tag")
     @Expose
     private Tag [] Tag;
 
     /**
-     * Get CFW status
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return CFWStatus CFW status
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get Cloud Defense Status 
+     * @return CFWStatus Cloud Defense Status
      */
     public Long getCFWStatus() {
         return this.CFWStatus;
     }
 
     /**
-     * Set CFW status
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param CFWStatus CFW status
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set Cloud Defense Status
+     * @param CFWStatus Cloud Defense Status
      */
     public void setCFWStatus(Long CFWStatus) {
         this.CFWStatus = CFWStatus;
     }
 
     /**
-     * Get Asset ID
-Note: This field may return·null, indicating that no valid values can be obtained. 
+     * Get Asset ID 
      * @return AssetId Asset ID
-Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public String getAssetId() {
         return this.AssetId;
@@ -142,19 +126,15 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
     /**
      * Set Asset ID
-Note: This field may return·null, indicating that no valid values can be obtained.
      * @param AssetId Asset ID
-Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public void setAssetId(String AssetId) {
         this.AssetId = AssetId;
     }
 
     /**
-     * Get VPC information
-Note: This field may return·null, indicating that no valid values can be obtained. 
+     * Get VPC information 
      * @return VpcName VPC information
-Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public String getVpcName() {
         return this.VpcName;
@@ -162,19 +142,15 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
     /**
      * Set VPC information
-Note: This field may return·null, indicating that no valid values can be obtained.
      * @param VpcName VPC information
-Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public void setVpcName(String VpcName) {
         this.VpcName = VpcName;
     }
 
     /**
-     * Get Asset type
-Note: This field may return·null, indicating that no valid values can be obtained. 
+     * Get Asset type 
      * @return AssetType Asset type
-Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public String getAssetType() {
         return this.AssetType;
@@ -182,95 +158,79 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
     /**
      * Set Asset type
-Note: This field may return·null, indicating that no valid values can be obtained.
      * @param AssetType Asset type
-Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public void setAssetType(String AssetType) {
         this.AssetType = AssetType;
     }
 
     /**
-     * Get Public IP
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return PublicIp Public IP
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get Public IP address 
+     * @return PublicIp Public IP address
      */
     public String getPublicIp() {
         return this.PublicIp;
     }
 
     /**
-     * Set Public IP
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param PublicIp Public IP
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set Public IP address
+     * @param PublicIp Public IP address
      */
     public void setPublicIp(String PublicIp) {
         this.PublicIp = PublicIp;
     }
 
     /**
-     * Get Private IP
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return PrivateIp Private IP
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get VPC IP 
+     * @return PrivateIp VPC IP
      */
     public String getPrivateIp() {
         return this.PrivateIp;
     }
 
     /**
-     * Set Private IP
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param PrivateIp Private IP
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set VPC IP
+     * @param PrivateIp VPC IP
      */
     public void setPrivateIp(String PrivateIp) {
         this.PrivateIp = PrivateIp;
     }
 
     /**
-     * Get Region
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return Region Region
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get Region. 
+     * @return Region Region.
      */
     public String getRegion() {
         return this.Region;
     }
 
     /**
-     * Set Region
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param Region Region
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set Region.
+     * @param Region Region.
      */
     public void setRegion(String Region) {
         this.Region = Region;
     }
 
     /**
-     * Get vpc information 
-     * @return VpcId vpc information
+     * Get VPC information 
+     * @return VpcId VPC information
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set vpc information
-     * @param VpcId vpc information
+     * Set VPC information
+     * @param VpcId VPC information
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get Asset name
-Note: This field may return·null, indicating that no valid values can be obtained. 
+     * Get Asset name 
      * @return AssetName Asset name
-Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public String getAssetName() {
         return this.AssetName;
@@ -278,49 +238,39 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
     /**
      * Set Asset name
-Note: This field may return·null, indicating that no valid values can be obtained.
      * @param AssetName Asset name
-Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public void setAssetName(String AssetName) {
         this.AssetName = AssetName;
     }
 
     /**
-     * Get CFW edition
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return CFWProtectLevel CFW edition
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get Cloud Defense Protection Edition 
+     * @return CFWProtectLevel Cloud Defense Protection Edition
      */
     public Long getCFWProtectLevel() {
         return this.CFWProtectLevel;
     }
 
     /**
-     * Set CFW edition
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param CFWProtectLevel CFW edition
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set Cloud Defense Protection Edition
+     * @param CFWProtectLevel Cloud Defense Protection Edition
      */
     public void setCFWProtectLevel(Long CFWProtectLevel) {
         this.CFWProtectLevel = CFWProtectLevel;
     }
 
     /**
-     * Get Tag information
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return Tag Tag information
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get Tag Information 
+     * @return Tag Tag Information
      */
     public Tag [] getTag() {
         return this.Tag;
     }
 
     /**
-     * Set Tag information
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param Tag Tag information
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set Tag Information
+     * @param Tag Tag Information
      */
     public void setTag(Tag [] Tag) {
         this.Tag = Tag;

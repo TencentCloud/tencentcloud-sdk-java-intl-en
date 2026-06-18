@@ -31,6 +31,13 @@ public class CreateDomainAndIpRequest extends AbstractModel {
     private String [] Content;
 
     /**
+    * Group Account Member ID
+    */
+    @SerializedName("MemberId")
+    @Expose
+    private String [] MemberId;
+
+    /**
     * Asset tags
     */
     @SerializedName("Tags")
@@ -51,6 +58,22 @@ public class CreateDomainAndIpRequest extends AbstractModel {
      */
     public void setContent(String [] Content) {
         this.Content = Content;
+    }
+
+    /**
+     * Get Group Account Member ID 
+     * @return MemberId Group Account Member ID
+     */
+    public String [] getMemberId() {
+        return this.MemberId;
+    }
+
+    /**
+     * Set Group Account Member ID
+     * @param MemberId Group Account Member ID
+     */
+    public void setMemberId(String [] MemberId) {
+        this.MemberId = MemberId;
     }
 
     /**
@@ -83,6 +106,12 @@ public class CreateDomainAndIpRequest extends AbstractModel {
                 this.Content[i] = new String(source.Content[i]);
             }
         }
+        if (source.MemberId != null) {
+            this.MemberId = new String[source.MemberId.length];
+            for (int i = 0; i < source.MemberId.length; i++) {
+                this.MemberId[i] = new String(source.MemberId[i]);
+            }
+        }
         if (source.Tags != null) {
             this.Tags = new AssetTag[source.Tags.length];
             for (int i = 0; i < source.Tags.length; i++) {
@@ -97,6 +126,7 @@ public class CreateDomainAndIpRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "Content.", this.Content);
+        this.setParamArraySimple(map, prefix + "MemberId.", this.MemberId);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }

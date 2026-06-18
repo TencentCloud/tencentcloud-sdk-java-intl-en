@@ -24,74 +24,74 @@ import java.util.HashMap;
 public class CloudCountDesc extends AbstractModel {
 
     /**
-    * 0 represents Tencent Cloud
-1 represents AWS
+    * 0 means Tencent Cloud
+1 indicates AWS
     */
     @SerializedName("CloudType")
     @Expose
     private Long CloudType;
 
     /**
-    * Account quantity
+    * Account Quantity
     */
     @SerializedName("CloudCount")
     @Expose
     private Long CloudCount;
 
     /**
-    * The cloud account type description
+    * Description of The Cloud Account Type
     */
     @SerializedName("CloudDesc")
     @Expose
     private String CloudDesc;
 
     /**
-     * Get 0 represents Tencent Cloud
-1 represents AWS 
-     * @return CloudType 0 represents Tencent Cloud
-1 represents AWS
+     * Get 0 means Tencent Cloud
+1 indicates AWS 
+     * @return CloudType 0 means Tencent Cloud
+1 indicates AWS
      */
     public Long getCloudType() {
         return this.CloudType;
     }
 
     /**
-     * Set 0 represents Tencent Cloud
-1 represents AWS
-     * @param CloudType 0 represents Tencent Cloud
-1 represents AWS
+     * Set 0 means Tencent Cloud
+1 indicates AWS
+     * @param CloudType 0 means Tencent Cloud
+1 indicates AWS
      */
     public void setCloudType(Long CloudType) {
         this.CloudType = CloudType;
     }
 
     /**
-     * Get Account quantity 
-     * @return CloudCount Account quantity
+     * Get Account Quantity 
+     * @return CloudCount Account Quantity
      */
     public Long getCloudCount() {
         return this.CloudCount;
     }
 
     /**
-     * Set Account quantity
-     * @param CloudCount Account quantity
+     * Set Account Quantity
+     * @param CloudCount Account Quantity
      */
     public void setCloudCount(Long CloudCount) {
         this.CloudCount = CloudCount;
     }
 
     /**
-     * Get The cloud account type description 
-     * @return CloudDesc The cloud account type description
+     * Get Description of The Cloud Account Type 
+     * @return CloudDesc Description of The Cloud Account Type
      */
     public String getCloudDesc() {
         return this.CloudDesc;
     }
 
     /**
-     * Set The cloud account type description
-     * @param CloudDesc The cloud account type description
+     * Set Description of The Cloud Account Type
+     * @param CloudDesc Description of The Cloud Account Type
      */
     public void setCloudDesc(String CloudDesc) {
         this.CloudDesc = CloudDesc;

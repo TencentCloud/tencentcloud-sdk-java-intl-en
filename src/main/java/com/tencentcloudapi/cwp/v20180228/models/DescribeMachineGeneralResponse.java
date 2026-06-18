@@ -24,140 +24,140 @@ import java.util.HashMap;
 public class DescribeMachineGeneralResponse extends AbstractModel {
 
     /**
-    * Total number of assets
+    * <p>Total number of assets</p>
     */
     @SerializedName("MachineCnt")
     @Expose
     private Long MachineCnt;
 
     /**
-    * Number of Tencent Cloud machines
+    * <p>Number of Tencent Cloud machines</p>
     */
     @SerializedName("TencentCloudMachineCnt")
     @Expose
     private Long TencentCloudMachineCnt;
 
     /**
-    * Number of Alibaba Cloud machines
+    * <p>Number of Alibaba Cloud machines</p>
     */
     @SerializedName("AliCloudMachineCnt")
     @Expose
     private Long AliCloudMachineCnt;
 
     /**
-    * Number of Baidu Cloud machines
+    * <p>Number of Baidu Cloud machines</p>
     */
     @SerializedName("BaiduCloudMachineCnt")
     @Expose
     private Long BaiduCloudMachineCnt;
 
     /**
-    * Number of IDC machines
+    * <p>Number of IDC machines</p>
     */
     @SerializedName("IDCMachineCnt")
     @Expose
     private Long IDCMachineCnt;
 
     /**
-    * Number of machines from other cloud service vendors
+    * <p>Number of machines from other cloud service vendors</p>
     */
     @SerializedName("OtherCloudMachineCnt")
     @Expose
     private Long OtherCloudMachineCnt;
 
     /**
-    * Number of protected machines
+    * <p>Number of protected machines</p>
     */
     @SerializedName("ProtectMachineCnt")
     @Expose
     private Long ProtectMachineCnt;
 
     /**
-    * Number of protected Basic Edition machines
+    * <p>Number of protected Basic Edition machines</p>
     */
     @SerializedName("BaseMachineCnt")
     @Expose
     private Long BaseMachineCnt;
 
     /**
-    * Number of protected Pro Edition machines
+    * <p>Number of protected Pro Edition machines</p>
     */
     @SerializedName("SpecialtyMachineCnt")
     @Expose
     private Long SpecialtyMachineCnt;
 
     /**
-    * Number of protected Ultimate Edition machines
+    * <p>Number of protected Ultimate Edition machines</p>
     */
     @SerializedName("FlagshipMachineCnt")
     @Expose
     private Long FlagshipMachineCnt;
 
     /**
-    * Number of risky machines
+    * <p>Number of risky machines</p>
     */
     @SerializedName("RiskMachineCnt")
     @Expose
     private Long RiskMachineCnt;
 
     /**
-    * Number of new risky machines compared with that yesterday
+    * <p>Change in the number of risky machines compared with yesterday</p>
     */
     @SerializedName("CompareYesterdayRiskMachineCnt")
     @Expose
     private Long CompareYesterdayRiskMachineCnt;
 
     /**
-    * Number of new unprotected machines compared with that yesterday
+    * <p>Change in the number of unprotected machines compared with yesterday</p>
     */
     @SerializedName("CompareYesterdayNotProtectMachineCnt")
     @Expose
     private Long CompareYesterdayNotProtectMachineCnt;
 
     /**
-    * Number of new machines about to expire compared with that yesterday
+    * <p>Change in the number of machines expiring soon compared with yesterday</p>
     */
     @SerializedName("CompareYesterdayDeadlineMachineCnt")
     @Expose
     private Long CompareYesterdayDeadlineMachineCnt;
 
     /**
-    * Number of machines about to expire
+    * <p>Number of machines about to expire</p>
     */
     @SerializedName("DeadlineMachineCnt")
     @Expose
     private Long DeadlineMachineCnt;
 
     /**
-    * Number of unprotected machines
+    * <p>Number of unprotected machines</p>
     */
     @SerializedName("NotProtectMachineCnt")
     @Expose
     private Long NotProtectMachineCnt;
 
     /**
-    * Number of protected Lighthouse machines (Lighthouse machines)
+    * <p>Number of protected Lighthouse machines</p>
     */
     @SerializedName("LHGeneralDiscountCnt")
     @Expose
     private Long LHGeneralDiscountCnt;
 
     /**
-    * Number of new hosts compared with that yesterday
+    * <p>Change in the number of newly added hosts compared with yesterday</p>
     */
     @SerializedName("CompareYesterdayMachineCnt")
     @Expose
     private Long CompareYesterdayMachineCnt;
 
     /**
-    * Auto-cleanup Time, maximum 720 hours, minimum 0, 0 by default, 0=OFF
+    * <p>Automatic cleanup time, maximum 720 hours, minimum 0, default 0, 0=disabled</p>
     */
     @SerializedName("MachineDestroyAfterOfflineHours")
     @Expose
     private Long MachineDestroyAfterOfflineHours;
 
     /**
-    * Machine type array
+    * <p>Cloud server type array</p>
     */
     @SerializedName("CloudFrom")
     @Expose
@@ -171,24 +171,24 @@ public class DescribeMachineGeneralResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Total number of assets 
-     * @return MachineCnt Total number of assets
+     * Get <p>Total number of assets</p> 
+     * @return MachineCnt <p>Total number of assets</p>
      */
     public Long getMachineCnt() {
         return this.MachineCnt;
     }
 
     /**
-     * Set Total number of assets
-     * @param MachineCnt Total number of assets
+     * Set <p>Total number of assets</p>
+     * @param MachineCnt <p>Total number of assets</p>
      */
     public void setMachineCnt(Long MachineCnt) {
         this.MachineCnt = MachineCnt;
     }
 
     /**
-     * Get Number of Tencent Cloud machines 
-     * @return TencentCloudMachineCnt Number of Tencent Cloud machines
+     * Get <p>Number of Tencent Cloud machines</p> 
+     * @return TencentCloudMachineCnt <p>Number of Tencent Cloud machines</p>
      * @deprecated
      */
     @Deprecated
@@ -197,8 +197,8 @@ public class DescribeMachineGeneralResponse extends AbstractModel {
     }
 
     /**
-     * Set Number of Tencent Cloud machines
-     * @param TencentCloudMachineCnt Number of Tencent Cloud machines
+     * Set <p>Number of Tencent Cloud machines</p>
+     * @param TencentCloudMachineCnt <p>Number of Tencent Cloud machines</p>
      * @deprecated
      */
     @Deprecated
@@ -207,8 +207,8 @@ public class DescribeMachineGeneralResponse extends AbstractModel {
     }
 
     /**
-     * Get Number of Alibaba Cloud machines 
-     * @return AliCloudMachineCnt Number of Alibaba Cloud machines
+     * Get <p>Number of Alibaba Cloud machines</p> 
+     * @return AliCloudMachineCnt <p>Number of Alibaba Cloud machines</p>
      * @deprecated
      */
     @Deprecated
@@ -217,8 +217,8 @@ public class DescribeMachineGeneralResponse extends AbstractModel {
     }
 
     /**
-     * Set Number of Alibaba Cloud machines
-     * @param AliCloudMachineCnt Number of Alibaba Cloud machines
+     * Set <p>Number of Alibaba Cloud machines</p>
+     * @param AliCloudMachineCnt <p>Number of Alibaba Cloud machines</p>
      * @deprecated
      */
     @Deprecated
@@ -227,8 +227,8 @@ public class DescribeMachineGeneralResponse extends AbstractModel {
     }
 
     /**
-     * Get Number of Baidu Cloud machines 
-     * @return BaiduCloudMachineCnt Number of Baidu Cloud machines
+     * Get <p>Number of Baidu Cloud machines</p> 
+     * @return BaiduCloudMachineCnt <p>Number of Baidu Cloud machines</p>
      * @deprecated
      */
     @Deprecated
@@ -237,8 +237,8 @@ public class DescribeMachineGeneralResponse extends AbstractModel {
     }
 
     /**
-     * Set Number of Baidu Cloud machines
-     * @param BaiduCloudMachineCnt Number of Baidu Cloud machines
+     * Set <p>Number of Baidu Cloud machines</p>
+     * @param BaiduCloudMachineCnt <p>Number of Baidu Cloud machines</p>
      * @deprecated
      */
     @Deprecated
@@ -247,8 +247,8 @@ public class DescribeMachineGeneralResponse extends AbstractModel {
     }
 
     /**
-     * Get Number of IDC machines 
-     * @return IDCMachineCnt Number of IDC machines
+     * Get <p>Number of IDC machines</p> 
+     * @return IDCMachineCnt <p>Number of IDC machines</p>
      * @deprecated
      */
     @Deprecated
@@ -257,8 +257,8 @@ public class DescribeMachineGeneralResponse extends AbstractModel {
     }
 
     /**
-     * Set Number of IDC machines
-     * @param IDCMachineCnt Number of IDC machines
+     * Set <p>Number of IDC machines</p>
+     * @param IDCMachineCnt <p>Number of IDC machines</p>
      * @deprecated
      */
     @Deprecated
@@ -267,8 +267,8 @@ public class DescribeMachineGeneralResponse extends AbstractModel {
     }
 
     /**
-     * Get Number of machines from other cloud service vendors 
-     * @return OtherCloudMachineCnt Number of machines from other cloud service vendors
+     * Get <p>Number of machines from other cloud service vendors</p> 
+     * @return OtherCloudMachineCnt <p>Number of machines from other cloud service vendors</p>
      * @deprecated
      */
     @Deprecated
@@ -277,8 +277,8 @@ public class DescribeMachineGeneralResponse extends AbstractModel {
     }
 
     /**
-     * Set Number of machines from other cloud service vendors
-     * @param OtherCloudMachineCnt Number of machines from other cloud service vendors
+     * Set <p>Number of machines from other cloud service vendors</p>
+     * @param OtherCloudMachineCnt <p>Number of machines from other cloud service vendors</p>
      * @deprecated
      */
     @Deprecated
@@ -287,224 +287,224 @@ public class DescribeMachineGeneralResponse extends AbstractModel {
     }
 
     /**
-     * Get Number of protected machines 
-     * @return ProtectMachineCnt Number of protected machines
+     * Get <p>Number of protected machines</p> 
+     * @return ProtectMachineCnt <p>Number of protected machines</p>
      */
     public Long getProtectMachineCnt() {
         return this.ProtectMachineCnt;
     }
 
     /**
-     * Set Number of protected machines
-     * @param ProtectMachineCnt Number of protected machines
+     * Set <p>Number of protected machines</p>
+     * @param ProtectMachineCnt <p>Number of protected machines</p>
      */
     public void setProtectMachineCnt(Long ProtectMachineCnt) {
         this.ProtectMachineCnt = ProtectMachineCnt;
     }
 
     /**
-     * Get Number of protected Basic Edition machines 
-     * @return BaseMachineCnt Number of protected Basic Edition machines
+     * Get <p>Number of protected Basic Edition machines</p> 
+     * @return BaseMachineCnt <p>Number of protected Basic Edition machines</p>
      */
     public Long getBaseMachineCnt() {
         return this.BaseMachineCnt;
     }
 
     /**
-     * Set Number of protected Basic Edition machines
-     * @param BaseMachineCnt Number of protected Basic Edition machines
+     * Set <p>Number of protected Basic Edition machines</p>
+     * @param BaseMachineCnt <p>Number of protected Basic Edition machines</p>
      */
     public void setBaseMachineCnt(Long BaseMachineCnt) {
         this.BaseMachineCnt = BaseMachineCnt;
     }
 
     /**
-     * Get Number of protected Pro Edition machines 
-     * @return SpecialtyMachineCnt Number of protected Pro Edition machines
+     * Get <p>Number of protected Pro Edition machines</p> 
+     * @return SpecialtyMachineCnt <p>Number of protected Pro Edition machines</p>
      */
     public Long getSpecialtyMachineCnt() {
         return this.SpecialtyMachineCnt;
     }
 
     /**
-     * Set Number of protected Pro Edition machines
-     * @param SpecialtyMachineCnt Number of protected Pro Edition machines
+     * Set <p>Number of protected Pro Edition machines</p>
+     * @param SpecialtyMachineCnt <p>Number of protected Pro Edition machines</p>
      */
     public void setSpecialtyMachineCnt(Long SpecialtyMachineCnt) {
         this.SpecialtyMachineCnt = SpecialtyMachineCnt;
     }
 
     /**
-     * Get Number of protected Ultimate Edition machines 
-     * @return FlagshipMachineCnt Number of protected Ultimate Edition machines
+     * Get <p>Number of protected Ultimate Edition machines</p> 
+     * @return FlagshipMachineCnt <p>Number of protected Ultimate Edition machines</p>
      */
     public Long getFlagshipMachineCnt() {
         return this.FlagshipMachineCnt;
     }
 
     /**
-     * Set Number of protected Ultimate Edition machines
-     * @param FlagshipMachineCnt Number of protected Ultimate Edition machines
+     * Set <p>Number of protected Ultimate Edition machines</p>
+     * @param FlagshipMachineCnt <p>Number of protected Ultimate Edition machines</p>
      */
     public void setFlagshipMachineCnt(Long FlagshipMachineCnt) {
         this.FlagshipMachineCnt = FlagshipMachineCnt;
     }
 
     /**
-     * Get Number of risky machines 
-     * @return RiskMachineCnt Number of risky machines
+     * Get <p>Number of risky machines</p> 
+     * @return RiskMachineCnt <p>Number of risky machines</p>
      */
     public Long getRiskMachineCnt() {
         return this.RiskMachineCnt;
     }
 
     /**
-     * Set Number of risky machines
-     * @param RiskMachineCnt Number of risky machines
+     * Set <p>Number of risky machines</p>
+     * @param RiskMachineCnt <p>Number of risky machines</p>
      */
     public void setRiskMachineCnt(Long RiskMachineCnt) {
         this.RiskMachineCnt = RiskMachineCnt;
     }
 
     /**
-     * Get Number of new risky machines compared with that yesterday 
-     * @return CompareYesterdayRiskMachineCnt Number of new risky machines compared with that yesterday
+     * Get <p>Change in the number of risky machines compared with yesterday</p> 
+     * @return CompareYesterdayRiskMachineCnt <p>Change in the number of risky machines compared with yesterday</p>
      */
     public Long getCompareYesterdayRiskMachineCnt() {
         return this.CompareYesterdayRiskMachineCnt;
     }
 
     /**
-     * Set Number of new risky machines compared with that yesterday
-     * @param CompareYesterdayRiskMachineCnt Number of new risky machines compared with that yesterday
+     * Set <p>Change in the number of risky machines compared with yesterday</p>
+     * @param CompareYesterdayRiskMachineCnt <p>Change in the number of risky machines compared with yesterday</p>
      */
     public void setCompareYesterdayRiskMachineCnt(Long CompareYesterdayRiskMachineCnt) {
         this.CompareYesterdayRiskMachineCnt = CompareYesterdayRiskMachineCnt;
     }
 
     /**
-     * Get Number of new unprotected machines compared with that yesterday 
-     * @return CompareYesterdayNotProtectMachineCnt Number of new unprotected machines compared with that yesterday
+     * Get <p>Change in the number of unprotected machines compared with yesterday</p> 
+     * @return CompareYesterdayNotProtectMachineCnt <p>Change in the number of unprotected machines compared with yesterday</p>
      */
     public Long getCompareYesterdayNotProtectMachineCnt() {
         return this.CompareYesterdayNotProtectMachineCnt;
     }
 
     /**
-     * Set Number of new unprotected machines compared with that yesterday
-     * @param CompareYesterdayNotProtectMachineCnt Number of new unprotected machines compared with that yesterday
+     * Set <p>Change in the number of unprotected machines compared with yesterday</p>
+     * @param CompareYesterdayNotProtectMachineCnt <p>Change in the number of unprotected machines compared with yesterday</p>
      */
     public void setCompareYesterdayNotProtectMachineCnt(Long CompareYesterdayNotProtectMachineCnt) {
         this.CompareYesterdayNotProtectMachineCnt = CompareYesterdayNotProtectMachineCnt;
     }
 
     /**
-     * Get Number of new machines about to expire compared with that yesterday 
-     * @return CompareYesterdayDeadlineMachineCnt Number of new machines about to expire compared with that yesterday
+     * Get <p>Change in the number of machines expiring soon compared with yesterday</p> 
+     * @return CompareYesterdayDeadlineMachineCnt <p>Change in the number of machines expiring soon compared with yesterday</p>
      */
     public Long getCompareYesterdayDeadlineMachineCnt() {
         return this.CompareYesterdayDeadlineMachineCnt;
     }
 
     /**
-     * Set Number of new machines about to expire compared with that yesterday
-     * @param CompareYesterdayDeadlineMachineCnt Number of new machines about to expire compared with that yesterday
+     * Set <p>Change in the number of machines expiring soon compared with yesterday</p>
+     * @param CompareYesterdayDeadlineMachineCnt <p>Change in the number of machines expiring soon compared with yesterday</p>
      */
     public void setCompareYesterdayDeadlineMachineCnt(Long CompareYesterdayDeadlineMachineCnt) {
         this.CompareYesterdayDeadlineMachineCnt = CompareYesterdayDeadlineMachineCnt;
     }
 
     /**
-     * Get Number of machines about to expire 
-     * @return DeadlineMachineCnt Number of machines about to expire
+     * Get <p>Number of machines about to expire</p> 
+     * @return DeadlineMachineCnt <p>Number of machines about to expire</p>
      */
     public Long getDeadlineMachineCnt() {
         return this.DeadlineMachineCnt;
     }
 
     /**
-     * Set Number of machines about to expire
-     * @param DeadlineMachineCnt Number of machines about to expire
+     * Set <p>Number of machines about to expire</p>
+     * @param DeadlineMachineCnt <p>Number of machines about to expire</p>
      */
     public void setDeadlineMachineCnt(Long DeadlineMachineCnt) {
         this.DeadlineMachineCnt = DeadlineMachineCnt;
     }
 
     /**
-     * Get Number of unprotected machines 
-     * @return NotProtectMachineCnt Number of unprotected machines
+     * Get <p>Number of unprotected machines</p> 
+     * @return NotProtectMachineCnt <p>Number of unprotected machines</p>
      */
     public Long getNotProtectMachineCnt() {
         return this.NotProtectMachineCnt;
     }
 
     /**
-     * Set Number of unprotected machines
-     * @param NotProtectMachineCnt Number of unprotected machines
+     * Set <p>Number of unprotected machines</p>
+     * @param NotProtectMachineCnt <p>Number of unprotected machines</p>
      */
     public void setNotProtectMachineCnt(Long NotProtectMachineCnt) {
         this.NotProtectMachineCnt = NotProtectMachineCnt;
     }
 
     /**
-     * Get Number of protected Lighthouse machines (Lighthouse machines) 
-     * @return LHGeneralDiscountCnt Number of protected Lighthouse machines (Lighthouse machines)
+     * Get <p>Number of protected Lighthouse machines</p> 
+     * @return LHGeneralDiscountCnt <p>Number of protected Lighthouse machines</p>
      */
     public Long getLHGeneralDiscountCnt() {
         return this.LHGeneralDiscountCnt;
     }
 
     /**
-     * Set Number of protected Lighthouse machines (Lighthouse machines)
-     * @param LHGeneralDiscountCnt Number of protected Lighthouse machines (Lighthouse machines)
+     * Set <p>Number of protected Lighthouse machines</p>
+     * @param LHGeneralDiscountCnt <p>Number of protected Lighthouse machines</p>
      */
     public void setLHGeneralDiscountCnt(Long LHGeneralDiscountCnt) {
         this.LHGeneralDiscountCnt = LHGeneralDiscountCnt;
     }
 
     /**
-     * Get Number of new hosts compared with that yesterday 
-     * @return CompareYesterdayMachineCnt Number of new hosts compared with that yesterday
+     * Get <p>Change in the number of newly added hosts compared with yesterday</p> 
+     * @return CompareYesterdayMachineCnt <p>Change in the number of newly added hosts compared with yesterday</p>
      */
     public Long getCompareYesterdayMachineCnt() {
         return this.CompareYesterdayMachineCnt;
     }
 
     /**
-     * Set Number of new hosts compared with that yesterday
-     * @param CompareYesterdayMachineCnt Number of new hosts compared with that yesterday
+     * Set <p>Change in the number of newly added hosts compared with yesterday</p>
+     * @param CompareYesterdayMachineCnt <p>Change in the number of newly added hosts compared with yesterday</p>
      */
     public void setCompareYesterdayMachineCnt(Long CompareYesterdayMachineCnt) {
         this.CompareYesterdayMachineCnt = CompareYesterdayMachineCnt;
     }
 
     /**
-     * Get Auto-cleanup Time, maximum 720 hours, minimum 0, 0 by default, 0=OFF 
-     * @return MachineDestroyAfterOfflineHours Auto-cleanup Time, maximum 720 hours, minimum 0, 0 by default, 0=OFF
+     * Get <p>Automatic cleanup time, maximum 720 hours, minimum 0, default 0, 0=disabled</p> 
+     * @return MachineDestroyAfterOfflineHours <p>Automatic cleanup time, maximum 720 hours, minimum 0, default 0, 0=disabled</p>
      */
     public Long getMachineDestroyAfterOfflineHours() {
         return this.MachineDestroyAfterOfflineHours;
     }
 
     /**
-     * Set Auto-cleanup Time, maximum 720 hours, minimum 0, 0 by default, 0=OFF
-     * @param MachineDestroyAfterOfflineHours Auto-cleanup Time, maximum 720 hours, minimum 0, 0 by default, 0=OFF
+     * Set <p>Automatic cleanup time, maximum 720 hours, minimum 0, default 0, 0=disabled</p>
+     * @param MachineDestroyAfterOfflineHours <p>Automatic cleanup time, maximum 720 hours, minimum 0, default 0, 0=disabled</p>
      */
     public void setMachineDestroyAfterOfflineHours(Long MachineDestroyAfterOfflineHours) {
         this.MachineDestroyAfterOfflineHours = MachineDestroyAfterOfflineHours;
     }
 
     /**
-     * Get Machine type array 
-     * @return CloudFrom Machine type array
+     * Get <p>Cloud server type array</p> 
+     * @return CloudFrom <p>Cloud server type array</p>
      */
     public CloudFromCnt [] getCloudFrom() {
         return this.CloudFrom;
     }
 
     /**
-     * Set Machine type array
-     * @param CloudFrom Machine type array
+     * Set <p>Cloud server type array</p>
+     * @param CloudFrom <p>Cloud server type array</p>
      */
     public void setCloudFrom(CloudFromCnt [] CloudFrom) {
         this.CloudFrom = CloudFrom;

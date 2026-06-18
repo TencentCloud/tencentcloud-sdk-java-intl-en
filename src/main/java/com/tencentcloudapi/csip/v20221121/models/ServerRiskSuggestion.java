@@ -24,56 +24,46 @@ import java.util.HashMap;
 public class ServerRiskSuggestion extends AbstractModel {
 
     /**
-    * Risk title
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * Title.
     */
     @SerializedName("Title")
     @Expose
     private String Title;
 
     /**
-    * Risk details
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * Details.
     */
     @SerializedName("Body")
     @Expose
     private String Body;
 
     /**
-     * Get Risk title
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return Title Risk title
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get Title. 
+     * @return Title Title.
      */
     public String getTitle() {
         return this.Title;
     }
 
     /**
-     * Set Risk title
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param Title Risk title
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set Title.
+     * @param Title Title.
      */
     public void setTitle(String Title) {
         this.Title = Title;
     }
 
     /**
-     * Get Risk details
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return Body Risk details
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get Details. 
+     * @return Body Details.
      */
     public String getBody() {
         return this.Body;
     }
 
     /**
-     * Set Risk details
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param Body Risk details
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set Details.
+     * @param Body Details.
      */
     public void setBody(String Body) {
         this.Body = Body;

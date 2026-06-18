@@ -25,113 +25,98 @@ public class ClbListenerListInfo extends AbstractModel {
 
     /**
     * Listener ID
-Note: This field may return·null, indicating that no valid values can be obtained.
     */
     @SerializedName("ListenerId")
     @Expose
     private String ListenerId;
 
     /**
-    * The listener name.
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * listener name
     */
     @SerializedName("ListenerName")
     @Expose
     private String ListenerName;
 
     /**
-    * Load balancer ID
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * CLB Id
     */
     @SerializedName("LoadBalancerId")
     @Expose
     private String LoadBalancerId;
 
     /**
-    * CLB instance name
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * CLB name
     */
     @SerializedName("LoadBalancerName")
     @Expose
     private String LoadBalancerName;
 
     /**
-    * Network protocol
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * Protocol
     */
     @SerializedName("Protocol")
     @Expose
     private String Protocol;
 
     /**
-    * Region
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * Region.
     */
     @SerializedName("Region")
     @Expose
     private String Region;
 
     /**
-    * CLB instance IP
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * Load balancing ip
     */
     @SerializedName("Vip")
     @Expose
     private String Vip;
 
     /**
-    * Port
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * Port.
     */
     @SerializedName("VPort")
     @Expose
     private Long VPort;
 
     /**
-    * Availability zone
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * Region.
     */
     @SerializedName("Zone")
     @Expose
     private String Zone;
 
     /**
-    * VPC ID
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * VPC id
     */
     @SerializedName("NumericalVpcId")
     @Expose
     private Long NumericalVpcId;
 
     /**
-    * CLB instance type
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * CLB Type
     */
     @SerializedName("LoadBalancerType")
     @Expose
     private String LoadBalancerType;
 
     /**
-    * Listener domain name
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * Listener Domain Name
     */
     @SerializedName("Domain")
     @Expose
     private String Domain;
 
     /**
-    * Load balancer domain name
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * CLB domain name
     */
     @SerializedName("LoadBalancerDomain")
     @Expose
     private String LoadBalancerDomain;
 
     /**
-     * Get Listener ID
-Note: This field may return·null, indicating that no valid values can be obtained. 
+     * Get Listener ID 
      * @return ListenerId Listener ID
-Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public String getListenerId() {
         return this.ListenerId;
@@ -139,249 +124,199 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
     /**
      * Set Listener ID
-Note: This field may return·null, indicating that no valid values can be obtained.
      * @param ListenerId Listener ID
-Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public void setListenerId(String ListenerId) {
         this.ListenerId = ListenerId;
     }
 
     /**
-     * Get The listener name.
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return ListenerName The listener name.
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get listener name 
+     * @return ListenerName listener name
      */
     public String getListenerName() {
         return this.ListenerName;
     }
 
     /**
-     * Set The listener name.
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param ListenerName The listener name.
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set listener name
+     * @param ListenerName listener name
      */
     public void setListenerName(String ListenerName) {
         this.ListenerName = ListenerName;
     }
 
     /**
-     * Get Load balancer ID
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return LoadBalancerId Load balancer ID
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get CLB Id 
+     * @return LoadBalancerId CLB Id
      */
     public String getLoadBalancerId() {
         return this.LoadBalancerId;
     }
 
     /**
-     * Set Load balancer ID
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param LoadBalancerId Load balancer ID
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set CLB Id
+     * @param LoadBalancerId CLB Id
      */
     public void setLoadBalancerId(String LoadBalancerId) {
         this.LoadBalancerId = LoadBalancerId;
     }
 
     /**
-     * Get CLB instance name
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return LoadBalancerName CLB instance name
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get CLB name 
+     * @return LoadBalancerName CLB name
      */
     public String getLoadBalancerName() {
         return this.LoadBalancerName;
     }
 
     /**
-     * Set CLB instance name
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param LoadBalancerName CLB instance name
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set CLB name
+     * @param LoadBalancerName CLB name
      */
     public void setLoadBalancerName(String LoadBalancerName) {
         this.LoadBalancerName = LoadBalancerName;
     }
 
     /**
-     * Get Network protocol
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return Protocol Network protocol
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get Protocol 
+     * @return Protocol Protocol
      */
     public String getProtocol() {
         return this.Protocol;
     }
 
     /**
-     * Set Network protocol
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param Protocol Network protocol
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set Protocol
+     * @param Protocol Protocol
      */
     public void setProtocol(String Protocol) {
         this.Protocol = Protocol;
     }
 
     /**
-     * Get Region
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return Region Region
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get Region. 
+     * @return Region Region.
      */
     public String getRegion() {
         return this.Region;
     }
 
     /**
-     * Set Region
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param Region Region
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set Region.
+     * @param Region Region.
      */
     public void setRegion(String Region) {
         this.Region = Region;
     }
 
     /**
-     * Get CLB instance IP
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return Vip CLB instance IP
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get Load balancing ip 
+     * @return Vip Load balancing ip
      */
     public String getVip() {
         return this.Vip;
     }
 
     /**
-     * Set CLB instance IP
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param Vip CLB instance IP
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set Load balancing ip
+     * @param Vip Load balancing ip
      */
     public void setVip(String Vip) {
         this.Vip = Vip;
     }
 
     /**
-     * Get Port
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return VPort Port
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get Port. 
+     * @return VPort Port.
      */
     public Long getVPort() {
         return this.VPort;
     }
 
     /**
-     * Set Port
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param VPort Port
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set Port.
+     * @param VPort Port.
      */
     public void setVPort(Long VPort) {
         this.VPort = VPort;
     }
 
     /**
-     * Get Availability zone
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return Zone Availability zone
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get Region. 
+     * @return Zone Region.
      */
     public String getZone() {
         return this.Zone;
     }
 
     /**
-     * Set Availability zone
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param Zone Availability zone
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set Region.
+     * @param Zone Region.
      */
     public void setZone(String Zone) {
         this.Zone = Zone;
     }
 
     /**
-     * Get VPC ID
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return NumericalVpcId VPC ID
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get VPC id 
+     * @return NumericalVpcId VPC id
      */
     public Long getNumericalVpcId() {
         return this.NumericalVpcId;
     }
 
     /**
-     * Set VPC ID
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param NumericalVpcId VPC ID
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set VPC id
+     * @param NumericalVpcId VPC id
      */
     public void setNumericalVpcId(Long NumericalVpcId) {
         this.NumericalVpcId = NumericalVpcId;
     }
 
     /**
-     * Get CLB instance type
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return LoadBalancerType CLB instance type
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get CLB Type 
+     * @return LoadBalancerType CLB Type
      */
     public String getLoadBalancerType() {
         return this.LoadBalancerType;
     }
 
     /**
-     * Set CLB instance type
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param LoadBalancerType CLB instance type
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set CLB Type
+     * @param LoadBalancerType CLB Type
      */
     public void setLoadBalancerType(String LoadBalancerType) {
         this.LoadBalancerType = LoadBalancerType;
     }
 
     /**
-     * Get Listener domain name
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return Domain Listener domain name
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get Listener Domain Name 
+     * @return Domain Listener Domain Name
      */
     public String getDomain() {
         return this.Domain;
     }
 
     /**
-     * Set Listener domain name
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param Domain Listener domain name
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set Listener Domain Name
+     * @param Domain Listener Domain Name
      */
     public void setDomain(String Domain) {
         this.Domain = Domain;
     }
 
     /**
-     * Get Load balancer domain name
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return LoadBalancerDomain Load balancer domain name
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get CLB domain name 
+     * @return LoadBalancerDomain CLB domain name
      */
     public String getLoadBalancerDomain() {
         return this.LoadBalancerDomain;
     }
 
     /**
-     * Set Load balancer domain name
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param LoadBalancerDomain Load balancer domain name
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set CLB domain name
+     * @param LoadBalancerDomain CLB domain name
      */
     public void setLoadBalancerDomain(String LoadBalancerDomain) {
         this.LoadBalancerDomain = LoadBalancerDomain;

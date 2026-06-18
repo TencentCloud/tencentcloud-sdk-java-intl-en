@@ -38,7 +38,7 @@ public class VULRiskAdvanceCFGList extends AbstractModel {
     private String VULName;
 
     /**
-    * Risk level
+    * Risk level, low - low risk, high - high risk, middle - medium risk, info - notification, extreme - critical.
     */
     @SerializedName("RiskLevel")
     @Expose
@@ -52,8 +52,7 @@ public class VULRiskAdvanceCFGList extends AbstractModel {
     private String CheckFrom;
 
     /**
-    * Whether it's enabled. `1`: Enable; `0`: Disabled
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * Enable/Disable. 1-Enable; 0-Disable.
     */
     @SerializedName("Enable")
     @Expose
@@ -74,8 +73,7 @@ Note: This field may return·null, indicating that no valid values can be obtain
     private String ImpactVersion;
 
     /**
-    * CVE number
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * CVE
     */
     @SerializedName("CVE")
     @Expose
@@ -89,8 +87,7 @@ Note: This field may return·null, indicating that no valid values can be obtain
     private String [] VULTag;
 
     /**
-    * Fix solution
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * Repair method
     */
     @SerializedName("FixMethod")
     @Expose
@@ -98,15 +95,13 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
     /**
     * Disclosure time
-Note: This field may return·null, indicating that no valid values can be obtained.
     */
     @SerializedName("ReleaseTime")
     @Expose
     private String ReleaseTime;
 
     /**
-    * Whether it's an emergency vulnerability. Values: `1` (emergency vulnerability); `0` (non-emergency vulnerability
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * Emergency Vulnerability Type. 1-Emergency Vulnerability; 0-Non-emergency Vulnerability.
     */
     @SerializedName("EMGCVulType")
     @Expose
@@ -114,19 +109,59 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
     /**
     * Vulnerability description
-Note: This field may return·null, indicating that no valid values can be obtained.
     */
     @SerializedName("VULDescribe")
     @Expose
     private String VULDescribe;
 
     /**
-    * Affected components
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * Affected component
     */
     @SerializedName("ImpactComponent")
     @Expose
     private String ImpactComponent;
+
+    /**
+    * Vulnerability Payload
+    */
+    @SerializedName("Payload")
+    @Expose
+    private String Payload;
+
+    /**
+    * Technology reference
+    */
+    @SerializedName("References")
+    @Expose
+    private String References;
+
+    /**
+    * CVSS Score
+    */
+    @SerializedName("CVSS")
+    @Expose
+    private String CVSS;
+
+    /**
+    * Attack intensity
+    */
+    @SerializedName("AttackHeat")
+    @Expose
+    private String AttackHeat;
+
+    /**
+    * Security Product Support Status
+    */
+    @SerializedName("ServiceSupport")
+    @Expose
+    private ServiceSupport [] ServiceSupport;
+
+    /**
+    * Latest detection time
+    */
+    @SerializedName("RecentScanTime")
+    @Expose
+    private String RecentScanTime;
 
     /**
      * Get Risk ID 
@@ -161,16 +196,16 @@ Note: This field may return·null, indicating that no valid values can be obtain
     }
 
     /**
-     * Get Risk level 
-     * @return RiskLevel Risk level
+     * Get Risk level, low - low risk, high - high risk, middle - medium risk, info - notification, extreme - critical. 
+     * @return RiskLevel Risk level, low - low risk, high - high risk, middle - medium risk, info - notification, extreme - critical.
      */
     public String getRiskLevel() {
         return this.RiskLevel;
     }
 
     /**
-     * Set Risk level
-     * @param RiskLevel Risk level
+     * Set Risk level, low - low risk, high - high risk, middle - medium risk, info - notification, extreme - critical.
+     * @param RiskLevel Risk level, low - low risk, high - high risk, middle - medium risk, info - notification, extreme - critical.
      */
     public void setRiskLevel(String RiskLevel) {
         this.RiskLevel = RiskLevel;
@@ -193,20 +228,16 @@ Note: This field may return·null, indicating that no valid values can be obtain
     }
 
     /**
-     * Get Whether it's enabled. `1`: Enable; `0`: Disabled
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return Enable Whether it's enabled. `1`: Enable; `0`: Disabled
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get Enable/Disable. 1-Enable; 0-Disable. 
+     * @return Enable Enable/Disable. 1-Enable; 0-Disable.
      */
     public Long getEnable() {
         return this.Enable;
     }
 
     /**
-     * Set Whether it's enabled. `1`: Enable; `0`: Disabled
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param Enable Whether it's enabled. `1`: Enable; `0`: Disabled
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set Enable/Disable. 1-Enable; 0-Disable.
+     * @param Enable Enable/Disable. 1-Enable; 0-Disable.
      */
     public void setEnable(Long Enable) {
         this.Enable = Enable;
@@ -245,20 +276,16 @@ Note: This field may return·null, indicating that no valid values can be obtain
     }
 
     /**
-     * Get CVE number
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return CVE CVE number
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get CVE 
+     * @return CVE CVE
      */
     public String getCVE() {
         return this.CVE;
     }
 
     /**
-     * Set CVE number
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param CVE CVE number
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set CVE
+     * @param CVE CVE
      */
     public void setCVE(String CVE) {
         this.CVE = CVE;
@@ -281,30 +308,24 @@ Note: This field may return·null, indicating that no valid values can be obtain
     }
 
     /**
-     * Get Fix solution
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return FixMethod Fix solution
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get Repair method 
+     * @return FixMethod Repair method
      */
     public String [] getFixMethod() {
         return this.FixMethod;
     }
 
     /**
-     * Set Fix solution
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param FixMethod Fix solution
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set Repair method
+     * @param FixMethod Repair method
      */
     public void setFixMethod(String [] FixMethod) {
         this.FixMethod = FixMethod;
     }
 
     /**
-     * Get Disclosure time
-Note: This field may return·null, indicating that no valid values can be obtained. 
+     * Get Disclosure time 
      * @return ReleaseTime Disclosure time
-Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public String getReleaseTime() {
         return this.ReleaseTime;
@@ -312,39 +333,31 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
     /**
      * Set Disclosure time
-Note: This field may return·null, indicating that no valid values can be obtained.
      * @param ReleaseTime Disclosure time
-Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public void setReleaseTime(String ReleaseTime) {
         this.ReleaseTime = ReleaseTime;
     }
 
     /**
-     * Get Whether it's an emergency vulnerability. Values: `1` (emergency vulnerability); `0` (non-emergency vulnerability
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return EMGCVulType Whether it's an emergency vulnerability. Values: `1` (emergency vulnerability); `0` (non-emergency vulnerability
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get Emergency Vulnerability Type. 1-Emergency Vulnerability; 0-Non-emergency Vulnerability. 
+     * @return EMGCVulType Emergency Vulnerability Type. 1-Emergency Vulnerability; 0-Non-emergency Vulnerability.
      */
     public Long getEMGCVulType() {
         return this.EMGCVulType;
     }
 
     /**
-     * Set Whether it's an emergency vulnerability. Values: `1` (emergency vulnerability); `0` (non-emergency vulnerability
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param EMGCVulType Whether it's an emergency vulnerability. Values: `1` (emergency vulnerability); `0` (non-emergency vulnerability
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set Emergency Vulnerability Type. 1-Emergency Vulnerability; 0-Non-emergency Vulnerability.
+     * @param EMGCVulType Emergency Vulnerability Type. 1-Emergency Vulnerability; 0-Non-emergency Vulnerability.
      */
     public void setEMGCVulType(Long EMGCVulType) {
         this.EMGCVulType = EMGCVulType;
     }
 
     /**
-     * Get Vulnerability description
-Note: This field may return·null, indicating that no valid values can be obtained. 
+     * Get Vulnerability description 
      * @return VULDescribe Vulnerability description
-Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public String getVULDescribe() {
         return this.VULDescribe;
@@ -352,32 +365,122 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
     /**
      * Set Vulnerability description
-Note: This field may return·null, indicating that no valid values can be obtained.
      * @param VULDescribe Vulnerability description
-Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public void setVULDescribe(String VULDescribe) {
         this.VULDescribe = VULDescribe;
     }
 
     /**
-     * Get Affected components
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return ImpactComponent Affected components
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get Affected component 
+     * @return ImpactComponent Affected component
      */
     public String getImpactComponent() {
         return this.ImpactComponent;
     }
 
     /**
-     * Set Affected components
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param ImpactComponent Affected components
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set Affected component
+     * @param ImpactComponent Affected component
      */
     public void setImpactComponent(String ImpactComponent) {
         this.ImpactComponent = ImpactComponent;
+    }
+
+    /**
+     * Get Vulnerability Payload 
+     * @return Payload Vulnerability Payload
+     */
+    public String getPayload() {
+        return this.Payload;
+    }
+
+    /**
+     * Set Vulnerability Payload
+     * @param Payload Vulnerability Payload
+     */
+    public void setPayload(String Payload) {
+        this.Payload = Payload;
+    }
+
+    /**
+     * Get Technology reference 
+     * @return References Technology reference
+     */
+    public String getReferences() {
+        return this.References;
+    }
+
+    /**
+     * Set Technology reference
+     * @param References Technology reference
+     */
+    public void setReferences(String References) {
+        this.References = References;
+    }
+
+    /**
+     * Get CVSS Score 
+     * @return CVSS CVSS Score
+     */
+    public String getCVSS() {
+        return this.CVSS;
+    }
+
+    /**
+     * Set CVSS Score
+     * @param CVSS CVSS Score
+     */
+    public void setCVSS(String CVSS) {
+        this.CVSS = CVSS;
+    }
+
+    /**
+     * Get Attack intensity 
+     * @return AttackHeat Attack intensity
+     */
+    public String getAttackHeat() {
+        return this.AttackHeat;
+    }
+
+    /**
+     * Set Attack intensity
+     * @param AttackHeat Attack intensity
+     */
+    public void setAttackHeat(String AttackHeat) {
+        this.AttackHeat = AttackHeat;
+    }
+
+    /**
+     * Get Security Product Support Status 
+     * @return ServiceSupport Security Product Support Status
+     */
+    public ServiceSupport [] getServiceSupport() {
+        return this.ServiceSupport;
+    }
+
+    /**
+     * Set Security Product Support Status
+     * @param ServiceSupport Security Product Support Status
+     */
+    public void setServiceSupport(ServiceSupport [] ServiceSupport) {
+        this.ServiceSupport = ServiceSupport;
+    }
+
+    /**
+     * Get Latest detection time 
+     * @return RecentScanTime Latest detection time
+     */
+    public String getRecentScanTime() {
+        return this.RecentScanTime;
+    }
+
+    /**
+     * Set Latest detection time
+     * @param RecentScanTime Latest detection time
+     */
+    public void setRecentScanTime(String RecentScanTime) {
+        this.RecentScanTime = RecentScanTime;
     }
 
     public VULRiskAdvanceCFGList() {
@@ -436,6 +539,27 @@ Note: This field may return·null, indicating that no valid values can be obtain
         if (source.ImpactComponent != null) {
             this.ImpactComponent = new String(source.ImpactComponent);
         }
+        if (source.Payload != null) {
+            this.Payload = new String(source.Payload);
+        }
+        if (source.References != null) {
+            this.References = new String(source.References);
+        }
+        if (source.CVSS != null) {
+            this.CVSS = new String(source.CVSS);
+        }
+        if (source.AttackHeat != null) {
+            this.AttackHeat = new String(source.AttackHeat);
+        }
+        if (source.ServiceSupport != null) {
+            this.ServiceSupport = new ServiceSupport[source.ServiceSupport.length];
+            for (int i = 0; i < source.ServiceSupport.length; i++) {
+                this.ServiceSupport[i] = new ServiceSupport(source.ServiceSupport[i]);
+            }
+        }
+        if (source.RecentScanTime != null) {
+            this.RecentScanTime = new String(source.RecentScanTime);
+        }
     }
 
 
@@ -457,6 +581,12 @@ Note: This field may return·null, indicating that no valid values can be obtain
         this.setParamSimple(map, prefix + "EMGCVulType", this.EMGCVulType);
         this.setParamSimple(map, prefix + "VULDescribe", this.VULDescribe);
         this.setParamSimple(map, prefix + "ImpactComponent", this.ImpactComponent);
+        this.setParamSimple(map, prefix + "Payload", this.Payload);
+        this.setParamSimple(map, prefix + "References", this.References);
+        this.setParamSimple(map, prefix + "CVSS", this.CVSS);
+        this.setParamSimple(map, prefix + "AttackHeat", this.AttackHeat);
+        this.setParamArrayObj(map, prefix + "ServiceSupport.", this.ServiceSupport);
+        this.setParamSimple(map, prefix + "RecentScanTime", this.RecentScanTime);
 
     }
 }

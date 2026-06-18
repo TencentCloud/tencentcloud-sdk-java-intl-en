@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class DescribeLoginWhiteCombinedListRequest extends AbstractModel {
 
     /**
-    * Number of items to be returned. It is 10 by default, and the maximum value is 100.
+    * <p>Number of items to return. The default number is 10, and the maximum number is 100.</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * Offset, which defaults to 0
+    * <p>Offset. Default value: 0.</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * Filtering conditions. <li>IpOrAlias - String - required: no - filter by host IP address or alias.</li> <li>UserName - String - required: no - filter by username.</li> <li>SrcIP - String - required: no - filter by source IP address.</li> <li>Location - String - required: no - filter by login location.</li> <li>ModifyBeginTime - String - required: no - filter by modification time; start time.</li> <li>ModifyEndTime - String - required: no - filter by modification time; end time.</li>
+    * <p>Filter criteria.<li>IpOrAlias - String - Required: No - Host ip or alias filter</li><li>UserName - String - Required: No - UserName filter</li><li>SrcIP - String - Required: No - Source ip filter</li><li>Location - String - Required: No - Login Location filter</li><li>ModifyBeginTime - String - Required: No - Filter by modification time range, start time</li><li>ModifyEndTime - String - Required: No - Filter by modification time range, end time</li></p>
     */
     @SerializedName("Filters")
     @Expose
     private Filter [] Filters;
 
     /**
-     * Get Number of items to be returned. It is 10 by default, and the maximum value is 100. 
-     * @return Limit Number of items to be returned. It is 10 by default, and the maximum value is 100.
+     * Get <p>Number of items to return. The default number is 10, and the maximum number is 100.</p> 
+     * @return Limit <p>Number of items to return. The default number is 10, and the maximum number is 100.</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Number of items to be returned. It is 10 by default, and the maximum value is 100.
-     * @param Limit Number of items to be returned. It is 10 by default, and the maximum value is 100.
+     * Set <p>Number of items to return. The default number is 10, and the maximum number is 100.</p>
+     * @param Limit <p>Number of items to return. The default number is 10, and the maximum number is 100.</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get Offset, which defaults to 0 
-     * @return Offset Offset, which defaults to 0
+     * Get <p>Offset. Default value: 0.</p> 
+     * @return Offset <p>Offset. Default value: 0.</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Offset, which defaults to 0
-     * @param Offset Offset, which defaults to 0
+     * Set <p>Offset. Default value: 0.</p>
+     * @param Offset <p>Offset. Default value: 0.</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get Filtering conditions. <li>IpOrAlias - String - required: no - filter by host IP address or alias.</li> <li>UserName - String - required: no - filter by username.</li> <li>SrcIP - String - required: no - filter by source IP address.</li> <li>Location - String - required: no - filter by login location.</li> <li>ModifyBeginTime - String - required: no - filter by modification time; start time.</li> <li>ModifyEndTime - String - required: no - filter by modification time; end time.</li> 
-     * @return Filters Filtering conditions. <li>IpOrAlias - String - required: no - filter by host IP address or alias.</li> <li>UserName - String - required: no - filter by username.</li> <li>SrcIP - String - required: no - filter by source IP address.</li> <li>Location - String - required: no - filter by login location.</li> <li>ModifyBeginTime - String - required: no - filter by modification time; start time.</li> <li>ModifyEndTime - String - required: no - filter by modification time; end time.</li>
+     * Get <p>Filter criteria.<li>IpOrAlias - String - Required: No - Host ip or alias filter</li><li>UserName - String - Required: No - UserName filter</li><li>SrcIP - String - Required: No - Source ip filter</li><li>Location - String - Required: No - Login Location filter</li><li>ModifyBeginTime - String - Required: No - Filter by modification time range, start time</li><li>ModifyEndTime - String - Required: No - Filter by modification time range, end time</li></p> 
+     * @return Filters <p>Filter criteria.<li>IpOrAlias - String - Required: No - Host ip or alias filter</li><li>UserName - String - Required: No - UserName filter</li><li>SrcIP - String - Required: No - Source ip filter</li><li>Location - String - Required: No - Login Location filter</li><li>ModifyBeginTime - String - Required: No - Filter by modification time range, start time</li><li>ModifyEndTime - String - Required: No - Filter by modification time range, end time</li></p>
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set Filtering conditions. <li>IpOrAlias - String - required: no - filter by host IP address or alias.</li> <li>UserName - String - required: no - filter by username.</li> <li>SrcIP - String - required: no - filter by source IP address.</li> <li>Location - String - required: no - filter by login location.</li> <li>ModifyBeginTime - String - required: no - filter by modification time; start time.</li> <li>ModifyEndTime - String - required: no - filter by modification time; end time.</li>
-     * @param Filters Filtering conditions. <li>IpOrAlias - String - required: no - filter by host IP address or alias.</li> <li>UserName - String - required: no - filter by username.</li> <li>SrcIP - String - required: no - filter by source IP address.</li> <li>Location - String - required: no - filter by login location.</li> <li>ModifyBeginTime - String - required: no - filter by modification time; start time.</li> <li>ModifyEndTime - String - required: no - filter by modification time; end time.</li>
+     * Set <p>Filter criteria.<li>IpOrAlias - String - Required: No - Host ip or alias filter</li><li>UserName - String - Required: No - UserName filter</li><li>SrcIP - String - Required: No - Source ip filter</li><li>Location - String - Required: No - Login Location filter</li><li>ModifyBeginTime - String - Required: No - Filter by modification time range, start time</li><li>ModifyEndTime - String - Required: No - Filter by modification time range, end time</li></p>
+     * @param Filters <p>Filter criteria.<li>IpOrAlias - String - Required: No - Host ip or alias filter</li><li>UserName - String - Required: No - UserName filter</li><li>SrcIP - String - Required: No - Source ip filter</li><li>Location - String - Required: No - Login Location filter</li><li>ModifyBeginTime - String - Required: No - Filter by modification time range, start time</li><li>ModifyEndTime - String - Required: No - Filter by modification time range, end time</li></p>
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;

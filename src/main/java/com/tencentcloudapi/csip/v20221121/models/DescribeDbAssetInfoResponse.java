@@ -24,8 +24,7 @@ import java.util.HashMap;
 public class DescribeDbAssetInfoResponse extends AbstractModel {
 
     /**
-    * Details of a database asset. 
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * DB Asset Details
     */
     @SerializedName("Data")
     @Expose
@@ -39,20 +38,16 @@ Note: This field may return·null, indicating that no valid values can be obtain
     private String RequestId;
 
     /**
-     * Get Details of a database asset. 
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return Data Details of a database asset. 
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get DB Asset Details 
+     * @return Data DB Asset Details
      */
     public DbAssetInfo getData() {
         return this.Data;
     }
 
     /**
-     * Set Details of a database asset. 
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param Data Details of a database asset. 
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set DB Asset Details
+     * @param Data DB Asset Details
      */
     public void setData(DbAssetInfo Data) {
         this.Data = Data;

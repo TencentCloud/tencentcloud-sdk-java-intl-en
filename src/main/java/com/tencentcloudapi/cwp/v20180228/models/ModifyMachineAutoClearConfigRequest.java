@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class ModifyMachineAutoClearConfigRequest extends AbstractModel {
 
     /**
-    * Clean-up rule time, 0 for OFF, in days, up to 30 days
+    * <p>Cleanup rule retention period. 0: Disabled. Unit: day. Maximum: 30 days</p>
     */
     @SerializedName("ClearRule")
     @Expose
     private Long ClearRule;
 
     /**
-     * Get Clean-up rule time, 0 for OFF, in days, up to 30 days 
-     * @return ClearRule Clean-up rule time, 0 for OFF, in days, up to 30 days
+     * Get <p>Cleanup rule retention period. 0: Disabled. Unit: day. Maximum: 30 days</p> 
+     * @return ClearRule <p>Cleanup rule retention period. 0: Disabled. Unit: day. Maximum: 30 days</p>
      */
     public Long getClearRule() {
         return this.ClearRule;
     }
 
     /**
-     * Set Clean-up rule time, 0 for OFF, in days, up to 30 days
-     * @param ClearRule Clean-up rule time, 0 for OFF, in days, up to 30 days
+     * Set <p>Cleanup rule retention period. 0: Disabled. Unit: day. Maximum: 30 days</p>
+     * @param ClearRule <p>Cleanup rule retention period. 0: Disabled. Unit: day. Maximum: 30 days</p>
      */
     public void setClearRule(Long ClearRule) {
         this.ClearRule = ClearRule;

@@ -24,143 +24,140 @@ import java.util.HashMap;
 public class OrganizationUserInfo extends AbstractModel {
 
     /**
-    * Member account Uin
+    * Member Account UIN
     */
     @SerializedName("Uin")
     @Expose
     private String Uin;
 
     /**
-    * Member account name
+    * member account name
     */
     @SerializedName("NickName")
     @Expose
     private String NickName;
 
     /**
-    * Department node name, department of account
+    * Department Node Name, Account's Department
     */
     @SerializedName("NodeName")
     @Expose
     private String NodeName;
 
     /**
-    * Asset Quantity
+    * Number of assets
     */
     @SerializedName("AssetCount")
     @Expose
     private Long AssetCount;
 
     /**
-    * Risk Quantity
+    * Number of risks
     */
     @SerializedName("RiskCount")
     @Expose
     private Long RiskCount;
 
     /**
-    * Attack Quantity
+    * Number of Attacks
     */
     @SerializedName("AttackCount")
     @Expose
     private Long AttackCount;
 
     /**
-    * Member/Admin/;Member or Administrator
+    * Member/Admin/; Member or Administrator
     */
     @SerializedName("Role")
     @Expose
     private String Role;
 
     /**
-    * Member account id
+    * Member Account ID
     */
     @SerializedName("MemberId")
     @Expose
     private String MemberId;
 
     /**
-    * Member account Appid
+    * Member Account AppID
     */
     @SerializedName("AppId")
     @Expose
     private String AppId;
 
     /**
-    * account joining method,create/invite
+    * Account Joining Method: Create/Invite.
     */
     @SerializedName("JoinType")
     @Expose
     private String JoinType;
 
     /**
-    * If empty, it is not enabled; otherwise, different strings correspond to different versions, with 'common' being general and not version-specific.
+    * Not enabled if empty. Otherwise, different strings correspond to different versions. Common for General, regardless of version.
     */
     @SerializedName("CFWProtect")
     @Expose
     private String CFWProtect;
 
     /**
-    * If empty, it is not enabled; otherwise, different strings correspond to different versions, with 'common' being general and not version-specific.
+    * Not enabled if empty. Otherwise, different strings correspond to different versions. Common for General, regardless of version.
     */
     @SerializedName("WAFProtect")
     @Expose
     private String WAFProtect;
 
     /**
-    * If empty, it is not enabled; otherwise, different strings correspond to different versions, with 'common' being general and not version-specific.
+    * Not enabled if empty. Otherwise, different strings correspond to different versions. Common for General, regardless of version.
     */
     @SerializedName("CWPProtect")
     @Expose
     private String CWPProtect;
 
     /**
-    * 1 enable, 0 not enabled
+    * 1-Enabled; 0-Not Enabled.
     */
     @SerializedName("Enable")
     @Expose
     private Long Enable;
 
     /**
-    * "Free"      
-   //Free edition
-   "Advanced"   //Advanced edition "Enterprise" //Enterprise edition "Ultimate"  
-   //Ultimate edition
+    * Free       // Free Edition  Advanced   //Advanced Edition Enterprise //Enterprise Edition Ultimate   //Premium Edition
     */
     @SerializedName("CSIPProtect")
     @Expose
     private String CSIPProtect;
 
     /**
-    * 1 indicates the quota consumer
+    * 1 for quota consumer.
     */
     @SerializedName("QuotaConsumer")
     @Expose
     private Long QuotaConsumer;
 
     /**
-    * Account type: 0 for Tencent Cloud account, 1 for AWS account
+    * Account Type. 0 for Tencent Cloud account; 1 for AWS account.
     */
     @SerializedName("CloudType")
     @Expose
     private Long CloudType;
 
     /**
-    * 0 indicates the default value; 1 indicates 10 minutes; 2 indicates 1 hour; 3 indicates 24 hours
+    * 0 for default value, 1 for 10 minutes, 2 for 1 hour, 3 for 24 hours.
     */
     @SerializedName("SyncFrequency")
     @Expose
     private Long SyncFrequency;
 
     /**
-    * Whether the multi-cloud account has expired
+    * Whether the multi-cloud account is expired.
     */
     @SerializedName("IsExpired")
     @Expose
     private Boolean IsExpired;
 
     /**
-    * Multi-cloud account permissions list
+    * Multi-Cloud Account Permission List
     */
     @SerializedName("PermissionList")
     @Expose
@@ -174,16 +171,16 @@ public class OrganizationUserInfo extends AbstractModel {
     private Long AuthType;
 
     /**
-    * 0 Tencent Cloud group account
-1 Tencent Cloud access account
-2 non-Tencent Cloud
+    * Tencent Cloud Group Account
+Tencent Cloud access account
+2: non-Tencent Cloud
     */
     @SerializedName("TcMemberType")
     @Expose
     private Long TcMemberType;
 
     /**
-    * Sub-account count
+    * Number of sub-accounts.
     */
     @SerializedName("SubUserCount")
     @Expose
@@ -197,332 +194,320 @@ public class OrganizationUserInfo extends AbstractModel {
     private String JoinTypeInfo;
 
     /**
-     * Get Member account Uin 
-     * @return Uin Member account Uin
+     * Get Member Account UIN 
+     * @return Uin Member Account UIN
      */
     public String getUin() {
         return this.Uin;
     }
 
     /**
-     * Set Member account Uin
-     * @param Uin Member account Uin
+     * Set Member Account UIN
+     * @param Uin Member Account UIN
      */
     public void setUin(String Uin) {
         this.Uin = Uin;
     }
 
     /**
-     * Get Member account name 
-     * @return NickName Member account name
+     * Get member account name 
+     * @return NickName member account name
      */
     public String getNickName() {
         return this.NickName;
     }
 
     /**
-     * Set Member account name
-     * @param NickName Member account name
+     * Set member account name
+     * @param NickName member account name
      */
     public void setNickName(String NickName) {
         this.NickName = NickName;
     }
 
     /**
-     * Get Department node name, department of account 
-     * @return NodeName Department node name, department of account
+     * Get Department Node Name, Account's Department 
+     * @return NodeName Department Node Name, Account's Department
      */
     public String getNodeName() {
         return this.NodeName;
     }
 
     /**
-     * Set Department node name, department of account
-     * @param NodeName Department node name, department of account
+     * Set Department Node Name, Account's Department
+     * @param NodeName Department Node Name, Account's Department
      */
     public void setNodeName(String NodeName) {
         this.NodeName = NodeName;
     }
 
     /**
-     * Get Asset Quantity 
-     * @return AssetCount Asset Quantity
+     * Get Number of assets 
+     * @return AssetCount Number of assets
      */
     public Long getAssetCount() {
         return this.AssetCount;
     }
 
     /**
-     * Set Asset Quantity
-     * @param AssetCount Asset Quantity
+     * Set Number of assets
+     * @param AssetCount Number of assets
      */
     public void setAssetCount(Long AssetCount) {
         this.AssetCount = AssetCount;
     }
 
     /**
-     * Get Risk Quantity 
-     * @return RiskCount Risk Quantity
+     * Get Number of risks 
+     * @return RiskCount Number of risks
      */
     public Long getRiskCount() {
         return this.RiskCount;
     }
 
     /**
-     * Set Risk Quantity
-     * @param RiskCount Risk Quantity
+     * Set Number of risks
+     * @param RiskCount Number of risks
      */
     public void setRiskCount(Long RiskCount) {
         this.RiskCount = RiskCount;
     }
 
     /**
-     * Get Attack Quantity 
-     * @return AttackCount Attack Quantity
+     * Get Number of Attacks 
+     * @return AttackCount Number of Attacks
      */
     public Long getAttackCount() {
         return this.AttackCount;
     }
 
     /**
-     * Set Attack Quantity
-     * @param AttackCount Attack Quantity
+     * Set Number of Attacks
+     * @param AttackCount Number of Attacks
      */
     public void setAttackCount(Long AttackCount) {
         this.AttackCount = AttackCount;
     }
 
     /**
-     * Get Member/Admin/;Member or Administrator 
-     * @return Role Member/Admin/;Member or Administrator
+     * Get Member/Admin/; Member or Administrator 
+     * @return Role Member/Admin/; Member or Administrator
      */
     public String getRole() {
         return this.Role;
     }
 
     /**
-     * Set Member/Admin/;Member or Administrator
-     * @param Role Member/Admin/;Member or Administrator
+     * Set Member/Admin/; Member or Administrator
+     * @param Role Member/Admin/; Member or Administrator
      */
     public void setRole(String Role) {
         this.Role = Role;
     }
 
     /**
-     * Get Member account id 
-     * @return MemberId Member account id
+     * Get Member Account ID 
+     * @return MemberId Member Account ID
      */
     public String getMemberId() {
         return this.MemberId;
     }
 
     /**
-     * Set Member account id
-     * @param MemberId Member account id
+     * Set Member Account ID
+     * @param MemberId Member Account ID
      */
     public void setMemberId(String MemberId) {
         this.MemberId = MemberId;
     }
 
     /**
-     * Get Member account Appid 
-     * @return AppId Member account Appid
+     * Get Member Account AppID 
+     * @return AppId Member Account AppID
      */
     public String getAppId() {
         return this.AppId;
     }
 
     /**
-     * Set Member account Appid
-     * @param AppId Member account Appid
+     * Set Member Account AppID
+     * @param AppId Member Account AppID
      */
     public void setAppId(String AppId) {
         this.AppId = AppId;
     }
 
     /**
-     * Get account joining method,create/invite 
-     * @return JoinType account joining method,create/invite
+     * Get Account Joining Method: Create/Invite. 
+     * @return JoinType Account Joining Method: Create/Invite.
      */
     public String getJoinType() {
         return this.JoinType;
     }
 
     /**
-     * Set account joining method,create/invite
-     * @param JoinType account joining method,create/invite
+     * Set Account Joining Method: Create/Invite.
+     * @param JoinType Account Joining Method: Create/Invite.
      */
     public void setJoinType(String JoinType) {
         this.JoinType = JoinType;
     }
 
     /**
-     * Get If empty, it is not enabled; otherwise, different strings correspond to different versions, with 'common' being general and not version-specific. 
-     * @return CFWProtect If empty, it is not enabled; otherwise, different strings correspond to different versions, with 'common' being general and not version-specific.
+     * Get Not enabled if empty. Otherwise, different strings correspond to different versions. Common for General, regardless of version. 
+     * @return CFWProtect Not enabled if empty. Otherwise, different strings correspond to different versions. Common for General, regardless of version.
      */
     public String getCFWProtect() {
         return this.CFWProtect;
     }
 
     /**
-     * Set If empty, it is not enabled; otherwise, different strings correspond to different versions, with 'common' being general and not version-specific.
-     * @param CFWProtect If empty, it is not enabled; otherwise, different strings correspond to different versions, with 'common' being general and not version-specific.
+     * Set Not enabled if empty. Otherwise, different strings correspond to different versions. Common for General, regardless of version.
+     * @param CFWProtect Not enabled if empty. Otherwise, different strings correspond to different versions. Common for General, regardless of version.
      */
     public void setCFWProtect(String CFWProtect) {
         this.CFWProtect = CFWProtect;
     }
 
     /**
-     * Get If empty, it is not enabled; otherwise, different strings correspond to different versions, with 'common' being general and not version-specific. 
-     * @return WAFProtect If empty, it is not enabled; otherwise, different strings correspond to different versions, with 'common' being general and not version-specific.
+     * Get Not enabled if empty. Otherwise, different strings correspond to different versions. Common for General, regardless of version. 
+     * @return WAFProtect Not enabled if empty. Otherwise, different strings correspond to different versions. Common for General, regardless of version.
      */
     public String getWAFProtect() {
         return this.WAFProtect;
     }
 
     /**
-     * Set If empty, it is not enabled; otherwise, different strings correspond to different versions, with 'common' being general and not version-specific.
-     * @param WAFProtect If empty, it is not enabled; otherwise, different strings correspond to different versions, with 'common' being general and not version-specific.
+     * Set Not enabled if empty. Otherwise, different strings correspond to different versions. Common for General, regardless of version.
+     * @param WAFProtect Not enabled if empty. Otherwise, different strings correspond to different versions. Common for General, regardless of version.
      */
     public void setWAFProtect(String WAFProtect) {
         this.WAFProtect = WAFProtect;
     }
 
     /**
-     * Get If empty, it is not enabled; otherwise, different strings correspond to different versions, with 'common' being general and not version-specific. 
-     * @return CWPProtect If empty, it is not enabled; otherwise, different strings correspond to different versions, with 'common' being general and not version-specific.
+     * Get Not enabled if empty. Otherwise, different strings correspond to different versions. Common for General, regardless of version. 
+     * @return CWPProtect Not enabled if empty. Otherwise, different strings correspond to different versions. Common for General, regardless of version.
      */
     public String getCWPProtect() {
         return this.CWPProtect;
     }
 
     /**
-     * Set If empty, it is not enabled; otherwise, different strings correspond to different versions, with 'common' being general and not version-specific.
-     * @param CWPProtect If empty, it is not enabled; otherwise, different strings correspond to different versions, with 'common' being general and not version-specific.
+     * Set Not enabled if empty. Otherwise, different strings correspond to different versions. Common for General, regardless of version.
+     * @param CWPProtect Not enabled if empty. Otherwise, different strings correspond to different versions. Common for General, regardless of version.
      */
     public void setCWPProtect(String CWPProtect) {
         this.CWPProtect = CWPProtect;
     }
 
     /**
-     * Get 1 enable, 0 not enabled 
-     * @return Enable 1 enable, 0 not enabled
+     * Get 1-Enabled; 0-Not Enabled. 
+     * @return Enable 1-Enabled; 0-Not Enabled.
      */
     public Long getEnable() {
         return this.Enable;
     }
 
     /**
-     * Set 1 enable, 0 not enabled
-     * @param Enable 1 enable, 0 not enabled
+     * Set 1-Enabled; 0-Not Enabled.
+     * @param Enable 1-Enabled; 0-Not Enabled.
      */
     public void setEnable(Long Enable) {
         this.Enable = Enable;
     }
 
     /**
-     * Get "Free"      
-   //Free edition
-   "Advanced"   //Advanced edition "Enterprise" //Enterprise edition "Ultimate"  
-   //Ultimate edition 
-     * @return CSIPProtect "Free"      
-   //Free edition
-   "Advanced"   //Advanced edition "Enterprise" //Enterprise edition "Ultimate"  
-   //Ultimate edition
+     * Get Free       // Free Edition  Advanced   //Advanced Edition Enterprise //Enterprise Edition Ultimate   //Premium Edition 
+     * @return CSIPProtect Free       // Free Edition  Advanced   //Advanced Edition Enterprise //Enterprise Edition Ultimate   //Premium Edition
      */
     public String getCSIPProtect() {
         return this.CSIPProtect;
     }
 
     /**
-     * Set "Free"      
-   //Free edition
-   "Advanced"   //Advanced edition "Enterprise" //Enterprise edition "Ultimate"  
-   //Ultimate edition
-     * @param CSIPProtect "Free"      
-   //Free edition
-   "Advanced"   //Advanced edition "Enterprise" //Enterprise edition "Ultimate"  
-   //Ultimate edition
+     * Set Free       // Free Edition  Advanced   //Advanced Edition Enterprise //Enterprise Edition Ultimate   //Premium Edition
+     * @param CSIPProtect Free       // Free Edition  Advanced   //Advanced Edition Enterprise //Enterprise Edition Ultimate   //Premium Edition
      */
     public void setCSIPProtect(String CSIPProtect) {
         this.CSIPProtect = CSIPProtect;
     }
 
     /**
-     * Get 1 indicates the quota consumer 
-     * @return QuotaConsumer 1 indicates the quota consumer
+     * Get 1 for quota consumer. 
+     * @return QuotaConsumer 1 for quota consumer.
      */
     public Long getQuotaConsumer() {
         return this.QuotaConsumer;
     }
 
     /**
-     * Set 1 indicates the quota consumer
-     * @param QuotaConsumer 1 indicates the quota consumer
+     * Set 1 for quota consumer.
+     * @param QuotaConsumer 1 for quota consumer.
      */
     public void setQuotaConsumer(Long QuotaConsumer) {
         this.QuotaConsumer = QuotaConsumer;
     }
 
     /**
-     * Get Account type: 0 for Tencent Cloud account, 1 for AWS account 
-     * @return CloudType Account type: 0 for Tencent Cloud account, 1 for AWS account
+     * Get Account Type. 0 for Tencent Cloud account; 1 for AWS account. 
+     * @return CloudType Account Type. 0 for Tencent Cloud account; 1 for AWS account.
      */
     public Long getCloudType() {
         return this.CloudType;
     }
 
     /**
-     * Set Account type: 0 for Tencent Cloud account, 1 for AWS account
-     * @param CloudType Account type: 0 for Tencent Cloud account, 1 for AWS account
+     * Set Account Type. 0 for Tencent Cloud account; 1 for AWS account.
+     * @param CloudType Account Type. 0 for Tencent Cloud account; 1 for AWS account.
      */
     public void setCloudType(Long CloudType) {
         this.CloudType = CloudType;
     }
 
     /**
-     * Get 0 indicates the default value; 1 indicates 10 minutes; 2 indicates 1 hour; 3 indicates 24 hours 
-     * @return SyncFrequency 0 indicates the default value; 1 indicates 10 minutes; 2 indicates 1 hour; 3 indicates 24 hours
+     * Get 0 for default value, 1 for 10 minutes, 2 for 1 hour, 3 for 24 hours. 
+     * @return SyncFrequency 0 for default value, 1 for 10 minutes, 2 for 1 hour, 3 for 24 hours.
      */
     public Long getSyncFrequency() {
         return this.SyncFrequency;
     }
 
     /**
-     * Set 0 indicates the default value; 1 indicates 10 minutes; 2 indicates 1 hour; 3 indicates 24 hours
-     * @param SyncFrequency 0 indicates the default value; 1 indicates 10 minutes; 2 indicates 1 hour; 3 indicates 24 hours
+     * Set 0 for default value, 1 for 10 minutes, 2 for 1 hour, 3 for 24 hours.
+     * @param SyncFrequency 0 for default value, 1 for 10 minutes, 2 for 1 hour, 3 for 24 hours.
      */
     public void setSyncFrequency(Long SyncFrequency) {
         this.SyncFrequency = SyncFrequency;
     }
 
     /**
-     * Get Whether the multi-cloud account has expired 
-     * @return IsExpired Whether the multi-cloud account has expired
+     * Get Whether the multi-cloud account is expired. 
+     * @return IsExpired Whether the multi-cloud account is expired.
      */
     public Boolean getIsExpired() {
         return this.IsExpired;
     }
 
     /**
-     * Set Whether the multi-cloud account has expired
-     * @param IsExpired Whether the multi-cloud account has expired
+     * Set Whether the multi-cloud account is expired.
+     * @param IsExpired Whether the multi-cloud account is expired.
      */
     public void setIsExpired(Boolean IsExpired) {
         this.IsExpired = IsExpired;
     }
 
     /**
-     * Get Multi-cloud account permissions list 
-     * @return PermissionList Multi-cloud account permissions list
+     * Get Multi-Cloud Account Permission List 
+     * @return PermissionList Multi-Cloud Account Permission List
      */
     public String [] getPermissionList() {
         return this.PermissionList;
     }
 
     /**
-     * Set Multi-cloud account permissions list
-     * @param PermissionList Multi-cloud account permissions list
+     * Set Multi-Cloud Account Permission List
+     * @param PermissionList Multi-Cloud Account Permission List
      */
     public void setPermissionList(String [] PermissionList) {
         this.PermissionList = PermissionList;
@@ -545,40 +530,40 @@ public class OrganizationUserInfo extends AbstractModel {
     }
 
     /**
-     * Get 0 Tencent Cloud group account
-1 Tencent Cloud access account
-2 non-Tencent Cloud 
-     * @return TcMemberType 0 Tencent Cloud group account
-1 Tencent Cloud access account
-2 non-Tencent Cloud
+     * Get Tencent Cloud Group Account
+Tencent Cloud access account
+2: non-Tencent Cloud 
+     * @return TcMemberType Tencent Cloud Group Account
+Tencent Cloud access account
+2: non-Tencent Cloud
      */
     public Long getTcMemberType() {
         return this.TcMemberType;
     }
 
     /**
-     * Set 0 Tencent Cloud group account
-1 Tencent Cloud access account
-2 non-Tencent Cloud
-     * @param TcMemberType 0 Tencent Cloud group account
-1 Tencent Cloud access account
-2 non-Tencent Cloud
+     * Set Tencent Cloud Group Account
+Tencent Cloud access account
+2: non-Tencent Cloud
+     * @param TcMemberType Tencent Cloud Group Account
+Tencent Cloud access account
+2: non-Tencent Cloud
      */
     public void setTcMemberType(Long TcMemberType) {
         this.TcMemberType = TcMemberType;
     }
 
     /**
-     * Get Sub-account count 
-     * @return SubUserCount Sub-account count
+     * Get Number of sub-accounts. 
+     * @return SubUserCount Number of sub-accounts.
      */
     public Long getSubUserCount() {
         return this.SubUserCount;
     }
 
     /**
-     * Set Sub-account count
-     * @param SubUserCount Sub-account count
+     * Set Number of sub-accounts.
+     * @param SubUserCount Number of sub-accounts.
      */
     public void setSubUserCount(Long SubUserCount) {
         this.SubUserCount = SubUserCount;

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeExposuresRequest extends AbstractModel {
 
     /**
-    * Group Account Member ID
+    * <p>Group account member id</p>
     */
     @SerializedName("MemberId")
     @Expose
@@ -66,16 +66,16 @@ public class DescribeExposuresRequest extends AbstractModel {
     private String By;
 
     /**
-     * Get Group Account Member ID 
-     * @return MemberId Group Account Member ID
+     * Get <p>Group account member id</p> 
+     * @return MemberId <p>Group account member id</p>
      */
     public String [] getMemberId() {
         return this.MemberId;
     }
 
     /**
-     * Set Group Account Member ID
-     * @param MemberId Group Account Member ID
+     * Set <p>Group account member id</p>
+     * @param MemberId <p>Group account member id</p>
      */
     public void setMemberId(String [] MemberId) {
         this.MemberId = MemberId;

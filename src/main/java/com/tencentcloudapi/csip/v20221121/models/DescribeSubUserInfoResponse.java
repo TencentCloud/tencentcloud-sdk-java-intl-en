@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeSubUserInfoResponse extends AbstractModel {
 
     /**
-    * total
+    * Total number.
     */
     @SerializedName("TotalCount")
     @Expose
@@ -38,14 +38,14 @@ public class DescribeSubUserInfoResponse extends AbstractModel {
     private SubUserInfo [] Data;
 
     /**
-    * Manufacturer Enumeration List
+    * Manufacturer list
     */
     @SerializedName("CloudTypeLst")
     @Expose
     private FilterDataObject [] CloudTypeLst;
 
     /**
-    * Enumeration of appid of the main account
+    * Enumerate appid belonging to main account
     */
     @SerializedName("OwnerAppIDLst")
     @Expose
@@ -59,16 +59,16 @@ public class DescribeSubUserInfoResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get total 
-     * @return TotalCount total
+     * Get Total number. 
+     * @return TotalCount Total number.
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set total
-     * @param TotalCount total
+     * Set Total number.
+     * @param TotalCount Total number.
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
@@ -91,32 +91,32 @@ public class DescribeSubUserInfoResponse extends AbstractModel {
     }
 
     /**
-     * Get Manufacturer Enumeration List 
-     * @return CloudTypeLst Manufacturer Enumeration List
+     * Get Manufacturer list 
+     * @return CloudTypeLst Manufacturer list
      */
     public FilterDataObject [] getCloudTypeLst() {
         return this.CloudTypeLst;
     }
 
     /**
-     * Set Manufacturer Enumeration List
-     * @param CloudTypeLst Manufacturer Enumeration List
+     * Set Manufacturer list
+     * @param CloudTypeLst Manufacturer list
      */
     public void setCloudTypeLst(FilterDataObject [] CloudTypeLst) {
         this.CloudTypeLst = CloudTypeLst;
     }
 
     /**
-     * Get Enumeration of appid of the main account 
-     * @return OwnerAppIDLst Enumeration of appid of the main account
+     * Get Enumerate appid belonging to main account 
+     * @return OwnerAppIDLst Enumerate appid belonging to main account
      */
     public FilterDataObject [] getOwnerAppIDLst() {
         return this.OwnerAppIDLst;
     }
 
     /**
-     * Set Enumeration of appid of the main account
-     * @param OwnerAppIDLst Enumeration of appid of the main account
+     * Set Enumerate appid belonging to main account
+     * @param OwnerAppIDLst Enumerate appid belonging to main account
      */
     public void setOwnerAppIDLst(FilterDataObject [] OwnerAppIDLst) {
         this.OwnerAppIDLst = OwnerAppIDLst;

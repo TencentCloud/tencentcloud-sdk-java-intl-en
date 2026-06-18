@@ -24,207 +24,207 @@ import java.util.HashMap;
 public class ModifyLoginWhiteRecordRequest extends AbstractModel {
 
     /**
-    * Allowlisted users (Multiple users are separated by commas.)
+    * <p>Allowlisted users (multiple users separated by commas)</p>
     */
     @SerializedName("UserName")
     @Expose
     private String UserName;
 
     /**
-    * Allowlisted dimension information recorded after the update
+    * <p>Allowlisted dimension information recorded after the update</p>
     */
     @SerializedName("SrcIp")
     @Expose
     private String SrcIp;
 
     /**
-    * Start time
+    * <p>Start time.</p>
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * End time
+    * <p>End time.</p>
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-    * Remarks
+    * <p>Remark</p>
     */
     @SerializedName("Remark")
     @Expose
     private String Remark;
 
     /**
-    * Whether it applies to all servers: 0: no; 1: yes
+    * <p>Whether it applies to all servers: 0 - no; 1 - yes</p>
     */
     @SerializedName("IsGlobal")
     @Expose
     private Long IsGlobal;
 
     /**
-    * Allowlist ID
+    * <p>Allowlist ID</p>
     */
     @SerializedName("Id")
     @Expose
     private Long Id;
 
     /**
-    * Server list
+    * <p>Server list</p>
     */
     @SerializedName("Hosts")
     @Expose
     private HostInfo [] Hosts;
 
     /**
-    * Region list
+    * <p>Region list</p>
     */
     @SerializedName("Places")
     @Expose
     private Place [] Places;
 
     /**
-     * Get Allowlisted users (Multiple users are separated by commas.) 
-     * @return UserName Allowlisted users (Multiple users are separated by commas.)
+     * Get <p>Allowlisted users (multiple users separated by commas)</p> 
+     * @return UserName <p>Allowlisted users (multiple users separated by commas)</p>
      */
     public String getUserName() {
         return this.UserName;
     }
 
     /**
-     * Set Allowlisted users (Multiple users are separated by commas.)
-     * @param UserName Allowlisted users (Multiple users are separated by commas.)
+     * Set <p>Allowlisted users (multiple users separated by commas)</p>
+     * @param UserName <p>Allowlisted users (multiple users separated by commas)</p>
      */
     public void setUserName(String UserName) {
         this.UserName = UserName;
     }
 
     /**
-     * Get Allowlisted dimension information recorded after the update 
-     * @return SrcIp Allowlisted dimension information recorded after the update
+     * Get <p>Allowlisted dimension information recorded after the update</p> 
+     * @return SrcIp <p>Allowlisted dimension information recorded after the update</p>
      */
     public String getSrcIp() {
         return this.SrcIp;
     }
 
     /**
-     * Set Allowlisted dimension information recorded after the update
-     * @param SrcIp Allowlisted dimension information recorded after the update
+     * Set <p>Allowlisted dimension information recorded after the update</p>
+     * @param SrcIp <p>Allowlisted dimension information recorded after the update</p>
      */
     public void setSrcIp(String SrcIp) {
         this.SrcIp = SrcIp;
     }
 
     /**
-     * Get Start time 
-     * @return StartTime Start time
+     * Get <p>Start time.</p> 
+     * @return StartTime <p>Start time.</p>
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set Start time
-     * @param StartTime Start time
+     * Set <p>Start time.</p>
+     * @param StartTime <p>Start time.</p>
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get End time 
-     * @return EndTime End time
+     * Get <p>End time.</p> 
+     * @return EndTime <p>End time.</p>
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set End time
-     * @param EndTime End time
+     * Set <p>End time.</p>
+     * @param EndTime <p>End time.</p>
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get Remarks 
-     * @return Remark Remarks
+     * Get <p>Remark</p> 
+     * @return Remark <p>Remark</p>
      */
     public String getRemark() {
         return this.Remark;
     }
 
     /**
-     * Set Remarks
-     * @param Remark Remarks
+     * Set <p>Remark</p>
+     * @param Remark <p>Remark</p>
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;
     }
 
     /**
-     * Get Whether it applies to all servers: 0: no; 1: yes 
-     * @return IsGlobal Whether it applies to all servers: 0: no; 1: yes
+     * Get <p>Whether it applies to all servers: 0 - no; 1 - yes</p> 
+     * @return IsGlobal <p>Whether it applies to all servers: 0 - no; 1 - yes</p>
      */
     public Long getIsGlobal() {
         return this.IsGlobal;
     }
 
     /**
-     * Set Whether it applies to all servers: 0: no; 1: yes
-     * @param IsGlobal Whether it applies to all servers: 0: no; 1: yes
+     * Set <p>Whether it applies to all servers: 0 - no; 1 - yes</p>
+     * @param IsGlobal <p>Whether it applies to all servers: 0 - no; 1 - yes</p>
      */
     public void setIsGlobal(Long IsGlobal) {
         this.IsGlobal = IsGlobal;
     }
 
     /**
-     * Get Allowlist ID 
-     * @return Id Allowlist ID
+     * Get <p>Allowlist ID</p> 
+     * @return Id <p>Allowlist ID</p>
      */
     public Long getId() {
         return this.Id;
     }
 
     /**
-     * Set Allowlist ID
-     * @param Id Allowlist ID
+     * Set <p>Allowlist ID</p>
+     * @param Id <p>Allowlist ID</p>
      */
     public void setId(Long Id) {
         this.Id = Id;
     }
 
     /**
-     * Get Server list 
-     * @return Hosts Server list
+     * Get <p>Server list</p> 
+     * @return Hosts <p>Server list</p>
      */
     public HostInfo [] getHosts() {
         return this.Hosts;
     }
 
     /**
-     * Set Server list
-     * @param Hosts Server list
+     * Set <p>Server list</p>
+     * @param Hosts <p>Server list</p>
      */
     public void setHosts(HostInfo [] Hosts) {
         this.Hosts = Hosts;
     }
 
     /**
-     * Get Region list 
-     * @return Places Region list
+     * Get <p>Region list</p> 
+     * @return Places <p>Region list</p>
      */
     public Place [] getPlaces() {
         return this.Places;
     }
 
     /**
-     * Set Region list
-     * @param Places Region list
+     * Set <p>Region list</p>
+     * @param Places <p>Region list</p>
      */
     public void setPlaces(Place [] Places) {
         this.Places = Places;

@@ -24,863 +24,828 @@ import java.util.HashMap;
 public class Machine extends AbstractModel {
 
     /**
-    * Host name.
+    * <p>Host name.</p>
     */
     @SerializedName("MachineName")
     @Expose
     private String MachineName;
 
     /**
-    * Host System.
+    * <p>Host operating system.</p>
     */
     @SerializedName("MachineOs")
     @Expose
     private String MachineOs;
 
     /**
-    * Host status. <li>OFFLINE: Offline</li> <li>ONLINE: Online</li> <li>SHUTDOWN: Shutdown</li> <li>UNINSTALLED: No protection</li>	
+    * <p>Host status. <li>OFFLINE: Offline</li> <li>ONLINE: Online</li> <li>SHUTDOWN: Shut down</li> <li>UNINSTALLED: Unprotected</li></p>
     */
     @SerializedName("MachineStatus")
     @Expose
     private String MachineStatus;
 
     /**
-    * ONLINE Under protection; OFFLINE OFFLINE; UNINStALLED Not installed
+    * <p>ONLINE: Protected; OFFLINE: Offline; UNINSTALLED: Not installed</p>
     */
     @SerializedName("AgentStatus")
     @Expose
     private String AgentStatus;
 
     /**
-    * RUNNING; is shut down; to be recycled	
+    * <p>RUNNING: Running; STOPED: Shut down; EXPIRED: Pending reclamation</p>
     */
     @SerializedName("InstanceStatus")
     @Expose
     private String InstanceStatus;
 
     /**
-    * CWP UUID. If the CWP client is offline for a long time, an empty character is returned.
+    * <p>CWP Uuid. Returns an empty string if the client is offline long-term.</p>
     */
     @SerializedName("Uuid")
     @Expose
     private String Uuid;
 
     /**
-    * CVM or BM Machine Unique UUID.
+    * <p>Unique Uuid of a CVM or BM machine.</p>
     */
     @SerializedName("Quuid")
     @Expose
     private String Quuid;
 
     /**
-    * Number of vulnerabilities
+    * <p>Number of vulnerabilities.</p>
     */
     @SerializedName("VulNum")
     @Expose
     private Long VulNum;
 
     /**
-    * Host IP.
+    * <p>Host IP.</p>
     */
     @SerializedName("MachineIp")
     @Expose
     private String MachineIp;
 
     /**
-    * Whether the edition is Pro Edition
-<li>true: yes</li>
-<li>false: no</li>
+    * <p>Whether the host is Pro Edition.</p><li>true: Yes</li><li>false: No</li>
     */
     @SerializedName("IsProVersion")
     @Expose
     private Boolean IsProVersion;
 
     /**
-    * Public IP address of a host
+    * <p>Host public IP.</p>
     */
     @SerializedName("MachineWanIp")
     @Expose
     private String MachineWanIp;
 
     /**
-    * Host status
-<li>POSTPAY: postpaid, indicating pay-as-you-go mode  </li>
-<li>PREPAY: prepaid, indicating yearly/monthly subscription mode</li>
+    * <p>Host status.</p><li>POSTPAY: Postpaid (pay-as-you-go)</li><li>PREPAY: Prepaid (monthly or yearly subscription)</li>
     */
     @SerializedName("PayMode")
     @Expose
     private String PayMode;
 
     /**
-    * Number of Trojans
+    * <p>Number of trojans.</p>
     */
     @SerializedName("MalwareNum")
     @Expose
     private Long MalwareNum;
 
     /**
-    * Tag information
+    * <p>Tag information</p>
     */
     @SerializedName("Tag")
     @Expose
     private MachineTag [] Tag;
 
     /**
-    * Number of baseline risks
+    * <p>Number of baseline risks.</p>
     */
     @SerializedName("BaselineNum")
     @Expose
     private Long BaselineNum;
 
     /**
-    * Number of network risks
+    * <p>Number of network risks.</p>
     */
     @SerializedName("CyberAttackNum")
     @Expose
     private Long CyberAttackNum;
 
     /**
-    * Risk status
-<li>SAFE: Safe</li>
-<li>RISK: Risk</li>
-<li>UNKNOWN: Unknown</li>
+    * <p>Risk status.</p><li>SAFE: Safe</li><li>RISK: Risk</li><li>UNKNOWN: Unknown</li>
     */
     @SerializedName("SecurityStatus")
     @Expose
     private String SecurityStatus;
 
     /**
-    * Number of intrusion events
+    * <p>Number of intrusion events</p>
     */
     @SerializedName("InvasionNum")
     @Expose
     private Long InvasionNum;
 
     /**
-    * Region information
+    * <p>Region information</p>
     */
     @SerializedName("RegionInfo")
     @Expose
     private RegionInfo RegionInfo;
 
     /**
-    * Instance status: TERMINATED_PRO_VERSION - terminated
+    * <p>Instance status. TERMINATED_PRO_VERSION: terminated.</p>
     */
     @SerializedName("InstanceState")
     @Expose
     private String InstanceState;
 
     /**
-    * Tamper-proof; authorization status: 1 - authorized; 0 - unauthorized
+    * <p>Tamper-proof; authorization status: 1 - authorized; 0 - unauthorized</p>
     */
     @SerializedName("LicenseStatus")
     @Expose
     private Long LicenseStatus;
 
     /**
-    * Project ID
+    * <p>Project ID</p>
     */
     @SerializedName("ProjectId")
     @Expose
     private Long ProjectId;
 
     /**
-    * Whether there is an available asset scanning API: 0 - no; 1 - yes
+    * <p>Whether the asset scanning API is available. 0: No; 1: Yes</p>
     */
     @SerializedName("HasAssetScan")
     @Expose
     private Long HasAssetScan;
 
     /**
-    * Machine Zone Type. CVM - Cloud Virtual Machine; BM: Bare Metal; ECM: Edge Computing Machine; LH: Lightweight Application Server; Other: Hybrid Cloud Zone
+    * <p>Machine zone type. CVM: Cloud Virtual Machine; BM: Blackstone; ECM: Edge Computing Machine; LH: Lighthouse; Other: Hybrid cloud zone</p>
     */
     @SerializedName("MachineType")
     @Expose
     private String MachineType;
 
     /**
-    * Kernel version
+    * <p>Kernel version</p>
     */
     @SerializedName("KernelVersion")
     @Expose
     private String KernelVersion;
 
     /**
-    * Protection version: BASIC_VERSION - Basic Edition; PRO_VERSION - Professional Edition; Flagship - Ultimate Edition; GENERAL_DISCOUNT - Lightweight Edition
+    * <p>Protection edition: BASIC_VERSION: Basic Edition; PRO_VERSION: Pro Edition; Flagship: Ultimate Edition; GENERAL_DISCOUNT: Lighthouse Edition</p>
     */
     @SerializedName("ProtectType")
     @Expose
     private String ProtectType;
 
     /**
-    * Cloud Tag Information
+    * <p>Cloud tag information</p>
     */
     @SerializedName("CloudTags")
     @Expose
     private Tags [] CloudTags;
 
     /**
-    * Whether the host is added within 15 days. 0: Host not added within 15 days. 1: Host added within 15 days.
+    * <p>Whether the host was added within the last 15 days. 0: No; 1: Yes</p>
     */
     @SerializedName("IsAddedOnTheFifteen")
     @Expose
     private Long IsAddedOnTheFifteen;
 
     /**
-    * Host IP List
+    * <p>Host IP list</p>
     */
     @SerializedName("IpList")
     @Expose
     private String IpList;
 
     /**
-    * Network
+    * <p>Network</p>
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * Additional information
+    * <p>Additional information</p>
     */
     @SerializedName("MachineExtraInfo")
     @Expose
     private MachineExtraInfo MachineExtraInfo;
 
     /**
-    * Instance ID
+    * <p>Instance ID.</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Remarks
+    * <p>Remarks</p>
     */
     @SerializedName("Remark")
     @Expose
     private String Remark;
 
     /**
-    * Host security agent version
+    * <p>CWP agent version</p>
     */
     @SerializedName("AgentVersion")
     @Expose
     private String AgentVersion;
 
     /**
-    * 
+    * <p>APPID of the machine</p>
     */
     @SerializedName("AppId")
     @Expose
     private Long AppId;
 
     /**
-    * 
+    * <p>CSC paid edition</p>
     */
     @SerializedName("CSIPProtectType")
     @Expose
     private String CSIPProtectType;
 
     /**
-     * Get Host name. 
-     * @return MachineName Host name.
+     * Get <p>Host name.</p> 
+     * @return MachineName <p>Host name.</p>
      */
     public String getMachineName() {
         return this.MachineName;
     }
 
     /**
-     * Set Host name.
-     * @param MachineName Host name.
+     * Set <p>Host name.</p>
+     * @param MachineName <p>Host name.</p>
      */
     public void setMachineName(String MachineName) {
         this.MachineName = MachineName;
     }
 
     /**
-     * Get Host System. 
-     * @return MachineOs Host System.
+     * Get <p>Host operating system.</p> 
+     * @return MachineOs <p>Host operating system.</p>
      */
     public String getMachineOs() {
         return this.MachineOs;
     }
 
     /**
-     * Set Host System.
-     * @param MachineOs Host System.
+     * Set <p>Host operating system.</p>
+     * @param MachineOs <p>Host operating system.</p>
      */
     public void setMachineOs(String MachineOs) {
         this.MachineOs = MachineOs;
     }
 
     /**
-     * Get Host status. <li>OFFLINE: Offline</li> <li>ONLINE: Online</li> <li>SHUTDOWN: Shutdown</li> <li>UNINSTALLED: No protection</li>	 
-     * @return MachineStatus Host status. <li>OFFLINE: Offline</li> <li>ONLINE: Online</li> <li>SHUTDOWN: Shutdown</li> <li>UNINSTALLED: No protection</li>	
+     * Get <p>Host status. <li>OFFLINE: Offline</li> <li>ONLINE: Online</li> <li>SHUTDOWN: Shut down</li> <li>UNINSTALLED: Unprotected</li></p> 
+     * @return MachineStatus <p>Host status. <li>OFFLINE: Offline</li> <li>ONLINE: Online</li> <li>SHUTDOWN: Shut down</li> <li>UNINSTALLED: Unprotected</li></p>
      */
     public String getMachineStatus() {
         return this.MachineStatus;
     }
 
     /**
-     * Set Host status. <li>OFFLINE: Offline</li> <li>ONLINE: Online</li> <li>SHUTDOWN: Shutdown</li> <li>UNINSTALLED: No protection</li>	
-     * @param MachineStatus Host status. <li>OFFLINE: Offline</li> <li>ONLINE: Online</li> <li>SHUTDOWN: Shutdown</li> <li>UNINSTALLED: No protection</li>	
+     * Set <p>Host status. <li>OFFLINE: Offline</li> <li>ONLINE: Online</li> <li>SHUTDOWN: Shut down</li> <li>UNINSTALLED: Unprotected</li></p>
+     * @param MachineStatus <p>Host status. <li>OFFLINE: Offline</li> <li>ONLINE: Online</li> <li>SHUTDOWN: Shut down</li> <li>UNINSTALLED: Unprotected</li></p>
      */
     public void setMachineStatus(String MachineStatus) {
         this.MachineStatus = MachineStatus;
     }
 
     /**
-     * Get ONLINE Under protection; OFFLINE OFFLINE; UNINStALLED Not installed 
-     * @return AgentStatus ONLINE Under protection; OFFLINE OFFLINE; UNINStALLED Not installed
+     * Get <p>ONLINE: Protected; OFFLINE: Offline; UNINSTALLED: Not installed</p> 
+     * @return AgentStatus <p>ONLINE: Protected; OFFLINE: Offline; UNINSTALLED: Not installed</p>
      */
     public String getAgentStatus() {
         return this.AgentStatus;
     }
 
     /**
-     * Set ONLINE Under protection; OFFLINE OFFLINE; UNINStALLED Not installed
-     * @param AgentStatus ONLINE Under protection; OFFLINE OFFLINE; UNINStALLED Not installed
+     * Set <p>ONLINE: Protected; OFFLINE: Offline; UNINSTALLED: Not installed</p>
+     * @param AgentStatus <p>ONLINE: Protected; OFFLINE: Offline; UNINSTALLED: Not installed</p>
      */
     public void setAgentStatus(String AgentStatus) {
         this.AgentStatus = AgentStatus;
     }
 
     /**
-     * Get RUNNING; is shut down; to be recycled	 
-     * @return InstanceStatus RUNNING; is shut down; to be recycled	
+     * Get <p>RUNNING: Running; STOPED: Shut down; EXPIRED: Pending reclamation</p> 
+     * @return InstanceStatus <p>RUNNING: Running; STOPED: Shut down; EXPIRED: Pending reclamation</p>
      */
     public String getInstanceStatus() {
         return this.InstanceStatus;
     }
 
     /**
-     * Set RUNNING; is shut down; to be recycled	
-     * @param InstanceStatus RUNNING; is shut down; to be recycled	
+     * Set <p>RUNNING: Running; STOPED: Shut down; EXPIRED: Pending reclamation</p>
+     * @param InstanceStatus <p>RUNNING: Running; STOPED: Shut down; EXPIRED: Pending reclamation</p>
      */
     public void setInstanceStatus(String InstanceStatus) {
         this.InstanceStatus = InstanceStatus;
     }
 
     /**
-     * Get CWP UUID. If the CWP client is offline for a long time, an empty character is returned. 
-     * @return Uuid CWP UUID. If the CWP client is offline for a long time, an empty character is returned.
+     * Get <p>CWP Uuid. Returns an empty string if the client is offline long-term.</p> 
+     * @return Uuid <p>CWP Uuid. Returns an empty string if the client is offline long-term.</p>
      */
     public String getUuid() {
         return this.Uuid;
     }
 
     /**
-     * Set CWP UUID. If the CWP client is offline for a long time, an empty character is returned.
-     * @param Uuid CWP UUID. If the CWP client is offline for a long time, an empty character is returned.
+     * Set <p>CWP Uuid. Returns an empty string if the client is offline long-term.</p>
+     * @param Uuid <p>CWP Uuid. Returns an empty string if the client is offline long-term.</p>
      */
     public void setUuid(String Uuid) {
         this.Uuid = Uuid;
     }
 
     /**
-     * Get CVM or BM Machine Unique UUID. 
-     * @return Quuid CVM or BM Machine Unique UUID.
+     * Get <p>Unique Uuid of a CVM or BM machine.</p> 
+     * @return Quuid <p>Unique Uuid of a CVM or BM machine.</p>
      */
     public String getQuuid() {
         return this.Quuid;
     }
 
     /**
-     * Set CVM or BM Machine Unique UUID.
-     * @param Quuid CVM or BM Machine Unique UUID.
+     * Set <p>Unique Uuid of a CVM or BM machine.</p>
+     * @param Quuid <p>Unique Uuid of a CVM or BM machine.</p>
      */
     public void setQuuid(String Quuid) {
         this.Quuid = Quuid;
     }
 
     /**
-     * Get Number of vulnerabilities 
-     * @return VulNum Number of vulnerabilities
+     * Get <p>Number of vulnerabilities.</p> 
+     * @return VulNum <p>Number of vulnerabilities.</p>
      */
     public Long getVulNum() {
         return this.VulNum;
     }
 
     /**
-     * Set Number of vulnerabilities
-     * @param VulNum Number of vulnerabilities
+     * Set <p>Number of vulnerabilities.</p>
+     * @param VulNum <p>Number of vulnerabilities.</p>
      */
     public void setVulNum(Long VulNum) {
         this.VulNum = VulNum;
     }
 
     /**
-     * Get Host IP. 
-     * @return MachineIp Host IP.
+     * Get <p>Host IP.</p> 
+     * @return MachineIp <p>Host IP.</p>
      */
     public String getMachineIp() {
         return this.MachineIp;
     }
 
     /**
-     * Set Host IP.
-     * @param MachineIp Host IP.
+     * Set <p>Host IP.</p>
+     * @param MachineIp <p>Host IP.</p>
      */
     public void setMachineIp(String MachineIp) {
         this.MachineIp = MachineIp;
     }
 
     /**
-     * Get Whether the edition is Pro Edition
-<li>true: yes</li>
-<li>false: no</li> 
-     * @return IsProVersion Whether the edition is Pro Edition
-<li>true: yes</li>
-<li>false: no</li>
+     * Get <p>Whether the host is Pro Edition.</p><li>true: Yes</li><li>false: No</li> 
+     * @return IsProVersion <p>Whether the host is Pro Edition.</p><li>true: Yes</li><li>false: No</li>
      */
     public Boolean getIsProVersion() {
         return this.IsProVersion;
     }
 
     /**
-     * Set Whether the edition is Pro Edition
-<li>true: yes</li>
-<li>false: no</li>
-     * @param IsProVersion Whether the edition is Pro Edition
-<li>true: yes</li>
-<li>false: no</li>
+     * Set <p>Whether the host is Pro Edition.</p><li>true: Yes</li><li>false: No</li>
+     * @param IsProVersion <p>Whether the host is Pro Edition.</p><li>true: Yes</li><li>false: No</li>
      */
     public void setIsProVersion(Boolean IsProVersion) {
         this.IsProVersion = IsProVersion;
     }
 
     /**
-     * Get Public IP address of a host 
-     * @return MachineWanIp Public IP address of a host
+     * Get <p>Host public IP.</p> 
+     * @return MachineWanIp <p>Host public IP.</p>
      */
     public String getMachineWanIp() {
         return this.MachineWanIp;
     }
 
     /**
-     * Set Public IP address of a host
-     * @param MachineWanIp Public IP address of a host
+     * Set <p>Host public IP.</p>
+     * @param MachineWanIp <p>Host public IP.</p>
      */
     public void setMachineWanIp(String MachineWanIp) {
         this.MachineWanIp = MachineWanIp;
     }
 
     /**
-     * Get Host status
-<li>POSTPAY: postpaid, indicating pay-as-you-go mode  </li>
-<li>PREPAY: prepaid, indicating yearly/monthly subscription mode</li> 
-     * @return PayMode Host status
-<li>POSTPAY: postpaid, indicating pay-as-you-go mode  </li>
-<li>PREPAY: prepaid, indicating yearly/monthly subscription mode</li>
+     * Get <p>Host status.</p><li>POSTPAY: Postpaid (pay-as-you-go)</li><li>PREPAY: Prepaid (monthly or yearly subscription)</li> 
+     * @return PayMode <p>Host status.</p><li>POSTPAY: Postpaid (pay-as-you-go)</li><li>PREPAY: Prepaid (monthly or yearly subscription)</li>
      */
     public String getPayMode() {
         return this.PayMode;
     }
 
     /**
-     * Set Host status
-<li>POSTPAY: postpaid, indicating pay-as-you-go mode  </li>
-<li>PREPAY: prepaid, indicating yearly/monthly subscription mode</li>
-     * @param PayMode Host status
-<li>POSTPAY: postpaid, indicating pay-as-you-go mode  </li>
-<li>PREPAY: prepaid, indicating yearly/monthly subscription mode</li>
+     * Set <p>Host status.</p><li>POSTPAY: Postpaid (pay-as-you-go)</li><li>PREPAY: Prepaid (monthly or yearly subscription)</li>
+     * @param PayMode <p>Host status.</p><li>POSTPAY: Postpaid (pay-as-you-go)</li><li>PREPAY: Prepaid (monthly or yearly subscription)</li>
      */
     public void setPayMode(String PayMode) {
         this.PayMode = PayMode;
     }
 
     /**
-     * Get Number of Trojans 
-     * @return MalwareNum Number of Trojans
+     * Get <p>Number of trojans.</p> 
+     * @return MalwareNum <p>Number of trojans.</p>
      */
     public Long getMalwareNum() {
         return this.MalwareNum;
     }
 
     /**
-     * Set Number of Trojans
-     * @param MalwareNum Number of Trojans
+     * Set <p>Number of trojans.</p>
+     * @param MalwareNum <p>Number of trojans.</p>
      */
     public void setMalwareNum(Long MalwareNum) {
         this.MalwareNum = MalwareNum;
     }
 
     /**
-     * Get Tag information 
-     * @return Tag Tag information
+     * Get <p>Tag information</p> 
+     * @return Tag <p>Tag information</p>
      */
     public MachineTag [] getTag() {
         return this.Tag;
     }
 
     /**
-     * Set Tag information
-     * @param Tag Tag information
+     * Set <p>Tag information</p>
+     * @param Tag <p>Tag information</p>
      */
     public void setTag(MachineTag [] Tag) {
         this.Tag = Tag;
     }
 
     /**
-     * Get Number of baseline risks 
-     * @return BaselineNum Number of baseline risks
+     * Get <p>Number of baseline risks.</p> 
+     * @return BaselineNum <p>Number of baseline risks.</p>
      */
     public Long getBaselineNum() {
         return this.BaselineNum;
     }
 
     /**
-     * Set Number of baseline risks
-     * @param BaselineNum Number of baseline risks
+     * Set <p>Number of baseline risks.</p>
+     * @param BaselineNum <p>Number of baseline risks.</p>
      */
     public void setBaselineNum(Long BaselineNum) {
         this.BaselineNum = BaselineNum;
     }
 
     /**
-     * Get Number of network risks 
-     * @return CyberAttackNum Number of network risks
+     * Get <p>Number of network risks.</p> 
+     * @return CyberAttackNum <p>Number of network risks.</p>
      */
     public Long getCyberAttackNum() {
         return this.CyberAttackNum;
     }
 
     /**
-     * Set Number of network risks
-     * @param CyberAttackNum Number of network risks
+     * Set <p>Number of network risks.</p>
+     * @param CyberAttackNum <p>Number of network risks.</p>
      */
     public void setCyberAttackNum(Long CyberAttackNum) {
         this.CyberAttackNum = CyberAttackNum;
     }
 
     /**
-     * Get Risk status
-<li>SAFE: Safe</li>
-<li>RISK: Risk</li>
-<li>UNKNOWN: Unknown</li> 
-     * @return SecurityStatus Risk status
-<li>SAFE: Safe</li>
-<li>RISK: Risk</li>
-<li>UNKNOWN: Unknown</li>
+     * Get <p>Risk status.</p><li>SAFE: Safe</li><li>RISK: Risk</li><li>UNKNOWN: Unknown</li> 
+     * @return SecurityStatus <p>Risk status.</p><li>SAFE: Safe</li><li>RISK: Risk</li><li>UNKNOWN: Unknown</li>
      */
     public String getSecurityStatus() {
         return this.SecurityStatus;
     }
 
     /**
-     * Set Risk status
-<li>SAFE: Safe</li>
-<li>RISK: Risk</li>
-<li>UNKNOWN: Unknown</li>
-     * @param SecurityStatus Risk status
-<li>SAFE: Safe</li>
-<li>RISK: Risk</li>
-<li>UNKNOWN: Unknown</li>
+     * Set <p>Risk status.</p><li>SAFE: Safe</li><li>RISK: Risk</li><li>UNKNOWN: Unknown</li>
+     * @param SecurityStatus <p>Risk status.</p><li>SAFE: Safe</li><li>RISK: Risk</li><li>UNKNOWN: Unknown</li>
      */
     public void setSecurityStatus(String SecurityStatus) {
         this.SecurityStatus = SecurityStatus;
     }
 
     /**
-     * Get Number of intrusion events 
-     * @return InvasionNum Number of intrusion events
+     * Get <p>Number of intrusion events</p> 
+     * @return InvasionNum <p>Number of intrusion events</p>
      */
     public Long getInvasionNum() {
         return this.InvasionNum;
     }
 
     /**
-     * Set Number of intrusion events
-     * @param InvasionNum Number of intrusion events
+     * Set <p>Number of intrusion events</p>
+     * @param InvasionNum <p>Number of intrusion events</p>
      */
     public void setInvasionNum(Long InvasionNum) {
         this.InvasionNum = InvasionNum;
     }
 
     /**
-     * Get Region information 
-     * @return RegionInfo Region information
+     * Get <p>Region information</p> 
+     * @return RegionInfo <p>Region information</p>
      */
     public RegionInfo getRegionInfo() {
         return this.RegionInfo;
     }
 
     /**
-     * Set Region information
-     * @param RegionInfo Region information
+     * Set <p>Region information</p>
+     * @param RegionInfo <p>Region information</p>
      */
     public void setRegionInfo(RegionInfo RegionInfo) {
         this.RegionInfo = RegionInfo;
     }
 
     /**
-     * Get Instance status: TERMINATED_PRO_VERSION - terminated 
-     * @return InstanceState Instance status: TERMINATED_PRO_VERSION - terminated
+     * Get <p>Instance status. TERMINATED_PRO_VERSION: terminated.</p> 
+     * @return InstanceState <p>Instance status. TERMINATED_PRO_VERSION: terminated.</p>
      */
     public String getInstanceState() {
         return this.InstanceState;
     }
 
     /**
-     * Set Instance status: TERMINATED_PRO_VERSION - terminated
-     * @param InstanceState Instance status: TERMINATED_PRO_VERSION - terminated
+     * Set <p>Instance status. TERMINATED_PRO_VERSION: terminated.</p>
+     * @param InstanceState <p>Instance status. TERMINATED_PRO_VERSION: terminated.</p>
      */
     public void setInstanceState(String InstanceState) {
         this.InstanceState = InstanceState;
     }
 
     /**
-     * Get Tamper-proof; authorization status: 1 - authorized; 0 - unauthorized 
-     * @return LicenseStatus Tamper-proof; authorization status: 1 - authorized; 0 - unauthorized
+     * Get <p>Tamper-proof; authorization status: 1 - authorized; 0 - unauthorized</p> 
+     * @return LicenseStatus <p>Tamper-proof; authorization status: 1 - authorized; 0 - unauthorized</p>
      */
     public Long getLicenseStatus() {
         return this.LicenseStatus;
     }
 
     /**
-     * Set Tamper-proof; authorization status: 1 - authorized; 0 - unauthorized
-     * @param LicenseStatus Tamper-proof; authorization status: 1 - authorized; 0 - unauthorized
+     * Set <p>Tamper-proof; authorization status: 1 - authorized; 0 - unauthorized</p>
+     * @param LicenseStatus <p>Tamper-proof; authorization status: 1 - authorized; 0 - unauthorized</p>
      */
     public void setLicenseStatus(Long LicenseStatus) {
         this.LicenseStatus = LicenseStatus;
     }
 
     /**
-     * Get Project ID 
-     * @return ProjectId Project ID
+     * Get <p>Project ID</p> 
+     * @return ProjectId <p>Project ID</p>
      */
     public Long getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set Project ID
-     * @param ProjectId Project ID
+     * Set <p>Project ID</p>
+     * @param ProjectId <p>Project ID</p>
      */
     public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;
     }
 
     /**
-     * Get Whether there is an available asset scanning API: 0 - no; 1 - yes 
-     * @return HasAssetScan Whether there is an available asset scanning API: 0 - no; 1 - yes
+     * Get <p>Whether the asset scanning API is available. 0: No; 1: Yes</p> 
+     * @return HasAssetScan <p>Whether the asset scanning API is available. 0: No; 1: Yes</p>
      */
     public Long getHasAssetScan() {
         return this.HasAssetScan;
     }
 
     /**
-     * Set Whether there is an available asset scanning API: 0 - no; 1 - yes
-     * @param HasAssetScan Whether there is an available asset scanning API: 0 - no; 1 - yes
+     * Set <p>Whether the asset scanning API is available. 0: No; 1: Yes</p>
+     * @param HasAssetScan <p>Whether the asset scanning API is available. 0: No; 1: Yes</p>
      */
     public void setHasAssetScan(Long HasAssetScan) {
         this.HasAssetScan = HasAssetScan;
     }
 
     /**
-     * Get Machine Zone Type. CVM - Cloud Virtual Machine; BM: Bare Metal; ECM: Edge Computing Machine; LH: Lightweight Application Server; Other: Hybrid Cloud Zone 
-     * @return MachineType Machine Zone Type. CVM - Cloud Virtual Machine; BM: Bare Metal; ECM: Edge Computing Machine; LH: Lightweight Application Server; Other: Hybrid Cloud Zone
+     * Get <p>Machine zone type. CVM: Cloud Virtual Machine; BM: Blackstone; ECM: Edge Computing Machine; LH: Lighthouse; Other: Hybrid cloud zone</p> 
+     * @return MachineType <p>Machine zone type. CVM: Cloud Virtual Machine; BM: Blackstone; ECM: Edge Computing Machine; LH: Lighthouse; Other: Hybrid cloud zone</p>
      */
     public String getMachineType() {
         return this.MachineType;
     }
 
     /**
-     * Set Machine Zone Type. CVM - Cloud Virtual Machine; BM: Bare Metal; ECM: Edge Computing Machine; LH: Lightweight Application Server; Other: Hybrid Cloud Zone
-     * @param MachineType Machine Zone Type. CVM - Cloud Virtual Machine; BM: Bare Metal; ECM: Edge Computing Machine; LH: Lightweight Application Server; Other: Hybrid Cloud Zone
+     * Set <p>Machine zone type. CVM: Cloud Virtual Machine; BM: Blackstone; ECM: Edge Computing Machine; LH: Lighthouse; Other: Hybrid cloud zone</p>
+     * @param MachineType <p>Machine zone type. CVM: Cloud Virtual Machine; BM: Blackstone; ECM: Edge Computing Machine; LH: Lighthouse; Other: Hybrid cloud zone</p>
      */
     public void setMachineType(String MachineType) {
         this.MachineType = MachineType;
     }
 
     /**
-     * Get Kernel version 
-     * @return KernelVersion Kernel version
+     * Get <p>Kernel version</p> 
+     * @return KernelVersion <p>Kernel version</p>
      */
     public String getKernelVersion() {
         return this.KernelVersion;
     }
 
     /**
-     * Set Kernel version
-     * @param KernelVersion Kernel version
+     * Set <p>Kernel version</p>
+     * @param KernelVersion <p>Kernel version</p>
      */
     public void setKernelVersion(String KernelVersion) {
         this.KernelVersion = KernelVersion;
     }
 
     /**
-     * Get Protection version: BASIC_VERSION - Basic Edition; PRO_VERSION - Professional Edition; Flagship - Ultimate Edition; GENERAL_DISCOUNT - Lightweight Edition 
-     * @return ProtectType Protection version: BASIC_VERSION - Basic Edition; PRO_VERSION - Professional Edition; Flagship - Ultimate Edition; GENERAL_DISCOUNT - Lightweight Edition
+     * Get <p>Protection edition: BASIC_VERSION: Basic Edition; PRO_VERSION: Pro Edition; Flagship: Ultimate Edition; GENERAL_DISCOUNT: Lighthouse Edition</p> 
+     * @return ProtectType <p>Protection edition: BASIC_VERSION: Basic Edition; PRO_VERSION: Pro Edition; Flagship: Ultimate Edition; GENERAL_DISCOUNT: Lighthouse Edition</p>
      */
     public String getProtectType() {
         return this.ProtectType;
     }
 
     /**
-     * Set Protection version: BASIC_VERSION - Basic Edition; PRO_VERSION - Professional Edition; Flagship - Ultimate Edition; GENERAL_DISCOUNT - Lightweight Edition
-     * @param ProtectType Protection version: BASIC_VERSION - Basic Edition; PRO_VERSION - Professional Edition; Flagship - Ultimate Edition; GENERAL_DISCOUNT - Lightweight Edition
+     * Set <p>Protection edition: BASIC_VERSION: Basic Edition; PRO_VERSION: Pro Edition; Flagship: Ultimate Edition; GENERAL_DISCOUNT: Lighthouse Edition</p>
+     * @param ProtectType <p>Protection edition: BASIC_VERSION: Basic Edition; PRO_VERSION: Pro Edition; Flagship: Ultimate Edition; GENERAL_DISCOUNT: Lighthouse Edition</p>
      */
     public void setProtectType(String ProtectType) {
         this.ProtectType = ProtectType;
     }
 
     /**
-     * Get Cloud Tag Information 
-     * @return CloudTags Cloud Tag Information
+     * Get <p>Cloud tag information</p> 
+     * @return CloudTags <p>Cloud tag information</p>
      */
     public Tags [] getCloudTags() {
         return this.CloudTags;
     }
 
     /**
-     * Set Cloud Tag Information
-     * @param CloudTags Cloud Tag Information
+     * Set <p>Cloud tag information</p>
+     * @param CloudTags <p>Cloud tag information</p>
      */
     public void setCloudTags(Tags [] CloudTags) {
         this.CloudTags = CloudTags;
     }
 
     /**
-     * Get Whether the host is added within 15 days. 0: Host not added within 15 days. 1: Host added within 15 days. 
-     * @return IsAddedOnTheFifteen Whether the host is added within 15 days. 0: Host not added within 15 days. 1: Host added within 15 days.
+     * Get <p>Whether the host was added within the last 15 days. 0: No; 1: Yes</p> 
+     * @return IsAddedOnTheFifteen <p>Whether the host was added within the last 15 days. 0: No; 1: Yes</p>
      */
     public Long getIsAddedOnTheFifteen() {
         return this.IsAddedOnTheFifteen;
     }
 
     /**
-     * Set Whether the host is added within 15 days. 0: Host not added within 15 days. 1: Host added within 15 days.
-     * @param IsAddedOnTheFifteen Whether the host is added within 15 days. 0: Host not added within 15 days. 1: Host added within 15 days.
+     * Set <p>Whether the host was added within the last 15 days. 0: No; 1: Yes</p>
+     * @param IsAddedOnTheFifteen <p>Whether the host was added within the last 15 days. 0: No; 1: Yes</p>
      */
     public void setIsAddedOnTheFifteen(Long IsAddedOnTheFifteen) {
         this.IsAddedOnTheFifteen = IsAddedOnTheFifteen;
     }
 
     /**
-     * Get Host IP List 
-     * @return IpList Host IP List
+     * Get <p>Host IP list</p> 
+     * @return IpList <p>Host IP list</p>
      */
     public String getIpList() {
         return this.IpList;
     }
 
     /**
-     * Set Host IP List
-     * @param IpList Host IP List
+     * Set <p>Host IP list</p>
+     * @param IpList <p>Host IP list</p>
      */
     public void setIpList(String IpList) {
         this.IpList = IpList;
     }
 
     /**
-     * Get Network 
-     * @return VpcId Network
+     * Get <p>Network</p> 
+     * @return VpcId <p>Network</p>
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set Network
-     * @param VpcId Network
+     * Set <p>Network</p>
+     * @param VpcId <p>Network</p>
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get Additional information 
-     * @return MachineExtraInfo Additional information
+     * Get <p>Additional information</p> 
+     * @return MachineExtraInfo <p>Additional information</p>
      */
     public MachineExtraInfo getMachineExtraInfo() {
         return this.MachineExtraInfo;
     }
 
     /**
-     * Set Additional information
-     * @param MachineExtraInfo Additional information
+     * Set <p>Additional information</p>
+     * @param MachineExtraInfo <p>Additional information</p>
      */
     public void setMachineExtraInfo(MachineExtraInfo MachineExtraInfo) {
         this.MachineExtraInfo = MachineExtraInfo;
     }
 
     /**
-     * Get Instance ID 
-     * @return InstanceId Instance ID
+     * Get <p>Instance ID.</p> 
+     * @return InstanceId <p>Instance ID.</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Instance ID
-     * @param InstanceId Instance ID
+     * Set <p>Instance ID.</p>
+     * @param InstanceId <p>Instance ID.</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Remarks 
-     * @return Remark Remarks
+     * Get <p>Remarks</p> 
+     * @return Remark <p>Remarks</p>
      */
     public String getRemark() {
         return this.Remark;
     }
 
     /**
-     * Set Remarks
-     * @param Remark Remarks
+     * Set <p>Remarks</p>
+     * @param Remark <p>Remarks</p>
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;
     }
 
     /**
-     * Get Host security agent version 
-     * @return AgentVersion Host security agent version
+     * Get <p>CWP agent version</p> 
+     * @return AgentVersion <p>CWP agent version</p>
      */
     public String getAgentVersion() {
         return this.AgentVersion;
     }
 
     /**
-     * Set Host security agent version
-     * @param AgentVersion Host security agent version
+     * Set <p>CWP agent version</p>
+     * @param AgentVersion <p>CWP agent version</p>
      */
     public void setAgentVersion(String AgentVersion) {
         this.AgentVersion = AgentVersion;
     }
 
     /**
-     * Get  
-     * @return AppId 
+     * Get <p>APPID of the machine</p> 
+     * @return AppId <p>APPID of the machine</p>
      */
     public Long getAppId() {
         return this.AppId;
     }
 
     /**
-     * Set 
-     * @param AppId 
+     * Set <p>APPID of the machine</p>
+     * @param AppId <p>APPID of the machine</p>
      */
     public void setAppId(Long AppId) {
         this.AppId = AppId;
     }
 
     /**
-     * Get  
-     * @return CSIPProtectType 
+     * Get <p>CSC paid edition</p> 
+     * @return CSIPProtectType <p>CSC paid edition</p>
      */
     public String getCSIPProtectType() {
         return this.CSIPProtectType;
     }
 
     /**
-     * Set 
-     * @param CSIPProtectType 
+     * Set <p>CSC paid edition</p>
+     * @param CSIPProtectType <p>CSC paid edition</p>
      */
     public void setCSIPProtectType(String CSIPProtectType) {
         this.CSIPProtectType = CSIPProtectType;

@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeLoginWhiteHostListResponse extends AbstractModel {
 
     /**
-    * Total number
+    * <p>Total.</p>
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * Server list
+    * <p>Server list</p>
     */
     @SerializedName("Hosts")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeLoginWhiteHostListResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Total number 
-     * @return TotalCount Total number
+     * Get <p>Total.</p> 
+     * @return TotalCount <p>Total.</p>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set Total number
-     * @param TotalCount Total number
+     * Set <p>Total.</p>
+     * @param TotalCount <p>Total.</p>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get Server list 
-     * @return Hosts Server list
+     * Get <p>Server list</p> 
+     * @return Hosts <p>Server list</p>
      */
     public HostDesc [] getHosts() {
         return this.Hosts;
     }
 
     /**
-     * Set Server list
-     * @param Hosts Server list
+     * Set <p>Server list</p>
+     * @param Hosts <p>Server list</p>
      */
     public void setHosts(HostDesc [] Hosts) {
         this.Hosts = Hosts;

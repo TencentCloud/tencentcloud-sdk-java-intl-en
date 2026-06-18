@@ -25,15 +25,13 @@ public class DomainAssetVO extends AbstractModel {
 
     /**
     * Asset ID
-Note: This field may return·null, indicating that no valid values can be obtained.
     */
     @SerializedName("AssetId")
     @Expose
     private String [] AssetId;
 
     /**
-    * Asset name
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * Asset Name
     */
     @SerializedName("AssetName")
     @Expose
@@ -41,31 +39,27 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
     /**
     * Asset type
-Note: This field may return·null, indicating that no valid values can be obtained.
     */
     @SerializedName("AssetType")
     @Expose
     private String [] AssetType;
 
     /**
-    * Region
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * Region.
     */
     @SerializedName("Region")
     @Expose
     private String [] Region;
 
     /**
-    * WAF status
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * WAF Status
     */
     @SerializedName("WAFStatus")
     @Expose
     private Long WAFStatus;
 
     /**
-    * Asset creation time
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * Asset Creation Time
     */
     @SerializedName("AssetCreateTime")
     @Expose
@@ -73,7 +67,6 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
     /**
     * Appid
-Note: This field may return·null, indicating that no valid values can be obtained.
     */
     @SerializedName("AppId")
     @Expose
@@ -81,7 +74,6 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
     /**
     * Account ID
-Note: This field may return·null, indicating that no valid values can be obtained.
     */
     @SerializedName("Uin")
     @Expose
@@ -89,31 +81,27 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
     /**
     * Account name
-Note: This field may return·null, indicating that no valid values can be obtained.
     */
     @SerializedName("NickName")
     @Expose
     private String NickName;
 
     /**
-    * Whether it's a critical asset
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * Core or Not
     */
     @SerializedName("IsCore")
     @Expose
     private Long IsCore;
 
     /**
-    * Whether it's a cloud asset
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * Whether it is on-cloud asset.
     */
     @SerializedName("IsCloud")
     @Expose
     private Long IsCloud;
 
     /**
-    * Network attacks
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * network attack
     */
     @SerializedName("Attack")
     @Expose
@@ -121,15 +109,13 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
     /**
     * Network access
-Note: This field may return·null, indicating that no valid values can be obtained.
     */
     @SerializedName("Access")
     @Expose
     private Long Access;
 
     /**
-    * Number of blocked attacks
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * Network Interception
     */
     @SerializedName("Intercept")
     @Expose
@@ -137,7 +123,6 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
     /**
     * Inbound peak bandwidth
-Note: This field may return·null, indicating that no valid values can be obtained.
     */
     @SerializedName("InBandwidth")
     @Expose
@@ -145,23 +130,20 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
     /**
     * Outbound peak bandwidth
-Note: This field may return·null, indicating that no valid values can be obtained.
     */
     @SerializedName("OutBandwidth")
     @Expose
     private String OutBandwidth;
 
     /**
-    * Total inbound traffic
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * Cumulative Inbound Traffic
     */
     @SerializedName("InFlow")
     @Expose
     private String InFlow;
 
     /**
-    * Total outbound traffic
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * Cumulative Outbound Traffic
     */
     @SerializedName("OutFlow")
     @Expose
@@ -169,177 +151,154 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
     /**
     * Last scan time
-Note: This field may return·null, indicating that no valid values can be obtained.
     */
     @SerializedName("LastScanTime")
     @Expose
     private String LastScanTime;
 
     /**
-    * Port risks
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * port risk
     */
     @SerializedName("PortRisk")
     @Expose
     private Long PortRisk;
 
     /**
-    * Vulnerabilities
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * Vulnerability risk
     */
     @SerializedName("VulnerabilityRisk")
     @Expose
     private Long VulnerabilityRisk;
 
     /**
-    * Configuration risks
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * Configuration risk
     */
     @SerializedName("ConfigurationRisk")
     @Expose
     private Long ConfigurationRisk;
 
     /**
-    * Scan tasks
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * Scan Task
     */
     @SerializedName("ScanTask")
     @Expose
     private Long ScanTask;
 
     /**
-    * Domain name
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * Domain
     */
     @SerializedName("SubDomain")
     @Expose
     private String SubDomain;
 
     /**
-    * Resolved IP
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * Resolve IP
     */
     @SerializedName("SeverIp")
     @Expose
     private String [] SeverIp;
 
     /**
-    * Bot access requests
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * Number of Bot Attacks
     */
     @SerializedName("BotCount")
     @Expose
     private Long BotCount;
 
     /**
-    * Weak password risks
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * Weak password risk
     */
     @SerializedName("WeakPassword")
     @Expose
     private Long WeakPassword;
 
     /**
-    * Content risks
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * Content risk
     */
     @SerializedName("WebContentRisk")
     @Expose
     private Long WebContentRisk;
 
     /**
-    * Tags
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * tag
     */
     @SerializedName("Tag")
     @Expose
     private Tag [] Tag;
 
     /**
-    * The type of associated instances.
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * Associated instance type
     */
     @SerializedName("SourceType")
     @Expose
     private String SourceType;
 
     /**
-    * Member ID
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * Member ID information
     */
     @SerializedName("MemberId")
     @Expose
     private String MemberId;
 
     /**
-    * CC attacks
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * CC Attack
     */
     @SerializedName("CCAttack")
     @Expose
     private Long CCAttack;
 
     /**
-    * Web attack
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * Web Attack
     */
     @SerializedName("WebAttack")
     @Expose
     private Long WebAttack;
 
     /**
-    * Services exposed to risks
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * Number of Risk Service Exposures
     */
     @SerializedName("ServiceRisk")
     @Expose
     private Long ServiceRisk;
 
     /**
-    * Whether it's a newly-added asset. Values: `1` (Yes), `0` (No)
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * New Asset or Not. 1: New
     */
     @SerializedName("IsNewAsset")
     @Expose
     private Long IsNewAsset;
 
     /**
-    * Random third-level domain name of the asset pending ownership verification
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * Random Layer-3 Domain of Assets to Be Recognized
     */
     @SerializedName("VerifyDomain")
     @Expose
     private String VerifyDomain;
 
     /**
-    * TXT record of the asset pending ownership verification
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * TXT Record Content of Pending Confirmation Assets
     */
     @SerializedName("VerifyTXTRecord")
     @Expose
     private String VerifyTXTRecord;
 
     /**
-    * Ownership verification status of the asset. `0`: Pending verification; `1`: Verified; `2`: Verifying; `3`: TXT record verification failed; `4`: Human verification failed.
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * Authentication Status of Assets Pending Recognition. 0: Pending Authentication; 1: Authentication Succeeded; 2: Authentication in Progress; 3: TXT Authentication Failed; 4: Manual Authentication Failed.
     */
     @SerializedName("VerifyStatus")
     @Expose
     private Long VerifyStatus;
 
     /**
-    * u200cNumber of bot attacks
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * Bot Access Count
     */
     @SerializedName("BotAccessCount")
     @Expose
     private Long BotAccessCount;
 
     /**
-     * Get Asset ID
-Note: This field may return·null, indicating that no valid values can be obtained. 
+     * Get Asset ID 
      * @return AssetId Asset ID
-Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public String [] getAssetId() {
         return this.AssetId;
@@ -347,39 +306,31 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
     /**
      * Set Asset ID
-Note: This field may return·null, indicating that no valid values can be obtained.
      * @param AssetId Asset ID
-Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public void setAssetId(String [] AssetId) {
         this.AssetId = AssetId;
     }
 
     /**
-     * Get Asset name
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return AssetName Asset name
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get Asset Name 
+     * @return AssetName Asset Name
      */
     public String [] getAssetName() {
         return this.AssetName;
     }
 
     /**
-     * Set Asset name
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param AssetName Asset name
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set Asset Name
+     * @param AssetName Asset Name
      */
     public void setAssetName(String [] AssetName) {
         this.AssetName = AssetName;
     }
 
     /**
-     * Get Asset type
-Note: This field may return·null, indicating that no valid values can be obtained. 
+     * Get Asset type 
      * @return AssetType Asset type
-Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public String [] getAssetType() {
         return this.AssetType;
@@ -387,79 +338,63 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
     /**
      * Set Asset type
-Note: This field may return·null, indicating that no valid values can be obtained.
      * @param AssetType Asset type
-Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public void setAssetType(String [] AssetType) {
         this.AssetType = AssetType;
     }
 
     /**
-     * Get Region
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return Region Region
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get Region. 
+     * @return Region Region.
      */
     public String [] getRegion() {
         return this.Region;
     }
 
     /**
-     * Set Region
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param Region Region
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set Region.
+     * @param Region Region.
      */
     public void setRegion(String [] Region) {
         this.Region = Region;
     }
 
     /**
-     * Get WAF status
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return WAFStatus WAF status
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get WAF Status 
+     * @return WAFStatus WAF Status
      */
     public Long getWAFStatus() {
         return this.WAFStatus;
     }
 
     /**
-     * Set WAF status
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param WAFStatus WAF status
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set WAF Status
+     * @param WAFStatus WAF Status
      */
     public void setWAFStatus(Long WAFStatus) {
         this.WAFStatus = WAFStatus;
     }
 
     /**
-     * Get Asset creation time
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return AssetCreateTime Asset creation time
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get Asset Creation Time 
+     * @return AssetCreateTime Asset Creation Time
      */
     public String getAssetCreateTime() {
         return this.AssetCreateTime;
     }
 
     /**
-     * Set Asset creation time
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param AssetCreateTime Asset creation time
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set Asset Creation Time
+     * @param AssetCreateTime Asset Creation Time
      */
     public void setAssetCreateTime(String AssetCreateTime) {
         this.AssetCreateTime = AssetCreateTime;
     }
 
     /**
-     * Get Appid
-Note: This field may return·null, indicating that no valid values can be obtained. 
+     * Get Appid 
      * @return AppId Appid
-Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public Long getAppId() {
         return this.AppId;
@@ -467,19 +402,15 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
     /**
      * Set Appid
-Note: This field may return·null, indicating that no valid values can be obtained.
      * @param AppId Appid
-Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public void setAppId(Long AppId) {
         this.AppId = AppId;
     }
 
     /**
-     * Get Account ID
-Note: This field may return·null, indicating that no valid values can be obtained. 
+     * Get Account ID 
      * @return Uin Account ID
-Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public String getUin() {
         return this.Uin;
@@ -487,19 +418,15 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
     /**
      * Set Account ID
-Note: This field may return·null, indicating that no valid values can be obtained.
      * @param Uin Account ID
-Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public void setUin(String Uin) {
         this.Uin = Uin;
     }
 
     /**
-     * Get Account name
-Note: This field may return·null, indicating that no valid values can be obtained. 
+     * Get Account name 
      * @return NickName Account name
-Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public String getNickName() {
         return this.NickName;
@@ -507,79 +434,63 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
     /**
      * Set Account name
-Note: This field may return·null, indicating that no valid values can be obtained.
      * @param NickName Account name
-Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public void setNickName(String NickName) {
         this.NickName = NickName;
     }
 
     /**
-     * Get Whether it's a critical asset
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return IsCore Whether it's a critical asset
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get Core or Not 
+     * @return IsCore Core or Not
      */
     public Long getIsCore() {
         return this.IsCore;
     }
 
     /**
-     * Set Whether it's a critical asset
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param IsCore Whether it's a critical asset
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set Core or Not
+     * @param IsCore Core or Not
      */
     public void setIsCore(Long IsCore) {
         this.IsCore = IsCore;
     }
 
     /**
-     * Get Whether it's a cloud asset
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return IsCloud Whether it's a cloud asset
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get Whether it is on-cloud asset. 
+     * @return IsCloud Whether it is on-cloud asset.
      */
     public Long getIsCloud() {
         return this.IsCloud;
     }
 
     /**
-     * Set Whether it's a cloud asset
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param IsCloud Whether it's a cloud asset
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set Whether it is on-cloud asset.
+     * @param IsCloud Whether it is on-cloud asset.
      */
     public void setIsCloud(Long IsCloud) {
         this.IsCloud = IsCloud;
     }
 
     /**
-     * Get Network attacks
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return Attack Network attacks
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get network attack 
+     * @return Attack network attack
      */
     public Long getAttack() {
         return this.Attack;
     }
 
     /**
-     * Set Network attacks
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param Attack Network attacks
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set network attack
+     * @param Attack network attack
      */
     public void setAttack(Long Attack) {
         this.Attack = Attack;
     }
 
     /**
-     * Get Network access
-Note: This field may return·null, indicating that no valid values can be obtained. 
+     * Get Network access 
      * @return Access Network access
-Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public Long getAccess() {
         return this.Access;
@@ -587,39 +498,31 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
     /**
      * Set Network access
-Note: This field may return·null, indicating that no valid values can be obtained.
      * @param Access Network access
-Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public void setAccess(Long Access) {
         this.Access = Access;
     }
 
     /**
-     * Get Number of blocked attacks
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return Intercept Number of blocked attacks
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get Network Interception 
+     * @return Intercept Network Interception
      */
     public Long getIntercept() {
         return this.Intercept;
     }
 
     /**
-     * Set Number of blocked attacks
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param Intercept Number of blocked attacks
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set Network Interception
+     * @param Intercept Network Interception
      */
     public void setIntercept(Long Intercept) {
         this.Intercept = Intercept;
     }
 
     /**
-     * Get Inbound peak bandwidth
-Note: This field may return·null, indicating that no valid values can be obtained. 
+     * Get Inbound peak bandwidth 
      * @return InBandwidth Inbound peak bandwidth
-Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public String getInBandwidth() {
         return this.InBandwidth;
@@ -627,19 +530,15 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
     /**
      * Set Inbound peak bandwidth
-Note: This field may return·null, indicating that no valid values can be obtained.
      * @param InBandwidth Inbound peak bandwidth
-Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public void setInBandwidth(String InBandwidth) {
         this.InBandwidth = InBandwidth;
     }
 
     /**
-     * Get Outbound peak bandwidth
-Note: This field may return·null, indicating that no valid values can be obtained. 
+     * Get Outbound peak bandwidth 
      * @return OutBandwidth Outbound peak bandwidth
-Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public String getOutBandwidth() {
         return this.OutBandwidth;
@@ -647,59 +546,47 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
     /**
      * Set Outbound peak bandwidth
-Note: This field may return·null, indicating that no valid values can be obtained.
      * @param OutBandwidth Outbound peak bandwidth
-Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public void setOutBandwidth(String OutBandwidth) {
         this.OutBandwidth = OutBandwidth;
     }
 
     /**
-     * Get Total inbound traffic
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return InFlow Total inbound traffic
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get Cumulative Inbound Traffic 
+     * @return InFlow Cumulative Inbound Traffic
      */
     public String getInFlow() {
         return this.InFlow;
     }
 
     /**
-     * Set Total inbound traffic
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param InFlow Total inbound traffic
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set Cumulative Inbound Traffic
+     * @param InFlow Cumulative Inbound Traffic
      */
     public void setInFlow(String InFlow) {
         this.InFlow = InFlow;
     }
 
     /**
-     * Get Total outbound traffic
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return OutFlow Total outbound traffic
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get Cumulative Outbound Traffic 
+     * @return OutFlow Cumulative Outbound Traffic
      */
     public String getOutFlow() {
         return this.OutFlow;
     }
 
     /**
-     * Set Total outbound traffic
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param OutFlow Total outbound traffic
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set Cumulative Outbound Traffic
+     * @param OutFlow Cumulative Outbound Traffic
      */
     public void setOutFlow(String OutFlow) {
         this.OutFlow = OutFlow;
     }
 
     /**
-     * Get Last scan time
-Note: This field may return·null, indicating that no valid values can be obtained. 
+     * Get Last scan time 
      * @return LastScanTime Last scan time
-Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public String getLastScanTime() {
         return this.LastScanTime;
@@ -707,409 +594,327 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
     /**
      * Set Last scan time
-Note: This field may return·null, indicating that no valid values can be obtained.
      * @param LastScanTime Last scan time
-Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public void setLastScanTime(String LastScanTime) {
         this.LastScanTime = LastScanTime;
     }
 
     /**
-     * Get Port risks
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return PortRisk Port risks
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get port risk 
+     * @return PortRisk port risk
      */
     public Long getPortRisk() {
         return this.PortRisk;
     }
 
     /**
-     * Set Port risks
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param PortRisk Port risks
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set port risk
+     * @param PortRisk port risk
      */
     public void setPortRisk(Long PortRisk) {
         this.PortRisk = PortRisk;
     }
 
     /**
-     * Get Vulnerabilities
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return VulnerabilityRisk Vulnerabilities
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get Vulnerability risk 
+     * @return VulnerabilityRisk Vulnerability risk
      */
     public Long getVulnerabilityRisk() {
         return this.VulnerabilityRisk;
     }
 
     /**
-     * Set Vulnerabilities
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param VulnerabilityRisk Vulnerabilities
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set Vulnerability risk
+     * @param VulnerabilityRisk Vulnerability risk
      */
     public void setVulnerabilityRisk(Long VulnerabilityRisk) {
         this.VulnerabilityRisk = VulnerabilityRisk;
     }
 
     /**
-     * Get Configuration risks
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return ConfigurationRisk Configuration risks
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get Configuration risk 
+     * @return ConfigurationRisk Configuration risk
      */
     public Long getConfigurationRisk() {
         return this.ConfigurationRisk;
     }
 
     /**
-     * Set Configuration risks
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param ConfigurationRisk Configuration risks
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set Configuration risk
+     * @param ConfigurationRisk Configuration risk
      */
     public void setConfigurationRisk(Long ConfigurationRisk) {
         this.ConfigurationRisk = ConfigurationRisk;
     }
 
     /**
-     * Get Scan tasks
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return ScanTask Scan tasks
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get Scan Task 
+     * @return ScanTask Scan Task
      */
     public Long getScanTask() {
         return this.ScanTask;
     }
 
     /**
-     * Set Scan tasks
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param ScanTask Scan tasks
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set Scan Task
+     * @param ScanTask Scan Task
      */
     public void setScanTask(Long ScanTask) {
         this.ScanTask = ScanTask;
     }
 
     /**
-     * Get Domain name
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return SubDomain Domain name
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get Domain 
+     * @return SubDomain Domain
      */
     public String getSubDomain() {
         return this.SubDomain;
     }
 
     /**
-     * Set Domain name
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param SubDomain Domain name
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set Domain
+     * @param SubDomain Domain
      */
     public void setSubDomain(String SubDomain) {
         this.SubDomain = SubDomain;
     }
 
     /**
-     * Get Resolved IP
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return SeverIp Resolved IP
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get Resolve IP 
+     * @return SeverIp Resolve IP
      */
     public String [] getSeverIp() {
         return this.SeverIp;
     }
 
     /**
-     * Set Resolved IP
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param SeverIp Resolved IP
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set Resolve IP
+     * @param SeverIp Resolve IP
      */
     public void setSeverIp(String [] SeverIp) {
         this.SeverIp = SeverIp;
     }
 
     /**
-     * Get Bot access requests
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return BotCount Bot access requests
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get Number of Bot Attacks 
+     * @return BotCount Number of Bot Attacks
      */
     public Long getBotCount() {
         return this.BotCount;
     }
 
     /**
-     * Set Bot access requests
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param BotCount Bot access requests
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set Number of Bot Attacks
+     * @param BotCount Number of Bot Attacks
      */
     public void setBotCount(Long BotCount) {
         this.BotCount = BotCount;
     }
 
     /**
-     * Get Weak password risks
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return WeakPassword Weak password risks
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get Weak password risk 
+     * @return WeakPassword Weak password risk
      */
     public Long getWeakPassword() {
         return this.WeakPassword;
     }
 
     /**
-     * Set Weak password risks
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param WeakPassword Weak password risks
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set Weak password risk
+     * @param WeakPassword Weak password risk
      */
     public void setWeakPassword(Long WeakPassword) {
         this.WeakPassword = WeakPassword;
     }
 
     /**
-     * Get Content risks
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return WebContentRisk Content risks
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get Content risk 
+     * @return WebContentRisk Content risk
      */
     public Long getWebContentRisk() {
         return this.WebContentRisk;
     }
 
     /**
-     * Set Content risks
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param WebContentRisk Content risks
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set Content risk
+     * @param WebContentRisk Content risk
      */
     public void setWebContentRisk(Long WebContentRisk) {
         this.WebContentRisk = WebContentRisk;
     }
 
     /**
-     * Get Tags
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return Tag Tags
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get tag 
+     * @return Tag tag
      */
     public Tag [] getTag() {
         return this.Tag;
     }
 
     /**
-     * Set Tags
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param Tag Tags
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set tag
+     * @param Tag tag
      */
     public void setTag(Tag [] Tag) {
         this.Tag = Tag;
     }
 
     /**
-     * Get The type of associated instances.
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return SourceType The type of associated instances.
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get Associated instance type 
+     * @return SourceType Associated instance type
      */
     public String getSourceType() {
         return this.SourceType;
     }
 
     /**
-     * Set The type of associated instances.
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param SourceType The type of associated instances.
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set Associated instance type
+     * @param SourceType Associated instance type
      */
     public void setSourceType(String SourceType) {
         this.SourceType = SourceType;
     }
 
     /**
-     * Get Member ID
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return MemberId Member ID
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get Member ID information 
+     * @return MemberId Member ID information
      */
     public String getMemberId() {
         return this.MemberId;
     }
 
     /**
-     * Set Member ID
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param MemberId Member ID
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set Member ID information
+     * @param MemberId Member ID information
      */
     public void setMemberId(String MemberId) {
         this.MemberId = MemberId;
     }
 
     /**
-     * Get CC attacks
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return CCAttack CC attacks
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get CC Attack 
+     * @return CCAttack CC Attack
      */
     public Long getCCAttack() {
         return this.CCAttack;
     }
 
     /**
-     * Set CC attacks
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param CCAttack CC attacks
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set CC Attack
+     * @param CCAttack CC Attack
      */
     public void setCCAttack(Long CCAttack) {
         this.CCAttack = CCAttack;
     }
 
     /**
-     * Get Web attack
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return WebAttack Web attack
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get Web Attack 
+     * @return WebAttack Web Attack
      */
     public Long getWebAttack() {
         return this.WebAttack;
     }
 
     /**
-     * Set Web attack
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param WebAttack Web attack
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set Web Attack
+     * @param WebAttack Web Attack
      */
     public void setWebAttack(Long WebAttack) {
         this.WebAttack = WebAttack;
     }
 
     /**
-     * Get Services exposed to risks
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return ServiceRisk Services exposed to risks
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get Number of Risk Service Exposures 
+     * @return ServiceRisk Number of Risk Service Exposures
      */
     public Long getServiceRisk() {
         return this.ServiceRisk;
     }
 
     /**
-     * Set Services exposed to risks
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param ServiceRisk Services exposed to risks
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set Number of Risk Service Exposures
+     * @param ServiceRisk Number of Risk Service Exposures
      */
     public void setServiceRisk(Long ServiceRisk) {
         this.ServiceRisk = ServiceRisk;
     }
 
     /**
-     * Get Whether it's a newly-added asset. Values: `1` (Yes), `0` (No)
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return IsNewAsset Whether it's a newly-added asset. Values: `1` (Yes), `0` (No)
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get New Asset or Not. 1: New 
+     * @return IsNewAsset New Asset or Not. 1: New
      */
     public Long getIsNewAsset() {
         return this.IsNewAsset;
     }
 
     /**
-     * Set Whether it's a newly-added asset. Values: `1` (Yes), `0` (No)
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param IsNewAsset Whether it's a newly-added asset. Values: `1` (Yes), `0` (No)
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set New Asset or Not. 1: New
+     * @param IsNewAsset New Asset or Not. 1: New
      */
     public void setIsNewAsset(Long IsNewAsset) {
         this.IsNewAsset = IsNewAsset;
     }
 
     /**
-     * Get Random third-level domain name of the asset pending ownership verification
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return VerifyDomain Random third-level domain name of the asset pending ownership verification
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get Random Layer-3 Domain of Assets to Be Recognized 
+     * @return VerifyDomain Random Layer-3 Domain of Assets to Be Recognized
      */
     public String getVerifyDomain() {
         return this.VerifyDomain;
     }
 
     /**
-     * Set Random third-level domain name of the asset pending ownership verification
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param VerifyDomain Random third-level domain name of the asset pending ownership verification
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set Random Layer-3 Domain of Assets to Be Recognized
+     * @param VerifyDomain Random Layer-3 Domain of Assets to Be Recognized
      */
     public void setVerifyDomain(String VerifyDomain) {
         this.VerifyDomain = VerifyDomain;
     }
 
     /**
-     * Get TXT record of the asset pending ownership verification
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return VerifyTXTRecord TXT record of the asset pending ownership verification
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get TXT Record Content of Pending Confirmation Assets 
+     * @return VerifyTXTRecord TXT Record Content of Pending Confirmation Assets
      */
     public String getVerifyTXTRecord() {
         return this.VerifyTXTRecord;
     }
 
     /**
-     * Set TXT record of the asset pending ownership verification
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param VerifyTXTRecord TXT record of the asset pending ownership verification
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set TXT Record Content of Pending Confirmation Assets
+     * @param VerifyTXTRecord TXT Record Content of Pending Confirmation Assets
      */
     public void setVerifyTXTRecord(String VerifyTXTRecord) {
         this.VerifyTXTRecord = VerifyTXTRecord;
     }
 
     /**
-     * Get Ownership verification status of the asset. `0`: Pending verification; `1`: Verified; `2`: Verifying; `3`: TXT record verification failed; `4`: Human verification failed.
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return VerifyStatus Ownership verification status of the asset. `0`: Pending verification; `1`: Verified; `2`: Verifying; `3`: TXT record verification failed; `4`: Human verification failed.
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get Authentication Status of Assets Pending Recognition. 0: Pending Authentication; 1: Authentication Succeeded; 2: Authentication in Progress; 3: TXT Authentication Failed; 4: Manual Authentication Failed. 
+     * @return VerifyStatus Authentication Status of Assets Pending Recognition. 0: Pending Authentication; 1: Authentication Succeeded; 2: Authentication in Progress; 3: TXT Authentication Failed; 4: Manual Authentication Failed.
      */
     public Long getVerifyStatus() {
         return this.VerifyStatus;
     }
 
     /**
-     * Set Ownership verification status of the asset. `0`: Pending verification; `1`: Verified; `2`: Verifying; `3`: TXT record verification failed; `4`: Human verification failed.
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param VerifyStatus Ownership verification status of the asset. `0`: Pending verification; `1`: Verified; `2`: Verifying; `3`: TXT record verification failed; `4`: Human verification failed.
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set Authentication Status of Assets Pending Recognition. 0: Pending Authentication; 1: Authentication Succeeded; 2: Authentication in Progress; 3: TXT Authentication Failed; 4: Manual Authentication Failed.
+     * @param VerifyStatus Authentication Status of Assets Pending Recognition. 0: Pending Authentication; 1: Authentication Succeeded; 2: Authentication in Progress; 3: TXT Authentication Failed; 4: Manual Authentication Failed.
      */
     public void setVerifyStatus(Long VerifyStatus) {
         this.VerifyStatus = VerifyStatus;
     }
 
     /**
-     * Get u200cNumber of bot attacks
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return BotAccessCount u200cNumber of bot attacks
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get Bot Access Count 
+     * @return BotAccessCount Bot Access Count
      */
     public Long getBotAccessCount() {
         return this.BotAccessCount;
     }
 
     /**
-     * Set u200cNumber of bot attacks
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param BotAccessCount u200cNumber of bot attacks
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set Bot Access Count
+     * @param BotAccessCount Bot Access Count
      */
     public void setBotAccessCount(Long BotAccessCount) {
         this.BotAccessCount = BotAccessCount;

@@ -24,32 +24,28 @@ import java.util.HashMap;
 public class DescribeTaskLogListResponse extends AbstractModel {
 
     /**
-    * Total number of entries
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Total quantity.
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * List of reports
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * Report List
     */
     @SerializedName("Data")
     @Expose
     private TaskLogInfo [] Data;
 
     /**
-    * Number of reports pending viewed
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * Pending Viewing Count
     */
     @SerializedName("NotViewNumber")
     @Expose
     private Long NotViewNumber;
 
     /**
-    * Number of report templates
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * Number of Report Templates
     */
     @SerializedName("ReportTemplateNumber")
     @Expose
@@ -63,80 +59,64 @@ Note: This field may return·null, indicating that no valid values can be obtain
     private String RequestId;
 
     /**
-     * Get Total number of entries
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return TotalCount Total number of entries
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Total quantity. 
+     * @return TotalCount Total quantity.
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set Total number of entries
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param TotalCount Total number of entries
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Total quantity.
+     * @param TotalCount Total quantity.
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get List of reports
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return Data List of reports
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get Report List 
+     * @return Data Report List
      */
     public TaskLogInfo [] getData() {
         return this.Data;
     }
 
     /**
-     * Set List of reports
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param Data List of reports
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set Report List
+     * @param Data Report List
      */
     public void setData(TaskLogInfo [] Data) {
         this.Data = Data;
     }
 
     /**
-     * Get Number of reports pending viewed
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return NotViewNumber Number of reports pending viewed
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get Pending Viewing Count 
+     * @return NotViewNumber Pending Viewing Count
      */
     public Long getNotViewNumber() {
         return this.NotViewNumber;
     }
 
     /**
-     * Set Number of reports pending viewed
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param NotViewNumber Number of reports pending viewed
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set Pending Viewing Count
+     * @param NotViewNumber Pending Viewing Count
      */
     public void setNotViewNumber(Long NotViewNumber) {
         this.NotViewNumber = NotViewNumber;
     }
 
     /**
-     * Get Number of report templates
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return ReportTemplateNumber Number of report templates
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get Number of Report Templates 
+     * @return ReportTemplateNumber Number of Report Templates
      */
     public Long getReportTemplateNumber() {
         return this.ReportTemplateNumber;
     }
 
     /**
-     * Set Number of report templates
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param ReportTemplateNumber Number of report templates
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set Number of Report Templates
+     * @param ReportTemplateNumber Number of Report Templates
      */
     public void setReportTemplateNumber(Long ReportTemplateNumber) {
         this.ReportTemplateNumber = ReportTemplateNumber;

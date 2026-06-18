@@ -24,175 +24,175 @@ import java.util.HashMap;
 public class DescribeLicenseGeneralResponse extends AbstractModel {
 
     /**
-    * Total number of authorizations (including those that are isolated, expired, and in other states)
+    * <p>Total number of licenses (including unavailable licenses such as isolated and expired ones)</p>
     */
     @SerializedName("LicenseCnt")
     @Expose
     private Long LicenseCnt;
 
     /**
-    * Number of available authorizations
+    * <p>Available licenses</p>
     */
     @SerializedName("AvailableLicenseCnt")
     @Expose
     private Long AvailableLicenseCnt;
 
     /**
-    * Number of available Professional Edition authorizations (including those in postpaid mode)
+    * <p>Number of available Pro Edition licenses (including postpaid licenses)</p>
     */
     @SerializedName("AvailableProVersionLicenseCnt")
     @Expose
     private Long AvailableProVersionLicenseCnt;
 
     /**
-    * Number of available Ultimate Edition authorizations
+    * <p>Number of available Ultimate Edition licenses</p>
     */
     @SerializedName("AvailableFlagshipVersionLicenseCnt")
     @Expose
     private Long AvailableFlagshipVersionLicenseCnt;
 
     /**
-    * Number of authorizations about to expire (no more than 15 days left)
+    * <p>Number of licenses expiring within 15 days</p>
     */
     @SerializedName("NearExpiryLicenseCnt")
     @Expose
     private Long NearExpiryLicenseCnt;
 
     /**
-    * Number of expired authorizations (excluding deleted ones)
+    * <p>Number of expired licenses (excluding deleted records)</p>
     */
     @SerializedName("ExpireLicenseCnt")
     @Expose
     private Long ExpireLicenseCnt;
 
     /**
-    * Automatic upgrade enabling status. True: enabled; false: disabled. Default value: false.
+    * <p>Automatic upgrade switch status. Default value: false. true: enabled; false: disabled.</p>
     */
     @SerializedName("AutoOpenStatus")
     @Expose
     private Boolean AutoOpenStatus;
 
     /**
-    * PROVERSION_POSTPAY: Pro Edition - postpaid; PROVERSION_PREPAY: Pro edition - prepaid; FLAGSHIP_PREPAY: Ultimate Edition - prepaid.
+    * <p>PROVERSION_POSTPAY: Pro Edition - postpaid; PROVERSION_PREPAY: Pro Edition - prepaid; FLAGSHIP_PREPAY: Ultimate Edition - prepaid.</p>
     */
     @SerializedName("ProtectType")
     @Expose
     private String ProtectType;
 
     /**
-    * Whether automatic upgrade has been enabled before
+    * <p>Whether automatic upgrade has been enabled before</p>
     */
     @SerializedName("IsOpenStatusHistory")
     @Expose
     private Boolean IsOpenStatusHistory;
 
     /**
-    * Number of used authorizations
+    * <p>Number of used licenses</p>
     */
     @SerializedName("UsedLicenseCnt")
     @Expose
     private Long UsedLicenseCnt;
 
     /**
-    * Number of authorizations that have not expired
+    * <p>Number of unexpired licenses</p>
     */
     @SerializedName("NotExpiredLicenseCnt")
     @Expose
     private Long NotExpiredLicenseCnt;
 
     /**
-    * Total number of Ultimate Edition authorizations (valid orders)
+    * <p>Total number of Ultimate Edition licenses (valid orders)</p>
     */
     @SerializedName("FlagshipVersionLicenseCnt")
     @Expose
     private Long FlagshipVersionLicenseCnt;
 
     /**
-    * Total number of Pro Edition authorizations (valid orders)
+    * <p>Total number of Pro Edition licenses (valid orders)</p>
     */
     @SerializedName("ProVersionLicenseCnt")
     @Expose
     private Long ProVersionLicenseCnt;
 
     /**
-    * Total number of Lite Edition authorizations (those of valid orders)
+    * <p>Lightweight edition total number of licenses (valid order licenses count)</p>
     */
     @SerializedName("CwpVersionLicenseCnt")
     @Expose
     private Long CwpVersionLicenseCnt;
 
     /**
-    * Number of available Inclusive Edition authorizations
+    * <p>Number of available Lightweight Edition licenses</p>
     */
     @SerializedName("AvailableLHLicenseCnt")
     @Expose
     private Long AvailableLHLicenseCnt;
 
     /**
-    * Auto-purchase switch, true for ON, false for OFF
+    * <p>Auto-purchase switch. true: enabled; false: disabled.</p>
     */
     @SerializedName("AutoRepurchaseSwitch")
     @Expose
     private Boolean AutoRepurchaseSwitch;
 
     /**
-    * Is auto-renewal required for auto-purchase orders, true for ON, false for OFF
+    * <p>Whether auto-purchase orders are automatically renewed. true: enabled; false: disabled.</p>
     */
     @SerializedName("AutoRepurchaseRenewSwitch")
     @Expose
     private Boolean AutoRepurchaseRenewSwitch;
 
     /**
-    * Number of terminated orders
+    * <p>Number of terminated orders</p>
     */
     @SerializedName("DestroyOrderNum")
     @Expose
     private Long DestroyOrderNum;
 
     /**
-    * Whether automatic renewal is enabled for additional purchase. true: enabled; false: disabled.
+    * <p>Auto-renewal switch for auto-purchase. true: enabled; false: disabled.</p>
     */
     @SerializedName("RepurchaseRenewSwitch")
     @Expose
     private Boolean RepurchaseRenewSwitch;
 
     /**
-    * Whether to automatically bind new machines to rasp protection. false indicates disabled, enabled otherwise.
+    * <p>Whether to automatically bind RASP protection to newly added machines. false: disabled; true: enabled.</p>
     */
     @SerializedName("AutoBindRaspSwitch")
     @Expose
     private Boolean AutoBindRaspSwitch;
 
     /**
-    * Whether to enable automatic addition of machines for rasp protection. false indicates disabled, enabled.
+    * <p>Whether to automatically enable RASP protection for newly added machines. false: disabled; true: enabled.</p>
     */
     @SerializedName("AutoOpenRaspSwitch")
     @Expose
     private Boolean AutoOpenRaspSwitch;
 
     /**
-    * Whether the automatic scaling down switch is on
+    * <p>Whether the auto-downgrade switch is enabled</p>
     */
     @SerializedName("AutoDowngradeSwitch")
     @Expose
     private Boolean AutoDowngradeSwitch;
 
     /**
-    * 
+    * <p>Number of available AI Protection Edition licenses</p>
     */
     @SerializedName("AvailableAISecurityLicenseCnt")
     @Expose
     private Long AvailableAISecurityLicenseCnt;
 
     /**
-    * 
+    * <p>Total number of AI Protection Edition licenses</p>
     */
     @SerializedName("AISecurityVersionLicenseCnt")
     @Expose
     private Long AISecurityVersionLicenseCnt;
 
     /**
-    * 
+    * <p>Number of available licenses after combining application protection licenses with Ultimate Edition licenses</p>
     */
     @SerializedName("ApplicationAvailableLicenseCnt")
     @Expose
@@ -206,400 +206,400 @@ public class DescribeLicenseGeneralResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Total number of authorizations (including those that are isolated, expired, and in other states) 
-     * @return LicenseCnt Total number of authorizations (including those that are isolated, expired, and in other states)
+     * Get <p>Total number of licenses (including unavailable licenses such as isolated and expired ones)</p> 
+     * @return LicenseCnt <p>Total number of licenses (including unavailable licenses such as isolated and expired ones)</p>
      */
     public Long getLicenseCnt() {
         return this.LicenseCnt;
     }
 
     /**
-     * Set Total number of authorizations (including those that are isolated, expired, and in other states)
-     * @param LicenseCnt Total number of authorizations (including those that are isolated, expired, and in other states)
+     * Set <p>Total number of licenses (including unavailable licenses such as isolated and expired ones)</p>
+     * @param LicenseCnt <p>Total number of licenses (including unavailable licenses such as isolated and expired ones)</p>
      */
     public void setLicenseCnt(Long LicenseCnt) {
         this.LicenseCnt = LicenseCnt;
     }
 
     /**
-     * Get Number of available authorizations 
-     * @return AvailableLicenseCnt Number of available authorizations
+     * Get <p>Available licenses</p> 
+     * @return AvailableLicenseCnt <p>Available licenses</p>
      */
     public Long getAvailableLicenseCnt() {
         return this.AvailableLicenseCnt;
     }
 
     /**
-     * Set Number of available authorizations
-     * @param AvailableLicenseCnt Number of available authorizations
+     * Set <p>Available licenses</p>
+     * @param AvailableLicenseCnt <p>Available licenses</p>
      */
     public void setAvailableLicenseCnt(Long AvailableLicenseCnt) {
         this.AvailableLicenseCnt = AvailableLicenseCnt;
     }
 
     /**
-     * Get Number of available Professional Edition authorizations (including those in postpaid mode) 
-     * @return AvailableProVersionLicenseCnt Number of available Professional Edition authorizations (including those in postpaid mode)
+     * Get <p>Number of available Pro Edition licenses (including postpaid licenses)</p> 
+     * @return AvailableProVersionLicenseCnt <p>Number of available Pro Edition licenses (including postpaid licenses)</p>
      */
     public Long getAvailableProVersionLicenseCnt() {
         return this.AvailableProVersionLicenseCnt;
     }
 
     /**
-     * Set Number of available Professional Edition authorizations (including those in postpaid mode)
-     * @param AvailableProVersionLicenseCnt Number of available Professional Edition authorizations (including those in postpaid mode)
+     * Set <p>Number of available Pro Edition licenses (including postpaid licenses)</p>
+     * @param AvailableProVersionLicenseCnt <p>Number of available Pro Edition licenses (including postpaid licenses)</p>
      */
     public void setAvailableProVersionLicenseCnt(Long AvailableProVersionLicenseCnt) {
         this.AvailableProVersionLicenseCnt = AvailableProVersionLicenseCnt;
     }
 
     /**
-     * Get Number of available Ultimate Edition authorizations 
-     * @return AvailableFlagshipVersionLicenseCnt Number of available Ultimate Edition authorizations
+     * Get <p>Number of available Ultimate Edition licenses</p> 
+     * @return AvailableFlagshipVersionLicenseCnt <p>Number of available Ultimate Edition licenses</p>
      */
     public Long getAvailableFlagshipVersionLicenseCnt() {
         return this.AvailableFlagshipVersionLicenseCnt;
     }
 
     /**
-     * Set Number of available Ultimate Edition authorizations
-     * @param AvailableFlagshipVersionLicenseCnt Number of available Ultimate Edition authorizations
+     * Set <p>Number of available Ultimate Edition licenses</p>
+     * @param AvailableFlagshipVersionLicenseCnt <p>Number of available Ultimate Edition licenses</p>
      */
     public void setAvailableFlagshipVersionLicenseCnt(Long AvailableFlagshipVersionLicenseCnt) {
         this.AvailableFlagshipVersionLicenseCnt = AvailableFlagshipVersionLicenseCnt;
     }
 
     /**
-     * Get Number of authorizations about to expire (no more than 15 days left) 
-     * @return NearExpiryLicenseCnt Number of authorizations about to expire (no more than 15 days left)
+     * Get <p>Number of licenses expiring within 15 days</p> 
+     * @return NearExpiryLicenseCnt <p>Number of licenses expiring within 15 days</p>
      */
     public Long getNearExpiryLicenseCnt() {
         return this.NearExpiryLicenseCnt;
     }
 
     /**
-     * Set Number of authorizations about to expire (no more than 15 days left)
-     * @param NearExpiryLicenseCnt Number of authorizations about to expire (no more than 15 days left)
+     * Set <p>Number of licenses expiring within 15 days</p>
+     * @param NearExpiryLicenseCnt <p>Number of licenses expiring within 15 days</p>
      */
     public void setNearExpiryLicenseCnt(Long NearExpiryLicenseCnt) {
         this.NearExpiryLicenseCnt = NearExpiryLicenseCnt;
     }
 
     /**
-     * Get Number of expired authorizations (excluding deleted ones) 
-     * @return ExpireLicenseCnt Number of expired authorizations (excluding deleted ones)
+     * Get <p>Number of expired licenses (excluding deleted records)</p> 
+     * @return ExpireLicenseCnt <p>Number of expired licenses (excluding deleted records)</p>
      */
     public Long getExpireLicenseCnt() {
         return this.ExpireLicenseCnt;
     }
 
     /**
-     * Set Number of expired authorizations (excluding deleted ones)
-     * @param ExpireLicenseCnt Number of expired authorizations (excluding deleted ones)
+     * Set <p>Number of expired licenses (excluding deleted records)</p>
+     * @param ExpireLicenseCnt <p>Number of expired licenses (excluding deleted records)</p>
      */
     public void setExpireLicenseCnt(Long ExpireLicenseCnt) {
         this.ExpireLicenseCnt = ExpireLicenseCnt;
     }
 
     /**
-     * Get Automatic upgrade enabling status. True: enabled; false: disabled. Default value: false. 
-     * @return AutoOpenStatus Automatic upgrade enabling status. True: enabled; false: disabled. Default value: false.
+     * Get <p>Automatic upgrade switch status. Default value: false. true: enabled; false: disabled.</p> 
+     * @return AutoOpenStatus <p>Automatic upgrade switch status. Default value: false. true: enabled; false: disabled.</p>
      */
     public Boolean getAutoOpenStatus() {
         return this.AutoOpenStatus;
     }
 
     /**
-     * Set Automatic upgrade enabling status. True: enabled; false: disabled. Default value: false.
-     * @param AutoOpenStatus Automatic upgrade enabling status. True: enabled; false: disabled. Default value: false.
+     * Set <p>Automatic upgrade switch status. Default value: false. true: enabled; false: disabled.</p>
+     * @param AutoOpenStatus <p>Automatic upgrade switch status. Default value: false. true: enabled; false: disabled.</p>
      */
     public void setAutoOpenStatus(Boolean AutoOpenStatus) {
         this.AutoOpenStatus = AutoOpenStatus;
     }
 
     /**
-     * Get PROVERSION_POSTPAY: Pro Edition - postpaid; PROVERSION_PREPAY: Pro edition - prepaid; FLAGSHIP_PREPAY: Ultimate Edition - prepaid. 
-     * @return ProtectType PROVERSION_POSTPAY: Pro Edition - postpaid; PROVERSION_PREPAY: Pro edition - prepaid; FLAGSHIP_PREPAY: Ultimate Edition - prepaid.
+     * Get <p>PROVERSION_POSTPAY: Pro Edition - postpaid; PROVERSION_PREPAY: Pro Edition - prepaid; FLAGSHIP_PREPAY: Ultimate Edition - prepaid.</p> 
+     * @return ProtectType <p>PROVERSION_POSTPAY: Pro Edition - postpaid; PROVERSION_PREPAY: Pro Edition - prepaid; FLAGSHIP_PREPAY: Ultimate Edition - prepaid.</p>
      */
     public String getProtectType() {
         return this.ProtectType;
     }
 
     /**
-     * Set PROVERSION_POSTPAY: Pro Edition - postpaid; PROVERSION_PREPAY: Pro edition - prepaid; FLAGSHIP_PREPAY: Ultimate Edition - prepaid.
-     * @param ProtectType PROVERSION_POSTPAY: Pro Edition - postpaid; PROVERSION_PREPAY: Pro edition - prepaid; FLAGSHIP_PREPAY: Ultimate Edition - prepaid.
+     * Set <p>PROVERSION_POSTPAY: Pro Edition - postpaid; PROVERSION_PREPAY: Pro Edition - prepaid; FLAGSHIP_PREPAY: Ultimate Edition - prepaid.</p>
+     * @param ProtectType <p>PROVERSION_POSTPAY: Pro Edition - postpaid; PROVERSION_PREPAY: Pro Edition - prepaid; FLAGSHIP_PREPAY: Ultimate Edition - prepaid.</p>
      */
     public void setProtectType(String ProtectType) {
         this.ProtectType = ProtectType;
     }
 
     /**
-     * Get Whether automatic upgrade has been enabled before 
-     * @return IsOpenStatusHistory Whether automatic upgrade has been enabled before
+     * Get <p>Whether automatic upgrade has been enabled before</p> 
+     * @return IsOpenStatusHistory <p>Whether automatic upgrade has been enabled before</p>
      */
     public Boolean getIsOpenStatusHistory() {
         return this.IsOpenStatusHistory;
     }
 
     /**
-     * Set Whether automatic upgrade has been enabled before
-     * @param IsOpenStatusHistory Whether automatic upgrade has been enabled before
+     * Set <p>Whether automatic upgrade has been enabled before</p>
+     * @param IsOpenStatusHistory <p>Whether automatic upgrade has been enabled before</p>
      */
     public void setIsOpenStatusHistory(Boolean IsOpenStatusHistory) {
         this.IsOpenStatusHistory = IsOpenStatusHistory;
     }
 
     /**
-     * Get Number of used authorizations 
-     * @return UsedLicenseCnt Number of used authorizations
+     * Get <p>Number of used licenses</p> 
+     * @return UsedLicenseCnt <p>Number of used licenses</p>
      */
     public Long getUsedLicenseCnt() {
         return this.UsedLicenseCnt;
     }
 
     /**
-     * Set Number of used authorizations
-     * @param UsedLicenseCnt Number of used authorizations
+     * Set <p>Number of used licenses</p>
+     * @param UsedLicenseCnt <p>Number of used licenses</p>
      */
     public void setUsedLicenseCnt(Long UsedLicenseCnt) {
         this.UsedLicenseCnt = UsedLicenseCnt;
     }
 
     /**
-     * Get Number of authorizations that have not expired 
-     * @return NotExpiredLicenseCnt Number of authorizations that have not expired
+     * Get <p>Number of unexpired licenses</p> 
+     * @return NotExpiredLicenseCnt <p>Number of unexpired licenses</p>
      */
     public Long getNotExpiredLicenseCnt() {
         return this.NotExpiredLicenseCnt;
     }
 
     /**
-     * Set Number of authorizations that have not expired
-     * @param NotExpiredLicenseCnt Number of authorizations that have not expired
+     * Set <p>Number of unexpired licenses</p>
+     * @param NotExpiredLicenseCnt <p>Number of unexpired licenses</p>
      */
     public void setNotExpiredLicenseCnt(Long NotExpiredLicenseCnt) {
         this.NotExpiredLicenseCnt = NotExpiredLicenseCnt;
     }
 
     /**
-     * Get Total number of Ultimate Edition authorizations (valid orders) 
-     * @return FlagshipVersionLicenseCnt Total number of Ultimate Edition authorizations (valid orders)
+     * Get <p>Total number of Ultimate Edition licenses (valid orders)</p> 
+     * @return FlagshipVersionLicenseCnt <p>Total number of Ultimate Edition licenses (valid orders)</p>
      */
     public Long getFlagshipVersionLicenseCnt() {
         return this.FlagshipVersionLicenseCnt;
     }
 
     /**
-     * Set Total number of Ultimate Edition authorizations (valid orders)
-     * @param FlagshipVersionLicenseCnt Total number of Ultimate Edition authorizations (valid orders)
+     * Set <p>Total number of Ultimate Edition licenses (valid orders)</p>
+     * @param FlagshipVersionLicenseCnt <p>Total number of Ultimate Edition licenses (valid orders)</p>
      */
     public void setFlagshipVersionLicenseCnt(Long FlagshipVersionLicenseCnt) {
         this.FlagshipVersionLicenseCnt = FlagshipVersionLicenseCnt;
     }
 
     /**
-     * Get Total number of Pro Edition authorizations (valid orders) 
-     * @return ProVersionLicenseCnt Total number of Pro Edition authorizations (valid orders)
+     * Get <p>Total number of Pro Edition licenses (valid orders)</p> 
+     * @return ProVersionLicenseCnt <p>Total number of Pro Edition licenses (valid orders)</p>
      */
     public Long getProVersionLicenseCnt() {
         return this.ProVersionLicenseCnt;
     }
 
     /**
-     * Set Total number of Pro Edition authorizations (valid orders)
-     * @param ProVersionLicenseCnt Total number of Pro Edition authorizations (valid orders)
+     * Set <p>Total number of Pro Edition licenses (valid orders)</p>
+     * @param ProVersionLicenseCnt <p>Total number of Pro Edition licenses (valid orders)</p>
      */
     public void setProVersionLicenseCnt(Long ProVersionLicenseCnt) {
         this.ProVersionLicenseCnt = ProVersionLicenseCnt;
     }
 
     /**
-     * Get Total number of Lite Edition authorizations (those of valid orders) 
-     * @return CwpVersionLicenseCnt Total number of Lite Edition authorizations (those of valid orders)
+     * Get <p>Lightweight edition total number of licenses (valid order licenses count)</p> 
+     * @return CwpVersionLicenseCnt <p>Lightweight edition total number of licenses (valid order licenses count)</p>
      */
     public Long getCwpVersionLicenseCnt() {
         return this.CwpVersionLicenseCnt;
     }
 
     /**
-     * Set Total number of Lite Edition authorizations (those of valid orders)
-     * @param CwpVersionLicenseCnt Total number of Lite Edition authorizations (those of valid orders)
+     * Set <p>Lightweight edition total number of licenses (valid order licenses count)</p>
+     * @param CwpVersionLicenseCnt <p>Lightweight edition total number of licenses (valid order licenses count)</p>
      */
     public void setCwpVersionLicenseCnt(Long CwpVersionLicenseCnt) {
         this.CwpVersionLicenseCnt = CwpVersionLicenseCnt;
     }
 
     /**
-     * Get Number of available Inclusive Edition authorizations 
-     * @return AvailableLHLicenseCnt Number of available Inclusive Edition authorizations
+     * Get <p>Number of available Lightweight Edition licenses</p> 
+     * @return AvailableLHLicenseCnt <p>Number of available Lightweight Edition licenses</p>
      */
     public Long getAvailableLHLicenseCnt() {
         return this.AvailableLHLicenseCnt;
     }
 
     /**
-     * Set Number of available Inclusive Edition authorizations
-     * @param AvailableLHLicenseCnt Number of available Inclusive Edition authorizations
+     * Set <p>Number of available Lightweight Edition licenses</p>
+     * @param AvailableLHLicenseCnt <p>Number of available Lightweight Edition licenses</p>
      */
     public void setAvailableLHLicenseCnt(Long AvailableLHLicenseCnt) {
         this.AvailableLHLicenseCnt = AvailableLHLicenseCnt;
     }
 
     /**
-     * Get Auto-purchase switch, true for ON, false for OFF 
-     * @return AutoRepurchaseSwitch Auto-purchase switch, true for ON, false for OFF
+     * Get <p>Auto-purchase switch. true: enabled; false: disabled.</p> 
+     * @return AutoRepurchaseSwitch <p>Auto-purchase switch. true: enabled; false: disabled.</p>
      */
     public Boolean getAutoRepurchaseSwitch() {
         return this.AutoRepurchaseSwitch;
     }
 
     /**
-     * Set Auto-purchase switch, true for ON, false for OFF
-     * @param AutoRepurchaseSwitch Auto-purchase switch, true for ON, false for OFF
+     * Set <p>Auto-purchase switch. true: enabled; false: disabled.</p>
+     * @param AutoRepurchaseSwitch <p>Auto-purchase switch. true: enabled; false: disabled.</p>
      */
     public void setAutoRepurchaseSwitch(Boolean AutoRepurchaseSwitch) {
         this.AutoRepurchaseSwitch = AutoRepurchaseSwitch;
     }
 
     /**
-     * Get Is auto-renewal required for auto-purchase orders, true for ON, false for OFF 
-     * @return AutoRepurchaseRenewSwitch Is auto-renewal required for auto-purchase orders, true for ON, false for OFF
+     * Get <p>Whether auto-purchase orders are automatically renewed. true: enabled; false: disabled.</p> 
+     * @return AutoRepurchaseRenewSwitch <p>Whether auto-purchase orders are automatically renewed. true: enabled; false: disabled.</p>
      */
     public Boolean getAutoRepurchaseRenewSwitch() {
         return this.AutoRepurchaseRenewSwitch;
     }
 
     /**
-     * Set Is auto-renewal required for auto-purchase orders, true for ON, false for OFF
-     * @param AutoRepurchaseRenewSwitch Is auto-renewal required for auto-purchase orders, true for ON, false for OFF
+     * Set <p>Whether auto-purchase orders are automatically renewed. true: enabled; false: disabled.</p>
+     * @param AutoRepurchaseRenewSwitch <p>Whether auto-purchase orders are automatically renewed. true: enabled; false: disabled.</p>
      */
     public void setAutoRepurchaseRenewSwitch(Boolean AutoRepurchaseRenewSwitch) {
         this.AutoRepurchaseRenewSwitch = AutoRepurchaseRenewSwitch;
     }
 
     /**
-     * Get Number of terminated orders 
-     * @return DestroyOrderNum Number of terminated orders
+     * Get <p>Number of terminated orders</p> 
+     * @return DestroyOrderNum <p>Number of terminated orders</p>
      */
     public Long getDestroyOrderNum() {
         return this.DestroyOrderNum;
     }
 
     /**
-     * Set Number of terminated orders
-     * @param DestroyOrderNum Number of terminated orders
+     * Set <p>Number of terminated orders</p>
+     * @param DestroyOrderNum <p>Number of terminated orders</p>
      */
     public void setDestroyOrderNum(Long DestroyOrderNum) {
         this.DestroyOrderNum = DestroyOrderNum;
     }
 
     /**
-     * Get Whether automatic renewal is enabled for additional purchase. true: enabled; false: disabled. 
-     * @return RepurchaseRenewSwitch Whether automatic renewal is enabled for additional purchase. true: enabled; false: disabled.
+     * Get <p>Auto-renewal switch for auto-purchase. true: enabled; false: disabled.</p> 
+     * @return RepurchaseRenewSwitch <p>Auto-renewal switch for auto-purchase. true: enabled; false: disabled.</p>
      */
     public Boolean getRepurchaseRenewSwitch() {
         return this.RepurchaseRenewSwitch;
     }
 
     /**
-     * Set Whether automatic renewal is enabled for additional purchase. true: enabled; false: disabled.
-     * @param RepurchaseRenewSwitch Whether automatic renewal is enabled for additional purchase. true: enabled; false: disabled.
+     * Set <p>Auto-renewal switch for auto-purchase. true: enabled; false: disabled.</p>
+     * @param RepurchaseRenewSwitch <p>Auto-renewal switch for auto-purchase. true: enabled; false: disabled.</p>
      */
     public void setRepurchaseRenewSwitch(Boolean RepurchaseRenewSwitch) {
         this.RepurchaseRenewSwitch = RepurchaseRenewSwitch;
     }
 
     /**
-     * Get Whether to automatically bind new machines to rasp protection. false indicates disabled, enabled otherwise. 
-     * @return AutoBindRaspSwitch Whether to automatically bind new machines to rasp protection. false indicates disabled, enabled otherwise.
+     * Get <p>Whether to automatically bind RASP protection to newly added machines. false: disabled; true: enabled.</p> 
+     * @return AutoBindRaspSwitch <p>Whether to automatically bind RASP protection to newly added machines. false: disabled; true: enabled.</p>
      */
     public Boolean getAutoBindRaspSwitch() {
         return this.AutoBindRaspSwitch;
     }
 
     /**
-     * Set Whether to automatically bind new machines to rasp protection. false indicates disabled, enabled otherwise.
-     * @param AutoBindRaspSwitch Whether to automatically bind new machines to rasp protection. false indicates disabled, enabled otherwise.
+     * Set <p>Whether to automatically bind RASP protection to newly added machines. false: disabled; true: enabled.</p>
+     * @param AutoBindRaspSwitch <p>Whether to automatically bind RASP protection to newly added machines. false: disabled; true: enabled.</p>
      */
     public void setAutoBindRaspSwitch(Boolean AutoBindRaspSwitch) {
         this.AutoBindRaspSwitch = AutoBindRaspSwitch;
     }
 
     /**
-     * Get Whether to enable automatic addition of machines for rasp protection. false indicates disabled, enabled. 
-     * @return AutoOpenRaspSwitch Whether to enable automatic addition of machines for rasp protection. false indicates disabled, enabled.
+     * Get <p>Whether to automatically enable RASP protection for newly added machines. false: disabled; true: enabled.</p> 
+     * @return AutoOpenRaspSwitch <p>Whether to automatically enable RASP protection for newly added machines. false: disabled; true: enabled.</p>
      */
     public Boolean getAutoOpenRaspSwitch() {
         return this.AutoOpenRaspSwitch;
     }
 
     /**
-     * Set Whether to enable automatic addition of machines for rasp protection. false indicates disabled, enabled.
-     * @param AutoOpenRaspSwitch Whether to enable automatic addition of machines for rasp protection. false indicates disabled, enabled.
+     * Set <p>Whether to automatically enable RASP protection for newly added machines. false: disabled; true: enabled.</p>
+     * @param AutoOpenRaspSwitch <p>Whether to automatically enable RASP protection for newly added machines. false: disabled; true: enabled.</p>
      */
     public void setAutoOpenRaspSwitch(Boolean AutoOpenRaspSwitch) {
         this.AutoOpenRaspSwitch = AutoOpenRaspSwitch;
     }
 
     /**
-     * Get Whether the automatic scaling down switch is on 
-     * @return AutoDowngradeSwitch Whether the automatic scaling down switch is on
+     * Get <p>Whether the auto-downgrade switch is enabled</p> 
+     * @return AutoDowngradeSwitch <p>Whether the auto-downgrade switch is enabled</p>
      */
     public Boolean getAutoDowngradeSwitch() {
         return this.AutoDowngradeSwitch;
     }
 
     /**
-     * Set Whether the automatic scaling down switch is on
-     * @param AutoDowngradeSwitch Whether the automatic scaling down switch is on
+     * Set <p>Whether the auto-downgrade switch is enabled</p>
+     * @param AutoDowngradeSwitch <p>Whether the auto-downgrade switch is enabled</p>
      */
     public void setAutoDowngradeSwitch(Boolean AutoDowngradeSwitch) {
         this.AutoDowngradeSwitch = AutoDowngradeSwitch;
     }
 
     /**
-     * Get  
-     * @return AvailableAISecurityLicenseCnt 
+     * Get <p>Number of available AI Protection Edition licenses</p> 
+     * @return AvailableAISecurityLicenseCnt <p>Number of available AI Protection Edition licenses</p>
      */
     public Long getAvailableAISecurityLicenseCnt() {
         return this.AvailableAISecurityLicenseCnt;
     }
 
     /**
-     * Set 
-     * @param AvailableAISecurityLicenseCnt 
+     * Set <p>Number of available AI Protection Edition licenses</p>
+     * @param AvailableAISecurityLicenseCnt <p>Number of available AI Protection Edition licenses</p>
      */
     public void setAvailableAISecurityLicenseCnt(Long AvailableAISecurityLicenseCnt) {
         this.AvailableAISecurityLicenseCnt = AvailableAISecurityLicenseCnt;
     }
 
     /**
-     * Get  
-     * @return AISecurityVersionLicenseCnt 
+     * Get <p>Total number of AI Protection Edition licenses</p> 
+     * @return AISecurityVersionLicenseCnt <p>Total number of AI Protection Edition licenses</p>
      */
     public Long getAISecurityVersionLicenseCnt() {
         return this.AISecurityVersionLicenseCnt;
     }
 
     /**
-     * Set 
-     * @param AISecurityVersionLicenseCnt 
+     * Set <p>Total number of AI Protection Edition licenses</p>
+     * @param AISecurityVersionLicenseCnt <p>Total number of AI Protection Edition licenses</p>
      */
     public void setAISecurityVersionLicenseCnt(Long AISecurityVersionLicenseCnt) {
         this.AISecurityVersionLicenseCnt = AISecurityVersionLicenseCnt;
     }
 
     /**
-     * Get  
-     * @return ApplicationAvailableLicenseCnt 
+     * Get <p>Number of available licenses after combining application protection licenses with Ultimate Edition licenses</p> 
+     * @return ApplicationAvailableLicenseCnt <p>Number of available licenses after combining application protection licenses with Ultimate Edition licenses</p>
      */
     public Long getApplicationAvailableLicenseCnt() {
         return this.ApplicationAvailableLicenseCnt;
     }
 
     /**
-     * Set 
-     * @param ApplicationAvailableLicenseCnt 
+     * Set <p>Number of available licenses after combining application protection licenses with Ultimate Edition licenses</p>
+     * @param ApplicationAvailableLicenseCnt <p>Number of available licenses after combining application protection licenses with Ultimate Edition licenses</p>
      */
     public void setApplicationAvailableLicenseCnt(Long ApplicationAvailableLicenseCnt) {
         this.ApplicationAvailableLicenseCnt = ApplicationAvailableLicenseCnt;

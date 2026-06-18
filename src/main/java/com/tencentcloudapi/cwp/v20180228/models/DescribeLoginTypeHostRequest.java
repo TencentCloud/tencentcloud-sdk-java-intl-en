@@ -31,28 +31,28 @@ public class DescribeLoginTypeHostRequest extends AbstractModel {
     private Filter [] Filters;
 
     /**
-    * Limit Entries, 10 by default, up to 100
+    * <p>The maximum number of entries. Default value: 10. Maximum value: 100.</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * Offset, which is 0 by default.
+    * <p>Offset. Default value: 0.</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * Sorting Method: [ASC: Ascending Order, DESC: Descending Order]
+    * <p>Sort order: [ASC: ascending | DESC: descending]</p>
     */
     @SerializedName("Order")
     @Expose
     private String Order;
 
     /**
-    * Sorting column: [Id].
+    * <p>Optional sorting column: [Id]</p>
     */
     @SerializedName("By")
     @Expose
@@ -75,64 +75,64 @@ public class DescribeLoginTypeHostRequest extends AbstractModel {
     }
 
     /**
-     * Get Limit Entries, 10 by default, up to 100 
-     * @return Limit Limit Entries, 10 by default, up to 100
+     * Get <p>The maximum number of entries. Default value: 10. Maximum value: 100.</p> 
+     * @return Limit <p>The maximum number of entries. Default value: 10. Maximum value: 100.</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Limit Entries, 10 by default, up to 100
-     * @param Limit Limit Entries, 10 by default, up to 100
+     * Set <p>The maximum number of entries. Default value: 10. Maximum value: 100.</p>
+     * @param Limit <p>The maximum number of entries. Default value: 10. Maximum value: 100.</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get Offset, which is 0 by default. 
-     * @return Offset Offset, which is 0 by default.
+     * Get <p>Offset. Default value: 0.</p> 
+     * @return Offset <p>Offset. Default value: 0.</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Offset, which is 0 by default.
-     * @param Offset Offset, which is 0 by default.
+     * Set <p>Offset. Default value: 0.</p>
+     * @param Offset <p>Offset. Default value: 0.</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get Sorting Method: [ASC: Ascending Order, DESC: Descending Order] 
-     * @return Order Sorting Method: [ASC: Ascending Order, DESC: Descending Order]
+     * Get <p>Sort order: [ASC: ascending | DESC: descending]</p> 
+     * @return Order <p>Sort order: [ASC: ascending | DESC: descending]</p>
      */
     public String getOrder() {
         return this.Order;
     }
 
     /**
-     * Set Sorting Method: [ASC: Ascending Order, DESC: Descending Order]
-     * @param Order Sorting Method: [ASC: Ascending Order, DESC: Descending Order]
+     * Set <p>Sort order: [ASC: ascending | DESC: descending]</p>
+     * @param Order <p>Sort order: [ASC: ascending | DESC: descending]</p>
      */
     public void setOrder(String Order) {
         this.Order = Order;
     }
 
     /**
-     * Get Sorting column: [Id]. 
-     * @return By Sorting column: [Id].
+     * Get <p>Optional sorting column: [Id]</p> 
+     * @return By <p>Optional sorting column: [Id]</p>
      */
     public String getBy() {
         return this.By;
     }
 
     /**
-     * Set Sorting column: [Id].
-     * @param By Sorting column: [Id].
+     * Set <p>Optional sorting column: [Id]</p>
+     * @param By <p>Optional sorting column: [Id]</p>
      */
     public void setBy(String By) {
         this.By = By;

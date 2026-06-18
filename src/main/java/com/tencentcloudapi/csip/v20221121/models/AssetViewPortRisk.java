@@ -38,7 +38,7 @@ public class AssetViewPortRisk extends AbstractModel {
     private String AffectAsset;
 
     /**
-    * Risk level
+    * Risk level, low - low risk, high - high risk, middle - medium risk, info - notification, extreme - critical.
     */
     @SerializedName("Level")
     @Expose
@@ -94,14 +94,14 @@ public class AssetViewPortRisk extends AbstractModel {
     private Long Suggestion;
 
     /**
-    * Status of the risk. `0`: Not handled, `1`: Handled; `2`: Ignored
+    * Status, 0 unprocessed, 1 processed, 2 ignored, 3 defended by cloud protection
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * Unique ID of the asset
+    * Risk ID
     */
     @SerializedName("Id")
     @Expose
@@ -136,27 +136,39 @@ public class AssetViewPortRisk extends AbstractModel {
     private String AppId;
 
     /**
-    * User name.
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * User Nickname
     */
     @SerializedName("Nick")
     @Expose
     private String Nick;
 
     /**
-    * User `uin`
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * User UIN
     */
     @SerializedName("Uin")
     @Expose
     private String Uin;
 
     /**
-    * Source of the task
+    * Recognition Source. See Enumeration Return for details.
     */
     @SerializedName("From")
     @Expose
     private String From;
+
+    /**
+    * Service judgment, high-risk service, web service, other service
+    */
+    @SerializedName("ServiceJudge")
+    @Expose
+    private String ServiceJudge;
+
+    /**
+    * Status, 0 unprocessed, 1 processed, 2 ignored, 3 defended by cloud protection, 4 no action is required
+    */
+    @SerializedName("XspmStatus")
+    @Expose
+    private Long XspmStatus;
 
     /**
      * Get Port 
@@ -191,16 +203,16 @@ Note: This field may return·null, indicating that no valid values can be obtain
     }
 
     /**
-     * Get Risk level 
-     * @return Level Risk level
+     * Get Risk level, low - low risk, high - high risk, middle - medium risk, info - notification, extreme - critical. 
+     * @return Level Risk level, low - low risk, high - high risk, middle - medium risk, info - notification, extreme - critical.
      */
     public String getLevel() {
         return this.Level;
     }
 
     /**
-     * Set Risk level
-     * @param Level Risk level
+     * Set Risk level, low - low risk, high - high risk, middle - medium risk, info - notification, extreme - critical.
+     * @param Level Risk level, low - low risk, high - high risk, middle - medium risk, info - notification, extreme - critical.
      */
     public void setLevel(String Level) {
         this.Level = Level;
@@ -319,32 +331,32 @@ Note: This field may return·null, indicating that no valid values can be obtain
     }
 
     /**
-     * Get Status of the risk. `0`: Not handled, `1`: Handled; `2`: Ignored 
-     * @return Status Status of the risk. `0`: Not handled, `1`: Handled; `2`: Ignored
+     * Get Status, 0 unprocessed, 1 processed, 2 ignored, 3 defended by cloud protection 
+     * @return Status Status, 0 unprocessed, 1 processed, 2 ignored, 3 defended by cloud protection
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Status of the risk. `0`: Not handled, `1`: Handled; `2`: Ignored
-     * @param Status Status of the risk. `0`: Not handled, `1`: Handled; `2`: Ignored
+     * Set Status, 0 unprocessed, 1 processed, 2 ignored, 3 defended by cloud protection
+     * @param Status Status, 0 unprocessed, 1 processed, 2 ignored, 3 defended by cloud protection
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get Unique ID of the asset 
-     * @return Id Unique ID of the asset
+     * Get Risk ID 
+     * @return Id Risk ID
      */
     public String getId() {
         return this.Id;
     }
 
     /**
-     * Set Unique ID of the asset
-     * @param Id Unique ID of the asset
+     * Set Risk ID
+     * @param Id Risk ID
      */
     public void setId(String Id) {
         this.Id = Id;
@@ -415,59 +427,83 @@ Note: This field may return·null, indicating that no valid values can be obtain
     }
 
     /**
-     * Get User name.
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return Nick User name.
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get User Nickname 
+     * @return Nick User Nickname
      */
     public String getNick() {
         return this.Nick;
     }
 
     /**
-     * Set User name.
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param Nick User name.
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set User Nickname
+     * @param Nick User Nickname
      */
     public void setNick(String Nick) {
         this.Nick = Nick;
     }
 
     /**
-     * Get User `uin`
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return Uin User `uin`
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get User UIN 
+     * @return Uin User UIN
      */
     public String getUin() {
         return this.Uin;
     }
 
     /**
-     * Set User `uin`
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param Uin User `uin`
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set User UIN
+     * @param Uin User UIN
      */
     public void setUin(String Uin) {
         this.Uin = Uin;
     }
 
     /**
-     * Get Source of the task 
-     * @return From Source of the task
+     * Get Recognition Source. See Enumeration Return for details. 
+     * @return From Recognition Source. See Enumeration Return for details.
      */
     public String getFrom() {
         return this.From;
     }
 
     /**
-     * Set Source of the task
-     * @param From Source of the task
+     * Set Recognition Source. See Enumeration Return for details.
+     * @param From Recognition Source. See Enumeration Return for details.
      */
     public void setFrom(String From) {
         this.From = From;
+    }
+
+    /**
+     * Get Service judgment, high-risk service, web service, other service 
+     * @return ServiceJudge Service judgment, high-risk service, web service, other service
+     */
+    public String getServiceJudge() {
+        return this.ServiceJudge;
+    }
+
+    /**
+     * Set Service judgment, high-risk service, web service, other service
+     * @param ServiceJudge Service judgment, high-risk service, web service, other service
+     */
+    public void setServiceJudge(String ServiceJudge) {
+        this.ServiceJudge = ServiceJudge;
+    }
+
+    /**
+     * Get Status, 0 unprocessed, 1 processed, 2 ignored, 3 defended by cloud protection, 4 no action is required 
+     * @return XspmStatus Status, 0 unprocessed, 1 processed, 2 ignored, 3 defended by cloud protection, 4 no action is required
+     */
+    public Long getXspmStatus() {
+        return this.XspmStatus;
+    }
+
+    /**
+     * Set Status, 0 unprocessed, 1 processed, 2 ignored, 3 defended by cloud protection, 4 no action is required
+     * @param XspmStatus Status, 0 unprocessed, 1 processed, 2 ignored, 3 defended by cloud protection, 4 no action is required
+     */
+    public void setXspmStatus(Long XspmStatus) {
+        this.XspmStatus = XspmStatus;
     }
 
     public AssetViewPortRisk() {
@@ -535,6 +571,12 @@ Note: This field may return·null, indicating that no valid values can be obtain
         if (source.From != null) {
             this.From = new String(source.From);
         }
+        if (source.ServiceJudge != null) {
+            this.ServiceJudge = new String(source.ServiceJudge);
+        }
+        if (source.XspmStatus != null) {
+            this.XspmStatus = new Long(source.XspmStatus);
+        }
     }
 
 
@@ -561,6 +603,8 @@ Note: This field may return·null, indicating that no valid values can be obtain
         this.setParamSimple(map, prefix + "Nick", this.Nick);
         this.setParamSimple(map, prefix + "Uin", this.Uin);
         this.setParamSimple(map, prefix + "From", this.From);
+        this.setParamSimple(map, prefix + "ServiceJudge", this.ServiceJudge);
+        this.setParamSimple(map, prefix + "XspmStatus", this.XspmStatus);
 
     }
 }

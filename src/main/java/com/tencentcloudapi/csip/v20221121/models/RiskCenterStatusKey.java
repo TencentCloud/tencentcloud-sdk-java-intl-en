@@ -31,13 +31,6 @@ public class RiskCenterStatusKey extends AbstractModel {
     private String Id;
 
     /**
-    * User AppId
-    */
-    @SerializedName("AppId")
-    @Expose
-    private String AppId;
-
-    /**
     * Public IP/domain name
     */
     @SerializedName("PublicIPDomain")
@@ -50,6 +43,13 @@ public class RiskCenterStatusKey extends AbstractModel {
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
+
+    /**
+    * User AppId
+    */
+    @SerializedName("AppId")
+    @Expose
+    private String AppId;
 
     /**
      * Get Risk ID 
@@ -65,22 +65,6 @@ public class RiskCenterStatusKey extends AbstractModel {
      */
     public void setId(String Id) {
         this.Id = Id;
-    }
-
-    /**
-     * Get User AppId 
-     * @return AppId User AppId
-     */
-    public String getAppId() {
-        return this.AppId;
-    }
-
-    /**
-     * Set User AppId
-     * @param AppId User AppId
-     */
-    public void setAppId(String AppId) {
-        this.AppId = AppId;
     }
 
     /**
@@ -115,6 +99,22 @@ public class RiskCenterStatusKey extends AbstractModel {
         this.InstanceId = InstanceId;
     }
 
+    /**
+     * Get User AppId 
+     * @return AppId User AppId
+     */
+    public String getAppId() {
+        return this.AppId;
+    }
+
+    /**
+     * Set User AppId
+     * @param AppId User AppId
+     */
+    public void setAppId(String AppId) {
+        this.AppId = AppId;
+    }
+
     public RiskCenterStatusKey() {
     }
 
@@ -126,14 +126,14 @@ public class RiskCenterStatusKey extends AbstractModel {
         if (source.Id != null) {
             this.Id = new String(source.Id);
         }
-        if (source.AppId != null) {
-            this.AppId = new String(source.AppId);
-        }
         if (source.PublicIPDomain != null) {
             this.PublicIPDomain = new String(source.PublicIPDomain);
         }
         if (source.InstanceId != null) {
             this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.AppId != null) {
+            this.AppId = new String(source.AppId);
         }
     }
 
@@ -143,9 +143,9 @@ public class RiskCenterStatusKey extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Id", this.Id);
-        this.setParamSimple(map, prefix + "AppId", this.AppId);
         this.setParamSimple(map, prefix + "PublicIPDomain", this.PublicIPDomain);
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
+        this.setParamSimple(map, prefix + "AppId", this.AppId);
 
     }
 }

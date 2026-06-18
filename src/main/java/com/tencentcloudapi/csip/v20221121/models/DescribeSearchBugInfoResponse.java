@@ -24,8 +24,7 @@ import java.util.HashMap;
 public class DescribeSearchBugInfoResponse extends AbstractModel {
 
     /**
-    * Vulnerability and asset information
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * Vulnerability information and asset information
     */
     @SerializedName("Data")
     @Expose
@@ -53,20 +52,16 @@ Note: This field may return·null, indicating that no valid values can be obtain
     private String RequestId;
 
     /**
-     * Get Vulnerability and asset information
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return Data Vulnerability and asset information
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get Vulnerability information and asset information 
+     * @return Data Vulnerability information and asset information
      */
     public DataSearchBug getData() {
         return this.Data;
     }
 
     /**
-     * Set Vulnerability and asset information
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param Data Vulnerability and asset information
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set Vulnerability information and asset information
+     * @param Data Vulnerability information and asset information
      */
     public void setData(DataSearchBug Data) {
         this.Data = Data;

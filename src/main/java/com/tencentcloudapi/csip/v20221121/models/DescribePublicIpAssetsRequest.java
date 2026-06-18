@@ -24,7 +24,14 @@ import java.util.HashMap;
 public class DescribePublicIpAssetsRequest extends AbstractModel {
 
     /**
-    * Filter conditions
+    * Group Account Member ID
+    */
+    @SerializedName("MemberId")
+    @Expose
+    private String [] MemberId;
+
+    /**
+    * Filter parameters
     */
     @SerializedName("Filter")
     @Expose
@@ -38,16 +45,32 @@ public class DescribePublicIpAssetsRequest extends AbstractModel {
     private AssetTag [] Tags;
 
     /**
-     * Get Filter conditions 
-     * @return Filter Filter conditions
+     * Get Group Account Member ID 
+     * @return MemberId Group Account Member ID
+     */
+    public String [] getMemberId() {
+        return this.MemberId;
+    }
+
+    /**
+     * Set Group Account Member ID
+     * @param MemberId Group Account Member ID
+     */
+    public void setMemberId(String [] MemberId) {
+        this.MemberId = MemberId;
+    }
+
+    /**
+     * Get Filter parameters 
+     * @return Filter Filter parameters
      */
     public Filter getFilter() {
         return this.Filter;
     }
 
     /**
-     * Set Filter conditions
-     * @param Filter Filter conditions
+     * Set Filter parameters
+     * @param Filter Filter parameters
      */
     public void setFilter(Filter Filter) {
         this.Filter = Filter;
@@ -77,6 +100,12 @@ public class DescribePublicIpAssetsRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribePublicIpAssetsRequest(DescribePublicIpAssetsRequest source) {
+        if (source.MemberId != null) {
+            this.MemberId = new String[source.MemberId.length];
+            for (int i = 0; i < source.MemberId.length; i++) {
+                this.MemberId[i] = new String(source.MemberId[i]);
+            }
+        }
         if (source.Filter != null) {
             this.Filter = new Filter(source.Filter);
         }
@@ -93,6 +122,7 @@ public class DescribePublicIpAssetsRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamArraySimple(map, prefix + "MemberId.", this.MemberId);
         this.setParamObj(map, prefix + "Filter.", this.Filter);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 

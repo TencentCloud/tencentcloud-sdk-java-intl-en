@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ModifyOrganizationAccountStatusRequest extends AbstractModel {
 
     /**
-    * Modify Group Account Status. 1: Enabled; 2: Disabled.
+    * Modify group account status. 1 Enable, 0 Disable.
     */
     @SerializedName("Status")
     @Expose
@@ -38,16 +38,16 @@ public class ModifyOrganizationAccountStatusRequest extends AbstractModel {
     private String [] MemberId;
 
     /**
-     * Get Modify Group Account Status. 1: Enabled; 2: Disabled. 
-     * @return Status Modify Group Account Status. 1: Enabled; 2: Disabled.
+     * Get Modify group account status. 1 Enable, 0 Disable. 
+     * @return Status Modify group account status. 1 Enable, 0 Disable.
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Modify Group Account Status. 1: Enabled; 2: Disabled.
-     * @param Status Modify Group Account Status. 1: Enabled; 2: Disabled.
+     * Set Modify group account status. 1 Enable, 0 Disable.
+     * @param Status Modify group account status. 1 Enable, 0 Disable.
      */
     public void setStatus(Long Status) {
         this.Status = Status;

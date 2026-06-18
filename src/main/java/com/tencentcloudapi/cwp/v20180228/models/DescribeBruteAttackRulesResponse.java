@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeBruteAttackRulesResponse extends AbstractModel {
 
     /**
-    * List of rules for blocking brute force cracking
+    * <p>Rules for blocking brute-force attacks</p>
     */
     @SerializedName("Rules")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeBruteAttackRulesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get List of rules for blocking brute force cracking 
-     * @return Rules List of rules for blocking brute force cracking
+     * Get <p>Rules for blocking brute-force attacks</p> 
+     * @return Rules <p>Rules for blocking brute-force attacks</p>
      */
     public BruteAttackRuleList [] getRules() {
         return this.Rules;
     }
 
     /**
-     * Set List of rules for blocking brute force cracking
-     * @param Rules List of rules for blocking brute force cracking
+     * Set <p>Rules for blocking brute-force attacks</p>
+     * @param Rules <p>Rules for blocking brute-force attacks</p>
      */
     public void setRules(BruteAttackRuleList [] Rules) {
         this.Rules = Rules;

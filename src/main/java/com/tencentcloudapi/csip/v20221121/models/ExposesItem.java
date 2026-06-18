@@ -24,831 +24,877 @@ import java.util.HashMap;
 public class ExposesItem extends AbstractModel {
 
     /**
-    * Cloud service provider.
+    * <p>Cloud vendor</p>
     */
     @SerializedName("Provider")
     @Expose
     private String Provider;
 
     /**
-    * Account name.
+    * <p>Cloud account name</p>
     */
     @SerializedName("CloudAccountName")
     @Expose
     private String CloudAccountName;
 
     /**
-    * Cloud account.
+    * <p>Cloud Account</p>
     */
     @SerializedName("CloudAccountId")
     @Expose
     private String CloudAccountId;
 
     /**
-    * Domain
+    * <p>Domain name</p>
     */
     @SerializedName("Domain")
     @Expose
     private String Domain;
 
     /**
-    * IP
+    * <p>IP</p>
     */
     @SerializedName("Ip")
     @Expose
     private String Ip;
 
     /**
-    * Port or port range.
+    * <p>Port or port range</p>
     */
     @SerializedName("Port")
     @Expose
     private String Port;
 
     /**
-    * Open.
+    * <p>Open</p>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * Risk type.
+    * <p>Risk type</p>
     */
     @SerializedName("RiskType")
     @Expose
     private String RiskType;
 
     /**
-    * acl type.
+    * <p>acl type</p>
     */
     @SerializedName("AclType")
     @Expose
     private String AclType;
 
     /**
-    * ACL list.
+    * <p>acl list</p>
     */
     @SerializedName("AclList")
     @Expose
     private String AclList;
 
     /**
-    * Asset ID.
+    * <p>Asset ID</p>
     */
     @SerializedName("AssetId")
     @Expose
     private String AssetId;
 
     /**
-    * Instance name
+    * <p>Instance name</p>
     */
     @SerializedName("InstanceName")
     @Expose
     private String InstanceName;
 
     /**
-    * Asset type.
+    * <p>Asset type</p>
     */
     @SerializedName("AssetType")
     @Expose
     private String AssetType;
 
     /**
-    * Port service quantity.
+    * <p>Number of port services</p>
     */
     @SerializedName("PortServiceCount")
     @Expose
     private Long PortServiceCount;
 
     /**
-    * Number of high-risk ports.
+    * <p>Number of high-risk ports</p>
     */
     @SerializedName("HighRiskPortServiceCount")
     @Expose
     private Long HighRiskPortServiceCount;
 
     /**
-    * Number of web applications.
+    * <p>Number of web applications</p>
     */
     @SerializedName("WebAppCount")
     @Expose
     private Long WebAppCount;
 
     /**
-    * Number of web applications at risk.
+    * <p>Number of web applications at risk</p>
     */
     @SerializedName("RiskWebAppCount")
     @Expose
     private Long RiskWebAppCount;
 
     /**
-    * Number of Weak Passwords
+    * <p>Number of weak passwords.</p>
     */
     @SerializedName("WeakPasswordCount")
     @Expose
     private Long WeakPasswordCount;
 
     /**
-    * Number of vulnerabilities
+    * <p>Vulnerability count</p>
     */
     @SerializedName("VulCount")
     @Expose
     private Long VulCount;
 
     /**
-    * First detection time
+    * <p>First discovery time</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * Latest update time.
+    * <p>Latest update time.</p>
     */
     @SerializedName("UpdateTime")
     @Expose
     private String UpdateTime;
 
     /**
-    * Instance Type Name
+    * <p>Instance Type Name</p>
     */
     @SerializedName("AssetTypeName")
     @Expose
     private String AssetTypeName;
 
     /**
-    * Open status.
+    * <p>Open status</p>
     */
     @SerializedName("DisplayStatus")
     @Expose
     private String DisplayStatus;
 
     /**
-    * Port status.
+    * <p>Port status</p>
     */
     @SerializedName("DisplayRiskType")
     @Expose
     private String DisplayRiskType;
 
     /**
-    * Scan task status.
+    * <p>Scan task status</p>
     */
     @SerializedName("ScanTaskStatus")
     @Expose
     private String ScanTaskStatus;
 
     /**
-    * uuid
+    * <p>uuid</p>
     */
     @SerializedName("Uuid")
     @Expose
     private String Uuid;
 
     /**
-    * Whether a security check has been performed.
+    * <p>Whether a security check has been performed</p>
     */
     @SerializedName("HasScan")
     @Expose
     private String HasScan;
 
     /**
-    * Tenant ID.
+    * <p>Tenant ID</p>
     */
     @SerializedName("AppId")
     @Expose
     private Long AppId;
 
     /**
-    * Tenant ID string.
+    * <p>Tenant ID string</p>
     */
     @SerializedName("AppIdStr")
     @Expose
     private String AppIdStr;
 
     /**
-    * Record ID
+    * <p>Record ID</p>
     */
     @SerializedName("ExposureID")
     @Expose
     private Long ExposureID;
 
     /**
-    * Number of ports open.
+    * <p>Number of open ports</p>
     */
     @SerializedName("PortDetectCount")
     @Expose
     private Long PortDetectCount;
 
     /**
-    * Port exposure result.
+    * <p>Port exposure result</p>
     */
     @SerializedName("PortDetectResult")
     @Expose
     private String PortDetectResult;
 
     /**
-    * Tag.
+    * <p>Tag.</p>
     */
     @SerializedName("Tag")
     @Expose
     private String Tag;
 
     /**
-    * Remarks
+    * <p>Remark</p>
     */
     @SerializedName("Comment")
     @Expose
     private String Comment;
 
     /**
-    * Number of risks to be governed.
+    * <p>Number of risks to be governed</p>
     */
     @SerializedName("ToGovernedRiskCount")
     @Expose
     private Long ToGovernedRiskCount;
 
     /**
-    * Risk content to be governed.
+    * <p>Risk content to be governed</p>
     */
     @SerializedName("ToGovernedRiskContent")
     @Expose
     private String ToGovernedRiskContent;
 
     /**
-     * Get Cloud service provider. 
-     * @return Provider Cloud service provider.
+    * <p>Type icon of asset</p>
+    */
+    @SerializedName("AssetTypeIconURL")
+    @Expose
+    private String AssetTypeIconURL;
+
+    /**
+    * <p>Asset type 3D icon</p>
+    */
+    @SerializedName("AssetTypeIconSolidURL")
+    @Expose
+    private String AssetTypeIconSolidURL;
+
+    /**
+     * Get <p>Cloud vendor</p> 
+     * @return Provider <p>Cloud vendor</p>
      */
     public String getProvider() {
         return this.Provider;
     }
 
     /**
-     * Set Cloud service provider.
-     * @param Provider Cloud service provider.
+     * Set <p>Cloud vendor</p>
+     * @param Provider <p>Cloud vendor</p>
      */
     public void setProvider(String Provider) {
         this.Provider = Provider;
     }
 
     /**
-     * Get Account name. 
-     * @return CloudAccountName Account name.
+     * Get <p>Cloud account name</p> 
+     * @return CloudAccountName <p>Cloud account name</p>
      */
     public String getCloudAccountName() {
         return this.CloudAccountName;
     }
 
     /**
-     * Set Account name.
-     * @param CloudAccountName Account name.
+     * Set <p>Cloud account name</p>
+     * @param CloudAccountName <p>Cloud account name</p>
      */
     public void setCloudAccountName(String CloudAccountName) {
         this.CloudAccountName = CloudAccountName;
     }
 
     /**
-     * Get Cloud account. 
-     * @return CloudAccountId Cloud account.
+     * Get <p>Cloud Account</p> 
+     * @return CloudAccountId <p>Cloud Account</p>
      */
     public String getCloudAccountId() {
         return this.CloudAccountId;
     }
 
     /**
-     * Set Cloud account.
-     * @param CloudAccountId Cloud account.
+     * Set <p>Cloud Account</p>
+     * @param CloudAccountId <p>Cloud Account</p>
      */
     public void setCloudAccountId(String CloudAccountId) {
         this.CloudAccountId = CloudAccountId;
     }
 
     /**
-     * Get Domain 
-     * @return Domain Domain
+     * Get <p>Domain name</p> 
+     * @return Domain <p>Domain name</p>
      */
     public String getDomain() {
         return this.Domain;
     }
 
     /**
-     * Set Domain
-     * @param Domain Domain
+     * Set <p>Domain name</p>
+     * @param Domain <p>Domain name</p>
      */
     public void setDomain(String Domain) {
         this.Domain = Domain;
     }
 
     /**
-     * Get IP 
-     * @return Ip IP
+     * Get <p>IP</p> 
+     * @return Ip <p>IP</p>
      */
     public String getIp() {
         return this.Ip;
     }
 
     /**
-     * Set IP
-     * @param Ip IP
+     * Set <p>IP</p>
+     * @param Ip <p>IP</p>
      */
     public void setIp(String Ip) {
         this.Ip = Ip;
     }
 
     /**
-     * Get Port or port range. 
-     * @return Port Port or port range.
+     * Get <p>Port or port range</p> 
+     * @return Port <p>Port or port range</p>
      */
     public String getPort() {
         return this.Port;
     }
 
     /**
-     * Set Port or port range.
-     * @param Port Port or port range.
+     * Set <p>Port or port range</p>
+     * @param Port <p>Port or port range</p>
      */
     public void setPort(String Port) {
         this.Port = Port;
     }
 
     /**
-     * Get Open. 
-     * @return Status Open.
+     * Get <p>Open</p> 
+     * @return Status <p>Open</p>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Open.
-     * @param Status Open.
+     * Set <p>Open</p>
+     * @param Status <p>Open</p>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get Risk type. 
-     * @return RiskType Risk type.
+     * Get <p>Risk type</p> 
+     * @return RiskType <p>Risk type</p>
      */
     public String getRiskType() {
         return this.RiskType;
     }
 
     /**
-     * Set Risk type.
-     * @param RiskType Risk type.
+     * Set <p>Risk type</p>
+     * @param RiskType <p>Risk type</p>
      */
     public void setRiskType(String RiskType) {
         this.RiskType = RiskType;
     }
 
     /**
-     * Get acl type. 
-     * @return AclType acl type.
+     * Get <p>acl type</p> 
+     * @return AclType <p>acl type</p>
      */
     public String getAclType() {
         return this.AclType;
     }
 
     /**
-     * Set acl type.
-     * @param AclType acl type.
+     * Set <p>acl type</p>
+     * @param AclType <p>acl type</p>
      */
     public void setAclType(String AclType) {
         this.AclType = AclType;
     }
 
     /**
-     * Get ACL list. 
-     * @return AclList ACL list.
+     * Get <p>acl list</p> 
+     * @return AclList <p>acl list</p>
      */
     public String getAclList() {
         return this.AclList;
     }
 
     /**
-     * Set ACL list.
-     * @param AclList ACL list.
+     * Set <p>acl list</p>
+     * @param AclList <p>acl list</p>
      */
     public void setAclList(String AclList) {
         this.AclList = AclList;
     }
 
     /**
-     * Get Asset ID. 
-     * @return AssetId Asset ID.
+     * Get <p>Asset ID</p> 
+     * @return AssetId <p>Asset ID</p>
      */
     public String getAssetId() {
         return this.AssetId;
     }
 
     /**
-     * Set Asset ID.
-     * @param AssetId Asset ID.
+     * Set <p>Asset ID</p>
+     * @param AssetId <p>Asset ID</p>
      */
     public void setAssetId(String AssetId) {
         this.AssetId = AssetId;
     }
 
     /**
-     * Get Instance name 
-     * @return InstanceName Instance name
+     * Get <p>Instance name</p> 
+     * @return InstanceName <p>Instance name</p>
      */
     public String getInstanceName() {
         return this.InstanceName;
     }
 
     /**
-     * Set Instance name
-     * @param InstanceName Instance name
+     * Set <p>Instance name</p>
+     * @param InstanceName <p>Instance name</p>
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;
     }
 
     /**
-     * Get Asset type. 
-     * @return AssetType Asset type.
+     * Get <p>Asset type</p> 
+     * @return AssetType <p>Asset type</p>
      */
     public String getAssetType() {
         return this.AssetType;
     }
 
     /**
-     * Set Asset type.
-     * @param AssetType Asset type.
+     * Set <p>Asset type</p>
+     * @param AssetType <p>Asset type</p>
      */
     public void setAssetType(String AssetType) {
         this.AssetType = AssetType;
     }
 
     /**
-     * Get Port service quantity. 
-     * @return PortServiceCount Port service quantity.
+     * Get <p>Number of port services</p> 
+     * @return PortServiceCount <p>Number of port services</p>
      */
     public Long getPortServiceCount() {
         return this.PortServiceCount;
     }
 
     /**
-     * Set Port service quantity.
-     * @param PortServiceCount Port service quantity.
+     * Set <p>Number of port services</p>
+     * @param PortServiceCount <p>Number of port services</p>
      */
     public void setPortServiceCount(Long PortServiceCount) {
         this.PortServiceCount = PortServiceCount;
     }
 
     /**
-     * Get Number of high-risk ports. 
-     * @return HighRiskPortServiceCount Number of high-risk ports.
+     * Get <p>Number of high-risk ports</p> 
+     * @return HighRiskPortServiceCount <p>Number of high-risk ports</p>
      */
     public Long getHighRiskPortServiceCount() {
         return this.HighRiskPortServiceCount;
     }
 
     /**
-     * Set Number of high-risk ports.
-     * @param HighRiskPortServiceCount Number of high-risk ports.
+     * Set <p>Number of high-risk ports</p>
+     * @param HighRiskPortServiceCount <p>Number of high-risk ports</p>
      */
     public void setHighRiskPortServiceCount(Long HighRiskPortServiceCount) {
         this.HighRiskPortServiceCount = HighRiskPortServiceCount;
     }
 
     /**
-     * Get Number of web applications. 
-     * @return WebAppCount Number of web applications.
+     * Get <p>Number of web applications</p> 
+     * @return WebAppCount <p>Number of web applications</p>
      */
     public Long getWebAppCount() {
         return this.WebAppCount;
     }
 
     /**
-     * Set Number of web applications.
-     * @param WebAppCount Number of web applications.
+     * Set <p>Number of web applications</p>
+     * @param WebAppCount <p>Number of web applications</p>
      */
     public void setWebAppCount(Long WebAppCount) {
         this.WebAppCount = WebAppCount;
     }
 
     /**
-     * Get Number of web applications at risk. 
-     * @return RiskWebAppCount Number of web applications at risk.
+     * Get <p>Number of web applications at risk</p> 
+     * @return RiskWebAppCount <p>Number of web applications at risk</p>
      */
     public Long getRiskWebAppCount() {
         return this.RiskWebAppCount;
     }
 
     /**
-     * Set Number of web applications at risk.
-     * @param RiskWebAppCount Number of web applications at risk.
+     * Set <p>Number of web applications at risk</p>
+     * @param RiskWebAppCount <p>Number of web applications at risk</p>
      */
     public void setRiskWebAppCount(Long RiskWebAppCount) {
         this.RiskWebAppCount = RiskWebAppCount;
     }
 
     /**
-     * Get Number of Weak Passwords 
-     * @return WeakPasswordCount Number of Weak Passwords
+     * Get <p>Number of weak passwords.</p> 
+     * @return WeakPasswordCount <p>Number of weak passwords.</p>
      */
     public Long getWeakPasswordCount() {
         return this.WeakPasswordCount;
     }
 
     /**
-     * Set Number of Weak Passwords
-     * @param WeakPasswordCount Number of Weak Passwords
+     * Set <p>Number of weak passwords.</p>
+     * @param WeakPasswordCount <p>Number of weak passwords.</p>
      */
     public void setWeakPasswordCount(Long WeakPasswordCount) {
         this.WeakPasswordCount = WeakPasswordCount;
     }
 
     /**
-     * Get Number of vulnerabilities 
-     * @return VulCount Number of vulnerabilities
+     * Get <p>Vulnerability count</p> 
+     * @return VulCount <p>Vulnerability count</p>
      */
     public Long getVulCount() {
         return this.VulCount;
     }
 
     /**
-     * Set Number of vulnerabilities
-     * @param VulCount Number of vulnerabilities
+     * Set <p>Vulnerability count</p>
+     * @param VulCount <p>Vulnerability count</p>
      */
     public void setVulCount(Long VulCount) {
         this.VulCount = VulCount;
     }
 
     /**
-     * Get First detection time 
-     * @return CreateTime First detection time
+     * Get <p>First discovery time</p> 
+     * @return CreateTime <p>First discovery time</p>
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set First detection time
-     * @param CreateTime First detection time
+     * Set <p>First discovery time</p>
+     * @param CreateTime <p>First discovery time</p>
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get Latest update time. 
-     * @return UpdateTime Latest update time.
+     * Get <p>Latest update time.</p> 
+     * @return UpdateTime <p>Latest update time.</p>
      */
     public String getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set Latest update time.
-     * @param UpdateTime Latest update time.
+     * Set <p>Latest update time.</p>
+     * @param UpdateTime <p>Latest update time.</p>
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;
     }
 
     /**
-     * Get Instance Type Name 
-     * @return AssetTypeName Instance Type Name
+     * Get <p>Instance Type Name</p> 
+     * @return AssetTypeName <p>Instance Type Name</p>
      */
     public String getAssetTypeName() {
         return this.AssetTypeName;
     }
 
     /**
-     * Set Instance Type Name
-     * @param AssetTypeName Instance Type Name
+     * Set <p>Instance Type Name</p>
+     * @param AssetTypeName <p>Instance Type Name</p>
      */
     public void setAssetTypeName(String AssetTypeName) {
         this.AssetTypeName = AssetTypeName;
     }
 
     /**
-     * Get Open status. 
-     * @return DisplayStatus Open status.
+     * Get <p>Open status</p> 
+     * @return DisplayStatus <p>Open status</p>
      */
     public String getDisplayStatus() {
         return this.DisplayStatus;
     }
 
     /**
-     * Set Open status.
-     * @param DisplayStatus Open status.
+     * Set <p>Open status</p>
+     * @param DisplayStatus <p>Open status</p>
      */
     public void setDisplayStatus(String DisplayStatus) {
         this.DisplayStatus = DisplayStatus;
     }
 
     /**
-     * Get Port status. 
-     * @return DisplayRiskType Port status.
+     * Get <p>Port status</p> 
+     * @return DisplayRiskType <p>Port status</p>
      */
     public String getDisplayRiskType() {
         return this.DisplayRiskType;
     }
 
     /**
-     * Set Port status.
-     * @param DisplayRiskType Port status.
+     * Set <p>Port status</p>
+     * @param DisplayRiskType <p>Port status</p>
      */
     public void setDisplayRiskType(String DisplayRiskType) {
         this.DisplayRiskType = DisplayRiskType;
     }
 
     /**
-     * Get Scan task status. 
-     * @return ScanTaskStatus Scan task status.
+     * Get <p>Scan task status</p> 
+     * @return ScanTaskStatus <p>Scan task status</p>
      */
     public String getScanTaskStatus() {
         return this.ScanTaskStatus;
     }
 
     /**
-     * Set Scan task status.
-     * @param ScanTaskStatus Scan task status.
+     * Set <p>Scan task status</p>
+     * @param ScanTaskStatus <p>Scan task status</p>
      */
     public void setScanTaskStatus(String ScanTaskStatus) {
         this.ScanTaskStatus = ScanTaskStatus;
     }
 
     /**
-     * Get uuid 
-     * @return Uuid uuid
+     * Get <p>uuid</p> 
+     * @return Uuid <p>uuid</p>
      */
     public String getUuid() {
         return this.Uuid;
     }
 
     /**
-     * Set uuid
-     * @param Uuid uuid
+     * Set <p>uuid</p>
+     * @param Uuid <p>uuid</p>
      */
     public void setUuid(String Uuid) {
         this.Uuid = Uuid;
     }
 
     /**
-     * Get Whether a security check has been performed. 
-     * @return HasScan Whether a security check has been performed.
+     * Get <p>Whether a security check has been performed</p> 
+     * @return HasScan <p>Whether a security check has been performed</p>
      */
     public String getHasScan() {
         return this.HasScan;
     }
 
     /**
-     * Set Whether a security check has been performed.
-     * @param HasScan Whether a security check has been performed.
+     * Set <p>Whether a security check has been performed</p>
+     * @param HasScan <p>Whether a security check has been performed</p>
      */
     public void setHasScan(String HasScan) {
         this.HasScan = HasScan;
     }
 
     /**
-     * Get Tenant ID. 
-     * @return AppId Tenant ID.
+     * Get <p>Tenant ID</p> 
+     * @return AppId <p>Tenant ID</p>
      */
     public Long getAppId() {
         return this.AppId;
     }
 
     /**
-     * Set Tenant ID.
-     * @param AppId Tenant ID.
+     * Set <p>Tenant ID</p>
+     * @param AppId <p>Tenant ID</p>
      */
     public void setAppId(Long AppId) {
         this.AppId = AppId;
     }
 
     /**
-     * Get Tenant ID string. 
-     * @return AppIdStr Tenant ID string.
+     * Get <p>Tenant ID string</p> 
+     * @return AppIdStr <p>Tenant ID string</p>
      */
     public String getAppIdStr() {
         return this.AppIdStr;
     }
 
     /**
-     * Set Tenant ID string.
-     * @param AppIdStr Tenant ID string.
+     * Set <p>Tenant ID string</p>
+     * @param AppIdStr <p>Tenant ID string</p>
      */
     public void setAppIdStr(String AppIdStr) {
         this.AppIdStr = AppIdStr;
     }
 
     /**
-     * Get Record ID 
-     * @return ExposureID Record ID
+     * Get <p>Record ID</p> 
+     * @return ExposureID <p>Record ID</p>
      */
     public Long getExposureID() {
         return this.ExposureID;
     }
 
     /**
-     * Set Record ID
-     * @param ExposureID Record ID
+     * Set <p>Record ID</p>
+     * @param ExposureID <p>Record ID</p>
      */
     public void setExposureID(Long ExposureID) {
         this.ExposureID = ExposureID;
     }
 
     /**
-     * Get Number of ports open. 
-     * @return PortDetectCount Number of ports open.
+     * Get <p>Number of open ports</p> 
+     * @return PortDetectCount <p>Number of open ports</p>
      */
     public Long getPortDetectCount() {
         return this.PortDetectCount;
     }
 
     /**
-     * Set Number of ports open.
-     * @param PortDetectCount Number of ports open.
+     * Set <p>Number of open ports</p>
+     * @param PortDetectCount <p>Number of open ports</p>
      */
     public void setPortDetectCount(Long PortDetectCount) {
         this.PortDetectCount = PortDetectCount;
     }
 
     /**
-     * Get Port exposure result. 
-     * @return PortDetectResult Port exposure result.
+     * Get <p>Port exposure result</p> 
+     * @return PortDetectResult <p>Port exposure result</p>
      */
     public String getPortDetectResult() {
         return this.PortDetectResult;
     }
 
     /**
-     * Set Port exposure result.
-     * @param PortDetectResult Port exposure result.
+     * Set <p>Port exposure result</p>
+     * @param PortDetectResult <p>Port exposure result</p>
      */
     public void setPortDetectResult(String PortDetectResult) {
         this.PortDetectResult = PortDetectResult;
     }
 
     /**
-     * Get Tag. 
-     * @return Tag Tag.
+     * Get <p>Tag.</p> 
+     * @return Tag <p>Tag.</p>
      */
     public String getTag() {
         return this.Tag;
     }
 
     /**
-     * Set Tag.
-     * @param Tag Tag.
+     * Set <p>Tag.</p>
+     * @param Tag <p>Tag.</p>
      */
     public void setTag(String Tag) {
         this.Tag = Tag;
     }
 
     /**
-     * Get Remarks 
-     * @return Comment Remarks
+     * Get <p>Remark</p> 
+     * @return Comment <p>Remark</p>
      */
     public String getComment() {
         return this.Comment;
     }
 
     /**
-     * Set Remarks
-     * @param Comment Remarks
+     * Set <p>Remark</p>
+     * @param Comment <p>Remark</p>
      */
     public void setComment(String Comment) {
         this.Comment = Comment;
     }
 
     /**
-     * Get Number of risks to be governed. 
-     * @return ToGovernedRiskCount Number of risks to be governed.
+     * Get <p>Number of risks to be governed</p> 
+     * @return ToGovernedRiskCount <p>Number of risks to be governed</p>
      */
     public Long getToGovernedRiskCount() {
         return this.ToGovernedRiskCount;
     }
 
     /**
-     * Set Number of risks to be governed.
-     * @param ToGovernedRiskCount Number of risks to be governed.
+     * Set <p>Number of risks to be governed</p>
+     * @param ToGovernedRiskCount <p>Number of risks to be governed</p>
      */
     public void setToGovernedRiskCount(Long ToGovernedRiskCount) {
         this.ToGovernedRiskCount = ToGovernedRiskCount;
     }
 
     /**
-     * Get Risk content to be governed. 
-     * @return ToGovernedRiskContent Risk content to be governed.
+     * Get <p>Risk content to be governed</p> 
+     * @return ToGovernedRiskContent <p>Risk content to be governed</p>
      */
     public String getToGovernedRiskContent() {
         return this.ToGovernedRiskContent;
     }
 
     /**
-     * Set Risk content to be governed.
-     * @param ToGovernedRiskContent Risk content to be governed.
+     * Set <p>Risk content to be governed</p>
+     * @param ToGovernedRiskContent <p>Risk content to be governed</p>
      */
     public void setToGovernedRiskContent(String ToGovernedRiskContent) {
         this.ToGovernedRiskContent = ToGovernedRiskContent;
+    }
+
+    /**
+     * Get <p>Type icon of asset</p> 
+     * @return AssetTypeIconURL <p>Type icon of asset</p>
+     */
+    public String getAssetTypeIconURL() {
+        return this.AssetTypeIconURL;
+    }
+
+    /**
+     * Set <p>Type icon of asset</p>
+     * @param AssetTypeIconURL <p>Type icon of asset</p>
+     */
+    public void setAssetTypeIconURL(String AssetTypeIconURL) {
+        this.AssetTypeIconURL = AssetTypeIconURL;
+    }
+
+    /**
+     * Get <p>Asset type 3D icon</p> 
+     * @return AssetTypeIconSolidURL <p>Asset type 3D icon</p>
+     */
+    public String getAssetTypeIconSolidURL() {
+        return this.AssetTypeIconSolidURL;
+    }
+
+    /**
+     * Set <p>Asset type 3D icon</p>
+     * @param AssetTypeIconSolidURL <p>Asset type 3D icon</p>
+     */
+    public void setAssetTypeIconSolidURL(String AssetTypeIconSolidURL) {
+        this.AssetTypeIconSolidURL = AssetTypeIconSolidURL;
     }
 
     public ExposesItem() {
@@ -967,6 +1013,12 @@ public class ExposesItem extends AbstractModel {
         if (source.ToGovernedRiskContent != null) {
             this.ToGovernedRiskContent = new String(source.ToGovernedRiskContent);
         }
+        if (source.AssetTypeIconURL != null) {
+            this.AssetTypeIconURL = new String(source.AssetTypeIconURL);
+        }
+        if (source.AssetTypeIconSolidURL != null) {
+            this.AssetTypeIconSolidURL = new String(source.AssetTypeIconSolidURL);
+        }
     }
 
 
@@ -1010,6 +1062,8 @@ public class ExposesItem extends AbstractModel {
         this.setParamSimple(map, prefix + "Comment", this.Comment);
         this.setParamSimple(map, prefix + "ToGovernedRiskCount", this.ToGovernedRiskCount);
         this.setParamSimple(map, prefix + "ToGovernedRiskContent", this.ToGovernedRiskContent);
+        this.setParamSimple(map, prefix + "AssetTypeIconURL", this.AssetTypeIconURL);
+        this.setParamSimple(map, prefix + "AssetTypeIconSolidURL", this.AssetTypeIconSolidURL);
 
     }
 }

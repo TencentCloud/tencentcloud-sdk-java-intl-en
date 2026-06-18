@@ -1,0 +1,179 @@
+/*
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+package com.tencentcloudapi.tdmysql.v20211122.models;
+
+import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.annotations.Expose;
+import java.util.HashMap;
+
+public class ModifyInstanceNetworkRequest extends AbstractModel {
+
+    /**
+    * Instance ID.
+    */
+    @SerializedName("InstanceId")
+    @Expose
+    private String InstanceId;
+
+    /**
+    * VpcId of the target VPC network
+    */
+    @SerializedName("VpcId")
+    @Expose
+    private String VpcId;
+
+    /**
+    * Subnet ID of the target VPC network
+    */
+    @SerializedName("SubnetId")
+    @Expose
+    private String SubnetId;
+
+    /**
+    * VIP retention duration, in hours, value ranges from 0 to 168. 0 means immediate release with a one-minute delay. Not specified, default is 24 hr for VIP release.
+    */
+    @SerializedName("VipReleaseDelay")
+    @Expose
+    private Long VipReleaseDelay;
+
+    /**
+    * Assign vip modification. Leave blank for a random vip.
+    */
+    @SerializedName("Vip")
+    @Expose
+    private String Vip;
+
+    /**
+     * Get Instance ID. 
+     * @return InstanceId Instance ID.
+     */
+    public String getInstanceId() {
+        return this.InstanceId;
+    }
+
+    /**
+     * Set Instance ID.
+     * @param InstanceId Instance ID.
+     */
+    public void setInstanceId(String InstanceId) {
+        this.InstanceId = InstanceId;
+    }
+
+    /**
+     * Get VpcId of the target VPC network 
+     * @return VpcId VpcId of the target VPC network
+     */
+    public String getVpcId() {
+        return this.VpcId;
+    }
+
+    /**
+     * Set VpcId of the target VPC network
+     * @param VpcId VpcId of the target VPC network
+     */
+    public void setVpcId(String VpcId) {
+        this.VpcId = VpcId;
+    }
+
+    /**
+     * Get Subnet ID of the target VPC network 
+     * @return SubnetId Subnet ID of the target VPC network
+     */
+    public String getSubnetId() {
+        return this.SubnetId;
+    }
+
+    /**
+     * Set Subnet ID of the target VPC network
+     * @param SubnetId Subnet ID of the target VPC network
+     */
+    public void setSubnetId(String SubnetId) {
+        this.SubnetId = SubnetId;
+    }
+
+    /**
+     * Get VIP retention duration, in hours, value ranges from 0 to 168. 0 means immediate release with a one-minute delay. Not specified, default is 24 hr for VIP release. 
+     * @return VipReleaseDelay VIP retention duration, in hours, value ranges from 0 to 168. 0 means immediate release with a one-minute delay. Not specified, default is 24 hr for VIP release.
+     */
+    public Long getVipReleaseDelay() {
+        return this.VipReleaseDelay;
+    }
+
+    /**
+     * Set VIP retention duration, in hours, value ranges from 0 to 168. 0 means immediate release with a one-minute delay. Not specified, default is 24 hr for VIP release.
+     * @param VipReleaseDelay VIP retention duration, in hours, value ranges from 0 to 168. 0 means immediate release with a one-minute delay. Not specified, default is 24 hr for VIP release.
+     */
+    public void setVipReleaseDelay(Long VipReleaseDelay) {
+        this.VipReleaseDelay = VipReleaseDelay;
+    }
+
+    /**
+     * Get Assign vip modification. Leave blank for a random vip. 
+     * @return Vip Assign vip modification. Leave blank for a random vip.
+     */
+    public String getVip() {
+        return this.Vip;
+    }
+
+    /**
+     * Set Assign vip modification. Leave blank for a random vip.
+     * @param Vip Assign vip modification. Leave blank for a random vip.
+     */
+    public void setVip(String Vip) {
+        this.Vip = Vip;
+    }
+
+    public ModifyInstanceNetworkRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyInstanceNetworkRequest(ModifyInstanceNetworkRequest source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.VpcId != null) {
+            this.VpcId = new String(source.VpcId);
+        }
+        if (source.SubnetId != null) {
+            this.SubnetId = new String(source.SubnetId);
+        }
+        if (source.VipReleaseDelay != null) {
+            this.VipReleaseDelay = new Long(source.VipReleaseDelay);
+        }
+        if (source.Vip != null) {
+            this.Vip = new String(source.Vip);
+        }
+    }
+
+
+    /**
+     * Internal implementation, normal users should not use it.
+     */
+    public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
+        this.setParamSimple(map, prefix + "VpcId", this.VpcId);
+        this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
+        this.setParamSimple(map, prefix + "VipReleaseDelay", this.VipReleaseDelay);
+        this.setParamSimple(map, prefix + "Vip", this.Vip);
+
+    }
+}
+

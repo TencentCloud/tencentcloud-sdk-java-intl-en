@@ -73,8 +73,7 @@ public class SubnetAsset extends AbstractModel {
     private String VpcName;
 
     /**
-    * Tags
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * Tag.
     */
     @SerializedName("Tag")
     @Expose
@@ -144,16 +143,14 @@ Note: This field may return·null, indicating that no valid values can be obtain
     private String LastScanTime;
 
     /**
-    * Whether it's a critical asset
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * Core or Not
     */
     @SerializedName("IsCore")
     @Expose
     private Long IsCore;
 
     /**
-    * Whether it's a newly-added asset. Values: `1` (Yes), `0` (No)
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * New Asset or Not. 1: New
     */
     @SerializedName("IsNewAsset")
     @Expose
@@ -272,20 +269,16 @@ Note: This field may return·null, indicating that no valid values can be obtain
     }
 
     /**
-     * Get Tags
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return Tag Tags
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get Tag. 
+     * @return Tag Tag.
      */
     public Tag [] getTag() {
         return this.Tag;
     }
 
     /**
-     * Set Tags
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param Tag Tags
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set Tag.
+     * @param Tag Tag.
      */
     public void setTag(Tag [] Tag) {
         this.Tag = Tag;
@@ -436,40 +429,32 @@ Note: This field may return·null, indicating that no valid values can be obtain
     }
 
     /**
-     * Get Whether it's a critical asset
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return IsCore Whether it's a critical asset
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get Core or Not 
+     * @return IsCore Core or Not
      */
     public Long getIsCore() {
         return this.IsCore;
     }
 
     /**
-     * Set Whether it's a critical asset
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param IsCore Whether it's a critical asset
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set Core or Not
+     * @param IsCore Core or Not
      */
     public void setIsCore(Long IsCore) {
         this.IsCore = IsCore;
     }
 
     /**
-     * Get Whether it's a newly-added asset. Values: `1` (Yes), `0` (No)
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return IsNewAsset Whether it's a newly-added asset. Values: `1` (Yes), `0` (No)
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get New Asset or Not. 1: New 
+     * @return IsNewAsset New Asset or Not. 1: New
      */
     public Long getIsNewAsset() {
         return this.IsNewAsset;
     }
 
     /**
-     * Set Whether it's a newly-added asset. Values: `1` (Yes), `0` (No)
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param IsNewAsset Whether it's a newly-added asset. Values: `1` (Yes), `0` (No)
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set New Asset or Not. 1: New
+     * @param IsNewAsset New Asset or Not. 1: New
      */
     public void setIsNewAsset(Long IsNewAsset) {
         this.IsNewAsset = IsNewAsset;

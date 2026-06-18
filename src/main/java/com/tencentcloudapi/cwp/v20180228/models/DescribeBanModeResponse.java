@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeBanModeResponse extends AbstractModel {
 
     /**
-    * Blocking mode. STANDARD_MODE: standard mode; DEEP_MODE: deep mode.
+    * <p>Blocking mode. STANDARD_MODE: standard mode; DEEP_MODE: deep mode.</p>
     */
     @SerializedName("Mode")
     @Expose
     private String Mode;
 
     /**
-    * Configuration of the standard blocking mode
+    * <p>Configuration of the standard blocking mode</p>
     */
     @SerializedName("StandardModeConfig")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeBanModeResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Blocking mode. STANDARD_MODE: standard mode; DEEP_MODE: deep mode. 
-     * @return Mode Blocking mode. STANDARD_MODE: standard mode; DEEP_MODE: deep mode.
+     * Get <p>Blocking mode. STANDARD_MODE: standard mode; DEEP_MODE: deep mode.</p> 
+     * @return Mode <p>Blocking mode. STANDARD_MODE: standard mode; DEEP_MODE: deep mode.</p>
      */
     public String getMode() {
         return this.Mode;
     }
 
     /**
-     * Set Blocking mode. STANDARD_MODE: standard mode; DEEP_MODE: deep mode.
-     * @param Mode Blocking mode. STANDARD_MODE: standard mode; DEEP_MODE: deep mode.
+     * Set <p>Blocking mode. STANDARD_MODE: standard mode; DEEP_MODE: deep mode.</p>
+     * @param Mode <p>Blocking mode. STANDARD_MODE: standard mode; DEEP_MODE: deep mode.</p>
      */
     public void setMode(String Mode) {
         this.Mode = Mode;
     }
 
     /**
-     * Get Configuration of the standard blocking mode 
-     * @return StandardModeConfig Configuration of the standard blocking mode
+     * Get <p>Configuration of the standard blocking mode</p> 
+     * @return StandardModeConfig <p>Configuration of the standard blocking mode</p>
      */
     public StandardModeConfig getStandardModeConfig() {
         return this.StandardModeConfig;
     }
 
     /**
-     * Set Configuration of the standard blocking mode
-     * @param StandardModeConfig Configuration of the standard blocking mode
+     * Set <p>Configuration of the standard blocking mode</p>
+     * @param StandardModeConfig <p>Configuration of the standard blocking mode</p>
      */
     public void setStandardModeConfig(StandardModeConfig StandardModeConfig) {
         this.StandardModeConfig = StandardModeConfig;

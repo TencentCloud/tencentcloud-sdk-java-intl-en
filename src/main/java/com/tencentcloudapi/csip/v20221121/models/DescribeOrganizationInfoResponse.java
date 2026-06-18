@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeOrganizationInfoResponse extends AbstractModel {
 
     /**
-    * Total number of items
+    * Total quantity.
     */
     @SerializedName("TotalCount")
     @Expose
@@ -45,16 +45,16 @@ public class DescribeOrganizationInfoResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Total number of items 
-     * @return TotalCount Total number of items
+     * Get Total quantity. 
+     * @return TotalCount Total quantity.
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set Total number of items
-     * @param TotalCount Total number of items
+     * Set Total quantity.
+     * @param TotalCount Total quantity.
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

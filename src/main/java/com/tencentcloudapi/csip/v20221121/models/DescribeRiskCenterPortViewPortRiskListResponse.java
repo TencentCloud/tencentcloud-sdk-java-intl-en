@@ -31,7 +31,7 @@ public class DescribeRiskCenterPortViewPortRiskListResponse extends AbstractMode
     private Long TotalCount;
 
     /**
-    * List of port risks by assets
+    * Port Risk List from Port's Perspective
     */
     @SerializedName("Data")
     @Expose
@@ -82,16 +82,16 @@ public class DescribeRiskCenterPortViewPortRiskListResponse extends AbstractMode
     }
 
     /**
-     * Get List of port risks by assets 
-     * @return Data List of port risks by assets
+     * Get Port Risk List from Port's Perspective 
+     * @return Data Port Risk List from Port's Perspective
      */
     public PortViewPortRisk [] getData() {
         return this.Data;
     }
 
     /**
-     * Set List of port risks by assets
-     * @param Data List of port risks by assets
+     * Set Port Risk List from Port's Perspective
+     * @param Data Port Risk List from Port's Perspective
      */
     public void setData(PortViewPortRisk [] Data) {
         this.Data = Data;

@@ -31,7 +31,7 @@ public class DescribeRiskCenterWebsiteRiskListResponse extends AbstractModel {
     private Long TotalCount;
 
     /**
-    * List of content risks
+    * Content Risk List
     */
     @SerializedName("Data")
     @Expose
@@ -89,16 +89,16 @@ public class DescribeRiskCenterWebsiteRiskListResponse extends AbstractModel {
     }
 
     /**
-     * Get List of content risks 
-     * @return Data List of content risks
+     * Get Content Risk List 
+     * @return Data Content Risk List
      */
     public WebsiteRisk [] getData() {
         return this.Data;
     }
 
     /**
-     * Set List of content risks
-     * @param Data List of content risks
+     * Set Content Risk List
+     * @param Data Content Risk List
      */
     public void setData(WebsiteRisk [] Data) {
         this.Data = Data;

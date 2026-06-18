@@ -25,31 +25,27 @@ public class CVMAssetVO extends AbstractModel {
 
     /**
     * Asset ID
-Note: This field may return·null, indicating that no valid values can be obtained.
     */
     @SerializedName("AssetId")
     @Expose
     private String AssetId;
 
     /**
-    * Asset name
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * Asset name.
     */
     @SerializedName("AssetName")
     @Expose
     private String AssetName;
 
     /**
-    * Asset type
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * Asset type.
     */
     @SerializedName("AssetType")
     @Expose
     private String AssetType;
 
     /**
-    * Region
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * Region.
     */
     @SerializedName("Region")
     @Expose
@@ -57,31 +53,27 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
     /**
     * Protection status
-Note: This field may return·null, indicating that no valid values can be obtained.
     */
     @SerializedName("CWPStatus")
     @Expose
     private Long CWPStatus;
 
     /**
-    * Asset creation time
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * Asset creation time.
     */
     @SerializedName("AssetCreateTime")
     @Expose
     private String AssetCreateTime;
 
     /**
-    * Public IP
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * Public IP address
     */
     @SerializedName("PublicIp")
     @Expose
     private String PublicIp;
 
     /**
-    * Private IP
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * Private IP.
     */
     @SerializedName("PrivateIp")
     @Expose
@@ -95,32 +87,28 @@ Note: This field may return·null, indicating that no valid values can be obtain
     private String VpcId;
 
     /**
-    * VPC name
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * VPC Name
     */
     @SerializedName("VpcName")
     @Expose
     private String VpcName;
 
     /**
-    * App ID
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * App ID information
     */
     @SerializedName("AppId")
     @Expose
     private Long AppId;
 
     /**
-    * User `uin`
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * User UIN
     */
     @SerializedName("Uin")
     @Expose
     private String Uin;
 
     /**
-    * User name
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * Nickname.
     */
     @SerializedName("NickName")
     @Expose
@@ -128,15 +116,13 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
     /**
     * Availability zone
-Note: This field may return·null, indicating that no valid values can be obtained.
     */
     @SerializedName("AvailableArea")
     @Expose
     private String AvailableArea;
 
     /**
-    * Whether it's a critical asset
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * Core or Not
     */
     @SerializedName("IsCore")
     @Expose
@@ -144,191 +130,167 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
     /**
     * Subnet ID
-Note: This field may return·null, indicating that no valid values can be obtained.
     */
     @SerializedName("SubnetId")
     @Expose
     private String SubnetId;
 
     /**
-    * Subnet name
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * Subnet Name
     */
     @SerializedName("SubnetName")
     @Expose
     private String SubnetName;
 
     /**
-    * UUID of the instance
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * CWP Agent UUID.
     */
     @SerializedName("InstanceUuid")
     @Expose
     private String InstanceUuid;
 
     /**
-    * QUuid of the instance
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * CVM host UUID.
     */
     @SerializedName("InstanceQUuid")
     @Expose
     private String InstanceQUuid;
 
     /**
-    * OS name
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * OS Name
     */
     @SerializedName("OsName")
     @Expose
     private String OsName;
 
     /**
-    * Number of partitions
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * Partition
     */
     @SerializedName("PartitionCount")
     @Expose
     private Long PartitionCount;
 
     /**
-    * CPU information
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * CPU Information
     */
     @SerializedName("CPUInfo")
     @Expose
     private String CPUInfo;
 
     /**
-    * CPU size
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * CPU Size
     */
     @SerializedName("CPUSize")
     @Expose
     private Long CPUSize;
 
     /**
-    * CPU load
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * CPU Load
     */
     @SerializedName("CPULoad")
     @Expose
     private String CPULoad;
 
     /**
-    * Memory size
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * Memory size.
     */
     @SerializedName("MemorySize")
     @Expose
     private String MemorySize;
 
     /**
-    * Memory load
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * Memory Load
     */
     @SerializedName("MemoryLoad")
     @Expose
     private String MemoryLoad;
 
     /**
-    * Disk size.
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * Hard disk size.
     */
     @SerializedName("DiskSize")
     @Expose
     private String DiskSize;
 
     /**
-    * Disk load
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * Hard Disk Load
     */
     @SerializedName("DiskLoad")
     @Expose
     private String DiskLoad;
 
     /**
-    * Number of accounts
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * Number of Accounts
     */
     @SerializedName("AccountCount")
     @Expose
     private String AccountCount;
 
     /**
-    * Number of processes
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * Number of Processes
     */
     @SerializedName("ProcessCount")
     @Expose
     private String ProcessCount;
 
     /**
-    * Number of applications
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * Software application.
     */
     @SerializedName("AppCount")
     @Expose
     private String AppCount;
 
     /**
-    * Number of listened ports.
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * Listening port
     */
     @SerializedName("PortCount")
     @Expose
     private Long PortCount;
 
     /**
-    * Number of network attacks
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * Network attack.
     */
     @SerializedName("Attack")
     @Expose
     private Long Attack;
 
     /**
-    * Number of network access requests
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * Network access.
     */
     @SerializedName("Access")
     @Expose
     private Long Access;
 
     /**
-    * Number of blocked attacks
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * Network Interception
     */
     @SerializedName("Intercept")
     @Expose
     private Long Intercept;
 
     /**
-    * Inbound peak bandwidth
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * Inbound peak bandwidth.
     */
     @SerializedName("InBandwidth")
     @Expose
     private String InBandwidth;
 
     /**
-    * OutInbound peak bandwidth
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * Outbound peak bandwidth.
     */
     @SerializedName("OutBandwidth")
     @Expose
     private String OutBandwidth;
 
     /**
-    * Total inbound traffic
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * Total inbound traffic.
     */
     @SerializedName("InFlow")
     @Expose
     private String InFlow;
 
     /**
-    * Total outbound traffic
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * Outbound cumulative traffic.
     */
     @SerializedName("OutFlow")
     @Expose
@@ -336,105 +298,210 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
     /**
     * Last scan time
-Note: This field may return·null, indicating that no valid values can be obtained.
     */
     @SerializedName("LastScanTime")
     @Expose
     private String LastScanTime;
 
     /**
-    * Proactive malicious outgoing requests
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * Malicious outgoing request.
     */
     @SerializedName("NetWorkOut")
     @Expose
     private Long NetWorkOut;
 
     /**
-    * Port risks
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * Port risk.
     */
     @SerializedName("PortRisk")
     @Expose
     private Long PortRisk;
 
     /**
-    * Vulnerabilities
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * Vulnerability risk.
     */
     @SerializedName("VulnerabilityRisk")
     @Expose
     private Long VulnerabilityRisk;
 
     /**
-    * Configuraiton risks
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * Configuration risk.
     */
     @SerializedName("ConfigurationRisk")
     @Expose
     private Long ConfigurationRisk;
 
     /**
-    * Number of scan tasks
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * Scan Task Count
     */
     @SerializedName("ScanTask")
     @Expose
     private Long ScanTask;
 
     /**
-    * Tags
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * Tag.
     */
     @SerializedName("Tag")
     @Expose
     private Tag [] Tag;
 
     /**
-    * Member ID
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * memberId
     */
     @SerializedName("MemberId")
     @Expose
     private String MemberId;
 
     /**
-    * Full name of the operating system
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * Full OS Name
     */
     @SerializedName("Os")
     @Expose
     private String Os;
 
     /**
-    * Risk exposure
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * Risk service exposure.
     */
     @SerializedName("RiskExposure")
     @Expose
     private Long RiskExposure;
 
     /**
-    * BAS toolkit status. `0`: Not installed; `1`: Installed; `2`: Offline.
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * Simulated Attack Tool Status. 0 indicates not installed. 1 indicates installed. 2 indicates offline.
     */
     @SerializedName("BASAgentStatus")
     @Expose
     private Long BASAgentStatus;
 
     /**
-    * `1`: New asset; `0`: Not a new asset
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * 1-New Asset; 0-Not a New Asset
     */
     @SerializedName("IsNewAsset")
     @Expose
     private Long IsNewAsset;
 
     /**
-     * Get Asset ID
-Note: This field may return·null, indicating that no valid values can be obtained. 
+    * 0: not installed; 1: install; 2: installing.
+    */
+    @SerializedName("CVMAgentStatus")
+    @Expose
+    private Long CVMAgentStatus;
+
+    /**
+    * 1: enable 0: not enabled.
+    */
+    @SerializedName("CVMStatus")
+    @Expose
+    private Long CVMStatus;
+
+    /**
+    * 1: client installed 0: not installed 2: Agentless.
+    */
+    @SerializedName("DefenseModel")
+    @Expose
+    private Long DefenseModel;
+
+    /**
+    * 1: installed 0: not installed.
+    */
+    @SerializedName("TatStatus")
+    @Expose
+    private Long TatStatus;
+
+    /**
+    * cpu trend chart.
+    */
+    @SerializedName("CpuTrend")
+    @Expose
+    private Element [] CpuTrend;
+
+    /**
+    * Memory trend chart.
+    */
+    @SerializedName("MemoryTrend")
+    @Expose
+    private Element [] MemoryTrend;
+
+    /**
+    * 1: agent online 0: agent offline 2: host offline.
+    */
+    @SerializedName("AgentStatus")
+    @Expose
+    private Long AgentStatus;
+
+    /**
+    * Number of shutdowns this month.
+    */
+    @SerializedName("CloseDefenseCount")
+    @Expose
+    private Long CloseDefenseCount;
+
+    /**
+    * Running state.
+    */
+    @SerializedName("InstanceState")
+    @Expose
+    private String InstanceState;
+
+    /**
+    * Security group data.
+    */
+    @SerializedName("SecurityGroupIds")
+    @Expose
+    private String [] SecurityGroupIds;
+
+    /**
+    * Physical memory occupied KB.
+    */
+    @SerializedName("AgentMemRss")
+    @Expose
+    private Long AgentMemRss;
+
+    /**
+    * CPU utilization percentage.
+    */
+    @SerializedName("AgentCpuPer")
+    @Expose
+    private Float AgentCpuPer;
+
+    /**
+    * Actual appid belonging to cvm.
+    */
+    @SerializedName("RealAppid")
+    @Expose
+    private Long RealAppid;
+
+    /**
+    * Cloud asset type: 0: tencent cloud, 1: aws, 2: azure.
+    */
+    @SerializedName("CloudType")
+    @Expose
+    private Long CloudType;
+
+    /**
+    * Host protection status enumeration.
+0: not installed.
+Basic edition protection.
+2: inclusive edition protection.
+3: protection by pro edition.
+4: ultimate edition protection.
+5: offline.
+6: shutdown.
+    */
+    @SerializedName("ProtectStatus")
+    @Expose
+    private Long ProtectStatus;
+
+    /**
+    * Last offline time.
+    */
+    @SerializedName("OfflineTime")
+    @Expose
+    private String OfflineTime;
+
+    /**
+     * Get Asset ID 
      * @return AssetId Asset ID
-Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public String getAssetId() {
         return this.AssetId;
@@ -442,79 +509,63 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
     /**
      * Set Asset ID
-Note: This field may return·null, indicating that no valid values can be obtained.
      * @param AssetId Asset ID
-Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public void setAssetId(String AssetId) {
         this.AssetId = AssetId;
     }
 
     /**
-     * Get Asset name
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return AssetName Asset name
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get Asset name. 
+     * @return AssetName Asset name.
      */
     public String getAssetName() {
         return this.AssetName;
     }
 
     /**
-     * Set Asset name
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param AssetName Asset name
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set Asset name.
+     * @param AssetName Asset name.
      */
     public void setAssetName(String AssetName) {
         this.AssetName = AssetName;
     }
 
     /**
-     * Get Asset type
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return AssetType Asset type
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get Asset type. 
+     * @return AssetType Asset type.
      */
     public String getAssetType() {
         return this.AssetType;
     }
 
     /**
-     * Set Asset type
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param AssetType Asset type
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set Asset type.
+     * @param AssetType Asset type.
      */
     public void setAssetType(String AssetType) {
         this.AssetType = AssetType;
     }
 
     /**
-     * Get Region
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return Region Region
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get Region. 
+     * @return Region Region.
      */
     public String getRegion() {
         return this.Region;
     }
 
     /**
-     * Set Region
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param Region Region
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set Region.
+     * @param Region Region.
      */
     public void setRegion(String Region) {
         this.Region = Region;
     }
 
     /**
-     * Get Protection status
-Note: This field may return·null, indicating that no valid values can be obtained. 
+     * Get Protection status 
      * @return CWPStatus Protection status
-Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public Long getCWPStatus() {
         return this.CWPStatus;
@@ -522,69 +573,55 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
     /**
      * Set Protection status
-Note: This field may return·null, indicating that no valid values can be obtained.
      * @param CWPStatus Protection status
-Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public void setCWPStatus(Long CWPStatus) {
         this.CWPStatus = CWPStatus;
     }
 
     /**
-     * Get Asset creation time
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return AssetCreateTime Asset creation time
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get Asset creation time. 
+     * @return AssetCreateTime Asset creation time.
      */
     public String getAssetCreateTime() {
         return this.AssetCreateTime;
     }
 
     /**
-     * Set Asset creation time
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param AssetCreateTime Asset creation time
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set Asset creation time.
+     * @param AssetCreateTime Asset creation time.
      */
     public void setAssetCreateTime(String AssetCreateTime) {
         this.AssetCreateTime = AssetCreateTime;
     }
 
     /**
-     * Get Public IP
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return PublicIp Public IP
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get Public IP address 
+     * @return PublicIp Public IP address
      */
     public String getPublicIp() {
         return this.PublicIp;
     }
 
     /**
-     * Set Public IP
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param PublicIp Public IP
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set Public IP address
+     * @param PublicIp Public IP address
      */
     public void setPublicIp(String PublicIp) {
         this.PublicIp = PublicIp;
     }
 
     /**
-     * Get Private IP
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return PrivateIp Private IP
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get Private IP. 
+     * @return PrivateIp Private IP.
      */
     public String getPrivateIp() {
         return this.PrivateIp;
     }
 
     /**
-     * Set Private IP
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param PrivateIp Private IP
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set Private IP.
+     * @param PrivateIp Private IP.
      */
     public void setPrivateIp(String PrivateIp) {
         this.PrivateIp = PrivateIp;
@@ -607,90 +644,72 @@ Note: This field may return·null, indicating that no valid values can be obtain
     }
 
     /**
-     * Get VPC name
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return VpcName VPC name
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get VPC Name 
+     * @return VpcName VPC Name
      */
     public String getVpcName() {
         return this.VpcName;
     }
 
     /**
-     * Set VPC name
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param VpcName VPC name
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set VPC Name
+     * @param VpcName VPC Name
      */
     public void setVpcName(String VpcName) {
         this.VpcName = VpcName;
     }
 
     /**
-     * Get App ID
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return AppId App ID
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get App ID information 
+     * @return AppId App ID information
      */
     public Long getAppId() {
         return this.AppId;
     }
 
     /**
-     * Set App ID
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param AppId App ID
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set App ID information
+     * @param AppId App ID information
      */
     public void setAppId(Long AppId) {
         this.AppId = AppId;
     }
 
     /**
-     * Get User `uin`
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return Uin User `uin`
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get User UIN 
+     * @return Uin User UIN
      */
     public String getUin() {
         return this.Uin;
     }
 
     /**
-     * Set User `uin`
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param Uin User `uin`
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set User UIN
+     * @param Uin User UIN
      */
     public void setUin(String Uin) {
         this.Uin = Uin;
     }
 
     /**
-     * Get User name
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return NickName User name
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get Nickname. 
+     * @return NickName Nickname.
      */
     public String getNickName() {
         return this.NickName;
     }
 
     /**
-     * Set User name
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param NickName User name
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set Nickname.
+     * @param NickName Nickname.
      */
     public void setNickName(String NickName) {
         this.NickName = NickName;
     }
 
     /**
-     * Get Availability zone
-Note: This field may return·null, indicating that no valid values can be obtained. 
+     * Get Availability zone 
      * @return AvailableArea Availability zone
-Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public String getAvailableArea() {
         return this.AvailableArea;
@@ -698,39 +717,31 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
     /**
      * Set Availability zone
-Note: This field may return·null, indicating that no valid values can be obtained.
      * @param AvailableArea Availability zone
-Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public void setAvailableArea(String AvailableArea) {
         this.AvailableArea = AvailableArea;
     }
 
     /**
-     * Get Whether it's a critical asset
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return IsCore Whether it's a critical asset
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get Core or Not 
+     * @return IsCore Core or Not
      */
     public Long getIsCore() {
         return this.IsCore;
     }
 
     /**
-     * Set Whether it's a critical asset
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param IsCore Whether it's a critical asset
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set Core or Not
+     * @param IsCore Core or Not
      */
     public void setIsCore(Long IsCore) {
         this.IsCore = IsCore;
     }
 
     /**
-     * Get Subnet ID
-Note: This field may return·null, indicating that no valid values can be obtained. 
+     * Get Subnet ID 
      * @return SubnetId Subnet ID
-Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public String getSubnetId() {
         return this.SubnetId;
@@ -738,479 +749,383 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
     /**
      * Set Subnet ID
-Note: This field may return·null, indicating that no valid values can be obtained.
      * @param SubnetId Subnet ID
-Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;
     }
 
     /**
-     * Get Subnet name
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return SubnetName Subnet name
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get Subnet Name 
+     * @return SubnetName Subnet Name
      */
     public String getSubnetName() {
         return this.SubnetName;
     }
 
     /**
-     * Set Subnet name
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param SubnetName Subnet name
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set Subnet Name
+     * @param SubnetName Subnet Name
      */
     public void setSubnetName(String SubnetName) {
         this.SubnetName = SubnetName;
     }
 
     /**
-     * Get UUID of the instance
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return InstanceUuid UUID of the instance
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get CWP Agent UUID. 
+     * @return InstanceUuid CWP Agent UUID.
      */
     public String getInstanceUuid() {
         return this.InstanceUuid;
     }
 
     /**
-     * Set UUID of the instance
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param InstanceUuid UUID of the instance
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set CWP Agent UUID.
+     * @param InstanceUuid CWP Agent UUID.
      */
     public void setInstanceUuid(String InstanceUuid) {
         this.InstanceUuid = InstanceUuid;
     }
 
     /**
-     * Get QUuid of the instance
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return InstanceQUuid QUuid of the instance
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get CVM host UUID. 
+     * @return InstanceQUuid CVM host UUID.
      */
     public String getInstanceQUuid() {
         return this.InstanceQUuid;
     }
 
     /**
-     * Set QUuid of the instance
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param InstanceQUuid QUuid of the instance
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set CVM host UUID.
+     * @param InstanceQUuid CVM host UUID.
      */
     public void setInstanceQUuid(String InstanceQUuid) {
         this.InstanceQUuid = InstanceQUuid;
     }
 
     /**
-     * Get OS name
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return OsName OS name
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get OS Name 
+     * @return OsName OS Name
      */
     public String getOsName() {
         return this.OsName;
     }
 
     /**
-     * Set OS name
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param OsName OS name
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set OS Name
+     * @param OsName OS Name
      */
     public void setOsName(String OsName) {
         this.OsName = OsName;
     }
 
     /**
-     * Get Number of partitions
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return PartitionCount Number of partitions
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get Partition 
+     * @return PartitionCount Partition
      */
     public Long getPartitionCount() {
         return this.PartitionCount;
     }
 
     /**
-     * Set Number of partitions
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param PartitionCount Number of partitions
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set Partition
+     * @param PartitionCount Partition
      */
     public void setPartitionCount(Long PartitionCount) {
         this.PartitionCount = PartitionCount;
     }
 
     /**
-     * Get CPU information
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return CPUInfo CPU information
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get CPU Information 
+     * @return CPUInfo CPU Information
      */
     public String getCPUInfo() {
         return this.CPUInfo;
     }
 
     /**
-     * Set CPU information
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param CPUInfo CPU information
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set CPU Information
+     * @param CPUInfo CPU Information
      */
     public void setCPUInfo(String CPUInfo) {
         this.CPUInfo = CPUInfo;
     }
 
     /**
-     * Get CPU size
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return CPUSize CPU size
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get CPU Size 
+     * @return CPUSize CPU Size
      */
     public Long getCPUSize() {
         return this.CPUSize;
     }
 
     /**
-     * Set CPU size
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param CPUSize CPU size
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set CPU Size
+     * @param CPUSize CPU Size
      */
     public void setCPUSize(Long CPUSize) {
         this.CPUSize = CPUSize;
     }
 
     /**
-     * Get CPU load
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return CPULoad CPU load
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get CPU Load 
+     * @return CPULoad CPU Load
      */
     public String getCPULoad() {
         return this.CPULoad;
     }
 
     /**
-     * Set CPU load
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param CPULoad CPU load
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set CPU Load
+     * @param CPULoad CPU Load
      */
     public void setCPULoad(String CPULoad) {
         this.CPULoad = CPULoad;
     }
 
     /**
-     * Get Memory size
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return MemorySize Memory size
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get Memory size. 
+     * @return MemorySize Memory size.
      */
     public String getMemorySize() {
         return this.MemorySize;
     }
 
     /**
-     * Set Memory size
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param MemorySize Memory size
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set Memory size.
+     * @param MemorySize Memory size.
      */
     public void setMemorySize(String MemorySize) {
         this.MemorySize = MemorySize;
     }
 
     /**
-     * Get Memory load
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return MemoryLoad Memory load
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get Memory Load 
+     * @return MemoryLoad Memory Load
      */
     public String getMemoryLoad() {
         return this.MemoryLoad;
     }
 
     /**
-     * Set Memory load
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param MemoryLoad Memory load
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set Memory Load
+     * @param MemoryLoad Memory Load
      */
     public void setMemoryLoad(String MemoryLoad) {
         this.MemoryLoad = MemoryLoad;
     }
 
     /**
-     * Get Disk size.
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return DiskSize Disk size.
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get Hard disk size. 
+     * @return DiskSize Hard disk size.
      */
     public String getDiskSize() {
         return this.DiskSize;
     }
 
     /**
-     * Set Disk size.
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param DiskSize Disk size.
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set Hard disk size.
+     * @param DiskSize Hard disk size.
      */
     public void setDiskSize(String DiskSize) {
         this.DiskSize = DiskSize;
     }
 
     /**
-     * Get Disk load
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return DiskLoad Disk load
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get Hard Disk Load 
+     * @return DiskLoad Hard Disk Load
      */
     public String getDiskLoad() {
         return this.DiskLoad;
     }
 
     /**
-     * Set Disk load
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param DiskLoad Disk load
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set Hard Disk Load
+     * @param DiskLoad Hard Disk Load
      */
     public void setDiskLoad(String DiskLoad) {
         this.DiskLoad = DiskLoad;
     }
 
     /**
-     * Get Number of accounts
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return AccountCount Number of accounts
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get Number of Accounts 
+     * @return AccountCount Number of Accounts
      */
     public String getAccountCount() {
         return this.AccountCount;
     }
 
     /**
-     * Set Number of accounts
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param AccountCount Number of accounts
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set Number of Accounts
+     * @param AccountCount Number of Accounts
      */
     public void setAccountCount(String AccountCount) {
         this.AccountCount = AccountCount;
     }
 
     /**
-     * Get Number of processes
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return ProcessCount Number of processes
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get Number of Processes 
+     * @return ProcessCount Number of Processes
      */
     public String getProcessCount() {
         return this.ProcessCount;
     }
 
     /**
-     * Set Number of processes
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param ProcessCount Number of processes
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set Number of Processes
+     * @param ProcessCount Number of Processes
      */
     public void setProcessCount(String ProcessCount) {
         this.ProcessCount = ProcessCount;
     }
 
     /**
-     * Get Number of applications
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return AppCount Number of applications
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get Software application. 
+     * @return AppCount Software application.
      */
     public String getAppCount() {
         return this.AppCount;
     }
 
     /**
-     * Set Number of applications
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param AppCount Number of applications
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set Software application.
+     * @param AppCount Software application.
      */
     public void setAppCount(String AppCount) {
         this.AppCount = AppCount;
     }
 
     /**
-     * Get Number of listened ports.
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return PortCount Number of listened ports.
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get Listening port 
+     * @return PortCount Listening port
      */
     public Long getPortCount() {
         return this.PortCount;
     }
 
     /**
-     * Set Number of listened ports.
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param PortCount Number of listened ports.
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set Listening port
+     * @param PortCount Listening port
      */
     public void setPortCount(Long PortCount) {
         this.PortCount = PortCount;
     }
 
     /**
-     * Get Number of network attacks
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return Attack Number of network attacks
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get Network attack. 
+     * @return Attack Network attack.
      */
     public Long getAttack() {
         return this.Attack;
     }
 
     /**
-     * Set Number of network attacks
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param Attack Number of network attacks
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set Network attack.
+     * @param Attack Network attack.
      */
     public void setAttack(Long Attack) {
         this.Attack = Attack;
     }
 
     /**
-     * Get Number of network access requests
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return Access Number of network access requests
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get Network access. 
+     * @return Access Network access.
      */
     public Long getAccess() {
         return this.Access;
     }
 
     /**
-     * Set Number of network access requests
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param Access Number of network access requests
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set Network access.
+     * @param Access Network access.
      */
     public void setAccess(Long Access) {
         this.Access = Access;
     }
 
     /**
-     * Get Number of blocked attacks
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return Intercept Number of blocked attacks
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get Network Interception 
+     * @return Intercept Network Interception
      */
     public Long getIntercept() {
         return this.Intercept;
     }
 
     /**
-     * Set Number of blocked attacks
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param Intercept Number of blocked attacks
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set Network Interception
+     * @param Intercept Network Interception
      */
     public void setIntercept(Long Intercept) {
         this.Intercept = Intercept;
     }
 
     /**
-     * Get Inbound peak bandwidth
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return InBandwidth Inbound peak bandwidth
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get Inbound peak bandwidth. 
+     * @return InBandwidth Inbound peak bandwidth.
      */
     public String getInBandwidth() {
         return this.InBandwidth;
     }
 
     /**
-     * Set Inbound peak bandwidth
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param InBandwidth Inbound peak bandwidth
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set Inbound peak bandwidth.
+     * @param InBandwidth Inbound peak bandwidth.
      */
     public void setInBandwidth(String InBandwidth) {
         this.InBandwidth = InBandwidth;
     }
 
     /**
-     * Get OutInbound peak bandwidth
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return OutBandwidth OutInbound peak bandwidth
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get Outbound peak bandwidth. 
+     * @return OutBandwidth Outbound peak bandwidth.
      */
     public String getOutBandwidth() {
         return this.OutBandwidth;
     }
 
     /**
-     * Set OutInbound peak bandwidth
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param OutBandwidth OutInbound peak bandwidth
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set Outbound peak bandwidth.
+     * @param OutBandwidth Outbound peak bandwidth.
      */
     public void setOutBandwidth(String OutBandwidth) {
         this.OutBandwidth = OutBandwidth;
     }
 
     /**
-     * Get Total inbound traffic
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return InFlow Total inbound traffic
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get Total inbound traffic. 
+     * @return InFlow Total inbound traffic.
      */
     public String getInFlow() {
         return this.InFlow;
     }
 
     /**
-     * Set Total inbound traffic
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param InFlow Total inbound traffic
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set Total inbound traffic.
+     * @param InFlow Total inbound traffic.
      */
     public void setInFlow(String InFlow) {
         this.InFlow = InFlow;
     }
 
     /**
-     * Get Total outbound traffic
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return OutFlow Total outbound traffic
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get Outbound cumulative traffic. 
+     * @return OutFlow Outbound cumulative traffic.
      */
     public String getOutFlow() {
         return this.OutFlow;
     }
 
     /**
-     * Set Total outbound traffic
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param OutFlow Total outbound traffic
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set Outbound cumulative traffic.
+     * @param OutFlow Outbound cumulative traffic.
      */
     public void setOutFlow(String OutFlow) {
         this.OutFlow = OutFlow;
     }
 
     /**
-     * Get Last scan time
-Note: This field may return·null, indicating that no valid values can be obtained. 
+     * Get Last scan time 
      * @return LastScanTime Last scan time
-Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public String getLastScanTime() {
         return this.LastScanTime;
@@ -1218,232 +1133,470 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
     /**
      * Set Last scan time
-Note: This field may return·null, indicating that no valid values can be obtained.
      * @param LastScanTime Last scan time
-Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public void setLastScanTime(String LastScanTime) {
         this.LastScanTime = LastScanTime;
     }
 
     /**
-     * Get Proactive malicious outgoing requests
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return NetWorkOut Proactive malicious outgoing requests
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get Malicious outgoing request. 
+     * @return NetWorkOut Malicious outgoing request.
      */
     public Long getNetWorkOut() {
         return this.NetWorkOut;
     }
 
     /**
-     * Set Proactive malicious outgoing requests
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param NetWorkOut Proactive malicious outgoing requests
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set Malicious outgoing request.
+     * @param NetWorkOut Malicious outgoing request.
      */
     public void setNetWorkOut(Long NetWorkOut) {
         this.NetWorkOut = NetWorkOut;
     }
 
     /**
-     * Get Port risks
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return PortRisk Port risks
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get Port risk. 
+     * @return PortRisk Port risk.
      */
     public Long getPortRisk() {
         return this.PortRisk;
     }
 
     /**
-     * Set Port risks
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param PortRisk Port risks
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set Port risk.
+     * @param PortRisk Port risk.
      */
     public void setPortRisk(Long PortRisk) {
         this.PortRisk = PortRisk;
     }
 
     /**
-     * Get Vulnerabilities
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return VulnerabilityRisk Vulnerabilities
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get Vulnerability risk. 
+     * @return VulnerabilityRisk Vulnerability risk.
      */
     public Long getVulnerabilityRisk() {
         return this.VulnerabilityRisk;
     }
 
     /**
-     * Set Vulnerabilities
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param VulnerabilityRisk Vulnerabilities
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set Vulnerability risk.
+     * @param VulnerabilityRisk Vulnerability risk.
      */
     public void setVulnerabilityRisk(Long VulnerabilityRisk) {
         this.VulnerabilityRisk = VulnerabilityRisk;
     }
 
     /**
-     * Get Configuraiton risks
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return ConfigurationRisk Configuraiton risks
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get Configuration risk. 
+     * @return ConfigurationRisk Configuration risk.
      */
     public Long getConfigurationRisk() {
         return this.ConfigurationRisk;
     }
 
     /**
-     * Set Configuraiton risks
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param ConfigurationRisk Configuraiton risks
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set Configuration risk.
+     * @param ConfigurationRisk Configuration risk.
      */
     public void setConfigurationRisk(Long ConfigurationRisk) {
         this.ConfigurationRisk = ConfigurationRisk;
     }
 
     /**
-     * Get Number of scan tasks
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return ScanTask Number of scan tasks
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get Scan Task Count 
+     * @return ScanTask Scan Task Count
      */
     public Long getScanTask() {
         return this.ScanTask;
     }
 
     /**
-     * Set Number of scan tasks
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param ScanTask Number of scan tasks
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set Scan Task Count
+     * @param ScanTask Scan Task Count
      */
     public void setScanTask(Long ScanTask) {
         this.ScanTask = ScanTask;
     }
 
     /**
-     * Get Tags
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return Tag Tags
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get Tag. 
+     * @return Tag Tag.
      */
     public Tag [] getTag() {
         return this.Tag;
     }
 
     /**
-     * Set Tags
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param Tag Tags
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set Tag.
+     * @param Tag Tag.
      */
     public void setTag(Tag [] Tag) {
         this.Tag = Tag;
     }
 
     /**
-     * Get Member ID
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return MemberId Member ID
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get memberId 
+     * @return MemberId memberId
      */
     public String getMemberId() {
         return this.MemberId;
     }
 
     /**
-     * Set Member ID
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param MemberId Member ID
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set memberId
+     * @param MemberId memberId
      */
     public void setMemberId(String MemberId) {
         this.MemberId = MemberId;
     }
 
     /**
-     * Get Full name of the operating system
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return Os Full name of the operating system
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get Full OS Name 
+     * @return Os Full OS Name
      */
     public String getOs() {
         return this.Os;
     }
 
     /**
-     * Set Full name of the operating system
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param Os Full name of the operating system
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set Full OS Name
+     * @param Os Full OS Name
      */
     public void setOs(String Os) {
         this.Os = Os;
     }
 
     /**
-     * Get Risk exposure
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return RiskExposure Risk exposure
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get Risk service exposure. 
+     * @return RiskExposure Risk service exposure.
      */
     public Long getRiskExposure() {
         return this.RiskExposure;
     }
 
     /**
-     * Set Risk exposure
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param RiskExposure Risk exposure
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set Risk service exposure.
+     * @param RiskExposure Risk service exposure.
      */
     public void setRiskExposure(Long RiskExposure) {
         this.RiskExposure = RiskExposure;
     }
 
     /**
-     * Get BAS toolkit status. `0`: Not installed; `1`: Installed; `2`: Offline.
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return BASAgentStatus BAS toolkit status. `0`: Not installed; `1`: Installed; `2`: Offline.
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get Simulated Attack Tool Status. 0 indicates not installed. 1 indicates installed. 2 indicates offline. 
+     * @return BASAgentStatus Simulated Attack Tool Status. 0 indicates not installed. 1 indicates installed. 2 indicates offline.
      */
     public Long getBASAgentStatus() {
         return this.BASAgentStatus;
     }
 
     /**
-     * Set BAS toolkit status. `0`: Not installed; `1`: Installed; `2`: Offline.
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param BASAgentStatus BAS toolkit status. `0`: Not installed; `1`: Installed; `2`: Offline.
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set Simulated Attack Tool Status. 0 indicates not installed. 1 indicates installed. 2 indicates offline.
+     * @param BASAgentStatus Simulated Attack Tool Status. 0 indicates not installed. 1 indicates installed. 2 indicates offline.
      */
     public void setBASAgentStatus(Long BASAgentStatus) {
         this.BASAgentStatus = BASAgentStatus;
     }
 
     /**
-     * Get `1`: New asset; `0`: Not a new asset
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return IsNewAsset `1`: New asset; `0`: Not a new asset
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get 1-New Asset; 0-Not a New Asset 
+     * @return IsNewAsset 1-New Asset; 0-Not a New Asset
      */
     public Long getIsNewAsset() {
         return this.IsNewAsset;
     }
 
     /**
-     * Set `1`: New asset; `0`: Not a new asset
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param IsNewAsset `1`: New asset; `0`: Not a new asset
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set 1-New Asset; 0-Not a New Asset
+     * @param IsNewAsset 1-New Asset; 0-Not a New Asset
      */
     public void setIsNewAsset(Long IsNewAsset) {
         this.IsNewAsset = IsNewAsset;
+    }
+
+    /**
+     * Get 0: not installed; 1: install; 2: installing. 
+     * @return CVMAgentStatus 0: not installed; 1: install; 2: installing.
+     */
+    public Long getCVMAgentStatus() {
+        return this.CVMAgentStatus;
+    }
+
+    /**
+     * Set 0: not installed; 1: install; 2: installing.
+     * @param CVMAgentStatus 0: not installed; 1: install; 2: installing.
+     */
+    public void setCVMAgentStatus(Long CVMAgentStatus) {
+        this.CVMAgentStatus = CVMAgentStatus;
+    }
+
+    /**
+     * Get 1: enable 0: not enabled. 
+     * @return CVMStatus 1: enable 0: not enabled.
+     */
+    public Long getCVMStatus() {
+        return this.CVMStatus;
+    }
+
+    /**
+     * Set 1: enable 0: not enabled.
+     * @param CVMStatus 1: enable 0: not enabled.
+     */
+    public void setCVMStatus(Long CVMStatus) {
+        this.CVMStatus = CVMStatus;
+    }
+
+    /**
+     * Get 1: client installed 0: not installed 2: Agentless. 
+     * @return DefenseModel 1: client installed 0: not installed 2: Agentless.
+     */
+    public Long getDefenseModel() {
+        return this.DefenseModel;
+    }
+
+    /**
+     * Set 1: client installed 0: not installed 2: Agentless.
+     * @param DefenseModel 1: client installed 0: not installed 2: Agentless.
+     */
+    public void setDefenseModel(Long DefenseModel) {
+        this.DefenseModel = DefenseModel;
+    }
+
+    /**
+     * Get 1: installed 0: not installed. 
+     * @return TatStatus 1: installed 0: not installed.
+     */
+    public Long getTatStatus() {
+        return this.TatStatus;
+    }
+
+    /**
+     * Set 1: installed 0: not installed.
+     * @param TatStatus 1: installed 0: not installed.
+     */
+    public void setTatStatus(Long TatStatus) {
+        this.TatStatus = TatStatus;
+    }
+
+    /**
+     * Get cpu trend chart. 
+     * @return CpuTrend cpu trend chart.
+     */
+    public Element [] getCpuTrend() {
+        return this.CpuTrend;
+    }
+
+    /**
+     * Set cpu trend chart.
+     * @param CpuTrend cpu trend chart.
+     */
+    public void setCpuTrend(Element [] CpuTrend) {
+        this.CpuTrend = CpuTrend;
+    }
+
+    /**
+     * Get Memory trend chart. 
+     * @return MemoryTrend Memory trend chart.
+     */
+    public Element [] getMemoryTrend() {
+        return this.MemoryTrend;
+    }
+
+    /**
+     * Set Memory trend chart.
+     * @param MemoryTrend Memory trend chart.
+     */
+    public void setMemoryTrend(Element [] MemoryTrend) {
+        this.MemoryTrend = MemoryTrend;
+    }
+
+    /**
+     * Get 1: agent online 0: agent offline 2: host offline. 
+     * @return AgentStatus 1: agent online 0: agent offline 2: host offline.
+     */
+    public Long getAgentStatus() {
+        return this.AgentStatus;
+    }
+
+    /**
+     * Set 1: agent online 0: agent offline 2: host offline.
+     * @param AgentStatus 1: agent online 0: agent offline 2: host offline.
+     */
+    public void setAgentStatus(Long AgentStatus) {
+        this.AgentStatus = AgentStatus;
+    }
+
+    /**
+     * Get Number of shutdowns this month. 
+     * @return CloseDefenseCount Number of shutdowns this month.
+     */
+    public Long getCloseDefenseCount() {
+        return this.CloseDefenseCount;
+    }
+
+    /**
+     * Set Number of shutdowns this month.
+     * @param CloseDefenseCount Number of shutdowns this month.
+     */
+    public void setCloseDefenseCount(Long CloseDefenseCount) {
+        this.CloseDefenseCount = CloseDefenseCount;
+    }
+
+    /**
+     * Get Running state. 
+     * @return InstanceState Running state.
+     */
+    public String getInstanceState() {
+        return this.InstanceState;
+    }
+
+    /**
+     * Set Running state.
+     * @param InstanceState Running state.
+     */
+    public void setInstanceState(String InstanceState) {
+        this.InstanceState = InstanceState;
+    }
+
+    /**
+     * Get Security group data. 
+     * @return SecurityGroupIds Security group data.
+     */
+    public String [] getSecurityGroupIds() {
+        return this.SecurityGroupIds;
+    }
+
+    /**
+     * Set Security group data.
+     * @param SecurityGroupIds Security group data.
+     */
+    public void setSecurityGroupIds(String [] SecurityGroupIds) {
+        this.SecurityGroupIds = SecurityGroupIds;
+    }
+
+    /**
+     * Get Physical memory occupied KB. 
+     * @return AgentMemRss Physical memory occupied KB.
+     */
+    public Long getAgentMemRss() {
+        return this.AgentMemRss;
+    }
+
+    /**
+     * Set Physical memory occupied KB.
+     * @param AgentMemRss Physical memory occupied KB.
+     */
+    public void setAgentMemRss(Long AgentMemRss) {
+        this.AgentMemRss = AgentMemRss;
+    }
+
+    /**
+     * Get CPU utilization percentage. 
+     * @return AgentCpuPer CPU utilization percentage.
+     */
+    public Float getAgentCpuPer() {
+        return this.AgentCpuPer;
+    }
+
+    /**
+     * Set CPU utilization percentage.
+     * @param AgentCpuPer CPU utilization percentage.
+     */
+    public void setAgentCpuPer(Float AgentCpuPer) {
+        this.AgentCpuPer = AgentCpuPer;
+    }
+
+    /**
+     * Get Actual appid belonging to cvm. 
+     * @return RealAppid Actual appid belonging to cvm.
+     */
+    public Long getRealAppid() {
+        return this.RealAppid;
+    }
+
+    /**
+     * Set Actual appid belonging to cvm.
+     * @param RealAppid Actual appid belonging to cvm.
+     */
+    public void setRealAppid(Long RealAppid) {
+        this.RealAppid = RealAppid;
+    }
+
+    /**
+     * Get Cloud asset type: 0: tencent cloud, 1: aws, 2: azure. 
+     * @return CloudType Cloud asset type: 0: tencent cloud, 1: aws, 2: azure.
+     */
+    public Long getCloudType() {
+        return this.CloudType;
+    }
+
+    /**
+     * Set Cloud asset type: 0: tencent cloud, 1: aws, 2: azure.
+     * @param CloudType Cloud asset type: 0: tencent cloud, 1: aws, 2: azure.
+     */
+    public void setCloudType(Long CloudType) {
+        this.CloudType = CloudType;
+    }
+
+    /**
+     * Get Host protection status enumeration.
+0: not installed.
+Basic edition protection.
+2: inclusive edition protection.
+3: protection by pro edition.
+4: ultimate edition protection.
+5: offline.
+6: shutdown. 
+     * @return ProtectStatus Host protection status enumeration.
+0: not installed.
+Basic edition protection.
+2: inclusive edition protection.
+3: protection by pro edition.
+4: ultimate edition protection.
+5: offline.
+6: shutdown.
+     */
+    public Long getProtectStatus() {
+        return this.ProtectStatus;
+    }
+
+    /**
+     * Set Host protection status enumeration.
+0: not installed.
+Basic edition protection.
+2: inclusive edition protection.
+3: protection by pro edition.
+4: ultimate edition protection.
+5: offline.
+6: shutdown.
+     * @param ProtectStatus Host protection status enumeration.
+0: not installed.
+Basic edition protection.
+2: inclusive edition protection.
+3: protection by pro edition.
+4: ultimate edition protection.
+5: offline.
+6: shutdown.
+     */
+    public void setProtectStatus(Long ProtectStatus) {
+        this.ProtectStatus = ProtectStatus;
+    }
+
+    /**
+     * Get Last offline time. 
+     * @return OfflineTime Last offline time.
+     */
+    public String getOfflineTime() {
+        return this.OfflineTime;
+    }
+
+    /**
+     * Set Last offline time.
+     * @param OfflineTime Last offline time.
+     */
+    public void setOfflineTime(String OfflineTime) {
+        this.OfflineTime = OfflineTime;
     }
 
     public CVMAssetVO() {
@@ -1610,6 +1763,63 @@ Note: This field may return·null, indicating that no valid values can be obtain
         if (source.IsNewAsset != null) {
             this.IsNewAsset = new Long(source.IsNewAsset);
         }
+        if (source.CVMAgentStatus != null) {
+            this.CVMAgentStatus = new Long(source.CVMAgentStatus);
+        }
+        if (source.CVMStatus != null) {
+            this.CVMStatus = new Long(source.CVMStatus);
+        }
+        if (source.DefenseModel != null) {
+            this.DefenseModel = new Long(source.DefenseModel);
+        }
+        if (source.TatStatus != null) {
+            this.TatStatus = new Long(source.TatStatus);
+        }
+        if (source.CpuTrend != null) {
+            this.CpuTrend = new Element[source.CpuTrend.length];
+            for (int i = 0; i < source.CpuTrend.length; i++) {
+                this.CpuTrend[i] = new Element(source.CpuTrend[i]);
+            }
+        }
+        if (source.MemoryTrend != null) {
+            this.MemoryTrend = new Element[source.MemoryTrend.length];
+            for (int i = 0; i < source.MemoryTrend.length; i++) {
+                this.MemoryTrend[i] = new Element(source.MemoryTrend[i]);
+            }
+        }
+        if (source.AgentStatus != null) {
+            this.AgentStatus = new Long(source.AgentStatus);
+        }
+        if (source.CloseDefenseCount != null) {
+            this.CloseDefenseCount = new Long(source.CloseDefenseCount);
+        }
+        if (source.InstanceState != null) {
+            this.InstanceState = new String(source.InstanceState);
+        }
+        if (source.SecurityGroupIds != null) {
+            this.SecurityGroupIds = new String[source.SecurityGroupIds.length];
+            for (int i = 0; i < source.SecurityGroupIds.length; i++) {
+                this.SecurityGroupIds[i] = new String(source.SecurityGroupIds[i]);
+            }
+        }
+        if (source.AgentMemRss != null) {
+            this.AgentMemRss = new Long(source.AgentMemRss);
+        }
+        if (source.AgentCpuPer != null) {
+            this.AgentCpuPer = new Float(source.AgentCpuPer);
+        }
+        if (source.RealAppid != null) {
+            this.RealAppid = new Long(source.RealAppid);
+        }
+        if (source.CloudType != null) {
+            this.CloudType = new Long(source.CloudType);
+        }
+        if (source.ProtectStatus != null) {
+            this.ProtectStatus = new Long(source.ProtectStatus);
+        }
+        if (source.OfflineTime != null) {
+            this.OfflineTime = new String(source.OfflineTime);
+        }
     }
 
 
@@ -1668,6 +1878,22 @@ Note: This field may return·null, indicating that no valid values can be obtain
         this.setParamSimple(map, prefix + "RiskExposure", this.RiskExposure);
         this.setParamSimple(map, prefix + "BASAgentStatus", this.BASAgentStatus);
         this.setParamSimple(map, prefix + "IsNewAsset", this.IsNewAsset);
+        this.setParamSimple(map, prefix + "CVMAgentStatus", this.CVMAgentStatus);
+        this.setParamSimple(map, prefix + "CVMStatus", this.CVMStatus);
+        this.setParamSimple(map, prefix + "DefenseModel", this.DefenseModel);
+        this.setParamSimple(map, prefix + "TatStatus", this.TatStatus);
+        this.setParamArrayObj(map, prefix + "CpuTrend.", this.CpuTrend);
+        this.setParamArrayObj(map, prefix + "MemoryTrend.", this.MemoryTrend);
+        this.setParamSimple(map, prefix + "AgentStatus", this.AgentStatus);
+        this.setParamSimple(map, prefix + "CloseDefenseCount", this.CloseDefenseCount);
+        this.setParamSimple(map, prefix + "InstanceState", this.InstanceState);
+        this.setParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
+        this.setParamSimple(map, prefix + "AgentMemRss", this.AgentMemRss);
+        this.setParamSimple(map, prefix + "AgentCpuPer", this.AgentCpuPer);
+        this.setParamSimple(map, prefix + "RealAppid", this.RealAppid);
+        this.setParamSimple(map, prefix + "CloudType", this.CloudType);
+        this.setParamSimple(map, prefix + "ProtectStatus", this.ProtectStatus);
+        this.setParamSimple(map, prefix + "OfflineTime", this.OfflineTime);
 
     }
 }

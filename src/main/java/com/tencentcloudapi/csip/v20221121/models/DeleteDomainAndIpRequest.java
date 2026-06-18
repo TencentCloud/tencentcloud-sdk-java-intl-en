@@ -24,7 +24,14 @@ import java.util.HashMap;
 public class DeleteDomainAndIpRequest extends AbstractModel {
 
     /**
-    * u200c-
+    * Group Account Member ID
+    */
+    @SerializedName("MemberId")
+    @Expose
+    private String [] MemberId;
+
+    /**
+    * asset
     */
     @SerializedName("Content")
     @Expose
@@ -59,16 +66,32 @@ public class DeleteDomainAndIpRequest extends AbstractModel {
     private String Type;
 
     /**
-     * Get u200c- 
-     * @return Content u200c-
+     * Get Group Account Member ID 
+     * @return MemberId Group Account Member ID
+     */
+    public String [] getMemberId() {
+        return this.MemberId;
+    }
+
+    /**
+     * Set Group Account Member ID
+     * @param MemberId Group Account Member ID
+     */
+    public void setMemberId(String [] MemberId) {
+        this.MemberId = MemberId;
+    }
+
+    /**
+     * Get asset 
+     * @return Content asset
      */
     public PublicIpDomainListKey [] getContent() {
         return this.Content;
     }
 
     /**
-     * Set u200c-
-     * @param Content u200c-
+     * Set asset
+     * @param Content asset
      */
     public void setContent(PublicIpDomainListKey [] Content) {
         this.Content = Content;
@@ -146,6 +169,12 @@ public class DeleteDomainAndIpRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DeleteDomainAndIpRequest(DeleteDomainAndIpRequest source) {
+        if (source.MemberId != null) {
+            this.MemberId = new String[source.MemberId.length];
+            for (int i = 0; i < source.MemberId.length; i++) {
+                this.MemberId[i] = new String(source.MemberId[i]);
+            }
+        }
         if (source.Content != null) {
             this.Content = new PublicIpDomainListKey[source.Content.length];
             for (int i = 0; i < source.Content.length; i++) {
@@ -174,6 +203,7 @@ public class DeleteDomainAndIpRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamArraySimple(map, prefix + "MemberId.", this.MemberId);
         this.setParamArrayObj(map, prefix + "Content.", this.Content);
         this.setParamSimple(map, prefix + "RetainPath", this.RetainPath);
         this.setParamSimple(map, prefix + "IgnoreAsset", this.IgnoreAsset);

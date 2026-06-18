@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class AddLoginWhiteListsResponse extends AbstractModel {
 
     /**
-    * Prompt list of duplicate addition
+    * <p>List of duplicate-addition prompts</p>
     */
     @SerializedName("DuplicateHosts")
     @Expose
@@ -38,16 +38,16 @@ public class AddLoginWhiteListsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Prompt list of duplicate addition 
-     * @return DuplicateHosts Prompt list of duplicate addition
+     * Get <p>List of duplicate-addition prompts</p> 
+     * @return DuplicateHosts <p>List of duplicate-addition prompts</p>
      */
     public DuplicateHosts [] getDuplicateHosts() {
         return this.DuplicateHosts;
     }
 
     /**
-     * Set Prompt list of duplicate addition
-     * @param DuplicateHosts Prompt list of duplicate addition
+     * Set <p>List of duplicate-addition prompts</p>
+     * @param DuplicateHosts <p>List of duplicate-addition prompts</p>
      */
     public void setDuplicateHosts(DuplicateHosts [] DuplicateHosts) {
         this.DuplicateHosts = DuplicateHosts;

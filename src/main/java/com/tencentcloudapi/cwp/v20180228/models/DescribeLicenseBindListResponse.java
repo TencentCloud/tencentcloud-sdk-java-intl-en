@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeLicenseBindListResponse extends AbstractModel {
 
     /**
-    * Total number of entries
+    * <p>Total quantity.</p>
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * List of bound machines
+    * <p>List of bound machine information</p>
     */
     @SerializedName("List")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeLicenseBindListResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Total number of entries 
-     * @return TotalCount Total number of entries
+     * Get <p>Total quantity.</p> 
+     * @return TotalCount <p>Total quantity.</p>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set Total number of entries
-     * @param TotalCount Total number of entries
+     * Set <p>Total quantity.</p>
+     * @param TotalCount <p>Total quantity.</p>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get List of bound machines 
-     * @return List List of bound machines
+     * Get <p>List of bound machine information</p> 
+     * @return List <p>List of bound machine information</p>
      */
     public LicenseBindDetail [] getList() {
         return this.List;
     }
 
     /**
-     * Set List of bound machines
-     * @param List List of bound machines
+     * Set <p>List of bound machine information</p>
+     * @param List <p>List of bound machine information</p>
      */
     public void setList(LicenseBindDetail [] List) {
         this.List = List;

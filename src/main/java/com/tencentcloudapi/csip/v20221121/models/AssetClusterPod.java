@@ -45,8 +45,7 @@ public class AssetClusterPod extends AbstractModel {
     private String Nick;
 
     /**
-    * Region
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * Region.
     */
     @SerializedName("Region")
     @Expose
@@ -67,8 +66,7 @@ Note: This field may return·null, indicating that no valid values can be obtain
     private String AssetName;
 
     /**
-    * Creation time of the pod
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * Pod Creation Time
     */
     @SerializedName("InstanceCreateTime")
     @Expose
@@ -76,103 +74,90 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
     /**
     * Namespace
-Note: This field may return·null, indicating that no valid values can be obtained.
     */
     @SerializedName("Namespace")
     @Expose
     private String Namespace;
 
     /**
-    * Status
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * Status.
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * Cluster ID
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * Cluster ID.
     */
     @SerializedName("ClusterId")
     @Expose
     private String ClusterId;
 
     /**
-    * Cluster name
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * Cluster name.
     */
     @SerializedName("ClusterName")
     @Expose
     private String ClusterName;
 
     /**
-    * Server ID
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * Host ID
     */
     @SerializedName("MachineId")
     @Expose
     private String MachineId;
 
     /**
-    * Server name
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * host name
     */
     @SerializedName("MachineName")
     @Expose
     private String MachineName;
 
     /**
-    * Pod IP
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * pod ip
     */
     @SerializedName("PodIp")
     @Expose
     private String PodIp;
 
     /**
-    * Number of associated services
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * Associated Service Count
     */
     @SerializedName("ServiceCount")
     @Expose
     private Long ServiceCount;
 
     /**
-    * Number of associated containers
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * Associated container number
     */
     @SerializedName("ContainerCount")
     @Expose
     private Long ContainerCount;
 
     /**
-    * Public IP
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * Public IP address
     */
     @SerializedName("PublicIp")
     @Expose
     private String PublicIp;
 
     /**
-    * Private IP
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * Private IP address
     */
     @SerializedName("PrivateIp")
     @Expose
     private String PrivateIp;
 
     /**
-    * Whether it's a critical asset. Values: `1` (critical asset), `0` (non-critical asset)
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * Whether it is core. 1: Core; 2: Non-core.
     */
     @SerializedName("IsCore")
     @Expose
     private Long IsCore;
 
     /**
-    * Whether it's a newly-added asset. Values: `1` (Yes), `0` (No)
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * New Asset or Not. 1: New
     */
     @SerializedName("IsNewAsset")
     @Expose
@@ -227,20 +212,16 @@ Note: This field may return·null, indicating that no valid values can be obtain
     }
 
     /**
-     * Get Region
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return Region Region
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get Region. 
+     * @return Region Region.
      */
     public String getRegion() {
         return this.Region;
     }
 
     /**
-     * Set Region
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param Region Region
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set Region.
+     * @param Region Region.
      */
     public void setRegion(String Region) {
         this.Region = Region;
@@ -279,30 +260,24 @@ Note: This field may return·null, indicating that no valid values can be obtain
     }
 
     /**
-     * Get Creation time of the pod
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return InstanceCreateTime Creation time of the pod
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get Pod Creation Time 
+     * @return InstanceCreateTime Pod Creation Time
      */
     public String getInstanceCreateTime() {
         return this.InstanceCreateTime;
     }
 
     /**
-     * Set Creation time of the pod
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param InstanceCreateTime Creation time of the pod
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set Pod Creation Time
+     * @param InstanceCreateTime Pod Creation Time
      */
     public void setInstanceCreateTime(String InstanceCreateTime) {
         this.InstanceCreateTime = InstanceCreateTime;
     }
 
     /**
-     * Get Namespace
-Note: This field may return·null, indicating that no valid values can be obtained. 
+     * Get Namespace 
      * @return Namespace Namespace
-Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public String getNamespace() {
         return this.Namespace;
@@ -310,249 +285,199 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
     /**
      * Set Namespace
-Note: This field may return·null, indicating that no valid values can be obtained.
      * @param Namespace Namespace
-Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public void setNamespace(String Namespace) {
         this.Namespace = Namespace;
     }
 
     /**
-     * Get Status
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return Status Status
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get Status. 
+     * @return Status Status.
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Status
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param Status Status
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set Status.
+     * @param Status Status.
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get Cluster ID
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return ClusterId Cluster ID
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get Cluster ID. 
+     * @return ClusterId Cluster ID.
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set Cluster ID
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param ClusterId Cluster ID
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set Cluster ID.
+     * @param ClusterId Cluster ID.
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
     }
 
     /**
-     * Get Cluster name
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return ClusterName Cluster name
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get Cluster name. 
+     * @return ClusterName Cluster name.
      */
     public String getClusterName() {
         return this.ClusterName;
     }
 
     /**
-     * Set Cluster name
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param ClusterName Cluster name
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set Cluster name.
+     * @param ClusterName Cluster name.
      */
     public void setClusterName(String ClusterName) {
         this.ClusterName = ClusterName;
     }
 
     /**
-     * Get Server ID
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return MachineId Server ID
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get Host ID 
+     * @return MachineId Host ID
      */
     public String getMachineId() {
         return this.MachineId;
     }
 
     /**
-     * Set Server ID
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param MachineId Server ID
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set Host ID
+     * @param MachineId Host ID
      */
     public void setMachineId(String MachineId) {
         this.MachineId = MachineId;
     }
 
     /**
-     * Get Server name
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return MachineName Server name
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get host name 
+     * @return MachineName host name
      */
     public String getMachineName() {
         return this.MachineName;
     }
 
     /**
-     * Set Server name
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param MachineName Server name
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set host name
+     * @param MachineName host name
      */
     public void setMachineName(String MachineName) {
         this.MachineName = MachineName;
     }
 
     /**
-     * Get Pod IP
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return PodIp Pod IP
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get pod ip 
+     * @return PodIp pod ip
      */
     public String getPodIp() {
         return this.PodIp;
     }
 
     /**
-     * Set Pod IP
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param PodIp Pod IP
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set pod ip
+     * @param PodIp pod ip
      */
     public void setPodIp(String PodIp) {
         this.PodIp = PodIp;
     }
 
     /**
-     * Get Number of associated services
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return ServiceCount Number of associated services
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get Associated Service Count 
+     * @return ServiceCount Associated Service Count
      */
     public Long getServiceCount() {
         return this.ServiceCount;
     }
 
     /**
-     * Set Number of associated services
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param ServiceCount Number of associated services
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set Associated Service Count
+     * @param ServiceCount Associated Service Count
      */
     public void setServiceCount(Long ServiceCount) {
         this.ServiceCount = ServiceCount;
     }
 
     /**
-     * Get Number of associated containers
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return ContainerCount Number of associated containers
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get Associated container number 
+     * @return ContainerCount Associated container number
      */
     public Long getContainerCount() {
         return this.ContainerCount;
     }
 
     /**
-     * Set Number of associated containers
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param ContainerCount Number of associated containers
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set Associated container number
+     * @param ContainerCount Associated container number
      */
     public void setContainerCount(Long ContainerCount) {
         this.ContainerCount = ContainerCount;
     }
 
     /**
-     * Get Public IP
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return PublicIp Public IP
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get Public IP address 
+     * @return PublicIp Public IP address
      */
     public String getPublicIp() {
         return this.PublicIp;
     }
 
     /**
-     * Set Public IP
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param PublicIp Public IP
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set Public IP address
+     * @param PublicIp Public IP address
      */
     public void setPublicIp(String PublicIp) {
         this.PublicIp = PublicIp;
     }
 
     /**
-     * Get Private IP
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return PrivateIp Private IP
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get Private IP address 
+     * @return PrivateIp Private IP address
      */
     public String getPrivateIp() {
         return this.PrivateIp;
     }
 
     /**
-     * Set Private IP
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param PrivateIp Private IP
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set Private IP address
+     * @param PrivateIp Private IP address
      */
     public void setPrivateIp(String PrivateIp) {
         this.PrivateIp = PrivateIp;
     }
 
     /**
-     * Get Whether it's a critical asset. Values: `1` (critical asset), `0` (non-critical asset)
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return IsCore Whether it's a critical asset. Values: `1` (critical asset), `0` (non-critical asset)
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get Whether it is core. 1: Core; 2: Non-core. 
+     * @return IsCore Whether it is core. 1: Core; 2: Non-core.
      */
     public Long getIsCore() {
         return this.IsCore;
     }
 
     /**
-     * Set Whether it's a critical asset. Values: `1` (critical asset), `0` (non-critical asset)
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param IsCore Whether it's a critical asset. Values: `1` (critical asset), `0` (non-critical asset)
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set Whether it is core. 1: Core; 2: Non-core.
+     * @param IsCore Whether it is core. 1: Core; 2: Non-core.
      */
     public void setIsCore(Long IsCore) {
         this.IsCore = IsCore;
     }
 
     /**
-     * Get Whether it's a newly-added asset. Values: `1` (Yes), `0` (No)
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return IsNewAsset Whether it's a newly-added asset. Values: `1` (Yes), `0` (No)
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get New Asset or Not. 1: New 
+     * @return IsNewAsset New Asset or Not. 1: New
      */
     public Long getIsNewAsset() {
         return this.IsNewAsset;
     }
 
     /**
-     * Set Whether it's a newly-added asset. Values: `1` (Yes), `0` (No)
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param IsNewAsset Whether it's a newly-added asset. Values: `1` (Yes), `0` (No)
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set New Asset or Not. 1: New
+     * @param IsNewAsset New Asset or Not. 1: New
      */
     public void setIsNewAsset(Long IsNewAsset) {
         this.IsNewAsset = IsNewAsset;

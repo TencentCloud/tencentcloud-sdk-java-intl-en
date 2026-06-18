@@ -31,13 +31,6 @@ public class DescribeDBSAvailableRecoveryTimeRequest extends AbstractModel {
     private String InstanceId;
 
     /**
-    * <p>Backup set ID. the value comes from the DescribeDBSBackupSets api response.</p>
-    */
-    @SerializedName("BackupSetId")
-    @Expose
-    private Long BackupSetId;
-
-    /**
      * Get <p>Instance ID.</p> 
      * @return InstanceId <p>Instance ID.</p>
      */
@@ -53,22 +46,6 @@ public class DescribeDBSAvailableRecoveryTimeRequest extends AbstractModel {
         this.InstanceId = InstanceId;
     }
 
-    /**
-     * Get <p>Backup set ID. the value comes from the DescribeDBSBackupSets api response.</p> 
-     * @return BackupSetId <p>Backup set ID. the value comes from the DescribeDBSBackupSets api response.</p>
-     */
-    public Long getBackupSetId() {
-        return this.BackupSetId;
-    }
-
-    /**
-     * Set <p>Backup set ID. the value comes from the DescribeDBSBackupSets api response.</p>
-     * @param BackupSetId <p>Backup set ID. the value comes from the DescribeDBSBackupSets api response.</p>
-     */
-    public void setBackupSetId(Long BackupSetId) {
-        this.BackupSetId = BackupSetId;
-    }
-
     public DescribeDBSAvailableRecoveryTimeRequest() {
     }
 
@@ -80,9 +57,6 @@ public class DescribeDBSAvailableRecoveryTimeRequest extends AbstractModel {
         if (source.InstanceId != null) {
             this.InstanceId = new String(source.InstanceId);
         }
-        if (source.BackupSetId != null) {
-            this.BackupSetId = new Long(source.BackupSetId);
-        }
     }
 
 
@@ -91,7 +65,6 @@ public class DescribeDBSAvailableRecoveryTimeRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
-        this.setParamSimple(map, prefix + "BackupSetId", this.BackupSetId);
 
     }
 }

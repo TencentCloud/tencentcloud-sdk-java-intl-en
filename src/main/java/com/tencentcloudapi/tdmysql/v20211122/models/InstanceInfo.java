@@ -486,6 +486,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private AnalysisRelationInfo [] AnalysisRelationInfos;
 
     /**
+    * <p>Analysis engine instance info</p>
+    */
+    @SerializedName("AnalysisInstanceInfo")
+    @Expose
+    private AnalysisInstanceInfo AnalysisInstanceInfo;
+
+    /**
      * Get <p>Number of compute nodes</p> 
      * @return ComputeNodeNum <p>Number of compute nodes</p>
      * @deprecated
@@ -1637,6 +1644,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.AnalysisRelationInfos = AnalysisRelationInfos;
     }
 
+    /**
+     * Get <p>Analysis engine instance info</p> 
+     * @return AnalysisInstanceInfo <p>Analysis engine instance info</p>
+     */
+    public AnalysisInstanceInfo getAnalysisInstanceInfo() {
+        return this.AnalysisInstanceInfo;
+    }
+
+    /**
+     * Set <p>Analysis engine instance info</p>
+     * @param AnalysisInstanceInfo <p>Analysis engine instance info</p>
+     */
+    public void setAnalysisInstanceInfo(AnalysisInstanceInfo AnalysisInstanceInfo) {
+        this.AnalysisInstanceInfo = AnalysisInstanceInfo;
+    }
+
     public InstanceInfo() {
     }
 
@@ -1846,6 +1869,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 this.AnalysisRelationInfos[i] = new AnalysisRelationInfo(source.AnalysisRelationInfos[i]);
             }
         }
+        if (source.AnalysisInstanceInfo != null) {
+            this.AnalysisInstanceInfo = new AnalysisInstanceInfo(source.AnalysisInstanceInfo);
+        }
     }
 
 
@@ -1915,6 +1941,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamObj(map, prefix + "AutoScaleConfig.", this.AutoScaleConfig);
         this.setParamSimple(map, prefix + "AnalysisMode", this.AnalysisMode);
         this.setParamArrayObj(map, prefix + "AnalysisRelationInfos.", this.AnalysisRelationInfos);
+        this.setParamObj(map, prefix + "AnalysisInstanceInfo.", this.AnalysisInstanceInfo);
 
     }
 }

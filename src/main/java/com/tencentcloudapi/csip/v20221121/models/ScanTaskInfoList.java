@@ -24,16 +24,14 @@ import java.util.HashMap;
 public class ScanTaskInfoList extends AbstractModel {
 
     /**
-    * Task name
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Task name.
     */
     @SerializedName("TaskName")
     @Expose
     private String TaskName;
 
     /**
-    * Start time of the task
-Note: This field may return null, indicating that no valid values can be obtained.
+    * start time of the task
     */
     @SerializedName("StartTime")
     @Expose
@@ -41,71 +39,62 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Task end time
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-    * CRON format
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Cron Format
     */
     @SerializedName("ScanPlanContent")
     @Expose
     private String ScanPlanContent;
 
     /**
-    * Task type. `0`: Scheduled task, `1`: Scan immediately; `2`: Scanned at the specified time; `3`: Custom.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 0-Periodic Task; 1-Scan Now; 2-Scheduled Scan; 3-Custom.
     */
     @SerializedName("TaskType")
     @Expose
     private Long TaskType;
 
     /**
-    * Creation time
-Note: This field may return `null`, indicating that no valid values can be obtained.
+    * Creation time.
     */
     @SerializedName("InsertTime")
     @Expose
     private String InsertTime;
 
     /**
-    * Task ID
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Task ID.
     */
     @SerializedName("TaskId")
     @Expose
     private String TaskId;
 
     /**
-    * Custom list of assets to scan
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Custom Specified Scan Asset Information
     */
     @SerializedName("SelfDefiningAssets")
     @Expose
     private String [] SelfDefiningAssets;
 
     /**
-    * Estimated period to complete the task
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Estimated Time
     */
     @SerializedName("PredictTime")
     @Expose
     private Long PredictTime;
 
     /**
-    * Estimated completion time of the task
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Estimated Completion Time
     */
     @SerializedName("PredictEndTime")
     @Expose
     private String PredictEndTime;
 
     /**
-    * Number of reports
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Report Count
     */
     @SerializedName("ReportNumber")
     @Expose
@@ -113,15 +102,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Number of assets
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("AssetNumber")
     @Expose
     private Long AssetNumber;
 
     /**
-    * Scanning status. `0`: (default) Not scanned; `1`: Scanning; `2`: Scan completed; `3`: Error while scanning; `4`: Scanning stopped
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Scan Status. 0-Initial Value; 1-Scanning; 2-Scan Completed; 3-Scan Error; 4-Scan Stopped.
     */
     @SerializedName("ScanStatus")
     @Expose
@@ -129,7 +116,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Task progress
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Percent")
     @Expose
@@ -137,86 +123,76 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * port/poc/weakpass/webcontent/configrisk
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ScanItem")
     @Expose
     private String ScanItem;
 
     /**
-    * Values: `0` (Scan all); `1` (Scan specific assets); `2` (Scan all expect the specified assets); `3` (Custom assets).
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 0-Full Scan; 1-Specified Asset Scan; 2-Excluded Asset Scan; 3-Custom Specified Asset Scan.
     */
     @SerializedName("ScanAssetType")
     @Expose
     private Long ScanAssetType;
 
     /**
-    * VSS subtask ID
-Note: This field may return null, indicating that no valid values can be obtained.
+    * VSS Subtask ID
     */
     @SerializedName("VSSTaskId")
     @Expose
     private String VSSTaskId;
 
     /**
-    * CSPM subtask ID
-Note: This field may return null, indicating that no valid values can be obtained.
+    * CSPM Subtask ID
     */
     @SerializedName("CSPMTaskId")
     @Expose
     private String CSPMTaskId;
 
     /**
-    * CWPP vulnerability scan task IDHost missed scan subtask id
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Host Vulnerability Scan Subtask ID
     */
     @SerializedName("CWPPOCId")
     @Expose
     private String CWPPOCId;
 
     /**
-    * CWPP baseline check task ID
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Host Baseline Subtask ID
     */
     @SerializedName("CWPBlId")
     @Expose
     private String CWPBlId;
 
     /**
-    * VSS task progess
-Note: This field may return null, indicating that no valid values can be obtained.
+    * VSS Subtask Progress
     */
     @SerializedName("VSSTaskProcess")
     @Expose
     private Long VSSTaskProcess;
 
     /**
-    * CSPM task progress
-Note: This field may return null, indicating that no valid values can be obtained.
+    * CSPM Subtask Progress
     */
     @SerializedName("CSPMTaskProcess")
     @Expose
     private Long CSPMTaskProcess;
 
     /**
-    * CWPP vulnerability scan task progress
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Host Vulnerability Scan Subtask Progress
     */
     @SerializedName("CWPPOCProcess")
     @Expose
     private Long CWPPOCProcess;
 
     /**
-    * CWPP baseline check task progress
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Host Baseline Subtask Progress
     */
     @SerializedName("CWPBlProcess")
     @Expose
     private Long CWPBlProcess;
 
     /**
-    * Exception status codes
+    * Exception status code
     */
     @SerializedName("ErrorCode")
     @Expose
@@ -224,169 +200,144 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Exception information
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ErrorInfo")
     @Expose
     private String ErrorInfo;
 
     /**
-    * Day of the month to start the scheduled task
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Number of Days for Periodic Task to Start
     */
     @SerializedName("StartDay")
     @Expose
     private Long StartDay;
 
     /**
-    * Scan frequency in days. `1`: Every day; `7`: Every seven days; `30`: Every 30 days; `0`: Scan once only
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Scanning Frequency, in Days. 1-Daily; 7-Weekly; 30-Monthly; 0-Scan Once.
     */
     @SerializedName("Frequency")
     @Expose
     private Long Frequency;
 
     /**
-    * Number of completed tasks
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Completion Count
     */
     @SerializedName("CompleteNumber")
     @Expose
     private Long CompleteNumber;
 
     /**
-    * Number of scanned assets
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Completed Asset Count
     */
     @SerializedName("CompleteAssetNumber")
     @Expose
     private Long CompleteAssetNumber;
 
     /**
-    * Number of risks
-Note: This field may return null, indicating that no valid values can be obtained.
+    * risk count
     */
     @SerializedName("RiskCount")
     @Expose
     private Long RiskCount;
 
     /**
-    * Assets
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Asset
     */
     @SerializedName("Assets")
     @Expose
     private TaskAssetObject [] Assets;
 
     /**
-    * User `Appid`
-Note: This field may return null, indicating that no valid values can be obtained.
+    * User Appid
     */
     @SerializedName("AppId")
     @Expose
     private String AppId;
 
     /**
-    * User UIN
-Note: This field may return null, indicating that no valid values can be obtained.
+    * User Host Account ID
     */
     @SerializedName("UIN")
     @Expose
     private String UIN;
 
     /**
-    * User name.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * User name
     */
     @SerializedName("UserName")
     @Expose
     private String UserName;
 
     /**
-    * Scan task mode: `0` (Standard), `1` (Quick), `2` (Advanced). 
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Checkup Mode. 0-Standard Mode; 1-Quick Mode; 2-Advanced Mode.
     */
     @SerializedName("TaskMode")
     @Expose
     private Long TaskMode;
 
     /**
-    * Source of scanning request
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Scan Source
     */
     @SerializedName("ScanFrom")
     @Expose
     private String ScanFrom;
 
     /**
-    * Whether it's a limited-time free health check. `0`: No; `1`: Yes
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Whether health checkup is limited or exempted. 0-No; 1-Yes.
     */
     @SerializedName("IsFree")
     @Expose
     private Long IsFree;
 
     /**
-    * Whether the user is authorized to delete this task. `1` :Yes; `0`: No. It's available for multi-account management.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Whether it can be deleted. 1-Yes; 0-No. For use with multi-account management.
     */
     @SerializedName("IsDelete")
     @Expose
     private Long IsDelete;
 
     /**
-    * Source of the task. `0`: Default, `1`: Assistant; `2`: Health check
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Task Source Type. 0: Default; 1: Assistant; 2: Health Checkup Items.
     */
     @SerializedName("SourceType")
     @Expose
     private Long SourceType;
 
     /**
-     * Get Task name
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return TaskName Task name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Task name. 
+     * @return TaskName Task name.
      */
     public String getTaskName() {
         return this.TaskName;
     }
 
     /**
-     * Set Task name
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param TaskName Task name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Task name.
+     * @param TaskName Task name.
      */
     public void setTaskName(String TaskName) {
         this.TaskName = TaskName;
     }
 
     /**
-     * Get Start time of the task
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return StartTime Start time of the task
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get start time of the task 
+     * @return StartTime start time of the task
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set Start time of the task
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param StartTime Start time of the task
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set start time of the task
+     * @param StartTime start time of the task
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get Task end time
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Task end time 
      * @return EndTime Task end time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getEndTime() {
         return this.EndTime;
@@ -394,179 +345,143 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Task end time
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param EndTime Task end time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get CRON format
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ScanPlanContent CRON format
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Cron Format 
+     * @return ScanPlanContent Cron Format
      */
     public String getScanPlanContent() {
         return this.ScanPlanContent;
     }
 
     /**
-     * Set CRON format
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ScanPlanContent CRON format
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Cron Format
+     * @param ScanPlanContent Cron Format
      */
     public void setScanPlanContent(String ScanPlanContent) {
         this.ScanPlanContent = ScanPlanContent;
     }
 
     /**
-     * Get Task type. `0`: Scheduled task, `1`: Scan immediately; `2`: Scanned at the specified time; `3`: Custom.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return TaskType Task type. `0`: Scheduled task, `1`: Scan immediately; `2`: Scanned at the specified time; `3`: Custom.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get 0-Periodic Task; 1-Scan Now; 2-Scheduled Scan; 3-Custom. 
+     * @return TaskType 0-Periodic Task; 1-Scan Now; 2-Scheduled Scan; 3-Custom.
      */
     public Long getTaskType() {
         return this.TaskType;
     }
 
     /**
-     * Set Task type. `0`: Scheduled task, `1`: Scan immediately; `2`: Scanned at the specified time; `3`: Custom.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param TaskType Task type. `0`: Scheduled task, `1`: Scan immediately; `2`: Scanned at the specified time; `3`: Custom.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 0-Periodic Task; 1-Scan Now; 2-Scheduled Scan; 3-Custom.
+     * @param TaskType 0-Periodic Task; 1-Scan Now; 2-Scheduled Scan; 3-Custom.
      */
     public void setTaskType(Long TaskType) {
         this.TaskType = TaskType;
     }
 
     /**
-     * Get Creation time
-Note: This field may return `null`, indicating that no valid values can be obtained. 
-     * @return InsertTime Creation time
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * Get Creation time. 
+     * @return InsertTime Creation time.
      */
     public String getInsertTime() {
         return this.InsertTime;
     }
 
     /**
-     * Set Creation time
-Note: This field may return `null`, indicating that no valid values can be obtained.
-     * @param InsertTime Creation time
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * Set Creation time.
+     * @param InsertTime Creation time.
      */
     public void setInsertTime(String InsertTime) {
         this.InsertTime = InsertTime;
     }
 
     /**
-     * Get Task ID
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return TaskId Task ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Task ID. 
+     * @return TaskId Task ID.
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set Task ID
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param TaskId Task ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Task ID.
+     * @param TaskId Task ID.
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;
     }
 
     /**
-     * Get Custom list of assets to scan
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return SelfDefiningAssets Custom list of assets to scan
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Custom Specified Scan Asset Information 
+     * @return SelfDefiningAssets Custom Specified Scan Asset Information
      */
     public String [] getSelfDefiningAssets() {
         return this.SelfDefiningAssets;
     }
 
     /**
-     * Set Custom list of assets to scan
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param SelfDefiningAssets Custom list of assets to scan
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Custom Specified Scan Asset Information
+     * @param SelfDefiningAssets Custom Specified Scan Asset Information
      */
     public void setSelfDefiningAssets(String [] SelfDefiningAssets) {
         this.SelfDefiningAssets = SelfDefiningAssets;
     }
 
     /**
-     * Get Estimated period to complete the task
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return PredictTime Estimated period to complete the task
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Estimated Time 
+     * @return PredictTime Estimated Time
      */
     public Long getPredictTime() {
         return this.PredictTime;
     }
 
     /**
-     * Set Estimated period to complete the task
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param PredictTime Estimated period to complete the task
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Estimated Time
+     * @param PredictTime Estimated Time
      */
     public void setPredictTime(Long PredictTime) {
         this.PredictTime = PredictTime;
     }
 
     /**
-     * Get Estimated completion time of the task
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return PredictEndTime Estimated completion time of the task
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Estimated Completion Time 
+     * @return PredictEndTime Estimated Completion Time
      */
     public String getPredictEndTime() {
         return this.PredictEndTime;
     }
 
     /**
-     * Set Estimated completion time of the task
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param PredictEndTime Estimated completion time of the task
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Estimated Completion Time
+     * @param PredictEndTime Estimated Completion Time
      */
     public void setPredictEndTime(String PredictEndTime) {
         this.PredictEndTime = PredictEndTime;
     }
 
     /**
-     * Get Number of reports
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ReportNumber Number of reports
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Report Count 
+     * @return ReportNumber Report Count
      */
     public Long getReportNumber() {
         return this.ReportNumber;
     }
 
     /**
-     * Set Number of reports
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ReportNumber Number of reports
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Report Count
+     * @param ReportNumber Report Count
      */
     public void setReportNumber(Long ReportNumber) {
         this.ReportNumber = ReportNumber;
     }
 
     /**
-     * Get Number of assets
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Number of assets 
      * @return AssetNumber Number of assets
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getAssetNumber() {
         return this.AssetNumber;
@@ -574,39 +489,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Number of assets
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param AssetNumber Number of assets
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setAssetNumber(Long AssetNumber) {
         this.AssetNumber = AssetNumber;
     }
 
     /**
-     * Get Scanning status. `0`: (default) Not scanned; `1`: Scanning; `2`: Scan completed; `3`: Error while scanning; `4`: Scanning stopped
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ScanStatus Scanning status. `0`: (default) Not scanned; `1`: Scanning; `2`: Scan completed; `3`: Error while scanning; `4`: Scanning stopped
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Scan Status. 0-Initial Value; 1-Scanning; 2-Scan Completed; 3-Scan Error; 4-Scan Stopped. 
+     * @return ScanStatus Scan Status. 0-Initial Value; 1-Scanning; 2-Scan Completed; 3-Scan Error; 4-Scan Stopped.
      */
     public Long getScanStatus() {
         return this.ScanStatus;
     }
 
     /**
-     * Set Scanning status. `0`: (default) Not scanned; `1`: Scanning; `2`: Scan completed; `3`: Error while scanning; `4`: Scanning stopped
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ScanStatus Scanning status. `0`: (default) Not scanned; `1`: Scanning; `2`: Scan completed; `3`: Error while scanning; `4`: Scanning stopped
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Scan Status. 0-Initial Value; 1-Scanning; 2-Scan Completed; 3-Scan Error; 4-Scan Stopped.
+     * @param ScanStatus Scan Status. 0-Initial Value; 1-Scanning; 2-Scan Completed; 3-Scan Error; 4-Scan Stopped.
      */
     public void setScanStatus(Long ScanStatus) {
         this.ScanStatus = ScanStatus;
     }
 
     /**
-     * Get Task progress
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Task progress 
      * @return Percent Task progress
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Float getPercent() {
         return this.Percent;
@@ -614,19 +521,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Task progress
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Percent Task progress
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setPercent(Float Percent) {
         this.Percent = Percent;
     }
 
     /**
-     * Get port/poc/weakpass/webcontent/configrisk
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get port/poc/weakpass/webcontent/configrisk 
      * @return ScanItem port/poc/weakpass/webcontent/configrisk
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getScanItem() {
         return this.ScanItem;
@@ -634,215 +537,175 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set port/poc/weakpass/webcontent/configrisk
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param ScanItem port/poc/weakpass/webcontent/configrisk
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setScanItem(String ScanItem) {
         this.ScanItem = ScanItem;
     }
 
     /**
-     * Get Values: `0` (Scan all); `1` (Scan specific assets); `2` (Scan all expect the specified assets); `3` (Custom assets).
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ScanAssetType Values: `0` (Scan all); `1` (Scan specific assets); `2` (Scan all expect the specified assets); `3` (Custom assets).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get 0-Full Scan; 1-Specified Asset Scan; 2-Excluded Asset Scan; 3-Custom Specified Asset Scan. 
+     * @return ScanAssetType 0-Full Scan; 1-Specified Asset Scan; 2-Excluded Asset Scan; 3-Custom Specified Asset Scan.
      */
     public Long getScanAssetType() {
         return this.ScanAssetType;
     }
 
     /**
-     * Set Values: `0` (Scan all); `1` (Scan specific assets); `2` (Scan all expect the specified assets); `3` (Custom assets).
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ScanAssetType Values: `0` (Scan all); `1` (Scan specific assets); `2` (Scan all expect the specified assets); `3` (Custom assets).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 0-Full Scan; 1-Specified Asset Scan; 2-Excluded Asset Scan; 3-Custom Specified Asset Scan.
+     * @param ScanAssetType 0-Full Scan; 1-Specified Asset Scan; 2-Excluded Asset Scan; 3-Custom Specified Asset Scan.
      */
     public void setScanAssetType(Long ScanAssetType) {
         this.ScanAssetType = ScanAssetType;
     }
 
     /**
-     * Get VSS subtask ID
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return VSSTaskId VSS subtask ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get VSS Subtask ID 
+     * @return VSSTaskId VSS Subtask ID
      */
     public String getVSSTaskId() {
         return this.VSSTaskId;
     }
 
     /**
-     * Set VSS subtask ID
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param VSSTaskId VSS subtask ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set VSS Subtask ID
+     * @param VSSTaskId VSS Subtask ID
      */
     public void setVSSTaskId(String VSSTaskId) {
         this.VSSTaskId = VSSTaskId;
     }
 
     /**
-     * Get CSPM subtask ID
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return CSPMTaskId CSPM subtask ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get CSPM Subtask ID 
+     * @return CSPMTaskId CSPM Subtask ID
      */
     public String getCSPMTaskId() {
         return this.CSPMTaskId;
     }
 
     /**
-     * Set CSPM subtask ID
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param CSPMTaskId CSPM subtask ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set CSPM Subtask ID
+     * @param CSPMTaskId CSPM Subtask ID
      */
     public void setCSPMTaskId(String CSPMTaskId) {
         this.CSPMTaskId = CSPMTaskId;
     }
 
     /**
-     * Get CWPP vulnerability scan task IDHost missed scan subtask id
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return CWPPOCId CWPP vulnerability scan task IDHost missed scan subtask id
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Host Vulnerability Scan Subtask ID 
+     * @return CWPPOCId Host Vulnerability Scan Subtask ID
      */
     public String getCWPPOCId() {
         return this.CWPPOCId;
     }
 
     /**
-     * Set CWPP vulnerability scan task IDHost missed scan subtask id
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param CWPPOCId CWPP vulnerability scan task IDHost missed scan subtask id
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Host Vulnerability Scan Subtask ID
+     * @param CWPPOCId Host Vulnerability Scan Subtask ID
      */
     public void setCWPPOCId(String CWPPOCId) {
         this.CWPPOCId = CWPPOCId;
     }
 
     /**
-     * Get CWPP baseline check task ID
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return CWPBlId CWPP baseline check task ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Host Baseline Subtask ID 
+     * @return CWPBlId Host Baseline Subtask ID
      */
     public String getCWPBlId() {
         return this.CWPBlId;
     }
 
     /**
-     * Set CWPP baseline check task ID
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param CWPBlId CWPP baseline check task ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Host Baseline Subtask ID
+     * @param CWPBlId Host Baseline Subtask ID
      */
     public void setCWPBlId(String CWPBlId) {
         this.CWPBlId = CWPBlId;
     }
 
     /**
-     * Get VSS task progess
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return VSSTaskProcess VSS task progess
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get VSS Subtask Progress 
+     * @return VSSTaskProcess VSS Subtask Progress
      */
     public Long getVSSTaskProcess() {
         return this.VSSTaskProcess;
     }
 
     /**
-     * Set VSS task progess
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param VSSTaskProcess VSS task progess
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set VSS Subtask Progress
+     * @param VSSTaskProcess VSS Subtask Progress
      */
     public void setVSSTaskProcess(Long VSSTaskProcess) {
         this.VSSTaskProcess = VSSTaskProcess;
     }
 
     /**
-     * Get CSPM task progress
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return CSPMTaskProcess CSPM task progress
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get CSPM Subtask Progress 
+     * @return CSPMTaskProcess CSPM Subtask Progress
      */
     public Long getCSPMTaskProcess() {
         return this.CSPMTaskProcess;
     }
 
     /**
-     * Set CSPM task progress
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param CSPMTaskProcess CSPM task progress
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set CSPM Subtask Progress
+     * @param CSPMTaskProcess CSPM Subtask Progress
      */
     public void setCSPMTaskProcess(Long CSPMTaskProcess) {
         this.CSPMTaskProcess = CSPMTaskProcess;
     }
 
     /**
-     * Get CWPP vulnerability scan task progress
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return CWPPOCProcess CWPP vulnerability scan task progress
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Host Vulnerability Scan Subtask Progress 
+     * @return CWPPOCProcess Host Vulnerability Scan Subtask Progress
      */
     public Long getCWPPOCProcess() {
         return this.CWPPOCProcess;
     }
 
     /**
-     * Set CWPP vulnerability scan task progress
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param CWPPOCProcess CWPP vulnerability scan task progress
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Host Vulnerability Scan Subtask Progress
+     * @param CWPPOCProcess Host Vulnerability Scan Subtask Progress
      */
     public void setCWPPOCProcess(Long CWPPOCProcess) {
         this.CWPPOCProcess = CWPPOCProcess;
     }
 
     /**
-     * Get CWPP baseline check task progress
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return CWPBlProcess CWPP baseline check task progress
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Host Baseline Subtask Progress 
+     * @return CWPBlProcess Host Baseline Subtask Progress
      */
     public Long getCWPBlProcess() {
         return this.CWPBlProcess;
     }
 
     /**
-     * Set CWPP baseline check task progress
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param CWPBlProcess CWPP baseline check task progress
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Host Baseline Subtask Progress
+     * @param CWPBlProcess Host Baseline Subtask Progress
      */
     public void setCWPBlProcess(Long CWPBlProcess) {
         this.CWPBlProcess = CWPBlProcess;
     }
 
     /**
-     * Get Exception status codes 
-     * @return ErrorCode Exception status codes
+     * Get Exception status code 
+     * @return ErrorCode Exception status code
      */
     public Long getErrorCode() {
         return this.ErrorCode;
     }
 
     /**
-     * Set Exception status codes
-     * @param ErrorCode Exception status codes
+     * Set Exception status code
+     * @param ErrorCode Exception status code
      */
     public void setErrorCode(Long ErrorCode) {
         this.ErrorCode = ErrorCode;
     }
 
     /**
-     * Get Exception information
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Exception information 
      * @return ErrorInfo Exception information
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getErrorInfo() {
         return this.ErrorInfo;
@@ -850,289 +713,231 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Exception information
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param ErrorInfo Exception information
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setErrorInfo(String ErrorInfo) {
         this.ErrorInfo = ErrorInfo;
     }
 
     /**
-     * Get Day of the month to start the scheduled task
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return StartDay Day of the month to start the scheduled task
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Number of Days for Periodic Task to Start 
+     * @return StartDay Number of Days for Periodic Task to Start
      */
     public Long getStartDay() {
         return this.StartDay;
     }
 
     /**
-     * Set Day of the month to start the scheduled task
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param StartDay Day of the month to start the scheduled task
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Number of Days for Periodic Task to Start
+     * @param StartDay Number of Days for Periodic Task to Start
      */
     public void setStartDay(Long StartDay) {
         this.StartDay = StartDay;
     }
 
     /**
-     * Get Scan frequency in days. `1`: Every day; `7`: Every seven days; `30`: Every 30 days; `0`: Scan once only
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Frequency Scan frequency in days. `1`: Every day; `7`: Every seven days; `30`: Every 30 days; `0`: Scan once only
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Scanning Frequency, in Days. 1-Daily; 7-Weekly; 30-Monthly; 0-Scan Once. 
+     * @return Frequency Scanning Frequency, in Days. 1-Daily; 7-Weekly; 30-Monthly; 0-Scan Once.
      */
     public Long getFrequency() {
         return this.Frequency;
     }
 
     /**
-     * Set Scan frequency in days. `1`: Every day; `7`: Every seven days; `30`: Every 30 days; `0`: Scan once only
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Frequency Scan frequency in days. `1`: Every day; `7`: Every seven days; `30`: Every 30 days; `0`: Scan once only
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Scanning Frequency, in Days. 1-Daily; 7-Weekly; 30-Monthly; 0-Scan Once.
+     * @param Frequency Scanning Frequency, in Days. 1-Daily; 7-Weekly; 30-Monthly; 0-Scan Once.
      */
     public void setFrequency(Long Frequency) {
         this.Frequency = Frequency;
     }
 
     /**
-     * Get Number of completed tasks
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return CompleteNumber Number of completed tasks
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Completion Count 
+     * @return CompleteNumber Completion Count
      */
     public Long getCompleteNumber() {
         return this.CompleteNumber;
     }
 
     /**
-     * Set Number of completed tasks
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param CompleteNumber Number of completed tasks
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Completion Count
+     * @param CompleteNumber Completion Count
      */
     public void setCompleteNumber(Long CompleteNumber) {
         this.CompleteNumber = CompleteNumber;
     }
 
     /**
-     * Get Number of scanned assets
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return CompleteAssetNumber Number of scanned assets
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Completed Asset Count 
+     * @return CompleteAssetNumber Completed Asset Count
      */
     public Long getCompleteAssetNumber() {
         return this.CompleteAssetNumber;
     }
 
     /**
-     * Set Number of scanned assets
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param CompleteAssetNumber Number of scanned assets
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Completed Asset Count
+     * @param CompleteAssetNumber Completed Asset Count
      */
     public void setCompleteAssetNumber(Long CompleteAssetNumber) {
         this.CompleteAssetNumber = CompleteAssetNumber;
     }
 
     /**
-     * Get Number of risks
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return RiskCount Number of risks
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get risk count 
+     * @return RiskCount risk count
      */
     public Long getRiskCount() {
         return this.RiskCount;
     }
 
     /**
-     * Set Number of risks
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param RiskCount Number of risks
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set risk count
+     * @param RiskCount risk count
      */
     public void setRiskCount(Long RiskCount) {
         this.RiskCount = RiskCount;
     }
 
     /**
-     * Get Assets
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Assets Assets
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Asset 
+     * @return Assets Asset
      */
     public TaskAssetObject [] getAssets() {
         return this.Assets;
     }
 
     /**
-     * Set Assets
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Assets Assets
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Asset
+     * @param Assets Asset
      */
     public void setAssets(TaskAssetObject [] Assets) {
         this.Assets = Assets;
     }
 
     /**
-     * Get User `Appid`
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return AppId User `Appid`
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get User Appid 
+     * @return AppId User Appid
      */
     public String getAppId() {
         return this.AppId;
     }
 
     /**
-     * Set User `Appid`
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param AppId User `Appid`
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set User Appid
+     * @param AppId User Appid
      */
     public void setAppId(String AppId) {
         this.AppId = AppId;
     }
 
     /**
-     * Get User UIN
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return UIN User UIN
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get User Host Account ID 
+     * @return UIN User Host Account ID
      */
     public String getUIN() {
         return this.UIN;
     }
 
     /**
-     * Set User UIN
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param UIN User UIN
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set User Host Account ID
+     * @param UIN User Host Account ID
      */
     public void setUIN(String UIN) {
         this.UIN = UIN;
     }
 
     /**
-     * Get User name.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return UserName User name.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get User name 
+     * @return UserName User name
      */
     public String getUserName() {
         return this.UserName;
     }
 
     /**
-     * Set User name.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param UserName User name.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set User name
+     * @param UserName User name
      */
     public void setUserName(String UserName) {
         this.UserName = UserName;
     }
 
     /**
-     * Get Scan task mode: `0` (Standard), `1` (Quick), `2` (Advanced). 
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return TaskMode Scan task mode: `0` (Standard), `1` (Quick), `2` (Advanced). 
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Checkup Mode. 0-Standard Mode; 1-Quick Mode; 2-Advanced Mode. 
+     * @return TaskMode Checkup Mode. 0-Standard Mode; 1-Quick Mode; 2-Advanced Mode.
      */
     public Long getTaskMode() {
         return this.TaskMode;
     }
 
     /**
-     * Set Scan task mode: `0` (Standard), `1` (Quick), `2` (Advanced). 
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param TaskMode Scan task mode: `0` (Standard), `1` (Quick), `2` (Advanced). 
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Checkup Mode. 0-Standard Mode; 1-Quick Mode; 2-Advanced Mode.
+     * @param TaskMode Checkup Mode. 0-Standard Mode; 1-Quick Mode; 2-Advanced Mode.
      */
     public void setTaskMode(Long TaskMode) {
         this.TaskMode = TaskMode;
     }
 
     /**
-     * Get Source of scanning request
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ScanFrom Source of scanning request
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Scan Source 
+     * @return ScanFrom Scan Source
      */
     public String getScanFrom() {
         return this.ScanFrom;
     }
 
     /**
-     * Set Source of scanning request
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ScanFrom Source of scanning request
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Scan Source
+     * @param ScanFrom Scan Source
      */
     public void setScanFrom(String ScanFrom) {
         this.ScanFrom = ScanFrom;
     }
 
     /**
-     * Get Whether it's a limited-time free health check. `0`: No; `1`: Yes
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return IsFree Whether it's a limited-time free health check. `0`: No; `1`: Yes
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Whether health checkup is limited or exempted. 0-No; 1-Yes. 
+     * @return IsFree Whether health checkup is limited or exempted. 0-No; 1-Yes.
      */
     public Long getIsFree() {
         return this.IsFree;
     }
 
     /**
-     * Set Whether it's a limited-time free health check. `0`: No; `1`: Yes
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param IsFree Whether it's a limited-time free health check. `0`: No; `1`: Yes
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Whether health checkup is limited or exempted. 0-No; 1-Yes.
+     * @param IsFree Whether health checkup is limited or exempted. 0-No; 1-Yes.
      */
     public void setIsFree(Long IsFree) {
         this.IsFree = IsFree;
     }
 
     /**
-     * Get Whether the user is authorized to delete this task. `1` :Yes; `0`: No. It's available for multi-account management.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return IsDelete Whether the user is authorized to delete this task. `1` :Yes; `0`: No. It's available for multi-account management.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Whether it can be deleted. 1-Yes; 0-No. For use with multi-account management. 
+     * @return IsDelete Whether it can be deleted. 1-Yes; 0-No. For use with multi-account management.
      */
     public Long getIsDelete() {
         return this.IsDelete;
     }
 
     /**
-     * Set Whether the user is authorized to delete this task. `1` :Yes; `0`: No. It's available for multi-account management.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param IsDelete Whether the user is authorized to delete this task. `1` :Yes; `0`: No. It's available for multi-account management.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Whether it can be deleted. 1-Yes; 0-No. For use with multi-account management.
+     * @param IsDelete Whether it can be deleted. 1-Yes; 0-No. For use with multi-account management.
      */
     public void setIsDelete(Long IsDelete) {
         this.IsDelete = IsDelete;
     }
 
     /**
-     * Get Source of the task. `0`: Default, `1`: Assistant; `2`: Health check
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return SourceType Source of the task. `0`: Default, `1`: Assistant; `2`: Health check
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Task Source Type. 0: Default; 1: Assistant; 2: Health Checkup Items. 
+     * @return SourceType Task Source Type. 0: Default; 1: Assistant; 2: Health Checkup Items.
      */
     public Long getSourceType() {
         return this.SourceType;
     }
 
     /**
-     * Set Source of the task. `0`: Default, `1`: Assistant; `2`: Health check
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param SourceType Source of the task. `0`: Default, `1`: Assistant; `2`: Health check
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Task Source Type. 0: Default; 1: Assistant; 2: Health Checkup Items.
+     * @param SourceType Task Source Type. 0: Default; 1: Assistant; 2: Health Checkup Items.
      */
     public void setSourceType(Long SourceType) {
         this.SourceType = SourceType;

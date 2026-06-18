@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeLoginWhiteCombinedListResponse extends AbstractModel {
 
     /**
-    * Total number
+    * <p>Total quantity.</p>
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * List of allowlists after merge
+    * <p>Merged allowlist</p>
     */
     @SerializedName("LoginWhiteCombinedInfos")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeLoginWhiteCombinedListResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Total number 
-     * @return TotalCount Total number
+     * Get <p>Total quantity.</p> 
+     * @return TotalCount <p>Total quantity.</p>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set Total number
-     * @param TotalCount Total number
+     * Set <p>Total quantity.</p>
+     * @param TotalCount <p>Total quantity.</p>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get List of allowlists after merge 
-     * @return LoginWhiteCombinedInfos List of allowlists after merge
+     * Get <p>Merged allowlist</p> 
+     * @return LoginWhiteCombinedInfos <p>Merged allowlist</p>
      */
     public LoginWhiteCombinedInfo [] getLoginWhiteCombinedInfos() {
         return this.LoginWhiteCombinedInfos;
     }
 
     /**
-     * Set List of allowlists after merge
-     * @param LoginWhiteCombinedInfos List of allowlists after merge
+     * Set <p>Merged allowlist</p>
+     * @param LoginWhiteCombinedInfos <p>Merged allowlist</p>
      */
     public void setLoginWhiteCombinedInfos(LoginWhiteCombinedInfo [] LoginWhiteCombinedInfos) {
         this.LoginWhiteCombinedInfos = LoginWhiteCombinedInfos;

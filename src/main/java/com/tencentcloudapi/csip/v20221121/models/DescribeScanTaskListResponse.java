@@ -24,32 +24,28 @@ import java.util.HashMap;
 public class DescribeScanTaskListResponse extends AbstractModel {
 
     /**
-    * Total number of entries
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Total quantity.
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * List of scan tasks
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * Task Log List
     */
     @SerializedName("Data")
     @Expose
     private ScanTaskInfoList [] Data;
 
     /**
-    * List of account UINs
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * Host Account ID List
     */
     @SerializedName("UINList")
     @Expose
     private String [] UINList;
 
     /**
-    * List of task modes
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * Health Checkup Mode Filter List
     */
     @SerializedName("TaskModeList")
     @Expose
@@ -63,80 +59,64 @@ Note: This field may return·null, indicating that no valid values can be obtain
     private String RequestId;
 
     /**
-     * Get Total number of entries
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return TotalCount Total number of entries
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Total quantity. 
+     * @return TotalCount Total quantity.
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set Total number of entries
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param TotalCount Total number of entries
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Total quantity.
+     * @param TotalCount Total quantity.
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get List of scan tasks
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return Data List of scan tasks
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get Task Log List 
+     * @return Data Task Log List
      */
     public ScanTaskInfoList [] getData() {
         return this.Data;
     }
 
     /**
-     * Set List of scan tasks
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param Data List of scan tasks
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set Task Log List
+     * @param Data Task Log List
      */
     public void setData(ScanTaskInfoList [] Data) {
         this.Data = Data;
     }
 
     /**
-     * Get List of account UINs
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return UINList List of account UINs
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get Host Account ID List 
+     * @return UINList Host Account ID List
      */
     public String [] getUINList() {
         return this.UINList;
     }
 
     /**
-     * Set List of account UINs
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param UINList List of account UINs
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set Host Account ID List
+     * @param UINList Host Account ID List
      */
     public void setUINList(String [] UINList) {
         this.UINList = UINList;
     }
 
     /**
-     * Get List of task modes
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return TaskModeList List of task modes
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get Health Checkup Mode Filter List 
+     * @return TaskModeList Health Checkup Mode Filter List
      */
     public FilterDataObject [] getTaskModeList() {
         return this.TaskModeList;
     }
 
     /**
-     * Set List of task modes
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param TaskModeList List of task modes
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set Health Checkup Mode Filter List
+     * @param TaskModeList Health Checkup Mode Filter List
      */
     public void setTaskModeList(FilterDataObject [] TaskModeList) {
         this.TaskModeList = TaskModeList;

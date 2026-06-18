@@ -31,6 +31,13 @@ public class StopRiskCenterTaskRequest extends AbstractModel {
     private TaskIdListKey [] TaskIdList;
 
     /**
+    * Group Account Member ID
+    */
+    @SerializedName("MemberId")
+    @Expose
+    private String [] MemberId;
+
+    /**
      * Get List of task IDs 
      * @return TaskIdList List of task IDs
      */
@@ -44,6 +51,22 @@ public class StopRiskCenterTaskRequest extends AbstractModel {
      */
     public void setTaskIdList(TaskIdListKey [] TaskIdList) {
         this.TaskIdList = TaskIdList;
+    }
+
+    /**
+     * Get Group Account Member ID 
+     * @return MemberId Group Account Member ID
+     */
+    public String [] getMemberId() {
+        return this.MemberId;
+    }
+
+    /**
+     * Set Group Account Member ID
+     * @param MemberId Group Account Member ID
+     */
+    public void setMemberId(String [] MemberId) {
+        this.MemberId = MemberId;
     }
 
     public StopRiskCenterTaskRequest() {
@@ -60,6 +83,12 @@ public class StopRiskCenterTaskRequest extends AbstractModel {
                 this.TaskIdList[i] = new TaskIdListKey(source.TaskIdList[i]);
             }
         }
+        if (source.MemberId != null) {
+            this.MemberId = new String[source.MemberId.length];
+            for (int i = 0; i < source.MemberId.length; i++) {
+                this.MemberId[i] = new String(source.MemberId[i]);
+            }
+        }
     }
 
 
@@ -68,6 +97,7 @@ public class StopRiskCenterTaskRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "TaskIdList.", this.TaskIdList);
+        this.setParamArraySimple(map, prefix + "MemberId.", this.MemberId);
 
     }
 }

@@ -24,135 +24,115 @@ import java.util.HashMap;
 public class DescribeMachineClearHistoryRequest extends AbstractModel {
 
     /**
-    * Filtering criteria
-Return entries that match both Keywords and TimeBetween when multiple filtering criteria are used
-<li> Keywords: instance name, private IP address, public IP address</li>
-<li> TimeBetween: time interval</li>
+    * <p>Filter conditions<br>When multiple conditions are used, Keywords and TimeBetween are intersected</p><li>Keywords: instance name, private IP, or public IP</li><li>TimeBetween: time range</li>
     */
     @SerializedName("Filters")
     @Expose
     private Filters [] Filters;
 
     /**
-    * Limit Entries, 10 by default, up to 100.
+    * <p>The maximum number of entries. Default value: 10. Maximum value: 100.</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * Offset. Default value: 0.
+    * <p>Offset. Default value: 0.</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * Ascending order, ASC, Descending order DESC, ASC by default.
+    * <p>Sort order: ASC for ascending, DESC for descending. Default: ASC</p>
     */
     @SerializedName("Order")
     @Expose
     private String Order;
 
     /**
-    * AgentLastOfflineTime: last offline time of client
-AutoClearTime: clearing time
+    * <p>AgentLastOfflineTime: Time when the client was last offline<br>AutoClearTime: Cleanup time</p>
     */
     @SerializedName("By")
     @Expose
     private String By;
 
     /**
-     * Get Filtering criteria
-Return entries that match both Keywords and TimeBetween when multiple filtering criteria are used
-<li> Keywords: instance name, private IP address, public IP address</li>
-<li> TimeBetween: time interval</li> 
-     * @return Filters Filtering criteria
-Return entries that match both Keywords and TimeBetween when multiple filtering criteria are used
-<li> Keywords: instance name, private IP address, public IP address</li>
-<li> TimeBetween: time interval</li>
+     * Get <p>Filter conditions<br>When multiple conditions are used, Keywords and TimeBetween are intersected</p><li>Keywords: instance name, private IP, or public IP</li><li>TimeBetween: time range</li> 
+     * @return Filters <p>Filter conditions<br>When multiple conditions are used, Keywords and TimeBetween are intersected</p><li>Keywords: instance name, private IP, or public IP</li><li>TimeBetween: time range</li>
      */
     public Filters [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set Filtering criteria
-Return entries that match both Keywords and TimeBetween when multiple filtering criteria are used
-<li> Keywords: instance name, private IP address, public IP address</li>
-<li> TimeBetween: time interval</li>
-     * @param Filters Filtering criteria
-Return entries that match both Keywords and TimeBetween when multiple filtering criteria are used
-<li> Keywords: instance name, private IP address, public IP address</li>
-<li> TimeBetween: time interval</li>
+     * Set <p>Filter conditions<br>When multiple conditions are used, Keywords and TimeBetween are intersected</p><li>Keywords: instance name, private IP, or public IP</li><li>TimeBetween: time range</li>
+     * @param Filters <p>Filter conditions<br>When multiple conditions are used, Keywords and TimeBetween are intersected</p><li>Keywords: instance name, private IP, or public IP</li><li>TimeBetween: time range</li>
      */
     public void setFilters(Filters [] Filters) {
         this.Filters = Filters;
     }
 
     /**
-     * Get Limit Entries, 10 by default, up to 100. 
-     * @return Limit Limit Entries, 10 by default, up to 100.
+     * Get <p>The maximum number of entries. Default value: 10. Maximum value: 100.</p> 
+     * @return Limit <p>The maximum number of entries. Default value: 10. Maximum value: 100.</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Limit Entries, 10 by default, up to 100.
-     * @param Limit Limit Entries, 10 by default, up to 100.
+     * Set <p>The maximum number of entries. Default value: 10. Maximum value: 100.</p>
+     * @param Limit <p>The maximum number of entries. Default value: 10. Maximum value: 100.</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get Offset. Default value: 0. 
-     * @return Offset Offset. Default value: 0.
+     * Get <p>Offset. Default value: 0.</p> 
+     * @return Offset <p>Offset. Default value: 0.</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Offset. Default value: 0.
-     * @param Offset Offset. Default value: 0.
+     * Set <p>Offset. Default value: 0.</p>
+     * @param Offset <p>Offset. Default value: 0.</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get Ascending order, ASC, Descending order DESC, ASC by default. 
-     * @return Order Ascending order, ASC, Descending order DESC, ASC by default.
+     * Get <p>Sort order: ASC for ascending, DESC for descending. Default: ASC</p> 
+     * @return Order <p>Sort order: ASC for ascending, DESC for descending. Default: ASC</p>
      */
     public String getOrder() {
         return this.Order;
     }
 
     /**
-     * Set Ascending order, ASC, Descending order DESC, ASC by default.
-     * @param Order Ascending order, ASC, Descending order DESC, ASC by default.
+     * Set <p>Sort order: ASC for ascending, DESC for descending. Default: ASC</p>
+     * @param Order <p>Sort order: ASC for ascending, DESC for descending. Default: ASC</p>
      */
     public void setOrder(String Order) {
         this.Order = Order;
     }
 
     /**
-     * Get AgentLastOfflineTime: last offline time of client
-AutoClearTime: clearing time 
-     * @return By AgentLastOfflineTime: last offline time of client
-AutoClearTime: clearing time
+     * Get <p>AgentLastOfflineTime: Time when the client was last offline<br>AutoClearTime: Cleanup time</p> 
+     * @return By <p>AgentLastOfflineTime: Time when the client was last offline<br>AutoClearTime: Cleanup time</p>
      */
     public String getBy() {
         return this.By;
     }
 
     /**
-     * Set AgentLastOfflineTime: last offline time of client
-AutoClearTime: clearing time
-     * @param By AgentLastOfflineTime: last offline time of client
-AutoClearTime: clearing time
+     * Set <p>AgentLastOfflineTime: Time when the client was last offline<br>AutoClearTime: Cleanup time</p>
+     * @param By <p>AgentLastOfflineTime: Time when the client was last offline<br>AutoClearTime: Cleanup time</p>
      */
     public void setBy(String By) {
         this.By = By;

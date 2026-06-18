@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class Filter extends AbstractModel {
 
     /**
-    * Name of filter key
+    * <p>Name of filter key.</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * One or more filter values
+    * <p>One or more filter values.</p>
     */
     @SerializedName("Values")
     @Expose
     private String [] Values;
 
     /**
-    * Fuzzy search
+    * <p>Fuzzy search</p>
     */
     @SerializedName("ExactMatch")
     @Expose
     private Boolean ExactMatch;
 
     /**
-     * Get Name of filter key 
-     * @return Name Name of filter key
+     * Get <p>Name of filter key.</p> 
+     * @return Name <p>Name of filter key.</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Name of filter key
-     * @param Name Name of filter key
+     * Set <p>Name of filter key.</p>
+     * @param Name <p>Name of filter key.</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get One or more filter values 
-     * @return Values One or more filter values
+     * Get <p>One or more filter values.</p> 
+     * @return Values <p>One or more filter values.</p>
      */
     public String [] getValues() {
         return this.Values;
     }
 
     /**
-     * Set One or more filter values
-     * @param Values One or more filter values
+     * Set <p>One or more filter values.</p>
+     * @param Values <p>One or more filter values.</p>
      */
     public void setValues(String [] Values) {
         this.Values = Values;
     }
 
     /**
-     * Get Fuzzy search 
-     * @return ExactMatch Fuzzy search
+     * Get <p>Fuzzy search</p> 
+     * @return ExactMatch <p>Fuzzy search</p>
      */
     public Boolean getExactMatch() {
         return this.ExactMatch;
     }
 
     /**
-     * Set Fuzzy search
-     * @param ExactMatch Fuzzy search
+     * Set <p>Fuzzy search</p>
+     * @param ExactMatch <p>Fuzzy search</p>
      */
     public void setExactMatch(Boolean ExactMatch) {
         this.ExactMatch = ExactMatch;

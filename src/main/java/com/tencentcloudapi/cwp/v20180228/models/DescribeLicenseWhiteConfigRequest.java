@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DescribeLicenseWhiteConfigRequest extends AbstractModel {
 
     /**
-    * Rule name. For example, cwp.
+    * <p>Rule name, for example: cwp</p>
     */
     @SerializedName("RuleName")
     @Expose
     private String RuleName;
 
     /**
-     * Get Rule name. For example, cwp. 
-     * @return RuleName Rule name. For example, cwp.
+     * Get <p>Rule name, for example: cwp</p> 
+     * @return RuleName <p>Rule name, for example: cwp</p>
      */
     public String getRuleName() {
         return this.RuleName;
     }
 
     /**
-     * Set Rule name. For example, cwp.
-     * @param RuleName Rule name. For example, cwp.
+     * Set <p>Rule name, for example: cwp</p>
+     * @param RuleName <p>Rule name, for example: cwp</p>
      */
     public void setRuleName(String RuleName) {
         this.RuleName = RuleName;

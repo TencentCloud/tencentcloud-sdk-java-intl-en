@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DescribeOrganizationInfoRequest extends AbstractModel {
 
     /**
-    * Member ID of the group account
+    * Group Account Member ID
     */
     @SerializedName("MemberId")
     @Expose
     private String [] MemberId;
 
     /**
-     * Get Member ID of the group account 
-     * @return MemberId Member ID of the group account
+     * Get Group Account Member ID 
+     * @return MemberId Group Account Member ID
      */
     public String [] getMemberId() {
         return this.MemberId;
     }
 
     /**
-     * Set Member ID of the group account
-     * @param MemberId Member ID of the group account
+     * Set Group Account Member ID
+     * @param MemberId Group Account Member ID
      */
     public void setMemberId(String [] MemberId) {
         this.MemberId = MemberId;

@@ -24,42 +24,42 @@ import java.util.HashMap;
 public class DescribeBanStatusResponse extends AbstractModel {
 
     /**
-    * (Abandoned) Block switch status: 0 -- Off 1 -- Advanced blocking 2 -- Basic block (blocklist IPs in the intelligence database)
+    * <p>(Deprecated) Blocking switch status: 0 -- Off; 1 -- Advanced blocking; 2 -- Basic blocking (blocks only blacklisted IPs in the intelligence database)</p>
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * Whether to display the pop-up prompt. False: no; true: yes.
+    * <p>Whether to show pop-up prompts. false: disabled; true: enabled</p>
     */
     @SerializedName("ShowTips")
     @Expose
     private Boolean ShowTips;
 
     /**
-    * Whether to enable intelligent over-allowing mode
+    * <p>Whether to enable intelligent allowlisting mode</p>
     */
     @SerializedName("OpenSmartMode")
     @Expose
     private Boolean OpenSmartMode;
 
     /**
-    * Whether intelligence IP blocking is enabled
+    * <p>Whether to enable threat-intelligence IP blocking</p>
     */
     @SerializedName("BanBlackIp")
     @Expose
     private Boolean BanBlackIp;
 
     /**
-    * Whether vulnerability IP blocking is enabled
+    * <p>Whether to enable vulnerability-related IP blocking</p>
     */
     @SerializedName("BanVulIp")
     @Expose
     private Boolean BanVulIp;
 
     /**
-    * Whether to enable rule blocking
+    * <p>Whether to enable rule blocking</p>
     */
     @SerializedName("BanByRule")
     @Expose
@@ -73,96 +73,96 @@ public class DescribeBanStatusResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get (Abandoned) Block switch status: 0 -- Off 1 -- Advanced blocking 2 -- Basic block (blocklist IPs in the intelligence database) 
-     * @return Status (Abandoned) Block switch status: 0 -- Off 1 -- Advanced blocking 2 -- Basic block (blocklist IPs in the intelligence database)
+     * Get <p>(Deprecated) Blocking switch status: 0 -- Off; 1 -- Advanced blocking; 2 -- Basic blocking (blocks only blacklisted IPs in the intelligence database)</p> 
+     * @return Status <p>(Deprecated) Blocking switch status: 0 -- Off; 1 -- Advanced blocking; 2 -- Basic blocking (blocks only blacklisted IPs in the intelligence database)</p>
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set (Abandoned) Block switch status: 0 -- Off 1 -- Advanced blocking 2 -- Basic block (blocklist IPs in the intelligence database)
-     * @param Status (Abandoned) Block switch status: 0 -- Off 1 -- Advanced blocking 2 -- Basic block (blocklist IPs in the intelligence database)
+     * Set <p>(Deprecated) Blocking switch status: 0 -- Off; 1 -- Advanced blocking; 2 -- Basic blocking (blocks only blacklisted IPs in the intelligence database)</p>
+     * @param Status <p>(Deprecated) Blocking switch status: 0 -- Off; 1 -- Advanced blocking; 2 -- Basic blocking (blocks only blacklisted IPs in the intelligence database)</p>
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get Whether to display the pop-up prompt. False: no; true: yes. 
-     * @return ShowTips Whether to display the pop-up prompt. False: no; true: yes.
+     * Get <p>Whether to show pop-up prompts. false: disabled; true: enabled</p> 
+     * @return ShowTips <p>Whether to show pop-up prompts. false: disabled; true: enabled</p>
      */
     public Boolean getShowTips() {
         return this.ShowTips;
     }
 
     /**
-     * Set Whether to display the pop-up prompt. False: no; true: yes.
-     * @param ShowTips Whether to display the pop-up prompt. False: no; true: yes.
+     * Set <p>Whether to show pop-up prompts. false: disabled; true: enabled</p>
+     * @param ShowTips <p>Whether to show pop-up prompts. false: disabled; true: enabled</p>
      */
     public void setShowTips(Boolean ShowTips) {
         this.ShowTips = ShowTips;
     }
 
     /**
-     * Get Whether to enable intelligent over-allowing mode 
-     * @return OpenSmartMode Whether to enable intelligent over-allowing mode
+     * Get <p>Whether to enable intelligent allowlisting mode</p> 
+     * @return OpenSmartMode <p>Whether to enable intelligent allowlisting mode</p>
      */
     public Boolean getOpenSmartMode() {
         return this.OpenSmartMode;
     }
 
     /**
-     * Set Whether to enable intelligent over-allowing mode
-     * @param OpenSmartMode Whether to enable intelligent over-allowing mode
+     * Set <p>Whether to enable intelligent allowlisting mode</p>
+     * @param OpenSmartMode <p>Whether to enable intelligent allowlisting mode</p>
      */
     public void setOpenSmartMode(Boolean OpenSmartMode) {
         this.OpenSmartMode = OpenSmartMode;
     }
 
     /**
-     * Get Whether intelligence IP blocking is enabled 
-     * @return BanBlackIp Whether intelligence IP blocking is enabled
+     * Get <p>Whether to enable threat-intelligence IP blocking</p> 
+     * @return BanBlackIp <p>Whether to enable threat-intelligence IP blocking</p>
      */
     public Boolean getBanBlackIp() {
         return this.BanBlackIp;
     }
 
     /**
-     * Set Whether intelligence IP blocking is enabled
-     * @param BanBlackIp Whether intelligence IP blocking is enabled
+     * Set <p>Whether to enable threat-intelligence IP blocking</p>
+     * @param BanBlackIp <p>Whether to enable threat-intelligence IP blocking</p>
      */
     public void setBanBlackIp(Boolean BanBlackIp) {
         this.BanBlackIp = BanBlackIp;
     }
 
     /**
-     * Get Whether vulnerability IP blocking is enabled 
-     * @return BanVulIp Whether vulnerability IP blocking is enabled
+     * Get <p>Whether to enable vulnerability-related IP blocking</p> 
+     * @return BanVulIp <p>Whether to enable vulnerability-related IP blocking</p>
      */
     public Boolean getBanVulIp() {
         return this.BanVulIp;
     }
 
     /**
-     * Set Whether vulnerability IP blocking is enabled
-     * @param BanVulIp Whether vulnerability IP blocking is enabled
+     * Set <p>Whether to enable vulnerability-related IP blocking</p>
+     * @param BanVulIp <p>Whether to enable vulnerability-related IP blocking</p>
      */
     public void setBanVulIp(Boolean BanVulIp) {
         this.BanVulIp = BanVulIp;
     }
 
     /**
-     * Get Whether to enable rule blocking 
-     * @return BanByRule Whether to enable rule blocking
+     * Get <p>Whether to enable rule blocking</p> 
+     * @return BanByRule <p>Whether to enable rule blocking</p>
      */
     public Boolean getBanByRule() {
         return this.BanByRule;
     }
 
     /**
-     * Set Whether to enable rule blocking
-     * @param BanByRule Whether to enable rule blocking
+     * Set <p>Whether to enable rule blocking</p>
+     * @param BanByRule <p>Whether to enable rule blocking</p>
      */
     public void setBanByRule(Boolean BanByRule) {
         this.BanByRule = BanByRule;

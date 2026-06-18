@@ -31,6 +31,13 @@ public class DescribeTaskLogURLRequest extends AbstractModel {
     private Long Type;
 
     /**
+    * Group Account Member ID
+    */
+    @SerializedName("MemberId")
+    @Expose
+    private String [] MemberId;
+
+    /**
     * List of task report IDs
     */
     @SerializedName("ReportItemKeyList")
@@ -58,6 +65,22 @@ public class DescribeTaskLogURLRequest extends AbstractModel {
      */
     public void setType(Long Type) {
         this.Type = Type;
+    }
+
+    /**
+     * Get Group Account Member ID 
+     * @return MemberId Group Account Member ID
+     */
+    public String [] getMemberId() {
+        return this.MemberId;
+    }
+
+    /**
+     * Set Group Account Member ID
+     * @param MemberId Group Account Member ID
+     */
+    public void setMemberId(String [] MemberId) {
+        this.MemberId = MemberId;
     }
 
     /**
@@ -103,6 +126,12 @@ public class DescribeTaskLogURLRequest extends AbstractModel {
         if (source.Type != null) {
             this.Type = new Long(source.Type);
         }
+        if (source.MemberId != null) {
+            this.MemberId = new String[source.MemberId.length];
+            for (int i = 0; i < source.MemberId.length; i++) {
+                this.MemberId[i] = new String(source.MemberId[i]);
+            }
+        }
         if (source.ReportItemKeyList != null) {
             this.ReportItemKeyList = new ReportItemKey[source.ReportItemKeyList.length];
             for (int i = 0; i < source.ReportItemKeyList.length; i++) {
@@ -123,6 +152,7 @@ public class DescribeTaskLogURLRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Type", this.Type);
+        this.setParamArraySimple(map, prefix + "MemberId.", this.MemberId);
         this.setParamArrayObj(map, prefix + "ReportItemKeyList.", this.ReportItemKeyList);
         this.setParamArrayObj(map, prefix + "ReportTaskIdList.", this.ReportTaskIdList);
 

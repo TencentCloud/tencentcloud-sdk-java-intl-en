@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class DescribeSubUserInfoRequest extends AbstractModel {
 
     /**
-    * Member ID of the group account
+    * Group Account Member ID
     */
     @SerializedName("MemberId")
     @Expose
     private String [] MemberId;
 
     /**
-    * Filter content
+    * Filtered Content
     */
     @SerializedName("Filter")
     @Expose
     private Filter Filter;
 
     /**
-     * Get Member ID of the group account 
-     * @return MemberId Member ID of the group account
+     * Get Group Account Member ID 
+     * @return MemberId Group Account Member ID
      */
     public String [] getMemberId() {
         return this.MemberId;
     }
 
     /**
-     * Set Member ID of the group account
-     * @param MemberId Member ID of the group account
+     * Set Group Account Member ID
+     * @param MemberId Group Account Member ID
      */
     public void setMemberId(String [] MemberId) {
         this.MemberId = MemberId;
     }
 
     /**
-     * Get Filter content 
-     * @return Filter Filter content
+     * Get Filtered Content 
+     * @return Filter Filtered Content
      */
     public Filter getFilter() {
         return this.Filter;
     }
 
     /**
-     * Set Filter content
-     * @param Filter Filter content
+     * Set Filtered Content
+     * @param Filter Filtered Content
      */
     public void setFilter(Filter Filter) {
         this.Filter = Filter;

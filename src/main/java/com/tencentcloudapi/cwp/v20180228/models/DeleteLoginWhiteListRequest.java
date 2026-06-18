@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DeleteLoginWhiteListRequest extends AbstractModel {
 
     /**
-    * Allowlisted IDs (The maximum number is 100.)
+    * <p>Allowlist ID (maximum 100)</p>
     */
     @SerializedName("Ids")
     @Expose
     private Long [] Ids;
 
     /**
-     * Get Allowlisted IDs (The maximum number is 100.) 
-     * @return Ids Allowlisted IDs (The maximum number is 100.)
+     * Get <p>Allowlist ID (maximum 100)</p> 
+     * @return Ids <p>Allowlist ID (maximum 100)</p>
      */
     public Long [] getIds() {
         return this.Ids;
     }
 
     /**
-     * Set Allowlisted IDs (The maximum number is 100.)
-     * @param Ids Allowlisted IDs (The maximum number is 100.)
+     * Set <p>Allowlist ID (maximum 100)</p>
+     * @param Ids <p>Allowlist ID (maximum 100)</p>
      */
     public void setIds(Long [] Ids) {
         this.Ids = Ids;

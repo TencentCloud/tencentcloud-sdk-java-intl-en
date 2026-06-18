@@ -234,6 +234,34 @@ public class CreateDBInstancesRequest extends AbstractModel {
     private AutoScalingConfig AutoScaleConfig;
 
     /**
+    * <p>Bind to security group list</p>
+    */
+    @SerializedName("SecurityGroupIds")
+    @Expose
+    private String [] SecurityGroupIds;
+
+    /**
+    * <p>root userName. The default is dbaadmin in the current version. It will reset to dbaadmin even if a value is passed.</p>
+    */
+    @SerializedName("UserName")
+    @Expose
+    private String UserName;
+
+    /**
+    * <p>dbaadmin password</p>
+    */
+    @SerializedName("Password")
+    @Expose
+    private String Password;
+
+    /**
+    * <p>Whether transparent data encryption is enabled. 0: not enabled; 1: enabled</p>
+    */
+    @SerializedName("EncryptionEnable")
+    @Expose
+    private Long EncryptionEnable;
+
+    /**
      * Get <p>Creating an Instance Region</p> 
      * @return Zone <p>Creating an Instance Region</p>
      */
@@ -713,6 +741,70 @@ public class CreateDBInstancesRequest extends AbstractModel {
         this.AutoScaleConfig = AutoScaleConfig;
     }
 
+    /**
+     * Get <p>Bind to security group list</p> 
+     * @return SecurityGroupIds <p>Bind to security group list</p>
+     */
+    public String [] getSecurityGroupIds() {
+        return this.SecurityGroupIds;
+    }
+
+    /**
+     * Set <p>Bind to security group list</p>
+     * @param SecurityGroupIds <p>Bind to security group list</p>
+     */
+    public void setSecurityGroupIds(String [] SecurityGroupIds) {
+        this.SecurityGroupIds = SecurityGroupIds;
+    }
+
+    /**
+     * Get <p>root userName. The default is dbaadmin in the current version. It will reset to dbaadmin even if a value is passed.</p> 
+     * @return UserName <p>root userName. The default is dbaadmin in the current version. It will reset to dbaadmin even if a value is passed.</p>
+     */
+    public String getUserName() {
+        return this.UserName;
+    }
+
+    /**
+     * Set <p>root userName. The default is dbaadmin in the current version. It will reset to dbaadmin even if a value is passed.</p>
+     * @param UserName <p>root userName. The default is dbaadmin in the current version. It will reset to dbaadmin even if a value is passed.</p>
+     */
+    public void setUserName(String UserName) {
+        this.UserName = UserName;
+    }
+
+    /**
+     * Get <p>dbaadmin password</p> 
+     * @return Password <p>dbaadmin password</p>
+     */
+    public String getPassword() {
+        return this.Password;
+    }
+
+    /**
+     * Set <p>dbaadmin password</p>
+     * @param Password <p>dbaadmin password</p>
+     */
+    public void setPassword(String Password) {
+        this.Password = Password;
+    }
+
+    /**
+     * Get <p>Whether transparent data encryption is enabled. 0: not enabled; 1: enabled</p> 
+     * @return EncryptionEnable <p>Whether transparent data encryption is enabled. 0: not enabled; 1: enabled</p>
+     */
+    public Long getEncryptionEnable() {
+        return this.EncryptionEnable;
+    }
+
+    /**
+     * Set <p>Whether transparent data encryption is enabled. 0: not enabled; 1: enabled</p>
+     * @param EncryptionEnable <p>Whether transparent data encryption is enabled. 0: not enabled; 1: enabled</p>
+     */
+    public void setEncryptionEnable(Long EncryptionEnable) {
+        this.EncryptionEnable = EncryptionEnable;
+    }
+
     public CreateDBInstancesRequest() {
     }
 
@@ -823,6 +915,21 @@ public class CreateDBInstancesRequest extends AbstractModel {
         if (source.AutoScaleConfig != null) {
             this.AutoScaleConfig = new AutoScalingConfig(source.AutoScaleConfig);
         }
+        if (source.SecurityGroupIds != null) {
+            this.SecurityGroupIds = new String[source.SecurityGroupIds.length];
+            for (int i = 0; i < source.SecurityGroupIds.length; i++) {
+                this.SecurityGroupIds[i] = new String(source.SecurityGroupIds[i]);
+            }
+        }
+        if (source.UserName != null) {
+            this.UserName = new String(source.UserName);
+        }
+        if (source.Password != null) {
+            this.Password = new String(source.Password);
+        }
+        if (source.EncryptionEnable != null) {
+            this.EncryptionEnable = new Long(source.EncryptionEnable);
+        }
     }
 
 
@@ -860,6 +967,10 @@ public class CreateDBInstancesRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "TemplateId", this.TemplateId);
         this.setParamSimple(map, prefix + "SQLMode", this.SQLMode);
         this.setParamObj(map, prefix + "AutoScaleConfig.", this.AutoScaleConfig);
+        this.setParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
+        this.setParamSimple(map, prefix + "UserName", this.UserName);
+        this.setParamSimple(map, prefix + "Password", this.Password);
+        this.setParamSimple(map, prefix + "EncryptionEnable", this.EncryptionEnable);
 
     }
 }

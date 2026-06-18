@@ -24,84 +24,69 @@ import java.util.HashMap;
 public class Filters extends AbstractModel {
 
     /**
-    * Instance ID.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Filter condition name.
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * Instance ID content.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Filter condition value list
     */
     @SerializedName("Values")
     @Expose
     private String [] Values;
 
     /**
-    * Fuzzy matching.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Exact match: 1 - exact match; default - fuzzy match
     */
     @SerializedName("ExactMatch")
     @Expose
     private String ExactMatch;
 
     /**
-     * Get Instance ID.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Name Instance ID.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Filter condition name. 
+     * @return Name Filter condition name.
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Instance ID.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Name Instance ID.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Filter condition name.
+     * @param Name Filter condition name.
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get Instance ID content.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Values Instance ID content.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Filter condition value list 
+     * @return Values Filter condition value list
      */
     public String [] getValues() {
         return this.Values;
     }
 
     /**
-     * Set Instance ID content.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Values Instance ID content.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Filter condition value list
+     * @param Values Filter condition value list
      */
     public void setValues(String [] Values) {
         this.Values = Values;
     }
 
     /**
-     * Get Fuzzy matching.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ExactMatch Fuzzy matching.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Exact match: 1 - exact match; default - fuzzy match 
+     * @return ExactMatch Exact match: 1 - exact match; default - fuzzy match
      */
     public String getExactMatch() {
         return this.ExactMatch;
     }
 
     /**
-     * Set Fuzzy matching.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ExactMatch Fuzzy matching.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Exact match: 1 - exact match; default - fuzzy match
+     * @param ExactMatch Exact match: 1 - exact match; default - fuzzy match
      */
     public void setExactMatch(String ExactMatch) {
         this.ExactMatch = ExactMatch;

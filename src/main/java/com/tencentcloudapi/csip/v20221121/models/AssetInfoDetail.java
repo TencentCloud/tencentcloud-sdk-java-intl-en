@@ -24,280 +24,230 @@ import java.util.HashMap;
 public class AssetInfoDetail extends AbstractModel {
 
     /**
-    * AppID of the user
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * User appid.
     */
     @SerializedName("AppID")
     @Expose
     private String AppID;
 
     /**
-    * CVE number
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * CVE id
     */
     @SerializedName("CVEId")
     @Expose
     private String CVEId;
 
     /**
-    * Whether the asset is scanned. Values: `0`: (default) Not scanned; `1`: Scanning; `2`: Scan completed; `3`: Error while scanning
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * Scan Status. 0-Not Scanned by Default; 1-Scanning; 2-Scan Completed; 3-Scan Error.
     */
     @SerializedName("IsScan")
     @Expose
     private Long IsScan;
 
     /**
-    * Number of affected assets
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * Number of Affected Assets
     */
     @SerializedName("InfluenceAsset")
     @Expose
     private Long InfluenceAsset;
 
     /**
-    * Number of not fixed assets
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * Number of Unfixed Assets
     */
     @SerializedName("NotRepairAsset")
     @Expose
     private Long NotRepairAsset;
 
     /**
-    * Number of not protected assets
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * Unprotected Asset Count
     */
     @SerializedName("NotProtectAsset")
     @Expose
     private Long NotProtectAsset;
 
     /**
-    * Task ID
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * Task ID.
     */
     @SerializedName("TaskId")
     @Expose
     private String TaskId;
 
     /**
-    * Task progress in terms of percentage
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * Task Percentage
     */
     @SerializedName("TaskPercent")
     @Expose
     private Long TaskPercent;
 
     /**
-    * Task creation time
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * Task Time
     */
     @SerializedName("TaskTime")
     @Expose
     private Long TaskTime;
 
     /**
-    * Scan start time
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * Scan time
     */
     @SerializedName("ScanTime")
     @Expose
     private String ScanTime;
 
     /**
-     * Get AppID of the user
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return AppID AppID of the user
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get User appid. 
+     * @return AppID User appid.
      */
     public String getAppID() {
         return this.AppID;
     }
 
     /**
-     * Set AppID of the user
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param AppID AppID of the user
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set User appid.
+     * @param AppID User appid.
      */
     public void setAppID(String AppID) {
         this.AppID = AppID;
     }
 
     /**
-     * Get CVE number
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return CVEId CVE number
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get CVE id 
+     * @return CVEId CVE id
      */
     public String getCVEId() {
         return this.CVEId;
     }
 
     /**
-     * Set CVE number
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param CVEId CVE number
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set CVE id
+     * @param CVEId CVE id
      */
     public void setCVEId(String CVEId) {
         this.CVEId = CVEId;
     }
 
     /**
-     * Get Whether the asset is scanned. Values: `0`: (default) Not scanned; `1`: Scanning; `2`: Scan completed; `3`: Error while scanning
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return IsScan Whether the asset is scanned. Values: `0`: (default) Not scanned; `1`: Scanning; `2`: Scan completed; `3`: Error while scanning
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get Scan Status. 0-Not Scanned by Default; 1-Scanning; 2-Scan Completed; 3-Scan Error. 
+     * @return IsScan Scan Status. 0-Not Scanned by Default; 1-Scanning; 2-Scan Completed; 3-Scan Error.
      */
     public Long getIsScan() {
         return this.IsScan;
     }
 
     /**
-     * Set Whether the asset is scanned. Values: `0`: (default) Not scanned; `1`: Scanning; `2`: Scan completed; `3`: Error while scanning
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param IsScan Whether the asset is scanned. Values: `0`: (default) Not scanned; `1`: Scanning; `2`: Scan completed; `3`: Error while scanning
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set Scan Status. 0-Not Scanned by Default; 1-Scanning; 2-Scan Completed; 3-Scan Error.
+     * @param IsScan Scan Status. 0-Not Scanned by Default; 1-Scanning; 2-Scan Completed; 3-Scan Error.
      */
     public void setIsScan(Long IsScan) {
         this.IsScan = IsScan;
     }
 
     /**
-     * Get Number of affected assets
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return InfluenceAsset Number of affected assets
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get Number of Affected Assets 
+     * @return InfluenceAsset Number of Affected Assets
      */
     public Long getInfluenceAsset() {
         return this.InfluenceAsset;
     }
 
     /**
-     * Set Number of affected assets
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param InfluenceAsset Number of affected assets
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set Number of Affected Assets
+     * @param InfluenceAsset Number of Affected Assets
      */
     public void setInfluenceAsset(Long InfluenceAsset) {
         this.InfluenceAsset = InfluenceAsset;
     }
 
     /**
-     * Get Number of not fixed assets
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return NotRepairAsset Number of not fixed assets
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get Number of Unfixed Assets 
+     * @return NotRepairAsset Number of Unfixed Assets
      */
     public Long getNotRepairAsset() {
         return this.NotRepairAsset;
     }
 
     /**
-     * Set Number of not fixed assets
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param NotRepairAsset Number of not fixed assets
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set Number of Unfixed Assets
+     * @param NotRepairAsset Number of Unfixed Assets
      */
     public void setNotRepairAsset(Long NotRepairAsset) {
         this.NotRepairAsset = NotRepairAsset;
     }
 
     /**
-     * Get Number of not protected assets
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return NotProtectAsset Number of not protected assets
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get Unprotected Asset Count 
+     * @return NotProtectAsset Unprotected Asset Count
      */
     public Long getNotProtectAsset() {
         return this.NotProtectAsset;
     }
 
     /**
-     * Set Number of not protected assets
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param NotProtectAsset Number of not protected assets
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set Unprotected Asset Count
+     * @param NotProtectAsset Unprotected Asset Count
      */
     public void setNotProtectAsset(Long NotProtectAsset) {
         this.NotProtectAsset = NotProtectAsset;
     }
 
     /**
-     * Get Task ID
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return TaskId Task ID
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get Task ID. 
+     * @return TaskId Task ID.
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set Task ID
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param TaskId Task ID
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set Task ID.
+     * @param TaskId Task ID.
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;
     }
 
     /**
-     * Get Task progress in terms of percentage
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return TaskPercent Task progress in terms of percentage
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get Task Percentage 
+     * @return TaskPercent Task Percentage
      */
     public Long getTaskPercent() {
         return this.TaskPercent;
     }
 
     /**
-     * Set Task progress in terms of percentage
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param TaskPercent Task progress in terms of percentage
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set Task Percentage
+     * @param TaskPercent Task Percentage
      */
     public void setTaskPercent(Long TaskPercent) {
         this.TaskPercent = TaskPercent;
     }
 
     /**
-     * Get Task creation time
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return TaskTime Task creation time
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get Task Time 
+     * @return TaskTime Task Time
      */
     public Long getTaskTime() {
         return this.TaskTime;
     }
 
     /**
-     * Set Task creation time
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param TaskTime Task creation time
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set Task Time
+     * @param TaskTime Task Time
      */
     public void setTaskTime(Long TaskTime) {
         this.TaskTime = TaskTime;
     }
 
     /**
-     * Get Scan start time
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return ScanTime Scan start time
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get Scan time 
+     * @return ScanTime Scan time
      */
     public String getScanTime() {
         return this.ScanTime;
     }
 
     /**
-     * Set Scan start time
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param ScanTime Scan start time
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set Scan time
+     * @param ScanTime Scan time
      */
     public void setScanTime(String ScanTime) {
         this.ScanTime = ScanTime;

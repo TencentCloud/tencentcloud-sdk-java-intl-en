@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DescribeNetAttackSettingRequest extends AbstractModel {
 
     /**
-    * 
+    * <p>Product type. 0:CWP; 1:CSC</p>
     */
     @SerializedName("ProductType")
     @Expose
     private Long ProductType;
 
     /**
-     * Get  
-     * @return ProductType 
+     * Get <p>Product type. 0:CWP; 1:CSC</p> 
+     * @return ProductType <p>Product type. 0:CWP; 1:CSC</p>
      */
     public Long getProductType() {
         return this.ProductType;
     }
 
     /**
-     * Set 
-     * @param ProductType 
+     * Set <p>Product type. 0:CWP; 1:CSC</p>
+     * @param ProductType <p>Product type. 0:CWP; 1:CSC</p>
      */
     public void setProductType(Long ProductType) {
         this.ProductType = ProductType;

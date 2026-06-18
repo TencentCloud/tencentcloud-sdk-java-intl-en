@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class PortViewPortRisk extends AbstractModel {
 
     /**
-    * Affected assets
+    * Unprocessed quantity.
     */
     @SerializedName("NoHandleCount")
     @Expose
     private Long NoHandleCount;
 
     /**
-    * Risk level
+    * Risk level, low - low risk, high - high risk, middle - medium risk, info - notification, extreme - critical.
     */
     @SerializedName("Level")
     @Expose
@@ -80,21 +80,21 @@ public class PortViewPortRisk extends AbstractModel {
     private Long Suggestion;
 
     /**
-    * Status of the risk. `0`: Not handled, `1`: Handled; `2`: Ignored
+    * Number of Affected Assets
     */
     @SerializedName("AffectAssetCount")
     @Expose
     private String AffectAssetCount;
 
     /**
-    * Unique ID of the asset
+    * ID
     */
     @SerializedName("Id")
     @Expose
     private String Id;
 
     /**
-    * Asset sub-category
+    * Source recognition
     */
     @SerializedName("From")
     @Expose
@@ -115,16 +115,14 @@ public class PortViewPortRisk extends AbstractModel {
     private String AppId;
 
     /**
-    * User name.
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * User Nickname
     */
     @SerializedName("Nick")
     @Expose
     private String Nick;
 
     /**
-    * User `uin`
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * User UIN
     */
     @SerializedName("Uin")
     @Expose
@@ -138,32 +136,32 @@ Note: This field may return·null, indicating that no valid values can be obtain
     private String Service;
 
     /**
-     * Get Affected assets 
-     * @return NoHandleCount Affected assets
+     * Get Unprocessed quantity. 
+     * @return NoHandleCount Unprocessed quantity.
      */
     public Long getNoHandleCount() {
         return this.NoHandleCount;
     }
 
     /**
-     * Set Affected assets
-     * @param NoHandleCount Affected assets
+     * Set Unprocessed quantity.
+     * @param NoHandleCount Unprocessed quantity.
      */
     public void setNoHandleCount(Long NoHandleCount) {
         this.NoHandleCount = NoHandleCount;
     }
 
     /**
-     * Get Risk level 
-     * @return Level Risk level
+     * Get Risk level, low - low risk, high - high risk, middle - medium risk, info - notification, extreme - critical. 
+     * @return Level Risk level, low - low risk, high - high risk, middle - medium risk, info - notification, extreme - critical.
      */
     public String getLevel() {
         return this.Level;
     }
 
     /**
-     * Set Risk level
-     * @param Level Risk level
+     * Set Risk level, low - low risk, high - high risk, middle - medium risk, info - notification, extreme - critical.
+     * @param Level Risk level, low - low risk, high - high risk, middle - medium risk, info - notification, extreme - critical.
      */
     public void setLevel(String Level) {
         this.Level = Level;
@@ -266,48 +264,48 @@ Note: This field may return·null, indicating that no valid values can be obtain
     }
 
     /**
-     * Get Status of the risk. `0`: Not handled, `1`: Handled; `2`: Ignored 
-     * @return AffectAssetCount Status of the risk. `0`: Not handled, `1`: Handled; `2`: Ignored
+     * Get Number of Affected Assets 
+     * @return AffectAssetCount Number of Affected Assets
      */
     public String getAffectAssetCount() {
         return this.AffectAssetCount;
     }
 
     /**
-     * Set Status of the risk. `0`: Not handled, `1`: Handled; `2`: Ignored
-     * @param AffectAssetCount Status of the risk. `0`: Not handled, `1`: Handled; `2`: Ignored
+     * Set Number of Affected Assets
+     * @param AffectAssetCount Number of Affected Assets
      */
     public void setAffectAssetCount(String AffectAssetCount) {
         this.AffectAssetCount = AffectAssetCount;
     }
 
     /**
-     * Get Unique ID of the asset 
-     * @return Id Unique ID of the asset
+     * Get ID 
+     * @return Id ID
      */
     public String getId() {
         return this.Id;
     }
 
     /**
-     * Set Unique ID of the asset
-     * @param Id Unique ID of the asset
+     * Set ID
+     * @param Id ID
      */
     public void setId(String Id) {
         this.Id = Id;
     }
 
     /**
-     * Get Asset sub-category 
-     * @return From Asset sub-category
+     * Get Source recognition 
+     * @return From Source recognition
      */
     public String getFrom() {
         return this.From;
     }
 
     /**
-     * Set Asset sub-category
-     * @param From Asset sub-category
+     * Set Source recognition
+     * @param From Source recognition
      */
     public void setFrom(String From) {
         this.From = From;
@@ -346,40 +344,32 @@ Note: This field may return·null, indicating that no valid values can be obtain
     }
 
     /**
-     * Get User name.
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return Nick User name.
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get User Nickname 
+     * @return Nick User Nickname
      */
     public String getNick() {
         return this.Nick;
     }
 
     /**
-     * Set User name.
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param Nick User name.
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set User Nickname
+     * @param Nick User Nickname
      */
     public void setNick(String Nick) {
         this.Nick = Nick;
     }
 
     /**
-     * Get User `uin`
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return Uin User `uin`
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get User UIN 
+     * @return Uin User UIN
      */
     public String getUin() {
         return this.Uin;
     }
 
     /**
-     * Set User `uin`
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param Uin User `uin`
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set User UIN
+     * @param Uin User UIN
      */
     public void setUin(String Uin) {
         this.Uin = Uin;

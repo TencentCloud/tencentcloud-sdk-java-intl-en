@@ -24,651 +24,624 @@ import java.util.HashMap;
 public class AccessKeyAlarm extends AbstractModel {
 
     /**
-    * Alarm name.
+    * <p>Alarm name</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * Alarm level.
-0 - unavailable 1 - Note 2 - low risk 3 - medium risk 4 - high risk 5 - critical.
+    * <p>Alarm level<br>0-Unavailable 1-Notification 2-Low risk 3-Medium risk 4-High risk 5-Critical</p>
     */
     @SerializedName("Level")
     @Expose
     private Long Level;
 
     /**
-    * Alarm record ID.
+    * <p>Alarm record ID</p>
     */
     @SerializedName("ID")
     @Expose
     private Long ID;
 
     /**
-    * Alarm rule ID.
+    * <p>Alarm rule ID</p>
     */
     @SerializedName("AlarmRuleID")
     @Expose
     private Long AlarmRuleID;
 
     /**
-    * Alarm type
-Abnormal call.
-Leak monitoring.
+    * <p>Alarm type<br>0 Abnormal call<br>1 Leak monitoring</p>
     */
     @SerializedName("AlarmType")
     @Expose
     private Long AlarmType;
 
     /**
-    * Access key.
+    * <p>Access key</p>
     */
     @SerializedName("AccessKey")
     @Expose
     private String AccessKey;
 
     /**
-    * Access key ID.
+    * <p>Access Key ID</p>
     */
     @SerializedName("AccessKeyID")
     @Expose
     private Long AccessKeyID;
 
     /**
-    * Access key remark.
+    * <p>Access key remark</p>
     */
     @SerializedName("AccessKeyRemark")
     @Expose
     private String AccessKeyRemark;
 
     /**
-    * Last Alarm Time
+    * <p>Last alarm time</p>
     */
     @SerializedName("LastAlarmTime")
     @Expose
     private String LastAlarmTime;
 
     /**
-    * Alarm status.
-0 - unprocessed 1 - processed 2 - ignored.
+    * <p>Alarm status<br>0-unprocessed 1-processed 2-ignored</p>
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * Aggregate date.
+    * <p>Aggregate date</p>
     */
     @SerializedName("Date")
     @Expose
     private String Date;
 
     /**
-    * Alarm Tag.
+    * <p>Alarm tag</p>
     */
     @SerializedName("Tag")
     @Expose
     private String [] Tag;
 
     /**
-    * Account associate Uin belonging to main account.
+    * <p>Uin of the main account</p>
     */
     @SerializedName("Uin")
     @Expose
     private String Uin;
 
     /**
-    * Nickname of the main account.
+    * <p>Nickname of the main account</p>
     */
     @SerializedName("Nickname")
     @Expose
     private String Nickname;
 
     /**
-    * Sub-Account Uin belonging to.
+    * <p>Sub-account Uin</p>
     */
     @SerializedName("SubUin")
     @Expose
     private String SubUin;
 
     /**
-    * Sub-Account nickname.
+    * <p>Sub-account nickname</p>
     */
     @SerializedName("SubNickname")
     @Expose
     private String SubNickname;
 
     /**
-    * Account type.
-0 root account AK 1 sub-account AK 2 temporary key.
+    * <p>Account type<br>0 Root account AK 1 Sub-account AK 2 Temporary key</p>
     */
     @SerializedName("Type")
     @Expose
     private Long Type;
 
     /**
-    * App ID
+    * <p>App ID</p>
     */
     @SerializedName("AppID")
     @Expose
     private Long AppID;
 
     /**
-    * Leakage evidence.
+    * <p>Leakage evidence</p>
     */
     @SerializedName("LeakEvidence")
     @Expose
     private String [] LeakEvidence;
 
     /**
-    * Whether editing a trusted account is supported.
+    * <p>Whether support editing trust account</p>
     */
     @SerializedName("IsSupportEditWhiteAccount")
     @Expose
     private Boolean IsSupportEditWhiteAccount;
 
     /**
-    * Alarm evidence.
+    * <p>Alert evidence</p>
     */
     @SerializedName("Evidence")
     @Expose
     private String Evidence;
 
     /**
-    * Alarm rule flag.
+    * <p>Alarm rule flag</p>
     */
     @SerializedName("RuleKey")
     @Expose
     private String RuleKey;
 
     /**
-    * Cloud vendor type 0: tencent cloud 1: amazon web services 2: microsoft azure 3: google cloud 4: alibaba cloud 5: huawei cloud.
+    * <p>Cloud vendor type 0:Tencent Cloud 1:Amazon Web Services 2:Microsoft Azure 3:Google Cloud 4:Alibaba Cloud 5:Huawei Cloud</p>
     */
     @SerializedName("CloudType")
     @Expose
     private Long CloudType;
 
     /**
-    * Alarm AI analysis status.
--Analysis failed.
-0 not analyzed.
-Under analysis.
-2 analysis successful, real Alarm.
-3 analysis successful, suspicious Alarm.
+    * <p>Alarm AI analysis status<br>-1 Analysis failed<br>0 Not analyzed<br>1 Under analysis<br>2 Analysis successful, real alarm<br>3 Analysis successful, suspicious alarm</p>
     */
     @SerializedName("AIStatus")
     @Expose
     private Long AIStatus;
 
     /**
-    * First Alarm timestamp (in seconds).
+    * <p>First alarm timestamp (in seconds)</p>
     */
     @SerializedName("FirstAlarmTimestamp")
     @Expose
     private Long FirstAlarmTimestamp;
 
     /**
-    * Last Alarm timestamp (in seconds).
+    * <p>Last alarm timestamp (in seconds)</p>
     */
     @SerializedName("LastAlarmTimestamp")
     @Expose
     private Long LastAlarmTimestamp;
 
     /**
-     * Get Alarm name. 
-     * @return Name Alarm name.
+    * <p>AI analysis failure description. Empty string if not failed.</p>
+    */
+    @SerializedName("AIFailedReason")
+    @Expose
+    private String AIFailedReason;
+
+    /**
+     * Get <p>Alarm name</p> 
+     * @return Name <p>Alarm name</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Alarm name.
-     * @param Name Alarm name.
+     * Set <p>Alarm name</p>
+     * @param Name <p>Alarm name</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get Alarm level.
-0 - unavailable 1 - Note 2 - low risk 3 - medium risk 4 - high risk 5 - critical. 
-     * @return Level Alarm level.
-0 - unavailable 1 - Note 2 - low risk 3 - medium risk 4 - high risk 5 - critical.
+     * Get <p>Alarm level<br>0-Unavailable 1-Notification 2-Low risk 3-Medium risk 4-High risk 5-Critical</p> 
+     * @return Level <p>Alarm level<br>0-Unavailable 1-Notification 2-Low risk 3-Medium risk 4-High risk 5-Critical</p>
      */
     public Long getLevel() {
         return this.Level;
     }
 
     /**
-     * Set Alarm level.
-0 - unavailable 1 - Note 2 - low risk 3 - medium risk 4 - high risk 5 - critical.
-     * @param Level Alarm level.
-0 - unavailable 1 - Note 2 - low risk 3 - medium risk 4 - high risk 5 - critical.
+     * Set <p>Alarm level<br>0-Unavailable 1-Notification 2-Low risk 3-Medium risk 4-High risk 5-Critical</p>
+     * @param Level <p>Alarm level<br>0-Unavailable 1-Notification 2-Low risk 3-Medium risk 4-High risk 5-Critical</p>
      */
     public void setLevel(Long Level) {
         this.Level = Level;
     }
 
     /**
-     * Get Alarm record ID. 
-     * @return ID Alarm record ID.
+     * Get <p>Alarm record ID</p> 
+     * @return ID <p>Alarm record ID</p>
      */
     public Long getID() {
         return this.ID;
     }
 
     /**
-     * Set Alarm record ID.
-     * @param ID Alarm record ID.
+     * Set <p>Alarm record ID</p>
+     * @param ID <p>Alarm record ID</p>
      */
     public void setID(Long ID) {
         this.ID = ID;
     }
 
     /**
-     * Get Alarm rule ID. 
-     * @return AlarmRuleID Alarm rule ID.
+     * Get <p>Alarm rule ID</p> 
+     * @return AlarmRuleID <p>Alarm rule ID</p>
      */
     public Long getAlarmRuleID() {
         return this.AlarmRuleID;
     }
 
     /**
-     * Set Alarm rule ID.
-     * @param AlarmRuleID Alarm rule ID.
+     * Set <p>Alarm rule ID</p>
+     * @param AlarmRuleID <p>Alarm rule ID</p>
      */
     public void setAlarmRuleID(Long AlarmRuleID) {
         this.AlarmRuleID = AlarmRuleID;
     }
 
     /**
-     * Get Alarm type
-Abnormal call.
-Leak monitoring. 
-     * @return AlarmType Alarm type
-Abnormal call.
-Leak monitoring.
+     * Get <p>Alarm type<br>0 Abnormal call<br>1 Leak monitoring</p> 
+     * @return AlarmType <p>Alarm type<br>0 Abnormal call<br>1 Leak monitoring</p>
      */
     public Long getAlarmType() {
         return this.AlarmType;
     }
 
     /**
-     * Set Alarm type
-Abnormal call.
-Leak monitoring.
-     * @param AlarmType Alarm type
-Abnormal call.
-Leak monitoring.
+     * Set <p>Alarm type<br>0 Abnormal call<br>1 Leak monitoring</p>
+     * @param AlarmType <p>Alarm type<br>0 Abnormal call<br>1 Leak monitoring</p>
      */
     public void setAlarmType(Long AlarmType) {
         this.AlarmType = AlarmType;
     }
 
     /**
-     * Get Access key. 
-     * @return AccessKey Access key.
+     * Get <p>Access key</p> 
+     * @return AccessKey <p>Access key</p>
      */
     public String getAccessKey() {
         return this.AccessKey;
     }
 
     /**
-     * Set Access key.
-     * @param AccessKey Access key.
+     * Set <p>Access key</p>
+     * @param AccessKey <p>Access key</p>
      */
     public void setAccessKey(String AccessKey) {
         this.AccessKey = AccessKey;
     }
 
     /**
-     * Get Access key ID. 
-     * @return AccessKeyID Access key ID.
+     * Get <p>Access Key ID</p> 
+     * @return AccessKeyID <p>Access Key ID</p>
      */
     public Long getAccessKeyID() {
         return this.AccessKeyID;
     }
 
     /**
-     * Set Access key ID.
-     * @param AccessKeyID Access key ID.
+     * Set <p>Access Key ID</p>
+     * @param AccessKeyID <p>Access Key ID</p>
      */
     public void setAccessKeyID(Long AccessKeyID) {
         this.AccessKeyID = AccessKeyID;
     }
 
     /**
-     * Get Access key remark. 
-     * @return AccessKeyRemark Access key remark.
+     * Get <p>Access key remark</p> 
+     * @return AccessKeyRemark <p>Access key remark</p>
      */
     public String getAccessKeyRemark() {
         return this.AccessKeyRemark;
     }
 
     /**
-     * Set Access key remark.
-     * @param AccessKeyRemark Access key remark.
+     * Set <p>Access key remark</p>
+     * @param AccessKeyRemark <p>Access key remark</p>
      */
     public void setAccessKeyRemark(String AccessKeyRemark) {
         this.AccessKeyRemark = AccessKeyRemark;
     }
 
     /**
-     * Get Last Alarm Time 
-     * @return LastAlarmTime Last Alarm Time
+     * Get <p>Last alarm time</p> 
+     * @return LastAlarmTime <p>Last alarm time</p>
      */
     public String getLastAlarmTime() {
         return this.LastAlarmTime;
     }
 
     /**
-     * Set Last Alarm Time
-     * @param LastAlarmTime Last Alarm Time
+     * Set <p>Last alarm time</p>
+     * @param LastAlarmTime <p>Last alarm time</p>
      */
     public void setLastAlarmTime(String LastAlarmTime) {
         this.LastAlarmTime = LastAlarmTime;
     }
 
     /**
-     * Get Alarm status.
-0 - unprocessed 1 - processed 2 - ignored. 
-     * @return Status Alarm status.
-0 - unprocessed 1 - processed 2 - ignored.
+     * Get <p>Alarm status<br>0-unprocessed 1-processed 2-ignored</p> 
+     * @return Status <p>Alarm status<br>0-unprocessed 1-processed 2-ignored</p>
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Alarm status.
-0 - unprocessed 1 - processed 2 - ignored.
-     * @param Status Alarm status.
-0 - unprocessed 1 - processed 2 - ignored.
+     * Set <p>Alarm status<br>0-unprocessed 1-processed 2-ignored</p>
+     * @param Status <p>Alarm status<br>0-unprocessed 1-processed 2-ignored</p>
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get Aggregate date. 
-     * @return Date Aggregate date.
+     * Get <p>Aggregate date</p> 
+     * @return Date <p>Aggregate date</p>
      */
     public String getDate() {
         return this.Date;
     }
 
     /**
-     * Set Aggregate date.
-     * @param Date Aggregate date.
+     * Set <p>Aggregate date</p>
+     * @param Date <p>Aggregate date</p>
      */
     public void setDate(String Date) {
         this.Date = Date;
     }
 
     /**
-     * Get Alarm Tag. 
-     * @return Tag Alarm Tag.
+     * Get <p>Alarm tag</p> 
+     * @return Tag <p>Alarm tag</p>
      */
     public String [] getTag() {
         return this.Tag;
     }
 
     /**
-     * Set Alarm Tag.
-     * @param Tag Alarm Tag.
+     * Set <p>Alarm tag</p>
+     * @param Tag <p>Alarm tag</p>
      */
     public void setTag(String [] Tag) {
         this.Tag = Tag;
     }
 
     /**
-     * Get Account associate Uin belonging to main account. 
-     * @return Uin Account associate Uin belonging to main account.
+     * Get <p>Uin of the main account</p> 
+     * @return Uin <p>Uin of the main account</p>
      */
     public String getUin() {
         return this.Uin;
     }
 
     /**
-     * Set Account associate Uin belonging to main account.
-     * @param Uin Account associate Uin belonging to main account.
+     * Set <p>Uin of the main account</p>
+     * @param Uin <p>Uin of the main account</p>
      */
     public void setUin(String Uin) {
         this.Uin = Uin;
     }
 
     /**
-     * Get Nickname of the main account. 
-     * @return Nickname Nickname of the main account.
+     * Get <p>Nickname of the main account</p> 
+     * @return Nickname <p>Nickname of the main account</p>
      */
     public String getNickname() {
         return this.Nickname;
     }
 
     /**
-     * Set Nickname of the main account.
-     * @param Nickname Nickname of the main account.
+     * Set <p>Nickname of the main account</p>
+     * @param Nickname <p>Nickname of the main account</p>
      */
     public void setNickname(String Nickname) {
         this.Nickname = Nickname;
     }
 
     /**
-     * Get Sub-Account Uin belonging to. 
-     * @return SubUin Sub-Account Uin belonging to.
+     * Get <p>Sub-account Uin</p> 
+     * @return SubUin <p>Sub-account Uin</p>
      */
     public String getSubUin() {
         return this.SubUin;
     }
 
     /**
-     * Set Sub-Account Uin belonging to.
-     * @param SubUin Sub-Account Uin belonging to.
+     * Set <p>Sub-account Uin</p>
+     * @param SubUin <p>Sub-account Uin</p>
      */
     public void setSubUin(String SubUin) {
         this.SubUin = SubUin;
     }
 
     /**
-     * Get Sub-Account nickname. 
-     * @return SubNickname Sub-Account nickname.
+     * Get <p>Sub-account nickname</p> 
+     * @return SubNickname <p>Sub-account nickname</p>
      */
     public String getSubNickname() {
         return this.SubNickname;
     }
 
     /**
-     * Set Sub-Account nickname.
-     * @param SubNickname Sub-Account nickname.
+     * Set <p>Sub-account nickname</p>
+     * @param SubNickname <p>Sub-account nickname</p>
      */
     public void setSubNickname(String SubNickname) {
         this.SubNickname = SubNickname;
     }
 
     /**
-     * Get Account type.
-0 root account AK 1 sub-account AK 2 temporary key. 
-     * @return Type Account type.
-0 root account AK 1 sub-account AK 2 temporary key.
+     * Get <p>Account type<br>0 Root account AK 1 Sub-account AK 2 Temporary key</p> 
+     * @return Type <p>Account type<br>0 Root account AK 1 Sub-account AK 2 Temporary key</p>
      */
     public Long getType() {
         return this.Type;
     }
 
     /**
-     * Set Account type.
-0 root account AK 1 sub-account AK 2 temporary key.
-     * @param Type Account type.
-0 root account AK 1 sub-account AK 2 temporary key.
+     * Set <p>Account type<br>0 Root account AK 1 Sub-account AK 2 Temporary key</p>
+     * @param Type <p>Account type<br>0 Root account AK 1 Sub-account AK 2 Temporary key</p>
      */
     public void setType(Long Type) {
         this.Type = Type;
     }
 
     /**
-     * Get App ID 
-     * @return AppID App ID
+     * Get <p>App ID</p> 
+     * @return AppID <p>App ID</p>
      */
     public Long getAppID() {
         return this.AppID;
     }
 
     /**
-     * Set App ID
-     * @param AppID App ID
+     * Set <p>App ID</p>
+     * @param AppID <p>App ID</p>
      */
     public void setAppID(Long AppID) {
         this.AppID = AppID;
     }
 
     /**
-     * Get Leakage evidence. 
-     * @return LeakEvidence Leakage evidence.
+     * Get <p>Leakage evidence</p> 
+     * @return LeakEvidence <p>Leakage evidence</p>
      */
     public String [] getLeakEvidence() {
         return this.LeakEvidence;
     }
 
     /**
-     * Set Leakage evidence.
-     * @param LeakEvidence Leakage evidence.
+     * Set <p>Leakage evidence</p>
+     * @param LeakEvidence <p>Leakage evidence</p>
      */
     public void setLeakEvidence(String [] LeakEvidence) {
         this.LeakEvidence = LeakEvidence;
     }
 
     /**
-     * Get Whether editing a trusted account is supported. 
-     * @return IsSupportEditWhiteAccount Whether editing a trusted account is supported.
+     * Get <p>Whether support editing trust account</p> 
+     * @return IsSupportEditWhiteAccount <p>Whether support editing trust account</p>
      */
     public Boolean getIsSupportEditWhiteAccount() {
         return this.IsSupportEditWhiteAccount;
     }
 
     /**
-     * Set Whether editing a trusted account is supported.
-     * @param IsSupportEditWhiteAccount Whether editing a trusted account is supported.
+     * Set <p>Whether support editing trust account</p>
+     * @param IsSupportEditWhiteAccount <p>Whether support editing trust account</p>
      */
     public void setIsSupportEditWhiteAccount(Boolean IsSupportEditWhiteAccount) {
         this.IsSupportEditWhiteAccount = IsSupportEditWhiteAccount;
     }
 
     /**
-     * Get Alarm evidence. 
-     * @return Evidence Alarm evidence.
+     * Get <p>Alert evidence</p> 
+     * @return Evidence <p>Alert evidence</p>
      */
     public String getEvidence() {
         return this.Evidence;
     }
 
     /**
-     * Set Alarm evidence.
-     * @param Evidence Alarm evidence.
+     * Set <p>Alert evidence</p>
+     * @param Evidence <p>Alert evidence</p>
      */
     public void setEvidence(String Evidence) {
         this.Evidence = Evidence;
     }
 
     /**
-     * Get Alarm rule flag. 
-     * @return RuleKey Alarm rule flag.
+     * Get <p>Alarm rule flag</p> 
+     * @return RuleKey <p>Alarm rule flag</p>
      */
     public String getRuleKey() {
         return this.RuleKey;
     }
 
     /**
-     * Set Alarm rule flag.
-     * @param RuleKey Alarm rule flag.
+     * Set <p>Alarm rule flag</p>
+     * @param RuleKey <p>Alarm rule flag</p>
      */
     public void setRuleKey(String RuleKey) {
         this.RuleKey = RuleKey;
     }
 
     /**
-     * Get Cloud vendor type 0: tencent cloud 1: amazon web services 2: microsoft azure 3: google cloud 4: alibaba cloud 5: huawei cloud. 
-     * @return CloudType Cloud vendor type 0: tencent cloud 1: amazon web services 2: microsoft azure 3: google cloud 4: alibaba cloud 5: huawei cloud.
+     * Get <p>Cloud vendor type 0:Tencent Cloud 1:Amazon Web Services 2:Microsoft Azure 3:Google Cloud 4:Alibaba Cloud 5:Huawei Cloud</p> 
+     * @return CloudType <p>Cloud vendor type 0:Tencent Cloud 1:Amazon Web Services 2:Microsoft Azure 3:Google Cloud 4:Alibaba Cloud 5:Huawei Cloud</p>
      */
     public Long getCloudType() {
         return this.CloudType;
     }
 
     /**
-     * Set Cloud vendor type 0: tencent cloud 1: amazon web services 2: microsoft azure 3: google cloud 4: alibaba cloud 5: huawei cloud.
-     * @param CloudType Cloud vendor type 0: tencent cloud 1: amazon web services 2: microsoft azure 3: google cloud 4: alibaba cloud 5: huawei cloud.
+     * Set <p>Cloud vendor type 0:Tencent Cloud 1:Amazon Web Services 2:Microsoft Azure 3:Google Cloud 4:Alibaba Cloud 5:Huawei Cloud</p>
+     * @param CloudType <p>Cloud vendor type 0:Tencent Cloud 1:Amazon Web Services 2:Microsoft Azure 3:Google Cloud 4:Alibaba Cloud 5:Huawei Cloud</p>
      */
     public void setCloudType(Long CloudType) {
         this.CloudType = CloudType;
     }
 
     /**
-     * Get Alarm AI analysis status.
--Analysis failed.
-0 not analyzed.
-Under analysis.
-2 analysis successful, real Alarm.
-3 analysis successful, suspicious Alarm. 
-     * @return AIStatus Alarm AI analysis status.
--Analysis failed.
-0 not analyzed.
-Under analysis.
-2 analysis successful, real Alarm.
-3 analysis successful, suspicious Alarm.
+     * Get <p>Alarm AI analysis status<br>-1 Analysis failed<br>0 Not analyzed<br>1 Under analysis<br>2 Analysis successful, real alarm<br>3 Analysis successful, suspicious alarm</p> 
+     * @return AIStatus <p>Alarm AI analysis status<br>-1 Analysis failed<br>0 Not analyzed<br>1 Under analysis<br>2 Analysis successful, real alarm<br>3 Analysis successful, suspicious alarm</p>
      */
     public Long getAIStatus() {
         return this.AIStatus;
     }
 
     /**
-     * Set Alarm AI analysis status.
--Analysis failed.
-0 not analyzed.
-Under analysis.
-2 analysis successful, real Alarm.
-3 analysis successful, suspicious Alarm.
-     * @param AIStatus Alarm AI analysis status.
--Analysis failed.
-0 not analyzed.
-Under analysis.
-2 analysis successful, real Alarm.
-3 analysis successful, suspicious Alarm.
+     * Set <p>Alarm AI analysis status<br>-1 Analysis failed<br>0 Not analyzed<br>1 Under analysis<br>2 Analysis successful, real alarm<br>3 Analysis successful, suspicious alarm</p>
+     * @param AIStatus <p>Alarm AI analysis status<br>-1 Analysis failed<br>0 Not analyzed<br>1 Under analysis<br>2 Analysis successful, real alarm<br>3 Analysis successful, suspicious alarm</p>
      */
     public void setAIStatus(Long AIStatus) {
         this.AIStatus = AIStatus;
     }
 
     /**
-     * Get First Alarm timestamp (in seconds). 
-     * @return FirstAlarmTimestamp First Alarm timestamp (in seconds).
+     * Get <p>First alarm timestamp (in seconds)</p> 
+     * @return FirstAlarmTimestamp <p>First alarm timestamp (in seconds)</p>
      */
     public Long getFirstAlarmTimestamp() {
         return this.FirstAlarmTimestamp;
     }
 
     /**
-     * Set First Alarm timestamp (in seconds).
-     * @param FirstAlarmTimestamp First Alarm timestamp (in seconds).
+     * Set <p>First alarm timestamp (in seconds)</p>
+     * @param FirstAlarmTimestamp <p>First alarm timestamp (in seconds)</p>
      */
     public void setFirstAlarmTimestamp(Long FirstAlarmTimestamp) {
         this.FirstAlarmTimestamp = FirstAlarmTimestamp;
     }
 
     /**
-     * Get Last Alarm timestamp (in seconds). 
-     * @return LastAlarmTimestamp Last Alarm timestamp (in seconds).
+     * Get <p>Last alarm timestamp (in seconds)</p> 
+     * @return LastAlarmTimestamp <p>Last alarm timestamp (in seconds)</p>
      */
     public Long getLastAlarmTimestamp() {
         return this.LastAlarmTimestamp;
     }
 
     /**
-     * Set Last Alarm timestamp (in seconds).
-     * @param LastAlarmTimestamp Last Alarm timestamp (in seconds).
+     * Set <p>Last alarm timestamp (in seconds)</p>
+     * @param LastAlarmTimestamp <p>Last alarm timestamp (in seconds)</p>
      */
     public void setLastAlarmTimestamp(Long LastAlarmTimestamp) {
         this.LastAlarmTimestamp = LastAlarmTimestamp;
+    }
+
+    /**
+     * Get <p>AI analysis failure description. Empty string if not failed.</p> 
+     * @return AIFailedReason <p>AI analysis failure description. Empty string if not failed.</p>
+     */
+    public String getAIFailedReason() {
+        return this.AIFailedReason;
+    }
+
+    /**
+     * Set <p>AI analysis failure description. Empty string if not failed.</p>
+     * @param AIFailedReason <p>AI analysis failure description. Empty string if not failed.</p>
+     */
+    public void setAIFailedReason(String AIFailedReason) {
+        this.AIFailedReason = AIFailedReason;
     }
 
     public AccessKeyAlarm() {
@@ -763,6 +736,9 @@ Under analysis.
         if (source.LastAlarmTimestamp != null) {
             this.LastAlarmTimestamp = new Long(source.LastAlarmTimestamp);
         }
+        if (source.AIFailedReason != null) {
+            this.AIFailedReason = new String(source.AIFailedReason);
+        }
     }
 
 
@@ -796,6 +772,7 @@ Under analysis.
         this.setParamSimple(map, prefix + "AIStatus", this.AIStatus);
         this.setParamSimple(map, prefix + "FirstAlarmTimestamp", this.FirstAlarmTimestamp);
         this.setParamSimple(map, prefix + "LastAlarmTimestamp", this.LastAlarmTimestamp);
+        this.setParamSimple(map, prefix + "AIFailedReason", this.AIFailedReason);
 
     }
 }

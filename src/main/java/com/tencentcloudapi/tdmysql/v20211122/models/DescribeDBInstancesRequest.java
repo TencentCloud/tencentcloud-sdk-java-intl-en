@@ -24,72 +24,95 @@ import java.util.HashMap;
 public class DescribeDBInstancesRequest extends AbstractModel {
 
     /**
-    * Filter parameters.
+    * <p>Filter parameters</p>
     */
     @SerializedName("Filters")
     @Expose
     private InstanceFilter [] Filters;
 
     /**
-    * Maximum return count, defaults to 20, maximum 100
+    * <p>Maximum return count, defaults to 20, maximum 100</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * Offset, which is an integer multiple of Limit.
+    * <p>Offset, which is an integer multiple of Limit.</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-     * Get Filter parameters. 
-     * @return Filters Filter parameters.
+    * <p>Specified query engine type</p><p>Enumeration value:</p><ul><li>libra: Column storage engine</li></ul>
+    */
+    @SerializedName("EngineType")
+    @Expose
+    private String EngineType;
+
+    /**
+     * Get <p>Filter parameters</p> 
+     * @return Filters <p>Filter parameters</p>
      */
     public InstanceFilter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set Filter parameters.
-     * @param Filters Filter parameters.
+     * Set <p>Filter parameters</p>
+     * @param Filters <p>Filter parameters</p>
      */
     public void setFilters(InstanceFilter [] Filters) {
         this.Filters = Filters;
     }
 
     /**
-     * Get Maximum return count, defaults to 20, maximum 100 
-     * @return Limit Maximum return count, defaults to 20, maximum 100
+     * Get <p>Maximum return count, defaults to 20, maximum 100</p> 
+     * @return Limit <p>Maximum return count, defaults to 20, maximum 100</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Maximum return count, defaults to 20, maximum 100
-     * @param Limit Maximum return count, defaults to 20, maximum 100
+     * Set <p>Maximum return count, defaults to 20, maximum 100</p>
+     * @param Limit <p>Maximum return count, defaults to 20, maximum 100</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get Offset, which is an integer multiple of Limit. 
-     * @return Offset Offset, which is an integer multiple of Limit.
+     * Get <p>Offset, which is an integer multiple of Limit.</p> 
+     * @return Offset <p>Offset, which is an integer multiple of Limit.</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Offset, which is an integer multiple of Limit.
-     * @param Offset Offset, which is an integer multiple of Limit.
+     * Set <p>Offset, which is an integer multiple of Limit.</p>
+     * @param Offset <p>Offset, which is an integer multiple of Limit.</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
+    }
+
+    /**
+     * Get <p>Specified query engine type</p><p>Enumeration value:</p><ul><li>libra: Column storage engine</li></ul> 
+     * @return EngineType <p>Specified query engine type</p><p>Enumeration value:</p><ul><li>libra: Column storage engine</li></ul>
+     */
+    public String getEngineType() {
+        return this.EngineType;
+    }
+
+    /**
+     * Set <p>Specified query engine type</p><p>Enumeration value:</p><ul><li>libra: Column storage engine</li></ul>
+     * @param EngineType <p>Specified query engine type</p><p>Enumeration value:</p><ul><li>libra: Column storage engine</li></ul>
+     */
+    public void setEngineType(String EngineType) {
+        this.EngineType = EngineType;
     }
 
     public DescribeDBInstancesRequest() {
@@ -112,6 +135,9 @@ public class DescribeDBInstancesRequest extends AbstractModel {
         if (source.Offset != null) {
             this.Offset = new Long(source.Offset);
         }
+        if (source.EngineType != null) {
+            this.EngineType = new String(source.EngineType);
+        }
     }
 
 
@@ -122,6 +148,7 @@ public class DescribeDBInstancesRequest extends AbstractModel {
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
+        this.setParamSimple(map, prefix + "EngineType", this.EngineType);
 
     }
 }

@@ -24,8 +24,7 @@ import java.util.HashMap;
 public class DescribePublicIpAssetsResponse extends AbstractModel {
 
     /**
-    * Data list
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * List
     */
     @SerializedName("Data")
     @Expose
@@ -39,48 +38,42 @@ Note: This field may return·null, indicating that no valid values can be obtain
     private Long Total;
 
     /**
-    * List of asset locations
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * Asset Attribution
     */
     @SerializedName("AssetLocationList")
     @Expose
     private FilterDataObject [] AssetLocationList;
 
     /**
-    * List of IP types
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * IP List Enumeration
     */
     @SerializedName("IpTypeList")
     @Expose
     private FilterDataObject [] IpTypeList;
 
     /**
-    * List of regions
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * Region List Enumeration
     */
     @SerializedName("RegionList")
     @Expose
     private FilterDataObject [] RegionList;
 
     /**
-    * List of protection status
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * Protection Enumeration
     */
     @SerializedName("DefenseStatusList")
     @Expose
     private FilterDataObject [] DefenseStatusList;
 
     /**
-    * List of asset types
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * Asset Type Enumeration
     */
     @SerializedName("AssetTypeList")
     @Expose
     private FilterDataObject [] AssetTypeList;
 
     /**
-    * List of AppIds 
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * AppId Enumeration
     */
     @SerializedName("AppIdList")
     @Expose
@@ -94,20 +87,16 @@ Note: This field may return·null, indicating that no valid values can be obtain
     private String RequestId;
 
     /**
-     * Get Data list
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return Data Data list
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get List 
+     * @return Data List
      */
     public IpAssetListVO [] getData() {
         return this.Data;
     }
 
     /**
-     * Set Data list
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param Data Data list
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set List
+     * @param Data List
      */
     public void setData(IpAssetListVO [] Data) {
         this.Data = Data;
@@ -130,120 +119,96 @@ Note: This field may return·null, indicating that no valid values can be obtain
     }
 
     /**
-     * Get List of asset locations
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return AssetLocationList List of asset locations
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get Asset Attribution 
+     * @return AssetLocationList Asset Attribution
      */
     public FilterDataObject [] getAssetLocationList() {
         return this.AssetLocationList;
     }
 
     /**
-     * Set List of asset locations
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param AssetLocationList List of asset locations
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set Asset Attribution
+     * @param AssetLocationList Asset Attribution
      */
     public void setAssetLocationList(FilterDataObject [] AssetLocationList) {
         this.AssetLocationList = AssetLocationList;
     }
 
     /**
-     * Get List of IP types
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return IpTypeList List of IP types
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get IP List Enumeration 
+     * @return IpTypeList IP List Enumeration
      */
     public FilterDataObject [] getIpTypeList() {
         return this.IpTypeList;
     }
 
     /**
-     * Set List of IP types
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param IpTypeList List of IP types
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set IP List Enumeration
+     * @param IpTypeList IP List Enumeration
      */
     public void setIpTypeList(FilterDataObject [] IpTypeList) {
         this.IpTypeList = IpTypeList;
     }
 
     /**
-     * Get List of regions
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return RegionList List of regions
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get Region List Enumeration 
+     * @return RegionList Region List Enumeration
      */
     public FilterDataObject [] getRegionList() {
         return this.RegionList;
     }
 
     /**
-     * Set List of regions
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param RegionList List of regions
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set Region List Enumeration
+     * @param RegionList Region List Enumeration
      */
     public void setRegionList(FilterDataObject [] RegionList) {
         this.RegionList = RegionList;
     }
 
     /**
-     * Get List of protection status
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return DefenseStatusList List of protection status
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get Protection Enumeration 
+     * @return DefenseStatusList Protection Enumeration
      */
     public FilterDataObject [] getDefenseStatusList() {
         return this.DefenseStatusList;
     }
 
     /**
-     * Set List of protection status
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param DefenseStatusList List of protection status
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set Protection Enumeration
+     * @param DefenseStatusList Protection Enumeration
      */
     public void setDefenseStatusList(FilterDataObject [] DefenseStatusList) {
         this.DefenseStatusList = DefenseStatusList;
     }
 
     /**
-     * Get List of asset types
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return AssetTypeList List of asset types
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get Asset Type Enumeration 
+     * @return AssetTypeList Asset Type Enumeration
      */
     public FilterDataObject [] getAssetTypeList() {
         return this.AssetTypeList;
     }
 
     /**
-     * Set List of asset types
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param AssetTypeList List of asset types
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set Asset Type Enumeration
+     * @param AssetTypeList Asset Type Enumeration
      */
     public void setAssetTypeList(FilterDataObject [] AssetTypeList) {
         this.AssetTypeList = AssetTypeList;
     }
 
     /**
-     * Get List of AppIds 
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return AppIdList List of AppIds 
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get AppId Enumeration 
+     * @return AppIdList AppId Enumeration
      */
     public FilterDataObject [] getAppIdList() {
         return this.AppIdList;
     }
 
     /**
-     * Set List of AppIds 
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param AppIdList List of AppIds 
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set AppId Enumeration
+     * @param AppIdList AppId Enumeration
      */
     public void setAppIdList(FilterDataObject [] AppIdList) {
         this.AppIdList = AppIdList;

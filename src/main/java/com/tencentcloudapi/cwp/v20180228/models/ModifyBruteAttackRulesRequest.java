@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class ModifyBruteAttackRulesRequest extends AbstractModel {
 
     /**
-    * Rule of determining brute force cracking
+    * <p>Brute-force attack determination rule</p>
     */
     @SerializedName("Rules")
     @Expose
     private BruteAttackRule [] Rules;
 
     /**
-     * Get Rule of determining brute force cracking 
-     * @return Rules Rule of determining brute force cracking
+     * Get <p>Brute-force attack determination rule</p> 
+     * @return Rules <p>Brute-force attack determination rule</p>
      */
     public BruteAttackRule [] getRules() {
         return this.Rules;
     }
 
     /**
-     * Set Rule of determining brute force cracking
-     * @param Rules Rule of determining brute force cracking
+     * Set <p>Brute-force attack determination rule</p>
+     * @param Rules <p>Brute-force attack determination rule</p>
      */
     public void setRules(BruteAttackRule [] Rules) {
         this.Rules = Rules;

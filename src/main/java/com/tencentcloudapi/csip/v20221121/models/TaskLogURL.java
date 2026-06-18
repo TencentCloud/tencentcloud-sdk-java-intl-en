@@ -24,24 +24,21 @@ import java.util.HashMap;
 public class TaskLogURL extends AbstractModel {
 
     /**
-    * Temp download URL for the report
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * Temporary Link for Report Download
     */
     @SerializedName("URL")
     @Expose
     private String URL;
 
     /**
-    * Task report ID
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * Task Report ID
     */
     @SerializedName("LogId")
     @Expose
     private String LogId;
 
     /**
-    * Task report name
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * Task Report Name
     */
     @SerializedName("TaskLogName")
     @Expose
@@ -49,77 +46,62 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
     /**
     * APP ID
-Note: This field may return·null, indicating that no valid values can be obtained.
     */
     @SerializedName("AppId")
     @Expose
     private String AppId;
 
     /**
-     * Get Temp download URL for the report
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return URL Temp download URL for the report
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get Temporary Link for Report Download 
+     * @return URL Temporary Link for Report Download
      */
     public String getURL() {
         return this.URL;
     }
 
     /**
-     * Set Temp download URL for the report
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param URL Temp download URL for the report
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set Temporary Link for Report Download
+     * @param URL Temporary Link for Report Download
      */
     public void setURL(String URL) {
         this.URL = URL;
     }
 
     /**
-     * Get Task report ID
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return LogId Task report ID
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get Task Report ID 
+     * @return LogId Task Report ID
      */
     public String getLogId() {
         return this.LogId;
     }
 
     /**
-     * Set Task report ID
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param LogId Task report ID
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set Task Report ID
+     * @param LogId Task Report ID
      */
     public void setLogId(String LogId) {
         this.LogId = LogId;
     }
 
     /**
-     * Get Task report name
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return TaskLogName Task report name
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get Task Report Name 
+     * @return TaskLogName Task Report Name
      */
     public String getTaskLogName() {
         return this.TaskLogName;
     }
 
     /**
-     * Set Task report name
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param TaskLogName Task report name
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set Task Report Name
+     * @param TaskLogName Task Report Name
      */
     public void setTaskLogName(String TaskLogName) {
         this.TaskLogName = TaskLogName;
     }
 
     /**
-     * Get APP ID
-Note: This field may return·null, indicating that no valid values can be obtained. 
+     * Get APP ID 
      * @return AppId APP ID
-Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public String getAppId() {
         return this.AppId;
@@ -127,9 +109,7 @@ Note: This field may return·null, indicating that no valid values can be obtain
 
     /**
      * Set APP ID
-Note: This field may return·null, indicating that no valid values can be obtained.
      * @param AppId APP ID
-Note: This field may return·null, indicating that no valid values can be obtained.
      */
     public void setAppId(String AppId) {
         this.AppId = AppId;

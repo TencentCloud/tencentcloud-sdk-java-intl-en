@@ -24,56 +24,56 @@ import java.util.HashMap;
 public class DescribeLoginTypeGlobalConfResponse extends AbstractModel {
 
     /**
-    * Whether anti-uninstall is enabled <li>0 No</li> <li>1 Yes</li> <li>9 Not set, same as 0 means not enabled</li>
+    * <p>Whether uninstall protection is enabled <li>0: No</li> <li>1: Yes</li> <li>9: Not set, equivalent to 0 (disabled)</li></p>
     */
     @SerializedName("Enable")
     @Expose
     private Long Enable;
 
     /**
-    * Scope <li>0 Selected host</li> <li>1 All hosts</li>
+    * <p>Scope <li>0: Selected hosts</li> <li>1: All hosts</li></p>
     */
     @SerializedName("Scope")
     @Expose
     private Long Scope;
 
     /**
-    * Selected host configuration count
+    * <p>Number of selected host configurations</p>
     */
     @SerializedName("IncludeHostCount")
     @Expose
     private Long IncludeHostCount;
 
     /**
-    * Deselect host configuration count
+    * <p>Number of excluded host configurations</p>
     */
     @SerializedName("ExcludeHostCount")
     @Expose
     private Long ExcludeHostCount;
 
     /**
-    * Select quuid configuration list
+    * <p>List of selected QUUID configurations</p>
     */
     @SerializedName("IncludeQuuid")
     @Expose
     private String [] IncludeQuuid;
 
     /**
-    * Exclude quuid configuration list
+    * <p>List of excluded QUUID configurations</p>
     */
     @SerializedName("ExcludeQuuid")
     @Expose
     private String [] ExcludeQuuid;
 
     /**
-    * Number of Machines Enabled
+    * <p>Number of enabled machines</p>
     */
     @SerializedName("EnableCount")
     @Expose
     private Long EnableCount;
 
     /**
-    * Number of inactive machines
+    * <p>Number of disabled machines</p>
     */
     @SerializedName("DisableCount")
     @Expose
@@ -87,128 +87,128 @@ public class DescribeLoginTypeGlobalConfResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Whether anti-uninstall is enabled <li>0 No</li> <li>1 Yes</li> <li>9 Not set, same as 0 means not enabled</li> 
-     * @return Enable Whether anti-uninstall is enabled <li>0 No</li> <li>1 Yes</li> <li>9 Not set, same as 0 means not enabled</li>
+     * Get <p>Whether uninstall protection is enabled <li>0: No</li> <li>1: Yes</li> <li>9: Not set, equivalent to 0 (disabled)</li></p> 
+     * @return Enable <p>Whether uninstall protection is enabled <li>0: No</li> <li>1: Yes</li> <li>9: Not set, equivalent to 0 (disabled)</li></p>
      */
     public Long getEnable() {
         return this.Enable;
     }
 
     /**
-     * Set Whether anti-uninstall is enabled <li>0 No</li> <li>1 Yes</li> <li>9 Not set, same as 0 means not enabled</li>
-     * @param Enable Whether anti-uninstall is enabled <li>0 No</li> <li>1 Yes</li> <li>9 Not set, same as 0 means not enabled</li>
+     * Set <p>Whether uninstall protection is enabled <li>0: No</li> <li>1: Yes</li> <li>9: Not set, equivalent to 0 (disabled)</li></p>
+     * @param Enable <p>Whether uninstall protection is enabled <li>0: No</li> <li>1: Yes</li> <li>9: Not set, equivalent to 0 (disabled)</li></p>
      */
     public void setEnable(Long Enable) {
         this.Enable = Enable;
     }
 
     /**
-     * Get Scope <li>0 Selected host</li> <li>1 All hosts</li> 
-     * @return Scope Scope <li>0 Selected host</li> <li>1 All hosts</li>
+     * Get <p>Scope <li>0: Selected hosts</li> <li>1: All hosts</li></p> 
+     * @return Scope <p>Scope <li>0: Selected hosts</li> <li>1: All hosts</li></p>
      */
     public Long getScope() {
         return this.Scope;
     }
 
     /**
-     * Set Scope <li>0 Selected host</li> <li>1 All hosts</li>
-     * @param Scope Scope <li>0 Selected host</li> <li>1 All hosts</li>
+     * Set <p>Scope <li>0: Selected hosts</li> <li>1: All hosts</li></p>
+     * @param Scope <p>Scope <li>0: Selected hosts</li> <li>1: All hosts</li></p>
      */
     public void setScope(Long Scope) {
         this.Scope = Scope;
     }
 
     /**
-     * Get Selected host configuration count 
-     * @return IncludeHostCount Selected host configuration count
+     * Get <p>Number of selected host configurations</p> 
+     * @return IncludeHostCount <p>Number of selected host configurations</p>
      */
     public Long getIncludeHostCount() {
         return this.IncludeHostCount;
     }
 
     /**
-     * Set Selected host configuration count
-     * @param IncludeHostCount Selected host configuration count
+     * Set <p>Number of selected host configurations</p>
+     * @param IncludeHostCount <p>Number of selected host configurations</p>
      */
     public void setIncludeHostCount(Long IncludeHostCount) {
         this.IncludeHostCount = IncludeHostCount;
     }
 
     /**
-     * Get Deselect host configuration count 
-     * @return ExcludeHostCount Deselect host configuration count
+     * Get <p>Number of excluded host configurations</p> 
+     * @return ExcludeHostCount <p>Number of excluded host configurations</p>
      */
     public Long getExcludeHostCount() {
         return this.ExcludeHostCount;
     }
 
     /**
-     * Set Deselect host configuration count
-     * @param ExcludeHostCount Deselect host configuration count
+     * Set <p>Number of excluded host configurations</p>
+     * @param ExcludeHostCount <p>Number of excluded host configurations</p>
      */
     public void setExcludeHostCount(Long ExcludeHostCount) {
         this.ExcludeHostCount = ExcludeHostCount;
     }
 
     /**
-     * Get Select quuid configuration list 
-     * @return IncludeQuuid Select quuid configuration list
+     * Get <p>List of selected QUUID configurations</p> 
+     * @return IncludeQuuid <p>List of selected QUUID configurations</p>
      */
     public String [] getIncludeQuuid() {
         return this.IncludeQuuid;
     }
 
     /**
-     * Set Select quuid configuration list
-     * @param IncludeQuuid Select quuid configuration list
+     * Set <p>List of selected QUUID configurations</p>
+     * @param IncludeQuuid <p>List of selected QUUID configurations</p>
      */
     public void setIncludeQuuid(String [] IncludeQuuid) {
         this.IncludeQuuid = IncludeQuuid;
     }
 
     /**
-     * Get Exclude quuid configuration list 
-     * @return ExcludeQuuid Exclude quuid configuration list
+     * Get <p>List of excluded QUUID configurations</p> 
+     * @return ExcludeQuuid <p>List of excluded QUUID configurations</p>
      */
     public String [] getExcludeQuuid() {
         return this.ExcludeQuuid;
     }
 
     /**
-     * Set Exclude quuid configuration list
-     * @param ExcludeQuuid Exclude quuid configuration list
+     * Set <p>List of excluded QUUID configurations</p>
+     * @param ExcludeQuuid <p>List of excluded QUUID configurations</p>
      */
     public void setExcludeQuuid(String [] ExcludeQuuid) {
         this.ExcludeQuuid = ExcludeQuuid;
     }
 
     /**
-     * Get Number of Machines Enabled 
-     * @return EnableCount Number of Machines Enabled
+     * Get <p>Number of enabled machines</p> 
+     * @return EnableCount <p>Number of enabled machines</p>
      */
     public Long getEnableCount() {
         return this.EnableCount;
     }
 
     /**
-     * Set Number of Machines Enabled
-     * @param EnableCount Number of Machines Enabled
+     * Set <p>Number of enabled machines</p>
+     * @param EnableCount <p>Number of enabled machines</p>
      */
     public void setEnableCount(Long EnableCount) {
         this.EnableCount = EnableCount;
     }
 
     /**
-     * Get Number of inactive machines 
-     * @return DisableCount Number of inactive machines
+     * Get <p>Number of disabled machines</p> 
+     * @return DisableCount <p>Number of disabled machines</p>
      */
     public Long getDisableCount() {
         return this.DisableCount;
     }
 
     /**
-     * Set Number of inactive machines
-     * @param DisableCount Number of inactive machines
+     * Set <p>Number of disabled machines</p>
+     * @param DisableCount <p>Number of disabled machines</p>
      */
     public void setDisableCount(Long DisableCount) {
         this.DisableCount = DisableCount;

@@ -24,26 +24,49 @@ import java.util.HashMap;
 public class DeleteRiskScanTaskRequest extends AbstractModel {
 
     /**
-    * List of task IDs
+    * task id and target AppID list
     */
     @SerializedName("TaskIdList")
     @Expose
     private TaskIdListKey [] TaskIdList;
 
     /**
-     * Get List of task IDs 
-     * @return TaskIdList List of task IDs
+    * Group Account Member ID
+    */
+    @SerializedName("MemberId")
+    @Expose
+    private String [] MemberId;
+
+    /**
+     * Get task id and target AppID list 
+     * @return TaskIdList task id and target AppID list
      */
     public TaskIdListKey [] getTaskIdList() {
         return this.TaskIdList;
     }
 
     /**
-     * Set List of task IDs
-     * @param TaskIdList List of task IDs
+     * Set task id and target AppID list
+     * @param TaskIdList task id and target AppID list
      */
     public void setTaskIdList(TaskIdListKey [] TaskIdList) {
         this.TaskIdList = TaskIdList;
+    }
+
+    /**
+     * Get Group Account Member ID 
+     * @return MemberId Group Account Member ID
+     */
+    public String [] getMemberId() {
+        return this.MemberId;
+    }
+
+    /**
+     * Set Group Account Member ID
+     * @param MemberId Group Account Member ID
+     */
+    public void setMemberId(String [] MemberId) {
+        this.MemberId = MemberId;
     }
 
     public DeleteRiskScanTaskRequest() {
@@ -60,6 +83,12 @@ public class DeleteRiskScanTaskRequest extends AbstractModel {
                 this.TaskIdList[i] = new TaskIdListKey(source.TaskIdList[i]);
             }
         }
+        if (source.MemberId != null) {
+            this.MemberId = new String[source.MemberId.length];
+            for (int i = 0; i < source.MemberId.length; i++) {
+                this.MemberId[i] = new String(source.MemberId[i]);
+            }
+        }
     }
 
 
@@ -68,6 +97,7 @@ public class DeleteRiskScanTaskRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "TaskIdList.", this.TaskIdList);
+        this.setParamArraySimple(map, prefix + "MemberId.", this.MemberId);
 
     }
 }

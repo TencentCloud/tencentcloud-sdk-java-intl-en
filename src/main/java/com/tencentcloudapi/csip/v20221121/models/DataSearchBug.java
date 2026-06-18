@@ -31,60 +31,67 @@ public class DataSearchBug extends AbstractModel {
     private String StateCode;
 
     /**
-    *  
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * Vulnerability details
     */
     @SerializedName("DataBug")
     @Expose
     private BugInfoDetail [] DataBug;
 
     /**
-    * None
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * Vulnerability impact assets details
     */
     @SerializedName("DataAsset")
     @Expose
     private AssetInfoDetail [] DataAsset;
 
     /**
-    * `true`: Support vulnerability scan; `false`: Do not support vulnerability scan
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * True supports scanning. False does not support scanning.
     */
     @SerializedName("VSSScan")
     @Expose
     private Boolean VSSScan;
 
     /**
-    * `0`: Do not support; `1`: Support
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * 0-Not Supported; 1-Supported
     */
     @SerializedName("CWPScan")
     @Expose
     private String CWPScan;
 
     /**
-    * `1`: Support virtual patches; `0` or null: Do not support
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * 1 indicates virtual patches supported, 0 or null indicates not supported.
     */
     @SerializedName("CFWPatch")
     @Expose
     private String CFWPatch;
 
     /**
-    * `0`: Do not support; `1`: Support
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * 0-Not Supported; 1-Supported
     */
     @SerializedName("WafPatch")
     @Expose
     private Long WafPatch;
 
     /**
-    * `0`: Do not support; `1`: Support
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * 0-Not Supported; 1-Supported
     */
     @SerializedName("CWPFix")
     @Expose
     private Long CWPFix;
+
+    /**
+    * Product Support Status
+    */
+    @SerializedName("DataSupport")
+    @Expose
+    private ProductSupport [] DataSupport;
+
+    /**
+    * cveId
+    */
+    @SerializedName("CveId")
+    @Expose
+    private String CveId;
 
     /**
      * Get Query status code 
@@ -103,143 +110,147 @@ Note: This field may return·null, indicating that no valid values can be obtain
     }
 
     /**
-     * Get  
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return DataBug  
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get Vulnerability details 
+     * @return DataBug Vulnerability details
      */
     public BugInfoDetail [] getDataBug() {
         return this.DataBug;
     }
 
     /**
-     * Set  
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param DataBug  
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set Vulnerability details
+     * @param DataBug Vulnerability details
      */
     public void setDataBug(BugInfoDetail [] DataBug) {
         this.DataBug = DataBug;
     }
 
     /**
-     * Get None
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return DataAsset None
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get Vulnerability impact assets details 
+     * @return DataAsset Vulnerability impact assets details
      */
     public AssetInfoDetail [] getDataAsset() {
         return this.DataAsset;
     }
 
     /**
-     * Set None
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param DataAsset None
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set Vulnerability impact assets details
+     * @param DataAsset Vulnerability impact assets details
      */
     public void setDataAsset(AssetInfoDetail [] DataAsset) {
         this.DataAsset = DataAsset;
     }
 
     /**
-     * Get `true`: Support vulnerability scan; `false`: Do not support vulnerability scan
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return VSSScan `true`: Support vulnerability scan; `false`: Do not support vulnerability scan
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get True supports scanning. False does not support scanning. 
+     * @return VSSScan True supports scanning. False does not support scanning.
      */
     public Boolean getVSSScan() {
         return this.VSSScan;
     }
 
     /**
-     * Set `true`: Support vulnerability scan; `false`: Do not support vulnerability scan
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param VSSScan `true`: Support vulnerability scan; `false`: Do not support vulnerability scan
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set True supports scanning. False does not support scanning.
+     * @param VSSScan True supports scanning. False does not support scanning.
      */
     public void setVSSScan(Boolean VSSScan) {
         this.VSSScan = VSSScan;
     }
 
     /**
-     * Get `0`: Do not support; `1`: Support
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return CWPScan `0`: Do not support; `1`: Support
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get 0-Not Supported; 1-Supported 
+     * @return CWPScan 0-Not Supported; 1-Supported
      */
     public String getCWPScan() {
         return this.CWPScan;
     }
 
     /**
-     * Set `0`: Do not support; `1`: Support
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param CWPScan `0`: Do not support; `1`: Support
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set 0-Not Supported; 1-Supported
+     * @param CWPScan 0-Not Supported; 1-Supported
      */
     public void setCWPScan(String CWPScan) {
         this.CWPScan = CWPScan;
     }
 
     /**
-     * Get `1`: Support virtual patches; `0` or null: Do not support
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return CFWPatch `1`: Support virtual patches; `0` or null: Do not support
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get 1 indicates virtual patches supported, 0 or null indicates not supported. 
+     * @return CFWPatch 1 indicates virtual patches supported, 0 or null indicates not supported.
      */
     public String getCFWPatch() {
         return this.CFWPatch;
     }
 
     /**
-     * Set `1`: Support virtual patches; `0` or null: Do not support
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param CFWPatch `1`: Support virtual patches; `0` or null: Do not support
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set 1 indicates virtual patches supported, 0 or null indicates not supported.
+     * @param CFWPatch 1 indicates virtual patches supported, 0 or null indicates not supported.
      */
     public void setCFWPatch(String CFWPatch) {
         this.CFWPatch = CFWPatch;
     }
 
     /**
-     * Get `0`: Do not support; `1`: Support
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return WafPatch `0`: Do not support; `1`: Support
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get 0-Not Supported; 1-Supported 
+     * @return WafPatch 0-Not Supported; 1-Supported
      */
     public Long getWafPatch() {
         return this.WafPatch;
     }
 
     /**
-     * Set `0`: Do not support; `1`: Support
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param WafPatch `0`: Do not support; `1`: Support
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set 0-Not Supported; 1-Supported
+     * @param WafPatch 0-Not Supported; 1-Supported
      */
     public void setWafPatch(Long WafPatch) {
         this.WafPatch = WafPatch;
     }
 
     /**
-     * Get `0`: Do not support; `1`: Support
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return CWPFix `0`: Do not support; `1`: Support
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get 0-Not Supported; 1-Supported 
+     * @return CWPFix 0-Not Supported; 1-Supported
      */
     public Long getCWPFix() {
         return this.CWPFix;
     }
 
     /**
-     * Set `0`: Do not support; `1`: Support
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param CWPFix `0`: Do not support; `1`: Support
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set 0-Not Supported; 1-Supported
+     * @param CWPFix 0-Not Supported; 1-Supported
      */
     public void setCWPFix(Long CWPFix) {
         this.CWPFix = CWPFix;
+    }
+
+    /**
+     * Get Product Support Status 
+     * @return DataSupport Product Support Status
+     */
+    public ProductSupport [] getDataSupport() {
+        return this.DataSupport;
+    }
+
+    /**
+     * Set Product Support Status
+     * @param DataSupport Product Support Status
+     */
+    public void setDataSupport(ProductSupport [] DataSupport) {
+        this.DataSupport = DataSupport;
+    }
+
+    /**
+     * Get cveId 
+     * @return CveId cveId
+     */
+    public String getCveId() {
+        return this.CveId;
+    }
+
+    /**
+     * Set cveId
+     * @param CveId cveId
+     */
+    public void setCveId(String CveId) {
+        this.CveId = CveId;
     }
 
     public DataSearchBug() {
@@ -280,6 +291,15 @@ Note: This field may return·null, indicating that no valid values can be obtain
         if (source.CWPFix != null) {
             this.CWPFix = new Long(source.CWPFix);
         }
+        if (source.DataSupport != null) {
+            this.DataSupport = new ProductSupport[source.DataSupport.length];
+            for (int i = 0; i < source.DataSupport.length; i++) {
+                this.DataSupport[i] = new ProductSupport(source.DataSupport[i]);
+            }
+        }
+        if (source.CveId != null) {
+            this.CveId = new String(source.CveId);
+        }
     }
 
 
@@ -295,6 +315,8 @@ Note: This field may return·null, indicating that no valid values can be obtain
         this.setParamSimple(map, prefix + "CFWPatch", this.CFWPatch);
         this.setParamSimple(map, prefix + "WafPatch", this.WafPatch);
         this.setParamSimple(map, prefix + "CWPFix", this.CWPFix);
+        this.setParamArrayObj(map, prefix + "DataSupport.", this.DataSupport);
+        this.setParamSimple(map, prefix + "CveId", this.CveId);
 
     }
 }

@@ -2242,6 +2242,17 @@ This API is used to call the billing payment API for payment since prepaid order
     }
 
     /**
+     *This API is used to get server details.
+     * @param req DescribeMachineInfoRequest
+     * @return DescribeMachineInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeMachineInfoResponse DescribeMachineInfo(DescribeMachineInfoRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeMachineInfo", DescribeMachineInfoResponse.class);
+    }
+
+    /**
      *This API is used to query the machine authorization information.
      * @param req DescribeMachineLicenseDetailRequest
      * @return DescribeMachineLicenseDetailResponse

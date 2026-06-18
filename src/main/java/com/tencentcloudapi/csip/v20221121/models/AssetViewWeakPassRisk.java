@@ -31,7 +31,7 @@ public class AssetViewWeakPassRisk extends AbstractModel {
     private String AffectAsset;
 
     /**
-    * Risk level
+    * Risk level: low - low risk, high - high risk, middle - medium risk, info - notification, extreme - critical.
     */
     @SerializedName("Level")
     @Expose
@@ -80,7 +80,7 @@ public class AssetViewWeakPassRisk extends AbstractModel {
     private Long Status;
 
     /**
-    * Unique ID of the asset
+    * ID, handle risk usage
     */
     @SerializedName("Id")
     @Expose
@@ -115,16 +115,14 @@ public class AssetViewWeakPassRisk extends AbstractModel {
     private String AppId;
 
     /**
-    * User name.
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * User Nickname
     */
     @SerializedName("Nick")
     @Expose
     private String Nick;
 
     /**
-    * User `uin`
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * User UIN
     */
     @SerializedName("Uin")
     @Expose
@@ -166,11 +164,18 @@ Note: This field may return·null, indicating that no valid values can be obtain
     private String Fix;
 
     /**
-    * Pay load
+    * proof
     */
     @SerializedName("Payload")
     @Expose
     private String Payload;
+
+    /**
+    * Port.
+    */
+    @SerializedName("Port")
+    @Expose
+    private Long Port;
 
     /**
      * Get Affected assets 
@@ -189,16 +194,16 @@ Note: This field may return·null, indicating that no valid values can be obtain
     }
 
     /**
-     * Get Risk level 
-     * @return Level Risk level
+     * Get Risk level: low - low risk, high - high risk, middle - medium risk, info - notification, extreme - critical. 
+     * @return Level Risk level: low - low risk, high - high risk, middle - medium risk, info - notification, extreme - critical.
      */
     public String getLevel() {
         return this.Level;
     }
 
     /**
-     * Set Risk level
-     * @param Level Risk level
+     * Set Risk level: low - low risk, high - high risk, middle - medium risk, info - notification, extreme - critical.
+     * @param Level Risk level: low - low risk, high - high risk, middle - medium risk, info - notification, extreme - critical.
      */
     public void setLevel(String Level) {
         this.Level = Level;
@@ -301,16 +306,16 @@ Note: This field may return·null, indicating that no valid values can be obtain
     }
 
     /**
-     * Get Unique ID of the asset 
-     * @return Id Unique ID of the asset
+     * Get ID, handle risk usage 
+     * @return Id ID, handle risk usage
      */
     public String getId() {
         return this.Id;
     }
 
     /**
-     * Set Unique ID of the asset
-     * @param Id Unique ID of the asset
+     * Set ID, handle risk usage
+     * @param Id ID, handle risk usage
      */
     public void setId(String Id) {
         this.Id = Id;
@@ -381,40 +386,32 @@ Note: This field may return·null, indicating that no valid values can be obtain
     }
 
     /**
-     * Get User name.
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return Nick User name.
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get User Nickname 
+     * @return Nick User Nickname
      */
     public String getNick() {
         return this.Nick;
     }
 
     /**
-     * Set User name.
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param Nick User name.
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set User Nickname
+     * @param Nick User Nickname
      */
     public void setNick(String Nick) {
         this.Nick = Nick;
     }
 
     /**
-     * Get User `uin`
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return Uin User `uin`
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get User UIN 
+     * @return Uin User UIN
      */
     public String getUin() {
         return this.Uin;
     }
 
     /**
-     * Set User `uin`
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param Uin User `uin`
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set User UIN
+     * @param Uin User UIN
      */
     public void setUin(String Uin) {
         this.Uin = Uin;
@@ -501,19 +498,35 @@ Note: This field may return·null, indicating that no valid values can be obtain
     }
 
     /**
-     * Get Pay load 
-     * @return Payload Pay load
+     * Get proof 
+     * @return Payload proof
      */
     public String getPayload() {
         return this.Payload;
     }
 
     /**
-     * Set Pay load
-     * @param Payload Pay load
+     * Set proof
+     * @param Payload proof
      */
     public void setPayload(String Payload) {
         this.Payload = Payload;
+    }
+
+    /**
+     * Get Port. 
+     * @return Port Port.
+     */
+    public Long getPort() {
+        return this.Port;
+    }
+
+    /**
+     * Set Port.
+     * @param Port Port.
+     */
+    public void setPort(Long Port) {
+        this.Port = Port;
     }
 
     public AssetViewWeakPassRisk() {
@@ -587,6 +600,9 @@ Note: This field may return·null, indicating that no valid values can be obtain
         if (source.Payload != null) {
             this.Payload = new String(source.Payload);
         }
+        if (source.Port != null) {
+            this.Port = new Long(source.Port);
+        }
     }
 
 
@@ -615,6 +631,7 @@ Note: This field may return·null, indicating that no valid values can be obtain
         this.setParamSimple(map, prefix + "VULURL", this.VULURL);
         this.setParamSimple(map, prefix + "Fix", this.Fix);
         this.setParamSimple(map, prefix + "Payload", this.Payload);
+        this.setParamSimple(map, prefix + "Port", this.Port);
 
     }
 }

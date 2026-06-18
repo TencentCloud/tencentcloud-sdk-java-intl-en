@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeMachineOsListResponse extends AbstractModel {
 
     /**
-    * Operating system list
+    * <p>Operating system list</p>
     */
     @SerializedName("List")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeMachineOsListResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Operating system list 
-     * @return List Operating system list
+     * Get <p>Operating system list</p> 
+     * @return List <p>Operating system list</p>
      */
     public OsName [] getList() {
         return this.List;
     }
 
     /**
-     * Set Operating system list
-     * @param List Operating system list
+     * Set <p>Operating system list</p>
+     * @param List <p>Operating system list</p>
      */
     public void setList(OsName [] List) {
         this.List = List;

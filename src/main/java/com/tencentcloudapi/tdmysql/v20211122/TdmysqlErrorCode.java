@@ -21,6 +21,9 @@ public enum TdmysqlErrorCode {
      /* FailedOperation.AddInstanceInfoFailed */
      FAILEDOPERATION_ADDINSTANCEINFOFAILED("FailedOperation.AddInstanceInfoFailed"),
      
+     /* FailedOperation.ApplyVipFailed */
+     FAILEDOPERATION_APPLYVIPFAILED("FailedOperation.ApplyVipFailed"),
+     
      /* FailedOperation.AuthNoStrategy */
      FAILEDOPERATION_AUTHNOSTRATEGY("FailedOperation.AuthNoStrategy"),
      
@@ -53,6 +56,12 @@ public enum TdmysqlErrorCode {
      
      /* Failed to update the new instance name. */
      FAILEDOPERATION_DBUPDATEINSTANCEERROR("FailedOperation.DBUpdateInstanceError"),
+     
+     /* Failed to update user data. */
+     FAILEDOPERATION_DBUPDATEUSERERROR("FailedOperation.DBUpdateUserError"),
+     
+     /* Failed to update and maintain window configuration */
+     FAILEDOPERATION_DBUPSERTMAINTENANCEWINDOWERROR("FailedOperation.DBUpsertMaintenanceWindowError"),
      
      /* The number of DBs has exceeded the limit. */
      FAILEDOPERATION_DBCOUNTLIMITERROR("FailedOperation.DbCountLimitError"),
@@ -105,14 +114,29 @@ public enum TdmysqlErrorCode {
      /* Update permission error. */
      FAILEDOPERATION_UPDATEPRIVILEGESERROR("FailedOperation.UpdatePrivilegesError"),
      
+     /* FailedOperation.WanStatusAbnormal */
+     FAILEDOPERATION_WANSTATUSABNORMAL("FailedOperation.WanStatusAbnormal"),
+     
+     /* InternalError.CheckVipStatusFailed */
+     INTERNALERROR_CHECKVIPSTATUSFAILED("InternalError.CheckVipStatusFailed"),
+     
      /* Database access error. */
      INTERNALERROR_DATABASEACCESSERROR("InternalError.DatabaseAccessError"),
+     
+     /* InternalError.DbOperationFailed */
+     INTERNALERROR_DBOPERATIONFAILED("InternalError.DbOperationFailed"),
      
      /* Query database object failed. */
      INTERNALERROR_DESCRIBEDBOBJECTSERROR("InternalError.DescribeDBObjectsError"),
      
      /* InternalError.GetSecurityGroupDetailFailed */
      INTERNALERROR_GETSECURITYGROUPDETAILFAILED("InternalError.GetSecurityGroupDetailFailed"),
+     
+     /* InternalError.GetSubnetFailed */
+     INTERNALERROR_GETSUBNETFAILED("InternalError.GetSubnetFailed"),
+     
+     /* InternalError.GetVpcFailed */
+     INTERNALERROR_GETVPCFAILED("InternalError.GetVpcFailed"),
      
      /* InternalError.InstanceOperatePermissionError */
      INTERNALERROR_INSTANCEOPERATEPERMISSIONERROR("InternalError.InstanceOperatePermissionError"),
@@ -141,6 +165,9 @@ public enum TdmysqlErrorCode {
      /* InternalError.SetSvcLocationFailed */
      INTERNALERROR_SETSVCLOCATIONFAILED("InternalError.SetSvcLocationFailed"),
      
+     /* InternalError.VpcOperationFailed */
+     INTERNALERROR_VPCOPERATIONFAILED("InternalError.VpcOperationFailed"),
+     
      /* Parameter error. */
      INVALIDPARAMETER("InvalidParameter"),
      
@@ -165,6 +192,15 @@ public enum TdmysqlErrorCode {
      /* InvalidParameter.PermissionDenied */
      INVALIDPARAMETER_PERMISSIONDENIED("InvalidParameter.PermissionDenied"),
      
+     /* InvalidParameter.SubnetUnavailable */
+     INVALIDPARAMETER_SUBNETUNAVAILABLE("InvalidParameter.SubnetUnavailable"),
+     
+     /* InvalidParameter.VipNotInSubnet */
+     INVALIDPARAMETER_VIPNOTINSUBNET("InvalidParameter.VipNotInSubnet"),
+     
+     /* InvalidParameter.VipUsed */
+     INVALIDPARAMETER_VIPUSED("InvalidParameter.VipUsed"),
+     
      /* Parameter value error. */
      INVALIDPARAMETERVALUE("InvalidParameterValue"),
      
@@ -186,6 +222,9 @@ public enum TdmysqlErrorCode {
      /* Name verification failed. */
      INVALIDPARAMETERVALUE_CHECKNAMEERROR("InvalidParameterValue.CheckNameError"),
      
+     /* Password verification failed. */
+     INVALIDPARAMETERVALUE_CHECKPASSWDERROR("InvalidParameterValue.CheckPasswdError"),
+     
      /* Instance specification validation error. */
      INVALIDPARAMETERVALUE_CHECKSPECERROR("InvalidParameterValue.CheckSpecError"),
      
@@ -198,8 +237,14 @@ public enum TdmysqlErrorCode {
      /* Parameter error */
      INVALIDPARAMETERVALUE_INVALIDPARAMETERVALUEERROR("InvalidParameterValue.InvalidParameterValueError"),
      
+     /* Parameter verification failure for maintenance window */
+     INVALIDPARAMETERVALUE_MAINTENANCEWINDOWPARAMERROR("InvalidParameterValue.MaintenanceWindowParamError"),
+     
      /* The number of instance replicas created does not meet specifications. */
      INVALIDPARAMETERVALUE_NODEREPLICASINVALIDERROR("InvalidParameterValue.NodeReplicasInvalidError"),
+     
+     /* Vport range error. */
+     INVALIDPARAMETERVALUE_VPORTRANGEERROR("InvalidParameterValue.VportRangeError"),
      
      /* The number of bound tags exceeds the limit. */
      LIMITEXCEEDED_ADDTAGCOUNTERROR("LimitExceeded.AddTagCountError"),
@@ -242,6 +287,9 @@ public enum TdmysqlErrorCode {
      
      /* The number of backups exceeds the quota. backups cannot be created again. */
      OPERATIONDENIED_MANUALBACKUPSETQUOTAEXCEEDEDERR("OperationDenied.ManualBackupSetQuotaExceededErr"),
+     
+     /* Reset super user password failed. */
+     OPERATIONDENIED_RESETUSERPASSWORDERROR("OperationDenied.ResetUserPasswordError"),
      
      /* Instance resource not found. */
      RESOURCENOTFOUND_BIZRESOURCENOTFOUNDERROR("ResourceNotFound.BizResourceNotFoundError"),

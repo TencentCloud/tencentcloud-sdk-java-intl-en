@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DeleteMachineClearHistoryRequest extends AbstractModel {
 
     /**
-    * IDs of records to be deleted, up to 100 characters in length
+    * <p>IDs of the records to be deleted. Maximum: 100</p>
     */
     @SerializedName("Ids")
     @Expose
     private Long [] Ids;
 
     /**
-     * Get IDs of records to be deleted, up to 100 characters in length 
-     * @return Ids IDs of records to be deleted, up to 100 characters in length
+     * Get <p>IDs of the records to be deleted. Maximum: 100</p> 
+     * @return Ids <p>IDs of the records to be deleted. Maximum: 100</p>
      */
     public Long [] getIds() {
         return this.Ids;
     }
 
     /**
-     * Set IDs of records to be deleted, up to 100 characters in length
-     * @param Ids IDs of records to be deleted, up to 100 characters in length
+     * Set <p>IDs of the records to be deleted. Maximum: 100</p>
+     * @param Ids <p>IDs of the records to be deleted. Maximum: 100</p>
      */
     public void setIds(Long [] Ids) {
         this.Ids = Ids;

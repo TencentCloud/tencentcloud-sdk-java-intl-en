@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class ModifyBanModeRequest extends AbstractModel {
 
     /**
-    * Blocking mode. STANDARD_MODE: standard mode; DEEP_MODE: deep mode.
+    * <p>Blocking mode. STANDARD_MODE: standard mode; DEEP_MODE: deep mode.</p>
     */
     @SerializedName("Mode")
     @Expose
     private String Mode;
 
     /**
-    * Blocking time. This parameter is valid in standard blocking mode.
+    * <p>Blocking duration, used in standard blocking mode</p>
     */
     @SerializedName("Ttl")
     @Expose
     private Long Ttl;
 
     /**
-     * Get Blocking mode. STANDARD_MODE: standard mode; DEEP_MODE: deep mode. 
-     * @return Mode Blocking mode. STANDARD_MODE: standard mode; DEEP_MODE: deep mode.
+     * Get <p>Blocking mode. STANDARD_MODE: standard mode; DEEP_MODE: deep mode.</p> 
+     * @return Mode <p>Blocking mode. STANDARD_MODE: standard mode; DEEP_MODE: deep mode.</p>
      */
     public String getMode() {
         return this.Mode;
     }
 
     /**
-     * Set Blocking mode. STANDARD_MODE: standard mode; DEEP_MODE: deep mode.
-     * @param Mode Blocking mode. STANDARD_MODE: standard mode; DEEP_MODE: deep mode.
+     * Set <p>Blocking mode. STANDARD_MODE: standard mode; DEEP_MODE: deep mode.</p>
+     * @param Mode <p>Blocking mode. STANDARD_MODE: standard mode; DEEP_MODE: deep mode.</p>
      */
     public void setMode(String Mode) {
         this.Mode = Mode;
     }
 
     /**
-     * Get Blocking time. This parameter is valid in standard blocking mode. 
-     * @return Ttl Blocking time. This parameter is valid in standard blocking mode.
+     * Get <p>Blocking duration, used in standard blocking mode</p> 
+     * @return Ttl <p>Blocking duration, used in standard blocking mode</p>
      */
     public Long getTtl() {
         return this.Ttl;
     }
 
     /**
-     * Set Blocking time. This parameter is valid in standard blocking mode.
-     * @param Ttl Blocking time. This parameter is valid in standard blocking mode.
+     * Set <p>Blocking duration, used in standard blocking mode</p>
+     * @param Ttl <p>Blocking duration, used in standard blocking mode</p>
      */
     public void setTtl(Long Ttl) {
         this.Ttl = Ttl;

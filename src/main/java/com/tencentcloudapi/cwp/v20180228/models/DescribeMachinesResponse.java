@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeMachinesResponse extends AbstractModel {
 
     /**
-    * List of hosts
+    * <p>Host list</p>
     */
     @SerializedName("Machines")
     @Expose
     private Machine [] Machines;
 
     /**
-    * Number of hosts
+    * <p>Number of hosts</p>
     */
     @SerializedName("TotalCount")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeMachinesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get List of hosts 
-     * @return Machines List of hosts
+     * Get <p>Host list</p> 
+     * @return Machines <p>Host list</p>
      */
     public Machine [] getMachines() {
         return this.Machines;
     }
 
     /**
-     * Set List of hosts
-     * @param Machines List of hosts
+     * Set <p>Host list</p>
+     * @param Machines <p>Host list</p>
      */
     public void setMachines(Machine [] Machines) {
         this.Machines = Machines;
     }
 
     /**
-     * Get Number of hosts 
-     * @return TotalCount Number of hosts
+     * Get <p>Number of hosts</p> 
+     * @return TotalCount <p>Number of hosts</p>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set Number of hosts
-     * @param TotalCount Number of hosts
+     * Set <p>Number of hosts</p>
+     * @param TotalCount <p>Number of hosts</p>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

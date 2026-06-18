@@ -38,7 +38,7 @@ public class VULViewVULRisk extends AbstractModel {
     private Long NoHandleCount;
 
     /**
-    * Risk level
+    * Risk level, low - low risk, high - high risk, middle - medium risk, info - notification, extreme - critical.
     */
     @SerializedName("Level")
     @Expose
@@ -66,21 +66,21 @@ public class VULViewVULRisk extends AbstractModel {
     private String FirstTime;
 
     /**
-    * Status of the risk. `0`: Not handled, `1`: Handled; `2`: Ignored
+    * Number of Affected Assets
     */
     @SerializedName("AffectAssetCount")
     @Expose
     private Long AffectAssetCount;
 
     /**
-    * Unique ID of the asset
+    * Risk ID
     */
     @SerializedName("Id")
     @Expose
     private String Id;
 
     /**
-    * Asset sub-category
+    * Scan Source. See API Return Enumeration Type for details.
     */
     @SerializedName("From")
     @Expose
@@ -122,43 +122,42 @@ public class VULViewVULRisk extends AbstractModel {
     private String Describe;
 
     /**
-    * Pay load
+    * Vulnerability Payload
     */
     @SerializedName("Payload")
     @Expose
     private String Payload;
 
     /**
-    * Affected components
+    * Affected component
     */
     @SerializedName("AppName")
     @Expose
     private String AppName;
 
     /**
-    * Reference information of the vulnerability
+    * Technology reference
     */
     @SerializedName("References")
     @Expose
     private String References;
 
     /**
-    * Affected version
+    * Vulnerability Affected Version
     */
     @SerializedName("AppVersion")
     @Expose
     private String AppVersion;
 
     /**
-    * Vulnerability URL
+    * risks
     */
     @SerializedName("VULURL")
     @Expose
     private String VULURL;
 
     /**
-    * User name.
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * User Nickname
     */
     @SerializedName("Nick")
     @Expose
@@ -172,24 +171,21 @@ Note: This field may return·null, indicating that no valid values can be obtain
     private String AppId;
 
     /**
-    * User `uin`
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * User UIN
     */
     @SerializedName("Uin")
     @Expose
     private String Uin;
 
     /**
-    * Fix suggestion
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * Fixing suggestion
     */
     @SerializedName("Fix")
     @Expose
     private String Fix;
 
     /**
-    * Whether it's an emergency vulnerability. Values: `1` (emergency vulnerability); `0` (non-emergency vulnerability
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * Emergency Vulnerability Type. 1-Emergency Vulnerability; 0-Non-emergency Vulnerability.
     */
     @SerializedName("EMGCVulType")
     @Expose
@@ -228,16 +224,16 @@ Note: This field may return·null, indicating that no valid values can be obtain
     }
 
     /**
-     * Get Risk level 
-     * @return Level Risk level
+     * Get Risk level, low - low risk, high - high risk, middle - medium risk, info - notification, extreme - critical. 
+     * @return Level Risk level, low - low risk, high - high risk, middle - medium risk, info - notification, extreme - critical.
      */
     public String getLevel() {
         return this.Level;
     }
 
     /**
-     * Set Risk level
-     * @param Level Risk level
+     * Set Risk level, low - low risk, high - high risk, middle - medium risk, info - notification, extreme - critical.
+     * @param Level Risk level, low - low risk, high - high risk, middle - medium risk, info - notification, extreme - critical.
      */
     public void setLevel(String Level) {
         this.Level = Level;
@@ -292,48 +288,48 @@ Note: This field may return·null, indicating that no valid values can be obtain
     }
 
     /**
-     * Get Status of the risk. `0`: Not handled, `1`: Handled; `2`: Ignored 
-     * @return AffectAssetCount Status of the risk. `0`: Not handled, `1`: Handled; `2`: Ignored
+     * Get Number of Affected Assets 
+     * @return AffectAssetCount Number of Affected Assets
      */
     public Long getAffectAssetCount() {
         return this.AffectAssetCount;
     }
 
     /**
-     * Set Status of the risk. `0`: Not handled, `1`: Handled; `2`: Ignored
-     * @param AffectAssetCount Status of the risk. `0`: Not handled, `1`: Handled; `2`: Ignored
+     * Set Number of Affected Assets
+     * @param AffectAssetCount Number of Affected Assets
      */
     public void setAffectAssetCount(Long AffectAssetCount) {
         this.AffectAssetCount = AffectAssetCount;
     }
 
     /**
-     * Get Unique ID of the asset 
-     * @return Id Unique ID of the asset
+     * Get Risk ID 
+     * @return Id Risk ID
      */
     public String getId() {
         return this.Id;
     }
 
     /**
-     * Set Unique ID of the asset
-     * @param Id Unique ID of the asset
+     * Set Risk ID
+     * @param Id Risk ID
      */
     public void setId(String Id) {
         this.Id = Id;
     }
 
     /**
-     * Get Asset sub-category 
-     * @return From Asset sub-category
+     * Get Scan Source. See API Return Enumeration Type for details. 
+     * @return From Scan Source. See API Return Enumeration Type for details.
      */
     public String getFrom() {
         return this.From;
     }
 
     /**
-     * Set Asset sub-category
-     * @param From Asset sub-category
+     * Set Scan Source. See API Return Enumeration Type for details.
+     * @param From Scan Source. See API Return Enumeration Type for details.
      */
     public void setFrom(String From) {
         this.From = From;
@@ -420,100 +416,96 @@ Note: This field may return·null, indicating that no valid values can be obtain
     }
 
     /**
-     * Get Pay load 
-     * @return Payload Pay load
+     * Get Vulnerability Payload 
+     * @return Payload Vulnerability Payload
      */
     public String getPayload() {
         return this.Payload;
     }
 
     /**
-     * Set Pay load
-     * @param Payload Pay load
+     * Set Vulnerability Payload
+     * @param Payload Vulnerability Payload
      */
     public void setPayload(String Payload) {
         this.Payload = Payload;
     }
 
     /**
-     * Get Affected components 
-     * @return AppName Affected components
+     * Get Affected component 
+     * @return AppName Affected component
      */
     public String getAppName() {
         return this.AppName;
     }
 
     /**
-     * Set Affected components
-     * @param AppName Affected components
+     * Set Affected component
+     * @param AppName Affected component
      */
     public void setAppName(String AppName) {
         this.AppName = AppName;
     }
 
     /**
-     * Get Reference information of the vulnerability 
-     * @return References Reference information of the vulnerability
+     * Get Technology reference 
+     * @return References Technology reference
      */
     public String getReferences() {
         return this.References;
     }
 
     /**
-     * Set Reference information of the vulnerability
-     * @param References Reference information of the vulnerability
+     * Set Technology reference
+     * @param References Technology reference
      */
     public void setReferences(String References) {
         this.References = References;
     }
 
     /**
-     * Get Affected version 
-     * @return AppVersion Affected version
+     * Get Vulnerability Affected Version 
+     * @return AppVersion Vulnerability Affected Version
      */
     public String getAppVersion() {
         return this.AppVersion;
     }
 
     /**
-     * Set Affected version
-     * @param AppVersion Affected version
+     * Set Vulnerability Affected Version
+     * @param AppVersion Vulnerability Affected Version
      */
     public void setAppVersion(String AppVersion) {
         this.AppVersion = AppVersion;
     }
 
     /**
-     * Get Vulnerability URL 
-     * @return VULURL Vulnerability URL
+     * Get risks 
+     * @return VULURL risks
      */
     public String getVULURL() {
         return this.VULURL;
     }
 
     /**
-     * Set Vulnerability URL
-     * @param VULURL Vulnerability URL
+     * Set risks
+     * @param VULURL risks
      */
     public void setVULURL(String VULURL) {
         this.VULURL = VULURL;
     }
 
     /**
-     * Get User name.
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return Nick User name.
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get User Nickname 
+     * @return Nick User Nickname
      */
     public String getNick() {
         return this.Nick;
     }
 
     /**
-     * Set User name.
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param Nick User name.
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set User Nickname
+     * @param Nick User Nickname
      */
     public void setNick(String Nick) {
         this.Nick = Nick;
@@ -536,60 +528,48 @@ Note: This field may return·null, indicating that no valid values can be obtain
     }
 
     /**
-     * Get User `uin`
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return Uin User `uin`
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get User UIN 
+     * @return Uin User UIN
      */
     public String getUin() {
         return this.Uin;
     }
 
     /**
-     * Set User `uin`
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param Uin User `uin`
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set User UIN
+     * @param Uin User UIN
      */
     public void setUin(String Uin) {
         this.Uin = Uin;
     }
 
     /**
-     * Get Fix suggestion
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return Fix Fix suggestion
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get Fixing suggestion 
+     * @return Fix Fixing suggestion
      */
     public String getFix() {
         return this.Fix;
     }
 
     /**
-     * Set Fix suggestion
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param Fix Fix suggestion
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set Fixing suggestion
+     * @param Fix Fixing suggestion
      */
     public void setFix(String Fix) {
         this.Fix = Fix;
     }
 
     /**
-     * Get Whether it's an emergency vulnerability. Values: `1` (emergency vulnerability); `0` (non-emergency vulnerability
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return EMGCVulType Whether it's an emergency vulnerability. Values: `1` (emergency vulnerability); `0` (non-emergency vulnerability
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get Emergency Vulnerability Type. 1-Emergency Vulnerability; 0-Non-emergency Vulnerability. 
+     * @return EMGCVulType Emergency Vulnerability Type. 1-Emergency Vulnerability; 0-Non-emergency Vulnerability.
      */
     public Long getEMGCVulType() {
         return this.EMGCVulType;
     }
 
     /**
-     * Set Whether it's an emergency vulnerability. Values: `1` (emergency vulnerability); `0` (non-emergency vulnerability
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param EMGCVulType Whether it's an emergency vulnerability. Values: `1` (emergency vulnerability); `0` (non-emergency vulnerability
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set Emergency Vulnerability Type. 1-Emergency Vulnerability; 0-Non-emergency Vulnerability.
+     * @param EMGCVulType Emergency Vulnerability Type. 1-Emergency Vulnerability; 0-Non-emergency Vulnerability.
      */
     public void setEMGCVulType(Long EMGCVulType) {
         this.EMGCVulType = EMGCVulType;

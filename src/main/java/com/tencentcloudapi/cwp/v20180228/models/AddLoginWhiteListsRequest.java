@@ -24,74 +24,69 @@ import java.util.HashMap;
 public class AddLoginWhiteListsRequest extends AbstractModel {
 
     /**
-    * Cross-region log-in allowlist entity
+    * <p>Unusual-login allowlist entry</p>
     */
     @SerializedName("HostLoginWhiteObj")
     @Expose
     private HostLoginWhiteObj HostLoginWhiteObj;
 
     /**
-    * Synchronous event processing method:
-"": do not process"All": add all events that match this configuration to the allowlist"Id": add the event corresponding to the event ID to the allowlist
+    * <p>Event sync processing method:<br>"" -- No action<br>"All" -- Add all event records matching this configuration to the allowlist<br>"Id" -- Add the event record corresponding to EventId to the allowlist</p>
     */
     @SerializedName("ProcessType")
     @Expose
     private String ProcessType;
 
     /**
-    * Cross-region log-in event ID. This parameter is required when ProcessType is set to Id.
+    * <p>Unusual-login event ID. This parameter is required when ProcessType is Id.</p>
     */
     @SerializedName("EventId")
     @Expose
     private Long EventId;
 
     /**
-     * Get Cross-region log-in allowlist entity 
-     * @return HostLoginWhiteObj Cross-region log-in allowlist entity
+     * Get <p>Unusual-login allowlist entry</p> 
+     * @return HostLoginWhiteObj <p>Unusual-login allowlist entry</p>
      */
     public HostLoginWhiteObj getHostLoginWhiteObj() {
         return this.HostLoginWhiteObj;
     }
 
     /**
-     * Set Cross-region log-in allowlist entity
-     * @param HostLoginWhiteObj Cross-region log-in allowlist entity
+     * Set <p>Unusual-login allowlist entry</p>
+     * @param HostLoginWhiteObj <p>Unusual-login allowlist entry</p>
      */
     public void setHostLoginWhiteObj(HostLoginWhiteObj HostLoginWhiteObj) {
         this.HostLoginWhiteObj = HostLoginWhiteObj;
     }
 
     /**
-     * Get Synchronous event processing method:
-"": do not process"All": add all events that match this configuration to the allowlist"Id": add the event corresponding to the event ID to the allowlist 
-     * @return ProcessType Synchronous event processing method:
-"": do not process"All": add all events that match this configuration to the allowlist"Id": add the event corresponding to the event ID to the allowlist
+     * Get <p>Event sync processing method:<br>"" -- No action<br>"All" -- Add all event records matching this configuration to the allowlist<br>"Id" -- Add the event record corresponding to EventId to the allowlist</p> 
+     * @return ProcessType <p>Event sync processing method:<br>"" -- No action<br>"All" -- Add all event records matching this configuration to the allowlist<br>"Id" -- Add the event record corresponding to EventId to the allowlist</p>
      */
     public String getProcessType() {
         return this.ProcessType;
     }
 
     /**
-     * Set Synchronous event processing method:
-"": do not process"All": add all events that match this configuration to the allowlist"Id": add the event corresponding to the event ID to the allowlist
-     * @param ProcessType Synchronous event processing method:
-"": do not process"All": add all events that match this configuration to the allowlist"Id": add the event corresponding to the event ID to the allowlist
+     * Set <p>Event sync processing method:<br>"" -- No action<br>"All" -- Add all event records matching this configuration to the allowlist<br>"Id" -- Add the event record corresponding to EventId to the allowlist</p>
+     * @param ProcessType <p>Event sync processing method:<br>"" -- No action<br>"All" -- Add all event records matching this configuration to the allowlist<br>"Id" -- Add the event record corresponding to EventId to the allowlist</p>
      */
     public void setProcessType(String ProcessType) {
         this.ProcessType = ProcessType;
     }
 
     /**
-     * Get Cross-region log-in event ID. This parameter is required when ProcessType is set to Id. 
-     * @return EventId Cross-region log-in event ID. This parameter is required when ProcessType is set to Id.
+     * Get <p>Unusual-login event ID. This parameter is required when ProcessType is Id.</p> 
+     * @return EventId <p>Unusual-login event ID. This parameter is required when ProcessType is Id.</p>
      */
     public Long getEventId() {
         return this.EventId;
     }
 
     /**
-     * Set Cross-region log-in event ID. This parameter is required when ProcessType is set to Id.
-     * @param EventId Cross-region log-in event ID. This parameter is required when ProcessType is set to Id.
+     * Set <p>Unusual-login event ID. This parameter is required when ProcessType is Id.</p>
+     * @param EventId <p>Unusual-login event ID. This parameter is required when ProcessType is Id.</p>
      */
     public void setEventId(Long EventId) {
         this.EventId = EventId;

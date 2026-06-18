@@ -45,6 +45,13 @@ public class ModifyRiskCenterRiskStatusRequest extends AbstractModel {
     private Long Type;
 
     /**
+    * Group Account Member ID
+    */
+    @SerializedName("MemberId")
+    @Expose
+    private String [] MemberId;
+
+    /**
      * Get Data of risk assets 
      * @return RiskStatusKeys Data of risk assets
      */
@@ -92,6 +99,22 @@ public class ModifyRiskCenterRiskStatusRequest extends AbstractModel {
         this.Type = Type;
     }
 
+    /**
+     * Get Group Account Member ID 
+     * @return MemberId Group Account Member ID
+     */
+    public String [] getMemberId() {
+        return this.MemberId;
+    }
+
+    /**
+     * Set Group Account Member ID
+     * @param MemberId Group Account Member ID
+     */
+    public void setMemberId(String [] MemberId) {
+        this.MemberId = MemberId;
+    }
+
     public ModifyRiskCenterRiskStatusRequest() {
     }
 
@@ -112,6 +135,12 @@ public class ModifyRiskCenterRiskStatusRequest extends AbstractModel {
         if (source.Type != null) {
             this.Type = new Long(source.Type);
         }
+        if (source.MemberId != null) {
+            this.MemberId = new String[source.MemberId.length];
+            for (int i = 0; i < source.MemberId.length; i++) {
+                this.MemberId[i] = new String(source.MemberId[i]);
+            }
+        }
     }
 
 
@@ -122,6 +151,7 @@ public class ModifyRiskCenterRiskStatusRequest extends AbstractModel {
         this.setParamArrayObj(map, prefix + "RiskStatusKeys.", this.RiskStatusKeys);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "Type", this.Type);
+        this.setParamArraySimple(map, prefix + "MemberId.", this.MemberId);
 
     }
 }

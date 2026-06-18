@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class DescribeLoginWhiteHostListRequest extends AbstractModel {
 
     /**
-    * Allowlist ID
+    * <p>Allowlist ID</p>
     */
     @SerializedName("Id")
     @Expose
     private Long Id;
 
     /**
-    * Number of results to be returned. Maximum value: 1000.
+    * <p>Number of items to return. Maximum value: 1000.</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * Offset. Default value: 0.
+    * <p>Offset. Default value: 0.</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * Filtering criteria <li>IpOrAlias - String - required: no - host IP or alias for filtering</li>
+    * <p>Filter criteria<li>IpOrAlias - String - Required: No - Host IP or alias filter</li></p>
     */
     @SerializedName("Filters")
     @Expose
     private AssetFilters [] Filters;
 
     /**
-     * Get Allowlist ID 
-     * @return Id Allowlist ID
+     * Get <p>Allowlist ID</p> 
+     * @return Id <p>Allowlist ID</p>
      */
     public Long getId() {
         return this.Id;
     }
 
     /**
-     * Set Allowlist ID
-     * @param Id Allowlist ID
+     * Set <p>Allowlist ID</p>
+     * @param Id <p>Allowlist ID</p>
      */
     public void setId(Long Id) {
         this.Id = Id;
     }
 
     /**
-     * Get Number of results to be returned. Maximum value: 1000. 
-     * @return Limit Number of results to be returned. Maximum value: 1000.
+     * Get <p>Number of items to return. Maximum value: 1000.</p> 
+     * @return Limit <p>Number of items to return. Maximum value: 1000.</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Number of results to be returned. Maximum value: 1000.
-     * @param Limit Number of results to be returned. Maximum value: 1000.
+     * Set <p>Number of items to return. Maximum value: 1000.</p>
+     * @param Limit <p>Number of items to return. Maximum value: 1000.</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get Offset. Default value: 0. 
-     * @return Offset Offset. Default value: 0.
+     * Get <p>Offset. Default value: 0.</p> 
+     * @return Offset <p>Offset. Default value: 0.</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Offset. Default value: 0.
-     * @param Offset Offset. Default value: 0.
+     * Set <p>Offset. Default value: 0.</p>
+     * @param Offset <p>Offset. Default value: 0.</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get Filtering criteria <li>IpOrAlias - String - required: no - host IP or alias for filtering</li> 
-     * @return Filters Filtering criteria <li>IpOrAlias - String - required: no - host IP or alias for filtering</li>
+     * Get <p>Filter criteria<li>IpOrAlias - String - Required: No - Host IP or alias filter</li></p> 
+     * @return Filters <p>Filter criteria<li>IpOrAlias - String - Required: No - Host IP or alias filter</li></p>
      */
     public AssetFilters [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set Filtering criteria <li>IpOrAlias - String - required: no - host IP or alias for filtering</li>
-     * @param Filters Filtering criteria <li>IpOrAlias - String - required: no - host IP or alias for filtering</li>
+     * Set <p>Filter criteria<li>IpOrAlias - String - Required: No - Host IP or alias filter</li></p>
+     * @param Filters <p>Filter criteria<li>IpOrAlias - String - Required: No - Host IP or alias filter</li></p>
      */
     public void setFilters(AssetFilters [] Filters) {
         this.Filters = Filters;

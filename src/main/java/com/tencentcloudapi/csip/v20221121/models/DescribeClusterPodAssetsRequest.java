@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeClusterPodAssetsRequest extends AbstractModel {
 
     /**
-    * Member id
+    * Group Account Member ID
     */
     @SerializedName("MemberId")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeClusterPodAssetsRequest extends AbstractModel {
     private Filter Filter;
 
     /**
-     * Get Member id 
-     * @return MemberId Member id
+     * Get Group Account Member ID 
+     * @return MemberId Group Account Member ID
      */
     public String [] getMemberId() {
         return this.MemberId;
     }
 
     /**
-     * Set Member id
-     * @param MemberId Member id
+     * Set Group Account Member ID
+     * @param MemberId Group Account Member ID
      */
     public void setMemberId(String [] MemberId) {
         this.MemberId = MemberId;
