@@ -24,92 +24,122 @@ import java.util.HashMap;
 public class FuseFaceReviewDetail extends AbstractModel {
 
     /**
-    * 
+    * Reserved field
     */
     @SerializedName("Field")
     @Expose
     private String Field;
 
     /**
-    * 
+    * Label Names Matched by Content Moderation
     */
     @SerializedName("Label")
     @Expose
     private String Label;
 
     /**
-    * 
+    * Confidence score of the detection label. A higher score means a greater likelihood of violations.
+0-70: Suggestion = PASS
+70-80: Suggestion = REVIEW
+80-100: Suggestion = BLOCK
     */
     @SerializedName("Confidence")
     @Expose
     private Float Confidence;
 
     /**
-    * 
+    * Moderation Conclusion for Detection Scenarios
+PASS: Normal
+REVIEW: Suspicious
+BLOCK: Violation
     */
     @SerializedName("Suggestion")
     @Expose
     private String Suggestion;
 
     /**
-     * Get  
-     * @return Field 
+     * Get Reserved field 
+     * @return Field Reserved field
      */
     public String getField() {
         return this.Field;
     }
 
     /**
-     * Set 
-     * @param Field 
+     * Set Reserved field
+     * @param Field Reserved field
      */
     public void setField(String Field) {
         this.Field = Field;
     }
 
     /**
-     * Get  
-     * @return Label 
+     * Get Label Names Matched by Content Moderation 
+     * @return Label Label Names Matched by Content Moderation
      */
     public String getLabel() {
         return this.Label;
     }
 
     /**
-     * Set 
-     * @param Label 
+     * Set Label Names Matched by Content Moderation
+     * @param Label Label Names Matched by Content Moderation
      */
     public void setLabel(String Label) {
         this.Label = Label;
     }
 
     /**
-     * Get  
-     * @return Confidence 
+     * Get Confidence score of the detection label. A higher score means a greater likelihood of violations.
+0-70: Suggestion = PASS
+70-80: Suggestion = REVIEW
+80-100: Suggestion = BLOCK 
+     * @return Confidence Confidence score of the detection label. A higher score means a greater likelihood of violations.
+0-70: Suggestion = PASS
+70-80: Suggestion = REVIEW
+80-100: Suggestion = BLOCK
      */
     public Float getConfidence() {
         return this.Confidence;
     }
 
     /**
-     * Set 
-     * @param Confidence 
+     * Set Confidence score of the detection label. A higher score means a greater likelihood of violations.
+0-70: Suggestion = PASS
+70-80: Suggestion = REVIEW
+80-100: Suggestion = BLOCK
+     * @param Confidence Confidence score of the detection label. A higher score means a greater likelihood of violations.
+0-70: Suggestion = PASS
+70-80: Suggestion = REVIEW
+80-100: Suggestion = BLOCK
      */
     public void setConfidence(Float Confidence) {
         this.Confidence = Confidence;
     }
 
     /**
-     * Get  
-     * @return Suggestion 
+     * Get Moderation Conclusion for Detection Scenarios
+PASS: Normal
+REVIEW: Suspicious
+BLOCK: Violation 
+     * @return Suggestion Moderation Conclusion for Detection Scenarios
+PASS: Normal
+REVIEW: Suspicious
+BLOCK: Violation
      */
     public String getSuggestion() {
         return this.Suggestion;
     }
 
     /**
-     * Set 
-     * @param Suggestion 
+     * Set Moderation Conclusion for Detection Scenarios
+PASS: Normal
+REVIEW: Suspicious
+BLOCK: Violation
+     * @param Suggestion Moderation Conclusion for Detection Scenarios
+PASS: Normal
+REVIEW: Suspicious
+BLOCK: Violation
      */
     public void setSuggestion(String Suggestion) {
         this.Suggestion = Suggestion;

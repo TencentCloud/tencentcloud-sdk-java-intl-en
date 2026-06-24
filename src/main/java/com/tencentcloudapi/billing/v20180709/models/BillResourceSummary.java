@@ -38,7 +38,7 @@ public class BillResourceSummary extends AbstractModel {
     private String ProductCodeName;
 
     /**
-    * Billing mode, which can be monthly subscription or pay-as-you-go.
+    * Billing mode, which can be yearly/monthly subscription or pay-as-you-go.
     */
     @SerializedName("PayModeName")
     @Expose
@@ -80,14 +80,14 @@ public class BillResourceSummary extends AbstractModel {
     private String ResourceName;
 
     /**
-    * Transaction type, which can be monthly subscription purchase, monthly subscription renewal, or pay-as-you-go deduction.
+    * Transaction type, which can be yearly/monthly subscription purchase, yearly/monthly subscription renewal, or pay-as-you-go deduction.
     */
     @SerializedName("ActionTypeName")
     @Expose
     private String ActionTypeName;
 
     /**
-    * Order ID: The order number for a monthly subscription purchase
+    * Order ID: The order number for a yearly/monthly subscription purchase
     */
     @SerializedName("OrderId")
     @Expose
@@ -331,16 +331,16 @@ public class BillResourceSummary extends AbstractModel {
     }
 
     /**
-     * Get Billing mode, which can be monthly subscription or pay-as-you-go. 
-     * @return PayModeName Billing mode, which can be monthly subscription or pay-as-you-go.
+     * Get Billing mode, which can be yearly/monthly subscription or pay-as-you-go. 
+     * @return PayModeName Billing mode, which can be yearly/monthly subscription or pay-as-you-go.
      */
     public String getPayModeName() {
         return this.PayModeName;
     }
 
     /**
-     * Set Billing mode, which can be monthly subscription or pay-as-you-go.
-     * @param PayModeName Billing mode, which can be monthly subscription or pay-as-you-go.
+     * Set Billing mode, which can be yearly/monthly subscription or pay-as-you-go.
+     * @param PayModeName Billing mode, which can be yearly/monthly subscription or pay-as-you-go.
      */
     public void setPayModeName(String PayModeName) {
         this.PayModeName = PayModeName;
@@ -427,32 +427,32 @@ public class BillResourceSummary extends AbstractModel {
     }
 
     /**
-     * Get Transaction type, which can be monthly subscription purchase, monthly subscription renewal, or pay-as-you-go deduction. 
-     * @return ActionTypeName Transaction type, which can be monthly subscription purchase, monthly subscription renewal, or pay-as-you-go deduction.
+     * Get Transaction type, which can be yearly/monthly subscription purchase, yearly/monthly subscription renewal, or pay-as-you-go deduction. 
+     * @return ActionTypeName Transaction type, which can be yearly/monthly subscription purchase, yearly/monthly subscription renewal, or pay-as-you-go deduction.
      */
     public String getActionTypeName() {
         return this.ActionTypeName;
     }
 
     /**
-     * Set Transaction type, which can be monthly subscription purchase, monthly subscription renewal, or pay-as-you-go deduction.
-     * @param ActionTypeName Transaction type, which can be monthly subscription purchase, monthly subscription renewal, or pay-as-you-go deduction.
+     * Set Transaction type, which can be yearly/monthly subscription purchase, yearly/monthly subscription renewal, or pay-as-you-go deduction.
+     * @param ActionTypeName Transaction type, which can be yearly/monthly subscription purchase, yearly/monthly subscription renewal, or pay-as-you-go deduction.
      */
     public void setActionTypeName(String ActionTypeName) {
         this.ActionTypeName = ActionTypeName;
     }
 
     /**
-     * Get Order ID: The order number for a monthly subscription purchase 
-     * @return OrderId Order ID: The order number for a monthly subscription purchase
+     * Get Order ID: The order number for a yearly/monthly subscription purchase 
+     * @return OrderId Order ID: The order number for a yearly/monthly subscription purchase
      */
     public String getOrderId() {
         return this.OrderId;
     }
 
     /**
-     * Set Order ID: The order number for a monthly subscription purchase
-     * @param OrderId Order ID: The order number for a monthly subscription purchase
+     * Set Order ID: The order number for a yearly/monthly subscription purchase
+     * @param OrderId Order ID: The order number for a yearly/monthly subscription purchase
      */
     public void setOrderId(String OrderId) {
         this.OrderId = OrderId;

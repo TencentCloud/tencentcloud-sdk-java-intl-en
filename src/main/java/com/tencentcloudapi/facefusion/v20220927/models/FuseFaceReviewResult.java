@@ -24,138 +24,138 @@ import java.util.HashMap;
 public class FuseFaceReviewResult extends AbstractModel {
 
     /**
-    * 
+    * Reserved field
     */
     @SerializedName("Category")
     @Expose
     private String Category;
 
     /**
-    * 
+    * Status code. 0 indicates successful processing; other values indicate failure.
     */
     @SerializedName("Code")
     @Expose
     private String Code;
 
     /**
-    * 
+    * Corresponding Status Code Description
     */
     @SerializedName("CodeDescription")
     @Expose
     private String CodeDescription;
 
     /**
-    * 
+    * Reserved field
     */
     @SerializedName("Confidence")
     @Expose
     private Float Confidence;
 
     /**
-    * 
+    * Reserved field
     */
     @SerializedName("Suggestion")
     @Expose
     private String Suggestion;
 
     /**
-    * 
+    * Detailed Moderation Content
     */
     @SerializedName("DetailSet")
     @Expose
     private FuseFaceReviewDetail [] DetailSet;
 
     /**
-     * Get  
-     * @return Category 
+     * Get Reserved field 
+     * @return Category Reserved field
      */
     public String getCategory() {
         return this.Category;
     }
 
     /**
-     * Set 
-     * @param Category 
+     * Set Reserved field
+     * @param Category Reserved field
      */
     public void setCategory(String Category) {
         this.Category = Category;
     }
 
     /**
-     * Get  
-     * @return Code 
+     * Get Status code. 0 indicates successful processing; other values indicate failure. 
+     * @return Code Status code. 0 indicates successful processing; other values indicate failure.
      */
     public String getCode() {
         return this.Code;
     }
 
     /**
-     * Set 
-     * @param Code 
+     * Set Status code. 0 indicates successful processing; other values indicate failure.
+     * @param Code Status code. 0 indicates successful processing; other values indicate failure.
      */
     public void setCode(String Code) {
         this.Code = Code;
     }
 
     /**
-     * Get  
-     * @return CodeDescription 
+     * Get Corresponding Status Code Description 
+     * @return CodeDescription Corresponding Status Code Description
      */
     public String getCodeDescription() {
         return this.CodeDescription;
     }
 
     /**
-     * Set 
-     * @param CodeDescription 
+     * Set Corresponding Status Code Description
+     * @param CodeDescription Corresponding Status Code Description
      */
     public void setCodeDescription(String CodeDescription) {
         this.CodeDescription = CodeDescription;
     }
 
     /**
-     * Get  
-     * @return Confidence 
+     * Get Reserved field 
+     * @return Confidence Reserved field
      */
     public Float getConfidence() {
         return this.Confidence;
     }
 
     /**
-     * Set 
-     * @param Confidence 
+     * Set Reserved field
+     * @param Confidence Reserved field
      */
     public void setConfidence(Float Confidence) {
         this.Confidence = Confidence;
     }
 
     /**
-     * Get  
-     * @return Suggestion 
+     * Get Reserved field 
+     * @return Suggestion Reserved field
      */
     public String getSuggestion() {
         return this.Suggestion;
     }
 
     /**
-     * Set 
-     * @param Suggestion 
+     * Set Reserved field
+     * @param Suggestion Reserved field
      */
     public void setSuggestion(String Suggestion) {
         this.Suggestion = Suggestion;
     }
 
     /**
-     * Get  
-     * @return DetailSet 
+     * Get Detailed Moderation Content 
+     * @return DetailSet Detailed Moderation Content
      */
     public FuseFaceReviewDetail [] getDetailSet() {
         return this.DetailSet;
     }
 
     /**
-     * Set 
-     * @param DetailSet 
+     * Set Detailed Moderation Content
+     * @param DetailSet Detailed Moderation Content
      */
     public void setDetailSet(FuseFaceReviewDetail [] DetailSet) {
         this.DetailSet = DetailSet;

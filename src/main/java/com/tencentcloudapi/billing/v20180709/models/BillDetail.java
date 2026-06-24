@@ -38,7 +38,7 @@ public class BillDetail extends AbstractModel {
     private String ProductCodeName;
 
     /**
-    * Billing mode, which can be monthly subscription or pay-as-you-go.
+    * Billing mode, which can be yearly/monthly subscription or pay-as-you-go.
     */
     @SerializedName("PayModeName")
     @Expose
@@ -80,14 +80,14 @@ public class BillDetail extends AbstractModel {
     private String ResourceName;
 
     /**
-    * Transaction type, which can be monthly subscription purchase, monthly subscription renewal, or pay-as-you-go deduction.
+    * Transaction type, which can be yearly/monthly subscription purchase, yearly/monthly subscription renewal, or pay-as-you-go deduction.
     */
     @SerializedName("ActionTypeName")
     @Expose
     private String ActionTypeName;
 
     /**
-    * Order ID: The sub-order number corresponding to the monthly subscription mode. In the postpaid billing model, the bill amount does not exist as an order concept, and this parameter can be ignored.
+    * Order ID: The sub-order number corresponding to the yearly/monthly subscription mode. In the postpaid billing model, the bill amount does not exist as an order concept, and this parameter can be ignored.
 
     */
     @SerializedName("OrderId")
@@ -316,16 +316,16 @@ public class BillDetail extends AbstractModel {
     }
 
     /**
-     * Get Billing mode, which can be monthly subscription or pay-as-you-go. 
-     * @return PayModeName Billing mode, which can be monthly subscription or pay-as-you-go.
+     * Get Billing mode, which can be yearly/monthly subscription or pay-as-you-go. 
+     * @return PayModeName Billing mode, which can be yearly/monthly subscription or pay-as-you-go.
      */
     public String getPayModeName() {
         return this.PayModeName;
     }
 
     /**
-     * Set Billing mode, which can be monthly subscription or pay-as-you-go.
-     * @param PayModeName Billing mode, which can be monthly subscription or pay-as-you-go.
+     * Set Billing mode, which can be yearly/monthly subscription or pay-as-you-go.
+     * @param PayModeName Billing mode, which can be yearly/monthly subscription or pay-as-you-go.
      */
     public void setPayModeName(String PayModeName) {
         this.PayModeName = PayModeName;
@@ -412,25 +412,25 @@ public class BillDetail extends AbstractModel {
     }
 
     /**
-     * Get Transaction type, which can be monthly subscription purchase, monthly subscription renewal, or pay-as-you-go deduction. 
-     * @return ActionTypeName Transaction type, which can be monthly subscription purchase, monthly subscription renewal, or pay-as-you-go deduction.
+     * Get Transaction type, which can be yearly/monthly subscription purchase, yearly/monthly subscription renewal, or pay-as-you-go deduction. 
+     * @return ActionTypeName Transaction type, which can be yearly/monthly subscription purchase, yearly/monthly subscription renewal, or pay-as-you-go deduction.
      */
     public String getActionTypeName() {
         return this.ActionTypeName;
     }
 
     /**
-     * Set Transaction type, which can be monthly subscription purchase, monthly subscription renewal, or pay-as-you-go deduction.
-     * @param ActionTypeName Transaction type, which can be monthly subscription purchase, monthly subscription renewal, or pay-as-you-go deduction.
+     * Set Transaction type, which can be yearly/monthly subscription purchase, yearly/monthly subscription renewal, or pay-as-you-go deduction.
+     * @param ActionTypeName Transaction type, which can be yearly/monthly subscription purchase, yearly/monthly subscription renewal, or pay-as-you-go deduction.
      */
     public void setActionTypeName(String ActionTypeName) {
         this.ActionTypeName = ActionTypeName;
     }
 
     /**
-     * Get Order ID: The sub-order number corresponding to the monthly subscription mode. In the postpaid billing model, the bill amount does not exist as an order concept, and this parameter can be ignored.
+     * Get Order ID: The sub-order number corresponding to the yearly/monthly subscription mode. In the postpaid billing model, the bill amount does not exist as an order concept, and this parameter can be ignored.
  
-     * @return OrderId Order ID: The sub-order number corresponding to the monthly subscription mode. In the postpaid billing model, the bill amount does not exist as an order concept, and this parameter can be ignored.
+     * @return OrderId Order ID: The sub-order number corresponding to the yearly/monthly subscription mode. In the postpaid billing model, the bill amount does not exist as an order concept, and this parameter can be ignored.
 
      */
     public String getOrderId() {
@@ -438,9 +438,9 @@ public class BillDetail extends AbstractModel {
     }
 
     /**
-     * Set Order ID: The sub-order number corresponding to the monthly subscription mode. In the postpaid billing model, the bill amount does not exist as an order concept, and this parameter can be ignored.
+     * Set Order ID: The sub-order number corresponding to the yearly/monthly subscription mode. In the postpaid billing model, the bill amount does not exist as an order concept, and this parameter can be ignored.
 
-     * @param OrderId Order ID: The sub-order number corresponding to the monthly subscription mode. In the postpaid billing model, the bill amount does not exist as an order concept, and this parameter can be ignored.
+     * @param OrderId Order ID: The sub-order number corresponding to the yearly/monthly subscription mode. In the postpaid billing model, the bill amount does not exist as an order concept, and this parameter can be ignored.
 
      */
     public void setOrderId(String OrderId) {
