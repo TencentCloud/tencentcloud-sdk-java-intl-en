@@ -25,7 +25,7 @@ public class DescribeDealsByCondRequest extends AbstractModel {
 
     /**
     * Start time 
-Example :2016-01-01 00:00:00
+Example :2016-01-01 00:00:00.
     */
     @SerializedName("StartTime")
     @Expose
@@ -61,11 +61,11 @@ Status of the order
 2: paid 
 3: shipment in progress
 4: shipped
-5`: Shipment Failed
-6`: Refunded
-7`: Ticket closed
-8`: Order expired
-9`: Order invalid
+5: Shipment Failed
+6: Refunded
+7: Ticket closed
+8: Order expired
+9: Order invalid
 10: product invalidated
 11: third-party payment refused
 12: payment in process
@@ -107,9 +107,9 @@ Example:ins-a2bb34
 
     /**
      * Get Start time 
-Example :2016-01-01 00:00:00 
+Example :2016-01-01 00:00:00. 
      * @return StartTime Start time 
-Example :2016-01-01 00:00:00
+Example :2016-01-01 00:00:00.
      */
     public String getStartTime() {
         return this.StartTime;
@@ -117,9 +117,9 @@ Example :2016-01-01 00:00:00
 
     /**
      * Set Start time 
-Example :2016-01-01 00:00:00
+Example :2016-01-01 00:00:00.
      * @param StartTime Start time 
-Example :2016-01-01 00:00:00
+Example :2016-01-01 00:00:00.
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
@@ -188,11 +188,11 @@ Status of the order
 2: paid 
 3: shipment in progress
 4: shipped
-5`: Shipment Failed
-6`: Refunded
-7`: Ticket closed
-8`: Order expired
-9`: Order invalid
+5: Shipment Failed
+6: Refunded
+7: Ticket closed
+8: Order expired
+9: Order invalid
 10: product invalidated
 11: third-party payment refused
 12: payment in process 
@@ -202,11 +202,11 @@ Status of the order
 2: paid 
 3: shipment in progress
 4: shipped
-5`: Shipment Failed
-6`: Refunded
-7`: Ticket closed
-8`: Order expired
-9`: Order invalid
+5: Shipment Failed
+6: Refunded
+7: Ticket closed
+8: Order expired
+9: Order invalid
 10: product invalidated
 11: third-party payment refused
 12: payment in process
@@ -222,11 +222,11 @@ Status of the order
 2: paid 
 3: shipment in progress
 4: shipped
-5`: Shipment Failed
-6`: Refunded
-7`: Ticket closed
-8`: Order expired
-9`: Order invalid
+5: Shipment Failed
+6: Refunded
+7: Ticket closed
+8: Order expired
+9: Order invalid
 10: product invalidated
 11: third-party payment refused
 12: payment in process
@@ -236,11 +236,11 @@ Status of the order
 2: paid 
 3: shipment in progress
 4: shipped
-5`: Shipment Failed
-6`: Refunded
-7`: Ticket closed
-8`: Order expired
-9`: Order invalid
+5: Shipment Failed
+6: Refunded
+7: Ticket closed
+8: Order expired
+9: Order invalid
 10: product invalidated
 11: third-party payment refused
 12: payment in process

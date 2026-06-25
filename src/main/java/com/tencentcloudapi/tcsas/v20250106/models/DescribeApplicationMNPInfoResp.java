@@ -101,6 +101,27 @@ public class DescribeApplicationMNPInfoResp extends AbstractModel {
     private CategoryInfo [] CategoryList;
 
     /**
+    * Team ID.
+    */
+    @SerializedName("TeamId")
+    @Expose
+    private String TeamId;
+
+    /**
+    * Team name.
+    */
+    @SerializedName("TeamName")
+    @Expose
+    private String TeamName;
+
+    /**
+    * Team type ID.
+    */
+    @SerializedName("TeamTypeId")
+    @Expose
+    private Long TeamTypeId;
+
+    /**
      * Get Mini program or mini game appid. 
      * @return MNPId Mini program or mini game appid.
      */
@@ -276,6 +297,54 @@ public class DescribeApplicationMNPInfoResp extends AbstractModel {
         this.CategoryList = CategoryList;
     }
 
+    /**
+     * Get Team ID. 
+     * @return TeamId Team ID.
+     */
+    public String getTeamId() {
+        return this.TeamId;
+    }
+
+    /**
+     * Set Team ID.
+     * @param TeamId Team ID.
+     */
+    public void setTeamId(String TeamId) {
+        this.TeamId = TeamId;
+    }
+
+    /**
+     * Get Team name. 
+     * @return TeamName Team name.
+     */
+    public String getTeamName() {
+        return this.TeamName;
+    }
+
+    /**
+     * Set Team name.
+     * @param TeamName Team name.
+     */
+    public void setTeamName(String TeamName) {
+        this.TeamName = TeamName;
+    }
+
+    /**
+     * Get Team type ID. 
+     * @return TeamTypeId Team type ID.
+     */
+    public Long getTeamTypeId() {
+        return this.TeamTypeId;
+    }
+
+    /**
+     * Set Team type ID.
+     * @param TeamTypeId Team type ID.
+     */
+    public void setTeamTypeId(Long TeamTypeId) {
+        this.TeamTypeId = TeamTypeId;
+    }
+
     public DescribeApplicationMNPInfoResp() {
     }
 
@@ -320,6 +389,15 @@ public class DescribeApplicationMNPInfoResp extends AbstractModel {
                 this.CategoryList[i] = new CategoryInfo(source.CategoryList[i]);
             }
         }
+        if (source.TeamId != null) {
+            this.TeamId = new String(source.TeamId);
+        }
+        if (source.TeamName != null) {
+            this.TeamName = new String(source.TeamName);
+        }
+        if (source.TeamTypeId != null) {
+            this.TeamTypeId = new Long(source.TeamTypeId);
+        }
     }
 
 
@@ -338,6 +416,9 @@ public class DescribeApplicationMNPInfoResp extends AbstractModel {
         this.setParamSimple(map, prefix + "OnlineStatus", this.OnlineStatus);
         this.setParamSimple(map, prefix + "EngineType", this.EngineType);
         this.setParamArrayObj(map, prefix + "CategoryList.", this.CategoryList);
+        this.setParamSimple(map, prefix + "TeamId", this.TeamId);
+        this.setParamSimple(map, prefix + "TeamName", this.TeamName);
+        this.setParamSimple(map, prefix + "TeamTypeId", this.TeamTypeId);
 
     }
 }

@@ -179,16 +179,15 @@ public class Deal extends AbstractModel {
 
     /**
     * Transaction type
-
 Modify network mode adjust bandwidth mode.
 Adjust bandwidth size.
-`Refund`: refund.
+Refund: refund.
 downgrade.
 upgrade configuration.
 renew.
 purchase.
-preMoveOut monthly subscription resource migration out.
-preMoveIn specifies the monthly subscription resources to migrate.
+preMoveOut yearly/monthly subscription resource migration out.
+preMoveIn specifies the yearly/monthly subscription resources to migrate.
 preToPost specifies the prepaid to postpaid conversion.
 postMoveOut specifies the pay-as-you-go resources to be migrated out.
 postMoveIn specifies the pay-as-you-go resources for inbound migration.
@@ -580,30 +579,28 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get Transaction type
-
 Modify network mode adjust bandwidth mode.
 Adjust bandwidth size.
-`Refund`: refund.
+Refund: refund.
 downgrade.
 upgrade configuration.
 renew.
 purchase.
-preMoveOut monthly subscription resource migration out.
-preMoveIn specifies the monthly subscription resources to migrate.
+preMoveOut yearly/monthly subscription resource migration out.
+preMoveIn specifies the yearly/monthly subscription resources to migrate.
 preToPost specifies the prepaid to postpaid conversion.
 postMoveOut specifies the pay-as-you-go resources to be migrated out.
 postMoveIn specifies the pay-as-you-go resources for inbound migration. 
      * @return Action Transaction type
-
 Modify network mode adjust bandwidth mode.
 Adjust bandwidth size.
-`Refund`: refund.
+Refund: refund.
 downgrade.
 upgrade configuration.
 renew.
 purchase.
-preMoveOut monthly subscription resource migration out.
-preMoveIn specifies the monthly subscription resources to migrate.
+preMoveOut yearly/monthly subscription resource migration out.
+preMoveIn specifies the yearly/monthly subscription resources to migrate.
 preToPost specifies the prepaid to postpaid conversion.
 postMoveOut specifies the pay-as-you-go resources to be migrated out.
 postMoveIn specifies the pay-as-you-go resources for inbound migration.
@@ -614,30 +611,28 @@ postMoveIn specifies the pay-as-you-go resources for inbound migration.
 
     /**
      * Set Transaction type
-
 Modify network mode adjust bandwidth mode.
 Adjust bandwidth size.
-`Refund`: refund.
+Refund: refund.
 downgrade.
 upgrade configuration.
 renew.
 purchase.
-preMoveOut monthly subscription resource migration out.
-preMoveIn specifies the monthly subscription resources to migrate.
+preMoveOut yearly/monthly subscription resource migration out.
+preMoveIn specifies the yearly/monthly subscription resources to migrate.
 preToPost specifies the prepaid to postpaid conversion.
 postMoveOut specifies the pay-as-you-go resources to be migrated out.
 postMoveIn specifies the pay-as-you-go resources for inbound migration.
      * @param Action Transaction type
-
 Modify network mode adjust bandwidth mode.
 Adjust bandwidth size.
-`Refund`: refund.
+Refund: refund.
 downgrade.
 upgrade configuration.
 renew.
 purchase.
-preMoveOut monthly subscription resource migration out.
-preMoveIn specifies the monthly subscription resources to migrate.
+preMoveOut yearly/monthly subscription resource migration out.
+preMoveIn specifies the yearly/monthly subscription resources to migrate.
 preToPost specifies the prepaid to postpaid conversion.
 postMoveOut specifies the pay-as-you-go resources to be migrated out.
 postMoveIn specifies the pay-as-you-go resources for inbound migration.

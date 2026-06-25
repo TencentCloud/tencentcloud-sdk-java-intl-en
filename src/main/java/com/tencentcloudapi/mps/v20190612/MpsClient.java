@@ -84,6 +84,17 @@ Smart subtitle (full speech, speech hotword, and speech translation).
     }
 
     /**
+     *This API is used to create AIGC audio generation tasks.
+     * @param req CreateAigcAudioTaskRequest
+     * @return CreateAigcAudioTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateAigcAudioTaskResponse CreateAigcAudioTask(CreateAigcAudioTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateAigcAudioTask", CreateAigcAudioTaskResponse.class);
+    }
+
+    /**
      *This API is used to create AIGC image generation tasks.
      * @param req CreateAigcImageTaskRequest
      * @return CreateAigcImageTaskResponse
@@ -638,6 +649,17 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
     public DescribeAdaptiveDynamicStreamingTemplatesResponse DescribeAdaptiveDynamicStreamingTemplates(DescribeAdaptiveDynamicStreamingTemplatesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeAdaptiveDynamicStreamingTemplates", DescribeAdaptiveDynamicStreamingTemplatesResponse.class);
+    }
+
+    /**
+     *This API is used to query the progress of AIGC audio generation tasks and obtain the generation results.
+     * @param req DescribeAigcAudioTaskRequest
+     * @return DescribeAigcAudioTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAigcAudioTaskResponse DescribeAigcAudioTask(DescribeAigcAudioTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAigcAudioTask", DescribeAigcAudioTaskResponse.class);
     }
 
     /**

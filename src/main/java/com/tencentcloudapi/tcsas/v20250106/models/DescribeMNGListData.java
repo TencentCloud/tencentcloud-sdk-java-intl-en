@@ -129,6 +129,20 @@ public class DescribeMNGListData extends AbstractModel {
     private String EffectMNPVersion;
 
     /**
+    * Team ID.
+    */
+    @SerializedName("TeamId")
+    @Expose
+    private String TeamId;
+
+    /**
+    * Team type ID. Valid values: 1: Mini program team; 2: Superapp team; 3: Service provider team.
+    */
+    @SerializedName("TeamTypeId")
+    @Expose
+    private Long TeamTypeId;
+
+    /**
      * Get <p>Mini game appid.</p> 
      * @return MNPId <p>Mini game appid.</p>
      */
@@ -368,6 +382,38 @@ public class DescribeMNGListData extends AbstractModel {
         this.EffectMNPVersion = EffectMNPVersion;
     }
 
+    /**
+     * Get Team ID. 
+     * @return TeamId Team ID.
+     */
+    public String getTeamId() {
+        return this.TeamId;
+    }
+
+    /**
+     * Set Team ID.
+     * @param TeamId Team ID.
+     */
+    public void setTeamId(String TeamId) {
+        this.TeamId = TeamId;
+    }
+
+    /**
+     * Get Team type ID. Valid values: 1: Mini program team; 2: Superapp team; 3: Service provider team. 
+     * @return TeamTypeId Team type ID. Valid values: 1: Mini program team; 2: Superapp team; 3: Service provider team.
+     */
+    public Long getTeamTypeId() {
+        return this.TeamTypeId;
+    }
+
+    /**
+     * Set Team type ID. Valid values: 1: Mini program team; 2: Superapp team; 3: Service provider team.
+     * @param TeamTypeId Team type ID. Valid values: 1: Mini program team; 2: Superapp team; 3: Service provider team.
+     */
+    public void setTeamTypeId(Long TeamTypeId) {
+        this.TeamTypeId = TeamTypeId;
+    }
+
     public DescribeMNGListData() {
     }
 
@@ -421,6 +467,12 @@ public class DescribeMNGListData extends AbstractModel {
         if (source.EffectMNPVersion != null) {
             this.EffectMNPVersion = new String(source.EffectMNPVersion);
         }
+        if (source.TeamId != null) {
+            this.TeamId = new String(source.TeamId);
+        }
+        if (source.TeamTypeId != null) {
+            this.TeamTypeId = new Long(source.TeamTypeId);
+        }
     }
 
 
@@ -443,6 +495,8 @@ public class DescribeMNGListData extends AbstractModel {
         this.setParamSimple(map, prefix + "EffectStatus", this.EffectStatus);
         this.setParamSimple(map, prefix + "EffectMNPVersionId", this.EffectMNPVersionId);
         this.setParamSimple(map, prefix + "EffectMNPVersion", this.EffectMNPVersion);
+        this.setParamSimple(map, prefix + "TeamId", this.TeamId);
+        this.setParamSimple(map, prefix + "TeamTypeId", this.TeamTypeId);
 
     }
 }

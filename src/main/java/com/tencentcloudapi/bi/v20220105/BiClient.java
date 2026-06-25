@@ -61,6 +61,17 @@ public class BiClient extends AbstractClient{
     }
 
     /**
+     *Create a business tag
+     * @param req CreateCorpTagRequest
+     * @return CreateCorpTagResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateCorpTagResponse CreateCorpTag(CreateCorpTagRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateCorpTag", CreateCorpTagResponse.class);
+    }
+
+    /**
      *Add a data table
      * @param req CreateDataTableRequest
      * @return CreateDataTableResponse
@@ -124,6 +135,17 @@ public class BiClient extends AbstractClient{
     public CreateProjectResponse CreateProject(CreateProjectRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CreateProject", CreateProjectResponse.class);
+    }
+
+    /**
+     *Create a tag table
+     * @param req CreateTagTableRequest
+     * @return CreateTagTableResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateTagTableResponse CreateTagTable(CreateTagTableRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateTagTable", CreateTagTableResponse.class);
     }
 
     /**
@@ -281,6 +303,17 @@ public class BiClient extends AbstractClient{
     }
 
     /**
+     *Edit business tags (async)
+     * @param req EditCorpTagRequest
+     * @return EditCorpTagResponse
+     * @throws TencentCloudSDKException
+     */
+    public EditCorpTagResponse EditCorpTag(EditCorpTagRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "EditCorpTag", EditCorpTagResponse.class);
+    }
+
+    /**
      *This API is used to export a screenshot.
      * @param req ExportScreenPageRequest
      * @return ExportScreenPageResponse
@@ -347,6 +380,17 @@ public class BiClient extends AbstractClient{
     }
 
     /**
+     *Edit tag table
+     * @param req ModifyTagTableRequest
+     * @return ModifyTagTableResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyTagTableResponse ModifyTagTable(ModifyTagTableRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyTagTable", ModifyTagTableResponse.class);
+    }
+
+    /**
      *This API is used to modify user role info.
      * @param req ModifyUserRoleRequest
      * @return ModifyUserRoleResponse
@@ -366,6 +410,17 @@ public class BiClient extends AbstractClient{
     public ModifyUserRoleProjectResponse ModifyUserRoleProject(ModifyUserRoleProjectRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyUserRoleProject", ModifyUserRoleProjectResponse.class);
+    }
+
+    /**
+     *Modify user tag value
+     * @param req ModifyUserTagRequest
+     * @return ModifyUserTagResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyUserTagResponse ModifyUserTag(ModifyUserTagRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyUserTag", ModifyUserTagResponse.class);
     }
 
 }

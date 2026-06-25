@@ -34,14 +34,14 @@ public class DescribeBasicDeviceStatusResponse extends AbstractModel {
     private KeyValue [] Data;
 
     /**
-    * 
+    * Name of the domain asset.
     */
     @SerializedName("CLBData")
     @Expose
     private KeyValue [] CLBData;
 
     /**
-    * 
+    * Status of the CNAME WAF resource.
     */
     @SerializedName("CnameWafData")
     @Expose
@@ -83,32 +83,32 @@ public class DescribeBasicDeviceStatusResponse extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return CLBData 
+     * Get Name of the domain asset. 
+     * @return CLBData Name of the domain asset.
      */
     public KeyValue [] getCLBData() {
         return this.CLBData;
     }
 
     /**
-     * Set 
-     * @param CLBData 
+     * Set Name of the domain asset.
+     * @param CLBData Name of the domain asset.
      */
     public void setCLBData(KeyValue [] CLBData) {
         this.CLBData = CLBData;
     }
 
     /**
-     * Get  
-     * @return CnameWafData 
+     * Get Status of the CNAME WAF resource. 
+     * @return CnameWafData Status of the CNAME WAF resource.
      */
     public KeyValue [] getCnameWafData() {
         return this.CnameWafData;
     }
 
     /**
-     * Set 
-     * @param CnameWafData 
+     * Set Status of the CNAME WAF resource.
+     * @param CnameWafData Status of the CNAME WAF resource.
      */
     public void setCnameWafData(KeyValue [] CnameWafData) {
         this.CnameWafData = CnameWafData;

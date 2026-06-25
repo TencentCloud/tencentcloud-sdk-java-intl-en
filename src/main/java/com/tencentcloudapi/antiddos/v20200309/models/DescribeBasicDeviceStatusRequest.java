@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class DescribeBasicDeviceStatusRequest extends AbstractModel {
 
     /**
-    * List of IP resources
+    * List of IP resources.
     */
     @SerializedName("IpList")
     @Expose
     private String [] IpList;
 
     /**
-    * Pass id for domain-bound resources
+    * List of domain asset IDs.
     */
     @SerializedName("IdList")
     @Expose
     private String [] IdList;
 
     /**
-    * region name
+    * Region name for filtering.
     */
     @SerializedName("FilterRegion")
     @Expose
     private Long FilterRegion;
 
     /**
-    * CNAME WAF resource
+    * List of CNAME WAF resource IDs.
     */
     @SerializedName("CnameWafIdList")
     @Expose
     private String [] CnameWafIdList;
 
     /**
-     * Get List of IP resources 
-     * @return IpList List of IP resources
+     * Get List of IP resources. 
+     * @return IpList List of IP resources.
      */
     public String [] getIpList() {
         return this.IpList;
     }
 
     /**
-     * Set List of IP resources
-     * @param IpList List of IP resources
+     * Set List of IP resources.
+     * @param IpList List of IP resources.
      */
     public void setIpList(String [] IpList) {
         this.IpList = IpList;
     }
 
     /**
-     * Get Pass id for domain-bound resources 
-     * @return IdList Pass id for domain-bound resources
+     * Get List of domain asset IDs. 
+     * @return IdList List of domain asset IDs.
      */
     public String [] getIdList() {
         return this.IdList;
     }
 
     /**
-     * Set Pass id for domain-bound resources
-     * @param IdList Pass id for domain-bound resources
+     * Set List of domain asset IDs.
+     * @param IdList List of domain asset IDs.
      */
     public void setIdList(String [] IdList) {
         this.IdList = IdList;
     }
 
     /**
-     * Get region name 
-     * @return FilterRegion region name
+     * Get Region name for filtering. 
+     * @return FilterRegion Region name for filtering.
      */
     public Long getFilterRegion() {
         return this.FilterRegion;
     }
 
     /**
-     * Set region name
-     * @param FilterRegion region name
+     * Set Region name for filtering.
+     * @param FilterRegion Region name for filtering.
      */
     public void setFilterRegion(Long FilterRegion) {
         this.FilterRegion = FilterRegion;
     }
 
     /**
-     * Get CNAME WAF resource 
-     * @return CnameWafIdList CNAME WAF resource
+     * Get List of CNAME WAF resource IDs. 
+     * @return CnameWafIdList List of CNAME WAF resource IDs.
      */
     public String [] getCnameWafIdList() {
         return this.CnameWafIdList;
     }
 
     /**
-     * Set CNAME WAF resource
-     * @param CnameWafIdList CNAME WAF resource
+     * Set List of CNAME WAF resource IDs.
+     * @param CnameWafIdList List of CNAME WAF resource IDs.
      */
     public void setCnameWafIdList(String [] CnameWafIdList) {
         this.CnameWafIdList = CnameWafIdList;

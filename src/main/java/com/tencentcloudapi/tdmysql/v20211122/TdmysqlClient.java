@@ -512,6 +512,17 @@ public class TdmysqlClient extends AbstractClient{
     }
 
     /**
+     *This API is used to batch reset user password.
+     * @param req ResetUsersPasswordRequest
+     * @return ResetUsersPasswordResponse
+     * @throws TencentCloudSDKException
+     */
+    public ResetUsersPasswordResponse ResetUsersPassword(ResetUsersPasswordRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ResetUsersPassword", ResetUsersPasswordResponse.class);
+    }
+
+    /**
      *This API is used to restart database instances.
      * @param req RestartDBInstancesRequest
      * @return RestartDBInstancesResponse

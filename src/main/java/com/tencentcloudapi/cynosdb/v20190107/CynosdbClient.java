@@ -765,6 +765,17 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
+     *This API is used to query instance group info.
+     * @param req DescribeClusterInstanceGroupsRequest
+     * @return DescribeClusterInstanceGroupsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeClusterInstanceGroupsResponse DescribeClusterInstanceGroups(DescribeClusterInstanceGroupsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeClusterInstanceGroups", DescribeClusterInstanceGroupsResponse.class);
+    }
+
+    /**
      *This API is used to query instance groups.
      * @param req DescribeClusterInstanceGrpsRequest
      * @return DescribeClusterInstanceGrpsResponse

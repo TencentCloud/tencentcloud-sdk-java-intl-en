@@ -115,6 +115,13 @@ public class DescribeMNGManagerDetailData extends AbstractModel {
     private MNPDetailI18nVO [] I18nList;
 
     /**
+    * Team type ID. Valid values: 1: Mini program team; 2: Superapp team; 3: Service provider team.
+    */
+    @SerializedName("TeamTypeId")
+    @Expose
+    private Long TeamTypeId;
+
+    /**
      * Get <p>Mini game category.</p> 
      * @return MNPType <p>Mini game category.</p>
      */
@@ -322,6 +329,22 @@ public class DescribeMNGManagerDetailData extends AbstractModel {
         this.I18nList = I18nList;
     }
 
+    /**
+     * Get Team type ID. Valid values: 1: Mini program team; 2: Superapp team; 3: Service provider team. 
+     * @return TeamTypeId Team type ID. Valid values: 1: Mini program team; 2: Superapp team; 3: Service provider team.
+     */
+    public Long getTeamTypeId() {
+        return this.TeamTypeId;
+    }
+
+    /**
+     * Set Team type ID. Valid values: 1: Mini program team; 2: Superapp team; 3: Service provider team.
+     * @param TeamTypeId Team type ID. Valid values: 1: Mini program team; 2: Superapp team; 3: Service provider team.
+     */
+    public void setTeamTypeId(Long TeamTypeId) {
+        this.TeamTypeId = TeamTypeId;
+    }
+
     public DescribeMNGManagerDetailData() {
     }
 
@@ -372,6 +395,9 @@ public class DescribeMNGManagerDetailData extends AbstractModel {
                 this.I18nList[i] = new MNPDetailI18nVO(source.I18nList[i]);
             }
         }
+        if (source.TeamTypeId != null) {
+            this.TeamTypeId = new Long(source.TeamTypeId);
+        }
     }
 
 
@@ -392,6 +418,7 @@ public class DescribeMNGManagerDetailData extends AbstractModel {
         this.setParamSimple(map, prefix + "TeamId", this.TeamId);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamArrayObj(map, prefix + "I18nList.", this.I18nList);
+        this.setParamSimple(map, prefix + "TeamTypeId", this.TeamTypeId);
 
     }
 }
