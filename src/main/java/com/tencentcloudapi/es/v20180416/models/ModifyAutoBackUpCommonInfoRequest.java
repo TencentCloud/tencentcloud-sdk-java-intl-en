@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.dts.v20211206.models;
+package com.tencentcloudapi.es.v20180416.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,47 +21,16 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class OnlineDDL extends AbstractModel {
+public class ModifyAutoBackUpCommonInfoRequest extends AbstractModel {
 
-    /**
-    * Status
-Note: This field may return null, indicating that no valid values can be obtained.
-    */
-    @SerializedName("Status")
-    @Expose
-    private String Status;
-
-    /**
-     * Get Status
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Status Status
-Note: This field may return null, indicating that no valid values can be obtained.
-     */
-    public String getStatus() {
-        return this.Status;
-    }
-
-    /**
-     * Set Status
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Status Status
-Note: This field may return null, indicating that no valid values can be obtained.
-     */
-    public void setStatus(String Status) {
-        this.Status = Status;
-    }
-
-    public OnlineDDL() {
+    public ModifyAutoBackUpCommonInfoRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public OnlineDDL(OnlineDDL source) {
-        if (source.Status != null) {
-            this.Status = new String(source.Status);
-        }
+    public ModifyAutoBackUpCommonInfoRequest(ModifyAutoBackUpCommonInfoRequest source) {
     }
 
 
@@ -69,7 +38,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Status", this.Status);
 
     }
 }

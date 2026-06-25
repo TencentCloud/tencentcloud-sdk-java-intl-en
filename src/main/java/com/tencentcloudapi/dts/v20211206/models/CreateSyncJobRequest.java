@@ -66,6 +66,13 @@ public class CreateSyncJobRequest extends AbstractModel {
     private String Specification;
 
     /**
+    * 
+    */
+    @SerializedName("TimeSpan")
+    @Expose
+    private Long TimeSpan;
+
+    /**
     * Tag information
     */
     @SerializedName("Tags")
@@ -204,6 +211,22 @@ public class CreateSyncJobRequest extends AbstractModel {
     }
 
     /**
+     * Get  
+     * @return TimeSpan 
+     */
+    public Long getTimeSpan() {
+        return this.TimeSpan;
+    }
+
+    /**
+     * Set 
+     * @param TimeSpan 
+     */
+    public void setTimeSpan(Long TimeSpan) {
+        this.TimeSpan = TimeSpan;
+    }
+
+    /**
      * Get Tag information 
      * @return Tags Tag information
      */
@@ -325,6 +348,9 @@ public class CreateSyncJobRequest extends AbstractModel {
         if (source.Specification != null) {
             this.Specification = new String(source.Specification);
         }
+        if (source.TimeSpan != null) {
+            this.TimeSpan = new Long(source.TimeSpan);
+        }
         if (source.Tags != null) {
             this.Tags = new TagItem[source.Tags.length];
             for (int i = 0; i < source.Tags.length; i++) {
@@ -359,6 +385,7 @@ public class CreateSyncJobRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "DstDatabaseType", this.DstDatabaseType);
         this.setParamSimple(map, prefix + "DstRegion", this.DstRegion);
         this.setParamSimple(map, prefix + "Specification", this.Specification);
+        this.setParamSimple(map, prefix + "TimeSpan", this.TimeSpan);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "Count", this.Count);
         this.setParamSimple(map, prefix + "AutoRenew", this.AutoRenew);

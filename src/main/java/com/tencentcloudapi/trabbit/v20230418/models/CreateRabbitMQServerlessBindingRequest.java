@@ -66,6 +66,13 @@ public class CreateRabbitMQServerlessBindingRequest extends AbstractModel {
     private String RoutingKey;
 
     /**
+    * 
+    */
+    @SerializedName("Arguments")
+    @Expose
+    private RabbitMQServerlessKeyValuePair [] Arguments;
+
+    /**
      * Get Instance ID 
      * @return InstanceId Instance ID
      */
@@ -161,6 +168,22 @@ public class CreateRabbitMQServerlessBindingRequest extends AbstractModel {
         this.RoutingKey = RoutingKey;
     }
 
+    /**
+     * Get  
+     * @return Arguments 
+     */
+    public RabbitMQServerlessKeyValuePair [] getArguments() {
+        return this.Arguments;
+    }
+
+    /**
+     * Set 
+     * @param Arguments 
+     */
+    public void setArguments(RabbitMQServerlessKeyValuePair [] Arguments) {
+        this.Arguments = Arguments;
+    }
+
     public CreateRabbitMQServerlessBindingRequest() {
     }
 
@@ -187,6 +210,12 @@ public class CreateRabbitMQServerlessBindingRequest extends AbstractModel {
         if (source.RoutingKey != null) {
             this.RoutingKey = new String(source.RoutingKey);
         }
+        if (source.Arguments != null) {
+            this.Arguments = new RabbitMQServerlessKeyValuePair[source.Arguments.length];
+            for (int i = 0; i < source.Arguments.length; i++) {
+                this.Arguments[i] = new RabbitMQServerlessKeyValuePair(source.Arguments[i]);
+            }
+        }
     }
 
 
@@ -200,6 +229,7 @@ public class CreateRabbitMQServerlessBindingRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "DestinationType", this.DestinationType);
         this.setParamSimple(map, prefix + "Destination", this.Destination);
         this.setParamSimple(map, prefix + "RoutingKey", this.RoutingKey);
+        this.setParamArrayObj(map, prefix + "Arguments.", this.Arguments);
 
     }
 }

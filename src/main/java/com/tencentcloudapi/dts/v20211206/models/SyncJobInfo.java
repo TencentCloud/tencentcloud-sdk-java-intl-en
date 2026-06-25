@@ -288,6 +288,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String OfflineTime;
 
     /**
+    * 
+    */
+    @SerializedName("OptObjStatus")
+    @Expose
+    private String OptObjStatus;
+
+    /**
     * Settings of automatic retry time
 Note: This field may return null, indicating that no valid values can be obtained.
     */
@@ -964,6 +971,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
+     * Get  
+     * @return OptObjStatus 
+     */
+    public String getOptObjStatus() {
+        return this.OptObjStatus;
+    }
+
+    /**
+     * Set 
+     * @param OptObjStatus 
+     */
+    public void setOptObjStatus(String OptObjStatus) {
+        this.OptObjStatus = OptObjStatus;
+    }
+
+    /**
      * Get Settings of automatic retry time
 Note: This field may return null, indicating that no valid values can be obtained. 
      * @return AutoRetryTimeRangeMinutes Settings of automatic retry time
@@ -1119,6 +1142,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.OfflineTime != null) {
             this.OfflineTime = new String(source.OfflineTime);
         }
+        if (source.OptObjStatus != null) {
+            this.OptObjStatus = new String(source.OptObjStatus);
+        }
         if (source.AutoRetryTimeRangeMinutes != null) {
             this.AutoRetryTimeRangeMinutes = new Long(source.AutoRetryTimeRangeMinutes);
         }
@@ -1165,6 +1191,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "InstanceClass", this.InstanceClass);
         this.setParamSimple(map, prefix + "AutoRenew", this.AutoRenew);
         this.setParamSimple(map, prefix + "OfflineTime", this.OfflineTime);
+        this.setParamSimple(map, prefix + "OptObjStatus", this.OptObjStatus);
         this.setParamSimple(map, prefix + "AutoRetryTimeRangeMinutes", this.AutoRetryTimeRangeMinutes);
         this.setParamSimple(map, prefix + "DumperResumeCtrl", this.DumperResumeCtrl);
 

@@ -31,13 +31,6 @@ public class CreateFileSystemRequest extends AbstractModel {
     private String FileSystemName;
 
     /**
-    * File system capacity (in bytes), which can range from 1 GB to 1 PB and must be an integer multiple of 1 GB
-    */
-    @SerializedName("CapacityQuota")
-    @Expose
-    private Long CapacityQuota;
-
-    /**
     * Whether to verify POSIX ACL
     */
     @SerializedName("PosixAcl")
@@ -50,6 +43,13 @@ public class CreateFileSystemRequest extends AbstractModel {
     @SerializedName("Description")
     @Expose
     private String Description;
+
+    /**
+    * File system capacity (in bytes), which can range from 1 GB to 1 PB and must be an integer multiple of 1 GB
+    */
+    @SerializedName("CapacityQuota")
+    @Expose
+    private Long CapacityQuota;
 
     /**
     * List of superuser names, which is an empty array by default
@@ -110,22 +110,6 @@ public class CreateFileSystemRequest extends AbstractModel {
     }
 
     /**
-     * Get File system capacity (in bytes), which can range from 1 GB to 1 PB and must be an integer multiple of 1 GB 
-     * @return CapacityQuota File system capacity (in bytes), which can range from 1 GB to 1 PB and must be an integer multiple of 1 GB
-     */
-    public Long getCapacityQuota() {
-        return this.CapacityQuota;
-    }
-
-    /**
-     * Set File system capacity (in bytes), which can range from 1 GB to 1 PB and must be an integer multiple of 1 GB
-     * @param CapacityQuota File system capacity (in bytes), which can range from 1 GB to 1 PB and must be an integer multiple of 1 GB
-     */
-    public void setCapacityQuota(Long CapacityQuota) {
-        this.CapacityQuota = CapacityQuota;
-    }
-
-    /**
      * Get Whether to verify POSIX ACL 
      * @return PosixAcl Whether to verify POSIX ACL
      */
@@ -155,6 +139,22 @@ public class CreateFileSystemRequest extends AbstractModel {
      */
     public void setDescription(String Description) {
         this.Description = Description;
+    }
+
+    /**
+     * Get File system capacity (in bytes), which can range from 1 GB to 1 PB and must be an integer multiple of 1 GB 
+     * @return CapacityQuota File system capacity (in bytes), which can range from 1 GB to 1 PB and must be an integer multiple of 1 GB
+     */
+    public Long getCapacityQuota() {
+        return this.CapacityQuota;
+    }
+
+    /**
+     * Set File system capacity (in bytes), which can range from 1 GB to 1 PB and must be an integer multiple of 1 GB
+     * @param CapacityQuota File system capacity (in bytes), which can range from 1 GB to 1 PB and must be an integer multiple of 1 GB
+     */
+    public void setCapacityQuota(Long CapacityQuota) {
+        this.CapacityQuota = CapacityQuota;
     }
 
     /**
@@ -264,14 +264,14 @@ public class CreateFileSystemRequest extends AbstractModel {
         if (source.FileSystemName != null) {
             this.FileSystemName = new String(source.FileSystemName);
         }
-        if (source.CapacityQuota != null) {
-            this.CapacityQuota = new Long(source.CapacityQuota);
-        }
         if (source.PosixAcl != null) {
             this.PosixAcl = new Boolean(source.PosixAcl);
         }
         if (source.Description != null) {
             this.Description = new String(source.Description);
+        }
+        if (source.CapacityQuota != null) {
+            this.CapacityQuota = new Long(source.CapacityQuota);
         }
         if (source.SuperUsers != null) {
             this.SuperUsers = new String[source.SuperUsers.length];
@@ -308,9 +308,9 @@ public class CreateFileSystemRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "FileSystemName", this.FileSystemName);
-        this.setParamSimple(map, prefix + "CapacityQuota", this.CapacityQuota);
         this.setParamSimple(map, prefix + "PosixAcl", this.PosixAcl);
         this.setParamSimple(map, prefix + "Description", this.Description);
+        this.setParamSimple(map, prefix + "CapacityQuota", this.CapacityQuota);
         this.setParamArraySimple(map, prefix + "SuperUsers.", this.SuperUsers);
         this.setParamSimple(map, prefix + "RootInodeUser", this.RootInodeUser);
         this.setParamSimple(map, prefix + "RootInodeGroup", this.RootInodeGroup);

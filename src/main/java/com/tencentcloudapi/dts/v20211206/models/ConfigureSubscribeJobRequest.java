@@ -87,6 +87,20 @@ public class ConfigureSubscribeJobRequest extends AbstractModel {
     private KeyValuePairOption [] ExtraAttr;
 
     /**
+    * 
+    */
+    @SerializedName("ConsumerVpcId")
+    @Expose
+    private String ConsumerVpcId;
+
+    /**
+    * 
+    */
+    @SerializedName("ConsumerSubnetId")
+    @Expose
+    private String ConsumerSubnetId;
+
+    /**
      * Get Data subscription instance ID 
      * @return SubscribeId Data subscription instance ID
      */
@@ -230,6 +244,38 @@ public class ConfigureSubscribeJobRequest extends AbstractModel {
         this.ExtraAttr = ExtraAttr;
     }
 
+    /**
+     * Get  
+     * @return ConsumerVpcId 
+     */
+    public String getConsumerVpcId() {
+        return this.ConsumerVpcId;
+    }
+
+    /**
+     * Set 
+     * @param ConsumerVpcId 
+     */
+    public void setConsumerVpcId(String ConsumerVpcId) {
+        this.ConsumerVpcId = ConsumerVpcId;
+    }
+
+    /**
+     * Get  
+     * @return ConsumerSubnetId 
+     */
+    public String getConsumerSubnetId() {
+        return this.ConsumerSubnetId;
+    }
+
+    /**
+     * Set 
+     * @param ConsumerSubnetId 
+     */
+    public void setConsumerSubnetId(String ConsumerSubnetId) {
+        this.ConsumerSubnetId = ConsumerSubnetId;
+    }
+
     public ConfigureSubscribeJobRequest() {
     }
 
@@ -277,6 +323,12 @@ public class ConfigureSubscribeJobRequest extends AbstractModel {
                 this.ExtraAttr[i] = new KeyValuePairOption(source.ExtraAttr[i]);
             }
         }
+        if (source.ConsumerVpcId != null) {
+            this.ConsumerVpcId = new String(source.ConsumerVpcId);
+        }
+        if (source.ConsumerSubnetId != null) {
+            this.ConsumerSubnetId = new String(source.ConsumerSubnetId);
+        }
     }
 
 
@@ -293,6 +345,8 @@ public class ConfigureSubscribeJobRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Protocol", this.Protocol);
         this.setParamArrayObj(map, prefix + "PipelineInfo.", this.PipelineInfo);
         this.setParamArrayObj(map, prefix + "ExtraAttr.", this.ExtraAttr);
+        this.setParamSimple(map, prefix + "ConsumerVpcId", this.ConsumerVpcId);
+        this.setParamSimple(map, prefix + "ConsumerSubnetId", this.ConsumerSubnetId);
 
     }
 }

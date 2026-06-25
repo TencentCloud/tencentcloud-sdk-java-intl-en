@@ -104,14 +104,21 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long AutoRetryTimeRangeMinutes;
 
     /**
-    * Whether to filter out begin and commit messages when synchronizing to the kafka link. Currently only supported for MySQL-to-kafka links.
+    * 
+    */
+    @SerializedName("StartPosition")
+    @Expose
+    private String StartPosition;
+
+    /**
+    * 
     */
     @SerializedName("FilterBeginCommit")
     @Expose
     private Boolean FilterBeginCommit;
 
     /**
-    * Whether to filter out checkpoint messages when synchronizing to the kafka link. Currently only supported for MySQL-to-kafka links.
+    * 
     */
     @SerializedName("FilterCheckpoint")
     @Expose
@@ -318,32 +325,48 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Whether to filter out begin and commit messages when synchronizing to the kafka link. Currently only supported for MySQL-to-kafka links. 
-     * @return FilterBeginCommit Whether to filter out begin and commit messages when synchronizing to the kafka link. Currently only supported for MySQL-to-kafka links.
+     * Get  
+     * @return StartPosition 
+     */
+    public String getStartPosition() {
+        return this.StartPosition;
+    }
+
+    /**
+     * Set 
+     * @param StartPosition 
+     */
+    public void setStartPosition(String StartPosition) {
+        this.StartPosition = StartPosition;
+    }
+
+    /**
+     * Get  
+     * @return FilterBeginCommit 
      */
     public Boolean getFilterBeginCommit() {
         return this.FilterBeginCommit;
     }
 
     /**
-     * Set Whether to filter out begin and commit messages when synchronizing to the kafka link. Currently only supported for MySQL-to-kafka links.
-     * @param FilterBeginCommit Whether to filter out begin and commit messages when synchronizing to the kafka link. Currently only supported for MySQL-to-kafka links.
+     * Set 
+     * @param FilterBeginCommit 
      */
     public void setFilterBeginCommit(Boolean FilterBeginCommit) {
         this.FilterBeginCommit = FilterBeginCommit;
     }
 
     /**
-     * Get Whether to filter out checkpoint messages when synchronizing to the kafka link. Currently only supported for MySQL-to-kafka links. 
-     * @return FilterCheckpoint Whether to filter out checkpoint messages when synchronizing to the kafka link. Currently only supported for MySQL-to-kafka links.
+     * Get  
+     * @return FilterCheckpoint 
      */
     public Boolean getFilterCheckpoint() {
         return this.FilterCheckpoint;
     }
 
     /**
-     * Set Whether to filter out checkpoint messages when synchronizing to the kafka link. Currently only supported for MySQL-to-kafka links.
-     * @param FilterCheckpoint Whether to filter out checkpoint messages when synchronizing to the kafka link. Currently only supported for MySQL-to-kafka links.
+     * Set 
+     * @param FilterCheckpoint 
      */
     public void setFilterCheckpoint(Boolean FilterCheckpoint) {
         this.FilterCheckpoint = FilterCheckpoint;
@@ -393,6 +416,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.AutoRetryTimeRangeMinutes != null) {
             this.AutoRetryTimeRangeMinutes = new Long(source.AutoRetryTimeRangeMinutes);
         }
+        if (source.StartPosition != null) {
+            this.StartPosition = new String(source.StartPosition);
+        }
         if (source.FilterBeginCommit != null) {
             this.FilterBeginCommit = new Boolean(source.FilterBeginCommit);
         }
@@ -416,6 +442,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamObj(map, prefix + "KafkaOption.", this.KafkaOption);
         this.setParamObj(map, prefix + "RateLimitOption.", this.RateLimitOption);
         this.setParamSimple(map, prefix + "AutoRetryTimeRangeMinutes", this.AutoRetryTimeRangeMinutes);
+        this.setParamSimple(map, prefix + "StartPosition", this.StartPosition);
         this.setParamSimple(map, prefix + "FilterBeginCommit", this.FilterBeginCommit);
         this.setParamSimple(map, prefix + "FilterCheckpoint", this.FilterCheckpoint);
 

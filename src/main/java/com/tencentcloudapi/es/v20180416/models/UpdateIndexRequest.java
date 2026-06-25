@@ -73,6 +73,27 @@ public class UpdateIndexRequest extends AbstractModel {
     private Boolean RolloverBackingIndex;
 
     /**
+    * 
+    */
+    @SerializedName("MountIndex")
+    @Expose
+    private Boolean MountIndex;
+
+    /**
+    * 
+    */
+    @SerializedName("IndexUuid")
+    @Expose
+    private String IndexUuid;
+
+    /**
+    * 
+    */
+    @SerializedName("BackingIndexName")
+    @Expose
+    private String BackingIndexName;
+
+    /**
      * Get ES cluster ID 
      * @return InstanceId ES cluster ID
      */
@@ -184,6 +205,54 @@ public class UpdateIndexRequest extends AbstractModel {
         this.RolloverBackingIndex = RolloverBackingIndex;
     }
 
+    /**
+     * Get  
+     * @return MountIndex 
+     */
+    public Boolean getMountIndex() {
+        return this.MountIndex;
+    }
+
+    /**
+     * Set 
+     * @param MountIndex 
+     */
+    public void setMountIndex(Boolean MountIndex) {
+        this.MountIndex = MountIndex;
+    }
+
+    /**
+     * Get  
+     * @return IndexUuid 
+     */
+    public String getIndexUuid() {
+        return this.IndexUuid;
+    }
+
+    /**
+     * Set 
+     * @param IndexUuid 
+     */
+    public void setIndexUuid(String IndexUuid) {
+        this.IndexUuid = IndexUuid;
+    }
+
+    /**
+     * Get  
+     * @return BackingIndexName 
+     */
+    public String getBackingIndexName() {
+        return this.BackingIndexName;
+    }
+
+    /**
+     * Set 
+     * @param BackingIndexName 
+     */
+    public void setBackingIndexName(String BackingIndexName) {
+        this.BackingIndexName = BackingIndexName;
+    }
+
     public UpdateIndexRequest() {
     }
 
@@ -213,6 +282,15 @@ public class UpdateIndexRequest extends AbstractModel {
         if (source.RolloverBackingIndex != null) {
             this.RolloverBackingIndex = new Boolean(source.RolloverBackingIndex);
         }
+        if (source.MountIndex != null) {
+            this.MountIndex = new Boolean(source.MountIndex);
+        }
+        if (source.IndexUuid != null) {
+            this.IndexUuid = new String(source.IndexUuid);
+        }
+        if (source.BackingIndexName != null) {
+            this.BackingIndexName = new String(source.BackingIndexName);
+        }
     }
 
 
@@ -227,6 +305,9 @@ public class UpdateIndexRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Username", this.Username);
         this.setParamSimple(map, prefix + "Password", this.Password);
         this.setParamSimple(map, prefix + "RolloverBackingIndex", this.RolloverBackingIndex);
+        this.setParamSimple(map, prefix + "MountIndex", this.MountIndex);
+        this.setParamSimple(map, prefix + "IndexUuid", this.IndexUuid);
+        this.setParamSimple(map, prefix + "BackingIndexName", this.BackingIndexName);
 
     }
 }

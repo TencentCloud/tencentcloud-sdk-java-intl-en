@@ -45,13 +45,6 @@ public class ModifyConsumerGroupPasswordRequest extends AbstractModel {
     private String ConsumerGroupName;
 
     /**
-    * Old Password.
-    */
-    @SerializedName("OldPassword")
-    @Expose
-    private String OldPassword;
-
-    /**
     * New password. The character length is no less than 3 and no more than 32.
     */
     @SerializedName("NewPassword")
@@ -107,22 +100,6 @@ public class ModifyConsumerGroupPasswordRequest extends AbstractModel {
     }
 
     /**
-     * Get Old Password. 
-     * @return OldPassword Old Password.
-     */
-    public String getOldPassword() {
-        return this.OldPassword;
-    }
-
-    /**
-     * Set Old Password.
-     * @param OldPassword Old Password.
-     */
-    public void setOldPassword(String OldPassword) {
-        this.OldPassword = OldPassword;
-    }
-
-    /**
      * Get New password. The character length is no less than 3 and no more than 32. 
      * @return NewPassword New password. The character length is no less than 3 and no more than 32.
      */
@@ -155,9 +132,6 @@ public class ModifyConsumerGroupPasswordRequest extends AbstractModel {
         if (source.ConsumerGroupName != null) {
             this.ConsumerGroupName = new String(source.ConsumerGroupName);
         }
-        if (source.OldPassword != null) {
-            this.OldPassword = new String(source.OldPassword);
-        }
         if (source.NewPassword != null) {
             this.NewPassword = new String(source.NewPassword);
         }
@@ -171,7 +145,6 @@ public class ModifyConsumerGroupPasswordRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "SubscribeId", this.SubscribeId);
         this.setParamSimple(map, prefix + "AccountName", this.AccountName);
         this.setParamSimple(map, prefix + "ConsumerGroupName", this.ConsumerGroupName);
-        this.setParamSimple(map, prefix + "OldPassword", this.OldPassword);
         this.setParamSimple(map, prefix + "NewPassword", this.NewPassword);
 
     }

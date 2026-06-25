@@ -40,6 +40,13 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     private String IndexName;
 
     /**
+    * 
+    */
+    @SerializedName("IndexMetaJson")
+    @Expose
+    private String IndexMetaJson;
+
+    /**
     * Index status
 Note: This field may return `null`, indicating that no valid value can be obtained.
     */
@@ -173,6 +180,22 @@ Note: This field may return `null`, indicating that no valid value can be obtain
      */
     public void setIndexName(String IndexName) {
         this.IndexName = IndexName;
+    }
+
+    /**
+     * Get  
+     * @return IndexMetaJson 
+     */
+    public String getIndexMetaJson() {
+        return this.IndexMetaJson;
+    }
+
+    /**
+     * Set 
+     * @param IndexMetaJson 
+     */
+    public void setIndexMetaJson(String IndexMetaJson) {
+        this.IndexMetaJson = IndexMetaJson;
     }
 
     /**
@@ -429,6 +452,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.IndexName != null) {
             this.IndexName = new String(source.IndexName);
         }
+        if (source.IndexMetaJson != null) {
+            this.IndexMetaJson = new String(source.IndexMetaJson);
+        }
         if (source.IndexStatus != null) {
             this.IndexStatus = new String(source.IndexStatus);
         }
@@ -477,6 +503,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "IndexType", this.IndexType);
         this.setParamSimple(map, prefix + "IndexName", this.IndexName);
+        this.setParamSimple(map, prefix + "IndexMetaJson", this.IndexMetaJson);
         this.setParamSimple(map, prefix + "IndexStatus", this.IndexStatus);
         this.setParamSimple(map, prefix + "IndexStorage", this.IndexStorage);
         this.setParamSimple(map, prefix + "IndexCreateTime", this.IndexCreateTime);

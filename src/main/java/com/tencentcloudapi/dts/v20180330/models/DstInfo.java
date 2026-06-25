@@ -107,7 +107,9 @@ public class DstInfo extends AbstractModel {
     /**
      * Get Target instance VIP, which has been disused and does not need to be entered 
      * @return Ip Target instance VIP, which has been disused and does not need to be entered
+     * @deprecated
      */
+    @Deprecated
     public String getIp() {
         return this.Ip;
     }
@@ -115,7 +117,9 @@ public class DstInfo extends AbstractModel {
     /**
      * Set Target instance VIP, which has been disused and does not need to be entered
      * @param Ip Target instance VIP, which has been disused and does not need to be entered
+     * @deprecated
      */
+    @Deprecated
     public void setIp(String Ip) {
         this.Ip = Ip;
     }
@@ -123,7 +127,9 @@ public class DstInfo extends AbstractModel {
     /**
      * Get Target instance Vport, which has been disused and does not need to be entered 
      * @return Port Target instance Vport, which has been disused and does not need to be entered
+     * @deprecated
      */
+    @Deprecated
     public Long getPort() {
         return this.Port;
     }
@@ -131,7 +137,9 @@ public class DstInfo extends AbstractModel {
     /**
      * Set Target instance Vport, which has been disused and does not need to be entered
      * @param Port Target instance Vport, which has been disused and does not need to be entered
+     * @deprecated
      */
+    @Deprecated
     public void setPort(Long Port) {
         this.Port = Port;
     }

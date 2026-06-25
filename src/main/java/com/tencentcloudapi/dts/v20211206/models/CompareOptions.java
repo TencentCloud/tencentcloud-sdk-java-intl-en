@@ -47,6 +47,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long ThreadCount;
 
     /**
+    * 
+    */
+    @SerializedName("Type")
+    @Expose
+    private String Type;
+
+    /**
      * Get Comparative Method: dataCheck (Complete Data Comparison), sampleDataCheck (Sampling Data Comparison), rowsCount (Row Count Comparison)Note: This field may return null, indicating that no valid value can be obtained. 
      * @return Method Comparative Method: dataCheck (Complete Data Comparison), sampleDataCheck (Sampling Data Comparison), rowsCount (Row Count Comparison)Note: This field may return null, indicating that no valid value can be obtained.
      */
@@ -102,6 +109,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.ThreadCount = ThreadCount;
     }
 
+    /**
+     * Get  
+     * @return Type 
+     */
+    public String getType() {
+        return this.Type;
+    }
+
+    /**
+     * Set 
+     * @param Type 
+     */
+    public void setType(String Type) {
+        this.Type = Type;
+    }
+
     public CompareOptions() {
     }
 
@@ -119,6 +142,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.ThreadCount != null) {
             this.ThreadCount = new Long(source.ThreadCount);
         }
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
     }
 
 
@@ -129,6 +155,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "Method", this.Method);
         this.setParamSimple(map, prefix + "SampleRate", this.SampleRate);
         this.setParamSimple(map, prefix + "ThreadCount", this.ThreadCount);
+        this.setParamSimple(map, prefix + "Type", this.Type);
 
     }
 }

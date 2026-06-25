@@ -136,14 +136,14 @@ public class EndpointItem extends AbstractModel {
     private KeyValuePairOption [] ExtraAttr;
 
     /**
-    * The ID of the sub-instance when the database is cynos and it is a sub-database instance within a cynos cluster
+    * 
     */
     @SerializedName("ChildInstanceId")
     @Expose
     private String ChildInstanceId;
 
     /**
-    * When the database is cynos and it is a sub-database instance within a cynos cluster, this parameter represents the type of the sub-instance, for example: pass 'ro' for read-only instances, 'rw' for read-write instances.
+    * 
     */
     @SerializedName("ChildInstanceType")
     @Expose
@@ -406,32 +406,32 @@ public class EndpointItem extends AbstractModel {
     }
 
     /**
-     * Get The ID of the sub-instance when the database is cynos and it is a sub-database instance within a cynos cluster 
-     * @return ChildInstanceId The ID of the sub-instance when the database is cynos and it is a sub-database instance within a cynos cluster
+     * Get  
+     * @return ChildInstanceId 
      */
     public String getChildInstanceId() {
         return this.ChildInstanceId;
     }
 
     /**
-     * Set The ID of the sub-instance when the database is cynos and it is a sub-database instance within a cynos cluster
-     * @param ChildInstanceId The ID of the sub-instance when the database is cynos and it is a sub-database instance within a cynos cluster
+     * Set 
+     * @param ChildInstanceId 
      */
     public void setChildInstanceId(String ChildInstanceId) {
         this.ChildInstanceId = ChildInstanceId;
     }
 
     /**
-     * Get When the database is cynos and it is a sub-database instance within a cynos cluster, this parameter represents the type of the sub-instance, for example: pass 'ro' for read-only instances, 'rw' for read-write instances. 
-     * @return ChildInstanceType When the database is cynos and it is a sub-database instance within a cynos cluster, this parameter represents the type of the sub-instance, for example: pass 'ro' for read-only instances, 'rw' for read-write instances.
+     * Get  
+     * @return ChildInstanceType 
      */
     public String getChildInstanceType() {
         return this.ChildInstanceType;
     }
 
     /**
-     * Set When the database is cynos and it is a sub-database instance within a cynos cluster, this parameter represents the type of the sub-instance, for example: pass 'ro' for read-only instances, 'rw' for read-write instances.
-     * @param ChildInstanceType When the database is cynos and it is a sub-database instance within a cynos cluster, this parameter represents the type of the sub-instance, for example: pass 'ro' for read-only instances, 'rw' for read-write instances.
+     * Set 
+     * @param ChildInstanceType 
      */
     public void setChildInstanceType(String ChildInstanceType) {
         this.ChildInstanceType = ChildInstanceType;

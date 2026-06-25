@@ -31,6 +31,13 @@ public class DescribeSubscribeJobsRequest extends AbstractModel {
     private String SubscribeId;
 
     /**
+    * 
+    */
+    @SerializedName("SubscribeIds")
+    @Expose
+    private String [] SubscribeIds;
+
+    /**
     * Subscription name (prefix fuzzy match)
     */
     @SerializedName("SubscribeName")
@@ -43,6 +50,13 @@ public class DescribeSubscribeJobsRequest extends AbstractModel {
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
+
+    /**
+    * 
+    */
+    @SerializedName("Topic")
+    @Expose
+    private String Topic;
 
     /**
     * Payment method. Valid values: 0 (monthly subscription); 1 (pay-as-you-go).
@@ -117,6 +131,22 @@ public class DescribeSubscribeJobsRequest extends AbstractModel {
     }
 
     /**
+     * Get  
+     * @return SubscribeIds 
+     */
+    public String [] getSubscribeIds() {
+        return this.SubscribeIds;
+    }
+
+    /**
+     * Set 
+     * @param SubscribeIds 
+     */
+    public void setSubscribeIds(String [] SubscribeIds) {
+        this.SubscribeIds = SubscribeIds;
+    }
+
+    /**
      * Get Subscription name (prefix fuzzy match) 
      * @return SubscribeName Subscription name (prefix fuzzy match)
      */
@@ -146,6 +176,22 @@ public class DescribeSubscribeJobsRequest extends AbstractModel {
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
+    }
+
+    /**
+     * Get  
+     * @return Topic 
+     */
+    public String getTopic() {
+        return this.Topic;
+    }
+
+    /**
+     * Set 
+     * @param Topic 
+     */
+    public void setTopic(String Topic) {
+        this.Topic = Topic;
     }
 
     /**
@@ -287,11 +333,20 @@ public class DescribeSubscribeJobsRequest extends AbstractModel {
         if (source.SubscribeId != null) {
             this.SubscribeId = new String(source.SubscribeId);
         }
+        if (source.SubscribeIds != null) {
+            this.SubscribeIds = new String[source.SubscribeIds.length];
+            for (int i = 0; i < source.SubscribeIds.length; i++) {
+                this.SubscribeIds[i] = new String(source.SubscribeIds[i]);
+            }
+        }
         if (source.SubscribeName != null) {
             this.SubscribeName = new String(source.SubscribeName);
         }
         if (source.InstanceId != null) {
             this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.Topic != null) {
+            this.Topic = new String(source.Topic);
         }
         if (source.PayType != null) {
             this.PayType = new Long(source.PayType);
@@ -334,8 +389,10 @@ public class DescribeSubscribeJobsRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "SubscribeId", this.SubscribeId);
+        this.setParamArraySimple(map, prefix + "SubscribeIds.", this.SubscribeIds);
         this.setParamSimple(map, prefix + "SubscribeName", this.SubscribeName);
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
+        this.setParamSimple(map, prefix + "Topic", this.Topic);
         this.setParamSimple(map, prefix + "PayType", this.PayType);
         this.setParamSimple(map, prefix + "Product", this.Product);
         this.setParamArraySimple(map, prefix + "Status.", this.Status);

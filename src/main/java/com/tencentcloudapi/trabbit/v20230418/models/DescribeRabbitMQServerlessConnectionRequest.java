@@ -38,6 +38,41 @@ public class DescribeRabbitMQServerlessConnectionRequest extends AbstractModel {
     private String VirtualHost;
 
     /**
+    * Sort by which field. Supported options: channel (channel count), incoming_bytes (inbound traffic size), outgoing_bytes (outbound traffic size)
+    */
+    @SerializedName("SortElement")
+    @Expose
+    private String SortElement;
+
+    /**
+    * Sort order: ASC, DESC
+    */
+    @SerializedName("SortType")
+    @Expose
+    private String SortType;
+
+    /**
+    * 
+    */
+    @SerializedName("Offset")
+    @Expose
+    private Long Offset;
+
+    /**
+    * 
+    */
+    @SerializedName("Limit")
+    @Expose
+    private Long Limit;
+
+    /**
+    * 
+    */
+    @SerializedName("Name")
+    @Expose
+    private String Name;
+
+    /**
      * Get instance ID		 
      * @return InstanceId instance ID		
      */
@@ -69,6 +104,86 @@ public class DescribeRabbitMQServerlessConnectionRequest extends AbstractModel {
         this.VirtualHost = VirtualHost;
     }
 
+    /**
+     * Get Sort by which field. Supported options: channel (channel count), incoming_bytes (inbound traffic size), outgoing_bytes (outbound traffic size) 
+     * @return SortElement Sort by which field. Supported options: channel (channel count), incoming_bytes (inbound traffic size), outgoing_bytes (outbound traffic size)
+     */
+    public String getSortElement() {
+        return this.SortElement;
+    }
+
+    /**
+     * Set Sort by which field. Supported options: channel (channel count), incoming_bytes (inbound traffic size), outgoing_bytes (outbound traffic size)
+     * @param SortElement Sort by which field. Supported options: channel (channel count), incoming_bytes (inbound traffic size), outgoing_bytes (outbound traffic size)
+     */
+    public void setSortElement(String SortElement) {
+        this.SortElement = SortElement;
+    }
+
+    /**
+     * Get Sort order: ASC, DESC 
+     * @return SortType Sort order: ASC, DESC
+     */
+    public String getSortType() {
+        return this.SortType;
+    }
+
+    /**
+     * Set Sort order: ASC, DESC
+     * @param SortType Sort order: ASC, DESC
+     */
+    public void setSortType(String SortType) {
+        this.SortType = SortType;
+    }
+
+    /**
+     * Get  
+     * @return Offset 
+     */
+    public Long getOffset() {
+        return this.Offset;
+    }
+
+    /**
+     * Set 
+     * @param Offset 
+     */
+    public void setOffset(Long Offset) {
+        this.Offset = Offset;
+    }
+
+    /**
+     * Get  
+     * @return Limit 
+     */
+    public Long getLimit() {
+        return this.Limit;
+    }
+
+    /**
+     * Set 
+     * @param Limit 
+     */
+    public void setLimit(Long Limit) {
+        this.Limit = Limit;
+    }
+
+    /**
+     * Get  
+     * @return Name 
+     */
+    public String getName() {
+        return this.Name;
+    }
+
+    /**
+     * Set 
+     * @param Name 
+     */
+    public void setName(String Name) {
+        this.Name = Name;
+    }
+
     public DescribeRabbitMQServerlessConnectionRequest() {
     }
 
@@ -83,6 +198,21 @@ public class DescribeRabbitMQServerlessConnectionRequest extends AbstractModel {
         if (source.VirtualHost != null) {
             this.VirtualHost = new String(source.VirtualHost);
         }
+        if (source.SortElement != null) {
+            this.SortElement = new String(source.SortElement);
+        }
+        if (source.SortType != null) {
+            this.SortType = new String(source.SortType);
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
     }
 
 
@@ -92,6 +222,11 @@ public class DescribeRabbitMQServerlessConnectionRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "VirtualHost", this.VirtualHost);
+        this.setParamSimple(map, prefix + "SortElement", this.SortElement);
+        this.setParamSimple(map, prefix + "SortType", this.SortType);
+        this.setParamSimple(map, prefix + "Offset", this.Offset);
+        this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamSimple(map, prefix + "Name", this.Name);
 
     }
 }

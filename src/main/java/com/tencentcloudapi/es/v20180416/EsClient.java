@@ -39,6 +39,17 @@ public class EsClient extends AbstractClient{
     }
 
     /**
+     *This API is used to create an auto backup snapshot policy.
+     * @param req CreateAutoBackUpStrategyRequest
+     * @return CreateAutoBackUpStrategyResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateAutoBackUpStrategyResponse CreateAutoBackUpStrategy(CreateAutoBackUpStrategyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateAutoBackUpStrategy", CreateAutoBackUpStrategyResponse.class);
+    }
+
+    /**
      *This API is used to create indices.
      * @param req CreateIndexRequest
      * @return CreateIndexResponse
@@ -61,6 +72,17 @@ public class EsClient extends AbstractClient{
     }
 
     /**
+     *This API is used to delete an auto backup snapshot policy.
+     * @param req DeleteAutoBackUpStrategyRequest
+     * @return DeleteAutoBackUpStrategyResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteAutoBackUpStrategyResponse DeleteAutoBackUpStrategy(DeleteAutoBackUpStrategyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteAutoBackUpStrategy", DeleteAutoBackUpStrategyResponse.class);
+    }
+
+    /**
      *This API is used to delete indices.
      * @param req DeleteIndexRequest
      * @return DeleteIndexResponse
@@ -80,6 +102,17 @@ public class EsClient extends AbstractClient{
     public DeleteInstanceResponse DeleteInstance(DeleteInstanceRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteInstance", DeleteInstanceResponse.class);
+    }
+
+    /**
+     *This API is used to obtain an auto backup snapshot policy.
+     * @param req DescribeAutoBackUpStrategyRequest
+     * @return DescribeAutoBackUpStrategyResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAutoBackUpStrategyResponse DescribeAutoBackUpStrategy(DescribeAutoBackUpStrategyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAutoBackUpStrategy", DescribeAutoBackUpStrategyResponse.class);
     }
 
     /**
@@ -157,6 +190,28 @@ public class EsClient extends AbstractClient{
     public GetRequestTargetNodeTypesResponse GetRequestTargetNodeTypes(GetRequestTargetNodeTypesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "GetRequestTargetNodeTypes", GetRequestTargetNodeTypesResponse.class);
+    }
+
+    /**
+     *This API is used to modify the common information of an auto backup snapshot policy.
+     * @param req ModifyAutoBackUpCommonInfoRequest
+     * @return ModifyAutoBackUpCommonInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyAutoBackUpCommonInfoResponse ModifyAutoBackUpCommonInfo(ModifyAutoBackUpCommonInfoRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyAutoBackUpCommonInfo", ModifyAutoBackUpCommonInfoResponse.class);
+    }
+
+    /**
+     *This API is used to modify an auto backup snapshot policy.
+     * @param req ModifyAutoBackUpStrategyRequest
+     * @return ModifyAutoBackUpStrategyResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyAutoBackUpStrategyResponse ModifyAutoBackUpStrategy(ModifyAutoBackUpStrategyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyAutoBackUpStrategy", ModifyAutoBackUpStrategyResponse.class);
     }
 
     /**

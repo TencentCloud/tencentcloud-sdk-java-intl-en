@@ -73,6 +73,13 @@ public class CreateSubscribeRequest extends AbstractModel {
     private String Name;
 
     /**
+    * 
+    */
+    @SerializedName("InstanceClass")
+    @Expose
+    private String InstanceClass;
+
+    /**
      * Get Subscription database type. Currently, cynosdbmysql, mariadb, mongodb, mysql, percona, tdpg, and tdsqlpercona are supported. 
      * @return Product Subscription database type. Currently, cynosdbmysql, mariadb, mongodb, mysql, percona, tdpg, and tdsqlpercona are supported.
      */
@@ -184,6 +191,22 @@ public class CreateSubscribeRequest extends AbstractModel {
         this.Name = Name;
     }
 
+    /**
+     * Get  
+     * @return InstanceClass 
+     */
+    public String getInstanceClass() {
+        return this.InstanceClass;
+    }
+
+    /**
+     * Set 
+     * @param InstanceClass 
+     */
+    public void setInstanceClass(String InstanceClass) {
+        this.InstanceClass = InstanceClass;
+    }
+
     public CreateSubscribeRequest() {
     }
 
@@ -216,6 +239,9 @@ public class CreateSubscribeRequest extends AbstractModel {
         if (source.Name != null) {
             this.Name = new String(source.Name);
         }
+        if (source.InstanceClass != null) {
+            this.InstanceClass = new String(source.InstanceClass);
+        }
     }
 
 
@@ -230,6 +256,7 @@ public class CreateSubscribeRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Count", this.Count);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "Name", this.Name);
+        this.setParamSimple(map, prefix + "InstanceClass", this.InstanceClass);
 
     }
 }

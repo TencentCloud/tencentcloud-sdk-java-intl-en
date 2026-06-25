@@ -181,6 +181,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String TmpToken;
 
     /**
+    * 
+    */
+    @SerializedName("EncryptConn")
+    @Expose
+    private String EncryptConn;
+
+    /**
      * Get Node role in a distributed database, such as the mongos node in MongoDB.
 Note: This field may return null, indicating that no valid values can be obtained. 
      * @return Role Node role in a distributed database, such as the mongos node in MongoDB.
@@ -568,6 +575,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.TmpToken = TmpToken;
     }
 
+    /**
+     * Get  
+     * @return EncryptConn 
+     */
+    public String getEncryptConn() {
+        return this.EncryptConn;
+    }
+
+    /**
+     * Set 
+     * @param EncryptConn 
+     */
+    public void setEncryptConn(String EncryptConn) {
+        this.EncryptConn = EncryptConn;
+    }
+
     public DBInfo() {
     }
 
@@ -636,6 +659,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.TmpToken != null) {
             this.TmpToken = new String(source.TmpToken);
         }
+        if (source.EncryptConn != null) {
+            this.EncryptConn = new String(source.EncryptConn);
+        }
     }
 
 
@@ -663,6 +689,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "TmpSecretId", this.TmpSecretId);
         this.setParamSimple(map, prefix + "TmpSecretKey", this.TmpSecretKey);
         this.setParamSimple(map, prefix + "TmpToken", this.TmpToken);
+        this.setParamSimple(map, prefix + "EncryptConn", this.EncryptConn);
 
     }
 }
