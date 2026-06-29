@@ -40,7 +40,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String PostalCode;
 
     /**
-    * Specifies the sub-region.
+    * Sub-region or state/province.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Subdivision")
@@ -48,7 +48,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String Subdivision;
 
     /**
-    * Specifies the city.
+    * District or county.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("District")
+    @Expose
+    private String District;
+
+    /**
+    * City name.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("City")
@@ -56,7 +64,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String City;
 
     /**
-    * Complete address.
+    * Subdistrict or township.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Subdistrict")
+    @Expose
+    private String Subdistrict;
+
+    /**
+    * Formatted complete address.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("FormattedAddress")
@@ -96,7 +112,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String LineFour;
 
     /**
-    * Specifies the fifth line in the address bar.
+    * Specifies the fifth line of the address bar.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("LineFive")
@@ -144,9 +160,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Specifies the sub-region.
+     * Get Sub-region or state/province.
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Subdivision Specifies the sub-region.
+     * @return Subdivision Sub-region or state/province.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getSubdivision() {
@@ -154,9 +170,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Specifies the sub-region.
+     * Set Sub-region or state/province.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Subdivision Specifies the sub-region.
+     * @param Subdivision Sub-region or state/province.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setSubdivision(String Subdivision) {
@@ -164,9 +180,29 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Specifies the city.
+     * Get District or county.
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return City Specifies the city.
+     * @return District District or county.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getDistrict() {
+        return this.District;
+    }
+
+    /**
+     * Set District or county.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param District District or county.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setDistrict(String District) {
+        this.District = District;
+    }
+
+    /**
+     * Get City name.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return City City name.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getCity() {
@@ -174,9 +210,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Specifies the city.
+     * Set City name.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param City Specifies the city.
+     * @param City City name.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setCity(String City) {
@@ -184,9 +220,29 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Complete address.
+     * Get Subdistrict or township.
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return FormattedAddress Complete address.
+     * @return Subdistrict Subdistrict or township.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getSubdistrict() {
+        return this.Subdistrict;
+    }
+
+    /**
+     * Set Subdistrict or township.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Subdistrict Subdistrict or township.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setSubdistrict(String Subdistrict) {
+        this.Subdistrict = Subdistrict;
+    }
+
+    /**
+     * Get Formatted complete address.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return FormattedAddress Formatted complete address.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getFormattedAddress() {
@@ -194,9 +250,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Complete address.
+     * Set Formatted complete address.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param FormattedAddress Complete address.
+     * @param FormattedAddress Formatted complete address.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setFormattedAddress(String FormattedAddress) {
@@ -284,9 +340,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Specifies the fifth line in the address bar.
+     * Get Specifies the fifth line of the address bar.
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return LineFive Specifies the fifth line in the address bar.
+     * @return LineFive Specifies the fifth line of the address bar.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getLineFive() {
@@ -294,9 +350,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Specifies the fifth line in the address bar.
+     * Set Specifies the fifth line of the address bar.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param LineFive Specifies the fifth line in the address bar.
+     * @param LineFive Specifies the fifth line of the address bar.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setLineFive(String LineFive) {
@@ -320,8 +376,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.Subdivision != null) {
             this.Subdivision = new String(source.Subdivision);
         }
+        if (source.District != null) {
+            this.District = new String(source.District);
+        }
         if (source.City != null) {
             this.City = new String(source.City);
+        }
+        if (source.Subdistrict != null) {
+            this.Subdistrict = new String(source.Subdistrict);
         }
         if (source.FormattedAddress != null) {
             this.FormattedAddress = new String(source.FormattedAddress);
@@ -351,7 +413,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "Country", this.Country);
         this.setParamSimple(map, prefix + "PostalCode", this.PostalCode);
         this.setParamSimple(map, prefix + "Subdivision", this.Subdivision);
+        this.setParamSimple(map, prefix + "District", this.District);
         this.setParamSimple(map, prefix + "City", this.City);
+        this.setParamSimple(map, prefix + "Subdistrict", this.Subdistrict);
         this.setParamSimple(map, prefix + "FormattedAddress", this.FormattedAddress);
         this.setParamSimple(map, prefix + "LineOne", this.LineOne);
         this.setParamSimple(map, prefix + "LineTwo", this.LineTwo);

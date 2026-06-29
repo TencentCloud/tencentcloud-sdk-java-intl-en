@@ -3,7 +3,7 @@ public enum OcrErrorCode {
      /* The CardSide type of the ID card is incorrect. */
      FAILEDOPERATION_CARDSIDEERROR("FailedOperation.CardSideError"),
      
-     /* File download failed. */
+     /* Failed to download the file. */
      FAILEDOPERATION_DOWNLOADERROR("FailedOperation.DownLoadError"),
      
      /* The image is empty. */
@@ -39,7 +39,7 @@ public enum OcrErrorCode {
      /* No text is detected in the image. */
      FAILEDOPERATION_IMAGENOTEXT("FailedOperation.ImageNoText"),
      
-     /* The image size is too large. refer to the image size limit in the reference input. */
+     /* The image size exceeds the limit. Refer to the image size constraints in the input parameter description. */
      FAILEDOPERATION_IMAGESIZETOOLARGE("FailedOperation.ImageSizeTooLarge"),
      
      /* The information in the visual zone does not match that in the machine-readable zone. */
@@ -66,7 +66,7 @@ public enum OcrErrorCode {
      /* Not a passport. */
      FAILEDOPERATION_NOPASSPORT("FailedOperation.NoPassport"),
      
-     /* OCR failed. This error may be caused by unstable network connections,service anomalies or other issues. */
+     /* OCR recognition failed. This error may be caused by unstable network connections, service anomalies, or other issues. */
      FAILEDOPERATION_OCRFAILED("FailedOperation.OcrFailed"),
      
      /* Unknown error. */
@@ -75,7 +75,7 @@ public enum OcrErrorCode {
      /* Unknown file type. */
      FAILEDOPERATION_UNKNOWFILETYPEERROR("FailedOperation.UnKnowFileTypeError"),
      
-     /* The service is not activated. */
+     /* The service has not been activated. */
      FAILEDOPERATION_UNOPENERROR("FailedOperation.UnOpenError"),
      
      /* General Alarm Service exception */
@@ -87,7 +87,7 @@ public enum OcrErrorCode {
      /* Image decoding failed. */
      INVALIDPARAMETER_ENGINEIMAGEDECODEFAILED("InvalidParameter.EngineImageDecodeFailed"),
      
-     /* The size of the image file content is abnormal. */
+     /* The image file size is invalid or exceeds the allowed limit. */
      INVALIDPARAMETERVALUE_INVALIDFILECONTENTSIZE("InvalidParameterValue.InvalidFileContentSize"),
      
      /* Incorrect parameter value. */
@@ -99,10 +99,10 @@ public enum OcrErrorCode {
      /* Image file download failed. */
      RESOURCEUNAVAILABLE_IMAGEDOWNLOADERROR("ResourceUnavailable.ImageDownloadError"),
      
-     /* The account is in arrears. */
+     /* The account has insufficient balance. */
      RESOURCEUNAVAILABLE_INARREARS("ResourceUnavailable.InArrears"),
      
-     /* The account resource package is exhausted. */
+     /* The resource package has been exhausted. */
      RESOURCEUNAVAILABLE_RESOURCEPACKAGERUNOUT("ResourceUnavailable.ResourcePackageRunOut"),
      
      /* Exceptional billing status. */

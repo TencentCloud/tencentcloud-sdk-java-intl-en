@@ -24,55 +24,25 @@ import java.util.HashMap;
 public class ApplyCardVerificationExternalRequest extends AbstractModel {
 
     /**
-    * Specifies the country of the document.
-ARG:Argentina
-AUS:Australia
-KHM:Cambodia
-CAN:Canada
-SGP:Singapore
-CHL:Chile
-DEU:Germany
-MEX:Mexico
-MMR:Myanmar
-NZL:New Zealand
-BGD:Bangladesh
-NGA:Nigeria
-PAK:Pakistan
-RUS:Russia
-IDN:Indonesia
-HKG:Hong Kong, China
-THA:Thailand
-MYS:Malaysia
-JPN:Japan
-PHL:Philippines
-MAC:Macao, China
-CHN:ChinaPermit
-TWN:Taiwan, China
-BGD:Bangladesh
-NGA:Nigeria 
-PAK:Pakistan
-
-AUTO: supports cards and documents from 200+ countries
+    * Country/Region of the document. For the full list of supported countries/regions, refer to the API description.
     */
     @SerializedName("Nationality")
     @Expose
     private String Nationality;
 
     /**
-    * Document type.
-ID_CARD
-PASSPORT
-DRIVING_LICENSE
-RESIDENCE_PERMIT (Supported in certain countries/regions, including Australia, Canada, Germany, New Zealand, Nigeria, Singapore).
+    * Document type. Supported values: ID_CARD, PASSPORT, DRIVING_LICENSE, RESIDENCE_PERMIT (only supported in certain countries/regions, including Australia, Canada, Germany, New Zealand, Nigeria, Singapore).
     */
     @SerializedName("CardType")
     @Expose
     private String CardType;
 
     /**
-    * The Base64 value of the document Front. supported image formats: PNG, JPG/JPEG. 
-Supported image size: the downloaded image after Base64 encoding must be no more than 2M. image download time must be no more than 5 seconds. 
-Supported image resolution: between 256 \* 256 and 4096 \* 4096. For some documents, either ImageUrlBack or ImageBase64Back must be provided. If both are provided, only ImageUrlFront will be used.
+    * Base64-encoded image of the document front.
+Supported image formats: PNG, JPG/JPEG (GIF not supported).
+Supported image size: The downloaded image after Base64 encoding must not exceed 2 MB. Image download time must not exceed 5 seconds.
+Supported image resolution: Between 256*256 and 4096*4096 pixels.
+Note: You must provide either ImageUrlFront or ImageBase64Front. If both are provided, only ImageUrlFront is used.
     */
     @SerializedName("ImageBase64Front")
     @Expose
@@ -80,7 +50,7 @@ Supported image resolution: between 256 \* 256 and 4096 \* 4096. For some docume
 
     /**
     * The Base64 value of the reverse side of the document. Supported image formats: PNG, JPG/JPEG. 
-Supported image size: the downloaded image after Base64 encoding must be no more than 2M. image download time must be no more than 5 seconds. 
+Supported image size: the downloaded image after Base64 encoding must be no more than 2M. Image download time must be no more than 5 seconds. 
 Supported image resolution: between 256 \* 256 and 4096 \* 4096. For some documents, either ImageUrlBack or ImageBase64Back must be provided. If both are provided, only ImageUrlBack is used.
     */
     @SerializedName("ImageBase64Back")
@@ -88,210 +58,98 @@ Supported image resolution: between 256 \* 256 and 4096 \* 4096. For some docume
     private String ImageBase64Back;
 
     /**
-    * Url of the document Front. supported image formats: PNG, JPG/JPEG. 
-Supported image size: the downloaded image after Base64 encoding must be no more than 2M. image download time must be no more than 5 seconds. 
-Supported image resolution: between 256 \* 256 and 4096 \* 4096. For some documents, either ImageUrlBack or ImageBase64Back must be provided. If both are provided, only ImageUrlFront will be used.
+    * URL of the document front image.
+Supported image formats: PNG, JPG/JPEG (GIF not supported).
+Supported image size: The downloaded image after Base64 encoding must not exceed 2 MB. Image download time must not exceed 5 seconds.
+Supported image resolution: Between 256*256 and 4096*4096 pixels.
+Note: You must provide either ImageUrlFront or ImageBase64Front. If both are provided, only ImageUrlFront is used.
     */
     @SerializedName("ImageUrlFront")
     @Expose
     private String ImageUrlFront;
 
     /**
-    * Specifies the Url of the document Back. supported image formats: PNG, JPG/JPEG
-Supported image size: no more than 2M after Base64 encoding. image download time should not exceed 5 seconds. 
-Supported image resolution: between 256 \* 256 and 4096 \* 4096. For some documents, either ImageUrlBack or ImageBase64Back must be provided. If both are provided, only use ImageUrlBack.
-
+    * URL of the document back image.
+Supported image formats: PNG, JPG/JPEG (GIF not supported).
+Supported image size: The downloaded image after Base64 encoding must not exceed 2 MB. Image download time must not exceed 5 seconds.
+Supported image resolution: Between 256*256 and 4096*4096 pixels.
+Note: For some documents, you must provide either ImageUrlBack or ImageBase64Back. If both are provided, only ImageUrlBack is used.
     */
     @SerializedName("ImageUrlBack")
     @Expose
     private String ImageUrlBack;
 
     /**
-    * Whether to extract the ID portrait. Default value: false.
+    * Whether to crop and return the face image from the document. Default: false.
+If set to true, the image constraints are:
+- Size after Base64 encoding must not exceed 5 MB.
+- Maximum pixel width/height: 4000 for JPG, 2000 for other formats.
+- Minimum pixel width/height: 64.
+- Supported formats: PNG, JPG, JPEG, BMP (GIF not supported).
     */
     @SerializedName("ReturnHeadImage")
     @Expose
     private Boolean ReturnHeadImage;
 
     /**
-     * Get Specifies the country of the document.
-ARG:Argentina
-AUS:Australia
-KHM:Cambodia
-CAN:Canada
-SGP:Singapore
-CHL:Chile
-DEU:Germany
-MEX:Mexico
-MMR:Myanmar
-NZL:New Zealand
-BGD:Bangladesh
-NGA:Nigeria
-PAK:Pakistan
-RUS:Russia
-IDN:Indonesia
-HKG:Hong Kong, China
-THA:Thailand
-MYS:Malaysia
-JPN:Japan
-PHL:Philippines
-MAC:Macao, China
-CHN:ChinaPermit
-TWN:Taiwan, China
-BGD:Bangladesh
-NGA:Nigeria 
-PAK:Pakistan
-
-AUTO: supports cards and documents from 200+ countries 
-     * @return Nationality Specifies the country of the document.
-ARG:Argentina
-AUS:Australia
-KHM:Cambodia
-CAN:Canada
-SGP:Singapore
-CHL:Chile
-DEU:Germany
-MEX:Mexico
-MMR:Myanmar
-NZL:New Zealand
-BGD:Bangladesh
-NGA:Nigeria
-PAK:Pakistan
-RUS:Russia
-IDN:Indonesia
-HKG:Hong Kong, China
-THA:Thailand
-MYS:Malaysia
-JPN:Japan
-PHL:Philippines
-MAC:Macao, China
-CHN:ChinaPermit
-TWN:Taiwan, China
-BGD:Bangladesh
-NGA:Nigeria 
-PAK:Pakistan
-
-AUTO: supports cards and documents from 200+ countries
+     * Get Country/Region of the document. For the full list of supported countries/regions, refer to the API description. 
+     * @return Nationality Country/Region of the document. For the full list of supported countries/regions, refer to the API description.
      */
     public String getNationality() {
         return this.Nationality;
     }
 
     /**
-     * Set Specifies the country of the document.
-ARG:Argentina
-AUS:Australia
-KHM:Cambodia
-CAN:Canada
-SGP:Singapore
-CHL:Chile
-DEU:Germany
-MEX:Mexico
-MMR:Myanmar
-NZL:New Zealand
-BGD:Bangladesh
-NGA:Nigeria
-PAK:Pakistan
-RUS:Russia
-IDN:Indonesia
-HKG:Hong Kong, China
-THA:Thailand
-MYS:Malaysia
-JPN:Japan
-PHL:Philippines
-MAC:Macao, China
-CHN:ChinaPermit
-TWN:Taiwan, China
-BGD:Bangladesh
-NGA:Nigeria 
-PAK:Pakistan
-
-AUTO: supports cards and documents from 200+ countries
-     * @param Nationality Specifies the country of the document.
-ARG:Argentina
-AUS:Australia
-KHM:Cambodia
-CAN:Canada
-SGP:Singapore
-CHL:Chile
-DEU:Germany
-MEX:Mexico
-MMR:Myanmar
-NZL:New Zealand
-BGD:Bangladesh
-NGA:Nigeria
-PAK:Pakistan
-RUS:Russia
-IDN:Indonesia
-HKG:Hong Kong, China
-THA:Thailand
-MYS:Malaysia
-JPN:Japan
-PHL:Philippines
-MAC:Macao, China
-CHN:ChinaPermit
-TWN:Taiwan, China
-BGD:Bangladesh
-NGA:Nigeria 
-PAK:Pakistan
-
-AUTO: supports cards and documents from 200+ countries
+     * Set Country/Region of the document. For the full list of supported countries/regions, refer to the API description.
+     * @param Nationality Country/Region of the document. For the full list of supported countries/regions, refer to the API description.
      */
     public void setNationality(String Nationality) {
         this.Nationality = Nationality;
     }
 
     /**
-     * Get Document type.
-ID_CARD
-PASSPORT
-DRIVING_LICENSE
-RESIDENCE_PERMIT (Supported in certain countries/regions, including Australia, Canada, Germany, New Zealand, Nigeria, Singapore). 
-     * @return CardType Document type.
-ID_CARD
-PASSPORT
-DRIVING_LICENSE
-RESIDENCE_PERMIT (Supported in certain countries/regions, including Australia, Canada, Germany, New Zealand, Nigeria, Singapore).
+     * Get Document type. Supported values: ID_CARD, PASSPORT, DRIVING_LICENSE, RESIDENCE_PERMIT (only supported in certain countries/regions, including Australia, Canada, Germany, New Zealand, Nigeria, Singapore). 
+     * @return CardType Document type. Supported values: ID_CARD, PASSPORT, DRIVING_LICENSE, RESIDENCE_PERMIT (only supported in certain countries/regions, including Australia, Canada, Germany, New Zealand, Nigeria, Singapore).
      */
     public String getCardType() {
         return this.CardType;
     }
 
     /**
-     * Set Document type.
-ID_CARD
-PASSPORT
-DRIVING_LICENSE
-RESIDENCE_PERMIT (Supported in certain countries/regions, including Australia, Canada, Germany, New Zealand, Nigeria, Singapore).
-     * @param CardType Document type.
-ID_CARD
-PASSPORT
-DRIVING_LICENSE
-RESIDENCE_PERMIT (Supported in certain countries/regions, including Australia, Canada, Germany, New Zealand, Nigeria, Singapore).
+     * Set Document type. Supported values: ID_CARD, PASSPORT, DRIVING_LICENSE, RESIDENCE_PERMIT (only supported in certain countries/regions, including Australia, Canada, Germany, New Zealand, Nigeria, Singapore).
+     * @param CardType Document type. Supported values: ID_CARD, PASSPORT, DRIVING_LICENSE, RESIDENCE_PERMIT (only supported in certain countries/regions, including Australia, Canada, Germany, New Zealand, Nigeria, Singapore).
      */
     public void setCardType(String CardType) {
         this.CardType = CardType;
     }
 
     /**
-     * Get The Base64 value of the document Front. supported image formats: PNG, JPG/JPEG. 
-Supported image size: the downloaded image after Base64 encoding must be no more than 2M. image download time must be no more than 5 seconds. 
-Supported image resolution: between 256 \* 256 and 4096 \* 4096. For some documents, either ImageUrlBack or ImageBase64Back must be provided. If both are provided, only ImageUrlFront will be used. 
-     * @return ImageBase64Front The Base64 value of the document Front. supported image formats: PNG, JPG/JPEG. 
-Supported image size: the downloaded image after Base64 encoding must be no more than 2M. image download time must be no more than 5 seconds. 
-Supported image resolution: between 256 \* 256 and 4096 \* 4096. For some documents, either ImageUrlBack or ImageBase64Back must be provided. If both are provided, only ImageUrlFront will be used.
+     * Get Base64-encoded image of the document front.
+Supported image formats: PNG, JPG/JPEG (GIF not supported).
+Supported image size: The downloaded image after Base64 encoding must not exceed 2 MB. Image download time must not exceed 5 seconds.
+Supported image resolution: Between 256*256 and 4096*4096 pixels.
+Note: You must provide either ImageUrlFront or ImageBase64Front. If both are provided, only ImageUrlFront is used. 
+     * @return ImageBase64Front Base64-encoded image of the document front.
+Supported image formats: PNG, JPG/JPEG (GIF not supported).
+Supported image size: The downloaded image after Base64 encoding must not exceed 2 MB. Image download time must not exceed 5 seconds.
+Supported image resolution: Between 256*256 and 4096*4096 pixels.
+Note: You must provide either ImageUrlFront or ImageBase64Front. If both are provided, only ImageUrlFront is used.
      */
     public String getImageBase64Front() {
         return this.ImageBase64Front;
     }
 
     /**
-     * Set The Base64 value of the document Front. supported image formats: PNG, JPG/JPEG. 
-Supported image size: the downloaded image after Base64 encoding must be no more than 2M. image download time must be no more than 5 seconds. 
-Supported image resolution: between 256 \* 256 and 4096 \* 4096. For some documents, either ImageUrlBack or ImageBase64Back must be provided. If both are provided, only ImageUrlFront will be used.
-     * @param ImageBase64Front The Base64 value of the document Front. supported image formats: PNG, JPG/JPEG. 
-Supported image size: the downloaded image after Base64 encoding must be no more than 2M. image download time must be no more than 5 seconds. 
-Supported image resolution: between 256 \* 256 and 4096 \* 4096. For some documents, either ImageUrlBack or ImageBase64Back must be provided. If both are provided, only ImageUrlFront will be used.
+     * Set Base64-encoded image of the document front.
+Supported image formats: PNG, JPG/JPEG (GIF not supported).
+Supported image size: The downloaded image after Base64 encoding must not exceed 2 MB. Image download time must not exceed 5 seconds.
+Supported image resolution: Between 256*256 and 4096*4096 pixels.
+Note: You must provide either ImageUrlFront or ImageBase64Front. If both are provided, only ImageUrlFront is used.
+     * @param ImageBase64Front Base64-encoded image of the document front.
+Supported image formats: PNG, JPG/JPEG (GIF not supported).
+Supported image size: The downloaded image after Base64 encoding must not exceed 2 MB. Image download time must not exceed 5 seconds.
+Supported image resolution: Between 256*256 and 4096*4096 pixels.
+Note: You must provide either ImageUrlFront or ImageBase64Front. If both are provided, only ImageUrlFront is used.
      */
     public void setImageBase64Front(String ImageBase64Front) {
         this.ImageBase64Front = ImageBase64Front;
@@ -299,10 +157,10 @@ Supported image resolution: between 256 \* 256 and 4096 \* 4096. For some docume
 
     /**
      * Get The Base64 value of the reverse side of the document. Supported image formats: PNG, JPG/JPEG. 
-Supported image size: the downloaded image after Base64 encoding must be no more than 2M. image download time must be no more than 5 seconds. 
+Supported image size: the downloaded image after Base64 encoding must be no more than 2M. Image download time must be no more than 5 seconds. 
 Supported image resolution: between 256 \* 256 and 4096 \* 4096. For some documents, either ImageUrlBack or ImageBase64Back must be provided. If both are provided, only ImageUrlBack is used. 
      * @return ImageBase64Back The Base64 value of the reverse side of the document. Supported image formats: PNG, JPG/JPEG. 
-Supported image size: the downloaded image after Base64 encoding must be no more than 2M. image download time must be no more than 5 seconds. 
+Supported image size: the downloaded image after Base64 encoding must be no more than 2M. Image download time must be no more than 5 seconds. 
 Supported image resolution: between 256 \* 256 and 4096 \* 4096. For some documents, either ImageUrlBack or ImageBase64Back must be provided. If both are provided, only ImageUrlBack is used.
      */
     public String getImageBase64Back() {
@@ -311,10 +169,10 @@ Supported image resolution: between 256 \* 256 and 4096 \* 4096. For some docume
 
     /**
      * Set The Base64 value of the reverse side of the document. Supported image formats: PNG, JPG/JPEG. 
-Supported image size: the downloaded image after Base64 encoding must be no more than 2M. image download time must be no more than 5 seconds. 
+Supported image size: the downloaded image after Base64 encoding must be no more than 2M. Image download time must be no more than 5 seconds. 
 Supported image resolution: between 256 \* 256 and 4096 \* 4096. For some documents, either ImageUrlBack or ImageBase64Back must be provided. If both are provided, only ImageUrlBack is used.
      * @param ImageBase64Back The Base64 value of the reverse side of the document. Supported image formats: PNG, JPG/JPEG. 
-Supported image size: the downloaded image after Base64 encoding must be no more than 2M. image download time must be no more than 5 seconds. 
+Supported image size: the downloaded image after Base64 encoding must be no more than 2M. Image download time must be no more than 5 seconds. 
 Supported image resolution: between 256 \* 256 and 4096 \* 4096. For some documents, either ImageUrlBack or ImageBase64Back must be provided. If both are provided, only ImageUrlBack is used.
      */
     public void setImageBase64Back(String ImageBase64Back) {
@@ -322,68 +180,100 @@ Supported image resolution: between 256 \* 256 and 4096 \* 4096. For some docume
     }
 
     /**
-     * Get Url of the document Front. supported image formats: PNG, JPG/JPEG. 
-Supported image size: the downloaded image after Base64 encoding must be no more than 2M. image download time must be no more than 5 seconds. 
-Supported image resolution: between 256 \* 256 and 4096 \* 4096. For some documents, either ImageUrlBack or ImageBase64Back must be provided. If both are provided, only ImageUrlFront will be used. 
-     * @return ImageUrlFront Url of the document Front. supported image formats: PNG, JPG/JPEG. 
-Supported image size: the downloaded image after Base64 encoding must be no more than 2M. image download time must be no more than 5 seconds. 
-Supported image resolution: between 256 \* 256 and 4096 \* 4096. For some documents, either ImageUrlBack or ImageBase64Back must be provided. If both are provided, only ImageUrlFront will be used.
+     * Get URL of the document front image.
+Supported image formats: PNG, JPG/JPEG (GIF not supported).
+Supported image size: The downloaded image after Base64 encoding must not exceed 2 MB. Image download time must not exceed 5 seconds.
+Supported image resolution: Between 256*256 and 4096*4096 pixels.
+Note: You must provide either ImageUrlFront or ImageBase64Front. If both are provided, only ImageUrlFront is used. 
+     * @return ImageUrlFront URL of the document front image.
+Supported image formats: PNG, JPG/JPEG (GIF not supported).
+Supported image size: The downloaded image after Base64 encoding must not exceed 2 MB. Image download time must not exceed 5 seconds.
+Supported image resolution: Between 256*256 and 4096*4096 pixels.
+Note: You must provide either ImageUrlFront or ImageBase64Front. If both are provided, only ImageUrlFront is used.
      */
     public String getImageUrlFront() {
         return this.ImageUrlFront;
     }
 
     /**
-     * Set Url of the document Front. supported image formats: PNG, JPG/JPEG. 
-Supported image size: the downloaded image after Base64 encoding must be no more than 2M. image download time must be no more than 5 seconds. 
-Supported image resolution: between 256 \* 256 and 4096 \* 4096. For some documents, either ImageUrlBack or ImageBase64Back must be provided. If both are provided, only ImageUrlFront will be used.
-     * @param ImageUrlFront Url of the document Front. supported image formats: PNG, JPG/JPEG. 
-Supported image size: the downloaded image after Base64 encoding must be no more than 2M. image download time must be no more than 5 seconds. 
-Supported image resolution: between 256 \* 256 and 4096 \* 4096. For some documents, either ImageUrlBack or ImageBase64Back must be provided. If both are provided, only ImageUrlFront will be used.
+     * Set URL of the document front image.
+Supported image formats: PNG, JPG/JPEG (GIF not supported).
+Supported image size: The downloaded image after Base64 encoding must not exceed 2 MB. Image download time must not exceed 5 seconds.
+Supported image resolution: Between 256*256 and 4096*4096 pixels.
+Note: You must provide either ImageUrlFront or ImageBase64Front. If both are provided, only ImageUrlFront is used.
+     * @param ImageUrlFront URL of the document front image.
+Supported image formats: PNG, JPG/JPEG (GIF not supported).
+Supported image size: The downloaded image after Base64 encoding must not exceed 2 MB. Image download time must not exceed 5 seconds.
+Supported image resolution: Between 256*256 and 4096*4096 pixels.
+Note: You must provide either ImageUrlFront or ImageBase64Front. If both are provided, only ImageUrlFront is used.
      */
     public void setImageUrlFront(String ImageUrlFront) {
         this.ImageUrlFront = ImageUrlFront;
     }
 
     /**
-     * Get Specifies the Url of the document Back. supported image formats: PNG, JPG/JPEG
-Supported image size: no more than 2M after Base64 encoding. image download time should not exceed 5 seconds. 
-Supported image resolution: between 256 \* 256 and 4096 \* 4096. For some documents, either ImageUrlBack or ImageBase64Back must be provided. If both are provided, only use ImageUrlBack.
- 
-     * @return ImageUrlBack Specifies the Url of the document Back. supported image formats: PNG, JPG/JPEG
-Supported image size: no more than 2M after Base64 encoding. image download time should not exceed 5 seconds. 
-Supported image resolution: between 256 \* 256 and 4096 \* 4096. For some documents, either ImageUrlBack or ImageBase64Back must be provided. If both are provided, only use ImageUrlBack.
-
+     * Get URL of the document back image.
+Supported image formats: PNG, JPG/JPEG (GIF not supported).
+Supported image size: The downloaded image after Base64 encoding must not exceed 2 MB. Image download time must not exceed 5 seconds.
+Supported image resolution: Between 256*256 and 4096*4096 pixels.
+Note: For some documents, you must provide either ImageUrlBack or ImageBase64Back. If both are provided, only ImageUrlBack is used. 
+     * @return ImageUrlBack URL of the document back image.
+Supported image formats: PNG, JPG/JPEG (GIF not supported).
+Supported image size: The downloaded image after Base64 encoding must not exceed 2 MB. Image download time must not exceed 5 seconds.
+Supported image resolution: Between 256*256 and 4096*4096 pixels.
+Note: For some documents, you must provide either ImageUrlBack or ImageBase64Back. If both are provided, only ImageUrlBack is used.
      */
     public String getImageUrlBack() {
         return this.ImageUrlBack;
     }
 
     /**
-     * Set Specifies the Url of the document Back. supported image formats: PNG, JPG/JPEG
-Supported image size: no more than 2M after Base64 encoding. image download time should not exceed 5 seconds. 
-Supported image resolution: between 256 \* 256 and 4096 \* 4096. For some documents, either ImageUrlBack or ImageBase64Back must be provided. If both are provided, only use ImageUrlBack.
-
-     * @param ImageUrlBack Specifies the Url of the document Back. supported image formats: PNG, JPG/JPEG
-Supported image size: no more than 2M after Base64 encoding. image download time should not exceed 5 seconds. 
-Supported image resolution: between 256 \* 256 and 4096 \* 4096. For some documents, either ImageUrlBack or ImageBase64Back must be provided. If both are provided, only use ImageUrlBack.
-
+     * Set URL of the document back image.
+Supported image formats: PNG, JPG/JPEG (GIF not supported).
+Supported image size: The downloaded image after Base64 encoding must not exceed 2 MB. Image download time must not exceed 5 seconds.
+Supported image resolution: Between 256*256 and 4096*4096 pixels.
+Note: For some documents, you must provide either ImageUrlBack or ImageBase64Back. If both are provided, only ImageUrlBack is used.
+     * @param ImageUrlBack URL of the document back image.
+Supported image formats: PNG, JPG/JPEG (GIF not supported).
+Supported image size: The downloaded image after Base64 encoding must not exceed 2 MB. Image download time must not exceed 5 seconds.
+Supported image resolution: Between 256*256 and 4096*4096 pixels.
+Note: For some documents, you must provide either ImageUrlBack or ImageBase64Back. If both are provided, only ImageUrlBack is used.
      */
     public void setImageUrlBack(String ImageUrlBack) {
         this.ImageUrlBack = ImageUrlBack;
     }
 
     /**
-     * Get Whether to extract the ID portrait. Default value: false. 
-     * @return ReturnHeadImage Whether to extract the ID portrait. Default value: false.
+     * Get Whether to crop and return the face image from the document. Default: false.
+If set to true, the image constraints are:
+- Size after Base64 encoding must not exceed 5 MB.
+- Maximum pixel width/height: 4000 for JPG, 2000 for other formats.
+- Minimum pixel width/height: 64.
+- Supported formats: PNG, JPG, JPEG, BMP (GIF not supported). 
+     * @return ReturnHeadImage Whether to crop and return the face image from the document. Default: false.
+If set to true, the image constraints are:
+- Size after Base64 encoding must not exceed 5 MB.
+- Maximum pixel width/height: 4000 for JPG, 2000 for other formats.
+- Minimum pixel width/height: 64.
+- Supported formats: PNG, JPG, JPEG, BMP (GIF not supported).
      */
     public Boolean getReturnHeadImage() {
         return this.ReturnHeadImage;
     }
 
     /**
-     * Set Whether to extract the ID portrait. Default value: false.
-     * @param ReturnHeadImage Whether to extract the ID portrait. Default value: false.
+     * Set Whether to crop and return the face image from the document. Default: false.
+If set to true, the image constraints are:
+- Size after Base64 encoding must not exceed 5 MB.
+- Maximum pixel width/height: 4000 for JPG, 2000 for other formats.
+- Minimum pixel width/height: 64.
+- Supported formats: PNG, JPG, JPEG, BMP (GIF not supported).
+     * @param ReturnHeadImage Whether to crop and return the face image from the document. Default: false.
+If set to true, the image constraints are:
+- Size after Base64 encoding must not exceed 5 MB.
+- Maximum pixel width/height: 4000 for JPG, 2000 for other formats.
+- Minimum pixel width/height: 64.
+- Supported formats: PNG, JPG, JPEG, BMP (GIF not supported).
      */
     public void setReturnHeadImage(Boolean ReturnHeadImage) {
         this.ReturnHeadImage = ReturnHeadImage;

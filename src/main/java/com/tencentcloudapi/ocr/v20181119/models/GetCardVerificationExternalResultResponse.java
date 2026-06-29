@@ -24,22 +24,27 @@ import java.util.HashMap;
 public class GetCardVerificationExternalResultResponse extends AbstractModel {
 
     /**
-    * Indicates the status. valid values: 
-PASSED
+    * Verification status. Valid values: 
 PROCESSING
-WARNING
+ABNORMAL
+COMPLETED
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * Indicates the anti-counterfeiting information.
--ScreenshotSuspected: The image is a screenshot.
--RetakeSuspected: The image is taken from another screen.
--PaperCopy: The image is a black and white, or color photocopy.
--FakeSuspected: The image of the card, or the information on the card has been edited or altered.
--OtherWarning: Document's authenticity is not verified for various reasons.
+    * Anti-counterfeiting information. 
+- ScreenshotSuspected: The image is a screenshot.
+- RetakeSuspected: The image is taken from another screen.
+- PaperCopy: The image is a black and white, or color photocopy.
+- FakeSuspected: The image of the card, or the information on the card has been edited or altered.
+- PoorImageQuality: The image is bad quality.
+- InformationVerificationFailed: Information verification failed based on OCR recognition results
+- TooManyCards: Multiple cards present in the frame.
+- IncompleteCard: Captured document is incomplete.
+- OtherWarning: Document's authenticity is not verified for various reasons.
+
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("WarnInfo")
@@ -47,7 +52,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String [] WarnInfo;
 
     /**
-    * Country Code.
+    * Country or region of the document.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Nationality")
@@ -55,7 +60,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String Nationality;
 
     /**
-    * Recognition result of the text in the id photo.	
+    * Front-side document recognition results. 
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("CardInfo")
@@ -63,14 +68,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private GeneralCard CardInfo;
 
     /**
-    * Specifies the token in the request parameters.
+    * Back-side document recognition results.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("BackCardInfo")
+    @Expose
+    private GeneralCard BackCardInfo;
+
+    /**
+    * The token passed in the input parameters.
     */
     @SerializedName("CardVerificationToken")
     @Expose
     private String CardVerificationToken;
 
     /**
-    * If the ReturnHeadImage is false or not passed when initiating the card and certificate recognition, the HeadImageBase64 will return an empty string. If the ReturnHeadImage is true when initiating the card and certificate recognition and the HeadImageBase64 returns an empty string, it indicates that the face image recognition has failed. Please check the image.
+    * Base64-encoded head image from the document. If ReturnHeadImage was set to false or not provided in the request, this field returns an empty string. If ReturnHeadImage was set to true and this field returns an empty string, indicating a failure to extract the head image extraction failed. Please check the input document photo.
     */
     @SerializedName("HeadImageBase64")
     @Expose
@@ -84,47 +97,57 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Indicates the status. valid values: 
-PASSED
+     * Get Verification status. Valid values: 
 PROCESSING
-WARNING 
-     * @return Status Indicates the status. valid values: 
-PASSED
+ABNORMAL
+COMPLETED 
+     * @return Status Verification status. Valid values: 
 PROCESSING
-WARNING
+ABNORMAL
+COMPLETED
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Indicates the status. valid values: 
-PASSED
+     * Set Verification status. Valid values: 
 PROCESSING
-WARNING
-     * @param Status Indicates the status. valid values: 
-PASSED
+ABNORMAL
+COMPLETED
+     * @param Status Verification status. Valid values: 
 PROCESSING
-WARNING
+ABNORMAL
+COMPLETED
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get Indicates the anti-counterfeiting information.
--ScreenshotSuspected: The image is a screenshot.
--RetakeSuspected: The image is taken from another screen.
--PaperCopy: The image is a black and white, or color photocopy.
--FakeSuspected: The image of the card, or the information on the card has been edited or altered.
--OtherWarning: Document's authenticity is not verified for various reasons.
+     * Get Anti-counterfeiting information. 
+- ScreenshotSuspected: The image is a screenshot.
+- RetakeSuspected: The image is taken from another screen.
+- PaperCopy: The image is a black and white, or color photocopy.
+- FakeSuspected: The image of the card, or the information on the card has been edited or altered.
+- PoorImageQuality: The image is bad quality.
+- InformationVerificationFailed: Information verification failed based on OCR recognition results
+- TooManyCards: Multiple cards present in the frame.
+- IncompleteCard: Captured document is incomplete.
+- OtherWarning: Document's authenticity is not verified for various reasons.
+
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return WarnInfo Indicates the anti-counterfeiting information.
--ScreenshotSuspected: The image is a screenshot.
--RetakeSuspected: The image is taken from another screen.
--PaperCopy: The image is a black and white, or color photocopy.
--FakeSuspected: The image of the card, or the information on the card has been edited or altered.
--OtherWarning: Document's authenticity is not verified for various reasons.
+     * @return WarnInfo Anti-counterfeiting information. 
+- ScreenshotSuspected: The image is a screenshot.
+- RetakeSuspected: The image is taken from another screen.
+- PaperCopy: The image is a black and white, or color photocopy.
+- FakeSuspected: The image of the card, or the information on the card has been edited or altered.
+- PoorImageQuality: The image is bad quality.
+- InformationVerificationFailed: Information verification failed based on OCR recognition results
+- TooManyCards: Multiple cards present in the frame.
+- IncompleteCard: Captured document is incomplete.
+- OtherWarning: Document's authenticity is not verified for various reasons.
+
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String [] getWarnInfo() {
@@ -132,19 +155,29 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Indicates the anti-counterfeiting information.
--ScreenshotSuspected: The image is a screenshot.
--RetakeSuspected: The image is taken from another screen.
--PaperCopy: The image is a black and white, or color photocopy.
--FakeSuspected: The image of the card, or the information on the card has been edited or altered.
--OtherWarning: Document's authenticity is not verified for various reasons.
+     * Set Anti-counterfeiting information. 
+- ScreenshotSuspected: The image is a screenshot.
+- RetakeSuspected: The image is taken from another screen.
+- PaperCopy: The image is a black and white, or color photocopy.
+- FakeSuspected: The image of the card, or the information on the card has been edited or altered.
+- PoorImageQuality: The image is bad quality.
+- InformationVerificationFailed: Information verification failed based on OCR recognition results
+- TooManyCards: Multiple cards present in the frame.
+- IncompleteCard: Captured document is incomplete.
+- OtherWarning: Document's authenticity is not verified for various reasons.
+
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param WarnInfo Indicates the anti-counterfeiting information.
--ScreenshotSuspected: The image is a screenshot.
--RetakeSuspected: The image is taken from another screen.
--PaperCopy: The image is a black and white, or color photocopy.
--FakeSuspected: The image of the card, or the information on the card has been edited or altered.
--OtherWarning: Document's authenticity is not verified for various reasons.
+     * @param WarnInfo Anti-counterfeiting information. 
+- ScreenshotSuspected: The image is a screenshot.
+- RetakeSuspected: The image is taken from another screen.
+- PaperCopy: The image is a black and white, or color photocopy.
+- FakeSuspected: The image of the card, or the information on the card has been edited or altered.
+- PoorImageQuality: The image is bad quality.
+- InformationVerificationFailed: Information verification failed based on OCR recognition results
+- TooManyCards: Multiple cards present in the frame.
+- IncompleteCard: Captured document is incomplete.
+- OtherWarning: Document's authenticity is not verified for various reasons.
+
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setWarnInfo(String [] WarnInfo) {
@@ -152,29 +185,33 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Country Code.
+     * Get Country or region of the document.
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Nationality Country Code.
+     * @return Nationality Country or region of the document.
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @deprecated
      */
+    @Deprecated
     public String getNationality() {
         return this.Nationality;
     }
 
     /**
-     * Set Country Code.
+     * Set Country or region of the document.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Nationality Country Code.
+     * @param Nationality Country or region of the document.
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @deprecated
      */
+    @Deprecated
     public void setNationality(String Nationality) {
         this.Nationality = Nationality;
     }
 
     /**
-     * Get Recognition result of the text in the id photo.	
+     * Get Front-side document recognition results. 
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return CardInfo Recognition result of the text in the id photo.	
+     * @return CardInfo Front-side document recognition results. 
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public GeneralCard getCardInfo() {
@@ -182,9 +219,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Recognition result of the text in the id photo.	
+     * Set Front-side document recognition results. 
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param CardInfo Recognition result of the text in the id photo.	
+     * @param CardInfo Front-side document recognition results. 
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setCardInfo(GeneralCard CardInfo) {
@@ -192,32 +229,52 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Specifies the token in the request parameters. 
-     * @return CardVerificationToken Specifies the token in the request parameters.
+     * Get Back-side document recognition results.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return BackCardInfo Back-side document recognition results.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public GeneralCard getBackCardInfo() {
+        return this.BackCardInfo;
+    }
+
+    /**
+     * Set Back-side document recognition results.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param BackCardInfo Back-side document recognition results.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setBackCardInfo(GeneralCard BackCardInfo) {
+        this.BackCardInfo = BackCardInfo;
+    }
+
+    /**
+     * Get The token passed in the input parameters. 
+     * @return CardVerificationToken The token passed in the input parameters.
      */
     public String getCardVerificationToken() {
         return this.CardVerificationToken;
     }
 
     /**
-     * Set Specifies the token in the request parameters.
-     * @param CardVerificationToken Specifies the token in the request parameters.
+     * Set The token passed in the input parameters.
+     * @param CardVerificationToken The token passed in the input parameters.
      */
     public void setCardVerificationToken(String CardVerificationToken) {
         this.CardVerificationToken = CardVerificationToken;
     }
 
     /**
-     * Get If the ReturnHeadImage is false or not passed when initiating the card and certificate recognition, the HeadImageBase64 will return an empty string. If the ReturnHeadImage is true when initiating the card and certificate recognition and the HeadImageBase64 returns an empty string, it indicates that the face image recognition has failed. Please check the image. 
-     * @return HeadImageBase64 If the ReturnHeadImage is false or not passed when initiating the card and certificate recognition, the HeadImageBase64 will return an empty string. If the ReturnHeadImage is true when initiating the card and certificate recognition and the HeadImageBase64 returns an empty string, it indicates that the face image recognition has failed. Please check the image.
+     * Get Base64-encoded head image from the document. If ReturnHeadImage was set to false or not provided in the request, this field returns an empty string. If ReturnHeadImage was set to true and this field returns an empty string, indicating a failure to extract the head image extraction failed. Please check the input document photo. 
+     * @return HeadImageBase64 Base64-encoded head image from the document. If ReturnHeadImage was set to false or not provided in the request, this field returns an empty string. If ReturnHeadImage was set to true and this field returns an empty string, indicating a failure to extract the head image extraction failed. Please check the input document photo.
      */
     public String getHeadImageBase64() {
         return this.HeadImageBase64;
     }
 
     /**
-     * Set If the ReturnHeadImage is false or not passed when initiating the card and certificate recognition, the HeadImageBase64 will return an empty string. If the ReturnHeadImage is true when initiating the card and certificate recognition and the HeadImageBase64 returns an empty string, it indicates that the face image recognition has failed. Please check the image.
-     * @param HeadImageBase64 If the ReturnHeadImage is false or not passed when initiating the card and certificate recognition, the HeadImageBase64 will return an empty string. If the ReturnHeadImage is true when initiating the card and certificate recognition and the HeadImageBase64 returns an empty string, it indicates that the face image recognition has failed. Please check the image.
+     * Set Base64-encoded head image from the document. If ReturnHeadImage was set to false or not provided in the request, this field returns an empty string. If ReturnHeadImage was set to true and this field returns an empty string, indicating a failure to extract the head image extraction failed. Please check the input document photo.
+     * @param HeadImageBase64 Base64-encoded head image from the document. If ReturnHeadImage was set to false or not provided in the request, this field returns an empty string. If ReturnHeadImage was set to true and this field returns an empty string, indicating a failure to extract the head image extraction failed. Please check the input document photo.
      */
     public void setHeadImageBase64(String HeadImageBase64) {
         this.HeadImageBase64 = HeadImageBase64;
@@ -262,6 +319,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.CardInfo != null) {
             this.CardInfo = new GeneralCard(source.CardInfo);
         }
+        if (source.BackCardInfo != null) {
+            this.BackCardInfo = new GeneralCard(source.BackCardInfo);
+        }
         if (source.CardVerificationToken != null) {
             this.CardVerificationToken = new String(source.CardVerificationToken);
         }
@@ -282,6 +342,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamArraySimple(map, prefix + "WarnInfo.", this.WarnInfo);
         this.setParamSimple(map, prefix + "Nationality", this.Nationality);
         this.setParamObj(map, prefix + "CardInfo.", this.CardInfo);
+        this.setParamObj(map, prefix + "BackCardInfo.", this.BackCardInfo);
         this.setParamSimple(map, prefix + "CardVerificationToken", this.CardVerificationToken);
         this.setParamSimple(map, prefix + "HeadImageBase64", this.HeadImageBase64);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
