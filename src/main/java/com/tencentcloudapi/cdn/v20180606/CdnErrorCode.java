@@ -1,5 +1,8 @@
 package com.tencentcloudapi.cdn.v20180606;
 public enum CdnErrorCode {
+     /* CAM signature/authentication error. */
+     AUTHFAILURE("AuthFailure"),
+     
      /* Authentication error. Please check and try again. */
      AUTHFAILURE_INVALIDAUTHORIZATION("AuthFailure.InvalidAuthorization"),
      
@@ -11,6 +14,9 @@ public enum CdnErrorCode {
      
      /* The certificate does not exist. */
      FAILEDOPERATION_SSLCERTNOTFOUND("FailedOperation.SslCertNotFound"),
+     
+     /* Internal error. */
+     INTERNALERROR("InternalError"),
      
      /* Authentication system internal error. */
      INTERNALERROR_CAMSYSTEMERROR("InternalError.CamSystemError"),
@@ -51,17 +57,14 @@ public enum CdnErrorCode {
      /* Internal service error. Please submit a ticket for troubleshooting. */
      INTERNALERROR_ROUTEERROR("InternalError.RouteError"),
      
-     /* The SCDN service is not activated. Please purchase or renew an SCDN packet and try again. */
-     INTERNALERROR_SCDNUSERNOPACKAGE("InternalError.ScdnUserNoPackage"),
-     
-     /* Your SCDN service is suspended. Please purchase a new SCDN packet. */
-     INTERNALERROR_SCDNUSERSUSPEND("InternalError.ScdnUserSuspend"),
-     
      /* Tag internal error. Please submit a ticket for troubleshooting. */
      INTERNALERROR_TAGSYSTEMERROR("InternalError.TagSystemError"),
      
      /* Internal service error. Please submit a ticket for troubleshooting. */
      INTERNALERROR_UNKNOWNERROR("InternalError.UnknownError"),
+     
+     /* Parameter error. */
+     INVALIDPARAMETER("InvalidParameter"),
      
      /* The access port 443 must be enabled for HTTPS configuration. */
      INVALIDPARAMETER_ACCESSPORTOPENEDHTTPS("InvalidParameter.AccessPortOpenedHttps"),
@@ -122,6 +125,9 @@ public enum CdnErrorCode {
      
      /* Failed to add the domain name. Please make sure to specify a tag for the domain name. */
      INVALIDPARAMETER_CDNCONFIGTAGREQUIRED("InvalidParameter.CdnConfigTagRequired"),
+     
+     /* Domain name is already integrated with Edgeone. */
+     INVALIDPARAMETER_CDNHOSTEXISTSINEDGEONE("InvalidParameter.CdnHostExistsInEdgeOne"),
      
      /* The domain name is configured with special configurations, please submit a ticket. */
      INVALIDPARAMETER_CDNHOSTHASSPECIALCONFIG("InvalidParameter.CdnHostHasSpecialConfig"),
@@ -243,15 +249,6 @@ public enum CdnErrorCode {
      /* This platform does not support remote access to an authentication address via the HTTPS protocol. */
      INVALIDPARAMETER_REMOTEAUTHINVALIDPROTOCOL("InvalidParameter.RemoteAuthInvalidProtocol"),
      
-     /* Unable to recreate: the task has expired. */
-     INVALIDPARAMETER_SCDNLOGTASKEXPIRED("InvalidParameter.ScdnLogTaskExpired"),
-     
-     /* The task does not exist or was not failed. */
-     INVALIDPARAMETER_SCDNLOGTASKNOTFOUNDORNOTFAIL("InvalidParameter.ScdnLogTaskNotFoundOrNotFail"),
-     
-     /* Incorrect time range */
-     INVALIDPARAMETER_SCDNLOGTASKTIMERANGEINVALID("InvalidParameter.ScdnLogTaskTimeRangeInvalid"),
-     
      /*  */
      INVALIDPARAMETER_SSLCERTCHAINERROR("InvalidParameter.SslCertChainError"),
      
@@ -260,6 +257,12 @@ public enum CdnErrorCode {
      
      /*  */
      INVALIDPARAMETER_SSLCERTPARSEERROR("InvalidParameter.SslCertParseError"),
+     
+     /* Parameter value error. */
+     INVALIDPARAMETERVALUE("InvalidParameterValue"),
+     
+     /* The quota limit is exceeded. */
+     LIMITEXCEEDED("LimitExceeded"),
      
      /* The number of resource arrays exceeds the upper limit. */
      LIMITEXCEEDED_CAMRESOURCEARRAYTOOLONG("LimitExceeded.CamResourceArrayTooLong"),
@@ -330,14 +333,26 @@ public enum CdnErrorCode {
      /* The number of topics exceeds the limit. */
      LIMITEXCEEDED_CLSTOPICEXCEED("LimitExceeded.ClsTopicExceed"),
      
-     /* Daily task quota exceeded */
-     LIMITEXCEEDED_SCDNLOGTASKEXCEEDDAYLIMIT("LimitExceeded.ScdnLogTaskExceedDayLimit"),
-     
      /*  */
      LIMITEXCEEDED_SSLCERTREQUESTLIMITEXCEEDED("LimitExceeded.SslCertRequestLimitExceeded"),
      
+     /* Parameters are missing. */
+     MISSINGPARAMETER("MissingParameter"),
+     
+     /*  */
+     OPERATIONDENIED_CDNHOSTHASDDOSRISK("OperationDenied.CdnHostHasDDosRisk"),
+     
+     /*  */
+     OPERATIONDENIED_PRODUCTUPDATING("OperationDenied.ProductUpdating"),
+     
+     /* Tencent cloud CDN has been comprehensively upgraded to edge security acceleration platform. */
+     OPERATIONDENIED_PRODUCTUPGRADED("OperationDenied.ProductUpgraded"),
+     
      /* Inconsistent domain name. Please select again or submit a ticket. */
      OPERATIONDENIED_SHARECACHEAREADNSNOTMATCH("OperationDenied.ShareCacheAreaDnsNotMatch"),
+     
+     /* This account is migrating to EdgeOne. if it exists, contact after-sales customer service. */
+     OPERATIONDENIED_USERMIGRATING("OperationDenied.UserMigrating"),
      
      /* The domain name conflicts with an existing domain name in the system. */
      RESOURCEINUSE_CDNCONFLICTHOSTEXISTS("ResourceInUse.CdnConflictHostExists"),
@@ -347,6 +362,9 @@ public enum CdnErrorCode {
      
      /* CDN resources are being operated. */
      RESOURCEINUSE_CDNOPINPROGRESS("ResourceInUse.CdnOpInProgress"),
+     
+     /* Domain name already exists. */
+     RESOURCEINUSE_TCBHOSTEXISTS("ResourceInUse.TcbHostExists"),
      
      /* The tag key does not exist. */
      RESOURCENOTFOUND_CAMTAGKEYNOTEXIST("ResourceNotFound.CamTagKeyNotExist"),
@@ -402,11 +420,14 @@ public enum CdnErrorCode {
      /* ICP filing is required for the domain name and the synchronization takes 2 hours. If it is already filed, please try later. */
      RESOURCEUNAVAILABLE_CDNHOSTNOICP("ResourceUnavailable.CdnHostNoIcp"),
      
+     /* Your account has compliance security risks. */
+     RESOURCEUNAVAILABLE_CHECKUSERHIGHRISK("ResourceUnavailable.CheckUserHighRisk"),
+     
      /* The domain name has been connected to VOD. To access CDN, please delete it from VOD first. */
      RESOURCEUNAVAILABLE_HOSTEXISTINVOD("ResourceUnavailable.HostExistInVod"),
      
-     /* The SCDN service is not activated. Please purchase or renew an SCDN packet and try again. */
-     RESOURCEUNAVAILABLE_SCDNUSERNOPACKAGE("ResourceUnavailable.ScdnUserNoPackage"),
+     /* Unauthorized operation. */
+     UNAUTHORIZEDOPERATION("UnauthorizedOperation"),
      
      /* The sub-account is unauthorized to query full data. */
      UNAUTHORIZEDOPERATION_CDNACCOUNTUNAUTHORIZED("UnauthorizedOperation.CdnAccountUnauthorized"),
@@ -429,11 +450,17 @@ public enum CdnErrorCode {
      /* This domain name belongs to another account, and you do not have permission to connect it. */
      UNAUTHORIZEDOPERATION_CDNHOSTISOWNEDBYOTHER("UnauthorizedOperation.CdnHostIsOwnedByOther"),
      
+     /* Domain name integration requires submitting a ticket. */
+     UNAUTHORIZEDOPERATION_CDNHOSTISTOAPPLYHOST("UnauthorizedOperation.CdnHostIsToApplyHost"),
+     
      /* The domain name has been connected by another account. For more information, please submit a ticket. */
      UNAUTHORIZEDOPERATION_CDNHOSTISUSEDBYOTHER("UnauthorizedOperation.CdnHostIsUsedByOther"),
      
      /* The sub-account has no access to the CDN-accelerated domain name. */
      UNAUTHORIZEDOPERATION_CDNHOSTUNAUTHORIZED("UnauthorizedOperation.CdnHostUnauthorized"),
+     
+     /* User status is invalid. service is temporarily unavailable. */
+     UNAUTHORIZEDOPERATION_CDNINVALIDUSERSTATUS("UnauthorizedOperation.CdnInvalidUserStatus"),
      
      /* The project is not authorized for the sub-account. */
      UNAUTHORIZEDOPERATION_CDNPROJECTUNAUTHORIZED("UnauthorizedOperation.CdnProjectUnauthorized"),
@@ -479,6 +506,9 @@ public enum CdnErrorCode {
      
      /* Too many calling attempts. */
      UNAUTHORIZEDOPERATION_OPERATIONTOOOFTEN("UnauthorizedOperation.OperationTooOften"),
+     
+     /* Unknown parameter error. */
+     UNKNOWNPARAMETER("UnknownParameter"),
      
      /* The operation is not allowed. */
      UNSUPPORTEDOPERATION_CLSNOTALLOWED("UnsupportedOperation.ClsNotAllowed"),

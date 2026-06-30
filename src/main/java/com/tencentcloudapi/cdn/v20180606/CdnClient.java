@@ -72,17 +72,6 @@ public class CdnClient extends AbstractClient{
     }
 
     /**
-     *This API is used to recreate a failed event log task.
-     * @param req CreateScdnFailedLogTaskRequest
-     * @return CreateScdnFailedLogTaskResponse
-     * @throws TencentCloudSDKException
-     */
-    public CreateScdnFailedLogTaskResponse CreateScdnFailedLogTask(CreateScdnFailedLogTaskRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "CreateScdnFailedLogTask", CreateScdnFailedLogTaskResponse.class);
-    }
-
-    /**
      *This API is used to delete a specified acceleration domain name.
      * @param req DeleteCdnDomainRequest
      * @return DeleteCdnDomainResponse
@@ -154,6 +143,7 @@ If you have a strong requirement for data timeliness, it is recommended to use t
 
     /**
      *This API is used to query CDN IP ownership.
+This API is used to create and bind a policy. (Note: The API request frequency limit follows CDN's restriction: 200 requests/10 minutes).
      * @param req DescribeCdnIpRequest
      * @return DescribeCdnIpResponse
      * @throws TencentCloudSDKException
@@ -164,7 +154,8 @@ If you have a strong requirement for data timeliness, it is recommended to use t
     }
 
     /**
-     *This API is used to query the IP information of CDN intermediate nodes. Note: this API will be deactivated soon and no longer be maintained. Please call `DescribeIpStatus` instead.
+     ***This API is deprecated.**.
+This API is used to query the IP information of CDN origin-pull nodes. (Note: The replace API is DescribeIpStatus.).
      * @param req DescribeCdnOriginIpRequest
      * @return DescribeCdnOriginIpResponse
      * @throws TencentCloudSDKException
@@ -333,8 +324,8 @@ If you have migrated your ECDN service to CDN, you can use the [DescribeIpStatus
     }
 
     /**
-     *This API is used to query the list of domain name URLs containing regulation-violating content scanned and detected by the CDN system, and the current status of the URLs.
-It corresponds to the **Pornography Detection** page on the CDN Console.
+     *This API is used to query the URL list with domain violations detected by the CDN system scan and their status.
+This API is used to correspond to the content compliant webpage in the CDN console.
      * @param req DescribeUrlViolationsRequest
      * @return DescribeUrlViolationsResponse
      * @throws TencentCloudSDKException
@@ -342,17 +333,6 @@ It corresponds to the **Pornography Detection** page on the CDN Console.
     public DescribeUrlViolationsResponse DescribeUrlViolations(DescribeUrlViolationsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeUrlViolations", DescribeUrlViolationsResponse.class);
-    }
-
-    /**
-     *This API is used to block access to a specific URL on CDN. When a URL is blocked, error 403 will be returned for requests from the Chinese mainland. URL blocking is not permanent. Note that this API is only available to beta users now. 
-     * @param req DisableCachesRequest
-     * @return DisableCachesResponse
-     * @throws TencentCloudSDKException
-     */
-    public DisableCachesResponse DisableCaches(DisableCachesRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DisableCaches", DisableCachesResponse.class);
     }
 
     /**
@@ -368,14 +348,14 @@ It corresponds to the **Pornography Detection** page on the CDN Console.
     }
 
     /**
-     *This API (EnableCaches) is used to unblock manually blocked URLs. After a URL is successfully unblocked, it takes about 5 to 10 minutes to take effect across the entire network. (This API is during beta test and not fully available now.)
-     * @param req EnableCachesRequest
-     * @return EnableCachesResponse
+     *This API is used to copy the configuration of a reference domain to a new domain name. Self-owned certificates and customization options are not currently supported.
+     * @param req DuplicateDomainConfigRequest
+     * @return DuplicateDomainConfigResponse
      * @throws TencentCloudSDKException
      */
-    public EnableCachesResponse EnableCaches(EnableCachesRequest req) throws TencentCloudSDKException{
+    public DuplicateDomainConfigResponse DuplicateDomainConfig(DuplicateDomainConfigRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
-        return this.internalRequest(req, "EnableCaches", EnableCachesResponse.class);
+        return this.internalRequest(req, "DuplicateDomainConfig", DuplicateDomainConfigResponse.class);
     }
 
     /**
@@ -387,17 +367,6 @@ It corresponds to the **Pornography Detection** page on the CDN Console.
     public EnableClsLogTopicResponse EnableClsLogTopic(EnableClsLogTopicRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "EnableClsLogTopic", EnableClsLogTopicResponse.class);
-    }
-
-    /**
-     *This API is used to query the resource blocking history and the current URL status. (This API is in beta test and not generally available yet.)
-     * @param req GetDisableRecordsRequest
-     * @return GetDisableRecordsResponse
-     * @throws TencentCloudSDKException
-     */
-    public GetDisableRecordsResponse GetDisableRecords(GetDisableRecordsRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "GetDisableRecords", GetDisableRecordsResponse.class);
     }
 
     /**
@@ -559,17 +528,6 @@ This API is used for CloudAudit-related operations. The input parameters may con
     public UpdatePayTypeResponse UpdatePayType(UpdatePayTypeRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "UpdatePayType", UpdatePayTypeResponse.class);
-    }
-
-    /**
-     *This API is used to modify security configurations of SCDN acceleration domain names.
-     * @param req UpdateScdnDomainRequest
-     * @return UpdateScdnDomainResponse
-     * @throws TencentCloudSDKException
-     */
-    public UpdateScdnDomainResponse UpdateScdnDomain(UpdateScdnDomainRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "UpdateScdnDomain", UpdateScdnDomainResponse.class);
     }
 
 }

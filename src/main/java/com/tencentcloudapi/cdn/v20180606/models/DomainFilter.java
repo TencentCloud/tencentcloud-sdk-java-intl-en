@@ -24,25 +24,25 @@ import java.util.HashMap;
 public class DomainFilter extends AbstractModel {
 
     /**
-    * Filter filter. Values:
-- `origin`: Primary origin server.
-- `domain`: Domain name.
-- `resourceId`: Domain name ID.
-- `status`: Domain name status. Values: `online`, `offline`, and `processing`.
-- `serviceType`: Service type. Values: `web`, `download`, `media`, `hybrid` and `dynamic`.
-- `projectId`: Project ID.
-- `domainType`: Primary origin type. Values: `cname` (customer origin), `COS` (COS origin), `third_party` (third-party object storage origin), and `igtm` (IGTM origin).
-- `fullUrlCache`: Whether to enable path cache. Values: `on`, `off`.
-- `https`: Whether to configure HTTPS. Values: `on`, `off` and `processing`.
-- `originPullProtocol`: Origin-pull protocol type. Value: `http`, `follow`, and `https`.
-- `tagKey`: Tag key.
+    * Filter field name. supported list as follows:.
+-`Origin`: specifies the primary origin server.
+-Domain name. specifies the domain name.
+-resourceId: domain id.
+-Status: specifies the domain name status. valid values: online, offline, processing, deleted.
+-serviceType: specifies the business type. valid values: web, download, media, hybrid, dynamic.
+-projectId: specifies the project ID.
+-domainType: specifies the primary origin server type. valid values: cname (self-owned origin), cos (cloud object storage integration), third_party (third-party object storage), igtm (igtm multi-active origin).
+-fullUrlCache. specifies full path cache. valid values: on, off.
+-Specifies whether to configure https. valid values: on, off, processing.
+-originPullProtocol: specifies the origin-pull protocol. valid values: http, follow, https.
+-tagKey: specifies the Tag key.
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * Filter field value.
+    * Specifies the filter field value. the default maximum is 5. when Name is origin/domain and Fuzzy is true, the maximum is 1.
     */
     @SerializedName("Value")
     @Expose
@@ -57,76 +57,76 @@ When fuzzy query is enabled, the maximum Value length is 1. When fuzzy query is 
     private Boolean Fuzzy;
 
     /**
-     * Get Filter filter. Values:
-- `origin`: Primary origin server.
-- `domain`: Domain name.
-- `resourceId`: Domain name ID.
-- `status`: Domain name status. Values: `online`, `offline`, and `processing`.
-- `serviceType`: Service type. Values: `web`, `download`, `media`, `hybrid` and `dynamic`.
-- `projectId`: Project ID.
-- `domainType`: Primary origin type. Values: `cname` (customer origin), `COS` (COS origin), `third_party` (third-party object storage origin), and `igtm` (IGTM origin).
-- `fullUrlCache`: Whether to enable path cache. Values: `on`, `off`.
-- `https`: Whether to configure HTTPS. Values: `on`, `off` and `processing`.
-- `originPullProtocol`: Origin-pull protocol type. Value: `http`, `follow`, and `https`.
-- `tagKey`: Tag key. 
-     * @return Name Filter filter. Values:
-- `origin`: Primary origin server.
-- `domain`: Domain name.
-- `resourceId`: Domain name ID.
-- `status`: Domain name status. Values: `online`, `offline`, and `processing`.
-- `serviceType`: Service type. Values: `web`, `download`, `media`, `hybrid` and `dynamic`.
-- `projectId`: Project ID.
-- `domainType`: Primary origin type. Values: `cname` (customer origin), `COS` (COS origin), `third_party` (third-party object storage origin), and `igtm` (IGTM origin).
-- `fullUrlCache`: Whether to enable path cache. Values: `on`, `off`.
-- `https`: Whether to configure HTTPS. Values: `on`, `off` and `processing`.
-- `originPullProtocol`: Origin-pull protocol type. Value: `http`, `follow`, and `https`.
-- `tagKey`: Tag key.
+     * Get Filter field name. supported list as follows:.
+-`Origin`: specifies the primary origin server.
+-Domain name. specifies the domain name.
+-resourceId: domain id.
+-Status: specifies the domain name status. valid values: online, offline, processing, deleted.
+-serviceType: specifies the business type. valid values: web, download, media, hybrid, dynamic.
+-projectId: specifies the project ID.
+-domainType: specifies the primary origin server type. valid values: cname (self-owned origin), cos (cloud object storage integration), third_party (third-party object storage), igtm (igtm multi-active origin).
+-fullUrlCache. specifies full path cache. valid values: on, off.
+-Specifies whether to configure https. valid values: on, off, processing.
+-originPullProtocol: specifies the origin-pull protocol. valid values: http, follow, https.
+-tagKey: specifies the Tag key. 
+     * @return Name Filter field name. supported list as follows:.
+-`Origin`: specifies the primary origin server.
+-Domain name. specifies the domain name.
+-resourceId: domain id.
+-Status: specifies the domain name status. valid values: online, offline, processing, deleted.
+-serviceType: specifies the business type. valid values: web, download, media, hybrid, dynamic.
+-projectId: specifies the project ID.
+-domainType: specifies the primary origin server type. valid values: cname (self-owned origin), cos (cloud object storage integration), third_party (third-party object storage), igtm (igtm multi-active origin).
+-fullUrlCache. specifies full path cache. valid values: on, off.
+-Specifies whether to configure https. valid values: on, off, processing.
+-originPullProtocol: specifies the origin-pull protocol. valid values: http, follow, https.
+-tagKey: specifies the Tag key.
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Filter filter. Values:
-- `origin`: Primary origin server.
-- `domain`: Domain name.
-- `resourceId`: Domain name ID.
-- `status`: Domain name status. Values: `online`, `offline`, and `processing`.
-- `serviceType`: Service type. Values: `web`, `download`, `media`, `hybrid` and `dynamic`.
-- `projectId`: Project ID.
-- `domainType`: Primary origin type. Values: `cname` (customer origin), `COS` (COS origin), `third_party` (third-party object storage origin), and `igtm` (IGTM origin).
-- `fullUrlCache`: Whether to enable path cache. Values: `on`, `off`.
-- `https`: Whether to configure HTTPS. Values: `on`, `off` and `processing`.
-- `originPullProtocol`: Origin-pull protocol type. Value: `http`, `follow`, and `https`.
-- `tagKey`: Tag key.
-     * @param Name Filter filter. Values:
-- `origin`: Primary origin server.
-- `domain`: Domain name.
-- `resourceId`: Domain name ID.
-- `status`: Domain name status. Values: `online`, `offline`, and `processing`.
-- `serviceType`: Service type. Values: `web`, `download`, `media`, `hybrid` and `dynamic`.
-- `projectId`: Project ID.
-- `domainType`: Primary origin type. Values: `cname` (customer origin), `COS` (COS origin), `third_party` (third-party object storage origin), and `igtm` (IGTM origin).
-- `fullUrlCache`: Whether to enable path cache. Values: `on`, `off`.
-- `https`: Whether to configure HTTPS. Values: `on`, `off` and `processing`.
-- `originPullProtocol`: Origin-pull protocol type. Value: `http`, `follow`, and `https`.
-- `tagKey`: Tag key.
+     * Set Filter field name. supported list as follows:.
+-`Origin`: specifies the primary origin server.
+-Domain name. specifies the domain name.
+-resourceId: domain id.
+-Status: specifies the domain name status. valid values: online, offline, processing, deleted.
+-serviceType: specifies the business type. valid values: web, download, media, hybrid, dynamic.
+-projectId: specifies the project ID.
+-domainType: specifies the primary origin server type. valid values: cname (self-owned origin), cos (cloud object storage integration), third_party (third-party object storage), igtm (igtm multi-active origin).
+-fullUrlCache. specifies full path cache. valid values: on, off.
+-Specifies whether to configure https. valid values: on, off, processing.
+-originPullProtocol: specifies the origin-pull protocol. valid values: http, follow, https.
+-tagKey: specifies the Tag key.
+     * @param Name Filter field name. supported list as follows:.
+-`Origin`: specifies the primary origin server.
+-Domain name. specifies the domain name.
+-resourceId: domain id.
+-Status: specifies the domain name status. valid values: online, offline, processing, deleted.
+-serviceType: specifies the business type. valid values: web, download, media, hybrid, dynamic.
+-projectId: specifies the project ID.
+-domainType: specifies the primary origin server type. valid values: cname (self-owned origin), cos (cloud object storage integration), third_party (third-party object storage), igtm (igtm multi-active origin).
+-fullUrlCache. specifies full path cache. valid values: on, off.
+-Specifies whether to configure https. valid values: on, off, processing.
+-originPullProtocol: specifies the origin-pull protocol. valid values: http, follow, https.
+-tagKey: specifies the Tag key.
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get Filter field value. 
-     * @return Value Filter field value.
+     * Get Specifies the filter field value. the default maximum is 5. when Name is origin/domain and Fuzzy is true, the maximum is 1. 
+     * @return Value Specifies the filter field value. the default maximum is 5. when Name is origin/domain and Fuzzy is true, the maximum is 1.
      */
     public String [] getValue() {
         return this.Value;
     }
 
     /**
-     * Set Filter field value.
-     * @param Value Filter field value.
+     * Set Specifies the filter field value. the default maximum is 5. when Name is origin/domain and Fuzzy is true, the maximum is 1.
+     * @param Value Specifies the filter field value. the default maximum is 5. when Name is origin/domain and Fuzzy is true, the maximum is 1.
      */
     public void setValue(String [] Value) {
         this.Value = Value;

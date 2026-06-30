@@ -24,16 +24,14 @@ import java.util.HashMap;
 public class DescribePushTasksResponse extends AbstractModel {
 
     /**
-    * Prefetch history
-Note: This field may return `null`, indicating that no valid value can be obtained.
+    * Preheating history.
     */
     @SerializedName("PushLogs")
     @Expose
     private PushTask [] PushLogs;
 
     /**
-    * Total number of tasks, which is used for pagination.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+    * Total number of tasks. for pagination.
     */
     @SerializedName("TotalCount")
     @Expose
@@ -47,40 +45,32 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     private String RequestId;
 
     /**
-     * Get Prefetch history
-Note: This field may return `null`, indicating that no valid value can be obtained. 
-     * @return PushLogs Prefetch history
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Get Preheating history. 
+     * @return PushLogs Preheating history.
      */
     public PushTask [] getPushLogs() {
         return this.PushLogs;
     }
 
     /**
-     * Set Prefetch history
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param PushLogs Prefetch history
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Set Preheating history.
+     * @param PushLogs Preheating history.
      */
     public void setPushLogs(PushTask [] PushLogs) {
         this.PushLogs = PushLogs;
     }
 
     /**
-     * Get Total number of tasks, which is used for pagination.
-Note: This field may return `null`, indicating that no valid value can be obtained. 
-     * @return TotalCount Total number of tasks, which is used for pagination.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Get Total number of tasks. for pagination. 
+     * @return TotalCount Total number of tasks. for pagination.
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set Total number of tasks, which is used for pagination.
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param TotalCount Total number of tasks, which is used for pagination.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Set Total number of tasks. for pagination.
+     * @param TotalCount Total number of tasks. for pagination.
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

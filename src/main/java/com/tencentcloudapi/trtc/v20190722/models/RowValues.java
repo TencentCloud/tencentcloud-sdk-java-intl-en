@@ -24,26 +24,54 @@ import java.util.HashMap;
 public class RowValues extends AbstractModel {
 
     /**
-    * Data value
+    * Data value.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("RowValue")
     @Expose
     private Long [] RowValue;
 
     /**
-     * Get Data value 
-     * @return RowValue Data value
+    * Data value.
+    */
+    @SerializedName("RowValueFloat")
+    @Expose
+    private Float [] RowValueFloat;
+
+    /**
+     * Get Data value.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return RowValue Data value.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long [] getRowValue() {
         return this.RowValue;
     }
 
     /**
-     * Set Data value
-     * @param RowValue Data value
+     * Set Data value.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param RowValue Data value.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setRowValue(Long [] RowValue) {
         this.RowValue = RowValue;
+    }
+
+    /**
+     * Get Data value. 
+     * @return RowValueFloat Data value.
+     */
+    public Float [] getRowValueFloat() {
+        return this.RowValueFloat;
+    }
+
+    /**
+     * Set Data value.
+     * @param RowValueFloat Data value.
+     */
+    public void setRowValueFloat(Float [] RowValueFloat) {
+        this.RowValueFloat = RowValueFloat;
     }
 
     public RowValues() {
@@ -60,6 +88,12 @@ public class RowValues extends AbstractModel {
                 this.RowValue[i] = new Long(source.RowValue[i]);
             }
         }
+        if (source.RowValueFloat != null) {
+            this.RowValueFloat = new Float[source.RowValueFloat.length];
+            for (int i = 0; i < source.RowValueFloat.length; i++) {
+                this.RowValueFloat[i] = new Float(source.RowValueFloat[i]);
+            }
+        }
     }
 
 
@@ -68,6 +102,7 @@ public class RowValues extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "RowValue.", this.RowValue);
+        this.setParamArraySimple(map, prefix + "RowValueFloat.", this.RowValueFloat);
 
     }
 }

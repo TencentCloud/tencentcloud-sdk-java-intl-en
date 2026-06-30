@@ -31,7 +31,7 @@ public class DescribeDomainsConfigRequest extends AbstractModel {
     private Long Offset;
 
     /**
-    * Limit on paginated queries. Default value: 100. Maximum value: 1000.
+    * Number limit of paginated query. default value: 100. maximum settable: 100.
     */
     @SerializedName("Limit")
     @Expose
@@ -68,16 +68,16 @@ public class DescribeDomainsConfigRequest extends AbstractModel {
     }
 
     /**
-     * Get Limit on paginated queries. Default value: 100. Maximum value: 1000. 
-     * @return Limit Limit on paginated queries. Default value: 100. Maximum value: 1000.
+     * Get Number limit of paginated query. default value: 100. maximum settable: 100. 
+     * @return Limit Number limit of paginated query. default value: 100. maximum settable: 100.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Limit on paginated queries. Default value: 100. Maximum value: 1000.
-     * @param Limit Limit on paginated queries. Default value: 100. Maximum value: 1000.
+     * Set Number limit of paginated query. default value: 100. maximum settable: 100.
+     * @param Limit Number limit of paginated query. default value: 100. maximum settable: 100.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

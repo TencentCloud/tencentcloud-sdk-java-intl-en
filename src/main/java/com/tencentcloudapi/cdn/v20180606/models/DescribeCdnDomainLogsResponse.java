@@ -24,8 +24,8 @@ import java.util.HashMap;
 public class DescribeCdnDomainLogsResponse extends AbstractModel {
 
     /**
-    * Download link of the log package.
-You can open the link to download a .gz log package that contains all log files without extension.
+    * Specifies the download url of the log package.
+Download content is a compression package with the gz suffix. after decompression, it becomes a text file without an extension. link validity period is 1 day.
     */
     @SerializedName("DomainLogs")
     @Expose
@@ -46,20 +46,20 @@ You can open the link to download a .gz log package that contains all log files 
     private String RequestId;
 
     /**
-     * Get Download link of the log package.
-You can open the link to download a .gz log package that contains all log files without extension. 
-     * @return DomainLogs Download link of the log package.
-You can open the link to download a .gz log package that contains all log files without extension.
+     * Get Specifies the download url of the log package.
+Download content is a compression package with the gz suffix. after decompression, it becomes a text file without an extension. link validity period is 1 day. 
+     * @return DomainLogs Specifies the download url of the log package.
+Download content is a compression package with the gz suffix. after decompression, it becomes a text file without an extension. link validity period is 1 day.
      */
     public DomainLog [] getDomainLogs() {
         return this.DomainLogs;
     }
 
     /**
-     * Set Download link of the log package.
-You can open the link to download a .gz log package that contains all log files without extension.
-     * @param DomainLogs Download link of the log package.
-You can open the link to download a .gz log package that contains all log files without extension.
+     * Set Specifies the download url of the log package.
+Download content is a compression package with the gz suffix. after decompression, it becomes a text file without an extension. link validity period is 1 day.
+     * @param DomainLogs Specifies the download url of the log package.
+Download content is a compression package with the gz suffix. after decompression, it becomes a text file without an extension. link validity period is 1 day.
      */
     public void setDomainLogs(DomainLog [] DomainLogs) {
         this.DomainLogs = DomainLogs;

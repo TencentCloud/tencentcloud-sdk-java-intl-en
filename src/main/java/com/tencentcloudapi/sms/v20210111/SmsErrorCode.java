@@ -51,6 +51,9 @@ public enum SmsErrorCode {
      /* Non-Root accounts cannot use the template list pull feature. You can use the TencentCloud API key of your root account to call the API. */
      FAILEDOPERATION_PROHIBITSUBACCOUNTUSE("FailedOperation.ProhibitSubAccountUse"),
      
+     /*  */
+     FAILEDOPERATION_QUALIFICATIONIDNOTAPPROVED("FailedOperation.QualificationIdNotApproved"),
+     
      /* The signature ID does not exist. */
      FAILEDOPERATION_SIGNIDNOTEXIST("FailedOperation.SignIdNotExist"),
      
@@ -170,6 +173,9 @@ public enum SmsErrorCode {
      
      /* URLs are not allowed in template variables. */
      INVALIDPARAMETERVALUE_PROHIBITEDUSEURLINTEMPLATEPARAMETER("InvalidParameterValue.ProhibitedUseUrlInTemplateParameter"),
+     
+     /*  */
+     INVALIDPARAMETERVALUE_QUALIFICATIONIDNOTFOUND("InvalidParameterValue.QualificationIdNotFound"),
      
      /* The `SdkAppId` does not exist. */
      INVALIDPARAMETERVALUE_SDKAPPIDNOTEXIST("InvalidParameterValue.SdkAppIdNotExist"),

@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cdn.v20180606.models;
+package com.tencentcloudapi.sqlserver.v20180328.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,43 +21,43 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeCdnIpRequest extends AbstractModel {
+public class ModifyDBInstanceRenewFlagRequest extends AbstractModel {
 
     /**
-    * IP list you want to query. supports 1-20 ip inquiries at a time.
+    * Instance renewal flag information.
     */
-    @SerializedName("Ips")
+    @SerializedName("RenewFlags")
     @Expose
-    private String [] Ips;
+    private InstanceRenewInfo [] RenewFlags;
 
     /**
-     * Get IP list you want to query. supports 1-20 ip inquiries at a time. 
-     * @return Ips IP list you want to query. supports 1-20 ip inquiries at a time.
+     * Get Instance renewal flag information. 
+     * @return RenewFlags Instance renewal flag information.
      */
-    public String [] getIps() {
-        return this.Ips;
+    public InstanceRenewInfo [] getRenewFlags() {
+        return this.RenewFlags;
     }
 
     /**
-     * Set IP list you want to query. supports 1-20 ip inquiries at a time.
-     * @param Ips IP list you want to query. supports 1-20 ip inquiries at a time.
+     * Set Instance renewal flag information.
+     * @param RenewFlags Instance renewal flag information.
      */
-    public void setIps(String [] Ips) {
-        this.Ips = Ips;
+    public void setRenewFlags(InstanceRenewInfo [] RenewFlags) {
+        this.RenewFlags = RenewFlags;
     }
 
-    public DescribeCdnIpRequest() {
+    public ModifyDBInstanceRenewFlagRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeCdnIpRequest(DescribeCdnIpRequest source) {
-        if (source.Ips != null) {
-            this.Ips = new String[source.Ips.length];
-            for (int i = 0; i < source.Ips.length; i++) {
-                this.Ips[i] = new String(source.Ips[i]);
+    public ModifyDBInstanceRenewFlagRequest(ModifyDBInstanceRenewFlagRequest source) {
+        if (source.RenewFlags != null) {
+            this.RenewFlags = new InstanceRenewInfo[source.RenewFlags.length];
+            for (int i = 0; i < source.RenewFlags.length; i++) {
+                this.RenewFlags[i] = new InstanceRenewInfo(source.RenewFlags[i]);
             }
         }
     }
@@ -67,7 +67,7 @@ public class DescribeCdnIpRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArraySimple(map, prefix + "Ips.", this.Ips);
+        this.setParamArrayObj(map, prefix + "RenewFlags.", this.RenewFlags);
 
     }
 }

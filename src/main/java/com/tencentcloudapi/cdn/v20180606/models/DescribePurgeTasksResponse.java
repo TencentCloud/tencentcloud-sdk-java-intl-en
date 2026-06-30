@@ -24,16 +24,14 @@ import java.util.HashMap;
 public class DescribePurgeTasksResponse extends AbstractModel {
 
     /**
-    * Detailed purge record.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+    * Specifies the detailed refresh record.
     */
     @SerializedName("PurgeLogs")
     @Expose
     private PurgeTask [] PurgeLogs;
 
     /**
-    * Total number of tasks, which is used for pagination.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+    * Total number of tasks. for pagination.
     */
     @SerializedName("TotalCount")
     @Expose
@@ -47,40 +45,32 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     private String RequestId;
 
     /**
-     * Get Detailed purge record.
-Note: This field may return `null`, indicating that no valid value can be obtained. 
-     * @return PurgeLogs Detailed purge record.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Get Specifies the detailed refresh record. 
+     * @return PurgeLogs Specifies the detailed refresh record.
      */
     public PurgeTask [] getPurgeLogs() {
         return this.PurgeLogs;
     }
 
     /**
-     * Set Detailed purge record.
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param PurgeLogs Detailed purge record.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Set Specifies the detailed refresh record.
+     * @param PurgeLogs Specifies the detailed refresh record.
      */
     public void setPurgeLogs(PurgeTask [] PurgeLogs) {
         this.PurgeLogs = PurgeLogs;
     }
 
     /**
-     * Get Total number of tasks, which is used for pagination.
-Note: This field may return `null`, indicating that no valid value can be obtained. 
-     * @return TotalCount Total number of tasks, which is used for pagination.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Get Total number of tasks. for pagination. 
+     * @return TotalCount Total number of tasks. for pagination.
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set Total number of tasks, which is used for pagination.
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param TotalCount Total number of tasks, which is used for pagination.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Set Total number of tasks. for pagination.
+     * @param TotalCount Total number of tasks. for pagination.
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

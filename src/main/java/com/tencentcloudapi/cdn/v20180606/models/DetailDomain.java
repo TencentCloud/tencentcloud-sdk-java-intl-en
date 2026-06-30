@@ -570,6 +570,21 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private OthersPrivateAccess OthersPrivateAccess;
 
     /**
+    * Specifies the blocklist parameter.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("ParamFilter")
+    @Expose
+    private ParamFilter ParamFilter;
+
+    /**
+    * 
+    */
+    @SerializedName("AutoGuard")
+    @Expose
+    private AutoGuard AutoGuard;
+
+    /**
      * Get Domain name ID 
      * @return ResourceId Domain name ID
      */
@@ -1961,6 +1976,42 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.OthersPrivateAccess = OthersPrivateAccess;
     }
 
+    /**
+     * Get Specifies the blocklist parameter.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return ParamFilter Specifies the blocklist parameter.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public ParamFilter getParamFilter() {
+        return this.ParamFilter;
+    }
+
+    /**
+     * Set Specifies the blocklist parameter.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ParamFilter Specifies the blocklist parameter.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setParamFilter(ParamFilter ParamFilter) {
+        this.ParamFilter = ParamFilter;
+    }
+
+    /**
+     * Get  
+     * @return AutoGuard 
+     */
+    public AutoGuard getAutoGuard() {
+        return this.AutoGuard;
+    }
+
+    /**
+     * Set 
+     * @param AutoGuard 
+     */
+    public void setAutoGuard(AutoGuard AutoGuard) {
+        this.AutoGuard = AutoGuard;
+    }
+
     public DetailDomain() {
     }
 
@@ -2176,6 +2227,12 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         if (source.OthersPrivateAccess != null) {
             this.OthersPrivateAccess = new OthersPrivateAccess(source.OthersPrivateAccess);
         }
+        if (source.ParamFilter != null) {
+            this.ParamFilter = new ParamFilter(source.ParamFilter);
+        }
+        if (source.AutoGuard != null) {
+            this.AutoGuard = new AutoGuard(source.AutoGuard);
+        }
     }
 
 
@@ -2249,6 +2306,8 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.setParamObj(map, prefix + "QnPrivateAccess.", this.QnPrivateAccess);
         this.setParamObj(map, prefix + "HttpsBilling.", this.HttpsBilling);
         this.setParamObj(map, prefix + "OthersPrivateAccess.", this.OthersPrivateAccess);
+        this.setParamObj(map, prefix + "ParamFilter.", this.ParamFilter);
+        this.setParamObj(map, prefix + "AutoGuard.", this.AutoGuard);
 
     }
 }

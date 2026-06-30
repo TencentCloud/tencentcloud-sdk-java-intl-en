@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cdn.v20180606.models;
+package com.tencentcloudapi.sqlserver.v20180328.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,44 +21,41 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeCdnIpRequest extends AbstractModel {
+public class StartMigrationCheckRequest extends AbstractModel {
 
     /**
-    * IP list you want to query. supports 1-20 ip inquiries at a time.
+    * Migration task ID.
     */
-    @SerializedName("Ips")
+    @SerializedName("MigrateId")
     @Expose
-    private String [] Ips;
+    private Long MigrateId;
 
     /**
-     * Get IP list you want to query. supports 1-20 ip inquiries at a time. 
-     * @return Ips IP list you want to query. supports 1-20 ip inquiries at a time.
+     * Get Migration task ID. 
+     * @return MigrateId Migration task ID.
      */
-    public String [] getIps() {
-        return this.Ips;
+    public Long getMigrateId() {
+        return this.MigrateId;
     }
 
     /**
-     * Set IP list you want to query. supports 1-20 ip inquiries at a time.
-     * @param Ips IP list you want to query. supports 1-20 ip inquiries at a time.
+     * Set Migration task ID.
+     * @param MigrateId Migration task ID.
      */
-    public void setIps(String [] Ips) {
-        this.Ips = Ips;
+    public void setMigrateId(Long MigrateId) {
+        this.MigrateId = MigrateId;
     }
 
-    public DescribeCdnIpRequest() {
+    public StartMigrationCheckRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeCdnIpRequest(DescribeCdnIpRequest source) {
-        if (source.Ips != null) {
-            this.Ips = new String[source.Ips.length];
-            for (int i = 0; i < source.Ips.length; i++) {
-                this.Ips[i] = new String(source.Ips[i]);
-            }
+    public StartMigrationCheckRequest(StartMigrationCheckRequest source) {
+        if (source.MigrateId != null) {
+            this.MigrateId = new Long(source.MigrateId);
         }
     }
 
@@ -67,7 +64,7 @@ public class DescribeCdnIpRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArraySimple(map, prefix + "Ips.", this.Ips);
+        this.setParamSimple(map, prefix + "MigrateId", this.MigrateId);
 
     }
 }

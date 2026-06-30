@@ -24,7 +24,8 @@ import java.util.HashMap;
 public class DescribeTRTCMarketQualityDataResponse extends AbstractModel {
 
     /**
-    * TRTC Data Dashboard output parameters
+    * TRTC monitoring data output parameters.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Data")
     @Expose
@@ -38,16 +39,20 @@ public class DescribeTRTCMarketQualityDataResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get TRTC Data Dashboard output parameters 
-     * @return Data TRTC Data Dashboard output parameters
+     * Get TRTC monitoring data output parameters.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Data TRTC monitoring data output parameters.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public TRTCDataResult getData() {
         return this.Data;
     }
 
     /**
-     * Set TRTC Data Dashboard output parameters
-     * @param Data TRTC Data Dashboard output parameters
+     * Set TRTC monitoring data output parameters.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Data TRTC monitoring data output parameters.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setData(TRTCDataResult Data) {
         this.Data = Data;

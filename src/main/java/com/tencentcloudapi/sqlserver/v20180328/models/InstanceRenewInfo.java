@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cdn.v20180606.models;
+package com.tencentcloudapi.sqlserver.v20180328.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,67 +21,67 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ScdnWafRule extends AbstractModel {
+public class InstanceRenewInfo extends AbstractModel {
 
     /**
-    * Attack type
+    * 
     */
-    @SerializedName("AttackType")
+    @SerializedName("InstanceId")
     @Expose
-    private String AttackType;
+    private String InstanceId;
 
     /**
-    * Defense action. Valid value: `observe`.
+    * 
     */
-    @SerializedName("Operate")
+    @SerializedName("RenewFlag")
     @Expose
-    private String Operate;
+    private Long RenewFlag;
 
     /**
-     * Get Attack type 
-     * @return AttackType Attack type
+     * Get  
+     * @return InstanceId 
      */
-    public String getAttackType() {
-        return this.AttackType;
+    public String getInstanceId() {
+        return this.InstanceId;
     }
 
     /**
-     * Set Attack type
-     * @param AttackType Attack type
+     * Set 
+     * @param InstanceId 
      */
-    public void setAttackType(String AttackType) {
-        this.AttackType = AttackType;
+    public void setInstanceId(String InstanceId) {
+        this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Defense action. Valid value: `observe`. 
-     * @return Operate Defense action. Valid value: `observe`.
+     * Get  
+     * @return RenewFlag 
      */
-    public String getOperate() {
-        return this.Operate;
+    public Long getRenewFlag() {
+        return this.RenewFlag;
     }
 
     /**
-     * Set Defense action. Valid value: `observe`.
-     * @param Operate Defense action. Valid value: `observe`.
+     * Set 
+     * @param RenewFlag 
      */
-    public void setOperate(String Operate) {
-        this.Operate = Operate;
+    public void setRenewFlag(Long RenewFlag) {
+        this.RenewFlag = RenewFlag;
     }
 
-    public ScdnWafRule() {
+    public InstanceRenewInfo() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public ScdnWafRule(ScdnWafRule source) {
-        if (source.AttackType != null) {
-            this.AttackType = new String(source.AttackType);
+    public InstanceRenewInfo(InstanceRenewInfo source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
         }
-        if (source.Operate != null) {
-            this.Operate = new String(source.Operate);
+        if (source.RenewFlag != null) {
+            this.RenewFlag = new Long(source.RenewFlag);
         }
     }
 
@@ -90,8 +90,8 @@ public class ScdnWafRule extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "AttackType", this.AttackType);
-        this.setParamSimple(map, prefix + "Operate", this.Operate);
+        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
+        this.setParamSimple(map, prefix + "RenewFlag", this.RenewFlag);
 
     }
 }

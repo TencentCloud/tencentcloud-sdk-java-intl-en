@@ -31,14 +31,14 @@ public class DescribeCdnDomainLogsRequest extends AbstractModel {
     private String Domain;
 
     /**
-    * Starting time, such as `2019-09-04 00:00:00`
+    * Start time.
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * End time, such as `2019-09-04 12:00:00`
+    * End time.
     */
     @SerializedName("EndTime")
     @Expose
@@ -59,19 +59,18 @@ public class DescribeCdnDomainLogsRequest extends AbstractModel {
     private Long Limit;
 
     /**
-    * Specifies a region for the query.
-`mainland`: specifies to return the download link of logs on acceleration within Mainland China;
-`overseas`: specifies to return the download link of logs on acceleration outside Mainland China;
-`global`: specifies to return a download link of logs on acceleration within Mainland China and a link of logs on acceleration outside Mainland China.
-Default value: `mainland`.
+    * Specifies the region for log download, defaults to mainland. valid values:.
+<li>mainland: specifies the download url for the domestic acceleration log package.</li>.
+<Li>Overseas: specifies the url for obtaining overseas acceleration logs package download.</li>.
+<li>global: simultaneously obtain domestic and overseas acceleration logs package download urls (separately packaged).</li>.
     */
     @SerializedName("Area")
     @Expose
     private String Area;
 
     /**
-    * Specifies the type of logs to download (only access logs supported).
-`access`: Access logs.
+    * Specifies the type of logs to download. valid values:.
+<Li>Access: specifies the access log.</li>.
     */
     @SerializedName("LogType")
     @Expose
@@ -94,32 +93,32 @@ Default value: `mainland`.
     }
 
     /**
-     * Get Starting time, such as `2019-09-04 00:00:00` 
-     * @return StartTime Starting time, such as `2019-09-04 00:00:00`
+     * Get Start time. 
+     * @return StartTime Start time.
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set Starting time, such as `2019-09-04 00:00:00`
-     * @param StartTime Starting time, such as `2019-09-04 00:00:00`
+     * Set Start time.
+     * @param StartTime Start time.
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get End time, such as `2019-09-04 12:00:00` 
-     * @return EndTime End time, such as `2019-09-04 12:00:00`
+     * Get End time. 
+     * @return EndTime End time.
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set End time, such as `2019-09-04 12:00:00`
-     * @param EndTime End time, such as `2019-09-04 12:00:00`
+     * Set End time.
+     * @param EndTime End time.
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
@@ -158,52 +157,48 @@ Default value: `mainland`.
     }
 
     /**
-     * Get Specifies a region for the query.
-`mainland`: specifies to return the download link of logs on acceleration within Mainland China;
-`overseas`: specifies to return the download link of logs on acceleration outside Mainland China;
-`global`: specifies to return a download link of logs on acceleration within Mainland China and a link of logs on acceleration outside Mainland China.
-Default value: `mainland`. 
-     * @return Area Specifies a region for the query.
-`mainland`: specifies to return the download link of logs on acceleration within Mainland China;
-`overseas`: specifies to return the download link of logs on acceleration outside Mainland China;
-`global`: specifies to return a download link of logs on acceleration within Mainland China and a link of logs on acceleration outside Mainland China.
-Default value: `mainland`.
+     * Get Specifies the region for log download, defaults to mainland. valid values:.
+<li>mainland: specifies the download url for the domestic acceleration log package.</li>.
+<Li>Overseas: specifies the url for obtaining overseas acceleration logs package download.</li>.
+<li>global: simultaneously obtain domestic and overseas acceleration logs package download urls (separately packaged).</li>. 
+     * @return Area Specifies the region for log download, defaults to mainland. valid values:.
+<li>mainland: specifies the download url for the domestic acceleration log package.</li>.
+<Li>Overseas: specifies the url for obtaining overseas acceleration logs package download.</li>.
+<li>global: simultaneously obtain domestic and overseas acceleration logs package download urls (separately packaged).</li>.
      */
     public String getArea() {
         return this.Area;
     }
 
     /**
-     * Set Specifies a region for the query.
-`mainland`: specifies to return the download link of logs on acceleration within Mainland China;
-`overseas`: specifies to return the download link of logs on acceleration outside Mainland China;
-`global`: specifies to return a download link of logs on acceleration within Mainland China and a link of logs on acceleration outside Mainland China.
-Default value: `mainland`.
-     * @param Area Specifies a region for the query.
-`mainland`: specifies to return the download link of logs on acceleration within Mainland China;
-`overseas`: specifies to return the download link of logs on acceleration outside Mainland China;
-`global`: specifies to return a download link of logs on acceleration within Mainland China and a link of logs on acceleration outside Mainland China.
-Default value: `mainland`.
+     * Set Specifies the region for log download, defaults to mainland. valid values:.
+<li>mainland: specifies the download url for the domestic acceleration log package.</li>.
+<Li>Overseas: specifies the url for obtaining overseas acceleration logs package download.</li>.
+<li>global: simultaneously obtain domestic and overseas acceleration logs package download urls (separately packaged).</li>.
+     * @param Area Specifies the region for log download, defaults to mainland. valid values:.
+<li>mainland: specifies the download url for the domestic acceleration log package.</li>.
+<Li>Overseas: specifies the url for obtaining overseas acceleration logs package download.</li>.
+<li>global: simultaneously obtain domestic and overseas acceleration logs package download urls (separately packaged).</li>.
      */
     public void setArea(String Area) {
         this.Area = Area;
     }
 
     /**
-     * Get Specifies the type of logs to download (only access logs supported).
-`access`: Access logs. 
-     * @return LogType Specifies the type of logs to download (only access logs supported).
-`access`: Access logs.
+     * Get Specifies the type of logs to download. valid values:.
+<Li>Access: specifies the access log.</li>. 
+     * @return LogType Specifies the type of logs to download. valid values:.
+<Li>Access: specifies the access log.</li>.
      */
     public String getLogType() {
         return this.LogType;
     }
 
     /**
-     * Set Specifies the type of logs to download (only access logs supported).
-`access`: Access logs.
-     * @param LogType Specifies the type of logs to download (only access logs supported).
-`access`: Access logs.
+     * Set Specifies the type of logs to download. valid values:.
+<Li>Access: specifies the access log.</li>.
+     * @param LogType Specifies the type of logs to download. valid values:.
+<Li>Access: specifies the access log.</li>.
      */
     public void setLogType(String LogType) {
         this.LogType = LogType;

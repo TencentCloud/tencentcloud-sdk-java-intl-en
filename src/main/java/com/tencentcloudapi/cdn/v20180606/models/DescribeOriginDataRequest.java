@@ -87,8 +87,8 @@ If the domain name information is specified, this parameter can be ignored.
     private String Interval;
 
     /**
-    * The aggregate data for multiple domain names is returned by default (false) when multiple `Domains` are passed in.
-You can set it to true to return the details for each Domain (the statusCode metric is currently not supported)
+    * Domains specifies multiple domain names to import. default (false) indicates aggregated data for multiple domain names.
+Specifies as required to be true, returns detailed data for each Domain (statusCode, 2xx, 3xx, 4xx, 5xx metrics not currently supported).
     */
     @SerializedName("Detail")
     @Expose
@@ -291,20 +291,20 @@ If the domain name information is specified, this parameter can be ignored.
     }
 
     /**
-     * Get The aggregate data for multiple domain names is returned by default (false) when multiple `Domains` are passed in.
-You can set it to true to return the details for each Domain (the statusCode metric is currently not supported) 
-     * @return Detail The aggregate data for multiple domain names is returned by default (false) when multiple `Domains` are passed in.
-You can set it to true to return the details for each Domain (the statusCode metric is currently not supported)
+     * Get Domains specifies multiple domain names to import. default (false) indicates aggregated data for multiple domain names.
+Specifies as required to be true, returns detailed data for each Domain (statusCode, 2xx, 3xx, 4xx, 5xx metrics not currently supported). 
+     * @return Detail Domains specifies multiple domain names to import. default (false) indicates aggregated data for multiple domain names.
+Specifies as required to be true, returns detailed data for each Domain (statusCode, 2xx, 3xx, 4xx, 5xx metrics not currently supported).
      */
     public Boolean getDetail() {
         return this.Detail;
     }
 
     /**
-     * Set The aggregate data for multiple domain names is returned by default (false) when multiple `Domains` are passed in.
-You can set it to true to return the details for each Domain (the statusCode metric is currently not supported)
-     * @param Detail The aggregate data for multiple domain names is returned by default (false) when multiple `Domains` are passed in.
-You can set it to true to return the details for each Domain (the statusCode metric is currently not supported)
+     * Set Domains specifies multiple domain names to import. default (false) indicates aggregated data for multiple domain names.
+Specifies as required to be true, returns detailed data for each Domain (statusCode, 2xx, 3xx, 4xx, 5xx metrics not currently supported).
+     * @param Detail Domains specifies multiple domain names to import. default (false) indicates aggregated data for multiple domain names.
+Specifies as required to be true, returns detailed data for each Domain (statusCode, 2xx, 3xx, 4xx, 5xx metrics not currently supported).
      */
     public void setDetail(Boolean Detail) {
         this.Detail = Detail;

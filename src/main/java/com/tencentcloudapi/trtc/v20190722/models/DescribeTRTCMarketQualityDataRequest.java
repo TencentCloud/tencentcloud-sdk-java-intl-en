@@ -24,105 +24,128 @@ import java.util.HashMap;
 public class DescribeTRTCMarketQualityDataRequest extends AbstractModel {
 
     /**
-    * User SDKAppId (e.g., 1400xxxxxx)
+    * User SdkAppId (for example: 1400xxxxxx).
     */
     @SerializedName("SdkAppId")
     @Expose
     private String SdkAppId;
 
     /**
-    * Query start time, format is YYYY-MM-DD. (The query time range depends on the monitoring dashboard function version, the premium edition can query up to 30 days)
+    * Query start time, and the format is YYYY-MM-DD. (query time range is based on the monitoring dashboard feature version. the basic version supports querying the last 30 days, and the advanced version supports querying the last 60 days).
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * Query end time, format is YYYY-MM-DD.
+    * Query end time in YYYY-MM-DD format.
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-    * The granularity of the returned data, which can be set to the following values:
-d: by day. This returns data for the entire UTC day of the query time range. 
-h: by hour. This returns data for the entire UTC hour of the query time range.
+    * The granularity of returned data supports the following values:.
+d: day. at this time, return the data of UTC time at zero point within a specified time range.
+h: billed hourly. at this point, return the data of full hour UTC time within a specified time range.
     */
     @SerializedName("Period")
     @Expose
     private String Period;
 
     /**
-     * Get User SDKAppId (e.g., 1400xxxxxx) 
-     * @return SdkAppId User SDKAppId (e.g., 1400xxxxxx)
+    * Whether the returned data is a decimal.
+    */
+    @SerializedName("IsFloat")
+    @Expose
+    private Boolean IsFloat;
+
+    /**
+     * Get User SdkAppId (for example: 1400xxxxxx). 
+     * @return SdkAppId User SdkAppId (for example: 1400xxxxxx).
      */
     public String getSdkAppId() {
         return this.SdkAppId;
     }
 
     /**
-     * Set User SDKAppId (e.g., 1400xxxxxx)
-     * @param SdkAppId User SDKAppId (e.g., 1400xxxxxx)
+     * Set User SdkAppId (for example: 1400xxxxxx).
+     * @param SdkAppId User SdkAppId (for example: 1400xxxxxx).
      */
     public void setSdkAppId(String SdkAppId) {
         this.SdkAppId = SdkAppId;
     }
 
     /**
-     * Get Query start time, format is YYYY-MM-DD. (The query time range depends on the monitoring dashboard function version, the premium edition can query up to 30 days) 
-     * @return StartTime Query start time, format is YYYY-MM-DD. (The query time range depends on the monitoring dashboard function version, the premium edition can query up to 30 days)
+     * Get Query start time, and the format is YYYY-MM-DD. (query time range is based on the monitoring dashboard feature version. the basic version supports querying the last 30 days, and the advanced version supports querying the last 60 days). 
+     * @return StartTime Query start time, and the format is YYYY-MM-DD. (query time range is based on the monitoring dashboard feature version. the basic version supports querying the last 30 days, and the advanced version supports querying the last 60 days).
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set Query start time, format is YYYY-MM-DD. (The query time range depends on the monitoring dashboard function version, the premium edition can query up to 30 days)
-     * @param StartTime Query start time, format is YYYY-MM-DD. (The query time range depends on the monitoring dashboard function version, the premium edition can query up to 30 days)
+     * Set Query start time, and the format is YYYY-MM-DD. (query time range is based on the monitoring dashboard feature version. the basic version supports querying the last 30 days, and the advanced version supports querying the last 60 days).
+     * @param StartTime Query start time, and the format is YYYY-MM-DD. (query time range is based on the monitoring dashboard feature version. the basic version supports querying the last 30 days, and the advanced version supports querying the last 60 days).
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get Query end time, format is YYYY-MM-DD. 
-     * @return EndTime Query end time, format is YYYY-MM-DD.
+     * Get Query end time in YYYY-MM-DD format. 
+     * @return EndTime Query end time in YYYY-MM-DD format.
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set Query end time, format is YYYY-MM-DD.
-     * @param EndTime Query end time, format is YYYY-MM-DD.
+     * Set Query end time in YYYY-MM-DD format.
+     * @param EndTime Query end time in YYYY-MM-DD format.
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get The granularity of the returned data, which can be set to the following values:
-d: by day. This returns data for the entire UTC day of the query time range. 
-h: by hour. This returns data for the entire UTC hour of the query time range. 
-     * @return Period The granularity of the returned data, which can be set to the following values:
-d: by day. This returns data for the entire UTC day of the query time range. 
-h: by hour. This returns data for the entire UTC hour of the query time range.
+     * Get The granularity of returned data supports the following values:.
+d: day. at this time, return the data of UTC time at zero point within a specified time range.
+h: billed hourly. at this point, return the data of full hour UTC time within a specified time range. 
+     * @return Period The granularity of returned data supports the following values:.
+d: day. at this time, return the data of UTC time at zero point within a specified time range.
+h: billed hourly. at this point, return the data of full hour UTC time within a specified time range.
      */
     public String getPeriod() {
         return this.Period;
     }
 
     /**
-     * Set The granularity of the returned data, which can be set to the following values:
-d: by day. This returns data for the entire UTC day of the query time range. 
-h: by hour. This returns data for the entire UTC hour of the query time range.
-     * @param Period The granularity of the returned data, which can be set to the following values:
-d: by day. This returns data for the entire UTC day of the query time range. 
-h: by hour. This returns data for the entire UTC hour of the query time range.
+     * Set The granularity of returned data supports the following values:.
+d: day. at this time, return the data of UTC time at zero point within a specified time range.
+h: billed hourly. at this point, return the data of full hour UTC time within a specified time range.
+     * @param Period The granularity of returned data supports the following values:.
+d: day. at this time, return the data of UTC time at zero point within a specified time range.
+h: billed hourly. at this point, return the data of full hour UTC time within a specified time range.
      */
     public void setPeriod(String Period) {
         this.Period = Period;
+    }
+
+    /**
+     * Get Whether the returned data is a decimal. 
+     * @return IsFloat Whether the returned data is a decimal.
+     */
+    public Boolean getIsFloat() {
+        return this.IsFloat;
+    }
+
+    /**
+     * Set Whether the returned data is a decimal.
+     * @param IsFloat Whether the returned data is a decimal.
+     */
+    public void setIsFloat(Boolean IsFloat) {
+        this.IsFloat = IsFloat;
     }
 
     public DescribeTRTCMarketQualityDataRequest() {
@@ -145,6 +168,9 @@ h: by hour. This returns data for the entire UTC hour of the query time range.
         if (source.Period != null) {
             this.Period = new String(source.Period);
         }
+        if (source.IsFloat != null) {
+            this.IsFloat = new Boolean(source.IsFloat);
+        }
     }
 
 
@@ -156,6 +182,7 @@ h: by hour. This returns data for the entire UTC hour of the query time range.
         this.setParamSimple(map, prefix + "StartTime", this.StartTime);
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
         this.setParamSimple(map, prefix + "Period", this.Period);
+        this.setParamSimple(map, prefix + "IsFloat", this.IsFloat);
 
     }
 }

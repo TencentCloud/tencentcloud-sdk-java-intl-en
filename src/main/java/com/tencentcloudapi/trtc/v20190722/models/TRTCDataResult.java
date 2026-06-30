@@ -24,69 +24,84 @@ import java.util.HashMap;
 public class TRTCDataResult extends AbstractModel {
 
     /**
-    * StatementID value, fixed at 0 for Monitoring Dashboard.
+    * The StatementID value is fixed as 0 in the monitoring dashboard.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("StatementID")
     @Expose
     private Long StatementID;
 
     /**
-    * Query result data, returned in Columns-Values format.
+    * Query result data is returned in Columns-Values format.	
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Series")
     @Expose
     private SeriesInfos [] Series;
 
     /**
-    * Total value, fixed at 1 for Monitoring Dashboard.
+    * The Total value is fixed as 1 in the dashboard feature monitoring.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Total")
     @Expose
     private Long Total;
 
     /**
-     * Get StatementID value, fixed at 0 for Monitoring Dashboard. 
-     * @return StatementID StatementID value, fixed at 0 for Monitoring Dashboard.
+     * Get The StatementID value is fixed as 0 in the monitoring dashboard.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return StatementID The StatementID value is fixed as 0 in the monitoring dashboard.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getStatementID() {
         return this.StatementID;
     }
 
     /**
-     * Set StatementID value, fixed at 0 for Monitoring Dashboard.
-     * @param StatementID StatementID value, fixed at 0 for Monitoring Dashboard.
+     * Set The StatementID value is fixed as 0 in the monitoring dashboard.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param StatementID The StatementID value is fixed as 0 in the monitoring dashboard.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setStatementID(Long StatementID) {
         this.StatementID = StatementID;
     }
 
     /**
-     * Get Query result data, returned in Columns-Values format. 
-     * @return Series Query result data, returned in Columns-Values format.
+     * Get Query result data is returned in Columns-Values format.	
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Series Query result data is returned in Columns-Values format.	
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public SeriesInfos [] getSeries() {
         return this.Series;
     }
 
     /**
-     * Set Query result data, returned in Columns-Values format.
-     * @param Series Query result data, returned in Columns-Values format.
+     * Set Query result data is returned in Columns-Values format.	
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Series Query result data is returned in Columns-Values format.	
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setSeries(SeriesInfos [] Series) {
         this.Series = Series;
     }
 
     /**
-     * Get Total value, fixed at 1 for Monitoring Dashboard. 
-     * @return Total Total value, fixed at 1 for Monitoring Dashboard.
+     * Get The Total value is fixed as 1 in the dashboard feature monitoring.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Total The Total value is fixed as 1 in the dashboard feature monitoring.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getTotal() {
         return this.Total;
     }
 
     /**
-     * Set Total value, fixed at 1 for Monitoring Dashboard.
-     * @param Total Total value, fixed at 1 for Monitoring Dashboard.
+     * Set The Total value is fixed as 1 in the dashboard feature monitoring.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Total The Total value is fixed as 1 in the dashboard feature monitoring.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setTotal(Long Total) {
         this.Total = Total;

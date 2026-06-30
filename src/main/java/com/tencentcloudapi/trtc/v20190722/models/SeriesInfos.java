@@ -24,46 +24,56 @@ import java.util.HashMap;
 public class SeriesInfos extends AbstractModel {
 
     /**
-    * Data columns
+    * Data column
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Columns")
     @Expose
     private String [] Columns;
 
     /**
-    * Data values
+    * Data value.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Values")
     @Expose
     private RowValues [] Values;
 
     /**
-     * Get Data columns 
-     * @return Columns Data columns
+     * Get Data column
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Columns Data column
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String [] getColumns() {
         return this.Columns;
     }
 
     /**
-     * Set Data columns
-     * @param Columns Data columns
+     * Set Data column
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Columns Data column
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setColumns(String [] Columns) {
         this.Columns = Columns;
     }
 
     /**
-     * Get Data values 
-     * @return Values Data values
+     * Get Data value.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Values Data value.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public RowValues [] getValues() {
         return this.Values;
     }
 
     /**
-     * Set Data values
-     * @param Values Data values
+     * Set Data value.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Values Data value.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setValues(RowValues [] Values) {
         this.Values = Values;

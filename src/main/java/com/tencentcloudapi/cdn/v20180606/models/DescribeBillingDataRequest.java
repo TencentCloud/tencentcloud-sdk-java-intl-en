@@ -106,7 +106,7 @@ Default value: `bandwidth`
     private String Product;
 
     /**
-    * Specify the time zone for query time, default UTC+08:00
+    * 
     */
     @SerializedName("TimeZone")
     @Expose
@@ -333,16 +333,16 @@ Default value: `bandwidth`
     }
 
     /**
-     * Get Specify the time zone for query time, default UTC+08:00 
-     * @return TimeZone Specify the time zone for query time, default UTC+08:00
+     * Get  
+     * @return TimeZone 
      */
     public String getTimeZone() {
         return this.TimeZone;
     }
 
     /**
-     * Set Specify the time zone for query time, default UTC+08:00
-     * @param TimeZone Specify the time zone for query time, default UTC+08:00
+     * Set 
+     * @param TimeZone 
      */
     public void setTimeZone(String TimeZone) {
         this.TimeZone = TimeZone;

@@ -25,7 +25,6 @@ public class CreateClsLogTopicResponse extends AbstractModel {
 
     /**
     * Topic ID
-Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("TopicId")
     @Expose
@@ -39,10 +38,8 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     private String RequestId;
 
     /**
-     * Get Topic ID
-Note: This field may return `null`, indicating that no valid value can be obtained. 
+     * Get Topic ID 
      * @return TopicId Topic ID
-Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public String getTopicId() {
         return this.TopicId;
@@ -50,9 +47,7 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 
     /**
      * Set Topic ID
-Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param TopicId Topic ID
-Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setTopicId(String TopicId) {
         this.TopicId = TopicId;

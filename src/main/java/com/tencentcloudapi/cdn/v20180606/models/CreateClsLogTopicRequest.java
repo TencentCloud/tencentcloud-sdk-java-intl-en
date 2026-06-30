@@ -52,6 +52,13 @@ public class CreateClsLogTopicRequest extends AbstractModel {
     private DomainAreaConfig [] DomainAreaConfigs;
 
     /**
+    * Specifies whether to inherit the domain name tag. default false.
+    */
+    @SerializedName("InheritDomainTags")
+    @Expose
+    private Boolean InheritDomainTags;
+
+    /**
      * Get Log topic name 
      * @return TopicName Log topic name
      */
@@ -115,6 +122,22 @@ public class CreateClsLogTopicRequest extends AbstractModel {
         this.DomainAreaConfigs = DomainAreaConfigs;
     }
 
+    /**
+     * Get Specifies whether to inherit the domain name tag. default false. 
+     * @return InheritDomainTags Specifies whether to inherit the domain name tag. default false.
+     */
+    public Boolean getInheritDomainTags() {
+        return this.InheritDomainTags;
+    }
+
+    /**
+     * Set Specifies whether to inherit the domain name tag. default false.
+     * @param InheritDomainTags Specifies whether to inherit the domain name tag. default false.
+     */
+    public void setInheritDomainTags(Boolean InheritDomainTags) {
+        this.InheritDomainTags = InheritDomainTags;
+    }
+
     public CreateClsLogTopicRequest() {
     }
 
@@ -138,6 +161,9 @@ public class CreateClsLogTopicRequest extends AbstractModel {
                 this.DomainAreaConfigs[i] = new DomainAreaConfig(source.DomainAreaConfigs[i]);
             }
         }
+        if (source.InheritDomainTags != null) {
+            this.InheritDomainTags = new Boolean(source.InheritDomainTags);
+        }
     }
 
 
@@ -149,6 +175,7 @@ public class CreateClsLogTopicRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "LogsetId", this.LogsetId);
         this.setParamSimple(map, prefix + "Channel", this.Channel);
         this.setParamArrayObj(map, prefix + "DomainAreaConfigs.", this.DomainAreaConfigs);
+        this.setParamSimple(map, prefix + "InheritDomainTags", this.InheritDomainTags);
 
     }
 }

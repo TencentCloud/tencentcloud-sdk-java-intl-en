@@ -31,7 +31,7 @@ public class DescribeCertDomainsRequest extends AbstractModel {
     private String Cert;
 
     /**
-    * Managed certificate ID. `Cert` and `CertId` cannot be both empty. If they’re both filled in, `CerID` prevails.
+    * Managed certificate ID. Cert and CertId cannot both be empty. if both are filled in, CertId takes precedence.
     */
     @SerializedName("CertId")
     @Expose
@@ -61,16 +61,16 @@ public class DescribeCertDomainsRequest extends AbstractModel {
     }
 
     /**
-     * Get Managed certificate ID. `Cert` and `CertId` cannot be both empty. If they’re both filled in, `CerID` prevails. 
-     * @return CertId Managed certificate ID. `Cert` and `CertId` cannot be both empty. If they’re both filled in, `CerID` prevails.
+     * Get Managed certificate ID. Cert and CertId cannot both be empty. if both are filled in, CertId takes precedence. 
+     * @return CertId Managed certificate ID. Cert and CertId cannot both be empty. if both are filled in, CertId takes precedence.
      */
     public String getCertId() {
         return this.CertId;
     }
 
     /**
-     * Set Managed certificate ID. `Cert` and `CertId` cannot be both empty. If they’re both filled in, `CerID` prevails.
-     * @param CertId Managed certificate ID. `Cert` and `CertId` cannot be both empty. If they’re both filled in, `CerID` prevails.
+     * Set Managed certificate ID. Cert and CertId cannot both be empty. if both are filled in, CertId takes precedence.
+     * @param CertId Managed certificate ID. Cert and CertId cannot both be empty. if both are filled in, CertId takes precedence.
      */
     public void setCertId(String CertId) {
         this.CertId = CertId;

@@ -34,6 +34,23 @@ Note: This field may return·`null`, indicating that no valid values can be obta
     private String Switch;
 
     /**
+    * When the original image is avif and the client Accept header contains image/avif, return directly the original image.
+When the original image is in avif format and the client Accept header does not include image/avif but includes image/webp, convert avif to webp format and return. if the Accept header does not include image/webp, convert to jpeg and return.
+
+Valid values:. 
+- []
+- ["webp"]
+- ["jpeg"]
+- ["webp", "jpeg"]
+
+"Webp": whether avif to webp is enabled, "jpeg": whether avif to jpeg is enabled. if both webp and jpeg are enabled, webp must be before jpeg.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("FallbackFormats")
+    @Expose
+    private String [] FallbackFormats;
+
+    /**
      * Get Whether to enable `AvifAdapter` for image optimization. Values:
 `on`: Enable
 `off`: Disable
@@ -61,6 +78,62 @@ Note: This field may return·`null`, indicating that no valid values can be obta
         this.Switch = Switch;
     }
 
+    /**
+     * Get When the original image is avif and the client Accept header contains image/avif, return directly the original image.
+When the original image is in avif format and the client Accept header does not include image/avif but includes image/webp, convert avif to webp format and return. if the Accept header does not include image/webp, convert to jpeg and return.
+
+Valid values:. 
+- []
+- ["webp"]
+- ["jpeg"]
+- ["webp", "jpeg"]
+
+"Webp": whether avif to webp is enabled, "jpeg": whether avif to jpeg is enabled. if both webp and jpeg are enabled, webp must be before jpeg.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return FallbackFormats When the original image is avif and the client Accept header contains image/avif, return directly the original image.
+When the original image is in avif format and the client Accept header does not include image/avif but includes image/webp, convert avif to webp format and return. if the Accept header does not include image/webp, convert to jpeg and return.
+
+Valid values:. 
+- []
+- ["webp"]
+- ["jpeg"]
+- ["webp", "jpeg"]
+
+"Webp": whether avif to webp is enabled, "jpeg": whether avif to jpeg is enabled. if both webp and jpeg are enabled, webp must be before jpeg.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String [] getFallbackFormats() {
+        return this.FallbackFormats;
+    }
+
+    /**
+     * Set When the original image is avif and the client Accept header contains image/avif, return directly the original image.
+When the original image is in avif format and the client Accept header does not include image/avif but includes image/webp, convert avif to webp format and return. if the Accept header does not include image/webp, convert to jpeg and return.
+
+Valid values:. 
+- []
+- ["webp"]
+- ["jpeg"]
+- ["webp", "jpeg"]
+
+"Webp": whether avif to webp is enabled, "jpeg": whether avif to jpeg is enabled. if both webp and jpeg are enabled, webp must be before jpeg.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param FallbackFormats When the original image is avif and the client Accept header contains image/avif, return directly the original image.
+When the original image is in avif format and the client Accept header does not include image/avif but includes image/webp, convert avif to webp format and return. if the Accept header does not include image/webp, convert to jpeg and return.
+
+Valid values:. 
+- []
+- ["webp"]
+- ["jpeg"]
+- ["webp", "jpeg"]
+
+"Webp": whether avif to webp is enabled, "jpeg": whether avif to jpeg is enabled. if both webp and jpeg are enabled, webp must be before jpeg.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setFallbackFormats(String [] FallbackFormats) {
+        this.FallbackFormats = FallbackFormats;
+    }
+
     public AvifAdapter() {
     }
 
@@ -72,6 +145,12 @@ Note: This field may return·`null`, indicating that no valid values can be obta
         if (source.Switch != null) {
             this.Switch = new String(source.Switch);
         }
+        if (source.FallbackFormats != null) {
+            this.FallbackFormats = new String[source.FallbackFormats.length];
+            for (int i = 0; i < source.FallbackFormats.length; i++) {
+                this.FallbackFormats[i] = new String(source.FallbackFormats[i]);
+            }
+        }
     }
 
 
@@ -80,6 +159,7 @@ Note: This field may return·`null`, indicating that no valid values can be obta
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Switch", this.Switch);
+        this.setParamArraySimple(map, prefix + "FallbackFormats.", this.FallbackFormats);
 
     }
 }

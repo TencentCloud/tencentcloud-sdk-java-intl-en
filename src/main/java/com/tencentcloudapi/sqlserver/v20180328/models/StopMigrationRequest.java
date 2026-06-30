@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cdn.v20180606.models;
+package com.tencentcloudapi.sqlserver.v20180328.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,51 +21,41 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ScdnDdosConfig extends AbstractModel {
+public class StopMigrationRequest extends AbstractModel {
 
     /**
-    * Whether to enable SCDN DDoS configuration. Values:
-`on`: Enable
-`off`: Disable
+    * Migration task ID.
     */
-    @SerializedName("Switch")
+    @SerializedName("MigrateId")
     @Expose
-    private String Switch;
+    private Long MigrateId;
 
     /**
-     * Get Whether to enable SCDN DDoS configuration. Values:
-`on`: Enable
-`off`: Disable 
-     * @return Switch Whether to enable SCDN DDoS configuration. Values:
-`on`: Enable
-`off`: Disable
+     * Get Migration task ID. 
+     * @return MigrateId Migration task ID.
      */
-    public String getSwitch() {
-        return this.Switch;
+    public Long getMigrateId() {
+        return this.MigrateId;
     }
 
     /**
-     * Set Whether to enable SCDN DDoS configuration. Values:
-`on`: Enable
-`off`: Disable
-     * @param Switch Whether to enable SCDN DDoS configuration. Values:
-`on`: Enable
-`off`: Disable
+     * Set Migration task ID.
+     * @param MigrateId Migration task ID.
      */
-    public void setSwitch(String Switch) {
-        this.Switch = Switch;
+    public void setMigrateId(Long MigrateId) {
+        this.MigrateId = MigrateId;
     }
 
-    public ScdnDdosConfig() {
+    public StopMigrationRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public ScdnDdosConfig(ScdnDdosConfig source) {
-        if (source.Switch != null) {
-            this.Switch = new String(source.Switch);
+    public StopMigrationRequest(StopMigrationRequest source) {
+        if (source.MigrateId != null) {
+            this.MigrateId = new Long(source.MigrateId);
         }
     }
 
@@ -74,7 +64,7 @@ public class ScdnDdosConfig extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Switch", this.Switch);
+        this.setParamSimple(map, prefix + "MigrateId", this.MigrateId);
 
     }
 }

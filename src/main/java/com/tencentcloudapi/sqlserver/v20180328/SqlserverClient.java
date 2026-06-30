@@ -358,6 +358,17 @@ public class SqlserverClient extends AbstractClient{
     }
 
     /**
+     *This API is used to delete rollback task records.
+     * @param req DeleteRestoreTaskRequest
+     * @return DeleteRestoreTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteRestoreTaskResponse DeleteRestoreTask(DeleteRestoreTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteRestoreTask", DeleteRestoreTaskResponse.class);
+    }
+
+    /**
      *This API is used to query information on the account and permissions associated with the database.
      * @param req DescribeAccountPrivilegeByDBRequest
      * @return DescribeAccountPrivilegeByDBResponse
@@ -985,6 +996,17 @@ public class SqlserverClient extends AbstractClient{
     }
 
     /**
+     *This API is used to query upload permissions for incremental backups.
+     * @param req DescribeUploadIncrementalInfoRequest
+     * @return DescribeUploadIncrementalInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeUploadIncrementalInfoResponse DescribeUploadIncrementalInfo(DescribeUploadIncrementalInfoRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeUploadIncrementalInfo", DescribeUploadIncrementalInfoResponse.class);
+    }
+
+    /**
      *This API is used to query the list of extended events.
      * @param req DescribeXEventsRequest
      * @return DescribeXEventsResponse
@@ -1026,6 +1048,17 @@ public class SqlserverClient extends AbstractClient{
     public InquiryPriceCreateDBInstancesResponse InquiryPriceCreateDBInstances(InquiryPriceCreateDBInstancesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "InquiryPriceCreateDBInstances", InquiryPriceCreateDBInstancesResponse.class);
+    }
+
+    /**
+     *This API is used to query the renewal price of a monthly subscription instance.
+     * @param req InquiryPriceRenewDBInstanceRequest
+     * @return InquiryPriceRenewDBInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public InquiryPriceRenewDBInstanceResponse InquiryPriceRenewDBInstance(InquiryPriceRenewDBInstanceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "InquiryPriceRenewDBInstance", InquiryPriceRenewDBInstanceResponse.class);
     }
 
     /**
@@ -1170,6 +1203,17 @@ public class SqlserverClient extends AbstractClient{
     public ModifyDBInstanceProjectResponse ModifyDBInstanceProject(ModifyDBInstanceProjectRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyDBInstanceProject", ModifyDBInstanceProjectResponse.class);
+    }
+
+    /**
+     *This API is used to modify the instance renewal flag.
+     * @param req ModifyDBInstanceRenewFlagRequest
+     * @return ModifyDBInstanceRenewFlagResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyDBInstanceRenewFlagResponse ModifyDBInstanceRenewFlag(ModifyDBInstanceRenewFlagRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyDBInstanceRenewFlag", ModifyDBInstanceRenewFlagResponse.class);
     }
 
     /**
@@ -1439,6 +1483,17 @@ Before you modify a parameter, you can use the `DescribeInstanceParams` API to q
     }
 
     /**
+     *This API is used to renew instances. For pay-as-you-go instances, the billing method will change to monthly subscription after renewal. You can call the InquiryPriceRenewDBInstance API for the renewal price of pay-as-you-go instances.
+     * @param req RenewDBInstanceRequest
+     * @return RenewDBInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public RenewDBInstanceResponse RenewDBInstance(RenewDBInstanceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "RenewDBInstance", RenewDBInstanceResponse.class);
+    }
+
+    /**
      *This API is used to recover the pay-as-you-go instance that is manually isolated through the API TerminateDBInstance from the recycle bin.
      * @param req RenewPostpaidDBInstanceRequest
      * @return RenewPostpaidDBInstanceResponse
@@ -1535,6 +1590,28 @@ Before you modify a parameter, you can use the `DescribeInstanceParams` API to q
     public StartInstanceXEventResponse StartInstanceXEvent(StartInstanceXEventRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "StartInstanceXEvent", StartInstanceXEventResponse.class);
+    }
+
+    /**
+     *This API is used to start a pre-migration verification task, applicable to the migration method where the migration source type is TencentDB for SQL Server.
+     * @param req StartMigrationCheckRequest
+     * @return StartMigrationCheckResponse
+     * @throws TencentCloudSDKException
+     */
+    public StartMigrationCheckResponse StartMigrationCheck(StartMigrationCheckRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "StartMigrationCheck", StartMigrationCheckResponse.class);
+    }
+
+    /**
+     *This API is used to terminate a migration task.
+     * @param req StopMigrationRequest
+     * @return StopMigrationResponse
+     * @throws TencentCloudSDKException
+     */
+    public StopMigrationResponse StopMigration(StopMigrationRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "StopMigration", StopMigrationResponse.class);
     }
 
     /**
