@@ -45,7 +45,7 @@ public class DescribeLoginTypeHostRequest extends AbstractModel {
     private Long Offset;
 
     /**
-    * <p>Sort order: [ASC: ascending | DESC: descending]</p>
+    * <p>Sort order: [ASC: ascending, DESC: descending]</p>
     */
     @SerializedName("Order")
     @Expose
@@ -107,16 +107,16 @@ public class DescribeLoginTypeHostRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>Sort order: [ASC: ascending | DESC: descending]</p> 
-     * @return Order <p>Sort order: [ASC: ascending | DESC: descending]</p>
+     * Get <p>Sort order: [ASC: ascending, DESC: descending]</p> 
+     * @return Order <p>Sort order: [ASC: ascending, DESC: descending]</p>
      */
     public String getOrder() {
         return this.Order;
     }
 
     /**
-     * Set <p>Sort order: [ASC: ascending | DESC: descending]</p>
-     * @param Order <p>Sort order: [ASC: ascending | DESC: descending]</p>
+     * Set <p>Sort order: [ASC: ascending, DESC: descending]</p>
+     * @param Order <p>Sort order: [ASC: ascending, DESC: descending]</p>
      */
     public void setOrder(String Order) {
         this.Order = Order;

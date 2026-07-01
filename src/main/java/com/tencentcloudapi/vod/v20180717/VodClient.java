@@ -229,6 +229,21 @@ The output file is in MP4 or MP3 format. In the callback for media composition, 
     }
 
     /**
+     *This API is used to create and enable AIGC quota configuration. Quota usage starts accumulating when the quota feature is enabled. The AIGC feature will no longer be usable when the quota is reached.
+
+If the quota is re-enabled after deletion, the amount will be cleared and recalculated.
+
+Since AGC content generation is an async task, real-time usage data cannot be obtained. Therefore, the Quota limit may result in some errors, and completely precise control cannot be achieved with the set limit.
+     * @param req CreateAigcQuotaRequest
+     * @return CreateAigcQuotaResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateAigcQuotaResponse CreateAigcQuota(CreateAigcQuotaRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateAigcQuota", CreateAigcQuotaResponse.class);
+    }
+
+    /**
      *This API is used to create AIGC custom subjects (Vidu). Note that calling this API may incur fees. Refer to the billing documentation (https://www.tencentcloud.com/document/product/266/95125?from_cn_redirect=1#96b3b59a-f9e1-49e9-966a-bedb70a4bf12).
      * @param req CreateAigcSubjectRequest
      * @return CreateAigcSubjectResponse
@@ -724,6 +739,19 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
     }
 
     /**
+     *This API is used to delete AIGC quota configurations. Once deleted, it will no longer limit the initiation of AIGC tasks.
+
+If the quota is re-enabled after deletion, the amount will be cleared and recalculated.
+     * @param req DeleteAigcQuotaRequest
+     * @return DeleteAigcQuotaResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteAigcQuotaResponse DeleteAigcQuota(DeleteAigcQuotaRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteAigcQuota", DeleteAigcQuotaResponse.class);
+    }
+
+    /**
      *This API is used to delete a custom animated image generating template.
      * @param req DeleteAnimatedGraphicsTemplateRequest
      * @return DeleteAnimatedGraphicsTemplateResponse
@@ -1118,6 +1146,17 @@ This API is used to delete a player configuration.
     public DescribeAigcFaceInfoAsyncResponse DescribeAigcFaceInfoAsync(DescribeAigcFaceInfoAsyncRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeAigcFaceInfoAsync", DescribeAigcFaceInfoAsyncResponse.class);
+    }
+
+    /**
+     *This API is used to query the AIGC quota configuration.
+     * @param req DescribeAigcQuotasRequest
+     * @return DescribeAigcQuotasResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAigcQuotasResponse DescribeAigcQuotas(DescribeAigcQuotasRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAigcQuotas", DescribeAigcQuotasResponse.class);
     }
 
     /**
@@ -2000,6 +2039,19 @@ Note: templates with an ID below 10000 are preset and cannot be modified.
     public ModifyAdaptiveDynamicStreamingTemplateResponse ModifyAdaptiveDynamicStreamingTemplate(ModifyAdaptiveDynamicStreamingTemplateRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyAdaptiveDynamicStreamingTemplate", ModifyAdaptiveDynamicStreamingTemplateResponse.class);
+    }
+
+    /**
+     *This API is used to edit AIGC quota configuration. Quota usage starts accumulating when the quota functionality is enabled. The AIGC functionality will no longer be usable once the quota is reached.
+
+Since AGC content generation is an async task, real-time usage data cannot be obtained. Therefore, the Quota limit may result in some errors, and completely precise control cannot be achieved with the set limit.
+     * @param req ModifyAigcQuotaRequest
+     * @return ModifyAigcQuotaResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyAigcQuotaResponse ModifyAigcQuota(ModifyAigcQuotaRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyAigcQuota", ModifyAigcQuotaResponse.class);
     }
 
     /**
