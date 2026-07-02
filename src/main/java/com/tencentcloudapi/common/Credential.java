@@ -30,6 +30,13 @@ import com.tencentcloudapi.common.exception.TencentCloudSDKException;
  * <p>Ephemeral credential, can be obtained from Security Token Service (STS), has three dimensions:
  * SecretId, SecretKey and Token. It will expire after a short time, hence you need to invoke STS
  * API to refresh it.
+ *
+ * <p><b>Thread-safety and atomicity.</b> The triple (secretId, secretKey, token) is only guaranteed
+ * to be read atomically via {@link #getSnapshot()}. The individual {@code getSecretId()},
+ * {@code getSecretKey()}, {@code getToken()} getters do NOT guarantee that two consecutive calls
+ * observe a consistent triple — a refresh triggered between them may yield an id/key/token
+ * mismatch. Any code path that consumes more than one of the three fields together (e.g. request
+ * signing) should use {@link #getSnapshot()}.
  */
 public class Credential {
     private String secretId;
@@ -90,6 +97,54 @@ public class Credential {
 
     public void setToken(String token) {
         this.token = token;
+    }
+
+    /**
+     * Atomically replaces the entire (secretId, secretKey, token) triple under the same monitor
+     * used by {@link #getSnapshot()}.
+     *
+     * <p>Use this instead of three separate {@code setSecretId} / {@code setSecretKey} /
+     * {@code setToken} calls whenever you need to publish a freshly-refreshed triple: concurrent
+     * readers going through {@link #getSnapshot()} are guaranteed to observe either the old triple
+     * or the new triple in its entirety, never a mix of the two. The individual setters do not
+     * provide this guarantee and should only be used when no other thread is reading.
+     *
+     * <p>This method is the intended write-side companion to {@link #getSnapshot()}'s read-side
+     * atomicity. {@link Updater} implementations that refresh the triple in place (rather than
+     * constructing a new {@code Credential}) should call this method instead of the individual
+     * setters.
+     *
+     * @param secretId  the new secret id.
+     * @param secretKey the new secret key.
+     * @param token     the new token, may be empty or {@code null} for permanent credentials.
+     */
+    public void setCredential(String secretId, String secretKey, String token) {
+        synchronized (this) {
+            this.secretId = secretId;
+            this.secretKey = secretKey;
+            this.token = token;
+        }
+    }
+
+    /**
+     * Returns a point-in-time, self-consistent copy of the (secretId, secretKey, token) triple.
+     *
+     * <p>This is the only thread-safe, atomic way to read the credential triple. The refresh hook
+     * (if any) is invoked exactly once under a lock, and the three fields are then sampled together
+     * into a new {@code Credential} that does not carry an {@link Updater}. Use this in any code
+     * path that consumes more than one of the three fields together (e.g. request signing).
+     *
+     * <p>The returned object should be treated as read-only. It is a fresh instance and mutating it
+     * via the setters has no effect on the source credential, but doing so will break the
+     * consistency guarantee for the holder of the snapshot.
+     *
+     * @return a point-in-time copy of the credential triple, with no attached updater.
+     */
+    public Credential getSnapshot() {
+        synchronized (this) {
+            tryUpdate();
+            return new Credential(secretId, secretKey, token);
+        }
     }
 
     private void tryUpdate() {
