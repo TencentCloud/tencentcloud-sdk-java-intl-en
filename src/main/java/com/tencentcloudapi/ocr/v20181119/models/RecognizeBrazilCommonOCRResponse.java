@@ -24,14 +24,18 @@ import java.util.HashMap;
 public class RecognizeBrazilCommonOCRResponse extends AbstractModel {
 
     /**
-    * Specifies the type of document in brazil. valid values: 1. RNE 2. RNM 3. IDCard 4. DrivingLicense.
+    * Specifies the type of document in brazil. valid values: 
+1. RNE 
+2. RNM 
+3. IDCard 
+4. DrivingLicense.
     */
     @SerializedName("Type")
     @Expose
     private Long Type;
 
     /**
-    * Identifies the content of a brazil document.
+    * The recognized content of the Brazilian document.
     */
     @SerializedName("Result")
     @Expose
@@ -45,32 +49,48 @@ public class RecognizeBrazilCommonOCRResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Specifies the type of document in brazil. valid values: 1. RNE 2. RNM 3. IDCard 4. DrivingLicense. 
-     * @return Type Specifies the type of document in brazil. valid values: 1. RNE 2. RNM 3. IDCard 4. DrivingLicense.
+     * Get Specifies the type of document in brazil. valid values: 
+1. RNE 
+2. RNM 
+3. IDCard 
+4. DrivingLicense. 
+     * @return Type Specifies the type of document in brazil. valid values: 
+1. RNE 
+2. RNM 
+3. IDCard 
+4. DrivingLicense.
      */
     public Long getType() {
         return this.Type;
     }
 
     /**
-     * Set Specifies the type of document in brazil. valid values: 1. RNE 2. RNM 3. IDCard 4. DrivingLicense.
-     * @param Type Specifies the type of document in brazil. valid values: 1. RNE 2. RNM 3. IDCard 4. DrivingLicense.
+     * Set Specifies the type of document in brazil. valid values: 
+1. RNE 
+2. RNM 
+3. IDCard 
+4. DrivingLicense.
+     * @param Type Specifies the type of document in brazil. valid values: 
+1. RNE 
+2. RNM 
+3. IDCard 
+4. DrivingLicense.
      */
     public void setType(Long Type) {
         this.Type = Type;
     }
 
     /**
-     * Get Identifies the content of a brazil document. 
-     * @return Result Identifies the content of a brazil document.
+     * Get The recognized content of the Brazilian document. 
+     * @return Result The recognized content of the Brazilian document.
      */
     public BrazilCardInfo getResult() {
         return this.Result;
     }
 
     /**
-     * Set Identifies the content of a brazil document.
-     * @param Result Identifies the content of a brazil document.
+     * Set The recognized content of the Brazilian document.
+     * @param Result The recognized content of the Brazilian document.
      */
     public void setResult(BrazilCardInfo Result) {
         this.Result = Result;

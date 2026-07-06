@@ -24,250 +24,230 @@ import java.util.HashMap;
 public class ModifyTranscodeTemplateRequest extends AbstractModel {
 
     /**
-    * Unique ID of a transcoding template.
+    * <p>Unique identifier of the transcoding template.</p>
     */
     @SerializedName("Definition")
     @Expose
     private Long Definition;
 
     /**
-    * Container format. Valid values: mp4; flv; hls; mp3; flac; ogg; m4a. Among them, mp3, flac, ogg, and m4a are for audio files.
+    * <p>Container format. Valid values: mp4, flv, hls, mp3, flac, ogg, m4a, and wav. Among them, mp3, flac, ogg, m4a, and wav are for audio-only files.</p>
     */
     @SerializedName("Container")
     @Expose
     private String Container;
 
     /**
-    * Name of a transcoding template. Length limit: 64 characters.
+    * <p>Transcoding template name. Length limit: 64 characters.</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * Template description. Length limit: 256 characters.
+    * <p>Transcoding template description. Length limit: 256 characters.</p>
     */
     @SerializedName("Comment")
     @Expose
     private String Comment;
 
     /**
-    * Whether to remove video data. Valid values:
-<li>0: Retain</li>
-<li>1: Remove</li>
+    * <p>Indicates whether to remove video data. Valid values:</p><li>0: Data is reserved.</li><li>1: Data is removed.</li>
     */
     @SerializedName("RemoveVideo")
     @Expose
     private Long RemoveVideo;
 
     /**
-    * Whether to remove audio data. Valid values:
-<li>0: Retain</li>
-<li>1: Remove</li>
+    * <p>Indicates whether to remove audio data. Valid values:</p><li>0: Data is reserved.</li><li>1: Data is removed.</li>
     */
     @SerializedName("RemoveAudio")
     @Expose
     private Long RemoveAudio;
 
     /**
-    * Video stream configuration parameter.
+    * <p>Video stream configuration parameters.</p>
     */
     @SerializedName("VideoTemplate")
     @Expose
     private VideoTemplateInfoForUpdate VideoTemplate;
 
     /**
-    * Audio stream configuration parameter.
+    * <p>Audio stream configuration parameters.</p>
     */
     @SerializedName("AudioTemplate")
     @Expose
     private AudioTemplateInfoForUpdate AudioTemplate;
 
     /**
-    * TESHD transcoding parameter. To enable it, please contact your Tencent Cloud sales rep.
+    * <p>Top Speed Codec transcoding parameters.</p>
     */
     @SerializedName("TEHDConfig")
     @Expose
     private TEHDConfigForUpdate TEHDConfig;
 
     /**
-    * Audio/Video enhancement settings.
+    * <p>Audio/video enhancement parameters.</p>
     */
     @SerializedName("EnhanceConfig")
     @Expose
     private EnhanceConfig EnhanceConfig;
 
     /**
-     * Get Unique ID of a transcoding template. 
-     * @return Definition Unique ID of a transcoding template.
+     * Get <p>Unique identifier of the transcoding template.</p> 
+     * @return Definition <p>Unique identifier of the transcoding template.</p>
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set Unique ID of a transcoding template.
-     * @param Definition Unique ID of a transcoding template.
+     * Set <p>Unique identifier of the transcoding template.</p>
+     * @param Definition <p>Unique identifier of the transcoding template.</p>
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;
     }
 
     /**
-     * Get Container format. Valid values: mp4; flv; hls; mp3; flac; ogg; m4a. Among them, mp3, flac, ogg, and m4a are for audio files. 
-     * @return Container Container format. Valid values: mp4; flv; hls; mp3; flac; ogg; m4a. Among them, mp3, flac, ogg, and m4a are for audio files.
+     * Get <p>Container format. Valid values: mp4, flv, hls, mp3, flac, ogg, m4a, and wav. Among them, mp3, flac, ogg, m4a, and wav are for audio-only files.</p> 
+     * @return Container <p>Container format. Valid values: mp4, flv, hls, mp3, flac, ogg, m4a, and wav. Among them, mp3, flac, ogg, m4a, and wav are for audio-only files.</p>
      */
     public String getContainer() {
         return this.Container;
     }
 
     /**
-     * Set Container format. Valid values: mp4; flv; hls; mp3; flac; ogg; m4a. Among them, mp3, flac, ogg, and m4a are for audio files.
-     * @param Container Container format. Valid values: mp4; flv; hls; mp3; flac; ogg; m4a. Among them, mp3, flac, ogg, and m4a are for audio files.
+     * Set <p>Container format. Valid values: mp4, flv, hls, mp3, flac, ogg, m4a, and wav. Among them, mp3, flac, ogg, m4a, and wav are for audio-only files.</p>
+     * @param Container <p>Container format. Valid values: mp4, flv, hls, mp3, flac, ogg, m4a, and wav. Among them, mp3, flac, ogg, m4a, and wav are for audio-only files.</p>
      */
     public void setContainer(String Container) {
         this.Container = Container;
     }
 
     /**
-     * Get Name of a transcoding template. Length limit: 64 characters. 
-     * @return Name Name of a transcoding template. Length limit: 64 characters.
+     * Get <p>Transcoding template name. Length limit: 64 characters.</p> 
+     * @return Name <p>Transcoding template name. Length limit: 64 characters.</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Name of a transcoding template. Length limit: 64 characters.
-     * @param Name Name of a transcoding template. Length limit: 64 characters.
+     * Set <p>Transcoding template name. Length limit: 64 characters.</p>
+     * @param Name <p>Transcoding template name. Length limit: 64 characters.</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get Template description. Length limit: 256 characters. 
-     * @return Comment Template description. Length limit: 256 characters.
+     * Get <p>Transcoding template description. Length limit: 256 characters.</p> 
+     * @return Comment <p>Transcoding template description. Length limit: 256 characters.</p>
      */
     public String getComment() {
         return this.Comment;
     }
 
     /**
-     * Set Template description. Length limit: 256 characters.
-     * @param Comment Template description. Length limit: 256 characters.
+     * Set <p>Transcoding template description. Length limit: 256 characters.</p>
+     * @param Comment <p>Transcoding template description. Length limit: 256 characters.</p>
      */
     public void setComment(String Comment) {
         this.Comment = Comment;
     }
 
     /**
-     * Get Whether to remove video data. Valid values:
-<li>0: Retain</li>
-<li>1: Remove</li> 
-     * @return RemoveVideo Whether to remove video data. Valid values:
-<li>0: Retain</li>
-<li>1: Remove</li>
+     * Get <p>Indicates whether to remove video data. Valid values:</p><li>0: Data is reserved.</li><li>1: Data is removed.</li> 
+     * @return RemoveVideo <p>Indicates whether to remove video data. Valid values:</p><li>0: Data is reserved.</li><li>1: Data is removed.</li>
      */
     public Long getRemoveVideo() {
         return this.RemoveVideo;
     }
 
     /**
-     * Set Whether to remove video data. Valid values:
-<li>0: Retain</li>
-<li>1: Remove</li>
-     * @param RemoveVideo Whether to remove video data. Valid values:
-<li>0: Retain</li>
-<li>1: Remove</li>
+     * Set <p>Indicates whether to remove video data. Valid values:</p><li>0: Data is reserved.</li><li>1: Data is removed.</li>
+     * @param RemoveVideo <p>Indicates whether to remove video data. Valid values:</p><li>0: Data is reserved.</li><li>1: Data is removed.</li>
      */
     public void setRemoveVideo(Long RemoveVideo) {
         this.RemoveVideo = RemoveVideo;
     }
 
     /**
-     * Get Whether to remove audio data. Valid values:
-<li>0: Retain</li>
-<li>1: Remove</li> 
-     * @return RemoveAudio Whether to remove audio data. Valid values:
-<li>0: Retain</li>
-<li>1: Remove</li>
+     * Get <p>Indicates whether to remove audio data. Valid values:</p><li>0: Data is reserved.</li><li>1: Data is removed.</li> 
+     * @return RemoveAudio <p>Indicates whether to remove audio data. Valid values:</p><li>0: Data is reserved.</li><li>1: Data is removed.</li>
      */
     public Long getRemoveAudio() {
         return this.RemoveAudio;
     }
 
     /**
-     * Set Whether to remove audio data. Valid values:
-<li>0: Retain</li>
-<li>1: Remove</li>
-     * @param RemoveAudio Whether to remove audio data. Valid values:
-<li>0: Retain</li>
-<li>1: Remove</li>
+     * Set <p>Indicates whether to remove audio data. Valid values:</p><li>0: Data is reserved.</li><li>1: Data is removed.</li>
+     * @param RemoveAudio <p>Indicates whether to remove audio data. Valid values:</p><li>0: Data is reserved.</li><li>1: Data is removed.</li>
      */
     public void setRemoveAudio(Long RemoveAudio) {
         this.RemoveAudio = RemoveAudio;
     }
 
     /**
-     * Get Video stream configuration parameter. 
-     * @return VideoTemplate Video stream configuration parameter.
+     * Get <p>Video stream configuration parameters.</p> 
+     * @return VideoTemplate <p>Video stream configuration parameters.</p>
      */
     public VideoTemplateInfoForUpdate getVideoTemplate() {
         return this.VideoTemplate;
     }
 
     /**
-     * Set Video stream configuration parameter.
-     * @param VideoTemplate Video stream configuration parameter.
+     * Set <p>Video stream configuration parameters.</p>
+     * @param VideoTemplate <p>Video stream configuration parameters.</p>
      */
     public void setVideoTemplate(VideoTemplateInfoForUpdate VideoTemplate) {
         this.VideoTemplate = VideoTemplate;
     }
 
     /**
-     * Get Audio stream configuration parameter. 
-     * @return AudioTemplate Audio stream configuration parameter.
+     * Get <p>Audio stream configuration parameters.</p> 
+     * @return AudioTemplate <p>Audio stream configuration parameters.</p>
      */
     public AudioTemplateInfoForUpdate getAudioTemplate() {
         return this.AudioTemplate;
     }
 
     /**
-     * Set Audio stream configuration parameter.
-     * @param AudioTemplate Audio stream configuration parameter.
+     * Set <p>Audio stream configuration parameters.</p>
+     * @param AudioTemplate <p>Audio stream configuration parameters.</p>
      */
     public void setAudioTemplate(AudioTemplateInfoForUpdate AudioTemplate) {
         this.AudioTemplate = AudioTemplate;
     }
 
     /**
-     * Get TESHD transcoding parameter. To enable it, please contact your Tencent Cloud sales rep. 
-     * @return TEHDConfig TESHD transcoding parameter. To enable it, please contact your Tencent Cloud sales rep.
+     * Get <p>Top Speed Codec transcoding parameters.</p> 
+     * @return TEHDConfig <p>Top Speed Codec transcoding parameters.</p>
      */
     public TEHDConfigForUpdate getTEHDConfig() {
         return this.TEHDConfig;
     }
 
     /**
-     * Set TESHD transcoding parameter. To enable it, please contact your Tencent Cloud sales rep.
-     * @param TEHDConfig TESHD transcoding parameter. To enable it, please contact your Tencent Cloud sales rep.
+     * Set <p>Top Speed Codec transcoding parameters.</p>
+     * @param TEHDConfig <p>Top Speed Codec transcoding parameters.</p>
      */
     public void setTEHDConfig(TEHDConfigForUpdate TEHDConfig) {
         this.TEHDConfig = TEHDConfig;
     }
 
     /**
-     * Get Audio/Video enhancement settings. 
-     * @return EnhanceConfig Audio/Video enhancement settings.
+     * Get <p>Audio/video enhancement parameters.</p> 
+     * @return EnhanceConfig <p>Audio/video enhancement parameters.</p>
      */
     public EnhanceConfig getEnhanceConfig() {
         return this.EnhanceConfig;
     }
 
     /**
-     * Set Audio/Video enhancement settings.
-     * @param EnhanceConfig Audio/Video enhancement settings.
+     * Set <p>Audio/video enhancement parameters.</p>
+     * @param EnhanceConfig <p>Audio/video enhancement parameters.</p>
      */
     public void setEnhanceConfig(EnhanceConfig EnhanceConfig) {
         this.EnhanceConfig = EnhanceConfig;

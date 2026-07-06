@@ -66,14 +66,28 @@ public class SyncDubbingRequest extends AbstractModel {
     private String AudioLang;
 
     /**
-    * <p>Output parameters.</p><p>Specifies the output format, etc.</p>
+    * <p>Voice attribute.</p>
+    */
+    @SerializedName("VoiceProfile")
+    @Expose
+    private VoiceProfile VoiceProfile;
+
+    /**
+    * <p>Output parameters.</p><p>Specifies the output format, etc. The default output audio format is base64.</p>
     */
     @SerializedName("Output")
     @Expose
     private SyncDubbingOutputOption Output;
 
     /**
-    * <p>Extended parameters in the format of a JSON string.</p><p>‑ synExt (Object): Speech synthesis extension parameter.<br>- duration (Float): Synthesized audio duration, in seconds. Example: 5.2.<br>- sampleRate (Integer): Synthesized audio sample rate. Default value: 16000. Supported values: [8000,16000,22050,32000,44100].<br> pitch (Integer): -Pitch. Default value: 0 (original voice output). Valid values: [-12, 12].<br>‑ cloneExt (Object): Voice cloning extension parameter.<br>    - timeRanges (Float[][]): Specifies the time ranges for audio cloning. Default value: [[0, 20]]. Example: [[5.2, 10], [45, 59.8]].</p>
+    * <p>Resource ID. The resource needs to be enabled. The default value is the account's primary resource ID.</p>
+    */
+    @SerializedName("ResourceId")
+    @Expose
+    private String ResourceId;
+
+    /**
+    * <p>Extended parameters in the format of a JSON string.</p><p><strong>synExt</strong>    Object    Extended text to speech parameter.<br>  <strong>duration</strong>    Float    Synthesized audio duration, in seconds. Example: 5.2.<br>  <strong>sampleRate</strong>    Integer    Synthesized audio sample rate. Default value: 16000. Valid values: [8000, 16000, 22050, 24000, 32000, 44100].<br>  <strong>pitch</strong>    Integer    Pitch. Default value: 0 (original voice output). Valid values: [-12, 12].<br><strong>cloneExt</strong>    Object    Extended voice cloning parameter.<br>  <strong>timeRanges</strong>    Float[][]    Specifies the time ranges for audio cloning. The default value is the first 20 seconds of the audio. Example: [[5.2, 10], [45, 59.8]].</p>
     */
     @SerializedName("ExtParam")
     @Expose
@@ -176,32 +190,64 @@ public class SyncDubbingRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>Output parameters.</p><p>Specifies the output format, etc.</p> 
-     * @return Output <p>Output parameters.</p><p>Specifies the output format, etc.</p>
+     * Get <p>Voice attribute.</p> 
+     * @return VoiceProfile <p>Voice attribute.</p>
+     */
+    public VoiceProfile getVoiceProfile() {
+        return this.VoiceProfile;
+    }
+
+    /**
+     * Set <p>Voice attribute.</p>
+     * @param VoiceProfile <p>Voice attribute.</p>
+     */
+    public void setVoiceProfile(VoiceProfile VoiceProfile) {
+        this.VoiceProfile = VoiceProfile;
+    }
+
+    /**
+     * Get <p>Output parameters.</p><p>Specifies the output format, etc. The default output audio format is base64.</p> 
+     * @return Output <p>Output parameters.</p><p>Specifies the output format, etc. The default output audio format is base64.</p>
      */
     public SyncDubbingOutputOption getOutput() {
         return this.Output;
     }
 
     /**
-     * Set <p>Output parameters.</p><p>Specifies the output format, etc.</p>
-     * @param Output <p>Output parameters.</p><p>Specifies the output format, etc.</p>
+     * Set <p>Output parameters.</p><p>Specifies the output format, etc. The default output audio format is base64.</p>
+     * @param Output <p>Output parameters.</p><p>Specifies the output format, etc. The default output audio format is base64.</p>
      */
     public void setOutput(SyncDubbingOutputOption Output) {
         this.Output = Output;
     }
 
     /**
-     * Get <p>Extended parameters in the format of a JSON string.</p><p>‑ synExt (Object): Speech synthesis extension parameter.<br>- duration (Float): Synthesized audio duration, in seconds. Example: 5.2.<br>- sampleRate (Integer): Synthesized audio sample rate. Default value: 16000. Supported values: [8000,16000,22050,32000,44100].<br> pitch (Integer): -Pitch. Default value: 0 (original voice output). Valid values: [-12, 12].<br>‑ cloneExt (Object): Voice cloning extension parameter.<br>    - timeRanges (Float[][]): Specifies the time ranges for audio cloning. Default value: [[0, 20]]. Example: [[5.2, 10], [45, 59.8]].</p> 
-     * @return ExtParam <p>Extended parameters in the format of a JSON string.</p><p>‑ synExt (Object): Speech synthesis extension parameter.<br>- duration (Float): Synthesized audio duration, in seconds. Example: 5.2.<br>- sampleRate (Integer): Synthesized audio sample rate. Default value: 16000. Supported values: [8000,16000,22050,32000,44100].<br> pitch (Integer): -Pitch. Default value: 0 (original voice output). Valid values: [-12, 12].<br>‑ cloneExt (Object): Voice cloning extension parameter.<br>    - timeRanges (Float[][]): Specifies the time ranges for audio cloning. Default value: [[0, 20]]. Example: [[5.2, 10], [45, 59.8]].</p>
+     * Get <p>Resource ID. The resource needs to be enabled. The default value is the account's primary resource ID.</p> 
+     * @return ResourceId <p>Resource ID. The resource needs to be enabled. The default value is the account's primary resource ID.</p>
+     */
+    public String getResourceId() {
+        return this.ResourceId;
+    }
+
+    /**
+     * Set <p>Resource ID. The resource needs to be enabled. The default value is the account's primary resource ID.</p>
+     * @param ResourceId <p>Resource ID. The resource needs to be enabled. The default value is the account's primary resource ID.</p>
+     */
+    public void setResourceId(String ResourceId) {
+        this.ResourceId = ResourceId;
+    }
+
+    /**
+     * Get <p>Extended parameters in the format of a JSON string.</p><p><strong>synExt</strong>    Object    Extended text to speech parameter.<br>  <strong>duration</strong>    Float    Synthesized audio duration, in seconds. Example: 5.2.<br>  <strong>sampleRate</strong>    Integer    Synthesized audio sample rate. Default value: 16000. Valid values: [8000, 16000, 22050, 24000, 32000, 44100].<br>  <strong>pitch</strong>    Integer    Pitch. Default value: 0 (original voice output). Valid values: [-12, 12].<br><strong>cloneExt</strong>    Object    Extended voice cloning parameter.<br>  <strong>timeRanges</strong>    Float[][]    Specifies the time ranges for audio cloning. The default value is the first 20 seconds of the audio. Example: [[5.2, 10], [45, 59.8]].</p> 
+     * @return ExtParam <p>Extended parameters in the format of a JSON string.</p><p><strong>synExt</strong>    Object    Extended text to speech parameter.<br>  <strong>duration</strong>    Float    Synthesized audio duration, in seconds. Example: 5.2.<br>  <strong>sampleRate</strong>    Integer    Synthesized audio sample rate. Default value: 16000. Valid values: [8000, 16000, 22050, 24000, 32000, 44100].<br>  <strong>pitch</strong>    Integer    Pitch. Default value: 0 (original voice output). Valid values: [-12, 12].<br><strong>cloneExt</strong>    Object    Extended voice cloning parameter.<br>  <strong>timeRanges</strong>    Float[][]    Specifies the time ranges for audio cloning. The default value is the first 20 seconds of the audio. Example: [[5.2, 10], [45, 59.8]].</p>
      */
     public String getExtParam() {
         return this.ExtParam;
     }
 
     /**
-     * Set <p>Extended parameters in the format of a JSON string.</p><p>‑ synExt (Object): Speech synthesis extension parameter.<br>- duration (Float): Synthesized audio duration, in seconds. Example: 5.2.<br>- sampleRate (Integer): Synthesized audio sample rate. Default value: 16000. Supported values: [8000,16000,22050,32000,44100].<br> pitch (Integer): -Pitch. Default value: 0 (original voice output). Valid values: [-12, 12].<br>‑ cloneExt (Object): Voice cloning extension parameter.<br>    - timeRanges (Float[][]): Specifies the time ranges for audio cloning. Default value: [[0, 20]]. Example: [[5.2, 10], [45, 59.8]].</p>
-     * @param ExtParam <p>Extended parameters in the format of a JSON string.</p><p>‑ synExt (Object): Speech synthesis extension parameter.<br>- duration (Float): Synthesized audio duration, in seconds. Example: 5.2.<br>- sampleRate (Integer): Synthesized audio sample rate. Default value: 16000. Supported values: [8000,16000,22050,32000,44100].<br> pitch (Integer): -Pitch. Default value: 0 (original voice output). Valid values: [-12, 12].<br>‑ cloneExt (Object): Voice cloning extension parameter.<br>    - timeRanges (Float[][]): Specifies the time ranges for audio cloning. Default value: [[0, 20]]. Example: [[5.2, 10], [45, 59.8]].</p>
+     * Set <p>Extended parameters in the format of a JSON string.</p><p><strong>synExt</strong>    Object    Extended text to speech parameter.<br>  <strong>duration</strong>    Float    Synthesized audio duration, in seconds. Example: 5.2.<br>  <strong>sampleRate</strong>    Integer    Synthesized audio sample rate. Default value: 16000. Valid values: [8000, 16000, 22050, 24000, 32000, 44100].<br>  <strong>pitch</strong>    Integer    Pitch. Default value: 0 (original voice output). Valid values: [-12, 12].<br><strong>cloneExt</strong>    Object    Extended voice cloning parameter.<br>  <strong>timeRanges</strong>    Float[][]    Specifies the time ranges for audio cloning. The default value is the first 20 seconds of the audio. Example: [[5.2, 10], [45, 59.8]].</p>
+     * @param ExtParam <p>Extended parameters in the format of a JSON string.</p><p><strong>synExt</strong>    Object    Extended text to speech parameter.<br>  <strong>duration</strong>    Float    Synthesized audio duration, in seconds. Example: 5.2.<br>  <strong>sampleRate</strong>    Integer    Synthesized audio sample rate. Default value: 16000. Valid values: [8000, 16000, 22050, 24000, 32000, 44100].<br>  <strong>pitch</strong>    Integer    Pitch. Default value: 0 (original voice output). Valid values: [-12, 12].<br><strong>cloneExt</strong>    Object    Extended voice cloning parameter.<br>  <strong>timeRanges</strong>    Float[][]    Specifies the time ranges for audio cloning. The default value is the first 20 seconds of the audio. Example: [[5.2, 10], [45, 59.8]].</p>
      */
     public void setExtParam(String ExtParam) {
         this.ExtParam = ExtParam;
@@ -233,8 +279,14 @@ public class SyncDubbingRequest extends AbstractModel {
         if (source.AudioLang != null) {
             this.AudioLang = new String(source.AudioLang);
         }
+        if (source.VoiceProfile != null) {
+            this.VoiceProfile = new VoiceProfile(source.VoiceProfile);
+        }
         if (source.Output != null) {
             this.Output = new SyncDubbingOutputOption(source.Output);
+        }
+        if (source.ResourceId != null) {
+            this.ResourceId = new String(source.ResourceId);
         }
         if (source.ExtParam != null) {
             this.ExtParam = new String(source.ExtParam);
@@ -252,7 +304,9 @@ public class SyncDubbingRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "AudioData", this.AudioData);
         this.setParamSimple(map, prefix + "AudioUrl", this.AudioUrl);
         this.setParamSimple(map, prefix + "AudioLang", this.AudioLang);
+        this.setParamObj(map, prefix + "VoiceProfile.", this.VoiceProfile);
         this.setParamObj(map, prefix + "Output.", this.Output);
+        this.setParamSimple(map, prefix + "ResourceId", this.ResourceId);
         this.setParamSimple(map, prefix + "ExtParam", this.ExtParam);
 
     }

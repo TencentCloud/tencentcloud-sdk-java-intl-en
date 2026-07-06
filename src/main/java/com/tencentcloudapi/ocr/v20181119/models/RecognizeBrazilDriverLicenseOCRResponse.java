@@ -24,42 +24,42 @@ import java.util.HashMap;
 public class RecognizeBrazilDriverLicenseOCRResponse extends AbstractModel {
 
     /**
-    * Name
+    * Name of the license holder.
     */
     @SerializedName("NOME")
     @Expose
     private String NOME;
 
     /**
-    * Driving license type
+    * Driver's license category.
     */
     @SerializedName("CatHab")
     @Expose
     private String CatHab;
 
     /**
-    * CNH number
+    * Driver's license number (CNH).
     */
     @SerializedName("CNHNumber")
     @Expose
     private String CNHNumber;
 
     /**
-    * Valid date
+    * Validity date (valid until).
     */
     @SerializedName("VALIDADE")
     @Expose
     private String VALIDADE;
 
     /**
-    * Qualification
+    * Qualification information.
     */
     @SerializedName("QUALIFICATION")
     @Expose
     private String QUALIFICATION;
 
     /**
-    * ID number
+    * ID number (Identity document number).
     */
     @SerializedName("IDENTIDADE")
     @Expose
@@ -73,7 +73,7 @@ public class RecognizeBrazilDriverLicenseOCRResponse extends AbstractModel {
     private String CPF;
 
     /**
-    * Birthday
+    * Date of birth.
     */
     @SerializedName("NASCIMENTO")
     @Expose
@@ -94,35 +94,35 @@ public class RecognizeBrazilDriverLicenseOCRResponse extends AbstractModel {
     private String REGISTRO;
 
     /**
-    * Remark
+    * Remarks
     */
     @SerializedName("OBSERVATIONS")
     @Expose
     private String OBSERVATIONS;
 
     /**
-    * Issue date
+    * Date of issue.
     */
     @SerializedName("IssueDate")
     @Expose
     private String IssueDate;
 
     /**
-    * Issue location
+    * Place of issue.
     */
     @SerializedName("LOCAL")
     @Expose
     private String LOCAL;
 
     /**
-    * Number in the back of the card
+    * Registration number on the back of the card.
     */
     @SerializedName("BackNumber")
     @Expose
     private String BackNumber;
 
     /**
-    * Field confidence
+    * This field is deprecated and will always return "1". Usage is not recommended.
     */
     @SerializedName("AdvancedInfo")
     @Expose
@@ -143,96 +143,96 @@ public class RecognizeBrazilDriverLicenseOCRResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Name 
-     * @return NOME Name
+     * Get Name of the license holder. 
+     * @return NOME Name of the license holder.
      */
     public String getNOME() {
         return this.NOME;
     }
 
     /**
-     * Set Name
-     * @param NOME Name
+     * Set Name of the license holder.
+     * @param NOME Name of the license holder.
      */
     public void setNOME(String NOME) {
         this.NOME = NOME;
     }
 
     /**
-     * Get Driving license type 
-     * @return CatHab Driving license type
+     * Get Driver's license category. 
+     * @return CatHab Driver's license category.
      */
     public String getCatHab() {
         return this.CatHab;
     }
 
     /**
-     * Set Driving license type
-     * @param CatHab Driving license type
+     * Set Driver's license category.
+     * @param CatHab Driver's license category.
      */
     public void setCatHab(String CatHab) {
         this.CatHab = CatHab;
     }
 
     /**
-     * Get CNH number 
-     * @return CNHNumber CNH number
+     * Get Driver's license number (CNH). 
+     * @return CNHNumber Driver's license number (CNH).
      */
     public String getCNHNumber() {
         return this.CNHNumber;
     }
 
     /**
-     * Set CNH number
-     * @param CNHNumber CNH number
+     * Set Driver's license number (CNH).
+     * @param CNHNumber Driver's license number (CNH).
      */
     public void setCNHNumber(String CNHNumber) {
         this.CNHNumber = CNHNumber;
     }
 
     /**
-     * Get Valid date 
-     * @return VALIDADE Valid date
+     * Get Validity date (valid until). 
+     * @return VALIDADE Validity date (valid until).
      */
     public String getVALIDADE() {
         return this.VALIDADE;
     }
 
     /**
-     * Set Valid date
-     * @param VALIDADE Valid date
+     * Set Validity date (valid until).
+     * @param VALIDADE Validity date (valid until).
      */
     public void setVALIDADE(String VALIDADE) {
         this.VALIDADE = VALIDADE;
     }
 
     /**
-     * Get Qualification 
-     * @return QUALIFICATION Qualification
+     * Get Qualification information. 
+     * @return QUALIFICATION Qualification information.
      */
     public String getQUALIFICATION() {
         return this.QUALIFICATION;
     }
 
     /**
-     * Set Qualification
-     * @param QUALIFICATION Qualification
+     * Set Qualification information.
+     * @param QUALIFICATION Qualification information.
      */
     public void setQUALIFICATION(String QUALIFICATION) {
         this.QUALIFICATION = QUALIFICATION;
     }
 
     /**
-     * Get ID number 
-     * @return IDENTIDADE ID number
+     * Get ID number (Identity document number). 
+     * @return IDENTIDADE ID number (Identity document number).
      */
     public String getIDENTIDADE() {
         return this.IDENTIDADE;
     }
 
     /**
-     * Set ID number
-     * @param IDENTIDADE ID number
+     * Set ID number (Identity document number).
+     * @param IDENTIDADE ID number (Identity document number).
      */
     public void setIDENTIDADE(String IDENTIDADE) {
         this.IDENTIDADE = IDENTIDADE;
@@ -255,16 +255,16 @@ public class RecognizeBrazilDriverLicenseOCRResponse extends AbstractModel {
     }
 
     /**
-     * Get Birthday 
-     * @return NASCIMENTO Birthday
+     * Get Date of birth. 
+     * @return NASCIMENTO Date of birth.
      */
     public String getNASCIMENTO() {
         return this.NASCIMENTO;
     }
 
     /**
-     * Set Birthday
-     * @param NASCIMENTO Birthday
+     * Set Date of birth.
+     * @param NASCIMENTO Date of birth.
      */
     public void setNASCIMENTO(String NASCIMENTO) {
         this.NASCIMENTO = NASCIMENTO;
@@ -303,81 +303,85 @@ public class RecognizeBrazilDriverLicenseOCRResponse extends AbstractModel {
     }
 
     /**
-     * Get Remark 
-     * @return OBSERVATIONS Remark
+     * Get Remarks 
+     * @return OBSERVATIONS Remarks
      */
     public String getOBSERVATIONS() {
         return this.OBSERVATIONS;
     }
 
     /**
-     * Set Remark
-     * @param OBSERVATIONS Remark
+     * Set Remarks
+     * @param OBSERVATIONS Remarks
      */
     public void setOBSERVATIONS(String OBSERVATIONS) {
         this.OBSERVATIONS = OBSERVATIONS;
     }
 
     /**
-     * Get Issue date 
-     * @return IssueDate Issue date
+     * Get Date of issue. 
+     * @return IssueDate Date of issue.
      */
     public String getIssueDate() {
         return this.IssueDate;
     }
 
     /**
-     * Set Issue date
-     * @param IssueDate Issue date
+     * Set Date of issue.
+     * @param IssueDate Date of issue.
      */
     public void setIssueDate(String IssueDate) {
         this.IssueDate = IssueDate;
     }
 
     /**
-     * Get Issue location 
-     * @return LOCAL Issue location
+     * Get Place of issue. 
+     * @return LOCAL Place of issue.
      */
     public String getLOCAL() {
         return this.LOCAL;
     }
 
     /**
-     * Set Issue location
-     * @param LOCAL Issue location
+     * Set Place of issue.
+     * @param LOCAL Place of issue.
      */
     public void setLOCAL(String LOCAL) {
         this.LOCAL = LOCAL;
     }
 
     /**
-     * Get Number in the back of the card 
-     * @return BackNumber Number in the back of the card
+     * Get Registration number on the back of the card. 
+     * @return BackNumber Registration number on the back of the card.
      */
     public String getBackNumber() {
         return this.BackNumber;
     }
 
     /**
-     * Set Number in the back of the card
-     * @param BackNumber Number in the back of the card
+     * Set Registration number on the back of the card.
+     * @param BackNumber Registration number on the back of the card.
      */
     public void setBackNumber(String BackNumber) {
         this.BackNumber = BackNumber;
     }
 
     /**
-     * Get Field confidence 
-     * @return AdvancedInfo Field confidence
+     * Get This field is deprecated and will always return "1". Usage is not recommended. 
+     * @return AdvancedInfo This field is deprecated and will always return "1". Usage is not recommended.
+     * @deprecated
      */
+    @Deprecated
     public String getAdvancedInfo() {
         return this.AdvancedInfo;
     }
 
     /**
-     * Set Field confidence
-     * @param AdvancedInfo Field confidence
+     * Set This field is deprecated and will always return "1". Usage is not recommended.
+     * @param AdvancedInfo This field is deprecated and will always return "1". Usage is not recommended.
+     * @deprecated
      */
+    @Deprecated
     public void setAdvancedInfo(String AdvancedInfo) {
         this.AdvancedInfo = AdvancedInfo;
     }

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateTranscodeTemplateResponse extends AbstractModel {
 
     /**
-    * Unique ID of a transcoding template.
+    * <p>Unique identifier of the transcoding template.</p>
     */
     @SerializedName("Definition")
     @Expose
@@ -38,16 +38,16 @@ public class CreateTranscodeTemplateResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Unique ID of a transcoding template. 
-     * @return Definition Unique ID of a transcoding template.
+     * Get <p>Unique identifier of the transcoding template.</p> 
+     * @return Definition <p>Unique identifier of the transcoding template.</p>
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set Unique ID of a transcoding template.
-     * @param Definition Unique ID of a transcoding template.
+     * Set <p>Unique identifier of the transcoding template.</p>
+     * @param Definition <p>Unique identifier of the transcoding template.</p>
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;

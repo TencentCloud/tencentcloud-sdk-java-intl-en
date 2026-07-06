@@ -66,7 +66,7 @@ public class MLIDPassportOCRResponse extends AbstractModel {
     private String IssuingCountry;
 
     /**
-    * Country/region code
+    * Nationality code (MRZ field)
     */
     @SerializedName("Nationality")
     @Expose
@@ -80,7 +80,7 @@ public class MLIDPassportOCRResponse extends AbstractModel {
     private Long [] Warn;
 
     /**
-    * Identity photo
+    * Base64-encoded identity photo
     */
     @SerializedName("Image")
     @Expose
@@ -131,22 +131,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String Type;
 
     /**
-    * Document content in Information Zone
+    * Document content in the visual zone
     */
     @SerializedName("PassportRecognizeInfos")
     @Expose
     private PassportRecognizeInfos PassportRecognizeInfos;
 
     /**
-    * Card Warning Information
-
--9101 Alarm for covered certificate,
--9102 Alarm for photocopied certificate,
--9103 Alarm for photographed certificate,
--9104 Alarm for PS certificate,
--9107 Alarm for reflective certificate,
--9108 Alarm for blurry image,
--9109 This capability is not enabled.
+    * Warning information for the document. This field applies only to international site requests and will return an empty array for domestic site requests. Valid warning codes: 
+-9101 (incomplete card border), 
+-9102 (photocopied document), 
+-9103 (re-photographed document), -9104 (PS-altered document), 
+-9107 (reflective document), 
+-9108 (blurry image), 
+-9109 (warning capability not enabled).
     */
     @SerializedName("WarnCardInfos")
     @Expose
@@ -160,7 +158,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long CardCount;
 
     /**
-    * complete or not
+    * Whether the passport information is complete.
     */
     @SerializedName("IsComplete")
     @Expose
@@ -270,16 +268,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Country/region code 
-     * @return Nationality Country/region code
+     * Get Nationality code (MRZ field) 
+     * @return Nationality Nationality code (MRZ field)
      */
     public String getNationality() {
         return this.Nationality;
     }
 
     /**
-     * Set Country/region code
-     * @param Nationality Country/region code
+     * Set Nationality code (MRZ field)
+     * @param Nationality Nationality code (MRZ field)
      */
     public void setNationality(String Nationality) {
         this.Nationality = Nationality;
@@ -306,16 +304,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Identity photo 
-     * @return Image Identity photo
+     * Get Base64-encoded identity photo 
+     * @return Image Base64-encoded identity photo
      */
     public String getImage() {
         return this.Image;
     }
 
     /**
-     * Set Identity photo
-     * @param Image Identity photo
+     * Set Base64-encoded identity photo
+     * @param Image Base64-encoded identity photo
      */
     public void setImage(String Image) {
         this.Image = Image;
@@ -430,64 +428,56 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Document content in Information Zone 
-     * @return PassportRecognizeInfos Document content in Information Zone
+     * Get Document content in the visual zone 
+     * @return PassportRecognizeInfos Document content in the visual zone
      */
     public PassportRecognizeInfos getPassportRecognizeInfos() {
         return this.PassportRecognizeInfos;
     }
 
     /**
-     * Set Document content in Information Zone
-     * @param PassportRecognizeInfos Document content in Information Zone
+     * Set Document content in the visual zone
+     * @param PassportRecognizeInfos Document content in the visual zone
      */
     public void setPassportRecognizeInfos(PassportRecognizeInfos PassportRecognizeInfos) {
         this.PassportRecognizeInfos = PassportRecognizeInfos;
     }
 
     /**
-     * Get Card Warning Information
-
--9101 Alarm for covered certificate,
--9102 Alarm for photocopied certificate,
--9103 Alarm for photographed certificate,
--9104 Alarm for PS certificate,
--9107 Alarm for reflective certificate,
--9108 Alarm for blurry image,
--9109 This capability is not enabled. 
-     * @return WarnCardInfos Card Warning Information
-
--9101 Alarm for covered certificate,
--9102 Alarm for photocopied certificate,
--9103 Alarm for photographed certificate,
--9104 Alarm for PS certificate,
--9107 Alarm for reflective certificate,
--9108 Alarm for blurry image,
--9109 This capability is not enabled.
+     * Get Warning information for the document. This field applies only to international site requests and will return an empty array for domestic site requests. Valid warning codes: 
+-9101 (incomplete card border), 
+-9102 (photocopied document), 
+-9103 (re-photographed document), -9104 (PS-altered document), 
+-9107 (reflective document), 
+-9108 (blurry image), 
+-9109 (warning capability not enabled). 
+     * @return WarnCardInfos Warning information for the document. This field applies only to international site requests and will return an empty array for domestic site requests. Valid warning codes: 
+-9101 (incomplete card border), 
+-9102 (photocopied document), 
+-9103 (re-photographed document), -9104 (PS-altered document), 
+-9107 (reflective document), 
+-9108 (blurry image), 
+-9109 (warning capability not enabled).
      */
     public Long [] getWarnCardInfos() {
         return this.WarnCardInfos;
     }
 
     /**
-     * Set Card Warning Information
-
--9101 Alarm for covered certificate,
--9102 Alarm for photocopied certificate,
--9103 Alarm for photographed certificate,
--9104 Alarm for PS certificate,
--9107 Alarm for reflective certificate,
--9108 Alarm for blurry image,
--9109 This capability is not enabled.
-     * @param WarnCardInfos Card Warning Information
-
--9101 Alarm for covered certificate,
--9102 Alarm for photocopied certificate,
--9103 Alarm for photographed certificate,
--9104 Alarm for PS certificate,
--9107 Alarm for reflective certificate,
--9108 Alarm for blurry image,
--9109 This capability is not enabled.
+     * Set Warning information for the document. This field applies only to international site requests and will return an empty array for domestic site requests. Valid warning codes: 
+-9101 (incomplete card border), 
+-9102 (photocopied document), 
+-9103 (re-photographed document), -9104 (PS-altered document), 
+-9107 (reflective document), 
+-9108 (blurry image), 
+-9109 (warning capability not enabled).
+     * @param WarnCardInfos Warning information for the document. This field applies only to international site requests and will return an empty array for domestic site requests. Valid warning codes: 
+-9101 (incomplete card border), 
+-9102 (photocopied document), 
+-9103 (re-photographed document), -9104 (PS-altered document), 
+-9107 (reflective document), 
+-9108 (blurry image), 
+-9109 (warning capability not enabled).
      */
     public void setWarnCardInfos(Long [] WarnCardInfos) {
         this.WarnCardInfos = WarnCardInfos;
@@ -510,16 +500,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get complete or not 
-     * @return IsComplete complete or not
+     * Get Whether the passport information is complete. 
+     * @return IsComplete Whether the passport information is complete.
      */
     public Boolean getIsComplete() {
         return this.IsComplete;
     }
 
     /**
-     * Set complete or not
-     * @param IsComplete complete or not
+     * Set Whether the passport information is complete.
+     * @param IsComplete Whether the passport information is complete.
      */
     public void setIsComplete(Boolean IsComplete) {
         this.IsComplete = IsComplete;

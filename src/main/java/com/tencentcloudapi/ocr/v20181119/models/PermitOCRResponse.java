@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class PermitOCRResponse extends AbstractModel {
 
     /**
-    * Name
+    * Name in Chinese
     */
     @SerializedName("Name")
     @Expose
@@ -66,7 +66,7 @@ public class PermitOCRResponse extends AbstractModel {
     private String IssueAuthority;
 
     /**
-    * Issuing place
+    * Place of issue
     */
     @SerializedName("IssueAddress")
     @Expose
@@ -80,29 +80,28 @@ public class PermitOCRResponse extends AbstractModel {
     private String Birthday;
 
     /**
-    * base64 of the avatar image
+    * Base64-encoded profile photo of the document holder.
     */
     @SerializedName("PortraitImage")
     @Expose
     private String PortraitImage;
 
     /**
-    * Return type
+    * Document type, such as: Exit-Entry Permit for Travelling to and from Hong Kong and Macao, or Exit-Entry Permit for Travelling to and from Taiwan.
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * Card Warning Information
-
--9101 Alarm for covered certificate,
--9102 Alarm for photocopied certificate,
--9103 Alarm for photographed certificate,
--9104 Alarm for PS certificate,
--9107 Alarm for reflective certificate,
--9108 Alarm for blurry image,
--9109 This capability is not enabled.
+    * Warning information for the document. This field is only valid for international site requests. Warning codes:
+-9101: Incomplete card border warning
+-9102: Photocopied card warning
+-9103: Recaptured card warning
+-9104: Photoshopped card warning
+-9107: Reflective card warning
+-9108: Blurry image warning
+-9109: Warning capability not enabled
     */
     @SerializedName("WarnCardInfos")
     @Expose
@@ -116,16 +115,16 @@ public class PermitOCRResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Name 
-     * @return Name Name
+     * Get Name in Chinese 
+     * @return Name Name in Chinese
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Name
-     * @param Name Name
+     * Set Name in Chinese
+     * @param Name Name in Chinese
      */
     public void setName(String Name) {
         this.Name = Name;
@@ -212,16 +211,16 @@ public class PermitOCRResponse extends AbstractModel {
     }
 
     /**
-     * Get Issuing place 
-     * @return IssueAddress Issuing place
+     * Get Place of issue 
+     * @return IssueAddress Place of issue
      */
     public String getIssueAddress() {
         return this.IssueAddress;
     }
 
     /**
-     * Set Issuing place
-     * @param IssueAddress Issuing place
+     * Set Place of issue
+     * @param IssueAddress Place of issue
      */
     public void setIssueAddress(String IssueAddress) {
         this.IssueAddress = IssueAddress;
@@ -244,80 +243,76 @@ public class PermitOCRResponse extends AbstractModel {
     }
 
     /**
-     * Get base64 of the avatar image 
-     * @return PortraitImage base64 of the avatar image
+     * Get Base64-encoded profile photo of the document holder. 
+     * @return PortraitImage Base64-encoded profile photo of the document holder.
      */
     public String getPortraitImage() {
         return this.PortraitImage;
     }
 
     /**
-     * Set base64 of the avatar image
-     * @param PortraitImage base64 of the avatar image
+     * Set Base64-encoded profile photo of the document holder.
+     * @param PortraitImage Base64-encoded profile photo of the document holder.
      */
     public void setPortraitImage(String PortraitImage) {
         this.PortraitImage = PortraitImage;
     }
 
     /**
-     * Get Return type 
-     * @return Type Return type
+     * Get Document type, such as: Exit-Entry Permit for Travelling to and from Hong Kong and Macao, or Exit-Entry Permit for Travelling to and from Taiwan. 
+     * @return Type Document type, such as: Exit-Entry Permit for Travelling to and from Hong Kong and Macao, or Exit-Entry Permit for Travelling to and from Taiwan.
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set Return type
-     * @param Type Return type
+     * Set Document type, such as: Exit-Entry Permit for Travelling to and from Hong Kong and Macao, or Exit-Entry Permit for Travelling to and from Taiwan.
+     * @param Type Document type, such as: Exit-Entry Permit for Travelling to and from Hong Kong and Macao, or Exit-Entry Permit for Travelling to and from Taiwan.
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get Card Warning Information
-
--9101 Alarm for covered certificate,
--9102 Alarm for photocopied certificate,
--9103 Alarm for photographed certificate,
--9104 Alarm for PS certificate,
--9107 Alarm for reflective certificate,
--9108 Alarm for blurry image,
--9109 This capability is not enabled. 
-     * @return WarnCardInfos Card Warning Information
-
--9101 Alarm for covered certificate,
--9102 Alarm for photocopied certificate,
--9103 Alarm for photographed certificate,
--9104 Alarm for PS certificate,
--9107 Alarm for reflective certificate,
--9108 Alarm for blurry image,
--9109 This capability is not enabled.
+     * Get Warning information for the document. This field is only valid for international site requests. Warning codes:
+-9101: Incomplete card border warning
+-9102: Photocopied card warning
+-9103: Recaptured card warning
+-9104: Photoshopped card warning
+-9107: Reflective card warning
+-9108: Blurry image warning
+-9109: Warning capability not enabled 
+     * @return WarnCardInfos Warning information for the document. This field is only valid for international site requests. Warning codes:
+-9101: Incomplete card border warning
+-9102: Photocopied card warning
+-9103: Recaptured card warning
+-9104: Photoshopped card warning
+-9107: Reflective card warning
+-9108: Blurry image warning
+-9109: Warning capability not enabled
      */
     public Long [] getWarnCardInfos() {
         return this.WarnCardInfos;
     }
 
     /**
-     * Set Card Warning Information
-
--9101 Alarm for covered certificate,
--9102 Alarm for photocopied certificate,
--9103 Alarm for photographed certificate,
--9104 Alarm for PS certificate,
--9107 Alarm for reflective certificate,
--9108 Alarm for blurry image,
--9109 This capability is not enabled.
-     * @param WarnCardInfos Card Warning Information
-
--9101 Alarm for covered certificate,
--9102 Alarm for photocopied certificate,
--9103 Alarm for photographed certificate,
--9104 Alarm for PS certificate,
--9107 Alarm for reflective certificate,
--9108 Alarm for blurry image,
--9109 This capability is not enabled.
+     * Set Warning information for the document. This field is only valid for international site requests. Warning codes:
+-9101: Incomplete card border warning
+-9102: Photocopied card warning
+-9103: Recaptured card warning
+-9104: Photoshopped card warning
+-9107: Reflective card warning
+-9108: Blurry image warning
+-9109: Warning capability not enabled
+     * @param WarnCardInfos Warning information for the document. This field is only valid for international site requests. Warning codes:
+-9101: Incomplete card border warning
+-9102: Photocopied card warning
+-9103: Recaptured card warning
+-9104: Photoshopped card warning
+-9107: Reflective card warning
+-9108: Blurry image warning
+-9109: Warning capability not enabled
      */
     public void setWarnCardInfos(Long [] WarnCardInfos) {
         this.WarnCardInfos = WarnCardInfos;

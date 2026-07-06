@@ -59,6 +59,17 @@ public class RecognizeBrazilDriverLicenseOCRRequest extends AbstractModel {
     private Boolean CropPortrait;
 
     /**
+    * Version of the driver's license image. 
+Valid values: 
+OLD (old version), 
+NEW (new version). 
+The default value is OLD.
+    */
+    @SerializedName("LicenceVersion")
+    @Expose
+    private String LicenceVersion;
+
+    /**
      * Get The Base64 value of the image. It is required that the image after Base64 encoding should not exceed 7M, the resolution is recommended to be 500*800 or above, and PNG, JPG, JPEG, and BMP formats are supported. It is recommended that the card part occupies at least 2/3 of the picture. One of ImageUrl and ImageBase64 of the image must be provided. If both are provided, only ImageUrl will be used. 
      * @return ImageBase64 The Base64 value of the image. It is required that the image after Base64 encoding should not exceed 7M, the resolution is recommended to be 500*800 or above, and PNG, JPG, JPEG, and BMP formats are supported. It is recommended that the card part occupies at least 2/3 of the picture. One of ImageUrl and ImageBase64 of the image must be provided. If both are provided, only ImageUrl will be used.
      */
@@ -138,6 +149,38 @@ public class RecognizeBrazilDriverLicenseOCRRequest extends AbstractModel {
         this.CropPortrait = CropPortrait;
     }
 
+    /**
+     * Get Version of the driver's license image. 
+Valid values: 
+OLD (old version), 
+NEW (new version). 
+The default value is OLD. 
+     * @return LicenceVersion Version of the driver's license image. 
+Valid values: 
+OLD (old version), 
+NEW (new version). 
+The default value is OLD.
+     */
+    public String getLicenceVersion() {
+        return this.LicenceVersion;
+    }
+
+    /**
+     * Set Version of the driver's license image. 
+Valid values: 
+OLD (old version), 
+NEW (new version). 
+The default value is OLD.
+     * @param LicenceVersion Version of the driver's license image. 
+Valid values: 
+OLD (old version), 
+NEW (new version). 
+The default value is OLD.
+     */
+    public void setLicenceVersion(String LicenceVersion) {
+        this.LicenceVersion = LicenceVersion;
+    }
+
     public RecognizeBrazilDriverLicenseOCRRequest() {
     }
 
@@ -161,6 +204,9 @@ public class RecognizeBrazilDriverLicenseOCRRequest extends AbstractModel {
         if (source.CropPortrait != null) {
             this.CropPortrait = new Boolean(source.CropPortrait);
         }
+        if (source.LicenceVersion != null) {
+            this.LicenceVersion = new String(source.LicenceVersion);
+        }
     }
 
 
@@ -173,6 +219,7 @@ public class RecognizeBrazilDriverLicenseOCRRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ImageUrl", this.ImageUrl);
         this.setParamSimple(map, prefix + "BackImageUrl", this.BackImageUrl);
         this.setParamSimple(map, prefix + "CropPortrait", this.CropPortrait);
+        this.setParamSimple(map, prefix + "LicenceVersion", this.LicenceVersion);
 
     }
 }

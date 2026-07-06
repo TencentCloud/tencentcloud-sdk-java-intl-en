@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class AiRecognitionTaskOcrFullTextSegmentTextItem extends AbstractModel {
 
     /**
-    * Confidence of a recognition segment. Value range: 0-100.
+    * <p>Confidence of the recognized segment. Value range: 0–100.</p>
     */
     @SerializedName("Confidence")
     @Expose
     private Float Confidence;
 
     /**
-    * Zone coordinates of a recognition result. The array contains four elements: [x1,y1,x2,y2], i.e., the horizontal and vertical coordinates of the top-left and bottom-right corners.
+    * <p>Area coordinates of the recognition result. The array contains 4 elements [x1,y1,x2,y2], representing the horizontal and vertical coordinates of the top-left corner and bottom-right corner.</p>
     */
     @SerializedName("AreaCoordSet")
     @Expose
     private Long [] AreaCoordSet;
 
     /**
-    * Recognized text.
+    * <p>Recognized text.</p>
     */
     @SerializedName("Text")
     @Expose
     private String Text;
 
     /**
-     * Get Confidence of a recognition segment. Value range: 0-100. 
-     * @return Confidence Confidence of a recognition segment. Value range: 0-100.
+     * Get <p>Confidence of the recognized segment. Value range: 0–100.</p> 
+     * @return Confidence <p>Confidence of the recognized segment. Value range: 0–100.</p>
      */
     public Float getConfidence() {
         return this.Confidence;
     }
 
     /**
-     * Set Confidence of a recognition segment. Value range: 0-100.
-     * @param Confidence Confidence of a recognition segment. Value range: 0-100.
+     * Set <p>Confidence of the recognized segment. Value range: 0–100.</p>
+     * @param Confidence <p>Confidence of the recognized segment. Value range: 0–100.</p>
      */
     public void setConfidence(Float Confidence) {
         this.Confidence = Confidence;
     }
 
     /**
-     * Get Zone coordinates of a recognition result. The array contains four elements: [x1,y1,x2,y2], i.e., the horizontal and vertical coordinates of the top-left and bottom-right corners. 
-     * @return AreaCoordSet Zone coordinates of a recognition result. The array contains four elements: [x1,y1,x2,y2], i.e., the horizontal and vertical coordinates of the top-left and bottom-right corners.
+     * Get <p>Area coordinates of the recognition result. The array contains 4 elements [x1,y1,x2,y2], representing the horizontal and vertical coordinates of the top-left corner and bottom-right corner.</p> 
+     * @return AreaCoordSet <p>Area coordinates of the recognition result. The array contains 4 elements [x1,y1,x2,y2], representing the horizontal and vertical coordinates of the top-left corner and bottom-right corner.</p>
      */
     public Long [] getAreaCoordSet() {
         return this.AreaCoordSet;
     }
 
     /**
-     * Set Zone coordinates of a recognition result. The array contains four elements: [x1,y1,x2,y2], i.e., the horizontal and vertical coordinates of the top-left and bottom-right corners.
-     * @param AreaCoordSet Zone coordinates of a recognition result. The array contains four elements: [x1,y1,x2,y2], i.e., the horizontal and vertical coordinates of the top-left and bottom-right corners.
+     * Set <p>Area coordinates of the recognition result. The array contains 4 elements [x1,y1,x2,y2], representing the horizontal and vertical coordinates of the top-left corner and bottom-right corner.</p>
+     * @param AreaCoordSet <p>Area coordinates of the recognition result. The array contains 4 elements [x1,y1,x2,y2], representing the horizontal and vertical coordinates of the top-left corner and bottom-right corner.</p>
      */
     public void setAreaCoordSet(Long [] AreaCoordSet) {
         this.AreaCoordSet = AreaCoordSet;
     }
 
     /**
-     * Get Recognized text. 
-     * @return Text Recognized text.
+     * Get <p>Recognized text.</p> 
+     * @return Text <p>Recognized text.</p>
      */
     public String getText() {
         return this.Text;
     }
 
     /**
-     * Set Recognized text.
-     * @param Text Recognized text.
+     * Set <p>Recognized text.</p>
+     * @param Text <p>Recognized text.</p>
      */
     public void setText(String Text) {
         this.Text = Text;

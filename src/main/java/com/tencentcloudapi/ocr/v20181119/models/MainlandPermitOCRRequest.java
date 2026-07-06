@@ -52,6 +52,15 @@ The download speed and stability of non-Tencent Cloud URLs may be low.
     private Boolean RetProfile;
 
     /**
+    * The side of the document. Valid values: FRONT (front side, default),
+BACK (back side, only supported for Mainland Travel Permit for inbound visits). 
+Note: Back side recognition is only supported for the "Mainland Travel Permit for Hong Kong and Macao Residents" , and is not supported for Hong Kong, Macao, or Taiwan passes.
+    */
+    @SerializedName("CardSide")
+    @Expose
+    private String CardSide;
+
+    /**
      * Get The Base64-encoded value of the image.
 Supported image formats: PNG, JPG, and JPEG. GIF is currently not supported.
 Supported image size: The downloaded image after Base64 encoding can be up to 7 MB. The download time of the image cannot exceed 3s.
@@ -127,6 +136,30 @@ The download speed and stability of non-Tencent Cloud URLs may be low.
         this.RetProfile = RetProfile;
     }
 
+    /**
+     * Get The side of the document. Valid values: FRONT (front side, default),
+BACK (back side, only supported for Mainland Travel Permit for inbound visits). 
+Note: Back side recognition is only supported for the "Mainland Travel Permit for Hong Kong and Macao Residents" , and is not supported for Hong Kong, Macao, or Taiwan passes. 
+     * @return CardSide The side of the document. Valid values: FRONT (front side, default),
+BACK (back side, only supported for Mainland Travel Permit for inbound visits). 
+Note: Back side recognition is only supported for the "Mainland Travel Permit for Hong Kong and Macao Residents" , and is not supported for Hong Kong, Macao, or Taiwan passes.
+     */
+    public String getCardSide() {
+        return this.CardSide;
+    }
+
+    /**
+     * Set The side of the document. Valid values: FRONT (front side, default),
+BACK (back side, only supported for Mainland Travel Permit for inbound visits). 
+Note: Back side recognition is only supported for the "Mainland Travel Permit for Hong Kong and Macao Residents" , and is not supported for Hong Kong, Macao, or Taiwan passes.
+     * @param CardSide The side of the document. Valid values: FRONT (front side, default),
+BACK (back side, only supported for Mainland Travel Permit for inbound visits). 
+Note: Back side recognition is only supported for the "Mainland Travel Permit for Hong Kong and Macao Residents" , and is not supported for Hong Kong, Macao, or Taiwan passes.
+     */
+    public void setCardSide(String CardSide) {
+        this.CardSide = CardSide;
+    }
+
     public MainlandPermitOCRRequest() {
     }
 
@@ -144,6 +177,9 @@ The download speed and stability of non-Tencent Cloud URLs may be low.
         if (source.RetProfile != null) {
             this.RetProfile = new Boolean(source.RetProfile);
         }
+        if (source.CardSide != null) {
+            this.CardSide = new String(source.CardSide);
+        }
     }
 
 
@@ -154,6 +190,7 @@ The download speed and stability of non-Tencent Cloud URLs may be low.
         this.setParamSimple(map, prefix + "ImageBase64", this.ImageBase64);
         this.setParamSimple(map, prefix + "ImageUrl", this.ImageUrl);
         this.setParamSimple(map, prefix + "RetProfile", this.RetProfile);
+        this.setParamSimple(map, prefix + "CardSide", this.CardSide);
 
     }
 }

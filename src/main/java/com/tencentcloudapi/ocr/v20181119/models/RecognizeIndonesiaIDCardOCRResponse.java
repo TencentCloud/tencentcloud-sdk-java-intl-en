@@ -66,7 +66,7 @@ public class RecognizeIndonesiaIDCardOCRResponse extends AbstractModel {
     private String Alamat;
 
     /**
-    * The street.
+    * The neighborhood/community unit (RT/RW).
     */
     @SerializedName("RTRW")
     @Expose
@@ -270,16 +270,16 @@ public class RecognizeIndonesiaIDCardOCRResponse extends AbstractModel {
     }
 
     /**
-     * Get The street. 
-     * @return RTRW The street.
+     * Get The neighborhood/community unit (RT/RW). 
+     * @return RTRW The neighborhood/community unit (RT/RW).
      */
     public String getRTRW() {
         return this.RTRW;
     }
 
     /**
-     * Set The street.
-     * @param RTRW The street.
+     * Set The neighborhood/community unit (RT/RW).
+     * @param RTRW The neighborhood/community unit (RT/RW).
      */
     public void setRTRW(String RTRW) {
         this.RTRW = RTRW;

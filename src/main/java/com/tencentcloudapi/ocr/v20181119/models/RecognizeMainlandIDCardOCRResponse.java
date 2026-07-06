@@ -31,21 +31,21 @@ public class RecognizeMainlandIDCardOCRResponse extends AbstractModel {
     private String Name;
 
     /**
-    * Sex((portrait side))
+    * Gender (portrait side)
     */
     @SerializedName("Sex")
     @Expose
     private String Sex;
 
     /**
-    * Nation((portrait side))
+    * Ethnicity (portrait side)
     */
     @SerializedName("Nation")
     @Expose
     private String Nation;
 
     /**
-    * Brithday((portrait side))
+    * Date of birth (portrait side)
     */
     @SerializedName("Birth")
     @Expose
@@ -66,29 +66,28 @@ public class RecognizeMainlandIDCardOCRResponse extends AbstractModel {
     private String IdNum;
 
     /**
-    * Card authority(national emblem side)
+    * Issuing authority (national emblem side)
     */
     @SerializedName("Authority")
     @Expose
     private String Authority;
 
     /**
-    * Card valid date (national emblem side)
+    * Validity period (national emblem side)
     */
     @SerializedName("ValidDate")
     @Expose
     private String ValidDate;
 
     /**
-    * Card Warning Information
-
--9101 Alarm for covered certificate,
--9102 Alarm for photocopied certificate,
--9103 Alarm for photographed certificate,
--9104 Alarm for PS certificate,
--9107 Alarm for reflective certificate,
--9108 Alarm for blurry image,
--9109 This capability is not enabled.
+    * Warning information for the ID card. Valid warning codes: 
+-9101 (incomplete card border), 
+-9102 (photocopied document), 
+-9103 (re-photographed document), 
+-9104 (PS-altered document), 
+-9107 (reflective document), 
+-9108 (blurry image), 
+-9109 (warning capability not enabled).
     */
     @SerializedName("WarnCardInfos")
     @Expose
@@ -132,48 +131,48 @@ public class RecognizeMainlandIDCardOCRResponse extends AbstractModel {
     }
 
     /**
-     * Get Sex((portrait side)) 
-     * @return Sex Sex((portrait side))
+     * Get Gender (portrait side) 
+     * @return Sex Gender (portrait side)
      */
     public String getSex() {
         return this.Sex;
     }
 
     /**
-     * Set Sex((portrait side))
-     * @param Sex Sex((portrait side))
+     * Set Gender (portrait side)
+     * @param Sex Gender (portrait side)
      */
     public void setSex(String Sex) {
         this.Sex = Sex;
     }
 
     /**
-     * Get Nation((portrait side)) 
-     * @return Nation Nation((portrait side))
+     * Get Ethnicity (portrait side) 
+     * @return Nation Ethnicity (portrait side)
      */
     public String getNation() {
         return this.Nation;
     }
 
     /**
-     * Set Nation((portrait side))
-     * @param Nation Nation((portrait side))
+     * Set Ethnicity (portrait side)
+     * @param Nation Ethnicity (portrait side)
      */
     public void setNation(String Nation) {
         this.Nation = Nation;
     }
 
     /**
-     * Get Brithday((portrait side)) 
-     * @return Birth Brithday((portrait side))
+     * Get Date of birth (portrait side) 
+     * @return Birth Date of birth (portrait side)
      */
     public String getBirth() {
         return this.Birth;
     }
 
     /**
-     * Set Brithday((portrait side))
-     * @param Birth Brithday((portrait side))
+     * Set Date of birth (portrait side)
+     * @param Birth Date of birth (portrait side)
      */
     public void setBirth(String Birth) {
         this.Birth = Birth;
@@ -212,80 +211,76 @@ public class RecognizeMainlandIDCardOCRResponse extends AbstractModel {
     }
 
     /**
-     * Get Card authority(national emblem side) 
-     * @return Authority Card authority(national emblem side)
+     * Get Issuing authority (national emblem side) 
+     * @return Authority Issuing authority (national emblem side)
      */
     public String getAuthority() {
         return this.Authority;
     }
 
     /**
-     * Set Card authority(national emblem side)
-     * @param Authority Card authority(national emblem side)
+     * Set Issuing authority (national emblem side)
+     * @param Authority Issuing authority (national emblem side)
      */
     public void setAuthority(String Authority) {
         this.Authority = Authority;
     }
 
     /**
-     * Get Card valid date (national emblem side) 
-     * @return ValidDate Card valid date (national emblem side)
+     * Get Validity period (national emblem side) 
+     * @return ValidDate Validity period (national emblem side)
      */
     public String getValidDate() {
         return this.ValidDate;
     }
 
     /**
-     * Set Card valid date (national emblem side)
-     * @param ValidDate Card valid date (national emblem side)
+     * Set Validity period (national emblem side)
+     * @param ValidDate Validity period (national emblem side)
      */
     public void setValidDate(String ValidDate) {
         this.ValidDate = ValidDate;
     }
 
     /**
-     * Get Card Warning Information
-
--9101 Alarm for covered certificate,
--9102 Alarm for photocopied certificate,
--9103 Alarm for photographed certificate,
--9104 Alarm for PS certificate,
--9107 Alarm for reflective certificate,
--9108 Alarm for blurry image,
--9109 This capability is not enabled. 
-     * @return WarnCardInfos Card Warning Information
-
--9101 Alarm for covered certificate,
--9102 Alarm for photocopied certificate,
--9103 Alarm for photographed certificate,
--9104 Alarm for PS certificate,
--9107 Alarm for reflective certificate,
--9108 Alarm for blurry image,
--9109 This capability is not enabled.
+     * Get Warning information for the ID card. Valid warning codes: 
+-9101 (incomplete card border), 
+-9102 (photocopied document), 
+-9103 (re-photographed document), 
+-9104 (PS-altered document), 
+-9107 (reflective document), 
+-9108 (blurry image), 
+-9109 (warning capability not enabled). 
+     * @return WarnCardInfos Warning information for the ID card. Valid warning codes: 
+-9101 (incomplete card border), 
+-9102 (photocopied document), 
+-9103 (re-photographed document), 
+-9104 (PS-altered document), 
+-9107 (reflective document), 
+-9108 (blurry image), 
+-9109 (warning capability not enabled).
      */
     public Long [] getWarnCardInfos() {
         return this.WarnCardInfos;
     }
 
     /**
-     * Set Card Warning Information
-
--9101 Alarm for covered certificate,
--9102 Alarm for photocopied certificate,
--9103 Alarm for photographed certificate,
--9104 Alarm for PS certificate,
--9107 Alarm for reflective certificate,
--9108 Alarm for blurry image,
--9109 This capability is not enabled.
-     * @param WarnCardInfos Card Warning Information
-
--9101 Alarm for covered certificate,
--9102 Alarm for photocopied certificate,
--9103 Alarm for photographed certificate,
--9104 Alarm for PS certificate,
--9107 Alarm for reflective certificate,
--9108 Alarm for blurry image,
--9109 This capability is not enabled.
+     * Set Warning information for the ID card. Valid warning codes: 
+-9101 (incomplete card border), 
+-9102 (photocopied document), 
+-9103 (re-photographed document), 
+-9104 (PS-altered document), 
+-9107 (reflective document), 
+-9108 (blurry image), 
+-9109 (warning capability not enabled).
+     * @param WarnCardInfos Warning information for the ID card. Valid warning codes: 
+-9101 (incomplete card border), 
+-9102 (photocopied document), 
+-9103 (re-photographed document), 
+-9104 (PS-altered document), 
+-9107 (reflective document), 
+-9108 (blurry image), 
+-9109 (warning capability not enabled).
      */
     public void setWarnCardInfos(Long [] WarnCardInfos) {
         this.WarnCardInfos = WarnCardInfos;

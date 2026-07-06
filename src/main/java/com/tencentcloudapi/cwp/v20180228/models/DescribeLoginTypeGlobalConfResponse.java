@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeLoginTypeGlobalConfResponse extends AbstractModel {
 
     /**
-    * <p>Whether uninstall protection is enabled <li>0: No</li> <li>1: Yes</li> <li>9: Not set, equivalent to 0 (disabled)</li></p>
+    * <p>Whether to enable QR code log-in <li>0 No</li> <li>1 Yes</li> <li>9 Not set, same as 0 means not enabled</li></p>
     */
     @SerializedName("Enable")
     @Expose
@@ -87,16 +87,16 @@ public class DescribeLoginTypeGlobalConfResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get <p>Whether uninstall protection is enabled <li>0: No</li> <li>1: Yes</li> <li>9: Not set, equivalent to 0 (disabled)</li></p> 
-     * @return Enable <p>Whether uninstall protection is enabled <li>0: No</li> <li>1: Yes</li> <li>9: Not set, equivalent to 0 (disabled)</li></p>
+     * Get <p>Whether to enable QR code log-in <li>0 No</li> <li>1 Yes</li> <li>9 Not set, same as 0 means not enabled</li></p> 
+     * @return Enable <p>Whether to enable QR code log-in <li>0 No</li> <li>1 Yes</li> <li>9 Not set, same as 0 means not enabled</li></p>
      */
     public Long getEnable() {
         return this.Enable;
     }
 
     /**
-     * Set <p>Whether uninstall protection is enabled <li>0: No</li> <li>1: Yes</li> <li>9: Not set, equivalent to 0 (disabled)</li></p>
-     * @param Enable <p>Whether uninstall protection is enabled <li>0: No</li> <li>1: Yes</li> <li>9: Not set, equivalent to 0 (disabled)</li></p>
+     * Set <p>Whether to enable QR code log-in <li>0 No</li> <li>1 Yes</li> <li>9 Not set, same as 0 means not enabled</li></p>
+     * @param Enable <p>Whether to enable QR code log-in <li>0 No</li> <li>1 Yes</li> <li>9 Not set, same as 0 means not enabled</li></p>
      */
     public void setEnable(Long Enable) {
         this.Enable = Enable;

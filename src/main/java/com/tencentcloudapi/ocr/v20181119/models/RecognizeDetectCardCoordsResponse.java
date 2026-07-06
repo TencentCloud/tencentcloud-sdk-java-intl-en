@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class RecognizeDetectCardCoordsResponse extends AbstractModel {
 
     /**
-    * Detected coordinate information.
+    * Coordinate information of the detected four corners of the card.
     */
     @SerializedName("ItemList")
     @Expose
@@ -38,16 +38,16 @@ public class RecognizeDetectCardCoordsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Detected coordinate information. 
-     * @return ItemList Detected coordinate information.
+     * Get Coordinate information of the detected four corners of the card. 
+     * @return ItemList Coordinate information of the detected four corners of the card.
      */
     public CoordsItem [] getItemList() {
         return this.ItemList;
     }
 
     /**
-     * Set Detected coordinate information.
-     * @param ItemList Detected coordinate information.
+     * Set Coordinate information of the detected four corners of the card.
+     * @param ItemList Coordinate information of the detected four corners of the card.
      */
     public void setItemList(CoordsItem [] ItemList) {
         this.ItemList = ItemList;

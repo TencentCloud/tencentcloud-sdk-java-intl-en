@@ -24,148 +24,143 @@ import java.util.HashMap;
 public class SmartSubtitleTaskAsrFullTextSegmentItem extends AbstractModel {
 
     /**
-    * Confidence of a recognized segment. Value range: 0-100.
+    * <p>Confidence of the recognized segment. Value range: 0–100.</p>
     */
     @SerializedName("Confidence")
     @Expose
     private Float Confidence;
 
     /**
-    * Start time offset of a recognized segment, in seconds.
+    * <p>Start time offset of the recognized segment, in seconds.</p>
     */
     @SerializedName("StartTimeOffset")
     @Expose
     private Float StartTimeOffset;
 
     /**
-    * End time offset of a recognized segment, in seconds.
+    * <p>End time offset of the recognized segment, in seconds.</p>
     */
     @SerializedName("EndTimeOffset")
     @Expose
     private Float EndTimeOffset;
 
     /**
-    * Recognized text.
+    * <p>Recognized text.</p>
     */
     @SerializedName("Text")
     @Expose
     private String Text;
 
     /**
-    * Word timestamp information.
-
-Note: This field may return null, indicating that no valid value can be obtained.
+    * <p>Word timestamp information.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Wordlist")
     @Expose
     private WordResult [] Wordlist;
 
     /**
-    * Speaker ID (if speaker recognition is enabled).
+    * <p>Speaker ID (if speaker recognition is enabled).</p>
     */
     @SerializedName("SpeakerId")
     @Expose
     private String SpeakerId;
 
     /**
-     * Get Confidence of a recognized segment. Value range: 0-100. 
-     * @return Confidence Confidence of a recognized segment. Value range: 0-100.
+     * Get <p>Confidence of the recognized segment. Value range: 0–100.</p> 
+     * @return Confidence <p>Confidence of the recognized segment. Value range: 0–100.</p>
      */
     public Float getConfidence() {
         return this.Confidence;
     }
 
     /**
-     * Set Confidence of a recognized segment. Value range: 0-100.
-     * @param Confidence Confidence of a recognized segment. Value range: 0-100.
+     * Set <p>Confidence of the recognized segment. Value range: 0–100.</p>
+     * @param Confidence <p>Confidence of the recognized segment. Value range: 0–100.</p>
      */
     public void setConfidence(Float Confidence) {
         this.Confidence = Confidence;
     }
 
     /**
-     * Get Start time offset of a recognized segment, in seconds. 
-     * @return StartTimeOffset Start time offset of a recognized segment, in seconds.
+     * Get <p>Start time offset of the recognized segment, in seconds.</p> 
+     * @return StartTimeOffset <p>Start time offset of the recognized segment, in seconds.</p>
      */
     public Float getStartTimeOffset() {
         return this.StartTimeOffset;
     }
 
     /**
-     * Set Start time offset of a recognized segment, in seconds.
-     * @param StartTimeOffset Start time offset of a recognized segment, in seconds.
+     * Set <p>Start time offset of the recognized segment, in seconds.</p>
+     * @param StartTimeOffset <p>Start time offset of the recognized segment, in seconds.</p>
      */
     public void setStartTimeOffset(Float StartTimeOffset) {
         this.StartTimeOffset = StartTimeOffset;
     }
 
     /**
-     * Get End time offset of a recognized segment, in seconds. 
-     * @return EndTimeOffset End time offset of a recognized segment, in seconds.
+     * Get <p>End time offset of the recognized segment, in seconds.</p> 
+     * @return EndTimeOffset <p>End time offset of the recognized segment, in seconds.</p>
      */
     public Float getEndTimeOffset() {
         return this.EndTimeOffset;
     }
 
     /**
-     * Set End time offset of a recognized segment, in seconds.
-     * @param EndTimeOffset End time offset of a recognized segment, in seconds.
+     * Set <p>End time offset of the recognized segment, in seconds.</p>
+     * @param EndTimeOffset <p>End time offset of the recognized segment, in seconds.</p>
      */
     public void setEndTimeOffset(Float EndTimeOffset) {
         this.EndTimeOffset = EndTimeOffset;
     }
 
     /**
-     * Get Recognized text. 
-     * @return Text Recognized text.
+     * Get <p>Recognized text.</p> 
+     * @return Text <p>Recognized text.</p>
      */
     public String getText() {
         return this.Text;
     }
 
     /**
-     * Set Recognized text.
-     * @param Text Recognized text.
+     * Set <p>Recognized text.</p>
+     * @param Text <p>Recognized text.</p>
      */
     public void setText(String Text) {
         this.Text = Text;
     }
 
     /**
-     * Get Word timestamp information.
-
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return Wordlist Word timestamp information.
-
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get <p>Word timestamp information.</p>
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Wordlist <p>Word timestamp information.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public WordResult [] getWordlist() {
         return this.Wordlist;
     }
 
     /**
-     * Set Word timestamp information.
-
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param Wordlist Word timestamp information.
-
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set <p>Word timestamp information.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Wordlist <p>Word timestamp information.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setWordlist(WordResult [] Wordlist) {
         this.Wordlist = Wordlist;
     }
 
     /**
-     * Get Speaker ID (if speaker recognition is enabled). 
-     * @return SpeakerId Speaker ID (if speaker recognition is enabled).
+     * Get <p>Speaker ID (if speaker recognition is enabled).</p> 
+     * @return SpeakerId <p>Speaker ID (if speaker recognition is enabled).</p>
      */
     public String getSpeakerId() {
         return this.SpeakerId;
     }
 
     /**
-     * Set Speaker ID (if speaker recognition is enabled).
-     * @param SpeakerId Speaker ID (if speaker recognition is enabled).
+     * Set <p>Speaker ID (if speaker recognition is enabled).</p>
+     * @param SpeakerId <p>Speaker ID (if speaker recognition is enabled).</p>
      */
     public void setSpeakerId(String SpeakerId) {
         this.SpeakerId = SpeakerId;

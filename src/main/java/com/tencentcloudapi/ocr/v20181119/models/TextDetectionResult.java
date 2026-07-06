@@ -31,7 +31,7 @@ public class TextDetectionResult extends AbstractModel {
     private String Value;
 
     /**
-    * The coordinates, represented in the coordinates of the four points.
+    * This field is deprecated and will always return an empty array. Usage is not recommended.
     */
     @SerializedName("Polygon")
     @Expose
@@ -54,17 +54,21 @@ public class TextDetectionResult extends AbstractModel {
     }
 
     /**
-     * Get The coordinates, represented in the coordinates of the four points. 
-     * @return Polygon The coordinates, represented in the coordinates of the four points.
+     * Get This field is deprecated and will always return an empty array. Usage is not recommended. 
+     * @return Polygon This field is deprecated and will always return an empty array. Usage is not recommended.
+     * @deprecated
      */
+    @Deprecated
     public Coord [] getPolygon() {
         return this.Polygon;
     }
 
     /**
-     * Set The coordinates, represented in the coordinates of the four points.
-     * @param Polygon The coordinates, represented in the coordinates of the four points.
+     * Set This field is deprecated and will always return an empty array. Usage is not recommended.
+     * @param Polygon This field is deprecated and will always return an empty array. Usage is not recommended.
+     * @deprecated
      */
+    @Deprecated
     public void setPolygon(Coord [] Polygon) {
         this.Polygon = Polygon;
     }

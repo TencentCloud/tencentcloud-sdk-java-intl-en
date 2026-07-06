@@ -24,87 +24,110 @@ import java.util.HashMap;
 public class ImageTaskInput extends AbstractModel {
 
     /**
-    * Image encoding configuration.
-Note: This field may return null, indicating that no valid value can be obtained.
+    * <p>Image encoding configuration.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("EncodeConfig")
     @Expose
     private ImageEncodeConfig EncodeConfig;
 
     /**
-    * Image enhancement configuration.
-Note: This field may return null, indicating that no valid value can be obtained.
+    * <p>Image enhancement configuration.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("EnhanceConfig")
     @Expose
     private ImageEnhanceConfig EnhanceConfig;
 
     /**
-    * Image erasing configuration.
-Note: This field may return null, indicating that no valid value can be obtained.
+    * <p>Image erasing configuration.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("EraseConfig")
     @Expose
     private ImageEraseConfig EraseConfig;
 
     /**
-     * Get Image encoding configuration.
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return EncodeConfig Image encoding configuration.
-Note: This field may return null, indicating that no valid value can be obtained.
+    * 
+    */
+    @SerializedName("AiPosterSuiteConfig")
+    @Expose
+    private AiPosterSuiteConfig AiPosterSuiteConfig;
+
+    /**
+     * Get <p>Image encoding configuration.</p>
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return EncodeConfig <p>Image encoding configuration.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public ImageEncodeConfig getEncodeConfig() {
         return this.EncodeConfig;
     }
 
     /**
-     * Set Image encoding configuration.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param EncodeConfig Image encoding configuration.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set <p>Image encoding configuration.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param EncodeConfig <p>Image encoding configuration.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setEncodeConfig(ImageEncodeConfig EncodeConfig) {
         this.EncodeConfig = EncodeConfig;
     }
 
     /**
-     * Get Image enhancement configuration.
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return EnhanceConfig Image enhancement configuration.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get <p>Image enhancement configuration.</p>
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return EnhanceConfig <p>Image enhancement configuration.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public ImageEnhanceConfig getEnhanceConfig() {
         return this.EnhanceConfig;
     }
 
     /**
-     * Set Image enhancement configuration.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param EnhanceConfig Image enhancement configuration.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set <p>Image enhancement configuration.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param EnhanceConfig <p>Image enhancement configuration.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setEnhanceConfig(ImageEnhanceConfig EnhanceConfig) {
         this.EnhanceConfig = EnhanceConfig;
     }
 
     /**
-     * Get Image erasing configuration.
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return EraseConfig Image erasing configuration.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get <p>Image erasing configuration.</p>
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return EraseConfig <p>Image erasing configuration.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public ImageEraseConfig getEraseConfig() {
         return this.EraseConfig;
     }
 
     /**
-     * Set Image erasing configuration.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param EraseConfig Image erasing configuration.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set <p>Image erasing configuration.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param EraseConfig <p>Image erasing configuration.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setEraseConfig(ImageEraseConfig EraseConfig) {
         this.EraseConfig = EraseConfig;
+    }
+
+    /**
+     * Get  
+     * @return AiPosterSuiteConfig 
+     */
+    public AiPosterSuiteConfig getAiPosterSuiteConfig() {
+        return this.AiPosterSuiteConfig;
+    }
+
+    /**
+     * Set 
+     * @param AiPosterSuiteConfig 
+     */
+    public void setAiPosterSuiteConfig(AiPosterSuiteConfig AiPosterSuiteConfig) {
+        this.AiPosterSuiteConfig = AiPosterSuiteConfig;
     }
 
     public ImageTaskInput() {
@@ -124,6 +147,9 @@ Note: This field may return null, indicating that no valid value can be obtained
         if (source.EraseConfig != null) {
             this.EraseConfig = new ImageEraseConfig(source.EraseConfig);
         }
+        if (source.AiPosterSuiteConfig != null) {
+            this.AiPosterSuiteConfig = new AiPosterSuiteConfig(source.AiPosterSuiteConfig);
+        }
     }
 
 
@@ -134,6 +160,7 @@ Note: This field may return null, indicating that no valid value can be obtained
         this.setParamObj(map, prefix + "EncodeConfig.", this.EncodeConfig);
         this.setParamObj(map, prefix + "EnhanceConfig.", this.EnhanceConfig);
         this.setParamObj(map, prefix + "EraseConfig.", this.EraseConfig);
+        this.setParamObj(map, prefix + "AiPosterSuiteConfig.", this.AiPosterSuiteConfig);
 
     }
 }

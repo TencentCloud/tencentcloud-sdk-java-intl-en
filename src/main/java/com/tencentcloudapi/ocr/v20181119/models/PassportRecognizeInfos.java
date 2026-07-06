@@ -24,355 +24,348 @@ import java.util.HashMap;
 public class PassportRecognizeInfos extends AbstractModel {
 
     /**
-    * Document Type (Passport Information Page Recognition Result).
+    * 
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * Issuing Country (Passport Information Page Recognition Result).
+    * 
     */
     @SerializedName("IssuingCountry")
     @Expose
     private String IssuingCountry;
 
     /**
-    * Passport Number (Passport Information Page Recognition Result).
+    * 
     */
     @SerializedName("PassportID")
     @Expose
     private String PassportID;
 
     /**
-    * Surname (Passport Information Page Recognition Result).
+    * 
     */
     @SerializedName("Surname")
     @Expose
     private String Surname;
 
     /**
-    * Given Name (Passport Information Page Recognition Result).
+    * 
     */
     @SerializedName("GivenName")
     @Expose
     private String GivenName;
 
     /**
-    * Full Name (Passport Information Page Recognition Result).
+    * 
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * Nationality Information (Passport Information Page Recognition Result).
+    * 
     */
     @SerializedName("Nationality")
     @Expose
     private String Nationality;
 
     /**
-    * Date of Birth (Passport Information Page Recognition Result).
+    * 
     */
     @SerializedName("DateOfBirth")
     @Expose
     private String DateOfBirth;
 
     /**
-    * Gender (Passport Information Page Recognition Result).
+    * 
     */
     @SerializedName("Sex")
     @Expose
     private String Sex;
 
     /**
-    * Date of Issue (Passport Information Page Recognition Result).
+    * 
     */
     @SerializedName("DateOfIssuance")
     @Expose
     private String DateOfIssuance;
 
     /**
-    * Expiry Date (Passport Information Page Recognition Result).
+    * 
     */
     @SerializedName("DateOfExpiration")
     @Expose
     private String DateOfExpiration;
 
     /**
-    * Cardholder Signature (Passport Information Page Recognition Result)
-
-This field is only supported for Chinese mainland passports and not available for Hong Kong (China), Macao (China), and Taiwan (China) passports or foreign passports.
+    * 
     */
     @SerializedName("Signature")
     @Expose
     private String Signature;
 
     /**
-    * Place of Issue (Passport Information Page Recognition Result)
-
-This field is only supported for Chinese mainland passports and not available for Hong Kong (China), Macao (China), and Taiwan (China) passports or foreign passports.
+    * 
     */
     @SerializedName("IssuePlace")
     @Expose
     private String IssuePlace;
 
     /**
-    * Issuing Authority (Passport Information Page Recognition Result)
-
-This field is only supported for Chinese mainland passports and not available for Hong Kong (China), Macao (China), and Taiwan (China) passports or foreign passports.
+    * 
     */
     @SerializedName("IssuingAuthority")
     @Expose
     private String IssuingAuthority;
 
     /**
-     * Get Document Type (Passport Information Page Recognition Result). 
-     * @return Type Document Type (Passport Information Page Recognition Result).
+    * 
+    */
+    @SerializedName("BirthPlace")
+    @Expose
+    private String BirthPlace;
+
+    /**
+     * Get  
+     * @return Type 
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set Document Type (Passport Information Page Recognition Result).
-     * @param Type Document Type (Passport Information Page Recognition Result).
+     * Set 
+     * @param Type 
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get Issuing Country (Passport Information Page Recognition Result). 
-     * @return IssuingCountry Issuing Country (Passport Information Page Recognition Result).
+     * Get  
+     * @return IssuingCountry 
      */
     public String getIssuingCountry() {
         return this.IssuingCountry;
     }
 
     /**
-     * Set Issuing Country (Passport Information Page Recognition Result).
-     * @param IssuingCountry Issuing Country (Passport Information Page Recognition Result).
+     * Set 
+     * @param IssuingCountry 
      */
     public void setIssuingCountry(String IssuingCountry) {
         this.IssuingCountry = IssuingCountry;
     }
 
     /**
-     * Get Passport Number (Passport Information Page Recognition Result). 
-     * @return PassportID Passport Number (Passport Information Page Recognition Result).
+     * Get  
+     * @return PassportID 
      */
     public String getPassportID() {
         return this.PassportID;
     }
 
     /**
-     * Set Passport Number (Passport Information Page Recognition Result).
-     * @param PassportID Passport Number (Passport Information Page Recognition Result).
+     * Set 
+     * @param PassportID 
      */
     public void setPassportID(String PassportID) {
         this.PassportID = PassportID;
     }
 
     /**
-     * Get Surname (Passport Information Page Recognition Result). 
-     * @return Surname Surname (Passport Information Page Recognition Result).
+     * Get  
+     * @return Surname 
      */
     public String getSurname() {
         return this.Surname;
     }
 
     /**
-     * Set Surname (Passport Information Page Recognition Result).
-     * @param Surname Surname (Passport Information Page Recognition Result).
+     * Set 
+     * @param Surname 
      */
     public void setSurname(String Surname) {
         this.Surname = Surname;
     }
 
     /**
-     * Get Given Name (Passport Information Page Recognition Result). 
-     * @return GivenName Given Name (Passport Information Page Recognition Result).
+     * Get  
+     * @return GivenName 
      */
     public String getGivenName() {
         return this.GivenName;
     }
 
     /**
-     * Set Given Name (Passport Information Page Recognition Result).
-     * @param GivenName Given Name (Passport Information Page Recognition Result).
+     * Set 
+     * @param GivenName 
      */
     public void setGivenName(String GivenName) {
         this.GivenName = GivenName;
     }
 
     /**
-     * Get Full Name (Passport Information Page Recognition Result). 
-     * @return Name Full Name (Passport Information Page Recognition Result).
+     * Get  
+     * @return Name 
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Full Name (Passport Information Page Recognition Result).
-     * @param Name Full Name (Passport Information Page Recognition Result).
+     * Set 
+     * @param Name 
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get Nationality Information (Passport Information Page Recognition Result). 
-     * @return Nationality Nationality Information (Passport Information Page Recognition Result).
+     * Get  
+     * @return Nationality 
      */
     public String getNationality() {
         return this.Nationality;
     }
 
     /**
-     * Set Nationality Information (Passport Information Page Recognition Result).
-     * @param Nationality Nationality Information (Passport Information Page Recognition Result).
+     * Set 
+     * @param Nationality 
      */
     public void setNationality(String Nationality) {
         this.Nationality = Nationality;
     }
 
     /**
-     * Get Date of Birth (Passport Information Page Recognition Result). 
-     * @return DateOfBirth Date of Birth (Passport Information Page Recognition Result).
+     * Get  
+     * @return DateOfBirth 
      */
     public String getDateOfBirth() {
         return this.DateOfBirth;
     }
 
     /**
-     * Set Date of Birth (Passport Information Page Recognition Result).
-     * @param DateOfBirth Date of Birth (Passport Information Page Recognition Result).
+     * Set 
+     * @param DateOfBirth 
      */
     public void setDateOfBirth(String DateOfBirth) {
         this.DateOfBirth = DateOfBirth;
     }
 
     /**
-     * Get Gender (Passport Information Page Recognition Result). 
-     * @return Sex Gender (Passport Information Page Recognition Result).
+     * Get  
+     * @return Sex 
      */
     public String getSex() {
         return this.Sex;
     }
 
     /**
-     * Set Gender (Passport Information Page Recognition Result).
-     * @param Sex Gender (Passport Information Page Recognition Result).
+     * Set 
+     * @param Sex 
      */
     public void setSex(String Sex) {
         this.Sex = Sex;
     }
 
     /**
-     * Get Date of Issue (Passport Information Page Recognition Result). 
-     * @return DateOfIssuance Date of Issue (Passport Information Page Recognition Result).
+     * Get  
+     * @return DateOfIssuance 
      */
     public String getDateOfIssuance() {
         return this.DateOfIssuance;
     }
 
     /**
-     * Set Date of Issue (Passport Information Page Recognition Result).
-     * @param DateOfIssuance Date of Issue (Passport Information Page Recognition Result).
+     * Set 
+     * @param DateOfIssuance 
      */
     public void setDateOfIssuance(String DateOfIssuance) {
         this.DateOfIssuance = DateOfIssuance;
     }
 
     /**
-     * Get Expiry Date (Passport Information Page Recognition Result). 
-     * @return DateOfExpiration Expiry Date (Passport Information Page Recognition Result).
+     * Get  
+     * @return DateOfExpiration 
      */
     public String getDateOfExpiration() {
         return this.DateOfExpiration;
     }
 
     /**
-     * Set Expiry Date (Passport Information Page Recognition Result).
-     * @param DateOfExpiration Expiry Date (Passport Information Page Recognition Result).
+     * Set 
+     * @param DateOfExpiration 
      */
     public void setDateOfExpiration(String DateOfExpiration) {
         this.DateOfExpiration = DateOfExpiration;
     }
 
     /**
-     * Get Cardholder Signature (Passport Information Page Recognition Result)
-
-This field is only supported for Chinese mainland passports and not available for Hong Kong (China), Macao (China), and Taiwan (China) passports or foreign passports. 
-     * @return Signature Cardholder Signature (Passport Information Page Recognition Result)
-
-This field is only supported for Chinese mainland passports and not available for Hong Kong (China), Macao (China), and Taiwan (China) passports or foreign passports.
+     * Get  
+     * @return Signature 
      */
     public String getSignature() {
         return this.Signature;
     }
 
     /**
-     * Set Cardholder Signature (Passport Information Page Recognition Result)
-
-This field is only supported for Chinese mainland passports and not available for Hong Kong (China), Macao (China), and Taiwan (China) passports or foreign passports.
-     * @param Signature Cardholder Signature (Passport Information Page Recognition Result)
-
-This field is only supported for Chinese mainland passports and not available for Hong Kong (China), Macao (China), and Taiwan (China) passports or foreign passports.
+     * Set 
+     * @param Signature 
      */
     public void setSignature(String Signature) {
         this.Signature = Signature;
     }
 
     /**
-     * Get Place of Issue (Passport Information Page Recognition Result)
-
-This field is only supported for Chinese mainland passports and not available for Hong Kong (China), Macao (China), and Taiwan (China) passports or foreign passports. 
-     * @return IssuePlace Place of Issue (Passport Information Page Recognition Result)
-
-This field is only supported for Chinese mainland passports and not available for Hong Kong (China), Macao (China), and Taiwan (China) passports or foreign passports.
+     * Get  
+     * @return IssuePlace 
      */
     public String getIssuePlace() {
         return this.IssuePlace;
     }
 
     /**
-     * Set Place of Issue (Passport Information Page Recognition Result)
-
-This field is only supported for Chinese mainland passports and not available for Hong Kong (China), Macao (China), and Taiwan (China) passports or foreign passports.
-     * @param IssuePlace Place of Issue (Passport Information Page Recognition Result)
-
-This field is only supported for Chinese mainland passports and not available for Hong Kong (China), Macao (China), and Taiwan (China) passports or foreign passports.
+     * Set 
+     * @param IssuePlace 
      */
     public void setIssuePlace(String IssuePlace) {
         this.IssuePlace = IssuePlace;
     }
 
     /**
-     * Get Issuing Authority (Passport Information Page Recognition Result)
-
-This field is only supported for Chinese mainland passports and not available for Hong Kong (China), Macao (China), and Taiwan (China) passports or foreign passports. 
-     * @return IssuingAuthority Issuing Authority (Passport Information Page Recognition Result)
-
-This field is only supported for Chinese mainland passports and not available for Hong Kong (China), Macao (China), and Taiwan (China) passports or foreign passports.
+     * Get  
+     * @return IssuingAuthority 
      */
     public String getIssuingAuthority() {
         return this.IssuingAuthority;
     }
 
     /**
-     * Set Issuing Authority (Passport Information Page Recognition Result)
-
-This field is only supported for Chinese mainland passports and not available for Hong Kong (China), Macao (China), and Taiwan (China) passports or foreign passports.
-     * @param IssuingAuthority Issuing Authority (Passport Information Page Recognition Result)
-
-This field is only supported for Chinese mainland passports and not available for Hong Kong (China), Macao (China), and Taiwan (China) passports or foreign passports.
+     * Set 
+     * @param IssuingAuthority 
      */
     public void setIssuingAuthority(String IssuingAuthority) {
         this.IssuingAuthority = IssuingAuthority;
+    }
+
+    /**
+     * Get  
+     * @return BirthPlace 
+     */
+    public String getBirthPlace() {
+        return this.BirthPlace;
+    }
+
+    /**
+     * Set 
+     * @param BirthPlace 
+     */
+    public void setBirthPlace(String BirthPlace) {
+        this.BirthPlace = BirthPlace;
     }
 
     public PassportRecognizeInfos() {
@@ -425,6 +418,9 @@ This field is only supported for Chinese mainland passports and not available fo
         if (source.IssuingAuthority != null) {
             this.IssuingAuthority = new String(source.IssuingAuthority);
         }
+        if (source.BirthPlace != null) {
+            this.BirthPlace = new String(source.BirthPlace);
+        }
     }
 
 
@@ -446,6 +442,7 @@ This field is only supported for Chinese mainland passports and not available fo
         this.setParamSimple(map, prefix + "Signature", this.Signature);
         this.setParamSimple(map, prefix + "IssuePlace", this.IssuePlace);
         this.setParamSimple(map, prefix + "IssuingAuthority", this.IssuingAuthority);
+        this.setParamSimple(map, prefix + "BirthPlace", this.BirthPlace);
 
     }
 }

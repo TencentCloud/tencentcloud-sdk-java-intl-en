@@ -73,6 +73,13 @@ public class QualityControlData extends AbstractModel {
     private ContainerDiagnoseResultItem [] ContainerDiagnoseResultSet;
 
     /**
+    * <p>LLM AIGC quality detection result.</p>
+    */
+    @SerializedName("LLMDetectionReport")
+    @Expose
+    private LLMDetectionReport LLMDetectionReport;
+
+    /**
      * Get <p>A value of true indicates that the video has no audio track.</p> 
      * @return NoAudio <p>A value of true indicates that the video has no audio track.</p>
      */
@@ -184,6 +191,22 @@ public class QualityControlData extends AbstractModel {
         this.ContainerDiagnoseResultSet = ContainerDiagnoseResultSet;
     }
 
+    /**
+     * Get <p>LLM AIGC quality detection result.</p> 
+     * @return LLMDetectionReport <p>LLM AIGC quality detection result.</p>
+     */
+    public LLMDetectionReport getLLMDetectionReport() {
+        return this.LLMDetectionReport;
+    }
+
+    /**
+     * Set <p>LLM AIGC quality detection result.</p>
+     * @param LLMDetectionReport <p>LLM AIGC quality detection result.</p>
+     */
+    public void setLLMDetectionReport(LLMDetectionReport LLMDetectionReport) {
+        this.LLMDetectionReport = LLMDetectionReport;
+    }
+
     public QualityControlData() {
     }
 
@@ -219,6 +242,9 @@ public class QualityControlData extends AbstractModel {
                 this.ContainerDiagnoseResultSet[i] = new ContainerDiagnoseResultItem(source.ContainerDiagnoseResultSet[i]);
             }
         }
+        if (source.LLMDetectionReport != null) {
+            this.LLMDetectionReport = new LLMDetectionReport(source.LLMDetectionReport);
+        }
     }
 
 
@@ -233,6 +259,7 @@ public class QualityControlData extends AbstractModel {
         this.setParamSimple(map, prefix + "AestheticEvaluationScore", this.AestheticEvaluationScore);
         this.setParamArrayObj(map, prefix + "QualityControlResultSet.", this.QualityControlResultSet);
         this.setParamArrayObj(map, prefix + "ContainerDiagnoseResultSet.", this.ContainerDiagnoseResultSet);
+        this.setParamObj(map, prefix + "LLMDetectionReport.", this.LLMDetectionReport);
 
     }
 }

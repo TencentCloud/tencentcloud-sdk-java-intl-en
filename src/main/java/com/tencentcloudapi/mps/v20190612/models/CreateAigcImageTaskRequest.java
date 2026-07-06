@@ -24,42 +24,49 @@ import java.util.HashMap;
 public class CreateAigcImageTaskRequest extends AbstractModel {
 
     /**
-    * <p>Model name.<br>Supported models:<br>Hunyuan.<br>GEM.<br>Qwen.</p>
+    * <p>Model name.<br>Supported models:<br>Hunyuan.<br>Qwen.<br>Vidu.<br>Kling.<br>MJ.</p>
     */
     @SerializedName("ModelName")
     @Expose
     private String ModelName;
 
     /**
-    * <p>Specify the model version number. By default, the system uses the supported stable version of the model.</p><ol><li>GEM: [2.5 and 3.0].</li></ol>
+    * <p>Specific version number of the model. By default, the system uses the supported stable version of the model.</p><ol><li>Hunyuan: [3.0].</li><li>Vidu: [q2].</li><li>Kling: [2.1, O1, 3.0, and 3.0-Omni].</li><li>Qwen: [0925].</li><li>MJ: [v7].</li></ol>
     */
     @SerializedName("ModelVersion")
     @Expose
     private String ModelVersion;
 
     /**
-    * <p>Description of the generated image. (Note: Supports up to 1000 characters.) This parameter is required when no reference image is passed in.</p>
+    * <p>Used for scene-based image generation; only supported by some models.</p><p>Enumeration value:</p><ul><li>3d_panorama: panoramic view. Only Hunyuan supports this.</li></ul>
+    */
+    @SerializedName("SceneType")
+    @Expose
+    private String SceneType;
+
+    /**
+    * <p>Description of the generated image. This parameter is required when no reference image is specified.</p>
     */
     @SerializedName("Prompt")
     @Expose
     private String Prompt;
 
     /**
-    * <p>Specifies the content you want to prevent the model from generating. Note: Not all models support this. For example: top lighting, bright colors, people, animals, multiple vehicles, and wind.</p>
+    * <p>Specifies the content you want to prevent the model from generating. Note: Not all models support this.</p><p>For example: top lighting, bright colors, people, animals, multiple vehicles, and wind.</p>
     */
     @SerializedName("NegativePrompt")
     @Expose
     private String NegativePrompt;
 
     /**
-    * <p>The default value is False, meaning the model follows instructions strictly. For better results with more nuanced prompts, set this parameter to True to automatically optimize the input prompt and improve generation quality.</p>
+    * <p>The default value is False, meaning the model follows instructions strictly.<br>For better results with more nuanced prompts, set this parameter to True to automatically optimize the input prompt and improve generation quality.</p>
     */
     @SerializedName("EnhancePrompt")
     @Expose
     private Boolean EnhancePrompt;
 
     /**
-    * <p>Used for inputting image information as a resource for reference. Default support for inputting an image.</p><p>Models supporting multi-image input:</p><ol><li>GEM, supporting up to 3 images as resource input.</li></ol><p>Note:</p><ol><li>Recommended image less than 7M. Limits vary by model.</li><li>Format support: jpeg, png, webp.</li></ol>
+    * <p>Reference resource images. By default, one image can be specified.</p><p>Models supporting multiple images:</p><ol><li>Kling 2.1 supports up to 4 images as resource image input.</li><li>Kling 3.0-Omni supports up to 10 images as resource image input.</li><li>Kling O1 supports up to 10 images as resource image input.</li><li>Vidu q2 supports up to 7 images as resource image input.</li><li>Hunyuan 3.0 supports up to 3 images as resource image input.</li><li>MJ v7 supports up to 3 images as resource image input.</li></ol><p>Note:</p><ol><li>The recommended image size is less than 7 MB. Different models have different limits.</li><li>Supported image formats: JPEG, PNG, and WebP.</li></ol>
     */
     @SerializedName("ImageInfos")
     @Expose
@@ -73,7 +80,7 @@ public class CreateAigcImageTaskRequest extends AbstractModel {
     private AigcImageExtraParam ExtraParameters;
 
     /**
-    * <p>Used to input some special scene parameters required by the model, serialized into a string in Json format. Example: {"size":"2048x2048"}</p>
+    * <p>Special scenario parameters required by the model, formatted as a JSON serialized string.</p><ol><li>Hunyuan 3.0 supports freely setting resolution width and height within [512, 2048] pixels, with the product of width and height less than or equal to 1024x1024 pixels.</li><li>Qwen 0925 supports freely setting resolution width and height, with a valid total pixel range of [512x512=261632, 2048x2048=4194304].</li></ol><p>Example: {"size":"1024x1024"}.</p>
     */
     @SerializedName("AdditionalParameters")
     @Expose
@@ -94,96 +101,112 @@ public class CreateAigcImageTaskRequest extends AbstractModel {
     private String Operator;
 
     /**
-     * Get <p>Model name.<br>Supported models:<br>Hunyuan.<br>GEM.<br>Qwen.</p> 
-     * @return ModelName <p>Model name.<br>Supported models:<br>Hunyuan.<br>GEM.<br>Qwen.</p>
+     * Get <p>Model name.<br>Supported models:<br>Hunyuan.<br>Qwen.<br>Vidu.<br>Kling.<br>MJ.</p> 
+     * @return ModelName <p>Model name.<br>Supported models:<br>Hunyuan.<br>Qwen.<br>Vidu.<br>Kling.<br>MJ.</p>
      */
     public String getModelName() {
         return this.ModelName;
     }
 
     /**
-     * Set <p>Model name.<br>Supported models:<br>Hunyuan.<br>GEM.<br>Qwen.</p>
-     * @param ModelName <p>Model name.<br>Supported models:<br>Hunyuan.<br>GEM.<br>Qwen.</p>
+     * Set <p>Model name.<br>Supported models:<br>Hunyuan.<br>Qwen.<br>Vidu.<br>Kling.<br>MJ.</p>
+     * @param ModelName <p>Model name.<br>Supported models:<br>Hunyuan.<br>Qwen.<br>Vidu.<br>Kling.<br>MJ.</p>
      */
     public void setModelName(String ModelName) {
         this.ModelName = ModelName;
     }
 
     /**
-     * Get <p>Specify the model version number. By default, the system uses the supported stable version of the model.</p><ol><li>GEM: [2.5 and 3.0].</li></ol> 
-     * @return ModelVersion <p>Specify the model version number. By default, the system uses the supported stable version of the model.</p><ol><li>GEM: [2.5 and 3.0].</li></ol>
+     * Get <p>Specific version number of the model. By default, the system uses the supported stable version of the model.</p><ol><li>Hunyuan: [3.0].</li><li>Vidu: [q2].</li><li>Kling: [2.1, O1, 3.0, and 3.0-Omni].</li><li>Qwen: [0925].</li><li>MJ: [v7].</li></ol> 
+     * @return ModelVersion <p>Specific version number of the model. By default, the system uses the supported stable version of the model.</p><ol><li>Hunyuan: [3.0].</li><li>Vidu: [q2].</li><li>Kling: [2.1, O1, 3.0, and 3.0-Omni].</li><li>Qwen: [0925].</li><li>MJ: [v7].</li></ol>
      */
     public String getModelVersion() {
         return this.ModelVersion;
     }
 
     /**
-     * Set <p>Specify the model version number. By default, the system uses the supported stable version of the model.</p><ol><li>GEM: [2.5 and 3.0].</li></ol>
-     * @param ModelVersion <p>Specify the model version number. By default, the system uses the supported stable version of the model.</p><ol><li>GEM: [2.5 and 3.0].</li></ol>
+     * Set <p>Specific version number of the model. By default, the system uses the supported stable version of the model.</p><ol><li>Hunyuan: [3.0].</li><li>Vidu: [q2].</li><li>Kling: [2.1, O1, 3.0, and 3.0-Omni].</li><li>Qwen: [0925].</li><li>MJ: [v7].</li></ol>
+     * @param ModelVersion <p>Specific version number of the model. By default, the system uses the supported stable version of the model.</p><ol><li>Hunyuan: [3.0].</li><li>Vidu: [q2].</li><li>Kling: [2.1, O1, 3.0, and 3.0-Omni].</li><li>Qwen: [0925].</li><li>MJ: [v7].</li></ol>
      */
     public void setModelVersion(String ModelVersion) {
         this.ModelVersion = ModelVersion;
     }
 
     /**
-     * Get <p>Description of the generated image. (Note: Supports up to 1000 characters.) This parameter is required when no reference image is passed in.</p> 
-     * @return Prompt <p>Description of the generated image. (Note: Supports up to 1000 characters.) This parameter is required when no reference image is passed in.</p>
+     * Get <p>Used for scene-based image generation; only supported by some models.</p><p>Enumeration value:</p><ul><li>3d_panorama: panoramic view. Only Hunyuan supports this.</li></ul> 
+     * @return SceneType <p>Used for scene-based image generation; only supported by some models.</p><p>Enumeration value:</p><ul><li>3d_panorama: panoramic view. Only Hunyuan supports this.</li></ul>
+     */
+    public String getSceneType() {
+        return this.SceneType;
+    }
+
+    /**
+     * Set <p>Used for scene-based image generation; only supported by some models.</p><p>Enumeration value:</p><ul><li>3d_panorama: panoramic view. Only Hunyuan supports this.</li></ul>
+     * @param SceneType <p>Used for scene-based image generation; only supported by some models.</p><p>Enumeration value:</p><ul><li>3d_panorama: panoramic view. Only Hunyuan supports this.</li></ul>
+     */
+    public void setSceneType(String SceneType) {
+        this.SceneType = SceneType;
+    }
+
+    /**
+     * Get <p>Description of the generated image. This parameter is required when no reference image is specified.</p> 
+     * @return Prompt <p>Description of the generated image. This parameter is required when no reference image is specified.</p>
      */
     public String getPrompt() {
         return this.Prompt;
     }
 
     /**
-     * Set <p>Description of the generated image. (Note: Supports up to 1000 characters.) This parameter is required when no reference image is passed in.</p>
-     * @param Prompt <p>Description of the generated image. (Note: Supports up to 1000 characters.) This parameter is required when no reference image is passed in.</p>
+     * Set <p>Description of the generated image. This parameter is required when no reference image is specified.</p>
+     * @param Prompt <p>Description of the generated image. This parameter is required when no reference image is specified.</p>
      */
     public void setPrompt(String Prompt) {
         this.Prompt = Prompt;
     }
 
     /**
-     * Get <p>Specifies the content you want to prevent the model from generating. Note: Not all models support this. For example: top lighting, bright colors, people, animals, multiple vehicles, and wind.</p> 
-     * @return NegativePrompt <p>Specifies the content you want to prevent the model from generating. Note: Not all models support this. For example: top lighting, bright colors, people, animals, multiple vehicles, and wind.</p>
+     * Get <p>Specifies the content you want to prevent the model from generating. Note: Not all models support this.</p><p>For example: top lighting, bright colors, people, animals, multiple vehicles, and wind.</p> 
+     * @return NegativePrompt <p>Specifies the content you want to prevent the model from generating. Note: Not all models support this.</p><p>For example: top lighting, bright colors, people, animals, multiple vehicles, and wind.</p>
      */
     public String getNegativePrompt() {
         return this.NegativePrompt;
     }
 
     /**
-     * Set <p>Specifies the content you want to prevent the model from generating. Note: Not all models support this. For example: top lighting, bright colors, people, animals, multiple vehicles, and wind.</p>
-     * @param NegativePrompt <p>Specifies the content you want to prevent the model from generating. Note: Not all models support this. For example: top lighting, bright colors, people, animals, multiple vehicles, and wind.</p>
+     * Set <p>Specifies the content you want to prevent the model from generating. Note: Not all models support this.</p><p>For example: top lighting, bright colors, people, animals, multiple vehicles, and wind.</p>
+     * @param NegativePrompt <p>Specifies the content you want to prevent the model from generating. Note: Not all models support this.</p><p>For example: top lighting, bright colors, people, animals, multiple vehicles, and wind.</p>
      */
     public void setNegativePrompt(String NegativePrompt) {
         this.NegativePrompt = NegativePrompt;
     }
 
     /**
-     * Get <p>The default value is False, meaning the model follows instructions strictly. For better results with more nuanced prompts, set this parameter to True to automatically optimize the input prompt and improve generation quality.</p> 
-     * @return EnhancePrompt <p>The default value is False, meaning the model follows instructions strictly. For better results with more nuanced prompts, set this parameter to True to automatically optimize the input prompt and improve generation quality.</p>
+     * Get <p>The default value is False, meaning the model follows instructions strictly.<br>For better results with more nuanced prompts, set this parameter to True to automatically optimize the input prompt and improve generation quality.</p> 
+     * @return EnhancePrompt <p>The default value is False, meaning the model follows instructions strictly.<br>For better results with more nuanced prompts, set this parameter to True to automatically optimize the input prompt and improve generation quality.</p>
      */
     public Boolean getEnhancePrompt() {
         return this.EnhancePrompt;
     }
 
     /**
-     * Set <p>The default value is False, meaning the model follows instructions strictly. For better results with more nuanced prompts, set this parameter to True to automatically optimize the input prompt and improve generation quality.</p>
-     * @param EnhancePrompt <p>The default value is False, meaning the model follows instructions strictly. For better results with more nuanced prompts, set this parameter to True to automatically optimize the input prompt and improve generation quality.</p>
+     * Set <p>The default value is False, meaning the model follows instructions strictly.<br>For better results with more nuanced prompts, set this parameter to True to automatically optimize the input prompt and improve generation quality.</p>
+     * @param EnhancePrompt <p>The default value is False, meaning the model follows instructions strictly.<br>For better results with more nuanced prompts, set this parameter to True to automatically optimize the input prompt and improve generation quality.</p>
      */
     public void setEnhancePrompt(Boolean EnhancePrompt) {
         this.EnhancePrompt = EnhancePrompt;
     }
 
     /**
-     * Get <p>Used for inputting image information as a resource for reference. Default support for inputting an image.</p><p>Models supporting multi-image input:</p><ol><li>GEM, supporting up to 3 images as resource input.</li></ol><p>Note:</p><ol><li>Recommended image less than 7M. Limits vary by model.</li><li>Format support: jpeg, png, webp.</li></ol> 
-     * @return ImageInfos <p>Used for inputting image information as a resource for reference. Default support for inputting an image.</p><p>Models supporting multi-image input:</p><ol><li>GEM, supporting up to 3 images as resource input.</li></ol><p>Note:</p><ol><li>Recommended image less than 7M. Limits vary by model.</li><li>Format support: jpeg, png, webp.</li></ol>
+     * Get <p>Reference resource images. By default, one image can be specified.</p><p>Models supporting multiple images:</p><ol><li>Kling 2.1 supports up to 4 images as resource image input.</li><li>Kling 3.0-Omni supports up to 10 images as resource image input.</li><li>Kling O1 supports up to 10 images as resource image input.</li><li>Vidu q2 supports up to 7 images as resource image input.</li><li>Hunyuan 3.0 supports up to 3 images as resource image input.</li><li>MJ v7 supports up to 3 images as resource image input.</li></ol><p>Note:</p><ol><li>The recommended image size is less than 7 MB. Different models have different limits.</li><li>Supported image formats: JPEG, PNG, and WebP.</li></ol> 
+     * @return ImageInfos <p>Reference resource images. By default, one image can be specified.</p><p>Models supporting multiple images:</p><ol><li>Kling 2.1 supports up to 4 images as resource image input.</li><li>Kling 3.0-Omni supports up to 10 images as resource image input.</li><li>Kling O1 supports up to 10 images as resource image input.</li><li>Vidu q2 supports up to 7 images as resource image input.</li><li>Hunyuan 3.0 supports up to 3 images as resource image input.</li><li>MJ v7 supports up to 3 images as resource image input.</li></ol><p>Note:</p><ol><li>The recommended image size is less than 7 MB. Different models have different limits.</li><li>Supported image formats: JPEG, PNG, and WebP.</li></ol>
      */
     public AigcImageInfo [] getImageInfos() {
         return this.ImageInfos;
     }
 
     /**
-     * Set <p>Used for inputting image information as a resource for reference. Default support for inputting an image.</p><p>Models supporting multi-image input:</p><ol><li>GEM, supporting up to 3 images as resource input.</li></ol><p>Note:</p><ol><li>Recommended image less than 7M. Limits vary by model.</li><li>Format support: jpeg, png, webp.</li></ol>
-     * @param ImageInfos <p>Used for inputting image information as a resource for reference. Default support for inputting an image.</p><p>Models supporting multi-image input:</p><ol><li>GEM, supporting up to 3 images as resource input.</li></ol><p>Note:</p><ol><li>Recommended image less than 7M. Limits vary by model.</li><li>Format support: jpeg, png, webp.</li></ol>
+     * Set <p>Reference resource images. By default, one image can be specified.</p><p>Models supporting multiple images:</p><ol><li>Kling 2.1 supports up to 4 images as resource image input.</li><li>Kling 3.0-Omni supports up to 10 images as resource image input.</li><li>Kling O1 supports up to 10 images as resource image input.</li><li>Vidu q2 supports up to 7 images as resource image input.</li><li>Hunyuan 3.0 supports up to 3 images as resource image input.</li><li>MJ v7 supports up to 3 images as resource image input.</li></ol><p>Note:</p><ol><li>The recommended image size is less than 7 MB. Different models have different limits.</li><li>Supported image formats: JPEG, PNG, and WebP.</li></ol>
+     * @param ImageInfos <p>Reference resource images. By default, one image can be specified.</p><p>Models supporting multiple images:</p><ol><li>Kling 2.1 supports up to 4 images as resource image input.</li><li>Kling 3.0-Omni supports up to 10 images as resource image input.</li><li>Kling O1 supports up to 10 images as resource image input.</li><li>Vidu q2 supports up to 7 images as resource image input.</li><li>Hunyuan 3.0 supports up to 3 images as resource image input.</li><li>MJ v7 supports up to 3 images as resource image input.</li></ol><p>Note:</p><ol><li>The recommended image size is less than 7 MB. Different models have different limits.</li><li>Supported image formats: JPEG, PNG, and WebP.</li></ol>
      */
     public void setImageInfos(AigcImageInfo [] ImageInfos) {
         this.ImageInfos = ImageInfos;
@@ -206,16 +229,16 @@ public class CreateAigcImageTaskRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>Used to input some special scene parameters required by the model, serialized into a string in Json format. Example: {"size":"2048x2048"}</p> 
-     * @return AdditionalParameters <p>Used to input some special scene parameters required by the model, serialized into a string in Json format. Example: {"size":"2048x2048"}</p>
+     * Get <p>Special scenario parameters required by the model, formatted as a JSON serialized string.</p><ol><li>Hunyuan 3.0 supports freely setting resolution width and height within [512, 2048] pixels, with the product of width and height less than or equal to 1024x1024 pixels.</li><li>Qwen 0925 supports freely setting resolution width and height, with a valid total pixel range of [512x512=261632, 2048x2048=4194304].</li></ol><p>Example: {"size":"1024x1024"}.</p> 
+     * @return AdditionalParameters <p>Special scenario parameters required by the model, formatted as a JSON serialized string.</p><ol><li>Hunyuan 3.0 supports freely setting resolution width and height within [512, 2048] pixels, with the product of width and height less than or equal to 1024x1024 pixels.</li><li>Qwen 0925 supports freely setting resolution width and height, with a valid total pixel range of [512x512=261632, 2048x2048=4194304].</li></ol><p>Example: {"size":"1024x1024"}.</p>
      */
     public String getAdditionalParameters() {
         return this.AdditionalParameters;
     }
 
     /**
-     * Set <p>Used to input some special scene parameters required by the model, serialized into a string in Json format. Example: {"size":"2048x2048"}</p>
-     * @param AdditionalParameters <p>Used to input some special scene parameters required by the model, serialized into a string in Json format. Example: {"size":"2048x2048"}</p>
+     * Set <p>Special scenario parameters required by the model, formatted as a JSON serialized string.</p><ol><li>Hunyuan 3.0 supports freely setting resolution width and height within [512, 2048] pixels, with the product of width and height less than or equal to 1024x1024 pixels.</li><li>Qwen 0925 supports freely setting resolution width and height, with a valid total pixel range of [512x512=261632, 2048x2048=4194304].</li></ol><p>Example: {"size":"1024x1024"}.</p>
+     * @param AdditionalParameters <p>Special scenario parameters required by the model, formatted as a JSON serialized string.</p><ol><li>Hunyuan 3.0 supports freely setting resolution width and height within [512, 2048] pixels, with the product of width and height less than or equal to 1024x1024 pixels.</li><li>Qwen 0925 supports freely setting resolution width and height, with a valid total pixel range of [512x512=261632, 2048x2048=4194304].</li></ol><p>Example: {"size":"1024x1024"}.</p>
      */
     public void setAdditionalParameters(String AdditionalParameters) {
         this.AdditionalParameters = AdditionalParameters;
@@ -267,6 +290,9 @@ public class CreateAigcImageTaskRequest extends AbstractModel {
         if (source.ModelVersion != null) {
             this.ModelVersion = new String(source.ModelVersion);
         }
+        if (source.SceneType != null) {
+            this.SceneType = new String(source.SceneType);
+        }
         if (source.Prompt != null) {
             this.Prompt = new String(source.Prompt);
         }
@@ -303,6 +329,7 @@ public class CreateAigcImageTaskRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ModelName", this.ModelName);
         this.setParamSimple(map, prefix + "ModelVersion", this.ModelVersion);
+        this.setParamSimple(map, prefix + "SceneType", this.SceneType);
         this.setParamSimple(map, prefix + "Prompt", this.Prompt);
         this.setParamSimple(map, prefix + "NegativePrompt", this.NegativePrompt);
         this.setParamSimple(map, prefix + "EnhancePrompt", this.EnhancePrompt);

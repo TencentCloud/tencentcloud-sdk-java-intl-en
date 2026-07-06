@@ -59,6 +59,13 @@ public class VoiceInfo extends AbstractModel {
     private String Gender;
 
     /**
+    * <p>Age.</p><p>Enumeration values:</p><ul><li>child: child</li><li>teenager: teenager</li><li>youth: youth</li><li>middle_aged: middle-aged</li><li>senior: senior</li><li>unknown: unknown</li></ul>
+    */
+    @SerializedName("Age")
+    @Expose
+    private String Age;
+
+    /**
     * <p>List of supported languages. </p><p>For example: en.</p>
     */
     @SerializedName("Languages")
@@ -167,6 +174,22 @@ public class VoiceInfo extends AbstractModel {
     }
 
     /**
+     * Get <p>Age.</p><p>Enumeration values:</p><ul><li>child: child</li><li>teenager: teenager</li><li>youth: youth</li><li>middle_aged: middle-aged</li><li>senior: senior</li><li>unknown: unknown</li></ul> 
+     * @return Age <p>Age.</p><p>Enumeration values:</p><ul><li>child: child</li><li>teenager: teenager</li><li>youth: youth</li><li>middle_aged: middle-aged</li><li>senior: senior</li><li>unknown: unknown</li></ul>
+     */
+    public String getAge() {
+        return this.Age;
+    }
+
+    /**
+     * Set <p>Age.</p><p>Enumeration values:</p><ul><li>child: child</li><li>teenager: teenager</li><li>youth: youth</li><li>middle_aged: middle-aged</li><li>senior: senior</li><li>unknown: unknown</li></ul>
+     * @param Age <p>Age.</p><p>Enumeration values:</p><ul><li>child: child</li><li>teenager: teenager</li><li>youth: youth</li><li>middle_aged: middle-aged</li><li>senior: senior</li><li>unknown: unknown</li></ul>
+     */
+    public void setAge(String Age) {
+        this.Age = Age;
+    }
+
+    /**
      * Get <p>List of supported languages. </p><p>For example: en.</p> 
      * @return Languages <p>List of supported languages. </p><p>For example: en.</p>
      */
@@ -253,6 +276,9 @@ public class VoiceInfo extends AbstractModel {
         if (source.Gender != null) {
             this.Gender = new String(source.Gender);
         }
+        if (source.Age != null) {
+            this.Age = new String(source.Age);
+        }
         if (source.Languages != null) {
             this.Languages = new String[source.Languages.length];
             for (int i = 0; i < source.Languages.length; i++) {
@@ -286,6 +312,7 @@ public class VoiceInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamSimple(map, prefix + "Category", this.Category);
         this.setParamSimple(map, prefix + "Gender", this.Gender);
+        this.setParamSimple(map, prefix + "Age", this.Age);
         this.setParamArraySimple(map, prefix + "Languages.", this.Languages);
         this.setParamSimple(map, prefix + "AudioUrl", this.AudioUrl);
         this.setParamArraySimple(map, prefix + "Labels.", this.Labels);

@@ -31,6 +31,20 @@ public class DesignVoiceAsyncRequest extends AbstractModel {
     private String Prompt;
 
     /**
+    * <p>Voice attribute.</p>
+    */
+    @SerializedName("VoiceProfile")
+    @Expose
+    private VoiceProfile VoiceProfile;
+
+    /**
+    * <p>Audition audio text. The length cannot exceed 500.</p>
+    */
+    @SerializedName("Text")
+    @Expose
+    private String Text;
+
+    /**
     * <p>Extended parameters in the format of a JSON string.</p>
     */
     @SerializedName("ExtParam")
@@ -51,6 +65,38 @@ public class DesignVoiceAsyncRequest extends AbstractModel {
      */
     public void setPrompt(String Prompt) {
         this.Prompt = Prompt;
+    }
+
+    /**
+     * Get <p>Voice attribute.</p> 
+     * @return VoiceProfile <p>Voice attribute.</p>
+     */
+    public VoiceProfile getVoiceProfile() {
+        return this.VoiceProfile;
+    }
+
+    /**
+     * Set <p>Voice attribute.</p>
+     * @param VoiceProfile <p>Voice attribute.</p>
+     */
+    public void setVoiceProfile(VoiceProfile VoiceProfile) {
+        this.VoiceProfile = VoiceProfile;
+    }
+
+    /**
+     * Get <p>Audition audio text. The length cannot exceed 500.</p> 
+     * @return Text <p>Audition audio text. The length cannot exceed 500.</p>
+     */
+    public String getText() {
+        return this.Text;
+    }
+
+    /**
+     * Set <p>Audition audio text. The length cannot exceed 500.</p>
+     * @param Text <p>Audition audio text. The length cannot exceed 500.</p>
+     */
+    public void setText(String Text) {
+        this.Text = Text;
     }
 
     /**
@@ -80,6 +126,12 @@ public class DesignVoiceAsyncRequest extends AbstractModel {
         if (source.Prompt != null) {
             this.Prompt = new String(source.Prompt);
         }
+        if (source.VoiceProfile != null) {
+            this.VoiceProfile = new VoiceProfile(source.VoiceProfile);
+        }
+        if (source.Text != null) {
+            this.Text = new String(source.Text);
+        }
         if (source.ExtParam != null) {
             this.ExtParam = new String(source.ExtParam);
         }
@@ -91,6 +143,8 @@ public class DesignVoiceAsyncRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Prompt", this.Prompt);
+        this.setParamObj(map, prefix + "VoiceProfile.", this.VoiceProfile);
+        this.setParamSimple(map, prefix + "Text", this.Text);
         this.setParamSimple(map, prefix + "ExtParam", this.ExtParam);
 
     }

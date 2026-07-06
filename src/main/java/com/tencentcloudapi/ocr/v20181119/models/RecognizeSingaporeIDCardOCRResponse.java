@@ -38,35 +38,35 @@ public class RecognizeSingaporeIDCardOCRResponse extends AbstractModel {
     private String EnName;
 
     /**
-    * gender
+    * Gender
     */
     @SerializedName("Sex")
     @Expose
     private String Sex;
 
     /**
-    * Birth Country
+    * Country of birth
     */
     @SerializedName("CountryOfBirth")
     @Expose
     private String CountryOfBirth;
 
     /**
-    * Brithday
+    * Date of birth
     */
     @SerializedName("Birthday")
     @Expose
     private String Birthday;
 
     /**
-    * Address(back side)
+    * Address (back side)
     */
     @SerializedName("Address")
     @Expose
     private String Address;
 
     /**
-    * License number
+    * ID number
     */
     @SerializedName("ID")
     @Expose
@@ -87,7 +87,7 @@ public class RecognizeSingaporeIDCardOCRResponse extends AbstractModel {
     private String NRICCode;
 
     /**
-    * Post code(back side)
+    * Postal code (back side)
     */
     @SerializedName("PostCode")
     @Expose
@@ -169,80 +169,80 @@ public class RecognizeSingaporeIDCardOCRResponse extends AbstractModel {
     }
 
     /**
-     * Get gender 
-     * @return Sex gender
+     * Get Gender 
+     * @return Sex Gender
      */
     public String getSex() {
         return this.Sex;
     }
 
     /**
-     * Set gender
-     * @param Sex gender
+     * Set Gender
+     * @param Sex Gender
      */
     public void setSex(String Sex) {
         this.Sex = Sex;
     }
 
     /**
-     * Get Birth Country 
-     * @return CountryOfBirth Birth Country
+     * Get Country of birth 
+     * @return CountryOfBirth Country of birth
      */
     public String getCountryOfBirth() {
         return this.CountryOfBirth;
     }
 
     /**
-     * Set Birth Country
-     * @param CountryOfBirth Birth Country
+     * Set Country of birth
+     * @param CountryOfBirth Country of birth
      */
     public void setCountryOfBirth(String CountryOfBirth) {
         this.CountryOfBirth = CountryOfBirth;
     }
 
     /**
-     * Get Brithday 
-     * @return Birthday Brithday
+     * Get Date of birth 
+     * @return Birthday Date of birth
      */
     public String getBirthday() {
         return this.Birthday;
     }
 
     /**
-     * Set Brithday
-     * @param Birthday Brithday
+     * Set Date of birth
+     * @param Birthday Date of birth
      */
     public void setBirthday(String Birthday) {
         this.Birthday = Birthday;
     }
 
     /**
-     * Get Address(back side) 
-     * @return Address Address(back side)
+     * Get Address (back side) 
+     * @return Address Address (back side)
      */
     public String getAddress() {
         return this.Address;
     }
 
     /**
-     * Set Address(back side)
-     * @param Address Address(back side)
+     * Set Address (back side)
+     * @param Address Address (back side)
      */
     public void setAddress(String Address) {
         this.Address = Address;
     }
 
     /**
-     * Get License number 
-     * @return ID License number
+     * Get ID number 
+     * @return ID ID number
      */
     public String getID() {
         return this.ID;
     }
 
     /**
-     * Set License number
-     * @param ID License number
+     * Set ID number
+     * @param ID ID number
      */
     public void setID(String ID) {
         this.ID = ID;
@@ -281,16 +281,16 @@ public class RecognizeSingaporeIDCardOCRResponse extends AbstractModel {
     }
 
     /**
-     * Get Post code(back side) 
-     * @return PostCode Post code(back side)
+     * Get Postal code (back side) 
+     * @return PostCode Postal code (back side)
      */
     public String getPostCode() {
         return this.PostCode;
     }
 
     /**
-     * Set Post code(back side)
-     * @param PostCode Post code(back side)
+     * Set Postal code (back side)
+     * @param PostCode Postal code (back side)
      */
     public void setPostCode(String PostCode) {
         this.PostCode = PostCode;

@@ -491,6 +491,17 @@ Calling this API is a high-risk operation because the key cannot be recovered on
     }
 
     /**
+     *Obtaining CAM Console Password Rules
+     * @param req GetPasswordRulesRequest
+     * @return GetPasswordRulesResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetPasswordRulesResponse GetPasswordRules(GetPasswordRulesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetPasswordRules", GetPasswordRulesResponse.class);
+    }
+
+    /**
      *This API (GetPolicy) is used to query and view policy details.
      * @param req GetPolicyRequest
      * @return GetPolicyResponse
@@ -851,6 +862,17 @@ Calling this API is a high-risk operation because the key cannot be recovered on
     public UpdateOIDCConfigResponse UpdateOIDCConfig(UpdateOIDCConfigRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "UpdateOIDCConfig", UpdateOIDCConfigResponse.class);
+    }
+
+    /**
+     *Updating CAM Console Password Rules
+     * @param req UpdatePasswordRulesRequest
+     * @return UpdatePasswordRulesResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdatePasswordRulesResponse UpdatePasswordRules(UpdatePasswordRulesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpdatePasswordRules", UpdatePasswordRulesResponse.class);
     }
 
     /**

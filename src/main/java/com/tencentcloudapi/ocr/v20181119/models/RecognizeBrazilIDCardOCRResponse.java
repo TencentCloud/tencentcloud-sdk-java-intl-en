@@ -38,7 +38,7 @@ public class RecognizeBrazilIDCardOCRResponse extends AbstractModel {
     private String MemberShip;
 
     /**
-    * Birthday
+    * Date of birth
     */
     @SerializedName("DataNascimento")
     @Expose
@@ -52,7 +52,7 @@ public class RecognizeBrazilIDCardOCRResponse extends AbstractModel {
     private String IssuingAgency;
 
     /**
-    * blood type
+    * Blood type
     */
     @SerializedName("Fatorrh")
     @Expose
@@ -87,7 +87,7 @@ public class RecognizeBrazilIDCardOCRResponse extends AbstractModel {
     private String DNI;
 
     /**
-    * universal registration
+    * General registry (Registro Geral)
     */
     @SerializedName("RegistroGeral")
     @Expose
@@ -161,16 +161,16 @@ public class RecognizeBrazilIDCardOCRResponse extends AbstractModel {
     }
 
     /**
-     * Get Birthday 
-     * @return DataNascimento Birthday
+     * Get Date of birth 
+     * @return DataNascimento Date of birth
      */
     public String getDataNascimento() {
         return this.DataNascimento;
     }
 
     /**
-     * Set Birthday
-     * @param DataNascimento Birthday
+     * Set Date of birth
+     * @param DataNascimento Date of birth
      */
     public void setDataNascimento(String DataNascimento) {
         this.DataNascimento = DataNascimento;
@@ -193,16 +193,16 @@ public class RecognizeBrazilIDCardOCRResponse extends AbstractModel {
     }
 
     /**
-     * Get blood type 
-     * @return Fatorrh blood type
+     * Get Blood type 
+     * @return Fatorrh Blood type
      */
     public String getFatorrh() {
         return this.Fatorrh;
     }
 
     /**
-     * Set blood type
-     * @param Fatorrh blood type
+     * Set Blood type
+     * @param Fatorrh Blood type
      */
     public void setFatorrh(String Fatorrh) {
         this.Fatorrh = Fatorrh;
@@ -273,16 +273,16 @@ public class RecognizeBrazilIDCardOCRResponse extends AbstractModel {
     }
 
     /**
-     * Get universal registration 
-     * @return RegistroGeral universal registration
+     * Get General registry (Registro Geral) 
+     * @return RegistroGeral General registry (Registro Geral)
      */
     public String getRegistroGeral() {
         return this.RegistroGeral;
     }
 
     /**
-     * Set universal registration
-     * @param RegistroGeral universal registration
+     * Set General registry (Registro Geral)
+     * @param RegistroGeral General registry (Registro Geral)
      */
     public void setRegistroGeral(String RegistroGeral) {
         this.RegistroGeral = RegistroGeral;

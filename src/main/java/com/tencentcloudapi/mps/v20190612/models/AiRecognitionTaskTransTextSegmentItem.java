@@ -24,138 +24,138 @@ import java.util.HashMap;
 public class AiRecognitionTaskTransTextSegmentItem extends AbstractModel {
 
     /**
-    * The confidence score for a segment. Value range: 0-100.
+    * <p>Confidence of the recognized segment. Value range: 0–100.</p>
     */
     @SerializedName("Confidence")
     @Expose
     private Float Confidence;
 
     /**
-    * The start time offset (seconds) of a segment.
+    * <p>Start time offset of the recognized segment, in seconds.</p>
     */
     @SerializedName("StartTimeOffset")
     @Expose
     private Float StartTimeOffset;
 
     /**
-    * The end time offset (seconds) of a segment.
+    * <p>End time offset of the recognized segment, in seconds.</p>
     */
     @SerializedName("EndTimeOffset")
     @Expose
     private Float EndTimeOffset;
 
     /**
-    * The text transcript.
+    * <p>Recognized text.</p>
     */
     @SerializedName("Text")
     @Expose
     private String Text;
 
     /**
-    * The translation.
+    * <p>Translated text.</p>
     */
     @SerializedName("Trans")
     @Expose
     private String Trans;
 
     /**
-    * Word timestamp information.
+    * <p>Word timestamp information.</p>
     */
     @SerializedName("Wordlist")
     @Expose
     private WordResult [] Wordlist;
 
     /**
-     * Get The confidence score for a segment. Value range: 0-100. 
-     * @return Confidence The confidence score for a segment. Value range: 0-100.
+     * Get <p>Confidence of the recognized segment. Value range: 0–100.</p> 
+     * @return Confidence <p>Confidence of the recognized segment. Value range: 0–100.</p>
      */
     public Float getConfidence() {
         return this.Confidence;
     }
 
     /**
-     * Set The confidence score for a segment. Value range: 0-100.
-     * @param Confidence The confidence score for a segment. Value range: 0-100.
+     * Set <p>Confidence of the recognized segment. Value range: 0–100.</p>
+     * @param Confidence <p>Confidence of the recognized segment. Value range: 0–100.</p>
      */
     public void setConfidence(Float Confidence) {
         this.Confidence = Confidence;
     }
 
     /**
-     * Get The start time offset (seconds) of a segment. 
-     * @return StartTimeOffset The start time offset (seconds) of a segment.
+     * Get <p>Start time offset of the recognized segment, in seconds.</p> 
+     * @return StartTimeOffset <p>Start time offset of the recognized segment, in seconds.</p>
      */
     public Float getStartTimeOffset() {
         return this.StartTimeOffset;
     }
 
     /**
-     * Set The start time offset (seconds) of a segment.
-     * @param StartTimeOffset The start time offset (seconds) of a segment.
+     * Set <p>Start time offset of the recognized segment, in seconds.</p>
+     * @param StartTimeOffset <p>Start time offset of the recognized segment, in seconds.</p>
      */
     public void setStartTimeOffset(Float StartTimeOffset) {
         this.StartTimeOffset = StartTimeOffset;
     }
 
     /**
-     * Get The end time offset (seconds) of a segment. 
-     * @return EndTimeOffset The end time offset (seconds) of a segment.
+     * Get <p>End time offset of the recognized segment, in seconds.</p> 
+     * @return EndTimeOffset <p>End time offset of the recognized segment, in seconds.</p>
      */
     public Float getEndTimeOffset() {
         return this.EndTimeOffset;
     }
 
     /**
-     * Set The end time offset (seconds) of a segment.
-     * @param EndTimeOffset The end time offset (seconds) of a segment.
+     * Set <p>End time offset of the recognized segment, in seconds.</p>
+     * @param EndTimeOffset <p>End time offset of the recognized segment, in seconds.</p>
      */
     public void setEndTimeOffset(Float EndTimeOffset) {
         this.EndTimeOffset = EndTimeOffset;
     }
 
     /**
-     * Get The text transcript. 
-     * @return Text The text transcript.
+     * Get <p>Recognized text.</p> 
+     * @return Text <p>Recognized text.</p>
      */
     public String getText() {
         return this.Text;
     }
 
     /**
-     * Set The text transcript.
-     * @param Text The text transcript.
+     * Set <p>Recognized text.</p>
+     * @param Text <p>Recognized text.</p>
      */
     public void setText(String Text) {
         this.Text = Text;
     }
 
     /**
-     * Get The translation. 
-     * @return Trans The translation.
+     * Get <p>Translated text.</p> 
+     * @return Trans <p>Translated text.</p>
      */
     public String getTrans() {
         return this.Trans;
     }
 
     /**
-     * Set The translation.
-     * @param Trans The translation.
+     * Set <p>Translated text.</p>
+     * @param Trans <p>Translated text.</p>
      */
     public void setTrans(String Trans) {
         this.Trans = Trans;
     }
 
     /**
-     * Get Word timestamp information. 
-     * @return Wordlist Word timestamp information.
+     * Get <p>Word timestamp information.</p> 
+     * @return Wordlist <p>Word timestamp information.</p>
      */
     public WordResult [] getWordlist() {
         return this.Wordlist;
     }
 
     /**
-     * Set Word timestamp information.
-     * @param Wordlist Word timestamp information.
+     * Set <p>Word timestamp information.</p>
+     * @param Wordlist <p>Word timestamp information.</p>
      */
     public void setWordlist(WordResult [] Wordlist) {
         this.Wordlist = Wordlist;

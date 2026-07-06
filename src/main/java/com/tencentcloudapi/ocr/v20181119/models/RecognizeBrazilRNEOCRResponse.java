@@ -24,35 +24,35 @@ import java.util.HashMap;
 public class RecognizeBrazilRNEOCRResponse extends AbstractModel {
 
     /**
-    * RNE
+    * The RNE (Registro Nacional de Estrangeiros) number.
     */
     @SerializedName("RNE")
     @Expose
     private String RNE;
 
     /**
-    * Classification
+    * The classification of the RNE document.
     */
     @SerializedName("CLASSIFICATION")
     @Expose
     private String CLASSIFICATION;
 
     /**
-    * Valid date
+    * The validity period (expiry date) of the RNE document.
     */
     @SerializedName("VALIDADE")
     @Expose
     private String VALIDADE;
 
     /**
-    * Name
+    * The full name.
     */
     @SerializedName("NOME")
     @Expose
     private String NOME;
 
     /**
-    * Family information
+    * Family information (parents' names).
     */
     @SerializedName("Membership")
     @Expose
@@ -73,14 +73,14 @@ public class RecognizeBrazilRNEOCRResponse extends AbstractModel {
     private String NATURALIDADE;
 
     /**
-    * Issuing agency
+    * The issuing agency.
     */
     @SerializedName("IssuingAgency")
     @Expose
     private String IssuingAgency;
 
     /**
-    * Birthday
+    * Date of birth.
     */
     @SerializedName("DateOfBirth")
     @Expose
@@ -94,28 +94,28 @@ public class RecognizeBrazilRNEOCRResponse extends AbstractModel {
     private String Sex;
 
     /**
-    * Date of entry
+    * The date of entry into Brazil.
     */
     @SerializedName("EntryDate")
     @Expose
     private String EntryDate;
 
     /**
-    * VIA
+    * The VIA (document version/sequence number).
     */
     @SerializedName("VIA")
     @Expose
     private String VIA;
 
     /**
-    * Dispatch date
+    * The issue date.
     */
     @SerializedName("DispatchDate")
     @Expose
     private String DispatchDate;
 
     /**
-    * MRZ
+    * The machine readable zone (MRZ) code.
     */
     @SerializedName("MRZ")
     @Expose
@@ -136,80 +136,80 @@ public class RecognizeBrazilRNEOCRResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get RNE 
-     * @return RNE RNE
+     * Get The RNE (Registro Nacional de Estrangeiros) number. 
+     * @return RNE The RNE (Registro Nacional de Estrangeiros) number.
      */
     public String getRNE() {
         return this.RNE;
     }
 
     /**
-     * Set RNE
-     * @param RNE RNE
+     * Set The RNE (Registro Nacional de Estrangeiros) number.
+     * @param RNE The RNE (Registro Nacional de Estrangeiros) number.
      */
     public void setRNE(String RNE) {
         this.RNE = RNE;
     }
 
     /**
-     * Get Classification 
-     * @return CLASSIFICATION Classification
+     * Get The classification of the RNE document. 
+     * @return CLASSIFICATION The classification of the RNE document.
      */
     public String getCLASSIFICATION() {
         return this.CLASSIFICATION;
     }
 
     /**
-     * Set Classification
-     * @param CLASSIFICATION Classification
+     * Set The classification of the RNE document.
+     * @param CLASSIFICATION The classification of the RNE document.
      */
     public void setCLASSIFICATION(String CLASSIFICATION) {
         this.CLASSIFICATION = CLASSIFICATION;
     }
 
     /**
-     * Get Valid date 
-     * @return VALIDADE Valid date
+     * Get The validity period (expiry date) of the RNE document. 
+     * @return VALIDADE The validity period (expiry date) of the RNE document.
      */
     public String getVALIDADE() {
         return this.VALIDADE;
     }
 
     /**
-     * Set Valid date
-     * @param VALIDADE Valid date
+     * Set The validity period (expiry date) of the RNE document.
+     * @param VALIDADE The validity period (expiry date) of the RNE document.
      */
     public void setVALIDADE(String VALIDADE) {
         this.VALIDADE = VALIDADE;
     }
 
     /**
-     * Get Name 
-     * @return NOME Name
+     * Get The full name. 
+     * @return NOME The full name.
      */
     public String getNOME() {
         return this.NOME;
     }
 
     /**
-     * Set Name
-     * @param NOME Name
+     * Set The full name.
+     * @param NOME The full name.
      */
     public void setNOME(String NOME) {
         this.NOME = NOME;
     }
 
     /**
-     * Get Family information 
-     * @return Membership Family information
+     * Get Family information (parents' names). 
+     * @return Membership Family information (parents' names).
      */
     public String getMembership() {
         return this.Membership;
     }
 
     /**
-     * Set Family information
-     * @param Membership Family information
+     * Set Family information (parents' names).
+     * @param Membership Family information (parents' names).
      */
     public void setMembership(String Membership) {
         this.Membership = Membership;
@@ -248,32 +248,32 @@ public class RecognizeBrazilRNEOCRResponse extends AbstractModel {
     }
 
     /**
-     * Get Issuing agency 
-     * @return IssuingAgency Issuing agency
+     * Get The issuing agency. 
+     * @return IssuingAgency The issuing agency.
      */
     public String getIssuingAgency() {
         return this.IssuingAgency;
     }
 
     /**
-     * Set Issuing agency
-     * @param IssuingAgency Issuing agency
+     * Set The issuing agency.
+     * @param IssuingAgency The issuing agency.
      */
     public void setIssuingAgency(String IssuingAgency) {
         this.IssuingAgency = IssuingAgency;
     }
 
     /**
-     * Get Birthday 
-     * @return DateOfBirth Birthday
+     * Get Date of birth. 
+     * @return DateOfBirth Date of birth.
      */
     public String getDateOfBirth() {
         return this.DateOfBirth;
     }
 
     /**
-     * Set Birthday
-     * @param DateOfBirth Birthday
+     * Set Date of birth.
+     * @param DateOfBirth Date of birth.
      */
     public void setDateOfBirth(String DateOfBirth) {
         this.DateOfBirth = DateOfBirth;
@@ -296,64 +296,64 @@ public class RecognizeBrazilRNEOCRResponse extends AbstractModel {
     }
 
     /**
-     * Get Date of entry 
-     * @return EntryDate Date of entry
+     * Get The date of entry into Brazil. 
+     * @return EntryDate The date of entry into Brazil.
      */
     public String getEntryDate() {
         return this.EntryDate;
     }
 
     /**
-     * Set Date of entry
-     * @param EntryDate Date of entry
+     * Set The date of entry into Brazil.
+     * @param EntryDate The date of entry into Brazil.
      */
     public void setEntryDate(String EntryDate) {
         this.EntryDate = EntryDate;
     }
 
     /**
-     * Get VIA 
-     * @return VIA VIA
+     * Get The VIA (document version/sequence number). 
+     * @return VIA The VIA (document version/sequence number).
      */
     public String getVIA() {
         return this.VIA;
     }
 
     /**
-     * Set VIA
-     * @param VIA VIA
+     * Set The VIA (document version/sequence number).
+     * @param VIA The VIA (document version/sequence number).
      */
     public void setVIA(String VIA) {
         this.VIA = VIA;
     }
 
     /**
-     * Get Dispatch date 
-     * @return DispatchDate Dispatch date
+     * Get The issue date. 
+     * @return DispatchDate The issue date.
      */
     public String getDispatchDate() {
         return this.DispatchDate;
     }
 
     /**
-     * Set Dispatch date
-     * @param DispatchDate Dispatch date
+     * Set The issue date.
+     * @param DispatchDate The issue date.
      */
     public void setDispatchDate(String DispatchDate) {
         this.DispatchDate = DispatchDate;
     }
 
     /**
-     * Get MRZ 
-     * @return MRZ MRZ
+     * Get The machine readable zone (MRZ) code. 
+     * @return MRZ The machine readable zone (MRZ) code.
      */
     public String getMRZ() {
         return this.MRZ;
     }
 
     /**
-     * Set MRZ
-     * @param MRZ MRZ
+     * Set The machine readable zone (MRZ) code.
+     * @param MRZ The machine readable zone (MRZ) code.
      */
     public void setMRZ(String MRZ) {
         this.MRZ = MRZ;

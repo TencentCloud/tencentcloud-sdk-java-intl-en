@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class AigcImageExtraParam extends AbstractModel {
 
     /**
-    * <p>Aspect ratio of the generated video.</p><p>Supported aspect ratios for different models:</p><ol><li>GEM: 1:1, 3:2, 2:3, 3:4, 4:3, 4:5, 5:4, 9:16, 16:9, and 21:9.</li></ol><p>Note: For more information about the aspect ratios of specific models, see the model website.</p>
+    * <p>Aspect ratio of the generated video.</p><p>Supported aspect ratios for different models:</p><ol><li>Kling 2.1: 16:9, 9:16, 1:1, 4:3, 3:4, 3:2, 2:3, and 21:9.</li><li>Kling 3.0: 16:9, 9:16, 1:1, 4:3, 3:4, 3:2, 2:3, and 21:9.</li><li>Kling 3.0-Omni: 16:9, 9:16, 1:1, 4:3, 3:4, 3:2, 2:3, and 21:9.</li><li>Kling O1: 16:9, 9:16, 1:1, 4:3, 3:4, 3:2, 2:3, and 21:9.</li><li>Vidu q2: 16:9, 9:16, 1:1, 3:4, 4:3, 21:9, 2:3, and 3:2.</li><li>MJ v7: The aspect ratio needs to be specified in the prompt.</li></ol><p>Note: For more information about the aspect ratios of specific models, see the model website.</p>
     */
     @SerializedName("AspectRatio")
     @Expose
@@ -45,23 +45,23 @@ public class AigcImageExtraParam extends AbstractModel {
     private Long LogoAdd;
 
     /**
-    * 
+    * <p>Specifies the output format of the image. JPEG and PNG formats are supported.</p>
     */
     @SerializedName("OutputFormat")
     @Expose
     private String OutputFormat;
 
     /**
-     * Get <p>Aspect ratio of the generated video.</p><p>Supported aspect ratios for different models:</p><ol><li>GEM: 1:1, 3:2, 2:3, 3:4, 4:3, 4:5, 5:4, 9:16, 16:9, and 21:9.</li></ol><p>Note: For more information about the aspect ratios of specific models, see the model website.</p> 
-     * @return AspectRatio <p>Aspect ratio of the generated video.</p><p>Supported aspect ratios for different models:</p><ol><li>GEM: 1:1, 3:2, 2:3, 3:4, 4:3, 4:5, 5:4, 9:16, 16:9, and 21:9.</li></ol><p>Note: For more information about the aspect ratios of specific models, see the model website.</p>
+     * Get <p>Aspect ratio of the generated video.</p><p>Supported aspect ratios for different models:</p><ol><li>Kling 2.1: 16:9, 9:16, 1:1, 4:3, 3:4, 3:2, 2:3, and 21:9.</li><li>Kling 3.0: 16:9, 9:16, 1:1, 4:3, 3:4, 3:2, 2:3, and 21:9.</li><li>Kling 3.0-Omni: 16:9, 9:16, 1:1, 4:3, 3:4, 3:2, 2:3, and 21:9.</li><li>Kling O1: 16:9, 9:16, 1:1, 4:3, 3:4, 3:2, 2:3, and 21:9.</li><li>Vidu q2: 16:9, 9:16, 1:1, 3:4, 4:3, 21:9, 2:3, and 3:2.</li><li>MJ v7: The aspect ratio needs to be specified in the prompt.</li></ol><p>Note: For more information about the aspect ratios of specific models, see the model website.</p> 
+     * @return AspectRatio <p>Aspect ratio of the generated video.</p><p>Supported aspect ratios for different models:</p><ol><li>Kling 2.1: 16:9, 9:16, 1:1, 4:3, 3:4, 3:2, 2:3, and 21:9.</li><li>Kling 3.0: 16:9, 9:16, 1:1, 4:3, 3:4, 3:2, 2:3, and 21:9.</li><li>Kling 3.0-Omni: 16:9, 9:16, 1:1, 4:3, 3:4, 3:2, 2:3, and 21:9.</li><li>Kling O1: 16:9, 9:16, 1:1, 4:3, 3:4, 3:2, 2:3, and 21:9.</li><li>Vidu q2: 16:9, 9:16, 1:1, 3:4, 4:3, 21:9, 2:3, and 3:2.</li><li>MJ v7: The aspect ratio needs to be specified in the prompt.</li></ol><p>Note: For more information about the aspect ratios of specific models, see the model website.</p>
      */
     public String getAspectRatio() {
         return this.AspectRatio;
     }
 
     /**
-     * Set <p>Aspect ratio of the generated video.</p><p>Supported aspect ratios for different models:</p><ol><li>GEM: 1:1, 3:2, 2:3, 3:4, 4:3, 4:5, 5:4, 9:16, 16:9, and 21:9.</li></ol><p>Note: For more information about the aspect ratios of specific models, see the model website.</p>
-     * @param AspectRatio <p>Aspect ratio of the generated video.</p><p>Supported aspect ratios for different models:</p><ol><li>GEM: 1:1, 3:2, 2:3, 3:4, 4:3, 4:5, 5:4, 9:16, 16:9, and 21:9.</li></ol><p>Note: For more information about the aspect ratios of specific models, see the model website.</p>
+     * Set <p>Aspect ratio of the generated video.</p><p>Supported aspect ratios for different models:</p><ol><li>Kling 2.1: 16:9, 9:16, 1:1, 4:3, 3:4, 3:2, 2:3, and 21:9.</li><li>Kling 3.0: 16:9, 9:16, 1:1, 4:3, 3:4, 3:2, 2:3, and 21:9.</li><li>Kling 3.0-Omni: 16:9, 9:16, 1:1, 4:3, 3:4, 3:2, 2:3, and 21:9.</li><li>Kling O1: 16:9, 9:16, 1:1, 4:3, 3:4, 3:2, 2:3, and 21:9.</li><li>Vidu q2: 16:9, 9:16, 1:1, 3:4, 4:3, 21:9, 2:3, and 3:2.</li><li>MJ v7: The aspect ratio needs to be specified in the prompt.</li></ol><p>Note: For more information about the aspect ratios of specific models, see the model website.</p>
+     * @param AspectRatio <p>Aspect ratio of the generated video.</p><p>Supported aspect ratios for different models:</p><ol><li>Kling 2.1: 16:9, 9:16, 1:1, 4:3, 3:4, 3:2, 2:3, and 21:9.</li><li>Kling 3.0: 16:9, 9:16, 1:1, 4:3, 3:4, 3:2, 2:3, and 21:9.</li><li>Kling 3.0-Omni: 16:9, 9:16, 1:1, 4:3, 3:4, 3:2, 2:3, and 21:9.</li><li>Kling O1: 16:9, 9:16, 1:1, 4:3, 3:4, 3:2, 2:3, and 21:9.</li><li>Vidu q2: 16:9, 9:16, 1:1, 3:4, 4:3, 21:9, 2:3, and 3:2.</li><li>MJ v7: The aspect ratio needs to be specified in the prompt.</li></ol><p>Note: For more information about the aspect ratios of specific models, see the model website.</p>
      */
     public void setAspectRatio(String AspectRatio) {
         this.AspectRatio = AspectRatio;
@@ -100,16 +100,16 @@ public class AigcImageExtraParam extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return OutputFormat 
+     * Get <p>Specifies the output format of the image. JPEG and PNG formats are supported.</p> 
+     * @return OutputFormat <p>Specifies the output format of the image. JPEG and PNG formats are supported.</p>
      */
     public String getOutputFormat() {
         return this.OutputFormat;
     }
 
     /**
-     * Set 
-     * @param OutputFormat 
+     * Set <p>Specifies the output format of the image. JPEG and PNG formats are supported.</p>
+     * @param OutputFormat <p>Specifies the output format of the image. JPEG and PNG formats are supported.</p>
      */
     public void setOutputFormat(String OutputFormat) {
         this.OutputFormat = OutputFormat;

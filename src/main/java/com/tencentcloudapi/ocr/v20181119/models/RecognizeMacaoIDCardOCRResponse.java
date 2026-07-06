@@ -24,77 +24,77 @@ import java.util.HashMap;
 public class RecognizeMacaoIDCardOCRResponse extends AbstractModel {
 
     /**
-    * Chinese last name
+    * Last name in Chinese
     */
     @SerializedName("CnLastName")
     @Expose
     private String CnLastName;
 
     /**
-    * English last name
+    * Last name in English
     */
     @SerializedName("EnLastName")
     @Expose
     private String EnLastName;
 
     /**
-    * Last name code
+    * Telecode of the last name in Chinese
     */
     @SerializedName("LastNameCode")
     @Expose
     private String LastNameCode;
 
     /**
-    * Chinese first name
+    * First name in Chinese
     */
     @SerializedName("CnFirstName")
     @Expose
     private String CnFirstName;
 
     /**
-    * English first name
+    * First name in English
     */
     @SerializedName("EnFirstName")
     @Expose
     private String EnFirstName;
 
     /**
-    * First name code
+    * Telecode of the first name in Chinese
     */
     @SerializedName("FirstNameCode")
     @Expose
     private String FirstNameCode;
 
     /**
-    * ID Number
+    * Identity card number
     */
     @SerializedName("ID")
     @Expose
     private String ID;
 
     /**
-    * Birthday(DD-MM-YYYY)
+    * Date of birth (DD-MM-YYYY)
     */
     @SerializedName("Birthday")
     @Expose
     private String Birthday;
 
     /**
-    * gender
+    * Gender
     */
     @SerializedName("Sex")
     @Expose
     private String Sex;
 
     /**
-    * First issue Date (DD-MM-YYYY)
+    * Date of first issue (DD-MM-YYYY)
     */
     @SerializedName("FirstIssueDate")
     @Expose
     private String FirstIssueDate;
 
     /**
-    * Issue date (DD-MM-YYYY)
+    * Date of issue (DD-MM-YYYY)
     */
     @SerializedName("CurrentIssueDate")
     @Expose
@@ -108,7 +108,7 @@ public class RecognizeMacaoIDCardOCRResponse extends AbstractModel {
     private String ValidityPeriod;
 
     /**
-    * ID symbol
+    * Document symbol
     */
     @SerializedName("Symbol")
     @Expose
@@ -129,14 +129,15 @@ public class RecognizeMacaoIDCardOCRResponse extends AbstractModel {
     private String RetImage;
 
     /**
-    * Image rotation angle, the horizontal direction of the text is 0, clockwise is positive, counterclockwise is negative
+    * This field is deprecated and will always return null. Usage is not recommended.
     */
     @SerializedName("Angle")
     @Expose
     private String Angle;
 
     /**
-    * Resident type.
+    * Resident type. 
+Valid values: Permanent Resident Identity Card, Non-permanent Resident Identity Card.
     */
     @SerializedName("ResidentType")
     @Expose
@@ -165,176 +166,176 @@ public class RecognizeMacaoIDCardOCRResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Chinese last name 
-     * @return CnLastName Chinese last name
+     * Get Last name in Chinese 
+     * @return CnLastName Last name in Chinese
      */
     public String getCnLastName() {
         return this.CnLastName;
     }
 
     /**
-     * Set Chinese last name
-     * @param CnLastName Chinese last name
+     * Set Last name in Chinese
+     * @param CnLastName Last name in Chinese
      */
     public void setCnLastName(String CnLastName) {
         this.CnLastName = CnLastName;
     }
 
     /**
-     * Get English last name 
-     * @return EnLastName English last name
+     * Get Last name in English 
+     * @return EnLastName Last name in English
      */
     public String getEnLastName() {
         return this.EnLastName;
     }
 
     /**
-     * Set English last name
-     * @param EnLastName English last name
+     * Set Last name in English
+     * @param EnLastName Last name in English
      */
     public void setEnLastName(String EnLastName) {
         this.EnLastName = EnLastName;
     }
 
     /**
-     * Get Last name code 
-     * @return LastNameCode Last name code
+     * Get Telecode of the last name in Chinese 
+     * @return LastNameCode Telecode of the last name in Chinese
      */
     public String getLastNameCode() {
         return this.LastNameCode;
     }
 
     /**
-     * Set Last name code
-     * @param LastNameCode Last name code
+     * Set Telecode of the last name in Chinese
+     * @param LastNameCode Telecode of the last name in Chinese
      */
     public void setLastNameCode(String LastNameCode) {
         this.LastNameCode = LastNameCode;
     }
 
     /**
-     * Get Chinese first name 
-     * @return CnFirstName Chinese first name
+     * Get First name in Chinese 
+     * @return CnFirstName First name in Chinese
      */
     public String getCnFirstName() {
         return this.CnFirstName;
     }
 
     /**
-     * Set Chinese first name
-     * @param CnFirstName Chinese first name
+     * Set First name in Chinese
+     * @param CnFirstName First name in Chinese
      */
     public void setCnFirstName(String CnFirstName) {
         this.CnFirstName = CnFirstName;
     }
 
     /**
-     * Get English first name 
-     * @return EnFirstName English first name
+     * Get First name in English 
+     * @return EnFirstName First name in English
      */
     public String getEnFirstName() {
         return this.EnFirstName;
     }
 
     /**
-     * Set English first name
-     * @param EnFirstName English first name
+     * Set First name in English
+     * @param EnFirstName First name in English
      */
     public void setEnFirstName(String EnFirstName) {
         this.EnFirstName = EnFirstName;
     }
 
     /**
-     * Get First name code 
-     * @return FirstNameCode First name code
+     * Get Telecode of the first name in Chinese 
+     * @return FirstNameCode Telecode of the first name in Chinese
      */
     public String getFirstNameCode() {
         return this.FirstNameCode;
     }
 
     /**
-     * Set First name code
-     * @param FirstNameCode First name code
+     * Set Telecode of the first name in Chinese
+     * @param FirstNameCode Telecode of the first name in Chinese
      */
     public void setFirstNameCode(String FirstNameCode) {
         this.FirstNameCode = FirstNameCode;
     }
 
     /**
-     * Get ID Number 
-     * @return ID ID Number
+     * Get Identity card number 
+     * @return ID Identity card number
      */
     public String getID() {
         return this.ID;
     }
 
     /**
-     * Set ID Number
-     * @param ID ID Number
+     * Set Identity card number
+     * @param ID Identity card number
      */
     public void setID(String ID) {
         this.ID = ID;
     }
 
     /**
-     * Get Birthday(DD-MM-YYYY) 
-     * @return Birthday Birthday(DD-MM-YYYY)
+     * Get Date of birth (DD-MM-YYYY) 
+     * @return Birthday Date of birth (DD-MM-YYYY)
      */
     public String getBirthday() {
         return this.Birthday;
     }
 
     /**
-     * Set Birthday(DD-MM-YYYY)
-     * @param Birthday Birthday(DD-MM-YYYY)
+     * Set Date of birth (DD-MM-YYYY)
+     * @param Birthday Date of birth (DD-MM-YYYY)
      */
     public void setBirthday(String Birthday) {
         this.Birthday = Birthday;
     }
 
     /**
-     * Get gender 
-     * @return Sex gender
+     * Get Gender 
+     * @return Sex Gender
      */
     public String getSex() {
         return this.Sex;
     }
 
     /**
-     * Set gender
-     * @param Sex gender
+     * Set Gender
+     * @param Sex Gender
      */
     public void setSex(String Sex) {
         this.Sex = Sex;
     }
 
     /**
-     * Get First issue Date (DD-MM-YYYY) 
-     * @return FirstIssueDate First issue Date (DD-MM-YYYY)
+     * Get Date of first issue (DD-MM-YYYY) 
+     * @return FirstIssueDate Date of first issue (DD-MM-YYYY)
      */
     public String getFirstIssueDate() {
         return this.FirstIssueDate;
     }
 
     /**
-     * Set First issue Date (DD-MM-YYYY)
-     * @param FirstIssueDate First issue Date (DD-MM-YYYY)
+     * Set Date of first issue (DD-MM-YYYY)
+     * @param FirstIssueDate Date of first issue (DD-MM-YYYY)
      */
     public void setFirstIssueDate(String FirstIssueDate) {
         this.FirstIssueDate = FirstIssueDate;
     }
 
     /**
-     * Get Issue date (DD-MM-YYYY) 
-     * @return CurrentIssueDate Issue date (DD-MM-YYYY)
+     * Get Date of issue (DD-MM-YYYY) 
+     * @return CurrentIssueDate Date of issue (DD-MM-YYYY)
      */
     public String getCurrentIssueDate() {
         return this.CurrentIssueDate;
     }
 
     /**
-     * Set Issue date (DD-MM-YYYY)
-     * @param CurrentIssueDate Issue date (DD-MM-YYYY)
+     * Set Date of issue (DD-MM-YYYY)
+     * @param CurrentIssueDate Date of issue (DD-MM-YYYY)
      */
     public void setCurrentIssueDate(String CurrentIssueDate) {
         this.CurrentIssueDate = CurrentIssueDate;
@@ -357,16 +358,16 @@ public class RecognizeMacaoIDCardOCRResponse extends AbstractModel {
     }
 
     /**
-     * Get ID symbol 
-     * @return Symbol ID symbol
+     * Get Document symbol 
+     * @return Symbol Document symbol
      */
     public String getSymbol() {
         return this.Symbol;
     }
 
     /**
-     * Set ID symbol
-     * @param Symbol ID symbol
+     * Set Document symbol
+     * @param Symbol Document symbol
      */
     public void setSymbol(String Symbol) {
         this.Symbol = Symbol;
@@ -405,32 +406,40 @@ public class RecognizeMacaoIDCardOCRResponse extends AbstractModel {
     }
 
     /**
-     * Get Image rotation angle, the horizontal direction of the text is 0, clockwise is positive, counterclockwise is negative 
-     * @return Angle Image rotation angle, the horizontal direction of the text is 0, clockwise is positive, counterclockwise is negative
+     * Get This field is deprecated and will always return null. Usage is not recommended. 
+     * @return Angle This field is deprecated and will always return null. Usage is not recommended.
+     * @deprecated
      */
+    @Deprecated
     public String getAngle() {
         return this.Angle;
     }
 
     /**
-     * Set Image rotation angle, the horizontal direction of the text is 0, clockwise is positive, counterclockwise is negative
-     * @param Angle Image rotation angle, the horizontal direction of the text is 0, clockwise is positive, counterclockwise is negative
+     * Set This field is deprecated and will always return null. Usage is not recommended.
+     * @param Angle This field is deprecated and will always return null. Usage is not recommended.
+     * @deprecated
      */
+    @Deprecated
     public void setAngle(String Angle) {
         this.Angle = Angle;
     }
 
     /**
      * Get Resident type. 
-     * @return ResidentType Resident type.
+Valid values: Permanent Resident Identity Card, Non-permanent Resident Identity Card. 
+     * @return ResidentType Resident type. 
+Valid values: Permanent Resident Identity Card, Non-permanent Resident Identity Card.
      */
     public String getResidentType() {
         return this.ResidentType;
     }
 
     /**
-     * Set Resident type.
-     * @param ResidentType Resident type.
+     * Set Resident type. 
+Valid values: Permanent Resident Identity Card, Non-permanent Resident Identity Card.
+     * @param ResidentType Resident type. 
+Valid values: Permanent Resident Identity Card, Non-permanent Resident Identity Card.
      */
     public void setResidentType(String ResidentType) {
         this.ResidentType = ResidentType;

@@ -404,19 +404,6 @@ The following table lists the supported countries or regions, document types, an
     }
 
     /**
-     *This API is used to detect and recognize key fields such as the card number, bank information, and expiration date on mainstream bank cards in Mainland China.
-
-This API is not fully available for the time being. For more information, please contact your [Tencent Cloud sales rep](https://intl.cloud.tencent.com/contact-sales).
-     * @param req BankCardOCRRequest
-     * @return BankCardOCRResponse
-     * @throws TencentCloudSDKException
-     */
-    public BankCardOCRResponse BankCardOCR(BankCardOCRRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "BankCardOCR", BankCardOCRResponse.class);
-    }
-
-    /**
      *This API supports identifying and extracting field information in structured scenarios such as complex scenarios and multiple formats. Key scenarios include: finance, health care, transportation, travel, insurance. Click [experience now](https://ocrdemo.cloud.tencent.com/).
 
 This API is used to set the alias SmartStructuralPro.
@@ -487,90 +474,6 @@ This API is not fully available for the time being. For more information, please
     public HKIDCardOCRResponse HKIDCardOCR(HKIDCardOCRRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "HKIDCardOCR", HKIDCardOCRResponse.class);
-    }
-
-    /**
-     *This API is used to recognize key fields on the front and back sides of a residence permit for Hong Kong, Macao, or Taiwan residents, including name, gender, date of birth, address, ID number, issuing authority, validity period, number of issues, and permit number. It can be used for residence permit OCR in scenarios such as bank account opening and user registration.
-
-A maximum of 20 requests can be initiated per second for this API.
-     * @param req HmtResidentPermitOCRRequest
-     * @return HmtResidentPermitOCRResponse
-     * @throws TencentCloudSDKException
-     */
-    public HmtResidentPermitOCRResponse HmtResidentPermitOCR(HmtResidentPermitOCRRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "HmtResidentPermitOCR", HmtResidentPermitOCRResponse.class);
-    }
-
-    /**
-     *This API is used to recognize all fields on the front and back sides of a second-generation resident identity card for the Chinese mainland: name, gender, ethnicity, date of birth, domicile, identification number, issuing authority, and validity period, with a recognition accuracy of over 99%.
-
-In addition, this API supports multiple value-added capabilities to meet the needs of different scenarios. It can crop ID card photos and profile photos, and provide warnings for nine cases, as detailed below.
-
-<table style="width:650px">
-      <thead>
-        <tr>
-       <th width="150">Capability</th>
-          <th width="500">Description</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td rowspan="2">Cropping</td>
-          <td>Crops the ID card photo (by removing extra edges outside the ID card and automatically correcting the shooting angle).</td>
-        </tr>
-        <tr>
-          <td>Crops the profile photo (by automatically cutting out the face area in the ID card).</td>
-        </tr>
-        <tr>
-          <td rowspan="9">Warning</td>
-          <td>Warns about invalid ID card validity periods.</td>
-        </tr>
-        <tr>
-          <td>Warns about  incomplete ID card borders.</td>
-        </tr>
-        <tr>
-          <td>Warns about photocopied images.</td>
-        </tr>
-        <tr>
-          <td>Warns about spoofed images.</td>
-        </tr>
-          <tr>
-          <td>Warns about border and frame occlusions.</td>
-        </tr>
-         <tr>
-          <td>Warns about temporary ID cards.</td>
-        </tr>
-          <tr>
-          <td>Warns about photoshopped images.</td>
-        </tr>
-          <tr>
-          <td>Warns about blurry ID card images (blurriness can be determined based on the image quality score).</td>
-        </tr>
-      </tbody>
-    </table>
-
-A maximum of 20 requests can be initiated per second for this API.
-     * @param req IDCardOCRRequest
-     * @return IDCardOCRResponse
-     * @throws TencentCloudSDKException
-     */
-    public IDCardOCRResponse IDCardOCR(IDCardOCRRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "IDCardOCR", IDCardOCRResponse.class);
-    }
-
-    /**
-     *This API is used to recognize a license plate attached to a motor vehicle in the Chinese mainland and return the regional code, license plate number, and license plate color.
-
-A maximum of 10 requests can be initiated per second for this API.
-     * @param req LicensePlateOCRRequest
-     * @return LicensePlateOCRResponse
-     * @throws TencentCloudSDKException
-     */
-    public LicensePlateOCRResponse LicensePlateOCR(LicensePlateOCRRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "LicensePlateOCR", LicensePlateOCRResponse.class);
     }
 
     /**
@@ -704,143 +607,6 @@ This API is used to set the default request rate limit to 5 requests/second.
     }
 
     /**
-     *This API is used to recognize various types of invoices or tickets in an image or PDF file. You can also specify a type. 14 types of standard expense reimbursement invoices are supported, including value-added tax (VAT) invoice (special, general, roll, blockchain, and toll), fully digitalized electronic invoice (special and general), non-tax revenue invoice (general receipt and general payment voucher), quota invoice, general machine-printed invoice, car sales invoice (motor vehicle sales invoice and used car invoice), train ticket, taxi receipt, itinerary/receipt of e-ticket for air transportation, bus ticket, ship ticket, toll receipt, and medical invoice (inpatient and outpatient). This API can also be used for intelligent recognition of other types of invoices. To try now, click [here](https://intl.cloud.tencent.com/product/ocr?from_cn_redirect=1).
-
-A maximum of 5 requests can be initiated per second for this API.
-
-
-The invoice/ticket subtype (SubType), subtype description (TypeDescription), and parent type (Type) can be returned, as described below:
-<table style="width:715px">
-      <thead>
-        <tr>
-          <th style="width:200px">SubType</th>
-          <th style="width:200px">TypeDescription</th>
-          <th >Type</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td> VatSpecialInvoice</td>
-          <td> Special VAT invoice </td>
-          <td> 3 </td>
-        </tr>
-        <tr>
-          <td> VatCommonInvoice</td>
-          <td> General VAT invoice </td>
-          <td> 3 </td>
-        </tr>
-        <tr>
-          <td> VatElectronicCommonInvoice </td>
-          <td> Electronic general VAT invoice </td>
-          <td> 3 </td>
-        </tr>
-        <tr>
-          <td> VatElectronicSpecialInvoice </td>
-          <td> Electronic special VAT invoice </td>
-          <td> 3 </td>
-        </tr>
-        <tr>
-          <td> VatElectronicInvoiceBlockchain</td>
-          <td> Blockchain electronic invoice </td>
-          <td> 3 </td>
-        </tr>
-        <tr>
-          <td> VatElectronicInvoiceToll</td>
-          <td> Electronic general VAT invoice (toll)</td>
-          <td> 3 </td>
-        </tr>
-        <tr>
-          <td> VatElectronicSpecialInvoiceFull</td>
-          <td> Electronic invoice (special)</td>
-          <td> 16 </td>
-        </tr>
-        <tr>
-          <td> VatElectronicInvoiceFull</td>
-          <td> Electronic invoice (general) </td>
-          <td> 16 </td>
-        </tr>
-        <tr>
-          <td> MotorVehicleSaleInvoice </td>
-          <td> Motor vehicle sales invoice </td>
-          <td> 12 </td>
-        </tr>
-        <tr>
-          <td> UsedCarPurchaseInvoice </td>
-          <td> Used car invoice </td>
-          <td> 12 </td>
-        </tr>
-        <tr>
-          <td> VatInvoiceRoll </td>
-          <td> General VAT invoice (roll) </td>
-          <td> 11 </td>
-        </tr>
-        <tr>
-          <td> TaxiTicket </td>
-          <td> Taxi receipt </td>
-          <td> 0 </td>
-        </tr>
-        <tr>
-          <td> QuotaInvoice </td>
-          <td> Quota invoice </td>
-          <td> 1 </td>
-        </tr>
-        <tr>
-          <td> TrainTicket </td>
-          <td> Train ticket </td>
-          <td> 2 </td>
-        </tr>
-        <tr>
-          <td> AirTransport </td>
-          <td> Itinerary/Receipt of e-ticket for air transportation </td>
-          <td> 5 </td>
-        </tr>
-        <tr>
-          <td> MachinePrintedInvoice </td>
-          <td> General machine-printed invoice </td>
-          <td> 8 </td>
-        </tr>
-        <tr>
-          <td> BusInvoice </td>
-          <td> Bus ticket </td>
-          <td> 9 </td>
-        </tr>
-        <tr>
-          <td> ShippingInvoice </td>
-          <td> Ship ticket </td>
-          <td> 10 </td>
-        </tr>
-        <tr>
-          <td> NonTaxIncomeGeneralBill </td>
-          <td> General receipt for non-tax revenue </td>
-          <td> 15 </td>
-        </tr>
-        <tr>
-          <td> NonTaxIncomeElectronicBill </td>
-          <td> General payment voucher for non-tax revenue (electronic) </td>
-          <td> 15 </td>
-        </tr>
-        <tr>
-          <td> TollInvoice </td>
-          <td> Toll receipt </td>
-          <td> 13 </td>
-        </tr>
-        <tr>
-          <td> OtherInvoice </td>
-          <td> Other </td>
-          <td> -1 </td>
-        </tr>
-      </tbody>
-    </table>
-     * @param req RecognizeGeneralInvoiceRequest
-     * @return RecognizeGeneralInvoiceResponse
-     * @throws TencentCloudSDKException
-     */
-    public RecognizeGeneralInvoiceResponse RecognizeGeneralInvoice(RecognizeGeneralInvoiceRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "RecognizeGeneralInvoice", RecognizeGeneralInvoiceResponse.class);
-    }
-
-    /**
      *Indonesian identity card recognition
 
 Default API request rate limit: 5 requests/second.
@@ -851,28 +617,6 @@ Default API request rate limit: 5 requests/second.
     public RecognizeIndonesiaIDCardOCRResponse RecognizeIndonesiaIDCardOCR(RecognizeIndonesiaIDCardOCRRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "RecognizeIndonesiaIDCardOCR", RecognizeIndonesiaIDCardOCRResponse.class);
-    }
-
-    /**
-     *This API is used to recognize a South Korean driver's license.
-     * @param req RecognizeKoreanDrivingLicenseOCRRequest
-     * @return RecognizeKoreanDrivingLicenseOCRResponse
-     * @throws TencentCloudSDKException
-     */
-    public RecognizeKoreanDrivingLicenseOCRResponse RecognizeKoreanDrivingLicenseOCR(RecognizeKoreanDrivingLicenseOCRRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "RecognizeKoreanDrivingLicenseOCR", RecognizeKoreanDrivingLicenseOCRResponse.class);
-    }
-
-    /**
-     *This API is used to recognize a South Korean ID card.
-     * @param req RecognizeKoreanIDCardOCRRequest
-     * @return RecognizeKoreanIDCardOCRResponse
-     * @throws TencentCloudSDKException
-     */
-    public RecognizeKoreanIDCardOCRResponse RecognizeKoreanIDCardOCR(RecognizeKoreanIDCardOCRRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "RecognizeKoreanIDCardOCR", RecognizeKoreanIDCardOCRResponse.class);
     }
 
     /**
@@ -889,8 +633,9 @@ This API is not fully available for the time being. For more information, please
     }
 
     /**
-     *This interface supports the identification of all fields on the front and back of the second-generation ID card for mainland Chinese residents.Including name, gender, ethnicity, date of birth, address, citizen ID number, issuing authority, and validity period, the identification accuracy reaches more than 99%.In addition, this interface also supports a variety of value-added capabilities to meet the needs of different scenarios. Such as the cropping function of ID card photos and portrait photos, and also has 5 alarm functions.
-As shown in the table below. <table style="width:650px"> <thead> <tr> <th width="150">Value-added ability</th> <th width="500">Ability items</th> </tr> </thead> <tbody> <tr> <td rowspan="9">Alarm function</td> </tr> <tr> <td>ID card photocopy warning</td> </tr> <tr> <td>ID card on-screen display warning</td> </tr> <tr> <td>Alarm for occlusion in the ID card frame</td> </tr> <tr> <td>ID card reflective warning</td> </tr> <tr> <td>Blurry picture warning</td> </tr> </tbody> </table> Default interface request frequency limit: 20 times/second
+     *This interface recognizes all fields on both sides of the Mainland China Resident Identity Card (second-generation), including name, gender, ethnicity, date of birth, address, ID number, issuing authority, and validity period, with an accuracy of over 99%.
+
+In addition, the interface provides additional features for various scenarios, such as ID card and portrait photo cropping, along with five alarm detections (see table below).<table style="width:650px"> <thead> <tr> <th width="150">Value-added ability</th> <th width="500">Ability items</th> </tr> </thead> <tbody> <tr> <td rowspan="9">Alarm function</td> </tr> <tr> <td>ID card photocopy warning</td> </tr> <tr> <td>ID card on-screen display warning</td> </tr> <tr> <td>Alarm for occlusion in the ID card frame</td> </tr> <tr> <td>ID card reflective warning</td> </tr> <tr> <td>Blurry picture warning</td> </tr> </tbody> </table> Default rate limit: 20 requests/second.
      * @param req RecognizeMainlandIDCardOCRRequest
      * @return RecognizeMainlandIDCardOCRResponse
      * @throws TencentCloudSDKException
@@ -981,19 +726,6 @@ As shown in the table below. <table style="width:650px"> <thead> <tr> <th width=
     }
 
     /**
-     *This API is used to recognize regular tables, borderless tables, or multi-tables in images or PDF files containing Chinese and English texts. It returns the text content of each cell, supports recognition of rotated table images, and can save the recognition results into an Excel document. It delivers higher recognition accuracy than that of table OCR v2 and applies to more scenarios. The recognition accuracy in difficult table scenarios, such as irregular tables and nested tables (borderless tables contained in bordered tables), is better than that of table OCR v2. To try it, click [here](https://intl.cloud.tencent.com/product/smart?from_cn_redirect=1-ocr).
-
-A maximum of 2 requests can be initiated per second for this API.
-     * @param req RecognizeTableAccurateOCRRequest
-     * @return RecognizeTableAccurateOCRResponse
-     * @throws TencentCloudSDKException
-     */
-    public RecognizeTableAccurateOCRResponse RecognizeTableAccurateOCR(RecognizeTableAccurateOCRRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "RecognizeTableAccurateOCR", RecognizeTableAccurateOCRResponse.class);
-    }
-
-    /**
      *This API is used to recognize the fields on a Thai identity card, including name in Thai, name in English, address, date of birth, identification number, date of issue, and date of expiry.
 
 A maximum of 10 requests can be initiated per second for this API.
@@ -1021,19 +753,6 @@ A maximum of 5 requests can be initiated per second for this API.
     }
 
     /**
-     *This API is used to recognize various types of seals, including invoice seals and finance seals. It is suitable for scenarios such as official document and invoice/ticket OCR.
-
-A maximum of 5 requests can be initiated per second for this API.
-     * @param req SealOCRRequest
-     * @return SealOCRResponse
-     * @throws TencentCloudSDKException
-     */
-    public SealOCRResponse SealOCR(SealOCRRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "SealOCR", SealOCRResponse.class);
-    }
-
-    /**
      *This API is used to recognize fields from cards, documents, bills, forms, contracts, and other structured information. It is flexible and efficient to use, without any configuration required. This API is suitable for recognizing structured information.
 
 A maximum of 10 requests can be initiated per second for this API.
@@ -1044,32 +763,6 @@ A maximum of 10 requests can be initiated per second for this API.
     public SmartStructuralOCRV2Response SmartStructuralOCRV2(SmartStructuralOCRV2Request req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "SmartStructuralOCRV2", SmartStructuralOCRV2Response.class);
-    }
-
-    /**
-     *This API is used to recognize fields from cards, documents, bills, forms, contracts, and other structured information. It is flexible and efficient to use, without any configuration required. This API is suitable for recognizing structured information.
-
-A maximum of 10 requests can be initiated per second for this API.
-     * @param req SmartStructuralProRequest
-     * @return SmartStructuralProResponse
-     * @throws TencentCloudSDKException
-     */
-    public SmartStructuralProResponse SmartStructuralPro(SmartStructuralProRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "SmartStructuralPro", SmartStructuralProResponse.class);
-    }
-
-    /**
-     *This API is used to detect and recognize Chinese and English forms in images. It can return the text content of each cell and save the recognition result as Excel.
-
-This API is not fully available for the time being. For more information, please contact your [Tencent Cloud sales rep](https://intl.cloud.tencent.com/contact-sales).
-     * @param req TableOCRRequest
-     * @return TableOCRResponse
-     * @throws TencentCloudSDKException
-     */
-    public TableOCRResponse TableOCR(TableOCRRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "TableOCR", TableOCRResponse.class);
     }
 
     /**

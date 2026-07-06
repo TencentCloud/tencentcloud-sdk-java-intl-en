@@ -24,115 +24,115 @@ import java.util.HashMap;
 public class AiRecognitionTaskAsrFullTextSegmentItem extends AbstractModel {
 
     /**
-    * Confidence of a recognition segment. Value range: 0-100.
+    * <p>Confidence of the recognized segment. Value range: 0–100.</p>
     */
     @SerializedName("Confidence")
     @Expose
     private Float Confidence;
 
     /**
-    * Start time offset of a recognition segment in seconds.
+    * <p>Start time offset of the recognized segment, in seconds.</p>
     */
     @SerializedName("StartTimeOffset")
     @Expose
     private Float StartTimeOffset;
 
     /**
-    * End time offset of a recognition segment in seconds.
+    * <p>End time offset of the recognized segment, in seconds.</p>
     */
     @SerializedName("EndTimeOffset")
     @Expose
     private Float EndTimeOffset;
 
     /**
-    * Recognized text.
+    * <p>Recognized text.</p>
     */
     @SerializedName("Text")
     @Expose
     private String Text;
 
     /**
-    * Word timestamp information.
+    * <p>Word timestamp information.</p>
     */
     @SerializedName("Wordlist")
     @Expose
     private WordResult [] Wordlist;
 
     /**
-     * Get Confidence of a recognition segment. Value range: 0-100. 
-     * @return Confidence Confidence of a recognition segment. Value range: 0-100.
+     * Get <p>Confidence of the recognized segment. Value range: 0–100.</p> 
+     * @return Confidence <p>Confidence of the recognized segment. Value range: 0–100.</p>
      */
     public Float getConfidence() {
         return this.Confidence;
     }
 
     /**
-     * Set Confidence of a recognition segment. Value range: 0-100.
-     * @param Confidence Confidence of a recognition segment. Value range: 0-100.
+     * Set <p>Confidence of the recognized segment. Value range: 0–100.</p>
+     * @param Confidence <p>Confidence of the recognized segment. Value range: 0–100.</p>
      */
     public void setConfidence(Float Confidence) {
         this.Confidence = Confidence;
     }
 
     /**
-     * Get Start time offset of a recognition segment in seconds. 
-     * @return StartTimeOffset Start time offset of a recognition segment in seconds.
+     * Get <p>Start time offset of the recognized segment, in seconds.</p> 
+     * @return StartTimeOffset <p>Start time offset of the recognized segment, in seconds.</p>
      */
     public Float getStartTimeOffset() {
         return this.StartTimeOffset;
     }
 
     /**
-     * Set Start time offset of a recognition segment in seconds.
-     * @param StartTimeOffset Start time offset of a recognition segment in seconds.
+     * Set <p>Start time offset of the recognized segment, in seconds.</p>
+     * @param StartTimeOffset <p>Start time offset of the recognized segment, in seconds.</p>
      */
     public void setStartTimeOffset(Float StartTimeOffset) {
         this.StartTimeOffset = StartTimeOffset;
     }
 
     /**
-     * Get End time offset of a recognition segment in seconds. 
-     * @return EndTimeOffset End time offset of a recognition segment in seconds.
+     * Get <p>End time offset of the recognized segment, in seconds.</p> 
+     * @return EndTimeOffset <p>End time offset of the recognized segment, in seconds.</p>
      */
     public Float getEndTimeOffset() {
         return this.EndTimeOffset;
     }
 
     /**
-     * Set End time offset of a recognition segment in seconds.
-     * @param EndTimeOffset End time offset of a recognition segment in seconds.
+     * Set <p>End time offset of the recognized segment, in seconds.</p>
+     * @param EndTimeOffset <p>End time offset of the recognized segment, in seconds.</p>
      */
     public void setEndTimeOffset(Float EndTimeOffset) {
         this.EndTimeOffset = EndTimeOffset;
     }
 
     /**
-     * Get Recognized text. 
-     * @return Text Recognized text.
+     * Get <p>Recognized text.</p> 
+     * @return Text <p>Recognized text.</p>
      */
     public String getText() {
         return this.Text;
     }
 
     /**
-     * Set Recognized text.
-     * @param Text Recognized text.
+     * Set <p>Recognized text.</p>
+     * @param Text <p>Recognized text.</p>
      */
     public void setText(String Text) {
         this.Text = Text;
     }
 
     /**
-     * Get Word timestamp information. 
-     * @return Wordlist Word timestamp information.
+     * Get <p>Word timestamp information.</p> 
+     * @return Wordlist <p>Word timestamp information.</p>
      */
     public WordResult [] getWordlist() {
         return this.Wordlist;
     }
 
     /**
-     * Set Word timestamp information.
-     * @param Wordlist Word timestamp information.
+     * Set <p>Word timestamp information.</p>
+     * @param Wordlist <p>Word timestamp information.</p>
      */
     public void setWordlist(WordResult [] Wordlist) {
         this.Wordlist = Wordlist;

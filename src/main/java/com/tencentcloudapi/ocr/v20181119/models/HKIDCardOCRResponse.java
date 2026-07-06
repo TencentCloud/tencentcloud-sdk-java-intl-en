@@ -38,7 +38,7 @@ public class HKIDCardOCRResponse extends AbstractModel {
     private String EnName;
 
     /**
-    * Telecode for the name in Chinese
+    * Telecode of the name in Chinese
     */
     @SerializedName("TelexCode")
     @Expose
@@ -83,14 +83,14 @@ public class HKIDCardOCRResponse extends AbstractModel {
     private String Symbol;
 
     /**
-    * First issue date
+    * Date of first issue
     */
     @SerializedName("FirstIssueDate")
     @Expose
     private String FirstIssueDate;
 
     /**
-    * Last receipt date
+    * Date of last receipt
     */
     @SerializedName("CurrentIssueDate")
     @Expose
@@ -199,16 +199,16 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Telecode for the name in Chinese 
-     * @return TelexCode Telecode for the name in Chinese
+     * Get Telecode of the name in Chinese 
+     * @return TelexCode Telecode of the name in Chinese
      */
     public String getTelexCode() {
         return this.TelexCode;
     }
 
     /**
-     * Set Telecode for the name in Chinese
-     * @param TelexCode Telecode for the name in Chinese
+     * Set Telecode of the name in Chinese
+     * @param TelexCode Telecode of the name in Chinese
      */
     public void setTelexCode(String TelexCode) {
         this.TelexCode = TelexCode;
@@ -307,32 +307,32 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get First issue date 
-     * @return FirstIssueDate First issue date
+     * Get Date of first issue 
+     * @return FirstIssueDate Date of first issue
      */
     public String getFirstIssueDate() {
         return this.FirstIssueDate;
     }
 
     /**
-     * Set First issue date
-     * @param FirstIssueDate First issue date
+     * Set Date of first issue
+     * @param FirstIssueDate Date of first issue
      */
     public void setFirstIssueDate(String FirstIssueDate) {
         this.FirstIssueDate = FirstIssueDate;
     }
 
     /**
-     * Get Last receipt date 
-     * @return CurrentIssueDate Last receipt date
+     * Get Date of last receipt 
+     * @return CurrentIssueDate Date of last receipt
      */
     public String getCurrentIssueDate() {
         return this.CurrentIssueDate;
     }
 
     /**
-     * Set Last receipt date
-     * @param CurrentIssueDate Last receipt date
+     * Set Date of last receipt
+     * @param CurrentIssueDate Date of last receipt
      */
     public void setCurrentIssueDate(String CurrentIssueDate) {
         this.CurrentIssueDate = CurrentIssueDate;

@@ -38,14 +38,14 @@ public class RecognizeThaiIDCardOCRResponse extends AbstractModel {
     private String ThaiName;
 
     /**
-    * Name in English
+    * First name in English
     */
     @SerializedName("EnFirstName")
     @Expose
     private String EnFirstName;
 
     /**
-    * Name in English
+    * Last name in English
     */
     @SerializedName("EnLastName")
     @Expose
@@ -115,7 +115,7 @@ public class RecognizeThaiIDCardOCRResponse extends AbstractModel {
     private String Address;
 
     /**
-    * LaserID in the back of the card.
+    * Laser ID on the back of the card.
     */
     @SerializedName("LaserID")
     @Expose
@@ -205,32 +205,32 @@ true: complete; false: incomplete
     }
 
     /**
-     * Get Name in English 
-     * @return EnFirstName Name in English
+     * Get First name in English 
+     * @return EnFirstName First name in English
      */
     public String getEnFirstName() {
         return this.EnFirstName;
     }
 
     /**
-     * Set Name in English
-     * @param EnFirstName Name in English
+     * Set First name in English
+     * @param EnFirstName First name in English
      */
     public void setEnFirstName(String EnFirstName) {
         this.EnFirstName = EnFirstName;
     }
 
     /**
-     * Get Name in English 
-     * @return EnLastName Name in English
+     * Get Last name in English 
+     * @return EnLastName Last name in English
      */
     public String getEnLastName() {
         return this.EnLastName;
     }
 
     /**
-     * Set Name in English
-     * @param EnLastName Name in English
+     * Set Last name in English
+     * @param EnLastName Last name in English
      */
     public void setEnLastName(String EnLastName) {
         this.EnLastName = EnLastName;
@@ -381,16 +381,16 @@ true: complete; false: incomplete
     }
 
     /**
-     * Get LaserID in the back of the card. 
-     * @return LaserID LaserID in the back of the card.
+     * Get Laser ID on the back of the card. 
+     * @return LaserID Laser ID on the back of the card.
      */
     public String getLaserID() {
         return this.LaserID;
     }
 
     /**
-     * Set LaserID in the back of the card.
-     * @param LaserID LaserID in the back of the card.
+     * Set Laser ID on the back of the card.
+     * @param LaserID Laser ID on the back of the card.
      */
     public void setLaserID(String LaserID) {
         this.LaserID = LaserID;

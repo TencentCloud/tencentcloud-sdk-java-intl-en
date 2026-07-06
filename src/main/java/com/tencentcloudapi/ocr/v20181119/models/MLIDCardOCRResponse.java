@@ -52,11 +52,7 @@ public class MLIDCardOCRResponse extends AbstractModel {
     private String Sex;
 
     /**
-    * Alarm codes
--9103 Alarm for photographed certificate
--9102 Alarm for photocopied certificate
--9106 Alarm for covered certificate
--9107 Alarm for blurry image
+    * This field is deprecated and will always return an empty array. Usage is not recommended.
     */
     @SerializedName("Warn")
     @Expose
@@ -70,27 +66,21 @@ public class MLIDCardOCRResponse extends AbstractModel {
     private String Image;
 
     /**
-    * This is an extended field, 
-with the confidence of a field recognition result returned in the following format.
-{
-  Field name:{
-    Confidence:0.9999
-  }
-}
+    * This field is deprecated and will always return "1". Usage is not recommended.
     */
     @SerializedName("AdvancedInfo")
     @Expose
     private String AdvancedInfo;
 
     /**
-    * Certificate type
-MyKad  ID card
-MyPR    Permanent resident card
-MyTentera   Military identity card
-MyKAS    Temporary ID card
-POLIS  Police card
-IKAD   Work permit
-MyKid   Kid card
+    * Certificate type: 
+- MyKad: ID card 
+- MyPR: Permanent resident card 
+- MyTentera: Military identity card 
+- MyKAS: Temporary ID card 
+- POLIS: Police card 
+- IKAD: Work permit 
+- MyKid: Child ID card
     */
     @SerializedName("Type")
     @Expose
@@ -104,7 +94,7 @@ MyKid   Kid card
     private String Birthday;
 
     /**
-    * Number on the back of Malaysia ID card 
+    * Number on the back of the Malaysian ID card
     */
     @SerializedName("MyKadNumber")
     @Expose
@@ -197,16 +187,8 @@ MyKid   Kid card
     }
 
     /**
-     * Get Alarm codes
--9103 Alarm for photographed certificate
--9102 Alarm for photocopied certificate
--9106 Alarm for covered certificate
--9107 Alarm for blurry image 
-     * @return Warn Alarm codes
--9103 Alarm for photographed certificate
--9102 Alarm for photocopied certificate
--9106 Alarm for covered certificate
--9107 Alarm for blurry image
+     * Get This field is deprecated and will always return an empty array. Usage is not recommended. 
+     * @return Warn This field is deprecated and will always return an empty array. Usage is not recommended.
      * @deprecated
      */
     @Deprecated
@@ -215,16 +197,8 @@ MyKid   Kid card
     }
 
     /**
-     * Set Alarm codes
--9103 Alarm for photographed certificate
--9102 Alarm for photocopied certificate
--9106 Alarm for covered certificate
--9107 Alarm for blurry image
-     * @param Warn Alarm codes
--9103 Alarm for photographed certificate
--9102 Alarm for photocopied certificate
--9106 Alarm for covered certificate
--9107 Alarm for blurry image
+     * Set This field is deprecated and will always return an empty array. Usage is not recommended.
+     * @param Warn This field is deprecated and will always return an empty array. Usage is not recommended.
      * @deprecated
      */
     @Deprecated
@@ -249,84 +223,64 @@ MyKid   Kid card
     }
 
     /**
-     * Get This is an extended field, 
-with the confidence of a field recognition result returned in the following format.
-{
-  Field name:{
-    Confidence:0.9999
-  }
-} 
-     * @return AdvancedInfo This is an extended field, 
-with the confidence of a field recognition result returned in the following format.
-{
-  Field name:{
-    Confidence:0.9999
-  }
-}
+     * Get This field is deprecated and will always return "1". Usage is not recommended. 
+     * @return AdvancedInfo This field is deprecated and will always return "1". Usage is not recommended.
+     * @deprecated
      */
+    @Deprecated
     public String getAdvancedInfo() {
         return this.AdvancedInfo;
     }
 
     /**
-     * Set This is an extended field, 
-with the confidence of a field recognition result returned in the following format.
-{
-  Field name:{
-    Confidence:0.9999
-  }
-}
-     * @param AdvancedInfo This is an extended field, 
-with the confidence of a field recognition result returned in the following format.
-{
-  Field name:{
-    Confidence:0.9999
-  }
-}
+     * Set This field is deprecated and will always return "1". Usage is not recommended.
+     * @param AdvancedInfo This field is deprecated and will always return "1". Usage is not recommended.
+     * @deprecated
      */
+    @Deprecated
     public void setAdvancedInfo(String AdvancedInfo) {
         this.AdvancedInfo = AdvancedInfo;
     }
 
     /**
-     * Get Certificate type
-MyKad  ID card
-MyPR    Permanent resident card
-MyTentera   Military identity card
-MyKAS    Temporary ID card
-POLIS  Police card
-IKAD   Work permit
-MyKid   Kid card 
-     * @return Type Certificate type
-MyKad  ID card
-MyPR    Permanent resident card
-MyTentera   Military identity card
-MyKAS    Temporary ID card
-POLIS  Police card
-IKAD   Work permit
-MyKid   Kid card
+     * Get Certificate type: 
+- MyKad: ID card 
+- MyPR: Permanent resident card 
+- MyTentera: Military identity card 
+- MyKAS: Temporary ID card 
+- POLIS: Police card 
+- IKAD: Work permit 
+- MyKid: Child ID card 
+     * @return Type Certificate type: 
+- MyKad: ID card 
+- MyPR: Permanent resident card 
+- MyTentera: Military identity card 
+- MyKAS: Temporary ID card 
+- POLIS: Police card 
+- IKAD: Work permit 
+- MyKid: Child ID card
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set Certificate type
-MyKad  ID card
-MyPR    Permanent resident card
-MyTentera   Military identity card
-MyKAS    Temporary ID card
-POLIS  Police card
-IKAD   Work permit
-MyKid   Kid card
-     * @param Type Certificate type
-MyKad  ID card
-MyPR    Permanent resident card
-MyTentera   Military identity card
-MyKAS    Temporary ID card
-POLIS  Police card
-IKAD   Work permit
-MyKid   Kid card
+     * Set Certificate type: 
+- MyKad: ID card 
+- MyPR: Permanent resident card 
+- MyTentera: Military identity card 
+- MyKAS: Temporary ID card 
+- POLIS: Police card 
+- IKAD: Work permit 
+- MyKid: Child ID card
+     * @param Type Certificate type: 
+- MyKad: ID card 
+- MyPR: Permanent resident card 
+- MyTentera: Military identity card 
+- MyKAS: Temporary ID card 
+- POLIS: Police card 
+- IKAD: Work permit 
+- MyKid: Child ID card
      */
     public void setType(String Type) {
         this.Type = Type;
@@ -349,16 +303,16 @@ MyKid   Kid card
     }
 
     /**
-     * Get Number on the back of Malaysia ID card  
-     * @return MyKadNumber Number on the back of Malaysia ID card 
+     * Get Number on the back of the Malaysian ID card 
+     * @return MyKadNumber Number on the back of the Malaysian ID card
      */
     public String getMyKadNumber() {
         return this.MyKadNumber;
     }
 
     /**
-     * Set Number on the back of Malaysia ID card 
-     * @param MyKadNumber Number on the back of Malaysia ID card 
+     * Set Number on the back of the Malaysian ID card
+     * @param MyKadNumber Number on the back of the Malaysian ID card
      */
     public void setMyKadNumber(String MyKadNumber) {
         this.MyKadNumber = MyKadNumber;

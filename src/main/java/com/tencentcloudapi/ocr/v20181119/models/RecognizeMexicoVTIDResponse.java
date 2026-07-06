@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class RecognizeMexicoVTIDResponse extends AbstractModel {
 
     /**
-    * Name
+    * The full name.
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * Sex
+    * Gender.
     */
     @SerializedName("Sex")
     @Expose
@@ -59,7 +59,7 @@ public class RecognizeMexicoVTIDResponse extends AbstractModel {
     private String CURP;
 
     /**
-    * Birthday
+    * Date of birth.
     */
     @SerializedName("Birth")
     @Expose
@@ -80,7 +80,7 @@ public class RecognizeMexicoVTIDResponse extends AbstractModel {
     private String IssueDate;
 
     /**
-    * ValidDate
+    * The validity period (expiration date).
     */
     @SerializedName("ValidDate")
     @Expose
@@ -129,32 +129,32 @@ public class RecognizeMexicoVTIDResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Name 
-     * @return Name Name
+     * Get The full name. 
+     * @return Name The full name.
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Name
-     * @param Name Name
+     * Set The full name.
+     * @param Name The full name.
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get Sex 
-     * @return Sex Sex
+     * Get Gender. 
+     * @return Sex Gender.
      */
     public String getSex() {
         return this.Sex;
     }
 
     /**
-     * Set Sex
-     * @param Sex Sex
+     * Set Gender.
+     * @param Sex Gender.
      */
     public void setSex(String Sex) {
         this.Sex = Sex;
@@ -209,16 +209,16 @@ public class RecognizeMexicoVTIDResponse extends AbstractModel {
     }
 
     /**
-     * Get Birthday 
-     * @return Birth Birthday
+     * Get Date of birth. 
+     * @return Birth Date of birth.
      */
     public String getBirth() {
         return this.Birth;
     }
 
     /**
-     * Set Birthday
-     * @param Birth Birthday
+     * Set Date of birth.
+     * @param Birth Date of birth.
      */
     public void setBirth(String Birth) {
         this.Birth = Birth;
@@ -257,16 +257,16 @@ public class RecognizeMexicoVTIDResponse extends AbstractModel {
     }
 
     /**
-     * Get ValidDate 
-     * @return ValidDate ValidDate
+     * Get The validity period (expiration date). 
+     * @return ValidDate The validity period (expiration date).
      */
     public String getValidDate() {
         return this.ValidDate;
     }
 
     /**
-     * Set ValidDate
-     * @param ValidDate ValidDate
+     * Set The validity period (expiration date).
+     * @param ValidDate The validity period (expiration date).
      */
     public void setValidDate(String ValidDate) {
         this.ValidDate = ValidDate;

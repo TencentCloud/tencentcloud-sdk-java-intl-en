@@ -53,6 +53,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String VoiceId;
 
     /**
+    * <p>Audition audio URL.</p>
+    */
+    @SerializedName("AudioUrl")
+    @Expose
+    private String AudioUrl;
+
+    /**
     * <p>Extended information.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
     */
@@ -136,6 +143,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
+     * Get <p>Audition audio URL.</p> 
+     * @return AudioUrl <p>Audition audio URL.</p>
+     */
+    public String getAudioUrl() {
+        return this.AudioUrl;
+    }
+
+    /**
+     * Set <p>Audition audio URL.</p>
+     * @param AudioUrl <p>Audition audio URL.</p>
+     */
+    public void setAudioUrl(String AudioUrl) {
+        this.AudioUrl = AudioUrl;
+    }
+
+    /**
      * Get <p>Extended information.</p>
 Note: This field may return null, indicating that no valid values can be obtained. 
      * @return ExtInfo <p>Extended information.</p>
@@ -191,6 +214,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.VoiceId != null) {
             this.VoiceId = new String(source.VoiceId);
         }
+        if (source.AudioUrl != null) {
+            this.AudioUrl = new String(source.AudioUrl);
+        }
         if (source.ExtInfo != null) {
             this.ExtInfo = new String(source.ExtInfo);
         }
@@ -208,6 +234,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "Msg", this.Msg);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "VoiceId", this.VoiceId);
+        this.setParamSimple(map, prefix + "AudioUrl", this.AudioUrl);
         this.setParamSimple(map, prefix + "ExtInfo", this.ExtInfo);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 

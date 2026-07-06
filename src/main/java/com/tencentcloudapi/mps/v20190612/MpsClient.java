@@ -586,6 +586,17 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
     }
 
     /**
+     *This API is used to delete a voice (created via voice cloning or design).
+     * @param req DeleteVoiceRequest
+     * @return DeleteVoiceResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteVoiceResponse DeleteVoice(DeleteVoiceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteVoice", DeleteVoiceResponse.class);
+    }
+
+    /**
      *This API is used to delete a custom watermarking template.
      * @param req DeleteWatermarkTemplateRequest
      * @return DeleteWatermarkTemplateResponse
@@ -1019,7 +1030,7 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
     }
 
     /**
-     *This API is used to design a voice. It generates a voice ID based on a prompt.
+     *This API is used to design a voice. It generates a voice ID based on a prompt. The default maximum number of cloned or designed voices is 100.
      * @param req DesignVoiceAsyncRequest
      * @return DesignVoiceAsyncResponse
      * @throws TencentCloudSDKException
@@ -1027,6 +1038,28 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
     public DesignVoiceAsyncResponse DesignVoiceAsync(DesignVoiceAsyncRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DesignVoiceAsync", DesignVoiceAsyncResponse.class);
+    }
+
+    /**
+     *This API is used to quickly detect the hard subtitle area in a video file.
+     * @param req DetectVideoSubtitleAreaRequest
+     * @return DetectVideoSubtitleAreaResponse
+     * @throws TencentCloudSDKException
+     */
+    public DetectVideoSubtitleAreaResponse DetectVideoSubtitleArea(DetectVideoSubtitleAreaRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DetectVideoSubtitleArea", DetectVideoSubtitleAreaResponse.class);
+    }
+
+    /**
+     *This API is used to quickly detect whether a video file contains a watermark.
+     * @param req DetectVideoWatermarkRequest
+     * @return DetectVideoWatermarkResponse
+     * @throws TencentCloudSDKException
+     */
+    public DetectVideoWatermarkResponse DetectVideoWatermark(DetectVideoWatermarkRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DetectVideoWatermark", DetectVideoWatermarkResponse.class);
     }
 
     /**
@@ -1476,7 +1509,7 @@ Live stream processing event notification supports HTTP callback and also suppor
     }
 
     /**
-     *This API is used to return the clone voice type Id or synthetic audio results synchronously.
+     *This API is used to return the cloned voice ID or synthetic audio result. The default maximum number of cloned or designed voices is 100.
      * @param req SyncDubbingRequest
      * @return SyncDubbingResponse
      * @throws TencentCloudSDKException
@@ -1517,6 +1550,17 @@ Live stream processing event notification supports HTTP callback and also suppor
     public UpdateProjectResponse UpdateProject(UpdateProjectRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "UpdateProject", UpdateProjectResponse.class);
+    }
+
+    /**
+     *This API is used to update the voice information.
+     * @param req UpdateVoiceRequest
+     * @return UpdateVoiceResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateVoiceResponse UpdateVoice(UpdateVoiceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpdateVoice", UpdateVoiceResponse.class);
     }
 
 }
