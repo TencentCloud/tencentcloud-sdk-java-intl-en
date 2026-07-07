@@ -39,6 +39,19 @@ public class TokenhubClient extends AbstractClient{
     }
 
     /**
+     *Create an API key.
+
+Create a new API key. Upon successful creation, return the API Key ID. Specify the platform kind, binding method, and initial state.
+     * @param req CreateApiKeyRequest
+     * @return CreateApiKeyResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateApiKeyResponse CreateApiKey(CreateApiKeyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateApiKey", CreateApiKeyResponse.class);
+    }
+
+    /**
      *Create a Termbase.
 
 Create a new Termbase in this application for custom definition source to target language terminology mapping. Return the Termbase ID upon success, which can be used to carry out other management operations on terminology entries.
@@ -62,6 +75,17 @@ Create terminology entries in batches under the designated Termbase. You can cre
     public CreateGlossaryEntriesResponse CreateGlossaryEntries(CreateGlossaryEntriesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CreateGlossaryEntries", CreateGlossaryEntriesResponse.class);
+    }
+
+    /**
+     *This API is used to delete specified api keys and clean up associated model binding relationships.
+     * @param req DeleteApiKeyRequest
+     * @return DeleteApiKeyResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteApiKeyResponse DeleteApiKey(DeleteApiKeyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteApiKey", DeleteApiKeyResponse.class);
     }
 
     /**
@@ -114,6 +138,30 @@ Query specified entries in a Termbase. Support pagination.
     public DescribeGlossaryEntriesResponse DescribeGlossaryEntries(DescribeGlossaryEntriesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeGlossaryEntries", DescribeGlossaryEntriesResponse.class);
+    }
+
+    /**
+     *Refresh API key information.
+
+This API is used to update the remark information, IP allowlist and Token quota of an API key (recommended to use QuotaDesired parameter for quota modification). Passing no optional parameters means no modification.
+     * @param req ModifyApiKeyInfoRequest
+     * @return ModifyApiKeyInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyApiKeyInfoResponse ModifyApiKeyInfo(ModifyApiKeyInfoRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyApiKeyInfo", ModifyApiKeyInfoResponse.class);
+    }
+
+    /**
+     *This API is used to enable or disable the status of an api key.
+     * @param req ModifyApiKeyStatusRequest
+     * @return ModifyApiKeyStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyApiKeyStatusResponse ModifyApiKeyStatus(ModifyApiKeyStatusRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyApiKeyStatus", ModifyApiKeyStatusResponse.class);
     }
 
     /**

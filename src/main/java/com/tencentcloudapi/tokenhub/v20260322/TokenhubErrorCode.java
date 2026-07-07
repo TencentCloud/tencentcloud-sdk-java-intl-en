@@ -9,8 +9,14 @@ public enum TokenhubErrorCode {
      /* InvalidParameterValue.InvalidParameterValue */
      INVALIDPARAMETERVALUE_INVALIDPARAMETERVALUE("InvalidParameterValue.InvalidParameterValue"),
      
+     /* The quota limit is exceeded. */
+     LIMITEXCEEDED("LimitExceeded"),
+     
      /* MissingParameter.MissingParameter */
      MISSINGPARAMETER_MISSINGPARAMETER("MissingParameter.MissingParameter"),
+     
+     /* The resource does not exist. */
+     RESOURCENOTFOUND("ResourceNotFound"),
      
      /* ResourceNotFound.GlossaryNotFound */
      RESOURCENOTFOUND_GLOSSARYNOTFOUND("ResourceNotFound.GlossaryNotFound"),

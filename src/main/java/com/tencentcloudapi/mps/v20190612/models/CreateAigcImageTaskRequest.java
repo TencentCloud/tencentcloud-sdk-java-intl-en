@@ -73,6 +73,13 @@ public class CreateAigcImageTaskRequest extends AbstractModel {
     private AigcImageInfo [] ImageInfos;
 
     /**
+    * 
+    */
+    @SerializedName("OutputImageCount")
+    @Expose
+    private Long OutputImageCount;
+
+    /**
     * <p>Additional parameters required for the model.</p>
     */
     @SerializedName("ExtraParameters")
@@ -213,6 +220,22 @@ public class CreateAigcImageTaskRequest extends AbstractModel {
     }
 
     /**
+     * Get  
+     * @return OutputImageCount 
+     */
+    public Long getOutputImageCount() {
+        return this.OutputImageCount;
+    }
+
+    /**
+     * Set 
+     * @param OutputImageCount 
+     */
+    public void setOutputImageCount(Long OutputImageCount) {
+        this.OutputImageCount = OutputImageCount;
+    }
+
+    /**
      * Get <p>Additional parameters required for the model.</p> 
      * @return ExtraParameters <p>Additional parameters required for the model.</p>
      */
@@ -308,6 +331,9 @@ public class CreateAigcImageTaskRequest extends AbstractModel {
                 this.ImageInfos[i] = new AigcImageInfo(source.ImageInfos[i]);
             }
         }
+        if (source.OutputImageCount != null) {
+            this.OutputImageCount = new Long(source.OutputImageCount);
+        }
         if (source.ExtraParameters != null) {
             this.ExtraParameters = new AigcImageExtraParam(source.ExtraParameters);
         }
@@ -334,6 +360,7 @@ public class CreateAigcImageTaskRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "NegativePrompt", this.NegativePrompt);
         this.setParamSimple(map, prefix + "EnhancePrompt", this.EnhancePrompt);
         this.setParamArrayObj(map, prefix + "ImageInfos.", this.ImageInfos);
+        this.setParamSimple(map, prefix + "OutputImageCount", this.OutputImageCount);
         this.setParamObj(map, prefix + "ExtraParameters.", this.ExtraParameters);
         this.setParamSimple(map, prefix + "AdditionalParameters", this.AdditionalParameters);
         this.setParamObj(map, prefix + "StoreCosParam.", this.StoreCosParam);
