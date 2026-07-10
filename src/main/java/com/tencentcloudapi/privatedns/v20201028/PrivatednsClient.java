@@ -39,6 +39,17 @@ public class PrivatednsClient extends AbstractClient{
     }
 
     /**
+     *This API is used to add the VPC associated with the private domain.
+     * @param req AddSpecifyPrivateZoneVpcRequest
+     * @return AddSpecifyPrivateZoneVpcResponse
+     * @throws TencentCloudSDKException
+     */
+    public AddSpecifyPrivateZoneVpcResponse AddSpecifyPrivateZoneVpc(AddSpecifyPrivateZoneVpcRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "AddSpecifyPrivateZoneVpc", AddSpecifyPrivateZoneVpcResponse.class);
+    }
+
+    /**
      *This API is used to create an endpoint.
      * @param req CreateEndPointRequest
      * @return CreateEndPointResponse
@@ -138,7 +149,7 @@ public class PrivatednsClient extends AbstractClient{
     }
 
     /**
-     *This API is used to delete a DNS record for a private domain.
+     *This API is used to delete the private DNS records.
      * @param req DeletePrivateZoneRecordRequest
      * @return DeletePrivateZoneRecordResponse
      * @throws TencentCloudSDKException
@@ -146,6 +157,17 @@ public class PrivatednsClient extends AbstractClient{
     public DeletePrivateZoneRecordResponse DeletePrivateZoneRecord(DeletePrivateZoneRecordRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeletePrivateZoneRecord", DeletePrivateZoneRecordResponse.class);
+    }
+
+    /**
+     *This API is used to delete the VPC associated with the private domain.
+     * @param req DeleteSpecifyPrivateZoneVpcRequest
+     * @return DeleteSpecifyPrivateZoneVpcResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteSpecifyPrivateZoneVpcResponse DeleteSpecifyPrivateZoneVpc(DeleteSpecifyPrivateZoneVpcRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteSpecifyPrivateZoneVpc", DeleteSpecifyPrivateZoneVpcResponse.class);
     }
 
     /**
@@ -259,7 +281,7 @@ public class PrivatednsClient extends AbstractClient{
     }
 
     /**
-     *This API is used to get the list of records for a private domain.
+     *This API is used to obtain the private domain record list.
      * @param req DescribePrivateZoneRecordListRequest
      * @return DescribePrivateZoneRecordListResponse
      * @throws TencentCloudSDKException
@@ -366,6 +388,17 @@ public class PrivatednsClient extends AbstractClient{
     public ModifyRecordsStatusResponse ModifyRecordsStatus(ModifyRecordsStatusRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyRecordsStatus", ModifyRecordsStatusResponse.class);
+    }
+
+    /**
+     *This API is used to query the asynchronous VPC binding status.
+     * @param req QueryAsyncBindVpcStatusRequest
+     * @return QueryAsyncBindVpcStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public QueryAsyncBindVpcStatusResponse QueryAsyncBindVpcStatus(QueryAsyncBindVpcStatusRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "QueryAsyncBindVpcStatus", QueryAsyncBindVpcStatusResponse.class);
     }
 
     /**

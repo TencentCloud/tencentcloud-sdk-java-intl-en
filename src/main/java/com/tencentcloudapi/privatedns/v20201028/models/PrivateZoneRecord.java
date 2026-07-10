@@ -24,79 +24,79 @@ import java.util.HashMap;
 public class PrivateZoneRecord extends AbstractModel {
 
     /**
-    * Record ID
+    * Record ID.
     */
     @SerializedName("RecordId")
     @Expose
     private String RecordId;
 
     /**
-    * Private domain ID: zone-xxxxxxxx
+    * Private domain ID, which is in zone-xxxxxxxx format.
     */
     @SerializedName("ZoneId")
     @Expose
     private String ZoneId;
 
     /**
-    * Subdomain
+    * Subdomain name.
     */
     @SerializedName("SubDomain")
     @Expose
     private String SubDomain;
 
     /**
-    * Record type. Valid values: "A", "AAAA", "CNAME", "MX", "TXT", "PTR"
+    * Record type. Valid values: A, AAAA, CNAME, MX, TXT, and PTR.
     */
     @SerializedName("RecordType")
     @Expose
     private String RecordType;
 
     /**
-    * Record value
+    * Record value.
     */
     @SerializedName("RecordValue")
     @Expose
     private String RecordValue;
 
     /**
-    * Record cache time. The smaller the value, the faster the record will take effect. Value range: 1–86400s. Default value: 600
+    * Record cache time. The smaller the value, the faster the record will take effect. Value range: 1-86,400s. Default value: 600.
     */
     @SerializedName("TTL")
     @Expose
     private Long TTL;
 
     /**
-    * MX priority, which is required when the record type is MX. Valid values: 5, 10, 15, 20, 30, 40, 50
-Note: this field may return null, indicating that no valid values can be obtained.
+    * MX priority, which is required when the record type is MX. Valid values: 5, 10, 15, 20, 30, 40, and 50.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("MX")
     @Expose
     private Long MX;
 
     /**
-    * Record status: ENABLED
+    * Record status: ENABLED.
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * Record weight. Value range: 1–100
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Record weight. Value range: 1–100.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Weight")
     @Expose
     private Long Weight;
 
     /**
-    * Record creation time
+    * Record creation time.
     */
     @SerializedName("CreatedOn")
     @Expose
     private String CreatedOn;
 
     /**
-    * Record update time
+    * Record update time.
     */
     @SerializedName("UpdatedOn")
     @Expose
@@ -104,191 +104,200 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
     * Additional information
-Note: this field may return null, indicating that no valid values can be obtained.
+
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Extra")
     @Expose
     private String Extra;
 
     /**
-     * Get Record ID 
-     * @return RecordId Record ID
+    * 0: pause; 1: enable.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Enabled")
+    @Expose
+    private Long Enabled;
+
+    /**
+     * Get Record ID. 
+     * @return RecordId Record ID.
      */
     public String getRecordId() {
         return this.RecordId;
     }
 
     /**
-     * Set Record ID
-     * @param RecordId Record ID
+     * Set Record ID.
+     * @param RecordId Record ID.
      */
     public void setRecordId(String RecordId) {
         this.RecordId = RecordId;
     }
 
     /**
-     * Get Private domain ID: zone-xxxxxxxx 
-     * @return ZoneId Private domain ID: zone-xxxxxxxx
+     * Get Private domain ID, which is in zone-xxxxxxxx format. 
+     * @return ZoneId Private domain ID, which is in zone-xxxxxxxx format.
      */
     public String getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set Private domain ID: zone-xxxxxxxx
-     * @param ZoneId Private domain ID: zone-xxxxxxxx
+     * Set Private domain ID, which is in zone-xxxxxxxx format.
+     * @param ZoneId Private domain ID, which is in zone-xxxxxxxx format.
      */
     public void setZoneId(String ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * Get Subdomain 
-     * @return SubDomain Subdomain
+     * Get Subdomain name. 
+     * @return SubDomain Subdomain name.
      */
     public String getSubDomain() {
         return this.SubDomain;
     }
 
     /**
-     * Set Subdomain
-     * @param SubDomain Subdomain
+     * Set Subdomain name.
+     * @param SubDomain Subdomain name.
      */
     public void setSubDomain(String SubDomain) {
         this.SubDomain = SubDomain;
     }
 
     /**
-     * Get Record type. Valid values: "A", "AAAA", "CNAME", "MX", "TXT", "PTR" 
-     * @return RecordType Record type. Valid values: "A", "AAAA", "CNAME", "MX", "TXT", "PTR"
+     * Get Record type. Valid values: A, AAAA, CNAME, MX, TXT, and PTR. 
+     * @return RecordType Record type. Valid values: A, AAAA, CNAME, MX, TXT, and PTR.
      */
     public String getRecordType() {
         return this.RecordType;
     }
 
     /**
-     * Set Record type. Valid values: "A", "AAAA", "CNAME", "MX", "TXT", "PTR"
-     * @param RecordType Record type. Valid values: "A", "AAAA", "CNAME", "MX", "TXT", "PTR"
+     * Set Record type. Valid values: A, AAAA, CNAME, MX, TXT, and PTR.
+     * @param RecordType Record type. Valid values: A, AAAA, CNAME, MX, TXT, and PTR.
      */
     public void setRecordType(String RecordType) {
         this.RecordType = RecordType;
     }
 
     /**
-     * Get Record value 
-     * @return RecordValue Record value
+     * Get Record value. 
+     * @return RecordValue Record value.
      */
     public String getRecordValue() {
         return this.RecordValue;
     }
 
     /**
-     * Set Record value
-     * @param RecordValue Record value
+     * Set Record value.
+     * @param RecordValue Record value.
      */
     public void setRecordValue(String RecordValue) {
         this.RecordValue = RecordValue;
     }
 
     /**
-     * Get Record cache time. The smaller the value, the faster the record will take effect. Value range: 1–86400s. Default value: 600 
-     * @return TTL Record cache time. The smaller the value, the faster the record will take effect. Value range: 1–86400s. Default value: 600
+     * Get Record cache time. The smaller the value, the faster the record will take effect. Value range: 1-86,400s. Default value: 600. 
+     * @return TTL Record cache time. The smaller the value, the faster the record will take effect. Value range: 1-86,400s. Default value: 600.
      */
     public Long getTTL() {
         return this.TTL;
     }
 
     /**
-     * Set Record cache time. The smaller the value, the faster the record will take effect. Value range: 1–86400s. Default value: 600
-     * @param TTL Record cache time. The smaller the value, the faster the record will take effect. Value range: 1–86400s. Default value: 600
+     * Set Record cache time. The smaller the value, the faster the record will take effect. Value range: 1-86,400s. Default value: 600.
+     * @param TTL Record cache time. The smaller the value, the faster the record will take effect. Value range: 1-86,400s. Default value: 600.
      */
     public void setTTL(Long TTL) {
         this.TTL = TTL;
     }
 
     /**
-     * Get MX priority, which is required when the record type is MX. Valid values: 5, 10, 15, 20, 30, 40, 50
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return MX MX priority, which is required when the record type is MX. Valid values: 5, 10, 15, 20, 30, 40, 50
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get MX priority, which is required when the record type is MX. Valid values: 5, 10, 15, 20, 30, 40, and 50.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return MX MX priority, which is required when the record type is MX. Valid values: 5, 10, 15, 20, 30, 40, and 50.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getMX() {
         return this.MX;
     }
 
     /**
-     * Set MX priority, which is required when the record type is MX. Valid values: 5, 10, 15, 20, 30, 40, 50
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param MX MX priority, which is required when the record type is MX. Valid values: 5, 10, 15, 20, 30, 40, 50
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set MX priority, which is required when the record type is MX. Valid values: 5, 10, 15, 20, 30, 40, and 50.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param MX MX priority, which is required when the record type is MX. Valid values: 5, 10, 15, 20, 30, 40, and 50.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setMX(Long MX) {
         this.MX = MX;
     }
 
     /**
-     * Get Record status: ENABLED 
-     * @return Status Record status: ENABLED
+     * Get Record status: ENABLED. 
+     * @return Status Record status: ENABLED.
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Record status: ENABLED
-     * @param Status Record status: ENABLED
+     * Set Record status: ENABLED.
+     * @param Status Record status: ENABLED.
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get Record weight. Value range: 1–100
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return Weight Record weight. Value range: 1–100
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Record weight. Value range: 1–100.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Weight Record weight. Value range: 1–100.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getWeight() {
         return this.Weight;
     }
 
     /**
-     * Set Record weight. Value range: 1–100
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Weight Record weight. Value range: 1–100
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Record weight. Value range: 1–100.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Weight Record weight. Value range: 1–100.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setWeight(Long Weight) {
         this.Weight = Weight;
     }
 
     /**
-     * Get Record creation time 
-     * @return CreatedOn Record creation time
+     * Get Record creation time. 
+     * @return CreatedOn Record creation time.
      */
     public String getCreatedOn() {
         return this.CreatedOn;
     }
 
     /**
-     * Set Record creation time
-     * @param CreatedOn Record creation time
+     * Set Record creation time.
+     * @param CreatedOn Record creation time.
      */
     public void setCreatedOn(String CreatedOn) {
         this.CreatedOn = CreatedOn;
     }
 
     /**
-     * Get Record update time 
-     * @return UpdatedOn Record update time
+     * Get Record update time. 
+     * @return UpdatedOn Record update time.
      */
     public String getUpdatedOn() {
         return this.UpdatedOn;
     }
 
     /**
-     * Set Record update time
-     * @param UpdatedOn Record update time
+     * Set Record update time.
+     * @param UpdatedOn Record update time.
      */
     public void setUpdatedOn(String UpdatedOn) {
         this.UpdatedOn = UpdatedOn;
@@ -296,9 +305,11 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get Additional information
-Note: this field may return null, indicating that no valid values can be obtained. 
+
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return Extra Additional information
-Note: this field may return null, indicating that no valid values can be obtained.
+
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getExtra() {
         return this.Extra;
@@ -306,12 +317,34 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Additional information
-Note: this field may return null, indicating that no valid values can be obtained.
+
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param Extra Additional information
-Note: this field may return null, indicating that no valid values can be obtained.
+
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setExtra(String Extra) {
         this.Extra = Extra;
+    }
+
+    /**
+     * Get 0: pause; 1: enable.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Enabled 0: pause; 1: enable.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getEnabled() {
+        return this.Enabled;
+    }
+
+    /**
+     * Set 0: pause; 1: enable.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Enabled 0: pause; 1: enable.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setEnabled(Long Enabled) {
+        this.Enabled = Enabled;
     }
 
     public PrivateZoneRecord() {
@@ -358,6 +391,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
         if (source.Extra != null) {
             this.Extra = new String(source.Extra);
         }
+        if (source.Enabled != null) {
+            this.Enabled = new Long(source.Enabled);
+        }
     }
 
 
@@ -377,6 +413,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "CreatedOn", this.CreatedOn);
         this.setParamSimple(map, prefix + "UpdatedOn", this.UpdatedOn);
         this.setParamSimple(map, prefix + "Extra", this.Extra);
+        this.setParamSimple(map, prefix + "Enabled", this.Enabled);
 
     }
 }

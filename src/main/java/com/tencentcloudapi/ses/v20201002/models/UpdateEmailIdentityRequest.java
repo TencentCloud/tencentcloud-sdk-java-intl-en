@@ -31,6 +31,20 @@ public class UpdateEmailIdentityRequest extends AbstractModel {
     private String EmailIdentity;
 
     /**
+    * The  DKIMOption parameter is effective or not
+    */
+    @SerializedName("NewAPI")
+    @Expose
+    private Boolean NewAPI;
+
+    /**
+    * dkim option, 0: 1024, 1: 2048, 2: both
+    */
+    @SerializedName("DKIMOption")
+    @Expose
+    private Long DKIMOption;
+
+    /**
      * Get Domain to be verified. 
      * @return EmailIdentity Domain to be verified.
      */
@@ -46,6 +60,38 @@ public class UpdateEmailIdentityRequest extends AbstractModel {
         this.EmailIdentity = EmailIdentity;
     }
 
+    /**
+     * Get The  DKIMOption parameter is effective or not 
+     * @return NewAPI The  DKIMOption parameter is effective or not
+     */
+    public Boolean getNewAPI() {
+        return this.NewAPI;
+    }
+
+    /**
+     * Set The  DKIMOption parameter is effective or not
+     * @param NewAPI The  DKIMOption parameter is effective or not
+     */
+    public void setNewAPI(Boolean NewAPI) {
+        this.NewAPI = NewAPI;
+    }
+
+    /**
+     * Get dkim option, 0: 1024, 1: 2048, 2: both 
+     * @return DKIMOption dkim option, 0: 1024, 1: 2048, 2: both
+     */
+    public Long getDKIMOption() {
+        return this.DKIMOption;
+    }
+
+    /**
+     * Set dkim option, 0: 1024, 1: 2048, 2: both
+     * @param DKIMOption dkim option, 0: 1024, 1: 2048, 2: both
+     */
+    public void setDKIMOption(Long DKIMOption) {
+        this.DKIMOption = DKIMOption;
+    }
+
     public UpdateEmailIdentityRequest() {
     }
 
@@ -57,6 +103,12 @@ public class UpdateEmailIdentityRequest extends AbstractModel {
         if (source.EmailIdentity != null) {
             this.EmailIdentity = new String(source.EmailIdentity);
         }
+        if (source.NewAPI != null) {
+            this.NewAPI = new Boolean(source.NewAPI);
+        }
+        if (source.DKIMOption != null) {
+            this.DKIMOption = new Long(source.DKIMOption);
+        }
     }
 
 
@@ -65,6 +117,8 @@ public class UpdateEmailIdentityRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "EmailIdentity", this.EmailIdentity);
+        this.setParamSimple(map, prefix + "NewAPI", this.NewAPI);
+        this.setParamSimple(map, prefix + "DKIMOption", this.DKIMOption);
 
     }
 }

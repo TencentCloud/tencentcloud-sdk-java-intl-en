@@ -115,6 +115,30 @@ Delete terminology entries in batches under the specified Termbase. You can dele
     }
 
     /**
+     *This API is used to query API Key details based on API Key ID or key value, and return the plaintext key. At least one of ApiKeyId and ApiKey must be input, with priority given to ApiKeyId.
+     * @param req DescribeApiKeyRequest
+     * @return DescribeApiKeyResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeApiKeyResponse DescribeApiKey(DescribeApiKeyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeApiKey", DescribeApiKeyResponse.class);
+    }
+
+    /**
+     *Query API key list.
+
+Query the API key list of the current user with key values in masking display. Support pagination, filtering, and sorting.
+     * @param req DescribeApiKeyListRequest
+     * @return DescribeApiKeyListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeApiKeyListResponse DescribeApiKeyList(DescribeApiKeyListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeApiKeyList", DescribeApiKeyListResponse.class);
+    }
+
+    /**
      *Query the terminology repository list.
 
 Query the Termbase list under this application. Support paginate, filter, and sort.

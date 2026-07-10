@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class DescribePrivateZoneRecordListRequest extends AbstractModel {
 
     /**
-    * Private domain ID: zone-xxxxxx
+    * Private domain ID, which is in zone-xxxxxx format.
     */
     @SerializedName("ZoneId")
     @Expose
     private String ZoneId;
 
     /**
-    * Filter parameter
+    * Filter parameters. (Valid values: Value and RecordType.)
     */
     @SerializedName("Filters")
     @Expose
     private Filter [] Filters;
 
     /**
-    * Pagination offset, starting from 0
+    * Pagination offset, starting from 0.
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * Number of entries per page. Maximum value: 100. Default value: 20
+    * Pagination limit. Maximum value: 200. Default value: 20.
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-     * Get Private domain ID: zone-xxxxxx 
-     * @return ZoneId Private domain ID: zone-xxxxxx
+     * Get Private domain ID, which is in zone-xxxxxx format. 
+     * @return ZoneId Private domain ID, which is in zone-xxxxxx format.
      */
     public String getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set Private domain ID: zone-xxxxxx
-     * @param ZoneId Private domain ID: zone-xxxxxx
+     * Set Private domain ID, which is in zone-xxxxxx format.
+     * @param ZoneId Private domain ID, which is in zone-xxxxxx format.
      */
     public void setZoneId(String ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * Get Filter parameter 
-     * @return Filters Filter parameter
+     * Get Filter parameters. (Valid values: Value and RecordType.) 
+     * @return Filters Filter parameters. (Valid values: Value and RecordType.)
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set Filter parameter
-     * @param Filters Filter parameter
+     * Set Filter parameters. (Valid values: Value and RecordType.)
+     * @param Filters Filter parameters. (Valid values: Value and RecordType.)
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;
     }
 
     /**
-     * Get Pagination offset, starting from 0 
-     * @return Offset Pagination offset, starting from 0
+     * Get Pagination offset, starting from 0. 
+     * @return Offset Pagination offset, starting from 0.
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Pagination offset, starting from 0
-     * @param Offset Pagination offset, starting from 0
+     * Set Pagination offset, starting from 0.
+     * @param Offset Pagination offset, starting from 0.
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get Number of entries per page. Maximum value: 100. Default value: 20 
-     * @return Limit Number of entries per page. Maximum value: 100. Default value: 20
+     * Get Pagination limit. Maximum value: 200. Default value: 20. 
+     * @return Limit Pagination limit. Maximum value: 200. Default value: 20.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Number of entries per page. Maximum value: 100. Default value: 20
-     * @param Limit Number of entries per page. Maximum value: 100. Default value: 20
+     * Set Pagination limit. Maximum value: 200. Default value: 20.
+     * @param Limit Pagination limit. Maximum value: 200. Default value: 20.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class DeletePrivateZoneRecordRequest extends AbstractModel {
 
     /**
-    * Private domain ID
+    * Private domain ID.
     */
     @SerializedName("ZoneId")
     @Expose
     private String ZoneId;
 
     /**
-    * Record ID
+    * Record ID (which can be obtained by calling DescribePrivateZoneRecordList).
     */
     @SerializedName("RecordId")
     @Expose
     private String RecordId;
 
     /**
-    * Array of record IDs. `RecordId` takes precedence.
+    * Record ID array, with RecordId preferred.
     */
     @SerializedName("RecordIdSet")
     @Expose
     private String [] RecordIdSet;
 
     /**
-     * Get Private domain ID 
-     * @return ZoneId Private domain ID
+     * Get Private domain ID. 
+     * @return ZoneId Private domain ID.
      */
     public String getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set Private domain ID
-     * @param ZoneId Private domain ID
+     * Set Private domain ID.
+     * @param ZoneId Private domain ID.
      */
     public void setZoneId(String ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * Get Record ID 
-     * @return RecordId Record ID
+     * Get Record ID (which can be obtained by calling DescribePrivateZoneRecordList). 
+     * @return RecordId Record ID (which can be obtained by calling DescribePrivateZoneRecordList).
      */
     public String getRecordId() {
         return this.RecordId;
     }
 
     /**
-     * Set Record ID
-     * @param RecordId Record ID
+     * Set Record ID (which can be obtained by calling DescribePrivateZoneRecordList).
+     * @param RecordId Record ID (which can be obtained by calling DescribePrivateZoneRecordList).
      */
     public void setRecordId(String RecordId) {
         this.RecordId = RecordId;
     }
 
     /**
-     * Get Array of record IDs. `RecordId` takes precedence. 
-     * @return RecordIdSet Array of record IDs. `RecordId` takes precedence.
+     * Get Record ID array, with RecordId preferred. 
+     * @return RecordIdSet Record ID array, with RecordId preferred.
      */
     public String [] getRecordIdSet() {
         return this.RecordIdSet;
     }
 
     /**
-     * Set Array of record IDs. `RecordId` takes precedence.
-     * @param RecordIdSet Array of record IDs. `RecordId` takes precedence.
+     * Set Record ID array, with RecordId preferred.
+     * @param RecordIdSet Record ID array, with RecordId preferred.
      */
     public void setRecordIdSet(String [] RecordIdSet) {
         this.RecordIdSet = RecordIdSet;
