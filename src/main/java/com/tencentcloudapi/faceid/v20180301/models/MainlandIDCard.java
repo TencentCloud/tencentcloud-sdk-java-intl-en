@@ -82,6 +82,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String FormattedAddress;
 
     /**
+    * Issuing authority
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Authority")
+    @Expose
+    private String Authority;
+
+    /**
+    * Validity period
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("ValidDate")
+    @Expose
+    private String ValidDate;
+
+    /**
      * Get Chinese name
 Note: This field may return null, indicating that no valid values can be obtained.
  
@@ -233,6 +249,46 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.FormattedAddress = FormattedAddress;
     }
 
+    /**
+     * Get Issuing authority
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Authority Issuing authority
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getAuthority() {
+        return this.Authority;
+    }
+
+    /**
+     * Set Issuing authority
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Authority Issuing authority
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setAuthority(String Authority) {
+        this.Authority = Authority;
+    }
+
+    /**
+     * Get Validity period
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return ValidDate Validity period
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getValidDate() {
+        return this.ValidDate;
+    }
+
+    /**
+     * Set Validity period
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ValidDate Validity period
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setValidDate(String ValidDate) {
+        this.ValidDate = ValidDate;
+    }
+
     public MainlandIDCard() {
     }
 
@@ -262,6 +318,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.FormattedAddress != null) {
             this.FormattedAddress = new String(source.FormattedAddress);
         }
+        if (source.Authority != null) {
+            this.Authority = new String(source.Authority);
+        }
+        if (source.ValidDate != null) {
+            this.ValidDate = new String(source.ValidDate);
+        }
     }
 
 
@@ -276,6 +338,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "Address", this.Address);
         this.setParamSimple(map, prefix + "LicenseNumber", this.LicenseNumber);
         this.setParamSimple(map, prefix + "FormattedAddress", this.FormattedAddress);
+        this.setParamSimple(map, prefix + "Authority", this.Authority);
+        this.setParamSimple(map, prefix + "ValidDate", this.ValidDate);
 
     }
 }

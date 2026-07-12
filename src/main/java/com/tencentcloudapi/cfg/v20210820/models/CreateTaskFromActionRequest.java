@@ -73,6 +73,13 @@ public class CreateTaskFromActionRequest extends AbstractModel {
     private Long TaskPauseDuration;
 
     /**
+    * 
+    */
+    @SerializedName("TaskTags")
+    @Expose
+    private TagWithCreate [] TaskTags;
+
+    /**
      * Get Action ID, which can be obtained by using the action list API DescribeActionLibraryList. 
      * @return TaskActionId Action ID, which can be obtained by using the action list API DescribeActionLibraryList.
      */
@@ -184,6 +191,22 @@ public class CreateTaskFromActionRequest extends AbstractModel {
         this.TaskPauseDuration = TaskPauseDuration;
     }
 
+    /**
+     * Get  
+     * @return TaskTags 
+     */
+    public TagWithCreate [] getTaskTags() {
+        return this.TaskTags;
+    }
+
+    /**
+     * Set 
+     * @param TaskTags 
+     */
+    public void setTaskTags(TagWithCreate [] TaskTags) {
+        this.TaskTags = TaskTags;
+    }
+
     public CreateTaskFromActionRequest() {
     }
 
@@ -216,6 +239,12 @@ public class CreateTaskFromActionRequest extends AbstractModel {
         if (source.TaskPauseDuration != null) {
             this.TaskPauseDuration = new Long(source.TaskPauseDuration);
         }
+        if (source.TaskTags != null) {
+            this.TaskTags = new TagWithCreate[source.TaskTags.length];
+            for (int i = 0; i < source.TaskTags.length; i++) {
+                this.TaskTags[i] = new TagWithCreate(source.TaskTags[i]);
+            }
+        }
     }
 
 
@@ -230,6 +259,7 @@ public class CreateTaskFromActionRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "TaskActionGeneralConfiguration", this.TaskActionGeneralConfiguration);
         this.setParamSimple(map, prefix + "TaskActionCustomConfiguration", this.TaskActionCustomConfiguration);
         this.setParamSimple(map, prefix + "TaskPauseDuration", this.TaskPauseDuration);
+        this.setParamArrayObj(map, prefix + "TaskTags.", this.TaskTags);
 
     }
 }

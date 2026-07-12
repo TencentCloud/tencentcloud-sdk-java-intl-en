@@ -40,7 +40,7 @@ public class PrometheusInstancesItem extends AbstractModel {
     /**
     * Instance billing mode. Valid values:
 <ul>
-<li>2: Monthly subscription</li>
+<li>2: Yearly/Monthly subscription</li>
 <li>3: Pay-as-you-go</li>
 </ul>
     */
@@ -296,6 +296,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long MigrationType;
 
     /**
+    * 
+    */
+    @SerializedName("InstanceAttributes")
+    @Expose
+    private PrometheusRuleKV [] InstanceAttributes;
+
+    /**
      * Get Instance ID. 
      * @return InstanceId Instance ID.
      */
@@ -330,12 +337,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
     /**
      * Get Instance billing mode. Valid values:
 <ul>
-<li>2: Monthly subscription</li>
+<li>2: Yearly/Monthly subscription</li>
 <li>3: Pay-as-you-go</li>
 </ul> 
      * @return InstanceChargeType Instance billing mode. Valid values:
 <ul>
-<li>2: Monthly subscription</li>
+<li>2: Yearly/Monthly subscription</li>
 <li>3: Pay-as-you-go</li>
 </ul>
      */
@@ -346,12 +353,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
     /**
      * Set Instance billing mode. Valid values:
 <ul>
-<li>2: Monthly subscription</li>
+<li>2: Yearly/Monthly subscription</li>
 <li>3: Pay-as-you-go</li>
 </ul>
      * @param InstanceChargeType Instance billing mode. Valid values:
 <ul>
-<li>2: Monthly subscription</li>
+<li>2: Yearly/Monthly subscription</li>
 <li>3: Pay-as-you-go</li>
 </ul>
      */
@@ -1023,6 +1030,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.MigrationType = MigrationType;
     }
 
+    /**
+     * Get  
+     * @return InstanceAttributes 
+     */
+    public PrometheusRuleKV [] getInstanceAttributes() {
+        return this.InstanceAttributes;
+    }
+
+    /**
+     * Set 
+     * @param InstanceAttributes 
+     */
+    public void setInstanceAttributes(PrometheusRuleKV [] InstanceAttributes) {
+        this.InstanceAttributes = InstanceAttributes;
+    }
+
     public PrometheusInstancesItem() {
     }
 
@@ -1124,6 +1147,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.MigrationType != null) {
             this.MigrationType = new Long(source.MigrationType);
         }
+        if (source.InstanceAttributes != null) {
+            this.InstanceAttributes = new PrometheusRuleKV[source.InstanceAttributes.length];
+            for (int i = 0; i < source.InstanceAttributes.length; i++) {
+                this.InstanceAttributes[i] = new PrometheusRuleKV(source.InstanceAttributes[i]);
+            }
+        }
     }
 
 
@@ -1161,6 +1190,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "AlertRuleLimit", this.AlertRuleLimit);
         this.setParamSimple(map, prefix + "RecordingRuleLimit", this.RecordingRuleLimit);
         this.setParamSimple(map, prefix + "MigrationType", this.MigrationType);
+        this.setParamArrayObj(map, prefix + "InstanceAttributes.", this.InstanceAttributes);
 
     }
 }

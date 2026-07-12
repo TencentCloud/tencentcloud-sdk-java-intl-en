@@ -222,7 +222,7 @@ public enum MonitorErrorCode {
      /* InternalError.UnexpectedInternal */
      INTERNALERROR_UNEXPECTEDINTERNAL("InternalError.UnexpectedInternal"),
      
-     /* Invalid parameter. */
+     /* Parameter error. */
      INVALIDPARAMETER("InvalidParameter"),
      
      /* InvalidParameter.ClusterNotFound */
@@ -311,6 +311,9 @@ public enum MonitorErrorCode {
      
      /* Unauthorized operation. */
      UNAUTHORIZEDOPERATION("UnauthorizedOperation"),
+     
+     /*  */
+     UNAUTHORIZEDOPERATION_CAMNOAUTH("UnauthorizedOperation.CamNoAuth"),
      
      /* Unknown parameter. */
      UNKNOWNPARAMETER("UnknownParameter"),

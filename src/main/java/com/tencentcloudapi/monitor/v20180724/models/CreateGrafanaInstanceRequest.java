@@ -45,13 +45,6 @@ public class CreateGrafanaInstanceRequest extends AbstractModel {
     private String [] SubnetIds;
 
     /**
-    * Initial Grafana password
-    */
-    @SerializedName("GrafanaInitPassword")
-    @Expose
-    private String GrafanaInitPassword;
-
-    /**
     * Whether to enable public network access
     */
     @SerializedName("EnableInternet")
@@ -59,11 +52,25 @@ public class CreateGrafanaInstanceRequest extends AbstractModel {
     private Boolean EnableInternet;
 
     /**
+    * Initial Grafana password
+    */
+    @SerializedName("GrafanaInitPassword")
+    @Expose
+    private String GrafanaInitPassword;
+
+    /**
     * Tag
     */
     @SerializedName("TagSpecification")
     @Expose
     private PrometheusTag [] TagSpecification;
+
+    /**
+    * 
+    */
+    @SerializedName("AutoVoucher")
+    @Expose
+    private Boolean AutoVoucher;
 
     /**
      * Get Instance name 
@@ -114,22 +121,6 @@ public class CreateGrafanaInstanceRequest extends AbstractModel {
     }
 
     /**
-     * Get Initial Grafana password 
-     * @return GrafanaInitPassword Initial Grafana password
-     */
-    public String getGrafanaInitPassword() {
-        return this.GrafanaInitPassword;
-    }
-
-    /**
-     * Set Initial Grafana password
-     * @param GrafanaInitPassword Initial Grafana password
-     */
-    public void setGrafanaInitPassword(String GrafanaInitPassword) {
-        this.GrafanaInitPassword = GrafanaInitPassword;
-    }
-
-    /**
      * Get Whether to enable public network access 
      * @return EnableInternet Whether to enable public network access
      */
@@ -146,6 +137,22 @@ public class CreateGrafanaInstanceRequest extends AbstractModel {
     }
 
     /**
+     * Get Initial Grafana password 
+     * @return GrafanaInitPassword Initial Grafana password
+     */
+    public String getGrafanaInitPassword() {
+        return this.GrafanaInitPassword;
+    }
+
+    /**
+     * Set Initial Grafana password
+     * @param GrafanaInitPassword Initial Grafana password
+     */
+    public void setGrafanaInitPassword(String GrafanaInitPassword) {
+        this.GrafanaInitPassword = GrafanaInitPassword;
+    }
+
+    /**
      * Get Tag 
      * @return TagSpecification Tag
      */
@@ -159,6 +166,22 @@ public class CreateGrafanaInstanceRequest extends AbstractModel {
      */
     public void setTagSpecification(PrometheusTag [] TagSpecification) {
         this.TagSpecification = TagSpecification;
+    }
+
+    /**
+     * Get  
+     * @return AutoVoucher 
+     */
+    public Boolean getAutoVoucher() {
+        return this.AutoVoucher;
+    }
+
+    /**
+     * Set 
+     * @param AutoVoucher 
+     */
+    public void setAutoVoucher(Boolean AutoVoucher) {
+        this.AutoVoucher = AutoVoucher;
     }
 
     public CreateGrafanaInstanceRequest() {
@@ -181,17 +204,20 @@ public class CreateGrafanaInstanceRequest extends AbstractModel {
                 this.SubnetIds[i] = new String(source.SubnetIds[i]);
             }
         }
-        if (source.GrafanaInitPassword != null) {
-            this.GrafanaInitPassword = new String(source.GrafanaInitPassword);
-        }
         if (source.EnableInternet != null) {
             this.EnableInternet = new Boolean(source.EnableInternet);
+        }
+        if (source.GrafanaInitPassword != null) {
+            this.GrafanaInitPassword = new String(source.GrafanaInitPassword);
         }
         if (source.TagSpecification != null) {
             this.TagSpecification = new PrometheusTag[source.TagSpecification.length];
             for (int i = 0; i < source.TagSpecification.length; i++) {
                 this.TagSpecification[i] = new PrometheusTag(source.TagSpecification[i]);
             }
+        }
+        if (source.AutoVoucher != null) {
+            this.AutoVoucher = new Boolean(source.AutoVoucher);
         }
     }
 
@@ -203,9 +229,10 @@ public class CreateGrafanaInstanceRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "InstanceName", this.InstanceName);
         this.setParamSimple(map, prefix + "VpcId", this.VpcId);
         this.setParamArraySimple(map, prefix + "SubnetIds.", this.SubnetIds);
-        this.setParamSimple(map, prefix + "GrafanaInitPassword", this.GrafanaInitPassword);
         this.setParamSimple(map, prefix + "EnableInternet", this.EnableInternet);
+        this.setParamSimple(map, prefix + "GrafanaInitPassword", this.GrafanaInitPassword);
         this.setParamArrayObj(map, prefix + "TagSpecification.", this.TagSpecification);
+        this.setParamSimple(map, prefix + "AutoVoucher", this.AutoVoucher);
 
     }
 }

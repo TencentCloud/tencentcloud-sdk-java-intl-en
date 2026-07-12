@@ -52,6 +52,27 @@ public class ModifyTaskRunStatusRequest extends AbstractModel {
     private String Summary;
 
     /**
+    * 
+    */
+    @SerializedName("Issue")
+    @Expose
+    private String Issue;
+
+    /**
+    * 
+    */
+    @SerializedName("Record")
+    @Expose
+    private String Record;
+
+    /**
+    * 
+    */
+    @SerializedName("IncludeRecordInReport")
+    @Expose
+    private Long IncludeRecordInReport;
+
+    /**
      * Get Task ID 
      * @return TaskId Task ID
      */
@@ -115,6 +136,54 @@ public class ModifyTaskRunStatusRequest extends AbstractModel {
         this.Summary = Summary;
     }
 
+    /**
+     * Get  
+     * @return Issue 
+     */
+    public String getIssue() {
+        return this.Issue;
+    }
+
+    /**
+     * Set 
+     * @param Issue 
+     */
+    public void setIssue(String Issue) {
+        this.Issue = Issue;
+    }
+
+    /**
+     * Get  
+     * @return Record 
+     */
+    public String getRecord() {
+        return this.Record;
+    }
+
+    /**
+     * Set 
+     * @param Record 
+     */
+    public void setRecord(String Record) {
+        this.Record = Record;
+    }
+
+    /**
+     * Get  
+     * @return IncludeRecordInReport 
+     */
+    public Long getIncludeRecordInReport() {
+        return this.IncludeRecordInReport;
+    }
+
+    /**
+     * Set 
+     * @param IncludeRecordInReport 
+     */
+    public void setIncludeRecordInReport(Long IncludeRecordInReport) {
+        this.IncludeRecordInReport = IncludeRecordInReport;
+    }
+
     public ModifyTaskRunStatusRequest() {
     }
 
@@ -135,6 +204,15 @@ public class ModifyTaskRunStatusRequest extends AbstractModel {
         if (source.Summary != null) {
             this.Summary = new String(source.Summary);
         }
+        if (source.Issue != null) {
+            this.Issue = new String(source.Issue);
+        }
+        if (source.Record != null) {
+            this.Record = new String(source.Record);
+        }
+        if (source.IncludeRecordInReport != null) {
+            this.IncludeRecordInReport = new Long(source.IncludeRecordInReport);
+        }
     }
 
 
@@ -146,6 +224,9 @@ public class ModifyTaskRunStatusRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "IsExpect", this.IsExpect);
         this.setParamSimple(map, prefix + "Summary", this.Summary);
+        this.setParamSimple(map, prefix + "Issue", this.Issue);
+        this.setParamSimple(map, prefix + "Record", this.Record);
+        this.setParamSimple(map, prefix + "IncludeRecordInReport", this.IncludeRecordInReport);
 
     }
 }

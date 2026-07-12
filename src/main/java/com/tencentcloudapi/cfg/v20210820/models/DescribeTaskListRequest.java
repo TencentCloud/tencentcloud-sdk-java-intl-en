@@ -122,14 +122,14 @@ public class DescribeTaskListRequest extends AbstractModel {
     private Long [] TaskStatusList;
 
     /**
-    * Architecture ID
+    * 
     */
     @SerializedName("ArchId")
     @Expose
     private String ArchId;
 
     /**
-    * Architecture Name
+    * 
     */
     @SerializedName("ArchName")
     @Expose
@@ -360,32 +360,32 @@ public class DescribeTaskListRequest extends AbstractModel {
     }
 
     /**
-     * Get Architecture ID 
-     * @return ArchId Architecture ID
+     * Get  
+     * @return ArchId 
      */
     public String getArchId() {
         return this.ArchId;
     }
 
     /**
-     * Set Architecture ID
-     * @param ArchId Architecture ID
+     * Set 
+     * @param ArchId 
      */
     public void setArchId(String ArchId) {
         this.ArchId = ArchId;
     }
 
     /**
-     * Get Architecture Name 
-     * @return ArchName Architecture Name
+     * Get  
+     * @return ArchName 
      */
     public String getArchName() {
         return this.ArchName;
     }
 
     /**
-     * Set Architecture Name
-     * @param ArchName Architecture Name
+     * Set 
+     * @param ArchName 
      */
     public void setArchName(String ArchName) {
         this.ArchName = ArchName;

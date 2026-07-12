@@ -96,6 +96,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String OriginalCardInfo;
 
     /**
+    * Base64 of the cropped portrait image extracted from the identity document</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("HeadImageBase64")
+    @Expose
+    private String HeadImageBase64;
+
+    /**
      * Get <p>Whether the identity authentication or OCR process is successful.</p>
 Note: This field may return null, indicating that no valid values can be obtained. 
      * @return IsPass <p>Whether the identity authentication or OCR process is successful.</p>
@@ -279,6 +287,26 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.OriginalCardInfo = OriginalCardInfo;
     }
 
+    /**
+     * Get Base64 of the cropped portrait image extracted from the identity document</p>
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return HeadImageBase64 Base64 of the cropped portrait image extracted from the identity document</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getHeadImageBase64() {
+        return this.HeadImageBase64;
+    }
+
+    /**
+     * Set Base64 of the cropped portrait image extracted from the identity document</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param HeadImageBase64 Base64 of the cropped portrait image extracted from the identity document</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setHeadImageBase64(String HeadImageBase64) {
+        this.HeadImageBase64 = HeadImageBase64;
+    }
+
     public OCRResult() {
     }
 
@@ -317,6 +345,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.OriginalCardInfo != null) {
             this.OriginalCardInfo = new String(source.OriginalCardInfo);
         }
+        if (source.HeadImageBase64 != null) {
+            this.HeadImageBase64 = new String(source.HeadImageBase64);
+        }
     }
 
 
@@ -333,6 +364,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "CardBackCutImageBase64", this.CardBackCutImageBase64);
         this.setParamArraySimple(map, prefix + "WarnCardInfos.", this.WarnCardInfos);
         this.setParamSimple(map, prefix + "OriginalCardInfo", this.OriginalCardInfo);
+        this.setParamSimple(map, prefix + "HeadImageBase64", this.HeadImageBase64);
 
     }
 }

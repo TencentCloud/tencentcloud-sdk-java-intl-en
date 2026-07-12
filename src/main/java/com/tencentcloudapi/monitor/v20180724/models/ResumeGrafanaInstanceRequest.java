@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class ResumeGrafanaInstanceRequest extends AbstractModel {
 
     /**
-    * TCMG instance ID, such as “grafana-12345678”.
+    * TCMG instance ID, such as grafana-12345678.
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-     * Get TCMG instance ID, such as “grafana-12345678”. 
-     * @return InstanceId TCMG instance ID, such as “grafana-12345678”.
+     * Get TCMG instance ID, such as grafana-12345678. 
+     * @return InstanceId TCMG instance ID, such as grafana-12345678.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set TCMG instance ID, such as “grafana-12345678”.
-     * @param InstanceId TCMG instance ID, such as “grafana-12345678”.
+     * Set TCMG instance ID, such as grafana-12345678.
+     * @param InstanceId TCMG instance ID, such as grafana-12345678.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;

@@ -91,7 +91,7 @@ public class DescribePrometheusInstancesRequest extends AbstractModel {
 
     /**
     * Filter by billing mode
-<li>2: Monthly subscription</li>
+<li>2: Yearly/Monthly subscription</li>
 <li>3: Pay-as-you-go</li>
     */
     @SerializedName("InstanceChargeType")
@@ -268,10 +268,10 @@ public class DescribePrometheusInstancesRequest extends AbstractModel {
 
     /**
      * Get Filter by billing mode
-<li>2: Monthly subscription</li>
+<li>2: Yearly/Monthly subscription</li>
 <li>3: Pay-as-you-go</li> 
      * @return InstanceChargeType Filter by billing mode
-<li>2: Monthly subscription</li>
+<li>2: Yearly/Monthly subscription</li>
 <li>3: Pay-as-you-go</li>
      */
     public Long getInstanceChargeType() {
@@ -280,10 +280,10 @@ public class DescribePrometheusInstancesRequest extends AbstractModel {
 
     /**
      * Set Filter by billing mode
-<li>2: Monthly subscription</li>
+<li>2: Yearly/Monthly subscription</li>
 <li>3: Pay-as-you-go</li>
      * @param InstanceChargeType Filter by billing mode
-<li>2: Monthly subscription</li>
+<li>2: Yearly/Monthly subscription</li>
 <li>3: Pay-as-you-go</li>
      */
     public void setInstanceChargeType(Long InstanceChargeType) {
