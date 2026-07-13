@@ -52,6 +52,27 @@ public class ModifyRabbitMQServerlessQueueRequest extends AbstractModel {
     private String Remark;
 
     /**
+    * MessageTTL parameter in milliseconds, dedicated to classic event type	
+    */
+    @SerializedName("MessageTTL")
+    @Expose
+    private Long MessageTTL;
+
+    /**
+    * DeadLetterExchange parameter. It specifies that expired or rejected messages can be delivered to the specified dead letter exchange.
+    */
+    @SerializedName("DeadLetterExchange")
+    @Expose
+    private String DeadLetterExchange;
+
+    /**
+    * DeadLetterRoutingKey parameter. The value can only contain letters, digits, periods (.), hyphens (-), at signs (@), and underscores (_).
+    */
+    @SerializedName("DeadLetterRoutingKey")
+    @Expose
+    private String DeadLetterRoutingKey;
+
+    /**
      * Get Instance ID 
      * @return InstanceId Instance ID
      */
@@ -115,6 +136,54 @@ public class ModifyRabbitMQServerlessQueueRequest extends AbstractModel {
         this.Remark = Remark;
     }
 
+    /**
+     * Get MessageTTL parameter in milliseconds, dedicated to classic event type	 
+     * @return MessageTTL MessageTTL parameter in milliseconds, dedicated to classic event type	
+     */
+    public Long getMessageTTL() {
+        return this.MessageTTL;
+    }
+
+    /**
+     * Set MessageTTL parameter in milliseconds, dedicated to classic event type	
+     * @param MessageTTL MessageTTL parameter in milliseconds, dedicated to classic event type	
+     */
+    public void setMessageTTL(Long MessageTTL) {
+        this.MessageTTL = MessageTTL;
+    }
+
+    /**
+     * Get DeadLetterExchange parameter. It specifies that expired or rejected messages can be delivered to the specified dead letter exchange. 
+     * @return DeadLetterExchange DeadLetterExchange parameter. It specifies that expired or rejected messages can be delivered to the specified dead letter exchange.
+     */
+    public String getDeadLetterExchange() {
+        return this.DeadLetterExchange;
+    }
+
+    /**
+     * Set DeadLetterExchange parameter. It specifies that expired or rejected messages can be delivered to the specified dead letter exchange.
+     * @param DeadLetterExchange DeadLetterExchange parameter. It specifies that expired or rejected messages can be delivered to the specified dead letter exchange.
+     */
+    public void setDeadLetterExchange(String DeadLetterExchange) {
+        this.DeadLetterExchange = DeadLetterExchange;
+    }
+
+    /**
+     * Get DeadLetterRoutingKey parameter. The value can only contain letters, digits, periods (.), hyphens (-), at signs (@), and underscores (_). 
+     * @return DeadLetterRoutingKey DeadLetterRoutingKey parameter. The value can only contain letters, digits, periods (.), hyphens (-), at signs (@), and underscores (_).
+     */
+    public String getDeadLetterRoutingKey() {
+        return this.DeadLetterRoutingKey;
+    }
+
+    /**
+     * Set DeadLetterRoutingKey parameter. The value can only contain letters, digits, periods (.), hyphens (-), at signs (@), and underscores (_).
+     * @param DeadLetterRoutingKey DeadLetterRoutingKey parameter. The value can only contain letters, digits, periods (.), hyphens (-), at signs (@), and underscores (_).
+     */
+    public void setDeadLetterRoutingKey(String DeadLetterRoutingKey) {
+        this.DeadLetterRoutingKey = DeadLetterRoutingKey;
+    }
+
     public ModifyRabbitMQServerlessQueueRequest() {
     }
 
@@ -135,6 +204,15 @@ public class ModifyRabbitMQServerlessQueueRequest extends AbstractModel {
         if (source.Remark != null) {
             this.Remark = new String(source.Remark);
         }
+        if (source.MessageTTL != null) {
+            this.MessageTTL = new Long(source.MessageTTL);
+        }
+        if (source.DeadLetterExchange != null) {
+            this.DeadLetterExchange = new String(source.DeadLetterExchange);
+        }
+        if (source.DeadLetterRoutingKey != null) {
+            this.DeadLetterRoutingKey = new String(source.DeadLetterRoutingKey);
+        }
     }
 
 
@@ -146,6 +224,9 @@ public class ModifyRabbitMQServerlessQueueRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "VirtualHost", this.VirtualHost);
         this.setParamSimple(map, prefix + "QueueName", this.QueueName);
         this.setParamSimple(map, prefix + "Remark", this.Remark);
+        this.setParamSimple(map, prefix + "MessageTTL", this.MessageTTL);
+        this.setParamSimple(map, prefix + "DeadLetterExchange", this.DeadLetterExchange);
+        this.setParamSimple(map, prefix + "DeadLetterRoutingKey", this.DeadLetterRoutingKey);
 
     }
 }

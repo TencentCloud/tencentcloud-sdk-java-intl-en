@@ -73,6 +73,41 @@ public class RabbitMQConnection extends AbstractModel {
     private Long Channels;
 
     /**
+    * Inbound traffic volume in bytes
+    */
+    @SerializedName("IncomingBytes")
+    @Expose
+    private Float IncomingBytes;
+
+    /**
+    * Outbound traffic volume in bytes
+    */
+    @SerializedName("OutgoingBytes")
+    @Expose
+    private Float OutgoingBytes;
+
+    /**
+    * Heartbeat interval. Default 60s.
+    */
+    @SerializedName("Heartbeat")
+    @Expose
+    private Long Heartbeat;
+
+    /**
+    * Maximum number of channels per link. Default 1024.
+    */
+    @SerializedName("MaxChannel")
+    @Expose
+    private Long MaxChannel;
+
+    /**
+    * Idle time point
+    */
+    @SerializedName("IdleSince")
+    @Expose
+    private String IdleSince;
+
+    /**
      * Get Connection name. 
      * @return ConnectionName Connection name.
      */
@@ -184,6 +219,86 @@ public class RabbitMQConnection extends AbstractModel {
         this.Channels = Channels;
     }
 
+    /**
+     * Get Inbound traffic volume in bytes 
+     * @return IncomingBytes Inbound traffic volume in bytes
+     */
+    public Float getIncomingBytes() {
+        return this.IncomingBytes;
+    }
+
+    /**
+     * Set Inbound traffic volume in bytes
+     * @param IncomingBytes Inbound traffic volume in bytes
+     */
+    public void setIncomingBytes(Float IncomingBytes) {
+        this.IncomingBytes = IncomingBytes;
+    }
+
+    /**
+     * Get Outbound traffic volume in bytes 
+     * @return OutgoingBytes Outbound traffic volume in bytes
+     */
+    public Float getOutgoingBytes() {
+        return this.OutgoingBytes;
+    }
+
+    /**
+     * Set Outbound traffic volume in bytes
+     * @param OutgoingBytes Outbound traffic volume in bytes
+     */
+    public void setOutgoingBytes(Float OutgoingBytes) {
+        this.OutgoingBytes = OutgoingBytes;
+    }
+
+    /**
+     * Get Heartbeat interval. Default 60s. 
+     * @return Heartbeat Heartbeat interval. Default 60s.
+     */
+    public Long getHeartbeat() {
+        return this.Heartbeat;
+    }
+
+    /**
+     * Set Heartbeat interval. Default 60s.
+     * @param Heartbeat Heartbeat interval. Default 60s.
+     */
+    public void setHeartbeat(Long Heartbeat) {
+        this.Heartbeat = Heartbeat;
+    }
+
+    /**
+     * Get Maximum number of channels per link. Default 1024. 
+     * @return MaxChannel Maximum number of channels per link. Default 1024.
+     */
+    public Long getMaxChannel() {
+        return this.MaxChannel;
+    }
+
+    /**
+     * Set Maximum number of channels per link. Default 1024.
+     * @param MaxChannel Maximum number of channels per link. Default 1024.
+     */
+    public void setMaxChannel(Long MaxChannel) {
+        this.MaxChannel = MaxChannel;
+    }
+
+    /**
+     * Get Idle time point 
+     * @return IdleSince Idle time point
+     */
+    public String getIdleSince() {
+        return this.IdleSince;
+    }
+
+    /**
+     * Set Idle time point
+     * @param IdleSince Idle time point
+     */
+    public void setIdleSince(String IdleSince) {
+        this.IdleSince = IdleSince;
+    }
+
     public RabbitMQConnection() {
     }
 
@@ -213,6 +328,21 @@ public class RabbitMQConnection extends AbstractModel {
         if (source.Channels != null) {
             this.Channels = new Long(source.Channels);
         }
+        if (source.IncomingBytes != null) {
+            this.IncomingBytes = new Float(source.IncomingBytes);
+        }
+        if (source.OutgoingBytes != null) {
+            this.OutgoingBytes = new Float(source.OutgoingBytes);
+        }
+        if (source.Heartbeat != null) {
+            this.Heartbeat = new Long(source.Heartbeat);
+        }
+        if (source.MaxChannel != null) {
+            this.MaxChannel = new Long(source.MaxChannel);
+        }
+        if (source.IdleSince != null) {
+            this.IdleSince = new String(source.IdleSince);
+        }
     }
 
 
@@ -227,6 +357,11 @@ public class RabbitMQConnection extends AbstractModel {
         this.setParamSimple(map, prefix + "SSL", this.SSL);
         this.setParamSimple(map, prefix + "Protocol", this.Protocol);
         this.setParamSimple(map, prefix + "Channels", this.Channels);
+        this.setParamSimple(map, prefix + "IncomingBytes", this.IncomingBytes);
+        this.setParamSimple(map, prefix + "OutgoingBytes", this.OutgoingBytes);
+        this.setParamSimple(map, prefix + "Heartbeat", this.Heartbeat);
+        this.setParamSimple(map, prefix + "MaxChannel", this.MaxChannel);
+        this.setParamSimple(map, prefix + "IdleSince", this.IdleSince);
 
     }
 }

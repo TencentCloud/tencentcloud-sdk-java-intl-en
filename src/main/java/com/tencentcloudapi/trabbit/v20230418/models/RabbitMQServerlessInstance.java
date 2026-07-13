@@ -165,6 +165,20 @@ public class RabbitMQServerlessInstance extends AbstractModel {
     private Long IsolatedTime;
 
     /**
+    * Serverless Extension Fields
+    */
+    @SerializedName("ServerlessExt")
+    @Expose
+    private String ServerlessExt;
+
+    /**
+    * Instance tag list.
+    */
+    @SerializedName("Tags")
+    @Expose
+    private RabbitMQServerlessTag [] Tags;
+
+    /**
      * Get Instance ID 
      * @return InstanceId Instance ID
      */
@@ -488,6 +502,38 @@ public class RabbitMQServerlessInstance extends AbstractModel {
         this.IsolatedTime = IsolatedTime;
     }
 
+    /**
+     * Get Serverless Extension Fields 
+     * @return ServerlessExt Serverless Extension Fields
+     */
+    public String getServerlessExt() {
+        return this.ServerlessExt;
+    }
+
+    /**
+     * Set Serverless Extension Fields
+     * @param ServerlessExt Serverless Extension Fields
+     */
+    public void setServerlessExt(String ServerlessExt) {
+        this.ServerlessExt = ServerlessExt;
+    }
+
+    /**
+     * Get Instance tag list. 
+     * @return Tags Instance tag list.
+     */
+    public RabbitMQServerlessTag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set Instance tag list.
+     * @param Tags Instance tag list.
+     */
+    public void setTags(RabbitMQServerlessTag [] Tags) {
+        this.Tags = Tags;
+    }
+
     public RabbitMQServerlessInstance() {
     }
 
@@ -559,6 +605,15 @@ public class RabbitMQServerlessInstance extends AbstractModel {
         if (source.IsolatedTime != null) {
             this.IsolatedTime = new Long(source.IsolatedTime);
         }
+        if (source.ServerlessExt != null) {
+            this.ServerlessExt = new String(source.ServerlessExt);
+        }
+        if (source.Tags != null) {
+            this.Tags = new RabbitMQServerlessTag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new RabbitMQServerlessTag(source.Tags[i]);
+            }
+        }
     }
 
 
@@ -586,6 +641,8 @@ public class RabbitMQServerlessInstance extends AbstractModel {
         this.setParamSimple(map, prefix + "NodeCount", this.NodeCount);
         this.setParamSimple(map, prefix + "MaxStorage", this.MaxStorage);
         this.setParamSimple(map, prefix + "IsolatedTime", this.IsolatedTime);
+        this.setParamSimple(map, prefix + "ServerlessExt", this.ServerlessExt);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

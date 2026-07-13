@@ -87,6 +87,13 @@ public class RabbitMQClusterSpecInfo extends AbstractModel {
     private Long PublicNetworkTps;
 
     /**
+    * Feature list corresponding to the instance, yes means supported, no means unsupported
+    */
+    @SerializedName("Features")
+    @Expose
+    private String Features;
+
+    /**
      * Get Specifies the cluster specification name. 
      * @return SpecName Specifies the cluster specification name.
      */
@@ -230,6 +237,22 @@ public class RabbitMQClusterSpecInfo extends AbstractModel {
         this.PublicNetworkTps = PublicNetworkTps;
     }
 
+    /**
+     * Get Feature list corresponding to the instance, yes means supported, no means unsupported 
+     * @return Features Feature list corresponding to the instance, yes means supported, no means unsupported
+     */
+    public String getFeatures() {
+        return this.Features;
+    }
+
+    /**
+     * Set Feature list corresponding to the instance, yes means supported, no means unsupported
+     * @param Features Feature list corresponding to the instance, yes means supported, no means unsupported
+     */
+    public void setFeatures(String Features) {
+        this.Features = Features;
+    }
+
     public RabbitMQClusterSpecInfo() {
     }
 
@@ -265,6 +288,9 @@ public class RabbitMQClusterSpecInfo extends AbstractModel {
         if (source.PublicNetworkTps != null) {
             this.PublicNetworkTps = new Long(source.PublicNetworkTps);
         }
+        if (source.Features != null) {
+            this.Features = new String(source.Features);
+        }
     }
 
 
@@ -281,6 +307,7 @@ public class RabbitMQClusterSpecInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "MaxUserNum", this.MaxUserNum);
         this.setParamSimple(map, prefix + "MaxBandWidth", this.MaxBandWidth);
         this.setParamSimple(map, prefix + "PublicNetworkTps", this.PublicNetworkTps);
+        this.setParamSimple(map, prefix + "Features", this.Features);
 
     }
 }

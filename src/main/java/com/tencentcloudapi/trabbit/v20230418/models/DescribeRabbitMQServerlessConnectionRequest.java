@@ -38,35 +38,35 @@ public class DescribeRabbitMQServerlessConnectionRequest extends AbstractModel {
     private String VirtualHost;
 
     /**
-    * Sort by which field. Supported options: channel (channel count), incoming_bytes (inbound traffic size), outgoing_bytes (outbound traffic size)
+    * Sort by which field. Supported values: channel (number of channels), incoming_bytes (inbound traffic volume), outgoing_bytes (outbound traffic volume).
     */
     @SerializedName("SortElement")
     @Expose
     private String SortElement;
 
     /**
-    * Sort order: ASC, DESC
+    * Sorting method: ASC, DESC
     */
     @SerializedName("SortType")
     @Expose
     private String SortType;
 
     /**
-    * 
+    * Pagination parameters, started from which data entry
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 
+    * Page size.
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 
+    * Connection name fuzzy search
     */
     @SerializedName("Name")
     @Expose
@@ -105,80 +105,80 @@ public class DescribeRabbitMQServerlessConnectionRequest extends AbstractModel {
     }
 
     /**
-     * Get Sort by which field. Supported options: channel (channel count), incoming_bytes (inbound traffic size), outgoing_bytes (outbound traffic size) 
-     * @return SortElement Sort by which field. Supported options: channel (channel count), incoming_bytes (inbound traffic size), outgoing_bytes (outbound traffic size)
+     * Get Sort by which field. Supported values: channel (number of channels), incoming_bytes (inbound traffic volume), outgoing_bytes (outbound traffic volume). 
+     * @return SortElement Sort by which field. Supported values: channel (number of channels), incoming_bytes (inbound traffic volume), outgoing_bytes (outbound traffic volume).
      */
     public String getSortElement() {
         return this.SortElement;
     }
 
     /**
-     * Set Sort by which field. Supported options: channel (channel count), incoming_bytes (inbound traffic size), outgoing_bytes (outbound traffic size)
-     * @param SortElement Sort by which field. Supported options: channel (channel count), incoming_bytes (inbound traffic size), outgoing_bytes (outbound traffic size)
+     * Set Sort by which field. Supported values: channel (number of channels), incoming_bytes (inbound traffic volume), outgoing_bytes (outbound traffic volume).
+     * @param SortElement Sort by which field. Supported values: channel (number of channels), incoming_bytes (inbound traffic volume), outgoing_bytes (outbound traffic volume).
      */
     public void setSortElement(String SortElement) {
         this.SortElement = SortElement;
     }
 
     /**
-     * Get Sort order: ASC, DESC 
-     * @return SortType Sort order: ASC, DESC
+     * Get Sorting method: ASC, DESC 
+     * @return SortType Sorting method: ASC, DESC
      */
     public String getSortType() {
         return this.SortType;
     }
 
     /**
-     * Set Sort order: ASC, DESC
-     * @param SortType Sort order: ASC, DESC
+     * Set Sorting method: ASC, DESC
+     * @param SortType Sorting method: ASC, DESC
      */
     public void setSortType(String SortType) {
         this.SortType = SortType;
     }
 
     /**
-     * Get  
-     * @return Offset 
+     * Get Pagination parameters, started from which data entry 
+     * @return Offset Pagination parameters, started from which data entry
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 
-     * @param Offset 
+     * Set Pagination parameters, started from which data entry
+     * @param Offset Pagination parameters, started from which data entry
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get  
-     * @return Limit 
+     * Get Page size. 
+     * @return Limit Page size.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 
-     * @param Limit 
+     * Set Page size.
+     * @param Limit Page size.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get  
-     * @return Name 
+     * Get Connection name fuzzy search 
+     * @return Name Connection name fuzzy search
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 
-     * @param Name 
+     * Set Connection name fuzzy search
+     * @param Name Connection name fuzzy search
      */
     public void setName(String Name) {
         this.Name = Name;

@@ -24,210 +24,233 @@ import java.util.HashMap;
 public class RabbitMQBindingListInfo extends AbstractModel {
 
     /**
-    * binding id.
+    * <p>Routing relationship id</p>
     */
     @SerializedName("BindingId")
     @Expose
     private Long BindingId;
 
     /**
-    * Vhost parameter.
+    * <p>Vhost parameter</p>
     */
     @SerializedName("VirtualHost")
     @Expose
     private String VirtualHost;
 
     /**
-    * Source exchange name.
+    * <p>Source exchange name</p>
     */
     @SerializedName("Source")
     @Expose
     private String Source;
 
     /**
-    * Target type. valid values: queue or exchange.
+    * <p>Target type, queue or exchange</p>
     */
     @SerializedName("DestinationType")
     @Expose
     private String DestinationType;
 
     /**
-    * Target resource name.
+    * <p>Target resource name</p>
     */
     @SerializedName("Destination")
     @Expose
     private String Destination;
 
     /**
-    * Binding key.
+    * <p>Bind key</p>
     */
     @SerializedName("RoutingKey")
     @Expose
     private String RoutingKey;
 
     /**
-    * Source exchange type.
+    * <p>Source exchange type</p>
     */
     @SerializedName("SourceExchangeType")
     @Expose
     private String SourceExchangeType;
 
     /**
-    * Creation time
+    * <p>Creation time.</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * Modification time
+    * <p>Modification time.</p>
     */
     @SerializedName("ModifyTime")
     @Expose
     private String ModifyTime;
 
     /**
-     * Get binding id. 
-     * @return BindingId binding id.
+    * <p>Bind parameter. Parameters can be passed in during binding for header type Exchange. No need to input for other types of Exchange.</p>
+    */
+    @SerializedName("Arguments")
+    @Expose
+    private RabbitMQServerlessKeyValuePair [] Arguments;
+
+    /**
+     * Get <p>Routing relationship id</p> 
+     * @return BindingId <p>Routing relationship id</p>
      */
     public Long getBindingId() {
         return this.BindingId;
     }
 
     /**
-     * Set binding id.
-     * @param BindingId binding id.
+     * Set <p>Routing relationship id</p>
+     * @param BindingId <p>Routing relationship id</p>
      */
     public void setBindingId(Long BindingId) {
         this.BindingId = BindingId;
     }
 
     /**
-     * Get Vhost parameter. 
-     * @return VirtualHost Vhost parameter.
+     * Get <p>Vhost parameter</p> 
+     * @return VirtualHost <p>Vhost parameter</p>
      */
     public String getVirtualHost() {
         return this.VirtualHost;
     }
 
     /**
-     * Set Vhost parameter.
-     * @param VirtualHost Vhost parameter.
+     * Set <p>Vhost parameter</p>
+     * @param VirtualHost <p>Vhost parameter</p>
      */
     public void setVirtualHost(String VirtualHost) {
         this.VirtualHost = VirtualHost;
     }
 
     /**
-     * Get Source exchange name. 
-     * @return Source Source exchange name.
+     * Get <p>Source exchange name</p> 
+     * @return Source <p>Source exchange name</p>
      */
     public String getSource() {
         return this.Source;
     }
 
     /**
-     * Set Source exchange name.
-     * @param Source Source exchange name.
+     * Set <p>Source exchange name</p>
+     * @param Source <p>Source exchange name</p>
      */
     public void setSource(String Source) {
         this.Source = Source;
     }
 
     /**
-     * Get Target type. valid values: queue or exchange. 
-     * @return DestinationType Target type. valid values: queue or exchange.
+     * Get <p>Target type, queue or exchange</p> 
+     * @return DestinationType <p>Target type, queue or exchange</p>
      */
     public String getDestinationType() {
         return this.DestinationType;
     }
 
     /**
-     * Set Target type. valid values: queue or exchange.
-     * @param DestinationType Target type. valid values: queue or exchange.
+     * Set <p>Target type, queue or exchange</p>
+     * @param DestinationType <p>Target type, queue or exchange</p>
      */
     public void setDestinationType(String DestinationType) {
         this.DestinationType = DestinationType;
     }
 
     /**
-     * Get Target resource name. 
-     * @return Destination Target resource name.
+     * Get <p>Target resource name</p> 
+     * @return Destination <p>Target resource name</p>
      */
     public String getDestination() {
         return this.Destination;
     }
 
     /**
-     * Set Target resource name.
-     * @param Destination Target resource name.
+     * Set <p>Target resource name</p>
+     * @param Destination <p>Target resource name</p>
      */
     public void setDestination(String Destination) {
         this.Destination = Destination;
     }
 
     /**
-     * Get Binding key. 
-     * @return RoutingKey Binding key.
+     * Get <p>Bind key</p> 
+     * @return RoutingKey <p>Bind key</p>
      */
     public String getRoutingKey() {
         return this.RoutingKey;
     }
 
     /**
-     * Set Binding key.
-     * @param RoutingKey Binding key.
+     * Set <p>Bind key</p>
+     * @param RoutingKey <p>Bind key</p>
      */
     public void setRoutingKey(String RoutingKey) {
         this.RoutingKey = RoutingKey;
     }
 
     /**
-     * Get Source exchange type. 
-     * @return SourceExchangeType Source exchange type.
+     * Get <p>Source exchange type</p> 
+     * @return SourceExchangeType <p>Source exchange type</p>
      */
     public String getSourceExchangeType() {
         return this.SourceExchangeType;
     }
 
     /**
-     * Set Source exchange type.
-     * @param SourceExchangeType Source exchange type.
+     * Set <p>Source exchange type</p>
+     * @param SourceExchangeType <p>Source exchange type</p>
      */
     public void setSourceExchangeType(String SourceExchangeType) {
         this.SourceExchangeType = SourceExchangeType;
     }
 
     /**
-     * Get Creation time 
-     * @return CreateTime Creation time
+     * Get <p>Creation time.</p> 
+     * @return CreateTime <p>Creation time.</p>
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set Creation time
-     * @param CreateTime Creation time
+     * Set <p>Creation time.</p>
+     * @param CreateTime <p>Creation time.</p>
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get Modification time 
-     * @return ModifyTime Modification time
+     * Get <p>Modification time.</p> 
+     * @return ModifyTime <p>Modification time.</p>
      */
     public String getModifyTime() {
         return this.ModifyTime;
     }
 
     /**
-     * Set Modification time
-     * @param ModifyTime Modification time
+     * Set <p>Modification time.</p>
+     * @param ModifyTime <p>Modification time.</p>
      */
     public void setModifyTime(String ModifyTime) {
         this.ModifyTime = ModifyTime;
+    }
+
+    /**
+     * Get <p>Bind parameter. Parameters can be passed in during binding for header type Exchange. No need to input for other types of Exchange.</p> 
+     * @return Arguments <p>Bind parameter. Parameters can be passed in during binding for header type Exchange. No need to input for other types of Exchange.</p>
+     */
+    public RabbitMQServerlessKeyValuePair [] getArguments() {
+        return this.Arguments;
+    }
+
+    /**
+     * Set <p>Bind parameter. Parameters can be passed in during binding for header type Exchange. No need to input for other types of Exchange.</p>
+     * @param Arguments <p>Bind parameter. Parameters can be passed in during binding for header type Exchange. No need to input for other types of Exchange.</p>
+     */
+    public void setArguments(RabbitMQServerlessKeyValuePair [] Arguments) {
+        this.Arguments = Arguments;
     }
 
     public RabbitMQBindingListInfo() {
@@ -265,6 +288,12 @@ public class RabbitMQBindingListInfo extends AbstractModel {
         if (source.ModifyTime != null) {
             this.ModifyTime = new String(source.ModifyTime);
         }
+        if (source.Arguments != null) {
+            this.Arguments = new RabbitMQServerlessKeyValuePair[source.Arguments.length];
+            for (int i = 0; i < source.Arguments.length; i++) {
+                this.Arguments[i] = new RabbitMQServerlessKeyValuePair(source.Arguments[i]);
+            }
+        }
     }
 
 
@@ -281,6 +310,7 @@ public class RabbitMQBindingListInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "SourceExchangeType", this.SourceExchangeType);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "ModifyTime", this.ModifyTime);
+        this.setParamArrayObj(map, prefix + "Arguments.", this.Arguments);
 
     }
 }

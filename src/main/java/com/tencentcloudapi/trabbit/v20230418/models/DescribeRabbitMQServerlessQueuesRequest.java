@@ -24,209 +24,184 @@ import java.util.HashMap;
 public class DescribeRabbitMQServerlessQueuesRequest extends AbstractModel {
 
     /**
-    * Instance ID
+    * <p>Instance Id</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Vhost parameter.
+    * <p>Vhost parameter</p>
     */
     @SerializedName("VirtualHost")
     @Expose
     private String VirtualHost;
 
     /**
-    * Pagination offset
+    * <p>Pagination offset.</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * Pagination limit
+    * <p>Pagination limit.</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * Search keywords
+    * <p>Search keyword</p>
     */
     @SerializedName("SearchWord")
     @Expose
     private String SearchWord;
 
     /**
-    * Specifies the queue type filter criteria. if it is left blank or set to "all", it indicates classic and quorum queues; if set to "classic", it filters classic queues; if set to "quorum", it filters quorum queues.
+    * <p>Queue type filter criteria. Leave blank or use "all" for classic and quorum queues; "classic" for classic queues; "quorum" for quorum queues.</p>
     */
     @SerializedName("QueueType")
     @Expose
     private String QueueType;
 
     /**
-    * Sorting field.
-ConsumerNumber: specifies the number of online consumers.
-MessageHeapCount specifies the number of message backlogs.
-MessageRateInOut specifies the total production and consumption rate.
-MessageRateIn specifies the production rate.
-MessageRateOut specifies the consumption rate.
+    * <p>Sorting field:<br>messages_ready - message backlog;<br>publish - production rate;<br>deliver - consumption rate;<br>consumers - number of online consumers;</p>
     */
     @SerializedName("SortElement")
     @Expose
     private String SortElement;
 
     /**
-    * Sort order. valid values: ascend or descend.
+    * <p>Sort order, asc or desc</p>
     */
     @SerializedName("SortOrder")
     @Expose
     private String SortOrder;
 
     /**
-     * Get Instance ID 
-     * @return InstanceId Instance ID
+     * Get <p>Instance Id</p> 
+     * @return InstanceId <p>Instance Id</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Instance ID
-     * @param InstanceId Instance ID
+     * Set <p>Instance Id</p>
+     * @param InstanceId <p>Instance Id</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Vhost parameter. 
-     * @return VirtualHost Vhost parameter.
+     * Get <p>Vhost parameter</p> 
+     * @return VirtualHost <p>Vhost parameter</p>
      */
     public String getVirtualHost() {
         return this.VirtualHost;
     }
 
     /**
-     * Set Vhost parameter.
-     * @param VirtualHost Vhost parameter.
+     * Set <p>Vhost parameter</p>
+     * @param VirtualHost <p>Vhost parameter</p>
      */
     public void setVirtualHost(String VirtualHost) {
         this.VirtualHost = VirtualHost;
     }
 
     /**
-     * Get Pagination offset 
-     * @return Offset Pagination offset
+     * Get <p>Pagination offset.</p> 
+     * @return Offset <p>Pagination offset.</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Pagination offset
-     * @param Offset Pagination offset
+     * Set <p>Pagination offset.</p>
+     * @param Offset <p>Pagination offset.</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get Pagination limit 
-     * @return Limit Pagination limit
+     * Get <p>Pagination limit.</p> 
+     * @return Limit <p>Pagination limit.</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Pagination limit
-     * @param Limit Pagination limit
+     * Set <p>Pagination limit.</p>
+     * @param Limit <p>Pagination limit.</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get Search keywords 
-     * @return SearchWord Search keywords
+     * Get <p>Search keyword</p> 
+     * @return SearchWord <p>Search keyword</p>
      */
     public String getSearchWord() {
         return this.SearchWord;
     }
 
     /**
-     * Set Search keywords
-     * @param SearchWord Search keywords
+     * Set <p>Search keyword</p>
+     * @param SearchWord <p>Search keyword</p>
      */
     public void setSearchWord(String SearchWord) {
         this.SearchWord = SearchWord;
     }
 
     /**
-     * Get Specifies the queue type filter criteria. if it is left blank or set to "all", it indicates classic and quorum queues; if set to "classic", it filters classic queues; if set to "quorum", it filters quorum queues. 
-     * @return QueueType Specifies the queue type filter criteria. if it is left blank or set to "all", it indicates classic and quorum queues; if set to "classic", it filters classic queues; if set to "quorum", it filters quorum queues.
+     * Get <p>Queue type filter criteria. Leave blank or use "all" for classic and quorum queues; "classic" for classic queues; "quorum" for quorum queues.</p> 
+     * @return QueueType <p>Queue type filter criteria. Leave blank or use "all" for classic and quorum queues; "classic" for classic queues; "quorum" for quorum queues.</p>
      */
     public String getQueueType() {
         return this.QueueType;
     }
 
     /**
-     * Set Specifies the queue type filter criteria. if it is left blank or set to "all", it indicates classic and quorum queues; if set to "classic", it filters classic queues; if set to "quorum", it filters quorum queues.
-     * @param QueueType Specifies the queue type filter criteria. if it is left blank or set to "all", it indicates classic and quorum queues; if set to "classic", it filters classic queues; if set to "quorum", it filters quorum queues.
+     * Set <p>Queue type filter criteria. Leave blank or use "all" for classic and quorum queues; "classic" for classic queues; "quorum" for quorum queues.</p>
+     * @param QueueType <p>Queue type filter criteria. Leave blank or use "all" for classic and quorum queues; "classic" for classic queues; "quorum" for quorum queues.</p>
      */
     public void setQueueType(String QueueType) {
         this.QueueType = QueueType;
     }
 
     /**
-     * Get Sorting field.
-ConsumerNumber: specifies the number of online consumers.
-MessageHeapCount specifies the number of message backlogs.
-MessageRateInOut specifies the total production and consumption rate.
-MessageRateIn specifies the production rate.
-MessageRateOut specifies the consumption rate. 
-     * @return SortElement Sorting field.
-ConsumerNumber: specifies the number of online consumers.
-MessageHeapCount specifies the number of message backlogs.
-MessageRateInOut specifies the total production and consumption rate.
-MessageRateIn specifies the production rate.
-MessageRateOut specifies the consumption rate.
+     * Get <p>Sorting field:<br>messages_ready - message backlog;<br>publish - production rate;<br>deliver - consumption rate;<br>consumers - number of online consumers;</p> 
+     * @return SortElement <p>Sorting field:<br>messages_ready - message backlog;<br>publish - production rate;<br>deliver - consumption rate;<br>consumers - number of online consumers;</p>
      */
     public String getSortElement() {
         return this.SortElement;
     }
 
     /**
-     * Set Sorting field.
-ConsumerNumber: specifies the number of online consumers.
-MessageHeapCount specifies the number of message backlogs.
-MessageRateInOut specifies the total production and consumption rate.
-MessageRateIn specifies the production rate.
-MessageRateOut specifies the consumption rate.
-     * @param SortElement Sorting field.
-ConsumerNumber: specifies the number of online consumers.
-MessageHeapCount specifies the number of message backlogs.
-MessageRateInOut specifies the total production and consumption rate.
-MessageRateIn specifies the production rate.
-MessageRateOut specifies the consumption rate.
+     * Set <p>Sorting field:<br>messages_ready - message backlog;<br>publish - production rate;<br>deliver - consumption rate;<br>consumers - number of online consumers;</p>
+     * @param SortElement <p>Sorting field:<br>messages_ready - message backlog;<br>publish - production rate;<br>deliver - consumption rate;<br>consumers - number of online consumers;</p>
      */
     public void setSortElement(String SortElement) {
         this.SortElement = SortElement;
     }
 
     /**
-     * Get Sort order. valid values: ascend or descend. 
-     * @return SortOrder Sort order. valid values: ascend or descend.
+     * Get <p>Sort order, asc or desc</p> 
+     * @return SortOrder <p>Sort order, asc or desc</p>
      */
     public String getSortOrder() {
         return this.SortOrder;
     }
 
     /**
-     * Set Sort order. valid values: ascend or descend.
-     * @param SortOrder Sort order. valid values: ascend or descend.
+     * Set <p>Sort order, asc or desc</p>
+     * @param SortOrder <p>Sort order, asc or desc</p>
      */
     public void setSortOrder(String SortOrder) {
         this.SortOrder = SortOrder;

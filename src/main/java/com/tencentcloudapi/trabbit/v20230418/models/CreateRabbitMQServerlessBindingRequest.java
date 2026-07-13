@@ -24,161 +24,161 @@ import java.util.HashMap;
 public class CreateRabbitMQServerlessBindingRequest extends AbstractModel {
 
     /**
-    * Instance ID
+    * <p>Instance Id</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Vhost parameter.
+    * <p>Vhost parameter</p>
     */
     @SerializedName("VirtualHost")
     @Expose
     private String VirtualHost;
 
     /**
-    * Source exchange.
+    * <p>Source exchange</p>
     */
     @SerializedName("Source")
     @Expose
     private String Source;
 
     /**
-    * Target type. valid values: queue or exchange.
+    * <p>Target type, value queue or exchange</p>
     */
     @SerializedName("DestinationType")
     @Expose
     private String DestinationType;
 
     /**
-    * Target queue or exchange.
+    * <p>Target queue or switch</p>
     */
     @SerializedName("Destination")
     @Expose
     private String Destination;
 
     /**
-    * Binding key.
+    * <p>Bind key</p>
     */
     @SerializedName("RoutingKey")
     @Expose
     private String RoutingKey;
 
     /**
-    * 
+    * <p>When creating a Binding for Header type Exchange, parameters can be passed in. No need to input for other types of Exchange.</p>
     */
     @SerializedName("Arguments")
     @Expose
     private RabbitMQServerlessKeyValuePair [] Arguments;
 
     /**
-     * Get Instance ID 
-     * @return InstanceId Instance ID
+     * Get <p>Instance Id</p> 
+     * @return InstanceId <p>Instance Id</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Instance ID
-     * @param InstanceId Instance ID
+     * Set <p>Instance Id</p>
+     * @param InstanceId <p>Instance Id</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Vhost parameter. 
-     * @return VirtualHost Vhost parameter.
+     * Get <p>Vhost parameter</p> 
+     * @return VirtualHost <p>Vhost parameter</p>
      */
     public String getVirtualHost() {
         return this.VirtualHost;
     }
 
     /**
-     * Set Vhost parameter.
-     * @param VirtualHost Vhost parameter.
+     * Set <p>Vhost parameter</p>
+     * @param VirtualHost <p>Vhost parameter</p>
      */
     public void setVirtualHost(String VirtualHost) {
         this.VirtualHost = VirtualHost;
     }
 
     /**
-     * Get Source exchange. 
-     * @return Source Source exchange.
+     * Get <p>Source exchange</p> 
+     * @return Source <p>Source exchange</p>
      */
     public String getSource() {
         return this.Source;
     }
 
     /**
-     * Set Source exchange.
-     * @param Source Source exchange.
+     * Set <p>Source exchange</p>
+     * @param Source <p>Source exchange</p>
      */
     public void setSource(String Source) {
         this.Source = Source;
     }
 
     /**
-     * Get Target type. valid values: queue or exchange. 
-     * @return DestinationType Target type. valid values: queue or exchange.
+     * Get <p>Target type, value queue or exchange</p> 
+     * @return DestinationType <p>Target type, value queue or exchange</p>
      */
     public String getDestinationType() {
         return this.DestinationType;
     }
 
     /**
-     * Set Target type. valid values: queue or exchange.
-     * @param DestinationType Target type. valid values: queue or exchange.
+     * Set <p>Target type, value queue or exchange</p>
+     * @param DestinationType <p>Target type, value queue or exchange</p>
      */
     public void setDestinationType(String DestinationType) {
         this.DestinationType = DestinationType;
     }
 
     /**
-     * Get Target queue or exchange. 
-     * @return Destination Target queue or exchange.
+     * Get <p>Target queue or switch</p> 
+     * @return Destination <p>Target queue or switch</p>
      */
     public String getDestination() {
         return this.Destination;
     }
 
     /**
-     * Set Target queue or exchange.
-     * @param Destination Target queue or exchange.
+     * Set <p>Target queue or switch</p>
+     * @param Destination <p>Target queue or switch</p>
      */
     public void setDestination(String Destination) {
         this.Destination = Destination;
     }
 
     /**
-     * Get Binding key. 
-     * @return RoutingKey Binding key.
+     * Get <p>Bind key</p> 
+     * @return RoutingKey <p>Bind key</p>
      */
     public String getRoutingKey() {
         return this.RoutingKey;
     }
 
     /**
-     * Set Binding key.
-     * @param RoutingKey Binding key.
+     * Set <p>Bind key</p>
+     * @param RoutingKey <p>Bind key</p>
      */
     public void setRoutingKey(String RoutingKey) {
         this.RoutingKey = RoutingKey;
     }
 
     /**
-     * Get  
-     * @return Arguments 
+     * Get <p>When creating a Binding for Header type Exchange, parameters can be passed in. No need to input for other types of Exchange.</p> 
+     * @return Arguments <p>When creating a Binding for Header type Exchange, parameters can be passed in. No need to input for other types of Exchange.</p>
      */
     public RabbitMQServerlessKeyValuePair [] getArguments() {
         return this.Arguments;
     }
 
     /**
-     * Set 
-     * @param Arguments 
+     * Set <p>When creating a Binding for Header type Exchange, parameters can be passed in. No need to input for other types of Exchange.</p>
+     * @param Arguments <p>When creating a Binding for Header type Exchange, parameters can be passed in. No need to input for other types of Exchange.</p>
      */
     public void setArguments(RabbitMQServerlessKeyValuePair [] Arguments) {
         this.Arguments = Arguments;

@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.trabbit.v20230418.models;
+package com.tencentcloudapi.billing.v20180709.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,67 +21,67 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class RabbitMQServerlessKeyValuePair extends AbstractModel {
+public class BudgetInfoApiResponse extends AbstractModel {
 
     /**
-    * Key.
+    * Budget project id
     */
-    @SerializedName("Key")
+    @SerializedName("BudgetId")
     @Expose
-    private String Key;
+    private String BudgetId;
 
     /**
-    * Value.
+    * Update budget time
     */
-    @SerializedName("Value")
+    @SerializedName("UpdateTime")
     @Expose
-    private String Value;
+    private String UpdateTime;
 
     /**
-     * Get Key. 
-     * @return Key Key.
+     * Get Budget project id 
+     * @return BudgetId Budget project id
      */
-    public String getKey() {
-        return this.Key;
+    public String getBudgetId() {
+        return this.BudgetId;
     }
 
     /**
-     * Set Key.
-     * @param Key Key.
+     * Set Budget project id
+     * @param BudgetId Budget project id
      */
-    public void setKey(String Key) {
-        this.Key = Key;
+    public void setBudgetId(String BudgetId) {
+        this.BudgetId = BudgetId;
     }
 
     /**
-     * Get Value. 
-     * @return Value Value.
+     * Get Update budget time 
+     * @return UpdateTime Update budget time
      */
-    public String getValue() {
-        return this.Value;
+    public String getUpdateTime() {
+        return this.UpdateTime;
     }
 
     /**
-     * Set Value.
-     * @param Value Value.
+     * Set Update budget time
+     * @param UpdateTime Update budget time
      */
-    public void setValue(String Value) {
-        this.Value = Value;
+    public void setUpdateTime(String UpdateTime) {
+        this.UpdateTime = UpdateTime;
     }
 
-    public RabbitMQServerlessKeyValuePair() {
+    public BudgetInfoApiResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public RabbitMQServerlessKeyValuePair(RabbitMQServerlessKeyValuePair source) {
-        if (source.Key != null) {
-            this.Key = new String(source.Key);
+    public BudgetInfoApiResponse(BudgetInfoApiResponse source) {
+        if (source.BudgetId != null) {
+            this.BudgetId = new String(source.BudgetId);
         }
-        if (source.Value != null) {
-            this.Value = new String(source.Value);
+        if (source.UpdateTime != null) {
+            this.UpdateTime = new String(source.UpdateTime);
         }
     }
 
@@ -90,8 +90,8 @@ public class RabbitMQServerlessKeyValuePair extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Key", this.Key);
-        this.setParamSimple(map, prefix + "Value", this.Value);
+        this.setParamSimple(map, prefix + "BudgetId", this.BudgetId);
+        this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
 
     }
 }

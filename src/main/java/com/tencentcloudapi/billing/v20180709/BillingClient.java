@@ -72,6 +72,17 @@ public class BillingClient extends AbstractClient{
     }
 
     /**
+     *Create budget information
+     * @param req CreateBudgetRequest
+     * @return CreateBudgetResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateBudgetResponse CreateBudget(CreateBudgetRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateBudget", CreateBudgetResponse.class);
+    }
+
+    /**
      *Create a collection rule.
      * @param req CreateGatherRuleRequest
      * @return CreateGatherRuleResponse
@@ -125,6 +136,17 @@ Currently, the integrated and supported product for purchase includes: Cloud Fir
     public DeleteAllocationUnitResponse DeleteAllocationUnit(DeleteAllocationUnitRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteAllocationUnit", DeleteAllocationUnitResponse.class);
+    }
+
+    /**
+     *Delete the corresponding budget project based on the budget ID
+     * @param req DeleteBudgetRequest
+     * @return DeleteBudgetResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteBudgetResponse DeleteBudget(DeleteBudgetRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteBudget", DeleteBudgetResponse.class);
     }
 
     /**
@@ -440,6 +462,39 @@ Note: The API request may fail due to network instability or other exceptions. I
     }
 
     /**
+     *Retrieve budget details
+     * @param req DescribeBudgetRequest
+     * @return DescribeBudgetResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBudgetResponse DescribeBudget(DescribeBudgetRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeBudget", DescribeBudgetResponse.class);
+    }
+
+    /**
+     *Query budget modification records
+     * @param req DescribeBudgetOperationLogRequest
+     * @return DescribeBudgetOperationLogResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBudgetOperationLogResponse DescribeBudgetOperationLog(DescribeBudgetOperationLogRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeBudgetOperationLog", DescribeBudgetOperationLogResponse.class);
+    }
+
+    /**
+     *Return budget alert records, including budget period, detection time, notification time, reminder type, and content.
+     * @param req DescribeBudgetRemindRecordListRequest
+     * @return DescribeBudgetRemindRecordListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBudgetRemindRecordListResponse DescribeBudgetRemindRecordList(DescribeBudgetRemindRecordListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeBudgetRemindRecordList", DescribeBudgetRemindRecordListResponse.class);
+    }
+
+    /**
      *Query the four-layer matching relationship between the quoted product name and billing products
      * @param req DescribeCPQBillingMappingRequest
      * @return DescribeCPQBillingMappingResponse
@@ -640,6 +695,17 @@ For customers with large-scale consumption detail (for example, monthly consumpt
     public ModifyAllocationUnitResponse ModifyAllocationUnit(ModifyAllocationUnitRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyAllocationUnit", ModifyAllocationUnitResponse.class);
+    }
+
+    /**
+     *Refresh budget information
+     * @param req ModifyBudgetRequest
+     * @return ModifyBudgetResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyBudgetResponse ModifyBudget(ModifyBudgetRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyBudget", ModifyBudgetResponse.class);
     }
 
     /**

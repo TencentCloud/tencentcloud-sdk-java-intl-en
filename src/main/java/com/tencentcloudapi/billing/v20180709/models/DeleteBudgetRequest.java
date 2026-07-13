@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.trabbit.v20230418.models;
+package com.tencentcloudapi.billing.v20180709.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,67 +21,44 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class RabbitMQServerlessKeyValuePair extends AbstractModel {
+public class DeleteBudgetRequest extends AbstractModel {
 
     /**
-    * Key.
+    * Budget project id
     */
-    @SerializedName("Key")
+    @SerializedName("BudgetIds")
     @Expose
-    private String Key;
+    private String [] BudgetIds;
 
     /**
-    * Value.
-    */
-    @SerializedName("Value")
-    @Expose
-    private String Value;
-
-    /**
-     * Get Key. 
-     * @return Key Key.
+     * Get Budget project id 
+     * @return BudgetIds Budget project id
      */
-    public String getKey() {
-        return this.Key;
+    public String [] getBudgetIds() {
+        return this.BudgetIds;
     }
 
     /**
-     * Set Key.
-     * @param Key Key.
+     * Set Budget project id
+     * @param BudgetIds Budget project id
      */
-    public void setKey(String Key) {
-        this.Key = Key;
+    public void setBudgetIds(String [] BudgetIds) {
+        this.BudgetIds = BudgetIds;
     }
 
-    /**
-     * Get Value. 
-     * @return Value Value.
-     */
-    public String getValue() {
-        return this.Value;
-    }
-
-    /**
-     * Set Value.
-     * @param Value Value.
-     */
-    public void setValue(String Value) {
-        this.Value = Value;
-    }
-
-    public RabbitMQServerlessKeyValuePair() {
+    public DeleteBudgetRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public RabbitMQServerlessKeyValuePair(RabbitMQServerlessKeyValuePair source) {
-        if (source.Key != null) {
-            this.Key = new String(source.Key);
-        }
-        if (source.Value != null) {
-            this.Value = new String(source.Value);
+    public DeleteBudgetRequest(DeleteBudgetRequest source) {
+        if (source.BudgetIds != null) {
+            this.BudgetIds = new String[source.BudgetIds.length];
+            for (int i = 0; i < source.BudgetIds.length; i++) {
+                this.BudgetIds[i] = new String(source.BudgetIds[i]);
+            }
         }
     }
 
@@ -90,8 +67,7 @@ public class RabbitMQServerlessKeyValuePair extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Key", this.Key);
-        this.setParamSimple(map, prefix + "Value", this.Value);
+        this.setParamArraySimple(map, prefix + "BudgetIds.", this.BudgetIds);
 
     }
 }

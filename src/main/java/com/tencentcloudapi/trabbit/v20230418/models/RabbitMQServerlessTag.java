@@ -21,67 +21,67 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class RabbitMQServerlessKeyValuePair extends AbstractModel {
+public class RabbitMQServerlessTag extends AbstractModel {
 
     /**
-    * Key.
+    * Tag key.
     */
-    @SerializedName("Key")
+    @SerializedName("TagKey")
     @Expose
-    private String Key;
+    private String TagKey;
 
     /**
-    * Value.
+    * Tag value.
     */
-    @SerializedName("Value")
+    @SerializedName("TagValue")
     @Expose
-    private String Value;
+    private String TagValue;
 
     /**
-     * Get Key. 
-     * @return Key Key.
+     * Get Tag key. 
+     * @return TagKey Tag key.
      */
-    public String getKey() {
-        return this.Key;
+    public String getTagKey() {
+        return this.TagKey;
     }
 
     /**
-     * Set Key.
-     * @param Key Key.
+     * Set Tag key.
+     * @param TagKey Tag key.
      */
-    public void setKey(String Key) {
-        this.Key = Key;
+    public void setTagKey(String TagKey) {
+        this.TagKey = TagKey;
     }
 
     /**
-     * Get Value. 
-     * @return Value Value.
+     * Get Tag value. 
+     * @return TagValue Tag value.
      */
-    public String getValue() {
-        return this.Value;
+    public String getTagValue() {
+        return this.TagValue;
     }
 
     /**
-     * Set Value.
-     * @param Value Value.
+     * Set Tag value.
+     * @param TagValue Tag value.
      */
-    public void setValue(String Value) {
-        this.Value = Value;
+    public void setTagValue(String TagValue) {
+        this.TagValue = TagValue;
     }
 
-    public RabbitMQServerlessKeyValuePair() {
+    public RabbitMQServerlessTag() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public RabbitMQServerlessKeyValuePair(RabbitMQServerlessKeyValuePair source) {
-        if (source.Key != null) {
-            this.Key = new String(source.Key);
+    public RabbitMQServerlessTag(RabbitMQServerlessTag source) {
+        if (source.TagKey != null) {
+            this.TagKey = new String(source.TagKey);
         }
-        if (source.Value != null) {
-            this.Value = new String(source.Value);
+        if (source.TagValue != null) {
+            this.TagValue = new String(source.TagValue);
         }
     }
 
@@ -90,8 +90,8 @@ public class RabbitMQServerlessKeyValuePair extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Key", this.Key);
-        this.setParamSimple(map, prefix + "Value", this.Value);
+        this.setParamSimple(map, prefix + "TagKey", this.TagKey);
+        this.setParamSimple(map, prefix + "TagValue", this.TagValue);
 
     }
 }

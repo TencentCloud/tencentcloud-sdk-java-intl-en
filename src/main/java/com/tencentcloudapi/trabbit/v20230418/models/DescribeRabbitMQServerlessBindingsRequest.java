@@ -24,184 +24,184 @@ import java.util.HashMap;
 public class DescribeRabbitMQServerlessBindingsRequest extends AbstractModel {
 
     /**
-    * Instance ID
+    * <p>Instance Id</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Vhost parameter.
+    * <p>Vhost parameter</p>
     */
     @SerializedName("VirtualHost")
     @Expose
     private String VirtualHost;
 
     /**
-    * Pagination Offset
+    * <p>Pagination offset</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * Pagination Limit
+    * <p>Pagination limit</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * Search keywords. do fuzzy search based on source exchange name, target resource name or binding key.
+    * <p>Search keywords, do fuzzy search based on source exchange name/target resource name</p>
     */
     @SerializedName("SearchWord")
     @Expose
     private String SearchWord;
 
     /**
-    * Search and filter precisely according to the source Exchange.
+    * <p>Precise search and filter based on source Exchange</p>
     */
     @SerializedName("SourceExchange")
     @Expose
     private String SourceExchange;
 
     /**
-    * Specifies precise search filter based on target QueueName. cannot set simultaneously with DestinationExchange filter.
+    * <p>Precise search filter based on target QueueName and DestinationExchange cannot be set both at the same time</p>
     */
     @SerializedName("QueueName")
     @Expose
     private String QueueName;
 
     /**
-    * Precise search filter based on target Exchange. cannot set it simultaneously with QueueName filter.
+    * <p>Precise search filter based on target Exchange and QueueName filter cannot be set both at the same time</p>
     */
     @SerializedName("DestinationExchange")
     @Expose
     private String DestinationExchange;
 
     /**
-     * Get Instance ID 
-     * @return InstanceId Instance ID
+     * Get <p>Instance Id</p> 
+     * @return InstanceId <p>Instance Id</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Instance ID
-     * @param InstanceId Instance ID
+     * Set <p>Instance Id</p>
+     * @param InstanceId <p>Instance Id</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Vhost parameter. 
-     * @return VirtualHost Vhost parameter.
+     * Get <p>Vhost parameter</p> 
+     * @return VirtualHost <p>Vhost parameter</p>
      */
     public String getVirtualHost() {
         return this.VirtualHost;
     }
 
     /**
-     * Set Vhost parameter.
-     * @param VirtualHost Vhost parameter.
+     * Set <p>Vhost parameter</p>
+     * @param VirtualHost <p>Vhost parameter</p>
      */
     public void setVirtualHost(String VirtualHost) {
         this.VirtualHost = VirtualHost;
     }
 
     /**
-     * Get Pagination Offset 
-     * @return Offset Pagination Offset
+     * Get <p>Pagination offset</p> 
+     * @return Offset <p>Pagination offset</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Pagination Offset
-     * @param Offset Pagination Offset
+     * Set <p>Pagination offset</p>
+     * @param Offset <p>Pagination offset</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get Pagination Limit 
-     * @return Limit Pagination Limit
+     * Get <p>Pagination limit</p> 
+     * @return Limit <p>Pagination limit</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Pagination Limit
-     * @param Limit Pagination Limit
+     * Set <p>Pagination limit</p>
+     * @param Limit <p>Pagination limit</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get Search keywords. do fuzzy search based on source exchange name, target resource name or binding key. 
-     * @return SearchWord Search keywords. do fuzzy search based on source exchange name, target resource name or binding key.
+     * Get <p>Search keywords, do fuzzy search based on source exchange name/target resource name</p> 
+     * @return SearchWord <p>Search keywords, do fuzzy search based on source exchange name/target resource name</p>
      */
     public String getSearchWord() {
         return this.SearchWord;
     }
 
     /**
-     * Set Search keywords. do fuzzy search based on source exchange name, target resource name or binding key.
-     * @param SearchWord Search keywords. do fuzzy search based on source exchange name, target resource name or binding key.
+     * Set <p>Search keywords, do fuzzy search based on source exchange name/target resource name</p>
+     * @param SearchWord <p>Search keywords, do fuzzy search based on source exchange name/target resource name</p>
      */
     public void setSearchWord(String SearchWord) {
         this.SearchWord = SearchWord;
     }
 
     /**
-     * Get Search and filter precisely according to the source Exchange. 
-     * @return SourceExchange Search and filter precisely according to the source Exchange.
+     * Get <p>Precise search and filter based on source Exchange</p> 
+     * @return SourceExchange <p>Precise search and filter based on source Exchange</p>
      */
     public String getSourceExchange() {
         return this.SourceExchange;
     }
 
     /**
-     * Set Search and filter precisely according to the source Exchange.
-     * @param SourceExchange Search and filter precisely according to the source Exchange.
+     * Set <p>Precise search and filter based on source Exchange</p>
+     * @param SourceExchange <p>Precise search and filter based on source Exchange</p>
      */
     public void setSourceExchange(String SourceExchange) {
         this.SourceExchange = SourceExchange;
     }
 
     /**
-     * Get Specifies precise search filter based on target QueueName. cannot set simultaneously with DestinationExchange filter. 
-     * @return QueueName Specifies precise search filter based on target QueueName. cannot set simultaneously with DestinationExchange filter.
+     * Get <p>Precise search filter based on target QueueName and DestinationExchange cannot be set both at the same time</p> 
+     * @return QueueName <p>Precise search filter based on target QueueName and DestinationExchange cannot be set both at the same time</p>
      */
     public String getQueueName() {
         return this.QueueName;
     }
 
     /**
-     * Set Specifies precise search filter based on target QueueName. cannot set simultaneously with DestinationExchange filter.
-     * @param QueueName Specifies precise search filter based on target QueueName. cannot set simultaneously with DestinationExchange filter.
+     * Set <p>Precise search filter based on target QueueName and DestinationExchange cannot be set both at the same time</p>
+     * @param QueueName <p>Precise search filter based on target QueueName and DestinationExchange cannot be set both at the same time</p>
      */
     public void setQueueName(String QueueName) {
         this.QueueName = QueueName;
     }
 
     /**
-     * Get Precise search filter based on target Exchange. cannot set it simultaneously with QueueName filter. 
-     * @return DestinationExchange Precise search filter based on target Exchange. cannot set it simultaneously with QueueName filter.
+     * Get <p>Precise search filter based on target Exchange and QueueName filter cannot be set both at the same time</p> 
+     * @return DestinationExchange <p>Precise search filter based on target Exchange and QueueName filter cannot be set both at the same time</p>
      */
     public String getDestinationExchange() {
         return this.DestinationExchange;
     }
 
     /**
-     * Set Precise search filter based on target Exchange. cannot set it simultaneously with QueueName filter.
-     * @param DestinationExchange Precise search filter based on target Exchange. cannot set it simultaneously with QueueName filter.
+     * Set <p>Precise search filter based on target Exchange and QueueName filter cannot be set both at the same time</p>
+     * @param DestinationExchange <p>Precise search filter based on target Exchange and QueueName filter cannot be set both at the same time</p>
      */
     public void setDestinationExchange(String DestinationExchange) {
         this.DestinationExchange = DestinationExchange;

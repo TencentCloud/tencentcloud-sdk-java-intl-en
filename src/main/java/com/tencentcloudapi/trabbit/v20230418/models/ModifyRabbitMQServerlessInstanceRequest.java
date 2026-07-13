@@ -52,6 +52,27 @@ public class ModifyRabbitMQServerlessInstanceRequest extends AbstractModel {
     private Boolean TraceFlag;
 
     /**
+    * Traffic throttling production consumption ratio
+    */
+    @SerializedName("SendReceiveRatio")
+    @Expose
+    private Float SendReceiveRatio;
+
+    /**
+    * Specifies whether to delete all tags. Default value: false.
+    */
+    @SerializedName("DeleteAllTags")
+    @Expose
+    private Boolean DeleteAllTags;
+
+    /**
+    * Modified instance tag list
+    */
+    @SerializedName("InstanceTags")
+    @Expose
+    private RabbitMQServerlessTag [] InstanceTags;
+
+    /**
      * Get Instance ID 
      * @return InstanceId Instance ID
      */
@@ -115,6 +136,54 @@ public class ModifyRabbitMQServerlessInstanceRequest extends AbstractModel {
         this.TraceFlag = TraceFlag;
     }
 
+    /**
+     * Get Traffic throttling production consumption ratio 
+     * @return SendReceiveRatio Traffic throttling production consumption ratio
+     */
+    public Float getSendReceiveRatio() {
+        return this.SendReceiveRatio;
+    }
+
+    /**
+     * Set Traffic throttling production consumption ratio
+     * @param SendReceiveRatio Traffic throttling production consumption ratio
+     */
+    public void setSendReceiveRatio(Float SendReceiveRatio) {
+        this.SendReceiveRatio = SendReceiveRatio;
+    }
+
+    /**
+     * Get Specifies whether to delete all tags. Default value: false. 
+     * @return DeleteAllTags Specifies whether to delete all tags. Default value: false.
+     */
+    public Boolean getDeleteAllTags() {
+        return this.DeleteAllTags;
+    }
+
+    /**
+     * Set Specifies whether to delete all tags. Default value: false.
+     * @param DeleteAllTags Specifies whether to delete all tags. Default value: false.
+     */
+    public void setDeleteAllTags(Boolean DeleteAllTags) {
+        this.DeleteAllTags = DeleteAllTags;
+    }
+
+    /**
+     * Get Modified instance tag list 
+     * @return InstanceTags Modified instance tag list
+     */
+    public RabbitMQServerlessTag [] getInstanceTags() {
+        return this.InstanceTags;
+    }
+
+    /**
+     * Set Modified instance tag list
+     * @param InstanceTags Modified instance tag list
+     */
+    public void setInstanceTags(RabbitMQServerlessTag [] InstanceTags) {
+        this.InstanceTags = InstanceTags;
+    }
+
     public ModifyRabbitMQServerlessInstanceRequest() {
     }
 
@@ -135,6 +204,18 @@ public class ModifyRabbitMQServerlessInstanceRequest extends AbstractModel {
         if (source.TraceFlag != null) {
             this.TraceFlag = new Boolean(source.TraceFlag);
         }
+        if (source.SendReceiveRatio != null) {
+            this.SendReceiveRatio = new Float(source.SendReceiveRatio);
+        }
+        if (source.DeleteAllTags != null) {
+            this.DeleteAllTags = new Boolean(source.DeleteAllTags);
+        }
+        if (source.InstanceTags != null) {
+            this.InstanceTags = new RabbitMQServerlessTag[source.InstanceTags.length];
+            for (int i = 0; i < source.InstanceTags.length; i++) {
+                this.InstanceTags[i] = new RabbitMQServerlessTag(source.InstanceTags[i]);
+            }
+        }
     }
 
 
@@ -146,6 +227,9 @@ public class ModifyRabbitMQServerlessInstanceRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ClusterName", this.ClusterName);
         this.setParamSimple(map, prefix + "Remark", this.Remark);
         this.setParamSimple(map, prefix + "TraceFlag", this.TraceFlag);
+        this.setParamSimple(map, prefix + "SendReceiveRatio", this.SendReceiveRatio);
+        this.setParamSimple(map, prefix + "DeleteAllTags", this.DeleteAllTags);
+        this.setParamArrayObj(map, prefix + "InstanceTags.", this.InstanceTags);
 
     }
 }

@@ -32,7 +32,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Boolean IsPass;
 
     /**
-    * <p>Base64 of the ID image</p>
+    * <p>Base64 of the front side ID image</p>
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("CardImageBase64")
@@ -96,12 +96,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String OriginalCardInfo;
 
     /**
-    * Base64 of the cropped portrait image extracted from the identity document</p>
+    * <p>Document portrait matting</p>
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("HeadImageBase64")
     @Expose
     private String HeadImageBase64;
+
+    /**
+    * <p>Base64 of the back side ID image</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("CardBackImageBase64")
+    @Expose
+    private String CardBackImageBase64;
 
     /**
      * Get <p>Whether the identity authentication or OCR process is successful.</p>
@@ -124,9 +132,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get <p>Base64 of the ID image</p>
+     * Get <p>Base64 of the front side ID image</p>
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return CardImageBase64 <p>Base64 of the ID image</p>
+     * @return CardImageBase64 <p>Base64 of the front side ID image</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getCardImageBase64() {
@@ -134,9 +142,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set <p>Base64 of the ID image</p>
+     * Set <p>Base64 of the front side ID image</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param CardImageBase64 <p>Base64 of the ID image</p>
+     * @param CardImageBase64 <p>Base64 of the front side ID image</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setCardImageBase64(String CardImageBase64) {
@@ -288,9 +296,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Base64 of the cropped portrait image extracted from the identity document</p>
+     * Get <p>Document portrait matting</p>
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return HeadImageBase64 Base64 of the cropped portrait image extracted from the identity document</p>
+     * @return HeadImageBase64 <p>Document portrait matting</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getHeadImageBase64() {
@@ -298,13 +306,33 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Base64 of the cropped portrait image extracted from the identity document</p>
+     * Set <p>Document portrait matting</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param HeadImageBase64 Base64 of the cropped portrait image extracted from the identity document</p>
+     * @param HeadImageBase64 <p>Document portrait matting</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setHeadImageBase64(String HeadImageBase64) {
         this.HeadImageBase64 = HeadImageBase64;
+    }
+
+    /**
+     * Get <p>Base64 of the back side ID image</p>
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return CardBackImageBase64 <p>Base64 of the back side ID image</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getCardBackImageBase64() {
+        return this.CardBackImageBase64;
+    }
+
+    /**
+     * Set <p>Base64 of the back side ID image</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param CardBackImageBase64 <p>Base64 of the back side ID image</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setCardBackImageBase64(String CardBackImageBase64) {
+        this.CardBackImageBase64 = CardBackImageBase64;
     }
 
     public OCRResult() {
@@ -348,6 +376,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.HeadImageBase64 != null) {
             this.HeadImageBase64 = new String(source.HeadImageBase64);
         }
+        if (source.CardBackImageBase64 != null) {
+            this.CardBackImageBase64 = new String(source.CardBackImageBase64);
+        }
     }
 
 
@@ -365,6 +396,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamArraySimple(map, prefix + "WarnCardInfos.", this.WarnCardInfos);
         this.setParamSimple(map, prefix + "OriginalCardInfo", this.OriginalCardInfo);
         this.setParamSimple(map, prefix + "HeadImageBase64", this.HeadImageBase64);
+        this.setParamSimple(map, prefix + "CardBackImageBase64", this.CardBackImageBase64);
 
     }
 }
