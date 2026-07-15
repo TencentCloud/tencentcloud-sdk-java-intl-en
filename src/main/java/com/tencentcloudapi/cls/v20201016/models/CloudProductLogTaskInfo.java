@@ -24,164 +24,210 @@ import java.util.HashMap;
 public class CloudProductLogTaskInfo extends AbstractModel {
 
     /**
-    * Service region
+    * <p>Log service region</p>
     */
     @SerializedName("ClsRegion")
     @Expose
     private String ClsRegion;
 
     /**
-    * Instance ID.
+    * <p>Instance ID.</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Logset ID
+    * <p>Logset ID</p>
     */
     @SerializedName("LogsetId")
     @Expose
     private String LogsetId;
 
     /**
-    * Log topic ID
+    * <p>Log topic ID.</p>
     */
     @SerializedName("TopicId")
     @Expose
     private String TopicId;
 
     /**
-    * Log configuration extended information, generally used for storage of additional log delivery configuration
+    * <p>Extended information for logging configuration, generally used to store additional log delivery configuration</p>
     */
     @SerializedName("Extend")
     @Expose
     private String Extend;
 
     /**
-    * Log type, support enumerate: CDS-AUDIT, CDS-RISK, CDB-AUDIT, TDSQL-C-AUDIT, MongoDB-AUDIT, MongoDB-SlowLog, MongoDB-ErrorLog, TDMYSQL-SLOW, DCDB-AUDIT, DCDB-SLOW, DCDB-ERROR, MariaDB-AUDIT, MariaDB-SLOW, MariaDB-ERROR, PostgreSQL-SLOW, PostgreSQL-ERROR, PostgreSQL-AUDIT, BH-FILELOG, BH-COMMANDLOG, APIS-ACCESS
+    * <p>Log type, supports enumeration: CDS-AUDIT, CDS-RISK, CDB-AUDIT, TDSQL-C-AUDIT, MongoDB-AUDIT, MongoDB-SlowLog, MongoDB-ErrorLog, TDMYSQL-SLOW, DCDB-AUDIT, DCDB-SLOW, DCDB-ERROR, MariaDB-AUDIT, MariaDB-SLOW, MariaDB-ERROR, PostgreSQL-SLOW, PostgreSQL-ERROR, PostgreSQL-AUDIT, BH-FILELOG, BH-COMMANDLOG, APIS-ACCESS</p>
     */
     @SerializedName("LogType")
     @Expose
     private String LogType;
 
     /**
-    * Task status: 0 Creating, 1 Creation completed, 2 Deleting
+    * <p>Task status: 0 creating, 1 creation completed, 2 deleting</p>
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-     * Get Service region 
-     * @return ClsRegion Service region
+    * <p>Tag information of the topic associated with the delivery task</p>
+    */
+    @SerializedName("TopicTags")
+    @Expose
+    private Tag [] TopicTags;
+
+    /**
+    * <p>Tag information of the logset associated with the delivery task</p>
+    */
+    @SerializedName("LogsetTags")
+    @Expose
+    private Tag [] LogsetTags;
+
+    /**
+     * Get <p>Log service region</p> 
+     * @return ClsRegion <p>Log service region</p>
      */
     public String getClsRegion() {
         return this.ClsRegion;
     }
 
     /**
-     * Set Service region
-     * @param ClsRegion Service region
+     * Set <p>Log service region</p>
+     * @param ClsRegion <p>Log service region</p>
      */
     public void setClsRegion(String ClsRegion) {
         this.ClsRegion = ClsRegion;
     }
 
     /**
-     * Get Instance ID. 
-     * @return InstanceId Instance ID.
+     * Get <p>Instance ID.</p> 
+     * @return InstanceId <p>Instance ID.</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Instance ID.
-     * @param InstanceId Instance ID.
+     * Set <p>Instance ID.</p>
+     * @param InstanceId <p>Instance ID.</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Logset ID 
-     * @return LogsetId Logset ID
+     * Get <p>Logset ID</p> 
+     * @return LogsetId <p>Logset ID</p>
      */
     public String getLogsetId() {
         return this.LogsetId;
     }
 
     /**
-     * Set Logset ID
-     * @param LogsetId Logset ID
+     * Set <p>Logset ID</p>
+     * @param LogsetId <p>Logset ID</p>
      */
     public void setLogsetId(String LogsetId) {
         this.LogsetId = LogsetId;
     }
 
     /**
-     * Get Log topic ID 
-     * @return TopicId Log topic ID
+     * Get <p>Log topic ID.</p> 
+     * @return TopicId <p>Log topic ID.</p>
      */
     public String getTopicId() {
         return this.TopicId;
     }
 
     /**
-     * Set Log topic ID
-     * @param TopicId Log topic ID
+     * Set <p>Log topic ID.</p>
+     * @param TopicId <p>Log topic ID.</p>
      */
     public void setTopicId(String TopicId) {
         this.TopicId = TopicId;
     }
 
     /**
-     * Get Log configuration extended information, generally used for storage of additional log delivery configuration 
-     * @return Extend Log configuration extended information, generally used for storage of additional log delivery configuration
+     * Get <p>Extended information for logging configuration, generally used to store additional log delivery configuration</p> 
+     * @return Extend <p>Extended information for logging configuration, generally used to store additional log delivery configuration</p>
      */
     public String getExtend() {
         return this.Extend;
     }
 
     /**
-     * Set Log configuration extended information, generally used for storage of additional log delivery configuration
-     * @param Extend Log configuration extended information, generally used for storage of additional log delivery configuration
+     * Set <p>Extended information for logging configuration, generally used to store additional log delivery configuration</p>
+     * @param Extend <p>Extended information for logging configuration, generally used to store additional log delivery configuration</p>
      */
     public void setExtend(String Extend) {
         this.Extend = Extend;
     }
 
     /**
-     * Get Log type, support enumerate: CDS-AUDIT, CDS-RISK, CDB-AUDIT, TDSQL-C-AUDIT, MongoDB-AUDIT, MongoDB-SlowLog, MongoDB-ErrorLog, TDMYSQL-SLOW, DCDB-AUDIT, DCDB-SLOW, DCDB-ERROR, MariaDB-AUDIT, MariaDB-SLOW, MariaDB-ERROR, PostgreSQL-SLOW, PostgreSQL-ERROR, PostgreSQL-AUDIT, BH-FILELOG, BH-COMMANDLOG, APIS-ACCESS 
-     * @return LogType Log type, support enumerate: CDS-AUDIT, CDS-RISK, CDB-AUDIT, TDSQL-C-AUDIT, MongoDB-AUDIT, MongoDB-SlowLog, MongoDB-ErrorLog, TDMYSQL-SLOW, DCDB-AUDIT, DCDB-SLOW, DCDB-ERROR, MariaDB-AUDIT, MariaDB-SLOW, MariaDB-ERROR, PostgreSQL-SLOW, PostgreSQL-ERROR, PostgreSQL-AUDIT, BH-FILELOG, BH-COMMANDLOG, APIS-ACCESS
+     * Get <p>Log type, supports enumeration: CDS-AUDIT, CDS-RISK, CDB-AUDIT, TDSQL-C-AUDIT, MongoDB-AUDIT, MongoDB-SlowLog, MongoDB-ErrorLog, TDMYSQL-SLOW, DCDB-AUDIT, DCDB-SLOW, DCDB-ERROR, MariaDB-AUDIT, MariaDB-SLOW, MariaDB-ERROR, PostgreSQL-SLOW, PostgreSQL-ERROR, PostgreSQL-AUDIT, BH-FILELOG, BH-COMMANDLOG, APIS-ACCESS</p> 
+     * @return LogType <p>Log type, supports enumeration: CDS-AUDIT, CDS-RISK, CDB-AUDIT, TDSQL-C-AUDIT, MongoDB-AUDIT, MongoDB-SlowLog, MongoDB-ErrorLog, TDMYSQL-SLOW, DCDB-AUDIT, DCDB-SLOW, DCDB-ERROR, MariaDB-AUDIT, MariaDB-SLOW, MariaDB-ERROR, PostgreSQL-SLOW, PostgreSQL-ERROR, PostgreSQL-AUDIT, BH-FILELOG, BH-COMMANDLOG, APIS-ACCESS</p>
      */
     public String getLogType() {
         return this.LogType;
     }
 
     /**
-     * Set Log type, support enumerate: CDS-AUDIT, CDS-RISK, CDB-AUDIT, TDSQL-C-AUDIT, MongoDB-AUDIT, MongoDB-SlowLog, MongoDB-ErrorLog, TDMYSQL-SLOW, DCDB-AUDIT, DCDB-SLOW, DCDB-ERROR, MariaDB-AUDIT, MariaDB-SLOW, MariaDB-ERROR, PostgreSQL-SLOW, PostgreSQL-ERROR, PostgreSQL-AUDIT, BH-FILELOG, BH-COMMANDLOG, APIS-ACCESS
-     * @param LogType Log type, support enumerate: CDS-AUDIT, CDS-RISK, CDB-AUDIT, TDSQL-C-AUDIT, MongoDB-AUDIT, MongoDB-SlowLog, MongoDB-ErrorLog, TDMYSQL-SLOW, DCDB-AUDIT, DCDB-SLOW, DCDB-ERROR, MariaDB-AUDIT, MariaDB-SLOW, MariaDB-ERROR, PostgreSQL-SLOW, PostgreSQL-ERROR, PostgreSQL-AUDIT, BH-FILELOG, BH-COMMANDLOG, APIS-ACCESS
+     * Set <p>Log type, supports enumeration: CDS-AUDIT, CDS-RISK, CDB-AUDIT, TDSQL-C-AUDIT, MongoDB-AUDIT, MongoDB-SlowLog, MongoDB-ErrorLog, TDMYSQL-SLOW, DCDB-AUDIT, DCDB-SLOW, DCDB-ERROR, MariaDB-AUDIT, MariaDB-SLOW, MariaDB-ERROR, PostgreSQL-SLOW, PostgreSQL-ERROR, PostgreSQL-AUDIT, BH-FILELOG, BH-COMMANDLOG, APIS-ACCESS</p>
+     * @param LogType <p>Log type, supports enumeration: CDS-AUDIT, CDS-RISK, CDB-AUDIT, TDSQL-C-AUDIT, MongoDB-AUDIT, MongoDB-SlowLog, MongoDB-ErrorLog, TDMYSQL-SLOW, DCDB-AUDIT, DCDB-SLOW, DCDB-ERROR, MariaDB-AUDIT, MariaDB-SLOW, MariaDB-ERROR, PostgreSQL-SLOW, PostgreSQL-ERROR, PostgreSQL-AUDIT, BH-FILELOG, BH-COMMANDLOG, APIS-ACCESS</p>
      */
     public void setLogType(String LogType) {
         this.LogType = LogType;
     }
 
     /**
-     * Get Task status: 0 Creating, 1 Creation completed, 2 Deleting 
-     * @return Status Task status: 0 Creating, 1 Creation completed, 2 Deleting
+     * Get <p>Task status: 0 creating, 1 creation completed, 2 deleting</p> 
+     * @return Status <p>Task status: 0 creating, 1 creation completed, 2 deleting</p>
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Task status: 0 Creating, 1 Creation completed, 2 Deleting
-     * @param Status Task status: 0 Creating, 1 Creation completed, 2 Deleting
+     * Set <p>Task status: 0 creating, 1 creation completed, 2 deleting</p>
+     * @param Status <p>Task status: 0 creating, 1 creation completed, 2 deleting</p>
      */
     public void setStatus(Long Status) {
         this.Status = Status;
+    }
+
+    /**
+     * Get <p>Tag information of the topic associated with the delivery task</p> 
+     * @return TopicTags <p>Tag information of the topic associated with the delivery task</p>
+     */
+    public Tag [] getTopicTags() {
+        return this.TopicTags;
+    }
+
+    /**
+     * Set <p>Tag information of the topic associated with the delivery task</p>
+     * @param TopicTags <p>Tag information of the topic associated with the delivery task</p>
+     */
+    public void setTopicTags(Tag [] TopicTags) {
+        this.TopicTags = TopicTags;
+    }
+
+    /**
+     * Get <p>Tag information of the logset associated with the delivery task</p> 
+     * @return LogsetTags <p>Tag information of the logset associated with the delivery task</p>
+     */
+    public Tag [] getLogsetTags() {
+        return this.LogsetTags;
+    }
+
+    /**
+     * Set <p>Tag information of the logset associated with the delivery task</p>
+     * @param LogsetTags <p>Tag information of the logset associated with the delivery task</p>
+     */
+    public void setLogsetTags(Tag [] LogsetTags) {
+        this.LogsetTags = LogsetTags;
     }
 
     public CloudProductLogTaskInfo() {
@@ -213,6 +259,18 @@ public class CloudProductLogTaskInfo extends AbstractModel {
         if (source.Status != null) {
             this.Status = new Long(source.Status);
         }
+        if (source.TopicTags != null) {
+            this.TopicTags = new Tag[source.TopicTags.length];
+            for (int i = 0; i < source.TopicTags.length; i++) {
+                this.TopicTags[i] = new Tag(source.TopicTags[i]);
+            }
+        }
+        if (source.LogsetTags != null) {
+            this.LogsetTags = new Tag[source.LogsetTags.length];
+            for (int i = 0; i < source.LogsetTags.length; i++) {
+                this.LogsetTags[i] = new Tag(source.LogsetTags[i]);
+            }
+        }
     }
 
 
@@ -227,6 +285,8 @@ public class CloudProductLogTaskInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "Extend", this.Extend);
         this.setParamSimple(map, prefix + "LogType", this.LogType);
         this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamArrayObj(map, prefix + "TopicTags.", this.TopicTags);
+        this.setParamArrayObj(map, prefix + "LogsetTags.", this.LogsetTags);
 
     }
 }

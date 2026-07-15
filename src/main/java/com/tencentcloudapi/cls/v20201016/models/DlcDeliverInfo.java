@@ -24,371 +24,440 @@ import java.util.HashMap;
 public class DlcDeliverInfo extends AbstractModel {
 
     /**
-    * Task ID.
+    * <p>Task id.</p>
     */
     @SerializedName("TaskId")
     @Expose
     private String TaskId;
 
     /**
-    * Account id.
+    * <p>Account id.</p>
     */
     @SerializedName("Uin")
     @Expose
     private Long Uin;
 
     /**
-    * Log topic ID.
+    * <p>Log topic id.</p>
     */
     @SerializedName("TopicId")
     @Expose
     private String TopicId;
 
     /**
-    * Task name.
+    * <p>Task name.</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * Delivery Type. Valid values: 0: real-time delivery; 1: historic delivery.
+    * <p>Delivery Type, 0: real-time delivery, 1: history delivery</p>
     */
     @SerializedName("DeliverType")
     @Expose
     private Long DeliverType;
 
     /**
-    * Delivery file size in MB
+    * <p>Delivery file size, in MB.</p>
     */
     @SerializedName("MaxSize")
     @Expose
     private Long MaxSize;
 
     /**
-    * Delivery interval in seconds
+    * <p>Delivery interval in seconds</p>
     */
     @SerializedName("Interval")
     @Expose
     private Long Interval;
 
     /**
-    * Start time of the delivery time range
+    * <p>Start time of the delivery time range</p>
     */
     @SerializedName("StartTime")
     @Expose
     private Long StartTime;
 
     /**
-    * End time of the delivery time range
+    * <p>End time of the delivery time range</p>
     */
     @SerializedName("EndTime")
     @Expose
     private Long EndTime;
 
     /**
-    * dlc configuration message
+    * <p>dlc configuration message</p>
     */
     @SerializedName("DlcInfo")
     @Expose
     private DlcInfo DlcInfo;
 
     /**
-    * Whether to enable delivery service log. 1 for disabled, 2 for enabled
+    * <p>Whether to enable delivery service log. 1 Disabled, 2 Enabled</p>
     */
     @SerializedName("HasServicesLog")
     @Expose
     private Long HasServicesLog;
 
     /**
-    * Task status.
+    * <p>Task status.</p>
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * Task progress. Historic delivery tasks take effect.
+    * <p>Task progress. Historic delivery tasks take effect.</p>
     */
     @SerializedName("Progress")
     @Expose
     private Long Progress;
 
     /**
-    * Topic type of logs. 0: standard topic; 1: metric topic.
+    * <p>Log topic type. 0: Standard topic, 1: Metric topic</p>
     */
     @SerializedName("BizType")
     @Expose
     private Long BizType;
 
     /**
-    * Task creation time.
+    * <p>Task creation time.</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private Long CreateTime;
 
     /**
-    * Task modification time.
+    * <p>Task last modified.</p>
     */
     @SerializedName("UpdateTime")
     @Expose
     private Long UpdateTime;
 
     /**
-     * Get Task ID. 
-     * @return TaskId Task ID.
+    * <p>Auto-create dlc field</p><p>Default value: false</p><p>When there are additional fields in your log, the system will automatically ship them to DLC.</p>
+    */
+    @SerializedName("AutoCreateField")
+    @Expose
+    private Boolean AutoCreateField;
+
+    /**
+    * <p>Store logs with delivery failure in a DLC table</p>
+    */
+    @SerializedName("DlcFailHandle")
+    @Expose
+    private DlcFailHandle DlcFailHandle;
+
+    /**
+    * <p>Log pre-filtering - Perform pre-filtering process on the original data for data ingestion into Splunk.</p>
+    */
+    @SerializedName("DSLFilter")
+    @Expose
+    private String DSLFilter;
+
+    /**
+     * Get <p>Task id.</p> 
+     * @return TaskId <p>Task id.</p>
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set Task ID.
-     * @param TaskId Task ID.
+     * Set <p>Task id.</p>
+     * @param TaskId <p>Task id.</p>
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;
     }
 
     /**
-     * Get Account id. 
-     * @return Uin Account id.
+     * Get <p>Account id.</p> 
+     * @return Uin <p>Account id.</p>
      */
     public Long getUin() {
         return this.Uin;
     }
 
     /**
-     * Set Account id.
-     * @param Uin Account id.
+     * Set <p>Account id.</p>
+     * @param Uin <p>Account id.</p>
      */
     public void setUin(Long Uin) {
         this.Uin = Uin;
     }
 
     /**
-     * Get Log topic ID. 
-     * @return TopicId Log topic ID.
+     * Get <p>Log topic id.</p> 
+     * @return TopicId <p>Log topic id.</p>
      */
     public String getTopicId() {
         return this.TopicId;
     }
 
     /**
-     * Set Log topic ID.
-     * @param TopicId Log topic ID.
+     * Set <p>Log topic id.</p>
+     * @param TopicId <p>Log topic id.</p>
      */
     public void setTopicId(String TopicId) {
         this.TopicId = TopicId;
     }
 
     /**
-     * Get Task name. 
-     * @return Name Task name.
+     * Get <p>Task name.</p> 
+     * @return Name <p>Task name.</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Task name.
-     * @param Name Task name.
+     * Set <p>Task name.</p>
+     * @param Name <p>Task name.</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get Delivery Type. Valid values: 0: real-time delivery; 1: historic delivery. 
-     * @return DeliverType Delivery Type. Valid values: 0: real-time delivery; 1: historic delivery.
+     * Get <p>Delivery Type, 0: real-time delivery, 1: history delivery</p> 
+     * @return DeliverType <p>Delivery Type, 0: real-time delivery, 1: history delivery</p>
      */
     public Long getDeliverType() {
         return this.DeliverType;
     }
 
     /**
-     * Set Delivery Type. Valid values: 0: real-time delivery; 1: historic delivery.
-     * @param DeliverType Delivery Type. Valid values: 0: real-time delivery; 1: historic delivery.
+     * Set <p>Delivery Type, 0: real-time delivery, 1: history delivery</p>
+     * @param DeliverType <p>Delivery Type, 0: real-time delivery, 1: history delivery</p>
      */
     public void setDeliverType(Long DeliverType) {
         this.DeliverType = DeliverType;
     }
 
     /**
-     * Get Delivery file size in MB 
-     * @return MaxSize Delivery file size in MB
+     * Get <p>Delivery file size, in MB.</p> 
+     * @return MaxSize <p>Delivery file size, in MB.</p>
      */
     public Long getMaxSize() {
         return this.MaxSize;
     }
 
     /**
-     * Set Delivery file size in MB
-     * @param MaxSize Delivery file size in MB
+     * Set <p>Delivery file size, in MB.</p>
+     * @param MaxSize <p>Delivery file size, in MB.</p>
      */
     public void setMaxSize(Long MaxSize) {
         this.MaxSize = MaxSize;
     }
 
     /**
-     * Get Delivery interval in seconds 
-     * @return Interval Delivery interval in seconds
+     * Get <p>Delivery interval in seconds</p> 
+     * @return Interval <p>Delivery interval in seconds</p>
      */
     public Long getInterval() {
         return this.Interval;
     }
 
     /**
-     * Set Delivery interval in seconds
-     * @param Interval Delivery interval in seconds
+     * Set <p>Delivery interval in seconds</p>
+     * @param Interval <p>Delivery interval in seconds</p>
      */
     public void setInterval(Long Interval) {
         this.Interval = Interval;
     }
 
     /**
-     * Get Start time of the delivery time range 
-     * @return StartTime Start time of the delivery time range
+     * Get <p>Start time of the delivery time range</p> 
+     * @return StartTime <p>Start time of the delivery time range</p>
      */
     public Long getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set Start time of the delivery time range
-     * @param StartTime Start time of the delivery time range
+     * Set <p>Start time of the delivery time range</p>
+     * @param StartTime <p>Start time of the delivery time range</p>
      */
     public void setStartTime(Long StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get End time of the delivery time range 
-     * @return EndTime End time of the delivery time range
+     * Get <p>End time of the delivery time range</p> 
+     * @return EndTime <p>End time of the delivery time range</p>
      */
     public Long getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set End time of the delivery time range
-     * @param EndTime End time of the delivery time range
+     * Set <p>End time of the delivery time range</p>
+     * @param EndTime <p>End time of the delivery time range</p>
      */
     public void setEndTime(Long EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get dlc configuration message 
-     * @return DlcInfo dlc configuration message
+     * Get <p>dlc configuration message</p> 
+     * @return DlcInfo <p>dlc configuration message</p>
      */
     public DlcInfo getDlcInfo() {
         return this.DlcInfo;
     }
 
     /**
-     * Set dlc configuration message
-     * @param DlcInfo dlc configuration message
+     * Set <p>dlc configuration message</p>
+     * @param DlcInfo <p>dlc configuration message</p>
      */
     public void setDlcInfo(DlcInfo DlcInfo) {
         this.DlcInfo = DlcInfo;
     }
 
     /**
-     * Get Whether to enable delivery service log. 1 for disabled, 2 for enabled 
-     * @return HasServicesLog Whether to enable delivery service log. 1 for disabled, 2 for enabled
+     * Get <p>Whether to enable delivery service log. 1 Disabled, 2 Enabled</p> 
+     * @return HasServicesLog <p>Whether to enable delivery service log. 1 Disabled, 2 Enabled</p>
      */
     public Long getHasServicesLog() {
         return this.HasServicesLog;
     }
 
     /**
-     * Set Whether to enable delivery service log. 1 for disabled, 2 for enabled
-     * @param HasServicesLog Whether to enable delivery service log. 1 for disabled, 2 for enabled
+     * Set <p>Whether to enable delivery service log. 1 Disabled, 2 Enabled</p>
+     * @param HasServicesLog <p>Whether to enable delivery service log. 1 Disabled, 2 Enabled</p>
      */
     public void setHasServicesLog(Long HasServicesLog) {
         this.HasServicesLog = HasServicesLog;
     }
 
     /**
-     * Get Task status. 
-     * @return Status Task status.
+     * Get <p>Task status.</p> 
+     * @return Status <p>Task status.</p>
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Task status.
-     * @param Status Task status.
+     * Set <p>Task status.</p>
+     * @param Status <p>Task status.</p>
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get Task progress. Historic delivery tasks take effect. 
-     * @return Progress Task progress. Historic delivery tasks take effect.
+     * Get <p>Task progress. Historic delivery tasks take effect.</p> 
+     * @return Progress <p>Task progress. Historic delivery tasks take effect.</p>
      */
     public Long getProgress() {
         return this.Progress;
     }
 
     /**
-     * Set Task progress. Historic delivery tasks take effect.
-     * @param Progress Task progress. Historic delivery tasks take effect.
+     * Set <p>Task progress. Historic delivery tasks take effect.</p>
+     * @param Progress <p>Task progress. Historic delivery tasks take effect.</p>
      */
     public void setProgress(Long Progress) {
         this.Progress = Progress;
     }
 
     /**
-     * Get Topic type of logs. 0: standard topic; 1: metric topic. 
-     * @return BizType Topic type of logs. 0: standard topic; 1: metric topic.
+     * Get <p>Log topic type. 0: Standard topic, 1: Metric topic</p> 
+     * @return BizType <p>Log topic type. 0: Standard topic, 1: Metric topic</p>
      */
     public Long getBizType() {
         return this.BizType;
     }
 
     /**
-     * Set Topic type of logs. 0: standard topic; 1: metric topic.
-     * @param BizType Topic type of logs. 0: standard topic; 1: metric topic.
+     * Set <p>Log topic type. 0: Standard topic, 1: Metric topic</p>
+     * @param BizType <p>Log topic type. 0: Standard topic, 1: Metric topic</p>
      */
     public void setBizType(Long BizType) {
         this.BizType = BizType;
     }
 
     /**
-     * Get Task creation time. 
-     * @return CreateTime Task creation time.
+     * Get <p>Task creation time.</p> 
+     * @return CreateTime <p>Task creation time.</p>
      */
     public Long getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set Task creation time.
-     * @param CreateTime Task creation time.
+     * Set <p>Task creation time.</p>
+     * @param CreateTime <p>Task creation time.</p>
      */
     public void setCreateTime(Long CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get Task modification time. 
-     * @return UpdateTime Task modification time.
+     * Get <p>Task last modified.</p> 
+     * @return UpdateTime <p>Task last modified.</p>
      */
     public Long getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set Task modification time.
-     * @param UpdateTime Task modification time.
+     * Set <p>Task last modified.</p>
+     * @param UpdateTime <p>Task last modified.</p>
      */
     public void setUpdateTime(Long UpdateTime) {
         this.UpdateTime = UpdateTime;
+    }
+
+    /**
+     * Get <p>Auto-create dlc field</p><p>Default value: false</p><p>When there are additional fields in your log, the system will automatically ship them to DLC.</p> 
+     * @return AutoCreateField <p>Auto-create dlc field</p><p>Default value: false</p><p>When there are additional fields in your log, the system will automatically ship them to DLC.</p>
+     */
+    public Boolean getAutoCreateField() {
+        return this.AutoCreateField;
+    }
+
+    /**
+     * Set <p>Auto-create dlc field</p><p>Default value: false</p><p>When there are additional fields in your log, the system will automatically ship them to DLC.</p>
+     * @param AutoCreateField <p>Auto-create dlc field</p><p>Default value: false</p><p>When there are additional fields in your log, the system will automatically ship them to DLC.</p>
+     */
+    public void setAutoCreateField(Boolean AutoCreateField) {
+        this.AutoCreateField = AutoCreateField;
+    }
+
+    /**
+     * Get <p>Store logs with delivery failure in a DLC table</p> 
+     * @return DlcFailHandle <p>Store logs with delivery failure in a DLC table</p>
+     */
+    public DlcFailHandle getDlcFailHandle() {
+        return this.DlcFailHandle;
+    }
+
+    /**
+     * Set <p>Store logs with delivery failure in a DLC table</p>
+     * @param DlcFailHandle <p>Store logs with delivery failure in a DLC table</p>
+     */
+    public void setDlcFailHandle(DlcFailHandle DlcFailHandle) {
+        this.DlcFailHandle = DlcFailHandle;
+    }
+
+    /**
+     * Get <p>Log pre-filtering - Perform pre-filtering process on the original data for data ingestion into Splunk.</p> 
+     * @return DSLFilter <p>Log pre-filtering - Perform pre-filtering process on the original data for data ingestion into Splunk.</p>
+     */
+    public String getDSLFilter() {
+        return this.DSLFilter;
+    }
+
+    /**
+     * Set <p>Log pre-filtering - Perform pre-filtering process on the original data for data ingestion into Splunk.</p>
+     * @param DSLFilter <p>Log pre-filtering - Perform pre-filtering process on the original data for data ingestion into Splunk.</p>
+     */
+    public void setDSLFilter(String DSLFilter) {
+        this.DSLFilter = DSLFilter;
     }
 
     public DlcDeliverInfo() {
@@ -447,6 +516,15 @@ public class DlcDeliverInfo extends AbstractModel {
         if (source.UpdateTime != null) {
             this.UpdateTime = new Long(source.UpdateTime);
         }
+        if (source.AutoCreateField != null) {
+            this.AutoCreateField = new Boolean(source.AutoCreateField);
+        }
+        if (source.DlcFailHandle != null) {
+            this.DlcFailHandle = new DlcFailHandle(source.DlcFailHandle);
+        }
+        if (source.DSLFilter != null) {
+            this.DSLFilter = new String(source.DSLFilter);
+        }
     }
 
 
@@ -470,6 +548,9 @@ public class DlcDeliverInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "BizType", this.BizType);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
+        this.setParamSimple(map, prefix + "AutoCreateField", this.AutoCreateField);
+        this.setParamObj(map, prefix + "DlcFailHandle.", this.DlcFailHandle);
+        this.setParamSimple(map, prefix + "DSLFilter", this.DSLFilter);
 
     }
 }

@@ -24,463 +24,486 @@ import java.util.HashMap;
 public class ScheduledSqlTaskInfo extends AbstractModel {
 
     /**
-    * ScheduledSql task id
+    * <p>ScheduledSql task id</p>
     */
     @SerializedName("TaskId")
     @Expose
     private String TaskId;
 
     /**
-    * ScheduledSql task name
+    * <p>ScheduledSql task name</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * Source Log Topic ID
+    * <p>Source log topic id.</p>
     */
     @SerializedName("SrcTopicId")
     @Expose
     private String SrcTopicId;
 
     /**
-    * Source Log Topic Name
+    * <p>source log topic name</p>
     */
     @SerializedName("SrcTopicName")
     @Expose
     private String SrcTopicName;
 
     /**
-    * Scheduled SQL analysis of target topic
+    * <p>Scheduled SQL analysis target topic</p>
     */
     @SerializedName("DstResource")
     @Expose
     private ScheduledSqlResouceInfo DstResource;
 
     /**
-    * Task creation time. Format: yyyy-MM-dd HH:mm:ss
+    * <p>Task creation time. Format: yyyy-MM-dd HH:mm:ss</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * Task update time. Format: yyyy-MM-dd HH:mm:ss
+    * <p>Task update time. Format: yyyy-MM-dd HH:mm:ss</p>
     */
     @SerializedName("UpdateTime")
     @Expose
     private String UpdateTime;
 
     /**
-    * Task status: 1: Running 2: Stop 3: Exception - Source log topic not found 4: Exception - target topic not found5: Access permission issue 6: Internal failure 7: Other faults
+    * <p>Task status, 1: Running 2: Stopped 3: Exception - Source log topic not found 4: Exception - Target topic not found</p><p>5: Access permission issue 6: Internal fault 7: Other faults</p>
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * Task status: 1 Enabled, 2 Disabled
+    * <p>Task status: 1 Enabled, 2 Disabled</p>
     */
     @SerializedName("EnableFlag")
     @Expose
     private Long EnableFlag;
 
     /**
-    * Queries statements
+    * <p>Query statement</p>
     */
     @SerializedName("ScheduledSqlContent")
     @Expose
     private String ScheduledSqlContent;
 
     /**
-    * Schedule start time. Format: yyyy-MM-dd HH:mm:ss
+    * <p>Schedule start time. Format: yyyy-MM-dd HH:mm:ss</p>
     */
     @SerializedName("ProcessStartTime")
     @Expose
     private String ProcessStartTime;
 
     /**
-    * Schedule Type: 1 Continuous Running 2 Specified Time Range
+    * <p>Schedule Type: 1 Continuous Running 2 Specified Time Range</p>
     */
     @SerializedName("ProcessType")
     @Expose
     private Long ProcessType;
 
     /**
-    * Schedule End Time, format: yyyy-MM-dd HH:mm:ss, required when process_type=2
+    * <p>Schedule End Time, format: yyyy-MM-dd HH:mm:ss, required when process_type=2</p>
     */
     @SerializedName("ProcessEndTime")
     @Expose
     private String ProcessEndTime;
 
     /**
-    * Scheduling cycle (minutes), 1-1440 minutes
+    * <p>Scheduling Interval (Minutes), 1-1440 minutes</p>
     */
     @SerializedName("ProcessPeriod")
     @Expose
     private Long ProcessPeriod;
 
     /**
-    * Query Time Window. @m-15m, @m, meaning the last 15 minutes
+    * <p>Query Time Window. @m-15m, @m, meaning the last 15 minutes</p>
     */
     @SerializedName("ProcessTimeWindow")
     @Expose
     private String ProcessTimeWindow;
 
     /**
-    * Execution delay (seconds), 0-120 seconds, default 60
+    * <p>Execution delay (seconds), 0-120 seconds, default 60 seconds</p>
     */
     @SerializedName("ProcessDelay")
     @Expose
     private Long ProcessDelay;
 
     /**
-    * Regional information of the source topicId. Supported regions are listed in the region list document (https://www.tencentcloud.com/document/api/614/56474?from_cn_redirect=1#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8).
+    * <p>Regional information of the source topicId. For supported regions, see the <a href="https://www.tencentcloud.com/document/api/614/56474?from_cn_redirect=1#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8">region list</a> document.</p>
     */
     @SerializedName("SrcTopicRegion")
     @Expose
     private String SrcTopicRegion;
 
     /**
-    * Syntax rules. 0: Lucene syntax; 1: CQL syntax.
+    * <p>Syntax rules. 0: Lucene syntax, 1: CQL syntax</p>
     */
     @SerializedName("SyntaxRule")
     @Expose
     private Long SyntaxRule;
 
     /**
-    * Whether to enable service log shipping. Valid values: 1: disable; 2: enable.
+    * <p>Whether the delivery service log is enabled. 1: Turn off, 2: Turn on.</p>
     */
     @SerializedName("HasServicesLog")
     @Expose
     private Long HasServicesLog;
 
     /**
-    * Full-text search tag. 1: Off, 2: On.
+    * <p>Full-text search tag. 1: Off, 2: On.</p>
     */
     @SerializedName("FullQuery")
     @Expose
     private Long FullQuery;
 
     /**
-     * Get ScheduledSql task id 
-     * @return TaskId ScheduledSql task id
+    * <p>Scheduling cycle time unit</p><p>Value ranges from 1 to 2</p><p>Default value: 1</p><p>Default value 1 (minute), other value 2 (second)</p>
+    */
+    @SerializedName("ProcessPeriodUnit")
+    @Expose
+    private Long ProcessPeriodUnit;
+
+    /**
+     * Get <p>ScheduledSql task id</p> 
+     * @return TaskId <p>ScheduledSql task id</p>
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set ScheduledSql task id
-     * @param TaskId ScheduledSql task id
+     * Set <p>ScheduledSql task id</p>
+     * @param TaskId <p>ScheduledSql task id</p>
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;
     }
 
     /**
-     * Get ScheduledSql task name 
-     * @return Name ScheduledSql task name
+     * Get <p>ScheduledSql task name</p> 
+     * @return Name <p>ScheduledSql task name</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set ScheduledSql task name
-     * @param Name ScheduledSql task name
+     * Set <p>ScheduledSql task name</p>
+     * @param Name <p>ScheduledSql task name</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get Source Log Topic ID 
-     * @return SrcTopicId Source Log Topic ID
+     * Get <p>Source log topic id.</p> 
+     * @return SrcTopicId <p>Source log topic id.</p>
      */
     public String getSrcTopicId() {
         return this.SrcTopicId;
     }
 
     /**
-     * Set Source Log Topic ID
-     * @param SrcTopicId Source Log Topic ID
+     * Set <p>Source log topic id.</p>
+     * @param SrcTopicId <p>Source log topic id.</p>
      */
     public void setSrcTopicId(String SrcTopicId) {
         this.SrcTopicId = SrcTopicId;
     }
 
     /**
-     * Get Source Log Topic Name 
-     * @return SrcTopicName Source Log Topic Name
+     * Get <p>source log topic name</p> 
+     * @return SrcTopicName <p>source log topic name</p>
      */
     public String getSrcTopicName() {
         return this.SrcTopicName;
     }
 
     /**
-     * Set Source Log Topic Name
-     * @param SrcTopicName Source Log Topic Name
+     * Set <p>source log topic name</p>
+     * @param SrcTopicName <p>source log topic name</p>
      */
     public void setSrcTopicName(String SrcTopicName) {
         this.SrcTopicName = SrcTopicName;
     }
 
     /**
-     * Get Scheduled SQL analysis of target topic 
-     * @return DstResource Scheduled SQL analysis of target topic
+     * Get <p>Scheduled SQL analysis target topic</p> 
+     * @return DstResource <p>Scheduled SQL analysis target topic</p>
      */
     public ScheduledSqlResouceInfo getDstResource() {
         return this.DstResource;
     }
 
     /**
-     * Set Scheduled SQL analysis of target topic
-     * @param DstResource Scheduled SQL analysis of target topic
+     * Set <p>Scheduled SQL analysis target topic</p>
+     * @param DstResource <p>Scheduled SQL analysis target topic</p>
      */
     public void setDstResource(ScheduledSqlResouceInfo DstResource) {
         this.DstResource = DstResource;
     }
 
     /**
-     * Get Task creation time. Format: yyyy-MM-dd HH:mm:ss 
-     * @return CreateTime Task creation time. Format: yyyy-MM-dd HH:mm:ss
+     * Get <p>Task creation time. Format: yyyy-MM-dd HH:mm:ss</p> 
+     * @return CreateTime <p>Task creation time. Format: yyyy-MM-dd HH:mm:ss</p>
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set Task creation time. Format: yyyy-MM-dd HH:mm:ss
-     * @param CreateTime Task creation time. Format: yyyy-MM-dd HH:mm:ss
+     * Set <p>Task creation time. Format: yyyy-MM-dd HH:mm:ss</p>
+     * @param CreateTime <p>Task creation time. Format: yyyy-MM-dd HH:mm:ss</p>
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get Task update time. Format: yyyy-MM-dd HH:mm:ss 
-     * @return UpdateTime Task update time. Format: yyyy-MM-dd HH:mm:ss
+     * Get <p>Task update time. Format: yyyy-MM-dd HH:mm:ss</p> 
+     * @return UpdateTime <p>Task update time. Format: yyyy-MM-dd HH:mm:ss</p>
      */
     public String getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set Task update time. Format: yyyy-MM-dd HH:mm:ss
-     * @param UpdateTime Task update time. Format: yyyy-MM-dd HH:mm:ss
+     * Set <p>Task update time. Format: yyyy-MM-dd HH:mm:ss</p>
+     * @param UpdateTime <p>Task update time. Format: yyyy-MM-dd HH:mm:ss</p>
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;
     }
 
     /**
-     * Get Task status: 1: Running 2: Stop 3: Exception - Source log topic not found 4: Exception - target topic not found5: Access permission issue 6: Internal failure 7: Other faults 
-     * @return Status Task status: 1: Running 2: Stop 3: Exception - Source log topic not found 4: Exception - target topic not found5: Access permission issue 6: Internal failure 7: Other faults
+     * Get <p>Task status, 1: Running 2: Stopped 3: Exception - Source log topic not found 4: Exception - Target topic not found</p><p>5: Access permission issue 6: Internal fault 7: Other faults</p> 
+     * @return Status <p>Task status, 1: Running 2: Stopped 3: Exception - Source log topic not found 4: Exception - Target topic not found</p><p>5: Access permission issue 6: Internal fault 7: Other faults</p>
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Task status: 1: Running 2: Stop 3: Exception - Source log topic not found 4: Exception - target topic not found5: Access permission issue 6: Internal failure 7: Other faults
-     * @param Status Task status: 1: Running 2: Stop 3: Exception - Source log topic not found 4: Exception - target topic not found5: Access permission issue 6: Internal failure 7: Other faults
+     * Set <p>Task status, 1: Running 2: Stopped 3: Exception - Source log topic not found 4: Exception - Target topic not found</p><p>5: Access permission issue 6: Internal fault 7: Other faults</p>
+     * @param Status <p>Task status, 1: Running 2: Stopped 3: Exception - Source log topic not found 4: Exception - Target topic not found</p><p>5: Access permission issue 6: Internal fault 7: Other faults</p>
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get Task status: 1 Enabled, 2 Disabled 
-     * @return EnableFlag Task status: 1 Enabled, 2 Disabled
+     * Get <p>Task status: 1 Enabled, 2 Disabled</p> 
+     * @return EnableFlag <p>Task status: 1 Enabled, 2 Disabled</p>
      */
     public Long getEnableFlag() {
         return this.EnableFlag;
     }
 
     /**
-     * Set Task status: 1 Enabled, 2 Disabled
-     * @param EnableFlag Task status: 1 Enabled, 2 Disabled
+     * Set <p>Task status: 1 Enabled, 2 Disabled</p>
+     * @param EnableFlag <p>Task status: 1 Enabled, 2 Disabled</p>
      */
     public void setEnableFlag(Long EnableFlag) {
         this.EnableFlag = EnableFlag;
     }
 
     /**
-     * Get Queries statements 
-     * @return ScheduledSqlContent Queries statements
+     * Get <p>Query statement</p> 
+     * @return ScheduledSqlContent <p>Query statement</p>
      */
     public String getScheduledSqlContent() {
         return this.ScheduledSqlContent;
     }
 
     /**
-     * Set Queries statements
-     * @param ScheduledSqlContent Queries statements
+     * Set <p>Query statement</p>
+     * @param ScheduledSqlContent <p>Query statement</p>
      */
     public void setScheduledSqlContent(String ScheduledSqlContent) {
         this.ScheduledSqlContent = ScheduledSqlContent;
     }
 
     /**
-     * Get Schedule start time. Format: yyyy-MM-dd HH:mm:ss 
-     * @return ProcessStartTime Schedule start time. Format: yyyy-MM-dd HH:mm:ss
+     * Get <p>Schedule start time. Format: yyyy-MM-dd HH:mm:ss</p> 
+     * @return ProcessStartTime <p>Schedule start time. Format: yyyy-MM-dd HH:mm:ss</p>
      */
     public String getProcessStartTime() {
         return this.ProcessStartTime;
     }
 
     /**
-     * Set Schedule start time. Format: yyyy-MM-dd HH:mm:ss
-     * @param ProcessStartTime Schedule start time. Format: yyyy-MM-dd HH:mm:ss
+     * Set <p>Schedule start time. Format: yyyy-MM-dd HH:mm:ss</p>
+     * @param ProcessStartTime <p>Schedule start time. Format: yyyy-MM-dd HH:mm:ss</p>
      */
     public void setProcessStartTime(String ProcessStartTime) {
         this.ProcessStartTime = ProcessStartTime;
     }
 
     /**
-     * Get Schedule Type: 1 Continuous Running 2 Specified Time Range 
-     * @return ProcessType Schedule Type: 1 Continuous Running 2 Specified Time Range
+     * Get <p>Schedule Type: 1 Continuous Running 2 Specified Time Range</p> 
+     * @return ProcessType <p>Schedule Type: 1 Continuous Running 2 Specified Time Range</p>
      */
     public Long getProcessType() {
         return this.ProcessType;
     }
 
     /**
-     * Set Schedule Type: 1 Continuous Running 2 Specified Time Range
-     * @param ProcessType Schedule Type: 1 Continuous Running 2 Specified Time Range
+     * Set <p>Schedule Type: 1 Continuous Running 2 Specified Time Range</p>
+     * @param ProcessType <p>Schedule Type: 1 Continuous Running 2 Specified Time Range</p>
      */
     public void setProcessType(Long ProcessType) {
         this.ProcessType = ProcessType;
     }
 
     /**
-     * Get Schedule End Time, format: yyyy-MM-dd HH:mm:ss, required when process_type=2 
-     * @return ProcessEndTime Schedule End Time, format: yyyy-MM-dd HH:mm:ss, required when process_type=2
+     * Get <p>Schedule End Time, format: yyyy-MM-dd HH:mm:ss, required when process_type=2</p> 
+     * @return ProcessEndTime <p>Schedule End Time, format: yyyy-MM-dd HH:mm:ss, required when process_type=2</p>
      */
     public String getProcessEndTime() {
         return this.ProcessEndTime;
     }
 
     /**
-     * Set Schedule End Time, format: yyyy-MM-dd HH:mm:ss, required when process_type=2
-     * @param ProcessEndTime Schedule End Time, format: yyyy-MM-dd HH:mm:ss, required when process_type=2
+     * Set <p>Schedule End Time, format: yyyy-MM-dd HH:mm:ss, required when process_type=2</p>
+     * @param ProcessEndTime <p>Schedule End Time, format: yyyy-MM-dd HH:mm:ss, required when process_type=2</p>
      */
     public void setProcessEndTime(String ProcessEndTime) {
         this.ProcessEndTime = ProcessEndTime;
     }
 
     /**
-     * Get Scheduling cycle (minutes), 1-1440 minutes 
-     * @return ProcessPeriod Scheduling cycle (minutes), 1-1440 minutes
+     * Get <p>Scheduling Interval (Minutes), 1-1440 minutes</p> 
+     * @return ProcessPeriod <p>Scheduling Interval (Minutes), 1-1440 minutes</p>
      */
     public Long getProcessPeriod() {
         return this.ProcessPeriod;
     }
 
     /**
-     * Set Scheduling cycle (minutes), 1-1440 minutes
-     * @param ProcessPeriod Scheduling cycle (minutes), 1-1440 minutes
+     * Set <p>Scheduling Interval (Minutes), 1-1440 minutes</p>
+     * @param ProcessPeriod <p>Scheduling Interval (Minutes), 1-1440 minutes</p>
      */
     public void setProcessPeriod(Long ProcessPeriod) {
         this.ProcessPeriod = ProcessPeriod;
     }
 
     /**
-     * Get Query Time Window. @m-15m, @m, meaning the last 15 minutes 
-     * @return ProcessTimeWindow Query Time Window. @m-15m, @m, meaning the last 15 minutes
+     * Get <p>Query Time Window. @m-15m, @m, meaning the last 15 minutes</p> 
+     * @return ProcessTimeWindow <p>Query Time Window. @m-15m, @m, meaning the last 15 minutes</p>
      */
     public String getProcessTimeWindow() {
         return this.ProcessTimeWindow;
     }
 
     /**
-     * Set Query Time Window. @m-15m, @m, meaning the last 15 minutes
-     * @param ProcessTimeWindow Query Time Window. @m-15m, @m, meaning the last 15 minutes
+     * Set <p>Query Time Window. @m-15m, @m, meaning the last 15 minutes</p>
+     * @param ProcessTimeWindow <p>Query Time Window. @m-15m, @m, meaning the last 15 minutes</p>
      */
     public void setProcessTimeWindow(String ProcessTimeWindow) {
         this.ProcessTimeWindow = ProcessTimeWindow;
     }
 
     /**
-     * Get Execution delay (seconds), 0-120 seconds, default 60 
-     * @return ProcessDelay Execution delay (seconds), 0-120 seconds, default 60
+     * Get <p>Execution delay (seconds), 0-120 seconds, default 60 seconds</p> 
+     * @return ProcessDelay <p>Execution delay (seconds), 0-120 seconds, default 60 seconds</p>
      */
     public Long getProcessDelay() {
         return this.ProcessDelay;
     }
 
     /**
-     * Set Execution delay (seconds), 0-120 seconds, default 60
-     * @param ProcessDelay Execution delay (seconds), 0-120 seconds, default 60
+     * Set <p>Execution delay (seconds), 0-120 seconds, default 60 seconds</p>
+     * @param ProcessDelay <p>Execution delay (seconds), 0-120 seconds, default 60 seconds</p>
      */
     public void setProcessDelay(Long ProcessDelay) {
         this.ProcessDelay = ProcessDelay;
     }
 
     /**
-     * Get Regional information of the source topicId. Supported regions are listed in the region list document (https://www.tencentcloud.com/document/api/614/56474?from_cn_redirect=1#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8). 
-     * @return SrcTopicRegion Regional information of the source topicId. Supported regions are listed in the region list document (https://www.tencentcloud.com/document/api/614/56474?from_cn_redirect=1#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8).
+     * Get <p>Regional information of the source topicId. For supported regions, see the <a href="https://www.tencentcloud.com/document/api/614/56474?from_cn_redirect=1#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8">region list</a> document.</p> 
+     * @return SrcTopicRegion <p>Regional information of the source topicId. For supported regions, see the <a href="https://www.tencentcloud.com/document/api/614/56474?from_cn_redirect=1#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8">region list</a> document.</p>
      */
     public String getSrcTopicRegion() {
         return this.SrcTopicRegion;
     }
 
     /**
-     * Set Regional information of the source topicId. Supported regions are listed in the region list document (https://www.tencentcloud.com/document/api/614/56474?from_cn_redirect=1#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8).
-     * @param SrcTopicRegion Regional information of the source topicId. Supported regions are listed in the region list document (https://www.tencentcloud.com/document/api/614/56474?from_cn_redirect=1#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8).
+     * Set <p>Regional information of the source topicId. For supported regions, see the <a href="https://www.tencentcloud.com/document/api/614/56474?from_cn_redirect=1#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8">region list</a> document.</p>
+     * @param SrcTopicRegion <p>Regional information of the source topicId. For supported regions, see the <a href="https://www.tencentcloud.com/document/api/614/56474?from_cn_redirect=1#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8">region list</a> document.</p>
      */
     public void setSrcTopicRegion(String SrcTopicRegion) {
         this.SrcTopicRegion = SrcTopicRegion;
     }
 
     /**
-     * Get Syntax rules. 0: Lucene syntax; 1: CQL syntax. 
-     * @return SyntaxRule Syntax rules. 0: Lucene syntax; 1: CQL syntax.
+     * Get <p>Syntax rules. 0: Lucene syntax, 1: CQL syntax</p> 
+     * @return SyntaxRule <p>Syntax rules. 0: Lucene syntax, 1: CQL syntax</p>
      */
     public Long getSyntaxRule() {
         return this.SyntaxRule;
     }
 
     /**
-     * Set Syntax rules. 0: Lucene syntax; 1: CQL syntax.
-     * @param SyntaxRule Syntax rules. 0: Lucene syntax; 1: CQL syntax.
+     * Set <p>Syntax rules. 0: Lucene syntax, 1: CQL syntax</p>
+     * @param SyntaxRule <p>Syntax rules. 0: Lucene syntax, 1: CQL syntax</p>
      */
     public void setSyntaxRule(Long SyntaxRule) {
         this.SyntaxRule = SyntaxRule;
     }
 
     /**
-     * Get Whether to enable service log shipping. Valid values: 1: disable; 2: enable. 
-     * @return HasServicesLog Whether to enable service log shipping. Valid values: 1: disable; 2: enable.
+     * Get <p>Whether the delivery service log is enabled. 1: Turn off, 2: Turn on.</p> 
+     * @return HasServicesLog <p>Whether the delivery service log is enabled. 1: Turn off, 2: Turn on.</p>
      */
     public Long getHasServicesLog() {
         return this.HasServicesLog;
     }
 
     /**
-     * Set Whether to enable service log shipping. Valid values: 1: disable; 2: enable.
-     * @param HasServicesLog Whether to enable service log shipping. Valid values: 1: disable; 2: enable.
+     * Set <p>Whether the delivery service log is enabled. 1: Turn off, 2: Turn on.</p>
+     * @param HasServicesLog <p>Whether the delivery service log is enabled. 1: Turn off, 2: Turn on.</p>
      */
     public void setHasServicesLog(Long HasServicesLog) {
         this.HasServicesLog = HasServicesLog;
     }
 
     /**
-     * Get Full-text search tag. 1: Off, 2: On. 
-     * @return FullQuery Full-text search tag. 1: Off, 2: On.
+     * Get <p>Full-text search tag. 1: Off, 2: On.</p> 
+     * @return FullQuery <p>Full-text search tag. 1: Off, 2: On.</p>
      */
     public Long getFullQuery() {
         return this.FullQuery;
     }
 
     /**
-     * Set Full-text search tag. 1: Off, 2: On.
-     * @param FullQuery Full-text search tag. 1: Off, 2: On.
+     * Set <p>Full-text search tag. 1: Off, 2: On.</p>
+     * @param FullQuery <p>Full-text search tag. 1: Off, 2: On.</p>
      */
     public void setFullQuery(Long FullQuery) {
         this.FullQuery = FullQuery;
+    }
+
+    /**
+     * Get <p>Scheduling cycle time unit</p><p>Value ranges from 1 to 2</p><p>Default value: 1</p><p>Default value 1 (minute), other value 2 (second)</p> 
+     * @return ProcessPeriodUnit <p>Scheduling cycle time unit</p><p>Value ranges from 1 to 2</p><p>Default value: 1</p><p>Default value 1 (minute), other value 2 (second)</p>
+     */
+    public Long getProcessPeriodUnit() {
+        return this.ProcessPeriodUnit;
+    }
+
+    /**
+     * Set <p>Scheduling cycle time unit</p><p>Value ranges from 1 to 2</p><p>Default value: 1</p><p>Default value 1 (minute), other value 2 (second)</p>
+     * @param ProcessPeriodUnit <p>Scheduling cycle time unit</p><p>Value ranges from 1 to 2</p><p>Default value: 1</p><p>Default value 1 (minute), other value 2 (second)</p>
+     */
+    public void setProcessPeriodUnit(Long ProcessPeriodUnit) {
+        this.ProcessPeriodUnit = ProcessPeriodUnit;
     }
 
     public ScheduledSqlTaskInfo() {
@@ -551,6 +574,9 @@ public class ScheduledSqlTaskInfo extends AbstractModel {
         if (source.FullQuery != null) {
             this.FullQuery = new Long(source.FullQuery);
         }
+        if (source.ProcessPeriodUnit != null) {
+            this.ProcessPeriodUnit = new Long(source.ProcessPeriodUnit);
+        }
     }
 
 
@@ -578,6 +604,7 @@ public class ScheduledSqlTaskInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "SyntaxRule", this.SyntaxRule);
         this.setParamSimple(map, prefix + "HasServicesLog", this.HasServicesLog);
         this.setParamSimple(map, prefix + "FullQuery", this.FullQuery);
+        this.setParamSimple(map, prefix + "ProcessPeriodUnit", this.ProcessPeriodUnit);
 
     }
 }

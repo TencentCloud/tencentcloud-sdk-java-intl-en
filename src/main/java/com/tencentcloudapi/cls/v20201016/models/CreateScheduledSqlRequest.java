@@ -24,302 +24,371 @@ import java.util.HashMap;
 public class CreateScheduledSqlRequest extends AbstractModel {
 
     /**
-    * Source log topic ID. Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
+    * <p>Source log topic ID - Obtain the log topic ID by <a href="https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1">searching the log topic list</a>.</p>
     */
     @SerializedName("SrcTopicId")
     @Expose
     private String SrcTopicId;
 
     /**
-    * Task name, 0-255 characters
+    * <p>Task name, 0-255 characters</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * Task start status. 1: Enabled, 2: Disabled
+    * <p>Task start status. 1: Enabled, 2: Disabled</p>
     */
     @SerializedName("EnableFlag")
     @Expose
     private Long EnableFlag;
 
     /**
-    * Target log topic for scheduled SQL analysis
+    * <p>Target log topic for scheduled SQL analysis</p>
     */
     @SerializedName("DstResource")
     @Expose
     private ScheduledSqlResouceInfo DstResource;
 
     /**
-    * Query statement
+    * <p>Query statement</p>
     */
     @SerializedName("ScheduledSqlContent")
     @Expose
     private String ScheduledSqlContent;
 
     /**
-    * Schedule start time, Unix timestamp, in milliseconds
+    * <p>Schedule start time, Unix timestamp, in milliseconds</p>
     */
     @SerializedName("ProcessStartTime")
     @Expose
     private Long ProcessStartTime;
 
     /**
-    * Schedule type: 1: Continuous running; 2: Specified time range
+    * <p>Schedule Type: 1 Continuous Running 2 Specified Time Range</p>
     */
     @SerializedName("ProcessType")
     @Expose
     private Long ProcessType;
 
     /**
-    * Scheduling Interval (Minutes), 1-1440 minutes
+    * <p>Scheduling Interval (Minutes), 1-1440 minutes</p>
     */
     @SerializedName("ProcessPeriod")
     @Expose
     private Long ProcessPeriod;
 
     /**
-    * Time window for a single query. If your target topic is a metric topic, it is recommended that the size of this parameter not exceed 30 minutes, otherwise, metric conversion may fail.
+    * <p>Time window for a single query. If your target topic is a metric topic, it is recommended that the size of this parameter not exceed 30 minutes, otherwise, metric conversion may fail.</p>
     */
     @SerializedName("ProcessTimeWindow")
     @Expose
     private String ProcessTimeWindow;
 
     /**
-    * Execution Delay (Seconds), 0-120 seconds, default 60 seconds
+    * <p>Execution delay (seconds), 0-120 seconds, default 60 seconds</p>
     */
     @SerializedName("ProcessDelay")
     @Expose
     private Long ProcessDelay;
 
     /**
-    * Regional information of the source topicId. For supported regions, see the region list (https://www.tencentcloud.com/document/api/614/56474?from_cn_redirect=1#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8) document.
+    * <p>Regional information of the source topicId. For supported regions, see the <a href="https://www.tencentcloud.com/document/api/614/56474?from_cn_redirect=1#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8">region list</a> document.</p>
     */
     @SerializedName("SrcTopicRegion")
     @Expose
     private String SrcTopicRegion;
 
     /**
-    * Schedule end time. Required field when ProcessType=2, Unix timestamp, in milliseconds
+    * <p>Scheduling Time Unit</p><p>Value ranges from 1 to 2</p><p>Default value: 1</p><p>The default value is 1 (minute), and the additional value is 2 (second).</p>
+    */
+    @SerializedName("ProcessPeriodUnit")
+    @Expose
+    private Long ProcessPeriodUnit;
+
+    /**
+    * <p>Schedule End Time, required when ProcessType=2, Unix timestamp, in milliseconds</p>
     */
     @SerializedName("ProcessEndTime")
     @Expose
     private Long ProcessEndTime;
 
     /**
-    * Query syntax rules. Default value is 0. 0: Lucene syntax, 1: CQL syntax
+    * <p>Query syntax rules. Default value: 0. 0: Lucene syntax, 1: CQL syntax</p>
     */
     @SerializedName("SyntaxRule")
     @Expose
     private Long SyntaxRule;
 
     /**
-     * Get Source log topic ID. Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1). 
-     * @return SrcTopicId Source log topic ID. Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
+    * <p>Whether to enable delivery service log. 1: Disabled, 2: Enabled.</p>
+    */
+    @SerializedName("HasServicesLog")
+    @Expose
+    private Long HasServicesLog;
+
+    /**
+    * <p>Full-text search tag. 1: Off, 2: On. Default: 1</p>
+    */
+    @SerializedName("FullQuery")
+    @Expose
+    private Long FullQuery;
+
+    /**
+     * Get <p>Source log topic ID - Obtain the log topic ID by <a href="https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1">searching the log topic list</a>.</p> 
+     * @return SrcTopicId <p>Source log topic ID - Obtain the log topic ID by <a href="https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1">searching the log topic list</a>.</p>
      */
     public String getSrcTopicId() {
         return this.SrcTopicId;
     }
 
     /**
-     * Set Source log topic ID. Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
-     * @param SrcTopicId Source log topic ID. Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
+     * Set <p>Source log topic ID - Obtain the log topic ID by <a href="https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1">searching the log topic list</a>.</p>
+     * @param SrcTopicId <p>Source log topic ID - Obtain the log topic ID by <a href="https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1">searching the log topic list</a>.</p>
      */
     public void setSrcTopicId(String SrcTopicId) {
         this.SrcTopicId = SrcTopicId;
     }
 
     /**
-     * Get Task name, 0-255 characters 
-     * @return Name Task name, 0-255 characters
+     * Get <p>Task name, 0-255 characters</p> 
+     * @return Name <p>Task name, 0-255 characters</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Task name, 0-255 characters
-     * @param Name Task name, 0-255 characters
+     * Set <p>Task name, 0-255 characters</p>
+     * @param Name <p>Task name, 0-255 characters</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get Task start status. 1: Enabled, 2: Disabled 
-     * @return EnableFlag Task start status. 1: Enabled, 2: Disabled
+     * Get <p>Task start status. 1: Enabled, 2: Disabled</p> 
+     * @return EnableFlag <p>Task start status. 1: Enabled, 2: Disabled</p>
      */
     public Long getEnableFlag() {
         return this.EnableFlag;
     }
 
     /**
-     * Set Task start status. 1: Enabled, 2: Disabled
-     * @param EnableFlag Task start status. 1: Enabled, 2: Disabled
+     * Set <p>Task start status. 1: Enabled, 2: Disabled</p>
+     * @param EnableFlag <p>Task start status. 1: Enabled, 2: Disabled</p>
      */
     public void setEnableFlag(Long EnableFlag) {
         this.EnableFlag = EnableFlag;
     }
 
     /**
-     * Get Target log topic for scheduled SQL analysis 
-     * @return DstResource Target log topic for scheduled SQL analysis
+     * Get <p>Target log topic for scheduled SQL analysis</p> 
+     * @return DstResource <p>Target log topic for scheduled SQL analysis</p>
      */
     public ScheduledSqlResouceInfo getDstResource() {
         return this.DstResource;
     }
 
     /**
-     * Set Target log topic for scheduled SQL analysis
-     * @param DstResource Target log topic for scheduled SQL analysis
+     * Set <p>Target log topic for scheduled SQL analysis</p>
+     * @param DstResource <p>Target log topic for scheduled SQL analysis</p>
      */
     public void setDstResource(ScheduledSqlResouceInfo DstResource) {
         this.DstResource = DstResource;
     }
 
     /**
-     * Get Query statement 
-     * @return ScheduledSqlContent Query statement
+     * Get <p>Query statement</p> 
+     * @return ScheduledSqlContent <p>Query statement</p>
      */
     public String getScheduledSqlContent() {
         return this.ScheduledSqlContent;
     }
 
     /**
-     * Set Query statement
-     * @param ScheduledSqlContent Query statement
+     * Set <p>Query statement</p>
+     * @param ScheduledSqlContent <p>Query statement</p>
      */
     public void setScheduledSqlContent(String ScheduledSqlContent) {
         this.ScheduledSqlContent = ScheduledSqlContent;
     }
 
     /**
-     * Get Schedule start time, Unix timestamp, in milliseconds 
-     * @return ProcessStartTime Schedule start time, Unix timestamp, in milliseconds
+     * Get <p>Schedule start time, Unix timestamp, in milliseconds</p> 
+     * @return ProcessStartTime <p>Schedule start time, Unix timestamp, in milliseconds</p>
      */
     public Long getProcessStartTime() {
         return this.ProcessStartTime;
     }
 
     /**
-     * Set Schedule start time, Unix timestamp, in milliseconds
-     * @param ProcessStartTime Schedule start time, Unix timestamp, in milliseconds
+     * Set <p>Schedule start time, Unix timestamp, in milliseconds</p>
+     * @param ProcessStartTime <p>Schedule start time, Unix timestamp, in milliseconds</p>
      */
     public void setProcessStartTime(Long ProcessStartTime) {
         this.ProcessStartTime = ProcessStartTime;
     }
 
     /**
-     * Get Schedule type: 1: Continuous running; 2: Specified time range 
-     * @return ProcessType Schedule type: 1: Continuous running; 2: Specified time range
+     * Get <p>Schedule Type: 1 Continuous Running 2 Specified Time Range</p> 
+     * @return ProcessType <p>Schedule Type: 1 Continuous Running 2 Specified Time Range</p>
      */
     public Long getProcessType() {
         return this.ProcessType;
     }
 
     /**
-     * Set Schedule type: 1: Continuous running; 2: Specified time range
-     * @param ProcessType Schedule type: 1: Continuous running; 2: Specified time range
+     * Set <p>Schedule Type: 1 Continuous Running 2 Specified Time Range</p>
+     * @param ProcessType <p>Schedule Type: 1 Continuous Running 2 Specified Time Range</p>
      */
     public void setProcessType(Long ProcessType) {
         this.ProcessType = ProcessType;
     }
 
     /**
-     * Get Scheduling Interval (Minutes), 1-1440 minutes 
-     * @return ProcessPeriod Scheduling Interval (Minutes), 1-1440 minutes
+     * Get <p>Scheduling Interval (Minutes), 1-1440 minutes</p> 
+     * @return ProcessPeriod <p>Scheduling Interval (Minutes), 1-1440 minutes</p>
      */
     public Long getProcessPeriod() {
         return this.ProcessPeriod;
     }
 
     /**
-     * Set Scheduling Interval (Minutes), 1-1440 minutes
-     * @param ProcessPeriod Scheduling Interval (Minutes), 1-1440 minutes
+     * Set <p>Scheduling Interval (Minutes), 1-1440 minutes</p>
+     * @param ProcessPeriod <p>Scheduling Interval (Minutes), 1-1440 minutes</p>
      */
     public void setProcessPeriod(Long ProcessPeriod) {
         this.ProcessPeriod = ProcessPeriod;
     }
 
     /**
-     * Get Time window for a single query. If your target topic is a metric topic, it is recommended that the size of this parameter not exceed 30 minutes, otherwise, metric conversion may fail. 
-     * @return ProcessTimeWindow Time window for a single query. If your target topic is a metric topic, it is recommended that the size of this parameter not exceed 30 minutes, otherwise, metric conversion may fail.
+     * Get <p>Time window for a single query. If your target topic is a metric topic, it is recommended that the size of this parameter not exceed 30 minutes, otherwise, metric conversion may fail.</p> 
+     * @return ProcessTimeWindow <p>Time window for a single query. If your target topic is a metric topic, it is recommended that the size of this parameter not exceed 30 minutes, otherwise, metric conversion may fail.</p>
      */
     public String getProcessTimeWindow() {
         return this.ProcessTimeWindow;
     }
 
     /**
-     * Set Time window for a single query. If your target topic is a metric topic, it is recommended that the size of this parameter not exceed 30 minutes, otherwise, metric conversion may fail.
-     * @param ProcessTimeWindow Time window for a single query. If your target topic is a metric topic, it is recommended that the size of this parameter not exceed 30 minutes, otherwise, metric conversion may fail.
+     * Set <p>Time window for a single query. If your target topic is a metric topic, it is recommended that the size of this parameter not exceed 30 minutes, otherwise, metric conversion may fail.</p>
+     * @param ProcessTimeWindow <p>Time window for a single query. If your target topic is a metric topic, it is recommended that the size of this parameter not exceed 30 minutes, otherwise, metric conversion may fail.</p>
      */
     public void setProcessTimeWindow(String ProcessTimeWindow) {
         this.ProcessTimeWindow = ProcessTimeWindow;
     }
 
     /**
-     * Get Execution Delay (Seconds), 0-120 seconds, default 60 seconds 
-     * @return ProcessDelay Execution Delay (Seconds), 0-120 seconds, default 60 seconds
+     * Get <p>Execution delay (seconds), 0-120 seconds, default 60 seconds</p> 
+     * @return ProcessDelay <p>Execution delay (seconds), 0-120 seconds, default 60 seconds</p>
      */
     public Long getProcessDelay() {
         return this.ProcessDelay;
     }
 
     /**
-     * Set Execution Delay (Seconds), 0-120 seconds, default 60 seconds
-     * @param ProcessDelay Execution Delay (Seconds), 0-120 seconds, default 60 seconds
+     * Set <p>Execution delay (seconds), 0-120 seconds, default 60 seconds</p>
+     * @param ProcessDelay <p>Execution delay (seconds), 0-120 seconds, default 60 seconds</p>
      */
     public void setProcessDelay(Long ProcessDelay) {
         this.ProcessDelay = ProcessDelay;
     }
 
     /**
-     * Get Regional information of the source topicId. For supported regions, see the region list (https://www.tencentcloud.com/document/api/614/56474?from_cn_redirect=1#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8) document. 
-     * @return SrcTopicRegion Regional information of the source topicId. For supported regions, see the region list (https://www.tencentcloud.com/document/api/614/56474?from_cn_redirect=1#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8) document.
+     * Get <p>Regional information of the source topicId. For supported regions, see the <a href="https://www.tencentcloud.com/document/api/614/56474?from_cn_redirect=1#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8">region list</a> document.</p> 
+     * @return SrcTopicRegion <p>Regional information of the source topicId. For supported regions, see the <a href="https://www.tencentcloud.com/document/api/614/56474?from_cn_redirect=1#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8">region list</a> document.</p>
      */
     public String getSrcTopicRegion() {
         return this.SrcTopicRegion;
     }
 
     /**
-     * Set Regional information of the source topicId. For supported regions, see the region list (https://www.tencentcloud.com/document/api/614/56474?from_cn_redirect=1#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8) document.
-     * @param SrcTopicRegion Regional information of the source topicId. For supported regions, see the region list (https://www.tencentcloud.com/document/api/614/56474?from_cn_redirect=1#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8) document.
+     * Set <p>Regional information of the source topicId. For supported regions, see the <a href="https://www.tencentcloud.com/document/api/614/56474?from_cn_redirect=1#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8">region list</a> document.</p>
+     * @param SrcTopicRegion <p>Regional information of the source topicId. For supported regions, see the <a href="https://www.tencentcloud.com/document/api/614/56474?from_cn_redirect=1#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8">region list</a> document.</p>
      */
     public void setSrcTopicRegion(String SrcTopicRegion) {
         this.SrcTopicRegion = SrcTopicRegion;
     }
 
     /**
-     * Get Schedule end time. Required field when ProcessType=2, Unix timestamp, in milliseconds 
-     * @return ProcessEndTime Schedule end time. Required field when ProcessType=2, Unix timestamp, in milliseconds
+     * Get <p>Scheduling Time Unit</p><p>Value ranges from 1 to 2</p><p>Default value: 1</p><p>The default value is 1 (minute), and the additional value is 2 (second).</p> 
+     * @return ProcessPeriodUnit <p>Scheduling Time Unit</p><p>Value ranges from 1 to 2</p><p>Default value: 1</p><p>The default value is 1 (minute), and the additional value is 2 (second).</p>
+     */
+    public Long getProcessPeriodUnit() {
+        return this.ProcessPeriodUnit;
+    }
+
+    /**
+     * Set <p>Scheduling Time Unit</p><p>Value ranges from 1 to 2</p><p>Default value: 1</p><p>The default value is 1 (minute), and the additional value is 2 (second).</p>
+     * @param ProcessPeriodUnit <p>Scheduling Time Unit</p><p>Value ranges from 1 to 2</p><p>Default value: 1</p><p>The default value is 1 (minute), and the additional value is 2 (second).</p>
+     */
+    public void setProcessPeriodUnit(Long ProcessPeriodUnit) {
+        this.ProcessPeriodUnit = ProcessPeriodUnit;
+    }
+
+    /**
+     * Get <p>Schedule End Time, required when ProcessType=2, Unix timestamp, in milliseconds</p> 
+     * @return ProcessEndTime <p>Schedule End Time, required when ProcessType=2, Unix timestamp, in milliseconds</p>
      */
     public Long getProcessEndTime() {
         return this.ProcessEndTime;
     }
 
     /**
-     * Set Schedule end time. Required field when ProcessType=2, Unix timestamp, in milliseconds
-     * @param ProcessEndTime Schedule end time. Required field when ProcessType=2, Unix timestamp, in milliseconds
+     * Set <p>Schedule End Time, required when ProcessType=2, Unix timestamp, in milliseconds</p>
+     * @param ProcessEndTime <p>Schedule End Time, required when ProcessType=2, Unix timestamp, in milliseconds</p>
      */
     public void setProcessEndTime(Long ProcessEndTime) {
         this.ProcessEndTime = ProcessEndTime;
     }
 
     /**
-     * Get Query syntax rules. Default value is 0. 0: Lucene syntax, 1: CQL syntax 
-     * @return SyntaxRule Query syntax rules. Default value is 0. 0: Lucene syntax, 1: CQL syntax
+     * Get <p>Query syntax rules. Default value: 0. 0: Lucene syntax, 1: CQL syntax</p> 
+     * @return SyntaxRule <p>Query syntax rules. Default value: 0. 0: Lucene syntax, 1: CQL syntax</p>
      */
     public Long getSyntaxRule() {
         return this.SyntaxRule;
     }
 
     /**
-     * Set Query syntax rules. Default value is 0. 0: Lucene syntax, 1: CQL syntax
-     * @param SyntaxRule Query syntax rules. Default value is 0. 0: Lucene syntax, 1: CQL syntax
+     * Set <p>Query syntax rules. Default value: 0. 0: Lucene syntax, 1: CQL syntax</p>
+     * @param SyntaxRule <p>Query syntax rules. Default value: 0. 0: Lucene syntax, 1: CQL syntax</p>
      */
     public void setSyntaxRule(Long SyntaxRule) {
         this.SyntaxRule = SyntaxRule;
+    }
+
+    /**
+     * Get <p>Whether to enable delivery service log. 1: Disabled, 2: Enabled.</p> 
+     * @return HasServicesLog <p>Whether to enable delivery service log. 1: Disabled, 2: Enabled.</p>
+     */
+    public Long getHasServicesLog() {
+        return this.HasServicesLog;
+    }
+
+    /**
+     * Set <p>Whether to enable delivery service log. 1: Disabled, 2: Enabled.</p>
+     * @param HasServicesLog <p>Whether to enable delivery service log. 1: Disabled, 2: Enabled.</p>
+     */
+    public void setHasServicesLog(Long HasServicesLog) {
+        this.HasServicesLog = HasServicesLog;
+    }
+
+    /**
+     * Get <p>Full-text search tag. 1: Off, 2: On. Default: 1</p> 
+     * @return FullQuery <p>Full-text search tag. 1: Off, 2: On. Default: 1</p>
+     */
+    public Long getFullQuery() {
+        return this.FullQuery;
+    }
+
+    /**
+     * Set <p>Full-text search tag. 1: Off, 2: On. Default: 1</p>
+     * @param FullQuery <p>Full-text search tag. 1: Off, 2: On. Default: 1</p>
+     */
+    public void setFullQuery(Long FullQuery) {
+        this.FullQuery = FullQuery;
     }
 
     public CreateScheduledSqlRequest() {
@@ -363,11 +432,20 @@ public class CreateScheduledSqlRequest extends AbstractModel {
         if (source.SrcTopicRegion != null) {
             this.SrcTopicRegion = new String(source.SrcTopicRegion);
         }
+        if (source.ProcessPeriodUnit != null) {
+            this.ProcessPeriodUnit = new Long(source.ProcessPeriodUnit);
+        }
         if (source.ProcessEndTime != null) {
             this.ProcessEndTime = new Long(source.ProcessEndTime);
         }
         if (source.SyntaxRule != null) {
             this.SyntaxRule = new Long(source.SyntaxRule);
+        }
+        if (source.HasServicesLog != null) {
+            this.HasServicesLog = new Long(source.HasServicesLog);
+        }
+        if (source.FullQuery != null) {
+            this.FullQuery = new Long(source.FullQuery);
         }
     }
 
@@ -387,8 +465,11 @@ public class CreateScheduledSqlRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ProcessTimeWindow", this.ProcessTimeWindow);
         this.setParamSimple(map, prefix + "ProcessDelay", this.ProcessDelay);
         this.setParamSimple(map, prefix + "SrcTopicRegion", this.SrcTopicRegion);
+        this.setParamSimple(map, prefix + "ProcessPeriodUnit", this.ProcessPeriodUnit);
         this.setParamSimple(map, prefix + "ProcessEndTime", this.ProcessEndTime);
         this.setParamSimple(map, prefix + "SyntaxRule", this.SyntaxRule);
+        this.setParamSimple(map, prefix + "HasServicesLog", this.HasServicesLog);
+        this.setParamSimple(map, prefix + "FullQuery", this.FullQuery);
 
     }
 }

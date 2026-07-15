@@ -450,6 +450,17 @@ Note:
     }
 
     /**
+     *This API is used to create a remote write delivery task.
+     * @param req CreateRemoteWriteTaskRequest
+     * @return CreateRemoteWriteTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateRemoteWriteTaskResponse CreateRemoteWriteTask(CreateRemoteWriteTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateRemoteWriteTask", CreateRemoteWriteTaskResponse.class);
+    }
+
+    /**
      *This API is used to create a scheduled SQL analysis task.
      * @param req CreateScheduledSqlRequest
      * @return CreateScheduledSqlResponse
@@ -821,6 +832,17 @@ Note:
     public DeleteRecordingRuleYamlTaskResponse DeleteRecordingRuleYamlTask(DeleteRecordingRuleYamlTaskRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteRecordingRuleYamlTask", DeleteRecordingRuleYamlTaskResponse.class);
+    }
+
+    /**
+     *This API is used to delete a RemoteWrite task.
+     * @param req DeleteRemoteWriteTaskRequest
+     * @return DeleteRemoteWriteTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteRemoteWriteTaskResponse DeleteRemoteWriteTask(DeleteRemoteWriteTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteRemoteWriteTask", DeleteRemoteWriteTaskResponse.class);
     }
 
     /**
@@ -1396,6 +1418,17 @@ Note:
     }
 
     /**
+     *This API is used to obtain the list of RemoteWrite delivery tasks.
+     * @param req DescribeRemoteWriteTasksRequest
+     * @return DescribeRemoteWriteTasksResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRemoteWriteTasksResponse DescribeRemoteWriteTasks(DescribeRemoteWriteTasksRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeRemoteWriteTasks", DescribeRemoteWriteTasksResponse.class);
+    }
+
+    /**
      *This API is used to access the scheduled SQL analysis task list.
      * @param req DescribeScheduledSqlInfoRequest
      * @return DescribeScheduledSqlInfoResponse
@@ -1857,6 +1890,17 @@ Note: Modifying the interface will directly overwrite historical data and change
     public ModifyRecordingRuleYamlTaskResponse ModifyRecordingRuleYamlTask(ModifyRecordingRuleYamlTaskRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyRecordingRuleYamlTask", ModifyRecordingRuleYamlTaskResponse.class);
+    }
+
+    /**
+     *This API is used to modify a RemoteWrite task.
+     * @param req ModifyRemoteWriteTaskRequest
+     * @return ModifyRemoteWriteTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyRemoteWriteTaskResponse ModifyRemoteWriteTask(ModifyRemoteWriteTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyRemoteWriteTask", ModifyRemoteWriteTaskResponse.class);
     }
 
     /**

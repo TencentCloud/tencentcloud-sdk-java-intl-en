@@ -24,256 +24,325 @@ import java.util.HashMap;
 public class ModifyScheduledSqlRequest extends AbstractModel {
 
     /**
-    * Task ID, which can be obtained through [scheduled SQL analysis task list](https://www.tencentcloud.com/document/product/614/95519?from_cn_redirect=1).
+    * <p>Task ID, obtained by <a href="https://www.tencentcloud.com/document/product/614/95519?from_cn_redirect=1">searching the scheduled SQL analysis task list</a>.</p>
     */
     @SerializedName("TaskId")
     @Expose
     private String TaskId;
 
     /**
-    * Source log topic. Search the [scheduled SQL analysis task list](https://www.tencentcloud.com/document/product/614/95519?from_cn_redirect=1) to obtain it.
+    * <p>Source log topic, obtained via <a href="https://www.tencentcloud.com/document/product/614/95519?from_cn_redirect=1">search scheduled SQL analysis task list</a></p>
     */
     @SerializedName("SrcTopicId")
     @Expose
     private String SrcTopicId;
 
     /**
-    * Task start status. 1: Enabled, 2: Disabled
+    * <p>Task start status. 1: Enabled, 2: Disabled</p>
     */
     @SerializedName("EnableFlag")
     @Expose
     private Long EnableFlag;
 
     /**
-    * Target log topic for scheduled SQL analysis
+    * <p>Target log topic for scheduled SQL analysis</p>
     */
     @SerializedName("DstResource")
     @Expose
     private ScheduledSqlResouceInfo DstResource;
 
     /**
-    * Queries statements
+    * <p>Query statement</p>
     */
     @SerializedName("ScheduledSqlContent")
     @Expose
     private String ScheduledSqlContent;
 
     /**
-    * Scheduling cycle (minutes), 1-1440 minutes
+    * <p>Scheduling Interval (Minutes), 1-1440 minutes</p>
     */
     @SerializedName("ProcessPeriod")
     @Expose
     private Long ProcessPeriod;
 
     /**
-    * Time window for a single query. Example: last 15 minutes
+    * <p>Time window for a single query. Example: last 15 minutes</p>
     */
     @SerializedName("ProcessTimeWindow")
     @Expose
     private String ProcessTimeWindow;
 
     /**
-    * Execution delay (seconds), 0-120 seconds, default 60
+    * <p>Execution delay (seconds), 0-120 seconds, default 60 seconds</p>
     */
     @SerializedName("ProcessDelay")
     @Expose
     private Long ProcessDelay;
 
     /**
-    * Regional information of the source topicId. Supported regions are listed in the region list document (https://www.tencentcloud.com/document/api/614/56474?from_cn_redirect=1#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8).
+    * <p>Regional information of the source topicId. For supported regions, see the <a href="https://www.tencentcloud.com/document/api/614/56474?from_cn_redirect=1#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8">region list</a> document.</p>
     */
     @SerializedName("SrcTopicRegion")
     @Expose
     private String SrcTopicRegion;
 
     /**
-    * Task name, 0-255 characters
+    * <p>Task name, 0-255 characters</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * Syntax rules. Default value: 0. 0: Lucene syntax, 1: CQL syntax
+    * <p>Syntax rules. Default value: 0. 0: Lucene syntax, 1: CQL syntax</p>
     */
     @SerializedName("SyntaxRule")
     @Expose
     private Long SyntaxRule;
 
     /**
-     * Get Task ID, which can be obtained through [scheduled SQL analysis task list](https://www.tencentcloud.com/document/product/614/95519?from_cn_redirect=1). 
-     * @return TaskId Task ID, which can be obtained through [scheduled SQL analysis task list](https://www.tencentcloud.com/document/product/614/95519?from_cn_redirect=1).
+    * <p>Whether to enable delivery service log. 1: Disabled, 2: Enabled.</p>
+    */
+    @SerializedName("HasServicesLog")
+    @Expose
+    private Long HasServicesLog;
+
+    /**
+    * <p>Full-text search query tag. 1: Off, 2: On.</p>
+    */
+    @SerializedName("FullQuery")
+    @Expose
+    private Long FullQuery;
+
+    /**
+    * <p>Scheduling period unit</p><p>Value ranges from 1 to 2</p><p>Default value: 1</p><p>Default value 1 (minute), other value 2 (second)</p>
+    */
+    @SerializedName("ProcessPeriodUnit")
+    @Expose
+    private Long ProcessPeriodUnit;
+
+    /**
+     * Get <p>Task ID, obtained by <a href="https://www.tencentcloud.com/document/product/614/95519?from_cn_redirect=1">searching the scheduled SQL analysis task list</a>.</p> 
+     * @return TaskId <p>Task ID, obtained by <a href="https://www.tencentcloud.com/document/product/614/95519?from_cn_redirect=1">searching the scheduled SQL analysis task list</a>.</p>
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set Task ID, which can be obtained through [scheduled SQL analysis task list](https://www.tencentcloud.com/document/product/614/95519?from_cn_redirect=1).
-     * @param TaskId Task ID, which can be obtained through [scheduled SQL analysis task list](https://www.tencentcloud.com/document/product/614/95519?from_cn_redirect=1).
+     * Set <p>Task ID, obtained by <a href="https://www.tencentcloud.com/document/product/614/95519?from_cn_redirect=1">searching the scheduled SQL analysis task list</a>.</p>
+     * @param TaskId <p>Task ID, obtained by <a href="https://www.tencentcloud.com/document/product/614/95519?from_cn_redirect=1">searching the scheduled SQL analysis task list</a>.</p>
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;
     }
 
     /**
-     * Get Source log topic. Search the [scheduled SQL analysis task list](https://www.tencentcloud.com/document/product/614/95519?from_cn_redirect=1) to obtain it. 
-     * @return SrcTopicId Source log topic. Search the [scheduled SQL analysis task list](https://www.tencentcloud.com/document/product/614/95519?from_cn_redirect=1) to obtain it.
+     * Get <p>Source log topic, obtained via <a href="https://www.tencentcloud.com/document/product/614/95519?from_cn_redirect=1">search scheduled SQL analysis task list</a></p> 
+     * @return SrcTopicId <p>Source log topic, obtained via <a href="https://www.tencentcloud.com/document/product/614/95519?from_cn_redirect=1">search scheduled SQL analysis task list</a></p>
      */
     public String getSrcTopicId() {
         return this.SrcTopicId;
     }
 
     /**
-     * Set Source log topic. Search the [scheduled SQL analysis task list](https://www.tencentcloud.com/document/product/614/95519?from_cn_redirect=1) to obtain it.
-     * @param SrcTopicId Source log topic. Search the [scheduled SQL analysis task list](https://www.tencentcloud.com/document/product/614/95519?from_cn_redirect=1) to obtain it.
+     * Set <p>Source log topic, obtained via <a href="https://www.tencentcloud.com/document/product/614/95519?from_cn_redirect=1">search scheduled SQL analysis task list</a></p>
+     * @param SrcTopicId <p>Source log topic, obtained via <a href="https://www.tencentcloud.com/document/product/614/95519?from_cn_redirect=1">search scheduled SQL analysis task list</a></p>
      */
     public void setSrcTopicId(String SrcTopicId) {
         this.SrcTopicId = SrcTopicId;
     }
 
     /**
-     * Get Task start status. 1: Enabled, 2: Disabled 
-     * @return EnableFlag Task start status. 1: Enabled, 2: Disabled
+     * Get <p>Task start status. 1: Enabled, 2: Disabled</p> 
+     * @return EnableFlag <p>Task start status. 1: Enabled, 2: Disabled</p>
      */
     public Long getEnableFlag() {
         return this.EnableFlag;
     }
 
     /**
-     * Set Task start status. 1: Enabled, 2: Disabled
-     * @param EnableFlag Task start status. 1: Enabled, 2: Disabled
+     * Set <p>Task start status. 1: Enabled, 2: Disabled</p>
+     * @param EnableFlag <p>Task start status. 1: Enabled, 2: Disabled</p>
      */
     public void setEnableFlag(Long EnableFlag) {
         this.EnableFlag = EnableFlag;
     }
 
     /**
-     * Get Target log topic for scheduled SQL analysis 
-     * @return DstResource Target log topic for scheduled SQL analysis
+     * Get <p>Target log topic for scheduled SQL analysis</p> 
+     * @return DstResource <p>Target log topic for scheduled SQL analysis</p>
      */
     public ScheduledSqlResouceInfo getDstResource() {
         return this.DstResource;
     }
 
     /**
-     * Set Target log topic for scheduled SQL analysis
-     * @param DstResource Target log topic for scheduled SQL analysis
+     * Set <p>Target log topic for scheduled SQL analysis</p>
+     * @param DstResource <p>Target log topic for scheduled SQL analysis</p>
      */
     public void setDstResource(ScheduledSqlResouceInfo DstResource) {
         this.DstResource = DstResource;
     }
 
     /**
-     * Get Queries statements 
-     * @return ScheduledSqlContent Queries statements
+     * Get <p>Query statement</p> 
+     * @return ScheduledSqlContent <p>Query statement</p>
      */
     public String getScheduledSqlContent() {
         return this.ScheduledSqlContent;
     }
 
     /**
-     * Set Queries statements
-     * @param ScheduledSqlContent Queries statements
+     * Set <p>Query statement</p>
+     * @param ScheduledSqlContent <p>Query statement</p>
      */
     public void setScheduledSqlContent(String ScheduledSqlContent) {
         this.ScheduledSqlContent = ScheduledSqlContent;
     }
 
     /**
-     * Get Scheduling cycle (minutes), 1-1440 minutes 
-     * @return ProcessPeriod Scheduling cycle (minutes), 1-1440 minutes
+     * Get <p>Scheduling Interval (Minutes), 1-1440 minutes</p> 
+     * @return ProcessPeriod <p>Scheduling Interval (Minutes), 1-1440 minutes</p>
      */
     public Long getProcessPeriod() {
         return this.ProcessPeriod;
     }
 
     /**
-     * Set Scheduling cycle (minutes), 1-1440 minutes
-     * @param ProcessPeriod Scheduling cycle (minutes), 1-1440 minutes
+     * Set <p>Scheduling Interval (Minutes), 1-1440 minutes</p>
+     * @param ProcessPeriod <p>Scheduling Interval (Minutes), 1-1440 minutes</p>
      */
     public void setProcessPeriod(Long ProcessPeriod) {
         this.ProcessPeriod = ProcessPeriod;
     }
 
     /**
-     * Get Time window for a single query. Example: last 15 minutes 
-     * @return ProcessTimeWindow Time window for a single query. Example: last 15 minutes
+     * Get <p>Time window for a single query. Example: last 15 minutes</p> 
+     * @return ProcessTimeWindow <p>Time window for a single query. Example: last 15 minutes</p>
      */
     public String getProcessTimeWindow() {
         return this.ProcessTimeWindow;
     }
 
     /**
-     * Set Time window for a single query. Example: last 15 minutes
-     * @param ProcessTimeWindow Time window for a single query. Example: last 15 minutes
+     * Set <p>Time window for a single query. Example: last 15 minutes</p>
+     * @param ProcessTimeWindow <p>Time window for a single query. Example: last 15 minutes</p>
      */
     public void setProcessTimeWindow(String ProcessTimeWindow) {
         this.ProcessTimeWindow = ProcessTimeWindow;
     }
 
     /**
-     * Get Execution delay (seconds), 0-120 seconds, default 60 
-     * @return ProcessDelay Execution delay (seconds), 0-120 seconds, default 60
+     * Get <p>Execution delay (seconds), 0-120 seconds, default 60 seconds</p> 
+     * @return ProcessDelay <p>Execution delay (seconds), 0-120 seconds, default 60 seconds</p>
      */
     public Long getProcessDelay() {
         return this.ProcessDelay;
     }
 
     /**
-     * Set Execution delay (seconds), 0-120 seconds, default 60
-     * @param ProcessDelay Execution delay (seconds), 0-120 seconds, default 60
+     * Set <p>Execution delay (seconds), 0-120 seconds, default 60 seconds</p>
+     * @param ProcessDelay <p>Execution delay (seconds), 0-120 seconds, default 60 seconds</p>
      */
     public void setProcessDelay(Long ProcessDelay) {
         this.ProcessDelay = ProcessDelay;
     }
 
     /**
-     * Get Regional information of the source topicId. Supported regions are listed in the region list document (https://www.tencentcloud.com/document/api/614/56474?from_cn_redirect=1#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8). 
-     * @return SrcTopicRegion Regional information of the source topicId. Supported regions are listed in the region list document (https://www.tencentcloud.com/document/api/614/56474?from_cn_redirect=1#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8).
+     * Get <p>Regional information of the source topicId. For supported regions, see the <a href="https://www.tencentcloud.com/document/api/614/56474?from_cn_redirect=1#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8">region list</a> document.</p> 
+     * @return SrcTopicRegion <p>Regional information of the source topicId. For supported regions, see the <a href="https://www.tencentcloud.com/document/api/614/56474?from_cn_redirect=1#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8">region list</a> document.</p>
      */
     public String getSrcTopicRegion() {
         return this.SrcTopicRegion;
     }
 
     /**
-     * Set Regional information of the source topicId. Supported regions are listed in the region list document (https://www.tencentcloud.com/document/api/614/56474?from_cn_redirect=1#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8).
-     * @param SrcTopicRegion Regional information of the source topicId. Supported regions are listed in the region list document (https://www.tencentcloud.com/document/api/614/56474?from_cn_redirect=1#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8).
+     * Set <p>Regional information of the source topicId. For supported regions, see the <a href="https://www.tencentcloud.com/document/api/614/56474?from_cn_redirect=1#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8">region list</a> document.</p>
+     * @param SrcTopicRegion <p>Regional information of the source topicId. For supported regions, see the <a href="https://www.tencentcloud.com/document/api/614/56474?from_cn_redirect=1#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8">region list</a> document.</p>
      */
     public void setSrcTopicRegion(String SrcTopicRegion) {
         this.SrcTopicRegion = SrcTopicRegion;
     }
 
     /**
-     * Get Task name, 0-255 characters 
-     * @return Name Task name, 0-255 characters
+     * Get <p>Task name, 0-255 characters</p> 
+     * @return Name <p>Task name, 0-255 characters</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Task name, 0-255 characters
-     * @param Name Task name, 0-255 characters
+     * Set <p>Task name, 0-255 characters</p>
+     * @param Name <p>Task name, 0-255 characters</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get Syntax rules. Default value: 0. 0: Lucene syntax, 1: CQL syntax 
-     * @return SyntaxRule Syntax rules. Default value: 0. 0: Lucene syntax, 1: CQL syntax
+     * Get <p>Syntax rules. Default value: 0. 0: Lucene syntax, 1: CQL syntax</p> 
+     * @return SyntaxRule <p>Syntax rules. Default value: 0. 0: Lucene syntax, 1: CQL syntax</p>
      */
     public Long getSyntaxRule() {
         return this.SyntaxRule;
     }
 
     /**
-     * Set Syntax rules. Default value: 0. 0: Lucene syntax, 1: CQL syntax
-     * @param SyntaxRule Syntax rules. Default value: 0. 0: Lucene syntax, 1: CQL syntax
+     * Set <p>Syntax rules. Default value: 0. 0: Lucene syntax, 1: CQL syntax</p>
+     * @param SyntaxRule <p>Syntax rules. Default value: 0. 0: Lucene syntax, 1: CQL syntax</p>
      */
     public void setSyntaxRule(Long SyntaxRule) {
         this.SyntaxRule = SyntaxRule;
+    }
+
+    /**
+     * Get <p>Whether to enable delivery service log. 1: Disabled, 2: Enabled.</p> 
+     * @return HasServicesLog <p>Whether to enable delivery service log. 1: Disabled, 2: Enabled.</p>
+     */
+    public Long getHasServicesLog() {
+        return this.HasServicesLog;
+    }
+
+    /**
+     * Set <p>Whether to enable delivery service log. 1: Disabled, 2: Enabled.</p>
+     * @param HasServicesLog <p>Whether to enable delivery service log. 1: Disabled, 2: Enabled.</p>
+     */
+    public void setHasServicesLog(Long HasServicesLog) {
+        this.HasServicesLog = HasServicesLog;
+    }
+
+    /**
+     * Get <p>Full-text search query tag. 1: Off, 2: On.</p> 
+     * @return FullQuery <p>Full-text search query tag. 1: Off, 2: On.</p>
+     */
+    public Long getFullQuery() {
+        return this.FullQuery;
+    }
+
+    /**
+     * Set <p>Full-text search query tag. 1: Off, 2: On.</p>
+     * @param FullQuery <p>Full-text search query tag. 1: Off, 2: On.</p>
+     */
+    public void setFullQuery(Long FullQuery) {
+        this.FullQuery = FullQuery;
+    }
+
+    /**
+     * Get <p>Scheduling period unit</p><p>Value ranges from 1 to 2</p><p>Default value: 1</p><p>Default value 1 (minute), other value 2 (second)</p> 
+     * @return ProcessPeriodUnit <p>Scheduling period unit</p><p>Value ranges from 1 to 2</p><p>Default value: 1</p><p>Default value 1 (minute), other value 2 (second)</p>
+     */
+    public Long getProcessPeriodUnit() {
+        return this.ProcessPeriodUnit;
+    }
+
+    /**
+     * Set <p>Scheduling period unit</p><p>Value ranges from 1 to 2</p><p>Default value: 1</p><p>Default value 1 (minute), other value 2 (second)</p>
+     * @param ProcessPeriodUnit <p>Scheduling period unit</p><p>Value ranges from 1 to 2</p><p>Default value: 1</p><p>Default value 1 (minute), other value 2 (second)</p>
+     */
+    public void setProcessPeriodUnit(Long ProcessPeriodUnit) {
+        this.ProcessPeriodUnit = ProcessPeriodUnit;
     }
 
     public ModifyScheduledSqlRequest() {
@@ -317,6 +386,15 @@ public class ModifyScheduledSqlRequest extends AbstractModel {
         if (source.SyntaxRule != null) {
             this.SyntaxRule = new Long(source.SyntaxRule);
         }
+        if (source.HasServicesLog != null) {
+            this.HasServicesLog = new Long(source.HasServicesLog);
+        }
+        if (source.FullQuery != null) {
+            this.FullQuery = new Long(source.FullQuery);
+        }
+        if (source.ProcessPeriodUnit != null) {
+            this.ProcessPeriodUnit = new Long(source.ProcessPeriodUnit);
+        }
     }
 
 
@@ -335,6 +413,9 @@ public class ModifyScheduledSqlRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "SrcTopicRegion", this.SrcTopicRegion);
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "SyntaxRule", this.SyntaxRule);
+        this.setParamSimple(map, prefix + "HasServicesLog", this.HasServicesLog);
+        this.setParamSimple(map, prefix + "FullQuery", this.FullQuery);
+        this.setParamSimple(map, prefix + "ProcessPeriodUnit", this.ProcessPeriodUnit);
 
     }
 }

@@ -101,6 +101,27 @@ public class ModifyDlcDeliverRequest extends AbstractModel {
     private Long Status;
 
     /**
+    * <p>Auto-create dlc field</p><p>Default value: false</p><p>When there are additional fields in your log, the system will automatically ship them to DLC.</p>
+    */
+    @SerializedName("AutoCreateField")
+    @Expose
+    private Boolean AutoCreateField;
+
+    /**
+    * <p>Store logs with delivery failure in a DLC table</p>
+    */
+    @SerializedName("DlcFailHandle")
+    @Expose
+    private DlcFailHandle DlcFailHandle;
+
+    /**
+    * <p>Log pre-filtering - Perform pre-filtering process on the original data for data ingestion into Splunk.</p>
+    */
+    @SerializedName("DSLFilter")
+    @Expose
+    private String DSLFilter;
+
+    /**
      * Get <p>log topic id</p><ul><li>Obtain the log topic Id through <a href="https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1">Get Log Topic List</a>.</li></ul> 
      * @return TopicId <p>log topic id</p><ul><li>Obtain the log topic Id through <a href="https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1">Get Log Topic List</a>.</li></ul>
      */
@@ -276,6 +297,54 @@ public class ModifyDlcDeliverRequest extends AbstractModel {
         this.Status = Status;
     }
 
+    /**
+     * Get <p>Auto-create dlc field</p><p>Default value: false</p><p>When there are additional fields in your log, the system will automatically ship them to DLC.</p> 
+     * @return AutoCreateField <p>Auto-create dlc field</p><p>Default value: false</p><p>When there are additional fields in your log, the system will automatically ship them to DLC.</p>
+     */
+    public Boolean getAutoCreateField() {
+        return this.AutoCreateField;
+    }
+
+    /**
+     * Set <p>Auto-create dlc field</p><p>Default value: false</p><p>When there are additional fields in your log, the system will automatically ship them to DLC.</p>
+     * @param AutoCreateField <p>Auto-create dlc field</p><p>Default value: false</p><p>When there are additional fields in your log, the system will automatically ship them to DLC.</p>
+     */
+    public void setAutoCreateField(Boolean AutoCreateField) {
+        this.AutoCreateField = AutoCreateField;
+    }
+
+    /**
+     * Get <p>Store logs with delivery failure in a DLC table</p> 
+     * @return DlcFailHandle <p>Store logs with delivery failure in a DLC table</p>
+     */
+    public DlcFailHandle getDlcFailHandle() {
+        return this.DlcFailHandle;
+    }
+
+    /**
+     * Set <p>Store logs with delivery failure in a DLC table</p>
+     * @param DlcFailHandle <p>Store logs with delivery failure in a DLC table</p>
+     */
+    public void setDlcFailHandle(DlcFailHandle DlcFailHandle) {
+        this.DlcFailHandle = DlcFailHandle;
+    }
+
+    /**
+     * Get <p>Log pre-filtering - Perform pre-filtering process on the original data for data ingestion into Splunk.</p> 
+     * @return DSLFilter <p>Log pre-filtering - Perform pre-filtering process on the original data for data ingestion into Splunk.</p>
+     */
+    public String getDSLFilter() {
+        return this.DSLFilter;
+    }
+
+    /**
+     * Set <p>Log pre-filtering - Perform pre-filtering process on the original data for data ingestion into Splunk.</p>
+     * @param DSLFilter <p>Log pre-filtering - Perform pre-filtering process on the original data for data ingestion into Splunk.</p>
+     */
+    public void setDSLFilter(String DSLFilter) {
+        this.DSLFilter = DSLFilter;
+    }
+
     public ModifyDlcDeliverRequest() {
     }
 
@@ -317,6 +386,15 @@ public class ModifyDlcDeliverRequest extends AbstractModel {
         if (source.Status != null) {
             this.Status = new Long(source.Status);
         }
+        if (source.AutoCreateField != null) {
+            this.AutoCreateField = new Boolean(source.AutoCreateField);
+        }
+        if (source.DlcFailHandle != null) {
+            this.DlcFailHandle = new DlcFailHandle(source.DlcFailHandle);
+        }
+        if (source.DSLFilter != null) {
+            this.DSLFilter = new String(source.DSLFilter);
+        }
     }
 
 
@@ -335,6 +413,9 @@ public class ModifyDlcDeliverRequest extends AbstractModel {
         this.setParamObj(map, prefix + "DlcInfo.", this.DlcInfo);
         this.setParamSimple(map, prefix + "HasServicesLog", this.HasServicesLog);
         this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "AutoCreateField", this.AutoCreateField);
+        this.setParamObj(map, prefix + "DlcFailHandle.", this.DlcFailHandle);
+        this.setParamSimple(map, prefix + "DSLFilter", this.DSLFilter);
 
     }
 }

@@ -45,6 +45,13 @@ public class DescribeCloudProductLogTasksRequest extends AbstractModel {
     private Filter [] Filters;
 
     /**
+    * <p>Whether to carry tag information of the topic and logset</p>
+    */
+    @SerializedName("WithTags")
+    @Expose
+    private Boolean WithTags;
+
+    /**
      * Get <p>Paging offset. Default value: 0.</p> 
      * @return Offset <p>Paging offset. Default value: 0.</p>
      */
@@ -92,6 +99,22 @@ public class DescribeCloudProductLogTasksRequest extends AbstractModel {
         this.Filters = Filters;
     }
 
+    /**
+     * Get <p>Whether to carry tag information of the topic and logset</p> 
+     * @return WithTags <p>Whether to carry tag information of the topic and logset</p>
+     */
+    public Boolean getWithTags() {
+        return this.WithTags;
+    }
+
+    /**
+     * Set <p>Whether to carry tag information of the topic and logset</p>
+     * @param WithTags <p>Whether to carry tag information of the topic and logset</p>
+     */
+    public void setWithTags(Boolean WithTags) {
+        this.WithTags = WithTags;
+    }
+
     public DescribeCloudProductLogTasksRequest() {
     }
 
@@ -112,6 +135,9 @@ public class DescribeCloudProductLogTasksRequest extends AbstractModel {
                 this.Filters[i] = new Filter(source.Filters[i]);
             }
         }
+        if (source.WithTags != null) {
+            this.WithTags = new Boolean(source.WithTags);
+        }
     }
 
 
@@ -122,6 +148,7 @@ public class DescribeCloudProductLogTasksRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
+        this.setParamSimple(map, prefix + "WithTags", this.WithTags);
 
     }
 }

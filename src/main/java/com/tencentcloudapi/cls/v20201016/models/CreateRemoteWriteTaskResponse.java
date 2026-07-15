@@ -21,10 +21,11 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateScheduledSqlResponse extends AbstractModel {
+public class CreateRemoteWriteTaskResponse extends AbstractModel {
 
     /**
-    * <p>Task ID.</p>
+    * RemoteWrite task ID.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("TaskId")
     @Expose
@@ -38,16 +39,20 @@ public class CreateScheduledSqlResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get <p>Task ID.</p> 
-     * @return TaskId <p>Task ID.</p>
+     * Get RemoteWrite task ID.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return TaskId RemoteWrite task ID.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set <p>Task ID.</p>
-     * @param TaskId <p>Task ID.</p>
+     * Set RemoteWrite task ID.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param TaskId RemoteWrite task ID.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;
@@ -69,14 +74,14 @@ public class CreateScheduledSqlResponse extends AbstractModel {
         this.RequestId = RequestId;
     }
 
-    public CreateScheduledSqlResponse() {
+    public CreateRemoteWriteTaskResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public CreateScheduledSqlResponse(CreateScheduledSqlResponse source) {
+    public CreateRemoteWriteTaskResponse(CreateRemoteWriteTaskResponse source) {
         if (source.TaskId != null) {
             this.TaskId = new String(source.TaskId);
         }
