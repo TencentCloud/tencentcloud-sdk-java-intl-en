@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class CustomVariable extends AbstractModel {
 
     /**
-    * 
+    * <p>User-defined variable type.</p><p>Parameter format: PascalCase format.</p><p>This cannot be UserPrompt. The default platform template is not adapted for custom content. Submit a ticket if needed.</p>
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * 
+    * <p>Custom variable description.</p>
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-     * Get  
-     * @return Type 
+     * Get <p>User-defined variable type.</p><p>Parameter format: PascalCase format.</p><p>This cannot be UserPrompt. The default platform template is not adapted for custom content. Submit a ticket if needed.</p> 
+     * @return Type <p>User-defined variable type.</p><p>Parameter format: PascalCase format.</p><p>This cannot be UserPrompt. The default platform template is not adapted for custom content. Submit a ticket if needed.</p>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 
-     * @param Type 
+     * Set <p>User-defined variable type.</p><p>Parameter format: PascalCase format.</p><p>This cannot be UserPrompt. The default platform template is not adapted for custom content. Submit a ticket if needed.</p>
+     * @param Type <p>User-defined variable type.</p><p>Parameter format: PascalCase format.</p><p>This cannot be UserPrompt. The default platform template is not adapted for custom content. Submit a ticket if needed.</p>
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get  
-     * @return Description 
+     * Get <p>Custom variable description.</p> 
+     * @return Description <p>Custom variable description.</p>
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set 
-     * @param Description 
+     * Set <p>Custom variable description.</p>
+     * @param Description <p>Custom variable description.</p>
      */
     public void setDescription(String Description) {
         this.Description = Description;

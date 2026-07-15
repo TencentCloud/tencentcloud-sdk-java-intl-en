@@ -48,7 +48,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private ImageEraseConfig EraseConfig;
 
     /**
-    * 
+    * <p>AI image set configuration.</p>
     */
     @SerializedName("AiPosterSuiteConfig")
     @Expose
@@ -115,16 +115,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get  
-     * @return AiPosterSuiteConfig 
+     * Get <p>AI image set configuration.</p> 
+     * @return AiPosterSuiteConfig <p>AI image set configuration.</p>
      */
     public AiPosterSuiteConfig getAiPosterSuiteConfig() {
         return this.AiPosterSuiteConfig;
     }
 
     /**
-     * Set 
-     * @param AiPosterSuiteConfig 
+     * Set <p>AI image set configuration.</p>
+     * @param AiPosterSuiteConfig <p>AI image set configuration.</p>
      */
     public void setAiPosterSuiteConfig(AiPosterSuiteConfig AiPosterSuiteConfig) {
         this.AiPosterSuiteConfig = AiPosterSuiteConfig;

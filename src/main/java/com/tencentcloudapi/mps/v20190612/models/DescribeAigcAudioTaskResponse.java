@@ -24,28 +24,28 @@ import java.util.HashMap;
 public class DescribeAigcAudioTaskResponse extends AbstractModel {
 
     /**
-    * Current task status. WAIT: waiting; RUN: running; FAIL: failed; DONE: successful.Example value: DONE
+    * <p>Current task status. WAIT: waiting. RUN: running. FAIL: failed. DONE: successful.</p>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * When the task status is FAIL, the failure information is returned.
+    * <p>If the task status is FAIL, the failure information is returned.</p>
     */
     @SerializedName("Message")
     @Expose
     private String Message;
 
     /**
-    * Output audio information.
+    * <p>Output audio information.</p>
     */
     @SerializedName("AudioInfos")
     @Expose
     private AigcAudioOutputAudioInfo [] AudioInfos;
 
     /**
-    * Output video information. Only returned for scenarios such as video dubbing.
+    * <p>Output video information, which is only available for scenarios such as video dubbing.</p>
     */
     @SerializedName("VideoInfos")
     @Expose
@@ -59,64 +59,64 @@ public class DescribeAigcAudioTaskResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Current task status. WAIT: waiting; RUN: running; FAIL: failed; DONE: successful.Example value: DONE 
-     * @return Status Current task status. WAIT: waiting; RUN: running; FAIL: failed; DONE: successful.Example value: DONE
+     * Get <p>Current task status. WAIT: waiting. RUN: running. FAIL: failed. DONE: successful.</p> 
+     * @return Status <p>Current task status. WAIT: waiting. RUN: running. FAIL: failed. DONE: successful.</p>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Current task status. WAIT: waiting; RUN: running; FAIL: failed; DONE: successful.Example value: DONE
-     * @param Status Current task status. WAIT: waiting; RUN: running; FAIL: failed; DONE: successful.Example value: DONE
+     * Set <p>Current task status. WAIT: waiting. RUN: running. FAIL: failed. DONE: successful.</p>
+     * @param Status <p>Current task status. WAIT: waiting. RUN: running. FAIL: failed. DONE: successful.</p>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get When the task status is FAIL, the failure information is returned. 
-     * @return Message When the task status is FAIL, the failure information is returned.
+     * Get <p>If the task status is FAIL, the failure information is returned.</p> 
+     * @return Message <p>If the task status is FAIL, the failure information is returned.</p>
      */
     public String getMessage() {
         return this.Message;
     }
 
     /**
-     * Set When the task status is FAIL, the failure information is returned.
-     * @param Message When the task status is FAIL, the failure information is returned.
+     * Set <p>If the task status is FAIL, the failure information is returned.</p>
+     * @param Message <p>If the task status is FAIL, the failure information is returned.</p>
      */
     public void setMessage(String Message) {
         this.Message = Message;
     }
 
     /**
-     * Get Output audio information. 
-     * @return AudioInfos Output audio information.
+     * Get <p>Output audio information.</p> 
+     * @return AudioInfos <p>Output audio information.</p>
      */
     public AigcAudioOutputAudioInfo [] getAudioInfos() {
         return this.AudioInfos;
     }
 
     /**
-     * Set Output audio information.
-     * @param AudioInfos Output audio information.
+     * Set <p>Output audio information.</p>
+     * @param AudioInfos <p>Output audio information.</p>
      */
     public void setAudioInfos(AigcAudioOutputAudioInfo [] AudioInfos) {
         this.AudioInfos = AudioInfos;
     }
 
     /**
-     * Get Output video information. Only returned for scenarios such as video dubbing. 
-     * @return VideoInfos Output video information. Only returned for scenarios such as video dubbing.
+     * Get <p>Output video information, which is only available for scenarios such as video dubbing.</p> 
+     * @return VideoInfos <p>Output video information, which is only available for scenarios such as video dubbing.</p>
      */
     public AigcAudioOutputVideoInfo [] getVideoInfos() {
         return this.VideoInfos;
     }
 
     /**
-     * Set Output video information. Only returned for scenarios such as video dubbing.
-     * @param VideoInfos Output video information. Only returned for scenarios such as video dubbing.
+     * Set <p>Output video information, which is only available for scenarios such as video dubbing.</p>
+     * @param VideoInfos <p>Output video information, which is only available for scenarios such as video dubbing.</p>
      */
     public void setVideoInfos(AigcAudioOutputVideoInfo [] VideoInfos) {
         this.VideoInfos = VideoInfos;

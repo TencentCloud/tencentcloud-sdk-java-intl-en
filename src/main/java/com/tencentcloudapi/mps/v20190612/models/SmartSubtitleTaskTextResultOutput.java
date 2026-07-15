@@ -24,6 +24,14 @@ import java.util.HashMap;
 public class SmartSubtitleTaskTextResultOutput extends AbstractModel {
 
     /**
+    * <p>List of segments for smart subtitle recognition.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("SegmentSet")
+    @Expose
+    private SmartSubtitleTaskFullTextSegmentItem [] SegmentSet;
+
+    /**
     * <p>Subtitle recognition result</p>
 Note: This field may return null, indicating that no valid values can be obtained.
     */
@@ -46,6 +54,26 @@ Note: This field may return null, indicating that no valid values can be obtaine
     @SerializedName("OutputStorage")
     @Expose
     private TaskOutputStorage OutputStorage;
+
+    /**
+     * Get <p>List of segments for smart subtitle recognition.</p>
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return SegmentSet <p>List of segments for smart subtitle recognition.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public SmartSubtitleTaskFullTextSegmentItem [] getSegmentSet() {
+        return this.SegmentSet;
+    }
+
+    /**
+     * Set <p>List of segments for smart subtitle recognition.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param SegmentSet <p>List of segments for smart subtitle recognition.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setSegmentSet(SmartSubtitleTaskFullTextSegmentItem [] SegmentSet) {
+        this.SegmentSet = SegmentSet;
+    }
 
     /**
      * Get <p>Subtitle recognition result</p>
@@ -115,6 +143,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public SmartSubtitleTaskTextResultOutput(SmartSubtitleTaskTextResultOutput source) {
+        if (source.SegmentSet != null) {
+            this.SegmentSet = new SmartSubtitleTaskFullTextSegmentItem[source.SegmentSet.length];
+            for (int i = 0; i < source.SegmentSet.length; i++) {
+                this.SegmentSet[i] = new SmartSubtitleTaskFullTextSegmentItem(source.SegmentSet[i]);
+            }
+        }
         if (source.RecognizeSubtitleResult != null) {
             this.RecognizeSubtitleResult = new SubtitleResult[source.RecognizeSubtitleResult.length];
             for (int i = 0; i < source.RecognizeSubtitleResult.length; i++) {
@@ -137,6 +171,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamArrayObj(map, prefix + "SegmentSet.", this.SegmentSet);
         this.setParamArrayObj(map, prefix + "RecognizeSubtitleResult.", this.RecognizeSubtitleResult);
         this.setParamArrayObj(map, prefix + "TransSubtitleResult.", this.TransSubtitleResult);
         this.setParamObj(map, prefix + "OutputStorage.", this.OutputStorage);

@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class CreateEmailIdentityRequest extends AbstractModel {
 
     /**
-    * Your sender domain. You are advised to use a third-level domain, for example, mail.qcloud.com.
+    * <p>For your sender domain name, recommend using a level 3 or higher domain name. Example: mail.qcloud.com.</p>
     */
     @SerializedName("EmailIdentity")
     @Expose
     private String EmailIdentity;
 
     /**
-    * Generated dkim key length. valid values: 0 (1024), 1 (2048).
+    * <p>Generated dkim key length. 0:1024, 1:2048</p>
     */
     @SerializedName("DKIMOption")
     @Expose
     private Long DKIMOption;
 
     /**
-    * tag.
+    * <p>tag</p>
     */
     @SerializedName("TagList")
     @Expose
     private TagList [] TagList;
 
     /**
-     * Get Your sender domain. You are advised to use a third-level domain, for example, mail.qcloud.com. 
-     * @return EmailIdentity Your sender domain. You are advised to use a third-level domain, for example, mail.qcloud.com.
+     * Get <p>For your sender domain name, recommend using a level 3 or higher domain name. Example: mail.qcloud.com.</p> 
+     * @return EmailIdentity <p>For your sender domain name, recommend using a level 3 or higher domain name. Example: mail.qcloud.com.</p>
      */
     public String getEmailIdentity() {
         return this.EmailIdentity;
     }
 
     /**
-     * Set Your sender domain. You are advised to use a third-level domain, for example, mail.qcloud.com.
-     * @param EmailIdentity Your sender domain. You are advised to use a third-level domain, for example, mail.qcloud.com.
+     * Set <p>For your sender domain name, recommend using a level 3 or higher domain name. Example: mail.qcloud.com.</p>
+     * @param EmailIdentity <p>For your sender domain name, recommend using a level 3 or higher domain name. Example: mail.qcloud.com.</p>
      */
     public void setEmailIdentity(String EmailIdentity) {
         this.EmailIdentity = EmailIdentity;
     }
 
     /**
-     * Get Generated dkim key length. valid values: 0 (1024), 1 (2048). 
-     * @return DKIMOption Generated dkim key length. valid values: 0 (1024), 1 (2048).
+     * Get <p>Generated dkim key length. 0:1024, 1:2048</p> 
+     * @return DKIMOption <p>Generated dkim key length. 0:1024, 1:2048</p>
      */
     public Long getDKIMOption() {
         return this.DKIMOption;
     }
 
     /**
-     * Set Generated dkim key length. valid values: 0 (1024), 1 (2048).
-     * @param DKIMOption Generated dkim key length. valid values: 0 (1024), 1 (2048).
+     * Set <p>Generated dkim key length. 0:1024, 1:2048</p>
+     * @param DKIMOption <p>Generated dkim key length. 0:1024, 1:2048</p>
      */
     public void setDKIMOption(Long DKIMOption) {
         this.DKIMOption = DKIMOption;
     }
 
     /**
-     * Get tag. 
-     * @return TagList tag.
+     * Get <p>tag</p> 
+     * @return TagList <p>tag</p>
      */
     public TagList [] getTagList() {
         return this.TagList;
     }
 
     /**
-     * Set tag.
-     * @param TagList tag.
+     * Set <p>tag</p>
+     * @param TagList <p>tag</p>
      */
     public void setTagList(TagList [] TagList) {
         this.TagList = TagList;

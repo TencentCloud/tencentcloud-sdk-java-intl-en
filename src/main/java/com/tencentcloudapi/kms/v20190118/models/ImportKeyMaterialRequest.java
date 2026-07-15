@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class ImportKeyMaterialRequest extends AbstractModel {
 
     /**
-    * Base64-encoded key material that encrypted with the `PublicKey` returned by `GetParametersForImport`. For the KMS of SM-CRYPTO version, the length of the key material should be 128 bits, while for KMS of FIPS-compliant version, the length should be 256 bits.
+    * <p>base64-encoded encrypted key material using the PublicKey returned by GetParametersForImport. For KMS in national cryptography version regions, the length requirement for imported key material is 128 bit. For KMS in FIPS 140-2 version regions, the length requirement for imported key material is 256 bit.</p>
     */
     @SerializedName("EncryptedKeyMaterial")
     @Expose
     private String EncryptedKeyMaterial;
 
     /**
-    * Import token obtained by calling `GetParametersForImport`.
+    * <p>Import token obtained by calling GetParametersForImport.</p>
     */
     @SerializedName("ImportToken")
     @Expose
     private String ImportToken;
 
     /**
-    * Specifies the CMK into which to import key material, which must be the same as the one specified by `GetParametersForImport`.
+    * <p>The CMK designated for importing key material must be identical to the CMK specified in GetParametersForImport.</p>
     */
     @SerializedName("KeyId")
     @Expose
     private String KeyId;
 
     /**
-    * Unix timestamp of the key material's expiration time. If this value is empty or 0, the key material will never expire. To specify the expiration time, it should be later than the current time. Maximum value: 2147443200.
+    * <p>Expiration time of the key material in unix timestamp. If unspecified or 0, the key material does not expire. If specified, the expiration time must be greater than the current time and supports up to 2147443200.</p>
     */
     @SerializedName("ValidTo")
     @Expose
     private Long ValidTo;
 
     /**
-     * Get Base64-encoded key material that encrypted with the `PublicKey` returned by `GetParametersForImport`. For the KMS of SM-CRYPTO version, the length of the key material should be 128 bits, while for KMS of FIPS-compliant version, the length should be 256 bits. 
-     * @return EncryptedKeyMaterial Base64-encoded key material that encrypted with the `PublicKey` returned by `GetParametersForImport`. For the KMS of SM-CRYPTO version, the length of the key material should be 128 bits, while for KMS of FIPS-compliant version, the length should be 256 bits.
+     * Get <p>base64-encoded encrypted key material using the PublicKey returned by GetParametersForImport. For KMS in national cryptography version regions, the length requirement for imported key material is 128 bit. For KMS in FIPS 140-2 version regions, the length requirement for imported key material is 256 bit.</p> 
+     * @return EncryptedKeyMaterial <p>base64-encoded encrypted key material using the PublicKey returned by GetParametersForImport. For KMS in national cryptography version regions, the length requirement for imported key material is 128 bit. For KMS in FIPS 140-2 version regions, the length requirement for imported key material is 256 bit.</p>
      */
     public String getEncryptedKeyMaterial() {
         return this.EncryptedKeyMaterial;
     }
 
     /**
-     * Set Base64-encoded key material that encrypted with the `PublicKey` returned by `GetParametersForImport`. For the KMS of SM-CRYPTO version, the length of the key material should be 128 bits, while for KMS of FIPS-compliant version, the length should be 256 bits.
-     * @param EncryptedKeyMaterial Base64-encoded key material that encrypted with the `PublicKey` returned by `GetParametersForImport`. For the KMS of SM-CRYPTO version, the length of the key material should be 128 bits, while for KMS of FIPS-compliant version, the length should be 256 bits.
+     * Set <p>base64-encoded encrypted key material using the PublicKey returned by GetParametersForImport. For KMS in national cryptography version regions, the length requirement for imported key material is 128 bit. For KMS in FIPS 140-2 version regions, the length requirement for imported key material is 256 bit.</p>
+     * @param EncryptedKeyMaterial <p>base64-encoded encrypted key material using the PublicKey returned by GetParametersForImport. For KMS in national cryptography version regions, the length requirement for imported key material is 128 bit. For KMS in FIPS 140-2 version regions, the length requirement for imported key material is 256 bit.</p>
      */
     public void setEncryptedKeyMaterial(String EncryptedKeyMaterial) {
         this.EncryptedKeyMaterial = EncryptedKeyMaterial;
     }
 
     /**
-     * Get Import token obtained by calling `GetParametersForImport`. 
-     * @return ImportToken Import token obtained by calling `GetParametersForImport`.
+     * Get <p>Import token obtained by calling GetParametersForImport.</p> 
+     * @return ImportToken <p>Import token obtained by calling GetParametersForImport.</p>
      */
     public String getImportToken() {
         return this.ImportToken;
     }
 
     /**
-     * Set Import token obtained by calling `GetParametersForImport`.
-     * @param ImportToken Import token obtained by calling `GetParametersForImport`.
+     * Set <p>Import token obtained by calling GetParametersForImport.</p>
+     * @param ImportToken <p>Import token obtained by calling GetParametersForImport.</p>
      */
     public void setImportToken(String ImportToken) {
         this.ImportToken = ImportToken;
     }
 
     /**
-     * Get Specifies the CMK into which to import key material, which must be the same as the one specified by `GetParametersForImport`. 
-     * @return KeyId Specifies the CMK into which to import key material, which must be the same as the one specified by `GetParametersForImport`.
+     * Get <p>The CMK designated for importing key material must be identical to the CMK specified in GetParametersForImport.</p> 
+     * @return KeyId <p>The CMK designated for importing key material must be identical to the CMK specified in GetParametersForImport.</p>
      */
     public String getKeyId() {
         return this.KeyId;
     }
 
     /**
-     * Set Specifies the CMK into which to import key material, which must be the same as the one specified by `GetParametersForImport`.
-     * @param KeyId Specifies the CMK into which to import key material, which must be the same as the one specified by `GetParametersForImport`.
+     * Set <p>The CMK designated for importing key material must be identical to the CMK specified in GetParametersForImport.</p>
+     * @param KeyId <p>The CMK designated for importing key material must be identical to the CMK specified in GetParametersForImport.</p>
      */
     public void setKeyId(String KeyId) {
         this.KeyId = KeyId;
     }
 
     /**
-     * Get Unix timestamp of the key material's expiration time. If this value is empty or 0, the key material will never expire. To specify the expiration time, it should be later than the current time. Maximum value: 2147443200. 
-     * @return ValidTo Unix timestamp of the key material's expiration time. If this value is empty or 0, the key material will never expire. To specify the expiration time, it should be later than the current time. Maximum value: 2147443200.
+     * Get <p>Expiration time of the key material in unix timestamp. If unspecified or 0, the key material does not expire. If specified, the expiration time must be greater than the current time and supports up to 2147443200.</p> 
+     * @return ValidTo <p>Expiration time of the key material in unix timestamp. If unspecified or 0, the key material does not expire. If specified, the expiration time must be greater than the current time and supports up to 2147443200.</p>
      */
     public Long getValidTo() {
         return this.ValidTo;
     }
 
     /**
-     * Set Unix timestamp of the key material's expiration time. If this value is empty or 0, the key material will never expire. To specify the expiration time, it should be later than the current time. Maximum value: 2147443200.
-     * @param ValidTo Unix timestamp of the key material's expiration time. If this value is empty or 0, the key material will never expire. To specify the expiration time, it should be later than the current time. Maximum value: 2147443200.
+     * Set <p>Expiration time of the key material in unix timestamp. If unspecified or 0, the key material does not expire. If specified, the expiration time must be greater than the current time and supports up to 2147443200.</p>
+     * @param ValidTo <p>Expiration time of the key material in unix timestamp. If unspecified or 0, the key material does not expire. If specified, the expiration time must be greater than the current time and supports up to 2147443200.</p>
      */
     public void setValidTo(Long ValidTo) {
         this.ValidTo = ValidTo;

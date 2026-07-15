@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class RecipeItem extends AbstractModel {
 
     /**
-    * 
+    * <p>Sub-image type.</p><p>Enumeration values:</p><ul><li>hero: product hero image.</li><li>detail: product details image.</li><li>selling: core selling point image.</li><li>atmosphere: scene atmosphere image.</li><li>angles: multiple-angle image.</li><li>scene: usage scenario image.</li></ul>
     */
     @SerializedName("Theme")
     @Expose
     private String Theme;
 
     /**
-    * 
+    * <p>Number of corresponding sub-images.</p><p>Value range: 1 to 4.</p><p>Unit: image.</p><p>Each type can have up to 4 sub-images. The total number of sub-images must be within the range of 4 to 12.</p>
     */
     @SerializedName("Num")
     @Expose
     private Long Num;
 
     /**
-     * Get  
-     * @return Theme 
+     * Get <p>Sub-image type.</p><p>Enumeration values:</p><ul><li>hero: product hero image.</li><li>detail: product details image.</li><li>selling: core selling point image.</li><li>atmosphere: scene atmosphere image.</li><li>angles: multiple-angle image.</li><li>scene: usage scenario image.</li></ul> 
+     * @return Theme <p>Sub-image type.</p><p>Enumeration values:</p><ul><li>hero: product hero image.</li><li>detail: product details image.</li><li>selling: core selling point image.</li><li>atmosphere: scene atmosphere image.</li><li>angles: multiple-angle image.</li><li>scene: usage scenario image.</li></ul>
      */
     public String getTheme() {
         return this.Theme;
     }
 
     /**
-     * Set 
-     * @param Theme 
+     * Set <p>Sub-image type.</p><p>Enumeration values:</p><ul><li>hero: product hero image.</li><li>detail: product details image.</li><li>selling: core selling point image.</li><li>atmosphere: scene atmosphere image.</li><li>angles: multiple-angle image.</li><li>scene: usage scenario image.</li></ul>
+     * @param Theme <p>Sub-image type.</p><p>Enumeration values:</p><ul><li>hero: product hero image.</li><li>detail: product details image.</li><li>selling: core selling point image.</li><li>atmosphere: scene atmosphere image.</li><li>angles: multiple-angle image.</li><li>scene: usage scenario image.</li></ul>
      */
     public void setTheme(String Theme) {
         this.Theme = Theme;
     }
 
     /**
-     * Get  
-     * @return Num 
+     * Get <p>Number of corresponding sub-images.</p><p>Value range: 1 to 4.</p><p>Unit: image.</p><p>Each type can have up to 4 sub-images. The total number of sub-images must be within the range of 4 to 12.</p> 
+     * @return Num <p>Number of corresponding sub-images.</p><p>Value range: 1 to 4.</p><p>Unit: image.</p><p>Each type can have up to 4 sub-images. The total number of sub-images must be within the range of 4 to 12.</p>
      */
     public Long getNum() {
         return this.Num;
     }
 
     /**
-     * Set 
-     * @param Num 
+     * Set <p>Number of corresponding sub-images.</p><p>Value range: 1 to 4.</p><p>Unit: image.</p><p>Each type can have up to 4 sub-images. The total number of sub-images must be within the range of 4 to 12.</p>
+     * @param Num <p>Number of corresponding sub-images.</p><p>Value range: 1 to 4.</p><p>Unit: image.</p><p>Each type can have up to 4 sub-images. The total number of sub-images must be within the range of 4 to 12.</p>
      */
     public void setNum(Long Num) {
         this.Num = Num;

@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class AigcAudioOutputVideoInfo extends AbstractModel {
 
     /**
-    * 
+    * <p>Video URL.</p>
     */
     @SerializedName("Url")
     @Expose
     private String Url;
 
     /**
-    * 
+    * <p>Video duration.</p>
     */
     @SerializedName("Duration")
     @Expose
     private Long Duration;
 
     /**
-     * Get  
-     * @return Url 
+     * Get <p>Video URL.</p> 
+     * @return Url <p>Video URL.</p>
      */
     public String getUrl() {
         return this.Url;
     }
 
     /**
-     * Set 
-     * @param Url 
+     * Set <p>Video URL.</p>
+     * @param Url <p>Video URL.</p>
      */
     public void setUrl(String Url) {
         this.Url = Url;
     }
 
     /**
-     * Get  
-     * @return Duration 
+     * Get <p>Video duration.</p> 
+     * @return Duration <p>Video duration.</p>
      */
     public Long getDuration() {
         return this.Duration;
     }
 
     /**
-     * Set 
-     * @param Duration 
+     * Set <p>Video duration.</p>
+     * @param Duration <p>Video duration.</p>
      */
     public void setDuration(Long Duration) {
         this.Duration = Duration;

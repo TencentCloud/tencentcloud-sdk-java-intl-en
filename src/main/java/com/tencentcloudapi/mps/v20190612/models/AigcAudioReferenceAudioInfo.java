@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class AigcAudioReferenceAudioInfo extends AbstractModel {
 
     /**
-    * 
+    * <p>Reference audio URL, which must be accessible from the public network.</p>
     */
     @SerializedName("AudioUrl")
     @Expose
     private String AudioUrl;
 
     /**
-     * Get  
-     * @return AudioUrl 
+     * Get <p>Reference audio URL, which must be accessible from the public network.</p> 
+     * @return AudioUrl <p>Reference audio URL, which must be accessible from the public network.</p>
      */
     public String getAudioUrl() {
         return this.AudioUrl;
     }
 
     /**
-     * Set 
-     * @param AudioUrl 
+     * Set <p>Reference audio URL, which must be accessible from the public network.</p>
+     * @param AudioUrl <p>Reference audio URL, which must be accessible from the public network.</p>
      */
     public void setAudioUrl(String AudioUrl) {
         this.AudioUrl = AudioUrl;

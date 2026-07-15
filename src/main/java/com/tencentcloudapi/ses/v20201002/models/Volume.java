@@ -24,184 +24,184 @@ import java.util.HashMap;
 public class Volume extends AbstractModel {
 
     /**
-    * Date
+    * <p>Date</p>
     */
     @SerializedName("SendDate")
     @Expose
     private String SendDate;
 
     /**
-    * Number of email requests.
+    * <p>Request quantity by email</p>
     */
     @SerializedName("RequestCount")
     @Expose
     private Long RequestCount;
 
     /**
-    * Number of email requests accepted by Tencent Cloud.
+    * <p>Tencent Cloud pass count</p>
     */
     @SerializedName("AcceptedCount")
     @Expose
     private Long AcceptedCount;
 
     /**
-    * Number of delivered emails.
+    * <p>Delivery quantity</p>
     */
     @SerializedName("DeliveredCount")
     @Expose
     private Long DeliveredCount;
 
     /**
-    * Number of users (deduplicated) who opened emails.
+    * <p>Total number of times emails were opened</p>
     */
     @SerializedName("OpenedCount")
     @Expose
     private Long OpenedCount;
 
     /**
-    * Number of recipients who clicked on links in emails.
+    * <p>Number of users who clicked the link in the mail</p>
     */
     @SerializedName("ClickedCount")
     @Expose
     private Long ClickedCount;
 
     /**
-    * Number of bounced emails.
+    * <p>Bounced count</p>
     */
     @SerializedName("BounceCount")
     @Expose
     private Long BounceCount;
 
     /**
-    * Number of users for unsubscription.
+    * <p>Number of users for unsubscription</p>
     */
     @SerializedName("UnsubscribeCount")
     @Expose
     private Long UnsubscribeCount;
 
     /**
-     * Get Date 
-     * @return SendDate Date
+     * Get <p>Date</p> 
+     * @return SendDate <p>Date</p>
      */
     public String getSendDate() {
         return this.SendDate;
     }
 
     /**
-     * Set Date
-     * @param SendDate Date
+     * Set <p>Date</p>
+     * @param SendDate <p>Date</p>
      */
     public void setSendDate(String SendDate) {
         this.SendDate = SendDate;
     }
 
     /**
-     * Get Number of email requests. 
-     * @return RequestCount Number of email requests.
+     * Get <p>Request quantity by email</p> 
+     * @return RequestCount <p>Request quantity by email</p>
      */
     public Long getRequestCount() {
         return this.RequestCount;
     }
 
     /**
-     * Set Number of email requests.
-     * @param RequestCount Number of email requests.
+     * Set <p>Request quantity by email</p>
+     * @param RequestCount <p>Request quantity by email</p>
      */
     public void setRequestCount(Long RequestCount) {
         this.RequestCount = RequestCount;
     }
 
     /**
-     * Get Number of email requests accepted by Tencent Cloud. 
-     * @return AcceptedCount Number of email requests accepted by Tencent Cloud.
+     * Get <p>Tencent Cloud pass count</p> 
+     * @return AcceptedCount <p>Tencent Cloud pass count</p>
      */
     public Long getAcceptedCount() {
         return this.AcceptedCount;
     }
 
     /**
-     * Set Number of email requests accepted by Tencent Cloud.
-     * @param AcceptedCount Number of email requests accepted by Tencent Cloud.
+     * Set <p>Tencent Cloud pass count</p>
+     * @param AcceptedCount <p>Tencent Cloud pass count</p>
      */
     public void setAcceptedCount(Long AcceptedCount) {
         this.AcceptedCount = AcceptedCount;
     }
 
     /**
-     * Get Number of delivered emails. 
-     * @return DeliveredCount Number of delivered emails.
+     * Get <p>Delivery quantity</p> 
+     * @return DeliveredCount <p>Delivery quantity</p>
      */
     public Long getDeliveredCount() {
         return this.DeliveredCount;
     }
 
     /**
-     * Set Number of delivered emails.
-     * @param DeliveredCount Number of delivered emails.
+     * Set <p>Delivery quantity</p>
+     * @param DeliveredCount <p>Delivery quantity</p>
      */
     public void setDeliveredCount(Long DeliveredCount) {
         this.DeliveredCount = DeliveredCount;
     }
 
     /**
-     * Get Number of users (deduplicated) who opened emails. 
-     * @return OpenedCount Number of users (deduplicated) who opened emails.
+     * Get <p>Total number of times emails were opened</p> 
+     * @return OpenedCount <p>Total number of times emails were opened</p>
      */
     public Long getOpenedCount() {
         return this.OpenedCount;
     }
 
     /**
-     * Set Number of users (deduplicated) who opened emails.
-     * @param OpenedCount Number of users (deduplicated) who opened emails.
+     * Set <p>Total number of times emails were opened</p>
+     * @param OpenedCount <p>Total number of times emails were opened</p>
      */
     public void setOpenedCount(Long OpenedCount) {
         this.OpenedCount = OpenedCount;
     }
 
     /**
-     * Get Number of recipients who clicked on links in emails. 
-     * @return ClickedCount Number of recipients who clicked on links in emails.
+     * Get <p>Number of users who clicked the link in the mail</p> 
+     * @return ClickedCount <p>Number of users who clicked the link in the mail</p>
      */
     public Long getClickedCount() {
         return this.ClickedCount;
     }
 
     /**
-     * Set Number of recipients who clicked on links in emails.
-     * @param ClickedCount Number of recipients who clicked on links in emails.
+     * Set <p>Number of users who clicked the link in the mail</p>
+     * @param ClickedCount <p>Number of users who clicked the link in the mail</p>
      */
     public void setClickedCount(Long ClickedCount) {
         this.ClickedCount = ClickedCount;
     }
 
     /**
-     * Get Number of bounced emails. 
-     * @return BounceCount Number of bounced emails.
+     * Get <p>Bounced count</p> 
+     * @return BounceCount <p>Bounced count</p>
      */
     public Long getBounceCount() {
         return this.BounceCount;
     }
 
     /**
-     * Set Number of bounced emails.
-     * @param BounceCount Number of bounced emails.
+     * Set <p>Bounced count</p>
+     * @param BounceCount <p>Bounced count</p>
      */
     public void setBounceCount(Long BounceCount) {
         this.BounceCount = BounceCount;
     }
 
     /**
-     * Get Number of users for unsubscription. 
-     * @return UnsubscribeCount Number of users for unsubscription.
+     * Get <p>Number of users for unsubscription</p> 
+     * @return UnsubscribeCount <p>Number of users for unsubscription</p>
      */
     public Long getUnsubscribeCount() {
         return this.UnsubscribeCount;
     }
 
     /**
-     * Set Number of users for unsubscription.
-     * @param UnsubscribeCount Number of users for unsubscription.
+     * Set <p>Number of users for unsubscription</p>
+     * @param UnsubscribeCount <p>Number of users for unsubscription</p>
      */
     public void setUnsubscribeCount(Long UnsubscribeCount) {
         this.UnsubscribeCount = UnsubscribeCount;

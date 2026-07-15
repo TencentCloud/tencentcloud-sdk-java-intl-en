@@ -24,644 +24,644 @@ import java.util.HashMap;
 public class KeyMetadata extends AbstractModel {
 
     /**
-    * Globally unique CMK ID
+    * <p>Globally unique ID of the CMK.</p>
     */
     @SerializedName("KeyId")
     @Expose
     private String KeyId;
 
     /**
-    * Alias that makes a key more recognizable and understandable
+    * <p>An alias name as a key that is easier to identify and understand</p>
     */
     @SerializedName("Alias")
     @Expose
     private String Alias;
 
     /**
-    * Key creation time
+    * <p>Key creation time</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private Long CreateTime;
 
     /**
-    * CMK description
+    * <p>Description of the CMK.</p>
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * CMK status. Valid values: Enabled, Disabled, PendingDelete, PendingImport, Archived.
+    * <p>CMK state, value: Enabled | Disabled | PendingDelete | PendingImport | Archived</p>
     */
     @SerializedName("KeyState")
     @Expose
     private String KeyState;
 
     /**
-    * CMK purpose. Valid values: `ENCRYPT_DECRYPT`, `ASYMMETRIC_DECRYPT_RSA_2048`, `ASYMMETRIC_DECRYPT_SM2`, `ASYMMETRIC_SIGN_VERIFY_SM2`, `ASYMMETRIC_SIGN_VERIFY_RSA_2048`, and `ASYMMETRIC_SIGN_VERIFY_ECC`.
+    * <p>CMK purpose. Value: ENCRYPT_DECRYPT | ASYMMETRIC_DECRYPT_RSA_2048 | ASYMMETRIC_DECRYPT_SM2 | ASYMMETRIC_SIGN_VERIFY_SM2 | ASYMMETRIC_SIGN_VERIFY_RSA_2048 | ASYMMETRIC_SIGN_VERIFY_ECC</p>
     */
     @SerializedName("KeyUsage")
     @Expose
     private String KeyUsage;
 
     /**
-    * CMK type. 2: FIPS-compliant; 4: SM-CRYPTO
+    * <p>CMK type. 2 means compliant with FIPS 140-2 standard. 4 means compliant with national cryptography standards.</p><p>Enumeration value:</p><ul><li>2: Complies with FIPS 140-2 standard</li><li>4: Complies with national cryptography standards</li></ul>
     */
     @SerializedName("Type")
     @Expose
     private Long Type;
 
     /**
-    * Creator
+    * <p>Creator.</p>
     */
     @SerializedName("CreatorUin")
     @Expose
     private Long CreatorUin;
 
     /**
-    * Whether key rotation is enabled
+    * <p>Is key rotation function enabled?</p>
     */
     @SerializedName("KeyRotationEnabled")
     @Expose
     private Boolean KeyRotationEnabled;
 
     /**
-    * CMK creator. The value of this parameter is `user` if the CMK is created by the user, or the corresponding service name if it is created automatically by an authorized Tencent Cloud service.
+    * <p>Creator of the CMK. For user-created CMKs, the value is user. For CMKs auto-created by authorized Cloud services, the value is the corresponding product name.</p>
     */
     @SerializedName("Owner")
     @Expose
     private String Owner;
 
     /**
-    * Time of next rotation if key rotation is enabled
+    * <p>The time when the next rotation occurs with key rotation enabled</p>
     */
     @SerializedName("NextRotateTime")
     @Expose
     private Long NextRotateTime;
 
     /**
-    * The time when scheduled deletion occurs.
+    * <p>The time when schedule deletion</p>
     */
     @SerializedName("DeletionDate")
     @Expose
     private Long DeletionDate;
 
     /**
-    * CMK key material type. the type created by KMS is TENCENT_KMS. the user-imported type is EXTERNAL.
+    * <p>CMK key material type. TENCENT_KMS for those created by KMS, EXTERNAL for user import.</p>
     */
     @SerializedName("Origin")
     @Expose
     private String Origin;
 
     /**
-    * Valid when Origin is EXTERNAL. indicates the validity date of the key material. 0 means no expiration.
+    * <p>Valid when Origin is EXTERNAL. Indicates the expiration date of the key material. 0 means never expire.</p>
     */
     @SerializedName("ValidTo")
     @Expose
     private Long ValidTo;
 
     /**
-    * Resource ID in the format of `creatorUin/$creatorUin/$keyId`.
+    * <p>Resource ID, format: creatorUin/$creatorUin/$keyId</p>
     */
     @SerializedName("ResourceId")
     @Expose
     private String ResourceId;
 
     /**
-    * HSM cluster ID (valid only for exclusive or managed version KMS service instances).
+    * <p>HSM Cluster ID (only applicable to KMS exclusive/managed service instance)</p>
     */
     @SerializedName("HsmClusterId")
     @Expose
     private String HsmClusterId;
 
     /**
-    * Key rotation period (days).
+    * <p>Key rotation cycle (days)</p>
     */
     @SerializedName("RotateDays")
     @Expose
     private Long RotateDays;
 
     /**
-    * Last disorderly rotation time (Unix timestamp).
+    * <p>Last rotation time (Unix timestamp).</p>
     */
     @SerializedName("LastRotateTime")
     @Expose
     private Long LastRotateTime;
 
     /**
-    * Specifies whether the key is a primary replica. valid values: 0 (primary replica), 1 (synced replica).
+    * <p>Whether the key is the primary replica. 0: primary replica, 1: synced replica.</p>
     */
     @SerializedName("IsSyncReplica")
     @Expose
     private Long IsSyncReplica;
 
     /**
-    * Synchronous original region.
+    * <p>Synchronous original region</p>
     */
     @SerializedName("SourceRegion")
     @Expose
     private String SourceRegion;
 
     /**
-    * The state of key synchronization. valid values: 0 (unsynced), 1 (synchronization successful), 2 (synchronization failed), 3 (synchronizing).
+    * <p>Key synchronization state: 0: unsynced, 1: synced successfully, 2: synchronization failed, 3: syncing.</p>
     */
     @SerializedName("SyncStatus")
     @Expose
     private Long SyncStatus;
 
     /**
-    * Describes the synchronous result.
+    * <p>Synchronous result description</p>
     */
     @SerializedName("SyncMessages")
     @Expose
     private String SyncMessages;
 
     /**
-    * Start time of synchronization.
+    * <p>Start time of synchronization</p>
     */
     @SerializedName("SyncStartTime")
     @Expose
     private Long SyncStartTime;
 
     /**
-    * Specifies the synchronous end time.
+    * <p>Synchronous end time</p>
     */
     @SerializedName("SyncEndTime")
     @Expose
     private Long SyncEndTime;
 
     /**
-    * Synchronous original cluster. if empty, it is a public cloud public cluster.
+    * <p>Synchronous original cluster. If empty, it is a public cloud public cluster.</p>
     */
     @SerializedName("SourceHsmClusterId")
     @Expose
     private String SourceHsmClusterId;
 
     /**
-    * Member account appId.
+    * <p>Member account appId</p>
     */
     @SerializedName("AccountAppId")
     @Expose
     private Long AccountAppId;
 
     /**
-    * Member account UIN
+    * <p>member account uin</p>
     */
     @SerializedName("AccountUin")
     @Expose
     private Long AccountUin;
 
     /**
-    * Member account name.
+    * <p>Member account name</p>
     */
     @SerializedName("AccountName")
     @Expose
     private String AccountName;
 
     /**
-     * Get Globally unique CMK ID 
-     * @return KeyId Globally unique CMK ID
+     * Get <p>Globally unique ID of the CMK.</p> 
+     * @return KeyId <p>Globally unique ID of the CMK.</p>
      */
     public String getKeyId() {
         return this.KeyId;
     }
 
     /**
-     * Set Globally unique CMK ID
-     * @param KeyId Globally unique CMK ID
+     * Set <p>Globally unique ID of the CMK.</p>
+     * @param KeyId <p>Globally unique ID of the CMK.</p>
      */
     public void setKeyId(String KeyId) {
         this.KeyId = KeyId;
     }
 
     /**
-     * Get Alias that makes a key more recognizable and understandable 
-     * @return Alias Alias that makes a key more recognizable and understandable
+     * Get <p>An alias name as a key that is easier to identify and understand</p> 
+     * @return Alias <p>An alias name as a key that is easier to identify and understand</p>
      */
     public String getAlias() {
         return this.Alias;
     }
 
     /**
-     * Set Alias that makes a key more recognizable and understandable
-     * @param Alias Alias that makes a key more recognizable and understandable
+     * Set <p>An alias name as a key that is easier to identify and understand</p>
+     * @param Alias <p>An alias name as a key that is easier to identify and understand</p>
      */
     public void setAlias(String Alias) {
         this.Alias = Alias;
     }
 
     /**
-     * Get Key creation time 
-     * @return CreateTime Key creation time
+     * Get <p>Key creation time</p> 
+     * @return CreateTime <p>Key creation time</p>
      */
     public Long getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set Key creation time
-     * @param CreateTime Key creation time
+     * Set <p>Key creation time</p>
+     * @param CreateTime <p>Key creation time</p>
      */
     public void setCreateTime(Long CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get CMK description 
-     * @return Description CMK description
+     * Get <p>Description of the CMK.</p> 
+     * @return Description <p>Description of the CMK.</p>
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set CMK description
-     * @param Description CMK description
+     * Set <p>Description of the CMK.</p>
+     * @param Description <p>Description of the CMK.</p>
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get CMK status. Valid values: Enabled, Disabled, PendingDelete, PendingImport, Archived. 
-     * @return KeyState CMK status. Valid values: Enabled, Disabled, PendingDelete, PendingImport, Archived.
+     * Get <p>CMK state, value: Enabled | Disabled | PendingDelete | PendingImport | Archived</p> 
+     * @return KeyState <p>CMK state, value: Enabled | Disabled | PendingDelete | PendingImport | Archived</p>
      */
     public String getKeyState() {
         return this.KeyState;
     }
 
     /**
-     * Set CMK status. Valid values: Enabled, Disabled, PendingDelete, PendingImport, Archived.
-     * @param KeyState CMK status. Valid values: Enabled, Disabled, PendingDelete, PendingImport, Archived.
+     * Set <p>CMK state, value: Enabled | Disabled | PendingDelete | PendingImport | Archived</p>
+     * @param KeyState <p>CMK state, value: Enabled | Disabled | PendingDelete | PendingImport | Archived</p>
      */
     public void setKeyState(String KeyState) {
         this.KeyState = KeyState;
     }
 
     /**
-     * Get CMK purpose. Valid values: `ENCRYPT_DECRYPT`, `ASYMMETRIC_DECRYPT_RSA_2048`, `ASYMMETRIC_DECRYPT_SM2`, `ASYMMETRIC_SIGN_VERIFY_SM2`, `ASYMMETRIC_SIGN_VERIFY_RSA_2048`, and `ASYMMETRIC_SIGN_VERIFY_ECC`. 
-     * @return KeyUsage CMK purpose. Valid values: `ENCRYPT_DECRYPT`, `ASYMMETRIC_DECRYPT_RSA_2048`, `ASYMMETRIC_DECRYPT_SM2`, `ASYMMETRIC_SIGN_VERIFY_SM2`, `ASYMMETRIC_SIGN_VERIFY_RSA_2048`, and `ASYMMETRIC_SIGN_VERIFY_ECC`.
+     * Get <p>CMK purpose. Value: ENCRYPT_DECRYPT | ASYMMETRIC_DECRYPT_RSA_2048 | ASYMMETRIC_DECRYPT_SM2 | ASYMMETRIC_SIGN_VERIFY_SM2 | ASYMMETRIC_SIGN_VERIFY_RSA_2048 | ASYMMETRIC_SIGN_VERIFY_ECC</p> 
+     * @return KeyUsage <p>CMK purpose. Value: ENCRYPT_DECRYPT | ASYMMETRIC_DECRYPT_RSA_2048 | ASYMMETRIC_DECRYPT_SM2 | ASYMMETRIC_SIGN_VERIFY_SM2 | ASYMMETRIC_SIGN_VERIFY_RSA_2048 | ASYMMETRIC_SIGN_VERIFY_ECC</p>
      */
     public String getKeyUsage() {
         return this.KeyUsage;
     }
 
     /**
-     * Set CMK purpose. Valid values: `ENCRYPT_DECRYPT`, `ASYMMETRIC_DECRYPT_RSA_2048`, `ASYMMETRIC_DECRYPT_SM2`, `ASYMMETRIC_SIGN_VERIFY_SM2`, `ASYMMETRIC_SIGN_VERIFY_RSA_2048`, and `ASYMMETRIC_SIGN_VERIFY_ECC`.
-     * @param KeyUsage CMK purpose. Valid values: `ENCRYPT_DECRYPT`, `ASYMMETRIC_DECRYPT_RSA_2048`, `ASYMMETRIC_DECRYPT_SM2`, `ASYMMETRIC_SIGN_VERIFY_SM2`, `ASYMMETRIC_SIGN_VERIFY_RSA_2048`, and `ASYMMETRIC_SIGN_VERIFY_ECC`.
+     * Set <p>CMK purpose. Value: ENCRYPT_DECRYPT | ASYMMETRIC_DECRYPT_RSA_2048 | ASYMMETRIC_DECRYPT_SM2 | ASYMMETRIC_SIGN_VERIFY_SM2 | ASYMMETRIC_SIGN_VERIFY_RSA_2048 | ASYMMETRIC_SIGN_VERIFY_ECC</p>
+     * @param KeyUsage <p>CMK purpose. Value: ENCRYPT_DECRYPT | ASYMMETRIC_DECRYPT_RSA_2048 | ASYMMETRIC_DECRYPT_SM2 | ASYMMETRIC_SIGN_VERIFY_SM2 | ASYMMETRIC_SIGN_VERIFY_RSA_2048 | ASYMMETRIC_SIGN_VERIFY_ECC</p>
      */
     public void setKeyUsage(String KeyUsage) {
         this.KeyUsage = KeyUsage;
     }
 
     /**
-     * Get CMK type. 2: FIPS-compliant; 4: SM-CRYPTO 
-     * @return Type CMK type. 2: FIPS-compliant; 4: SM-CRYPTO
+     * Get <p>CMK type. 2 means compliant with FIPS 140-2 standard. 4 means compliant with national cryptography standards.</p><p>Enumeration value:</p><ul><li>2: Complies with FIPS 140-2 standard</li><li>4: Complies with national cryptography standards</li></ul> 
+     * @return Type <p>CMK type. 2 means compliant with FIPS 140-2 standard. 4 means compliant with national cryptography standards.</p><p>Enumeration value:</p><ul><li>2: Complies with FIPS 140-2 standard</li><li>4: Complies with national cryptography standards</li></ul>
      */
     public Long getType() {
         return this.Type;
     }
 
     /**
-     * Set CMK type. 2: FIPS-compliant; 4: SM-CRYPTO
-     * @param Type CMK type. 2: FIPS-compliant; 4: SM-CRYPTO
+     * Set <p>CMK type. 2 means compliant with FIPS 140-2 standard. 4 means compliant with national cryptography standards.</p><p>Enumeration value:</p><ul><li>2: Complies with FIPS 140-2 standard</li><li>4: Complies with national cryptography standards</li></ul>
+     * @param Type <p>CMK type. 2 means compliant with FIPS 140-2 standard. 4 means compliant with national cryptography standards.</p><p>Enumeration value:</p><ul><li>2: Complies with FIPS 140-2 standard</li><li>4: Complies with national cryptography standards</li></ul>
      */
     public void setType(Long Type) {
         this.Type = Type;
     }
 
     /**
-     * Get Creator 
-     * @return CreatorUin Creator
+     * Get <p>Creator.</p> 
+     * @return CreatorUin <p>Creator.</p>
      */
     public Long getCreatorUin() {
         return this.CreatorUin;
     }
 
     /**
-     * Set Creator
-     * @param CreatorUin Creator
+     * Set <p>Creator.</p>
+     * @param CreatorUin <p>Creator.</p>
      */
     public void setCreatorUin(Long CreatorUin) {
         this.CreatorUin = CreatorUin;
     }
 
     /**
-     * Get Whether key rotation is enabled 
-     * @return KeyRotationEnabled Whether key rotation is enabled
+     * Get <p>Is key rotation function enabled?</p> 
+     * @return KeyRotationEnabled <p>Is key rotation function enabled?</p>
      */
     public Boolean getKeyRotationEnabled() {
         return this.KeyRotationEnabled;
     }
 
     /**
-     * Set Whether key rotation is enabled
-     * @param KeyRotationEnabled Whether key rotation is enabled
+     * Set <p>Is key rotation function enabled?</p>
+     * @param KeyRotationEnabled <p>Is key rotation function enabled?</p>
      */
     public void setKeyRotationEnabled(Boolean KeyRotationEnabled) {
         this.KeyRotationEnabled = KeyRotationEnabled;
     }
 
     /**
-     * Get CMK creator. The value of this parameter is `user` if the CMK is created by the user, or the corresponding service name if it is created automatically by an authorized Tencent Cloud service. 
-     * @return Owner CMK creator. The value of this parameter is `user` if the CMK is created by the user, or the corresponding service name if it is created automatically by an authorized Tencent Cloud service.
+     * Get <p>Creator of the CMK. For user-created CMKs, the value is user. For CMKs auto-created by authorized Cloud services, the value is the corresponding product name.</p> 
+     * @return Owner <p>Creator of the CMK. For user-created CMKs, the value is user. For CMKs auto-created by authorized Cloud services, the value is the corresponding product name.</p>
      */
     public String getOwner() {
         return this.Owner;
     }
 
     /**
-     * Set CMK creator. The value of this parameter is `user` if the CMK is created by the user, or the corresponding service name if it is created automatically by an authorized Tencent Cloud service.
-     * @param Owner CMK creator. The value of this parameter is `user` if the CMK is created by the user, or the corresponding service name if it is created automatically by an authorized Tencent Cloud service.
+     * Set <p>Creator of the CMK. For user-created CMKs, the value is user. For CMKs auto-created by authorized Cloud services, the value is the corresponding product name.</p>
+     * @param Owner <p>Creator of the CMK. For user-created CMKs, the value is user. For CMKs auto-created by authorized Cloud services, the value is the corresponding product name.</p>
      */
     public void setOwner(String Owner) {
         this.Owner = Owner;
     }
 
     /**
-     * Get Time of next rotation if key rotation is enabled 
-     * @return NextRotateTime Time of next rotation if key rotation is enabled
+     * Get <p>The time when the next rotation occurs with key rotation enabled</p> 
+     * @return NextRotateTime <p>The time when the next rotation occurs with key rotation enabled</p>
      */
     public Long getNextRotateTime() {
         return this.NextRotateTime;
     }
 
     /**
-     * Set Time of next rotation if key rotation is enabled
-     * @param NextRotateTime Time of next rotation if key rotation is enabled
+     * Set <p>The time when the next rotation occurs with key rotation enabled</p>
+     * @param NextRotateTime <p>The time when the next rotation occurs with key rotation enabled</p>
      */
     public void setNextRotateTime(Long NextRotateTime) {
         this.NextRotateTime = NextRotateTime;
     }
 
     /**
-     * Get The time when scheduled deletion occurs. 
-     * @return DeletionDate The time when scheduled deletion occurs.
+     * Get <p>The time when schedule deletion</p> 
+     * @return DeletionDate <p>The time when schedule deletion</p>
      */
     public Long getDeletionDate() {
         return this.DeletionDate;
     }
 
     /**
-     * Set The time when scheduled deletion occurs.
-     * @param DeletionDate The time when scheduled deletion occurs.
+     * Set <p>The time when schedule deletion</p>
+     * @param DeletionDate <p>The time when schedule deletion</p>
      */
     public void setDeletionDate(Long DeletionDate) {
         this.DeletionDate = DeletionDate;
     }
 
     /**
-     * Get CMK key material type. the type created by KMS is TENCENT_KMS. the user-imported type is EXTERNAL. 
-     * @return Origin CMK key material type. the type created by KMS is TENCENT_KMS. the user-imported type is EXTERNAL.
+     * Get <p>CMK key material type. TENCENT_KMS for those created by KMS, EXTERNAL for user import.</p> 
+     * @return Origin <p>CMK key material type. TENCENT_KMS for those created by KMS, EXTERNAL for user import.</p>
      */
     public String getOrigin() {
         return this.Origin;
     }
 
     /**
-     * Set CMK key material type. the type created by KMS is TENCENT_KMS. the user-imported type is EXTERNAL.
-     * @param Origin CMK key material type. the type created by KMS is TENCENT_KMS. the user-imported type is EXTERNAL.
+     * Set <p>CMK key material type. TENCENT_KMS for those created by KMS, EXTERNAL for user import.</p>
+     * @param Origin <p>CMK key material type. TENCENT_KMS for those created by KMS, EXTERNAL for user import.</p>
      */
     public void setOrigin(String Origin) {
         this.Origin = Origin;
     }
 
     /**
-     * Get Valid when Origin is EXTERNAL. indicates the validity date of the key material. 0 means no expiration. 
-     * @return ValidTo Valid when Origin is EXTERNAL. indicates the validity date of the key material. 0 means no expiration.
+     * Get <p>Valid when Origin is EXTERNAL. Indicates the expiration date of the key material. 0 means never expire.</p> 
+     * @return ValidTo <p>Valid when Origin is EXTERNAL. Indicates the expiration date of the key material. 0 means never expire.</p>
      */
     public Long getValidTo() {
         return this.ValidTo;
     }
 
     /**
-     * Set Valid when Origin is EXTERNAL. indicates the validity date of the key material. 0 means no expiration.
-     * @param ValidTo Valid when Origin is EXTERNAL. indicates the validity date of the key material. 0 means no expiration.
+     * Set <p>Valid when Origin is EXTERNAL. Indicates the expiration date of the key material. 0 means never expire.</p>
+     * @param ValidTo <p>Valid when Origin is EXTERNAL. Indicates the expiration date of the key material. 0 means never expire.</p>
      */
     public void setValidTo(Long ValidTo) {
         this.ValidTo = ValidTo;
     }
 
     /**
-     * Get Resource ID in the format of `creatorUin/$creatorUin/$keyId`. 
-     * @return ResourceId Resource ID in the format of `creatorUin/$creatorUin/$keyId`.
+     * Get <p>Resource ID, format: creatorUin/$creatorUin/$keyId</p> 
+     * @return ResourceId <p>Resource ID, format: creatorUin/$creatorUin/$keyId</p>
      */
     public String getResourceId() {
         return this.ResourceId;
     }
 
     /**
-     * Set Resource ID in the format of `creatorUin/$creatorUin/$keyId`.
-     * @param ResourceId Resource ID in the format of `creatorUin/$creatorUin/$keyId`.
+     * Set <p>Resource ID, format: creatorUin/$creatorUin/$keyId</p>
+     * @param ResourceId <p>Resource ID, format: creatorUin/$creatorUin/$keyId</p>
      */
     public void setResourceId(String ResourceId) {
         this.ResourceId = ResourceId;
     }
 
     /**
-     * Get HSM cluster ID (valid only for exclusive or managed version KMS service instances). 
-     * @return HsmClusterId HSM cluster ID (valid only for exclusive or managed version KMS service instances).
+     * Get <p>HSM Cluster ID (only applicable to KMS exclusive/managed service instance)</p> 
+     * @return HsmClusterId <p>HSM Cluster ID (only applicable to KMS exclusive/managed service instance)</p>
      */
     public String getHsmClusterId() {
         return this.HsmClusterId;
     }
 
     /**
-     * Set HSM cluster ID (valid only for exclusive or managed version KMS service instances).
-     * @param HsmClusterId HSM cluster ID (valid only for exclusive or managed version KMS service instances).
+     * Set <p>HSM Cluster ID (only applicable to KMS exclusive/managed service instance)</p>
+     * @param HsmClusterId <p>HSM Cluster ID (only applicable to KMS exclusive/managed service instance)</p>
      */
     public void setHsmClusterId(String HsmClusterId) {
         this.HsmClusterId = HsmClusterId;
     }
 
     /**
-     * Get Key rotation period (days). 
-     * @return RotateDays Key rotation period (days).
+     * Get <p>Key rotation cycle (days)</p> 
+     * @return RotateDays <p>Key rotation cycle (days)</p>
      */
     public Long getRotateDays() {
         return this.RotateDays;
     }
 
     /**
-     * Set Key rotation period (days).
-     * @param RotateDays Key rotation period (days).
+     * Set <p>Key rotation cycle (days)</p>
+     * @param RotateDays <p>Key rotation cycle (days)</p>
      */
     public void setRotateDays(Long RotateDays) {
         this.RotateDays = RotateDays;
     }
 
     /**
-     * Get Last disorderly rotation time (Unix timestamp). 
-     * @return LastRotateTime Last disorderly rotation time (Unix timestamp).
+     * Get <p>Last rotation time (Unix timestamp).</p> 
+     * @return LastRotateTime <p>Last rotation time (Unix timestamp).</p>
      */
     public Long getLastRotateTime() {
         return this.LastRotateTime;
     }
 
     /**
-     * Set Last disorderly rotation time (Unix timestamp).
-     * @param LastRotateTime Last disorderly rotation time (Unix timestamp).
+     * Set <p>Last rotation time (Unix timestamp).</p>
+     * @param LastRotateTime <p>Last rotation time (Unix timestamp).</p>
      */
     public void setLastRotateTime(Long LastRotateTime) {
         this.LastRotateTime = LastRotateTime;
     }
 
     /**
-     * Get Specifies whether the key is a primary replica. valid values: 0 (primary replica), 1 (synced replica). 
-     * @return IsSyncReplica Specifies whether the key is a primary replica. valid values: 0 (primary replica), 1 (synced replica).
+     * Get <p>Whether the key is the primary replica. 0: primary replica, 1: synced replica.</p> 
+     * @return IsSyncReplica <p>Whether the key is the primary replica. 0: primary replica, 1: synced replica.</p>
      */
     public Long getIsSyncReplica() {
         return this.IsSyncReplica;
     }
 
     /**
-     * Set Specifies whether the key is a primary replica. valid values: 0 (primary replica), 1 (synced replica).
-     * @param IsSyncReplica Specifies whether the key is a primary replica. valid values: 0 (primary replica), 1 (synced replica).
+     * Set <p>Whether the key is the primary replica. 0: primary replica, 1: synced replica.</p>
+     * @param IsSyncReplica <p>Whether the key is the primary replica. 0: primary replica, 1: synced replica.</p>
      */
     public void setIsSyncReplica(Long IsSyncReplica) {
         this.IsSyncReplica = IsSyncReplica;
     }
 
     /**
-     * Get Synchronous original region. 
-     * @return SourceRegion Synchronous original region.
+     * Get <p>Synchronous original region</p> 
+     * @return SourceRegion <p>Synchronous original region</p>
      */
     public String getSourceRegion() {
         return this.SourceRegion;
     }
 
     /**
-     * Set Synchronous original region.
-     * @param SourceRegion Synchronous original region.
+     * Set <p>Synchronous original region</p>
+     * @param SourceRegion <p>Synchronous original region</p>
      */
     public void setSourceRegion(String SourceRegion) {
         this.SourceRegion = SourceRegion;
     }
 
     /**
-     * Get The state of key synchronization. valid values: 0 (unsynced), 1 (synchronization successful), 2 (synchronization failed), 3 (synchronizing). 
-     * @return SyncStatus The state of key synchronization. valid values: 0 (unsynced), 1 (synchronization successful), 2 (synchronization failed), 3 (synchronizing).
+     * Get <p>Key synchronization state: 0: unsynced, 1: synced successfully, 2: synchronization failed, 3: syncing.</p> 
+     * @return SyncStatus <p>Key synchronization state: 0: unsynced, 1: synced successfully, 2: synchronization failed, 3: syncing.</p>
      */
     public Long getSyncStatus() {
         return this.SyncStatus;
     }
 
     /**
-     * Set The state of key synchronization. valid values: 0 (unsynced), 1 (synchronization successful), 2 (synchronization failed), 3 (synchronizing).
-     * @param SyncStatus The state of key synchronization. valid values: 0 (unsynced), 1 (synchronization successful), 2 (synchronization failed), 3 (synchronizing).
+     * Set <p>Key synchronization state: 0: unsynced, 1: synced successfully, 2: synchronization failed, 3: syncing.</p>
+     * @param SyncStatus <p>Key synchronization state: 0: unsynced, 1: synced successfully, 2: synchronization failed, 3: syncing.</p>
      */
     public void setSyncStatus(Long SyncStatus) {
         this.SyncStatus = SyncStatus;
     }
 
     /**
-     * Get Describes the synchronous result. 
-     * @return SyncMessages Describes the synchronous result.
+     * Get <p>Synchronous result description</p> 
+     * @return SyncMessages <p>Synchronous result description</p>
      */
     public String getSyncMessages() {
         return this.SyncMessages;
     }
 
     /**
-     * Set Describes the synchronous result.
-     * @param SyncMessages Describes the synchronous result.
+     * Set <p>Synchronous result description</p>
+     * @param SyncMessages <p>Synchronous result description</p>
      */
     public void setSyncMessages(String SyncMessages) {
         this.SyncMessages = SyncMessages;
     }
 
     /**
-     * Get Start time of synchronization. 
-     * @return SyncStartTime Start time of synchronization.
+     * Get <p>Start time of synchronization</p> 
+     * @return SyncStartTime <p>Start time of synchronization</p>
      */
     public Long getSyncStartTime() {
         return this.SyncStartTime;
     }
 
     /**
-     * Set Start time of synchronization.
-     * @param SyncStartTime Start time of synchronization.
+     * Set <p>Start time of synchronization</p>
+     * @param SyncStartTime <p>Start time of synchronization</p>
      */
     public void setSyncStartTime(Long SyncStartTime) {
         this.SyncStartTime = SyncStartTime;
     }
 
     /**
-     * Get Specifies the synchronous end time. 
-     * @return SyncEndTime Specifies the synchronous end time.
+     * Get <p>Synchronous end time</p> 
+     * @return SyncEndTime <p>Synchronous end time</p>
      */
     public Long getSyncEndTime() {
         return this.SyncEndTime;
     }
 
     /**
-     * Set Specifies the synchronous end time.
-     * @param SyncEndTime Specifies the synchronous end time.
+     * Set <p>Synchronous end time</p>
+     * @param SyncEndTime <p>Synchronous end time</p>
      */
     public void setSyncEndTime(Long SyncEndTime) {
         this.SyncEndTime = SyncEndTime;
     }
 
     /**
-     * Get Synchronous original cluster. if empty, it is a public cloud public cluster. 
-     * @return SourceHsmClusterId Synchronous original cluster. if empty, it is a public cloud public cluster.
+     * Get <p>Synchronous original cluster. If empty, it is a public cloud public cluster.</p> 
+     * @return SourceHsmClusterId <p>Synchronous original cluster. If empty, it is a public cloud public cluster.</p>
      */
     public String getSourceHsmClusterId() {
         return this.SourceHsmClusterId;
     }
 
     /**
-     * Set Synchronous original cluster. if empty, it is a public cloud public cluster.
-     * @param SourceHsmClusterId Synchronous original cluster. if empty, it is a public cloud public cluster.
+     * Set <p>Synchronous original cluster. If empty, it is a public cloud public cluster.</p>
+     * @param SourceHsmClusterId <p>Synchronous original cluster. If empty, it is a public cloud public cluster.</p>
      */
     public void setSourceHsmClusterId(String SourceHsmClusterId) {
         this.SourceHsmClusterId = SourceHsmClusterId;
     }
 
     /**
-     * Get Member account appId. 
-     * @return AccountAppId Member account appId.
+     * Get <p>Member account appId</p> 
+     * @return AccountAppId <p>Member account appId</p>
      */
     public Long getAccountAppId() {
         return this.AccountAppId;
     }
 
     /**
-     * Set Member account appId.
-     * @param AccountAppId Member account appId.
+     * Set <p>Member account appId</p>
+     * @param AccountAppId <p>Member account appId</p>
      */
     public void setAccountAppId(Long AccountAppId) {
         this.AccountAppId = AccountAppId;
     }
 
     /**
-     * Get Member account UIN 
-     * @return AccountUin Member account UIN
+     * Get <p>member account uin</p> 
+     * @return AccountUin <p>member account uin</p>
      */
     public Long getAccountUin() {
         return this.AccountUin;
     }
 
     /**
-     * Set Member account UIN
-     * @param AccountUin Member account UIN
+     * Set <p>member account uin</p>
+     * @param AccountUin <p>member account uin</p>
      */
     public void setAccountUin(Long AccountUin) {
         this.AccountUin = AccountUin;
     }
 
     /**
-     * Get Member account name. 
-     * @return AccountName Member account name.
+     * Get <p>Member account name</p> 
+     * @return AccountName <p>Member account name</p>
      */
     public String getAccountName() {
         return this.AccountName;
     }
 
     /**
-     * Set Member account name.
-     * @param AccountName Member account name.
+     * Set <p>Member account name</p>
+     * @param AccountName <p>Member account name</p>
      */
     public void setAccountName(String AccountName) {
         this.AccountName = AccountName;

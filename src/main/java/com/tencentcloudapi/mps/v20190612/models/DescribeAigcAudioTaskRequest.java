@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DescribeAigcAudioTaskRequest extends AbstractModel {
 
     /**
-    * The task ID returned when creating the AIGC audio generation task.Example value: 24000145-****d**-cb46b8040b684b539bbd46****e*e2fd
+    * <p>Task ID returned when the AIGC video generation task is created.</p>
     */
     @SerializedName("TaskId")
     @Expose
     private String TaskId;
 
     /**
-     * Get The task ID returned when creating the AIGC audio generation task.Example value: 24000145-****d**-cb46b8040b684b539bbd46****e*e2fd 
-     * @return TaskId The task ID returned when creating the AIGC audio generation task.Example value: 24000145-****d**-cb46b8040b684b539bbd46****e*e2fd
+     * Get <p>Task ID returned when the AIGC video generation task is created.</p> 
+     * @return TaskId <p>Task ID returned when the AIGC video generation task is created.</p>
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set The task ID returned when creating the AIGC audio generation task.Example value: 24000145-****d**-cb46b8040b684b539bbd46****e*e2fd
-     * @param TaskId The task ID returned when creating the AIGC audio generation task.Example value: 24000145-****d**-cb46b8040b684b539bbd46****e*e2fd
+     * Set <p>Task ID returned when the AIGC video generation task is created.</p>
+     * @param TaskId <p>Task ID returned when the AIGC video generation task is created.</p>
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;

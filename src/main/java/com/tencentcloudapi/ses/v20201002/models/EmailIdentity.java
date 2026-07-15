@@ -24,164 +24,187 @@ import java.util.HashMap;
 public class EmailIdentity extends AbstractModel {
 
     /**
-    * Sender domain.
+    * <p>Sender domain name</p>
     */
     @SerializedName("IdentityName")
     @Expose
     private String IdentityName;
 
     /**
-    * Verification type. The value is fixed to `DOMAIN`.
+    * <p>Validation type, fixed as DOMAIN</p>
     */
     @SerializedName("IdentityType")
     @Expose
     private String IdentityType;
 
     /**
-    * Verification passed or not.
+    * <p>Whether verified</p>
     */
     @SerializedName("SendingEnabled")
     @Expose
     private Boolean SendingEnabled;
 
     /**
-    * Current reputation level
+    * <p>Current reputation level</p>
     */
     @SerializedName("CurrentReputationLevel")
     @Expose
     private Long CurrentReputationLevel;
 
     /**
-    * Maximum number of messages sent per day
+    * <p>Maximum message sending capacity of the current day</p>
     */
     @SerializedName("DailyQuota")
     @Expose
     private Long DailyQuota;
 
     /**
-    * Independent ip for domain configuration.
+    * <p>Independent ip for domain configuration</p>
     */
     @SerializedName("SendIp")
     @Expose
     private String [] SendIp;
 
     /**
-    * tag.
+    * <p>tag</p>
     */
     @SerializedName("TagList")
     @Expose
     private TagList [] TagList;
 
     /**
-     * Get Sender domain. 
-     * @return IdentityName Sender domain.
+    * <p>dkim bit number</p><p>Enumeration value:</p><ul><li>0: 1024</li><li>1: 2048</li><li>2: Dual signature</li></ul><p>Default value: 0</p>
+    */
+    @SerializedName("DKIMOption")
+    @Expose
+    private Long DKIMOption;
+
+    /**
+     * Get <p>Sender domain name</p> 
+     * @return IdentityName <p>Sender domain name</p>
      */
     public String getIdentityName() {
         return this.IdentityName;
     }
 
     /**
-     * Set Sender domain.
-     * @param IdentityName Sender domain.
+     * Set <p>Sender domain name</p>
+     * @param IdentityName <p>Sender domain name</p>
      */
     public void setIdentityName(String IdentityName) {
         this.IdentityName = IdentityName;
     }
 
     /**
-     * Get Verification type. The value is fixed to `DOMAIN`. 
-     * @return IdentityType Verification type. The value is fixed to `DOMAIN`.
+     * Get <p>Validation type, fixed as DOMAIN</p> 
+     * @return IdentityType <p>Validation type, fixed as DOMAIN</p>
      */
     public String getIdentityType() {
         return this.IdentityType;
     }
 
     /**
-     * Set Verification type. The value is fixed to `DOMAIN`.
-     * @param IdentityType Verification type. The value is fixed to `DOMAIN`.
+     * Set <p>Validation type, fixed as DOMAIN</p>
+     * @param IdentityType <p>Validation type, fixed as DOMAIN</p>
      */
     public void setIdentityType(String IdentityType) {
         this.IdentityType = IdentityType;
     }
 
     /**
-     * Get Verification passed or not. 
-     * @return SendingEnabled Verification passed or not.
+     * Get <p>Whether verified</p> 
+     * @return SendingEnabled <p>Whether verified</p>
      */
     public Boolean getSendingEnabled() {
         return this.SendingEnabled;
     }
 
     /**
-     * Set Verification passed or not.
-     * @param SendingEnabled Verification passed or not.
+     * Set <p>Whether verified</p>
+     * @param SendingEnabled <p>Whether verified</p>
      */
     public void setSendingEnabled(Boolean SendingEnabled) {
         this.SendingEnabled = SendingEnabled;
     }
 
     /**
-     * Get Current reputation level 
-     * @return CurrentReputationLevel Current reputation level
+     * Get <p>Current reputation level</p> 
+     * @return CurrentReputationLevel <p>Current reputation level</p>
      */
     public Long getCurrentReputationLevel() {
         return this.CurrentReputationLevel;
     }
 
     /**
-     * Set Current reputation level
-     * @param CurrentReputationLevel Current reputation level
+     * Set <p>Current reputation level</p>
+     * @param CurrentReputationLevel <p>Current reputation level</p>
      */
     public void setCurrentReputationLevel(Long CurrentReputationLevel) {
         this.CurrentReputationLevel = CurrentReputationLevel;
     }
 
     /**
-     * Get Maximum number of messages sent per day 
-     * @return DailyQuota Maximum number of messages sent per day
+     * Get <p>Maximum message sending capacity of the current day</p> 
+     * @return DailyQuota <p>Maximum message sending capacity of the current day</p>
      */
     public Long getDailyQuota() {
         return this.DailyQuota;
     }
 
     /**
-     * Set Maximum number of messages sent per day
-     * @param DailyQuota Maximum number of messages sent per day
+     * Set <p>Maximum message sending capacity of the current day</p>
+     * @param DailyQuota <p>Maximum message sending capacity of the current day</p>
      */
     public void setDailyQuota(Long DailyQuota) {
         this.DailyQuota = DailyQuota;
     }
 
     /**
-     * Get Independent ip for domain configuration. 
-     * @return SendIp Independent ip for domain configuration.
+     * Get <p>Independent ip for domain configuration</p> 
+     * @return SendIp <p>Independent ip for domain configuration</p>
      */
     public String [] getSendIp() {
         return this.SendIp;
     }
 
     /**
-     * Set Independent ip for domain configuration.
-     * @param SendIp Independent ip for domain configuration.
+     * Set <p>Independent ip for domain configuration</p>
+     * @param SendIp <p>Independent ip for domain configuration</p>
      */
     public void setSendIp(String [] SendIp) {
         this.SendIp = SendIp;
     }
 
     /**
-     * Get tag. 
-     * @return TagList tag.
+     * Get <p>tag</p> 
+     * @return TagList <p>tag</p>
      */
     public TagList [] getTagList() {
         return this.TagList;
     }
 
     /**
-     * Set tag.
-     * @param TagList tag.
+     * Set <p>tag</p>
+     * @param TagList <p>tag</p>
      */
     public void setTagList(TagList [] TagList) {
         this.TagList = TagList;
+    }
+
+    /**
+     * Get <p>dkim bit number</p><p>Enumeration value:</p><ul><li>0: 1024</li><li>1: 2048</li><li>2: Dual signature</li></ul><p>Default value: 0</p> 
+     * @return DKIMOption <p>dkim bit number</p><p>Enumeration value:</p><ul><li>0: 1024</li><li>1: 2048</li><li>2: Dual signature</li></ul><p>Default value: 0</p>
+     */
+    public Long getDKIMOption() {
+        return this.DKIMOption;
+    }
+
+    /**
+     * Set <p>dkim bit number</p><p>Enumeration value:</p><ul><li>0: 1024</li><li>1: 2048</li><li>2: Dual signature</li></ul><p>Default value: 0</p>
+     * @param DKIMOption <p>dkim bit number</p><p>Enumeration value:</p><ul><li>0: 1024</li><li>1: 2048</li><li>2: Dual signature</li></ul><p>Default value: 0</p>
+     */
+    public void setDKIMOption(Long DKIMOption) {
+        this.DKIMOption = DKIMOption;
     }
 
     public EmailIdentity() {
@@ -219,6 +242,9 @@ public class EmailIdentity extends AbstractModel {
                 this.TagList[i] = new TagList(source.TagList[i]);
             }
         }
+        if (source.DKIMOption != null) {
+            this.DKIMOption = new Long(source.DKIMOption);
+        }
     }
 
 
@@ -233,6 +259,7 @@ public class EmailIdentity extends AbstractModel {
         this.setParamSimple(map, prefix + "DailyQuota", this.DailyQuota);
         this.setParamArraySimple(map, prefix + "SendIp.", this.SendIp);
         this.setParamArrayObj(map, prefix + "TagList.", this.TagList);
+        this.setParamSimple(map, prefix + "DKIMOption", this.DKIMOption);
 
     }
 }

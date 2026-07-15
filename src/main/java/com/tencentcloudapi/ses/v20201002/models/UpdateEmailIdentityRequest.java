@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class UpdateEmailIdentityRequest extends AbstractModel {
 
     /**
-    * Domain to be verified.
+    * <p>Domain name for request verification</p>
     */
     @SerializedName("EmailIdentity")
     @Expose
     private String EmailIdentity;
 
     /**
-    * The  DKIMOption parameter is effective or not
+    * <p>Match the new and old APIs in the console</p>
     */
     @SerializedName("NewAPI")
     @Expose
     private Boolean NewAPI;
 
     /**
-    * dkim option, 0: 1024, 1: 2048, 2: both
+    * <p>dkim digits</p><p>Enumeration value:</p><ul><li>0: 1024</li><li>1: 2048</li><li>2: Dual signature</li></ul>
     */
     @SerializedName("DKIMOption")
     @Expose
     private Long DKIMOption;
 
     /**
-     * Get Domain to be verified. 
-     * @return EmailIdentity Domain to be verified.
+     * Get <p>Domain name for request verification</p> 
+     * @return EmailIdentity <p>Domain name for request verification</p>
      */
     public String getEmailIdentity() {
         return this.EmailIdentity;
     }
 
     /**
-     * Set Domain to be verified.
-     * @param EmailIdentity Domain to be verified.
+     * Set <p>Domain name for request verification</p>
+     * @param EmailIdentity <p>Domain name for request verification</p>
      */
     public void setEmailIdentity(String EmailIdentity) {
         this.EmailIdentity = EmailIdentity;
     }
 
     /**
-     * Get The  DKIMOption parameter is effective or not 
-     * @return NewAPI The  DKIMOption parameter is effective or not
+     * Get <p>Match the new and old APIs in the console</p> 
+     * @return NewAPI <p>Match the new and old APIs in the console</p>
      */
     public Boolean getNewAPI() {
         return this.NewAPI;
     }
 
     /**
-     * Set The  DKIMOption parameter is effective or not
-     * @param NewAPI The  DKIMOption parameter is effective or not
+     * Set <p>Match the new and old APIs in the console</p>
+     * @param NewAPI <p>Match the new and old APIs in the console</p>
      */
     public void setNewAPI(Boolean NewAPI) {
         this.NewAPI = NewAPI;
     }
 
     /**
-     * Get dkim option, 0: 1024, 1: 2048, 2: both 
-     * @return DKIMOption dkim option, 0: 1024, 1: 2048, 2: both
+     * Get <p>dkim digits</p><p>Enumeration value:</p><ul><li>0: 1024</li><li>1: 2048</li><li>2: Dual signature</li></ul> 
+     * @return DKIMOption <p>dkim digits</p><p>Enumeration value:</p><ul><li>0: 1024</li><li>1: 2048</li><li>2: Dual signature</li></ul>
      */
     public Long getDKIMOption() {
         return this.DKIMOption;
     }
 
     /**
-     * Set dkim option, 0: 1024, 1: 2048, 2: both
-     * @param DKIMOption dkim option, 0: 1024, 1: 2048, 2: both
+     * Set <p>dkim digits</p><p>Enumeration value:</p><ul><li>0: 1024</li><li>1: 2048</li><li>2: Dual signature</li></ul>
+     * @param DKIMOption <p>dkim digits</p><p>Enumeration value:</p><ul><li>0: 1024</li><li>1: 2048</li><li>2: Dual signature</li></ul>
      */
     public void setDKIMOption(Long DKIMOption) {
         this.DKIMOption = DKIMOption;

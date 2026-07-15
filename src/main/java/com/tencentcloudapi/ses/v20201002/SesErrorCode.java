@@ -9,7 +9,7 @@ public enum SesErrorCode {
      /* The attachments are too large. Make sure they do not exceed the size limit for a single attachment and the overall limit for all attachments. */
      FAILEDOPERATION_ATTACHCONTENTTOOLARGE("FailedOperation.AttachContentToolarge"),
      
-     /*  */
+     /* DKIM is not created and must be created in advance */
      FAILEDOPERATION_DKIMNOTAPPLIED("FailedOperation.DKIMNotApplied"),
      
      /* The email address is in the blocklist. */

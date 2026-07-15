@@ -60,6 +60,27 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private AudioTrackChannelInfo TrackChannelInfo;
 
     /**
+    * <p>Audio track language, such as chi or eng. Note: (1) This follows the ISO 639-2 standard. (2) This applies only to adaptive bitrate streaming templates. (3) The value "source" means that the source language is used.</p>
+    */
+    @SerializedName("AudioLanguage")
+    @Expose
+    private String AudioLanguage;
+
+    /**
+    * <p>Audio track name, such as Chinese or English. Note: (1) Only Chinese characters, letters, digits, spaces, underscores (_), hyphens (-), periods (.), and brackets are supported. The length cannot exceed 64 characters. (2) This applies only to adaptive bitrate streaming templates. (3) The value "source" means that the source name is used.</p>
+    */
+    @SerializedName("AudioName")
+    @Expose
+    private String AudioName;
+
+    /**
+    * <p>Default audio track. When set to true, the current audio track is designated as the default audio track. A maximum of 1 default audio track can be specified.</p><p>Default value: false.</p>
+    */
+    @SerializedName("DefaultTrack")
+    @Expose
+    private Boolean DefaultTrack;
+
+    /**
      * Get <p>Audio stream encoding format.<br>When audio transcoding is not needed, the valid value is:</p><li>copy.</li>When the outer parameter Container is mp3, the valid value is:<li>mp3.</li>When the outer parameter Container is ogg or flac, the valid value is:<li>flac.</li>When the outer parameter Container is m4a, the valid values are:<li>aac;</li><li>ac3.</li>When the outer parameter Container is mp4 or flv, the valid values are:<li>aac: suitable for mp4.</li><li>mp3: suitable for flv.</li><li>mp2.</li>When the outer parameter Container is hls, the valid values are:<li>aac.</li><li>mp3.</li><li>eac3: used when merging audio tracks with adaptive transcoding.</li>When the outer parameter Container is wav, the valid values are:<li>pcm16 and pcm24.</li> 
      * @return Codec <p>Audio stream encoding format.<br>When audio transcoding is not needed, the valid value is:</p><li>copy.</li>When the outer parameter Container is mp3, the valid value is:<li>mp3.</li>When the outer parameter Container is ogg or flac, the valid value is:<li>flac.</li>When the outer parameter Container is m4a, the valid values are:<li>aac;</li><li>ac3.</li>When the outer parameter Container is mp4 or flv, the valid values are:<li>aac: suitable for mp4.</li><li>mp3: suitable for flv.</li><li>mp2.</li>When the outer parameter Container is hls, the valid values are:<li>aac.</li><li>mp3.</li><li>eac3: used when merging audio tracks with adaptive transcoding.</li>When the outer parameter Container is wav, the valid values are:<li>pcm16 and pcm24.</li>
      */
@@ -143,6 +164,54 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.TrackChannelInfo = TrackChannelInfo;
     }
 
+    /**
+     * Get <p>Audio track language, such as chi or eng. Note: (1) This follows the ISO 639-2 standard. (2) This applies only to adaptive bitrate streaming templates. (3) The value "source" means that the source language is used.</p> 
+     * @return AudioLanguage <p>Audio track language, such as chi or eng. Note: (1) This follows the ISO 639-2 standard. (2) This applies only to adaptive bitrate streaming templates. (3) The value "source" means that the source language is used.</p>
+     */
+    public String getAudioLanguage() {
+        return this.AudioLanguage;
+    }
+
+    /**
+     * Set <p>Audio track language, such as chi or eng. Note: (1) This follows the ISO 639-2 standard. (2) This applies only to adaptive bitrate streaming templates. (3) The value "source" means that the source language is used.</p>
+     * @param AudioLanguage <p>Audio track language, such as chi or eng. Note: (1) This follows the ISO 639-2 standard. (2) This applies only to adaptive bitrate streaming templates. (3) The value "source" means that the source language is used.</p>
+     */
+    public void setAudioLanguage(String AudioLanguage) {
+        this.AudioLanguage = AudioLanguage;
+    }
+
+    /**
+     * Get <p>Audio track name, such as Chinese or English. Note: (1) Only Chinese characters, letters, digits, spaces, underscores (_), hyphens (-), periods (.), and brackets are supported. The length cannot exceed 64 characters. (2) This applies only to adaptive bitrate streaming templates. (3) The value "source" means that the source name is used.</p> 
+     * @return AudioName <p>Audio track name, such as Chinese or English. Note: (1) Only Chinese characters, letters, digits, spaces, underscores (_), hyphens (-), periods (.), and brackets are supported. The length cannot exceed 64 characters. (2) This applies only to adaptive bitrate streaming templates. (3) The value "source" means that the source name is used.</p>
+     */
+    public String getAudioName() {
+        return this.AudioName;
+    }
+
+    /**
+     * Set <p>Audio track name, such as Chinese or English. Note: (1) Only Chinese characters, letters, digits, spaces, underscores (_), hyphens (-), periods (.), and brackets are supported. The length cannot exceed 64 characters. (2) This applies only to adaptive bitrate streaming templates. (3) The value "source" means that the source name is used.</p>
+     * @param AudioName <p>Audio track name, such as Chinese or English. Note: (1) Only Chinese characters, letters, digits, spaces, underscores (_), hyphens (-), periods (.), and brackets are supported. The length cannot exceed 64 characters. (2) This applies only to adaptive bitrate streaming templates. (3) The value "source" means that the source name is used.</p>
+     */
+    public void setAudioName(String AudioName) {
+        this.AudioName = AudioName;
+    }
+
+    /**
+     * Get <p>Default audio track. When set to true, the current audio track is designated as the default audio track. A maximum of 1 default audio track can be specified.</p><p>Default value: false.</p> 
+     * @return DefaultTrack <p>Default audio track. When set to true, the current audio track is designated as the default audio track. A maximum of 1 default audio track can be specified.</p><p>Default value: false.</p>
+     */
+    public Boolean getDefaultTrack() {
+        return this.DefaultTrack;
+    }
+
+    /**
+     * Set <p>Default audio track. When set to true, the current audio track is designated as the default audio track. A maximum of 1 default audio track can be specified.</p><p>Default value: false.</p>
+     * @param DefaultTrack <p>Default audio track. When set to true, the current audio track is designated as the default audio track. A maximum of 1 default audio track can be specified.</p><p>Default value: false.</p>
+     */
+    public void setDefaultTrack(Boolean DefaultTrack) {
+        this.DefaultTrack = DefaultTrack;
+    }
+
     public AudioTemplateInfo() {
     }
 
@@ -166,6 +235,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.TrackChannelInfo != null) {
             this.TrackChannelInfo = new AudioTrackChannelInfo(source.TrackChannelInfo);
         }
+        if (source.AudioLanguage != null) {
+            this.AudioLanguage = new String(source.AudioLanguage);
+        }
+        if (source.AudioName != null) {
+            this.AudioName = new String(source.AudioName);
+        }
+        if (source.DefaultTrack != null) {
+            this.DefaultTrack = new Boolean(source.DefaultTrack);
+        }
     }
 
 
@@ -178,6 +256,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "SampleRate", this.SampleRate);
         this.setParamSimple(map, prefix + "AudioChannel", this.AudioChannel);
         this.setParamObj(map, prefix + "TrackChannelInfo.", this.TrackChannelInfo);
+        this.setParamSimple(map, prefix + "AudioLanguage", this.AudioLanguage);
+        this.setParamSimple(map, prefix + "AudioName", this.AudioName);
+        this.setParamSimple(map, prefix + "DefaultTrack", this.DefaultTrack);
 
     }
 }

@@ -183,7 +183,8 @@ Note: Only an approved template can be used to send emails.
     }
 
     /**
-     *This API is used to delete a sender domain. After deleted, the sender domain can no longer be used to send emails.
+     ***The delete interface for sending domain names is only available to corporate users.**
+Delete the sender domain name. Once deleted, that domain name cannot be used anymore to send email.
      * @param req DeleteEmailIdentityRequest
      * @return DeleteEmailIdentityResponse
      * @throws TencentCloudSDKException

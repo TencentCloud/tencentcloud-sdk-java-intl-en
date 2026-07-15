@@ -24,299 +24,299 @@ import java.util.HashMap;
 public class AbuseReport extends AbstractModel {
 
     /**
-    * Send time.
+    * <p>Send time</p>
     */
     @SerializedName("DeliverTime")
     @Expose
     private String DeliverTime;
 
     /**
-    * Sender address.
+    * <p>Sender address</p>
     */
     @SerializedName("OriginalMailFrom")
     @Expose
     private String OriginalMailFrom;
 
     /**
-    * Receive email.
+    * <p>Receive email address</p>
     */
     @SerializedName("OriginalRcptTo")
     @Expose
     private String OriginalRcptTo;
 
     /**
-    * Sender domain name.
+    * <p>Sender domain name</p>
     */
     @SerializedName("FromDomain")
     @Expose
     private String FromDomain;
 
     /**
-    * Complaint time.
+    * <p>Complaint time</p>
     */
     @SerializedName("ComplainTime")
     @Expose
     private String ComplainTime;
 
     /**
-    * Recipient domain name.
+    * <p>Recipient domain name</p>
     */
     @SerializedName("Mta")
     @Expose
     private String Mta;
 
     /**
-    * Source IP
+    * <p>Source ip</p>
     */
     @SerializedName("SourceIp")
     @Expose
     private String SourceIp;
 
     /**
-    * Data time.
+    * <p>Data time</p>
     */
     @SerializedName("InsertTime")
     @Expose
     private String InsertTime;
 
     /**
-    * Template ID
+    * <p>Template ID</p>
     */
     @SerializedName("TemplateId")
     @Expose
     private String TemplateId;
 
     /**
-    * bulkId
+    * <p>bulkId</p>
     */
     @SerializedName("BulkId")
     @Expose
     private String BulkId;
 
     /**
-    * Message-Id in mail.
+    * <p>Message-Id of the mail</p>
     */
     @SerializedName("MessageId")
     @Expose
     private String MessageId;
 
     /**
-    * Complaint time.
+    * <p>Complaint time</p>
     */
     @SerializedName("AbuseTime")
     @Expose
     private String AbuseTime;
 
     /**
-    * Email subject.
+    * <p>Email Subject</p>
     */
     @SerializedName("Subject")
     @Expose
     private String Subject;
 
     /**
-     * Get Send time. 
-     * @return DeliverTime Send time.
+     * Get <p>Send time</p> 
+     * @return DeliverTime <p>Send time</p>
      */
     public String getDeliverTime() {
         return this.DeliverTime;
     }
 
     /**
-     * Set Send time.
-     * @param DeliverTime Send time.
+     * Set <p>Send time</p>
+     * @param DeliverTime <p>Send time</p>
      */
     public void setDeliverTime(String DeliverTime) {
         this.DeliverTime = DeliverTime;
     }
 
     /**
-     * Get Sender address. 
-     * @return OriginalMailFrom Sender address.
+     * Get <p>Sender address</p> 
+     * @return OriginalMailFrom <p>Sender address</p>
      */
     public String getOriginalMailFrom() {
         return this.OriginalMailFrom;
     }
 
     /**
-     * Set Sender address.
-     * @param OriginalMailFrom Sender address.
+     * Set <p>Sender address</p>
+     * @param OriginalMailFrom <p>Sender address</p>
      */
     public void setOriginalMailFrom(String OriginalMailFrom) {
         this.OriginalMailFrom = OriginalMailFrom;
     }
 
     /**
-     * Get Receive email. 
-     * @return OriginalRcptTo Receive email.
+     * Get <p>Receive email address</p> 
+     * @return OriginalRcptTo <p>Receive email address</p>
      */
     public String getOriginalRcptTo() {
         return this.OriginalRcptTo;
     }
 
     /**
-     * Set Receive email.
-     * @param OriginalRcptTo Receive email.
+     * Set <p>Receive email address</p>
+     * @param OriginalRcptTo <p>Receive email address</p>
      */
     public void setOriginalRcptTo(String OriginalRcptTo) {
         this.OriginalRcptTo = OriginalRcptTo;
     }
 
     /**
-     * Get Sender domain name. 
-     * @return FromDomain Sender domain name.
+     * Get <p>Sender domain name</p> 
+     * @return FromDomain <p>Sender domain name</p>
      */
     public String getFromDomain() {
         return this.FromDomain;
     }
 
     /**
-     * Set Sender domain name.
-     * @param FromDomain Sender domain name.
+     * Set <p>Sender domain name</p>
+     * @param FromDomain <p>Sender domain name</p>
      */
     public void setFromDomain(String FromDomain) {
         this.FromDomain = FromDomain;
     }
 
     /**
-     * Get Complaint time. 
-     * @return ComplainTime Complaint time.
+     * Get <p>Complaint time</p> 
+     * @return ComplainTime <p>Complaint time</p>
      */
     public String getComplainTime() {
         return this.ComplainTime;
     }
 
     /**
-     * Set Complaint time.
-     * @param ComplainTime Complaint time.
+     * Set <p>Complaint time</p>
+     * @param ComplainTime <p>Complaint time</p>
      */
     public void setComplainTime(String ComplainTime) {
         this.ComplainTime = ComplainTime;
     }
 
     /**
-     * Get Recipient domain name. 
-     * @return Mta Recipient domain name.
+     * Get <p>Recipient domain name</p> 
+     * @return Mta <p>Recipient domain name</p>
      */
     public String getMta() {
         return this.Mta;
     }
 
     /**
-     * Set Recipient domain name.
-     * @param Mta Recipient domain name.
+     * Set <p>Recipient domain name</p>
+     * @param Mta <p>Recipient domain name</p>
      */
     public void setMta(String Mta) {
         this.Mta = Mta;
     }
 
     /**
-     * Get Source IP 
-     * @return SourceIp Source IP
+     * Get <p>Source ip</p> 
+     * @return SourceIp <p>Source ip</p>
      */
     public String getSourceIp() {
         return this.SourceIp;
     }
 
     /**
-     * Set Source IP
-     * @param SourceIp Source IP
+     * Set <p>Source ip</p>
+     * @param SourceIp <p>Source ip</p>
      */
     public void setSourceIp(String SourceIp) {
         this.SourceIp = SourceIp;
     }
 
     /**
-     * Get Data time. 
-     * @return InsertTime Data time.
+     * Get <p>Data time</p> 
+     * @return InsertTime <p>Data time</p>
      */
     public String getInsertTime() {
         return this.InsertTime;
     }
 
     /**
-     * Set Data time.
-     * @param InsertTime Data time.
+     * Set <p>Data time</p>
+     * @param InsertTime <p>Data time</p>
      */
     public void setInsertTime(String InsertTime) {
         this.InsertTime = InsertTime;
     }
 
     /**
-     * Get Template ID 
-     * @return TemplateId Template ID
+     * Get <p>Template ID</p> 
+     * @return TemplateId <p>Template ID</p>
      */
     public String getTemplateId() {
         return this.TemplateId;
     }
 
     /**
-     * Set Template ID
-     * @param TemplateId Template ID
+     * Set <p>Template ID</p>
+     * @param TemplateId <p>Template ID</p>
      */
     public void setTemplateId(String TemplateId) {
         this.TemplateId = TemplateId;
     }
 
     /**
-     * Get bulkId 
-     * @return BulkId bulkId
+     * Get <p>bulkId</p> 
+     * @return BulkId <p>bulkId</p>
      */
     public String getBulkId() {
         return this.BulkId;
     }
 
     /**
-     * Set bulkId
-     * @param BulkId bulkId
+     * Set <p>bulkId</p>
+     * @param BulkId <p>bulkId</p>
      */
     public void setBulkId(String BulkId) {
         this.BulkId = BulkId;
     }
 
     /**
-     * Get Message-Id in mail. 
-     * @return MessageId Message-Id in mail.
+     * Get <p>Message-Id of the mail</p> 
+     * @return MessageId <p>Message-Id of the mail</p>
      */
     public String getMessageId() {
         return this.MessageId;
     }
 
     /**
-     * Set Message-Id in mail.
-     * @param MessageId Message-Id in mail.
+     * Set <p>Message-Id of the mail</p>
+     * @param MessageId <p>Message-Id of the mail</p>
      */
     public void setMessageId(String MessageId) {
         this.MessageId = MessageId;
     }
 
     /**
-     * Get Complaint time. 
-     * @return AbuseTime Complaint time.
+     * Get <p>Complaint time</p> 
+     * @return AbuseTime <p>Complaint time</p>
      */
     public String getAbuseTime() {
         return this.AbuseTime;
     }
 
     /**
-     * Set Complaint time.
-     * @param AbuseTime Complaint time.
+     * Set <p>Complaint time</p>
+     * @param AbuseTime <p>Complaint time</p>
      */
     public void setAbuseTime(String AbuseTime) {
         this.AbuseTime = AbuseTime;
     }
 
     /**
-     * Get Email subject. 
-     * @return Subject Email subject.
+     * Get <p>Email Subject</p> 
+     * @return Subject <p>Email Subject</p>
      */
     public String getSubject() {
         return this.Subject;
     }
 
     /**
-     * Set Email subject.
-     * @param Subject Email subject.
+     * Set <p>Email Subject</p>
+     * @param Subject <p>Email Subject</p>
      */
     public void setSubject(String Subject) {
         this.Subject = Subject;

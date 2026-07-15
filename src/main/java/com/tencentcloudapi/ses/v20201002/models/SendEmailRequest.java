@@ -31,7 +31,7 @@ public class SendEmailRequest extends AbstractModel {
     private String FromEmailAddress;
 
     /**
-    * <p>Email Subject</p>
+    * <p>Email Subject</p><p>When using templates to send, support using template variable parameters for population.</p>
     */
     @SerializedName("Subject")
     @Expose
@@ -138,16 +138,16 @@ public class SendEmailRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>Email Subject</p> 
-     * @return Subject <p>Email Subject</p>
+     * Get <p>Email Subject</p><p>When using templates to send, support using template variable parameters for population.</p> 
+     * @return Subject <p>Email Subject</p><p>When using templates to send, support using template variable parameters for population.</p>
      */
     public String getSubject() {
         return this.Subject;
     }
 
     /**
-     * Set <p>Email Subject</p>
-     * @param Subject <p>Email Subject</p>
+     * Set <p>Email Subject</p><p>When using templates to send, support using template variable parameters for population.</p>
+     * @param Subject <p>Email Subject</p><p>When using templates to send, support using template variable parameters for population.</p>
      */
     public void setSubject(String Subject) {
         this.Subject = Subject;

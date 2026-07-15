@@ -24,28 +24,28 @@ import java.util.HashMap;
 public class UpdateEmailIdentityResponse extends AbstractModel {
 
     /**
-    * Verification type. The value is fixed to `DOMAIN`.
+    * <p>Validation type. Fixed value: DOMAIN</p>
     */
     @SerializedName("IdentityType")
     @Expose
     private String IdentityType;
 
     /**
-    * Verification passed or not.
+    * <p>Whether verified</p>
     */
     @SerializedName("VerifiedForSendingStatus")
     @Expose
     private Boolean VerifiedForSendingStatus;
 
     /**
-    * DNS information that needs to be configured.
+    * <p>DNS information needs to be configured</p>
     */
     @SerializedName("Attributes")
     @Expose
     private DNSAttributes [] Attributes;
 
     /**
-    * dkim option, 0: 1024, 1: 2048, 2: both
+    * <p>dkim digits</p><p>Enumeration value:</p><ul><li>0: 1024</li><li>1: 2048</li><li>2: Dual signature</li></ul>
     */
     @SerializedName("DKIMOption")
     @Expose
@@ -59,64 +59,64 @@ public class UpdateEmailIdentityResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Verification type. The value is fixed to `DOMAIN`. 
-     * @return IdentityType Verification type. The value is fixed to `DOMAIN`.
+     * Get <p>Validation type. Fixed value: DOMAIN</p> 
+     * @return IdentityType <p>Validation type. Fixed value: DOMAIN</p>
      */
     public String getIdentityType() {
         return this.IdentityType;
     }
 
     /**
-     * Set Verification type. The value is fixed to `DOMAIN`.
-     * @param IdentityType Verification type. The value is fixed to `DOMAIN`.
+     * Set <p>Validation type. Fixed value: DOMAIN</p>
+     * @param IdentityType <p>Validation type. Fixed value: DOMAIN</p>
      */
     public void setIdentityType(String IdentityType) {
         this.IdentityType = IdentityType;
     }
 
     /**
-     * Get Verification passed or not. 
-     * @return VerifiedForSendingStatus Verification passed or not.
+     * Get <p>Whether verified</p> 
+     * @return VerifiedForSendingStatus <p>Whether verified</p>
      */
     public Boolean getVerifiedForSendingStatus() {
         return this.VerifiedForSendingStatus;
     }
 
     /**
-     * Set Verification passed or not.
-     * @param VerifiedForSendingStatus Verification passed or not.
+     * Set <p>Whether verified</p>
+     * @param VerifiedForSendingStatus <p>Whether verified</p>
      */
     public void setVerifiedForSendingStatus(Boolean VerifiedForSendingStatus) {
         this.VerifiedForSendingStatus = VerifiedForSendingStatus;
     }
 
     /**
-     * Get DNS information that needs to be configured. 
-     * @return Attributes DNS information that needs to be configured.
+     * Get <p>DNS information needs to be configured</p> 
+     * @return Attributes <p>DNS information needs to be configured</p>
      */
     public DNSAttributes [] getAttributes() {
         return this.Attributes;
     }
 
     /**
-     * Set DNS information that needs to be configured.
-     * @param Attributes DNS information that needs to be configured.
+     * Set <p>DNS information needs to be configured</p>
+     * @param Attributes <p>DNS information needs to be configured</p>
      */
     public void setAttributes(DNSAttributes [] Attributes) {
         this.Attributes = Attributes;
     }
 
     /**
-     * Get dkim option, 0: 1024, 1: 2048, 2: both 
-     * @return DKIMOption dkim option, 0: 1024, 1: 2048, 2: both
+     * Get <p>dkim digits</p><p>Enumeration value:</p><ul><li>0: 1024</li><li>1: 2048</li><li>2: Dual signature</li></ul> 
+     * @return DKIMOption <p>dkim digits</p><p>Enumeration value:</p><ul><li>0: 1024</li><li>1: 2048</li><li>2: Dual signature</li></ul>
      */
     public Long getDKIMOption() {
         return this.DKIMOption;
     }
 
     /**
-     * Set dkim option, 0: 1024, 1: 2048, 2: both
-     * @param DKIMOption dkim option, 0: 1024, 1: 2048, 2: both
+     * Set <p>dkim digits</p><p>Enumeration value:</p><ul><li>0: 1024</li><li>1: 2048</li><li>2: Dual signature</li></ul>
+     * @param DKIMOption <p>dkim digits</p><p>Enumeration value:</p><ul><li>0: 1024</li><li>1: 2048</li><li>2: Dual signature</li></ul>
      */
     public void setDKIMOption(Long DKIMOption) {
         this.DKIMOption = DKIMOption;

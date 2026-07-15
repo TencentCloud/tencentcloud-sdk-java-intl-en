@@ -24,130 +24,151 @@ import java.util.HashMap;
 public class GetServiceStatusResponse extends AbstractModel {
 
     /**
-    * Whether the KMS service has been activated. true: activated
+    * <p>Whether the KMS service is enabled. true means enabled</p>
     */
     @SerializedName("ServiceEnabled")
     @Expose
     private Boolean ServiceEnabled;
 
     /**
-    * Service unavailability type: 0-not purchased, 1-normal, 2-service suspended due to overdue payments, 3-resource release.
+    * <p>Service unavailability type: 0-not purchased, 1-normal, 2-service suspended due to overdue payments, 3-resource release</p>
     */
     @SerializedName("InvalidType")
     @Expose
     private Long InvalidType;
 
     /**
-    * 0: Basic Edition, 1: Ultimate Edition
+    * <p>0-Standard Edition, 1-Flagship Edition</p>
     */
     @SerializedName("UserLevel")
     @Expose
     private Long UserLevel;
 
     /**
-    * Specifies the expiry time (Epoch Unix Timestamp) of the flagship edition.
+    * <p>Expiry time of the flagship edition (Epoch Unix Timestamp).</p>
     */
     @SerializedName("ProExpireTime")
     @Expose
     private Long ProExpireTime;
 
     /**
-    * Specifies whether the flagship edition is automatically renewed: 0 - no automatic renewal, 1 - automatic renewal.
+    * <p>Whether the flagship edition is automatically renewed: 0-no auto-renewal, 1-auto-renewal</p>
     */
     @SerializedName("ProRenewFlag")
     @Expose
     private Long ProRenewFlag;
 
     /**
-    * Flagship edition purchase record unique identifier. if not activated, the return value is empty.
+    * <p>Unique identifier of the flagship edition purchase record. If the flagship edition is not activated, the return value is empty.</p>
     */
     @SerializedName("ProResourceId")
     @Expose
     private String ProResourceId;
 
     /**
-    * Whether to enable the KMS-managed version.
+    * <p>Whether to enable managed by KMS</p>
     */
     @SerializedName("ExclusiveVSMEnabled")
     @Expose
     private Boolean ExclusiveVSMEnabled;
 
     /**
-    * Whether to enable the exclusive edition of KMS.
+    * <p>Whether to enable KMS exclusive edition</p>
     */
     @SerializedName("ExclusiveHSMEnabled")
     @Expose
     private Boolean ExclusiveHSMEnabled;
 
     /**
-    * Specifies the KMS subscription information.
+    * <p>KMS subscription information.</p>
     */
     @SerializedName("SubscriptionInfo")
     @Expose
     private String SubscriptionInfo;
 
     /**
-    * Returns the amount of KMS user secret keys used.
+    * <p>Return the usage quantity of KMS user secret key</p>
     */
     @SerializedName("CmkUserCount")
     @Expose
     private Long CmkUserCount;
 
     /**
-    * Returns the specification quantity of KMS user secret keys.
+    * <p>Return the specification quantity of KMS user secret keys</p>
     */
     @SerializedName("CmkLimit")
     @Expose
     private Long CmkLimit;
 
     /**
-    * Return dedicated cluster group.
+    * <p>Return the dedicated cluster group</p>
     */
     @SerializedName("ExclusiveHSMList")
     @Expose
     private ExclusiveHSM [] ExclusiveHSMList;
 
     /**
-    * Whether data key management is supported. valid values: 1 (supported), 0 (unsupported).
+    * <p>Indicates whether data key management is supported. 1: supported. 0: not supported.</p>
     */
     @SerializedName("IsAllowedDataKeyHosted")
     @Expose
     private Boolean IsAllowedDataKeyHosted;
 
     /**
-    * Valid when IsAllowedDataKeyHosted is 1. specifies the purchase quota for data keys.
+    * <p>Valid when IsAllowedDataKeyHosted is 1. Purchase quota of the data key</p>
     */
     @SerializedName("DataKeyLimit")
     @Expose
     private Long DataKeyLimit;
 
     /**
-    * Valid when IsAllowedDataKeyHosted is 1. data key free quota.
+    * <p>Valid at that time when IsAllowedDataKeyHosted is 1. Data key free quota.</p>
     */
     @SerializedName("FreeDataKeyLimit")
     @Expose
     private Long FreeDataKeyLimit;
 
     /**
-    * Valid at that time when IsAllowedDataKeyHosted is 1. specifies the number of keys used.
+    * <p>Valid when IsAllowedDataKeyHosted is 1. Number of used data keys.</p>
     */
     @SerializedName("DataKeyUsedCount")
     @Expose
     private Long DataKeyUsedCount;
 
     /**
-    * Specifies the target region of the sync task.
+    * <p>Target region info of the sync task</p>
     */
     @SerializedName("SyncTaskList")
     @Expose
     private DestinationSyncConfig [] SyncTaskList;
 
     /**
-    * Whether synchronization task is supported. true: supported; false: unsupported.
+    * <p>Whether sync task is supported. true: supported, false: unsupported.</p>
     */
     @SerializedName("IsAllowedSync")
     @Expose
     private Boolean IsAllowedSync;
+
+    /**
+    * <p>QPS in the region</p>
+    */
+    @SerializedName("QpsLimit")
+    @Expose
+    private Long QpsLimit;
+
+    /**
+    * <p>Total QPS value</p>
+    */
+    @SerializedName("QpsTotalLimit")
+    @Expose
+    private Long QpsTotalLimit;
+
+    /**
+    * <p>QPS in the region</p>
+    */
+    @SerializedName("RegionsQps")
+    @Expose
+    private RegionQps [] RegionsQps;
 
     /**
     * The unique request ID, generated by the server, will be returned for every request (if the request fails to reach the server for other reasons, the request will not obtain a RequestId). RequestId is required for locating a problem.
@@ -157,291 +178,339 @@ public class GetServiceStatusResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Whether the KMS service has been activated. true: activated 
-     * @return ServiceEnabled Whether the KMS service has been activated. true: activated
+     * Get <p>Whether the KMS service is enabled. true means enabled</p> 
+     * @return ServiceEnabled <p>Whether the KMS service is enabled. true means enabled</p>
      */
     public Boolean getServiceEnabled() {
         return this.ServiceEnabled;
     }
 
     /**
-     * Set Whether the KMS service has been activated. true: activated
-     * @param ServiceEnabled Whether the KMS service has been activated. true: activated
+     * Set <p>Whether the KMS service is enabled. true means enabled</p>
+     * @param ServiceEnabled <p>Whether the KMS service is enabled. true means enabled</p>
      */
     public void setServiceEnabled(Boolean ServiceEnabled) {
         this.ServiceEnabled = ServiceEnabled;
     }
 
     /**
-     * Get Service unavailability type: 0-not purchased, 1-normal, 2-service suspended due to overdue payments, 3-resource release. 
-     * @return InvalidType Service unavailability type: 0-not purchased, 1-normal, 2-service suspended due to overdue payments, 3-resource release.
+     * Get <p>Service unavailability type: 0-not purchased, 1-normal, 2-service suspended due to overdue payments, 3-resource release</p> 
+     * @return InvalidType <p>Service unavailability type: 0-not purchased, 1-normal, 2-service suspended due to overdue payments, 3-resource release</p>
      */
     public Long getInvalidType() {
         return this.InvalidType;
     }
 
     /**
-     * Set Service unavailability type: 0-not purchased, 1-normal, 2-service suspended due to overdue payments, 3-resource release.
-     * @param InvalidType Service unavailability type: 0-not purchased, 1-normal, 2-service suspended due to overdue payments, 3-resource release.
+     * Set <p>Service unavailability type: 0-not purchased, 1-normal, 2-service suspended due to overdue payments, 3-resource release</p>
+     * @param InvalidType <p>Service unavailability type: 0-not purchased, 1-normal, 2-service suspended due to overdue payments, 3-resource release</p>
      */
     public void setInvalidType(Long InvalidType) {
         this.InvalidType = InvalidType;
     }
 
     /**
-     * Get 0: Basic Edition, 1: Ultimate Edition 
-     * @return UserLevel 0: Basic Edition, 1: Ultimate Edition
+     * Get <p>0-Standard Edition, 1-Flagship Edition</p> 
+     * @return UserLevel <p>0-Standard Edition, 1-Flagship Edition</p>
      */
     public Long getUserLevel() {
         return this.UserLevel;
     }
 
     /**
-     * Set 0: Basic Edition, 1: Ultimate Edition
-     * @param UserLevel 0: Basic Edition, 1: Ultimate Edition
+     * Set <p>0-Standard Edition, 1-Flagship Edition</p>
+     * @param UserLevel <p>0-Standard Edition, 1-Flagship Edition</p>
      */
     public void setUserLevel(Long UserLevel) {
         this.UserLevel = UserLevel;
     }
 
     /**
-     * Get Specifies the expiry time (Epoch Unix Timestamp) of the flagship edition. 
-     * @return ProExpireTime Specifies the expiry time (Epoch Unix Timestamp) of the flagship edition.
+     * Get <p>Expiry time of the flagship edition (Epoch Unix Timestamp).</p> 
+     * @return ProExpireTime <p>Expiry time of the flagship edition (Epoch Unix Timestamp).</p>
      */
     public Long getProExpireTime() {
         return this.ProExpireTime;
     }
 
     /**
-     * Set Specifies the expiry time (Epoch Unix Timestamp) of the flagship edition.
-     * @param ProExpireTime Specifies the expiry time (Epoch Unix Timestamp) of the flagship edition.
+     * Set <p>Expiry time of the flagship edition (Epoch Unix Timestamp).</p>
+     * @param ProExpireTime <p>Expiry time of the flagship edition (Epoch Unix Timestamp).</p>
      */
     public void setProExpireTime(Long ProExpireTime) {
         this.ProExpireTime = ProExpireTime;
     }
 
     /**
-     * Get Specifies whether the flagship edition is automatically renewed: 0 - no automatic renewal, 1 - automatic renewal. 
-     * @return ProRenewFlag Specifies whether the flagship edition is automatically renewed: 0 - no automatic renewal, 1 - automatic renewal.
+     * Get <p>Whether the flagship edition is automatically renewed: 0-no auto-renewal, 1-auto-renewal</p> 
+     * @return ProRenewFlag <p>Whether the flagship edition is automatically renewed: 0-no auto-renewal, 1-auto-renewal</p>
      */
     public Long getProRenewFlag() {
         return this.ProRenewFlag;
     }
 
     /**
-     * Set Specifies whether the flagship edition is automatically renewed: 0 - no automatic renewal, 1 - automatic renewal.
-     * @param ProRenewFlag Specifies whether the flagship edition is automatically renewed: 0 - no automatic renewal, 1 - automatic renewal.
+     * Set <p>Whether the flagship edition is automatically renewed: 0-no auto-renewal, 1-auto-renewal</p>
+     * @param ProRenewFlag <p>Whether the flagship edition is automatically renewed: 0-no auto-renewal, 1-auto-renewal</p>
      */
     public void setProRenewFlag(Long ProRenewFlag) {
         this.ProRenewFlag = ProRenewFlag;
     }
 
     /**
-     * Get Flagship edition purchase record unique identifier. if not activated, the return value is empty. 
-     * @return ProResourceId Flagship edition purchase record unique identifier. if not activated, the return value is empty.
+     * Get <p>Unique identifier of the flagship edition purchase record. If the flagship edition is not activated, the return value is empty.</p> 
+     * @return ProResourceId <p>Unique identifier of the flagship edition purchase record. If the flagship edition is not activated, the return value is empty.</p>
      */
     public String getProResourceId() {
         return this.ProResourceId;
     }
 
     /**
-     * Set Flagship edition purchase record unique identifier. if not activated, the return value is empty.
-     * @param ProResourceId Flagship edition purchase record unique identifier. if not activated, the return value is empty.
+     * Set <p>Unique identifier of the flagship edition purchase record. If the flagship edition is not activated, the return value is empty.</p>
+     * @param ProResourceId <p>Unique identifier of the flagship edition purchase record. If the flagship edition is not activated, the return value is empty.</p>
      */
     public void setProResourceId(String ProResourceId) {
         this.ProResourceId = ProResourceId;
     }
 
     /**
-     * Get Whether to enable the KMS-managed version. 
-     * @return ExclusiveVSMEnabled Whether to enable the KMS-managed version.
+     * Get <p>Whether to enable managed by KMS</p> 
+     * @return ExclusiveVSMEnabled <p>Whether to enable managed by KMS</p>
      */
     public Boolean getExclusiveVSMEnabled() {
         return this.ExclusiveVSMEnabled;
     }
 
     /**
-     * Set Whether to enable the KMS-managed version.
-     * @param ExclusiveVSMEnabled Whether to enable the KMS-managed version.
+     * Set <p>Whether to enable managed by KMS</p>
+     * @param ExclusiveVSMEnabled <p>Whether to enable managed by KMS</p>
      */
     public void setExclusiveVSMEnabled(Boolean ExclusiveVSMEnabled) {
         this.ExclusiveVSMEnabled = ExclusiveVSMEnabled;
     }
 
     /**
-     * Get Whether to enable the exclusive edition of KMS. 
-     * @return ExclusiveHSMEnabled Whether to enable the exclusive edition of KMS.
+     * Get <p>Whether to enable KMS exclusive edition</p> 
+     * @return ExclusiveHSMEnabled <p>Whether to enable KMS exclusive edition</p>
      */
     public Boolean getExclusiveHSMEnabled() {
         return this.ExclusiveHSMEnabled;
     }
 
     /**
-     * Set Whether to enable the exclusive edition of KMS.
-     * @param ExclusiveHSMEnabled Whether to enable the exclusive edition of KMS.
+     * Set <p>Whether to enable KMS exclusive edition</p>
+     * @param ExclusiveHSMEnabled <p>Whether to enable KMS exclusive edition</p>
      */
     public void setExclusiveHSMEnabled(Boolean ExclusiveHSMEnabled) {
         this.ExclusiveHSMEnabled = ExclusiveHSMEnabled;
     }
 
     /**
-     * Get Specifies the KMS subscription information. 
-     * @return SubscriptionInfo Specifies the KMS subscription information.
+     * Get <p>KMS subscription information.</p> 
+     * @return SubscriptionInfo <p>KMS subscription information.</p>
      */
     public String getSubscriptionInfo() {
         return this.SubscriptionInfo;
     }
 
     /**
-     * Set Specifies the KMS subscription information.
-     * @param SubscriptionInfo Specifies the KMS subscription information.
+     * Set <p>KMS subscription information.</p>
+     * @param SubscriptionInfo <p>KMS subscription information.</p>
      */
     public void setSubscriptionInfo(String SubscriptionInfo) {
         this.SubscriptionInfo = SubscriptionInfo;
     }
 
     /**
-     * Get Returns the amount of KMS user secret keys used. 
-     * @return CmkUserCount Returns the amount of KMS user secret keys used.
+     * Get <p>Return the usage quantity of KMS user secret key</p> 
+     * @return CmkUserCount <p>Return the usage quantity of KMS user secret key</p>
      */
     public Long getCmkUserCount() {
         return this.CmkUserCount;
     }
 
     /**
-     * Set Returns the amount of KMS user secret keys used.
-     * @param CmkUserCount Returns the amount of KMS user secret keys used.
+     * Set <p>Return the usage quantity of KMS user secret key</p>
+     * @param CmkUserCount <p>Return the usage quantity of KMS user secret key</p>
      */
     public void setCmkUserCount(Long CmkUserCount) {
         this.CmkUserCount = CmkUserCount;
     }
 
     /**
-     * Get Returns the specification quantity of KMS user secret keys. 
-     * @return CmkLimit Returns the specification quantity of KMS user secret keys.
+     * Get <p>Return the specification quantity of KMS user secret keys</p> 
+     * @return CmkLimit <p>Return the specification quantity of KMS user secret keys</p>
      */
     public Long getCmkLimit() {
         return this.CmkLimit;
     }
 
     /**
-     * Set Returns the specification quantity of KMS user secret keys.
-     * @param CmkLimit Returns the specification quantity of KMS user secret keys.
+     * Set <p>Return the specification quantity of KMS user secret keys</p>
+     * @param CmkLimit <p>Return the specification quantity of KMS user secret keys</p>
      */
     public void setCmkLimit(Long CmkLimit) {
         this.CmkLimit = CmkLimit;
     }
 
     /**
-     * Get Return dedicated cluster group. 
-     * @return ExclusiveHSMList Return dedicated cluster group.
+     * Get <p>Return the dedicated cluster group</p> 
+     * @return ExclusiveHSMList <p>Return the dedicated cluster group</p>
      */
     public ExclusiveHSM [] getExclusiveHSMList() {
         return this.ExclusiveHSMList;
     }
 
     /**
-     * Set Return dedicated cluster group.
-     * @param ExclusiveHSMList Return dedicated cluster group.
+     * Set <p>Return the dedicated cluster group</p>
+     * @param ExclusiveHSMList <p>Return the dedicated cluster group</p>
      */
     public void setExclusiveHSMList(ExclusiveHSM [] ExclusiveHSMList) {
         this.ExclusiveHSMList = ExclusiveHSMList;
     }
 
     /**
-     * Get Whether data key management is supported. valid values: 1 (supported), 0 (unsupported). 
-     * @return IsAllowedDataKeyHosted Whether data key management is supported. valid values: 1 (supported), 0 (unsupported).
+     * Get <p>Indicates whether data key management is supported. 1: supported. 0: not supported.</p> 
+     * @return IsAllowedDataKeyHosted <p>Indicates whether data key management is supported. 1: supported. 0: not supported.</p>
      */
     public Boolean getIsAllowedDataKeyHosted() {
         return this.IsAllowedDataKeyHosted;
     }
 
     /**
-     * Set Whether data key management is supported. valid values: 1 (supported), 0 (unsupported).
-     * @param IsAllowedDataKeyHosted Whether data key management is supported. valid values: 1 (supported), 0 (unsupported).
+     * Set <p>Indicates whether data key management is supported. 1: supported. 0: not supported.</p>
+     * @param IsAllowedDataKeyHosted <p>Indicates whether data key management is supported. 1: supported. 0: not supported.</p>
      */
     public void setIsAllowedDataKeyHosted(Boolean IsAllowedDataKeyHosted) {
         this.IsAllowedDataKeyHosted = IsAllowedDataKeyHosted;
     }
 
     /**
-     * Get Valid when IsAllowedDataKeyHosted is 1. specifies the purchase quota for data keys. 
-     * @return DataKeyLimit Valid when IsAllowedDataKeyHosted is 1. specifies the purchase quota for data keys.
+     * Get <p>Valid when IsAllowedDataKeyHosted is 1. Purchase quota of the data key</p> 
+     * @return DataKeyLimit <p>Valid when IsAllowedDataKeyHosted is 1. Purchase quota of the data key</p>
      */
     public Long getDataKeyLimit() {
         return this.DataKeyLimit;
     }
 
     /**
-     * Set Valid when IsAllowedDataKeyHosted is 1. specifies the purchase quota for data keys.
-     * @param DataKeyLimit Valid when IsAllowedDataKeyHosted is 1. specifies the purchase quota for data keys.
+     * Set <p>Valid when IsAllowedDataKeyHosted is 1. Purchase quota of the data key</p>
+     * @param DataKeyLimit <p>Valid when IsAllowedDataKeyHosted is 1. Purchase quota of the data key</p>
      */
     public void setDataKeyLimit(Long DataKeyLimit) {
         this.DataKeyLimit = DataKeyLimit;
     }
 
     /**
-     * Get Valid when IsAllowedDataKeyHosted is 1. data key free quota. 
-     * @return FreeDataKeyLimit Valid when IsAllowedDataKeyHosted is 1. data key free quota.
+     * Get <p>Valid at that time when IsAllowedDataKeyHosted is 1. Data key free quota.</p> 
+     * @return FreeDataKeyLimit <p>Valid at that time when IsAllowedDataKeyHosted is 1. Data key free quota.</p>
      */
     public Long getFreeDataKeyLimit() {
         return this.FreeDataKeyLimit;
     }
 
     /**
-     * Set Valid when IsAllowedDataKeyHosted is 1. data key free quota.
-     * @param FreeDataKeyLimit Valid when IsAllowedDataKeyHosted is 1. data key free quota.
+     * Set <p>Valid at that time when IsAllowedDataKeyHosted is 1. Data key free quota.</p>
+     * @param FreeDataKeyLimit <p>Valid at that time when IsAllowedDataKeyHosted is 1. Data key free quota.</p>
      */
     public void setFreeDataKeyLimit(Long FreeDataKeyLimit) {
         this.FreeDataKeyLimit = FreeDataKeyLimit;
     }
 
     /**
-     * Get Valid at that time when IsAllowedDataKeyHosted is 1. specifies the number of keys used. 
-     * @return DataKeyUsedCount Valid at that time when IsAllowedDataKeyHosted is 1. specifies the number of keys used.
+     * Get <p>Valid when IsAllowedDataKeyHosted is 1. Number of used data keys.</p> 
+     * @return DataKeyUsedCount <p>Valid when IsAllowedDataKeyHosted is 1. Number of used data keys.</p>
      */
     public Long getDataKeyUsedCount() {
         return this.DataKeyUsedCount;
     }
 
     /**
-     * Set Valid at that time when IsAllowedDataKeyHosted is 1. specifies the number of keys used.
-     * @param DataKeyUsedCount Valid at that time when IsAllowedDataKeyHosted is 1. specifies the number of keys used.
+     * Set <p>Valid when IsAllowedDataKeyHosted is 1. Number of used data keys.</p>
+     * @param DataKeyUsedCount <p>Valid when IsAllowedDataKeyHosted is 1. Number of used data keys.</p>
      */
     public void setDataKeyUsedCount(Long DataKeyUsedCount) {
         this.DataKeyUsedCount = DataKeyUsedCount;
     }
 
     /**
-     * Get Specifies the target region of the sync task. 
-     * @return SyncTaskList Specifies the target region of the sync task.
+     * Get <p>Target region info of the sync task</p> 
+     * @return SyncTaskList <p>Target region info of the sync task</p>
      */
     public DestinationSyncConfig [] getSyncTaskList() {
         return this.SyncTaskList;
     }
 
     /**
-     * Set Specifies the target region of the sync task.
-     * @param SyncTaskList Specifies the target region of the sync task.
+     * Set <p>Target region info of the sync task</p>
+     * @param SyncTaskList <p>Target region info of the sync task</p>
      */
     public void setSyncTaskList(DestinationSyncConfig [] SyncTaskList) {
         this.SyncTaskList = SyncTaskList;
     }
 
     /**
-     * Get Whether synchronization task is supported. true: supported; false: unsupported. 
-     * @return IsAllowedSync Whether synchronization task is supported. true: supported; false: unsupported.
+     * Get <p>Whether sync task is supported. true: supported, false: unsupported.</p> 
+     * @return IsAllowedSync <p>Whether sync task is supported. true: supported, false: unsupported.</p>
      */
     public Boolean getIsAllowedSync() {
         return this.IsAllowedSync;
     }
 
     /**
-     * Set Whether synchronization task is supported. true: supported; false: unsupported.
-     * @param IsAllowedSync Whether synchronization task is supported. true: supported; false: unsupported.
+     * Set <p>Whether sync task is supported. true: supported, false: unsupported.</p>
+     * @param IsAllowedSync <p>Whether sync task is supported. true: supported, false: unsupported.</p>
      */
     public void setIsAllowedSync(Boolean IsAllowedSync) {
         this.IsAllowedSync = IsAllowedSync;
+    }
+
+    /**
+     * Get <p>QPS in the region</p> 
+     * @return QpsLimit <p>QPS in the region</p>
+     */
+    public Long getQpsLimit() {
+        return this.QpsLimit;
+    }
+
+    /**
+     * Set <p>QPS in the region</p>
+     * @param QpsLimit <p>QPS in the region</p>
+     */
+    public void setQpsLimit(Long QpsLimit) {
+        this.QpsLimit = QpsLimit;
+    }
+
+    /**
+     * Get <p>Total QPS value</p> 
+     * @return QpsTotalLimit <p>Total QPS value</p>
+     */
+    public Long getQpsTotalLimit() {
+        return this.QpsTotalLimit;
+    }
+
+    /**
+     * Set <p>Total QPS value</p>
+     * @param QpsTotalLimit <p>Total QPS value</p>
+     */
+    public void setQpsTotalLimit(Long QpsTotalLimit) {
+        this.QpsTotalLimit = QpsTotalLimit;
+    }
+
+    /**
+     * Get <p>QPS in the region</p> 
+     * @return RegionsQps <p>QPS in the region</p>
+     */
+    public RegionQps [] getRegionsQps() {
+        return this.RegionsQps;
+    }
+
+    /**
+     * Set <p>QPS in the region</p>
+     * @param RegionsQps <p>QPS in the region</p>
+     */
+    public void setRegionsQps(RegionQps [] RegionsQps) {
+        this.RegionsQps = RegionsQps;
     }
 
     /**
@@ -528,6 +597,18 @@ public class GetServiceStatusResponse extends AbstractModel {
         if (source.IsAllowedSync != null) {
             this.IsAllowedSync = new Boolean(source.IsAllowedSync);
         }
+        if (source.QpsLimit != null) {
+            this.QpsLimit = new Long(source.QpsLimit);
+        }
+        if (source.QpsTotalLimit != null) {
+            this.QpsTotalLimit = new Long(source.QpsTotalLimit);
+        }
+        if (source.RegionsQps != null) {
+            this.RegionsQps = new RegionQps[source.RegionsQps.length];
+            for (int i = 0; i < source.RegionsQps.length; i++) {
+                this.RegionsQps[i] = new RegionQps(source.RegionsQps[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -556,6 +637,9 @@ public class GetServiceStatusResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "DataKeyUsedCount", this.DataKeyUsedCount);
         this.setParamArrayObj(map, prefix + "SyncTaskList.", this.SyncTaskList);
         this.setParamSimple(map, prefix + "IsAllowedSync", this.IsAllowedSync);
+        this.setParamSimple(map, prefix + "QpsLimit", this.QpsLimit);
+        this.setParamSimple(map, prefix + "QpsTotalLimit", this.QpsTotalLimit);
+        this.setParamArrayObj(map, prefix + "RegionsQps.", this.RegionsQps);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -38,7 +38,7 @@ public class BatchSendEmailRequest extends AbstractModel {
     private Long ReceiverId;
 
     /**
-    * <p>Email Subject</p>
+    * <p>Email Subject</p><p>When sending with templates, supports the use of template variable parameters for fill</p>
     */
     @SerializedName("Subject")
     @Expose
@@ -140,16 +140,16 @@ public class BatchSendEmailRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>Email Subject</p> 
-     * @return Subject <p>Email Subject</p>
+     * Get <p>Email Subject</p><p>When sending with templates, supports the use of template variable parameters for fill</p> 
+     * @return Subject <p>Email Subject</p><p>When sending with templates, supports the use of template variable parameters for fill</p>
      */
     public String getSubject() {
         return this.Subject;
     }
 
     /**
-     * Set <p>Email Subject</p>
-     * @param Subject <p>Email Subject</p>
+     * Set <p>Email Subject</p><p>When sending with templates, supports the use of template variable parameters for fill</p>
+     * @param Subject <p>Email Subject</p><p>When sending with templates, supports the use of template variable parameters for fill</p>
      */
     public void setSubject(String Subject) {
         this.Subject = Subject;

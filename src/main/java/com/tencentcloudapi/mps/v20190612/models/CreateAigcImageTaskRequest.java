@@ -73,7 +73,7 @@ public class CreateAigcImageTaskRequest extends AbstractModel {
     private AigcImageInfo [] ImageInfos;
 
     /**
-    * 
+    * <p>Specifies the number of output images. One image is supported by default.</p>
     */
     @SerializedName("OutputImageCount")
     @Expose
@@ -220,16 +220,16 @@ public class CreateAigcImageTaskRequest extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return OutputImageCount 
+     * Get <p>Specifies the number of output images. One image is supported by default.</p> 
+     * @return OutputImageCount <p>Specifies the number of output images. One image is supported by default.</p>
      */
     public Long getOutputImageCount() {
         return this.OutputImageCount;
     }
 
     /**
-     * Set 
-     * @param OutputImageCount 
+     * Set <p>Specifies the number of output images. One image is supported by default.</p>
+     * @param OutputImageCount <p>Specifies the number of output images. One image is supported by default.</p>
      */
     public void setOutputImageCount(Long OutputImageCount) {
         this.OutputImageCount = OutputImageCount;

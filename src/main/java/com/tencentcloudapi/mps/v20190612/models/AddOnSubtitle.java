@@ -24,10 +24,7 @@ import java.util.HashMap;
 public class AddOnSubtitle extends AbstractModel {
 
     /**
-    * The mode. Valid values:
-<li>`subtitle-stream`: Add a subtitle track.</li>
-<li>`close-caption-708`: Embed CEA-708 subtitles in SEI frames.</li>
-<li>`close-caption-608`: Embed CEA-608 subtitles in SEI frames.</li>
+    * <p>Insertion method. Valid values:</p><li>subtitle-stream: Inserts a subtitle track.</li><li>close-caption-708: Encodes CEA-708 subtitles into SEI frames.</li><li>close-caption-608: Encodes CEA-608 subtitles into SEI frames.</li>
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Type")
@@ -35,7 +32,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String Type;
 
     /**
-    * The subtitle file.
+    * <p>Subtitle file.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Subtitle")
@@ -43,40 +40,38 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private MediaInputInfo Subtitle;
 
     /**
-    * Subtitle name.
-Note: supports Chinese characters, letters, digits, spaces, underscores (_), hyphens (-), periods (.), and parentheses. Max 64 characters.
-Note: This field may return null, indicating that no valid value can be obtained.
+    * <p>Subtitle name.<br>Note: Only Chinese characters, letters, digits, spaces, underscores (_), hyphens (-), periods (.), and brackets are supported. The length cannot exceed 64 characters.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("SubtitleName")
     @Expose
     private String SubtitleName;
 
     /**
-    * Output format of the subtitle. valid values: "WebVTT", "TTML".
-Default value: "WebVTT".
+    * <p>Subtitle language, such as eng.</p>
+    */
+    @SerializedName("SubtitleLanguage")
+    @Expose
+    private String SubtitleLanguage;
+
+    /**
+    * <p>Subtitle output format. Valid values: {&quot;WebVTT&quot;,&quot;TTML&quot;}.<br>Default value: &quot;WebVTT&quot;.</p>
     */
     @SerializedName("OutputFormat")
     @Expose
     private String OutputFormat;
 
     /**
-    * Default subtitle track. specifies the current subtitle as the default track when true. a maximum of 1 default subtitle track can be specified.
-Default value: `false`.
+    * <p>Default subtitle track. When set to true, the current subtitle is designated as the default subtitle track. A maximum of 1 default subtitle track can be specified.<br>Default value: false.</p>
     */
     @SerializedName("DefaultTrack")
     @Expose
     private Boolean DefaultTrack;
 
     /**
-     * Get The mode. Valid values:
-<li>`subtitle-stream`: Add a subtitle track.</li>
-<li>`close-caption-708`: Embed CEA-708 subtitles in SEI frames.</li>
-<li>`close-caption-608`: Embed CEA-608 subtitles in SEI frames.</li>
+     * Get <p>Insertion method. Valid values:</p><li>subtitle-stream: Inserts a subtitle track.</li><li>close-caption-708: Encodes CEA-708 subtitles into SEI frames.</li><li>close-caption-608: Encodes CEA-608 subtitles into SEI frames.</li>
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Type The mode. Valid values:
-<li>`subtitle-stream`: Add a subtitle track.</li>
-<li>`close-caption-708`: Embed CEA-708 subtitles in SEI frames.</li>
-<li>`close-caption-608`: Embed CEA-608 subtitles in SEI frames.</li>
+     * @return Type <p>Insertion method. Valid values:</p><li>subtitle-stream: Inserts a subtitle track.</li><li>close-caption-708: Encodes CEA-708 subtitles into SEI frames.</li><li>close-caption-608: Encodes CEA-608 subtitles into SEI frames.</li>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getType() {
@@ -84,15 +79,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set The mode. Valid values:
-<li>`subtitle-stream`: Add a subtitle track.</li>
-<li>`close-caption-708`: Embed CEA-708 subtitles in SEI frames.</li>
-<li>`close-caption-608`: Embed CEA-608 subtitles in SEI frames.</li>
+     * Set <p>Insertion method. Valid values:</p><li>subtitle-stream: Inserts a subtitle track.</li><li>close-caption-708: Encodes CEA-708 subtitles into SEI frames.</li><li>close-caption-608: Encodes CEA-608 subtitles into SEI frames.</li>
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Type The mode. Valid values:
-<li>`subtitle-stream`: Add a subtitle track.</li>
-<li>`close-caption-708`: Embed CEA-708 subtitles in SEI frames.</li>
-<li>`close-caption-608`: Embed CEA-608 subtitles in SEI frames.</li>
+     * @param Type <p>Insertion method. Valid values:</p><li>subtitle-stream: Inserts a subtitle track.</li><li>close-caption-708: Encodes CEA-708 subtitles into SEI frames.</li><li>close-caption-608: Encodes CEA-608 subtitles into SEI frames.</li>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setType(String Type) {
@@ -100,9 +89,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get The subtitle file.
+     * Get <p>Subtitle file.</p>
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Subtitle The subtitle file.
+     * @return Subtitle <p>Subtitle file.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public MediaInputInfo getSubtitle() {
@@ -110,9 +99,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set The subtitle file.
+     * Set <p>Subtitle file.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Subtitle The subtitle file.
+     * @param Subtitle <p>Subtitle file.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setSubtitle(MediaInputInfo Subtitle) {
@@ -120,64 +109,68 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Subtitle name.
-Note: supports Chinese characters, letters, digits, spaces, underscores (_), hyphens (-), periods (.), and parentheses. Max 64 characters.
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return SubtitleName Subtitle name.
-Note: supports Chinese characters, letters, digits, spaces, underscores (_), hyphens (-), periods (.), and parentheses. Max 64 characters.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get <p>Subtitle name.<br>Note: Only Chinese characters, letters, digits, spaces, underscores (_), hyphens (-), periods (.), and brackets are supported. The length cannot exceed 64 characters.</p>
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return SubtitleName <p>Subtitle name.<br>Note: Only Chinese characters, letters, digits, spaces, underscores (_), hyphens (-), periods (.), and brackets are supported. The length cannot exceed 64 characters.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getSubtitleName() {
         return this.SubtitleName;
     }
 
     /**
-     * Set Subtitle name.
-Note: supports Chinese characters, letters, digits, spaces, underscores (_), hyphens (-), periods (.), and parentheses. Max 64 characters.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param SubtitleName Subtitle name.
-Note: supports Chinese characters, letters, digits, spaces, underscores (_), hyphens (-), periods (.), and parentheses. Max 64 characters.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set <p>Subtitle name.<br>Note: Only Chinese characters, letters, digits, spaces, underscores (_), hyphens (-), periods (.), and brackets are supported. The length cannot exceed 64 characters.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param SubtitleName <p>Subtitle name.<br>Note: Only Chinese characters, letters, digits, spaces, underscores (_), hyphens (-), periods (.), and brackets are supported. The length cannot exceed 64 characters.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setSubtitleName(String SubtitleName) {
         this.SubtitleName = SubtitleName;
     }
 
     /**
-     * Get Output format of the subtitle. valid values: "WebVTT", "TTML".
-Default value: "WebVTT". 
-     * @return OutputFormat Output format of the subtitle. valid values: "WebVTT", "TTML".
-Default value: "WebVTT".
+     * Get <p>Subtitle language, such as eng.</p> 
+     * @return SubtitleLanguage <p>Subtitle language, such as eng.</p>
+     */
+    public String getSubtitleLanguage() {
+        return this.SubtitleLanguage;
+    }
+
+    /**
+     * Set <p>Subtitle language, such as eng.</p>
+     * @param SubtitleLanguage <p>Subtitle language, such as eng.</p>
+     */
+    public void setSubtitleLanguage(String SubtitleLanguage) {
+        this.SubtitleLanguage = SubtitleLanguage;
+    }
+
+    /**
+     * Get <p>Subtitle output format. Valid values: {&quot;WebVTT&quot;,&quot;TTML&quot;}.<br>Default value: &quot;WebVTT&quot;.</p> 
+     * @return OutputFormat <p>Subtitle output format. Valid values: {&quot;WebVTT&quot;,&quot;TTML&quot;}.<br>Default value: &quot;WebVTT&quot;.</p>
      */
     public String getOutputFormat() {
         return this.OutputFormat;
     }
 
     /**
-     * Set Output format of the subtitle. valid values: "WebVTT", "TTML".
-Default value: "WebVTT".
-     * @param OutputFormat Output format of the subtitle. valid values: "WebVTT", "TTML".
-Default value: "WebVTT".
+     * Set <p>Subtitle output format. Valid values: {&quot;WebVTT&quot;,&quot;TTML&quot;}.<br>Default value: &quot;WebVTT&quot;.</p>
+     * @param OutputFormat <p>Subtitle output format. Valid values: {&quot;WebVTT&quot;,&quot;TTML&quot;}.<br>Default value: &quot;WebVTT&quot;.</p>
      */
     public void setOutputFormat(String OutputFormat) {
         this.OutputFormat = OutputFormat;
     }
 
     /**
-     * Get Default subtitle track. specifies the current subtitle as the default track when true. a maximum of 1 default subtitle track can be specified.
-Default value: `false`. 
-     * @return DefaultTrack Default subtitle track. specifies the current subtitle as the default track when true. a maximum of 1 default subtitle track can be specified.
-Default value: `false`.
+     * Get <p>Default subtitle track. When set to true, the current subtitle is designated as the default subtitle track. A maximum of 1 default subtitle track can be specified.<br>Default value: false.</p> 
+     * @return DefaultTrack <p>Default subtitle track. When set to true, the current subtitle is designated as the default subtitle track. A maximum of 1 default subtitle track can be specified.<br>Default value: false.</p>
      */
     public Boolean getDefaultTrack() {
         return this.DefaultTrack;
     }
 
     /**
-     * Set Default subtitle track. specifies the current subtitle as the default track when true. a maximum of 1 default subtitle track can be specified.
-Default value: `false`.
-     * @param DefaultTrack Default subtitle track. specifies the current subtitle as the default track when true. a maximum of 1 default subtitle track can be specified.
-Default value: `false`.
+     * Set <p>Default subtitle track. When set to true, the current subtitle is designated as the default subtitle track. A maximum of 1 default subtitle track can be specified.<br>Default value: false.</p>
+     * @param DefaultTrack <p>Default subtitle track. When set to true, the current subtitle is designated as the default subtitle track. A maximum of 1 default subtitle track can be specified.<br>Default value: false.</p>
      */
     public void setDefaultTrack(Boolean DefaultTrack) {
         this.DefaultTrack = DefaultTrack;
@@ -200,6 +193,9 @@ Default value: `false`.
         if (source.SubtitleName != null) {
             this.SubtitleName = new String(source.SubtitleName);
         }
+        if (source.SubtitleLanguage != null) {
+            this.SubtitleLanguage = new String(source.SubtitleLanguage);
+        }
         if (source.OutputFormat != null) {
             this.OutputFormat = new String(source.OutputFormat);
         }
@@ -216,6 +212,7 @@ Default value: `false`.
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamObj(map, prefix + "Subtitle.", this.Subtitle);
         this.setParamSimple(map, prefix + "SubtitleName", this.SubtitleName);
+        this.setParamSimple(map, prefix + "SubtitleLanguage", this.SubtitleLanguage);
         this.setParamSimple(map, prefix + "OutputFormat", this.OutputFormat);
         this.setParamSimple(map, prefix + "DefaultTrack", this.DefaultTrack);
 

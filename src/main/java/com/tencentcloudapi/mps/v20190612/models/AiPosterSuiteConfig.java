@@ -24,184 +24,184 @@ import java.util.HashMap;
 public class AiPosterSuiteConfig extends AbstractModel {
 
     /**
-    * 
+    * <p>Image output mode.</p><p>Enumeration values:</p><ul><li>auto: fully automatic mode. CustomVariables can be passed in this mode.</li><li>modify: modification mode. The corresponding description needs to be provided in the AddOnParameter.ExtPrompt field in this mode. CustomVariables cannot be passed in this mode.</li></ul><p>Default value: auto.</p>
     */
     @SerializedName("Mode")
     @Expose
     private String Mode;
 
     /**
-    * 
+    * <p>Ecommerce platform visual template ID.</p><p>If you need a personalized visual template, submit a ticket.</p>
     */
     @SerializedName("Definition")
     @Expose
     private Long Definition;
 
     /**
-    * 
+    * <p>Sub-image configuration.</p>
     */
     @SerializedName("Recipe")
     @Expose
     private RecipeItem [] Recipe;
 
     /**
-    * 
+    * <p>Sub-image text language.</p><p>Enumeration values:</p><ul><li>zh-CN: Simplified Chinese.</li><li>en-US: American English.</li></ul><p>Default value: zh-CN.</p><p>If you need more languages, submit a ticket.</p>
     */
     @SerializedName("Language")
     @Expose
     private String Language;
 
     /**
-    * 
+    * <p>Sub-image aspect ratio.</p><p>Enumeration values:</p><ul><li>1:1: 1:1.</li><li>3:4: 3:4.</li><li>4:3: 4:3.</li><li>9:16: 9:16.</li><li>16:9: 16:9.</li></ul><p>Default value: 1:1.</p>
     */
     @SerializedName("PanelRatio")
     @Expose
     private String PanelRatio;
 
     /**
-    * 
+    * <p>Sub-image resolution.</p><p>Enumeration values:</p><ul><li>720: 720.</li><li>1K: 1K.</li><li>2K: 2K.</li><li>4K: 4K.</li></ul><p>Default value: 1K.</p>
     */
     @SerializedName("PanelResolution")
     @Expose
     private String PanelResolution;
 
     /**
-    * 
+    * <p>User-defined variable.</p>
     */
     @SerializedName("CustomVariables")
     @Expose
     private CustomVariable [] CustomVariables;
 
     /**
-    * 
+    * <p>Model name.</p><p>Enumeration value:</p><ul><li>WAND-suite-1.0-flash: WAND-suite-1.0-flash.</li></ul>
     */
     @SerializedName("Model")
     @Expose
     private String Model;
 
     /**
-     * Get  
-     * @return Mode 
+     * Get <p>Image output mode.</p><p>Enumeration values:</p><ul><li>auto: fully automatic mode. CustomVariables can be passed in this mode.</li><li>modify: modification mode. The corresponding description needs to be provided in the AddOnParameter.ExtPrompt field in this mode. CustomVariables cannot be passed in this mode.</li></ul><p>Default value: auto.</p> 
+     * @return Mode <p>Image output mode.</p><p>Enumeration values:</p><ul><li>auto: fully automatic mode. CustomVariables can be passed in this mode.</li><li>modify: modification mode. The corresponding description needs to be provided in the AddOnParameter.ExtPrompt field in this mode. CustomVariables cannot be passed in this mode.</li></ul><p>Default value: auto.</p>
      */
     public String getMode() {
         return this.Mode;
     }
 
     /**
-     * Set 
-     * @param Mode 
+     * Set <p>Image output mode.</p><p>Enumeration values:</p><ul><li>auto: fully automatic mode. CustomVariables can be passed in this mode.</li><li>modify: modification mode. The corresponding description needs to be provided in the AddOnParameter.ExtPrompt field in this mode. CustomVariables cannot be passed in this mode.</li></ul><p>Default value: auto.</p>
+     * @param Mode <p>Image output mode.</p><p>Enumeration values:</p><ul><li>auto: fully automatic mode. CustomVariables can be passed in this mode.</li><li>modify: modification mode. The corresponding description needs to be provided in the AddOnParameter.ExtPrompt field in this mode. CustomVariables cannot be passed in this mode.</li></ul><p>Default value: auto.</p>
      */
     public void setMode(String Mode) {
         this.Mode = Mode;
     }
 
     /**
-     * Get  
-     * @return Definition 
+     * Get <p>Ecommerce platform visual template ID.</p><p>If you need a personalized visual template, submit a ticket.</p> 
+     * @return Definition <p>Ecommerce platform visual template ID.</p><p>If you need a personalized visual template, submit a ticket.</p>
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set 
-     * @param Definition 
+     * Set <p>Ecommerce platform visual template ID.</p><p>If you need a personalized visual template, submit a ticket.</p>
+     * @param Definition <p>Ecommerce platform visual template ID.</p><p>If you need a personalized visual template, submit a ticket.</p>
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;
     }
 
     /**
-     * Get  
-     * @return Recipe 
+     * Get <p>Sub-image configuration.</p> 
+     * @return Recipe <p>Sub-image configuration.</p>
      */
     public RecipeItem [] getRecipe() {
         return this.Recipe;
     }
 
     /**
-     * Set 
-     * @param Recipe 
+     * Set <p>Sub-image configuration.</p>
+     * @param Recipe <p>Sub-image configuration.</p>
      */
     public void setRecipe(RecipeItem [] Recipe) {
         this.Recipe = Recipe;
     }
 
     /**
-     * Get  
-     * @return Language 
+     * Get <p>Sub-image text language.</p><p>Enumeration values:</p><ul><li>zh-CN: Simplified Chinese.</li><li>en-US: American English.</li></ul><p>Default value: zh-CN.</p><p>If you need more languages, submit a ticket.</p> 
+     * @return Language <p>Sub-image text language.</p><p>Enumeration values:</p><ul><li>zh-CN: Simplified Chinese.</li><li>en-US: American English.</li></ul><p>Default value: zh-CN.</p><p>If you need more languages, submit a ticket.</p>
      */
     public String getLanguage() {
         return this.Language;
     }
 
     /**
-     * Set 
-     * @param Language 
+     * Set <p>Sub-image text language.</p><p>Enumeration values:</p><ul><li>zh-CN: Simplified Chinese.</li><li>en-US: American English.</li></ul><p>Default value: zh-CN.</p><p>If you need more languages, submit a ticket.</p>
+     * @param Language <p>Sub-image text language.</p><p>Enumeration values:</p><ul><li>zh-CN: Simplified Chinese.</li><li>en-US: American English.</li></ul><p>Default value: zh-CN.</p><p>If you need more languages, submit a ticket.</p>
      */
     public void setLanguage(String Language) {
         this.Language = Language;
     }
 
     /**
-     * Get  
-     * @return PanelRatio 
+     * Get <p>Sub-image aspect ratio.</p><p>Enumeration values:</p><ul><li>1:1: 1:1.</li><li>3:4: 3:4.</li><li>4:3: 4:3.</li><li>9:16: 9:16.</li><li>16:9: 16:9.</li></ul><p>Default value: 1:1.</p> 
+     * @return PanelRatio <p>Sub-image aspect ratio.</p><p>Enumeration values:</p><ul><li>1:1: 1:1.</li><li>3:4: 3:4.</li><li>4:3: 4:3.</li><li>9:16: 9:16.</li><li>16:9: 16:9.</li></ul><p>Default value: 1:1.</p>
      */
     public String getPanelRatio() {
         return this.PanelRatio;
     }
 
     /**
-     * Set 
-     * @param PanelRatio 
+     * Set <p>Sub-image aspect ratio.</p><p>Enumeration values:</p><ul><li>1:1: 1:1.</li><li>3:4: 3:4.</li><li>4:3: 4:3.</li><li>9:16: 9:16.</li><li>16:9: 16:9.</li></ul><p>Default value: 1:1.</p>
+     * @param PanelRatio <p>Sub-image aspect ratio.</p><p>Enumeration values:</p><ul><li>1:1: 1:1.</li><li>3:4: 3:4.</li><li>4:3: 4:3.</li><li>9:16: 9:16.</li><li>16:9: 16:9.</li></ul><p>Default value: 1:1.</p>
      */
     public void setPanelRatio(String PanelRatio) {
         this.PanelRatio = PanelRatio;
     }
 
     /**
-     * Get  
-     * @return PanelResolution 
+     * Get <p>Sub-image resolution.</p><p>Enumeration values:</p><ul><li>720: 720.</li><li>1K: 1K.</li><li>2K: 2K.</li><li>4K: 4K.</li></ul><p>Default value: 1K.</p> 
+     * @return PanelResolution <p>Sub-image resolution.</p><p>Enumeration values:</p><ul><li>720: 720.</li><li>1K: 1K.</li><li>2K: 2K.</li><li>4K: 4K.</li></ul><p>Default value: 1K.</p>
      */
     public String getPanelResolution() {
         return this.PanelResolution;
     }
 
     /**
-     * Set 
-     * @param PanelResolution 
+     * Set <p>Sub-image resolution.</p><p>Enumeration values:</p><ul><li>720: 720.</li><li>1K: 1K.</li><li>2K: 2K.</li><li>4K: 4K.</li></ul><p>Default value: 1K.</p>
+     * @param PanelResolution <p>Sub-image resolution.</p><p>Enumeration values:</p><ul><li>720: 720.</li><li>1K: 1K.</li><li>2K: 2K.</li><li>4K: 4K.</li></ul><p>Default value: 1K.</p>
      */
     public void setPanelResolution(String PanelResolution) {
         this.PanelResolution = PanelResolution;
     }
 
     /**
-     * Get  
-     * @return CustomVariables 
+     * Get <p>User-defined variable.</p> 
+     * @return CustomVariables <p>User-defined variable.</p>
      */
     public CustomVariable [] getCustomVariables() {
         return this.CustomVariables;
     }
 
     /**
-     * Set 
-     * @param CustomVariables 
+     * Set <p>User-defined variable.</p>
+     * @param CustomVariables <p>User-defined variable.</p>
      */
     public void setCustomVariables(CustomVariable [] CustomVariables) {
         this.CustomVariables = CustomVariables;
     }
 
     /**
-     * Get  
-     * @return Model 
+     * Get <p>Model name.</p><p>Enumeration value:</p><ul><li>WAND-suite-1.0-flash: WAND-suite-1.0-flash.</li></ul> 
+     * @return Model <p>Model name.</p><p>Enumeration value:</p><ul><li>WAND-suite-1.0-flash: WAND-suite-1.0-flash.</li></ul>
      */
     public String getModel() {
         return this.Model;
     }
 
     /**
-     * Set 
-     * @param Model 
+     * Set <p>Model name.</p><p>Enumeration value:</p><ul><li>WAND-suite-1.0-flash: WAND-suite-1.0-flash.</li></ul>
+     * @param Model <p>Model name.</p><p>Enumeration value:</p><ul><li>WAND-suite-1.0-flash: WAND-suite-1.0-flash.</li></ul>
      */
     public void setModel(String Model) {
         this.Model = Model;

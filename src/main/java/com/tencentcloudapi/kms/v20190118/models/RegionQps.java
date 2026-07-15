@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.ses.v20201002.models;
+package com.tencentcloudapi.kms.v20190118.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,41 +21,67 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class GetEmailIdentityRequest extends AbstractModel {
+public class RegionQps extends AbstractModel {
 
     /**
-    * <p>Sender domain name</p>
+    * <p>Region.</p>
     */
-    @SerializedName("EmailIdentity")
+    @SerializedName("Region")
     @Expose
-    private String EmailIdentity;
+    private String Region;
 
     /**
-     * Get <p>Sender domain name</p> 
-     * @return EmailIdentity <p>Sender domain name</p>
+    * <p>qps size</p>
+    */
+    @SerializedName("Qps")
+    @Expose
+    private Long Qps;
+
+    /**
+     * Get <p>Region.</p> 
+     * @return Region <p>Region.</p>
      */
-    public String getEmailIdentity() {
-        return this.EmailIdentity;
+    public String getRegion() {
+        return this.Region;
     }
 
     /**
-     * Set <p>Sender domain name</p>
-     * @param EmailIdentity <p>Sender domain name</p>
+     * Set <p>Region.</p>
+     * @param Region <p>Region.</p>
      */
-    public void setEmailIdentity(String EmailIdentity) {
-        this.EmailIdentity = EmailIdentity;
+    public void setRegion(String Region) {
+        this.Region = Region;
     }
 
-    public GetEmailIdentityRequest() {
+    /**
+     * Get <p>qps size</p> 
+     * @return Qps <p>qps size</p>
+     */
+    public Long getQps() {
+        return this.Qps;
+    }
+
+    /**
+     * Set <p>qps size</p>
+     * @param Qps <p>qps size</p>
+     */
+    public void setQps(Long Qps) {
+        this.Qps = Qps;
+    }
+
+    public RegionQps() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public GetEmailIdentityRequest(GetEmailIdentityRequest source) {
-        if (source.EmailIdentity != null) {
-            this.EmailIdentity = new String(source.EmailIdentity);
+    public RegionQps(RegionQps source) {
+        if (source.Region != null) {
+            this.Region = new String(source.Region);
+        }
+        if (source.Qps != null) {
+            this.Qps = new Long(source.Qps);
         }
     }
 
@@ -64,7 +90,8 @@ public class GetEmailIdentityRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "EmailIdentity", this.EmailIdentity);
+        this.setParamSimple(map, prefix + "Region", this.Region);
+        this.setParamSimple(map, prefix + "Qps", this.Qps);
 
     }
 }

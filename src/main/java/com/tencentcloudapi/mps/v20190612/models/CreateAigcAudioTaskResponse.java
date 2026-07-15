@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateAigcAudioTaskResponse extends AbstractModel {
 
     /**
-    * The task ID returned after the task is created successfully.Call the query API to poll for task progress and the generation result.Example value: 24*******AigcAudio-6a38**3a9f51468da5bfc25****9a462
+    * <p>Returned task ID after the task is created successfully.<br>The task progress and generation results can be obtained by calling the query API.</p>
     */
     @SerializedName("TaskId")
     @Expose
@@ -38,16 +38,16 @@ public class CreateAigcAudioTaskResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get The task ID returned after the task is created successfully.Call the query API to poll for task progress and the generation result.Example value: 24*******AigcAudio-6a38**3a9f51468da5bfc25****9a462 
-     * @return TaskId The task ID returned after the task is created successfully.Call the query API to poll for task progress and the generation result.Example value: 24*******AigcAudio-6a38**3a9f51468da5bfc25****9a462
+     * Get <p>Returned task ID after the task is created successfully.<br>The task progress and generation results can be obtained by calling the query API.</p> 
+     * @return TaskId <p>Returned task ID after the task is created successfully.<br>The task progress and generation results can be obtained by calling the query API.</p>
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set The task ID returned after the task is created successfully.Call the query API to poll for task progress and the generation result.Example value: 24*******AigcAudio-6a38**3a9f51468da5bfc25****9a462
-     * @param TaskId The task ID returned after the task is created successfully.Call the query API to poll for task progress and the generation result.Example value: 24*******AigcAudio-6a38**3a9f51468da5bfc25****9a462
+     * Set <p>Returned task ID after the task is created successfully.<br>The task progress and generation results can be obtained by calling the query API.</p>
+     * @param TaskId <p>Returned task ID after the task is created successfully.<br>The task progress and generation results can be obtained by calling the query API.</p>
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;
