@@ -50,6 +50,39 @@ public class TcsasClient extends AbstractClient{
     }
 
     /**
+     *This API is used to allow the superapp to approve the activation of mini program payment.
+     * @param req ApproveMNPPaymentEnableRequest
+     * @return ApproveMNPPaymentEnableResponse
+     * @throws TencentCloudSDKException
+     */
+    public ApproveMNPPaymentEnableResponse ApproveMNPPaymentEnable(ApproveMNPPaymentEnableRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ApproveMNPPaymentEnable", ApproveMNPPaymentEnableResponse.class);
+    }
+
+    /**
+     *This API is used to allow the superapp to approve the payment merchant binding request of a mini program team.
+     * @param req ApprovePaymentMerchantBindingRequest
+     * @return ApprovePaymentMerchantBindingResponse
+     * @throws TencentCloudSDKException
+     */
+    public ApprovePaymentMerchantBindingResponse ApprovePaymentMerchantBinding(ApprovePaymentMerchantBindingRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ApprovePaymentMerchantBinding", ApprovePaymentMerchantBindingResponse.class);
+    }
+
+    /**
+     *This API is used to change the bound payment merchant.
+     * @param req ChangePaymentBoundMerchantRequest
+     * @return ChangePaymentBoundMerchantResponse
+     * @throws TencentCloudSDKException
+     */
+    public ChangePaymentBoundMerchantResponse ChangePaymentBoundMerchant(ChangePaymentBoundMerchantRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ChangePaymentBoundMerchant", ChangePaymentBoundMerchantResponse.class);
+    }
+
+    /**
      *This API is used to configure the preview of a mini game.
      * @param req ConfigureMNGPreviewRequest
      * @return ConfigureMNGPreviewResponse
@@ -1073,6 +1106,17 @@ public class TcsasClient extends AbstractClient{
     }
 
     /**
+     *This API is used to query the mini program payment approval information.
+     * @param req DescribeMNPPaymentApprovalInfoRequest
+     * @return DescribeMNPPaymentApprovalInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeMNPPaymentApprovalInfoResponse DescribeMNPPaymentApprovalInfo(DescribeMNPPaymentApprovalInfoRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeMNPPaymentApprovalInfo", DescribeMNPPaymentApprovalInfoResponse.class);
+    }
+
+    /**
      *This API is used to query the mini program preview details.
      * @param req DescribeMNPPreviewRequest
      * @return DescribeMNPPreviewResponse
@@ -1337,6 +1381,17 @@ public class TcsasClient extends AbstractClient{
     }
 
     /**
+     *This API is used to allow the superapp to actively disable mini program payment.
+     * @param req DisableMNPPaymentRequest
+     * @return DisableMNPPaymentResponse
+     * @throws TencentCloudSDKException
+     */
+    public DisableMNPPaymentResponse DisableMNPPayment(DisableMNPPaymentRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DisableMNPPayment", DisableMNPPaymentResponse.class);
+    }
+
+    /**
      *This API is used to enable a superapp sensitive API.
      * @param req EnableApplicationSensitiveAPIRequest
      * @return EnableApplicationSensitiveAPIResponse
@@ -1502,6 +1557,17 @@ public class TcsasClient extends AbstractClient{
     }
 
     /**
+     *This API is used to query the merchant information of a mini program.
+     * @param req QueryMNPMerchantInfoRequest
+     * @return QueryMNPMerchantInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public QueryMNPMerchantInfoResponse QueryMNPMerchantInfo(QueryMNPMerchantInfoRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "QueryMNPMerchantInfo", QueryMNPMerchantInfoResponse.class);
+    }
+
+    /**
      *This API is used to release a mini game version.
      * @param req ReleaseMNGVersionRequest
      * @return ReleaseMNGVersionResponse
@@ -1546,6 +1612,28 @@ public class TcsasClient extends AbstractClient{
     }
 
     /**
+     *This API is used to request the activation of mini program payment.
+     * @param req RequestPaymentEnableRequest
+     * @return RequestPaymentEnableResponse
+     * @throws TencentCloudSDKException
+     */
+    public RequestPaymentEnableResponse RequestPaymentEnable(RequestPaymentEnableRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "RequestPaymentEnable", RequestPaymentEnableResponse.class);
+    }
+
+    /**
+     *This API is used to request the binding of a payment merchant to a team.
+     * @param req RequestPaymentMerchantBindingRequest
+     * @return RequestPaymentMerchantBindingResponse
+     * @throws TencentCloudSDKException
+     */
+    public RequestPaymentMerchantBindingResponse RequestPaymentMerchantBinding(RequestPaymentMerchantBindingRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "RequestPaymentMerchantBinding", RequestPaymentMerchantBindingResponse.class);
+    }
+
+    /**
      *This API is used to reset a mini game secret key.
      * @param req ResetMNGAppSecretRequest
      * @return ResetMNGAppSecretResponse
@@ -1587,6 +1675,28 @@ public class TcsasClient extends AbstractClient{
     public RollbackMNPVersionResponse RollbackMNPVersion(RollbackMNPVersionRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "RollbackMNPVersion", RollbackMNPVersionResponse.class);
+    }
+
+    /**
+     *This API is used to allow a mini program team to actively unbind the payment merchant.
+     * @param req UnbindMNPPaymentMerchantRequest
+     * @return UnbindMNPPaymentMerchantResponse
+     * @throws TencentCloudSDKException
+     */
+    public UnbindMNPPaymentMerchantResponse UnbindMNPPaymentMerchant(UnbindMNPPaymentMerchantRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UnbindMNPPaymentMerchant", UnbindMNPPaymentMerchantResponse.class);
+    }
+
+    /**
+     *This API is used to allow the superapp to actively unbind the payment merchant.
+     * @param req UnbindPaymentMerchantRequest
+     * @return UnbindPaymentMerchantResponse
+     * @throws TencentCloudSDKException
+     */
+    public UnbindPaymentMerchantResponse UnbindPaymentMerchant(UnbindPaymentMerchantRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UnbindPaymentMerchant", UnbindPaymentMerchantResponse.class);
     }
 
 }

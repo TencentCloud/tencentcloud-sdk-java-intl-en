@@ -129,18 +129,25 @@ public class DescribeMNGListData extends AbstractModel {
     private String EffectMNPVersion;
 
     /**
-    * Team ID.
+    * <p>Team ID.</p>
     */
     @SerializedName("TeamId")
     @Expose
     private String TeamId;
 
     /**
-    * Team type ID. Valid values: 1: Mini program team; 2: Superapp team; 3: Service provider team.
+    * <p>Team type ID. Valid values: 1: Mini program team; 2: Superapp team; 3: Service provider team.</p>
     */
     @SerializedName("TeamTypeId")
     @Expose
     private Long TeamTypeId;
+
+    /**
+    * <p>Age rating information.</p>
+    */
+    @SerializedName("AgeRatings")
+    @Expose
+    private AgeRatingItem [] AgeRatings;
 
     /**
      * Get <p>Mini game appid.</p> 
@@ -383,35 +390,51 @@ public class DescribeMNGListData extends AbstractModel {
     }
 
     /**
-     * Get Team ID. 
-     * @return TeamId Team ID.
+     * Get <p>Team ID.</p> 
+     * @return TeamId <p>Team ID.</p>
      */
     public String getTeamId() {
         return this.TeamId;
     }
 
     /**
-     * Set Team ID.
-     * @param TeamId Team ID.
+     * Set <p>Team ID.</p>
+     * @param TeamId <p>Team ID.</p>
      */
     public void setTeamId(String TeamId) {
         this.TeamId = TeamId;
     }
 
     /**
-     * Get Team type ID. Valid values: 1: Mini program team; 2: Superapp team; 3: Service provider team. 
-     * @return TeamTypeId Team type ID. Valid values: 1: Mini program team; 2: Superapp team; 3: Service provider team.
+     * Get <p>Team type ID. Valid values: 1: Mini program team; 2: Superapp team; 3: Service provider team.</p> 
+     * @return TeamTypeId <p>Team type ID. Valid values: 1: Mini program team; 2: Superapp team; 3: Service provider team.</p>
      */
     public Long getTeamTypeId() {
         return this.TeamTypeId;
     }
 
     /**
-     * Set Team type ID. Valid values: 1: Mini program team; 2: Superapp team; 3: Service provider team.
-     * @param TeamTypeId Team type ID. Valid values: 1: Mini program team; 2: Superapp team; 3: Service provider team.
+     * Set <p>Team type ID. Valid values: 1: Mini program team; 2: Superapp team; 3: Service provider team.</p>
+     * @param TeamTypeId <p>Team type ID. Valid values: 1: Mini program team; 2: Superapp team; 3: Service provider team.</p>
      */
     public void setTeamTypeId(Long TeamTypeId) {
         this.TeamTypeId = TeamTypeId;
+    }
+
+    /**
+     * Get <p>Age rating information.</p> 
+     * @return AgeRatings <p>Age rating information.</p>
+     */
+    public AgeRatingItem [] getAgeRatings() {
+        return this.AgeRatings;
+    }
+
+    /**
+     * Set <p>Age rating information.</p>
+     * @param AgeRatings <p>Age rating information.</p>
+     */
+    public void setAgeRatings(AgeRatingItem [] AgeRatings) {
+        this.AgeRatings = AgeRatings;
     }
 
     public DescribeMNGListData() {
@@ -473,6 +496,12 @@ public class DescribeMNGListData extends AbstractModel {
         if (source.TeamTypeId != null) {
             this.TeamTypeId = new Long(source.TeamTypeId);
         }
+        if (source.AgeRatings != null) {
+            this.AgeRatings = new AgeRatingItem[source.AgeRatings.length];
+            for (int i = 0; i < source.AgeRatings.length; i++) {
+                this.AgeRatings[i] = new AgeRatingItem(source.AgeRatings[i]);
+            }
+        }
     }
 
 
@@ -497,6 +526,7 @@ public class DescribeMNGListData extends AbstractModel {
         this.setParamSimple(map, prefix + "EffectMNPVersion", this.EffectMNPVersion);
         this.setParamSimple(map, prefix + "TeamId", this.TeamId);
         this.setParamSimple(map, prefix + "TeamTypeId", this.TeamTypeId);
+        this.setParamArrayObj(map, prefix + "AgeRatings.", this.AgeRatings);
 
     }
 }

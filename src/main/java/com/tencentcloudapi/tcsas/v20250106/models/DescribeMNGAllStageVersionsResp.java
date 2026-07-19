@@ -150,6 +150,13 @@ public class DescribeMNGAllStageVersionsResp extends AbstractModel {
     private Long VersionCurrentStatus;
 
     /**
+    * <p>Age rating information.</p>
+    */
+    @SerializedName("AgeRatings")
+    @Expose
+    private AgeRatingItem [] AgeRatings;
+
+    /**
      * Get <p>Mini game appid.</p> 
      * @return MNPId <p>Mini game appid.</p>
      */
@@ -437,6 +444,22 @@ public class DescribeMNGAllStageVersionsResp extends AbstractModel {
         this.VersionCurrentStatus = VersionCurrentStatus;
     }
 
+    /**
+     * Get <p>Age rating information.</p> 
+     * @return AgeRatings <p>Age rating information.</p>
+     */
+    public AgeRatingItem [] getAgeRatings() {
+        return this.AgeRatings;
+    }
+
+    /**
+     * Set <p>Age rating information.</p>
+     * @param AgeRatings <p>Age rating information.</p>
+     */
+    public void setAgeRatings(AgeRatingItem [] AgeRatings) {
+        this.AgeRatings = AgeRatings;
+    }
+
     public DescribeMNGAllStageVersionsResp() {
     }
 
@@ -499,6 +522,12 @@ public class DescribeMNGAllStageVersionsResp extends AbstractModel {
         if (source.VersionCurrentStatus != null) {
             this.VersionCurrentStatus = new Long(source.VersionCurrentStatus);
         }
+        if (source.AgeRatings != null) {
+            this.AgeRatings = new AgeRatingItem[source.AgeRatings.length];
+            for (int i = 0; i < source.AgeRatings.length; i++) {
+                this.AgeRatings[i] = new AgeRatingItem(source.AgeRatings[i]);
+            }
+        }
     }
 
 
@@ -524,6 +553,7 @@ public class DescribeMNGAllStageVersionsResp extends AbstractModel {
         this.setParamSimple(map, prefix + "RollbackVersion", this.RollbackVersion);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "VersionCurrentStatus", this.VersionCurrentStatus);
+        this.setParamArrayObj(map, prefix + "AgeRatings.", this.AgeRatings);
 
     }
 }

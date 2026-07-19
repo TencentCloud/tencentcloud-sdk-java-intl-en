@@ -21,7 +21,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateMNPSecretKeyRequest extends AbstractModel {
+public class RequestPaymentMerchantBindingRequest extends AbstractModel {
 
     /**
     * <p>Platform ID.</p>
@@ -31,18 +31,25 @@ public class CreateMNPSecretKeyRequest extends AbstractModel {
     private String PlatformId;
 
     /**
-    * <p>Mini program or mini game appid.</p>
+    * <p>Mini program appid.</p>
     */
-    @SerializedName("MNPId")
+    @SerializedName("TeamId")
     @Expose
-    private String MNPId;
+    private String TeamId;
 
     /**
-    * <p>CICD ID</p>
+    * <p>Merchant ID.</p>
     */
-    @SerializedName("PipelineId")
+    @SerializedName("MerchantID")
     @Expose
-    private String PipelineId;
+    private String MerchantID;
+
+    /**
+    * <p>Merchant name.</p>
+    */
+    @SerializedName("MerchantName")
+    @Expose
+    private String MerchantName;
 
     /**
      * Get <p>Platform ID.</p> 
@@ -61,53 +68,72 @@ public class CreateMNPSecretKeyRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>Mini program or mini game appid.</p> 
-     * @return MNPId <p>Mini program or mini game appid.</p>
+     * Get <p>Mini program appid.</p> 
+     * @return TeamId <p>Mini program appid.</p>
      */
-    public String getMNPId() {
-        return this.MNPId;
+    public String getTeamId() {
+        return this.TeamId;
     }
 
     /**
-     * Set <p>Mini program or mini game appid.</p>
-     * @param MNPId <p>Mini program or mini game appid.</p>
+     * Set <p>Mini program appid.</p>
+     * @param TeamId <p>Mini program appid.</p>
      */
-    public void setMNPId(String MNPId) {
-        this.MNPId = MNPId;
+    public void setTeamId(String TeamId) {
+        this.TeamId = TeamId;
     }
 
     /**
-     * Get <p>CICD ID</p> 
-     * @return PipelineId <p>CICD ID</p>
+     * Get <p>Merchant ID.</p> 
+     * @return MerchantID <p>Merchant ID.</p>
      */
-    public String getPipelineId() {
-        return this.PipelineId;
+    public String getMerchantID() {
+        return this.MerchantID;
     }
 
     /**
-     * Set <p>CICD ID</p>
-     * @param PipelineId <p>CICD ID</p>
+     * Set <p>Merchant ID.</p>
+     * @param MerchantID <p>Merchant ID.</p>
      */
-    public void setPipelineId(String PipelineId) {
-        this.PipelineId = PipelineId;
+    public void setMerchantID(String MerchantID) {
+        this.MerchantID = MerchantID;
     }
 
-    public CreateMNPSecretKeyRequest() {
+    /**
+     * Get <p>Merchant name.</p> 
+     * @return MerchantName <p>Merchant name.</p>
+     */
+    public String getMerchantName() {
+        return this.MerchantName;
+    }
+
+    /**
+     * Set <p>Merchant name.</p>
+     * @param MerchantName <p>Merchant name.</p>
+     */
+    public void setMerchantName(String MerchantName) {
+        this.MerchantName = MerchantName;
+    }
+
+    public RequestPaymentMerchantBindingRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public CreateMNPSecretKeyRequest(CreateMNPSecretKeyRequest source) {
+    public RequestPaymentMerchantBindingRequest(RequestPaymentMerchantBindingRequest source) {
         if (source.PlatformId != null) {
             this.PlatformId = new String(source.PlatformId);
         }
-        if (source.MNPId != null) {
-            this.MNPId = new String(source.MNPId);
+        if (source.TeamId != null) {
+            this.TeamId = new String(source.TeamId);
         }
-        if (source.PipelineId != null) {
-            this.PipelineId = new String(source.PipelineId);
+        if (source.MerchantID != null) {
+            this.MerchantID = new String(source.MerchantID);
+        }
+        if (source.MerchantName != null) {
+            this.MerchantName = new String(source.MerchantName);
         }
     }
 
@@ -117,8 +143,9 @@ public class CreateMNPSecretKeyRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "PlatformId", this.PlatformId);
-        this.setParamSimple(map, prefix + "MNPId", this.MNPId);
-        this.setParamSimple(map, prefix + "PipelineId", this.PipelineId);
+        this.setParamSimple(map, prefix + "TeamId", this.TeamId);
+        this.setParamSimple(map, prefix + "MerchantID", this.MerchantID);
+        this.setParamSimple(map, prefix + "MerchantName", this.MerchantName);
 
     }
 }

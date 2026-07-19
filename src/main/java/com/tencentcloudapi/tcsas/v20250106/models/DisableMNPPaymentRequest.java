@@ -21,14 +21,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeMNGVersionRequest extends AbstractModel {
-
-    /**
-    * <p>Task ID returned by the CreateMNPVersion API.</p>
-    */
-    @SerializedName("BusinessId")
-    @Expose
-    private String BusinessId;
+public class DisableMNPPaymentRequest extends AbstractModel {
 
     /**
     * <p>Platform ID.</p>
@@ -38,27 +31,18 @@ public class DescribeMNGVersionRequest extends AbstractModel {
     private String PlatformId;
 
     /**
-    * <p>CICD ID</p>
+    * <p>Superapp ID.</p>
     */
-    @SerializedName("PipelineId")
+    @SerializedName("ApplicationId")
     @Expose
-    private String PipelineId;
+    private String ApplicationId;
 
     /**
-     * Get <p>Task ID returned by the CreateMNPVersion API.</p> 
-     * @return BusinessId <p>Task ID returned by the CreateMNPVersion API.</p>
-     */
-    public String getBusinessId() {
-        return this.BusinessId;
-    }
-
-    /**
-     * Set <p>Task ID returned by the CreateMNPVersion API.</p>
-     * @param BusinessId <p>Task ID returned by the CreateMNPVersion API.</p>
-     */
-    public void setBusinessId(String BusinessId) {
-        this.BusinessId = BusinessId;
-    }
+    * <p>Primary key ID, obtained from the API response of approving mini program payment activation.</p>
+    */
+    @SerializedName("ID")
+    @Expose
+    private Long ID;
 
     /**
      * Get <p>Platform ID.</p> 
@@ -77,37 +61,53 @@ public class DescribeMNGVersionRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>CICD ID</p> 
-     * @return PipelineId <p>CICD ID</p>
+     * Get <p>Superapp ID.</p> 
+     * @return ApplicationId <p>Superapp ID.</p>
      */
-    public String getPipelineId() {
-        return this.PipelineId;
+    public String getApplicationId() {
+        return this.ApplicationId;
     }
 
     /**
-     * Set <p>CICD ID</p>
-     * @param PipelineId <p>CICD ID</p>
+     * Set <p>Superapp ID.</p>
+     * @param ApplicationId <p>Superapp ID.</p>
      */
-    public void setPipelineId(String PipelineId) {
-        this.PipelineId = PipelineId;
+    public void setApplicationId(String ApplicationId) {
+        this.ApplicationId = ApplicationId;
     }
 
-    public DescribeMNGVersionRequest() {
+    /**
+     * Get <p>Primary key ID, obtained from the API response of approving mini program payment activation.</p> 
+     * @return ID <p>Primary key ID, obtained from the API response of approving mini program payment activation.</p>
+     */
+    public Long getID() {
+        return this.ID;
+    }
+
+    /**
+     * Set <p>Primary key ID, obtained from the API response of approving mini program payment activation.</p>
+     * @param ID <p>Primary key ID, obtained from the API response of approving mini program payment activation.</p>
+     */
+    public void setID(Long ID) {
+        this.ID = ID;
+    }
+
+    public DisableMNPPaymentRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeMNGVersionRequest(DescribeMNGVersionRequest source) {
-        if (source.BusinessId != null) {
-            this.BusinessId = new String(source.BusinessId);
-        }
+    public DisableMNPPaymentRequest(DisableMNPPaymentRequest source) {
         if (source.PlatformId != null) {
             this.PlatformId = new String(source.PlatformId);
         }
-        if (source.PipelineId != null) {
-            this.PipelineId = new String(source.PipelineId);
+        if (source.ApplicationId != null) {
+            this.ApplicationId = new String(source.ApplicationId);
+        }
+        if (source.ID != null) {
+            this.ID = new Long(source.ID);
         }
     }
 
@@ -116,9 +116,9 @@ public class DescribeMNGVersionRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "BusinessId", this.BusinessId);
         this.setParamSimple(map, prefix + "PlatformId", this.PlatformId);
-        this.setParamSimple(map, prefix + "PipelineId", this.PipelineId);
+        this.setParamSimple(map, prefix + "ApplicationId", this.ApplicationId);
+        this.setParamSimple(map, prefix + "ID", this.ID);
 
     }
 }

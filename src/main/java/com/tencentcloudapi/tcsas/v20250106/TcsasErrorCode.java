@@ -18,8 +18,23 @@ public enum TcsasErrorCode {
      /* FailedOperation.ApplicationNumberExceedLimit */
      FAILEDOPERATION_APPLICATIONNUMBEREXCEEDLIMIT("FailedOperation.ApplicationNumberExceedLimit"),
      
+     /* The approval request has already been processed. Please do not repeat this operation. */
+     FAILEDOPERATION_APPROVALALREADYPROCESSED("FailedOperation.ApprovalAlreadyProcessed"),
+     
+     /* The approval request does not belong to the current superapp. */
+     FAILEDOPERATION_APPROVALNOTBELONGTOAPPLICATION("FailedOperation.ApprovalNotBelongToApplication"),
+     
      /* FailedOperation.ExistMNPApprovalRecord */
      FAILEDOPERATION_EXISTMNPAPPROVALRECORD("FailedOperation.ExistMNPApprovalRecord"),
+     
+     /* A merchant binding request already exists. */
+     FAILEDOPERATION_EXISTMERCHANTBINDAPPLY("FailedOperation.ExistMerchantBindApply"),
+     
+     /* The merchant is already bound. */
+     FAILEDOPERATION_EXISTMERCHANTBINDRELATION("FailedOperation.ExistMerchantBindRelation"),
+     
+     /* A payment activation approval request is already pending. Please do not resubmit. */
+     FAILEDOPERATION_EXISTPAYMENTOPENAPPLY("FailedOperation.ExistPaymentOpenApply"),
      
      /* FailedOperation.ExistRepeatDomainUrl */
      FAILEDOPERATION_EXISTREPEATDOMAINURL("FailedOperation.ExistRepeatDomainUrl"),
@@ -42,6 +57,9 @@ public enum TcsasErrorCode {
      /* FailedOperation.MNPOnlineVersionNotExist */
      FAILEDOPERATION_MNPONLINEVERSIONNOTEXIST("FailedOperation.MNPOnlineVersionNotExist"),
      
+     /* The payment capability of this mini program is already activated. */
+     FAILEDOPERATION_MNPPAYMENTALREADYENABLED("FailedOperation.MNPPaymentAlreadyEnabled"),
+     
      /* FailedOperation.MNPReleaseNumberExceedLimit */
      FAILEDOPERATION_MNPRELEASENUMBEREXCEEDLIMIT("FailedOperation.MNPReleaseNumberExceedLimit"),
      
@@ -53,6 +71,9 @@ public enum TcsasErrorCode {
      
      /* FailedOperation.MNPVersionReleased */
      FAILEDOPERATION_MNPVERSIONRELEASED("FailedOperation.MNPVersionReleased"),
+     
+     /* The superapp payment configuration is disabled. */
+     FAILEDOPERATION_MERCHANTPAYMENTFUNCTIONCLOSED("FailedOperation.MerchantPaymentFunctionClosed"),
      
      /* FailedOperation.MiniProgramIconAnalysisFailed */
      FAILEDOPERATION_MINIPROGRAMICONANALYSISFAILED("FailedOperation.MiniProgramIconAnalysisFailed"),
@@ -68,6 +89,15 @@ public enum TcsasErrorCode {
      
      /* FailedOperation.PackageAlreadyExpired */
      FAILEDOPERATION_PACKAGEALREADYEXPIRED("FailedOperation.PackageAlreadyExpired"),
+     
+     /* Invalid superapp ID or parameter ID. */
+     FAILEDOPERATION_PAYMENTRECORDNOTBELONGTOAPPLICATION("FailedOperation.PaymentRecordNotBelongToApplication"),
+     
+     /* Payment binding not found. */
+     FAILEDOPERATION_PAYMENTRECORDNOTFOUND("FailedOperation.PaymentRecordNotFound"),
+     
+     /* Payment version verification failed. */
+     FAILEDOPERATION_PAYMENTVERSIONCHECKERROR("FailedOperation.PaymentVersionCheckError"),
      
      /* Number of production superapp package name configurations exceeds the limit. */
      FAILEDOPERATION_PRODAPPLICATIONCONFIGEXCEEDLIMIT("FailedOperation.ProdApplicationConfigExceedLimit"),
@@ -108,6 +138,9 @@ public enum TcsasErrorCode {
      /* Invalid parameter value. */
      INVALIDPARAMETERVALUE("InvalidParameterValue"),
      
+     /* Age rating exceeds the superapp limit. */
+     INVALIDPARAMETERVALUE_AGERATINGEXCEEDSUPPERAPPLIMIT("InvalidParameterValue.AgeRatingExceedSupperAppLimit"),
+     
      /* Superapp package name length exceeds the limit. */
      INVALIDPARAMETERVALUE_APPKEYLENGTHEXCEEDLIMIT("InvalidParameterValue.AppKeyLengthExceedLimit"),
      
@@ -116,6 +149,12 @@ public enum TcsasErrorCode {
      
      /* Superapp URL length exceeds the limit. */
      INVALIDPARAMETERVALUE_APPURLLENGTHEXCEEDLIMIT("InvalidParameterValue.AppURLLengthExceedLimit"),
+     
+     /* Approval note cannot be empty. */
+     INVALIDPARAMETERVALUE_APPROVALNOTEREQUIRED("InvalidParameterValue.ApprovalNoteRequired"),
+     
+     /* Duplicate age rating. */
+     INVALIDPARAMETERVALUE_DUPLICATEAGERATINGSTANDARD("InvalidParameterValue.DuplicateAgeRatingStandard"),
      
      /* InvalidParameterValue.ExistMismatchParameterType */
      INVALIDPARAMETERVALUE_EXISTMISMATCHPARAMETERTYPE("InvalidParameterValue.ExistMismatchParameterType"),
@@ -128,6 +167,9 @@ public enum TcsasErrorCode {
      
      /* InvalidParameterValue.InvalidAccountType */
      INVALIDPARAMETERVALUE_INVALIDACCOUNTTYPE("InvalidParameterValue.InvalidAccountType"),
+     
+     /* Invalid age rating parameters. */
+     INVALIDPARAMETERVALUE_INVALIDAGERATINGSTANDARD("InvalidParameterValue.InvalidAgeRatingStandard"),
      
      /* InvalidParameterValue.InvalidAppPackageNameLayout */
      INVALIDPARAMETERVALUE_INVALIDAPPPACKAGENAMELAYOUT("InvalidParameterValue.InvalidAppPackageNameLayout"),
@@ -156,6 +198,12 @@ public enum TcsasErrorCode {
      /* InvalidParameterValue.InvalidApprovalNote */
      INVALIDPARAMETERVALUE_INVALIDAPPROVALNOTE("InvalidParameterValue.InvalidApprovalNote"),
      
+     /* Invalid approval type. */
+     INVALIDPARAMETERVALUE_INVALIDAPPROVALTYPE("InvalidParameterValue.InvalidApprovalType"),
+     
+     /* Invalid multi-language language code. */
+     INVALIDPARAMETERVALUE_INVALIDMNPI18NLANG("InvalidParameterValue.InvalidMNPI18NLang"),
+     
      /* InvalidParameterValue.InvalidMNPIcon */
      INVALIDPARAMETERVALUE_INVALIDMNPICON("InvalidParameterValue.InvalidMNPIcon"),
      
@@ -182,6 +230,12 @@ public enum TcsasErrorCode {
      
      /* InvalidParameterValue.InvalidMNPVersionTaskId */
      INVALIDPARAMETERVALUE_INVALIDMNPVERSIONTASKID("InvalidParameterValue.InvalidMNPVersionTaskId"),
+     
+     /* Invalid merchant ID. */
+     INVALIDPARAMETERVALUE_INVALIDMERCHANTID("InvalidParameterValue.InvalidMerchantId"),
+     
+     /* Invalid merchant name. */
+     INVALIDPARAMETERVALUE_INVALIDMERCHANTNAME("InvalidParameterValue.InvalidMerchantName"),
      
      /* InvalidParameterValue.InvalidMiniAppId */
      INVALIDPARAMETERVALUE_INVALIDMINIAPPID("InvalidParameterValue.InvalidMiniAppId"),
@@ -215,6 +269,9 @@ public enum TcsasErrorCode {
      
      /* InvalidParameterValue.MiniProgramNameAlreadyExist */
      INVALIDPARAMETERVALUE_MINIPROGRAMNAMEALREADYEXIST("InvalidParameterValue.MiniProgramNameAlreadyExist"),
+     
+     /* Approval note is required. */
+     INVALIDPARAMETERVALUE_PAYMENTRECORDNOTFOUND("InvalidParameterValue.PaymentRecordNotFound"),
      
      /* InvalidParameterValue.ProcessApplicationAndApprovalApplicationMismatch */
      INVALIDPARAMETERVALUE_PROCESSAPPLICATIONANDAPPROVALAPPLICATIONMISMATCH("InvalidParameterValue.ProcessApplicationAndApprovalApplicationMismatch"),

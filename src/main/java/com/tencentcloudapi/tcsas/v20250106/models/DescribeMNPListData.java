@@ -24,394 +24,417 @@ import java.util.HashMap;
 public class DescribeMNPListData extends AbstractModel {
 
     /**
-    * Mini program appid.
+    * <p>Mini game appid.</p>
     */
     @SerializedName("MNPId")
     @Expose
     private String MNPId;
 
     /**
-    * Mini program icon.
+    * <p>Mini game icon.</p>
     */
     @SerializedName("MNPIcon")
     @Expose
     private String MNPIcon;
 
     /**
-    * Mini program name.
+    * <p>Mini game name.</p>
     */
     @SerializedName("MNPName")
     @Expose
     private String MNPName;
 
     /**
-    * Team name. 
+    * <p>Team name.</p>
     */
     @SerializedName("TeamName")
     @Expose
     private String TeamName;
 
     /**
-    * Mini program category.
+    * <p>Mini game category.</p>
     */
     @SerializedName("MNPType")
     @Expose
     private String MNPType;
 
     /**
-    * Mini program available status. Valid values: 1: Available; 2: Removed.
+    * <p>Mini game available status. Valid values: 1: Available; 2: Not available.</p>
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * Mini program introduction.
+    * <p>Mini game introduction.</p>
     */
     @SerializedName("MNPIntro")
     @Expose
     private String MNPIntro;
 
     /**
-    * Creator.
+    * <p>Creator.</p>
     */
     @SerializedName("CreateUser")
     @Expose
     private String CreateUser;
 
     /**
-    * Creation time.
+    * <p>Creation time.</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * Last modifier.
+    * <p>Last modifier.</p>
     */
     @SerializedName("UpdateUser")
     @Expose
     private String UpdateUser;
 
     /**
-    * Last modified time.
+    * <p>Last modified time.</p>
     */
     @SerializedName("UpdateTime")
     @Expose
     private String UpdateTime;
 
     /**
-    * Superapp name.
+    * <p>Superapp name.</p>
     */
     @SerializedName("ApplicationName")
     @Expose
     private String ApplicationName;
 
     /**
-    * Binding effective status for the superapp. Valid values: 1: Not effective; 2: Effective.
+    * <p>Binding effective status for the superapp. Valid values: 1: Not effective; 2: Effective.</p>
     */
     @SerializedName("EffectStatus")
     @Expose
     private Long EffectStatus;
 
     /**
-    * Effective mini program version ID bound to the superapp. 
+    * <p>Effective mini program version ID bound to the superapp.</p>
     */
     @SerializedName("EffectMNPVersionId")
     @Expose
     private Long EffectMNPVersionId;
 
     /**
-    * Effective mini program version number bound to the superapp. 
+    * <p>Effective mini program version number bound to the superapp.</p>
     */
     @SerializedName("EffectMNPVersion")
     @Expose
     private String EffectMNPVersion;
 
     /**
-    * Team ID.
+    * <p>Team ID.</p>
     */
     @SerializedName("TeamId")
     @Expose
     private String TeamId;
 
     /**
-    * Team type ID. Valid values: 1: Mini program team; 2: Superapp team; 3: Service provider team.
+    * <p>Team type ID. Valid values: 1: Mini program team; 2: Superapp team; 3: Service provider team.</p>
     */
     @SerializedName("TeamTypeId")
     @Expose
     private Long TeamTypeId;
 
     /**
-     * Get Mini program appid. 
-     * @return MNPId Mini program appid.
+    * <p>Age rating information.</p>
+    */
+    @SerializedName("AgeRatings")
+    @Expose
+    private AgeRatingItem [] AgeRatings;
+
+    /**
+     * Get <p>Mini game appid.</p> 
+     * @return MNPId <p>Mini game appid.</p>
      */
     public String getMNPId() {
         return this.MNPId;
     }
 
     /**
-     * Set Mini program appid.
-     * @param MNPId Mini program appid.
+     * Set <p>Mini game appid.</p>
+     * @param MNPId <p>Mini game appid.</p>
      */
     public void setMNPId(String MNPId) {
         this.MNPId = MNPId;
     }
 
     /**
-     * Get Mini program icon. 
-     * @return MNPIcon Mini program icon.
+     * Get <p>Mini game icon.</p> 
+     * @return MNPIcon <p>Mini game icon.</p>
      */
     public String getMNPIcon() {
         return this.MNPIcon;
     }
 
     /**
-     * Set Mini program icon.
-     * @param MNPIcon Mini program icon.
+     * Set <p>Mini game icon.</p>
+     * @param MNPIcon <p>Mini game icon.</p>
      */
     public void setMNPIcon(String MNPIcon) {
         this.MNPIcon = MNPIcon;
     }
 
     /**
-     * Get Mini program name. 
-     * @return MNPName Mini program name.
+     * Get <p>Mini game name.</p> 
+     * @return MNPName <p>Mini game name.</p>
      */
     public String getMNPName() {
         return this.MNPName;
     }
 
     /**
-     * Set Mini program name.
-     * @param MNPName Mini program name.
+     * Set <p>Mini game name.</p>
+     * @param MNPName <p>Mini game name.</p>
      */
     public void setMNPName(String MNPName) {
         this.MNPName = MNPName;
     }
 
     /**
-     * Get Team name.  
-     * @return TeamName Team name. 
+     * Get <p>Team name.</p> 
+     * @return TeamName <p>Team name.</p>
      */
     public String getTeamName() {
         return this.TeamName;
     }
 
     /**
-     * Set Team name. 
-     * @param TeamName Team name. 
+     * Set <p>Team name.</p>
+     * @param TeamName <p>Team name.</p>
      */
     public void setTeamName(String TeamName) {
         this.TeamName = TeamName;
     }
 
     /**
-     * Get Mini program category. 
-     * @return MNPType Mini program category.
+     * Get <p>Mini game category.</p> 
+     * @return MNPType <p>Mini game category.</p>
      */
     public String getMNPType() {
         return this.MNPType;
     }
 
     /**
-     * Set Mini program category.
-     * @param MNPType Mini program category.
+     * Set <p>Mini game category.</p>
+     * @param MNPType <p>Mini game category.</p>
      */
     public void setMNPType(String MNPType) {
         this.MNPType = MNPType;
     }
 
     /**
-     * Get Mini program available status. Valid values: 1: Available; 2: Removed. 
-     * @return Status Mini program available status. Valid values: 1: Available; 2: Removed.
+     * Get <p>Mini game available status. Valid values: 1: Available; 2: Not available.</p> 
+     * @return Status <p>Mini game available status. Valid values: 1: Available; 2: Not available.</p>
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Mini program available status. Valid values: 1: Available; 2: Removed.
-     * @param Status Mini program available status. Valid values: 1: Available; 2: Removed.
+     * Set <p>Mini game available status. Valid values: 1: Available; 2: Not available.</p>
+     * @param Status <p>Mini game available status. Valid values: 1: Available; 2: Not available.</p>
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get Mini program introduction. 
-     * @return MNPIntro Mini program introduction.
+     * Get <p>Mini game introduction.</p> 
+     * @return MNPIntro <p>Mini game introduction.</p>
      */
     public String getMNPIntro() {
         return this.MNPIntro;
     }
 
     /**
-     * Set Mini program introduction.
-     * @param MNPIntro Mini program introduction.
+     * Set <p>Mini game introduction.</p>
+     * @param MNPIntro <p>Mini game introduction.</p>
      */
     public void setMNPIntro(String MNPIntro) {
         this.MNPIntro = MNPIntro;
     }
 
     /**
-     * Get Creator. 
-     * @return CreateUser Creator.
+     * Get <p>Creator.</p> 
+     * @return CreateUser <p>Creator.</p>
      */
     public String getCreateUser() {
         return this.CreateUser;
     }
 
     /**
-     * Set Creator.
-     * @param CreateUser Creator.
+     * Set <p>Creator.</p>
+     * @param CreateUser <p>Creator.</p>
      */
     public void setCreateUser(String CreateUser) {
         this.CreateUser = CreateUser;
     }
 
     /**
-     * Get Creation time. 
-     * @return CreateTime Creation time.
+     * Get <p>Creation time.</p> 
+     * @return CreateTime <p>Creation time.</p>
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set Creation time.
-     * @param CreateTime Creation time.
+     * Set <p>Creation time.</p>
+     * @param CreateTime <p>Creation time.</p>
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get Last modifier. 
-     * @return UpdateUser Last modifier.
+     * Get <p>Last modifier.</p> 
+     * @return UpdateUser <p>Last modifier.</p>
      */
     public String getUpdateUser() {
         return this.UpdateUser;
     }
 
     /**
-     * Set Last modifier.
-     * @param UpdateUser Last modifier.
+     * Set <p>Last modifier.</p>
+     * @param UpdateUser <p>Last modifier.</p>
      */
     public void setUpdateUser(String UpdateUser) {
         this.UpdateUser = UpdateUser;
     }
 
     /**
-     * Get Last modified time. 
-     * @return UpdateTime Last modified time.
+     * Get <p>Last modified time.</p> 
+     * @return UpdateTime <p>Last modified time.</p>
      */
     public String getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set Last modified time.
-     * @param UpdateTime Last modified time.
+     * Set <p>Last modified time.</p>
+     * @param UpdateTime <p>Last modified time.</p>
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;
     }
 
     /**
-     * Get Superapp name. 
-     * @return ApplicationName Superapp name.
+     * Get <p>Superapp name.</p> 
+     * @return ApplicationName <p>Superapp name.</p>
      */
     public String getApplicationName() {
         return this.ApplicationName;
     }
 
     /**
-     * Set Superapp name.
-     * @param ApplicationName Superapp name.
+     * Set <p>Superapp name.</p>
+     * @param ApplicationName <p>Superapp name.</p>
      */
     public void setApplicationName(String ApplicationName) {
         this.ApplicationName = ApplicationName;
     }
 
     /**
-     * Get Binding effective status for the superapp. Valid values: 1: Not effective; 2: Effective. 
-     * @return EffectStatus Binding effective status for the superapp. Valid values: 1: Not effective; 2: Effective.
+     * Get <p>Binding effective status for the superapp. Valid values: 1: Not effective; 2: Effective.</p> 
+     * @return EffectStatus <p>Binding effective status for the superapp. Valid values: 1: Not effective; 2: Effective.</p>
      */
     public Long getEffectStatus() {
         return this.EffectStatus;
     }
 
     /**
-     * Set Binding effective status for the superapp. Valid values: 1: Not effective; 2: Effective.
-     * @param EffectStatus Binding effective status for the superapp. Valid values: 1: Not effective; 2: Effective.
+     * Set <p>Binding effective status for the superapp. Valid values: 1: Not effective; 2: Effective.</p>
+     * @param EffectStatus <p>Binding effective status for the superapp. Valid values: 1: Not effective; 2: Effective.</p>
      */
     public void setEffectStatus(Long EffectStatus) {
         this.EffectStatus = EffectStatus;
     }
 
     /**
-     * Get Effective mini program version ID bound to the superapp.  
-     * @return EffectMNPVersionId Effective mini program version ID bound to the superapp. 
+     * Get <p>Effective mini program version ID bound to the superapp.</p> 
+     * @return EffectMNPVersionId <p>Effective mini program version ID bound to the superapp.</p>
      */
     public Long getEffectMNPVersionId() {
         return this.EffectMNPVersionId;
     }
 
     /**
-     * Set Effective mini program version ID bound to the superapp. 
-     * @param EffectMNPVersionId Effective mini program version ID bound to the superapp. 
+     * Set <p>Effective mini program version ID bound to the superapp.</p>
+     * @param EffectMNPVersionId <p>Effective mini program version ID bound to the superapp.</p>
      */
     public void setEffectMNPVersionId(Long EffectMNPVersionId) {
         this.EffectMNPVersionId = EffectMNPVersionId;
     }
 
     /**
-     * Get Effective mini program version number bound to the superapp.  
-     * @return EffectMNPVersion Effective mini program version number bound to the superapp. 
+     * Get <p>Effective mini program version number bound to the superapp.</p> 
+     * @return EffectMNPVersion <p>Effective mini program version number bound to the superapp.</p>
      */
     public String getEffectMNPVersion() {
         return this.EffectMNPVersion;
     }
 
     /**
-     * Set Effective mini program version number bound to the superapp. 
-     * @param EffectMNPVersion Effective mini program version number bound to the superapp. 
+     * Set <p>Effective mini program version number bound to the superapp.</p>
+     * @param EffectMNPVersion <p>Effective mini program version number bound to the superapp.</p>
      */
     public void setEffectMNPVersion(String EffectMNPVersion) {
         this.EffectMNPVersion = EffectMNPVersion;
     }
 
     /**
-     * Get Team ID. 
-     * @return TeamId Team ID.
+     * Get <p>Team ID.</p> 
+     * @return TeamId <p>Team ID.</p>
      */
     public String getTeamId() {
         return this.TeamId;
     }
 
     /**
-     * Set Team ID.
-     * @param TeamId Team ID.
+     * Set <p>Team ID.</p>
+     * @param TeamId <p>Team ID.</p>
      */
     public void setTeamId(String TeamId) {
         this.TeamId = TeamId;
     }
 
     /**
-     * Get Team type ID. Valid values: 1: Mini program team; 2: Superapp team; 3: Service provider team. 
-     * @return TeamTypeId Team type ID. Valid values: 1: Mini program team; 2: Superapp team; 3: Service provider team.
+     * Get <p>Team type ID. Valid values: 1: Mini program team; 2: Superapp team; 3: Service provider team.</p> 
+     * @return TeamTypeId <p>Team type ID. Valid values: 1: Mini program team; 2: Superapp team; 3: Service provider team.</p>
      */
     public Long getTeamTypeId() {
         return this.TeamTypeId;
     }
 
     /**
-     * Set Team type ID. Valid values: 1: Mini program team; 2: Superapp team; 3: Service provider team.
-     * @param TeamTypeId Team type ID. Valid values: 1: Mini program team; 2: Superapp team; 3: Service provider team.
+     * Set <p>Team type ID. Valid values: 1: Mini program team; 2: Superapp team; 3: Service provider team.</p>
+     * @param TeamTypeId <p>Team type ID. Valid values: 1: Mini program team; 2: Superapp team; 3: Service provider team.</p>
      */
     public void setTeamTypeId(Long TeamTypeId) {
         this.TeamTypeId = TeamTypeId;
+    }
+
+    /**
+     * Get <p>Age rating information.</p> 
+     * @return AgeRatings <p>Age rating information.</p>
+     */
+    public AgeRatingItem [] getAgeRatings() {
+        return this.AgeRatings;
+    }
+
+    /**
+     * Set <p>Age rating information.</p>
+     * @param AgeRatings <p>Age rating information.</p>
+     */
+    public void setAgeRatings(AgeRatingItem [] AgeRatings) {
+        this.AgeRatings = AgeRatings;
     }
 
     public DescribeMNPListData() {
@@ -473,6 +496,12 @@ public class DescribeMNPListData extends AbstractModel {
         if (source.TeamTypeId != null) {
             this.TeamTypeId = new Long(source.TeamTypeId);
         }
+        if (source.AgeRatings != null) {
+            this.AgeRatings = new AgeRatingItem[source.AgeRatings.length];
+            for (int i = 0; i < source.AgeRatings.length; i++) {
+                this.AgeRatings[i] = new AgeRatingItem(source.AgeRatings[i]);
+            }
+        }
     }
 
 
@@ -497,6 +526,7 @@ public class DescribeMNPListData extends AbstractModel {
         this.setParamSimple(map, prefix + "EffectMNPVersion", this.EffectMNPVersion);
         this.setParamSimple(map, prefix + "TeamId", this.TeamId);
         this.setParamSimple(map, prefix + "TeamTypeId", this.TeamTypeId);
+        this.setParamArrayObj(map, prefix + "AgeRatings.", this.AgeRatings);
 
     }
 }

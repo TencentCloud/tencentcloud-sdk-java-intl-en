@@ -115,11 +115,26 @@ public class DescribeMNPManagerDetailData extends AbstractModel {
     private MNPDetailI18nVO [] I18nList;
 
     /**
-    * Team type ID. Valid values: 1: Mini program team; 2: Superapp team; 3: Service provider team.
+    * <p>Team type ID. Valid values: 1: Mini program team; 2: Superapp team; 3: Service provider team.</p>
     */
     @SerializedName("TeamTypeId")
     @Expose
     private Long TeamTypeId;
+
+    /**
+    * <p>Age rating information.</p>
+    */
+    @SerializedName("AgeRatings")
+    @Expose
+    private AgeRatingItem [] AgeRatings;
+
+    /**
+    * <p>Merchant ID bound to the team to which the mini program belongs.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("MerchantId")
+    @Expose
+    private String MerchantId;
 
     /**
      * Get <p>Mini program category.</p> 
@@ -330,19 +345,55 @@ public class DescribeMNPManagerDetailData extends AbstractModel {
     }
 
     /**
-     * Get Team type ID. Valid values: 1: Mini program team; 2: Superapp team; 3: Service provider team. 
-     * @return TeamTypeId Team type ID. Valid values: 1: Mini program team; 2: Superapp team; 3: Service provider team.
+     * Get <p>Team type ID. Valid values: 1: Mini program team; 2: Superapp team; 3: Service provider team.</p> 
+     * @return TeamTypeId <p>Team type ID. Valid values: 1: Mini program team; 2: Superapp team; 3: Service provider team.</p>
      */
     public Long getTeamTypeId() {
         return this.TeamTypeId;
     }
 
     /**
-     * Set Team type ID. Valid values: 1: Mini program team; 2: Superapp team; 3: Service provider team.
-     * @param TeamTypeId Team type ID. Valid values: 1: Mini program team; 2: Superapp team; 3: Service provider team.
+     * Set <p>Team type ID. Valid values: 1: Mini program team; 2: Superapp team; 3: Service provider team.</p>
+     * @param TeamTypeId <p>Team type ID. Valid values: 1: Mini program team; 2: Superapp team; 3: Service provider team.</p>
      */
     public void setTeamTypeId(Long TeamTypeId) {
         this.TeamTypeId = TeamTypeId;
+    }
+
+    /**
+     * Get <p>Age rating information.</p> 
+     * @return AgeRatings <p>Age rating information.</p>
+     */
+    public AgeRatingItem [] getAgeRatings() {
+        return this.AgeRatings;
+    }
+
+    /**
+     * Set <p>Age rating information.</p>
+     * @param AgeRatings <p>Age rating information.</p>
+     */
+    public void setAgeRatings(AgeRatingItem [] AgeRatings) {
+        this.AgeRatings = AgeRatings;
+    }
+
+    /**
+     * Get <p>Merchant ID bound to the team to which the mini program belongs.</p>
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return MerchantId <p>Merchant ID bound to the team to which the mini program belongs.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getMerchantId() {
+        return this.MerchantId;
+    }
+
+    /**
+     * Set <p>Merchant ID bound to the team to which the mini program belongs.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param MerchantId <p>Merchant ID bound to the team to which the mini program belongs.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setMerchantId(String MerchantId) {
+        this.MerchantId = MerchantId;
     }
 
     public DescribeMNPManagerDetailData() {
@@ -398,6 +449,15 @@ public class DescribeMNPManagerDetailData extends AbstractModel {
         if (source.TeamTypeId != null) {
             this.TeamTypeId = new Long(source.TeamTypeId);
         }
+        if (source.AgeRatings != null) {
+            this.AgeRatings = new AgeRatingItem[source.AgeRatings.length];
+            for (int i = 0; i < source.AgeRatings.length; i++) {
+                this.AgeRatings[i] = new AgeRatingItem(source.AgeRatings[i]);
+            }
+        }
+        if (source.MerchantId != null) {
+            this.MerchantId = new String(source.MerchantId);
+        }
     }
 
 
@@ -419,6 +479,8 @@ public class DescribeMNPManagerDetailData extends AbstractModel {
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamArrayObj(map, prefix + "I18nList.", this.I18nList);
         this.setParamSimple(map, prefix + "TeamTypeId", this.TeamTypeId);
+        this.setParamArrayObj(map, prefix + "AgeRatings.", this.AgeRatings);
+        this.setParamSimple(map, prefix + "MerchantId", this.MerchantId);
 
     }
 }

@@ -80,6 +80,13 @@ public class CreateMNPRequest extends AbstractModel {
     private MNPI18NSyncDto [] I18nList;
 
     /**
+    * <p>Age rating information.</p>
+    */
+    @SerializedName("AgeRatings")
+    @Expose
+    private AgeRatingItemReq [] AgeRatings;
+
+    /**
      * Get <p>Mini program category.</p> 
      * @return MNPType <p>Mini program category.</p>
      */
@@ -207,6 +214,22 @@ public class CreateMNPRequest extends AbstractModel {
         this.I18nList = I18nList;
     }
 
+    /**
+     * Get <p>Age rating information.</p> 
+     * @return AgeRatings <p>Age rating information.</p>
+     */
+    public AgeRatingItemReq [] getAgeRatings() {
+        return this.AgeRatings;
+    }
+
+    /**
+     * Set <p>Age rating information.</p>
+     * @param AgeRatings <p>Age rating information.</p>
+     */
+    public void setAgeRatings(AgeRatingItemReq [] AgeRatings) {
+        this.AgeRatings = AgeRatings;
+    }
+
     public CreateMNPRequest() {
     }
 
@@ -242,6 +265,12 @@ public class CreateMNPRequest extends AbstractModel {
                 this.I18nList[i] = new MNPI18NSyncDto(source.I18nList[i]);
             }
         }
+        if (source.AgeRatings != null) {
+            this.AgeRatings = new AgeRatingItemReq[source.AgeRatings.length];
+            for (int i = 0; i < source.AgeRatings.length; i++) {
+                this.AgeRatings[i] = new AgeRatingItemReq(source.AgeRatings[i]);
+            }
+        }
     }
 
 
@@ -257,6 +286,7 @@ public class CreateMNPRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "PlatformId", this.PlatformId);
         this.setParamSimple(map, prefix + "TeamId", this.TeamId);
         this.setParamArrayObj(map, prefix + "I18nList.", this.I18nList);
+        this.setParamArrayObj(map, prefix + "AgeRatings.", this.AgeRatings);
 
     }
 }

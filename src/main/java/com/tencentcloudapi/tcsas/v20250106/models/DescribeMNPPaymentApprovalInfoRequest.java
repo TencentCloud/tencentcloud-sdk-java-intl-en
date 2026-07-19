@@ -21,67 +21,67 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class MNPVersionSubPackageInfo extends AbstractModel {
+public class DescribeMNPPaymentApprovalInfoRequest extends AbstractModel {
 
     /**
-    * <p>Package name.</p>
+    * <p>Platform ID.</p>
     */
-    @SerializedName("Name")
+    @SerializedName("PlatformId")
     @Expose
-    private String Name;
+    private String PlatformId;
 
     /**
-    * <p>Package size.</p>
+    * <p>Mini program appid.</p>
     */
-    @SerializedName("Size")
+    @SerializedName("MNPId")
     @Expose
-    private Long Size;
+    private String MNPId;
 
     /**
-     * Get <p>Package name.</p> 
-     * @return Name <p>Package name.</p>
+     * Get <p>Platform ID.</p> 
+     * @return PlatformId <p>Platform ID.</p>
      */
-    public String getName() {
-        return this.Name;
+    public String getPlatformId() {
+        return this.PlatformId;
     }
 
     /**
-     * Set <p>Package name.</p>
-     * @param Name <p>Package name.</p>
+     * Set <p>Platform ID.</p>
+     * @param PlatformId <p>Platform ID.</p>
      */
-    public void setName(String Name) {
-        this.Name = Name;
+    public void setPlatformId(String PlatformId) {
+        this.PlatformId = PlatformId;
     }
 
     /**
-     * Get <p>Package size.</p> 
-     * @return Size <p>Package size.</p>
+     * Get <p>Mini program appid.</p> 
+     * @return MNPId <p>Mini program appid.</p>
      */
-    public Long getSize() {
-        return this.Size;
+    public String getMNPId() {
+        return this.MNPId;
     }
 
     /**
-     * Set <p>Package size.</p>
-     * @param Size <p>Package size.</p>
+     * Set <p>Mini program appid.</p>
+     * @param MNPId <p>Mini program appid.</p>
      */
-    public void setSize(Long Size) {
-        this.Size = Size;
+    public void setMNPId(String MNPId) {
+        this.MNPId = MNPId;
     }
 
-    public MNPVersionSubPackageInfo() {
+    public DescribeMNPPaymentApprovalInfoRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public MNPVersionSubPackageInfo(MNPVersionSubPackageInfo source) {
-        if (source.Name != null) {
-            this.Name = new String(source.Name);
+    public DescribeMNPPaymentApprovalInfoRequest(DescribeMNPPaymentApprovalInfoRequest source) {
+        if (source.PlatformId != null) {
+            this.PlatformId = new String(source.PlatformId);
         }
-        if (source.Size != null) {
-            this.Size = new Long(source.Size);
+        if (source.MNPId != null) {
+            this.MNPId = new String(source.MNPId);
         }
     }
 
@@ -90,8 +90,8 @@ public class MNPVersionSubPackageInfo extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Name", this.Name);
-        this.setParamSimple(map, prefix + "Size", this.Size);
+        this.setParamSimple(map, prefix + "PlatformId", this.PlatformId);
+        this.setParamSimple(map, prefix + "MNPId", this.MNPId);
 
     }
 }

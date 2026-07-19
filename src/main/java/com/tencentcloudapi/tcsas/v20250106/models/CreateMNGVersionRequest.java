@@ -59,14 +59,14 @@ public class CreateMNGVersionRequest extends AbstractModel {
     private String MNPVersionIntro;
 
     /**
-    * <p>Version type. Valid values: 1: Debug; 2: Development. Default value: 2.</p>
+    * <p>Version type. Valid values: 1: Debug version; 2: Development version.</p> Default value: 2.</p>
     */
     @SerializedName("VersionType")
     @Expose
     private Long VersionType;
 
     /**
-    * <p>Compilation condition.</p>
+    * <p>Compilation conditions.</p>
     */
     @SerializedName("CompileCondition")
     @Expose
@@ -80,7 +80,7 @@ public class CreateMNGVersionRequest extends AbstractModel {
     private String CompileConfig;
 
     /**
-    * <p>CI/CD key ID.</p>
+    * <p>CICD ID</p>
     */
     @SerializedName("PipelineId")
     @Expose
@@ -174,32 +174,32 @@ public class CreateMNGVersionRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>Version type. Valid values: 1: Debug; 2: Development. Default value: 2.</p> 
-     * @return VersionType <p>Version type. Valid values: 1: Debug; 2: Development. Default value: 2.</p>
+     * Get <p>Version type. Valid values: 1: Debug version; 2: Development version.</p> Default value: 2.</p> 
+     * @return VersionType <p>Version type. Valid values: 1: Debug version; 2: Development version.</p> Default value: 2.</p>
      */
     public Long getVersionType() {
         return this.VersionType;
     }
 
     /**
-     * Set <p>Version type. Valid values: 1: Debug; 2: Development. Default value: 2.</p>
-     * @param VersionType <p>Version type. Valid values: 1: Debug; 2: Development. Default value: 2.</p>
+     * Set <p>Version type. Valid values: 1: Debug version; 2: Development version.</p> Default value: 2.</p>
+     * @param VersionType <p>Version type. Valid values: 1: Debug version; 2: Development version.</p> Default value: 2.</p>
      */
     public void setVersionType(Long VersionType) {
         this.VersionType = VersionType;
     }
 
     /**
-     * Get <p>Compilation condition.</p> 
-     * @return CompileCondition <p>Compilation condition.</p>
+     * Get <p>Compilation conditions.</p> 
+     * @return CompileCondition <p>Compilation conditions.</p>
      */
     public String getCompileCondition() {
         return this.CompileCondition;
     }
 
     /**
-     * Set <p>Compilation condition.</p>
-     * @param CompileCondition <p>Compilation condition.</p>
+     * Set <p>Compilation conditions.</p>
+     * @param CompileCondition <p>Compilation conditions.</p>
      */
     public void setCompileCondition(String CompileCondition) {
         this.CompileCondition = CompileCondition;
@@ -222,16 +222,16 @@ public class CreateMNGVersionRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>CI/CD key ID.</p> 
-     * @return PipelineId <p>CI/CD key ID.</p>
+     * Get <p>CICD ID</p> 
+     * @return PipelineId <p>CICD ID</p>
      */
     public String getPipelineId() {
         return this.PipelineId;
     }
 
     /**
-     * Set <p>CI/CD key ID.</p>
-     * @param PipelineId <p>CI/CD key ID.</p>
+     * Set <p>CICD ID</p>
+     * @param PipelineId <p>CICD ID</p>
      */
     public void setPipelineId(String PipelineId) {
         this.PipelineId = PipelineId;
