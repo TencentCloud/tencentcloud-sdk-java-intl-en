@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ProcessImageAsyncTask extends AbstractModel {
 
     /**
-    * Image transcoding output configuration.
+    * <p>Image transcoding output configuration.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("EncodeConfig")
@@ -32,7 +32,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private ImageEncodeConfig EncodeConfig;
 
     /**
-    * Image enhancement configuration.
+    * <p>Image enhancement configuration.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("EnhanceConfig")
@@ -40,9 +40,17 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private ImageEnhanceConfig EnhanceConfig;
 
     /**
-     * Get Image transcoding output configuration.
+    * <p>Image beauty effect configuration.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("BeautyConfig")
+    @Expose
+    private ImageBeautyConfig BeautyConfig;
+
+    /**
+     * Get <p>Image transcoding output configuration.</p>
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return EncodeConfig Image transcoding output configuration.
+     * @return EncodeConfig <p>Image transcoding output configuration.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public ImageEncodeConfig getEncodeConfig() {
@@ -50,9 +58,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Image transcoding output configuration.
+     * Set <p>Image transcoding output configuration.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param EncodeConfig Image transcoding output configuration.
+     * @param EncodeConfig <p>Image transcoding output configuration.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setEncodeConfig(ImageEncodeConfig EncodeConfig) {
@@ -60,9 +68,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Image enhancement configuration.
+     * Get <p>Image enhancement configuration.</p>
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return EnhanceConfig Image enhancement configuration.
+     * @return EnhanceConfig <p>Image enhancement configuration.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public ImageEnhanceConfig getEnhanceConfig() {
@@ -70,13 +78,33 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Image enhancement configuration.
+     * Set <p>Image enhancement configuration.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param EnhanceConfig Image enhancement configuration.
+     * @param EnhanceConfig <p>Image enhancement configuration.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setEnhanceConfig(ImageEnhanceConfig EnhanceConfig) {
         this.EnhanceConfig = EnhanceConfig;
+    }
+
+    /**
+     * Get <p>Image beauty effect configuration.</p>
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return BeautyConfig <p>Image beauty effect configuration.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public ImageBeautyConfig getBeautyConfig() {
+        return this.BeautyConfig;
+    }
+
+    /**
+     * Set <p>Image beauty effect configuration.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param BeautyConfig <p>Image beauty effect configuration.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setBeautyConfig(ImageBeautyConfig BeautyConfig) {
+        this.BeautyConfig = BeautyConfig;
     }
 
     public ProcessImageAsyncTask() {
@@ -93,6 +121,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.EnhanceConfig != null) {
             this.EnhanceConfig = new ImageEnhanceConfig(source.EnhanceConfig);
         }
+        if (source.BeautyConfig != null) {
+            this.BeautyConfig = new ImageBeautyConfig(source.BeautyConfig);
+        }
     }
 
 
@@ -102,6 +133,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "EncodeConfig.", this.EncodeConfig);
         this.setParamObj(map, prefix + "EnhanceConfig.", this.EnhanceConfig);
+        this.setParamObj(map, prefix + "BeautyConfig.", this.BeautyConfig);
 
     }
 }

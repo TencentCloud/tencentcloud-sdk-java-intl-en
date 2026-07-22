@@ -152,15 +152,15 @@ public class RecognizeIndonesiaIDCardOCRResponse extends AbstractModel {
     /**
     * Card Warning Information
 
--9101 Alarm for covered certificate,
--9102 Alarm for photocopied certificate,
--9103 Alarm for photographed certificate,
--9104 Alarm for PS certificate,
--9107 Alarm for reflective certificate,
--9108 Alarm for blurry image,
--8101 Alarm for document information format verification,
--8102 Alarm for document information consistency verification,
--9109 This capability is not enabled.
+-9101 Alarm for covered certificate
+-9102 Alarm for photocopied certificate
+-9103 Alarm for photographed certificate
+-9104 Alarm for tamper certificate
+-9107 Alarm for reflective certificate
+-9108 Alarm for blurry image
+-8101 Alarm for document information format verification
+-8102 Alarm for document information consistency verification
+-9109 This capability is not enabled. Please contact customer support to activate the alert service
     */
     @SerializedName("WarnCardInfos")
     @Expose
@@ -464,26 +464,26 @@ public class RecognizeIndonesiaIDCardOCRResponse extends AbstractModel {
     /**
      * Get Card Warning Information
 
--9101 Alarm for covered certificate,
--9102 Alarm for photocopied certificate,
--9103 Alarm for photographed certificate,
--9104 Alarm for PS certificate,
--9107 Alarm for reflective certificate,
--9108 Alarm for blurry image,
--8101 Alarm for document information format verification,
--8102 Alarm for document information consistency verification,
--9109 This capability is not enabled. 
+-9101 Alarm for covered certificate
+-9102 Alarm for photocopied certificate
+-9103 Alarm for photographed certificate
+-9104 Alarm for tamper certificate
+-9107 Alarm for reflective certificate
+-9108 Alarm for blurry image
+-8101 Alarm for document information format verification
+-8102 Alarm for document information consistency verification
+-9109 This capability is not enabled. Please contact customer support to activate the alert service 
      * @return WarnCardInfos Card Warning Information
 
--9101 Alarm for covered certificate,
--9102 Alarm for photocopied certificate,
--9103 Alarm for photographed certificate,
--9104 Alarm for PS certificate,
--9107 Alarm for reflective certificate,
--9108 Alarm for blurry image,
--8101 Alarm for document information format verification,
--8102 Alarm for document information consistency verification,
--9109 This capability is not enabled.
+-9101 Alarm for covered certificate
+-9102 Alarm for photocopied certificate
+-9103 Alarm for photographed certificate
+-9104 Alarm for tamper certificate
+-9107 Alarm for reflective certificate
+-9108 Alarm for blurry image
+-8101 Alarm for document information format verification
+-8102 Alarm for document information consistency verification
+-9109 This capability is not enabled. Please contact customer support to activate the alert service
      */
     public Long [] getWarnCardInfos() {
         return this.WarnCardInfos;
@@ -492,26 +492,26 @@ public class RecognizeIndonesiaIDCardOCRResponse extends AbstractModel {
     /**
      * Set Card Warning Information
 
--9101 Alarm for covered certificate,
--9102 Alarm for photocopied certificate,
--9103 Alarm for photographed certificate,
--9104 Alarm for PS certificate,
--9107 Alarm for reflective certificate,
--9108 Alarm for blurry image,
--8101 Alarm for document information format verification,
--8102 Alarm for document information consistency verification,
--9109 This capability is not enabled.
+-9101 Alarm for covered certificate
+-9102 Alarm for photocopied certificate
+-9103 Alarm for photographed certificate
+-9104 Alarm for tamper certificate
+-9107 Alarm for reflective certificate
+-9108 Alarm for blurry image
+-8101 Alarm for document information format verification
+-8102 Alarm for document information consistency verification
+-9109 This capability is not enabled. Please contact customer support to activate the alert service
      * @param WarnCardInfos Card Warning Information
 
--9101 Alarm for covered certificate,
--9102 Alarm for photocopied certificate,
--9103 Alarm for photographed certificate,
--9104 Alarm for PS certificate,
--9107 Alarm for reflective certificate,
--9108 Alarm for blurry image,
--8101 Alarm for document information format verification,
--8102 Alarm for document information consistency verification,
--9109 This capability is not enabled.
+-9101 Alarm for covered certificate
+-9102 Alarm for photocopied certificate
+-9103 Alarm for photographed certificate
+-9104 Alarm for tamper certificate
+-9107 Alarm for reflective certificate
+-9108 Alarm for blurry image
+-8101 Alarm for document information format verification
+-8102 Alarm for document information consistency verification
+-9109 This capability is not enabled. Please contact customer support to activate the alert service
      */
     public void setWarnCardInfos(Long [] WarnCardInfos) {
         this.WarnCardInfos = WarnCardInfos;

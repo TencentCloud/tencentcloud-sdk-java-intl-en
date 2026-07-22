@@ -31,7 +31,7 @@ public class CreateAigcVideoRedrawTaskRequest extends AbstractModel {
     private Long SubAppId;
 
     /**
-    * <p>Input video file information for the AIGC video conversion task.</p>
+    * <p>File information of the input video for the AIGC video conversion task. The input video duration should be less than 90 seconds, and the size should be within 2GB.</p>
     */
     @SerializedName("FileInfo")
     @Expose
@@ -89,16 +89,16 @@ public class CreateAigcVideoRedrawTaskRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>Input video file information for the AIGC video conversion task.</p> 
-     * @return FileInfo <p>Input video file information for the AIGC video conversion task.</p>
+     * Get <p>File information of the input video for the AIGC video conversion task. The input video duration should be less than 90 seconds, and the size should be within 2GB.</p> 
+     * @return FileInfo <p>File information of the input video for the AIGC video conversion task. The input video duration should be less than 90 seconds, and the size should be within 2GB.</p>
      */
     public AigcVideoRedrawTaskInputFileInfo getFileInfo() {
         return this.FileInfo;
     }
 
     /**
-     * Set <p>Input video file information for the AIGC video conversion task.</p>
-     * @param FileInfo <p>Input video file information for the AIGC video conversion task.</p>
+     * Set <p>File information of the input video for the AIGC video conversion task. The input video duration should be less than 90 seconds, and the size should be within 2GB.</p>
+     * @param FileInfo <p>File information of the input video for the AIGC video conversion task. The input video duration should be less than 90 seconds, and the size should be within 2GB.</p>
      */
     public void setFileInfo(AigcVideoRedrawTaskInputFileInfo FileInfo) {
         this.FileInfo = FileInfo;

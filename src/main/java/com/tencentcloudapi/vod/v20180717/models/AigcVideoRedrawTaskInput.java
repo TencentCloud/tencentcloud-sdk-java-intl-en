@@ -31,6 +31,13 @@ public class AigcVideoRedrawTaskInput extends AbstractModel {
     private AigcVideoRedrawTaskInputFileInfo FileInfo;
 
     /**
+    * <p>AIGC video conversion task parameter information.</p>
+    */
+    @SerializedName("TaskInfo")
+    @Expose
+    private AigcVideoRedrawTaskInfo TaskInfo;
+
+    /**
     * <p>AIGC video conversion output configuration.</p>
     */
     @SerializedName("OutputConfig")
@@ -51,6 +58,22 @@ public class AigcVideoRedrawTaskInput extends AbstractModel {
      */
     public void setFileInfo(AigcVideoRedrawTaskInputFileInfo FileInfo) {
         this.FileInfo = FileInfo;
+    }
+
+    /**
+     * Get <p>AIGC video conversion task parameter information.</p> 
+     * @return TaskInfo <p>AIGC video conversion task parameter information.</p>
+     */
+    public AigcVideoRedrawTaskInfo getTaskInfo() {
+        return this.TaskInfo;
+    }
+
+    /**
+     * Set <p>AIGC video conversion task parameter information.</p>
+     * @param TaskInfo <p>AIGC video conversion task parameter information.</p>
+     */
+    public void setTaskInfo(AigcVideoRedrawTaskInfo TaskInfo) {
+        this.TaskInfo = TaskInfo;
     }
 
     /**
@@ -80,6 +103,9 @@ public class AigcVideoRedrawTaskInput extends AbstractModel {
         if (source.FileInfo != null) {
             this.FileInfo = new AigcVideoRedrawTaskInputFileInfo(source.FileInfo);
         }
+        if (source.TaskInfo != null) {
+            this.TaskInfo = new AigcVideoRedrawTaskInfo(source.TaskInfo);
+        }
         if (source.OutputConfig != null) {
             this.OutputConfig = new AigcVideoRedrawOutputConfig(source.OutputConfig);
         }
@@ -91,6 +117,7 @@ public class AigcVideoRedrawTaskInput extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "FileInfo.", this.FileInfo);
+        this.setParamObj(map, prefix + "TaskInfo.", this.TaskInfo);
         this.setParamObj(map, prefix + "OutputConfig.", this.OutputConfig);
 
     }

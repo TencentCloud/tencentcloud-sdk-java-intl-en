@@ -38,7 +38,7 @@ public class DescribeAigcUsageDataRequest extends AbstractModel {
     private String EndTime;
 
     /**
-    * <p>AIGC type.</p><p>Enumeration value:</p><ul><li>Video: video</li><li>Image: image</li><li>Text: text</li><li>Audio: audio</li><li>SceneAigcVideo: scenario-based video processing</li><li>SceneAigcImage: scenario-based image processing</li><li>SceneAigcTime: scenario-based processing times</li></ul>
+    * <p>AIGC type.</p><p>Enumeration values:</p><ul><li>Video: Video</li><li>Image: Image</li><li>Text: Text</li><li>Audio: Audio</li><li>SceneAigcVideo: Scenario-based video processing</li><li>SceneAigcImage: Scenario-based image processing</li><li>SceneAigcTime: Scenario-based processing times</li><li>TextDetail: Text detailed record</li></ul>
     */
     @SerializedName("AigcType")
     @Expose
@@ -64,6 +64,27 @@ public class DescribeAigcUsageDataRequest extends AbstractModel {
     @SerializedName("APIKeys")
     @Expose
     private String [] APIKeys;
+
+    /**
+    * <p>Query cursor</p>
+    */
+    @SerializedName("ScrollToken")
+    @Expose
+    private String ScrollToken;
+
+    /**
+    * <p>Size per page, maximum 200, it will be truncated to 200</p>
+    */
+    @SerializedName("PageSize")
+    @Expose
+    private Long PageSize;
+
+    /**
+    * <p>RequestId of the raw text. Valid at that time when AigcType is TextDetail.</p>
+    */
+    @SerializedName("ReqId")
+    @Expose
+    private String ReqId;
 
     /**
      * Get <p>Start date. Use the <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52">ISO date format</a>.</p> 
@@ -98,16 +119,16 @@ public class DescribeAigcUsageDataRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>AIGC type.</p><p>Enumeration value:</p><ul><li>Video: video</li><li>Image: image</li><li>Text: text</li><li>Audio: audio</li><li>SceneAigcVideo: scenario-based video processing</li><li>SceneAigcImage: scenario-based image processing</li><li>SceneAigcTime: scenario-based processing times</li></ul> 
-     * @return AigcType <p>AIGC type.</p><p>Enumeration value:</p><ul><li>Video: video</li><li>Image: image</li><li>Text: text</li><li>Audio: audio</li><li>SceneAigcVideo: scenario-based video processing</li><li>SceneAigcImage: scenario-based image processing</li><li>SceneAigcTime: scenario-based processing times</li></ul>
+     * Get <p>AIGC type.</p><p>Enumeration values:</p><ul><li>Video: Video</li><li>Image: Image</li><li>Text: Text</li><li>Audio: Audio</li><li>SceneAigcVideo: Scenario-based video processing</li><li>SceneAigcImage: Scenario-based image processing</li><li>SceneAigcTime: Scenario-based processing times</li><li>TextDetail: Text detailed record</li></ul> 
+     * @return AigcType <p>AIGC type.</p><p>Enumeration values:</p><ul><li>Video: Video</li><li>Image: Image</li><li>Text: Text</li><li>Audio: Audio</li><li>SceneAigcVideo: Scenario-based video processing</li><li>SceneAigcImage: Scenario-based image processing</li><li>SceneAigcTime: Scenario-based processing times</li><li>TextDetail: Text detailed record</li></ul>
      */
     public String getAigcType() {
         return this.AigcType;
     }
 
     /**
-     * Set <p>AIGC type.</p><p>Enumeration value:</p><ul><li>Video: video</li><li>Image: image</li><li>Text: text</li><li>Audio: audio</li><li>SceneAigcVideo: scenario-based video processing</li><li>SceneAigcImage: scenario-based image processing</li><li>SceneAigcTime: scenario-based processing times</li></ul>
-     * @param AigcType <p>AIGC type.</p><p>Enumeration value:</p><ul><li>Video: video</li><li>Image: image</li><li>Text: text</li><li>Audio: audio</li><li>SceneAigcVideo: scenario-based video processing</li><li>SceneAigcImage: scenario-based image processing</li><li>SceneAigcTime: scenario-based processing times</li></ul>
+     * Set <p>AIGC type.</p><p>Enumeration values:</p><ul><li>Video: Video</li><li>Image: Image</li><li>Text: Text</li><li>Audio: Audio</li><li>SceneAigcVideo: Scenario-based video processing</li><li>SceneAigcImage: Scenario-based image processing</li><li>SceneAigcTime: Scenario-based processing times</li><li>TextDetail: Text detailed record</li></ul>
+     * @param AigcType <p>AIGC type.</p><p>Enumeration values:</p><ul><li>Video: Video</li><li>Image: Image</li><li>Text: Text</li><li>Audio: Audio</li><li>SceneAigcVideo: Scenario-based video processing</li><li>SceneAigcImage: Scenario-based image processing</li><li>SceneAigcTime: Scenario-based processing times</li><li>TextDetail: Text detailed record</li></ul>
      */
     public void setAigcType(String AigcType) {
         this.AigcType = AigcType;
@@ -161,6 +182,54 @@ public class DescribeAigcUsageDataRequest extends AbstractModel {
         this.APIKeys = APIKeys;
     }
 
+    /**
+     * Get <p>Query cursor</p> 
+     * @return ScrollToken <p>Query cursor</p>
+     */
+    public String getScrollToken() {
+        return this.ScrollToken;
+    }
+
+    /**
+     * Set <p>Query cursor</p>
+     * @param ScrollToken <p>Query cursor</p>
+     */
+    public void setScrollToken(String ScrollToken) {
+        this.ScrollToken = ScrollToken;
+    }
+
+    /**
+     * Get <p>Size per page, maximum 200, it will be truncated to 200</p> 
+     * @return PageSize <p>Size per page, maximum 200, it will be truncated to 200</p>
+     */
+    public Long getPageSize() {
+        return this.PageSize;
+    }
+
+    /**
+     * Set <p>Size per page, maximum 200, it will be truncated to 200</p>
+     * @param PageSize <p>Size per page, maximum 200, it will be truncated to 200</p>
+     */
+    public void setPageSize(Long PageSize) {
+        this.PageSize = PageSize;
+    }
+
+    /**
+     * Get <p>RequestId of the raw text. Valid at that time when AigcType is TextDetail.</p> 
+     * @return ReqId <p>RequestId of the raw text. Valid at that time when AigcType is TextDetail.</p>
+     */
+    public String getReqId() {
+        return this.ReqId;
+    }
+
+    /**
+     * Set <p>RequestId of the raw text. Valid at that time when AigcType is TextDetail.</p>
+     * @param ReqId <p>RequestId of the raw text. Valid at that time when AigcType is TextDetail.</p>
+     */
+    public void setReqId(String ReqId) {
+        this.ReqId = ReqId;
+    }
+
     public DescribeAigcUsageDataRequest() {
     }
 
@@ -190,6 +259,15 @@ public class DescribeAigcUsageDataRequest extends AbstractModel {
                 this.APIKeys[i] = new String(source.APIKeys[i]);
             }
         }
+        if (source.ScrollToken != null) {
+            this.ScrollToken = new String(source.ScrollToken);
+        }
+        if (source.PageSize != null) {
+            this.PageSize = new Long(source.PageSize);
+        }
+        if (source.ReqId != null) {
+            this.ReqId = new String(source.ReqId);
+        }
     }
 
 
@@ -203,6 +281,9 @@ public class DescribeAigcUsageDataRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "SubAppId", this.SubAppId);
         this.setParamSimple(map, prefix + "APIKey", this.APIKey);
         this.setParamArraySimple(map, prefix + "APIKeys.", this.APIKeys);
+        this.setParamSimple(map, prefix + "ScrollToken", this.ScrollToken);
+        this.setParamSimple(map, prefix + "PageSize", this.PageSize);
+        this.setParamSimple(map, prefix + "ReqId", this.ReqId);
 
     }
 }

@@ -38,6 +38,13 @@ public class AigcVideoTaskOutput extends AbstractModel {
     private String [] ProcedureTaskIds;
 
     /**
+    * <p>Usage information for AIGC video tasks.</p>
+    */
+    @SerializedName("Usage")
+    @Expose
+    private AigcVideoTaskUsage Usage;
+
+    /**
      * Get <p>Output file info of the AIGC video task.</p> 
      * @return FileInfos <p>Output file info of the AIGC video task.</p>
      */
@@ -69,6 +76,22 @@ public class AigcVideoTaskOutput extends AbstractModel {
         this.ProcedureTaskIds = ProcedureTaskIds;
     }
 
+    /**
+     * Get <p>Usage information for AIGC video tasks.</p> 
+     * @return Usage <p>Usage information for AIGC video tasks.</p>
+     */
+    public AigcVideoTaskUsage getUsage() {
+        return this.Usage;
+    }
+
+    /**
+     * Set <p>Usage information for AIGC video tasks.</p>
+     * @param Usage <p>Usage information for AIGC video tasks.</p>
+     */
+    public void setUsage(AigcVideoTaskUsage Usage) {
+        this.Usage = Usage;
+    }
+
     public AigcVideoTaskOutput() {
     }
 
@@ -89,6 +112,9 @@ public class AigcVideoTaskOutput extends AbstractModel {
                 this.ProcedureTaskIds[i] = new String(source.ProcedureTaskIds[i]);
             }
         }
+        if (source.Usage != null) {
+            this.Usage = new AigcVideoTaskUsage(source.Usage);
+        }
     }
 
 
@@ -98,6 +124,7 @@ public class AigcVideoTaskOutput extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "FileInfos.", this.FileInfos);
         this.setParamArraySimple(map, prefix + "ProcedureTaskIds.", this.ProcedureTaskIds);
+        this.setParamObj(map, prefix + "Usage.", this.Usage);
 
     }
 }

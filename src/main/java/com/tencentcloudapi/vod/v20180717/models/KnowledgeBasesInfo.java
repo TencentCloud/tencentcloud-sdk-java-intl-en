@@ -31,6 +31,13 @@ public class KnowledgeBasesInfo extends AbstractModel {
     private String [] Bases;
 
     /**
+    * <p>Media analysis information in the knowledge base</p>
+    */
+    @SerializedName("KnowledgeAnalysisInfos")
+    @Expose
+    private KnowledgeAnalysisInfo [] KnowledgeAnalysisInfos;
+
+    /**
      * Get <p>Current library list of media assets to import</p> 
      * @return Bases <p>Current library list of media assets to import</p>
      */
@@ -44,6 +51,22 @@ public class KnowledgeBasesInfo extends AbstractModel {
      */
     public void setBases(String [] Bases) {
         this.Bases = Bases;
+    }
+
+    /**
+     * Get <p>Media analysis information in the knowledge base</p> 
+     * @return KnowledgeAnalysisInfos <p>Media analysis information in the knowledge base</p>
+     */
+    public KnowledgeAnalysisInfo [] getKnowledgeAnalysisInfos() {
+        return this.KnowledgeAnalysisInfos;
+    }
+
+    /**
+     * Set <p>Media analysis information in the knowledge base</p>
+     * @param KnowledgeAnalysisInfos <p>Media analysis information in the knowledge base</p>
+     */
+    public void setKnowledgeAnalysisInfos(KnowledgeAnalysisInfo [] KnowledgeAnalysisInfos) {
+        this.KnowledgeAnalysisInfos = KnowledgeAnalysisInfos;
     }
 
     public KnowledgeBasesInfo() {
@@ -60,6 +83,12 @@ public class KnowledgeBasesInfo extends AbstractModel {
                 this.Bases[i] = new String(source.Bases[i]);
             }
         }
+        if (source.KnowledgeAnalysisInfos != null) {
+            this.KnowledgeAnalysisInfos = new KnowledgeAnalysisInfo[source.KnowledgeAnalysisInfos.length];
+            for (int i = 0; i < source.KnowledgeAnalysisInfos.length; i++) {
+                this.KnowledgeAnalysisInfos[i] = new KnowledgeAnalysisInfo(source.KnowledgeAnalysisInfos[i]);
+            }
+        }
     }
 
 
@@ -68,6 +97,7 @@ public class KnowledgeBasesInfo extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "Bases.", this.Bases);
+        this.setParamArrayObj(map, prefix + "KnowledgeAnalysisInfos.", this.KnowledgeAnalysisInfos);
 
     }
 }

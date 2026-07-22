@@ -24,28 +24,28 @@ import java.util.HashMap;
 public class SimpleHlsClipResponse extends AbstractModel {
 
     /**
-    * Trimmed video address
+    * <p>Trimmed video address.</p>
     */
     @SerializedName("Url")
     @Expose
     private String Url;
 
     /**
-    * Cropped video metadata. Currently, the `Size`, `Rotate`, `VideoDuration`, and `AudioDuration` fields are temporarily default with no real data.
+    * <p>Cropped video metadata. Currently, the <code>Size</code>, <code>Rotate</code>, <code>VideoDuration</code>, and <code>AudioDuration</code> fields are temporarily default with no real data.</p>
     */
     @SerializedName("MetaData")
     @Expose
     private MediaMetaData MetaData;
 
     /**
-    * Unique identifier of the media file for post-editing solidified video.
+    * <p>Unique identifier of media file for post-editing solidified video.</p>
     */
     @SerializedName("FileId")
     @Expose
     private String FileId;
 
     /**
-    * Edited video task flow ID after solidification.
+    * <p>ID of the edited video task flow after solidification.</p>
     */
     @SerializedName("TaskId")
     @Expose
@@ -59,64 +59,64 @@ public class SimpleHlsClipResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Trimmed video address 
-     * @return Url Trimmed video address
+     * Get <p>Trimmed video address.</p> 
+     * @return Url <p>Trimmed video address.</p>
      */
     public String getUrl() {
         return this.Url;
     }
 
     /**
-     * Set Trimmed video address
-     * @param Url Trimmed video address
+     * Set <p>Trimmed video address.</p>
+     * @param Url <p>Trimmed video address.</p>
      */
     public void setUrl(String Url) {
         this.Url = Url;
     }
 
     /**
-     * Get Cropped video metadata. Currently, the `Size`, `Rotate`, `VideoDuration`, and `AudioDuration` fields are temporarily default with no real data. 
-     * @return MetaData Cropped video metadata. Currently, the `Size`, `Rotate`, `VideoDuration`, and `AudioDuration` fields are temporarily default with no real data.
+     * Get <p>Cropped video metadata. Currently, the <code>Size</code>, <code>Rotate</code>, <code>VideoDuration</code>, and <code>AudioDuration</code> fields are temporarily default with no real data.</p> 
+     * @return MetaData <p>Cropped video metadata. Currently, the <code>Size</code>, <code>Rotate</code>, <code>VideoDuration</code>, and <code>AudioDuration</code> fields are temporarily default with no real data.</p>
      */
     public MediaMetaData getMetaData() {
         return this.MetaData;
     }
 
     /**
-     * Set Cropped video metadata. Currently, the `Size`, `Rotate`, `VideoDuration`, and `AudioDuration` fields are temporarily default with no real data.
-     * @param MetaData Cropped video metadata. Currently, the `Size`, `Rotate`, `VideoDuration`, and `AudioDuration` fields are temporarily default with no real data.
+     * Set <p>Cropped video metadata. Currently, the <code>Size</code>, <code>Rotate</code>, <code>VideoDuration</code>, and <code>AudioDuration</code> fields are temporarily default with no real data.</p>
+     * @param MetaData <p>Cropped video metadata. Currently, the <code>Size</code>, <code>Rotate</code>, <code>VideoDuration</code>, and <code>AudioDuration</code> fields are temporarily default with no real data.</p>
      */
     public void setMetaData(MediaMetaData MetaData) {
         this.MetaData = MetaData;
     }
 
     /**
-     * Get Unique identifier of the media file for post-editing solidified video. 
-     * @return FileId Unique identifier of the media file for post-editing solidified video.
+     * Get <p>Unique identifier of media file for post-editing solidified video.</p> 
+     * @return FileId <p>Unique identifier of media file for post-editing solidified video.</p>
      */
     public String getFileId() {
         return this.FileId;
     }
 
     /**
-     * Set Unique identifier of the media file for post-editing solidified video.
-     * @param FileId Unique identifier of the media file for post-editing solidified video.
+     * Set <p>Unique identifier of media file for post-editing solidified video.</p>
+     * @param FileId <p>Unique identifier of media file for post-editing solidified video.</p>
      */
     public void setFileId(String FileId) {
         this.FileId = FileId;
     }
 
     /**
-     * Get Edited video task flow ID after solidification. 
-     * @return TaskId Edited video task flow ID after solidification.
+     * Get <p>ID of the edited video task flow after solidification.</p> 
+     * @return TaskId <p>ID of the edited video task flow after solidification.</p>
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set Edited video task flow ID after solidification.
-     * @param TaskId Edited video task flow ID after solidification.
+     * Set <p>ID of the edited video task flow after solidification.</p>
+     * @param TaskId <p>ID of the edited video task flow after solidification.</p>
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;

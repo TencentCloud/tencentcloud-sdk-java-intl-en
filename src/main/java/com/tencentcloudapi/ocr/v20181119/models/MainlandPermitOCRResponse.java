@@ -116,12 +116,12 @@ Note: Only supported for the back side of the Mainland Travel Permit for Hong Ko
     private MainlandTravelPermitBackInfos MainlandTravelPermitBackInfos;
 
     /**
-    * Warning information for the document. This field is only valid for international site requests. 
-Warning codes: 
--9102: photocopy warning; 
--9103: recapture warning; 
--9104: Photoshopped document warning; 
--9109: warning capability not enabled.
+    * Card Warning Information
+
+-9102 Alarm for photocopied certificate
+-9103 Alarm for photographed certificate
+-9104 Alarm for tamper certificate
+-9109 This capability is not enabled.This capability is not enabled. Please contact customer support to activate the alert service.
     */
     @SerializedName("WarnCardInfos")
     @Expose
@@ -347,36 +347,36 @@ Note: Only supported for the back side of the Mainland Travel Permit for Hong Ko
     }
 
     /**
-     * Get Warning information for the document. This field is only valid for international site requests. 
-Warning codes: 
--9102: photocopy warning; 
--9103: recapture warning; 
--9104: Photoshopped document warning; 
--9109: warning capability not enabled. 
-     * @return WarnCardInfos Warning information for the document. This field is only valid for international site requests. 
-Warning codes: 
--9102: photocopy warning; 
--9103: recapture warning; 
--9104: Photoshopped document warning; 
--9109: warning capability not enabled.
+     * Get Card Warning Information
+
+-9102 Alarm for photocopied certificate
+-9103 Alarm for photographed certificate
+-9104 Alarm for tamper certificate
+-9109 This capability is not enabled.This capability is not enabled. Please contact customer support to activate the alert service. 
+     * @return WarnCardInfos Card Warning Information
+
+-9102 Alarm for photocopied certificate
+-9103 Alarm for photographed certificate
+-9104 Alarm for tamper certificate
+-9109 This capability is not enabled.This capability is not enabled. Please contact customer support to activate the alert service.
      */
     public Long [] getWarnCardInfos() {
         return this.WarnCardInfos;
     }
 
     /**
-     * Set Warning information for the document. This field is only valid for international site requests. 
-Warning codes: 
--9102: photocopy warning; 
--9103: recapture warning; 
--9104: Photoshopped document warning; 
--9109: warning capability not enabled.
-     * @param WarnCardInfos Warning information for the document. This field is only valid for international site requests. 
-Warning codes: 
--9102: photocopy warning; 
--9103: recapture warning; 
--9104: Photoshopped document warning; 
--9109: warning capability not enabled.
+     * Set Card Warning Information
+
+-9102 Alarm for photocopied certificate
+-9103 Alarm for photographed certificate
+-9104 Alarm for tamper certificate
+-9109 This capability is not enabled.This capability is not enabled. Please contact customer support to activate the alert service.
+     * @param WarnCardInfos Card Warning Information
+
+-9102 Alarm for photocopied certificate
+-9103 Alarm for photographed certificate
+-9104 Alarm for tamper certificate
+-9109 This capability is not enabled.This capability is not enabled. Please contact customer support to activate the alert service.
      */
     public void setWarnCardInfos(Long [] WarnCardInfos) {
         this.WarnCardInfos = WarnCardInfos;

@@ -24,69 +24,92 @@ import java.util.HashMap;
 public class ProcessImageAsyncInput extends AbstractModel {
 
     /**
-    * FileId for image processing.
+    * <p>FileId of image processing.</p>
     */
     @SerializedName("FileId")
     @Expose
     private String FileId;
 
     /**
-    * Image processing parameter.
+    * <p>Image URL.</p>
+    */
+    @SerializedName("Url")
+    @Expose
+    private String Url;
+
+    /**
+    * <p>Image processing parameter.</p>
     */
     @SerializedName("ImageTaskInput")
     @Expose
     private ProcessImageAsyncTaskInput ImageTaskInput;
 
     /**
-    * Output media file configuration for image processing tasks.
+    * <p>Output media file configuration for the image processing task.</p>
     */
     @SerializedName("OutputConfig")
     @Expose
     private ProcessImageAsyncOutputConfig OutputConfig;
 
     /**
-     * Get FileId for image processing. 
-     * @return FileId FileId for image processing.
+     * Get <p>FileId of image processing.</p> 
+     * @return FileId <p>FileId of image processing.</p>
      */
     public String getFileId() {
         return this.FileId;
     }
 
     /**
-     * Set FileId for image processing.
-     * @param FileId FileId for image processing.
+     * Set <p>FileId of image processing.</p>
+     * @param FileId <p>FileId of image processing.</p>
      */
     public void setFileId(String FileId) {
         this.FileId = FileId;
     }
 
     /**
-     * Get Image processing parameter. 
-     * @return ImageTaskInput Image processing parameter.
+     * Get <p>Image URL.</p> 
+     * @return Url <p>Image URL.</p>
+     */
+    public String getUrl() {
+        return this.Url;
+    }
+
+    /**
+     * Set <p>Image URL.</p>
+     * @param Url <p>Image URL.</p>
+     */
+    public void setUrl(String Url) {
+        this.Url = Url;
+    }
+
+    /**
+     * Get <p>Image processing parameter.</p> 
+     * @return ImageTaskInput <p>Image processing parameter.</p>
      */
     public ProcessImageAsyncTaskInput getImageTaskInput() {
         return this.ImageTaskInput;
     }
 
     /**
-     * Set Image processing parameter.
-     * @param ImageTaskInput Image processing parameter.
+     * Set <p>Image processing parameter.</p>
+     * @param ImageTaskInput <p>Image processing parameter.</p>
      */
     public void setImageTaskInput(ProcessImageAsyncTaskInput ImageTaskInput) {
         this.ImageTaskInput = ImageTaskInput;
     }
 
     /**
-     * Get Output media file configuration for image processing tasks. 
-     * @return OutputConfig Output media file configuration for image processing tasks.
+     * Get <p>Output media file configuration for the image processing task.</p> 
+     * @return OutputConfig <p>Output media file configuration for the image processing task.</p>
      */
     public ProcessImageAsyncOutputConfig getOutputConfig() {
         return this.OutputConfig;
     }
 
     /**
-     * Set Output media file configuration for image processing tasks.
-     * @param OutputConfig Output media file configuration for image processing tasks.
+     * Set <p>Output media file configuration for the image processing task.</p>
+     * @param OutputConfig <p>Output media file configuration for the image processing task.</p>
      */
     public void setOutputConfig(ProcessImageAsyncOutputConfig OutputConfig) {
         this.OutputConfig = OutputConfig;
@@ -103,6 +126,9 @@ public class ProcessImageAsyncInput extends AbstractModel {
         if (source.FileId != null) {
             this.FileId = new String(source.FileId);
         }
+        if (source.Url != null) {
+            this.Url = new String(source.Url);
+        }
         if (source.ImageTaskInput != null) {
             this.ImageTaskInput = new ProcessImageAsyncTaskInput(source.ImageTaskInput);
         }
@@ -117,6 +143,7 @@ public class ProcessImageAsyncInput extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "FileId", this.FileId);
+        this.setParamSimple(map, prefix + "Url", this.Url);
         this.setParamObj(map, prefix + "ImageTaskInput.", this.ImageTaskInput);
         this.setParamObj(map, prefix + "OutputConfig.", this.OutputConfig);
 

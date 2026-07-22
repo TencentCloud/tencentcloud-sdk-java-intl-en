@@ -59,7 +59,7 @@ public class SceneAigcImageOutputConfig extends AbstractModel {
     private String AspectRatio;
 
     /**
-    * <p>Output image encoding format parameters. <strong>Valid only for AI clothing change scenarios.</strong></p>
+    * <p>Output image encoding format parameters.</p>
     */
     @SerializedName("EncodeConfig")
     @Expose
@@ -80,7 +80,7 @@ public class SceneAigcImageOutputConfig extends AbstractModel {
     private Long ImageHeight;
 
     /**
-    * <p>Output resolution. Only valid for change_clothes and change_clothes_under scenarios. Available values: 1K, 2K, 4K.</p>
+    * <p>Output resolution. Only valid for <code>ai_try_on</code> scenarios. Value range: 1K, 2K, 4K.</p>
     */
     @SerializedName("Resolution")
     @Expose
@@ -167,16 +167,16 @@ public class SceneAigcImageOutputConfig extends AbstractModel {
     }
 
     /**
-     * Get <p>Output image encoding format parameters. <strong>Valid only for AI clothing change scenarios.</strong></p> 
-     * @return EncodeConfig <p>Output image encoding format parameters. <strong>Valid only for AI clothing change scenarios.</strong></p>
+     * Get <p>Output image encoding format parameters.</p> 
+     * @return EncodeConfig <p>Output image encoding format parameters.</p>
      */
     public ImageSceneAigcEncodeConfig getEncodeConfig() {
         return this.EncodeConfig;
     }
 
     /**
-     * Set <p>Output image encoding format parameters. <strong>Valid only for AI clothing change scenarios.</strong></p>
-     * @param EncodeConfig <p>Output image encoding format parameters. <strong>Valid only for AI clothing change scenarios.</strong></p>
+     * Set <p>Output image encoding format parameters.</p>
+     * @param EncodeConfig <p>Output image encoding format parameters.</p>
      */
     public void setEncodeConfig(ImageSceneAigcEncodeConfig EncodeConfig) {
         this.EncodeConfig = EncodeConfig;
@@ -215,16 +215,16 @@ public class SceneAigcImageOutputConfig extends AbstractModel {
     }
 
     /**
-     * Get <p>Output resolution. Only valid for change_clothes and change_clothes_under scenarios. Available values: 1K, 2K, 4K.</p> 
-     * @return Resolution <p>Output resolution. Only valid for change_clothes and change_clothes_under scenarios. Available values: 1K, 2K, 4K.</p>
+     * Get <p>Output resolution. Only valid for <code>ai_try_on</code> scenarios. Value range: 1K, 2K, 4K.</p> 
+     * @return Resolution <p>Output resolution. Only valid for <code>ai_try_on</code> scenarios. Value range: 1K, 2K, 4K.</p>
      */
     public String getResolution() {
         return this.Resolution;
     }
 
     /**
-     * Set <p>Output resolution. Only valid for change_clothes and change_clothes_under scenarios. Available values: 1K, 2K, 4K.</p>
-     * @param Resolution <p>Output resolution. Only valid for change_clothes and change_clothes_under scenarios. Available values: 1K, 2K, 4K.</p>
+     * Set <p>Output resolution. Only valid for <code>ai_try_on</code> scenarios. Value range: 1K, 2K, 4K.</p>
+     * @param Resolution <p>Output resolution. Only valid for <code>ai_try_on</code> scenarios. Value range: 1K, 2K, 4K.</p>
      */
     public void setResolution(String Resolution) {
         this.Resolution = Resolution;

@@ -24,28 +24,28 @@ import java.util.HashMap;
 public class LiveRealTimeClipResponse extends AbstractModel {
 
     /**
-    * Edited Video Playback URL
+    * <p>Edited Video Playback URL.</p>
     */
     @SerializedName("Url")
     @Expose
     private String Url;
 
     /**
-    * Unique identifier of media file for post-editing solidified video.
+    * <p>Unique identifier of media file for post-editing solidified video.</p>
     */
     @SerializedName("FileId")
     @Expose
     private String FileId;
 
     /**
-    * Edited video task flow ID after solidification.
+    * <p>ID of the edited video task flow after solidification.</p>
     */
     @SerializedName("VodTaskId")
     @Expose
     private String VodTaskId;
 
     /**
-    * Edited Video Metadata
+    * <p>Edited video metadata.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("MetaData")
@@ -53,7 +53,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private MediaMetaData MetaData;
 
     /**
-    * <span id="p_segmentset">Edited video clip information.</span>
+    * <p><span id="p_segmentset">Edited video clip information.</span></p>
     */
     @SerializedName("SegmentSet")
     @Expose
@@ -67,57 +67,57 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Edited Video Playback URL 
-     * @return Url Edited Video Playback URL
+     * Get <p>Edited Video Playback URL.</p> 
+     * @return Url <p>Edited Video Playback URL.</p>
      */
     public String getUrl() {
         return this.Url;
     }
 
     /**
-     * Set Edited Video Playback URL
-     * @param Url Edited Video Playback URL
+     * Set <p>Edited Video Playback URL.</p>
+     * @param Url <p>Edited Video Playback URL.</p>
      */
     public void setUrl(String Url) {
         this.Url = Url;
     }
 
     /**
-     * Get Unique identifier of media file for post-editing solidified video. 
-     * @return FileId Unique identifier of media file for post-editing solidified video.
+     * Get <p>Unique identifier of media file for post-editing solidified video.</p> 
+     * @return FileId <p>Unique identifier of media file for post-editing solidified video.</p>
      */
     public String getFileId() {
         return this.FileId;
     }
 
     /**
-     * Set Unique identifier of media file for post-editing solidified video.
-     * @param FileId Unique identifier of media file for post-editing solidified video.
+     * Set <p>Unique identifier of media file for post-editing solidified video.</p>
+     * @param FileId <p>Unique identifier of media file for post-editing solidified video.</p>
      */
     public void setFileId(String FileId) {
         this.FileId = FileId;
     }
 
     /**
-     * Get Edited video task flow ID after solidification. 
-     * @return VodTaskId Edited video task flow ID after solidification.
+     * Get <p>ID of the edited video task flow after solidification.</p> 
+     * @return VodTaskId <p>ID of the edited video task flow after solidification.</p>
      */
     public String getVodTaskId() {
         return this.VodTaskId;
     }
 
     /**
-     * Set Edited video task flow ID after solidification.
-     * @param VodTaskId Edited video task flow ID after solidification.
+     * Set <p>ID of the edited video task flow after solidification.</p>
+     * @param VodTaskId <p>ID of the edited video task flow after solidification.</p>
      */
     public void setVodTaskId(String VodTaskId) {
         this.VodTaskId = VodTaskId;
     }
 
     /**
-     * Get Edited Video Metadata
+     * Get <p>Edited video metadata.</p>
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return MetaData Edited Video Metadata
+     * @return MetaData <p>Edited video metadata.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public MediaMetaData getMetaData() {
@@ -125,9 +125,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Edited Video Metadata
+     * Set <p>Edited video metadata.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param MetaData Edited Video Metadata
+     * @param MetaData <p>Edited video metadata.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setMetaData(MediaMetaData MetaData) {
@@ -135,16 +135,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get <span id="p_segmentset">Edited video clip information.</span> 
-     * @return SegmentSet <span id="p_segmentset">Edited video clip information.</span>
+     * Get <p><span id="p_segmentset">Edited video clip information.</span></p> 
+     * @return SegmentSet <p><span id="p_segmentset">Edited video clip information.</span></p>
      */
     public LiveRealTimeClipMediaSegmentInfo [] getSegmentSet() {
         return this.SegmentSet;
     }
 
     /**
-     * Set <span id="p_segmentset">Edited video clip information.</span>
-     * @param SegmentSet <span id="p_segmentset">Edited video clip information.</span>
+     * Set <p><span id="p_segmentset">Edited video clip information.</span></p>
+     * @param SegmentSet <p><span id="p_segmentset">Edited video clip information.</span></p>
      */
     public void setSegmentSet(LiveRealTimeClipMediaSegmentInfo [] SegmentSet) {
         this.SegmentSet = SegmentSet;
