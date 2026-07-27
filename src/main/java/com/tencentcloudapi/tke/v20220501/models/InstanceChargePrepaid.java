@@ -25,7 +25,7 @@ public class InstanceChargePrepaid extends AbstractModel {
 
     /**
     * Billing cycle of the pay-as-you-go mode (unit: month):
-1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36, 48, 60
+1,2,3,4,5,6,7, 8,9,10,11,12,24,36,48,60
     */
     @SerializedName("Period")
     @Expose
@@ -33,8 +33,8 @@ public class InstanceChargePrepaid extends AbstractModel {
 
     /**
     * Renewal method of the prepayment mode:
-- NOTIFY_AND_AUTO_RENEW: Notify the user of expiration and auto-renew (default)
-- NOTIFY_AND_MANUAL_RENEW: Notify the user of expiration but do not auto-renew
+- NOTIFY_AND_AUTO_RENEW: Notify the user of expiration and auto-renew 
+- NOTIFY_AND_MANUAL_RENEW: Notify the user of expiration but auto-renewal is not performed (default)
 - DISABLE_NOTIFY_AND_MANUAL_RENEW: Do not notify the user of expiration and do not auto-renew
 
     */
@@ -44,9 +44,9 @@ public class InstanceChargePrepaid extends AbstractModel {
 
     /**
      * Get Billing cycle of the pay-as-you-go mode (unit: month):
-1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36, 48, 60 
+1,2,3,4,5,6,7, 8,9,10,11,12,24,36,48,60 
      * @return Period Billing cycle of the pay-as-you-go mode (unit: month):
-1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36, 48, 60
+1,2,3,4,5,6,7, 8,9,10,11,12,24,36,48,60
      */
     public Long getPeriod() {
         return this.Period;
@@ -54,9 +54,9 @@ public class InstanceChargePrepaid extends AbstractModel {
 
     /**
      * Set Billing cycle of the pay-as-you-go mode (unit: month):
-1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36, 48, 60
+1,2,3,4,5,6,7, 8,9,10,11,12,24,36,48,60
      * @param Period Billing cycle of the pay-as-you-go mode (unit: month):
-1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36, 48, 60
+1,2,3,4,5,6,7, 8,9,10,11,12,24,36,48,60
      */
     public void setPeriod(Long Period) {
         this.Period = Period;
@@ -64,13 +64,13 @@ public class InstanceChargePrepaid extends AbstractModel {
 
     /**
      * Get Renewal method of the prepayment mode:
-- NOTIFY_AND_AUTO_RENEW: Notify the user of expiration and auto-renew (default)
-- NOTIFY_AND_MANUAL_RENEW: Notify the user of expiration but do not auto-renew
+- NOTIFY_AND_AUTO_RENEW: Notify the user of expiration and auto-renew 
+- NOTIFY_AND_MANUAL_RENEW: Notify the user of expiration but auto-renewal is not performed (default)
 - DISABLE_NOTIFY_AND_MANUAL_RENEW: Do not notify the user of expiration and do not auto-renew
  
      * @return RenewFlag Renewal method of the prepayment mode:
-- NOTIFY_AND_AUTO_RENEW: Notify the user of expiration and auto-renew (default)
-- NOTIFY_AND_MANUAL_RENEW: Notify the user of expiration but do not auto-renew
+- NOTIFY_AND_AUTO_RENEW: Notify the user of expiration and auto-renew 
+- NOTIFY_AND_MANUAL_RENEW: Notify the user of expiration but auto-renewal is not performed (default)
 - DISABLE_NOTIFY_AND_MANUAL_RENEW: Do not notify the user of expiration and do not auto-renew
 
      */
@@ -80,13 +80,13 @@ public class InstanceChargePrepaid extends AbstractModel {
 
     /**
      * Set Renewal method of the prepayment mode:
-- NOTIFY_AND_AUTO_RENEW: Notify the user of expiration and auto-renew (default)
-- NOTIFY_AND_MANUAL_RENEW: Notify the user of expiration but do not auto-renew
+- NOTIFY_AND_AUTO_RENEW: Notify the user of expiration and auto-renew 
+- NOTIFY_AND_MANUAL_RENEW: Notify the user of expiration but auto-renewal is not performed (default)
 - DISABLE_NOTIFY_AND_MANUAL_RENEW: Do not notify the user of expiration and do not auto-renew
 
      * @param RenewFlag Renewal method of the prepayment mode:
-- NOTIFY_AND_AUTO_RENEW: Notify the user of expiration and auto-renew (default)
-- NOTIFY_AND_MANUAL_RENEW: Notify the user of expiration but do not auto-renew
+- NOTIFY_AND_AUTO_RENEW: Notify the user of expiration and auto-renew 
+- NOTIFY_AND_MANUAL_RENEW: Notify the user of expiration but auto-renewal is not performed (default)
 - DISABLE_NOTIFY_AND_MANUAL_RENEW: Do not notify the user of expiration and do not auto-renew
 
      */

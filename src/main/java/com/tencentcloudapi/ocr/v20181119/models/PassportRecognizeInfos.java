@@ -24,348 +24,506 @@ import java.util.HashMap;
 public class PassportRecognizeInfos extends AbstractModel {
 
     /**
-    * 
+    * Document type, obtained from passport visual zone
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * 
+    * Issuing country, obtained from passport visual zone
     */
     @SerializedName("IssuingCountry")
     @Expose
     private String IssuingCountry;
 
     /**
-    * 
+    * Unique serial number / identification number of the passport, obtained from passport visual zone
     */
     @SerializedName("PassportID")
     @Expose
     private String PassportID;
 
     /**
-    * 
+    * Last name, obtained from passport visual zone
     */
     @SerializedName("Surname")
     @Expose
     private String Surname;
 
     /**
-    * 
+    * First name, obtained from passport visual zone
     */
     @SerializedName("GivenName")
     @Expose
     private String GivenName;
 
     /**
-    * 
+    * Full name, obtained from passport visual zone
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 
+    * Nationality, obtained from passport visual zone
     */
     @SerializedName("Nationality")
     @Expose
     private String Nationality;
 
     /**
-    * 
+    * Date of birth, obtained from passport visual zone
     */
     @SerializedName("DateOfBirth")
     @Expose
     private String DateOfBirth;
 
     /**
-    * 
+    * Gender, obtained from passport visual zone
     */
     @SerializedName("Sex")
     @Expose
     private String Sex;
 
     /**
-    * 
+    * Date of issue, obtained from passport visual zone
     */
     @SerializedName("DateOfIssuance")
     @Expose
     private String DateOfIssuance;
 
     /**
-    * 
+    * Passport expiry date, obtained from passport visual zone
     */
     @SerializedName("DateOfExpiration")
     @Expose
     private String DateOfExpiration;
 
     /**
-    * 
+    * Holder's signature, obtained from passport visual zone
+(Note: Only returned for PRC passport)
     */
     @SerializedName("Signature")
     @Expose
     private String Signature;
 
     /**
-    * 
+    * Place of issue, obtained from passport visual zone
+(Note: Only returned for PRC passport)
     */
     @SerializedName("IssuePlace")
     @Expose
     private String IssuePlace;
 
     /**
-    * 
+    * Issuing Authority, obtained from passport visual zone
+(Note: Only returned for PRC passport)
+
     */
     @SerializedName("IssuingAuthority")
     @Expose
     private String IssuingAuthority;
 
     /**
-    * 
+    * Place of birth, obtained from passport visual zone
     */
     @SerializedName("BirthPlace")
     @Expose
     private String BirthPlace;
 
     /**
-     * Get  
-     * @return Type 
+    * Passport flag, obtained from passport visual zone
+    */
+    @SerializedName("PassportFlag")
+    @Expose
+    private String PassportFlag;
+
+    /**
+    * Middle name, obtained from passport visual zone
+    */
+    @SerializedName("MiddleName")
+    @Expose
+    private String MiddleName;
+
+    /**
+    * Father's name, obtained from passport visual zone
+    */
+    @SerializedName("FatherName")
+    @Expose
+    private String FatherName;
+
+    /**
+    * Mother's name, obtained from passport visual zone
+    */
+    @SerializedName("MotherName")
+    @Expose
+    private String MotherName;
+
+    /**
+    * Title, obtained from passport visual zone
+    */
+    @SerializedName("Title")
+    @Expose
+    private String Title;
+
+    /**
+    * Name suffix, obtained from passport visual zone
+    */
+    @SerializedName("Postname")
+    @Expose
+    private String Postname;
+
+    /**
+     * Get Document type, obtained from passport visual zone 
+     * @return Type Document type, obtained from passport visual zone
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 
-     * @param Type 
+     * Set Document type, obtained from passport visual zone
+     * @param Type Document type, obtained from passport visual zone
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get  
-     * @return IssuingCountry 
+     * Get Issuing country, obtained from passport visual zone 
+     * @return IssuingCountry Issuing country, obtained from passport visual zone
      */
     public String getIssuingCountry() {
         return this.IssuingCountry;
     }
 
     /**
-     * Set 
-     * @param IssuingCountry 
+     * Set Issuing country, obtained from passport visual zone
+     * @param IssuingCountry Issuing country, obtained from passport visual zone
      */
     public void setIssuingCountry(String IssuingCountry) {
         this.IssuingCountry = IssuingCountry;
     }
 
     /**
-     * Get  
-     * @return PassportID 
+     * Get Unique serial number / identification number of the passport, obtained from passport visual zone 
+     * @return PassportID Unique serial number / identification number of the passport, obtained from passport visual zone
      */
     public String getPassportID() {
         return this.PassportID;
     }
 
     /**
-     * Set 
-     * @param PassportID 
+     * Set Unique serial number / identification number of the passport, obtained from passport visual zone
+     * @param PassportID Unique serial number / identification number of the passport, obtained from passport visual zone
      */
     public void setPassportID(String PassportID) {
         this.PassportID = PassportID;
     }
 
     /**
-     * Get  
-     * @return Surname 
+     * Get Last name, obtained from passport visual zone 
+     * @return Surname Last name, obtained from passport visual zone
      */
     public String getSurname() {
         return this.Surname;
     }
 
     /**
-     * Set 
-     * @param Surname 
+     * Set Last name, obtained from passport visual zone
+     * @param Surname Last name, obtained from passport visual zone
      */
     public void setSurname(String Surname) {
         this.Surname = Surname;
     }
 
     /**
-     * Get  
-     * @return GivenName 
+     * Get First name, obtained from passport visual zone 
+     * @return GivenName First name, obtained from passport visual zone
      */
     public String getGivenName() {
         return this.GivenName;
     }
 
     /**
-     * Set 
-     * @param GivenName 
+     * Set First name, obtained from passport visual zone
+     * @param GivenName First name, obtained from passport visual zone
      */
     public void setGivenName(String GivenName) {
         this.GivenName = GivenName;
     }
 
     /**
-     * Get  
-     * @return Name 
+     * Get Full name, obtained from passport visual zone 
+     * @return Name Full name, obtained from passport visual zone
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 
-     * @param Name 
+     * Set Full name, obtained from passport visual zone
+     * @param Name Full name, obtained from passport visual zone
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get  
-     * @return Nationality 
+     * Get Nationality, obtained from passport visual zone 
+     * @return Nationality Nationality, obtained from passport visual zone
      */
     public String getNationality() {
         return this.Nationality;
     }
 
     /**
-     * Set 
-     * @param Nationality 
+     * Set Nationality, obtained from passport visual zone
+     * @param Nationality Nationality, obtained from passport visual zone
      */
     public void setNationality(String Nationality) {
         this.Nationality = Nationality;
     }
 
     /**
-     * Get  
-     * @return DateOfBirth 
+     * Get Date of birth, obtained from passport visual zone 
+     * @return DateOfBirth Date of birth, obtained from passport visual zone
      */
     public String getDateOfBirth() {
         return this.DateOfBirth;
     }
 
     /**
-     * Set 
-     * @param DateOfBirth 
+     * Set Date of birth, obtained from passport visual zone
+     * @param DateOfBirth Date of birth, obtained from passport visual zone
      */
     public void setDateOfBirth(String DateOfBirth) {
         this.DateOfBirth = DateOfBirth;
     }
 
     /**
-     * Get  
-     * @return Sex 
+     * Get Gender, obtained from passport visual zone 
+     * @return Sex Gender, obtained from passport visual zone
      */
     public String getSex() {
         return this.Sex;
     }
 
     /**
-     * Set 
-     * @param Sex 
+     * Set Gender, obtained from passport visual zone
+     * @param Sex Gender, obtained from passport visual zone
      */
     public void setSex(String Sex) {
         this.Sex = Sex;
     }
 
     /**
-     * Get  
-     * @return DateOfIssuance 
+     * Get Date of issue, obtained from passport visual zone 
+     * @return DateOfIssuance Date of issue, obtained from passport visual zone
      */
     public String getDateOfIssuance() {
         return this.DateOfIssuance;
     }
 
     /**
-     * Set 
-     * @param DateOfIssuance 
+     * Set Date of issue, obtained from passport visual zone
+     * @param DateOfIssuance Date of issue, obtained from passport visual zone
      */
     public void setDateOfIssuance(String DateOfIssuance) {
         this.DateOfIssuance = DateOfIssuance;
     }
 
     /**
-     * Get  
-     * @return DateOfExpiration 
+     * Get Passport expiry date, obtained from passport visual zone 
+     * @return DateOfExpiration Passport expiry date, obtained from passport visual zone
      */
     public String getDateOfExpiration() {
         return this.DateOfExpiration;
     }
 
     /**
-     * Set 
-     * @param DateOfExpiration 
+     * Set Passport expiry date, obtained from passport visual zone
+     * @param DateOfExpiration Passport expiry date, obtained from passport visual zone
      */
     public void setDateOfExpiration(String DateOfExpiration) {
         this.DateOfExpiration = DateOfExpiration;
     }
 
     /**
-     * Get  
-     * @return Signature 
+     * Get Holder's signature, obtained from passport visual zone
+(Note: Only returned for PRC passport) 
+     * @return Signature Holder's signature, obtained from passport visual zone
+(Note: Only returned for PRC passport)
      */
     public String getSignature() {
         return this.Signature;
     }
 
     /**
-     * Set 
-     * @param Signature 
+     * Set Holder's signature, obtained from passport visual zone
+(Note: Only returned for PRC passport)
+     * @param Signature Holder's signature, obtained from passport visual zone
+(Note: Only returned for PRC passport)
      */
     public void setSignature(String Signature) {
         this.Signature = Signature;
     }
 
     /**
-     * Get  
-     * @return IssuePlace 
+     * Get Place of issue, obtained from passport visual zone
+(Note: Only returned for PRC passport) 
+     * @return IssuePlace Place of issue, obtained from passport visual zone
+(Note: Only returned for PRC passport)
      */
     public String getIssuePlace() {
         return this.IssuePlace;
     }
 
     /**
-     * Set 
-     * @param IssuePlace 
+     * Set Place of issue, obtained from passport visual zone
+(Note: Only returned for PRC passport)
+     * @param IssuePlace Place of issue, obtained from passport visual zone
+(Note: Only returned for PRC passport)
      */
     public void setIssuePlace(String IssuePlace) {
         this.IssuePlace = IssuePlace;
     }
 
     /**
-     * Get  
-     * @return IssuingAuthority 
+     * Get Issuing Authority, obtained from passport visual zone
+(Note: Only returned for PRC passport)
+ 
+     * @return IssuingAuthority Issuing Authority, obtained from passport visual zone
+(Note: Only returned for PRC passport)
+
      */
     public String getIssuingAuthority() {
         return this.IssuingAuthority;
     }
 
     /**
-     * Set 
-     * @param IssuingAuthority 
+     * Set Issuing Authority, obtained from passport visual zone
+(Note: Only returned for PRC passport)
+
+     * @param IssuingAuthority Issuing Authority, obtained from passport visual zone
+(Note: Only returned for PRC passport)
+
      */
     public void setIssuingAuthority(String IssuingAuthority) {
         this.IssuingAuthority = IssuingAuthority;
     }
 
     /**
-     * Get  
-     * @return BirthPlace 
+     * Get Place of birth, obtained from passport visual zone 
+     * @return BirthPlace Place of birth, obtained from passport visual zone
      */
     public String getBirthPlace() {
         return this.BirthPlace;
     }
 
     /**
-     * Set 
-     * @param BirthPlace 
+     * Set Place of birth, obtained from passport visual zone
+     * @param BirthPlace Place of birth, obtained from passport visual zone
      */
     public void setBirthPlace(String BirthPlace) {
         this.BirthPlace = BirthPlace;
+    }
+
+    /**
+     * Get Passport flag, obtained from passport visual zone 
+     * @return PassportFlag Passport flag, obtained from passport visual zone
+     */
+    public String getPassportFlag() {
+        return this.PassportFlag;
+    }
+
+    /**
+     * Set Passport flag, obtained from passport visual zone
+     * @param PassportFlag Passport flag, obtained from passport visual zone
+     */
+    public void setPassportFlag(String PassportFlag) {
+        this.PassportFlag = PassportFlag;
+    }
+
+    /**
+     * Get Middle name, obtained from passport visual zone 
+     * @return MiddleName Middle name, obtained from passport visual zone
+     */
+    public String getMiddleName() {
+        return this.MiddleName;
+    }
+
+    /**
+     * Set Middle name, obtained from passport visual zone
+     * @param MiddleName Middle name, obtained from passport visual zone
+     */
+    public void setMiddleName(String MiddleName) {
+        this.MiddleName = MiddleName;
+    }
+
+    /**
+     * Get Father's name, obtained from passport visual zone 
+     * @return FatherName Father's name, obtained from passport visual zone
+     */
+    public String getFatherName() {
+        return this.FatherName;
+    }
+
+    /**
+     * Set Father's name, obtained from passport visual zone
+     * @param FatherName Father's name, obtained from passport visual zone
+     */
+    public void setFatherName(String FatherName) {
+        this.FatherName = FatherName;
+    }
+
+    /**
+     * Get Mother's name, obtained from passport visual zone 
+     * @return MotherName Mother's name, obtained from passport visual zone
+     */
+    public String getMotherName() {
+        return this.MotherName;
+    }
+
+    /**
+     * Set Mother's name, obtained from passport visual zone
+     * @param MotherName Mother's name, obtained from passport visual zone
+     */
+    public void setMotherName(String MotherName) {
+        this.MotherName = MotherName;
+    }
+
+    /**
+     * Get Title, obtained from passport visual zone 
+     * @return Title Title, obtained from passport visual zone
+     */
+    public String getTitle() {
+        return this.Title;
+    }
+
+    /**
+     * Set Title, obtained from passport visual zone
+     * @param Title Title, obtained from passport visual zone
+     */
+    public void setTitle(String Title) {
+        this.Title = Title;
+    }
+
+    /**
+     * Get Name suffix, obtained from passport visual zone 
+     * @return Postname Name suffix, obtained from passport visual zone
+     */
+    public String getPostname() {
+        return this.Postname;
+    }
+
+    /**
+     * Set Name suffix, obtained from passport visual zone
+     * @param Postname Name suffix, obtained from passport visual zone
+     */
+    public void setPostname(String Postname) {
+        this.Postname = Postname;
     }
 
     public PassportRecognizeInfos() {
@@ -421,6 +579,24 @@ public class PassportRecognizeInfos extends AbstractModel {
         if (source.BirthPlace != null) {
             this.BirthPlace = new String(source.BirthPlace);
         }
+        if (source.PassportFlag != null) {
+            this.PassportFlag = new String(source.PassportFlag);
+        }
+        if (source.MiddleName != null) {
+            this.MiddleName = new String(source.MiddleName);
+        }
+        if (source.FatherName != null) {
+            this.FatherName = new String(source.FatherName);
+        }
+        if (source.MotherName != null) {
+            this.MotherName = new String(source.MotherName);
+        }
+        if (source.Title != null) {
+            this.Title = new String(source.Title);
+        }
+        if (source.Postname != null) {
+            this.Postname = new String(source.Postname);
+        }
     }
 
 
@@ -443,6 +619,12 @@ public class PassportRecognizeInfos extends AbstractModel {
         this.setParamSimple(map, prefix + "IssuePlace", this.IssuePlace);
         this.setParamSimple(map, prefix + "IssuingAuthority", this.IssuingAuthority);
         this.setParamSimple(map, prefix + "BirthPlace", this.BirthPlace);
+        this.setParamSimple(map, prefix + "PassportFlag", this.PassportFlag);
+        this.setParamSimple(map, prefix + "MiddleName", this.MiddleName);
+        this.setParamSimple(map, prefix + "FatherName", this.FatherName);
+        this.setParamSimple(map, prefix + "MotherName", this.MotherName);
+        this.setParamSimple(map, prefix + "Title", this.Title);
+        this.setParamSimple(map, prefix + "Postname", this.Postname);
 
     }
 }

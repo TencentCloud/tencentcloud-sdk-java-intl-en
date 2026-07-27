@@ -138,6 +138,17 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
+     *This API is used to modify a native node.
+     * @param req ModifyClusterMachineRequest
+     * @return ModifyClusterMachineResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyClusterMachineResponse ModifyClusterMachine(ModifyClusterMachineRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyClusterMachine", ModifyClusterMachineResponse.class);
+    }
+
+    /**
      *This API is used to modify a health check policy.
      * @param req ModifyHealthCheckPolicyRequest
      * @return ModifyHealthCheckPolicyResponse

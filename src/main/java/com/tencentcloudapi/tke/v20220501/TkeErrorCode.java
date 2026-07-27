@@ -52,7 +52,10 @@ public enum TkeErrorCode {
      RESOURCENOTFOUND_CLUSTERNOTFOUND("ResourceNotFound.ClusterNotFound"),
      
      /* The cluster status does not support this operation. */
-     RESOURCEUNAVAILABLE_CLUSTERSTATE("ResourceUnavailable.ClusterState");
+     RESOURCEUNAVAILABLE_CLUSTERSTATE("ResourceUnavailable.ClusterState"),
+     
+     /* Unknown parameter error. */
+     UNKNOWNPARAMETER("UnknownParameter");
      
     private String value;
     private TkeErrorCode (String value){

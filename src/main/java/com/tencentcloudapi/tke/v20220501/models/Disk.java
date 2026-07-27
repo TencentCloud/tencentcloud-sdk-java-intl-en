@@ -31,7 +31,7 @@ public class Disk extends AbstractModel {
     private String DiskType;
 
     /**
-    * Cloud disk size (GB)
+    * Cloud disk size (G)
     */
     @SerializedName("DiskSize")
     @Expose
@@ -59,6 +59,30 @@ public class Disk extends AbstractModel {
     private String MountTarget;
 
     /**
+    * Cloud disk ID
+Note: This field may return "null", indicating that no valid value can be obtained.
+    */
+    @SerializedName("DiskId")
+    @Expose
+    private String DiskId;
+
+    /**
+    * Encrypt the system disk
+Note: This field may return "null", indicating that no valid value can be obtained.
+    */
+    @SerializedName("Encrypt")
+    @Expose
+    private String Encrypt;
+
+    /**
+    * Custom KMS ID
+Note: This field may return "null", indicating that no valid value can be obtained.
+    */
+    @SerializedName("KmsKeyId")
+    @Expose
+    private String KmsKeyId;
+
+    /**
      * Get Cloud disk type 
      * @return DiskType Cloud disk type
      */
@@ -75,16 +99,16 @@ public class Disk extends AbstractModel {
     }
 
     /**
-     * Get Cloud disk size (GB) 
-     * @return DiskSize Cloud disk size (GB)
+     * Get Cloud disk size (G) 
+     * @return DiskSize Cloud disk size (G)
      */
     public Long getDiskSize() {
         return this.DiskSize;
     }
 
     /**
-     * Set Cloud disk size (GB)
-     * @param DiskSize Cloud disk size (GB)
+     * Set Cloud disk size (G)
+     * @param DiskSize Cloud disk size (G)
      */
     public void setDiskSize(Long DiskSize) {
         this.DiskSize = DiskSize;
@@ -138,6 +162,66 @@ public class Disk extends AbstractModel {
         this.MountTarget = MountTarget;
     }
 
+    /**
+     * Get Cloud disk ID
+Note: This field may return "null", indicating that no valid value can be obtained. 
+     * @return DiskId Cloud disk ID
+Note: This field may return "null", indicating that no valid value can be obtained.
+     */
+    public String getDiskId() {
+        return this.DiskId;
+    }
+
+    /**
+     * Set Cloud disk ID
+Note: This field may return "null", indicating that no valid value can be obtained.
+     * @param DiskId Cloud disk ID
+Note: This field may return "null", indicating that no valid value can be obtained.
+     */
+    public void setDiskId(String DiskId) {
+        this.DiskId = DiskId;
+    }
+
+    /**
+     * Get Encrypt the system disk
+Note: This field may return "null", indicating that no valid value can be obtained. 
+     * @return Encrypt Encrypt the system disk
+Note: This field may return "null", indicating that no valid value can be obtained.
+     */
+    public String getEncrypt() {
+        return this.Encrypt;
+    }
+
+    /**
+     * Set Encrypt the system disk
+Note: This field may return "null", indicating that no valid value can be obtained.
+     * @param Encrypt Encrypt the system disk
+Note: This field may return "null", indicating that no valid value can be obtained.
+     */
+    public void setEncrypt(String Encrypt) {
+        this.Encrypt = Encrypt;
+    }
+
+    /**
+     * Get Custom KMS ID
+Note: This field may return "null", indicating that no valid value can be obtained. 
+     * @return KmsKeyId Custom KMS ID
+Note: This field may return "null", indicating that no valid value can be obtained.
+     */
+    public String getKmsKeyId() {
+        return this.KmsKeyId;
+    }
+
+    /**
+     * Set Custom KMS ID
+Note: This field may return "null", indicating that no valid value can be obtained.
+     * @param KmsKeyId Custom KMS ID
+Note: This field may return "null", indicating that no valid value can be obtained.
+     */
+    public void setKmsKeyId(String KmsKeyId) {
+        this.KmsKeyId = KmsKeyId;
+    }
+
     public Disk() {
     }
 
@@ -161,6 +245,15 @@ public class Disk extends AbstractModel {
         if (source.MountTarget != null) {
             this.MountTarget = new String(source.MountTarget);
         }
+        if (source.DiskId != null) {
+            this.DiskId = new String(source.DiskId);
+        }
+        if (source.Encrypt != null) {
+            this.Encrypt = new String(source.Encrypt);
+        }
+        if (source.KmsKeyId != null) {
+            this.KmsKeyId = new String(source.KmsKeyId);
+        }
     }
 
 
@@ -173,6 +266,9 @@ public class Disk extends AbstractModel {
         this.setParamSimple(map, prefix + "AutoFormatAndMount", this.AutoFormatAndMount);
         this.setParamSimple(map, prefix + "FileSystem", this.FileSystem);
         this.setParamSimple(map, prefix + "MountTarget", this.MountTarget);
+        this.setParamSimple(map, prefix + "DiskId", this.DiskId);
+        this.setParamSimple(map, prefix + "Encrypt", this.Encrypt);
+        this.setParamSimple(map, prefix + "KmsKeyId", this.KmsKeyId);
 
     }
 }
