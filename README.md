@@ -199,6 +199,29 @@ Example: [CustomHttpClient.java](examples/common/CustomHttpClient.java).
 
 # Other Issues
 
+## OkHttp Upgrade
+
+To address security risks in OkHttp 3.x, starting from version 3.0.1387 the OkHttp dependency is upgraded from 3.12.13 to 4.12.0.
+
+### Rolling back to OkHttp 3.12.13
+
+If the upgrade conflicts with your project, you can roll back by explicitly declaring the following dependencies in your application's `pom.xml`. Per Maven's "nearest definition" arbitration rule, the version declared in your application will override the 4.12.0 transitively introduced by the SDK:
+
+```xml
+<dependency>
+  <groupId>com.squareup.okhttp3</groupId>
+  <artifactId>okhttp</artifactId>
+  <version>3.12.13</version>
+</dependency>
+<dependency>
+  <groupId>com.squareup.okhttp3</groupId>
+  <artifactId>logging-interceptor</artifactId>
+  <version>3.12.13</version>
+</dependency>
+```
+
+> **Note**: Rolling back re-introduces the security risks already fixed in the newer OkHttp. Use it only for emergency troubleshooting and issue isolation; switch back to OkHttp 4 as soon as the issue is resolved.
+
 ## Certificate Problems
 Usually caused by client environment misconfiguration. Enable debug logs with `-Djavax.net.debug=ssl`.
 
