@@ -38,6 +38,13 @@ public class CreateAigcVideoRedrawTaskRequest extends AbstractModel {
     private AigcVideoRedrawTaskInputFileInfo FileInfo;
 
     /**
+    * <p>Parameters for the AIGC video conversion task.</p>
+    */
+    @SerializedName("TaskInfo")
+    @Expose
+    private AigcVideoRedrawTaskInfo TaskInfo;
+
+    /**
     * <p>Output media file configuration for the AIGC video conversion task.</p>
     */
     @SerializedName("OutputConfig")
@@ -102,6 +109,22 @@ public class CreateAigcVideoRedrawTaskRequest extends AbstractModel {
      */
     public void setFileInfo(AigcVideoRedrawTaskInputFileInfo FileInfo) {
         this.FileInfo = FileInfo;
+    }
+
+    /**
+     * Get <p>Parameters for the AIGC video conversion task.</p> 
+     * @return TaskInfo <p>Parameters for the AIGC video conversion task.</p>
+     */
+    public AigcVideoRedrawTaskInfo getTaskInfo() {
+        return this.TaskInfo;
+    }
+
+    /**
+     * Set <p>Parameters for the AIGC video conversion task.</p>
+     * @param TaskInfo <p>Parameters for the AIGC video conversion task.</p>
+     */
+    public void setTaskInfo(AigcVideoRedrawTaskInfo TaskInfo) {
+        this.TaskInfo = TaskInfo;
     }
 
     /**
@@ -198,6 +221,9 @@ public class CreateAigcVideoRedrawTaskRequest extends AbstractModel {
         if (source.FileInfo != null) {
             this.FileInfo = new AigcVideoRedrawTaskInputFileInfo(source.FileInfo);
         }
+        if (source.TaskInfo != null) {
+            this.TaskInfo = new AigcVideoRedrawTaskInfo(source.TaskInfo);
+        }
         if (source.OutputConfig != null) {
             this.OutputConfig = new AigcVideoRedrawOutputConfig(source.OutputConfig);
         }
@@ -222,6 +248,7 @@ public class CreateAigcVideoRedrawTaskRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "SubAppId", this.SubAppId);
         this.setParamObj(map, prefix + "FileInfo.", this.FileInfo);
+        this.setParamObj(map, prefix + "TaskInfo.", this.TaskInfo);
         this.setParamObj(map, prefix + "OutputConfig.", this.OutputConfig);
         this.setParamSimple(map, prefix + "SessionId", this.SessionId);
         this.setParamSimple(map, prefix + "SessionContext", this.SessionContext);

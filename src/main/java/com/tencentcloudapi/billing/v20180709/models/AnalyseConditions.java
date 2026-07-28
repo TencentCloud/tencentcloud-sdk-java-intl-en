@@ -91,8 +91,8 @@ public class AnalyseConditions extends AbstractModel {
 cashPayAmount: Cash 
 incentivePayAmount: Bonus 
 voucherPayAmount: Coupon 
-tax: tax. 
-costBeforeTax: pre-tax price
+tax: tax
+amountBeforeTax: pre-tax price
     */
     @SerializedName("FeeType")
     @Expose
@@ -268,14 +268,14 @@ costBeforeTax: pre-tax price
 cashPayAmount: Cash 
 incentivePayAmount: Bonus 
 voucherPayAmount: Coupon 
-tax: tax. 
-costBeforeTax: pre-tax price 
+tax: tax
+amountBeforeTax: pre-tax price 
      * @return FeeType Fee type. Query fee type (please use fee type code input parameter). The input parameter enumeration is as follows:
 cashPayAmount: Cash 
 incentivePayAmount: Bonus 
 voucherPayAmount: Coupon 
-tax: tax. 
-costBeforeTax: pre-tax price
+tax: tax
+amountBeforeTax: pre-tax price
      */
     public String getFeeType() {
         return this.FeeType;
@@ -286,14 +286,14 @@ costBeforeTax: pre-tax price
 cashPayAmount: Cash 
 incentivePayAmount: Bonus 
 voucherPayAmount: Coupon 
-tax: tax. 
-costBeforeTax: pre-tax price
+tax: tax
+amountBeforeTax: pre-tax price
      * @param FeeType Fee type. Query fee type (please use fee type code input parameter). The input parameter enumeration is as follows:
 cashPayAmount: Cash 
 incentivePayAmount: Bonus 
 voucherPayAmount: Coupon 
-tax: tax. 
-costBeforeTax: pre-tax price
+tax: tax
+amountBeforeTax: pre-tax price
      */
     public void setFeeType(String FeeType) {
         this.FeeType = FeeType;
