@@ -102,7 +102,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String Zone;
 
     /**
-    * Billing mode. Valid value: `1` (monthly subscription).
+    * Billing mode. Valid value: `1` (yearly/monthly subscription).
     */
     @SerializedName("InstanceChargeType")
     @Expose
@@ -338,16 +338,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Billing mode. Valid value: `1` (monthly subscription). 
-     * @return InstanceChargeType Billing mode. Valid value: `1` (monthly subscription).
+     * Get Billing mode. Valid value: `1` (yearly/monthly subscription). 
+     * @return InstanceChargeType Billing mode. Valid value: `1` (yearly/monthly subscription).
      */
     public Long getInstanceChargeType() {
         return this.InstanceChargeType;
     }
 
     /**
-     * Set Billing mode. Valid value: `1` (monthly subscription).
-     * @param InstanceChargeType Billing mode. Valid value: `1` (monthly subscription).
+     * Set Billing mode. Valid value: `1` (yearly/monthly subscription).
+     * @param InstanceChargeType Billing mode. Valid value: `1` (yearly/monthly subscription).
      */
     public void setInstanceChargeType(Long InstanceChargeType) {
         this.InstanceChargeType = InstanceChargeType;
