@@ -94,7 +94,7 @@ class TCLog implements Interceptor {
      * @throws IOException If an I/O error occurs while processing the request or response.
      */
     @Override
-    public Response intercept(Chain chain) throws IOException {
+    public Response intercept(Interceptor.Chain chain) throws IOException {
         // Get the request being sent
         Request request = chain.request();
         String req =

@@ -5,7 +5,7 @@ Welcome to Tencent Cloud Software Development Kit (SDK), a companion tool for th
 Tencent Cloud SDK for Java helps Java developers debug and use TencentCloud APIs with ease. This document describes Tencent Cloud SDK for Java and how to quickly use it with code examples provided.
 
 # Dependent Environment
-1. Dependent environment: JDK 7 or higher.
+1. Dependent environment: JDK 8 or higher.
 2. Activate your product in the Tencent Cloud Console.
 3. Get the `SecretID`, `SecretKey`, and endpoint. The general format of endpoint is `\*.intl.tencentcloudapi.com`. For example, the endpoint of CVM is `cvm.intl.tencentcloudapi.com`. For more information, please see the documentation of the specified product.
 
@@ -196,6 +196,29 @@ CommonRequest request = new CommonRequest();
 request.setHeader(header);  
 ```  
 Example: [CustomHttpClient.java](examples/common/CustomHttpClient.java).
+
+# OkHttp Upgrade
+
+To mitigate security risks in OkHttp 3.x, starting from version 3.2.0, the OkHttp dependency is upgraded from 3.12.13 to 4.12.0.
+
+### Roll back to OkHttp 3.12.13
+
+If the upgrade conflicts with your project, you can explicitly declare the following dependencies in your application's `pom.xml` to roll back. Per Maven's "nearest definition" dependency mediation rule, the version declared by the application will override the 4.12.0 transitively introduced by the SDK:
+
+```xml
+<dependency>
+  <groupId>com.squareup.okhttp3</groupId>
+  <artifactId>okhttp</artifactId>
+  <version>3.12.13</version>
+</dependency>
+<dependency>
+  <groupId>com.squareup.okhttp3</groupId>
+  <artifactId>logging-interceptor</artifactId>
+  <version>3.12.13</version>
+</dependency>
+```
+
+> **Note**: Rolling back will reintroduce the security risks fixed in newer OkHttp versions. Use it only for emergency troubleshooting and issue diagnosis, and restore OkHttp 4 as soon as the issue is resolved.
 
 # Other Issues
 

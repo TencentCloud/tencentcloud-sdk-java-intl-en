@@ -6,8 +6,13 @@ import com.tencentcloudapi.cbs.v20170312.models.Filter;
 import com.tencentcloudapi.cbs.v20170312.models.ModifySnapshotAttributeRequest;
 import com.tencentcloudapi.common.Credential;
 import com.tencentcloudapi.common.exception.TencentCloudSDKException;
+import com.tencentcloudapi.common.profile.ClientProfile;
+import com.tencentcloudapi.common.profile.Language;
 import com.tencentcloudapi.cvm.v20170312.CvmClient;
 import com.tencentcloudapi.cvm.v20170312.models.DescribeInstancesRequest;
+import com.tencentcloudapi.faceid.v20180301.FaceidClient;
+import com.tencentcloudapi.faceid.v20180301.models.Encryption;
+import com.tencentcloudapi.faceid.v20180301.models.MobileStatusRequest;
 import com.tencentcloudapi.iai.v20200303.IaiClient;
 import com.tencentcloudapi.iai.v20200303.models.SearchFacesRequest;
 import org.junit.Test;
@@ -95,6 +100,35 @@ public class DataTypeTest {
             throw new RuntimeException("unexpected success");
         } catch (TencentCloudSDKException e) {
             if (!e.getErrorCode().contains("InvalidParameter")) {
+                throw new RuntimeException("unexpected error", e);
+            }
+        }
+    }
+
+    @Test
+    public void TestComplexType() {
+        Credential cred = new Credential(
+                System.getenv("TENCENTCLOUD_SECRET_ID"),
+                System.getenv("TENCENTCLOUD_SECRET_KEY")
+        );
+
+        ClientProfile cpf = new ClientProfile();
+        cpf.setLanguage(Language.EN_US);
+
+        FaceidClient client = new FaceidClient(cred, "ap-guangzhou");
+        MobileStatusRequest req = new MobileStatusRequest();
+        req.setMobile("null");
+        Encryption encryption = new Encryption();
+        encryption.setCiphertextBlob("null");
+        encryption.setEncryptList(new String[]{"null", "null"});
+        encryption.setIv("null");
+        req.setEncryption(encryption);
+
+        try {
+            client.MobileStatus(req);
+            throw new RuntimeException("unexpected success");
+        } catch (TencentCloudSDKException e) {
+            if (!e.getErrorCode().contains("UnauthorizedOperation.Nonactivated")) {
                 throw new RuntimeException("unexpected error", e);
             }
         }
