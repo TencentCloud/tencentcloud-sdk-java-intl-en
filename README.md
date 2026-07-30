@@ -201,7 +201,7 @@ Example: [CustomHttpClient.java](examples/common/CustomHttpClient.java).
 
 ## OkHttp Upgrade
 
-To address security risks in OkHttp 3.x, starting from version 3.0.1387 the OkHttp dependency is upgraded from 3.12.13 to 4.12.0.
+To address security risks in OkHttp 3.x, starting from version 3.1.0 the OkHttp dependency is upgraded from 3.12.13 to 4.12.0.
 
 ### Rolling back to OkHttp 3.12.13
 
