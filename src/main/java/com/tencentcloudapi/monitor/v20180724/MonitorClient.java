@@ -609,6 +609,17 @@ Note: **If you use a sub-account, you can only query the alarm records of author
     }
 
     /**
+     *This API is used to query the user information configured in the notification template.
+     * @param req DescribeAlarmNoticeOnCallUsersFromPrometheusAlertIDRequest
+     * @return DescribeAlarmNoticeOnCallUsersFromPrometheusAlertIDResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAlarmNoticeOnCallUsersFromPrometheusAlertIDResponse DescribeAlarmNoticeOnCallUsersFromPrometheusAlertID(DescribeAlarmNoticeOnCallUsersFromPrometheusAlertIDRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAlarmNoticeOnCallUsersFromPrometheusAlertID", DescribeAlarmNoticeOnCallUsersFromPrometheusAlertIDResponse.class);
+    }
+
+    /**
      *This API is used to query the list of notification templates.
      * @param req DescribeAlarmNoticesRequest
      * @return DescribeAlarmNoticesResponse
