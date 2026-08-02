@@ -24,256 +24,302 @@ import java.util.HashMap;
 public class ProxyNodeInfo extends AbstractModel {
 
     /**
-    * Database proxy node ID.
+    * <p>Database Proxy Node ID</p>
     */
     @SerializedName("ProxyNodeId")
     @Expose
     private String ProxyNodeId;
 
     /**
-    * Current node connections, which is not returned by the `DescribeProxyNodes` API.
+    * <p>Current connection number of nodes. This field value does not return in the DescribeProxyNodes API.</p>
     */
     @SerializedName("ProxyNodeConnections")
     @Expose
     private Long ProxyNodeConnections;
 
     /**
-    * CPU of the database proxy node.
+    * <p>Database proxy node cpu</p>
     */
     @SerializedName("Cpu")
     @Expose
     private Long Cpu;
 
     /**
-    * Memory of the database proxy node.
+    * <p>Database proxy node memory</p>
     */
     @SerializedName("Mem")
     @Expose
     private Long Mem;
 
     /**
-    * Status of the database proxy node.
+    * <p>Database Proxy Node Status</p>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * Database proxy group ID.
+    * <p>Database Proxy Group ID</p>
     */
     @SerializedName("ProxyGroupId")
     @Expose
     private String ProxyGroupId;
 
     /**
-    * Cluster ID.
+    * <p>Cluster ID.</p>
     */
     @SerializedName("ClusterId")
     @Expose
     private String ClusterId;
 
     /**
-    * User AppID.
+    * <p>User AppID</p>
     */
     @SerializedName("AppId")
     @Expose
     private Long AppId;
 
     /**
-    * Region.
+    * <p>Region.</p>
     */
     @SerializedName("Region")
     @Expose
     private String Region;
 
     /**
-    * AZ.
+    * <p>AZ.</p>
     */
     @SerializedName("Zone")
     @Expose
     private String Zone;
 
     /**
-    * Database proxy node name.
+    * <p>Database Proxy Node Name</p>
     */
     @SerializedName("OssProxyNodeName")
     @Expose
     private String OssProxyNodeName;
 
     /**
-     * Get Database proxy node ID. 
-     * @return ProxyNodeId Database proxy node ID.
+    * <p>Creation time.</p>
+    */
+    @SerializedName("CreateTime")
+    @Expose
+    private String CreateTime;
+
+    /**
+    * <p>Update time.</p>
+    */
+    @SerializedName("UpdateTime")
+    @Expose
+    private String UpdateTime;
+
+    /**
+     * Get <p>Database Proxy Node ID</p> 
+     * @return ProxyNodeId <p>Database Proxy Node ID</p>
      */
     public String getProxyNodeId() {
         return this.ProxyNodeId;
     }
 
     /**
-     * Set Database proxy node ID.
-     * @param ProxyNodeId Database proxy node ID.
+     * Set <p>Database Proxy Node ID</p>
+     * @param ProxyNodeId <p>Database Proxy Node ID</p>
      */
     public void setProxyNodeId(String ProxyNodeId) {
         this.ProxyNodeId = ProxyNodeId;
     }
 
     /**
-     * Get Current node connections, which is not returned by the `DescribeProxyNodes` API. 
-     * @return ProxyNodeConnections Current node connections, which is not returned by the `DescribeProxyNodes` API.
+     * Get <p>Current connection number of nodes. This field value does not return in the DescribeProxyNodes API.</p> 
+     * @return ProxyNodeConnections <p>Current connection number of nodes. This field value does not return in the DescribeProxyNodes API.</p>
      */
     public Long getProxyNodeConnections() {
         return this.ProxyNodeConnections;
     }
 
     /**
-     * Set Current node connections, which is not returned by the `DescribeProxyNodes` API.
-     * @param ProxyNodeConnections Current node connections, which is not returned by the `DescribeProxyNodes` API.
+     * Set <p>Current connection number of nodes. This field value does not return in the DescribeProxyNodes API.</p>
+     * @param ProxyNodeConnections <p>Current connection number of nodes. This field value does not return in the DescribeProxyNodes API.</p>
      */
     public void setProxyNodeConnections(Long ProxyNodeConnections) {
         this.ProxyNodeConnections = ProxyNodeConnections;
     }
 
     /**
-     * Get CPU of the database proxy node. 
-     * @return Cpu CPU of the database proxy node.
+     * Get <p>Database proxy node cpu</p> 
+     * @return Cpu <p>Database proxy node cpu</p>
      */
     public Long getCpu() {
         return this.Cpu;
     }
 
     /**
-     * Set CPU of the database proxy node.
-     * @param Cpu CPU of the database proxy node.
+     * Set <p>Database proxy node cpu</p>
+     * @param Cpu <p>Database proxy node cpu</p>
      */
     public void setCpu(Long Cpu) {
         this.Cpu = Cpu;
     }
 
     /**
-     * Get Memory of the database proxy node. 
-     * @return Mem Memory of the database proxy node.
+     * Get <p>Database proxy node memory</p> 
+     * @return Mem <p>Database proxy node memory</p>
      */
     public Long getMem() {
         return this.Mem;
     }
 
     /**
-     * Set Memory of the database proxy node.
-     * @param Mem Memory of the database proxy node.
+     * Set <p>Database proxy node memory</p>
+     * @param Mem <p>Database proxy node memory</p>
      */
     public void setMem(Long Mem) {
         this.Mem = Mem;
     }
 
     /**
-     * Get Status of the database proxy node. 
-     * @return Status Status of the database proxy node.
+     * Get <p>Database Proxy Node Status</p> 
+     * @return Status <p>Database Proxy Node Status</p>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Status of the database proxy node.
-     * @param Status Status of the database proxy node.
+     * Set <p>Database Proxy Node Status</p>
+     * @param Status <p>Database Proxy Node Status</p>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get Database proxy group ID. 
-     * @return ProxyGroupId Database proxy group ID.
+     * Get <p>Database Proxy Group ID</p> 
+     * @return ProxyGroupId <p>Database Proxy Group ID</p>
      */
     public String getProxyGroupId() {
         return this.ProxyGroupId;
     }
 
     /**
-     * Set Database proxy group ID.
-     * @param ProxyGroupId Database proxy group ID.
+     * Set <p>Database Proxy Group ID</p>
+     * @param ProxyGroupId <p>Database Proxy Group ID</p>
      */
     public void setProxyGroupId(String ProxyGroupId) {
         this.ProxyGroupId = ProxyGroupId;
     }
 
     /**
-     * Get Cluster ID. 
-     * @return ClusterId Cluster ID.
+     * Get <p>Cluster ID.</p> 
+     * @return ClusterId <p>Cluster ID.</p>
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set Cluster ID.
-     * @param ClusterId Cluster ID.
+     * Set <p>Cluster ID.</p>
+     * @param ClusterId <p>Cluster ID.</p>
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
     }
 
     /**
-     * Get User AppID. 
-     * @return AppId User AppID.
+     * Get <p>User AppID</p> 
+     * @return AppId <p>User AppID</p>
      */
     public Long getAppId() {
         return this.AppId;
     }
 
     /**
-     * Set User AppID.
-     * @param AppId User AppID.
+     * Set <p>User AppID</p>
+     * @param AppId <p>User AppID</p>
      */
     public void setAppId(Long AppId) {
         this.AppId = AppId;
     }
 
     /**
-     * Get Region. 
-     * @return Region Region.
+     * Get <p>Region.</p> 
+     * @return Region <p>Region.</p>
      */
     public String getRegion() {
         return this.Region;
     }
 
     /**
-     * Set Region.
-     * @param Region Region.
+     * Set <p>Region.</p>
+     * @param Region <p>Region.</p>
      */
     public void setRegion(String Region) {
         this.Region = Region;
     }
 
     /**
-     * Get AZ. 
-     * @return Zone AZ.
+     * Get <p>AZ.</p> 
+     * @return Zone <p>AZ.</p>
      */
     public String getZone() {
         return this.Zone;
     }
 
     /**
-     * Set AZ.
-     * @param Zone AZ.
+     * Set <p>AZ.</p>
+     * @param Zone <p>AZ.</p>
      */
     public void setZone(String Zone) {
         this.Zone = Zone;
     }
 
     /**
-     * Get Database proxy node name. 
-     * @return OssProxyNodeName Database proxy node name.
+     * Get <p>Database Proxy Node Name</p> 
+     * @return OssProxyNodeName <p>Database Proxy Node Name</p>
      */
     public String getOssProxyNodeName() {
         return this.OssProxyNodeName;
     }
 
     /**
-     * Set Database proxy node name.
-     * @param OssProxyNodeName Database proxy node name.
+     * Set <p>Database Proxy Node Name</p>
+     * @param OssProxyNodeName <p>Database Proxy Node Name</p>
      */
     public void setOssProxyNodeName(String OssProxyNodeName) {
         this.OssProxyNodeName = OssProxyNodeName;
+    }
+
+    /**
+     * Get <p>Creation time.</p> 
+     * @return CreateTime <p>Creation time.</p>
+     */
+    public String getCreateTime() {
+        return this.CreateTime;
+    }
+
+    /**
+     * Set <p>Creation time.</p>
+     * @param CreateTime <p>Creation time.</p>
+     */
+    public void setCreateTime(String CreateTime) {
+        this.CreateTime = CreateTime;
+    }
+
+    /**
+     * Get <p>Update time.</p> 
+     * @return UpdateTime <p>Update time.</p>
+     */
+    public String getUpdateTime() {
+        return this.UpdateTime;
+    }
+
+    /**
+     * Set <p>Update time.</p>
+     * @param UpdateTime <p>Update time.</p>
+     */
+    public void setUpdateTime(String UpdateTime) {
+        this.UpdateTime = UpdateTime;
     }
 
     public ProxyNodeInfo() {
@@ -317,6 +363,12 @@ public class ProxyNodeInfo extends AbstractModel {
         if (source.OssProxyNodeName != null) {
             this.OssProxyNodeName = new String(source.OssProxyNodeName);
         }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+        if (source.UpdateTime != null) {
+            this.UpdateTime = new String(source.UpdateTime);
+        }
     }
 
 
@@ -335,6 +387,8 @@ public class ProxyNodeInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "Region", this.Region);
         this.setParamSimple(map, prefix + "Zone", this.Zone);
         this.setParamSimple(map, prefix + "OssProxyNodeName", this.OssProxyNodeName);
+        this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
+        this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
 
     }
 }

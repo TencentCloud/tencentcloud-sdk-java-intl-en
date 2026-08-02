@@ -45,7 +45,8 @@ public class FileSystemClient extends AbstractModel {
     private String VpcId;
 
     /**
-    * Availability zone name, such as ap-beijing-1. see the region and availability zone list in the description document (https://www.tencentcloud.com/document/api/582/38144?from_cn_redirect=1).
+    * Availability zone name, such as ap-beijing-1. see the region and availability zone list in the description [Introduction
+](https://www.tencentcloud.com/zh/document/product/582/50830)
     */
     @SerializedName("Zone")
     @Expose
@@ -114,16 +115,20 @@ public class FileSystemClient extends AbstractModel {
     }
 
     /**
-     * Get Availability zone name, such as ap-beijing-1. see the region and availability zone list in the description document (https://www.tencentcloud.com/document/api/582/38144?from_cn_redirect=1). 
-     * @return Zone Availability zone name, such as ap-beijing-1. see the region and availability zone list in the description document (https://www.tencentcloud.com/document/api/582/38144?from_cn_redirect=1).
+     * Get Availability zone name, such as ap-beijing-1. see the region and availability zone list in the description [Introduction
+](https://www.tencentcloud.com/zh/document/product/582/50830) 
+     * @return Zone Availability zone name, such as ap-beijing-1. see the region and availability zone list in the description [Introduction
+](https://www.tencentcloud.com/zh/document/product/582/50830)
      */
     public String getZone() {
         return this.Zone;
     }
 
     /**
-     * Set Availability zone name, such as ap-beijing-1. see the region and availability zone list in the description document (https://www.tencentcloud.com/document/api/582/38144?from_cn_redirect=1).
-     * @param Zone Availability zone name, such as ap-beijing-1. see the region and availability zone list in the description document (https://www.tencentcloud.com/document/api/582/38144?from_cn_redirect=1).
+     * Set Availability zone name, such as ap-beijing-1. see the region and availability zone list in the description [Introduction
+](https://www.tencentcloud.com/zh/document/product/582/50830)
+     * @param Zone Availability zone name, such as ap-beijing-1. see the region and availability zone list in the description [Introduction
+](https://www.tencentcloud.com/zh/document/product/582/50830)
      */
     public void setZone(String Zone) {
         this.Zone = Zone;

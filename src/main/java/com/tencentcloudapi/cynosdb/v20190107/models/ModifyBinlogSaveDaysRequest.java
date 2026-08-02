@@ -24,49 +24,72 @@ import java.util.HashMap;
 public class ModifyBinlogSaveDaysRequest extends AbstractModel {
 
     /**
-    * Cluster ID
+    * <p>Cluster ID.</p>
     */
     @SerializedName("ClusterId")
     @Expose
     private String ClusterId;
 
     /**
-    * Binlog retention period in days
+    * <p>Binlog retention days</p>
     */
     @SerializedName("BinlogSaveDays")
     @Expose
     private Long BinlogSaveDays;
 
     /**
-     * Get Cluster ID 
-     * @return ClusterId Cluster ID
+    * <p>Cross-region backup retention period</p><p>Unit: Day</p>
+    */
+    @SerializedName("BinlogCrossRegionSaveDays")
+    @Expose
+    private Long BinlogCrossRegionSaveDays;
+
+    /**
+     * Get <p>Cluster ID.</p> 
+     * @return ClusterId <p>Cluster ID.</p>
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set Cluster ID
-     * @param ClusterId Cluster ID
+     * Set <p>Cluster ID.</p>
+     * @param ClusterId <p>Cluster ID.</p>
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
     }
 
     /**
-     * Get Binlog retention period in days 
-     * @return BinlogSaveDays Binlog retention period in days
+     * Get <p>Binlog retention days</p> 
+     * @return BinlogSaveDays <p>Binlog retention days</p>
      */
     public Long getBinlogSaveDays() {
         return this.BinlogSaveDays;
     }
 
     /**
-     * Set Binlog retention period in days
-     * @param BinlogSaveDays Binlog retention period in days
+     * Set <p>Binlog retention days</p>
+     * @param BinlogSaveDays <p>Binlog retention days</p>
      */
     public void setBinlogSaveDays(Long BinlogSaveDays) {
         this.BinlogSaveDays = BinlogSaveDays;
+    }
+
+    /**
+     * Get <p>Cross-region backup retention period</p><p>Unit: Day</p> 
+     * @return BinlogCrossRegionSaveDays <p>Cross-region backup retention period</p><p>Unit: Day</p>
+     */
+    public Long getBinlogCrossRegionSaveDays() {
+        return this.BinlogCrossRegionSaveDays;
+    }
+
+    /**
+     * Set <p>Cross-region backup retention period</p><p>Unit: Day</p>
+     * @param BinlogCrossRegionSaveDays <p>Cross-region backup retention period</p><p>Unit: Day</p>
+     */
+    public void setBinlogCrossRegionSaveDays(Long BinlogCrossRegionSaveDays) {
+        this.BinlogCrossRegionSaveDays = BinlogCrossRegionSaveDays;
     }
 
     public ModifyBinlogSaveDaysRequest() {
@@ -83,6 +106,9 @@ public class ModifyBinlogSaveDaysRequest extends AbstractModel {
         if (source.BinlogSaveDays != null) {
             this.BinlogSaveDays = new Long(source.BinlogSaveDays);
         }
+        if (source.BinlogCrossRegionSaveDays != null) {
+            this.BinlogCrossRegionSaveDays = new Long(source.BinlogCrossRegionSaveDays);
+        }
     }
 
 
@@ -92,6 +118,7 @@ public class ModifyBinlogSaveDaysRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
         this.setParamSimple(map, prefix + "BinlogSaveDays", this.BinlogSaveDays);
+        this.setParamSimple(map, prefix + "BinlogCrossRegionSaveDays", this.BinlogCrossRegionSaveDays);
 
     }
 }

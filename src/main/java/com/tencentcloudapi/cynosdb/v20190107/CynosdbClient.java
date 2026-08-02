@@ -655,6 +655,17 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
+     *This API is used to query the backup usage overview.
+     * @param req DescribeBackupOverviewRequest
+     * @return DescribeBackupOverviewResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBackupOverviewResponse DescribeBackupOverview(DescribeBackupOverviewRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeBackupOverview", DescribeBackupOverviewResponse.class);
+    }
+
+    /**
      *This API is used to query binlog configurations.
      * @param req DescribeBinlogConfigRequest
      * @return DescribeBinlogConfigResponse
@@ -2382,6 +2393,17 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
+     *This API is used to convert a Prepaid Cluster to a postpaid cluster.
+     * @param req TransferClusterPrepayToPostpayRequest
+     * @return TransferClusterPrepayToPostpayResponse
+     * @throws TencentCloudSDKException
+     */
+    public TransferClusterPrepayToPostpayResponse TransferClusterPrepayToPostpay(TransferClusterPrepayToPostpayRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "TransferClusterPrepayToPostpay", TransferClusterPrepayToPostpayResponse.class);
+    }
+
+    /**
      *This API is used to trigger cross-AZ migration.
      * @param req TransferClusterZoneRequest
      * @return TransferClusterZoneResponse
@@ -2390,6 +2412,17 @@ public class CynosdbClient extends AbstractClient{
     public TransferClusterZoneResponse TransferClusterZone(TransferClusterZoneRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "TransferClusterZone", TransferClusterZoneResponse.class);
+    }
+
+    /**
+     *This API is used to convert prepaid storage to postpaid storage.
+     * @param req TransferStoragePrepayToPostpayRequest
+     * @return TransferStoragePrepayToPostpayResponse
+     * @throws TencentCloudSDKException
+     */
+    public TransferStoragePrepayToPostpayResponse TransferStoragePrepayToPostpay(TransferStoragePrepayToPostpayRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "TransferStoragePrepayToPostpay", TransferStoragePrepayToPostpayResponse.class);
     }
 
     /**

@@ -84,7 +84,9 @@ Description: To get the instance group ID of a cluster, perform [query cluster i
     /**
      * Get Availability zone 
      * @return Zone Availability zone
+     * @deprecated
      */
+    @Deprecated
     public String getZone() {
         return this.Zone;
     }
@@ -92,7 +94,9 @@ Description: To get the instance group ID of a cluster, perform [query cluster i
     /**
      * Set Availability zone
      * @param Zone Availability zone
+     * @deprecated
      */
+    @Deprecated
     public void setZone(String Zone) {
         this.Zone = Zone;
     }

@@ -18,6 +18,9 @@ public enum CynosdbErrorCode {
      /* Authentication failed. Please try again later. If the problem persists, please contact customer service. */
      FAILEDOPERATION_CAMSIGANDAUTHERROR("FailedOperation.CamSigAndAuthError"),
      
+     /*  */
+     FAILEDOPERATION_CREATEAUDITFAILERROR("FailedOperation.CreateAuditFailError"),
+     
      /* Failed to create the order and make a payment. */
      FAILEDOPERATION_CREATEORDER("FailedOperation.CreateOrder"),
      
@@ -406,7 +409,10 @@ public enum CynosdbErrorCode {
      UNAUTHORIZEDOPERATION_NOTREALNAMEACCOUNT("UnauthorizedOperation.NotRealNameAccount"),
      
      /* CAM authentication failed. */
-     UNAUTHORIZEDOPERATION_PERMISSIONDENIED("UnauthorizedOperation.PermissionDenied");
+     UNAUTHORIZEDOPERATION_PERMISSIONDENIED("UnauthorizedOperation.PermissionDenied"),
+     
+     /*  */
+     UNAUTHORIZEDOPERATION_ROLEUNAUTHORIZED("UnauthorizedOperation.RoleUnauthorized");
      
     private String value;
     private CynosdbErrorCode (String value){

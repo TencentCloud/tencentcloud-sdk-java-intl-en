@@ -92,6 +92,13 @@ If set to true, the image constraints are:
     private Boolean ReturnHeadImage;
 
     /**
+    * Verification status callback URL. When set, this endpoint will be actively notified with the final verification result upon process completion. Leave blank to disable callbacks. Since callbacks are not fully reliable, a polling mechanism is advised to guarantee retrieval of the final status.
+    */
+    @SerializedName("WebhookUrl")
+    @Expose
+    private String WebhookUrl;
+
+    /**
      * Get Country/Region of the document. For the full list of supported countries/regions, refer to the API description. 
      * @return Nationality Country/Region of the document. For the full list of supported countries/regions, refer to the API description.
      */
@@ -279,6 +286,22 @@ If set to true, the image constraints are:
         this.ReturnHeadImage = ReturnHeadImage;
     }
 
+    /**
+     * Get Verification status callback URL. When set, this endpoint will be actively notified with the final verification result upon process completion. Leave blank to disable callbacks. Since callbacks are not fully reliable, a polling mechanism is advised to guarantee retrieval of the final status. 
+     * @return WebhookUrl Verification status callback URL. When set, this endpoint will be actively notified with the final verification result upon process completion. Leave blank to disable callbacks. Since callbacks are not fully reliable, a polling mechanism is advised to guarantee retrieval of the final status.
+     */
+    public String getWebhookUrl() {
+        return this.WebhookUrl;
+    }
+
+    /**
+     * Set Verification status callback URL. When set, this endpoint will be actively notified with the final verification result upon process completion. Leave blank to disable callbacks. Since callbacks are not fully reliable, a polling mechanism is advised to guarantee retrieval of the final status.
+     * @param WebhookUrl Verification status callback URL. When set, this endpoint will be actively notified with the final verification result upon process completion. Leave blank to disable callbacks. Since callbacks are not fully reliable, a polling mechanism is advised to guarantee retrieval of the final status.
+     */
+    public void setWebhookUrl(String WebhookUrl) {
+        this.WebhookUrl = WebhookUrl;
+    }
+
     public ApplyCardVerificationExternalRequest() {
     }
 
@@ -308,6 +331,9 @@ If set to true, the image constraints are:
         if (source.ReturnHeadImage != null) {
             this.ReturnHeadImage = new Boolean(source.ReturnHeadImage);
         }
+        if (source.WebhookUrl != null) {
+            this.WebhookUrl = new String(source.WebhookUrl);
+        }
     }
 
 
@@ -322,6 +348,7 @@ If set to true, the image constraints are:
         this.setParamSimple(map, prefix + "ImageUrlFront", this.ImageUrlFront);
         this.setParamSimple(map, prefix + "ImageUrlBack", this.ImageUrlBack);
         this.setParamSimple(map, prefix + "ReturnHeadImage", this.ReturnHeadImage);
+        this.setParamSimple(map, prefix + "WebhookUrl", this.WebhookUrl);
 
     }
 }

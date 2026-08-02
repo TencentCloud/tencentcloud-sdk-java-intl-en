@@ -87,7 +87,9 @@ Description: To get the instance group ID of a cluster, perform [query cluster i
 Description: Please enter the primary AZ of the cluster location correctly. If you enter a non-primary AZ of the cluster location, the call may display success but the actual execution will fail. 
      * @return Zone Availability zone.
 Description: Please enter the primary AZ of the cluster location correctly. If you enter a non-primary AZ of the cluster location, the call may display success but the actual execution will fail.
+     * @deprecated
      */
+    @Deprecated
     public String getZone() {
         return this.Zone;
     }
@@ -97,7 +99,9 @@ Description: Please enter the primary AZ of the cluster location correctly. If y
 Description: Please enter the primary AZ of the cluster location correctly. If you enter a non-primary AZ of the cluster location, the call may display success but the actual execution will fail.
      * @param Zone Availability zone.
 Description: Please enter the primary AZ of the cluster location correctly. If you enter a non-primary AZ of the cluster location, the call may display success but the actual execution will fail.
+     * @deprecated
      */
+    @Deprecated
     public void setZone(String Zone) {
         this.Zone = Zone;
     }

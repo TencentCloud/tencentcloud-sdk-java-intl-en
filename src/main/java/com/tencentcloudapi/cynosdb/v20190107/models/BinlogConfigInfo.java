@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class BinlogConfigInfo extends AbstractModel {
 
     /**
-    * Specifies the retention time of binlogs.
+    * <p>binlog retention time</p>
     */
     @SerializedName("BinlogSaveDays")
     @Expose
     private Long BinlogSaveDays;
 
     /**
-    * Whether binlog cross-region backup is enabled.
+    * <p>Whether cross-region backup of binlog is enabled</p>
     */
     @SerializedName("BinlogCrossRegionsEnable")
     @Expose
     private String BinlogCrossRegionsEnable;
 
     /**
-    * binlog in a different region.
+    * <p>binlog cross-region</p>
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("BinlogCrossRegions")
@@ -46,48 +46,55 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String [] BinlogCrossRegions;
 
     /**
-    * Safe info
+    * <p>Cross-region backup retention period</p><p>Unit: Day</p>
+    */
+    @SerializedName("BinlogCrossRegionSaveDays")
+    @Expose
+    private Long BinlogCrossRegionSaveDays;
+
+    /**
+    * <p>Safe info</p>
     */
     @SerializedName("AutoCopyVaults")
     @Expose
     private CreateBackupVaultItem [] AutoCopyVaults;
 
     /**
-     * Get Specifies the retention time of binlogs. 
-     * @return BinlogSaveDays Specifies the retention time of binlogs.
+     * Get <p>binlog retention time</p> 
+     * @return BinlogSaveDays <p>binlog retention time</p>
      */
     public Long getBinlogSaveDays() {
         return this.BinlogSaveDays;
     }
 
     /**
-     * Set Specifies the retention time of binlogs.
-     * @param BinlogSaveDays Specifies the retention time of binlogs.
+     * Set <p>binlog retention time</p>
+     * @param BinlogSaveDays <p>binlog retention time</p>
      */
     public void setBinlogSaveDays(Long BinlogSaveDays) {
         this.BinlogSaveDays = BinlogSaveDays;
     }
 
     /**
-     * Get Whether binlog cross-region backup is enabled. 
-     * @return BinlogCrossRegionsEnable Whether binlog cross-region backup is enabled.
+     * Get <p>Whether cross-region backup of binlog is enabled</p> 
+     * @return BinlogCrossRegionsEnable <p>Whether cross-region backup of binlog is enabled</p>
      */
     public String getBinlogCrossRegionsEnable() {
         return this.BinlogCrossRegionsEnable;
     }
 
     /**
-     * Set Whether binlog cross-region backup is enabled.
-     * @param BinlogCrossRegionsEnable Whether binlog cross-region backup is enabled.
+     * Set <p>Whether cross-region backup of binlog is enabled</p>
+     * @param BinlogCrossRegionsEnable <p>Whether cross-region backup of binlog is enabled</p>
      */
     public void setBinlogCrossRegionsEnable(String BinlogCrossRegionsEnable) {
         this.BinlogCrossRegionsEnable = BinlogCrossRegionsEnable;
     }
 
     /**
-     * Get binlog in a different region.
+     * Get <p>binlog cross-region</p>
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return BinlogCrossRegions binlog in a different region.
+     * @return BinlogCrossRegions <p>binlog cross-region</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String [] getBinlogCrossRegions() {
@@ -95,9 +102,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set binlog in a different region.
+     * Set <p>binlog cross-region</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param BinlogCrossRegions binlog in a different region.
+     * @param BinlogCrossRegions <p>binlog cross-region</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setBinlogCrossRegions(String [] BinlogCrossRegions) {
@@ -105,16 +112,32 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Safe info 
-     * @return AutoCopyVaults Safe info
+     * Get <p>Cross-region backup retention period</p><p>Unit: Day</p> 
+     * @return BinlogCrossRegionSaveDays <p>Cross-region backup retention period</p><p>Unit: Day</p>
+     */
+    public Long getBinlogCrossRegionSaveDays() {
+        return this.BinlogCrossRegionSaveDays;
+    }
+
+    /**
+     * Set <p>Cross-region backup retention period</p><p>Unit: Day</p>
+     * @param BinlogCrossRegionSaveDays <p>Cross-region backup retention period</p><p>Unit: Day</p>
+     */
+    public void setBinlogCrossRegionSaveDays(Long BinlogCrossRegionSaveDays) {
+        this.BinlogCrossRegionSaveDays = BinlogCrossRegionSaveDays;
+    }
+
+    /**
+     * Get <p>Safe info</p> 
+     * @return AutoCopyVaults <p>Safe info</p>
      */
     public CreateBackupVaultItem [] getAutoCopyVaults() {
         return this.AutoCopyVaults;
     }
 
     /**
-     * Set Safe info
-     * @param AutoCopyVaults Safe info
+     * Set <p>Safe info</p>
+     * @param AutoCopyVaults <p>Safe info</p>
      */
     public void setAutoCopyVaults(CreateBackupVaultItem [] AutoCopyVaults) {
         this.AutoCopyVaults = AutoCopyVaults;
@@ -140,6 +163,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 this.BinlogCrossRegions[i] = new String(source.BinlogCrossRegions[i]);
             }
         }
+        if (source.BinlogCrossRegionSaveDays != null) {
+            this.BinlogCrossRegionSaveDays = new Long(source.BinlogCrossRegionSaveDays);
+        }
         if (source.AutoCopyVaults != null) {
             this.AutoCopyVaults = new CreateBackupVaultItem[source.AutoCopyVaults.length];
             for (int i = 0; i < source.AutoCopyVaults.length; i++) {
@@ -156,6 +182,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "BinlogSaveDays", this.BinlogSaveDays);
         this.setParamSimple(map, prefix + "BinlogCrossRegionsEnable", this.BinlogCrossRegionsEnable);
         this.setParamArraySimple(map, prefix + "BinlogCrossRegions.", this.BinlogCrossRegions);
+        this.setParamSimple(map, prefix + "BinlogCrossRegionSaveDays", this.BinlogCrossRegionSaveDays);
         this.setParamArrayObj(map, prefix + "AutoCopyVaults.", this.AutoCopyVaults);
 
     }

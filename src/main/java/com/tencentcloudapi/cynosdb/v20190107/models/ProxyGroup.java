@@ -24,210 +24,256 @@ import java.util.HashMap;
 public class ProxyGroup extends AbstractModel {
 
     /**
-    * Database proxy group ID
+    * <p>Database Proxy Group ID.</p>
     */
     @SerializedName("ProxyGroupId")
     @Expose
     private String ProxyGroupId;
 
     /**
-    * Number of nodes in the proxy group
+    * <p>Number of database proxy group nodes</p>
     */
     @SerializedName("ProxyNodeCount")
     @Expose
     private Long ProxyNodeCount;
 
     /**
-    * Database proxy group status
+    * <p>Database Proxy Group status</p>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * Region
+    * <p>Region.</p>
     */
     @SerializedName("Region")
     @Expose
     private String Region;
 
     /**
-    * AZ
+    * <p>AZ.</p>
     */
     @SerializedName("Zone")
     @Expose
     private String Zone;
 
     /**
-    * Current proxy version
+    * <p>Current proxy version</p>
     */
     @SerializedName("CurrentProxyVersion")
     @Expose
     private String CurrentProxyVersion;
 
     /**
-    * Cluster ID
+    * <p>Cluster ID.</p>
     */
     @SerializedName("ClusterId")
     @Expose
     private String ClusterId;
 
     /**
-    * User AppId
+    * <p>User AppId</p>
     */
     @SerializedName("AppId")
     @Expose
     private Long AppId;
 
     /**
-    * Specifies that a read-write node activates the database proxy.
+    * <p>Activate database proxy for RWNode</p>
     */
     @SerializedName("OpenRw")
     @Expose
     private String OpenRw;
 
     /**
-     * Get Database proxy group ID 
-     * @return ProxyGroupId Database proxy group ID
+    * <p>Creation time.</p>
+    */
+    @SerializedName("CreateTime")
+    @Expose
+    private String CreateTime;
+
+    /**
+    * <p>Update time.</p>
+    */
+    @SerializedName("UpdateTime")
+    @Expose
+    private String UpdateTime;
+
+    /**
+     * Get <p>Database Proxy Group ID.</p> 
+     * @return ProxyGroupId <p>Database Proxy Group ID.</p>
      */
     public String getProxyGroupId() {
         return this.ProxyGroupId;
     }
 
     /**
-     * Set Database proxy group ID
-     * @param ProxyGroupId Database proxy group ID
+     * Set <p>Database Proxy Group ID.</p>
+     * @param ProxyGroupId <p>Database Proxy Group ID.</p>
      */
     public void setProxyGroupId(String ProxyGroupId) {
         this.ProxyGroupId = ProxyGroupId;
     }
 
     /**
-     * Get Number of nodes in the proxy group 
-     * @return ProxyNodeCount Number of nodes in the proxy group
+     * Get <p>Number of database proxy group nodes</p> 
+     * @return ProxyNodeCount <p>Number of database proxy group nodes</p>
      */
     public Long getProxyNodeCount() {
         return this.ProxyNodeCount;
     }
 
     /**
-     * Set Number of nodes in the proxy group
-     * @param ProxyNodeCount Number of nodes in the proxy group
+     * Set <p>Number of database proxy group nodes</p>
+     * @param ProxyNodeCount <p>Number of database proxy group nodes</p>
      */
     public void setProxyNodeCount(Long ProxyNodeCount) {
         this.ProxyNodeCount = ProxyNodeCount;
     }
 
     /**
-     * Get Database proxy group status 
-     * @return Status Database proxy group status
+     * Get <p>Database Proxy Group status</p> 
+     * @return Status <p>Database Proxy Group status</p>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Database proxy group status
-     * @param Status Database proxy group status
+     * Set <p>Database Proxy Group status</p>
+     * @param Status <p>Database Proxy Group status</p>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get Region 
-     * @return Region Region
+     * Get <p>Region.</p> 
+     * @return Region <p>Region.</p>
      */
     public String getRegion() {
         return this.Region;
     }
 
     /**
-     * Set Region
-     * @param Region Region
+     * Set <p>Region.</p>
+     * @param Region <p>Region.</p>
      */
     public void setRegion(String Region) {
         this.Region = Region;
     }
 
     /**
-     * Get AZ 
-     * @return Zone AZ
+     * Get <p>AZ.</p> 
+     * @return Zone <p>AZ.</p>
      */
     public String getZone() {
         return this.Zone;
     }
 
     /**
-     * Set AZ
-     * @param Zone AZ
+     * Set <p>AZ.</p>
+     * @param Zone <p>AZ.</p>
      */
     public void setZone(String Zone) {
         this.Zone = Zone;
     }
 
     /**
-     * Get Current proxy version 
-     * @return CurrentProxyVersion Current proxy version
+     * Get <p>Current proxy version</p> 
+     * @return CurrentProxyVersion <p>Current proxy version</p>
      */
     public String getCurrentProxyVersion() {
         return this.CurrentProxyVersion;
     }
 
     /**
-     * Set Current proxy version
-     * @param CurrentProxyVersion Current proxy version
+     * Set <p>Current proxy version</p>
+     * @param CurrentProxyVersion <p>Current proxy version</p>
      */
     public void setCurrentProxyVersion(String CurrentProxyVersion) {
         this.CurrentProxyVersion = CurrentProxyVersion;
     }
 
     /**
-     * Get Cluster ID 
-     * @return ClusterId Cluster ID
+     * Get <p>Cluster ID.</p> 
+     * @return ClusterId <p>Cluster ID.</p>
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set Cluster ID
-     * @param ClusterId Cluster ID
+     * Set <p>Cluster ID.</p>
+     * @param ClusterId <p>Cluster ID.</p>
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
     }
 
     /**
-     * Get User AppId 
-     * @return AppId User AppId
+     * Get <p>User AppId</p> 
+     * @return AppId <p>User AppId</p>
      */
     public Long getAppId() {
         return this.AppId;
     }
 
     /**
-     * Set User AppId
-     * @param AppId User AppId
+     * Set <p>User AppId</p>
+     * @param AppId <p>User AppId</p>
      */
     public void setAppId(Long AppId) {
         this.AppId = AppId;
     }
 
     /**
-     * Get Specifies that a read-write node activates the database proxy. 
-     * @return OpenRw Specifies that a read-write node activates the database proxy.
+     * Get <p>Activate database proxy for RWNode</p> 
+     * @return OpenRw <p>Activate database proxy for RWNode</p>
      */
     public String getOpenRw() {
         return this.OpenRw;
     }
 
     /**
-     * Set Specifies that a read-write node activates the database proxy.
-     * @param OpenRw Specifies that a read-write node activates the database proxy.
+     * Set <p>Activate database proxy for RWNode</p>
+     * @param OpenRw <p>Activate database proxy for RWNode</p>
      */
     public void setOpenRw(String OpenRw) {
         this.OpenRw = OpenRw;
+    }
+
+    /**
+     * Get <p>Creation time.</p> 
+     * @return CreateTime <p>Creation time.</p>
+     */
+    public String getCreateTime() {
+        return this.CreateTime;
+    }
+
+    /**
+     * Set <p>Creation time.</p>
+     * @param CreateTime <p>Creation time.</p>
+     */
+    public void setCreateTime(String CreateTime) {
+        this.CreateTime = CreateTime;
+    }
+
+    /**
+     * Get <p>Update time.</p> 
+     * @return UpdateTime <p>Update time.</p>
+     */
+    public String getUpdateTime() {
+        return this.UpdateTime;
+    }
+
+    /**
+     * Set <p>Update time.</p>
+     * @param UpdateTime <p>Update time.</p>
+     */
+    public void setUpdateTime(String UpdateTime) {
+        this.UpdateTime = UpdateTime;
     }
 
     public ProxyGroup() {
@@ -265,6 +311,12 @@ public class ProxyGroup extends AbstractModel {
         if (source.OpenRw != null) {
             this.OpenRw = new String(source.OpenRw);
         }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+        if (source.UpdateTime != null) {
+            this.UpdateTime = new String(source.UpdateTime);
+        }
     }
 
 
@@ -281,6 +333,8 @@ public class ProxyGroup extends AbstractModel {
         this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
         this.setParamSimple(map, prefix + "AppId", this.AppId);
         this.setParamSimple(map, prefix + "OpenRw", this.OpenRw);
+        this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
+        this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
 
     }
 }

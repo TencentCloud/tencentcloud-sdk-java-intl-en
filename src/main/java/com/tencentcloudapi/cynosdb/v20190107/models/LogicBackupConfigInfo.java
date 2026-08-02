@@ -24,174 +24,192 @@ import java.util.HashMap;
 public class LogicBackupConfigInfo extends AbstractModel {
 
     /**
-    * Whether automatic logical backup is enabled.
+    * <p>Whether automatic logical backup is enabled</p>
     */
     @SerializedName("LogicBackupEnable")
     @Expose
     private String LogicBackupEnable;
 
     /**
-    * Specifies the automatic logic backup start time.
+    * <p>Automatic logic backup start time</p>
     */
     @SerializedName("LogicBackupTimeBeg")
     @Expose
     private Long LogicBackupTimeBeg;
 
     /**
-    * Specifies the termination time of automatic logical backup.
+    * <p>Automated logic backup end time</p>
     */
     @SerializedName("LogicBackupTimeEnd")
     @Expose
     private Long LogicBackupTimeEnd;
 
     /**
-    * Automatic logical backup retention time.
-Unit: seconds.
+    * <p>Automatic logical backup retention time<br>Unit: second</p>
     */
     @SerializedName("LogicReserveDuration")
     @Expose
     private Long LogicReserveDuration;
 
     /**
-    * Is cross-regional logical backup enabled?.
-Valid values: ON/OFF.
+    * <p>Whether cross-regional logical backup is enabled<br>Available values: ON/OFF</p>
     */
     @SerializedName("LogicCrossRegionsEnable")
     @Expose
     private String LogicCrossRegionsEnable;
 
     /**
-    * Regions covered by logical backup.
+    * <p>Cross-regional logic backup</p>
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("LogicCrossRegions")
     @Expose
     private String [] LogicCrossRegions;
 
     /**
-    * Backup delivery relationship
+    * <p>Backup delivery relationship</p>
     */
     @SerializedName("AutoCopyVaults")
     @Expose
     private CreateBackupVaultItem [] AutoCopyVaults;
 
     /**
-     * Get Whether automatic logical backup is enabled. 
-     * @return LogicBackupEnable Whether automatic logical backup is enabled.
+    * <p>Day</p><p>Unit: Cross-regional logical backup retention time</p>
+    */
+    @SerializedName("LogicCrossRegionSaveDays")
+    @Expose
+    private Long LogicCrossRegionSaveDays;
+
+    /**
+     * Get <p>Whether automatic logical backup is enabled</p> 
+     * @return LogicBackupEnable <p>Whether automatic logical backup is enabled</p>
      */
     public String getLogicBackupEnable() {
         return this.LogicBackupEnable;
     }
 
     /**
-     * Set Whether automatic logical backup is enabled.
-     * @param LogicBackupEnable Whether automatic logical backup is enabled.
+     * Set <p>Whether automatic logical backup is enabled</p>
+     * @param LogicBackupEnable <p>Whether automatic logical backup is enabled</p>
      */
     public void setLogicBackupEnable(String LogicBackupEnable) {
         this.LogicBackupEnable = LogicBackupEnable;
     }
 
     /**
-     * Get Specifies the automatic logic backup start time. 
-     * @return LogicBackupTimeBeg Specifies the automatic logic backup start time.
+     * Get <p>Automatic logic backup start time</p> 
+     * @return LogicBackupTimeBeg <p>Automatic logic backup start time</p>
      */
     public Long getLogicBackupTimeBeg() {
         return this.LogicBackupTimeBeg;
     }
 
     /**
-     * Set Specifies the automatic logic backup start time.
-     * @param LogicBackupTimeBeg Specifies the automatic logic backup start time.
+     * Set <p>Automatic logic backup start time</p>
+     * @param LogicBackupTimeBeg <p>Automatic logic backup start time</p>
      */
     public void setLogicBackupTimeBeg(Long LogicBackupTimeBeg) {
         this.LogicBackupTimeBeg = LogicBackupTimeBeg;
     }
 
     /**
-     * Get Specifies the termination time of automatic logical backup. 
-     * @return LogicBackupTimeEnd Specifies the termination time of automatic logical backup.
+     * Get <p>Automated logic backup end time</p> 
+     * @return LogicBackupTimeEnd <p>Automated logic backup end time</p>
      */
     public Long getLogicBackupTimeEnd() {
         return this.LogicBackupTimeEnd;
     }
 
     /**
-     * Set Specifies the termination time of automatic logical backup.
-     * @param LogicBackupTimeEnd Specifies the termination time of automatic logical backup.
+     * Set <p>Automated logic backup end time</p>
+     * @param LogicBackupTimeEnd <p>Automated logic backup end time</p>
      */
     public void setLogicBackupTimeEnd(Long LogicBackupTimeEnd) {
         this.LogicBackupTimeEnd = LogicBackupTimeEnd;
     }
 
     /**
-     * Get Automatic logical backup retention time.
-Unit: seconds. 
-     * @return LogicReserveDuration Automatic logical backup retention time.
-Unit: seconds.
+     * Get <p>Automatic logical backup retention time<br>Unit: second</p> 
+     * @return LogicReserveDuration <p>Automatic logical backup retention time<br>Unit: second</p>
      */
     public Long getLogicReserveDuration() {
         return this.LogicReserveDuration;
     }
 
     /**
-     * Set Automatic logical backup retention time.
-Unit: seconds.
-     * @param LogicReserveDuration Automatic logical backup retention time.
-Unit: seconds.
+     * Set <p>Automatic logical backup retention time<br>Unit: second</p>
+     * @param LogicReserveDuration <p>Automatic logical backup retention time<br>Unit: second</p>
      */
     public void setLogicReserveDuration(Long LogicReserveDuration) {
         this.LogicReserveDuration = LogicReserveDuration;
     }
 
     /**
-     * Get Is cross-regional logical backup enabled?.
-Valid values: ON/OFF. 
-     * @return LogicCrossRegionsEnable Is cross-regional logical backup enabled?.
-Valid values: ON/OFF.
+     * Get <p>Whether cross-regional logical backup is enabled<br>Available values: ON/OFF</p> 
+     * @return LogicCrossRegionsEnable <p>Whether cross-regional logical backup is enabled<br>Available values: ON/OFF</p>
      */
     public String getLogicCrossRegionsEnable() {
         return this.LogicCrossRegionsEnable;
     }
 
     /**
-     * Set Is cross-regional logical backup enabled?.
-Valid values: ON/OFF.
-     * @param LogicCrossRegionsEnable Is cross-regional logical backup enabled?.
-Valid values: ON/OFF.
+     * Set <p>Whether cross-regional logical backup is enabled<br>Available values: ON/OFF</p>
+     * @param LogicCrossRegionsEnable <p>Whether cross-regional logical backup is enabled<br>Available values: ON/OFF</p>
      */
     public void setLogicCrossRegionsEnable(String LogicCrossRegionsEnable) {
         this.LogicCrossRegionsEnable = LogicCrossRegionsEnable;
     }
 
     /**
-     * Get Regions covered by logical backup. 
-     * @return LogicCrossRegions Regions covered by logical backup.
+     * Get <p>Cross-regional logic backup</p>
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return LogicCrossRegions <p>Cross-regional logic backup</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String [] getLogicCrossRegions() {
         return this.LogicCrossRegions;
     }
 
     /**
-     * Set Regions covered by logical backup.
-     * @param LogicCrossRegions Regions covered by logical backup.
+     * Set <p>Cross-regional logic backup</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param LogicCrossRegions <p>Cross-regional logic backup</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setLogicCrossRegions(String [] LogicCrossRegions) {
         this.LogicCrossRegions = LogicCrossRegions;
     }
 
     /**
-     * Get Backup delivery relationship 
-     * @return AutoCopyVaults Backup delivery relationship
+     * Get <p>Backup delivery relationship</p> 
+     * @return AutoCopyVaults <p>Backup delivery relationship</p>
      */
     public CreateBackupVaultItem [] getAutoCopyVaults() {
         return this.AutoCopyVaults;
     }
 
     /**
-     * Set Backup delivery relationship
-     * @param AutoCopyVaults Backup delivery relationship
+     * Set <p>Backup delivery relationship</p>
+     * @param AutoCopyVaults <p>Backup delivery relationship</p>
      */
     public void setAutoCopyVaults(CreateBackupVaultItem [] AutoCopyVaults) {
         this.AutoCopyVaults = AutoCopyVaults;
+    }
+
+    /**
+     * Get <p>Day</p><p>Unit: Cross-regional logical backup retention time</p> 
+     * @return LogicCrossRegionSaveDays <p>Day</p><p>Unit: Cross-regional logical backup retention time</p>
+     */
+    public Long getLogicCrossRegionSaveDays() {
+        return this.LogicCrossRegionSaveDays;
+    }
+
+    /**
+     * Set <p>Day</p><p>Unit: Cross-regional logical backup retention time</p>
+     * @param LogicCrossRegionSaveDays <p>Day</p><p>Unit: Cross-regional logical backup retention time</p>
+     */
+    public void setLogicCrossRegionSaveDays(Long LogicCrossRegionSaveDays) {
+        this.LogicCrossRegionSaveDays = LogicCrossRegionSaveDays;
     }
 
     public LogicBackupConfigInfo() {
@@ -229,6 +247,9 @@ Valid values: ON/OFF.
                 this.AutoCopyVaults[i] = new CreateBackupVaultItem(source.AutoCopyVaults[i]);
             }
         }
+        if (source.LogicCrossRegionSaveDays != null) {
+            this.LogicCrossRegionSaveDays = new Long(source.LogicCrossRegionSaveDays);
+        }
     }
 
 
@@ -243,6 +264,7 @@ Valid values: ON/OFF.
         this.setParamSimple(map, prefix + "LogicCrossRegionsEnable", this.LogicCrossRegionsEnable);
         this.setParamArraySimple(map, prefix + "LogicCrossRegions.", this.LogicCrossRegions);
         this.setParamArrayObj(map, prefix + "AutoCopyVaults.", this.AutoCopyVaults);
+        this.setParamSimple(map, prefix + "LogicCrossRegionSaveDays", this.LogicCrossRegionSaveDays);
 
     }
 }

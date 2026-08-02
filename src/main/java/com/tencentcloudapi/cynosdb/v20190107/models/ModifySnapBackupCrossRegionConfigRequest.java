@@ -24,72 +24,95 @@ import java.util.HashMap;
 public class ModifySnapBackupCrossRegionConfigRequest extends AbstractModel {
 
     /**
-    * Cluster ID
+    * <p>Cluster ID.</p>
     */
     @SerializedName("ClusterId")
     @Expose
     private String ClusterId;
 
     /**
-    * Whether cross-region snapshot backup is enabled.
+    * <p>Whether cross-region snapshot backup is enabled ON/OFF</p>
     */
     @SerializedName("CrossRegionsEnable")
     @Expose
     private String CrossRegionsEnable;
 
     /**
-    * Cross-Regional snapshot backup.
+    * <p>Cross-regional snapshot backup</p>
     */
     @SerializedName("CrossRegions")
     @Expose
     private String [] CrossRegions;
 
     /**
-     * Get Cluster ID 
-     * @return ClusterId Cluster ID
+    * <p>Cross-region backup retention period</p><p>Unit: day</p>
+    */
+    @SerializedName("CrossRegionSaveDays")
+    @Expose
+    private Long CrossRegionSaveDays;
+
+    /**
+     * Get <p>Cluster ID.</p> 
+     * @return ClusterId <p>Cluster ID.</p>
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set Cluster ID
-     * @param ClusterId Cluster ID
+     * Set <p>Cluster ID.</p>
+     * @param ClusterId <p>Cluster ID.</p>
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
     }
 
     /**
-     * Get Whether cross-region snapshot backup is enabled. 
-     * @return CrossRegionsEnable Whether cross-region snapshot backup is enabled.
+     * Get <p>Whether cross-region snapshot backup is enabled ON/OFF</p> 
+     * @return CrossRegionsEnable <p>Whether cross-region snapshot backup is enabled ON/OFF</p>
      */
     public String getCrossRegionsEnable() {
         return this.CrossRegionsEnable;
     }
 
     /**
-     * Set Whether cross-region snapshot backup is enabled.
-     * @param CrossRegionsEnable Whether cross-region snapshot backup is enabled.
+     * Set <p>Whether cross-region snapshot backup is enabled ON/OFF</p>
+     * @param CrossRegionsEnable <p>Whether cross-region snapshot backup is enabled ON/OFF</p>
      */
     public void setCrossRegionsEnable(String CrossRegionsEnable) {
         this.CrossRegionsEnable = CrossRegionsEnable;
     }
 
     /**
-     * Get Cross-Regional snapshot backup. 
-     * @return CrossRegions Cross-Regional snapshot backup.
+     * Get <p>Cross-regional snapshot backup</p> 
+     * @return CrossRegions <p>Cross-regional snapshot backup</p>
      */
     public String [] getCrossRegions() {
         return this.CrossRegions;
     }
 
     /**
-     * Set Cross-Regional snapshot backup.
-     * @param CrossRegions Cross-Regional snapshot backup.
+     * Set <p>Cross-regional snapshot backup</p>
+     * @param CrossRegions <p>Cross-regional snapshot backup</p>
      */
     public void setCrossRegions(String [] CrossRegions) {
         this.CrossRegions = CrossRegions;
+    }
+
+    /**
+     * Get <p>Cross-region backup retention period</p><p>Unit: day</p> 
+     * @return CrossRegionSaveDays <p>Cross-region backup retention period</p><p>Unit: day</p>
+     */
+    public Long getCrossRegionSaveDays() {
+        return this.CrossRegionSaveDays;
+    }
+
+    /**
+     * Set <p>Cross-region backup retention period</p><p>Unit: day</p>
+     * @param CrossRegionSaveDays <p>Cross-region backup retention period</p><p>Unit: day</p>
+     */
+    public void setCrossRegionSaveDays(Long CrossRegionSaveDays) {
+        this.CrossRegionSaveDays = CrossRegionSaveDays;
     }
 
     public ModifySnapBackupCrossRegionConfigRequest() {
@@ -112,6 +135,9 @@ public class ModifySnapBackupCrossRegionConfigRequest extends AbstractModel {
                 this.CrossRegions[i] = new String(source.CrossRegions[i]);
             }
         }
+        if (source.CrossRegionSaveDays != null) {
+            this.CrossRegionSaveDays = new Long(source.CrossRegionSaveDays);
+        }
     }
 
 
@@ -122,6 +148,7 @@ public class ModifySnapBackupCrossRegionConfigRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
         this.setParamSimple(map, prefix + "CrossRegionsEnable", this.CrossRegionsEnable);
         this.setParamArraySimple(map, prefix + "CrossRegions.", this.CrossRegions);
+        this.setParamSimple(map, prefix + "CrossRegionSaveDays", this.CrossRegionSaveDays);
 
     }
 }

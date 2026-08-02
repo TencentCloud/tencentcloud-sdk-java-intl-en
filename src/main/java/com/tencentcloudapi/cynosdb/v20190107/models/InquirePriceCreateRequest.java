@@ -24,266 +24,302 @@ import java.util.HashMap;
 public class InquirePriceCreateRequest extends AbstractModel {
 
     /**
-    * AZ
+    * <p>Availability zone, each region provision best practice</p>
     */
     @SerializedName("Zone")
     @Expose
     private String Zone;
 
     /**
-    * Number of compute node to purchase
+    * <p>Number of compute nodes to purchase</p>
     */
     @SerializedName("GoodsNum")
     @Expose
     private Long GoodsNum;
 
     /**
-    * Instance type for purchase. Valid values: `PREPAID`, `POSTPAID`, `SERVERLESS`.
+    * <p>Instance purchase type, optional values: PREPAID, POSTPAID, SERVERLESS</p>
     */
     @SerializedName("InstancePayMode")
     @Expose
     private String InstancePayMode;
 
     /**
-    * Storage type for purchase. Valid values: `PREPAID`, `POSTPAID`.
+    * <p>Storage purchase type, optional values: PREPAID, POSTPAID</p>
     */
     @SerializedName("StoragePayMode")
     @Expose
     private String StoragePayMode;
 
     /**
-    * Instance device type. Supported values are as follows:
-- common: indicates the general type
-- exclusive: indicates the exclusive type.
+    * <p>Instance device type. Supported values are as follows:</p><ul><li>common: refers to universal type</li><li>exclusive: refers to dedicated type</li></ul>
     */
     @SerializedName("DeviceType")
     @Expose
     private String DeviceType;
 
     /**
-    * Number of CPU cores, which is required when `InstancePayMode` is `PREPAID` or `POSTPAID`.
+    * <p>Number of CPU cores. Required for PREPAID and POSTPAID instance types.</p>
     */
     @SerializedName("Cpu")
     @Expose
     private Long Cpu;
 
     /**
-    * Memory size in GB, which is required when `InstancePayMode` is `PREPAID` or `POSTPAID`.
+    * <p>Memory size in GB. Required for PREPAID and POSTPAID instance types.</p>
     */
     @SerializedName("Memory")
     @Expose
     private Long Memory;
 
     /**
-    * CCU size, which is required when `InstancePayMode` is `SERVERLESS`.
+    * <p>Ccu size. Required for the serverless type.</p>
     */
     @SerializedName("Ccu")
     @Expose
     private Float Ccu;
 
     /**
-    * Storage size, which is required when `StoragePayMode` is `PREPAID`.
+    * <p>Storage size. Required for PREPAID storage type</p>
     */
     @SerializedName("StorageLimit")
     @Expose
     private Long StorageLimit;
 
     /**
-    * Validity period, which is required when `InstancePayMode` is `PREPAID`.
+    * <p>Purchase period, required for PREPAID purchase type</p>
     */
     @SerializedName("TimeSpan")
     @Expose
     private Long TimeSpan;
 
     /**
-    * Duration unit, which is required when `InstancePayMode` is `PREPAID`. Valid values: `m` (month), `d` (day).
+    * <p>Duration unit. Optional values: m, d. Required for PREPAID purchase type.</p>
     */
     @SerializedName("TimeUnit")
     @Expose
     private String TimeUnit;
 
     /**
-     * Get AZ 
-     * @return Zone AZ
+    * <p>Storage architecture type. Enumeration value: 1.0/2.0 Default value: 1.0</p>
+    */
+    @SerializedName("StorageVersion")
+    @Expose
+    private String StorageVersion;
+
+    /**
+    * <p>Whether storage spans AZs. Valid for storage architecture 2.0</p>
+    */
+    @SerializedName("IsMultiAz")
+    @Expose
+    private Boolean IsMultiAz;
+
+    /**
+     * Get <p>Availability zone, each region provision best practice</p> 
+     * @return Zone <p>Availability zone, each region provision best practice</p>
      */
     public String getZone() {
         return this.Zone;
     }
 
     /**
-     * Set AZ
-     * @param Zone AZ
+     * Set <p>Availability zone, each region provision best practice</p>
+     * @param Zone <p>Availability zone, each region provision best practice</p>
      */
     public void setZone(String Zone) {
         this.Zone = Zone;
     }
 
     /**
-     * Get Number of compute node to purchase 
-     * @return GoodsNum Number of compute node to purchase
+     * Get <p>Number of compute nodes to purchase</p> 
+     * @return GoodsNum <p>Number of compute nodes to purchase</p>
      */
     public Long getGoodsNum() {
         return this.GoodsNum;
     }
 
     /**
-     * Set Number of compute node to purchase
-     * @param GoodsNum Number of compute node to purchase
+     * Set <p>Number of compute nodes to purchase</p>
+     * @param GoodsNum <p>Number of compute nodes to purchase</p>
      */
     public void setGoodsNum(Long GoodsNum) {
         this.GoodsNum = GoodsNum;
     }
 
     /**
-     * Get Instance type for purchase. Valid values: `PREPAID`, `POSTPAID`, `SERVERLESS`. 
-     * @return InstancePayMode Instance type for purchase. Valid values: `PREPAID`, `POSTPAID`, `SERVERLESS`.
+     * Get <p>Instance purchase type, optional values: PREPAID, POSTPAID, SERVERLESS</p> 
+     * @return InstancePayMode <p>Instance purchase type, optional values: PREPAID, POSTPAID, SERVERLESS</p>
      */
     public String getInstancePayMode() {
         return this.InstancePayMode;
     }
 
     /**
-     * Set Instance type for purchase. Valid values: `PREPAID`, `POSTPAID`, `SERVERLESS`.
-     * @param InstancePayMode Instance type for purchase. Valid values: `PREPAID`, `POSTPAID`, `SERVERLESS`.
+     * Set <p>Instance purchase type, optional values: PREPAID, POSTPAID, SERVERLESS</p>
+     * @param InstancePayMode <p>Instance purchase type, optional values: PREPAID, POSTPAID, SERVERLESS</p>
      */
     public void setInstancePayMode(String InstancePayMode) {
         this.InstancePayMode = InstancePayMode;
     }
 
     /**
-     * Get Storage type for purchase. Valid values: `PREPAID`, `POSTPAID`. 
-     * @return StoragePayMode Storage type for purchase. Valid values: `PREPAID`, `POSTPAID`.
+     * Get <p>Storage purchase type, optional values: PREPAID, POSTPAID</p> 
+     * @return StoragePayMode <p>Storage purchase type, optional values: PREPAID, POSTPAID</p>
      */
     public String getStoragePayMode() {
         return this.StoragePayMode;
     }
 
     /**
-     * Set Storage type for purchase. Valid values: `PREPAID`, `POSTPAID`.
-     * @param StoragePayMode Storage type for purchase. Valid values: `PREPAID`, `POSTPAID`.
+     * Set <p>Storage purchase type, optional values: PREPAID, POSTPAID</p>
+     * @param StoragePayMode <p>Storage purchase type, optional values: PREPAID, POSTPAID</p>
      */
     public void setStoragePayMode(String StoragePayMode) {
         this.StoragePayMode = StoragePayMode;
     }
 
     /**
-     * Get Instance device type. Supported values are as follows:
-- common: indicates the general type
-- exclusive: indicates the exclusive type. 
-     * @return DeviceType Instance device type. Supported values are as follows:
-- common: indicates the general type
-- exclusive: indicates the exclusive type.
+     * Get <p>Instance device type. Supported values are as follows:</p><ul><li>common: refers to universal type</li><li>exclusive: refers to dedicated type</li></ul> 
+     * @return DeviceType <p>Instance device type. Supported values are as follows:</p><ul><li>common: refers to universal type</li><li>exclusive: refers to dedicated type</li></ul>
      */
     public String getDeviceType() {
         return this.DeviceType;
     }
 
     /**
-     * Set Instance device type. Supported values are as follows:
-- common: indicates the general type
-- exclusive: indicates the exclusive type.
-     * @param DeviceType Instance device type. Supported values are as follows:
-- common: indicates the general type
-- exclusive: indicates the exclusive type.
+     * Set <p>Instance device type. Supported values are as follows:</p><ul><li>common: refers to universal type</li><li>exclusive: refers to dedicated type</li></ul>
+     * @param DeviceType <p>Instance device type. Supported values are as follows:</p><ul><li>common: refers to universal type</li><li>exclusive: refers to dedicated type</li></ul>
      */
     public void setDeviceType(String DeviceType) {
         this.DeviceType = DeviceType;
     }
 
     /**
-     * Get Number of CPU cores, which is required when `InstancePayMode` is `PREPAID` or `POSTPAID`. 
-     * @return Cpu Number of CPU cores, which is required when `InstancePayMode` is `PREPAID` or `POSTPAID`.
+     * Get <p>Number of CPU cores. Required for PREPAID and POSTPAID instance types.</p> 
+     * @return Cpu <p>Number of CPU cores. Required for PREPAID and POSTPAID instance types.</p>
      */
     public Long getCpu() {
         return this.Cpu;
     }
 
     /**
-     * Set Number of CPU cores, which is required when `InstancePayMode` is `PREPAID` or `POSTPAID`.
-     * @param Cpu Number of CPU cores, which is required when `InstancePayMode` is `PREPAID` or `POSTPAID`.
+     * Set <p>Number of CPU cores. Required for PREPAID and POSTPAID instance types.</p>
+     * @param Cpu <p>Number of CPU cores. Required for PREPAID and POSTPAID instance types.</p>
      */
     public void setCpu(Long Cpu) {
         this.Cpu = Cpu;
     }
 
     /**
-     * Get Memory size in GB, which is required when `InstancePayMode` is `PREPAID` or `POSTPAID`. 
-     * @return Memory Memory size in GB, which is required when `InstancePayMode` is `PREPAID` or `POSTPAID`.
+     * Get <p>Memory size in GB. Required for PREPAID and POSTPAID instance types.</p> 
+     * @return Memory <p>Memory size in GB. Required for PREPAID and POSTPAID instance types.</p>
      */
     public Long getMemory() {
         return this.Memory;
     }
 
     /**
-     * Set Memory size in GB, which is required when `InstancePayMode` is `PREPAID` or `POSTPAID`.
-     * @param Memory Memory size in GB, which is required when `InstancePayMode` is `PREPAID` or `POSTPAID`.
+     * Set <p>Memory size in GB. Required for PREPAID and POSTPAID instance types.</p>
+     * @param Memory <p>Memory size in GB. Required for PREPAID and POSTPAID instance types.</p>
      */
     public void setMemory(Long Memory) {
         this.Memory = Memory;
     }
 
     /**
-     * Get CCU size, which is required when `InstancePayMode` is `SERVERLESS`. 
-     * @return Ccu CCU size, which is required when `InstancePayMode` is `SERVERLESS`.
+     * Get <p>Ccu size. Required for the serverless type.</p> 
+     * @return Ccu <p>Ccu size. Required for the serverless type.</p>
      */
     public Float getCcu() {
         return this.Ccu;
     }
 
     /**
-     * Set CCU size, which is required when `InstancePayMode` is `SERVERLESS`.
-     * @param Ccu CCU size, which is required when `InstancePayMode` is `SERVERLESS`.
+     * Set <p>Ccu size. Required for the serverless type.</p>
+     * @param Ccu <p>Ccu size. Required for the serverless type.</p>
      */
     public void setCcu(Float Ccu) {
         this.Ccu = Ccu;
     }
 
     /**
-     * Get Storage size, which is required when `StoragePayMode` is `PREPAID`. 
-     * @return StorageLimit Storage size, which is required when `StoragePayMode` is `PREPAID`.
+     * Get <p>Storage size. Required for PREPAID storage type</p> 
+     * @return StorageLimit <p>Storage size. Required for PREPAID storage type</p>
      */
     public Long getStorageLimit() {
         return this.StorageLimit;
     }
 
     /**
-     * Set Storage size, which is required when `StoragePayMode` is `PREPAID`.
-     * @param StorageLimit Storage size, which is required when `StoragePayMode` is `PREPAID`.
+     * Set <p>Storage size. Required for PREPAID storage type</p>
+     * @param StorageLimit <p>Storage size. Required for PREPAID storage type</p>
      */
     public void setStorageLimit(Long StorageLimit) {
         this.StorageLimit = StorageLimit;
     }
 
     /**
-     * Get Validity period, which is required when `InstancePayMode` is `PREPAID`. 
-     * @return TimeSpan Validity period, which is required when `InstancePayMode` is `PREPAID`.
+     * Get <p>Purchase period, required for PREPAID purchase type</p> 
+     * @return TimeSpan <p>Purchase period, required for PREPAID purchase type</p>
      */
     public Long getTimeSpan() {
         return this.TimeSpan;
     }
 
     /**
-     * Set Validity period, which is required when `InstancePayMode` is `PREPAID`.
-     * @param TimeSpan Validity period, which is required when `InstancePayMode` is `PREPAID`.
+     * Set <p>Purchase period, required for PREPAID purchase type</p>
+     * @param TimeSpan <p>Purchase period, required for PREPAID purchase type</p>
      */
     public void setTimeSpan(Long TimeSpan) {
         this.TimeSpan = TimeSpan;
     }
 
     /**
-     * Get Duration unit, which is required when `InstancePayMode` is `PREPAID`. Valid values: `m` (month), `d` (day). 
-     * @return TimeUnit Duration unit, which is required when `InstancePayMode` is `PREPAID`. Valid values: `m` (month), `d` (day).
+     * Get <p>Duration unit. Optional values: m, d. Required for PREPAID purchase type.</p> 
+     * @return TimeUnit <p>Duration unit. Optional values: m, d. Required for PREPAID purchase type.</p>
      */
     public String getTimeUnit() {
         return this.TimeUnit;
     }
 
     /**
-     * Set Duration unit, which is required when `InstancePayMode` is `PREPAID`. Valid values: `m` (month), `d` (day).
-     * @param TimeUnit Duration unit, which is required when `InstancePayMode` is `PREPAID`. Valid values: `m` (month), `d` (day).
+     * Set <p>Duration unit. Optional values: m, d. Required for PREPAID purchase type.</p>
+     * @param TimeUnit <p>Duration unit. Optional values: m, d. Required for PREPAID purchase type.</p>
      */
     public void setTimeUnit(String TimeUnit) {
         this.TimeUnit = TimeUnit;
+    }
+
+    /**
+     * Get <p>Storage architecture type. Enumeration value: 1.0/2.0 Default value: 1.0</p> 
+     * @return StorageVersion <p>Storage architecture type. Enumeration value: 1.0/2.0 Default value: 1.0</p>
+     */
+    public String getStorageVersion() {
+        return this.StorageVersion;
+    }
+
+    /**
+     * Set <p>Storage architecture type. Enumeration value: 1.0/2.0 Default value: 1.0</p>
+     * @param StorageVersion <p>Storage architecture type. Enumeration value: 1.0/2.0 Default value: 1.0</p>
+     */
+    public void setStorageVersion(String StorageVersion) {
+        this.StorageVersion = StorageVersion;
+    }
+
+    /**
+     * Get <p>Whether storage spans AZs. Valid for storage architecture 2.0</p> 
+     * @return IsMultiAz <p>Whether storage spans AZs. Valid for storage architecture 2.0</p>
+     */
+    public Boolean getIsMultiAz() {
+        return this.IsMultiAz;
+    }
+
+    /**
+     * Set <p>Whether storage spans AZs. Valid for storage architecture 2.0</p>
+     * @param IsMultiAz <p>Whether storage spans AZs. Valid for storage architecture 2.0</p>
+     */
+    public void setIsMultiAz(Boolean IsMultiAz) {
+        this.IsMultiAz = IsMultiAz;
     }
 
     public InquirePriceCreateRequest() {
@@ -327,6 +363,12 @@ public class InquirePriceCreateRequest extends AbstractModel {
         if (source.TimeUnit != null) {
             this.TimeUnit = new String(source.TimeUnit);
         }
+        if (source.StorageVersion != null) {
+            this.StorageVersion = new String(source.StorageVersion);
+        }
+        if (source.IsMultiAz != null) {
+            this.IsMultiAz = new Boolean(source.IsMultiAz);
+        }
     }
 
 
@@ -345,6 +387,8 @@ public class InquirePriceCreateRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "StorageLimit", this.StorageLimit);
         this.setParamSimple(map, prefix + "TimeSpan", this.TimeSpan);
         this.setParamSimple(map, prefix + "TimeUnit", this.TimeUnit);
+        this.setParamSimple(map, prefix + "StorageVersion", this.StorageVersion);
+        this.setParamSimple(map, prefix + "IsMultiAz", this.IsMultiAz);
 
     }
 }

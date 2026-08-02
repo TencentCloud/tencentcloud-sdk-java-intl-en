@@ -24,233 +24,256 @@ import java.util.HashMap;
 public class BinlogItem extends AbstractModel {
 
     /**
-    * Binlog filename
+    * <p>Binlog filename</p>
     */
     @SerializedName("FileName")
     @Expose
     private String FileName;
 
     /**
-    * File size in bytes
+    * <p>File size, measurement unit: byte</p>
     */
     @SerializedName("FileSize")
     @Expose
     private Long FileSize;
 
     /**
-    * Transaction start time
+    * <p>Earliest transaction time</p>
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * Transaction end time
+    * <p>Latest transaction time</p>
     */
     @SerializedName("FinishTime")
     @Expose
     private String FinishTime;
 
     /**
-    * Binlog file ID
+    * <p>Binlog file ID</p>
     */
     @SerializedName("BinlogId")
     @Expose
     private Long BinlogId;
 
     /**
-    * binlog cross-region coverage
+    * <p>Cross-regional binlog</p>
     */
     @SerializedName("CrossRegions")
     @Expose
     private String [] CrossRegions;
 
     /**
-    * Backup delivery status
+    * <p>Backup delivery status</p>
     */
     @SerializedName("CopyStatus")
     @Expose
     private String CopyStatus;
 
     /**
-    * Safe info
+    * <p>Safe information</p>
     */
     @SerializedName("VaultInfos")
     @Expose
     private VaultInfo [] VaultInfos;
 
     /**
-    * Encryption key
+    * <p>Encryption key</p>
     */
     @SerializedName("EncryptKeyId")
     @Expose
     private String EncryptKeyId;
 
     /**
-    * Encrypt key region
+    * <p>Key region for encryption</p>
     */
     @SerializedName("EncryptRegion")
     @Expose
     private String EncryptRegion;
 
     /**
-     * Get Binlog filename 
-     * @return FileName Binlog filename
+    * <p>Geographical distribution of backups</p>
+    */
+    @SerializedName("ExistRegions")
+    @Expose
+    private BinlogRegionInfo [] ExistRegions;
+
+    /**
+     * Get <p>Binlog filename</p> 
+     * @return FileName <p>Binlog filename</p>
      */
     public String getFileName() {
         return this.FileName;
     }
 
     /**
-     * Set Binlog filename
-     * @param FileName Binlog filename
+     * Set <p>Binlog filename</p>
+     * @param FileName <p>Binlog filename</p>
      */
     public void setFileName(String FileName) {
         this.FileName = FileName;
     }
 
     /**
-     * Get File size in bytes 
-     * @return FileSize File size in bytes
+     * Get <p>File size, measurement unit: byte</p> 
+     * @return FileSize <p>File size, measurement unit: byte</p>
      */
     public Long getFileSize() {
         return this.FileSize;
     }
 
     /**
-     * Set File size in bytes
-     * @param FileSize File size in bytes
+     * Set <p>File size, measurement unit: byte</p>
+     * @param FileSize <p>File size, measurement unit: byte</p>
      */
     public void setFileSize(Long FileSize) {
         this.FileSize = FileSize;
     }
 
     /**
-     * Get Transaction start time 
-     * @return StartTime Transaction start time
+     * Get <p>Earliest transaction time</p> 
+     * @return StartTime <p>Earliest transaction time</p>
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set Transaction start time
-     * @param StartTime Transaction start time
+     * Set <p>Earliest transaction time</p>
+     * @param StartTime <p>Earliest transaction time</p>
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get Transaction end time 
-     * @return FinishTime Transaction end time
+     * Get <p>Latest transaction time</p> 
+     * @return FinishTime <p>Latest transaction time</p>
      */
     public String getFinishTime() {
         return this.FinishTime;
     }
 
     /**
-     * Set Transaction end time
-     * @param FinishTime Transaction end time
+     * Set <p>Latest transaction time</p>
+     * @param FinishTime <p>Latest transaction time</p>
      */
     public void setFinishTime(String FinishTime) {
         this.FinishTime = FinishTime;
     }
 
     /**
-     * Get Binlog file ID 
-     * @return BinlogId Binlog file ID
+     * Get <p>Binlog file ID</p> 
+     * @return BinlogId <p>Binlog file ID</p>
      */
     public Long getBinlogId() {
         return this.BinlogId;
     }
 
     /**
-     * Set Binlog file ID
-     * @param BinlogId Binlog file ID
+     * Set <p>Binlog file ID</p>
+     * @param BinlogId <p>Binlog file ID</p>
      */
     public void setBinlogId(Long BinlogId) {
         this.BinlogId = BinlogId;
     }
 
     /**
-     * Get binlog cross-region coverage 
-     * @return CrossRegions binlog cross-region coverage
+     * Get <p>Cross-regional binlog</p> 
+     * @return CrossRegions <p>Cross-regional binlog</p>
      */
     public String [] getCrossRegions() {
         return this.CrossRegions;
     }
 
     /**
-     * Set binlog cross-region coverage
-     * @param CrossRegions binlog cross-region coverage
+     * Set <p>Cross-regional binlog</p>
+     * @param CrossRegions <p>Cross-regional binlog</p>
      */
     public void setCrossRegions(String [] CrossRegions) {
         this.CrossRegions = CrossRegions;
     }
 
     /**
-     * Get Backup delivery status 
-     * @return CopyStatus Backup delivery status
+     * Get <p>Backup delivery status</p> 
+     * @return CopyStatus <p>Backup delivery status</p>
      */
     public String getCopyStatus() {
         return this.CopyStatus;
     }
 
     /**
-     * Set Backup delivery status
-     * @param CopyStatus Backup delivery status
+     * Set <p>Backup delivery status</p>
+     * @param CopyStatus <p>Backup delivery status</p>
      */
     public void setCopyStatus(String CopyStatus) {
         this.CopyStatus = CopyStatus;
     }
 
     /**
-     * Get Safe info 
-     * @return VaultInfos Safe info
+     * Get <p>Safe information</p> 
+     * @return VaultInfos <p>Safe information</p>
      */
     public VaultInfo [] getVaultInfos() {
         return this.VaultInfos;
     }
 
     /**
-     * Set Safe info
-     * @param VaultInfos Safe info
+     * Set <p>Safe information</p>
+     * @param VaultInfos <p>Safe information</p>
      */
     public void setVaultInfos(VaultInfo [] VaultInfos) {
         this.VaultInfos = VaultInfos;
     }
 
     /**
-     * Get Encryption key 
-     * @return EncryptKeyId Encryption key
+     * Get <p>Encryption key</p> 
+     * @return EncryptKeyId <p>Encryption key</p>
      */
     public String getEncryptKeyId() {
         return this.EncryptKeyId;
     }
 
     /**
-     * Set Encryption key
-     * @param EncryptKeyId Encryption key
+     * Set <p>Encryption key</p>
+     * @param EncryptKeyId <p>Encryption key</p>
      */
     public void setEncryptKeyId(String EncryptKeyId) {
         this.EncryptKeyId = EncryptKeyId;
     }
 
     /**
-     * Get Encrypt key region 
-     * @return EncryptRegion Encrypt key region
+     * Get <p>Key region for encryption</p> 
+     * @return EncryptRegion <p>Key region for encryption</p>
      */
     public String getEncryptRegion() {
         return this.EncryptRegion;
     }
 
     /**
-     * Set Encrypt key region
-     * @param EncryptRegion Encrypt key region
+     * Set <p>Key region for encryption</p>
+     * @param EncryptRegion <p>Key region for encryption</p>
      */
     public void setEncryptRegion(String EncryptRegion) {
         this.EncryptRegion = EncryptRegion;
+    }
+
+    /**
+     * Get <p>Geographical distribution of backups</p> 
+     * @return ExistRegions <p>Geographical distribution of backups</p>
+     */
+    public BinlogRegionInfo [] getExistRegions() {
+        return this.ExistRegions;
+    }
+
+    /**
+     * Set <p>Geographical distribution of backups</p>
+     * @param ExistRegions <p>Geographical distribution of backups</p>
+     */
+    public void setExistRegions(BinlogRegionInfo [] ExistRegions) {
+        this.ExistRegions = ExistRegions;
     }
 
     public BinlogItem() {
@@ -297,6 +320,12 @@ public class BinlogItem extends AbstractModel {
         if (source.EncryptRegion != null) {
             this.EncryptRegion = new String(source.EncryptRegion);
         }
+        if (source.ExistRegions != null) {
+            this.ExistRegions = new BinlogRegionInfo[source.ExistRegions.length];
+            for (int i = 0; i < source.ExistRegions.length; i++) {
+                this.ExistRegions[i] = new BinlogRegionInfo(source.ExistRegions[i]);
+            }
+        }
     }
 
 
@@ -314,6 +343,7 @@ public class BinlogItem extends AbstractModel {
         this.setParamArrayObj(map, prefix + "VaultInfos.", this.VaultInfos);
         this.setParamSimple(map, prefix + "EncryptKeyId", this.EncryptKeyId);
         this.setParamSimple(map, prefix + "EncryptRegion", this.EncryptRegion);
+        this.setParamArrayObj(map, prefix + "ExistRegions.", this.ExistRegions);
 
     }
 }

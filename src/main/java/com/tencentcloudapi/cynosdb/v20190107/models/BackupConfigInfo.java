@@ -24,28 +24,28 @@ import java.util.HashMap;
 public class BackupConfigInfo extends AbstractModel {
 
     /**
-    * System automation time.
+    * <p>System automation time</p>
     */
     @SerializedName("BackupCustomAutoTime")
     @Expose
     private Boolean BackupCustomAutoTime;
 
     /**
-    * Indicates the full backup start time. value range: [0-24*3600]. for example, 0:00, 1:00, and 2:00 are 0, 3600, and 7200 respectively.
+    * <p>Indicates the full backup start time, [0-24*3600]. For example, 0:00, 1:00, and 2:00 are 0, 3600, and 7200 respectively.</p>
     */
     @SerializedName("BackupTimeBeg")
     @Expose
     private Long BackupTimeBeg;
 
     /**
-    * Indicates the full backup end time. value range: [0-24*3600]. for example, 0:00, 1:00, and 2:00 are 0, 3600, and 7200 respectively.
+    * <p>Indicates the full backup end time, [0-24*3600]. For example, 0:00, 1:00, and 2:00 are 0, 3600, and 7200 respectively.</p>
     */
     @SerializedName("BackupTimeEnd")
     @Expose
     private Long BackupTimeEnd;
 
     /**
-    * Currently this parameter cannot be modified. no need to specify. backup frequency is an array of length 7, corresponding to the backup method from sunday to saturday, full for full backup and increment for incremental backup.
+    * <p>This parameter currently does not support modification and is not required. Backup frequency is an array of length 7, corresponding to the backup method from Sunday to Saturday, full-full backup, increment-incremental backup.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("BackupWeekDays")
@@ -53,30 +53,28 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String [] BackupWeekDays;
 
     /**
-    * Interval.
+    * <p>Interval</p>
     */
     @SerializedName("BackupIntervalTime")
     @Expose
     private Long BackupIntervalTime;
 
     /**
-    * Indicates the backup retention period in seconds. data will be cleaned up longer than this time. 7 days means 3600247=604800. the maximum is 158112000.
+    * <p>Indicates the backup retention period in seconds. Backups will be cleaned up longer than this time. 7 days means 3600*24*7=604800. The maximum value is 158112000.</p>
     */
     @SerializedName("ReserveDuration")
     @Expose
     private Long ReserveDuration;
 
     /**
-    * Enable cross-region backup.
-Enable.
-0: disabled.
+    * <p>Cross-region backup enabled<br>yes-Enable<br>no-Disable</p>
     */
     @SerializedName("CrossRegionsEnable")
     @Expose
     private String CrossRegionsEnable;
 
     /**
-    * Cross-Regional backup region.
+    * <p>Cross-regional backup region</p>
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("CrossRegions")
@@ -84,71 +82,78 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String [] CrossRegions;
 
     /**
-    * Automatic data backup trigger policy, periodically: automatic periodic backup, frequent: high-frequency backup
+    * <p>Cross-region backup retention period</p><p>Unit: Day</p>
+    */
+    @SerializedName("CrossRegionSaveDays")
+    @Expose
+    private Long CrossRegionSaveDays;
+
+    /**
+    * <p>Automatic data backup trigger policy, periodically: automatic periodic backup, frequent: high frequency backup</p>
     */
     @SerializedName("BackupTriggerStrategy")
     @Expose
     private String BackupTriggerStrategy;
 
     /**
-    * Backup delivery relationship
+    * <p>Backup delivery relationship</p>
     */
     @SerializedName("AutoCopyVaults")
     @Expose
     private CreateBackupVaultItem [] AutoCopyVaults;
 
     /**
-     * Get System automation time. 
-     * @return BackupCustomAutoTime System automation time.
+     * Get <p>System automation time</p> 
+     * @return BackupCustomAutoTime <p>System automation time</p>
      */
     public Boolean getBackupCustomAutoTime() {
         return this.BackupCustomAutoTime;
     }
 
     /**
-     * Set System automation time.
-     * @param BackupCustomAutoTime System automation time.
+     * Set <p>System automation time</p>
+     * @param BackupCustomAutoTime <p>System automation time</p>
      */
     public void setBackupCustomAutoTime(Boolean BackupCustomAutoTime) {
         this.BackupCustomAutoTime = BackupCustomAutoTime;
     }
 
     /**
-     * Get Indicates the full backup start time. value range: [0-24*3600]. for example, 0:00, 1:00, and 2:00 are 0, 3600, and 7200 respectively. 
-     * @return BackupTimeBeg Indicates the full backup start time. value range: [0-24*3600]. for example, 0:00, 1:00, and 2:00 are 0, 3600, and 7200 respectively.
+     * Get <p>Indicates the full backup start time, [0-24*3600]. For example, 0:00, 1:00, and 2:00 are 0, 3600, and 7200 respectively.</p> 
+     * @return BackupTimeBeg <p>Indicates the full backup start time, [0-24*3600]. For example, 0:00, 1:00, and 2:00 are 0, 3600, and 7200 respectively.</p>
      */
     public Long getBackupTimeBeg() {
         return this.BackupTimeBeg;
     }
 
     /**
-     * Set Indicates the full backup start time. value range: [0-24*3600]. for example, 0:00, 1:00, and 2:00 are 0, 3600, and 7200 respectively.
-     * @param BackupTimeBeg Indicates the full backup start time. value range: [0-24*3600]. for example, 0:00, 1:00, and 2:00 are 0, 3600, and 7200 respectively.
+     * Set <p>Indicates the full backup start time, [0-24*3600]. For example, 0:00, 1:00, and 2:00 are 0, 3600, and 7200 respectively.</p>
+     * @param BackupTimeBeg <p>Indicates the full backup start time, [0-24*3600]. For example, 0:00, 1:00, and 2:00 are 0, 3600, and 7200 respectively.</p>
      */
     public void setBackupTimeBeg(Long BackupTimeBeg) {
         this.BackupTimeBeg = BackupTimeBeg;
     }
 
     /**
-     * Get Indicates the full backup end time. value range: [0-24*3600]. for example, 0:00, 1:00, and 2:00 are 0, 3600, and 7200 respectively. 
-     * @return BackupTimeEnd Indicates the full backup end time. value range: [0-24*3600]. for example, 0:00, 1:00, and 2:00 are 0, 3600, and 7200 respectively.
+     * Get <p>Indicates the full backup end time, [0-24*3600]. For example, 0:00, 1:00, and 2:00 are 0, 3600, and 7200 respectively.</p> 
+     * @return BackupTimeEnd <p>Indicates the full backup end time, [0-24*3600]. For example, 0:00, 1:00, and 2:00 are 0, 3600, and 7200 respectively.</p>
      */
     public Long getBackupTimeEnd() {
         return this.BackupTimeEnd;
     }
 
     /**
-     * Set Indicates the full backup end time. value range: [0-24*3600]. for example, 0:00, 1:00, and 2:00 are 0, 3600, and 7200 respectively.
-     * @param BackupTimeEnd Indicates the full backup end time. value range: [0-24*3600]. for example, 0:00, 1:00, and 2:00 are 0, 3600, and 7200 respectively.
+     * Set <p>Indicates the full backup end time, [0-24*3600]. For example, 0:00, 1:00, and 2:00 are 0, 3600, and 7200 respectively.</p>
+     * @param BackupTimeEnd <p>Indicates the full backup end time, [0-24*3600]. For example, 0:00, 1:00, and 2:00 are 0, 3600, and 7200 respectively.</p>
      */
     public void setBackupTimeEnd(Long BackupTimeEnd) {
         this.BackupTimeEnd = BackupTimeEnd;
     }
 
     /**
-     * Get Currently this parameter cannot be modified. no need to specify. backup frequency is an array of length 7, corresponding to the backup method from sunday to saturday, full for full backup and increment for incremental backup.
+     * Get <p>This parameter currently does not support modification and is not required. Backup frequency is an array of length 7, corresponding to the backup method from Sunday to Saturday, full-full backup, increment-incremental backup.</p>
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return BackupWeekDays Currently this parameter cannot be modified. no need to specify. backup frequency is an array of length 7, corresponding to the backup method from sunday to saturday, full for full backup and increment for incremental backup.
+     * @return BackupWeekDays <p>This parameter currently does not support modification and is not required. Backup frequency is an array of length 7, corresponding to the backup method from Sunday to Saturday, full-full backup, increment-incremental backup.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String [] getBackupWeekDays() {
@@ -156,9 +161,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Currently this parameter cannot be modified. no need to specify. backup frequency is an array of length 7, corresponding to the backup method from sunday to saturday, full for full backup and increment for incremental backup.
+     * Set <p>This parameter currently does not support modification and is not required. Backup frequency is an array of length 7, corresponding to the backup method from Sunday to Saturday, full-full backup, increment-incremental backup.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param BackupWeekDays Currently this parameter cannot be modified. no need to specify. backup frequency is an array of length 7, corresponding to the backup method from sunday to saturday, full for full backup and increment for incremental backup.
+     * @param BackupWeekDays <p>This parameter currently does not support modification and is not required. Backup frequency is an array of length 7, corresponding to the backup method from Sunday to Saturday, full-full backup, increment-incremental backup.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setBackupWeekDays(String [] BackupWeekDays) {
@@ -166,65 +171,57 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Interval. 
-     * @return BackupIntervalTime Interval.
+     * Get <p>Interval</p> 
+     * @return BackupIntervalTime <p>Interval</p>
      */
     public Long getBackupIntervalTime() {
         return this.BackupIntervalTime;
     }
 
     /**
-     * Set Interval.
-     * @param BackupIntervalTime Interval.
+     * Set <p>Interval</p>
+     * @param BackupIntervalTime <p>Interval</p>
      */
     public void setBackupIntervalTime(Long BackupIntervalTime) {
         this.BackupIntervalTime = BackupIntervalTime;
     }
 
     /**
-     * Get Indicates the backup retention period in seconds. data will be cleaned up longer than this time. 7 days means 3600247=604800. the maximum is 158112000. 
-     * @return ReserveDuration Indicates the backup retention period in seconds. data will be cleaned up longer than this time. 7 days means 3600247=604800. the maximum is 158112000.
+     * Get <p>Indicates the backup retention period in seconds. Backups will be cleaned up longer than this time. 7 days means 3600*24*7=604800. The maximum value is 158112000.</p> 
+     * @return ReserveDuration <p>Indicates the backup retention period in seconds. Backups will be cleaned up longer than this time. 7 days means 3600*24*7=604800. The maximum value is 158112000.</p>
      */
     public Long getReserveDuration() {
         return this.ReserveDuration;
     }
 
     /**
-     * Set Indicates the backup retention period in seconds. data will be cleaned up longer than this time. 7 days means 3600247=604800. the maximum is 158112000.
-     * @param ReserveDuration Indicates the backup retention period in seconds. data will be cleaned up longer than this time. 7 days means 3600247=604800. the maximum is 158112000.
+     * Set <p>Indicates the backup retention period in seconds. Backups will be cleaned up longer than this time. 7 days means 3600*24*7=604800. The maximum value is 158112000.</p>
+     * @param ReserveDuration <p>Indicates the backup retention period in seconds. Backups will be cleaned up longer than this time. 7 days means 3600*24*7=604800. The maximum value is 158112000.</p>
      */
     public void setReserveDuration(Long ReserveDuration) {
         this.ReserveDuration = ReserveDuration;
     }
 
     /**
-     * Get Enable cross-region backup.
-Enable.
-0: disabled. 
-     * @return CrossRegionsEnable Enable cross-region backup.
-Enable.
-0: disabled.
+     * Get <p>Cross-region backup enabled<br>yes-Enable<br>no-Disable</p> 
+     * @return CrossRegionsEnable <p>Cross-region backup enabled<br>yes-Enable<br>no-Disable</p>
      */
     public String getCrossRegionsEnable() {
         return this.CrossRegionsEnable;
     }
 
     /**
-     * Set Enable cross-region backup.
-Enable.
-0: disabled.
-     * @param CrossRegionsEnable Enable cross-region backup.
-Enable.
-0: disabled.
+     * Set <p>Cross-region backup enabled<br>yes-Enable<br>no-Disable</p>
+     * @param CrossRegionsEnable <p>Cross-region backup enabled<br>yes-Enable<br>no-Disable</p>
      */
     public void setCrossRegionsEnable(String CrossRegionsEnable) {
         this.CrossRegionsEnable = CrossRegionsEnable;
     }
 
     /**
-     * Get Cross-Regional backup region.
+     * Get <p>Cross-regional backup region</p>
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return CrossRegions Cross-Regional backup region.
+     * @return CrossRegions <p>Cross-regional backup region</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String [] getCrossRegions() {
@@ -232,9 +229,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Cross-Regional backup region.
+     * Set <p>Cross-regional backup region</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param CrossRegions Cross-Regional backup region.
+     * @param CrossRegions <p>Cross-regional backup region</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setCrossRegions(String [] CrossRegions) {
@@ -242,32 +239,48 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Automatic data backup trigger policy, periodically: automatic periodic backup, frequent: high-frequency backup 
-     * @return BackupTriggerStrategy Automatic data backup trigger policy, periodically: automatic periodic backup, frequent: high-frequency backup
+     * Get <p>Cross-region backup retention period</p><p>Unit: Day</p> 
+     * @return CrossRegionSaveDays <p>Cross-region backup retention period</p><p>Unit: Day</p>
+     */
+    public Long getCrossRegionSaveDays() {
+        return this.CrossRegionSaveDays;
+    }
+
+    /**
+     * Set <p>Cross-region backup retention period</p><p>Unit: Day</p>
+     * @param CrossRegionSaveDays <p>Cross-region backup retention period</p><p>Unit: Day</p>
+     */
+    public void setCrossRegionSaveDays(Long CrossRegionSaveDays) {
+        this.CrossRegionSaveDays = CrossRegionSaveDays;
+    }
+
+    /**
+     * Get <p>Automatic data backup trigger policy, periodically: automatic periodic backup, frequent: high frequency backup</p> 
+     * @return BackupTriggerStrategy <p>Automatic data backup trigger policy, periodically: automatic periodic backup, frequent: high frequency backup</p>
      */
     public String getBackupTriggerStrategy() {
         return this.BackupTriggerStrategy;
     }
 
     /**
-     * Set Automatic data backup trigger policy, periodically: automatic periodic backup, frequent: high-frequency backup
-     * @param BackupTriggerStrategy Automatic data backup trigger policy, periodically: automatic periodic backup, frequent: high-frequency backup
+     * Set <p>Automatic data backup trigger policy, periodically: automatic periodic backup, frequent: high frequency backup</p>
+     * @param BackupTriggerStrategy <p>Automatic data backup trigger policy, periodically: automatic periodic backup, frequent: high frequency backup</p>
      */
     public void setBackupTriggerStrategy(String BackupTriggerStrategy) {
         this.BackupTriggerStrategy = BackupTriggerStrategy;
     }
 
     /**
-     * Get Backup delivery relationship 
-     * @return AutoCopyVaults Backup delivery relationship
+     * Get <p>Backup delivery relationship</p> 
+     * @return AutoCopyVaults <p>Backup delivery relationship</p>
      */
     public CreateBackupVaultItem [] getAutoCopyVaults() {
         return this.AutoCopyVaults;
     }
 
     /**
-     * Set Backup delivery relationship
-     * @param AutoCopyVaults Backup delivery relationship
+     * Set <p>Backup delivery relationship</p>
+     * @param AutoCopyVaults <p>Backup delivery relationship</p>
      */
     public void setAutoCopyVaults(CreateBackupVaultItem [] AutoCopyVaults) {
         this.AutoCopyVaults = AutoCopyVaults;
@@ -311,6 +324,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 this.CrossRegions[i] = new String(source.CrossRegions[i]);
             }
         }
+        if (source.CrossRegionSaveDays != null) {
+            this.CrossRegionSaveDays = new Long(source.CrossRegionSaveDays);
+        }
         if (source.BackupTriggerStrategy != null) {
             this.BackupTriggerStrategy = new String(source.BackupTriggerStrategy);
         }
@@ -335,6 +351,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "ReserveDuration", this.ReserveDuration);
         this.setParamSimple(map, prefix + "CrossRegionsEnable", this.CrossRegionsEnable);
         this.setParamArraySimple(map, prefix + "CrossRegions.", this.CrossRegions);
+        this.setParamSimple(map, prefix + "CrossRegionSaveDays", this.CrossRegionSaveDays);
         this.setParamSimple(map, prefix + "BackupTriggerStrategy", this.BackupTriggerStrategy);
         this.setParamArrayObj(map, prefix + "AutoCopyVaults.", this.AutoCopyVaults);
 
