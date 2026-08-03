@@ -24,115 +24,115 @@ import java.util.HashMap;
 public class CreateDatahubTopicRequest extends AbstractModel {
 
     /**
-    * Name, a string of no more than 128 characters, must start with "AppId-" and can contain letters, digits, and hyphens (-).
+    * <p>Name is a string of no more than 128 characters, must start with "AppId-", and the remaining part can contain letters, digits, and hyphens (-). It can be queried through the API DescribeAppInfo.</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * Number of partitions, which should be greater than 0.
+    * <p>Number of partitions, maximum value is 500, larger than 0</p>
     */
     @SerializedName("PartitionNum")
     @Expose
     private Long PartitionNum;
 
     /**
-    * Message retention period in milliseconds. The current minimum value is 60,000 ms.
+    * <p>Message retention period in milliseconds. Current min value is 60000 ms.</p>
     */
     @SerializedName("RetentionMs")
     @Expose
     private Long RetentionMs;
 
     /**
-    * Topic remarks, which are a string of up to 128 characters. It can contain letters, digits, and hyphens (-) and must start with a letter.
+    * <p>Topic remark is a string of no more than 64 characters, which can contain letters, digits, and hyphens (-).</p>
     */
     @SerializedName("Note")
     @Expose
     private String Note;
 
     /**
-    * Tag list
+    * <p>Tag list</p>
     */
     @SerializedName("Tags")
     @Expose
     private Tag [] Tags;
 
     /**
-     * Get Name, a string of no more than 128 characters, must start with "AppId-" and can contain letters, digits, and hyphens (-). 
-     * @return Name Name, a string of no more than 128 characters, must start with "AppId-" and can contain letters, digits, and hyphens (-).
+     * Get <p>Name is a string of no more than 128 characters, must start with "AppId-", and the remaining part can contain letters, digits, and hyphens (-). It can be queried through the API DescribeAppInfo.</p> 
+     * @return Name <p>Name is a string of no more than 128 characters, must start with "AppId-", and the remaining part can contain letters, digits, and hyphens (-). It can be queried through the API DescribeAppInfo.</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Name, a string of no more than 128 characters, must start with "AppId-" and can contain letters, digits, and hyphens (-).
-     * @param Name Name, a string of no more than 128 characters, must start with "AppId-" and can contain letters, digits, and hyphens (-).
+     * Set <p>Name is a string of no more than 128 characters, must start with "AppId-", and the remaining part can contain letters, digits, and hyphens (-). It can be queried through the API DescribeAppInfo.</p>
+     * @param Name <p>Name is a string of no more than 128 characters, must start with "AppId-", and the remaining part can contain letters, digits, and hyphens (-). It can be queried through the API DescribeAppInfo.</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get Number of partitions, which should be greater than 0. 
-     * @return PartitionNum Number of partitions, which should be greater than 0.
+     * Get <p>Number of partitions, maximum value is 500, larger than 0</p> 
+     * @return PartitionNum <p>Number of partitions, maximum value is 500, larger than 0</p>
      */
     public Long getPartitionNum() {
         return this.PartitionNum;
     }
 
     /**
-     * Set Number of partitions, which should be greater than 0.
-     * @param PartitionNum Number of partitions, which should be greater than 0.
+     * Set <p>Number of partitions, maximum value is 500, larger than 0</p>
+     * @param PartitionNum <p>Number of partitions, maximum value is 500, larger than 0</p>
      */
     public void setPartitionNum(Long PartitionNum) {
         this.PartitionNum = PartitionNum;
     }
 
     /**
-     * Get Message retention period in milliseconds. The current minimum value is 60,000 ms. 
-     * @return RetentionMs Message retention period in milliseconds. The current minimum value is 60,000 ms.
+     * Get <p>Message retention period in milliseconds. Current min value is 60000 ms.</p> 
+     * @return RetentionMs <p>Message retention period in milliseconds. Current min value is 60000 ms.</p>
      */
     public Long getRetentionMs() {
         return this.RetentionMs;
     }
 
     /**
-     * Set Message retention period in milliseconds. The current minimum value is 60,000 ms.
-     * @param RetentionMs Message retention period in milliseconds. The current minimum value is 60,000 ms.
+     * Set <p>Message retention period in milliseconds. Current min value is 60000 ms.</p>
+     * @param RetentionMs <p>Message retention period in milliseconds. Current min value is 60000 ms.</p>
      */
     public void setRetentionMs(Long RetentionMs) {
         this.RetentionMs = RetentionMs;
     }
 
     /**
-     * Get Topic remarks, which are a string of up to 128 characters. It can contain letters, digits, and hyphens (-) and must start with a letter. 
-     * @return Note Topic remarks, which are a string of up to 128 characters. It can contain letters, digits, and hyphens (-) and must start with a letter.
+     * Get <p>Topic remark is a string of no more than 64 characters, which can contain letters, digits, and hyphens (-).</p> 
+     * @return Note <p>Topic remark is a string of no more than 64 characters, which can contain letters, digits, and hyphens (-).</p>
      */
     public String getNote() {
         return this.Note;
     }
 
     /**
-     * Set Topic remarks, which are a string of up to 128 characters. It can contain letters, digits, and hyphens (-) and must start with a letter.
-     * @param Note Topic remarks, which are a string of up to 128 characters. It can contain letters, digits, and hyphens (-) and must start with a letter.
+     * Set <p>Topic remark is a string of no more than 64 characters, which can contain letters, digits, and hyphens (-).</p>
+     * @param Note <p>Topic remark is a string of no more than 64 characters, which can contain letters, digits, and hyphens (-).</p>
      */
     public void setNote(String Note) {
         this.Note = Note;
     }
 
     /**
-     * Get Tag list 
-     * @return Tags Tag list
+     * Get <p>Tag list</p> 
+     * @return Tags <p>Tag list</p>
      */
     public Tag [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set Tag list
-     * @param Tags Tag list
+     * Set <p>Tag list</p>
+     * @param Tags <p>Tag list</p>
      */
     public void setTags(Tag [] Tags) {
         this.Tags = Tags;

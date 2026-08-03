@@ -50,6 +50,17 @@ public class CfwClient extends AbstractClient{
     }
 
     /**
+     *Add one or more Internet Boundary Access Control Rules.
+     * @param req AddAclRuleRequest
+     * @return AddAclRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public AddAclRuleResponse AddAclRule(AddAclRuleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "AddAclRule", AddAclRuleResponse.class);
+    }
+
+    /**
      *This API is used to create enterprise security group rules (new).
      * @param req AddEnterpriseSecurityGroupRulesRequest
      * @return AddEnterpriseSecurityGroupRulesResponse
@@ -224,6 +235,28 @@ public class CfwClient extends AbstractClient{
     public DescribeBlockStaticListResponse DescribeBlockStaticList(DescribeBlockStaticListRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeBlockStaticList", DescribeBlockStaticListResponse.class);
+    }
+
+    /**
+     *This API is used to query the firewall log of the current tenant. Only use HasMore/NextToken in Response.Data to paginate.
+     * @param req DescribeCfwLogsRequest
+     * @return DescribeCfwLogsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCfwLogsResponse DescribeCfwLogs(DescribeCfwLogsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCfwLogs", DescribeCfwLogsResponse.class);
+    }
+
+    /**
+     *Query status monitoring scenario. Op=describe_scene is used to detect available scenarios, metrics, perspectives, and secondary dropdown available_options. Op=fetch_scene is used to pull specific scenario snapshots, with results in the JSON string of Response.Data.
+     * @param req DescribeCfwStatusMonitorRequest
+     * @return DescribeCfwStatusMonitorResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCfwStatusMonitorResponse DescribeCfwStatusMonitor(DescribeCfwStatusMonitorRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCfwStatusMonitor", DescribeCfwStatusMonitorResponse.class);
     }
 
     /**

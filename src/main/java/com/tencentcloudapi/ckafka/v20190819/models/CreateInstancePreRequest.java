@@ -38,7 +38,7 @@ public class CreateInstancePreRequest extends AbstractModel {
     private Long ZoneId;
 
     /**
-    * <P>Specifies the prepaid purchase duration, such as "1m" (exactly one month). value ranges from 1m to 36m.</p>.
+    * <p>Prepaid purchase duration, for example "1m", exactly one month, value ranges from 1m to 36m.</p>
     */
     @SerializedName("Period")
     @Expose
@@ -94,7 +94,7 @@ public class CreateInstancePreRequest extends AbstractModel {
     private String KafkaVersion;
 
     /**
-    * <P>Instance type. specifies "standard" for standard edition instance (default), "profession" for professional edition instance, "premium" for advanced edition instance.</p>.
+    * <p>Instance type: Fill in "standard" for [standard edition instance] (default), "profession" for [professional edition instance], and "premium" for [Advanced Edition Instance].</p>
     */
     @SerializedName("SpecificationsType")
     @Expose
@@ -129,7 +129,7 @@ public class CreateInstancePreRequest extends AbstractModel {
     private Tag [] Tags;
 
     /**
-    * <p>Specifies the instance disk type for pro edition/advanced edition. standard edition instances do not require this field. valid values: "CLOUD_SSD" (SSD CLOUD disk), "CLOUD_BASIC" (high-performance CLOUD block storage). default value: "CLOUD_BASIC".</p>.
+    * <p>Instance disk type for Pro Edition/Advanced Edition instances. You do not need to fill it in for Standard Edition instances. "CLOUD_SSD": SSD CLOUD disk; "CLOUD_BASIC": high-performance CLOUD block storage. Defaults to "CLOUD_BASIC" if not specified.</p>
     */
     @SerializedName("DiskType")
     @Expose
@@ -185,6 +185,13 @@ public class CreateInstancePreRequest extends AbstractModel {
     private String CustomSSLCertId;
 
     /**
+    * <p>Elastic storage switch</p><p>Enumeration value:</p><ul><li>0: Turn off</li><li>1: Turn on</li></ul><p>Default value: 0</p>
+    */
+    @SerializedName("StoreQuantityType")
+    @Expose
+    private Long StoreQuantityType;
+
+    /**
      * Get <p>Specifies the Name of the ckafka cluster instance, which is any string with a length not more than 128 characters.</p>. 
      * @return InstanceName <p>Specifies the Name of the ckafka cluster instance, which is any string with a length not more than 128 characters.</p>.
      */
@@ -217,16 +224,16 @@ public class CreateInstancePreRequest extends AbstractModel {
     }
 
     /**
-     * Get <P>Specifies the prepaid purchase duration, such as "1m" (exactly one month). value ranges from 1m to 36m.</p>. 
-     * @return Period <P>Specifies the prepaid purchase duration, such as "1m" (exactly one month). value ranges from 1m to 36m.</p>.
+     * Get <p>Prepaid purchase duration, for example "1m", exactly one month, value ranges from 1m to 36m.</p> 
+     * @return Period <p>Prepaid purchase duration, for example "1m", exactly one month, value ranges from 1m to 36m.</p>
      */
     public String getPeriod() {
         return this.Period;
     }
 
     /**
-     * Set <P>Specifies the prepaid purchase duration, such as "1m" (exactly one month). value ranges from 1m to 36m.</p>.
-     * @param Period <P>Specifies the prepaid purchase duration, such as "1m" (exactly one month). value ranges from 1m to 36m.</p>.
+     * Set <p>Prepaid purchase duration, for example "1m", exactly one month, value ranges from 1m to 36m.</p>
+     * @param Period <p>Prepaid purchase duration, for example "1m", exactly one month, value ranges from 1m to 36m.</p>
      */
     public void setPeriod(String Period) {
         this.Period = Period;
@@ -345,16 +352,16 @@ public class CreateInstancePreRequest extends AbstractModel {
     }
 
     /**
-     * Get <P>Instance type. specifies "standard" for standard edition instance (default), "profession" for professional edition instance, "premium" for advanced edition instance.</p>. 
-     * @return SpecificationsType <P>Instance type. specifies "standard" for standard edition instance (default), "profession" for professional edition instance, "premium" for advanced edition instance.</p>.
+     * Get <p>Instance type: Fill in "standard" for [standard edition instance] (default), "profession" for [professional edition instance], and "premium" for [Advanced Edition Instance].</p> 
+     * @return SpecificationsType <p>Instance type: Fill in "standard" for [standard edition instance] (default), "profession" for [professional edition instance], and "premium" for [Advanced Edition Instance].</p>
      */
     public String getSpecificationsType() {
         return this.SpecificationsType;
     }
 
     /**
-     * Set <P>Instance type. specifies "standard" for standard edition instance (default), "profession" for professional edition instance, "premium" for advanced edition instance.</p>.
-     * @param SpecificationsType <P>Instance type. specifies "standard" for standard edition instance (default), "profession" for professional edition instance, "premium" for advanced edition instance.</p>.
+     * Set <p>Instance type: Fill in "standard" for [standard edition instance] (default), "profession" for [professional edition instance], and "premium" for [Advanced Edition Instance].</p>
+     * @param SpecificationsType <p>Instance type: Fill in "standard" for [standard edition instance] (default), "profession" for [professional edition instance], and "premium" for [Advanced Edition Instance].</p>
      */
     public void setSpecificationsType(String SpecificationsType) {
         this.SpecificationsType = SpecificationsType;
@@ -425,16 +432,16 @@ public class CreateInstancePreRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>Specifies the instance disk type for pro edition/advanced edition. standard edition instances do not require this field. valid values: "CLOUD_SSD" (SSD CLOUD disk), "CLOUD_BASIC" (high-performance CLOUD block storage). default value: "CLOUD_BASIC".</p>. 
-     * @return DiskType <p>Specifies the instance disk type for pro edition/advanced edition. standard edition instances do not require this field. valid values: "CLOUD_SSD" (SSD CLOUD disk), "CLOUD_BASIC" (high-performance CLOUD block storage). default value: "CLOUD_BASIC".</p>.
+     * Get <p>Instance disk type for Pro Edition/Advanced Edition instances. You do not need to fill it in for Standard Edition instances. "CLOUD_SSD": SSD CLOUD disk; "CLOUD_BASIC": high-performance CLOUD block storage. Defaults to "CLOUD_BASIC" if not specified.</p> 
+     * @return DiskType <p>Instance disk type for Pro Edition/Advanced Edition instances. You do not need to fill it in for Standard Edition instances. "CLOUD_SSD": SSD CLOUD disk; "CLOUD_BASIC": high-performance CLOUD block storage. Defaults to "CLOUD_BASIC" if not specified.</p>
      */
     public String getDiskType() {
         return this.DiskType;
     }
 
     /**
-     * Set <p>Specifies the instance disk type for pro edition/advanced edition. standard edition instances do not require this field. valid values: "CLOUD_SSD" (SSD CLOUD disk), "CLOUD_BASIC" (high-performance CLOUD block storage). default value: "CLOUD_BASIC".</p>.
-     * @param DiskType <p>Specifies the instance disk type for pro edition/advanced edition. standard edition instances do not require this field. valid values: "CLOUD_SSD" (SSD CLOUD disk), "CLOUD_BASIC" (high-performance CLOUD block storage). default value: "CLOUD_BASIC".</p>.
+     * Set <p>Instance disk type for Pro Edition/Advanced Edition instances. You do not need to fill it in for Standard Edition instances. "CLOUD_SSD": SSD CLOUD disk; "CLOUD_BASIC": high-performance CLOUD block storage. Defaults to "CLOUD_BASIC" if not specified.</p>
+     * @param DiskType <p>Instance disk type for Pro Edition/Advanced Edition instances. You do not need to fill it in for Standard Edition instances. "CLOUD_SSD": SSD CLOUD disk; "CLOUD_BASIC": high-performance CLOUD block storage. Defaults to "CLOUD_BASIC" if not specified.</p>
      */
     public void setDiskType(String DiskType) {
         this.DiskType = DiskType;
@@ -552,6 +559,22 @@ public class CreateInstancePreRequest extends AbstractModel {
         this.CustomSSLCertId = CustomSSLCertId;
     }
 
+    /**
+     * Get <p>Elastic storage switch</p><p>Enumeration value:</p><ul><li>0: Turn off</li><li>1: Turn on</li></ul><p>Default value: 0</p> 
+     * @return StoreQuantityType <p>Elastic storage switch</p><p>Enumeration value:</p><ul><li>0: Turn off</li><li>1: Turn on</li></ul><p>Default value: 0</p>
+     */
+    public Long getStoreQuantityType() {
+        return this.StoreQuantityType;
+    }
+
+    /**
+     * Set <p>Elastic storage switch</p><p>Enumeration value:</p><ul><li>0: Turn off</li><li>1: Turn on</li></ul><p>Default value: 0</p>
+     * @param StoreQuantityType <p>Elastic storage switch</p><p>Enumeration value:</p><ul><li>0: Turn off</li><li>1: Turn on</li></ul><p>Default value: 0</p>
+     */
+    public void setStoreQuantityType(Long StoreQuantityType) {
+        this.StoreQuantityType = StoreQuantityType;
+    }
+
     public CreateInstancePreRequest() {
     }
 
@@ -635,6 +658,9 @@ public class CreateInstancePreRequest extends AbstractModel {
         if (source.CustomSSLCertId != null) {
             this.CustomSSLCertId = new String(source.CustomSSLCertId);
         }
+        if (source.StoreQuantityType != null) {
+            this.StoreQuantityType = new Long(source.StoreQuantityType);
+        }
     }
 
 
@@ -665,6 +691,7 @@ public class CreateInstancePreRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "AutoVoucher", this.AutoVoucher);
         this.setParamSimple(map, prefix + "ElasticBandwidthSwitch", this.ElasticBandwidthSwitch);
         this.setParamSimple(map, prefix + "CustomSSLCertId", this.CustomSSLCertId);
+        this.setParamSimple(map, prefix + "StoreQuantityType", this.StoreQuantityType);
 
     }
 }

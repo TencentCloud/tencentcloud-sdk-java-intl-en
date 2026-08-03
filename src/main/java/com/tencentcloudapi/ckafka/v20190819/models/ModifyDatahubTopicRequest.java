@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class ModifyDatahubTopicRequest extends AbstractModel {
 
     /**
-    * Elastic topic name.
+    * <p>Elastic topic name</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/597/86863?from_cn_redirect=1">DescribeDatahubTopics</a></p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * Message retention period in ms. The current minimum value is 60,000 ms.
+    * <p>Message retention period in milliseconds. Current min value is 60000 ms.</p>
     */
     @SerializedName("RetentionMs")
     @Expose
     private Long RetentionMs;
 
     /**
-    * Topic remarks, which are a string of up to 64 characters. It can contain letters, digits, and hyphens (-) and must start with a letter.
+    * <p>Topic remark</p><p>Input parameter limit: no more than 64 characters</p>
     */
     @SerializedName("Note")
     @Expose
     private String Note;
 
     /**
-    * Tag list
+    * <p>Tag list</p>
     */
     @SerializedName("Tags")
     @Expose
     private Tag [] Tags;
 
     /**
-     * Get Elastic topic name. 
-     * @return Name Elastic topic name.
+     * Get <p>Elastic topic name</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/597/86863?from_cn_redirect=1">DescribeDatahubTopics</a></p> 
+     * @return Name <p>Elastic topic name</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/597/86863?from_cn_redirect=1">DescribeDatahubTopics</a></p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Elastic topic name.
-     * @param Name Elastic topic name.
+     * Set <p>Elastic topic name</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/597/86863?from_cn_redirect=1">DescribeDatahubTopics</a></p>
+     * @param Name <p>Elastic topic name</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/597/86863?from_cn_redirect=1">DescribeDatahubTopics</a></p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get Message retention period in ms. The current minimum value is 60,000 ms. 
-     * @return RetentionMs Message retention period in ms. The current minimum value is 60,000 ms.
+     * Get <p>Message retention period in milliseconds. Current min value is 60000 ms.</p> 
+     * @return RetentionMs <p>Message retention period in milliseconds. Current min value is 60000 ms.</p>
      */
     public Long getRetentionMs() {
         return this.RetentionMs;
     }
 
     /**
-     * Set Message retention period in ms. The current minimum value is 60,000 ms.
-     * @param RetentionMs Message retention period in ms. The current minimum value is 60,000 ms.
+     * Set <p>Message retention period in milliseconds. Current min value is 60000 ms.</p>
+     * @param RetentionMs <p>Message retention period in milliseconds. Current min value is 60000 ms.</p>
      */
     public void setRetentionMs(Long RetentionMs) {
         this.RetentionMs = RetentionMs;
     }
 
     /**
-     * Get Topic remarks, which are a string of up to 64 characters. It can contain letters, digits, and hyphens (-) and must start with a letter. 
-     * @return Note Topic remarks, which are a string of up to 64 characters. It can contain letters, digits, and hyphens (-) and must start with a letter.
+     * Get <p>Topic remark</p><p>Input parameter limit: no more than 64 characters</p> 
+     * @return Note <p>Topic remark</p><p>Input parameter limit: no more than 64 characters</p>
      */
     public String getNote() {
         return this.Note;
     }
 
     /**
-     * Set Topic remarks, which are a string of up to 64 characters. It can contain letters, digits, and hyphens (-) and must start with a letter.
-     * @param Note Topic remarks, which are a string of up to 64 characters. It can contain letters, digits, and hyphens (-) and must start with a letter.
+     * Set <p>Topic remark</p><p>Input parameter limit: no more than 64 characters</p>
+     * @param Note <p>Topic remark</p><p>Input parameter limit: no more than 64 characters</p>
      */
     public void setNote(String Note) {
         this.Note = Note;
     }
 
     /**
-     * Get Tag list 
-     * @return Tags Tag list
+     * Get <p>Tag list</p> 
+     * @return Tags <p>Tag list</p>
      */
     public Tag [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set Tag list
-     * @param Tags Tag list
+     * Set <p>Tag list</p>
+     * @param Tags <p>Tag list</p>
      */
     public void setTags(Tag [] Tags) {
         this.Tags = Tags;

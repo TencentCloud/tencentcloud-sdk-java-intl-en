@@ -9,6 +9,9 @@ public enum CfwErrorCode {
      /* Operation failed. */
      FAILEDOPERATION("FailedOperation"),
      
+     /* FailedOperation.ResponseTooLarge */
+     FAILEDOPERATION_RESPONSETOOLARGE("FailedOperation.ResponseTooLarge"),
+     
      /* Internal error. */
      INTERNALERROR("InternalError"),
      

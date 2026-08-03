@@ -24,138 +24,138 @@ import java.util.HashMap;
 public class DescribeDatahubTopicsRequest extends AbstractModel {
 
     /**
-    * Search term.
+    * <p>Search term</p><p>Performs fuzzy matching on the Name, TopicName, or TopicId field.</p>
     */
     @SerializedName("SearchWord")
     @Expose
     private String SearchWord;
 
     /**
-    * Query offset, which defaults to `0`.
+    * <p>Offset position of this page, defaults to 0</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * Maximum number of results to be returned in this request. Default value: `50`. Maximum value: `50`.
+    * <p>Maximum number of returned results this time</p><p>Value ranges from 1 to 100</p><p>Default value: 20</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * Specifies whether to query the topic list from the connection.
+    * <p>Whether to query the topic list from the connection query</p><p>Default value: false</p>
     */
     @SerializedName("QueryFromConnectResource")
     @Expose
     private Boolean QueryFromConnectResource;
 
     /**
-    * Connection ID.
+    * <p>Connection ID.</p>
     */
     @SerializedName("ConnectResourceId")
     @Expose
     private String ConnectResourceId;
 
     /**
-    * topic resource expression.
+    * <p>topic resource expression</p>
     */
     @SerializedName("TopicRegularExpression")
     @Expose
     private String TopicRegularExpression;
 
     /**
-     * Get Search term. 
-     * @return SearchWord Search term.
+     * Get <p>Search term</p><p>Performs fuzzy matching on the Name, TopicName, or TopicId field.</p> 
+     * @return SearchWord <p>Search term</p><p>Performs fuzzy matching on the Name, TopicName, or TopicId field.</p>
      */
     public String getSearchWord() {
         return this.SearchWord;
     }
 
     /**
-     * Set Search term.
-     * @param SearchWord Search term.
+     * Set <p>Search term</p><p>Performs fuzzy matching on the Name, TopicName, or TopicId field.</p>
+     * @param SearchWord <p>Search term</p><p>Performs fuzzy matching on the Name, TopicName, or TopicId field.</p>
      */
     public void setSearchWord(String SearchWord) {
         this.SearchWord = SearchWord;
     }
 
     /**
-     * Get Query offset, which defaults to `0`. 
-     * @return Offset Query offset, which defaults to `0`.
+     * Get <p>Offset position of this page, defaults to 0</p> 
+     * @return Offset <p>Offset position of this page, defaults to 0</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Query offset, which defaults to `0`.
-     * @param Offset Query offset, which defaults to `0`.
+     * Set <p>Offset position of this page, defaults to 0</p>
+     * @param Offset <p>Offset position of this page, defaults to 0</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get Maximum number of results to be returned in this request. Default value: `50`. Maximum value: `50`. 
-     * @return Limit Maximum number of results to be returned in this request. Default value: `50`. Maximum value: `50`.
+     * Get <p>Maximum number of returned results this time</p><p>Value ranges from 1 to 100</p><p>Default value: 20</p> 
+     * @return Limit <p>Maximum number of returned results this time</p><p>Value ranges from 1 to 100</p><p>Default value: 20</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Maximum number of results to be returned in this request. Default value: `50`. Maximum value: `50`.
-     * @param Limit Maximum number of results to be returned in this request. Default value: `50`. Maximum value: `50`.
+     * Set <p>Maximum number of returned results this time</p><p>Value ranges from 1 to 100</p><p>Default value: 20</p>
+     * @param Limit <p>Maximum number of returned results this time</p><p>Value ranges from 1 to 100</p><p>Default value: 20</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get Specifies whether to query the topic list from the connection. 
-     * @return QueryFromConnectResource Specifies whether to query the topic list from the connection.
+     * Get <p>Whether to query the topic list from the connection query</p><p>Default value: false</p> 
+     * @return QueryFromConnectResource <p>Whether to query the topic list from the connection query</p><p>Default value: false</p>
      */
     public Boolean getQueryFromConnectResource() {
         return this.QueryFromConnectResource;
     }
 
     /**
-     * Set Specifies whether to query the topic list from the connection.
-     * @param QueryFromConnectResource Specifies whether to query the topic list from the connection.
+     * Set <p>Whether to query the topic list from the connection query</p><p>Default value: false</p>
+     * @param QueryFromConnectResource <p>Whether to query the topic list from the connection query</p><p>Default value: false</p>
      */
     public void setQueryFromConnectResource(Boolean QueryFromConnectResource) {
         this.QueryFromConnectResource = QueryFromConnectResource;
     }
 
     /**
-     * Get Connection ID. 
-     * @return ConnectResourceId Connection ID.
+     * Get <p>Connection ID.</p> 
+     * @return ConnectResourceId <p>Connection ID.</p>
      */
     public String getConnectResourceId() {
         return this.ConnectResourceId;
     }
 
     /**
-     * Set Connection ID.
-     * @param ConnectResourceId Connection ID.
+     * Set <p>Connection ID.</p>
+     * @param ConnectResourceId <p>Connection ID.</p>
      */
     public void setConnectResourceId(String ConnectResourceId) {
         this.ConnectResourceId = ConnectResourceId;
     }
 
     /**
-     * Get topic resource expression. 
-     * @return TopicRegularExpression topic resource expression.
+     * Get <p>topic resource expression</p> 
+     * @return TopicRegularExpression <p>topic resource expression</p>
      */
     public String getTopicRegularExpression() {
         return this.TopicRegularExpression;
     }
 
     /**
-     * Set topic resource expression.
-     * @param TopicRegularExpression topic resource expression.
+     * Set <p>topic resource expression</p>
+     * @param TopicRegularExpression <p>topic resource expression</p>
      */
     public void setTopicRegularExpression(String TopicRegularExpression) {
         this.TopicRegularExpression = TopicRegularExpression;

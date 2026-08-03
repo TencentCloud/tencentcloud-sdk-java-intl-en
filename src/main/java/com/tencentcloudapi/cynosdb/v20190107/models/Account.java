@@ -24,161 +24,161 @@ import java.util.HashMap;
 public class Account extends AbstractModel {
 
     /**
-    * Database account name
+    * <p>Database account name.</p>
     */
     @SerializedName("AccountName")
     @Expose
     private String AccountName;
 
     /**
-    * Host
+    * <p>host</p>
     */
     @SerializedName("Host")
     @Expose
     private String Host;
 
     /**
-    * Database account description
+    * <p>Database account description.</p>
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * Creation time
+    * <p>Creation time.</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * Update time
+    * <p>Update time.</p>
     */
     @SerializedName("UpdateTime")
     @Expose
     private String UpdateTime;
 
     /**
-    * The max connections
+    * <p>Maximum user connections</p>
     */
     @SerializedName("MaxUserConnections")
     @Expose
     private Long MaxUserConnections;
 
     /**
-    * Whether password rotation is enabled (0: turn off; 1: turn on)
+    * <p>Whether password rotation is enabled (0: turn off; 1: turn on)</p>
     */
     @SerializedName("PasswordRotation")
     @Expose
     private Long PasswordRotation;
 
     /**
-     * Get Database account name 
-     * @return AccountName Database account name
+     * Get <p>Database account name.</p> 
+     * @return AccountName <p>Database account name.</p>
      */
     public String getAccountName() {
         return this.AccountName;
     }
 
     /**
-     * Set Database account name
-     * @param AccountName Database account name
+     * Set <p>Database account name.</p>
+     * @param AccountName <p>Database account name.</p>
      */
     public void setAccountName(String AccountName) {
         this.AccountName = AccountName;
     }
 
     /**
-     * Get Host 
-     * @return Host Host
+     * Get <p>host</p> 
+     * @return Host <p>host</p>
      */
     public String getHost() {
         return this.Host;
     }
 
     /**
-     * Set Host
-     * @param Host Host
+     * Set <p>host</p>
+     * @param Host <p>host</p>
      */
     public void setHost(String Host) {
         this.Host = Host;
     }
 
     /**
-     * Get Database account description 
-     * @return Description Database account description
+     * Get <p>Database account description.</p> 
+     * @return Description <p>Database account description.</p>
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set Database account description
-     * @param Description Database account description
+     * Set <p>Database account description.</p>
+     * @param Description <p>Database account description.</p>
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get Creation time 
-     * @return CreateTime Creation time
+     * Get <p>Creation time.</p> 
+     * @return CreateTime <p>Creation time.</p>
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set Creation time
-     * @param CreateTime Creation time
+     * Set <p>Creation time.</p>
+     * @param CreateTime <p>Creation time.</p>
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get Update time 
-     * @return UpdateTime Update time
+     * Get <p>Update time.</p> 
+     * @return UpdateTime <p>Update time.</p>
      */
     public String getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set Update time
-     * @param UpdateTime Update time
+     * Set <p>Update time.</p>
+     * @param UpdateTime <p>Update time.</p>
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;
     }
 
     /**
-     * Get The max connections 
-     * @return MaxUserConnections The max connections
+     * Get <p>Maximum user connections</p> 
+     * @return MaxUserConnections <p>Maximum user connections</p>
      */
     public Long getMaxUserConnections() {
         return this.MaxUserConnections;
     }
 
     /**
-     * Set The max connections
-     * @param MaxUserConnections The max connections
+     * Set <p>Maximum user connections</p>
+     * @param MaxUserConnections <p>Maximum user connections</p>
      */
     public void setMaxUserConnections(Long MaxUserConnections) {
         this.MaxUserConnections = MaxUserConnections;
     }
 
     /**
-     * Get Whether password rotation is enabled (0: turn off; 1: turn on) 
-     * @return PasswordRotation Whether password rotation is enabled (0: turn off; 1: turn on)
+     * Get <p>Whether password rotation is enabled (0: turn off; 1: turn on)</p> 
+     * @return PasswordRotation <p>Whether password rotation is enabled (0: turn off; 1: turn on)</p>
      */
     public Long getPasswordRotation() {
         return this.PasswordRotation;
     }
 
     /**
-     * Set Whether password rotation is enabled (0: turn off; 1: turn on)
-     * @param PasswordRotation Whether password rotation is enabled (0: turn off; 1: turn on)
+     * Set <p>Whether password rotation is enabled (0: turn off; 1: turn on)</p>
+     * @param PasswordRotation <p>Whether password rotation is enabled (0: turn off; 1: turn on)</p>
      */
     public void setPasswordRotation(Long PasswordRotation) {
         this.PasswordRotation = PasswordRotation;

@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class DeleteAccountsRequest extends AbstractModel {
 
     /**
-    * Cluster ID
+    * <p>Cluster ID.</p>
     */
     @SerializedName("ClusterId")
     @Expose
     private String ClusterId;
 
     /**
-    * Accounts in array, which contains `account` and `host`.
+    * <p>Account array, including account and host.</p>
     */
     @SerializedName("Accounts")
     @Expose
     private InputAccount [] Accounts;
 
     /**
-     * Get Cluster ID 
-     * @return ClusterId Cluster ID
+     * Get <p>Cluster ID.</p> 
+     * @return ClusterId <p>Cluster ID.</p>
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set Cluster ID
-     * @param ClusterId Cluster ID
+     * Set <p>Cluster ID.</p>
+     * @param ClusterId <p>Cluster ID.</p>
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
     }
 
     /**
-     * Get Accounts in array, which contains `account` and `host`. 
-     * @return Accounts Accounts in array, which contains `account` and `host`.
+     * Get <p>Account array, including account and host.</p> 
+     * @return Accounts <p>Account array, including account and host.</p>
      */
     public InputAccount [] getAccounts() {
         return this.Accounts;
     }
 
     /**
-     * Set Accounts in array, which contains `account` and `host`.
-     * @param Accounts Accounts in array, which contains `account` and `host`.
+     * Set <p>Account array, including account and host.</p>
+     * @param Accounts <p>Account array, including account and host.</p>
      */
     public void setAccounts(InputAccount [] Accounts) {
         this.Accounts = Accounts;

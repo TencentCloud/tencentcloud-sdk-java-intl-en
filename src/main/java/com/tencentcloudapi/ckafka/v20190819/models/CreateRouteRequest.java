@@ -52,7 +52,7 @@ public class CreateRouteRequest extends AbstractModel {
     private String SubnetId;
 
     /**
-    * <p>Access type: 0-plaintext; 1-sasl_plaintext; 3-sasl_ssl; 4-sasl_scram_sha_256; 5-sasl_scram_sha_512. defaults to 0. when vipType=3, supports 0,1,3,4,5. when vipType=7, supports 0,1,3. when vipType=1, supports 1,3.</p>.
+    * <p>Access type: 0-plaintext; 1-sasl_plaintext; 3-sasl_ssl; 4-sasl_scram_sha_256; 5-sasl_scram_sha_512. Default is 0.<br>vipType=3, supports 0,1,3,4,5<br>vipType=7, supports 0,1,3<br>vipType=1, supports 1,3</p>
     */
     @SerializedName("AccessType")
     @Expose
@@ -99,6 +99,13 @@ public class CreateRouteRequest extends AbstractModel {
     @SerializedName("SecurityGroupIds")
     @Expose
     private String [] SecurityGroupIds;
+
+    /**
+    * <p>Preset configuration of public network route IP allowlist</p><p>Input parameter limit: vipType=1</p>
+    */
+    @SerializedName("IpWhitelist")
+    @Expose
+    private IpWhitelistDTO [] IpWhitelist;
 
     /**
      * Get <p>Specifies the ckafka cluster instance id. obtain through the API <a href="https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1">DescribeInstances</a>.</p>. 
@@ -165,16 +172,16 @@ public class CreateRouteRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>Access type: 0-plaintext; 1-sasl_plaintext; 3-sasl_ssl; 4-sasl_scram_sha_256; 5-sasl_scram_sha_512. defaults to 0. when vipType=3, supports 0,1,3,4,5. when vipType=7, supports 0,1,3. when vipType=1, supports 1,3.</p>. 
-     * @return AccessType <p>Access type: 0-plaintext; 1-sasl_plaintext; 3-sasl_ssl; 4-sasl_scram_sha_256; 5-sasl_scram_sha_512. defaults to 0. when vipType=3, supports 0,1,3,4,5. when vipType=7, supports 0,1,3. when vipType=1, supports 1,3.</p>.
+     * Get <p>Access type: 0-plaintext; 1-sasl_plaintext; 3-sasl_ssl; 4-sasl_scram_sha_256; 5-sasl_scram_sha_512. Default is 0.<br>vipType=3, supports 0,1,3,4,5<br>vipType=7, supports 0,1,3<br>vipType=1, supports 1,3</p> 
+     * @return AccessType <p>Access type: 0-plaintext; 1-sasl_plaintext; 3-sasl_ssl; 4-sasl_scram_sha_256; 5-sasl_scram_sha_512. Default is 0.<br>vipType=3, supports 0,1,3,4,5<br>vipType=7, supports 0,1,3<br>vipType=1, supports 1,3</p>
      */
     public Long getAccessType() {
         return this.AccessType;
     }
 
     /**
-     * Set <p>Access type: 0-plaintext; 1-sasl_plaintext; 3-sasl_ssl; 4-sasl_scram_sha_256; 5-sasl_scram_sha_512. defaults to 0. when vipType=3, supports 0,1,3,4,5. when vipType=7, supports 0,1,3. when vipType=1, supports 1,3.</p>.
-     * @param AccessType <p>Access type: 0-plaintext; 1-sasl_plaintext; 3-sasl_ssl; 4-sasl_scram_sha_256; 5-sasl_scram_sha_512. defaults to 0. when vipType=3, supports 0,1,3,4,5. when vipType=7, supports 0,1,3. when vipType=1, supports 1,3.</p>.
+     * Set <p>Access type: 0-plaintext; 1-sasl_plaintext; 3-sasl_ssl; 4-sasl_scram_sha_256; 5-sasl_scram_sha_512. Default is 0.<br>vipType=3, supports 0,1,3,4,5<br>vipType=7, supports 0,1,3<br>vipType=1, supports 1,3</p>
+     * @param AccessType <p>Access type: 0-plaintext; 1-sasl_plaintext; 3-sasl_ssl; 4-sasl_scram_sha_256; 5-sasl_scram_sha_512. Default is 0.<br>vipType=3, supports 0,1,3,4,5<br>vipType=7, supports 0,1,3<br>vipType=1, supports 1,3</p>
      */
     public void setAccessType(Long AccessType) {
         this.AccessType = AccessType;
@@ -276,6 +283,22 @@ public class CreateRouteRequest extends AbstractModel {
         this.SecurityGroupIds = SecurityGroupIds;
     }
 
+    /**
+     * Get <p>Preset configuration of public network route IP allowlist</p><p>Input parameter limit: vipType=1</p> 
+     * @return IpWhitelist <p>Preset configuration of public network route IP allowlist</p><p>Input parameter limit: vipType=1</p>
+     */
+    public IpWhitelistDTO [] getIpWhitelist() {
+        return this.IpWhitelist;
+    }
+
+    /**
+     * Set <p>Preset configuration of public network route IP allowlist</p><p>Input parameter limit: vipType=1</p>
+     * @param IpWhitelist <p>Preset configuration of public network route IP allowlist</p><p>Input parameter limit: vipType=1</p>
+     */
+    public void setIpWhitelist(IpWhitelistDTO [] IpWhitelist) {
+        this.IpWhitelist = IpWhitelist;
+    }
+
     public CreateRouteRequest() {
     }
 
@@ -320,6 +343,12 @@ public class CreateRouteRequest extends AbstractModel {
                 this.SecurityGroupIds[i] = new String(source.SecurityGroupIds[i]);
             }
         }
+        if (source.IpWhitelist != null) {
+            this.IpWhitelist = new IpWhitelistDTO[source.IpWhitelist.length];
+            for (int i = 0; i < source.IpWhitelist.length; i++) {
+                this.IpWhitelist[i] = new IpWhitelistDTO(source.IpWhitelist[i]);
+            }
+        }
     }
 
 
@@ -338,6 +367,7 @@ public class CreateRouteRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Ip", this.Ip);
         this.setParamSimple(map, prefix + "Note", this.Note);
         this.setParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
+        this.setParamArrayObj(map, prefix + "IpWhitelist.", this.IpWhitelist);
 
     }
 }

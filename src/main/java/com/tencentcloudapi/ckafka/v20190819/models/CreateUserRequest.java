@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class CreateUserRequest extends AbstractModel {
 
     /**
-    * The ckafka cluster instance Id, which can be obtained through the [DescribeInstances](https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1) api.
+    * <p>ckafka cluster instance Id, which can be obtained through the <a href="https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1">DescribeInstances</a> API</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Username
+    * <p>Username.</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * User password
+    * <p>User password.</p>
     */
     @SerializedName("Password")
     @Expose
     private String Password;
 
     /**
-     * Get The ckafka cluster instance Id, which can be obtained through the [DescribeInstances](https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1) api. 
-     * @return InstanceId The ckafka cluster instance Id, which can be obtained through the [DescribeInstances](https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1) api.
+     * Get <p>ckafka cluster instance Id, which can be obtained through the <a href="https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1">DescribeInstances</a> API</p> 
+     * @return InstanceId <p>ckafka cluster instance Id, which can be obtained through the <a href="https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1">DescribeInstances</a> API</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set The ckafka cluster instance Id, which can be obtained through the [DescribeInstances](https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1) api.
-     * @param InstanceId The ckafka cluster instance Id, which can be obtained through the [DescribeInstances](https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1) api.
+     * Set <p>ckafka cluster instance Id, which can be obtained through the <a href="https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1">DescribeInstances</a> API</p>
+     * @param InstanceId <p>ckafka cluster instance Id, which can be obtained through the <a href="https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1">DescribeInstances</a> API</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Username 
-     * @return Name Username
+     * Get <p>Username.</p> 
+     * @return Name <p>Username.</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Username
-     * @param Name Username
+     * Set <p>Username.</p>
+     * @param Name <p>Username.</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get User password 
-     * @return Password User password
+     * Get <p>User password.</p> 
+     * @return Password <p>User password.</p>
      */
     public String getPassword() {
         return this.Password;
     }
 
     /**
-     * Set User password
-     * @param Password User password
+     * Set <p>User password.</p>
+     * @param Password <p>User password.</p>
      */
     public void setPassword(String Password) {
         this.Password = Password;

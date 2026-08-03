@@ -24,115 +24,115 @@ import java.util.HashMap;
 public class UpgradeBrokerVersionRequest extends AbstractModel {
 
     /**
-    * The ckafka cluster instance Id.
+    * <p>ckafka cluster instance Id</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 1. smooth configuration upgrade 2. vertical configuration upgrade.
+    * <p>Upgrade type</p><p>Enumeration value:</p><ul><li>1: Minor version migration (recommended)</li></ul>
     */
     @SerializedName("Type")
     @Expose
     private Long Type;
 
     /**
-    * Version number
+    * <p>Version number.</p>
     */
     @SerializedName("SourceVersion")
     @Expose
     private String SourceVersion;
 
     /**
-    * Version number
+    * <p>Version number.</p>
     */
     @SerializedName("TargetVersion")
     @Expose
     private String TargetVersion;
 
     /**
-    * Delay time.
+    * <p>Delay time</p>
     */
     @SerializedName("DelayTimeStamp")
     @Expose
     private String DelayTimeStamp;
 
     /**
-     * Get The ckafka cluster instance Id. 
-     * @return InstanceId The ckafka cluster instance Id.
+     * Get <p>ckafka cluster instance Id</p> 
+     * @return InstanceId <p>ckafka cluster instance Id</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set The ckafka cluster instance Id.
-     * @param InstanceId The ckafka cluster instance Id.
+     * Set <p>ckafka cluster instance Id</p>
+     * @param InstanceId <p>ckafka cluster instance Id</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 1. smooth configuration upgrade 2. vertical configuration upgrade. 
-     * @return Type 1. smooth configuration upgrade 2. vertical configuration upgrade.
+     * Get <p>Upgrade type</p><p>Enumeration value:</p><ul><li>1: Minor version migration (recommended)</li></ul> 
+     * @return Type <p>Upgrade type</p><p>Enumeration value:</p><ul><li>1: Minor version migration (recommended)</li></ul>
      */
     public Long getType() {
         return this.Type;
     }
 
     /**
-     * Set 1. smooth configuration upgrade 2. vertical configuration upgrade.
-     * @param Type 1. smooth configuration upgrade 2. vertical configuration upgrade.
+     * Set <p>Upgrade type</p><p>Enumeration value:</p><ul><li>1: Minor version migration (recommended)</li></ul>
+     * @param Type <p>Upgrade type</p><p>Enumeration value:</p><ul><li>1: Minor version migration (recommended)</li></ul>
      */
     public void setType(Long Type) {
         this.Type = Type;
     }
 
     /**
-     * Get Version number 
-     * @return SourceVersion Version number
+     * Get <p>Version number.</p> 
+     * @return SourceVersion <p>Version number.</p>
      */
     public String getSourceVersion() {
         return this.SourceVersion;
     }
 
     /**
-     * Set Version number
-     * @param SourceVersion Version number
+     * Set <p>Version number.</p>
+     * @param SourceVersion <p>Version number.</p>
      */
     public void setSourceVersion(String SourceVersion) {
         this.SourceVersion = SourceVersion;
     }
 
     /**
-     * Get Version number 
-     * @return TargetVersion Version number
+     * Get <p>Version number.</p> 
+     * @return TargetVersion <p>Version number.</p>
      */
     public String getTargetVersion() {
         return this.TargetVersion;
     }
 
     /**
-     * Set Version number
-     * @param TargetVersion Version number
+     * Set <p>Version number.</p>
+     * @param TargetVersion <p>Version number.</p>
      */
     public void setTargetVersion(String TargetVersion) {
         this.TargetVersion = TargetVersion;
     }
 
     /**
-     * Get Delay time. 
-     * @return DelayTimeStamp Delay time.
+     * Get <p>Delay time</p> 
+     * @return DelayTimeStamp <p>Delay time</p>
      */
     public String getDelayTimeStamp() {
         return this.DelayTimeStamp;
     }
 
     /**
-     * Set Delay time.
-     * @param DelayTimeStamp Delay time.
+     * Set <p>Delay time</p>
+     * @param DelayTimeStamp <p>Delay time</p>
      */
     public void setDelayTimeStamp(String DelayTimeStamp) {
         this.DelayTimeStamp = DelayTimeStamp;

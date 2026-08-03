@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateUserResponse extends AbstractModel {
 
     /**
-    * Returned result.
+    * <p>Returned results</p>
     */
     @SerializedName("Result")
     @Expose
@@ -38,16 +38,16 @@ public class CreateUserResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Returned result. 
-     * @return Result Returned result.
+     * Get <p>Returned results</p> 
+     * @return Result <p>Returned results</p>
      */
     public JgwOperateResponse getResult() {
         return this.Result;
     }
 
     /**
-     * Set Returned result.
-     * @param Result Returned result.
+     * Set <p>Returned results</p>
+     * @param Result <p>Returned results</p>
      */
     public void setResult(JgwOperateResponse Result) {
         this.Result = Result;

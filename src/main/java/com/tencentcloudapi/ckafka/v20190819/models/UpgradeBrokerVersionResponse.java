@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class UpgradeBrokerVersionResponse extends AbstractModel {
 
     /**
-    * Upgrade result.
+    * <p>Upgrade result</p>
     */
     @SerializedName("Result")
     @Expose
@@ -38,16 +38,16 @@ public class UpgradeBrokerVersionResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Upgrade result. 
-     * @return Result Upgrade result.
+     * Get <p>Upgrade result</p> 
+     * @return Result <p>Upgrade result</p>
      */
     public JgwOperateResponse getResult() {
         return this.Result;
     }
 
     /**
-     * Set Upgrade result.
-     * @param Result Upgrade result.
+     * Set <p>Upgrade result</p>
+     * @param Result <p>Upgrade result</p>
      */
     public void setResult(JgwOperateResponse Result) {
         this.Result = Result;

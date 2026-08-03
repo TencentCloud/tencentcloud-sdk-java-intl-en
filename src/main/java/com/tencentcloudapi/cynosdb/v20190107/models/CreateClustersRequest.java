@@ -353,6 +353,20 @@ public class CreateClustersRequest extends AbstractModel {
     private String CynosVersion;
 
     /**
+    * <p>Synchronization method. Value range: async, semisync, sync.</p>
+    */
+    @SerializedName("SyncWay")
+    @Expose
+    private String SyncWay;
+
+    /**
+    * <p>Semi-sync timeout period, in milliseconds. To ensure business stability, semi-synchronous replication has a degradation logic. When the primary availability zone cluster waits for the secondary availability zone cluster to confirm a transaction, if the timeout period is exceeded, the replication method will degrade to asynchronous replication.</p><p>Value ranges from 1000 to 4294967295.</p><p>Unit: ms</p><p>Default value: 10000</p>
+    */
+    @SerializedName("SemiSyncTimeout")
+    @Expose
+    private Long SemiSyncTimeout;
+
+    /**
      * Get <p>AZ.</p> 
      * @return Zone <p>AZ.</p>
      */
@@ -1104,6 +1118,38 @@ public class CreateClustersRequest extends AbstractModel {
         this.CynosVersion = CynosVersion;
     }
 
+    /**
+     * Get <p>Synchronization method. Value range: async, semisync, sync.</p> 
+     * @return SyncWay <p>Synchronization method. Value range: async, semisync, sync.</p>
+     */
+    public String getSyncWay() {
+        return this.SyncWay;
+    }
+
+    /**
+     * Set <p>Synchronization method. Value range: async, semisync, sync.</p>
+     * @param SyncWay <p>Synchronization method. Value range: async, semisync, sync.</p>
+     */
+    public void setSyncWay(String SyncWay) {
+        this.SyncWay = SyncWay;
+    }
+
+    /**
+     * Get <p>Semi-sync timeout period, in milliseconds. To ensure business stability, semi-synchronous replication has a degradation logic. When the primary availability zone cluster waits for the secondary availability zone cluster to confirm a transaction, if the timeout period is exceeded, the replication method will degrade to asynchronous replication.</p><p>Value ranges from 1000 to 4294967295.</p><p>Unit: ms</p><p>Default value: 10000</p> 
+     * @return SemiSyncTimeout <p>Semi-sync timeout period, in milliseconds. To ensure business stability, semi-synchronous replication has a degradation logic. When the primary availability zone cluster waits for the secondary availability zone cluster to confirm a transaction, if the timeout period is exceeded, the replication method will degrade to asynchronous replication.</p><p>Value ranges from 1000 to 4294967295.</p><p>Unit: ms</p><p>Default value: 10000</p>
+     */
+    public Long getSemiSyncTimeout() {
+        return this.SemiSyncTimeout;
+    }
+
+    /**
+     * Set <p>Semi-sync timeout period, in milliseconds. To ensure business stability, semi-synchronous replication has a degradation logic. When the primary availability zone cluster waits for the secondary availability zone cluster to confirm a transaction, if the timeout period is exceeded, the replication method will degrade to asynchronous replication.</p><p>Value ranges from 1000 to 4294967295.</p><p>Unit: ms</p><p>Default value: 10000</p>
+     * @param SemiSyncTimeout <p>Semi-sync timeout period, in milliseconds. To ensure business stability, semi-synchronous replication has a degradation logic. When the primary availability zone cluster waits for the secondary availability zone cluster to confirm a transaction, if the timeout period is exceeded, the replication method will degrade to asynchronous replication.</p><p>Value ranges from 1000 to 4294967295.</p><p>Unit: ms</p><p>Default value: 10000</p>
+     */
+    public void setSemiSyncTimeout(Long SemiSyncTimeout) {
+        this.SemiSyncTimeout = SemiSyncTimeout;
+    }
+
     public CreateClustersRequest() {
     }
 
@@ -1268,6 +1314,12 @@ public class CreateClustersRequest extends AbstractModel {
         if (source.CynosVersion != null) {
             this.CynosVersion = new String(source.CynosVersion);
         }
+        if (source.SyncWay != null) {
+            this.SyncWay = new String(source.SyncWay);
+        }
+        if (source.SemiSyncTimeout != null) {
+            this.SemiSyncTimeout = new Long(source.SemiSyncTimeout);
+        }
     }
 
 
@@ -1322,6 +1374,8 @@ public class CreateClustersRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "AutoArchiveDelayHours", this.AutoArchiveDelayHours);
         this.setParamSimple(map, prefix + "ClusterLevel", this.ClusterLevel);
         this.setParamSimple(map, prefix + "CynosVersion", this.CynosVersion);
+        this.setParamSimple(map, prefix + "SyncWay", this.SyncWay);
+        this.setParamSimple(map, prefix + "SemiSyncTimeout", this.SemiSyncTimeout);
 
     }
 }

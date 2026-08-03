@@ -227,6 +227,27 @@ public class RollbackToNewClusterRequest extends AbstractModel {
     private Boolean FromSaveBackup;
 
     /**
+    * <p>Synchronization method. Available values: async, semisync, sync. Async as a default.</p>
+    */
+    @SerializedName("SyncWay")
+    @Expose
+    private String SyncWay;
+
+    /**
+    * <p>Semi-synchronous timeout period, in milliseconds. To ensure business stability, semi-synchronous replication has a degradation logic. When the primary availability zone cluster waits for the secondary availability zone cluster to confirm a transaction, if the timeout period is exceeded, the replication method will degrade to asynchronous replication.</p><p>Value ranges from 1000 to 4294967295.</p><p>Unit: ms</p><p>Default value: 10000</p>
+    */
+    @SerializedName("SemiSyncTimeout")
+    @Expose
+    private Long SemiSyncTimeout;
+
+    /**
+    * <p>Standby availability zone</p>
+    */
+    @SerializedName("SlaveZone")
+    @Expose
+    private String SlaveZone;
+
+    /**
      * Get <p>AZ.</p> 
      * @return Zone <p>AZ.</p>
      */
@@ -690,6 +711,54 @@ public class RollbackToNewClusterRequest extends AbstractModel {
         this.FromSaveBackup = FromSaveBackup;
     }
 
+    /**
+     * Get <p>Synchronization method. Available values: async, semisync, sync. Async as a default.</p> 
+     * @return SyncWay <p>Synchronization method. Available values: async, semisync, sync. Async as a default.</p>
+     */
+    public String getSyncWay() {
+        return this.SyncWay;
+    }
+
+    /**
+     * Set <p>Synchronization method. Available values: async, semisync, sync. Async as a default.</p>
+     * @param SyncWay <p>Synchronization method. Available values: async, semisync, sync. Async as a default.</p>
+     */
+    public void setSyncWay(String SyncWay) {
+        this.SyncWay = SyncWay;
+    }
+
+    /**
+     * Get <p>Semi-synchronous timeout period, in milliseconds. To ensure business stability, semi-synchronous replication has a degradation logic. When the primary availability zone cluster waits for the secondary availability zone cluster to confirm a transaction, if the timeout period is exceeded, the replication method will degrade to asynchronous replication.</p><p>Value ranges from 1000 to 4294967295.</p><p>Unit: ms</p><p>Default value: 10000</p> 
+     * @return SemiSyncTimeout <p>Semi-synchronous timeout period, in milliseconds. To ensure business stability, semi-synchronous replication has a degradation logic. When the primary availability zone cluster waits for the secondary availability zone cluster to confirm a transaction, if the timeout period is exceeded, the replication method will degrade to asynchronous replication.</p><p>Value ranges from 1000 to 4294967295.</p><p>Unit: ms</p><p>Default value: 10000</p>
+     */
+    public Long getSemiSyncTimeout() {
+        return this.SemiSyncTimeout;
+    }
+
+    /**
+     * Set <p>Semi-synchronous timeout period, in milliseconds. To ensure business stability, semi-synchronous replication has a degradation logic. When the primary availability zone cluster waits for the secondary availability zone cluster to confirm a transaction, if the timeout period is exceeded, the replication method will degrade to asynchronous replication.</p><p>Value ranges from 1000 to 4294967295.</p><p>Unit: ms</p><p>Default value: 10000</p>
+     * @param SemiSyncTimeout <p>Semi-synchronous timeout period, in milliseconds. To ensure business stability, semi-synchronous replication has a degradation logic. When the primary availability zone cluster waits for the secondary availability zone cluster to confirm a transaction, if the timeout period is exceeded, the replication method will degrade to asynchronous replication.</p><p>Value ranges from 1000 to 4294967295.</p><p>Unit: ms</p><p>Default value: 10000</p>
+     */
+    public void setSemiSyncTimeout(Long SemiSyncTimeout) {
+        this.SemiSyncTimeout = SemiSyncTimeout;
+    }
+
+    /**
+     * Get <p>Standby availability zone</p> 
+     * @return SlaveZone <p>Standby availability zone</p>
+     */
+    public String getSlaveZone() {
+        return this.SlaveZone;
+    }
+
+    /**
+     * Set <p>Standby availability zone</p>
+     * @param SlaveZone <p>Standby availability zone</p>
+     */
+    public void setSlaveZone(String SlaveZone) {
+        this.SlaveZone = SlaveZone;
+    }
+
     public RollbackToNewClusterRequest() {
     }
 
@@ -809,6 +878,15 @@ public class RollbackToNewClusterRequest extends AbstractModel {
         if (source.FromSaveBackup != null) {
             this.FromSaveBackup = new Boolean(source.FromSaveBackup);
         }
+        if (source.SyncWay != null) {
+            this.SyncWay = new String(source.SyncWay);
+        }
+        if (source.SemiSyncTimeout != null) {
+            this.SemiSyncTimeout = new Long(source.SemiSyncTimeout);
+        }
+        if (source.SlaveZone != null) {
+            this.SlaveZone = new String(source.SlaveZone);
+        }
     }
 
 
@@ -845,6 +923,9 @@ public class RollbackToNewClusterRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
         this.setParamSimple(map, prefix + "AutoArchive", this.AutoArchive);
         this.setParamSimple(map, prefix + "FromSaveBackup", this.FromSaveBackup);
+        this.setParamSimple(map, prefix + "SyncWay", this.SyncWay);
+        this.setParamSimple(map, prefix + "SemiSyncTimeout", this.SemiSyncTimeout);
+        this.setParamSimple(map, prefix + "SlaveZone", this.SlaveZone);
 
     }
 }

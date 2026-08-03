@@ -24,138 +24,138 @@ import java.util.HashMap;
 public class NewAccount extends AbstractModel {
 
     /**
-    * Account name, which can contain 1-16 letters, digits, and underscores. It must begin with a letter and end with a letter or digit.
+    * <p>Account name, containing letters, digits, and underscores, starting with a letter, ending with a letter or digit, length 1-30</p>
     */
     @SerializedName("AccountName")
     @Expose
     private String AccountName;
 
     /**
-    * Host
+    * <p>host (% or ipv4 address)</p>
     */
     @SerializedName("Host")
     @Expose
     private String Host;
 
     /**
-    * Password, which can contain 8-64 characters.
+    * <p>Password. The length range is 8 to 64 characters.</p>
     */
     @SerializedName("AccountPassword")
     @Expose
     private String AccountPassword;
 
     /**
-    * Whether password rotation is enabled (0: turn off; 1: turn on)
+    * <p>Whether password rotation is enabled (0: turn off; 1: turn on)</p>
     */
     @SerializedName("PasswordRotation")
     @Expose
     private Long PasswordRotation;
 
     /**
-    * Description
+    * <p>Description.</p>
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * Maximum number of user connections, which cannot be above 10,240.
+    * <p>Maximum user connections cannot be greater than 10240</p>
     */
     @SerializedName("MaxUserConnections")
     @Expose
     private Long MaxUserConnections;
 
     /**
-     * Get Account name, which can contain 1-16 letters, digits, and underscores. It must begin with a letter and end with a letter or digit. 
-     * @return AccountName Account name, which can contain 1-16 letters, digits, and underscores. It must begin with a letter and end with a letter or digit.
+     * Get <p>Account name, containing letters, digits, and underscores, starting with a letter, ending with a letter or digit, length 1-30</p> 
+     * @return AccountName <p>Account name, containing letters, digits, and underscores, starting with a letter, ending with a letter or digit, length 1-30</p>
      */
     public String getAccountName() {
         return this.AccountName;
     }
 
     /**
-     * Set Account name, which can contain 1-16 letters, digits, and underscores. It must begin with a letter and end with a letter or digit.
-     * @param AccountName Account name, which can contain 1-16 letters, digits, and underscores. It must begin with a letter and end with a letter or digit.
+     * Set <p>Account name, containing letters, digits, and underscores, starting with a letter, ending with a letter or digit, length 1-30</p>
+     * @param AccountName <p>Account name, containing letters, digits, and underscores, starting with a letter, ending with a letter or digit, length 1-30</p>
      */
     public void setAccountName(String AccountName) {
         this.AccountName = AccountName;
     }
 
     /**
-     * Get Host 
-     * @return Host Host
+     * Get <p>host (% or ipv4 address)</p> 
+     * @return Host <p>host (% or ipv4 address)</p>
      */
     public String getHost() {
         return this.Host;
     }
 
     /**
-     * Set Host
-     * @param Host Host
+     * Set <p>host (% or ipv4 address)</p>
+     * @param Host <p>host (% or ipv4 address)</p>
      */
     public void setHost(String Host) {
         this.Host = Host;
     }
 
     /**
-     * Get Password, which can contain 8-64 characters. 
-     * @return AccountPassword Password, which can contain 8-64 characters.
+     * Get <p>Password. The length range is 8 to 64 characters.</p> 
+     * @return AccountPassword <p>Password. The length range is 8 to 64 characters.</p>
      */
     public String getAccountPassword() {
         return this.AccountPassword;
     }
 
     /**
-     * Set Password, which can contain 8-64 characters.
-     * @param AccountPassword Password, which can contain 8-64 characters.
+     * Set <p>Password. The length range is 8 to 64 characters.</p>
+     * @param AccountPassword <p>Password. The length range is 8 to 64 characters.</p>
      */
     public void setAccountPassword(String AccountPassword) {
         this.AccountPassword = AccountPassword;
     }
 
     /**
-     * Get Whether password rotation is enabled (0: turn off; 1: turn on) 
-     * @return PasswordRotation Whether password rotation is enabled (0: turn off; 1: turn on)
+     * Get <p>Whether password rotation is enabled (0: turn off; 1: turn on)</p> 
+     * @return PasswordRotation <p>Whether password rotation is enabled (0: turn off; 1: turn on)</p>
      */
     public Long getPasswordRotation() {
         return this.PasswordRotation;
     }
 
     /**
-     * Set Whether password rotation is enabled (0: turn off; 1: turn on)
-     * @param PasswordRotation Whether password rotation is enabled (0: turn off; 1: turn on)
+     * Set <p>Whether password rotation is enabled (0: turn off; 1: turn on)</p>
+     * @param PasswordRotation <p>Whether password rotation is enabled (0: turn off; 1: turn on)</p>
      */
     public void setPasswordRotation(Long PasswordRotation) {
         this.PasswordRotation = PasswordRotation;
     }
 
     /**
-     * Get Description 
-     * @return Description Description
+     * Get <p>Description.</p> 
+     * @return Description <p>Description.</p>
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set Description
-     * @param Description Description
+     * Set <p>Description.</p>
+     * @param Description <p>Description.</p>
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get Maximum number of user connections, which cannot be above 10,240. 
-     * @return MaxUserConnections Maximum number of user connections, which cannot be above 10,240.
+     * Get <p>Maximum user connections cannot be greater than 10240</p> 
+     * @return MaxUserConnections <p>Maximum user connections cannot be greater than 10240</p>
      */
     public Long getMaxUserConnections() {
         return this.MaxUserConnections;
     }
 
     /**
-     * Set Maximum number of user connections, which cannot be above 10,240.
-     * @param MaxUserConnections Maximum number of user connections, which cannot be above 10,240.
+     * Set <p>Maximum user connections cannot be greater than 10240</p>
+     * @param MaxUserConnections <p>Maximum user connections cannot be greater than 10240</p>
      */
     public void setMaxUserConnections(Long MaxUserConnections) {
         this.MaxUserConnections = MaxUserConnections;

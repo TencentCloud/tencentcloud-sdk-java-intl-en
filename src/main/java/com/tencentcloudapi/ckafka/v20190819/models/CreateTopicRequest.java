@@ -87,7 +87,7 @@ public class CreateTopicRequest extends AbstractModel {
     private Long MinInsyncReplicas;
 
     /**
-    * <p>Whether to allow unsynchronized replicas to be elected as leader, 0: not allowed, 1: allowed, default not allowed</p>
+    * <p>Whether to allow unsynchronized replicas to be elected as leader. 0: not allowed, 1: allowed. Default value is the instance dimension value.</p>
     */
     @SerializedName("UncleanLeaderElectionEnable")
     @Expose
@@ -294,16 +294,16 @@ public class CreateTopicRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>Whether to allow unsynchronized replicas to be elected as leader, 0: not allowed, 1: allowed, default not allowed</p> 
-     * @return UncleanLeaderElectionEnable <p>Whether to allow unsynchronized replicas to be elected as leader, 0: not allowed, 1: allowed, default not allowed</p>
+     * Get <p>Whether to allow unsynchronized replicas to be elected as leader. 0: not allowed, 1: allowed. Default value is the instance dimension value.</p> 
+     * @return UncleanLeaderElectionEnable <p>Whether to allow unsynchronized replicas to be elected as leader. 0: not allowed, 1: allowed. Default value is the instance dimension value.</p>
      */
     public Long getUncleanLeaderElectionEnable() {
         return this.UncleanLeaderElectionEnable;
     }
 
     /**
-     * Set <p>Whether to allow unsynchronized replicas to be elected as leader, 0: not allowed, 1: allowed, default not allowed</p>
-     * @param UncleanLeaderElectionEnable <p>Whether to allow unsynchronized replicas to be elected as leader, 0: not allowed, 1: allowed, default not allowed</p>
+     * Set <p>Whether to allow unsynchronized replicas to be elected as leader. 0: not allowed, 1: allowed. Default value is the instance dimension value.</p>
+     * @param UncleanLeaderElectionEnable <p>Whether to allow unsynchronized replicas to be elected as leader. 0: not allowed, 1: allowed. Default value is the instance dimension value.</p>
      */
     public void setUncleanLeaderElectionEnable(Long UncleanLeaderElectionEnable) {
         this.UncleanLeaderElectionEnable = UncleanLeaderElectionEnable;

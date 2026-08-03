@@ -24,276 +24,276 @@ import java.util.HashMap;
 public class Ability extends AbstractModel {
 
     /**
-    * Whether secondary AZ is supported
+    * <p>Whether support from availability zone is supported</p>
     */
     @SerializedName("IsSupportSlaveZone")
     @Expose
     private String IsSupportSlaveZone;
 
     /**
-    * The causes for no support from an availability zone.
+    * <p>The causes for no support from availability zone</p>
     */
     @SerializedName("NonsupportSlaveZoneReason")
     @Expose
     private String NonsupportSlaveZoneReason;
 
     /**
-    * Whether read-only instance is supported
+    * <p>Whether RO instance is supported</p>
     */
     @SerializedName("IsSupportRo")
     @Expose
     private String IsSupportRo;
 
     /**
-    * Reasons why RO instances are not supported.
+    * <p>Reason for unsupported RO instance</p>
     */
     @SerializedName("NonsupportRoReason")
     @Expose
     private String NonsupportRoReason;
 
     /**
-    * Whether manual snapshot backup initiation is supported.
+    * <p>Whether manual snapshot backup initiation is supported</p>
     */
     @SerializedName("IsSupportManualSnapshot")
     @Expose
     private String IsSupportManualSnapshot;
 
     /**
-    * Whether transparent data encryption is supported.
+    * <p>Whether transparent data encryption is supported</p>
     */
     @SerializedName("IsSupportTransparentDataEncryption")
     @Expose
     private String IsSupportTransparentDataEncryption;
 
     /**
-    * Reasons for no support of transparent data encryption.
+    * <p>The causes for unsupported transparent data encryption</p>
     */
     @SerializedName("NoSupportTransparentDataEncryptionReason")
     @Expose
     private String NoSupportTransparentDataEncryptionReason;
 
     /**
-    * Whether manual initiation of logical backup is supported.
+    * <p>Whether manual initiation of logical backup is supported</p>
     */
     @SerializedName("IsSupportManualLogic")
     @Expose
     private String IsSupportManualLogic;
 
     /**
-    * Enable global encryption.
+    * <p>Whether global encryption can be enabled</p>
     */
     @SerializedName("IsSupportGlobalEncryption")
     @Expose
     private String IsSupportGlobalEncryption;
 
     /**
-    * The causes for unsupported global encryption.
+    * <p>The causes for unsupported global encryption</p>
     */
     @SerializedName("NoSupportGlobalEncryptionReason")
     @Expose
     private String NoSupportGlobalEncryptionReason;
 
     /**
-    * Status code for unsupported tde reason.
+    * <p>Status code for unsupported transparent encryption reason</p>
     */
     @SerializedName("NoSupportTransparentDataEncryptionReasonCode")
     @Expose
     private String NoSupportTransparentDataEncryptionReasonCode;
 
     /**
-    * Status code for unsupported global encryption.
+    * <p>Status code for unsupported global encryption reason</p>
     */
     @SerializedName("NoSupportGlobalEncryptionReasonCode")
     @Expose
     private String NoSupportGlobalEncryptionReasonCode;
 
     /**
-     * Get Whether secondary AZ is supported 
-     * @return IsSupportSlaveZone Whether secondary AZ is supported
+     * Get <p>Whether support from availability zone is supported</p> 
+     * @return IsSupportSlaveZone <p>Whether support from availability zone is supported</p>
      */
     public String getIsSupportSlaveZone() {
         return this.IsSupportSlaveZone;
     }
 
     /**
-     * Set Whether secondary AZ is supported
-     * @param IsSupportSlaveZone Whether secondary AZ is supported
+     * Set <p>Whether support from availability zone is supported</p>
+     * @param IsSupportSlaveZone <p>Whether support from availability zone is supported</p>
      */
     public void setIsSupportSlaveZone(String IsSupportSlaveZone) {
         this.IsSupportSlaveZone = IsSupportSlaveZone;
     }
 
     /**
-     * Get The causes for no support from an availability zone. 
-     * @return NonsupportSlaveZoneReason The causes for no support from an availability zone.
+     * Get <p>The causes for no support from availability zone</p> 
+     * @return NonsupportSlaveZoneReason <p>The causes for no support from availability zone</p>
      */
     public String getNonsupportSlaveZoneReason() {
         return this.NonsupportSlaveZoneReason;
     }
 
     /**
-     * Set The causes for no support from an availability zone.
-     * @param NonsupportSlaveZoneReason The causes for no support from an availability zone.
+     * Set <p>The causes for no support from availability zone</p>
+     * @param NonsupportSlaveZoneReason <p>The causes for no support from availability zone</p>
      */
     public void setNonsupportSlaveZoneReason(String NonsupportSlaveZoneReason) {
         this.NonsupportSlaveZoneReason = NonsupportSlaveZoneReason;
     }
 
     /**
-     * Get Whether read-only instance is supported 
-     * @return IsSupportRo Whether read-only instance is supported
+     * Get <p>Whether RO instance is supported</p> 
+     * @return IsSupportRo <p>Whether RO instance is supported</p>
      */
     public String getIsSupportRo() {
         return this.IsSupportRo;
     }
 
     /**
-     * Set Whether read-only instance is supported
-     * @param IsSupportRo Whether read-only instance is supported
+     * Set <p>Whether RO instance is supported</p>
+     * @param IsSupportRo <p>Whether RO instance is supported</p>
      */
     public void setIsSupportRo(String IsSupportRo) {
         this.IsSupportRo = IsSupportRo;
     }
 
     /**
-     * Get Reasons why RO instances are not supported. 
-     * @return NonsupportRoReason Reasons why RO instances are not supported.
+     * Get <p>Reason for unsupported RO instance</p> 
+     * @return NonsupportRoReason <p>Reason for unsupported RO instance</p>
      */
     public String getNonsupportRoReason() {
         return this.NonsupportRoReason;
     }
 
     /**
-     * Set Reasons why RO instances are not supported.
-     * @param NonsupportRoReason Reasons why RO instances are not supported.
+     * Set <p>Reason for unsupported RO instance</p>
+     * @param NonsupportRoReason <p>Reason for unsupported RO instance</p>
      */
     public void setNonsupportRoReason(String NonsupportRoReason) {
         this.NonsupportRoReason = NonsupportRoReason;
     }
 
     /**
-     * Get Whether manual snapshot backup initiation is supported. 
-     * @return IsSupportManualSnapshot Whether manual snapshot backup initiation is supported.
+     * Get <p>Whether manual snapshot backup initiation is supported</p> 
+     * @return IsSupportManualSnapshot <p>Whether manual snapshot backup initiation is supported</p>
      */
     public String getIsSupportManualSnapshot() {
         return this.IsSupportManualSnapshot;
     }
 
     /**
-     * Set Whether manual snapshot backup initiation is supported.
-     * @param IsSupportManualSnapshot Whether manual snapshot backup initiation is supported.
+     * Set <p>Whether manual snapshot backup initiation is supported</p>
+     * @param IsSupportManualSnapshot <p>Whether manual snapshot backup initiation is supported</p>
      */
     public void setIsSupportManualSnapshot(String IsSupportManualSnapshot) {
         this.IsSupportManualSnapshot = IsSupportManualSnapshot;
     }
 
     /**
-     * Get Whether transparent data encryption is supported. 
-     * @return IsSupportTransparentDataEncryption Whether transparent data encryption is supported.
+     * Get <p>Whether transparent data encryption is supported</p> 
+     * @return IsSupportTransparentDataEncryption <p>Whether transparent data encryption is supported</p>
      */
     public String getIsSupportTransparentDataEncryption() {
         return this.IsSupportTransparentDataEncryption;
     }
 
     /**
-     * Set Whether transparent data encryption is supported.
-     * @param IsSupportTransparentDataEncryption Whether transparent data encryption is supported.
+     * Set <p>Whether transparent data encryption is supported</p>
+     * @param IsSupportTransparentDataEncryption <p>Whether transparent data encryption is supported</p>
      */
     public void setIsSupportTransparentDataEncryption(String IsSupportTransparentDataEncryption) {
         this.IsSupportTransparentDataEncryption = IsSupportTransparentDataEncryption;
     }
 
     /**
-     * Get Reasons for no support of transparent data encryption. 
-     * @return NoSupportTransparentDataEncryptionReason Reasons for no support of transparent data encryption.
+     * Get <p>The causes for unsupported transparent data encryption</p> 
+     * @return NoSupportTransparentDataEncryptionReason <p>The causes for unsupported transparent data encryption</p>
      */
     public String getNoSupportTransparentDataEncryptionReason() {
         return this.NoSupportTransparentDataEncryptionReason;
     }
 
     /**
-     * Set Reasons for no support of transparent data encryption.
-     * @param NoSupportTransparentDataEncryptionReason Reasons for no support of transparent data encryption.
+     * Set <p>The causes for unsupported transparent data encryption</p>
+     * @param NoSupportTransparentDataEncryptionReason <p>The causes for unsupported transparent data encryption</p>
      */
     public void setNoSupportTransparentDataEncryptionReason(String NoSupportTransparentDataEncryptionReason) {
         this.NoSupportTransparentDataEncryptionReason = NoSupportTransparentDataEncryptionReason;
     }
 
     /**
-     * Get Whether manual initiation of logical backup is supported. 
-     * @return IsSupportManualLogic Whether manual initiation of logical backup is supported.
+     * Get <p>Whether manual initiation of logical backup is supported</p> 
+     * @return IsSupportManualLogic <p>Whether manual initiation of logical backup is supported</p>
      */
     public String getIsSupportManualLogic() {
         return this.IsSupportManualLogic;
     }
 
     /**
-     * Set Whether manual initiation of logical backup is supported.
-     * @param IsSupportManualLogic Whether manual initiation of logical backup is supported.
+     * Set <p>Whether manual initiation of logical backup is supported</p>
+     * @param IsSupportManualLogic <p>Whether manual initiation of logical backup is supported</p>
      */
     public void setIsSupportManualLogic(String IsSupportManualLogic) {
         this.IsSupportManualLogic = IsSupportManualLogic;
     }
 
     /**
-     * Get Enable global encryption. 
-     * @return IsSupportGlobalEncryption Enable global encryption.
+     * Get <p>Whether global encryption can be enabled</p> 
+     * @return IsSupportGlobalEncryption <p>Whether global encryption can be enabled</p>
      */
     public String getIsSupportGlobalEncryption() {
         return this.IsSupportGlobalEncryption;
     }
 
     /**
-     * Set Enable global encryption.
-     * @param IsSupportGlobalEncryption Enable global encryption.
+     * Set <p>Whether global encryption can be enabled</p>
+     * @param IsSupportGlobalEncryption <p>Whether global encryption can be enabled</p>
      */
     public void setIsSupportGlobalEncryption(String IsSupportGlobalEncryption) {
         this.IsSupportGlobalEncryption = IsSupportGlobalEncryption;
     }
 
     /**
-     * Get The causes for unsupported global encryption. 
-     * @return NoSupportGlobalEncryptionReason The causes for unsupported global encryption.
+     * Get <p>The causes for unsupported global encryption</p> 
+     * @return NoSupportGlobalEncryptionReason <p>The causes for unsupported global encryption</p>
      */
     public String getNoSupportGlobalEncryptionReason() {
         return this.NoSupportGlobalEncryptionReason;
     }
 
     /**
-     * Set The causes for unsupported global encryption.
-     * @param NoSupportGlobalEncryptionReason The causes for unsupported global encryption.
+     * Set <p>The causes for unsupported global encryption</p>
+     * @param NoSupportGlobalEncryptionReason <p>The causes for unsupported global encryption</p>
      */
     public void setNoSupportGlobalEncryptionReason(String NoSupportGlobalEncryptionReason) {
         this.NoSupportGlobalEncryptionReason = NoSupportGlobalEncryptionReason;
     }
 
     /**
-     * Get Status code for unsupported tde reason. 
-     * @return NoSupportTransparentDataEncryptionReasonCode Status code for unsupported tde reason.
+     * Get <p>Status code for unsupported transparent encryption reason</p> 
+     * @return NoSupportTransparentDataEncryptionReasonCode <p>Status code for unsupported transparent encryption reason</p>
      */
     public String getNoSupportTransparentDataEncryptionReasonCode() {
         return this.NoSupportTransparentDataEncryptionReasonCode;
     }
 
     /**
-     * Set Status code for unsupported tde reason.
-     * @param NoSupportTransparentDataEncryptionReasonCode Status code for unsupported tde reason.
+     * Set <p>Status code for unsupported transparent encryption reason</p>
+     * @param NoSupportTransparentDataEncryptionReasonCode <p>Status code for unsupported transparent encryption reason</p>
      */
     public void setNoSupportTransparentDataEncryptionReasonCode(String NoSupportTransparentDataEncryptionReasonCode) {
         this.NoSupportTransparentDataEncryptionReasonCode = NoSupportTransparentDataEncryptionReasonCode;
     }
 
     /**
-     * Get Status code for unsupported global encryption. 
-     * @return NoSupportGlobalEncryptionReasonCode Status code for unsupported global encryption.
+     * Get <p>Status code for unsupported global encryption reason</p> 
+     * @return NoSupportGlobalEncryptionReasonCode <p>Status code for unsupported global encryption reason</p>
      */
     public String getNoSupportGlobalEncryptionReasonCode() {
         return this.NoSupportGlobalEncryptionReasonCode;
     }
 
     /**
-     * Set Status code for unsupported global encryption.
-     * @param NoSupportGlobalEncryptionReasonCode Status code for unsupported global encryption.
+     * Set <p>Status code for unsupported global encryption reason</p>
+     * @param NoSupportGlobalEncryptionReasonCode <p>Status code for unsupported global encryption reason</p>
      */
     public void setNoSupportGlobalEncryptionReasonCode(String NoSupportGlobalEncryptionReasonCode) {
         this.NoSupportGlobalEncryptionReasonCode = NoSupportGlobalEncryptionReasonCode;

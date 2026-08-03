@@ -59,7 +59,7 @@ public class InstanceAttributesResponse extends AbstractModel {
     private String Vport;
 
     /**
-    * <P>Specifies the instance status. valid values: 0 (creating), 1 (running), 2 (deleting), 3 (deleted), 5 (isolated), 7 (upgrading), -1 (creation failed).</p>.
+    * <p>Instance status. 0: Creating, 1: Running, 2: Deleting, 3: Deleted, 5: Isolated, 7: Upgrading, -1: Creation failed</p>
     */
     @SerializedName("Status")
     @Expose
@@ -206,7 +206,7 @@ public class InstanceAttributesResponse extends AbstractModel {
     private Long Cvm;
 
     /**
-    * <p>Instance type. enumerates the list: profession: pro edition; standards2: standard version; premium: advanced edition; serverless: serverless edition.</p>.
+    * <p>Instance type</p><p>Enumeration value:</p><ul><li>profession: Pro Edition</li><li>premium: Advanced Edition</li><li>serverless: Serverless Edition</li><li>other: Standard Version (for example: standards2/standard, this version is not available for sale)</li></ul>
     */
     @SerializedName("InstanceType")
     @Expose
@@ -290,21 +290,21 @@ public class InstanceAttributesResponse extends AbstractModel {
     private String InstanceChargeType;
 
     /**
-    * <p>Specifies whether to enable the elastic bandwidth allowlist. valid values: 1 (enabled), 0 (disabled).</p>.
+    * <p>Whether to enable elastic bandwidth allowlist<br>1: Elastic bandwidth allowlist is enabled;<br>0: Elastic bandwidth allowlist is not enabled;</p>
     */
     @SerializedName("ElasticBandwidthSwitch")
     @Expose
     private Long ElasticBandwidthSwitch;
 
     /**
-    * <P>Specifies the elastic bandwidth activation status. 1: elastic bandwidth is disabled; 16: enabling elastic bandwidth; 32: elastic bandwidth enabled successfully; 33: disabling elastic bandwidth; 34: elastic bandwidth disabled successfully; 64: failed to enable elastic bandwidth; 65: failed to disable elastic bandwidth.</p>.
+    * <p>Elastic bandwidth activation status<br>1: Elastic bandwidth not enabled;<br>16: Enabling elastic bandwidth;<br>32: Elastic bandwidth enabled successfully;<br>33: Disabling elastic bandwidth;<br>34: Elastic bandwidth disabled successfully;<br>64: Failed to enable elastic bandwidth;<br>65: Failed to disable elastic bandwidth;</p>
     */
     @SerializedName("ElasticBandwidthOpenStatus")
     @Expose
     private Long ElasticBandwidthOpenStatus;
 
     /**
-    * <p>ClusterType<br />CLOUD_IDC IDC cluster<br />CLOUD_CVM_SHARE CVM shared cluster<br />CLOUD_CVM_YUNTI YUNTI CVM cluster<br />CLOUD_CVM CVM cluster<br />CLOUD_CDC CDC cluster<br />CLOUD_EKS_TSE EKS cluster</p>.
+    * <p>Cluster type<br>CLOUD_IDC IDC cluster<br>CLOUD_CVM_SHARE CVM shared cluster<br>CLOUD_CVM_YUNTI YunTi CVM cluster<br>CLOUD_CVM CVM cluster<br>CLOUD_CDC cdc cluster<br>CLOUD_EKS_TSE EKS cluster</p>
     */
     @SerializedName("ClusterType")
     @Expose
@@ -346,14 +346,14 @@ public class InstanceAttributesResponse extends AbstractModel {
     private Long DeleteProtectionEnable;
 
     /**
-    * <p>Message retention size at the instance level</p>Measurement unit: bytes<br>Default value: -1
+    * <p>Message retention size at the instance level</p><p>Measurement unit: bytes</p><p>Default value: -1</p>
     */
     @SerializedName("RetentionBytes")
     @Expose
     private Long RetentionBytes;
 
     /**
-    * <p>The maximum idle time of a transaction ID. Uncommitted transactions that time out will be marked with expiration.</p>Unit: ms
+    * <p>Maximum idle time of transaction ID. Uncommitted transactions that time out will be marked with expiration.</p><p>Unit: ms</p>
     */
     @SerializedName("TransactionalIdExpirationMs")
     @Expose
@@ -440,16 +440,16 @@ public class InstanceAttributesResponse extends AbstractModel {
     }
 
     /**
-     * Get <P>Specifies the instance status. valid values: 0 (creating), 1 (running), 2 (deleting), 3 (deleted), 5 (isolated), 7 (upgrading), -1 (creation failed).</p>. 
-     * @return Status <P>Specifies the instance status. valid values: 0 (creating), 1 (running), 2 (deleting), 3 (deleted), 5 (isolated), 7 (upgrading), -1 (creation failed).</p>.
+     * Get <p>Instance status. 0: Creating, 1: Running, 2: Deleting, 3: Deleted, 5: Isolated, 7: Upgrading, -1: Creation failed</p> 
+     * @return Status <p>Instance status. 0: Creating, 1: Running, 2: Deleting, 3: Deleted, 5: Isolated, 7: Upgrading, -1: Creation failed</p>
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set <P>Specifies the instance status. valid values: 0 (creating), 1 (running), 2 (deleting), 3 (deleted), 5 (isolated), 7 (upgrading), -1 (creation failed).</p>.
-     * @param Status <P>Specifies the instance status. valid values: 0 (creating), 1 (running), 2 (deleting), 3 (deleted), 5 (isolated), 7 (upgrading), -1 (creation failed).</p>.
+     * Set <p>Instance status. 0: Creating, 1: Running, 2: Deleting, 3: Deleted, 5: Isolated, 7: Upgrading, -1: Creation failed</p>
+     * @param Status <p>Instance status. 0: Creating, 1: Running, 2: Deleting, 3: Deleted, 5: Isolated, 7: Upgrading, -1: Creation failed</p>
      */
     public void setStatus(Long Status) {
         this.Status = Status;
@@ -776,16 +776,16 @@ public class InstanceAttributesResponse extends AbstractModel {
     }
 
     /**
-     * Get <p>Instance type. enumerates the list: profession: pro edition; standards2: standard version; premium: advanced edition; serverless: serverless edition.</p>. 
-     * @return InstanceType <p>Instance type. enumerates the list: profession: pro edition; standards2: standard version; premium: advanced edition; serverless: serverless edition.</p>.
+     * Get <p>Instance type</p><p>Enumeration value:</p><ul><li>profession: Pro Edition</li><li>premium: Advanced Edition</li><li>serverless: Serverless Edition</li><li>other: Standard Version (for example: standards2/standard, this version is not available for sale)</li></ul> 
+     * @return InstanceType <p>Instance type</p><p>Enumeration value:</p><ul><li>profession: Pro Edition</li><li>premium: Advanced Edition</li><li>serverless: Serverless Edition</li><li>other: Standard Version (for example: standards2/standard, this version is not available for sale)</li></ul>
      */
     public String getInstanceType() {
         return this.InstanceType;
     }
 
     /**
-     * Set <p>Instance type. enumerates the list: profession: pro edition; standards2: standard version; premium: advanced edition; serverless: serverless edition.</p>.
-     * @param InstanceType <p>Instance type. enumerates the list: profession: pro edition; standards2: standard version; premium: advanced edition; serverless: serverless edition.</p>.
+     * Set <p>Instance type</p><p>Enumeration value:</p><ul><li>profession: Pro Edition</li><li>premium: Advanced Edition</li><li>serverless: Serverless Edition</li><li>other: Standard Version (for example: standards2/standard, this version is not available for sale)</li></ul>
+     * @param InstanceType <p>Instance type</p><p>Enumeration value:</p><ul><li>profession: Pro Edition</li><li>premium: Advanced Edition</li><li>serverless: Serverless Edition</li><li>other: Standard Version (for example: standards2/standard, this version is not available for sale)</li></ul>
      */
     public void setInstanceType(String InstanceType) {
         this.InstanceType = InstanceType;
@@ -968,48 +968,48 @@ public class InstanceAttributesResponse extends AbstractModel {
     }
 
     /**
-     * Get <p>Specifies whether to enable the elastic bandwidth allowlist. valid values: 1 (enabled), 0 (disabled).</p>. 
-     * @return ElasticBandwidthSwitch <p>Specifies whether to enable the elastic bandwidth allowlist. valid values: 1 (enabled), 0 (disabled).</p>.
+     * Get <p>Whether to enable elastic bandwidth allowlist<br>1: Elastic bandwidth allowlist is enabled;<br>0: Elastic bandwidth allowlist is not enabled;</p> 
+     * @return ElasticBandwidthSwitch <p>Whether to enable elastic bandwidth allowlist<br>1: Elastic bandwidth allowlist is enabled;<br>0: Elastic bandwidth allowlist is not enabled;</p>
      */
     public Long getElasticBandwidthSwitch() {
         return this.ElasticBandwidthSwitch;
     }
 
     /**
-     * Set <p>Specifies whether to enable the elastic bandwidth allowlist. valid values: 1 (enabled), 0 (disabled).</p>.
-     * @param ElasticBandwidthSwitch <p>Specifies whether to enable the elastic bandwidth allowlist. valid values: 1 (enabled), 0 (disabled).</p>.
+     * Set <p>Whether to enable elastic bandwidth allowlist<br>1: Elastic bandwidth allowlist is enabled;<br>0: Elastic bandwidth allowlist is not enabled;</p>
+     * @param ElasticBandwidthSwitch <p>Whether to enable elastic bandwidth allowlist<br>1: Elastic bandwidth allowlist is enabled;<br>0: Elastic bandwidth allowlist is not enabled;</p>
      */
     public void setElasticBandwidthSwitch(Long ElasticBandwidthSwitch) {
         this.ElasticBandwidthSwitch = ElasticBandwidthSwitch;
     }
 
     /**
-     * Get <P>Specifies the elastic bandwidth activation status. 1: elastic bandwidth is disabled; 16: enabling elastic bandwidth; 32: elastic bandwidth enabled successfully; 33: disabling elastic bandwidth; 34: elastic bandwidth disabled successfully; 64: failed to enable elastic bandwidth; 65: failed to disable elastic bandwidth.</p>. 
-     * @return ElasticBandwidthOpenStatus <P>Specifies the elastic bandwidth activation status. 1: elastic bandwidth is disabled; 16: enabling elastic bandwidth; 32: elastic bandwidth enabled successfully; 33: disabling elastic bandwidth; 34: elastic bandwidth disabled successfully; 64: failed to enable elastic bandwidth; 65: failed to disable elastic bandwidth.</p>.
+     * Get <p>Elastic bandwidth activation status<br>1: Elastic bandwidth not enabled;<br>16: Enabling elastic bandwidth;<br>32: Elastic bandwidth enabled successfully;<br>33: Disabling elastic bandwidth;<br>34: Elastic bandwidth disabled successfully;<br>64: Failed to enable elastic bandwidth;<br>65: Failed to disable elastic bandwidth;</p> 
+     * @return ElasticBandwidthOpenStatus <p>Elastic bandwidth activation status<br>1: Elastic bandwidth not enabled;<br>16: Enabling elastic bandwidth;<br>32: Elastic bandwidth enabled successfully;<br>33: Disabling elastic bandwidth;<br>34: Elastic bandwidth disabled successfully;<br>64: Failed to enable elastic bandwidth;<br>65: Failed to disable elastic bandwidth;</p>
      */
     public Long getElasticBandwidthOpenStatus() {
         return this.ElasticBandwidthOpenStatus;
     }
 
     /**
-     * Set <P>Specifies the elastic bandwidth activation status. 1: elastic bandwidth is disabled; 16: enabling elastic bandwidth; 32: elastic bandwidth enabled successfully; 33: disabling elastic bandwidth; 34: elastic bandwidth disabled successfully; 64: failed to enable elastic bandwidth; 65: failed to disable elastic bandwidth.</p>.
-     * @param ElasticBandwidthOpenStatus <P>Specifies the elastic bandwidth activation status. 1: elastic bandwidth is disabled; 16: enabling elastic bandwidth; 32: elastic bandwidth enabled successfully; 33: disabling elastic bandwidth; 34: elastic bandwidth disabled successfully; 64: failed to enable elastic bandwidth; 65: failed to disable elastic bandwidth.</p>.
+     * Set <p>Elastic bandwidth activation status<br>1: Elastic bandwidth not enabled;<br>16: Enabling elastic bandwidth;<br>32: Elastic bandwidth enabled successfully;<br>33: Disabling elastic bandwidth;<br>34: Elastic bandwidth disabled successfully;<br>64: Failed to enable elastic bandwidth;<br>65: Failed to disable elastic bandwidth;</p>
+     * @param ElasticBandwidthOpenStatus <p>Elastic bandwidth activation status<br>1: Elastic bandwidth not enabled;<br>16: Enabling elastic bandwidth;<br>32: Elastic bandwidth enabled successfully;<br>33: Disabling elastic bandwidth;<br>34: Elastic bandwidth disabled successfully;<br>64: Failed to enable elastic bandwidth;<br>65: Failed to disable elastic bandwidth;</p>
      */
     public void setElasticBandwidthOpenStatus(Long ElasticBandwidthOpenStatus) {
         this.ElasticBandwidthOpenStatus = ElasticBandwidthOpenStatus;
     }
 
     /**
-     * Get <p>ClusterType<br />CLOUD_IDC IDC cluster<br />CLOUD_CVM_SHARE CVM shared cluster<br />CLOUD_CVM_YUNTI YUNTI CVM cluster<br />CLOUD_CVM CVM cluster<br />CLOUD_CDC CDC cluster<br />CLOUD_EKS_TSE EKS cluster</p>. 
-     * @return ClusterType <p>ClusterType<br />CLOUD_IDC IDC cluster<br />CLOUD_CVM_SHARE CVM shared cluster<br />CLOUD_CVM_YUNTI YUNTI CVM cluster<br />CLOUD_CVM CVM cluster<br />CLOUD_CDC CDC cluster<br />CLOUD_EKS_TSE EKS cluster</p>.
+     * Get <p>Cluster type<br>CLOUD_IDC IDC cluster<br>CLOUD_CVM_SHARE CVM shared cluster<br>CLOUD_CVM_YUNTI YunTi CVM cluster<br>CLOUD_CVM CVM cluster<br>CLOUD_CDC cdc cluster<br>CLOUD_EKS_TSE EKS cluster</p> 
+     * @return ClusterType <p>Cluster type<br>CLOUD_IDC IDC cluster<br>CLOUD_CVM_SHARE CVM shared cluster<br>CLOUD_CVM_YUNTI YunTi CVM cluster<br>CLOUD_CVM CVM cluster<br>CLOUD_CDC cdc cluster<br>CLOUD_EKS_TSE EKS cluster</p>
      */
     public String getClusterType() {
         return this.ClusterType;
     }
 
     /**
-     * Set <p>ClusterType<br />CLOUD_IDC IDC cluster<br />CLOUD_CVM_SHARE CVM shared cluster<br />CLOUD_CVM_YUNTI YUNTI CVM cluster<br />CLOUD_CVM CVM cluster<br />CLOUD_CDC CDC cluster<br />CLOUD_EKS_TSE EKS cluster</p>.
-     * @param ClusterType <p>ClusterType<br />CLOUD_IDC IDC cluster<br />CLOUD_CVM_SHARE CVM shared cluster<br />CLOUD_CVM_YUNTI YUNTI CVM cluster<br />CLOUD_CVM CVM cluster<br />CLOUD_CDC CDC cluster<br />CLOUD_EKS_TSE EKS cluster</p>.
+     * Set <p>Cluster type<br>CLOUD_IDC IDC cluster<br>CLOUD_CVM_SHARE CVM shared cluster<br>CLOUD_CVM_YUNTI YunTi CVM cluster<br>CLOUD_CVM CVM cluster<br>CLOUD_CDC cdc cluster<br>CLOUD_EKS_TSE EKS cluster</p>
+     * @param ClusterType <p>Cluster type<br>CLOUD_IDC IDC cluster<br>CLOUD_CVM_SHARE CVM shared cluster<br>CLOUD_CVM_YUNTI YunTi CVM cluster<br>CLOUD_CVM CVM cluster<br>CLOUD_CDC cdc cluster<br>CLOUD_EKS_TSE EKS cluster</p>
      */
     public void setClusterType(String ClusterType) {
         this.ClusterType = ClusterType;
@@ -1096,32 +1096,32 @@ public class InstanceAttributesResponse extends AbstractModel {
     }
 
     /**
-     * Get <p>Message retention size at the instance level</p>Measurement unit: bytes<br>Default value: -1 
-     * @return RetentionBytes <p>Message retention size at the instance level</p>Measurement unit: bytes<br>Default value: -1
+     * Get <p>Message retention size at the instance level</p><p>Measurement unit: bytes</p><p>Default value: -1</p> 
+     * @return RetentionBytes <p>Message retention size at the instance level</p><p>Measurement unit: bytes</p><p>Default value: -1</p>
      */
     public Long getRetentionBytes() {
         return this.RetentionBytes;
     }
 
     /**
-     * Set <p>Message retention size at the instance level</p>Measurement unit: bytes<br>Default value: -1
-     * @param RetentionBytes <p>Message retention size at the instance level</p>Measurement unit: bytes<br>Default value: -1
+     * Set <p>Message retention size at the instance level</p><p>Measurement unit: bytes</p><p>Default value: -1</p>
+     * @param RetentionBytes <p>Message retention size at the instance level</p><p>Measurement unit: bytes</p><p>Default value: -1</p>
      */
     public void setRetentionBytes(Long RetentionBytes) {
         this.RetentionBytes = RetentionBytes;
     }
 
     /**
-     * Get <p>The maximum idle time of a transaction ID. Uncommitted transactions that time out will be marked with expiration.</p>Unit: ms 
-     * @return TransactionalIdExpirationMs <p>The maximum idle time of a transaction ID. Uncommitted transactions that time out will be marked with expiration.</p>Unit: ms
+     * Get <p>Maximum idle time of transaction ID. Uncommitted transactions that time out will be marked with expiration.</p><p>Unit: ms</p> 
+     * @return TransactionalIdExpirationMs <p>Maximum idle time of transaction ID. Uncommitted transactions that time out will be marked with expiration.</p><p>Unit: ms</p>
      */
     public Long getTransactionalIdExpirationMs() {
         return this.TransactionalIdExpirationMs;
     }
 
     /**
-     * Set <p>The maximum idle time of a transaction ID. Uncommitted transactions that time out will be marked with expiration.</p>Unit: ms
-     * @param TransactionalIdExpirationMs <p>The maximum idle time of a transaction ID. Uncommitted transactions that time out will be marked with expiration.</p>Unit: ms
+     * Set <p>Maximum idle time of transaction ID. Uncommitted transactions that time out will be marked with expiration.</p><p>Unit: ms</p>
+     * @param TransactionalIdExpirationMs <p>Maximum idle time of transaction ID. Uncommitted transactions that time out will be marked with expiration.</p><p>Unit: ms</p>
      */
     public void setTransactionalIdExpirationMs(Long TransactionalIdExpirationMs) {
         this.TransactionalIdExpirationMs = TransactionalIdExpirationMs;

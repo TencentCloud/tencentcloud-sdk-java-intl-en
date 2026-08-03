@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ModifyDatahubTopicResponse extends AbstractModel {
 
     /**
-    * Returned result set
+    * <p>Returned result set</p>
     */
     @SerializedName("Result")
     @Expose
@@ -38,16 +38,16 @@ public class ModifyDatahubTopicResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Returned result set 
-     * @return Result Returned result set
+     * Get <p>Returned result set</p> 
+     * @return Result <p>Returned result set</p>
      */
     public JgwOperateResponse getResult() {
         return this.Result;
     }
 
     /**
-     * Set Returned result set
-     * @param Result Returned result set
+     * Set <p>Returned result set</p>
+     * @param Result <p>Returned result set</p>
      */
     public void setResult(JgwOperateResponse Result) {
         this.Result = Result;

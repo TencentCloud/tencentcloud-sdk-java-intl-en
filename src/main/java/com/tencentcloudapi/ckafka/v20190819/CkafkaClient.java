@@ -292,17 +292,6 @@ public class CkafkaClient extends AbstractClient{
     }
 
     /**
-     *This API is used to delete a topic IP allowlist.
-     * @param req DeleteTopicIpWhiteListRequest
-     * @return DeleteTopicIpWhiteListResponse
-     * @throws TencentCloudSDKException
-     */
-    public DeleteTopicIpWhiteListResponse DeleteTopicIpWhiteList(DeleteTopicIpWhiteListRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DeleteTopicIpWhiteList", DeleteTopicIpWhiteListResponse.class);
-    }
-
-    /**
      *This API is used to delete a user.
      * @param req DeleteUserRequest
      * @return DeleteUserResponse
@@ -322,6 +311,17 @@ public class CkafkaClient extends AbstractClient{
     public DescribeACLResponse DescribeACL(DescribeACLRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeACL", DescribeACLResponse.class);
+    }
+
+    /**
+     *This API is used to query the public IP allowlist of an instance.
+     * @param req DescribeAccessPolicyRequest
+     * @return DescribeAccessPolicyResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAccessPolicyResponse DescribeAccessPolicy(DescribeAccessPolicyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAccessPolicy", DescribeAccessPolicyResponse.class);
     }
 
     /**
@@ -664,6 +664,28 @@ This API is used to get the list of topics in a CKafka instance of a user.
     public InstanceScalingDownResponse InstanceScalingDown(InstanceScalingDownRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "InstanceScalingDown", InstanceScalingDownResponse.class);
+    }
+
+    /**
+     *Isolate a prepaid instance. This API is used to perform isolation on the instance. After successful execution, the instance is isolated.
+     * @param req IsolatedInstancePreRequest
+     * @return IsolatedInstancePreResponse
+     * @throws TencentCloudSDKException
+     */
+    public IsolatedInstancePreResponse IsolatedInstancePre(IsolatedInstancePreRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "IsolatedInstancePre", IsolatedInstancePreResponse.class);
+    }
+
+    /**
+     *This API is used to modify the public IP allowlist of an instance.
+     * @param req ModifyAccessPolicyRequest
+     * @return ModifyAccessPolicyResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyAccessPolicyResponse ModifyAccessPolicy(ModifyAccessPolicyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyAccessPolicy", ModifyAccessPolicyResponse.class);
     }
 
     /**

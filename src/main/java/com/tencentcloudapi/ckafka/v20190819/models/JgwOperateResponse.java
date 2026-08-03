@@ -24,74 +24,74 @@ import java.util.HashMap;
 public class JgwOperateResponse extends AbstractModel {
 
     /**
-    * Returned code. 0: normal, other values: error
+    * <p>Returned code. 0 as normal, non-0 as error.</p>
     */
     @SerializedName("ReturnCode")
     @Expose
     private String ReturnCode;
 
     /**
-    * Success message
+    * <p>Success message</p>
     */
     @SerializedName("ReturnMessage")
     @Expose
     private String ReturnMessage;
 
     /**
-    * Data returned by an operation, which may contain `flowId`, etc.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * <p>The Data returned by the operation may include flowId.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Data")
     @Expose
     private OperateResponseData Data;
 
     /**
-     * Get Returned code. 0: normal, other values: error 
-     * @return ReturnCode Returned code. 0: normal, other values: error
+     * Get <p>Returned code. 0 as normal, non-0 as error.</p> 
+     * @return ReturnCode <p>Returned code. 0 as normal, non-0 as error.</p>
      */
     public String getReturnCode() {
         return this.ReturnCode;
     }
 
     /**
-     * Set Returned code. 0: normal, other values: error
-     * @param ReturnCode Returned code. 0: normal, other values: error
+     * Set <p>Returned code. 0 as normal, non-0 as error.</p>
+     * @param ReturnCode <p>Returned code. 0 as normal, non-0 as error.</p>
      */
     public void setReturnCode(String ReturnCode) {
         this.ReturnCode = ReturnCode;
     }
 
     /**
-     * Get Success message 
-     * @return ReturnMessage Success message
+     * Get <p>Success message</p> 
+     * @return ReturnMessage <p>Success message</p>
      */
     public String getReturnMessage() {
         return this.ReturnMessage;
     }
 
     /**
-     * Set Success message
-     * @param ReturnMessage Success message
+     * Set <p>Success message</p>
+     * @param ReturnMessage <p>Success message</p>
      */
     public void setReturnMessage(String ReturnMessage) {
         this.ReturnMessage = ReturnMessage;
     }
 
     /**
-     * Get Data returned by an operation, which may contain `flowId`, etc.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return Data Data returned by an operation, which may contain `flowId`, etc.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get <p>The Data returned by the operation may include flowId.</p>
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Data <p>The Data returned by the operation may include flowId.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public OperateResponseData getData() {
         return this.Data;
     }
 
     /**
-     * Set Data returned by an operation, which may contain `flowId`, etc.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Data Data returned by an operation, which may contain `flowId`, etc.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set <p>The Data returned by the operation may include flowId.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Data <p>The Data returned by the operation may include flowId.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setData(OperateResponseData Data) {
         this.Data = Data;

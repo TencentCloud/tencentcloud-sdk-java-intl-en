@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class User extends AbstractModel {
 
     /**
-    * User ID
+    * <p>User id</p>
     */
     @SerializedName("UserId")
     @Expose
     private Long UserId;
 
     /**
-    * Username
+    * <p>Username</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * Creation time
+    * <p>Creation time.</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * Last updated time
+    * <p>Last update time</p>
     */
     @SerializedName("UpdateTime")
     @Expose
     private String UpdateTime;
 
     /**
-     * Get User ID 
-     * @return UserId User ID
+     * Get <p>User id</p> 
+     * @return UserId <p>User id</p>
      */
     public Long getUserId() {
         return this.UserId;
     }
 
     /**
-     * Set User ID
-     * @param UserId User ID
+     * Set <p>User id</p>
+     * @param UserId <p>User id</p>
      */
     public void setUserId(Long UserId) {
         this.UserId = UserId;
     }
 
     /**
-     * Get Username 
-     * @return Name Username
+     * Get <p>Username</p> 
+     * @return Name <p>Username</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Username
-     * @param Name Username
+     * Set <p>Username</p>
+     * @param Name <p>Username</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get Creation time 
-     * @return CreateTime Creation time
+     * Get <p>Creation time.</p> 
+     * @return CreateTime <p>Creation time.</p>
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set Creation time
-     * @param CreateTime Creation time
+     * Set <p>Creation time.</p>
+     * @param CreateTime <p>Creation time.</p>
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get Last updated time 
-     * @return UpdateTime Last updated time
+     * Get <p>Last update time</p> 
+     * @return UpdateTime <p>Last update time</p>
      */
     public String getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set Last updated time
-     * @param UpdateTime Last updated time
+     * Set <p>Last update time</p>
+     * @param UpdateTime <p>Last update time</p>
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;

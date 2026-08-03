@@ -69,6 +69,9 @@ public enum CkafkaErrorCode {
      /* Task paused. */
      OPERATIONDENIED_RESOURCETASKPAUSED("OperationDenied.ResourceTaskPaused"),
      
+     /* Region error */
+     REGIONERROR("RegionError"),
+     
      /* The number of requests exceeds the frequency limit. */
      REQUESTLIMITEXCEEDED("RequestLimitExceeded"),
      
