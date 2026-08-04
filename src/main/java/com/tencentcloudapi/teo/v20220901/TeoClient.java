@@ -285,6 +285,28 @@ The feature is only supported by the enterprise plan and is currently in closed 
     }
 
     /**
+     *Create an inference API Token for authenticating access to the inference service. The Token content is returned only once when creating. Each site can create up to 100 tokens.
+     * @param req CreateInferenceAPITokenRequest
+     * @return CreateInferenceAPITokenResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateInferenceAPITokenResponse CreateInferenceAPIToken(CreateInferenceAPITokenRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateInferenceAPIToken", CreateInferenceAPITokenResponse.class);
+    }
+
+    /**
+     *This API is used to create an inference service. It allows setting the service name, listening port, container image configuration, and resource configuration. Once created successfully, an inference access address is provided.
+     * @param req CreateInferenceServiceRequest
+     * @return CreateInferenceServiceResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateInferenceServiceResponse CreateInferenceService(CreateInferenceServiceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateInferenceService", CreateInferenceServiceResponse.class);
+    }
+
+    /**
      *JIT transcoding already provides preset transcoding templates to meet most needs. If there are personalized transcoding requirements, you can create custom transcoding templates through this API, with up to 100 custom transcoding templates allowed.
 This API is used to ensure the consistency of JIT transcoding effect, avoid video output exceptions caused by EO cache or M3U8 sharding template changes during the process, and templates cannot be modified after creation.
 This API is used to learn about the detailed capacity of JIT transcoding. EdgeOne video instant processing function introduction (https://www.tencentcloud.com/document/product/1552/111927?from_cn_redirect=1).
@@ -671,6 +693,17 @@ The feature is only supported by the enterprise plan and is currently in closed 
     public DeleteFunctionRulesResponse DeleteFunctionRules(DeleteFunctionRulesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteFunctionRules", DeleteFunctionRulesResponse.class);
+    }
+
+    /**
+     *This API is used to delete an inference API Token. Once deleted, the Token will expire immediately, and requests for accessing the inference service using it will no longer be accessible.
+     * @param req DeleteInferenceAPITokenRequest
+     * @return DeleteInferenceAPITokenResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteInferenceAPITokenResponse DeleteInferenceAPIToken(DeleteInferenceAPITokenRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteInferenceAPIToken", DeleteInferenceAPITokenResponse.class);
     }
 
     /**
@@ -1178,6 +1211,72 @@ The feature is only supported in the enterprise plan and is currently in closed 
     public DescribeIdentificationsResponse DescribeIdentifications(DescribeIdentificationsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeIdentifications", DescribeIdentificationsResponse.class);
+    }
+
+    /**
+     *This API is used to query the list of reasoning API Tokens, return the ID, name, content, and creation time of the Tokens, and support paging query.
+     * @param req DescribeInferenceAPITokensRequest
+     * @return DescribeInferenceAPITokensResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeInferenceAPITokensResponse DescribeInferenceAPITokens(DescribeInferenceAPITokensRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeInferenceAPITokens", DescribeInferenceAPITokensResponse.class);
+    }
+
+    /**
+     *This API is used to query the reasoning hardware specification list, returning configurations such as CPU, memory, GPU, and memory for each specification. You can select the required specification during service creation.
+     * @param req DescribeInferenceHardwareSpecificationsRequest
+     * @return DescribeInferenceHardwareSpecificationsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeInferenceHardwareSpecificationsResponse DescribeInferenceHardwareSpecifications(DescribeInferenceHardwareSpecificationsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeInferenceHardwareSpecifications", DescribeInferenceHardwareSpecificationsResponse.class);
+    }
+
+    /**
+     *This API is used to query the logs of a designated deployment of an inference service, return log content and generation time, and support time-based range search, pagination, and sorting.
+     * @param req DescribeInferenceServiceDeploymentLogsRequest
+     * @return DescribeInferenceServiceDeploymentLogsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeInferenceServiceDeploymentLogsResponse DescribeInferenceServiceDeploymentLogs(DescribeInferenceServiceDeploymentLogsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeInferenceServiceDeploymentLogs", DescribeInferenceServiceDeploymentLogsResponse.class);
+    }
+
+    /**
+     *This API is used to query the deployment history list of inference services, returning the operation type, status, duration, configuration snapshot, and whether it is the currently effective configuration for each deployment, with support for pagination and sorting.
+     * @param req DescribeInferenceServiceDeploymentRecordsRequest
+     * @return DescribeInferenceServiceDeploymentRecordsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeInferenceServiceDeploymentRecordsResponse DescribeInferenceServiceDeploymentRecords(DescribeInferenceServiceDeploymentRecordsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeInferenceServiceDeploymentRecords", DescribeInferenceServiceDeploymentRecordsResponse.class);
+    }
+
+    /**
+     *This API is used to query service monitoring data for reasoning, supporting indicators such as CPU, memory, GPU, video memory utilization, and instance count. You can specify the time range and aggregation granularity, and query data for up to the most recent 30 days.
+     * @param req DescribeInferenceServiceMonitorDataRequest
+     * @return DescribeInferenceServiceMonitorDataResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeInferenceServiceMonitorDataResponse DescribeInferenceServiceMonitorData(DescribeInferenceServiceMonitorDataRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeInferenceServiceMonitorData", DescribeInferenceServiceMonitorDataResponse.class);
+    }
+
+    /**
+     *This API is used to query the service list for reasoning, supporting filtering by service name, service ID, and status. It returns information such as service configuration, running state, number of instances, and reasoning access address.
+     * @param req DescribeInferenceServicesRequest
+     * @return DescribeInferenceServicesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeInferenceServicesResponse DescribeInferenceServices(DescribeInferenceServicesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeInferenceServices", DescribeInferenceServicesResponse.class);
     }
 
     /**
@@ -2081,6 +2180,17 @@ To use an external certificate, upload the certificate to [SSL Certificates Cons
     }
 
     /**
+     *This API is used to modify the inference service, supporting updates to the listening port, request path, container image, resource configuration, and description. Only the passed parameters are modified, while others remain unchanged.
+     * @param req ModifyInferenceServiceRequest
+     * @return ModifyInferenceServiceResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyInferenceServiceResponse ModifyInferenceService(ModifyInferenceServiceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyInferenceService", ModifyInferenceServiceResponse.class);
+    }
+
+    /**
      *This API is used to modify the configuration of a Layer 4 proxy instance.
      * @param req ModifyL4ProxyRequest
      * @return ModifyL4ProxyResponse
@@ -2410,6 +2520,17 @@ This API is used to create, modify and delete preheating origin speed limit rest
     public ModifyZoneWorkModeResponse ModifyZoneWorkMode(ModifyZoneWorkModeRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyZoneWorkMode", ModifyZoneWorkModeResponse.class);
+    }
+
+    /**
+     *This API is used to operate an inference service, support stopping, starting up, and deleting the inference service. Once deleted, resources cannot be recovered.
+     * @param req OperateInferenceServiceRequest
+     * @return OperateInferenceServiceResponse
+     * @throws TencentCloudSDKException
+     */
+    public OperateInferenceServiceResponse OperateInferenceService(OperateInferenceServiceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "OperateInferenceService", OperateInferenceServiceResponse.class);
     }
 
     /**

@@ -24,555 +24,578 @@ import java.util.HashMap;
 public class DataKeyMetadata extends AbstractModel {
 
     /**
-    * DataKey globally unique id.
+    * <p>Globally unique ID of the DataKey</p>
     */
     @SerializedName("DataKeyId")
     @Expose
     private String DataKeyId;
 
     /**
-    * Globally unique id of the CMK.
+    * <p>Globally unique ID of the CMK.</p>
     */
     @SerializedName("KeyId")
     @Expose
     private String KeyId;
 
     /**
-    * CMK name.
+    * <p>CMK name</p>
     */
     @SerializedName("KeyName")
     @Expose
     private String KeyName;
 
     /**
-    * Key name as a more recognizable and understandable data key.
+    * <p>Data key name that is easier to identify and understand as a key</p>
     */
     @SerializedName("DataKeyName")
     @Expose
     private String DataKeyName;
 
     /**
-    * Specifies the length of the data key in bytes.
+    * <p>Length of the data key, in bytes</p>
     */
     @SerializedName("NumberOfBytes")
     @Expose
     private Long NumberOfBytes;
 
     /**
-    * Key key creation time.
+    * <p>Key creation time</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private Long CreateTime;
 
     /**
-    * DataKey description.
+    * <p>Description of DataKey</p>
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * DataKey status. valid values: Enabled, Disabled, PendingDelete.
+    * <p>DataKey state, value: Enabled | Disabled | PendingDelete</p>
     */
     @SerializedName("KeyState")
     @Expose
     private String KeyState;
 
     /**
-    * Creator.
+    * <p>Creator.</p>
     */
     @SerializedName("CreatorUin")
     @Expose
     private Long CreatorUin;
 
     /**
-    * Specifies the creator of the data key. valid values: user (user-created) or product name (auto-created by authorized cloud services).
+    * <p>Creator of the data key. For user-created keys, it is user; for keys automatically created by authorized cloud services, it is the corresponding product name.</p>
     */
     @SerializedName("Owner")
     @Expose
     private String Owner;
 
     /**
-    * The time when schedule deletion.
+    * <p>Schedule deletion time</p>
     */
     @SerializedName("DeletionDate")
     @Expose
     private Long DeletionDate;
 
     /**
-    * Specifies the key material type of DataKey. valid values: TENCENT_KMS (created by KMS), EXTERNAL (user import).
+    * <p>DataKey key material type. For keys created by KMS: TENCENT_KMS. For keys of user import type: EXTERNAL.</p>
     */
     @SerializedName("Origin")
     @Expose
     private String Origin;
 
     /**
-    * HSM cluster ID (only applicable to KMS exclusive/managed service instance).
+    * <p>HSM Cluster ID (only applicable to KMS exclusive edition/managed version service instances)</p>
     */
     @SerializedName("HsmClusterId")
     @Expose
     private String HsmClusterId;
 
     /**
-    * Resource ID in the format of `creatorUin/$creatorUin/$dataKeyId`.
+    * <p>Resource ID, format: creatorUin/$creatorUin/$dataKeyId</p>
     */
     @SerializedName("ResourceId")
     @Expose
     private String ResourceId;
 
     /**
-    * Whether the key is a primary replica. valid values: `0` (primary), `1` (synced replica).
+    * <p>Whether the key is a primary replica. 0: primary replica, 1: synced replica.</p>
     */
     @SerializedName("IsSyncReplica")
     @Expose
     private Long IsSyncReplica;
 
     /**
-    * Synchronous original region.
+    * <p>Synchronous original region</p>
     */
     @SerializedName("SourceRegion")
     @Expose
     private String SourceRegion;
 
     /**
-    * The state of key synchronization. valid values: 0 (unsynced), 1 (synchronization successful), 2 (synchronization failed), 3 (synchronizing).
+    * <p>Key synchronization status. 0: unsynced, 1: synchronization successful, 2: synchronization failure, 3: syncing.</p>
     */
     @SerializedName("SyncStatus")
     @Expose
     private Long SyncStatus;
 
     /**
-    * Sresult description}.
+    * <p>Synchronous result description</p>
     */
     @SerializedName("SyncMessages")
     @Expose
     private String SyncMessages;
 
     /**
-    * Start time of synchronization.
+    * <p>Start time of synchronization</p>
     */
     @SerializedName("SyncStartTime")
     @Expose
     private Long SyncStartTime;
 
     /**
-    * Specifies the synchronous end time.
+    * <p>Synchronous end time</p>
     */
     @SerializedName("SyncEndTime")
     @Expose
     private Long SyncEndTime;
 
     /**
-    * Synchronous original cluster. if empty, it is a public cloud public cluster.
+    * <p>Synchronous primitive cluster. If empty, it is a public cloud public cluster.</p>
     */
     @SerializedName("SourceHsmClusterId")
     @Expose
     private String SourceHsmClusterId;
 
     /**
-    * Member account appId.
+    * <p>Member account appId</p>
     */
     @SerializedName("AccountAppId")
     @Expose
     private Long AccountAppId;
 
     /**
-    * Member account UIN
+    * <p>member account uin</p>
     */
     @SerializedName("AccountUin")
     @Expose
     private Long AccountUin;
 
     /**
-    * Member account name.
+    * <p>Enter the member account name.</p>
     */
     @SerializedName("AccountName")
     @Expose
     private String AccountName;
 
     /**
-     * Get DataKey globally unique id. 
-     * @return DataKeyId DataKey globally unique id.
+    * <p>Creator UIN</p>
+    */
+    @SerializedName("CreatorUinString")
+    @Expose
+    private String CreatorUinString;
+
+    /**
+     * Get <p>Globally unique ID of the DataKey</p> 
+     * @return DataKeyId <p>Globally unique ID of the DataKey</p>
      */
     public String getDataKeyId() {
         return this.DataKeyId;
     }
 
     /**
-     * Set DataKey globally unique id.
-     * @param DataKeyId DataKey globally unique id.
+     * Set <p>Globally unique ID of the DataKey</p>
+     * @param DataKeyId <p>Globally unique ID of the DataKey</p>
      */
     public void setDataKeyId(String DataKeyId) {
         this.DataKeyId = DataKeyId;
     }
 
     /**
-     * Get Globally unique id of the CMK. 
-     * @return KeyId Globally unique id of the CMK.
+     * Get <p>Globally unique ID of the CMK.</p> 
+     * @return KeyId <p>Globally unique ID of the CMK.</p>
      */
     public String getKeyId() {
         return this.KeyId;
     }
 
     /**
-     * Set Globally unique id of the CMK.
-     * @param KeyId Globally unique id of the CMK.
+     * Set <p>Globally unique ID of the CMK.</p>
+     * @param KeyId <p>Globally unique ID of the CMK.</p>
      */
     public void setKeyId(String KeyId) {
         this.KeyId = KeyId;
     }
 
     /**
-     * Get CMK name. 
-     * @return KeyName CMK name.
+     * Get <p>CMK name</p> 
+     * @return KeyName <p>CMK name</p>
      */
     public String getKeyName() {
         return this.KeyName;
     }
 
     /**
-     * Set CMK name.
-     * @param KeyName CMK name.
+     * Set <p>CMK name</p>
+     * @param KeyName <p>CMK name</p>
      */
     public void setKeyName(String KeyName) {
         this.KeyName = KeyName;
     }
 
     /**
-     * Get Key name as a more recognizable and understandable data key. 
-     * @return DataKeyName Key name as a more recognizable and understandable data key.
+     * Get <p>Data key name that is easier to identify and understand as a key</p> 
+     * @return DataKeyName <p>Data key name that is easier to identify and understand as a key</p>
      */
     public String getDataKeyName() {
         return this.DataKeyName;
     }
 
     /**
-     * Set Key name as a more recognizable and understandable data key.
-     * @param DataKeyName Key name as a more recognizable and understandable data key.
+     * Set <p>Data key name that is easier to identify and understand as a key</p>
+     * @param DataKeyName <p>Data key name that is easier to identify and understand as a key</p>
      */
     public void setDataKeyName(String DataKeyName) {
         this.DataKeyName = DataKeyName;
     }
 
     /**
-     * Get Specifies the length of the data key in bytes. 
-     * @return NumberOfBytes Specifies the length of the data key in bytes.
+     * Get <p>Length of the data key, in bytes</p> 
+     * @return NumberOfBytes <p>Length of the data key, in bytes</p>
      */
     public Long getNumberOfBytes() {
         return this.NumberOfBytes;
     }
 
     /**
-     * Set Specifies the length of the data key in bytes.
-     * @param NumberOfBytes Specifies the length of the data key in bytes.
+     * Set <p>Length of the data key, in bytes</p>
+     * @param NumberOfBytes <p>Length of the data key, in bytes</p>
      */
     public void setNumberOfBytes(Long NumberOfBytes) {
         this.NumberOfBytes = NumberOfBytes;
     }
 
     /**
-     * Get Key key creation time. 
-     * @return CreateTime Key key creation time.
+     * Get <p>Key creation time</p> 
+     * @return CreateTime <p>Key creation time</p>
      */
     public Long getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set Key key creation time.
-     * @param CreateTime Key key creation time.
+     * Set <p>Key creation time</p>
+     * @param CreateTime <p>Key creation time</p>
      */
     public void setCreateTime(Long CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get DataKey description. 
-     * @return Description DataKey description.
+     * Get <p>Description of DataKey</p> 
+     * @return Description <p>Description of DataKey</p>
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set DataKey description.
-     * @param Description DataKey description.
+     * Set <p>Description of DataKey</p>
+     * @param Description <p>Description of DataKey</p>
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get DataKey status. valid values: Enabled, Disabled, PendingDelete. 
-     * @return KeyState DataKey status. valid values: Enabled, Disabled, PendingDelete.
+     * Get <p>DataKey state, value: Enabled | Disabled | PendingDelete</p> 
+     * @return KeyState <p>DataKey state, value: Enabled | Disabled | PendingDelete</p>
      */
     public String getKeyState() {
         return this.KeyState;
     }
 
     /**
-     * Set DataKey status. valid values: Enabled, Disabled, PendingDelete.
-     * @param KeyState DataKey status. valid values: Enabled, Disabled, PendingDelete.
+     * Set <p>DataKey state, value: Enabled | Disabled | PendingDelete</p>
+     * @param KeyState <p>DataKey state, value: Enabled | Disabled | PendingDelete</p>
      */
     public void setKeyState(String KeyState) {
         this.KeyState = KeyState;
     }
 
     /**
-     * Get Creator. 
-     * @return CreatorUin Creator.
+     * Get <p>Creator.</p> 
+     * @return CreatorUin <p>Creator.</p>
      */
     public Long getCreatorUin() {
         return this.CreatorUin;
     }
 
     /**
-     * Set Creator.
-     * @param CreatorUin Creator.
+     * Set <p>Creator.</p>
+     * @param CreatorUin <p>Creator.</p>
      */
     public void setCreatorUin(Long CreatorUin) {
         this.CreatorUin = CreatorUin;
     }
 
     /**
-     * Get Specifies the creator of the data key. valid values: user (user-created) or product name (auto-created by authorized cloud services). 
-     * @return Owner Specifies the creator of the data key. valid values: user (user-created) or product name (auto-created by authorized cloud services).
+     * Get <p>Creator of the data key. For user-created keys, it is user; for keys automatically created by authorized cloud services, it is the corresponding product name.</p> 
+     * @return Owner <p>Creator of the data key. For user-created keys, it is user; for keys automatically created by authorized cloud services, it is the corresponding product name.</p>
      */
     public String getOwner() {
         return this.Owner;
     }
 
     /**
-     * Set Specifies the creator of the data key. valid values: user (user-created) or product name (auto-created by authorized cloud services).
-     * @param Owner Specifies the creator of the data key. valid values: user (user-created) or product name (auto-created by authorized cloud services).
+     * Set <p>Creator of the data key. For user-created keys, it is user; for keys automatically created by authorized cloud services, it is the corresponding product name.</p>
+     * @param Owner <p>Creator of the data key. For user-created keys, it is user; for keys automatically created by authorized cloud services, it is the corresponding product name.</p>
      */
     public void setOwner(String Owner) {
         this.Owner = Owner;
     }
 
     /**
-     * Get The time when schedule deletion. 
-     * @return DeletionDate The time when schedule deletion.
+     * Get <p>Schedule deletion time</p> 
+     * @return DeletionDate <p>Schedule deletion time</p>
      */
     public Long getDeletionDate() {
         return this.DeletionDate;
     }
 
     /**
-     * Set The time when schedule deletion.
-     * @param DeletionDate The time when schedule deletion.
+     * Set <p>Schedule deletion time</p>
+     * @param DeletionDate <p>Schedule deletion time</p>
      */
     public void setDeletionDate(Long DeletionDate) {
         this.DeletionDate = DeletionDate;
     }
 
     /**
-     * Get Specifies the key material type of DataKey. valid values: TENCENT_KMS (created by KMS), EXTERNAL (user import). 
-     * @return Origin Specifies the key material type of DataKey. valid values: TENCENT_KMS (created by KMS), EXTERNAL (user import).
+     * Get <p>DataKey key material type. For keys created by KMS: TENCENT_KMS. For keys of user import type: EXTERNAL.</p> 
+     * @return Origin <p>DataKey key material type. For keys created by KMS: TENCENT_KMS. For keys of user import type: EXTERNAL.</p>
      */
     public String getOrigin() {
         return this.Origin;
     }
 
     /**
-     * Set Specifies the key material type of DataKey. valid values: TENCENT_KMS (created by KMS), EXTERNAL (user import).
-     * @param Origin Specifies the key material type of DataKey. valid values: TENCENT_KMS (created by KMS), EXTERNAL (user import).
+     * Set <p>DataKey key material type. For keys created by KMS: TENCENT_KMS. For keys of user import type: EXTERNAL.</p>
+     * @param Origin <p>DataKey key material type. For keys created by KMS: TENCENT_KMS. For keys of user import type: EXTERNAL.</p>
      */
     public void setOrigin(String Origin) {
         this.Origin = Origin;
     }
 
     /**
-     * Get HSM cluster ID (only applicable to KMS exclusive/managed service instance). 
-     * @return HsmClusterId HSM cluster ID (only applicable to KMS exclusive/managed service instance).
+     * Get <p>HSM Cluster ID (only applicable to KMS exclusive edition/managed version service instances)</p> 
+     * @return HsmClusterId <p>HSM Cluster ID (only applicable to KMS exclusive edition/managed version service instances)</p>
      */
     public String getHsmClusterId() {
         return this.HsmClusterId;
     }
 
     /**
-     * Set HSM cluster ID (only applicable to KMS exclusive/managed service instance).
-     * @param HsmClusterId HSM cluster ID (only applicable to KMS exclusive/managed service instance).
+     * Set <p>HSM Cluster ID (only applicable to KMS exclusive edition/managed version service instances)</p>
+     * @param HsmClusterId <p>HSM Cluster ID (only applicable to KMS exclusive edition/managed version service instances)</p>
      */
     public void setHsmClusterId(String HsmClusterId) {
         this.HsmClusterId = HsmClusterId;
     }
 
     /**
-     * Get Resource ID in the format of `creatorUin/$creatorUin/$dataKeyId`. 
-     * @return ResourceId Resource ID in the format of `creatorUin/$creatorUin/$dataKeyId`.
+     * Get <p>Resource ID, format: creatorUin/$creatorUin/$dataKeyId</p> 
+     * @return ResourceId <p>Resource ID, format: creatorUin/$creatorUin/$dataKeyId</p>
      */
     public String getResourceId() {
         return this.ResourceId;
     }
 
     /**
-     * Set Resource ID in the format of `creatorUin/$creatorUin/$dataKeyId`.
-     * @param ResourceId Resource ID in the format of `creatorUin/$creatorUin/$dataKeyId`.
+     * Set <p>Resource ID, format: creatorUin/$creatorUin/$dataKeyId</p>
+     * @param ResourceId <p>Resource ID, format: creatorUin/$creatorUin/$dataKeyId</p>
      */
     public void setResourceId(String ResourceId) {
         this.ResourceId = ResourceId;
     }
 
     /**
-     * Get Whether the key is a primary replica. valid values: `0` (primary), `1` (synced replica). 
-     * @return IsSyncReplica Whether the key is a primary replica. valid values: `0` (primary), `1` (synced replica).
+     * Get <p>Whether the key is a primary replica. 0: primary replica, 1: synced replica.</p> 
+     * @return IsSyncReplica <p>Whether the key is a primary replica. 0: primary replica, 1: synced replica.</p>
      */
     public Long getIsSyncReplica() {
         return this.IsSyncReplica;
     }
 
     /**
-     * Set Whether the key is a primary replica. valid values: `0` (primary), `1` (synced replica).
-     * @param IsSyncReplica Whether the key is a primary replica. valid values: `0` (primary), `1` (synced replica).
+     * Set <p>Whether the key is a primary replica. 0: primary replica, 1: synced replica.</p>
+     * @param IsSyncReplica <p>Whether the key is a primary replica. 0: primary replica, 1: synced replica.</p>
      */
     public void setIsSyncReplica(Long IsSyncReplica) {
         this.IsSyncReplica = IsSyncReplica;
     }
 
     /**
-     * Get Synchronous original region. 
-     * @return SourceRegion Synchronous original region.
+     * Get <p>Synchronous original region</p> 
+     * @return SourceRegion <p>Synchronous original region</p>
      */
     public String getSourceRegion() {
         return this.SourceRegion;
     }
 
     /**
-     * Set Synchronous original region.
-     * @param SourceRegion Synchronous original region.
+     * Set <p>Synchronous original region</p>
+     * @param SourceRegion <p>Synchronous original region</p>
      */
     public void setSourceRegion(String SourceRegion) {
         this.SourceRegion = SourceRegion;
     }
 
     /**
-     * Get The state of key synchronization. valid values: 0 (unsynced), 1 (synchronization successful), 2 (synchronization failed), 3 (synchronizing). 
-     * @return SyncStatus The state of key synchronization. valid values: 0 (unsynced), 1 (synchronization successful), 2 (synchronization failed), 3 (synchronizing).
+     * Get <p>Key synchronization status. 0: unsynced, 1: synchronization successful, 2: synchronization failure, 3: syncing.</p> 
+     * @return SyncStatus <p>Key synchronization status. 0: unsynced, 1: synchronization successful, 2: synchronization failure, 3: syncing.</p>
      */
     public Long getSyncStatus() {
         return this.SyncStatus;
     }
 
     /**
-     * Set The state of key synchronization. valid values: 0 (unsynced), 1 (synchronization successful), 2 (synchronization failed), 3 (synchronizing).
-     * @param SyncStatus The state of key synchronization. valid values: 0 (unsynced), 1 (synchronization successful), 2 (synchronization failed), 3 (synchronizing).
+     * Set <p>Key synchronization status. 0: unsynced, 1: synchronization successful, 2: synchronization failure, 3: syncing.</p>
+     * @param SyncStatus <p>Key synchronization status. 0: unsynced, 1: synchronization successful, 2: synchronization failure, 3: syncing.</p>
      */
     public void setSyncStatus(Long SyncStatus) {
         this.SyncStatus = SyncStatus;
     }
 
     /**
-     * Get Sresult description}. 
-     * @return SyncMessages Sresult description}.
+     * Get <p>Synchronous result description</p> 
+     * @return SyncMessages <p>Synchronous result description</p>
      */
     public String getSyncMessages() {
         return this.SyncMessages;
     }
 
     /**
-     * Set Sresult description}.
-     * @param SyncMessages Sresult description}.
+     * Set <p>Synchronous result description</p>
+     * @param SyncMessages <p>Synchronous result description</p>
      */
     public void setSyncMessages(String SyncMessages) {
         this.SyncMessages = SyncMessages;
     }
 
     /**
-     * Get Start time of synchronization. 
-     * @return SyncStartTime Start time of synchronization.
+     * Get <p>Start time of synchronization</p> 
+     * @return SyncStartTime <p>Start time of synchronization</p>
      */
     public Long getSyncStartTime() {
         return this.SyncStartTime;
     }
 
     /**
-     * Set Start time of synchronization.
-     * @param SyncStartTime Start time of synchronization.
+     * Set <p>Start time of synchronization</p>
+     * @param SyncStartTime <p>Start time of synchronization</p>
      */
     public void setSyncStartTime(Long SyncStartTime) {
         this.SyncStartTime = SyncStartTime;
     }
 
     /**
-     * Get Specifies the synchronous end time. 
-     * @return SyncEndTime Specifies the synchronous end time.
+     * Get <p>Synchronous end time</p> 
+     * @return SyncEndTime <p>Synchronous end time</p>
      */
     public Long getSyncEndTime() {
         return this.SyncEndTime;
     }
 
     /**
-     * Set Specifies the synchronous end time.
-     * @param SyncEndTime Specifies the synchronous end time.
+     * Set <p>Synchronous end time</p>
+     * @param SyncEndTime <p>Synchronous end time</p>
      */
     public void setSyncEndTime(Long SyncEndTime) {
         this.SyncEndTime = SyncEndTime;
     }
 
     /**
-     * Get Synchronous original cluster. if empty, it is a public cloud public cluster. 
-     * @return SourceHsmClusterId Synchronous original cluster. if empty, it is a public cloud public cluster.
+     * Get <p>Synchronous primitive cluster. If empty, it is a public cloud public cluster.</p> 
+     * @return SourceHsmClusterId <p>Synchronous primitive cluster. If empty, it is a public cloud public cluster.</p>
      */
     public String getSourceHsmClusterId() {
         return this.SourceHsmClusterId;
     }
 
     /**
-     * Set Synchronous original cluster. if empty, it is a public cloud public cluster.
-     * @param SourceHsmClusterId Synchronous original cluster. if empty, it is a public cloud public cluster.
+     * Set <p>Synchronous primitive cluster. If empty, it is a public cloud public cluster.</p>
+     * @param SourceHsmClusterId <p>Synchronous primitive cluster. If empty, it is a public cloud public cluster.</p>
      */
     public void setSourceHsmClusterId(String SourceHsmClusterId) {
         this.SourceHsmClusterId = SourceHsmClusterId;
     }
 
     /**
-     * Get Member account appId. 
-     * @return AccountAppId Member account appId.
+     * Get <p>Member account appId</p> 
+     * @return AccountAppId <p>Member account appId</p>
      */
     public Long getAccountAppId() {
         return this.AccountAppId;
     }
 
     /**
-     * Set Member account appId.
-     * @param AccountAppId Member account appId.
+     * Set <p>Member account appId</p>
+     * @param AccountAppId <p>Member account appId</p>
      */
     public void setAccountAppId(Long AccountAppId) {
         this.AccountAppId = AccountAppId;
     }
 
     /**
-     * Get Member account UIN 
-     * @return AccountUin Member account UIN
+     * Get <p>member account uin</p> 
+     * @return AccountUin <p>member account uin</p>
      */
     public Long getAccountUin() {
         return this.AccountUin;
     }
 
     /**
-     * Set Member account UIN
-     * @param AccountUin Member account UIN
+     * Set <p>member account uin</p>
+     * @param AccountUin <p>member account uin</p>
      */
     public void setAccountUin(Long AccountUin) {
         this.AccountUin = AccountUin;
     }
 
     /**
-     * Get Member account name. 
-     * @return AccountName Member account name.
+     * Get <p>Enter the member account name.</p> 
+     * @return AccountName <p>Enter the member account name.</p>
      */
     public String getAccountName() {
         return this.AccountName;
     }
 
     /**
-     * Set Member account name.
-     * @param AccountName Member account name.
+     * Set <p>Enter the member account name.</p>
+     * @param AccountName <p>Enter the member account name.</p>
      */
     public void setAccountName(String AccountName) {
         this.AccountName = AccountName;
+    }
+
+    /**
+     * Get <p>Creator UIN</p> 
+     * @return CreatorUinString <p>Creator UIN</p>
+     */
+    public String getCreatorUinString() {
+        return this.CreatorUinString;
+    }
+
+    /**
+     * Set <p>Creator UIN</p>
+     * @param CreatorUinString <p>Creator UIN</p>
+     */
+    public void setCreatorUinString(String CreatorUinString) {
+        this.CreatorUinString = CreatorUinString;
     }
 
     public DataKeyMetadata() {
@@ -655,6 +678,9 @@ public class DataKeyMetadata extends AbstractModel {
         if (source.AccountName != null) {
             this.AccountName = new String(source.AccountName);
         }
+        if (source.CreatorUinString != null) {
+            this.CreatorUinString = new String(source.CreatorUinString);
+        }
     }
 
 
@@ -686,6 +712,7 @@ public class DataKeyMetadata extends AbstractModel {
         this.setParamSimple(map, prefix + "AccountAppId", this.AccountAppId);
         this.setParamSimple(map, prefix + "AccountUin", this.AccountUin);
         this.setParamSimple(map, prefix + "AccountName", this.AccountName);
+        this.setParamSimple(map, prefix + "CreatorUinString", this.CreatorUinString);
 
     }
 }

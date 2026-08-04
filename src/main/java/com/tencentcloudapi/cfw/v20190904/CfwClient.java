@@ -775,6 +775,20 @@ Modify events related with the IPs/domains in the blocked/allowed list
     }
 
     /**
+     *This API is used to retrieve and analyze logs. Please note the following matters when using this API.
+1. Besides being subject to the default API request rate limit, for a single log topic, the number of concurrent queries must not exceed 15.
+2. For search syntax, it's recommended to use the dedicated CQL syntax rule for log service. Please use the SyntaxRule parameter and set its value to 1. The console uses this syntax rule by default.
+3. The API's return data packet maximum is 49MB. It is recommended to enable gzip compression (HTTP Request Header Accept-Encoding: gzip).
+     * @param req SearchLogRequest
+     * @return SearchLogResponse
+     * @throws TencentCloudSDKException
+     */
+    public SearchLogResponse SearchLog(SearchLogRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "SearchLog", SearchLogResponse.class);
+    }
+
+    /**
      *This API is used to configure firewall DNAT rules.
      * @param req SetNatFwDnatRuleRequest
      * @return SetNatFwDnatRuleResponse

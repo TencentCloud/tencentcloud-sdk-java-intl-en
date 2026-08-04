@@ -220,6 +220,13 @@ public class KeyMetadata extends AbstractModel {
     private String AccountName;
 
     /**
+    * <p>Creator UIN</p>
+    */
+    @SerializedName("CreatorUinString")
+    @Expose
+    private String CreatorUinString;
+
+    /**
      * Get <p>Globally unique ID of the CMK.</p> 
      * @return KeyId <p>Globally unique ID of the CMK.</p>
      */
@@ -667,6 +674,22 @@ public class KeyMetadata extends AbstractModel {
         this.AccountName = AccountName;
     }
 
+    /**
+     * Get <p>Creator UIN</p> 
+     * @return CreatorUinString <p>Creator UIN</p>
+     */
+    public String getCreatorUinString() {
+        return this.CreatorUinString;
+    }
+
+    /**
+     * Set <p>Creator UIN</p>
+     * @param CreatorUinString <p>Creator UIN</p>
+     */
+    public void setCreatorUinString(String CreatorUinString) {
+        this.CreatorUinString = CreatorUinString;
+    }
+
     public KeyMetadata() {
     }
 
@@ -759,6 +782,9 @@ public class KeyMetadata extends AbstractModel {
         if (source.AccountName != null) {
             this.AccountName = new String(source.AccountName);
         }
+        if (source.CreatorUinString != null) {
+            this.CreatorUinString = new String(source.CreatorUinString);
+        }
     }
 
 
@@ -794,6 +820,7 @@ public class KeyMetadata extends AbstractModel {
         this.setParamSimple(map, prefix + "AccountAppId", this.AccountAppId);
         this.setParamSimple(map, prefix + "AccountUin", this.AccountUin);
         this.setParamSimple(map, prefix + "AccountName", this.AccountName);
+        this.setParamSimple(map, prefix + "CreatorUinString", this.CreatorUinString);
 
     }
 }

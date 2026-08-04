@@ -117,7 +117,9 @@ public class DescribeOnlineRecordResponse extends AbstractModel {
     private VideoInfo [] VideoInfos;
 
     /**
-    * 
+    * Playback URL, must be used with a signaling player. This field is only applicable to video generation mode
+Note: This field may return null, indicating that no valid value can be retrieved.
+Example value: http://replayurl
     */
     @SerializedName("ReplayUrl")
     @Expose
@@ -367,16 +369,24 @@ Note: This parameter may return null, indicating that no valid values can be obt
     }
 
     /**
-     * Get  
-     * @return ReplayUrl 
+     * Get Playback URL, must be used with a signaling player. This field is only applicable to video generation mode
+Note: This field may return null, indicating that no valid value can be retrieved.
+Example value: http://replayurl 
+     * @return ReplayUrl Playback URL, must be used with a signaling player. This field is only applicable to video generation mode
+Note: This field may return null, indicating that no valid value can be retrieved.
+Example value: http://replayurl
      */
     public String getReplayUrl() {
         return this.ReplayUrl;
     }
 
     /**
-     * Set 
-     * @param ReplayUrl 
+     * Set Playback URL, must be used with a signaling player. This field is only applicable to video generation mode
+Note: This field may return null, indicating that no valid value can be retrieved.
+Example value: http://replayurl
+     * @param ReplayUrl Playback URL, must be used with a signaling player. This field is only applicable to video generation mode
+Note: This field may return null, indicating that no valid value can be retrieved.
+Example value: http://replayurl
      */
     public void setReplayUrl(String ReplayUrl) {
         this.ReplayUrl = ReplayUrl;

@@ -689,6 +689,17 @@ Key material can only be imported into CMKs in `Enabled` and `PendingImport` sta
     }
 
     /**
+     *Rotate the designated customer master key immediately. You can call DescribeKey to return the last rotation time and the next rotation time, and determine whether the rotation is successful.
+     * @param req RotateKeyRequest
+     * @return RotateKeyResponse
+     * @throws TencentCloudSDKException
+     */
+    public RotateKeyResponse RotateKey(RotateKeyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "RotateKey", RotateKeyResponse.class);
+    }
+
+    /**
      *Schedule deletion for a data key.
      * @param req ScheduleDataKeyDeletionRequest
      * @return ScheduleDataKeyDeletionResponse
