@@ -24,95 +24,141 @@ import java.util.HashMap;
 public class VODInputInfo extends AbstractModel {
 
     /**
-    * Specifies the Bucket ID where the input file resides.
+    * <p><em>Bucket ID</em> where the media processing object file resides</p>
     */
     @SerializedName("Bucket")
     @Expose
     private String Bucket;
 
     /**
-    * Specifies the region where the input file's Bucket resides.
+    * <p>Region of the Bucket where the media processing object file resides</p>
     */
     @SerializedName("Region")
     @Expose
     private String Region;
 
     /**
-    * Path of the input file.
+    * <p>Input path of the media processing object file</p>
     */
     @SerializedName("Object")
     @Expose
     private String Object;
 
     /**
-    * VOD Pro application Id.
+    * <p>VOD application ID.</p>
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
 
     /**
-     * Get Specifies the Bucket ID where the input file resides. 
-     * @return Bucket Specifies the Bucket ID where the input file resides.
+    * <p>Whether to use VOD Standard Edition.<br>Attention: If left empty, VOD Pro Edition is used.</p><p>Enumeration values: </p><ul><li>Use VOD Pro Edition</li><li>Use VOD Standard Edition, allowing tasks to be initiated with FileId</li></ul><p>Default value: 0</p>
+    */
+    @SerializedName("VodBasic")
+    @Expose
+    private Long VodBasic;
+
+    /**
+    * <p>VOD Standard Edition FileId</p>
+    */
+    @SerializedName("FileId")
+    @Expose
+    private String FileId;
+
+    /**
+     * Get <p><em>Bucket ID</em> where the media processing object file resides</p> 
+     * @return Bucket <p><em>Bucket ID</em> where the media processing object file resides</p>
      */
     public String getBucket() {
         return this.Bucket;
     }
 
     /**
-     * Set Specifies the Bucket ID where the input file resides.
-     * @param Bucket Specifies the Bucket ID where the input file resides.
+     * Set <p><em>Bucket ID</em> where the media processing object file resides</p>
+     * @param Bucket <p><em>Bucket ID</em> where the media processing object file resides</p>
      */
     public void setBucket(String Bucket) {
         this.Bucket = Bucket;
     }
 
     /**
-     * Get Specifies the region where the input file's Bucket resides. 
-     * @return Region Specifies the region where the input file's Bucket resides.
+     * Get <p>Region of the Bucket where the media processing object file resides</p> 
+     * @return Region <p>Region of the Bucket where the media processing object file resides</p>
      */
     public String getRegion() {
         return this.Region;
     }
 
     /**
-     * Set Specifies the region where the input file's Bucket resides.
-     * @param Region Specifies the region where the input file's Bucket resides.
+     * Set <p>Region of the Bucket where the media processing object file resides</p>
+     * @param Region <p>Region of the Bucket where the media processing object file resides</p>
      */
     public void setRegion(String Region) {
         this.Region = Region;
     }
 
     /**
-     * Get Path of the input file. 
-     * @return Object Path of the input file.
+     * Get <p>Input path of the media processing object file</p> 
+     * @return Object <p>Input path of the media processing object file</p>
      */
     public String getObject() {
         return this.Object;
     }
 
     /**
-     * Set Path of the input file.
-     * @param Object Path of the input file.
+     * Set <p>Input path of the media processing object file</p>
+     * @param Object <p>Input path of the media processing object file</p>
      */
     public void setObject(String Object) {
         this.Object = Object;
     }
 
     /**
-     * Get VOD Pro application Id. 
-     * @return SubAppId VOD Pro application Id.
+     * Get <p>VOD application ID.</p> 
+     * @return SubAppId <p>VOD application ID.</p>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set VOD Pro application Id.
-     * @param SubAppId VOD Pro application Id.
+     * Set <p>VOD application ID.</p>
+     * @param SubAppId <p>VOD application ID.</p>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
+    }
+
+    /**
+     * Get <p>Whether to use VOD Standard Edition.<br>Attention: If left empty, VOD Pro Edition is used.</p><p>Enumeration values: </p><ul><li>Use VOD Pro Edition</li><li>Use VOD Standard Edition, allowing tasks to be initiated with FileId</li></ul><p>Default value: 0</p> 
+     * @return VodBasic <p>Whether to use VOD Standard Edition.<br>Attention: If left empty, VOD Pro Edition is used.</p><p>Enumeration values: </p><ul><li>Use VOD Pro Edition</li><li>Use VOD Standard Edition, allowing tasks to be initiated with FileId</li></ul><p>Default value: 0</p>
+     */
+    public Long getVodBasic() {
+        return this.VodBasic;
+    }
+
+    /**
+     * Set <p>Whether to use VOD Standard Edition.<br>Attention: If left empty, VOD Pro Edition is used.</p><p>Enumeration values: </p><ul><li>Use VOD Pro Edition</li><li>Use VOD Standard Edition, allowing tasks to be initiated with FileId</li></ul><p>Default value: 0</p>
+     * @param VodBasic <p>Whether to use VOD Standard Edition.<br>Attention: If left empty, VOD Pro Edition is used.</p><p>Enumeration values: </p><ul><li>Use VOD Pro Edition</li><li>Use VOD Standard Edition, allowing tasks to be initiated with FileId</li></ul><p>Default value: 0</p>
+     */
+    public void setVodBasic(Long VodBasic) {
+        this.VodBasic = VodBasic;
+    }
+
+    /**
+     * Get <p>VOD Standard Edition FileId</p> 
+     * @return FileId <p>VOD Standard Edition FileId</p>
+     */
+    public String getFileId() {
+        return this.FileId;
+    }
+
+    /**
+     * Set <p>VOD Standard Edition FileId</p>
+     * @param FileId <p>VOD Standard Edition FileId</p>
+     */
+    public void setFileId(String FileId) {
+        this.FileId = FileId;
     }
 
     public VODInputInfo() {
@@ -135,6 +181,12 @@ public class VODInputInfo extends AbstractModel {
         if (source.SubAppId != null) {
             this.SubAppId = new Long(source.SubAppId);
         }
+        if (source.VodBasic != null) {
+            this.VodBasic = new Long(source.VodBasic);
+        }
+        if (source.FileId != null) {
+            this.FileId = new String(source.FileId);
+        }
     }
 
 
@@ -146,6 +198,8 @@ public class VODInputInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "Region", this.Region);
         this.setParamSimple(map, prefix + "Object", this.Object);
         this.setParamSimple(map, prefix + "SubAppId", this.SubAppId);
+        this.setParamSimple(map, prefix + "VodBasic", this.VodBasic);
+        this.setParamSimple(map, prefix + "FileId", this.FileId);
 
     }
 }

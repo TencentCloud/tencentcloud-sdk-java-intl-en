@@ -52,6 +52,27 @@ public class AiAnalysisTaskDubbingOutput extends AbstractModel {
     private TaskOutputStorage OutputStorage;
 
     /**
+    * <p>Additional results, currently including subtitle file result URLs</p>
+    */
+    @SerializedName("ExtraOutput")
+    @Expose
+    private String ExtraOutput;
+
+    /**
+    * <p>FileId of the dubbed video.</p>
+    */
+    @SerializedName("VideoFileId")
+    @Expose
+    private String VideoFileId;
+
+    /**
+    * <p>FileId of the tag file.</p>
+    */
+    @SerializedName("SpeakerFileId")
+    @Expose
+    private String SpeakerFileId;
+
+    /**
      * Get <p>Dubbed video path.</p> 
      * @return VideoPath <p>Dubbed video path.</p>
      */
@@ -115,6 +136,54 @@ public class AiAnalysisTaskDubbingOutput extends AbstractModel {
         this.OutputStorage = OutputStorage;
     }
 
+    /**
+     * Get <p>Additional results, currently including subtitle file result URLs</p> 
+     * @return ExtraOutput <p>Additional results, currently including subtitle file result URLs</p>
+     */
+    public String getExtraOutput() {
+        return this.ExtraOutput;
+    }
+
+    /**
+     * Set <p>Additional results, currently including subtitle file result URLs</p>
+     * @param ExtraOutput <p>Additional results, currently including subtitle file result URLs</p>
+     */
+    public void setExtraOutput(String ExtraOutput) {
+        this.ExtraOutput = ExtraOutput;
+    }
+
+    /**
+     * Get <p>FileId of the dubbed video.</p> 
+     * @return VideoFileId <p>FileId of the dubbed video.</p>
+     */
+    public String getVideoFileId() {
+        return this.VideoFileId;
+    }
+
+    /**
+     * Set <p>FileId of the dubbed video.</p>
+     * @param VideoFileId <p>FileId of the dubbed video.</p>
+     */
+    public void setVideoFileId(String VideoFileId) {
+        this.VideoFileId = VideoFileId;
+    }
+
+    /**
+     * Get <p>FileId of the tag file.</p> 
+     * @return SpeakerFileId <p>FileId of the tag file.</p>
+     */
+    public String getSpeakerFileId() {
+        return this.SpeakerFileId;
+    }
+
+    /**
+     * Set <p>FileId of the tag file.</p>
+     * @param SpeakerFileId <p>FileId of the tag file.</p>
+     */
+    public void setSpeakerFileId(String SpeakerFileId) {
+        this.SpeakerFileId = SpeakerFileId;
+    }
+
     public AiAnalysisTaskDubbingOutput() {
     }
 
@@ -135,6 +204,15 @@ public class AiAnalysisTaskDubbingOutput extends AbstractModel {
         if (source.OutputStorage != null) {
             this.OutputStorage = new TaskOutputStorage(source.OutputStorage);
         }
+        if (source.ExtraOutput != null) {
+            this.ExtraOutput = new String(source.ExtraOutput);
+        }
+        if (source.VideoFileId != null) {
+            this.VideoFileId = new String(source.VideoFileId);
+        }
+        if (source.SpeakerFileId != null) {
+            this.SpeakerFileId = new String(source.SpeakerFileId);
+        }
     }
 
 
@@ -146,6 +224,9 @@ public class AiAnalysisTaskDubbingOutput extends AbstractModel {
         this.setParamSimple(map, prefix + "SpeakerPath", this.SpeakerPath);
         this.setParamSimple(map, prefix + "VoiceId", this.VoiceId);
         this.setParamObj(map, prefix + "OutputStorage.", this.OutputStorage);
+        this.setParamSimple(map, prefix + "ExtraOutput", this.ExtraOutput);
+        this.setParamSimple(map, prefix + "VideoFileId", this.VideoFileId);
+        this.setParamSimple(map, prefix + "SpeakerFileId", this.SpeakerFileId);
 
     }
 }

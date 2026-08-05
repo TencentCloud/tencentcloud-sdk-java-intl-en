@@ -51,6 +51,17 @@ Smart subtitle (full speech, speech hotword, and speech translation).
     }
 
     /**
+     *Clone a hit product. Input a reference video of a hit product and a product image to generate a video with aligned style and pace.
+     * @param req CloneViralRequest
+     * @return CloneViralResponse
+     * @throws TencentCloudSDKException
+     */
+    public CloneViralResponse CloneViral(CloneViralRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CloneViral", CloneViralResponse.class);
+    }
+
+    /**
      *This API is used to create a custom content analysis template. Up to 50 templates can be created.
      * @param req CreateAIAnalysisTemplateRequest
      * @return CreateAIAnalysisTemplateResponse
@@ -81,6 +92,17 @@ Smart subtitle (full speech, speech hotword, and speech translation).
     public CreateAdaptiveDynamicStreamingTemplateResponse CreateAdaptiveDynamicStreamingTemplate(CreateAdaptiveDynamicStreamingTemplateRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CreateAdaptiveDynamicStreamingTemplate", CreateAdaptiveDynamicStreamingTemplateResponse.class);
+    }
+
+    /**
+     *AI comic workflow, input a playbook, automatically split scenes, generate an AI comic
+     * @param req CreateAiDramaTaskRequest
+     * @return CreateAiDramaTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateAiDramaTaskResponse CreateAiDramaTask(CreateAiDramaTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateAiDramaTask", CreateAiDramaTaskResponse.class);
     }
 
     /**
@@ -158,6 +180,17 @@ Smart subtitle (full speech, speech hotword, and speech translation).
     public CreateContentReviewTemplateResponse CreateContentReviewTemplate(CreateContentReviewTemplateRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CreateContentReviewTemplate", CreateContentReviewTemplateResponse.class);
+    }
+
+    /**
+     *Creates an AIGC document-to-video task
+     * @param req CreateDocToVideoTaskRequest
+     * @return CreateDocToVideoTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateDocToVideoTaskResponse CreateDocToVideoTask(CreateDocToVideoTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateDocToVideoTask", CreateDocToVideoTaskResponse.class);
     }
 
     /**
@@ -317,6 +350,17 @@ This API is used to create an orchestration, which is in disable status by defau
     public CreateTranscodeTemplateResponse CreateTranscodeTemplate(CreateTranscodeTemplateRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CreateTranscodeTemplate", CreateTranscodeTemplateResponse.class);
+    }
+
+    /**
+     *Creates an AIGC redrawing task
+     * @param req CreateVideoRedrawTaskRequest
+     * @return CreateVideoRedrawTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateVideoRedrawTaskResponse CreateVideoRedrawTask(CreateVideoRedrawTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateVideoRedrawTask", CreateVideoRedrawTaskResponse.class);
     }
 
     /**
@@ -685,6 +729,17 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
     }
 
     /**
+     *Queries AIGC scenario task APIs
+     * @param req DescribeAigcTaskStatusRequest
+     * @return DescribeAigcTaskStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAigcTaskStatusResponse DescribeAigcTaskStatus(DescribeAigcTaskStatusRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAigcTaskStatus", DescribeAigcTaskStatusResponse.class);
+    }
+
+    /**
      *This API is used to query the progress of AIGC video generation tasks and obtain the generation results.
      * @param req DescribeAigcVideoTaskRequest
      * @return DescribeAigcVideoTaskResponse
@@ -751,6 +806,17 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
     }
 
     /**
+     *Queries the results of a hit product clone task
+     * @param req DescribeCloneViralTaskRequest
+     * @return DescribeCloneViralTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCloneViralTaskResponse DescribeCloneViralTask(DescribeCloneViralTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCloneViralTask", DescribeCloneViralTaskResponse.class);
+    }
+
+    /**
      *This API is used to query content moderation templates by template ID. Both custom and preset templates that match the template IDs passed in will be returned.
      * @param req DescribeContentReviewTemplatesRequest
      * @return DescribeContentReviewTemplatesResponse
@@ -792,6 +858,17 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
     public DescribeImageTaskDetailResponse DescribeImageTaskDetail(DescribeImageTaskDetailRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeImageTaskDetail", DescribeImageTaskDetailResponse.class);
+    }
+
+    /**
+     *Image processing task query API.
+     * @param req DescribeImageTasksRequest
+     * @return DescribeImageTasksResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeImageTasksResponse DescribeImageTasks(DescribeImageTasksRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeImageTasks", DescribeImageTasksResponse.class);
     }
 
     /**
@@ -1108,6 +1185,17 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
     }
 
     /**
+     *Model embedding API
+     * @param req EmbeddingDataRequest
+     * @return EmbeddingDataResponse
+     * @throws TencentCloudSDKException
+     */
+    public EmbeddingDataResponse EmbeddingData(EmbeddingDataRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "EmbeddingData", EmbeddingDataResponse.class);
+    }
+
+    /**
      *This API is used to enable a scheme.
      * @param req EnableScheduleRequest
      * @return EnableScheduleResponse
@@ -1420,10 +1508,11 @@ Instead of initiating a video processing task, this API is used to help generate
     }
 
     /**
-     *This API is used to initiate image processing, with features including:
-1. Format conversion.
-2. Image enhancement.
-3. Image erasure.
+     *This API is used to initiate image processing. Its features include:
+1. Format conversion;
+2. Image enhancement;
+3. Image erasure;4. Digital watermark;
+5. Beauty filter;
      * @param req ProcessImageRequest
      * @return ProcessImageResponse
      * @throws TencentCloudSDKException

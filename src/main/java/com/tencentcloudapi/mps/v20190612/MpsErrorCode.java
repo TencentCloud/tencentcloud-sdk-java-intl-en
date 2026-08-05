@@ -9,6 +9,9 @@ public enum MpsErrorCode {
      /* Operation failed: COS service is suspended. */
      FAILEDOPERATION_COSSTATUSINAVLID("FailedOperation.CosStatusInavlid"),
      
+     /* Failed to create an AIGC task */
+     FAILEDOPERATION_CREATEAIGCTASKFAILED("FailedOperation.CreateAIGCTaskFailed"),
+     
      /* Resource generation failed. */
      FAILEDOPERATION_GENERATERESOURCE("FailedOperation.GenerateResource"),
      
@@ -24,8 +27,14 @@ public enum MpsErrorCode {
      /* Operation failed due to a network error. */
      FAILEDOPERATION_NETWORKERROR("FailedOperation.NetWorkError"),
      
+     /* Error occurred while querying the task */
+     FAILEDOPERATION_QUERYAIGCTASKFAILED("FailedOperation.QueryAIGCTaskFailed"),
+     
      /* Operation failed: Error setting the source notification. */
      FAILEDOPERATION_SETSOURCENOTIFY("FailedOperation.SetSourceNotify"),
+     
+     /* User account has been suspended */
+     FAILEDOPERATION_USERARREARS("FailedOperation.UserArrears"),
      
      /* Internal error. */
      INTERNALERROR("InternalError"),
@@ -51,8 +60,17 @@ public enum MpsErrorCode {
      /* Illegal input. */
      INVALIDPARAMETER_INPUTINFO("InvalidParameter.InputInfo"),
      
+     /* The Url in the request parameter is invalid */
+     INVALIDPARAMETER_INVALIDURL("InvalidParameter.InvalidUrl"),
+     
+     /* Invalid parameters. The model is not supported. */
+     INVALIDPARAMETER_MODELNOTSUPPORTED("InvalidParameter.ModelNotSupported"),
+     
      /* InvalidParameter.NotFound */
      INVALIDPARAMETER_NOTFOUND("InvalidParameter.NotFound"),
+     
+     /* JSON parsing failure; `Uin` / `SubAccountUin` / `Message` missing */
+     INVALIDPARAMETER_VALUE("InvalidParameter.Value"),
      
      /* Review blocklist for user-submitted input. */
      INVALIDPARAMETER_VIOLATIONCONTENT("InvalidParameter.ViolationContent"),
@@ -426,6 +444,9 @@ public enum MpsErrorCode {
      /* The vertical position of the origin of the watermark relative to the origin of coordinates of the video. % and px formats are supported. */
      INVALIDPARAMETERVALUE_YPOS("InvalidParameterValue.YPos"),
      
+     /* Unable to create a task. The number of tasks being executed has reached the limit. */
+     LIMITEXCEEDED_CREATETASK("LimitExceeded.CreateTask"),
+     
      /* The number of created hotword lexicons has reached the default upper limit. */
      LIMITEXCEEDED_TOOMUCHHOTWORDS("LimitExceeded.TooMuchHotWords"),
      
@@ -449,6 +470,9 @@ public enum MpsErrorCode {
      
      /* The resource does not exist: figure. */
      RESOURCENOTFOUND_PERSON("ResourceNotFound.Person"),
+     
+     /* The task does not exist */
+     RESOURCENOTFOUND_TASKNOTFOUND("ResourceNotFound.TaskNotFound"),
      
      /* The resource does not exist: the template does not exist. */
      RESOURCENOTFOUND_TEMPLATENOTEXIST("ResourceNotFound.TemplateNotExist"),

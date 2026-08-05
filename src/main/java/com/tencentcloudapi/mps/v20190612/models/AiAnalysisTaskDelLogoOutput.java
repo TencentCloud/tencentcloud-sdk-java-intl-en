@@ -76,6 +76,41 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String VoiceClonedMarkFile;
 
     /**
+    * <p>Result path of a video for removal only</p>
+    */
+    @SerializedName("ErasedVideoPath")
+    @Expose
+    private String ErasedVideoPath;
+
+    /**
+    * <p>Voice cloning editing information</p><p>Editing information for secondary modifications of voice cloning</p>
+    */
+    @SerializedName("DubbingEditInfoUrl")
+    @Expose
+    private String DubbingEditInfoUrl;
+
+    /**
+    * <p>FileId of a file after removal.</p>
+    */
+    @SerializedName("FileId")
+    @Expose
+    private String FileId;
+
+    /**
+    * <p>FileId of the subtitle file extracted from video.</p>
+    */
+    @SerializedName("OriginSubtitleFileId")
+    @Expose
+    private String OriginSubtitleFileId;
+
+    /**
+    * <p>FileId of a subtitle translation file extracted from a video.</p>
+    */
+    @SerializedName("TranslateSubtitleFileId")
+    @Expose
+    private String TranslateSubtitleFileId;
+
+    /**
      * Get <p>Path of a file after removal.</p> 
      * @return Path <p>Path of a file after removal.</p>
      */
@@ -199,6 +234,86 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.VoiceClonedMarkFile = VoiceClonedMarkFile;
     }
 
+    /**
+     * Get <p>Result path of a video for removal only</p> 
+     * @return ErasedVideoPath <p>Result path of a video for removal only</p>
+     */
+    public String getErasedVideoPath() {
+        return this.ErasedVideoPath;
+    }
+
+    /**
+     * Set <p>Result path of a video for removal only</p>
+     * @param ErasedVideoPath <p>Result path of a video for removal only</p>
+     */
+    public void setErasedVideoPath(String ErasedVideoPath) {
+        this.ErasedVideoPath = ErasedVideoPath;
+    }
+
+    /**
+     * Get <p>Voice cloning editing information</p><p>Editing information for secondary modifications of voice cloning</p> 
+     * @return DubbingEditInfoUrl <p>Voice cloning editing information</p><p>Editing information for secondary modifications of voice cloning</p>
+     */
+    public String getDubbingEditInfoUrl() {
+        return this.DubbingEditInfoUrl;
+    }
+
+    /**
+     * Set <p>Voice cloning editing information</p><p>Editing information for secondary modifications of voice cloning</p>
+     * @param DubbingEditInfoUrl <p>Voice cloning editing information</p><p>Editing information for secondary modifications of voice cloning</p>
+     */
+    public void setDubbingEditInfoUrl(String DubbingEditInfoUrl) {
+        this.DubbingEditInfoUrl = DubbingEditInfoUrl;
+    }
+
+    /**
+     * Get <p>FileId of a file after removal.</p> 
+     * @return FileId <p>FileId of a file after removal.</p>
+     */
+    public String getFileId() {
+        return this.FileId;
+    }
+
+    /**
+     * Set <p>FileId of a file after removal.</p>
+     * @param FileId <p>FileId of a file after removal.</p>
+     */
+    public void setFileId(String FileId) {
+        this.FileId = FileId;
+    }
+
+    /**
+     * Get <p>FileId of the subtitle file extracted from video.</p> 
+     * @return OriginSubtitleFileId <p>FileId of the subtitle file extracted from video.</p>
+     */
+    public String getOriginSubtitleFileId() {
+        return this.OriginSubtitleFileId;
+    }
+
+    /**
+     * Set <p>FileId of the subtitle file extracted from video.</p>
+     * @param OriginSubtitleFileId <p>FileId of the subtitle file extracted from video.</p>
+     */
+    public void setOriginSubtitleFileId(String OriginSubtitleFileId) {
+        this.OriginSubtitleFileId = OriginSubtitleFileId;
+    }
+
+    /**
+     * Get <p>FileId of a subtitle translation file extracted from a video.</p> 
+     * @return TranslateSubtitleFileId <p>FileId of a subtitle translation file extracted from a video.</p>
+     */
+    public String getTranslateSubtitleFileId() {
+        return this.TranslateSubtitleFileId;
+    }
+
+    /**
+     * Set <p>FileId of a subtitle translation file extracted from a video.</p>
+     * @param TranslateSubtitleFileId <p>FileId of a subtitle translation file extracted from a video.</p>
+     */
+    public void setTranslateSubtitleFileId(String TranslateSubtitleFileId) {
+        this.TranslateSubtitleFileId = TranslateSubtitleFileId;
+    }
+
     public AiAnalysisTaskDelLogoOutput() {
     }
 
@@ -228,6 +343,21 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.VoiceClonedMarkFile != null) {
             this.VoiceClonedMarkFile = new String(source.VoiceClonedMarkFile);
         }
+        if (source.ErasedVideoPath != null) {
+            this.ErasedVideoPath = new String(source.ErasedVideoPath);
+        }
+        if (source.DubbingEditInfoUrl != null) {
+            this.DubbingEditInfoUrl = new String(source.DubbingEditInfoUrl);
+        }
+        if (source.FileId != null) {
+            this.FileId = new String(source.FileId);
+        }
+        if (source.OriginSubtitleFileId != null) {
+            this.OriginSubtitleFileId = new String(source.OriginSubtitleFileId);
+        }
+        if (source.TranslateSubtitleFileId != null) {
+            this.TranslateSubtitleFileId = new String(source.TranslateSubtitleFileId);
+        }
     }
 
 
@@ -242,6 +372,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamObj(map, prefix + "SubtitlePos.", this.SubtitlePos);
         this.setParamSimple(map, prefix + "VoiceClonedVideo", this.VoiceClonedVideo);
         this.setParamSimple(map, prefix + "VoiceClonedMarkFile", this.VoiceClonedMarkFile);
+        this.setParamSimple(map, prefix + "ErasedVideoPath", this.ErasedVideoPath);
+        this.setParamSimple(map, prefix + "DubbingEditInfoUrl", this.DubbingEditInfoUrl);
+        this.setParamSimple(map, prefix + "FileId", this.FileId);
+        this.setParamSimple(map, prefix + "OriginSubtitleFileId", this.OriginSubtitleFileId);
+        this.setParamSimple(map, prefix + "TranslateSubtitleFileId", this.TranslateSubtitleFileId);
 
     }
 }

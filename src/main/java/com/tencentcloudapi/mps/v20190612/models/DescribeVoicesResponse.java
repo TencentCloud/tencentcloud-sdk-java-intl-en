@@ -38,6 +38,13 @@ public class DescribeVoicesResponse extends AbstractModel {
     private String Msg;
 
     /**
+    * <p>Total number of voices that meet the search criteria</p>
+    */
+    @SerializedName("TotalCount")
+    @Expose
+    private Long TotalCount;
+
+    /**
     * <p>Available voice list.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
     */
@@ -82,6 +89,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
      */
     public void setMsg(String Msg) {
         this.Msg = Msg;
+    }
+
+    /**
+     * Get <p>Total number of voices that meet the search criteria</p> 
+     * @return TotalCount <p>Total number of voices that meet the search criteria</p>
+     */
+    public Long getTotalCount() {
+        return this.TotalCount;
+    }
+
+    /**
+     * Set <p>Total number of voices that meet the search criteria</p>
+     * @param TotalCount <p>Total number of voices that meet the search criteria</p>
+     */
+    public void setTotalCount(Long TotalCount) {
+        this.TotalCount = TotalCount;
     }
 
     /**
@@ -134,6 +157,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.Msg != null) {
             this.Msg = new String(source.Msg);
         }
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
         if (source.Voices != null) {
             this.Voices = new VoiceInfo[source.Voices.length];
             for (int i = 0; i < source.Voices.length; i++) {
@@ -152,6 +178,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ErrorCode", this.ErrorCode);
         this.setParamSimple(map, prefix + "Msg", this.Msg);
+        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
         this.setParamArrayObj(map, prefix + "Voices.", this.Voices);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 

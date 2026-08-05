@@ -24,82 +24,105 @@ import java.util.HashMap;
 public class ImageProcessTaskOutput extends AbstractModel {
 
     /**
-    * Path of the output file.
-Note: This field may return null, indicating that no valid value can be obtained.
+    * <p>Path of the output file.</p>
+Attention: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Path")
     @Expose
     private String Path;
 
     /**
-    * Storage location of the output file.
-Note: This field may return null, indicating that no valid value can be obtained.
+    * <p>Storage location of the output file.</p>
+Attention: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("OutputStorage")
     @Expose
     private TaskOutputStorage OutputStorage;
 
     /**
-    * Processing result of the image-to-text task.
+    * <p>Processing result of the image-to-text task.</p>
     */
     @SerializedName("Content")
     @Expose
     private String Content;
 
     /**
-     * Get Path of the output file.
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return Path Path of the output file.
-Note: This field may return null, indicating that no valid value can be obtained.
+    * <p>VOD Standard Edition FileId</p>
+    */
+    @SerializedName("FileId")
+    @Expose
+    private String FileId;
+
+    /**
+     * Get <p>Path of the output file.</p>
+Attention: This field may return null, indicating that no valid values can be obtained. 
+     * @return Path <p>Path of the output file.</p>
+Attention: This field may return null, indicating that no valid values can be obtained.
      */
     public String getPath() {
         return this.Path;
     }
 
     /**
-     * Set Path of the output file.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param Path Path of the output file.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set <p>Path of the output file.</p>
+Attention: This field may return null, indicating that no valid values can be obtained.
+     * @param Path <p>Path of the output file.</p>
+Attention: This field may return null, indicating that no valid values can be obtained.
      */
     public void setPath(String Path) {
         this.Path = Path;
     }
 
     /**
-     * Get Storage location of the output file.
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return OutputStorage Storage location of the output file.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get <p>Storage location of the output file.</p>
+Attention: This field may return null, indicating that no valid values can be obtained. 
+     * @return OutputStorage <p>Storage location of the output file.</p>
+Attention: This field may return null, indicating that no valid values can be obtained.
      */
     public TaskOutputStorage getOutputStorage() {
         return this.OutputStorage;
     }
 
     /**
-     * Set Storage location of the output file.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param OutputStorage Storage location of the output file.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set <p>Storage location of the output file.</p>
+Attention: This field may return null, indicating that no valid values can be obtained.
+     * @param OutputStorage <p>Storage location of the output file.</p>
+Attention: This field may return null, indicating that no valid values can be obtained.
      */
     public void setOutputStorage(TaskOutputStorage OutputStorage) {
         this.OutputStorage = OutputStorage;
     }
 
     /**
-     * Get Processing result of the image-to-text task. 
-     * @return Content Processing result of the image-to-text task.
+     * Get <p>Processing result of the image-to-text task.</p> 
+     * @return Content <p>Processing result of the image-to-text task.</p>
      */
     public String getContent() {
         return this.Content;
     }
 
     /**
-     * Set Processing result of the image-to-text task.
-     * @param Content Processing result of the image-to-text task.
+     * Set <p>Processing result of the image-to-text task.</p>
+     * @param Content <p>Processing result of the image-to-text task.</p>
      */
     public void setContent(String Content) {
         this.Content = Content;
+    }
+
+    /**
+     * Get <p>VOD Standard Edition FileId</p> 
+     * @return FileId <p>VOD Standard Edition FileId</p>
+     */
+    public String getFileId() {
+        return this.FileId;
+    }
+
+    /**
+     * Set <p>VOD Standard Edition FileId</p>
+     * @param FileId <p>VOD Standard Edition FileId</p>
+     */
+    public void setFileId(String FileId) {
+        this.FileId = FileId;
     }
 
     public ImageProcessTaskOutput() {
@@ -119,6 +142,9 @@ Note: This field may return null, indicating that no valid value can be obtained
         if (source.Content != null) {
             this.Content = new String(source.Content);
         }
+        if (source.FileId != null) {
+            this.FileId = new String(source.FileId);
+        }
     }
 
 
@@ -129,6 +155,7 @@ Note: This field may return null, indicating that no valid value can be obtained
         this.setParamSimple(map, prefix + "Path", this.Path);
         this.setParamObj(map, prefix + "OutputStorage.", this.OutputStorage);
         this.setParamSimple(map, prefix + "Content", this.Content);
+        this.setParamSimple(map, prefix + "FileId", this.FileId);
 
     }
 }

@@ -94,6 +94,13 @@ public class CreateAigcVideoTaskRequest extends AbstractModel {
     private AigcVideoReferenceVideoInfo [] VideoInfos;
 
     /**
+    * <p>Some models support reference audio input via URL.</p>
+    */
+    @SerializedName("AudioInfos")
+    @Expose
+    private AigcVideoReferenceAudioInfo [] AudioInfos;
+
+    /**
     * <p>Duration of the generated video.<br>Note:</p><ol><li>Kling: default value: 5 seconds.<ul><li>O1 supports 3 to 10 seconds.</li><li>3.0-Omni supports 3 to 15 seconds, or 3 to 10 seconds when a video reference is used.</li><li>3.0 supports 3 to 15 seconds.</li><li>Other versions support 5 and 10 seconds.</li></ul></li><li>The std mode of Hailuo supports 6 and 10 seconds, and other modes support 6 seconds. Default value: 6 seconds.</li><li>Vidu: default value: 5 seconds.<ul><li>q3-pro, q3-turbo, q3, and q3-mix support 3 to 16 seconds.</li><li>q2-pro, q2-turbo, and q2 support 1 to 10 seconds.</li></ul></li><li>PixVerse: default value: 5 seconds.<ul><li>v5.6 supports 5, 8, and 10 seconds.</li><li>v6 and c1 support 1 to 15 seconds.</li></ul></li><li>H2 supports 3 to 15 seconds. Default value: 5 seconds.</li></ol>
     */
     @SerializedName("Duration")
@@ -289,6 +296,22 @@ public class CreateAigcVideoTaskRequest extends AbstractModel {
     }
 
     /**
+     * Get <p>Some models support reference audio input via URL.</p> 
+     * @return AudioInfos <p>Some models support reference audio input via URL.</p>
+     */
+    public AigcVideoReferenceAudioInfo [] getAudioInfos() {
+        return this.AudioInfos;
+    }
+
+    /**
+     * Set <p>Some models support reference audio input via URL.</p>
+     * @param AudioInfos <p>Some models support reference audio input via URL.</p>
+     */
+    public void setAudioInfos(AigcVideoReferenceAudioInfo [] AudioInfos) {
+        this.AudioInfos = AudioInfos;
+    }
+
+    /**
      * Get <p>Duration of the generated video.<br>Note:</p><ol><li>Kling: default value: 5 seconds.<ul><li>O1 supports 3 to 10 seconds.</li><li>3.0-Omni supports 3 to 15 seconds, or 3 to 10 seconds when a video reference is used.</li><li>3.0 supports 3 to 15 seconds.</li><li>Other versions support 5 and 10 seconds.</li></ul></li><li>The std mode of Hailuo supports 6 and 10 seconds, and other modes support 6 seconds. Default value: 6 seconds.</li><li>Vidu: default value: 5 seconds.<ul><li>q3-pro, q3-turbo, q3, and q3-mix support 3 to 16 seconds.</li><li>q2-pro, q2-turbo, and q2 support 1 to 10 seconds.</li></ul></li><li>PixVerse: default value: 5 seconds.<ul><li>v5.6 supports 5, 8, and 10 seconds.</li><li>v6 and c1 support 1 to 15 seconds.</li></ul></li><li>H2 supports 3 to 15 seconds. Default value: 5 seconds.</li></ol> 
      * @return Duration <p>Duration of the generated video.<br>Note:</p><ol><li>Kling: default value: 5 seconds.<ul><li>O1 supports 3 to 10 seconds.</li><li>3.0-Omni supports 3 to 15 seconds, or 3 to 10 seconds when a video reference is used.</li><li>3.0 supports 3 to 15 seconds.</li><li>Other versions support 5 and 10 seconds.</li></ul></li><li>The std mode of Hailuo supports 6 and 10 seconds, and other modes support 6 seconds. Default value: 6 seconds.</li><li>Vidu: default value: 5 seconds.<ul><li>q3-pro, q3-turbo, q3, and q3-mix support 3 to 16 seconds.</li><li>q2-pro, q2-turbo, and q2 support 1 to 10 seconds.</li></ul></li><li>PixVerse: default value: 5 seconds.<ul><li>v5.6 supports 5, 8, and 10 seconds.</li><li>v6 and c1 support 1 to 15 seconds.</li></ul></li><li>H2 supports 3 to 15 seconds. Default value: 5 seconds.</li></ol>
      */
@@ -412,6 +435,12 @@ public class CreateAigcVideoTaskRequest extends AbstractModel {
                 this.VideoInfos[i] = new AigcVideoReferenceVideoInfo(source.VideoInfos[i]);
             }
         }
+        if (source.AudioInfos != null) {
+            this.AudioInfos = new AigcVideoReferenceAudioInfo[source.AudioInfos.length];
+            for (int i = 0; i < source.AudioInfos.length; i++) {
+                this.AudioInfos[i] = new AigcVideoReferenceAudioInfo(source.AudioInfos[i]);
+            }
+        }
         if (source.Duration != null) {
             this.Duration = new Long(source.Duration);
         }
@@ -444,6 +473,7 @@ public class CreateAigcVideoTaskRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "LastImageUrl", this.LastImageUrl);
         this.setParamArrayObj(map, prefix + "ImageInfos.", this.ImageInfos);
         this.setParamArrayObj(map, prefix + "VideoInfos.", this.VideoInfos);
+        this.setParamArrayObj(map, prefix + "AudioInfos.", this.AudioInfos);
         this.setParamSimple(map, prefix + "Duration", this.Duration);
         this.setParamObj(map, prefix + "ExtraParameters.", this.ExtraParameters);
         this.setParamObj(map, prefix + "StoreCosParam.", this.StoreCosParam);

@@ -31,7 +31,7 @@ public class CreateAigcAudioTaskRequest extends AbstractModel {
     private String ModelName;
 
     /**
-    * <p>Specifies the model version. By default, the system uses the supported stable version of the model.<br>Supported versions for GL: 3.0-clip and 3.0-pro.<br>Supported versions for MinimaxMusic: 2.0, 2.5, and 2.6.</p>
+    * <p>Specifies the model version. By default, the system uses the supported stable version of the model.<br>Supported versions for GL: 3.0-clip and 3.0-pro.<br>Supported versions for MiniMaxMusic: 2.0, 2.5, and 2.6.</p>
     */
     @SerializedName("ModelVersion")
     @Expose
@@ -87,7 +87,7 @@ public class CreateAigcAudioTaskRequest extends AbstractModel {
     private AigcAudioExtraParam ExtraParameters;
 
     /**
-    * <p>This is used to specify special scenario parameters required by the model, in the format of a serialized JSON string.<br>Example to specify lyrics for the MinimaxMusic model:<br>{"lyric":{"The pony is running with joy. The flowers are blooming."}}</p>
+    * <p>This is used to specify special scenario parameters required by the model, in the format of a serialized JSON string.<br>Example to specify lyrics for the MinimaxMusic model:<br>{"lyric":{"The pony is running with joy. The flowers are blooming."}}</p><ol><li>Example for MiniMaxMusic instrumental music: &quot;AdditionalParameters&quot;:&quot;{"is_instrumental":true}&quot;</li></ol>
     */
     @SerializedName("AdditionalParameters")
     @Expose
@@ -117,16 +117,16 @@ public class CreateAigcAudioTaskRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>Specifies the model version. By default, the system uses the supported stable version of the model.<br>Supported versions for GL: 3.0-clip and 3.0-pro.<br>Supported versions for MinimaxMusic: 2.0, 2.5, and 2.6.</p> 
-     * @return ModelVersion <p>Specifies the model version. By default, the system uses the supported stable version of the model.<br>Supported versions for GL: 3.0-clip and 3.0-pro.<br>Supported versions for MinimaxMusic: 2.0, 2.5, and 2.6.</p>
+     * Get <p>Specifies the model version. By default, the system uses the supported stable version of the model.<br>Supported versions for GL: 3.0-clip and 3.0-pro.<br>Supported versions for MiniMaxMusic: 2.0, 2.5, and 2.6.</p> 
+     * @return ModelVersion <p>Specifies the model version. By default, the system uses the supported stable version of the model.<br>Supported versions for GL: 3.0-clip and 3.0-pro.<br>Supported versions for MiniMaxMusic: 2.0, 2.5, and 2.6.</p>
      */
     public String getModelVersion() {
         return this.ModelVersion;
     }
 
     /**
-     * Set <p>Specifies the model version. By default, the system uses the supported stable version of the model.<br>Supported versions for GL: 3.0-clip and 3.0-pro.<br>Supported versions for MinimaxMusic: 2.0, 2.5, and 2.6.</p>
-     * @param ModelVersion <p>Specifies the model version. By default, the system uses the supported stable version of the model.<br>Supported versions for GL: 3.0-clip and 3.0-pro.<br>Supported versions for MinimaxMusic: 2.0, 2.5, and 2.6.</p>
+     * Set <p>Specifies the model version. By default, the system uses the supported stable version of the model.<br>Supported versions for GL: 3.0-clip and 3.0-pro.<br>Supported versions for MiniMaxMusic: 2.0, 2.5, and 2.6.</p>
+     * @param ModelVersion <p>Specifies the model version. By default, the system uses the supported stable version of the model.<br>Supported versions for GL: 3.0-clip and 3.0-pro.<br>Supported versions for MiniMaxMusic: 2.0, 2.5, and 2.6.</p>
      */
     public void setModelVersion(String ModelVersion) {
         this.ModelVersion = ModelVersion;
@@ -245,16 +245,16 @@ public class CreateAigcAudioTaskRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>This is used to specify special scenario parameters required by the model, in the format of a serialized JSON string.<br>Example to specify lyrics for the MinimaxMusic model:<br>{"lyric":{"The pony is running with joy. The flowers are blooming."}}</p> 
-     * @return AdditionalParameters <p>This is used to specify special scenario parameters required by the model, in the format of a serialized JSON string.<br>Example to specify lyrics for the MinimaxMusic model:<br>{"lyric":{"The pony is running with joy. The flowers are blooming."}}</p>
+     * Get <p>This is used to specify special scenario parameters required by the model, in the format of a serialized JSON string.<br>Example to specify lyrics for the MinimaxMusic model:<br>{"lyric":{"The pony is running with joy. The flowers are blooming."}}</p><ol><li>Example for MiniMaxMusic instrumental music: &quot;AdditionalParameters&quot;:&quot;{"is_instrumental":true}&quot;</li></ol> 
+     * @return AdditionalParameters <p>This is used to specify special scenario parameters required by the model, in the format of a serialized JSON string.<br>Example to specify lyrics for the MinimaxMusic model:<br>{"lyric":{"The pony is running with joy. The flowers are blooming."}}</p><ol><li>Example for MiniMaxMusic instrumental music: &quot;AdditionalParameters&quot;:&quot;{"is_instrumental":true}&quot;</li></ol>
      */
     public String getAdditionalParameters() {
         return this.AdditionalParameters;
     }
 
     /**
-     * Set <p>This is used to specify special scenario parameters required by the model, in the format of a serialized JSON string.<br>Example to specify lyrics for the MinimaxMusic model:<br>{"lyric":{"The pony is running with joy. The flowers are blooming."}}</p>
-     * @param AdditionalParameters <p>This is used to specify special scenario parameters required by the model, in the format of a serialized JSON string.<br>Example to specify lyrics for the MinimaxMusic model:<br>{"lyric":{"The pony is running with joy. The flowers are blooming."}}</p>
+     * Set <p>This is used to specify special scenario parameters required by the model, in the format of a serialized JSON string.<br>Example to specify lyrics for the MinimaxMusic model:<br>{"lyric":{"The pony is running with joy. The flowers are blooming."}}</p><ol><li>Example for MiniMaxMusic instrumental music: &quot;AdditionalParameters&quot;:&quot;{"is_instrumental":true}&quot;</li></ol>
+     * @param AdditionalParameters <p>This is used to specify special scenario parameters required by the model, in the format of a serialized JSON string.<br>Example to specify lyrics for the MinimaxMusic model:<br>{"lyric":{"The pony is running with joy. The flowers are blooming."}}</p><ol><li>Example for MiniMaxMusic instrumental music: &quot;AdditionalParameters&quot;:&quot;{"is_instrumental":true}&quot;</li></ol>
      */
     public void setAdditionalParameters(String AdditionalParameters) {
         this.AdditionalParameters = AdditionalParameters;

@@ -52,6 +52,13 @@ public class SubtitleResult extends AbstractModel {
     private String SubtitleEmbedPath;
 
     /**
+    * <p>FileId of the subtitle file.</p>
+    */
+    @SerializedName("SubtitleFileId")
+    @Expose
+    private String SubtitleFileId;
+
+    /**
      * Get <p>Language of the subtitle file</p> 
      * @return Language <p>Language of the subtitle file</p>
      */
@@ -115,6 +122,22 @@ public class SubtitleResult extends AbstractModel {
         this.SubtitleEmbedPath = SubtitleEmbedPath;
     }
 
+    /**
+     * Get <p>FileId of the subtitle file.</p> 
+     * @return SubtitleFileId <p>FileId of the subtitle file.</p>
+     */
+    public String getSubtitleFileId() {
+        return this.SubtitleFileId;
+    }
+
+    /**
+     * Set <p>FileId of the subtitle file.</p>
+     * @param SubtitleFileId <p>FileId of the subtitle file.</p>
+     */
+    public void setSubtitleFileId(String SubtitleFileId) {
+        this.SubtitleFileId = SubtitleFileId;
+    }
+
     public SubtitleResult() {
     }
 
@@ -135,6 +158,9 @@ public class SubtitleResult extends AbstractModel {
         if (source.SubtitleEmbedPath != null) {
             this.SubtitleEmbedPath = new String(source.SubtitleEmbedPath);
         }
+        if (source.SubtitleFileId != null) {
+            this.SubtitleFileId = new String(source.SubtitleFileId);
+        }
     }
 
 
@@ -146,6 +172,7 @@ public class SubtitleResult extends AbstractModel {
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "Path", this.Path);
         this.setParamSimple(map, prefix + "SubtitleEmbedPath", this.SubtitleEmbedPath);
+        this.setParamSimple(map, prefix + "SubtitleFileId", this.SubtitleFileId);
 
     }
 }

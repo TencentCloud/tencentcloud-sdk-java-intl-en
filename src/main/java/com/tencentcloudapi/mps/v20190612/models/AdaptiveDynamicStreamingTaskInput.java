@@ -128,6 +128,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private AddOnAudio [] AddOnAudios;
 
     /**
+    * <p>When not empty, directly replace the StreamInfos field of the template. The field format is the same as the StreamInfos when creating an adaptive template.</p>
+    */
+    @SerializedName("StdExtStreamInfos")
+    @Expose
+    private AdaptiveStreamTemplate [] StdExtStreamInfos;
+
+    /**
      * Get <p>Adaptive bitrate streaming template ID.</p> 
      * @return Definition <p>Adaptive bitrate streaming template ID.</p>
      */
@@ -375,6 +382,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.AddOnAudios = AddOnAudios;
     }
 
+    /**
+     * Get <p>When not empty, directly replace the StreamInfos field of the template. The field format is the same as the StreamInfos when creating an adaptive template.</p> 
+     * @return StdExtStreamInfos <p>When not empty, directly replace the StreamInfos field of the template. The field format is the same as the StreamInfos when creating an adaptive template.</p>
+     */
+    public AdaptiveStreamTemplate [] getStdExtStreamInfos() {
+        return this.StdExtStreamInfos;
+    }
+
+    /**
+     * Set <p>When not empty, directly replace the StreamInfos field of the template. The field format is the same as the StreamInfos when creating an adaptive template.</p>
+     * @param StdExtStreamInfos <p>When not empty, directly replace the StreamInfos field of the template. The field format is the same as the StreamInfos when creating an adaptive template.</p>
+     */
+    public void setStdExtStreamInfos(AdaptiveStreamTemplate [] StdExtStreamInfos) {
+        this.StdExtStreamInfos = StdExtStreamInfos;
+    }
+
     public AdaptiveDynamicStreamingTaskInput() {
     }
 
@@ -437,6 +460,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 this.AddOnAudios[i] = new AddOnAudio(source.AddOnAudios[i]);
             }
         }
+        if (source.StdExtStreamInfos != null) {
+            this.StdExtStreamInfos = new AdaptiveStreamTemplate[source.StdExtStreamInfos.length];
+            for (int i = 0; i < source.StdExtStreamInfos.length; i++) {
+                this.StdExtStreamInfos[i] = new AdaptiveStreamTemplate(source.StdExtStreamInfos[i]);
+            }
+        }
     }
 
 
@@ -458,6 +487,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "StdExtInfo", this.StdExtInfo);
         this.setParamArraySimple(map, prefix + "KeyPTSList.", this.KeyPTSList);
         this.setParamArrayObj(map, prefix + "AddOnAudios.", this.AddOnAudios);
+        this.setParamArrayObj(map, prefix + "StdExtStreamInfos.", this.StdExtStreamInfos);
 
     }
 }
