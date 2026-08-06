@@ -229,7 +229,7 @@ The data generated with the SDK must be stored in COS, and the region of the COS
     }
 
     /**
-     *NFC verification service, obtain Token information for the NFC identify request.
+     *NFC verification service, obtain Token information for the NFC identify request.This API supports NFC recognition and verification of ID cards (second-generation resident identity card, Residence Permit for Hong Kong (China) and Macao (China), Residence Permit for Taiwan (China), Permanent Residence Permit for Foreigners) as well as travel documents (exit-entry permit for travelling to and from Hong Kong (China) and Macao (China), Taiwan travel permit, Mainland Travel Permit for Taiwan Residents, Return Home Permit).
      * @param req GetNFCTokenRequest
      * @return GetNFCTokenResponse
      * @throws TencentCloudSDKException

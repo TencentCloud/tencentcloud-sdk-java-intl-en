@@ -46,6 +46,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String [] AdvancedObjects;
 
     /**
+    * A redundant field that specifies the online DDL type
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("OnlineDDL")
+    @Expose
+    private OnlineDDL OnlineDDL;
+
+    /**
      * Get Sync object type. Valid value: `Partial` (Partial objects). Note: This field may return null, indicating that no valid values can be obtained. 
      * @return Mode Sync object type. Valid value: `Partial` (Partial objects). Note: This field may return null, indicating that no valid values can be obtained.
      */
@@ -97,6 +105,26 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.AdvancedObjects = AdvancedObjects;
     }
 
+    /**
+     * Get A redundant field that specifies the online DDL type
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return OnlineDDL A redundant field that specifies the online DDL type
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public OnlineDDL getOnlineDDL() {
+        return this.OnlineDDL;
+    }
+
+    /**
+     * Set A redundant field that specifies the online DDL type
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param OnlineDDL A redundant field that specifies the online DDL type
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setOnlineDDL(OnlineDDL OnlineDDL) {
+        this.OnlineDDL = OnlineDDL;
+    }
+
     public Objects() {
     }
 
@@ -120,6 +148,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 this.AdvancedObjects[i] = new String(source.AdvancedObjects[i]);
             }
         }
+        if (source.OnlineDDL != null) {
+            this.OnlineDDL = new OnlineDDL(source.OnlineDDL);
+        }
     }
 
 
@@ -130,6 +161,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "Mode", this.Mode);
         this.setParamArrayObj(map, prefix + "Databases.", this.Databases);
         this.setParamArraySimple(map, prefix + "AdvancedObjects.", this.AdvancedObjects);
+        this.setParamObj(map, prefix + "OnlineDDL.", this.OnlineDDL);
 
     }
 }

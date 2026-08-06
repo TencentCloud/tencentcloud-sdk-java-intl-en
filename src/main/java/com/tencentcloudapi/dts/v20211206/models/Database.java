@@ -64,6 +64,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String NewSchemaName;
 
     /**
+    * Table selection mode, which is required if `DBMode` is `Partial` for postgresql or sqlserver. Valid values: `All`, `Partial`. To sync an entire schema, set this parameter to `All`.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("SchemaMode")
+    @Expose
+    private String SchemaMode;
+
+    /**
     * Table selection mode, which is required if `DBMode` is `Partial`. Valid values: `All`, `Partial`. To sync an entire database, set this parameter to `All`.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
@@ -128,7 +136,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String [] Procedures;
 
     /**
-    * Trigger sync mode. Valid values: `All`, `Partial`. To sync an entire database, set this parameter to `All`. Currently, the advanced object “trigger” is not supported for data sync.
+    * Trigger sync mode. Valid values: `All`, `Partial`. To sync an entire database, set this parameter to `All`. Currently, the advanced object "trigger" is not supported for data sync.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("TriggerMode")
@@ -144,7 +152,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String [] Triggers;
 
     /**
-    * Event sync mode. Valid values: `All`, `Partial`. To sync an entire database, set this parameter to `All`. Currently, the advanced object “event” is not supported for data sync.
+    * Event sync mode. Valid values: `All`, `Partial`. To sync an entire database, set this parameter to `All`. Currently, the advanced object "event" is not supported for data sync.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("EventMode")
@@ -257,6 +265,26 @@ Note: This field may return null, indicating that no valid values can be obtaine
      */
     public void setNewSchemaName(String NewSchemaName) {
         this.NewSchemaName = NewSchemaName;
+    }
+
+    /**
+     * Get Table selection mode, which is required if `DBMode` is `Partial` for postgresql or sqlserver. Valid values: `All`, `Partial`. To sync an entire schema, set this parameter to `All`.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return SchemaMode Table selection mode, which is required if `DBMode` is `Partial` for postgresql or sqlserver. Valid values: `All`, `Partial`. To sync an entire schema, set this parameter to `All`.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getSchemaMode() {
+        return this.SchemaMode;
+    }
+
+    /**
+     * Set Table selection mode, which is required if `DBMode` is `Partial` for postgresql or sqlserver. Valid values: `All`, `Partial`. To sync an entire schema, set this parameter to `All`.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param SchemaMode Table selection mode, which is required if `DBMode` is `Partial` for postgresql or sqlserver. Valid values: `All`, `Partial`. To sync an entire schema, set this parameter to `All`.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setSchemaMode(String SchemaMode) {
+        this.SchemaMode = SchemaMode;
     }
 
     /**
@@ -420,9 +448,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Trigger sync mode. Valid values: `All`, `Partial`. To sync an entire database, set this parameter to `All`. Currently, the advanced object “trigger” is not supported for data sync.
+     * Get Trigger sync mode. Valid values: `All`, `Partial`. To sync an entire database, set this parameter to `All`. Currently, the advanced object "trigger" is not supported for data sync.
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return TriggerMode Trigger sync mode. Valid values: `All`, `Partial`. To sync an entire database, set this parameter to `All`. Currently, the advanced object “trigger” is not supported for data sync.
+     * @return TriggerMode Trigger sync mode. Valid values: `All`, `Partial`. To sync an entire database, set this parameter to `All`. Currently, the advanced object "trigger" is not supported for data sync.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getTriggerMode() {
@@ -430,9 +458,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Trigger sync mode. Valid values: `All`, `Partial`. To sync an entire database, set this parameter to `All`. Currently, the advanced object “trigger” is not supported for data sync.
+     * Set Trigger sync mode. Valid values: `All`, `Partial`. To sync an entire database, set this parameter to `All`. Currently, the advanced object "trigger" is not supported for data sync.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param TriggerMode Trigger sync mode. Valid values: `All`, `Partial`. To sync an entire database, set this parameter to `All`. Currently, the advanced object “trigger” is not supported for data sync.
+     * @param TriggerMode Trigger sync mode. Valid values: `All`, `Partial`. To sync an entire database, set this parameter to `All`. Currently, the advanced object "trigger" is not supported for data sync.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setTriggerMode(String TriggerMode) {
@@ -460,9 +488,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Event sync mode. Valid values: `All`, `Partial`. To sync an entire database, set this parameter to `All`. Currently, the advanced object “event” is not supported for data sync.
+     * Get Event sync mode. Valid values: `All`, `Partial`. To sync an entire database, set this parameter to `All`. Currently, the advanced object "event" is not supported for data sync.
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return EventMode Event sync mode. Valid values: `All`, `Partial`. To sync an entire database, set this parameter to `All`. Currently, the advanced object “event” is not supported for data sync.
+     * @return EventMode Event sync mode. Valid values: `All`, `Partial`. To sync an entire database, set this parameter to `All`. Currently, the advanced object "event" is not supported for data sync.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getEventMode() {
@@ -470,9 +498,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Event sync mode. Valid values: `All`, `Partial`. To sync an entire database, set this parameter to `All`. Currently, the advanced object “event” is not supported for data sync.
+     * Set Event sync mode. Valid values: `All`, `Partial`. To sync an entire database, set this parameter to `All`. Currently, the advanced object "event" is not supported for data sync.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param EventMode Event sync mode. Valid values: `All`, `Partial`. To sync an entire database, set this parameter to `All`. Currently, the advanced object “event” is not supported for data sync.
+     * @param EventMode Event sync mode. Valid values: `All`, `Partial`. To sync an entire database, set this parameter to `All`. Currently, the advanced object "event" is not supported for data sync.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setEventMode(String EventMode) {
@@ -521,6 +549,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         }
         if (source.NewSchemaName != null) {
             this.NewSchemaName = new String(source.NewSchemaName);
+        }
+        if (source.SchemaMode != null) {
+            this.SchemaMode = new String(source.SchemaMode);
         }
         if (source.TableMode != null) {
             this.TableMode = new String(source.TableMode);
@@ -588,6 +619,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "DbMode", this.DbMode);
         this.setParamSimple(map, prefix + "SchemaName", this.SchemaName);
         this.setParamSimple(map, prefix + "NewSchemaName", this.NewSchemaName);
+        this.setParamSimple(map, prefix + "SchemaMode", this.SchemaMode);
         this.setParamSimple(map, prefix + "TableMode", this.TableMode);
         this.setParamArrayObj(map, prefix + "Tables.", this.Tables);
         this.setParamSimple(map, prefix + "ViewMode", this.ViewMode);

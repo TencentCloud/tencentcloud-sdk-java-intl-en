@@ -1897,4 +1897,15 @@ Description: Only incomplete import jobs support termination, and the executed S
         return this.internalRequest(req, "UpgradeDBInstanceEngineVersion", UpgradeDBInstanceEngineVersionResponse.class);
     }
 
+    /**
+     *This API is used to upgrade a read-only group to a pure network forwarding mode.
+     * @param req UpgradeRoGroupRequest
+     * @return UpgradeRoGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpgradeRoGroupResponse UpgradeRoGroup(UpgradeRoGroupRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpgradeRoGroup", UpgradeRoGroupResponse.class);
+    }
+
 }
