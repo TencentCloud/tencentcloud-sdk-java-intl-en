@@ -1620,7 +1620,7 @@ Live stream processing event notification supports HTTP callback and also suppor
     }
 
     /**
-     *
+     *This API is used to translate text. The "subtitle translation (additional languages)" billing item is used. Billing is calculated by converting characters to minutes at a rate of 1,100 characters per minute (based on Unicode code points. For example, "hello" counts as 5 characters).
      * @param req TextTranslationRequest
      * @return TextTranslationResponse
      * @throws TencentCloudSDKException
