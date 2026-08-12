@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class Filters extends AbstractModel {
 
     /**
-    * Filter condition name.
+    * Filter criterion name. Parameter: Status (Execution result, Values: SUCCESS/FAILED/USER_CANCELED/CHECKING).
     */
     @SerializedName("Name")
     @Expose
@@ -38,23 +38,23 @@ public class Filters extends AbstractModel {
     private String [] Values;
 
     /**
-    * Exact match: 1 - exact match; default - fuzzy match
+    * Exact match: 1 - exact match; default - fuzzy matching
     */
     @SerializedName("ExactMatch")
     @Expose
     private String ExactMatch;
 
     /**
-     * Get Filter condition name. 
-     * @return Name Filter condition name.
+     * Get Filter criterion name. Parameter: Status (Execution result, Values: SUCCESS/FAILED/USER_CANCELED/CHECKING). 
+     * @return Name Filter criterion name. Parameter: Status (Execution result, Values: SUCCESS/FAILED/USER_CANCELED/CHECKING).
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Filter condition name.
-     * @param Name Filter condition name.
+     * Set Filter criterion name. Parameter: Status (Execution result, Values: SUCCESS/FAILED/USER_CANCELED/CHECKING).
+     * @param Name Filter criterion name. Parameter: Status (Execution result, Values: SUCCESS/FAILED/USER_CANCELED/CHECKING).
      */
     public void setName(String Name) {
         this.Name = Name;
@@ -77,16 +77,16 @@ public class Filters extends AbstractModel {
     }
 
     /**
-     * Get Exact match: 1 - exact match; default - fuzzy match 
-     * @return ExactMatch Exact match: 1 - exact match; default - fuzzy match
+     * Get Exact match: 1 - exact match; default - fuzzy matching 
+     * @return ExactMatch Exact match: 1 - exact match; default - fuzzy matching
      */
     public String getExactMatch() {
         return this.ExactMatch;
     }
 
     /**
-     * Set Exact match: 1 - exact match; default - fuzzy match
-     * @param ExactMatch Exact match: 1 - exact match; default - fuzzy match
+     * Set Exact match: 1 - exact match; default - fuzzy matching
+     * @param ExactMatch Exact match: 1 - exact match; default - fuzzy matching
      */
     public void setExactMatch(String ExactMatch) {
         this.ExactMatch = ExactMatch;

@@ -9,7 +9,7 @@ public enum IaiErrorCode {
      /* This operation cannot be performed across algorithm model versions. */
      FAILEDOPERATION_ACROSSVERSIONSERROR("FailedOperation.AcrossVersionsError"),
      
-     /* Match failed. */
+     /* Comparison failed. */
      FAILEDOPERATION_COMPAREFAIL("FailedOperation.CompareFail"),
      
      /* The operations conflict. Do not operate on the same person simultaneously. */
@@ -57,13 +57,13 @@ public enum IaiErrorCode {
      /* Multiple faces detected. */
      FAILEDOPERATION_LIFEPHOTODETECTFACES("FailedOperation.LifePhotoDetectFaces"),
      
-     /* Real-person verification failed. */
+     /* Real person comparison failed. */
      FAILEDOPERATION_LIFEPHOTODETECTFAKE("FailedOperation.LifePhotoDetectFake"),
      
-     /* Failed to detect a complete face. */
+     /* Full face not detected. */
      FAILEDOPERATION_LIFEPHOTODETECTNOFACES("FailedOperation.LifePhotoDetectNoFaces"),
      
-     /* The uploaded image is either too large or too small. */
+     /* Uploaded image too large or too small. */
      FAILEDOPERATION_LIFEPHOTOSIZEERROR("FailedOperation.LifePhotoSizeError"),
      
      /* The request frequency exceeds the limit. */

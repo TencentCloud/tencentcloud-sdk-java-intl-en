@@ -50,6 +50,17 @@ public class CsipClient extends AbstractClient{
     }
 
     /**
+     *Add a vulnerability allowlist
+     * @param req AddVulWhitelistRequest
+     * @return AddVulWhitelistResponse
+     * @throws TencentCloudSDKException
+     */
+    public AddVulWhitelistResponse AddVulWhitelist(AddVulWhitelistRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "AddVulWhitelist", AddVulWhitelistResponse.class);
+    }
+
+    /**
      *Detect AK async task.
      * @param req CreateAccessKeyCheckTaskRequest
      * @return CreateAccessKeyCheckTaskResponse
@@ -80,6 +91,17 @@ public class CsipClient extends AbstractClient{
     public CreateDomainAndIpResponse CreateDomainAndIp(CreateDomainAndIpRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CreateDomainAndIp", CreateDomainAndIpResponse.class);
+    }
+
+    /**
+     *This API is used to create a host vulnerability table export task.
+     * @param req CreateHostVulExportJobRequest
+     * @return CreateHostVulExportJobResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateHostVulExportJobResponse CreateHostVulExportJob(CreateHostVulExportJobRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateHostVulExportJob", CreateHostVulExportJobResponse.class);
     }
 
     /**
@@ -138,6 +160,61 @@ public class CsipClient extends AbstractClient{
     }
 
     /**
+     *Retry the vulnerability repair task that failed to fix, and redispatch the repair instruction only for the hosts of the original task that failed to fix. Retry is allowed only when the task status is partially or totally failed to fix.
+     * @param req CreateVulFixRetryTaskRequest
+     * @return CreateVulFixRetryTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateVulFixRetryTaskResponse CreateVulFixRetryTask(CreateVulFixRetryTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateVulFixRetryTask", CreateVulFixRetryTaskResponse.class);
+    }
+
+    /**
+     *Users manually submit vulnerability repair tasks, specify the vulnerabilities and target hosts that need to be repaired, and the system creates fixing tasks and dispatches execution. It supports options such as specifying the repair timeout period and whether to create a snapshot. The FixItems array is used to precisely control which hosts each vulnerability or KB patch repairs.
+     * @param req CreateVulFixTaskRequest
+     * @return CreateVulFixTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateVulFixTaskResponse CreateVulFixTask(CreateVulFixTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateVulFixTask", CreateVulFixTaskResponse.class);
+    }
+
+    /**
+     *Create an export task for the list of fixed vulnerabilities. It supports the same filter criteria as DescribeVulFixedList. The export is implemented via an asynchronous task. After a JobID is returned, the frontend polls to query the export task status. The export fields include vulnerability ID, vulnerability name, vulnerability level, VPR rating, vulnerability type, CVE ID, host name, instance ID, associated component & path, and repair time.
+     * @param req CreateVulFixedExportJobRequest
+     * @return CreateVulFixedExportJobResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateVulFixedExportJobResponse CreateVulFixedExportJob(CreateVulFixedExportJobRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateVulFixedExportJob", CreateVulFixedExportJobResponse.class);
+    }
+
+    /**
+     *This API is used to create a vulnerability rescan
+     * @param req CreateVulReScanRequest
+     * @return CreateVulReScanResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateVulReScanResponse CreateVulReScan(CreateVulReScanRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateVulReScan", CreateVulReScanResponse.class);
+    }
+
+    /**
+     *This API is used to create a vulnerability scanning (one-click scan).
+     * @param req CreateVulScanManualRequest
+     * @return CreateVulScanManualResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateVulScanManualResponse CreateVulScanManual(CreateVulScanManualRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateVulScanManual", CreateVulScanManualResponse.class);
+    }
+
+    /**
      *This API is used to delete assets.
      * @param req DeleteDomainAndIpRequest
      * @return DeleteDomainAndIpResponse
@@ -179,6 +256,17 @@ public class CsipClient extends AbstractClient{
     public DeleteRiskScanTaskResponse DeleteRiskScanTask(DeleteRiskScanTaskRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteRiskScanTask", DeleteRiskScanTaskResponse.class);
+    }
+
+    /**
+     *This API is used to delete a vulnerability allowlist.
+     * @param req DeleteVulWhitelistRequest
+     * @return DeleteVulWhitelistResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteVulWhitelistResponse DeleteVulWhitelist(DeleteVulWhitelistRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteVulWhitelist", DeleteVulWhitelistResponse.class);
     }
 
     /**
@@ -520,6 +608,39 @@ public class CsipClient extends AbstractClient{
     public DescribeHighBaseLineRiskListResponse DescribeHighBaseLineRiskList(DescribeHighBaseLineRiskListRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeHighBaseLineRiskList", DescribeHighBaseLineRiskListResponse.class);
+    }
+
+    /**
+     *This API is used to obtain host vulnerability VPR information.
+     * @param req DescribeHostVulItemVPRInfoRequest
+     * @return DescribeHostVulItemVPRInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeHostVulItemVPRInfoResponse DescribeHostVulItemVPRInfo(DescribeHostVulItemVPRInfoRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeHostVulItemVPRInfo", DescribeHostVulItemVPRInfoResponse.class);
+    }
+
+    /**
+     *This API is used to obtain the host vulnerability overview.
+     * @param req DescribeHostVulOverviewRequest
+     * @return DescribeHostVulOverviewResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeHostVulOverviewResponse DescribeHostVulOverview(DescribeHostVulOverviewRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeHostVulOverview", DescribeHostVulOverviewResponse.class);
+    }
+
+    /**
+     *This API is used to retrieve the host vulnerability risk list.
+     * @param req DescribeHostVulRiskListRequest
+     * @return DescribeHostVulRiskListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeHostVulRiskListResponse DescribeHostVulRiskList(DescribeHostVulRiskListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeHostVulRiskList", DescribeHostVulRiskListResponse.class);
     }
 
     /**
@@ -1007,6 +1128,116 @@ public class CsipClient extends AbstractClient{
     }
 
     /**
+     *This API is used to query the associated server of a vulnerable component.
+     * @param req DescribeVulComponentRelateHostRequest
+     * @return DescribeVulComponentRelateHostResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeVulComponentRelateHostResponse DescribeVulComponentRelateHost(DescribeVulComponentRelateHostRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeVulComponentRelateHost", DescribeVulComponentRelateHostResponse.class);
+    }
+
+    /**
+     *This API is used to query the details of a specified vulnerability repair task, including detailed data such as remediation status and snapshot status for each host, and supports pagination and filtering.
+     * @param req DescribeVulFixTaskDetailRequest
+     * @return DescribeVulFixTaskDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeVulFixTaskDetailResponse DescribeVulFixTaskDetail(DescribeVulFixTaskDetailRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeVulFixTaskDetail", DescribeVulFixTaskDetailResponse.class);
+    }
+
+    /**
+     *This API is used to query the vulnerability repair task record list with paging, support by conditional filtering such as remediation status and time range, and show summary information for each repair task.
+     * @param req DescribeVulFixTaskListRequest
+     * @return DescribeVulFixTaskListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeVulFixTaskListResponse DescribeVulFixTaskList(DescribeVulFixTaskListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeVulFixTaskList", DescribeVulFixTaskListResponse.class);
+    }
+
+    /**
+     *This API is used to query the host list where specified vulnerabilities can be repaired. Before a user submits a repair task, it is necessary to query which hosts support automatic fix, providing data support for users to select repair targets.
+     * @param req DescribeVulFixableMachineListRequest
+     * @return DescribeVulFixableMachineListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeVulFixableMachineListResponse DescribeVulFixableMachineList(DescribeVulFixableMachineListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeVulFixableMachineList", DescribeVulFixableMachineListResponse.class);
+    }
+
+    /**
+     *This API is used to query the repair details of a certain fixed vulnerability on a specified host, including basic information about the vulnerability, repair host information, and a detailed list of associated components and paths (component name, version number hit, associated path, repair command).
+     * @param req DescribeVulFixedHostDetailRequest
+     * @return DescribeVulFixedHostDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeVulFixedHostDetailResponse DescribeVulFixedHostDetail(DescribeVulFixedHostDetailRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeVulFixedHostDetail", DescribeVulFixedHostDetailResponse.class);
+    }
+
+    /**
+     *This API is used to query the list of repaired vulnerabilities, show vulnerability information with successful fixes and statistics on repair conditions, helping users understand the repair results.
+     * @param req DescribeVulFixedListRequest
+     * @return DescribeVulFixedListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeVulFixedListResponse DescribeVulFixedList(DescribeVulFixedListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeVulFixedList", DescribeVulFixedListResponse.class);
+    }
+
+    /**
+     *This API is used to query host-associated vulnerability components.
+     * @param req DescribeVulHostRelateComponentRequest
+     * @return DescribeVulHostRelateComponentResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeVulHostRelateComponentResponse DescribeVulHostRelateComponent(DescribeVulHostRelateComponentRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeVulHostRelateComponent", DescribeVulHostRelateComponentResponse.class);
+    }
+
+    /**
+     *This API is used to retrieve the vulnerability ignore list.
+     * @param req DescribeVulIgnoreRuleListRequest
+     * @return DescribeVulIgnoreRuleListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeVulIgnoreRuleListResponse DescribeVulIgnoreRuleList(DescribeVulIgnoreRuleListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeVulIgnoreRuleList", DescribeVulIgnoreRuleListResponse.class);
+    }
+
+    /**
+     *This API is used to obtain vulnerability list
+     * @param req DescribeVulItemListRequest
+     * @return DescribeVulItemListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeVulItemListResponse DescribeVulItemList(DescribeVulItemListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeVulItemList", DescribeVulItemListResponse.class);
+    }
+
+    /**
+     *Obtains the vulnerability tag list
+     * @param req DescribeVulLabelListRequest
+     * @return DescribeVulLabelListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeVulLabelListResponse DescribeVulLabelList(DescribeVulLabelListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeVulLabelList", DescribeVulLabelListResponse.class);
+    }
+
+    /**
      *Query the list of vulnerabilities of host nodes under the exposed path in cloud boundary analysis.
      * @param req DescribeVulRiskListRequest
      * @return DescribeVulRiskListResponse
@@ -1015,6 +1246,61 @@ public class CsipClient extends AbstractClient{
     public DescribeVulRiskListResponse DescribeVulRiskList(DescribeVulRiskListRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeVulRiskList", DescribeVulRiskListResponse.class);
+    }
+
+    /**
+     *Retrieve the associated component of a vulnerability
+     * @param req DescribeVulRiskRelateComponentRequest
+     * @return DescribeVulRiskRelateComponentResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeVulRiskRelateComponentResponse DescribeVulRiskRelateComponent(DescribeVulRiskRelateComponentRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeVulRiskRelateComponent", DescribeVulRiskRelateComponentResponse.class);
+    }
+
+    /**
+     *Search for hosts associated with vulnerabilities or KBs
+     * @param req DescribeVulRiskRelateHostRequest
+     * @return DescribeVulRiskRelateHostResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeVulRiskRelateHostResponse DescribeVulRiskRelateHost(DescribeVulRiskRelateHostRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeVulRiskRelateHost", DescribeVulRiskRelateHostResponse.class);
+    }
+
+    /**
+     *This API is used to obtain vulnerability scanning (period scanning).
+     * @param req DescribeVulScanPeriodicRequest
+     * @return DescribeVulScanPeriodicResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeVulScanPeriodicResponse DescribeVulScanPeriodic(DescribeVulScanPeriodicRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeVulScanPeriodic", DescribeVulScanPeriodicResponse.class);
+    }
+
+    /**
+     *This API is used to retrieve vulnerability scanning task detail
+     * @param req DescribeVulScanTaskDetailRequest
+     * @return DescribeVulScanTaskDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeVulScanTaskDetailResponse DescribeVulScanTaskDetail(DescribeVulScanTaskDetailRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeVulScanTaskDetail", DescribeVulScanTaskDetailResponse.class);
+    }
+
+    /**
+     *This API is used to search vulnerability scanning task history
+     * @param req DescribeVulScanTaskListRequest
+     * @return DescribeVulScanTaskListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeVulScanTaskListResponse DescribeVulScanTaskList(DescribeVulScanTaskListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeVulScanTaskList", DescribeVulScanTaskListResponse.class);
     }
 
     /**
@@ -1081,6 +1367,39 @@ public class CsipClient extends AbstractClient{
     public ModifyUebaRuleSwitchResponse ModifyUebaRuleSwitch(ModifyUebaRuleSwitchRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyUebaRuleSwitch", ModifyUebaRuleSwitchResponse.class);
+    }
+
+    /**
+     *This API is used to modify vulnerability scanning (period scanning).
+     * @param req ModifyVulScanPeriodicRequest
+     * @return ModifyVulScanPeriodicResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyVulScanPeriodicResponse ModifyVulScanPeriodic(ModifyVulScanPeriodicRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyVulScanPeriodic", ModifyVulScanPeriodicResponse.class);
+    }
+
+    /**
+     *This API is used to modify the vulnerability allowlist configuration.
+     * @param req ModifyVulWhitelistConfigRequest
+     * @return ModifyVulWhitelistConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyVulWhitelistConfigResponse ModifyVulWhitelistConfig(ModifyVulWhitelistConfigRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyVulWhitelistConfig", ModifyVulWhitelistConfigResponse.class);
+    }
+
+    /**
+     *This API is used to modify the vulnerability allowlist switch.
+     * @param req ModifyVulWhitelistSwitchRequest
+     * @return ModifyVulWhitelistSwitchResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyVulWhitelistSwitchResponse ModifyVulWhitelistSwitch(ModifyVulWhitelistSwitchRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyVulWhitelistSwitch", ModifyVulWhitelistSwitchResponse.class);
     }
 
     /**

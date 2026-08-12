@@ -21,67 +21,67 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Tag extends AbstractModel {
+public class VulComponentSummary extends AbstractModel {
 
     /**
-    * Tag key.
+    * <p>Component name.</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * Tag value.
+    * <p>Associated hosts.</p>
     */
-    @SerializedName("Value")
+    @SerializedName("RelateHostCount")
     @Expose
-    private String Value;
+    private Long RelateHostCount;
 
     /**
-     * Get Tag key. 
-     * @return Name Tag key.
+     * Get <p>Component name.</p> 
+     * @return Name <p>Component name.</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Tag key.
-     * @param Name Tag key.
+     * Set <p>Component name.</p>
+     * @param Name <p>Component name.</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get Tag value. 
-     * @return Value Tag value.
+     * Get <p>Associated hosts.</p> 
+     * @return RelateHostCount <p>Associated hosts.</p>
      */
-    public String getValue() {
-        return this.Value;
+    public Long getRelateHostCount() {
+        return this.RelateHostCount;
     }
 
     /**
-     * Set Tag value.
-     * @param Value Tag value.
+     * Set <p>Associated hosts.</p>
+     * @param RelateHostCount <p>Associated hosts.</p>
      */
-    public void setValue(String Value) {
-        this.Value = Value;
+    public void setRelateHostCount(Long RelateHostCount) {
+        this.RelateHostCount = RelateHostCount;
     }
 
-    public Tag() {
+    public VulComponentSummary() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public Tag(Tag source) {
+    public VulComponentSummary(VulComponentSummary source) {
         if (source.Name != null) {
             this.Name = new String(source.Name);
         }
-        if (source.Value != null) {
-            this.Value = new String(source.Value);
+        if (source.RelateHostCount != null) {
+            this.RelateHostCount = new Long(source.RelateHostCount);
         }
     }
 
@@ -91,7 +91,7 @@ public class Tag extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Name", this.Name);
-        this.setParamSimple(map, prefix + "Value", this.Value);
+        this.setParamSimple(map, prefix + "RelateHostCount", this.RelateHostCount);
 
     }
 }

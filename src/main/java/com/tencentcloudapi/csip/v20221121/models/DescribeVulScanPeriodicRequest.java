@@ -21,67 +21,44 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Tag extends AbstractModel {
+public class DescribeVulScanPeriodicRequest extends AbstractModel {
 
     /**
-    * Tag key.
+    * <p>Group account member id</p>
     */
-    @SerializedName("Name")
+    @SerializedName("MemberId")
     @Expose
-    private String Name;
+    private String [] MemberId;
 
     /**
-    * Tag value.
-    */
-    @SerializedName("Value")
-    @Expose
-    private String Value;
-
-    /**
-     * Get Tag key. 
-     * @return Name Tag key.
+     * Get <p>Group account member id</p> 
+     * @return MemberId <p>Group account member id</p>
      */
-    public String getName() {
-        return this.Name;
+    public String [] getMemberId() {
+        return this.MemberId;
     }
 
     /**
-     * Set Tag key.
-     * @param Name Tag key.
+     * Set <p>Group account member id</p>
+     * @param MemberId <p>Group account member id</p>
      */
-    public void setName(String Name) {
-        this.Name = Name;
+    public void setMemberId(String [] MemberId) {
+        this.MemberId = MemberId;
     }
 
-    /**
-     * Get Tag value. 
-     * @return Value Tag value.
-     */
-    public String getValue() {
-        return this.Value;
-    }
-
-    /**
-     * Set Tag value.
-     * @param Value Tag value.
-     */
-    public void setValue(String Value) {
-        this.Value = Value;
-    }
-
-    public Tag() {
+    public DescribeVulScanPeriodicRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public Tag(Tag source) {
-        if (source.Name != null) {
-            this.Name = new String(source.Name);
-        }
-        if (source.Value != null) {
-            this.Value = new String(source.Value);
+    public DescribeVulScanPeriodicRequest(DescribeVulScanPeriodicRequest source) {
+        if (source.MemberId != null) {
+            this.MemberId = new String[source.MemberId.length];
+            for (int i = 0; i < source.MemberId.length; i++) {
+                this.MemberId[i] = new String(source.MemberId[i]);
+            }
         }
     }
 
@@ -90,8 +67,7 @@ public class Tag extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Name", this.Name);
-        this.setParamSimple(map, prefix + "Value", this.Value);
+        this.setParamArraySimple(map, prefix + "MemberId.", this.MemberId);
 
     }
 }

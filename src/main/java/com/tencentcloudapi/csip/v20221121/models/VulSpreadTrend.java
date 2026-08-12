@@ -21,67 +21,67 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Tag extends AbstractModel {
+public class VulSpreadTrend extends AbstractModel {
 
     /**
-    * Tag key.
+    * <p>Date<br>Parameter format: YYYY-MM-DD</p>
     */
-    @SerializedName("Name")
+    @SerializedName("Date")
     @Expose
-    private String Name;
+    private String Date;
 
     /**
-    * Tag value.
+    * <p>Propagation trend numeric value of the date</p>
     */
-    @SerializedName("Value")
+    @SerializedName("Trend")
     @Expose
-    private String Value;
+    private Float Trend;
 
     /**
-     * Get Tag key. 
-     * @return Name Tag key.
+     * Get <p>Date<br>Parameter format: YYYY-MM-DD</p> 
+     * @return Date <p>Date<br>Parameter format: YYYY-MM-DD</p>
      */
-    public String getName() {
-        return this.Name;
+    public String getDate() {
+        return this.Date;
     }
 
     /**
-     * Set Tag key.
-     * @param Name Tag key.
+     * Set <p>Date<br>Parameter format: YYYY-MM-DD</p>
+     * @param Date <p>Date<br>Parameter format: YYYY-MM-DD</p>
      */
-    public void setName(String Name) {
-        this.Name = Name;
+    public void setDate(String Date) {
+        this.Date = Date;
     }
 
     /**
-     * Get Tag value. 
-     * @return Value Tag value.
+     * Get <p>Propagation trend numeric value of the date</p> 
+     * @return Trend <p>Propagation trend numeric value of the date</p>
      */
-    public String getValue() {
-        return this.Value;
+    public Float getTrend() {
+        return this.Trend;
     }
 
     /**
-     * Set Tag value.
-     * @param Value Tag value.
+     * Set <p>Propagation trend numeric value of the date</p>
+     * @param Trend <p>Propagation trend numeric value of the date</p>
      */
-    public void setValue(String Value) {
-        this.Value = Value;
+    public void setTrend(Float Trend) {
+        this.Trend = Trend;
     }
 
-    public Tag() {
+    public VulSpreadTrend() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public Tag(Tag source) {
-        if (source.Name != null) {
-            this.Name = new String(source.Name);
+    public VulSpreadTrend(VulSpreadTrend source) {
+        if (source.Date != null) {
+            this.Date = new String(source.Date);
         }
-        if (source.Value != null) {
-            this.Value = new String(source.Value);
+        if (source.Trend != null) {
+            this.Trend = new Float(source.Trend);
         }
     }
 
@@ -90,8 +90,8 @@ public class Tag extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Name", this.Name);
-        this.setParamSimple(map, prefix + "Value", this.Value);
+        this.setParamSimple(map, prefix + "Date", this.Date);
+        this.setParamSimple(map, prefix + "Trend", this.Trend);
 
     }
 }

@@ -21,68 +21,16 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Tag extends AbstractModel {
+public class DescribeVulLabelListRequest extends AbstractModel {
 
-    /**
-    * Tag key.
-    */
-    @SerializedName("Name")
-    @Expose
-    private String Name;
-
-    /**
-    * Tag value.
-    */
-    @SerializedName("Value")
-    @Expose
-    private String Value;
-
-    /**
-     * Get Tag key. 
-     * @return Name Tag key.
-     */
-    public String getName() {
-        return this.Name;
-    }
-
-    /**
-     * Set Tag key.
-     * @param Name Tag key.
-     */
-    public void setName(String Name) {
-        this.Name = Name;
-    }
-
-    /**
-     * Get Tag value. 
-     * @return Value Tag value.
-     */
-    public String getValue() {
-        return this.Value;
-    }
-
-    /**
-     * Set Tag value.
-     * @param Value Tag value.
-     */
-    public void setValue(String Value) {
-        this.Value = Value;
-    }
-
-    public Tag() {
+    public DescribeVulLabelListRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public Tag(Tag source) {
-        if (source.Name != null) {
-            this.Name = new String(source.Name);
-        }
-        if (source.Value != null) {
-            this.Value = new String(source.Value);
-        }
+    public DescribeVulLabelListRequest(DescribeVulLabelListRequest source) {
     }
 
 
@@ -90,8 +38,6 @@ public class Tag extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Name", this.Name);
-        this.setParamSimple(map, prefix + "Value", this.Value);
 
     }
 }
