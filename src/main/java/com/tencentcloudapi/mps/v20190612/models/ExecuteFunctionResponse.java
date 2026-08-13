@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ExecuteFunctionResponse extends AbstractModel {
 
     /**
-    * Packed string, which will vary according to the custom API.
+    * String after packaging, coordinate with the backend.
     */
     @SerializedName("Result")
     @Expose
@@ -38,16 +38,16 @@ public class ExecuteFunctionResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Packed string, which will vary according to the custom API. 
-     * @return Result Packed string, which will vary according to the custom API.
+     * Get String after packaging, coordinate with the backend. 
+     * @return Result String after packaging, coordinate with the backend.
      */
     public String getResult() {
         return this.Result;
     }
 
     /**
-     * Set Packed string, which will vary according to the custom API.
-     * @param Result Packed string, which will vary according to the custom API.
+     * Set String after packaging, coordinate with the backend.
+     * @param Result String after packaging, coordinate with the backend.
      */
     public void setResult(String Result) {
         this.Result = Result;

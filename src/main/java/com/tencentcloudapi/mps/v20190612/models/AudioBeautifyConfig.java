@@ -34,11 +34,10 @@ Default value: `ON`.
     private String Switch;
 
     /**
-    * The audio improvement options. You can specify multiple options. Valid values:
-<li>`declick`: Noise removal.</li>
-<li>`deesser`: De-essing.</li>
-Default: `declick`.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Type. Multiple selections allowed. Valid values:
+<li>declick: noise removal</li>
+<li>deesser: Dental Click Suppression</li>
+Default value: declick.
     */
     @SerializedName("Types")
     @Expose
@@ -73,32 +72,28 @@ Default value: `ON`.
     }
 
     /**
-     * Get The audio improvement options. You can specify multiple options. Valid values:
-<li>`declick`: Noise removal.</li>
-<li>`deesser`: De-essing.</li>
-Default: `declick`.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Types The audio improvement options. You can specify multiple options. Valid values:
-<li>`declick`: Noise removal.</li>
-<li>`deesser`: De-essing.</li>
-Default: `declick`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Type. Multiple selections allowed. Valid values:
+<li>declick: noise removal</li>
+<li>deesser: Dental Click Suppression</li>
+Default value: declick. 
+     * @return Types Type. Multiple selections allowed. Valid values:
+<li>declick: noise removal</li>
+<li>deesser: Dental Click Suppression</li>
+Default value: declick.
      */
     public String [] getTypes() {
         return this.Types;
     }
 
     /**
-     * Set The audio improvement options. You can specify multiple options. Valid values:
-<li>`declick`: Noise removal.</li>
-<li>`deesser`: De-essing.</li>
-Default: `declick`.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Types The audio improvement options. You can specify multiple options. Valid values:
-<li>`declick`: Noise removal.</li>
-<li>`deesser`: De-essing.</li>
-Default: `declick`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Type. Multiple selections allowed. Valid values:
+<li>declick: noise removal</li>
+<li>deesser: Dental Click Suppression</li>
+Default value: declick.
+     * @param Types Type. Multiple selections allowed. Valid values:
+<li>declick: noise removal</li>
+<li>deesser: Dental Click Suppression</li>
+Default value: declick.
      */
     public void setTypes(String [] Types) {
         this.Types = Types;

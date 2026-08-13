@@ -62,6 +62,17 @@ Smart subtitle (full speech, speech hotword, and speech translation).
     }
 
     /**
+     *This API is used to clone a voice type from a reference audio.
+     * @param req CloneVoiceRequest
+     * @return CloneVoiceResponse
+     * @throws TencentCloudSDKException
+     */
+    public CloneVoiceResponse CloneVoice(CloneVoiceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CloneVoice", CloneVoiceResponse.class);
+    }
+
+    /**
      *This API is used to create a custom content analysis template. Up to 50 templates can be created.
      * @param req CreateAIAnalysisTemplateRequest
      * @return CreateAIAnalysisTemplateResponse
@@ -103,6 +114,17 @@ Smart subtitle (full speech, speech hotword, and speech translation).
     public CreateAiDramaTaskResponse CreateAiDramaTask(CreateAiDramaTaskRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CreateAiDramaTask", CreateAiDramaTaskResponse.class);
+    }
+
+    /**
+     *Create an ai video fission task
+     * @param req CreateAiFissionTaskRequest
+     * @return CreateAiFissionTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateAiFissionTaskResponse CreateAiFissionTask(CreateAiFissionTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateAiFissionTask", CreateAiFissionTaskResponse.class);
     }
 
     /**
@@ -443,7 +465,7 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
     }
 
     /**
-     *This API is used to delete a custom animated image generating template.
+     *This API is used to delete custom animated image generating templates.
      * @param req DeleteAnimatedGraphicsTemplateRequest
      * @return DeleteAnimatedGraphicsTemplateResponse
      * @throws TencentCloudSDKException
@@ -476,7 +498,7 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
     }
 
     /**
-     *This API is used to delete a custom content moderation template.
+     *This API is used to delete a user-defined content moderation template.
      * @param req DeleteContentReviewTemplateRequest
      * @return DeleteContentReviewTemplateResponse
      * @throws TencentCloudSDKException
@@ -487,7 +509,7 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
     }
 
     /**
-     *This API is used to delete an image sprite generating template.
+     *This API is used to delete a sprite sheet template.
      * @param req DeleteImageSpriteTemplateRequest
      * @return DeleteImageSpriteTemplateResponse
      * @throws TencentCloudSDKException
@@ -553,7 +575,7 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
     }
 
     /**
-     *This API is used to delete a custom sampled screencapturing template.
+     *This API is used to delete a user-customized sampled screenshot template.
      * @param req DeleteSampleSnapshotTemplateRequest
      * @return DeleteSampleSnapshotTemplateResponse
      * @throws TencentCloudSDKException
@@ -564,7 +586,7 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
     }
 
     /**
-     *This API is used to delete a scheme.
+     *Delete orchestration
      * @param req DeleteScheduleRequest
      * @return DeleteScheduleResponse
      * @throws TencentCloudSDKException
@@ -597,7 +619,7 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
     }
 
     /**
-     *This API is used to delete a custom time point screencapturing template.
+     *This API is used to delete a user-customized specified time point screenshot template.
      * @param req DeleteSnapshotByTimeOffsetTemplateRequest
      * @return DeleteSnapshotByTimeOffsetTemplateResponse
      * @throws TencentCloudSDKException
@@ -641,7 +663,7 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
     }
 
     /**
-     *This API is used to delete a custom watermarking template.
+     *This API is used to delete a user-customized watermark template.
      * @param req DeleteWatermarkTemplateRequest
      * @return DeleteWatermarkTemplateResponse
      * @throws TencentCloudSDKException
@@ -663,7 +685,7 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
     }
 
     /**
-     *This API is used to delete a workflow. An enabled workflow must be disabled before it can be deleted.
+     *Delete workflow. For enabled workflows, they must be disabled before they can be deleted.
      * @param req DeleteWorkflowRequest
      * @return DeleteWorkflowResponse
      * @throws TencentCloudSDKException
@@ -726,6 +748,17 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
     public DescribeAigcImageTaskResponse DescribeAigcImageTask(DescribeAigcImageTaskRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeAigcImageTask", DescribeAigcImageTaskResponse.class);
+    }
+
+    /**
+     *Query AIGC task list details
+     * @param req DescribeAigcTaskListRequest
+     * @return DescribeAigcTaskListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAigcTaskListResponse DescribeAigcTaskList(DescribeAigcTaskListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAigcTaskList", DescribeAigcTaskListResponse.class);
     }
 
     /**
@@ -883,7 +916,7 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
     }
 
     /**
-     *This API is used to get the metadata of media, such as video image width/height, codec, length, and frame rate.
+     *This API is used to obtain media meta information, including video image width, height, encoding format, duration, and frame rate.
      * @param req DescribeMediaMetaDataRequest
      * @return DescribeMediaMetaDataResponse
      * @throws TencentCloudSDKException
@@ -1140,7 +1173,7 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
     }
 
     /**
-     *This API is used to disable a scheme.
+     *Disable automated trigger orchestration tasks.
      * @param req DisableScheduleRequest
      * @return DisableScheduleResponse
      * @throws TencentCloudSDKException
@@ -1196,7 +1229,7 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
     }
 
     /**
-     *This API is used to enable a scheme.
+     *Enable automated trigger orchestration tasks.
      * @param req EnableScheduleRequest
      * @return EnableScheduleResponse
      * @throws TencentCloudSDKException
@@ -1207,7 +1240,7 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
     }
 
     /**
-     *This API is used to enable a workflow.
+     *Enables a workflow.
      * @param req EnableWorkflowRequest
      * @return EnableWorkflowResponse
      * @throws TencentCloudSDKException
@@ -1218,7 +1251,7 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
     }
 
     /**
-     *This API is reserved for special circumstances. Do not use it unless you are directed to use it by technical support.
+     *This interface is only used for custom development in special scenarios. Unless a Media Processing Service customer service representative proactively informs you that you need to use this interface, do not call it in other cases.
      * @param req ExecuteFunctionRequest
      * @return ExecuteFunctionResponse
      * @throws TencentCloudSDKException
@@ -1341,7 +1374,7 @@ Note: templates with an ID below 10000 are preset and cannot be modified.
     }
 
     /**
-     *This API is used to modify a live recording template.
+     *This example shows you how to modify a live streaming recording template.
      * @param req ModifyLiveRecordTemplateRequest
      * @return ModifyLiveRecordTemplateResponse
      * @throws TencentCloudSDKException
@@ -1587,7 +1620,7 @@ Live stream processing event notification supports HTTP callback and also suppor
     }
 
     /**
-     *This API is used to reset an existing workflow that is disabled.
+     *This API is used to reset a workflow that already exists and is in disable status.
      * @param req ResetWorkflowRequest
      * @return ResetWorkflowResponse
      * @throws TencentCloudSDKException
@@ -1606,6 +1639,17 @@ Live stream processing event notification supports HTTP callback and also suppor
     public SyncDubbingResponse SyncDubbing(SyncDubbingRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "SyncDubbing", SyncDubbingResponse.class);
+    }
+
+    /**
+     *This API is used to generate speech synchronously based on input text and specified voice tone.
+     * @param req TextToSpeechRequest
+     * @return TextToSpeechResponse
+     * @throws TencentCloudSDKException
+     */
+    public TextToSpeechResponse TextToSpeech(TextToSpeechRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "TextToSpeech", TextToSpeechResponse.class);
     }
 
     /**

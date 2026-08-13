@@ -28,7 +28,6 @@ public class ImageAreaBoxInfo extends AbstractModel {
 <li>logo: icon.</li>
 <li>Text: text.</li>
 Default value: logo.
-Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("Type")
     @Expose
@@ -36,18 +35,16 @@ Note: This field may return null, indicating that no valid value can be obtained
 
     /**
     * Coordinates (pixel-level) of the box selection area in the image, in the format of [x1, y1, x2, y2]. It indicates the coordinates of the top left corner and the bottom right corner. Note: The maximum value of this field is 4096.
-For example, [101, 85, 111, 95].
-Note: This field may return null, indicating that no valid values can be obtained.
+For example, [101, 85, 111, —].
     */
     @SerializedName("AreaCoordSet")
     @Expose
     private Long [] AreaCoordSet;
 
     /**
-    * Coordinates of the box selection area in the image, in the format of [x1, y1, x2, y2]. It indicates the coordinates of the top left corner and the bottom right corner. This field takes effect when AreaCoordSet is not specified. When it indicates the pixel, the maximum value of this field is 4096.
+    * Coordinates of the box selection area in the image, in the format of [x1, y1, x2, y2]. It indicates the coordinates of the top left corner and the bottom right corner. This parameter is valid only when AreaCoordSet is not specified. When it indicates the pixel, the maximum value of this field is 4096.
 - [0.1, 0.1, 0.3, 0.3]: indicates the ratio (values are less than 1).
 - [50, 50, 350, 280]: indicates the pixel (values are greater than or equal to 1).
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("BoundingBox")
     @Expose
@@ -64,13 +61,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * Get Type of the box selection area in the image. Valid values:
 <li>logo: icon.</li>
 <li>Text: text.</li>
-Default value: logo.
-Note: This field may return null, indicating that no valid value can be obtained. 
+Default value: logo. 
      * @return Type Type of the box selection area in the image. Valid values:
 <li>logo: icon.</li>
 <li>Text: text.</li>
 Default value: logo.
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public String getType() {
         return this.Type;
@@ -81,12 +76,10 @@ Note: This field may return null, indicating that no valid value can be obtained
 <li>logo: icon.</li>
 <li>Text: text.</li>
 Default value: logo.
-Note: This field may return null, indicating that no valid value can be obtained.
      * @param Type Type of the box selection area in the image. Valid values:
 <li>logo: icon.</li>
 <li>Text: text.</li>
 Default value: logo.
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setType(String Type) {
         this.Type = Type;
@@ -94,11 +87,9 @@ Note: This field may return null, indicating that no valid value can be obtained
 
     /**
      * Get Coordinates (pixel-level) of the box selection area in the image, in the format of [x1, y1, x2, y2]. It indicates the coordinates of the top left corner and the bottom right corner. Note: The maximum value of this field is 4096.
-For example, [101, 85, 111, 95].
-Note: This field may return null, indicating that no valid values can be obtained. 
+For example, [101, 85, 111, —]. 
      * @return AreaCoordSet Coordinates (pixel-level) of the box selection area in the image, in the format of [x1, y1, x2, y2]. It indicates the coordinates of the top left corner and the bottom right corner. Note: The maximum value of this field is 4096.
-For example, [101, 85, 111, 95].
-Note: This field may return null, indicating that no valid values can be obtained.
+For example, [101, 85, 111, —].
      */
     public Long [] getAreaCoordSet() {
         return this.AreaCoordSet;
@@ -106,39 +97,33 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Coordinates (pixel-level) of the box selection area in the image, in the format of [x1, y1, x2, y2]. It indicates the coordinates of the top left corner and the bottom right corner. Note: The maximum value of this field is 4096.
-For example, [101, 85, 111, 95].
-Note: This field may return null, indicating that no valid values can be obtained.
+For example, [101, 85, 111, —].
      * @param AreaCoordSet Coordinates (pixel-level) of the box selection area in the image, in the format of [x1, y1, x2, y2]. It indicates the coordinates of the top left corner and the bottom right corner. Note: The maximum value of this field is 4096.
-For example, [101, 85, 111, 95].
-Note: This field may return null, indicating that no valid values can be obtained.
+For example, [101, 85, 111, —].
      */
     public void setAreaCoordSet(Long [] AreaCoordSet) {
         this.AreaCoordSet = AreaCoordSet;
     }
 
     /**
-     * Get Coordinates of the box selection area in the image, in the format of [x1, y1, x2, y2]. It indicates the coordinates of the top left corner and the bottom right corner. This field takes effect when AreaCoordSet is not specified. When it indicates the pixel, the maximum value of this field is 4096.
+     * Get Coordinates of the box selection area in the image, in the format of [x1, y1, x2, y2]. It indicates the coordinates of the top left corner and the bottom right corner. This parameter is valid only when AreaCoordSet is not specified. When it indicates the pixel, the maximum value of this field is 4096.
+- [0.1, 0.1, 0.3, 0.3]: indicates the ratio (values are less than 1).
+- [50, 50, 350, 280]: indicates the pixel (values are greater than or equal to 1). 
+     * @return BoundingBox Coordinates of the box selection area in the image, in the format of [x1, y1, x2, y2]. It indicates the coordinates of the top left corner and the bottom right corner. This parameter is valid only when AreaCoordSet is not specified. When it indicates the pixel, the maximum value of this field is 4096.
 - [0.1, 0.1, 0.3, 0.3]: indicates the ratio (values are less than 1).
 - [50, 50, 350, 280]: indicates the pixel (values are greater than or equal to 1).
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return BoundingBox Coordinates of the box selection area in the image, in the format of [x1, y1, x2, y2]. It indicates the coordinates of the top left corner and the bottom right corner. This field takes effect when AreaCoordSet is not specified. When it indicates the pixel, the maximum value of this field is 4096.
-- [0.1, 0.1, 0.3, 0.3]: indicates the ratio (values are less than 1).
-- [50, 50, 350, 280]: indicates the pixel (values are greater than or equal to 1).
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Float [] getBoundingBox() {
         return this.BoundingBox;
     }
 
     /**
-     * Set Coordinates of the box selection area in the image, in the format of [x1, y1, x2, y2]. It indicates the coordinates of the top left corner and the bottom right corner. This field takes effect when AreaCoordSet is not specified. When it indicates the pixel, the maximum value of this field is 4096.
+     * Set Coordinates of the box selection area in the image, in the format of [x1, y1, x2, y2]. It indicates the coordinates of the top left corner and the bottom right corner. This parameter is valid only when AreaCoordSet is not specified. When it indicates the pixel, the maximum value of this field is 4096.
 - [0.1, 0.1, 0.3, 0.3]: indicates the ratio (values are less than 1).
 - [50, 50, 350, 280]: indicates the pixel (values are greater than or equal to 1).
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param BoundingBox Coordinates of the box selection area in the image, in the format of [x1, y1, x2, y2]. It indicates the coordinates of the top left corner and the bottom right corner. This field takes effect when AreaCoordSet is not specified. When it indicates the pixel, the maximum value of this field is 4096.
+     * @param BoundingBox Coordinates of the box selection area in the image, in the format of [x1, y1, x2, y2]. It indicates the coordinates of the top left corner and the bottom right corner. This parameter is valid only when AreaCoordSet is not specified. When it indicates the pixel, the maximum value of this field is 4096.
 - [0.1, 0.1, 0.3, 0.3]: indicates the ratio (values are less than 1).
 - [50, 50, 350, 280]: indicates the pixel (values are greater than or equal to 1).
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setBoundingBox(Float [] BoundingBox) {
         this.BoundingBox = BoundingBox;

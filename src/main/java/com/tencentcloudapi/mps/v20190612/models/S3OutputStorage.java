@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class S3OutputStorage extends AbstractModel {
 
     /**
-    * The AWS S3 bucket.
+    * S3 bucket.
     */
     @SerializedName("S3Bucket")
     @Expose
     private String S3Bucket;
 
     /**
-    * The region of the AWS S3 bucket.
+    * Region of the S3 bucket.
     */
     @SerializedName("S3Region")
     @Expose
     private String S3Region;
 
     /**
-    * The key ID required to upload files to the AWS S3 object.
+    * Secret key id for uploading media content to the AWS private network.
     */
     @SerializedName("S3SecretId")
     @Expose
     private String S3SecretId;
 
     /**
-    * The key required to upload files to the AWS S3 object.
+    * Upload the secret key for media content on the AWS private network.
     */
     @SerializedName("S3SecretKey")
     @Expose
     private String S3SecretKey;
 
     /**
-     * Get The AWS S3 bucket. 
-     * @return S3Bucket The AWS S3 bucket.
+     * Get S3 bucket. 
+     * @return S3Bucket S3 bucket.
      */
     public String getS3Bucket() {
         return this.S3Bucket;
     }
 
     /**
-     * Set The AWS S3 bucket.
-     * @param S3Bucket The AWS S3 bucket.
+     * Set S3 bucket.
+     * @param S3Bucket S3 bucket.
      */
     public void setS3Bucket(String S3Bucket) {
         this.S3Bucket = S3Bucket;
     }
 
     /**
-     * Get The region of the AWS S3 bucket. 
-     * @return S3Region The region of the AWS S3 bucket.
+     * Get Region of the S3 bucket. 
+     * @return S3Region Region of the S3 bucket.
      */
     public String getS3Region() {
         return this.S3Region;
     }
 
     /**
-     * Set The region of the AWS S3 bucket.
-     * @param S3Region The region of the AWS S3 bucket.
+     * Set Region of the S3 bucket.
+     * @param S3Region Region of the S3 bucket.
      */
     public void setS3Region(String S3Region) {
         this.S3Region = S3Region;
     }
 
     /**
-     * Get The key ID required to upload files to the AWS S3 object. 
-     * @return S3SecretId The key ID required to upload files to the AWS S3 object.
+     * Get Secret key id for uploading media content to the AWS private network. 
+     * @return S3SecretId Secret key id for uploading media content to the AWS private network.
      */
     public String getS3SecretId() {
         return this.S3SecretId;
     }
 
     /**
-     * Set The key ID required to upload files to the AWS S3 object.
-     * @param S3SecretId The key ID required to upload files to the AWS S3 object.
+     * Set Secret key id for uploading media content to the AWS private network.
+     * @param S3SecretId Secret key id for uploading media content to the AWS private network.
      */
     public void setS3SecretId(String S3SecretId) {
         this.S3SecretId = S3SecretId;
     }
 
     /**
-     * Get The key required to upload files to the AWS S3 object. 
-     * @return S3SecretKey The key required to upload files to the AWS S3 object.
+     * Get Upload the secret key for media content on the AWS private network. 
+     * @return S3SecretKey Upload the secret key for media content on the AWS private network.
      */
     public String getS3SecretKey() {
         return this.S3SecretKey;
     }
 
     /**
-     * Set The key required to upload files to the AWS S3 object.
-     * @param S3SecretKey The key required to upload files to the AWS S3 object.
+     * Set Upload the secret key for media content on the AWS private network.
+     * @param S3SecretKey Upload the secret key for media content on the AWS private network.
      */
     public void setS3SecretKey(String S3SecretKey) {
         this.S3SecretKey = S3SecretKey;

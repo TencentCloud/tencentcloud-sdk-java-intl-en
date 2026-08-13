@@ -32,7 +32,6 @@ public class ImageSpriteTaskInput extends AbstractModel {
 
     /**
     * <p>Target storage for the file after the sprite screenshot is taken. If this is not specified, it inherits the value from the upper-level OutputStorage.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("OutputStorage")
     @Expose
@@ -54,7 +53,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * <p>Rule of the <code>{number}</code> variable in the output path after the sprite screenshot is taken.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ObjectNumberFormat")
     @Expose
@@ -84,10 +82,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get <p>Target storage for the file after the sprite screenshot is taken. If this is not specified, it inherits the value from the upper-level OutputStorage.</p>
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get <p>Target storage for the file after the sprite screenshot is taken. If this is not specified, it inherits the value from the upper-level OutputStorage.</p> 
      * @return OutputStorage <p>Target storage for the file after the sprite screenshot is taken. If this is not specified, it inherits the value from the upper-level OutputStorage.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public TaskOutputStorage getOutputStorage() {
         return this.OutputStorage;
@@ -95,9 +91,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set <p>Target storage for the file after the sprite screenshot is taken. If this is not specified, it inherits the value from the upper-level OutputStorage.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param OutputStorage <p>Target storage for the file after the sprite screenshot is taken. If this is not specified, it inherits the value from the upper-level OutputStorage.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setOutputStorage(TaskOutputStorage OutputStorage) {
         this.OutputStorage = OutputStorage;
@@ -136,10 +130,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get <p>Rule of the <code>{number}</code> variable in the output path after the sprite screenshot is taken.</p>
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get <p>Rule of the <code>{number}</code> variable in the output path after the sprite screenshot is taken.</p> 
      * @return ObjectNumberFormat <p>Rule of the <code>{number}</code> variable in the output path after the sprite screenshot is taken.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public NumberFormat getObjectNumberFormat() {
         return this.ObjectNumberFormat;
@@ -147,9 +139,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set <p>Rule of the <code>{number}</code> variable in the output path after the sprite screenshot is taken.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param ObjectNumberFormat <p>Rule of the <code>{number}</code> variable in the output path after the sprite screenshot is taken.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setObjectNumberFormat(NumberFormat ObjectNumberFormat) {
         this.ObjectNumberFormat = ObjectNumberFormat;

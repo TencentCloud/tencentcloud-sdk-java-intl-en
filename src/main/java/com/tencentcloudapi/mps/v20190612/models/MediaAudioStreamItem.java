@@ -48,12 +48,25 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String Codec;
 
     /**
-    * Number of sound channels, e.g., 2
-Note: this field may return `null`, indicating that no valid value was found.
+    * Number of audio channels, for example 2.
     */
     @SerializedName("Channel")
     @Expose
     private Long Channel;
+
+    /**
+    * Audio Codecs.
+    */
+    @SerializedName("Codecs")
+    @Expose
+    private String Codecs;
+
+    /**
+    * Audio loudness.
+    */
+    @SerializedName("Loudness")
+    @Expose
+    private Float Loudness;
 
     /**
      * Get Bitrate of an audio stream in bps.
@@ -116,23 +129,51 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Number of sound channels, e.g., 2
-Note: this field may return `null`, indicating that no valid value was found. 
-     * @return Channel Number of sound channels, e.g., 2
-Note: this field may return `null`, indicating that no valid value was found.
+     * Get Number of audio channels, for example 2. 
+     * @return Channel Number of audio channels, for example 2.
      */
     public Long getChannel() {
         return this.Channel;
     }
 
     /**
-     * Set Number of sound channels, e.g., 2
-Note: this field may return `null`, indicating that no valid value was found.
-     * @param Channel Number of sound channels, e.g., 2
-Note: this field may return `null`, indicating that no valid value was found.
+     * Set Number of audio channels, for example 2.
+     * @param Channel Number of audio channels, for example 2.
      */
     public void setChannel(Long Channel) {
         this.Channel = Channel;
+    }
+
+    /**
+     * Get Audio Codecs. 
+     * @return Codecs Audio Codecs.
+     */
+    public String getCodecs() {
+        return this.Codecs;
+    }
+
+    /**
+     * Set Audio Codecs.
+     * @param Codecs Audio Codecs.
+     */
+    public void setCodecs(String Codecs) {
+        this.Codecs = Codecs;
+    }
+
+    /**
+     * Get Audio loudness. 
+     * @return Loudness Audio loudness.
+     */
+    public Float getLoudness() {
+        return this.Loudness;
+    }
+
+    /**
+     * Set Audio loudness.
+     * @param Loudness Audio loudness.
+     */
+    public void setLoudness(Float Loudness) {
+        this.Loudness = Loudness;
     }
 
     public MediaAudioStreamItem() {
@@ -155,6 +196,12 @@ Note: this field may return `null`, indicating that no valid value was found.
         if (source.Channel != null) {
             this.Channel = new Long(source.Channel);
         }
+        if (source.Codecs != null) {
+            this.Codecs = new String(source.Codecs);
+        }
+        if (source.Loudness != null) {
+            this.Loudness = new Float(source.Loudness);
+        }
     }
 
 
@@ -166,6 +213,8 @@ Note: this field may return `null`, indicating that no valid value was found.
         this.setParamSimple(map, prefix + "SamplingRate", this.SamplingRate);
         this.setParamSimple(map, prefix + "Codec", this.Codec);
         this.setParamSimple(map, prefix + "Channel", this.Channel);
+        this.setParamSimple(map, prefix + "Codecs", this.Codecs);
+        this.setParamSimple(map, prefix + "Loudness", this.Loudness);
 
     }
 }

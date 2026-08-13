@@ -74,7 +74,6 @@ public class TaskNotifyConfig extends AbstractModel {
 
     /**
     * <p>AWS SQS callback. This is required if NotifyType is AWS-SQS.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("AwsSQS")
     @Expose
@@ -200,10 +199,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get <p>AWS SQS callback. This is required if NotifyType is AWS-SQS.</p>
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get <p>AWS SQS callback. This is required if NotifyType is AWS-SQS.</p> 
      * @return AwsSQS <p>AWS SQS callback. This is required if NotifyType is AWS-SQS.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public AwsSQS getAwsSQS() {
         return this.AwsSQS;
@@ -211,9 +208,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set <p>AWS SQS callback. This is required if NotifyType is AWS-SQS.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param AwsSQS <p>AWS SQS callback. This is required if NotifyType is AWS-SQS.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setAwsSQS(AwsSQS AwsSQS) {
         this.AwsSQS = AwsSQS;

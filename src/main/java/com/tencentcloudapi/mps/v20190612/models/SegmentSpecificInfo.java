@@ -25,10 +25,9 @@ public class SegmentSpecificInfo extends AbstractModel {
 
     /**
     * Switch for segment duration at startup. Optional values:
-on: Turn on the switch
+on: Turn on
 off: Turn off the switch
 Default value: off
-Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("Switch")
     @Expose
@@ -36,7 +35,6 @@ Note: This field may return null, indicating that no valid value can be obtained
 
     /**
     * Segment duration at startup. Unit: second
-Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("FragmentTime")
     @Expose
@@ -44,7 +42,6 @@ Note: This field may return null, indicating that no valid value can be obtained
 
     /**
     * Number of effective segments, indicating the first FragmentEndNum segments with FragmentTime. Value range: >=1
-Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("FragmentEndNum")
     @Expose
@@ -52,15 +49,13 @@ Note: This field may return null, indicating that no valid value can be obtained
 
     /**
      * Get Switch for segment duration at startup. Optional values:
-on: Turn on the switch
+on: Turn on
 off: Turn off the switch
-Default value: off
-Note: This field may return null, indicating that no valid value can be obtained. 
+Default value: off 
      * @return Switch Switch for segment duration at startup. Optional values:
-on: Turn on the switch
+on: Turn on
 off: Turn off the switch
 Default value: off
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public String getSwitch() {
         return this.Switch;
@@ -68,25 +63,21 @@ Note: This field may return null, indicating that no valid value can be obtained
 
     /**
      * Set Switch for segment duration at startup. Optional values:
-on: Turn on the switch
+on: Turn on
 off: Turn off the switch
 Default value: off
-Note: This field may return null, indicating that no valid value can be obtained.
      * @param Switch Switch for segment duration at startup. Optional values:
-on: Turn on the switch
+on: Turn on
 off: Turn off the switch
 Default value: off
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
     }
 
     /**
-     * Get Segment duration at startup. Unit: second
-Note: This field may return null, indicating that no valid value can be obtained. 
+     * Get Segment duration at startup. Unit: second 
      * @return FragmentTime Segment duration at startup. Unit: second
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public Long getFragmentTime() {
         return this.FragmentTime;
@@ -94,19 +85,15 @@ Note: This field may return null, indicating that no valid value can be obtained
 
     /**
      * Set Segment duration at startup. Unit: second
-Note: This field may return null, indicating that no valid value can be obtained.
      * @param FragmentTime Segment duration at startup. Unit: second
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setFragmentTime(Long FragmentTime) {
         this.FragmentTime = FragmentTime;
     }
 
     /**
-     * Get Number of effective segments, indicating the first FragmentEndNum segments with FragmentTime. Value range: >=1
-Note: This field may return null, indicating that no valid value can be obtained. 
+     * Get Number of effective segments, indicating the first FragmentEndNum segments with FragmentTime. Value range: >=1 
      * @return FragmentEndNum Number of effective segments, indicating the first FragmentEndNum segments with FragmentTime. Value range: >=1
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public Long getFragmentEndNum() {
         return this.FragmentEndNum;
@@ -114,9 +101,7 @@ Note: This field may return null, indicating that no valid value can be obtained
 
     /**
      * Set Number of effective segments, indicating the first FragmentEndNum segments with FragmentTime. Value range: >=1
-Note: This field may return null, indicating that no valid value can be obtained.
      * @param FragmentEndNum Number of effective segments, indicating the first FragmentEndNum segments with FragmentTime. Value range: >=1
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setFragmentEndNum(Long FragmentEndNum) {
         this.FragmentEndNum = FragmentEndNum;

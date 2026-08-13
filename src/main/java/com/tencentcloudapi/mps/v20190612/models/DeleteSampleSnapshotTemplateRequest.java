@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DeleteSampleSnapshotTemplateRequest extends AbstractModel {
 
     /**
-    * Unique ID of a sampled screencapturing template.
+    * Unique identifier of the sampled screenshot template.
     */
     @SerializedName("Definition")
     @Expose
     private Long Definition;
 
     /**
-     * Get Unique ID of a sampled screencapturing template. 
-     * @return Definition Unique ID of a sampled screencapturing template.
+     * Get Unique identifier of the sampled screenshot template. 
+     * @return Definition Unique identifier of the sampled screenshot template.
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set Unique ID of a sampled screencapturing template.
-     * @param Definition Unique ID of a sampled screencapturing template.
+     * Set Unique identifier of the sampled screenshot template.
+     * @param Definition Unique identifier of the sampled screenshot template.
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;

@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DescribeMediaMetaDataRequest extends AbstractModel {
 
     /**
-    * Input information of file for metadata getting.
+    * Input information of the file that needs to get meta information.
     */
     @SerializedName("InputInfo")
     @Expose
     private MediaInputInfo InputInfo;
 
     /**
-     * Get Input information of file for metadata getting. 
-     * @return InputInfo Input information of file for metadata getting.
+     * Get Input information of the file that needs to get meta information. 
+     * @return InputInfo Input information of the file that needs to get meta information.
      */
     public MediaInputInfo getInputInfo() {
         return this.InputInfo;
     }
 
     /**
-     * Set Input information of file for metadata getting.
-     * @param InputInfo Input information of file for metadata getting.
+     * Set Input information of the file that needs to get meta information.
+     * @param InputInfo Input information of the file that needs to get meta information.
      */
     public void setInputInfo(MediaInputInfo InputInfo) {
         this.InputInfo = InputInfo;

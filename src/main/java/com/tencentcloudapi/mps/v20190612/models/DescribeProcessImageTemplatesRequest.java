@@ -31,7 +31,7 @@ public class DescribeProcessImageTemplatesRequest extends AbstractModel {
     private Long [] Definitions;
 
     /**
-    * Pagination offset. The default value is 0.
+    * Pagination offset. Default value: 0.
     */
     @SerializedName("Offset")
     @Expose
@@ -59,8 +59,8 @@ public class DescribeProcessImageTemplatesRequest extends AbstractModel {
     private Long OrderType;
 
     /**
-    * Sorting field. Valid values:
-Definition: unique identifier of the template.
+    * Sorting field. Valid values:  
+Definition: Template Unique Identifier 
 Default value: creation time.
     */
     @SerializedName("OrderBy")
@@ -91,16 +91,16 @@ Default value: creation time.
     }
 
     /**
-     * Get Pagination offset. The default value is 0. 
-     * @return Offset Pagination offset. The default value is 0.
+     * Get Pagination offset. Default value: 0. 
+     * @return Offset Pagination offset. Default value: 0.
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Pagination offset. The default value is 0.
-     * @param Offset Pagination offset. The default value is 0.
+     * Set Pagination offset. Default value: 0.
+     * @param Offset Pagination offset. Default value: 0.
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
@@ -155,11 +155,11 @@ Default value: creation time.
     }
 
     /**
-     * Get Sorting field. Valid values:
-Definition: unique identifier of the template.
+     * Get Sorting field. Valid values:  
+Definition: Template Unique Identifier 
 Default value: creation time. 
-     * @return OrderBy Sorting field. Valid values:
-Definition: unique identifier of the template.
+     * @return OrderBy Sorting field. Valid values:  
+Definition: Template Unique Identifier 
 Default value: creation time.
      */
     public String getOrderBy() {
@@ -167,11 +167,11 @@ Default value: creation time.
     }
 
     /**
-     * Set Sorting field. Valid values:
-Definition: unique identifier of the template.
+     * Set Sorting field. Valid values:  
+Definition: Template Unique Identifier 
 Default value: creation time.
-     * @param OrderBy Sorting field. Valid values:
-Definition: unique identifier of the template.
+     * @param OrderBy Sorting field. Valid values:  
+Definition: Template Unique Identifier 
 Default value: creation time.
      */
     public void setOrderBy(String OrderBy) {

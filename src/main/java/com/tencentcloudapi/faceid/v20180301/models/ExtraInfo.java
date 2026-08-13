@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class ExtraInfo extends AbstractModel {
 
     /**
-    * Full details of the hit template; return solely the template with the maximum similarity.
+    * Detailed information of the hit template, return only the template information with the highest similarity.
     */
     @SerializedName("RetrievalLivenessExtraInfo")
     @Expose
     private RetrievalLivenessExtraInfo [] RetrievalLivenessExtraInfo;
 
     /**
-     * Get Full details of the hit template; return solely the template with the maximum similarity. 
-     * @return RetrievalLivenessExtraInfo Full details of the hit template; return solely the template with the maximum similarity.
+     * Get Detailed information of the hit template, return only the template information with the highest similarity. 
+     * @return RetrievalLivenessExtraInfo Detailed information of the hit template, return only the template information with the highest similarity.
      */
     public RetrievalLivenessExtraInfo [] getRetrievalLivenessExtraInfo() {
         return this.RetrievalLivenessExtraInfo;
     }
 
     /**
-     * Set Full details of the hit template; return solely the template with the maximum similarity.
-     * @param RetrievalLivenessExtraInfo Full details of the hit template; return solely the template with the maximum similarity.
+     * Set Detailed information of the hit template, return only the template information with the highest similarity.
+     * @param RetrievalLivenessExtraInfo Detailed information of the hit template, return only the template information with the highest similarity.
      */
     public void setRetrievalLivenessExtraInfo(RetrievalLivenessExtraInfo [] RetrievalLivenessExtraInfo) {
         this.RetrievalLivenessExtraInfo = RetrievalLivenessExtraInfo;

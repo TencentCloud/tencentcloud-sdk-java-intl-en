@@ -52,25 +52,22 @@ public class AwsS3FileUploadTrigger extends AbstractModel {
     private String [] Formats;
 
     /**
-    * The key ID of the AWS S3 bucket.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Secret key ID of the bound AWS S3 bucket.
     */
     @SerializedName("S3SecretId")
     @Expose
     private String S3SecretId;
 
     /**
-    * The key of the AWS S3 bucket.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Secret Key of the bound AWS S3 bucket.
     */
     @SerializedName("S3SecretKey")
     @Expose
     private String S3SecretKey;
 
     /**
-    * The SQS queue of the AWS S3 bucket.
-Note: The queue must be in the same region as the bucket.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * SQS event queue bound to the AWS S3 bucket.
+Note: The queue and bucket need to be in the same region.
     */
     @SerializedName("AwsSQS")
     @Expose
@@ -141,64 +138,52 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get The key ID of the AWS S3 bucket.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return S3SecretId The key ID of the AWS S3 bucket.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Secret key ID of the bound AWS S3 bucket. 
+     * @return S3SecretId Secret key ID of the bound AWS S3 bucket.
      */
     public String getS3SecretId() {
         return this.S3SecretId;
     }
 
     /**
-     * Set The key ID of the AWS S3 bucket.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param S3SecretId The key ID of the AWS S3 bucket.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Secret key ID of the bound AWS S3 bucket.
+     * @param S3SecretId Secret key ID of the bound AWS S3 bucket.
      */
     public void setS3SecretId(String S3SecretId) {
         this.S3SecretId = S3SecretId;
     }
 
     /**
-     * Get The key of the AWS S3 bucket.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return S3SecretKey The key of the AWS S3 bucket.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Secret Key of the bound AWS S3 bucket. 
+     * @return S3SecretKey Secret Key of the bound AWS S3 bucket.
      */
     public String getS3SecretKey() {
         return this.S3SecretKey;
     }
 
     /**
-     * Set The key of the AWS S3 bucket.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param S3SecretKey The key of the AWS S3 bucket.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Secret Key of the bound AWS S3 bucket.
+     * @param S3SecretKey Secret Key of the bound AWS S3 bucket.
      */
     public void setS3SecretKey(String S3SecretKey) {
         this.S3SecretKey = S3SecretKey;
     }
 
     /**
-     * Get The SQS queue of the AWS S3 bucket.
-Note: The queue must be in the same region as the bucket.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return AwsSQS The SQS queue of the AWS S3 bucket.
-Note: The queue must be in the same region as the bucket.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get SQS event queue bound to the AWS S3 bucket.
+Note: The queue and bucket need to be in the same region. 
+     * @return AwsSQS SQS event queue bound to the AWS S3 bucket.
+Note: The queue and bucket need to be in the same region.
      */
     public AwsSQS getAwsSQS() {
         return this.AwsSQS;
     }
 
     /**
-     * Set The SQS queue of the AWS S3 bucket.
-Note: The queue must be in the same region as the bucket.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param AwsSQS The SQS queue of the AWS S3 bucket.
-Note: The queue must be in the same region as the bucket.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set SQS event queue bound to the AWS S3 bucket.
+Note: The queue and bucket need to be in the same region.
+     * @param AwsSQS SQS event queue bound to the AWS S3 bucket.
+Note: The queue and bucket need to be in the same region.
      */
     public void setAwsSQS(AwsSQS AwsSQS) {
         this.AwsSQS = AwsSQS;

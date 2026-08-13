@@ -53,7 +53,6 @@ public class AudioTemplateInfo extends AbstractModel {
 
     /**
     * <p>Audio track merging information.<br>Note: This field only takes effect for adaptive transcoding.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("TrackChannelInfo")
     @Expose
@@ -145,10 +144,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get <p>Audio track merging information.<br>Note: This field only takes effect for adaptive transcoding.</p>
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get <p>Audio track merging information.<br>Note: This field only takes effect for adaptive transcoding.</p> 
      * @return TrackChannelInfo <p>Audio track merging information.<br>Note: This field only takes effect for adaptive transcoding.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public AudioTrackChannelInfo getTrackChannelInfo() {
         return this.TrackChannelInfo;
@@ -156,9 +153,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set <p>Audio track merging information.<br>Note: This field only takes effect for adaptive transcoding.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param TrackChannelInfo <p>Audio track merging information.<br>Note: This field only takes effect for adaptive transcoding.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setTrackChannelInfo(AudioTrackChannelInfo TrackChannelInfo) {
         this.TrackChannelInfo = TrackChannelInfo;

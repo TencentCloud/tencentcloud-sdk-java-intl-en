@@ -31,8 +31,7 @@ public class AiRestorationConfig extends AbstractModel {
     private String Switch;
 
     /**
-    * <p>Strength type</p><p>Enumeration values: </p><ul><li>weak: Weak</li><li>normal: Medium</li><li>strong: Strong</li></ul><p>Default value: normal</p>
-Attention: This field may return null, indicating that no valid values can be obtained.
+    * <p>Strength type</p><p>Enumeration values:</p><ul><li>weak: Weak</li><li>normal: Medium</li><li>strong: Strong</li></ul><p>Default value: normal</p>
     */
     @SerializedName("Type")
     @Expose
@@ -55,20 +54,16 @@ Attention: This field may return null, indicating that no valid values can be ob
     }
 
     /**
-     * Get <p>Strength type</p><p>Enumeration values: </p><ul><li>weak: Weak</li><li>normal: Medium</li><li>strong: Strong</li></ul><p>Default value: normal</p>
-Attention: This field may return null, indicating that no valid values can be obtained. 
-     * @return Type <p>Strength type</p><p>Enumeration values: </p><ul><li>weak: Weak</li><li>normal: Medium</li><li>strong: Strong</li></ul><p>Default value: normal</p>
-Attention: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Strength type</p><p>Enumeration values:</p><ul><li>weak: Weak</li><li>normal: Medium</li><li>strong: Strong</li></ul><p>Default value: normal</p> 
+     * @return Type <p>Strength type</p><p>Enumeration values:</p><ul><li>weak: Weak</li><li>normal: Medium</li><li>strong: Strong</li></ul><p>Default value: normal</p>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set <p>Strength type</p><p>Enumeration values: </p><ul><li>weak: Weak</li><li>normal: Medium</li><li>strong: Strong</li></ul><p>Default value: normal</p>
-Attention: This field may return null, indicating that no valid values can be obtained.
-     * @param Type <p>Strength type</p><p>Enumeration values: </p><ul><li>weak: Weak</li><li>normal: Medium</li><li>strong: Strong</li></ul><p>Default value: normal</p>
-Attention: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Strength type</p><p>Enumeration values:</p><ul><li>weak: Weak</li><li>normal: Medium</li><li>strong: Strong</li></ul><p>Default value: normal</p>
+     * @param Type <p>Strength type</p><p>Enumeration values:</p><ul><li>weak: Weak</li><li>normal: Medium</li><li>strong: Strong</li></ul><p>Default value: normal</p>
      */
     public void setType(String Type) {
         this.Type = Type;

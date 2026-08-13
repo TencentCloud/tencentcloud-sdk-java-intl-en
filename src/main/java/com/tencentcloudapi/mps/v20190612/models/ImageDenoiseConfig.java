@@ -34,11 +34,10 @@ Default value: ON.
     private String Switch;
 
     /**
-    * Type, with valid values including:
+    * Type, available values:
 <li>weak</li>
 <li>strong</li>
 Default value: weak.
-Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("Type")
     @Expose
@@ -73,32 +72,28 @@ Default value: ON.
     }
 
     /**
-     * Get Type, with valid values including:
+     * Get Type, available values:
+<li>weak</li>
+<li>strong</li>
+Default value: weak. 
+     * @return Type Type, available values:
 <li>weak</li>
 <li>strong</li>
 Default value: weak.
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return Type Type, with valid values including:
-<li>weak</li>
-<li>strong</li>
-Default value: weak.
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set Type, with valid values including:
+     * Set Type, available values:
 <li>weak</li>
 <li>strong</li>
 Default value: weak.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param Type Type, with valid values including:
+     * @param Type Type, available values:
 <li>weak</li>
 <li>strong</li>
 Default value: weak.
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setType(String Type) {
         this.Type = Type;

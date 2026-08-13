@@ -24,71 +24,61 @@ import java.util.HashMap;
 public class TEHDConfigForUpdate extends AbstractModel {
 
     /**
-    * The TSC type. Valid values:
-<li>`TEHD-100`: TSC-100 (video TSC). </li>
-<li>`TEHD-200`: TSC-200 (audio TSC). </li>
-If this parameter is left blank, no modification will be made.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Top Speed Codec type. Available values:
+<li>TEHD-100: Top Speed Codec-100 (video top speed codec).</li>
+<li>TEHD-200: Top Speed Codec-200 (TSC audio).</li>
+Leave it blank to keep it unchanged.
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * The maximum video bitrate. If this parameter is not specified, no modifications will be made.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Upper limit of video bitrate. Leave blank to keep unchanged.
     */
     @SerializedName("MaxVideoBitrate")
     @Expose
     private Long MaxVideoBitrate;
 
     /**
-     * Get The TSC type. Valid values:
-<li>`TEHD-100`: TSC-100 (video TSC). </li>
-<li>`TEHD-200`: TSC-200 (audio TSC). </li>
-If this parameter is left blank, no modification will be made.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Type The TSC type. Valid values:
-<li>`TEHD-100`: TSC-100 (video TSC). </li>
-<li>`TEHD-200`: TSC-200 (audio TSC). </li>
-If this parameter is left blank, no modification will be made.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Top Speed Codec type. Available values:
+<li>TEHD-100: Top Speed Codec-100 (video top speed codec).</li>
+<li>TEHD-200: Top Speed Codec-200 (TSC audio).</li>
+Leave it blank to keep it unchanged. 
+     * @return Type Top Speed Codec type. Available values:
+<li>TEHD-100: Top Speed Codec-100 (video top speed codec).</li>
+<li>TEHD-200: Top Speed Codec-200 (TSC audio).</li>
+Leave it blank to keep it unchanged.
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set The TSC type. Valid values:
-<li>`TEHD-100`: TSC-100 (video TSC). </li>
-<li>`TEHD-200`: TSC-200 (audio TSC). </li>
-If this parameter is left blank, no modification will be made.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Type The TSC type. Valid values:
-<li>`TEHD-100`: TSC-100 (video TSC). </li>
-<li>`TEHD-200`: TSC-200 (audio TSC). </li>
-If this parameter is left blank, no modification will be made.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Top Speed Codec type. Available values:
+<li>TEHD-100: Top Speed Codec-100 (video top speed codec).</li>
+<li>TEHD-200: Top Speed Codec-200 (TSC audio).</li>
+Leave it blank to keep it unchanged.
+     * @param Type Top Speed Codec type. Available values:
+<li>TEHD-100: Top Speed Codec-100 (video top speed codec).</li>
+<li>TEHD-200: Top Speed Codec-200 (TSC audio).</li>
+Leave it blank to keep it unchanged.
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get The maximum video bitrate. If this parameter is not specified, no modifications will be made.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return MaxVideoBitrate The maximum video bitrate. If this parameter is not specified, no modifications will be made.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Upper limit of video bitrate. Leave blank to keep unchanged. 
+     * @return MaxVideoBitrate Upper limit of video bitrate. Leave blank to keep unchanged.
      */
     public Long getMaxVideoBitrate() {
         return this.MaxVideoBitrate;
     }
 
     /**
-     * Set The maximum video bitrate. If this parameter is not specified, no modifications will be made.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param MaxVideoBitrate The maximum video bitrate. If this parameter is not specified, no modifications will be made.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Upper limit of video bitrate. Leave blank to keep unchanged.
+     * @param MaxVideoBitrate Upper limit of video bitrate. Leave blank to keep unchanged.
      */
     public void setMaxVideoBitrate(Long MaxVideoBitrate) {
         this.MaxVideoBitrate = MaxVideoBitrate;

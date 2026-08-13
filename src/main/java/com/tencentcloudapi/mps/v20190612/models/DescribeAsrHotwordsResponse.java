@@ -31,22 +31,22 @@ public class DescribeAsrHotwordsResponse extends AbstractModel {
     private String HotwordsId;
 
     /**
-    * Current hotword lexicon id status. a value of 0 indicates that no template is bound to this hotword lexicon at the query moment and it can be deleted.
+    * Current hot lexicon id status. A value of 0 indicates that no template is bound to this hot lexicon at the query moment, and it can be deleted.
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * Name of the hot lexicon.
+    * Hotword lexicon name
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * Specifies the value is 0 for a temporary hotword lexicon and returns the string provided during creation.
-Specifies the value is 1 for a file-based hotword lexicon, and returns the content of the file uploaded during creation.
+    * The value is 0 for a temporary hotword lexicon, and the string provided during creation is returned.
+The value is 1 for a file-based hotword lexicon, and the content of the file uploaded during creation is returned.
 
 
     */
@@ -71,21 +71,21 @@ Specifies the value is 1 for a file-based hotword lexicon, and returns the conte
     /**
     * Hotword text, which depends on the value of Type.
 If the value of Type is 0, the hotword string is returned.
-If the value of Type is 1, the base64-encoded content of the hotword file is returned.
+If the value of Type is 1, the base64-encoded content of the hotword lexicon file is returned.
     */
     @SerializedName("Content")
     @Expose
     private String Content;
 
     /**
-    * Number of words contained in the hotword lexicon.
+    * Number of words contained in the current hotword lexicon.
     */
     @SerializedName("WordCount")
     @Expose
     private Long WordCount;
 
     /**
-    * Paging offset. Default value: 0.
+    * Pagination offset. Default value: 0.
     */
     @SerializedName("Offset")
     @Expose
@@ -99,14 +99,14 @@ If the value of Type is 1, the base64-encoded content of the hotword file is ret
     private Long Limit;
 
     /**
-    * Hot word lexicon createtime in ISOUTC format "2006-01-02T15:04:05Z".
+    * Creation time of the hot lexicon in ISOUTC format "2006-01-02T15:04:05Z"
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * Hot lexicon last modified in ISOUTC format "2006-01-02T15:04:05Z".
+    * Hot lexicon last modified ISOUTC format "2006-01-02T15:04:05Z"
     */
     @SerializedName("UpdateTime")
     @Expose
@@ -136,44 +136,44 @@ If the value of Type is 1, the base64-encoded content of the hotword file is ret
     }
 
     /**
-     * Get Current hotword lexicon id status. a value of 0 indicates that no template is bound to this hotword lexicon at the query moment and it can be deleted. 
-     * @return Status Current hotword lexicon id status. a value of 0 indicates that no template is bound to this hotword lexicon at the query moment and it can be deleted.
+     * Get Current hot lexicon id status. A value of 0 indicates that no template is bound to this hot lexicon at the query moment, and it can be deleted. 
+     * @return Status Current hot lexicon id status. A value of 0 indicates that no template is bound to this hot lexicon at the query moment, and it can be deleted.
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Current hotword lexicon id status. a value of 0 indicates that no template is bound to this hotword lexicon at the query moment and it can be deleted.
-     * @param Status Current hotword lexicon id status. a value of 0 indicates that no template is bound to this hotword lexicon at the query moment and it can be deleted.
+     * Set Current hot lexicon id status. A value of 0 indicates that no template is bound to this hot lexicon at the query moment, and it can be deleted.
+     * @param Status Current hot lexicon id status. A value of 0 indicates that no template is bound to this hot lexicon at the query moment, and it can be deleted.
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get Name of the hot lexicon. 
-     * @return Name Name of the hot lexicon.
+     * Get Hotword lexicon name 
+     * @return Name Hotword lexicon name
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Name of the hot lexicon.
-     * @param Name Name of the hot lexicon.
+     * Set Hotword lexicon name
+     * @param Name Hotword lexicon name
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get Specifies the value is 0 for a temporary hotword lexicon and returns the string provided during creation.
-Specifies the value is 1 for a file-based hotword lexicon, and returns the content of the file uploaded during creation.
+     * Get The value is 0 for a temporary hotword lexicon, and the string provided during creation is returned.
+The value is 1 for a file-based hotword lexicon, and the content of the file uploaded during creation is returned.
 
  
-     * @return Type Specifies the value is 0 for a temporary hotword lexicon and returns the string provided during creation.
-Specifies the value is 1 for a file-based hotword lexicon, and returns the content of the file uploaded during creation.
+     * @return Type The value is 0 for a temporary hotword lexicon, and the string provided during creation is returned.
+The value is 1 for a file-based hotword lexicon, and the content of the file uploaded during creation is returned.
 
 
      */
@@ -182,12 +182,12 @@ Specifies the value is 1 for a file-based hotword lexicon, and returns the conte
     }
 
     /**
-     * Set Specifies the value is 0 for a temporary hotword lexicon and returns the string provided during creation.
-Specifies the value is 1 for a file-based hotword lexicon, and returns the content of the file uploaded during creation.
+     * Set The value is 0 for a temporary hotword lexicon, and the string provided during creation is returned.
+The value is 1 for a file-based hotword lexicon, and the content of the file uploaded during creation is returned.
 
 
-     * @param Type Specifies the value is 0 for a temporary hotword lexicon and returns the string provided during creation.
-Specifies the value is 1 for a file-based hotword lexicon, and returns the content of the file uploaded during creation.
+     * @param Type The value is 0 for a temporary hotword lexicon, and the string provided during creation is returned.
+The value is 1 for a file-based hotword lexicon, and the content of the file uploaded during creation is returned.
 
 
      */
@@ -230,10 +230,10 @@ Specifies the value is 1 for a file-based hotword lexicon, and returns the conte
     /**
      * Get Hotword text, which depends on the value of Type.
 If the value of Type is 0, the hotword string is returned.
-If the value of Type is 1, the base64-encoded content of the hotword file is returned. 
+If the value of Type is 1, the base64-encoded content of the hotword lexicon file is returned. 
      * @return Content Hotword text, which depends on the value of Type.
 If the value of Type is 0, the hotword string is returned.
-If the value of Type is 1, the base64-encoded content of the hotword file is returned.
+If the value of Type is 1, the base64-encoded content of the hotword lexicon file is returned.
      */
     public String getContent() {
         return this.Content;
@@ -242,42 +242,42 @@ If the value of Type is 1, the base64-encoded content of the hotword file is ret
     /**
      * Set Hotword text, which depends on the value of Type.
 If the value of Type is 0, the hotword string is returned.
-If the value of Type is 1, the base64-encoded content of the hotword file is returned.
+If the value of Type is 1, the base64-encoded content of the hotword lexicon file is returned.
      * @param Content Hotword text, which depends on the value of Type.
 If the value of Type is 0, the hotword string is returned.
-If the value of Type is 1, the base64-encoded content of the hotword file is returned.
+If the value of Type is 1, the base64-encoded content of the hotword lexicon file is returned.
      */
     public void setContent(String Content) {
         this.Content = Content;
     }
 
     /**
-     * Get Number of words contained in the hotword lexicon. 
-     * @return WordCount Number of words contained in the hotword lexicon.
+     * Get Number of words contained in the current hotword lexicon. 
+     * @return WordCount Number of words contained in the current hotword lexicon.
      */
     public Long getWordCount() {
         return this.WordCount;
     }
 
     /**
-     * Set Number of words contained in the hotword lexicon.
-     * @param WordCount Number of words contained in the hotword lexicon.
+     * Set Number of words contained in the current hotword lexicon.
+     * @param WordCount Number of words contained in the current hotword lexicon.
      */
     public void setWordCount(Long WordCount) {
         this.WordCount = WordCount;
     }
 
     /**
-     * Get Paging offset. Default value: 0. 
-     * @return Offset Paging offset. Default value: 0.
+     * Get Pagination offset. Default value: 0. 
+     * @return Offset Pagination offset. Default value: 0.
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Paging offset. Default value: 0.
-     * @param Offset Paging offset. Default value: 0.
+     * Set Pagination offset. Default value: 0.
+     * @param Offset Pagination offset. Default value: 0.
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
@@ -300,32 +300,32 @@ If the value of Type is 1, the base64-encoded content of the hotword file is ret
     }
 
     /**
-     * Get Hot word lexicon createtime in ISOUTC format "2006-01-02T15:04:05Z". 
-     * @return CreateTime Hot word lexicon createtime in ISOUTC format "2006-01-02T15:04:05Z".
+     * Get Creation time of the hot lexicon in ISOUTC format "2006-01-02T15:04:05Z" 
+     * @return CreateTime Creation time of the hot lexicon in ISOUTC format "2006-01-02T15:04:05Z"
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set Hot word lexicon createtime in ISOUTC format "2006-01-02T15:04:05Z".
-     * @param CreateTime Hot word lexicon createtime in ISOUTC format "2006-01-02T15:04:05Z".
+     * Set Creation time of the hot lexicon in ISOUTC format "2006-01-02T15:04:05Z"
+     * @param CreateTime Creation time of the hot lexicon in ISOUTC format "2006-01-02T15:04:05Z"
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get Hot lexicon last modified in ISOUTC format "2006-01-02T15:04:05Z". 
-     * @return UpdateTime Hot lexicon last modified in ISOUTC format "2006-01-02T15:04:05Z".
+     * Get Hot lexicon last modified ISOUTC format "2006-01-02T15:04:05Z" 
+     * @return UpdateTime Hot lexicon last modified ISOUTC format "2006-01-02T15:04:05Z"
      */
     public String getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set Hot lexicon last modified in ISOUTC format "2006-01-02T15:04:05Z".
-     * @param UpdateTime Hot lexicon last modified in ISOUTC format "2006-01-02T15:04:05Z".
+     * Set Hot lexicon last modified ISOUTC format "2006-01-02T15:04:05Z"
+     * @param UpdateTime Hot lexicon last modified ISOUTC format "2006-01-02T15:04:05Z"
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;

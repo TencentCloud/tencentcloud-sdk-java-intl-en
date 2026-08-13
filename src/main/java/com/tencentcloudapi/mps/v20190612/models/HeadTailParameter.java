@@ -24,56 +24,46 @@ import java.util.HashMap;
 public class HeadTailParameter extends AbstractModel {
 
     /**
-    * The opening segments.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Opening scene list.
     */
     @SerializedName("HeadSet")
     @Expose
     private MediaInputInfo [] HeadSet;
 
     /**
-    * The closing segments.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Ending list.
     */
     @SerializedName("TailSet")
     @Expose
     private MediaInputInfo [] TailSet;
 
     /**
-     * Get The opening segments.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return HeadSet The opening segments.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Opening scene list. 
+     * @return HeadSet Opening scene list.
      */
     public MediaInputInfo [] getHeadSet() {
         return this.HeadSet;
     }
 
     /**
-     * Set The opening segments.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param HeadSet The opening segments.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Opening scene list.
+     * @param HeadSet Opening scene list.
      */
     public void setHeadSet(MediaInputInfo [] HeadSet) {
         this.HeadSet = HeadSet;
     }
 
     /**
-     * Get The closing segments.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return TailSet The closing segments.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Ending list. 
+     * @return TailSet Ending list.
      */
     public MediaInputInfo [] getTailSet() {
         return this.TailSet;
     }
 
     /**
-     * Set The closing segments.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param TailSet The closing segments.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Ending list.
+     * @param TailSet Ending list.
      */
     public void setTailSet(MediaInputInfo [] TailSet) {
         this.TailSet = TailSet;

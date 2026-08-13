@@ -63,8 +63,7 @@ public class OverrideTranscodeParameter extends AbstractModel {
     private AudioTemplateInfoForUpdate AudioTemplate;
 
     /**
-    * The TSC transcoding parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Top Speed Codec transcoding parameter.
     */
     @SerializedName("TEHDConfig")
     @Expose
@@ -195,20 +194,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get The TSC transcoding parameters.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return TEHDConfig The TSC transcoding parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Top Speed Codec transcoding parameter. 
+     * @return TEHDConfig Top Speed Codec transcoding parameter.
      */
     public TEHDConfigForUpdate getTEHDConfig() {
         return this.TEHDConfig;
     }
 
     /**
-     * Set The TSC transcoding parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param TEHDConfig The TSC transcoding parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Top Speed Codec transcoding parameter.
+     * @param TEHDConfig Top Speed Codec transcoding parameter.
      */
     public void setTEHDConfig(TEHDConfigForUpdate TEHDConfig) {
         this.TEHDConfig = TEHDConfig;

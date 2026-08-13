@@ -24,16 +24,14 @@ import java.util.HashMap;
 public class RetrievalLivenessExtraInfo extends AbstractModel {
 
     /**
-    * <p>Hit template type. Among them, Common - public library; Auto - Auto Clustering Library; Owner - custom template.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Hit template type, among them Common-public library; Auto-Auto Clustering Library; Owner-custom template library</p>
     */
     @SerializedName("HitGroup")
     @Expose
     private String HitGroup;
 
     /**
-    * <p>The similarity between the request image and the hit attack template ranges from [0,2]. The smaller the value, the higher the probability of hitting the attack template. The default threshold is 0.6. When SimilarityScore≥0.6, it is judged as normal. SimilarityScore&lt;0.6 is judged as an attack.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Similarity between the request image and the attack template hit. The similarity value ranges from 0 to 2. The smaller the value, the higher the probability of hitting the attack template. The default threshold is 0.6. When the SimilarityScore is ≥0.6, the judgment is as normal. When the SimilarityScore is <0.6, the judgment is an attack.</p>
     */
     @SerializedName("SimilarityScore")
     @Expose
@@ -41,57 +39,46 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * <p>Template id of the cache hit</p>
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("HitTemplate")
     @Expose
     private String HitTemplate;
 
     /**
-     * Get <p>Hit template type. Among them, Common - public library; Auto - Auto Clustering Library; Owner - custom template.</p>
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return HitGroup <p>Hit template type. Among them, Common - public library; Auto - Auto Clustering Library; Owner - custom template.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Hit template type, among them Common-public library; Auto-Auto Clustering Library; Owner-custom template library</p> 
+     * @return HitGroup <p>Hit template type, among them Common-public library; Auto-Auto Clustering Library; Owner-custom template library</p>
      */
     public String getHitGroup() {
         return this.HitGroup;
     }
 
     /**
-     * Set <p>Hit template type. Among them, Common - public library; Auto - Auto Clustering Library; Owner - custom template.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param HitGroup <p>Hit template type. Among them, Common - public library; Auto - Auto Clustering Library; Owner - custom template.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Hit template type, among them Common-public library; Auto-Auto Clustering Library; Owner-custom template library</p>
+     * @param HitGroup <p>Hit template type, among them Common-public library; Auto-Auto Clustering Library; Owner-custom template library</p>
      */
     public void setHitGroup(String HitGroup) {
         this.HitGroup = HitGroup;
     }
 
     /**
-     * Get <p>The similarity between the request image and the hit attack template ranges from [0,2]. The smaller the value, the higher the probability of hitting the attack template. The default threshold is 0.6. When SimilarityScore≥0.6, it is judged as normal. SimilarityScore&lt;0.6 is judged as an attack.</p>
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return SimilarityScore <p>The similarity between the request image and the hit attack template ranges from [0,2]. The smaller the value, the higher the probability of hitting the attack template. The default threshold is 0.6. When SimilarityScore≥0.6, it is judged as normal. SimilarityScore&lt;0.6 is judged as an attack.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Similarity between the request image and the attack template hit. The similarity value ranges from 0 to 2. The smaller the value, the higher the probability of hitting the attack template. The default threshold is 0.6. When the SimilarityScore is ≥0.6, the judgment is as normal. When the SimilarityScore is <0.6, the judgment is an attack.</p> 
+     * @return SimilarityScore <p>Similarity between the request image and the attack template hit. The similarity value ranges from 0 to 2. The smaller the value, the higher the probability of hitting the attack template. The default threshold is 0.6. When the SimilarityScore is ≥0.6, the judgment is as normal. When the SimilarityScore is <0.6, the judgment is an attack.</p>
      */
     public Float getSimilarityScore() {
         return this.SimilarityScore;
     }
 
     /**
-     * Set <p>The similarity between the request image and the hit attack template ranges from [0,2]. The smaller the value, the higher the probability of hitting the attack template. The default threshold is 0.6. When SimilarityScore≥0.6, it is judged as normal. SimilarityScore&lt;0.6 is judged as an attack.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param SimilarityScore <p>The similarity between the request image and the hit attack template ranges from [0,2]. The smaller the value, the higher the probability of hitting the attack template. The default threshold is 0.6. When SimilarityScore≥0.6, it is judged as normal. SimilarityScore&lt;0.6 is judged as an attack.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Similarity between the request image and the attack template hit. The similarity value ranges from 0 to 2. The smaller the value, the higher the probability of hitting the attack template. The default threshold is 0.6. When the SimilarityScore is ≥0.6, the judgment is as normal. When the SimilarityScore is <0.6, the judgment is an attack.</p>
+     * @param SimilarityScore <p>Similarity between the request image and the attack template hit. The similarity value ranges from 0 to 2. The smaller the value, the higher the probability of hitting the attack template. The default threshold is 0.6. When the SimilarityScore is ≥0.6, the judgment is as normal. When the SimilarityScore is <0.6, the judgment is an attack.</p>
      */
     public void setSimilarityScore(Float SimilarityScore) {
         this.SimilarityScore = SimilarityScore;
     }
 
     /**
-     * Get <p>Template id of the cache hit</p>
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get <p>Template id of the cache hit</p> 
      * @return HitTemplate <p>Template id of the cache hit</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getHitTemplate() {
         return this.HitTemplate;
@@ -99,9 +86,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set <p>Template id of the cache hit</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param HitTemplate <p>Template id of the cache hit</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setHitTemplate(String HitTemplate) {
         this.HitTemplate = HitTemplate;

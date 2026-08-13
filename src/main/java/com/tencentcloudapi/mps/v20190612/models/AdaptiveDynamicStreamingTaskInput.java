@@ -39,15 +39,13 @@ public class AdaptiveDynamicStreamingTaskInput extends AbstractModel {
 
     /**
     * <p>Digital watermark parameter.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("BlindWatermark")
     @Expose
     private BlindWatermarkInput BlindWatermark;
 
     /**
-    * <p>Target storage for files after adaptive bitrate streaming. If this is not specified, the upper-level OutputStorage value is used.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Target storage for files after adaptive bitrate streaming. If left blank, it inherits the upper-level OutputStorage value.</p>
     */
     @SerializedName("OutputStorage")
     @Expose
@@ -76,15 +74,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * <p>External subtitle feature. Specifies the subtitle file to be inserted.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("AddOnSubtitles")
     @Expose
     private AddOnSubtitle [] AddOnSubtitles;
 
     /**
-    * <p>DRM information.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Drm information.</p>
     */
     @SerializedName("DrmInfo")
     @Expose
@@ -99,7 +95,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * <p>Hard subtitle (burned-in subtitle) feature. Specifies the subtitle source, font size, location, and other subtitle parameters.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("SubtitleTemplate")
     @Expose
@@ -113,8 +108,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String StdExtInfo;
 
     /**
-    * <p>Specifies frames at specified PTS times as keyframes and splits segments. Unit: milliseconds (relative deviation of up to 1 ms is allowed). When both GOP and segment duration are specified, they function together. Note that you need to enable RawPts, keep the frame rate as that of the source, and ensure the specified PTS time corresponds to a frame in the source.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Set the frame at the specified pts time as a key frame and segment it. Unit: milliseconds (relative deviation <=1ms is allowed). When both gop and segment duration are specified simultaneously, they function together. Note that RawPts must be enabled, keep the frame rate following the source, and ensure the passed-in pts time corresponds to a frame in the source.</p>
     */
     @SerializedName("KeyPTSList")
     @Expose
@@ -167,10 +161,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get <p>Digital watermark parameter.</p>
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get <p>Digital watermark parameter.</p> 
      * @return BlindWatermark <p>Digital watermark parameter.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public BlindWatermarkInput getBlindWatermark() {
         return this.BlindWatermark;
@@ -178,29 +170,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set <p>Digital watermark parameter.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param BlindWatermark <p>Digital watermark parameter.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setBlindWatermark(BlindWatermarkInput BlindWatermark) {
         this.BlindWatermark = BlindWatermark;
     }
 
     /**
-     * Get <p>Target storage for files after adaptive bitrate streaming. If this is not specified, the upper-level OutputStorage value is used.</p>
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return OutputStorage <p>Target storage for files after adaptive bitrate streaming. If this is not specified, the upper-level OutputStorage value is used.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Target storage for files after adaptive bitrate streaming. If left blank, it inherits the upper-level OutputStorage value.</p> 
+     * @return OutputStorage <p>Target storage for files after adaptive bitrate streaming. If left blank, it inherits the upper-level OutputStorage value.</p>
      */
     public TaskOutputStorage getOutputStorage() {
         return this.OutputStorage;
     }
 
     /**
-     * Set <p>Target storage for files after adaptive bitrate streaming. If this is not specified, the upper-level OutputStorage value is used.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param OutputStorage <p>Target storage for files after adaptive bitrate streaming. If this is not specified, the upper-level OutputStorage value is used.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Target storage for files after adaptive bitrate streaming. If left blank, it inherits the upper-level OutputStorage value.</p>
+     * @param OutputStorage <p>Target storage for files after adaptive bitrate streaming. If left blank, it inherits the upper-level OutputStorage value.</p>
      */
     public void setOutputStorage(TaskOutputStorage OutputStorage) {
         this.OutputStorage = OutputStorage;
@@ -255,10 +241,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get <p>External subtitle feature. Specifies the subtitle file to be inserted.</p>
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get <p>External subtitle feature. Specifies the subtitle file to be inserted.</p> 
      * @return AddOnSubtitles <p>External subtitle feature. Specifies the subtitle file to be inserted.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public AddOnSubtitle [] getAddOnSubtitles() {
         return this.AddOnSubtitles;
@@ -266,29 +250,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set <p>External subtitle feature. Specifies the subtitle file to be inserted.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param AddOnSubtitles <p>External subtitle feature. Specifies the subtitle file to be inserted.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setAddOnSubtitles(AddOnSubtitle [] AddOnSubtitles) {
         this.AddOnSubtitles = AddOnSubtitles;
     }
 
     /**
-     * Get <p>DRM information.</p>
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return DrmInfo <p>DRM information.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Drm information.</p> 
+     * @return DrmInfo <p>Drm information.</p>
      */
     public DrmInfo getDrmInfo() {
         return this.DrmInfo;
     }
 
     /**
-     * Set <p>DRM information.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param DrmInfo <p>DRM information.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Drm information.</p>
+     * @param DrmInfo <p>Drm information.</p>
      */
     public void setDrmInfo(DrmInfo DrmInfo) {
         this.DrmInfo = DrmInfo;
@@ -311,10 +289,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get <p>Hard subtitle (burned-in subtitle) feature. Specifies the subtitle source, font size, location, and other subtitle parameters.</p>
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get <p>Hard subtitle (burned-in subtitle) feature. Specifies the subtitle source, font size, location, and other subtitle parameters.</p> 
      * @return SubtitleTemplate <p>Hard subtitle (burned-in subtitle) feature. Specifies the subtitle source, font size, location, and other subtitle parameters.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public SubtitleTemplate getSubtitleTemplate() {
         return this.SubtitleTemplate;
@@ -322,9 +298,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set <p>Hard subtitle (burned-in subtitle) feature. Specifies the subtitle source, font size, location, and other subtitle parameters.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param SubtitleTemplate <p>Hard subtitle (burned-in subtitle) feature. Specifies the subtitle source, font size, location, and other subtitle parameters.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setSubtitleTemplate(SubtitleTemplate SubtitleTemplate) {
         this.SubtitleTemplate = SubtitleTemplate;
@@ -347,20 +321,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get <p>Specifies frames at specified PTS times as keyframes and splits segments. Unit: milliseconds (relative deviation of up to 1 ms is allowed). When both GOP and segment duration are specified, they function together. Note that you need to enable RawPts, keep the frame rate as that of the source, and ensure the specified PTS time corresponds to a frame in the source.</p>
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return KeyPTSList <p>Specifies frames at specified PTS times as keyframes and splits segments. Unit: milliseconds (relative deviation of up to 1 ms is allowed). When both GOP and segment duration are specified, they function together. Note that you need to enable RawPts, keep the frame rate as that of the source, and ensure the specified PTS time corresponds to a frame in the source.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Set the frame at the specified pts time as a key frame and segment it. Unit: milliseconds (relative deviation <=1ms is allowed). When both gop and segment duration are specified simultaneously, they function together. Note that RawPts must be enabled, keep the frame rate following the source, and ensure the passed-in pts time corresponds to a frame in the source.</p> 
+     * @return KeyPTSList <p>Set the frame at the specified pts time as a key frame and segment it. Unit: milliseconds (relative deviation <=1ms is allowed). When both gop and segment duration are specified simultaneously, they function together. Note that RawPts must be enabled, keep the frame rate following the source, and ensure the passed-in pts time corresponds to a frame in the source.</p>
      */
     public Long [] getKeyPTSList() {
         return this.KeyPTSList;
     }
 
     /**
-     * Set <p>Specifies frames at specified PTS times as keyframes and splits segments. Unit: milliseconds (relative deviation of up to 1 ms is allowed). When both GOP and segment duration are specified, they function together. Note that you need to enable RawPts, keep the frame rate as that of the source, and ensure the specified PTS time corresponds to a frame in the source.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param KeyPTSList <p>Specifies frames at specified PTS times as keyframes and splits segments. Unit: milliseconds (relative deviation of up to 1 ms is allowed). When both GOP and segment duration are specified, they function together. Note that you need to enable RawPts, keep the frame rate as that of the source, and ensure the specified PTS time corresponds to a frame in the source.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Set the frame at the specified pts time as a key frame and segment it. Unit: milliseconds (relative deviation <=1ms is allowed). When both gop and segment duration are specified simultaneously, they function together. Note that RawPts must be enabled, keep the frame rate following the source, and ensure the passed-in pts time corresponds to a frame in the source.</p>
+     * @param KeyPTSList <p>Set the frame at the specified pts time as a key frame and segment it. Unit: milliseconds (relative deviation <=1ms is allowed). When both gop and segment duration are specified simultaneously, they function together. Note that RawPts must be enabled, keep the frame rate following the source, and ensure the passed-in pts time corresponds to a frame in the source.</p>
      */
     public void setKeyPTSList(Long [] KeyPTSList) {
         this.KeyPTSList = KeyPTSList;

@@ -24,115 +24,130 @@ import java.util.HashMap;
 public class S3InputInfo extends AbstractModel {
 
     /**
-    * The AWS S3 bucket.
+    * S3 bucket.
     */
     @SerializedName("S3Bucket")
     @Expose
     private String S3Bucket;
 
     /**
-    * The region of the AWS S3 bucket.
+    * Region of the S3 bucket. Currently supports:  
+us-east-1  
+eu-west-3
+
     */
     @SerializedName("S3Region")
     @Expose
     private String S3Region;
 
     /**
-    * The path of the AWS S3 object.
+    * Resource path of the media in the S3 bucket.
     */
     @SerializedName("S3Object")
     @Expose
     private String S3Object;
 
     /**
-    * The key ID required to access the AWS S3 object.
+    * AWS private network access media resource secret key id.
     */
     @SerializedName("S3SecretId")
     @Expose
     private String S3SecretId;
 
     /**
-    * The key required to access the AWS S3 object.
+    * AWS private network access media content key.
     */
     @SerializedName("S3SecretKey")
     @Expose
     private String S3SecretKey;
 
     /**
-     * Get The AWS S3 bucket. 
-     * @return S3Bucket The AWS S3 bucket.
+     * Get S3 bucket. 
+     * @return S3Bucket S3 bucket.
      */
     public String getS3Bucket() {
         return this.S3Bucket;
     }
 
     /**
-     * Set The AWS S3 bucket.
-     * @param S3Bucket The AWS S3 bucket.
+     * Set S3 bucket.
+     * @param S3Bucket S3 bucket.
      */
     public void setS3Bucket(String S3Bucket) {
         this.S3Bucket = S3Bucket;
     }
 
     /**
-     * Get The region of the AWS S3 bucket. 
-     * @return S3Region The region of the AWS S3 bucket.
+     * Get Region of the S3 bucket. Currently supports:  
+us-east-1  
+eu-west-3
+ 
+     * @return S3Region Region of the S3 bucket. Currently supports:  
+us-east-1  
+eu-west-3
+
      */
     public String getS3Region() {
         return this.S3Region;
     }
 
     /**
-     * Set The region of the AWS S3 bucket.
-     * @param S3Region The region of the AWS S3 bucket.
+     * Set Region of the S3 bucket. Currently supports:  
+us-east-1  
+eu-west-3
+
+     * @param S3Region Region of the S3 bucket. Currently supports:  
+us-east-1  
+eu-west-3
+
      */
     public void setS3Region(String S3Region) {
         this.S3Region = S3Region;
     }
 
     /**
-     * Get The path of the AWS S3 object. 
-     * @return S3Object The path of the AWS S3 object.
+     * Get Resource path of the media in the S3 bucket. 
+     * @return S3Object Resource path of the media in the S3 bucket.
      */
     public String getS3Object() {
         return this.S3Object;
     }
 
     /**
-     * Set The path of the AWS S3 object.
-     * @param S3Object The path of the AWS S3 object.
+     * Set Resource path of the media in the S3 bucket.
+     * @param S3Object Resource path of the media in the S3 bucket.
      */
     public void setS3Object(String S3Object) {
         this.S3Object = S3Object;
     }
 
     /**
-     * Get The key ID required to access the AWS S3 object. 
-     * @return S3SecretId The key ID required to access the AWS S3 object.
+     * Get AWS private network access media resource secret key id. 
+     * @return S3SecretId AWS private network access media resource secret key id.
      */
     public String getS3SecretId() {
         return this.S3SecretId;
     }
 
     /**
-     * Set The key ID required to access the AWS S3 object.
-     * @param S3SecretId The key ID required to access the AWS S3 object.
+     * Set AWS private network access media resource secret key id.
+     * @param S3SecretId AWS private network access media resource secret key id.
      */
     public void setS3SecretId(String S3SecretId) {
         this.S3SecretId = S3SecretId;
     }
 
     /**
-     * Get The key required to access the AWS S3 object. 
-     * @return S3SecretKey The key required to access the AWS S3 object.
+     * Get AWS private network access media content key. 
+     * @return S3SecretKey AWS private network access media content key.
      */
     public String getS3SecretKey() {
         return this.S3SecretKey;
     }
 
     /**
-     * Set The key required to access the AWS S3 object.
-     * @param S3SecretKey The key required to access the AWS S3 object.
+     * Set AWS private network access media content key.
+     * @param S3SecretKey AWS private network access media content key.
      */
     public void setS3SecretKey(String S3SecretKey) {
         this.S3SecretKey = S3SecretKey;

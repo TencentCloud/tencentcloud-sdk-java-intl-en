@@ -24,109 +24,94 @@ import java.util.HashMap;
 public class HLSConfigureInfo extends AbstractModel {
 
     /**
-    * Duration of a single TS file in seconds. Value range: 5-30 seconds.
+    * Duration of TS file, unit: second, value ranges from 5 to 30 seconds.
 
-If this parameter is left empty, 30 seconds will be used by default.
-Note: This field may return null, indicating that no valid value can be obtained.
+Leave it blank and it defaults to 30 seconds.
     */
     @SerializedName("ItemDuration")
     @Expose
     private Long ItemDuration;
 
     /**
-    * Recording cycle in seconds. Value range: 10 minutes to 12 hours.
+    * Recording period, unit: second, value ranges from 10 minutes to 12 hr.
 
-If this parameter is left empty, 10 minutes (3600 seconds) will be used by default.
-Note: This field may return null, indicating that no valid value can be obtained.
+Leave it blank defaults to 10 minutes (3600 seconds).
     */
     @SerializedName("Interval")
     @Expose
     private Long Interval;
 
     /**
-    * Resume recording waiting time, unit: seconds. Value range: 60-1800 seconds.
-If this parameter is left empty, 0 (resume recording not enabled) will be used by default.
-Note: This field may return null, indicating that no valid value can be obtained.
+    * Continuation waiting time, unit: second. Value range: 60 seconds to 1800 seconds.
+Leave blank defaults to 0 (recording continuation disabled).
     */
     @SerializedName("ContinueTimeout")
     @Expose
     private Long ContinueTimeout;
 
     /**
-     * Get Duration of a single TS file in seconds. Value range: 5-30 seconds.
+     * Get Duration of TS file, unit: second, value ranges from 5 to 30 seconds.
 
-If this parameter is left empty, 30 seconds will be used by default.
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return ItemDuration Duration of a single TS file in seconds. Value range: 5-30 seconds.
+Leave it blank and it defaults to 30 seconds. 
+     * @return ItemDuration Duration of TS file, unit: second, value ranges from 5 to 30 seconds.
 
-If this parameter is left empty, 30 seconds will be used by default.
-Note: This field may return null, indicating that no valid value can be obtained.
+Leave it blank and it defaults to 30 seconds.
      */
     public Long getItemDuration() {
         return this.ItemDuration;
     }
 
     /**
-     * Set Duration of a single TS file in seconds. Value range: 5-30 seconds.
+     * Set Duration of TS file, unit: second, value ranges from 5 to 30 seconds.
 
-If this parameter is left empty, 30 seconds will be used by default.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param ItemDuration Duration of a single TS file in seconds. Value range: 5-30 seconds.
+Leave it blank and it defaults to 30 seconds.
+     * @param ItemDuration Duration of TS file, unit: second, value ranges from 5 to 30 seconds.
 
-If this parameter is left empty, 30 seconds will be used by default.
-Note: This field may return null, indicating that no valid value can be obtained.
+Leave it blank and it defaults to 30 seconds.
      */
     public void setItemDuration(Long ItemDuration) {
         this.ItemDuration = ItemDuration;
     }
 
     /**
-     * Get Recording cycle in seconds. Value range: 10 minutes to 12 hours.
+     * Get Recording period, unit: second, value ranges from 10 minutes to 12 hr.
 
-If this parameter is left empty, 10 minutes (3600 seconds) will be used by default.
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return Interval Recording cycle in seconds. Value range: 10 minutes to 12 hours.
+Leave it blank defaults to 10 minutes (3600 seconds). 
+     * @return Interval Recording period, unit: second, value ranges from 10 minutes to 12 hr.
 
-If this parameter is left empty, 10 minutes (3600 seconds) will be used by default.
-Note: This field may return null, indicating that no valid value can be obtained.
+Leave it blank defaults to 10 minutes (3600 seconds).
      */
     public Long getInterval() {
         return this.Interval;
     }
 
     /**
-     * Set Recording cycle in seconds. Value range: 10 minutes to 12 hours.
+     * Set Recording period, unit: second, value ranges from 10 minutes to 12 hr.
 
-If this parameter is left empty, 10 minutes (3600 seconds) will be used by default.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param Interval Recording cycle in seconds. Value range: 10 minutes to 12 hours.
+Leave it blank defaults to 10 minutes (3600 seconds).
+     * @param Interval Recording period, unit: second, value ranges from 10 minutes to 12 hr.
 
-If this parameter is left empty, 10 minutes (3600 seconds) will be used by default.
-Note: This field may return null, indicating that no valid value can be obtained.
+Leave it blank defaults to 10 minutes (3600 seconds).
      */
     public void setInterval(Long Interval) {
         this.Interval = Interval;
     }
 
     /**
-     * Get Resume recording waiting time, unit: seconds. Value range: 60-1800 seconds.
-If this parameter is left empty, 0 (resume recording not enabled) will be used by default.
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return ContinueTimeout Resume recording waiting time, unit: seconds. Value range: 60-1800 seconds.
-If this parameter is left empty, 0 (resume recording not enabled) will be used by default.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get Continuation waiting time, unit: second. Value range: 60 seconds to 1800 seconds.
+Leave blank defaults to 0 (recording continuation disabled). 
+     * @return ContinueTimeout Continuation waiting time, unit: second. Value range: 60 seconds to 1800 seconds.
+Leave blank defaults to 0 (recording continuation disabled).
      */
     public Long getContinueTimeout() {
         return this.ContinueTimeout;
     }
 
     /**
-     * Set Resume recording waiting time, unit: seconds. Value range: 60-1800 seconds.
-If this parameter is left empty, 0 (resume recording not enabled) will be used by default.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param ContinueTimeout Resume recording waiting time, unit: seconds. Value range: 60-1800 seconds.
-If this parameter is left empty, 0 (resume recording not enabled) will be used by default.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set Continuation waiting time, unit: second. Value range: 60 seconds to 1800 seconds.
+Leave blank defaults to 0 (recording continuation disabled).
+     * @param ContinueTimeout Continuation waiting time, unit: second. Value range: 60 seconds to 1800 seconds.
+Leave blank defaults to 0 (recording continuation disabled).
      */
     public void setContinueTimeout(Long ContinueTimeout) {
         this.ContinueTimeout = ContinueTimeout;

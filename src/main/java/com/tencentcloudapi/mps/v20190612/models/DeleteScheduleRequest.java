@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DeleteScheduleRequest extends AbstractModel {
 
     /**
-    * The scheme ID.
+    * Orchestration unique identifier.
     */
     @SerializedName("ScheduleId")
     @Expose
     private Long ScheduleId;
 
     /**
-     * Get The scheme ID. 
-     * @return ScheduleId The scheme ID.
+     * Get Orchestration unique identifier. 
+     * @return ScheduleId Orchestration unique identifier.
      */
     public Long getScheduleId() {
         return this.ScheduleId;
     }
 
     /**
-     * Set The scheme ID.
-     * @param ScheduleId The scheme ID.
+     * Set Orchestration unique identifier.
+     * @param ScheduleId Orchestration unique identifier.
      */
     public void setScheduleId(Long ScheduleId) {
         this.ScheduleId = ScheduleId;

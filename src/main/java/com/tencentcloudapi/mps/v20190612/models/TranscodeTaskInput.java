@@ -39,10 +39,9 @@ This parameter is used in high customization scenarios. it is recommended that y
     private RawTranscodeParameter RawParameter;
 
     /**
-    * Video transcoding custom parameter, which is valid when `Definition` is not 0.
-When any parameters in this structure are entered, they will be used to override corresponding parameters in templates.
-This parameter is used in highly customized scenarios. We recommend you only use `Definition` to specify the transcoding parameter.
-Note: this field may return `null`, indicating that no valid value was found.
+    * Custom video transcoding parameter. It takes effect when Definition is not set to 0.
+When you fill in some transcoding parameters in this structure, the filled parameters will be used to override the parameters in the transcoding template.
+This parameter is used in high customization scenarios. It is recommended that you use only Definition to specify transcoding parameters.
     */
     @SerializedName("OverrideParameter")
     @Expose
@@ -56,8 +55,7 @@ Note: this field may return `null`, indicating that no valid value was found.
     private WatermarkInput [] WatermarkSet;
 
     /**
-    * Digital watermark parameter.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Digital watermark parameters.
     */
     @SerializedName("BlindWatermark")
     @Expose
@@ -91,8 +89,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Float EndTimeOffset;
 
     /**
-    * Target bucket of an output file. If this parameter is left empty, the `OutputStorage` value of the upper folder will be inherited.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Target storage for the transcoded file. If left blank, it inherits the upper-level OutputStorage value.
     */
     @SerializedName("OutputStorage")
     @Expose
@@ -120,15 +117,13 @@ If left empty, a relative path is used by default: `{inputName}_transcode_{defin
 
     /**
     * Rule of the `{number}` variable in the output path after transcoding.
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ObjectNumberFormat")
     @Expose
     private NumberFormat ObjectNumberFormat;
 
     /**
-    * Opening and closing credits parameters
-Note: this field may return `null`, indicating that no valid value was found.
+    * Video opening/closing credits parameter.
     */
     @SerializedName("HeadTailParameter")
     @Expose
@@ -171,28 +166,24 @@ This parameter is used in high customization scenarios. it is recommended that y
     }
 
     /**
-     * Get Video transcoding custom parameter, which is valid when `Definition` is not 0.
-When any parameters in this structure are entered, they will be used to override corresponding parameters in templates.
-This parameter is used in highly customized scenarios. We recommend you only use `Definition` to specify the transcoding parameter.
-Note: this field may return `null`, indicating that no valid value was found. 
-     * @return OverrideParameter Video transcoding custom parameter, which is valid when `Definition` is not 0.
-When any parameters in this structure are entered, they will be used to override corresponding parameters in templates.
-This parameter is used in highly customized scenarios. We recommend you only use `Definition` to specify the transcoding parameter.
-Note: this field may return `null`, indicating that no valid value was found.
+     * Get Custom video transcoding parameter. It takes effect when Definition is not set to 0.
+When you fill in some transcoding parameters in this structure, the filled parameters will be used to override the parameters in the transcoding template.
+This parameter is used in high customization scenarios. It is recommended that you use only Definition to specify transcoding parameters. 
+     * @return OverrideParameter Custom video transcoding parameter. It takes effect when Definition is not set to 0.
+When you fill in some transcoding parameters in this structure, the filled parameters will be used to override the parameters in the transcoding template.
+This parameter is used in high customization scenarios. It is recommended that you use only Definition to specify transcoding parameters.
      */
     public OverrideTranscodeParameter getOverrideParameter() {
         return this.OverrideParameter;
     }
 
     /**
-     * Set Video transcoding custom parameter, which is valid when `Definition` is not 0.
-When any parameters in this structure are entered, they will be used to override corresponding parameters in templates.
-This parameter is used in highly customized scenarios. We recommend you only use `Definition` to specify the transcoding parameter.
-Note: this field may return `null`, indicating that no valid value was found.
-     * @param OverrideParameter Video transcoding custom parameter, which is valid when `Definition` is not 0.
-When any parameters in this structure are entered, they will be used to override corresponding parameters in templates.
-This parameter is used in highly customized scenarios. We recommend you only use `Definition` to specify the transcoding parameter.
-Note: this field may return `null`, indicating that no valid value was found.
+     * Set Custom video transcoding parameter. It takes effect when Definition is not set to 0.
+When you fill in some transcoding parameters in this structure, the filled parameters will be used to override the parameters in the transcoding template.
+This parameter is used in high customization scenarios. It is recommended that you use only Definition to specify transcoding parameters.
+     * @param OverrideParameter Custom video transcoding parameter. It takes effect when Definition is not set to 0.
+When you fill in some transcoding parameters in this structure, the filled parameters will be used to override the parameters in the transcoding template.
+This parameter is used in high customization scenarios. It is recommended that you use only Definition to specify transcoding parameters.
      */
     public void setOverrideParameter(OverrideTranscodeParameter OverrideParameter) {
         this.OverrideParameter = OverrideParameter;
@@ -215,20 +206,16 @@ Note: this field may return `null`, indicating that no valid value was found.
     }
 
     /**
-     * Get Digital watermark parameter.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return BlindWatermark Digital watermark parameter.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Digital watermark parameters. 
+     * @return BlindWatermark Digital watermark parameters.
      */
     public BlindWatermarkInput getBlindWatermark() {
         return this.BlindWatermark;
     }
 
     /**
-     * Set Digital watermark parameter.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param BlindWatermark Digital watermark parameter.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Digital watermark parameters.
+     * @param BlindWatermark Digital watermark parameters.
      */
     public void setBlindWatermark(BlindWatermarkInput BlindWatermark) {
         this.BlindWatermark = BlindWatermark;
@@ -307,20 +294,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Target bucket of an output file. If this parameter is left empty, the `OutputStorage` value of the upper folder will be inherited.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return OutputStorage Target bucket of an output file. If this parameter is left empty, the `OutputStorage` value of the upper folder will be inherited.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Target storage for the transcoded file. If left blank, it inherits the upper-level OutputStorage value. 
+     * @return OutputStorage Target storage for the transcoded file. If left blank, it inherits the upper-level OutputStorage value.
      */
     public TaskOutputStorage getOutputStorage() {
         return this.OutputStorage;
     }
 
     /**
-     * Set Target bucket of an output file. If this parameter is left empty, the `OutputStorage` value of the upper folder will be inherited.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param OutputStorage Target bucket of an output file. If this parameter is left empty, the `OutputStorage` value of the upper folder will be inherited.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Target storage for the transcoded file. If left blank, it inherits the upper-level OutputStorage value.
+     * @param OutputStorage Target storage for the transcoded file. If left blank, it inherits the upper-level OutputStorage value.
      */
     public void setOutputStorage(TaskOutputStorage OutputStorage) {
         this.OutputStorage = OutputStorage;
@@ -383,10 +366,8 @@ If left empty, a relative path is used by default: `{inputName}_transcode_{defin
     }
 
     /**
-     * Get Rule of the `{number}` variable in the output path after transcoding.
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Rule of the `{number}` variable in the output path after transcoding. 
      * @return ObjectNumberFormat Rule of the `{number}` variable in the output path after transcoding.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public NumberFormat getObjectNumberFormat() {
         return this.ObjectNumberFormat;
@@ -394,29 +375,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Rule of the `{number}` variable in the output path after transcoding.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param ObjectNumberFormat Rule of the `{number}` variable in the output path after transcoding.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setObjectNumberFormat(NumberFormat ObjectNumberFormat) {
         this.ObjectNumberFormat = ObjectNumberFormat;
     }
 
     /**
-     * Get Opening and closing credits parameters
-Note: this field may return `null`, indicating that no valid value was found. 
-     * @return HeadTailParameter Opening and closing credits parameters
-Note: this field may return `null`, indicating that no valid value was found.
+     * Get Video opening/closing credits parameter. 
+     * @return HeadTailParameter Video opening/closing credits parameter.
      */
     public HeadTailParameter getHeadTailParameter() {
         return this.HeadTailParameter;
     }
 
     /**
-     * Set Opening and closing credits parameters
-Note: this field may return `null`, indicating that no valid value was found.
-     * @param HeadTailParameter Opening and closing credits parameters
-Note: this field may return `null`, indicating that no valid value was found.
+     * Set Video opening/closing credits parameter.
+     * @param HeadTailParameter Video opening/closing credits parameter.
      */
     public void setHeadTailParameter(HeadTailParameter HeadTailParameter) {
         this.HeadTailParameter = HeadTailParameter;

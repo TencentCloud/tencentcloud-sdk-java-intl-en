@@ -24,33 +24,28 @@ import java.util.HashMap;
 public class ExtractBlindWatermarkTaskConfig extends AbstractModel {
 
     /**
-    * Valid when the watermark type is blind-abseq. specifies the segment duration of the input video. unit: ms.
-Segment duration is 5 seconds by default if left empty.
-Note: This field may return null, indicating that no valid value can be obtained.
+    * Valid when the digital watermark type is blind-abseq, used to specify the segment duration of the input video. Unit: ms.
+If left empty, the default segment duration is 5 seconds.
     */
     @SerializedName("SegmentDuration")
     @Expose
     private Long SegmentDuration;
 
     /**
-     * Get Valid when the watermark type is blind-abseq. specifies the segment duration of the input video. unit: ms.
-Segment duration is 5 seconds by default if left empty.
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return SegmentDuration Valid when the watermark type is blind-abseq. specifies the segment duration of the input video. unit: ms.
-Segment duration is 5 seconds by default if left empty.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get Valid when the digital watermark type is blind-abseq, used to specify the segment duration of the input video. Unit: ms.
+If left empty, the default segment duration is 5 seconds. 
+     * @return SegmentDuration Valid when the digital watermark type is blind-abseq, used to specify the segment duration of the input video. Unit: ms.
+If left empty, the default segment duration is 5 seconds.
      */
     public Long getSegmentDuration() {
         return this.SegmentDuration;
     }
 
     /**
-     * Set Valid when the watermark type is blind-abseq. specifies the segment duration of the input video. unit: ms.
-Segment duration is 5 seconds by default if left empty.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param SegmentDuration Valid when the watermark type is blind-abseq. specifies the segment duration of the input video. unit: ms.
-Segment duration is 5 seconds by default if left empty.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set Valid when the digital watermark type is blind-abseq, used to specify the segment duration of the input video. Unit: ms.
+If left empty, the default segment duration is 5 seconds.
+     * @param SegmentDuration Valid when the digital watermark type is blind-abseq, used to specify the segment duration of the input video. Unit: ms.
+If left empty, the default segment duration is 5 seconds.
      */
     public void setSegmentDuration(Long SegmentDuration) {
         this.SegmentDuration = SegmentDuration;

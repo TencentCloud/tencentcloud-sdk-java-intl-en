@@ -42,24 +42,21 @@ public class MediaInputInfo extends AbstractModel {
     private CosInputInfo CosInputInfo;
 
     /**
-    * The URL of the object to process. This parameter is valid and required when `Type` is `URL`.
-Note: This field may return null, indicating that no valid value can be obtained.
+    * Valid when Type is URL. This item is required and indicates the media processing URL object information.
     */
     @SerializedName("UrlInputInfo")
     @Expose
     private UrlInputInfo UrlInputInfo;
 
     /**
-    * The information of the AWS S3 object processed. This parameter is required if `Type` is `AWS-S3`.
-Note: This field may return null, indicating that no valid value can be obtained.
+    * Valid when Type is AWS-S3. This item is required and represents the AWS S3 object information for media processing.
     */
     @SerializedName("S3InputInfo")
     @Expose
     private S3InputInfo S3InputInfo;
 
     /**
-    * The information of the VOD Pro object processed. This parameter is required if `Type` is `VOD`.
-Note: This field may return null, indicating that no valid value can be obtained.
+    * Valid at that time when Type is VOD. This item is required and represents the Media Processing Service (MPS) video-on-demand (VOD) pro edition object information.
     */
     @SerializedName("VODInputInfo")
     @Expose
@@ -114,60 +111,48 @@ Note: This field may return null, indicating that no valid value can be obtained
     }
 
     /**
-     * Get The URL of the object to process. This parameter is valid and required when `Type` is `URL`.
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return UrlInputInfo The URL of the object to process. This parameter is valid and required when `Type` is `URL`.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get Valid when Type is URL. This item is required and indicates the media processing URL object information. 
+     * @return UrlInputInfo Valid when Type is URL. This item is required and indicates the media processing URL object information.
      */
     public UrlInputInfo getUrlInputInfo() {
         return this.UrlInputInfo;
     }
 
     /**
-     * Set The URL of the object to process. This parameter is valid and required when `Type` is `URL`.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param UrlInputInfo The URL of the object to process. This parameter is valid and required when `Type` is `URL`.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set Valid when Type is URL. This item is required and indicates the media processing URL object information.
+     * @param UrlInputInfo Valid when Type is URL. This item is required and indicates the media processing URL object information.
      */
     public void setUrlInputInfo(UrlInputInfo UrlInputInfo) {
         this.UrlInputInfo = UrlInputInfo;
     }
 
     /**
-     * Get The information of the AWS S3 object processed. This parameter is required if `Type` is `AWS-S3`.
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return S3InputInfo The information of the AWS S3 object processed. This parameter is required if `Type` is `AWS-S3`.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get Valid when Type is AWS-S3. This item is required and represents the AWS S3 object information for media processing. 
+     * @return S3InputInfo Valid when Type is AWS-S3. This item is required and represents the AWS S3 object information for media processing.
      */
     public S3InputInfo getS3InputInfo() {
         return this.S3InputInfo;
     }
 
     /**
-     * Set The information of the AWS S3 object processed. This parameter is required if `Type` is `AWS-S3`.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param S3InputInfo The information of the AWS S3 object processed. This parameter is required if `Type` is `AWS-S3`.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set Valid when Type is AWS-S3. This item is required and represents the AWS S3 object information for media processing.
+     * @param S3InputInfo Valid when Type is AWS-S3. This item is required and represents the AWS S3 object information for media processing.
      */
     public void setS3InputInfo(S3InputInfo S3InputInfo) {
         this.S3InputInfo = S3InputInfo;
     }
 
     /**
-     * Get The information of the VOD Pro object processed. This parameter is required if `Type` is `VOD`.
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return VODInputInfo The information of the VOD Pro object processed. This parameter is required if `Type` is `VOD`.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get Valid at that time when Type is VOD. This item is required and represents the Media Processing Service (MPS) video-on-demand (VOD) pro edition object information. 
+     * @return VODInputInfo Valid at that time when Type is VOD. This item is required and represents the Media Processing Service (MPS) video-on-demand (VOD) pro edition object information.
      */
     public VODInputInfo getVODInputInfo() {
         return this.VODInputInfo;
     }
 
     /**
-     * Set The information of the VOD Pro object processed. This parameter is required if `Type` is `VOD`.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param VODInputInfo The information of the VOD Pro object processed. This parameter is required if `Type` is `VOD`.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set Valid at that time when Type is VOD. This item is required and represents the Media Processing Service (MPS) video-on-demand (VOD) pro edition object information.
+     * @param VODInputInfo Valid at that time when Type is VOD. This item is required and represents the Media Processing Service (MPS) video-on-demand (VOD) pro edition object information.
      */
     public void setVODInputInfo(VODInputInfo VODInputInfo) {
         this.VODInputInfo = VODInputInfo;

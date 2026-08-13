@@ -45,7 +45,7 @@ public class CreateAsrHotwordsRequest extends AbstractModel {
     private String Content;
 
     /**
-    * Base64-encoded content of the hotword file. This field is required if Type is set to 1.
+    * base64 content of the hot word library file, Type 1 required
 
 
     */
@@ -109,10 +109,10 @@ public class CreateAsrHotwordsRequest extends AbstractModel {
     }
 
     /**
-     * Get Base64-encoded content of the hotword file. This field is required if Type is set to 1.
+     * Get base64 content of the hot word library file, Type 1 required
 
  
-     * @return FileContent Base64-encoded content of the hotword file. This field is required if Type is set to 1.
+     * @return FileContent base64 content of the hot word library file, Type 1 required
 
 
      */
@@ -121,10 +121,10 @@ public class CreateAsrHotwordsRequest extends AbstractModel {
     }
 
     /**
-     * Set Base64-encoded content of the hotword file. This field is required if Type is set to 1.
+     * Set base64 content of the hot word library file, Type 1 required
 
 
-     * @param FileContent Base64-encoded content of the hotword file. This field is required if Type is set to 1.
+     * @param FileContent base64 content of the hot word library file, Type 1 required
 
 
      */

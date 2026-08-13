@@ -24,28 +24,25 @@ import java.util.HashMap;
 public class SubtitleTemplate extends AbstractModel {
 
     /**
-    * The URL of the subtitles to add to the video.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Subtitle file URL to be suppressed in the video.
     */
     @SerializedName("Path")
     @Expose
     private String Path;
 
     /**
-    * Specifies the subtitle track for embedding subtitles into the video. the Streamindex parameter takes value starting from 0, where 0 indicates usage of the first subtitle track in the source video. if Path is specified, use Path preferentially. either Path or Streamindex should be specified.
+    * Specifies the subtitle track for embedding subtitles into the video. The Streamindex value starts from 0, where 0 indicates usage of the first subtitle track in the source video. If Path is specified, use Path preferentially. Specify at least one of Path or Streamindex.
 
--Note: StreamIndex must match the subtitle track index in the source file. for example, if the subtitle track in the source file is stream#0:3, StreamIndex should be 3. otherwise, task processing failed.
+-Note: StreamIndex must be consistent with the subtitle track index in the source file. For example, if the subtitle track in the source file is stream#0:3, StreamIndex should be 3. Otherwise, task processing may fail.
 
 
-Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("StreamIndex")
     @Expose
     private Long StreamIndex;
 
     /**
-    * Input information on the subtitle file to be embedded into the video. Currently, only subtitle files stored in COS are supported.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Input information on the subtitle file to be embedded in the video. Currently, only subtitle files stored in COS are supported.
     */
     @SerializedName("SubtitleFileInput")
     @Expose
@@ -62,7 +59,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     /**
     * Font type. Valid values:
 <li>hei.ttf: SimHei</li>
-<li>song.ttf: SimSun.</li>
+<li>song.ttf: Song Typeface.</li>
 <li>kai.ttf (recommend) or simkai.ttf: KaiTi.</li>
 <li>msyh.ttf: Microsoft YaHei.</li>
 <li>msyhbd.ttf: Microsoft YaHei Bold.</li>
@@ -98,21 +95,19 @@ Default value: hei.ttf.
 <li>kai.ttf is recommended for SimKai.</li>
 <li>FontFileInput takes precedence when specified.</li>
 
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("FontType")
     @Expose
     private String FontType;
 
     /**
-    * Font size. If not specified, the font size of the subtitle file applies. Pixel and percentage formats are supported:
+    * Font size. If not specified, the font size of the subtitle file applies. Pixel and percentage formats are supported.
 
-- Pixel: Npx. Value range of N: (0,4096].
+-.
 - Percentage: N%. Value range of N: (0,100]. For example, 10% means the subtitle font size is 10% of the source video height.
 
 The default size is 5% of the source video height if this parameter is not specified or the font size is not configured in the subtitle file.
 
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("FontSize")
     @Expose
@@ -120,50 +115,46 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Font color. Format: 0xRRGGBB. Default value: 0xFFFFFF (white).
-Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("FontColor")
     @Expose
     private String FontColor;
 
     /**
-    * The text transparency. Value range: 0-1.
-<li>`0`: Fully transparent.</li>
-<li>`1`: Fully opaque.</li>
+    * Text opacity, value ranges from 0 to 1.
+<li>0: completely transparent.</li>
+<li>1: completely opaque.</li>
 Default value: 1.
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("FontAlpha")
     @Expose
     private Float FontAlpha;
 
     /**
-    * Subtitle position on the Y-axis. If this parameter is specified, the built-in coordinates in the subtitle file will be ignored. The pixel and percentage formats are supported.
+    * Subtitle y-axis coordinate position. Specify this parameter to ignore the built-in coordinates of the subtitle file. Support pixel and percentage format.
 
- - Pixel: Npx. Value range of N: [0,4096].
- - Percentage: N%. Value range of N: [0,100]. For example, 10% indicates that the subtitle position on the Y-axis is 10% of the video height.
+-.
+-Percentage: N%, N range: [0,100]; for example, 10% means subtitle y-coordinate = 10% * source video height.
 
 By default, the position is 4% of the source video height.
-Note: The origin of the coordinate axes is at the bottom of the central axis of the source video, and the subtitle reference position is at the bottom of the central axis of the subtitles, as shown in the figure below.
+Note: The origin of the coordinate axes is at the bottom of the central axis of the source video, and the subtitle reference position is at the bottom of the central axis of the subtitles, see the following diagram.
 ![image](https://ie-mps-1258344699.cos.ap-nanjing.tencentcos.cn/common/cloud/mps-demo/102_ai_subtitle/subtitle_style.png)
 
-Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("YPos")
     @Expose
     private String YPos;
 
     /**
-    * Subtitle background position on the Y-axis. Pixel and percentage formats are supported.
+    * y-axis coordinate position of the subtitle background base plate; Support pixel and percentage format:
 
- - Pixel: Npx. Value range of N: [0,4096].
- - Percentage: N%. Value range of N: [0,100]. For example, 10% indicates that the subtitle background position on the Y-axis is 10% of the video height.
+-.
+-Percentage: N%, N range: [0,100]; for example, 10% means the y-coordinate of the subtitle background base plate = 10% * video height.
 
 If this parameter is not specified, the subtitle background is disabled.
-Note: The origin of the coordinate axes is at the bottom of the central axis of the source video, and the reference position of the subtitle background is at the bottom of the central axis of the source video, as shown in the figure below.
+Note: The origin of the coordinate axes is at the bottom of the central axis of the source video, and the reference point of the subtitle background base plate is at the bottom of its central axis. Refer to the figure below.
 ![image](https://ie-mps-1258344699.cos.ap-nanjing.tencentcos.cn/common/cloud/mps-demo/102_ai_subtitle/subtitle_style.png)
 
-Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("BoardY")
     @Expose
@@ -175,7 +166,6 @@ Note: This field may return null, indicating that no valid value can be obtained
 - Value range for percentages: [0, 100].
 If background is enabled and this parameter is not specified, the default width is 90% of the source video width.
 
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("BoardWidth")
     @Expose
@@ -187,7 +177,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 - Value range for percentages: [0, 100].
 If background is enabled and this parameter is not specified, the default height is 15% of the source video height.
 
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("BoardHeight")
     @Expose
@@ -196,7 +185,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
     /**
     * Board color. Format: 0xRRGGBB.
 Default value: 0x000000 (black).
-Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("BoardColor")
     @Expose
@@ -207,7 +195,6 @@ Note: This field may return null, indicating that no valid value can be obtained
 <li>0: completely transparent.</li>
 <li>1: completely opaque.</li>
 Default value: 0.8.
-Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("BoardAlpha")
     @Expose
@@ -326,76 +313,64 @@ If this is not specified, no shadow is applied by default.
     private Long LineSpacingUnit;
 
     /**
-     * Get The URL of the subtitles to add to the video.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Path The URL of the subtitles to add to the video.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Subtitle file URL to be suppressed in the video. 
+     * @return Path Subtitle file URL to be suppressed in the video.
      */
     public String getPath() {
         return this.Path;
     }
 
     /**
-     * Set The URL of the subtitles to add to the video.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Path The URL of the subtitles to add to the video.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Subtitle file URL to be suppressed in the video.
+     * @param Path Subtitle file URL to be suppressed in the video.
      */
     public void setPath(String Path) {
         this.Path = Path;
     }
 
     /**
-     * Get Specifies the subtitle track for embedding subtitles into the video. the Streamindex parameter takes value starting from 0, where 0 indicates usage of the first subtitle track in the source video. if Path is specified, use Path preferentially. either Path or Streamindex should be specified.
+     * Get Specifies the subtitle track for embedding subtitles into the video. The Streamindex value starts from 0, where 0 indicates usage of the first subtitle track in the source video. If Path is specified, use Path preferentially. Specify at least one of Path or Streamindex.
 
--Note: StreamIndex must match the subtitle track index in the source file. for example, if the subtitle track in the source file is stream#0:3, StreamIndex should be 3. otherwise, task processing failed.
+-Note: StreamIndex must be consistent with the subtitle track index in the source file. For example, if the subtitle track in the source file is stream#0:3, StreamIndex should be 3. Otherwise, task processing may fail.
+
+ 
+     * @return StreamIndex Specifies the subtitle track for embedding subtitles into the video. The Streamindex value starts from 0, where 0 indicates usage of the first subtitle track in the source video. If Path is specified, use Path preferentially. Specify at least one of Path or Streamindex.
+
+-Note: StreamIndex must be consistent with the subtitle track index in the source file. For example, if the subtitle track in the source file is stream#0:3, StreamIndex should be 3. Otherwise, task processing may fail.
 
 
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return StreamIndex Specifies the subtitle track for embedding subtitles into the video. the Streamindex parameter takes value starting from 0, where 0 indicates usage of the first subtitle track in the source video. if Path is specified, use Path preferentially. either Path or Streamindex should be specified.
-
--Note: StreamIndex must match the subtitle track index in the source file. for example, if the subtitle track in the source file is stream#0:3, StreamIndex should be 3. otherwise, task processing failed.
-
-
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public Long getStreamIndex() {
         return this.StreamIndex;
     }
 
     /**
-     * Set Specifies the subtitle track for embedding subtitles into the video. the Streamindex parameter takes value starting from 0, where 0 indicates usage of the first subtitle track in the source video. if Path is specified, use Path preferentially. either Path or Streamindex should be specified.
+     * Set Specifies the subtitle track for embedding subtitles into the video. The Streamindex value starts from 0, where 0 indicates usage of the first subtitle track in the source video. If Path is specified, use Path preferentially. Specify at least one of Path or Streamindex.
 
--Note: StreamIndex must match the subtitle track index in the source file. for example, if the subtitle track in the source file is stream#0:3, StreamIndex should be 3. otherwise, task processing failed.
-
-
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param StreamIndex Specifies the subtitle track for embedding subtitles into the video. the Streamindex parameter takes value starting from 0, where 0 indicates usage of the first subtitle track in the source video. if Path is specified, use Path preferentially. either Path or Streamindex should be specified.
-
--Note: StreamIndex must match the subtitle track index in the source file. for example, if the subtitle track in the source file is stream#0:3, StreamIndex should be 3. otherwise, task processing failed.
+-Note: StreamIndex must be consistent with the subtitle track index in the source file. For example, if the subtitle track in the source file is stream#0:3, StreamIndex should be 3. Otherwise, task processing may fail.
 
 
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @param StreamIndex Specifies the subtitle track for embedding subtitles into the video. The Streamindex value starts from 0, where 0 indicates usage of the first subtitle track in the source video. If Path is specified, use Path preferentially. Specify at least one of Path or Streamindex.
+
+-Note: StreamIndex must be consistent with the subtitle track index in the source file. For example, if the subtitle track in the source file is stream#0:3, StreamIndex should be 3. Otherwise, task processing may fail.
+
+
      */
     public void setStreamIndex(Long StreamIndex) {
         this.StreamIndex = StreamIndex;
     }
 
     /**
-     * Get Input information on the subtitle file to be embedded into the video. Currently, only subtitle files stored in COS are supported.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return SubtitleFileInput Input information on the subtitle file to be embedded into the video. Currently, only subtitle files stored in COS are supported.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Input information on the subtitle file to be embedded in the video. Currently, only subtitle files stored in COS are supported. 
+     * @return SubtitleFileInput Input information on the subtitle file to be embedded in the video. Currently, only subtitle files stored in COS are supported.
      */
     public MediaInputInfo getSubtitleFileInput() {
         return this.SubtitleFileInput;
     }
 
     /**
-     * Set Input information on the subtitle file to be embedded into the video. Currently, only subtitle files stored in COS are supported.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param SubtitleFileInput Input information on the subtitle file to be embedded into the video. Currently, only subtitle files stored in COS are supported.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Input information on the subtitle file to be embedded in the video. Currently, only subtitle files stored in COS are supported.
+     * @param SubtitleFileInput Input information on the subtitle file to be embedded in the video. Currently, only subtitle files stored in COS are supported.
      */
     public void setSubtitleFileInput(MediaInputInfo SubtitleFileInput) {
         this.SubtitleFileInput = SubtitleFileInput;
@@ -424,7 +399,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     /**
      * Get Font type. Valid values:
 <li>hei.ttf: SimHei</li>
-<li>song.ttf: SimSun.</li>
+<li>song.ttf: Song Typeface.</li>
 <li>kai.ttf (recommend) or simkai.ttf: KaiTi.</li>
 <li>msyh.ttf: Microsoft YaHei.</li>
 <li>msyhbd.ttf: Microsoft YaHei Bold.</li>
@@ -459,11 +434,10 @@ Default value: hei.ttf.
 <br>Note:
 <li>kai.ttf is recommended for SimKai.</li>
 <li>FontFileInput takes precedence when specified.</li>
-
-Note: This field may return null, indicating that no valid values can be obtained. 
+ 
      * @return FontType Font type. Valid values:
 <li>hei.ttf: SimHei</li>
-<li>song.ttf: SimSun.</li>
+<li>song.ttf: Song Typeface.</li>
 <li>kai.ttf (recommend) or simkai.ttf: KaiTi.</li>
 <li>msyh.ttf: Microsoft YaHei.</li>
 <li>msyhbd.ttf: Microsoft YaHei Bold.</li>
@@ -499,7 +473,6 @@ Default value: hei.ttf.
 <li>kai.ttf is recommended for SimKai.</li>
 <li>FontFileInput takes precedence when specified.</li>
 
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getFontType() {
         return this.FontType;
@@ -508,7 +481,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     /**
      * Set Font type. Valid values:
 <li>hei.ttf: SimHei</li>
-<li>song.ttf: SimSun.</li>
+<li>song.ttf: Song Typeface.</li>
 <li>kai.ttf (recommend) or simkai.ttf: KaiTi.</li>
 <li>msyh.ttf: Microsoft YaHei.</li>
 <li>msyhbd.ttf: Microsoft YaHei Bold.</li>
@@ -544,10 +517,9 @@ Default value: hei.ttf.
 <li>kai.ttf is recommended for SimKai.</li>
 <li>FontFileInput takes precedence when specified.</li>
 
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param FontType Font type. Valid values:
 <li>hei.ttf: SimHei</li>
-<li>song.ttf: SimSun.</li>
+<li>song.ttf: Song Typeface.</li>
 <li>kai.ttf (recommend) or simkai.ttf: KaiTi.</li>
 <li>msyh.ttf: Microsoft YaHei.</li>
 <li>msyhbd.ttf: Microsoft YaHei Bold.</li>
@@ -583,61 +555,54 @@ Default value: hei.ttf.
 <li>kai.ttf is recommended for SimKai.</li>
 <li>FontFileInput takes precedence when specified.</li>
 
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setFontType(String FontType) {
         this.FontType = FontType;
     }
 
     /**
-     * Get Font size. If not specified, the font size of the subtitle file applies. Pixel and percentage formats are supported:
+     * Get Font size. If not specified, the font size of the subtitle file applies. Pixel and percentage formats are supported.
 
-- Pixel: Npx. Value range of N: (0,4096].
+-.
+- Percentage: N%. Value range of N: (0,100]. For example, 10% means the subtitle font size is 10% of the source video height.
+
+The default size is 5% of the source video height if this parameter is not specified or the font size is not configured in the subtitle file.
+ 
+     * @return FontSize Font size. If not specified, the font size of the subtitle file applies. Pixel and percentage formats are supported.
+
+-.
 - Percentage: N%. Value range of N: (0,100]. For example, 10% means the subtitle font size is 10% of the source video height.
 
 The default size is 5% of the source video height if this parameter is not specified or the font size is not configured in the subtitle file.
 
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return FontSize Font size. If not specified, the font size of the subtitle file applies. Pixel and percentage formats are supported:
-
-- Pixel: Npx. Value range of N: (0,4096].
-- Percentage: N%. Value range of N: (0,100]. For example, 10% means the subtitle font size is 10% of the source video height.
-
-The default size is 5% of the source video height if this parameter is not specified or the font size is not configured in the subtitle file.
-
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getFontSize() {
         return this.FontSize;
     }
 
     /**
-     * Set Font size. If not specified, the font size of the subtitle file applies. Pixel and percentage formats are supported:
+     * Set Font size. If not specified, the font size of the subtitle file applies. Pixel and percentage formats are supported.
 
-- Pixel: Npx. Value range of N: (0,4096].
+-.
 - Percentage: N%. Value range of N: (0,100]. For example, 10% means the subtitle font size is 10% of the source video height.
 
 The default size is 5% of the source video height if this parameter is not specified or the font size is not configured in the subtitle file.
 
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param FontSize Font size. If not specified, the font size of the subtitle file applies. Pixel and percentage formats are supported:
+     * @param FontSize Font size. If not specified, the font size of the subtitle file applies. Pixel and percentage formats are supported.
 
-- Pixel: Npx. Value range of N: (0,4096].
+-.
 - Percentage: N%. Value range of N: (0,100]. For example, 10% means the subtitle font size is 10% of the source video height.
 
 The default size is 5% of the source video height if this parameter is not specified or the font size is not configured in the subtitle file.
 
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setFontSize(String FontSize) {
         this.FontSize = FontSize;
     }
 
     /**
-     * Get Font color. Format: 0xRRGGBB. Default value: 0xFFFFFF (white).
-Note: This field may return null, indicating that no valid value can be obtained. 
+     * Get Font color. Format: 0xRRGGBB. Default value: 0xFFFFFF (white). 
      * @return FontColor Font color. Format: 0xRRGGBB. Default value: 0xFFFFFF (white).
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public String getFontColor() {
         return this.FontColor;
@@ -645,145 +610,131 @@ Note: This field may return null, indicating that no valid value can be obtained
 
     /**
      * Set Font color. Format: 0xRRGGBB. Default value: 0xFFFFFF (white).
-Note: This field may return null, indicating that no valid value can be obtained.
      * @param FontColor Font color. Format: 0xRRGGBB. Default value: 0xFFFFFF (white).
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setFontColor(String FontColor) {
         this.FontColor = FontColor;
     }
 
     /**
-     * Get The text transparency. Value range: 0-1.
-<li>`0`: Fully transparent.</li>
-<li>`1`: Fully opaque.</li>
+     * Get Text opacity, value ranges from 0 to 1.
+<li>0: completely transparent.</li>
+<li>1: completely opaque.</li>
+Default value: 1. 
+     * @return FontAlpha Text opacity, value ranges from 0 to 1.
+<li>0: completely transparent.</li>
+<li>1: completely opaque.</li>
 Default value: 1.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return FontAlpha The text transparency. Value range: 0-1.
-<li>`0`: Fully transparent.</li>
-<li>`1`: Fully opaque.</li>
-Default value: 1.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Float getFontAlpha() {
         return this.FontAlpha;
     }
 
     /**
-     * Set The text transparency. Value range: 0-1.
-<li>`0`: Fully transparent.</li>
-<li>`1`: Fully opaque.</li>
+     * Set Text opacity, value ranges from 0 to 1.
+<li>0: completely transparent.</li>
+<li>1: completely opaque.</li>
 Default value: 1.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param FontAlpha The text transparency. Value range: 0-1.
-<li>`0`: Fully transparent.</li>
-<li>`1`: Fully opaque.</li>
+     * @param FontAlpha Text opacity, value ranges from 0 to 1.
+<li>0: completely transparent.</li>
+<li>1: completely opaque.</li>
 Default value: 1.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setFontAlpha(Float FontAlpha) {
         this.FontAlpha = FontAlpha;
     }
 
     /**
-     * Get Subtitle position on the Y-axis. If this parameter is specified, the built-in coordinates in the subtitle file will be ignored. The pixel and percentage formats are supported.
+     * Get Subtitle y-axis coordinate position. Specify this parameter to ignore the built-in coordinates of the subtitle file. Support pixel and percentage format.
 
- - Pixel: Npx. Value range of N: [0,4096].
- - Percentage: N%. Value range of N: [0,100]. For example, 10% indicates that the subtitle position on the Y-axis is 10% of the video height.
-
-By default, the position is 4% of the source video height.
-Note: The origin of the coordinate axes is at the bottom of the central axis of the source video, and the subtitle reference position is at the bottom of the central axis of the subtitles, as shown in the figure below.
-![image](https://ie-mps-1258344699.cos.ap-nanjing.tencentcos.cn/common/cloud/mps-demo/102_ai_subtitle/subtitle_style.png)
-
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return YPos Subtitle position on the Y-axis. If this parameter is specified, the built-in coordinates in the subtitle file will be ignored. The pixel and percentage formats are supported.
-
- - Pixel: Npx. Value range of N: [0,4096].
- - Percentage: N%. Value range of N: [0,100]. For example, 10% indicates that the subtitle position on the Y-axis is 10% of the video height.
+-.
+-Percentage: N%, N range: [0,100]; for example, 10% means subtitle y-coordinate = 10% * source video height.
 
 By default, the position is 4% of the source video height.
-Note: The origin of the coordinate axes is at the bottom of the central axis of the source video, and the subtitle reference position is at the bottom of the central axis of the subtitles, as shown in the figure below.
+Note: The origin of the coordinate axes is at the bottom of the central axis of the source video, and the subtitle reference position is at the bottom of the central axis of the subtitles, see the following diagram.
+![image](https://ie-mps-1258344699.cos.ap-nanjing.tencentcos.cn/common/cloud/mps-demo/102_ai_subtitle/subtitle_style.png)
+ 
+     * @return YPos Subtitle y-axis coordinate position. Specify this parameter to ignore the built-in coordinates of the subtitle file. Support pixel and percentage format.
+
+-.
+-Percentage: N%, N range: [0,100]; for example, 10% means subtitle y-coordinate = 10% * source video height.
+
+By default, the position is 4% of the source video height.
+Note: The origin of the coordinate axes is at the bottom of the central axis of the source video, and the subtitle reference position is at the bottom of the central axis of the subtitles, see the following diagram.
 ![image](https://ie-mps-1258344699.cos.ap-nanjing.tencentcos.cn/common/cloud/mps-demo/102_ai_subtitle/subtitle_style.png)
 
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public String getYPos() {
         return this.YPos;
     }
 
     /**
-     * Set Subtitle position on the Y-axis. If this parameter is specified, the built-in coordinates in the subtitle file will be ignored. The pixel and percentage formats are supported.
+     * Set Subtitle y-axis coordinate position. Specify this parameter to ignore the built-in coordinates of the subtitle file. Support pixel and percentage format.
 
- - Pixel: Npx. Value range of N: [0,4096].
- - Percentage: N%. Value range of N: [0,100]. For example, 10% indicates that the subtitle position on the Y-axis is 10% of the video height.
-
-By default, the position is 4% of the source video height.
-Note: The origin of the coordinate axes is at the bottom of the central axis of the source video, and the subtitle reference position is at the bottom of the central axis of the subtitles, as shown in the figure below.
-![image](https://ie-mps-1258344699.cos.ap-nanjing.tencentcos.cn/common/cloud/mps-demo/102_ai_subtitle/subtitle_style.png)
-
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param YPos Subtitle position on the Y-axis. If this parameter is specified, the built-in coordinates in the subtitle file will be ignored. The pixel and percentage formats are supported.
-
- - Pixel: Npx. Value range of N: [0,4096].
- - Percentage: N%. Value range of N: [0,100]. For example, 10% indicates that the subtitle position on the Y-axis is 10% of the video height.
+-.
+-Percentage: N%, N range: [0,100]; for example, 10% means subtitle y-coordinate = 10% * source video height.
 
 By default, the position is 4% of the source video height.
-Note: The origin of the coordinate axes is at the bottom of the central axis of the source video, and the subtitle reference position is at the bottom of the central axis of the subtitles, as shown in the figure below.
+Note: The origin of the coordinate axes is at the bottom of the central axis of the source video, and the subtitle reference position is at the bottom of the central axis of the subtitles, see the following diagram.
 ![image](https://ie-mps-1258344699.cos.ap-nanjing.tencentcos.cn/common/cloud/mps-demo/102_ai_subtitle/subtitle_style.png)
 
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @param YPos Subtitle y-axis coordinate position. Specify this parameter to ignore the built-in coordinates of the subtitle file. Support pixel and percentage format.
+
+-.
+-Percentage: N%, N range: [0,100]; for example, 10% means subtitle y-coordinate = 10% * source video height.
+
+By default, the position is 4% of the source video height.
+Note: The origin of the coordinate axes is at the bottom of the central axis of the source video, and the subtitle reference position is at the bottom of the central axis of the subtitles, see the following diagram.
+![image](https://ie-mps-1258344699.cos.ap-nanjing.tencentcos.cn/common/cloud/mps-demo/102_ai_subtitle/subtitle_style.png)
+
      */
     public void setYPos(String YPos) {
         this.YPos = YPos;
     }
 
     /**
-     * Get Subtitle background position on the Y-axis. Pixel and percentage formats are supported.
+     * Get y-axis coordinate position of the subtitle background base plate; Support pixel and percentage format:
 
- - Pixel: Npx. Value range of N: [0,4096].
- - Percentage: N%. Value range of N: [0,100]. For example, 10% indicates that the subtitle background position on the Y-axis is 10% of the video height.
-
-If this parameter is not specified, the subtitle background is disabled.
-Note: The origin of the coordinate axes is at the bottom of the central axis of the source video, and the reference position of the subtitle background is at the bottom of the central axis of the source video, as shown in the figure below.
-![image](https://ie-mps-1258344699.cos.ap-nanjing.tencentcos.cn/common/cloud/mps-demo/102_ai_subtitle/subtitle_style.png)
-
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return BoardY Subtitle background position on the Y-axis. Pixel and percentage formats are supported.
-
- - Pixel: Npx. Value range of N: [0,4096].
- - Percentage: N%. Value range of N: [0,100]. For example, 10% indicates that the subtitle background position on the Y-axis is 10% of the video height.
+-.
+-Percentage: N%, N range: [0,100]; for example, 10% means the y-coordinate of the subtitle background base plate = 10% * video height.
 
 If this parameter is not specified, the subtitle background is disabled.
-Note: The origin of the coordinate axes is at the bottom of the central axis of the source video, and the reference position of the subtitle background is at the bottom of the central axis of the source video, as shown in the figure below.
+Note: The origin of the coordinate axes is at the bottom of the central axis of the source video, and the reference point of the subtitle background base plate is at the bottom of its central axis. Refer to the figure below.
+![image](https://ie-mps-1258344699.cos.ap-nanjing.tencentcos.cn/common/cloud/mps-demo/102_ai_subtitle/subtitle_style.png)
+ 
+     * @return BoardY y-axis coordinate position of the subtitle background base plate; Support pixel and percentage format:
+
+-.
+-Percentage: N%, N range: [0,100]; for example, 10% means the y-coordinate of the subtitle background base plate = 10% * video height.
+
+If this parameter is not specified, the subtitle background is disabled.
+Note: The origin of the coordinate axes is at the bottom of the central axis of the source video, and the reference point of the subtitle background base plate is at the bottom of its central axis. Refer to the figure below.
 ![image](https://ie-mps-1258344699.cos.ap-nanjing.tencentcos.cn/common/cloud/mps-demo/102_ai_subtitle/subtitle_style.png)
 
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public String getBoardY() {
         return this.BoardY;
     }
 
     /**
-     * Set Subtitle background position on the Y-axis. Pixel and percentage formats are supported.
+     * Set y-axis coordinate position of the subtitle background base plate; Support pixel and percentage format:
 
- - Pixel: Npx. Value range of N: [0,4096].
- - Percentage: N%. Value range of N: [0,100]. For example, 10% indicates that the subtitle background position on the Y-axis is 10% of the video height.
-
-If this parameter is not specified, the subtitle background is disabled.
-Note: The origin of the coordinate axes is at the bottom of the central axis of the source video, and the reference position of the subtitle background is at the bottom of the central axis of the source video, as shown in the figure below.
-![image](https://ie-mps-1258344699.cos.ap-nanjing.tencentcos.cn/common/cloud/mps-demo/102_ai_subtitle/subtitle_style.png)
-
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param BoardY Subtitle background position on the Y-axis. Pixel and percentage formats are supported.
-
- - Pixel: Npx. Value range of N: [0,4096].
- - Percentage: N%. Value range of N: [0,100]. For example, 10% indicates that the subtitle background position on the Y-axis is 10% of the video height.
+-.
+-Percentage: N%, N range: [0,100]; for example, 10% means the y-coordinate of the subtitle background base plate = 10% * video height.
 
 If this parameter is not specified, the subtitle background is disabled.
-Note: The origin of the coordinate axes is at the bottom of the central axis of the source video, and the reference position of the subtitle background is at the bottom of the central axis of the source video, as shown in the figure below.
+Note: The origin of the coordinate axes is at the bottom of the central axis of the source video, and the reference point of the subtitle background base plate is at the bottom of its central axis. Refer to the figure below.
 ![image](https://ie-mps-1258344699.cos.ap-nanjing.tencentcos.cn/common/cloud/mps-demo/102_ai_subtitle/subtitle_style.png)
 
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @param BoardY y-axis coordinate position of the subtitle background base plate; Support pixel and percentage format:
+
+-.
+-Percentage: N%, N range: [0,100]; for example, 10% means the y-coordinate of the subtitle background base plate = 10% * video height.
+
+If this parameter is not specified, the subtitle background is disabled.
+Note: The origin of the coordinate axes is at the bottom of the central axis of the source video, and the reference point of the subtitle background base plate is at the bottom of its central axis. Refer to the figure below.
+![image](https://ie-mps-1258344699.cos.ap-nanjing.tencentcos.cn/common/cloud/mps-demo/102_ai_subtitle/subtitle_style.png)
+
      */
     public void setBoardY(String BoardY) {
         this.BoardY = BoardY;
@@ -794,14 +745,12 @@ Note: This field may return null, indicating that no valid value can be obtained
 - Value range for pixels: [0,4096].
 - Value range for percentages: [0, 100].
 If background is enabled and this parameter is not specified, the default width is 90% of the source video width.
-
-Note: This field may return null, indicating that no valid values can be obtained. 
+ 
      * @return BoardWidth Background width. The value should be a positive integer.
 - Value range for pixels: [0,4096].
 - Value range for percentages: [0, 100].
 If background is enabled and this parameter is not specified, the default width is 90% of the source video width.
 
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getBoardWidth() {
         return this.BoardWidth;
@@ -813,13 +762,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
 - Value range for percentages: [0, 100].
 If background is enabled and this parameter is not specified, the default width is 90% of the source video width.
 
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param BoardWidth Background width. The value should be a positive integer.
 - Value range for pixels: [0,4096].
 - Value range for percentages: [0, 100].
 If background is enabled and this parameter is not specified, the default width is 90% of the source video width.
 
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setBoardWidth(Long BoardWidth) {
         this.BoardWidth = BoardWidth;
@@ -830,14 +777,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
 - Value range for pixels: [0,4096].
 - Value range for percentages: [0, 100].
 If background is enabled and this parameter is not specified, the default height is 15% of the source video height.
-
-Note: This field may return null, indicating that no valid values can be obtained. 
+ 
      * @return BoardHeight Background height. The value should be a positive integer.
 - Value range for pixels: [0,4096].
 - Value range for percentages: [0, 100].
 If background is enabled and this parameter is not specified, the default height is 15% of the source video height.
 
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getBoardHeight() {
         return this.BoardHeight;
@@ -849,13 +794,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
 - Value range for percentages: [0, 100].
 If background is enabled and this parameter is not specified, the default height is 15% of the source video height.
 
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param BoardHeight Background height. The value should be a positive integer.
 - Value range for pixels: [0,4096].
 - Value range for percentages: [0, 100].
 If background is enabled and this parameter is not specified, the default height is 15% of the source video height.
 
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setBoardHeight(Long BoardHeight) {
         this.BoardHeight = BoardHeight;
@@ -863,11 +806,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get Board color. Format: 0xRRGGBB.
-Default value: 0x000000 (black).
-Note: This field may return null, indicating that no valid value can be obtained. 
+Default value: 0x000000 (black). 
      * @return BoardColor Board color. Format: 0xRRGGBB.
 Default value: 0x000000 (black).
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public String getBoardColor() {
         return this.BoardColor;
@@ -876,10 +817,8 @@ Note: This field may return null, indicating that no valid value can be obtained
     /**
      * Set Board color. Format: 0xRRGGBB.
 Default value: 0x000000 (black).
-Note: This field may return null, indicating that no valid value can be obtained.
      * @param BoardColor Board color. Format: 0xRRGGBB.
 Default value: 0x000000 (black).
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setBoardColor(String BoardColor) {
         this.BoardColor = BoardColor;
@@ -889,13 +828,11 @@ Note: This field may return null, indicating that no valid value can be obtained
      * Get Subtitle background transparency. Value range: [0, 1].
 <li>0: completely transparent.</li>
 <li>1: completely opaque.</li>
-Default value: 0.8.
-Note: This field may return null, indicating that no valid value can be obtained. 
+Default value: 0.8. 
      * @return BoardAlpha Subtitle background transparency. Value range: [0, 1].
 <li>0: completely transparent.</li>
 <li>1: completely opaque.</li>
 Default value: 0.8.
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public Float getBoardAlpha() {
         return this.BoardAlpha;
@@ -906,12 +843,10 @@ Note: This field may return null, indicating that no valid value can be obtained
 <li>0: completely transparent.</li>
 <li>1: completely opaque.</li>
 Default value: 0.8.
-Note: This field may return null, indicating that no valid value can be obtained.
      * @param BoardAlpha Subtitle background transparency. Value range: [0, 1].
 <li>0: completely transparent.</li>
 <li>1: completely opaque.</li>
 Default value: 0.8.
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setBoardAlpha(Float BoardAlpha) {
         this.BoardAlpha = BoardAlpha;

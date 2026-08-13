@@ -24,11 +24,10 @@ import java.util.HashMap;
 public class ImageEraseLogoConfig extends AbstractModel {
 
     /**
-    * Capability configuration enabling status. Valid values:
-<li>ON: enabled</li>
-<li>OFF: disabled</li>
+    * Capability configuration switch. Valid values:
+<li>ON: enabled;</li>
+<li>OFF: disabled.</li>
 Default value: ON.
-Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("Switch")
     @Expose
@@ -36,41 +35,35 @@ Note: This field may return null, indicating that no valid value can be obtained
 
     /**
     * Multiple box selection areas that need to be erased, with a maximum of 16 areas available.
-Note: This field may return null, indicating that no valid value can be obtained.
-
-Note: This field may return null, indicating that no valid value can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ImageAreaBoxes")
     @Expose
     private ImageAreaBoxInfo [] ImageAreaBoxes;
 
     /**
-     * Get Capability configuration enabling status. Valid values:
-<li>ON: enabled</li>
-<li>OFF: disabled</li>
+     * Get Capability configuration switch. Valid values:
+<li>ON: enabled;</li>
+<li>OFF: disabled.</li>
+Default value: ON. 
+     * @return Switch Capability configuration switch. Valid values:
+<li>ON: enabled;</li>
+<li>OFF: disabled.</li>
 Default value: ON.
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return Switch Capability configuration enabling status. Valid values:
-<li>ON: enabled</li>
-<li>OFF: disabled</li>
-Default value: ON.
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set Capability configuration enabling status. Valid values:
-<li>ON: enabled</li>
-<li>OFF: disabled</li>
+     * Set Capability configuration switch. Valid values:
+<li>ON: enabled;</li>
+<li>OFF: disabled.</li>
 Default value: ON.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param Switch Capability configuration enabling status. Valid values:
-<li>ON: enabled</li>
-<li>OFF: disabled</li>
+     * @param Switch Capability configuration switch. Valid values:
+<li>ON: enabled;</li>
+<li>OFF: disabled.</li>
 Default value: ON.
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
@@ -78,13 +71,9 @@ Note: This field may return null, indicating that no valid value can be obtained
 
     /**
      * Get Multiple box selection areas that need to be erased, with a maximum of 16 areas available.
-Note: This field may return null, indicating that no valid value can be obtained.
-
-Note: This field may return null, indicating that no valid value can be obtained. 
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return ImageAreaBoxes Multiple box selection areas that need to be erased, with a maximum of 16 areas available.
-Note: This field may return null, indicating that no valid value can be obtained.
-
-Note: This field may return null, indicating that no valid value can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public ImageAreaBoxInfo [] getImageAreaBoxes() {
         return this.ImageAreaBoxes;
@@ -92,13 +81,9 @@ Note: This field may return null, indicating that no valid value can be obtained
 
     /**
      * Set Multiple box selection areas that need to be erased, with a maximum of 16 areas available.
-Note: This field may return null, indicating that no valid value can be obtained.
-
-Note: This field may return null, indicating that no valid value can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param ImageAreaBoxes Multiple box selection areas that need to be erased, with a maximum of 16 areas available.
-Note: This field may return null, indicating that no valid value can be obtained.
-
-Note: This field may return null, indicating that no valid value can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setImageAreaBoxes(ImageAreaBoxInfo [] ImageAreaBoxes) {
         this.ImageAreaBoxes = ImageAreaBoxes;

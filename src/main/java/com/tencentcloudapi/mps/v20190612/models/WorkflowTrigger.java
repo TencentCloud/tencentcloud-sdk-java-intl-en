@@ -35,18 +35,16 @@ public class WorkflowTrigger extends AbstractModel {
     private String Type;
 
     /**
-    * This parameter is required and valid when `Type` is `CosFileUpload`, indicating the COS trigger rule.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Required and valid when Type is CosFileUpload. This is a COS trigger rule.
     */
     @SerializedName("CosFileUploadTrigger")
     @Expose
     private CosFileUploadTrigger CosFileUploadTrigger;
 
     /**
-    * The AWS S3 trigger. This parameter is valid and required if `Type` is `AwsS3FileUpload`.
+    * Required and valid when Type is AwsS3FileUpload. This is the AWS S3 trigger rule.
 
-Note: Currently, the key for the AWS S3 bucket, the trigger SQS queue, and the callback SQS queue must be the same.
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: Currently, the keys for AWS S3, the corresponding trigger queue SQS, and the callback queue SQS should be the same.
     */
     @SerializedName("AwsS3FileUploadTrigger")
     @Expose
@@ -85,48 +83,40 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get This parameter is required and valid when `Type` is `CosFileUpload`, indicating the COS trigger rule.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return CosFileUploadTrigger This parameter is required and valid when `Type` is `CosFileUpload`, indicating the COS trigger rule.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Required and valid when Type is CosFileUpload. This is a COS trigger rule. 
+     * @return CosFileUploadTrigger Required and valid when Type is CosFileUpload. This is a COS trigger rule.
      */
     public CosFileUploadTrigger getCosFileUploadTrigger() {
         return this.CosFileUploadTrigger;
     }
 
     /**
-     * Set This parameter is required and valid when `Type` is `CosFileUpload`, indicating the COS trigger rule.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param CosFileUploadTrigger This parameter is required and valid when `Type` is `CosFileUpload`, indicating the COS trigger rule.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Required and valid when Type is CosFileUpload. This is a COS trigger rule.
+     * @param CosFileUploadTrigger Required and valid when Type is CosFileUpload. This is a COS trigger rule.
      */
     public void setCosFileUploadTrigger(CosFileUploadTrigger CosFileUploadTrigger) {
         this.CosFileUploadTrigger = CosFileUploadTrigger;
     }
 
     /**
-     * Get The AWS S3 trigger. This parameter is valid and required if `Type` is `AwsS3FileUpload`.
+     * Get Required and valid when Type is AwsS3FileUpload. This is the AWS S3 trigger rule.
 
-Note: Currently, the key for the AWS S3 bucket, the trigger SQS queue, and the callback SQS queue must be the same.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return AwsS3FileUploadTrigger The AWS S3 trigger. This parameter is valid and required if `Type` is `AwsS3FileUpload`.
+Note: Currently, the keys for AWS S3, the corresponding trigger queue SQS, and the callback queue SQS should be the same. 
+     * @return AwsS3FileUploadTrigger Required and valid when Type is AwsS3FileUpload. This is the AWS S3 trigger rule.
 
-Note: Currently, the key for the AWS S3 bucket, the trigger SQS queue, and the callback SQS queue must be the same.
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: Currently, the keys for AWS S3, the corresponding trigger queue SQS, and the callback queue SQS should be the same.
      */
     public AwsS3FileUploadTrigger getAwsS3FileUploadTrigger() {
         return this.AwsS3FileUploadTrigger;
     }
 
     /**
-     * Set The AWS S3 trigger. This parameter is valid and required if `Type` is `AwsS3FileUpload`.
+     * Set Required and valid when Type is AwsS3FileUpload. This is the AWS S3 trigger rule.
 
-Note: Currently, the key for the AWS S3 bucket, the trigger SQS queue, and the callback SQS queue must be the same.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param AwsS3FileUploadTrigger The AWS S3 trigger. This parameter is valid and required if `Type` is `AwsS3FileUpload`.
+Note: Currently, the keys for AWS S3, the corresponding trigger queue SQS, and the callback queue SQS should be the same.
+     * @param AwsS3FileUploadTrigger Required and valid when Type is AwsS3FileUpload. This is the AWS S3 trigger rule.
 
-Note: Currently, the key for the AWS S3 bucket, the trigger SQS queue, and the callback SQS queue must be the same.
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: Currently, the keys for AWS S3, the corresponding trigger queue SQS, and the callback queue SQS should be the same.
      */
     public void setAwsS3FileUploadTrigger(AwsS3FileUploadTrigger AwsS3FileUploadTrigger) {
         this.AwsS3FileUploadTrigger = AwsS3FileUploadTrigger;

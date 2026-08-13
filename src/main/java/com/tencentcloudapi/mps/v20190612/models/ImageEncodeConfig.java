@@ -25,7 +25,6 @@ public class ImageEncodeConfig extends AbstractModel {
 
     /**
     * Image format. Valid values: JPEG, PNG, BMP, and WebP. If it is not specified, the original image format is used. Animations are not supported.
-Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("Format")
     @Expose
@@ -33,17 +32,14 @@ Note: This field may return null, indicating that no valid value can be obtained
 
     /**
     * Relative image quality. Valid range: 1 - 100. The value is based on the original image quality, and the default is the original image quality.
-Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("Quality")
     @Expose
     private Long Quality;
 
     /**
-     * Get Image format. Valid values: JPEG, PNG, BMP, and WebP. If it is not specified, the original image format is used. Animations are not supported.
-Note: This field may return null, indicating that no valid value can be obtained. 
+     * Get Image format. Valid values: JPEG, PNG, BMP, and WebP. If it is not specified, the original image format is used. Animations are not supported. 
      * @return Format Image format. Valid values: JPEG, PNG, BMP, and WebP. If it is not specified, the original image format is used. Animations are not supported.
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public String getFormat() {
         return this.Format;
@@ -51,19 +47,15 @@ Note: This field may return null, indicating that no valid value can be obtained
 
     /**
      * Set Image format. Valid values: JPEG, PNG, BMP, and WebP. If it is not specified, the original image format is used. Animations are not supported.
-Note: This field may return null, indicating that no valid value can be obtained.
      * @param Format Image format. Valid values: JPEG, PNG, BMP, and WebP. If it is not specified, the original image format is used. Animations are not supported.
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setFormat(String Format) {
         this.Format = Format;
     }
 
     /**
-     * Get Relative image quality. Valid range: 1 - 100. The value is based on the original image quality, and the default is the original image quality.
-Note: This field may return null, indicating that no valid value can be obtained. 
+     * Get Relative image quality. Valid range: 1 - 100. The value is based on the original image quality, and the default is the original image quality. 
      * @return Quality Relative image quality. Valid range: 1 - 100. The value is based on the original image quality, and the default is the original image quality.
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public Long getQuality() {
         return this.Quality;
@@ -71,9 +63,7 @@ Note: This field may return null, indicating that no valid value can be obtained
 
     /**
      * Set Relative image quality. Valid range: 1 - 100. The value is based on the original image quality, and the default is the original image quality.
-Note: This field may return null, indicating that no valid value can be obtained.
      * @param Quality Relative image quality. Valid range: 1 - 100. The value is based on the original image quality, and the default is the original image quality.
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setQuality(Long Quality) {
         this.Quality = Quality;

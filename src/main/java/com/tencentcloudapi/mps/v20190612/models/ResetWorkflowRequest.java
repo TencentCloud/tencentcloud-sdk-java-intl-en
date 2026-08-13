@@ -31,21 +31,21 @@ public class ResetWorkflowRequest extends AbstractModel {
     private Long WorkflowId;
 
     /**
-    * Workflow name of up to 128 characters, which must be unique for the same user.
+    * Workflow name, up to 128 characters. The name is unique for the same user.
     */
     @SerializedName("WorkflowName")
     @Expose
     private String WorkflowName;
 
     /**
-    * Triggering rule bound to a workflow. If an uploaded video hits the rule for the object, the workflow will be triggered.
+    * The trigger rule bound to the workflow triggers the workflow when an uploaded video hits the rule for the object.
     */
     @SerializedName("Trigger")
     @Expose
     private WorkflowTrigger Trigger;
 
     /**
-    * Output configuration of a video processing output file. If this parameter is left empty, the storage location in `Trigger` will be inherited.
+    * Video processing output configuration. If left blank, it inherits the storage location from Trigger.
     */
     @SerializedName("OutputStorage")
     @Expose
@@ -60,42 +60,42 @@ If left empty, it is the same as the directory of the trigger file, that is, `{i
     private String OutputDir;
 
     /**
-    * Parameter of a video processing task.
+    * Parameters for the video processing task.
     */
     @SerializedName("MediaProcessTask")
     @Expose
     private MediaProcessTaskInput MediaProcessTask;
 
     /**
-    * Type parameter of a video content audit task.
+    * Parameters for the video content review task.
     */
     @SerializedName("AiContentReviewTask")
     @Expose
     private AiContentReviewTaskInput AiContentReviewTask;
 
     /**
-    * Video content analysis task parameter.
+    * Parameters for the video content analysis task.
     */
     @SerializedName("AiAnalysisTask")
     @Expose
     private AiAnalysisTaskInput AiAnalysisTask;
 
     /**
-    * Type parameter of a video content recognition task.
+    * Parameters for the video content recognition task.
     */
     @SerializedName("AiRecognitionTask")
     @Expose
     private AiRecognitionTaskInput AiRecognitionTask;
 
     /**
-    * Workflow priority. The higher the value, the higher the priority. Value range: [-10, 10]. If this parameter is left empty, 0 will be used.
+    * Priority of the workflow. The higher the value, the higher the priority. The value range is from -10 to 10. If left blank, the default value is 0.
     */
     @SerializedName("TaskPriority")
     @Expose
     private Long TaskPriority;
 
     /**
-    * Event notification information of a task. If this parameter is left empty, no event notifications will be obtained.
+    * Event notification information of the task. If it is left unspecified, it indicates that no event notification is obtained.
     */
     @SerializedName("TaskNotifyConfig")
     @Expose
@@ -118,48 +118,48 @@ If left empty, it is the same as the directory of the trigger file, that is, `{i
     }
 
     /**
-     * Get Workflow name of up to 128 characters, which must be unique for the same user. 
-     * @return WorkflowName Workflow name of up to 128 characters, which must be unique for the same user.
+     * Get Workflow name, up to 128 characters. The name is unique for the same user. 
+     * @return WorkflowName Workflow name, up to 128 characters. The name is unique for the same user.
      */
     public String getWorkflowName() {
         return this.WorkflowName;
     }
 
     /**
-     * Set Workflow name of up to 128 characters, which must be unique for the same user.
-     * @param WorkflowName Workflow name of up to 128 characters, which must be unique for the same user.
+     * Set Workflow name, up to 128 characters. The name is unique for the same user.
+     * @param WorkflowName Workflow name, up to 128 characters. The name is unique for the same user.
      */
     public void setWorkflowName(String WorkflowName) {
         this.WorkflowName = WorkflowName;
     }
 
     /**
-     * Get Triggering rule bound to a workflow. If an uploaded video hits the rule for the object, the workflow will be triggered. 
-     * @return Trigger Triggering rule bound to a workflow. If an uploaded video hits the rule for the object, the workflow will be triggered.
+     * Get The trigger rule bound to the workflow triggers the workflow when an uploaded video hits the rule for the object. 
+     * @return Trigger The trigger rule bound to the workflow triggers the workflow when an uploaded video hits the rule for the object.
      */
     public WorkflowTrigger getTrigger() {
         return this.Trigger;
     }
 
     /**
-     * Set Triggering rule bound to a workflow. If an uploaded video hits the rule for the object, the workflow will be triggered.
-     * @param Trigger Triggering rule bound to a workflow. If an uploaded video hits the rule for the object, the workflow will be triggered.
+     * Set The trigger rule bound to the workflow triggers the workflow when an uploaded video hits the rule for the object.
+     * @param Trigger The trigger rule bound to the workflow triggers the workflow when an uploaded video hits the rule for the object.
      */
     public void setTrigger(WorkflowTrigger Trigger) {
         this.Trigger = Trigger;
     }
 
     /**
-     * Get Output configuration of a video processing output file. If this parameter is left empty, the storage location in `Trigger` will be inherited. 
-     * @return OutputStorage Output configuration of a video processing output file. If this parameter is left empty, the storage location in `Trigger` will be inherited.
+     * Get Video processing output configuration. If left blank, it inherits the storage location from Trigger. 
+     * @return OutputStorage Video processing output configuration. If left blank, it inherits the storage location from Trigger.
      */
     public TaskOutputStorage getOutputStorage() {
         return this.OutputStorage;
     }
 
     /**
-     * Set Output configuration of a video processing output file. If this parameter is left empty, the storage location in `Trigger` will be inherited.
-     * @param OutputStorage Output configuration of a video processing output file. If this parameter is left empty, the storage location in `Trigger` will be inherited.
+     * Set Video processing output configuration. If left blank, it inherits the storage location from Trigger.
+     * @param OutputStorage Video processing output configuration. If left blank, it inherits the storage location from Trigger.
      */
     public void setOutputStorage(TaskOutputStorage OutputStorage) {
         this.OutputStorage = OutputStorage;
@@ -186,96 +186,96 @@ If left empty, it is the same as the directory of the trigger file, that is, `{i
     }
 
     /**
-     * Get Parameter of a video processing task. 
-     * @return MediaProcessTask Parameter of a video processing task.
+     * Get Parameters for the video processing task. 
+     * @return MediaProcessTask Parameters for the video processing task.
      */
     public MediaProcessTaskInput getMediaProcessTask() {
         return this.MediaProcessTask;
     }
 
     /**
-     * Set Parameter of a video processing task.
-     * @param MediaProcessTask Parameter of a video processing task.
+     * Set Parameters for the video processing task.
+     * @param MediaProcessTask Parameters for the video processing task.
      */
     public void setMediaProcessTask(MediaProcessTaskInput MediaProcessTask) {
         this.MediaProcessTask = MediaProcessTask;
     }
 
     /**
-     * Get Type parameter of a video content audit task. 
-     * @return AiContentReviewTask Type parameter of a video content audit task.
+     * Get Parameters for the video content review task. 
+     * @return AiContentReviewTask Parameters for the video content review task.
      */
     public AiContentReviewTaskInput getAiContentReviewTask() {
         return this.AiContentReviewTask;
     }
 
     /**
-     * Set Type parameter of a video content audit task.
-     * @param AiContentReviewTask Type parameter of a video content audit task.
+     * Set Parameters for the video content review task.
+     * @param AiContentReviewTask Parameters for the video content review task.
      */
     public void setAiContentReviewTask(AiContentReviewTaskInput AiContentReviewTask) {
         this.AiContentReviewTask = AiContentReviewTask;
     }
 
     /**
-     * Get Video content analysis task parameter. 
-     * @return AiAnalysisTask Video content analysis task parameter.
+     * Get Parameters for the video content analysis task. 
+     * @return AiAnalysisTask Parameters for the video content analysis task.
      */
     public AiAnalysisTaskInput getAiAnalysisTask() {
         return this.AiAnalysisTask;
     }
 
     /**
-     * Set Video content analysis task parameter.
-     * @param AiAnalysisTask Video content analysis task parameter.
+     * Set Parameters for the video content analysis task.
+     * @param AiAnalysisTask Parameters for the video content analysis task.
      */
     public void setAiAnalysisTask(AiAnalysisTaskInput AiAnalysisTask) {
         this.AiAnalysisTask = AiAnalysisTask;
     }
 
     /**
-     * Get Type parameter of a video content recognition task. 
-     * @return AiRecognitionTask Type parameter of a video content recognition task.
+     * Get Parameters for the video content recognition task. 
+     * @return AiRecognitionTask Parameters for the video content recognition task.
      */
     public AiRecognitionTaskInput getAiRecognitionTask() {
         return this.AiRecognitionTask;
     }
 
     /**
-     * Set Type parameter of a video content recognition task.
-     * @param AiRecognitionTask Type parameter of a video content recognition task.
+     * Set Parameters for the video content recognition task.
+     * @param AiRecognitionTask Parameters for the video content recognition task.
      */
     public void setAiRecognitionTask(AiRecognitionTaskInput AiRecognitionTask) {
         this.AiRecognitionTask = AiRecognitionTask;
     }
 
     /**
-     * Get Workflow priority. The higher the value, the higher the priority. Value range: [-10, 10]. If this parameter is left empty, 0 will be used. 
-     * @return TaskPriority Workflow priority. The higher the value, the higher the priority. Value range: [-10, 10]. If this parameter is left empty, 0 will be used.
+     * Get Priority of the workflow. The higher the value, the higher the priority. The value range is from -10 to 10. If left blank, the default value is 0. 
+     * @return TaskPriority Priority of the workflow. The higher the value, the higher the priority. The value range is from -10 to 10. If left blank, the default value is 0.
      */
     public Long getTaskPriority() {
         return this.TaskPriority;
     }
 
     /**
-     * Set Workflow priority. The higher the value, the higher the priority. Value range: [-10, 10]. If this parameter is left empty, 0 will be used.
-     * @param TaskPriority Workflow priority. The higher the value, the higher the priority. Value range: [-10, 10]. If this parameter is left empty, 0 will be used.
+     * Set Priority of the workflow. The higher the value, the higher the priority. The value range is from -10 to 10. If left blank, the default value is 0.
+     * @param TaskPriority Priority of the workflow. The higher the value, the higher the priority. The value range is from -10 to 10. If left blank, the default value is 0.
      */
     public void setTaskPriority(Long TaskPriority) {
         this.TaskPriority = TaskPriority;
     }
 
     /**
-     * Get Event notification information of a task. If this parameter is left empty, no event notifications will be obtained. 
-     * @return TaskNotifyConfig Event notification information of a task. If this parameter is left empty, no event notifications will be obtained.
+     * Get Event notification information of the task. If it is left unspecified, it indicates that no event notification is obtained. 
+     * @return TaskNotifyConfig Event notification information of the task. If it is left unspecified, it indicates that no event notification is obtained.
      */
     public TaskNotifyConfig getTaskNotifyConfig() {
         return this.TaskNotifyConfig;
     }
 
     /**
-     * Set Event notification information of a task. If this parameter is left empty, no event notifications will be obtained.
-     * @param TaskNotifyConfig Event notification information of a task. If this parameter is left empty, no event notifications will be obtained.
+     * Set Event notification information of the task. If it is left unspecified, it indicates that no event notification is obtained.
+     * @param TaskNotifyConfig Event notification information of the task. If it is left unspecified, it indicates that no event notification is obtained.
      */
     public void setTaskNotifyConfig(TaskNotifyConfig TaskNotifyConfig) {
         this.TaskNotifyConfig = TaskNotifyConfig;

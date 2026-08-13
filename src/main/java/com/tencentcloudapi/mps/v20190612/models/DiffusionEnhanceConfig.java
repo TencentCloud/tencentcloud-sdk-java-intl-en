@@ -34,12 +34,12 @@ Default value: OFF.
     private String Switch;
 
     /**
-    * Strength type. Valid values:
+    * Strength type, available values:
+
 weak
 normal
 strong
 Default value: normal.
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Type")
     @Expose
@@ -74,36 +74,36 @@ Default value: OFF.
     }
 
     /**
-     * Get Strength type. Valid values:
+     * Get Strength type, available values:
+
+weak
+normal
+strong
+Default value: normal. 
+     * @return Type Strength type, available values:
+
 weak
 normal
 strong
 Default value: normal.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Type Strength type. Valid values:
-weak
-normal
-strong
-Default value: normal.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set Strength type. Valid values:
+     * Set Strength type, available values:
+
 weak
 normal
 strong
 Default value: normal.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Type Strength type. Valid values:
+     * @param Type Strength type, available values:
+
 weak
 normal
 strong
 Default value: normal.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setType(String Type) {
         this.Type = Type;

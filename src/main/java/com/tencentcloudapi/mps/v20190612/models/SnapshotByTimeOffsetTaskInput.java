@@ -52,8 +52,7 @@ public class SnapshotByTimeOffsetTaskInput extends AbstractModel {
     private WatermarkInput [] WatermarkSet;
 
     /**
-    * <p>Target storage for the file after the time point screenshot is taken. If this is not specified, it inherits the value from the upper-level OutputStorage.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Target storage for the file after time point screenshot taking. If not specified, it inherits the upper-level OutputStorage value.</p>
     */
     @SerializedName("OutputStorage")
     @Expose
@@ -67,8 +66,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String OutputObjectPath;
 
     /**
-    * <p>Rule of the <code>{number}</code> variable in the output path after the time point screenshot is taken.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Rule of the <code>{number}</code> variable in the output path after time point screenshot taking.</p>
     */
     @SerializedName("ObjectNumberFormat")
     @Expose
@@ -146,20 +144,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get <p>Target storage for the file after the time point screenshot is taken. If this is not specified, it inherits the value from the upper-level OutputStorage.</p>
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return OutputStorage <p>Target storage for the file after the time point screenshot is taken. If this is not specified, it inherits the value from the upper-level OutputStorage.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Target storage for the file after time point screenshot taking. If not specified, it inherits the upper-level OutputStorage value.</p> 
+     * @return OutputStorage <p>Target storage for the file after time point screenshot taking. If not specified, it inherits the upper-level OutputStorage value.</p>
      */
     public TaskOutputStorage getOutputStorage() {
         return this.OutputStorage;
     }
 
     /**
-     * Set <p>Target storage for the file after the time point screenshot is taken. If this is not specified, it inherits the value from the upper-level OutputStorage.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param OutputStorage <p>Target storage for the file after the time point screenshot is taken. If this is not specified, it inherits the value from the upper-level OutputStorage.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Target storage for the file after time point screenshot taking. If not specified, it inherits the upper-level OutputStorage value.</p>
+     * @param OutputStorage <p>Target storage for the file after time point screenshot taking. If not specified, it inherits the upper-level OutputStorage value.</p>
      */
     public void setOutputStorage(TaskOutputStorage OutputStorage) {
         this.OutputStorage = OutputStorage;
@@ -182,20 +176,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get <p>Rule of the <code>{number}</code> variable in the output path after the time point screenshot is taken.</p>
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ObjectNumberFormat <p>Rule of the <code>{number}</code> variable in the output path after the time point screenshot is taken.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Rule of the <code>{number}</code> variable in the output path after time point screenshot taking.</p> 
+     * @return ObjectNumberFormat <p>Rule of the <code>{number}</code> variable in the output path after time point screenshot taking.</p>
      */
     public NumberFormat getObjectNumberFormat() {
         return this.ObjectNumberFormat;
     }
 
     /**
-     * Set <p>Rule of the <code>{number}</code> variable in the output path after the time point screenshot is taken.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ObjectNumberFormat <p>Rule of the <code>{number}</code> variable in the output path after the time point screenshot is taken.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Rule of the <code>{number}</code> variable in the output path after time point screenshot taking.</p>
+     * @param ObjectNumberFormat <p>Rule of the <code>{number}</code> variable in the output path after time point screenshot taking.</p>
      */
     public void setObjectNumberFormat(NumberFormat ObjectNumberFormat) {
         this.ObjectNumberFormat = ObjectNumberFormat;

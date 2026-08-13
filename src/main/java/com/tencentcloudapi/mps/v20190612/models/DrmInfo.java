@@ -58,8 +58,7 @@ Specifies that only singlefile mode can be used for MPEG-DASH.
     private String Type;
 
     /**
-    * The AES-128 encryption details.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * SimpleAes encrypted information.
     */
     @SerializedName("SimpleAesDrm")
     @Expose
@@ -197,20 +196,16 @@ Specifies that only singlefile mode can be used for MPEG-DASH.
     }
 
     /**
-     * Get The AES-128 encryption details.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return SimpleAesDrm The AES-128 encryption details.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get SimpleAes encrypted information. 
+     * @return SimpleAesDrm SimpleAes encrypted information.
      */
     public SimpleAesDrm getSimpleAesDrm() {
         return this.SimpleAesDrm;
     }
 
     /**
-     * Set The AES-128 encryption details.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param SimpleAesDrm The AES-128 encryption details.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set SimpleAes encrypted information.
+     * @param SimpleAesDrm SimpleAes encrypted information.
      */
     public void setSimpleAesDrm(SimpleAesDrm SimpleAesDrm) {
         this.SimpleAesDrm = SimpleAesDrm;

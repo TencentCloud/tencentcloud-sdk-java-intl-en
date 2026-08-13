@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DeleteImageSpriteTemplateRequest extends AbstractModel {
 
     /**
-    * Unique ID of an image sprite generating template.
+    * Unique identifier of the sprite screenshot template.
     */
     @SerializedName("Definition")
     @Expose
     private Long Definition;
 
     /**
-     * Get Unique ID of an image sprite generating template. 
-     * @return Definition Unique ID of an image sprite generating template.
+     * Get Unique identifier of the sprite screenshot template. 
+     * @return Definition Unique identifier of the sprite screenshot template.
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set Unique ID of an image sprite generating template.
-     * @param Definition Unique ID of an image sprite generating template.
+     * Set Unique identifier of the sprite screenshot template.
+     * @param Definition Unique identifier of the sprite screenshot template.
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;

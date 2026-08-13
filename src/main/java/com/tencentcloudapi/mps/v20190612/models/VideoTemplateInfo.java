@@ -107,11 +107,10 @@ If this parameter is 0 or left blank, the system will automatically set the GOP 
     private Long Gop;
 
     /**
-    * GOP value unit. Optional values:
+    * Gop value unit, value range:
 frame: indicates frame
 second: indicates second
 Default value: frame
-Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("GopUnit")
     @Expose
@@ -132,56 +131,50 @@ Default value: black.
     private String FillType;
 
     /**
-    * Specifies the constant bitrate control factor for the video. Value range: [0, 51]. Leaving this parameter blank sets it to "Automatic". It is recommended not to specify this parameter unless necessary.
-If the Mode parameter is set to VBR and the Vcrf value is also configured, MPS will process the video in VBR mode, considering both Vcrf and Bitrate parameters to balance video quality, bitrate, transcoding efficiency, and file size.
-If the Mode parameter is set to CRF, the Bitrate setting will be invalid, and encoding will be based on the Vcrf value.
-If the Mode parameter is set to ABR or CBR, the Vcrf value does not need to be configured.
-Note: This field may return null, indicating that no valid value can be obtained.
+    * Control factor for constant video bitrate. Value range: [0, 51]. If this parameter is not specified, it means "auto". If there are no special requirements, it is advisable not to specify this parameter.
+When the Mode parameter is set to VBR, if the Vcrf value is configured concurrently, MPS will process video in VBR mode, with consideration of both Vcrf and Bitrate parameter settings to balance video quality, bitrate, transcoding efficiency, and file size.
+When the Mode parameter is set to CRF, the Bitrate setting will become invalid, and encoding is performed based on the Vcrf value.
+When the Mode parameter is set to ABR or CBR, the Vcrf value does not need to be configured.
     */
     @SerializedName("Vcrf")
     @Expose
     private Long Vcrf;
 
     /**
-    * Average shard duration. value range: (0-10], unit: second.
-Leaving it blank means auto, which automatically chooses the appropriate segment duration based on video features such as GOP.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Average shard duration. Range: (0-10], unit: second
+Leave it blank to auto, which automatically chooses the appropriate segment duration based on the video's GOP and other features.
     */
     @SerializedName("HlsTime")
     @Expose
     private Long HlsTime;
 
     /**
-    * HLS segment type. Valid values:
-<li>0: HLS+TS segment</li>
-<li>2: HLS+TS byte range</li>
-<li>7: HLS+MP4 segment</li>
-<li>5: HLS+MP4 byte range</li>
+    * hls fragment type, value range:
+<li>0: HLS+TS segment.</li>
+<li>2:HLS+TS byte range</li>
+<li>7: HLS+MP4 segment.</li>
+<li>5:HLS+MP4 byte range</li>
 Default value: 0
-
-Note: This field is used for normal/TSC transcoding settings and does not apply to adaptive bitrate streaming. To configure the segment type for adaptive bitrate streaming, use the outer field.
-Note: This field may return null, indicating that no valid value can be obtained.
+Note: This field is used for ordinary/TSC transcoding settings and does not take effect for adaptive bitrate streams. If you need to configure the sharding type for an adaptive bitrate stream, you can use the outer field.
     */
     @SerializedName("SegmentType")
     @Expose
     private Long SegmentType;
 
     /**
-    * Denominator of the frame rate.
+    * Denominator of the frame rate
 Note: The value must be greater than 0.
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("FpsDenominator")
     @Expose
     private Long FpsDenominator;
 
     /**
-    * 3D video splicing mode, applicable only to mv-hevc and effective for 3d videos. valid values:
-<Li>side_by_side: the original video content is arranged in a left-right layout.</li>
-<li>top_bottom: vertical layout arrangement of original video content.</li>
-Submit the amount and cost based on the segmented resolution size.
-Default value: side_by_side.
-Note: This field may return null, indicating that no valid value can be obtained.
+    * 3D video splicing mode, only mv-hevc, 3D video takes effect, available values:
+<li>side_by_side: side-by-side layout of the original video content.</li>
+<li>top_bottom: top-bottom layout arrangement of the original video content.</li>
+Billing is based on the segmented resolution dimension for reporting usage and cost.
+Default value: side_by_side
     */
     @SerializedName("Stereo3dType")
     @Expose
@@ -190,12 +183,11 @@ Note: This field may return null, indicating that no valid value can be obtained
     /**
     * Profile, suitable for different scenarios.
 baseline: It only supports I/P-frames and non-interlaced scenarios, and is suitable for scenarios such as video calls and mobile videos.
-main: It offers I-frames, P-frames, and B-frames, and supports both interlaced and non-interlaced modes. It is mainly used in mainstream audio and video consumption products such as video players and streaming media transmission devices.
-high: the highest encoding level, with 8x8 prediction added to the main profile and support for custom quantification. It is widely used in scenarios such as Blu-ray storage and HDTV.
+Mainstream Profile, providing I-frames, P-frames, and B-frames, and supporting both interlaced and non-interlaced modes. It is primarily used in mainstream audio and video consumption products such as video players and streaming media transmission devices.
+high: The highest encoding level, adding 8X8  prediction to the Main Profile and supporting custom quantification. Widely used in Blu-ray storage and HDTV scenarios.
 default: automatic filling along with the original video.    
 
 This configuration appears only when the encoding standard is set to H264. baseline/main/high is supported. Default value: default
-Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("VideoProfile")
     @Expose
@@ -203,9 +195,8 @@ Note: This field may return null, indicating that no valid value can be obtained
 
     /**
     * Encoder level. Default value: auto ("")
-If the encoding standard is set to H264, the following options are supported: "", 1, 1.1, 1.2, 1.3, 2, 2.1, 2.2, 3, 3.1, 3.2, 4, 4.1, 4.2, 5, and 5.1.
+If the encoding standard is set to H264, the following options are supported: "", 1, 1.1, 1.2, 1.3, 2, -2.1, 2.2, 3, 3.1, 3.2, 4, 4.1, 4.2, 5, and 5.1.
 If the encoding standard is set to H265, the following options are supported: "", 1, 2, 2.1, 3, 3.1, 4, 4.1, 5, 5.1, 5.2, 6, 6.1, 6.2, and 8.5.
-Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("VideoLevel")
     @Expose
@@ -213,8 +204,7 @@ Note: This field may return null, indicating that no valid value can be obtained
 
     /**
     * Number of B-frames between reference frames. The default is auto, and a range of 0 - 16 is supported.
-Note: Leaving it blank means using the auto option.
-Note: This field may return null, indicating that no valid value can be obtained.
+Note: Leave it blank to indicate usage of auto.
     */
     @SerializedName("Bframes")
     @Expose
@@ -222,12 +212,11 @@ Note: This field may return null, indicating that no valid value can be obtained
 
     /**
     * Bitrate control mode. Optional values:
-VBR: variable bitrate. The output bitrate is adjusted based on the complexity of the video image, ensuring higher image quality. This mode is suitable for storage scenarios as well as applications with high image quality requirements.
-ABR: average bitrate. The average bitrate of the output video is kept stable to the greatest extent, but short-term bitrate fluctuations are allowed. This mode is suitable for scenarios where it is necessary to minimize the overall bitrate while a certain quality is maintained.
-CBR: constant bitrate. The output bitrate remains constant during the video encoding process, regardless of changes in image complexity. This mode is suitable for scenarios with strict network bandwidth requirements, such as live streaming.
-VCRF: constant rate factor. The video quality is controlled by setting a quality factor, achieving constant quality encoding of videos. The bitrate is automatically adjusted based on the complexity of the content. This mode is suitable for scenarios where maintaining a certain quality is desired.
+VBR (Variable Bit Rate): Dynamic bitrate (VBR) adjusts the output bitrate based on the complexity of the video image to ensure higher image quality. It is suitable for storage scenarios and applications with high image quality requirements.
+ABR (Average Bit Rate): Average bitrate. It aims to keep the average bitrate of the output video stable while allowing short-term bitrate fluctuation. This is suitable for scenarios where overall bitrate needs to be minimized while maintaining a certain image quality.
+CBR (Constant Bit Rate): Constant bitrate. In video encoding, it maintains a constant output bitrate regardless of image complexity changes. It is suitable for scenarios with strict network bandwidth requirements, such as live streaming.
+VCRF (Constant Rate Factor): Constant quality factor. It controls video quality by setting a Quality Factor, enabling constant quality encoding of videos. Bitrate adjustment is based on content complexity. This method is suitable for scenarios where maintaining a certain quality is desired.
 VBR is selected by default.
-Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("Mode")
     @Expose
@@ -236,19 +225,16 @@ Note: This field may return null, indicating that no valid value can be obtained
     /**
     * Display aspect ratio. Optional values: [1:1, 2:1, default]
 Default value: default
-Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("Sar")
     @Expose
     private String Sar;
 
     /**
-    * Adaptive I-frame decision. When it is enabled, Media Processing Service will automatically identify transition points between different scenarios in the video (usually they are visually distinct frames, such as those of switching from one shot to another) and adaptively insert keyframes (I-frames) at these points to improve the random accessibility and encoding efficiency of the video. Optional values:
-0: Disable the adaptive I-frame decision 
+    * Adaptive I-frame decision. Once enabled, Media Processing Service automatically identifies transition points between different scenarios in the video (usually visually distinct frames, such as switching from one shot to another) and adaptively inserts keyframes (I-frames) at these points to improve random accessibility and encoding efficiency. Optional values:
+0: Disable adaptive I-frame decision. 
 1: Enable the adaptive I-frame decision
 Default value: 0
-
-Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("NoScenecut")
     @Expose
@@ -256,82 +242,71 @@ Note: This field may return null, indicating that no valid value can be obtained
 
     /**
     * Bit: 8/10 is supported. Default value: 8
-Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("BitDepth")
     @Expose
     private Long BitDepth;
 
     /**
-    * Preservation of original timestamp. Optional values:
+    * Preserve original timestamp. Optional values:
 0: Disabled
 1: Enabled
 Default value: Disabled
-Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("RawPts")
     @Expose
     private Long RawPts;
 
     /**
-    * Proportional compression bitrate. When it is enabled, the bitrate of the output video will be adjusted according to the proportion. After the compression ratio is entered, the system will automatically calculate the target output bitrate based on the source video bitrate. Compression ratio range: 0-100
+    * Proportional compression bitrate. When enabled, the output video's bitrate is adjusted according to the specified ratio. After the compression ratio is entered, the system automatically calculates the target output bitrate based on the video source bitrate. Compression ratio range: 0-100.
 Leaving this value blank means it is not enabled by default.
-Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("Compress")
     @Expose
     private Long Compress;
 
     /**
-    * Segment duration at startup.
-Note: This field may return null, indicating that no valid value can be obtained.
+    * Segment Duration at Startup
     */
     @SerializedName("SegmentSpecificInfo")
     @Expose
     private SegmentSpecificInfo SegmentSpecificInfo;
 
     /**
-    * Whether the template enables scenario-based settings. 
-0: disable. 
+    * Whether to enable scenario-based settings for the template 
+0: disable 
 1: enable 
- 
 Default value: 0	
-	
-Note: The values of SceneType and CompressType fields only take effect when this field value is 1.
-Note: This field may return null, indicating that no valid value can be obtained.
+Note: SceneType and CompressType field values are effective only when this field value is 1.
     */
     @SerializedName("ScenarioBased")
     @Expose
     private Long ScenarioBased;
 
     /**
-    * Video scenario. Valid values: 
-- normal: General transcoding scenario. General transcoding and compression scenario.
-- pgc: PGC HD TV shows and movies. At the time of compression, focus is placed on the viewing experience of TV shows and movies and ROI encoding is performed according to their characteristics, while high-quality contents of videos and audio are retained. 
-- materials_video: HD materials. Scenario involving material resources, where requirements for image quality are extremely high and there are many transparent images, with almost no visual loss during compression. 
-- ugc: UGC content. It is suitable for a wide range of UGC/short video scenarios, with an optimized encoding bitrate for short video characteristics, improved image quality, and enhanced business QOS/QOE metrics. 
-- e-commerce_video. Fashion show/e-commerce: At the time of compression, emphasis is placed on detail clarity and ROI enhancement, with a particular focus on maintaining the image quality of the face region. 
-- educational_video. Education. At the time of compression, emphasis is placed on the clarity and readability of text and images to help students better understand the content, ensuring that the teaching content is clearly conveyed. 
-
-Default value: normal.
-Note: To use this value, the value of ScenarioBased must be 1; otherwise, this value will not take effect.
-Note: This field may return null, indicating that no valid value can be obtained.
+    * Video scenario. Optional values: 
+normal: General transcoding scenario: General transcoding and compression scenario.
+pgc: PGC HD TV shows and movies: At the time of compression, focus is placed on the viewing experience of TV shows and movies and ROI encoding is performed according to their characteristics, while high-quality video and audio content is retained. 
+materials_video: HD materials: Scenario involving material resources, where requirements for image quality are extremely high and there are many transparent images, with almost no visual loss during compression. 
+ugc: UGC content: It is suitable for a wide range of UGC/short video scenarios, with an optimized encoding bitrate for short video characteristics, improved image quality, and enhanced business QOS/QOE metrics. 
+e-commerce_video: Fashion show/e-commerce: During compression, emphasis is placed on detail clarity and ROI enhancement, with a particular focus on maintaining the image quality of the face region. 
+educational_video: Education: Compression emphasizes clarity and readability of text and images to help students better understand content and ensure clear conveyance of teaching content. 
+Default value: normal
+Note: To use this value, ScenarioBased must be 1, otherwise it does not take effect.
     */
     @SerializedName("SceneType")
     @Expose
     private String SceneType;
 
     /**
-    * Transcoding policy. Valid values: 
-- ultra_compress: Extreme compression. Compared to standard compression, this policy can maximize bitrate compression while ensuring a certain level of image quality, thus greatly saving bandwidth and storage costs. 
-- standard_compress: Comprehensively optimal. Balances compression ratio and image quality, compressing files as much as possible without a noticeable reduction in subjective image quality. Only audio and video TSC transcoding fees are charged for this policy. 
-- high_compress: Bitrate priority. Prioritizes reducing file size, which may result in certain image quality loss. Only audio and video TSC transcoding fees are charged for this policy. 
-- low_compress: Image quality priority. Prioritizes ensuring image quality, and the size of compressed files may be relatively large. Only audio and video TSC transcoding fees are charged for this policy. 
-
+    * Transcoding policy. Optional values: 
+ultra_compress: Ultimate compression: Compared to standard compression, this policy can maximize bitrate compression while ensuring a certain level of image quality, greatly saving bandwidth and storage costs. 
+standard_compress: Comprehensively optimal: The compression ratio and image quality are balanced, and files are compressed as much as possible without a noticeable reduction in subjective image quality. Only audio and video TSC transcoding fees are charged for this policy. 
+high_compress: Bitrate priority: Priority is given to reducing file size, which may result in certain image quality loss. Only audio and video TSC transcoding fees are charged for this policy. 
+low_compress: Image quality priority: Priority is given to ensuring image quality, and the size of the compressed file may be relatively large. Only audio and video TSC transcoding fees are charged for this policy. 
 Default value: standard_compress. 
-Note: If you need to watch videos on TV, it is recommended not to use the ultra_compress policy. The billing standard for the ultra_compress policy is TSC transcoding + audio and video enhancement - artifacts removal.
-Note: To use this value, the value of ScenarioBased must be 1; otherwise, this value will not take effect.
-Note: This field may return null, indicating that no valid value can be obtained.
+Note: To watch videos on TV, the ultra_compress policy is not recommended. The billing standard for the ultra_compress policy is Top Speed Codec (TSC) transcoding + audio/video enhancement - artifacts removal.
+Note: To use this value, ScenarioBased must be 1, otherwise it does not take effect.
     */
     @SerializedName("CompressType")
     @Expose
@@ -586,32 +561,28 @@ If this parameter is 0 or left blank, the system will automatically set the GOP 
     }
 
     /**
-     * Get GOP value unit. Optional values:
+     * Get Gop value unit, value range:
+frame: indicates frame
+second: indicates second
+Default value: frame 
+     * @return GopUnit Gop value unit, value range:
 frame: indicates frame
 second: indicates second
 Default value: frame
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return GopUnit GOP value unit. Optional values:
-frame: indicates frame
-second: indicates second
-Default value: frame
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public String getGopUnit() {
         return this.GopUnit;
     }
 
     /**
-     * Set GOP value unit. Optional values:
+     * Set Gop value unit, value range:
 frame: indicates frame
 second: indicates second
 Default value: frame
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param GopUnit GOP value unit. Optional values:
+     * @param GopUnit Gop value unit, value range:
 frame: indicates frame
 second: indicates second
 Default value: frame
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setGopUnit(String GopUnit) {
         this.GopUnit = GopUnit;
@@ -662,164 +633,140 @@ Default value: black.
     }
 
     /**
-     * Get Specifies the constant bitrate control factor for the video. Value range: [0, 51]. Leaving this parameter blank sets it to "Automatic". It is recommended not to specify this parameter unless necessary.
-If the Mode parameter is set to VBR and the Vcrf value is also configured, MPS will process the video in VBR mode, considering both Vcrf and Bitrate parameters to balance video quality, bitrate, transcoding efficiency, and file size.
-If the Mode parameter is set to CRF, the Bitrate setting will be invalid, and encoding will be based on the Vcrf value.
-If the Mode parameter is set to ABR or CBR, the Vcrf value does not need to be configured.
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return Vcrf Specifies the constant bitrate control factor for the video. Value range: [0, 51]. Leaving this parameter blank sets it to "Automatic". It is recommended not to specify this parameter unless necessary.
-If the Mode parameter is set to VBR and the Vcrf value is also configured, MPS will process the video in VBR mode, considering both Vcrf and Bitrate parameters to balance video quality, bitrate, transcoding efficiency, and file size.
-If the Mode parameter is set to CRF, the Bitrate setting will be invalid, and encoding will be based on the Vcrf value.
-If the Mode parameter is set to ABR or CBR, the Vcrf value does not need to be configured.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get Control factor for constant video bitrate. Value range: [0, 51]. If this parameter is not specified, it means "auto". If there are no special requirements, it is advisable not to specify this parameter.
+When the Mode parameter is set to VBR, if the Vcrf value is configured concurrently, MPS will process video in VBR mode, with consideration of both Vcrf and Bitrate parameter settings to balance video quality, bitrate, transcoding efficiency, and file size.
+When the Mode parameter is set to CRF, the Bitrate setting will become invalid, and encoding is performed based on the Vcrf value.
+When the Mode parameter is set to ABR or CBR, the Vcrf value does not need to be configured. 
+     * @return Vcrf Control factor for constant video bitrate. Value range: [0, 51]. If this parameter is not specified, it means "auto". If there are no special requirements, it is advisable not to specify this parameter.
+When the Mode parameter is set to VBR, if the Vcrf value is configured concurrently, MPS will process video in VBR mode, with consideration of both Vcrf and Bitrate parameter settings to balance video quality, bitrate, transcoding efficiency, and file size.
+When the Mode parameter is set to CRF, the Bitrate setting will become invalid, and encoding is performed based on the Vcrf value.
+When the Mode parameter is set to ABR or CBR, the Vcrf value does not need to be configured.
      */
     public Long getVcrf() {
         return this.Vcrf;
     }
 
     /**
-     * Set Specifies the constant bitrate control factor for the video. Value range: [0, 51]. Leaving this parameter blank sets it to "Automatic". It is recommended not to specify this parameter unless necessary.
-If the Mode parameter is set to VBR and the Vcrf value is also configured, MPS will process the video in VBR mode, considering both Vcrf and Bitrate parameters to balance video quality, bitrate, transcoding efficiency, and file size.
-If the Mode parameter is set to CRF, the Bitrate setting will be invalid, and encoding will be based on the Vcrf value.
-If the Mode parameter is set to ABR or CBR, the Vcrf value does not need to be configured.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param Vcrf Specifies the constant bitrate control factor for the video. Value range: [0, 51]. Leaving this parameter blank sets it to "Automatic". It is recommended not to specify this parameter unless necessary.
-If the Mode parameter is set to VBR and the Vcrf value is also configured, MPS will process the video in VBR mode, considering both Vcrf and Bitrate parameters to balance video quality, bitrate, transcoding efficiency, and file size.
-If the Mode parameter is set to CRF, the Bitrate setting will be invalid, and encoding will be based on the Vcrf value.
-If the Mode parameter is set to ABR or CBR, the Vcrf value does not need to be configured.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set Control factor for constant video bitrate. Value range: [0, 51]. If this parameter is not specified, it means "auto". If there are no special requirements, it is advisable not to specify this parameter.
+When the Mode parameter is set to VBR, if the Vcrf value is configured concurrently, MPS will process video in VBR mode, with consideration of both Vcrf and Bitrate parameter settings to balance video quality, bitrate, transcoding efficiency, and file size.
+When the Mode parameter is set to CRF, the Bitrate setting will become invalid, and encoding is performed based on the Vcrf value.
+When the Mode parameter is set to ABR or CBR, the Vcrf value does not need to be configured.
+     * @param Vcrf Control factor for constant video bitrate. Value range: [0, 51]. If this parameter is not specified, it means "auto". If there are no special requirements, it is advisable not to specify this parameter.
+When the Mode parameter is set to VBR, if the Vcrf value is configured concurrently, MPS will process video in VBR mode, with consideration of both Vcrf and Bitrate parameter settings to balance video quality, bitrate, transcoding efficiency, and file size.
+When the Mode parameter is set to CRF, the Bitrate setting will become invalid, and encoding is performed based on the Vcrf value.
+When the Mode parameter is set to ABR or CBR, the Vcrf value does not need to be configured.
      */
     public void setVcrf(Long Vcrf) {
         this.Vcrf = Vcrf;
     }
 
     /**
-     * Get Average shard duration. value range: (0-10], unit: second.
-Leaving it blank means auto, which automatically chooses the appropriate segment duration based on video features such as GOP.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return HlsTime Average shard duration. value range: (0-10], unit: second.
-Leaving it blank means auto, which automatically chooses the appropriate segment duration based on video features such as GOP.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Average shard duration. Range: (0-10], unit: second
+Leave it blank to auto, which automatically chooses the appropriate segment duration based on the video's GOP and other features. 
+     * @return HlsTime Average shard duration. Range: (0-10], unit: second
+Leave it blank to auto, which automatically chooses the appropriate segment duration based on the video's GOP and other features.
      */
     public Long getHlsTime() {
         return this.HlsTime;
     }
 
     /**
-     * Set Average shard duration. value range: (0-10], unit: second.
-Leaving it blank means auto, which automatically chooses the appropriate segment duration based on video features such as GOP.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param HlsTime Average shard duration. value range: (0-10], unit: second.
-Leaving it blank means auto, which automatically chooses the appropriate segment duration based on video features such as GOP.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Average shard duration. Range: (0-10], unit: second
+Leave it blank to auto, which automatically chooses the appropriate segment duration based on the video's GOP and other features.
+     * @param HlsTime Average shard duration. Range: (0-10], unit: second
+Leave it blank to auto, which automatically chooses the appropriate segment duration based on the video's GOP and other features.
      */
     public void setHlsTime(Long HlsTime) {
         this.HlsTime = HlsTime;
     }
 
     /**
-     * Get HLS segment type. Valid values:
-<li>0: HLS+TS segment</li>
-<li>2: HLS+TS byte range</li>
-<li>7: HLS+MP4 segment</li>
-<li>5: HLS+MP4 byte range</li>
+     * Get hls fragment type, value range:
+<li>0: HLS+TS segment.</li>
+<li>2:HLS+TS byte range</li>
+<li>7: HLS+MP4 segment.</li>
+<li>5:HLS+MP4 byte range</li>
 Default value: 0
-
-Note: This field is used for normal/TSC transcoding settings and does not apply to adaptive bitrate streaming. To configure the segment type for adaptive bitrate streaming, use the outer field.
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return SegmentType HLS segment type. Valid values:
-<li>0: HLS+TS segment</li>
-<li>2: HLS+TS byte range</li>
-<li>7: HLS+MP4 segment</li>
-<li>5: HLS+MP4 byte range</li>
+Note: This field is used for ordinary/TSC transcoding settings and does not take effect for adaptive bitrate streams. If you need to configure the sharding type for an adaptive bitrate stream, you can use the outer field. 
+     * @return SegmentType hls fragment type, value range:
+<li>0: HLS+TS segment.</li>
+<li>2:HLS+TS byte range</li>
+<li>7: HLS+MP4 segment.</li>
+<li>5:HLS+MP4 byte range</li>
 Default value: 0
-
-Note: This field is used for normal/TSC transcoding settings and does not apply to adaptive bitrate streaming. To configure the segment type for adaptive bitrate streaming, use the outer field.
-Note: This field may return null, indicating that no valid value can be obtained.
+Note: This field is used for ordinary/TSC transcoding settings and does not take effect for adaptive bitrate streams. If you need to configure the sharding type for an adaptive bitrate stream, you can use the outer field.
      */
     public Long getSegmentType() {
         return this.SegmentType;
     }
 
     /**
-     * Set HLS segment type. Valid values:
-<li>0: HLS+TS segment</li>
-<li>2: HLS+TS byte range</li>
-<li>7: HLS+MP4 segment</li>
-<li>5: HLS+MP4 byte range</li>
+     * Set hls fragment type, value range:
+<li>0: HLS+TS segment.</li>
+<li>2:HLS+TS byte range</li>
+<li>7: HLS+MP4 segment.</li>
+<li>5:HLS+MP4 byte range</li>
 Default value: 0
-
-Note: This field is used for normal/TSC transcoding settings and does not apply to adaptive bitrate streaming. To configure the segment type for adaptive bitrate streaming, use the outer field.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param SegmentType HLS segment type. Valid values:
-<li>0: HLS+TS segment</li>
-<li>2: HLS+TS byte range</li>
-<li>7: HLS+MP4 segment</li>
-<li>5: HLS+MP4 byte range</li>
+Note: This field is used for ordinary/TSC transcoding settings and does not take effect for adaptive bitrate streams. If you need to configure the sharding type for an adaptive bitrate stream, you can use the outer field.
+     * @param SegmentType hls fragment type, value range:
+<li>0: HLS+TS segment.</li>
+<li>2:HLS+TS byte range</li>
+<li>7: HLS+MP4 segment.</li>
+<li>5:HLS+MP4 byte range</li>
 Default value: 0
-
-Note: This field is used for normal/TSC transcoding settings and does not apply to adaptive bitrate streaming. To configure the segment type for adaptive bitrate streaming, use the outer field.
-Note: This field may return null, indicating that no valid value can be obtained.
+Note: This field is used for ordinary/TSC transcoding settings and does not take effect for adaptive bitrate streams. If you need to configure the sharding type for an adaptive bitrate stream, you can use the outer field.
      */
     public void setSegmentType(Long SegmentType) {
         this.SegmentType = SegmentType;
     }
 
     /**
-     * Get Denominator of the frame rate.
+     * Get Denominator of the frame rate
+Note: The value must be greater than 0. 
+     * @return FpsDenominator Denominator of the frame rate
 Note: The value must be greater than 0.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return FpsDenominator Denominator of the frame rate.
-Note: The value must be greater than 0.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getFpsDenominator() {
         return this.FpsDenominator;
     }
 
     /**
-     * Set Denominator of the frame rate.
+     * Set Denominator of the frame rate
 Note: The value must be greater than 0.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param FpsDenominator Denominator of the frame rate.
+     * @param FpsDenominator Denominator of the frame rate
 Note: The value must be greater than 0.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setFpsDenominator(Long FpsDenominator) {
         this.FpsDenominator = FpsDenominator;
     }
 
     /**
-     * Get 3D video splicing mode, applicable only to mv-hevc and effective for 3d videos. valid values:
-<Li>side_by_side: the original video content is arranged in a left-right layout.</li>
-<li>top_bottom: vertical layout arrangement of original video content.</li>
-Submit the amount and cost based on the segmented resolution size.
-Default value: side_by_side.
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return Stereo3dType 3D video splicing mode, applicable only to mv-hevc and effective for 3d videos. valid values:
-<Li>side_by_side: the original video content is arranged in a left-right layout.</li>
-<li>top_bottom: vertical layout arrangement of original video content.</li>
-Submit the amount and cost based on the segmented resolution size.
-Default value: side_by_side.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get 3D video splicing mode, only mv-hevc, 3D video takes effect, available values:
+<li>side_by_side: side-by-side layout of the original video content.</li>
+<li>top_bottom: top-bottom layout arrangement of the original video content.</li>
+Billing is based on the segmented resolution dimension for reporting usage and cost.
+Default value: side_by_side 
+     * @return Stereo3dType 3D video splicing mode, only mv-hevc, 3D video takes effect, available values:
+<li>side_by_side: side-by-side layout of the original video content.</li>
+<li>top_bottom: top-bottom layout arrangement of the original video content.</li>
+Billing is based on the segmented resolution dimension for reporting usage and cost.
+Default value: side_by_side
      */
     public String getStereo3dType() {
         return this.Stereo3dType;
     }
 
     /**
-     * Set 3D video splicing mode, applicable only to mv-hevc and effective for 3d videos. valid values:
-<Li>side_by_side: the original video content is arranged in a left-right layout.</li>
-<li>top_bottom: vertical layout arrangement of original video content.</li>
-Submit the amount and cost based on the segmented resolution size.
-Default value: side_by_side.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param Stereo3dType 3D video splicing mode, applicable only to mv-hevc and effective for 3d videos. valid values:
-<Li>side_by_side: the original video content is arranged in a left-right layout.</li>
-<li>top_bottom: vertical layout arrangement of original video content.</li>
-Submit the amount and cost based on the segmented resolution size.
-Default value: side_by_side.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set 3D video splicing mode, only mv-hevc, 3D video takes effect, available values:
+<li>side_by_side: side-by-side layout of the original video content.</li>
+<li>top_bottom: top-bottom layout arrangement of the original video content.</li>
+Billing is based on the segmented resolution dimension for reporting usage and cost.
+Default value: side_by_side
+     * @param Stereo3dType 3D video splicing mode, only mv-hevc, 3D video takes effect, available values:
+<li>side_by_side: side-by-side layout of the original video content.</li>
+<li>top_bottom: top-bottom layout arrangement of the original video content.</li>
+Billing is based on the segmented resolution dimension for reporting usage and cost.
+Default value: side_by_side
      */
     public void setStereo3dType(String Stereo3dType) {
         this.Stereo3dType = Stereo3dType;
@@ -828,20 +775,18 @@ Note: This field may return null, indicating that no valid value can be obtained
     /**
      * Get Profile, suitable for different scenarios.
 baseline: It only supports I/P-frames and non-interlaced scenarios, and is suitable for scenarios such as video calls and mobile videos.
-main: It offers I-frames, P-frames, and B-frames, and supports both interlaced and non-interlaced modes. It is mainly used in mainstream audio and video consumption products such as video players and streaming media transmission devices.
-high: the highest encoding level, with 8x8 prediction added to the main profile and support for custom quantification. It is widely used in scenarios such as Blu-ray storage and HDTV.
+Mainstream Profile, providing I-frames, P-frames, and B-frames, and supporting both interlaced and non-interlaced modes. It is primarily used in mainstream audio and video consumption products such as video players and streaming media transmission devices.
+high: The highest encoding level, adding 8X8  prediction to the Main Profile and supporting custom quantification. Widely used in Blu-ray storage and HDTV scenarios.
 default: automatic filling along with the original video.    
 
-This configuration appears only when the encoding standard is set to H264. baseline/main/high is supported. Default value: default
-Note: This field may return null, indicating that no valid value can be obtained. 
+This configuration appears only when the encoding standard is set to H264. baseline/main/high is supported. Default value: default 
      * @return VideoProfile Profile, suitable for different scenarios.
 baseline: It only supports I/P-frames and non-interlaced scenarios, and is suitable for scenarios such as video calls and mobile videos.
-main: It offers I-frames, P-frames, and B-frames, and supports both interlaced and non-interlaced modes. It is mainly used in mainstream audio and video consumption products such as video players and streaming media transmission devices.
-high: the highest encoding level, with 8x8 prediction added to the main profile and support for custom quantification. It is widely used in scenarios such as Blu-ray storage and HDTV.
+Mainstream Profile, providing I-frames, P-frames, and B-frames, and supporting both interlaced and non-interlaced modes. It is primarily used in mainstream audio and video consumption products such as video players and streaming media transmission devices.
+high: The highest encoding level, adding 8X8  prediction to the Main Profile and supporting custom quantification. Widely used in Blu-ray storage and HDTV scenarios.
 default: automatic filling along with the original video.    
 
 This configuration appears only when the encoding standard is set to H264. baseline/main/high is supported. Default value: default
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public String getVideoProfile() {
         return this.VideoProfile;
@@ -850,20 +795,18 @@ Note: This field may return null, indicating that no valid value can be obtained
     /**
      * Set Profile, suitable for different scenarios.
 baseline: It only supports I/P-frames and non-interlaced scenarios, and is suitable for scenarios such as video calls and mobile videos.
-main: It offers I-frames, P-frames, and B-frames, and supports both interlaced and non-interlaced modes. It is mainly used in mainstream audio and video consumption products such as video players and streaming media transmission devices.
-high: the highest encoding level, with 8x8 prediction added to the main profile and support for custom quantification. It is widely used in scenarios such as Blu-ray storage and HDTV.
+Mainstream Profile, providing I-frames, P-frames, and B-frames, and supporting both interlaced and non-interlaced modes. It is primarily used in mainstream audio and video consumption products such as video players and streaming media transmission devices.
+high: The highest encoding level, adding 8X8  prediction to the Main Profile and supporting custom quantification. Widely used in Blu-ray storage and HDTV scenarios.
 default: automatic filling along with the original video.    
 
 This configuration appears only when the encoding standard is set to H264. baseline/main/high is supported. Default value: default
-Note: This field may return null, indicating that no valid value can be obtained.
      * @param VideoProfile Profile, suitable for different scenarios.
 baseline: It only supports I/P-frames and non-interlaced scenarios, and is suitable for scenarios such as video calls and mobile videos.
-main: It offers I-frames, P-frames, and B-frames, and supports both interlaced and non-interlaced modes. It is mainly used in mainstream audio and video consumption products such as video players and streaming media transmission devices.
-high: the highest encoding level, with 8x8 prediction added to the main profile and support for custom quantification. It is widely used in scenarios such as Blu-ray storage and HDTV.
+Mainstream Profile, providing I-frames, P-frames, and B-frames, and supporting both interlaced and non-interlaced modes. It is primarily used in mainstream audio and video consumption products such as video players and streaming media transmission devices.
+high: The highest encoding level, adding 8X8  prediction to the Main Profile and supporting custom quantification. Widely used in Blu-ray storage and HDTV scenarios.
 default: automatic filling along with the original video.    
 
 This configuration appears only when the encoding standard is set to H264. baseline/main/high is supported. Default value: default
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setVideoProfile(String VideoProfile) {
         this.VideoProfile = VideoProfile;
@@ -871,13 +814,11 @@ Note: This field may return null, indicating that no valid value can be obtained
 
     /**
      * Get Encoder level. Default value: auto ("")
-If the encoding standard is set to H264, the following options are supported: "", 1, 1.1, 1.2, 1.3, 2, 2.1, 2.2, 3, 3.1, 3.2, 4, 4.1, 4.2, 5, and 5.1.
-If the encoding standard is set to H265, the following options are supported: "", 1, 2, 2.1, 3, 3.1, 4, 4.1, 5, 5.1, 5.2, 6, 6.1, 6.2, and 8.5.
-Note: This field may return null, indicating that no valid value can be obtained. 
+If the encoding standard is set to H264, the following options are supported: "", 1, 1.1, 1.2, 1.3, 2, -2.1, 2.2, 3, 3.1, 3.2, 4, 4.1, 4.2, 5, and 5.1.
+If the encoding standard is set to H265, the following options are supported: "", 1, 2, 2.1, 3, 3.1, 4, 4.1, 5, 5.1, 5.2, 6, 6.1, 6.2, and 8.5. 
      * @return VideoLevel Encoder level. Default value: auto ("")
-If the encoding standard is set to H264, the following options are supported: "", 1, 1.1, 1.2, 1.3, 2, 2.1, 2.2, 3, 3.1, 3.2, 4, 4.1, 4.2, 5, and 5.1.
+If the encoding standard is set to H264, the following options are supported: "", 1, 1.1, 1.2, 1.3, 2, -2.1, 2.2, 3, 3.1, 3.2, 4, 4.1, 4.2, 5, and 5.1.
 If the encoding standard is set to H265, the following options are supported: "", 1, 2, 2.1, 3, 3.1, 4, 4.1, 5, 5.1, 5.2, 6, 6.1, 6.2, and 8.5.
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public String getVideoLevel() {
         return this.VideoLevel;
@@ -885,13 +826,11 @@ Note: This field may return null, indicating that no valid value can be obtained
 
     /**
      * Set Encoder level. Default value: auto ("")
-If the encoding standard is set to H264, the following options are supported: "", 1, 1.1, 1.2, 1.3, 2, 2.1, 2.2, 3, 3.1, 3.2, 4, 4.1, 4.2, 5, and 5.1.
+If the encoding standard is set to H264, the following options are supported: "", 1, 1.1, 1.2, 1.3, 2, -2.1, 2.2, 3, 3.1, 3.2, 4, 4.1, 4.2, 5, and 5.1.
 If the encoding standard is set to H265, the following options are supported: "", 1, 2, 2.1, 3, 3.1, 4, 4.1, 5, 5.1, 5.2, 6, 6.1, 6.2, and 8.5.
-Note: This field may return null, indicating that no valid value can be obtained.
      * @param VideoLevel Encoder level. Default value: auto ("")
-If the encoding standard is set to H264, the following options are supported: "", 1, 1.1, 1.2, 1.3, 2, 2.1, 2.2, 3, 3.1, 3.2, 4, 4.1, 4.2, 5, and 5.1.
+If the encoding standard is set to H264, the following options are supported: "", 1, 1.1, 1.2, 1.3, 2, -2.1, 2.2, 3, 3.1, 3.2, 4, 4.1, 4.2, 5, and 5.1.
 If the encoding standard is set to H265, the following options are supported: "", 1, 2, 2.1, 3, 3.1, 4, 4.1, 5, 5.1, 5.2, 6, 6.1, 6.2, and 8.5.
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setVideoLevel(String VideoLevel) {
         this.VideoLevel = VideoLevel;
@@ -899,11 +838,9 @@ Note: This field may return null, indicating that no valid value can be obtained
 
     /**
      * Get Number of B-frames between reference frames. The default is auto, and a range of 0 - 16 is supported.
-Note: Leaving it blank means using the auto option.
-Note: This field may return null, indicating that no valid value can be obtained. 
+Note: Leave it blank to indicate usage of auto. 
      * @return Bframes Number of B-frames between reference frames. The default is auto, and a range of 0 - 16 is supported.
-Note: Leaving it blank means using the auto option.
-Note: This field may return null, indicating that no valid value can be obtained.
+Note: Leave it blank to indicate usage of auto.
      */
     public Long getBframes() {
         return this.Bframes;
@@ -911,11 +848,9 @@ Note: This field may return null, indicating that no valid value can be obtained
 
     /**
      * Set Number of B-frames between reference frames. The default is auto, and a range of 0 - 16 is supported.
-Note: Leaving it blank means using the auto option.
-Note: This field may return null, indicating that no valid value can be obtained.
+Note: Leave it blank to indicate usage of auto.
      * @param Bframes Number of B-frames between reference frames. The default is auto, and a range of 0 - 16 is supported.
-Note: Leaving it blank means using the auto option.
-Note: This field may return null, indicating that no valid value can be obtained.
+Note: Leave it blank to indicate usage of auto.
      */
     public void setBframes(Long Bframes) {
         this.Bframes = Bframes;
@@ -923,19 +858,17 @@ Note: This field may return null, indicating that no valid value can be obtained
 
     /**
      * Get Bitrate control mode. Optional values:
-VBR: variable bitrate. The output bitrate is adjusted based on the complexity of the video image, ensuring higher image quality. This mode is suitable for storage scenarios as well as applications with high image quality requirements.
-ABR: average bitrate. The average bitrate of the output video is kept stable to the greatest extent, but short-term bitrate fluctuations are allowed. This mode is suitable for scenarios where it is necessary to minimize the overall bitrate while a certain quality is maintained.
-CBR: constant bitrate. The output bitrate remains constant during the video encoding process, regardless of changes in image complexity. This mode is suitable for scenarios with strict network bandwidth requirements, such as live streaming.
-VCRF: constant rate factor. The video quality is controlled by setting a quality factor, achieving constant quality encoding of videos. The bitrate is automatically adjusted based on the complexity of the content. This mode is suitable for scenarios where maintaining a certain quality is desired.
-VBR is selected by default.
-Note: This field may return null, indicating that no valid value can be obtained. 
+VBR (Variable Bit Rate): Dynamic bitrate (VBR) adjusts the output bitrate based on the complexity of the video image to ensure higher image quality. It is suitable for storage scenarios and applications with high image quality requirements.
+ABR (Average Bit Rate): Average bitrate. It aims to keep the average bitrate of the output video stable while allowing short-term bitrate fluctuation. This is suitable for scenarios where overall bitrate needs to be minimized while maintaining a certain image quality.
+CBR (Constant Bit Rate): Constant bitrate. In video encoding, it maintains a constant output bitrate regardless of image complexity changes. It is suitable for scenarios with strict network bandwidth requirements, such as live streaming.
+VCRF (Constant Rate Factor): Constant quality factor. It controls video quality by setting a Quality Factor, enabling constant quality encoding of videos. Bitrate adjustment is based on content complexity. This method is suitable for scenarios where maintaining a certain quality is desired.
+VBR is selected by default. 
      * @return Mode Bitrate control mode. Optional values:
-VBR: variable bitrate. The output bitrate is adjusted based on the complexity of the video image, ensuring higher image quality. This mode is suitable for storage scenarios as well as applications with high image quality requirements.
-ABR: average bitrate. The average bitrate of the output video is kept stable to the greatest extent, but short-term bitrate fluctuations are allowed. This mode is suitable for scenarios where it is necessary to minimize the overall bitrate while a certain quality is maintained.
-CBR: constant bitrate. The output bitrate remains constant during the video encoding process, regardless of changes in image complexity. This mode is suitable for scenarios with strict network bandwidth requirements, such as live streaming.
-VCRF: constant rate factor. The video quality is controlled by setting a quality factor, achieving constant quality encoding of videos. The bitrate is automatically adjusted based on the complexity of the content. This mode is suitable for scenarios where maintaining a certain quality is desired.
+VBR (Variable Bit Rate): Dynamic bitrate (VBR) adjusts the output bitrate based on the complexity of the video image to ensure higher image quality. It is suitable for storage scenarios and applications with high image quality requirements.
+ABR (Average Bit Rate): Average bitrate. It aims to keep the average bitrate of the output video stable while allowing short-term bitrate fluctuation. This is suitable for scenarios where overall bitrate needs to be minimized while maintaining a certain image quality.
+CBR (Constant Bit Rate): Constant bitrate. In video encoding, it maintains a constant output bitrate regardless of image complexity changes. It is suitable for scenarios with strict network bandwidth requirements, such as live streaming.
+VCRF (Constant Rate Factor): Constant quality factor. It controls video quality by setting a Quality Factor, enabling constant quality encoding of videos. Bitrate adjustment is based on content complexity. This method is suitable for scenarios where maintaining a certain quality is desired.
 VBR is selected by default.
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public String getMode() {
         return this.Mode;
@@ -943,19 +876,17 @@ Note: This field may return null, indicating that no valid value can be obtained
 
     /**
      * Set Bitrate control mode. Optional values:
-VBR: variable bitrate. The output bitrate is adjusted based on the complexity of the video image, ensuring higher image quality. This mode is suitable for storage scenarios as well as applications with high image quality requirements.
-ABR: average bitrate. The average bitrate of the output video is kept stable to the greatest extent, but short-term bitrate fluctuations are allowed. This mode is suitable for scenarios where it is necessary to minimize the overall bitrate while a certain quality is maintained.
-CBR: constant bitrate. The output bitrate remains constant during the video encoding process, regardless of changes in image complexity. This mode is suitable for scenarios with strict network bandwidth requirements, such as live streaming.
-VCRF: constant rate factor. The video quality is controlled by setting a quality factor, achieving constant quality encoding of videos. The bitrate is automatically adjusted based on the complexity of the content. This mode is suitable for scenarios where maintaining a certain quality is desired.
+VBR (Variable Bit Rate): Dynamic bitrate (VBR) adjusts the output bitrate based on the complexity of the video image to ensure higher image quality. It is suitable for storage scenarios and applications with high image quality requirements.
+ABR (Average Bit Rate): Average bitrate. It aims to keep the average bitrate of the output video stable while allowing short-term bitrate fluctuation. This is suitable for scenarios where overall bitrate needs to be minimized while maintaining a certain image quality.
+CBR (Constant Bit Rate): Constant bitrate. In video encoding, it maintains a constant output bitrate regardless of image complexity changes. It is suitable for scenarios with strict network bandwidth requirements, such as live streaming.
+VCRF (Constant Rate Factor): Constant quality factor. It controls video quality by setting a Quality Factor, enabling constant quality encoding of videos. Bitrate adjustment is based on content complexity. This method is suitable for scenarios where maintaining a certain quality is desired.
 VBR is selected by default.
-Note: This field may return null, indicating that no valid value can be obtained.
      * @param Mode Bitrate control mode. Optional values:
-VBR: variable bitrate. The output bitrate is adjusted based on the complexity of the video image, ensuring higher image quality. This mode is suitable for storage scenarios as well as applications with high image quality requirements.
-ABR: average bitrate. The average bitrate of the output video is kept stable to the greatest extent, but short-term bitrate fluctuations are allowed. This mode is suitable for scenarios where it is necessary to minimize the overall bitrate while a certain quality is maintained.
-CBR: constant bitrate. The output bitrate remains constant during the video encoding process, regardless of changes in image complexity. This mode is suitable for scenarios with strict network bandwidth requirements, such as live streaming.
-VCRF: constant rate factor. The video quality is controlled by setting a quality factor, achieving constant quality encoding of videos. The bitrate is automatically adjusted based on the complexity of the content. This mode is suitable for scenarios where maintaining a certain quality is desired.
+VBR (Variable Bit Rate): Dynamic bitrate (VBR) adjusts the output bitrate based on the complexity of the video image to ensure higher image quality. It is suitable for storage scenarios and applications with high image quality requirements.
+ABR (Average Bit Rate): Average bitrate. It aims to keep the average bitrate of the output video stable while allowing short-term bitrate fluctuation. This is suitable for scenarios where overall bitrate needs to be minimized while maintaining a certain image quality.
+CBR (Constant Bit Rate): Constant bitrate. In video encoding, it maintains a constant output bitrate regardless of image complexity changes. It is suitable for scenarios with strict network bandwidth requirements, such as live streaming.
+VCRF (Constant Rate Factor): Constant quality factor. It controls video quality by setting a Quality Factor, enabling constant quality encoding of videos. Bitrate adjustment is based on content complexity. This method is suitable for scenarios where maintaining a certain quality is desired.
 VBR is selected by default.
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setMode(String Mode) {
         this.Mode = Mode;
@@ -963,11 +894,9 @@ Note: This field may return null, indicating that no valid value can be obtained
 
     /**
      * Get Display aspect ratio. Optional values: [1:1, 2:1, default]
-Default value: default
-Note: This field may return null, indicating that no valid value can be obtained. 
+Default value: default 
      * @return Sar Display aspect ratio. Optional values: [1:1, 2:1, default]
 Default value: default
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public String getSar() {
         return this.Sar;
@@ -976,56 +905,44 @@ Note: This field may return null, indicating that no valid value can be obtained
     /**
      * Set Display aspect ratio. Optional values: [1:1, 2:1, default]
 Default value: default
-Note: This field may return null, indicating that no valid value can be obtained.
      * @param Sar Display aspect ratio. Optional values: [1:1, 2:1, default]
 Default value: default
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setSar(String Sar) {
         this.Sar = Sar;
     }
 
     /**
-     * Get Adaptive I-frame decision. When it is enabled, Media Processing Service will automatically identify transition points between different scenarios in the video (usually they are visually distinct frames, such as those of switching from one shot to another) and adaptively insert keyframes (I-frames) at these points to improve the random accessibility and encoding efficiency of the video. Optional values:
-0: Disable the adaptive I-frame decision 
+     * Get Adaptive I-frame decision. Once enabled, Media Processing Service automatically identifies transition points between different scenarios in the video (usually visually distinct frames, such as switching from one shot to another) and adaptively inserts keyframes (I-frames) at these points to improve random accessibility and encoding efficiency. Optional values:
+0: Disable adaptive I-frame decision. 
+1: Enable the adaptive I-frame decision
+Default value: 0 
+     * @return NoScenecut Adaptive I-frame decision. Once enabled, Media Processing Service automatically identifies transition points between different scenarios in the video (usually visually distinct frames, such as switching from one shot to another) and adaptively inserts keyframes (I-frames) at these points to improve random accessibility and encoding efficiency. Optional values:
+0: Disable adaptive I-frame decision. 
 1: Enable the adaptive I-frame decision
 Default value: 0
-
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return NoScenecut Adaptive I-frame decision. When it is enabled, Media Processing Service will automatically identify transition points between different scenarios in the video (usually they are visually distinct frames, such as those of switching from one shot to another) and adaptively insert keyframes (I-frames) at these points to improve the random accessibility and encoding efficiency of the video. Optional values:
-0: Disable the adaptive I-frame decision 
-1: Enable the adaptive I-frame decision
-Default value: 0
-
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public Long getNoScenecut() {
         return this.NoScenecut;
     }
 
     /**
-     * Set Adaptive I-frame decision. When it is enabled, Media Processing Service will automatically identify transition points between different scenarios in the video (usually they are visually distinct frames, such as those of switching from one shot to another) and adaptively insert keyframes (I-frames) at these points to improve the random accessibility and encoding efficiency of the video. Optional values:
-0: Disable the adaptive I-frame decision 
+     * Set Adaptive I-frame decision. Once enabled, Media Processing Service automatically identifies transition points between different scenarios in the video (usually visually distinct frames, such as switching from one shot to another) and adaptively inserts keyframes (I-frames) at these points to improve random accessibility and encoding efficiency. Optional values:
+0: Disable adaptive I-frame decision. 
 1: Enable the adaptive I-frame decision
 Default value: 0
-
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param NoScenecut Adaptive I-frame decision. When it is enabled, Media Processing Service will automatically identify transition points between different scenarios in the video (usually they are visually distinct frames, such as those of switching from one shot to another) and adaptively insert keyframes (I-frames) at these points to improve the random accessibility and encoding efficiency of the video. Optional values:
-0: Disable the adaptive I-frame decision 
+     * @param NoScenecut Adaptive I-frame decision. Once enabled, Media Processing Service automatically identifies transition points between different scenarios in the video (usually visually distinct frames, such as switching from one shot to another) and adaptively inserts keyframes (I-frames) at these points to improve random accessibility and encoding efficiency. Optional values:
+0: Disable adaptive I-frame decision. 
 1: Enable the adaptive I-frame decision
 Default value: 0
-
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setNoScenecut(Long NoScenecut) {
         this.NoScenecut = NoScenecut;
     }
 
     /**
-     * Get Bit: 8/10 is supported. Default value: 8
-Note: This field may return null, indicating that no valid value can be obtained. 
+     * Get Bit: 8/10 is supported. Default value: 8 
      * @return BitDepth Bit: 8/10 is supported. Default value: 8
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public Long getBitDepth() {
         return this.BitDepth;
@@ -1033,237 +950,195 @@ Note: This field may return null, indicating that no valid value can be obtained
 
     /**
      * Set Bit: 8/10 is supported. Default value: 8
-Note: This field may return null, indicating that no valid value can be obtained.
      * @param BitDepth Bit: 8/10 is supported. Default value: 8
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setBitDepth(Long BitDepth) {
         this.BitDepth = BitDepth;
     }
 
     /**
-     * Get Preservation of original timestamp. Optional values:
+     * Get Preserve original timestamp. Optional values:
+0: Disabled
+1: Enabled
+Default value: Disabled 
+     * @return RawPts Preserve original timestamp. Optional values:
 0: Disabled
 1: Enabled
 Default value: Disabled
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return RawPts Preservation of original timestamp. Optional values:
-0: Disabled
-1: Enabled
-Default value: Disabled
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public Long getRawPts() {
         return this.RawPts;
     }
 
     /**
-     * Set Preservation of original timestamp. Optional values:
+     * Set Preserve original timestamp. Optional values:
 0: Disabled
 1: Enabled
 Default value: Disabled
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param RawPts Preservation of original timestamp. Optional values:
+     * @param RawPts Preserve original timestamp. Optional values:
 0: Disabled
 1: Enabled
 Default value: Disabled
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setRawPts(Long RawPts) {
         this.RawPts = RawPts;
     }
 
     /**
-     * Get Proportional compression bitrate. When it is enabled, the bitrate of the output video will be adjusted according to the proportion. After the compression ratio is entered, the system will automatically calculate the target output bitrate based on the source video bitrate. Compression ratio range: 0-100
+     * Get Proportional compression bitrate. When enabled, the output video's bitrate is adjusted according to the specified ratio. After the compression ratio is entered, the system automatically calculates the target output bitrate based on the video source bitrate. Compression ratio range: 0-100.
+Leaving this value blank means it is not enabled by default. 
+     * @return Compress Proportional compression bitrate. When enabled, the output video's bitrate is adjusted according to the specified ratio. After the compression ratio is entered, the system automatically calculates the target output bitrate based on the video source bitrate. Compression ratio range: 0-100.
 Leaving this value blank means it is not enabled by default.
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return Compress Proportional compression bitrate. When it is enabled, the bitrate of the output video will be adjusted according to the proportion. After the compression ratio is entered, the system will automatically calculate the target output bitrate based on the source video bitrate. Compression ratio range: 0-100
-Leaving this value blank means it is not enabled by default.
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public Long getCompress() {
         return this.Compress;
     }
 
     /**
-     * Set Proportional compression bitrate. When it is enabled, the bitrate of the output video will be adjusted according to the proportion. After the compression ratio is entered, the system will automatically calculate the target output bitrate based on the source video bitrate. Compression ratio range: 0-100
+     * Set Proportional compression bitrate. When enabled, the output video's bitrate is adjusted according to the specified ratio. After the compression ratio is entered, the system automatically calculates the target output bitrate based on the video source bitrate. Compression ratio range: 0-100.
 Leaving this value blank means it is not enabled by default.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param Compress Proportional compression bitrate. When it is enabled, the bitrate of the output video will be adjusted according to the proportion. After the compression ratio is entered, the system will automatically calculate the target output bitrate based on the source video bitrate. Compression ratio range: 0-100
+     * @param Compress Proportional compression bitrate. When enabled, the output video's bitrate is adjusted according to the specified ratio. After the compression ratio is entered, the system automatically calculates the target output bitrate based on the video source bitrate. Compression ratio range: 0-100.
 Leaving this value blank means it is not enabled by default.
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setCompress(Long Compress) {
         this.Compress = Compress;
     }
 
     /**
-     * Get Segment duration at startup.
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return SegmentSpecificInfo Segment duration at startup.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get Segment Duration at Startup 
+     * @return SegmentSpecificInfo Segment Duration at Startup
      */
     public SegmentSpecificInfo getSegmentSpecificInfo() {
         return this.SegmentSpecificInfo;
     }
 
     /**
-     * Set Segment duration at startup.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param SegmentSpecificInfo Segment duration at startup.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set Segment Duration at Startup
+     * @param SegmentSpecificInfo Segment Duration at Startup
      */
     public void setSegmentSpecificInfo(SegmentSpecificInfo SegmentSpecificInfo) {
         this.SegmentSpecificInfo = SegmentSpecificInfo;
     }
 
     /**
-     * Get Whether the template enables scenario-based settings. 
-0: disable. 
+     * Get Whether to enable scenario-based settings for the template 
+0: disable 
 1: enable 
- 
 Default value: 0	
-	
-Note: The values of SceneType and CompressType fields only take effect when this field value is 1.
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return ScenarioBased Whether the template enables scenario-based settings. 
-0: disable. 
+Note: SceneType and CompressType field values are effective only when this field value is 1. 
+     * @return ScenarioBased Whether to enable scenario-based settings for the template 
+0: disable 
 1: enable 
- 
 Default value: 0	
-	
-Note: The values of SceneType and CompressType fields only take effect when this field value is 1.
-Note: This field may return null, indicating that no valid value can be obtained.
+Note: SceneType and CompressType field values are effective only when this field value is 1.
      */
     public Long getScenarioBased() {
         return this.ScenarioBased;
     }
 
     /**
-     * Set Whether the template enables scenario-based settings. 
-0: disable. 
+     * Set Whether to enable scenario-based settings for the template 
+0: disable 
 1: enable 
- 
 Default value: 0	
-	
-Note: The values of SceneType and CompressType fields only take effect when this field value is 1.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param ScenarioBased Whether the template enables scenario-based settings. 
-0: disable. 
+Note: SceneType and CompressType field values are effective only when this field value is 1.
+     * @param ScenarioBased Whether to enable scenario-based settings for the template 
+0: disable 
 1: enable 
- 
 Default value: 0	
-	
-Note: The values of SceneType and CompressType fields only take effect when this field value is 1.
-Note: This field may return null, indicating that no valid value can be obtained.
+Note: SceneType and CompressType field values are effective only when this field value is 1.
      */
     public void setScenarioBased(Long ScenarioBased) {
         this.ScenarioBased = ScenarioBased;
     }
 
     /**
-     * Get Video scenario. Valid values: 
-- normal: General transcoding scenario. General transcoding and compression scenario.
-- pgc: PGC HD TV shows and movies. At the time of compression, focus is placed on the viewing experience of TV shows and movies and ROI encoding is performed according to their characteristics, while high-quality contents of videos and audio are retained. 
-- materials_video: HD materials. Scenario involving material resources, where requirements for image quality are extremely high and there are many transparent images, with almost no visual loss during compression. 
-- ugc: UGC content. It is suitable for a wide range of UGC/short video scenarios, with an optimized encoding bitrate for short video characteristics, improved image quality, and enhanced business QOS/QOE metrics. 
-- e-commerce_video. Fashion show/e-commerce: At the time of compression, emphasis is placed on detail clarity and ROI enhancement, with a particular focus on maintaining the image quality of the face region. 
-- educational_video. Education. At the time of compression, emphasis is placed on the clarity and readability of text and images to help students better understand the content, ensuring that the teaching content is clearly conveyed. 
-
-Default value: normal.
-Note: To use this value, the value of ScenarioBased must be 1; otherwise, this value will not take effect.
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return SceneType Video scenario. Valid values: 
-- normal: General transcoding scenario. General transcoding and compression scenario.
-- pgc: PGC HD TV shows and movies. At the time of compression, focus is placed on the viewing experience of TV shows and movies and ROI encoding is performed according to their characteristics, while high-quality contents of videos and audio are retained. 
-- materials_video: HD materials. Scenario involving material resources, where requirements for image quality are extremely high and there are many transparent images, with almost no visual loss during compression. 
-- ugc: UGC content. It is suitable for a wide range of UGC/short video scenarios, with an optimized encoding bitrate for short video characteristics, improved image quality, and enhanced business QOS/QOE metrics. 
-- e-commerce_video. Fashion show/e-commerce: At the time of compression, emphasis is placed on detail clarity and ROI enhancement, with a particular focus on maintaining the image quality of the face region. 
-- educational_video. Education. At the time of compression, emphasis is placed on the clarity and readability of text and images to help students better understand the content, ensuring that the teaching content is clearly conveyed. 
-
-Default value: normal.
-Note: To use this value, the value of ScenarioBased must be 1; otherwise, this value will not take effect.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get Video scenario. Optional values: 
+normal: General transcoding scenario: General transcoding and compression scenario.
+pgc: PGC HD TV shows and movies: At the time of compression, focus is placed on the viewing experience of TV shows and movies and ROI encoding is performed according to their characteristics, while high-quality video and audio content is retained. 
+materials_video: HD materials: Scenario involving material resources, where requirements for image quality are extremely high and there are many transparent images, with almost no visual loss during compression. 
+ugc: UGC content: It is suitable for a wide range of UGC/short video scenarios, with an optimized encoding bitrate for short video characteristics, improved image quality, and enhanced business QOS/QOE metrics. 
+e-commerce_video: Fashion show/e-commerce: During compression, emphasis is placed on detail clarity and ROI enhancement, with a particular focus on maintaining the image quality of the face region. 
+educational_video: Education: Compression emphasizes clarity and readability of text and images to help students better understand content and ensure clear conveyance of teaching content. 
+Default value: normal
+Note: To use this value, ScenarioBased must be 1, otherwise it does not take effect. 
+     * @return SceneType Video scenario. Optional values: 
+normal: General transcoding scenario: General transcoding and compression scenario.
+pgc: PGC HD TV shows and movies: At the time of compression, focus is placed on the viewing experience of TV shows and movies and ROI encoding is performed according to their characteristics, while high-quality video and audio content is retained. 
+materials_video: HD materials: Scenario involving material resources, where requirements for image quality are extremely high and there are many transparent images, with almost no visual loss during compression. 
+ugc: UGC content: It is suitable for a wide range of UGC/short video scenarios, with an optimized encoding bitrate for short video characteristics, improved image quality, and enhanced business QOS/QOE metrics. 
+e-commerce_video: Fashion show/e-commerce: During compression, emphasis is placed on detail clarity and ROI enhancement, with a particular focus on maintaining the image quality of the face region. 
+educational_video: Education: Compression emphasizes clarity and readability of text and images to help students better understand content and ensure clear conveyance of teaching content. 
+Default value: normal
+Note: To use this value, ScenarioBased must be 1, otherwise it does not take effect.
      */
     public String getSceneType() {
         return this.SceneType;
     }
 
     /**
-     * Set Video scenario. Valid values: 
-- normal: General transcoding scenario. General transcoding and compression scenario.
-- pgc: PGC HD TV shows and movies. At the time of compression, focus is placed on the viewing experience of TV shows and movies and ROI encoding is performed according to their characteristics, while high-quality contents of videos and audio are retained. 
-- materials_video: HD materials. Scenario involving material resources, where requirements for image quality are extremely high and there are many transparent images, with almost no visual loss during compression. 
-- ugc: UGC content. It is suitable for a wide range of UGC/short video scenarios, with an optimized encoding bitrate for short video characteristics, improved image quality, and enhanced business QOS/QOE metrics. 
-- e-commerce_video. Fashion show/e-commerce: At the time of compression, emphasis is placed on detail clarity and ROI enhancement, with a particular focus on maintaining the image quality of the face region. 
-- educational_video. Education. At the time of compression, emphasis is placed on the clarity and readability of text and images to help students better understand the content, ensuring that the teaching content is clearly conveyed. 
-
-Default value: normal.
-Note: To use this value, the value of ScenarioBased must be 1; otherwise, this value will not take effect.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param SceneType Video scenario. Valid values: 
-- normal: General transcoding scenario. General transcoding and compression scenario.
-- pgc: PGC HD TV shows and movies. At the time of compression, focus is placed on the viewing experience of TV shows and movies and ROI encoding is performed according to their characteristics, while high-quality contents of videos and audio are retained. 
-- materials_video: HD materials. Scenario involving material resources, where requirements for image quality are extremely high and there are many transparent images, with almost no visual loss during compression. 
-- ugc: UGC content. It is suitable for a wide range of UGC/short video scenarios, with an optimized encoding bitrate for short video characteristics, improved image quality, and enhanced business QOS/QOE metrics. 
-- e-commerce_video. Fashion show/e-commerce: At the time of compression, emphasis is placed on detail clarity and ROI enhancement, with a particular focus on maintaining the image quality of the face region. 
-- educational_video. Education. At the time of compression, emphasis is placed on the clarity and readability of text and images to help students better understand the content, ensuring that the teaching content is clearly conveyed. 
-
-Default value: normal.
-Note: To use this value, the value of ScenarioBased must be 1; otherwise, this value will not take effect.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set Video scenario. Optional values: 
+normal: General transcoding scenario: General transcoding and compression scenario.
+pgc: PGC HD TV shows and movies: At the time of compression, focus is placed on the viewing experience of TV shows and movies and ROI encoding is performed according to their characteristics, while high-quality video and audio content is retained. 
+materials_video: HD materials: Scenario involving material resources, where requirements for image quality are extremely high and there are many transparent images, with almost no visual loss during compression. 
+ugc: UGC content: It is suitable for a wide range of UGC/short video scenarios, with an optimized encoding bitrate for short video characteristics, improved image quality, and enhanced business QOS/QOE metrics. 
+e-commerce_video: Fashion show/e-commerce: During compression, emphasis is placed on detail clarity and ROI enhancement, with a particular focus on maintaining the image quality of the face region. 
+educational_video: Education: Compression emphasizes clarity and readability of text and images to help students better understand content and ensure clear conveyance of teaching content. 
+Default value: normal
+Note: To use this value, ScenarioBased must be 1, otherwise it does not take effect.
+     * @param SceneType Video scenario. Optional values: 
+normal: General transcoding scenario: General transcoding and compression scenario.
+pgc: PGC HD TV shows and movies: At the time of compression, focus is placed on the viewing experience of TV shows and movies and ROI encoding is performed according to their characteristics, while high-quality video and audio content is retained. 
+materials_video: HD materials: Scenario involving material resources, where requirements for image quality are extremely high and there are many transparent images, with almost no visual loss during compression. 
+ugc: UGC content: It is suitable for a wide range of UGC/short video scenarios, with an optimized encoding bitrate for short video characteristics, improved image quality, and enhanced business QOS/QOE metrics. 
+e-commerce_video: Fashion show/e-commerce: During compression, emphasis is placed on detail clarity and ROI enhancement, with a particular focus on maintaining the image quality of the face region. 
+educational_video: Education: Compression emphasizes clarity and readability of text and images to help students better understand content and ensure clear conveyance of teaching content. 
+Default value: normal
+Note: To use this value, ScenarioBased must be 1, otherwise it does not take effect.
      */
     public void setSceneType(String SceneType) {
         this.SceneType = SceneType;
     }
 
     /**
-     * Get Transcoding policy. Valid values: 
-- ultra_compress: Extreme compression. Compared to standard compression, this policy can maximize bitrate compression while ensuring a certain level of image quality, thus greatly saving bandwidth and storage costs. 
-- standard_compress: Comprehensively optimal. Balances compression ratio and image quality, compressing files as much as possible without a noticeable reduction in subjective image quality. Only audio and video TSC transcoding fees are charged for this policy. 
-- high_compress: Bitrate priority. Prioritizes reducing file size, which may result in certain image quality loss. Only audio and video TSC transcoding fees are charged for this policy. 
-- low_compress: Image quality priority. Prioritizes ensuring image quality, and the size of compressed files may be relatively large. Only audio and video TSC transcoding fees are charged for this policy. 
-
+     * Get Transcoding policy. Optional values: 
+ultra_compress: Ultimate compression: Compared to standard compression, this policy can maximize bitrate compression while ensuring a certain level of image quality, greatly saving bandwidth and storage costs. 
+standard_compress: Comprehensively optimal: The compression ratio and image quality are balanced, and files are compressed as much as possible without a noticeable reduction in subjective image quality. Only audio and video TSC transcoding fees are charged for this policy. 
+high_compress: Bitrate priority: Priority is given to reducing file size, which may result in certain image quality loss. Only audio and video TSC transcoding fees are charged for this policy. 
+low_compress: Image quality priority: Priority is given to ensuring image quality, and the size of the compressed file may be relatively large. Only audio and video TSC transcoding fees are charged for this policy. 
 Default value: standard_compress. 
-Note: If you need to watch videos on TV, it is recommended not to use the ultra_compress policy. The billing standard for the ultra_compress policy is TSC transcoding + audio and video enhancement - artifacts removal.
-Note: To use this value, the value of ScenarioBased must be 1; otherwise, this value will not take effect.
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return CompressType Transcoding policy. Valid values: 
-- ultra_compress: Extreme compression. Compared to standard compression, this policy can maximize bitrate compression while ensuring a certain level of image quality, thus greatly saving bandwidth and storage costs. 
-- standard_compress: Comprehensively optimal. Balances compression ratio and image quality, compressing files as much as possible without a noticeable reduction in subjective image quality. Only audio and video TSC transcoding fees are charged for this policy. 
-- high_compress: Bitrate priority. Prioritizes reducing file size, which may result in certain image quality loss. Only audio and video TSC transcoding fees are charged for this policy. 
-- low_compress: Image quality priority. Prioritizes ensuring image quality, and the size of compressed files may be relatively large. Only audio and video TSC transcoding fees are charged for this policy. 
-
+Note: To watch videos on TV, the ultra_compress policy is not recommended. The billing standard for the ultra_compress policy is Top Speed Codec (TSC) transcoding + audio/video enhancement - artifacts removal.
+Note: To use this value, ScenarioBased must be 1, otherwise it does not take effect. 
+     * @return CompressType Transcoding policy. Optional values: 
+ultra_compress: Ultimate compression: Compared to standard compression, this policy can maximize bitrate compression while ensuring a certain level of image quality, greatly saving bandwidth and storage costs. 
+standard_compress: Comprehensively optimal: The compression ratio and image quality are balanced, and files are compressed as much as possible without a noticeable reduction in subjective image quality. Only audio and video TSC transcoding fees are charged for this policy. 
+high_compress: Bitrate priority: Priority is given to reducing file size, which may result in certain image quality loss. Only audio and video TSC transcoding fees are charged for this policy. 
+low_compress: Image quality priority: Priority is given to ensuring image quality, and the size of the compressed file may be relatively large. Only audio and video TSC transcoding fees are charged for this policy. 
 Default value: standard_compress. 
-Note: If you need to watch videos on TV, it is recommended not to use the ultra_compress policy. The billing standard for the ultra_compress policy is TSC transcoding + audio and video enhancement - artifacts removal.
-Note: To use this value, the value of ScenarioBased must be 1; otherwise, this value will not take effect.
-Note: This field may return null, indicating that no valid value can be obtained.
+Note: To watch videos on TV, the ultra_compress policy is not recommended. The billing standard for the ultra_compress policy is Top Speed Codec (TSC) transcoding + audio/video enhancement - artifacts removal.
+Note: To use this value, ScenarioBased must be 1, otherwise it does not take effect.
      */
     public String getCompressType() {
         return this.CompressType;
     }
 
     /**
-     * Set Transcoding policy. Valid values: 
-- ultra_compress: Extreme compression. Compared to standard compression, this policy can maximize bitrate compression while ensuring a certain level of image quality, thus greatly saving bandwidth and storage costs. 
-- standard_compress: Comprehensively optimal. Balances compression ratio and image quality, compressing files as much as possible without a noticeable reduction in subjective image quality. Only audio and video TSC transcoding fees are charged for this policy. 
-- high_compress: Bitrate priority. Prioritizes reducing file size, which may result in certain image quality loss. Only audio and video TSC transcoding fees are charged for this policy. 
-- low_compress: Image quality priority. Prioritizes ensuring image quality, and the size of compressed files may be relatively large. Only audio and video TSC transcoding fees are charged for this policy. 
-
+     * Set Transcoding policy. Optional values: 
+ultra_compress: Ultimate compression: Compared to standard compression, this policy can maximize bitrate compression while ensuring a certain level of image quality, greatly saving bandwidth and storage costs. 
+standard_compress: Comprehensively optimal: The compression ratio and image quality are balanced, and files are compressed as much as possible without a noticeable reduction in subjective image quality. Only audio and video TSC transcoding fees are charged for this policy. 
+high_compress: Bitrate priority: Priority is given to reducing file size, which may result in certain image quality loss. Only audio and video TSC transcoding fees are charged for this policy. 
+low_compress: Image quality priority: Priority is given to ensuring image quality, and the size of the compressed file may be relatively large. Only audio and video TSC transcoding fees are charged for this policy. 
 Default value: standard_compress. 
-Note: If you need to watch videos on TV, it is recommended not to use the ultra_compress policy. The billing standard for the ultra_compress policy is TSC transcoding + audio and video enhancement - artifacts removal.
-Note: To use this value, the value of ScenarioBased must be 1; otherwise, this value will not take effect.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param CompressType Transcoding policy. Valid values: 
-- ultra_compress: Extreme compression. Compared to standard compression, this policy can maximize bitrate compression while ensuring a certain level of image quality, thus greatly saving bandwidth and storage costs. 
-- standard_compress: Comprehensively optimal. Balances compression ratio and image quality, compressing files as much as possible without a noticeable reduction in subjective image quality. Only audio and video TSC transcoding fees are charged for this policy. 
-- high_compress: Bitrate priority. Prioritizes reducing file size, which may result in certain image quality loss. Only audio and video TSC transcoding fees are charged for this policy. 
-- low_compress: Image quality priority. Prioritizes ensuring image quality, and the size of compressed files may be relatively large. Only audio and video TSC transcoding fees are charged for this policy. 
-
+Note: To watch videos on TV, the ultra_compress policy is not recommended. The billing standard for the ultra_compress policy is Top Speed Codec (TSC) transcoding + audio/video enhancement - artifacts removal.
+Note: To use this value, ScenarioBased must be 1, otherwise it does not take effect.
+     * @param CompressType Transcoding policy. Optional values: 
+ultra_compress: Ultimate compression: Compared to standard compression, this policy can maximize bitrate compression while ensuring a certain level of image quality, greatly saving bandwidth and storage costs. 
+standard_compress: Comprehensively optimal: The compression ratio and image quality are balanced, and files are compressed as much as possible without a noticeable reduction in subjective image quality. Only audio and video TSC transcoding fees are charged for this policy. 
+high_compress: Bitrate priority: Priority is given to reducing file size, which may result in certain image quality loss. Only audio and video TSC transcoding fees are charged for this policy. 
+low_compress: Image quality priority: Priority is given to ensuring image quality, and the size of the compressed file may be relatively large. Only audio and video TSC transcoding fees are charged for this policy. 
 Default value: standard_compress. 
-Note: If you need to watch videos on TV, it is recommended not to use the ultra_compress policy. The billing standard for the ultra_compress policy is TSC transcoding + audio and video enhancement - artifacts removal.
-Note: To use this value, the value of ScenarioBased must be 1; otherwise, this value will not take effect.
-Note: This field may return null, indicating that no valid value can be obtained.
+Note: To watch videos on TV, the ultra_compress policy is not recommended. The billing standard for the ultra_compress policy is Top Speed Codec (TSC) transcoding + audio/video enhancement - artifacts removal.
+Note: To use this value, ScenarioBased must be 1, otherwise it does not take effect.
      */
     public void setCompressType(String CompressType) {
         this.CompressType = CompressType;

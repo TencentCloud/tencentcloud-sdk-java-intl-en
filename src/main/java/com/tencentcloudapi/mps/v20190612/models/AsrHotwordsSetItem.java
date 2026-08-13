@@ -24,84 +24,69 @@ import java.util.HashMap;
 public class AsrHotwordsSetItem extends AbstractModel {
 
     /**
-    * Hotword ID.
-Note: This field may return null, indicating that no valid value can be obtained.
+    * Serial number of the hot word
     */
     @SerializedName("Id")
     @Expose
     private Long Id;
 
     /**
-    * Hotword text.
-Note: This field may return null, indicating that no valid value can be obtained.
+    * Hotword text
     */
     @SerializedName("Text")
     @Expose
     private String Text;
 
     /**
-    * Hotword weight. The value can be 11 or 100 or be in the range of 1 to 10.
-Note: This field may return null, indicating that no valid value can be obtained.
+    * Hotword weight. The value can be 11 or 100 or be in the range of 1 to -10.
     */
     @SerializedName("Weight")
     @Expose
     private Long Weight;
 
     /**
-     * Get Hotword ID.
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return Id Hotword ID.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get Serial number of the hot word 
+     * @return Id Serial number of the hot word
      */
     public Long getId() {
         return this.Id;
     }
 
     /**
-     * Set Hotword ID.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param Id Hotword ID.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set Serial number of the hot word
+     * @param Id Serial number of the hot word
      */
     public void setId(Long Id) {
         this.Id = Id;
     }
 
     /**
-     * Get Hotword text.
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return Text Hotword text.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get Hotword text 
+     * @return Text Hotword text
      */
     public String getText() {
         return this.Text;
     }
 
     /**
-     * Set Hotword text.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param Text Hotword text.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set Hotword text
+     * @param Text Hotword text
      */
     public void setText(String Text) {
         this.Text = Text;
     }
 
     /**
-     * Get Hotword weight. The value can be 11 or 100 or be in the range of 1 to 10.
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return Weight Hotword weight. The value can be 11 or 100 or be in the range of 1 to 10.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get Hotword weight. The value can be 11 or 100 or be in the range of 1 to -10. 
+     * @return Weight Hotword weight. The value can be 11 or 100 or be in the range of 1 to -10.
      */
     public Long getWeight() {
         return this.Weight;
     }
 
     /**
-     * Set Hotword weight. The value can be 11 or 100 or be in the range of 1 to 10.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param Weight Hotword weight. The value can be 11 or 100 or be in the range of 1 to 10.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set Hotword weight. The value can be 11 or 100 or be in the range of 1 to -10.
+     * @param Weight Hotword weight. The value can be 11 or 100 or be in the range of 1 to -10.
      */
     public void setWeight(Long Weight) {
         this.Weight = Weight;

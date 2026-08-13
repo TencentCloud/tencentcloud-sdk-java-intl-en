@@ -25,17 +25,14 @@ public class ImageEraseConfig extends AbstractModel {
 
     /**
     * Icon erasing configuration.
-Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("ImageEraseLogo")
     @Expose
     private ImageEraseLogoConfig ImageEraseLogo;
 
     /**
-     * Get Icon erasing configuration.
-Note: This field may return null, indicating that no valid value can be obtained. 
+     * Get Icon erasing configuration. 
      * @return ImageEraseLogo Icon erasing configuration.
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public ImageEraseLogoConfig getImageEraseLogo() {
         return this.ImageEraseLogo;
@@ -43,9 +40,7 @@ Note: This field may return null, indicating that no valid value can be obtained
 
     /**
      * Set Icon erasing configuration.
-Note: This field may return null, indicating that no valid value can be obtained.
      * @param ImageEraseLogo Icon erasing configuration.
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setImageEraseLogo(ImageEraseLogoConfig ImageEraseLogo) {
         this.ImageEraseLogo = ImageEraseLogo;

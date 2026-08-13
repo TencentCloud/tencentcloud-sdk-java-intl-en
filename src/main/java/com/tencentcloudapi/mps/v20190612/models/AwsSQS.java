@@ -24,112 +24,92 @@ import java.util.HashMap;
 public class AwsSQS extends AbstractModel {
 
     /**
-    * The region of the SQS queue.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * SQS queue area.
     */
     @SerializedName("SQSRegion")
     @Expose
     private String SQSRegion;
 
     /**
-    * The name of the SQS queue.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * SQS queue name.
     */
     @SerializedName("SQSQueueName")
     @Expose
     private String SQSQueueName;
 
     /**
-    * The key ID required to read from/write to the SQS queue.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Secret id for read-write SQS.
     */
     @SerializedName("S3SecretId")
     @Expose
     private String S3SecretId;
 
     /**
-    * The key required to read from/write to the SQS queue.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Read-write SQS secret key.
     */
     @SerializedName("S3SecretKey")
     @Expose
     private String S3SecretKey;
 
     /**
-     * Get The region of the SQS queue.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return SQSRegion The region of the SQS queue.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get SQS queue area. 
+     * @return SQSRegion SQS queue area.
      */
     public String getSQSRegion() {
         return this.SQSRegion;
     }
 
     /**
-     * Set The region of the SQS queue.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param SQSRegion The region of the SQS queue.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set SQS queue area.
+     * @param SQSRegion SQS queue area.
      */
     public void setSQSRegion(String SQSRegion) {
         this.SQSRegion = SQSRegion;
     }
 
     /**
-     * Get The name of the SQS queue.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return SQSQueueName The name of the SQS queue.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get SQS queue name. 
+     * @return SQSQueueName SQS queue name.
      */
     public String getSQSQueueName() {
         return this.SQSQueueName;
     }
 
     /**
-     * Set The name of the SQS queue.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param SQSQueueName The name of the SQS queue.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set SQS queue name.
+     * @param SQSQueueName SQS queue name.
      */
     public void setSQSQueueName(String SQSQueueName) {
         this.SQSQueueName = SQSQueueName;
     }
 
     /**
-     * Get The key ID required to read from/write to the SQS queue.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return S3SecretId The key ID required to read from/write to the SQS queue.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Secret id for read-write SQS. 
+     * @return S3SecretId Secret id for read-write SQS.
      */
     public String getS3SecretId() {
         return this.S3SecretId;
     }
 
     /**
-     * Set The key ID required to read from/write to the SQS queue.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param S3SecretId The key ID required to read from/write to the SQS queue.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Secret id for read-write SQS.
+     * @param S3SecretId Secret id for read-write SQS.
      */
     public void setS3SecretId(String S3SecretId) {
         this.S3SecretId = S3SecretId;
     }
 
     /**
-     * Get The key required to read from/write to the SQS queue.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return S3SecretKey The key required to read from/write to the SQS queue.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Read-write SQS secret key. 
+     * @return S3SecretKey Read-write SQS secret key.
      */
     public String getS3SecretKey() {
         return this.S3SecretKey;
     }
 
     /**
-     * Set The key required to read from/write to the SQS queue.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param S3SecretKey The key required to read from/write to the SQS queue.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Read-write SQS secret key.
+     * @param S3SecretKey Read-write SQS secret key.
      */
     public void setS3SecretKey(String S3SecretKey) {
         this.S3SecretKey = S3SecretKey;

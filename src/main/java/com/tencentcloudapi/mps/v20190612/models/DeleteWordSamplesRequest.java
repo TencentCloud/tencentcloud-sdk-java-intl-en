@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DeleteWordSamplesRequest extends AbstractModel {
 
     /**
-    * Keyword. Array length limit: 100 words.
+    * Keyword, array length limit: 100 words.
     */
     @SerializedName("Keywords")
     @Expose
     private String [] Keywords;
 
     /**
-     * Get Keyword. Array length limit: 100 words. 
-     * @return Keywords Keyword. Array length limit: 100 words.
+     * Get Keyword, array length limit: 100 words. 
+     * @return Keywords Keyword, array length limit: 100 words.
      */
     public String [] getKeywords() {
         return this.Keywords;
     }
 
     /**
-     * Set Keyword. Array length limit: 100 words.
-     * @param Keywords Keyword. Array length limit: 100 words.
+     * Set Keyword, array length limit: 100 words.
+     * @param Keywords Keyword, array length limit: 100 words.
      */
     public void setKeywords(String [] Keywords) {
         this.Keywords = Keywords;

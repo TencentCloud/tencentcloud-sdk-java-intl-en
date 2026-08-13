@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class ExecuteFunctionRequest extends AbstractModel {
 
     /**
-    * Name of called backend API.
+    * Backend interface name invoked.
     */
     @SerializedName("FunctionName")
     @Expose
     private String FunctionName;
 
     /**
-    * API parameter. Parameter format will depend on the actual function definition.
+    * API parameter, coordinate with the backend for the specific parameter format when calling.
     */
     @SerializedName("FunctionArg")
     @Expose
     private String FunctionArg;
 
     /**
-     * Get Name of called backend API. 
-     * @return FunctionName Name of called backend API.
+     * Get Backend interface name invoked. 
+     * @return FunctionName Backend interface name invoked.
      */
     public String getFunctionName() {
         return this.FunctionName;
     }
 
     /**
-     * Set Name of called backend API.
-     * @param FunctionName Name of called backend API.
+     * Set Backend interface name invoked.
+     * @param FunctionName Backend interface name invoked.
      */
     public void setFunctionName(String FunctionName) {
         this.FunctionName = FunctionName;
     }
 
     /**
-     * Get API parameter. Parameter format will depend on the actual function definition. 
-     * @return FunctionArg API parameter. Parameter format will depend on the actual function definition.
+     * Get API parameter, coordinate with the backend for the specific parameter format when calling. 
+     * @return FunctionArg API parameter, coordinate with the backend for the specific parameter format when calling.
      */
     public String getFunctionArg() {
         return this.FunctionArg;
     }
 
     /**
-     * Set API parameter. Parameter format will depend on the actual function definition.
-     * @param FunctionArg API parameter. Parameter format will depend on the actual function definition.
+     * Set API parameter, coordinate with the backend for the specific parameter format when calling.
+     * @param FunctionArg API parameter, coordinate with the backend for the specific parameter format when calling.
      */
     public void setFunctionArg(String FunctionArg) {
         this.FunctionArg = FunctionArg;

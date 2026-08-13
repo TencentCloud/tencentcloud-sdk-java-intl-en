@@ -34,13 +34,12 @@ Default value: ON.
     private String Switch;
 
     /**
-    * Type. Valid values:
+    * Type, available values:
 <li>HDR10</li>
 <li>HLG</li>
-Default value: HDR10.
+Default Value: HDR10.
 Note: The video encoding method should be h264 or h265.
 Note: The video encoding bit depth is 10.
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Type")
     @Expose
@@ -75,40 +74,36 @@ Default value: ON.
     }
 
     /**
-     * Get Type. Valid values:
+     * Get Type, available values:
 <li>HDR10</li>
 <li>HLG</li>
-Default value: HDR10.
+Default Value: HDR10.
 Note: The video encoding method should be h264 or h265.
-Note: The video encoding bit depth is 10.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Type Type. Valid values:
+Note: The video encoding bit depth is 10. 
+     * @return Type Type, available values:
 <li>HDR10</li>
 <li>HLG</li>
-Default value: HDR10.
+Default Value: HDR10.
 Note: The video encoding method should be h264 or h265.
 Note: The video encoding bit depth is 10.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set Type. Valid values:
+     * Set Type, available values:
 <li>HDR10</li>
 <li>HLG</li>
-Default value: HDR10.
+Default Value: HDR10.
 Note: The video encoding method should be h264 or h265.
 Note: The video encoding bit depth is 10.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Type Type. Valid values:
+     * @param Type Type, available values:
 <li>HDR10</li>
 <li>HLG</li>
-Default value: HDR10.
+Default Value: HDR10.
 Note: The video encoding method should be h264 or h265.
 Note: The video encoding bit depth is 10.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setType(String Type) {
         this.Type = Type;

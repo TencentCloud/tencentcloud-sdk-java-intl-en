@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ModifyLiveRecordTemplateRequest extends AbstractModel {
 
     /**
-    * Specifies the recording template unique identifier.
+    * Unique identifier of the recording template.
     */
     @SerializedName("Definition")
     @Expose
@@ -45,7 +45,7 @@ public class ModifyLiveRecordTemplateRequest extends AbstractModel {
     private MP4ConfigureInfo MP4Configure;
 
     /**
-    * Recording template name. Length limit: 64 characters.
+    * Recording template name. The length cannot exceed 64 characters.
     */
     @SerializedName("Name")
     @Expose
@@ -66,16 +66,16 @@ public class ModifyLiveRecordTemplateRequest extends AbstractModel {
     private String RecordType;
 
     /**
-     * Get Specifies the recording template unique identifier. 
-     * @return Definition Specifies the recording template unique identifier.
+     * Get Unique identifier of the recording template. 
+     * @return Definition Unique identifier of the recording template.
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set Specifies the recording template unique identifier.
-     * @param Definition Specifies the recording template unique identifier.
+     * Set Unique identifier of the recording template.
+     * @param Definition Unique identifier of the recording template.
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;
@@ -114,16 +114,16 @@ public class ModifyLiveRecordTemplateRequest extends AbstractModel {
     }
 
     /**
-     * Get Recording template name. Length limit: 64 characters. 
-     * @return Name Recording template name. Length limit: 64 characters.
+     * Get Recording template name. The length cannot exceed 64 characters. 
+     * @return Name Recording template name. The length cannot exceed 64 characters.
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Recording template name. Length limit: 64 characters.
-     * @param Name Recording template name. Length limit: 64 characters.
+     * Set Recording template name. The length cannot exceed 64 characters.
+     * @param Name Recording template name. The length cannot exceed 64 characters.
      */
     public void setName(String Name) {
         this.Name = Name;

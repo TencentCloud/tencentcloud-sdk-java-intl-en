@@ -24,8 +24,7 @@ import java.util.HashMap;
 public class SimpleAesDrm extends AbstractModel {
 
     /**
-    * The URI of decryption key.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Request decryption key uri address.
     */
     @SerializedName("Uri")
     @Expose
@@ -33,45 +32,37 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Encryption key (32-byte hexadecimal string).
-Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("Key")
     @Expose
     private String Key;
 
     /**
-    * Initialization vector for encryption (32-byte hexadecimal string).
-Note: This field may return null, indicating that no valid value can be obtained.
+    * Encryption initialization vector (32-byte hexadecimal string).
     */
     @SerializedName("Vector")
     @Expose
     private String Vector;
 
     /**
-     * Get The URI of decryption key.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Uri The URI of decryption key.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Request decryption key uri address. 
+     * @return Uri Request decryption key uri address.
      */
     public String getUri() {
         return this.Uri;
     }
 
     /**
-     * Set The URI of decryption key.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Uri The URI of decryption key.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Request decryption key uri address.
+     * @param Uri Request decryption key uri address.
      */
     public void setUri(String Uri) {
         this.Uri = Uri;
     }
 
     /**
-     * Get Encryption key (32-byte hexadecimal string).
-Note: This field may return null, indicating that no valid value can be obtained. 
+     * Get Encryption key (32-byte hexadecimal string). 
      * @return Key Encryption key (32-byte hexadecimal string).
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public String getKey() {
         return this.Key;
@@ -79,29 +70,23 @@ Note: This field may return null, indicating that no valid value can be obtained
 
     /**
      * Set Encryption key (32-byte hexadecimal string).
-Note: This field may return null, indicating that no valid value can be obtained.
      * @param Key Encryption key (32-byte hexadecimal string).
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setKey(String Key) {
         this.Key = Key;
     }
 
     /**
-     * Get Initialization vector for encryption (32-byte hexadecimal string).
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return Vector Initialization vector for encryption (32-byte hexadecimal string).
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get Encryption initialization vector (32-byte hexadecimal string). 
+     * @return Vector Encryption initialization vector (32-byte hexadecimal string).
      */
     public String getVector() {
         return this.Vector;
     }
 
     /**
-     * Set Initialization vector for encryption (32-byte hexadecimal string).
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param Vector Initialization vector for encryption (32-byte hexadecimal string).
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set Encryption initialization vector (32-byte hexadecimal string).
+     * @param Vector Encryption initialization vector (32-byte hexadecimal string).
      */
     public void setVector(String Vector) {
         this.Vector = Vector;

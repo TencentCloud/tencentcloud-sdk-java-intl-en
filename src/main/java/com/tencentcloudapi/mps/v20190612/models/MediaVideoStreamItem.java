@@ -64,55 +64,49 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long Fps;
 
     /**
-    * Color primaries
-Note: this field may return `null`, indicating that no valid value was found.
+    * Colorspace.
     */
     @SerializedName("ColorPrimaries")
     @Expose
     private String ColorPrimaries;
 
     /**
-    * Color space
-Note: this field may return `null`, indicating that no valid value was found.
+    * Colorspace.
     */
     @SerializedName("ColorSpace")
     @Expose
     private String ColorSpace;
 
     /**
-    * Color transfer
-Note: this field may return `null`, indicating that no valid value was found.
+    * Colorspace.
     */
     @SerializedName("ColorTransfer")
     @Expose
     private String ColorTransfer;
 
     /**
-    * HDR type
-Note: This field may return `null`, indicating that no valid value was found.
+    * HDR type.
     */
     @SerializedName("HdrType")
     @Expose
     private String HdrType;
 
     /**
-    * 
+    * Video Codecs.
     */
     @SerializedName("Codecs")
     @Expose
     private String Codecs;
 
     /**
-    * Numerator of the frame rate.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Numerator of the frame rate
     */
     @SerializedName("FpsNumerator")
     @Expose
     private Long FpsNumerator;
 
     /**
-    * Denominator of the frame rate.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Denominator of the frame rate
     */
     @SerializedName("FpsDenominator")
     @Expose
@@ -219,136 +213,112 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Color primaries
-Note: this field may return `null`, indicating that no valid value was found. 
-     * @return ColorPrimaries Color primaries
-Note: this field may return `null`, indicating that no valid value was found.
+     * Get Colorspace. 
+     * @return ColorPrimaries Colorspace.
      */
     public String getColorPrimaries() {
         return this.ColorPrimaries;
     }
 
     /**
-     * Set Color primaries
-Note: this field may return `null`, indicating that no valid value was found.
-     * @param ColorPrimaries Color primaries
-Note: this field may return `null`, indicating that no valid value was found.
+     * Set Colorspace.
+     * @param ColorPrimaries Colorspace.
      */
     public void setColorPrimaries(String ColorPrimaries) {
         this.ColorPrimaries = ColorPrimaries;
     }
 
     /**
-     * Get Color space
-Note: this field may return `null`, indicating that no valid value was found. 
-     * @return ColorSpace Color space
-Note: this field may return `null`, indicating that no valid value was found.
+     * Get Colorspace. 
+     * @return ColorSpace Colorspace.
      */
     public String getColorSpace() {
         return this.ColorSpace;
     }
 
     /**
-     * Set Color space
-Note: this field may return `null`, indicating that no valid value was found.
-     * @param ColorSpace Color space
-Note: this field may return `null`, indicating that no valid value was found.
+     * Set Colorspace.
+     * @param ColorSpace Colorspace.
      */
     public void setColorSpace(String ColorSpace) {
         this.ColorSpace = ColorSpace;
     }
 
     /**
-     * Get Color transfer
-Note: this field may return `null`, indicating that no valid value was found. 
-     * @return ColorTransfer Color transfer
-Note: this field may return `null`, indicating that no valid value was found.
+     * Get Colorspace. 
+     * @return ColorTransfer Colorspace.
      */
     public String getColorTransfer() {
         return this.ColorTransfer;
     }
 
     /**
-     * Set Color transfer
-Note: this field may return `null`, indicating that no valid value was found.
-     * @param ColorTransfer Color transfer
-Note: this field may return `null`, indicating that no valid value was found.
+     * Set Colorspace.
+     * @param ColorTransfer Colorspace.
      */
     public void setColorTransfer(String ColorTransfer) {
         this.ColorTransfer = ColorTransfer;
     }
 
     /**
-     * Get HDR type
-Note: This field may return `null`, indicating that no valid value was found. 
-     * @return HdrType HDR type
-Note: This field may return `null`, indicating that no valid value was found.
+     * Get HDR type. 
+     * @return HdrType HDR type.
      */
     public String getHdrType() {
         return this.HdrType;
     }
 
     /**
-     * Set HDR type
-Note: This field may return `null`, indicating that no valid value was found.
-     * @param HdrType HDR type
-Note: This field may return `null`, indicating that no valid value was found.
+     * Set HDR type.
+     * @param HdrType HDR type.
      */
     public void setHdrType(String HdrType) {
         this.HdrType = HdrType;
     }
 
     /**
-     * Get  
-     * @return Codecs 
+     * Get Video Codecs. 
+     * @return Codecs Video Codecs.
      */
     public String getCodecs() {
         return this.Codecs;
     }
 
     /**
-     * Set 
-     * @param Codecs 
+     * Set Video Codecs.
+     * @param Codecs Video Codecs.
      */
     public void setCodecs(String Codecs) {
         this.Codecs = Codecs;
     }
 
     /**
-     * Get Numerator of the frame rate.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return FpsNumerator Numerator of the frame rate.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Numerator of the frame rate 
+     * @return FpsNumerator Numerator of the frame rate
      */
     public Long getFpsNumerator() {
         return this.FpsNumerator;
     }
 
     /**
-     * Set Numerator of the frame rate.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param FpsNumerator Numerator of the frame rate.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Numerator of the frame rate
+     * @param FpsNumerator Numerator of the frame rate
      */
     public void setFpsNumerator(Long FpsNumerator) {
         this.FpsNumerator = FpsNumerator;
     }
 
     /**
-     * Get Denominator of the frame rate.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return FpsDenominator Denominator of the frame rate.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Denominator of the frame rate 
+     * @return FpsDenominator Denominator of the frame rate
      */
     public Long getFpsDenominator() {
         return this.FpsDenominator;
     }
 
     /**
-     * Set Denominator of the frame rate.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param FpsDenominator Denominator of the frame rate.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Denominator of the frame rate
+     * @param FpsDenominator Denominator of the frame rate
      */
     public void setFpsDenominator(Long FpsDenominator) {
         this.FpsDenominator = FpsDenominator;

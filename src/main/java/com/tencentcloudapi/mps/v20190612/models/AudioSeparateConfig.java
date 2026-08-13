@@ -34,22 +34,20 @@ Default value: `ON`.
     private String Switch;
 
     /**
-    * The scenario. Valid values:
-<li>`normal`: Separate voice and background audio.</li>
-<li>`music`: Separate vocals and instrumentals.</li>
-Default value: `normal`.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Scenario type. Valid values:
+<li>normal: Voice background audio scenario</li>
+<li>music: Singing accompaniment scenario</li>
+Default value: normal.
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * The output audio track. Valid values:
-<li>`vocal`: Voice.</li>
-<li>`background`: Output background audio if the scenario is `normal`, and output instrumentals if the scenario is `music`.</li>
-Default value: `vocal`.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Output audio track. Available values:
+<li>vocal: output voice.</li>
+<li>Background: Output background audio when the application scenario is normal, and output accompaniment when the application scenario is music.</li>
+Default value: vocal.
     */
     @SerializedName("Track")
     @Expose
@@ -84,64 +82,56 @@ Default value: `ON`.
     }
 
     /**
-     * Get The scenario. Valid values:
-<li>`normal`: Separate voice and background audio.</li>
-<li>`music`: Separate vocals and instrumentals.</li>
-Default value: `normal`.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Type The scenario. Valid values:
-<li>`normal`: Separate voice and background audio.</li>
-<li>`music`: Separate vocals and instrumentals.</li>
-Default value: `normal`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Scenario type. Valid values:
+<li>normal: Voice background audio scenario</li>
+<li>music: Singing accompaniment scenario</li>
+Default value: normal. 
+     * @return Type Scenario type. Valid values:
+<li>normal: Voice background audio scenario</li>
+<li>music: Singing accompaniment scenario</li>
+Default value: normal.
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set The scenario. Valid values:
-<li>`normal`: Separate voice and background audio.</li>
-<li>`music`: Separate vocals and instrumentals.</li>
-Default value: `normal`.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Type The scenario. Valid values:
-<li>`normal`: Separate voice and background audio.</li>
-<li>`music`: Separate vocals and instrumentals.</li>
-Default value: `normal`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Scenario type. Valid values:
+<li>normal: Voice background audio scenario</li>
+<li>music: Singing accompaniment scenario</li>
+Default value: normal.
+     * @param Type Scenario type. Valid values:
+<li>normal: Voice background audio scenario</li>
+<li>music: Singing accompaniment scenario</li>
+Default value: normal.
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get The output audio track. Valid values:
-<li>`vocal`: Voice.</li>
-<li>`background`: Output background audio if the scenario is `normal`, and output instrumentals if the scenario is `music`.</li>
-Default value: `vocal`.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Track The output audio track. Valid values:
-<li>`vocal`: Voice.</li>
-<li>`background`: Output background audio if the scenario is `normal`, and output instrumentals if the scenario is `music`.</li>
-Default value: `vocal`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Output audio track. Available values:
+<li>vocal: output voice.</li>
+<li>Background: Output background audio when the application scenario is normal, and output accompaniment when the application scenario is music.</li>
+Default value: vocal. 
+     * @return Track Output audio track. Available values:
+<li>vocal: output voice.</li>
+<li>Background: Output background audio when the application scenario is normal, and output accompaniment when the application scenario is music.</li>
+Default value: vocal.
      */
     public String getTrack() {
         return this.Track;
     }
 
     /**
-     * Set The output audio track. Valid values:
-<li>`vocal`: Voice.</li>
-<li>`background`: Output background audio if the scenario is `normal`, and output instrumentals if the scenario is `music`.</li>
-Default value: `vocal`.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Track The output audio track. Valid values:
-<li>`vocal`: Voice.</li>
-<li>`background`: Output background audio if the scenario is `normal`, and output instrumentals if the scenario is `music`.</li>
-Default value: `vocal`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Output audio track. Available values:
+<li>vocal: output voice.</li>
+<li>Background: Output background audio when the application scenario is normal, and output accompaniment when the application scenario is music.</li>
+Default value: vocal.
+     * @param Track Output audio track. Available values:
+<li>vocal: output voice.</li>
+<li>Background: Output background audio when the application scenario is normal, and output accompaniment when the application scenario is music.</li>
+Default value: vocal.
      */
     public void setTrack(String Track) {
         this.Track = Track;

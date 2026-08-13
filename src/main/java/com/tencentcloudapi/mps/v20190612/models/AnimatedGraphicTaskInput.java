@@ -45,8 +45,7 @@ public class AnimatedGraphicTaskInput extends AbstractModel {
     private Float EndTimeOffset;
 
     /**
-    * <p>Target storage for the file after GIF conversion. If this is not specified, it inherits the value from the upper-level OutputStorage.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Target storage for the file after animated image conversion. If left blank, it inherits the upper-level OutputStorage value.</p>
     */
     @SerializedName("OutputStorage")
     @Expose
@@ -115,20 +114,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get <p>Target storage for the file after GIF conversion. If this is not specified, it inherits the value from the upper-level OutputStorage.</p>
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return OutputStorage <p>Target storage for the file after GIF conversion. If this is not specified, it inherits the value from the upper-level OutputStorage.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Target storage for the file after animated image conversion. If left blank, it inherits the upper-level OutputStorage value.</p> 
+     * @return OutputStorage <p>Target storage for the file after animated image conversion. If left blank, it inherits the upper-level OutputStorage value.</p>
      */
     public TaskOutputStorage getOutputStorage() {
         return this.OutputStorage;
     }
 
     /**
-     * Set <p>Target storage for the file after GIF conversion. If this is not specified, it inherits the value from the upper-level OutputStorage.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param OutputStorage <p>Target storage for the file after GIF conversion. If this is not specified, it inherits the value from the upper-level OutputStorage.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Target storage for the file after animated image conversion. If left blank, it inherits the upper-level OutputStorage value.</p>
+     * @param OutputStorage <p>Target storage for the file after animated image conversion. If left blank, it inherits the upper-level OutputStorage value.</p>
      */
     public void setOutputStorage(TaskOutputStorage OutputStorage) {
         this.OutputStorage = OutputStorage;

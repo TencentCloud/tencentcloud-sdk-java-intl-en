@@ -34,10 +34,9 @@ Default value: ON.
     private String Switch;
 
     /**
-    * The frame rate (Hz). Value range: [0, 100].
+    * Frame rate. Value ranges from 0 to 100. Measurement unit: Hz.
 Default value: 0.
-Note: For transcoding, this parameter will overwrite `Fps` of `VideoTemplate`.
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: For transcode, this parameter overrides the internal Fps in VideoTemplate.
     */
     @SerializedName("Fps")
     @Expose
@@ -72,28 +71,24 @@ Default value: ON.
     }
 
     /**
-     * Get The frame rate (Hz). Value range: [0, 100].
+     * Get Frame rate. Value ranges from 0 to 100. Measurement unit: Hz.
 Default value: 0.
-Note: For transcoding, this parameter will overwrite `Fps` of `VideoTemplate`.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Fps The frame rate (Hz). Value range: [0, 100].
+Note: For transcode, this parameter overrides the internal Fps in VideoTemplate. 
+     * @return Fps Frame rate. Value ranges from 0 to 100. Measurement unit: Hz.
 Default value: 0.
-Note: For transcoding, this parameter will overwrite `Fps` of `VideoTemplate`.
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: For transcode, this parameter overrides the internal Fps in VideoTemplate.
      */
     public Long getFps() {
         return this.Fps;
     }
 
     /**
-     * Set The frame rate (Hz). Value range: [0, 100].
+     * Set Frame rate. Value ranges from 0 to 100. Measurement unit: Hz.
 Default value: 0.
-Note: For transcoding, this parameter will overwrite `Fps` of `VideoTemplate`.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Fps The frame rate (Hz). Value range: [0, 100].
+Note: For transcode, this parameter overrides the internal Fps in VideoTemplate.
+     * @param Fps Frame rate. Value ranges from 0 to 100. Measurement unit: Hz.
 Default value: 0.
-Note: For transcoding, this parameter will overwrite `Fps` of `VideoTemplate`.
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: For transcode, this parameter overrides the internal Fps in VideoTemplate.
      */
     public void setFps(Long Fps) {
         this.Fps = Fps;

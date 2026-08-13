@@ -25,9 +25,8 @@ public class ModifyAsrHotwordsRequest extends AbstractModel {
 
     /**
     * Hotword lexicon ID. 
- 
-Either Name or Content should be specified if the hotword lexicon is a temporary hotword lexicon.
-Either Name, FileContent, or FileName should be specified if the hotword lexicon is a file-based hotword lexicon.
+Either Name or Content should be specified if the hotword lexicon is a temporary hotword lexicon. 
+Either Name, FileContent, or FileName should be specified if the hotword vocabulary is a file-based hotword lexicon. 
 
     */
     @SerializedName("HotwordsId")
@@ -49,7 +48,7 @@ Either Name, FileContent, or FileName should be specified if the hotword lexicon
     private String Content;
 
     /**
-    * Base64-encoded content of the hotword file. This field is required if Type is set to 1.
+    * base64 content of the hot word library file, Type 1 required
 
 
 
@@ -67,14 +66,12 @@ Either Name, FileContent, or FileName should be specified if the hotword lexicon
 
     /**
      * Get Hotword lexicon ID. 
- 
-Either Name or Content should be specified if the hotword lexicon is a temporary hotword lexicon.
-Either Name, FileContent, or FileName should be specified if the hotword lexicon is a file-based hotword lexicon.
+Either Name or Content should be specified if the hotword lexicon is a temporary hotword lexicon. 
+Either Name, FileContent, or FileName should be specified if the hotword vocabulary is a file-based hotword lexicon. 
  
      * @return HotwordsId Hotword lexicon ID. 
- 
-Either Name or Content should be specified if the hotword lexicon is a temporary hotword lexicon.
-Either Name, FileContent, or FileName should be specified if the hotword lexicon is a file-based hotword lexicon.
+Either Name or Content should be specified if the hotword lexicon is a temporary hotword lexicon. 
+Either Name, FileContent, or FileName should be specified if the hotword vocabulary is a file-based hotword lexicon. 
 
      */
     public String getHotwordsId() {
@@ -83,14 +80,12 @@ Either Name, FileContent, or FileName should be specified if the hotword lexicon
 
     /**
      * Set Hotword lexicon ID. 
- 
-Either Name or Content should be specified if the hotword lexicon is a temporary hotword lexicon.
-Either Name, FileContent, or FileName should be specified if the hotword lexicon is a file-based hotword lexicon.
+Either Name or Content should be specified if the hotword lexicon is a temporary hotword lexicon. 
+Either Name, FileContent, or FileName should be specified if the hotword vocabulary is a file-based hotword lexicon. 
 
      * @param HotwordsId Hotword lexicon ID. 
- 
-Either Name or Content should be specified if the hotword lexicon is a temporary hotword lexicon.
-Either Name, FileContent, or FileName should be specified if the hotword lexicon is a file-based hotword lexicon.
+Either Name or Content should be specified if the hotword lexicon is a temporary hotword lexicon. 
+Either Name, FileContent, or FileName should be specified if the hotword vocabulary is a file-based hotword lexicon. 
 
      */
     public void setHotwordsId(String HotwordsId) {
@@ -130,11 +125,11 @@ Either Name, FileContent, or FileName should be specified if the hotword lexicon
     }
 
     /**
-     * Get Base64-encoded content of the hotword file. This field is required if Type is set to 1.
+     * Get base64 content of the hot word library file, Type 1 required
 
 
  
-     * @return FileContent Base64-encoded content of the hotword file. This field is required if Type is set to 1.
+     * @return FileContent base64 content of the hot word library file, Type 1 required
 
 
 
@@ -144,11 +139,11 @@ Either Name, FileContent, or FileName should be specified if the hotword lexicon
     }
 
     /**
-     * Set Base64-encoded content of the hotword file. This field is required if Type is set to 1.
+     * Set base64 content of the hot word library file, Type 1 required
 
 
 
-     * @param FileContent Base64-encoded content of the hotword file. This field is required if Type is set to 1.
+     * @param FileContent base64 content of the hot word library file, Type 1 required
 
 
 

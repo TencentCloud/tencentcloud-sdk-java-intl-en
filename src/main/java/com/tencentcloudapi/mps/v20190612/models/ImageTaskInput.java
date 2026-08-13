@@ -25,7 +25,6 @@ public class ImageTaskInput extends AbstractModel {
 
     /**
     * <p>Image encoding configuration.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("EncodeConfig")
     @Expose
@@ -33,7 +32,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * <p>Image enhancement configuration.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("EnhanceConfig")
     @Expose
@@ -41,7 +39,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * <p>Image erasing configuration.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("EraseConfig")
     @Expose
@@ -55,10 +52,36 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private AiPosterSuiteConfig AiPosterSuiteConfig;
 
     /**
-     * Get <p>Image encoding configuration.</p>
-Note: This field may return null, indicating that no valid values can be obtained. 
+    * <p>Ai image cutout configuration</p>
+    */
+    @SerializedName("AiCutoutConfig")
+    @Expose
+    private AiCutoutConfig AiCutoutConfig;
+
+    /**
+    * <p>Ai Image Expansion Configuration</p>
+    */
+    @SerializedName("AiExpansionConfig")
+    @Expose
+    private AiExpansionConfig AiExpansionConfig;
+
+    /**
+    * <p>Ai storyboard deconstruction configuration</p>
+    */
+    @SerializedName("AiStoryboardConfig")
+    @Expose
+    private AiStoryboardConfig AiStoryboardConfig;
+
+    /**
+    * <p>Image understanding configuration.</p>
+    */
+    @SerializedName("UnderstandImageConfig")
+    @Expose
+    private UnderstandImageConfig UnderstandImageConfig;
+
+    /**
+     * Get <p>Image encoding configuration.</p> 
      * @return EncodeConfig <p>Image encoding configuration.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public ImageEncodeConfig getEncodeConfig() {
         return this.EncodeConfig;
@@ -66,19 +89,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set <p>Image encoding configuration.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param EncodeConfig <p>Image encoding configuration.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setEncodeConfig(ImageEncodeConfig EncodeConfig) {
         this.EncodeConfig = EncodeConfig;
     }
 
     /**
-     * Get <p>Image enhancement configuration.</p>
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get <p>Image enhancement configuration.</p> 
      * @return EnhanceConfig <p>Image enhancement configuration.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public ImageEnhanceConfig getEnhanceConfig() {
         return this.EnhanceConfig;
@@ -86,19 +105,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set <p>Image enhancement configuration.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param EnhanceConfig <p>Image enhancement configuration.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setEnhanceConfig(ImageEnhanceConfig EnhanceConfig) {
         this.EnhanceConfig = EnhanceConfig;
     }
 
     /**
-     * Get <p>Image erasing configuration.</p>
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get <p>Image erasing configuration.</p> 
      * @return EraseConfig <p>Image erasing configuration.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public ImageEraseConfig getEraseConfig() {
         return this.EraseConfig;
@@ -106,9 +121,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set <p>Image erasing configuration.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param EraseConfig <p>Image erasing configuration.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setEraseConfig(ImageEraseConfig EraseConfig) {
         this.EraseConfig = EraseConfig;
@@ -128,6 +141,70 @@ Note: This field may return null, indicating that no valid values can be obtaine
      */
     public void setAiPosterSuiteConfig(AiPosterSuiteConfig AiPosterSuiteConfig) {
         this.AiPosterSuiteConfig = AiPosterSuiteConfig;
+    }
+
+    /**
+     * Get <p>Ai image cutout configuration</p> 
+     * @return AiCutoutConfig <p>Ai image cutout configuration</p>
+     */
+    public AiCutoutConfig getAiCutoutConfig() {
+        return this.AiCutoutConfig;
+    }
+
+    /**
+     * Set <p>Ai image cutout configuration</p>
+     * @param AiCutoutConfig <p>Ai image cutout configuration</p>
+     */
+    public void setAiCutoutConfig(AiCutoutConfig AiCutoutConfig) {
+        this.AiCutoutConfig = AiCutoutConfig;
+    }
+
+    /**
+     * Get <p>Ai Image Expansion Configuration</p> 
+     * @return AiExpansionConfig <p>Ai Image Expansion Configuration</p>
+     */
+    public AiExpansionConfig getAiExpansionConfig() {
+        return this.AiExpansionConfig;
+    }
+
+    /**
+     * Set <p>Ai Image Expansion Configuration</p>
+     * @param AiExpansionConfig <p>Ai Image Expansion Configuration</p>
+     */
+    public void setAiExpansionConfig(AiExpansionConfig AiExpansionConfig) {
+        this.AiExpansionConfig = AiExpansionConfig;
+    }
+
+    /**
+     * Get <p>Ai storyboard deconstruction configuration</p> 
+     * @return AiStoryboardConfig <p>Ai storyboard deconstruction configuration</p>
+     */
+    public AiStoryboardConfig getAiStoryboardConfig() {
+        return this.AiStoryboardConfig;
+    }
+
+    /**
+     * Set <p>Ai storyboard deconstruction configuration</p>
+     * @param AiStoryboardConfig <p>Ai storyboard deconstruction configuration</p>
+     */
+    public void setAiStoryboardConfig(AiStoryboardConfig AiStoryboardConfig) {
+        this.AiStoryboardConfig = AiStoryboardConfig;
+    }
+
+    /**
+     * Get <p>Image understanding configuration.</p> 
+     * @return UnderstandImageConfig <p>Image understanding configuration.</p>
+     */
+    public UnderstandImageConfig getUnderstandImageConfig() {
+        return this.UnderstandImageConfig;
+    }
+
+    /**
+     * Set <p>Image understanding configuration.</p>
+     * @param UnderstandImageConfig <p>Image understanding configuration.</p>
+     */
+    public void setUnderstandImageConfig(UnderstandImageConfig UnderstandImageConfig) {
+        this.UnderstandImageConfig = UnderstandImageConfig;
     }
 
     public ImageTaskInput() {
@@ -150,6 +227,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.AiPosterSuiteConfig != null) {
             this.AiPosterSuiteConfig = new AiPosterSuiteConfig(source.AiPosterSuiteConfig);
         }
+        if (source.AiCutoutConfig != null) {
+            this.AiCutoutConfig = new AiCutoutConfig(source.AiCutoutConfig);
+        }
+        if (source.AiExpansionConfig != null) {
+            this.AiExpansionConfig = new AiExpansionConfig(source.AiExpansionConfig);
+        }
+        if (source.AiStoryboardConfig != null) {
+            this.AiStoryboardConfig = new AiStoryboardConfig(source.AiStoryboardConfig);
+        }
+        if (source.UnderstandImageConfig != null) {
+            this.UnderstandImageConfig = new UnderstandImageConfig(source.UnderstandImageConfig);
+        }
     }
 
 
@@ -161,6 +250,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamObj(map, prefix + "EnhanceConfig.", this.EnhanceConfig);
         this.setParamObj(map, prefix + "EraseConfig.", this.EraseConfig);
         this.setParamObj(map, prefix + "AiPosterSuiteConfig.", this.AiPosterSuiteConfig);
+        this.setParamObj(map, prefix + "AiCutoutConfig.", this.AiCutoutConfig);
+        this.setParamObj(map, prefix + "AiExpansionConfig.", this.AiExpansionConfig);
+        this.setParamObj(map, prefix + "AiStoryboardConfig.", this.AiStoryboardConfig);
+        this.setParamObj(map, prefix + "UnderstandImageConfig.", this.UnderstandImageConfig);
 
     }
 }

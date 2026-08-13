@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DeleteWatermarkTemplateRequest extends AbstractModel {
 
     /**
-    * Unique ID of a watermarking template.
+    * Unique identifier of the watermark template.
     */
     @SerializedName("Definition")
     @Expose
     private Long Definition;
 
     /**
-     * Get Unique ID of a watermarking template. 
-     * @return Definition Unique ID of a watermarking template.
+     * Get Unique identifier of the watermark template. 
+     * @return Definition Unique identifier of the watermark template.
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set Unique ID of a watermarking template.
-     * @param Definition Unique ID of a watermarking template.
+     * Set Unique identifier of the watermark template.
+     * @param Definition Unique identifier of the watermark template.
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;

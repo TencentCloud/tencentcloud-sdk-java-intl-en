@@ -34,16 +34,14 @@ Default value: ON.
     private String Switch;
 
     /**
-    * Frame rate numerator. Value range: non-negative number, which should be less than 120 when divided by the denominator, and in the unit of Hz. The default value is 0. Note: For transcoding, this parameter will overwrite the Fps in the VideoTemplate.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Frame rate numerator. Value range: non-negative number, less than 120 when divided by the denominator, in Hz. Default value is 0. Note: For transcoding, this parameter overrides the Fps in the VideoTemplate.
     */
     @SerializedName("FpsNum")
     @Expose
     private Long FpsNum;
 
     /**
-    * Frame rate denominator.Value range: numbers equal to or greater than 1. The default value is 1. Note: For transcoding, this parameter will overwrite the FpsDenominator in the VideoTemplate.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Frame rate denominator. Value range: numbers equal to or greater than 1. The default value is 1. Note: For transcoding, this parameter will override the FpsDenominator in the VideoTemplate.
     */
     @SerializedName("FpsDen")
     @Expose
@@ -78,40 +76,32 @@ Default value: ON.
     }
 
     /**
-     * Get Frame rate numerator. Value range: non-negative number, which should be less than 120 when divided by the denominator, and in the unit of Hz. The default value is 0. Note: For transcoding, this parameter will overwrite the Fps in the VideoTemplate.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return FpsNum Frame rate numerator. Value range: non-negative number, which should be less than 120 when divided by the denominator, and in the unit of Hz. The default value is 0. Note: For transcoding, this parameter will overwrite the Fps in the VideoTemplate.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Frame rate numerator. Value range: non-negative number, less than 120 when divided by the denominator, in Hz. Default value is 0. Note: For transcoding, this parameter overrides the Fps in the VideoTemplate. 
+     * @return FpsNum Frame rate numerator. Value range: non-negative number, less than 120 when divided by the denominator, in Hz. Default value is 0. Note: For transcoding, this parameter overrides the Fps in the VideoTemplate.
      */
     public Long getFpsNum() {
         return this.FpsNum;
     }
 
     /**
-     * Set Frame rate numerator. Value range: non-negative number, which should be less than 120 when divided by the denominator, and in the unit of Hz. The default value is 0. Note: For transcoding, this parameter will overwrite the Fps in the VideoTemplate.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param FpsNum Frame rate numerator. Value range: non-negative number, which should be less than 120 when divided by the denominator, and in the unit of Hz. The default value is 0. Note: For transcoding, this parameter will overwrite the Fps in the VideoTemplate.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Frame rate numerator. Value range: non-negative number, less than 120 when divided by the denominator, in Hz. Default value is 0. Note: For transcoding, this parameter overrides the Fps in the VideoTemplate.
+     * @param FpsNum Frame rate numerator. Value range: non-negative number, less than 120 when divided by the denominator, in Hz. Default value is 0. Note: For transcoding, this parameter overrides the Fps in the VideoTemplate.
      */
     public void setFpsNum(Long FpsNum) {
         this.FpsNum = FpsNum;
     }
 
     /**
-     * Get Frame rate denominator.Value range: numbers equal to or greater than 1. The default value is 1. Note: For transcoding, this parameter will overwrite the FpsDenominator in the VideoTemplate.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return FpsDen Frame rate denominator.Value range: numbers equal to or greater than 1. The default value is 1. Note: For transcoding, this parameter will overwrite the FpsDenominator in the VideoTemplate.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Frame rate denominator. Value range: numbers equal to or greater than 1. The default value is 1. Note: For transcoding, this parameter will override the FpsDenominator in the VideoTemplate. 
+     * @return FpsDen Frame rate denominator. Value range: numbers equal to or greater than 1. The default value is 1. Note: For transcoding, this parameter will override the FpsDenominator in the VideoTemplate.
      */
     public Long getFpsDen() {
         return this.FpsDen;
     }
 
     /**
-     * Set Frame rate denominator.Value range: numbers equal to or greater than 1. The default value is 1. Note: For transcoding, this parameter will overwrite the FpsDenominator in the VideoTemplate.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param FpsDen Frame rate denominator.Value range: numbers equal to or greater than 1. The default value is 1. Note: For transcoding, this parameter will overwrite the FpsDenominator in the VideoTemplate.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Frame rate denominator. Value range: numbers equal to or greater than 1. The default value is 1. Note: For transcoding, this parameter will override the FpsDenominator in the VideoTemplate.
+     * @param FpsDen Frame rate denominator. Value range: numbers equal to or greater than 1. The default value is 1. Note: For transcoding, this parameter will override the FpsDenominator in the VideoTemplate.
      */
     public void setFpsDen(Long FpsDen) {
         this.FpsDen = FpsDen;

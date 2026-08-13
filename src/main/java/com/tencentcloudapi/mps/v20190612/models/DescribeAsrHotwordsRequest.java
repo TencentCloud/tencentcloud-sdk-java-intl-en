@@ -40,8 +40,7 @@ public class DescribeAsrHotwordsRequest extends AbstractModel {
     private String Name;
 
     /**
-    * Paging offset. Default value: 0.
-
+    * Pagination offset. Default value: 0.
 
     */
     @SerializedName("Offset")
@@ -58,9 +57,9 @@ public class DescribeAsrHotwordsRequest extends AbstractModel {
     /**
     * Hotword sorting field. Valid values:
 
- - Default: Sort by the hotword upload sequence.
- - Weight: Sort by the weight.
- - Lexical: Sort by the first letter of hotwords.
+- Default: Sort by the order in the default file.
+- Weight: Sort by the weight.
+- Lexical: Sort by the first letter of hotwords.
     */
     @SerializedName("OrderBy")
     @Expose
@@ -114,11 +113,9 @@ public class DescribeAsrHotwordsRequest extends AbstractModel {
     }
 
     /**
-     * Get Paging offset. Default value: 0.
-
+     * Get Pagination offset. Default value: 0.
  
-     * @return Offset Paging offset. Default value: 0.
-
+     * @return Offset Pagination offset. Default value: 0.
 
      */
     public Long getOffset() {
@@ -126,11 +123,9 @@ public class DescribeAsrHotwordsRequest extends AbstractModel {
     }
 
     /**
-     * Set Paging offset. Default value: 0.
+     * Set Pagination offset. Default value: 0.
 
-
-     * @param Offset Paging offset. Default value: 0.
-
+     * @param Offset Pagination offset. Default value: 0.
 
      */
     public void setOffset(Long Offset) {
@@ -156,14 +151,14 @@ public class DescribeAsrHotwordsRequest extends AbstractModel {
     /**
      * Get Hotword sorting field. Valid values:
 
- - Default: Sort by the hotword upload sequence.
- - Weight: Sort by the weight.
- - Lexical: Sort by the first letter of hotwords. 
+- Default: Sort by the order in the default file.
+- Weight: Sort by the weight.
+- Lexical: Sort by the first letter of hotwords. 
      * @return OrderBy Hotword sorting field. Valid values:
 
- - Default: Sort by the hotword upload sequence.
- - Weight: Sort by the weight.
- - Lexical: Sort by the first letter of hotwords.
+- Default: Sort by the order in the default file.
+- Weight: Sort by the weight.
+- Lexical: Sort by the first letter of hotwords.
      */
     public String getOrderBy() {
         return this.OrderBy;
@@ -172,14 +167,14 @@ public class DescribeAsrHotwordsRequest extends AbstractModel {
     /**
      * Set Hotword sorting field. Valid values:
 
- - Default: Sort by the hotword upload sequence.
- - Weight: Sort by the weight.
- - Lexical: Sort by the first letter of hotwords.
+- Default: Sort by the order in the default file.
+- Weight: Sort by the weight.
+- Lexical: Sort by the first letter of hotwords.
      * @param OrderBy Hotword sorting field. Valid values:
 
- - Default: Sort by the hotword upload sequence.
- - Weight: Sort by the weight.
- - Lexical: Sort by the first letter of hotwords.
+- Default: Sort by the order in the default file.
+- Weight: Sort by the weight.
+- Lexical: Sort by the first letter of hotwords.
      */
     public void setOrderBy(String OrderBy) {
         this.OrderBy = OrderBy;

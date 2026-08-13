@@ -79,16 +79,14 @@ Default value: 0.
     private String StdExtInfo;
 
     /**
-    * Audio/Video enhancement configuration.
-Note: This field may return null, indicating that no valid value can be obtained.
+    * Audio/Video enhancement configuration
     */
     @SerializedName("EnhanceConfig")
     @Expose
     private EnhanceConfig EnhanceConfig;
 
     /**
-    * Subtitle parameter.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Subtitle parameter
     */
     @SerializedName("SubtitleTemplate")
     @Expose
@@ -231,40 +229,32 @@ Default value: 0.
     }
 
     /**
-     * Get Audio/Video enhancement configuration.
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return EnhanceConfig Audio/Video enhancement configuration.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get Audio/Video enhancement configuration 
+     * @return EnhanceConfig Audio/Video enhancement configuration
      */
     public EnhanceConfig getEnhanceConfig() {
         return this.EnhanceConfig;
     }
 
     /**
-     * Set Audio/Video enhancement configuration.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param EnhanceConfig Audio/Video enhancement configuration.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set Audio/Video enhancement configuration
+     * @param EnhanceConfig Audio/Video enhancement configuration
      */
     public void setEnhanceConfig(EnhanceConfig EnhanceConfig) {
         this.EnhanceConfig = EnhanceConfig;
     }
 
     /**
-     * Get Subtitle parameter.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return SubtitleTemplate Subtitle parameter.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Subtitle parameter 
+     * @return SubtitleTemplate Subtitle parameter
      */
     public SubtitleTemplate getSubtitleTemplate() {
         return this.SubtitleTemplate;
     }
 
     /**
-     * Set Subtitle parameter.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param SubtitleTemplate Subtitle parameter.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Subtitle parameter
+     * @param SubtitleTemplate Subtitle parameter
      */
     public void setSubtitleTemplate(SubtitleTemplate SubtitleTemplate) {
         this.SubtitleTemplate = SubtitleTemplate;

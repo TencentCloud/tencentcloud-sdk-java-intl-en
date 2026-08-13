@@ -34,24 +34,21 @@ public class TaskOutputStorage extends AbstractModel {
     private String Type;
 
     /**
-    * The location to save the output object in COS. This parameter is valid and required when `Type` is COS.
-Note: This field may return null, indicating that no valid value can be obtained.
+    * Valid when Type is COS. This item is required and indicates the Media Processing Service COS output location.
     */
     @SerializedName("CosOutputStorage")
     @Expose
     private CosOutputStorage CosOutputStorage;
 
     /**
-    * The AWS S3 bucket to save the output file. This parameter is required if `Type` is `AWS-S3`.
-Note: This field may return null, indicating that no valid value can be obtained.
+    * Valid when Type is AWS-S3. This item is required and indicates the AWS S3 output location for media processing.
     */
     @SerializedName("S3OutputStorage")
     @Expose
     private S3OutputStorage S3OutputStorage;
 
     /**
-    * The VOD Pro application and bucket to save the output file. This parameter is required if `Type` is `VOD`.
-Note: This field may return null, indicating that no valid value can be obtained.
+    * Valid at that time when Type is VOD. This item is required and represents the Media Processing Service (MPS) video-on-demand (VOD) pro edition output location.
     */
     @SerializedName("VODOutputStorage")
     @Expose
@@ -86,60 +83,48 @@ Note: This field may return null, indicating that no valid value can be obtained
     }
 
     /**
-     * Get The location to save the output object in COS. This parameter is valid and required when `Type` is COS.
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return CosOutputStorage The location to save the output object in COS. This parameter is valid and required when `Type` is COS.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get Valid when Type is COS. This item is required and indicates the Media Processing Service COS output location. 
+     * @return CosOutputStorage Valid when Type is COS. This item is required and indicates the Media Processing Service COS output location.
      */
     public CosOutputStorage getCosOutputStorage() {
         return this.CosOutputStorage;
     }
 
     /**
-     * Set The location to save the output object in COS. This parameter is valid and required when `Type` is COS.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param CosOutputStorage The location to save the output object in COS. This parameter is valid and required when `Type` is COS.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set Valid when Type is COS. This item is required and indicates the Media Processing Service COS output location.
+     * @param CosOutputStorage Valid when Type is COS. This item is required and indicates the Media Processing Service COS output location.
      */
     public void setCosOutputStorage(CosOutputStorage CosOutputStorage) {
         this.CosOutputStorage = CosOutputStorage;
     }
 
     /**
-     * Get The AWS S3 bucket to save the output file. This parameter is required if `Type` is `AWS-S3`.
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return S3OutputStorage The AWS S3 bucket to save the output file. This parameter is required if `Type` is `AWS-S3`.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get Valid when Type is AWS-S3. This item is required and indicates the AWS S3 output location for media processing. 
+     * @return S3OutputStorage Valid when Type is AWS-S3. This item is required and indicates the AWS S3 output location for media processing.
      */
     public S3OutputStorage getS3OutputStorage() {
         return this.S3OutputStorage;
     }
 
     /**
-     * Set The AWS S3 bucket to save the output file. This parameter is required if `Type` is `AWS-S3`.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param S3OutputStorage The AWS S3 bucket to save the output file. This parameter is required if `Type` is `AWS-S3`.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set Valid when Type is AWS-S3. This item is required and indicates the AWS S3 output location for media processing.
+     * @param S3OutputStorage Valid when Type is AWS-S3. This item is required and indicates the AWS S3 output location for media processing.
      */
     public void setS3OutputStorage(S3OutputStorage S3OutputStorage) {
         this.S3OutputStorage = S3OutputStorage;
     }
 
     /**
-     * Get The VOD Pro application and bucket to save the output file. This parameter is required if `Type` is `VOD`.
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return VODOutputStorage The VOD Pro application and bucket to save the output file. This parameter is required if `Type` is `VOD`.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get Valid at that time when Type is VOD. This item is required and represents the Media Processing Service (MPS) video-on-demand (VOD) pro edition output location. 
+     * @return VODOutputStorage Valid at that time when Type is VOD. This item is required and represents the Media Processing Service (MPS) video-on-demand (VOD) pro edition output location.
      */
     public VODOutputStorage getVODOutputStorage() {
         return this.VODOutputStorage;
     }
 
     /**
-     * Set The VOD Pro application and bucket to save the output file. This parameter is required if `Type` is `VOD`.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param VODOutputStorage The VOD Pro application and bucket to save the output file. This parameter is required if `Type` is `VOD`.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set Valid at that time when Type is VOD. This item is required and represents the Media Processing Service (MPS) video-on-demand (VOD) pro edition output location.
+     * @param VODOutputStorage Valid at that time when Type is VOD. This item is required and represents the Media Processing Service (MPS) video-on-demand (VOD) pro edition output location.
      */
     public void setVODOutputStorage(VODOutputStorage VODOutputStorage) {
         this.VODOutputStorage = VODOutputStorage;

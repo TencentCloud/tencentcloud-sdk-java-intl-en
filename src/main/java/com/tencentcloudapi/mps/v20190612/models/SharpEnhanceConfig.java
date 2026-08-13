@@ -34,9 +34,8 @@ Default value: ON.
     private String Switch;
 
     /**
-    * The strength. Value range: 0.0-1.0
-Default value: 0.0
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Strength, value ranges from 0.0 to 1.0.
+Default: 0.0.
     */
     @SerializedName("Intensity")
     @Expose
@@ -71,24 +70,20 @@ Default value: ON.
     }
 
     /**
-     * Get The strength. Value range: 0.0-1.0
-Default value: 0.0
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Intensity The strength. Value range: 0.0-1.0
-Default value: 0.0
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Strength, value ranges from 0.0 to 1.0.
+Default: 0.0. 
+     * @return Intensity Strength, value ranges from 0.0 to 1.0.
+Default: 0.0.
      */
     public Float getIntensity() {
         return this.Intensity;
     }
 
     /**
-     * Set The strength. Value range: 0.0-1.0
-Default value: 0.0
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Intensity The strength. Value range: 0.0-1.0
-Default value: 0.0
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Strength, value ranges from 0.0 to 1.0.
+Default: 0.0.
+     * @param Intensity Strength, value ranges from 0.0 to 1.0.
+Default: 0.0.
      */
     public void setIntensity(Float Intensity) {
         this.Intensity = Intensity;

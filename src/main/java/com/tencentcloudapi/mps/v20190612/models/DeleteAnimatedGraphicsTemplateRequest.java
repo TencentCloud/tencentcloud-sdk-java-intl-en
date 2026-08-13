@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DeleteAnimatedGraphicsTemplateRequest extends AbstractModel {
 
     /**
-    * Unique ID of an animated image generating template.
+    * Unique identifier for rotation diagram template.
     */
     @SerializedName("Definition")
     @Expose
     private Long Definition;
 
     /**
-     * Get Unique ID of an animated image generating template. 
-     * @return Definition Unique ID of an animated image generating template.
+     * Get Unique identifier for rotation diagram template. 
+     * @return Definition Unique identifier for rotation diagram template.
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set Unique ID of an animated image generating template.
-     * @param Definition Unique ID of an animated image generating template.
+     * Set Unique identifier for rotation diagram template.
+     * @param Definition Unique identifier for rotation diagram template.
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;

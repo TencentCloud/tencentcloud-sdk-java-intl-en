@@ -34,21 +34,19 @@ Default value: ON.
     private String Switch;
 
     /**
-    * The strength. Valid values:
-<li>lq: For low-resolution videos with obvious noise</li>
-<li>hq: For high-resolution videos</li>
+    * Type, available values:
+<li>lq: Super-resolution for low-resolution videos with considerable noise;</li>
+<li>hq: Targeting high-resolution video super-resolution.</li>
 Default value: lq.
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * The ratio of the target resolution to the original resolution. Valid values:
-<li>2</li>
+    * Super-resolution multiple, optional value:
+<li>2: Currently only support 2x super resolution.</li>
 Default value: 2.
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Size")
     @Expose
@@ -83,60 +81,52 @@ Default value: ON.
     }
 
     /**
-     * Get The strength. Valid values:
-<li>lq: For low-resolution videos with obvious noise</li>
-<li>hq: For high-resolution videos</li>
+     * Get Type, available values:
+<li>lq: Super-resolution for low-resolution videos with considerable noise;</li>
+<li>hq: Targeting high-resolution video super-resolution.</li>
+Default value: lq. 
+     * @return Type Type, available values:
+<li>lq: Super-resolution for low-resolution videos with considerable noise;</li>
+<li>hq: Targeting high-resolution video super-resolution.</li>
 Default value: lq.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Type The strength. Valid values:
-<li>lq: For low-resolution videos with obvious noise</li>
-<li>hq: For high-resolution videos</li>
-Default value: lq.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set The strength. Valid values:
-<li>lq: For low-resolution videos with obvious noise</li>
-<li>hq: For high-resolution videos</li>
+     * Set Type, available values:
+<li>lq: Super-resolution for low-resolution videos with considerable noise;</li>
+<li>hq: Targeting high-resolution video super-resolution.</li>
 Default value: lq.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Type The strength. Valid values:
-<li>lq: For low-resolution videos with obvious noise</li>
-<li>hq: For high-resolution videos</li>
+     * @param Type Type, available values:
+<li>lq: Super-resolution for low-resolution videos with considerable noise;</li>
+<li>hq: Targeting high-resolution video super-resolution.</li>
 Default value: lq.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get The ratio of the target resolution to the original resolution. Valid values:
-<li>2</li>
+     * Get Super-resolution multiple, optional value:
+<li>2: Currently only support 2x super resolution.</li>
+Default value: 2. 
+     * @return Size Super-resolution multiple, optional value:
+<li>2: Currently only support 2x super resolution.</li>
 Default value: 2.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Size The ratio of the target resolution to the original resolution. Valid values:
-<li>2</li>
-Default value: 2.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getSize() {
         return this.Size;
     }
 
     /**
-     * Set The ratio of the target resolution to the original resolution. Valid values:
-<li>2</li>
+     * Set Super-resolution multiple, optional value:
+<li>2: Currently only support 2x super resolution.</li>
 Default value: 2.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Size The ratio of the target resolution to the original resolution. Valid values:
-<li>2</li>
+     * @param Size Super-resolution multiple, optional value:
+<li>2: Currently only support 2x super resolution.</li>
 Default value: 2.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setSize(Long Size) {
         this.Size = Size;

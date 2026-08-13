@@ -34,12 +34,11 @@ Default value: ON.
     private String Switch;
 
     /**
-    * The strength. Valid values:
+    * Type, available values:
 <li>weak</li>
 <li>normal</li>
 <li>strong</li>
 Default value: weak.
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Type")
     @Expose
@@ -74,36 +73,32 @@ Default value: ON.
     }
 
     /**
-     * Get The strength. Valid values:
+     * Get Type, available values:
+<li>weak</li>
+<li>normal</li>
+<li>strong</li>
+Default value: weak. 
+     * @return Type Type, available values:
 <li>weak</li>
 <li>normal</li>
 <li>strong</li>
 Default value: weak.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Type The strength. Valid values:
-<li>weak</li>
-<li>normal</li>
-<li>strong</li>
-Default value: weak.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set The strength. Valid values:
+     * Set Type, available values:
 <li>weak</li>
 <li>normal</li>
 <li>strong</li>
 Default value: weak.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Type The strength. Valid values:
+     * @param Type Type, available values:
 <li>weak</li>
 <li>normal</li>
 <li>strong</li>
 Default value: weak.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setType(String Type) {
         this.Type = Type;
