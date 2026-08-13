@@ -53,8 +53,6 @@ public class CreateIntegrateClusterResponse extends AbstractModel {
 
     /**
     * Large order number.
-
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("BigDealIds")
     @Expose
@@ -132,12 +130,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Large order number.
-
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Large order number. 
      * @return BigDealIds Large order number.
-
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String [] getBigDealIds() {
         return this.BigDealIds;
@@ -145,11 +139,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Large order number.
-
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param BigDealIds Large order number.
-
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setBigDealIds(String [] BigDealIds) {
         this.BigDealIds = BigDealIds;

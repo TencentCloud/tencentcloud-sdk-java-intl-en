@@ -25,7 +25,6 @@ public class DescribeLibraDBClusterAccountPrivilegesResponse extends AbstractMod
 
     /**
     * Permission list
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Privileges")
     @Expose
@@ -39,10 +38,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Permission list
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Permission list 
      * @return Privileges Permission list
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String [] getPrivileges() {
         return this.Privileges;
@@ -50,9 +47,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Permission list
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Privileges Permission list
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setPrivileges(String [] Privileges) {
         this.Privileges = Privileges;

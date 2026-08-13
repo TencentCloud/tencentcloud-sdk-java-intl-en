@@ -31,7 +31,7 @@ public class DescribeAuditInstanceListResponse extends AbstractModel {
     private Long TotalCount;
 
     /**
-    * List of detailed information about the audit instance.
+    * Audit the instance detail list.
     */
     @SerializedName("Items")
     @Expose
@@ -61,16 +61,16 @@ public class DescribeAuditInstanceListResponse extends AbstractModel {
     }
 
     /**
-     * Get List of detailed information about the audit instance. 
-     * @return Items List of detailed information about the audit instance.
+     * Get Audit the instance detail list. 
+     * @return Items Audit the instance detail list.
      */
     public InstanceAuditStatus [] getItems() {
         return this.Items;
     }
 
     /**
-     * Set List of detailed information about the audit instance.
-     * @param Items List of detailed information about the audit instance.
+     * Set Audit the instance detail list.
+     * @param Items Audit the instance detail list.
      */
     public void setItems(InstanceAuditStatus [] Items) {
         this.Items = Items;

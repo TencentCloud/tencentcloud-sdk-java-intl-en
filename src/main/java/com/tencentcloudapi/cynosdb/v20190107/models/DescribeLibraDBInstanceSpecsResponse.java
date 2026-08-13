@@ -24,8 +24,7 @@ import java.util.HashMap;
 public class DescribeLibraDBInstanceSpecsResponse extends AbstractModel {
 
     /**
-    * Instance specifications list in this region
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Instance specifications list for this region
     */
     @SerializedName("InstanceSpecSet")
     @Expose
@@ -39,20 +38,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Instance specifications list in this region
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return InstanceSpecSet Instance specifications list in this region
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Instance specifications list for this region 
+     * @return InstanceSpecSet Instance specifications list for this region
      */
     public RegionInstanceSpecInfo [] getInstanceSpecSet() {
         return this.InstanceSpecSet;
     }
 
     /**
-     * Set Instance specifications list in this region
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param InstanceSpecSet Instance specifications list in this region
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Instance specifications list for this region
+     * @param InstanceSpecSet Instance specifications list for this region
      */
     public void setInstanceSpecSet(RegionInstanceSpecInfo [] InstanceSpecSet) {
         this.InstanceSpecSet = InstanceSpecSet;

@@ -25,47 +25,41 @@ public class GoodsSpec extends AbstractModel {
 
     /**
     * Number of products
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("GoodsNum")
     @Expose
     private Long GoodsNum;
 
     /**
-    * Number of CPU cores. required for PREPAID and POSTPAID instance types.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Number of CPU cores. Required for PREPAID and POSTPAID instance types.
     */
     @SerializedName("Cpu")
     @Expose
     private Long Cpu;
 
     /**
-    * Memory size in gb. required for PREPAID and POSTPAID instance types.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Memory size, unit G, required for PREPAID and POSTPAID instance types
     */
     @SerializedName("Memory")
     @Expose
     private Long Memory;
 
     /**
-    * Ccu size. required for serverless type.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Ccu size, required for serverless type
     */
     @SerializedName("Ccu")
     @Expose
     private Float Ccu;
 
     /**
-    * Storage size. required for PREPAID storage type.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Storage size, required for PREPAID storage type
     */
     @SerializedName("StorageLimit")
     @Expose
     private Long StorageLimit;
 
     /**
-    * Purchase duration.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Purchase period
     */
     @SerializedName("TimeSpan")
     @Expose
@@ -73,7 +67,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Duration unit.
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("TimeUnit")
     @Expose
@@ -89,10 +82,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String DeviceType;
 
     /**
-     * Get Number of products
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Number of products 
      * @return GoodsNum Number of products
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getGoodsNum() {
         return this.GoodsNum;
@@ -100,119 +91,95 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Number of products
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param GoodsNum Number of products
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setGoodsNum(Long GoodsNum) {
         this.GoodsNum = GoodsNum;
     }
 
     /**
-     * Get Number of CPU cores. required for PREPAID and POSTPAID instance types.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Cpu Number of CPU cores. required for PREPAID and POSTPAID instance types.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Number of CPU cores. Required for PREPAID and POSTPAID instance types. 
+     * @return Cpu Number of CPU cores. Required for PREPAID and POSTPAID instance types.
      */
     public Long getCpu() {
         return this.Cpu;
     }
 
     /**
-     * Set Number of CPU cores. required for PREPAID and POSTPAID instance types.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Cpu Number of CPU cores. required for PREPAID and POSTPAID instance types.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Number of CPU cores. Required for PREPAID and POSTPAID instance types.
+     * @param Cpu Number of CPU cores. Required for PREPAID and POSTPAID instance types.
      */
     public void setCpu(Long Cpu) {
         this.Cpu = Cpu;
     }
 
     /**
-     * Get Memory size in gb. required for PREPAID and POSTPAID instance types.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Memory Memory size in gb. required for PREPAID and POSTPAID instance types.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Memory size, unit G, required for PREPAID and POSTPAID instance types 
+     * @return Memory Memory size, unit G, required for PREPAID and POSTPAID instance types
      */
     public Long getMemory() {
         return this.Memory;
     }
 
     /**
-     * Set Memory size in gb. required for PREPAID and POSTPAID instance types.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Memory Memory size in gb. required for PREPAID and POSTPAID instance types.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Memory size, unit G, required for PREPAID and POSTPAID instance types
+     * @param Memory Memory size, unit G, required for PREPAID and POSTPAID instance types
      */
     public void setMemory(Long Memory) {
         this.Memory = Memory;
     }
 
     /**
-     * Get Ccu size. required for serverless type.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Ccu Ccu size. required for serverless type.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Ccu size, required for serverless type 
+     * @return Ccu Ccu size, required for serverless type
      */
     public Float getCcu() {
         return this.Ccu;
     }
 
     /**
-     * Set Ccu size. required for serverless type.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Ccu Ccu size. required for serverless type.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Ccu size, required for serverless type
+     * @param Ccu Ccu size, required for serverless type
      */
     public void setCcu(Float Ccu) {
         this.Ccu = Ccu;
     }
 
     /**
-     * Get Storage size. required for PREPAID storage type.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return StorageLimit Storage size. required for PREPAID storage type.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Storage size, required for PREPAID storage type 
+     * @return StorageLimit Storage size, required for PREPAID storage type
      */
     public Long getStorageLimit() {
         return this.StorageLimit;
     }
 
     /**
-     * Set Storage size. required for PREPAID storage type.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param StorageLimit Storage size. required for PREPAID storage type.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Storage size, required for PREPAID storage type
+     * @param StorageLimit Storage size, required for PREPAID storage type
      */
     public void setStorageLimit(Long StorageLimit) {
         this.StorageLimit = StorageLimit;
     }
 
     /**
-     * Get Purchase duration.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return TimeSpan Purchase duration.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Purchase period 
+     * @return TimeSpan Purchase period
      */
     public Long getTimeSpan() {
         return this.TimeSpan;
     }
 
     /**
-     * Set Purchase duration.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param TimeSpan Purchase duration.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Purchase period
+     * @param TimeSpan Purchase period
      */
     public void setTimeSpan(Long TimeSpan) {
         this.TimeSpan = TimeSpan;
     }
 
     /**
-     * Get Duration unit.
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Duration unit. 
      * @return TimeUnit Duration unit.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getTimeUnit() {
         return this.TimeUnit;
@@ -220,9 +187,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Duration unit.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param TimeUnit Duration unit.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setTimeUnit(String TimeUnit) {
         this.TimeUnit = TimeUnit;

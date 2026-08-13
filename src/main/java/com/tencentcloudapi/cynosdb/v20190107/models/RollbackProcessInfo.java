@@ -38,14 +38,14 @@ public class RollbackProcessInfo extends AbstractModel {
     private String VipSwitchableTime;
 
     /**
-    * Swap instance list.
+    * Exchange instance list
     */
     @SerializedName("ExchangeInstanceInfoList")
     @Expose
     private ExchangeInstanceInfo [] ExchangeInstanceInfoList;
 
     /**
-    * Swap RO group list.
+    * Exchange RO group list
     */
     @SerializedName("ExchangeRoGroupInfoList")
     @Expose
@@ -105,32 +105,32 @@ public class RollbackProcessInfo extends AbstractModel {
     }
 
     /**
-     * Get Swap instance list. 
-     * @return ExchangeInstanceInfoList Swap instance list.
+     * Get Exchange instance list 
+     * @return ExchangeInstanceInfoList Exchange instance list
      */
     public ExchangeInstanceInfo [] getExchangeInstanceInfoList() {
         return this.ExchangeInstanceInfoList;
     }
 
     /**
-     * Set Swap instance list.
-     * @param ExchangeInstanceInfoList Swap instance list.
+     * Set Exchange instance list
+     * @param ExchangeInstanceInfoList Exchange instance list
      */
     public void setExchangeInstanceInfoList(ExchangeInstanceInfo [] ExchangeInstanceInfoList) {
         this.ExchangeInstanceInfoList = ExchangeInstanceInfoList;
     }
 
     /**
-     * Get Swap RO group list. 
-     * @return ExchangeRoGroupInfoList Swap RO group list.
+     * Get Exchange RO group list 
+     * @return ExchangeRoGroupInfoList Exchange RO group list
      */
     public ExchangeRoGroupInfo [] getExchangeRoGroupInfoList() {
         return this.ExchangeRoGroupInfoList;
     }
 
     /**
-     * Set Swap RO group list.
-     * @param ExchangeRoGroupInfoList Swap RO group list.
+     * Set Exchange RO group list
+     * @param ExchangeRoGroupInfoList Exchange RO group list
      */
     public void setExchangeRoGroupInfoList(ExchangeRoGroupInfo [] ExchangeRoGroupInfoList) {
         this.ExchangeRoGroupInfoList = ExchangeRoGroupInfoList;

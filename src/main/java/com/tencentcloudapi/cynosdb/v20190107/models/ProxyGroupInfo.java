@@ -38,8 +38,7 @@ public class ProxyGroupInfo extends AbstractModel {
     private ProxyGroupRwInfo ProxyGroupRwInfo;
 
     /**
-    * Node information of the database proxy
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Database proxy node info
     */
     @SerializedName("ProxyNodes")
     @Expose
@@ -53,8 +52,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private ProxyConnectionPoolInfo ConnectionPool;
 
     /**
-    * Network information for database proxy
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Database proxy network info
     */
     @SerializedName("NetAddrInfos")
     @Expose
@@ -100,20 +98,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Node information of the database proxy
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ProxyNodes Node information of the database proxy
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Database proxy node info 
+     * @return ProxyNodes Database proxy node info
      */
     public ProxyNodeInfo [] getProxyNodes() {
         return this.ProxyNodes;
     }
 
     /**
-     * Set Node information of the database proxy
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ProxyNodes Node information of the database proxy
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Database proxy node info
+     * @param ProxyNodes Database proxy node info
      */
     public void setProxyNodes(ProxyNodeInfo [] ProxyNodes) {
         this.ProxyNodes = ProxyNodes;
@@ -136,20 +130,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Network information for database proxy
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return NetAddrInfos Network information for database proxy
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Database proxy network info 
+     * @return NetAddrInfos Database proxy network info
      */
     public NetAddr [] getNetAddrInfos() {
         return this.NetAddrInfos;
     }
 
     /**
-     * Set Network information for database proxy
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param NetAddrInfos Network information for database proxy
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Database proxy network info
+     * @param NetAddrInfos Database proxy network info
      */
     public void setNetAddrInfos(NetAddr [] NetAddrInfos) {
         this.NetAddrInfos = NetAddrInfos;

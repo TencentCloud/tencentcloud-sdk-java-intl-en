@@ -60,7 +60,6 @@ public class ParamTemplateListInfo extends AbstractModel {
 
     /**
     * Parameter template details
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ParamInfoSet")
     @Expose
@@ -147,10 +146,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Parameter template details
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Parameter template details 
      * @return ParamInfoSet Parameter template details
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public TemplateParamInfo [] getParamInfoSet() {
         return this.ParamInfoSet;
@@ -158,9 +155,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Parameter template details
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param ParamInfoSet Parameter template details
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setParamInfoSet(TemplateParamInfo [] ParamInfoSet) {
         this.ParamInfoSet = ParamInfoSet;

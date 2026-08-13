@@ -200,7 +200,6 @@ public class BizTaskInfo extends AbstractModel {
 
     /**
     * <p>Modify parameter task information</p>
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ModifyParamsData")
     @Expose
@@ -229,7 +228,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * <p>Manual backup task information</p>
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ManualBackupData")
     @Expose
@@ -251,7 +249,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * <p>Convert cluster logs</p>
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("SwitchClusterLogBin")
     @Expose
@@ -259,7 +256,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * <p>Modify instance parameter data</p>
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ModifyInstanceParamsData")
     @Expose
@@ -719,10 +715,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get <p>Modify parameter task information</p>
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get <p>Modify parameter task information</p> 
      * @return ModifyParamsData <p>Modify parameter task information</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      * @deprecated
      */
     @Deprecated
@@ -732,9 +726,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set <p>Modify parameter task information</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param ModifyParamsData <p>Modify parameter task information</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      * @deprecated
      */
     @Deprecated
@@ -791,10 +783,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get <p>Manual backup task information</p>
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get <p>Manual backup task information</p> 
      * @return ManualBackupData <p>Manual backup task information</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public ManualBackupData getManualBackupData() {
         return this.ManualBackupData;
@@ -802,9 +792,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set <p>Manual backup task information</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param ManualBackupData <p>Manual backup task information</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setManualBackupData(ManualBackupData ManualBackupData) {
         this.ManualBackupData = ManualBackupData;
@@ -843,10 +831,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get <p>Convert cluster logs</p>
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get <p>Convert cluster logs</p> 
      * @return SwitchClusterLogBin <p>Convert cluster logs</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public SwitchClusterLogBin getSwitchClusterLogBin() {
         return this.SwitchClusterLogBin;
@@ -854,19 +840,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set <p>Convert cluster logs</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param SwitchClusterLogBin <p>Convert cluster logs</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setSwitchClusterLogBin(SwitchClusterLogBin SwitchClusterLogBin) {
         this.SwitchClusterLogBin = SwitchClusterLogBin;
     }
 
     /**
-     * Get <p>Modify instance parameter data</p>
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get <p>Modify instance parameter data</p> 
      * @return ModifyInstanceParamsData <p>Modify instance parameter data</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public BizTaskModifyParamsData getModifyInstanceParamsData() {
         return this.ModifyInstanceParamsData;
@@ -874,9 +856,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set <p>Modify instance parameter data</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param ModifyInstanceParamsData <p>Modify instance parameter data</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setModifyInstanceParamsData(BizTaskModifyParamsData ModifyInstanceParamsData) {
         this.ModifyInstanceParamsData = ModifyInstanceParamsData;

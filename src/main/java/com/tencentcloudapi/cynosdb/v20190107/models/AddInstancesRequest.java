@@ -38,14 +38,14 @@ public class AddInstancesRequest extends AbstractModel {
     private Long Cpu;
 
     /**
-    * Memory in GB
+    * <p>Memory in GB</p>
     */
     @SerializedName("Memory")
     @Expose
     private Long Memory;
 
     /**
-    * Number of added read-only instances. Value range: (0,16].
+    * <p>Number of newly-added read-only instances, value range (0,15]</p>
     */
     @SerializedName("ReadOnlyCount")
     @Expose
@@ -80,14 +80,14 @@ public class AddInstancesRequest extends AbstractModel {
     private String SubnetId;
 
     /**
-    * The port used when adding an RO group. Value range: [0,65535).
+    * <p>Port used when adding new RO groups, value range [0,65535)</p>
     */
     @SerializedName("Port")
     @Expose
     private Long Port;
 
     /**
-    * Instance name. String length range: [0,64).
+    * <p>Instance name, string length range [0,64), value range uppercase and lowercase letters, digits 0-9, '_', '-', '.'</p>
     */
     @SerializedName("InstanceName")
     @Expose
@@ -182,32 +182,32 @@ public class AddInstancesRequest extends AbstractModel {
     }
 
     /**
-     * Get Memory in GB 
-     * @return Memory Memory in GB
+     * Get <p>Memory in GB</p> 
+     * @return Memory <p>Memory in GB</p>
      */
     public Long getMemory() {
         return this.Memory;
     }
 
     /**
-     * Set Memory in GB
-     * @param Memory Memory in GB
+     * Set <p>Memory in GB</p>
+     * @param Memory <p>Memory in GB</p>
      */
     public void setMemory(Long Memory) {
         this.Memory = Memory;
     }
 
     /**
-     * Get Number of added read-only instances. Value range: (0,16]. 
-     * @return ReadOnlyCount Number of added read-only instances. Value range: (0,16].
+     * Get <p>Number of newly-added read-only instances, value range (0,15]</p> 
+     * @return ReadOnlyCount <p>Number of newly-added read-only instances, value range (0,15]</p>
      */
     public Long getReadOnlyCount() {
         return this.ReadOnlyCount;
     }
 
     /**
-     * Set Number of added read-only instances. Value range: (0,16].
-     * @param ReadOnlyCount Number of added read-only instances. Value range: (0,16].
+     * Set <p>Number of newly-added read-only instances, value range (0,15]</p>
+     * @param ReadOnlyCount <p>Number of newly-added read-only instances, value range (0,15]</p>
      */
     public void setReadOnlyCount(Long ReadOnlyCount) {
         this.ReadOnlyCount = ReadOnlyCount;
@@ -282,32 +282,32 @@ public class AddInstancesRequest extends AbstractModel {
     }
 
     /**
-     * Get The port used when adding an RO group. Value range: [0,65535). 
-     * @return Port The port used when adding an RO group. Value range: [0,65535).
+     * Get <p>Port used when adding new RO groups, value range [0,65535)</p> 
+     * @return Port <p>Port used when adding new RO groups, value range [0,65535)</p>
      */
     public Long getPort() {
         return this.Port;
     }
 
     /**
-     * Set The port used when adding an RO group. Value range: [0,65535).
-     * @param Port The port used when adding an RO group. Value range: [0,65535).
+     * Set <p>Port used when adding new RO groups, value range [0,65535)</p>
+     * @param Port <p>Port used when adding new RO groups, value range [0,65535)</p>
      */
     public void setPort(Long Port) {
         this.Port = Port;
     }
 
     /**
-     * Get Instance name. String length range: [0,64). 
-     * @return InstanceName Instance name. String length range: [0,64).
+     * Get <p>Instance name, string length range [0,64), value range uppercase and lowercase letters, digits 0-9, '_', '-', '.'</p> 
+     * @return InstanceName <p>Instance name, string length range [0,64), value range uppercase and lowercase letters, digits 0-9, '_', '-', '.'</p>
      */
     public String getInstanceName() {
         return this.InstanceName;
     }
 
     /**
-     * Set Instance name. String length range: [0,64).
-     * @param InstanceName Instance name. String length range: [0,64).
+     * Set <p>Instance name, string length range [0,64), value range uppercase and lowercase letters, digits 0-9, '_', '-', '.'</p>
+     * @param InstanceName <p>Instance name, string length range [0,64), value range uppercase and lowercase letters, digits 0-9, '_', '-', '.'</p>
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;

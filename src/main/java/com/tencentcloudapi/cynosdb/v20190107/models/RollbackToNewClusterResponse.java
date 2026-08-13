@@ -53,7 +53,6 @@ public class RollbackToNewClusterResponse extends AbstractModel {
 
     /**
     * <p>Large order number</p>
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("BigDealIds")
     @Expose
@@ -131,10 +130,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get <p>Large order number</p>
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get <p>Large order number</p> 
      * @return BigDealIds <p>Large order number</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String [] getBigDealIds() {
         return this.BigDealIds;
@@ -142,9 +139,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set <p>Large order number</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param BigDealIds <p>Large order number</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setBigDealIds(String [] BigDealIds) {
         this.BigDealIds = BigDealIds;

@@ -24,8 +24,7 @@ import java.util.HashMap;
 public class SparseBackupConfigRsp extends AbstractModel {
 
     /**
-    * <p>Sparse backup switch: ON/OFF</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Backup switch: ON/OFF</p>
     */
     @SerializedName("SparseBackupSwitch")
     @Expose
@@ -33,37 +32,30 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * <p>Sparse backup policy list (1-3)</p>
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("SparseBackupConfigInfos")
     @Expose
     private SparseBackupConfigInfo [] SparseBackupConfigInfos;
 
     /**
-     * Get <p>Sparse backup switch: ON/OFF</p>
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return SparseBackupSwitch <p>Sparse backup switch: ON/OFF</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Backup switch: ON/OFF</p> 
+     * @return SparseBackupSwitch <p>Backup switch: ON/OFF</p>
      */
     public String getSparseBackupSwitch() {
         return this.SparseBackupSwitch;
     }
 
     /**
-     * Set <p>Sparse backup switch: ON/OFF</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param SparseBackupSwitch <p>Sparse backup switch: ON/OFF</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Backup switch: ON/OFF</p>
+     * @param SparseBackupSwitch <p>Backup switch: ON/OFF</p>
      */
     public void setSparseBackupSwitch(String SparseBackupSwitch) {
         this.SparseBackupSwitch = SparseBackupSwitch;
     }
 
     /**
-     * Get <p>Sparse backup policy list (1-3)</p>
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get <p>Sparse backup policy list (1-3)</p> 
      * @return SparseBackupConfigInfos <p>Sparse backup policy list (1-3)</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public SparseBackupConfigInfo [] getSparseBackupConfigInfos() {
         return this.SparseBackupConfigInfos;
@@ -71,9 +63,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set <p>Sparse backup policy list (1-3)</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param SparseBackupConfigInfos <p>Sparse backup policy list (1-3)</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setSparseBackupConfigInfos(SparseBackupConfigInfo [] SparseBackupConfigInfos) {
         this.SparseBackupConfigInfos = SparseBackupConfigInfos;

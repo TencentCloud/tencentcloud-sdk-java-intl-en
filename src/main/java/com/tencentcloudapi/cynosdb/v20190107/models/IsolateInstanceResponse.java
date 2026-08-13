@@ -31,8 +31,7 @@ public class IsolateInstanceResponse extends AbstractModel {
     private Long FlowId;
 
     /**
-    * Order ID for isolated instance (prepaid instance)
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Order ID of the isolated instance (prepaid instance)
     */
     @SerializedName("DealNames")
     @Expose
@@ -62,20 +61,16 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Order ID for isolated instance (prepaid instance)
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return DealNames Order ID for isolated instance (prepaid instance)
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Order ID of the isolated instance (prepaid instance) 
+     * @return DealNames Order ID of the isolated instance (prepaid instance)
      */
     public String [] getDealNames() {
         return this.DealNames;
     }
 
     /**
-     * Set Order ID for isolated instance (prepaid instance)
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param DealNames Order ID for isolated instance (prepaid instance)
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Order ID of the isolated instance (prepaid instance)
+     * @param DealNames Order ID of the isolated instance (prepaid instance)
      */
     public void setDealNames(String [] DealNames) {
         this.DealNames = DealNames;

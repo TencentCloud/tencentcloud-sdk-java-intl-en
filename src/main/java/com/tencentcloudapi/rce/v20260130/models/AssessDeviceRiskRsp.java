@@ -38,6 +38,13 @@ public class AssessDeviceRiskRsp extends AbstractModel {
     private Device Device;
 
     /**
+    * <p>Basic IP environment information</p>
+    */
+    @SerializedName("Environment")
+    @Expose
+    private Environment Environment;
+
+    /**
      * Get <p>The risk score information of the device</p> 
      * @return Score <p>The risk score information of the device</p>
      */
@@ -69,6 +76,22 @@ public class AssessDeviceRiskRsp extends AbstractModel {
         this.Device = Device;
     }
 
+    /**
+     * Get <p>Basic IP environment information</p> 
+     * @return Environment <p>Basic IP environment information</p>
+     */
+    public Environment getEnvironment() {
+        return this.Environment;
+    }
+
+    /**
+     * Set <p>Basic IP environment information</p>
+     * @param Environment <p>Basic IP environment information</p>
+     */
+    public void setEnvironment(Environment Environment) {
+        this.Environment = Environment;
+    }
+
     public AssessDeviceRiskRsp() {
     }
 
@@ -83,6 +106,9 @@ public class AssessDeviceRiskRsp extends AbstractModel {
         if (source.Device != null) {
             this.Device = new Device(source.Device);
         }
+        if (source.Environment != null) {
+            this.Environment = new Environment(source.Environment);
+        }
     }
 
 
@@ -92,6 +118,7 @@ public class AssessDeviceRiskRsp extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "Score.", this.Score);
         this.setParamObj(map, prefix + "Device.", this.Device);
+        this.setParamObj(map, prefix + "Environment.", this.Environment);
 
     }
 }

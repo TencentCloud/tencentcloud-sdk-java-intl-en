@@ -38,8 +38,7 @@ public class DescribeProxiesResponse extends AbstractModel {
     private ProxyGroupInfo [] ProxyGroupInfos;
 
     /**
-    * <p>database proxy node</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Database proxy node</p>
     */
     @SerializedName("ProxyNodeInfos")
     @Expose
@@ -92,20 +91,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get <p>database proxy node</p>
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ProxyNodeInfos <p>database proxy node</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Database proxy node</p> 
+     * @return ProxyNodeInfos <p>Database proxy node</p>
      */
     public ProxyNodeInfo [] getProxyNodeInfos() {
         return this.ProxyNodeInfos;
     }
 
     /**
-     * Set <p>database proxy node</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ProxyNodeInfos <p>database proxy node</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Database proxy node</p>
+     * @param ProxyNodeInfos <p>Database proxy node</p>
      */
     public void setProxyNodeInfos(ProxyNodeInfo [] ProxyNodeInfos) {
         this.ProxyNodeInfos = ProxyNodeInfos;

@@ -24,8 +24,7 @@ import java.util.HashMap;
 public class DescribeBackupDownloadRestrictionResponse extends AbstractModel {
 
     /**
-    * Cluster backup download limit.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Backup download limit for clusters
     */
     @SerializedName("BackupLimitClusterRestrictions")
     @Expose
@@ -39,20 +38,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Cluster backup download limit.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return BackupLimitClusterRestrictions Cluster backup download limit.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Backup download limit for clusters 
+     * @return BackupLimitClusterRestrictions Backup download limit for clusters
      */
     public BackupLimitClusterRestriction [] getBackupLimitClusterRestrictions() {
         return this.BackupLimitClusterRestrictions;
     }
 
     /**
-     * Set Cluster backup download limit.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param BackupLimitClusterRestrictions Cluster backup download limit.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Backup download limit for clusters
+     * @param BackupLimitClusterRestrictions Backup download limit for clusters
      */
     public void setBackupLimitClusterRestrictions(BackupLimitClusterRestriction [] BackupLimitClusterRestrictions) {
         this.BackupLimitClusterRestrictions = BackupLimitClusterRestrictions;

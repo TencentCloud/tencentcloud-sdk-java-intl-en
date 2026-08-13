@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeClustersRequest extends AbstractModel {
 
     /**
-    * Engine type. Currently, `MYSQL` is supported.
+    * Engine type: Currently supports "MYSQL", "POSTGRESQL".
     */
     @SerializedName("DbType")
     @Expose
@@ -70,16 +70,16 @@ public class DescribeClustersRequest extends AbstractModel {
     private QueryFilter [] Filters;
 
     /**
-     * Get Engine type. Currently, `MYSQL` is supported. 
-     * @return DbType Engine type. Currently, `MYSQL` is supported.
+     * Get Engine type: Currently supports "MYSQL", "POSTGRESQL". 
+     * @return DbType Engine type: Currently supports "MYSQL", "POSTGRESQL".
      */
     public String getDbType() {
         return this.DbType;
     }
 
     /**
-     * Set Engine type. Currently, `MYSQL` is supported.
-     * @param DbType Engine type. Currently, `MYSQL` is supported.
+     * Set Engine type: Currently supports "MYSQL", "POSTGRESQL".
+     * @param DbType Engine type: Currently supports "MYSQL", "POSTGRESQL".
      */
     public void setDbType(String DbType) {
         this.DbType = DbType;

@@ -45,8 +45,7 @@ public class BackupConfigInfo extends AbstractModel {
     private Long BackupTimeEnd;
 
     /**
-    * <p>This parameter currently does not support modification and is not required. Backup frequency is an array of length 7, corresponding to the backup method from Sunday to Saturday, full-full backup, increment-incremental backup.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Currently this parameter cannot be modified and no need to specify. Backup frequency is an array of length 7, corresponding to the backup method from Sunday to Saturday, full-full backup, increment-incremental backup.</p>
     */
     @SerializedName("BackupWeekDays")
     @Expose
@@ -75,7 +74,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * <p>Cross-regional backup region</p>
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("CrossRegions")
     @Expose
@@ -151,20 +149,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get <p>This parameter currently does not support modification and is not required. Backup frequency is an array of length 7, corresponding to the backup method from Sunday to Saturday, full-full backup, increment-incremental backup.</p>
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return BackupWeekDays <p>This parameter currently does not support modification and is not required. Backup frequency is an array of length 7, corresponding to the backup method from Sunday to Saturday, full-full backup, increment-incremental backup.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Currently this parameter cannot be modified and no need to specify. Backup frequency is an array of length 7, corresponding to the backup method from Sunday to Saturday, full-full backup, increment-incremental backup.</p> 
+     * @return BackupWeekDays <p>Currently this parameter cannot be modified and no need to specify. Backup frequency is an array of length 7, corresponding to the backup method from Sunday to Saturday, full-full backup, increment-incremental backup.</p>
      */
     public String [] getBackupWeekDays() {
         return this.BackupWeekDays;
     }
 
     /**
-     * Set <p>This parameter currently does not support modification and is not required. Backup frequency is an array of length 7, corresponding to the backup method from Sunday to Saturday, full-full backup, increment-incremental backup.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param BackupWeekDays <p>This parameter currently does not support modification and is not required. Backup frequency is an array of length 7, corresponding to the backup method from Sunday to Saturday, full-full backup, increment-incremental backup.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Currently this parameter cannot be modified and no need to specify. Backup frequency is an array of length 7, corresponding to the backup method from Sunday to Saturday, full-full backup, increment-incremental backup.</p>
+     * @param BackupWeekDays <p>Currently this parameter cannot be modified and no need to specify. Backup frequency is an array of length 7, corresponding to the backup method from Sunday to Saturday, full-full backup, increment-incremental backup.</p>
      */
     public void setBackupWeekDays(String [] BackupWeekDays) {
         this.BackupWeekDays = BackupWeekDays;
@@ -219,10 +213,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get <p>Cross-regional backup region</p>
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get <p>Cross-regional backup region</p> 
      * @return CrossRegions <p>Cross-regional backup region</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String [] getCrossRegions() {
         return this.CrossRegions;
@@ -230,9 +222,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set <p>Cross-regional backup region</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param CrossRegions <p>Cross-regional backup region</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setCrossRegions(String [] CrossRegions) {
         this.CrossRegions = CrossRegions;

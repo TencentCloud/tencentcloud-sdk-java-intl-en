@@ -31,6 +31,13 @@ public class Decision extends AbstractModel {
     private String DecisionResult;
 
     /**
+    * <p>Decision action when a strategy is matched. Configurable in the console.</p>
+    */
+    @SerializedName("Disposition")
+    @Expose
+    private String Disposition;
+
+    /**
      * Get <p>Decision result</p><ul><li>pass: Pass</li><li>review: Review</li><li>reject: Reject</li></ul> 
      * @return DecisionResult <p>Decision result</p><ul><li>pass: Pass</li><li>review: Review</li><li>reject: Reject</li></ul>
      */
@@ -46,6 +53,22 @@ public class Decision extends AbstractModel {
         this.DecisionResult = DecisionResult;
     }
 
+    /**
+     * Get <p>Decision action when a strategy is matched. Configurable in the console.</p> 
+     * @return Disposition <p>Decision action when a strategy is matched. Configurable in the console.</p>
+     */
+    public String getDisposition() {
+        return this.Disposition;
+    }
+
+    /**
+     * Set <p>Decision action when a strategy is matched. Configurable in the console.</p>
+     * @param Disposition <p>Decision action when a strategy is matched. Configurable in the console.</p>
+     */
+    public void setDisposition(String Disposition) {
+        this.Disposition = Disposition;
+    }
+
     public Decision() {
     }
 
@@ -57,6 +80,9 @@ public class Decision extends AbstractModel {
         if (source.DecisionResult != null) {
             this.DecisionResult = new String(source.DecisionResult);
         }
+        if (source.Disposition != null) {
+            this.Disposition = new String(source.Disposition);
+        }
     }
 
 
@@ -65,6 +91,7 @@ public class Decision extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DecisionResult", this.DecisionResult);
+        this.setParamSimple(map, prefix + "Disposition", this.Disposition);
 
     }
 }

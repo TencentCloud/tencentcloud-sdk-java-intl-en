@@ -24,84 +24,69 @@ import java.util.HashMap;
 public class GoodsPrice extends AbstractModel {
 
     /**
-    * Specifies the instance price.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Instance price
     */
     @SerializedName("InstancePrice")
     @Expose
     private TradePrice InstancePrice;
 
     /**
-    * Specifies the storage price.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Storage price
     */
     @SerializedName("StoragePrice")
     @Expose
     private TradePrice StoragePrice;
 
     /**
-    * Specifies the product specification.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Product specification
     */
     @SerializedName("GoodsSpec")
     @Expose
     private GoodsSpec GoodsSpec;
 
     /**
-     * Get Specifies the instance price.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return InstancePrice Specifies the instance price.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Instance price 
+     * @return InstancePrice Instance price
      */
     public TradePrice getInstancePrice() {
         return this.InstancePrice;
     }
 
     /**
-     * Set Specifies the instance price.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param InstancePrice Specifies the instance price.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Instance price
+     * @param InstancePrice Instance price
      */
     public void setInstancePrice(TradePrice InstancePrice) {
         this.InstancePrice = InstancePrice;
     }
 
     /**
-     * Get Specifies the storage price.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return StoragePrice Specifies the storage price.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Storage price 
+     * @return StoragePrice Storage price
      */
     public TradePrice getStoragePrice() {
         return this.StoragePrice;
     }
 
     /**
-     * Set Specifies the storage price.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param StoragePrice Specifies the storage price.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Storage price
+     * @param StoragePrice Storage price
      */
     public void setStoragePrice(TradePrice StoragePrice) {
         this.StoragePrice = StoragePrice;
     }
 
     /**
-     * Get Specifies the product specification.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return GoodsSpec Specifies the product specification.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Product specification 
+     * @return GoodsSpec Product specification
      */
     public GoodsSpec getGoodsSpec() {
         return this.GoodsSpec;
     }
 
     /**
-     * Set Specifies the product specification.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param GoodsSpec Specifies the product specification.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Product specification
+     * @param GoodsSpec Product specification
      */
     public void setGoodsSpec(GoodsSpec GoodsSpec) {
         this.GoodsSpec = GoodsSpec;

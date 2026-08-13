@@ -25,7 +25,6 @@ public class DescribeLibraDBClusterAccountAllPrivilegesResponse extends Abstract
 
     /**
     * Permission statement
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("PrivilegeStatements")
     @Expose
@@ -33,7 +32,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Global permission
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("GlobalPrivileges")
     @Expose
@@ -41,7 +39,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Database permission
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("DatabasePrivileges")
     @Expose
@@ -49,7 +46,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Table permission
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("TablePrivileges")
     @Expose
@@ -63,10 +59,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Permission statement
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Permission statement 
      * @return PrivilegeStatements Permission statement
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String [] getPrivilegeStatements() {
         return this.PrivilegeStatements;
@@ -74,19 +68,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Permission statement
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param PrivilegeStatements Permission statement
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setPrivilegeStatements(String [] PrivilegeStatements) {
         this.PrivilegeStatements = PrivilegeStatements;
     }
 
     /**
-     * Get Global permission
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Global permission 
      * @return GlobalPrivileges Global permission
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String [] getGlobalPrivileges() {
         return this.GlobalPrivileges;
@@ -94,19 +84,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Global permission
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param GlobalPrivileges Global permission
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setGlobalPrivileges(String [] GlobalPrivileges) {
         this.GlobalPrivileges = GlobalPrivileges;
     }
 
     /**
-     * Get Database permission
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Database permission 
      * @return DatabasePrivileges Database permission
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public DatabasePrivileges [] getDatabasePrivileges() {
         return this.DatabasePrivileges;
@@ -114,19 +100,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Database permission
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param DatabasePrivileges Database permission
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setDatabasePrivileges(DatabasePrivileges [] DatabasePrivileges) {
         this.DatabasePrivileges = DatabasePrivileges;
     }
 
     /**
-     * Get Table permission
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Table permission 
      * @return TablePrivileges Table permission
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public TablePrivileges [] getTablePrivileges() {
         return this.TablePrivileges;
@@ -134,9 +116,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Table permission
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param TablePrivileges Table permission
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setTablePrivileges(TablePrivileges [] TablePrivileges) {
         this.TablePrivileges = TablePrivileges;

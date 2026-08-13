@@ -25,7 +25,6 @@ public class MigrateDBItem extends AbstractModel {
 
     /**
     * Database name.
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("DbName")
     @Expose
@@ -33,7 +32,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Data table migration mode
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("MigrateTableMode")
     @Expose
@@ -41,17 +39,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Data table information
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Tables")
     @Expose
     private MigrateTableItem [] Tables;
 
     /**
-     * Get Database name.
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Database name. 
      * @return DbName Database name.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getDbName() {
         return this.DbName;
@@ -59,19 +54,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Database name.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param DbName Database name.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setDbName(String DbName) {
         this.DbName = DbName;
     }
 
     /**
-     * Get Data table migration mode
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Data table migration mode 
      * @return MigrateTableMode Data table migration mode
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getMigrateTableMode() {
         return this.MigrateTableMode;
@@ -79,19 +70,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Data table migration mode
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param MigrateTableMode Data table migration mode
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setMigrateTableMode(String MigrateTableMode) {
         this.MigrateTableMode = MigrateTableMode;
     }
 
     /**
-     * Get Data table information
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Data table information 
      * @return Tables Data table information
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public MigrateTableItem [] getTables() {
         return this.Tables;
@@ -99,9 +86,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Data table information
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Tables Data table information
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setTables(MigrateTableItem [] Tables) {
         this.Tables = Tables;

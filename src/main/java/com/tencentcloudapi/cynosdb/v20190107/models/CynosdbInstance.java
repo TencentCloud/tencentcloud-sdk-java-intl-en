@@ -80,7 +80,7 @@ public class CynosdbInstance extends AbstractModel {
     private String Region;
 
     /**
-    * <p>AZ.</p>
+    * <p>Primary availability zone of the cluster</p>
     */
     @SerializedName("Zone")
     @Expose
@@ -354,14 +354,13 @@ public class CynosdbInstance extends AbstractModel {
 
     /**
     * <p>Resource tag</p>
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ResourceTags")
     @Expose
     private Tag [] ResourceTags;
 
     /**
-    * <p>Primary AZ</p>
+    * <p>Current instance availability zone for read-write</p>
     */
     @SerializedName("MasterZone")
     @Expose
@@ -369,7 +368,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * <p>Standby availability zone</p>
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("SlaveZones")
     @Expose
@@ -383,8 +381,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private InstanceNetInfo [] InstanceNetInfo;
 
     /**
-    * <p>Instance bind resource package info (only return compute resource package, packageType=CCU)</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Instance binding resource package information (only return compute resource package here, for example, packageType=CCU)</p>
     */
     @SerializedName("ResourcePackages")
     @Expose
@@ -438,6 +435,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
     @SerializedName("GdnId")
     @Expose
     private String GdnId;
+
+    /**
+    * <p>Current instance availability zone</p>
+    */
+    @SerializedName("RealZone")
+    @Expose
+    private String RealZone;
 
     /**
      * Get <p>User Uin</p> 
@@ -568,16 +572,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get <p>AZ.</p> 
-     * @return Zone <p>AZ.</p>
+     * Get <p>Primary availability zone of the cluster</p> 
+     * @return Zone <p>Primary availability zone of the cluster</p>
      */
     public String getZone() {
         return this.Zone;
     }
 
     /**
-     * Set <p>AZ.</p>
-     * @param Zone <p>AZ.</p>
+     * Set <p>Primary availability zone of the cluster</p>
+     * @param Zone <p>Primary availability zone of the cluster</p>
      */
     public void setZone(String Zone) {
         this.Zone = Zone;
@@ -1192,10 +1196,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get <p>Resource tag</p>
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get <p>Resource tag</p> 
      * @return ResourceTags <p>Resource tag</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Tag [] getResourceTags() {
         return this.ResourceTags;
@@ -1203,35 +1205,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set <p>Resource tag</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param ResourceTags <p>Resource tag</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setResourceTags(Tag [] ResourceTags) {
         this.ResourceTags = ResourceTags;
     }
 
     /**
-     * Get <p>Primary AZ</p> 
-     * @return MasterZone <p>Primary AZ</p>
+     * Get <p>Current instance availability zone for read-write</p> 
+     * @return MasterZone <p>Current instance availability zone for read-write</p>
      */
     public String getMasterZone() {
         return this.MasterZone;
     }
 
     /**
-     * Set <p>Primary AZ</p>
-     * @param MasterZone <p>Primary AZ</p>
+     * Set <p>Current instance availability zone for read-write</p>
+     * @param MasterZone <p>Current instance availability zone for read-write</p>
      */
     public void setMasterZone(String MasterZone) {
         this.MasterZone = MasterZone;
     }
 
     /**
-     * Get <p>Standby availability zone</p>
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get <p>Standby availability zone</p> 
      * @return SlaveZones <p>Standby availability zone</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String [] getSlaveZones() {
         return this.SlaveZones;
@@ -1239,9 +1237,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set <p>Standby availability zone</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param SlaveZones <p>Standby availability zone</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setSlaveZones(String [] SlaveZones) {
         this.SlaveZones = SlaveZones;
@@ -1264,20 +1260,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get <p>Instance bind resource package info (only return compute resource package, packageType=CCU)</p>
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ResourcePackages <p>Instance bind resource package info (only return compute resource package, packageType=CCU)</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Instance binding resource package information (only return compute resource package here, for example, packageType=CCU)</p> 
+     * @return ResourcePackages <p>Instance binding resource package information (only return compute resource package here, for example, packageType=CCU)</p>
      */
     public ResourcePackage [] getResourcePackages() {
         return this.ResourcePackages;
     }
 
     /**
-     * Set <p>Instance bind resource package info (only return compute resource package, packageType=CCU)</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ResourcePackages <p>Instance bind resource package info (only return compute resource package, packageType=CCU)</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Instance binding resource package information (only return compute resource package here, for example, packageType=CCU)</p>
+     * @param ResourcePackages <p>Instance binding resource package information (only return compute resource package here, for example, packageType=CCU)</p>
      */
     public void setResourcePackages(ResourcePackage [] ResourcePackages) {
         this.ResourcePackages = ResourcePackages;
@@ -1393,6 +1385,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
      */
     public void setGdnId(String GdnId) {
         this.GdnId = GdnId;
+    }
+
+    /**
+     * Get <p>Current instance availability zone</p> 
+     * @return RealZone <p>Current instance availability zone</p>
+     */
+    public String getRealZone() {
+        return this.RealZone;
+    }
+
+    /**
+     * Set <p>Current instance availability zone</p>
+     * @param RealZone <p>Current instance availability zone</p>
+     */
+    public void setRealZone(String RealZone) {
+        this.RealZone = RealZone;
     }
 
     public CynosdbInstance() {
@@ -1598,6 +1606,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.GdnId != null) {
             this.GdnId = new String(source.GdnId);
         }
+        if (source.RealZone != null) {
+            this.RealZone = new String(source.RealZone);
+        }
     }
 
 
@@ -1664,6 +1675,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "CynosVersionTag", this.CynosVersionTag);
         this.setParamArraySimple(map, prefix + "NodeList.", this.NodeList);
         this.setParamSimple(map, prefix + "GdnId", this.GdnId);
+        this.setParamSimple(map, prefix + "RealZone", this.RealZone);
 
     }
 }

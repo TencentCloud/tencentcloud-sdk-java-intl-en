@@ -25,7 +25,6 @@ public class DescribeLibraDBDataSourceResponse extends AbstractModel {
 
     /**
     * Source information list
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("DataSourceList")
     @Expose
@@ -39,10 +38,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Source information list
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Source information list 
      * @return DataSourceList Source information list
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public DataSourceItem [] getDataSourceList() {
         return this.DataSourceList;
@@ -50,9 +47,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Source information list
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param DataSourceList Source information list
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setDataSourceList(DataSourceItem [] DataSourceList) {
         this.DataSourceList = DataSourceList;

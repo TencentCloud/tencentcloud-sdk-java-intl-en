@@ -25,7 +25,6 @@ public class CreateBackupVaultItem extends AbstractModel {
 
     /**
     * Safe id
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("VaultId")
     @Expose
@@ -33,17 +32,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Safe region
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("VaultRegion")
     @Expose
     private String VaultRegion;
 
     /**
-     * Get Safe id
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Safe id 
      * @return VaultId Safe id
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getVaultId() {
         return this.VaultId;
@@ -51,19 +47,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Safe id
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param VaultId Safe id
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setVaultId(String VaultId) {
         this.VaultId = VaultId;
     }
 
     /**
-     * Get Safe region
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Safe region 
      * @return VaultRegion Safe region
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getVaultRegion() {
         return this.VaultRegion;
@@ -71,9 +63,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Safe region
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param VaultRegion Safe region
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setVaultRegion(String VaultRegion) {
         this.VaultRegion = VaultRegion;

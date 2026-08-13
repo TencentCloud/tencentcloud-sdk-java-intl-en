@@ -31,7 +31,7 @@ public class AssessDeviceRiskProRequest extends AbstractModel {
     private String DeviceToken;
 
     /**
-    * <p>User client IP address(IPv4 or IPv6)</p>
+    * <p>User client IP address (IPv4 or IPv6)</p>
     */
     @SerializedName("UserIp")
     @Expose
@@ -54,16 +54,16 @@ public class AssessDeviceRiskProRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>User client IP address(IPv4 or IPv6)</p> 
-     * @return UserIp <p>User client IP address(IPv4 or IPv6)</p>
+     * Get <p>User client IP address (IPv4 or IPv6)</p> 
+     * @return UserIp <p>User client IP address (IPv4 or IPv6)</p>
      */
     public String getUserIp() {
         return this.UserIp;
     }
 
     /**
-     * Set <p>User client IP address(IPv4 or IPv6)</p>
-     * @param UserIp <p>User client IP address(IPv4 or IPv6)</p>
+     * Set <p>User client IP address (IPv4 or IPv6)</p>
+     * @param UserIp <p>User client IP address (IPv4 or IPv6)</p>
      */
     public void setUserIp(String UserIp) {
         this.UserIp = UserIp;

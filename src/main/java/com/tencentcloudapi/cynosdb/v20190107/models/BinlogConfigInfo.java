@@ -38,8 +38,7 @@ public class BinlogConfigInfo extends AbstractModel {
     private String BinlogCrossRegionsEnable;
 
     /**
-    * <p>binlog cross-region</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Cross-region binlog</p>
     */
     @SerializedName("BinlogCrossRegions")
     @Expose
@@ -92,20 +91,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get <p>binlog cross-region</p>
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return BinlogCrossRegions <p>binlog cross-region</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Cross-region binlog</p> 
+     * @return BinlogCrossRegions <p>Cross-region binlog</p>
      */
     public String [] getBinlogCrossRegions() {
         return this.BinlogCrossRegions;
     }
 
     /**
-     * Set <p>binlog cross-region</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param BinlogCrossRegions <p>binlog cross-region</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Cross-region binlog</p>
+     * @param BinlogCrossRegions <p>Cross-region binlog</p>
      */
     public void setBinlogCrossRegions(String [] BinlogCrossRegions) {
         this.BinlogCrossRegions = BinlogCrossRegions;

@@ -25,17 +25,14 @@ public class MigrateTableItem extends AbstractModel {
 
     /**
     * Data table name
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("TableName")
     @Expose
     private String TableName;
 
     /**
-     * Get Data table name
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Data table name 
      * @return TableName Data table name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getTableName() {
         return this.TableName;
@@ -43,9 +40,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Data table name
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param TableName Data table name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setTableName(String TableName) {
         this.TableName = TableName;

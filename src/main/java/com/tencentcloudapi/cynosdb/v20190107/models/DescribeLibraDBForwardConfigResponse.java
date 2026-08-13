@@ -32,7 +32,6 @@ public class DescribeLibraDBForwardConfigResponse extends AbstractModel {
 
     /**
     * Forwarding list
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ForwardList")
     @Expose
@@ -62,10 +61,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Forwarding list
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Forwarding list 
      * @return ForwardList Forwarding list
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public ForwardInstanceInfo [] getForwardList() {
         return this.ForwardList;
@@ -73,9 +70,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Forwarding list
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param ForwardList Forwarding list
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setForwardList(ForwardInstanceInfo [] ForwardList) {
         this.ForwardList = ForwardList;

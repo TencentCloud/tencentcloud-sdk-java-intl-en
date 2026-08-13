@@ -94,14 +94,14 @@ public class RollbackData extends AbstractModel {
     private Long SnapShotId;
 
     /**
-    * Rollback database.
+    * Rollback database
     */
     @SerializedName("RollbackDatabases")
     @Expose
     private RollbackDatabase [] RollbackDatabases;
 
     /**
-    * Rollback data table.
+    * Rollback data table
     */
     @SerializedName("RollbackTables")
     @Expose
@@ -282,32 +282,32 @@ public class RollbackData extends AbstractModel {
     }
 
     /**
-     * Get Rollback database. 
-     * @return RollbackDatabases Rollback database.
+     * Get Rollback database 
+     * @return RollbackDatabases Rollback database
      */
     public RollbackDatabase [] getRollbackDatabases() {
         return this.RollbackDatabases;
     }
 
     /**
-     * Set Rollback database.
-     * @param RollbackDatabases Rollback database.
+     * Set Rollback database
+     * @param RollbackDatabases Rollback database
      */
     public void setRollbackDatabases(RollbackDatabase [] RollbackDatabases) {
         this.RollbackDatabases = RollbackDatabases;
     }
 
     /**
-     * Get Rollback data table. 
-     * @return RollbackTables Rollback data table.
+     * Get Rollback data table 
+     * @return RollbackTables Rollback data table
      */
     public RollbackTable [] getRollbackTables() {
         return this.RollbackTables;
     }
 
     /**
-     * Set Rollback data table.
-     * @param RollbackTables Rollback data table.
+     * Set Rollback data table
+     * @param RollbackTables Rollback data table
      */
     public void setRollbackTables(RollbackTable [] RollbackTables) {
         this.RollbackTables = RollbackTables;

@@ -25,7 +25,6 @@ public class RegionInstanceSpecInfo extends AbstractModel {
 
     /**
     * Number of CPU cores
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Cpu")
     @Expose
@@ -33,7 +32,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Memory size.
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Memory")
     @Expose
@@ -41,7 +39,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Minimum storage size
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("MinStorageSize")
     @Expose
@@ -49,7 +46,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Maximum storage size
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("MaxStorageSize")
     @Expose
@@ -57,7 +53,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Whether there is inventory
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("HasStock")
     @Expose
@@ -65,7 +60,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Instance type
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("InstanceType")
     @Expose
@@ -73,15 +67,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Storage type
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("StorageType")
     @Expose
     private String StorageType;
 
     /**
-    * minimum replica count
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Minimum replica count
     */
     @SerializedName("MinReplicaNum")
     @Expose
@@ -89,7 +81,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Maximum number of replicas
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("MaxReplicaNum")
     @Expose
@@ -97,17 +88,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Availability zone inventory information list
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ZoneStockInfos")
     @Expose
     private ZoneStockInfo4Libra [] ZoneStockInfos;
 
     /**
-     * Get Number of CPU cores
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Number of CPU cores 
      * @return Cpu Number of CPU cores
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getCpu() {
         return this.Cpu;
@@ -115,19 +103,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Number of CPU cores
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Cpu Number of CPU cores
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setCpu(Long Cpu) {
         this.Cpu = Cpu;
     }
 
     /**
-     * Get Memory size.
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Memory size. 
      * @return Memory Memory size.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getMemory() {
         return this.Memory;
@@ -135,19 +119,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Memory size.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Memory Memory size.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setMemory(Long Memory) {
         this.Memory = Memory;
     }
 
     /**
-     * Get Minimum storage size
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Minimum storage size 
      * @return MinStorageSize Minimum storage size
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getMinStorageSize() {
         return this.MinStorageSize;
@@ -155,19 +135,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Minimum storage size
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param MinStorageSize Minimum storage size
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setMinStorageSize(Long MinStorageSize) {
         this.MinStorageSize = MinStorageSize;
     }
 
     /**
-     * Get Maximum storage size
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Maximum storage size 
      * @return MaxStorageSize Maximum storage size
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getMaxStorageSize() {
         return this.MaxStorageSize;
@@ -175,19 +151,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Maximum storage size
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param MaxStorageSize Maximum storage size
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setMaxStorageSize(Long MaxStorageSize) {
         this.MaxStorageSize = MaxStorageSize;
     }
 
     /**
-     * Get Whether there is inventory
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Whether there is inventory 
      * @return HasStock Whether there is inventory
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Boolean getHasStock() {
         return this.HasStock;
@@ -195,19 +167,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Whether there is inventory
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param HasStock Whether there is inventory
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setHasStock(Boolean HasStock) {
         this.HasStock = HasStock;
     }
 
     /**
-     * Get Instance type
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Instance type 
      * @return InstanceType Instance type
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getInstanceType() {
         return this.InstanceType;
@@ -215,19 +183,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Instance type
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param InstanceType Instance type
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setInstanceType(String InstanceType) {
         this.InstanceType = InstanceType;
     }
 
     /**
-     * Get Storage type
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Storage type 
      * @return StorageType Storage type
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getStorageType() {
         return this.StorageType;
@@ -235,39 +199,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Storage type
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param StorageType Storage type
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setStorageType(String StorageType) {
         this.StorageType = StorageType;
     }
 
     /**
-     * Get minimum replica count
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return MinReplicaNum minimum replica count
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Minimum replica count 
+     * @return MinReplicaNum Minimum replica count
      */
     public Long getMinReplicaNum() {
         return this.MinReplicaNum;
     }
 
     /**
-     * Set minimum replica count
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param MinReplicaNum minimum replica count
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Minimum replica count
+     * @param MinReplicaNum Minimum replica count
      */
     public void setMinReplicaNum(Long MinReplicaNum) {
         this.MinReplicaNum = MinReplicaNum;
     }
 
     /**
-     * Get Maximum number of replicas
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Maximum number of replicas 
      * @return MaxReplicaNum Maximum number of replicas
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getMaxReplicaNum() {
         return this.MaxReplicaNum;
@@ -275,19 +231,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Maximum number of replicas
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param MaxReplicaNum Maximum number of replicas
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setMaxReplicaNum(Long MaxReplicaNum) {
         this.MaxReplicaNum = MaxReplicaNum;
     }
 
     /**
-     * Get Availability zone inventory information list
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Availability zone inventory information list 
      * @return ZoneStockInfos Availability zone inventory information list
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public ZoneStockInfo4Libra [] getZoneStockInfos() {
         return this.ZoneStockInfos;
@@ -295,9 +247,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Availability zone inventory information list
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param ZoneStockInfos Availability zone inventory information list
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setZoneStockInfos(ZoneStockInfo4Libra [] ZoneStockInfos) {
         this.ZoneStockInfos = ZoneStockInfos;

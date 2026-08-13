@@ -45,16 +45,14 @@ public class BackupLimitRestriction extends AbstractModel {
     private String IpComparisonSymbol;
 
     /**
-    * Specifies the vpc setting for download restrictions.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Limit download vpc settings
     */
     @SerializedName("LimitVpcs")
     @Expose
     private BackupLimitVpcItem [] LimitVpcs;
 
     /**
-    * Specifies the ip settings for limiting downloads.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Limit download ip settings
     */
     @SerializedName("LimitIps")
     @Expose
@@ -109,40 +107,32 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Specifies the vpc setting for download restrictions.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return LimitVpcs Specifies the vpc setting for download restrictions.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Limit download vpc settings 
+     * @return LimitVpcs Limit download vpc settings
      */
     public BackupLimitVpcItem [] getLimitVpcs() {
         return this.LimitVpcs;
     }
 
     /**
-     * Set Specifies the vpc setting for download restrictions.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param LimitVpcs Specifies the vpc setting for download restrictions.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Limit download vpc settings
+     * @param LimitVpcs Limit download vpc settings
      */
     public void setLimitVpcs(BackupLimitVpcItem [] LimitVpcs) {
         this.LimitVpcs = LimitVpcs;
     }
 
     /**
-     * Get Specifies the ip settings for limiting downloads.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return LimitIps Specifies the ip settings for limiting downloads.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Limit download ip settings 
+     * @return LimitIps Limit download ip settings
      */
     public String [] getLimitIps() {
         return this.LimitIps;
     }
 
     /**
-     * Set Specifies the ip settings for limiting downloads.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param LimitIps Specifies the ip settings for limiting downloads.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Limit download ip settings
+     * @param LimitIps Limit download ip settings
      */
     public void setLimitIps(String [] LimitIps) {
         this.LimitIps = LimitIps;

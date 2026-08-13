@@ -31,7 +31,7 @@ public class ClusterSlaveData extends AbstractModel {
     private String OldMasterZone;
 
     /**
-    * Old slave availability zone.
+    * Secondary availability zone
     */
     @SerializedName("OldSlaveZone")
     @Expose
@@ -45,7 +45,7 @@ public class ClusterSlaveData extends AbstractModel {
     private String NewMasterZone;
 
     /**
-    * New slave availability zone.
+    * Secondary AZ
     */
     @SerializedName("NewSlaveZone")
     @Expose
@@ -82,16 +82,16 @@ public class ClusterSlaveData extends AbstractModel {
     }
 
     /**
-     * Get Old slave availability zone. 
-     * @return OldSlaveZone Old slave availability zone.
+     * Get Secondary availability zone 
+     * @return OldSlaveZone Secondary availability zone
      */
     public String [] getOldSlaveZone() {
         return this.OldSlaveZone;
     }
 
     /**
-     * Set Old slave availability zone.
-     * @param OldSlaveZone Old slave availability zone.
+     * Set Secondary availability zone
+     * @param OldSlaveZone Secondary availability zone
      */
     public void setOldSlaveZone(String [] OldSlaveZone) {
         this.OldSlaveZone = OldSlaveZone;
@@ -114,16 +114,16 @@ public class ClusterSlaveData extends AbstractModel {
     }
 
     /**
-     * Get New slave availability zone. 
-     * @return NewSlaveZone New slave availability zone.
+     * Get Secondary AZ 
+     * @return NewSlaveZone Secondary AZ
      */
     public String [] getNewSlaveZone() {
         return this.NewSlaveZone;
     }
 
     /**
-     * Set New slave availability zone.
-     * @param NewSlaveZone New slave availability zone.
+     * Set Secondary AZ
+     * @param NewSlaveZone Secondary AZ
      */
     public void setNewSlaveZone(String [] NewSlaveZone) {
         this.NewSlaveZone = NewSlaveZone;

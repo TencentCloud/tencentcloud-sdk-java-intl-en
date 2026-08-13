@@ -24,8 +24,7 @@ import java.util.HashMap;
 public class SearchClusterDatabasesResponse extends AbstractModel {
 
     /**
-    * Database List
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Database list.
     */
     @SerializedName("Databases")
     @Expose
@@ -39,20 +38,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Database List
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Databases Database List
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Database list. 
+     * @return Databases Database list.
      */
     public String [] getDatabases() {
         return this.Databases;
     }
 
     /**
-     * Set Database List
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Databases Database List
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Database list.
+     * @param Databases Database list.
      */
     public void setDatabases(String [] Databases) {
         this.Databases = Databases;

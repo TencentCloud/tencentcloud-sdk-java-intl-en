@@ -24,8 +24,7 @@ import java.util.HashMap;
 public class IsolateLibraDBInstanceResponse extends AbstractModel {
 
     /**
-    * task flow id
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Task flow id
     */
     @SerializedName("FlowId")
     @Expose
@@ -33,7 +32,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Order ID list
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("DealNames")
     @Expose
@@ -47,30 +45,24 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get task flow id
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return FlowId task flow id
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Task flow id 
+     * @return FlowId Task flow id
      */
     public Long getFlowId() {
         return this.FlowId;
     }
 
     /**
-     * Set task flow id
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param FlowId task flow id
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Task flow id
+     * @param FlowId Task flow id
      */
     public void setFlowId(Long FlowId) {
         this.FlowId = FlowId;
     }
 
     /**
-     * Get Order ID list
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Order ID list 
      * @return DealNames Order ID list
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String [] getDealNames() {
         return this.DealNames;
@@ -78,9 +70,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Order ID list
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param DealNames Order ID list
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setDealNames(String [] DealNames) {
         this.DealNames = DealNames;

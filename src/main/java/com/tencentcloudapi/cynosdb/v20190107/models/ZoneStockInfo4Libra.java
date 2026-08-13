@@ -25,25 +25,21 @@ public class ZoneStockInfo4Libra extends AbstractModel {
 
     /**
     * Availability zone
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Zone")
     @Expose
     private String Zone;
 
     /**
-    * whether there is inventory
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Whether there is inventory
     */
     @SerializedName("HasStock")
     @Expose
     private Boolean HasStock;
 
     /**
-     * Get Availability zone
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Availability zone 
      * @return Zone Availability zone
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getZone() {
         return this.Zone;
@@ -51,29 +47,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Availability zone
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Zone Availability zone
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setZone(String Zone) {
         this.Zone = Zone;
     }
 
     /**
-     * Get whether there is inventory
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return HasStock whether there is inventory
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Whether there is inventory 
+     * @return HasStock Whether there is inventory
      */
     public Boolean getHasStock() {
         return this.HasStock;
     }
 
     /**
-     * Set whether there is inventory
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param HasStock whether there is inventory
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Whether there is inventory
+     * @param HasStock Whether there is inventory
      */
     public void setHasStock(Boolean HasStock) {
         this.HasStock = HasStock;

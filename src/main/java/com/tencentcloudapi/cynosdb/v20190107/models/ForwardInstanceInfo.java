@@ -25,25 +25,21 @@ public class ForwardInstanceInfo extends AbstractModel {
 
     /**
     * Forward the instance id
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Forward instance region
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Forward the instance region
     */
     @SerializedName("Region")
     @Expose
     private String Region;
 
     /**
-     * Get Forward the instance id
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Forward the instance id 
      * @return InstanceId Forward the instance id
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getInstanceId() {
         return this.InstanceId;
@@ -51,29 +47,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Forward the instance id
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param InstanceId Forward the instance id
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Forward instance region
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Region Forward instance region
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Forward the instance region 
+     * @return Region Forward the instance region
      */
     public String getRegion() {
         return this.Region;
     }
 
     /**
-     * Set Forward instance region
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Region Forward instance region
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Forward the instance region
+     * @param Region Forward the instance region
      */
     public void setRegion(String Region) {
         this.Region = Region;

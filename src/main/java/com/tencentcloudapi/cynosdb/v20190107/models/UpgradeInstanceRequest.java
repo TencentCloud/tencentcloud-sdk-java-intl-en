@@ -38,7 +38,7 @@ public class UpgradeInstanceRequest extends AbstractModel {
     private Long Cpu;
 
     /**
-    * Database memory in GB.
+    * Database memory in GB
     */
     @SerializedName("Memory")
     @Expose
@@ -135,16 +135,16 @@ public class UpgradeInstanceRequest extends AbstractModel {
     }
 
     /**
-     * Get Database memory in GB. 
-     * @return Memory Database memory in GB.
+     * Get Database memory in GB 
+     * @return Memory Database memory in GB
      */
     public Long getMemory() {
         return this.Memory;
     }
 
     /**
-     * Set Database memory in GB.
-     * @param Memory Database memory in GB.
+     * Set Database memory in GB
+     * @param Memory Database memory in GB
      */
     public void setMemory(Long Memory) {
         this.Memory = Memory;

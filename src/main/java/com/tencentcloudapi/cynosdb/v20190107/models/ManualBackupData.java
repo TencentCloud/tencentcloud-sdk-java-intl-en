@@ -45,8 +45,7 @@ public class ManualBackupData extends AbstractModel {
     private String SnapshotTime;
 
     /**
-    * Detailed information of cross-region backup items.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Detailed information of cross-region backup items
     */
     @SerializedName("CrossRegionBackupInfos")
     @Expose
@@ -101,20 +100,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Detailed information of cross-region backup items.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return CrossRegionBackupInfos Detailed information of cross-region backup items.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Detailed information of cross-region backup items 
+     * @return CrossRegionBackupInfos Detailed information of cross-region backup items
      */
     public CrossRegionBackupItem [] getCrossRegionBackupInfos() {
         return this.CrossRegionBackupInfos;
     }
 
     /**
-     * Set Detailed information of cross-region backup items.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param CrossRegionBackupInfos Detailed information of cross-region backup items.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Detailed information of cross-region backup items
+     * @param CrossRegionBackupInfos Detailed information of cross-region backup items
      */
     public void setCrossRegionBackupInfos(CrossRegionBackupItem [] CrossRegionBackupInfos) {
         this.CrossRegionBackupInfos = CrossRegionBackupInfos;

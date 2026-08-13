@@ -25,7 +25,6 @@ public class MigrateObject extends AbstractModel {
 
     /**
     * Database migration mode
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("MigrateDBMode")
     @Expose
@@ -33,17 +32,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Database information
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Databases")
     @Expose
     private MigrateDBItem [] Databases;
 
     /**
-     * Get Database migration mode
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Database migration mode 
      * @return MigrateDBMode Database migration mode
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getMigrateDBMode() {
         return this.MigrateDBMode;
@@ -51,19 +47,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Database migration mode
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param MigrateDBMode Database migration mode
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setMigrateDBMode(String MigrateDBMode) {
         this.MigrateDBMode = MigrateDBMode;
     }
 
     /**
-     * Get Database information
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Database information 
      * @return Databases Database information
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public MigrateDBItem [] getDatabases() {
         return this.Databases;
@@ -71,9 +63,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Database information
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Databases Database information
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setDatabases(MigrateDBItem [] Databases) {
         this.Databases = Databases;

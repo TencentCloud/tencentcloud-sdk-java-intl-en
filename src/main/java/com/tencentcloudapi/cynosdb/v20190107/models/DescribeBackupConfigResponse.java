@@ -73,8 +73,7 @@ public class DescribeBackupConfigResponse extends AbstractModel {
     private LogicBackupConfigInfo LogicBackupConfig;
 
     /**
-    * <p>Second-level snapshot backup configuration information</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Secondary snapshot backup configuration information</p>
     */
     @SerializedName("SnapshotSecondaryBackupConfig")
     @Expose
@@ -207,20 +206,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get <p>Second-level snapshot backup configuration information</p>
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return SnapshotSecondaryBackupConfig <p>Second-level snapshot backup configuration information</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Secondary snapshot backup configuration information</p> 
+     * @return SnapshotSecondaryBackupConfig <p>Secondary snapshot backup configuration information</p>
      */
     public BackupConfigInfo getSnapshotSecondaryBackupConfig() {
         return this.SnapshotSecondaryBackupConfig;
     }
 
     /**
-     * Set <p>Second-level snapshot backup configuration information</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param SnapshotSecondaryBackupConfig <p>Second-level snapshot backup configuration information</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Secondary snapshot backup configuration information</p>
+     * @param SnapshotSecondaryBackupConfig <p>Secondary snapshot backup configuration information</p>
      */
     public void setSnapshotSecondaryBackupConfig(BackupConfigInfo SnapshotSecondaryBackupConfig) {
         this.SnapshotSecondaryBackupConfig = SnapshotSecondaryBackupConfig;

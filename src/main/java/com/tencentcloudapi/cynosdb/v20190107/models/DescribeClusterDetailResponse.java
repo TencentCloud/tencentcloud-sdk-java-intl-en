@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeClusterDetailResponse extends AbstractModel {
 
     /**
-    * Cluster details
+    * <p>Cluster detail</p>
     */
     @SerializedName("Detail")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeClusterDetailResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Cluster details 
-     * @return Detail Cluster details
+     * Get <p>Cluster detail</p> 
+     * @return Detail <p>Cluster detail</p>
      */
     public CynosdbClusterDetail getDetail() {
         return this.Detail;
     }
 
     /**
-     * Set Cluster details
-     * @param Detail Cluster details
+     * Set <p>Cluster detail</p>
+     * @param Detail <p>Cluster detail</p>
      */
     public void setDetail(CynosdbClusterDetail Detail) {
         this.Detail = Detail;

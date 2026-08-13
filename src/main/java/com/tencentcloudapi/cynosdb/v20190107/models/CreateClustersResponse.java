@@ -52,8 +52,7 @@ public class CreateClustersResponse extends AbstractModel {
     private String [] ClusterIds;
 
     /**
-    * <p>Large Order ID</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Large order number</p>
     */
     @SerializedName("BigDealIds")
     @Expose
@@ -131,20 +130,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get <p>Large Order ID</p>
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return BigDealIds <p>Large Order ID</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Large order number</p> 
+     * @return BigDealIds <p>Large order number</p>
      */
     public String [] getBigDealIds() {
         return this.BigDealIds;
     }
 
     /**
-     * Set <p>Large Order ID</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param BigDealIds <p>Large Order ID</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Large order number</p>
+     * @param BigDealIds <p>Large order number</p>
      */
     public void setBigDealIds(String [] BigDealIds) {
         this.BigDealIds = BigDealIds;

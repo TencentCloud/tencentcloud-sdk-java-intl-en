@@ -24,8 +24,7 @@ import java.util.HashMap;
 public class DescribeSQLExecutionPlanResponse extends AbstractModel {
 
     /**
-    * <p>Execution plan details</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Plan details</p>
     */
     @SerializedName("PlanDetail")
     @Expose
@@ -39,20 +38,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get <p>Execution plan details</p>
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return PlanDetail <p>Execution plan details</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Plan details</p> 
+     * @return PlanDetail <p>Plan details</p>
      */
     public ExecutionPlanDetail getPlanDetail() {
         return this.PlanDetail;
     }
 
     /**
-     * Set <p>Execution plan details</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param PlanDetail <p>Execution plan details</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Plan details</p>
+     * @param PlanDetail <p>Plan details</p>
      */
     public void setPlanDetail(ExecutionPlanDetail PlanDetail) {
         this.PlanDetail = PlanDetail;

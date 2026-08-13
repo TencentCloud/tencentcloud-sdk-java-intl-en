@@ -66,8 +66,7 @@ public class ServerlessSpec extends AbstractModel {
     private Long StockCount;
 
     /**
-    * <p>Availability zone inventory information</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>AZ inventory information</p>
     */
     @SerializedName("ZoneStockInfos")
     @Expose
@@ -170,20 +169,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get <p>Availability zone inventory information</p>
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ZoneStockInfos <p>Availability zone inventory information</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>AZ inventory information</p> 
+     * @return ZoneStockInfos <p>AZ inventory information</p>
      */
     public ServerlessZoneStockInfo [] getZoneStockInfos() {
         return this.ZoneStockInfos;
     }
 
     /**
-     * Set <p>Availability zone inventory information</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ZoneStockInfos <p>Availability zone inventory information</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>AZ inventory information</p>
+     * @param ZoneStockInfos <p>AZ inventory information</p>
      */
     public void setZoneStockInfos(ServerlessZoneStockInfo [] ZoneStockInfos) {
         this.ZoneStockInfos = ZoneStockInfos;

@@ -31,8 +31,7 @@ public class IsolateClusterResponse extends AbstractModel {
     private Long FlowId;
 
     /**
-    * Refund order number (returned for prepaid resources. if necessary, synchronize the order status by using the billing product's DescribeDealsByCond to synchronize the order status).
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Refund order number (returned for prepaid resources. If you need to synchronize the order status, please use the billing product's DescribeDealsByCond to synchronize the order status.)
     */
     @SerializedName("DealNames")
     @Expose
@@ -62,20 +61,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Refund order number (returned for prepaid resources. if necessary, synchronize the order status by using the billing product's DescribeDealsByCond to synchronize the order status).
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return DealNames Refund order number (returned for prepaid resources. if necessary, synchronize the order status by using the billing product's DescribeDealsByCond to synchronize the order status).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Refund order number (returned for prepaid resources. If you need to synchronize the order status, please use the billing product's DescribeDealsByCond to synchronize the order status.) 
+     * @return DealNames Refund order number (returned for prepaid resources. If you need to synchronize the order status, please use the billing product's DescribeDealsByCond to synchronize the order status.)
      */
     public String [] getDealNames() {
         return this.DealNames;
     }
 
     /**
-     * Set Refund order number (returned for prepaid resources. if necessary, synchronize the order status by using the billing product's DescribeDealsByCond to synchronize the order status).
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param DealNames Refund order number (returned for prepaid resources. if necessary, synchronize the order status by using the billing product's DescribeDealsByCond to synchronize the order status).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Refund order number (returned for prepaid resources. If you need to synchronize the order status, please use the billing product's DescribeDealsByCond to synchronize the order status.)
+     * @param DealNames Refund order number (returned for prepaid resources. If you need to synchronize the order status, please use the billing product's DescribeDealsByCond to synchronize the order status.)
      */
     public void setDealNames(String [] DealNames) {
         this.DealNames = DealNames;

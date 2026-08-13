@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DescribeClusterDetailRequest extends AbstractModel {
 
     /**
-    * Cluster ID
+    * <p>Cluster Id.</p>
     */
     @SerializedName("ClusterId")
     @Expose
     private String ClusterId;
 
     /**
-     * Get Cluster ID 
-     * @return ClusterId Cluster ID
+     * Get <p>Cluster Id.</p> 
+     * @return ClusterId <p>Cluster Id.</p>
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set Cluster ID
-     * @param ClusterId Cluster ID
+     * Set <p>Cluster Id.</p>
+     * @param ClusterId <p>Cluster Id.</p>
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;

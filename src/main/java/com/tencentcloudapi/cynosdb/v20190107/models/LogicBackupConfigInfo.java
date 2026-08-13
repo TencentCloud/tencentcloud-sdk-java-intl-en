@@ -59,8 +59,7 @@ public class LogicBackupConfigInfo extends AbstractModel {
     private String LogicCrossRegionsEnable;
 
     /**
-    * <p>Cross-regional logic backup</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Cross-regional logical backup</p>
     */
     @SerializedName("LogicCrossRegions")
     @Expose
@@ -161,20 +160,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get <p>Cross-regional logic backup</p>
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return LogicCrossRegions <p>Cross-regional logic backup</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Cross-regional logical backup</p> 
+     * @return LogicCrossRegions <p>Cross-regional logical backup</p>
      */
     public String [] getLogicCrossRegions() {
         return this.LogicCrossRegions;
     }
 
     /**
-     * Set <p>Cross-regional logic backup</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param LogicCrossRegions <p>Cross-regional logic backup</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Cross-regional logical backup</p>
+     * @param LogicCrossRegions <p>Cross-regional logical backup</p>
      */
     public void setLogicCrossRegions(String [] LogicCrossRegions) {
         this.LogicCrossRegions = LogicCrossRegions;

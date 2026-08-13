@@ -25,7 +25,6 @@ public class AddLibraDBInstancesResponse extends AbstractModel {
 
     /**
     * Large order number.
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("BigDealIds")
     @Expose
@@ -33,7 +32,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Freeze transaction. One frozen flow is activated at a time.
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("TranId")
     @Expose
@@ -41,7 +39,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Post-paid order number.
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("DealNames")
     @Expose
@@ -49,7 +46,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Delivery resource id list.
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ResourceIds")
     @Expose
@@ -63,10 +59,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Large order number.
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Large order number. 
      * @return BigDealIds Large order number.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String [] getBigDealIds() {
         return this.BigDealIds;
@@ -74,19 +68,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Large order number.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param BigDealIds Large order number.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setBigDealIds(String [] BigDealIds) {
         this.BigDealIds = BigDealIds;
     }
 
     /**
-     * Get Freeze transaction. One frozen flow is activated at a time.
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Freeze transaction. One frozen flow is activated at a time. 
      * @return TranId Freeze transaction. One frozen flow is activated at a time.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getTranId() {
         return this.TranId;
@@ -94,19 +84,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Freeze transaction. One frozen flow is activated at a time.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param TranId Freeze transaction. One frozen flow is activated at a time.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setTranId(String TranId) {
         this.TranId = TranId;
     }
 
     /**
-     * Get Post-paid order number.
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Post-paid order number. 
      * @return DealNames Post-paid order number.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String [] getDealNames() {
         return this.DealNames;
@@ -114,19 +100,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Post-paid order number.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param DealNames Post-paid order number.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setDealNames(String [] DealNames) {
         this.DealNames = DealNames;
     }
 
     /**
-     * Get Delivery resource id list.
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Delivery resource id list. 
      * @return ResourceIds Delivery resource id list.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String [] getResourceIds() {
         return this.ResourceIds;
@@ -134,9 +116,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Delivery resource id list.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param ResourceIds Delivery resource id list.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setResourceIds(String [] ResourceIds) {
         this.ResourceIds = ResourceIds;

@@ -24,8 +24,7 @@ import java.util.HashMap;
 public class DescribeLibraDBInstanceDetailResponse extends AbstractModel {
 
     /**
-    * <p>root account</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Root account</p>
     */
     @SerializedName("Uin")
     @Expose
@@ -33,7 +32,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * <p>Account unique ID</p>
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("AppId")
     @Expose
@@ -41,7 +39,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * <p>Cluster ID.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ClusterId")
     @Expose
@@ -49,7 +46,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * <p>Cluster name.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ClusterName")
     @Expose
@@ -57,7 +53,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * <p>Instance ID.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("InstanceId")
     @Expose
@@ -65,23 +60,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * <p>Instance name.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("InstanceName")
     @Expose
     private String InstanceName;
 
     /**
-    * <p>Project ID.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Project ID</p>
     */
     @SerializedName("ProjectId")
     @Expose
     private Long ProjectId;
 
     /**
-    * <p>Region</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Region.</p>
     */
     @SerializedName("Region")
     @Expose
@@ -89,15 +81,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * <p>AZ.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Zone")
     @Expose
     private String Zone;
 
     /**
-    * <p>Instance status.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Instance status</p>
     */
     @SerializedName("Status")
     @Expose
@@ -105,7 +95,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * <p>Status description</p>
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("StatusDesc")
     @Expose
@@ -113,23 +102,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * <p>Libra analysis engine version</p>
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("LibraDBVersion")
     @Expose
     private String LibraDBVersion;
 
     /**
-    * <p>cpu cores</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>cpu cores.</p>
     */
     @SerializedName("Cpu")
     @Expose
     private Long Cpu;
 
     /**
-    * <p>Memory size</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Memory size.</p>
     */
     @SerializedName("Memory")
     @Expose
@@ -137,7 +123,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * <p>Storage size</p>
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Storage")
     @Expose
@@ -145,15 +130,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * <p>Storage type</p>
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("StorageType")
     @Expose
     private String StorageType;
 
     /**
-    * <p>Instance type</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Instance type.</p>
     */
     @SerializedName("InstanceType")
     @Expose
@@ -161,7 +144,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * <p>Instance role</p>
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("InstanceRole")
     @Expose
@@ -169,7 +151,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * <p>Update time.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("UpdateTime")
     @Expose
@@ -177,7 +158,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * <p>Creation time.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("CreateTime")
     @Expose
@@ -185,7 +165,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * <p>Selling mode</p>
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("PayMode")
     @Expose
@@ -193,15 +172,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * <p>Start time</p>
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("PeriodStartTime")
     @Expose
     private String PeriodStartTime;
 
     /**
-    * <p>End time of sale</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Termination time</p>
     */
     @SerializedName("PeriodEndTime")
     @Expose
@@ -209,7 +186,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * <p>Renewal flag</p>
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("RenewFlag")
     @Expose
@@ -217,7 +193,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * <p>Network type</p>
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("NetType")
     @Expose
@@ -225,7 +200,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * <p>VPC ID</p>
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("VpcId")
     @Expose
@@ -233,7 +207,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * <p>Subnet ID.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("SubnetId")
     @Expose
@@ -241,7 +214,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * <p>Virtual IP</p>
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Vip")
     @Expose
@@ -249,15 +221,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * <p>Port</p>
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Vport")
     @Expose
     private Long Vport;
 
     /**
-    * <p>Instance network information</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Instance network info</p>
     */
     @SerializedName("InstanceNetInfo")
     @Expose
@@ -265,7 +235,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * <p>Instance tag information</p>
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ResourceTags")
     @Expose
@@ -286,8 +255,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long NodeCount;
 
     /**
-    * <p>Analyze the information after instance upgrade version</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Analyze the information after the instance upgrade version</p>
     */
     @SerializedName("AnalysisUpgradeVersionInfo")
     @Expose
@@ -301,30 +269,24 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get <p>root account</p>
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Uin <p>root account</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Root account</p> 
+     * @return Uin <p>Root account</p>
      */
     public String getUin() {
         return this.Uin;
     }
 
     /**
-     * Set <p>root account</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Uin <p>root account</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Root account</p>
+     * @param Uin <p>Root account</p>
      */
     public void setUin(String Uin) {
         this.Uin = Uin;
     }
 
     /**
-     * Get <p>Account unique ID</p>
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get <p>Account unique ID</p> 
      * @return AppId <p>Account unique ID</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getAppId() {
         return this.AppId;
@@ -332,19 +294,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set <p>Account unique ID</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param AppId <p>Account unique ID</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setAppId(Long AppId) {
         this.AppId = AppId;
     }
 
     /**
-     * Get <p>Cluster ID.</p>
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get <p>Cluster ID.</p> 
      * @return ClusterId <p>Cluster ID.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getClusterId() {
         return this.ClusterId;
@@ -352,19 +310,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set <p>Cluster ID.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param ClusterId <p>Cluster ID.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
     }
 
     /**
-     * Get <p>Cluster name.</p>
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get <p>Cluster name.</p> 
      * @return ClusterName <p>Cluster name.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getClusterName() {
         return this.ClusterName;
@@ -372,19 +326,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set <p>Cluster name.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param ClusterName <p>Cluster name.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setClusterName(String ClusterName) {
         this.ClusterName = ClusterName;
     }
 
     /**
-     * Get <p>Instance ID.</p>
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get <p>Instance ID.</p> 
      * @return InstanceId <p>Instance ID.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getInstanceId() {
         return this.InstanceId;
@@ -392,19 +342,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set <p>Instance ID.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param InstanceId <p>Instance ID.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get <p>Instance name.</p>
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get <p>Instance name.</p> 
      * @return InstanceName <p>Instance name.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getInstanceName() {
         return this.InstanceName;
@@ -412,59 +358,47 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set <p>Instance name.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param InstanceName <p>Instance name.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;
     }
 
     /**
-     * Get <p>Project ID.</p>
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ProjectId <p>Project ID.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Project ID</p> 
+     * @return ProjectId <p>Project ID</p>
      */
     public Long getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set <p>Project ID.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ProjectId <p>Project ID.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Project ID</p>
+     * @param ProjectId <p>Project ID</p>
      */
     public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;
     }
 
     /**
-     * Get <p>Region</p>
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Region <p>Region</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Region.</p> 
+     * @return Region <p>Region.</p>
      */
     public String getRegion() {
         return this.Region;
     }
 
     /**
-     * Set <p>Region</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Region <p>Region</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Region.</p>
+     * @param Region <p>Region.</p>
      */
     public void setRegion(String Region) {
         this.Region = Region;
     }
 
     /**
-     * Get <p>AZ.</p>
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get <p>AZ.</p> 
      * @return Zone <p>AZ.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getZone() {
         return this.Zone;
@@ -472,39 +406,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set <p>AZ.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Zone <p>AZ.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setZone(String Zone) {
         this.Zone = Zone;
     }
 
     /**
-     * Get <p>Instance status.</p>
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Status <p>Instance status.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Instance status</p> 
+     * @return Status <p>Instance status</p>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set <p>Instance status.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Status <p>Instance status.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Instance status</p>
+     * @param Status <p>Instance status</p>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get <p>Status description</p>
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get <p>Status description</p> 
      * @return StatusDesc <p>Status description</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getStatusDesc() {
         return this.StatusDesc;
@@ -512,19 +438,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set <p>Status description</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param StatusDesc <p>Status description</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setStatusDesc(String StatusDesc) {
         this.StatusDesc = StatusDesc;
     }
 
     /**
-     * Get <p>Libra analysis engine version</p>
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get <p>Libra analysis engine version</p> 
      * @return LibraDBVersion <p>Libra analysis engine version</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getLibraDBVersion() {
         return this.LibraDBVersion;
@@ -532,59 +454,47 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set <p>Libra analysis engine version</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param LibraDBVersion <p>Libra analysis engine version</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setLibraDBVersion(String LibraDBVersion) {
         this.LibraDBVersion = LibraDBVersion;
     }
 
     /**
-     * Get <p>cpu cores</p>
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Cpu <p>cpu cores</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>cpu cores.</p> 
+     * @return Cpu <p>cpu cores.</p>
      */
     public Long getCpu() {
         return this.Cpu;
     }
 
     /**
-     * Set <p>cpu cores</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Cpu <p>cpu cores</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>cpu cores.</p>
+     * @param Cpu <p>cpu cores.</p>
      */
     public void setCpu(Long Cpu) {
         this.Cpu = Cpu;
     }
 
     /**
-     * Get <p>Memory size</p>
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Memory <p>Memory size</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Memory size.</p> 
+     * @return Memory <p>Memory size.</p>
      */
     public Long getMemory() {
         return this.Memory;
     }
 
     /**
-     * Set <p>Memory size</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Memory <p>Memory size</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Memory size.</p>
+     * @param Memory <p>Memory size.</p>
      */
     public void setMemory(Long Memory) {
         this.Memory = Memory;
     }
 
     /**
-     * Get <p>Storage size</p>
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get <p>Storage size</p> 
      * @return Storage <p>Storage size</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getStorage() {
         return this.Storage;
@@ -592,19 +502,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set <p>Storage size</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Storage <p>Storage size</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setStorage(Long Storage) {
         this.Storage = Storage;
     }
 
     /**
-     * Get <p>Storage type</p>
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get <p>Storage type</p> 
      * @return StorageType <p>Storage type</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getStorageType() {
         return this.StorageType;
@@ -612,39 +518,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set <p>Storage type</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param StorageType <p>Storage type</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setStorageType(String StorageType) {
         this.StorageType = StorageType;
     }
 
     /**
-     * Get <p>Instance type</p>
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return InstanceType <p>Instance type</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Instance type.</p> 
+     * @return InstanceType <p>Instance type.</p>
      */
     public String getInstanceType() {
         return this.InstanceType;
     }
 
     /**
-     * Set <p>Instance type</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param InstanceType <p>Instance type</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Instance type.</p>
+     * @param InstanceType <p>Instance type.</p>
      */
     public void setInstanceType(String InstanceType) {
         this.InstanceType = InstanceType;
     }
 
     /**
-     * Get <p>Instance role</p>
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get <p>Instance role</p> 
      * @return InstanceRole <p>Instance role</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getInstanceRole() {
         return this.InstanceRole;
@@ -652,19 +550,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set <p>Instance role</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param InstanceRole <p>Instance role</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setInstanceRole(String InstanceRole) {
         this.InstanceRole = InstanceRole;
     }
 
     /**
-     * Get <p>Update time.</p>
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get <p>Update time.</p> 
      * @return UpdateTime <p>Update time.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getUpdateTime() {
         return this.UpdateTime;
@@ -672,19 +566,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set <p>Update time.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param UpdateTime <p>Update time.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;
     }
 
     /**
-     * Get <p>Creation time.</p>
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get <p>Creation time.</p> 
      * @return CreateTime <p>Creation time.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getCreateTime() {
         return this.CreateTime;
@@ -692,19 +582,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set <p>Creation time.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param CreateTime <p>Creation time.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get <p>Selling mode</p>
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get <p>Selling mode</p> 
      * @return PayMode <p>Selling mode</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getPayMode() {
         return this.PayMode;
@@ -712,19 +598,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set <p>Selling mode</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param PayMode <p>Selling mode</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setPayMode(Long PayMode) {
         this.PayMode = PayMode;
     }
 
     /**
-     * Get <p>Start time</p>
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get <p>Start time</p> 
      * @return PeriodStartTime <p>Start time</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getPeriodStartTime() {
         return this.PeriodStartTime;
@@ -732,39 +614,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set <p>Start time</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param PeriodStartTime <p>Start time</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setPeriodStartTime(String PeriodStartTime) {
         this.PeriodStartTime = PeriodStartTime;
     }
 
     /**
-     * Get <p>End time of sale</p>
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return PeriodEndTime <p>End time of sale</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Termination time</p> 
+     * @return PeriodEndTime <p>Termination time</p>
      */
     public String getPeriodEndTime() {
         return this.PeriodEndTime;
     }
 
     /**
-     * Set <p>End time of sale</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param PeriodEndTime <p>End time of sale</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Termination time</p>
+     * @param PeriodEndTime <p>Termination time</p>
      */
     public void setPeriodEndTime(String PeriodEndTime) {
         this.PeriodEndTime = PeriodEndTime;
     }
 
     /**
-     * Get <p>Renewal flag</p>
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get <p>Renewal flag</p> 
      * @return RenewFlag <p>Renewal flag</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getRenewFlag() {
         return this.RenewFlag;
@@ -772,19 +646,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set <p>Renewal flag</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param RenewFlag <p>Renewal flag</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setRenewFlag(Long RenewFlag) {
         this.RenewFlag = RenewFlag;
     }
 
     /**
-     * Get <p>Network type</p>
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get <p>Network type</p> 
      * @return NetType <p>Network type</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getNetType() {
         return this.NetType;
@@ -792,19 +662,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set <p>Network type</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param NetType <p>Network type</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setNetType(Long NetType) {
         this.NetType = NetType;
     }
 
     /**
-     * Get <p>VPC ID</p>
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get <p>VPC ID</p> 
      * @return VpcId <p>VPC ID</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getVpcId() {
         return this.VpcId;
@@ -812,19 +678,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set <p>VPC ID</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param VpcId <p>VPC ID</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get <p>Subnet ID.</p>
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get <p>Subnet ID.</p> 
      * @return SubnetId <p>Subnet ID.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getSubnetId() {
         return this.SubnetId;
@@ -832,19 +694,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set <p>Subnet ID.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param SubnetId <p>Subnet ID.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;
     }
 
     /**
-     * Get <p>Virtual IP</p>
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get <p>Virtual IP</p> 
      * @return Vip <p>Virtual IP</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getVip() {
         return this.Vip;
@@ -852,19 +710,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set <p>Virtual IP</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Vip <p>Virtual IP</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setVip(String Vip) {
         this.Vip = Vip;
     }
 
     /**
-     * Get <p>Port</p>
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get <p>Port</p> 
      * @return Vport <p>Port</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getVport() {
         return this.Vport;
@@ -872,39 +726,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set <p>Port</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Vport <p>Port</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setVport(Long Vport) {
         this.Vport = Vport;
     }
 
     /**
-     * Get <p>Instance network information</p>
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return InstanceNetInfo <p>Instance network information</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Instance network info</p> 
+     * @return InstanceNetInfo <p>Instance network info</p>
      */
     public InstanceNetInfo getInstanceNetInfo() {
         return this.InstanceNetInfo;
     }
 
     /**
-     * Set <p>Instance network information</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param InstanceNetInfo <p>Instance network information</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Instance network info</p>
+     * @param InstanceNetInfo <p>Instance network info</p>
      */
     public void setInstanceNetInfo(InstanceNetInfo InstanceNetInfo) {
         this.InstanceNetInfo = InstanceNetInfo;
     }
 
     /**
-     * Get <p>Instance tag information</p>
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get <p>Instance tag information</p> 
      * @return ResourceTags <p>Instance tag information</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Tag [] getResourceTags() {
         return this.ResourceTags;
@@ -912,9 +758,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set <p>Instance tag information</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param ResourceTags <p>Instance tag information</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setResourceTags(Tag [] ResourceTags) {
         this.ResourceTags = ResourceTags;
@@ -953,20 +797,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get <p>Analyze the information after instance upgrade version</p>
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return AnalysisUpgradeVersionInfo <p>Analyze the information after instance upgrade version</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Analyze the information after the instance upgrade version</p> 
+     * @return AnalysisUpgradeVersionInfo <p>Analyze the information after the instance upgrade version</p>
      */
     public UpgradeAnalysisInstanceVersionInfo getAnalysisUpgradeVersionInfo() {
         return this.AnalysisUpgradeVersionInfo;
     }
 
     /**
-     * Set <p>Analyze the information after instance upgrade version</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param AnalysisUpgradeVersionInfo <p>Analyze the information after instance upgrade version</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Analyze the information after the instance upgrade version</p>
+     * @param AnalysisUpgradeVersionInfo <p>Analyze the information after the instance upgrade version</p>
      */
     public void setAnalysisUpgradeVersionInfo(UpgradeAnalysisInstanceVersionInfo AnalysisUpgradeVersionInfo) {
         this.AnalysisUpgradeVersionInfo = AnalysisUpgradeVersionInfo;

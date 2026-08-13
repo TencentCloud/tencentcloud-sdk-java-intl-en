@@ -38,6 +38,13 @@ public class DataScore extends AbstractModel {
     private RiskLabel [] RiskLabels;
 
     /**
+    * <p>Comprehensive risk score.</p><p>Value ranges from 1 to 1000.</p><p>The larger the value, the larger the risk.</p>
+    */
+    @SerializedName("RiskScore")
+    @Expose
+    private Long RiskScore;
+
+    /**
      * Get <p>Risk level</p> 
      * @return RiskLevel <p>Risk level</p>
      */
@@ -69,6 +76,22 @@ public class DataScore extends AbstractModel {
         this.RiskLabels = RiskLabels;
     }
 
+    /**
+     * Get <p>Comprehensive risk score.</p><p>Value ranges from 1 to 1000.</p><p>The larger the value, the larger the risk.</p> 
+     * @return RiskScore <p>Comprehensive risk score.</p><p>Value ranges from 1 to 1000.</p><p>The larger the value, the larger the risk.</p>
+     */
+    public Long getRiskScore() {
+        return this.RiskScore;
+    }
+
+    /**
+     * Set <p>Comprehensive risk score.</p><p>Value ranges from 1 to 1000.</p><p>The larger the value, the larger the risk.</p>
+     * @param RiskScore <p>Comprehensive risk score.</p><p>Value ranges from 1 to 1000.</p><p>The larger the value, the larger the risk.</p>
+     */
+    public void setRiskScore(Long RiskScore) {
+        this.RiskScore = RiskScore;
+    }
+
     public DataScore() {
     }
 
@@ -86,6 +109,9 @@ public class DataScore extends AbstractModel {
                 this.RiskLabels[i] = new RiskLabel(source.RiskLabels[i]);
             }
         }
+        if (source.RiskScore != null) {
+            this.RiskScore = new Long(source.RiskScore);
+        }
     }
 
 
@@ -95,6 +121,7 @@ public class DataScore extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "RiskLevel", this.RiskLevel);
         this.setParamArrayObj(map, prefix + "RiskLabels.", this.RiskLabels);
+        this.setParamSimple(map, prefix + "RiskScore", this.RiskScore);
 
     }
 }

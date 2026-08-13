@@ -94,6 +94,20 @@ public class Device extends AbstractModel {
     private String SdkBuildVersion;
 
     /**
+    * <p>Signature verification token. Please contact us to enable signature verification</p>
+    */
+    @SerializedName("SignToken")
+    @Expose
+    private String SignToken;
+
+    /**
+    * <p>Token generation timestamp, in milliseconds</p>
+    */
+    @SerializedName("TokenTime")
+    @Expose
+    private String TokenTime;
+
+    /**
      * Get <p>The unique id of device returned by RCE</p> 
      * @return DeviceId <p>The unique id of device returned by RCE</p>
      */
@@ -253,6 +267,38 @@ public class Device extends AbstractModel {
         this.SdkBuildVersion = SdkBuildVersion;
     }
 
+    /**
+     * Get <p>Signature verification token. Please contact us to enable signature verification</p> 
+     * @return SignToken <p>Signature verification token. Please contact us to enable signature verification</p>
+     */
+    public String getSignToken() {
+        return this.SignToken;
+    }
+
+    /**
+     * Set <p>Signature verification token. Please contact us to enable signature verification</p>
+     * @param SignToken <p>Signature verification token. Please contact us to enable signature verification</p>
+     */
+    public void setSignToken(String SignToken) {
+        this.SignToken = SignToken;
+    }
+
+    /**
+     * Get <p>Token generation timestamp, in milliseconds</p> 
+     * @return TokenTime <p>Token generation timestamp, in milliseconds</p>
+     */
+    public String getTokenTime() {
+        return this.TokenTime;
+    }
+
+    /**
+     * Set <p>Token generation timestamp, in milliseconds</p>
+     * @param TokenTime <p>Token generation timestamp, in milliseconds</p>
+     */
+    public void setTokenTime(String TokenTime) {
+        this.TokenTime = TokenTime;
+    }
+
     public Device() {
     }
 
@@ -291,6 +337,12 @@ public class Device extends AbstractModel {
         if (source.SdkBuildVersion != null) {
             this.SdkBuildVersion = new String(source.SdkBuildVersion);
         }
+        if (source.SignToken != null) {
+            this.SignToken = new String(source.SignToken);
+        }
+        if (source.TokenTime != null) {
+            this.TokenTime = new String(source.TokenTime);
+        }
     }
 
 
@@ -308,6 +360,8 @@ public class Device extends AbstractModel {
         this.setParamSimple(map, prefix + "Platform", this.Platform);
         this.setParamSimple(map, prefix + "SystemVersion", this.SystemVersion);
         this.setParamSimple(map, prefix + "SdkBuildVersion", this.SdkBuildVersion);
+        this.setParamSimple(map, prefix + "SignToken", this.SignToken);
+        this.setParamSimple(map, prefix + "TokenTime", this.TokenTime);
 
     }
 }

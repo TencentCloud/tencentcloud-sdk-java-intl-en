@@ -25,7 +25,6 @@ public class CheckItem extends AbstractModel {
 
     /**
     * Check item name
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Item")
     @Expose
@@ -33,33 +32,28 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Verification result of this item
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Result")
     @Expose
     private String Result;
 
     /**
-    * Detailed explanation of validation failure and modification suggestions
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Details of validation failed and modification suggestions
     */
     @SerializedName("CurrentValue")
     @Expose
     private String CurrentValue;
 
     /**
-    * Details of validation failure and modification suggestions
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Detailed explanation of validation failure and modification suggestions
     */
     @SerializedName("ExpectedValue")
     @Expose
     private String ExpectedValue;
 
     /**
-     * Get Check item name
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Check item name 
      * @return Item Check item name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getItem() {
         return this.Item;
@@ -67,19 +61,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Check item name
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Item Check item name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setItem(String Item) {
         this.Item = Item;
     }
 
     /**
-     * Get Verification result of this item
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Verification result of this item 
      * @return Result Verification result of this item
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getResult() {
         return this.Result;
@@ -87,49 +77,39 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Verification result of this item
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Result Verification result of this item
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setResult(String Result) {
         this.Result = Result;
     }
 
     /**
-     * Get Detailed explanation of validation failure and modification suggestions
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return CurrentValue Detailed explanation of validation failure and modification suggestions
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Details of validation failed and modification suggestions 
+     * @return CurrentValue Details of validation failed and modification suggestions
      */
     public String getCurrentValue() {
         return this.CurrentValue;
     }
 
     /**
-     * Set Detailed explanation of validation failure and modification suggestions
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param CurrentValue Detailed explanation of validation failure and modification suggestions
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Details of validation failed and modification suggestions
+     * @param CurrentValue Details of validation failed and modification suggestions
      */
     public void setCurrentValue(String CurrentValue) {
         this.CurrentValue = CurrentValue;
     }
 
     /**
-     * Get Details of validation failure and modification suggestions
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ExpectedValue Details of validation failure and modification suggestions
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Detailed explanation of validation failure and modification suggestions 
+     * @return ExpectedValue Detailed explanation of validation failure and modification suggestions
      */
     public String getExpectedValue() {
         return this.ExpectedValue;
     }
 
     /**
-     * Set Details of validation failure and modification suggestions
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ExpectedValue Details of validation failure and modification suggestions
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Detailed explanation of validation failure and modification suggestions
+     * @param ExpectedValue Detailed explanation of validation failure and modification suggestions
      */
     public void setExpectedValue(String ExpectedValue) {
         this.ExpectedValue = ExpectedValue;

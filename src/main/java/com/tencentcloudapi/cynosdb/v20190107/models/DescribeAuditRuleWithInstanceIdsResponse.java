@@ -31,8 +31,7 @@ public class DescribeAuditRuleWithInstanceIdsResponse extends AbstractModel {
     private Long TotalCount;
 
     /**
-    * Audit rule information of the instance
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Instance audit rule information.
     */
     @SerializedName("Items")
     @Expose
@@ -62,20 +61,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Audit rule information of the instance
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Items Audit rule information of the instance
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Instance audit rule information. 
+     * @return Items Instance audit rule information.
      */
     public InstanceAuditRule [] getItems() {
         return this.Items;
     }
 
     /**
-     * Set Audit rule information of the instance
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Items Audit rule information of the instance
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Instance audit rule information.
+     * @param Items Instance audit rule information.
      */
     public void setItems(InstanceAuditRule [] Items) {
         this.Items = Items;

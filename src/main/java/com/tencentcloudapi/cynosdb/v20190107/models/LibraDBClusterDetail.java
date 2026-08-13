@@ -228,7 +228,6 @@ public class LibraDBClusterDetail extends AbstractModel {
 
     /**
     * <p>Grayscale information for version upgrade</p>
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("AnalysisUpgradeVersionInfo")
     @Expose
@@ -699,10 +698,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get <p>Grayscale information for version upgrade</p>
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get <p>Grayscale information for version upgrade</p> 
      * @return AnalysisUpgradeVersionInfo <p>Grayscale information for version upgrade</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public UpgradeAnalysisInstanceVersionInfo getAnalysisUpgradeVersionInfo() {
         return this.AnalysisUpgradeVersionInfo;
@@ -710,9 +707,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set <p>Grayscale information for version upgrade</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param AnalysisUpgradeVersionInfo <p>Grayscale information for version upgrade</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setAnalysisUpgradeVersionInfo(UpgradeAnalysisInstanceVersionInfo AnalysisUpgradeVersionInfo) {
         this.AnalysisUpgradeVersionInfo = AnalysisUpgradeVersionInfo;

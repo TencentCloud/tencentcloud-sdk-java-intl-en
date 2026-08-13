@@ -130,23 +130,20 @@ public class CynosdbInstanceGrp extends AbstractModel {
 
     /**
     * VPC ID
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("UniqVpcId")
     @Expose
     private String UniqVpcId;
 
     /**
-    * Subnet ID
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Subnet ID.
     */
     @SerializedName("UniqSubnetId")
     @Expose
     private String UniqSubnetId;
 
     /**
-    * Information of the old IP
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Recycling IP information
     */
     @SerializedName("OldAddrInfo")
     @Expose
@@ -414,10 +411,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get VPC ID
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get VPC ID 
      * @return UniqVpcId VPC ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getUniqVpcId() {
         return this.UniqVpcId;
@@ -425,49 +420,39 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set VPC ID
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param UniqVpcId VPC ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setUniqVpcId(String UniqVpcId) {
         this.UniqVpcId = UniqVpcId;
     }
 
     /**
-     * Get Subnet ID
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return UniqSubnetId Subnet ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Subnet ID. 
+     * @return UniqSubnetId Subnet ID.
      */
     public String getUniqSubnetId() {
         return this.UniqSubnetId;
     }
 
     /**
-     * Set Subnet ID
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param UniqSubnetId Subnet ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Subnet ID.
+     * @param UniqSubnetId Subnet ID.
      */
     public void setUniqSubnetId(String UniqSubnetId) {
         this.UniqSubnetId = UniqSubnetId;
     }
 
     /**
-     * Get Information of the old IP
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return OldAddrInfo Information of the old IP
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Recycling IP information 
+     * @return OldAddrInfo Recycling IP information
      */
     public OldAddrInfo getOldAddrInfo() {
         return this.OldAddrInfo;
     }
 
     /**
-     * Set Information of the old IP
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param OldAddrInfo Information of the old IP
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Recycling IP information
+     * @param OldAddrInfo Recycling IP information
      */
     public void setOldAddrInfo(OldAddrInfo OldAddrInfo) {
         this.OldAddrInfo = OldAddrInfo;

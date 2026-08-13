@@ -25,15 +25,13 @@ public class ReplicationObject extends AbstractModel {
 
     /**
     * Source instance type
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("SrcInstanceType")
     @Expose
     private String SrcInstanceType;
 
     /**
-    * Source Cluster Id
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Source cluster Id
     */
     @SerializedName("SrcClusterId")
     @Expose
@@ -41,7 +39,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Source instance ID
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("SrcInstanceId")
     @Expose
@@ -49,25 +46,21 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Copy task ID
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ReplicationJobId")
     @Expose
     private String ReplicationJobId;
 
     /**
-    * sync object details
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Synchronization object details
     */
     @SerializedName("MigrateObjects")
     @Expose
     private MigrateOpt MigrateObjects;
 
     /**
-     * Get Source instance type
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Source instance type 
      * @return SrcInstanceType Source instance type
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getSrcInstanceType() {
         return this.SrcInstanceType;
@@ -75,39 +68,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Source instance type
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param SrcInstanceType Source instance type
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setSrcInstanceType(String SrcInstanceType) {
         this.SrcInstanceType = SrcInstanceType;
     }
 
     /**
-     * Get Source Cluster Id
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return SrcClusterId Source Cluster Id
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Source cluster Id 
+     * @return SrcClusterId Source cluster Id
      */
     public String getSrcClusterId() {
         return this.SrcClusterId;
     }
 
     /**
-     * Set Source Cluster Id
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param SrcClusterId Source Cluster Id
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Source cluster Id
+     * @param SrcClusterId Source cluster Id
      */
     public void setSrcClusterId(String SrcClusterId) {
         this.SrcClusterId = SrcClusterId;
     }
 
     /**
-     * Get Source instance ID
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Source instance ID 
      * @return SrcInstanceId Source instance ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getSrcInstanceId() {
         return this.SrcInstanceId;
@@ -115,19 +100,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Source instance ID
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param SrcInstanceId Source instance ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setSrcInstanceId(String SrcInstanceId) {
         this.SrcInstanceId = SrcInstanceId;
     }
 
     /**
-     * Get Copy task ID
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Copy task ID 
      * @return ReplicationJobId Copy task ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getReplicationJobId() {
         return this.ReplicationJobId;
@@ -135,29 +116,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Copy task ID
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param ReplicationJobId Copy task ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setReplicationJobId(String ReplicationJobId) {
         this.ReplicationJobId = ReplicationJobId;
     }
 
     /**
-     * Get sync object details
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return MigrateObjects sync object details
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Synchronization object details 
+     * @return MigrateObjects Synchronization object details
      */
     public MigrateOpt getMigrateObjects() {
         return this.MigrateObjects;
     }
 
     /**
-     * Set sync object details
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param MigrateObjects sync object details
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Synchronization object details
+     * @param MigrateObjects Synchronization object details
      */
     public void setMigrateObjects(MigrateOpt MigrateObjects) {
         this.MigrateObjects = MigrateObjects;

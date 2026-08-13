@@ -46,7 +46,6 @@ public class AssessDeviceRiskPremiumRsp extends AbstractModel {
 
     /**
     * <p>Basic IP environment information</p>
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Environment")
     @Expose
@@ -101,10 +100,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get <p>Basic IP environment information</p>
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get <p>Basic IP environment information</p> 
      * @return Environment <p>Basic IP environment information</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Environment getEnvironment() {
         return this.Environment;
@@ -112,9 +109,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set <p>Basic IP environment information</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Environment <p>Basic IP environment information</p>
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setEnvironment(Environment Environment) {
         this.Environment = Environment;

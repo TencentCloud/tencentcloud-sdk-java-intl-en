@@ -25,17 +25,14 @@ public class Objects extends AbstractModel {
 
     /**
     * Database table information
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("DatabaseTables")
     @Expose
     private MigrateObject DatabaseTables;
 
     /**
-     * Get Database table information
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Database table information 
      * @return DatabaseTables Database table information
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public MigrateObject getDatabaseTables() {
         return this.DatabaseTables;
@@ -43,9 +40,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Database table information
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param DatabaseTables Database table information
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setDatabaseTables(MigrateObject DatabaseTables) {
         this.DatabaseTables = DatabaseTables;

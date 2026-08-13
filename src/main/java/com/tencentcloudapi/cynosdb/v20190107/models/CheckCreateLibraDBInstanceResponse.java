@@ -25,7 +25,6 @@ public class CheckCreateLibraDBInstanceResponse extends AbstractModel {
 
     /**
     * Overall verification status
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Status")
     @Expose
@@ -33,7 +32,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Check item
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("CheckItem")
     @Expose
@@ -47,10 +45,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Overall verification status
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Overall verification status 
      * @return Status Overall verification status
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getStatus() {
         return this.Status;
@@ -58,19 +54,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Overall verification status
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Status Overall verification status
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get Check item
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Check item 
      * @return CheckItem Check item
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public CheckItem [] getCheckItem() {
         return this.CheckItem;
@@ -78,9 +70,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Check item
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param CheckItem Check item
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setCheckItem(CheckItem [] CheckItem) {
         this.CheckItem = CheckItem;

@@ -45,7 +45,7 @@ public class CynosdbClusterDetail extends AbstractModel {
     private String Region;
 
     /**
-    * <p>AZ.</p>
+    * <p>Primary availability zone of the cluster</p>
     */
     @SerializedName("Zone")
     @Expose
@@ -255,7 +255,7 @@ public class CynosdbClusterDetail extends AbstractModel {
     private ObjectTask [] Tasks;
 
     /**
-    * <p>Primary AZ</p>
+    * <p>Current instance located availability zone for read-write</p>
     */
     @SerializedName("MasterZone")
     @Expose
@@ -430,6 +430,13 @@ public class CynosdbClusterDetail extends AbstractModel {
     private Boolean IsOpenTDE;
 
     /**
+    * <p>Current instance availability zone</p>
+    */
+    @SerializedName("RealZone")
+    @Expose
+    private String RealZone;
+
+    /**
      * Get <p>Cluster ID.</p> 
      * @return ClusterId <p>Cluster ID.</p>
      */
@@ -478,16 +485,16 @@ public class CynosdbClusterDetail extends AbstractModel {
     }
 
     /**
-     * Get <p>AZ.</p> 
-     * @return Zone <p>AZ.</p>
+     * Get <p>Primary availability zone of the cluster</p> 
+     * @return Zone <p>Primary availability zone of the cluster</p>
      */
     public String getZone() {
         return this.Zone;
     }
 
     /**
-     * Set <p>AZ.</p>
-     * @param Zone <p>AZ.</p>
+     * Set <p>Primary availability zone of the cluster</p>
+     * @param Zone <p>Primary availability zone of the cluster</p>
      */
     public void setZone(String Zone) {
         this.Zone = Zone;
@@ -958,16 +965,16 @@ public class CynosdbClusterDetail extends AbstractModel {
     }
 
     /**
-     * Get <p>Primary AZ</p> 
-     * @return MasterZone <p>Primary AZ</p>
+     * Get <p>Current instance located availability zone for read-write</p> 
+     * @return MasterZone <p>Current instance located availability zone for read-write</p>
      */
     public String getMasterZone() {
         return this.MasterZone;
     }
 
     /**
-     * Set <p>Primary AZ</p>
-     * @param MasterZone <p>Primary AZ</p>
+     * Set <p>Current instance located availability zone for read-write</p>
+     * @param MasterZone <p>Current instance located availability zone for read-write</p>
      */
     public void setMasterZone(String MasterZone) {
         this.MasterZone = MasterZone;
@@ -1357,6 +1364,22 @@ public class CynosdbClusterDetail extends AbstractModel {
         this.IsOpenTDE = IsOpenTDE;
     }
 
+    /**
+     * Get <p>Current instance availability zone</p> 
+     * @return RealZone <p>Current instance availability zone</p>
+     */
+    public String getRealZone() {
+        return this.RealZone;
+    }
+
+    /**
+     * Set <p>Current instance availability zone</p>
+     * @param RealZone <p>Current instance availability zone</p>
+     */
+    public void setRealZone(String RealZone) {
+        this.RealZone = RealZone;
+    }
+
     public CynosdbClusterDetail() {
     }
 
@@ -1560,6 +1583,9 @@ public class CynosdbClusterDetail extends AbstractModel {
         if (source.IsOpenTDE != null) {
             this.IsOpenTDE = new Boolean(source.IsOpenTDE);
         }
+        if (source.RealZone != null) {
+            this.RealZone = new String(source.RealZone);
+        }
     }
 
 
@@ -1625,6 +1651,7 @@ public class CynosdbClusterDetail extends AbstractModel {
         this.setParamSimple(map, prefix + "ArchiveProgress", this.ArchiveProgress);
         this.setParamSimple(map, prefix + "ClusterLevel", this.ClusterLevel);
         this.setParamSimple(map, prefix + "IsOpenTDE", this.IsOpenTDE);
+        this.setParamSimple(map, prefix + "RealZone", this.RealZone);
 
     }
 }
