@@ -24,140 +24,115 @@ import java.util.HashMap;
 public class LiveRecordFile extends AbstractModel {
 
     /**
-    * The URL of the recording file.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("Url")
     @Expose
     private String Url;
 
     /**
-    * The size of the recording file.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("Size")
     @Expose
     private Long Size;
 
     /**
-    * The duration of the recording file.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("Duration")
     @Expose
     private Long Duration;
 
     /**
-    * The recording start time in [ISO date format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * The recording end time in [ISO date format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-     * Get The URL of the recording file.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Url The URL of the recording file.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return Url 
      */
     public String getUrl() {
         return this.Url;
     }
 
     /**
-     * Set The URL of the recording file.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Url The URL of the recording file.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param Url 
      */
     public void setUrl(String Url) {
         this.Url = Url;
     }
 
     /**
-     * Get The size of the recording file.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Size The size of the recording file.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return Size 
      */
     public Long getSize() {
         return this.Size;
     }
 
     /**
-     * Set The size of the recording file.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Size The size of the recording file.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param Size 
      */
     public void setSize(Long Size) {
         this.Size = Size;
     }
 
     /**
-     * Get The duration of the recording file.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Duration The duration of the recording file.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return Duration 
      */
     public Long getDuration() {
         return this.Duration;
     }
 
     /**
-     * Set The duration of the recording file.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Duration The duration of the recording file.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param Duration 
      */
     public void setDuration(Long Duration) {
         this.Duration = Duration;
     }
 
     /**
-     * Get The recording start time in [ISO date format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return StartTime The recording start time in [ISO date format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return StartTime 
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set The recording start time in [ISO date format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param StartTime The recording start time in [ISO date format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param StartTime 
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get The recording end time in [ISO date format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return EndTime The recording end time in [ISO date format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return EndTime 
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set The recording end time in [ISO date format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param EndTime The recording end time in [ISO date format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param EndTime 
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;

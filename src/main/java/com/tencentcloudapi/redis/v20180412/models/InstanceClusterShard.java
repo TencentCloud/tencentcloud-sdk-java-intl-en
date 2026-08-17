@@ -100,6 +100,20 @@ public class InstanceClusterShard extends AbstractModel {
     private Long Connected;
 
     /**
+    * AZ information.
+    */
+    @SerializedName("ZoneId")
+    @Expose
+    private String ZoneId;
+
+    /**
+    * Node group ID.
+    */
+    @SerializedName("ReplicasNodeId")
+    @Expose
+    private Long ReplicasNodeId;
+
+    /**
      * Get The name of a shard node 
      * @return ShardName The name of a shard node
      */
@@ -283,6 +297,38 @@ public class InstanceClusterShard extends AbstractModel {
         this.Connected = Connected;
     }
 
+    /**
+     * Get AZ information. 
+     * @return ZoneId AZ information.
+     */
+    public String getZoneId() {
+        return this.ZoneId;
+    }
+
+    /**
+     * Set AZ information.
+     * @param ZoneId AZ information.
+     */
+    public void setZoneId(String ZoneId) {
+        this.ZoneId = ZoneId;
+    }
+
+    /**
+     * Get Node group ID. 
+     * @return ReplicasNodeId Node group ID.
+     */
+    public Long getReplicasNodeId() {
+        return this.ReplicasNodeId;
+    }
+
+    /**
+     * Set Node group ID.
+     * @param ReplicasNodeId Node group ID.
+     */
+    public void setReplicasNodeId(Long ReplicasNodeId) {
+        this.ReplicasNodeId = ReplicasNodeId;
+    }
+
     public InstanceClusterShard() {
     }
 
@@ -321,6 +367,12 @@ public class InstanceClusterShard extends AbstractModel {
         if (source.Connected != null) {
             this.Connected = new Long(source.Connected);
         }
+        if (source.ZoneId != null) {
+            this.ZoneId = new String(source.ZoneId);
+        }
+        if (source.ReplicasNodeId != null) {
+            this.ReplicasNodeId = new Long(source.ReplicasNodeId);
+        }
     }
 
 
@@ -338,6 +390,8 @@ public class InstanceClusterShard extends AbstractModel {
         this.setParamSimple(map, prefix + "Runid", this.Runid);
         this.setParamSimple(map, prefix + "RunId", this.RunId);
         this.setParamSimple(map, prefix + "Connected", this.Connected);
+        this.setParamSimple(map, prefix + "ZoneId", this.ZoneId);
+        this.setParamSimple(map, prefix + "ReplicasNodeId", this.ReplicasNodeId);
 
     }
 }

@@ -24,15 +24,14 @@ import java.util.HashMap;
 public class SmartEraseTaskInput extends AbstractModel {
 
     /**
-    * Smart erasure template id.
+    * Smart erasing template id.
     */
     @SerializedName("Definition")
     @Expose
     private Long Definition;
 
     /**
-    * Intelligent erasure custom parameter. valid when Definition is 0. this parameter is used for highly custom scenarios. we recommend you prioritize using Definition to specify intelligent erasure parameters.
-Note: This field may return null, indicating that no valid value can be obtained.
+    * 
     */
     @SerializedName("RawParameter")
     @Expose
@@ -46,8 +45,7 @@ Note: This field may return null, indicating that no valid value can be obtained
     private OverrideEraseParameter OverrideParameter;
 
     /**
-    * Specifies the target storage for files. if left blank, it inherits the upper-level OutputStorage value.
-Note: This field may return null, indicating that no valid value can be obtained.
+    * 
     */
     @SerializedName("OutputStorage")
     @Expose
@@ -55,51 +53,46 @@ Note: This field may return null, indicating that no valid value can be obtained
 
     /**
     * Output path of the file, which can be a relative or absolute path.
-Specifies the output path must end with `.{format}`. variable names, please refer to [filename variable explanation](https://www.tencentcloud.com/document/product/1041/33495?has_map=1).
-**Relative path example**:
-<Li>Filename_{Variable name}.{format}</li>
+To define the output path, the path must end with `.{format}`. For variable names, please refer to the Filename Variable Explanation (https://www.tencentcloud.com/document/product/862/37039?from_cn_redirect=1).
+Relative path example:
+<li>Filename_{Variable name}.{format}</li>
 <li>Filename.{format}</li>
+Absolute path example:
+<li>/Custom path/Filename_{Variable name}.{format}</li>
 
-**Absolute path example**:
-<Li>/Custom path/filename_{variable name}.{format}</li>
-
-**Note**: currently does not support the `BatchProcessMedia` api.
+**Note**: Currently does not support the `BatchProcessMedia` API.
     */
     @SerializedName("OutputObjectPath")
     @Expose
     private String OutputObjectPath;
 
     /**
-     * Get Smart erasure template id. 
-     * @return Definition Smart erasure template id.
+     * Get Smart erasing template id. 
+     * @return Definition Smart erasing template id.
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set Smart erasure template id.
-     * @param Definition Smart erasure template id.
+     * Set Smart erasing template id.
+     * @param Definition Smart erasing template id.
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;
     }
 
     /**
-     * Get Intelligent erasure custom parameter. valid when Definition is 0. this parameter is used for highly custom scenarios. we recommend you prioritize using Definition to specify intelligent erasure parameters.
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return RawParameter Intelligent erasure custom parameter. valid when Definition is 0. this parameter is used for highly custom scenarios. we recommend you prioritize using Definition to specify intelligent erasure parameters.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get  
+     * @return RawParameter 
      */
     public RawSmartEraseParameter getRawParameter() {
         return this.RawParameter;
     }
 
     /**
-     * Set Intelligent erasure custom parameter. valid when Definition is 0. this parameter is used for highly custom scenarios. we recommend you prioritize using Definition to specify intelligent erasure parameters.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param RawParameter Intelligent erasure custom parameter. valid when Definition is 0. this parameter is used for highly custom scenarios. we recommend you prioritize using Definition to specify intelligent erasure parameters.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set 
+     * @param RawParameter 
      */
     public void setRawParameter(RawSmartEraseParameter RawParameter) {
         this.RawParameter = RawParameter;
@@ -122,20 +115,16 @@ Note: This field may return null, indicating that no valid value can be obtained
     }
 
     /**
-     * Get Specifies the target storage for files. if left blank, it inherits the upper-level OutputStorage value.
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return OutputStorage Specifies the target storage for files. if left blank, it inherits the upper-level OutputStorage value.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get  
+     * @return OutputStorage 
      */
     public TaskOutputStorage getOutputStorage() {
         return this.OutputStorage;
     }
 
     /**
-     * Set Specifies the target storage for files. if left blank, it inherits the upper-level OutputStorage value.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param OutputStorage Specifies the target storage for files. if left blank, it inherits the upper-level OutputStorage value.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set 
+     * @param OutputStorage 
      */
     public void setOutputStorage(TaskOutputStorage OutputStorage) {
         this.OutputStorage = OutputStorage;
@@ -143,25 +132,23 @@ Note: This field may return null, indicating that no valid value can be obtained
 
     /**
      * Get Output path of the file, which can be a relative or absolute path.
-Specifies the output path must end with `.{format}`. variable names, please refer to [filename variable explanation](https://www.tencentcloud.com/document/product/1041/33495?has_map=1).
-**Relative path example**:
-<Li>Filename_{Variable name}.{format}</li>
+To define the output path, the path must end with `.{format}`. For variable names, please refer to the Filename Variable Explanation (https://www.tencentcloud.com/document/product/862/37039?from_cn_redirect=1).
+Relative path example:
+<li>Filename_{Variable name}.{format}</li>
 <li>Filename.{format}</li>
+Absolute path example:
+<li>/Custom path/Filename_{Variable name}.{format}</li>
 
-**Absolute path example**:
-<Li>/Custom path/filename_{variable name}.{format}</li>
-
-**Note**: currently does not support the `BatchProcessMedia` api. 
+**Note**: Currently does not support the `BatchProcessMedia` API. 
      * @return OutputObjectPath Output path of the file, which can be a relative or absolute path.
-Specifies the output path must end with `.{format}`. variable names, please refer to [filename variable explanation](https://www.tencentcloud.com/document/product/1041/33495?has_map=1).
-**Relative path example**:
-<Li>Filename_{Variable name}.{format}</li>
+To define the output path, the path must end with `.{format}`. For variable names, please refer to the Filename Variable Explanation (https://www.tencentcloud.com/document/product/862/37039?from_cn_redirect=1).
+Relative path example:
+<li>Filename_{Variable name}.{format}</li>
 <li>Filename.{format}</li>
+Absolute path example:
+<li>/Custom path/Filename_{Variable name}.{format}</li>
 
-**Absolute path example**:
-<Li>/Custom path/filename_{variable name}.{format}</li>
-
-**Note**: currently does not support the `BatchProcessMedia` api.
+**Note**: Currently does not support the `BatchProcessMedia` API.
      */
     public String getOutputObjectPath() {
         return this.OutputObjectPath;
@@ -169,25 +156,23 @@ Specifies the output path must end with `.{format}`. variable names, please refe
 
     /**
      * Set Output path of the file, which can be a relative or absolute path.
-Specifies the output path must end with `.{format}`. variable names, please refer to [filename variable explanation](https://www.tencentcloud.com/document/product/1041/33495?has_map=1).
-**Relative path example**:
-<Li>Filename_{Variable name}.{format}</li>
+To define the output path, the path must end with `.{format}`. For variable names, please refer to the Filename Variable Explanation (https://www.tencentcloud.com/document/product/862/37039?from_cn_redirect=1).
+Relative path example:
+<li>Filename_{Variable name}.{format}</li>
 <li>Filename.{format}</li>
+Absolute path example:
+<li>/Custom path/Filename_{Variable name}.{format}</li>
 
-**Absolute path example**:
-<Li>/Custom path/filename_{variable name}.{format}</li>
-
-**Note**: currently does not support the `BatchProcessMedia` api.
+**Note**: Currently does not support the `BatchProcessMedia` API.
      * @param OutputObjectPath Output path of the file, which can be a relative or absolute path.
-Specifies the output path must end with `.{format}`. variable names, please refer to [filename variable explanation](https://www.tencentcloud.com/document/product/1041/33495?has_map=1).
-**Relative path example**:
-<Li>Filename_{Variable name}.{format}</li>
+To define the output path, the path must end with `.{format}`. For variable names, please refer to the Filename Variable Explanation (https://www.tencentcloud.com/document/product/862/37039?from_cn_redirect=1).
+Relative path example:
+<li>Filename_{Variable name}.{format}</li>
 <li>Filename.{format}</li>
+Absolute path example:
+<li>/Custom path/Filename_{Variable name}.{format}</li>
 
-**Absolute path example**:
-<Li>/Custom path/filename_{variable name}.{format}</li>
-
-**Note**: currently does not support the `BatchProcessMedia` api.
+**Note**: Currently does not support the `BatchProcessMedia` API.
      */
     public void setOutputObjectPath(String OutputObjectPath) {
         this.OutputObjectPath = OutputObjectPath;

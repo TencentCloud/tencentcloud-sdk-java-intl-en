@@ -24,209 +24,187 @@ import java.util.HashMap;
 public class Account extends AbstractModel {
 
     /**
-    * Instance ID.
+    * <p>Instance ID.</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Account name.
+    * <p>Account name.</p>
     */
     @SerializedName("AccountName")
     @Expose
     private String AccountName;
 
     /**
-    * Account description.
+    * <p>Account description.</p>
     */
     @SerializedName("Remark")
     @Expose
     private String Remark;
 
     /**
-    * Read/Write permission policy.
-- r: read-only.
-
- - w: write-only.
-- rw: read/write.
+    * <p>Read/write permission policy. - r: read-only. - w: write-only. - rw: read-write.</p>
     */
     @SerializedName("Privilege")
     @Expose
     private String Privilege;
 
     /**
-    * Read-only routing policy.
- - master: primary node.
- - replication: replica node.
+    * <p>Read-only Routing Policy. - master: Master node. - replication: Replica node.</p>
     */
     @SerializedName("ReadonlyPolicy")
     @Expose
     private String [] ReadonlyPolicy;
 
     /**
-    * Sub-account status.
- - 1: account under modification.
- - 2: valid account.
- - 4: account deleted.
+    * <p>Sub-account status. - 1: Account change in progress. - 2: Valid. - 4: Deleted.</p>
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * Creation time
+    * <p>Account creation time.</p><p>If the parameter is an empty string, the account was created in an earlier version where the recording feature was not supported.</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-     * Get Instance ID. 
-     * @return InstanceId Instance ID.
+    * <p>The time when the account last changed the password.</p><p>If the parameter is an empty string, it means the account was created in an earlier version that did not support the password modification time recording feature.</p>
+    */
+    @SerializedName("PasswordLastModifiedTime")
+    @Expose
+    private String PasswordLastModifiedTime;
+
+    /**
+     * Get <p>Instance ID.</p> 
+     * @return InstanceId <p>Instance ID.</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Instance ID.
-     * @param InstanceId Instance ID.
+     * Set <p>Instance ID.</p>
+     * @param InstanceId <p>Instance ID.</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Account name. 
-     * @return AccountName Account name.
+     * Get <p>Account name.</p> 
+     * @return AccountName <p>Account name.</p>
      */
     public String getAccountName() {
         return this.AccountName;
     }
 
     /**
-     * Set Account name.
-     * @param AccountName Account name.
+     * Set <p>Account name.</p>
+     * @param AccountName <p>Account name.</p>
      */
     public void setAccountName(String AccountName) {
         this.AccountName = AccountName;
     }
 
     /**
-     * Get Account description. 
-     * @return Remark Account description.
+     * Get <p>Account description.</p> 
+     * @return Remark <p>Account description.</p>
      */
     public String getRemark() {
         return this.Remark;
     }
 
     /**
-     * Set Account description.
-     * @param Remark Account description.
+     * Set <p>Account description.</p>
+     * @param Remark <p>Account description.</p>
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;
     }
 
     /**
-     * Get Read/Write permission policy.
-- r: read-only.
-
- - w: write-only.
-- rw: read/write. 
-     * @return Privilege Read/Write permission policy.
-- r: read-only.
-
- - w: write-only.
-- rw: read/write.
+     * Get <p>Read/write permission policy. - r: read-only. - w: write-only. - rw: read-write.</p> 
+     * @return Privilege <p>Read/write permission policy. - r: read-only. - w: write-only. - rw: read-write.</p>
      */
     public String getPrivilege() {
         return this.Privilege;
     }
 
     /**
-     * Set Read/Write permission policy.
-- r: read-only.
-
- - w: write-only.
-- rw: read/write.
-     * @param Privilege Read/Write permission policy.
-- r: read-only.
-
- - w: write-only.
-- rw: read/write.
+     * Set <p>Read/write permission policy. - r: read-only. - w: write-only. - rw: read-write.</p>
+     * @param Privilege <p>Read/write permission policy. - r: read-only. - w: write-only. - rw: read-write.</p>
      */
     public void setPrivilege(String Privilege) {
         this.Privilege = Privilege;
     }
 
     /**
-     * Get Read-only routing policy.
- - master: primary node.
- - replication: replica node. 
-     * @return ReadonlyPolicy Read-only routing policy.
- - master: primary node.
- - replication: replica node.
+     * Get <p>Read-only Routing Policy. - master: Master node. - replication: Replica node.</p> 
+     * @return ReadonlyPolicy <p>Read-only Routing Policy. - master: Master node. - replication: Replica node.</p>
      */
     public String [] getReadonlyPolicy() {
         return this.ReadonlyPolicy;
     }
 
     /**
-     * Set Read-only routing policy.
- - master: primary node.
- - replication: replica node.
-     * @param ReadonlyPolicy Read-only routing policy.
- - master: primary node.
- - replication: replica node.
+     * Set <p>Read-only Routing Policy. - master: Master node. - replication: Replica node.</p>
+     * @param ReadonlyPolicy <p>Read-only Routing Policy. - master: Master node. - replication: Replica node.</p>
      */
     public void setReadonlyPolicy(String [] ReadonlyPolicy) {
         this.ReadonlyPolicy = ReadonlyPolicy;
     }
 
     /**
-     * Get Sub-account status.
- - 1: account under modification.
- - 2: valid account.
- - 4: account deleted. 
-     * @return Status Sub-account status.
- - 1: account under modification.
- - 2: valid account.
- - 4: account deleted.
+     * Get <p>Sub-account status. - 1: Account change in progress. - 2: Valid. - 4: Deleted.</p> 
+     * @return Status <p>Sub-account status. - 1: Account change in progress. - 2: Valid. - 4: Deleted.</p>
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Sub-account status.
- - 1: account under modification.
- - 2: valid account.
- - 4: account deleted.
-     * @param Status Sub-account status.
- - 1: account under modification.
- - 2: valid account.
- - 4: account deleted.
+     * Set <p>Sub-account status. - 1: Account change in progress. - 2: Valid. - 4: Deleted.</p>
+     * @param Status <p>Sub-account status. - 1: Account change in progress. - 2: Valid. - 4: Deleted.</p>
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get Creation time 
-     * @return CreateTime Creation time
+     * Get <p>Account creation time.</p><p>If the parameter is an empty string, the account was created in an earlier version where the recording feature was not supported.</p> 
+     * @return CreateTime <p>Account creation time.</p><p>If the parameter is an empty string, the account was created in an earlier version where the recording feature was not supported.</p>
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set Creation time
-     * @param CreateTime Creation time
+     * Set <p>Account creation time.</p><p>If the parameter is an empty string, the account was created in an earlier version where the recording feature was not supported.</p>
+     * @param CreateTime <p>Account creation time.</p><p>If the parameter is an empty string, the account was created in an earlier version where the recording feature was not supported.</p>
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
+    }
+
+    /**
+     * Get <p>The time when the account last changed the password.</p><p>If the parameter is an empty string, it means the account was created in an earlier version that did not support the password modification time recording feature.</p> 
+     * @return PasswordLastModifiedTime <p>The time when the account last changed the password.</p><p>If the parameter is an empty string, it means the account was created in an earlier version that did not support the password modification time recording feature.</p>
+     */
+    public String getPasswordLastModifiedTime() {
+        return this.PasswordLastModifiedTime;
+    }
+
+    /**
+     * Set <p>The time when the account last changed the password.</p><p>If the parameter is an empty string, it means the account was created in an earlier version that did not support the password modification time recording feature.</p>
+     * @param PasswordLastModifiedTime <p>The time when the account last changed the password.</p><p>If the parameter is an empty string, it means the account was created in an earlier version that did not support the password modification time recording feature.</p>
+     */
+    public void setPasswordLastModifiedTime(String PasswordLastModifiedTime) {
+        this.PasswordLastModifiedTime = PasswordLastModifiedTime;
     }
 
     public Account() {
@@ -261,6 +239,9 @@ public class Account extends AbstractModel {
         if (source.CreateTime != null) {
             this.CreateTime = new String(source.CreateTime);
         }
+        if (source.PasswordLastModifiedTime != null) {
+            this.PasswordLastModifiedTime = new String(source.PasswordLastModifiedTime);
+        }
     }
 
 
@@ -275,6 +256,7 @@ public class Account extends AbstractModel {
         this.setParamArraySimple(map, prefix + "ReadonlyPolicy.", this.ReadonlyPolicy);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
+        this.setParamSimple(map, prefix + "PasswordLastModifiedTime", this.PasswordLastModifiedTime);
 
     }
 }

@@ -38,8 +38,7 @@ public class DescribeAigcTaskStatusResponse extends AbstractModel {
     private String TaskStatus;
 
     /**
-    * <p>Output url</p>
-Attention: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("OutputUrl")
     @Expose
@@ -134,20 +133,16 @@ Attention: This field may return null, indicating that no valid values can be ob
     }
 
     /**
-     * Get <p>Output url</p>
-Attention: This field may return null, indicating that no valid values can be obtained. 
-     * @return OutputUrl <p>Output url</p>
-Attention: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return OutputUrl 
      */
     public String getOutputUrl() {
         return this.OutputUrl;
     }
 
     /**
-     * Set <p>Output url</p>
-Attention: This field may return null, indicating that no valid values can be obtained.
-     * @param OutputUrl <p>Output url</p>
-Attention: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param OutputUrl 
      */
     public void setOutputUrl(String OutputUrl) {
         this.OutputUrl = OutputUrl;

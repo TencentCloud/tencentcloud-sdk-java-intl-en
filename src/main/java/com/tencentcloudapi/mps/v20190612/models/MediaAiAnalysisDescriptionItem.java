@@ -52,16 +52,14 @@ public class MediaAiAnalysisDescriptionItem extends AbstractModel {
     private String [] Keywords;
 
     /**
-    * Segmentation result.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("Paragraphs")
     @Expose
     private AiParagraphInfo [] Paragraphs;
 
     /**
-    * Address of the mind map of a summary task.
-Note: This field may return null, indicating that no valid value can be obtained.
+    * 
     */
     @SerializedName("MindMapUrl")
     @Expose
@@ -153,40 +151,32 @@ Note: This field may return null, indicating that no valid value can be obtained
     }
 
     /**
-     * Get Segmentation result.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Paragraphs Segmentation result.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return Paragraphs 
      */
     public AiParagraphInfo [] getParagraphs() {
         return this.Paragraphs;
     }
 
     /**
-     * Set Segmentation result.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Paragraphs Segmentation result.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param Paragraphs 
      */
     public void setParagraphs(AiParagraphInfo [] Paragraphs) {
         this.Paragraphs = Paragraphs;
     }
 
     /**
-     * Get Address of the mind map of a summary task.
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return MindMapUrl Address of the mind map of a summary task.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get  
+     * @return MindMapUrl 
      */
     public String getMindMapUrl() {
         return this.MindMapUrl;
     }
 
     /**
-     * Set Address of the mind map of a summary task.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param MindMapUrl Address of the mind map of a summary task.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set 
+     * @param MindMapUrl 
      */
     public void setMindMapUrl(String MindMapUrl) {
         this.MindMapUrl = MindMapUrl;

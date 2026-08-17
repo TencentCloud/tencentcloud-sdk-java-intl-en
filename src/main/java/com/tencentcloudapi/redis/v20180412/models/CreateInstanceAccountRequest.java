@@ -24,206 +24,161 @@ import java.util.HashMap;
 public class CreateInstanceAccountRequest extends AbstractModel {
 
     /**
-    * Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
+    * <p>Instance ID. Log in to the <a href="https://console.cloud.tencent.com/redis">Redis console</a> and copy the instance ID from the instance list.</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Custom account name for accessing the database.
-- It contains only letters, digits, underscores (_), and hyphens (-).
-- The length cannot exceed 32 characters.
+    * <p>Custom account name for accessing the database.</p><ul><li>Consist of letters, digits, underscores, and hyphens only.</li><li>Length cannot be greater than 32.</li></ul>
     */
     @SerializedName("AccountName")
     @Expose
     private String AccountName;
 
     /**
-    * Password of the custom account. The password complexity requirements are as follows:
-- It can contain 8 to 64 characters.
-- It should contain at least two of the following types: lowercase letters, uppercase letters, digits, and special characters (such as ()`~!@#$%^&*-+=_|{}[]:;<>,.?/).
-- It cannot start with a forward slash (/).
-
+    * <p>Set a password for the customized account. The password complexity requirements are as follows:</p><ul><li>Character count: [8,64].</li><li>Contain at least two kinds of lowercase letters, uppercase letters, digits and characters ()`~!@#$%^&amp;*-+=_|{}[]:;&lt;&gt;,.?/.</li><li>Cannot start with "/".</li></ul>
     */
     @SerializedName("AccountPassword")
     @Expose
     private String AccountPassword;
 
     /**
-    * The read requests for the designated account are routed to either the master node or replica nodes. If the Read-Only Replica is not enabled, the selection of replica nodes is not supported.
-- master: Master node.- replication: Replica node.
+    * <p>Read requests for the designated account are routed to the primary node or replica node. Read-only replica is not enabled, and selection of replica nodes is not supported.</p><ul><li>master: primary node</li><li>replication: replica node</li></ul>
     */
     @SerializedName("ReadonlyPolicy")
     @Expose
     private String [] ReadonlyPolicy;
 
     /**
-    * Read-write permissions of the account. It supports the selection of read-only and read-write permissions.
-- r: read-only.
-- rw: read-write.
+    * <p>Account read/write permission supports selecting read-only or read-write permission.</p><ul><li>r: Read-only.</li><li>rw: Read-write.</li></ul>
     */
     @SerializedName("Privilege")
     @Expose
     private String Privilege;
 
     /**
-    * Description information about account remarks, with a length of [0, 64] bytes.
+    * <p>Description information about account remarks, with a length of [0, 64] bytes.</p>
     */
     @SerializedName("Remark")
     @Expose
     private String Remark;
 
     /**
-    * Whether to encrypt the password.
+    * <p>Whether to enable password encryption for transmission.</p><ul><li>true: Encrypted.</li><li>false: Not encrypted (default value).</li></ul>
     */
     @SerializedName("EncryptPassword")
     @Expose
     private Boolean EncryptPassword;
 
     /**
-     * Get Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list. 
-     * @return InstanceId Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
+     * Get <p>Instance ID. Log in to the <a href="https://console.cloud.tencent.com/redis">Redis console</a> and copy the instance ID from the instance list.</p> 
+     * @return InstanceId <p>Instance ID. Log in to the <a href="https://console.cloud.tencent.com/redis">Redis console</a> and copy the instance ID from the instance list.</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
-     * @param InstanceId Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
+     * Set <p>Instance ID. Log in to the <a href="https://console.cloud.tencent.com/redis">Redis console</a> and copy the instance ID from the instance list.</p>
+     * @param InstanceId <p>Instance ID. Log in to the <a href="https://console.cloud.tencent.com/redis">Redis console</a> and copy the instance ID from the instance list.</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Custom account name for accessing the database.
-- It contains only letters, digits, underscores (_), and hyphens (-).
-- The length cannot exceed 32 characters. 
-     * @return AccountName Custom account name for accessing the database.
-- It contains only letters, digits, underscores (_), and hyphens (-).
-- The length cannot exceed 32 characters.
+     * Get <p>Custom account name for accessing the database.</p><ul><li>Consist of letters, digits, underscores, and hyphens only.</li><li>Length cannot be greater than 32.</li></ul> 
+     * @return AccountName <p>Custom account name for accessing the database.</p><ul><li>Consist of letters, digits, underscores, and hyphens only.</li><li>Length cannot be greater than 32.</li></ul>
      */
     public String getAccountName() {
         return this.AccountName;
     }
 
     /**
-     * Set Custom account name for accessing the database.
-- It contains only letters, digits, underscores (_), and hyphens (-).
-- The length cannot exceed 32 characters.
-     * @param AccountName Custom account name for accessing the database.
-- It contains only letters, digits, underscores (_), and hyphens (-).
-- The length cannot exceed 32 characters.
+     * Set <p>Custom account name for accessing the database.</p><ul><li>Consist of letters, digits, underscores, and hyphens only.</li><li>Length cannot be greater than 32.</li></ul>
+     * @param AccountName <p>Custom account name for accessing the database.</p><ul><li>Consist of letters, digits, underscores, and hyphens only.</li><li>Length cannot be greater than 32.</li></ul>
      */
     public void setAccountName(String AccountName) {
         this.AccountName = AccountName;
     }
 
     /**
-     * Get Password of the custom account. The password complexity requirements are as follows:
-- It can contain 8 to 64 characters.
-- It should contain at least two of the following types: lowercase letters, uppercase letters, digits, and special characters (such as ()`~!@#$%^&*-+=_|{}[]:;<>,.?/).
-- It cannot start with a forward slash (/).
- 
-     * @return AccountPassword Password of the custom account. The password complexity requirements are as follows:
-- It can contain 8 to 64 characters.
-- It should contain at least two of the following types: lowercase letters, uppercase letters, digits, and special characters (such as ()`~!@#$%^&*-+=_|{}[]:;<>,.?/).
-- It cannot start with a forward slash (/).
-
+     * Get <p>Set a password for the customized account. The password complexity requirements are as follows:</p><ul><li>Character count: [8,64].</li><li>Contain at least two kinds of lowercase letters, uppercase letters, digits and characters ()`~!@#$%^&amp;*-+=_|{}[]:;&lt;&gt;,.?/.</li><li>Cannot start with "/".</li></ul> 
+     * @return AccountPassword <p>Set a password for the customized account. The password complexity requirements are as follows:</p><ul><li>Character count: [8,64].</li><li>Contain at least two kinds of lowercase letters, uppercase letters, digits and characters ()`~!@#$%^&amp;*-+=_|{}[]:;&lt;&gt;,.?/.</li><li>Cannot start with "/".</li></ul>
      */
     public String getAccountPassword() {
         return this.AccountPassword;
     }
 
     /**
-     * Set Password of the custom account. The password complexity requirements are as follows:
-- It can contain 8 to 64 characters.
-- It should contain at least two of the following types: lowercase letters, uppercase letters, digits, and special characters (such as ()`~!@#$%^&*-+=_|{}[]:;<>,.?/).
-- It cannot start with a forward slash (/).
-
-     * @param AccountPassword Password of the custom account. The password complexity requirements are as follows:
-- It can contain 8 to 64 characters.
-- It should contain at least two of the following types: lowercase letters, uppercase letters, digits, and special characters (such as ()`~!@#$%^&*-+=_|{}[]:;<>,.?/).
-- It cannot start with a forward slash (/).
-
+     * Set <p>Set a password for the customized account. The password complexity requirements are as follows:</p><ul><li>Character count: [8,64].</li><li>Contain at least two kinds of lowercase letters, uppercase letters, digits and characters ()`~!@#$%^&amp;*-+=_|{}[]:;&lt;&gt;,.?/.</li><li>Cannot start with "/".</li></ul>
+     * @param AccountPassword <p>Set a password for the customized account. The password complexity requirements are as follows:</p><ul><li>Character count: [8,64].</li><li>Contain at least two kinds of lowercase letters, uppercase letters, digits and characters ()`~!@#$%^&amp;*-+=_|{}[]:;&lt;&gt;,.?/.</li><li>Cannot start with "/".</li></ul>
      */
     public void setAccountPassword(String AccountPassword) {
         this.AccountPassword = AccountPassword;
     }
 
     /**
-     * Get The read requests for the designated account are routed to either the master node or replica nodes. If the Read-Only Replica is not enabled, the selection of replica nodes is not supported.
-- master: Master node.- replication: Replica node. 
-     * @return ReadonlyPolicy The read requests for the designated account are routed to either the master node or replica nodes. If the Read-Only Replica is not enabled, the selection of replica nodes is not supported.
-- master: Master node.- replication: Replica node.
+     * Get <p>Read requests for the designated account are routed to the primary node or replica node. Read-only replica is not enabled, and selection of replica nodes is not supported.</p><ul><li>master: primary node</li><li>replication: replica node</li></ul> 
+     * @return ReadonlyPolicy <p>Read requests for the designated account are routed to the primary node or replica node. Read-only replica is not enabled, and selection of replica nodes is not supported.</p><ul><li>master: primary node</li><li>replication: replica node</li></ul>
      */
     public String [] getReadonlyPolicy() {
         return this.ReadonlyPolicy;
     }
 
     /**
-     * Set The read requests for the designated account are routed to either the master node or replica nodes. If the Read-Only Replica is not enabled, the selection of replica nodes is not supported.
-- master: Master node.- replication: Replica node.
-     * @param ReadonlyPolicy The read requests for the designated account are routed to either the master node or replica nodes. If the Read-Only Replica is not enabled, the selection of replica nodes is not supported.
-- master: Master node.- replication: Replica node.
+     * Set <p>Read requests for the designated account are routed to the primary node or replica node. Read-only replica is not enabled, and selection of replica nodes is not supported.</p><ul><li>master: primary node</li><li>replication: replica node</li></ul>
+     * @param ReadonlyPolicy <p>Read requests for the designated account are routed to the primary node or replica node. Read-only replica is not enabled, and selection of replica nodes is not supported.</p><ul><li>master: primary node</li><li>replication: replica node</li></ul>
      */
     public void setReadonlyPolicy(String [] ReadonlyPolicy) {
         this.ReadonlyPolicy = ReadonlyPolicy;
     }
 
     /**
-     * Get Read-write permissions of the account. It supports the selection of read-only and read-write permissions.
-- r: read-only.
-- rw: read-write. 
-     * @return Privilege Read-write permissions of the account. It supports the selection of read-only and read-write permissions.
-- r: read-only.
-- rw: read-write.
+     * Get <p>Account read/write permission supports selecting read-only or read-write permission.</p><ul><li>r: Read-only.</li><li>rw: Read-write.</li></ul> 
+     * @return Privilege <p>Account read/write permission supports selecting read-only or read-write permission.</p><ul><li>r: Read-only.</li><li>rw: Read-write.</li></ul>
      */
     public String getPrivilege() {
         return this.Privilege;
     }
 
     /**
-     * Set Read-write permissions of the account. It supports the selection of read-only and read-write permissions.
-- r: read-only.
-- rw: read-write.
-     * @param Privilege Read-write permissions of the account. It supports the selection of read-only and read-write permissions.
-- r: read-only.
-- rw: read-write.
+     * Set <p>Account read/write permission supports selecting read-only or read-write permission.</p><ul><li>r: Read-only.</li><li>rw: Read-write.</li></ul>
+     * @param Privilege <p>Account read/write permission supports selecting read-only or read-write permission.</p><ul><li>r: Read-only.</li><li>rw: Read-write.</li></ul>
      */
     public void setPrivilege(String Privilege) {
         this.Privilege = Privilege;
     }
 
     /**
-     * Get Description information about account remarks, with a length of [0, 64] bytes. 
-     * @return Remark Description information about account remarks, with a length of [0, 64] bytes.
+     * Get <p>Description information about account remarks, with a length of [0, 64] bytes.</p> 
+     * @return Remark <p>Description information about account remarks, with a length of [0, 64] bytes.</p>
      */
     public String getRemark() {
         return this.Remark;
     }
 
     /**
-     * Set Description information about account remarks, with a length of [0, 64] bytes.
-     * @param Remark Description information about account remarks, with a length of [0, 64] bytes.
+     * Set <p>Description information about account remarks, with a length of [0, 64] bytes.</p>
+     * @param Remark <p>Description information about account remarks, with a length of [0, 64] bytes.</p>
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;
     }
 
     /**
-     * Get Whether to encrypt the password. 
-     * @return EncryptPassword Whether to encrypt the password.
+     * Get <p>Whether to enable password encryption for transmission.</p><ul><li>true: Encrypted.</li><li>false: Not encrypted (default value).</li></ul> 
+     * @return EncryptPassword <p>Whether to enable password encryption for transmission.</p><ul><li>true: Encrypted.</li><li>false: Not encrypted (default value).</li></ul>
      */
     public Boolean getEncryptPassword() {
         return this.EncryptPassword;
     }
 
     /**
-     * Set Whether to encrypt the password.
-     * @param EncryptPassword Whether to encrypt the password.
+     * Set <p>Whether to enable password encryption for transmission.</p><ul><li>true: Encrypted.</li><li>false: Not encrypted (default value).</li></ul>
+     * @param EncryptPassword <p>Whether to enable password encryption for transmission.</p><ul><li>true: Encrypted.</li><li>false: Not encrypted (default value).</li></ul>
      */
     public void setEncryptPassword(Boolean EncryptPassword) {
         this.EncryptPassword = EncryptPassword;

@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class LiveStreamAiSmartSubtitleResultInfo extends AbstractModel {
 
     /**
-    * Live stream smart subtitling task result list.
+    * Live stream smart subtitle task result list.
     */
     @SerializedName("SmartSubtitleResult")
     @Expose
     private LiveSmartSubtitleResult [] SmartSubtitleResult;
 
     /**
-     * Get Live stream smart subtitling task result list. 
-     * @return SmartSubtitleResult Live stream smart subtitling task result list.
+     * Get Live stream smart subtitle task result list. 
+     * @return SmartSubtitleResult Live stream smart subtitle task result list.
      */
     public LiveSmartSubtitleResult [] getSmartSubtitleResult() {
         return this.SmartSubtitleResult;
     }
 
     /**
-     * Set Live stream smart subtitling task result list.
-     * @param SmartSubtitleResult Live stream smart subtitling task result list.
+     * Set Live stream smart subtitle task result list.
+     * @param SmartSubtitleResult Live stream smart subtitle task result list.
      */
     public void setSmartSubtitleResult(LiveSmartSubtitleResult [] SmartSubtitleResult) {
         this.SmartSubtitleResult = SmartSubtitleResult;

@@ -24,35 +24,35 @@ import java.util.HashMap;
 public class SegmentRecognitionItem extends AbstractModel {
 
     /**
-    * 
+    * Confidence degree.
     */
     @SerializedName("Confidence")
     @Expose
     private Float Confidence;
 
     /**
-    * 
+    * Start time offset of a recording clip.
     */
     @SerializedName("StartTimeOffset")
     @Expose
     private Float StartTimeOffset;
 
     /**
-    * 
+    * End time offset of the recording clip.
     */
     @SerializedName("EndTimeOffset")
     @Expose
     private Float EndTimeOffset;
 
     /**
-    * Specifies the split segment URL.
+    * Split segment URL.
     */
     @SerializedName("SegmentUrl")
     @Expose
     private String SegmentUrl;
 
     /**
-    * Specifies the segment cover.
+    * Segment cover.
     */
     @SerializedName("CovImgUrl")
     @Expose
@@ -66,7 +66,7 @@ public class SegmentRecognitionItem extends AbstractModel {
     private String Title;
 
     /**
-    * Specifies the segment summary.
+    * Segment summary.
     */
     @SerializedName("Summary")
     @Expose
@@ -80,101 +80,101 @@ public class SegmentRecognitionItem extends AbstractModel {
     private String [] Keywords;
 
     /**
-    * Specifies the start time of a live streaming segment in the ISO date format.
+    * The start time of a live streaming segment, in the ISO date format.
     */
     @SerializedName("BeginTime")
     @Expose
     private String BeginTime;
 
     /**
-    * Specifies the end time of a live streaming segment in the ISO date format.
+    * The end time of a live streaming segment, in the ISO date format.
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-    * Specifies the character ID.
+    * Specify the figure ID.
     */
     @SerializedName("PersonId")
     @Expose
     private String PersonId;
 
     /**
-     * Get  
-     * @return Confidence 
+     * Get Confidence degree. 
+     * @return Confidence Confidence degree.
      */
     public Float getConfidence() {
         return this.Confidence;
     }
 
     /**
-     * Set 
-     * @param Confidence 
+     * Set Confidence degree.
+     * @param Confidence Confidence degree.
      */
     public void setConfidence(Float Confidence) {
         this.Confidence = Confidence;
     }
 
     /**
-     * Get  
-     * @return StartTimeOffset 
+     * Get Start time offset of a recording clip. 
+     * @return StartTimeOffset Start time offset of a recording clip.
      */
     public Float getStartTimeOffset() {
         return this.StartTimeOffset;
     }
 
     /**
-     * Set 
-     * @param StartTimeOffset 
+     * Set Start time offset of a recording clip.
+     * @param StartTimeOffset Start time offset of a recording clip.
      */
     public void setStartTimeOffset(Float StartTimeOffset) {
         this.StartTimeOffset = StartTimeOffset;
     }
 
     /**
-     * Get  
-     * @return EndTimeOffset 
+     * Get End time offset of the recording clip. 
+     * @return EndTimeOffset End time offset of the recording clip.
      */
     public Float getEndTimeOffset() {
         return this.EndTimeOffset;
     }
 
     /**
-     * Set 
-     * @param EndTimeOffset 
+     * Set End time offset of the recording clip.
+     * @param EndTimeOffset End time offset of the recording clip.
      */
     public void setEndTimeOffset(Float EndTimeOffset) {
         this.EndTimeOffset = EndTimeOffset;
     }
 
     /**
-     * Get Specifies the split segment URL. 
-     * @return SegmentUrl Specifies the split segment URL.
+     * Get Split segment URL. 
+     * @return SegmentUrl Split segment URL.
      */
     public String getSegmentUrl() {
         return this.SegmentUrl;
     }
 
     /**
-     * Set Specifies the split segment URL.
-     * @param SegmentUrl Specifies the split segment URL.
+     * Set Split segment URL.
+     * @param SegmentUrl Split segment URL.
      */
     public void setSegmentUrl(String SegmentUrl) {
         this.SegmentUrl = SegmentUrl;
     }
 
     /**
-     * Get Specifies the segment cover. 
-     * @return CovImgUrl Specifies the segment cover.
+     * Get Segment cover. 
+     * @return CovImgUrl Segment cover.
      */
     public String getCovImgUrl() {
         return this.CovImgUrl;
     }
 
     /**
-     * Set Specifies the segment cover.
-     * @param CovImgUrl Specifies the segment cover.
+     * Set Segment cover.
+     * @param CovImgUrl Segment cover.
      */
     public void setCovImgUrl(String CovImgUrl) {
         this.CovImgUrl = CovImgUrl;
@@ -197,16 +197,16 @@ public class SegmentRecognitionItem extends AbstractModel {
     }
 
     /**
-     * Get Specifies the segment summary. 
-     * @return Summary Specifies the segment summary.
+     * Get Segment summary. 
+     * @return Summary Segment summary.
      */
     public String getSummary() {
         return this.Summary;
     }
 
     /**
-     * Set Specifies the segment summary.
-     * @param Summary Specifies the segment summary.
+     * Set Segment summary.
+     * @param Summary Segment summary.
      */
     public void setSummary(String Summary) {
         this.Summary = Summary;
@@ -229,48 +229,48 @@ public class SegmentRecognitionItem extends AbstractModel {
     }
 
     /**
-     * Get Specifies the start time of a live streaming segment in the ISO date format. 
-     * @return BeginTime Specifies the start time of a live streaming segment in the ISO date format.
+     * Get The start time of a live streaming segment, in the ISO date format. 
+     * @return BeginTime The start time of a live streaming segment, in the ISO date format.
      */
     public String getBeginTime() {
         return this.BeginTime;
     }
 
     /**
-     * Set Specifies the start time of a live streaming segment in the ISO date format.
-     * @param BeginTime Specifies the start time of a live streaming segment in the ISO date format.
+     * Set The start time of a live streaming segment, in the ISO date format.
+     * @param BeginTime The start time of a live streaming segment, in the ISO date format.
      */
     public void setBeginTime(String BeginTime) {
         this.BeginTime = BeginTime;
     }
 
     /**
-     * Get Specifies the end time of a live streaming segment in the ISO date format. 
-     * @return EndTime Specifies the end time of a live streaming segment in the ISO date format.
+     * Get The end time of a live streaming segment, in the ISO date format. 
+     * @return EndTime The end time of a live streaming segment, in the ISO date format.
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set Specifies the end time of a live streaming segment in the ISO date format.
-     * @param EndTime Specifies the end time of a live streaming segment in the ISO date format.
+     * Set The end time of a live streaming segment, in the ISO date format.
+     * @param EndTime The end time of a live streaming segment, in the ISO date format.
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get Specifies the character ID. 
-     * @return PersonId Specifies the character ID.
+     * Get Specify the figure ID. 
+     * @return PersonId Specify the figure ID.
      */
     public String getPersonId() {
         return this.PersonId;
     }
 
     /**
-     * Set Specifies the character ID.
-     * @param PersonId Specifies the character ID.
+     * Set Specify the figure ID.
+     * @param PersonId Specify the figure ID.
      */
     public void setPersonId(String PersonId) {
         this.PersonId = PersonId;

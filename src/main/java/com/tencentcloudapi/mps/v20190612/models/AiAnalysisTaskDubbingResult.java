@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class AiAnalysisTaskDubbingResult extends AbstractModel {
 
     /**
-    * Task status, including PROCESSING, SUCCESS, and FAIL.
+    * Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * Error code. `0`: Task successful. Other values: Task failed.
+    * Error code. 0: Task successful. Other values: Task failed.
     */
     @SerializedName("ErrCode")
     @Expose
@@ -45,47 +45,46 @@ public class AiAnalysisTaskDubbingResult extends AbstractModel {
     private String Message;
 
     /**
-    * Describes the task input for intelligent translation.
+    * Intelligent dubbing task input.
     */
     @SerializedName("Input")
     @Expose
     private AiAnalysisTaskDubbingInput Input;
 
     /**
-    * Describes the task output of intelligent translation.
-Note: This field may return null, indicating that no valid value can be obtained.
+    * 
     */
     @SerializedName("Output")
     @Expose
     private AiAnalysisTaskDubbingOutput Output;
 
     /**
-     * Get Task status, including PROCESSING, SUCCESS, and FAIL. 
-     * @return Status Task status, including PROCESSING, SUCCESS, and FAIL.
+     * Get Task status. Valid values are PROCESSING, SUCCESS, and FAIL. 
+     * @return Status Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Task status, including PROCESSING, SUCCESS, and FAIL.
-     * @param Status Task status, including PROCESSING, SUCCESS, and FAIL.
+     * Set Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
+     * @param Status Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get Error code. `0`: Task successful. Other values: Task failed. 
-     * @return ErrCode Error code. `0`: Task successful. Other values: Task failed.
+     * Get Error code. 0: Task successful. Other values: Task failed. 
+     * @return ErrCode Error code. 0: Task successful. Other values: Task failed.
      */
     public Long getErrCode() {
         return this.ErrCode;
     }
 
     /**
-     * Set Error code. `0`: Task successful. Other values: Task failed.
-     * @param ErrCode Error code. `0`: Task successful. Other values: Task failed.
+     * Set Error code. 0: Task successful. Other values: Task failed.
+     * @param ErrCode Error code. 0: Task successful. Other values: Task failed.
      */
     public void setErrCode(Long ErrCode) {
         this.ErrCode = ErrCode;
@@ -108,36 +107,32 @@ Note: This field may return null, indicating that no valid value can be obtained
     }
 
     /**
-     * Get Describes the task input for intelligent translation. 
-     * @return Input Describes the task input for intelligent translation.
+     * Get Intelligent dubbing task input. 
+     * @return Input Intelligent dubbing task input.
      */
     public AiAnalysisTaskDubbingInput getInput() {
         return this.Input;
     }
 
     /**
-     * Set Describes the task input for intelligent translation.
-     * @param Input Describes the task input for intelligent translation.
+     * Set Intelligent dubbing task input.
+     * @param Input Intelligent dubbing task input.
      */
     public void setInput(AiAnalysisTaskDubbingInput Input) {
         this.Input = Input;
     }
 
     /**
-     * Get Describes the task output of intelligent translation.
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return Output Describes the task output of intelligent translation.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get  
+     * @return Output 
      */
     public AiAnalysisTaskDubbingOutput getOutput() {
         return this.Output;
     }
 
     /**
-     * Set Describes the task output of intelligent translation.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param Output Describes the task output of intelligent translation.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set 
+     * @param Output 
      */
     public void setOutput(AiAnalysisTaskDubbingOutput Output) {
         this.Output = Output;

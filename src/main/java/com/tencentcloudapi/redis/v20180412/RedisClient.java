@@ -149,6 +149,17 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
+     *Disable logs
+     * @param req CloseLogRequest
+     * @return CloseLogResponse
+     * @throws TencentCloudSDKException
+     */
+    public CloseLogResponse CloseLog(CloseLogRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CloseLog", CloseLogResponse.class);
+    }
+
+    /**
      *This API is used to disable SSL encryption and authentication.
      * @param req CloseSSLRequest
      * @return CloseSSLResponse
@@ -157,6 +168,17 @@ public class RedisClient extends AbstractClient{
     public CloseSSLResponse CloseSSL(CloseSSLRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CloseSSL", CloseSSLResponse.class);
+    }
+
+    /**
+     *This API is used to create a log download task.
+     * @param req CreateExportTaskRequest
+     * @return CreateExportTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateExportTaskResponse CreateExportTask(CreateExportTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateExportTask", CreateExportTaskResponse.class);
     }
 
     /**
@@ -201,6 +223,17 @@ public class RedisClient extends AbstractClient{
     public CreateReplicationGroupResponse CreateReplicationGroup(CreateReplicationGroupRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CreateReplicationGroup", CreateReplicationGroupResponse.class);
+    }
+
+    /**
+     *This API is used to delete log download tasks.
+     * @param req DeleteExportTaskRequest
+     * @return DeleteExportTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteExportTaskResponse DeleteExportTask(DeleteExportTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteExportTask", DeleteExportTaskResponse.class);
     }
 
     /**
@@ -311,6 +344,17 @@ public class RedisClient extends AbstractClient{
     public DescribeDBSecurityGroupsResponse DescribeDBSecurityGroups(DescribeDBSecurityGroupsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeDBSecurityGroups", DescribeDBSecurityGroupsResponse.class);
+    }
+
+    /**
+     *This API is used to query download tasks for log files.
+     * @param req DescribeExportTasksRequest
+     * @return DescribeExportTasksResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeExportTasksResponse DescribeExportTasks(DescribeExportTasksRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeExportTasks", DescribeExportTasksResponse.class);
     }
 
     /**
@@ -575,6 +619,28 @@ public class RedisClient extends AbstractClient{
     public DescribeInstancesResponse DescribeInstances(DescribeInstancesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeInstances", DescribeInstancesResponse.class);
+    }
+
+    /**
+     *This API is used to query log instances.
+     * @param req DescribeLogInstanceListRequest
+     * @return DescribeLogInstanceListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLogInstanceListResponse DescribeLogInstanceList(DescribeLogInstanceListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeLogInstanceList", DescribeLogInstanceListResponse.class);
+    }
+
+    /**
+     *This API is used to query logs.
+     * @param req DescribeLogsRequest
+     * @return DescribeLogsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLogsResponse DescribeLogs(DescribeLogsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeLogs", DescribeLogsResponse.class);
     }
 
     /**
@@ -1029,6 +1095,17 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
+     *change log
+     * @param req ModifyLogRequest
+     * @return ModifyLogResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyLogResponse ModifyLog(ModifyLogRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyLog", ModifyLogResponse.class);
+    }
+
+    /**
      *This API is used to modify the time of instance maintenance window. Instances that require the version or architecture upgrade will undergo time switching during the maintenance window. Note: If the version or architecture upgrade has been initiated for an instance, its maintenance window cannot be modified.
      * @param req ModifyMaintenanceWindowRequest
      * @return ModifyMaintenanceWindowResponse
@@ -1070,6 +1147,17 @@ public class RedisClient extends AbstractClient{
     public ModifyReplicationGroupResponse ModifyReplicationGroup(ModifyReplicationGroupRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyReplicationGroup", ModifyReplicationGroupResponse.class);
+    }
+
+    /**
+     *Enable logging
+     * @param req OpenLogRequest
+     * @return OpenLogResponse
+     * @throws TencentCloudSDKException
+     */
+    public OpenLogResponse OpenLog(OpenLogRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "OpenLog", OpenLogResponse.class);
     }
 
     /**
@@ -1238,7 +1326,7 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
-     *This API is used to upgrade an instance to support multiple AZs.
+     *This API is deprecated.
      * @param req UpgradeVersionToMultiAvailabilityZonesRequest
      * @return UpgradeVersionToMultiAvailabilityZonesResponse
      * @throws TencentCloudSDKException

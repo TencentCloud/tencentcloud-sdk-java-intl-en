@@ -24,8 +24,8 @@ import java.util.HashMap;
 public class UpdateSmartErasePrivacyConfig extends AbstractModel {
 
     /**
-    * Erasing method of privacy protection.
-- blur
+    * Privacy protection removal method.
+- Blur: blur detection
 - mosaic
     */
     @SerializedName("PrivacyModel")
@@ -33,8 +33,8 @@ public class UpdateSmartErasePrivacyConfig extends AbstractModel {
     private String PrivacyModel;
 
     /**
-    * Privacy protection target. (When API Explorer is used, it is not required to specify an array. Add the corresponding items and enter the corresponding values.)
-- face: human face.
+    * Privacy protection target. (When API Explorer is used, no need to specify an array. Add the corresponding items and fill in the value.)
+- face: human face
 - plate: license plate.
     */
     @SerializedName("PrivacyTargets")
@@ -42,11 +42,11 @@ public class UpdateSmartErasePrivacyConfig extends AbstractModel {
     private String [] PrivacyTargets;
 
     /**
-     * Get Erasing method of privacy protection.
-- blur
+     * Get Privacy protection removal method.
+- Blur: blur detection
 - mosaic 
-     * @return PrivacyModel Erasing method of privacy protection.
-- blur
+     * @return PrivacyModel Privacy protection removal method.
+- Blur: blur detection
 - mosaic
      */
     public String getPrivacyModel() {
@@ -54,11 +54,11 @@ public class UpdateSmartErasePrivacyConfig extends AbstractModel {
     }
 
     /**
-     * Set Erasing method of privacy protection.
-- blur
+     * Set Privacy protection removal method.
+- Blur: blur detection
 - mosaic
-     * @param PrivacyModel Erasing method of privacy protection.
-- blur
+     * @param PrivacyModel Privacy protection removal method.
+- Blur: blur detection
 - mosaic
      */
     public void setPrivacyModel(String PrivacyModel) {
@@ -66,11 +66,11 @@ public class UpdateSmartErasePrivacyConfig extends AbstractModel {
     }
 
     /**
-     * Get Privacy protection target. (When API Explorer is used, it is not required to specify an array. Add the corresponding items and enter the corresponding values.)
-- face: human face.
+     * Get Privacy protection target. (When API Explorer is used, no need to specify an array. Add the corresponding items and fill in the value.)
+- face: human face
 - plate: license plate. 
-     * @return PrivacyTargets Privacy protection target. (When API Explorer is used, it is not required to specify an array. Add the corresponding items and enter the corresponding values.)
-- face: human face.
+     * @return PrivacyTargets Privacy protection target. (When API Explorer is used, no need to specify an array. Add the corresponding items and fill in the value.)
+- face: human face
 - plate: license plate.
      */
     public String [] getPrivacyTargets() {
@@ -78,11 +78,11 @@ public class UpdateSmartErasePrivacyConfig extends AbstractModel {
     }
 
     /**
-     * Set Privacy protection target. (When API Explorer is used, it is not required to specify an array. Add the corresponding items and enter the corresponding values.)
-- face: human face.
+     * Set Privacy protection target. (When API Explorer is used, no need to specify an array. Add the corresponding items and fill in the value.)
+- face: human face
 - plate: license plate.
-     * @param PrivacyTargets Privacy protection target. (When API Explorer is used, it is not required to specify an array. Add the corresponding items and enter the corresponding values.)
-- face: human face.
+     * @param PrivacyTargets Privacy protection target. (When API Explorer is used, no need to specify an array. Add the corresponding items and fill in the value.)
+- face: human face
 - plate: license plate.
      */
     public void setPrivacyTargets(String [] PrivacyTargets) {

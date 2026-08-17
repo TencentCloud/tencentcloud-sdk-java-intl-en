@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class LiveStreamTagRecognitionResult extends AbstractModel {
 
     /**
-    * 
+    * Timestamp events.
     */
     @SerializedName("Id")
     @Expose
     private String Id;
 
     /**
-    * 
+    * Start PTS time of a recognized segment, in seconds.
     */
     @SerializedName("StartPtsTime")
     @Expose
     private Float StartPtsTime;
 
     /**
-    * 
+    * End PTS time of a recognized segment, in seconds.
     */
     @SerializedName("EndPtsTime")
     @Expose
     private Float EndPtsTime;
 
     /**
-    * 
+    * Confidence of a recognized segment. Value range: 0-100.
     */
     @SerializedName("Confidence")
     @Expose
     private Float Confidence;
 
     /**
-     * Get  
-     * @return Id 
+     * Get Timestamp events. 
+     * @return Id Timestamp events.
      */
     public String getId() {
         return this.Id;
     }
 
     /**
-     * Set 
-     * @param Id 
+     * Set Timestamp events.
+     * @param Id Timestamp events.
      */
     public void setId(String Id) {
         this.Id = Id;
     }
 
     /**
-     * Get  
-     * @return StartPtsTime 
+     * Get Start PTS time of a recognized segment, in seconds. 
+     * @return StartPtsTime Start PTS time of a recognized segment, in seconds.
      */
     public Float getStartPtsTime() {
         return this.StartPtsTime;
     }
 
     /**
-     * Set 
-     * @param StartPtsTime 
+     * Set Start PTS time of a recognized segment, in seconds.
+     * @param StartPtsTime Start PTS time of a recognized segment, in seconds.
      */
     public void setStartPtsTime(Float StartPtsTime) {
         this.StartPtsTime = StartPtsTime;
     }
 
     /**
-     * Get  
-     * @return EndPtsTime 
+     * Get End PTS time of a recognized segment, in seconds. 
+     * @return EndPtsTime End PTS time of a recognized segment, in seconds.
      */
     public Float getEndPtsTime() {
         return this.EndPtsTime;
     }
 
     /**
-     * Set 
-     * @param EndPtsTime 
+     * Set End PTS time of a recognized segment, in seconds.
+     * @param EndPtsTime End PTS time of a recognized segment, in seconds.
      */
     public void setEndPtsTime(Float EndPtsTime) {
         this.EndPtsTime = EndPtsTime;
     }
 
     /**
-     * Get  
-     * @return Confidence 
+     * Get Confidence of a recognized segment. Value range: 0-100. 
+     * @return Confidence Confidence of a recognized segment. Value range: 0-100.
      */
     public Float getConfidence() {
         return this.Confidence;
     }
 
     /**
-     * Set 
-     * @param Confidence 
+     * Set Confidence of a recognized segment. Value range: 0-100.
+     * @param Confidence Confidence of a recognized segment. Value range: 0-100.
      */
     public void setConfidence(Float Confidence) {
         this.Confidence = Confidence;

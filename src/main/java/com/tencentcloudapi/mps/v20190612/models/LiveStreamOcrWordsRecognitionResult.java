@@ -31,28 +31,28 @@ public class LiveStreamOcrWordsRecognitionResult extends AbstractModel {
     private String Word;
 
     /**
-    * Start PTS time of recognized segment in seconds.
+    * Start PTS time of a recognized segment, in seconds.
     */
     @SerializedName("StartPtsTime")
     @Expose
     private Float StartPtsTime;
 
     /**
-    * End PTS time of recognized segment in seconds.
+    * End PTS time of a recognized segment, in seconds.
     */
     @SerializedName("EndPtsTime")
     @Expose
     private Float EndPtsTime;
 
     /**
-    * Confidence of recognized segment. Value range: 0–100.
+    * Confidence of a recognized segment. Value range: 0-100.
     */
     @SerializedName("Confidence")
     @Expose
     private Float Confidence;
 
     /**
-    * Zone coordinates of recognition result. The array contains four elements: [x1,y1,x2,y2], i.e., the horizontal and vertical coordinates of the top-left and bottom-right corners.
+    * Zone coordinates of the recognition result. An array contains four elements: [x1, y1, x2, y2], representing the horizontal and vertical coordinates of the top-left and bottom-right corners, respectively.
     */
     @SerializedName("AreaCoords")
     @Expose
@@ -75,64 +75,64 @@ public class LiveStreamOcrWordsRecognitionResult extends AbstractModel {
     }
 
     /**
-     * Get Start PTS time of recognized segment in seconds. 
-     * @return StartPtsTime Start PTS time of recognized segment in seconds.
+     * Get Start PTS time of a recognized segment, in seconds. 
+     * @return StartPtsTime Start PTS time of a recognized segment, in seconds.
      */
     public Float getStartPtsTime() {
         return this.StartPtsTime;
     }
 
     /**
-     * Set Start PTS time of recognized segment in seconds.
-     * @param StartPtsTime Start PTS time of recognized segment in seconds.
+     * Set Start PTS time of a recognized segment, in seconds.
+     * @param StartPtsTime Start PTS time of a recognized segment, in seconds.
      */
     public void setStartPtsTime(Float StartPtsTime) {
         this.StartPtsTime = StartPtsTime;
     }
 
     /**
-     * Get End PTS time of recognized segment in seconds. 
-     * @return EndPtsTime End PTS time of recognized segment in seconds.
+     * Get End PTS time of a recognized segment, in seconds. 
+     * @return EndPtsTime End PTS time of a recognized segment, in seconds.
      */
     public Float getEndPtsTime() {
         return this.EndPtsTime;
     }
 
     /**
-     * Set End PTS time of recognized segment in seconds.
-     * @param EndPtsTime End PTS time of recognized segment in seconds.
+     * Set End PTS time of a recognized segment, in seconds.
+     * @param EndPtsTime End PTS time of a recognized segment, in seconds.
      */
     public void setEndPtsTime(Float EndPtsTime) {
         this.EndPtsTime = EndPtsTime;
     }
 
     /**
-     * Get Confidence of recognized segment. Value range: 0–100. 
-     * @return Confidence Confidence of recognized segment. Value range: 0–100.
+     * Get Confidence of a recognized segment. Value range: 0-100. 
+     * @return Confidence Confidence of a recognized segment. Value range: 0-100.
      */
     public Float getConfidence() {
         return this.Confidence;
     }
 
     /**
-     * Set Confidence of recognized segment. Value range: 0–100.
-     * @param Confidence Confidence of recognized segment. Value range: 0–100.
+     * Set Confidence of a recognized segment. Value range: 0-100.
+     * @param Confidence Confidence of a recognized segment. Value range: 0-100.
      */
     public void setConfidence(Float Confidence) {
         this.Confidence = Confidence;
     }
 
     /**
-     * Get Zone coordinates of recognition result. The array contains four elements: [x1,y1,x2,y2], i.e., the horizontal and vertical coordinates of the top-left and bottom-right corners. 
-     * @return AreaCoords Zone coordinates of recognition result. The array contains four elements: [x1,y1,x2,y2], i.e., the horizontal and vertical coordinates of the top-left and bottom-right corners.
+     * Get Zone coordinates of the recognition result. An array contains four elements: [x1, y1, x2, y2], representing the horizontal and vertical coordinates of the top-left and bottom-right corners, respectively. 
+     * @return AreaCoords Zone coordinates of the recognition result. An array contains four elements: [x1, y1, x2, y2], representing the horizontal and vertical coordinates of the top-left and bottom-right corners, respectively.
      */
     public Long [] getAreaCoords() {
         return this.AreaCoords;
     }
 
     /**
-     * Set Zone coordinates of recognition result. The array contains four elements: [x1,y1,x2,y2], i.e., the horizontal and vertical coordinates of the top-left and bottom-right corners.
-     * @param AreaCoords Zone coordinates of recognition result. The array contains four elements: [x1,y1,x2,y2], i.e., the horizontal and vertical coordinates of the top-left and bottom-right corners.
+     * Set Zone coordinates of the recognition result. An array contains four elements: [x1, y1, x2, y2], representing the horizontal and vertical coordinates of the top-left and bottom-right corners, respectively.
+     * @param AreaCoords Zone coordinates of the recognition result. An array contains four elements: [x1, y1, x2, y2], representing the horizontal and vertical coordinates of the top-left and bottom-right corners, respectively.
      */
     public void setAreaCoords(Long [] AreaCoords) {
         this.AreaCoords = AreaCoords;

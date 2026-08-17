@@ -24,117 +24,102 @@ import java.util.HashMap;
 public class TranslateConfigureInfo extends AbstractModel {
 
     /**
-    * Switch of a full speech recognition task. Valid values:
-<li>ON: Enables an intelligent full speech recognition task;</li>
-<li>OFF: Disables an intelligent full speech recognition task.</li>
+    * Voice translation task switch, available values:
+<li>ON: Enable Intelligent Voice Translation task.</li>
+<li>OFF: Disables the Intelligent Voice Translation task.</li>
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-    * 
+    * Video source language.
     */
     @SerializedName("SourceLanguage")
     @Expose
     private String SourceLanguage;
 
     /**
-    * 
+    * Target language.
     */
     @SerializedName("DestinationLanguage")
     @Expose
     private String DestinationLanguage;
 
     /**
-    * Generated subtitle file format. Leaving it as an empty string means no subtitle file will be generated. Valid value:
-<li>vtt: Generate a WebVTT subtitle file.</li>
-
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("SubtitleFormat")
     @Expose
     private String SubtitleFormat;
 
     /**
-     * Get Switch of a full speech recognition task. Valid values:
-<li>ON: Enables an intelligent full speech recognition task;</li>
-<li>OFF: Disables an intelligent full speech recognition task.</li> 
-     * @return Switch Switch of a full speech recognition task. Valid values:
-<li>ON: Enables an intelligent full speech recognition task;</li>
-<li>OFF: Disables an intelligent full speech recognition task.</li>
+     * Get Voice translation task switch, available values:
+<li>ON: Enable Intelligent Voice Translation task.</li>
+<li>OFF: Disables the Intelligent Voice Translation task.</li> 
+     * @return Switch Voice translation task switch, available values:
+<li>ON: Enable Intelligent Voice Translation task.</li>
+<li>OFF: Disables the Intelligent Voice Translation task.</li>
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set Switch of a full speech recognition task. Valid values:
-<li>ON: Enables an intelligent full speech recognition task;</li>
-<li>OFF: Disables an intelligent full speech recognition task.</li>
-     * @param Switch Switch of a full speech recognition task. Valid values:
-<li>ON: Enables an intelligent full speech recognition task;</li>
-<li>OFF: Disables an intelligent full speech recognition task.</li>
+     * Set Voice translation task switch, available values:
+<li>ON: Enable Intelligent Voice Translation task.</li>
+<li>OFF: Disables the Intelligent Voice Translation task.</li>
+     * @param Switch Voice translation task switch, available values:
+<li>ON: Enable Intelligent Voice Translation task.</li>
+<li>OFF: Disables the Intelligent Voice Translation task.</li>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
     }
 
     /**
-     * Get  
-     * @return SourceLanguage 
+     * Get Video source language. 
+     * @return SourceLanguage Video source language.
      */
     public String getSourceLanguage() {
         return this.SourceLanguage;
     }
 
     /**
-     * Set 
-     * @param SourceLanguage 
+     * Set Video source language.
+     * @param SourceLanguage Video source language.
      */
     public void setSourceLanguage(String SourceLanguage) {
         this.SourceLanguage = SourceLanguage;
     }
 
     /**
-     * Get  
-     * @return DestinationLanguage 
+     * Get Target language. 
+     * @return DestinationLanguage Target language.
      */
     public String getDestinationLanguage() {
         return this.DestinationLanguage;
     }
 
     /**
-     * Set 
-     * @param DestinationLanguage 
+     * Set Target language.
+     * @param DestinationLanguage Target language.
      */
     public void setDestinationLanguage(String DestinationLanguage) {
         this.DestinationLanguage = DestinationLanguage;
     }
 
     /**
-     * Get Generated subtitle file format. Leaving it as an empty string means no subtitle file will be generated. Valid value:
-<li>vtt: Generate a WebVTT subtitle file.</li>
-
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return SubtitleFormat Generated subtitle file format. Leaving it as an empty string means no subtitle file will be generated. Valid value:
-<li>vtt: Generate a WebVTT subtitle file.</li>
-
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return SubtitleFormat 
      */
     public String getSubtitleFormat() {
         return this.SubtitleFormat;
     }
 
     /**
-     * Set Generated subtitle file format. Leaving it as an empty string means no subtitle file will be generated. Valid value:
-<li>vtt: Generate a WebVTT subtitle file.</li>
-
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param SubtitleFormat Generated subtitle file format. Leaving it as an empty string means no subtitle file will be generated. Valid value:
-<li>vtt: Generate a WebVTT subtitle file.</li>
-
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param SubtitleFormat 
      */
     public void setSubtitleFormat(String SubtitleFormat) {
         this.SubtitleFormat = SubtitleFormat;

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class TaskStatDataItem extends AbstractModel {
 
     /**
-    * The start time of the time interval where the data resides, using the ISO date format. for example, when the time granularity is day, 2018-12-01T00:00:00+08:00 indicates the interval from december 1, 2018 (inclusive) to december 2, 2018 (exclusive).
+    * Start time of the time interval where the data resides, using ISO date format. For example, when the time granularity is day, 2018-12-01T00:00:00+08:00 indicates the interval from December 1, 2018 (inclusive) to December III, 2018 (exclusive).
     */
     @SerializedName("Time")
     @Expose
@@ -45,16 +45,16 @@ public class TaskStatDataItem extends AbstractModel {
     private Long Usage;
 
     /**
-     * Get The start time of the time interval where the data resides, using the ISO date format. for example, when the time granularity is day, 2018-12-01T00:00:00+08:00 indicates the interval from december 1, 2018 (inclusive) to december 2, 2018 (exclusive). 
-     * @return Time The start time of the time interval where the data resides, using the ISO date format. for example, when the time granularity is day, 2018-12-01T00:00:00+08:00 indicates the interval from december 1, 2018 (inclusive) to december 2, 2018 (exclusive).
+     * Get Start time of the time interval where the data resides, using ISO date format. For example, when the time granularity is day, 2018-12-01T00:00:00+08:00 indicates the interval from December 1, 2018 (inclusive) to December III, 2018 (exclusive). 
+     * @return Time Start time of the time interval where the data resides, using ISO date format. For example, when the time granularity is day, 2018-12-01T00:00:00+08:00 indicates the interval from December 1, 2018 (inclusive) to December III, 2018 (exclusive).
      */
     public String getTime() {
         return this.Time;
     }
 
     /**
-     * Set The start time of the time interval where the data resides, using the ISO date format. for example, when the time granularity is day, 2018-12-01T00:00:00+08:00 indicates the interval from december 1, 2018 (inclusive) to december 2, 2018 (exclusive).
-     * @param Time The start time of the time interval where the data resides, using the ISO date format. for example, when the time granularity is day, 2018-12-01T00:00:00+08:00 indicates the interval from december 1, 2018 (inclusive) to december 2, 2018 (exclusive).
+     * Set Start time of the time interval where the data resides, using ISO date format. For example, when the time granularity is day, 2018-12-01T00:00:00+08:00 indicates the interval from December 1, 2018 (inclusive) to December III, 2018 (exclusive).
+     * @param Time Start time of the time interval where the data resides, using ISO date format. For example, when the time granularity is day, 2018-12-01T00:00:00+08:00 indicates the interval from December 1, 2018 (inclusive) to December III, 2018 (exclusive).
      */
     public void setTime(String Time) {
         this.Time = Time;

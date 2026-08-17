@@ -24,135 +24,135 @@ import java.util.HashMap;
 public class LiveStreamAiReviewResultItem extends AbstractModel {
 
     /**
-    * The type of moderation result. Valid values:
-<li>ImagePorn</li>
-<li>ImageTerrorism</li>
-<li>ImagePolitical</li>
-<li>VoicePorn</li>
+    * Review result type. Valid values:
+<li>ImagePorn: image porn detection.</li>
+<li>ImageTerrorism: image terrorism.</li>
+<li>ImagePolitical: image political sensitivity.</li>
+<li>VoicePorn: sound rule violation.</li>
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * Result of porn information detection in image, which is valid when `Type` is `ImagePorn`.
+    * Image porn detection result, valid when Type is ImagePorn.
     */
     @SerializedName("ImagePornResultSet")
     @Expose
     private LiveStreamAiReviewImagePornResult [] ImagePornResultSet;
 
     /**
-    * The result of detecting sensitive information in images, which is valid if `Type` is `ImageTerrorism`.
+    * Result of image terrorism detection, valid when Type is ImageTerrorism.
     */
     @SerializedName("ImageTerrorismResultSet")
     @Expose
     private LiveStreamAiReviewImageTerrorismResult [] ImageTerrorismResultSet;
 
     /**
-    * The result of detecting sensitive information in images, which is valid if `Type` is `ImagePolitical`.
+    * The result of image sensitivity, valid when Type is ImagePolitical.
     */
     @SerializedName("ImagePoliticalResultSet")
     @Expose
     private LiveStreamAiReviewImagePoliticalResult [] ImagePoliticalResultSet;
 
     /**
-    * The result for moderation of pornographic content in audio. This parameter is valid if `Type` is `VoicePorn`.
+    * Result of sound rule violation, valid when Type is VoicePorn.
     */
     @SerializedName("VoicePornResultSet")
     @Expose
     private LiveStreamAiReviewVoicePornResult [] VoicePornResultSet;
 
     /**
-     * Get The type of moderation result. Valid values:
-<li>ImagePorn</li>
-<li>ImageTerrorism</li>
-<li>ImagePolitical</li>
-<li>VoicePorn</li> 
-     * @return Type The type of moderation result. Valid values:
-<li>ImagePorn</li>
-<li>ImageTerrorism</li>
-<li>ImagePolitical</li>
-<li>VoicePorn</li>
+     * Get Review result type. Valid values:
+<li>ImagePorn: image porn detection.</li>
+<li>ImageTerrorism: image terrorism.</li>
+<li>ImagePolitical: image political sensitivity.</li>
+<li>VoicePorn: sound rule violation.</li> 
+     * @return Type Review result type. Valid values:
+<li>ImagePorn: image porn detection.</li>
+<li>ImageTerrorism: image terrorism.</li>
+<li>ImagePolitical: image political sensitivity.</li>
+<li>VoicePorn: sound rule violation.</li>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set The type of moderation result. Valid values:
-<li>ImagePorn</li>
-<li>ImageTerrorism</li>
-<li>ImagePolitical</li>
-<li>VoicePorn</li>
-     * @param Type The type of moderation result. Valid values:
-<li>ImagePorn</li>
-<li>ImageTerrorism</li>
-<li>ImagePolitical</li>
-<li>VoicePorn</li>
+     * Set Review result type. Valid values:
+<li>ImagePorn: image porn detection.</li>
+<li>ImageTerrorism: image terrorism.</li>
+<li>ImagePolitical: image political sensitivity.</li>
+<li>VoicePorn: sound rule violation.</li>
+     * @param Type Review result type. Valid values:
+<li>ImagePorn: image porn detection.</li>
+<li>ImageTerrorism: image terrorism.</li>
+<li>ImagePolitical: image political sensitivity.</li>
+<li>VoicePorn: sound rule violation.</li>
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get Result of porn information detection in image, which is valid when `Type` is `ImagePorn`. 
-     * @return ImagePornResultSet Result of porn information detection in image, which is valid when `Type` is `ImagePorn`.
+     * Get Image porn detection result, valid when Type is ImagePorn. 
+     * @return ImagePornResultSet Image porn detection result, valid when Type is ImagePorn.
      */
     public LiveStreamAiReviewImagePornResult [] getImagePornResultSet() {
         return this.ImagePornResultSet;
     }
 
     /**
-     * Set Result of porn information detection in image, which is valid when `Type` is `ImagePorn`.
-     * @param ImagePornResultSet Result of porn information detection in image, which is valid when `Type` is `ImagePorn`.
+     * Set Image porn detection result, valid when Type is ImagePorn.
+     * @param ImagePornResultSet Image porn detection result, valid when Type is ImagePorn.
      */
     public void setImagePornResultSet(LiveStreamAiReviewImagePornResult [] ImagePornResultSet) {
         this.ImagePornResultSet = ImagePornResultSet;
     }
 
     /**
-     * Get The result of detecting sensitive information in images, which is valid if `Type` is `ImageTerrorism`. 
-     * @return ImageTerrorismResultSet The result of detecting sensitive information in images, which is valid if `Type` is `ImageTerrorism`.
+     * Get Result of image terrorism detection, valid when Type is ImageTerrorism. 
+     * @return ImageTerrorismResultSet Result of image terrorism detection, valid when Type is ImageTerrorism.
      */
     public LiveStreamAiReviewImageTerrorismResult [] getImageTerrorismResultSet() {
         return this.ImageTerrorismResultSet;
     }
 
     /**
-     * Set The result of detecting sensitive information in images, which is valid if `Type` is `ImageTerrorism`.
-     * @param ImageTerrorismResultSet The result of detecting sensitive information in images, which is valid if `Type` is `ImageTerrorism`.
+     * Set Result of image terrorism detection, valid when Type is ImageTerrorism.
+     * @param ImageTerrorismResultSet Result of image terrorism detection, valid when Type is ImageTerrorism.
      */
     public void setImageTerrorismResultSet(LiveStreamAiReviewImageTerrorismResult [] ImageTerrorismResultSet) {
         this.ImageTerrorismResultSet = ImageTerrorismResultSet;
     }
 
     /**
-     * Get The result of detecting sensitive information in images, which is valid if `Type` is `ImagePolitical`. 
-     * @return ImagePoliticalResultSet The result of detecting sensitive information in images, which is valid if `Type` is `ImagePolitical`.
+     * Get The result of image sensitivity, valid when Type is ImagePolitical. 
+     * @return ImagePoliticalResultSet The result of image sensitivity, valid when Type is ImagePolitical.
      */
     public LiveStreamAiReviewImagePoliticalResult [] getImagePoliticalResultSet() {
         return this.ImagePoliticalResultSet;
     }
 
     /**
-     * Set The result of detecting sensitive information in images, which is valid if `Type` is `ImagePolitical`.
-     * @param ImagePoliticalResultSet The result of detecting sensitive information in images, which is valid if `Type` is `ImagePolitical`.
+     * Set The result of image sensitivity, valid when Type is ImagePolitical.
+     * @param ImagePoliticalResultSet The result of image sensitivity, valid when Type is ImagePolitical.
      */
     public void setImagePoliticalResultSet(LiveStreamAiReviewImagePoliticalResult [] ImagePoliticalResultSet) {
         this.ImagePoliticalResultSet = ImagePoliticalResultSet;
     }
 
     /**
-     * Get The result for moderation of pornographic content in audio. This parameter is valid if `Type` is `VoicePorn`. 
-     * @return VoicePornResultSet The result for moderation of pornographic content in audio. This parameter is valid if `Type` is `VoicePorn`.
+     * Get Result of sound rule violation, valid when Type is VoicePorn. 
+     * @return VoicePornResultSet Result of sound rule violation, valid when Type is VoicePorn.
      */
     public LiveStreamAiReviewVoicePornResult [] getVoicePornResultSet() {
         return this.VoicePornResultSet;
     }
 
     /**
-     * Set The result for moderation of pornographic content in audio. This parameter is valid if `Type` is `VoicePorn`.
-     * @param VoicePornResultSet The result for moderation of pornographic content in audio. This parameter is valid if `Type` is `VoicePorn`.
+     * Set Result of sound rule violation, valid when Type is VoicePorn.
+     * @param VoicePornResultSet Result of sound rule violation, valid when Type is VoicePorn.
      */
     public void setVoicePornResultSet(LiveStreamAiReviewVoicePornResult [] VoicePornResultSet) {
         this.VoicePornResultSet = VoicePornResultSet;

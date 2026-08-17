@@ -24,43 +24,23 @@ import java.util.HashMap;
 public class LiveStreamAiAnalysisResultInfo extends AbstractModel {
 
     /**
-    * Live streaming analysis subtask result. Valid values:
-<li>Live streaming video splitting.</li>
-<li>Live streaming highlight.</li>
-<li>Live streaming summary.</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("ResultSet")
     @Expose
     private LiveStreamAiAnalysisResultItem [] ResultSet;
 
     /**
-     * Get Live streaming analysis subtask result. Valid values:
-<li>Live streaming video splitting.</li>
-<li>Live streaming highlight.</li>
-<li>Live streaming summary.</li>
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ResultSet Live streaming analysis subtask result. Valid values:
-<li>Live streaming video splitting.</li>
-<li>Live streaming highlight.</li>
-<li>Live streaming summary.</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return ResultSet 
      */
     public LiveStreamAiAnalysisResultItem [] getResultSet() {
         return this.ResultSet;
     }
 
     /**
-     * Set Live streaming analysis subtask result. Valid values:
-<li>Live streaming video splitting.</li>
-<li>Live streaming highlight.</li>
-<li>Live streaming summary.</li>
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ResultSet Live streaming analysis subtask result. Valid values:
-<li>Live streaming video splitting.</li>
-<li>Live streaming highlight.</li>
-<li>Live streaming summary.</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param ResultSet 
      */
     public void setResultSet(LiveStreamAiAnalysisResultItem [] ResultSet) {
         this.ResultSet = ResultSet;

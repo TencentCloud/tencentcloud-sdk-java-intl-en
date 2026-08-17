@@ -59,14 +59,14 @@ public class LiveAiParagraphInfo extends AbstractModel {
     private Float EndTimeOffset;
 
     /**
-    * Starting time point of the live streaming segment in ISO date and time format.	
+    * The start time of a live streaming segment, in the ISO date format.	
     */
     @SerializedName("BeginTime")
     @Expose
     private String BeginTime;
 
     /**
-    * End time point of the live streaming segment in ISO date and time format.	
+    * The end time of a live streaming segment, in the ISO date format.	
     */
     @SerializedName("EndTime")
     @Expose
@@ -153,32 +153,32 @@ public class LiveAiParagraphInfo extends AbstractModel {
     }
 
     /**
-     * Get Starting time point of the live streaming segment in ISO date and time format.	 
-     * @return BeginTime Starting time point of the live streaming segment in ISO date and time format.	
+     * Get The start time of a live streaming segment, in the ISO date format.	 
+     * @return BeginTime The start time of a live streaming segment, in the ISO date format.	
      */
     public String getBeginTime() {
         return this.BeginTime;
     }
 
     /**
-     * Set Starting time point of the live streaming segment in ISO date and time format.	
-     * @param BeginTime Starting time point of the live streaming segment in ISO date and time format.	
+     * Set The start time of a live streaming segment, in the ISO date format.	
+     * @param BeginTime The start time of a live streaming segment, in the ISO date format.	
      */
     public void setBeginTime(String BeginTime) {
         this.BeginTime = BeginTime;
     }
 
     /**
-     * Get End time point of the live streaming segment in ISO date and time format.	 
-     * @return EndTime End time point of the live streaming segment in ISO date and time format.	
+     * Get The end time of a live streaming segment, in the ISO date format.	 
+     * @return EndTime The end time of a live streaming segment, in the ISO date format.	
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set End time point of the live streaming segment in ISO date and time format.	
-     * @param EndTime End time point of the live streaming segment in ISO date and time format.	
+     * Set The end time of a live streaming segment, in the ISO date format.	
+     * @param EndTime The end time of a live streaming segment, in the ISO date format.	
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;

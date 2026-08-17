@@ -24,152 +24,152 @@ import java.util.HashMap;
 public class AiReviewTerrorismTaskOutput extends AbstractModel {
 
     /**
-    * The confidence score for the detection of sensitive information. Value range: 0-100.
+    * Video sensitive content score, ranging from 0 to 100.
     */
     @SerializedName("Confidence")
     @Expose
     private Float Confidence;
 
     /**
-    * The suggestion for handling the sensitive information detected. Valid values:
-<li>pass</li>
-<li>review</li>
-<li>block</li>
+    * Result Suggestions for sensitive content, value ranges from...to...
+<li>pass.</li>
+<li>review.</li>
+<li>block.</li>
     */
     @SerializedName("Suggestion")
     @Expose
     private String Suggestion;
 
     /**
-    * The labels for the detected sensitive content. Valid values:
-<li>guns</li>
-<li>crowd</li>
-<li>police</li>
-<li>bloody</li>
-<li>banners (sensitive flags)</li>
-<li>militant</li>
-<li>explosion</li>
-<li>terrorists</li>
-<li>scenario (sensitive scenes) </li>
+    * Video sensitive content detection result tag, permissible range:
+<li>guns: weapons and firearms.</li>
+<li>crowd: crowd gathering.</li>
+<li>police: police force.</li>
+<li>bloody: graphic violence.</li>
+<li>banners: sensitive flags.</li>
+<li>militant: militant.</li>
+<li>explosion: explosions and fires.</li>
+<li>terrorists: sensitive persons.</li>
+<li>scenario: Sensitive content.</li>
     */
     @SerializedName("Label")
     @Expose
     private String Label;
 
     /**
-    * The video segments that contain sensitive information.
+    * List of video segments suspected of containing sensitive content.
     */
     @SerializedName("SegmentSet")
     @Expose
     private MediaContentReviewSegmentItem [] SegmentSet;
 
     /**
-     * Get The confidence score for the detection of sensitive information. Value range: 0-100. 
-     * @return Confidence The confidence score for the detection of sensitive information. Value range: 0-100.
+     * Get Video sensitive content score, ranging from 0 to 100. 
+     * @return Confidence Video sensitive content score, ranging from 0 to 100.
      */
     public Float getConfidence() {
         return this.Confidence;
     }
 
     /**
-     * Set The confidence score for the detection of sensitive information. Value range: 0-100.
-     * @param Confidence The confidence score for the detection of sensitive information. Value range: 0-100.
+     * Set Video sensitive content score, ranging from 0 to 100.
+     * @param Confidence Video sensitive content score, ranging from 0 to 100.
      */
     public void setConfidence(Float Confidence) {
         this.Confidence = Confidence;
     }
 
     /**
-     * Get The suggestion for handling the sensitive information detected. Valid values:
-<li>pass</li>
-<li>review</li>
-<li>block</li> 
-     * @return Suggestion The suggestion for handling the sensitive information detected. Valid values:
-<li>pass</li>
-<li>review</li>
-<li>block</li>
+     * Get Result Suggestions for sensitive content, value ranges from...to...
+<li>pass.</li>
+<li>review.</li>
+<li>block.</li> 
+     * @return Suggestion Result Suggestions for sensitive content, value ranges from...to...
+<li>pass.</li>
+<li>review.</li>
+<li>block.</li>
      */
     public String getSuggestion() {
         return this.Suggestion;
     }
 
     /**
-     * Set The suggestion for handling the sensitive information detected. Valid values:
-<li>pass</li>
-<li>review</li>
-<li>block</li>
-     * @param Suggestion The suggestion for handling the sensitive information detected. Valid values:
-<li>pass</li>
-<li>review</li>
-<li>block</li>
+     * Set Result Suggestions for sensitive content, value ranges from...to...
+<li>pass.</li>
+<li>review.</li>
+<li>block.</li>
+     * @param Suggestion Result Suggestions for sensitive content, value ranges from...to...
+<li>pass.</li>
+<li>review.</li>
+<li>block.</li>
      */
     public void setSuggestion(String Suggestion) {
         this.Suggestion = Suggestion;
     }
 
     /**
-     * Get The labels for the detected sensitive content. Valid values:
-<li>guns</li>
-<li>crowd</li>
-<li>police</li>
-<li>bloody</li>
-<li>banners (sensitive flags)</li>
-<li>militant</li>
-<li>explosion</li>
-<li>terrorists</li>
-<li>scenario (sensitive scenes) </li> 
-     * @return Label The labels for the detected sensitive content. Valid values:
-<li>guns</li>
-<li>crowd</li>
-<li>police</li>
-<li>bloody</li>
-<li>banners (sensitive flags)</li>
-<li>militant</li>
-<li>explosion</li>
-<li>terrorists</li>
-<li>scenario (sensitive scenes) </li>
+     * Get Video sensitive content detection result tag, permissible range:
+<li>guns: weapons and firearms.</li>
+<li>crowd: crowd gathering.</li>
+<li>police: police force.</li>
+<li>bloody: graphic violence.</li>
+<li>banners: sensitive flags.</li>
+<li>militant: militant.</li>
+<li>explosion: explosions and fires.</li>
+<li>terrorists: sensitive persons.</li>
+<li>scenario: Sensitive content.</li> 
+     * @return Label Video sensitive content detection result tag, permissible range:
+<li>guns: weapons and firearms.</li>
+<li>crowd: crowd gathering.</li>
+<li>police: police force.</li>
+<li>bloody: graphic violence.</li>
+<li>banners: sensitive flags.</li>
+<li>militant: militant.</li>
+<li>explosion: explosions and fires.</li>
+<li>terrorists: sensitive persons.</li>
+<li>scenario: Sensitive content.</li>
      */
     public String getLabel() {
         return this.Label;
     }
 
     /**
-     * Set The labels for the detected sensitive content. Valid values:
-<li>guns</li>
-<li>crowd</li>
-<li>police</li>
-<li>bloody</li>
-<li>banners (sensitive flags)</li>
-<li>militant</li>
-<li>explosion</li>
-<li>terrorists</li>
-<li>scenario (sensitive scenes) </li>
-     * @param Label The labels for the detected sensitive content. Valid values:
-<li>guns</li>
-<li>crowd</li>
-<li>police</li>
-<li>bloody</li>
-<li>banners (sensitive flags)</li>
-<li>militant</li>
-<li>explosion</li>
-<li>terrorists</li>
-<li>scenario (sensitive scenes) </li>
+     * Set Video sensitive content detection result tag, permissible range:
+<li>guns: weapons and firearms.</li>
+<li>crowd: crowd gathering.</li>
+<li>police: police force.</li>
+<li>bloody: graphic violence.</li>
+<li>banners: sensitive flags.</li>
+<li>militant: militant.</li>
+<li>explosion: explosions and fires.</li>
+<li>terrorists: sensitive persons.</li>
+<li>scenario: Sensitive content.</li>
+     * @param Label Video sensitive content detection result tag, permissible range:
+<li>guns: weapons and firearms.</li>
+<li>crowd: crowd gathering.</li>
+<li>police: police force.</li>
+<li>bloody: graphic violence.</li>
+<li>banners: sensitive flags.</li>
+<li>militant: militant.</li>
+<li>explosion: explosions and fires.</li>
+<li>terrorists: sensitive persons.</li>
+<li>scenario: Sensitive content.</li>
      */
     public void setLabel(String Label) {
         this.Label = Label;
     }
 
     /**
-     * Get The video segments that contain sensitive information. 
-     * @return SegmentSet The video segments that contain sensitive information.
+     * Get List of video segments suspected of containing sensitive content. 
+     * @return SegmentSet List of video segments suspected of containing sensitive content.
      */
     public MediaContentReviewSegmentItem [] getSegmentSet() {
         return this.SegmentSet;
     }
 
     /**
-     * Set The video segments that contain sensitive information.
-     * @param SegmentSet The video segments that contain sensitive information.
+     * Set List of video segments suspected of containing sensitive content.
+     * @param SegmentSet List of video segments suspected of containing sensitive content.
      */
     public void setSegmentSet(MediaContentReviewSegmentItem [] SegmentSet) {
         this.SegmentSet = SegmentSet;

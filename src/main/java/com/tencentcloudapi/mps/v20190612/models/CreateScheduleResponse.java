@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateScheduleResponse extends AbstractModel {
 
     /**
-    * The scheme ID.
+    * Orchestration ID.
     */
     @SerializedName("ScheduleId")
     @Expose
@@ -38,16 +38,16 @@ public class CreateScheduleResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get The scheme ID. 
-     * @return ScheduleId The scheme ID.
+     * Get Orchestration ID. 
+     * @return ScheduleId Orchestration ID.
      */
     public Long getScheduleId() {
         return this.ScheduleId;
     }
 
     /**
-     * Set The scheme ID.
-     * @param ScheduleId The scheme ID.
+     * Set Orchestration ID.
+     * @param ScheduleId Orchestration ID.
      */
     public void setScheduleId(Long ScheduleId) {
         this.ScheduleId = ScheduleId;

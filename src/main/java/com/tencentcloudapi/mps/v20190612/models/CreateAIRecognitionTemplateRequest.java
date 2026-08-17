@@ -24,164 +24,187 @@ import java.util.HashMap;
 public class CreateAIRecognitionTemplateRequest extends AbstractModel {
 
     /**
-    * Name of a video content recognition template. Length limit: 64 characters.
+    * Video content recognition template name, length limited to 64 characters.
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * Description of a video content recognition template. Length limit: 256 characters.
+    * Video Content Recognition template description, length limited to 256 characters.
     */
     @SerializedName("Comment")
     @Expose
     private String Comment;
 
     /**
-    * Face recognition control parameter.
+    * Face Recognition Control Parameter.
     */
     @SerializedName("FaceConfigure")
     @Expose
     private FaceConfigureInfo FaceConfigure;
 
     /**
-    * Full text recognition control parameter.
+    * Full Text Recognition Control Parameter.
     */
     @SerializedName("OcrFullTextConfigure")
     @Expose
     private OcrFullTextConfigureInfo OcrFullTextConfigure;
 
     /**
-    * Text keyword recognition control parameter.
+    * Text keyword recognition control.
     */
     @SerializedName("OcrWordsConfigure")
     @Expose
     private OcrWordsConfigureInfo OcrWordsConfigure;
 
     /**
-    * Full speech recognition control parameter.
+    * Speech Full-text Recognition Control Parameter.
     */
     @SerializedName("AsrFullTextConfigure")
     @Expose
     private AsrFullTextConfigureInfo AsrFullTextConfigure;
 
     /**
-    * Speech keyword recognition control parameter.
+    * Voice keyword recognition control parameters.
     */
     @SerializedName("AsrWordsConfigure")
     @Expose
     private AsrWordsConfigureInfo AsrWordsConfigure;
 
     /**
-     * Get Name of a video content recognition template. Length limit: 64 characters. 
-     * @return Name Name of a video content recognition template. Length limit: 64 characters.
+    * Voice translation control parameters.
+    */
+    @SerializedName("TranslateConfigure")
+    @Expose
+    private TranslateConfigureInfo TranslateConfigure;
+
+    /**
+     * Get Video content recognition template name, length limited to 64 characters. 
+     * @return Name Video content recognition template name, length limited to 64 characters.
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Name of a video content recognition template. Length limit: 64 characters.
-     * @param Name Name of a video content recognition template. Length limit: 64 characters.
+     * Set Video content recognition template name, length limited to 64 characters.
+     * @param Name Video content recognition template name, length limited to 64 characters.
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get Description of a video content recognition template. Length limit: 256 characters. 
-     * @return Comment Description of a video content recognition template. Length limit: 256 characters.
+     * Get Video Content Recognition template description, length limited to 256 characters. 
+     * @return Comment Video Content Recognition template description, length limited to 256 characters.
      */
     public String getComment() {
         return this.Comment;
     }
 
     /**
-     * Set Description of a video content recognition template. Length limit: 256 characters.
-     * @param Comment Description of a video content recognition template. Length limit: 256 characters.
+     * Set Video Content Recognition template description, length limited to 256 characters.
+     * @param Comment Video Content Recognition template description, length limited to 256 characters.
      */
     public void setComment(String Comment) {
         this.Comment = Comment;
     }
 
     /**
-     * Get Face recognition control parameter. 
-     * @return FaceConfigure Face recognition control parameter.
+     * Get Face Recognition Control Parameter. 
+     * @return FaceConfigure Face Recognition Control Parameter.
      */
     public FaceConfigureInfo getFaceConfigure() {
         return this.FaceConfigure;
     }
 
     /**
-     * Set Face recognition control parameter.
-     * @param FaceConfigure Face recognition control parameter.
+     * Set Face Recognition Control Parameter.
+     * @param FaceConfigure Face Recognition Control Parameter.
      */
     public void setFaceConfigure(FaceConfigureInfo FaceConfigure) {
         this.FaceConfigure = FaceConfigure;
     }
 
     /**
-     * Get Full text recognition control parameter. 
-     * @return OcrFullTextConfigure Full text recognition control parameter.
+     * Get Full Text Recognition Control Parameter. 
+     * @return OcrFullTextConfigure Full Text Recognition Control Parameter.
      */
     public OcrFullTextConfigureInfo getOcrFullTextConfigure() {
         return this.OcrFullTextConfigure;
     }
 
     /**
-     * Set Full text recognition control parameter.
-     * @param OcrFullTextConfigure Full text recognition control parameter.
+     * Set Full Text Recognition Control Parameter.
+     * @param OcrFullTextConfigure Full Text Recognition Control Parameter.
      */
     public void setOcrFullTextConfigure(OcrFullTextConfigureInfo OcrFullTextConfigure) {
         this.OcrFullTextConfigure = OcrFullTextConfigure;
     }
 
     /**
-     * Get Text keyword recognition control parameter. 
-     * @return OcrWordsConfigure Text keyword recognition control parameter.
+     * Get Text keyword recognition control. 
+     * @return OcrWordsConfigure Text keyword recognition control.
      */
     public OcrWordsConfigureInfo getOcrWordsConfigure() {
         return this.OcrWordsConfigure;
     }
 
     /**
-     * Set Text keyword recognition control parameter.
-     * @param OcrWordsConfigure Text keyword recognition control parameter.
+     * Set Text keyword recognition control.
+     * @param OcrWordsConfigure Text keyword recognition control.
      */
     public void setOcrWordsConfigure(OcrWordsConfigureInfo OcrWordsConfigure) {
         this.OcrWordsConfigure = OcrWordsConfigure;
     }
 
     /**
-     * Get Full speech recognition control parameter. 
-     * @return AsrFullTextConfigure Full speech recognition control parameter.
+     * Get Speech Full-text Recognition Control Parameter. 
+     * @return AsrFullTextConfigure Speech Full-text Recognition Control Parameter.
      */
     public AsrFullTextConfigureInfo getAsrFullTextConfigure() {
         return this.AsrFullTextConfigure;
     }
 
     /**
-     * Set Full speech recognition control parameter.
-     * @param AsrFullTextConfigure Full speech recognition control parameter.
+     * Set Speech Full-text Recognition Control Parameter.
+     * @param AsrFullTextConfigure Speech Full-text Recognition Control Parameter.
      */
     public void setAsrFullTextConfigure(AsrFullTextConfigureInfo AsrFullTextConfigure) {
         this.AsrFullTextConfigure = AsrFullTextConfigure;
     }
 
     /**
-     * Get Speech keyword recognition control parameter. 
-     * @return AsrWordsConfigure Speech keyword recognition control parameter.
+     * Get Voice keyword recognition control parameters. 
+     * @return AsrWordsConfigure Voice keyword recognition control parameters.
      */
     public AsrWordsConfigureInfo getAsrWordsConfigure() {
         return this.AsrWordsConfigure;
     }
 
     /**
-     * Set Speech keyword recognition control parameter.
-     * @param AsrWordsConfigure Speech keyword recognition control parameter.
+     * Set Voice keyword recognition control parameters.
+     * @param AsrWordsConfigure Voice keyword recognition control parameters.
      */
     public void setAsrWordsConfigure(AsrWordsConfigureInfo AsrWordsConfigure) {
         this.AsrWordsConfigure = AsrWordsConfigure;
+    }
+
+    /**
+     * Get Voice translation control parameters. 
+     * @return TranslateConfigure Voice translation control parameters.
+     */
+    public TranslateConfigureInfo getTranslateConfigure() {
+        return this.TranslateConfigure;
+    }
+
+    /**
+     * Set Voice translation control parameters.
+     * @param TranslateConfigure Voice translation control parameters.
+     */
+    public void setTranslateConfigure(TranslateConfigureInfo TranslateConfigure) {
+        this.TranslateConfigure = TranslateConfigure;
     }
 
     public CreateAIRecognitionTemplateRequest() {
@@ -213,6 +236,9 @@ public class CreateAIRecognitionTemplateRequest extends AbstractModel {
         if (source.AsrWordsConfigure != null) {
             this.AsrWordsConfigure = new AsrWordsConfigureInfo(source.AsrWordsConfigure);
         }
+        if (source.TranslateConfigure != null) {
+            this.TranslateConfigure = new TranslateConfigureInfo(source.TranslateConfigure);
+        }
     }
 
 
@@ -227,6 +253,7 @@ public class CreateAIRecognitionTemplateRequest extends AbstractModel {
         this.setParamObj(map, prefix + "OcrWordsConfigure.", this.OcrWordsConfigure);
         this.setParamObj(map, prefix + "AsrFullTextConfigure.", this.AsrFullTextConfigure);
         this.setParamObj(map, prefix + "AsrWordsConfigure.", this.AsrWordsConfigure);
+        this.setParamObj(map, prefix + "TranslateConfigure.", this.TranslateConfigure);
 
     }
 }

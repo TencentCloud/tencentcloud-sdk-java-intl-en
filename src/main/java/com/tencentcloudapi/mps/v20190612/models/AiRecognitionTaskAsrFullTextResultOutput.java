@@ -24,61 +24,61 @@ import java.util.HashMap;
 public class AiRecognitionTaskAsrFullTextResultOutput extends AbstractModel {
 
     /**
-    * List of full speech recognition segments.
+    * Full speech recognition segment list.
     */
     @SerializedName("SegmentSet")
     @Expose
     private AiRecognitionTaskAsrFullTextSegmentItem [] SegmentSet;
 
     /**
-    * Subtitles file address.
+    * Subtitle file path.
     */
     @SerializedName("SubtitlePath")
     @Expose
     private String SubtitlePath;
 
     /**
-    * Subtitles file storage location.
+    * Storage location of the subtitle file.
     */
     @SerializedName("OutputStorage")
     @Expose
     private TaskOutputStorage OutputStorage;
 
     /**
-     * Get List of full speech recognition segments. 
-     * @return SegmentSet List of full speech recognition segments.
+     * Get Full speech recognition segment list. 
+     * @return SegmentSet Full speech recognition segment list.
      */
     public AiRecognitionTaskAsrFullTextSegmentItem [] getSegmentSet() {
         return this.SegmentSet;
     }
 
     /**
-     * Set List of full speech recognition segments.
-     * @param SegmentSet List of full speech recognition segments.
+     * Set Full speech recognition segment list.
+     * @param SegmentSet Full speech recognition segment list.
      */
     public void setSegmentSet(AiRecognitionTaskAsrFullTextSegmentItem [] SegmentSet) {
         this.SegmentSet = SegmentSet;
     }
 
     /**
-     * Get Subtitles file address. 
-     * @return SubtitlePath Subtitles file address.
+     * Get Subtitle file path. 
+     * @return SubtitlePath Subtitle file path.
      */
     public String getSubtitlePath() {
         return this.SubtitlePath;
     }
 
     /**
-     * Set Subtitles file address.
-     * @param SubtitlePath Subtitles file address.
+     * Set Subtitle file path.
+     * @param SubtitlePath Subtitle file path.
      */
     public void setSubtitlePath(String SubtitlePath) {
         this.SubtitlePath = SubtitlePath;
     }
 
     /**
-     * Get Subtitles file storage location. 
-     * @return OutputStorage Subtitles file storage location.
+     * Get Storage location of the subtitle file. 
+     * @return OutputStorage Storage location of the subtitle file.
      * @deprecated
      */
     @Deprecated
@@ -87,8 +87,8 @@ public class AiRecognitionTaskAsrFullTextResultOutput extends AbstractModel {
     }
 
     /**
-     * Set Subtitles file storage location.
-     * @param OutputStorage Subtitles file storage location.
+     * Set Storage location of the subtitle file.
+     * @param OutputStorage Storage location of the subtitle file.
      * @deprecated
      */
     @Deprecated

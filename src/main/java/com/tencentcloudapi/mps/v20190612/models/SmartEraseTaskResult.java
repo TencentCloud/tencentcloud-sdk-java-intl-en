@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class SmartEraseTaskResult extends AbstractModel {
 
     /**
-    * Task status, including PROCESSING, SUCCESS, and FAIL.
+    * Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
     */
     @SerializedName("Status")
     @Expose
@@ -45,53 +45,51 @@ public class SmartEraseTaskResult extends AbstractModel {
     private String Message;
 
     /**
-    * Input of the smart erasure task.
-Note: This field may return null, indicating that no valid value can be obtained.
+    * 
     */
     @SerializedName("Input")
     @Expose
     private SmartEraseTaskInput Input;
 
     /**
-    * Output of the smart erasure task.
-Note: This field may return null, indicating that no valid value can be obtained.
+    * 
     */
     @SerializedName("Output")
     @Expose
     private AiAnalysisTaskDelLogoOutput Output;
 
     /**
-    * Task progress.		
+    * Task progress.	
     */
     @SerializedName("Progress")
     @Expose
     private Long Progress;
 
     /**
-    * Task execution start time in ISO datetime format.
+    * Starting time of task execution, in ISO date and time format.
     */
     @SerializedName("BeginProcessTime")
     @Expose
     private String BeginProcessTime;
 
     /**
-    * Task execution completion time in ISO datetime format.
+    * Task completion time, in ISO date and time format.
     */
     @SerializedName("FinishTime")
     @Expose
     private String FinishTime;
 
     /**
-     * Get Task status, including PROCESSING, SUCCESS, and FAIL. 
-     * @return Status Task status, including PROCESSING, SUCCESS, and FAIL.
+     * Get Task status. Valid values are PROCESSING, SUCCESS, and FAIL. 
+     * @return Status Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Task status, including PROCESSING, SUCCESS, and FAIL.
-     * @param Status Task status, including PROCESSING, SUCCESS, and FAIL.
+     * Set Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
+     * @param Status Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
      */
     public void setStatus(String Status) {
         this.Status = Status;
@@ -130,88 +128,80 @@ Note: This field may return null, indicating that no valid value can be obtained
     }
 
     /**
-     * Get Input of the smart erasure task.
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return Input Input of the smart erasure task.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get  
+     * @return Input 
      */
     public SmartEraseTaskInput getInput() {
         return this.Input;
     }
 
     /**
-     * Set Input of the smart erasure task.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param Input Input of the smart erasure task.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set 
+     * @param Input 
      */
     public void setInput(SmartEraseTaskInput Input) {
         this.Input = Input;
     }
 
     /**
-     * Get Output of the smart erasure task.
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return Output Output of the smart erasure task.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get  
+     * @return Output 
      */
     public AiAnalysisTaskDelLogoOutput getOutput() {
         return this.Output;
     }
 
     /**
-     * Set Output of the smart erasure task.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param Output Output of the smart erasure task.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set 
+     * @param Output 
      */
     public void setOutput(AiAnalysisTaskDelLogoOutput Output) {
         this.Output = Output;
     }
 
     /**
-     * Get Task progress.		 
-     * @return Progress Task progress.		
+     * Get Task progress.	 
+     * @return Progress Task progress.	
      */
     public Long getProgress() {
         return this.Progress;
     }
 
     /**
-     * Set Task progress.		
-     * @param Progress Task progress.		
+     * Set Task progress.	
+     * @param Progress Task progress.	
      */
     public void setProgress(Long Progress) {
         this.Progress = Progress;
     }
 
     /**
-     * Get Task execution start time in ISO datetime format. 
-     * @return BeginProcessTime Task execution start time in ISO datetime format.
+     * Get Starting time of task execution, in ISO date and time format. 
+     * @return BeginProcessTime Starting time of task execution, in ISO date and time format.
      */
     public String getBeginProcessTime() {
         return this.BeginProcessTime;
     }
 
     /**
-     * Set Task execution start time in ISO datetime format.
-     * @param BeginProcessTime Task execution start time in ISO datetime format.
+     * Set Starting time of task execution, in ISO date and time format.
+     * @param BeginProcessTime Starting time of task execution, in ISO date and time format.
      */
     public void setBeginProcessTime(String BeginProcessTime) {
         this.BeginProcessTime = BeginProcessTime;
     }
 
     /**
-     * Get Task execution completion time in ISO datetime format. 
-     * @return FinishTime Task execution completion time in ISO datetime format.
+     * Get Task completion time, in ISO date and time format. 
+     * @return FinishTime Task completion time, in ISO date and time format.
      */
     public String getFinishTime() {
         return this.FinishTime;
     }
 
     /**
-     * Set Task execution completion time in ISO datetime format.
-     * @param FinishTime Task execution completion time in ISO datetime format.
+     * Set Task completion time, in ISO date and time format.
+     * @param FinishTime Task completion time, in ISO date and time format.
      */
     public void setFinishTime(String FinishTime) {
         this.FinishTime = FinishTime;

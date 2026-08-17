@@ -24,64 +24,87 @@ import java.util.HashMap;
 public class AsrFullTextConfigureInfo extends AbstractModel {
 
     /**
-    * Switch of a full speech recognition task. Valid values:
-<li>ON: Enables an intelligent full speech recognition task;</li>
-<li>OFF: Disables an intelligent full speech recognition task.</li>
+    * Voice full-text recognition task switch, available values:
+<li>ON: Enable intelligent voice full-text recognition task.</li>
+<li>OFF: Disables the intelligent voice full-text recognition task.</li>
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-    * Format of the generated subtitles file. If this parameter is left empty or an empty string is entered, no subtitles files will be generated. Valid value:
-<li>vtt: Generates a WebVTT subtitles file.</li>
+    * Generated subtitle file format. Leaving it as an empty string or not filling it in means no subtitle file will be generated. Available values:
+<li>vtt: Generate a WebVTT subtitle file.</li>
     */
     @SerializedName("SubtitleFormat")
     @Expose
     private String SubtitleFormat;
 
     /**
-     * Get Switch of a full speech recognition task. Valid values:
-<li>ON: Enables an intelligent full speech recognition task;</li>
-<li>OFF: Disables an intelligent full speech recognition task.</li> 
-     * @return Switch Switch of a full speech recognition task. Valid values:
-<li>ON: Enables an intelligent full speech recognition task;</li>
-<li>OFF: Disables an intelligent full speech recognition task.</li>
+    * Video source language.
+    */
+    @SerializedName("SourceLanguage")
+    @Expose
+    private String SourceLanguage;
+
+    /**
+     * Get Voice full-text recognition task switch, available values:
+<li>ON: Enable intelligent voice full-text recognition task.</li>
+<li>OFF: Disables the intelligent voice full-text recognition task.</li> 
+     * @return Switch Voice full-text recognition task switch, available values:
+<li>ON: Enable intelligent voice full-text recognition task.</li>
+<li>OFF: Disables the intelligent voice full-text recognition task.</li>
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set Switch of a full speech recognition task. Valid values:
-<li>ON: Enables an intelligent full speech recognition task;</li>
-<li>OFF: Disables an intelligent full speech recognition task.</li>
-     * @param Switch Switch of a full speech recognition task. Valid values:
-<li>ON: Enables an intelligent full speech recognition task;</li>
-<li>OFF: Disables an intelligent full speech recognition task.</li>
+     * Set Voice full-text recognition task switch, available values:
+<li>ON: Enable intelligent voice full-text recognition task.</li>
+<li>OFF: Disables the intelligent voice full-text recognition task.</li>
+     * @param Switch Voice full-text recognition task switch, available values:
+<li>ON: Enable intelligent voice full-text recognition task.</li>
+<li>OFF: Disables the intelligent voice full-text recognition task.</li>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
     }
 
     /**
-     * Get Format of the generated subtitles file. If this parameter is left empty or an empty string is entered, no subtitles files will be generated. Valid value:
-<li>vtt: Generates a WebVTT subtitles file.</li> 
-     * @return SubtitleFormat Format of the generated subtitles file. If this parameter is left empty or an empty string is entered, no subtitles files will be generated. Valid value:
-<li>vtt: Generates a WebVTT subtitles file.</li>
+     * Get Generated subtitle file format. Leaving it as an empty string or not filling it in means no subtitle file will be generated. Available values:
+<li>vtt: Generate a WebVTT subtitle file.</li> 
+     * @return SubtitleFormat Generated subtitle file format. Leaving it as an empty string or not filling it in means no subtitle file will be generated. Available values:
+<li>vtt: Generate a WebVTT subtitle file.</li>
      */
     public String getSubtitleFormat() {
         return this.SubtitleFormat;
     }
 
     /**
-     * Set Format of the generated subtitles file. If this parameter is left empty or an empty string is entered, no subtitles files will be generated. Valid value:
-<li>vtt: Generates a WebVTT subtitles file.</li>
-     * @param SubtitleFormat Format of the generated subtitles file. If this parameter is left empty or an empty string is entered, no subtitles files will be generated. Valid value:
-<li>vtt: Generates a WebVTT subtitles file.</li>
+     * Set Generated subtitle file format. Leaving it as an empty string or not filling it in means no subtitle file will be generated. Available values:
+<li>vtt: Generate a WebVTT subtitle file.</li>
+     * @param SubtitleFormat Generated subtitle file format. Leaving it as an empty string or not filling it in means no subtitle file will be generated. Available values:
+<li>vtt: Generate a WebVTT subtitle file.</li>
      */
     public void setSubtitleFormat(String SubtitleFormat) {
         this.SubtitleFormat = SubtitleFormat;
+    }
+
+    /**
+     * Get Video source language. 
+     * @return SourceLanguage Video source language.
+     */
+    public String getSourceLanguage() {
+        return this.SourceLanguage;
+    }
+
+    /**
+     * Set Video source language.
+     * @param SourceLanguage Video source language.
+     */
+    public void setSourceLanguage(String SourceLanguage) {
+        this.SourceLanguage = SourceLanguage;
     }
 
     public AsrFullTextConfigureInfo() {
@@ -98,6 +121,9 @@ public class AsrFullTextConfigureInfo extends AbstractModel {
         if (source.SubtitleFormat != null) {
             this.SubtitleFormat = new String(source.SubtitleFormat);
         }
+        if (source.SourceLanguage != null) {
+            this.SourceLanguage = new String(source.SourceLanguage);
+        }
     }
 
 
@@ -107,6 +133,7 @@ public class AsrFullTextConfigureInfo extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Switch", this.Switch);
         this.setParamSimple(map, prefix + "SubtitleFormat", this.SubtitleFormat);
+        this.setParamSimple(map, prefix + "SourceLanguage", this.SourceLanguage);
 
     }
 }

@@ -24,57 +24,54 @@ import java.util.HashMap;
 public class ParseNotificationResponse extends AbstractModel {
 
     /**
-    * The event type. Valid values:
-<li>WorkflowTask</li>
-<li>EditMediaTask</li>
-<li>ScheduleTask (scheme)</li>
+    * Supported event types. Currently, the valid values include:
+<li>WorkflowTask: video workflow processing task.</li>
+<li>EditMediaTask: video editing task.</li>
+<li>ScheduleTask: Orchestration task.</li>
     */
     @SerializedName("EventType")
     @Expose
     private String EventType;
 
     /**
-    * The information of a video processing task. Information will be returned only if `EventType` is `WorkflowTask`.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("WorkflowTaskEvent")
     @Expose
     private WorkflowTask WorkflowTaskEvent;
 
     /**
-    * The information of a video editing task. Information will be returned only if `EventType` is `EditMediaTask`.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("EditMediaTaskEvent")
     @Expose
     private EditMediaTask EditMediaTaskEvent;
 
     /**
-    * The ID used for deduplication. If there was a request with the same ID in the last seven days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is left empty or an empty string is entered, no deduplication will be performed.
+    * An identifier for deduplication. If there has been a request with the same identifier within the past seven days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication is required.
     */
     @SerializedName("SessionId")
     @Expose
     private String SessionId;
 
     /**
-    * The source context which is used to pass through the user request information. The task flow status change callback will return the value of this field. It can contain up to 1,000 characters.
+    * Source context, which is used to pass through user request information. The callback for task flow status changes will return the value of this field. The maximum length is 1,000 characters.
     */
     @SerializedName("SessionContext")
     @Expose
     private String SessionContext;
 
     /**
-    * The information of a scheme. Information will be returned only if `EventType` is `ScheduleTask`.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("ScheduleTaskEvent")
     @Expose
     private ScheduleTask ScheduleTaskEvent;
 
     /**
-    * - The expiration time (Unix timestamp) of the notification's signature.
-- By default, notifications sent by MPS expire after 10 minutes. If the expiration time specified has elapsed, a notification will be considered invalid. This can prevent replay attacks.
-- The format of this parameter is a decimal Unix timestamp, i.e., the number of seconds that have elapsed since 00:00 (UTC/GMT time) on January 1, 1970.
+    * -Expiration time, event notification signature expiration UNIX timestamp.
+-The default expiration time for notifications from Media Processing Service (MPS) is 10 minutes. If the time specified by the Timestamp value in a message notification has expired, the notification can be deemed invalid, which helps prevent network replay attacks.
+-Timestamp is in decimal UNIX Timestamp format, which is the seconds elapsed since midnight (UTC/GMT) on January 1, 1970.
 
     */
     @SerializedName("Timestamp")
@@ -89,16 +86,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String Sign;
 
     /**
-    * Batch processing task information. this field has a value only when EventType is BatchTask.
-Note: This field may return null, indicating that no valid value can be obtained.
+    * 
     */
     @SerializedName("BatchTaskEvent")
     @Expose
     private BatchSubTaskResult BatchTaskEvent;
 
     /**
-    * Information about the digital watermark extraction task. This field has a value only when EventType is ExtractBlindWatermark.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("ExtractBlindWatermarkTask")
     @Expose
@@ -112,133 +107,121 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get The event type. Valid values:
-<li>WorkflowTask</li>
-<li>EditMediaTask</li>
-<li>ScheduleTask (scheme)</li> 
-     * @return EventType The event type. Valid values:
-<li>WorkflowTask</li>
-<li>EditMediaTask</li>
-<li>ScheduleTask (scheme)</li>
+     * Get Supported event types. Currently, the valid values include:
+<li>WorkflowTask: video workflow processing task.</li>
+<li>EditMediaTask: video editing task.</li>
+<li>ScheduleTask: Orchestration task.</li> 
+     * @return EventType Supported event types. Currently, the valid values include:
+<li>WorkflowTask: video workflow processing task.</li>
+<li>EditMediaTask: video editing task.</li>
+<li>ScheduleTask: Orchestration task.</li>
      */
     public String getEventType() {
         return this.EventType;
     }
 
     /**
-     * Set The event type. Valid values:
-<li>WorkflowTask</li>
-<li>EditMediaTask</li>
-<li>ScheduleTask (scheme)</li>
-     * @param EventType The event type. Valid values:
-<li>WorkflowTask</li>
-<li>EditMediaTask</li>
-<li>ScheduleTask (scheme)</li>
+     * Set Supported event types. Currently, the valid values include:
+<li>WorkflowTask: video workflow processing task.</li>
+<li>EditMediaTask: video editing task.</li>
+<li>ScheduleTask: Orchestration task.</li>
+     * @param EventType Supported event types. Currently, the valid values include:
+<li>WorkflowTask: video workflow processing task.</li>
+<li>EditMediaTask: video editing task.</li>
+<li>ScheduleTask: Orchestration task.</li>
      */
     public void setEventType(String EventType) {
         this.EventType = EventType;
     }
 
     /**
-     * Get The information of a video processing task. Information will be returned only if `EventType` is `WorkflowTask`.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return WorkflowTaskEvent The information of a video processing task. Information will be returned only if `EventType` is `WorkflowTask`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return WorkflowTaskEvent 
      */
     public WorkflowTask getWorkflowTaskEvent() {
         return this.WorkflowTaskEvent;
     }
 
     /**
-     * Set The information of a video processing task. Information will be returned only if `EventType` is `WorkflowTask`.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param WorkflowTaskEvent The information of a video processing task. Information will be returned only if `EventType` is `WorkflowTask`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param WorkflowTaskEvent 
      */
     public void setWorkflowTaskEvent(WorkflowTask WorkflowTaskEvent) {
         this.WorkflowTaskEvent = WorkflowTaskEvent;
     }
 
     /**
-     * Get The information of a video editing task. Information will be returned only if `EventType` is `EditMediaTask`.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return EditMediaTaskEvent The information of a video editing task. Information will be returned only if `EventType` is `EditMediaTask`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return EditMediaTaskEvent 
      */
     public EditMediaTask getEditMediaTaskEvent() {
         return this.EditMediaTaskEvent;
     }
 
     /**
-     * Set The information of a video editing task. Information will be returned only if `EventType` is `EditMediaTask`.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param EditMediaTaskEvent The information of a video editing task. Information will be returned only if `EventType` is `EditMediaTask`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param EditMediaTaskEvent 
      */
     public void setEditMediaTaskEvent(EditMediaTask EditMediaTaskEvent) {
         this.EditMediaTaskEvent = EditMediaTaskEvent;
     }
 
     /**
-     * Get The ID used for deduplication. If there was a request with the same ID in the last seven days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is left empty or an empty string is entered, no deduplication will be performed. 
-     * @return SessionId The ID used for deduplication. If there was a request with the same ID in the last seven days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is left empty or an empty string is entered, no deduplication will be performed.
+     * Get An identifier for deduplication. If there has been a request with the same identifier within the past seven days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication is required. 
+     * @return SessionId An identifier for deduplication. If there has been a request with the same identifier within the past seven days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication is required.
      */
     public String getSessionId() {
         return this.SessionId;
     }
 
     /**
-     * Set The ID used for deduplication. If there was a request with the same ID in the last seven days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is left empty or an empty string is entered, no deduplication will be performed.
-     * @param SessionId The ID used for deduplication. If there was a request with the same ID in the last seven days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is left empty or an empty string is entered, no deduplication will be performed.
+     * Set An identifier for deduplication. If there has been a request with the same identifier within the past seven days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication is required.
+     * @param SessionId An identifier for deduplication. If there has been a request with the same identifier within the past seven days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication is required.
      */
     public void setSessionId(String SessionId) {
         this.SessionId = SessionId;
     }
 
     /**
-     * Get The source context which is used to pass through the user request information. The task flow status change callback will return the value of this field. It can contain up to 1,000 characters. 
-     * @return SessionContext The source context which is used to pass through the user request information. The task flow status change callback will return the value of this field. It can contain up to 1,000 characters.
+     * Get Source context, which is used to pass through user request information. The callback for task flow status changes will return the value of this field. The maximum length is 1,000 characters. 
+     * @return SessionContext Source context, which is used to pass through user request information. The callback for task flow status changes will return the value of this field. The maximum length is 1,000 characters.
      */
     public String getSessionContext() {
         return this.SessionContext;
     }
 
     /**
-     * Set The source context which is used to pass through the user request information. The task flow status change callback will return the value of this field. It can contain up to 1,000 characters.
-     * @param SessionContext The source context which is used to pass through the user request information. The task flow status change callback will return the value of this field. It can contain up to 1,000 characters.
+     * Set Source context, which is used to pass through user request information. The callback for task flow status changes will return the value of this field. The maximum length is 1,000 characters.
+     * @param SessionContext Source context, which is used to pass through user request information. The callback for task flow status changes will return the value of this field. The maximum length is 1,000 characters.
      */
     public void setSessionContext(String SessionContext) {
         this.SessionContext = SessionContext;
     }
 
     /**
-     * Get The information of a scheme. Information will be returned only if `EventType` is `ScheduleTask`.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ScheduleTaskEvent The information of a scheme. Information will be returned only if `EventType` is `ScheduleTask`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return ScheduleTaskEvent 
      */
     public ScheduleTask getScheduleTaskEvent() {
         return this.ScheduleTaskEvent;
     }
 
     /**
-     * Set The information of a scheme. Information will be returned only if `EventType` is `ScheduleTask`.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ScheduleTaskEvent The information of a scheme. Information will be returned only if `EventType` is `ScheduleTask`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param ScheduleTaskEvent 
      */
     public void setScheduleTaskEvent(ScheduleTask ScheduleTaskEvent) {
         this.ScheduleTaskEvent = ScheduleTaskEvent;
     }
 
     /**
-     * Get - The expiration time (Unix timestamp) of the notification's signature.
-- By default, notifications sent by MPS expire after 10 minutes. If the expiration time specified has elapsed, a notification will be considered invalid. This can prevent replay attacks.
-- The format of this parameter is a decimal Unix timestamp, i.e., the number of seconds that have elapsed since 00:00 (UTC/GMT time) on January 1, 1970.
+     * Get -Expiration time, event notification signature expiration UNIX timestamp.
+-The default expiration time for notifications from Media Processing Service (MPS) is 10 minutes. If the time specified by the Timestamp value in a message notification has expired, the notification can be deemed invalid, which helps prevent network replay attacks.
+-Timestamp is in decimal UNIX Timestamp format, which is the seconds elapsed since midnight (UTC/GMT) on January 1, 1970.
  
-     * @return Timestamp - The expiration time (Unix timestamp) of the notification's signature.
-- By default, notifications sent by MPS expire after 10 minutes. If the expiration time specified has elapsed, a notification will be considered invalid. This can prevent replay attacks.
-- The format of this parameter is a decimal Unix timestamp, i.e., the number of seconds that have elapsed since 00:00 (UTC/GMT time) on January 1, 1970.
+     * @return Timestamp -Expiration time, event notification signature expiration UNIX timestamp.
+-The default expiration time for notifications from Media Processing Service (MPS) is 10 minutes. If the time specified by the Timestamp value in a message notification has expired, the notification can be deemed invalid, which helps prevent network replay attacks.
+-Timestamp is in decimal UNIX Timestamp format, which is the seconds elapsed since midnight (UTC/GMT) on January 1, 1970.
 
      */
     public Long getTimestamp() {
@@ -246,13 +229,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set - The expiration time (Unix timestamp) of the notification's signature.
-- By default, notifications sent by MPS expire after 10 minutes. If the expiration time specified has elapsed, a notification will be considered invalid. This can prevent replay attacks.
-- The format of this parameter is a decimal Unix timestamp, i.e., the number of seconds that have elapsed since 00:00 (UTC/GMT time) on January 1, 1970.
+     * Set -Expiration time, event notification signature expiration UNIX timestamp.
+-The default expiration time for notifications from Media Processing Service (MPS) is 10 minutes. If the time specified by the Timestamp value in a message notification has expired, the notification can be deemed invalid, which helps prevent network replay attacks.
+-Timestamp is in decimal UNIX Timestamp format, which is the seconds elapsed since midnight (UTC/GMT) on January 1, 1970.
 
-     * @param Timestamp - The expiration time (Unix timestamp) of the notification's signature.
-- By default, notifications sent by MPS expire after 10 minutes. If the expiration time specified has elapsed, a notification will be considered invalid. This can prevent replay attacks.
-- The format of this parameter is a decimal Unix timestamp, i.e., the number of seconds that have elapsed since 00:00 (UTC/GMT time) on January 1, 1970.
+     * @param Timestamp -Expiration time, event notification signature expiration UNIX timestamp.
+-The default expiration time for notifications from Media Processing Service (MPS) is 10 minutes. If the time specified by the Timestamp value in a message notification has expired, the notification can be deemed invalid, which helps prevent network replay attacks.
+-Timestamp is in decimal UNIX Timestamp format, which is the seconds elapsed since midnight (UTC/GMT) on January 1, 1970.
 
      */
     public void setTimestamp(Long Timestamp) {
@@ -276,40 +259,32 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Batch processing task information. this field has a value only when EventType is BatchTask.
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return BatchTaskEvent Batch processing task information. this field has a value only when EventType is BatchTask.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get  
+     * @return BatchTaskEvent 
      */
     public BatchSubTaskResult getBatchTaskEvent() {
         return this.BatchTaskEvent;
     }
 
     /**
-     * Set Batch processing task information. this field has a value only when EventType is BatchTask.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param BatchTaskEvent Batch processing task information. this field has a value only when EventType is BatchTask.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set 
+     * @param BatchTaskEvent 
      */
     public void setBatchTaskEvent(BatchSubTaskResult BatchTaskEvent) {
         this.BatchTaskEvent = BatchTaskEvent;
     }
 
     /**
-     * Get Information about the digital watermark extraction task. This field has a value only when EventType is ExtractBlindWatermark.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ExtractBlindWatermarkTask Information about the digital watermark extraction task. This field has a value only when EventType is ExtractBlindWatermark.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return ExtractBlindWatermarkTask 
      */
     public ExtractBlindWatermarkTask getExtractBlindWatermarkTask() {
         return this.ExtractBlindWatermarkTask;
     }
 
     /**
-     * Set Information about the digital watermark extraction task. This field has a value only when EventType is ExtractBlindWatermark.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ExtractBlindWatermarkTask Information about the digital watermark extraction task. This field has a value only when EventType is ExtractBlindWatermark.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param ExtractBlindWatermarkTask 
      */
     public void setExtractBlindWatermarkTask(ExtractBlindWatermarkTask ExtractBlindWatermarkTask) {
         this.ExtractBlindWatermarkTask = ExtractBlindWatermarkTask;

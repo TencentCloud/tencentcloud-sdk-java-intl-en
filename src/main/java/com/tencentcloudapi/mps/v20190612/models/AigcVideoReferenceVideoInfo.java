@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class AigcVideoReferenceVideoInfo extends AbstractModel {
 
     /**
-    * Reference video URL, which must be accessible from the public network.
+    * Reference video url. Must be external network accessible.
 This can be used as a feature reference video or a video for editing. The default type is video for editing. You can choose to keep the original sound of the video.
 The ReferType parameter specifies the reference video type: feature indicates feature reference video, and base indicates video for editing.
 If the reference video is a video for editing, the first and last frames cannot be defined.
@@ -48,11 +48,11 @@ If the reference video is a video for editing, the first and last frames cannot 
     private String KeepOriginalSound;
 
     /**
-     * Get Reference video URL, which must be accessible from the public network.
+     * Get Reference video url. Must be external network accessible.
 This can be used as a feature reference video or a video for editing. The default type is video for editing. You can choose to keep the original sound of the video.
 The ReferType parameter specifies the reference video type: feature indicates feature reference video, and base indicates video for editing.
 If the reference video is a video for editing, the first and last frames cannot be defined. 
-     * @return VideoUrl Reference video URL, which must be accessible from the public network.
+     * @return VideoUrl Reference video url. Must be external network accessible.
 This can be used as a feature reference video or a video for editing. The default type is video for editing. You can choose to keep the original sound of the video.
 The ReferType parameter specifies the reference video type: feature indicates feature reference video, and base indicates video for editing.
 If the reference video is a video for editing, the first and last frames cannot be defined.
@@ -62,11 +62,11 @@ If the reference video is a video for editing, the first and last frames cannot 
     }
 
     /**
-     * Set Reference video URL, which must be accessible from the public network.
+     * Set Reference video url. Must be external network accessible.
 This can be used as a feature reference video or a video for editing. The default type is video for editing. You can choose to keep the original sound of the video.
 The ReferType parameter specifies the reference video type: feature indicates feature reference video, and base indicates video for editing.
 If the reference video is a video for editing, the first and last frames cannot be defined.
-     * @param VideoUrl Reference video URL, which must be accessible from the public network.
+     * @param VideoUrl Reference video url. Must be external network accessible.
 This can be used as a feature reference video or a video for editing. The default type is video for editing. You can choose to keep the original sound of the video.
 The ReferType parameter specifies the reference video type: feature indicates feature reference video, and base indicates video for editing.
 If the reference video is a video for editing, the first and last frames cannot be defined.

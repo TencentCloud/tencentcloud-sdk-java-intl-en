@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class ParseLiveStreamProcessNotificationRequest extends AbstractModel {
 
     /**
-    * Live stream event notification obtained from CMQ.
+    * Event notification content for live streams obtained from CMQ.
     */
     @SerializedName("Content")
     @Expose
     private String Content;
 
     /**
-     * Get Live stream event notification obtained from CMQ. 
-     * @return Content Live stream event notification obtained from CMQ.
+     * Get Event notification content for live streams obtained from CMQ. 
+     * @return Content Event notification content for live streams obtained from CMQ.
      */
     public String getContent() {
         return this.Content;
     }
 
     /**
-     * Set Live stream event notification obtained from CMQ.
-     * @param Content Live stream event notification obtained from CMQ.
+     * Set Event notification content for live streams obtained from CMQ.
+     * @param Content Event notification content for live streams obtained from CMQ.
      */
     public void setContent(String Content) {
         this.Content = Content;

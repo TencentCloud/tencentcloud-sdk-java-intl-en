@@ -24,161 +24,161 @@ import java.util.HashMap;
 public class ImageTaskInfo extends AbstractModel {
 
     /**
-    * <p>TaskId of the image processing task.</p>
+    * 
     */
     @SerializedName("TaskId")
     @Expose
     private String TaskId;
 
     /**
-    * <p>Task status.</p><p>Enumeration values: </p><ul><li>FINISH: Task completion</li><li>PROCESSING: Task processing</li></ul>
+    * 
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * <p>Input file.</p>
+    * 
     */
     @SerializedName("Input")
     @Expose
     private String Input;
 
     /**
-    * <p>Creation time.</p><p>Parameter format: YYYY-MM-DDThh:mm:ssZ</p>
+    * 
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * <p>Processing start time.</p><p>Parameter format: YYYY-MM-DDThh:mm:ssZ</p>
+    * 
     */
     @SerializedName("BeginProcessTime")
     @Expose
     private String BeginProcessTime;
 
     /**
-    * <p>End time.</p><p>Parameter format: YYYY-MM-DDThh:mm:ssZ</p>
+    * 
     */
     @SerializedName("FinishTime")
     @Expose
     private String FinishTime;
 
     /**
-    * <p>Subtask failure identifier.</p>
+    * 
     */
     @SerializedName("SubTaskHasFailed")
     @Expose
     private Boolean SubTaskHasFailed;
 
     /**
-     * Get <p>TaskId of the image processing task.</p> 
-     * @return TaskId <p>TaskId of the image processing task.</p>
+     * Get  
+     * @return TaskId 
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set <p>TaskId of the image processing task.</p>
-     * @param TaskId <p>TaskId of the image processing task.</p>
+     * Set 
+     * @param TaskId 
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;
     }
 
     /**
-     * Get <p>Task status.</p><p>Enumeration values: </p><ul><li>FINISH: Task completion</li><li>PROCESSING: Task processing</li></ul> 
-     * @return Status <p>Task status.</p><p>Enumeration values: </p><ul><li>FINISH: Task completion</li><li>PROCESSING: Task processing</li></ul>
+     * Get  
+     * @return Status 
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set <p>Task status.</p><p>Enumeration values: </p><ul><li>FINISH: Task completion</li><li>PROCESSING: Task processing</li></ul>
-     * @param Status <p>Task status.</p><p>Enumeration values: </p><ul><li>FINISH: Task completion</li><li>PROCESSING: Task processing</li></ul>
+     * Set 
+     * @param Status 
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get <p>Input file.</p> 
-     * @return Input <p>Input file.</p>
+     * Get  
+     * @return Input 
      */
     public String getInput() {
         return this.Input;
     }
 
     /**
-     * Set <p>Input file.</p>
-     * @param Input <p>Input file.</p>
+     * Set 
+     * @param Input 
      */
     public void setInput(String Input) {
         this.Input = Input;
     }
 
     /**
-     * Get <p>Creation time.</p><p>Parameter format: YYYY-MM-DDThh:mm:ssZ</p> 
-     * @return CreateTime <p>Creation time.</p><p>Parameter format: YYYY-MM-DDThh:mm:ssZ</p>
+     * Get  
+     * @return CreateTime 
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set <p>Creation time.</p><p>Parameter format: YYYY-MM-DDThh:mm:ssZ</p>
-     * @param CreateTime <p>Creation time.</p><p>Parameter format: YYYY-MM-DDThh:mm:ssZ</p>
+     * Set 
+     * @param CreateTime 
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get <p>Processing start time.</p><p>Parameter format: YYYY-MM-DDThh:mm:ssZ</p> 
-     * @return BeginProcessTime <p>Processing start time.</p><p>Parameter format: YYYY-MM-DDThh:mm:ssZ</p>
+     * Get  
+     * @return BeginProcessTime 
      */
     public String getBeginProcessTime() {
         return this.BeginProcessTime;
     }
 
     /**
-     * Set <p>Processing start time.</p><p>Parameter format: YYYY-MM-DDThh:mm:ssZ</p>
-     * @param BeginProcessTime <p>Processing start time.</p><p>Parameter format: YYYY-MM-DDThh:mm:ssZ</p>
+     * Set 
+     * @param BeginProcessTime 
      */
     public void setBeginProcessTime(String BeginProcessTime) {
         this.BeginProcessTime = BeginProcessTime;
     }
 
     /**
-     * Get <p>End time.</p><p>Parameter format: YYYY-MM-DDThh:mm:ssZ</p> 
-     * @return FinishTime <p>End time.</p><p>Parameter format: YYYY-MM-DDThh:mm:ssZ</p>
+     * Get  
+     * @return FinishTime 
      */
     public String getFinishTime() {
         return this.FinishTime;
     }
 
     /**
-     * Set <p>End time.</p><p>Parameter format: YYYY-MM-DDThh:mm:ssZ</p>
-     * @param FinishTime <p>End time.</p><p>Parameter format: YYYY-MM-DDThh:mm:ssZ</p>
+     * Set 
+     * @param FinishTime 
      */
     public void setFinishTime(String FinishTime) {
         this.FinishTime = FinishTime;
     }
 
     /**
-     * Get <p>Subtask failure identifier.</p> 
-     * @return SubTaskHasFailed <p>Subtask failure identifier.</p>
+     * Get  
+     * @return SubTaskHasFailed 
      */
     public Boolean getSubTaskHasFailed() {
         return this.SubTaskHasFailed;
     }
 
     /**
-     * Set <p>Subtask failure identifier.</p>
-     * @param SubTaskHasFailed <p>Subtask failure identifier.</p>
+     * Set 
+     * @param SubTaskHasFailed 
      */
     public void setSubTaskHasFailed(Boolean SubTaskHasFailed) {
         this.SubTaskHasFailed = SubTaskHasFailed;

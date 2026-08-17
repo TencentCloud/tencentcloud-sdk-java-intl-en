@@ -24,8 +24,7 @@ import java.util.HashMap;
 public class SmartSubtitleTaskTransTextResultOutput extends AbstractModel {
 
     /**
-    * <p>List of segments for translation.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("SegmentSet")
     @Expose
@@ -60,20 +59,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private SubtitleTransResultItem [] SubtitleResults;
 
     /**
-     * Get <p>List of segments for translation.</p>
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return SegmentSet <p>List of segments for translation.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return SegmentSet 
      */
     public SmartSubtitleTaskTransTextSegmentItem [] getSegmentSet() {
         return this.SegmentSet;
     }
 
     /**
-     * Set <p>List of segments for translation.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param SegmentSet <p>List of segments for translation.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param SegmentSet 
      */
     public void setSegmentSet(SmartSubtitleTaskTransTextSegmentItem [] SegmentSet) {
         this.SegmentSet = SegmentSet;

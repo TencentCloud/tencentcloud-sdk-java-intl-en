@@ -52,24 +52,21 @@ public class AiAnalysisTaskDelLogoOutput extends AbstractModel {
     private String TranslateSubtitlePath;
 
     /**
-    * <p>Subtitle position after removal. <strong>Note</strong>: only applicable to subtitle extraction when return of subtitle position is enabled.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("SubtitlePos")
     @Expose
     private SubtitlePosition SubtitlePos;
 
     /**
-    * <p>File URL of the video after voice type cloning</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("VoiceClonedVideo")
     @Expose
     private String VoiceClonedVideo;
 
     /**
-    * <p>File address of the voice type clone annotation</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("VoiceClonedMarkFile")
     @Expose
@@ -175,60 +172,48 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get <p>Subtitle position after removal. <strong>Note</strong>: only applicable to subtitle extraction when return of subtitle position is enabled.</p>
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return SubtitlePos <p>Subtitle position after removal. <strong>Note</strong>: only applicable to subtitle extraction when return of subtitle position is enabled.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return SubtitlePos 
      */
     public SubtitlePosition getSubtitlePos() {
         return this.SubtitlePos;
     }
 
     /**
-     * Set <p>Subtitle position after removal. <strong>Note</strong>: only applicable to subtitle extraction when return of subtitle position is enabled.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param SubtitlePos <p>Subtitle position after removal. <strong>Note</strong>: only applicable to subtitle extraction when return of subtitle position is enabled.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param SubtitlePos 
      */
     public void setSubtitlePos(SubtitlePosition SubtitlePos) {
         this.SubtitlePos = SubtitlePos;
     }
 
     /**
-     * Get <p>File URL of the video after voice type cloning</p>
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return VoiceClonedVideo <p>File URL of the video after voice type cloning</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return VoiceClonedVideo 
      */
     public String getVoiceClonedVideo() {
         return this.VoiceClonedVideo;
     }
 
     /**
-     * Set <p>File URL of the video after voice type cloning</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param VoiceClonedVideo <p>File URL of the video after voice type cloning</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param VoiceClonedVideo 
      */
     public void setVoiceClonedVideo(String VoiceClonedVideo) {
         this.VoiceClonedVideo = VoiceClonedVideo;
     }
 
     /**
-     * Get <p>File address of the voice type clone annotation</p>
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return VoiceClonedMarkFile <p>File address of the voice type clone annotation</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return VoiceClonedMarkFile 
      */
     public String getVoiceClonedMarkFile() {
         return this.VoiceClonedMarkFile;
     }
 
     /**
-     * Set <p>File address of the voice type clone annotation</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param VoiceClonedMarkFile <p>File address of the voice type clone annotation</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param VoiceClonedMarkFile 
      */
     public void setVoiceClonedMarkFile(String VoiceClonedMarkFile) {
         this.VoiceClonedMarkFile = VoiceClonedMarkFile;

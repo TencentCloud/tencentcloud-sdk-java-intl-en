@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class AiAnalysisTaskDescriptionResult extends AbstractModel {
 
     /**
-    * Task status, including PROCESSING, SUCCESS, and FAIL.
+    * Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * Error code. `0`: Task successful. Other values: Task failed.
+    * Error code. 0: Task successful. Other values: Task failed.
     */
     @SerializedName("ErrCode")
     @Expose
@@ -52,40 +52,39 @@ public class AiAnalysisTaskDescriptionResult extends AbstractModel {
     private AiAnalysisTaskDescriptionInput Input;
 
     /**
-    * Intelligent description task output.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("Output")
     @Expose
     private AiAnalysisTaskDescriptionOutput Output;
 
     /**
-     * Get Task status, including PROCESSING, SUCCESS, and FAIL. 
-     * @return Status Task status, including PROCESSING, SUCCESS, and FAIL.
+     * Get Task status. Valid values are PROCESSING, SUCCESS, and FAIL. 
+     * @return Status Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Task status, including PROCESSING, SUCCESS, and FAIL.
-     * @param Status Task status, including PROCESSING, SUCCESS, and FAIL.
+     * Set Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
+     * @param Status Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get Error code. `0`: Task successful. Other values: Task failed. 
-     * @return ErrCode Error code. `0`: Task successful. Other values: Task failed.
+     * Get Error code. 0: Task successful. Other values: Task failed. 
+     * @return ErrCode Error code. 0: Task successful. Other values: Task failed.
      */
     public Long getErrCode() {
         return this.ErrCode;
     }
 
     /**
-     * Set Error code. `0`: Task successful. Other values: Task failed.
-     * @param ErrCode Error code. `0`: Task successful. Other values: Task failed.
+     * Set Error code. 0: Task successful. Other values: Task failed.
+     * @param ErrCode Error code. 0: Task successful. Other values: Task failed.
      */
     public void setErrCode(Long ErrCode) {
         this.ErrCode = ErrCode;
@@ -124,20 +123,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Intelligent description task output.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Output Intelligent description task output.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return Output 
      */
     public AiAnalysisTaskDescriptionOutput getOutput() {
         return this.Output;
     }
 
     /**
-     * Set Intelligent description task output.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Output Intelligent description task output.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param Output 
      */
     public void setOutput(AiAnalysisTaskDescriptionOutput Output) {
         this.Output = Output;

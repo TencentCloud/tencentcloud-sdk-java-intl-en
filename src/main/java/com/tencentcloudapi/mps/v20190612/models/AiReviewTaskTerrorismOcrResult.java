@@ -24,24 +24,21 @@ import java.util.HashMap;
 public class AiReviewTaskTerrorismOcrResult extends AbstractModel {
 
     /**
-    * Task status. Valid values: PROCESSING, SUCCESS, FAIL.
+    * Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * The error code. An empty string indicates the task is successful; any other value returned indicates the task failed. For details, see [Error Codes](https://intl.cloud.tencent.com/document/product/1041/40249).
+    * Error code. An empty string indicates that the task is successful, and other values indicate that the task has failed. For specific values, see [Error Codes] (https://www.tencentcloud.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
     */
     @SerializedName("ErrCodeExt")
     @Expose
     private String ErrCodeExt;
 
     /**
-    * Error code. 0: success; other values: failure.
-<li>40000: invalid input parameter. Please check it;</li>
-<li>60000: invalid source file (e.g., video data is corrupted). Please check whether the source file is normal;</li>
-<li>70000: internal service error. Please try again.</li>
+    * Error code. 0 indicates that the task is successful, and other values indicate that the task has failed. (This field is not recommended. Use the new error code field ErrCodeExt instead.)
     */
     @SerializedName("ErrCode")
     @Expose
@@ -55,75 +52,62 @@ public class AiReviewTaskTerrorismOcrResult extends AbstractModel {
     private String Message;
 
     /**
-    * The input parameter for OCR-based detection of terrorism content.
+    * Content review Ocr text sensitivity task input.
     */
     @SerializedName("Input")
     @Expose
     private AiReviewTerrorismOcrTaskInput Input;
 
     /**
-    * The output of OCR-based detection of terrorism content.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("Output")
     @Expose
     private AiReviewTerrorismOcrTaskOutput Output;
 
     /**
-     * Get Task status. Valid values: PROCESSING, SUCCESS, FAIL. 
-     * @return Status Task status. Valid values: PROCESSING, SUCCESS, FAIL.
+     * Get Task status. Valid values are PROCESSING, SUCCESS, and FAIL. 
+     * @return Status Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Task status. Valid values: PROCESSING, SUCCESS, FAIL.
-     * @param Status Task status. Valid values: PROCESSING, SUCCESS, FAIL.
+     * Set Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
+     * @param Status Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get The error code. An empty string indicates the task is successful; any other value returned indicates the task failed. For details, see [Error Codes](https://intl.cloud.tencent.com/document/product/1041/40249). 
-     * @return ErrCodeExt The error code. An empty string indicates the task is successful; any other value returned indicates the task failed. For details, see [Error Codes](https://intl.cloud.tencent.com/document/product/1041/40249).
+     * Get Error code. An empty string indicates that the task is successful, and other values indicate that the task has failed. For specific values, see [Error Codes] (https://www.tencentcloud.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81). 
+     * @return ErrCodeExt Error code. An empty string indicates that the task is successful, and other values indicate that the task has failed. For specific values, see [Error Codes] (https://www.tencentcloud.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
      */
     public String getErrCodeExt() {
         return this.ErrCodeExt;
     }
 
     /**
-     * Set The error code. An empty string indicates the task is successful; any other value returned indicates the task failed. For details, see [Error Codes](https://intl.cloud.tencent.com/document/product/1041/40249).
-     * @param ErrCodeExt The error code. An empty string indicates the task is successful; any other value returned indicates the task failed. For details, see [Error Codes](https://intl.cloud.tencent.com/document/product/1041/40249).
+     * Set Error code. An empty string indicates that the task is successful, and other values indicate that the task has failed. For specific values, see [Error Codes] (https://www.tencentcloud.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
+     * @param ErrCodeExt Error code. An empty string indicates that the task is successful, and other values indicate that the task has failed. For specific values, see [Error Codes] (https://www.tencentcloud.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
      */
     public void setErrCodeExt(String ErrCodeExt) {
         this.ErrCodeExt = ErrCodeExt;
     }
 
     /**
-     * Get Error code. 0: success; other values: failure.
-<li>40000: invalid input parameter. Please check it;</li>
-<li>60000: invalid source file (e.g., video data is corrupted). Please check whether the source file is normal;</li>
-<li>70000: internal service error. Please try again.</li> 
-     * @return ErrCode Error code. 0: success; other values: failure.
-<li>40000: invalid input parameter. Please check it;</li>
-<li>60000: invalid source file (e.g., video data is corrupted). Please check whether the source file is normal;</li>
-<li>70000: internal service error. Please try again.</li>
+     * Get Error code. 0 indicates that the task is successful, and other values indicate that the task has failed. (This field is not recommended. Use the new error code field ErrCodeExt instead.) 
+     * @return ErrCode Error code. 0 indicates that the task is successful, and other values indicate that the task has failed. (This field is not recommended. Use the new error code field ErrCodeExt instead.)
      */
     public Long getErrCode() {
         return this.ErrCode;
     }
 
     /**
-     * Set Error code. 0: success; other values: failure.
-<li>40000: invalid input parameter. Please check it;</li>
-<li>60000: invalid source file (e.g., video data is corrupted). Please check whether the source file is normal;</li>
-<li>70000: internal service error. Please try again.</li>
-     * @param ErrCode Error code. 0: success; other values: failure.
-<li>40000: invalid input parameter. Please check it;</li>
-<li>60000: invalid source file (e.g., video data is corrupted). Please check whether the source file is normal;</li>
-<li>70000: internal service error. Please try again.</li>
+     * Set Error code. 0 indicates that the task is successful, and other values indicate that the task has failed. (This field is not recommended. Use the new error code field ErrCodeExt instead.)
+     * @param ErrCode Error code. 0 indicates that the task is successful, and other values indicate that the task has failed. (This field is not recommended. Use the new error code field ErrCodeExt instead.)
      */
     public void setErrCode(Long ErrCode) {
         this.ErrCode = ErrCode;
@@ -146,36 +130,32 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Get The input parameter for OCR-based detection of terrorism content. 
-     * @return Input The input parameter for OCR-based detection of terrorism content.
+     * Get Content review Ocr text sensitivity task input. 
+     * @return Input Content review Ocr text sensitivity task input.
      */
     public AiReviewTerrorismOcrTaskInput getInput() {
         return this.Input;
     }
 
     /**
-     * Set The input parameter for OCR-based detection of terrorism content.
-     * @param Input The input parameter for OCR-based detection of terrorism content.
+     * Set Content review Ocr text sensitivity task input.
+     * @param Input Content review Ocr text sensitivity task input.
      */
     public void setInput(AiReviewTerrorismOcrTaskInput Input) {
         this.Input = Input;
     }
 
     /**
-     * Get The output of OCR-based detection of terrorism content.
-Note: This field may return `null`, indicating that no valid values can be obtained. 
-     * @return Output The output of OCR-based detection of terrorism content.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * Get  
+     * @return Output 
      */
     public AiReviewTerrorismOcrTaskOutput getOutput() {
         return this.Output;
     }
 
     /**
-     * Set The output of OCR-based detection of terrorism content.
-Note: This field may return `null`, indicating that no valid values can be obtained.
-     * @param Output The output of OCR-based detection of terrorism content.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * Set 
+     * @param Output 
      */
     public void setOutput(AiReviewTerrorismOcrTaskOutput Output) {
         this.Output = Output;

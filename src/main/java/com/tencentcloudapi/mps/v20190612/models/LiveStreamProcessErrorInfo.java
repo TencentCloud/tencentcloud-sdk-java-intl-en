@@ -24,9 +24,9 @@ import java.util.HashMap;
 public class LiveStreamProcessErrorInfo extends AbstractModel {
 
     /**
-    * Error code:
-<li>0: No error;</li>
-<li>If this parameter is not 0, an error has occurred. Please see the error message (`Message`).</li>
+    * Error code.
+<li>0 means no error.</li>
+<li>Non-zero means error. Refer to the error information in Message.</li>
     */
     @SerializedName("ErrCode")
     @Expose
@@ -40,24 +40,24 @@ public class LiveStreamProcessErrorInfo extends AbstractModel {
     private String Message;
 
     /**
-     * Get Error code:
-<li>0: No error;</li>
-<li>If this parameter is not 0, an error has occurred. Please see the error message (`Message`).</li> 
-     * @return ErrCode Error code:
-<li>0: No error;</li>
-<li>If this parameter is not 0, an error has occurred. Please see the error message (`Message`).</li>
+     * Get Error code.
+<li>0 means no error.</li>
+<li>Non-zero means error. Refer to the error information in Message.</li> 
+     * @return ErrCode Error code.
+<li>0 means no error.</li>
+<li>Non-zero means error. Refer to the error information in Message.</li>
      */
     public Long getErrCode() {
         return this.ErrCode;
     }
 
     /**
-     * Set Error code:
-<li>0: No error;</li>
-<li>If this parameter is not 0, an error has occurred. Please see the error message (`Message`).</li>
-     * @param ErrCode Error code:
-<li>0: No error;</li>
-<li>If this parameter is not 0, an error has occurred. Please see the error message (`Message`).</li>
+     * Set Error code.
+<li>0 means no error.</li>
+<li>Non-zero means error. Refer to the error information in Message.</li>
+     * @param ErrCode Error code.
+<li>0 means no error.</li>
+<li>Non-zero means error. Refer to the error information in Message.</li>
      */
     public void setErrCode(Long ErrCode) {
         this.ErrCode = ErrCode;

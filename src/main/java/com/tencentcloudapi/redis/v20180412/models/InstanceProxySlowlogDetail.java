@@ -24,164 +24,187 @@ import java.util.HashMap;
 public class InstanceProxySlowlogDetail extends AbstractModel {
 
     /**
-    * Slow query duration in milliseconds
+    * <p>Slow query duration. Measurement unit: ms.</p>
     */
     @SerializedName("Duration")
     @Expose
     private Long Duration;
 
     /**
-    * Client address
+    * <p>Client address.</p>
     */
     @SerializedName("Client")
     @Expose
     private String Client;
 
     /**
-    * Slow query command
+    * <p>Slow query command.</p>
     */
     @SerializedName("Command")
     @Expose
     private String Command;
 
     /**
-    * Detailed command line information of slow query
+    * <p>Slow query command line information.</p>
     */
     @SerializedName("CommandLine")
     @Expose
     private String CommandLine;
 
     /**
-    * Execution time
+    * <p>Execution time.</p>
     */
     @SerializedName("ExecuteTime")
     @Expose
     private String ExecuteTime;
 
     /**
-    * Duration of receiving client requests (ms).
+    * <p>Duration of receiving client requests (ms)</p>
     */
     @SerializedName("RecvClientEnd")
     @Expose
     private Long RecvClientEnd;
 
     /**
-    * Duration of sending client requests (ms).
+    * <p>Duration of sending client requests (ms)</p>
     */
     @SerializedName("SendClientEnd")
     @Expose
     private Long SendClientEnd;
 
     /**
-     * Get Slow query duration in milliseconds 
-     * @return Duration Slow query duration in milliseconds
+    * <p>Proxy node ID.</p>
+    */
+    @SerializedName("Node")
+    @Expose
+    private String Node;
+
+    /**
+     * Get <p>Slow query duration. Measurement unit: ms.</p> 
+     * @return Duration <p>Slow query duration. Measurement unit: ms.</p>
      */
     public Long getDuration() {
         return this.Duration;
     }
 
     /**
-     * Set Slow query duration in milliseconds
-     * @param Duration Slow query duration in milliseconds
+     * Set <p>Slow query duration. Measurement unit: ms.</p>
+     * @param Duration <p>Slow query duration. Measurement unit: ms.</p>
      */
     public void setDuration(Long Duration) {
         this.Duration = Duration;
     }
 
     /**
-     * Get Client address 
-     * @return Client Client address
+     * Get <p>Client address.</p> 
+     * @return Client <p>Client address.</p>
      */
     public String getClient() {
         return this.Client;
     }
 
     /**
-     * Set Client address
-     * @param Client Client address
+     * Set <p>Client address.</p>
+     * @param Client <p>Client address.</p>
      */
     public void setClient(String Client) {
         this.Client = Client;
     }
 
     /**
-     * Get Slow query command 
-     * @return Command Slow query command
+     * Get <p>Slow query command.</p> 
+     * @return Command <p>Slow query command.</p>
      */
     public String getCommand() {
         return this.Command;
     }
 
     /**
-     * Set Slow query command
-     * @param Command Slow query command
+     * Set <p>Slow query command.</p>
+     * @param Command <p>Slow query command.</p>
      */
     public void setCommand(String Command) {
         this.Command = Command;
     }
 
     /**
-     * Get Detailed command line information of slow query 
-     * @return CommandLine Detailed command line information of slow query
+     * Get <p>Slow query command line information.</p> 
+     * @return CommandLine <p>Slow query command line information.</p>
      */
     public String getCommandLine() {
         return this.CommandLine;
     }
 
     /**
-     * Set Detailed command line information of slow query
-     * @param CommandLine Detailed command line information of slow query
+     * Set <p>Slow query command line information.</p>
+     * @param CommandLine <p>Slow query command line information.</p>
      */
     public void setCommandLine(String CommandLine) {
         this.CommandLine = CommandLine;
     }
 
     /**
-     * Get Execution time 
-     * @return ExecuteTime Execution time
+     * Get <p>Execution time.</p> 
+     * @return ExecuteTime <p>Execution time.</p>
      */
     public String getExecuteTime() {
         return this.ExecuteTime;
     }
 
     /**
-     * Set Execution time
-     * @param ExecuteTime Execution time
+     * Set <p>Execution time.</p>
+     * @param ExecuteTime <p>Execution time.</p>
      */
     public void setExecuteTime(String ExecuteTime) {
         this.ExecuteTime = ExecuteTime;
     }
 
     /**
-     * Get Duration of receiving client requests (ms). 
-     * @return RecvClientEnd Duration of receiving client requests (ms).
+     * Get <p>Duration of receiving client requests (ms)</p> 
+     * @return RecvClientEnd <p>Duration of receiving client requests (ms)</p>
      */
     public Long getRecvClientEnd() {
         return this.RecvClientEnd;
     }
 
     /**
-     * Set Duration of receiving client requests (ms).
-     * @param RecvClientEnd Duration of receiving client requests (ms).
+     * Set <p>Duration of receiving client requests (ms)</p>
+     * @param RecvClientEnd <p>Duration of receiving client requests (ms)</p>
      */
     public void setRecvClientEnd(Long RecvClientEnd) {
         this.RecvClientEnd = RecvClientEnd;
     }
 
     /**
-     * Get Duration of sending client requests (ms). 
-     * @return SendClientEnd Duration of sending client requests (ms).
+     * Get <p>Duration of sending client requests (ms)</p> 
+     * @return SendClientEnd <p>Duration of sending client requests (ms)</p>
      */
     public Long getSendClientEnd() {
         return this.SendClientEnd;
     }
 
     /**
-     * Set Duration of sending client requests (ms).
-     * @param SendClientEnd Duration of sending client requests (ms).
+     * Set <p>Duration of sending client requests (ms)</p>
+     * @param SendClientEnd <p>Duration of sending client requests (ms)</p>
      */
     public void setSendClientEnd(Long SendClientEnd) {
         this.SendClientEnd = SendClientEnd;
+    }
+
+    /**
+     * Get <p>Proxy node ID.</p> 
+     * @return Node <p>Proxy node ID.</p>
+     */
+    public String getNode() {
+        return this.Node;
+    }
+
+    /**
+     * Set <p>Proxy node ID.</p>
+     * @param Node <p>Proxy node ID.</p>
+     */
+    public void setNode(String Node) {
+        this.Node = Node;
     }
 
     public InstanceProxySlowlogDetail() {
@@ -213,6 +236,9 @@ public class InstanceProxySlowlogDetail extends AbstractModel {
         if (source.SendClientEnd != null) {
             this.SendClientEnd = new Long(source.SendClientEnd);
         }
+        if (source.Node != null) {
+            this.Node = new String(source.Node);
+        }
     }
 
 
@@ -227,6 +253,7 @@ public class InstanceProxySlowlogDetail extends AbstractModel {
         this.setParamSimple(map, prefix + "ExecuteTime", this.ExecuteTime);
         this.setParamSimple(map, prefix + "RecvClientEnd", this.RecvClientEnd);
         this.setParamSimple(map, prefix + "SendClientEnd", this.SendClientEnd);
+        this.setParamSimple(map, prefix + "Node", this.Node);
 
     }
 }

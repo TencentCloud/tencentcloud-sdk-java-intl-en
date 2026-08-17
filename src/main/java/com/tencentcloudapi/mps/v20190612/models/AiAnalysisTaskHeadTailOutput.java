@@ -24,56 +24,46 @@ import java.util.HashMap;
 public class AiAnalysisTaskHeadTailOutput extends AbstractModel {
 
     /**
-    * Opening segment PTS.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("HeadTimeOffset")
     @Expose
     private Float HeadTimeOffset;
 
     /**
-    * Closing segment PTS.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("TailTimeOffset")
     @Expose
     private Float TailTimeOffset;
 
     /**
-     * Get Opening segment PTS.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return HeadTimeOffset Opening segment PTS.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return HeadTimeOffset 
      */
     public Float getHeadTimeOffset() {
         return this.HeadTimeOffset;
     }
 
     /**
-     * Set Opening segment PTS.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param HeadTimeOffset Opening segment PTS.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param HeadTimeOffset 
      */
     public void setHeadTimeOffset(Float HeadTimeOffset) {
         this.HeadTimeOffset = HeadTimeOffset;
     }
 
     /**
-     * Get Closing segment PTS.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return TailTimeOffset Closing segment PTS.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return TailTimeOffset 
      */
     public Float getTailTimeOffset() {
         return this.TailTimeOffset;
     }
 
     /**
-     * Set Closing segment PTS.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param TailTimeOffset Closing segment PTS.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param TailTimeOffset 
      */
     public void setTailTimeOffset(Float TailTimeOffset) {
         this.TailTimeOffset = TailTimeOffset;

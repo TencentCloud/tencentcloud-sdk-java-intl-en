@@ -24,81 +24,46 @@ import java.util.HashMap;
 public class AiQualityControlTaskInput extends AbstractModel {
 
     /**
-    * Media quality inspection template ID.
-You can directly use a preset template or customize a template in the console. The preset templates are as follows:
-- 10: Enable all quality inspection items.
-- 20: Only enable quality inspection items corresponding to format diagnosis.
-- 30: Only enable quality inspection items corresponding to no-reference scoring.
-- 40: Only enable quality inspection items corresponding to screen quality.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("Definition")
     @Expose
     private Long Definition;
 
     /**
-    * The channel extension parameter, which is a serialized JSON string.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("ChannelExtPara")
     @Expose
     private String ChannelExtPara;
 
     /**
-     * Get Media quality inspection template ID.
-You can directly use a preset template or customize a template in the console. The preset templates are as follows:
-- 10: Enable all quality inspection items.
-- 20: Only enable quality inspection items corresponding to format diagnosis.
-- 30: Only enable quality inspection items corresponding to no-reference scoring.
-- 40: Only enable quality inspection items corresponding to screen quality.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Definition Media quality inspection template ID.
-You can directly use a preset template or customize a template in the console. The preset templates are as follows:
-- 10: Enable all quality inspection items.
-- 20: Only enable quality inspection items corresponding to format diagnosis.
-- 30: Only enable quality inspection items corresponding to no-reference scoring.
-- 40: Only enable quality inspection items corresponding to screen quality.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return Definition 
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set Media quality inspection template ID.
-You can directly use a preset template or customize a template in the console. The preset templates are as follows:
-- 10: Enable all quality inspection items.
-- 20: Only enable quality inspection items corresponding to format diagnosis.
-- 30: Only enable quality inspection items corresponding to no-reference scoring.
-- 40: Only enable quality inspection items corresponding to screen quality.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Definition Media quality inspection template ID.
-You can directly use a preset template or customize a template in the console. The preset templates are as follows:
-- 10: Enable all quality inspection items.
-- 20: Only enable quality inspection items corresponding to format diagnosis.
-- 30: Only enable quality inspection items corresponding to no-reference scoring.
-- 40: Only enable quality inspection items corresponding to screen quality.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param Definition 
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;
     }
 
     /**
-     * Get The channel extension parameter, which is a serialized JSON string.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ChannelExtPara The channel extension parameter, which is a serialized JSON string.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return ChannelExtPara 
      */
     public String getChannelExtPara() {
         return this.ChannelExtPara;
     }
 
     /**
-     * Set The channel extension parameter, which is a serialized JSON string.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ChannelExtPara The channel extension parameter, which is a serialized JSON string.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param ChannelExtPara 
      */
     public void setChannelExtPara(String ChannelExtPara) {
         this.ChannelExtPara = ChannelExtPara;

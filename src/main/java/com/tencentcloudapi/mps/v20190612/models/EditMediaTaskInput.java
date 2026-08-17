@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class EditMediaTaskInput extends AbstractModel {
 
     /**
-    * Information of input video file.
+    * Input video file information.
     */
     @SerializedName("FileInfoSet")
     @Expose
     private EditMediaFileInfo [] FileInfoSet;
 
     /**
-     * Get Information of input video file. 
-     * @return FileInfoSet Information of input video file.
+     * Get Input video file information. 
+     * @return FileInfoSet Input video file information.
      */
     public EditMediaFileInfo [] getFileInfoSet() {
         return this.FileInfoSet;
     }
 
     /**
-     * Set Information of input video file.
-     * @param FileInfoSet Information of input video file.
+     * Set Input video file information.
+     * @param FileInfoSet Input video file information.
      */
     public void setFileInfoSet(EditMediaFileInfo [] FileInfoSet) {
         this.FileInfoSet = FileInfoSet;

@@ -24,28 +24,28 @@ import java.util.HashMap;
 public class DescribeBandwidthRangeResponse extends AbstractModel {
 
     /**
-    * Standard bandwidth, which is the bandwidth allocated by the system to each node when an instance is purchased.
+    * <p>Standard bandwidth. The bandwidth allocated by the system to each node when purchasing instances.</p>Measurement unit: MB/s.
     */
     @SerializedName("BaseBandwidth")
     @Expose
     private Long BaseBandwidth;
 
     /**
-    * The additional bandwidth of the instance. If the standard bandwidth does not meet your needs, you can increase the bandwidth on your own. <ul><li>If read-only replica is enabled, the total instance bandwidth = additional bandwidth * shard quantity + standard bandwidth * shard quantity * Max ([read-only replica quantity, 1]). The shard quantity in the standard architecture is 1. </li><li>If read-only replica is not enabled, the total instance bandwidth = additional bandwidth * shard quantity + standard bandwidth * shard quantity. The shard quantity in the standard architecture is 1.</li></ul>
+    * <p>Refers to the additional bandwidth of the instance. When the standard bandwidth cannot meet needs, users can manually add bandwidth.</p><ul><li>When read-only replicas are enabled, total instance bandwidth = additional bandwidth * shard quantity + standard bandwidth * shard quantity * Max ([number of read-only replicas, 1]). Shard quantity in standard architecture = 1.</li><li>When read-only replicas are not enabled, total instance bandwidth = additional bandwidth * shard quantity + standard bandwidth * shard quantity. Shard quantity in standard architecture = 1.</li></ul>Unit: MB/s.
     */
     @SerializedName("AddBandwidth")
     @Expose
     private Long AddBandwidth;
 
     /**
-    * The lower limit for additional bandwidth
+    * <p>Minimum set for additional bandwidth.</p> Unit: MB/s.
     */
     @SerializedName("MinAddBandwidth")
     @Expose
     private Long MinAddBandwidth;
 
     /**
-    * The upper limit for additional bandwidth
+    * <p>Set upper limit for additional bandwidth.</p> Measurement unit: MB/s.
     */
     @SerializedName("MaxAddBandwidth")
     @Expose
@@ -59,64 +59,64 @@ public class DescribeBandwidthRangeResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Standard bandwidth, which is the bandwidth allocated by the system to each node when an instance is purchased. 
-     * @return BaseBandwidth Standard bandwidth, which is the bandwidth allocated by the system to each node when an instance is purchased.
+     * Get <p>Standard bandwidth. The bandwidth allocated by the system to each node when purchasing instances.</p>Measurement unit: MB/s. 
+     * @return BaseBandwidth <p>Standard bandwidth. The bandwidth allocated by the system to each node when purchasing instances.</p>Measurement unit: MB/s.
      */
     public Long getBaseBandwidth() {
         return this.BaseBandwidth;
     }
 
     /**
-     * Set Standard bandwidth, which is the bandwidth allocated by the system to each node when an instance is purchased.
-     * @param BaseBandwidth Standard bandwidth, which is the bandwidth allocated by the system to each node when an instance is purchased.
+     * Set <p>Standard bandwidth. The bandwidth allocated by the system to each node when purchasing instances.</p>Measurement unit: MB/s.
+     * @param BaseBandwidth <p>Standard bandwidth. The bandwidth allocated by the system to each node when purchasing instances.</p>Measurement unit: MB/s.
      */
     public void setBaseBandwidth(Long BaseBandwidth) {
         this.BaseBandwidth = BaseBandwidth;
     }
 
     /**
-     * Get The additional bandwidth of the instance. If the standard bandwidth does not meet your needs, you can increase the bandwidth on your own. <ul><li>If read-only replica is enabled, the total instance bandwidth = additional bandwidth * shard quantity + standard bandwidth * shard quantity * Max ([read-only replica quantity, 1]). The shard quantity in the standard architecture is 1. </li><li>If read-only replica is not enabled, the total instance bandwidth = additional bandwidth * shard quantity + standard bandwidth * shard quantity. The shard quantity in the standard architecture is 1.</li></ul> 
-     * @return AddBandwidth The additional bandwidth of the instance. If the standard bandwidth does not meet your needs, you can increase the bandwidth on your own. <ul><li>If read-only replica is enabled, the total instance bandwidth = additional bandwidth * shard quantity + standard bandwidth * shard quantity * Max ([read-only replica quantity, 1]). The shard quantity in the standard architecture is 1. </li><li>If read-only replica is not enabled, the total instance bandwidth = additional bandwidth * shard quantity + standard bandwidth * shard quantity. The shard quantity in the standard architecture is 1.</li></ul>
+     * Get <p>Refers to the additional bandwidth of the instance. When the standard bandwidth cannot meet needs, users can manually add bandwidth.</p><ul><li>When read-only replicas are enabled, total instance bandwidth = additional bandwidth * shard quantity + standard bandwidth * shard quantity * Max ([number of read-only replicas, 1]). Shard quantity in standard architecture = 1.</li><li>When read-only replicas are not enabled, total instance bandwidth = additional bandwidth * shard quantity + standard bandwidth * shard quantity. Shard quantity in standard architecture = 1.</li></ul>Unit: MB/s. 
+     * @return AddBandwidth <p>Refers to the additional bandwidth of the instance. When the standard bandwidth cannot meet needs, users can manually add bandwidth.</p><ul><li>When read-only replicas are enabled, total instance bandwidth = additional bandwidth * shard quantity + standard bandwidth * shard quantity * Max ([number of read-only replicas, 1]). Shard quantity in standard architecture = 1.</li><li>When read-only replicas are not enabled, total instance bandwidth = additional bandwidth * shard quantity + standard bandwidth * shard quantity. Shard quantity in standard architecture = 1.</li></ul>Unit: MB/s.
      */
     public Long getAddBandwidth() {
         return this.AddBandwidth;
     }
 
     /**
-     * Set The additional bandwidth of the instance. If the standard bandwidth does not meet your needs, you can increase the bandwidth on your own. <ul><li>If read-only replica is enabled, the total instance bandwidth = additional bandwidth * shard quantity + standard bandwidth * shard quantity * Max ([read-only replica quantity, 1]). The shard quantity in the standard architecture is 1. </li><li>If read-only replica is not enabled, the total instance bandwidth = additional bandwidth * shard quantity + standard bandwidth * shard quantity. The shard quantity in the standard architecture is 1.</li></ul>
-     * @param AddBandwidth The additional bandwidth of the instance. If the standard bandwidth does not meet your needs, you can increase the bandwidth on your own. <ul><li>If read-only replica is enabled, the total instance bandwidth = additional bandwidth * shard quantity + standard bandwidth * shard quantity * Max ([read-only replica quantity, 1]). The shard quantity in the standard architecture is 1. </li><li>If read-only replica is not enabled, the total instance bandwidth = additional bandwidth * shard quantity + standard bandwidth * shard quantity. The shard quantity in the standard architecture is 1.</li></ul>
+     * Set <p>Refers to the additional bandwidth of the instance. When the standard bandwidth cannot meet needs, users can manually add bandwidth.</p><ul><li>When read-only replicas are enabled, total instance bandwidth = additional bandwidth * shard quantity + standard bandwidth * shard quantity * Max ([number of read-only replicas, 1]). Shard quantity in standard architecture = 1.</li><li>When read-only replicas are not enabled, total instance bandwidth = additional bandwidth * shard quantity + standard bandwidth * shard quantity. Shard quantity in standard architecture = 1.</li></ul>Unit: MB/s.
+     * @param AddBandwidth <p>Refers to the additional bandwidth of the instance. When the standard bandwidth cannot meet needs, users can manually add bandwidth.</p><ul><li>When read-only replicas are enabled, total instance bandwidth = additional bandwidth * shard quantity + standard bandwidth * shard quantity * Max ([number of read-only replicas, 1]). Shard quantity in standard architecture = 1.</li><li>When read-only replicas are not enabled, total instance bandwidth = additional bandwidth * shard quantity + standard bandwidth * shard quantity. Shard quantity in standard architecture = 1.</li></ul>Unit: MB/s.
      */
     public void setAddBandwidth(Long AddBandwidth) {
         this.AddBandwidth = AddBandwidth;
     }
 
     /**
-     * Get The lower limit for additional bandwidth 
-     * @return MinAddBandwidth The lower limit for additional bandwidth
+     * Get <p>Minimum set for additional bandwidth.</p> Unit: MB/s. 
+     * @return MinAddBandwidth <p>Minimum set for additional bandwidth.</p> Unit: MB/s.
      */
     public Long getMinAddBandwidth() {
         return this.MinAddBandwidth;
     }
 
     /**
-     * Set The lower limit for additional bandwidth
-     * @param MinAddBandwidth The lower limit for additional bandwidth
+     * Set <p>Minimum set for additional bandwidth.</p> Unit: MB/s.
+     * @param MinAddBandwidth <p>Minimum set for additional bandwidth.</p> Unit: MB/s.
      */
     public void setMinAddBandwidth(Long MinAddBandwidth) {
         this.MinAddBandwidth = MinAddBandwidth;
     }
 
     /**
-     * Get The upper limit for additional bandwidth 
-     * @return MaxAddBandwidth The upper limit for additional bandwidth
+     * Get <p>Set upper limit for additional bandwidth.</p> Measurement unit: MB/s. 
+     * @return MaxAddBandwidth <p>Set upper limit for additional bandwidth.</p> Measurement unit: MB/s.
      */
     public Long getMaxAddBandwidth() {
         return this.MaxAddBandwidth;
     }
 
     /**
-     * Set The upper limit for additional bandwidth
-     * @param MaxAddBandwidth The upper limit for additional bandwidth
+     * Set <p>Set upper limit for additional bandwidth.</p> Measurement unit: MB/s.
+     * @param MaxAddBandwidth <p>Set upper limit for additional bandwidth.</p> Measurement unit: MB/s.
      */
     public void setMaxAddBandwidth(Long MaxAddBandwidth) {
         this.MaxAddBandwidth = MaxAddBandwidth;

@@ -24,8 +24,7 @@ import java.util.HashMap;
 public class AiAnalysisTaskHorizontalToVerticalInput extends AbstractModel {
 
     /**
-    * <p>ID of the horizontal-to-vertical video transformation template.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("Definition")
     @Expose
@@ -39,20 +38,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String ExtendedParameter;
 
     /**
-     * Get <p>ID of the horizontal-to-vertical video transformation template.</p>
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Definition <p>ID of the horizontal-to-vertical video transformation template.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return Definition 
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set <p>ID of the horizontal-to-vertical video transformation template.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Definition <p>ID of the horizontal-to-vertical video transformation template.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param Definition 
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;

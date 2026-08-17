@@ -31,21 +31,21 @@ public class LiveStreamAsrFullTextRecognitionResult extends AbstractModel {
     private String Text;
 
     /**
-    * Start PTS time of recognized segment in seconds.
+    * Start PTS time of a recognized segment, in seconds.
     */
     @SerializedName("StartPtsTime")
     @Expose
     private Float StartPtsTime;
 
     /**
-    * End PTS time of recognized segment in seconds.
+    * End PTS time of a recognized segment, in seconds.
     */
     @SerializedName("EndPtsTime")
     @Expose
     private Float EndPtsTime;
 
     /**
-    * Confidence of recognized segment. Value range: 0–100.
+    * Confidence of a recognized segment. Value range: 0-100.
     */
     @SerializedName("Confidence")
     @Expose
@@ -73,7 +73,7 @@ public class LiveStreamAsrFullTextRecognitionResult extends AbstractModel {
     private Boolean SteadyState;
 
     /**
-    * User ID in the result of recognition via WebSocket and TRTC.Note: This field may return null, indicating that no valid value can be obtained.
+    * 
     */
     @SerializedName("UserId")
     @Expose
@@ -96,48 +96,48 @@ public class LiveStreamAsrFullTextRecognitionResult extends AbstractModel {
     }
 
     /**
-     * Get Start PTS time of recognized segment in seconds. 
-     * @return StartPtsTime Start PTS time of recognized segment in seconds.
+     * Get Start PTS time of a recognized segment, in seconds. 
+     * @return StartPtsTime Start PTS time of a recognized segment, in seconds.
      */
     public Float getStartPtsTime() {
         return this.StartPtsTime;
     }
 
     /**
-     * Set Start PTS time of recognized segment in seconds.
-     * @param StartPtsTime Start PTS time of recognized segment in seconds.
+     * Set Start PTS time of a recognized segment, in seconds.
+     * @param StartPtsTime Start PTS time of a recognized segment, in seconds.
      */
     public void setStartPtsTime(Float StartPtsTime) {
         this.StartPtsTime = StartPtsTime;
     }
 
     /**
-     * Get End PTS time of recognized segment in seconds. 
-     * @return EndPtsTime End PTS time of recognized segment in seconds.
+     * Get End PTS time of a recognized segment, in seconds. 
+     * @return EndPtsTime End PTS time of a recognized segment, in seconds.
      */
     public Float getEndPtsTime() {
         return this.EndPtsTime;
     }
 
     /**
-     * Set End PTS time of recognized segment in seconds.
-     * @param EndPtsTime End PTS time of recognized segment in seconds.
+     * Set End PTS time of a recognized segment, in seconds.
+     * @param EndPtsTime End PTS time of a recognized segment, in seconds.
      */
     public void setEndPtsTime(Float EndPtsTime) {
         this.EndPtsTime = EndPtsTime;
     }
 
     /**
-     * Get Confidence of recognized segment. Value range: 0–100. 
-     * @return Confidence Confidence of recognized segment. Value range: 0–100.
+     * Get Confidence of a recognized segment. Value range: 0-100. 
+     * @return Confidence Confidence of a recognized segment. Value range: 0-100.
      */
     public Float getConfidence() {
         return this.Confidence;
     }
 
     /**
-     * Set Confidence of recognized segment. Value range: 0–100.
-     * @param Confidence Confidence of recognized segment. Value range: 0–100.
+     * Set Confidence of a recognized segment. Value range: 0-100.
+     * @param Confidence Confidence of a recognized segment. Value range: 0-100.
      */
     public void setConfidence(Float Confidence) {
         this.Confidence = Confidence;
@@ -192,16 +192,16 @@ public class LiveStreamAsrFullTextRecognitionResult extends AbstractModel {
     }
 
     /**
-     * Get User ID in the result of recognition via WebSocket and TRTC.Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return UserId User ID in the result of recognition via WebSocket and TRTC.Note: This field may return null, indicating that no valid value can be obtained.
+     * Get  
+     * @return UserId 
      */
     public String getUserId() {
         return this.UserId;
     }
 
     /**
-     * Set User ID in the result of recognition via WebSocket and TRTC.Note: This field may return null, indicating that no valid value can be obtained.
-     * @param UserId User ID in the result of recognition via WebSocket and TRTC.Note: This field may return null, indicating that no valid value can be obtained.
+     * Set 
+     * @param UserId 
      */
     public void setUserId(String UserId) {
         this.UserId = UserId;

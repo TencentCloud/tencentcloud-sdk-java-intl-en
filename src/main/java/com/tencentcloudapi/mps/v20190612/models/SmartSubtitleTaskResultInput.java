@@ -31,8 +31,7 @@ public class SmartSubtitleTaskResultInput extends AbstractModel {
     private Long Definition;
 
     /**
-    * <p>Custom smart subtitle parameter. It takes effect when Definition is set to 0.<br>This parameter is used in highly customized scenarios. We recommend that you use Definition to specify smart subtitle parameters.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("RawParameter")
     @Expose
@@ -62,20 +61,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get <p>Custom smart subtitle parameter. It takes effect when Definition is set to 0.<br>This parameter is used in highly customized scenarios. We recommend that you use Definition to specify smart subtitle parameters.</p>
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return RawParameter <p>Custom smart subtitle parameter. It takes effect when Definition is set to 0.<br>This parameter is used in highly customized scenarios. We recommend that you use Definition to specify smart subtitle parameters.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return RawParameter 
      */
     public RawSmartSubtitleParameter getRawParameter() {
         return this.RawParameter;
     }
 
     /**
-     * Set <p>Custom smart subtitle parameter. It takes effect when Definition is set to 0.<br>This parameter is used in highly customized scenarios. We recommend that you use Definition to specify smart subtitle parameters.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param RawParameter <p>Custom smart subtitle parameter. It takes effect when Definition is set to 0.<br>This parameter is used in highly customized scenarios. We recommend that you use Definition to specify smart subtitle parameters.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param RawParameter 
      */
     public void setRawParameter(RawSmartSubtitleParameter RawParameter) {
         this.RawParameter = RawParameter;

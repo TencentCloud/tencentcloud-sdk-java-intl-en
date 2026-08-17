@@ -24,43 +24,43 @@ import java.util.HashMap;
 public class CreateScheduleRequest extends AbstractModel {
 
     /**
-    * The scheme name (max 128 characters). This name should be unique across your account.
+    * Orchestration name, up to 128 characters. The name is unique for the same user.
     */
     @SerializedName("ScheduleName")
     @Expose
     private String ScheduleName;
 
     /**
-    * The trigger of the scheme. If a file is uploaded to the specified bucket, the scheme will be triggered.
+    * Orchestrate the bound trigger rule. The orchestration is triggered when an uploaded video hits the rule for the object.
     */
     @SerializedName("Trigger")
     @Expose
     private WorkflowTrigger Trigger;
 
     /**
-    * The subtasks of the scheme.
+    * Orchestration task list.
     */
     @SerializedName("Activities")
     @Expose
     private Activity [] Activities;
 
     /**
-    * The bucket to save the output file. If you do not specify this parameter, the bucket in `Trigger` will be used.
+    * Media Processing Service output storage location. If left blank, it inherits the storage location from Trigger.
     */
     @SerializedName("OutputStorage")
     @Expose
     private TaskOutputStorage OutputStorage;
 
     /**
-    * The directory to save the media processing output file, which must start and end with `/`, such as `/movie/201907/`.
-If you do not specify this, the file will be saved to the trigger directory.
+    * Storage directory for the output file. It should start and end with a slash (/), such as `/movie/201907/`.
+If left empty, it is the same as the directory of the trigger file.
     */
     @SerializedName("OutputDir")
     @Expose
     private String OutputDir;
 
     /**
-    * The notification configuration. If you do not specify this parameter, notifications will not be sent.
+    * Event notification configuration of the task. If left blank, it indicates that no event notification will be obtained.
     */
     @SerializedName("TaskNotifyConfig")
     @Expose
@@ -74,100 +74,100 @@ If you do not specify this, the file will be saved to the trigger directory.
     private String ResourceId;
 
     /**
-     * Get The scheme name (max 128 characters). This name should be unique across your account. 
-     * @return ScheduleName The scheme name (max 128 characters). This name should be unique across your account.
+     * Get Orchestration name, up to 128 characters. The name is unique for the same user. 
+     * @return ScheduleName Orchestration name, up to 128 characters. The name is unique for the same user.
      */
     public String getScheduleName() {
         return this.ScheduleName;
     }
 
     /**
-     * Set The scheme name (max 128 characters). This name should be unique across your account.
-     * @param ScheduleName The scheme name (max 128 characters). This name should be unique across your account.
+     * Set Orchestration name, up to 128 characters. The name is unique for the same user.
+     * @param ScheduleName Orchestration name, up to 128 characters. The name is unique for the same user.
      */
     public void setScheduleName(String ScheduleName) {
         this.ScheduleName = ScheduleName;
     }
 
     /**
-     * Get The trigger of the scheme. If a file is uploaded to the specified bucket, the scheme will be triggered. 
-     * @return Trigger The trigger of the scheme. If a file is uploaded to the specified bucket, the scheme will be triggered.
+     * Get Orchestrate the bound trigger rule. The orchestration is triggered when an uploaded video hits the rule for the object. 
+     * @return Trigger Orchestrate the bound trigger rule. The orchestration is triggered when an uploaded video hits the rule for the object.
      */
     public WorkflowTrigger getTrigger() {
         return this.Trigger;
     }
 
     /**
-     * Set The trigger of the scheme. If a file is uploaded to the specified bucket, the scheme will be triggered.
-     * @param Trigger The trigger of the scheme. If a file is uploaded to the specified bucket, the scheme will be triggered.
+     * Set Orchestrate the bound trigger rule. The orchestration is triggered when an uploaded video hits the rule for the object.
+     * @param Trigger Orchestrate the bound trigger rule. The orchestration is triggered when an uploaded video hits the rule for the object.
      */
     public void setTrigger(WorkflowTrigger Trigger) {
         this.Trigger = Trigger;
     }
 
     /**
-     * Get The subtasks of the scheme. 
-     * @return Activities The subtasks of the scheme.
+     * Get Orchestration task list. 
+     * @return Activities Orchestration task list.
      */
     public Activity [] getActivities() {
         return this.Activities;
     }
 
     /**
-     * Set The subtasks of the scheme.
-     * @param Activities The subtasks of the scheme.
+     * Set Orchestration task list.
+     * @param Activities Orchestration task list.
      */
     public void setActivities(Activity [] Activities) {
         this.Activities = Activities;
     }
 
     /**
-     * Get The bucket to save the output file. If you do not specify this parameter, the bucket in `Trigger` will be used. 
-     * @return OutputStorage The bucket to save the output file. If you do not specify this parameter, the bucket in `Trigger` will be used.
+     * Get Media Processing Service output storage location. If left blank, it inherits the storage location from Trigger. 
+     * @return OutputStorage Media Processing Service output storage location. If left blank, it inherits the storage location from Trigger.
      */
     public TaskOutputStorage getOutputStorage() {
         return this.OutputStorage;
     }
 
     /**
-     * Set The bucket to save the output file. If you do not specify this parameter, the bucket in `Trigger` will be used.
-     * @param OutputStorage The bucket to save the output file. If you do not specify this parameter, the bucket in `Trigger` will be used.
+     * Set Media Processing Service output storage location. If left blank, it inherits the storage location from Trigger.
+     * @param OutputStorage Media Processing Service output storage location. If left blank, it inherits the storage location from Trigger.
      */
     public void setOutputStorage(TaskOutputStorage OutputStorage) {
         this.OutputStorage = OutputStorage;
     }
 
     /**
-     * Get The directory to save the media processing output file, which must start and end with `/`, such as `/movie/201907/`.
-If you do not specify this, the file will be saved to the trigger directory. 
-     * @return OutputDir The directory to save the media processing output file, which must start and end with `/`, such as `/movie/201907/`.
-If you do not specify this, the file will be saved to the trigger directory.
+     * Get Storage directory for the output file. It should start and end with a slash (/), such as `/movie/201907/`.
+If left empty, it is the same as the directory of the trigger file. 
+     * @return OutputDir Storage directory for the output file. It should start and end with a slash (/), such as `/movie/201907/`.
+If left empty, it is the same as the directory of the trigger file.
      */
     public String getOutputDir() {
         return this.OutputDir;
     }
 
     /**
-     * Set The directory to save the media processing output file, which must start and end with `/`, such as `/movie/201907/`.
-If you do not specify this, the file will be saved to the trigger directory.
-     * @param OutputDir The directory to save the media processing output file, which must start and end with `/`, such as `/movie/201907/`.
-If you do not specify this, the file will be saved to the trigger directory.
+     * Set Storage directory for the output file. It should start and end with a slash (/), such as `/movie/201907/`.
+If left empty, it is the same as the directory of the trigger file.
+     * @param OutputDir Storage directory for the output file. It should start and end with a slash (/), such as `/movie/201907/`.
+If left empty, it is the same as the directory of the trigger file.
      */
     public void setOutputDir(String OutputDir) {
         this.OutputDir = OutputDir;
     }
 
     /**
-     * Get The notification configuration. If you do not specify this parameter, notifications will not be sent. 
-     * @return TaskNotifyConfig The notification configuration. If you do not specify this parameter, notifications will not be sent.
+     * Get Event notification configuration of the task. If left blank, it indicates that no event notification will be obtained. 
+     * @return TaskNotifyConfig Event notification configuration of the task. If left blank, it indicates that no event notification will be obtained.
      */
     public TaskNotifyConfig getTaskNotifyConfig() {
         return this.TaskNotifyConfig;
     }
 
     /**
-     * Set The notification configuration. If you do not specify this parameter, notifications will not be sent.
-     * @param TaskNotifyConfig The notification configuration. If you do not specify this parameter, notifications will not be sent.
+     * Set Event notification configuration of the task. If left blank, it indicates that no event notification will be obtained.
+     * @param TaskNotifyConfig Event notification configuration of the task. If left blank, it indicates that no event notification will be obtained.
      */
     public void setTaskNotifyConfig(TaskNotifyConfig TaskNotifyConfig) {
         this.TaskNotifyConfig = TaskNotifyConfig;

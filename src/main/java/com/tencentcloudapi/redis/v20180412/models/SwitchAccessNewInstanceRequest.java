@@ -25,7 +25,7 @@ public class SwitchAccessNewInstanceRequest extends AbstractModel {
 
     /**
     * Specify the instance ID.
- For example: crs-xjhsdj****. Please log in to the [Redis Console] (https://console.cloud.tencent.com/redis#/) and copy the instance ID from the instance list.
+ For example: crs-xjhsdj****. Please log in to the[ Redis Colose](https://console.tencentcloud.com/redis) and copy the instance ID from the instance list.
 Sample value: crs-asdasdas.
     */
     @SerializedName("InstanceId")
@@ -34,10 +34,10 @@ Sample value: crs-asdasdas.
 
     /**
      * Get Specify the instance ID.
- For example: crs-xjhsdj****. Please log in to the [Redis Console] (https://console.cloud.tencent.com/redis#/) and copy the instance ID from the instance list.
+ For example: crs-xjhsdj****. Please log in to the[ Redis Colose](https://console.tencentcloud.com/redis) and copy the instance ID from the instance list.
 Sample value: crs-asdasdas. 
      * @return InstanceId Specify the instance ID.
- For example: crs-xjhsdj****. Please log in to the [Redis Console] (https://console.cloud.tencent.com/redis#/) and copy the instance ID from the instance list.
+ For example: crs-xjhsdj****. Please log in to the[ Redis Colose](https://console.tencentcloud.com/redis) and copy the instance ID from the instance list.
 Sample value: crs-asdasdas.
      */
     public String getInstanceId() {
@@ -46,10 +46,10 @@ Sample value: crs-asdasdas.
 
     /**
      * Set Specify the instance ID.
- For example: crs-xjhsdj****. Please log in to the [Redis Console] (https://console.cloud.tencent.com/redis#/) and copy the instance ID from the instance list.
+ For example: crs-xjhsdj****. Please log in to the[ Redis Colose](https://console.tencentcloud.com/redis) and copy the instance ID from the instance list.
 Sample value: crs-asdasdas.
      * @param InstanceId Specify the instance ID.
- For example: crs-xjhsdj****. Please log in to the [Redis Console] (https://console.cloud.tencent.com/redis#/) and copy the instance ID from the instance list.
+ For example: crs-xjhsdj****. Please log in to the[ Redis Colose](https://console.tencentcloud.com/redis) and copy the instance ID from the instance list.
 Sample value: crs-asdasdas.
      */
     public void setInstanceId(String InstanceId) {

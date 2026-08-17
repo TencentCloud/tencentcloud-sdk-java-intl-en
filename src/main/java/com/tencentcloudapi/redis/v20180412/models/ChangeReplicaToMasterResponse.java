@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ChangeReplicaToMasterResponse extends AbstractModel {
 
     /**
-    * Async task ID
+    * <p>Asynchronous task ID.</p>
     */
     @SerializedName("TaskId")
     @Expose
@@ -38,16 +38,16 @@ public class ChangeReplicaToMasterResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Async task ID 
-     * @return TaskId Async task ID
+     * Get <p>Asynchronous task ID.</p> 
+     * @return TaskId <p>Asynchronous task ID.</p>
      */
     public Long getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set Async task ID
-     * @param TaskId Async task ID
+     * Set <p>Asynchronous task ID.</p>
+     * @param TaskId <p>Asynchronous task ID.</p>
      */
     public void setTaskId(Long TaskId) {
         this.TaskId = TaskId;

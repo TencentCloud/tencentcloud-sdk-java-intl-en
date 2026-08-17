@@ -24,71 +24,46 @@ import java.util.HashMap;
 public class LiveStreamRecordResultInfo extends AbstractModel {
 
     /**
-    * Whether recording ends.
-0: Recording does not end, returning a single file.
-1: Recording ends, returning all recording files.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("RecordOver")
     @Expose
     private Long RecordOver;
 
     /**
-    * File list.
-
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("FileResults")
     @Expose
     private LiveRecordFile [] FileResults;
 
     /**
-     * Get Whether recording ends.
-0: Recording does not end, returning a single file.
-1: Recording ends, returning all recording files.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return RecordOver Whether recording ends.
-0: Recording does not end, returning a single file.
-1: Recording ends, returning all recording files.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return RecordOver 
      */
     public Long getRecordOver() {
         return this.RecordOver;
     }
 
     /**
-     * Set Whether recording ends.
-0: Recording does not end, returning a single file.
-1: Recording ends, returning all recording files.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param RecordOver Whether recording ends.
-0: Recording does not end, returning a single file.
-1: Recording ends, returning all recording files.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param RecordOver 
      */
     public void setRecordOver(Long RecordOver) {
         this.RecordOver = RecordOver;
     }
 
     /**
-     * Get File list.
-
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return FileResults File list.
-
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return FileResults 
      */
     public LiveRecordFile [] getFileResults() {
         return this.FileResults;
     }
 
     /**
-     * Set File list.
-
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param FileResults File list.
-
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param FileResults 
      */
     public void setFileResults(LiveRecordFile [] FileResults) {
         this.FileResults = FileResults;

@@ -24,11 +24,13 @@ import java.util.HashMap;
 public class UpdateSmartEraseWatermarkConfig extends AbstractModel {
 
     /**
-    * Watermark erasing method.
-**Automatic erasing: ** Video watermarks are automatically recognized using an AI model and are erased to generate a new video. It applies to dynamic watermarks.
-When automatic erasing is used, if AutoAreas is not specified, the full-screen video image area will be erased automatically. If AutoAreas is specified, the specified area will be erased automatically.
- **Specified area erasing: ** For static watermarks in fixed positions, you are recommended to specify the erasing area directly.When you choose specified area erasing, specify at least one area.
-- auto: automatic erasing.
+    * Watermark removal method.
+**Automatic erasing:** Video watermarks are automatically recognized using an AI model and are erased to generate a new video. It applies to dynamic watermarks.
+When using automatic erasing, if AutoAreas is not specified, the full-screen video image area will be erased automatically. If AutoAreas is specified, the specified area will be erased automatically.
+**Specified area erasure:** For static watermarks with a relatively fixed position, we recommend you directly specify the area for erasure.
+When you choose specified area erasure, import at least a specified region.
+
+- auto: automatic erasing
 - custom: specified area erasing.
     */
     @SerializedName("WatermarkEraseMethod")
@@ -36,10 +38,10 @@ When automatic erasing is used, if AutoAreas is not specified, the full-screen v
     private String WatermarkEraseMethod;
 
     /**
-    * Watermark erasing model.
-Basic Edition: provide average effects and high cost performance. It applies to animations or videos with clean backgrounds.
-Advanced Edition: provide better effects. It applies to reality-style videos, such as short dramas.
-- basic: Basic Edition.
+    * Watermark removal model.
+Basic Edition: Provides average effects and high cost performance. Suitable for animations or videos with clean backgrounds.
+Advanced edition: Better effectiveness, suitable for reality style videos such as mini-drama.
+-.
 - advanced: Advanced Edition.
     */
     @SerializedName("WatermarkModel")
@@ -47,7 +49,7 @@ Advanced Edition: provide better effects. It applies to reality-style videos, su
     private String WatermarkModel;
 
     /**
-    * Custom area for automatic erasing.
+    * Automatic removal of custom region.
 For the specified area, AI models are used to automatically detect and erase the target objects.
 Note: When the erasing method is set to custom, this parameter is invalid. Input [] for the erasing area; if this parameter is unspecified, the template area information will remain unchanged.
     */
@@ -56,7 +58,7 @@ Note: When the erasing method is set to custom, this parameter is invalid. Input
     private EraseArea [] AutoAreas;
 
     /**
-    * Custom area for specified area erasing.
+    * Specify a custom region for erasing.
 For the specified area, erase the target objects directly without detection and recognition within a selected time period.
 Note: Input [] for the erasing area; if this parameter is unspecified, the template area information will remain unchanged.
     */
@@ -65,17 +67,21 @@ Note: Input [] for the erasing area; if this parameter is unspecified, the templ
     private EraseTimeArea [] CustomAreas;
 
     /**
-     * Get Watermark erasing method.
-**Automatic erasing: ** Video watermarks are automatically recognized using an AI model and are erased to generate a new video. It applies to dynamic watermarks.
-When automatic erasing is used, if AutoAreas is not specified, the full-screen video image area will be erased automatically. If AutoAreas is specified, the specified area will be erased automatically.
- **Specified area erasing: ** For static watermarks in fixed positions, you are recommended to specify the erasing area directly.When you choose specified area erasing, specify at least one area.
-- auto: automatic erasing.
+     * Get Watermark removal method.
+**Automatic erasing:** Video watermarks are automatically recognized using an AI model and are erased to generate a new video. It applies to dynamic watermarks.
+When using automatic erasing, if AutoAreas is not specified, the full-screen video image area will be erased automatically. If AutoAreas is specified, the specified area will be erased automatically.
+**Specified area erasure:** For static watermarks with a relatively fixed position, we recommend you directly specify the area for erasure.
+When you choose specified area erasure, import at least a specified region.
+
+- auto: automatic erasing
 - custom: specified area erasing. 
-     * @return WatermarkEraseMethod Watermark erasing method.
-**Automatic erasing: ** Video watermarks are automatically recognized using an AI model and are erased to generate a new video. It applies to dynamic watermarks.
-When automatic erasing is used, if AutoAreas is not specified, the full-screen video image area will be erased automatically. If AutoAreas is specified, the specified area will be erased automatically.
- **Specified area erasing: ** For static watermarks in fixed positions, you are recommended to specify the erasing area directly.When you choose specified area erasing, specify at least one area.
-- auto: automatic erasing.
+     * @return WatermarkEraseMethod Watermark removal method.
+**Automatic erasing:** Video watermarks are automatically recognized using an AI model and are erased to generate a new video. It applies to dynamic watermarks.
+When using automatic erasing, if AutoAreas is not specified, the full-screen video image area will be erased automatically. If AutoAreas is specified, the specified area will be erased automatically.
+**Specified area erasure:** For static watermarks with a relatively fixed position, we recommend you directly specify the area for erasure.
+When you choose specified area erasure, import at least a specified region.
+
+- auto: automatic erasing
 - custom: specified area erasing.
      */
     public String getWatermarkEraseMethod() {
@@ -83,17 +89,21 @@ When automatic erasing is used, if AutoAreas is not specified, the full-screen v
     }
 
     /**
-     * Set Watermark erasing method.
-**Automatic erasing: ** Video watermarks are automatically recognized using an AI model and are erased to generate a new video. It applies to dynamic watermarks.
-When automatic erasing is used, if AutoAreas is not specified, the full-screen video image area will be erased automatically. If AutoAreas is specified, the specified area will be erased automatically.
- **Specified area erasing: ** For static watermarks in fixed positions, you are recommended to specify the erasing area directly.When you choose specified area erasing, specify at least one area.
-- auto: automatic erasing.
+     * Set Watermark removal method.
+**Automatic erasing:** Video watermarks are automatically recognized using an AI model and are erased to generate a new video. It applies to dynamic watermarks.
+When using automatic erasing, if AutoAreas is not specified, the full-screen video image area will be erased automatically. If AutoAreas is specified, the specified area will be erased automatically.
+**Specified area erasure:** For static watermarks with a relatively fixed position, we recommend you directly specify the area for erasure.
+When you choose specified area erasure, import at least a specified region.
+
+- auto: automatic erasing
 - custom: specified area erasing.
-     * @param WatermarkEraseMethod Watermark erasing method.
-**Automatic erasing: ** Video watermarks are automatically recognized using an AI model and are erased to generate a new video. It applies to dynamic watermarks.
-When automatic erasing is used, if AutoAreas is not specified, the full-screen video image area will be erased automatically. If AutoAreas is specified, the specified area will be erased automatically.
- **Specified area erasing: ** For static watermarks in fixed positions, you are recommended to specify the erasing area directly.When you choose specified area erasing, specify at least one area.
-- auto: automatic erasing.
+     * @param WatermarkEraseMethod Watermark removal method.
+**Automatic erasing:** Video watermarks are automatically recognized using an AI model and are erased to generate a new video. It applies to dynamic watermarks.
+When using automatic erasing, if AutoAreas is not specified, the full-screen video image area will be erased automatically. If AutoAreas is specified, the specified area will be erased automatically.
+**Specified area erasure:** For static watermarks with a relatively fixed position, we recommend you directly specify the area for erasure.
+When you choose specified area erasure, import at least a specified region.
+
+- auto: automatic erasing
 - custom: specified area erasing.
      */
     public void setWatermarkEraseMethod(String WatermarkEraseMethod) {
@@ -101,15 +111,15 @@ When automatic erasing is used, if AutoAreas is not specified, the full-screen v
     }
 
     /**
-     * Get Watermark erasing model.
-Basic Edition: provide average effects and high cost performance. It applies to animations or videos with clean backgrounds.
-Advanced Edition: provide better effects. It applies to reality-style videos, such as short dramas.
-- basic: Basic Edition.
+     * Get Watermark removal model.
+Basic Edition: Provides average effects and high cost performance. Suitable for animations or videos with clean backgrounds.
+Advanced edition: Better effectiveness, suitable for reality style videos such as mini-drama.
+-.
 - advanced: Advanced Edition. 
-     * @return WatermarkModel Watermark erasing model.
-Basic Edition: provide average effects and high cost performance. It applies to animations or videos with clean backgrounds.
-Advanced Edition: provide better effects. It applies to reality-style videos, such as short dramas.
-- basic: Basic Edition.
+     * @return WatermarkModel Watermark removal model.
+Basic Edition: Provides average effects and high cost performance. Suitable for animations or videos with clean backgrounds.
+Advanced edition: Better effectiveness, suitable for reality style videos such as mini-drama.
+-.
 - advanced: Advanced Edition.
      */
     public String getWatermarkModel() {
@@ -117,15 +127,15 @@ Advanced Edition: provide better effects. It applies to reality-style videos, su
     }
 
     /**
-     * Set Watermark erasing model.
-Basic Edition: provide average effects and high cost performance. It applies to animations or videos with clean backgrounds.
-Advanced Edition: provide better effects. It applies to reality-style videos, such as short dramas.
-- basic: Basic Edition.
+     * Set Watermark removal model.
+Basic Edition: Provides average effects and high cost performance. Suitable for animations or videos with clean backgrounds.
+Advanced edition: Better effectiveness, suitable for reality style videos such as mini-drama.
+-.
 - advanced: Advanced Edition.
-     * @param WatermarkModel Watermark erasing model.
-Basic Edition: provide average effects and high cost performance. It applies to animations or videos with clean backgrounds.
-Advanced Edition: provide better effects. It applies to reality-style videos, such as short dramas.
-- basic: Basic Edition.
+     * @param WatermarkModel Watermark removal model.
+Basic Edition: Provides average effects and high cost performance. Suitable for animations or videos with clean backgrounds.
+Advanced edition: Better effectiveness, suitable for reality style videos such as mini-drama.
+-.
 - advanced: Advanced Edition.
      */
     public void setWatermarkModel(String WatermarkModel) {
@@ -133,10 +143,10 @@ Advanced Edition: provide better effects. It applies to reality-style videos, su
     }
 
     /**
-     * Get Custom area for automatic erasing.
+     * Get Automatic removal of custom region.
 For the specified area, AI models are used to automatically detect and erase the target objects.
 Note: When the erasing method is set to custom, this parameter is invalid. Input [] for the erasing area; if this parameter is unspecified, the template area information will remain unchanged. 
-     * @return AutoAreas Custom area for automatic erasing.
+     * @return AutoAreas Automatic removal of custom region.
 For the specified area, AI models are used to automatically detect and erase the target objects.
 Note: When the erasing method is set to custom, this parameter is invalid. Input [] for the erasing area; if this parameter is unspecified, the template area information will remain unchanged.
      */
@@ -145,10 +155,10 @@ Note: When the erasing method is set to custom, this parameter is invalid. Input
     }
 
     /**
-     * Set Custom area for automatic erasing.
+     * Set Automatic removal of custom region.
 For the specified area, AI models are used to automatically detect and erase the target objects.
 Note: When the erasing method is set to custom, this parameter is invalid. Input [] for the erasing area; if this parameter is unspecified, the template area information will remain unchanged.
-     * @param AutoAreas Custom area for automatic erasing.
+     * @param AutoAreas Automatic removal of custom region.
 For the specified area, AI models are used to automatically detect and erase the target objects.
 Note: When the erasing method is set to custom, this parameter is invalid. Input [] for the erasing area; if this parameter is unspecified, the template area information will remain unchanged.
      */
@@ -157,10 +167,10 @@ Note: When the erasing method is set to custom, this parameter is invalid. Input
     }
 
     /**
-     * Get Custom area for specified area erasing.
+     * Get Specify a custom region for erasing.
 For the specified area, erase the target objects directly without detection and recognition within a selected time period.
 Note: Input [] for the erasing area; if this parameter is unspecified, the template area information will remain unchanged. 
-     * @return CustomAreas Custom area for specified area erasing.
+     * @return CustomAreas Specify a custom region for erasing.
 For the specified area, erase the target objects directly without detection and recognition within a selected time period.
 Note: Input [] for the erasing area; if this parameter is unspecified, the template area information will remain unchanged.
      */
@@ -169,10 +179,10 @@ Note: Input [] for the erasing area; if this parameter is unspecified, the templ
     }
 
     /**
-     * Set Custom area for specified area erasing.
+     * Set Specify a custom region for erasing.
 For the specified area, erase the target objects directly without detection and recognition within a selected time period.
 Note: Input [] for the erasing area; if this parameter is unspecified, the template area information will remain unchanged.
-     * @param CustomAreas Custom area for specified area erasing.
+     * @param CustomAreas Specify a custom region for erasing.
 For the specified area, erase the target objects directly without detection and recognition within a selected time period.
 Note: Input [] for the erasing area; if this parameter is unspecified, the template area information will remain unchanged.
      */

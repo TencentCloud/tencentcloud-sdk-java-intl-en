@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class AiAnalysisTaskVideoRemakeOutput extends AbstractModel {
 
     /**
-    * Specifies the file path for intelligent video deduplication.
+    * File path for intelligent video deduplication
     */
     @SerializedName("Path")
     @Expose
     private String Path;
 
     /**
-    * Specifies the storage location for intelligent video deduplication.
+    * Storage location of intelligent video deduplication
     */
     @SerializedName("OutputStorage")
     @Expose
     private TaskOutputStorage OutputStorage;
 
     /**
-     * Get Specifies the file path for intelligent video deduplication. 
-     * @return Path Specifies the file path for intelligent video deduplication.
+     * Get File path for intelligent video deduplication 
+     * @return Path File path for intelligent video deduplication
      */
     public String getPath() {
         return this.Path;
     }
 
     /**
-     * Set Specifies the file path for intelligent video deduplication.
-     * @param Path Specifies the file path for intelligent video deduplication.
+     * Set File path for intelligent video deduplication
+     * @param Path File path for intelligent video deduplication
      */
     public void setPath(String Path) {
         this.Path = Path;
     }
 
     /**
-     * Get Specifies the storage location for intelligent video deduplication. 
-     * @return OutputStorage Specifies the storage location for intelligent video deduplication.
+     * Get Storage location of intelligent video deduplication 
+     * @return OutputStorage Storage location of intelligent video deduplication
      */
     public TaskOutputStorage getOutputStorage() {
         return this.OutputStorage;
     }
 
     /**
-     * Set Specifies the storage location for intelligent video deduplication.
-     * @param OutputStorage Specifies the storage location for intelligent video deduplication.
+     * Set Storage location of intelligent video deduplication
+     * @param OutputStorage Storage location of intelligent video deduplication
      */
     public void setOutputStorage(TaskOutputStorage OutputStorage) {
         this.OutputStorage = OutputStorage;

@@ -24,428 +24,428 @@ import java.util.HashMap;
 public class AiAnalysisResult extends AbstractModel {
 
     /**
-    * Task type. Valid values:<li>Classification: intelligent classification.</li><li>Cover: intelligent cover.</li><li>Tag: intelligent tagging.</li><li>FrameTag: intelligent frame-level tagging.</li><li>Highlight: intelligent highlights.</li><li>DeLogo: intelligent removal.</li><li>Description: LLM summarization.</li><li>Dubbing: intelligent dubbing.</li><li>VideoRemake: video recreation.</li><li>VideoComprehension: video (audio) recognition.</li>
-<li>Cutout: video matting.</li><li>Reel: intelligent video editing.</li>
+    * Task type. Valid values:
+<li>Classification: intelligent classification.</li>
+<li>Cover: intelligent cover</li>
+<li>Tag: intelligent tagging.</li>
+<li>FrameTag: intelligent frame tagging.</li>
+<li>Highlight: Intelligent Highlights</li>
+<li>DeLogo: intelligent removal.</li>
+<li>Description: large model summarization.</li>
+<li>Dubbing: Intelligent Dubbing</li>
+<li>VideoRemake: Video deduplication</li>
+<li>VideoComprehension: video (audio) recognition.</li>
+<li>Cutout: Video matting</li>
+<li>Reel: intelligent video editing.</li>
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * Query result of intelligent categorization task in video content analysis, which is valid if task type is `Classification`.
+    * 
     */
     @SerializedName("ClassificationTask")
     @Expose
     private AiAnalysisTaskClassificationResult ClassificationTask;
 
     /**
-    * Query result of intelligent cover generating task in video content analysis, which is valid if task type is `Cover`.
+    * 
     */
     @SerializedName("CoverTask")
     @Expose
     private AiAnalysisTaskCoverResult CoverTask;
 
     /**
-    * Query result of intelligent tagging task in video content analysis, which is valid if task type is `Tag`.
+    * 
     */
     @SerializedName("TagTask")
     @Expose
     private AiAnalysisTaskTagResult TagTask;
 
     /**
-    * Query result of intelligent frame-specific tagging task in video content analysis, which is valid if task type is `FrameTag`.
+    * 
     */
     @SerializedName("FrameTagTask")
     @Expose
     private AiAnalysisTaskFrameTagResult FrameTagTask;
 
     /**
-    * The result of a highlight generation task. This parameter is valid if `Type` is `Highlight`.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("HighlightTask")
     @Expose
     private AiAnalysisTaskHighlightResult HighlightTask;
 
     /**
-    * The query result of an intelligent removal task for video analysis, which is valid when the task type is DeLogo.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("DeLogoTask")
     @Expose
     private AiAnalysisTaskDelLogoResult DeLogoTask;
 
     /**
-    * The query result of a splitting task for video analysis, which is valid when the task type is SegmentRecognition.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("SegmentTask")
     @Expose
     private AiAnalysisTaskSegmentResult SegmentTask;
 
     /**
-    * The query result of an opening and closing segments recognition task for video analysis, which is valid when the task type is HeadTailRecognition.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("HeadTailTask")
     @Expose
     private AiAnalysisTaskHeadTailResult HeadTailTask;
 
     /**
-    * The query result of a video analysis summarization task, which is valid when the task type is Description.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("DescriptionTask")
     @Expose
     private AiAnalysisTaskDescriptionResult DescriptionTask;
 
     /**
-    * The query result of a landscape-to-portrait task for video analysis, which is valid when the task type is HorizontalToVertical.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("HorizontalToVerticalTask")
     @Expose
     private AiAnalysisTaskHorizontalToVerticalResult HorizontalToVerticalTask;
 
     /**
-    * The query result of a Dubbing task for video content analysis, which is valid when the task type is Dubbing.
-Note: This field may return null, indicating that no valid value can be obtained.
+    * 
     */
     @SerializedName("DubbingTask")
     @Expose
     private AiAnalysisTaskDubbingResult DubbingTask;
 
     /**
-    * The query result of a video content deduplication task, which is valid when the task type is VideoRemake.
-Note: This field may return null, indicating that no valid value can be obtained.
+    * 
     */
     @SerializedName("VideoRemakeTask")
     @Expose
     private AiAnalysisTaskVideoRemakeResult VideoRemakeTask;
 
     /**
-    * Query result of the video (audio) recognition task. This parameter is valid when the task type is VideoComprehension.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("VideoComprehensionTask")
     @Expose
     private AiAnalysisTaskVideoComprehensionResult VideoComprehensionTask;
 
     /**
-    * Query result of video content analysis intelligent image masking task. valid when task type is Cutout.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("CutoutTask")
     @Expose
     private AiAnalysisTaskCutoutResult CutoutTask;
 
     /**
-    * Query result of the video content analysis AI narration and video re-creation task. valid when the task type is Reel.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("ReelTask")
     @Expose
     private AiAnalysisTaskReelResult ReelTask;
 
     /**
-     * Get Task type. Valid values:<li>Classification: intelligent classification.</li><li>Cover: intelligent cover.</li><li>Tag: intelligent tagging.</li><li>FrameTag: intelligent frame-level tagging.</li><li>Highlight: intelligent highlights.</li><li>DeLogo: intelligent removal.</li><li>Description: LLM summarization.</li><li>Dubbing: intelligent dubbing.</li><li>VideoRemake: video recreation.</li><li>VideoComprehension: video (audio) recognition.</li>
-<li>Cutout: video matting.</li><li>Reel: intelligent video editing.</li> 
-     * @return Type Task type. Valid values:<li>Classification: intelligent classification.</li><li>Cover: intelligent cover.</li><li>Tag: intelligent tagging.</li><li>FrameTag: intelligent frame-level tagging.</li><li>Highlight: intelligent highlights.</li><li>DeLogo: intelligent removal.</li><li>Description: LLM summarization.</li><li>Dubbing: intelligent dubbing.</li><li>VideoRemake: video recreation.</li><li>VideoComprehension: video (audio) recognition.</li>
-<li>Cutout: video matting.</li><li>Reel: intelligent video editing.</li>
+     * Get Task type. Valid values:
+<li>Classification: intelligent classification.</li>
+<li>Cover: intelligent cover</li>
+<li>Tag: intelligent tagging.</li>
+<li>FrameTag: intelligent frame tagging.</li>
+<li>Highlight: Intelligent Highlights</li>
+<li>DeLogo: intelligent removal.</li>
+<li>Description: large model summarization.</li>
+<li>Dubbing: Intelligent Dubbing</li>
+<li>VideoRemake: Video deduplication</li>
+<li>VideoComprehension: video (audio) recognition.</li>
+<li>Cutout: Video matting</li>
+<li>Reel: intelligent video editing.</li> 
+     * @return Type Task type. Valid values:
+<li>Classification: intelligent classification.</li>
+<li>Cover: intelligent cover</li>
+<li>Tag: intelligent tagging.</li>
+<li>FrameTag: intelligent frame tagging.</li>
+<li>Highlight: Intelligent Highlights</li>
+<li>DeLogo: intelligent removal.</li>
+<li>Description: large model summarization.</li>
+<li>Dubbing: Intelligent Dubbing</li>
+<li>VideoRemake: Video deduplication</li>
+<li>VideoComprehension: video (audio) recognition.</li>
+<li>Cutout: Video matting</li>
+<li>Reel: intelligent video editing.</li>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set Task type. Valid values:<li>Classification: intelligent classification.</li><li>Cover: intelligent cover.</li><li>Tag: intelligent tagging.</li><li>FrameTag: intelligent frame-level tagging.</li><li>Highlight: intelligent highlights.</li><li>DeLogo: intelligent removal.</li><li>Description: LLM summarization.</li><li>Dubbing: intelligent dubbing.</li><li>VideoRemake: video recreation.</li><li>VideoComprehension: video (audio) recognition.</li>
-<li>Cutout: video matting.</li><li>Reel: intelligent video editing.</li>
-     * @param Type Task type. Valid values:<li>Classification: intelligent classification.</li><li>Cover: intelligent cover.</li><li>Tag: intelligent tagging.</li><li>FrameTag: intelligent frame-level tagging.</li><li>Highlight: intelligent highlights.</li><li>DeLogo: intelligent removal.</li><li>Description: LLM summarization.</li><li>Dubbing: intelligent dubbing.</li><li>VideoRemake: video recreation.</li><li>VideoComprehension: video (audio) recognition.</li>
-<li>Cutout: video matting.</li><li>Reel: intelligent video editing.</li>
+     * Set Task type. Valid values:
+<li>Classification: intelligent classification.</li>
+<li>Cover: intelligent cover</li>
+<li>Tag: intelligent tagging.</li>
+<li>FrameTag: intelligent frame tagging.</li>
+<li>Highlight: Intelligent Highlights</li>
+<li>DeLogo: intelligent removal.</li>
+<li>Description: large model summarization.</li>
+<li>Dubbing: Intelligent Dubbing</li>
+<li>VideoRemake: Video deduplication</li>
+<li>VideoComprehension: video (audio) recognition.</li>
+<li>Cutout: Video matting</li>
+<li>Reel: intelligent video editing.</li>
+     * @param Type Task type. Valid values:
+<li>Classification: intelligent classification.</li>
+<li>Cover: intelligent cover</li>
+<li>Tag: intelligent tagging.</li>
+<li>FrameTag: intelligent frame tagging.</li>
+<li>Highlight: Intelligent Highlights</li>
+<li>DeLogo: intelligent removal.</li>
+<li>Description: large model summarization.</li>
+<li>Dubbing: Intelligent Dubbing</li>
+<li>VideoRemake: Video deduplication</li>
+<li>VideoComprehension: video (audio) recognition.</li>
+<li>Cutout: Video matting</li>
+<li>Reel: intelligent video editing.</li>
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get Query result of intelligent categorization task in video content analysis, which is valid if task type is `Classification`. 
-     * @return ClassificationTask Query result of intelligent categorization task in video content analysis, which is valid if task type is `Classification`.
+     * Get  
+     * @return ClassificationTask 
      */
     public AiAnalysisTaskClassificationResult getClassificationTask() {
         return this.ClassificationTask;
     }
 
     /**
-     * Set Query result of intelligent categorization task in video content analysis, which is valid if task type is `Classification`.
-     * @param ClassificationTask Query result of intelligent categorization task in video content analysis, which is valid if task type is `Classification`.
+     * Set 
+     * @param ClassificationTask 
      */
     public void setClassificationTask(AiAnalysisTaskClassificationResult ClassificationTask) {
         this.ClassificationTask = ClassificationTask;
     }
 
     /**
-     * Get Query result of intelligent cover generating task in video content analysis, which is valid if task type is `Cover`. 
-     * @return CoverTask Query result of intelligent cover generating task in video content analysis, which is valid if task type is `Cover`.
+     * Get  
+     * @return CoverTask 
      */
     public AiAnalysisTaskCoverResult getCoverTask() {
         return this.CoverTask;
     }
 
     /**
-     * Set Query result of intelligent cover generating task in video content analysis, which is valid if task type is `Cover`.
-     * @param CoverTask Query result of intelligent cover generating task in video content analysis, which is valid if task type is `Cover`.
+     * Set 
+     * @param CoverTask 
      */
     public void setCoverTask(AiAnalysisTaskCoverResult CoverTask) {
         this.CoverTask = CoverTask;
     }
 
     /**
-     * Get Query result of intelligent tagging task in video content analysis, which is valid if task type is `Tag`. 
-     * @return TagTask Query result of intelligent tagging task in video content analysis, which is valid if task type is `Tag`.
+     * Get  
+     * @return TagTask 
      */
     public AiAnalysisTaskTagResult getTagTask() {
         return this.TagTask;
     }
 
     /**
-     * Set Query result of intelligent tagging task in video content analysis, which is valid if task type is `Tag`.
-     * @param TagTask Query result of intelligent tagging task in video content analysis, which is valid if task type is `Tag`.
+     * Set 
+     * @param TagTask 
      */
     public void setTagTask(AiAnalysisTaskTagResult TagTask) {
         this.TagTask = TagTask;
     }
 
     /**
-     * Get Query result of intelligent frame-specific tagging task in video content analysis, which is valid if task type is `FrameTag`. 
-     * @return FrameTagTask Query result of intelligent frame-specific tagging task in video content analysis, which is valid if task type is `FrameTag`.
+     * Get  
+     * @return FrameTagTask 
      */
     public AiAnalysisTaskFrameTagResult getFrameTagTask() {
         return this.FrameTagTask;
     }
 
     /**
-     * Set Query result of intelligent frame-specific tagging task in video content analysis, which is valid if task type is `FrameTag`.
-     * @param FrameTagTask Query result of intelligent frame-specific tagging task in video content analysis, which is valid if task type is `FrameTag`.
+     * Set 
+     * @param FrameTagTask 
      */
     public void setFrameTagTask(AiAnalysisTaskFrameTagResult FrameTagTask) {
         this.FrameTagTask = FrameTagTask;
     }
 
     /**
-     * Get The result of a highlight generation task. This parameter is valid if `Type` is `Highlight`.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return HighlightTask The result of a highlight generation task. This parameter is valid if `Type` is `Highlight`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return HighlightTask 
      */
     public AiAnalysisTaskHighlightResult getHighlightTask() {
         return this.HighlightTask;
     }
 
     /**
-     * Set The result of a highlight generation task. This parameter is valid if `Type` is `Highlight`.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param HighlightTask The result of a highlight generation task. This parameter is valid if `Type` is `Highlight`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param HighlightTask 
      */
     public void setHighlightTask(AiAnalysisTaskHighlightResult HighlightTask) {
         this.HighlightTask = HighlightTask;
     }
 
     /**
-     * Get The query result of an intelligent removal task for video analysis, which is valid when the task type is DeLogo.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return DeLogoTask The query result of an intelligent removal task for video analysis, which is valid when the task type is DeLogo.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return DeLogoTask 
      */
     public AiAnalysisTaskDelLogoResult getDeLogoTask() {
         return this.DeLogoTask;
     }
 
     /**
-     * Set The query result of an intelligent removal task for video analysis, which is valid when the task type is DeLogo.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param DeLogoTask The query result of an intelligent removal task for video analysis, which is valid when the task type is DeLogo.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param DeLogoTask 
      */
     public void setDeLogoTask(AiAnalysisTaskDelLogoResult DeLogoTask) {
         this.DeLogoTask = DeLogoTask;
     }
 
     /**
-     * Get The query result of a splitting task for video analysis, which is valid when the task type is SegmentRecognition.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return SegmentTask The query result of a splitting task for video analysis, which is valid when the task type is SegmentRecognition.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return SegmentTask 
      */
     public AiAnalysisTaskSegmentResult getSegmentTask() {
         return this.SegmentTask;
     }
 
     /**
-     * Set The query result of a splitting task for video analysis, which is valid when the task type is SegmentRecognition.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param SegmentTask The query result of a splitting task for video analysis, which is valid when the task type is SegmentRecognition.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param SegmentTask 
      */
     public void setSegmentTask(AiAnalysisTaskSegmentResult SegmentTask) {
         this.SegmentTask = SegmentTask;
     }
 
     /**
-     * Get The query result of an opening and closing segments recognition task for video analysis, which is valid when the task type is HeadTailRecognition.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return HeadTailTask The query result of an opening and closing segments recognition task for video analysis, which is valid when the task type is HeadTailRecognition.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return HeadTailTask 
      */
     public AiAnalysisTaskHeadTailResult getHeadTailTask() {
         return this.HeadTailTask;
     }
 
     /**
-     * Set The query result of an opening and closing segments recognition task for video analysis, which is valid when the task type is HeadTailRecognition.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param HeadTailTask The query result of an opening and closing segments recognition task for video analysis, which is valid when the task type is HeadTailRecognition.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param HeadTailTask 
      */
     public void setHeadTailTask(AiAnalysisTaskHeadTailResult HeadTailTask) {
         this.HeadTailTask = HeadTailTask;
     }
 
     /**
-     * Get The query result of a video analysis summarization task, which is valid when the task type is Description.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return DescriptionTask The query result of a video analysis summarization task, which is valid when the task type is Description.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return DescriptionTask 
      */
     public AiAnalysisTaskDescriptionResult getDescriptionTask() {
         return this.DescriptionTask;
     }
 
     /**
-     * Set The query result of a video analysis summarization task, which is valid when the task type is Description.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param DescriptionTask The query result of a video analysis summarization task, which is valid when the task type is Description.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param DescriptionTask 
      */
     public void setDescriptionTask(AiAnalysisTaskDescriptionResult DescriptionTask) {
         this.DescriptionTask = DescriptionTask;
     }
 
     /**
-     * Get The query result of a landscape-to-portrait task for video analysis, which is valid when the task type is HorizontalToVertical.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return HorizontalToVerticalTask The query result of a landscape-to-portrait task for video analysis, which is valid when the task type is HorizontalToVertical.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return HorizontalToVerticalTask 
      */
     public AiAnalysisTaskHorizontalToVerticalResult getHorizontalToVerticalTask() {
         return this.HorizontalToVerticalTask;
     }
 
     /**
-     * Set The query result of a landscape-to-portrait task for video analysis, which is valid when the task type is HorizontalToVertical.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param HorizontalToVerticalTask The query result of a landscape-to-portrait task for video analysis, which is valid when the task type is HorizontalToVertical.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param HorizontalToVerticalTask 
      */
     public void setHorizontalToVerticalTask(AiAnalysisTaskHorizontalToVerticalResult HorizontalToVerticalTask) {
         this.HorizontalToVerticalTask = HorizontalToVerticalTask;
     }
 
     /**
-     * Get The query result of a Dubbing task for video content analysis, which is valid when the task type is Dubbing.
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return DubbingTask The query result of a Dubbing task for video content analysis, which is valid when the task type is Dubbing.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get  
+     * @return DubbingTask 
      */
     public AiAnalysisTaskDubbingResult getDubbingTask() {
         return this.DubbingTask;
     }
 
     /**
-     * Set The query result of a Dubbing task for video content analysis, which is valid when the task type is Dubbing.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param DubbingTask The query result of a Dubbing task for video content analysis, which is valid when the task type is Dubbing.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set 
+     * @param DubbingTask 
      */
     public void setDubbingTask(AiAnalysisTaskDubbingResult DubbingTask) {
         this.DubbingTask = DubbingTask;
     }
 
     /**
-     * Get The query result of a video content deduplication task, which is valid when the task type is VideoRemake.
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return VideoRemakeTask The query result of a video content deduplication task, which is valid when the task type is VideoRemake.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get  
+     * @return VideoRemakeTask 
      */
     public AiAnalysisTaskVideoRemakeResult getVideoRemakeTask() {
         return this.VideoRemakeTask;
     }
 
     /**
-     * Set The query result of a video content deduplication task, which is valid when the task type is VideoRemake.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param VideoRemakeTask The query result of a video content deduplication task, which is valid when the task type is VideoRemake.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set 
+     * @param VideoRemakeTask 
      */
     public void setVideoRemakeTask(AiAnalysisTaskVideoRemakeResult VideoRemakeTask) {
         this.VideoRemakeTask = VideoRemakeTask;
     }
 
     /**
-     * Get Query result of the video (audio) recognition task. This parameter is valid when the task type is VideoComprehension.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return VideoComprehensionTask Query result of the video (audio) recognition task. This parameter is valid when the task type is VideoComprehension.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return VideoComprehensionTask 
      */
     public AiAnalysisTaskVideoComprehensionResult getVideoComprehensionTask() {
         return this.VideoComprehensionTask;
     }
 
     /**
-     * Set Query result of the video (audio) recognition task. This parameter is valid when the task type is VideoComprehension.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param VideoComprehensionTask Query result of the video (audio) recognition task. This parameter is valid when the task type is VideoComprehension.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param VideoComprehensionTask 
      */
     public void setVideoComprehensionTask(AiAnalysisTaskVideoComprehensionResult VideoComprehensionTask) {
         this.VideoComprehensionTask = VideoComprehensionTask;
     }
 
     /**
-     * Get Query result of video content analysis intelligent image masking task. valid when task type is Cutout.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return CutoutTask Query result of video content analysis intelligent image masking task. valid when task type is Cutout.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return CutoutTask 
      */
     public AiAnalysisTaskCutoutResult getCutoutTask() {
         return this.CutoutTask;
     }
 
     /**
-     * Set Query result of video content analysis intelligent image masking task. valid when task type is Cutout.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param CutoutTask Query result of video content analysis intelligent image masking task. valid when task type is Cutout.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param CutoutTask 
      */
     public void setCutoutTask(AiAnalysisTaskCutoutResult CutoutTask) {
         this.CutoutTask = CutoutTask;
     }
 
     /**
-     * Get Query result of the video content analysis AI narration and video re-creation task. valid when the task type is Reel.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ReelTask Query result of the video content analysis AI narration and video re-creation task. valid when the task type is Reel.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return ReelTask 
      */
     public AiAnalysisTaskReelResult getReelTask() {
         return this.ReelTask;
     }
 
     /**
-     * Set Query result of the video content analysis AI narration and video re-creation task. valid when the task type is Reel.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ReelTask Query result of the video content analysis AI narration and video re-creation task. valid when the task type is Reel.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param ReelTask 
      */
     public void setReelTask(AiAnalysisTaskReelResult ReelTask) {
         this.ReelTask = ReelTask;

@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class AiAnalysisTaskCoverOutput extends AbstractModel {
 
     /**
-    * List of intelligently generated covers.
+    * Intelligent cover list.
     */
     @SerializedName("CoverSet")
     @Expose
     private MediaAiAnalysisCoverItem [] CoverSet;
 
     /**
-    * Storage location of intelligently generated cover.
+    * Intelligent cover storage location.
     */
     @SerializedName("OutputStorage")
     @Expose
     private TaskOutputStorage OutputStorage;
 
     /**
-     * Get List of intelligently generated covers. 
-     * @return CoverSet List of intelligently generated covers.
+     * Get Intelligent cover list. 
+     * @return CoverSet Intelligent cover list.
      */
     public MediaAiAnalysisCoverItem [] getCoverSet() {
         return this.CoverSet;
     }
 
     /**
-     * Set List of intelligently generated covers.
-     * @param CoverSet List of intelligently generated covers.
+     * Set Intelligent cover list.
+     * @param CoverSet Intelligent cover list.
      */
     public void setCoverSet(MediaAiAnalysisCoverItem [] CoverSet) {
         this.CoverSet = CoverSet;
     }
 
     /**
-     * Get Storage location of intelligently generated cover. 
-     * @return OutputStorage Storage location of intelligently generated cover.
+     * Get Intelligent cover storage location. 
+     * @return OutputStorage Intelligent cover storage location.
      */
     public TaskOutputStorage getOutputStorage() {
         return this.OutputStorage;
     }
 
     /**
-     * Set Storage location of intelligently generated cover.
-     * @param OutputStorage Storage location of intelligently generated cover.
+     * Set Intelligent cover storage location.
+     * @param OutputStorage Intelligent cover storage location.
      */
     public void setOutputStorage(TaskOutputStorage OutputStorage) {
         this.OutputStorage = OutputStorage;

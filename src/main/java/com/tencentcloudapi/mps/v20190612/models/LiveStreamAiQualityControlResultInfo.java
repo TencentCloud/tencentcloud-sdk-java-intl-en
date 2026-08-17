@@ -24,8 +24,7 @@ import java.util.HashMap;
 public class LiveStreamAiQualityControlResultInfo extends AbstractModel {
 
     /**
-    * Content quality inspection result list.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("QualityControlResults")
     @Expose
@@ -39,26 +38,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private DiagnoseResult [] DiagnoseResults;
 
     /**
-    * Content quality inspection result list.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("QualityControlResultSet")
     @Expose
     private QualityControlResult [] QualityControlResultSet;
 
     /**
-    * Format diagnostic result list.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("DiagnoseResultSet")
     @Expose
     private DiagnoseResult [] DiagnoseResultSet;
 
     /**
-     * Get Content quality inspection result list.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return QualityControlResults Content quality inspection result list.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return QualityControlResults 
      * @deprecated
      */
     @Deprecated
@@ -67,10 +62,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Content quality inspection result list.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param QualityControlResults Content quality inspection result list.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param QualityControlResults 
      * @deprecated
      */
     @Deprecated
@@ -99,40 +92,32 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Content quality inspection result list.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return QualityControlResultSet Content quality inspection result list.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return QualityControlResultSet 
      */
     public QualityControlResult [] getQualityControlResultSet() {
         return this.QualityControlResultSet;
     }
 
     /**
-     * Set Content quality inspection result list.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param QualityControlResultSet Content quality inspection result list.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param QualityControlResultSet 
      */
     public void setQualityControlResultSet(QualityControlResult [] QualityControlResultSet) {
         this.QualityControlResultSet = QualityControlResultSet;
     }
 
     /**
-     * Get Format diagnostic result list.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return DiagnoseResultSet Format diagnostic result list.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return DiagnoseResultSet 
      */
     public DiagnoseResult [] getDiagnoseResultSet() {
         return this.DiagnoseResultSet;
     }
 
     /**
-     * Set Format diagnostic result list.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param DiagnoseResultSet Format diagnostic result list.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param DiagnoseResultSet 
      */
     public void setDiagnoseResultSet(DiagnoseResult [] DiagnoseResultSet) {
         this.DiagnoseResultSet = DiagnoseResultSet;

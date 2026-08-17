@@ -31,26 +31,21 @@ public class SubtitleEmbedTemplateItem extends AbstractModel {
     private Long Definition;
 
     /**
-    * Subtitle suppression template name
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * Subtitle suppression template description
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("Comment")
     @Expose
     private String Comment;
 
     /**
-    * Template type. Valid values:
-* Preset: system preset template
-* Custom: user-defined template.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("Type")
     @Expose
@@ -85,8 +80,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private SubtitleEmbedConfig SubtitleEmbedConfig;
 
     /**
-    * Subtitle suppression template English name
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("AliasName")
     @Expose
@@ -109,68 +103,48 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Subtitle suppression template name
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Name Subtitle suppression template name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return Name 
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Subtitle suppression template name
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Name Subtitle suppression template name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param Name 
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get Subtitle suppression template description
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Comment Subtitle suppression template description
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return Comment 
      */
     public String getComment() {
         return this.Comment;
     }
 
     /**
-     * Set Subtitle suppression template description
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Comment Subtitle suppression template description
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param Comment 
      */
     public void setComment(String Comment) {
         this.Comment = Comment;
     }
 
     /**
-     * Get Template type. Valid values:
-* Preset: system preset template
-* Custom: user-defined template.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Type Template type. Valid values:
-* Preset: system preset template
-* Custom: user-defined template.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return Type 
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set Template type. Valid values:
-* Preset: system preset template
-* Custom: user-defined template.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Type Template type. Valid values:
-* Preset: system preset template
-* Custom: user-defined template.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param Type 
      */
     public void setType(String Type) {
         this.Type = Type;
@@ -241,20 +215,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Subtitle suppression template English name
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return AliasName Subtitle suppression template English name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return AliasName 
      */
     public String getAliasName() {
         return this.AliasName;
     }
 
     /**
-     * Set Subtitle suppression template English name
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param AliasName Subtitle suppression template English name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param AliasName 
      */
     public void setAliasName(String AliasName) {
         this.AliasName = AliasName;

@@ -24,33 +24,33 @@ import java.util.HashMap;
 public class CoverConfigureInfo extends AbstractModel {
 
     /**
-    * Switch of intelligent cover generating task. Valid values:
-<li>ON: enables intelligent cover generating task;</li>
-<li>OFF: disables intelligent cover generating task.</li>
+    * Intelligent Cover Task Switch. Valid values:
+<li>ON: Enable intelligent thumbnail generation.</li>
+<li>OFF: Disables the intelligent thumbnail generation task.</li>
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-     * Get Switch of intelligent cover generating task. Valid values:
-<li>ON: enables intelligent cover generating task;</li>
-<li>OFF: disables intelligent cover generating task.</li> 
-     * @return Switch Switch of intelligent cover generating task. Valid values:
-<li>ON: enables intelligent cover generating task;</li>
-<li>OFF: disables intelligent cover generating task.</li>
+     * Get Intelligent Cover Task Switch. Valid values:
+<li>ON: Enable intelligent thumbnail generation.</li>
+<li>OFF: Disables the intelligent thumbnail generation task.</li> 
+     * @return Switch Intelligent Cover Task Switch. Valid values:
+<li>ON: Enable intelligent thumbnail generation.</li>
+<li>OFF: Disables the intelligent thumbnail generation task.</li>
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set Switch of intelligent cover generating task. Valid values:
-<li>ON: enables intelligent cover generating task;</li>
-<li>OFF: disables intelligent cover generating task.</li>
-     * @param Switch Switch of intelligent cover generating task. Valid values:
-<li>ON: enables intelligent cover generating task;</li>
-<li>OFF: disables intelligent cover generating task.</li>
+     * Set Intelligent Cover Task Switch. Valid values:
+<li>ON: Enable intelligent thumbnail generation.</li>
+<li>OFF: Disables the intelligent thumbnail generation task.</li>
+     * @param Switch Intelligent Cover Task Switch. Valid values:
+<li>ON: Enable intelligent thumbnail generation.</li>
+<li>OFF: Disables the intelligent thumbnail generation task.</li>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;

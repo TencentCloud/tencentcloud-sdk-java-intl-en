@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class MediaSnapshotByTimePicInfoItem extends AbstractModel {
 
     /**
-    * The timestamp (seconds) of the screenshot.
+    * The screenshot corresponds to the time offset in the video file, expressed in seconds.
     */
     @SerializedName("TimeOffset")
     @Expose
     private Float TimeOffset;
 
     /**
-    * Path to the screenshot.
+    * Path of the screenshot.
     */
     @SerializedName("Path")
     @Expose
     private String Path;
 
     /**
-    * List of watermarking template IDs if the screenshots are watermarked.
+    * If a screenshot is watermarked, list of template IDs used for watermarking.
     */
     @SerializedName("WaterMarkDefinition")
     @Expose
     private Long [] WaterMarkDefinition;
 
     /**
-     * Get The timestamp (seconds) of the screenshot. 
-     * @return TimeOffset The timestamp (seconds) of the screenshot.
+     * Get The screenshot corresponds to the time offset in the video file, expressed in seconds. 
+     * @return TimeOffset The screenshot corresponds to the time offset in the video file, expressed in seconds.
      */
     public Float getTimeOffset() {
         return this.TimeOffset;
     }
 
     /**
-     * Set The timestamp (seconds) of the screenshot.
-     * @param TimeOffset The timestamp (seconds) of the screenshot.
+     * Set The screenshot corresponds to the time offset in the video file, expressed in seconds.
+     * @param TimeOffset The screenshot corresponds to the time offset in the video file, expressed in seconds.
      */
     public void setTimeOffset(Float TimeOffset) {
         this.TimeOffset = TimeOffset;
     }
 
     /**
-     * Get Path to the screenshot. 
-     * @return Path Path to the screenshot.
+     * Get Path of the screenshot. 
+     * @return Path Path of the screenshot.
      */
     public String getPath() {
         return this.Path;
     }
 
     /**
-     * Set Path to the screenshot.
-     * @param Path Path to the screenshot.
+     * Set Path of the screenshot.
+     * @param Path Path of the screenshot.
      */
     public void setPath(String Path) {
         this.Path = Path;
     }
 
     /**
-     * Get List of watermarking template IDs if the screenshots are watermarked. 
-     * @return WaterMarkDefinition List of watermarking template IDs if the screenshots are watermarked.
+     * Get If a screenshot is watermarked, list of template IDs used for watermarking. 
+     * @return WaterMarkDefinition If a screenshot is watermarked, list of template IDs used for watermarking.
      */
     public Long [] getWaterMarkDefinition() {
         return this.WaterMarkDefinition;
     }
 
     /**
-     * Set List of watermarking template IDs if the screenshots are watermarked.
-     * @param WaterMarkDefinition List of watermarking template IDs if the screenshots are watermarked.
+     * Set If a screenshot is watermarked, list of template IDs used for watermarking.
+     * @param WaterMarkDefinition If a screenshot is watermarked, list of template IDs used for watermarking.
      */
     public void setWaterMarkDefinition(Long [] WaterMarkDefinition) {
         this.WaterMarkDefinition = WaterMarkDefinition;

@@ -24,127 +24,127 @@ import java.util.HashMap;
 public class AiReviewPoliticalTaskOutput extends AbstractModel {
 
     /**
-    * The confidence score for the detection of sensitive information. Value range: 0-100.
+    * Video sensitive content score, ranging from 0 to 100.
     */
     @SerializedName("Confidence")
     @Expose
     private Float Confidence;
 
     /**
-    * The suggestion for handling the sensitive information detected. Valid values:
-<li>pass</li>
-<li>review</li>
-<li>block</li>
+    * Result Suggestions for sensitive content, value ranges from...to...
+<li>pass.</li>
+<li>review.</li>
+<li>block.</li>
     */
     @SerializedName("Suggestion")
     @Expose
     private String Suggestion;
 
     /**
-    * The labels for the detected sensitive content. The relationship between the values of this parameter and those of the `LabelSet` parameter in [PoliticalImgReviewTemplateInfo](https://intl.cloud.tencent.com/document/api/862/37615?from_cn_redirect=1#AiReviewPoliticalTaskOutput) is as follows:
+    * Video sensitive content result tag. The mapping between the LabelSet parameter in the content moderation template's visual sensitive content task control parameter (https://www.tencentcloud.com/document/api/862/37615?from_cn_redirect=1#AiReviewPoliticalTaskOutput) and the parameter value range of this parameter:
 violation_photo:
-<li>violation_photo (banned icons)</li>
-Other values (politician/entertainment/sport/entrepreneur/scholar/celebrity/military):
-<li>politician</li>
+<li>violation_photo: violation icon.</li>
+Other (i.e., politician/entertainment/sport/entrepreneur/scholar/celebrity/military):
+<li>politician: sensitive person.</li>
     */
     @SerializedName("Label")
     @Expose
     private String Label;
 
     /**
-    * The video segments that contain sensitive information.
+    * List of video segments suspected of containing sensitive content.
     */
     @SerializedName("SegmentSet")
     @Expose
     private MediaContentReviewPoliticalSegmentItem [] SegmentSet;
 
     /**
-     * Get The confidence score for the detection of sensitive information. Value range: 0-100. 
-     * @return Confidence The confidence score for the detection of sensitive information. Value range: 0-100.
+     * Get Video sensitive content score, ranging from 0 to 100. 
+     * @return Confidence Video sensitive content score, ranging from 0 to 100.
      */
     public Float getConfidence() {
         return this.Confidence;
     }
 
     /**
-     * Set The confidence score for the detection of sensitive information. Value range: 0-100.
-     * @param Confidence The confidence score for the detection of sensitive information. Value range: 0-100.
+     * Set Video sensitive content score, ranging from 0 to 100.
+     * @param Confidence Video sensitive content score, ranging from 0 to 100.
      */
     public void setConfidence(Float Confidence) {
         this.Confidence = Confidence;
     }
 
     /**
-     * Get The suggestion for handling the sensitive information detected. Valid values:
-<li>pass</li>
-<li>review</li>
-<li>block</li> 
-     * @return Suggestion The suggestion for handling the sensitive information detected. Valid values:
-<li>pass</li>
-<li>review</li>
-<li>block</li>
+     * Get Result Suggestions for sensitive content, value ranges from...to...
+<li>pass.</li>
+<li>review.</li>
+<li>block.</li> 
+     * @return Suggestion Result Suggestions for sensitive content, value ranges from...to...
+<li>pass.</li>
+<li>review.</li>
+<li>block.</li>
      */
     public String getSuggestion() {
         return this.Suggestion;
     }
 
     /**
-     * Set The suggestion for handling the sensitive information detected. Valid values:
-<li>pass</li>
-<li>review</li>
-<li>block</li>
-     * @param Suggestion The suggestion for handling the sensitive information detected. Valid values:
-<li>pass</li>
-<li>review</li>
-<li>block</li>
+     * Set Result Suggestions for sensitive content, value ranges from...to...
+<li>pass.</li>
+<li>review.</li>
+<li>block.</li>
+     * @param Suggestion Result Suggestions for sensitive content, value ranges from...to...
+<li>pass.</li>
+<li>review.</li>
+<li>block.</li>
      */
     public void setSuggestion(String Suggestion) {
         this.Suggestion = Suggestion;
     }
 
     /**
-     * Get The labels for the detected sensitive content. The relationship between the values of this parameter and those of the `LabelSet` parameter in [PoliticalImgReviewTemplateInfo](https://intl.cloud.tencent.com/document/api/862/37615?from_cn_redirect=1#AiReviewPoliticalTaskOutput) is as follows:
+     * Get Video sensitive content result tag. The mapping between the LabelSet parameter in the content moderation template's visual sensitive content task control parameter (https://www.tencentcloud.com/document/api/862/37615?from_cn_redirect=1#AiReviewPoliticalTaskOutput) and the parameter value range of this parameter:
 violation_photo:
-<li>violation_photo (banned icons)</li>
-Other values (politician/entertainment/sport/entrepreneur/scholar/celebrity/military):
-<li>politician</li> 
-     * @return Label The labels for the detected sensitive content. The relationship between the values of this parameter and those of the `LabelSet` parameter in [PoliticalImgReviewTemplateInfo](https://intl.cloud.tencent.com/document/api/862/37615?from_cn_redirect=1#AiReviewPoliticalTaskOutput) is as follows:
+<li>violation_photo: violation icon.</li>
+Other (i.e., politician/entertainment/sport/entrepreneur/scholar/celebrity/military):
+<li>politician: sensitive person.</li> 
+     * @return Label Video sensitive content result tag. The mapping between the LabelSet parameter in the content moderation template's visual sensitive content task control parameter (https://www.tencentcloud.com/document/api/862/37615?from_cn_redirect=1#AiReviewPoliticalTaskOutput) and the parameter value range of this parameter:
 violation_photo:
-<li>violation_photo (banned icons)</li>
-Other values (politician/entertainment/sport/entrepreneur/scholar/celebrity/military):
-<li>politician</li>
+<li>violation_photo: violation icon.</li>
+Other (i.e., politician/entertainment/sport/entrepreneur/scholar/celebrity/military):
+<li>politician: sensitive person.</li>
      */
     public String getLabel() {
         return this.Label;
     }
 
     /**
-     * Set The labels for the detected sensitive content. The relationship between the values of this parameter and those of the `LabelSet` parameter in [PoliticalImgReviewTemplateInfo](https://intl.cloud.tencent.com/document/api/862/37615?from_cn_redirect=1#AiReviewPoliticalTaskOutput) is as follows:
+     * Set Video sensitive content result tag. The mapping between the LabelSet parameter in the content moderation template's visual sensitive content task control parameter (https://www.tencentcloud.com/document/api/862/37615?from_cn_redirect=1#AiReviewPoliticalTaskOutput) and the parameter value range of this parameter:
 violation_photo:
-<li>violation_photo (banned icons)</li>
-Other values (politician/entertainment/sport/entrepreneur/scholar/celebrity/military):
-<li>politician</li>
-     * @param Label The labels for the detected sensitive content. The relationship between the values of this parameter and those of the `LabelSet` parameter in [PoliticalImgReviewTemplateInfo](https://intl.cloud.tencent.com/document/api/862/37615?from_cn_redirect=1#AiReviewPoliticalTaskOutput) is as follows:
+<li>violation_photo: violation icon.</li>
+Other (i.e., politician/entertainment/sport/entrepreneur/scholar/celebrity/military):
+<li>politician: sensitive person.</li>
+     * @param Label Video sensitive content result tag. The mapping between the LabelSet parameter in the content moderation template's visual sensitive content task control parameter (https://www.tencentcloud.com/document/api/862/37615?from_cn_redirect=1#AiReviewPoliticalTaskOutput) and the parameter value range of this parameter:
 violation_photo:
-<li>violation_photo (banned icons)</li>
-Other values (politician/entertainment/sport/entrepreneur/scholar/celebrity/military):
-<li>politician</li>
+<li>violation_photo: violation icon.</li>
+Other (i.e., politician/entertainment/sport/entrepreneur/scholar/celebrity/military):
+<li>politician: sensitive person.</li>
      */
     public void setLabel(String Label) {
         this.Label = Label;
     }
 
     /**
-     * Get The video segments that contain sensitive information. 
-     * @return SegmentSet The video segments that contain sensitive information.
+     * Get List of video segments suspected of containing sensitive content. 
+     * @return SegmentSet List of video segments suspected of containing sensitive content.
      */
     public MediaContentReviewPoliticalSegmentItem [] getSegmentSet() {
         return this.SegmentSet;
     }
 
     /**
-     * Set The video segments that contain sensitive information.
-     * @param SegmentSet The video segments that contain sensitive information.
+     * Set List of video segments suspected of containing sensitive content.
+     * @param SegmentSet List of video segments suspected of containing sensitive content.
      */
     public void setSegmentSet(MediaContentReviewPoliticalSegmentItem [] SegmentSet) {
         this.SegmentSet = SegmentSet;

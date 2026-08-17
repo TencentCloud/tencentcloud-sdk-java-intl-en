@@ -24,171 +24,161 @@ import java.util.HashMap;
 public class MediaAiAnalysisHighlightItem extends AbstractModel {
 
     /**
-    * The URL of the highlight segments.
+    * Intelligent highlight address.
     */
     @SerializedName("HighlightPath")
     @Expose
     private String HighlightPath;
 
     /**
-    * The URL of the thumbnail.
+    * Intelligent highlight cover address.
     */
     @SerializedName("CovImgPath")
     @Expose
     private String CovImgPath;
 
     /**
-    * The confidence score. Value range: 0-100.
+    * Reliability of the intelligent highlights, with a value range from 0 to 100.
     */
     @SerializedName("Confidence")
     @Expose
     private Float Confidence;
 
     /**
-    * The duration of the highlights.
+    * Intelligent highlight duration.
     */
     @SerializedName("Duration")
     @Expose
     private Float Duration;
 
     /**
-    * A list of the highlight segments.
+    * Intelligent highlight sub-clip list.
     */
     @SerializedName("SegmentSet")
     @Expose
     private HighlightSegmentItem [] SegmentSet;
 
     /**
-    * Intelligent highlight address.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("HighlightUrl")
     @Expose
     private String HighlightUrl;
 
     /**
-    * Intelligent highlight cover address.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("CovImgUrl")
     @Expose
     private String CovImgUrl;
 
     /**
-     * Get The URL of the highlight segments. 
-     * @return HighlightPath The URL of the highlight segments.
+     * Get Intelligent highlight address. 
+     * @return HighlightPath Intelligent highlight address.
      */
     public String getHighlightPath() {
         return this.HighlightPath;
     }
 
     /**
-     * Set The URL of the highlight segments.
-     * @param HighlightPath The URL of the highlight segments.
+     * Set Intelligent highlight address.
+     * @param HighlightPath Intelligent highlight address.
      */
     public void setHighlightPath(String HighlightPath) {
         this.HighlightPath = HighlightPath;
     }
 
     /**
-     * Get The URL of the thumbnail. 
-     * @return CovImgPath The URL of the thumbnail.
+     * Get Intelligent highlight cover address. 
+     * @return CovImgPath Intelligent highlight cover address.
      */
     public String getCovImgPath() {
         return this.CovImgPath;
     }
 
     /**
-     * Set The URL of the thumbnail.
-     * @param CovImgPath The URL of the thumbnail.
+     * Set Intelligent highlight cover address.
+     * @param CovImgPath Intelligent highlight cover address.
      */
     public void setCovImgPath(String CovImgPath) {
         this.CovImgPath = CovImgPath;
     }
 
     /**
-     * Get The confidence score. Value range: 0-100. 
-     * @return Confidence The confidence score. Value range: 0-100.
+     * Get Reliability of the intelligent highlights, with a value range from 0 to 100. 
+     * @return Confidence Reliability of the intelligent highlights, with a value range from 0 to 100.
      */
     public Float getConfidence() {
         return this.Confidence;
     }
 
     /**
-     * Set The confidence score. Value range: 0-100.
-     * @param Confidence The confidence score. Value range: 0-100.
+     * Set Reliability of the intelligent highlights, with a value range from 0 to 100.
+     * @param Confidence Reliability of the intelligent highlights, with a value range from 0 to 100.
      */
     public void setConfidence(Float Confidence) {
         this.Confidence = Confidence;
     }
 
     /**
-     * Get The duration of the highlights. 
-     * @return Duration The duration of the highlights.
+     * Get Intelligent highlight duration. 
+     * @return Duration Intelligent highlight duration.
      */
     public Float getDuration() {
         return this.Duration;
     }
 
     /**
-     * Set The duration of the highlights.
-     * @param Duration The duration of the highlights.
+     * Set Intelligent highlight duration.
+     * @param Duration Intelligent highlight duration.
      */
     public void setDuration(Float Duration) {
         this.Duration = Duration;
     }
 
     /**
-     * Get A list of the highlight segments. 
-     * @return SegmentSet A list of the highlight segments.
+     * Get Intelligent highlight sub-clip list. 
+     * @return SegmentSet Intelligent highlight sub-clip list.
      */
     public HighlightSegmentItem [] getSegmentSet() {
         return this.SegmentSet;
     }
 
     /**
-     * Set A list of the highlight segments.
-     * @param SegmentSet A list of the highlight segments.
+     * Set Intelligent highlight sub-clip list.
+     * @param SegmentSet Intelligent highlight sub-clip list.
      */
     public void setSegmentSet(HighlightSegmentItem [] SegmentSet) {
         this.SegmentSet = SegmentSet;
     }
 
     /**
-     * Get Intelligent highlight address.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return HighlightUrl Intelligent highlight address.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return HighlightUrl 
      */
     public String getHighlightUrl() {
         return this.HighlightUrl;
     }
 
     /**
-     * Set Intelligent highlight address.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param HighlightUrl Intelligent highlight address.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param HighlightUrl 
      */
     public void setHighlightUrl(String HighlightUrl) {
         this.HighlightUrl = HighlightUrl;
     }
 
     /**
-     * Get Intelligent highlight cover address.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return CovImgUrl Intelligent highlight cover address.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return CovImgUrl 
      */
     public String getCovImgUrl() {
         return this.CovImgUrl;
     }
 
     /**
-     * Set Intelligent highlight cover address.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param CovImgUrl Intelligent highlight cover address.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param CovImgUrl 
      */
     public void setCovImgUrl(String CovImgUrl) {
         this.CovImgUrl = CovImgUrl;

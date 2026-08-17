@@ -24,8 +24,7 @@ import java.util.HashMap;
 public class SmartSubtitleTaskAsrFullTextResultOutput extends AbstractModel {
 
     /**
-    * <p>List of segments for full speech recognition.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("SegmentSet")
     @Expose
@@ -60,20 +59,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private TaskOutputStorage OutputStorage;
 
     /**
-     * Get <p>List of segments for full speech recognition.</p>
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return SegmentSet <p>List of segments for full speech recognition.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return SegmentSet 
      */
     public SmartSubtitleTaskAsrFullTextSegmentItem [] getSegmentSet() {
         return this.SegmentSet;
     }
 
     /**
-     * Set <p>List of segments for full speech recognition.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param SegmentSet <p>List of segments for full speech recognition.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param SegmentSet 
      */
     public void setSegmentSet(SmartSubtitleTaskAsrFullTextSegmentItem [] SegmentSet) {
         this.SegmentSet = SegmentSet;

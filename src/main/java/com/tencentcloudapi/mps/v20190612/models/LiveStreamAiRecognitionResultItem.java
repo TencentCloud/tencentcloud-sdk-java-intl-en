@@ -30,9 +30,8 @@ public class LiveStreamAiRecognitionResultItem extends AbstractModel {
 <li>OcrWordsRecognition: text keyword recognition.</li>
 <li>AsrFullTextRecognition: full speech recognition.</li>
 <li>OcrFullTextRecognition: full text recognition.</li>
-<li>TransTextRecognition: speech translation.</li>
-
-<li>ObjectRecognition: object recognition.</li>
+<li>TransTextRecognition: speech translation</li>
+<li>ObjectRecognition: object detection.</li>
 <li>TagRecognition: highlights marking.</li>
     */
     @SerializedName("Type")
@@ -40,47 +39,47 @@ public class LiveStreamAiRecognitionResultItem extends AbstractModel {
     private String Type;
 
     /**
-    * Face recognition result, which is valid when `Type` is
-`FaceRecognition`.
+    * Face recognition result, which is valid when Type is
+FaceRecognition is valid at that time.
     */
     @SerializedName("FaceRecognitionResultSet")
     @Expose
     private LiveStreamFaceRecognitionResult [] FaceRecognitionResultSet;
 
     /**
-    * Speech keyword recognition result, which is valid when `Type` is
-`AsrWordsRecognition`.
+    * Speech keyword recognition result. When Type is
+AsrWordsRecognition.
     */
     @SerializedName("AsrWordsRecognitionResultSet")
     @Expose
     private LiveStreamAsrWordsRecognitionResult [] AsrWordsRecognitionResultSet;
 
     /**
-    * Text keyword recognition result, which is valid when `Type` is
-`OcrWordsRecognition`.
+    * Text keyword recognition result. When Type is
+OcrWordsRecognition.
     */
     @SerializedName("OcrWordsRecognitionResultSet")
     @Expose
     private LiveStreamOcrWordsRecognitionResult [] OcrWordsRecognitionResultSet;
 
     /**
-    * Full speech recognition result, which is valid when `Type` is
-`AsrFullTextRecognition`.
+    * Full speech recognition result. When Type is
+AsrFullTextRecognition.
     */
     @SerializedName("AsrFullTextRecognitionResultSet")
     @Expose
     private LiveStreamAsrFullTextRecognitionResult [] AsrFullTextRecognitionResultSet;
 
     /**
-    * Full text recognition result, which is valid when `Type` is
-`OcrFullTextRecognition`.
+    * Full text recognition result, when Type is
+OcrFullTextRecognition.
     */
     @SerializedName("OcrFullTextRecognitionResultSet")
     @Expose
     private LiveStreamOcrFullTextRecognitionResult [] OcrFullTextRecognitionResultSet;
 
     /**
-    * The translation result. This parameter is valid only if `Type` is `TransTextRecognition`.
+    * Translation result. Valid when Type is TransTextRecognition.
     */
     @SerializedName("TransTextRecognitionResultSet")
     @Expose
@@ -107,9 +106,8 @@ public class LiveStreamAiRecognitionResultItem extends AbstractModel {
 <li>OcrWordsRecognition: text keyword recognition.</li>
 <li>AsrFullTextRecognition: full speech recognition.</li>
 <li>OcrFullTextRecognition: full text recognition.</li>
-<li>TransTextRecognition: speech translation.</li>
-
-<li>ObjectRecognition: object recognition.</li>
+<li>TransTextRecognition: speech translation</li>
+<li>ObjectRecognition: object detection.</li>
 <li>TagRecognition: highlights marking.</li> 
      * @return Type Result type. Valid values:
 <li>FaceRecognition: face recognition.</li>
@@ -117,9 +115,8 @@ public class LiveStreamAiRecognitionResultItem extends AbstractModel {
 <li>OcrWordsRecognition: text keyword recognition.</li>
 <li>AsrFullTextRecognition: full speech recognition.</li>
 <li>OcrFullTextRecognition: full text recognition.</li>
-<li>TransTextRecognition: speech translation.</li>
-
-<li>ObjectRecognition: object recognition.</li>
+<li>TransTextRecognition: speech translation</li>
+<li>ObjectRecognition: object detection.</li>
 <li>TagRecognition: highlights marking.</li>
      */
     public String getType() {
@@ -133,9 +130,8 @@ public class LiveStreamAiRecognitionResultItem extends AbstractModel {
 <li>OcrWordsRecognition: text keyword recognition.</li>
 <li>AsrFullTextRecognition: full speech recognition.</li>
 <li>OcrFullTextRecognition: full text recognition.</li>
-<li>TransTextRecognition: speech translation.</li>
-
-<li>ObjectRecognition: object recognition.</li>
+<li>TransTextRecognition: speech translation</li>
+<li>ObjectRecognition: object detection.</li>
 <li>TagRecognition: highlights marking.</li>
      * @param Type Result type. Valid values:
 <li>FaceRecognition: face recognition.</li>
@@ -143,9 +139,8 @@ public class LiveStreamAiRecognitionResultItem extends AbstractModel {
 <li>OcrWordsRecognition: text keyword recognition.</li>
 <li>AsrFullTextRecognition: full speech recognition.</li>
 <li>OcrFullTextRecognition: full text recognition.</li>
-<li>TransTextRecognition: speech translation.</li>
-
-<li>ObjectRecognition: object recognition.</li>
+<li>TransTextRecognition: speech translation</li>
+<li>ObjectRecognition: object detection.</li>
 <li>TagRecognition: highlights marking.</li>
      */
     public void setType(String Type) {
@@ -153,116 +148,116 @@ public class LiveStreamAiRecognitionResultItem extends AbstractModel {
     }
 
     /**
-     * Get Face recognition result, which is valid when `Type` is
-`FaceRecognition`. 
-     * @return FaceRecognitionResultSet Face recognition result, which is valid when `Type` is
-`FaceRecognition`.
+     * Get Face recognition result, which is valid when Type is
+FaceRecognition is valid at that time. 
+     * @return FaceRecognitionResultSet Face recognition result, which is valid when Type is
+FaceRecognition is valid at that time.
      */
     public LiveStreamFaceRecognitionResult [] getFaceRecognitionResultSet() {
         return this.FaceRecognitionResultSet;
     }
 
     /**
-     * Set Face recognition result, which is valid when `Type` is
-`FaceRecognition`.
-     * @param FaceRecognitionResultSet Face recognition result, which is valid when `Type` is
-`FaceRecognition`.
+     * Set Face recognition result, which is valid when Type is
+FaceRecognition is valid at that time.
+     * @param FaceRecognitionResultSet Face recognition result, which is valid when Type is
+FaceRecognition is valid at that time.
      */
     public void setFaceRecognitionResultSet(LiveStreamFaceRecognitionResult [] FaceRecognitionResultSet) {
         this.FaceRecognitionResultSet = FaceRecognitionResultSet;
     }
 
     /**
-     * Get Speech keyword recognition result, which is valid when `Type` is
-`AsrWordsRecognition`. 
-     * @return AsrWordsRecognitionResultSet Speech keyword recognition result, which is valid when `Type` is
-`AsrWordsRecognition`.
+     * Get Speech keyword recognition result. When Type is
+AsrWordsRecognition. 
+     * @return AsrWordsRecognitionResultSet Speech keyword recognition result. When Type is
+AsrWordsRecognition.
      */
     public LiveStreamAsrWordsRecognitionResult [] getAsrWordsRecognitionResultSet() {
         return this.AsrWordsRecognitionResultSet;
     }
 
     /**
-     * Set Speech keyword recognition result, which is valid when `Type` is
-`AsrWordsRecognition`.
-     * @param AsrWordsRecognitionResultSet Speech keyword recognition result, which is valid when `Type` is
-`AsrWordsRecognition`.
+     * Set Speech keyword recognition result. When Type is
+AsrWordsRecognition.
+     * @param AsrWordsRecognitionResultSet Speech keyword recognition result. When Type is
+AsrWordsRecognition.
      */
     public void setAsrWordsRecognitionResultSet(LiveStreamAsrWordsRecognitionResult [] AsrWordsRecognitionResultSet) {
         this.AsrWordsRecognitionResultSet = AsrWordsRecognitionResultSet;
     }
 
     /**
-     * Get Text keyword recognition result, which is valid when `Type` is
-`OcrWordsRecognition`. 
-     * @return OcrWordsRecognitionResultSet Text keyword recognition result, which is valid when `Type` is
-`OcrWordsRecognition`.
+     * Get Text keyword recognition result. When Type is
+OcrWordsRecognition. 
+     * @return OcrWordsRecognitionResultSet Text keyword recognition result. When Type is
+OcrWordsRecognition.
      */
     public LiveStreamOcrWordsRecognitionResult [] getOcrWordsRecognitionResultSet() {
         return this.OcrWordsRecognitionResultSet;
     }
 
     /**
-     * Set Text keyword recognition result, which is valid when `Type` is
-`OcrWordsRecognition`.
-     * @param OcrWordsRecognitionResultSet Text keyword recognition result, which is valid when `Type` is
-`OcrWordsRecognition`.
+     * Set Text keyword recognition result. When Type is
+OcrWordsRecognition.
+     * @param OcrWordsRecognitionResultSet Text keyword recognition result. When Type is
+OcrWordsRecognition.
      */
     public void setOcrWordsRecognitionResultSet(LiveStreamOcrWordsRecognitionResult [] OcrWordsRecognitionResultSet) {
         this.OcrWordsRecognitionResultSet = OcrWordsRecognitionResultSet;
     }
 
     /**
-     * Get Full speech recognition result, which is valid when `Type` is
-`AsrFullTextRecognition`. 
-     * @return AsrFullTextRecognitionResultSet Full speech recognition result, which is valid when `Type` is
-`AsrFullTextRecognition`.
+     * Get Full speech recognition result. When Type is
+AsrFullTextRecognition. 
+     * @return AsrFullTextRecognitionResultSet Full speech recognition result. When Type is
+AsrFullTextRecognition.
      */
     public LiveStreamAsrFullTextRecognitionResult [] getAsrFullTextRecognitionResultSet() {
         return this.AsrFullTextRecognitionResultSet;
     }
 
     /**
-     * Set Full speech recognition result, which is valid when `Type` is
-`AsrFullTextRecognition`.
-     * @param AsrFullTextRecognitionResultSet Full speech recognition result, which is valid when `Type` is
-`AsrFullTextRecognition`.
+     * Set Full speech recognition result. When Type is
+AsrFullTextRecognition.
+     * @param AsrFullTextRecognitionResultSet Full speech recognition result. When Type is
+AsrFullTextRecognition.
      */
     public void setAsrFullTextRecognitionResultSet(LiveStreamAsrFullTextRecognitionResult [] AsrFullTextRecognitionResultSet) {
         this.AsrFullTextRecognitionResultSet = AsrFullTextRecognitionResultSet;
     }
 
     /**
-     * Get Full text recognition result, which is valid when `Type` is
-`OcrFullTextRecognition`. 
-     * @return OcrFullTextRecognitionResultSet Full text recognition result, which is valid when `Type` is
-`OcrFullTextRecognition`.
+     * Get Full text recognition result, when Type is
+OcrFullTextRecognition. 
+     * @return OcrFullTextRecognitionResultSet Full text recognition result, when Type is
+OcrFullTextRecognition.
      */
     public LiveStreamOcrFullTextRecognitionResult [] getOcrFullTextRecognitionResultSet() {
         return this.OcrFullTextRecognitionResultSet;
     }
 
     /**
-     * Set Full text recognition result, which is valid when `Type` is
-`OcrFullTextRecognition`.
-     * @param OcrFullTextRecognitionResultSet Full text recognition result, which is valid when `Type` is
-`OcrFullTextRecognition`.
+     * Set Full text recognition result, when Type is
+OcrFullTextRecognition.
+     * @param OcrFullTextRecognitionResultSet Full text recognition result, when Type is
+OcrFullTextRecognition.
      */
     public void setOcrFullTextRecognitionResultSet(LiveStreamOcrFullTextRecognitionResult [] OcrFullTextRecognitionResultSet) {
         this.OcrFullTextRecognitionResultSet = OcrFullTextRecognitionResultSet;
     }
 
     /**
-     * Get The translation result. This parameter is valid only if `Type` is `TransTextRecognition`. 
-     * @return TransTextRecognitionResultSet The translation result. This parameter is valid only if `Type` is `TransTextRecognition`.
+     * Get Translation result. Valid when Type is TransTextRecognition. 
+     * @return TransTextRecognitionResultSet Translation result. Valid when Type is TransTextRecognition.
      */
     public LiveStreamTransTextRecognitionResult [] getTransTextRecognitionResultSet() {
         return this.TransTextRecognitionResultSet;
     }
 
     /**
-     * Set The translation result. This parameter is valid only if `Type` is `TransTextRecognition`.
-     * @param TransTextRecognitionResultSet The translation result. This parameter is valid only if `Type` is `TransTextRecognition`.
+     * Set Translation result. Valid when Type is TransTextRecognition.
+     * @param TransTextRecognitionResultSet Translation result. Valid when Type is TransTextRecognition.
      */
     public void setTransTextRecognitionResultSet(LiveStreamTransTextRecognitionResult [] TransTextRecognitionResultSet) {
         this.TransTextRecognitionResultSet = TransTextRecognitionResultSet;

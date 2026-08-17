@@ -24,339 +24,339 @@ import java.util.HashMap;
 public class AiRecognitionTaskFaceResultItem extends AbstractModel {
 
     /**
-    * Unique ID of a figure.
+    * Unique identification ID of the figure.
     */
     @SerializedName("Id")
     @Expose
     private String Id;
 
     /**
-    * Figure library type, indicating to which figure library the recognized figure belongs:
-<li>Default: Default figure library;</li>
-<li>UserDefine: Custom figure library.</li>
+    * Figure library type, indicates which figure library the recognized figure comes from.
+<li>Default: default figure library;</li>
+<li>UserDefine: user-defined character library.</li>
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * Name of a figure.
+    * Figure name.
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * Result set of segments that contain a figure.
+    * Result set of segments that contain people.
     */
     @SerializedName("SegmentSet")
     @Expose
     private AiRecognitionTaskFaceSegmentItem [] SegmentSet;
 
     /**
-    * Gender of the person.
-<Li>Male: man.</li>.
-<Li>Female: specifies the woman.</li>.
+    * Gender
+<li>Male: man</li>
+<li>Female: woman.</li>
     */
     @SerializedName("Gender")
     @Expose
     private String Gender;
 
     /**
-    * Date of birth.
+    * Date of birth of a person.
     */
     @SerializedName("Birthday")
     @Expose
     private String Birthday;
 
     /**
-    * Occupation or position of a person.
+    * Occupation or position.
     */
     @SerializedName("Profession")
     @Expose
     private String Profession;
 
     /**
-    * Specifies the graduation institution of the person.
+    * Graduation institution of the person.
     */
     @SerializedName("SchoolOfGraduation")
     @Expose
     private String SchoolOfGraduation;
 
     /**
-    * Description of the person.
+    * Figure description.
     */
     @SerializedName("Abstract")
     @Expose
     private String Abstract;
 
     /**
-    * Specifies the birthplace or place of origin.
+    * Birthplace or place of origin of a person.
     */
     @SerializedName("PlaceOfBirth")
     @Expose
     private String PlaceOfBirth;
 
     /**
-    * Person type.
-<Li>Politician: specifies the official.</li>.
-<Li>Artist: specifies the artist.</li>.
+    * Person type:
+<li>Politician: official.</li>
+<li>Artist: artist.</li>
     */
     @SerializedName("PersonType")
     @Expose
     private String PersonType;
 
     /**
-    * Sensitivity labeling.
-<Li>Normal: specifies the scaling group is normal.</li>.
-<Li>Sensitive: specifies sensitivity.</li>.
+    * Sensitivity labeling:
+<li>NORMAL: Normal;</li>
+<li>Sensitive: sensitive.</li>
     */
     @SerializedName("Remark")
     @Expose
     private String Remark;
 
     /**
-    * Specifies the screenshot link.
+    * Screenshot link
     */
     @SerializedName("Url")
     @Expose
     private String Url;
 
     /**
-     * Get Unique ID of a figure. 
-     * @return Id Unique ID of a figure.
+     * Get Unique identification ID of the figure. 
+     * @return Id Unique identification ID of the figure.
      */
     public String getId() {
         return this.Id;
     }
 
     /**
-     * Set Unique ID of a figure.
-     * @param Id Unique ID of a figure.
+     * Set Unique identification ID of the figure.
+     * @param Id Unique identification ID of the figure.
      */
     public void setId(String Id) {
         this.Id = Id;
     }
 
     /**
-     * Get Figure library type, indicating to which figure library the recognized figure belongs:
-<li>Default: Default figure library;</li>
-<li>UserDefine: Custom figure library.</li> 
-     * @return Type Figure library type, indicating to which figure library the recognized figure belongs:
-<li>Default: Default figure library;</li>
-<li>UserDefine: Custom figure library.</li>
+     * Get Figure library type, indicates which figure library the recognized figure comes from.
+<li>Default: default figure library;</li>
+<li>UserDefine: user-defined character library.</li> 
+     * @return Type Figure library type, indicates which figure library the recognized figure comes from.
+<li>Default: default figure library;</li>
+<li>UserDefine: user-defined character library.</li>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set Figure library type, indicating to which figure library the recognized figure belongs:
-<li>Default: Default figure library;</li>
-<li>UserDefine: Custom figure library.</li>
-     * @param Type Figure library type, indicating to which figure library the recognized figure belongs:
-<li>Default: Default figure library;</li>
-<li>UserDefine: Custom figure library.</li>
+     * Set Figure library type, indicates which figure library the recognized figure comes from.
+<li>Default: default figure library;</li>
+<li>UserDefine: user-defined character library.</li>
+     * @param Type Figure library type, indicates which figure library the recognized figure comes from.
+<li>Default: default figure library;</li>
+<li>UserDefine: user-defined character library.</li>
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get Name of a figure. 
-     * @return Name Name of a figure.
+     * Get Figure name. 
+     * @return Name Figure name.
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Name of a figure.
-     * @param Name Name of a figure.
+     * Set Figure name.
+     * @param Name Figure name.
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get Result set of segments that contain a figure. 
-     * @return SegmentSet Result set of segments that contain a figure.
+     * Get Result set of segments that contain people. 
+     * @return SegmentSet Result set of segments that contain people.
      */
     public AiRecognitionTaskFaceSegmentItem [] getSegmentSet() {
         return this.SegmentSet;
     }
 
     /**
-     * Set Result set of segments that contain a figure.
-     * @param SegmentSet Result set of segments that contain a figure.
+     * Set Result set of segments that contain people.
+     * @param SegmentSet Result set of segments that contain people.
      */
     public void setSegmentSet(AiRecognitionTaskFaceSegmentItem [] SegmentSet) {
         this.SegmentSet = SegmentSet;
     }
 
     /**
-     * Get Gender of the person.
-<Li>Male: man.</li>.
-<Li>Female: specifies the woman.</li>. 
-     * @return Gender Gender of the person.
-<Li>Male: man.</li>.
-<Li>Female: specifies the woman.</li>.
+     * Get Gender
+<li>Male: man</li>
+<li>Female: woman.</li> 
+     * @return Gender Gender
+<li>Male: man</li>
+<li>Female: woman.</li>
      */
     public String getGender() {
         return this.Gender;
     }
 
     /**
-     * Set Gender of the person.
-<Li>Male: man.</li>.
-<Li>Female: specifies the woman.</li>.
-     * @param Gender Gender of the person.
-<Li>Male: man.</li>.
-<Li>Female: specifies the woman.</li>.
+     * Set Gender
+<li>Male: man</li>
+<li>Female: woman.</li>
+     * @param Gender Gender
+<li>Male: man</li>
+<li>Female: woman.</li>
      */
     public void setGender(String Gender) {
         this.Gender = Gender;
     }
 
     /**
-     * Get Date of birth. 
-     * @return Birthday Date of birth.
+     * Get Date of birth of a person. 
+     * @return Birthday Date of birth of a person.
      */
     public String getBirthday() {
         return this.Birthday;
     }
 
     /**
-     * Set Date of birth.
-     * @param Birthday Date of birth.
+     * Set Date of birth of a person.
+     * @param Birthday Date of birth of a person.
      */
     public void setBirthday(String Birthday) {
         this.Birthday = Birthday;
     }
 
     /**
-     * Get Occupation or position of a person. 
-     * @return Profession Occupation or position of a person.
+     * Get Occupation or position. 
+     * @return Profession Occupation or position.
      */
     public String getProfession() {
         return this.Profession;
     }
 
     /**
-     * Set Occupation or position of a person.
-     * @param Profession Occupation or position of a person.
+     * Set Occupation or position.
+     * @param Profession Occupation or position.
      */
     public void setProfession(String Profession) {
         this.Profession = Profession;
     }
 
     /**
-     * Get Specifies the graduation institution of the person. 
-     * @return SchoolOfGraduation Specifies the graduation institution of the person.
+     * Get Graduation institution of the person. 
+     * @return SchoolOfGraduation Graduation institution of the person.
      */
     public String getSchoolOfGraduation() {
         return this.SchoolOfGraduation;
     }
 
     /**
-     * Set Specifies the graduation institution of the person.
-     * @param SchoolOfGraduation Specifies the graduation institution of the person.
+     * Set Graduation institution of the person.
+     * @param SchoolOfGraduation Graduation institution of the person.
      */
     public void setSchoolOfGraduation(String SchoolOfGraduation) {
         this.SchoolOfGraduation = SchoolOfGraduation;
     }
 
     /**
-     * Get Description of the person. 
-     * @return Abstract Description of the person.
+     * Get Figure description. 
+     * @return Abstract Figure description.
      */
     public String getAbstract() {
         return this.Abstract;
     }
 
     /**
-     * Set Description of the person.
-     * @param Abstract Description of the person.
+     * Set Figure description.
+     * @param Abstract Figure description.
      */
     public void setAbstract(String Abstract) {
         this.Abstract = Abstract;
     }
 
     /**
-     * Get Specifies the birthplace or place of origin. 
-     * @return PlaceOfBirth Specifies the birthplace or place of origin.
+     * Get Birthplace or place of origin of a person. 
+     * @return PlaceOfBirth Birthplace or place of origin of a person.
      */
     public String getPlaceOfBirth() {
         return this.PlaceOfBirth;
     }
 
     /**
-     * Set Specifies the birthplace or place of origin.
-     * @param PlaceOfBirth Specifies the birthplace or place of origin.
+     * Set Birthplace or place of origin of a person.
+     * @param PlaceOfBirth Birthplace or place of origin of a person.
      */
     public void setPlaceOfBirth(String PlaceOfBirth) {
         this.PlaceOfBirth = PlaceOfBirth;
     }
 
     /**
-     * Get Person type.
-<Li>Politician: specifies the official.</li>.
-<Li>Artist: specifies the artist.</li>. 
-     * @return PersonType Person type.
-<Li>Politician: specifies the official.</li>.
-<Li>Artist: specifies the artist.</li>.
+     * Get Person type:
+<li>Politician: official.</li>
+<li>Artist: artist.</li> 
+     * @return PersonType Person type:
+<li>Politician: official.</li>
+<li>Artist: artist.</li>
      */
     public String getPersonType() {
         return this.PersonType;
     }
 
     /**
-     * Set Person type.
-<Li>Politician: specifies the official.</li>.
-<Li>Artist: specifies the artist.</li>.
-     * @param PersonType Person type.
-<Li>Politician: specifies the official.</li>.
-<Li>Artist: specifies the artist.</li>.
+     * Set Person type:
+<li>Politician: official.</li>
+<li>Artist: artist.</li>
+     * @param PersonType Person type:
+<li>Politician: official.</li>
+<li>Artist: artist.</li>
      */
     public void setPersonType(String PersonType) {
         this.PersonType = PersonType;
     }
 
     /**
-     * Get Sensitivity labeling.
-<Li>Normal: specifies the scaling group is normal.</li>.
-<Li>Sensitive: specifies sensitivity.</li>. 
-     * @return Remark Sensitivity labeling.
-<Li>Normal: specifies the scaling group is normal.</li>.
-<Li>Sensitive: specifies sensitivity.</li>.
+     * Get Sensitivity labeling:
+<li>NORMAL: Normal;</li>
+<li>Sensitive: sensitive.</li> 
+     * @return Remark Sensitivity labeling:
+<li>NORMAL: Normal;</li>
+<li>Sensitive: sensitive.</li>
      */
     public String getRemark() {
         return this.Remark;
     }
 
     /**
-     * Set Sensitivity labeling.
-<Li>Normal: specifies the scaling group is normal.</li>.
-<Li>Sensitive: specifies sensitivity.</li>.
-     * @param Remark Sensitivity labeling.
-<Li>Normal: specifies the scaling group is normal.</li>.
-<Li>Sensitive: specifies sensitivity.</li>.
+     * Set Sensitivity labeling:
+<li>NORMAL: Normal;</li>
+<li>Sensitive: sensitive.</li>
+     * @param Remark Sensitivity labeling:
+<li>NORMAL: Normal;</li>
+<li>Sensitive: sensitive.</li>
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;
     }
 
     /**
-     * Get Specifies the screenshot link. 
-     * @return Url Specifies the screenshot link.
+     * Get Screenshot link 
+     * @return Url Screenshot link
      */
     public String getUrl() {
         return this.Url;
     }
 
     /**
-     * Set Specifies the screenshot link.
-     * @param Url Specifies the screenshot link.
+     * Set Screenshot link
+     * @param Url Screenshot link
      */
     public void setUrl(String Url) {
         this.Url = Url;

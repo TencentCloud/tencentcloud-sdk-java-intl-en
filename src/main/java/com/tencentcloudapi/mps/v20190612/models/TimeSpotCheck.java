@@ -26,8 +26,8 @@ public class TimeSpotCheck extends AbstractModel {
     /**
     * Duration of each loop detection, in seconds. Value range:
 
- - Minimum value: 10.
- - Maximum value: 86400.
+- Minimum value: 10.
+- Maximum value: 86400.
 
     */
     @SerializedName("CheckDuration")
@@ -36,8 +36,8 @@ public class TimeSpotCheck extends AbstractModel {
 
     /**
     * Detection interval, in seconds. It indicates the duration after a detection is completed and before the next detection is conducted. Value range:
- - Minimum value: 10.
- - Maximum value: 3600.
+- Minimum value: 10.
+- Maximum value: 3600.
     */
     @SerializedName("CheckInterval")
     @Expose
@@ -45,8 +45,8 @@ public class TimeSpotCheck extends AbstractModel {
 
     /**
     * Skipped opening duration, in seconds. Value range:
- - Minimum value: 1.
- - Maximum value: 1800.
+- Minimum value: 1.
+- Maximum value: 1800.
     */
     @SerializedName("SkipDuration")
     @Expose
@@ -54,8 +54,8 @@ public class TimeSpotCheck extends AbstractModel {
 
     /**
     * Number of loops. Value range:
- - Minimum value: 0.
- - Maximum value: 1000.
+- Minimum value: 0.
+- Maximum value: 1000.
 
 If the value is 0 or not specified, it indicates that loops are executed until the video ends.
     */
@@ -66,13 +66,13 @@ If the value is 0 or not specified, it indicates that loops are executed until t
     /**
      * Get Duration of each loop detection, in seconds. Value range:
 
- - Minimum value: 10.
- - Maximum value: 86400.
+- Minimum value: 10.
+- Maximum value: 86400.
  
      * @return CheckDuration Duration of each loop detection, in seconds. Value range:
 
- - Minimum value: 10.
- - Maximum value: 86400.
+- Minimum value: 10.
+- Maximum value: 86400.
 
      */
     public Long getCheckDuration() {
@@ -82,13 +82,13 @@ If the value is 0 or not specified, it indicates that loops are executed until t
     /**
      * Set Duration of each loop detection, in seconds. Value range:
 
- - Minimum value: 10.
- - Maximum value: 86400.
+- Minimum value: 10.
+- Maximum value: 86400.
 
      * @param CheckDuration Duration of each loop detection, in seconds. Value range:
 
- - Minimum value: 10.
- - Maximum value: 86400.
+- Minimum value: 10.
+- Maximum value: 86400.
 
      */
     public void setCheckDuration(Long CheckDuration) {
@@ -97,11 +97,11 @@ If the value is 0 or not specified, it indicates that loops are executed until t
 
     /**
      * Get Detection interval, in seconds. It indicates the duration after a detection is completed and before the next detection is conducted. Value range:
- - Minimum value: 10.
- - Maximum value: 3600. 
+- Minimum value: 10.
+- Maximum value: 3600. 
      * @return CheckInterval Detection interval, in seconds. It indicates the duration after a detection is completed and before the next detection is conducted. Value range:
- - Minimum value: 10.
- - Maximum value: 3600.
+- Minimum value: 10.
+- Maximum value: 3600.
      */
     public Long getCheckInterval() {
         return this.CheckInterval;
@@ -109,11 +109,11 @@ If the value is 0 or not specified, it indicates that loops are executed until t
 
     /**
      * Set Detection interval, in seconds. It indicates the duration after a detection is completed and before the next detection is conducted. Value range:
- - Minimum value: 10.
- - Maximum value: 3600.
+- Minimum value: 10.
+- Maximum value: 3600.
      * @param CheckInterval Detection interval, in seconds. It indicates the duration after a detection is completed and before the next detection is conducted. Value range:
- - Minimum value: 10.
- - Maximum value: 3600.
+- Minimum value: 10.
+- Maximum value: 3600.
      */
     public void setCheckInterval(Long CheckInterval) {
         this.CheckInterval = CheckInterval;
@@ -121,11 +121,11 @@ If the value is 0 or not specified, it indicates that loops are executed until t
 
     /**
      * Get Skipped opening duration, in seconds. Value range:
- - Minimum value: 1.
- - Maximum value: 1800. 
+- Minimum value: 1.
+- Maximum value: 1800. 
      * @return SkipDuration Skipped opening duration, in seconds. Value range:
- - Minimum value: 1.
- - Maximum value: 1800.
+- Minimum value: 1.
+- Maximum value: 1800.
      */
     public Long getSkipDuration() {
         return this.SkipDuration;
@@ -133,11 +133,11 @@ If the value is 0 or not specified, it indicates that loops are executed until t
 
     /**
      * Set Skipped opening duration, in seconds. Value range:
- - Minimum value: 1.
- - Maximum value: 1800.
+- Minimum value: 1.
+- Maximum value: 1800.
      * @param SkipDuration Skipped opening duration, in seconds. Value range:
- - Minimum value: 1.
- - Maximum value: 1800.
+- Minimum value: 1.
+- Maximum value: 1800.
      */
     public void setSkipDuration(Long SkipDuration) {
         this.SkipDuration = SkipDuration;
@@ -145,13 +145,13 @@ If the value is 0 or not specified, it indicates that loops are executed until t
 
     /**
      * Get Number of loops. Value range:
- - Minimum value: 0.
- - Maximum value: 1000.
+- Minimum value: 0.
+- Maximum value: 1000.
 
 If the value is 0 or not specified, it indicates that loops are executed until the video ends. 
      * @return CirclesNumber Number of loops. Value range:
- - Minimum value: 0.
- - Maximum value: 1000.
+- Minimum value: 0.
+- Maximum value: 1000.
 
 If the value is 0 or not specified, it indicates that loops are executed until the video ends.
      */
@@ -161,13 +161,13 @@ If the value is 0 or not specified, it indicates that loops are executed until t
 
     /**
      * Set Number of loops. Value range:
- - Minimum value: 0.
- - Maximum value: 1000.
+- Minimum value: 0.
+- Maximum value: 1000.
 
 If the value is 0 or not specified, it indicates that loops are executed until the video ends.
      * @param CirclesNumber Number of loops. Value range:
- - Minimum value: 0.
- - Maximum value: 1000.
+- Minimum value: 0.
+- Maximum value: 1000.
 
 If the value is 0 or not specified, it indicates that loops are executed until the video ends.
      */

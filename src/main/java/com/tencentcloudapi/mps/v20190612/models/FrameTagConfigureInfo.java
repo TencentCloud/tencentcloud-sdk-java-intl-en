@@ -24,33 +24,33 @@ import java.util.HashMap;
 public class FrameTagConfigureInfo extends AbstractModel {
 
     /**
-    * Switch of intelligent frame-specific tagging task. Valid values:
-<li>ON: enables intelligent frame-specific tagging task;</li>
-<li>OFF: disables intelligent frame-specific tagging task.</li>
+    * Intelligent frame tagging task switch. Valid values:
+<li>ON: Enable intelligent frame-specific tagging task.</li>
+<li>OFF: Disables the intelligent frame-specific tagging task.</li>
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-     * Get Switch of intelligent frame-specific tagging task. Valid values:
-<li>ON: enables intelligent frame-specific tagging task;</li>
-<li>OFF: disables intelligent frame-specific tagging task.</li> 
-     * @return Switch Switch of intelligent frame-specific tagging task. Valid values:
-<li>ON: enables intelligent frame-specific tagging task;</li>
-<li>OFF: disables intelligent frame-specific tagging task.</li>
+     * Get Intelligent frame tagging task switch. Valid values:
+<li>ON: Enable intelligent frame-specific tagging task.</li>
+<li>OFF: Disables the intelligent frame-specific tagging task.</li> 
+     * @return Switch Intelligent frame tagging task switch. Valid values:
+<li>ON: Enable intelligent frame-specific tagging task.</li>
+<li>OFF: Disables the intelligent frame-specific tagging task.</li>
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set Switch of intelligent frame-specific tagging task. Valid values:
-<li>ON: enables intelligent frame-specific tagging task;</li>
-<li>OFF: disables intelligent frame-specific tagging task.</li>
-     * @param Switch Switch of intelligent frame-specific tagging task. Valid values:
-<li>ON: enables intelligent frame-specific tagging task;</li>
-<li>OFF: disables intelligent frame-specific tagging task.</li>
+     * Set Intelligent frame tagging task switch. Valid values:
+<li>ON: Enable intelligent frame-specific tagging task.</li>
+<li>OFF: Disables the intelligent frame-specific tagging task.</li>
+     * @param Switch Intelligent frame tagging task switch. Valid values:
+<li>ON: Enable intelligent frame-specific tagging task.</li>
+<li>OFF: Disables the intelligent frame-specific tagging task.</li>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;

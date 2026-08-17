@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DeleteAIRecognitionTemplateRequest extends AbstractModel {
 
     /**
-    * Unique ID of a video content recognition template.
+    * Unique identifier of a video content recognition template.
     */
     @SerializedName("Definition")
     @Expose
     private Long Definition;
 
     /**
-     * Get Unique ID of a video content recognition template. 
-     * @return Definition Unique ID of a video content recognition template.
+     * Get Unique identifier of a video content recognition template. 
+     * @return Definition Unique identifier of a video content recognition template.
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set Unique ID of a video content recognition template.
-     * @param Definition Unique ID of a video content recognition template.
+     * Set Unique identifier of a video content recognition template.
+     * @param Definition Unique identifier of a video content recognition template.
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;

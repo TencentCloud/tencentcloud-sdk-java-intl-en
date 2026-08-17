@@ -59,8 +59,7 @@ public class LiveStreamObjectRecognitionResult extends AbstractModel {
     private Long [] AreaCoordSet;
 
     /**
-    * Screenshot link.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("Url")
     @Expose
@@ -147,20 +146,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Screenshot link.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Url Screenshot link.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return Url 
      */
     public String getUrl() {
         return this.Url;
     }
 
     /**
-     * Set Screenshot link.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Url Screenshot link.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param Url 
      */
     public void setUrl(String Url) {
         this.Url = Url;

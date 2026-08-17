@@ -110,7 +110,9 @@ public class TradeDealDetail extends AbstractModel {
     /**
      * Get Order ID, which is used when a TencentCloud API is called. 
      * @return DealId Order ID, which is used when a TencentCloud API is called.
+     * @deprecated
      */
+    @Deprecated
     public String getDealId() {
         return this.DealId;
     }
@@ -118,7 +120,9 @@ public class TradeDealDetail extends AbstractModel {
     /**
      * Set Order ID, which is used when a TencentCloud API is called.
      * @param DealId Order ID, which is used when a TencentCloud API is called.
+     * @deprecated
      */
+    @Deprecated
     public void setDealId(String DealId) {
         this.DealId = DealId;
     }

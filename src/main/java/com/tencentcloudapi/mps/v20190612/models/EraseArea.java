@@ -24,145 +24,145 @@ import java.util.HashMap;
 public class EraseArea extends AbstractModel {
 
     /**
-    * X-Axis coordinate of the upper left corner.
-When Unit is set to 1 (percentage Unit), 0.05 indicates the horizontal distance from the upper left corner of the region to the top-left corner of the entire frame is 5% of the frame width.
+    * X-axis coordinate of the upper left corner of the region.
+For example, when Unit is set to 1, which means using the percentage unit, 0.05 indicates that the horizontal distance from the top-left corner of the region to the top-left corner of the entire frame is 5% of the frame width.
     */
     @SerializedName("LeftTopX")
     @Expose
     private Float LeftTopX;
 
     /**
-    * Y-Axis coordinate of the upper left corner.
-When Unit is set to 1 (using percentage Unit), 0.1 indicates the vertical distance from the top-left corner of the area to the top-left corner of the entire frame is 10% of the screen height.
+    * Y-axis coordinate of the upper left corner.
+For example, when Unit is set to 1, which means using the percentage unit, 0.1 indicates that the vertical distance from the top-left corner of the region to the top-left corner of the entire frame is 10% of the frame height.
     */
     @SerializedName("LeftTopY")
     @Expose
     private Float LeftTopY;
 
     /**
-    * X-Axis coordinate of the bottom-right corner.
-When Unit is set to 1 (percentage Unit), 0.75 indicates the horizontal distance from the bottom-right corner of the region to the top-left corner of the entire frame is 75% of the frame width.
+    * X-axis coordinate of the bottom-right corner of the region.
+For example, when Unit is set to 1, which means using the percentage unit, 0.75 indicates that the horizontal distance from the bottom-right corner of the region to the top-left corner of the entire frame is 75% of the frame width.
     */
     @SerializedName("RightBottomX")
     @Expose
     private Float RightBottomX;
 
     /**
-    * Y-Axis coordinate of the bottom-right corner.
-When Unit is set to 1 (using percentage Unit), 0.9 indicates the vertical distance from the bottom-right corner of the area to the top-left corner of the entire frame is 90% of the screen height.
+    * Y-axis coordinate of the bottom-right corner of the region.
+For example, when Unit is set to 1, which means using the percentage unit, 0.9 indicates that the vertical distance from the bottom-right corner of the region to the top-left corner of the entire frame is 90% of the frame height.
     */
     @SerializedName("RightBottomY")
     @Expose
     private Float RightBottomY;
 
     /**
-    * Specifies the coordinate unit.
--Percentage.
--2 pixel values.
+    * Coordinate unit
+-Percentage
+- 2 pixel values
     */
     @SerializedName("Unit")
     @Expose
     private Long Unit;
 
     /**
-     * Get X-Axis coordinate of the upper left corner.
-When Unit is set to 1 (percentage Unit), 0.05 indicates the horizontal distance from the upper left corner of the region to the top-left corner of the entire frame is 5% of the frame width. 
-     * @return LeftTopX X-Axis coordinate of the upper left corner.
-When Unit is set to 1 (percentage Unit), 0.05 indicates the horizontal distance from the upper left corner of the region to the top-left corner of the entire frame is 5% of the frame width.
+     * Get X-axis coordinate of the upper left corner of the region.
+For example, when Unit is set to 1, which means using the percentage unit, 0.05 indicates that the horizontal distance from the top-left corner of the region to the top-left corner of the entire frame is 5% of the frame width. 
+     * @return LeftTopX X-axis coordinate of the upper left corner of the region.
+For example, when Unit is set to 1, which means using the percentage unit, 0.05 indicates that the horizontal distance from the top-left corner of the region to the top-left corner of the entire frame is 5% of the frame width.
      */
     public Float getLeftTopX() {
         return this.LeftTopX;
     }
 
     /**
-     * Set X-Axis coordinate of the upper left corner.
-When Unit is set to 1 (percentage Unit), 0.05 indicates the horizontal distance from the upper left corner of the region to the top-left corner of the entire frame is 5% of the frame width.
-     * @param LeftTopX X-Axis coordinate of the upper left corner.
-When Unit is set to 1 (percentage Unit), 0.05 indicates the horizontal distance from the upper left corner of the region to the top-left corner of the entire frame is 5% of the frame width.
+     * Set X-axis coordinate of the upper left corner of the region.
+For example, when Unit is set to 1, which means using the percentage unit, 0.05 indicates that the horizontal distance from the top-left corner of the region to the top-left corner of the entire frame is 5% of the frame width.
+     * @param LeftTopX X-axis coordinate of the upper left corner of the region.
+For example, when Unit is set to 1, which means using the percentage unit, 0.05 indicates that the horizontal distance from the top-left corner of the region to the top-left corner of the entire frame is 5% of the frame width.
      */
     public void setLeftTopX(Float LeftTopX) {
         this.LeftTopX = LeftTopX;
     }
 
     /**
-     * Get Y-Axis coordinate of the upper left corner.
-When Unit is set to 1 (using percentage Unit), 0.1 indicates the vertical distance from the top-left corner of the area to the top-left corner of the entire frame is 10% of the screen height. 
-     * @return LeftTopY Y-Axis coordinate of the upper left corner.
-When Unit is set to 1 (using percentage Unit), 0.1 indicates the vertical distance from the top-left corner of the area to the top-left corner of the entire frame is 10% of the screen height.
+     * Get Y-axis coordinate of the upper left corner.
+For example, when Unit is set to 1, which means using the percentage unit, 0.1 indicates that the vertical distance from the top-left corner of the region to the top-left corner of the entire frame is 10% of the frame height. 
+     * @return LeftTopY Y-axis coordinate of the upper left corner.
+For example, when Unit is set to 1, which means using the percentage unit, 0.1 indicates that the vertical distance from the top-left corner of the region to the top-left corner of the entire frame is 10% of the frame height.
      */
     public Float getLeftTopY() {
         return this.LeftTopY;
     }
 
     /**
-     * Set Y-Axis coordinate of the upper left corner.
-When Unit is set to 1 (using percentage Unit), 0.1 indicates the vertical distance from the top-left corner of the area to the top-left corner of the entire frame is 10% of the screen height.
-     * @param LeftTopY Y-Axis coordinate of the upper left corner.
-When Unit is set to 1 (using percentage Unit), 0.1 indicates the vertical distance from the top-left corner of the area to the top-left corner of the entire frame is 10% of the screen height.
+     * Set Y-axis coordinate of the upper left corner.
+For example, when Unit is set to 1, which means using the percentage unit, 0.1 indicates that the vertical distance from the top-left corner of the region to the top-left corner of the entire frame is 10% of the frame height.
+     * @param LeftTopY Y-axis coordinate of the upper left corner.
+For example, when Unit is set to 1, which means using the percentage unit, 0.1 indicates that the vertical distance from the top-left corner of the region to the top-left corner of the entire frame is 10% of the frame height.
      */
     public void setLeftTopY(Float LeftTopY) {
         this.LeftTopY = LeftTopY;
     }
 
     /**
-     * Get X-Axis coordinate of the bottom-right corner.
-When Unit is set to 1 (percentage Unit), 0.75 indicates the horizontal distance from the bottom-right corner of the region to the top-left corner of the entire frame is 75% of the frame width. 
-     * @return RightBottomX X-Axis coordinate of the bottom-right corner.
-When Unit is set to 1 (percentage Unit), 0.75 indicates the horizontal distance from the bottom-right corner of the region to the top-left corner of the entire frame is 75% of the frame width.
+     * Get X-axis coordinate of the bottom-right corner of the region.
+For example, when Unit is set to 1, which means using the percentage unit, 0.75 indicates that the horizontal distance from the bottom-right corner of the region to the top-left corner of the entire frame is 75% of the frame width. 
+     * @return RightBottomX X-axis coordinate of the bottom-right corner of the region.
+For example, when Unit is set to 1, which means using the percentage unit, 0.75 indicates that the horizontal distance from the bottom-right corner of the region to the top-left corner of the entire frame is 75% of the frame width.
      */
     public Float getRightBottomX() {
         return this.RightBottomX;
     }
 
     /**
-     * Set X-Axis coordinate of the bottom-right corner.
-When Unit is set to 1 (percentage Unit), 0.75 indicates the horizontal distance from the bottom-right corner of the region to the top-left corner of the entire frame is 75% of the frame width.
-     * @param RightBottomX X-Axis coordinate of the bottom-right corner.
-When Unit is set to 1 (percentage Unit), 0.75 indicates the horizontal distance from the bottom-right corner of the region to the top-left corner of the entire frame is 75% of the frame width.
+     * Set X-axis coordinate of the bottom-right corner of the region.
+For example, when Unit is set to 1, which means using the percentage unit, 0.75 indicates that the horizontal distance from the bottom-right corner of the region to the top-left corner of the entire frame is 75% of the frame width.
+     * @param RightBottomX X-axis coordinate of the bottom-right corner of the region.
+For example, when Unit is set to 1, which means using the percentage unit, 0.75 indicates that the horizontal distance from the bottom-right corner of the region to the top-left corner of the entire frame is 75% of the frame width.
      */
     public void setRightBottomX(Float RightBottomX) {
         this.RightBottomX = RightBottomX;
     }
 
     /**
-     * Get Y-Axis coordinate of the bottom-right corner.
-When Unit is set to 1 (using percentage Unit), 0.9 indicates the vertical distance from the bottom-right corner of the area to the top-left corner of the entire frame is 90% of the screen height. 
-     * @return RightBottomY Y-Axis coordinate of the bottom-right corner.
-When Unit is set to 1 (using percentage Unit), 0.9 indicates the vertical distance from the bottom-right corner of the area to the top-left corner of the entire frame is 90% of the screen height.
+     * Get Y-axis coordinate of the bottom-right corner of the region.
+For example, when Unit is set to 1, which means using the percentage unit, 0.9 indicates that the vertical distance from the bottom-right corner of the region to the top-left corner of the entire frame is 90% of the frame height. 
+     * @return RightBottomY Y-axis coordinate of the bottom-right corner of the region.
+For example, when Unit is set to 1, which means using the percentage unit, 0.9 indicates that the vertical distance from the bottom-right corner of the region to the top-left corner of the entire frame is 90% of the frame height.
      */
     public Float getRightBottomY() {
         return this.RightBottomY;
     }
 
     /**
-     * Set Y-Axis coordinate of the bottom-right corner.
-When Unit is set to 1 (using percentage Unit), 0.9 indicates the vertical distance from the bottom-right corner of the area to the top-left corner of the entire frame is 90% of the screen height.
-     * @param RightBottomY Y-Axis coordinate of the bottom-right corner.
-When Unit is set to 1 (using percentage Unit), 0.9 indicates the vertical distance from the bottom-right corner of the area to the top-left corner of the entire frame is 90% of the screen height.
+     * Set Y-axis coordinate of the bottom-right corner of the region.
+For example, when Unit is set to 1, which means using the percentage unit, 0.9 indicates that the vertical distance from the bottom-right corner of the region to the top-left corner of the entire frame is 90% of the frame height.
+     * @param RightBottomY Y-axis coordinate of the bottom-right corner of the region.
+For example, when Unit is set to 1, which means using the percentage unit, 0.9 indicates that the vertical distance from the bottom-right corner of the region to the top-left corner of the entire frame is 90% of the frame height.
      */
     public void setRightBottomY(Float RightBottomY) {
         this.RightBottomY = RightBottomY;
     }
 
     /**
-     * Get Specifies the coordinate unit.
--Percentage.
--2 pixel values. 
-     * @return Unit Specifies the coordinate unit.
--Percentage.
--2 pixel values.
+     * Get Coordinate unit
+-Percentage
+- 2 pixel values 
+     * @return Unit Coordinate unit
+-Percentage
+- 2 pixel values
      */
     public Long getUnit() {
         return this.Unit;
     }
 
     /**
-     * Set Specifies the coordinate unit.
--Percentage.
--2 pixel values.
-     * @param Unit Specifies the coordinate unit.
--Percentage.
--2 pixel values.
+     * Set Coordinate unit
+-Percentage
+- 2 pixel values
+     * @param Unit Coordinate unit
+-Percentage
+- 2 pixel values
      */
     public void setUnit(Long Unit) {
         this.Unit = Unit;

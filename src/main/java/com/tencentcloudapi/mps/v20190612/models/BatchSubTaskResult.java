@@ -24,84 +24,69 @@ import java.util.HashMap;
 public class BatchSubTaskResult extends AbstractModel {
 
     /**
-    * Input information for a batch task.
-Note: This field may return null, indicating that no valid value can be obtained.
+    * 
     */
     @SerializedName("InputInfos")
     @Expose
     private MediaInputInfo [] InputInfos;
 
     /**
-    * Metadata of the original video.
-Note: This field may return null, indicating that no valid value can be obtained.
+    * 
     */
     @SerializedName("Metadatas")
     @Expose
     private MediaMetaData [] Metadatas;
 
     /**
-    * Execution result of the smart subtitle task.
-Note: This field may return null, indicating that no valid value can be obtained.
+    * 
     */
     @SerializedName("SmartSubtitlesTaskResult")
     @Expose
     private BatchSmartSubtitlesResult SmartSubtitlesTaskResult;
 
     /**
-     * Get Input information for a batch task.
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return InputInfos Input information for a batch task.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get  
+     * @return InputInfos 
      */
     public MediaInputInfo [] getInputInfos() {
         return this.InputInfos;
     }
 
     /**
-     * Set Input information for a batch task.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param InputInfos Input information for a batch task.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set 
+     * @param InputInfos 
      */
     public void setInputInfos(MediaInputInfo [] InputInfos) {
         this.InputInfos = InputInfos;
     }
 
     /**
-     * Get Metadata of the original video.
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return Metadatas Metadata of the original video.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get  
+     * @return Metadatas 
      */
     public MediaMetaData [] getMetadatas() {
         return this.Metadatas;
     }
 
     /**
-     * Set Metadata of the original video.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param Metadatas Metadata of the original video.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set 
+     * @param Metadatas 
      */
     public void setMetadatas(MediaMetaData [] Metadatas) {
         this.Metadatas = Metadatas;
     }
 
     /**
-     * Get Execution result of the smart subtitle task.
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return SmartSubtitlesTaskResult Execution result of the smart subtitle task.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get  
+     * @return SmartSubtitlesTaskResult 
      */
     public BatchSmartSubtitlesResult getSmartSubtitlesTaskResult() {
         return this.SmartSubtitlesTaskResult;
     }
 
     /**
-     * Set Execution result of the smart subtitle task.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param SmartSubtitlesTaskResult Execution result of the smart subtitle task.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set 
+     * @param SmartSubtitlesTaskResult 
      */
     public void setSmartSubtitlesTaskResult(BatchSmartSubtitlesResult SmartSubtitlesTaskResult) {
         this.SmartSubtitlesTaskResult = SmartSubtitlesTaskResult;

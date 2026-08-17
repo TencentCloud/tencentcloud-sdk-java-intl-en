@@ -24,35 +24,35 @@ import java.util.HashMap;
 public class LiveStreamTransTextRecognitionResult extends AbstractModel {
 
     /**
-    * The text transcript.
+    * Recognized text.
     */
     @SerializedName("Text")
     @Expose
     private String Text;
 
     /**
-    * The PTS (seconds) of the start of a segment.
+    * Start PTS time of a translated fragment, in seconds.
     */
     @SerializedName("StartPtsTime")
     @Expose
     private Float StartPtsTime;
 
     /**
-    * The PTS (seconds) of the end of a segment.
+    * End PTS time of a translated segment, in seconds.
     */
     @SerializedName("EndPtsTime")
     @Expose
     private Float EndPtsTime;
 
     /**
-    * The confidence score for a segment. Value range: 0-100.
+    * Confidence of a translated segment. Value range: 0-100.
     */
     @SerializedName("Confidence")
     @Expose
     private Float Confidence;
 
     /**
-    * The translation.
+    * Translated text.
     */
     @SerializedName("Trans")
     @Expose
@@ -80,88 +80,87 @@ public class LiveStreamTransTextRecognitionResult extends AbstractModel {
     private Boolean SteadyState;
 
     /**
-    * User ID in the result of real-time translation via WebSocket and TRTC.
-Note: This field may return null, indicating that no valid value can be obtained.
+    * 
     */
     @SerializedName("UserId")
     @Expose
     private String UserId;
 
     /**
-     * Get The text transcript. 
-     * @return Text The text transcript.
+     * Get Recognized text. 
+     * @return Text Recognized text.
      */
     public String getText() {
         return this.Text;
     }
 
     /**
-     * Set The text transcript.
-     * @param Text The text transcript.
+     * Set Recognized text.
+     * @param Text Recognized text.
      */
     public void setText(String Text) {
         this.Text = Text;
     }
 
     /**
-     * Get The PTS (seconds) of the start of a segment. 
-     * @return StartPtsTime The PTS (seconds) of the start of a segment.
+     * Get Start PTS time of a translated fragment, in seconds. 
+     * @return StartPtsTime Start PTS time of a translated fragment, in seconds.
      */
     public Float getStartPtsTime() {
         return this.StartPtsTime;
     }
 
     /**
-     * Set The PTS (seconds) of the start of a segment.
-     * @param StartPtsTime The PTS (seconds) of the start of a segment.
+     * Set Start PTS time of a translated fragment, in seconds.
+     * @param StartPtsTime Start PTS time of a translated fragment, in seconds.
      */
     public void setStartPtsTime(Float StartPtsTime) {
         this.StartPtsTime = StartPtsTime;
     }
 
     /**
-     * Get The PTS (seconds) of the end of a segment. 
-     * @return EndPtsTime The PTS (seconds) of the end of a segment.
+     * Get End PTS time of a translated segment, in seconds. 
+     * @return EndPtsTime End PTS time of a translated segment, in seconds.
      */
     public Float getEndPtsTime() {
         return this.EndPtsTime;
     }
 
     /**
-     * Set The PTS (seconds) of the end of a segment.
-     * @param EndPtsTime The PTS (seconds) of the end of a segment.
+     * Set End PTS time of a translated segment, in seconds.
+     * @param EndPtsTime End PTS time of a translated segment, in seconds.
      */
     public void setEndPtsTime(Float EndPtsTime) {
         this.EndPtsTime = EndPtsTime;
     }
 
     /**
-     * Get The confidence score for a segment. Value range: 0-100. 
-     * @return Confidence The confidence score for a segment. Value range: 0-100.
+     * Get Confidence of a translated segment. Value range: 0-100. 
+     * @return Confidence Confidence of a translated segment. Value range: 0-100.
      */
     public Float getConfidence() {
         return this.Confidence;
     }
 
     /**
-     * Set The confidence score for a segment. Value range: 0-100.
-     * @param Confidence The confidence score for a segment. Value range: 0-100.
+     * Set Confidence of a translated segment. Value range: 0-100.
+     * @param Confidence Confidence of a translated segment. Value range: 0-100.
      */
     public void setConfidence(Float Confidence) {
         this.Confidence = Confidence;
     }
 
     /**
-     * Get The translation. 
-     * @return Trans The translation.
+     * Get Translated text. 
+     * @return Trans Translated text.
      */
     public String getTrans() {
         return this.Trans;
     }
 
     /**
-     * Set The translation.
-     * @param Trans The translation.
+     * Set Translated text.
+     * @param Trans Translated text.
      */
     public void setTrans(String Trans) {
         this.Trans = Trans;
@@ -216,20 +215,16 @@ Note: This field may return null, indicating that no valid value can be obtained
     }
 
     /**
-     * Get User ID in the result of real-time translation via WebSocket and TRTC.
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return UserId User ID in the result of real-time translation via WebSocket and TRTC.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get  
+     * @return UserId 
      */
     public String getUserId() {
         return this.UserId;
     }
 
     /**
-     * Set User ID in the result of real-time translation via WebSocket and TRTC.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param UserId User ID in the result of real-time translation via WebSocket and TRTC.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set 
+     * @param UserId 
      */
     public void setUserId(String UserId) {
         this.UserId = UserId;

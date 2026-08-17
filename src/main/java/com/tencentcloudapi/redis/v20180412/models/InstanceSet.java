@@ -24,668 +24,643 @@ import java.util.HashMap;
 public class InstanceSet extends AbstractModel {
 
     /**
-    * Instance name.
+    * <p>Instance name.</p>
     */
     @SerializedName("InstanceName")
     @Expose
     private String InstanceName;
 
     /**
-    * Instance ID.
+    * <p>Instance ID.</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * App ID of a user, which is an application ID that uniquely corresponds to the account ID. Certain Tencent Cloud products use this app ID.
-
+    * <p>User AppId. AppId is an application ID with a one-to-one correspondence to the account ID. Some Tencent Cloud products use this AppId.</p>
     */
     @SerializedName("Appid")
     @Expose
     private Long Appid;
 
     /**
-    * Project ID.
+    * <p>Project ID.</p>
     */
     @SerializedName("ProjectId")
     @Expose
     private Long ProjectId;
 
     /**
-    * Region ID.<ul><li>1: Guangzhou.</li><li>4: Shanghai.</li><li>5: Hong Kong (China).</li><li>7: Shanghai Finance.</li><li>8: Beijing.</li><li>9: Singapore.</li><li>11: Shenzhen Finance.</li><li>15: Western US (Silicon Valley).</li><li>16: Chengdu.</li><li>17: Frankfurt.</li><li>18: Seoul.</li><li>19: Chongqing.</li><li>22: Eastern US (Virginia).</li><li>23: Bangkok.</li><li>25: Tokyo.</li></ul>
+    * <p>Region ID.<ul><li>1: Guangzhou.</li><li>4: Shanghai.</li><li>5: Hong Kong (China).</li><li>7: Shanghai Finance.</li><li>8: Beijing.</li><li>9: Singapore.</li><li>11: Shenzhen Finance.</li><li>15: Western US (Silicon Valley).</li><li>16: Chengdu.</li><li>17: Frankfurt.</li><li>18: Seoul.</li><li>19: Chongqing.</li><li>22: Eastern US (Virginia).</li><li>23: Bangkok.</li><li>25: Tokyo.</li></ul></p>
     */
     @SerializedName("RegionId")
     @Expose
     private Long RegionId;
 
     /**
-    * Zone ID.
+    * <p>Region ID.</p>
     */
     @SerializedName("ZoneId")
     @Expose
     private Long ZoneId;
 
     /**
-    * VPC ID, for example, 75101.
+    * <p>vpc network ID, such as 75101.</p>
     */
     @SerializedName("VpcId")
     @Expose
     private Long VpcId;
 
     /**
-    * ID of the subnet under VPC, for example, 46315.
+    * <p>Subnet ID under vpc, for example: 46315.</p>
     */
     @SerializedName("SubnetId")
     @Expose
     private Long SubnetId;
 
     /**
-    * Current instance status. <ul><li>0: to be initialized;</li> <li>1: in process;</li> <li>2: running;</li> <li>-2: isolated;</li> <li>-3: to be deleted.</li></ul>
+    * <p>Current instance status. <ul><li>0: to be initialized;</li> <li>1: in process;</li> <li>2: running;</li> <li>-2: isolated;</li> <li>-3: to be deleted.</li></ul></p>
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * Instance VIP.
+    * <p>Instance VIP.</p>
     */
     @SerializedName("WanIp")
     @Expose
     private String WanIp;
 
     /**
-    * Instance port number.
+    * <p>Instance port number.</p>
     */
     @SerializedName("Port")
     @Expose
     private Long Port;
 
     /**
-    * Instance creation time, for example, in the format of 2020-01-15 10:20:00.
+    * <p>Instance creation time, for example, in the format of 2020-01-15 10:20:00.</p>
     */
     @SerializedName("Createtime")
     @Expose
     private String Createtime;
 
     /**
-    * Instance memory capacity. Unit: MB (1 MB = 1024 KB).
+    * <p>Instance memory capacity. Unit: MB (1 MB = 1024 KB).</p>
     */
     @SerializedName("Size")
     @Expose
     private Float Size;
 
     /**
-    * This parameter has been deprecated. Obtain the memory capacity used by the instance through the TCOP API [GetMonitorData](https://intl.cloud.tencent.com/document/product/248/31014?from_cn_redirect=1).
+    * <p>This field is deprecated. Please use the Tencent Cloud observability platform API interface <a href="https://www.tencentcloud.com/document/product/248/31014?from_cn_redirect=1">GetMonitorData</a> to obtain the memory capacity used by the instance.</p>
     */
     @SerializedName("SizeUsed")
     @Expose
     private Float SizeUsed;
 
     /**
-    * Instance type.
-
-- 2: Redis 2.8 memory edition (standard architecture).
-- 3: CKV 3.2 memory edition (standard architecture).
-- 4: CKV 3.2 memory edition (cluster architecture).
-- 5: Redis 2.8 memory edition (standalone).
-- 6: Redis 4.0 memory edition (standard architecture).
-- 7: Redis 4.0 memory edition (cluster architecture).
-- 8: Redis 5.0 memory edition (standard architecture).
-- 9: Redis 5.0 memory edition (cluster architecture).
-- 15: Redis 6.2 memory edition (standard architecture).
-- 16: Redis 6.2 memory edition (cluster architecture).
-- 17: Redis 7.0 memory edition (standard architecture).
-- 18: Redis 7.0 memory edition (cluster architecture).
-- 200: Memcached 1.6 memory edition (cluster architecture).
+    * <p>Instance type.</p><p>Enumeration value:</p><ul><li>2: Redis 2.8 memory edition (standard architecture).</li><li>3: CKV 3.2 memory edition (standard architecture).</li><li>4: CKV 3.2 memory edition (cluster architecture).</li><li>5: Redis 2.8 memory edition (standalone).</li><li>6: Redis 4.0 memory edition (standard architecture).</li><li>7: Redis 4.0 memory edition (cluster architecture).</li><li>8: Redis 5.0 memory edition (standard architecture).</li><li>9: Redis 5.0 memory edition (cluster architecture).</li><li>15: Redis 6.2 memory edition (standard architecture).</li><li>16: Redis 6.2 memory edition (cluster architecture).</li><li>17: Redis 7.0 memory edition (standard architecture).</li><li>18: Redis 7.0 memory edition (cluster architecture).</li><li>19: Valkey 8.0 memory edition (standard architecture).</li><li>20: Valkey 8.0 memory edition (cluster architecture).</li><li>21: Valkey 8.0 memory edition (standard architecture).</li><li>22: Valkey 8.0 memory edition (cluster architecture).</li><li>200: Memcached 1.6 memory edition (cluster architecture).</li></ul>
     */
     @SerializedName("Type")
     @Expose
     private Long Type;
 
     /**
-    * Whether the automatic renewal flag is set for an instance. <ul><li>1: set;</li> <li>0: not set.</li></ul>
+    * <p>Whether the automatic renewal flag is set for an instance.</p><ul><li>1: set auto-renewal.</li><li>0: automatic renewal flag not set.</li></ul>
     */
     @SerializedName("AutoRenewFlag")
     @Expose
     private Long AutoRenewFlag;
 
     /**
-    * Expiration time of a monthly subscription instance.
+    * <p>Expiration time of a monthly subscription instance.</p>
     */
     @SerializedName("DeadlineTime")
     @Expose
     private String DeadlineTime;
 
     /**
-    * Engine. Valid values: Redis Community Edition and Tencent Cloud CKV.
+    * <p>Engine. Valid values: Redis Community Edition and Tencent Cloud CKV.</p>
     */
     @SerializedName("Engine")
     @Expose
     private String Engine;
 
     /**
-    * Product type. <ul><li>standalone: Standard Edition;</li> <li>cluster: Cluster Edition.</li></ul>
+    * <p>Product type.<ul><li>standalone: standard version.</li><li>cluster: cluster version.</li></ul></p>
     */
     @SerializedName("ProductType")
     @Expose
     private String ProductType;
 
     /**
-    * VPC ID, for example, vpc-fk33jsf43kgv.
+    * <p>vpc Network id, such as vpc-fk33jsf43kgv.</p>
     */
     @SerializedName("UniqVpcId")
     @Expose
     private String UniqVpcId;
 
     /**
-    * ID of the subnet under VPC, for example, subnet-fd3j6l35mm0.
+    * <p>subnet id under vpc, for example: subnet-fd3j6l35mm0.</p>
     */
     @SerializedName("UniqSubnetId")
     @Expose
     private String UniqSubnetId;
 
     /**
-    * Billing mode. Only pay-as-you-go billing is supported.
+    * <p>Billing mode.<ul><li>0: Pay-As-You-Go.</li><li>1: Monthly Subscription.</li></ul></p>
     */
     @SerializedName("BillingMode")
     @Expose
     private Long BillingMode;
 
     /**
-    * Description of the instance running status, for example, running.
+    * <p>Description of instance running status: for example "instance running".</p>
     */
     @SerializedName("InstanceTitle")
     @Expose
     private String InstanceTitle;
 
     /**
-    * Default termination time of isolated instances, for example, in the format of 2020-02-15 10:20:00. By default, a pay-as-you-go instance will be terminated after 2 hours of isolation, and a monthly subscription instance will be terminated after 7 days.
+    * <p>Default termination time of isolated instances. Pay-as-you-go instance offline after isolation. Monthly Subscription instance offline after 7 days. In the format of: 2020-02-15 10:20:00.</p>
     */
     @SerializedName("OfflineTime")
     @Expose
     private String OfflineTime;
 
     /**
-    * Sub-status returned for the instance in the process.
- - 0: disk read-write status.
- - 1: disk read-only status because the upper limit is exceeded.
+    * <p>Substatus of the instance in process returned.</p><ul><li>0: Read and write status of the disk.</li><li>1: Read-only status of the disk due to exceeding limit.</li></ul>
     */
     @SerializedName("SubStatus")
     @Expose
     private Long SubStatus;
 
     /**
-    * Anti-affinity tag.
+    * <p>Anti-affinity tag.</p>
     */
     @SerializedName("Tags")
     @Expose
     private String [] Tags;
 
     /**
-    * Instance node information.
+    * <p>Instance node information.</p>
     */
     @SerializedName("InstanceNode")
     @Expose
     private InstanceNode [] InstanceNode;
 
     /**
-    * Shard size.
+    * <p>Shard size.</p>
     */
     @SerializedName("RedisShardSize")
     @Expose
     private Long RedisShardSize;
 
     /**
-    * Number of shards.
+    * <p>Number of shards.</p>
     */
     @SerializedName("RedisShardNum")
     @Expose
     private Long RedisShardNum;
 
     /**
-    * Number of replicas.
+    * <p>Number of replicas.</p>
     */
     @SerializedName("RedisReplicasNum")
     @Expose
     private Long RedisReplicasNum;
 
     /**
-    * Billing ID.
+    * <p>Billing ID.</p>
     */
     @SerializedName("PriceId")
     @Expose
     private Long PriceId;
 
     /**
-    * Time when an instance starts to be isolated.
+    * <p>Time when an instance starts to be isolated.</p>
     */
     @SerializedName("CloseTime")
     @Expose
     private String CloseTime;
 
     /**
-    * Read weight of a secondary node.
-- 0: disable read-only replicas.
-- 100: enable read-only replicas.
+    * <p>Read weight of the secondary node.</p><ul><li>0: means disable read-only replica.</li><li>100: means enable read-only replica.</li></ul>
     */
     @SerializedName("SlaveReadWeight")
     @Expose
     private Long SlaveReadWeight;
 
     /**
-    * Information on tags associated with the instance.
+    * <p>Tag information associated with an instance.</p>
     */
     @SerializedName("InstanceTags")
     @Expose
     private InstanceTagInfo [] InstanceTags;
 
     /**
-    * Project name
+    * <p>Project name.</p>
     */
     @SerializedName("ProjectName")
     @Expose
     private String ProjectName;
 
     /**
-    * Whether the instance is password-free.<ul><li>true: password-free instance.</li><li>false: password required by the instance.</li></ul>
+    * <p>Whether an instance is a password-free instance. <ul><li>true: yes;</li> <li>false: no.</li></ul></p>
     */
     @SerializedName("NoAuth")
     @Expose
     private Boolean NoAuth;
 
     /**
-    * Number of client connections.
+    * <p>Number of client connections.</p>
     */
     @SerializedName("ClientLimit")
     @Expose
     private Long ClientLimit;
 
     /**
-    * DTS status. (Internal parameter, which can be ignored.)
+    * <p>DTS status (internal parameter, can be ignored by users).</p>
     */
     @SerializedName("DtsStatus")
     @Expose
     private Long DtsStatus;
 
     /**
-    * Shard bandwidth limit. Unit: MB.
+    * <p>Upper limit of the shard bandwidth. Unit: MB.</p>
     */
     @SerializedName("NetLimit")
     @Expose
     private Long NetLimit;
 
     /**
-    * Password-free instance flag. (Internal parameter, which can be ignored.)
+    * <p>Password-free instance flag (internal parameter, which can be ignored).</p>
     */
     @SerializedName("PasswordFree")
     @Expose
     private Long PasswordFree;
 
     /**
-    * This parameter encounters a naming issue. It is recommended to use the parameter IPv6 instead. It is an internal parameter and can be ignored.
+    * <p>Internal parameter, which can be ignored. This parameter is not properly named. It is recommended to use the IPv6 parameter to replace it.</p>
     */
     @SerializedName("Vip6")
     @Expose
     private String Vip6;
 
     /**
-    * Internal parameter, which can be ignored.
+    * <p>Internal parameter, which can be ignored.</p>
     */
     @SerializedName("IPv6")
     @Expose
     private String IPv6;
 
     /**
-    * Instance read-only flag. (Internal parameter, which can be ignored.)
+    * <p>Instance read-only flag (internal parameter, which can be ignored).</p>
     */
     @SerializedName("ReadOnly")
     @Expose
     private Long ReadOnly;
 
     /**
-    * Internal parameter, which can be ignored.
+    * <p>Internal parameter, which can be ignored.</p>
     */
     @SerializedName("RemainBandwidthDuration")
     @Expose
     private String RemainBandwidthDuration;
 
     /**
-    * For TencentDB for Redis® instances, ignore this parameter.
+    * <p>For Redis instances, ignore this parameter.</p>
     */
     @SerializedName("DiskSize")
     @Expose
     private Long DiskSize;
 
     /**
-    * Monitoring version.<ul><li>1m: monitoring with the 1-minute granularity. Currently, this monitoring granularity is unavailable. For details, see [1-Minute Granularity Will Be Disused](https://intl.cloud.tencent.com/document/product/239/80653?from_cn_redirect=1).</li><li>5s: monitoring with the 5-second granularity.</li></ul>
+    * <p>Monitoring version.<ul><li>1m: 1-minute granularity monitoring. This monitoring granularity is deprecated. For details, please see <a href="https://www.tencentcloud.com/document/product/239/80653?from_cn_redirect=1">TencentDB for Redis 1-minute granularity deprecation notice</a>.</li><li>5s: 5-second granularity monitoring.</li></ul></p>
     */
     @SerializedName("MonitorVersion")
     @Expose
     private String MonitorVersion;
 
     /**
-    * Minimum value that can be set for the maximum number of client connections.
+    * <p>Minimum value that can be set for the maximum number of client connections.</p>
     */
     @SerializedName("ClientLimitMin")
     @Expose
     private Long ClientLimitMin;
 
     /**
-    * Maximum value that can be set for the maximum number of client connections.
+    * <p>Maximum value that can be set for the maximum number of client connections.</p>
     */
     @SerializedName("ClientLimitMax")
     @Expose
     private Long ClientLimitMax;
 
     /**
-    * Node details of the instance.
-
-It is returned only for multi-AZ instances.
+    * <p>Detailed node information of the instance.<br>Only multi-AZ instances will be returned.</p>
     */
     @SerializedName("NodeSet")
     @Expose
     private RedisNodeInfo [] NodeSet;
 
     /**
-    * Region information on the instance. For example, ap-guangzhou.
+    * <p>Region information of an instance, for example, ap-guangzhou.</p>
     */
     @SerializedName("Region")
     @Expose
     private String Region;
 
     /**
-    * Public network address.
+    * <p>Public network address.</p>
     */
     @SerializedName("WanAddress")
     @Expose
     private String WanAddress;
 
     /**
-    * Polaris service address for internal use.
+    * <p>Polaris service address for internal use.</p>
     */
     @SerializedName("PolarisServer")
     @Expose
     private String PolarisServer;
 
     /**
-    * CDC cluster ID of TencentDB for Redis®.
+    * <p>CDC Redis cluster ID.</p>
     */
     @SerializedName("RedisClusterId")
     @Expose
     private String RedisClusterId;
 
     /**
-    * CDC cluster ID.
+    * <p>CDC cluster ID.</p>
     */
     @SerializedName("DedicatedClusterId")
     @Expose
     private String DedicatedClusterId;
 
     /**
-    * Product edition.<ul><li>local: local disk.</li><li>cloud: cloud disk edition.</li><li>cdc: CDC cluster edition.</li></ul>
+    * <p>Product edition. <ul><li>local: local disk;</li> <li>cloud: cloud disk;</li> <li>cdc: CDC cluster edition.</li></ul></p>
     */
     @SerializedName("ProductVersion")
     @Expose
     private String ProductVersion;
 
     /**
-    * Current proxy version of the instance.
+    * <p>Current Proxy version of the instance.</p>
     */
     @SerializedName("CurrentProxyVersion")
     @Expose
     private String CurrentProxyVersion;
 
     /**
-    * Current cache minor version of the instance. If the instance is added to a global replication group, the global replication kernel version is displayed.
+    * <p>Current Cache minor version of an instance. If the instance joins a global replication group, the kernel version of the global replication group will be displayed.</p>
     */
     @SerializedName("CurrentRedisVersion")
     @Expose
     private String CurrentRedisVersion;
 
     /**
-    * Upgradable proxy version for the instance.
+    * <p>Upgradable Proxy version of an instance.</p>
     */
     @SerializedName("UpgradeProxyVersion")
     @Expose
     private String UpgradeProxyVersion;
 
     /**
-    * Upgradable cache minor version for the instance.
+    * <p>Upgradable Cache minor version of an instance.</p>
     */
     @SerializedName("UpgradeRedisVersion")
     @Expose
     private String UpgradeRedisVersion;
 
     /**
-    * Backup mode. - SecondLevelBackup: second-level backup. - NormalLevelBackup: ordinary backup.
+    * <p>Backup mode.</p><ul><li>SecondLevelBackup: second-level backup.</li><li>NormalLevelBackup: normal backup.</li></ul>
     */
     @SerializedName("BackupMode")
     @Expose
     private String BackupMode;
 
     /**
-    * Deletion protection switch. 0: disabled; 1: enabled.
+    * <p>Instance destruction protection switch.</p><ul><li>0: disabled.</li><li>1: enabled.</li></ul>
     */
     @SerializedName("DeleteProtectionSwitch")
     @Expose
     private Long DeleteProtectionSwitch;
 
     /**
-     * Get Instance name. 
-     * @return InstanceName Instance name.
+     * Get <p>Instance name.</p> 
+     * @return InstanceName <p>Instance name.</p>
      */
     public String getInstanceName() {
         return this.InstanceName;
     }
 
     /**
-     * Set Instance name.
-     * @param InstanceName Instance name.
+     * Set <p>Instance name.</p>
+     * @param InstanceName <p>Instance name.</p>
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;
     }
 
     /**
-     * Get Instance ID. 
-     * @return InstanceId Instance ID.
+     * Get <p>Instance ID.</p> 
+     * @return InstanceId <p>Instance ID.</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Instance ID.
-     * @param InstanceId Instance ID.
+     * Set <p>Instance ID.</p>
+     * @param InstanceId <p>Instance ID.</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get App ID of a user, which is an application ID that uniquely corresponds to the account ID. Certain Tencent Cloud products use this app ID.
- 
-     * @return Appid App ID of a user, which is an application ID that uniquely corresponds to the account ID. Certain Tencent Cloud products use this app ID.
-
+     * Get <p>User AppId. AppId is an application ID with a one-to-one correspondence to the account ID. Some Tencent Cloud products use this AppId.</p> 
+     * @return Appid <p>User AppId. AppId is an application ID with a one-to-one correspondence to the account ID. Some Tencent Cloud products use this AppId.</p>
      */
     public Long getAppid() {
         return this.Appid;
     }
 
     /**
-     * Set App ID of a user, which is an application ID that uniquely corresponds to the account ID. Certain Tencent Cloud products use this app ID.
-
-     * @param Appid App ID of a user, which is an application ID that uniquely corresponds to the account ID. Certain Tencent Cloud products use this app ID.
-
+     * Set <p>User AppId. AppId is an application ID with a one-to-one correspondence to the account ID. Some Tencent Cloud products use this AppId.</p>
+     * @param Appid <p>User AppId. AppId is an application ID with a one-to-one correspondence to the account ID. Some Tencent Cloud products use this AppId.</p>
      */
     public void setAppid(Long Appid) {
         this.Appid = Appid;
     }
 
     /**
-     * Get Project ID. 
-     * @return ProjectId Project ID.
+     * Get <p>Project ID.</p> 
+     * @return ProjectId <p>Project ID.</p>
      */
     public Long getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set Project ID.
-     * @param ProjectId Project ID.
+     * Set <p>Project ID.</p>
+     * @param ProjectId <p>Project ID.</p>
      */
     public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;
     }
 
     /**
-     * Get Region ID.<ul><li>1: Guangzhou.</li><li>4: Shanghai.</li><li>5: Hong Kong (China).</li><li>7: Shanghai Finance.</li><li>8: Beijing.</li><li>9: Singapore.</li><li>11: Shenzhen Finance.</li><li>15: Western US (Silicon Valley).</li><li>16: Chengdu.</li><li>17: Frankfurt.</li><li>18: Seoul.</li><li>19: Chongqing.</li><li>22: Eastern US (Virginia).</li><li>23: Bangkok.</li><li>25: Tokyo.</li></ul> 
-     * @return RegionId Region ID.<ul><li>1: Guangzhou.</li><li>4: Shanghai.</li><li>5: Hong Kong (China).</li><li>7: Shanghai Finance.</li><li>8: Beijing.</li><li>9: Singapore.</li><li>11: Shenzhen Finance.</li><li>15: Western US (Silicon Valley).</li><li>16: Chengdu.</li><li>17: Frankfurt.</li><li>18: Seoul.</li><li>19: Chongqing.</li><li>22: Eastern US (Virginia).</li><li>23: Bangkok.</li><li>25: Tokyo.</li></ul>
+     * Get <p>Region ID.<ul><li>1: Guangzhou.</li><li>4: Shanghai.</li><li>5: Hong Kong (China).</li><li>7: Shanghai Finance.</li><li>8: Beijing.</li><li>9: Singapore.</li><li>11: Shenzhen Finance.</li><li>15: Western US (Silicon Valley).</li><li>16: Chengdu.</li><li>17: Frankfurt.</li><li>18: Seoul.</li><li>19: Chongqing.</li><li>22: Eastern US (Virginia).</li><li>23: Bangkok.</li><li>25: Tokyo.</li></ul></p> 
+     * @return RegionId <p>Region ID.<ul><li>1: Guangzhou.</li><li>4: Shanghai.</li><li>5: Hong Kong (China).</li><li>7: Shanghai Finance.</li><li>8: Beijing.</li><li>9: Singapore.</li><li>11: Shenzhen Finance.</li><li>15: Western US (Silicon Valley).</li><li>16: Chengdu.</li><li>17: Frankfurt.</li><li>18: Seoul.</li><li>19: Chongqing.</li><li>22: Eastern US (Virginia).</li><li>23: Bangkok.</li><li>25: Tokyo.</li></ul></p>
      */
     public Long getRegionId() {
         return this.RegionId;
     }
 
     /**
-     * Set Region ID.<ul><li>1: Guangzhou.</li><li>4: Shanghai.</li><li>5: Hong Kong (China).</li><li>7: Shanghai Finance.</li><li>8: Beijing.</li><li>9: Singapore.</li><li>11: Shenzhen Finance.</li><li>15: Western US (Silicon Valley).</li><li>16: Chengdu.</li><li>17: Frankfurt.</li><li>18: Seoul.</li><li>19: Chongqing.</li><li>22: Eastern US (Virginia).</li><li>23: Bangkok.</li><li>25: Tokyo.</li></ul>
-     * @param RegionId Region ID.<ul><li>1: Guangzhou.</li><li>4: Shanghai.</li><li>5: Hong Kong (China).</li><li>7: Shanghai Finance.</li><li>8: Beijing.</li><li>9: Singapore.</li><li>11: Shenzhen Finance.</li><li>15: Western US (Silicon Valley).</li><li>16: Chengdu.</li><li>17: Frankfurt.</li><li>18: Seoul.</li><li>19: Chongqing.</li><li>22: Eastern US (Virginia).</li><li>23: Bangkok.</li><li>25: Tokyo.</li></ul>
+     * Set <p>Region ID.<ul><li>1: Guangzhou.</li><li>4: Shanghai.</li><li>5: Hong Kong (China).</li><li>7: Shanghai Finance.</li><li>8: Beijing.</li><li>9: Singapore.</li><li>11: Shenzhen Finance.</li><li>15: Western US (Silicon Valley).</li><li>16: Chengdu.</li><li>17: Frankfurt.</li><li>18: Seoul.</li><li>19: Chongqing.</li><li>22: Eastern US (Virginia).</li><li>23: Bangkok.</li><li>25: Tokyo.</li></ul></p>
+     * @param RegionId <p>Region ID.<ul><li>1: Guangzhou.</li><li>4: Shanghai.</li><li>5: Hong Kong (China).</li><li>7: Shanghai Finance.</li><li>8: Beijing.</li><li>9: Singapore.</li><li>11: Shenzhen Finance.</li><li>15: Western US (Silicon Valley).</li><li>16: Chengdu.</li><li>17: Frankfurt.</li><li>18: Seoul.</li><li>19: Chongqing.</li><li>22: Eastern US (Virginia).</li><li>23: Bangkok.</li><li>25: Tokyo.</li></ul></p>
      */
     public void setRegionId(Long RegionId) {
         this.RegionId = RegionId;
     }
 
     /**
-     * Get Zone ID. 
-     * @return ZoneId Zone ID.
+     * Get <p>Region ID.</p> 
+     * @return ZoneId <p>Region ID.</p>
      */
     public Long getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set Zone ID.
-     * @param ZoneId Zone ID.
+     * Set <p>Region ID.</p>
+     * @param ZoneId <p>Region ID.</p>
      */
     public void setZoneId(Long ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * Get VPC ID, for example, 75101. 
-     * @return VpcId VPC ID, for example, 75101.
+     * Get <p>vpc network ID, such as 75101.</p> 
+     * @return VpcId <p>vpc network ID, such as 75101.</p>
      */
     public Long getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set VPC ID, for example, 75101.
-     * @param VpcId VPC ID, for example, 75101.
+     * Set <p>vpc network ID, such as 75101.</p>
+     * @param VpcId <p>vpc network ID, such as 75101.</p>
      */
     public void setVpcId(Long VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get ID of the subnet under VPC, for example, 46315. 
-     * @return SubnetId ID of the subnet under VPC, for example, 46315.
+     * Get <p>Subnet ID under vpc, for example: 46315.</p> 
+     * @return SubnetId <p>Subnet ID under vpc, for example: 46315.</p>
      */
     public Long getSubnetId() {
         return this.SubnetId;
     }
 
     /**
-     * Set ID of the subnet under VPC, for example, 46315.
-     * @param SubnetId ID of the subnet under VPC, for example, 46315.
+     * Set <p>Subnet ID under vpc, for example: 46315.</p>
+     * @param SubnetId <p>Subnet ID under vpc, for example: 46315.</p>
      */
     public void setSubnetId(Long SubnetId) {
         this.SubnetId = SubnetId;
     }
 
     /**
-     * Get Current instance status. <ul><li>0: to be initialized;</li> <li>1: in process;</li> <li>2: running;</li> <li>-2: isolated;</li> <li>-3: to be deleted.</li></ul> 
-     * @return Status Current instance status. <ul><li>0: to be initialized;</li> <li>1: in process;</li> <li>2: running;</li> <li>-2: isolated;</li> <li>-3: to be deleted.</li></ul>
+     * Get <p>Current instance status. <ul><li>0: to be initialized;</li> <li>1: in process;</li> <li>2: running;</li> <li>-2: isolated;</li> <li>-3: to be deleted.</li></ul></p> 
+     * @return Status <p>Current instance status. <ul><li>0: to be initialized;</li> <li>1: in process;</li> <li>2: running;</li> <li>-2: isolated;</li> <li>-3: to be deleted.</li></ul></p>
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Current instance status. <ul><li>0: to be initialized;</li> <li>1: in process;</li> <li>2: running;</li> <li>-2: isolated;</li> <li>-3: to be deleted.</li></ul>
-     * @param Status Current instance status. <ul><li>0: to be initialized;</li> <li>1: in process;</li> <li>2: running;</li> <li>-2: isolated;</li> <li>-3: to be deleted.</li></ul>
+     * Set <p>Current instance status. <ul><li>0: to be initialized;</li> <li>1: in process;</li> <li>2: running;</li> <li>-2: isolated;</li> <li>-3: to be deleted.</li></ul></p>
+     * @param Status <p>Current instance status. <ul><li>0: to be initialized;</li> <li>1: in process;</li> <li>2: running;</li> <li>-2: isolated;</li> <li>-3: to be deleted.</li></ul></p>
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get Instance VIP. 
-     * @return WanIp Instance VIP.
+     * Get <p>Instance VIP.</p> 
+     * @return WanIp <p>Instance VIP.</p>
      */
     public String getWanIp() {
         return this.WanIp;
     }
 
     /**
-     * Set Instance VIP.
-     * @param WanIp Instance VIP.
+     * Set <p>Instance VIP.</p>
+     * @param WanIp <p>Instance VIP.</p>
      */
     public void setWanIp(String WanIp) {
         this.WanIp = WanIp;
     }
 
     /**
-     * Get Instance port number. 
-     * @return Port Instance port number.
+     * Get <p>Instance port number.</p> 
+     * @return Port <p>Instance port number.</p>
      */
     public Long getPort() {
         return this.Port;
     }
 
     /**
-     * Set Instance port number.
-     * @param Port Instance port number.
+     * Set <p>Instance port number.</p>
+     * @param Port <p>Instance port number.</p>
      */
     public void setPort(Long Port) {
         this.Port = Port;
     }
 
     /**
-     * Get Instance creation time, for example, in the format of 2020-01-15 10:20:00. 
-     * @return Createtime Instance creation time, for example, in the format of 2020-01-15 10:20:00.
+     * Get <p>Instance creation time, for example, in the format of 2020-01-15 10:20:00.</p> 
+     * @return Createtime <p>Instance creation time, for example, in the format of 2020-01-15 10:20:00.</p>
      */
     public String getCreatetime() {
         return this.Createtime;
     }
 
     /**
-     * Set Instance creation time, for example, in the format of 2020-01-15 10:20:00.
-     * @param Createtime Instance creation time, for example, in the format of 2020-01-15 10:20:00.
+     * Set <p>Instance creation time, for example, in the format of 2020-01-15 10:20:00.</p>
+     * @param Createtime <p>Instance creation time, for example, in the format of 2020-01-15 10:20:00.</p>
      */
     public void setCreatetime(String Createtime) {
         this.Createtime = Createtime;
     }
 
     /**
-     * Get Instance memory capacity. Unit: MB (1 MB = 1024 KB). 
-     * @return Size Instance memory capacity. Unit: MB (1 MB = 1024 KB).
+     * Get <p>Instance memory capacity. Unit: MB (1 MB = 1024 KB).</p> 
+     * @return Size <p>Instance memory capacity. Unit: MB (1 MB = 1024 KB).</p>
      */
     public Float getSize() {
         return this.Size;
     }
 
     /**
-     * Set Instance memory capacity. Unit: MB (1 MB = 1024 KB).
-     * @param Size Instance memory capacity. Unit: MB (1 MB = 1024 KB).
+     * Set <p>Instance memory capacity. Unit: MB (1 MB = 1024 KB).</p>
+     * @param Size <p>Instance memory capacity. Unit: MB (1 MB = 1024 KB).</p>
      */
     public void setSize(Float Size) {
         this.Size = Size;
     }
 
     /**
-     * Get This parameter has been deprecated. Obtain the memory capacity used by the instance through the TCOP API [GetMonitorData](https://intl.cloud.tencent.com/document/product/248/31014?from_cn_redirect=1). 
-     * @return SizeUsed This parameter has been deprecated. Obtain the memory capacity used by the instance through the TCOP API [GetMonitorData](https://intl.cloud.tencent.com/document/product/248/31014?from_cn_redirect=1).
+     * Get <p>This field is deprecated. Please use the Tencent Cloud observability platform API interface <a href="https://www.tencentcloud.com/document/product/248/31014?from_cn_redirect=1">GetMonitorData</a> to obtain the memory capacity used by the instance.</p> 
+     * @return SizeUsed <p>This field is deprecated. Please use the Tencent Cloud observability platform API interface <a href="https://www.tencentcloud.com/document/product/248/31014?from_cn_redirect=1">GetMonitorData</a> to obtain the memory capacity used by the instance.</p>
      * @deprecated
      */
     @Deprecated
@@ -694,8 +669,8 @@ It is returned only for multi-AZ instances.
     }
 
     /**
-     * Set This parameter has been deprecated. Obtain the memory capacity used by the instance through the TCOP API [GetMonitorData](https://intl.cloud.tencent.com/document/product/248/31014?from_cn_redirect=1).
-     * @param SizeUsed This parameter has been deprecated. Obtain the memory capacity used by the instance through the TCOP API [GetMonitorData](https://intl.cloud.tencent.com/document/product/248/31014?from_cn_redirect=1).
+     * Set <p>This field is deprecated. Please use the Tencent Cloud observability platform API interface <a href="https://www.tencentcloud.com/document/product/248/31014?from_cn_redirect=1">GetMonitorData</a> to obtain the memory capacity used by the instance.</p>
+     * @param SizeUsed <p>This field is deprecated. Please use the Tencent Cloud observability platform API interface <a href="https://www.tencentcloud.com/document/product/248/31014?from_cn_redirect=1">GetMonitorData</a> to obtain the memory capacity used by the instance.</p>
      * @deprecated
      */
     @Deprecated
@@ -704,832 +679,752 @@ It is returned only for multi-AZ instances.
     }
 
     /**
-     * Get Instance type.
-
-- 2: Redis 2.8 memory edition (standard architecture).
-- 3: CKV 3.2 memory edition (standard architecture).
-- 4: CKV 3.2 memory edition (cluster architecture).
-- 5: Redis 2.8 memory edition (standalone).
-- 6: Redis 4.0 memory edition (standard architecture).
-- 7: Redis 4.0 memory edition (cluster architecture).
-- 8: Redis 5.0 memory edition (standard architecture).
-- 9: Redis 5.0 memory edition (cluster architecture).
-- 15: Redis 6.2 memory edition (standard architecture).
-- 16: Redis 6.2 memory edition (cluster architecture).
-- 17: Redis 7.0 memory edition (standard architecture).
-- 18: Redis 7.0 memory edition (cluster architecture).
-- 200: Memcached 1.6 memory edition (cluster architecture). 
-     * @return Type Instance type.
-
-- 2: Redis 2.8 memory edition (standard architecture).
-- 3: CKV 3.2 memory edition (standard architecture).
-- 4: CKV 3.2 memory edition (cluster architecture).
-- 5: Redis 2.8 memory edition (standalone).
-- 6: Redis 4.0 memory edition (standard architecture).
-- 7: Redis 4.0 memory edition (cluster architecture).
-- 8: Redis 5.0 memory edition (standard architecture).
-- 9: Redis 5.0 memory edition (cluster architecture).
-- 15: Redis 6.2 memory edition (standard architecture).
-- 16: Redis 6.2 memory edition (cluster architecture).
-- 17: Redis 7.0 memory edition (standard architecture).
-- 18: Redis 7.0 memory edition (cluster architecture).
-- 200: Memcached 1.6 memory edition (cluster architecture).
+     * Get <p>Instance type.</p><p>Enumeration value:</p><ul><li>2: Redis 2.8 memory edition (standard architecture).</li><li>3: CKV 3.2 memory edition (standard architecture).</li><li>4: CKV 3.2 memory edition (cluster architecture).</li><li>5: Redis 2.8 memory edition (standalone).</li><li>6: Redis 4.0 memory edition (standard architecture).</li><li>7: Redis 4.0 memory edition (cluster architecture).</li><li>8: Redis 5.0 memory edition (standard architecture).</li><li>9: Redis 5.0 memory edition (cluster architecture).</li><li>15: Redis 6.2 memory edition (standard architecture).</li><li>16: Redis 6.2 memory edition (cluster architecture).</li><li>17: Redis 7.0 memory edition (standard architecture).</li><li>18: Redis 7.0 memory edition (cluster architecture).</li><li>19: Valkey 8.0 memory edition (standard architecture).</li><li>20: Valkey 8.0 memory edition (cluster architecture).</li><li>21: Valkey 8.0 memory edition (standard architecture).</li><li>22: Valkey 8.0 memory edition (cluster architecture).</li><li>200: Memcached 1.6 memory edition (cluster architecture).</li></ul> 
+     * @return Type <p>Instance type.</p><p>Enumeration value:</p><ul><li>2: Redis 2.8 memory edition (standard architecture).</li><li>3: CKV 3.2 memory edition (standard architecture).</li><li>4: CKV 3.2 memory edition (cluster architecture).</li><li>5: Redis 2.8 memory edition (standalone).</li><li>6: Redis 4.0 memory edition (standard architecture).</li><li>7: Redis 4.0 memory edition (cluster architecture).</li><li>8: Redis 5.0 memory edition (standard architecture).</li><li>9: Redis 5.0 memory edition (cluster architecture).</li><li>15: Redis 6.2 memory edition (standard architecture).</li><li>16: Redis 6.2 memory edition (cluster architecture).</li><li>17: Redis 7.0 memory edition (standard architecture).</li><li>18: Redis 7.0 memory edition (cluster architecture).</li><li>19: Valkey 8.0 memory edition (standard architecture).</li><li>20: Valkey 8.0 memory edition (cluster architecture).</li><li>21: Valkey 8.0 memory edition (standard architecture).</li><li>22: Valkey 8.0 memory edition (cluster architecture).</li><li>200: Memcached 1.6 memory edition (cluster architecture).</li></ul>
      */
     public Long getType() {
         return this.Type;
     }
 
     /**
-     * Set Instance type.
-
-- 2: Redis 2.8 memory edition (standard architecture).
-- 3: CKV 3.2 memory edition (standard architecture).
-- 4: CKV 3.2 memory edition (cluster architecture).
-- 5: Redis 2.8 memory edition (standalone).
-- 6: Redis 4.0 memory edition (standard architecture).
-- 7: Redis 4.0 memory edition (cluster architecture).
-- 8: Redis 5.0 memory edition (standard architecture).
-- 9: Redis 5.0 memory edition (cluster architecture).
-- 15: Redis 6.2 memory edition (standard architecture).
-- 16: Redis 6.2 memory edition (cluster architecture).
-- 17: Redis 7.0 memory edition (standard architecture).
-- 18: Redis 7.0 memory edition (cluster architecture).
-- 200: Memcached 1.6 memory edition (cluster architecture).
-     * @param Type Instance type.
-
-- 2: Redis 2.8 memory edition (standard architecture).
-- 3: CKV 3.2 memory edition (standard architecture).
-- 4: CKV 3.2 memory edition (cluster architecture).
-- 5: Redis 2.8 memory edition (standalone).
-- 6: Redis 4.0 memory edition (standard architecture).
-- 7: Redis 4.0 memory edition (cluster architecture).
-- 8: Redis 5.0 memory edition (standard architecture).
-- 9: Redis 5.0 memory edition (cluster architecture).
-- 15: Redis 6.2 memory edition (standard architecture).
-- 16: Redis 6.2 memory edition (cluster architecture).
-- 17: Redis 7.0 memory edition (standard architecture).
-- 18: Redis 7.0 memory edition (cluster architecture).
-- 200: Memcached 1.6 memory edition (cluster architecture).
+     * Set <p>Instance type.</p><p>Enumeration value:</p><ul><li>2: Redis 2.8 memory edition (standard architecture).</li><li>3: CKV 3.2 memory edition (standard architecture).</li><li>4: CKV 3.2 memory edition (cluster architecture).</li><li>5: Redis 2.8 memory edition (standalone).</li><li>6: Redis 4.0 memory edition (standard architecture).</li><li>7: Redis 4.0 memory edition (cluster architecture).</li><li>8: Redis 5.0 memory edition (standard architecture).</li><li>9: Redis 5.0 memory edition (cluster architecture).</li><li>15: Redis 6.2 memory edition (standard architecture).</li><li>16: Redis 6.2 memory edition (cluster architecture).</li><li>17: Redis 7.0 memory edition (standard architecture).</li><li>18: Redis 7.0 memory edition (cluster architecture).</li><li>19: Valkey 8.0 memory edition (standard architecture).</li><li>20: Valkey 8.0 memory edition (cluster architecture).</li><li>21: Valkey 8.0 memory edition (standard architecture).</li><li>22: Valkey 8.0 memory edition (cluster architecture).</li><li>200: Memcached 1.6 memory edition (cluster architecture).</li></ul>
+     * @param Type <p>Instance type.</p><p>Enumeration value:</p><ul><li>2: Redis 2.8 memory edition (standard architecture).</li><li>3: CKV 3.2 memory edition (standard architecture).</li><li>4: CKV 3.2 memory edition (cluster architecture).</li><li>5: Redis 2.8 memory edition (standalone).</li><li>6: Redis 4.0 memory edition (standard architecture).</li><li>7: Redis 4.0 memory edition (cluster architecture).</li><li>8: Redis 5.0 memory edition (standard architecture).</li><li>9: Redis 5.0 memory edition (cluster architecture).</li><li>15: Redis 6.2 memory edition (standard architecture).</li><li>16: Redis 6.2 memory edition (cluster architecture).</li><li>17: Redis 7.0 memory edition (standard architecture).</li><li>18: Redis 7.0 memory edition (cluster architecture).</li><li>19: Valkey 8.0 memory edition (standard architecture).</li><li>20: Valkey 8.0 memory edition (cluster architecture).</li><li>21: Valkey 8.0 memory edition (standard architecture).</li><li>22: Valkey 8.0 memory edition (cluster architecture).</li><li>200: Memcached 1.6 memory edition (cluster architecture).</li></ul>
      */
     public void setType(Long Type) {
         this.Type = Type;
     }
 
     /**
-     * Get Whether the automatic renewal flag is set for an instance. <ul><li>1: set;</li> <li>0: not set.</li></ul> 
-     * @return AutoRenewFlag Whether the automatic renewal flag is set for an instance. <ul><li>1: set;</li> <li>0: not set.</li></ul>
+     * Get <p>Whether the automatic renewal flag is set for an instance.</p><ul><li>1: set auto-renewal.</li><li>0: automatic renewal flag not set.</li></ul> 
+     * @return AutoRenewFlag <p>Whether the automatic renewal flag is set for an instance.</p><ul><li>1: set auto-renewal.</li><li>0: automatic renewal flag not set.</li></ul>
      */
     public Long getAutoRenewFlag() {
         return this.AutoRenewFlag;
     }
 
     /**
-     * Set Whether the automatic renewal flag is set for an instance. <ul><li>1: set;</li> <li>0: not set.</li></ul>
-     * @param AutoRenewFlag Whether the automatic renewal flag is set for an instance. <ul><li>1: set;</li> <li>0: not set.</li></ul>
+     * Set <p>Whether the automatic renewal flag is set for an instance.</p><ul><li>1: set auto-renewal.</li><li>0: automatic renewal flag not set.</li></ul>
+     * @param AutoRenewFlag <p>Whether the automatic renewal flag is set for an instance.</p><ul><li>1: set auto-renewal.</li><li>0: automatic renewal flag not set.</li></ul>
      */
     public void setAutoRenewFlag(Long AutoRenewFlag) {
         this.AutoRenewFlag = AutoRenewFlag;
     }
 
     /**
-     * Get Expiration time of a monthly subscription instance. 
-     * @return DeadlineTime Expiration time of a monthly subscription instance.
+     * Get <p>Expiration time of a monthly subscription instance.</p> 
+     * @return DeadlineTime <p>Expiration time of a monthly subscription instance.</p>
      */
     public String getDeadlineTime() {
         return this.DeadlineTime;
     }
 
     /**
-     * Set Expiration time of a monthly subscription instance.
-     * @param DeadlineTime Expiration time of a monthly subscription instance.
+     * Set <p>Expiration time of a monthly subscription instance.</p>
+     * @param DeadlineTime <p>Expiration time of a monthly subscription instance.</p>
      */
     public void setDeadlineTime(String DeadlineTime) {
         this.DeadlineTime = DeadlineTime;
     }
 
     /**
-     * Get Engine. Valid values: Redis Community Edition and Tencent Cloud CKV. 
-     * @return Engine Engine. Valid values: Redis Community Edition and Tencent Cloud CKV.
+     * Get <p>Engine. Valid values: Redis Community Edition and Tencent Cloud CKV.</p> 
+     * @return Engine <p>Engine. Valid values: Redis Community Edition and Tencent Cloud CKV.</p>
      */
     public String getEngine() {
         return this.Engine;
     }
 
     /**
-     * Set Engine. Valid values: Redis Community Edition and Tencent Cloud CKV.
-     * @param Engine Engine. Valid values: Redis Community Edition and Tencent Cloud CKV.
+     * Set <p>Engine. Valid values: Redis Community Edition and Tencent Cloud CKV.</p>
+     * @param Engine <p>Engine. Valid values: Redis Community Edition and Tencent Cloud CKV.</p>
      */
     public void setEngine(String Engine) {
         this.Engine = Engine;
     }
 
     /**
-     * Get Product type. <ul><li>standalone: Standard Edition;</li> <li>cluster: Cluster Edition.</li></ul> 
-     * @return ProductType Product type. <ul><li>standalone: Standard Edition;</li> <li>cluster: Cluster Edition.</li></ul>
+     * Get <p>Product type.<ul><li>standalone: standard version.</li><li>cluster: cluster version.</li></ul></p> 
+     * @return ProductType <p>Product type.<ul><li>standalone: standard version.</li><li>cluster: cluster version.</li></ul></p>
      */
     public String getProductType() {
         return this.ProductType;
     }
 
     /**
-     * Set Product type. <ul><li>standalone: Standard Edition;</li> <li>cluster: Cluster Edition.</li></ul>
-     * @param ProductType Product type. <ul><li>standalone: Standard Edition;</li> <li>cluster: Cluster Edition.</li></ul>
+     * Set <p>Product type.<ul><li>standalone: standard version.</li><li>cluster: cluster version.</li></ul></p>
+     * @param ProductType <p>Product type.<ul><li>standalone: standard version.</li><li>cluster: cluster version.</li></ul></p>
      */
     public void setProductType(String ProductType) {
         this.ProductType = ProductType;
     }
 
     /**
-     * Get VPC ID, for example, vpc-fk33jsf43kgv. 
-     * @return UniqVpcId VPC ID, for example, vpc-fk33jsf43kgv.
+     * Get <p>vpc Network id, such as vpc-fk33jsf43kgv.</p> 
+     * @return UniqVpcId <p>vpc Network id, such as vpc-fk33jsf43kgv.</p>
      */
     public String getUniqVpcId() {
         return this.UniqVpcId;
     }
 
     /**
-     * Set VPC ID, for example, vpc-fk33jsf43kgv.
-     * @param UniqVpcId VPC ID, for example, vpc-fk33jsf43kgv.
+     * Set <p>vpc Network id, such as vpc-fk33jsf43kgv.</p>
+     * @param UniqVpcId <p>vpc Network id, such as vpc-fk33jsf43kgv.</p>
      */
     public void setUniqVpcId(String UniqVpcId) {
         this.UniqVpcId = UniqVpcId;
     }
 
     /**
-     * Get ID of the subnet under VPC, for example, subnet-fd3j6l35mm0. 
-     * @return UniqSubnetId ID of the subnet under VPC, for example, subnet-fd3j6l35mm0.
+     * Get <p>subnet id under vpc, for example: subnet-fd3j6l35mm0.</p> 
+     * @return UniqSubnetId <p>subnet id under vpc, for example: subnet-fd3j6l35mm0.</p>
      */
     public String getUniqSubnetId() {
         return this.UniqSubnetId;
     }
 
     /**
-     * Set ID of the subnet under VPC, for example, subnet-fd3j6l35mm0.
-     * @param UniqSubnetId ID of the subnet under VPC, for example, subnet-fd3j6l35mm0.
+     * Set <p>subnet id under vpc, for example: subnet-fd3j6l35mm0.</p>
+     * @param UniqSubnetId <p>subnet id under vpc, for example: subnet-fd3j6l35mm0.</p>
      */
     public void setUniqSubnetId(String UniqSubnetId) {
         this.UniqSubnetId = UniqSubnetId;
     }
 
     /**
-     * Get Billing mode. Only pay-as-you-go billing is supported. 
-     * @return BillingMode Billing mode. Only pay-as-you-go billing is supported.
+     * Get <p>Billing mode.<ul><li>0: Pay-As-You-Go.</li><li>1: Monthly Subscription.</li></ul></p> 
+     * @return BillingMode <p>Billing mode.<ul><li>0: Pay-As-You-Go.</li><li>1: Monthly Subscription.</li></ul></p>
      */
     public Long getBillingMode() {
         return this.BillingMode;
     }
 
     /**
-     * Set Billing mode. Only pay-as-you-go billing is supported.
-     * @param BillingMode Billing mode. Only pay-as-you-go billing is supported.
+     * Set <p>Billing mode.<ul><li>0: Pay-As-You-Go.</li><li>1: Monthly Subscription.</li></ul></p>
+     * @param BillingMode <p>Billing mode.<ul><li>0: Pay-As-You-Go.</li><li>1: Monthly Subscription.</li></ul></p>
      */
     public void setBillingMode(Long BillingMode) {
         this.BillingMode = BillingMode;
     }
 
     /**
-     * Get Description of the instance running status, for example, running. 
-     * @return InstanceTitle Description of the instance running status, for example, running.
+     * Get <p>Description of instance running status: for example "instance running".</p> 
+     * @return InstanceTitle <p>Description of instance running status: for example "instance running".</p>
      */
     public String getInstanceTitle() {
         return this.InstanceTitle;
     }
 
     /**
-     * Set Description of the instance running status, for example, running.
-     * @param InstanceTitle Description of the instance running status, for example, running.
+     * Set <p>Description of instance running status: for example "instance running".</p>
+     * @param InstanceTitle <p>Description of instance running status: for example "instance running".</p>
      */
     public void setInstanceTitle(String InstanceTitle) {
         this.InstanceTitle = InstanceTitle;
     }
 
     /**
-     * Get Default termination time of isolated instances, for example, in the format of 2020-02-15 10:20:00. By default, a pay-as-you-go instance will be terminated after 2 hours of isolation, and a monthly subscription instance will be terminated after 7 days. 
-     * @return OfflineTime Default termination time of isolated instances, for example, in the format of 2020-02-15 10:20:00. By default, a pay-as-you-go instance will be terminated after 2 hours of isolation, and a monthly subscription instance will be terminated after 7 days.
+     * Get <p>Default termination time of isolated instances. Pay-as-you-go instance offline after isolation. Monthly Subscription instance offline after 7 days. In the format of: 2020-02-15 10:20:00.</p> 
+     * @return OfflineTime <p>Default termination time of isolated instances. Pay-as-you-go instance offline after isolation. Monthly Subscription instance offline after 7 days. In the format of: 2020-02-15 10:20:00.</p>
      */
     public String getOfflineTime() {
         return this.OfflineTime;
     }
 
     /**
-     * Set Default termination time of isolated instances, for example, in the format of 2020-02-15 10:20:00. By default, a pay-as-you-go instance will be terminated after 2 hours of isolation, and a monthly subscription instance will be terminated after 7 days.
-     * @param OfflineTime Default termination time of isolated instances, for example, in the format of 2020-02-15 10:20:00. By default, a pay-as-you-go instance will be terminated after 2 hours of isolation, and a monthly subscription instance will be terminated after 7 days.
+     * Set <p>Default termination time of isolated instances. Pay-as-you-go instance offline after isolation. Monthly Subscription instance offline after 7 days. In the format of: 2020-02-15 10:20:00.</p>
+     * @param OfflineTime <p>Default termination time of isolated instances. Pay-as-you-go instance offline after isolation. Monthly Subscription instance offline after 7 days. In the format of: 2020-02-15 10:20:00.</p>
      */
     public void setOfflineTime(String OfflineTime) {
         this.OfflineTime = OfflineTime;
     }
 
     /**
-     * Get Sub-status returned for the instance in the process.
- - 0: disk read-write status.
- - 1: disk read-only status because the upper limit is exceeded. 
-     * @return SubStatus Sub-status returned for the instance in the process.
- - 0: disk read-write status.
- - 1: disk read-only status because the upper limit is exceeded.
+     * Get <p>Substatus of the instance in process returned.</p><ul><li>0: Read and write status of the disk.</li><li>1: Read-only status of the disk due to exceeding limit.</li></ul> 
+     * @return SubStatus <p>Substatus of the instance in process returned.</p><ul><li>0: Read and write status of the disk.</li><li>1: Read-only status of the disk due to exceeding limit.</li></ul>
      */
     public Long getSubStatus() {
         return this.SubStatus;
     }
 
     /**
-     * Set Sub-status returned for the instance in the process.
- - 0: disk read-write status.
- - 1: disk read-only status because the upper limit is exceeded.
-     * @param SubStatus Sub-status returned for the instance in the process.
- - 0: disk read-write status.
- - 1: disk read-only status because the upper limit is exceeded.
+     * Set <p>Substatus of the instance in process returned.</p><ul><li>0: Read and write status of the disk.</li><li>1: Read-only status of the disk due to exceeding limit.</li></ul>
+     * @param SubStatus <p>Substatus of the instance in process returned.</p><ul><li>0: Read and write status of the disk.</li><li>1: Read-only status of the disk due to exceeding limit.</li></ul>
      */
     public void setSubStatus(Long SubStatus) {
         this.SubStatus = SubStatus;
     }
 
     /**
-     * Get Anti-affinity tag. 
-     * @return Tags Anti-affinity tag.
+     * Get <p>Anti-affinity tag.</p> 
+     * @return Tags <p>Anti-affinity tag.</p>
      */
     public String [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set Anti-affinity tag.
-     * @param Tags Anti-affinity tag.
+     * Set <p>Anti-affinity tag.</p>
+     * @param Tags <p>Anti-affinity tag.</p>
      */
     public void setTags(String [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get Instance node information. 
-     * @return InstanceNode Instance node information.
+     * Get <p>Instance node information.</p> 
+     * @return InstanceNode <p>Instance node information.</p>
      */
     public InstanceNode [] getInstanceNode() {
         return this.InstanceNode;
     }
 
     /**
-     * Set Instance node information.
-     * @param InstanceNode Instance node information.
+     * Set <p>Instance node information.</p>
+     * @param InstanceNode <p>Instance node information.</p>
      */
     public void setInstanceNode(InstanceNode [] InstanceNode) {
         this.InstanceNode = InstanceNode;
     }
 
     /**
-     * Get Shard size. 
-     * @return RedisShardSize Shard size.
+     * Get <p>Shard size.</p> 
+     * @return RedisShardSize <p>Shard size.</p>
      */
     public Long getRedisShardSize() {
         return this.RedisShardSize;
     }
 
     /**
-     * Set Shard size.
-     * @param RedisShardSize Shard size.
+     * Set <p>Shard size.</p>
+     * @param RedisShardSize <p>Shard size.</p>
      */
     public void setRedisShardSize(Long RedisShardSize) {
         this.RedisShardSize = RedisShardSize;
     }
 
     /**
-     * Get Number of shards. 
-     * @return RedisShardNum Number of shards.
+     * Get <p>Number of shards.</p> 
+     * @return RedisShardNum <p>Number of shards.</p>
      */
     public Long getRedisShardNum() {
         return this.RedisShardNum;
     }
 
     /**
-     * Set Number of shards.
-     * @param RedisShardNum Number of shards.
+     * Set <p>Number of shards.</p>
+     * @param RedisShardNum <p>Number of shards.</p>
      */
     public void setRedisShardNum(Long RedisShardNum) {
         this.RedisShardNum = RedisShardNum;
     }
 
     /**
-     * Get Number of replicas. 
-     * @return RedisReplicasNum Number of replicas.
+     * Get <p>Number of replicas.</p> 
+     * @return RedisReplicasNum <p>Number of replicas.</p>
      */
     public Long getRedisReplicasNum() {
         return this.RedisReplicasNum;
     }
 
     /**
-     * Set Number of replicas.
-     * @param RedisReplicasNum Number of replicas.
+     * Set <p>Number of replicas.</p>
+     * @param RedisReplicasNum <p>Number of replicas.</p>
      */
     public void setRedisReplicasNum(Long RedisReplicasNum) {
         this.RedisReplicasNum = RedisReplicasNum;
     }
 
     /**
-     * Get Billing ID. 
-     * @return PriceId Billing ID.
+     * Get <p>Billing ID.</p> 
+     * @return PriceId <p>Billing ID.</p>
      */
     public Long getPriceId() {
         return this.PriceId;
     }
 
     /**
-     * Set Billing ID.
-     * @param PriceId Billing ID.
+     * Set <p>Billing ID.</p>
+     * @param PriceId <p>Billing ID.</p>
      */
     public void setPriceId(Long PriceId) {
         this.PriceId = PriceId;
     }
 
     /**
-     * Get Time when an instance starts to be isolated. 
-     * @return CloseTime Time when an instance starts to be isolated.
+     * Get <p>Time when an instance starts to be isolated.</p> 
+     * @return CloseTime <p>Time when an instance starts to be isolated.</p>
      */
     public String getCloseTime() {
         return this.CloseTime;
     }
 
     /**
-     * Set Time when an instance starts to be isolated.
-     * @param CloseTime Time when an instance starts to be isolated.
+     * Set <p>Time when an instance starts to be isolated.</p>
+     * @param CloseTime <p>Time when an instance starts to be isolated.</p>
      */
     public void setCloseTime(String CloseTime) {
         this.CloseTime = CloseTime;
     }
 
     /**
-     * Get Read weight of a secondary node.
-- 0: disable read-only replicas.
-- 100: enable read-only replicas. 
-     * @return SlaveReadWeight Read weight of a secondary node.
-- 0: disable read-only replicas.
-- 100: enable read-only replicas.
+     * Get <p>Read weight of the secondary node.</p><ul><li>0: means disable read-only replica.</li><li>100: means enable read-only replica.</li></ul> 
+     * @return SlaveReadWeight <p>Read weight of the secondary node.</p><ul><li>0: means disable read-only replica.</li><li>100: means enable read-only replica.</li></ul>
      */
     public Long getSlaveReadWeight() {
         return this.SlaveReadWeight;
     }
 
     /**
-     * Set Read weight of a secondary node.
-- 0: disable read-only replicas.
-- 100: enable read-only replicas.
-     * @param SlaveReadWeight Read weight of a secondary node.
-- 0: disable read-only replicas.
-- 100: enable read-only replicas.
+     * Set <p>Read weight of the secondary node.</p><ul><li>0: means disable read-only replica.</li><li>100: means enable read-only replica.</li></ul>
+     * @param SlaveReadWeight <p>Read weight of the secondary node.</p><ul><li>0: means disable read-only replica.</li><li>100: means enable read-only replica.</li></ul>
      */
     public void setSlaveReadWeight(Long SlaveReadWeight) {
         this.SlaveReadWeight = SlaveReadWeight;
     }
 
     /**
-     * Get Information on tags associated with the instance. 
-     * @return InstanceTags Information on tags associated with the instance.
+     * Get <p>Tag information associated with an instance.</p> 
+     * @return InstanceTags <p>Tag information associated with an instance.</p>
      */
     public InstanceTagInfo [] getInstanceTags() {
         return this.InstanceTags;
     }
 
     /**
-     * Set Information on tags associated with the instance.
-     * @param InstanceTags Information on tags associated with the instance.
+     * Set <p>Tag information associated with an instance.</p>
+     * @param InstanceTags <p>Tag information associated with an instance.</p>
      */
     public void setInstanceTags(InstanceTagInfo [] InstanceTags) {
         this.InstanceTags = InstanceTags;
     }
 
     /**
-     * Get Project name 
-     * @return ProjectName Project name
+     * Get <p>Project name.</p> 
+     * @return ProjectName <p>Project name.</p>
      */
     public String getProjectName() {
         return this.ProjectName;
     }
 
     /**
-     * Set Project name
-     * @param ProjectName Project name
+     * Set <p>Project name.</p>
+     * @param ProjectName <p>Project name.</p>
      */
     public void setProjectName(String ProjectName) {
         this.ProjectName = ProjectName;
     }
 
     /**
-     * Get Whether the instance is password-free.<ul><li>true: password-free instance.</li><li>false: password required by the instance.</li></ul> 
-     * @return NoAuth Whether the instance is password-free.<ul><li>true: password-free instance.</li><li>false: password required by the instance.</li></ul>
+     * Get <p>Whether an instance is a password-free instance. <ul><li>true: yes;</li> <li>false: no.</li></ul></p> 
+     * @return NoAuth <p>Whether an instance is a password-free instance. <ul><li>true: yes;</li> <li>false: no.</li></ul></p>
      */
     public Boolean getNoAuth() {
         return this.NoAuth;
     }
 
     /**
-     * Set Whether the instance is password-free.<ul><li>true: password-free instance.</li><li>false: password required by the instance.</li></ul>
-     * @param NoAuth Whether the instance is password-free.<ul><li>true: password-free instance.</li><li>false: password required by the instance.</li></ul>
+     * Set <p>Whether an instance is a password-free instance. <ul><li>true: yes;</li> <li>false: no.</li></ul></p>
+     * @param NoAuth <p>Whether an instance is a password-free instance. <ul><li>true: yes;</li> <li>false: no.</li></ul></p>
      */
     public void setNoAuth(Boolean NoAuth) {
         this.NoAuth = NoAuth;
     }
 
     /**
-     * Get Number of client connections. 
-     * @return ClientLimit Number of client connections.
+     * Get <p>Number of client connections.</p> 
+     * @return ClientLimit <p>Number of client connections.</p>
      */
     public Long getClientLimit() {
         return this.ClientLimit;
     }
 
     /**
-     * Set Number of client connections.
-     * @param ClientLimit Number of client connections.
+     * Set <p>Number of client connections.</p>
+     * @param ClientLimit <p>Number of client connections.</p>
      */
     public void setClientLimit(Long ClientLimit) {
         this.ClientLimit = ClientLimit;
     }
 
     /**
-     * Get DTS status. (Internal parameter, which can be ignored.) 
-     * @return DtsStatus DTS status. (Internal parameter, which can be ignored.)
+     * Get <p>DTS status (internal parameter, can be ignored by users).</p> 
+     * @return DtsStatus <p>DTS status (internal parameter, can be ignored by users).</p>
      */
     public Long getDtsStatus() {
         return this.DtsStatus;
     }
 
     /**
-     * Set DTS status. (Internal parameter, which can be ignored.)
-     * @param DtsStatus DTS status. (Internal parameter, which can be ignored.)
+     * Set <p>DTS status (internal parameter, can be ignored by users).</p>
+     * @param DtsStatus <p>DTS status (internal parameter, can be ignored by users).</p>
      */
     public void setDtsStatus(Long DtsStatus) {
         this.DtsStatus = DtsStatus;
     }
 
     /**
-     * Get Shard bandwidth limit. Unit: MB. 
-     * @return NetLimit Shard bandwidth limit. Unit: MB.
+     * Get <p>Upper limit of the shard bandwidth. Unit: MB.</p> 
+     * @return NetLimit <p>Upper limit of the shard bandwidth. Unit: MB.</p>
      */
     public Long getNetLimit() {
         return this.NetLimit;
     }
 
     /**
-     * Set Shard bandwidth limit. Unit: MB.
-     * @param NetLimit Shard bandwidth limit. Unit: MB.
+     * Set <p>Upper limit of the shard bandwidth. Unit: MB.</p>
+     * @param NetLimit <p>Upper limit of the shard bandwidth. Unit: MB.</p>
      */
     public void setNetLimit(Long NetLimit) {
         this.NetLimit = NetLimit;
     }
 
     /**
-     * Get Password-free instance flag. (Internal parameter, which can be ignored.) 
-     * @return PasswordFree Password-free instance flag. (Internal parameter, which can be ignored.)
+     * Get <p>Password-free instance flag (internal parameter, which can be ignored).</p> 
+     * @return PasswordFree <p>Password-free instance flag (internal parameter, which can be ignored).</p>
      */
     public Long getPasswordFree() {
         return this.PasswordFree;
     }
 
     /**
-     * Set Password-free instance flag. (Internal parameter, which can be ignored.)
-     * @param PasswordFree Password-free instance flag. (Internal parameter, which can be ignored.)
+     * Set <p>Password-free instance flag (internal parameter, which can be ignored).</p>
+     * @param PasswordFree <p>Password-free instance flag (internal parameter, which can be ignored).</p>
      */
     public void setPasswordFree(Long PasswordFree) {
         this.PasswordFree = PasswordFree;
     }
 
     /**
-     * Get This parameter encounters a naming issue. It is recommended to use the parameter IPv6 instead. It is an internal parameter and can be ignored. 
-     * @return Vip6 This parameter encounters a naming issue. It is recommended to use the parameter IPv6 instead. It is an internal parameter and can be ignored.
+     * Get <p>Internal parameter, which can be ignored. This parameter is not properly named. It is recommended to use the IPv6 parameter to replace it.</p> 
+     * @return Vip6 <p>Internal parameter, which can be ignored. This parameter is not properly named. It is recommended to use the IPv6 parameter to replace it.</p>
      */
     public String getVip6() {
         return this.Vip6;
     }
 
     /**
-     * Set This parameter encounters a naming issue. It is recommended to use the parameter IPv6 instead. It is an internal parameter and can be ignored.
-     * @param Vip6 This parameter encounters a naming issue. It is recommended to use the parameter IPv6 instead. It is an internal parameter and can be ignored.
+     * Set <p>Internal parameter, which can be ignored. This parameter is not properly named. It is recommended to use the IPv6 parameter to replace it.</p>
+     * @param Vip6 <p>Internal parameter, which can be ignored. This parameter is not properly named. It is recommended to use the IPv6 parameter to replace it.</p>
      */
     public void setVip6(String Vip6) {
         this.Vip6 = Vip6;
     }
 
     /**
-     * Get Internal parameter, which can be ignored. 
-     * @return IPv6 Internal parameter, which can be ignored.
+     * Get <p>Internal parameter, which can be ignored.</p> 
+     * @return IPv6 <p>Internal parameter, which can be ignored.</p>
      */
     public String getIPv6() {
         return this.IPv6;
     }
 
     /**
-     * Set Internal parameter, which can be ignored.
-     * @param IPv6 Internal parameter, which can be ignored.
+     * Set <p>Internal parameter, which can be ignored.</p>
+     * @param IPv6 <p>Internal parameter, which can be ignored.</p>
      */
     public void setIPv6(String IPv6) {
         this.IPv6 = IPv6;
     }
 
     /**
-     * Get Instance read-only flag. (Internal parameter, which can be ignored.) 
-     * @return ReadOnly Instance read-only flag. (Internal parameter, which can be ignored.)
+     * Get <p>Instance read-only flag (internal parameter, which can be ignored).</p> 
+     * @return ReadOnly <p>Instance read-only flag (internal parameter, which can be ignored).</p>
      */
     public Long getReadOnly() {
         return this.ReadOnly;
     }
 
     /**
-     * Set Instance read-only flag. (Internal parameter, which can be ignored.)
-     * @param ReadOnly Instance read-only flag. (Internal parameter, which can be ignored.)
+     * Set <p>Instance read-only flag (internal parameter, which can be ignored).</p>
+     * @param ReadOnly <p>Instance read-only flag (internal parameter, which can be ignored).</p>
      */
     public void setReadOnly(Long ReadOnly) {
         this.ReadOnly = ReadOnly;
     }
 
     /**
-     * Get Internal parameter, which can be ignored. 
-     * @return RemainBandwidthDuration Internal parameter, which can be ignored.
+     * Get <p>Internal parameter, which can be ignored.</p> 
+     * @return RemainBandwidthDuration <p>Internal parameter, which can be ignored.</p>
      */
     public String getRemainBandwidthDuration() {
         return this.RemainBandwidthDuration;
     }
 
     /**
-     * Set Internal parameter, which can be ignored.
-     * @param RemainBandwidthDuration Internal parameter, which can be ignored.
+     * Set <p>Internal parameter, which can be ignored.</p>
+     * @param RemainBandwidthDuration <p>Internal parameter, which can be ignored.</p>
      */
     public void setRemainBandwidthDuration(String RemainBandwidthDuration) {
         this.RemainBandwidthDuration = RemainBandwidthDuration;
     }
 
     /**
-     * Get For TencentDB for Redis® instances, ignore this parameter. 
-     * @return DiskSize For TencentDB for Redis® instances, ignore this parameter.
+     * Get <p>For Redis instances, ignore this parameter.</p> 
+     * @return DiskSize <p>For Redis instances, ignore this parameter.</p>
      */
     public Long getDiskSize() {
         return this.DiskSize;
     }
 
     /**
-     * Set For TencentDB for Redis® instances, ignore this parameter.
-     * @param DiskSize For TencentDB for Redis® instances, ignore this parameter.
+     * Set <p>For Redis instances, ignore this parameter.</p>
+     * @param DiskSize <p>For Redis instances, ignore this parameter.</p>
      */
     public void setDiskSize(Long DiskSize) {
         this.DiskSize = DiskSize;
     }
 
     /**
-     * Get Monitoring version.<ul><li>1m: monitoring with the 1-minute granularity. Currently, this monitoring granularity is unavailable. For details, see [1-Minute Granularity Will Be Disused](https://intl.cloud.tencent.com/document/product/239/80653?from_cn_redirect=1).</li><li>5s: monitoring with the 5-second granularity.</li></ul> 
-     * @return MonitorVersion Monitoring version.<ul><li>1m: monitoring with the 1-minute granularity. Currently, this monitoring granularity is unavailable. For details, see [1-Minute Granularity Will Be Disused](https://intl.cloud.tencent.com/document/product/239/80653?from_cn_redirect=1).</li><li>5s: monitoring with the 5-second granularity.</li></ul>
+     * Get <p>Monitoring version.<ul><li>1m: 1-minute granularity monitoring. This monitoring granularity is deprecated. For details, please see <a href="https://www.tencentcloud.com/document/product/239/80653?from_cn_redirect=1">TencentDB for Redis 1-minute granularity deprecation notice</a>.</li><li>5s: 5-second granularity monitoring.</li></ul></p> 
+     * @return MonitorVersion <p>Monitoring version.<ul><li>1m: 1-minute granularity monitoring. This monitoring granularity is deprecated. For details, please see <a href="https://www.tencentcloud.com/document/product/239/80653?from_cn_redirect=1">TencentDB for Redis 1-minute granularity deprecation notice</a>.</li><li>5s: 5-second granularity monitoring.</li></ul></p>
      */
     public String getMonitorVersion() {
         return this.MonitorVersion;
     }
 
     /**
-     * Set Monitoring version.<ul><li>1m: monitoring with the 1-minute granularity. Currently, this monitoring granularity is unavailable. For details, see [1-Minute Granularity Will Be Disused](https://intl.cloud.tencent.com/document/product/239/80653?from_cn_redirect=1).</li><li>5s: monitoring with the 5-second granularity.</li></ul>
-     * @param MonitorVersion Monitoring version.<ul><li>1m: monitoring with the 1-minute granularity. Currently, this monitoring granularity is unavailable. For details, see [1-Minute Granularity Will Be Disused](https://intl.cloud.tencent.com/document/product/239/80653?from_cn_redirect=1).</li><li>5s: monitoring with the 5-second granularity.</li></ul>
+     * Set <p>Monitoring version.<ul><li>1m: 1-minute granularity monitoring. This monitoring granularity is deprecated. For details, please see <a href="https://www.tencentcloud.com/document/product/239/80653?from_cn_redirect=1">TencentDB for Redis 1-minute granularity deprecation notice</a>.</li><li>5s: 5-second granularity monitoring.</li></ul></p>
+     * @param MonitorVersion <p>Monitoring version.<ul><li>1m: 1-minute granularity monitoring. This monitoring granularity is deprecated. For details, please see <a href="https://www.tencentcloud.com/document/product/239/80653?from_cn_redirect=1">TencentDB for Redis 1-minute granularity deprecation notice</a>.</li><li>5s: 5-second granularity monitoring.</li></ul></p>
      */
     public void setMonitorVersion(String MonitorVersion) {
         this.MonitorVersion = MonitorVersion;
     }
 
     /**
-     * Get Minimum value that can be set for the maximum number of client connections. 
-     * @return ClientLimitMin Minimum value that can be set for the maximum number of client connections.
+     * Get <p>Minimum value that can be set for the maximum number of client connections.</p> 
+     * @return ClientLimitMin <p>Minimum value that can be set for the maximum number of client connections.</p>
      */
     public Long getClientLimitMin() {
         return this.ClientLimitMin;
     }
 
     /**
-     * Set Minimum value that can be set for the maximum number of client connections.
-     * @param ClientLimitMin Minimum value that can be set for the maximum number of client connections.
+     * Set <p>Minimum value that can be set for the maximum number of client connections.</p>
+     * @param ClientLimitMin <p>Minimum value that can be set for the maximum number of client connections.</p>
      */
     public void setClientLimitMin(Long ClientLimitMin) {
         this.ClientLimitMin = ClientLimitMin;
     }
 
     /**
-     * Get Maximum value that can be set for the maximum number of client connections. 
-     * @return ClientLimitMax Maximum value that can be set for the maximum number of client connections.
+     * Get <p>Maximum value that can be set for the maximum number of client connections.</p> 
+     * @return ClientLimitMax <p>Maximum value that can be set for the maximum number of client connections.</p>
      */
     public Long getClientLimitMax() {
         return this.ClientLimitMax;
     }
 
     /**
-     * Set Maximum value that can be set for the maximum number of client connections.
-     * @param ClientLimitMax Maximum value that can be set for the maximum number of client connections.
+     * Set <p>Maximum value that can be set for the maximum number of client connections.</p>
+     * @param ClientLimitMax <p>Maximum value that can be set for the maximum number of client connections.</p>
      */
     public void setClientLimitMax(Long ClientLimitMax) {
         this.ClientLimitMax = ClientLimitMax;
     }
 
     /**
-     * Get Node details of the instance.
-
-It is returned only for multi-AZ instances. 
-     * @return NodeSet Node details of the instance.
-
-It is returned only for multi-AZ instances.
+     * Get <p>Detailed node information of the instance.<br>Only multi-AZ instances will be returned.</p> 
+     * @return NodeSet <p>Detailed node information of the instance.<br>Only multi-AZ instances will be returned.</p>
      */
     public RedisNodeInfo [] getNodeSet() {
         return this.NodeSet;
     }
 
     /**
-     * Set Node details of the instance.
-
-It is returned only for multi-AZ instances.
-     * @param NodeSet Node details of the instance.
-
-It is returned only for multi-AZ instances.
+     * Set <p>Detailed node information of the instance.<br>Only multi-AZ instances will be returned.</p>
+     * @param NodeSet <p>Detailed node information of the instance.<br>Only multi-AZ instances will be returned.</p>
      */
     public void setNodeSet(RedisNodeInfo [] NodeSet) {
         this.NodeSet = NodeSet;
     }
 
     /**
-     * Get Region information on the instance. For example, ap-guangzhou. 
-     * @return Region Region information on the instance. For example, ap-guangzhou.
+     * Get <p>Region information of an instance, for example, ap-guangzhou.</p> 
+     * @return Region <p>Region information of an instance, for example, ap-guangzhou.</p>
      */
     public String getRegion() {
         return this.Region;
     }
 
     /**
-     * Set Region information on the instance. For example, ap-guangzhou.
-     * @param Region Region information on the instance. For example, ap-guangzhou.
+     * Set <p>Region information of an instance, for example, ap-guangzhou.</p>
+     * @param Region <p>Region information of an instance, for example, ap-guangzhou.</p>
      */
     public void setRegion(String Region) {
         this.Region = Region;
     }
 
     /**
-     * Get Public network address. 
-     * @return WanAddress Public network address.
+     * Get <p>Public network address.</p> 
+     * @return WanAddress <p>Public network address.</p>
      */
     public String getWanAddress() {
         return this.WanAddress;
     }
 
     /**
-     * Set Public network address.
-     * @param WanAddress Public network address.
+     * Set <p>Public network address.</p>
+     * @param WanAddress <p>Public network address.</p>
      */
     public void setWanAddress(String WanAddress) {
         this.WanAddress = WanAddress;
     }
 
     /**
-     * Get Polaris service address for internal use. 
-     * @return PolarisServer Polaris service address for internal use.
+     * Get <p>Polaris service address for internal use.</p> 
+     * @return PolarisServer <p>Polaris service address for internal use.</p>
      */
     public String getPolarisServer() {
         return this.PolarisServer;
     }
 
     /**
-     * Set Polaris service address for internal use.
-     * @param PolarisServer Polaris service address for internal use.
+     * Set <p>Polaris service address for internal use.</p>
+     * @param PolarisServer <p>Polaris service address for internal use.</p>
      */
     public void setPolarisServer(String PolarisServer) {
         this.PolarisServer = PolarisServer;
     }
 
     /**
-     * Get CDC cluster ID of TencentDB for Redis®. 
-     * @return RedisClusterId CDC cluster ID of TencentDB for Redis®.
+     * Get <p>CDC Redis cluster ID.</p> 
+     * @return RedisClusterId <p>CDC Redis cluster ID.</p>
      */
     public String getRedisClusterId() {
         return this.RedisClusterId;
     }
 
     /**
-     * Set CDC cluster ID of TencentDB for Redis®.
-     * @param RedisClusterId CDC cluster ID of TencentDB for Redis®.
+     * Set <p>CDC Redis cluster ID.</p>
+     * @param RedisClusterId <p>CDC Redis cluster ID.</p>
      */
     public void setRedisClusterId(String RedisClusterId) {
         this.RedisClusterId = RedisClusterId;
     }
 
     /**
-     * Get CDC cluster ID. 
-     * @return DedicatedClusterId CDC cluster ID.
+     * Get <p>CDC cluster ID.</p> 
+     * @return DedicatedClusterId <p>CDC cluster ID.</p>
      */
     public String getDedicatedClusterId() {
         return this.DedicatedClusterId;
     }
 
     /**
-     * Set CDC cluster ID.
-     * @param DedicatedClusterId CDC cluster ID.
+     * Set <p>CDC cluster ID.</p>
+     * @param DedicatedClusterId <p>CDC cluster ID.</p>
      */
     public void setDedicatedClusterId(String DedicatedClusterId) {
         this.DedicatedClusterId = DedicatedClusterId;
     }
 
     /**
-     * Get Product edition.<ul><li>local: local disk.</li><li>cloud: cloud disk edition.</li><li>cdc: CDC cluster edition.</li></ul> 
-     * @return ProductVersion Product edition.<ul><li>local: local disk.</li><li>cloud: cloud disk edition.</li><li>cdc: CDC cluster edition.</li></ul>
+     * Get <p>Product edition. <ul><li>local: local disk;</li> <li>cloud: cloud disk;</li> <li>cdc: CDC cluster edition.</li></ul></p> 
+     * @return ProductVersion <p>Product edition. <ul><li>local: local disk;</li> <li>cloud: cloud disk;</li> <li>cdc: CDC cluster edition.</li></ul></p>
      */
     public String getProductVersion() {
         return this.ProductVersion;
     }
 
     /**
-     * Set Product edition.<ul><li>local: local disk.</li><li>cloud: cloud disk edition.</li><li>cdc: CDC cluster edition.</li></ul>
-     * @param ProductVersion Product edition.<ul><li>local: local disk.</li><li>cloud: cloud disk edition.</li><li>cdc: CDC cluster edition.</li></ul>
+     * Set <p>Product edition. <ul><li>local: local disk;</li> <li>cloud: cloud disk;</li> <li>cdc: CDC cluster edition.</li></ul></p>
+     * @param ProductVersion <p>Product edition. <ul><li>local: local disk;</li> <li>cloud: cloud disk;</li> <li>cdc: CDC cluster edition.</li></ul></p>
      */
     public void setProductVersion(String ProductVersion) {
         this.ProductVersion = ProductVersion;
     }
 
     /**
-     * Get Current proxy version of the instance. 
-     * @return CurrentProxyVersion Current proxy version of the instance.
+     * Get <p>Current Proxy version of the instance.</p> 
+     * @return CurrentProxyVersion <p>Current Proxy version of the instance.</p>
      */
     public String getCurrentProxyVersion() {
         return this.CurrentProxyVersion;
     }
 
     /**
-     * Set Current proxy version of the instance.
-     * @param CurrentProxyVersion Current proxy version of the instance.
+     * Set <p>Current Proxy version of the instance.</p>
+     * @param CurrentProxyVersion <p>Current Proxy version of the instance.</p>
      */
     public void setCurrentProxyVersion(String CurrentProxyVersion) {
         this.CurrentProxyVersion = CurrentProxyVersion;
     }
 
     /**
-     * Get Current cache minor version of the instance. If the instance is added to a global replication group, the global replication kernel version is displayed. 
-     * @return CurrentRedisVersion Current cache minor version of the instance. If the instance is added to a global replication group, the global replication kernel version is displayed.
+     * Get <p>Current Cache minor version of an instance. If the instance joins a global replication group, the kernel version of the global replication group will be displayed.</p> 
+     * @return CurrentRedisVersion <p>Current Cache minor version of an instance. If the instance joins a global replication group, the kernel version of the global replication group will be displayed.</p>
      */
     public String getCurrentRedisVersion() {
         return this.CurrentRedisVersion;
     }
 
     /**
-     * Set Current cache minor version of the instance. If the instance is added to a global replication group, the global replication kernel version is displayed.
-     * @param CurrentRedisVersion Current cache minor version of the instance. If the instance is added to a global replication group, the global replication kernel version is displayed.
+     * Set <p>Current Cache minor version of an instance. If the instance joins a global replication group, the kernel version of the global replication group will be displayed.</p>
+     * @param CurrentRedisVersion <p>Current Cache minor version of an instance. If the instance joins a global replication group, the kernel version of the global replication group will be displayed.</p>
      */
     public void setCurrentRedisVersion(String CurrentRedisVersion) {
         this.CurrentRedisVersion = CurrentRedisVersion;
     }
 
     /**
-     * Get Upgradable proxy version for the instance. 
-     * @return UpgradeProxyVersion Upgradable proxy version for the instance.
+     * Get <p>Upgradable Proxy version of an instance.</p> 
+     * @return UpgradeProxyVersion <p>Upgradable Proxy version of an instance.</p>
      */
     public String getUpgradeProxyVersion() {
         return this.UpgradeProxyVersion;
     }
 
     /**
-     * Set Upgradable proxy version for the instance.
-     * @param UpgradeProxyVersion Upgradable proxy version for the instance.
+     * Set <p>Upgradable Proxy version of an instance.</p>
+     * @param UpgradeProxyVersion <p>Upgradable Proxy version of an instance.</p>
      */
     public void setUpgradeProxyVersion(String UpgradeProxyVersion) {
         this.UpgradeProxyVersion = UpgradeProxyVersion;
     }
 
     /**
-     * Get Upgradable cache minor version for the instance. 
-     * @return UpgradeRedisVersion Upgradable cache minor version for the instance.
+     * Get <p>Upgradable Cache minor version of an instance.</p> 
+     * @return UpgradeRedisVersion <p>Upgradable Cache minor version of an instance.</p>
      */
     public String getUpgradeRedisVersion() {
         return this.UpgradeRedisVersion;
     }
 
     /**
-     * Set Upgradable cache minor version for the instance.
-     * @param UpgradeRedisVersion Upgradable cache minor version for the instance.
+     * Set <p>Upgradable Cache minor version of an instance.</p>
+     * @param UpgradeRedisVersion <p>Upgradable Cache minor version of an instance.</p>
      */
     public void setUpgradeRedisVersion(String UpgradeRedisVersion) {
         this.UpgradeRedisVersion = UpgradeRedisVersion;
     }
 
     /**
-     * Get Backup mode. - SecondLevelBackup: second-level backup. - NormalLevelBackup: ordinary backup. 
-     * @return BackupMode Backup mode. - SecondLevelBackup: second-level backup. - NormalLevelBackup: ordinary backup.
+     * Get <p>Backup mode.</p><ul><li>SecondLevelBackup: second-level backup.</li><li>NormalLevelBackup: normal backup.</li></ul> 
+     * @return BackupMode <p>Backup mode.</p><ul><li>SecondLevelBackup: second-level backup.</li><li>NormalLevelBackup: normal backup.</li></ul>
      */
     public String getBackupMode() {
         return this.BackupMode;
     }
 
     /**
-     * Set Backup mode. - SecondLevelBackup: second-level backup. - NormalLevelBackup: ordinary backup.
-     * @param BackupMode Backup mode. - SecondLevelBackup: second-level backup. - NormalLevelBackup: ordinary backup.
+     * Set <p>Backup mode.</p><ul><li>SecondLevelBackup: second-level backup.</li><li>NormalLevelBackup: normal backup.</li></ul>
+     * @param BackupMode <p>Backup mode.</p><ul><li>SecondLevelBackup: second-level backup.</li><li>NormalLevelBackup: normal backup.</li></ul>
      */
     public void setBackupMode(String BackupMode) {
         this.BackupMode = BackupMode;
     }
 
     /**
-     * Get Deletion protection switch. 0: disabled; 1: enabled. 
-     * @return DeleteProtectionSwitch Deletion protection switch. 0: disabled; 1: enabled.
+     * Get <p>Instance destruction protection switch.</p><ul><li>0: disabled.</li><li>1: enabled.</li></ul> 
+     * @return DeleteProtectionSwitch <p>Instance destruction protection switch.</p><ul><li>0: disabled.</li><li>1: enabled.</li></ul>
      */
     public Long getDeleteProtectionSwitch() {
         return this.DeleteProtectionSwitch;
     }
 
     /**
-     * Set Deletion protection switch. 0: disabled; 1: enabled.
-     * @param DeleteProtectionSwitch Deletion protection switch. 0: disabled; 1: enabled.
+     * Set <p>Instance destruction protection switch.</p><ul><li>0: disabled.</li><li>1: enabled.</li></ul>
+     * @param DeleteProtectionSwitch <p>Instance destruction protection switch.</p><ul><li>0: disabled.</li><li>1: enabled.</li></ul>
      */
     public void setDeleteProtectionSwitch(Long DeleteProtectionSwitch) {
         this.DeleteProtectionSwitch = DeleteProtectionSwitch;

@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class AiReviewProhibitedOcrTaskOutput extends AbstractModel {
 
     /**
-    * Score of OCR-detected prohibited information in text between 0 and 100.
+    * Ocr text involves prohibited content scoring, with a score ranging from 0 to 100.
     */
     @SerializedName("Confidence")
     @Expose
     private Float Confidence;
 
     /**
-    * Suggestion for OCR-detected prohibited information in text. Valid values:
+    * Ocr text prohibited content result suggestion, value ranges from...to...
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
@@ -41,34 +41,34 @@ public class AiReviewProhibitedOcrTaskOutput extends AbstractModel {
     private String Suggestion;
 
     /**
-    * List of video segments that contain the OCR-detected prohibited information in text.
+    * Video segment list with Ocr text suspected of prohibition violations.
     */
     @SerializedName("SegmentSet")
     @Expose
     private MediaContentReviewOcrTextSegmentItem [] SegmentSet;
 
     /**
-     * Get Score of OCR-detected prohibited information in text between 0 and 100. 
-     * @return Confidence Score of OCR-detected prohibited information in text between 0 and 100.
+     * Get Ocr text involves prohibited content scoring, with a score ranging from 0 to 100. 
+     * @return Confidence Ocr text involves prohibited content scoring, with a score ranging from 0 to 100.
      */
     public Float getConfidence() {
         return this.Confidence;
     }
 
     /**
-     * Set Score of OCR-detected prohibited information in text between 0 and 100.
-     * @param Confidence Score of OCR-detected prohibited information in text between 0 and 100.
+     * Set Ocr text involves prohibited content scoring, with a score ranging from 0 to 100.
+     * @param Confidence Ocr text involves prohibited content scoring, with a score ranging from 0 to 100.
      */
     public void setConfidence(Float Confidence) {
         this.Confidence = Confidence;
     }
 
     /**
-     * Get Suggestion for OCR-detected prohibited information in text. Valid values:
+     * Get Ocr text prohibited content result suggestion, value ranges from...to...
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li> 
-     * @return Suggestion Suggestion for OCR-detected prohibited information in text. Valid values:
+     * @return Suggestion Ocr text prohibited content result suggestion, value ranges from...to...
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
@@ -78,11 +78,11 @@ public class AiReviewProhibitedOcrTaskOutput extends AbstractModel {
     }
 
     /**
-     * Set Suggestion for OCR-detected prohibited information in text. Valid values:
+     * Set Ocr text prohibited content result suggestion, value ranges from...to...
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
-     * @param Suggestion Suggestion for OCR-detected prohibited information in text. Valid values:
+     * @param Suggestion Ocr text prohibited content result suggestion, value ranges from...to...
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
@@ -92,16 +92,16 @@ public class AiReviewProhibitedOcrTaskOutput extends AbstractModel {
     }
 
     /**
-     * Get List of video segments that contain the OCR-detected prohibited information in text. 
-     * @return SegmentSet List of video segments that contain the OCR-detected prohibited information in text.
+     * Get Video segment list with Ocr text suspected of prohibition violations. 
+     * @return SegmentSet Video segment list with Ocr text suspected of prohibition violations.
      */
     public MediaContentReviewOcrTextSegmentItem [] getSegmentSet() {
         return this.SegmentSet;
     }
 
     /**
-     * Set List of video segments that contain the OCR-detected prohibited information in text.
-     * @param SegmentSet List of video segments that contain the OCR-detected prohibited information in text.
+     * Set Video segment list with Ocr text suspected of prohibition violations.
+     * @param SegmentSet Video segment list with Ocr text suspected of prohibition violations.
      */
     public void setSegmentSet(MediaContentReviewOcrTextSegmentItem [] SegmentSet) {
         this.SegmentSet = SegmentSet;

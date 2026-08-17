@@ -31,14 +31,14 @@ public class AiAnalysisTaskCutoutResult extends AbstractModel {
     private String Status;
 
     /**
-    * Error code. An empty string indicates that the task is successful, while other values indicate that the task has failed. For valid values, see the list of [MPS error codes](https://www.tencentcloud.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
+    * Error code. An empty string indicates that the task is successful, and other values indicate that the task has failed. For specific values, see [Error Codes] (https://www.tencentcloud.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
     */
     @SerializedName("ErrCodeExt")
     @Expose
     private String ErrCodeExt;
 
     /**
-    * Error message.
+    * Error message
     */
     @SerializedName("Message")
     @Expose
@@ -52,21 +52,21 @@ public class AiAnalysisTaskCutoutResult extends AbstractModel {
     private AiAnalysisTaskCutoutInput Input;
 
     /**
-    * Output of the video matting task.Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("Output")
     @Expose
     private AiAnalysisTaskCutoutOutput Output;
 
     /**
-    * Task progress.
+    * Task progress
     */
     @SerializedName("Progress")
     @Expose
     private Long Progress;
 
     /**
-    * Task start time, in ISO date and time format.
+    * Starting time of task execution, in ISO date and time format.
     */
     @SerializedName("BeginProcessTime")
     @Expose
@@ -96,32 +96,32 @@ public class AiAnalysisTaskCutoutResult extends AbstractModel {
     }
 
     /**
-     * Get Error code. An empty string indicates that the task is successful, while other values indicate that the task has failed. For valid values, see the list of [MPS error codes](https://www.tencentcloud.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81). 
-     * @return ErrCodeExt Error code. An empty string indicates that the task is successful, while other values indicate that the task has failed. For valid values, see the list of [MPS error codes](https://www.tencentcloud.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
+     * Get Error code. An empty string indicates that the task is successful, and other values indicate that the task has failed. For specific values, see [Error Codes] (https://www.tencentcloud.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81). 
+     * @return ErrCodeExt Error code. An empty string indicates that the task is successful, and other values indicate that the task has failed. For specific values, see [Error Codes] (https://www.tencentcloud.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
      */
     public String getErrCodeExt() {
         return this.ErrCodeExt;
     }
 
     /**
-     * Set Error code. An empty string indicates that the task is successful, while other values indicate that the task has failed. For valid values, see the list of [MPS error codes](https://www.tencentcloud.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
-     * @param ErrCodeExt Error code. An empty string indicates that the task is successful, while other values indicate that the task has failed. For valid values, see the list of [MPS error codes](https://www.tencentcloud.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
+     * Set Error code. An empty string indicates that the task is successful, and other values indicate that the task has failed. For specific values, see [Error Codes] (https://www.tencentcloud.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
+     * @param ErrCodeExt Error code. An empty string indicates that the task is successful, and other values indicate that the task has failed. For specific values, see [Error Codes] (https://www.tencentcloud.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
      */
     public void setErrCodeExt(String ErrCodeExt) {
         this.ErrCodeExt = ErrCodeExt;
     }
 
     /**
-     * Get Error message. 
-     * @return Message Error message.
+     * Get Error message 
+     * @return Message Error message
      */
     public String getMessage() {
         return this.Message;
     }
 
     /**
-     * Set Error message.
-     * @param Message Error message.
+     * Set Error message
+     * @param Message Error message
      */
     public void setMessage(String Message) {
         this.Message = Message;
@@ -144,48 +144,48 @@ public class AiAnalysisTaskCutoutResult extends AbstractModel {
     }
 
     /**
-     * Get Output of the video matting task.Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Output Output of the video matting task.Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return Output 
      */
     public AiAnalysisTaskCutoutOutput getOutput() {
         return this.Output;
     }
 
     /**
-     * Set Output of the video matting task.Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Output Output of the video matting task.Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param Output 
      */
     public void setOutput(AiAnalysisTaskCutoutOutput Output) {
         this.Output = Output;
     }
 
     /**
-     * Get Task progress. 
-     * @return Progress Task progress.
+     * Get Task progress 
+     * @return Progress Task progress
      */
     public Long getProgress() {
         return this.Progress;
     }
 
     /**
-     * Set Task progress.
-     * @param Progress Task progress.
+     * Set Task progress
+     * @param Progress Task progress
      */
     public void setProgress(Long Progress) {
         this.Progress = Progress;
     }
 
     /**
-     * Get Task start time, in ISO date and time format. 
-     * @return BeginProcessTime Task start time, in ISO date and time format.
+     * Get Starting time of task execution, in ISO date and time format. 
+     * @return BeginProcessTime Starting time of task execution, in ISO date and time format.
      */
     public String getBeginProcessTime() {
         return this.BeginProcessTime;
     }
 
     /**
-     * Set Task start time, in ISO date and time format.
-     * @param BeginProcessTime Task start time, in ISO date and time format.
+     * Set Starting time of task execution, in ISO date and time format.
+     * @param BeginProcessTime Starting time of task execution, in ISO date and time format.
      */
     public void setBeginProcessTime(String BeginProcessTime) {
         this.BeginProcessTime = BeginProcessTime;

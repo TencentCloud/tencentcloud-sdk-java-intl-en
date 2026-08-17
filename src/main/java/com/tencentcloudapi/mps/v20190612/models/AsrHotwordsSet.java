@@ -24,239 +24,184 @@ import java.util.HashMap;
 public class AsrHotwordsSet extends AbstractModel {
 
     /**
-    * Hotword lexicon ID.
-Note: This field may return null, indicating that no valid value can be obtained.
+    * 
     */
     @SerializedName("HotwordsId")
     @Expose
     private String HotwordsId;
 
     /**
-    * Current hotword lexicon status. The value indicates the number of smart subtitle templates bound to this hotword lexicon.
-If the value of Status is 0, it indicates that the hotword lexicon is not referenced by any smart subtitle template and that it can be deleted.
-If the value of Status is not 0, it indicates that the hotword lexicon cannot be deleted.
-Note: This field may return null, indicating that no valid value can be obtained.
+    * 
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * Hotword lexicon name.
-Note: This field may return null, indicating that no valid value can be obtained.
+    * 
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * Number of hotwords in the hotword lexicon.
-Note: This field may return null, indicating that no valid value can be obtained.
+    * 
     */
     @SerializedName("WordCount")
     @Expose
     private Long WordCount;
 
     /**
-    * Name of the uploaded hotword file.
-Note: This field may return null, indicating that no valid value can be obtained.
+    * 
     */
     @SerializedName("FileName")
     @Expose
     private String FileName;
 
     /**
-    * Creation time of the hotword lexicon in ISO datetime format (UTC time). For example, 2006-01-02T15:04:05Z.
-Note: This field may return null, indicating that no valid value can be obtained.
+    * 
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * Creation time of the hotword lexicon in ISO datetime format (UTC time). For example, 2006-01-02T15:04:05Z.
-Note: This field may return null, indicating that no valid value can be obtained.
+    * 
     */
     @SerializedName("UpdateTime")
     @Expose
     private String UpdateTime;
 
     /**
-    * 0: temporary hotword lexicon
-1: file-based hotword lexicon
-Note: This field may return null, indicating that no valid value can be obtained.
+    * 
     */
     @SerializedName("Type")
     @Expose
     private Long Type;
 
     /**
-     * Get Hotword lexicon ID.
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return HotwordsId Hotword lexicon ID.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get  
+     * @return HotwordsId 
      */
     public String getHotwordsId() {
         return this.HotwordsId;
     }
 
     /**
-     * Set Hotword lexicon ID.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param HotwordsId Hotword lexicon ID.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set 
+     * @param HotwordsId 
      */
     public void setHotwordsId(String HotwordsId) {
         this.HotwordsId = HotwordsId;
     }
 
     /**
-     * Get Current hotword lexicon status. The value indicates the number of smart subtitle templates bound to this hotword lexicon.
-If the value of Status is 0, it indicates that the hotword lexicon is not referenced by any smart subtitle template and that it can be deleted.
-If the value of Status is not 0, it indicates that the hotword lexicon cannot be deleted.
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return Status Current hotword lexicon status. The value indicates the number of smart subtitle templates bound to this hotword lexicon.
-If the value of Status is 0, it indicates that the hotword lexicon is not referenced by any smart subtitle template and that it can be deleted.
-If the value of Status is not 0, it indicates that the hotword lexicon cannot be deleted.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get  
+     * @return Status 
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Current hotword lexicon status. The value indicates the number of smart subtitle templates bound to this hotword lexicon.
-If the value of Status is 0, it indicates that the hotword lexicon is not referenced by any smart subtitle template and that it can be deleted.
-If the value of Status is not 0, it indicates that the hotword lexicon cannot be deleted.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param Status Current hotword lexicon status. The value indicates the number of smart subtitle templates bound to this hotword lexicon.
-If the value of Status is 0, it indicates that the hotword lexicon is not referenced by any smart subtitle template and that it can be deleted.
-If the value of Status is not 0, it indicates that the hotword lexicon cannot be deleted.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set 
+     * @param Status 
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get Hotword lexicon name.
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return Name Hotword lexicon name.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get  
+     * @return Name 
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Hotword lexicon name.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param Name Hotword lexicon name.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set 
+     * @param Name 
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get Number of hotwords in the hotword lexicon.
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return WordCount Number of hotwords in the hotword lexicon.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get  
+     * @return WordCount 
      */
     public Long getWordCount() {
         return this.WordCount;
     }
 
     /**
-     * Set Number of hotwords in the hotword lexicon.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param WordCount Number of hotwords in the hotword lexicon.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set 
+     * @param WordCount 
      */
     public void setWordCount(Long WordCount) {
         this.WordCount = WordCount;
     }
 
     /**
-     * Get Name of the uploaded hotword file.
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return FileName Name of the uploaded hotword file.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get  
+     * @return FileName 
      */
     public String getFileName() {
         return this.FileName;
     }
 
     /**
-     * Set Name of the uploaded hotword file.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param FileName Name of the uploaded hotword file.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set 
+     * @param FileName 
      */
     public void setFileName(String FileName) {
         this.FileName = FileName;
     }
 
     /**
-     * Get Creation time of the hotword lexicon in ISO datetime format (UTC time). For example, 2006-01-02T15:04:05Z.
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return CreateTime Creation time of the hotword lexicon in ISO datetime format (UTC time). For example, 2006-01-02T15:04:05Z.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get  
+     * @return CreateTime 
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set Creation time of the hotword lexicon in ISO datetime format (UTC time). For example, 2006-01-02T15:04:05Z.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param CreateTime Creation time of the hotword lexicon in ISO datetime format (UTC time). For example, 2006-01-02T15:04:05Z.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set 
+     * @param CreateTime 
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get Creation time of the hotword lexicon in ISO datetime format (UTC time). For example, 2006-01-02T15:04:05Z.
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return UpdateTime Creation time of the hotword lexicon in ISO datetime format (UTC time). For example, 2006-01-02T15:04:05Z.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get  
+     * @return UpdateTime 
      */
     public String getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set Creation time of the hotword lexicon in ISO datetime format (UTC time). For example, 2006-01-02T15:04:05Z.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param UpdateTime Creation time of the hotword lexicon in ISO datetime format (UTC time). For example, 2006-01-02T15:04:05Z.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set 
+     * @param UpdateTime 
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;
     }
 
     /**
-     * Get 0: temporary hotword lexicon
-1: file-based hotword lexicon
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return Type 0: temporary hotword lexicon
-1: file-based hotword lexicon
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get  
+     * @return Type 
      */
     public Long getType() {
         return this.Type;
     }
 
     /**
-     * Set 0: temporary hotword lexicon
-1: file-based hotword lexicon
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param Type 0: temporary hotword lexicon
-1: file-based hotword lexicon
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set 
+     * @param Type 
      */
     public void setType(Long Type) {
         this.Type = Type;

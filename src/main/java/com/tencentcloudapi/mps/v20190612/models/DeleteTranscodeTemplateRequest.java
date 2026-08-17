@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DeleteTranscodeTemplateRequest extends AbstractModel {
 
     /**
-    * Unique ID of a transcoding template.
+    * Unique identifier of the transcoding template.
     */
     @SerializedName("Definition")
     @Expose
     private Long Definition;
 
     /**
-     * Get Unique ID of a transcoding template. 
-     * @return Definition Unique ID of a transcoding template.
+     * Get Unique identifier of the transcoding template. 
+     * @return Definition Unique identifier of the transcoding template.
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set Unique ID of a transcoding template.
-     * @param Definition Unique ID of a transcoding template.
+     * Set Unique identifier of the transcoding template.
+     * @param Definition Unique identifier of the transcoding template.
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;

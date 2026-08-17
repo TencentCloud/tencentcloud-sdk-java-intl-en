@@ -24,16 +24,14 @@ import java.util.HashMap;
 public class ImageProcessTaskOutput extends AbstractModel {
 
     /**
-    * <p>Path of the output file.</p>
-Attention: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("Path")
     @Expose
     private String Path;
 
     /**
-    * <p>Storage location of the output file.</p>
-Attention: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("OutputStorage")
     @Expose
@@ -54,40 +52,32 @@ Attention: This field may return null, indicating that no valid values can be ob
     private String FileId;
 
     /**
-     * Get <p>Path of the output file.</p>
-Attention: This field may return null, indicating that no valid values can be obtained. 
-     * @return Path <p>Path of the output file.</p>
-Attention: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return Path 
      */
     public String getPath() {
         return this.Path;
     }
 
     /**
-     * Set <p>Path of the output file.</p>
-Attention: This field may return null, indicating that no valid values can be obtained.
-     * @param Path <p>Path of the output file.</p>
-Attention: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param Path 
      */
     public void setPath(String Path) {
         this.Path = Path;
     }
 
     /**
-     * Get <p>Storage location of the output file.</p>
-Attention: This field may return null, indicating that no valid values can be obtained. 
-     * @return OutputStorage <p>Storage location of the output file.</p>
-Attention: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return OutputStorage 
      */
     public TaskOutputStorage getOutputStorage() {
         return this.OutputStorage;
     }
 
     /**
-     * Set <p>Storage location of the output file.</p>
-Attention: This field may return null, indicating that no valid values can be obtained.
-     * @param OutputStorage <p>Storage location of the output file.</p>
-Attention: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param OutputStorage 
      */
     public void setOutputStorage(TaskOutputStorage OutputStorage) {
         this.OutputStorage = OutputStorage;

@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class AiAnalysisTaskClassificationOutput extends AbstractModel {
 
     /**
-    * List of intelligently generated video categories.
+    * Video intelligent classification list.
     */
     @SerializedName("ClassificationSet")
     @Expose
     private MediaAiAnalysisClassificationItem [] ClassificationSet;
 
     /**
-     * Get List of intelligently generated video categories. 
-     * @return ClassificationSet List of intelligently generated video categories.
+     * Get Video intelligent classification list. 
+     * @return ClassificationSet Video intelligent classification list.
      */
     public MediaAiAnalysisClassificationItem [] getClassificationSet() {
         return this.ClassificationSet;
     }
 
     /**
-     * Set List of intelligently generated video categories.
-     * @param ClassificationSet List of intelligently generated video categories.
+     * Set Video intelligent classification list.
+     * @param ClassificationSet Video intelligent classification list.
      */
     public void setClassificationSet(MediaAiAnalysisClassificationItem [] ClassificationSet) {
         this.ClassificationSet = ClassificationSet;

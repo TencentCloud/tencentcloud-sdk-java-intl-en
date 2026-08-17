@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class LiveStreamFaceRecognitionResult extends AbstractModel {
 
     /**
-    * Unique ID of figure.
+    * Unique identification ID of a figure.
     */
     @SerializedName("Id")
     @Expose
@@ -38,52 +38,52 @@ public class LiveStreamFaceRecognitionResult extends AbstractModel {
     private String Name;
 
     /**
-    * Figure library type, indicating to which figure library the recognized figure belongs:
-<li>Default: default figure library</li><li>UserDefine: custom figure library</li>
+    * Figure library type, which indicates which figure library the recognized figure comes from.
+<li>Default: Default figure library;</li><li>UserDefine: User-defined character library.</li>
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * Start PTS time of recognized segment in seconds.
+    * Start PTS time of a recognized segment, in seconds.
     */
     @SerializedName("StartPtsTime")
     @Expose
     private Float StartPtsTime;
 
     /**
-    * End PTS time of recognized segment in seconds.
+    * End PTS time of a recognized segment, in seconds.
     */
     @SerializedName("EndPtsTime")
     @Expose
     private Float EndPtsTime;
 
     /**
-    * Confidence of recognized segment. Value range: 0–100.
+    * Confidence of a recognized segment. Value range: 0-100.
     */
     @SerializedName("Confidence")
     @Expose
     private Float Confidence;
 
     /**
-    * Zone coordinates of recognition result. The array contains four elements: [x1,y1,x2,y2], i.e., the horizontal and vertical coordinates of the top-left and bottom-right corners.
+    * Zone coordinates of the recognition result. An array contains four elements: [x1, y1, x2, y2], representing the horizontal and vertical coordinates of the top-left and bottom-right corners, respectively.
     */
     @SerializedName("AreaCoordSet")
     @Expose
     private Long [] AreaCoordSet;
 
     /**
-     * Get Unique ID of figure. 
-     * @return Id Unique ID of figure.
+     * Get Unique identification ID of a figure. 
+     * @return Id Unique identification ID of a figure.
      */
     public String getId() {
         return this.Id;
     }
 
     /**
-     * Set Unique ID of figure.
-     * @param Id Unique ID of figure.
+     * Set Unique identification ID of a figure.
+     * @param Id Unique identification ID of a figure.
      */
     public void setId(String Id) {
         this.Id = Id;
@@ -106,84 +106,84 @@ public class LiveStreamFaceRecognitionResult extends AbstractModel {
     }
 
     /**
-     * Get Figure library type, indicating to which figure library the recognized figure belongs:
-<li>Default: default figure library</li><li>UserDefine: custom figure library</li> 
-     * @return Type Figure library type, indicating to which figure library the recognized figure belongs:
-<li>Default: default figure library</li><li>UserDefine: custom figure library</li>
+     * Get Figure library type, which indicates which figure library the recognized figure comes from.
+<li>Default: Default figure library;</li><li>UserDefine: User-defined character library.</li> 
+     * @return Type Figure library type, which indicates which figure library the recognized figure comes from.
+<li>Default: Default figure library;</li><li>UserDefine: User-defined character library.</li>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set Figure library type, indicating to which figure library the recognized figure belongs:
-<li>Default: default figure library</li><li>UserDefine: custom figure library</li>
-     * @param Type Figure library type, indicating to which figure library the recognized figure belongs:
-<li>Default: default figure library</li><li>UserDefine: custom figure library</li>
+     * Set Figure library type, which indicates which figure library the recognized figure comes from.
+<li>Default: Default figure library;</li><li>UserDefine: User-defined character library.</li>
+     * @param Type Figure library type, which indicates which figure library the recognized figure comes from.
+<li>Default: Default figure library;</li><li>UserDefine: User-defined character library.</li>
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get Start PTS time of recognized segment in seconds. 
-     * @return StartPtsTime Start PTS time of recognized segment in seconds.
+     * Get Start PTS time of a recognized segment, in seconds. 
+     * @return StartPtsTime Start PTS time of a recognized segment, in seconds.
      */
     public Float getStartPtsTime() {
         return this.StartPtsTime;
     }
 
     /**
-     * Set Start PTS time of recognized segment in seconds.
-     * @param StartPtsTime Start PTS time of recognized segment in seconds.
+     * Set Start PTS time of a recognized segment, in seconds.
+     * @param StartPtsTime Start PTS time of a recognized segment, in seconds.
      */
     public void setStartPtsTime(Float StartPtsTime) {
         this.StartPtsTime = StartPtsTime;
     }
 
     /**
-     * Get End PTS time of recognized segment in seconds. 
-     * @return EndPtsTime End PTS time of recognized segment in seconds.
+     * Get End PTS time of a recognized segment, in seconds. 
+     * @return EndPtsTime End PTS time of a recognized segment, in seconds.
      */
     public Float getEndPtsTime() {
         return this.EndPtsTime;
     }
 
     /**
-     * Set End PTS time of recognized segment in seconds.
-     * @param EndPtsTime End PTS time of recognized segment in seconds.
+     * Set End PTS time of a recognized segment, in seconds.
+     * @param EndPtsTime End PTS time of a recognized segment, in seconds.
      */
     public void setEndPtsTime(Float EndPtsTime) {
         this.EndPtsTime = EndPtsTime;
     }
 
     /**
-     * Get Confidence of recognized segment. Value range: 0–100. 
-     * @return Confidence Confidence of recognized segment. Value range: 0–100.
+     * Get Confidence of a recognized segment. Value range: 0-100. 
+     * @return Confidence Confidence of a recognized segment. Value range: 0-100.
      */
     public Float getConfidence() {
         return this.Confidence;
     }
 
     /**
-     * Set Confidence of recognized segment. Value range: 0–100.
-     * @param Confidence Confidence of recognized segment. Value range: 0–100.
+     * Set Confidence of a recognized segment. Value range: 0-100.
+     * @param Confidence Confidence of a recognized segment. Value range: 0-100.
      */
     public void setConfidence(Float Confidence) {
         this.Confidence = Confidence;
     }
 
     /**
-     * Get Zone coordinates of recognition result. The array contains four elements: [x1,y1,x2,y2], i.e., the horizontal and vertical coordinates of the top-left and bottom-right corners. 
-     * @return AreaCoordSet Zone coordinates of recognition result. The array contains four elements: [x1,y1,x2,y2], i.e., the horizontal and vertical coordinates of the top-left and bottom-right corners.
+     * Get Zone coordinates of the recognition result. An array contains four elements: [x1, y1, x2, y2], representing the horizontal and vertical coordinates of the top-left and bottom-right corners, respectively. 
+     * @return AreaCoordSet Zone coordinates of the recognition result. An array contains four elements: [x1, y1, x2, y2], representing the horizontal and vertical coordinates of the top-left and bottom-right corners, respectively.
      */
     public Long [] getAreaCoordSet() {
         return this.AreaCoordSet;
     }
 
     /**
-     * Set Zone coordinates of recognition result. The array contains four elements: [x1,y1,x2,y2], i.e., the horizontal and vertical coordinates of the top-left and bottom-right corners.
-     * @param AreaCoordSet Zone coordinates of recognition result. The array contains four elements: [x1,y1,x2,y2], i.e., the horizontal and vertical coordinates of the top-left and bottom-right corners.
+     * Set Zone coordinates of the recognition result. An array contains four elements: [x1, y1, x2, y2], representing the horizontal and vertical coordinates of the top-left and bottom-right corners, respectively.
+     * @param AreaCoordSet Zone coordinates of the recognition result. An array contains four elements: [x1, y1, x2, y2], representing the horizontal and vertical coordinates of the top-left and bottom-right corners, respectively.
      */
     public void setAreaCoordSet(Long [] AreaCoordSet) {
         this.AreaCoordSet = AreaCoordSet;

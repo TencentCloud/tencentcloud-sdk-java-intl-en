@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class VideoComprehensionResultItem extends AbstractModel {
 
     /**
-    * Segment start time (unit: seconds).
+    * Segment start time (unit: seconds)
 
     */
     @SerializedName("StartTime")
@@ -32,37 +32,37 @@ public class VideoComprehensionResultItem extends AbstractModel {
     private Float StartTime;
 
     /**
-    * Segment end time (unit: s).
+    * Segment end time (unit: seconds)
     */
     @SerializedName("EndTime")
     @Expose
     private Float EndTime;
 
     /**
-    * Video clip title.
+    * Storyboard clip title
     */
     @SerializedName("Title")
     @Expose
     private String Title;
 
     /**
-    * Storyboard clip information description.
+    * Segment information description
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * Scene clip keywords.
+    * Storyboard clip keywords
     */
     @SerializedName("Keywords")
     @Expose
     private String [] Keywords;
 
     /**
-     * Get Segment start time (unit: seconds).
+     * Get Segment start time (unit: seconds)
  
-     * @return StartTime Segment start time (unit: seconds).
+     * @return StartTime Segment start time (unit: seconds)
 
      */
     public Float getStartTime() {
@@ -70,9 +70,9 @@ public class VideoComprehensionResultItem extends AbstractModel {
     }
 
     /**
-     * Set Segment start time (unit: seconds).
+     * Set Segment start time (unit: seconds)
 
-     * @param StartTime Segment start time (unit: seconds).
+     * @param StartTime Segment start time (unit: seconds)
 
      */
     public void setStartTime(Float StartTime) {
@@ -80,64 +80,64 @@ public class VideoComprehensionResultItem extends AbstractModel {
     }
 
     /**
-     * Get Segment end time (unit: s). 
-     * @return EndTime Segment end time (unit: s).
+     * Get Segment end time (unit: seconds) 
+     * @return EndTime Segment end time (unit: seconds)
      */
     public Float getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set Segment end time (unit: s).
-     * @param EndTime Segment end time (unit: s).
+     * Set Segment end time (unit: seconds)
+     * @param EndTime Segment end time (unit: seconds)
      */
     public void setEndTime(Float EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get Video clip title. 
-     * @return Title Video clip title.
+     * Get Storyboard clip title 
+     * @return Title Storyboard clip title
      */
     public String getTitle() {
         return this.Title;
     }
 
     /**
-     * Set Video clip title.
-     * @param Title Video clip title.
+     * Set Storyboard clip title
+     * @param Title Storyboard clip title
      */
     public void setTitle(String Title) {
         this.Title = Title;
     }
 
     /**
-     * Get Storyboard clip information description. 
-     * @return Description Storyboard clip information description.
+     * Get Segment information description 
+     * @return Description Segment information description
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set Storyboard clip information description.
-     * @param Description Storyboard clip information description.
+     * Set Segment information description
+     * @param Description Segment information description
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get Scene clip keywords. 
-     * @return Keywords Scene clip keywords.
+     * Get Storyboard clip keywords 
+     * @return Keywords Storyboard clip keywords
      */
     public String [] getKeywords() {
         return this.Keywords;
     }
 
     /**
-     * Set Scene clip keywords.
-     * @param Keywords Scene clip keywords.
+     * Set Storyboard clip keywords
+     * @param Keywords Storyboard clip keywords
      */
     public void setKeywords(String [] Keywords) {
         this.Keywords = Keywords;

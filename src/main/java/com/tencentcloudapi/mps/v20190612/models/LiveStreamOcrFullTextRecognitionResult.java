@@ -24,115 +24,115 @@ import java.util.HashMap;
 public class LiveStreamOcrFullTextRecognitionResult extends AbstractModel {
 
     /**
-    * Speech text.
+    * Speech and text.
     */
     @SerializedName("Text")
     @Expose
     private String Text;
 
     /**
-    * Start PTS time of recognized segment in seconds.
+    * Start PTS time of a recognized segment, in seconds.
     */
     @SerializedName("StartPtsTime")
     @Expose
     private Float StartPtsTime;
 
     /**
-    * End PTS time of recognized segment in seconds.
+    * End PTS time of a recognized segment, in seconds.
     */
     @SerializedName("EndPtsTime")
     @Expose
     private Float EndPtsTime;
 
     /**
-    * Confidence of recognized segment. Value range: 0–100.
+    * Confidence of a recognized segment. Value range: 0-100.
     */
     @SerializedName("Confidence")
     @Expose
     private Float Confidence;
 
     /**
-    * Zone coordinates of recognition result. The array contains four elements: [x1,y1,x2,y2], i.e., the horizontal and vertical coordinates of the top-left and bottom-right corners.
+    * Zone coordinates of the recognition result. An array contains four elements: [x1, y1, x2, y2], representing the horizontal and vertical coordinates of the top-left and bottom-right corners, respectively.
     */
     @SerializedName("AreaCoordSet")
     @Expose
     private Long [] AreaCoordSet;
 
     /**
-     * Get Speech text. 
-     * @return Text Speech text.
+     * Get Speech and text. 
+     * @return Text Speech and text.
      */
     public String getText() {
         return this.Text;
     }
 
     /**
-     * Set Speech text.
-     * @param Text Speech text.
+     * Set Speech and text.
+     * @param Text Speech and text.
      */
     public void setText(String Text) {
         this.Text = Text;
     }
 
     /**
-     * Get Start PTS time of recognized segment in seconds. 
-     * @return StartPtsTime Start PTS time of recognized segment in seconds.
+     * Get Start PTS time of a recognized segment, in seconds. 
+     * @return StartPtsTime Start PTS time of a recognized segment, in seconds.
      */
     public Float getStartPtsTime() {
         return this.StartPtsTime;
     }
 
     /**
-     * Set Start PTS time of recognized segment in seconds.
-     * @param StartPtsTime Start PTS time of recognized segment in seconds.
+     * Set Start PTS time of a recognized segment, in seconds.
+     * @param StartPtsTime Start PTS time of a recognized segment, in seconds.
      */
     public void setStartPtsTime(Float StartPtsTime) {
         this.StartPtsTime = StartPtsTime;
     }
 
     /**
-     * Get End PTS time of recognized segment in seconds. 
-     * @return EndPtsTime End PTS time of recognized segment in seconds.
+     * Get End PTS time of a recognized segment, in seconds. 
+     * @return EndPtsTime End PTS time of a recognized segment, in seconds.
      */
     public Float getEndPtsTime() {
         return this.EndPtsTime;
     }
 
     /**
-     * Set End PTS time of recognized segment in seconds.
-     * @param EndPtsTime End PTS time of recognized segment in seconds.
+     * Set End PTS time of a recognized segment, in seconds.
+     * @param EndPtsTime End PTS time of a recognized segment, in seconds.
      */
     public void setEndPtsTime(Float EndPtsTime) {
         this.EndPtsTime = EndPtsTime;
     }
 
     /**
-     * Get Confidence of recognized segment. Value range: 0–100. 
-     * @return Confidence Confidence of recognized segment. Value range: 0–100.
+     * Get Confidence of a recognized segment. Value range: 0-100. 
+     * @return Confidence Confidence of a recognized segment. Value range: 0-100.
      */
     public Float getConfidence() {
         return this.Confidence;
     }
 
     /**
-     * Set Confidence of recognized segment. Value range: 0–100.
-     * @param Confidence Confidence of recognized segment. Value range: 0–100.
+     * Set Confidence of a recognized segment. Value range: 0-100.
+     * @param Confidence Confidence of a recognized segment. Value range: 0-100.
      */
     public void setConfidence(Float Confidence) {
         this.Confidence = Confidence;
     }
 
     /**
-     * Get Zone coordinates of recognition result. The array contains four elements: [x1,y1,x2,y2], i.e., the horizontal and vertical coordinates of the top-left and bottom-right corners. 
-     * @return AreaCoordSet Zone coordinates of recognition result. The array contains four elements: [x1,y1,x2,y2], i.e., the horizontal and vertical coordinates of the top-left and bottom-right corners.
+     * Get Zone coordinates of the recognition result. An array contains four elements: [x1, y1, x2, y2], representing the horizontal and vertical coordinates of the top-left and bottom-right corners, respectively. 
+     * @return AreaCoordSet Zone coordinates of the recognition result. An array contains four elements: [x1, y1, x2, y2], representing the horizontal and vertical coordinates of the top-left and bottom-right corners, respectively.
      */
     public Long [] getAreaCoordSet() {
         return this.AreaCoordSet;
     }
 
     /**
-     * Set Zone coordinates of recognition result. The array contains four elements: [x1,y1,x2,y2], i.e., the horizontal and vertical coordinates of the top-left and bottom-right corners.
-     * @param AreaCoordSet Zone coordinates of recognition result. The array contains four elements: [x1,y1,x2,y2], i.e., the horizontal and vertical coordinates of the top-left and bottom-right corners.
+     * Set Zone coordinates of the recognition result. An array contains four elements: [x1, y1, x2, y2], representing the horizontal and vertical coordinates of the top-left and bottom-right corners, respectively.
+     * @param AreaCoordSet Zone coordinates of the recognition result. An array contains four elements: [x1, y1, x2, y2], representing the horizontal and vertical coordinates of the top-left and bottom-right corners, respectively.
      */
     public void setAreaCoordSet(Long [] AreaCoordSet) {
         this.AreaCoordSet = AreaCoordSet;

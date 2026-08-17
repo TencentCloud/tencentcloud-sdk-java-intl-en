@@ -24,28 +24,28 @@ import java.util.HashMap;
 public class LiveStreamAiReviewVoicePornResult extends AbstractModel {
 
     /**
-    * Start PTS time of a suspected segment in seconds.
+    * Start PTS time of a suspected segment, in seconds.
     */
     @SerializedName("StartPtsTime")
     @Expose
     private Float StartPtsTime;
 
     /**
-    * End PTS time of a suspected segment in seconds.
+    * End PTS time of a suspected segment, in seconds.
     */
     @SerializedName("EndPtsTime")
     @Expose
     private Float EndPtsTime;
 
     /**
-    * Score of a suspected porn segment.
+    * Suspected segment porn score.
     */
     @SerializedName("Confidence")
     @Expose
     private Float Confidence;
 
     /**
-    * Suggestion for porn information detection of a suspected segment. Valid values:
+    * Pornographic result suggestion for suspected segment, value ranges from...to...
 <li>pass</li>
 <li>review</li>
 <li>block</li>
@@ -55,67 +55,67 @@ public class LiveStreamAiReviewVoicePornResult extends AbstractModel {
     private String Suggestion;
 
     /**
-    * Tag of the detected porn information in video. Valid values:
-<li>sexual_moan: Sexual moans.</li>
+    * Video porn detection result tag, value ranges from...to...
+<li>sexual_moan: Moan.</li>
     */
     @SerializedName("Label")
     @Expose
     private String Label;
 
     /**
-     * Get Start PTS time of a suspected segment in seconds. 
-     * @return StartPtsTime Start PTS time of a suspected segment in seconds.
+     * Get Start PTS time of a suspected segment, in seconds. 
+     * @return StartPtsTime Start PTS time of a suspected segment, in seconds.
      */
     public Float getStartPtsTime() {
         return this.StartPtsTime;
     }
 
     /**
-     * Set Start PTS time of a suspected segment in seconds.
-     * @param StartPtsTime Start PTS time of a suspected segment in seconds.
+     * Set Start PTS time of a suspected segment, in seconds.
+     * @param StartPtsTime Start PTS time of a suspected segment, in seconds.
      */
     public void setStartPtsTime(Float StartPtsTime) {
         this.StartPtsTime = StartPtsTime;
     }
 
     /**
-     * Get End PTS time of a suspected segment in seconds. 
-     * @return EndPtsTime End PTS time of a suspected segment in seconds.
+     * Get End PTS time of a suspected segment, in seconds. 
+     * @return EndPtsTime End PTS time of a suspected segment, in seconds.
      */
     public Float getEndPtsTime() {
         return this.EndPtsTime;
     }
 
     /**
-     * Set End PTS time of a suspected segment in seconds.
-     * @param EndPtsTime End PTS time of a suspected segment in seconds.
+     * Set End PTS time of a suspected segment, in seconds.
+     * @param EndPtsTime End PTS time of a suspected segment, in seconds.
      */
     public void setEndPtsTime(Float EndPtsTime) {
         this.EndPtsTime = EndPtsTime;
     }
 
     /**
-     * Get Score of a suspected porn segment. 
-     * @return Confidence Score of a suspected porn segment.
+     * Get Suspected segment porn score. 
+     * @return Confidence Suspected segment porn score.
      */
     public Float getConfidence() {
         return this.Confidence;
     }
 
     /**
-     * Set Score of a suspected porn segment.
-     * @param Confidence Score of a suspected porn segment.
+     * Set Suspected segment porn score.
+     * @param Confidence Suspected segment porn score.
      */
     public void setConfidence(Float Confidence) {
         this.Confidence = Confidence;
     }
 
     /**
-     * Get Suggestion for porn information detection of a suspected segment. Valid values:
+     * Get Pornographic result suggestion for suspected segment, value ranges from...to...
 <li>pass</li>
 <li>review</li>
 <li>block</li> 
-     * @return Suggestion Suggestion for porn information detection of a suspected segment. Valid values:
+     * @return Suggestion Pornographic result suggestion for suspected segment, value ranges from...to...
 <li>pass</li>
 <li>review</li>
 <li>block</li>
@@ -125,11 +125,11 @@ public class LiveStreamAiReviewVoicePornResult extends AbstractModel {
     }
 
     /**
-     * Set Suggestion for porn information detection of a suspected segment. Valid values:
+     * Set Pornographic result suggestion for suspected segment, value ranges from...to...
 <li>pass</li>
 <li>review</li>
 <li>block</li>
-     * @param Suggestion Suggestion for porn information detection of a suspected segment. Valid values:
+     * @param Suggestion Pornographic result suggestion for suspected segment, value ranges from...to...
 <li>pass</li>
 <li>review</li>
 <li>block</li>
@@ -139,20 +139,20 @@ public class LiveStreamAiReviewVoicePornResult extends AbstractModel {
     }
 
     /**
-     * Get Tag of the detected porn information in video. Valid values:
-<li>sexual_moan: Sexual moans.</li> 
-     * @return Label Tag of the detected porn information in video. Valid values:
-<li>sexual_moan: Sexual moans.</li>
+     * Get Video porn detection result tag, value ranges from...to...
+<li>sexual_moan: Moan.</li> 
+     * @return Label Video porn detection result tag, value ranges from...to...
+<li>sexual_moan: Moan.</li>
      */
     public String getLabel() {
         return this.Label;
     }
 
     /**
-     * Set Tag of the detected porn information in video. Valid values:
-<li>sexual_moan: Sexual moans.</li>
-     * @param Label Tag of the detected porn information in video. Valid values:
-<li>sexual_moan: Sexual moans.</li>
+     * Set Video porn detection result tag, value ranges from...to...
+<li>sexual_moan: Moan.</li>
+     * @param Label Video porn detection result tag, value ranges from...to...
+<li>sexual_moan: Moan.</li>
      */
     public void setLabel(String Label) {
         this.Label = Label;

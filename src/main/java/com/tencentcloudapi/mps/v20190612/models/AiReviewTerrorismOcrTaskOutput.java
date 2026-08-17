@@ -24,84 +24,84 @@ import java.util.HashMap;
 public class AiReviewTerrorismOcrTaskOutput extends AbstractModel {
 
     /**
-    * The confidence score for the OCR-based detection of sensitive information. Value range: 1-100.
+    * Ocr text sensitive content score, ranging from 0 to III.
     */
     @SerializedName("Confidence")
     @Expose
     private Float Confidence;
 
     /**
-    * The suggestion for handling the sensitive information detected based on OCR. Valid values:
-<li>pass</li>
-<li>review</li>
-<li>block</li>
+    * Ocr text sensitive result suggestion, value ranges from...to...
+<li>pass.</li>
+<li>review.</li>
+<li>block.</li>
     */
     @SerializedName("Suggestion")
     @Expose
     private String Suggestion;
 
     /**
-    * The video segments that contain sensitive information detected based on OCR.
+    * List of video segments suspected of containing sensitive content in Ocr text.
     */
     @SerializedName("SegmentSet")
     @Expose
     private MediaContentReviewOcrTextSegmentItem [] SegmentSet;
 
     /**
-     * Get The confidence score for the OCR-based detection of sensitive information. Value range: 1-100. 
-     * @return Confidence The confidence score for the OCR-based detection of sensitive information. Value range: 1-100.
+     * Get Ocr text sensitive content score, ranging from 0 to III. 
+     * @return Confidence Ocr text sensitive content score, ranging from 0 to III.
      */
     public Float getConfidence() {
         return this.Confidence;
     }
 
     /**
-     * Set The confidence score for the OCR-based detection of sensitive information. Value range: 1-100.
-     * @param Confidence The confidence score for the OCR-based detection of sensitive information. Value range: 1-100.
+     * Set Ocr text sensitive content score, ranging from 0 to III.
+     * @param Confidence Ocr text sensitive content score, ranging from 0 to III.
      */
     public void setConfidence(Float Confidence) {
         this.Confidence = Confidence;
     }
 
     /**
-     * Get The suggestion for handling the sensitive information detected based on OCR. Valid values:
-<li>pass</li>
-<li>review</li>
-<li>block</li> 
-     * @return Suggestion The suggestion for handling the sensitive information detected based on OCR. Valid values:
-<li>pass</li>
-<li>review</li>
-<li>block</li>
+     * Get Ocr text sensitive result suggestion, value ranges from...to...
+<li>pass.</li>
+<li>review.</li>
+<li>block.</li> 
+     * @return Suggestion Ocr text sensitive result suggestion, value ranges from...to...
+<li>pass.</li>
+<li>review.</li>
+<li>block.</li>
      */
     public String getSuggestion() {
         return this.Suggestion;
     }
 
     /**
-     * Set The suggestion for handling the sensitive information detected based on OCR. Valid values:
-<li>pass</li>
-<li>review</li>
-<li>block</li>
-     * @param Suggestion The suggestion for handling the sensitive information detected based on OCR. Valid values:
-<li>pass</li>
-<li>review</li>
-<li>block</li>
+     * Set Ocr text sensitive result suggestion, value ranges from...to...
+<li>pass.</li>
+<li>review.</li>
+<li>block.</li>
+     * @param Suggestion Ocr text sensitive result suggestion, value ranges from...to...
+<li>pass.</li>
+<li>review.</li>
+<li>block.</li>
      */
     public void setSuggestion(String Suggestion) {
         this.Suggestion = Suggestion;
     }
 
     /**
-     * Get The video segments that contain sensitive information detected based on OCR. 
-     * @return SegmentSet The video segments that contain sensitive information detected based on OCR.
+     * Get List of video segments suspected of containing sensitive content in Ocr text. 
+     * @return SegmentSet List of video segments suspected of containing sensitive content in Ocr text.
      */
     public MediaContentReviewOcrTextSegmentItem [] getSegmentSet() {
         return this.SegmentSet;
     }
 
     /**
-     * Set The video segments that contain sensitive information detected based on OCR.
-     * @param SegmentSet The video segments that contain sensitive information detected based on OCR.
+     * Set List of video segments suspected of containing sensitive content in Ocr text.
+     * @param SegmentSet List of video segments suspected of containing sensitive content in Ocr text.
      */
     public void setSegmentSet(MediaContentReviewOcrTextSegmentItem [] SegmentSet) {
         this.SegmentSet = SegmentSet;

@@ -41,8 +41,7 @@ public class LiveStreamAiAnalysisResultItem extends AbstractModel {
     private SegmentRecognitionItem [] SegmentResultSet;
 
     /**
-    * Highlight result. This field is valid when Type is set to Highlight.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("HighlightResultSet")
     @Expose
@@ -100,20 +99,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Highlight result. This field is valid when Type is set to Highlight.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return HighlightResultSet Highlight result. This field is valid when Type is set to Highlight.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return HighlightResultSet 
      */
     public MediaAiAnalysisHighlightItem [] getHighlightResultSet() {
         return this.HighlightResultSet;
     }
 
     /**
-     * Set Highlight result. This field is valid when Type is set to Highlight.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param HighlightResultSet Highlight result. This field is valid when Type is set to Highlight.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param HighlightResultSet 
      */
     public void setHighlightResultSet(MediaAiAnalysisHighlightItem [] HighlightResultSet) {
         this.HighlightResultSet = HighlightResultSet;

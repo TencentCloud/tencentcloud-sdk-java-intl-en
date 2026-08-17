@@ -24,28 +24,23 @@ import java.util.HashMap;
 public class LiveAiAnalysisDescriptionItem extends AbstractModel {
 
     /**
-    * Segmentation result.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("Paragraphs")
     @Expose
     private LiveAiParagraphInfo [] Paragraphs;
 
     /**
-     * Get Segmentation result.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Paragraphs Segmentation result.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return Paragraphs 
      */
     public LiveAiParagraphInfo [] getParagraphs() {
         return this.Paragraphs;
     }
 
     /**
-     * Set Segmentation result.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Paragraphs Segmentation result.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param Paragraphs 
      */
     public void setParagraphs(LiveAiParagraphInfo [] Paragraphs) {
         this.Paragraphs = Paragraphs;

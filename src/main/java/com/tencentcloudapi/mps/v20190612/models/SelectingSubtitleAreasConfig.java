@@ -24,7 +24,8 @@ import java.util.HashMap;
 public class SelectingSubtitleAreasConfig extends AbstractModel {
 
     /**
-    * Automatically selects custom areas.For the selected areas, the AI model is used to automatically detect and extract the target content.
+    * Automatically select a custom region.
+For the selected areas, the AI model is used to automatically detect and extract the target content.
     */
     @SerializedName("AutoAreas")
     @Expose
@@ -45,16 +46,20 @@ public class SelectingSubtitleAreasConfig extends AbstractModel {
     private Long SampleHeight;
 
     /**
-     * Get Automatically selects custom areas.For the selected areas, the AI model is used to automatically detect and extract the target content. 
-     * @return AutoAreas Automatically selects custom areas.For the selected areas, the AI model is used to automatically detect and extract the target content.
+     * Get Automatically select a custom region.
+For the selected areas, the AI model is used to automatically detect and extract the target content. 
+     * @return AutoAreas Automatically select a custom region.
+For the selected areas, the AI model is used to automatically detect and extract the target content.
      */
     public EraseArea [] getAutoAreas() {
         return this.AutoAreas;
     }
 
     /**
-     * Set Automatically selects custom areas.For the selected areas, the AI model is used to automatically detect and extract the target content.
-     * @param AutoAreas Automatically selects custom areas.For the selected areas, the AI model is used to automatically detect and extract the target content.
+     * Set Automatically select a custom region.
+For the selected areas, the AI model is used to automatically detect and extract the target content.
+     * @param AutoAreas Automatically select a custom region.
+For the selected areas, the AI model is used to automatically detect and extract the target content.
      */
     public void setAutoAreas(EraseArea [] AutoAreas) {
         this.AutoAreas = AutoAreas;

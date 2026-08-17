@@ -38,7 +38,7 @@ public class DescribeAsrHotwordsListRequest extends AbstractModel {
     private String Name;
 
     /**
-    * Paging offset. Default value: 0.
+    * Pagination offset. Default value: 0.
     */
     @SerializedName("Offset")
     @Expose
@@ -52,7 +52,7 @@ public class DescribeAsrHotwordsListRequest extends AbstractModel {
     private Long Limit;
 
     /**
-    * Hotword lexicon sorting order.
+    * Hotword lexicon sort order
 
 0: ascending (default)
 1: descending
@@ -62,13 +62,13 @@ public class DescribeAsrHotwordsListRequest extends AbstractModel {
     private Long OrderType;
 
     /**
-    * Sorts hotword lexicons by a specific field. By default, hotword lexicons are sorted by creation time. If an invalid field is used for sorting, the default sorting field applies.
+    * Sorts by a certain field. By default, sorts by creation time. Using an illegal field is deemed as the default.
 
- - CreateTime: sort by creation time
- - UpdateTime: sort by update time
- - Name: sort by hotword lexicon name
- - WordCount: sort by the number of hotwords
- - HotwordsId: sort by hotword lexicon ID
+- CreateTime: sort by creation time
+-UpdateTime: Update time sorting
+-Name: Sort by hotword lexicon name.
+- WordCount: sort by the number of hotwords
+- HotwordsId: sort by hotword lexicon ID
     */
     @SerializedName("OrderBy")
     @Expose
@@ -114,16 +114,16 @@ public class DescribeAsrHotwordsListRequest extends AbstractModel {
     }
 
     /**
-     * Get Paging offset. Default value: 0. 
-     * @return Offset Paging offset. Default value: 0.
+     * Get Pagination offset. Default value: 0. 
+     * @return Offset Pagination offset. Default value: 0.
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Paging offset. Default value: 0.
-     * @param Offset Paging offset. Default value: 0.
+     * Set Pagination offset. Default value: 0.
+     * @param Offset Pagination offset. Default value: 0.
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
@@ -146,11 +146,11 @@ public class DescribeAsrHotwordsListRequest extends AbstractModel {
     }
 
     /**
-     * Get Hotword lexicon sorting order.
+     * Get Hotword lexicon sort order
 
 0: ascending (default)
 1: descending 
-     * @return OrderType Hotword lexicon sorting order.
+     * @return OrderType Hotword lexicon sort order
 
 0: ascending (default)
 1: descending
@@ -160,11 +160,11 @@ public class DescribeAsrHotwordsListRequest extends AbstractModel {
     }
 
     /**
-     * Set Hotword lexicon sorting order.
+     * Set Hotword lexicon sort order
 
 0: ascending (default)
 1: descending
-     * @param OrderType Hotword lexicon sorting order.
+     * @param OrderType Hotword lexicon sort order
 
 0: ascending (default)
 1: descending
@@ -174,40 +174,40 @@ public class DescribeAsrHotwordsListRequest extends AbstractModel {
     }
 
     /**
-     * Get Sorts hotword lexicons by a specific field. By default, hotword lexicons are sorted by creation time. If an invalid field is used for sorting, the default sorting field applies.
+     * Get Sorts by a certain field. By default, sorts by creation time. Using an illegal field is deemed as the default.
 
- - CreateTime: sort by creation time
- - UpdateTime: sort by update time
- - Name: sort by hotword lexicon name
- - WordCount: sort by the number of hotwords
- - HotwordsId: sort by hotword lexicon ID 
-     * @return OrderBy Sorts hotword lexicons by a specific field. By default, hotword lexicons are sorted by creation time. If an invalid field is used for sorting, the default sorting field applies.
+- CreateTime: sort by creation time
+-UpdateTime: Update time sorting
+-Name: Sort by hotword lexicon name.
+- WordCount: sort by the number of hotwords
+- HotwordsId: sort by hotword lexicon ID 
+     * @return OrderBy Sorts by a certain field. By default, sorts by creation time. Using an illegal field is deemed as the default.
 
- - CreateTime: sort by creation time
- - UpdateTime: sort by update time
- - Name: sort by hotword lexicon name
- - WordCount: sort by the number of hotwords
- - HotwordsId: sort by hotword lexicon ID
+- CreateTime: sort by creation time
+-UpdateTime: Update time sorting
+-Name: Sort by hotword lexicon name.
+- WordCount: sort by the number of hotwords
+- HotwordsId: sort by hotword lexicon ID
      */
     public String getOrderBy() {
         return this.OrderBy;
     }
 
     /**
-     * Set Sorts hotword lexicons by a specific field. By default, hotword lexicons are sorted by creation time. If an invalid field is used for sorting, the default sorting field applies.
+     * Set Sorts by a certain field. By default, sorts by creation time. Using an illegal field is deemed as the default.
 
- - CreateTime: sort by creation time
- - UpdateTime: sort by update time
- - Name: sort by hotword lexicon name
- - WordCount: sort by the number of hotwords
- - HotwordsId: sort by hotword lexicon ID
-     * @param OrderBy Sorts hotword lexicons by a specific field. By default, hotword lexicons are sorted by creation time. If an invalid field is used for sorting, the default sorting field applies.
+- CreateTime: sort by creation time
+-UpdateTime: Update time sorting
+-Name: Sort by hotword lexicon name.
+- WordCount: sort by the number of hotwords
+- HotwordsId: sort by hotword lexicon ID
+     * @param OrderBy Sorts by a certain field. By default, sorts by creation time. Using an illegal field is deemed as the default.
 
- - CreateTime: sort by creation time
- - UpdateTime: sort by update time
- - Name: sort by hotword lexicon name
- - WordCount: sort by the number of hotwords
- - HotwordsId: sort by hotword lexicon ID
+- CreateTime: sort by creation time
+-UpdateTime: Update time sorting
+-Name: Sort by hotword lexicon name.
+- WordCount: sort by the number of hotwords
+- HotwordsId: sort by hotword lexicon ID
      */
     public void setOrderBy(String OrderBy) {
         this.OrderBy = OrderBy;

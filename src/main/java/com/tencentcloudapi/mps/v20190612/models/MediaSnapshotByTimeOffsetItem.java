@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class MediaSnapshotByTimeOffsetItem extends AbstractModel {
 
     /**
-    * Specification of a time point screenshot template. 
+    * Specification for SnapshotByTimeOffset, please refer to the [SnapshotByTimeOffset parameter template](https://www.tencentcloud.com/document/product/266/33480?from_cn_redirect=1#.E6.97.B6.E9.97.B4.E7.82.B9.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF).
     */
     @SerializedName("Definition")
     @Expose
     private Long Definition;
 
     /**
-    * Information set of screenshots of the same specification. Each element represents a screenshot.
+    * A screenshot information set of the same specification, each element represents a screenshot.
     */
     @SerializedName("PicInfoSet")
     @Expose
     private MediaSnapshotByTimePicInfoItem [] PicInfoSet;
 
     /**
-    * Location of a time point screenshot file.
+    * Storage location of the SnapshotByTimeOffset file.
     */
     @SerializedName("Storage")
     @Expose
     private TaskOutputStorage Storage;
 
     /**
-     * Get Specification of a time point screenshot template.  
-     * @return Definition Specification of a time point screenshot template. 
+     * Get Specification for SnapshotByTimeOffset, please refer to the [SnapshotByTimeOffset parameter template](https://www.tencentcloud.com/document/product/266/33480?from_cn_redirect=1#.E6.97.B6.E9.97.B4.E7.82.B9.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF). 
+     * @return Definition Specification for SnapshotByTimeOffset, please refer to the [SnapshotByTimeOffset parameter template](https://www.tencentcloud.com/document/product/266/33480?from_cn_redirect=1#.E6.97.B6.E9.97.B4.E7.82.B9.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF).
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set Specification of a time point screenshot template. 
-     * @param Definition Specification of a time point screenshot template. 
+     * Set Specification for SnapshotByTimeOffset, please refer to the [SnapshotByTimeOffset parameter template](https://www.tencentcloud.com/document/product/266/33480?from_cn_redirect=1#.E6.97.B6.E9.97.B4.E7.82.B9.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF).
+     * @param Definition Specification for SnapshotByTimeOffset, please refer to the [SnapshotByTimeOffset parameter template](https://www.tencentcloud.com/document/product/266/33480?from_cn_redirect=1#.E6.97.B6.E9.97.B4.E7.82.B9.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF).
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;
     }
 
     /**
-     * Get Information set of screenshots of the same specification. Each element represents a screenshot. 
-     * @return PicInfoSet Information set of screenshots of the same specification. Each element represents a screenshot.
+     * Get A screenshot information set of the same specification, each element represents a screenshot. 
+     * @return PicInfoSet A screenshot information set of the same specification, each element represents a screenshot.
      */
     public MediaSnapshotByTimePicInfoItem [] getPicInfoSet() {
         return this.PicInfoSet;
     }
 
     /**
-     * Set Information set of screenshots of the same specification. Each element represents a screenshot.
-     * @param PicInfoSet Information set of screenshots of the same specification. Each element represents a screenshot.
+     * Set A screenshot information set of the same specification, each element represents a screenshot.
+     * @param PicInfoSet A screenshot information set of the same specification, each element represents a screenshot.
      */
     public void setPicInfoSet(MediaSnapshotByTimePicInfoItem [] PicInfoSet) {
         this.PicInfoSet = PicInfoSet;
     }
 
     /**
-     * Get Location of a time point screenshot file. 
-     * @return Storage Location of a time point screenshot file.
+     * Get Storage location of the SnapshotByTimeOffset file. 
+     * @return Storage Storage location of the SnapshotByTimeOffset file.
      */
     public TaskOutputStorage getStorage() {
         return this.Storage;
     }
 
     /**
-     * Set Location of a time point screenshot file.
-     * @param Storage Location of a time point screenshot file.
+     * Set Storage location of the SnapshotByTimeOffset file.
+     * @param Storage Storage location of the SnapshotByTimeOffset file.
      */
     public void setStorage(TaskOutputStorage Storage) {
         this.Storage = Storage;

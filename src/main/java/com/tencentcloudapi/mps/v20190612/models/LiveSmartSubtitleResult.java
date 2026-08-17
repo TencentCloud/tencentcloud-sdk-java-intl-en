@@ -31,14 +31,14 @@ public class LiveSmartSubtitleResult extends AbstractModel {
     private String Text;
 
     /**
-    * Translate the starting PTS time of a segment, in seconds.
+    * Start PTS time of a translated recording clip, in seconds.
     */
     @SerializedName("StartPTSTime")
     @Expose
     private Float StartPTSTime;
 
     /**
-    * End PTS time of a translated segment, in seconds.
+    * End PTS time of a translated recording clip, in seconds.
     */
     @SerializedName("EndPTSTime")
     @Expose
@@ -52,32 +52,28 @@ public class LiveSmartSubtitleResult extends AbstractModel {
     private String Trans;
 
     /**
-    * Translation started at UTC time.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * Translation ends at UTC time.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-    * Steady-State tag.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("SteadyState")
     @Expose
     private Boolean SteadyState;
 
     /**
-    * websocket and trtc real-time translation UserId.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("UserId")
     @Expose
@@ -100,32 +96,32 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Translate the starting PTS time of a segment, in seconds. 
-     * @return StartPTSTime Translate the starting PTS time of a segment, in seconds.
+     * Get Start PTS time of a translated recording clip, in seconds. 
+     * @return StartPTSTime Start PTS time of a translated recording clip, in seconds.
      */
     public Float getStartPTSTime() {
         return this.StartPTSTime;
     }
 
     /**
-     * Set Translate the starting PTS time of a segment, in seconds.
-     * @param StartPTSTime Translate the starting PTS time of a segment, in seconds.
+     * Set Start PTS time of a translated recording clip, in seconds.
+     * @param StartPTSTime Start PTS time of a translated recording clip, in seconds.
      */
     public void setStartPTSTime(Float StartPTSTime) {
         this.StartPTSTime = StartPTSTime;
     }
 
     /**
-     * Get End PTS time of a translated segment, in seconds. 
-     * @return EndPTSTime End PTS time of a translated segment, in seconds.
+     * Get End PTS time of a translated recording clip, in seconds. 
+     * @return EndPTSTime End PTS time of a translated recording clip, in seconds.
      */
     public Float getEndPTSTime() {
         return this.EndPTSTime;
     }
 
     /**
-     * Set End PTS time of a translated segment, in seconds.
-     * @param EndPTSTime End PTS time of a translated segment, in seconds.
+     * Set End PTS time of a translated recording clip, in seconds.
+     * @param EndPTSTime End PTS time of a translated recording clip, in seconds.
      */
     public void setEndPTSTime(Float EndPTSTime) {
         this.EndPTSTime = EndPTSTime;
@@ -148,80 +144,64 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Translation started at UTC time.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return StartTime Translation started at UTC time.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return StartTime 
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set Translation started at UTC time.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param StartTime Translation started at UTC time.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param StartTime 
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get Translation ends at UTC time.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return EndTime Translation ends at UTC time.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return EndTime 
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set Translation ends at UTC time.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param EndTime Translation ends at UTC time.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param EndTime 
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get Steady-State tag.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return SteadyState Steady-State tag.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return SteadyState 
      */
     public Boolean getSteadyState() {
         return this.SteadyState;
     }
 
     /**
-     * Set Steady-State tag.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param SteadyState Steady-State tag.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param SteadyState 
      */
     public void setSteadyState(Boolean SteadyState) {
         this.SteadyState = SteadyState;
     }
 
     /**
-     * Get websocket and trtc real-time translation UserId.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return UserId websocket and trtc real-time translation UserId.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return UserId 
      */
     public String getUserId() {
         return this.UserId;
     }
 
     /**
-     * Set websocket and trtc real-time translation UserId.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param UserId websocket and trtc real-time translation UserId.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param UserId 
      */
     public void setUserId(String UserId) {
         this.UserId = UserId;

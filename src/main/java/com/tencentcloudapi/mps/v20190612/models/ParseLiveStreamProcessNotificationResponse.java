@@ -24,13 +24,13 @@ import java.util.HashMap;
 public class ParseLiveStreamProcessNotificationResponse extends AbstractModel {
 
     /**
-    * Live stream processing result type, including:.
-<Li>AiReviewResult: content moderation result;</li>.
-<Li>AiRecognitionResult: content recognition result;</li>.
-<Li>LiveRecordResult: live streaming result;</li>.
-<Li>AiQualityControlResult: media quality inspection result.</li>.
-<Li>AiAnalysisResult: content analysis result.</li>.
-<Li>AiSmartSubtitleResult: smart subtitle result.</li>.
+    * Live stream processing result type, including:
+<li>AiReviewResult: content moderation result;</li>
+<li>AiRecognitionResult: content recognition result;</li>
+<li>LiveRecordResult: live streaming result;</li>
+<li>AiQualityControlResult: media quality inspection result.</li>
+<li>AiAnalysisResult: content analysis result.</li>
+<li>AiSmartSubtitleResult: smart subtitle result;</li>
 <li>ProcessEof: end of live stream processing.</li>
     */
     @SerializedName("NotificationType")
@@ -38,80 +38,77 @@ public class ParseLiveStreamProcessNotificationResponse extends AbstractModel {
     private String NotificationType;
 
     /**
-    * Video processing task ID.
+    * Task ID for video processing.
     */
     @SerializedName("TaskId")
     @Expose
     private String TaskId;
 
     /**
-    * Information of a live stream processing error, which is valid when `NotificationType` is `ProcessEof`.
-Note: when this field return null, means no valid values can be obtained.
+    * 
     */
     @SerializedName("ProcessEofInfo")
     @Expose
     private LiveStreamProcessErrorInfo ProcessEofInfo;
 
     /**
-    * Content audit result, which is valid when `NotificationType` is `AiReviewResult`.
-Note: when this field return null, means no valid values can be obtained.
+    * 
     */
     @SerializedName("AiReviewResultInfo")
     @Expose
     private LiveStreamAiReviewResultInfo AiReviewResultInfo;
 
     /**
-    * Content recognition result, which is valid if `NotificationType` is `AiRecognitionResult`.
+    * 
     */
     @SerializedName("AiRecognitionResultInfo")
     @Expose
     private LiveStreamAiRecognitionResultInfo AiRecognitionResultInfo;
 
     /**
-    * Content analysis result, which is valid if `NotificationType` is `AiAnalysisResult`.
+    * 
     */
     @SerializedName("AiAnalysisResultInfo")
     @Expose
     private LiveStreamAiAnalysisResultInfo AiAnalysisResultInfo;
 
     /**
-    * Media quality inspection result, which is valid if `NotificationType` is `AiQualityControlResult`.
+    * 
     */
     @SerializedName("AiQualityControlResultInfo")
     @Expose
     private LiveStreamAiQualityControlResultInfo AiQualityControlResultInfo;
 
     /**
-    * Live recording result is valid when NotificationType is LiveRecordResult.
-Note: when this field return null, means no valid values can be obtained.
+    * 
     */
     @SerializedName("LiveRecordResultInfo")
     @Expose
     private LiveStreamRecordResultInfo LiveRecordResultInfo;
 
     /**
-    * Smart subtitle result. valid when NotificationType is AiSmartSubtitleResult.
+    * Smart subtitle result, valid when NotificationType is AiSmartSubtitleResult.
     */
     @SerializedName("AiSmartSubtitleResultInfo")
     @Expose
     private LiveStreamAiSmartSubtitleResultInfo AiSmartSubtitleResultInfo;
 
     /**
-    * The ID used for deduplication. If there was a request with the same ID in the last seven days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is left empty or an empty string is entered, no deduplication will be performed.
+    * An identifier for deduplication. If there has been a request with the same identifier within the past seven days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication is required.
     */
     @SerializedName("SessionId")
     @Expose
     private String SessionId;
 
     /**
-    * The source context which is used to pass through the user request information. The task flow status change callback will return the value of this field. It can contain up to 1,000 characters.
+    * Source context, which is used to pass through user request information. The callback for task flow status changes will return the value of this field. The maximum length is 1,000 characters.
     */
     @SerializedName("SessionContext")
     @Expose
     private String SessionContext;
 
     /**
-    * - expiration time, event notification signature expiration in UNIX Timestamp format. - notifications from media processing default to an expiration time of 10 minutes. if the time specified by the Timestamp value in a message notification has expired, the notification can be deemed invalid, furthermore preventing network replay attacks. - the Timestamp format is decimal UNIX Timestamp, seconds elapsed since midnight (UTC/GMT) on january 1, 1970.
+    * -Expiration time, the UNIX timestamp for event notification signature expiration. Notifications from Media Processing Service (MPS) have a default expiration time of 10 minutes. If the time specified by the Timestamp value in a notification has expired, the notification can be deemed invalid, which helps prevent network replay attacks. The Timestamp format is a decimal UNIX timestamp, representing the seconds elapsed since midnight on January 1, 1970 (UTC/GMT).
     */
     @SerializedName("Timestamp")
     @Expose
@@ -132,21 +129,21 @@ Note: when this field return null, means no valid values can be obtained.
     private String RequestId;
 
     /**
-     * Get Live stream processing result type, including:.
-<Li>AiReviewResult: content moderation result;</li>.
-<Li>AiRecognitionResult: content recognition result;</li>.
-<Li>LiveRecordResult: live streaming result;</li>.
-<Li>AiQualityControlResult: media quality inspection result.</li>.
-<Li>AiAnalysisResult: content analysis result.</li>.
-<Li>AiSmartSubtitleResult: smart subtitle result.</li>.
+     * Get Live stream processing result type, including:
+<li>AiReviewResult: content moderation result;</li>
+<li>AiRecognitionResult: content recognition result;</li>
+<li>LiveRecordResult: live streaming result;</li>
+<li>AiQualityControlResult: media quality inspection result.</li>
+<li>AiAnalysisResult: content analysis result.</li>
+<li>AiSmartSubtitleResult: smart subtitle result;</li>
 <li>ProcessEof: end of live stream processing.</li> 
-     * @return NotificationType Live stream processing result type, including:.
-<Li>AiReviewResult: content moderation result;</li>.
-<Li>AiRecognitionResult: content recognition result;</li>.
-<Li>LiveRecordResult: live streaming result;</li>.
-<Li>AiQualityControlResult: media quality inspection result.</li>.
-<Li>AiAnalysisResult: content analysis result.</li>.
-<Li>AiSmartSubtitleResult: smart subtitle result.</li>.
+     * @return NotificationType Live stream processing result type, including:
+<li>AiReviewResult: content moderation result;</li>
+<li>AiRecognitionResult: content recognition result;</li>
+<li>LiveRecordResult: live streaming result;</li>
+<li>AiQualityControlResult: media quality inspection result.</li>
+<li>AiAnalysisResult: content analysis result.</li>
+<li>AiSmartSubtitleResult: smart subtitle result;</li>
 <li>ProcessEof: end of live stream processing.</li>
      */
     public String getNotificationType() {
@@ -154,21 +151,21 @@ Note: when this field return null, means no valid values can be obtained.
     }
 
     /**
-     * Set Live stream processing result type, including:.
-<Li>AiReviewResult: content moderation result;</li>.
-<Li>AiRecognitionResult: content recognition result;</li>.
-<Li>LiveRecordResult: live streaming result;</li>.
-<Li>AiQualityControlResult: media quality inspection result.</li>.
-<Li>AiAnalysisResult: content analysis result.</li>.
-<Li>AiSmartSubtitleResult: smart subtitle result.</li>.
+     * Set Live stream processing result type, including:
+<li>AiReviewResult: content moderation result;</li>
+<li>AiRecognitionResult: content recognition result;</li>
+<li>LiveRecordResult: live streaming result;</li>
+<li>AiQualityControlResult: media quality inspection result.</li>
+<li>AiAnalysisResult: content analysis result.</li>
+<li>AiSmartSubtitleResult: smart subtitle result;</li>
 <li>ProcessEof: end of live stream processing.</li>
-     * @param NotificationType Live stream processing result type, including:.
-<Li>AiReviewResult: content moderation result;</li>.
-<Li>AiRecognitionResult: content recognition result;</li>.
-<Li>LiveRecordResult: live streaming result;</li>.
-<Li>AiQualityControlResult: media quality inspection result.</li>.
-<Li>AiAnalysisResult: content analysis result.</li>.
-<Li>AiSmartSubtitleResult: smart subtitle result.</li>.
+     * @param NotificationType Live stream processing result type, including:
+<li>AiReviewResult: content moderation result;</li>
+<li>AiRecognitionResult: content recognition result;</li>
+<li>LiveRecordResult: live streaming result;</li>
+<li>AiQualityControlResult: media quality inspection result.</li>
+<li>AiAnalysisResult: content analysis result.</li>
+<li>AiSmartSubtitleResult: smart subtitle result;</li>
 <li>ProcessEof: end of live stream processing.</li>
      */
     public void setNotificationType(String NotificationType) {
@@ -176,188 +173,176 @@ Note: when this field return null, means no valid values can be obtained.
     }
 
     /**
-     * Get Video processing task ID. 
-     * @return TaskId Video processing task ID.
+     * Get Task ID for video processing. 
+     * @return TaskId Task ID for video processing.
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set Video processing task ID.
-     * @param TaskId Video processing task ID.
+     * Set Task ID for video processing.
+     * @param TaskId Task ID for video processing.
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;
     }
 
     /**
-     * Get Information of a live stream processing error, which is valid when `NotificationType` is `ProcessEof`.
-Note: when this field return null, means no valid values can be obtained. 
-     * @return ProcessEofInfo Information of a live stream processing error, which is valid when `NotificationType` is `ProcessEof`.
-Note: when this field return null, means no valid values can be obtained.
+     * Get  
+     * @return ProcessEofInfo 
      */
     public LiveStreamProcessErrorInfo getProcessEofInfo() {
         return this.ProcessEofInfo;
     }
 
     /**
-     * Set Information of a live stream processing error, which is valid when `NotificationType` is `ProcessEof`.
-Note: when this field return null, means no valid values can be obtained.
-     * @param ProcessEofInfo Information of a live stream processing error, which is valid when `NotificationType` is `ProcessEof`.
-Note: when this field return null, means no valid values can be obtained.
+     * Set 
+     * @param ProcessEofInfo 
      */
     public void setProcessEofInfo(LiveStreamProcessErrorInfo ProcessEofInfo) {
         this.ProcessEofInfo = ProcessEofInfo;
     }
 
     /**
-     * Get Content audit result, which is valid when `NotificationType` is `AiReviewResult`.
-Note: when this field return null, means no valid values can be obtained. 
-     * @return AiReviewResultInfo Content audit result, which is valid when `NotificationType` is `AiReviewResult`.
-Note: when this field return null, means no valid values can be obtained.
+     * Get  
+     * @return AiReviewResultInfo 
      */
     public LiveStreamAiReviewResultInfo getAiReviewResultInfo() {
         return this.AiReviewResultInfo;
     }
 
     /**
-     * Set Content audit result, which is valid when `NotificationType` is `AiReviewResult`.
-Note: when this field return null, means no valid values can be obtained.
-     * @param AiReviewResultInfo Content audit result, which is valid when `NotificationType` is `AiReviewResult`.
-Note: when this field return null, means no valid values can be obtained.
+     * Set 
+     * @param AiReviewResultInfo 
      */
     public void setAiReviewResultInfo(LiveStreamAiReviewResultInfo AiReviewResultInfo) {
         this.AiReviewResultInfo = AiReviewResultInfo;
     }
 
     /**
-     * Get Content recognition result, which is valid if `NotificationType` is `AiRecognitionResult`. 
-     * @return AiRecognitionResultInfo Content recognition result, which is valid if `NotificationType` is `AiRecognitionResult`.
+     * Get  
+     * @return AiRecognitionResultInfo 
      */
     public LiveStreamAiRecognitionResultInfo getAiRecognitionResultInfo() {
         return this.AiRecognitionResultInfo;
     }
 
     /**
-     * Set Content recognition result, which is valid if `NotificationType` is `AiRecognitionResult`.
-     * @param AiRecognitionResultInfo Content recognition result, which is valid if `NotificationType` is `AiRecognitionResult`.
+     * Set 
+     * @param AiRecognitionResultInfo 
      */
     public void setAiRecognitionResultInfo(LiveStreamAiRecognitionResultInfo AiRecognitionResultInfo) {
         this.AiRecognitionResultInfo = AiRecognitionResultInfo;
     }
 
     /**
-     * Get Content analysis result, which is valid if `NotificationType` is `AiAnalysisResult`. 
-     * @return AiAnalysisResultInfo Content analysis result, which is valid if `NotificationType` is `AiAnalysisResult`.
+     * Get  
+     * @return AiAnalysisResultInfo 
      */
     public LiveStreamAiAnalysisResultInfo getAiAnalysisResultInfo() {
         return this.AiAnalysisResultInfo;
     }
 
     /**
-     * Set Content analysis result, which is valid if `NotificationType` is `AiAnalysisResult`.
-     * @param AiAnalysisResultInfo Content analysis result, which is valid if `NotificationType` is `AiAnalysisResult`.
+     * Set 
+     * @param AiAnalysisResultInfo 
      */
     public void setAiAnalysisResultInfo(LiveStreamAiAnalysisResultInfo AiAnalysisResultInfo) {
         this.AiAnalysisResultInfo = AiAnalysisResultInfo;
     }
 
     /**
-     * Get Media quality inspection result, which is valid if `NotificationType` is `AiQualityControlResult`. 
-     * @return AiQualityControlResultInfo Media quality inspection result, which is valid if `NotificationType` is `AiQualityControlResult`.
+     * Get  
+     * @return AiQualityControlResultInfo 
      */
     public LiveStreamAiQualityControlResultInfo getAiQualityControlResultInfo() {
         return this.AiQualityControlResultInfo;
     }
 
     /**
-     * Set Media quality inspection result, which is valid if `NotificationType` is `AiQualityControlResult`.
-     * @param AiQualityControlResultInfo Media quality inspection result, which is valid if `NotificationType` is `AiQualityControlResult`.
+     * Set 
+     * @param AiQualityControlResultInfo 
      */
     public void setAiQualityControlResultInfo(LiveStreamAiQualityControlResultInfo AiQualityControlResultInfo) {
         this.AiQualityControlResultInfo = AiQualityControlResultInfo;
     }
 
     /**
-     * Get Live recording result is valid when NotificationType is LiveRecordResult.
-Note: when this field return null, means no valid values can be obtained. 
-     * @return LiveRecordResultInfo Live recording result is valid when NotificationType is LiveRecordResult.
-Note: when this field return null, means no valid values can be obtained.
+     * Get  
+     * @return LiveRecordResultInfo 
      */
     public LiveStreamRecordResultInfo getLiveRecordResultInfo() {
         return this.LiveRecordResultInfo;
     }
 
     /**
-     * Set Live recording result is valid when NotificationType is LiveRecordResult.
-Note: when this field return null, means no valid values can be obtained.
-     * @param LiveRecordResultInfo Live recording result is valid when NotificationType is LiveRecordResult.
-Note: when this field return null, means no valid values can be obtained.
+     * Set 
+     * @param LiveRecordResultInfo 
      */
     public void setLiveRecordResultInfo(LiveStreamRecordResultInfo LiveRecordResultInfo) {
         this.LiveRecordResultInfo = LiveRecordResultInfo;
     }
 
     /**
-     * Get Smart subtitle result. valid when NotificationType is AiSmartSubtitleResult. 
-     * @return AiSmartSubtitleResultInfo Smart subtitle result. valid when NotificationType is AiSmartSubtitleResult.
+     * Get Smart subtitle result, valid when NotificationType is AiSmartSubtitleResult. 
+     * @return AiSmartSubtitleResultInfo Smart subtitle result, valid when NotificationType is AiSmartSubtitleResult.
      */
     public LiveStreamAiSmartSubtitleResultInfo getAiSmartSubtitleResultInfo() {
         return this.AiSmartSubtitleResultInfo;
     }
 
     /**
-     * Set Smart subtitle result. valid when NotificationType is AiSmartSubtitleResult.
-     * @param AiSmartSubtitleResultInfo Smart subtitle result. valid when NotificationType is AiSmartSubtitleResult.
+     * Set Smart subtitle result, valid when NotificationType is AiSmartSubtitleResult.
+     * @param AiSmartSubtitleResultInfo Smart subtitle result, valid when NotificationType is AiSmartSubtitleResult.
      */
     public void setAiSmartSubtitleResultInfo(LiveStreamAiSmartSubtitleResultInfo AiSmartSubtitleResultInfo) {
         this.AiSmartSubtitleResultInfo = AiSmartSubtitleResultInfo;
     }
 
     /**
-     * Get The ID used for deduplication. If there was a request with the same ID in the last seven days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is left empty or an empty string is entered, no deduplication will be performed. 
-     * @return SessionId The ID used for deduplication. If there was a request with the same ID in the last seven days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is left empty or an empty string is entered, no deduplication will be performed.
+     * Get An identifier for deduplication. If there has been a request with the same identifier within the past seven days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication is required. 
+     * @return SessionId An identifier for deduplication. If there has been a request with the same identifier within the past seven days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication is required.
      */
     public String getSessionId() {
         return this.SessionId;
     }
 
     /**
-     * Set The ID used for deduplication. If there was a request with the same ID in the last seven days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is left empty or an empty string is entered, no deduplication will be performed.
-     * @param SessionId The ID used for deduplication. If there was a request with the same ID in the last seven days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is left empty or an empty string is entered, no deduplication will be performed.
+     * Set An identifier for deduplication. If there has been a request with the same identifier within the past seven days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication is required.
+     * @param SessionId An identifier for deduplication. If there has been a request with the same identifier within the past seven days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication is required.
      */
     public void setSessionId(String SessionId) {
         this.SessionId = SessionId;
     }
 
     /**
-     * Get The source context which is used to pass through the user request information. The task flow status change callback will return the value of this field. It can contain up to 1,000 characters. 
-     * @return SessionContext The source context which is used to pass through the user request information. The task flow status change callback will return the value of this field. It can contain up to 1,000 characters.
+     * Get Source context, which is used to pass through user request information. The callback for task flow status changes will return the value of this field. The maximum length is 1,000 characters. 
+     * @return SessionContext Source context, which is used to pass through user request information. The callback for task flow status changes will return the value of this field. The maximum length is 1,000 characters.
      */
     public String getSessionContext() {
         return this.SessionContext;
     }
 
     /**
-     * Set The source context which is used to pass through the user request information. The task flow status change callback will return the value of this field. It can contain up to 1,000 characters.
-     * @param SessionContext The source context which is used to pass through the user request information. The task flow status change callback will return the value of this field. It can contain up to 1,000 characters.
+     * Set Source context, which is used to pass through user request information. The callback for task flow status changes will return the value of this field. The maximum length is 1,000 characters.
+     * @param SessionContext Source context, which is used to pass through user request information. The callback for task flow status changes will return the value of this field. The maximum length is 1,000 characters.
      */
     public void setSessionContext(String SessionContext) {
         this.SessionContext = SessionContext;
     }
 
     /**
-     * Get - expiration time, event notification signature expiration in UNIX Timestamp format. - notifications from media processing default to an expiration time of 10 minutes. if the time specified by the Timestamp value in a message notification has expired, the notification can be deemed invalid, furthermore preventing network replay attacks. - the Timestamp format is decimal UNIX Timestamp, seconds elapsed since midnight (UTC/GMT) on january 1, 1970. 
-     * @return Timestamp - expiration time, event notification signature expiration in UNIX Timestamp format. - notifications from media processing default to an expiration time of 10 minutes. if the time specified by the Timestamp value in a message notification has expired, the notification can be deemed invalid, furthermore preventing network replay attacks. - the Timestamp format is decimal UNIX Timestamp, seconds elapsed since midnight (UTC/GMT) on january 1, 1970.
+     * Get -Expiration time, the UNIX timestamp for event notification signature expiration. Notifications from Media Processing Service (MPS) have a default expiration time of 10 minutes. If the time specified by the Timestamp value in a notification has expired, the notification can be deemed invalid, which helps prevent network replay attacks. The Timestamp format is a decimal UNIX timestamp, representing the seconds elapsed since midnight on January 1, 1970 (UTC/GMT). 
+     * @return Timestamp -Expiration time, the UNIX timestamp for event notification signature expiration. Notifications from Media Processing Service (MPS) have a default expiration time of 10 minutes. If the time specified by the Timestamp value in a notification has expired, the notification can be deemed invalid, which helps prevent network replay attacks. The Timestamp format is a decimal UNIX timestamp, representing the seconds elapsed since midnight on January 1, 1970 (UTC/GMT).
      */
     public Long getTimestamp() {
         return this.Timestamp;
     }
 
     /**
-     * Set - expiration time, event notification signature expiration in UNIX Timestamp format. - notifications from media processing default to an expiration time of 10 minutes. if the time specified by the Timestamp value in a message notification has expired, the notification can be deemed invalid, furthermore preventing network replay attacks. - the Timestamp format is decimal UNIX Timestamp, seconds elapsed since midnight (UTC/GMT) on january 1, 1970.
-     * @param Timestamp - expiration time, event notification signature expiration in UNIX Timestamp format. - notifications from media processing default to an expiration time of 10 minutes. if the time specified by the Timestamp value in a message notification has expired, the notification can be deemed invalid, furthermore preventing network replay attacks. - the Timestamp format is decimal UNIX Timestamp, seconds elapsed since midnight (UTC/GMT) on january 1, 1970.
+     * Set -Expiration time, the UNIX timestamp for event notification signature expiration. Notifications from Media Processing Service (MPS) have a default expiration time of 10 minutes. If the time specified by the Timestamp value in a notification has expired, the notification can be deemed invalid, which helps prevent network replay attacks. The Timestamp format is a decimal UNIX timestamp, representing the seconds elapsed since midnight on January 1, 1970 (UTC/GMT).
+     * @param Timestamp -Expiration time, the UNIX timestamp for event notification signature expiration. Notifications from Media Processing Service (MPS) have a default expiration time of 10 minutes. If the time specified by the Timestamp value in a notification has expired, the notification can be deemed invalid, which helps prevent network replay attacks. The Timestamp format is a decimal UNIX timestamp, representing the seconds elapsed since midnight on January 1, 1970 (UTC/GMT).
      */
     public void setTimestamp(Long Timestamp) {
         this.Timestamp = Timestamp;

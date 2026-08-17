@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class AiRecognitionTaskAsrWordsSegmentItem extends AbstractModel {
 
     /**
-    * Start time offset of a recognition segment in seconds.
+    * Start time offset of a recognized segment, in seconds.
     */
     @SerializedName("StartTimeOffset")
     @Expose
     private Float StartTimeOffset;
 
     /**
-    * End time offset of a recognition segment in seconds.
+    * End time offset of a recognized segment, in seconds.
     */
     @SerializedName("EndTimeOffset")
     @Expose
     private Float EndTimeOffset;
 
     /**
-    * Confidence of a recognition segment. Value range: 0-100.
+    * Confidence of a recognized segment. Value range: 0-100.
     */
     @SerializedName("Confidence")
     @Expose
     private Float Confidence;
 
     /**
-     * Get Start time offset of a recognition segment in seconds. 
-     * @return StartTimeOffset Start time offset of a recognition segment in seconds.
+     * Get Start time offset of a recognized segment, in seconds. 
+     * @return StartTimeOffset Start time offset of a recognized segment, in seconds.
      */
     public Float getStartTimeOffset() {
         return this.StartTimeOffset;
     }
 
     /**
-     * Set Start time offset of a recognition segment in seconds.
-     * @param StartTimeOffset Start time offset of a recognition segment in seconds.
+     * Set Start time offset of a recognized segment, in seconds.
+     * @param StartTimeOffset Start time offset of a recognized segment, in seconds.
      */
     public void setStartTimeOffset(Float StartTimeOffset) {
         this.StartTimeOffset = StartTimeOffset;
     }
 
     /**
-     * Get End time offset of a recognition segment in seconds. 
-     * @return EndTimeOffset End time offset of a recognition segment in seconds.
+     * Get End time offset of a recognized segment, in seconds. 
+     * @return EndTimeOffset End time offset of a recognized segment, in seconds.
      */
     public Float getEndTimeOffset() {
         return this.EndTimeOffset;
     }
 
     /**
-     * Set End time offset of a recognition segment in seconds.
-     * @param EndTimeOffset End time offset of a recognition segment in seconds.
+     * Set End time offset of a recognized segment, in seconds.
+     * @param EndTimeOffset End time offset of a recognized segment, in seconds.
      */
     public void setEndTimeOffset(Float EndTimeOffset) {
         this.EndTimeOffset = EndTimeOffset;
     }
 
     /**
-     * Get Confidence of a recognition segment. Value range: 0-100. 
-     * @return Confidence Confidence of a recognition segment. Value range: 0-100.
+     * Get Confidence of a recognized segment. Value range: 0-100. 
+     * @return Confidence Confidence of a recognized segment. Value range: 0-100.
      */
     public Float getConfidence() {
         return this.Confidence;
     }
 
     /**
-     * Set Confidence of a recognition segment. Value range: 0-100.
-     * @param Confidence Confidence of a recognition segment. Value range: 0-100.
+     * Set Confidence of a recognized segment. Value range: 0-100.
+     * @param Confidence Confidence of a recognized segment. Value range: 0-100.
      */
     public void setConfidence(Float Confidence) {
         this.Confidence = Confidence;

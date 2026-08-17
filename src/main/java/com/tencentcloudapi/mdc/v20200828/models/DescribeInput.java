@@ -105,28 +105,35 @@ Note: this field may return `null`, indicating that no valid value was found.
     private String FailOver;
 
     /**
-    * 
+    * Available Zone Configuration: Under disaster recovery conditions, up to two are supported, corresponding to pipeline 0 and 1 in order. Otherwise, only one available zone is allowed.
+    */
+    @SerializedName("Zones")
+    @Expose
+    private String [] Zones;
+
+    /**
+    * The input RTMP_PULL configuration information.
     */
     @SerializedName("RTMPPullSettings")
     @Expose
     private DescribeInputRTMPPullSettings RTMPPullSettings;
 
     /**
-    * 
+    * The RTSP_PULL configuration information entered.
     */
     @SerializedName("RTSPPullSettings")
     @Expose
     private DescribeInputRTSPPullSettings RTSPPullSettings;
 
     /**
-    * 
+    * The input HLS-PULL configuration information.
     */
     @SerializedName("HLSPullSettings")
     @Expose
     private DescribeInputHLSPullSettings HLSPullSettings;
 
     /**
-    * 
+    * Extended smooth streaming configuration information.
     */
     @SerializedName("ResilientStream")
     @Expose
@@ -138,6 +145,27 @@ Note: this field may return `null`, indicating that no valid value was found.
     @SerializedName("SecurityGroupIds")
     @Expose
     private String [] SecurityGroupIds;
+
+    /**
+    * The input RIST configuration information.
+    */
+    @SerializedName("RISTSettings")
+    @Expose
+    private DescribeInputRISTSettings RISTSettings;
+
+    /**
+    * Enter URL information related to module configuration, including the provided streaming address or the configured third-party source address
+    */
+    @SerializedName("StreamUrls")
+    @Expose
+    private StreamUrlDetail [] StreamUrls;
+
+    /**
+    * Disaster recovery configuration items
+    */
+    @SerializedName("FailOverOption")
+    @Expose
+    private FailOverOption FailOverOption;
 
     /**
      * Get Input ID. 
@@ -332,64 +360,80 @@ Note: this field may return `null`, indicating that no valid value was found.
     }
 
     /**
-     * Get  
-     * @return RTMPPullSettings 
+     * Get Available Zone Configuration: Under disaster recovery conditions, up to two are supported, corresponding to pipeline 0 and 1 in order. Otherwise, only one available zone is allowed. 
+     * @return Zones Available Zone Configuration: Under disaster recovery conditions, up to two are supported, corresponding to pipeline 0 and 1 in order. Otherwise, only one available zone is allowed.
+     */
+    public String [] getZones() {
+        return this.Zones;
+    }
+
+    /**
+     * Set Available Zone Configuration: Under disaster recovery conditions, up to two are supported, corresponding to pipeline 0 and 1 in order. Otherwise, only one available zone is allowed.
+     * @param Zones Available Zone Configuration: Under disaster recovery conditions, up to two are supported, corresponding to pipeline 0 and 1 in order. Otherwise, only one available zone is allowed.
+     */
+    public void setZones(String [] Zones) {
+        this.Zones = Zones;
+    }
+
+    /**
+     * Get The input RTMP_PULL configuration information. 
+     * @return RTMPPullSettings The input RTMP_PULL configuration information.
      */
     public DescribeInputRTMPPullSettings getRTMPPullSettings() {
         return this.RTMPPullSettings;
     }
 
     /**
-     * Set 
-     * @param RTMPPullSettings 
+     * Set The input RTMP_PULL configuration information.
+     * @param RTMPPullSettings The input RTMP_PULL configuration information.
      */
     public void setRTMPPullSettings(DescribeInputRTMPPullSettings RTMPPullSettings) {
         this.RTMPPullSettings = RTMPPullSettings;
     }
 
     /**
-     * Get  
-     * @return RTSPPullSettings 
+     * Get The RTSP_PULL configuration information entered. 
+     * @return RTSPPullSettings The RTSP_PULL configuration information entered.
      */
     public DescribeInputRTSPPullSettings getRTSPPullSettings() {
         return this.RTSPPullSettings;
     }
 
     /**
-     * Set 
-     * @param RTSPPullSettings 
+     * Set The RTSP_PULL configuration information entered.
+     * @param RTSPPullSettings The RTSP_PULL configuration information entered.
      */
     public void setRTSPPullSettings(DescribeInputRTSPPullSettings RTSPPullSettings) {
         this.RTSPPullSettings = RTSPPullSettings;
     }
 
     /**
-     * Get  
-     * @return HLSPullSettings 
+     * Get The input HLS-PULL configuration information. 
+     * @return HLSPullSettings The input HLS-PULL configuration information.
      */
     public DescribeInputHLSPullSettings getHLSPullSettings() {
         return this.HLSPullSettings;
     }
 
     /**
-     * Set 
-     * @param HLSPullSettings 
+     * Set The input HLS-PULL configuration information.
+     * @param HLSPullSettings The input HLS-PULL configuration information.
      */
     public void setHLSPullSettings(DescribeInputHLSPullSettings HLSPullSettings) {
         this.HLSPullSettings = HLSPullSettings;
     }
 
     /**
-     * Get  
-     * @return ResilientStream 
+     * Get Extended smooth streaming configuration information. 
+     * @return ResilientStream Extended smooth streaming configuration information.
      */
     public ResilientStreamConf getResilientStream() {
         return this.ResilientStream;
     }
 
     /**
-     * Set 
-     * @param ResilientStream 
+     * Set Extended smooth streaming configuration information.
+     * @param ResilientStream Extended smooth streaming configuration information.
      */
     public void setResilientStream(ResilientStreamConf ResilientStream) {
         this.ResilientStream = ResilientStream;
@@ -409,6 +453,54 @@ Note: this field may return `null`, indicating that no valid value was found.
      */
     public void setSecurityGroupIds(String [] SecurityGroupIds) {
         this.SecurityGroupIds = SecurityGroupIds;
+    }
+
+    /**
+     * Get The input RIST configuration information. 
+     * @return RISTSettings The input RIST configuration information.
+     */
+    public DescribeInputRISTSettings getRISTSettings() {
+        return this.RISTSettings;
+    }
+
+    /**
+     * Set The input RIST configuration information.
+     * @param RISTSettings The input RIST configuration information.
+     */
+    public void setRISTSettings(DescribeInputRISTSettings RISTSettings) {
+        this.RISTSettings = RISTSettings;
+    }
+
+    /**
+     * Get Enter URL information related to module configuration, including the provided streaming address or the configured third-party source address 
+     * @return StreamUrls Enter URL information related to module configuration, including the provided streaming address or the configured third-party source address
+     */
+    public StreamUrlDetail [] getStreamUrls() {
+        return this.StreamUrls;
+    }
+
+    /**
+     * Set Enter URL information related to module configuration, including the provided streaming address or the configured third-party source address
+     * @param StreamUrls Enter URL information related to module configuration, including the provided streaming address or the configured third-party source address
+     */
+    public void setStreamUrls(StreamUrlDetail [] StreamUrls) {
+        this.StreamUrls = StreamUrls;
+    }
+
+    /**
+     * Get Disaster recovery configuration items 
+     * @return FailOverOption Disaster recovery configuration items
+     */
+    public FailOverOption getFailOverOption() {
+        return this.FailOverOption;
+    }
+
+    /**
+     * Set Disaster recovery configuration items
+     * @param FailOverOption Disaster recovery configuration items
+     */
+    public void setFailOverOption(FailOverOption FailOverOption) {
+        this.FailOverOption = FailOverOption;
     }
 
     public DescribeInput() {
@@ -458,6 +550,12 @@ Note: this field may return `null`, indicating that no valid value was found.
         if (source.FailOver != null) {
             this.FailOver = new String(source.FailOver);
         }
+        if (source.Zones != null) {
+            this.Zones = new String[source.Zones.length];
+            for (int i = 0; i < source.Zones.length; i++) {
+                this.Zones[i] = new String(source.Zones[i]);
+            }
+        }
         if (source.RTMPPullSettings != null) {
             this.RTMPPullSettings = new DescribeInputRTMPPullSettings(source.RTMPPullSettings);
         }
@@ -475,6 +573,18 @@ Note: this field may return `null`, indicating that no valid value was found.
             for (int i = 0; i < source.SecurityGroupIds.length; i++) {
                 this.SecurityGroupIds[i] = new String(source.SecurityGroupIds[i]);
             }
+        }
+        if (source.RISTSettings != null) {
+            this.RISTSettings = new DescribeInputRISTSettings(source.RISTSettings);
+        }
+        if (source.StreamUrls != null) {
+            this.StreamUrls = new StreamUrlDetail[source.StreamUrls.length];
+            for (int i = 0; i < source.StreamUrls.length; i++) {
+                this.StreamUrls[i] = new StreamUrlDetail(source.StreamUrls[i]);
+            }
+        }
+        if (source.FailOverOption != null) {
+            this.FailOverOption = new FailOverOption(source.FailOverOption);
         }
     }
 
@@ -494,11 +604,15 @@ Note: this field may return `null`, indicating that no valid value was found.
         this.setParamSimple(map, prefix + "InputRegion", this.InputRegion);
         this.setParamObj(map, prefix + "RTMPSettings.", this.RTMPSettings);
         this.setParamSimple(map, prefix + "FailOver", this.FailOver);
+        this.setParamArraySimple(map, prefix + "Zones.", this.Zones);
         this.setParamObj(map, prefix + "RTMPPullSettings.", this.RTMPPullSettings);
         this.setParamObj(map, prefix + "RTSPPullSettings.", this.RTSPPullSettings);
         this.setParamObj(map, prefix + "HLSPullSettings.", this.HLSPullSettings);
         this.setParamObj(map, prefix + "ResilientStream.", this.ResilientStream);
         this.setParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
+        this.setParamObj(map, prefix + "RISTSettings.", this.RISTSettings);
+        this.setParamArrayObj(map, prefix + "StreamUrls.", this.StreamUrls);
+        this.setParamObj(map, prefix + "FailOverOption.", this.FailOverOption);
 
     }
 }

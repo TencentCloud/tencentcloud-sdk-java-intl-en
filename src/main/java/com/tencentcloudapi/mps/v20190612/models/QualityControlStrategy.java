@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class QualityControlStrategy extends AbstractModel {
 
     /**
-    * Policy type. Valid values:
+    * Policy type. Value:
 - TimeSpotCheck
     */
     @SerializedName("StrategyType")
@@ -39,9 +39,9 @@ public class QualityControlStrategy extends AbstractModel {
     private TimeSpotCheck TimeSpotCheck;
 
     /**
-     * Get Policy type. Valid values:
+     * Get Policy type. Value:
 - TimeSpotCheck 
-     * @return StrategyType Policy type. Valid values:
+     * @return StrategyType Policy type. Value:
 - TimeSpotCheck
      */
     public String getStrategyType() {
@@ -49,9 +49,9 @@ public class QualityControlStrategy extends AbstractModel {
     }
 
     /**
-     * Set Policy type. Valid values:
+     * Set Policy type. Value:
 - TimeSpotCheck
-     * @param StrategyType Policy type. Valid values:
+     * @param StrategyType Policy type. Value:
 - TimeSpotCheck
      */
     public void setStrategyType(String StrategyType) {

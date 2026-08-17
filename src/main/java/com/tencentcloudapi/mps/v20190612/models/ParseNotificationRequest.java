@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class ParseNotificationRequest extends AbstractModel {
 
     /**
-    * Event notification obtained from CMQ.
+    * Event notification content obtained from CMQ.
     */
     @SerializedName("Content")
     @Expose
     private String Content;
 
     /**
-     * Get Event notification obtained from CMQ. 
-     * @return Content Event notification obtained from CMQ.
+     * Get Event notification content obtained from CMQ. 
+     * @return Content Event notification content obtained from CMQ.
      */
     public String getContent() {
         return this.Content;
     }
 
     /**
-     * Set Event notification obtained from CMQ.
-     * @param Content Event notification obtained from CMQ.
+     * Set Event notification content obtained from CMQ.
+     * @param Content Event notification content obtained from CMQ.
      */
     public void setContent(String Content) {
         this.Content = Content;

@@ -52,16 +52,14 @@ public class SmartSubtitleTaskBatchOutput extends AbstractModel {
     private String Message;
 
     /**
-    * <p>Translation task output information.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("TransTextTask")
     @Expose
     private SmartSubtitleTaskTransTextResultOutput TransTextTask;
 
     /**
-    * <p>Full speech recognition task output information.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("AsrFullTextTask")
     @Expose
@@ -132,40 +130,32 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get <p>Translation task output information.</p>
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return TransTextTask <p>Translation task output information.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return TransTextTask 
      */
     public SmartSubtitleTaskTransTextResultOutput getTransTextTask() {
         return this.TransTextTask;
     }
 
     /**
-     * Set <p>Translation task output information.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param TransTextTask <p>Translation task output information.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param TransTextTask 
      */
     public void setTransTextTask(SmartSubtitleTaskTransTextResultOutput TransTextTask) {
         this.TransTextTask = TransTextTask;
     }
 
     /**
-     * Get <p>Full speech recognition task output information.</p>
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return AsrFullTextTask <p>Full speech recognition task output information.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return AsrFullTextTask 
      */
     public SmartSubtitleTaskAsrFullTextResultOutput getAsrFullTextTask() {
         return this.AsrFullTextTask;
     }
 
     /**
-     * Set <p>Full speech recognition task output information.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param AsrFullTextTask <p>Full speech recognition task output information.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param AsrFullTextTask 
      */
     public void setAsrFullTextTask(SmartSubtitleTaskAsrFullTextResultOutput AsrFullTextTask) {
         this.AsrFullTextTask = AsrFullTextTask;

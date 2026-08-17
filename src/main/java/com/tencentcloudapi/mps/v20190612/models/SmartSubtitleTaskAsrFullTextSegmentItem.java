@@ -52,8 +52,7 @@ public class SmartSubtitleTaskAsrFullTextSegmentItem extends AbstractModel {
     private String Text;
 
     /**
-    * <p>Word timestamp information.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("Wordlist")
     @Expose
@@ -131,20 +130,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get <p>Word timestamp information.</p>
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Wordlist <p>Word timestamp information.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return Wordlist 
      */
     public WordResult [] getWordlist() {
         return this.Wordlist;
     }
 
     /**
-     * Set <p>Word timestamp information.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Wordlist <p>Word timestamp information.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param Wordlist 
      */
     public void setWordlist(WordResult [] Wordlist) {
         this.Wordlist = Wordlist;

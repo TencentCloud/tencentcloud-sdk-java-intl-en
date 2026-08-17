@@ -45,8 +45,7 @@ public class DescribeDesignTaskResponse extends AbstractModel {
     private String Status;
 
     /**
-    * <p>Voice ID.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("VoiceId")
     @Expose
@@ -60,8 +59,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String AudioUrl;
 
     /**
-    * <p>Extended information.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("ExtInfo")
     @Expose
@@ -123,20 +121,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get <p>Voice ID.</p>
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return VoiceId <p>Voice ID.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return VoiceId 
      */
     public String getVoiceId() {
         return this.VoiceId;
     }
 
     /**
-     * Set <p>Voice ID.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param VoiceId <p>Voice ID.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param VoiceId 
      */
     public void setVoiceId(String VoiceId) {
         this.VoiceId = VoiceId;
@@ -159,20 +153,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get <p>Extended information.</p>
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ExtInfo <p>Extended information.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return ExtInfo 
      */
     public String getExtInfo() {
         return this.ExtInfo;
     }
 
     /**
-     * Set <p>Extended information.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ExtInfo <p>Extended information.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param ExtInfo 
      */
     public void setExtInfo(String ExtInfo) {
         this.ExtInfo = ExtInfo;

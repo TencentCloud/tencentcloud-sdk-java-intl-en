@@ -24,16 +24,14 @@ import java.util.HashMap;
 public class Rules extends AbstractModel {
 
     /**
-    * Judgment condition ID.
-Note: This field may return null, indicating that no valid value can be obtained.
+    * 
     */
     @SerializedName("Id")
     @Expose
     private String Id;
 
     /**
-    * Judgment condition configuration.
-Note: This field may return null, indicating that no valid value can be obtained.
+    * 
     */
     @SerializedName("Conditions")
     @Expose
@@ -42,56 +40,47 @@ Note: This field may return null, indicating that no valid value can be obtained
     /**
     * Logical operator for the list of conditions. Valid values:
 
- - &&: logical AND
- - ||: logical OR
+- &&: logical AND
+- ||: logical OR
     */
     @SerializedName("Linker")
     @Expose
     private String Linker;
 
     /**
-    * Indexes of the nodes to execute if the judgment conditions are met.
-Note: This field may return null, indicating that no valid value can be obtained.
+    * 
     */
     @SerializedName("RearDriveIndexs")
     @Expose
     private Long [] RearDriveIndexs;
 
     /**
-     * Get Judgment condition ID.
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return Id Judgment condition ID.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get  
+     * @return Id 
      */
     public String getId() {
         return this.Id;
     }
 
     /**
-     * Set Judgment condition ID.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param Id Judgment condition ID.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set 
+     * @param Id 
      */
     public void setId(String Id) {
         this.Id = Id;
     }
 
     /**
-     * Get Judgment condition configuration.
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return Conditions Judgment condition configuration.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get  
+     * @return Conditions 
      */
     public RuleConditionItem [] getConditions() {
         return this.Conditions;
     }
 
     /**
-     * Set Judgment condition configuration.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param Conditions Judgment condition configuration.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set 
+     * @param Conditions 
      */
     public void setConditions(RuleConditionItem [] Conditions) {
         this.Conditions = Conditions;
@@ -100,12 +89,12 @@ Note: This field may return null, indicating that no valid value can be obtained
     /**
      * Get Logical operator for the list of conditions. Valid values:
 
- - &&: logical AND
- - ||: logical OR 
+- &&: logical AND
+- ||: logical OR 
      * @return Linker Logical operator for the list of conditions. Valid values:
 
- - &&: logical AND
- - ||: logical OR
+- &&: logical AND
+- ||: logical OR
      */
     public String getLinker() {
         return this.Linker;
@@ -114,32 +103,28 @@ Note: This field may return null, indicating that no valid value can be obtained
     /**
      * Set Logical operator for the list of conditions. Valid values:
 
- - &&: logical AND
- - ||: logical OR
+- &&: logical AND
+- ||: logical OR
      * @param Linker Logical operator for the list of conditions. Valid values:
 
- - &&: logical AND
- - ||: logical OR
+- &&: logical AND
+- ||: logical OR
      */
     public void setLinker(String Linker) {
         this.Linker = Linker;
     }
 
     /**
-     * Get Indexes of the nodes to execute if the judgment conditions are met.
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return RearDriveIndexs Indexes of the nodes to execute if the judgment conditions are met.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get  
+     * @return RearDriveIndexs 
      */
     public Long [] getRearDriveIndexs() {
         return this.RearDriveIndexs;
     }
 
     /**
-     * Set Indexes of the nodes to execute if the judgment conditions are met.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param RearDriveIndexs Indexes of the nodes to execute if the judgment conditions are met.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set 
+     * @param RearDriveIndexs 
      */
     public void setRearDriveIndexs(Long [] RearDriveIndexs) {
         this.RearDriveIndexs = RearDriveIndexs;

@@ -24,135 +24,115 @@ import java.util.HashMap;
 public class ImageProcessTaskResult extends AbstractModel {
 
     /**
-    * Task status, including PROCESSING, SUCCESS, and FAIL.
-Note: This field may return null, indicating that no valid value can be obtained.
+    * 
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * Error code. A null string indicates that the task is successful, while other values indicate that the task has failed. For valid values, see the list of [MPS error codes](https://www.tencentcloud.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
+    * Error code. An empty string indicates that the task is successful, and other values indicate that the task has failed. For specific values, see [Error Codes] (https://www.tencentcloud.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
     */
     @SerializedName("ErrMsg")
     @Expose
     private String ErrMsg;
 
     /**
-    * Error message.
-Note: This field may return null, indicating that no valid value can be obtained.
+    * 
     */
     @SerializedName("Message")
     @Expose
     private String Message;
 
     /**
-    * Transcoding task output.
-Note: This field may return null, indicating that no valid value can be obtained.
+    * 
     */
     @SerializedName("Output")
     @Expose
     private ImageProcessTaskOutput Output;
 
     /**
-    * Transcoding progress, with a value range of [0-100].
-Note: This field may return null, indicating that no valid value can be obtained.
+    * 
     */
     @SerializedName("Progress")
     @Expose
     private Long Progress;
 
     /**
-     * Get Task status, including PROCESSING, SUCCESS, and FAIL.
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return Status Task status, including PROCESSING, SUCCESS, and FAIL.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get  
+     * @return Status 
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Task status, including PROCESSING, SUCCESS, and FAIL.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param Status Task status, including PROCESSING, SUCCESS, and FAIL.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set 
+     * @param Status 
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get Error code. A null string indicates that the task is successful, while other values indicate that the task has failed. For valid values, see the list of [MPS error codes](https://www.tencentcloud.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81). 
-     * @return ErrMsg Error code. A null string indicates that the task is successful, while other values indicate that the task has failed. For valid values, see the list of [MPS error codes](https://www.tencentcloud.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
+     * Get Error code. An empty string indicates that the task is successful, and other values indicate that the task has failed. For specific values, see [Error Codes] (https://www.tencentcloud.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81). 
+     * @return ErrMsg Error code. An empty string indicates that the task is successful, and other values indicate that the task has failed. For specific values, see [Error Codes] (https://www.tencentcloud.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
      */
     public String getErrMsg() {
         return this.ErrMsg;
     }
 
     /**
-     * Set Error code. A null string indicates that the task is successful, while other values indicate that the task has failed. For valid values, see the list of [MPS error codes](https://www.tencentcloud.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
-     * @param ErrMsg Error code. A null string indicates that the task is successful, while other values indicate that the task has failed. For valid values, see the list of [MPS error codes](https://www.tencentcloud.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
+     * Set Error code. An empty string indicates that the task is successful, and other values indicate that the task has failed. For specific values, see [Error Codes] (https://www.tencentcloud.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
+     * @param ErrMsg Error code. An empty string indicates that the task is successful, and other values indicate that the task has failed. For specific values, see [Error Codes] (https://www.tencentcloud.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
      */
     public void setErrMsg(String ErrMsg) {
         this.ErrMsg = ErrMsg;
     }
 
     /**
-     * Get Error message.
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return Message Error message.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get  
+     * @return Message 
      */
     public String getMessage() {
         return this.Message;
     }
 
     /**
-     * Set Error message.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param Message Error message.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set 
+     * @param Message 
      */
     public void setMessage(String Message) {
         this.Message = Message;
     }
 
     /**
-     * Get Transcoding task output.
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return Output Transcoding task output.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get  
+     * @return Output 
      */
     public ImageProcessTaskOutput getOutput() {
         return this.Output;
     }
 
     /**
-     * Set Transcoding task output.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param Output Transcoding task output.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set 
+     * @param Output 
      */
     public void setOutput(ImageProcessTaskOutput Output) {
         this.Output = Output;
     }
 
     /**
-     * Get Transcoding progress, with a value range of [0-100].
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return Progress Transcoding progress, with a value range of [0-100].
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get  
+     * @return Progress 
      */
     public Long getProgress() {
         return this.Progress;
     }
 
     /**
-     * Set Transcoding progress, with a value range of [0-100].
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param Progress Transcoding progress, with a value range of [0-100].
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set 
+     * @param Progress 
      */
     public void setProgress(Long Progress) {
         this.Progress = Progress;

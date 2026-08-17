@@ -24,319 +24,299 @@ import java.util.HashMap;
 public class ActivityPara extends AbstractModel {
 
     /**
-    * A transcoding task.
+    * 
     */
     @SerializedName("TranscodeTask")
     @Expose
     private TranscodeTaskInput TranscodeTask;
 
     /**
-    * An animated screenshot generation task.
+    * 
     */
     @SerializedName("AnimatedGraphicTask")
     @Expose
     private AnimatedGraphicTaskInput AnimatedGraphicTask;
 
     /**
-    * A time point screenshot task.
+    * 
     */
     @SerializedName("SnapshotByTimeOffsetTask")
     @Expose
     private SnapshotByTimeOffsetTaskInput SnapshotByTimeOffsetTask;
 
     /**
-    * A sampled screenshot task.
+    * 
     */
     @SerializedName("SampleSnapshotTask")
     @Expose
     private SampleSnapshotTaskInput SampleSnapshotTask;
 
     /**
-    * An image sprite screenshot task.
+    * 
     */
     @SerializedName("ImageSpriteTask")
     @Expose
     private ImageSpriteTaskInput ImageSpriteTask;
 
     /**
-    * An adaptive bitrate streaming task.
+    * 
     */
     @SerializedName("AdaptiveDynamicStreamingTask")
     @Expose
     private AdaptiveDynamicStreamingTaskInput AdaptiveDynamicStreamingTask;
 
     /**
-    * A content moderation task.
+    * 
     */
     @SerializedName("AiContentReviewTask")
     @Expose
     private AiContentReviewTaskInput AiContentReviewTask;
 
     /**
-    * A content analysis task.
+    * 
     */
     @SerializedName("AiAnalysisTask")
     @Expose
     private AiAnalysisTaskInput AiAnalysisTask;
 
     /**
-    * A content recognition task.
+    * 
     */
     @SerializedName("AiRecognitionTask")
     @Expose
     private AiRecognitionTaskInput AiRecognitionTask;
 
     /**
-    * Media quality inspection task.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("QualityControlTask")
     @Expose
     private AiQualityControlTaskInput QualityControlTask;
 
     /**
-    * Conditional judgment of the task.
-Note: This field may return null, indicating that no valid value can be obtained.
+    * 
     */
     @SerializedName("ExecRulesTask")
     @Expose
     private ExecRulesTask ExecRulesTask;
 
     /**
-    * Smart subtitle task.
-Note: This field may return null, indicating that no valid value can be obtained.
+    * 
     */
     @SerializedName("SmartSubtitlesTask")
     @Expose
     private SmartSubtitlesTaskInput SmartSubtitlesTask;
 
     /**
-    * Smart erasure task.
-Note: This field may return null, indicating that no valid value can be obtained.
+    * 
     */
     @SerializedName("SmartEraseTask")
     @Expose
     private SmartEraseTaskInput SmartEraseTask;
 
     /**
-     * Get A transcoding task. 
-     * @return TranscodeTask A transcoding task.
+     * Get  
+     * @return TranscodeTask 
      */
     public TranscodeTaskInput getTranscodeTask() {
         return this.TranscodeTask;
     }
 
     /**
-     * Set A transcoding task.
-     * @param TranscodeTask A transcoding task.
+     * Set 
+     * @param TranscodeTask 
      */
     public void setTranscodeTask(TranscodeTaskInput TranscodeTask) {
         this.TranscodeTask = TranscodeTask;
     }
 
     /**
-     * Get An animated screenshot generation task. 
-     * @return AnimatedGraphicTask An animated screenshot generation task.
+     * Get  
+     * @return AnimatedGraphicTask 
      */
     public AnimatedGraphicTaskInput getAnimatedGraphicTask() {
         return this.AnimatedGraphicTask;
     }
 
     /**
-     * Set An animated screenshot generation task.
-     * @param AnimatedGraphicTask An animated screenshot generation task.
+     * Set 
+     * @param AnimatedGraphicTask 
      */
     public void setAnimatedGraphicTask(AnimatedGraphicTaskInput AnimatedGraphicTask) {
         this.AnimatedGraphicTask = AnimatedGraphicTask;
     }
 
     /**
-     * Get A time point screenshot task. 
-     * @return SnapshotByTimeOffsetTask A time point screenshot task.
+     * Get  
+     * @return SnapshotByTimeOffsetTask 
      */
     public SnapshotByTimeOffsetTaskInput getSnapshotByTimeOffsetTask() {
         return this.SnapshotByTimeOffsetTask;
     }
 
     /**
-     * Set A time point screenshot task.
-     * @param SnapshotByTimeOffsetTask A time point screenshot task.
+     * Set 
+     * @param SnapshotByTimeOffsetTask 
      */
     public void setSnapshotByTimeOffsetTask(SnapshotByTimeOffsetTaskInput SnapshotByTimeOffsetTask) {
         this.SnapshotByTimeOffsetTask = SnapshotByTimeOffsetTask;
     }
 
     /**
-     * Get A sampled screenshot task. 
-     * @return SampleSnapshotTask A sampled screenshot task.
+     * Get  
+     * @return SampleSnapshotTask 
      */
     public SampleSnapshotTaskInput getSampleSnapshotTask() {
         return this.SampleSnapshotTask;
     }
 
     /**
-     * Set A sampled screenshot task.
-     * @param SampleSnapshotTask A sampled screenshot task.
+     * Set 
+     * @param SampleSnapshotTask 
      */
     public void setSampleSnapshotTask(SampleSnapshotTaskInput SampleSnapshotTask) {
         this.SampleSnapshotTask = SampleSnapshotTask;
     }
 
     /**
-     * Get An image sprite screenshot task. 
-     * @return ImageSpriteTask An image sprite screenshot task.
+     * Get  
+     * @return ImageSpriteTask 
      */
     public ImageSpriteTaskInput getImageSpriteTask() {
         return this.ImageSpriteTask;
     }
 
     /**
-     * Set An image sprite screenshot task.
-     * @param ImageSpriteTask An image sprite screenshot task.
+     * Set 
+     * @param ImageSpriteTask 
      */
     public void setImageSpriteTask(ImageSpriteTaskInput ImageSpriteTask) {
         this.ImageSpriteTask = ImageSpriteTask;
     }
 
     /**
-     * Get An adaptive bitrate streaming task. 
-     * @return AdaptiveDynamicStreamingTask An adaptive bitrate streaming task.
+     * Get  
+     * @return AdaptiveDynamicStreamingTask 
      */
     public AdaptiveDynamicStreamingTaskInput getAdaptiveDynamicStreamingTask() {
         return this.AdaptiveDynamicStreamingTask;
     }
 
     /**
-     * Set An adaptive bitrate streaming task.
-     * @param AdaptiveDynamicStreamingTask An adaptive bitrate streaming task.
+     * Set 
+     * @param AdaptiveDynamicStreamingTask 
      */
     public void setAdaptiveDynamicStreamingTask(AdaptiveDynamicStreamingTaskInput AdaptiveDynamicStreamingTask) {
         this.AdaptiveDynamicStreamingTask = AdaptiveDynamicStreamingTask;
     }
 
     /**
-     * Get A content moderation task. 
-     * @return AiContentReviewTask A content moderation task.
+     * Get  
+     * @return AiContentReviewTask 
      */
     public AiContentReviewTaskInput getAiContentReviewTask() {
         return this.AiContentReviewTask;
     }
 
     /**
-     * Set A content moderation task.
-     * @param AiContentReviewTask A content moderation task.
+     * Set 
+     * @param AiContentReviewTask 
      */
     public void setAiContentReviewTask(AiContentReviewTaskInput AiContentReviewTask) {
         this.AiContentReviewTask = AiContentReviewTask;
     }
 
     /**
-     * Get A content analysis task. 
-     * @return AiAnalysisTask A content analysis task.
+     * Get  
+     * @return AiAnalysisTask 
      */
     public AiAnalysisTaskInput getAiAnalysisTask() {
         return this.AiAnalysisTask;
     }
 
     /**
-     * Set A content analysis task.
-     * @param AiAnalysisTask A content analysis task.
+     * Set 
+     * @param AiAnalysisTask 
      */
     public void setAiAnalysisTask(AiAnalysisTaskInput AiAnalysisTask) {
         this.AiAnalysisTask = AiAnalysisTask;
     }
 
     /**
-     * Get A content recognition task. 
-     * @return AiRecognitionTask A content recognition task.
+     * Get  
+     * @return AiRecognitionTask 
      */
     public AiRecognitionTaskInput getAiRecognitionTask() {
         return this.AiRecognitionTask;
     }
 
     /**
-     * Set A content recognition task.
-     * @param AiRecognitionTask A content recognition task.
+     * Set 
+     * @param AiRecognitionTask 
      */
     public void setAiRecognitionTask(AiRecognitionTaskInput AiRecognitionTask) {
         this.AiRecognitionTask = AiRecognitionTask;
     }
 
     /**
-     * Get Media quality inspection task.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return QualityControlTask Media quality inspection task.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return QualityControlTask 
      */
     public AiQualityControlTaskInput getQualityControlTask() {
         return this.QualityControlTask;
     }
 
     /**
-     * Set Media quality inspection task.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param QualityControlTask Media quality inspection task.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param QualityControlTask 
      */
     public void setQualityControlTask(AiQualityControlTaskInput QualityControlTask) {
         this.QualityControlTask = QualityControlTask;
     }
 
     /**
-     * Get Conditional judgment of the task.
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return ExecRulesTask Conditional judgment of the task.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get  
+     * @return ExecRulesTask 
      */
     public ExecRulesTask getExecRulesTask() {
         return this.ExecRulesTask;
     }
 
     /**
-     * Set Conditional judgment of the task.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param ExecRulesTask Conditional judgment of the task.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set 
+     * @param ExecRulesTask 
      */
     public void setExecRulesTask(ExecRulesTask ExecRulesTask) {
         this.ExecRulesTask = ExecRulesTask;
     }
 
     /**
-     * Get Smart subtitle task.
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return SmartSubtitlesTask Smart subtitle task.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get  
+     * @return SmartSubtitlesTask 
      */
     public SmartSubtitlesTaskInput getSmartSubtitlesTask() {
         return this.SmartSubtitlesTask;
     }
 
     /**
-     * Set Smart subtitle task.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param SmartSubtitlesTask Smart subtitle task.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set 
+     * @param SmartSubtitlesTask 
      */
     public void setSmartSubtitlesTask(SmartSubtitlesTaskInput SmartSubtitlesTask) {
         this.SmartSubtitlesTask = SmartSubtitlesTask;
     }
 
     /**
-     * Get Smart erasure task.
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return SmartEraseTask Smart erasure task.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get  
+     * @return SmartEraseTask 
      */
     public SmartEraseTaskInput getSmartEraseTask() {
         return this.SmartEraseTask;
     }
 
     /**
-     * Set Smart erasure task.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param SmartEraseTask Smart erasure task.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set 
+     * @param SmartEraseTask 
      */
     public void setSmartEraseTask(SmartEraseTaskInput SmartEraseTask) {
         this.SmartEraseTask = SmartEraseTask;

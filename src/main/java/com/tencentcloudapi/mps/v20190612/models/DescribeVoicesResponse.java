@@ -45,8 +45,7 @@ public class DescribeVoicesResponse extends AbstractModel {
     private Long TotalCount;
 
     /**
-    * <p>Available voice list.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("Voices")
     @Expose
@@ -108,20 +107,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get <p>Available voice list.</p>
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Voices <p>Available voice list.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return Voices 
      */
     public VoiceInfo [] getVoices() {
         return this.Voices;
     }
 
     /**
-     * Set <p>Available voice list.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Voices <p>Available voice list.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param Voices 
      */
     public void setVoices(VoiceInfo [] Voices) {
         this.Voices = Voices;

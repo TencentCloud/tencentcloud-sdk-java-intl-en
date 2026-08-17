@@ -24,49 +24,72 @@ import java.util.HashMap;
 public class EditMediaTaskOutput extends AbstractModel {
 
     /**
-    * Target storage of edited file.
+    * Target storage for the edited file.
     */
     @SerializedName("OutputStorage")
     @Expose
     private TaskOutputStorage OutputStorage;
 
     /**
-    * Path of edited video file.
+    * Path of the edited video file.
     */
     @SerializedName("Path")
     @Expose
     private String Path;
 
     /**
-     * Get Target storage of edited file. 
-     * @return OutputStorage Target storage of edited file.
+    * 
+    */
+    @SerializedName("MetaData")
+    @Expose
+    private MediaMetaData MetaData;
+
+    /**
+     * Get Target storage for the edited file. 
+     * @return OutputStorage Target storage for the edited file.
      */
     public TaskOutputStorage getOutputStorage() {
         return this.OutputStorage;
     }
 
     /**
-     * Set Target storage of edited file.
-     * @param OutputStorage Target storage of edited file.
+     * Set Target storage for the edited file.
+     * @param OutputStorage Target storage for the edited file.
      */
     public void setOutputStorage(TaskOutputStorage OutputStorage) {
         this.OutputStorage = OutputStorage;
     }
 
     /**
-     * Get Path of edited video file. 
-     * @return Path Path of edited video file.
+     * Get Path of the edited video file. 
+     * @return Path Path of the edited video file.
      */
     public String getPath() {
         return this.Path;
     }
 
     /**
-     * Set Path of edited video file.
-     * @param Path Path of edited video file.
+     * Set Path of the edited video file.
+     * @param Path Path of the edited video file.
      */
     public void setPath(String Path) {
         this.Path = Path;
+    }
+
+    /**
+     * Get  
+     * @return MetaData 
+     */
+    public MediaMetaData getMetaData() {
+        return this.MetaData;
+    }
+
+    /**
+     * Set 
+     * @param MetaData 
+     */
+    public void setMetaData(MediaMetaData MetaData) {
+        this.MetaData = MetaData;
     }
 
     public EditMediaTaskOutput() {
@@ -83,6 +106,9 @@ public class EditMediaTaskOutput extends AbstractModel {
         if (source.Path != null) {
             this.Path = new String(source.Path);
         }
+        if (source.MetaData != null) {
+            this.MetaData = new MediaMetaData(source.MetaData);
+        }
     }
 
 
@@ -92,6 +118,7 @@ public class EditMediaTaskOutput extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "OutputStorage.", this.OutputStorage);
         this.setParamSimple(map, prefix + "Path", this.Path);
+        this.setParamObj(map, prefix + "MetaData.", this.MetaData);
 
     }
 }

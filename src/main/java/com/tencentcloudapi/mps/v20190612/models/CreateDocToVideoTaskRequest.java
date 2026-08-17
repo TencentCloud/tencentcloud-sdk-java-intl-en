@@ -38,6 +38,13 @@ public class CreateDocToVideoTaskRequest extends AbstractModel {
     private DocToVideoCosInfo CosInfo;
 
     /**
+    * 
+    */
+    @SerializedName("ResourceId")
+    @Expose
+    private String ResourceId;
+
+    /**
      * Get <p>Input information for AIGC document‑to‑video generation</p> 
      * @return Input <p>Input information for AIGC document‑to‑video generation</p>
      */
@@ -69,6 +76,22 @@ public class CreateDocToVideoTaskRequest extends AbstractModel {
         this.CosInfo = CosInfo;
     }
 
+    /**
+     * Get  
+     * @return ResourceId 
+     */
+    public String getResourceId() {
+        return this.ResourceId;
+    }
+
+    /**
+     * Set 
+     * @param ResourceId 
+     */
+    public void setResourceId(String ResourceId) {
+        this.ResourceId = ResourceId;
+    }
+
     public CreateDocToVideoTaskRequest() {
     }
 
@@ -83,6 +106,9 @@ public class CreateDocToVideoTaskRequest extends AbstractModel {
         if (source.CosInfo != null) {
             this.CosInfo = new DocToVideoCosInfo(source.CosInfo);
         }
+        if (source.ResourceId != null) {
+            this.ResourceId = new String(source.ResourceId);
+        }
     }
 
 
@@ -92,6 +118,7 @@ public class CreateDocToVideoTaskRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "Input.", this.Input);
         this.setParamObj(map, prefix + "CosInfo.", this.CosInfo);
+        this.setParamSimple(map, prefix + "ResourceId", this.ResourceId);
 
     }
 }

@@ -24,43 +24,42 @@ import java.util.HashMap;
 public class HighlightSegmentItem extends AbstractModel {
 
     /**
-    * The confidence score.
+    * Confidence degree.
     */
     @SerializedName("Confidence")
     @Expose
     private Float Confidence;
 
     /**
-    * The start time offset of the segment.
+    * Segment start time offset.
     */
     @SerializedName("StartTimeOffset")
     @Expose
     private Float StartTimeOffset;
 
     /**
-    * The end time offset of the segment.
+    * End time offset of the recording clip.
     */
     @SerializedName("EndTimeOffset")
     @Expose
     private Float EndTimeOffset;
 
     /**
-    * Segment tag.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("SegmentTags")
     @Expose
     private String [] SegmentTags;
 
     /**
-    * Start time of the live streaming segment in ISO date and time format.	
+    * The start time of a live streaming segment, in the ISO date format.	
     */
     @SerializedName("BeginTime")
     @Expose
     private String BeginTime;
 
     /**
-    * End time of the live streaming segment in ISO date and time format.	
+    * The end time of a live streaming segment, in the ISO date format.	
     */
     @SerializedName("EndTime")
     @Expose
@@ -81,100 +80,96 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String Summary;
 
     /**
-     * Get The confidence score. 
-     * @return Confidence The confidence score.
+     * Get Confidence degree. 
+     * @return Confidence Confidence degree.
      */
     public Float getConfidence() {
         return this.Confidence;
     }
 
     /**
-     * Set The confidence score.
-     * @param Confidence The confidence score.
+     * Set Confidence degree.
+     * @param Confidence Confidence degree.
      */
     public void setConfidence(Float Confidence) {
         this.Confidence = Confidence;
     }
 
     /**
-     * Get The start time offset of the segment. 
-     * @return StartTimeOffset The start time offset of the segment.
+     * Get Segment start time offset. 
+     * @return StartTimeOffset Segment start time offset.
      */
     public Float getStartTimeOffset() {
         return this.StartTimeOffset;
     }
 
     /**
-     * Set The start time offset of the segment.
-     * @param StartTimeOffset The start time offset of the segment.
+     * Set Segment start time offset.
+     * @param StartTimeOffset Segment start time offset.
      */
     public void setStartTimeOffset(Float StartTimeOffset) {
         this.StartTimeOffset = StartTimeOffset;
     }
 
     /**
-     * Get The end time offset of the segment. 
-     * @return EndTimeOffset The end time offset of the segment.
+     * Get End time offset of the recording clip. 
+     * @return EndTimeOffset End time offset of the recording clip.
      */
     public Float getEndTimeOffset() {
         return this.EndTimeOffset;
     }
 
     /**
-     * Set The end time offset of the segment.
-     * @param EndTimeOffset The end time offset of the segment.
+     * Set End time offset of the recording clip.
+     * @param EndTimeOffset End time offset of the recording clip.
      */
     public void setEndTimeOffset(Float EndTimeOffset) {
         this.EndTimeOffset = EndTimeOffset;
     }
 
     /**
-     * Get Segment tag.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return SegmentTags Segment tag.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return SegmentTags 
      */
     public String [] getSegmentTags() {
         return this.SegmentTags;
     }
 
     /**
-     * Set Segment tag.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param SegmentTags Segment tag.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param SegmentTags 
      */
     public void setSegmentTags(String [] SegmentTags) {
         this.SegmentTags = SegmentTags;
     }
 
     /**
-     * Get Start time of the live streaming segment in ISO date and time format.	 
-     * @return BeginTime Start time of the live streaming segment in ISO date and time format.	
+     * Get The start time of a live streaming segment, in the ISO date format.	 
+     * @return BeginTime The start time of a live streaming segment, in the ISO date format.	
      */
     public String getBeginTime() {
         return this.BeginTime;
     }
 
     /**
-     * Set Start time of the live streaming segment in ISO date and time format.	
-     * @param BeginTime Start time of the live streaming segment in ISO date and time format.	
+     * Set The start time of a live streaming segment, in the ISO date format.	
+     * @param BeginTime The start time of a live streaming segment, in the ISO date format.	
      */
     public void setBeginTime(String BeginTime) {
         this.BeginTime = BeginTime;
     }
 
     /**
-     * Get End time of the live streaming segment in ISO date and time format.	 
-     * @return EndTime End time of the live streaming segment in ISO date and time format.	
+     * Get The end time of a live streaming segment, in the ISO date format.	 
+     * @return EndTime The end time of a live streaming segment, in the ISO date format.	
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set End time of the live streaming segment in ISO date and time format.	
-     * @param EndTime End time of the live streaming segment in ISO date and time format.	
+     * Set The end time of a live streaming segment, in the ISO date format.	
+     * @param EndTime The end time of a live streaming segment, in the ISO date format.	
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;

@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class AiReviewPornOcrTaskOutput extends AbstractModel {
 
     /**
-    * Score of the OCR-detected porn information in text from 0 to 100.
+    * Ocr text involves pornographic content scoring, with a score ranging from 0 to 100.
     */
     @SerializedName("Confidence")
     @Expose
     private Float Confidence;
 
     /**
-    * Suggestion for the OCR-detected porn information in text. Valid values:
+    * Result Suggestions for Ocr text pornographic content, value ranges from...to...
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
@@ -41,34 +41,34 @@ public class AiReviewPornOcrTaskOutput extends AbstractModel {
     private String Suggestion;
 
     /**
-    * List of video segments that contain the OCR-detected porn information in text.
+    * Video segment list with suspect Ocr text pornographic information.
     */
     @SerializedName("SegmentSet")
     @Expose
     private MediaContentReviewOcrTextSegmentItem [] SegmentSet;
 
     /**
-     * Get Score of the OCR-detected porn information in text from 0 to 100. 
-     * @return Confidence Score of the OCR-detected porn information in text from 0 to 100.
+     * Get Ocr text involves pornographic content scoring, with a score ranging from 0 to 100. 
+     * @return Confidence Ocr text involves pornographic content scoring, with a score ranging from 0 to 100.
      */
     public Float getConfidence() {
         return this.Confidence;
     }
 
     /**
-     * Set Score of the OCR-detected porn information in text from 0 to 100.
-     * @param Confidence Score of the OCR-detected porn information in text from 0 to 100.
+     * Set Ocr text involves pornographic content scoring, with a score ranging from 0 to 100.
+     * @param Confidence Ocr text involves pornographic content scoring, with a score ranging from 0 to 100.
      */
     public void setConfidence(Float Confidence) {
         this.Confidence = Confidence;
     }
 
     /**
-     * Get Suggestion for the OCR-detected porn information in text. Valid values:
+     * Get Result Suggestions for Ocr text pornographic content, value ranges from...to...
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li> 
-     * @return Suggestion Suggestion for the OCR-detected porn information in text. Valid values:
+     * @return Suggestion Result Suggestions for Ocr text pornographic content, value ranges from...to...
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
@@ -78,11 +78,11 @@ public class AiReviewPornOcrTaskOutput extends AbstractModel {
     }
 
     /**
-     * Set Suggestion for the OCR-detected porn information in text. Valid values:
+     * Set Result Suggestions for Ocr text pornographic content, value ranges from...to...
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
-     * @param Suggestion Suggestion for the OCR-detected porn information in text. Valid values:
+     * @param Suggestion Result Suggestions for Ocr text pornographic content, value ranges from...to...
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
@@ -92,16 +92,16 @@ public class AiReviewPornOcrTaskOutput extends AbstractModel {
     }
 
     /**
-     * Get List of video segments that contain the OCR-detected porn information in text. 
-     * @return SegmentSet List of video segments that contain the OCR-detected porn information in text.
+     * Get Video segment list with suspect Ocr text pornographic information. 
+     * @return SegmentSet Video segment list with suspect Ocr text pornographic information.
      */
     public MediaContentReviewOcrTextSegmentItem [] getSegmentSet() {
         return this.SegmentSet;
     }
 
     /**
-     * Set List of video segments that contain the OCR-detected porn information in text.
-     * @param SegmentSet List of video segments that contain the OCR-detected porn information in text.
+     * Set Video segment list with suspect Ocr text pornographic information.
+     * @param SegmentSet Video segment list with suspect Ocr text pornographic information.
      */
     public void setSegmentSet(MediaContentReviewOcrTextSegmentItem [] SegmentSet) {
         this.SegmentSet = SegmentSet;

@@ -24,69 +24,74 @@ import java.util.HashMap;
 public class MediaAiAnalysisFrameTagItem extends AbstractModel {
 
     /**
-    * Frame-specific tag name.
+    * Tag name by frame.
     */
     @SerializedName("Tag")
     @Expose
     private String Tag;
 
     /**
-    * 
+    * Classification list by frame tag name. CategorySet.N indicates the (N+1)th level classification.
+For example, when the Tag is "tower", CategorySet contains two elements: CategorySet.0 is "scenario" and CategorySet.1 is "building", which means the frame Tag is "tower", the first-level category is "scenario", and the second-level category is "building".
     */
     @SerializedName("CategorySet")
     @Expose
     private String [] CategorySet;
 
     /**
-    * Confidence of intelligently generated frame-specific tag between 0 and 100.
+    * Reliability of frame tagging, with a value range from 0 to -100.
     */
     @SerializedName("Confidence")
     @Expose
     private Float Confidence;
 
     /**
-     * Get Frame-specific tag name. 
-     * @return Tag Frame-specific tag name.
+     * Get Tag name by frame. 
+     * @return Tag Tag name by frame.
      */
     public String getTag() {
         return this.Tag;
     }
 
     /**
-     * Set Frame-specific tag name.
-     * @param Tag Frame-specific tag name.
+     * Set Tag name by frame.
+     * @param Tag Tag name by frame.
      */
     public void setTag(String Tag) {
         this.Tag = Tag;
     }
 
     /**
-     * Get  
-     * @return CategorySet 
+     * Get Classification list by frame tag name. CategorySet.N indicates the (N+1)th level classification.
+For example, when the Tag is "tower", CategorySet contains two elements: CategorySet.0 is "scenario" and CategorySet.1 is "building", which means the frame Tag is "tower", the first-level category is "scenario", and the second-level category is "building". 
+     * @return CategorySet Classification list by frame tag name. CategorySet.N indicates the (N+1)th level classification.
+For example, when the Tag is "tower", CategorySet contains two elements: CategorySet.0 is "scenario" and CategorySet.1 is "building", which means the frame Tag is "tower", the first-level category is "scenario", and the second-level category is "building".
      */
     public String [] getCategorySet() {
         return this.CategorySet;
     }
 
     /**
-     * Set 
-     * @param CategorySet 
+     * Set Classification list by frame tag name. CategorySet.N indicates the (N+1)th level classification.
+For example, when the Tag is "tower", CategorySet contains two elements: CategorySet.0 is "scenario" and CategorySet.1 is "building", which means the frame Tag is "tower", the first-level category is "scenario", and the second-level category is "building".
+     * @param CategorySet Classification list by frame tag name. CategorySet.N indicates the (N+1)th level classification.
+For example, when the Tag is "tower", CategorySet contains two elements: CategorySet.0 is "scenario" and CategorySet.1 is "building", which means the frame Tag is "tower", the first-level category is "scenario", and the second-level category is "building".
      */
     public void setCategorySet(String [] CategorySet) {
         this.CategorySet = CategorySet;
     }
 
     /**
-     * Get Confidence of intelligently generated frame-specific tag between 0 and 100. 
-     * @return Confidence Confidence of intelligently generated frame-specific tag between 0 and 100.
+     * Get Reliability of frame tagging, with a value range from 0 to -100. 
+     * @return Confidence Reliability of frame tagging, with a value range from 0 to -100.
      */
     public Float getConfidence() {
         return this.Confidence;
     }
 
     /**
-     * Set Confidence of intelligently generated frame-specific tag between 0 and 100.
-     * @param Confidence Confidence of intelligently generated frame-specific tag between 0 and 100.
+     * Set Reliability of frame tagging, with a value range from 0 to -100.
+     * @param Confidence Reliability of frame tagging, with a value range from 0 to -100.
      */
     public void setConfidence(Float Confidence) {
         this.Confidence = Confidence;

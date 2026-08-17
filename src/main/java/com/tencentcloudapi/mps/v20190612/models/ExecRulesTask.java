@@ -24,28 +24,23 @@ import java.util.HashMap;
 public class ExecRulesTask extends AbstractModel {
 
     /**
-    * Conditional judgment information.
-Note: This field may return null, indicating that no valid value can be obtained.
+    * 
     */
     @SerializedName("Rules")
     @Expose
     private Rules [] Rules;
 
     /**
-     * Get Conditional judgment information.
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return Rules Conditional judgment information.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get  
+     * @return Rules 
      */
     public Rules [] getRules() {
         return this.Rules;
     }
 
     /**
-     * Set Conditional judgment information.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param Rules Conditional judgment information.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set 
+     * @param Rules 
      */
     public void setRules(Rules [] Rules) {
         this.Rules = Rules;

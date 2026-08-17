@@ -25,21 +25,21 @@ public class Activity extends AbstractModel {
 
     /**
     * Atomic task type.
-<li>input: starting node.</li>.
-<li>output: termination node.</li>.
-<li>action-trans: specifies transcoding.</li>.
-<li>action-samplesnapshot: specifies sampled screenshot taking.</li>.
-<li>action-AIAnalysis: analysis.</li>.
-<li>action-AIRecognition: recognition.</li>.
-<li>action-aiReview: specifies the review action.</li>.
-<li>action-animated-graphics: specifies the animated image.</li>.
-<li>action-image-sprite: specifies the sprite sheet.</li>.
-<li>action-snapshotByTimeOffset: specifies time point screenshot taking.</li>.
-<li>action-adaptive-substream: specifies the adaptive bitrate stream.</li>.
-<li>action-AIQualityControl: media quality inspection.</li>.
-<li>action-SmartSubtitles: smart subtitling.</li>.
-<li>action-exec-rules: judgment rule.</li>.
-<li>action-SmartErase: smart erasure.</li>.
+<li>input: start node.</li>
+<li>output: termination node.</li>
+<li>action-trans: transcoding.</li>
+<li>action-samplesnapshot: sampled screenshot taking.</li>
+<li>action-AIAnalysis: analysis</li>
+<li>action-AIRecognition: recognition.</li>
+<li>action-aiReview: review</li>
+<li>action-animated-graphics: animated image</li>
+<li>action-image-sprite: sprite sheet</li>
+<li>action-snapshotByTimeOffset: time point screenshot taking</li>
+<li>action-adaptive-substream: adaptive bitrate streaming.</li>
+<li>action-AIQualityControl: media quality inspection.</li>
+<li>action-SmartSubtitles: smart subtitle</li>
+<li>action-exec-rules: judgment rule</li>
+<li>action-SmartErase: intelligent removal.</li>
 
 
 
@@ -49,15 +49,14 @@ public class Activity extends AbstractModel {
     private String ActivityType;
 
     /**
-    * Rear node index array.
+    * Rear drive node index array
     */
     @SerializedName("ReardriveIndex")
     @Expose
     private Long [] ReardriveIndex;
 
     /**
-    * The parameters of a subtask.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("ActivityPara")
     @Expose
@@ -65,40 +64,40 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get Atomic task type.
-<li>input: starting node.</li>.
-<li>output: termination node.</li>.
-<li>action-trans: specifies transcoding.</li>.
-<li>action-samplesnapshot: specifies sampled screenshot taking.</li>.
-<li>action-AIAnalysis: analysis.</li>.
-<li>action-AIRecognition: recognition.</li>.
-<li>action-aiReview: specifies the review action.</li>.
-<li>action-animated-graphics: specifies the animated image.</li>.
-<li>action-image-sprite: specifies the sprite sheet.</li>.
-<li>action-snapshotByTimeOffset: specifies time point screenshot taking.</li>.
-<li>action-adaptive-substream: specifies the adaptive bitrate stream.</li>.
-<li>action-AIQualityControl: media quality inspection.</li>.
-<li>action-SmartSubtitles: smart subtitling.</li>.
-<li>action-exec-rules: judgment rule.</li>.
-<li>action-SmartErase: smart erasure.</li>.
+<li>input: start node.</li>
+<li>output: termination node.</li>
+<li>action-trans: transcoding.</li>
+<li>action-samplesnapshot: sampled screenshot taking.</li>
+<li>action-AIAnalysis: analysis</li>
+<li>action-AIRecognition: recognition.</li>
+<li>action-aiReview: review</li>
+<li>action-animated-graphics: animated image</li>
+<li>action-image-sprite: sprite sheet</li>
+<li>action-snapshotByTimeOffset: time point screenshot taking</li>
+<li>action-adaptive-substream: adaptive bitrate streaming.</li>
+<li>action-AIQualityControl: media quality inspection.</li>
+<li>action-SmartSubtitles: smart subtitle</li>
+<li>action-exec-rules: judgment rule</li>
+<li>action-SmartErase: intelligent removal.</li>
 
 
  
      * @return ActivityType Atomic task type.
-<li>input: starting node.</li>.
-<li>output: termination node.</li>.
-<li>action-trans: specifies transcoding.</li>.
-<li>action-samplesnapshot: specifies sampled screenshot taking.</li>.
-<li>action-AIAnalysis: analysis.</li>.
-<li>action-AIRecognition: recognition.</li>.
-<li>action-aiReview: specifies the review action.</li>.
-<li>action-animated-graphics: specifies the animated image.</li>.
-<li>action-image-sprite: specifies the sprite sheet.</li>.
-<li>action-snapshotByTimeOffset: specifies time point screenshot taking.</li>.
-<li>action-adaptive-substream: specifies the adaptive bitrate stream.</li>.
-<li>action-AIQualityControl: media quality inspection.</li>.
-<li>action-SmartSubtitles: smart subtitling.</li>.
-<li>action-exec-rules: judgment rule.</li>.
-<li>action-SmartErase: smart erasure.</li>.
+<li>input: start node.</li>
+<li>output: termination node.</li>
+<li>action-trans: transcoding.</li>
+<li>action-samplesnapshot: sampled screenshot taking.</li>
+<li>action-AIAnalysis: analysis</li>
+<li>action-AIRecognition: recognition.</li>
+<li>action-aiReview: review</li>
+<li>action-animated-graphics: animated image</li>
+<li>action-image-sprite: sprite sheet</li>
+<li>action-snapshotByTimeOffset: time point screenshot taking</li>
+<li>action-adaptive-substream: adaptive bitrate streaming.</li>
+<li>action-AIQualityControl: media quality inspection.</li>
+<li>action-SmartSubtitles: smart subtitle</li>
+<li>action-exec-rules: judgment rule</li>
+<li>action-SmartErase: intelligent removal.</li>
 
 
 
@@ -109,40 +108,40 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Atomic task type.
-<li>input: starting node.</li>.
-<li>output: termination node.</li>.
-<li>action-trans: specifies transcoding.</li>.
-<li>action-samplesnapshot: specifies sampled screenshot taking.</li>.
-<li>action-AIAnalysis: analysis.</li>.
-<li>action-AIRecognition: recognition.</li>.
-<li>action-aiReview: specifies the review action.</li>.
-<li>action-animated-graphics: specifies the animated image.</li>.
-<li>action-image-sprite: specifies the sprite sheet.</li>.
-<li>action-snapshotByTimeOffset: specifies time point screenshot taking.</li>.
-<li>action-adaptive-substream: specifies the adaptive bitrate stream.</li>.
-<li>action-AIQualityControl: media quality inspection.</li>.
-<li>action-SmartSubtitles: smart subtitling.</li>.
-<li>action-exec-rules: judgment rule.</li>.
-<li>action-SmartErase: smart erasure.</li>.
+<li>input: start node.</li>
+<li>output: termination node.</li>
+<li>action-trans: transcoding.</li>
+<li>action-samplesnapshot: sampled screenshot taking.</li>
+<li>action-AIAnalysis: analysis</li>
+<li>action-AIRecognition: recognition.</li>
+<li>action-aiReview: review</li>
+<li>action-animated-graphics: animated image</li>
+<li>action-image-sprite: sprite sheet</li>
+<li>action-snapshotByTimeOffset: time point screenshot taking</li>
+<li>action-adaptive-substream: adaptive bitrate streaming.</li>
+<li>action-AIQualityControl: media quality inspection.</li>
+<li>action-SmartSubtitles: smart subtitle</li>
+<li>action-exec-rules: judgment rule</li>
+<li>action-SmartErase: intelligent removal.</li>
 
 
 
      * @param ActivityType Atomic task type.
-<li>input: starting node.</li>.
-<li>output: termination node.</li>.
-<li>action-trans: specifies transcoding.</li>.
-<li>action-samplesnapshot: specifies sampled screenshot taking.</li>.
-<li>action-AIAnalysis: analysis.</li>.
-<li>action-AIRecognition: recognition.</li>.
-<li>action-aiReview: specifies the review action.</li>.
-<li>action-animated-graphics: specifies the animated image.</li>.
-<li>action-image-sprite: specifies the sprite sheet.</li>.
-<li>action-snapshotByTimeOffset: specifies time point screenshot taking.</li>.
-<li>action-adaptive-substream: specifies the adaptive bitrate stream.</li>.
-<li>action-AIQualityControl: media quality inspection.</li>.
-<li>action-SmartSubtitles: smart subtitling.</li>.
-<li>action-exec-rules: judgment rule.</li>.
-<li>action-SmartErase: smart erasure.</li>.
+<li>input: start node.</li>
+<li>output: termination node.</li>
+<li>action-trans: transcoding.</li>
+<li>action-samplesnapshot: sampled screenshot taking.</li>
+<li>action-AIAnalysis: analysis</li>
+<li>action-AIRecognition: recognition.</li>
+<li>action-aiReview: review</li>
+<li>action-animated-graphics: animated image</li>
+<li>action-image-sprite: sprite sheet</li>
+<li>action-snapshotByTimeOffset: time point screenshot taking</li>
+<li>action-adaptive-substream: adaptive bitrate streaming.</li>
+<li>action-AIQualityControl: media quality inspection.</li>
+<li>action-SmartSubtitles: smart subtitle</li>
+<li>action-exec-rules: judgment rule</li>
+<li>action-SmartErase: intelligent removal.</li>
 
 
 
@@ -152,36 +151,32 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Rear node index array. 
-     * @return ReardriveIndex Rear node index array.
+     * Get Rear drive node index array 
+     * @return ReardriveIndex Rear drive node index array
      */
     public Long [] getReardriveIndex() {
         return this.ReardriveIndex;
     }
 
     /**
-     * Set Rear node index array.
-     * @param ReardriveIndex Rear node index array.
+     * Set Rear drive node index array
+     * @param ReardriveIndex Rear drive node index array
      */
     public void setReardriveIndex(Long [] ReardriveIndex) {
         this.ReardriveIndex = ReardriveIndex;
     }
 
     /**
-     * Get The parameters of a subtask.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ActivityPara The parameters of a subtask.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return ActivityPara 
      */
     public ActivityPara getActivityPara() {
         return this.ActivityPara;
     }
 
     /**
-     * Set The parameters of a subtask.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ActivityPara The parameters of a subtask.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param ActivityPara 
      */
     public void setActivityPara(ActivityPara ActivityPara) {
         this.ActivityPara = ActivityPara;

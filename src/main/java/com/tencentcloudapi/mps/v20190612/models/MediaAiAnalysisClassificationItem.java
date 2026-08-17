@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class MediaAiAnalysisClassificationItem extends AbstractModel {
 
     /**
-    * Name of intelligently generated category.
+    * Category name for intelligent classification.
     */
     @SerializedName("Classification")
     @Expose
     private String Classification;
 
     /**
-    * Confidence of intelligently generated category between 0 and 100.
+    * Reliability of intelligent classification, with a value range from 0 to 100.
     */
     @SerializedName("Confidence")
     @Expose
     private Float Confidence;
 
     /**
-     * Get Name of intelligently generated category. 
-     * @return Classification Name of intelligently generated category.
+     * Get Category name for intelligent classification. 
+     * @return Classification Category name for intelligent classification.
      */
     public String getClassification() {
         return this.Classification;
     }
 
     /**
-     * Set Name of intelligently generated category.
-     * @param Classification Name of intelligently generated category.
+     * Set Category name for intelligent classification.
+     * @param Classification Category name for intelligent classification.
      */
     public void setClassification(String Classification) {
         this.Classification = Classification;
     }
 
     /**
-     * Get Confidence of intelligently generated category between 0 and 100. 
-     * @return Confidence Confidence of intelligently generated category between 0 and 100.
+     * Get Reliability of intelligent classification, with a value range from 0 to 100. 
+     * @return Confidence Reliability of intelligent classification, with a value range from 0 to 100.
      */
     public Float getConfidence() {
         return this.Confidence;
     }
 
     /**
-     * Set Confidence of intelligently generated category between 0 and 100.
-     * @param Confidence Confidence of intelligently generated category between 0 and 100.
+     * Set Reliability of intelligent classification, with a value range from 0 to 100.
+     * @param Confidence Reliability of intelligent classification, with a value range from 0 to 100.
      */
     public void setConfidence(Float Confidence) {
         this.Confidence = Confidence;

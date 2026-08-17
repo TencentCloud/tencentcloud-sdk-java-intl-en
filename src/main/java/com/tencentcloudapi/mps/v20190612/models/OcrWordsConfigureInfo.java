@@ -24,61 +24,61 @@ import java.util.HashMap;
 public class OcrWordsConfigureInfo extends AbstractModel {
 
     /**
-    * Switch of a text keyword recognition task. Valid values:
-<li>ON: Enables a text keyword recognition task;</li>
-<li>OFF: Disables a text keyword recognition task.</li>
+    * Task switch for text keyword recognition, available values:
+<li>ON: Enable text keyword recognition task;</li>
+<li>OFF: Disables the text keyword recognition task.</li>
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-    * Keyword filter tag, which specifies the keyword tag that needs to be returned. If this parameter is left empty, all results will be returned.
-There can be up to 10 tags, each with a length limit of 16 characters.
+    * Keyword-based filtering tag, specify the tag of the keyword to return. If left blank or empty, all results are returned.
+The number of tags is up to 10, and each tag can have up to 16 characters.
     */
     @SerializedName("LabelSet")
     @Expose
     private String [] LabelSet;
 
     /**
-     * Get Switch of a text keyword recognition task. Valid values:
-<li>ON: Enables a text keyword recognition task;</li>
-<li>OFF: Disables a text keyword recognition task.</li> 
-     * @return Switch Switch of a text keyword recognition task. Valid values:
-<li>ON: Enables a text keyword recognition task;</li>
-<li>OFF: Disables a text keyword recognition task.</li>
+     * Get Task switch for text keyword recognition, available values:
+<li>ON: Enable text keyword recognition task;</li>
+<li>OFF: Disables the text keyword recognition task.</li> 
+     * @return Switch Task switch for text keyword recognition, available values:
+<li>ON: Enable text keyword recognition task;</li>
+<li>OFF: Disables the text keyword recognition task.</li>
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set Switch of a text keyword recognition task. Valid values:
-<li>ON: Enables a text keyword recognition task;</li>
-<li>OFF: Disables a text keyword recognition task.</li>
-     * @param Switch Switch of a text keyword recognition task. Valid values:
-<li>ON: Enables a text keyword recognition task;</li>
-<li>OFF: Disables a text keyword recognition task.</li>
+     * Set Task switch for text keyword recognition, available values:
+<li>ON: Enable text keyword recognition task;</li>
+<li>OFF: Disables the text keyword recognition task.</li>
+     * @param Switch Task switch for text keyword recognition, available values:
+<li>ON: Enable text keyword recognition task;</li>
+<li>OFF: Disables the text keyword recognition task.</li>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
     }
 
     /**
-     * Get Keyword filter tag, which specifies the keyword tag that needs to be returned. If this parameter is left empty, all results will be returned.
-There can be up to 10 tags, each with a length limit of 16 characters. 
-     * @return LabelSet Keyword filter tag, which specifies the keyword tag that needs to be returned. If this parameter is left empty, all results will be returned.
-There can be up to 10 tags, each with a length limit of 16 characters.
+     * Get Keyword-based filtering tag, specify the tag of the keyword to return. If left blank or empty, all results are returned.
+The number of tags is up to 10, and each tag can have up to 16 characters. 
+     * @return LabelSet Keyword-based filtering tag, specify the tag of the keyword to return. If left blank or empty, all results are returned.
+The number of tags is up to 10, and each tag can have up to 16 characters.
      */
     public String [] getLabelSet() {
         return this.LabelSet;
     }
 
     /**
-     * Set Keyword filter tag, which specifies the keyword tag that needs to be returned. If this parameter is left empty, all results will be returned.
-There can be up to 10 tags, each with a length limit of 16 characters.
-     * @param LabelSet Keyword filter tag, which specifies the keyword tag that needs to be returned. If this parameter is left empty, all results will be returned.
-There can be up to 10 tags, each with a length limit of 16 characters.
+     * Set Keyword-based filtering tag, specify the tag of the keyword to return. If left blank or empty, all results are returned.
+The number of tags is up to 10, and each tag can have up to 16 characters.
+     * @param LabelSet Keyword-based filtering tag, specify the tag of the keyword to return. If left blank or empty, all results are returned.
+The number of tags is up to 10, and each tag can have up to 16 characters.
      */
     public void setLabelSet(String [] LabelSet) {
         this.LabelSet = LabelSet;

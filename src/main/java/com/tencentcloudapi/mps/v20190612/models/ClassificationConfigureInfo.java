@@ -24,33 +24,33 @@ import java.util.HashMap;
 public class ClassificationConfigureInfo extends AbstractModel {
 
     /**
-    * Switch of intelligent categorization task. Valid values:
-<li>ON: enables intelligent categorization task;</li>
-<li>OFF: disables intelligent categorization task.</li>
+    * Intelligent classification task switch.
+<li>ON: Turn on intelligent classification.</li>
+<li>OFF: Disables the intelligent classification task.</li>
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-     * Get Switch of intelligent categorization task. Valid values:
-<li>ON: enables intelligent categorization task;</li>
-<li>OFF: disables intelligent categorization task.</li> 
-     * @return Switch Switch of intelligent categorization task. Valid values:
-<li>ON: enables intelligent categorization task;</li>
-<li>OFF: disables intelligent categorization task.</li>
+     * Get Intelligent classification task switch.
+<li>ON: Turn on intelligent classification.</li>
+<li>OFF: Disables the intelligent classification task.</li> 
+     * @return Switch Intelligent classification task switch.
+<li>ON: Turn on intelligent classification.</li>
+<li>OFF: Disables the intelligent classification task.</li>
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set Switch of intelligent categorization task. Valid values:
-<li>ON: enables intelligent categorization task;</li>
-<li>OFF: disables intelligent categorization task.</li>
-     * @param Switch Switch of intelligent categorization task. Valid values:
-<li>ON: enables intelligent categorization task;</li>
-<li>OFF: disables intelligent categorization task.</li>
+     * Set Intelligent classification task switch.
+<li>ON: Turn on intelligent classification.</li>
+<li>OFF: Disables the intelligent classification task.</li>
+     * @param Switch Intelligent classification task switch.
+<li>ON: Turn on intelligent classification.</li>
+<li>OFF: Disables the intelligent classification task.</li>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;

@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class LiveStreamAiReviewResultInfo extends AbstractModel {
 
     /**
-    * List of content audit results.
+    * Content moderation result list.
     */
     @SerializedName("ResultSet")
     @Expose
     private LiveStreamAiReviewResultItem [] ResultSet;
 
     /**
-     * Get List of content audit results. 
-     * @return ResultSet List of content audit results.
+     * Get Content moderation result list. 
+     * @return ResultSet Content moderation result list.
      */
     public LiveStreamAiReviewResultItem [] getResultSet() {
         return this.ResultSet;
     }
 
     /**
-     * Set List of content audit results.
-     * @param ResultSet List of content audit results.
+     * Set Content moderation result list.
+     * @param ResultSet Content moderation result list.
      */
     public void setResultSet(LiveStreamAiReviewResultItem [] ResultSet) {
         this.ResultSet = ResultSet;

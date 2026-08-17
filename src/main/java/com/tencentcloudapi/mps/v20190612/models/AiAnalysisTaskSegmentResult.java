@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class AiAnalysisTaskSegmentResult extends AbstractModel {
 
     /**
-    * Task status, including PROCESSING, SUCCESS, and FAIL.
+    * Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * Error code. `0`: Task successful. Other values: Task failed.
+    * Error code. 0: Task successful. Other values: Task failed.
     */
     @SerializedName("ErrCode")
     @Expose
@@ -52,39 +52,39 @@ public class AiAnalysisTaskSegmentResult extends AbstractModel {
     private AiAnalysisTaskSegmentInput Input;
 
     /**
-    * Splitting task output.Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("Output")
     @Expose
     private AiAnalysisTaskSegmentOutput Output;
 
     /**
-     * Get Task status, including PROCESSING, SUCCESS, and FAIL. 
-     * @return Status Task status, including PROCESSING, SUCCESS, and FAIL.
+     * Get Task status. Valid values are PROCESSING, SUCCESS, and FAIL. 
+     * @return Status Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Task status, including PROCESSING, SUCCESS, and FAIL.
-     * @param Status Task status, including PROCESSING, SUCCESS, and FAIL.
+     * Set Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
+     * @param Status Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get Error code. `0`: Task successful. Other values: Task failed. 
-     * @return ErrCode Error code. `0`: Task successful. Other values: Task failed.
+     * Get Error code. 0: Task successful. Other values: Task failed. 
+     * @return ErrCode Error code. 0: Task successful. Other values: Task failed.
      */
     public Long getErrCode() {
         return this.ErrCode;
     }
 
     /**
-     * Set Error code. `0`: Task successful. Other values: Task failed.
-     * @param ErrCode Error code. `0`: Task successful. Other values: Task failed.
+     * Set Error code. 0: Task successful. Other values: Task failed.
+     * @param ErrCode Error code. 0: Task successful. Other values: Task failed.
      */
     public void setErrCode(Long ErrCode) {
         this.ErrCode = ErrCode;
@@ -123,16 +123,16 @@ public class AiAnalysisTaskSegmentResult extends AbstractModel {
     }
 
     /**
-     * Get Splitting task output.Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Output Splitting task output.Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return Output 
      */
     public AiAnalysisTaskSegmentOutput getOutput() {
         return this.Output;
     }
 
     /**
-     * Set Splitting task output.Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Output Splitting task output.Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param Output 
      */
     public void setOutput(AiAnalysisTaskSegmentOutput Output) {
         this.Output = Output;

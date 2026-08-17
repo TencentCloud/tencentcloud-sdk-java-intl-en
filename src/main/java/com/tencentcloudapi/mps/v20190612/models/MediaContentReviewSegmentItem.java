@@ -24,35 +24,35 @@ import java.util.HashMap;
 public class MediaContentReviewSegmentItem extends AbstractModel {
 
     /**
-    * Start time offset of a suspected segment in seconds.
+    * Start time offset of a suspected segment, in seconds.
     */
     @SerializedName("StartTimeOffset")
     @Expose
     private Float StartTimeOffset;
 
     /**
-    * End time offset of a suspected segment in seconds.
+    * End time offset of a suspected segment, in seconds.
     */
     @SerializedName("EndTimeOffset")
     @Expose
     private Float EndTimeOffset;
 
     /**
-    * Score of a suspected porn segment.
+    * Suspected segment porn score.
     */
     @SerializedName("Confidence")
     @Expose
     private Float Confidence;
 
     /**
-    * Tag of porn information detection result of a suspected segment.
+    * Tag of the pornographic result for the suspected segment.
     */
     @SerializedName("Label")
     @Expose
     private String Label;
 
     /**
-    * Suggestion for porn information detection of a suspected segment. Valid values:
+    * Pornographic result suggestion for suspected segment, value ranges from...to...
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
@@ -62,90 +62,90 @@ public class MediaContentReviewSegmentItem extends AbstractModel {
     private String Suggestion;
 
     /**
-    * URL of a suspected image (which will not be permanently stored
- and will be deleted after `PicUrlExpireTime`).
+    * Suspected image URL (Images are not retained permanently upon arrival)
+The image will be deleted after the PicUrlExpireTime time point.
     */
     @SerializedName("Url")
     @Expose
     private String Url;
 
     /**
-    * Expiration time of a suspected image URL in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
+    * Expiration time of the suspected image URL, using the ISO date format (https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
     */
     @SerializedName("PicUrlExpireTime")
     @Expose
     private String PicUrlExpireTime;
 
     /**
-     * Get Start time offset of a suspected segment in seconds. 
-     * @return StartTimeOffset Start time offset of a suspected segment in seconds.
+     * Get Start time offset of a suspected segment, in seconds. 
+     * @return StartTimeOffset Start time offset of a suspected segment, in seconds.
      */
     public Float getStartTimeOffset() {
         return this.StartTimeOffset;
     }
 
     /**
-     * Set Start time offset of a suspected segment in seconds.
-     * @param StartTimeOffset Start time offset of a suspected segment in seconds.
+     * Set Start time offset of a suspected segment, in seconds.
+     * @param StartTimeOffset Start time offset of a suspected segment, in seconds.
      */
     public void setStartTimeOffset(Float StartTimeOffset) {
         this.StartTimeOffset = StartTimeOffset;
     }
 
     /**
-     * Get End time offset of a suspected segment in seconds. 
-     * @return EndTimeOffset End time offset of a suspected segment in seconds.
+     * Get End time offset of a suspected segment, in seconds. 
+     * @return EndTimeOffset End time offset of a suspected segment, in seconds.
      */
     public Float getEndTimeOffset() {
         return this.EndTimeOffset;
     }
 
     /**
-     * Set End time offset of a suspected segment in seconds.
-     * @param EndTimeOffset End time offset of a suspected segment in seconds.
+     * Set End time offset of a suspected segment, in seconds.
+     * @param EndTimeOffset End time offset of a suspected segment, in seconds.
      */
     public void setEndTimeOffset(Float EndTimeOffset) {
         this.EndTimeOffset = EndTimeOffset;
     }
 
     /**
-     * Get Score of a suspected porn segment. 
-     * @return Confidence Score of a suspected porn segment.
+     * Get Suspected segment porn score. 
+     * @return Confidence Suspected segment porn score.
      */
     public Float getConfidence() {
         return this.Confidence;
     }
 
     /**
-     * Set Score of a suspected porn segment.
-     * @param Confidence Score of a suspected porn segment.
+     * Set Suspected segment porn score.
+     * @param Confidence Suspected segment porn score.
      */
     public void setConfidence(Float Confidence) {
         this.Confidence = Confidence;
     }
 
     /**
-     * Get Tag of porn information detection result of a suspected segment. 
-     * @return Label Tag of porn information detection result of a suspected segment.
+     * Get Tag of the pornographic result for the suspected segment. 
+     * @return Label Tag of the pornographic result for the suspected segment.
      */
     public String getLabel() {
         return this.Label;
     }
 
     /**
-     * Set Tag of porn information detection result of a suspected segment.
-     * @param Label Tag of porn information detection result of a suspected segment.
+     * Set Tag of the pornographic result for the suspected segment.
+     * @param Label Tag of the pornographic result for the suspected segment.
      */
     public void setLabel(String Label) {
         this.Label = Label;
     }
 
     /**
-     * Get Suggestion for porn information detection of a suspected segment. Valid values:
+     * Get Pornographic result suggestion for suspected segment, value ranges from...to...
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li> 
-     * @return Suggestion Suggestion for porn information detection of a suspected segment. Valid values:
+     * @return Suggestion Pornographic result suggestion for suspected segment, value ranges from...to...
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
@@ -155,11 +155,11 @@ public class MediaContentReviewSegmentItem extends AbstractModel {
     }
 
     /**
-     * Set Suggestion for porn information detection of a suspected segment. Valid values:
+     * Set Pornographic result suggestion for suspected segment, value ranges from...to...
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
-     * @param Suggestion Suggestion for porn information detection of a suspected segment. Valid values:
+     * @param Suggestion Pornographic result suggestion for suspected segment, value ranges from...to...
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
@@ -169,36 +169,36 @@ public class MediaContentReviewSegmentItem extends AbstractModel {
     }
 
     /**
-     * Get URL of a suspected image (which will not be permanently stored
- and will be deleted after `PicUrlExpireTime`). 
-     * @return Url URL of a suspected image (which will not be permanently stored
- and will be deleted after `PicUrlExpireTime`).
+     * Get Suspected image URL (Images are not retained permanently upon arrival)
+The image will be deleted after the PicUrlExpireTime time point. 
+     * @return Url Suspected image URL (Images are not retained permanently upon arrival)
+The image will be deleted after the PicUrlExpireTime time point.
      */
     public String getUrl() {
         return this.Url;
     }
 
     /**
-     * Set URL of a suspected image (which will not be permanently stored
- and will be deleted after `PicUrlExpireTime`).
-     * @param Url URL of a suspected image (which will not be permanently stored
- and will be deleted after `PicUrlExpireTime`).
+     * Set Suspected image URL (Images are not retained permanently upon arrival)
+The image will be deleted after the PicUrlExpireTime time point.
+     * @param Url Suspected image URL (Images are not retained permanently upon arrival)
+The image will be deleted after the PicUrlExpireTime time point.
      */
     public void setUrl(String Url) {
         this.Url = Url;
     }
 
     /**
-     * Get Expiration time of a suspected image URL in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F). 
-     * @return PicUrlExpireTime Expiration time of a suspected image URL in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
+     * Get Expiration time of the suspected image URL, using the ISO date format (https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52). 
+     * @return PicUrlExpireTime Expiration time of the suspected image URL, using the ISO date format (https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
      */
     public String getPicUrlExpireTime() {
         return this.PicUrlExpireTime;
     }
 
     /**
-     * Set Expiration time of a suspected image URL in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
-     * @param PicUrlExpireTime Expiration time of a suspected image URL in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
+     * Set Expiration time of the suspected image URL, using the ISO date format (https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
+     * @param PicUrlExpireTime Expiration time of the suspected image URL, using the ISO date format (https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
      */
     public void setPicUrlExpireTime(String PicUrlExpireTime) {
         this.PicUrlExpireTime = PicUrlExpireTime;

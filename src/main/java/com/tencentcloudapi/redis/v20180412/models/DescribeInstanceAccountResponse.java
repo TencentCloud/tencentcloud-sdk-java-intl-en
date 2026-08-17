@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeInstanceAccountResponse extends AbstractModel {
 
     /**
-    * Account details.
+    * <p>Account detailed information.</p>
     */
     @SerializedName("Accounts")
     @Expose
     private Account [] Accounts;
 
     /**
-    * Number of accounts.
+    * <p>Account count.</p>
     */
     @SerializedName("TotalCount")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeInstanceAccountResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Account details. 
-     * @return Accounts Account details.
+     * Get <p>Account detailed information.</p> 
+     * @return Accounts <p>Account detailed information.</p>
      */
     public Account [] getAccounts() {
         return this.Accounts;
     }
 
     /**
-     * Set Account details.
-     * @param Accounts Account details.
+     * Set <p>Account detailed information.</p>
+     * @param Accounts <p>Account detailed information.</p>
      */
     public void setAccounts(Account [] Accounts) {
         this.Accounts = Accounts;
     }
 
     /**
-     * Get Number of accounts. 
-     * @return TotalCount Number of accounts.
+     * Get <p>Account count.</p> 
+     * @return TotalCount <p>Account count.</p>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set Number of accounts.
-     * @param TotalCount Number of accounts.
+     * Set <p>Account count.</p>
+     * @param TotalCount <p>Account count.</p>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

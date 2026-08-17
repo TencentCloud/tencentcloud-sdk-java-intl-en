@@ -31,8 +31,7 @@ public class AiAnalysisTaskSegmentOutput extends AbstractModel {
     private SegmentRecognitionItem [] SegmentSet;
 
     /**
-    * Video abstract, used for offline scenarios.
-Note: This field may return null, indicating that no valid value can be obtained.
+    * 
     */
     @SerializedName("Abstract")
     @Expose
@@ -55,20 +54,16 @@ Note: This field may return null, indicating that no valid value can be obtained
     }
 
     /**
-     * Get Video abstract, used for offline scenarios.
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return Abstract Video abstract, used for offline scenarios.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get  
+     * @return Abstract 
      */
     public String getAbstract() {
         return this.Abstract;
     }
 
     /**
-     * Set Video abstract, used for offline scenarios.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param Abstract Video abstract, used for offline scenarios.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set 
+     * @param Abstract 
      */
     public void setAbstract(String Abstract) {
         this.Abstract = Abstract;

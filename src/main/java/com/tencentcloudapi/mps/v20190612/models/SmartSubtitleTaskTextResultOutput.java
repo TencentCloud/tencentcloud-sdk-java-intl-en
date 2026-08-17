@@ -24,112 +24,92 @@ import java.util.HashMap;
 public class SmartSubtitleTaskTextResultOutput extends AbstractModel {
 
     /**
-    * <p>List of segments for smart subtitle recognition.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("SegmentSet")
     @Expose
     private SmartSubtitleTaskFullTextSegmentItem [] SegmentSet;
 
     /**
-    * <p>Subtitle recognition result</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("RecognizeSubtitleResult")
     @Expose
     private SubtitleResult [] RecognizeSubtitleResult;
 
     /**
-    * <p>Translated subtitles</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("TransSubtitleResult")
     @Expose
     private SubtitleResult [] TransSubtitleResult;
 
     /**
-    * <p>Storage location of the subtitle file</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("OutputStorage")
     @Expose
     private TaskOutputStorage OutputStorage;
 
     /**
-     * Get <p>List of segments for smart subtitle recognition.</p>
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return SegmentSet <p>List of segments for smart subtitle recognition.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return SegmentSet 
      */
     public SmartSubtitleTaskFullTextSegmentItem [] getSegmentSet() {
         return this.SegmentSet;
     }
 
     /**
-     * Set <p>List of segments for smart subtitle recognition.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param SegmentSet <p>List of segments for smart subtitle recognition.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param SegmentSet 
      */
     public void setSegmentSet(SmartSubtitleTaskFullTextSegmentItem [] SegmentSet) {
         this.SegmentSet = SegmentSet;
     }
 
     /**
-     * Get <p>Subtitle recognition result</p>
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return RecognizeSubtitleResult <p>Subtitle recognition result</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return RecognizeSubtitleResult 
      */
     public SubtitleResult [] getRecognizeSubtitleResult() {
         return this.RecognizeSubtitleResult;
     }
 
     /**
-     * Set <p>Subtitle recognition result</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param RecognizeSubtitleResult <p>Subtitle recognition result</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param RecognizeSubtitleResult 
      */
     public void setRecognizeSubtitleResult(SubtitleResult [] RecognizeSubtitleResult) {
         this.RecognizeSubtitleResult = RecognizeSubtitleResult;
     }
 
     /**
-     * Get <p>Translated subtitles</p>
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return TransSubtitleResult <p>Translated subtitles</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return TransSubtitleResult 
      */
     public SubtitleResult [] getTransSubtitleResult() {
         return this.TransSubtitleResult;
     }
 
     /**
-     * Set <p>Translated subtitles</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param TransSubtitleResult <p>Translated subtitles</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param TransSubtitleResult 
      */
     public void setTransSubtitleResult(SubtitleResult [] TransSubtitleResult) {
         this.TransSubtitleResult = TransSubtitleResult;
     }
 
     /**
-     * Get <p>Storage location of the subtitle file</p>
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return OutputStorage <p>Storage location of the subtitle file</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return OutputStorage 
      */
     public TaskOutputStorage getOutputStorage() {
         return this.OutputStorage;
     }
 
     /**
-     * Set <p>Storage location of the subtitle file</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param OutputStorage <p>Storage location of the subtitle file</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param OutputStorage 
      */
     public void setOutputStorage(TaskOutputStorage OutputStorage) {
         this.OutputStorage = OutputStorage;

@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class MediaAiAnalysisCoverItem extends AbstractModel {
 
     /**
-    * Storage path of intelligently generated cover.
+    * Intelligent cover storage path.
     */
     @SerializedName("CoverPath")
     @Expose
     private String CoverPath;
 
     /**
-    * Confidence of intelligently generated cover between 0 and 100.
+    * Reliability of the intelligent cover, with a value range from 0 to -100.
     */
     @SerializedName("Confidence")
     @Expose
     private Float Confidence;
 
     /**
-     * Get Storage path of intelligently generated cover. 
-     * @return CoverPath Storage path of intelligently generated cover.
+     * Get Intelligent cover storage path. 
+     * @return CoverPath Intelligent cover storage path.
      */
     public String getCoverPath() {
         return this.CoverPath;
     }
 
     /**
-     * Set Storage path of intelligently generated cover.
-     * @param CoverPath Storage path of intelligently generated cover.
+     * Set Intelligent cover storage path.
+     * @param CoverPath Intelligent cover storage path.
      */
     public void setCoverPath(String CoverPath) {
         this.CoverPath = CoverPath;
     }
 
     /**
-     * Get Confidence of intelligently generated cover between 0 and 100. 
-     * @return Confidence Confidence of intelligently generated cover between 0 and 100.
+     * Get Reliability of the intelligent cover, with a value range from 0 to -100. 
+     * @return Confidence Reliability of the intelligent cover, with a value range from 0 to -100.
      */
     public Float getConfidence() {
         return this.Confidence;
     }
 
     /**
-     * Set Confidence of intelligently generated cover between 0 and 100.
-     * @param Confidence Confidence of intelligently generated cover between 0 and 100.
+     * Set Reliability of the intelligent cover, with a value range from 0 to -100.
+     * @param Confidence Reliability of the intelligent cover, with a value range from 0 to -100.
      */
     public void setConfidence(Float Confidence) {
         this.Confidence = Confidence;

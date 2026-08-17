@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class AiReviewProhibitedAsrTaskOutput extends AbstractModel {
 
     /**
-    * Score of ASR-detected prohibited information in speech between 0 and 100.
+    * Asr text involves prohibited content scoring, with a score ranging from 0 to 100.
     */
     @SerializedName("Confidence")
     @Expose
     private Float Confidence;
 
     /**
-    * Suggestion for ASR-detected prohibited information in speech. Valid values:
+    * Asr text prohibited result suggestion, value ranges from...to...
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
@@ -41,34 +41,34 @@ public class AiReviewProhibitedAsrTaskOutput extends AbstractModel {
     private String Suggestion;
 
     /**
-    * List of video segments that contain the ASR-detected prohibited information in speech.
+    * Video segment list with Asr text suspected of prohibition violations.
     */
     @SerializedName("SegmentSet")
     @Expose
     private MediaContentReviewAsrTextSegmentItem [] SegmentSet;
 
     /**
-     * Get Score of ASR-detected prohibited information in speech between 0 and 100. 
-     * @return Confidence Score of ASR-detected prohibited information in speech between 0 and 100.
+     * Get Asr text involves prohibited content scoring, with a score ranging from 0 to 100. 
+     * @return Confidence Asr text involves prohibited content scoring, with a score ranging from 0 to 100.
      */
     public Float getConfidence() {
         return this.Confidence;
     }
 
     /**
-     * Set Score of ASR-detected prohibited information in speech between 0 and 100.
-     * @param Confidence Score of ASR-detected prohibited information in speech between 0 and 100.
+     * Set Asr text involves prohibited content scoring, with a score ranging from 0 to 100.
+     * @param Confidence Asr text involves prohibited content scoring, with a score ranging from 0 to 100.
      */
     public void setConfidence(Float Confidence) {
         this.Confidence = Confidence;
     }
 
     /**
-     * Get Suggestion for ASR-detected prohibited information in speech. Valid values:
+     * Get Asr text prohibited result suggestion, value ranges from...to...
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li> 
-     * @return Suggestion Suggestion for ASR-detected prohibited information in speech. Valid values:
+     * @return Suggestion Asr text prohibited result suggestion, value ranges from...to...
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
@@ -78,11 +78,11 @@ public class AiReviewProhibitedAsrTaskOutput extends AbstractModel {
     }
 
     /**
-     * Set Suggestion for ASR-detected prohibited information in speech. Valid values:
+     * Set Asr text prohibited result suggestion, value ranges from...to...
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
-     * @param Suggestion Suggestion for ASR-detected prohibited information in speech. Valid values:
+     * @param Suggestion Asr text prohibited result suggestion, value ranges from...to...
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
@@ -92,16 +92,16 @@ public class AiReviewProhibitedAsrTaskOutput extends AbstractModel {
     }
 
     /**
-     * Get List of video segments that contain the ASR-detected prohibited information in speech. 
-     * @return SegmentSet List of video segments that contain the ASR-detected prohibited information in speech.
+     * Get Video segment list with Asr text suspected of prohibition violations. 
+     * @return SegmentSet Video segment list with Asr text suspected of prohibition violations.
      */
     public MediaContentReviewAsrTextSegmentItem [] getSegmentSet() {
         return this.SegmentSet;
     }
 
     /**
-     * Set List of video segments that contain the ASR-detected prohibited information in speech.
-     * @param SegmentSet List of video segments that contain the ASR-detected prohibited information in speech.
+     * Set Video segment list with Asr text suspected of prohibition violations.
+     * @param SegmentSet Video segment list with Asr text suspected of prohibition violations.
      */
     public void setSegmentSet(MediaContentReviewAsrTextSegmentItem [] SegmentSet) {
         this.SegmentSet = SegmentSet;

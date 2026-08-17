@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class AiAnalysisTaskTagOutput extends AbstractModel {
 
     /**
-    * List of intelligently generated video tags.
+    * Video intelligent tag list.
     */
     @SerializedName("TagSet")
     @Expose
     private MediaAiAnalysisTagItem [] TagSet;
 
     /**
-     * Get List of intelligently generated video tags. 
-     * @return TagSet List of intelligently generated video tags.
+     * Get Video intelligent tag list. 
+     * @return TagSet Video intelligent tag list.
      */
     public MediaAiAnalysisTagItem [] getTagSet() {
         return this.TagSet;
     }
 
     /**
-     * Set List of intelligently generated video tags.
-     * @param TagSet List of intelligently generated video tags.
+     * Set Video intelligent tag list.
+     * @param TagSet Video intelligent tag list.
      */
     public void setTagSet(MediaAiAnalysisTagItem [] TagSet) {
         this.TagSet = TagSet;

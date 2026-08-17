@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeParamTemplatesResponse extends AbstractModel {
 
     /**
-    * Number of parameter templates of the user.
+    * <p>Number of parameter templates for this user.</p>
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * Parameter template details.
+    * <p>Parameter template details.</p>
     */
     @SerializedName("Items")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeParamTemplatesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Number of parameter templates of the user. 
-     * @return TotalCount Number of parameter templates of the user.
+     * Get <p>Number of parameter templates for this user.</p> 
+     * @return TotalCount <p>Number of parameter templates for this user.</p>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set Number of parameter templates of the user.
-     * @param TotalCount Number of parameter templates of the user.
+     * Set <p>Number of parameter templates for this user.</p>
+     * @param TotalCount <p>Number of parameter templates for this user.</p>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get Parameter template details. 
-     * @return Items Parameter template details.
+     * Get <p>Parameter template details.</p> 
+     * @return Items <p>Parameter template details.</p>
      */
     public ParamTemplateInfo [] getItems() {
         return this.Items;
     }
 
     /**
-     * Set Parameter template details.
-     * @param Items Parameter template details.
+     * Set <p>Parameter template details.</p>
+     * @param Items <p>Parameter template details.</p>
      */
     public void setItems(ParamTemplateInfo [] Items) {
         this.Items = Items;

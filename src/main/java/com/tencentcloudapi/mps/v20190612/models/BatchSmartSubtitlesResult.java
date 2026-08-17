@@ -24,56 +24,46 @@ import java.util.HashMap;
 public class BatchSmartSubtitlesResult extends AbstractModel {
 
     /**
-    * Input information for smart subtitle tasks.
-Note: This field may return null, indicating that no valid value can be obtained.
+    * 
     */
     @SerializedName("Input")
     @Expose
     private SmartSubtitleTaskResultInput Input;
 
     /**
-    * Output information for smart subtitle tasks.
-Note: This field may return null, indicating that no valid value can be obtained.
+    * 
     */
     @SerializedName("Outputs")
     @Expose
     private SmartSubtitleTaskBatchOutput [] Outputs;
 
     /**
-     * Get Input information for smart subtitle tasks.
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return Input Input information for smart subtitle tasks.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get  
+     * @return Input 
      */
     public SmartSubtitleTaskResultInput getInput() {
         return this.Input;
     }
 
     /**
-     * Set Input information for smart subtitle tasks.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param Input Input information for smart subtitle tasks.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set 
+     * @param Input 
      */
     public void setInput(SmartSubtitleTaskResultInput Input) {
         this.Input = Input;
     }
 
     /**
-     * Get Output information for smart subtitle tasks.
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return Outputs Output information for smart subtitle tasks.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get  
+     * @return Outputs 
      */
     public SmartSubtitleTaskBatchOutput [] getOutputs() {
         return this.Outputs;
     }
 
     /**
-     * Set Output information for smart subtitle tasks.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param Outputs Output information for smart subtitle tasks.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set 
+     * @param Outputs 
      */
     public void setOutputs(SmartSubtitleTaskBatchOutput [] Outputs) {
         this.Outputs = Outputs;

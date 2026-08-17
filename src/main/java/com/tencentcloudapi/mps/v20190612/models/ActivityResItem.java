@@ -24,364 +24,299 @@ import java.util.HashMap;
 public class ActivityResItem extends AbstractModel {
 
     /**
-    * The result of a transcoding task.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("TranscodeTask")
     @Expose
     private MediaProcessTaskTranscodeResult TranscodeTask;
 
     /**
-    * The result of an animated image generating task.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("AnimatedGraphicTask")
     @Expose
     private MediaProcessTaskAnimatedGraphicResult AnimatedGraphicTask;
 
     /**
-    * The result of a time point screenshot task.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("SnapshotByTimeOffsetTask")
     @Expose
     private MediaProcessTaskSnapshotByTimeOffsetResult SnapshotByTimeOffsetTask;
 
     /**
-    * The result of a sampled screenshot task.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("SampleSnapshotTask")
     @Expose
     private MediaProcessTaskSampleSnapshotResult SampleSnapshotTask;
 
     /**
-    * The result of an image sprite task.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("ImageSpriteTask")
     @Expose
     private MediaProcessTaskImageSpriteResult ImageSpriteTask;
 
     /**
-    * The result of an adaptive bitrate streaming task.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("AdaptiveDynamicStreamingTask")
     @Expose
     private MediaProcessTaskAdaptiveDynamicStreamingResult AdaptiveDynamicStreamingTask;
 
     /**
-    * The result of a content recognition task.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("RecognitionTask")
     @Expose
     private ScheduleRecognitionTaskResult RecognitionTask;
 
     /**
-    * The result of a content moderation task.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("ReviewTask")
     @Expose
     private ScheduleReviewTaskResult ReviewTask;
 
     /**
-    * The result of a content analysis task.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("AnalysisTask")
     @Expose
     private ScheduleAnalysisTaskResult AnalysisTask;
 
     /**
-    * Media quality inspection task output.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("QualityControlTask")
     @Expose
     private ScheduleQualityControlTaskResult QualityControlTask;
 
     /**
-    * Conditional judgment task output.
-Note: This field may return null, indicating that no valid value can be obtained.
+    * 
     */
     @SerializedName("ExecRuleTask")
     @Expose
     private ScheduleExecRuleTaskResult ExecRuleTask;
 
     /**
-    * Smart subtitle task output.
-Note: This field may return null, indicating that no valid value can be obtained.
+    * 
     */
     @SerializedName("SmartSubtitlesTask")
     @Expose
     private ScheduleSmartSubtitleTaskResult SmartSubtitlesTask;
 
     /**
-    * Smart erase task output.
-Note: This field may return null, indicating that no valid value can be obtained.
+    * 
     */
     @SerializedName("SmartEraseTask")
     @Expose
     private SmartEraseTaskResult SmartEraseTask;
 
     /**
-     * Get The result of a transcoding task.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return TranscodeTask The result of a transcoding task.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return TranscodeTask 
      */
     public MediaProcessTaskTranscodeResult getTranscodeTask() {
         return this.TranscodeTask;
     }
 
     /**
-     * Set The result of a transcoding task.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param TranscodeTask The result of a transcoding task.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param TranscodeTask 
      */
     public void setTranscodeTask(MediaProcessTaskTranscodeResult TranscodeTask) {
         this.TranscodeTask = TranscodeTask;
     }
 
     /**
-     * Get The result of an animated image generating task.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return AnimatedGraphicTask The result of an animated image generating task.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return AnimatedGraphicTask 
      */
     public MediaProcessTaskAnimatedGraphicResult getAnimatedGraphicTask() {
         return this.AnimatedGraphicTask;
     }
 
     /**
-     * Set The result of an animated image generating task.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param AnimatedGraphicTask The result of an animated image generating task.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param AnimatedGraphicTask 
      */
     public void setAnimatedGraphicTask(MediaProcessTaskAnimatedGraphicResult AnimatedGraphicTask) {
         this.AnimatedGraphicTask = AnimatedGraphicTask;
     }
 
     /**
-     * Get The result of a time point screenshot task.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return SnapshotByTimeOffsetTask The result of a time point screenshot task.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return SnapshotByTimeOffsetTask 
      */
     public MediaProcessTaskSnapshotByTimeOffsetResult getSnapshotByTimeOffsetTask() {
         return this.SnapshotByTimeOffsetTask;
     }
 
     /**
-     * Set The result of a time point screenshot task.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param SnapshotByTimeOffsetTask The result of a time point screenshot task.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param SnapshotByTimeOffsetTask 
      */
     public void setSnapshotByTimeOffsetTask(MediaProcessTaskSnapshotByTimeOffsetResult SnapshotByTimeOffsetTask) {
         this.SnapshotByTimeOffsetTask = SnapshotByTimeOffsetTask;
     }
 
     /**
-     * Get The result of a sampled screenshot task.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return SampleSnapshotTask The result of a sampled screenshot task.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return SampleSnapshotTask 
      */
     public MediaProcessTaskSampleSnapshotResult getSampleSnapshotTask() {
         return this.SampleSnapshotTask;
     }
 
     /**
-     * Set The result of a sampled screenshot task.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param SampleSnapshotTask The result of a sampled screenshot task.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param SampleSnapshotTask 
      */
     public void setSampleSnapshotTask(MediaProcessTaskSampleSnapshotResult SampleSnapshotTask) {
         this.SampleSnapshotTask = SampleSnapshotTask;
     }
 
     /**
-     * Get The result of an image sprite task.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ImageSpriteTask The result of an image sprite task.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return ImageSpriteTask 
      */
     public MediaProcessTaskImageSpriteResult getImageSpriteTask() {
         return this.ImageSpriteTask;
     }
 
     /**
-     * Set The result of an image sprite task.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ImageSpriteTask The result of an image sprite task.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param ImageSpriteTask 
      */
     public void setImageSpriteTask(MediaProcessTaskImageSpriteResult ImageSpriteTask) {
         this.ImageSpriteTask = ImageSpriteTask;
     }
 
     /**
-     * Get The result of an adaptive bitrate streaming task.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return AdaptiveDynamicStreamingTask The result of an adaptive bitrate streaming task.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return AdaptiveDynamicStreamingTask 
      */
     public MediaProcessTaskAdaptiveDynamicStreamingResult getAdaptiveDynamicStreamingTask() {
         return this.AdaptiveDynamicStreamingTask;
     }
 
     /**
-     * Set The result of an adaptive bitrate streaming task.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param AdaptiveDynamicStreamingTask The result of an adaptive bitrate streaming task.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param AdaptiveDynamicStreamingTask 
      */
     public void setAdaptiveDynamicStreamingTask(MediaProcessTaskAdaptiveDynamicStreamingResult AdaptiveDynamicStreamingTask) {
         this.AdaptiveDynamicStreamingTask = AdaptiveDynamicStreamingTask;
     }
 
     /**
-     * Get The result of a content recognition task.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return RecognitionTask The result of a content recognition task.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return RecognitionTask 
      */
     public ScheduleRecognitionTaskResult getRecognitionTask() {
         return this.RecognitionTask;
     }
 
     /**
-     * Set The result of a content recognition task.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param RecognitionTask The result of a content recognition task.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param RecognitionTask 
      */
     public void setRecognitionTask(ScheduleRecognitionTaskResult RecognitionTask) {
         this.RecognitionTask = RecognitionTask;
     }
 
     /**
-     * Get The result of a content moderation task.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ReviewTask The result of a content moderation task.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return ReviewTask 
      */
     public ScheduleReviewTaskResult getReviewTask() {
         return this.ReviewTask;
     }
 
     /**
-     * Set The result of a content moderation task.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ReviewTask The result of a content moderation task.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param ReviewTask 
      */
     public void setReviewTask(ScheduleReviewTaskResult ReviewTask) {
         this.ReviewTask = ReviewTask;
     }
 
     /**
-     * Get The result of a content analysis task.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return AnalysisTask The result of a content analysis task.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return AnalysisTask 
      */
     public ScheduleAnalysisTaskResult getAnalysisTask() {
         return this.AnalysisTask;
     }
 
     /**
-     * Set The result of a content analysis task.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param AnalysisTask The result of a content analysis task.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param AnalysisTask 
      */
     public void setAnalysisTask(ScheduleAnalysisTaskResult AnalysisTask) {
         this.AnalysisTask = AnalysisTask;
     }
 
     /**
-     * Get Media quality inspection task output.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return QualityControlTask Media quality inspection task output.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return QualityControlTask 
      */
     public ScheduleQualityControlTaskResult getQualityControlTask() {
         return this.QualityControlTask;
     }
 
     /**
-     * Set Media quality inspection task output.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param QualityControlTask Media quality inspection task output.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param QualityControlTask 
      */
     public void setQualityControlTask(ScheduleQualityControlTaskResult QualityControlTask) {
         this.QualityControlTask = QualityControlTask;
     }
 
     /**
-     * Get Conditional judgment task output.
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return ExecRuleTask Conditional judgment task output.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get  
+     * @return ExecRuleTask 
      */
     public ScheduleExecRuleTaskResult getExecRuleTask() {
         return this.ExecRuleTask;
     }
 
     /**
-     * Set Conditional judgment task output.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param ExecRuleTask Conditional judgment task output.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set 
+     * @param ExecRuleTask 
      */
     public void setExecRuleTask(ScheduleExecRuleTaskResult ExecRuleTask) {
         this.ExecRuleTask = ExecRuleTask;
     }
 
     /**
-     * Get Smart subtitle task output.
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return SmartSubtitlesTask Smart subtitle task output.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get  
+     * @return SmartSubtitlesTask 
      */
     public ScheduleSmartSubtitleTaskResult getSmartSubtitlesTask() {
         return this.SmartSubtitlesTask;
     }
 
     /**
-     * Set Smart subtitle task output.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param SmartSubtitlesTask Smart subtitle task output.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set 
+     * @param SmartSubtitlesTask 
      */
     public void setSmartSubtitlesTask(ScheduleSmartSubtitleTaskResult SmartSubtitlesTask) {
         this.SmartSubtitlesTask = SmartSubtitlesTask;
     }
 
     /**
-     * Get Smart erase task output.
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return SmartEraseTask Smart erase task output.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get  
+     * @return SmartEraseTask 
      */
     public SmartEraseTaskResult getSmartEraseTask() {
         return this.SmartEraseTask;
     }
 
     /**
-     * Set Smart erase task output.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param SmartEraseTask Smart erase task output.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set 
+     * @param SmartEraseTask 
      */
     public void setSmartEraseTask(SmartEraseTaskResult SmartEraseTask) {
         this.SmartEraseTask = SmartEraseTask;

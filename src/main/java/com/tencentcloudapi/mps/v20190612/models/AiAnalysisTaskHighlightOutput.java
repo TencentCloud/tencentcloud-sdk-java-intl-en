@@ -24,51 +24,46 @@ import java.util.HashMap;
 public class AiAnalysisTaskHighlightOutput extends AbstractModel {
 
     /**
-    * A list of the highlight segments generated.
+    * Intelligent video highlight list.
     */
     @SerializedName("HighlightSet")
     @Expose
     private MediaAiAnalysisHighlightItem [] HighlightSet;
 
     /**
-    * The storage location of the highlight segments.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("OutputStorage")
     @Expose
     private TaskOutputStorage OutputStorage;
 
     /**
-     * Get A list of the highlight segments generated. 
-     * @return HighlightSet A list of the highlight segments generated.
+     * Get Intelligent video highlight list. 
+     * @return HighlightSet Intelligent video highlight list.
      */
     public MediaAiAnalysisHighlightItem [] getHighlightSet() {
         return this.HighlightSet;
     }
 
     /**
-     * Set A list of the highlight segments generated.
-     * @param HighlightSet A list of the highlight segments generated.
+     * Set Intelligent video highlight list.
+     * @param HighlightSet Intelligent video highlight list.
      */
     public void setHighlightSet(MediaAiAnalysisHighlightItem [] HighlightSet) {
         this.HighlightSet = HighlightSet;
     }
 
     /**
-     * Get The storage location of the highlight segments.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return OutputStorage The storage location of the highlight segments.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return OutputStorage 
      */
     public TaskOutputStorage getOutputStorage() {
         return this.OutputStorage;
     }
 
     /**
-     * Set The storage location of the highlight segments.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param OutputStorage The storage location of the highlight segments.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param OutputStorage 
      */
     public void setOutputStorage(TaskOutputStorage OutputStorage) {
         this.OutputStorage = OutputStorage;

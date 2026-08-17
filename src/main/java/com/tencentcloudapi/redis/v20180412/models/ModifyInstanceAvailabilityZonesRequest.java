@@ -25,8 +25,7 @@ public class ModifyInstanceAvailabilityZonesRequest extends AbstractModel {
 
     /**
     * Specify the instance ID.
- For example: crs-xjhsdj****, please log in to the [Redis Console] (https://console.cloud.tencent.com/redis#/) and copy the instance ID from the instance list.
-
+ For example: crs-xjhsdj****, please log in to the [Redis Console](https://console.tencentcloud.com/redis) and copy the instance ID from the instance list.
     */
     @SerializedName("InstanceId")
     @Expose
@@ -51,11 +50,9 @@ For instances in a single availability zone, there is no need to configure the N
 
     /**
      * Get Specify the instance ID.
- For example: crs-xjhsdj****, please log in to the [Redis Console] (https://console.cloud.tencent.com/redis#/) and copy the instance ID from the instance list.
- 
+ For example: crs-xjhsdj****, please log in to the [Redis Console](https://console.tencentcloud.com/redis) and copy the instance ID from the instance list. 
      * @return InstanceId Specify the instance ID.
- For example: crs-xjhsdj****, please log in to the [Redis Console] (https://console.cloud.tencent.com/redis#/) and copy the instance ID from the instance list.
-
+ For example: crs-xjhsdj****, please log in to the [Redis Console](https://console.tencentcloud.com/redis) and copy the instance ID from the instance list.
      */
     public String getInstanceId() {
         return this.InstanceId;
@@ -63,11 +60,9 @@ For instances in a single availability zone, there is no need to configure the N
 
     /**
      * Set Specify the instance ID.
- For example: crs-xjhsdj****, please log in to the [Redis Console] (https://console.cloud.tencent.com/redis#/) and copy the instance ID from the instance list.
-
+ For example: crs-xjhsdj****, please log in to the [Redis Console](https://console.tencentcloud.com/redis) and copy the instance ID from the instance list.
      * @param InstanceId Specify the instance ID.
- For example: crs-xjhsdj****, please log in to the [Redis Console] (https://console.cloud.tencent.com/redis#/) and copy the instance ID from the instance list.
-
+ For example: crs-xjhsdj****, please log in to the [Redis Console](https://console.tencentcloud.com/redis) and copy the instance ID from the instance list.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;

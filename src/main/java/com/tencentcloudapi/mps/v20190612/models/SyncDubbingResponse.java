@@ -38,8 +38,7 @@ public class SyncDubbingResponse extends AbstractModel {
     private String Msg;
 
     /**
-    * <p>Synthetic audio in Base64 encoding and WAV format.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("AudioData")
     @Expose
@@ -53,8 +52,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String AudioUrl;
 
     /**
-    * <p>Cloned voice ID.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("VoiceId")
     @Expose
@@ -107,20 +105,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get <p>Synthetic audio in Base64 encoding and WAV format.</p>
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return AudioData <p>Synthetic audio in Base64 encoding and WAV format.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return AudioData 
      */
     public String getAudioData() {
         return this.AudioData;
     }
 
     /**
-     * Set <p>Synthetic audio in Base64 encoding and WAV format.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param AudioData <p>Synthetic audio in Base64 encoding and WAV format.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param AudioData 
      */
     public void setAudioData(String AudioData) {
         this.AudioData = AudioData;
@@ -143,20 +137,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get <p>Cloned voice ID.</p>
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return VoiceId <p>Cloned voice ID.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return VoiceId 
      */
     public String getVoiceId() {
         return this.VoiceId;
     }
 
     /**
-     * Set <p>Cloned voice ID.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param VoiceId <p>Cloned voice ID.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param VoiceId 
      */
     public void setVoiceId(String VoiceId) {
         this.VoiceId = VoiceId;

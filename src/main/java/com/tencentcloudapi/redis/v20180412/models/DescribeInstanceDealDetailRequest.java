@@ -24,26 +24,53 @@ import java.util.HashMap;
 public class DescribeInstanceDealDetailRequest extends AbstractModel {
 
     /**
-    * Order transaction ID array, which is the output parameter DealId of [CreateInstances](https://intl.cloud.tencent.com/document/api/239/20026?from_cn_redirect=1), with the maximum array length of 10.
+    * Order number, which is the output parameter DealId of [CreateInstances](https://www.tencentcloud.com/document/api/239/20026?from_cn_redirect=1), with the maximum array length of 10.
     */
     @SerializedName("DealIds")
     @Expose
     private String [] DealIds;
 
     /**
-     * Get Order transaction ID array, which is the output parameter DealId of [CreateInstances](https://intl.cloud.tencent.com/document/api/239/20026?from_cn_redirect=1), with the maximum array length of 10. 
-     * @return DealIds Order transaction ID array, which is the output parameter DealId of [CreateInstances](https://intl.cloud.tencent.com/document/api/239/20026?from_cn_redirect=1), with the maximum array length of 10.
+    * Order number, which is the output parameter DealName of [CreateInstances](https://www.tencentcloud.com/document/api/239/20026?from_cn_redirect=1), with the maximum array length of 10.
+    */
+    @SerializedName("DealName")
+    @Expose
+    private String DealName;
+
+    /**
+     * Get Order number, which is the output parameter DealId of [CreateInstances](https://www.tencentcloud.com/document/api/239/20026?from_cn_redirect=1), with the maximum array length of 10. 
+     * @return DealIds Order number, which is the output parameter DealId of [CreateInstances](https://www.tencentcloud.com/document/api/239/20026?from_cn_redirect=1), with the maximum array length of 10.
+     * @deprecated
      */
+    @Deprecated
     public String [] getDealIds() {
         return this.DealIds;
     }
 
     /**
-     * Set Order transaction ID array, which is the output parameter DealId of [CreateInstances](https://intl.cloud.tencent.com/document/api/239/20026?from_cn_redirect=1), with the maximum array length of 10.
-     * @param DealIds Order transaction ID array, which is the output parameter DealId of [CreateInstances](https://intl.cloud.tencent.com/document/api/239/20026?from_cn_redirect=1), with the maximum array length of 10.
+     * Set Order number, which is the output parameter DealId of [CreateInstances](https://www.tencentcloud.com/document/api/239/20026?from_cn_redirect=1), with the maximum array length of 10.
+     * @param DealIds Order number, which is the output parameter DealId of [CreateInstances](https://www.tencentcloud.com/document/api/239/20026?from_cn_redirect=1), with the maximum array length of 10.
+     * @deprecated
      */
+    @Deprecated
     public void setDealIds(String [] DealIds) {
         this.DealIds = DealIds;
+    }
+
+    /**
+     * Get Order number, which is the output parameter DealName of [CreateInstances](https://www.tencentcloud.com/document/api/239/20026?from_cn_redirect=1), with the maximum array length of 10. 
+     * @return DealName Order number, which is the output parameter DealName of [CreateInstances](https://www.tencentcloud.com/document/api/239/20026?from_cn_redirect=1), with the maximum array length of 10.
+     */
+    public String getDealName() {
+        return this.DealName;
+    }
+
+    /**
+     * Set Order number, which is the output parameter DealName of [CreateInstances](https://www.tencentcloud.com/document/api/239/20026?from_cn_redirect=1), with the maximum array length of 10.
+     * @param DealName Order number, which is the output parameter DealName of [CreateInstances](https://www.tencentcloud.com/document/api/239/20026?from_cn_redirect=1), with the maximum array length of 10.
+     */
+    public void setDealName(String DealName) {
+        this.DealName = DealName;
     }
 
     public DescribeInstanceDealDetailRequest() {
@@ -60,6 +87,9 @@ public class DescribeInstanceDealDetailRequest extends AbstractModel {
                 this.DealIds[i] = new String(source.DealIds[i]);
             }
         }
+        if (source.DealName != null) {
+            this.DealName = new String(source.DealName);
+        }
     }
 
 
@@ -68,6 +98,7 @@ public class DescribeInstanceDealDetailRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "DealIds.", this.DealIds);
+        this.setParamSimple(map, prefix + "DealName", this.DealName);
 
     }
 }

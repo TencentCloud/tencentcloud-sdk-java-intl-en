@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class AiRecognitionTaskTransTextResultOutput extends AbstractModel {
 
     /**
-    * The translated segments.
+    * Translate segments.
     */
     @SerializedName("SegmentSet")
     @Expose
     private AiRecognitionTaskTransTextSegmentItem [] SegmentSet;
 
     /**
-    * The subtitle URL.
+    * Subtitle file path.
     */
     @SerializedName("SubtitlePath")
     @Expose
     private String SubtitlePath;
 
     /**
-     * Get The translated segments. 
-     * @return SegmentSet The translated segments.
+     * Get Translate segments. 
+     * @return SegmentSet Translate segments.
      */
     public AiRecognitionTaskTransTextSegmentItem [] getSegmentSet() {
         return this.SegmentSet;
     }
 
     /**
-     * Set The translated segments.
-     * @param SegmentSet The translated segments.
+     * Set Translate segments.
+     * @param SegmentSet Translate segments.
      */
     public void setSegmentSet(AiRecognitionTaskTransTextSegmentItem [] SegmentSet) {
         this.SegmentSet = SegmentSet;
     }
 
     /**
-     * Get The subtitle URL. 
-     * @return SubtitlePath The subtitle URL.
+     * Get Subtitle file path. 
+     * @return SubtitlePath Subtitle file path.
      */
     public String getSubtitlePath() {
         return this.SubtitlePath;
     }
 
     /**
-     * Set The subtitle URL.
-     * @param SubtitlePath The subtitle URL.
+     * Set Subtitle file path.
+     * @param SubtitlePath Subtitle file path.
      */
     public void setSubtitlePath(String SubtitlePath) {
         this.SubtitlePath = SubtitlePath;

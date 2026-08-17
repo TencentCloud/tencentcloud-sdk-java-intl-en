@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class AiRecognitionTaskOcrFullTextSegmentItem extends AbstractModel {
 
     /**
-    * Start time offset of a recognition segment in seconds.
+    * Start time offset of a recognized segment, in seconds.
     */
     @SerializedName("StartTimeOffset")
     @Expose
     private Float StartTimeOffset;
 
     /**
-    * End time offset of a recognition segment in seconds.
+    * End time offset of a recognized segment, in seconds.
     */
     @SerializedName("EndTimeOffset")
     @Expose
@@ -45,32 +45,32 @@ public class AiRecognitionTaskOcrFullTextSegmentItem extends AbstractModel {
     private AiRecognitionTaskOcrFullTextSegmentTextItem [] TextSet;
 
     /**
-     * Get Start time offset of a recognition segment in seconds. 
-     * @return StartTimeOffset Start time offset of a recognition segment in seconds.
+     * Get Start time offset of a recognized segment, in seconds. 
+     * @return StartTimeOffset Start time offset of a recognized segment, in seconds.
      */
     public Float getStartTimeOffset() {
         return this.StartTimeOffset;
     }
 
     /**
-     * Set Start time offset of a recognition segment in seconds.
-     * @param StartTimeOffset Start time offset of a recognition segment in seconds.
+     * Set Start time offset of a recognized segment, in seconds.
+     * @param StartTimeOffset Start time offset of a recognized segment, in seconds.
      */
     public void setStartTimeOffset(Float StartTimeOffset) {
         this.StartTimeOffset = StartTimeOffset;
     }
 
     /**
-     * Get End time offset of a recognition segment in seconds. 
-     * @return EndTimeOffset End time offset of a recognition segment in seconds.
+     * Get End time offset of a recognized segment, in seconds. 
+     * @return EndTimeOffset End time offset of a recognized segment, in seconds.
      */
     public Float getEndTimeOffset() {
         return this.EndTimeOffset;
     }
 
     /**
-     * Set End time offset of a recognition segment in seconds.
-     * @param EndTimeOffset End time offset of a recognition segment in seconds.
+     * Set End time offset of a recognized segment, in seconds.
+     * @param EndTimeOffset End time offset of a recognized segment, in seconds.
      */
     public void setEndTimeOffset(Float EndTimeOffset) {
         this.EndTimeOffset = EndTimeOffset;

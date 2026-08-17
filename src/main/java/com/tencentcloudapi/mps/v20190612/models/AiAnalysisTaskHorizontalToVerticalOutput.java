@@ -24,89 +24,69 @@ import java.util.HashMap;
 public class AiAnalysisTaskHorizontalToVerticalOutput extends AbstractModel {
 
     /**
-    * Intelligent landscape-to-portrait video list.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("Path")
     @Expose
     private String Path;
 
     /**
-    * Storage location of intelligent landscape-to-portrait videos.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("OutputStorage")
     @Expose
     private TaskOutputStorage OutputStorage;
 
     /**
-    * Confidence.	
-	
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("Confidence")
     @Expose
     private Float Confidence;
 
     /**
-     * Get Intelligent landscape-to-portrait video list.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Path Intelligent landscape-to-portrait video list.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return Path 
      */
     public String getPath() {
         return this.Path;
     }
 
     /**
-     * Set Intelligent landscape-to-portrait video list.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Path Intelligent landscape-to-portrait video list.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param Path 
      */
     public void setPath(String Path) {
         this.Path = Path;
     }
 
     /**
-     * Get Storage location of intelligent landscape-to-portrait videos.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return OutputStorage Storage location of intelligent landscape-to-portrait videos.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return OutputStorage 
      */
     public TaskOutputStorage getOutputStorage() {
         return this.OutputStorage;
     }
 
     /**
-     * Set Storage location of intelligent landscape-to-portrait videos.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param OutputStorage Storage location of intelligent landscape-to-portrait videos.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param OutputStorage 
      */
     public void setOutputStorage(TaskOutputStorage OutputStorage) {
         this.OutputStorage = OutputStorage;
     }
 
     /**
-     * Get Confidence.	
-	
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Confidence Confidence.	
-	
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return Confidence 
      */
     public Float getConfidence() {
         return this.Confidence;
     }
 
     /**
-     * Set Confidence.	
-	
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Confidence Confidence.	
-	
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param Confidence 
      */
     public void setConfidence(Float Confidence) {
         this.Confidence = Confidence;

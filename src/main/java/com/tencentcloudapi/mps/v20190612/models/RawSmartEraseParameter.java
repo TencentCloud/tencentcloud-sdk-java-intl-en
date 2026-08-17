@@ -31,24 +31,21 @@ public class RawSmartEraseParameter extends AbstractModel {
     private String EraseType;
 
     /**
-    * <p>Subtitle erasing configuration;<br>This field is required when the value of EraseType is set to subtitle.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("EraseSubtitleConfig")
     @Expose
     private SmartEraseSubtitleConfig EraseSubtitleConfig;
 
     /**
-    * <p>Watermark erasing configuration.<br>This field is required when the value of EraseType is set to watermark.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("EraseWatermarkConfig")
     @Expose
     private SmartEraseWatermarkConfig EraseWatermarkConfig;
 
     /**
-    * <p>Privacy protection configuration.<br>This field is required when the value of EraseType is privacy.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("ErasePrivacyConfig")
     @Expose
@@ -92,60 +89,48 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get <p>Subtitle erasing configuration;<br>This field is required when the value of EraseType is set to subtitle.</p>
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return EraseSubtitleConfig <p>Subtitle erasing configuration;<br>This field is required when the value of EraseType is set to subtitle.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return EraseSubtitleConfig 
      */
     public SmartEraseSubtitleConfig getEraseSubtitleConfig() {
         return this.EraseSubtitleConfig;
     }
 
     /**
-     * Set <p>Subtitle erasing configuration;<br>This field is required when the value of EraseType is set to subtitle.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param EraseSubtitleConfig <p>Subtitle erasing configuration;<br>This field is required when the value of EraseType is set to subtitle.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param EraseSubtitleConfig 
      */
     public void setEraseSubtitleConfig(SmartEraseSubtitleConfig EraseSubtitleConfig) {
         this.EraseSubtitleConfig = EraseSubtitleConfig;
     }
 
     /**
-     * Get <p>Watermark erasing configuration.<br>This field is required when the value of EraseType is set to watermark.</p>
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return EraseWatermarkConfig <p>Watermark erasing configuration.<br>This field is required when the value of EraseType is set to watermark.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return EraseWatermarkConfig 
      */
     public SmartEraseWatermarkConfig getEraseWatermarkConfig() {
         return this.EraseWatermarkConfig;
     }
 
     /**
-     * Set <p>Watermark erasing configuration.<br>This field is required when the value of EraseType is set to watermark.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param EraseWatermarkConfig <p>Watermark erasing configuration.<br>This field is required when the value of EraseType is set to watermark.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param EraseWatermarkConfig 
      */
     public void setEraseWatermarkConfig(SmartEraseWatermarkConfig EraseWatermarkConfig) {
         this.EraseWatermarkConfig = EraseWatermarkConfig;
     }
 
     /**
-     * Get <p>Privacy protection configuration.<br>This field is required when the value of EraseType is privacy.</p>
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ErasePrivacyConfig <p>Privacy protection configuration.<br>This field is required when the value of EraseType is privacy.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return ErasePrivacyConfig 
      */
     public SmartErasePrivacyConfig getErasePrivacyConfig() {
         return this.ErasePrivacyConfig;
     }
 
     /**
-     * Set <p>Privacy protection configuration.<br>This field is required when the value of EraseType is privacy.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ErasePrivacyConfig <p>Privacy protection configuration.<br>This field is required when the value of EraseType is privacy.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param ErasePrivacyConfig 
      */
     public void setErasePrivacyConfig(SmartErasePrivacyConfig ErasePrivacyConfig) {
         this.ErasePrivacyConfig = ErasePrivacyConfig;

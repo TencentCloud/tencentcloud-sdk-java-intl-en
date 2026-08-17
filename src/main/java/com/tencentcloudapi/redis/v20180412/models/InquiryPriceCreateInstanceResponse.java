@@ -24,31 +24,42 @@ import java.util.HashMap;
 public class InquiryPriceCreateInstanceResponse extends AbstractModel {
 
     /**
-    * Price.
+    * <p>Discounted price.</p>
     */
     @SerializedName("Price")
     @Expose
     private Float Price;
 
     /**
-    * High precision price. 
+    * <p>High-precision discounted price</p>
     */
     @SerializedName("HighPrecisionPrice")
     @Expose
     private Float HighPrecisionPrice;
 
     /**
-    * Currency.
+    * <p>Original price</p>
+    */
+    @SerializedName("OriginalPrice")
+    @Expose
+    private Float OriginalPrice;
+
+    /**
+    * <p>High-precision original price</p>
+    */
+    @SerializedName("HighPrecisionOriginalPrice")
+    @Expose
+    private Float HighPrecisionOriginalPrice;
+
+    /**
+    * <p>Currency</p>
     */
     @SerializedName("Currency")
     @Expose
     private String Currency;
 
     /**
-    * Price unit.
-
- - pent: cent.
- - microPent: microcent.
+    * <p>Price amount unit</p><ul><li>pent: cent</li><li>microPent: microcent</li></ul>
     */
     @SerializedName("AmountUnit")
     @Expose
@@ -62,76 +73,96 @@ public class InquiryPriceCreateInstanceResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Price. 
-     * @return Price Price.
+     * Get <p>Discounted price.</p> 
+     * @return Price <p>Discounted price.</p>
      */
     public Float getPrice() {
         return this.Price;
     }
 
     /**
-     * Set Price.
-     * @param Price Price.
+     * Set <p>Discounted price.</p>
+     * @param Price <p>Discounted price.</p>
      */
     public void setPrice(Float Price) {
         this.Price = Price;
     }
 
     /**
-     * Get High precision price.  
-     * @return HighPrecisionPrice High precision price. 
+     * Get <p>High-precision discounted price</p> 
+     * @return HighPrecisionPrice <p>High-precision discounted price</p>
      */
     public Float getHighPrecisionPrice() {
         return this.HighPrecisionPrice;
     }
 
     /**
-     * Set High precision price. 
-     * @param HighPrecisionPrice High precision price. 
+     * Set <p>High-precision discounted price</p>
+     * @param HighPrecisionPrice <p>High-precision discounted price</p>
      */
     public void setHighPrecisionPrice(Float HighPrecisionPrice) {
         this.HighPrecisionPrice = HighPrecisionPrice;
     }
 
     /**
-     * Get Currency. 
-     * @return Currency Currency.
+     * Get <p>Original price</p> 
+     * @return OriginalPrice <p>Original price</p>
+     */
+    public Float getOriginalPrice() {
+        return this.OriginalPrice;
+    }
+
+    /**
+     * Set <p>Original price</p>
+     * @param OriginalPrice <p>Original price</p>
+     */
+    public void setOriginalPrice(Float OriginalPrice) {
+        this.OriginalPrice = OriginalPrice;
+    }
+
+    /**
+     * Get <p>High-precision original price</p> 
+     * @return HighPrecisionOriginalPrice <p>High-precision original price</p>
+     */
+    public Float getHighPrecisionOriginalPrice() {
+        return this.HighPrecisionOriginalPrice;
+    }
+
+    /**
+     * Set <p>High-precision original price</p>
+     * @param HighPrecisionOriginalPrice <p>High-precision original price</p>
+     */
+    public void setHighPrecisionOriginalPrice(Float HighPrecisionOriginalPrice) {
+        this.HighPrecisionOriginalPrice = HighPrecisionOriginalPrice;
+    }
+
+    /**
+     * Get <p>Currency</p> 
+     * @return Currency <p>Currency</p>
      */
     public String getCurrency() {
         return this.Currency;
     }
 
     /**
-     * Set Currency.
-     * @param Currency Currency.
+     * Set <p>Currency</p>
+     * @param Currency <p>Currency</p>
      */
     public void setCurrency(String Currency) {
         this.Currency = Currency;
     }
 
     /**
-     * Get Price unit.
-
- - pent: cent.
- - microPent: microcent. 
-     * @return AmountUnit Price unit.
-
- - pent: cent.
- - microPent: microcent.
+     * Get <p>Price amount unit</p><ul><li>pent: cent</li><li>microPent: microcent</li></ul> 
+     * @return AmountUnit <p>Price amount unit</p><ul><li>pent: cent</li><li>microPent: microcent</li></ul>
      */
     public String getAmountUnit() {
         return this.AmountUnit;
     }
 
     /**
-     * Set Price unit.
-
- - pent: cent.
- - microPent: microcent.
-     * @param AmountUnit Price unit.
-
- - pent: cent.
- - microPent: microcent.
+     * Set <p>Price amount unit</p><ul><li>pent: cent</li><li>microPent: microcent</li></ul>
+     * @param AmountUnit <p>Price amount unit</p><ul><li>pent: cent</li><li>microPent: microcent</li></ul>
      */
     public void setAmountUnit(String AmountUnit) {
         this.AmountUnit = AmountUnit;
@@ -167,6 +198,12 @@ public class InquiryPriceCreateInstanceResponse extends AbstractModel {
         if (source.HighPrecisionPrice != null) {
             this.HighPrecisionPrice = new Float(source.HighPrecisionPrice);
         }
+        if (source.OriginalPrice != null) {
+            this.OriginalPrice = new Float(source.OriginalPrice);
+        }
+        if (source.HighPrecisionOriginalPrice != null) {
+            this.HighPrecisionOriginalPrice = new Float(source.HighPrecisionOriginalPrice);
+        }
         if (source.Currency != null) {
             this.Currency = new String(source.Currency);
         }
@@ -185,6 +222,8 @@ public class InquiryPriceCreateInstanceResponse extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Price", this.Price);
         this.setParamSimple(map, prefix + "HighPrecisionPrice", this.HighPrecisionPrice);
+        this.setParamSimple(map, prefix + "OriginalPrice", this.OriginalPrice);
+        this.setParamSimple(map, prefix + "HighPrecisionOriginalPrice", this.HighPrecisionOriginalPrice);
         this.setParamSimple(map, prefix + "Currency", this.Currency);
         this.setParamSimple(map, prefix + "AmountUnit", this.AmountUnit);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);

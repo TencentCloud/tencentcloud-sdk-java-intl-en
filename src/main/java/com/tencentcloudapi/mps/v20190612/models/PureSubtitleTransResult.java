@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class PureSubtitleTransResult extends AbstractModel {
 
     /**
-    * Task status (the three valid values are as follows):
+    * Task status (the three valid values are as follows): 
 - PROCESSING
 - SUCCESS 
 - FAIL
@@ -62,8 +62,7 @@ public class PureSubtitleTransResult extends AbstractModel {
     private SmartSubtitleTaskResultInput Input;
 
     /**
-    * Translation output result of pure subtitle files.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("Output")
     @Expose
@@ -77,11 +76,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long Progress;
 
     /**
-     * Get Task status (the three valid values are as follows):
+     * Get Task status (the three valid values are as follows): 
 - PROCESSING
 - SUCCESS 
 - FAIL 
-     * @return Status Task status (the three valid values are as follows):
+     * @return Status Task status (the three valid values are as follows): 
 - PROCESSING
 - SUCCESS 
 - FAIL
@@ -91,11 +90,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Task status (the three valid values are as follows):
+     * Set Task status (the three valid values are as follows): 
 - PROCESSING
 - SUCCESS 
 - FAIL
-     * @param Status Task status (the three valid values are as follows):
+     * @param Status Task status (the three valid values are as follows): 
 - PROCESSING
 - SUCCESS 
 - FAIL
@@ -169,20 +168,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Translation output result of pure subtitle files.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Output Translation output result of pure subtitle files.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return Output 
      */
     public PureSubtitleTransResultOutput getOutput() {
         return this.Output;
     }
 
     /**
-     * Set Translation output result of pure subtitle files.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Output Translation output result of pure subtitle files.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param Output 
      */
     public void setOutput(PureSubtitleTransResultOutput Output) {
         this.Output = Output;

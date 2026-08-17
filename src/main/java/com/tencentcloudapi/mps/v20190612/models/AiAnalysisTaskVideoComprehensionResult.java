@@ -38,7 +38,7 @@ public class AiAnalysisTaskVideoComprehensionResult extends AbstractModel {
     private Long ErrCode;
 
     /**
-    * Error message.
+    * Error message
     */
     @SerializedName("Message")
     @Expose
@@ -52,8 +52,7 @@ public class AiAnalysisTaskVideoComprehensionResult extends AbstractModel {
     private AiAnalysisTaskVideoComprehensionInput Input;
 
     /**
-    * Output file for video (audio) recognition.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("Output")
     @Expose
@@ -120,16 +119,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Error message. 
-     * @return Message Error message.
+     * Get Error message 
+     * @return Message Error message
      */
     public String getMessage() {
         return this.Message;
     }
 
     /**
-     * Set Error message.
-     * @param Message Error message.
+     * Set Error message
+     * @param Message Error message
      */
     public void setMessage(String Message) {
         this.Message = Message;
@@ -152,20 +151,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Output file for video (audio) recognition.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Output Output file for video (audio) recognition.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return Output 
      */
     public AiAnalysisTaskVideoComprehensionOutput getOutput() {
         return this.Output;
     }
 
     /**
-     * Set Output file for video (audio) recognition.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Output Output file for video (audio) recognition.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param Output 
      */
     public void setOutput(AiAnalysisTaskVideoComprehensionOutput Output) {
         this.Output = Output;

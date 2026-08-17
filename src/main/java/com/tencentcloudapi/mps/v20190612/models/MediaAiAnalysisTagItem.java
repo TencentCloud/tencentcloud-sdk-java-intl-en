@@ -31,7 +31,7 @@ public class MediaAiAnalysisTagItem extends AbstractModel {
     private String Tag;
 
     /**
-    * Confidence of tag between 0 and 100.
+    * Reliability of the tag, with a value range from 0 to -100.
     */
     @SerializedName("Confidence")
     @Expose
@@ -61,16 +61,16 @@ public class MediaAiAnalysisTagItem extends AbstractModel {
     }
 
     /**
-     * Get Confidence of tag between 0 and 100. 
-     * @return Confidence Confidence of tag between 0 and 100.
+     * Get Reliability of the tag, with a value range from 0 to -100. 
+     * @return Confidence Reliability of the tag, with a value range from 0 to -100.
      */
     public Float getConfidence() {
         return this.Confidence;
     }
 
     /**
-     * Set Confidence of tag between 0 and 100.
-     * @param Confidence Confidence of tag between 0 and 100.
+     * Set Reliability of the tag, with a value range from 0 to -100.
+     * @param Confidence Reliability of the tag, with a value range from 0 to -100.
      */
     public void setConfidence(Float Confidence) {
         this.Confidence = Confidence;

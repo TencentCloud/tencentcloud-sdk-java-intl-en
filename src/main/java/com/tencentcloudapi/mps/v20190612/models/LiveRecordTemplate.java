@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class LiveRecordTemplate extends AbstractModel {
 
     /**
-    * Specifies the recording template unique identifier.
+    * Unique identifier of the recording template.
     */
     @SerializedName("Definition")
     @Expose
@@ -52,8 +52,7 @@ public class LiveRecordTemplate extends AbstractModel {
     private String Name;
 
     /**
-    * Template description.
-
+    * Template description information.
     */
     @SerializedName("Comment")
     @Expose
@@ -61,22 +60,22 @@ public class LiveRecordTemplate extends AbstractModel {
 
     /**
     * Template type. Valid values:
-<li>Preset: system-preset template;</li>
-<li>Custom: Custom template.</li>
+<li>Preset: system preset template;</li>
+<li>Custom: user-defined template.</li>
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * Creation time of a template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
+    * Template creation time in [ISO datetime format](https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * Last modified time of a template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
+    * Last modification time of the template in [ISO datetime format](https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
     */
     @SerializedName("UpdateTime")
     @Expose
@@ -90,16 +89,16 @@ public class LiveRecordTemplate extends AbstractModel {
     private String RecordType;
 
     /**
-     * Get Specifies the recording template unique identifier. 
-     * @return Definition Specifies the recording template unique identifier.
+     * Get Unique identifier of the recording template. 
+     * @return Definition Unique identifier of the recording template.
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set Specifies the recording template unique identifier.
-     * @param Definition Specifies the recording template unique identifier.
+     * Set Unique identifier of the recording template.
+     * @param Definition Unique identifier of the recording template.
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;
@@ -154,20 +153,16 @@ public class LiveRecordTemplate extends AbstractModel {
     }
 
     /**
-     * Get Template description.
- 
-     * @return Comment Template description.
-
+     * Get Template description information. 
+     * @return Comment Template description information.
      */
     public String getComment() {
         return this.Comment;
     }
 
     /**
-     * Set Template description.
-
-     * @param Comment Template description.
-
+     * Set Template description information.
+     * @param Comment Template description information.
      */
     public void setComment(String Comment) {
         this.Comment = Comment;
@@ -175,11 +170,11 @@ public class LiveRecordTemplate extends AbstractModel {
 
     /**
      * Get Template type. Valid values:
-<li>Preset: system-preset template;</li>
-<li>Custom: Custom template.</li> 
+<li>Preset: system preset template;</li>
+<li>Custom: user-defined template.</li> 
      * @return Type Template type. Valid values:
-<li>Preset: system-preset template;</li>
-<li>Custom: Custom template.</li>
+<li>Preset: system preset template;</li>
+<li>Custom: user-defined template.</li>
      */
     public String getType() {
         return this.Type;
@@ -187,43 +182,43 @@ public class LiveRecordTemplate extends AbstractModel {
 
     /**
      * Set Template type. Valid values:
-<li>Preset: system-preset template;</li>
-<li>Custom: Custom template.</li>
+<li>Preset: system preset template;</li>
+<li>Custom: user-defined template.</li>
      * @param Type Template type. Valid values:
-<li>Preset: system-preset template;</li>
-<li>Custom: Custom template.</li>
+<li>Preset: system preset template;</li>
+<li>Custom: user-defined template.</li>
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get Creation time of a template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F). 
-     * @return CreateTime Creation time of a template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
+     * Get Template creation time in [ISO datetime format](https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52). 
+     * @return CreateTime Template creation time in [ISO datetime format](https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set Creation time of a template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
-     * @param CreateTime Creation time of a template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
+     * Set Template creation time in [ISO datetime format](https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
+     * @param CreateTime Template creation time in [ISO datetime format](https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get Last modified time of a template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F). 
-     * @return UpdateTime Last modified time of a template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
+     * Get Last modification time of the template in [ISO datetime format](https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52). 
+     * @return UpdateTime Last modification time of the template in [ISO datetime format](https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
      */
     public String getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set Last modified time of a template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
-     * @param UpdateTime Last modified time of a template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
+     * Set Last modification time of the template in [ISO datetime format](https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
+     * @param UpdateTime Last modification time of the template in [ISO datetime format](https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;

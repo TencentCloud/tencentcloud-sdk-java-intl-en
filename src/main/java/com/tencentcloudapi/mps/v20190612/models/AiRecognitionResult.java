@@ -24,289 +24,214 @@ import java.util.HashMap;
 public class AiRecognitionResult extends AbstractModel {
 
     /**
-    * The task type. Valid values:
-<li>FaceRecognition: Face recognition</li>
-<li>AsrWordsRecognition: Speech keyword recognition</li>
-<li>OcrWordsRecognition: Text keyword recognition</li>
-<li>AsrFullTextRecognition: Full speech recognition</li>
-<li>OcrFullTextRecognition: Full text recognition</li>
-<li>TransTextRecognition: Speech translation</li>
+    * Task type. Valid values:
+<li>FaceRecognition: face recognition.</li>
+<li>AsrWordsRecognition: speech keyword recognition.</li>
+<li>OcrWordsRecognition: text keyword recognition.</li>
+<li>AsrFullTextRecognition: full speech recognition.</li>
+<li>OcrFullTextRecognition: full text recognition.</li>
+<li>TransTextRecognition: speech translation</li>
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * Face recognition result, which is valid when `Type` is 
- `FaceRecognition`.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("FaceTask")
     @Expose
     private AiRecognitionTaskFaceResult FaceTask;
 
     /**
-    * Speech keyword recognition result, which is valid when `Type` is
- `AsrWordsRecognition`.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("AsrWordsTask")
     @Expose
     private AiRecognitionTaskAsrWordsResult AsrWordsTask;
 
     /**
-    * Full speech recognition result, which is valid when `Type` is
- `AsrFullTextRecognition`.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("AsrFullTextTask")
     @Expose
     private AiRecognitionTaskAsrFullTextResult AsrFullTextTask;
 
     /**
-    * Text keyword recognition result, which is valid when `Type` is
- `OcrWordsRecognition`.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("OcrWordsTask")
     @Expose
     private AiRecognitionTaskOcrWordsResult OcrWordsTask;
 
     /**
-    * Full text recognition result, which is valid when `Type` is
- `OcrFullTextRecognition`.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("OcrFullTextTask")
     @Expose
     private AiRecognitionTaskOcrFullTextResult OcrFullTextTask;
 
     /**
-    * The translation result. This parameter is valid only if `Type` is
- `TransTextRecognition`.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("TransTextTask")
     @Expose
     private AiRecognitionTaskTransTextResult TransTextTask;
 
     /**
-    * Object recognition result, which is valid when Type is
-
-ObjectRecognition.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("ObjectTask")
     @Expose
     private AiRecognitionTaskObjectResult ObjectTask;
 
     /**
-     * Get The task type. Valid values:
-<li>FaceRecognition: Face recognition</li>
-<li>AsrWordsRecognition: Speech keyword recognition</li>
-<li>OcrWordsRecognition: Text keyword recognition</li>
-<li>AsrFullTextRecognition: Full speech recognition</li>
-<li>OcrFullTextRecognition: Full text recognition</li>
-<li>TransTextRecognition: Speech translation</li> 
-     * @return Type The task type. Valid values:
-<li>FaceRecognition: Face recognition</li>
-<li>AsrWordsRecognition: Speech keyword recognition</li>
-<li>OcrWordsRecognition: Text keyword recognition</li>
-<li>AsrFullTextRecognition: Full speech recognition</li>
-<li>OcrFullTextRecognition: Full text recognition</li>
-<li>TransTextRecognition: Speech translation</li>
+     * Get Task type. Valid values:
+<li>FaceRecognition: face recognition.</li>
+<li>AsrWordsRecognition: speech keyword recognition.</li>
+<li>OcrWordsRecognition: text keyword recognition.</li>
+<li>AsrFullTextRecognition: full speech recognition.</li>
+<li>OcrFullTextRecognition: full text recognition.</li>
+<li>TransTextRecognition: speech translation</li> 
+     * @return Type Task type. Valid values:
+<li>FaceRecognition: face recognition.</li>
+<li>AsrWordsRecognition: speech keyword recognition.</li>
+<li>OcrWordsRecognition: text keyword recognition.</li>
+<li>AsrFullTextRecognition: full speech recognition.</li>
+<li>OcrFullTextRecognition: full text recognition.</li>
+<li>TransTextRecognition: speech translation</li>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set The task type. Valid values:
-<li>FaceRecognition: Face recognition</li>
-<li>AsrWordsRecognition: Speech keyword recognition</li>
-<li>OcrWordsRecognition: Text keyword recognition</li>
-<li>AsrFullTextRecognition: Full speech recognition</li>
-<li>OcrFullTextRecognition: Full text recognition</li>
-<li>TransTextRecognition: Speech translation</li>
-     * @param Type The task type. Valid values:
-<li>FaceRecognition: Face recognition</li>
-<li>AsrWordsRecognition: Speech keyword recognition</li>
-<li>OcrWordsRecognition: Text keyword recognition</li>
-<li>AsrFullTextRecognition: Full speech recognition</li>
-<li>OcrFullTextRecognition: Full text recognition</li>
-<li>TransTextRecognition: Speech translation</li>
+     * Set Task type. Valid values:
+<li>FaceRecognition: face recognition.</li>
+<li>AsrWordsRecognition: speech keyword recognition.</li>
+<li>OcrWordsRecognition: text keyword recognition.</li>
+<li>AsrFullTextRecognition: full speech recognition.</li>
+<li>OcrFullTextRecognition: full text recognition.</li>
+<li>TransTextRecognition: speech translation</li>
+     * @param Type Task type. Valid values:
+<li>FaceRecognition: face recognition.</li>
+<li>AsrWordsRecognition: speech keyword recognition.</li>
+<li>OcrWordsRecognition: text keyword recognition.</li>
+<li>AsrFullTextRecognition: full speech recognition.</li>
+<li>OcrFullTextRecognition: full text recognition.</li>
+<li>TransTextRecognition: speech translation</li>
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get Face recognition result, which is valid when `Type` is 
- `FaceRecognition`.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return FaceTask Face recognition result, which is valid when `Type` is 
- `FaceRecognition`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return FaceTask 
      */
     public AiRecognitionTaskFaceResult getFaceTask() {
         return this.FaceTask;
     }
 
     /**
-     * Set Face recognition result, which is valid when `Type` is 
- `FaceRecognition`.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param FaceTask Face recognition result, which is valid when `Type` is 
- `FaceRecognition`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param FaceTask 
      */
     public void setFaceTask(AiRecognitionTaskFaceResult FaceTask) {
         this.FaceTask = FaceTask;
     }
 
     /**
-     * Get Speech keyword recognition result, which is valid when `Type` is
- `AsrWordsRecognition`.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return AsrWordsTask Speech keyword recognition result, which is valid when `Type` is
- `AsrWordsRecognition`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return AsrWordsTask 
      */
     public AiRecognitionTaskAsrWordsResult getAsrWordsTask() {
         return this.AsrWordsTask;
     }
 
     /**
-     * Set Speech keyword recognition result, which is valid when `Type` is
- `AsrWordsRecognition`.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param AsrWordsTask Speech keyword recognition result, which is valid when `Type` is
- `AsrWordsRecognition`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param AsrWordsTask 
      */
     public void setAsrWordsTask(AiRecognitionTaskAsrWordsResult AsrWordsTask) {
         this.AsrWordsTask = AsrWordsTask;
     }
 
     /**
-     * Get Full speech recognition result, which is valid when `Type` is
- `AsrFullTextRecognition`.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return AsrFullTextTask Full speech recognition result, which is valid when `Type` is
- `AsrFullTextRecognition`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return AsrFullTextTask 
      */
     public AiRecognitionTaskAsrFullTextResult getAsrFullTextTask() {
         return this.AsrFullTextTask;
     }
 
     /**
-     * Set Full speech recognition result, which is valid when `Type` is
- `AsrFullTextRecognition`.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param AsrFullTextTask Full speech recognition result, which is valid when `Type` is
- `AsrFullTextRecognition`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param AsrFullTextTask 
      */
     public void setAsrFullTextTask(AiRecognitionTaskAsrFullTextResult AsrFullTextTask) {
         this.AsrFullTextTask = AsrFullTextTask;
     }
 
     /**
-     * Get Text keyword recognition result, which is valid when `Type` is
- `OcrWordsRecognition`.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return OcrWordsTask Text keyword recognition result, which is valid when `Type` is
- `OcrWordsRecognition`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return OcrWordsTask 
      */
     public AiRecognitionTaskOcrWordsResult getOcrWordsTask() {
         return this.OcrWordsTask;
     }
 
     /**
-     * Set Text keyword recognition result, which is valid when `Type` is
- `OcrWordsRecognition`.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param OcrWordsTask Text keyword recognition result, which is valid when `Type` is
- `OcrWordsRecognition`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param OcrWordsTask 
      */
     public void setOcrWordsTask(AiRecognitionTaskOcrWordsResult OcrWordsTask) {
         this.OcrWordsTask = OcrWordsTask;
     }
 
     /**
-     * Get Full text recognition result, which is valid when `Type` is
- `OcrFullTextRecognition`.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return OcrFullTextTask Full text recognition result, which is valid when `Type` is
- `OcrFullTextRecognition`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return OcrFullTextTask 
      */
     public AiRecognitionTaskOcrFullTextResult getOcrFullTextTask() {
         return this.OcrFullTextTask;
     }
 
     /**
-     * Set Full text recognition result, which is valid when `Type` is
- `OcrFullTextRecognition`.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param OcrFullTextTask Full text recognition result, which is valid when `Type` is
- `OcrFullTextRecognition`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param OcrFullTextTask 
      */
     public void setOcrFullTextTask(AiRecognitionTaskOcrFullTextResult OcrFullTextTask) {
         this.OcrFullTextTask = OcrFullTextTask;
     }
 
     /**
-     * Get The translation result. This parameter is valid only if `Type` is
- `TransTextRecognition`.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return TransTextTask The translation result. This parameter is valid only if `Type` is
- `TransTextRecognition`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return TransTextTask 
      */
     public AiRecognitionTaskTransTextResult getTransTextTask() {
         return this.TransTextTask;
     }
 
     /**
-     * Set The translation result. This parameter is valid only if `Type` is
- `TransTextRecognition`.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param TransTextTask The translation result. This parameter is valid only if `Type` is
- `TransTextRecognition`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param TransTextTask 
      */
     public void setTransTextTask(AiRecognitionTaskTransTextResult TransTextTask) {
         this.TransTextTask = TransTextTask;
     }
 
     /**
-     * Get Object recognition result, which is valid when Type is
-
-ObjectRecognition.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ObjectTask Object recognition result, which is valid when Type is
-
-ObjectRecognition.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return ObjectTask 
      */
     public AiRecognitionTaskObjectResult getObjectTask() {
         return this.ObjectTask;
     }
 
     /**
-     * Set Object recognition result, which is valid when Type is
-
-ObjectRecognition.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ObjectTask Object recognition result, which is valid when Type is
-
-ObjectRecognition.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param ObjectTask 
      */
     public void setObjectTask(AiRecognitionTaskObjectResult ObjectTask) {
         this.ObjectTask = ObjectTask;

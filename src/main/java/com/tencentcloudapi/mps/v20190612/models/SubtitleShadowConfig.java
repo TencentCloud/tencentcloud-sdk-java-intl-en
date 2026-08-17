@@ -47,7 +47,7 @@ public class SubtitleShadowConfig extends AbstractModel {
     private Long ShadowWidthUnit;
 
     /**
-    * Shadow color. 6-digit base 16 RGB. Black by default if left blank (has set shadow in the current situation).
+    * Shadow color. 6-digit base 16 RGB. Black by default if left blank (when shadow is set).
 
     */
     @SerializedName("ShadowColor")
@@ -55,7 +55,7 @@ public class SubtitleShadowConfig extends AbstractModel {
     private String ShadowColor;
 
     /**
-    * Shadow transparency. The value should be a positive floating-point number in the range of (0, 1]. If this is not specified, the default value is 1, which means completely opaque (with shadow configured).
+    * Shadow transparency. A positive floating-point number in the range of (0, 1]. By default if left blank, the value is 1, which means completely opaque (with shadow configured).
 
     */
     @SerializedName("ShadowAlpha")
@@ -119,9 +119,9 @@ public class SubtitleShadowConfig extends AbstractModel {
     }
 
     /**
-     * Get Shadow color. 6-digit base 16 RGB. Black by default if left blank (has set shadow in the current situation).
+     * Get Shadow color. 6-digit base 16 RGB. Black by default if left blank (when shadow is set).
  
-     * @return ShadowColor Shadow color. 6-digit base 16 RGB. Black by default if left blank (has set shadow in the current situation).
+     * @return ShadowColor Shadow color. 6-digit base 16 RGB. Black by default if left blank (when shadow is set).
 
      */
     public String getShadowColor() {
@@ -129,9 +129,9 @@ public class SubtitleShadowConfig extends AbstractModel {
     }
 
     /**
-     * Set Shadow color. 6-digit base 16 RGB. Black by default if left blank (has set shadow in the current situation).
+     * Set Shadow color. 6-digit base 16 RGB. Black by default if left blank (when shadow is set).
 
-     * @param ShadowColor Shadow color. 6-digit base 16 RGB. Black by default if left blank (has set shadow in the current situation).
+     * @param ShadowColor Shadow color. 6-digit base 16 RGB. Black by default if left blank (when shadow is set).
 
      */
     public void setShadowColor(String ShadowColor) {
@@ -139,9 +139,9 @@ public class SubtitleShadowConfig extends AbstractModel {
     }
 
     /**
-     * Get Shadow transparency. The value should be a positive floating-point number in the range of (0, 1]. If this is not specified, the default value is 1, which means completely opaque (with shadow configured).
+     * Get Shadow transparency. A positive floating-point number in the range of (0, 1]. By default if left blank, the value is 1, which means completely opaque (with shadow configured).
  
-     * @return ShadowAlpha Shadow transparency. The value should be a positive floating-point number in the range of (0, 1]. If this is not specified, the default value is 1, which means completely opaque (with shadow configured).
+     * @return ShadowAlpha Shadow transparency. A positive floating-point number in the range of (0, 1]. By default if left blank, the value is 1, which means completely opaque (with shadow configured).
 
      */
     public Float getShadowAlpha() {
@@ -149,9 +149,9 @@ public class SubtitleShadowConfig extends AbstractModel {
     }
 
     /**
-     * Set Shadow transparency. The value should be a positive floating-point number in the range of (0, 1]. If this is not specified, the default value is 1, which means completely opaque (with shadow configured).
+     * Set Shadow transparency. A positive floating-point number in the range of (0, 1]. By default if left blank, the value is 1, which means completely opaque (with shadow configured).
 
-     * @param ShadowAlpha Shadow transparency. The value should be a positive floating-point number in the range of (0, 1]. If this is not specified, the default value is 1, which means completely opaque (with shadow configured).
+     * @param ShadowAlpha Shadow transparency. A positive floating-point number in the range of (0, 1]. By default if left blank, the value is 1, which means completely opaque (with shadow configured).
 
      */
     public void setShadowAlpha(Float ShadowAlpha) {

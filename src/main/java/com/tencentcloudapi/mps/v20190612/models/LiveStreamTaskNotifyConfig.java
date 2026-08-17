@@ -25,8 +25,9 @@ public class LiveStreamTaskNotifyConfig extends AbstractModel {
 
     /**
     * Notification type:
-TDMQ-CMQ: message queue.
-"URL": When a URL is specified, HTTP callbacks are pushed to the address specified by NotifyUrl. The callback protocol is HTTP+JSON. The content of the packet body is the same as the output parameters of [ParseLiveStreamProcessNotification](https://www.tencentcloud.com/document/product/862/39229?from_cn_redirect=1).
+TDMQ-CMQ: Message Queue
+"URL": When a URL is specified, the HTTP callback is pushed to the address specified by NotifyUrl. The callback protocol is http+json. The content of the packet body is the same as the output parameters of the [ParseLiveStreamProcessNotification API](https://www.tencentcloud.com/document/product/862/39229?from_cn_redirect=1).
+
 <Font color="red"> Note: if it is unspecified or left blank, no callback will be sent. To send a callback, fill in the corresponding type value. </font>
     */
     @SerializedName("NotifyType")
@@ -34,7 +35,7 @@ TDMQ-CMQ: message queue.
     private String NotifyType;
 
     /**
-    * HTTP callback URL, required if `NotifyType` is set to `URL`
+    * HTTP callback URL. This is required if NotifyType is URL.
     */
     @SerializedName("NotifyUrl")
     @Expose
@@ -69,8 +70,7 @@ TDMQ-CMQ: message queue.
     private String TopicName;
 
     /**
-    * Key used to generate a callback signature.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("NotifyKey")
     @Expose
@@ -78,12 +78,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get Notification type:
-TDMQ-CMQ: message queue.
-"URL": When a URL is specified, HTTP callbacks are pushed to the address specified by NotifyUrl. The callback protocol is HTTP+JSON. The content of the packet body is the same as the output parameters of [ParseLiveStreamProcessNotification](https://www.tencentcloud.com/document/product/862/39229?from_cn_redirect=1).
+TDMQ-CMQ: Message Queue
+"URL": When a URL is specified, the HTTP callback is pushed to the address specified by NotifyUrl. The callback protocol is http+json. The content of the packet body is the same as the output parameters of the [ParseLiveStreamProcessNotification API](https://www.tencentcloud.com/document/product/862/39229?from_cn_redirect=1).
+
 <Font color="red"> Note: if it is unspecified or left blank, no callback will be sent. To send a callback, fill in the corresponding type value. </font> 
      * @return NotifyType Notification type:
-TDMQ-CMQ: message queue.
-"URL": When a URL is specified, HTTP callbacks are pushed to the address specified by NotifyUrl. The callback protocol is HTTP+JSON. The content of the packet body is the same as the output parameters of [ParseLiveStreamProcessNotification](https://www.tencentcloud.com/document/product/862/39229?from_cn_redirect=1).
+TDMQ-CMQ: Message Queue
+"URL": When a URL is specified, the HTTP callback is pushed to the address specified by NotifyUrl. The callback protocol is http+json. The content of the packet body is the same as the output parameters of the [ParseLiveStreamProcessNotification API](https://www.tencentcloud.com/document/product/862/39229?from_cn_redirect=1).
+
 <Font color="red"> Note: if it is unspecified or left blank, no callback will be sent. To send a callback, fill in the corresponding type value. </font>
      */
     public String getNotifyType() {
@@ -92,12 +94,14 @@ TDMQ-CMQ: message queue.
 
     /**
      * Set Notification type:
-TDMQ-CMQ: message queue.
-"URL": When a URL is specified, HTTP callbacks are pushed to the address specified by NotifyUrl. The callback protocol is HTTP+JSON. The content of the packet body is the same as the output parameters of [ParseLiveStreamProcessNotification](https://www.tencentcloud.com/document/product/862/39229?from_cn_redirect=1).
+TDMQ-CMQ: Message Queue
+"URL": When a URL is specified, the HTTP callback is pushed to the address specified by NotifyUrl. The callback protocol is http+json. The content of the packet body is the same as the output parameters of the [ParseLiveStreamProcessNotification API](https://www.tencentcloud.com/document/product/862/39229?from_cn_redirect=1).
+
 <Font color="red"> Note: if it is unspecified or left blank, no callback will be sent. To send a callback, fill in the corresponding type value. </font>
      * @param NotifyType Notification type:
-TDMQ-CMQ: message queue.
-"URL": When a URL is specified, HTTP callbacks are pushed to the address specified by NotifyUrl. The callback protocol is HTTP+JSON. The content of the packet body is the same as the output parameters of [ParseLiveStreamProcessNotification](https://www.tencentcloud.com/document/product/862/39229?from_cn_redirect=1).
+TDMQ-CMQ: Message Queue
+"URL": When a URL is specified, the HTTP callback is pushed to the address specified by NotifyUrl. The callback protocol is http+json. The content of the packet body is the same as the output parameters of the [ParseLiveStreamProcessNotification API](https://www.tencentcloud.com/document/product/862/39229?from_cn_redirect=1).
+
 <Font color="red"> Note: if it is unspecified or left blank, no callback will be sent. To send a callback, fill in the corresponding type value. </font>
      */
     public void setNotifyType(String NotifyType) {
@@ -105,16 +109,16 @@ TDMQ-CMQ: message queue.
     }
 
     /**
-     * Get HTTP callback URL, required if `NotifyType` is set to `URL` 
-     * @return NotifyUrl HTTP callback URL, required if `NotifyType` is set to `URL`
+     * Get HTTP callback URL. This is required if NotifyType is URL. 
+     * @return NotifyUrl HTTP callback URL. This is required if NotifyType is URL.
      */
     public String getNotifyUrl() {
         return this.NotifyUrl;
     }
 
     /**
-     * Set HTTP callback URL, required if `NotifyType` is set to `URL`
-     * @param NotifyUrl HTTP callback URL, required if `NotifyType` is set to `URL`
+     * Set HTTP callback URL. This is required if NotifyType is URL.
+     * @param NotifyUrl HTTP callback URL. This is required if NotifyType is URL.
      */
     public void setNotifyUrl(String NotifyUrl) {
         this.NotifyUrl = NotifyUrl;
@@ -185,20 +189,16 @@ TDMQ-CMQ: message queue.
     }
 
     /**
-     * Get Key used to generate a callback signature.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return NotifyKey Key used to generate a callback signature.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return NotifyKey 
      */
     public String getNotifyKey() {
         return this.NotifyKey;
     }
 
     /**
-     * Set Key used to generate a callback signature.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param NotifyKey Key used to generate a callback signature.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param NotifyKey 
      */
     public void setNotifyKey(String NotifyKey) {
         this.NotifyKey = NotifyKey;

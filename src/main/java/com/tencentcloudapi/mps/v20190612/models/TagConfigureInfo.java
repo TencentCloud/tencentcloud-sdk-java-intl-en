@@ -24,33 +24,33 @@ import java.util.HashMap;
 public class TagConfigureInfo extends AbstractModel {
 
     /**
-    * Switch of intelligent tagging task. Valid values:
-<li>ON: enables intelligent tagging task;</li>
-<li>OFF: disables intelligent tagging task.</li>
+    * Intelligent tag task switch, available values:
+<li>ON: Enable intelligent tag task.</li>
+<li>OFF: Disables the intelligent tag task.</li>
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-     * Get Switch of intelligent tagging task. Valid values:
-<li>ON: enables intelligent tagging task;</li>
-<li>OFF: disables intelligent tagging task.</li> 
-     * @return Switch Switch of intelligent tagging task. Valid values:
-<li>ON: enables intelligent tagging task;</li>
-<li>OFF: disables intelligent tagging task.</li>
+     * Get Intelligent tag task switch, available values:
+<li>ON: Enable intelligent tag task.</li>
+<li>OFF: Disables the intelligent tag task.</li> 
+     * @return Switch Intelligent tag task switch, available values:
+<li>ON: Enable intelligent tag task.</li>
+<li>OFF: Disables the intelligent tag task.</li>
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set Switch of intelligent tagging task. Valid values:
-<li>ON: enables intelligent tagging task;</li>
-<li>OFF: disables intelligent tagging task.</li>
-     * @param Switch Switch of intelligent tagging task. Valid values:
-<li>ON: enables intelligent tagging task;</li>
-<li>OFF: disables intelligent tagging task.</li>
+     * Set Intelligent tag task switch, available values:
+<li>ON: Enable intelligent tag task.</li>
+<li>OFF: Disables the intelligent tag task.</li>
+     * @param Switch Intelligent tag task switch, available values:
+<li>ON: Enable intelligent tag task.</li>
+<li>OFF: Disables the intelligent tag task.</li>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;

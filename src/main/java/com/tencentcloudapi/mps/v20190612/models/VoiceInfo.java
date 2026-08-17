@@ -94,6 +94,13 @@ public class VoiceInfo extends AbstractModel {
     private String [] Scenes;
 
     /**
+    * 
+    */
+    @SerializedName("Engine")
+    @Expose
+    private String Engine;
+
+    /**
      * Get <p>Voice ID.</p> 
      * @return VoiceId <p>Voice ID.</p>
      */
@@ -253,6 +260,22 @@ public class VoiceInfo extends AbstractModel {
         this.Scenes = Scenes;
     }
 
+    /**
+     * Get  
+     * @return Engine 
+     */
+    public String getEngine() {
+        return this.Engine;
+    }
+
+    /**
+     * Set 
+     * @param Engine 
+     */
+    public void setEngine(String Engine) {
+        this.Engine = Engine;
+    }
+
     public VoiceInfo() {
     }
 
@@ -300,6 +323,9 @@ public class VoiceInfo extends AbstractModel {
                 this.Scenes[i] = new String(source.Scenes[i]);
             }
         }
+        if (source.Engine != null) {
+            this.Engine = new String(source.Engine);
+        }
     }
 
 
@@ -317,6 +343,7 @@ public class VoiceInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "AudioUrl", this.AudioUrl);
         this.setParamArraySimple(map, prefix + "Labels.", this.Labels);
         this.setParamArraySimple(map, prefix + "Scenes.", this.Scenes);
+        this.setParamSimple(map, prefix + "Engine", this.Engine);
 
     }
 }

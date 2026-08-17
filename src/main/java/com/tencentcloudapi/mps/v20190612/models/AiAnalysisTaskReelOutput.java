@@ -24,25 +24,25 @@ import java.util.HashMap;
 public class AiAnalysisTaskReelOutput extends AbstractModel {
 
     /**
-    * Path of the output video.
+    * Path of the commentated video.
     */
     @SerializedName("VideoPath")
     @Expose
     private String VideoPath;
 
     /**
-    * Path list of the output videos.
+    * Path list of the commentated video.
 
-**Note**:.
-1. when returning a file, `VideoPath` returns a file path, and `VideoPaths` likewise populates an element with the same path.
-2. when multiple files are returned, `VideoPath` returns an empty string, and `VideoPaths` returns the file path list.
+**Note**:
+1. When returning a file, `VideoPath` returns a file path, and `VideoPaths` is likewise populated with an element of the same path.
+2. When multiple files are returned, `VideoPath` returns an empty string, and `VideoPaths` returns a file path list.
     */
     @SerializedName("VideoPaths")
     @Expose
     private String [] VideoPaths;
 
     /**
-    * Script file path.
+    * Script file path
 
     */
     @SerializedName("ScriptPath")
@@ -50,64 +50,64 @@ public class AiAnalysisTaskReelOutput extends AbstractModel {
     private String ScriptPath;
 
     /**
-    * Storage location of the output video.
+    * Storage location of the commentated video.
     */
     @SerializedName("OutputStorage")
     @Expose
     private TaskOutputStorage OutputStorage;
 
     /**
-     * Get Path of the output video. 
-     * @return VideoPath Path of the output video.
+     * Get Path of the commentated video. 
+     * @return VideoPath Path of the commentated video.
      */
     public String getVideoPath() {
         return this.VideoPath;
     }
 
     /**
-     * Set Path of the output video.
-     * @param VideoPath Path of the output video.
+     * Set Path of the commentated video.
+     * @param VideoPath Path of the commentated video.
      */
     public void setVideoPath(String VideoPath) {
         this.VideoPath = VideoPath;
     }
 
     /**
-     * Get Path list of the output videos.
+     * Get Path list of the commentated video.
 
-**Note**:.
-1. when returning a file, `VideoPath` returns a file path, and `VideoPaths` likewise populates an element with the same path.
-2. when multiple files are returned, `VideoPath` returns an empty string, and `VideoPaths` returns the file path list. 
-     * @return VideoPaths Path list of the output videos.
+**Note**:
+1. When returning a file, `VideoPath` returns a file path, and `VideoPaths` is likewise populated with an element of the same path.
+2. When multiple files are returned, `VideoPath` returns an empty string, and `VideoPaths` returns a file path list. 
+     * @return VideoPaths Path list of the commentated video.
 
-**Note**:.
-1. when returning a file, `VideoPath` returns a file path, and `VideoPaths` likewise populates an element with the same path.
-2. when multiple files are returned, `VideoPath` returns an empty string, and `VideoPaths` returns the file path list.
+**Note**:
+1. When returning a file, `VideoPath` returns a file path, and `VideoPaths` is likewise populated with an element of the same path.
+2. When multiple files are returned, `VideoPath` returns an empty string, and `VideoPaths` returns a file path list.
      */
     public String [] getVideoPaths() {
         return this.VideoPaths;
     }
 
     /**
-     * Set Path list of the output videos.
+     * Set Path list of the commentated video.
 
-**Note**:.
-1. when returning a file, `VideoPath` returns a file path, and `VideoPaths` likewise populates an element with the same path.
-2. when multiple files are returned, `VideoPath` returns an empty string, and `VideoPaths` returns the file path list.
-     * @param VideoPaths Path list of the output videos.
+**Note**:
+1. When returning a file, `VideoPath` returns a file path, and `VideoPaths` is likewise populated with an element of the same path.
+2. When multiple files are returned, `VideoPath` returns an empty string, and `VideoPaths` returns a file path list.
+     * @param VideoPaths Path list of the commentated video.
 
-**Note**:.
-1. when returning a file, `VideoPath` returns a file path, and `VideoPaths` likewise populates an element with the same path.
-2. when multiple files are returned, `VideoPath` returns an empty string, and `VideoPaths` returns the file path list.
+**Note**:
+1. When returning a file, `VideoPath` returns a file path, and `VideoPaths` is likewise populated with an element of the same path.
+2. When multiple files are returned, `VideoPath` returns an empty string, and `VideoPaths` returns a file path list.
      */
     public void setVideoPaths(String [] VideoPaths) {
         this.VideoPaths = VideoPaths;
     }
 
     /**
-     * Get Script file path.
+     * Get Script file path
  
-     * @return ScriptPath Script file path.
+     * @return ScriptPath Script file path
 
      */
     public String getScriptPath() {
@@ -115,9 +115,9 @@ public class AiAnalysisTaskReelOutput extends AbstractModel {
     }
 
     /**
-     * Set Script file path.
+     * Set Script file path
 
-     * @param ScriptPath Script file path.
+     * @param ScriptPath Script file path
 
      */
     public void setScriptPath(String ScriptPath) {
@@ -125,16 +125,16 @@ public class AiAnalysisTaskReelOutput extends AbstractModel {
     }
 
     /**
-     * Get Storage location of the output video. 
-     * @return OutputStorage Storage location of the output video.
+     * Get Storage location of the commentated video. 
+     * @return OutputStorage Storage location of the commentated video.
      */
     public TaskOutputStorage getOutputStorage() {
         return this.OutputStorage;
     }
 
     /**
-     * Set Storage location of the output video.
-     * @param OutputStorage Storage location of the output video.
+     * Set Storage location of the commentated video.
+     * @param OutputStorage Storage location of the commentated video.
      */
     public void setOutputStorage(TaskOutputStorage OutputStorage) {
         this.OutputStorage = OutputStorage;

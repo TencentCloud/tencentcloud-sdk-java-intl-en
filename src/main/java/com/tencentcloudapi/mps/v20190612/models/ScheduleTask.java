@@ -24,186 +24,171 @@ import java.util.HashMap;
 public class ScheduleTask extends AbstractModel {
 
     /**
-    * The scheme ID.
+    * Orchestration task ID.
     */
     @SerializedName("TaskId")
     @Expose
     private String TaskId;
 
     /**
-    * The scheme status. Valid values:
-<li>PROCESSING</li>
-<li>FINISH</li>
+    * Task flow status. Valid values:
+<li>PROCESSING: Processing;</li>
+<li>FINISH: completed</li>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * If the value returned is not 0, there was a source error. If 0 is returned, refer to the error codes of the corresponding task type.
+    * An error code other than 0 is returned in case of a source exception. Use the error code of the specific task when a value of 0 is returned.
     */
     @SerializedName("ErrCode")
     @Expose
     private Long ErrCode;
 
     /**
-    * If there was a source error, this parameter is the error message. For other errors, refer to the error messages of the corresponding task type.
+    * The corresponding exception message is returned in case of a source exception. If no source exception occurs, use the message of each specific task.
     */
     @SerializedName("Message")
     @Expose
     private String Message;
 
     /**
-    * The information of the file processed.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("InputInfo")
     @Expose
     private MediaInputInfo InputInfo;
 
     /**
-    * The metadata of the source video.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("MetaData")
     @Expose
     private MediaMetaData MetaData;
 
     /**
-    * The output of the scheme.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("ActivityResultSet")
     @Expose
     private ActivityResult [] ActivityResultSet;
 
     /**
-     * Get The scheme ID. 
-     * @return TaskId The scheme ID.
+     * Get Orchestration task ID. 
+     * @return TaskId Orchestration task ID.
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set The scheme ID.
-     * @param TaskId The scheme ID.
+     * Set Orchestration task ID.
+     * @param TaskId Orchestration task ID.
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;
     }
 
     /**
-     * Get The scheme status. Valid values:
-<li>PROCESSING</li>
-<li>FINISH</li> 
-     * @return Status The scheme status. Valid values:
-<li>PROCESSING</li>
-<li>FINISH</li>
+     * Get Task flow status. Valid values:
+<li>PROCESSING: Processing;</li>
+<li>FINISH: completed</li> 
+     * @return Status Task flow status. Valid values:
+<li>PROCESSING: Processing;</li>
+<li>FINISH: completed</li>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set The scheme status. Valid values:
-<li>PROCESSING</li>
-<li>FINISH</li>
-     * @param Status The scheme status. Valid values:
-<li>PROCESSING</li>
-<li>FINISH</li>
+     * Set Task flow status. Valid values:
+<li>PROCESSING: Processing;</li>
+<li>FINISH: completed</li>
+     * @param Status Task flow status. Valid values:
+<li>PROCESSING: Processing;</li>
+<li>FINISH: completed</li>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get If the value returned is not 0, there was a source error. If 0 is returned, refer to the error codes of the corresponding task type. 
-     * @return ErrCode If the value returned is not 0, there was a source error. If 0 is returned, refer to the error codes of the corresponding task type.
+     * Get An error code other than 0 is returned in case of a source exception. Use the error code of the specific task when a value of 0 is returned. 
+     * @return ErrCode An error code other than 0 is returned in case of a source exception. Use the error code of the specific task when a value of 0 is returned.
      */
     public Long getErrCode() {
         return this.ErrCode;
     }
 
     /**
-     * Set If the value returned is not 0, there was a source error. If 0 is returned, refer to the error codes of the corresponding task type.
-     * @param ErrCode If the value returned is not 0, there was a source error. If 0 is returned, refer to the error codes of the corresponding task type.
+     * Set An error code other than 0 is returned in case of a source exception. Use the error code of the specific task when a value of 0 is returned.
+     * @param ErrCode An error code other than 0 is returned in case of a source exception. Use the error code of the specific task when a value of 0 is returned.
      */
     public void setErrCode(Long ErrCode) {
         this.ErrCode = ErrCode;
     }
 
     /**
-     * Get If there was a source error, this parameter is the error message. For other errors, refer to the error messages of the corresponding task type. 
-     * @return Message If there was a source error, this parameter is the error message. For other errors, refer to the error messages of the corresponding task type.
+     * Get The corresponding exception message is returned in case of a source exception. If no source exception occurs, use the message of each specific task. 
+     * @return Message The corresponding exception message is returned in case of a source exception. If no source exception occurs, use the message of each specific task.
      */
     public String getMessage() {
         return this.Message;
     }
 
     /**
-     * Set If there was a source error, this parameter is the error message. For other errors, refer to the error messages of the corresponding task type.
-     * @param Message If there was a source error, this parameter is the error message. For other errors, refer to the error messages of the corresponding task type.
+     * Set The corresponding exception message is returned in case of a source exception. If no source exception occurs, use the message of each specific task.
+     * @param Message The corresponding exception message is returned in case of a source exception. If no source exception occurs, use the message of each specific task.
      */
     public void setMessage(String Message) {
         this.Message = Message;
     }
 
     /**
-     * Get The information of the file processed.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return InputInfo The information of the file processed.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return InputInfo 
      */
     public MediaInputInfo getInputInfo() {
         return this.InputInfo;
     }
 
     /**
-     * Set The information of the file processed.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param InputInfo The information of the file processed.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param InputInfo 
      */
     public void setInputInfo(MediaInputInfo InputInfo) {
         this.InputInfo = InputInfo;
     }
 
     /**
-     * Get The metadata of the source video.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return MetaData The metadata of the source video.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return MetaData 
      */
     public MediaMetaData getMetaData() {
         return this.MetaData;
     }
 
     /**
-     * Set The metadata of the source video.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param MetaData The metadata of the source video.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param MetaData 
      */
     public void setMetaData(MediaMetaData MetaData) {
         this.MetaData = MetaData;
     }
 
     /**
-     * Get The output of the scheme.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ActivityResultSet The output of the scheme.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return ActivityResultSet 
      */
     public ActivityResult [] getActivityResultSet() {
         return this.ActivityResultSet;
     }
 
     /**
-     * Set The output of the scheme.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ActivityResultSet The output of the scheme.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param ActivityResultSet 
      */
     public void setActivityResultSet(ActivityResult [] ActivityResultSet) {
         this.ActivityResultSet = ActivityResultSet;

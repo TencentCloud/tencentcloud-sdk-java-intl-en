@@ -24,102 +24,92 @@ import java.util.HashMap;
 public class QualityControlItem extends AbstractModel {
 
     /**
-    * The confidence score. Value range: 0-100.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("Confidence")
     @Expose
     private Long Confidence;
 
     /**
-    * The start timestamp (second) of the segment.
+    * Start time of occurrence, in seconds.
     */
     @SerializedName("StartTimeOffset")
     @Expose
     private Float StartTimeOffset;
 
     /**
-    * The end timestamp (second) of the segment.
+    * End timestamp of the occurrence, in seconds.
     */
     @SerializedName("EndTimeOffset")
     @Expose
     private Float EndTimeOffset;
 
     /**
-    * The coordinates (px) of the top left and bottom right corner.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("AreaCoordSet")
     @Expose
     private Long [] AreaCoordSet;
 
     /**
-     * Get The confidence score. Value range: 0-100.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Confidence The confidence score. Value range: 0-100.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return Confidence 
      */
     public Long getConfidence() {
         return this.Confidence;
     }
 
     /**
-     * Set The confidence score. Value range: 0-100.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Confidence The confidence score. Value range: 0-100.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param Confidence 
      */
     public void setConfidence(Long Confidence) {
         this.Confidence = Confidence;
     }
 
     /**
-     * Get The start timestamp (second) of the segment. 
-     * @return StartTimeOffset The start timestamp (second) of the segment.
+     * Get Start time of occurrence, in seconds. 
+     * @return StartTimeOffset Start time of occurrence, in seconds.
      */
     public Float getStartTimeOffset() {
         return this.StartTimeOffset;
     }
 
     /**
-     * Set The start timestamp (second) of the segment.
-     * @param StartTimeOffset The start timestamp (second) of the segment.
+     * Set Start time of occurrence, in seconds.
+     * @param StartTimeOffset Start time of occurrence, in seconds.
      */
     public void setStartTimeOffset(Float StartTimeOffset) {
         this.StartTimeOffset = StartTimeOffset;
     }
 
     /**
-     * Get The end timestamp (second) of the segment. 
-     * @return EndTimeOffset The end timestamp (second) of the segment.
+     * Get End timestamp of the occurrence, in seconds. 
+     * @return EndTimeOffset End timestamp of the occurrence, in seconds.
      */
     public Float getEndTimeOffset() {
         return this.EndTimeOffset;
     }
 
     /**
-     * Set The end timestamp (second) of the segment.
-     * @param EndTimeOffset The end timestamp (second) of the segment.
+     * Set End timestamp of the occurrence, in seconds.
+     * @param EndTimeOffset End timestamp of the occurrence, in seconds.
      */
     public void setEndTimeOffset(Float EndTimeOffset) {
         this.EndTimeOffset = EndTimeOffset;
     }
 
     /**
-     * Get The coordinates (px) of the top left and bottom right corner.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return AreaCoordSet The coordinates (px) of the top left and bottom right corner.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return AreaCoordSet 
      */
     public Long [] getAreaCoordSet() {
         return this.AreaCoordSet;
     }
 
     /**
-     * Set The coordinates (px) of the top left and bottom right corner.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param AreaCoordSet The coordinates (px) of the top left and bottom right corner.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param AreaCoordSet 
      */
     public void setAreaCoordSet(Long [] AreaCoordSet) {
         this.AreaCoordSet = AreaCoordSet;

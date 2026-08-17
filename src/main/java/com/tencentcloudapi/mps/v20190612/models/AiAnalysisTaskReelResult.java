@@ -52,38 +52,35 @@ public class AiAnalysisTaskReelResult extends AbstractModel {
     private AiAnalysisTaskReelInput Input;
 
     /**
-    * AI narration and video re-creation task output.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("Output")
     @Expose
     private AiAnalysisTaskReelOutput Output;
 
     /**
-    * Error code. An empty string indicates that the task is successful, while other values indicate that the task has failed. For valid values, see the list of MPS error codes.Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("ErrCodeExt")
     @Expose
     private String ErrCodeExt;
 
     /**
-    * Task progress.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("Progress")
     @Expose
     private Long Progress;
 
     /**
-    * Task start time, in ISO date and time format.Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("BeginProcessTime")
     @Expose
     private String BeginProcessTime;
 
     /**
-    * Task completion time, in ISO date and time format.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("FinishTime")
     @Expose
@@ -154,92 +151,80 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get AI narration and video re-creation task output.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Output AI narration and video re-creation task output.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return Output 
      */
     public AiAnalysisTaskReelOutput getOutput() {
         return this.Output;
     }
 
     /**
-     * Set AI narration and video re-creation task output.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Output AI narration and video re-creation task output.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param Output 
      */
     public void setOutput(AiAnalysisTaskReelOutput Output) {
         this.Output = Output;
     }
 
     /**
-     * Get Error code. An empty string indicates that the task is successful, while other values indicate that the task has failed. For valid values, see the list of MPS error codes.Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ErrCodeExt Error code. An empty string indicates that the task is successful, while other values indicate that the task has failed. For valid values, see the list of MPS error codes.Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return ErrCodeExt 
      */
     public String getErrCodeExt() {
         return this.ErrCodeExt;
     }
 
     /**
-     * Set Error code. An empty string indicates that the task is successful, while other values indicate that the task has failed. For valid values, see the list of MPS error codes.Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ErrCodeExt Error code. An empty string indicates that the task is successful, while other values indicate that the task has failed. For valid values, see the list of MPS error codes.Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param ErrCodeExt 
      */
     public void setErrCodeExt(String ErrCodeExt) {
         this.ErrCodeExt = ErrCodeExt;
     }
 
     /**
-     * Get Task progress.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Progress Task progress.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return Progress 
      */
     public Long getProgress() {
         return this.Progress;
     }
 
     /**
-     * Set Task progress.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Progress Task progress.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param Progress 
      */
     public void setProgress(Long Progress) {
         this.Progress = Progress;
     }
 
     /**
-     * Get Task start time, in ISO date and time format.Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return BeginProcessTime Task start time, in ISO date and time format.Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return BeginProcessTime 
      */
     public String getBeginProcessTime() {
         return this.BeginProcessTime;
     }
 
     /**
-     * Set Task start time, in ISO date and time format.Note: This field may return null, indicating that no valid values can be obtained.
-     * @param BeginProcessTime Task start time, in ISO date and time format.Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param BeginProcessTime 
      */
     public void setBeginProcessTime(String BeginProcessTime) {
         this.BeginProcessTime = BeginProcessTime;
     }
 
     /**
-     * Get Task completion time, in ISO date and time format.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return FinishTime Task completion time, in ISO date and time format.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return FinishTime 
      */
     public String getFinishTime() {
         return this.FinishTime;
     }
 
     /**
-     * Set Task completion time, in ISO date and time format.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param FinishTime Task completion time, in ISO date and time format.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param FinishTime 
      */
     public void setFinishTime(String FinishTime) {
         this.FinishTime = FinishTime;

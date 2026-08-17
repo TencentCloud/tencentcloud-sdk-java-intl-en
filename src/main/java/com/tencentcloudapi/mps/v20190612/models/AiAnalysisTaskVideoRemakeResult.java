@@ -24,120 +24,115 @@ import java.util.HashMap;
 public class AiAnalysisTaskVideoRemakeResult extends AbstractModel {
 
     /**
-    * Specifies the task status. valid values: `PROCESSING`, `SUCCESS`, and `FAIL`.
+    * Task status. Valid values are `PROCESSING`, `SUCCESS`, and `FAIL`.
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * Error code. 0: success. other values: failure.
+    * Error code. 0: successful; other values: failed.
     */
     @SerializedName("ErrCode")
     @Expose
     private Long ErrCode;
 
     /**
-    * Error message.
+    * Error message
     */
     @SerializedName("Message")
     @Expose
     private String Message;
 
     /**
-    * Deduplication task input.
+    * Task input for deduplication
     */
     @SerializedName("Input")
     @Expose
     private AiAnalysisTaskVideoRemakeInput Input;
 
     /**
-    * Task output.
-Note: This field may return null, indicating that no valid value can be obtained.
+    * 
     */
     @SerializedName("Output")
     @Expose
     private AiAnalysisTaskVideoRemakeOutput Output;
 
     /**
-     * Get Specifies the task status. valid values: `PROCESSING`, `SUCCESS`, and `FAIL`. 
-     * @return Status Specifies the task status. valid values: `PROCESSING`, `SUCCESS`, and `FAIL`.
+     * Get Task status. Valid values are `PROCESSING`, `SUCCESS`, and `FAIL`. 
+     * @return Status Task status. Valid values are `PROCESSING`, `SUCCESS`, and `FAIL`.
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Specifies the task status. valid values: `PROCESSING`, `SUCCESS`, and `FAIL`.
-     * @param Status Specifies the task status. valid values: `PROCESSING`, `SUCCESS`, and `FAIL`.
+     * Set Task status. Valid values are `PROCESSING`, `SUCCESS`, and `FAIL`.
+     * @param Status Task status. Valid values are `PROCESSING`, `SUCCESS`, and `FAIL`.
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get Error code. 0: success. other values: failure. 
-     * @return ErrCode Error code. 0: success. other values: failure.
+     * Get Error code. 0: successful; other values: failed. 
+     * @return ErrCode Error code. 0: successful; other values: failed.
      */
     public Long getErrCode() {
         return this.ErrCode;
     }
 
     /**
-     * Set Error code. 0: success. other values: failure.
-     * @param ErrCode Error code. 0: success. other values: failure.
+     * Set Error code. 0: successful; other values: failed.
+     * @param ErrCode Error code. 0: successful; other values: failed.
      */
     public void setErrCode(Long ErrCode) {
         this.ErrCode = ErrCode;
     }
 
     /**
-     * Get Error message. 
-     * @return Message Error message.
+     * Get Error message 
+     * @return Message Error message
      */
     public String getMessage() {
         return this.Message;
     }
 
     /**
-     * Set Error message.
-     * @param Message Error message.
+     * Set Error message
+     * @param Message Error message
      */
     public void setMessage(String Message) {
         this.Message = Message;
     }
 
     /**
-     * Get Deduplication task input. 
-     * @return Input Deduplication task input.
+     * Get Task input for deduplication 
+     * @return Input Task input for deduplication
      */
     public AiAnalysisTaskVideoRemakeInput getInput() {
         return this.Input;
     }
 
     /**
-     * Set Deduplication task input.
-     * @param Input Deduplication task input.
+     * Set Task input for deduplication
+     * @param Input Task input for deduplication
      */
     public void setInput(AiAnalysisTaskVideoRemakeInput Input) {
         this.Input = Input;
     }
 
     /**
-     * Get Task output.
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return Output Task output.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get  
+     * @return Output 
      */
     public AiAnalysisTaskVideoRemakeOutput getOutput() {
         return this.Output;
     }
 
     /**
-     * Set Task output.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param Output Task output.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set 
+     * @param Output 
      */
     public void setOutput(AiAnalysisTaskVideoRemakeOutput Output) {
         this.Output = Output;

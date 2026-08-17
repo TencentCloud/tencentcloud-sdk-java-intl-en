@@ -24,28 +24,28 @@ import java.util.HashMap;
 public class MediaContentReviewAsrTextSegmentItem extends AbstractModel {
 
     /**
-    * Start time offset of a suspected segment in seconds.
+    * Start time offset of a suspected segment, in seconds.
     */
     @SerializedName("StartTimeOffset")
     @Expose
     private Float StartTimeOffset;
 
     /**
-    * End time offset of a suspected segment in seconds.
+    * End time offset of a suspected segment, in seconds.
     */
     @SerializedName("EndTimeOffset")
     @Expose
     private Float EndTimeOffset;
 
     /**
-    * Confidence of a suspected segment.
+    * Confidence degree of the suspected segment.
     */
     @SerializedName("Confidence")
     @Expose
     private Float Confidence;
 
     /**
-    * Suggestion for suspected segment audit. Valid values:
+    * Review result suggestion for suspected segment, value ranges from...to...
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
@@ -55,66 +55,66 @@ public class MediaContentReviewAsrTextSegmentItem extends AbstractModel {
     private String Suggestion;
 
     /**
-    * List of suspected keywords.
+    * Suspicious keyword list.
     */
     @SerializedName("KeywordSet")
     @Expose
     private String [] KeywordSet;
 
     /**
-     * Get Start time offset of a suspected segment in seconds. 
-     * @return StartTimeOffset Start time offset of a suspected segment in seconds.
+     * Get Start time offset of a suspected segment, in seconds. 
+     * @return StartTimeOffset Start time offset of a suspected segment, in seconds.
      */
     public Float getStartTimeOffset() {
         return this.StartTimeOffset;
     }
 
     /**
-     * Set Start time offset of a suspected segment in seconds.
-     * @param StartTimeOffset Start time offset of a suspected segment in seconds.
+     * Set Start time offset of a suspected segment, in seconds.
+     * @param StartTimeOffset Start time offset of a suspected segment, in seconds.
      */
     public void setStartTimeOffset(Float StartTimeOffset) {
         this.StartTimeOffset = StartTimeOffset;
     }
 
     /**
-     * Get End time offset of a suspected segment in seconds. 
-     * @return EndTimeOffset End time offset of a suspected segment in seconds.
+     * Get End time offset of a suspected segment, in seconds. 
+     * @return EndTimeOffset End time offset of a suspected segment, in seconds.
      */
     public Float getEndTimeOffset() {
         return this.EndTimeOffset;
     }
 
     /**
-     * Set End time offset of a suspected segment in seconds.
-     * @param EndTimeOffset End time offset of a suspected segment in seconds.
+     * Set End time offset of a suspected segment, in seconds.
+     * @param EndTimeOffset End time offset of a suspected segment, in seconds.
      */
     public void setEndTimeOffset(Float EndTimeOffset) {
         this.EndTimeOffset = EndTimeOffset;
     }
 
     /**
-     * Get Confidence of a suspected segment. 
-     * @return Confidence Confidence of a suspected segment.
+     * Get Confidence degree of the suspected segment. 
+     * @return Confidence Confidence degree of the suspected segment.
      */
     public Float getConfidence() {
         return this.Confidence;
     }
 
     /**
-     * Set Confidence of a suspected segment.
-     * @param Confidence Confidence of a suspected segment.
+     * Set Confidence degree of the suspected segment.
+     * @param Confidence Confidence degree of the suspected segment.
      */
     public void setConfidence(Float Confidence) {
         this.Confidence = Confidence;
     }
 
     /**
-     * Get Suggestion for suspected segment audit. Valid values:
+     * Get Review result suggestion for suspected segment, value ranges from...to...
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li> 
-     * @return Suggestion Suggestion for suspected segment audit. Valid values:
+     * @return Suggestion Review result suggestion for suspected segment, value ranges from...to...
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
@@ -124,11 +124,11 @@ public class MediaContentReviewAsrTextSegmentItem extends AbstractModel {
     }
 
     /**
-     * Set Suggestion for suspected segment audit. Valid values:
+     * Set Review result suggestion for suspected segment, value ranges from...to...
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
-     * @param Suggestion Suggestion for suspected segment audit. Valid values:
+     * @param Suggestion Review result suggestion for suspected segment, value ranges from...to...
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
@@ -138,16 +138,16 @@ public class MediaContentReviewAsrTextSegmentItem extends AbstractModel {
     }
 
     /**
-     * Get List of suspected keywords. 
-     * @return KeywordSet List of suspected keywords.
+     * Get Suspicious keyword list. 
+     * @return KeywordSet Suspicious keyword list.
      */
     public String [] getKeywordSet() {
         return this.KeywordSet;
     }
 
     /**
-     * Set List of suspected keywords.
-     * @param KeywordSet List of suspected keywords.
+     * Set Suspicious keyword list.
+     * @param KeywordSet Suspicious keyword list.
      */
     public void setKeywordSet(String [] KeywordSet) {
         this.KeywordSet = KeywordSet;

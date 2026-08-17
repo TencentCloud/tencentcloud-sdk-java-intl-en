@@ -38,8 +38,7 @@ public class DescribeBackupUrlResponse extends AbstractModel {
     private String [] InnerDownloadUrl;
 
     /**
-    * Filename. This field will be disused soon.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Filename, this field is gradually being deprecated.
     */
     @SerializedName("Filenames")
     @Expose
@@ -100,10 +99,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Filename. This field will be disused soon.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Filenames Filename. This field will be disused soon.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Filename, this field is gradually being deprecated. 
+     * @return Filenames Filename, this field is gradually being deprecated.
      * @deprecated
      */
     @Deprecated
@@ -112,10 +109,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Filename. This field will be disused soon.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Filenames Filename. This field will be disused soon.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Filename, this field is gradually being deprecated.
+     * @param Filenames Filename, this field is gradually being deprecated.
      * @deprecated
      */
     @Deprecated

@@ -24,56 +24,46 @@ import java.util.HashMap;
 public class AsrHotWordsConfigure extends AbstractModel {
 
     /**
-    * Hotword switch.
-Note: This field may return null, indicating that no valid value can be obtained.
+    * 
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-    * Hotword lexicon ID.
-Note: This field may return null, indicating that no valid value can be obtained.
+    * 
     */
     @SerializedName("LibraryId")
     @Expose
     private String LibraryId;
 
     /**
-     * Get Hotword switch.
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return Switch Hotword switch.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get  
+     * @return Switch 
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set Hotword switch.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param Switch Hotword switch.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set 
+     * @param Switch 
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
     }
 
     /**
-     * Get Hotword lexicon ID.
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return LibraryId Hotword lexicon ID.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get  
+     * @return LibraryId 
      */
     public String getLibraryId() {
         return this.LibraryId;
     }
 
     /**
-     * Set Hotword lexicon ID.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param LibraryId Hotword lexicon ID.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set 
+     * @param LibraryId 
      */
     public void setLibraryId(String LibraryId) {
         this.LibraryId = LibraryId;

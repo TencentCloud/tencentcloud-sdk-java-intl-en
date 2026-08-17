@@ -34,10 +34,10 @@ public class SubtitleBoardConfig extends AbstractModel {
     * Subtitle background base plate x-axis coordinate position; Supports pixel and percentage format:
 
 - Pixel: Npx. Value range of N: [-4096,4096].
--Percentage: N%, N range: [-100,100]. For example, 10% means the X-coordinate of the subtitle background base plate is 10% of the source video width.
+- Percentage: N%, N range: [-100,100]. For example, 10% means the X-coordinate of the subtitle background base plate is 10% of the source video width.
 
 Default value: 0px.
-Note: The origin of the coordinate axes is at the bottom of the central axis of the source video, and the reference position of the subtitle base plate is at the bottom of the central axis, as shown in the figure below.
+Note: The origin point of the coordinate axis is located at the bottom of the central axis of the source video, and the benchmark of the subtitle base plate is at the bottom of its central axis, refer to the figure below.
 ![image](https://ie-mps-1258344699.cos.ap-nanjing.tencentcos.cn/common/cloud/mps-demo/102_ai_subtitle/subtitle_style.png)
 
     */
@@ -53,13 +53,13 @@ Note: The origin of the coordinate axes is at the bottom of the central axis of 
     private Long BoardXUnit;
 
     /**
-    * Subtitle background base plate y-axis coordinate position; Supports pixel and percentage format:
+    * y-axis coordinate position of the subtitle background base plate; supports pixel and percentage format.
 
-- Pixel: Npx. Value range of N: [0,4096].
--Percentage: N%, where N ranges from [0,100]. For example, 10% means the y-coordinate of the subtitle background base plate equals 10% of the video height.
+-.
+-Percentage: N%, N range: [0,100]; for example, 10% means the y-coordinate of the subtitle background base plate = 10% * video height.
 
 If this parameter is not specified, the subtitle background is disabled.
-Note: The origin point of the coordinate axis is located at the bottom of the central axis of the source video, and the benchmark of the subtitle background base plate is at the bottom of its central axis. See the following diagram.
+Note: The origin of the coordinate axes is at the bottom of the central axis of the source video, and the benchmark of the subtitle background base plate is at the bottom of its central axis. See the following diagram:
 ![image](https://ie-mps-1258344699.cos.ap-nanjing.tencentcos.cn/common/cloud/mps-demo/102_ai_subtitle/subtitle_style.png)
 
     */
@@ -78,7 +78,7 @@ Note: The origin point of the coordinate axis is located at the bottom of the ce
     * Background width. The value should be a positive integer.
 - Value range for pixels: [0,4096].
 - Value range for percentages: [0, 100].
-If the base plate is enabled and this parameter is not specified, the default width is 90% of the source video width.
+If background is enabled and this parameter is not specified, the default width is 90% of the source video width.
 
     */
     @SerializedName("BoardWidth")
@@ -97,7 +97,7 @@ If the base plate is enabled and this parameter is not specified, the default wi
     * Background height. The value should be a positive integer.
 - Value range for pixels: [0,4096].
 - Value range for percentages: [0, 100].
-If the base plate is enabled and this parameter is not specified, the default height is 15% of the source video height.
+If background is enabled and this parameter is not specified, the default height is 15% of the source video height.
 
     */
     @SerializedName("BoardHeight")
@@ -150,19 +150,19 @@ Default value: 0.8.
      * Get Subtitle background base plate x-axis coordinate position; Supports pixel and percentage format:
 
 - Pixel: Npx. Value range of N: [-4096,4096].
--Percentage: N%, N range: [-100,100]. For example, 10% means the X-coordinate of the subtitle background base plate is 10% of the source video width.
+- Percentage: N%, N range: [-100,100]. For example, 10% means the X-coordinate of the subtitle background base plate is 10% of the source video width.
 
 Default value: 0px.
-Note: The origin of the coordinate axes is at the bottom of the central axis of the source video, and the reference position of the subtitle base plate is at the bottom of the central axis, as shown in the figure below.
+Note: The origin point of the coordinate axis is located at the bottom of the central axis of the source video, and the benchmark of the subtitle base plate is at the bottom of its central axis, refer to the figure below.
 ![image](https://ie-mps-1258344699.cos.ap-nanjing.tencentcos.cn/common/cloud/mps-demo/102_ai_subtitle/subtitle_style.png)
  
      * @return BoardX Subtitle background base plate x-axis coordinate position; Supports pixel and percentage format:
 
 - Pixel: Npx. Value range of N: [-4096,4096].
--Percentage: N%, N range: [-100,100]. For example, 10% means the X-coordinate of the subtitle background base plate is 10% of the source video width.
+- Percentage: N%, N range: [-100,100]. For example, 10% means the X-coordinate of the subtitle background base plate is 10% of the source video width.
 
 Default value: 0px.
-Note: The origin of the coordinate axes is at the bottom of the central axis of the source video, and the reference position of the subtitle base plate is at the bottom of the central axis, as shown in the figure below.
+Note: The origin point of the coordinate axis is located at the bottom of the central axis of the source video, and the benchmark of the subtitle base plate is at the bottom of its central axis, refer to the figure below.
 ![image](https://ie-mps-1258344699.cos.ap-nanjing.tencentcos.cn/common/cloud/mps-demo/102_ai_subtitle/subtitle_style.png)
 
      */
@@ -174,19 +174,19 @@ Note: The origin of the coordinate axes is at the bottom of the central axis of 
      * Set Subtitle background base plate x-axis coordinate position; Supports pixel and percentage format:
 
 - Pixel: Npx. Value range of N: [-4096,4096].
--Percentage: N%, N range: [-100,100]. For example, 10% means the X-coordinate of the subtitle background base plate is 10% of the source video width.
+- Percentage: N%, N range: [-100,100]. For example, 10% means the X-coordinate of the subtitle background base plate is 10% of the source video width.
 
 Default value: 0px.
-Note: The origin of the coordinate axes is at the bottom of the central axis of the source video, and the reference position of the subtitle base plate is at the bottom of the central axis, as shown in the figure below.
+Note: The origin point of the coordinate axis is located at the bottom of the central axis of the source video, and the benchmark of the subtitle base plate is at the bottom of its central axis, refer to the figure below.
 ![image](https://ie-mps-1258344699.cos.ap-nanjing.tencentcos.cn/common/cloud/mps-demo/102_ai_subtitle/subtitle_style.png)
 
      * @param BoardX Subtitle background base plate x-axis coordinate position; Supports pixel and percentage format:
 
 - Pixel: Npx. Value range of N: [-4096,4096].
--Percentage: N%, N range: [-100,100]. For example, 10% means the X-coordinate of the subtitle background base plate is 10% of the source video width.
+- Percentage: N%, N range: [-100,100]. For example, 10% means the X-coordinate of the subtitle background base plate is 10% of the source video width.
 
 Default value: 0px.
-Note: The origin of the coordinate axes is at the bottom of the central axis of the source video, and the reference position of the subtitle base plate is at the bottom of the central axis, as shown in the figure below.
+Note: The origin point of the coordinate axis is located at the bottom of the central axis of the source video, and the benchmark of the subtitle base plate is at the bottom of its central axis, refer to the figure below.
 ![image](https://ie-mps-1258344699.cos.ap-nanjing.tencentcos.cn/common/cloud/mps-demo/102_ai_subtitle/subtitle_style.png)
 
      */
@@ -211,22 +211,22 @@ Note: The origin of the coordinate axes is at the bottom of the central axis of 
     }
 
     /**
-     * Get Subtitle background base plate y-axis coordinate position; Supports pixel and percentage format:
+     * Get y-axis coordinate position of the subtitle background base plate; supports pixel and percentage format.
 
-- Pixel: Npx. Value range of N: [0,4096].
--Percentage: N%, where N ranges from [0,100]. For example, 10% means the y-coordinate of the subtitle background base plate equals 10% of the video height.
+-.
+-Percentage: N%, N range: [0,100]; for example, 10% means the y-coordinate of the subtitle background base plate = 10% * video height.
 
 If this parameter is not specified, the subtitle background is disabled.
-Note: The origin point of the coordinate axis is located at the bottom of the central axis of the source video, and the benchmark of the subtitle background base plate is at the bottom of its central axis. See the following diagram.
+Note: The origin of the coordinate axes is at the bottom of the central axis of the source video, and the benchmark of the subtitle background base plate is at the bottom of its central axis. See the following diagram:
 ![image](https://ie-mps-1258344699.cos.ap-nanjing.tencentcos.cn/common/cloud/mps-demo/102_ai_subtitle/subtitle_style.png)
  
-     * @return BoardY Subtitle background base plate y-axis coordinate position; Supports pixel and percentage format:
+     * @return BoardY y-axis coordinate position of the subtitle background base plate; supports pixel and percentage format.
 
-- Pixel: Npx. Value range of N: [0,4096].
--Percentage: N%, where N ranges from [0,100]. For example, 10% means the y-coordinate of the subtitle background base plate equals 10% of the video height.
+-.
+-Percentage: N%, N range: [0,100]; for example, 10% means the y-coordinate of the subtitle background base plate = 10% * video height.
 
 If this parameter is not specified, the subtitle background is disabled.
-Note: The origin point of the coordinate axis is located at the bottom of the central axis of the source video, and the benchmark of the subtitle background base plate is at the bottom of its central axis. See the following diagram.
+Note: The origin of the coordinate axes is at the bottom of the central axis of the source video, and the benchmark of the subtitle background base plate is at the bottom of its central axis. See the following diagram:
 ![image](https://ie-mps-1258344699.cos.ap-nanjing.tencentcos.cn/common/cloud/mps-demo/102_ai_subtitle/subtitle_style.png)
 
      */
@@ -235,22 +235,22 @@ Note: The origin point of the coordinate axis is located at the bottom of the ce
     }
 
     /**
-     * Set Subtitle background base plate y-axis coordinate position; Supports pixel and percentage format:
+     * Set y-axis coordinate position of the subtitle background base plate; supports pixel and percentage format.
 
-- Pixel: Npx. Value range of N: [0,4096].
--Percentage: N%, where N ranges from [0,100]. For example, 10% means the y-coordinate of the subtitle background base plate equals 10% of the video height.
+-.
+-Percentage: N%, N range: [0,100]; for example, 10% means the y-coordinate of the subtitle background base plate = 10% * video height.
 
 If this parameter is not specified, the subtitle background is disabled.
-Note: The origin point of the coordinate axis is located at the bottom of the central axis of the source video, and the benchmark of the subtitle background base plate is at the bottom of its central axis. See the following diagram.
+Note: The origin of the coordinate axes is at the bottom of the central axis of the source video, and the benchmark of the subtitle background base plate is at the bottom of its central axis. See the following diagram:
 ![image](https://ie-mps-1258344699.cos.ap-nanjing.tencentcos.cn/common/cloud/mps-demo/102_ai_subtitle/subtitle_style.png)
 
-     * @param BoardY Subtitle background base plate y-axis coordinate position; Supports pixel and percentage format:
+     * @param BoardY y-axis coordinate position of the subtitle background base plate; supports pixel and percentage format.
 
-- Pixel: Npx. Value range of N: [0,4096].
--Percentage: N%, where N ranges from [0,100]. For example, 10% means the y-coordinate of the subtitle background base plate equals 10% of the video height.
+-.
+-Percentage: N%, N range: [0,100]; for example, 10% means the y-coordinate of the subtitle background base plate = 10% * video height.
 
 If this parameter is not specified, the subtitle background is disabled.
-Note: The origin point of the coordinate axis is located at the bottom of the central axis of the source video, and the benchmark of the subtitle background base plate is at the bottom of its central axis. See the following diagram.
+Note: The origin of the coordinate axes is at the bottom of the central axis of the source video, and the benchmark of the subtitle background base plate is at the bottom of its central axis. See the following diagram:
 ![image](https://ie-mps-1258344699.cos.ap-nanjing.tencentcos.cn/common/cloud/mps-demo/102_ai_subtitle/subtitle_style.png)
 
      */
@@ -278,12 +278,12 @@ Note: The origin point of the coordinate axis is located at the bottom of the ce
      * Get Background width. The value should be a positive integer.
 - Value range for pixels: [0,4096].
 - Value range for percentages: [0, 100].
-If the base plate is enabled and this parameter is not specified, the default width is 90% of the source video width.
+If background is enabled and this parameter is not specified, the default width is 90% of the source video width.
  
      * @return BoardWidth Background width. The value should be a positive integer.
 - Value range for pixels: [0,4096].
 - Value range for percentages: [0, 100].
-If the base plate is enabled and this parameter is not specified, the default width is 90% of the source video width.
+If background is enabled and this parameter is not specified, the default width is 90% of the source video width.
 
      */
     public Long getBoardWidth() {
@@ -294,12 +294,12 @@ If the base plate is enabled and this parameter is not specified, the default wi
      * Set Background width. The value should be a positive integer.
 - Value range for pixels: [0,4096].
 - Value range for percentages: [0, 100].
-If the base plate is enabled and this parameter is not specified, the default width is 90% of the source video width.
+If background is enabled and this parameter is not specified, the default width is 90% of the source video width.
 
      * @param BoardWidth Background width. The value should be a positive integer.
 - Value range for pixels: [0,4096].
 - Value range for percentages: [0, 100].
-If the base plate is enabled and this parameter is not specified, the default width is 90% of the source video width.
+If background is enabled and this parameter is not specified, the default width is 90% of the source video width.
 
      */
     public void setBoardWidth(Long BoardWidth) {
@@ -330,12 +330,12 @@ If the base plate is enabled and this parameter is not specified, the default wi
      * Get Background height. The value should be a positive integer.
 - Value range for pixels: [0,4096].
 - Value range for percentages: [0, 100].
-If the base plate is enabled and this parameter is not specified, the default height is 15% of the source video height.
+If background is enabled and this parameter is not specified, the default height is 15% of the source video height.
  
      * @return BoardHeight Background height. The value should be a positive integer.
 - Value range for pixels: [0,4096].
 - Value range for percentages: [0, 100].
-If the base plate is enabled and this parameter is not specified, the default height is 15% of the source video height.
+If background is enabled and this parameter is not specified, the default height is 15% of the source video height.
 
      */
     public Long getBoardHeight() {
@@ -346,12 +346,12 @@ If the base plate is enabled and this parameter is not specified, the default he
      * Set Background height. The value should be a positive integer.
 - Value range for pixels: [0,4096].
 - Value range for percentages: [0, 100].
-If the base plate is enabled and this parameter is not specified, the default height is 15% of the source video height.
+If background is enabled and this parameter is not specified, the default height is 15% of the source video height.
 
      * @param BoardHeight Background height. The value should be a positive integer.
 - Value range for pixels: [0,4096].
 - Value range for percentages: [0, 100].
-If the base plate is enabled and this parameter is not specified, the default height is 15% of the source video height.
+If background is enabled and this parameter is not specified, the default height is 15% of the source video height.
 
      */
     public void setBoardHeight(Long BoardHeight) {

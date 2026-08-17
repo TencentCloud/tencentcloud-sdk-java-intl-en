@@ -31,7 +31,88 @@ public class RecognizeAudioRequest extends AbstractModel {
     private String AudioData;
 
     /**
-    * Target language for recognition. If this is not specified, the language is automatically identified (auto).Note: If the automatic identification provides unsatisfactory results, you can specify the language to improve the accuracy.Supported languages:auto: automatic identification.zh: Simplified Chinese.en: English.ja: Japanese.ko: Korean.vi: Vietnamese.ms: Malay.id: Indonesian.fil: Filipino.th: Thai.pt: Portuguese.tr: Turkish.ar: Arabic.es: Spanish.hi: Hindi.fr: French.de: German.it: Italian.yue: Cantonese.ru: Russian.af: Afrikaans.sq: Albanian.am: Amharic.hy: Armenian.az: Azerbaijani.eu: Basque.bn: Bengali.bs: Bosnian.bg: Bulgarian.my: Burmese.ca: Catalan.hr: Croatian.cs: Czech.da: Danish.nl: Dutch.et: Estonian.fi: Finnish.gl: Galician.ka: Georgian.el: Greek.gu: Gujarati.iw: Hebrew.hu: Hungarian.is: Icelandic.jv: Javanese.kn: Kannada.kk: Kazakh.km: Khmer.rw: Kinyarwanda.lo: Lao.lv: Latvian.lt: Lithuanian.mk: Macedonian.ml: Malayalam.mr: Marathi.mn: Mongolian.ne: Nepali.no: Norwegian Bokmal.fa: Persian.pl: Polish.ro: Romanian.sr: Serbian.si: Sinhala.sk: Slovak.sl: Slovenian.st: Southern Sotho.su: Sundanese.sw: Swahili.sv: Swedish.ta: Tamil.te: Telugu.ts: Tsonga.uk: Ukrainian.ur: Urdu.uz: Uzbek.ve: Vendaxh: Xhosa.zu: Zulu.
+    * Identify the target language. If left empty, the default is auto for automatic language identification.
+Note: If the automatic language recognition performance is poor, you can specify the language to improve accuracy.
+
+Currently supported languages:
+auto-identification
+Simplified Chinese
+en: English
+Japanese
+ko: Korean
+vi: Vietnamese
+ms: Malay
+id: Indonesian
+fil: Filipino
+th: Thai
+pt: Portuguese
+tr:
+ar: Arabic
+es: Spanish
+hi: Hindi
+French
+de: German
+Italian
+Cantonese
+ru: Russian
+af: Afrikaans
+sq: Albanian
+am: Amharic
+hy: Armenian
+az: Azerbaijani
+eu: Basque
+bn: Bengali
+bs: Bosnian
+bg: Bulgarian
+my: Burmese
+ca: Catalan
+hr: Croatian
+cs: Czech
+da: Danish
+nl: Dutch
+et: Estonian
+fi: Finnish
+gl: Galician
+ka: Georgian
+el: Greek
+gu: Gujarati
+iw: Hebrew
+hu: Hungarian
+is: Icelandic
+jv: Javanese
+kn: Kannada
+kk: Kazakh
+km: Khmer
+RPC
+lo: Lao
+lv: Latvian
+lt: Lithuanian
+mk: Macedonian
+ml: Malayalam
+mr: Marathi
+mn: Mongolian
+ne: Nepali
+Norwegian Bokmål
+fa: Persian
+pl: Polish
+ro: Romanian
+sr: Serbian
+si: Sinhalese
+sk: Slovak
+sl: Slovenian
+Southern Sotho
+su: Sundanese
+sw: Swahili
+sv: Swedish
+ta: Tamil
+te: Telugu
+`ts`: Tsonga.
+uk: Ukrainian
+ur: Urdu
+uz: Uzbek
+ve: Venda
+xh: isiXhosa
+zu: Zulu
 
     */
     @SerializedName("Source")
@@ -39,14 +120,21 @@ public class RecognizeAudioRequest extends AbstractModel {
     private String Source;
 
     /**
-    * Audio data format. Default value: pcm.Supported formats:pcm (mono 16-bit PCM data with a sample rate of 16000).ogg-opus (mono Opus-encoded Ogg data with sample rates of 16000, 24000, or 48000).
+    * Audio data format, default is pcm
+
+Supported formats:
+pcm (mono 16-bit sampling pcm data with a 16000 sampling rate)
+ogg-opus (mono Opus-encoded Ogg data with sample rates of 16000, 24000, or 48000).
     */
     @SerializedName("AudioFormat")
     @Expose
     private String AudioFormat;
 
     /**
-    * Audio sample rate.Supported sample rates:pcm 16000
+    * Audio sampling rate
+
+Supported sampling rates:
+pcm 16000
 ogg-opus 16000 / 24000 / 48000
     */
     @SerializedName("SampleRate")
@@ -77,9 +165,171 @@ ogg-opus 16000 / 24000 / 48000
     }
 
     /**
-     * Get Target language for recognition. If this is not specified, the language is automatically identified (auto).Note: If the automatic identification provides unsatisfactory results, you can specify the language to improve the accuracy.Supported languages:auto: automatic identification.zh: Simplified Chinese.en: English.ja: Japanese.ko: Korean.vi: Vietnamese.ms: Malay.id: Indonesian.fil: Filipino.th: Thai.pt: Portuguese.tr: Turkish.ar: Arabic.es: Spanish.hi: Hindi.fr: French.de: German.it: Italian.yue: Cantonese.ru: Russian.af: Afrikaans.sq: Albanian.am: Amharic.hy: Armenian.az: Azerbaijani.eu: Basque.bn: Bengali.bs: Bosnian.bg: Bulgarian.my: Burmese.ca: Catalan.hr: Croatian.cs: Czech.da: Danish.nl: Dutch.et: Estonian.fi: Finnish.gl: Galician.ka: Georgian.el: Greek.gu: Gujarati.iw: Hebrew.hu: Hungarian.is: Icelandic.jv: Javanese.kn: Kannada.kk: Kazakh.km: Khmer.rw: Kinyarwanda.lo: Lao.lv: Latvian.lt: Lithuanian.mk: Macedonian.ml: Malayalam.mr: Marathi.mn: Mongolian.ne: Nepali.no: Norwegian Bokmal.fa: Persian.pl: Polish.ro: Romanian.sr: Serbian.si: Sinhala.sk: Slovak.sl: Slovenian.st: Southern Sotho.su: Sundanese.sw: Swahili.sv: Swedish.ta: Tamil.te: Telugu.ts: Tsonga.uk: Ukrainian.ur: Urdu.uz: Uzbek.ve: Vendaxh: Xhosa.zu: Zulu.
+     * Get Identify the target language. If left empty, the default is auto for automatic language identification.
+Note: If the automatic language recognition performance is poor, you can specify the language to improve accuracy.
+
+Currently supported languages:
+auto-identification
+Simplified Chinese
+en: English
+Japanese
+ko: Korean
+vi: Vietnamese
+ms: Malay
+id: Indonesian
+fil: Filipino
+th: Thai
+pt: Portuguese
+tr:
+ar: Arabic
+es: Spanish
+hi: Hindi
+French
+de: German
+Italian
+Cantonese
+ru: Russian
+af: Afrikaans
+sq: Albanian
+am: Amharic
+hy: Armenian
+az: Azerbaijani
+eu: Basque
+bn: Bengali
+bs: Bosnian
+bg: Bulgarian
+my: Burmese
+ca: Catalan
+hr: Croatian
+cs: Czech
+da: Danish
+nl: Dutch
+et: Estonian
+fi: Finnish
+gl: Galician
+ka: Georgian
+el: Greek
+gu: Gujarati
+iw: Hebrew
+hu: Hungarian
+is: Icelandic
+jv: Javanese
+kn: Kannada
+kk: Kazakh
+km: Khmer
+RPC
+lo: Lao
+lv: Latvian
+lt: Lithuanian
+mk: Macedonian
+ml: Malayalam
+mr: Marathi
+mn: Mongolian
+ne: Nepali
+Norwegian Bokmål
+fa: Persian
+pl: Polish
+ro: Romanian
+sr: Serbian
+si: Sinhalese
+sk: Slovak
+sl: Slovenian
+Southern Sotho
+su: Sundanese
+sw: Swahili
+sv: Swedish
+ta: Tamil
+te: Telugu
+`ts`: Tsonga.
+uk: Ukrainian
+ur: Urdu
+uz: Uzbek
+ve: Venda
+xh: isiXhosa
+zu: Zulu
  
-     * @return Source Target language for recognition. If this is not specified, the language is automatically identified (auto).Note: If the automatic identification provides unsatisfactory results, you can specify the language to improve the accuracy.Supported languages:auto: automatic identification.zh: Simplified Chinese.en: English.ja: Japanese.ko: Korean.vi: Vietnamese.ms: Malay.id: Indonesian.fil: Filipino.th: Thai.pt: Portuguese.tr: Turkish.ar: Arabic.es: Spanish.hi: Hindi.fr: French.de: German.it: Italian.yue: Cantonese.ru: Russian.af: Afrikaans.sq: Albanian.am: Amharic.hy: Armenian.az: Azerbaijani.eu: Basque.bn: Bengali.bs: Bosnian.bg: Bulgarian.my: Burmese.ca: Catalan.hr: Croatian.cs: Czech.da: Danish.nl: Dutch.et: Estonian.fi: Finnish.gl: Galician.ka: Georgian.el: Greek.gu: Gujarati.iw: Hebrew.hu: Hungarian.is: Icelandic.jv: Javanese.kn: Kannada.kk: Kazakh.km: Khmer.rw: Kinyarwanda.lo: Lao.lv: Latvian.lt: Lithuanian.mk: Macedonian.ml: Malayalam.mr: Marathi.mn: Mongolian.ne: Nepali.no: Norwegian Bokmal.fa: Persian.pl: Polish.ro: Romanian.sr: Serbian.si: Sinhala.sk: Slovak.sl: Slovenian.st: Southern Sotho.su: Sundanese.sw: Swahili.sv: Swedish.ta: Tamil.te: Telugu.ts: Tsonga.uk: Ukrainian.ur: Urdu.uz: Uzbek.ve: Vendaxh: Xhosa.zu: Zulu.
+     * @return Source Identify the target language. If left empty, the default is auto for automatic language identification.
+Note: If the automatic language recognition performance is poor, you can specify the language to improve accuracy.
+
+Currently supported languages:
+auto-identification
+Simplified Chinese
+en: English
+Japanese
+ko: Korean
+vi: Vietnamese
+ms: Malay
+id: Indonesian
+fil: Filipino
+th: Thai
+pt: Portuguese
+tr:
+ar: Arabic
+es: Spanish
+hi: Hindi
+French
+de: German
+Italian
+Cantonese
+ru: Russian
+af: Afrikaans
+sq: Albanian
+am: Amharic
+hy: Armenian
+az: Azerbaijani
+eu: Basque
+bn: Bengali
+bs: Bosnian
+bg: Bulgarian
+my: Burmese
+ca: Catalan
+hr: Croatian
+cs: Czech
+da: Danish
+nl: Dutch
+et: Estonian
+fi: Finnish
+gl: Galician
+ka: Georgian
+el: Greek
+gu: Gujarati
+iw: Hebrew
+hu: Hungarian
+is: Icelandic
+jv: Javanese
+kn: Kannada
+kk: Kazakh
+km: Khmer
+RPC
+lo: Lao
+lv: Latvian
+lt: Lithuanian
+mk: Macedonian
+ml: Malayalam
+mr: Marathi
+mn: Mongolian
+ne: Nepali
+Norwegian Bokmål
+fa: Persian
+pl: Polish
+ro: Romanian
+sr: Serbian
+si: Sinhalese
+sk: Slovak
+sl: Slovenian
+Southern Sotho
+su: Sundanese
+sw: Swahili
+sv: Swedish
+ta: Tamil
+te: Telugu
+`ts`: Tsonga.
+uk: Ukrainian
+ur: Urdu
+uz: Uzbek
+ve: Venda
+xh: isiXhosa
+zu: Zulu
 
      */
     public String getSource() {
@@ -87,9 +337,171 @@ ogg-opus 16000 / 24000 / 48000
     }
 
     /**
-     * Set Target language for recognition. If this is not specified, the language is automatically identified (auto).Note: If the automatic identification provides unsatisfactory results, you can specify the language to improve the accuracy.Supported languages:auto: automatic identification.zh: Simplified Chinese.en: English.ja: Japanese.ko: Korean.vi: Vietnamese.ms: Malay.id: Indonesian.fil: Filipino.th: Thai.pt: Portuguese.tr: Turkish.ar: Arabic.es: Spanish.hi: Hindi.fr: French.de: German.it: Italian.yue: Cantonese.ru: Russian.af: Afrikaans.sq: Albanian.am: Amharic.hy: Armenian.az: Azerbaijani.eu: Basque.bn: Bengali.bs: Bosnian.bg: Bulgarian.my: Burmese.ca: Catalan.hr: Croatian.cs: Czech.da: Danish.nl: Dutch.et: Estonian.fi: Finnish.gl: Galician.ka: Georgian.el: Greek.gu: Gujarati.iw: Hebrew.hu: Hungarian.is: Icelandic.jv: Javanese.kn: Kannada.kk: Kazakh.km: Khmer.rw: Kinyarwanda.lo: Lao.lv: Latvian.lt: Lithuanian.mk: Macedonian.ml: Malayalam.mr: Marathi.mn: Mongolian.ne: Nepali.no: Norwegian Bokmal.fa: Persian.pl: Polish.ro: Romanian.sr: Serbian.si: Sinhala.sk: Slovak.sl: Slovenian.st: Southern Sotho.su: Sundanese.sw: Swahili.sv: Swedish.ta: Tamil.te: Telugu.ts: Tsonga.uk: Ukrainian.ur: Urdu.uz: Uzbek.ve: Vendaxh: Xhosa.zu: Zulu.
+     * Set Identify the target language. If left empty, the default is auto for automatic language identification.
+Note: If the automatic language recognition performance is poor, you can specify the language to improve accuracy.
 
-     * @param Source Target language for recognition. If this is not specified, the language is automatically identified (auto).Note: If the automatic identification provides unsatisfactory results, you can specify the language to improve the accuracy.Supported languages:auto: automatic identification.zh: Simplified Chinese.en: English.ja: Japanese.ko: Korean.vi: Vietnamese.ms: Malay.id: Indonesian.fil: Filipino.th: Thai.pt: Portuguese.tr: Turkish.ar: Arabic.es: Spanish.hi: Hindi.fr: French.de: German.it: Italian.yue: Cantonese.ru: Russian.af: Afrikaans.sq: Albanian.am: Amharic.hy: Armenian.az: Azerbaijani.eu: Basque.bn: Bengali.bs: Bosnian.bg: Bulgarian.my: Burmese.ca: Catalan.hr: Croatian.cs: Czech.da: Danish.nl: Dutch.et: Estonian.fi: Finnish.gl: Galician.ka: Georgian.el: Greek.gu: Gujarati.iw: Hebrew.hu: Hungarian.is: Icelandic.jv: Javanese.kn: Kannada.kk: Kazakh.km: Khmer.rw: Kinyarwanda.lo: Lao.lv: Latvian.lt: Lithuanian.mk: Macedonian.ml: Malayalam.mr: Marathi.mn: Mongolian.ne: Nepali.no: Norwegian Bokmal.fa: Persian.pl: Polish.ro: Romanian.sr: Serbian.si: Sinhala.sk: Slovak.sl: Slovenian.st: Southern Sotho.su: Sundanese.sw: Swahili.sv: Swedish.ta: Tamil.te: Telugu.ts: Tsonga.uk: Ukrainian.ur: Urdu.uz: Uzbek.ve: Vendaxh: Xhosa.zu: Zulu.
+Currently supported languages:
+auto-identification
+Simplified Chinese
+en: English
+Japanese
+ko: Korean
+vi: Vietnamese
+ms: Malay
+id: Indonesian
+fil: Filipino
+th: Thai
+pt: Portuguese
+tr:
+ar: Arabic
+es: Spanish
+hi: Hindi
+French
+de: German
+Italian
+Cantonese
+ru: Russian
+af: Afrikaans
+sq: Albanian
+am: Amharic
+hy: Armenian
+az: Azerbaijani
+eu: Basque
+bn: Bengali
+bs: Bosnian
+bg: Bulgarian
+my: Burmese
+ca: Catalan
+hr: Croatian
+cs: Czech
+da: Danish
+nl: Dutch
+et: Estonian
+fi: Finnish
+gl: Galician
+ka: Georgian
+el: Greek
+gu: Gujarati
+iw: Hebrew
+hu: Hungarian
+is: Icelandic
+jv: Javanese
+kn: Kannada
+kk: Kazakh
+km: Khmer
+RPC
+lo: Lao
+lv: Latvian
+lt: Lithuanian
+mk: Macedonian
+ml: Malayalam
+mr: Marathi
+mn: Mongolian
+ne: Nepali
+Norwegian Bokmål
+fa: Persian
+pl: Polish
+ro: Romanian
+sr: Serbian
+si: Sinhalese
+sk: Slovak
+sl: Slovenian
+Southern Sotho
+su: Sundanese
+sw: Swahili
+sv: Swedish
+ta: Tamil
+te: Telugu
+`ts`: Tsonga.
+uk: Ukrainian
+ur: Urdu
+uz: Uzbek
+ve: Venda
+xh: isiXhosa
+zu: Zulu
+
+     * @param Source Identify the target language. If left empty, the default is auto for automatic language identification.
+Note: If the automatic language recognition performance is poor, you can specify the language to improve accuracy.
+
+Currently supported languages:
+auto-identification
+Simplified Chinese
+en: English
+Japanese
+ko: Korean
+vi: Vietnamese
+ms: Malay
+id: Indonesian
+fil: Filipino
+th: Thai
+pt: Portuguese
+tr:
+ar: Arabic
+es: Spanish
+hi: Hindi
+French
+de: German
+Italian
+Cantonese
+ru: Russian
+af: Afrikaans
+sq: Albanian
+am: Amharic
+hy: Armenian
+az: Azerbaijani
+eu: Basque
+bn: Bengali
+bs: Bosnian
+bg: Bulgarian
+my: Burmese
+ca: Catalan
+hr: Croatian
+cs: Czech
+da: Danish
+nl: Dutch
+et: Estonian
+fi: Finnish
+gl: Galician
+ka: Georgian
+el: Greek
+gu: Gujarati
+iw: Hebrew
+hu: Hungarian
+is: Icelandic
+jv: Javanese
+kn: Kannada
+kk: Kazakh
+km: Khmer
+RPC
+lo: Lao
+lv: Latvian
+lt: Lithuanian
+mk: Macedonian
+ml: Malayalam
+mr: Marathi
+mn: Mongolian
+ne: Nepali
+Norwegian Bokmål
+fa: Persian
+pl: Polish
+ro: Romanian
+sr: Serbian
+si: Sinhalese
+sk: Slovak
+sl: Slovenian
+Southern Sotho
+su: Sundanese
+sw: Swahili
+sv: Swedish
+ta: Tamil
+te: Telugu
+`ts`: Tsonga.
+uk: Ukrainian
+ur: Urdu
+uz: Uzbek
+ve: Venda
+xh: isiXhosa
+zu: Zulu
 
      */
     public void setSource(String Source) {
@@ -97,25 +509,47 @@ ogg-opus 16000 / 24000 / 48000
     }
 
     /**
-     * Get Audio data format. Default value: pcm.Supported formats:pcm (mono 16-bit PCM data with a sample rate of 16000).ogg-opus (mono Opus-encoded Ogg data with sample rates of 16000, 24000, or 48000). 
-     * @return AudioFormat Audio data format. Default value: pcm.Supported formats:pcm (mono 16-bit PCM data with a sample rate of 16000).ogg-opus (mono Opus-encoded Ogg data with sample rates of 16000, 24000, or 48000).
+     * Get Audio data format, default is pcm
+
+Supported formats:
+pcm (mono 16-bit sampling pcm data with a 16000 sampling rate)
+ogg-opus (mono Opus-encoded Ogg data with sample rates of 16000, 24000, or 48000). 
+     * @return AudioFormat Audio data format, default is pcm
+
+Supported formats:
+pcm (mono 16-bit sampling pcm data with a 16000 sampling rate)
+ogg-opus (mono Opus-encoded Ogg data with sample rates of 16000, 24000, or 48000).
      */
     public String getAudioFormat() {
         return this.AudioFormat;
     }
 
     /**
-     * Set Audio data format. Default value: pcm.Supported formats:pcm (mono 16-bit PCM data with a sample rate of 16000).ogg-opus (mono Opus-encoded Ogg data with sample rates of 16000, 24000, or 48000).
-     * @param AudioFormat Audio data format. Default value: pcm.Supported formats:pcm (mono 16-bit PCM data with a sample rate of 16000).ogg-opus (mono Opus-encoded Ogg data with sample rates of 16000, 24000, or 48000).
+     * Set Audio data format, default is pcm
+
+Supported formats:
+pcm (mono 16-bit sampling pcm data with a 16000 sampling rate)
+ogg-opus (mono Opus-encoded Ogg data with sample rates of 16000, 24000, or 48000).
+     * @param AudioFormat Audio data format, default is pcm
+
+Supported formats:
+pcm (mono 16-bit sampling pcm data with a 16000 sampling rate)
+ogg-opus (mono Opus-encoded Ogg data with sample rates of 16000, 24000, or 48000).
      */
     public void setAudioFormat(String AudioFormat) {
         this.AudioFormat = AudioFormat;
     }
 
     /**
-     * Get Audio sample rate.Supported sample rates:pcm 16000
+     * Get Audio sampling rate
+
+Supported sampling rates:
+pcm 16000
 ogg-opus 16000 / 24000 / 48000 
-     * @return SampleRate Audio sample rate.Supported sample rates:pcm 16000
+     * @return SampleRate Audio sampling rate
+
+Supported sampling rates:
+pcm 16000
 ogg-opus 16000 / 24000 / 48000
      */
     public Long getSampleRate() {
@@ -123,9 +557,15 @@ ogg-opus 16000 / 24000 / 48000
     }
 
     /**
-     * Set Audio sample rate.Supported sample rates:pcm 16000
+     * Set Audio sampling rate
+
+Supported sampling rates:
+pcm 16000
 ogg-opus 16000 / 24000 / 48000
-     * @param SampleRate Audio sample rate.Supported sample rates:pcm 16000
+     * @param SampleRate Audio sampling rate
+
+Supported sampling rates:
+pcm 16000
 ogg-opus 16000 / 24000 / 48000
      */
     public void setSampleRate(Long SampleRate) {

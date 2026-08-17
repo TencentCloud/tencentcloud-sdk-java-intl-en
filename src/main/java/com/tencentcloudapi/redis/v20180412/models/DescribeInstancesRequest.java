@@ -158,7 +158,9 @@ public class DescribeInstancesRequest extends AbstractModel {
     private Long [] AutoRenew;
 
     /**
-    * Billing mode. Only pay-as-you-go billing is supported.
+    * Billing mode.
+- postpaid: pay-as-you-go.
+- prepaid: monthly subscription.
     */
     @SerializedName("BillingMode")
     @Expose
@@ -578,16 +580,24 @@ public class DescribeInstancesRequest extends AbstractModel {
     }
 
     /**
-     * Get Billing mode. Only pay-as-you-go billing is supported. 
-     * @return BillingMode Billing mode. Only pay-as-you-go billing is supported.
+     * Get Billing mode.
+- postpaid: pay-as-you-go.
+- prepaid: monthly subscription. 
+     * @return BillingMode Billing mode.
+- postpaid: pay-as-you-go.
+- prepaid: monthly subscription.
      */
     public String getBillingMode() {
         return this.BillingMode;
     }
 
     /**
-     * Set Billing mode. Only pay-as-you-go billing is supported.
-     * @param BillingMode Billing mode. Only pay-as-you-go billing is supported.
+     * Set Billing mode.
+- postpaid: pay-as-you-go.
+- prepaid: monthly subscription.
+     * @param BillingMode Billing mode.
+- postpaid: pay-as-you-go.
+- prepaid: monthly subscription.
      */
     public void setBillingMode(String BillingMode) {
         this.BillingMode = BillingMode;

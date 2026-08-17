@@ -24,161 +24,161 @@ import java.util.HashMap;
 public class MediaImageSpriteItem extends AbstractModel {
 
     /**
-    * Image sprite specification. For more information, please see [Image Sprite Parameter Template](https://intl.cloud.tencent.com/document/product/266/33480?from_cn_redirect=1#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF).
+    * Sprite sheet specification, please refer to the [Sprite Sheet Parameter Template](https://www.tencentcloud.com/document/product/266/33480?from_cn_redirect=1#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF).
     */
     @SerializedName("Definition")
     @Expose
     private Long Definition;
 
     /**
-    * Subimage height of an image sprite.
+    * Height of small images in sprite sheet.
     */
     @SerializedName("Height")
     @Expose
     private Long Height;
 
     /**
-    * Subimage width of an image sprite.
+    * Width of small images in sprite sheet.
     */
     @SerializedName("Width")
     @Expose
     private Long Width;
 
     /**
-    * Total number of subimages in each image sprite.
+    * Number of small images in each sprite sheet.
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * Path to each image sprite.
+    * Path of each sprite sheet.
     */
     @SerializedName("ImagePathSet")
     @Expose
     private String [] ImagePathSet;
 
     /**
-    * Path to a WebVtt file for the position-time relationship among subimages in an image sprite. The WebVtt file indicates the corresponding time points of each subimage and their coordinates in the image sprite, which is typically used by the player for implementing preview.
+    * 
     */
     @SerializedName("WebVttPath")
     @Expose
     private String WebVttPath;
 
     /**
-    * Storage location of an image sprite file.
+    * Storage location of the sprite sheet file.
     */
     @SerializedName("Storage")
     @Expose
     private TaskOutputStorage Storage;
 
     /**
-     * Get Image sprite specification. For more information, please see [Image Sprite Parameter Template](https://intl.cloud.tencent.com/document/product/266/33480?from_cn_redirect=1#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF). 
-     * @return Definition Image sprite specification. For more information, please see [Image Sprite Parameter Template](https://intl.cloud.tencent.com/document/product/266/33480?from_cn_redirect=1#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF).
+     * Get Sprite sheet specification, please refer to the [Sprite Sheet Parameter Template](https://www.tencentcloud.com/document/product/266/33480?from_cn_redirect=1#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF). 
+     * @return Definition Sprite sheet specification, please refer to the [Sprite Sheet Parameter Template](https://www.tencentcloud.com/document/product/266/33480?from_cn_redirect=1#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF).
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set Image sprite specification. For more information, please see [Image Sprite Parameter Template](https://intl.cloud.tencent.com/document/product/266/33480?from_cn_redirect=1#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF).
-     * @param Definition Image sprite specification. For more information, please see [Image Sprite Parameter Template](https://intl.cloud.tencent.com/document/product/266/33480?from_cn_redirect=1#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF).
+     * Set Sprite sheet specification, please refer to the [Sprite Sheet Parameter Template](https://www.tencentcloud.com/document/product/266/33480?from_cn_redirect=1#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF).
+     * @param Definition Sprite sheet specification, please refer to the [Sprite Sheet Parameter Template](https://www.tencentcloud.com/document/product/266/33480?from_cn_redirect=1#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF).
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;
     }
 
     /**
-     * Get Subimage height of an image sprite. 
-     * @return Height Subimage height of an image sprite.
+     * Get Height of small images in sprite sheet. 
+     * @return Height Height of small images in sprite sheet.
      */
     public Long getHeight() {
         return this.Height;
     }
 
     /**
-     * Set Subimage height of an image sprite.
-     * @param Height Subimage height of an image sprite.
+     * Set Height of small images in sprite sheet.
+     * @param Height Height of small images in sprite sheet.
      */
     public void setHeight(Long Height) {
         this.Height = Height;
     }
 
     /**
-     * Get Subimage width of an image sprite. 
-     * @return Width Subimage width of an image sprite.
+     * Get Width of small images in sprite sheet. 
+     * @return Width Width of small images in sprite sheet.
      */
     public Long getWidth() {
         return this.Width;
     }
 
     /**
-     * Set Subimage width of an image sprite.
-     * @param Width Subimage width of an image sprite.
+     * Set Width of small images in sprite sheet.
+     * @param Width Width of small images in sprite sheet.
      */
     public void setWidth(Long Width) {
         this.Width = Width;
     }
 
     /**
-     * Get Total number of subimages in each image sprite. 
-     * @return TotalCount Total number of subimages in each image sprite.
+     * Get Number of small images in each sprite sheet. 
+     * @return TotalCount Number of small images in each sprite sheet.
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set Total number of subimages in each image sprite.
-     * @param TotalCount Total number of subimages in each image sprite.
+     * Set Number of small images in each sprite sheet.
+     * @param TotalCount Number of small images in each sprite sheet.
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get Path to each image sprite. 
-     * @return ImagePathSet Path to each image sprite.
+     * Get Path of each sprite sheet. 
+     * @return ImagePathSet Path of each sprite sheet.
      */
     public String [] getImagePathSet() {
         return this.ImagePathSet;
     }
 
     /**
-     * Set Path to each image sprite.
-     * @param ImagePathSet Path to each image sprite.
+     * Set Path of each sprite sheet.
+     * @param ImagePathSet Path of each sprite sheet.
      */
     public void setImagePathSet(String [] ImagePathSet) {
         this.ImagePathSet = ImagePathSet;
     }
 
     /**
-     * Get Path to a WebVtt file for the position-time relationship among subimages in an image sprite. The WebVtt file indicates the corresponding time points of each subimage and their coordinates in the image sprite, which is typically used by the player for implementing preview. 
-     * @return WebVttPath Path to a WebVtt file for the position-time relationship among subimages in an image sprite. The WebVtt file indicates the corresponding time points of each subimage and their coordinates in the image sprite, which is typically used by the player for implementing preview.
+     * Get  
+     * @return WebVttPath 
      */
     public String getWebVttPath() {
         return this.WebVttPath;
     }
 
     /**
-     * Set Path to a WebVtt file for the position-time relationship among subimages in an image sprite. The WebVtt file indicates the corresponding time points of each subimage and their coordinates in the image sprite, which is typically used by the player for implementing preview.
-     * @param WebVttPath Path to a WebVtt file for the position-time relationship among subimages in an image sprite. The WebVtt file indicates the corresponding time points of each subimage and their coordinates in the image sprite, which is typically used by the player for implementing preview.
+     * Set 
+     * @param WebVttPath 
      */
     public void setWebVttPath(String WebVttPath) {
         this.WebVttPath = WebVttPath;
     }
 
     /**
-     * Get Storage location of an image sprite file. 
-     * @return Storage Storage location of an image sprite file.
+     * Get Storage location of the sprite sheet file. 
+     * @return Storage Storage location of the sprite sheet file.
      */
     public TaskOutputStorage getStorage() {
         return this.Storage;
     }
 
     /**
-     * Set Storage location of an image sprite file.
-     * @param Storage Storage location of an image sprite file.
+     * Set Storage location of the sprite sheet file.
+     * @param Storage Storage location of the sprite sheet file.
      */
     public void setStorage(TaskOutputStorage Storage) {
         this.Storage = Storage;

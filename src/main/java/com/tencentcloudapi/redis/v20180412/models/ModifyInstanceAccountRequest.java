@@ -24,229 +24,184 @@ import java.util.HashMap;
 public class ModifyInstanceAccountRequest extends AbstractModel {
 
     /**
-    * Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
+    * <p>Instance ID. Log in to the <a href="https://console.cloud.tencent.com/redis/instance/list">Redis console</a> and copy the instance ID from the instance list.</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Specifies the account that needs modification.
-- root: refers to the automatically generated account when a TencentDB for Redis® instance is created. Users cannot modify read-write permissions for the account, but can only modify its request routing policies.
-- Custom account: an account manually created by users after successful instance creation. Users can modify read-write permissions and request routing policies for the account at any time.
+    * <p>Specify the account that needs modification.</p><ul><li>root: refers to the automatically generated account when a Redis Database Instance is created. Users cannot modify its read-write permissions, but can only modify its request routing strategy.</li><li>Custom account: an account manually created by users once an instance is created successfully. Users can modify its read and write permissions and request routing strategy at any time.</li></ul>
     */
     @SerializedName("AccountName")
     @Expose
     private String AccountName;
 
     /**
-    * Specifies the access password for the account to be modified.
+    * <p>Specifies the access password for the account to be modified.</p>
     */
     @SerializedName("AccountPassword")
     @Expose
     private String AccountPassword;
 
     /**
-    * Account description information.
+    * <p>Account description.</p>
     */
     @SerializedName("Remark")
     @Expose
     private String Remark;
 
     /**
-    * Specifies the read-write request routing policies for the account to be modified.
-- master: read-write request routing to the primary node.
-- replication: read-write request routing to the secondary node.
+    * <p>Specify the policy for request routing of read-write requests for the modified account.</p><ul><li>master: means read-write requests are routed to the primary node.</li><li>replication: means read-write requests are routed to the secondary node.</li></ul>
     */
     @SerializedName("ReadonlyPolicy")
     @Expose
     private String [] ReadonlyPolicy;
 
     /**
-    * Specifies the read-write permissions for the account to be modified.
-- r: read-only.
-- w: write-only.
-- rw: read-write.
+    * <p>Specify the read/write permission of the account to be modified.</p><ul><li>r: Read-only.</li><li>w: Write-only.</li><li>rw: Read-write.</li></ul>
     */
     @SerializedName("Privilege")
     @Expose
     private String Privilege;
 
     /**
-    * Specifies whether to set the default account (root) to a password-free account. Custom accounts do not support password-free access.
-- true: set the default account (root) to a password-free account.
-- false: not set the default account (root) to a password-free account.
+    * <p>Specifies whether to set the default account (root) to a password-free account. Custom accounts do not support password-free access.</p><ul><li>true: The default account (root) is set to a password-free account.</li><li>false: The default account (root) is not set to a password-free account.</li></ul>
     */
     @SerializedName("NoAuth")
     @Expose
     private Boolean NoAuth;
 
     /**
-    * Specifies whether to encrypt the password for the account to be modified.
+    * <p>Whether to enable password encryption for transmission.</p><ul><li>true: Encrypted.</li><li>false: Not encrypted (default value).</li></ul>
     */
     @SerializedName("EncryptPassword")
     @Expose
     private Boolean EncryptPassword;
 
     /**
-     * Get Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list. 
-     * @return InstanceId Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
+     * Get <p>Instance ID. Log in to the <a href="https://console.cloud.tencent.com/redis/instance/list">Redis console</a> and copy the instance ID from the instance list.</p> 
+     * @return InstanceId <p>Instance ID. Log in to the <a href="https://console.cloud.tencent.com/redis/instance/list">Redis console</a> and copy the instance ID from the instance list.</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
-     * @param InstanceId Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
+     * Set <p>Instance ID. Log in to the <a href="https://console.cloud.tencent.com/redis/instance/list">Redis console</a> and copy the instance ID from the instance list.</p>
+     * @param InstanceId <p>Instance ID. Log in to the <a href="https://console.cloud.tencent.com/redis/instance/list">Redis console</a> and copy the instance ID from the instance list.</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Specifies the account that needs modification.
-- root: refers to the automatically generated account when a TencentDB for Redis® instance is created. Users cannot modify read-write permissions for the account, but can only modify its request routing policies.
-- Custom account: an account manually created by users after successful instance creation. Users can modify read-write permissions and request routing policies for the account at any time. 
-     * @return AccountName Specifies the account that needs modification.
-- root: refers to the automatically generated account when a TencentDB for Redis® instance is created. Users cannot modify read-write permissions for the account, but can only modify its request routing policies.
-- Custom account: an account manually created by users after successful instance creation. Users can modify read-write permissions and request routing policies for the account at any time.
+     * Get <p>Specify the account that needs modification.</p><ul><li>root: refers to the automatically generated account when a Redis Database Instance is created. Users cannot modify its read-write permissions, but can only modify its request routing strategy.</li><li>Custom account: an account manually created by users once an instance is created successfully. Users can modify its read and write permissions and request routing strategy at any time.</li></ul> 
+     * @return AccountName <p>Specify the account that needs modification.</p><ul><li>root: refers to the automatically generated account when a Redis Database Instance is created. Users cannot modify its read-write permissions, but can only modify its request routing strategy.</li><li>Custom account: an account manually created by users once an instance is created successfully. Users can modify its read and write permissions and request routing strategy at any time.</li></ul>
      */
     public String getAccountName() {
         return this.AccountName;
     }
 
     /**
-     * Set Specifies the account that needs modification.
-- root: refers to the automatically generated account when a TencentDB for Redis® instance is created. Users cannot modify read-write permissions for the account, but can only modify its request routing policies.
-- Custom account: an account manually created by users after successful instance creation. Users can modify read-write permissions and request routing policies for the account at any time.
-     * @param AccountName Specifies the account that needs modification.
-- root: refers to the automatically generated account when a TencentDB for Redis® instance is created. Users cannot modify read-write permissions for the account, but can only modify its request routing policies.
-- Custom account: an account manually created by users after successful instance creation. Users can modify read-write permissions and request routing policies for the account at any time.
+     * Set <p>Specify the account that needs modification.</p><ul><li>root: refers to the automatically generated account when a Redis Database Instance is created. Users cannot modify its read-write permissions, but can only modify its request routing strategy.</li><li>Custom account: an account manually created by users once an instance is created successfully. Users can modify its read and write permissions and request routing strategy at any time.</li></ul>
+     * @param AccountName <p>Specify the account that needs modification.</p><ul><li>root: refers to the automatically generated account when a Redis Database Instance is created. Users cannot modify its read-write permissions, but can only modify its request routing strategy.</li><li>Custom account: an account manually created by users once an instance is created successfully. Users can modify its read and write permissions and request routing strategy at any time.</li></ul>
      */
     public void setAccountName(String AccountName) {
         this.AccountName = AccountName;
     }
 
     /**
-     * Get Specifies the access password for the account to be modified. 
-     * @return AccountPassword Specifies the access password for the account to be modified.
+     * Get <p>Specifies the access password for the account to be modified.</p> 
+     * @return AccountPassword <p>Specifies the access password for the account to be modified.</p>
      */
     public String getAccountPassword() {
         return this.AccountPassword;
     }
 
     /**
-     * Set Specifies the access password for the account to be modified.
-     * @param AccountPassword Specifies the access password for the account to be modified.
+     * Set <p>Specifies the access password for the account to be modified.</p>
+     * @param AccountPassword <p>Specifies the access password for the account to be modified.</p>
      */
     public void setAccountPassword(String AccountPassword) {
         this.AccountPassword = AccountPassword;
     }
 
     /**
-     * Get Account description information. 
-     * @return Remark Account description information.
+     * Get <p>Account description.</p> 
+     * @return Remark <p>Account description.</p>
      */
     public String getRemark() {
         return this.Remark;
     }
 
     /**
-     * Set Account description information.
-     * @param Remark Account description information.
+     * Set <p>Account description.</p>
+     * @param Remark <p>Account description.</p>
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;
     }
 
     /**
-     * Get Specifies the read-write request routing policies for the account to be modified.
-- master: read-write request routing to the primary node.
-- replication: read-write request routing to the secondary node. 
-     * @return ReadonlyPolicy Specifies the read-write request routing policies for the account to be modified.
-- master: read-write request routing to the primary node.
-- replication: read-write request routing to the secondary node.
+     * Get <p>Specify the policy for request routing of read-write requests for the modified account.</p><ul><li>master: means read-write requests are routed to the primary node.</li><li>replication: means read-write requests are routed to the secondary node.</li></ul> 
+     * @return ReadonlyPolicy <p>Specify the policy for request routing of read-write requests for the modified account.</p><ul><li>master: means read-write requests are routed to the primary node.</li><li>replication: means read-write requests are routed to the secondary node.</li></ul>
      */
     public String [] getReadonlyPolicy() {
         return this.ReadonlyPolicy;
     }
 
     /**
-     * Set Specifies the read-write request routing policies for the account to be modified.
-- master: read-write request routing to the primary node.
-- replication: read-write request routing to the secondary node.
-     * @param ReadonlyPolicy Specifies the read-write request routing policies for the account to be modified.
-- master: read-write request routing to the primary node.
-- replication: read-write request routing to the secondary node.
+     * Set <p>Specify the policy for request routing of read-write requests for the modified account.</p><ul><li>master: means read-write requests are routed to the primary node.</li><li>replication: means read-write requests are routed to the secondary node.</li></ul>
+     * @param ReadonlyPolicy <p>Specify the policy for request routing of read-write requests for the modified account.</p><ul><li>master: means read-write requests are routed to the primary node.</li><li>replication: means read-write requests are routed to the secondary node.</li></ul>
      */
     public void setReadonlyPolicy(String [] ReadonlyPolicy) {
         this.ReadonlyPolicy = ReadonlyPolicy;
     }
 
     /**
-     * Get Specifies the read-write permissions for the account to be modified.
-- r: read-only.
-- w: write-only.
-- rw: read-write. 
-     * @return Privilege Specifies the read-write permissions for the account to be modified.
-- r: read-only.
-- w: write-only.
-- rw: read-write.
+     * Get <p>Specify the read/write permission of the account to be modified.</p><ul><li>r: Read-only.</li><li>w: Write-only.</li><li>rw: Read-write.</li></ul> 
+     * @return Privilege <p>Specify the read/write permission of the account to be modified.</p><ul><li>r: Read-only.</li><li>w: Write-only.</li><li>rw: Read-write.</li></ul>
      */
     public String getPrivilege() {
         return this.Privilege;
     }
 
     /**
-     * Set Specifies the read-write permissions for the account to be modified.
-- r: read-only.
-- w: write-only.
-- rw: read-write.
-     * @param Privilege Specifies the read-write permissions for the account to be modified.
-- r: read-only.
-- w: write-only.
-- rw: read-write.
+     * Set <p>Specify the read/write permission of the account to be modified.</p><ul><li>r: Read-only.</li><li>w: Write-only.</li><li>rw: Read-write.</li></ul>
+     * @param Privilege <p>Specify the read/write permission of the account to be modified.</p><ul><li>r: Read-only.</li><li>w: Write-only.</li><li>rw: Read-write.</li></ul>
      */
     public void setPrivilege(String Privilege) {
         this.Privilege = Privilege;
     }
 
     /**
-     * Get Specifies whether to set the default account (root) to a password-free account. Custom accounts do not support password-free access.
-- true: set the default account (root) to a password-free account.
-- false: not set the default account (root) to a password-free account. 
-     * @return NoAuth Specifies whether to set the default account (root) to a password-free account. Custom accounts do not support password-free access.
-- true: set the default account (root) to a password-free account.
-- false: not set the default account (root) to a password-free account.
+     * Get <p>Specifies whether to set the default account (root) to a password-free account. Custom accounts do not support password-free access.</p><ul><li>true: The default account (root) is set to a password-free account.</li><li>false: The default account (root) is not set to a password-free account.</li></ul> 
+     * @return NoAuth <p>Specifies whether to set the default account (root) to a password-free account. Custom accounts do not support password-free access.</p><ul><li>true: The default account (root) is set to a password-free account.</li><li>false: The default account (root) is not set to a password-free account.</li></ul>
      */
     public Boolean getNoAuth() {
         return this.NoAuth;
     }
 
     /**
-     * Set Specifies whether to set the default account (root) to a password-free account. Custom accounts do not support password-free access.
-- true: set the default account (root) to a password-free account.
-- false: not set the default account (root) to a password-free account.
-     * @param NoAuth Specifies whether to set the default account (root) to a password-free account. Custom accounts do not support password-free access.
-- true: set the default account (root) to a password-free account.
-- false: not set the default account (root) to a password-free account.
+     * Set <p>Specifies whether to set the default account (root) to a password-free account. Custom accounts do not support password-free access.</p><ul><li>true: The default account (root) is set to a password-free account.</li><li>false: The default account (root) is not set to a password-free account.</li></ul>
+     * @param NoAuth <p>Specifies whether to set the default account (root) to a password-free account. Custom accounts do not support password-free access.</p><ul><li>true: The default account (root) is set to a password-free account.</li><li>false: The default account (root) is not set to a password-free account.</li></ul>
      */
     public void setNoAuth(Boolean NoAuth) {
         this.NoAuth = NoAuth;
     }
 
     /**
-     * Get Specifies whether to encrypt the password for the account to be modified. 
-     * @return EncryptPassword Specifies whether to encrypt the password for the account to be modified.
+     * Get <p>Whether to enable password encryption for transmission.</p><ul><li>true: Encrypted.</li><li>false: Not encrypted (default value).</li></ul> 
+     * @return EncryptPassword <p>Whether to enable password encryption for transmission.</p><ul><li>true: Encrypted.</li><li>false: Not encrypted (default value).</li></ul>
      */
     public Boolean getEncryptPassword() {
         return this.EncryptPassword;
     }
 
     /**
-     * Set Specifies whether to encrypt the password for the account to be modified.
-     * @param EncryptPassword Specifies whether to encrypt the password for the account to be modified.
+     * Set <p>Whether to enable password encryption for transmission.</p><ul><li>true: Encrypted.</li><li>false: Not encrypted (default value).</li></ul>
+     * @param EncryptPassword <p>Whether to enable password encryption for transmission.</p><ul><li>true: Encrypted.</li><li>false: Not encrypted (default value).</li></ul>
      */
     public void setEncryptPassword(Boolean EncryptPassword) {
         this.EncryptPassword = EncryptPassword;

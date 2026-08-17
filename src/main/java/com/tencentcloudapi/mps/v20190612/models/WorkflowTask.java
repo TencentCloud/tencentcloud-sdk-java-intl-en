@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class WorkflowTask extends AbstractModel {
 
     /**
-    * The media processing task ID.
+    * Media processing task ID.
     */
     @SerializedName("TaskId")
     @Expose
@@ -33,105 +33,100 @@ public class WorkflowTask extends AbstractModel {
     /**
     * Task flow status. Valid values:
 <li>PROCESSING: Processing;</li>
-<li>FINISH: Completed.</li>
+<li>FINISH: completed</li>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * If the value returned is not 0, there was a source error. If 0 is returned, refer to the error codes of the corresponding task type.
+    * An error code other than 0 is returned in case of a source exception. Use the error code of the specific task when a value of 0 is returned.
     */
     @SerializedName("ErrCode")
     @Expose
     private Long ErrCode;
 
     /**
-    * Except those for source errors, error messages vary with task type.
+    * The corresponding exception message is returned in case of a source exception. If no source exception occurs, use the message of each specific task.
     */
     @SerializedName("Message")
     @Expose
     private String Message;
 
     /**
-    * The information of the file processed.
-Note: This field may return null, indicating that no valid value can be obtained.
+    * 
     */
     @SerializedName("InputInfo")
     @Expose
     private MediaInputInfo InputInfo;
 
     /**
-    * Metadata of a source video.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("MetaData")
     @Expose
     private MediaMetaData MetaData;
 
     /**
-    * The execution status and result of the media processing task.
+    * Execution status and results of a Media Processing Service task.
     */
     @SerializedName("MediaProcessResultSet")
     @Expose
     private MediaProcessTaskResult [] MediaProcessResultSet;
 
     /**
-    * Execution status and result of a video content audit task.
+    * Execution status and results of a video content review task.
     */
     @SerializedName("AiContentReviewResultSet")
     @Expose
     private AiContentReviewResult [] AiContentReviewResultSet;
 
     /**
-    * Execution status and result of video content analysis task.
+    * Execution status and results of a video content analysis task.
     */
     @SerializedName("AiAnalysisResultSet")
     @Expose
     private AiAnalysisResult [] AiAnalysisResultSet;
 
     /**
-    * Execution status and result of a video content recognition task.
+    * Task execution status and results of the video content recognition task.
     */
     @SerializedName("AiRecognitionResultSet")
     @Expose
     private AiRecognitionResult [] AiRecognitionResultSet;
 
     /**
-    * Execution status and results of a media quality inspection task.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("AiQualityControlTaskResult")
     @Expose
     private ScheduleQualityControlTaskResult AiQualityControlTaskResult;
 
     /**
-    * Execution result of the smart subtitle task.
-Note: This field may return null, indicating that no valid value can be obtained.
+    * 
     */
     @SerializedName("SmartSubtitlesTaskResult")
     @Expose
     private SmartSubtitlesResult [] SmartSubtitlesTaskResult;
 
     /**
-    * Execution result of the smart erasure task.
-Note: This field may return null, indicating that no valid value can be obtained.
+    * 
     */
     @SerializedName("SmartEraseTaskResult")
     @Expose
     private SmartEraseTaskResult SmartEraseTaskResult;
 
     /**
-     * Get The media processing task ID. 
-     * @return TaskId The media processing task ID.
+     * Get Media processing task ID. 
+     * @return TaskId Media processing task ID.
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set The media processing task ID.
-     * @param TaskId The media processing task ID.
+     * Set Media processing task ID.
+     * @param TaskId Media processing task ID.
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;
@@ -140,10 +135,10 @@ Note: This field may return null, indicating that no valid value can be obtained
     /**
      * Get Task flow status. Valid values:
 <li>PROCESSING: Processing;</li>
-<li>FINISH: Completed.</li> 
+<li>FINISH: completed</li> 
      * @return Status Task flow status. Valid values:
 <li>PROCESSING: Processing;</li>
-<li>FINISH: Completed.</li>
+<li>FINISH: completed</li>
      */
     public String getStatus() {
         return this.Status;
@@ -152,206 +147,186 @@ Note: This field may return null, indicating that no valid value can be obtained
     /**
      * Set Task flow status. Valid values:
 <li>PROCESSING: Processing;</li>
-<li>FINISH: Completed.</li>
+<li>FINISH: completed</li>
      * @param Status Task flow status. Valid values:
 <li>PROCESSING: Processing;</li>
-<li>FINISH: Completed.</li>
+<li>FINISH: completed</li>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get If the value returned is not 0, there was a source error. If 0 is returned, refer to the error codes of the corresponding task type. 
-     * @return ErrCode If the value returned is not 0, there was a source error. If 0 is returned, refer to the error codes of the corresponding task type.
+     * Get An error code other than 0 is returned in case of a source exception. Use the error code of the specific task when a value of 0 is returned. 
+     * @return ErrCode An error code other than 0 is returned in case of a source exception. Use the error code of the specific task when a value of 0 is returned.
      */
     public Long getErrCode() {
         return this.ErrCode;
     }
 
     /**
-     * Set If the value returned is not 0, there was a source error. If 0 is returned, refer to the error codes of the corresponding task type.
-     * @param ErrCode If the value returned is not 0, there was a source error. If 0 is returned, refer to the error codes of the corresponding task type.
+     * Set An error code other than 0 is returned in case of a source exception. Use the error code of the specific task when a value of 0 is returned.
+     * @param ErrCode An error code other than 0 is returned in case of a source exception. Use the error code of the specific task when a value of 0 is returned.
      */
     public void setErrCode(Long ErrCode) {
         this.ErrCode = ErrCode;
     }
 
     /**
-     * Get Except those for source errors, error messages vary with task type. 
-     * @return Message Except those for source errors, error messages vary with task type.
+     * Get The corresponding exception message is returned in case of a source exception. If no source exception occurs, use the message of each specific task. 
+     * @return Message The corresponding exception message is returned in case of a source exception. If no source exception occurs, use the message of each specific task.
      */
     public String getMessage() {
         return this.Message;
     }
 
     /**
-     * Set Except those for source errors, error messages vary with task type.
-     * @param Message Except those for source errors, error messages vary with task type.
+     * Set The corresponding exception message is returned in case of a source exception. If no source exception occurs, use the message of each specific task.
+     * @param Message The corresponding exception message is returned in case of a source exception. If no source exception occurs, use the message of each specific task.
      */
     public void setMessage(String Message) {
         this.Message = Message;
     }
 
     /**
-     * Get The information of the file processed.
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return InputInfo The information of the file processed.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get  
+     * @return InputInfo 
      */
     public MediaInputInfo getInputInfo() {
         return this.InputInfo;
     }
 
     /**
-     * Set The information of the file processed.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param InputInfo The information of the file processed.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set 
+     * @param InputInfo 
      */
     public void setInputInfo(MediaInputInfo InputInfo) {
         this.InputInfo = InputInfo;
     }
 
     /**
-     * Get Metadata of a source video.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return MetaData Metadata of a source video.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return MetaData 
      */
     public MediaMetaData getMetaData() {
         return this.MetaData;
     }
 
     /**
-     * Set Metadata of a source video.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param MetaData Metadata of a source video.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param MetaData 
      */
     public void setMetaData(MediaMetaData MetaData) {
         this.MetaData = MetaData;
     }
 
     /**
-     * Get The execution status and result of the media processing task. 
-     * @return MediaProcessResultSet The execution status and result of the media processing task.
+     * Get Execution status and results of a Media Processing Service task. 
+     * @return MediaProcessResultSet Execution status and results of a Media Processing Service task.
      */
     public MediaProcessTaskResult [] getMediaProcessResultSet() {
         return this.MediaProcessResultSet;
     }
 
     /**
-     * Set The execution status and result of the media processing task.
-     * @param MediaProcessResultSet The execution status and result of the media processing task.
+     * Set Execution status and results of a Media Processing Service task.
+     * @param MediaProcessResultSet Execution status and results of a Media Processing Service task.
      */
     public void setMediaProcessResultSet(MediaProcessTaskResult [] MediaProcessResultSet) {
         this.MediaProcessResultSet = MediaProcessResultSet;
     }
 
     /**
-     * Get Execution status and result of a video content audit task. 
-     * @return AiContentReviewResultSet Execution status and result of a video content audit task.
+     * Get Execution status and results of a video content review task. 
+     * @return AiContentReviewResultSet Execution status and results of a video content review task.
      */
     public AiContentReviewResult [] getAiContentReviewResultSet() {
         return this.AiContentReviewResultSet;
     }
 
     /**
-     * Set Execution status and result of a video content audit task.
-     * @param AiContentReviewResultSet Execution status and result of a video content audit task.
+     * Set Execution status and results of a video content review task.
+     * @param AiContentReviewResultSet Execution status and results of a video content review task.
      */
     public void setAiContentReviewResultSet(AiContentReviewResult [] AiContentReviewResultSet) {
         this.AiContentReviewResultSet = AiContentReviewResultSet;
     }
 
     /**
-     * Get Execution status and result of video content analysis task. 
-     * @return AiAnalysisResultSet Execution status and result of video content analysis task.
+     * Get Execution status and results of a video content analysis task. 
+     * @return AiAnalysisResultSet Execution status and results of a video content analysis task.
      */
     public AiAnalysisResult [] getAiAnalysisResultSet() {
         return this.AiAnalysisResultSet;
     }
 
     /**
-     * Set Execution status and result of video content analysis task.
-     * @param AiAnalysisResultSet Execution status and result of video content analysis task.
+     * Set Execution status and results of a video content analysis task.
+     * @param AiAnalysisResultSet Execution status and results of a video content analysis task.
      */
     public void setAiAnalysisResultSet(AiAnalysisResult [] AiAnalysisResultSet) {
         this.AiAnalysisResultSet = AiAnalysisResultSet;
     }
 
     /**
-     * Get Execution status and result of a video content recognition task. 
-     * @return AiRecognitionResultSet Execution status and result of a video content recognition task.
+     * Get Task execution status and results of the video content recognition task. 
+     * @return AiRecognitionResultSet Task execution status and results of the video content recognition task.
      */
     public AiRecognitionResult [] getAiRecognitionResultSet() {
         return this.AiRecognitionResultSet;
     }
 
     /**
-     * Set Execution status and result of a video content recognition task.
-     * @param AiRecognitionResultSet Execution status and result of a video content recognition task.
+     * Set Task execution status and results of the video content recognition task.
+     * @param AiRecognitionResultSet Task execution status and results of the video content recognition task.
      */
     public void setAiRecognitionResultSet(AiRecognitionResult [] AiRecognitionResultSet) {
         this.AiRecognitionResultSet = AiRecognitionResultSet;
     }
 
     /**
-     * Get Execution status and results of a media quality inspection task.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return AiQualityControlTaskResult Execution status and results of a media quality inspection task.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return AiQualityControlTaskResult 
      */
     public ScheduleQualityControlTaskResult getAiQualityControlTaskResult() {
         return this.AiQualityControlTaskResult;
     }
 
     /**
-     * Set Execution status and results of a media quality inspection task.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param AiQualityControlTaskResult Execution status and results of a media quality inspection task.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param AiQualityControlTaskResult 
      */
     public void setAiQualityControlTaskResult(ScheduleQualityControlTaskResult AiQualityControlTaskResult) {
         this.AiQualityControlTaskResult = AiQualityControlTaskResult;
     }
 
     /**
-     * Get Execution result of the smart subtitle task.
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return SmartSubtitlesTaskResult Execution result of the smart subtitle task.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get  
+     * @return SmartSubtitlesTaskResult 
      */
     public SmartSubtitlesResult [] getSmartSubtitlesTaskResult() {
         return this.SmartSubtitlesTaskResult;
     }
 
     /**
-     * Set Execution result of the smart subtitle task.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param SmartSubtitlesTaskResult Execution result of the smart subtitle task.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set 
+     * @param SmartSubtitlesTaskResult 
      */
     public void setSmartSubtitlesTaskResult(SmartSubtitlesResult [] SmartSubtitlesTaskResult) {
         this.SmartSubtitlesTaskResult = SmartSubtitlesTaskResult;
     }
 
     /**
-     * Get Execution result of the smart erasure task.
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return SmartEraseTaskResult Execution result of the smart erasure task.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get  
+     * @return SmartEraseTaskResult 
      */
     public SmartEraseTaskResult getSmartEraseTaskResult() {
         return this.SmartEraseTaskResult;
     }
 
     /**
-     * Set Execution result of the smart erasure task.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param SmartEraseTaskResult Execution result of the smart erasure task.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set 
+     * @param SmartEraseTaskResult 
      */
     public void setSmartEraseTaskResult(SmartEraseTaskResult SmartEraseTaskResult) {
         this.SmartEraseTaskResult = SmartEraseTaskResult;

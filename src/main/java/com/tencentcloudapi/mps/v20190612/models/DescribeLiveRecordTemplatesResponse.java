@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeLiveRecordTemplatesResponse extends AbstractModel {
 
     /**
-    * Total number of records that meet filter conditions.
+    * Total number of records that meet the filtering conditions.
     */
     @SerializedName("TotalCount")
     @Expose
@@ -45,16 +45,16 @@ public class DescribeLiveRecordTemplatesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Total number of records that meet filter conditions. 
-     * @return TotalCount Total number of records that meet filter conditions.
+     * Get Total number of records that meet the filtering conditions. 
+     * @return TotalCount Total number of records that meet the filtering conditions.
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set Total number of records that meet filter conditions.
-     * @param TotalCount Total number of records that meet filter conditions.
+     * Set Total number of records that meet the filtering conditions.
+     * @param TotalCount Total number of records that meet the filtering conditions.
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

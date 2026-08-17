@@ -32,17 +32,17 @@ public class EditMediaTask extends AbstractModel {
 
     /**
     * Task status. Valid values:
-<li>PROCESSING: processing;</li>
-<li>FINISH: completed.</li>
+<li>PROCESSING: Processing;</li>
+<li>FINISH: completed</li>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * Error code
-<li>0: success;</li>
-<li>Other values: failure.</li>
+    * Error code.
+<li>0: Success;</li>
+<li>Additional values: fail.</li>
     */
     @SerializedName("ErrCode")
     @Expose
@@ -56,14 +56,14 @@ public class EditMediaTask extends AbstractModel {
     private String Message;
 
     /**
-    * Input of video editing task.
+    * Input for video editing tasks.
     */
     @SerializedName("Input")
     @Expose
     private EditMediaTaskInput Input;
 
     /**
-    * Output of video editing task.
+    * 
     */
     @SerializedName("Output")
     @Expose
@@ -87,11 +87,11 @@ public class EditMediaTask extends AbstractModel {
 
     /**
      * Get Task status. Valid values:
-<li>PROCESSING: processing;</li>
-<li>FINISH: completed.</li> 
+<li>PROCESSING: Processing;</li>
+<li>FINISH: completed</li> 
      * @return Status Task status. Valid values:
-<li>PROCESSING: processing;</li>
-<li>FINISH: completed.</li>
+<li>PROCESSING: Processing;</li>
+<li>FINISH: completed</li>
      */
     public String getStatus() {
         return this.Status;
@@ -99,35 +99,35 @@ public class EditMediaTask extends AbstractModel {
 
     /**
      * Set Task status. Valid values:
-<li>PROCESSING: processing;</li>
-<li>FINISH: completed.</li>
+<li>PROCESSING: Processing;</li>
+<li>FINISH: completed</li>
      * @param Status Task status. Valid values:
-<li>PROCESSING: processing;</li>
-<li>FINISH: completed.</li>
+<li>PROCESSING: Processing;</li>
+<li>FINISH: completed</li>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get Error code
-<li>0: success;</li>
-<li>Other values: failure.</li> 
-     * @return ErrCode Error code
-<li>0: success;</li>
-<li>Other values: failure.</li>
+     * Get Error code.
+<li>0: Success;</li>
+<li>Additional values: fail.</li> 
+     * @return ErrCode Error code.
+<li>0: Success;</li>
+<li>Additional values: fail.</li>
      */
     public Long getErrCode() {
         return this.ErrCode;
     }
 
     /**
-     * Set Error code
-<li>0: success;</li>
-<li>Other values: failure.</li>
-     * @param ErrCode Error code
-<li>0: success;</li>
-<li>Other values: failure.</li>
+     * Set Error code.
+<li>0: Success;</li>
+<li>Additional values: fail.</li>
+     * @param ErrCode Error code.
+<li>0: Success;</li>
+<li>Additional values: fail.</li>
      */
     public void setErrCode(Long ErrCode) {
         this.ErrCode = ErrCode;
@@ -150,32 +150,32 @@ public class EditMediaTask extends AbstractModel {
     }
 
     /**
-     * Get Input of video editing task. 
-     * @return Input Input of video editing task.
+     * Get Input for video editing tasks. 
+     * @return Input Input for video editing tasks.
      */
     public EditMediaTaskInput getInput() {
         return this.Input;
     }
 
     /**
-     * Set Input of video editing task.
-     * @param Input Input of video editing task.
+     * Set Input for video editing tasks.
+     * @param Input Input for video editing tasks.
      */
     public void setInput(EditMediaTaskInput Input) {
         this.Input = Input;
     }
 
     /**
-     * Get Output of video editing task. 
-     * @return Output Output of video editing task.
+     * Get  
+     * @return Output 
      */
     public EditMediaTaskOutput getOutput() {
         return this.Output;
     }
 
     /**
-     * Set Output of video editing task.
-     * @param Output Output of video editing task.
+     * Set 
+     * @param Output 
      */
     public void setOutput(EditMediaTaskOutput Output) {
         this.Output = Output;

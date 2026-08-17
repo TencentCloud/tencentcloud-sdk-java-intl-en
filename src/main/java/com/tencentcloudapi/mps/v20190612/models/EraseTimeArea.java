@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class EraseTimeArea extends AbstractModel {
 
     /**
-    * Start time, in ms.
+    * Start time, unit: ms
     */
     @SerializedName("BeginMs")
     @Expose
     private Long BeginMs;
 
     /**
-    * End time, unit: ms.
+    * End time, unit: ms
     */
     @SerializedName("EndMs")
     @Expose
     private Long EndMs;
 
     /**
-    * Erases the domain list within the period.
+    * Erase domain list during the period
     */
     @SerializedName("Areas")
     @Expose
     private EraseArea [] Areas;
 
     /**
-     * Get Start time, in ms. 
-     * @return BeginMs Start time, in ms.
+     * Get Start time, unit: ms 
+     * @return BeginMs Start time, unit: ms
      */
     public Long getBeginMs() {
         return this.BeginMs;
     }
 
     /**
-     * Set Start time, in ms.
-     * @param BeginMs Start time, in ms.
+     * Set Start time, unit: ms
+     * @param BeginMs Start time, unit: ms
      */
     public void setBeginMs(Long BeginMs) {
         this.BeginMs = BeginMs;
     }
 
     /**
-     * Get End time, unit: ms. 
-     * @return EndMs End time, unit: ms.
+     * Get End time, unit: ms 
+     * @return EndMs End time, unit: ms
      */
     public Long getEndMs() {
         return this.EndMs;
     }
 
     /**
-     * Set End time, unit: ms.
-     * @param EndMs End time, unit: ms.
+     * Set End time, unit: ms
+     * @param EndMs End time, unit: ms
      */
     public void setEndMs(Long EndMs) {
         this.EndMs = EndMs;
     }
 
     /**
-     * Get Erases the domain list within the period. 
-     * @return Areas Erases the domain list within the period.
+     * Get Erase domain list during the period 
+     * @return Areas Erase domain list during the period
      */
     public EraseArea [] getAreas() {
         return this.Areas;
     }
 
     /**
-     * Set Erases the domain list within the period.
-     * @param Areas Erases the domain list within the period.
+     * Set Erase domain list during the period
+     * @param Areas Erase domain list during the period
      */
     public void setAreas(EraseArea [] Areas) {
         this.Areas = Areas;

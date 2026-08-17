@@ -24,107 +24,92 @@ import java.util.HashMap;
 public class EditMediaFileInfo extends AbstractModel {
 
     /**
-    * Video input information.
+    * Input video information.
     */
     @SerializedName("InputInfo")
     @Expose
     private MediaInputInfo InputInfo;
 
     /**
-    * The start offset (seconds) for video clipping. This parameter is valid for video clipping tasks.
+    * [Edit] task takes effect, video editing start time offset, measurement unit: second.
     */
     @SerializedName("StartTimeOffset")
     @Expose
     private Float StartTimeOffset;
 
     /**
-    * The end offset (seconds) for video clipping. This parameter is valid for video clipping tasks.
+    * [Edit] task takes effect, video editing end time offset, measurement unit: second.
     */
     @SerializedName("EndTimeOffset")
     @Expose
     private Float EndTimeOffset;
 
     /**
-    * The ID of the material associated with an element. This parameter is required for video compositing tasks.
-
-Note: The ID can be up to 32 characters long and can contain letters, digits, and special characters -_
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("Id")
     @Expose
     private String Id;
 
     /**
-     * Get Video input information. 
-     * @return InputInfo Video input information.
+     * Get Input video information. 
+     * @return InputInfo Input video information.
      */
     public MediaInputInfo getInputInfo() {
         return this.InputInfo;
     }
 
     /**
-     * Set Video input information.
-     * @param InputInfo Video input information.
+     * Set Input video information.
+     * @param InputInfo Input video information.
      */
     public void setInputInfo(MediaInputInfo InputInfo) {
         this.InputInfo = InputInfo;
     }
 
     /**
-     * Get The start offset (seconds) for video clipping. This parameter is valid for video clipping tasks. 
-     * @return StartTimeOffset The start offset (seconds) for video clipping. This parameter is valid for video clipping tasks.
+     * Get [Edit] task takes effect, video editing start time offset, measurement unit: second. 
+     * @return StartTimeOffset [Edit] task takes effect, video editing start time offset, measurement unit: second.
      */
     public Float getStartTimeOffset() {
         return this.StartTimeOffset;
     }
 
     /**
-     * Set The start offset (seconds) for video clipping. This parameter is valid for video clipping tasks.
-     * @param StartTimeOffset The start offset (seconds) for video clipping. This parameter is valid for video clipping tasks.
+     * Set [Edit] task takes effect, video editing start time offset, measurement unit: second.
+     * @param StartTimeOffset [Edit] task takes effect, video editing start time offset, measurement unit: second.
      */
     public void setStartTimeOffset(Float StartTimeOffset) {
         this.StartTimeOffset = StartTimeOffset;
     }
 
     /**
-     * Get The end offset (seconds) for video clipping. This parameter is valid for video clipping tasks. 
-     * @return EndTimeOffset The end offset (seconds) for video clipping. This parameter is valid for video clipping tasks.
+     * Get [Edit] task takes effect, video editing end time offset, measurement unit: second. 
+     * @return EndTimeOffset [Edit] task takes effect, video editing end time offset, measurement unit: second.
      */
     public Float getEndTimeOffset() {
         return this.EndTimeOffset;
     }
 
     /**
-     * Set The end offset (seconds) for video clipping. This parameter is valid for video clipping tasks.
-     * @param EndTimeOffset The end offset (seconds) for video clipping. This parameter is valid for video clipping tasks.
+     * Set [Edit] task takes effect, video editing end time offset, measurement unit: second.
+     * @param EndTimeOffset [Edit] task takes effect, video editing end time offset, measurement unit: second.
      */
     public void setEndTimeOffset(Float EndTimeOffset) {
         this.EndTimeOffset = EndTimeOffset;
     }
 
     /**
-     * Get The ID of the material associated with an element. This parameter is required for video compositing tasks.
-
-Note: The ID can be up to 32 characters long and can contain letters, digits, and special characters -_
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Id The ID of the material associated with an element. This parameter is required for video compositing tasks.
-
-Note: The ID can be up to 32 characters long and can contain letters, digits, and special characters -_
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return Id 
      */
     public String getId() {
         return this.Id;
     }
 
     /**
-     * Set The ID of the material associated with an element. This parameter is required for video compositing tasks.
-
-Note: The ID can be up to 32 characters long and can contain letters, digits, and special characters -_
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Id The ID of the material associated with an element. This parameter is required for video compositing tasks.
-
-Note: The ID can be up to 32 characters long and can contain letters, digits, and special characters -_
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param Id 
      */
     public void setId(String Id) {
         this.Id = Id;

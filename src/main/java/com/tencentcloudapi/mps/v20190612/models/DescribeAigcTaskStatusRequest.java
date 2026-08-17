@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DescribeAigcTaskStatusRequest extends AbstractModel {
 
     /**
-    * <p>Task ID.</p>
+    * 
     */
     @SerializedName("TaskId")
     @Expose
     private String TaskId;
 
     /**
-     * Get <p>Task ID.</p> 
-     * @return TaskId <p>Task ID.</p>
+     * Get  
+     * @return TaskId 
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set <p>Task ID.</p>
-     * @param TaskId <p>Task ID.</p>
+     * Set 
+     * @param TaskId 
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;

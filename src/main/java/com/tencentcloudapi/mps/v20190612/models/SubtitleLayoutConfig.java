@@ -32,8 +32,8 @@ public class SubtitleLayoutConfig extends AbstractModel {
 
     /**
     * Line spacing. The value should be a positive integer.
--Value range for pixels: [0, 1000].
-- Value range for percentages: [0, 100]. If this is not specified, the default value is 0.
+- Value range for pixels: [0, 1000].
+- Value range for percentages: [0, 100]. If left blank, the default is 0.
 
     */
     @SerializedName("LineSpacing")
@@ -41,7 +41,7 @@ public class SubtitleLayoutConfig extends AbstractModel {
     private Long LineSpacing;
 
     /**
-    * LineSpacing unit, 0 pixel, 1 percentage, defaults to 0, pixel
+    * LineSpacing measurement unit, 0 pixel, 1 percentage, defaults to 0, pixel
 
     */
     @SerializedName("LineSpacingUnit")
@@ -74,12 +74,12 @@ public class SubtitleLayoutConfig extends AbstractModel {
 
     /**
      * Get Line spacing. The value should be a positive integer.
--Value range for pixels: [0, 1000].
-- Value range for percentages: [0, 100]. If this is not specified, the default value is 0.
+- Value range for pixels: [0, 1000].
+- Value range for percentages: [0, 100]. If left blank, the default is 0.
  
      * @return LineSpacing Line spacing. The value should be a positive integer.
--Value range for pixels: [0, 1000].
-- Value range for percentages: [0, 100]. If this is not specified, the default value is 0.
+- Value range for pixels: [0, 1000].
+- Value range for percentages: [0, 100]. If left blank, the default is 0.
 
      */
     public Long getLineSpacing() {
@@ -88,12 +88,12 @@ public class SubtitleLayoutConfig extends AbstractModel {
 
     /**
      * Set Line spacing. The value should be a positive integer.
--Value range for pixels: [0, 1000].
-- Value range for percentages: [0, 100]. If this is not specified, the default value is 0.
+- Value range for pixels: [0, 1000].
+- Value range for percentages: [0, 100]. If left blank, the default is 0.
 
      * @param LineSpacing Line spacing. The value should be a positive integer.
--Value range for pixels: [0, 1000].
-- Value range for percentages: [0, 100]. If this is not specified, the default value is 0.
+- Value range for pixels: [0, 1000].
+- Value range for percentages: [0, 100]. If left blank, the default is 0.
 
      */
     public void setLineSpacing(Long LineSpacing) {
@@ -101,9 +101,9 @@ public class SubtitleLayoutConfig extends AbstractModel {
     }
 
     /**
-     * Get LineSpacing unit, 0 pixel, 1 percentage, defaults to 0, pixel
+     * Get LineSpacing measurement unit, 0 pixel, 1 percentage, defaults to 0, pixel
  
-     * @return LineSpacingUnit LineSpacing unit, 0 pixel, 1 percentage, defaults to 0, pixel
+     * @return LineSpacingUnit LineSpacing measurement unit, 0 pixel, 1 percentage, defaults to 0, pixel
 
      */
     public Long getLineSpacingUnit() {
@@ -111,9 +111,9 @@ public class SubtitleLayoutConfig extends AbstractModel {
     }
 
     /**
-     * Set LineSpacing unit, 0 pixel, 1 percentage, defaults to 0, pixel
+     * Set LineSpacing measurement unit, 0 pixel, 1 percentage, defaults to 0, pixel
 
-     * @param LineSpacingUnit LineSpacing unit, 0 pixel, 1 percentage, defaults to 0, pixel
+     * @param LineSpacingUnit LineSpacing measurement unit, 0 pixel, 1 percentage, defaults to 0, pixel
 
      */
     public void setLineSpacingUnit(Long LineSpacingUnit) {

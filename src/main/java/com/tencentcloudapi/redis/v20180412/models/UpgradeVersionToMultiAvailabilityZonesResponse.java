@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class UpgradeVersionToMultiAvailabilityZonesResponse extends AbstractModel {
 
     /**
-    * Task ID
+    * <p>Task ID.</p>
     */
     @SerializedName("FlowId")
     @Expose
@@ -38,16 +38,16 @@ public class UpgradeVersionToMultiAvailabilityZonesResponse extends AbstractMode
     private String RequestId;
 
     /**
-     * Get Task ID 
-     * @return FlowId Task ID
+     * Get <p>Task ID.</p> 
+     * @return FlowId <p>Task ID.</p>
      */
     public Long getFlowId() {
         return this.FlowId;
     }
 
     /**
-     * Set Task ID
-     * @param FlowId Task ID
+     * Set <p>Task ID.</p>
+     * @param FlowId <p>Task ID.</p>
      */
     public void setFlowId(Long FlowId) {
         this.FlowId = FlowId;

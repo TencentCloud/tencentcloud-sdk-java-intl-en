@@ -24,66 +24,66 @@ import java.util.HashMap;
 public class SmartErasePrivacyConfig extends AbstractModel {
 
     /**
-    * Specifies the privacy protection removal method.
--Blur: specifies the blur detection.
--Specifies the mosaic.
+    * Privacy protection removal method.
+- Blur: blur detection
+- mosaic
     */
     @SerializedName("PrivacyModel")
     @Expose
     private String PrivacyModel;
 
     /**
-    * Privacy protection objective. no need to import an array when in use on API Explorer. just add the corresponding item and fill in the value.
--Human face.
--License plate.
+    * Privacy protection target. (When API Explorer is used, no need to specify an array. Just add the corresponding items and fill in the value.)
+-Human face
+- plate: license plate.
     */
     @SerializedName("PrivacyTargets")
     @Expose
     private String [] PrivacyTargets;
 
     /**
-     * Get Specifies the privacy protection removal method.
--Blur: specifies the blur detection.
--Specifies the mosaic. 
-     * @return PrivacyModel Specifies the privacy protection removal method.
--Blur: specifies the blur detection.
--Specifies the mosaic.
+     * Get Privacy protection removal method.
+- Blur: blur detection
+- mosaic 
+     * @return PrivacyModel Privacy protection removal method.
+- Blur: blur detection
+- mosaic
      */
     public String getPrivacyModel() {
         return this.PrivacyModel;
     }
 
     /**
-     * Set Specifies the privacy protection removal method.
--Blur: specifies the blur detection.
--Specifies the mosaic.
-     * @param PrivacyModel Specifies the privacy protection removal method.
--Blur: specifies the blur detection.
--Specifies the mosaic.
+     * Set Privacy protection removal method.
+- Blur: blur detection
+- mosaic
+     * @param PrivacyModel Privacy protection removal method.
+- Blur: blur detection
+- mosaic
      */
     public void setPrivacyModel(String PrivacyModel) {
         this.PrivacyModel = PrivacyModel;
     }
 
     /**
-     * Get Privacy protection objective. no need to import an array when in use on API Explorer. just add the corresponding item and fill in the value.
--Human face.
--License plate. 
-     * @return PrivacyTargets Privacy protection objective. no need to import an array when in use on API Explorer. just add the corresponding item and fill in the value.
--Human face.
--License plate.
+     * Get Privacy protection target. (When API Explorer is used, no need to specify an array. Just add the corresponding items and fill in the value.)
+-Human face
+- plate: license plate. 
+     * @return PrivacyTargets Privacy protection target. (When API Explorer is used, no need to specify an array. Just add the corresponding items and fill in the value.)
+-Human face
+- plate: license plate.
      */
     public String [] getPrivacyTargets() {
         return this.PrivacyTargets;
     }
 
     /**
-     * Set Privacy protection objective. no need to import an array when in use on API Explorer. just add the corresponding item and fill in the value.
--Human face.
--License plate.
-     * @param PrivacyTargets Privacy protection objective. no need to import an array when in use on API Explorer. just add the corresponding item and fill in the value.
--Human face.
--License plate.
+     * Set Privacy protection target. (When API Explorer is used, no need to specify an array. Just add the corresponding items and fill in the value.)
+-Human face
+- plate: license plate.
+     * @param PrivacyTargets Privacy protection target. (When API Explorer is used, no need to specify an array. Just add the corresponding items and fill in the value.)
+-Human face
+- plate: license plate.
      */
     public void setPrivacyTargets(String [] PrivacyTargets) {
         this.PrivacyTargets = PrivacyTargets;

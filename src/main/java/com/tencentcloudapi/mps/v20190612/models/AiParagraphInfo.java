@@ -24,8 +24,7 @@ import java.util.HashMap;
 public class AiParagraphInfo extends AbstractModel {
 
     /**
-    * Segment summary.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("Summary")
     @Expose
@@ -39,43 +38,37 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String Title;
 
     /**
-    * Segment keywords.
+    * Segment keyword.
     */
     @SerializedName("Keywords")
     @Expose
     private String [] Keywords;
 
     /**
-    * Segmentation start time point, in seconds.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("StartTimeOffset")
     @Expose
     private Float StartTimeOffset;
 
     /**
-    * Segmentation end time point, in seconds.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("EndTimeOffset")
     @Expose
     private Float EndTimeOffset;
 
     /**
-     * Get Segment summary.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Summary Segment summary.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return Summary 
      */
     public String getSummary() {
         return this.Summary;
     }
 
     /**
-     * Set Segment summary.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Summary Segment summary.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param Summary 
      */
     public void setSummary(String Summary) {
         this.Summary = Summary;
@@ -98,56 +91,48 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Segment keywords. 
-     * @return Keywords Segment keywords.
+     * Get Segment keyword. 
+     * @return Keywords Segment keyword.
      */
     public String [] getKeywords() {
         return this.Keywords;
     }
 
     /**
-     * Set Segment keywords.
-     * @param Keywords Segment keywords.
+     * Set Segment keyword.
+     * @param Keywords Segment keyword.
      */
     public void setKeywords(String [] Keywords) {
         this.Keywords = Keywords;
     }
 
     /**
-     * Get Segmentation start time point, in seconds.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return StartTimeOffset Segmentation start time point, in seconds.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return StartTimeOffset 
      */
     public Float getStartTimeOffset() {
         return this.StartTimeOffset;
     }
 
     /**
-     * Set Segmentation start time point, in seconds.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param StartTimeOffset Segmentation start time point, in seconds.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param StartTimeOffset 
      */
     public void setStartTimeOffset(Float StartTimeOffset) {
         this.StartTimeOffset = StartTimeOffset;
     }
 
     /**
-     * Get Segmentation end time point, in seconds.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return EndTimeOffset Segmentation end time point, in seconds.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return EndTimeOffset 
      */
     public Float getEndTimeOffset() {
         return this.EndTimeOffset;
     }
 
     /**
-     * Set Segmentation end time point, in seconds.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param EndTimeOffset Segmentation end time point, in seconds.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param EndTimeOffset 
      */
     public void setEndTimeOffset(Float EndTimeOffset) {
         this.EndTimeOffset = EndTimeOffset;

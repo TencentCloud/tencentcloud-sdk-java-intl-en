@@ -24,70 +24,70 @@ import java.util.HashMap;
 public class QualityControlItemConfig extends AbstractModel {
 
     /**
-    * Quality inspection item name. valid values:.
-<li>LowEvaluation: specifies the no-reference MOS score of the video.</li>.
-<li>AudioEvaluation: specifies the no-reference MOS score of the audio.</li>.
-<Li>Mosaic: mosaic detection.</li>.
-<Li>CrashScreen: specifies screen glitch detection.</li>.
-<Li>Blur: specifies blur detection.</li>.
-<Li>Jitter: jitter detection.</li>.
-<Li>Noise: noise detection.</li>.
-<Li>QRCode: qr code detection.</li>.
-<Li>BarCode: specifies barcode detection.</li>.
-<Li>AppletCode: specifies mini program code detection.</li>.
-<Li>BlackWhiteEdge: specifies black and white edge detection.</li>.
-<Li>SolidColorScreen: specifies solid color screen detection.</li>.
-<Li>LowLighting: specifies low light.</li>.
-<Li>HighLighting: overexposure.</li>.
-<Li>NoVoice: specifies silence detection.</li>.
-<Li>LowVoice: specifies bass detection.</li>.
-<Li>HighVoice: explosion noise detection.</li>.
-<Li>AudioNoise: specifies audio noise detection.</li>.
-<Li>VideoResolutionChanged: specifies the video resolution change.</li>.
-<Li>AudioSampleRateChanged: specifies the audio sample rate change.</li>.
-<Li>AudioChannelsChanged: indicates the audio channel quantity change.</li>.
-<Li>ParameterSetsChanged: indicates the stream parameter set information has changed.</li>.
-<Li>DarOrSarInvalid: indicates an abnormal video aspect ratio.</li>.
-<li>TimestampFallback: specifies DTS timestamp rollback.</li>.
-<li>DtsJitter: specifies excessive DTS jitter.</li>.
-<li>PtsJitter: indicates excessive PTS jitter.</li>.
-<Li>AACDurationDeviation: specifies an improper aac frame timestamp interval.</li>.
-<Li>AudioDroppingFrames: indicates audio frame dropping.</li>.
-<Li>VideoDroppingFrames: specifies video frame dropping.</li>.
-<Li>AVTimestampInterleave: improper audio-video interleaving.</li>.
-<Li>PtsLessThanDts: specifies that the pts of the media stream is less than the dts.</li>.
-<Li>ReceiveFpsJitter: specifies excessive jitter in the network received frame rate.</li>.
-<Li>ReceiveFpsTooSmall: indicates the network received video frame rate is too low.</li>.
-<li>FpsJitter: specifies excessive jitter in the stream frame rate calculated via PTS.</li>.
-<Li>StreamOpenFailed: indicates the stream open failure.</li>.
-<Li>StreamEnd: specifies the stream end.</li>.
-<Li>StreamParseFailed: specifies the stream parsing failure.</li>.
-<li>VideoFirstFrameNotIdr: first frame not an IDR frame.</li>.
-<Li>StreamNALUError: indicates an nalu start code error.</li>.
-<li>TsStreamNoAud: specifies whether the mpegts H26x stream misses AUD NALU.</li>.
-<Li>AudioStreamLack: no audio stream.</li>.
-<Li>VideoStreamLack: no video stream.</li>.
-<Li>LackAudioRecover: specifies missing audio stream recovery.</li>.
-<Li>LackVideoRecover: missing video stream recovery.</li>.
-<Li>VideoBitrateOutofRange: video stream bitrate (kbps) out of range.</li>.
-<Li>AudioBitrateOutofRange: audio stream bitrate (kbps) out of range.</li>.
-<Li>VideoDecodeFailed: indicates a video decoding error.</li>.
-<Li>AudioDecodeFailed: audio decoding error.</li>.
-<Li>AudioOutOfPhase: specifies opposite phase in dual-channel audio.</li>.
-<Li>VideoDuplicatedFrame: indicates duplicate frames in video streams.</li>.
-<Li>AudioDuplicatedFrame: indicates duplicate frames in audio streams.</li>.
-<Li>VideoRotation: specifies video rotation.</li>.
-<li>TsMultiPrograms: specifies multiple programs in MPEG2-TS streams.</li>.
-<li>Mp4InvalidCodecFourcc: specifies the codec fourcc in Mp4 does not meet Apple HLS requirements.</li>.
-<Li>HLSBadM3u8Format: invalid m3u8 file.</li>.
-<Li>HLSInvalidMasterM3u8: invalid main m3u8 file.</li>.
-<Li>HLSInvalidMediaM3u8: invalid media m3u8 file.</li>.
-<Li>HLSMasterM3u8Recommended: parameters recommended by standards missing in main m3u8.</li>.
-<Li>HLSMediaM3u8Recommended: parameters recommended by standards missing in media m3u8.</li>.
-<li>HLSMediaM3u8DiscontinuityExist: indicates the existence of EXT-X-DISCONTINUITY in media m3u8.</li>.
-<Li>HLSMediaSegmentsStreamNumChange: indicates the number of streams in segments changes.</li>.
-<li>HLSMediaSegmentsPTSJitterDeviation: indicates PTS jumps between segments without EXT-X-DISCONTINUITY.</li>.
-<li>HLSMediaSegmentsDTSJitterDeviation: indicates DTS jumps between segments without EXT-X-DISCONTINUITY.</li>.
+    * Quality inspection item name. Valid values:
+<li>LowEvaluation: Video no-reference scoring (MOS).</li>
+<li>AudioEvaluation: Audio no-reference scoring (MOS).</li>
+<li>Mosaic: mosaic detection.</li>
+<li>CrashScreen: screen glitch detection.</li>
+<li>Blur: blur detection.</li>
+<li>Jitter: jitter detection.</li>
+<li>Noise: noise detection.</li>
+<li>QRCode: QR code detection.</li>
+<li>BarCode: barcode detection.</li>
+<li>AppletCode: mini program code detection.</li>
+<li>BlackWhiteEdge: black and white edge detection.</li>
+<li>SolidColorScreen: solid color screen detection.</li>
+<li>LowLighting: low light.</li>
+<li>HighLighting: overexposure.</li>
+<li>NoVoice: silence detection.</li>
+<li>LowVoice: bass detection.</li>
+<li>HighVoice: explosion noise detection</li>
+<li>AudioNoise: audio noise detection.</li>
+<li>VideoResolutionChanged: video resolution change.</li>
+<li>AudioSampleRateChanged: audio sampling rate change.</li>
+<li>AudioChannelsChanged: audio channels changed.</li>
+<li>ParameterSetsChanged: stream parameter set information has changed.</li>
+<li>DarOrSarInvalid: abnormal video aspect ratio.</li>
+<li>TimestampFallback: DTS timestamp rollback.</li>
+<li>DtsJitter: DTS jitter too high.</li>
+<li>PtsJitter: PTS jitter too high.</li>
+<li>AACDurationDeviation: improper AAC frame timestamp interval.</li>
+<li>AudioDroppingFrames: audio frame dropping.</li>
+<li>VideoDroppingFrames: video frame dropping.</li>
+<li>AVTimestampInterleave: improper audio-video interleaving.</li>
+<li>PtsLessThanDts: The pts of the media stream is less than the dts.</li>
+<li>ReceiveFpsJitter: excessive network received frame rate jitter</li>
+<li>ReceiveFpsTooSmall: network receive video frame rate too low.</li>
+<li>FpsJitter: excessive stream frame rate jitter calculated by PTS</li>
+<li>StreamOpenFailed: stream open failure.</li>
+<li>StreamEnd: stream end.</li>
+<li>StreamParseFailed: stream parsing failure.</li>
+<li>VideoFirstFrameNotIdr: first frame not an IDR frame.</li>
+<li>StreamNALUError: NALU start code error.</li>
+<li>TsStreamNoAud: The H26x stream of mpegts misses AUD NALU.</li>
+<li>AudioStreamLack: no audio stream.</li>
+<li>VideoStreamLack: no video stream.</li>
+<li>LackAudioRecover: missing audio stream recovery.</li>
+<li>LackVideoRecover: missing video stream recovery.</li>
+<li>VideoBitrateOutofRange: video stream bitrate (kbps) out of range.</li>
+<li>AudioBitrateOutofRange: audio stream bitrate (kbps) out of range.</li>
+<li>VideoDecodeFailed: video decoding error.</li>
+<li>AudioDecodeFailed: audio decoding error.</li>
+<li>AudioOutOfPhase: opposite phase in dual-channel audio.</li>
+<li>VideoDuplicatedFrame: duplicate frames in video streams.</li>
+<li>AudioDuplicatedFrame: duplicate frames in audio streams.</li>
+<li>VideoRotation: video rotation.</li>
+<li>TsMultiPrograms: multiple programs in MPEG2-TS streams.</li>
+<li>Mp4InvalidCodecFourcc: The codec fourcc in MP4 does not meet Apple HLS requirements.</li>
+<li>HLSBadM3u8Format: invalid M3U8 file.</li>
+<li>HLSInvalidMasterM3u8: invalid main M3U8 file.</li>
+<li>HLSInvalidMediaM3u8: invalid media M3U8 file.</li>
+<li>HLSMasterM3u8Recommended: parameters recommended by standards missing in main M3U8.</li>
+<li>HLSMediaM3u8Recommended: parameters recommended by standards missing in media M3U8.</li>
+<li>HLSMediaM3u8DiscontinuityExist: EXT-X-DISCONTINUITY in media M3U8.</li>
+<li>HLSMediaSegmentsStreamNumChange: Number of streams in segments changes.</li>
+<li>HLSMediaSegmentsPTSJitterDeviation: PTS jumps between segments without EXT-X-DISCONTINUITY.</li>
+<li>HLSMediaSegmentsDTSJitterDeviation: DTS jumps between segments without EXT-X-DISCONTINUITY.</li>
 <li>TimecodeTrackExist: TMCD track in MP4.</li>
     */
     @SerializedName("Type")
@@ -95,181 +95,170 @@ public class QualityControlItemConfig extends AbstractModel {
     private String Type;
 
     /**
-    * Capability configuration switch. Valid values:
-<li>ON: enabled;</li>
-<li>OFF: disabled.</li>
-
-Default value: ON.
-
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-    * Sampling method, Valid value:
-- Time: sampling based on time interval.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("Sampling")
     @Expose
     private String Sampling;
 
     /**
-    * Sampling interval time, in ms.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("IntervalTime")
     @Expose
     private Long IntervalTime;
 
     /**
-    * Duration of abnormality, in ms.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("Duration")
     @Expose
     private Long Duration;
 
     /**
-    * Threshold of a detection item. Different detection items have different thresholds.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("Threshold")
     @Expose
     private String Threshold;
 
     /**
-     * Get Quality inspection item name. valid values:.
-<li>LowEvaluation: specifies the no-reference MOS score of the video.</li>.
-<li>AudioEvaluation: specifies the no-reference MOS score of the audio.</li>.
-<Li>Mosaic: mosaic detection.</li>.
-<Li>CrashScreen: specifies screen glitch detection.</li>.
-<Li>Blur: specifies blur detection.</li>.
-<Li>Jitter: jitter detection.</li>.
-<Li>Noise: noise detection.</li>.
-<Li>QRCode: qr code detection.</li>.
-<Li>BarCode: specifies barcode detection.</li>.
-<Li>AppletCode: specifies mini program code detection.</li>.
-<Li>BlackWhiteEdge: specifies black and white edge detection.</li>.
-<Li>SolidColorScreen: specifies solid color screen detection.</li>.
-<Li>LowLighting: specifies low light.</li>.
-<Li>HighLighting: overexposure.</li>.
-<Li>NoVoice: specifies silence detection.</li>.
-<Li>LowVoice: specifies bass detection.</li>.
-<Li>HighVoice: explosion noise detection.</li>.
-<Li>AudioNoise: specifies audio noise detection.</li>.
-<Li>VideoResolutionChanged: specifies the video resolution change.</li>.
-<Li>AudioSampleRateChanged: specifies the audio sample rate change.</li>.
-<Li>AudioChannelsChanged: indicates the audio channel quantity change.</li>.
-<Li>ParameterSetsChanged: indicates the stream parameter set information has changed.</li>.
-<Li>DarOrSarInvalid: indicates an abnormal video aspect ratio.</li>.
-<li>TimestampFallback: specifies DTS timestamp rollback.</li>.
-<li>DtsJitter: specifies excessive DTS jitter.</li>.
-<li>PtsJitter: indicates excessive PTS jitter.</li>.
-<Li>AACDurationDeviation: specifies an improper aac frame timestamp interval.</li>.
-<Li>AudioDroppingFrames: indicates audio frame dropping.</li>.
-<Li>VideoDroppingFrames: specifies video frame dropping.</li>.
-<Li>AVTimestampInterleave: improper audio-video interleaving.</li>.
-<Li>PtsLessThanDts: specifies that the pts of the media stream is less than the dts.</li>.
-<Li>ReceiveFpsJitter: specifies excessive jitter in the network received frame rate.</li>.
-<Li>ReceiveFpsTooSmall: indicates the network received video frame rate is too low.</li>.
-<li>FpsJitter: specifies excessive jitter in the stream frame rate calculated via PTS.</li>.
-<Li>StreamOpenFailed: indicates the stream open failure.</li>.
-<Li>StreamEnd: specifies the stream end.</li>.
-<Li>StreamParseFailed: specifies the stream parsing failure.</li>.
-<li>VideoFirstFrameNotIdr: first frame not an IDR frame.</li>.
-<Li>StreamNALUError: indicates an nalu start code error.</li>.
-<li>TsStreamNoAud: specifies whether the mpegts H26x stream misses AUD NALU.</li>.
-<Li>AudioStreamLack: no audio stream.</li>.
-<Li>VideoStreamLack: no video stream.</li>.
-<Li>LackAudioRecover: specifies missing audio stream recovery.</li>.
-<Li>LackVideoRecover: missing video stream recovery.</li>.
-<Li>VideoBitrateOutofRange: video stream bitrate (kbps) out of range.</li>.
-<Li>AudioBitrateOutofRange: audio stream bitrate (kbps) out of range.</li>.
-<Li>VideoDecodeFailed: indicates a video decoding error.</li>.
-<Li>AudioDecodeFailed: audio decoding error.</li>.
-<Li>AudioOutOfPhase: specifies opposite phase in dual-channel audio.</li>.
-<Li>VideoDuplicatedFrame: indicates duplicate frames in video streams.</li>.
-<Li>AudioDuplicatedFrame: indicates duplicate frames in audio streams.</li>.
-<Li>VideoRotation: specifies video rotation.</li>.
-<li>TsMultiPrograms: specifies multiple programs in MPEG2-TS streams.</li>.
-<li>Mp4InvalidCodecFourcc: specifies the codec fourcc in Mp4 does not meet Apple HLS requirements.</li>.
-<Li>HLSBadM3u8Format: invalid m3u8 file.</li>.
-<Li>HLSInvalidMasterM3u8: invalid main m3u8 file.</li>.
-<Li>HLSInvalidMediaM3u8: invalid media m3u8 file.</li>.
-<Li>HLSMasterM3u8Recommended: parameters recommended by standards missing in main m3u8.</li>.
-<Li>HLSMediaM3u8Recommended: parameters recommended by standards missing in media m3u8.</li>.
-<li>HLSMediaM3u8DiscontinuityExist: indicates the existence of EXT-X-DISCONTINUITY in media m3u8.</li>.
-<Li>HLSMediaSegmentsStreamNumChange: indicates the number of streams in segments changes.</li>.
-<li>HLSMediaSegmentsPTSJitterDeviation: indicates PTS jumps between segments without EXT-X-DISCONTINUITY.</li>.
-<li>HLSMediaSegmentsDTSJitterDeviation: indicates DTS jumps between segments without EXT-X-DISCONTINUITY.</li>.
+     * Get Quality inspection item name. Valid values:
+<li>LowEvaluation: Video no-reference scoring (MOS).</li>
+<li>AudioEvaluation: Audio no-reference scoring (MOS).</li>
+<li>Mosaic: mosaic detection.</li>
+<li>CrashScreen: screen glitch detection.</li>
+<li>Blur: blur detection.</li>
+<li>Jitter: jitter detection.</li>
+<li>Noise: noise detection.</li>
+<li>QRCode: QR code detection.</li>
+<li>BarCode: barcode detection.</li>
+<li>AppletCode: mini program code detection.</li>
+<li>BlackWhiteEdge: black and white edge detection.</li>
+<li>SolidColorScreen: solid color screen detection.</li>
+<li>LowLighting: low light.</li>
+<li>HighLighting: overexposure.</li>
+<li>NoVoice: silence detection.</li>
+<li>LowVoice: bass detection.</li>
+<li>HighVoice: explosion noise detection</li>
+<li>AudioNoise: audio noise detection.</li>
+<li>VideoResolutionChanged: video resolution change.</li>
+<li>AudioSampleRateChanged: audio sampling rate change.</li>
+<li>AudioChannelsChanged: audio channels changed.</li>
+<li>ParameterSetsChanged: stream parameter set information has changed.</li>
+<li>DarOrSarInvalid: abnormal video aspect ratio.</li>
+<li>TimestampFallback: DTS timestamp rollback.</li>
+<li>DtsJitter: DTS jitter too high.</li>
+<li>PtsJitter: PTS jitter too high.</li>
+<li>AACDurationDeviation: improper AAC frame timestamp interval.</li>
+<li>AudioDroppingFrames: audio frame dropping.</li>
+<li>VideoDroppingFrames: video frame dropping.</li>
+<li>AVTimestampInterleave: improper audio-video interleaving.</li>
+<li>PtsLessThanDts: The pts of the media stream is less than the dts.</li>
+<li>ReceiveFpsJitter: excessive network received frame rate jitter</li>
+<li>ReceiveFpsTooSmall: network receive video frame rate too low.</li>
+<li>FpsJitter: excessive stream frame rate jitter calculated by PTS</li>
+<li>StreamOpenFailed: stream open failure.</li>
+<li>StreamEnd: stream end.</li>
+<li>StreamParseFailed: stream parsing failure.</li>
+<li>VideoFirstFrameNotIdr: first frame not an IDR frame.</li>
+<li>StreamNALUError: NALU start code error.</li>
+<li>TsStreamNoAud: The H26x stream of mpegts misses AUD NALU.</li>
+<li>AudioStreamLack: no audio stream.</li>
+<li>VideoStreamLack: no video stream.</li>
+<li>LackAudioRecover: missing audio stream recovery.</li>
+<li>LackVideoRecover: missing video stream recovery.</li>
+<li>VideoBitrateOutofRange: video stream bitrate (kbps) out of range.</li>
+<li>AudioBitrateOutofRange: audio stream bitrate (kbps) out of range.</li>
+<li>VideoDecodeFailed: video decoding error.</li>
+<li>AudioDecodeFailed: audio decoding error.</li>
+<li>AudioOutOfPhase: opposite phase in dual-channel audio.</li>
+<li>VideoDuplicatedFrame: duplicate frames in video streams.</li>
+<li>AudioDuplicatedFrame: duplicate frames in audio streams.</li>
+<li>VideoRotation: video rotation.</li>
+<li>TsMultiPrograms: multiple programs in MPEG2-TS streams.</li>
+<li>Mp4InvalidCodecFourcc: The codec fourcc in MP4 does not meet Apple HLS requirements.</li>
+<li>HLSBadM3u8Format: invalid M3U8 file.</li>
+<li>HLSInvalidMasterM3u8: invalid main M3U8 file.</li>
+<li>HLSInvalidMediaM3u8: invalid media M3U8 file.</li>
+<li>HLSMasterM3u8Recommended: parameters recommended by standards missing in main M3U8.</li>
+<li>HLSMediaM3u8Recommended: parameters recommended by standards missing in media M3U8.</li>
+<li>HLSMediaM3u8DiscontinuityExist: EXT-X-DISCONTINUITY in media M3U8.</li>
+<li>HLSMediaSegmentsStreamNumChange: Number of streams in segments changes.</li>
+<li>HLSMediaSegmentsPTSJitterDeviation: PTS jumps between segments without EXT-X-DISCONTINUITY.</li>
+<li>HLSMediaSegmentsDTSJitterDeviation: DTS jumps between segments without EXT-X-DISCONTINUITY.</li>
 <li>TimecodeTrackExist: TMCD track in MP4.</li> 
-     * @return Type Quality inspection item name. valid values:.
-<li>LowEvaluation: specifies the no-reference MOS score of the video.</li>.
-<li>AudioEvaluation: specifies the no-reference MOS score of the audio.</li>.
-<Li>Mosaic: mosaic detection.</li>.
-<Li>CrashScreen: specifies screen glitch detection.</li>.
-<Li>Blur: specifies blur detection.</li>.
-<Li>Jitter: jitter detection.</li>.
-<Li>Noise: noise detection.</li>.
-<Li>QRCode: qr code detection.</li>.
-<Li>BarCode: specifies barcode detection.</li>.
-<Li>AppletCode: specifies mini program code detection.</li>.
-<Li>BlackWhiteEdge: specifies black and white edge detection.</li>.
-<Li>SolidColorScreen: specifies solid color screen detection.</li>.
-<Li>LowLighting: specifies low light.</li>.
-<Li>HighLighting: overexposure.</li>.
-<Li>NoVoice: specifies silence detection.</li>.
-<Li>LowVoice: specifies bass detection.</li>.
-<Li>HighVoice: explosion noise detection.</li>.
-<Li>AudioNoise: specifies audio noise detection.</li>.
-<Li>VideoResolutionChanged: specifies the video resolution change.</li>.
-<Li>AudioSampleRateChanged: specifies the audio sample rate change.</li>.
-<Li>AudioChannelsChanged: indicates the audio channel quantity change.</li>.
-<Li>ParameterSetsChanged: indicates the stream parameter set information has changed.</li>.
-<Li>DarOrSarInvalid: indicates an abnormal video aspect ratio.</li>.
-<li>TimestampFallback: specifies DTS timestamp rollback.</li>.
-<li>DtsJitter: specifies excessive DTS jitter.</li>.
-<li>PtsJitter: indicates excessive PTS jitter.</li>.
-<Li>AACDurationDeviation: specifies an improper aac frame timestamp interval.</li>.
-<Li>AudioDroppingFrames: indicates audio frame dropping.</li>.
-<Li>VideoDroppingFrames: specifies video frame dropping.</li>.
-<Li>AVTimestampInterleave: improper audio-video interleaving.</li>.
-<Li>PtsLessThanDts: specifies that the pts of the media stream is less than the dts.</li>.
-<Li>ReceiveFpsJitter: specifies excessive jitter in the network received frame rate.</li>.
-<Li>ReceiveFpsTooSmall: indicates the network received video frame rate is too low.</li>.
-<li>FpsJitter: specifies excessive jitter in the stream frame rate calculated via PTS.</li>.
-<Li>StreamOpenFailed: indicates the stream open failure.</li>.
-<Li>StreamEnd: specifies the stream end.</li>.
-<Li>StreamParseFailed: specifies the stream parsing failure.</li>.
-<li>VideoFirstFrameNotIdr: first frame not an IDR frame.</li>.
-<Li>StreamNALUError: indicates an nalu start code error.</li>.
-<li>TsStreamNoAud: specifies whether the mpegts H26x stream misses AUD NALU.</li>.
-<Li>AudioStreamLack: no audio stream.</li>.
-<Li>VideoStreamLack: no video stream.</li>.
-<Li>LackAudioRecover: specifies missing audio stream recovery.</li>.
-<Li>LackVideoRecover: missing video stream recovery.</li>.
-<Li>VideoBitrateOutofRange: video stream bitrate (kbps) out of range.</li>.
-<Li>AudioBitrateOutofRange: audio stream bitrate (kbps) out of range.</li>.
-<Li>VideoDecodeFailed: indicates a video decoding error.</li>.
-<Li>AudioDecodeFailed: audio decoding error.</li>.
-<Li>AudioOutOfPhase: specifies opposite phase in dual-channel audio.</li>.
-<Li>VideoDuplicatedFrame: indicates duplicate frames in video streams.</li>.
-<Li>AudioDuplicatedFrame: indicates duplicate frames in audio streams.</li>.
-<Li>VideoRotation: specifies video rotation.</li>.
-<li>TsMultiPrograms: specifies multiple programs in MPEG2-TS streams.</li>.
-<li>Mp4InvalidCodecFourcc: specifies the codec fourcc in Mp4 does not meet Apple HLS requirements.</li>.
-<Li>HLSBadM3u8Format: invalid m3u8 file.</li>.
-<Li>HLSInvalidMasterM3u8: invalid main m3u8 file.</li>.
-<Li>HLSInvalidMediaM3u8: invalid media m3u8 file.</li>.
-<Li>HLSMasterM3u8Recommended: parameters recommended by standards missing in main m3u8.</li>.
-<Li>HLSMediaM3u8Recommended: parameters recommended by standards missing in media m3u8.</li>.
-<li>HLSMediaM3u8DiscontinuityExist: indicates the existence of EXT-X-DISCONTINUITY in media m3u8.</li>.
-<Li>HLSMediaSegmentsStreamNumChange: indicates the number of streams in segments changes.</li>.
-<li>HLSMediaSegmentsPTSJitterDeviation: indicates PTS jumps between segments without EXT-X-DISCONTINUITY.</li>.
-<li>HLSMediaSegmentsDTSJitterDeviation: indicates DTS jumps between segments without EXT-X-DISCONTINUITY.</li>.
+     * @return Type Quality inspection item name. Valid values:
+<li>LowEvaluation: Video no-reference scoring (MOS).</li>
+<li>AudioEvaluation: Audio no-reference scoring (MOS).</li>
+<li>Mosaic: mosaic detection.</li>
+<li>CrashScreen: screen glitch detection.</li>
+<li>Blur: blur detection.</li>
+<li>Jitter: jitter detection.</li>
+<li>Noise: noise detection.</li>
+<li>QRCode: QR code detection.</li>
+<li>BarCode: barcode detection.</li>
+<li>AppletCode: mini program code detection.</li>
+<li>BlackWhiteEdge: black and white edge detection.</li>
+<li>SolidColorScreen: solid color screen detection.</li>
+<li>LowLighting: low light.</li>
+<li>HighLighting: overexposure.</li>
+<li>NoVoice: silence detection.</li>
+<li>LowVoice: bass detection.</li>
+<li>HighVoice: explosion noise detection</li>
+<li>AudioNoise: audio noise detection.</li>
+<li>VideoResolutionChanged: video resolution change.</li>
+<li>AudioSampleRateChanged: audio sampling rate change.</li>
+<li>AudioChannelsChanged: audio channels changed.</li>
+<li>ParameterSetsChanged: stream parameter set information has changed.</li>
+<li>DarOrSarInvalid: abnormal video aspect ratio.</li>
+<li>TimestampFallback: DTS timestamp rollback.</li>
+<li>DtsJitter: DTS jitter too high.</li>
+<li>PtsJitter: PTS jitter too high.</li>
+<li>AACDurationDeviation: improper AAC frame timestamp interval.</li>
+<li>AudioDroppingFrames: audio frame dropping.</li>
+<li>VideoDroppingFrames: video frame dropping.</li>
+<li>AVTimestampInterleave: improper audio-video interleaving.</li>
+<li>PtsLessThanDts: The pts of the media stream is less than the dts.</li>
+<li>ReceiveFpsJitter: excessive network received frame rate jitter</li>
+<li>ReceiveFpsTooSmall: network receive video frame rate too low.</li>
+<li>FpsJitter: excessive stream frame rate jitter calculated by PTS</li>
+<li>StreamOpenFailed: stream open failure.</li>
+<li>StreamEnd: stream end.</li>
+<li>StreamParseFailed: stream parsing failure.</li>
+<li>VideoFirstFrameNotIdr: first frame not an IDR frame.</li>
+<li>StreamNALUError: NALU start code error.</li>
+<li>TsStreamNoAud: The H26x stream of mpegts misses AUD NALU.</li>
+<li>AudioStreamLack: no audio stream.</li>
+<li>VideoStreamLack: no video stream.</li>
+<li>LackAudioRecover: missing audio stream recovery.</li>
+<li>LackVideoRecover: missing video stream recovery.</li>
+<li>VideoBitrateOutofRange: video stream bitrate (kbps) out of range.</li>
+<li>AudioBitrateOutofRange: audio stream bitrate (kbps) out of range.</li>
+<li>VideoDecodeFailed: video decoding error.</li>
+<li>AudioDecodeFailed: audio decoding error.</li>
+<li>AudioOutOfPhase: opposite phase in dual-channel audio.</li>
+<li>VideoDuplicatedFrame: duplicate frames in video streams.</li>
+<li>AudioDuplicatedFrame: duplicate frames in audio streams.</li>
+<li>VideoRotation: video rotation.</li>
+<li>TsMultiPrograms: multiple programs in MPEG2-TS streams.</li>
+<li>Mp4InvalidCodecFourcc: The codec fourcc in MP4 does not meet Apple HLS requirements.</li>
+<li>HLSBadM3u8Format: invalid M3U8 file.</li>
+<li>HLSInvalidMasterM3u8: invalid main M3U8 file.</li>
+<li>HLSInvalidMediaM3u8: invalid media M3U8 file.</li>
+<li>HLSMasterM3u8Recommended: parameters recommended by standards missing in main M3U8.</li>
+<li>HLSMediaM3u8Recommended: parameters recommended by standards missing in media M3U8.</li>
+<li>HLSMediaM3u8DiscontinuityExist: EXT-X-DISCONTINUITY in media M3U8.</li>
+<li>HLSMediaSegmentsStreamNumChange: Number of streams in segments changes.</li>
+<li>HLSMediaSegmentsPTSJitterDeviation: PTS jumps between segments without EXT-X-DISCONTINUITY.</li>
+<li>HLSMediaSegmentsDTSJitterDeviation: DTS jumps between segments without EXT-X-DISCONTINUITY.</li>
 <li>TimecodeTrackExist: TMCD track in MP4.</li>
      */
     public String getType() {
@@ -277,135 +266,135 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Quality inspection item name. valid values:.
-<li>LowEvaluation: specifies the no-reference MOS score of the video.</li>.
-<li>AudioEvaluation: specifies the no-reference MOS score of the audio.</li>.
-<Li>Mosaic: mosaic detection.</li>.
-<Li>CrashScreen: specifies screen glitch detection.</li>.
-<Li>Blur: specifies blur detection.</li>.
-<Li>Jitter: jitter detection.</li>.
-<Li>Noise: noise detection.</li>.
-<Li>QRCode: qr code detection.</li>.
-<Li>BarCode: specifies barcode detection.</li>.
-<Li>AppletCode: specifies mini program code detection.</li>.
-<Li>BlackWhiteEdge: specifies black and white edge detection.</li>.
-<Li>SolidColorScreen: specifies solid color screen detection.</li>.
-<Li>LowLighting: specifies low light.</li>.
-<Li>HighLighting: overexposure.</li>.
-<Li>NoVoice: specifies silence detection.</li>.
-<Li>LowVoice: specifies bass detection.</li>.
-<Li>HighVoice: explosion noise detection.</li>.
-<Li>AudioNoise: specifies audio noise detection.</li>.
-<Li>VideoResolutionChanged: specifies the video resolution change.</li>.
-<Li>AudioSampleRateChanged: specifies the audio sample rate change.</li>.
-<Li>AudioChannelsChanged: indicates the audio channel quantity change.</li>.
-<Li>ParameterSetsChanged: indicates the stream parameter set information has changed.</li>.
-<Li>DarOrSarInvalid: indicates an abnormal video aspect ratio.</li>.
-<li>TimestampFallback: specifies DTS timestamp rollback.</li>.
-<li>DtsJitter: specifies excessive DTS jitter.</li>.
-<li>PtsJitter: indicates excessive PTS jitter.</li>.
-<Li>AACDurationDeviation: specifies an improper aac frame timestamp interval.</li>.
-<Li>AudioDroppingFrames: indicates audio frame dropping.</li>.
-<Li>VideoDroppingFrames: specifies video frame dropping.</li>.
-<Li>AVTimestampInterleave: improper audio-video interleaving.</li>.
-<Li>PtsLessThanDts: specifies that the pts of the media stream is less than the dts.</li>.
-<Li>ReceiveFpsJitter: specifies excessive jitter in the network received frame rate.</li>.
-<Li>ReceiveFpsTooSmall: indicates the network received video frame rate is too low.</li>.
-<li>FpsJitter: specifies excessive jitter in the stream frame rate calculated via PTS.</li>.
-<Li>StreamOpenFailed: indicates the stream open failure.</li>.
-<Li>StreamEnd: specifies the stream end.</li>.
-<Li>StreamParseFailed: specifies the stream parsing failure.</li>.
-<li>VideoFirstFrameNotIdr: first frame not an IDR frame.</li>.
-<Li>StreamNALUError: indicates an nalu start code error.</li>.
-<li>TsStreamNoAud: specifies whether the mpegts H26x stream misses AUD NALU.</li>.
-<Li>AudioStreamLack: no audio stream.</li>.
-<Li>VideoStreamLack: no video stream.</li>.
-<Li>LackAudioRecover: specifies missing audio stream recovery.</li>.
-<Li>LackVideoRecover: missing video stream recovery.</li>.
-<Li>VideoBitrateOutofRange: video stream bitrate (kbps) out of range.</li>.
-<Li>AudioBitrateOutofRange: audio stream bitrate (kbps) out of range.</li>.
-<Li>VideoDecodeFailed: indicates a video decoding error.</li>.
-<Li>AudioDecodeFailed: audio decoding error.</li>.
-<Li>AudioOutOfPhase: specifies opposite phase in dual-channel audio.</li>.
-<Li>VideoDuplicatedFrame: indicates duplicate frames in video streams.</li>.
-<Li>AudioDuplicatedFrame: indicates duplicate frames in audio streams.</li>.
-<Li>VideoRotation: specifies video rotation.</li>.
-<li>TsMultiPrograms: specifies multiple programs in MPEG2-TS streams.</li>.
-<li>Mp4InvalidCodecFourcc: specifies the codec fourcc in Mp4 does not meet Apple HLS requirements.</li>.
-<Li>HLSBadM3u8Format: invalid m3u8 file.</li>.
-<Li>HLSInvalidMasterM3u8: invalid main m3u8 file.</li>.
-<Li>HLSInvalidMediaM3u8: invalid media m3u8 file.</li>.
-<Li>HLSMasterM3u8Recommended: parameters recommended by standards missing in main m3u8.</li>.
-<Li>HLSMediaM3u8Recommended: parameters recommended by standards missing in media m3u8.</li>.
-<li>HLSMediaM3u8DiscontinuityExist: indicates the existence of EXT-X-DISCONTINUITY in media m3u8.</li>.
-<Li>HLSMediaSegmentsStreamNumChange: indicates the number of streams in segments changes.</li>.
-<li>HLSMediaSegmentsPTSJitterDeviation: indicates PTS jumps between segments without EXT-X-DISCONTINUITY.</li>.
-<li>HLSMediaSegmentsDTSJitterDeviation: indicates DTS jumps between segments without EXT-X-DISCONTINUITY.</li>.
+     * Set Quality inspection item name. Valid values:
+<li>LowEvaluation: Video no-reference scoring (MOS).</li>
+<li>AudioEvaluation: Audio no-reference scoring (MOS).</li>
+<li>Mosaic: mosaic detection.</li>
+<li>CrashScreen: screen glitch detection.</li>
+<li>Blur: blur detection.</li>
+<li>Jitter: jitter detection.</li>
+<li>Noise: noise detection.</li>
+<li>QRCode: QR code detection.</li>
+<li>BarCode: barcode detection.</li>
+<li>AppletCode: mini program code detection.</li>
+<li>BlackWhiteEdge: black and white edge detection.</li>
+<li>SolidColorScreen: solid color screen detection.</li>
+<li>LowLighting: low light.</li>
+<li>HighLighting: overexposure.</li>
+<li>NoVoice: silence detection.</li>
+<li>LowVoice: bass detection.</li>
+<li>HighVoice: explosion noise detection</li>
+<li>AudioNoise: audio noise detection.</li>
+<li>VideoResolutionChanged: video resolution change.</li>
+<li>AudioSampleRateChanged: audio sampling rate change.</li>
+<li>AudioChannelsChanged: audio channels changed.</li>
+<li>ParameterSetsChanged: stream parameter set information has changed.</li>
+<li>DarOrSarInvalid: abnormal video aspect ratio.</li>
+<li>TimestampFallback: DTS timestamp rollback.</li>
+<li>DtsJitter: DTS jitter too high.</li>
+<li>PtsJitter: PTS jitter too high.</li>
+<li>AACDurationDeviation: improper AAC frame timestamp interval.</li>
+<li>AudioDroppingFrames: audio frame dropping.</li>
+<li>VideoDroppingFrames: video frame dropping.</li>
+<li>AVTimestampInterleave: improper audio-video interleaving.</li>
+<li>PtsLessThanDts: The pts of the media stream is less than the dts.</li>
+<li>ReceiveFpsJitter: excessive network received frame rate jitter</li>
+<li>ReceiveFpsTooSmall: network receive video frame rate too low.</li>
+<li>FpsJitter: excessive stream frame rate jitter calculated by PTS</li>
+<li>StreamOpenFailed: stream open failure.</li>
+<li>StreamEnd: stream end.</li>
+<li>StreamParseFailed: stream parsing failure.</li>
+<li>VideoFirstFrameNotIdr: first frame not an IDR frame.</li>
+<li>StreamNALUError: NALU start code error.</li>
+<li>TsStreamNoAud: The H26x stream of mpegts misses AUD NALU.</li>
+<li>AudioStreamLack: no audio stream.</li>
+<li>VideoStreamLack: no video stream.</li>
+<li>LackAudioRecover: missing audio stream recovery.</li>
+<li>LackVideoRecover: missing video stream recovery.</li>
+<li>VideoBitrateOutofRange: video stream bitrate (kbps) out of range.</li>
+<li>AudioBitrateOutofRange: audio stream bitrate (kbps) out of range.</li>
+<li>VideoDecodeFailed: video decoding error.</li>
+<li>AudioDecodeFailed: audio decoding error.</li>
+<li>AudioOutOfPhase: opposite phase in dual-channel audio.</li>
+<li>VideoDuplicatedFrame: duplicate frames in video streams.</li>
+<li>AudioDuplicatedFrame: duplicate frames in audio streams.</li>
+<li>VideoRotation: video rotation.</li>
+<li>TsMultiPrograms: multiple programs in MPEG2-TS streams.</li>
+<li>Mp4InvalidCodecFourcc: The codec fourcc in MP4 does not meet Apple HLS requirements.</li>
+<li>HLSBadM3u8Format: invalid M3U8 file.</li>
+<li>HLSInvalidMasterM3u8: invalid main M3U8 file.</li>
+<li>HLSInvalidMediaM3u8: invalid media M3U8 file.</li>
+<li>HLSMasterM3u8Recommended: parameters recommended by standards missing in main M3U8.</li>
+<li>HLSMediaM3u8Recommended: parameters recommended by standards missing in media M3U8.</li>
+<li>HLSMediaM3u8DiscontinuityExist: EXT-X-DISCONTINUITY in media M3U8.</li>
+<li>HLSMediaSegmentsStreamNumChange: Number of streams in segments changes.</li>
+<li>HLSMediaSegmentsPTSJitterDeviation: PTS jumps between segments without EXT-X-DISCONTINUITY.</li>
+<li>HLSMediaSegmentsDTSJitterDeviation: DTS jumps between segments without EXT-X-DISCONTINUITY.</li>
 <li>TimecodeTrackExist: TMCD track in MP4.</li>
-     * @param Type Quality inspection item name. valid values:.
-<li>LowEvaluation: specifies the no-reference MOS score of the video.</li>.
-<li>AudioEvaluation: specifies the no-reference MOS score of the audio.</li>.
-<Li>Mosaic: mosaic detection.</li>.
-<Li>CrashScreen: specifies screen glitch detection.</li>.
-<Li>Blur: specifies blur detection.</li>.
-<Li>Jitter: jitter detection.</li>.
-<Li>Noise: noise detection.</li>.
-<Li>QRCode: qr code detection.</li>.
-<Li>BarCode: specifies barcode detection.</li>.
-<Li>AppletCode: specifies mini program code detection.</li>.
-<Li>BlackWhiteEdge: specifies black and white edge detection.</li>.
-<Li>SolidColorScreen: specifies solid color screen detection.</li>.
-<Li>LowLighting: specifies low light.</li>.
-<Li>HighLighting: overexposure.</li>.
-<Li>NoVoice: specifies silence detection.</li>.
-<Li>LowVoice: specifies bass detection.</li>.
-<Li>HighVoice: explosion noise detection.</li>.
-<Li>AudioNoise: specifies audio noise detection.</li>.
-<Li>VideoResolutionChanged: specifies the video resolution change.</li>.
-<Li>AudioSampleRateChanged: specifies the audio sample rate change.</li>.
-<Li>AudioChannelsChanged: indicates the audio channel quantity change.</li>.
-<Li>ParameterSetsChanged: indicates the stream parameter set information has changed.</li>.
-<Li>DarOrSarInvalid: indicates an abnormal video aspect ratio.</li>.
-<li>TimestampFallback: specifies DTS timestamp rollback.</li>.
-<li>DtsJitter: specifies excessive DTS jitter.</li>.
-<li>PtsJitter: indicates excessive PTS jitter.</li>.
-<Li>AACDurationDeviation: specifies an improper aac frame timestamp interval.</li>.
-<Li>AudioDroppingFrames: indicates audio frame dropping.</li>.
-<Li>VideoDroppingFrames: specifies video frame dropping.</li>.
-<Li>AVTimestampInterleave: improper audio-video interleaving.</li>.
-<Li>PtsLessThanDts: specifies that the pts of the media stream is less than the dts.</li>.
-<Li>ReceiveFpsJitter: specifies excessive jitter in the network received frame rate.</li>.
-<Li>ReceiveFpsTooSmall: indicates the network received video frame rate is too low.</li>.
-<li>FpsJitter: specifies excessive jitter in the stream frame rate calculated via PTS.</li>.
-<Li>StreamOpenFailed: indicates the stream open failure.</li>.
-<Li>StreamEnd: specifies the stream end.</li>.
-<Li>StreamParseFailed: specifies the stream parsing failure.</li>.
-<li>VideoFirstFrameNotIdr: first frame not an IDR frame.</li>.
-<Li>StreamNALUError: indicates an nalu start code error.</li>.
-<li>TsStreamNoAud: specifies whether the mpegts H26x stream misses AUD NALU.</li>.
-<Li>AudioStreamLack: no audio stream.</li>.
-<Li>VideoStreamLack: no video stream.</li>.
-<Li>LackAudioRecover: specifies missing audio stream recovery.</li>.
-<Li>LackVideoRecover: missing video stream recovery.</li>.
-<Li>VideoBitrateOutofRange: video stream bitrate (kbps) out of range.</li>.
-<Li>AudioBitrateOutofRange: audio stream bitrate (kbps) out of range.</li>.
-<Li>VideoDecodeFailed: indicates a video decoding error.</li>.
-<Li>AudioDecodeFailed: audio decoding error.</li>.
-<Li>AudioOutOfPhase: specifies opposite phase in dual-channel audio.</li>.
-<Li>VideoDuplicatedFrame: indicates duplicate frames in video streams.</li>.
-<Li>AudioDuplicatedFrame: indicates duplicate frames in audio streams.</li>.
-<Li>VideoRotation: specifies video rotation.</li>.
-<li>TsMultiPrograms: specifies multiple programs in MPEG2-TS streams.</li>.
-<li>Mp4InvalidCodecFourcc: specifies the codec fourcc in Mp4 does not meet Apple HLS requirements.</li>.
-<Li>HLSBadM3u8Format: invalid m3u8 file.</li>.
-<Li>HLSInvalidMasterM3u8: invalid main m3u8 file.</li>.
-<Li>HLSInvalidMediaM3u8: invalid media m3u8 file.</li>.
-<Li>HLSMasterM3u8Recommended: parameters recommended by standards missing in main m3u8.</li>.
-<Li>HLSMediaM3u8Recommended: parameters recommended by standards missing in media m3u8.</li>.
-<li>HLSMediaM3u8DiscontinuityExist: indicates the existence of EXT-X-DISCONTINUITY in media m3u8.</li>.
-<Li>HLSMediaSegmentsStreamNumChange: indicates the number of streams in segments changes.</li>.
-<li>HLSMediaSegmentsPTSJitterDeviation: indicates PTS jumps between segments without EXT-X-DISCONTINUITY.</li>.
-<li>HLSMediaSegmentsDTSJitterDeviation: indicates DTS jumps between segments without EXT-X-DISCONTINUITY.</li>.
+     * @param Type Quality inspection item name. Valid values:
+<li>LowEvaluation: Video no-reference scoring (MOS).</li>
+<li>AudioEvaluation: Audio no-reference scoring (MOS).</li>
+<li>Mosaic: mosaic detection.</li>
+<li>CrashScreen: screen glitch detection.</li>
+<li>Blur: blur detection.</li>
+<li>Jitter: jitter detection.</li>
+<li>Noise: noise detection.</li>
+<li>QRCode: QR code detection.</li>
+<li>BarCode: barcode detection.</li>
+<li>AppletCode: mini program code detection.</li>
+<li>BlackWhiteEdge: black and white edge detection.</li>
+<li>SolidColorScreen: solid color screen detection.</li>
+<li>LowLighting: low light.</li>
+<li>HighLighting: overexposure.</li>
+<li>NoVoice: silence detection.</li>
+<li>LowVoice: bass detection.</li>
+<li>HighVoice: explosion noise detection</li>
+<li>AudioNoise: audio noise detection.</li>
+<li>VideoResolutionChanged: video resolution change.</li>
+<li>AudioSampleRateChanged: audio sampling rate change.</li>
+<li>AudioChannelsChanged: audio channels changed.</li>
+<li>ParameterSetsChanged: stream parameter set information has changed.</li>
+<li>DarOrSarInvalid: abnormal video aspect ratio.</li>
+<li>TimestampFallback: DTS timestamp rollback.</li>
+<li>DtsJitter: DTS jitter too high.</li>
+<li>PtsJitter: PTS jitter too high.</li>
+<li>AACDurationDeviation: improper AAC frame timestamp interval.</li>
+<li>AudioDroppingFrames: audio frame dropping.</li>
+<li>VideoDroppingFrames: video frame dropping.</li>
+<li>AVTimestampInterleave: improper audio-video interleaving.</li>
+<li>PtsLessThanDts: The pts of the media stream is less than the dts.</li>
+<li>ReceiveFpsJitter: excessive network received frame rate jitter</li>
+<li>ReceiveFpsTooSmall: network receive video frame rate too low.</li>
+<li>FpsJitter: excessive stream frame rate jitter calculated by PTS</li>
+<li>StreamOpenFailed: stream open failure.</li>
+<li>StreamEnd: stream end.</li>
+<li>StreamParseFailed: stream parsing failure.</li>
+<li>VideoFirstFrameNotIdr: first frame not an IDR frame.</li>
+<li>StreamNALUError: NALU start code error.</li>
+<li>TsStreamNoAud: The H26x stream of mpegts misses AUD NALU.</li>
+<li>AudioStreamLack: no audio stream.</li>
+<li>VideoStreamLack: no video stream.</li>
+<li>LackAudioRecover: missing audio stream recovery.</li>
+<li>LackVideoRecover: missing video stream recovery.</li>
+<li>VideoBitrateOutofRange: video stream bitrate (kbps) out of range.</li>
+<li>AudioBitrateOutofRange: audio stream bitrate (kbps) out of range.</li>
+<li>VideoDecodeFailed: video decoding error.</li>
+<li>AudioDecodeFailed: audio decoding error.</li>
+<li>AudioOutOfPhase: opposite phase in dual-channel audio.</li>
+<li>VideoDuplicatedFrame: duplicate frames in video streams.</li>
+<li>AudioDuplicatedFrame: duplicate frames in audio streams.</li>
+<li>VideoRotation: video rotation.</li>
+<li>TsMultiPrograms: multiple programs in MPEG2-TS streams.</li>
+<li>Mp4InvalidCodecFourcc: The codec fourcc in MP4 does not meet Apple HLS requirements.</li>
+<li>HLSBadM3u8Format: invalid M3U8 file.</li>
+<li>HLSInvalidMasterM3u8: invalid main M3U8 file.</li>
+<li>HLSInvalidMediaM3u8: invalid media M3U8 file.</li>
+<li>HLSMasterM3u8Recommended: parameters recommended by standards missing in main M3U8.</li>
+<li>HLSMediaM3u8Recommended: parameters recommended by standards missing in media M3U8.</li>
+<li>HLSMediaM3u8DiscontinuityExist: EXT-X-DISCONTINUITY in media M3U8.</li>
+<li>HLSMediaSegmentsStreamNumChange: Number of streams in segments changes.</li>
+<li>HLSMediaSegmentsPTSJitterDeviation: PTS jumps between segments without EXT-X-DISCONTINUITY.</li>
+<li>HLSMediaSegmentsDTSJitterDeviation: DTS jumps between segments without EXT-X-DISCONTINUITY.</li>
 <li>TimecodeTrackExist: TMCD track in MP4.</li>
      */
     public void setType(String Type) {
@@ -413,124 +402,80 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Capability configuration switch. Valid values:
-<li>ON: enabled;</li>
-<li>OFF: disabled.</li>
-
-Default value: ON.
-
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Switch Capability configuration switch. Valid values:
-<li>ON: enabled;</li>
-<li>OFF: disabled.</li>
-
-Default value: ON.
-
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return Switch 
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set Capability configuration switch. Valid values:
-<li>ON: enabled;</li>
-<li>OFF: disabled.</li>
-
-Default value: ON.
-
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Switch Capability configuration switch. Valid values:
-<li>ON: enabled;</li>
-<li>OFF: disabled.</li>
-
-Default value: ON.
-
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param Switch 
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
     }
 
     /**
-     * Get Sampling method, Valid value:
-- Time: sampling based on time interval.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Sampling Sampling method, Valid value:
-- Time: sampling based on time interval.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return Sampling 
      */
     public String getSampling() {
         return this.Sampling;
     }
 
     /**
-     * Set Sampling method, Valid value:
-- Time: sampling based on time interval.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Sampling Sampling method, Valid value:
-- Time: sampling based on time interval.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param Sampling 
      */
     public void setSampling(String Sampling) {
         this.Sampling = Sampling;
     }
 
     /**
-     * Get Sampling interval time, in ms.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return IntervalTime Sampling interval time, in ms.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return IntervalTime 
      */
     public Long getIntervalTime() {
         return this.IntervalTime;
     }
 
     /**
-     * Set Sampling interval time, in ms.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param IntervalTime Sampling interval time, in ms.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param IntervalTime 
      */
     public void setIntervalTime(Long IntervalTime) {
         this.IntervalTime = IntervalTime;
     }
 
     /**
-     * Get Duration of abnormality, in ms.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Duration Duration of abnormality, in ms.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return Duration 
      */
     public Long getDuration() {
         return this.Duration;
     }
 
     /**
-     * Set Duration of abnormality, in ms.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Duration Duration of abnormality, in ms.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param Duration 
      */
     public void setDuration(Long Duration) {
         this.Duration = Duration;
     }
 
     /**
-     * Get Threshold of a detection item. Different detection items have different thresholds.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Threshold Threshold of a detection item. Different detection items have different thresholds.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return Threshold 
      */
     public String getThreshold() {
         return this.Threshold;
     }
 
     /**
-     * Set Threshold of a detection item. Different detection items have different thresholds.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Threshold Threshold of a detection item. Different detection items have different thresholds.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param Threshold 
      */
     public void setThreshold(String Threshold) {
         this.Threshold = Threshold;

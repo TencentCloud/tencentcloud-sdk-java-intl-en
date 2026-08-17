@@ -24,138 +24,138 @@ import java.util.HashMap;
 public class CreateAIAnalysisTemplateRequest extends AbstractModel {
 
     /**
-    * Video content analysis template name. Length limit: 64 characters.
+    * Name of the video analysis template, length limited to 64 characters.
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * Video content analysis template description. Length limit: 256 characters.
+    * Description of the video analysis template, length limited to 256 characters.
     */
     @SerializedName("Comment")
     @Expose
     private String Comment;
 
     /**
-    * Control parameter of intelligent categorization task.
+    * Intelligent Classification Task Control Parameters.
     */
     @SerializedName("ClassificationConfigure")
     @Expose
     private ClassificationConfigureInfo ClassificationConfigure;
 
     /**
-    * Control parameter of intelligent tagging task.
+    * Intelligent tag task control parameter.
     */
     @SerializedName("TagConfigure")
     @Expose
     private TagConfigureInfo TagConfigure;
 
     /**
-    * Control parameter of intelligent cover generating task.
+    * Intelligent Cover Task Control Parameters.
     */
     @SerializedName("CoverConfigure")
     @Expose
     private CoverConfigureInfo CoverConfigure;
 
     /**
-    * Control parameter of intelligent frame-specific tagging task.
+    * Intelligent frame-specific tagging task control parameter.
     */
     @SerializedName("FrameTagConfigure")
     @Expose
     private FrameTagConfigureInfo FrameTagConfigure;
 
     /**
-     * Get Video content analysis template name. Length limit: 64 characters. 
-     * @return Name Video content analysis template name. Length limit: 64 characters.
+     * Get Name of the video analysis template, length limited to 64 characters. 
+     * @return Name Name of the video analysis template, length limited to 64 characters.
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Video content analysis template name. Length limit: 64 characters.
-     * @param Name Video content analysis template name. Length limit: 64 characters.
+     * Set Name of the video analysis template, length limited to 64 characters.
+     * @param Name Name of the video analysis template, length limited to 64 characters.
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get Video content analysis template description. Length limit: 256 characters. 
-     * @return Comment Video content analysis template description. Length limit: 256 characters.
+     * Get Description of the video analysis template, length limited to 256 characters. 
+     * @return Comment Description of the video analysis template, length limited to 256 characters.
      */
     public String getComment() {
         return this.Comment;
     }
 
     /**
-     * Set Video content analysis template description. Length limit: 256 characters.
-     * @param Comment Video content analysis template description. Length limit: 256 characters.
+     * Set Description of the video analysis template, length limited to 256 characters.
+     * @param Comment Description of the video analysis template, length limited to 256 characters.
      */
     public void setComment(String Comment) {
         this.Comment = Comment;
     }
 
     /**
-     * Get Control parameter of intelligent categorization task. 
-     * @return ClassificationConfigure Control parameter of intelligent categorization task.
+     * Get Intelligent Classification Task Control Parameters. 
+     * @return ClassificationConfigure Intelligent Classification Task Control Parameters.
      */
     public ClassificationConfigureInfo getClassificationConfigure() {
         return this.ClassificationConfigure;
     }
 
     /**
-     * Set Control parameter of intelligent categorization task.
-     * @param ClassificationConfigure Control parameter of intelligent categorization task.
+     * Set Intelligent Classification Task Control Parameters.
+     * @param ClassificationConfigure Intelligent Classification Task Control Parameters.
      */
     public void setClassificationConfigure(ClassificationConfigureInfo ClassificationConfigure) {
         this.ClassificationConfigure = ClassificationConfigure;
     }
 
     /**
-     * Get Control parameter of intelligent tagging task. 
-     * @return TagConfigure Control parameter of intelligent tagging task.
+     * Get Intelligent tag task control parameter. 
+     * @return TagConfigure Intelligent tag task control parameter.
      */
     public TagConfigureInfo getTagConfigure() {
         return this.TagConfigure;
     }
 
     /**
-     * Set Control parameter of intelligent tagging task.
-     * @param TagConfigure Control parameter of intelligent tagging task.
+     * Set Intelligent tag task control parameter.
+     * @param TagConfigure Intelligent tag task control parameter.
      */
     public void setTagConfigure(TagConfigureInfo TagConfigure) {
         this.TagConfigure = TagConfigure;
     }
 
     /**
-     * Get Control parameter of intelligent cover generating task. 
-     * @return CoverConfigure Control parameter of intelligent cover generating task.
+     * Get Intelligent Cover Task Control Parameters. 
+     * @return CoverConfigure Intelligent Cover Task Control Parameters.
      */
     public CoverConfigureInfo getCoverConfigure() {
         return this.CoverConfigure;
     }
 
     /**
-     * Set Control parameter of intelligent cover generating task.
-     * @param CoverConfigure Control parameter of intelligent cover generating task.
+     * Set Intelligent Cover Task Control Parameters.
+     * @param CoverConfigure Intelligent Cover Task Control Parameters.
      */
     public void setCoverConfigure(CoverConfigureInfo CoverConfigure) {
         this.CoverConfigure = CoverConfigure;
     }
 
     /**
-     * Get Control parameter of intelligent frame-specific tagging task. 
-     * @return FrameTagConfigure Control parameter of intelligent frame-specific tagging task.
+     * Get Intelligent frame-specific tagging task control parameter. 
+     * @return FrameTagConfigure Intelligent frame-specific tagging task control parameter.
      */
     public FrameTagConfigureInfo getFrameTagConfigure() {
         return this.FrameTagConfigure;
     }
 
     /**
-     * Set Control parameter of intelligent frame-specific tagging task.
-     * @param FrameTagConfigure Control parameter of intelligent frame-specific tagging task.
+     * Set Intelligent frame-specific tagging task control parameter.
+     * @param FrameTagConfigure Intelligent frame-specific tagging task control parameter.
      */
     public void setFrameTagConfigure(FrameTagConfigureInfo FrameTagConfigure) {
         this.FrameTagConfigure = FrameTagConfigure;

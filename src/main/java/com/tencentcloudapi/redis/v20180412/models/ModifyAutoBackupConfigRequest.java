@@ -53,7 +53,7 @@ public class ModifyAutoBackupConfigRequest extends AbstractModel {
     private Long AutoBackupType;
 
     /**
-    * Specifies the retention days of full backup files. unit: day.
+    * Retention days for full backup files. Only support setting to 7, unit: day. If needed for longer period, please submit a ticket (https://console.cloud.tencent.com/workorder/category) to apply.
     */
     @SerializedName("BackupStorageDays")
     @Expose
@@ -128,16 +128,16 @@ public class ModifyAutoBackupConfigRequest extends AbstractModel {
     }
 
     /**
-     * Get Specifies the retention days of full backup files. unit: day. 
-     * @return BackupStorageDays Specifies the retention days of full backup files. unit: day.
+     * Get Retention days for full backup files. Only support setting to 7, unit: day. If needed for longer period, please submit a ticket (https://console.cloud.tencent.com/workorder/category) to apply. 
+     * @return BackupStorageDays Retention days for full backup files. Only support setting to 7, unit: day. If needed for longer period, please submit a ticket (https://console.cloud.tencent.com/workorder/category) to apply.
      */
     public Long getBackupStorageDays() {
         return this.BackupStorageDays;
     }
 
     /**
-     * Set Specifies the retention days of full backup files. unit: day.
-     * @param BackupStorageDays Specifies the retention days of full backup files. unit: day.
+     * Set Retention days for full backup files. Only support setting to 7, unit: day. If needed for longer period, please submit a ticket (https://console.cloud.tencent.com/workorder/category) to apply.
+     * @param BackupStorageDays Retention days for full backup files. Only support setting to 7, unit: day. If needed for longer period, please submit a ticket (https://console.cloud.tencent.com/workorder/category) to apply.
      */
     public void setBackupStorageDays(Long BackupStorageDays) {
         this.BackupStorageDays = BackupStorageDays;

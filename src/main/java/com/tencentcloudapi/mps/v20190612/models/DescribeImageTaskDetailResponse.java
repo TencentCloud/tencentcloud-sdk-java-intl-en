@@ -24,16 +24,14 @@ import java.util.HashMap;
 public class DescribeImageTaskDetailResponse extends AbstractModel {
 
     /**
-    * <p>Task type. Valid value: </p><li>WorkflowTask: Workflow processing task.</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("TaskType")
     @Expose
     private String TaskType;
 
     /**
-    * <p>Task status. Valid values: </p><li>WAITING: Waiting; </li><li>PROCESSING: Processing; </li><li>FINISH: Completed.</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("Status")
     @Expose
@@ -61,24 +59,21 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String Message;
 
     /**
-    * <p>Execution status and result of the image processing task.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("ImageProcessTaskResultSet")
     @Expose
     private ImageProcessTaskResult [] ImageProcessTaskResultSet;
 
     /**
-    * <p>Task creation time, in <a href="https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52">ISO date and time format</a>.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * <p>Task completion time, in <a href="https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52">ISO date and time format</a>.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("FinishTime")
     @Expose
@@ -113,40 +108,32 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get <p>Task type. Valid value: </p><li>WorkflowTask: Workflow processing task.</li>
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return TaskType <p>Task type. Valid value: </p><li>WorkflowTask: Workflow processing task.</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return TaskType 
      */
     public String getTaskType() {
         return this.TaskType;
     }
 
     /**
-     * Set <p>Task type. Valid value: </p><li>WorkflowTask: Workflow processing task.</li>
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param TaskType <p>Task type. Valid value: </p><li>WorkflowTask: Workflow processing task.</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param TaskType 
      */
     public void setTaskType(String TaskType) {
         this.TaskType = TaskType;
     }
 
     /**
-     * Get <p>Task status. Valid values: </p><li>WAITING: Waiting; </li><li>PROCESSING: Processing; </li><li>FINISH: Completed.</li>
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Status <p>Task status. Valid values: </p><li>WAITING: Waiting; </li><li>PROCESSING: Processing; </li><li>FINISH: Completed.</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return Status 
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set <p>Task status. Valid values: </p><li>WAITING: Waiting; </li><li>PROCESSING: Processing; </li><li>FINISH: Completed.</li>
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Status <p>Task status. Valid values: </p><li>WAITING: Waiting; </li><li>PROCESSING: Processing; </li><li>FINISH: Completed.</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param Status 
      */
     public void setStatus(String Status) {
         this.Status = Status;
@@ -201,60 +188,48 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get <p>Execution status and result of the image processing task.</p>
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ImageProcessTaskResultSet <p>Execution status and result of the image processing task.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return ImageProcessTaskResultSet 
      */
     public ImageProcessTaskResult [] getImageProcessTaskResultSet() {
         return this.ImageProcessTaskResultSet;
     }
 
     /**
-     * Set <p>Execution status and result of the image processing task.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ImageProcessTaskResultSet <p>Execution status and result of the image processing task.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param ImageProcessTaskResultSet 
      */
     public void setImageProcessTaskResultSet(ImageProcessTaskResult [] ImageProcessTaskResultSet) {
         this.ImageProcessTaskResultSet = ImageProcessTaskResultSet;
     }
 
     /**
-     * Get <p>Task creation time, in <a href="https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52">ISO date and time format</a>.</p>
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return CreateTime <p>Task creation time, in <a href="https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52">ISO date and time format</a>.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return CreateTime 
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set <p>Task creation time, in <a href="https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52">ISO date and time format</a>.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param CreateTime <p>Task creation time, in <a href="https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52">ISO date and time format</a>.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param CreateTime 
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get <p>Task completion time, in <a href="https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52">ISO date and time format</a>.</p>
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return FinishTime <p>Task completion time, in <a href="https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52">ISO date and time format</a>.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return FinishTime 
      */
     public String getFinishTime() {
         return this.FinishTime;
     }
 
     /**
-     * Set <p>Task completion time, in <a href="https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52">ISO date and time format</a>.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param FinishTime <p>Task completion time, in <a href="https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52">ISO date and time format</a>.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param FinishTime 
      */
     public void setFinishTime(String FinishTime) {
         this.FinishTime = FinishTime;

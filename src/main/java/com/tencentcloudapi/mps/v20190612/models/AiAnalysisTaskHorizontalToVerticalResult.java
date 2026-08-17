@@ -24,150 +24,115 @@ import java.util.HashMap;
 public class AiAnalysisTaskHorizontalToVerticalResult extends AbstractModel {
 
     /**
-    * Task status, including PROCESSING, SUCCESS, and FAIL.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * Error code. 0: Task successful. Other values: Task failed.
-
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("ErrCode")
     @Expose
     private Long ErrCode;
 
     /**
-    * Error message
-
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("Message")
     @Expose
     private String Message;
 
     /**
-    * Intelligent landscape-to-portrait task input.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("Input")
     @Expose
     private AiAnalysisTaskHorizontalToVerticalInput Input;
 
     /**
-    * Intelligent landscape-to-portrait task output.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("Output")
     @Expose
     private AiAnalysisTaskHorizontalToVerticalOutput Output;
 
     /**
-     * Get Task status, including PROCESSING, SUCCESS, and FAIL.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Status Task status, including PROCESSING, SUCCESS, and FAIL.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return Status 
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Task status, including PROCESSING, SUCCESS, and FAIL.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Status Task status, including PROCESSING, SUCCESS, and FAIL.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param Status 
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get Error code. 0: Task successful. Other values: Task failed.
-
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ErrCode Error code. 0: Task successful. Other values: Task failed.
-
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return ErrCode 
      */
     public Long getErrCode() {
         return this.ErrCode;
     }
 
     /**
-     * Set Error code. 0: Task successful. Other values: Task failed.
-
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ErrCode Error code. 0: Task successful. Other values: Task failed.
-
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param ErrCode 
      */
     public void setErrCode(Long ErrCode) {
         this.ErrCode = ErrCode;
     }
 
     /**
-     * Get Error message
-
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Message Error message
-
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return Message 
      */
     public String getMessage() {
         return this.Message;
     }
 
     /**
-     * Set Error message
-
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Message Error message
-
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param Message 
      */
     public void setMessage(String Message) {
         this.Message = Message;
     }
 
     /**
-     * Get Intelligent landscape-to-portrait task input.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Input Intelligent landscape-to-portrait task input.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return Input 
      */
     public AiAnalysisTaskHorizontalToVerticalInput getInput() {
         return this.Input;
     }
 
     /**
-     * Set Intelligent landscape-to-portrait task input.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Input Intelligent landscape-to-portrait task input.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param Input 
      */
     public void setInput(AiAnalysisTaskHorizontalToVerticalInput Input) {
         this.Input = Input;
     }
 
     /**
-     * Get Intelligent landscape-to-portrait task output.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Output Intelligent landscape-to-portrait task output.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return Output 
      */
     public AiAnalysisTaskHorizontalToVerticalOutput getOutput() {
         return this.Output;
     }
 
     /**
-     * Set Intelligent landscape-to-portrait task output.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Output Intelligent landscape-to-portrait task output.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param Output 
      */
     public void setOutput(AiAnalysisTaskHorizontalToVerticalOutput Output) {
         this.Output = Output;

@@ -24,28 +24,23 @@ import java.util.HashMap;
 public class AiReviewPornTaskInput extends AbstractModel {
 
     /**
-    * The ID of a porn detection template.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("Definition")
     @Expose
     private Long Definition;
 
     /**
-     * Get The ID of a porn detection template.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Definition The ID of a porn detection template.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return Definition 
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set The ID of a porn detection template.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Definition The ID of a porn detection template.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param Definition 
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;

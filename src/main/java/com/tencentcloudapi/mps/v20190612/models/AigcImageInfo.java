@@ -31,8 +31,10 @@ public class AigcImageInfo extends AbstractModel {
     private String ImageUrl;
 
     /**
-    * Reference type.
-Note:1. When the model uses Vidu's q2 multi-reference image generation, this can also be used to specify the subject ID.2. If the GV model is used, this serves as the reference method. Valid values are asset and style.
+    * Reference Type.
+Note:
+1. When the model uses Vidu's q2 multi-reference image generation, it can also be used to specify the subject ID.
+2. If the GV model is used, this serves as the reference method. Valid values are asset and style.
     */
     @SerializedName("ReferenceType")
     @Expose
@@ -55,20 +57,28 @@ Note:1. When the model uses Vidu's q2 multi-reference image generation, this can
     }
 
     /**
-     * Get Reference type.
-Note:1. When the model uses Vidu's q2 multi-reference image generation, this can also be used to specify the subject ID.2. If the GV model is used, this serves as the reference method. Valid values are asset and style. 
-     * @return ReferenceType Reference type.
-Note:1. When the model uses Vidu's q2 multi-reference image generation, this can also be used to specify the subject ID.2. If the GV model is used, this serves as the reference method. Valid values are asset and style.
+     * Get Reference Type.
+Note:
+1. When the model uses Vidu's q2 multi-reference image generation, it can also be used to specify the subject ID.
+2. If the GV model is used, this serves as the reference method. Valid values are asset and style. 
+     * @return ReferenceType Reference Type.
+Note:
+1. When the model uses Vidu's q2 multi-reference image generation, it can also be used to specify the subject ID.
+2. If the GV model is used, this serves as the reference method. Valid values are asset and style.
      */
     public String getReferenceType() {
         return this.ReferenceType;
     }
 
     /**
-     * Set Reference type.
-Note:1. When the model uses Vidu's q2 multi-reference image generation, this can also be used to specify the subject ID.2. If the GV model is used, this serves as the reference method. Valid values are asset and style.
-     * @param ReferenceType Reference type.
-Note:1. When the model uses Vidu's q2 multi-reference image generation, this can also be used to specify the subject ID.2. If the GV model is used, this serves as the reference method. Valid values are asset and style.
+     * Set Reference Type.
+Note:
+1. When the model uses Vidu's q2 multi-reference image generation, it can also be used to specify the subject ID.
+2. If the GV model is used, this serves as the reference method. Valid values are asset and style.
+     * @param ReferenceType Reference Type.
+Note:
+1. When the model uses Vidu's q2 multi-reference image generation, it can also be used to specify the subject ID.
+2. If the GV model is used, this serves as the reference method. Valid values are asset and style.
      */
     public void setReferenceType(String ReferenceType) {
         this.ReferenceType = ReferenceType;

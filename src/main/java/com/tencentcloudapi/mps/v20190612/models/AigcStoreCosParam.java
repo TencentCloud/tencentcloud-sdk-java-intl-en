@@ -38,7 +38,9 @@ public class AigcStoreCosParam extends AbstractModel {
     private String CosBucketRegion;
 
     /**
-    * Path of the COS bucket to store to.Optional.Example value: my_file.
+    * Store to the bucket path of cos.
+Option.
+Example value: my_file.
     */
     @SerializedName("CosBucketPath")
     @Expose
@@ -77,16 +79,24 @@ public class AigcStoreCosParam extends AbstractModel {
     }
 
     /**
-     * Get Path of the COS bucket to store to.Optional.Example value: my_file. 
-     * @return CosBucketPath Path of the COS bucket to store to.Optional.Example value: my_file.
+     * Get Store to the bucket path of cos.
+Option.
+Example value: my_file. 
+     * @return CosBucketPath Store to the bucket path of cos.
+Option.
+Example value: my_file.
      */
     public String getCosBucketPath() {
         return this.CosBucketPath;
     }
 
     /**
-     * Set Path of the COS bucket to store to.Optional.Example value: my_file.
-     * @param CosBucketPath Path of the COS bucket to store to.Optional.Example value: my_file.
+     * Set Store to the bucket path of cos.
+Option.
+Example value: my_file.
+     * @param CosBucketPath Store to the bucket path of cos.
+Option.
+Example value: my_file.
      */
     public void setCosBucketPath(String CosBucketPath) {
         this.CosBucketPath = CosBucketPath;

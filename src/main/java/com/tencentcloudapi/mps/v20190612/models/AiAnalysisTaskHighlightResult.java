@@ -24,120 +24,115 @@ import java.util.HashMap;
 public class AiAnalysisTaskHighlightResult extends AbstractModel {
 
     /**
-    * The task status. Valid values: `PROCESSING`, `SUCCESS`, `FAIL`.
+    * Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * Error code. `0`: The task succeeded; other values: The task failed.
+    * Error code. 0: Task successful. Other values: Task failed.
     */
     @SerializedName("ErrCode")
     @Expose
     private Long ErrCode;
 
     /**
-    * The error message.
+    * Error message.
     */
     @SerializedName("Message")
     @Expose
     private String Message;
 
     /**
-    * The input of the intelligent highlight generation task.
+    * Input of the intelligent highlight task.
     */
     @SerializedName("Input")
     @Expose
     private AiAnalysisTaskHighlightInput Input;
 
     /**
-    * The output of the intelligent highlight generation task.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("Output")
     @Expose
     private AiAnalysisTaskHighlightOutput Output;
 
     /**
-     * Get The task status. Valid values: `PROCESSING`, `SUCCESS`, `FAIL`. 
-     * @return Status The task status. Valid values: `PROCESSING`, `SUCCESS`, `FAIL`.
+     * Get Task status. Valid values are PROCESSING, SUCCESS, and FAIL. 
+     * @return Status Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set The task status. Valid values: `PROCESSING`, `SUCCESS`, `FAIL`.
-     * @param Status The task status. Valid values: `PROCESSING`, `SUCCESS`, `FAIL`.
+     * Set Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
+     * @param Status Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get Error code. `0`: The task succeeded; other values: The task failed. 
-     * @return ErrCode Error code. `0`: The task succeeded; other values: The task failed.
+     * Get Error code. 0: Task successful. Other values: Task failed. 
+     * @return ErrCode Error code. 0: Task successful. Other values: Task failed.
      */
     public Long getErrCode() {
         return this.ErrCode;
     }
 
     /**
-     * Set Error code. `0`: The task succeeded; other values: The task failed.
-     * @param ErrCode Error code. `0`: The task succeeded; other values: The task failed.
+     * Set Error code. 0: Task successful. Other values: Task failed.
+     * @param ErrCode Error code. 0: Task successful. Other values: Task failed.
      */
     public void setErrCode(Long ErrCode) {
         this.ErrCode = ErrCode;
     }
 
     /**
-     * Get The error message. 
-     * @return Message The error message.
+     * Get Error message. 
+     * @return Message Error message.
      */
     public String getMessage() {
         return this.Message;
     }
 
     /**
-     * Set The error message.
-     * @param Message The error message.
+     * Set Error message.
+     * @param Message Error message.
      */
     public void setMessage(String Message) {
         this.Message = Message;
     }
 
     /**
-     * Get The input of the intelligent highlight generation task. 
-     * @return Input The input of the intelligent highlight generation task.
+     * Get Input of the intelligent highlight task. 
+     * @return Input Input of the intelligent highlight task.
      */
     public AiAnalysisTaskHighlightInput getInput() {
         return this.Input;
     }
 
     /**
-     * Set The input of the intelligent highlight generation task.
-     * @param Input The input of the intelligent highlight generation task.
+     * Set Input of the intelligent highlight task.
+     * @param Input Input of the intelligent highlight task.
      */
     public void setInput(AiAnalysisTaskHighlightInput Input) {
         this.Input = Input;
     }
 
     /**
-     * Get The output of the intelligent highlight generation task.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Output The output of the intelligent highlight generation task.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return Output 
      */
     public AiAnalysisTaskHighlightOutput getOutput() {
         return this.Output;
     }
 
     /**
-     * Set The output of the intelligent highlight generation task.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Output The output of the intelligent highlight generation task.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param Output 
      */
     public void setOutput(AiAnalysisTaskHighlightOutput Output) {
         this.Output = Output;

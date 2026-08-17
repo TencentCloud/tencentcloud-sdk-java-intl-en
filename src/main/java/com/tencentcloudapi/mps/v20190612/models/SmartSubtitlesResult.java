@@ -25,8 +25,8 @@ public class SmartSubtitlesResult extends AbstractModel {
 
     /**
     * Task type. Valid values:
-- AsrFullTextRecognition: full speech recognition.
-- TransTextRecognition: speech translation.
+- AsrFullTextRecognition: full speech recognition
+- TransTextRecognition: speech translation
 - PureSubtitleTrans: pure subtitle translation.
 - OcrFullTextRecognition: text-based subtitle extraction.
     */
@@ -35,36 +35,28 @@ public class SmartSubtitlesResult extends AbstractModel {
     private String Type;
 
     /**
-    * Full speech recognition result. When Type is
- set to AsrFullTextRecognition, this parameter takes effect.
-Note: This field may return null, indicating that no valid value can be obtained.
+    * 
     */
     @SerializedName("AsrFullTextTask")
     @Expose
     private SmartSubtitleTaskAsrFullTextResult AsrFullTextTask;
 
     /**
-    * Translation result. When Type is
-
- set to TransTextRecognition, this parameter takes effect.
-Note: This field may return null, indicating that no valid value can be obtained.
+    * 
     */
     @SerializedName("TransTextTask")
     @Expose
     private SmartSubtitleTaskTransTextResult TransTextTask;
 
     /**
-    * The translation result of the pure subtitle file is returned when the translation type is PureSubtitleTrans.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("PureSubtitleTransTask")
     @Expose
     private PureSubtitleTransResult PureSubtitleTransTask;
 
     /**
-    * Text-based subtitle extraction result. This field is valid when the value of Type is
-OcrFullTextRecognition.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("OcrFullTextTask")
     @Expose
@@ -72,13 +64,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get Task type. Valid values:
-- AsrFullTextRecognition: full speech recognition.
-- TransTextRecognition: speech translation.
+- AsrFullTextRecognition: full speech recognition
+- TransTextRecognition: speech translation
 - PureSubtitleTrans: pure subtitle translation.
 - OcrFullTextRecognition: text-based subtitle extraction. 
      * @return Type Task type. Valid values:
-- AsrFullTextRecognition: full speech recognition.
-- TransTextRecognition: speech translation.
+- AsrFullTextRecognition: full speech recognition
+- TransTextRecognition: speech translation
 - PureSubtitleTrans: pure subtitle translation.
 - OcrFullTextRecognition: text-based subtitle extraction.
      */
@@ -88,13 +80,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Task type. Valid values:
-- AsrFullTextRecognition: full speech recognition.
-- TransTextRecognition: speech translation.
+- AsrFullTextRecognition: full speech recognition
+- TransTextRecognition: speech translation
 - PureSubtitleTrans: pure subtitle translation.
 - OcrFullTextRecognition: text-based subtitle extraction.
      * @param Type Task type. Valid values:
-- AsrFullTextRecognition: full speech recognition.
-- TransTextRecognition: speech translation.
+- AsrFullTextRecognition: full speech recognition
+- TransTextRecognition: speech translation
 - PureSubtitleTrans: pure subtitle translation.
 - OcrFullTextRecognition: text-based subtitle extraction.
      */
@@ -103,96 +95,64 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Full speech recognition result. When Type is
- set to AsrFullTextRecognition, this parameter takes effect.
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return AsrFullTextTask Full speech recognition result. When Type is
- set to AsrFullTextRecognition, this parameter takes effect.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get  
+     * @return AsrFullTextTask 
      */
     public SmartSubtitleTaskAsrFullTextResult getAsrFullTextTask() {
         return this.AsrFullTextTask;
     }
 
     /**
-     * Set Full speech recognition result. When Type is
- set to AsrFullTextRecognition, this parameter takes effect.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param AsrFullTextTask Full speech recognition result. When Type is
- set to AsrFullTextRecognition, this parameter takes effect.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set 
+     * @param AsrFullTextTask 
      */
     public void setAsrFullTextTask(SmartSubtitleTaskAsrFullTextResult AsrFullTextTask) {
         this.AsrFullTextTask = AsrFullTextTask;
     }
 
     /**
-     * Get Translation result. When Type is
-
- set to TransTextRecognition, this parameter takes effect.
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return TransTextTask Translation result. When Type is
-
- set to TransTextRecognition, this parameter takes effect.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get  
+     * @return TransTextTask 
      */
     public SmartSubtitleTaskTransTextResult getTransTextTask() {
         return this.TransTextTask;
     }
 
     /**
-     * Set Translation result. When Type is
-
- set to TransTextRecognition, this parameter takes effect.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param TransTextTask Translation result. When Type is
-
- set to TransTextRecognition, this parameter takes effect.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set 
+     * @param TransTextTask 
      */
     public void setTransTextTask(SmartSubtitleTaskTransTextResult TransTextTask) {
         this.TransTextTask = TransTextTask;
     }
 
     /**
-     * Get The translation result of the pure subtitle file is returned when the translation type is PureSubtitleTrans.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return PureSubtitleTransTask The translation result of the pure subtitle file is returned when the translation type is PureSubtitleTrans.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return PureSubtitleTransTask 
      */
     public PureSubtitleTransResult getPureSubtitleTransTask() {
         return this.PureSubtitleTransTask;
     }
 
     /**
-     * Set The translation result of the pure subtitle file is returned when the translation type is PureSubtitleTrans.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param PureSubtitleTransTask The translation result of the pure subtitle file is returned when the translation type is PureSubtitleTrans.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param PureSubtitleTransTask 
      */
     public void setPureSubtitleTransTask(PureSubtitleTransResult PureSubtitleTransTask) {
         this.PureSubtitleTransTask = PureSubtitleTransTask;
     }
 
     /**
-     * Get Text-based subtitle extraction result. This field is valid when the value of Type is
-OcrFullTextRecognition.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return OcrFullTextTask Text-based subtitle extraction result. This field is valid when the value of Type is
-OcrFullTextRecognition.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return OcrFullTextTask 
      */
     public SmartSubtitleTaskFullTextResult getOcrFullTextTask() {
         return this.OcrFullTextTask;
     }
 
     /**
-     * Set Text-based subtitle extraction result. This field is valid when the value of Type is
-OcrFullTextRecognition.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param OcrFullTextTask Text-based subtitle extraction result. This field is valid when the value of Type is
-OcrFullTextRecognition.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param OcrFullTextTask 
      */
     public void setOcrFullTextTask(SmartSubtitleTaskFullTextResult OcrFullTextTask) {
         this.OcrFullTextTask = OcrFullTextTask;

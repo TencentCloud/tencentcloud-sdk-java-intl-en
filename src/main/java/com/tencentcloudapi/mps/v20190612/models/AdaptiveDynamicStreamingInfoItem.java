@@ -31,21 +31,21 @@ public class AdaptiveDynamicStreamingInfoItem extends AbstractModel {
     private Long Definition;
 
     /**
-    * Container format. Valid values: HLS, MPEG-DASH.
+    * Packaging format, which may be two kinds: HLS and MPEG-DASH.
     */
     @SerializedName("Package")
     @Expose
     private String Package;
 
     /**
-    * Playback address.
+    * Playback path.
     */
     @SerializedName("Path")
     @Expose
     private String Path;
 
     /**
-    * Storage location of adaptive bitrate streaming files.
+    * Storage location of the adaptive bitrate stream file.
     */
     @SerializedName("Storage")
     @Expose
@@ -68,48 +68,48 @@ public class AdaptiveDynamicStreamingInfoItem extends AbstractModel {
     }
 
     /**
-     * Get Container format. Valid values: HLS, MPEG-DASH. 
-     * @return Package Container format. Valid values: HLS, MPEG-DASH.
+     * Get Packaging format, which may be two kinds: HLS and MPEG-DASH. 
+     * @return Package Packaging format, which may be two kinds: HLS and MPEG-DASH.
      */
     public String getPackage() {
         return this.Package;
     }
 
     /**
-     * Set Container format. Valid values: HLS, MPEG-DASH.
-     * @param Package Container format. Valid values: HLS, MPEG-DASH.
+     * Set Packaging format, which may be two kinds: HLS and MPEG-DASH.
+     * @param Package Packaging format, which may be two kinds: HLS and MPEG-DASH.
      */
     public void setPackage(String Package) {
         this.Package = Package;
     }
 
     /**
-     * Get Playback address. 
-     * @return Path Playback address.
+     * Get Playback path. 
+     * @return Path Playback path.
      */
     public String getPath() {
         return this.Path;
     }
 
     /**
-     * Set Playback address.
-     * @param Path Playback address.
+     * Set Playback path.
+     * @param Path Playback path.
      */
     public void setPath(String Path) {
         this.Path = Path;
     }
 
     /**
-     * Get Storage location of adaptive bitrate streaming files. 
-     * @return Storage Storage location of adaptive bitrate streaming files.
+     * Get Storage location of the adaptive bitrate stream file. 
+     * @return Storage Storage location of the adaptive bitrate stream file.
      */
     public TaskOutputStorage getStorage() {
         return this.Storage;
     }
 
     /**
-     * Set Storage location of adaptive bitrate streaming files.
-     * @param Storage Storage location of adaptive bitrate streaming files.
+     * Set Storage location of the adaptive bitrate stream file.
+     * @param Storage Storage location of the adaptive bitrate stream file.
      */
     public void setStorage(TaskOutputStorage Storage) {
         this.Storage = Storage;

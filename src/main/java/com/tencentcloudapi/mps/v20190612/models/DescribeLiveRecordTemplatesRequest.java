@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeLiveRecordTemplatesRequest extends AbstractModel {
 
     /**
-    * Specifies the recording template unique identifier filter condition, with an array length limit of 100.
+    * Filter condition for the unique identifier of the recording template. The array can contain up to 100 unique identifiers.
     */
     @SerializedName("Definitions")
     @Expose
     private Long [] Definitions;
 
     /**
-    * Paging offset. Default value: 0.
+    * Pagination offset. Default value: 0.
     */
     @SerializedName("Offset")
     @Expose
@@ -45,48 +45,48 @@ public class DescribeLiveRecordTemplatesRequest extends AbstractModel {
     private Long Limit;
 
     /**
-    * Indicates the template type filter condition. If left empty, all templates are returned. Valid values:
-* Preset: System preset template;
-* Custom
+    * Condition for filtering templates by type. If this field is not specified, all templates are returned. Available values:
+* Preset: system preset template
+* Custom: user-defined template.
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * Specifies the recording template identifier filter condition, with a length limit of 64 characters.
+    * Filter condition for recording template identifiers, with a length limit of 64 characters.
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-     * Get Specifies the recording template unique identifier filter condition, with an array length limit of 100. 
-     * @return Definitions Specifies the recording template unique identifier filter condition, with an array length limit of 100.
+     * Get Filter condition for the unique identifier of the recording template. The array can contain up to 100 unique identifiers. 
+     * @return Definitions Filter condition for the unique identifier of the recording template. The array can contain up to 100 unique identifiers.
      */
     public Long [] getDefinitions() {
         return this.Definitions;
     }
 
     /**
-     * Set Specifies the recording template unique identifier filter condition, with an array length limit of 100.
-     * @param Definitions Specifies the recording template unique identifier filter condition, with an array length limit of 100.
+     * Set Filter condition for the unique identifier of the recording template. The array can contain up to 100 unique identifiers.
+     * @param Definitions Filter condition for the unique identifier of the recording template. The array can contain up to 100 unique identifiers.
      */
     public void setDefinitions(Long [] Definitions) {
         this.Definitions = Definitions;
     }
 
     /**
-     * Get Paging offset. Default value: 0. 
-     * @return Offset Paging offset. Default value: 0.
+     * Get Pagination offset. Default value: 0. 
+     * @return Offset Pagination offset. Default value: 0.
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Paging offset. Default value: 0.
-     * @param Offset Paging offset. Default value: 0.
+     * Set Pagination offset. Default value: 0.
+     * @param Offset Pagination offset. Default value: 0.
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
@@ -109,40 +109,40 @@ public class DescribeLiveRecordTemplatesRequest extends AbstractModel {
     }
 
     /**
-     * Get Indicates the template type filter condition. If left empty, all templates are returned. Valid values:
-* Preset: System preset template;
-* Custom 
-     * @return Type Indicates the template type filter condition. If left empty, all templates are returned. Valid values:
-* Preset: System preset template;
-* Custom
+     * Get Condition for filtering templates by type. If this field is not specified, all templates are returned. Available values:
+* Preset: system preset template
+* Custom: user-defined template. 
+     * @return Type Condition for filtering templates by type. If this field is not specified, all templates are returned. Available values:
+* Preset: system preset template
+* Custom: user-defined template.
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set Indicates the template type filter condition. If left empty, all templates are returned. Valid values:
-* Preset: System preset template;
-* Custom
-     * @param Type Indicates the template type filter condition. If left empty, all templates are returned. Valid values:
-* Preset: System preset template;
-* Custom
+     * Set Condition for filtering templates by type. If this field is not specified, all templates are returned. Available values:
+* Preset: system preset template
+* Custom: user-defined template.
+     * @param Type Condition for filtering templates by type. If this field is not specified, all templates are returned. Available values:
+* Preset: system preset template
+* Custom: user-defined template.
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get Specifies the recording template identifier filter condition, with a length limit of 64 characters. 
-     * @return Name Specifies the recording template identifier filter condition, with a length limit of 64 characters.
+     * Get Filter condition for recording template identifiers, with a length limit of 64 characters. 
+     * @return Name Filter condition for recording template identifiers, with a length limit of 64 characters.
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Specifies the recording template identifier filter condition, with a length limit of 64 characters.
-     * @param Name Specifies the recording template identifier filter condition, with a length limit of 64 characters.
+     * Set Filter condition for recording template identifiers, with a length limit of 64 characters.
+     * @param Name Filter condition for recording template identifiers, with a length limit of 64 characters.
      */
     public void setName(String Name) {
         this.Name = Name;
