@@ -52,7 +52,7 @@ public class SendStatus extends AbstractModel {
     private String SessionContext;
 
     /**
-    * SMS request error code. For specific meanings, see [Error Codes](https://intl.cloud.tencent.com/zh/document/product/382/40536#6.-error-code). `Ok` will be returned for successful delivery.
+    * SMS request error code. For specific meanings, see [Error Codes](https://www.tencentcloud.com/zh/document/product/382/40536#6.-Error-Code). `Ok` will be returned for successful delivery.
     */
     @SerializedName("Code")
     @Expose
@@ -66,7 +66,7 @@ public class SendStatus extends AbstractModel {
     private String Message;
 
     /**
-    * Country/Region code, such as US and MY. For unrecognized country/region codes, `DEF` is returned by default. For the specific list of supported values, please see [Global SMS Price Overview](https://intl.cloud.tencent.com/document/product/382/18051?from_cn_redirect=1).
+    * Country/Region code, such as US and MY. For unrecognized country/region codes, `DEF` is returned by default. For the specific list of supported values, please see [Global SMS Price Overview](https://www.tencentcloud.com/zh/document/product/382/8414).
     */
     @SerializedName("IsoCode")
     @Expose
@@ -137,16 +137,16 @@ public class SendStatus extends AbstractModel {
     }
 
     /**
-     * Get SMS request error code. For specific meanings, see [Error Codes](https://intl.cloud.tencent.com/zh/document/product/382/40536#6.-error-code). `Ok` will be returned for successful delivery. 
-     * @return Code SMS request error code. For specific meanings, see [Error Codes](https://intl.cloud.tencent.com/zh/document/product/382/40536#6.-error-code). `Ok` will be returned for successful delivery.
+     * Get SMS request error code. For specific meanings, see [Error Codes](https://www.tencentcloud.com/zh/document/product/382/40536#6.-Error-Code). `Ok` will be returned for successful delivery. 
+     * @return Code SMS request error code. For specific meanings, see [Error Codes](https://www.tencentcloud.com/zh/document/product/382/40536#6.-Error-Code). `Ok` will be returned for successful delivery.
      */
     public String getCode() {
         return this.Code;
     }
 
     /**
-     * Set SMS request error code. For specific meanings, see [Error Codes](https://intl.cloud.tencent.com/zh/document/product/382/40536#6.-error-code). `Ok` will be returned for successful delivery.
-     * @param Code SMS request error code. For specific meanings, see [Error Codes](https://intl.cloud.tencent.com/zh/document/product/382/40536#6.-error-code). `Ok` will be returned for successful delivery.
+     * Set SMS request error code. For specific meanings, see [Error Codes](https://www.tencentcloud.com/zh/document/product/382/40536#6.-Error-Code). `Ok` will be returned for successful delivery.
+     * @param Code SMS request error code. For specific meanings, see [Error Codes](https://www.tencentcloud.com/zh/document/product/382/40536#6.-Error-Code). `Ok` will be returned for successful delivery.
      */
     public void setCode(String Code) {
         this.Code = Code;
@@ -169,16 +169,16 @@ public class SendStatus extends AbstractModel {
     }
 
     /**
-     * Get Country/Region code, such as US and MY. For unrecognized country/region codes, `DEF` is returned by default. For the specific list of supported values, please see [Global SMS Price Overview](https://intl.cloud.tencent.com/document/product/382/18051?from_cn_redirect=1). 
-     * @return IsoCode Country/Region code, such as US and MY. For unrecognized country/region codes, `DEF` is returned by default. For the specific list of supported values, please see [Global SMS Price Overview](https://intl.cloud.tencent.com/document/product/382/18051?from_cn_redirect=1).
+     * Get Country/Region code, such as US and MY. For unrecognized country/region codes, `DEF` is returned by default. For the specific list of supported values, please see [Global SMS Price Overview](https://www.tencentcloud.com/zh/document/product/382/8414). 
+     * @return IsoCode Country/Region code, such as US and MY. For unrecognized country/region codes, `DEF` is returned by default. For the specific list of supported values, please see [Global SMS Price Overview](https://www.tencentcloud.com/zh/document/product/382/8414).
      */
     public String getIsoCode() {
         return this.IsoCode;
     }
 
     /**
-     * Set Country/Region code, such as US and MY. For unrecognized country/region codes, `DEF` is returned by default. For the specific list of supported values, please see [Global SMS Price Overview](https://intl.cloud.tencent.com/document/product/382/18051?from_cn_redirect=1).
-     * @param IsoCode Country/Region code, such as US and MY. For unrecognized country/region codes, `DEF` is returned by default. For the specific list of supported values, please see [Global SMS Price Overview](https://intl.cloud.tencent.com/document/product/382/18051?from_cn_redirect=1).
+     * Set Country/Region code, such as US and MY. For unrecognized country/region codes, `DEF` is returned by default. For the specific list of supported values, please see [Global SMS Price Overview](https://www.tencentcloud.com/zh/document/product/382/8414).
+     * @param IsoCode Country/Region code, such as US and MY. For unrecognized country/region codes, `DEF` is returned by default. For the specific list of supported values, please see [Global SMS Price Overview](https://www.tencentcloud.com/zh/document/product/382/8414).
      */
     public void setIsoCode(String IsoCode) {
         this.IsoCode = IsoCode;

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ModifyDashboardRequest extends AbstractModel {
 
     /**
-    * Dashboard id. Obtain DashboardId through the [Get Dashboard](https://www.tencentcloud.com/document/api/614/95636?from_cn_redirect=1) API.
+    * Dashboard id.
     */
     @SerializedName("DashboardId")
     @Expose
@@ -52,16 +52,16 @@ public class ModifyDashboardRequest extends AbstractModel {
     private Tag [] Tags;
 
     /**
-     * Get Dashboard id. Obtain DashboardId through the [Get Dashboard](https://www.tencentcloud.com/document/api/614/95636?from_cn_redirect=1) API. 
-     * @return DashboardId Dashboard id. Obtain DashboardId through the [Get Dashboard](https://www.tencentcloud.com/document/api/614/95636?from_cn_redirect=1) API.
+     * Get Dashboard id. 
+     * @return DashboardId Dashboard id.
      */
     public String getDashboardId() {
         return this.DashboardId;
     }
 
     /**
-     * Set Dashboard id. Obtain DashboardId through the [Get Dashboard](https://www.tencentcloud.com/document/api/614/95636?from_cn_redirect=1) API.
-     * @param DashboardId Dashboard id. Obtain DashboardId through the [Get Dashboard](https://www.tencentcloud.com/document/api/614/95636?from_cn_redirect=1) API.
+     * Set Dashboard id.
+     * @param DashboardId Dashboard id.
      */
     public void setDashboardId(String DashboardId) {
         this.DashboardId = DashboardId;
