@@ -60,7 +60,11 @@ public class GetFaceIdTokenIntlRequest extends AbstractModel {
     private String ActionList;
 
     /**
-    * <p>PLUS: PLUS version, PRO: PRO version, ENHANCED: enhanced, BASIC: basic (default)</p>
+    * BASIC: Basic version (Default).
+ENHANCED: Enhance version, enable additional output of device risk level field.
+PRO: Pro version, enable additional output of attack type fields.
+PLUS: Plus version, enable additional output of device risk level and attack type fields.
+Please contact us to access enhance version & plus version.	
     */
     @SerializedName("SdkVersion")
     @Expose
@@ -158,16 +162,32 @@ public class GetFaceIdTokenIntlRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>PLUS: PLUS version, PRO: PRO version, ENHANCED: enhanced, BASIC: basic (default)</p> 
-     * @return SdkVersion <p>PLUS: PLUS version, PRO: PRO version, ENHANCED: enhanced, BASIC: basic (default)</p>
+     * Get BASIC: Basic version (Default).
+ENHANCED: Enhance version, enable additional output of device risk level field.
+PRO: Pro version, enable additional output of attack type fields.
+PLUS: Plus version, enable additional output of device risk level and attack type fields.
+Please contact us to access enhance version & plus version.	 
+     * @return SdkVersion BASIC: Basic version (Default).
+ENHANCED: Enhance version, enable additional output of device risk level field.
+PRO: Pro version, enable additional output of attack type fields.
+PLUS: Plus version, enable additional output of device risk level and attack type fields.
+Please contact us to access enhance version & plus version.	
      */
     public String getSdkVersion() {
         return this.SdkVersion;
     }
 
     /**
-     * Set <p>PLUS: PLUS version, PRO: PRO version, ENHANCED: enhanced, BASIC: basic (default)</p>
-     * @param SdkVersion <p>PLUS: PLUS version, PRO: PRO version, ENHANCED: enhanced, BASIC: basic (default)</p>
+     * Set BASIC: Basic version (Default).
+ENHANCED: Enhance version, enable additional output of device risk level field.
+PRO: Pro version, enable additional output of attack type fields.
+PLUS: Plus version, enable additional output of device risk level and attack type fields.
+Please contact us to access enhance version & plus version.	
+     * @param SdkVersion BASIC: Basic version (Default).
+ENHANCED: Enhance version, enable additional output of device risk level field.
+PRO: Pro version, enable additional output of attack type fields.
+PLUS: Plus version, enable additional output of device risk level and attack type fields.
+Please contact us to access enhance version & plus version.	
      */
     public void setSdkVersion(String SdkVersion) {
         this.SdkVersion = SdkVersion;

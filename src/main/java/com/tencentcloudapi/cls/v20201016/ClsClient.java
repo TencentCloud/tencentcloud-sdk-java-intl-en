@@ -1099,6 +1099,17 @@ Note:
     }
 
     /**
+     *This API is used to obtain the dashboard.
+     * @param req DescribeDashboardsRequest
+     * @return DescribeDashboardsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDashboardsResponse DescribeDashboards(DescribeDashboardsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDashboards", DescribeDashboardsResponse.class);
+    }
+
+    /**
      *This API is used to get the basic information of data processing tasks.
      * @param req DescribeDataTransformInfoRequest
      * @return DescribeDataTransformInfoResponse

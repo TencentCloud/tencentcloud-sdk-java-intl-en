@@ -32,7 +32,6 @@ public class DashboardSubscribeData extends AbstractModel {
 
     /**
     * Dashboard subscription time. If this field is empty, the dashboard default time is used.
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("DashboardTime")
     @Expose
@@ -40,7 +39,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Dashboard subscription template variable.
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("TemplateVariables")
     @Expose
@@ -91,10 +89,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Dashboard subscription time. If this field is empty, the dashboard default time is used.
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Dashboard subscription time. If this field is empty, the dashboard default time is used. 
      * @return DashboardTime Dashboard subscription time. If this field is empty, the dashboard default time is used.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String [] getDashboardTime() {
         return this.DashboardTime;
@@ -102,19 +98,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Dashboard subscription time. If this field is empty, the dashboard default time is used.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param DashboardTime Dashboard subscription time. If this field is empty, the dashboard default time is used.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setDashboardTime(String [] DashboardTime) {
         this.DashboardTime = DashboardTime;
     }
 
     /**
-     * Get Dashboard subscription template variable.
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Dashboard subscription template variable. 
      * @return TemplateVariables Dashboard subscription template variable.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public DashboardTemplateVariable [] getTemplateVariables() {
         return this.TemplateVariables;
@@ -122,9 +114,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Dashboard subscription template variable.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param TemplateVariables Dashboard subscription template variable.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setTemplateVariables(DashboardTemplateVariable [] TemplateVariables) {
         this.TemplateVariables = TemplateVariables;

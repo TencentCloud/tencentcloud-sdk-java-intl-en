@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class SearchDashboardSubscribeRequest extends AbstractModel {
 
     /**
-    * Dashboard id. Obtain the DashboardId through the [Get Dashboard](https://www.tencentcloud.com/document/api/614/95636?from_cn_redirect=1) API.
+    * Dashboard id. Obtain the DashboardId through the [search for a dashboard.](https://www.tencentcloud.com/document/api/614/95636?from_cn_redirect=1) API.
     */
     @SerializedName("DashboardId")
     @Expose
@@ -38,30 +38,30 @@ public class SearchDashboardSubscribeRequest extends AbstractModel {
     private DashboardSubscribeData SubscribeData;
 
     /**
-    * Dashboard subscription Id. Obtain through the api [Dashboard subscription list](https://www.tencentcloud.com/document/api/614/105779?from_cn_redirect=1).
+    * Dashboard subscription Id. Obtain the Id through the [dashboard subscription list](https://www.tencentcloud.com/document/api/614/105779?from_cn_redirect=1) api.
     */
     @SerializedName("Id")
     @Expose
     private Long Id;
 
     /**
-    * Dashboard subscription Name. Obtain through the api [Dashboard subscription list](https://www.tencentcloud.com/document/api/614/105779?from_cn_redirect=1).
+    * Dashboard subscription name. Obtain the Name through the [dashboard subscription list](https://www.tencentcloud.com/document/api/614/105779?from_cn_redirect=1) API.
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-     * Get Dashboard id. Obtain the DashboardId through the [Get Dashboard](https://www.tencentcloud.com/document/api/614/95636?from_cn_redirect=1) API. 
-     * @return DashboardId Dashboard id. Obtain the DashboardId through the [Get Dashboard](https://www.tencentcloud.com/document/api/614/95636?from_cn_redirect=1) API.
+     * Get Dashboard id. Obtain the DashboardId through the [search for a dashboard.](https://www.tencentcloud.com/document/api/614/95636?from_cn_redirect=1) API. 
+     * @return DashboardId Dashboard id. Obtain the DashboardId through the [search for a dashboard.](https://www.tencentcloud.com/document/api/614/95636?from_cn_redirect=1) API.
      */
     public String getDashboardId() {
         return this.DashboardId;
     }
 
     /**
-     * Set Dashboard id. Obtain the DashboardId through the [Get Dashboard](https://www.tencentcloud.com/document/api/614/95636?from_cn_redirect=1) API.
-     * @param DashboardId Dashboard id. Obtain the DashboardId through the [Get Dashboard](https://www.tencentcloud.com/document/api/614/95636?from_cn_redirect=1) API.
+     * Set Dashboard id. Obtain the DashboardId through the [search for a dashboard.](https://www.tencentcloud.com/document/api/614/95636?from_cn_redirect=1) API.
+     * @param DashboardId Dashboard id. Obtain the DashboardId through the [search for a dashboard.](https://www.tencentcloud.com/document/api/614/95636?from_cn_redirect=1) API.
      */
     public void setDashboardId(String DashboardId) {
         this.DashboardId = DashboardId;
@@ -84,32 +84,32 @@ public class SearchDashboardSubscribeRequest extends AbstractModel {
     }
 
     /**
-     * Get Dashboard subscription Id. Obtain through the api [Dashboard subscription list](https://www.tencentcloud.com/document/api/614/105779?from_cn_redirect=1). 
-     * @return Id Dashboard subscription Id. Obtain through the api [Dashboard subscription list](https://www.tencentcloud.com/document/api/614/105779?from_cn_redirect=1).
+     * Get Dashboard subscription Id. Obtain the Id through the [dashboard subscription list](https://www.tencentcloud.com/document/api/614/105779?from_cn_redirect=1) api. 
+     * @return Id Dashboard subscription Id. Obtain the Id through the [dashboard subscription list](https://www.tencentcloud.com/document/api/614/105779?from_cn_redirect=1) api.
      */
     public Long getId() {
         return this.Id;
     }
 
     /**
-     * Set Dashboard subscription Id. Obtain through the api [Dashboard subscription list](https://www.tencentcloud.com/document/api/614/105779?from_cn_redirect=1).
-     * @param Id Dashboard subscription Id. Obtain through the api [Dashboard subscription list](https://www.tencentcloud.com/document/api/614/105779?from_cn_redirect=1).
+     * Set Dashboard subscription Id. Obtain the Id through the [dashboard subscription list](https://www.tencentcloud.com/document/api/614/105779?from_cn_redirect=1) api.
+     * @param Id Dashboard subscription Id. Obtain the Id through the [dashboard subscription list](https://www.tencentcloud.com/document/api/614/105779?from_cn_redirect=1) api.
      */
     public void setId(Long Id) {
         this.Id = Id;
     }
 
     /**
-     * Get Dashboard subscription Name. Obtain through the api [Dashboard subscription list](https://www.tencentcloud.com/document/api/614/105779?from_cn_redirect=1). 
-     * @return Name Dashboard subscription Name. Obtain through the api [Dashboard subscription list](https://www.tencentcloud.com/document/api/614/105779?from_cn_redirect=1).
+     * Get Dashboard subscription name. Obtain the Name through the [dashboard subscription list](https://www.tencentcloud.com/document/api/614/105779?from_cn_redirect=1) API. 
+     * @return Name Dashboard subscription name. Obtain the Name through the [dashboard subscription list](https://www.tencentcloud.com/document/api/614/105779?from_cn_redirect=1) API.
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Dashboard subscription Name. Obtain through the api [Dashboard subscription list](https://www.tencentcloud.com/document/api/614/105779?from_cn_redirect=1).
-     * @param Name Dashboard subscription Name. Obtain through the api [Dashboard subscription list](https://www.tencentcloud.com/document/api/614/105779?from_cn_redirect=1).
+     * Set Dashboard subscription name. Obtain the Name through the [dashboard subscription list](https://www.tencentcloud.com/document/api/614/105779?from_cn_redirect=1) API.
+     * @param Name Dashboard subscription name. Obtain the Name through the [dashboard subscription list](https://www.tencentcloud.com/document/api/614/105779?from_cn_redirect=1) API.
      */
     public void setName(String Name) {
         this.Name = Name;

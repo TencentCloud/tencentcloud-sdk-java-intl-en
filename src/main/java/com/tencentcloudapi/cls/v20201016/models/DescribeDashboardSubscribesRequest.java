@@ -26,7 +26,7 @@ public class DescribeDashboardSubscribesRequest extends AbstractModel {
     /**
     * dashboardId: Filter by [dashboard id]. Type: String. Required: No.
 
--Dashboard id. Obtain DashboardId through the [Get Dashboard](https://www.tencentcloud.com/document/api/614/95636?from_cn_redirect=1) api.
+- Dashboard id. Obtain the DashboardId through the [Get Dashboard](https://www.tencentcloud.com/document/api/614/95636?from_cn_redirect=1) API.
 -Input parameter example: dashboard-522a5609-1f41-4b11-8086-5afd1d7574f5
 
 Each request can have up to 10 Filters. The upper limit of Filter.Values is 100.
@@ -52,13 +52,13 @@ Each request can have up to 10 Filters. The upper limit of Filter.Values is 100.
     /**
      * Get dashboardId: Filter by [dashboard id]. Type: String. Required: No.
 
--Dashboard id. Obtain DashboardId through the [Get Dashboard](https://www.tencentcloud.com/document/api/614/95636?from_cn_redirect=1) api.
+- Dashboard id. Obtain the DashboardId through the [Get Dashboard](https://www.tencentcloud.com/document/api/614/95636?from_cn_redirect=1) API.
 -Input parameter example: dashboard-522a5609-1f41-4b11-8086-5afd1d7574f5
 
 Each request can have up to 10 Filters. The upper limit of Filter.Values is 100. 
      * @return Filters dashboardId: Filter by [dashboard id]. Type: String. Required: No.
 
--Dashboard id. Obtain DashboardId through the [Get Dashboard](https://www.tencentcloud.com/document/api/614/95636?from_cn_redirect=1) api.
+- Dashboard id. Obtain the DashboardId through the [Get Dashboard](https://www.tencentcloud.com/document/api/614/95636?from_cn_redirect=1) API.
 -Input parameter example: dashboard-522a5609-1f41-4b11-8086-5afd1d7574f5
 
 Each request can have up to 10 Filters. The upper limit of Filter.Values is 100.
@@ -70,13 +70,13 @@ Each request can have up to 10 Filters. The upper limit of Filter.Values is 100.
     /**
      * Set dashboardId: Filter by [dashboard id]. Type: String. Required: No.
 
--Dashboard id. Obtain DashboardId through the [Get Dashboard](https://www.tencentcloud.com/document/api/614/95636?from_cn_redirect=1) api.
+- Dashboard id. Obtain the DashboardId through the [Get Dashboard](https://www.tencentcloud.com/document/api/614/95636?from_cn_redirect=1) API.
 -Input parameter example: dashboard-522a5609-1f41-4b11-8086-5afd1d7574f5
 
 Each request can have up to 10 Filters. The upper limit of Filter.Values is 100.
      * @param Filters dashboardId: Filter by [dashboard id]. Type: String. Required: No.
 
--Dashboard id. Obtain DashboardId through the [Get Dashboard](https://www.tencentcloud.com/document/api/614/95636?from_cn_redirect=1) api.
+- Dashboard id. Obtain the DashboardId through the [Get Dashboard](https://www.tencentcloud.com/document/api/614/95636?from_cn_redirect=1) API.
 -Input parameter example: dashboard-522a5609-1f41-4b11-8086-5afd1d7574f5
 
 Each request can have up to 10 Filters. The upper limit of Filter.Values is 100.

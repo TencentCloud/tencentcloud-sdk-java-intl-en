@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateDashboardRequest extends AbstractModel {
 
     /**
-    * dashboard name
+    * Dashboard name
     */
     @SerializedName("DashboardName")
     @Expose
@@ -45,16 +45,16 @@ public class CreateDashboardRequest extends AbstractModel {
     private Tag [] Tags;
 
     /**
-     * Get dashboard name 
-     * @return DashboardName dashboard name
+     * Get Dashboard name 
+     * @return DashboardName Dashboard name
      */
     public String getDashboardName() {
         return this.DashboardName;
     }
 
     /**
-     * Set dashboard name
-     * @param DashboardName dashboard name
+     * Set Dashboard name
+     * @param DashboardName Dashboard name
      */
     public void setDashboardName(String DashboardName) {
         this.DashboardName = DashboardName;

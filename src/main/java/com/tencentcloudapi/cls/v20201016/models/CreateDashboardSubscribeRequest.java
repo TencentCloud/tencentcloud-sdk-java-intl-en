@@ -26,9 +26,9 @@ public class CreateDashboardSubscribeRequest extends AbstractModel {
     /**
     * Dashboard subscription name.
 Input limit:
--Cannot be empty
--Length cannot exceed 128 bytes
--Cannot contain character '|'
+-cannot be empty
+-Length cannot exceed 128 bytes.
+-Cannot contain the character '|'
     */
     @SerializedName("Name")
     @Expose
@@ -36,7 +36,7 @@ Input limit:
 
     /**
     * Dashboard Id.
--Get the dashboard Id by [searching for the dashboard](https://www.tencentcloud.com/document/product/614/95636?from_cn_redirect=1).
+-Get the dashboard Id by [searching for a dashboard](https://www.tencentcloud.com/document/product/614/95636?from_cn_redirect=1).
     */
     @SerializedName("DashboardId")
     @Expose
@@ -44,12 +44,12 @@ Input limit:
 
     /**
     * Subscription time cron expression, in format {seconds} {minutes} {hours} {date} {month} {weekday}; (valid data: {minutes} {hours} {date} {month} {weekday})
--{seconds} Value ranges from 0 to 59. 
+-{seconds} value ranges from 0 to 59. 
 -{Minutes} Value ranges from 0 to 59. 
 -Hour. Value ranges from 0 to 23. 
--{Date} value ranges from 1 to 31 AND (last day of month: L) 
+-{Date} value ranges from 1 to 31 AND (dayOfMonth last day: L) 
 -{Month} value ranges from 1 to 12. 
--Week value ranges from 0 to 6 [0:Sunday, 6:Saturday]
+-Week value ranges from 0 to 6 [0:Sunday, 6:Saturday].
     */
     @SerializedName("Cron")
     @Expose
@@ -65,14 +65,14 @@ Input limit:
     /**
      * Get Dashboard subscription name.
 Input limit:
--Cannot be empty
--Length cannot exceed 128 bytes
--Cannot contain character '|' 
+-cannot be empty
+-Length cannot exceed 128 bytes.
+-Cannot contain the character '|' 
      * @return Name Dashboard subscription name.
 Input limit:
--Cannot be empty
--Length cannot exceed 128 bytes
--Cannot contain character '|'
+-cannot be empty
+-Length cannot exceed 128 bytes.
+-Cannot contain the character '|'
      */
     public String getName() {
         return this.Name;
@@ -81,14 +81,14 @@ Input limit:
     /**
      * Set Dashboard subscription name.
 Input limit:
--Cannot be empty
--Length cannot exceed 128 bytes
--Cannot contain character '|'
+-cannot be empty
+-Length cannot exceed 128 bytes.
+-Cannot contain the character '|'
      * @param Name Dashboard subscription name.
 Input limit:
--Cannot be empty
--Length cannot exceed 128 bytes
--Cannot contain character '|'
+-cannot be empty
+-Length cannot exceed 128 bytes.
+-Cannot contain the character '|'
      */
     public void setName(String Name) {
         this.Name = Name;
@@ -96,9 +96,9 @@ Input limit:
 
     /**
      * Get Dashboard Id.
--Get the dashboard Id by [searching for the dashboard](https://www.tencentcloud.com/document/product/614/95636?from_cn_redirect=1). 
+-Get the dashboard Id by [searching for a dashboard](https://www.tencentcloud.com/document/product/614/95636?from_cn_redirect=1). 
      * @return DashboardId Dashboard Id.
--Get the dashboard Id by [searching for the dashboard](https://www.tencentcloud.com/document/product/614/95636?from_cn_redirect=1).
+-Get the dashboard Id by [searching for a dashboard](https://www.tencentcloud.com/document/product/614/95636?from_cn_redirect=1).
      */
     public String getDashboardId() {
         return this.DashboardId;
@@ -106,9 +106,9 @@ Input limit:
 
     /**
      * Set Dashboard Id.
--Get the dashboard Id by [searching for the dashboard](https://www.tencentcloud.com/document/product/614/95636?from_cn_redirect=1).
+-Get the dashboard Id by [searching for a dashboard](https://www.tencentcloud.com/document/product/614/95636?from_cn_redirect=1).
      * @param DashboardId Dashboard Id.
--Get the dashboard Id by [searching for the dashboard](https://www.tencentcloud.com/document/product/614/95636?from_cn_redirect=1).
+-Get the dashboard Id by [searching for a dashboard](https://www.tencentcloud.com/document/product/614/95636?from_cn_redirect=1).
      */
     public void setDashboardId(String DashboardId) {
         this.DashboardId = DashboardId;
@@ -116,19 +116,19 @@ Input limit:
 
     /**
      * Get Subscription time cron expression, in format {seconds} {minutes} {hours} {date} {month} {weekday}; (valid data: {minutes} {hours} {date} {month} {weekday})
--{seconds} Value ranges from 0 to 59. 
+-{seconds} value ranges from 0 to 59. 
 -{Minutes} Value ranges from 0 to 59. 
 -Hour. Value ranges from 0 to 23. 
--{Date} value ranges from 1 to 31 AND (last day of month: L) 
+-{Date} value ranges from 1 to 31 AND (dayOfMonth last day: L) 
 -{Month} value ranges from 1 to 12. 
--Week value ranges from 0 to 6 [0:Sunday, 6:Saturday] 
+-Week value ranges from 0 to 6 [0:Sunday, 6:Saturday]. 
      * @return Cron Subscription time cron expression, in format {seconds} {minutes} {hours} {date} {month} {weekday}; (valid data: {minutes} {hours} {date} {month} {weekday})
--{seconds} Value ranges from 0 to 59. 
+-{seconds} value ranges from 0 to 59. 
 -{Minutes} Value ranges from 0 to 59. 
 -Hour. Value ranges from 0 to 23. 
--{Date} value ranges from 1 to 31 AND (last day of month: L) 
+-{Date} value ranges from 1 to 31 AND (dayOfMonth last day: L) 
 -{Month} value ranges from 1 to 12. 
--Week value ranges from 0 to 6 [0:Sunday, 6:Saturday]
+-Week value ranges from 0 to 6 [0:Sunday, 6:Saturday].
      */
     public String getCron() {
         return this.Cron;
@@ -136,19 +136,19 @@ Input limit:
 
     /**
      * Set Subscription time cron expression, in format {seconds} {minutes} {hours} {date} {month} {weekday}; (valid data: {minutes} {hours} {date} {month} {weekday})
--{seconds} Value ranges from 0 to 59. 
+-{seconds} value ranges from 0 to 59. 
 -{Minutes} Value ranges from 0 to 59. 
 -Hour. Value ranges from 0 to 23. 
--{Date} value ranges from 1 to 31 AND (last day of month: L) 
+-{Date} value ranges from 1 to 31 AND (dayOfMonth last day: L) 
 -{Month} value ranges from 1 to 12. 
--Week value ranges from 0 to 6 [0:Sunday, 6:Saturday]
+-Week value ranges from 0 to 6 [0:Sunday, 6:Saturday].
      * @param Cron Subscription time cron expression, in format {seconds} {minutes} {hours} {date} {month} {weekday}; (valid data: {minutes} {hours} {date} {month} {weekday})
--{seconds} Value ranges from 0 to 59. 
+-{seconds} value ranges from 0 to 59. 
 -{Minutes} Value ranges from 0 to 59. 
 -Hour. Value ranges from 0 to 23. 
--{Date} value ranges from 1 to 31 AND (last day of month: L) 
+-{Date} value ranges from 1 to 31 AND (dayOfMonth last day: L) 
 -{Month} value ranges from 1 to 12. 
--Week value ranges from 0 to 6 [0:Sunday, 6:Saturday]
+-Week value ranges from 0 to 6 [0:Sunday, 6:Saturday].
      */
     public void setCron(String Cron) {
         this.Cron = Cron;

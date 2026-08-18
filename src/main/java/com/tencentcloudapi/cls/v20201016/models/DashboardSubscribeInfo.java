@@ -66,14 +66,14 @@ public class DashboardSubscribeInfo extends AbstractModel {
     private String CreateTime;
 
     /**
-    * Dashboard subscription record update time. Format: `YYYY-MM-DD HH:MM:SS`
+    * Dashboard subscription record update time. Format: YYYY-MM-DD HH:MM:SS
     */
     @SerializedName("UpdateTime")
     @Expose
     private String UpdateTime;
 
     /**
-    * Time sent successfully of dashboard subscription record. Format: `YYYY-MM-DD HH:MM:SS`
+    * Last time for successful sending of dashboard subscription record. Format: `YYYY-MM-DD HH:MM:SS`
     */
     @SerializedName("LastTime")
     @Expose
@@ -197,32 +197,32 @@ public class DashboardSubscribeInfo extends AbstractModel {
     }
 
     /**
-     * Get Dashboard subscription record update time. Format: `YYYY-MM-DD HH:MM:SS` 
-     * @return UpdateTime Dashboard subscription record update time. Format: `YYYY-MM-DD HH:MM:SS`
+     * Get Dashboard subscription record update time. Format: YYYY-MM-DD HH:MM:SS 
+     * @return UpdateTime Dashboard subscription record update time. Format: YYYY-MM-DD HH:MM:SS
      */
     public String getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set Dashboard subscription record update time. Format: `YYYY-MM-DD HH:MM:SS`
-     * @param UpdateTime Dashboard subscription record update time. Format: `YYYY-MM-DD HH:MM:SS`
+     * Set Dashboard subscription record update time. Format: YYYY-MM-DD HH:MM:SS
+     * @param UpdateTime Dashboard subscription record update time. Format: YYYY-MM-DD HH:MM:SS
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;
     }
 
     /**
-     * Get Time sent successfully of dashboard subscription record. Format: `YYYY-MM-DD HH:MM:SS` 
-     * @return LastTime Time sent successfully of dashboard subscription record. Format: `YYYY-MM-DD HH:MM:SS`
+     * Get Last time for successful sending of dashboard subscription record. Format: `YYYY-MM-DD HH:MM:SS` 
+     * @return LastTime Last time for successful sending of dashboard subscription record. Format: `YYYY-MM-DD HH:MM:SS`
      */
     public String getLastTime() {
         return this.LastTime;
     }
 
     /**
-     * Set Time sent successfully of dashboard subscription record. Format: `YYYY-MM-DD HH:MM:SS`
-     * @param LastTime Time sent successfully of dashboard subscription record. Format: `YYYY-MM-DD HH:MM:SS`
+     * Set Last time for successful sending of dashboard subscription record. Format: `YYYY-MM-DD HH:MM:SS`
+     * @param LastTime Last time for successful sending of dashboard subscription record. Format: `YYYY-MM-DD HH:MM:SS`
      */
     public void setLastTime(String LastTime) {
         this.LastTime = LastTime;

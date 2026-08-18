@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class ModifyDashboardRequest extends AbstractModel {
 
     /**
-    * Dashboard id. Obtain the DashboardId through the [Get Dashboard](https://www.tencentcloud.com/document/api/614/95636?from_cn_redirect=1) API.
+    * Dashboard id. Obtain DashboardId through the [Get Dashboard](https://www.tencentcloud.com/document/api/614/95636?from_cn_redirect=1) API.
     */
     @SerializedName("DashboardId")
     @Expose
     private String DashboardId;
 
     /**
-    * dashboard name
+    * Dashboard name
     */
     @SerializedName("DashboardName")
     @Expose
@@ -52,32 +52,32 @@ public class ModifyDashboardRequest extends AbstractModel {
     private Tag [] Tags;
 
     /**
-     * Get Dashboard id. Obtain the DashboardId through the [Get Dashboard](https://www.tencentcloud.com/document/api/614/95636?from_cn_redirect=1) API. 
-     * @return DashboardId Dashboard id. Obtain the DashboardId through the [Get Dashboard](https://www.tencentcloud.com/document/api/614/95636?from_cn_redirect=1) API.
+     * Get Dashboard id. Obtain DashboardId through the [Get Dashboard](https://www.tencentcloud.com/document/api/614/95636?from_cn_redirect=1) API. 
+     * @return DashboardId Dashboard id. Obtain DashboardId through the [Get Dashboard](https://www.tencentcloud.com/document/api/614/95636?from_cn_redirect=1) API.
      */
     public String getDashboardId() {
         return this.DashboardId;
     }
 
     /**
-     * Set Dashboard id. Obtain the DashboardId through the [Get Dashboard](https://www.tencentcloud.com/document/api/614/95636?from_cn_redirect=1) API.
-     * @param DashboardId Dashboard id. Obtain the DashboardId through the [Get Dashboard](https://www.tencentcloud.com/document/api/614/95636?from_cn_redirect=1) API.
+     * Set Dashboard id. Obtain DashboardId through the [Get Dashboard](https://www.tencentcloud.com/document/api/614/95636?from_cn_redirect=1) API.
+     * @param DashboardId Dashboard id. Obtain DashboardId through the [Get Dashboard](https://www.tencentcloud.com/document/api/614/95636?from_cn_redirect=1) API.
      */
     public void setDashboardId(String DashboardId) {
         this.DashboardId = DashboardId;
     }
 
     /**
-     * Get dashboard name 
-     * @return DashboardName dashboard name
+     * Get Dashboard name 
+     * @return DashboardName Dashboard name
      */
     public String getDashboardName() {
         return this.DashboardName;
     }
 
     /**
-     * Set dashboard name
-     * @param DashboardName dashboard name
+     * Set Dashboard name
+     * @param DashboardName Dashboard name
      */
     public void setDashboardName(String DashboardName) {
         this.DashboardName = DashboardName;

@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class ModifyDashboardSubscribeRequest extends AbstractModel {
 
     /**
-    * Dashboard subscription id. Obtain the id through the [Get Dashboard Subscription List](https://www.tencentcloud.com/document/api/614/105779?from_cn_redirect=1) api.
+    * Dashboard subscription id. Obtain the Id through the [dashboard subscription list](https://www.tencentcloud.com/document/api/614/105779?from_cn_redirect=1) API.
     */
     @SerializedName("Id")
     @Expose
     private Long Id;
 
     /**
-    * Dashboard id. Obtain the DashboardId through the [Get Dashboard](https://www.tencentcloud.com/document/api/614/95636?from_cn_redirect=1) api.
+    * Dashboard id. Obtain DashboardId through the [Get Dashboard](https://www.tencentcloud.com/document/api/614/95636?from_cn_redirect=1) API.
     */
     @SerializedName("DashboardId")
     @Expose
@@ -59,32 +59,32 @@ public class ModifyDashboardSubscribeRequest extends AbstractModel {
     private DashboardSubscribeData SubscribeData;
 
     /**
-     * Get Dashboard subscription id. Obtain the id through the [Get Dashboard Subscription List](https://www.tencentcloud.com/document/api/614/105779?from_cn_redirect=1) api. 
-     * @return Id Dashboard subscription id. Obtain the id through the [Get Dashboard Subscription List](https://www.tencentcloud.com/document/api/614/105779?from_cn_redirect=1) api.
+     * Get Dashboard subscription id. Obtain the Id through the [dashboard subscription list](https://www.tencentcloud.com/document/api/614/105779?from_cn_redirect=1) API. 
+     * @return Id Dashboard subscription id. Obtain the Id through the [dashboard subscription list](https://www.tencentcloud.com/document/api/614/105779?from_cn_redirect=1) API.
      */
     public Long getId() {
         return this.Id;
     }
 
     /**
-     * Set Dashboard subscription id. Obtain the id through the [Get Dashboard Subscription List](https://www.tencentcloud.com/document/api/614/105779?from_cn_redirect=1) api.
-     * @param Id Dashboard subscription id. Obtain the id through the [Get Dashboard Subscription List](https://www.tencentcloud.com/document/api/614/105779?from_cn_redirect=1) api.
+     * Set Dashboard subscription id. Obtain the Id through the [dashboard subscription list](https://www.tencentcloud.com/document/api/614/105779?from_cn_redirect=1) API.
+     * @param Id Dashboard subscription id. Obtain the Id through the [dashboard subscription list](https://www.tencentcloud.com/document/api/614/105779?from_cn_redirect=1) API.
      */
     public void setId(Long Id) {
         this.Id = Id;
     }
 
     /**
-     * Get Dashboard id. Obtain the DashboardId through the [Get Dashboard](https://www.tencentcloud.com/document/api/614/95636?from_cn_redirect=1) api. 
-     * @return DashboardId Dashboard id. Obtain the DashboardId through the [Get Dashboard](https://www.tencentcloud.com/document/api/614/95636?from_cn_redirect=1) api.
+     * Get Dashboard id. Obtain DashboardId through the [Get Dashboard](https://www.tencentcloud.com/document/api/614/95636?from_cn_redirect=1) API. 
+     * @return DashboardId Dashboard id. Obtain DashboardId through the [Get Dashboard](https://www.tencentcloud.com/document/api/614/95636?from_cn_redirect=1) API.
      */
     public String getDashboardId() {
         return this.DashboardId;
     }
 
     /**
-     * Set Dashboard id. Obtain the DashboardId through the [Get Dashboard](https://www.tencentcloud.com/document/api/614/95636?from_cn_redirect=1) api.
-     * @param DashboardId Dashboard id. Obtain the DashboardId through the [Get Dashboard](https://www.tencentcloud.com/document/api/614/95636?from_cn_redirect=1) api.
+     * Set Dashboard id. Obtain DashboardId through the [Get Dashboard](https://www.tencentcloud.com/document/api/614/95636?from_cn_redirect=1) API.
+     * @param DashboardId Dashboard id. Obtain DashboardId through the [Get Dashboard](https://www.tencentcloud.com/document/api/614/95636?from_cn_redirect=1) API.
      */
     public void setDashboardId(String DashboardId) {
         this.DashboardId = DashboardId;
