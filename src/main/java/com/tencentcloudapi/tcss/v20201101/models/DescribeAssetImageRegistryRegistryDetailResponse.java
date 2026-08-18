@@ -52,21 +52,21 @@ public class DescribeAssetImageRegistryRegistryDetailResponse extends AbstractMo
     private String Url;
 
     /**
-    * Repository type, which can be `harbor`.
+    * Repository type, which can be `harbor`
     */
     @SerializedName("RegistryType")
     @Expose
     private String RegistryType;
 
     /**
-    * warehouse version
+    * Registry version
     */
     @SerializedName("RegistryVersion")
     @Expose
     private String RegistryVersion;
 
     /**
-    * Network type, which can be `public` (public network).
+    * Network type, which can be `public` (public network)
     */
     @SerializedName("NetType")
     @Expose
@@ -80,7 +80,7 @@ public class DescribeAssetImageRegistryRegistryDetailResponse extends AbstractMo
     private String RegistryRegion;
 
     /**
-    * rate limiting
+    * Rate limiting
     */
     @SerializedName("SpeedLimit")
     @Expose
@@ -94,42 +94,42 @@ public class DescribeAssetImageRegistryRegistryDetailResponse extends AbstractMo
     private Long Insecure;
 
     /**
-    * 
+    * Connectivity test results
     */
     @SerializedName("ConnDetectDetail")
     @Expose
     private RegistryConnDetectResult [] ConnDetectDetail;
 
     /**
-    * 
+    * TCR Instance ID
     */
     @SerializedName("InstanceID")
     @Expose
     private String InstanceID;
 
     /**
-    * Synchronization method. 0: full synchronization; 1: incremental synchronization.
+    * Synchronization method. 0: full synchronization; 1: incremental synchronization
     */
     @SerializedName("SyncMode")
     @Expose
     private Long SyncMode;
 
     /**
-    * Whether authorization and scanning are performed automatically. For full synchronization, only images of the latest version are involved. For incremental synchronization, all new images are involved.
+    * Whether authorization and scanning are performed automatically. For full synchronization, only images of the latest version are involved. For incremental synchronization, all new images are involved
     */
     @SerializedName("NeedScan")
     @Expose
     private Boolean NeedScan;
 
     /**
-    * Webhook access address.
+    * Webhook access address
     */
     @SerializedName("WebhookUrl")
     @Expose
     private String WebhookUrl;
 
     /**
-    * Webhook access token.	
+    * Webhook access token.
     */
     @SerializedName("WebhookToken")
     @Expose
@@ -207,48 +207,48 @@ public class DescribeAssetImageRegistryRegistryDetailResponse extends AbstractMo
     }
 
     /**
-     * Get Repository type, which can be `harbor`. 
-     * @return RegistryType Repository type, which can be `harbor`.
+     * Get Repository type, which can be `harbor` 
+     * @return RegistryType Repository type, which can be `harbor`
      */
     public String getRegistryType() {
         return this.RegistryType;
     }
 
     /**
-     * Set Repository type, which can be `harbor`.
-     * @param RegistryType Repository type, which can be `harbor`.
+     * Set Repository type, which can be `harbor`
+     * @param RegistryType Repository type, which can be `harbor`
      */
     public void setRegistryType(String RegistryType) {
         this.RegistryType = RegistryType;
     }
 
     /**
-     * Get warehouse version 
-     * @return RegistryVersion warehouse version
+     * Get Registry version 
+     * @return RegistryVersion Registry version
      */
     public String getRegistryVersion() {
         return this.RegistryVersion;
     }
 
     /**
-     * Set warehouse version
-     * @param RegistryVersion warehouse version
+     * Set Registry version
+     * @param RegistryVersion Registry version
      */
     public void setRegistryVersion(String RegistryVersion) {
         this.RegistryVersion = RegistryVersion;
     }
 
     /**
-     * Get Network type, which can be `public` (public network). 
-     * @return NetType Network type, which can be `public` (public network).
+     * Get Network type, which can be `public` (public network) 
+     * @return NetType Network type, which can be `public` (public network)
      */
     public String getNetType() {
         return this.NetType;
     }
 
     /**
-     * Set Network type, which can be `public` (public network).
-     * @param NetType Network type, which can be `public` (public network).
+     * Set Network type, which can be `public` (public network)
+     * @param NetType Network type, which can be `public` (public network)
      */
     public void setNetType(String NetType) {
         this.NetType = NetType;
@@ -271,16 +271,16 @@ public class DescribeAssetImageRegistryRegistryDetailResponse extends AbstractMo
     }
 
     /**
-     * Get rate limiting 
-     * @return SpeedLimit rate limiting
+     * Get Rate limiting 
+     * @return SpeedLimit Rate limiting
      */
     public Long getSpeedLimit() {
         return this.SpeedLimit;
     }
 
     /**
-     * Set rate limiting
-     * @param SpeedLimit rate limiting
+     * Set Rate limiting
+     * @param SpeedLimit Rate limiting
      */
     public void setSpeedLimit(Long SpeedLimit) {
         this.SpeedLimit = SpeedLimit;
@@ -303,96 +303,96 @@ public class DescribeAssetImageRegistryRegistryDetailResponse extends AbstractMo
     }
 
     /**
-     * Get  
-     * @return ConnDetectDetail 
+     * Get Connectivity test results 
+     * @return ConnDetectDetail Connectivity test results
      */
     public RegistryConnDetectResult [] getConnDetectDetail() {
         return this.ConnDetectDetail;
     }
 
     /**
-     * Set 
-     * @param ConnDetectDetail 
+     * Set Connectivity test results
+     * @param ConnDetectDetail Connectivity test results
      */
     public void setConnDetectDetail(RegistryConnDetectResult [] ConnDetectDetail) {
         this.ConnDetectDetail = ConnDetectDetail;
     }
 
     /**
-     * Get  
-     * @return InstanceID 
+     * Get TCR Instance ID 
+     * @return InstanceID TCR Instance ID
      */
     public String getInstanceID() {
         return this.InstanceID;
     }
 
     /**
-     * Set 
-     * @param InstanceID 
+     * Set TCR Instance ID
+     * @param InstanceID TCR Instance ID
      */
     public void setInstanceID(String InstanceID) {
         this.InstanceID = InstanceID;
     }
 
     /**
-     * Get Synchronization method. 0: full synchronization; 1: incremental synchronization. 
-     * @return SyncMode Synchronization method. 0: full synchronization; 1: incremental synchronization.
+     * Get Synchronization method. 0: full synchronization; 1: incremental synchronization 
+     * @return SyncMode Synchronization method. 0: full synchronization; 1: incremental synchronization
      */
     public Long getSyncMode() {
         return this.SyncMode;
     }
 
     /**
-     * Set Synchronization method. 0: full synchronization; 1: incremental synchronization.
-     * @param SyncMode Synchronization method. 0: full synchronization; 1: incremental synchronization.
+     * Set Synchronization method. 0: full synchronization; 1: incremental synchronization
+     * @param SyncMode Synchronization method. 0: full synchronization; 1: incremental synchronization
      */
     public void setSyncMode(Long SyncMode) {
         this.SyncMode = SyncMode;
     }
 
     /**
-     * Get Whether authorization and scanning are performed automatically. For full synchronization, only images of the latest version are involved. For incremental synchronization, all new images are involved. 
-     * @return NeedScan Whether authorization and scanning are performed automatically. For full synchronization, only images of the latest version are involved. For incremental synchronization, all new images are involved.
+     * Get Whether authorization and scanning are performed automatically. For full synchronization, only images of the latest version are involved. For incremental synchronization, all new images are involved 
+     * @return NeedScan Whether authorization and scanning are performed automatically. For full synchronization, only images of the latest version are involved. For incremental synchronization, all new images are involved
      */
     public Boolean getNeedScan() {
         return this.NeedScan;
     }
 
     /**
-     * Set Whether authorization and scanning are performed automatically. For full synchronization, only images of the latest version are involved. For incremental synchronization, all new images are involved.
-     * @param NeedScan Whether authorization and scanning are performed automatically. For full synchronization, only images of the latest version are involved. For incremental synchronization, all new images are involved.
+     * Set Whether authorization and scanning are performed automatically. For full synchronization, only images of the latest version are involved. For incremental synchronization, all new images are involved
+     * @param NeedScan Whether authorization and scanning are performed automatically. For full synchronization, only images of the latest version are involved. For incremental synchronization, all new images are involved
      */
     public void setNeedScan(Boolean NeedScan) {
         this.NeedScan = NeedScan;
     }
 
     /**
-     * Get Webhook access address. 
-     * @return WebhookUrl Webhook access address.
+     * Get Webhook access address 
+     * @return WebhookUrl Webhook access address
      */
     public String getWebhookUrl() {
         return this.WebhookUrl;
     }
 
     /**
-     * Set Webhook access address.
-     * @param WebhookUrl Webhook access address.
+     * Set Webhook access address
+     * @param WebhookUrl Webhook access address
      */
     public void setWebhookUrl(String WebhookUrl) {
         this.WebhookUrl = WebhookUrl;
     }
 
     /**
-     * Get Webhook access token.	 
-     * @return WebhookToken Webhook access token.	
+     * Get Webhook access token. 
+     * @return WebhookToken Webhook access token.
      */
     public String getWebhookToken() {
         return this.WebhookToken;
     }
 
     /**
-     * Set Webhook access token.	
-     * @param WebhookToken Webhook access token.	
+     * Set Webhook access token.
+     * @param WebhookToken Webhook access token.
      */
     public void setWebhookToken(String WebhookToken) {
         this.WebhookToken = WebhookToken;
