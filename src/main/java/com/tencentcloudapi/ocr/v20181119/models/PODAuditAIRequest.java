@@ -52,6 +52,13 @@ public class PODAuditAIRequest extends AbstractModel {
     private Long SignType;
 
     /**
+    * <p>Shipping address of the waybill in the business system</p>
+    */
+    @SerializedName("ShipToAddress")
+    @Expose
+    private String ShipToAddress;
+
+    /**
      * Get <p>The Base64 value of the image/PDF. The Base64 must be no more than 10M, resolution is recommended to be 600*800 or higher, and supports PNG, JPG, JPEG, BMP, PDF formats. Either ImageUrl or ImageBase64 of the image must be provided. If both are provided, only use ImageUrl. Example value: /9j/4AAQSkZJRg.....s97n//2Q==</p> 
      * @return ImageBase64List <p>The Base64 value of the image/PDF. The Base64 must be no more than 10M, resolution is recommended to be 600*800 or higher, and supports PNG, JPG, JPEG, BMP, PDF formats. Either ImageUrl or ImageBase64 of the image must be provided. If both are provided, only use ImageUrl. Example value: /9j/4AAQSkZJRg.....s97n//2Q==</p>
      */
@@ -115,6 +122,22 @@ public class PODAuditAIRequest extends AbstractModel {
         this.SignType = SignType;
     }
 
+    /**
+     * Get <p>Shipping address of the waybill in the business system</p> 
+     * @return ShipToAddress <p>Shipping address of the waybill in the business system</p>
+     */
+    public String getShipToAddress() {
+        return this.ShipToAddress;
+    }
+
+    /**
+     * Set <p>Shipping address of the waybill in the business system</p>
+     * @param ShipToAddress <p>Shipping address of the waybill in the business system</p>
+     */
+    public void setShipToAddress(String ShipToAddress) {
+        this.ShipToAddress = ShipToAddress;
+    }
+
     public PODAuditAIRequest() {
     }
 
@@ -141,6 +164,9 @@ public class PODAuditAIRequest extends AbstractModel {
         if (source.SignType != null) {
             this.SignType = new Long(source.SignType);
         }
+        if (source.ShipToAddress != null) {
+            this.ShipToAddress = new String(source.ShipToAddress);
+        }
     }
 
 
@@ -152,6 +178,7 @@ public class PODAuditAIRequest extends AbstractModel {
         this.setParamArraySimple(map, prefix + "ImageUrlList.", this.ImageUrlList);
         this.setParamSimple(map, prefix + "WaybillNumber", this.WaybillNumber);
         this.setParamSimple(map, prefix + "SignType", this.SignType);
+        this.setParamSimple(map, prefix + "ShipToAddress", this.ShipToAddress);
 
     }
 }

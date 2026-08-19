@@ -66,7 +66,7 @@ public class PhoneNumberInfo extends AbstractModel {
     private String IsoCode;
 
     /**
-    * Country code or region name such as China. For more information, see [Global SMS Price Overview](https://intl.cloud.tencent.com/document/product/382/18051?from_cn_redirect=1#.E6.97.A5.E7.BB.93.E5.90.8E.E4.BB.98.E8.B4.B9.3Ca-id.3D.22post-payment.22.3E.3C.2Fa.3E)
+    * Country code or region name such as China. For more information, see [Global SMS Price Overview](https://www.tencentcloud.com/document/product/382/8414?pg=#3c47bbea-5699-48a6-83d3-6b97cf2a23bc)
     */
     @SerializedName("IsoName")
     @Expose
@@ -169,16 +169,16 @@ public class PhoneNumberInfo extends AbstractModel {
     }
 
     /**
-     * Get Country code or region name such as China. For more information, see [Global SMS Price Overview](https://intl.cloud.tencent.com/document/product/382/18051?from_cn_redirect=1#.E6.97.A5.E7.BB.93.E5.90.8E.E4.BB.98.E8.B4.B9.3Ca-id.3D.22post-payment.22.3E.3C.2Fa.3E) 
-     * @return IsoName Country code or region name such as China. For more information, see [Global SMS Price Overview](https://intl.cloud.tencent.com/document/product/382/18051?from_cn_redirect=1#.E6.97.A5.E7.BB.93.E5.90.8E.E4.BB.98.E8.B4.B9.3Ca-id.3D.22post-payment.22.3E.3C.2Fa.3E)
+     * Get Country code or region name such as China. For more information, see [Global SMS Price Overview](https://www.tencentcloud.com/document/product/382/8414?pg=#3c47bbea-5699-48a6-83d3-6b97cf2a23bc) 
+     * @return IsoName Country code or region name such as China. For more information, see [Global SMS Price Overview](https://www.tencentcloud.com/document/product/382/8414?pg=#3c47bbea-5699-48a6-83d3-6b97cf2a23bc)
      */
     public String getIsoName() {
         return this.IsoName;
     }
 
     /**
-     * Set Country code or region name such as China. For more information, see [Global SMS Price Overview](https://intl.cloud.tencent.com/document/product/382/18051?from_cn_redirect=1#.E6.97.A5.E7.BB.93.E5.90.8E.E4.BB.98.E8.B4.B9.3Ca-id.3D.22post-payment.22.3E.3C.2Fa.3E)
-     * @param IsoName Country code or region name such as China. For more information, see [Global SMS Price Overview](https://intl.cloud.tencent.com/document/product/382/18051?from_cn_redirect=1#.E6.97.A5.E7.BB.93.E5.90.8E.E4.BB.98.E8.B4.B9.3Ca-id.3D.22post-payment.22.3E.3C.2Fa.3E)
+     * Set Country code or region name such as China. For more information, see [Global SMS Price Overview](https://www.tencentcloud.com/document/product/382/8414?pg=#3c47bbea-5699-48a6-83d3-6b97cf2a23bc)
+     * @param IsoName Country code or region name such as China. For more information, see [Global SMS Price Overview](https://www.tencentcloud.com/document/product/382/8414?pg=#3c47bbea-5699-48a6-83d3-6b97cf2a23bc)
      */
     public void setIsoName(String IsoName) {
         this.IsoName = IsoName;

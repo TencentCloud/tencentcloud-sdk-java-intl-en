@@ -31,7 +31,7 @@ public class PODAuditAIResponse extends AbstractModel {
     private Long AuditorDecision;
 
     /**
-    * <p>Reason code for non-compliance. If there are multiple, return a list of multiple codes.</p><p>Enumeration value:</p><ul><li>100: Wrong delivery address</li><li>101: No house number</li><li>104: Single question</li><li>200: No package</li><li>202: Privacy leakage</li></ul>
+    * <p>Non-compliance reason code. If there are multiple, return a list of multiple codes</p><p>Enumeration values:</p><ul><li>-2: Not supported currently or internal logic error</li><li>100: Delivered to the wrong address</li><li>104: No shipping label</li><li>105: Shipping label number not the same as the system</li><li>200: Package delivery location unclear</li><li>202: Acknowledgment contains personal privacy</li></ul>
     */
     @SerializedName("FailCode")
     @Expose
@@ -75,16 +75,16 @@ public class PODAuditAIResponse extends AbstractModel {
     }
 
     /**
-     * Get <p>Reason code for non-compliance. If there are multiple, return a list of multiple codes.</p><p>Enumeration value:</p><ul><li>100: Wrong delivery address</li><li>101: No house number</li><li>104: Single question</li><li>200: No package</li><li>202: Privacy leakage</li></ul> 
-     * @return FailCode <p>Reason code for non-compliance. If there are multiple, return a list of multiple codes.</p><p>Enumeration value:</p><ul><li>100: Wrong delivery address</li><li>101: No house number</li><li>104: Single question</li><li>200: No package</li><li>202: Privacy leakage</li></ul>
+     * Get <p>Non-compliance reason code. If there are multiple, return a list of multiple codes</p><p>Enumeration values:</p><ul><li>-2: Not supported currently or internal logic error</li><li>100: Delivered to the wrong address</li><li>104: No shipping label</li><li>105: Shipping label number not the same as the system</li><li>200: Package delivery location unclear</li><li>202: Acknowledgment contains personal privacy</li></ul> 
+     * @return FailCode <p>Non-compliance reason code. If there are multiple, return a list of multiple codes</p><p>Enumeration values:</p><ul><li>-2: Not supported currently or internal logic error</li><li>100: Delivered to the wrong address</li><li>104: No shipping label</li><li>105: Shipping label number not the same as the system</li><li>200: Package delivery location unclear</li><li>202: Acknowledgment contains personal privacy</li></ul>
      */
     public String [] getFailCode() {
         return this.FailCode;
     }
 
     /**
-     * Set <p>Reason code for non-compliance. If there are multiple, return a list of multiple codes.</p><p>Enumeration value:</p><ul><li>100: Wrong delivery address</li><li>101: No house number</li><li>104: Single question</li><li>200: No package</li><li>202: Privacy leakage</li></ul>
-     * @param FailCode <p>Reason code for non-compliance. If there are multiple, return a list of multiple codes.</p><p>Enumeration value:</p><ul><li>100: Wrong delivery address</li><li>101: No house number</li><li>104: Single question</li><li>200: No package</li><li>202: Privacy leakage</li></ul>
+     * Set <p>Non-compliance reason code. If there are multiple, return a list of multiple codes</p><p>Enumeration values:</p><ul><li>-2: Not supported currently or internal logic error</li><li>100: Delivered to the wrong address</li><li>104: No shipping label</li><li>105: Shipping label number not the same as the system</li><li>200: Package delivery location unclear</li><li>202: Acknowledgment contains personal privacy</li></ul>
+     * @param FailCode <p>Non-compliance reason code. If there are multiple, return a list of multiple codes</p><p>Enumeration values:</p><ul><li>-2: Not supported currently or internal logic error</li><li>100: Delivered to the wrong address</li><li>104: No shipping label</li><li>105: Shipping label number not the same as the system</li><li>200: Package delivery location unclear</li><li>202: Acknowledgment contains personal privacy</li></ul>
      */
     public void setFailCode(String [] FailCode) {
         this.FailCode = FailCode;

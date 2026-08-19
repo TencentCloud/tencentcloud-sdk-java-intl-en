@@ -21,10 +21,10 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ImportZoneConfigResponse extends AbstractModel {
+public class CreateLogAnalysisDownloadTaskResponse extends AbstractModel {
 
     /**
-    * <p>Task Id of this import configuration. Use the site configuration import result query API (DescribeZoneConfigImportResult) to get the execution result of this import job. Note: The import task Id only supports querying the most recent 7 days of import tasks.</p>
+    * <p>Log analysis download task ID.</p>
     */
     @SerializedName("TaskId")
     @Expose
@@ -38,16 +38,16 @@ public class ImportZoneConfigResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get <p>Task Id of this import configuration. Use the site configuration import result query API (DescribeZoneConfigImportResult) to get the execution result of this import job. Note: The import task Id only supports querying the most recent 7 days of import tasks.</p> 
-     * @return TaskId <p>Task Id of this import configuration. Use the site configuration import result query API (DescribeZoneConfigImportResult) to get the execution result of this import job. Note: The import task Id only supports querying the most recent 7 days of import tasks.</p>
+     * Get <p>Log analysis download task ID.</p> 
+     * @return TaskId <p>Log analysis download task ID.</p>
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set <p>Task Id of this import configuration. Use the site configuration import result query API (DescribeZoneConfigImportResult) to get the execution result of this import job. Note: The import task Id only supports querying the most recent 7 days of import tasks.</p>
-     * @param TaskId <p>Task Id of this import configuration. Use the site configuration import result query API (DescribeZoneConfigImportResult) to get the execution result of this import job. Note: The import task Id only supports querying the most recent 7 days of import tasks.</p>
+     * Set <p>Log analysis download task ID.</p>
+     * @param TaskId <p>Log analysis download task ID.</p>
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;
@@ -69,14 +69,14 @@ public class ImportZoneConfigResponse extends AbstractModel {
         this.RequestId = RequestId;
     }
 
-    public ImportZoneConfigResponse() {
+    public CreateLogAnalysisDownloadTaskResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public ImportZoneConfigResponse(ImportZoneConfigResponse source) {
+    public CreateLogAnalysisDownloadTaskResponse(CreateLogAnalysisDownloadTaskResponse source) {
         if (source.TaskId != null) {
             this.TaskId = new String(source.TaskId);
         }
