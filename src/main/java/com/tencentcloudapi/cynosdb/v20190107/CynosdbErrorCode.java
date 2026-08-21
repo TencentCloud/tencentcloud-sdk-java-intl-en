@@ -204,6 +204,9 @@ public enum CynosdbErrorCode {
      /* The operation is not allowed for system account. */
      INVALIDPARAMETERVALUE_INTERNALACCOUNT("InvalidParameterValue.InternalAccount"),
      
+     /* Intranet domain name exists. The retention time of the old IP must be more than {{1}} hours. */
+     INVALIDPARAMETERVALUE_INTERNALDOMAINRESERVETOOSHORTERROR("InvalidParameterValue.InternalDomainReserveTooShortError"),
+     
      /* Invalid instance version. */
      INVALIDPARAMETERVALUE_INVALIDDBVERSION("InvalidParameterValue.InvalidDBVersion"),
      
@@ -248,6 +251,9 @@ public enum CynosdbErrorCode {
      
      /* The selected subnet could not be found. */
      INVALIDPARAMETERVALUE_SUBNETNOTFOUND("InvalidParameterValue.SubnetNotFound"),
+     
+     /* The subnet of access group {{1}} matches the target subnet. No replacement is needed. */
+     INVALIDPARAMETERVALUE_SUBNETUNCHANGEDERROR("InvalidParameterValue.SubnetUnchangedError"),
      
      /* No data found */
      INVALIDPARAMETERVALUE_VALUENOTFOUND("InvalidParameterValue.ValueNotFound"),
@@ -383,6 +389,9 @@ public enum CynosdbErrorCode {
      
      /* This type of specification is unavailable. */
      OPERATIONDENIED_UNSUPPORTSALESPECERROR("OperationDenied.UnSupportSaleSpecError"),
+     
+     /* Audit enabling is not supported. */
+     OPERATIONDENIED_UNSUPPORTOPENAUDITERROR("OperationDenied.UnsupportOpenAuditError"),
      
      /* You need to verify your identity to make a purchase. */
      OPERATIONDENIED_USERNOTAUTHENTICATEDERROR("OperationDenied.UserNotAuthenticatedError"),

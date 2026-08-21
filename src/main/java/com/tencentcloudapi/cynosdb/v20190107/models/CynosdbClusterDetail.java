@@ -437,6 +437,20 @@ public class CynosdbClusterDetail extends AbstractModel {
     private String RealZone;
 
     /**
+    * <p>Exceed limit enabled status</p><p>Enumeration value:</p><ul><li>yes: Exceed limit enabled</li><li>no: Exceed limit disabled</li></ul><p>Default value: no</p>
+    */
+    @SerializedName("StorageOverUse")
+    @Expose
+    private String StorageOverUse;
+
+    /**
+    * <p>Auto-scaling enabled status</p><p>Enumeration value:</p><ul><li>yes: On</li><li>no: Off</li></ul><p>Default value: no</p>
+    */
+    @SerializedName("StorageAutoExpand")
+    @Expose
+    private String StorageAutoExpand;
+
+    /**
      * Get <p>Cluster ID.</p> 
      * @return ClusterId <p>Cluster ID.</p>
      */
@@ -1380,6 +1394,38 @@ public class CynosdbClusterDetail extends AbstractModel {
         this.RealZone = RealZone;
     }
 
+    /**
+     * Get <p>Exceed limit enabled status</p><p>Enumeration value:</p><ul><li>yes: Exceed limit enabled</li><li>no: Exceed limit disabled</li></ul><p>Default value: no</p> 
+     * @return StorageOverUse <p>Exceed limit enabled status</p><p>Enumeration value:</p><ul><li>yes: Exceed limit enabled</li><li>no: Exceed limit disabled</li></ul><p>Default value: no</p>
+     */
+    public String getStorageOverUse() {
+        return this.StorageOverUse;
+    }
+
+    /**
+     * Set <p>Exceed limit enabled status</p><p>Enumeration value:</p><ul><li>yes: Exceed limit enabled</li><li>no: Exceed limit disabled</li></ul><p>Default value: no</p>
+     * @param StorageOverUse <p>Exceed limit enabled status</p><p>Enumeration value:</p><ul><li>yes: Exceed limit enabled</li><li>no: Exceed limit disabled</li></ul><p>Default value: no</p>
+     */
+    public void setStorageOverUse(String StorageOverUse) {
+        this.StorageOverUse = StorageOverUse;
+    }
+
+    /**
+     * Get <p>Auto-scaling enabled status</p><p>Enumeration value:</p><ul><li>yes: On</li><li>no: Off</li></ul><p>Default value: no</p> 
+     * @return StorageAutoExpand <p>Auto-scaling enabled status</p><p>Enumeration value:</p><ul><li>yes: On</li><li>no: Off</li></ul><p>Default value: no</p>
+     */
+    public String getStorageAutoExpand() {
+        return this.StorageAutoExpand;
+    }
+
+    /**
+     * Set <p>Auto-scaling enabled status</p><p>Enumeration value:</p><ul><li>yes: On</li><li>no: Off</li></ul><p>Default value: no</p>
+     * @param StorageAutoExpand <p>Auto-scaling enabled status</p><p>Enumeration value:</p><ul><li>yes: On</li><li>no: Off</li></ul><p>Default value: no</p>
+     */
+    public void setStorageAutoExpand(String StorageAutoExpand) {
+        this.StorageAutoExpand = StorageAutoExpand;
+    }
+
     public CynosdbClusterDetail() {
     }
 
@@ -1586,6 +1632,12 @@ public class CynosdbClusterDetail extends AbstractModel {
         if (source.RealZone != null) {
             this.RealZone = new String(source.RealZone);
         }
+        if (source.StorageOverUse != null) {
+            this.StorageOverUse = new String(source.StorageOverUse);
+        }
+        if (source.StorageAutoExpand != null) {
+            this.StorageAutoExpand = new String(source.StorageAutoExpand);
+        }
     }
 
 
@@ -1652,6 +1704,8 @@ public class CynosdbClusterDetail extends AbstractModel {
         this.setParamSimple(map, prefix + "ClusterLevel", this.ClusterLevel);
         this.setParamSimple(map, prefix + "IsOpenTDE", this.IsOpenTDE);
         this.setParamSimple(map, prefix + "RealZone", this.RealZone);
+        this.setParamSimple(map, prefix + "StorageOverUse", this.StorageOverUse);
+        this.setParamSimple(map, prefix + "StorageAutoExpand", this.StorageAutoExpand);
 
     }
 }

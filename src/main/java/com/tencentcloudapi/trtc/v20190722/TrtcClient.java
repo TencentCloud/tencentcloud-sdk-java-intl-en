@@ -527,6 +527,17 @@ For details about the error events, see https://intl.cloud.tencent.com/document/
     }
 
     /**
+     *input a task ID to query the list of AI conversation context information.
+     * @param req QueryAIMessageListRequest
+     * @return QueryAIMessageListResponse
+     * @throws TencentCloudSDKException
+     */
+    public QueryAIMessageListResponse QueryAIMessageList(QueryAIMessageListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "QueryAIMessageList", QueryAIMessageListResponse.class);
+    }
+
+    /**
      *This API is used to remove a user from a room. It is applicable to scenarios where the anchor, room owner, or admin wants to kick out a user. It supports all platforms. For Android, iOS, Windows, and macOS, the TRTC SDK needs to be upgraded to v6.6 or above.
      * @param req RemoveUserRequest
      * @return RemoveUserResponse
