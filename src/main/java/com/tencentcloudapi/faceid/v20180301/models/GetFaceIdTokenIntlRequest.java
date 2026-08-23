@@ -78,6 +78,14 @@ Please contact us to access enhance version & plus version.
     private Long RetryLimit;
 
     /**
+    * <p>Whether to enable Bank of Thailand-specific background detection.<br>This parameter requires whitelist activation; please contact us to request access before it can take effect.</p><p>Default value: false</p>
+
+    */
+    @SerializedName("EnableBotBgDetection")
+    @Expose
+    private Boolean EnableBotBgDetection;
+
+    /**
      * Get <p>Indicates the detection mode. Parameter values as follows:<br>"liveness": liveness detection only;<br>"compare": liveness detection + face comparison;<br>Default value: "liveness".</p> 
      * @return CheckMode <p>Indicates the detection mode. Parameter values as follows:<br>"liveness": liveness detection only;<br>"compare": liveness detection + face comparison;<br>Default value: "liveness".</p>
      */
@@ -209,6 +217,26 @@ Please contact us to access enhance version & plus version.
         this.RetryLimit = RetryLimit;
     }
 
+    /**
+     * Get <p>Whether to enable Bank of Thailand-specific background detection.<br>This parameter requires whitelist activation; please contact us to request access before it can take effect.</p><p>Default value: false</p>
+ 
+     * @return EnableBotBgDetection <p>Whether to enable Bank of Thailand-specific background detection.<br>This parameter requires whitelist activation; please contact us to request access before it can take effect.</p><p>Default value: false</p>
+
+     */
+    public Boolean getEnableBotBgDetection() {
+        return this.EnableBotBgDetection;
+    }
+
+    /**
+     * Set <p>Whether to enable Bank of Thailand-specific background detection.<br>This parameter requires whitelist activation; please contact us to request access before it can take effect.</p><p>Default value: false</p>
+
+     * @param EnableBotBgDetection <p>Whether to enable Bank of Thailand-specific background detection.<br>This parameter requires whitelist activation; please contact us to request access before it can take effect.</p><p>Default value: false</p>
+
+     */
+    public void setEnableBotBgDetection(Boolean EnableBotBgDetection) {
+        this.EnableBotBgDetection = EnableBotBgDetection;
+    }
+
     public GetFaceIdTokenIntlRequest() {
     }
 
@@ -238,6 +266,9 @@ Please contact us to access enhance version & plus version.
         if (source.RetryLimit != null) {
             this.RetryLimit = new Long(source.RetryLimit);
         }
+        if (source.EnableBotBgDetection != null) {
+            this.EnableBotBgDetection = new Boolean(source.EnableBotBgDetection);
+        }
     }
 
 
@@ -252,6 +283,7 @@ Please contact us to access enhance version & plus version.
         this.setParamSimple(map, prefix + "ActionList", this.ActionList);
         this.setParamSimple(map, prefix + "SdkVersion", this.SdkVersion);
         this.setParamSimple(map, prefix + "RetryLimit", this.RetryLimit);
+        this.setParamSimple(map, prefix + "EnableBotBgDetection", this.EnableBotBgDetection);
 
     }
 }
