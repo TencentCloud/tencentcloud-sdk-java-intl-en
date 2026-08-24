@@ -107,30 +107,28 @@ Note: This field may return `null`, indicating that no valid value was found.
     private DescribeOutputRTMPPullSettings RTMPPullSettings;
 
     /**
-    * CIDR allowlist
-This parameter is valid if `Protocol` is set to `RTMP_PULL`. If this parameter is left empty, there is no restriction on clients’ IP addresses.
-Note: This field may return `null`, indicating that no valid value was found.
+    * CIDR Whitelist List. Effective when Protocol is RTMP_PULL. Empty means no restriction on client IP.
     */
     @SerializedName("AllowIpList")
     @Expose
     private String [] AllowIpList;
 
     /**
-    * 
+    * The output RTSP streaming configuration information.
     */
     @SerializedName("RTSPPullSettings")
     @Expose
     private DescribeOutputRTSPPullSettings RTSPPullSettings;
 
     /**
-    * 
+    * Output the HLS streaming configuration information.
     */
     @SerializedName("HLSPullSettings")
     @Expose
     private DescribeOutputHLSPullSettings HLSPullSettings;
 
     /**
-    * 
+    * The maximum number of concurrent streams is 4, with a default of 4.
     */
     @SerializedName("MaxConcurrent")
     @Expose
@@ -142,6 +140,48 @@ Note: This field may return `null`, indicating that no valid value was found.
     @SerializedName("SecurityGroupIds")
     @Expose
     private String [] SecurityGroupIds;
+
+    /**
+    * The available zone currently only supports a maximum of one output.
+    */
+    @SerializedName("Zones")
+    @Expose
+    private String [] Zones;
+
+    /**
+    * Output RIST configuration information.
+    */
+    @SerializedName("RISTSettings")
+    @Expose
+    private DescribeOutputRISTSettings RISTSettings;
+
+    /**
+    * For streams containing multiple audio/video tracks, you can specify the tracks that need to be used
+    */
+    @SerializedName("PidSelector")
+    @Expose
+    private PidSelector PidSelector;
+
+    /**
+    * Output module types, including Pinpoint (single point output, supporting up to four concurrent outputs); MultiMesh (Multi output, supports concurrent outputs greater than four, currently up to 200). The default type is Pinpoint output. For a single Flow, a region can only have a maximum of one MultiMesh output.
+    */
+    @SerializedName("OutputKind")
+    @Expose
+    private String OutputKind;
+
+    /**
+    * Output module configuration, relevant URLs, including provided streaming addresses or configured output to third-party forwarding addresses
+    */
+    @SerializedName("StreamUrls")
+    @Expose
+    private StreamUrlDetail [] StreamUrls;
+
+    /**
+    * For streams containing multiple audio/video tracks, you can specify the tracks that need to be used
+    */
+    @SerializedName("StreamSelector")
+    @Expose
+    private StreamSelector StreamSelector;
 
     /**
      * Get Output ID. 
@@ -344,72 +384,64 @@ Note: This field may return `null`, indicating that no valid value was found.
     }
 
     /**
-     * Get CIDR allowlist
-This parameter is valid if `Protocol` is set to `RTMP_PULL`. If this parameter is left empty, there is no restriction on clients’ IP addresses.
-Note: This field may return `null`, indicating that no valid value was found. 
-     * @return AllowIpList CIDR allowlist
-This parameter is valid if `Protocol` is set to `RTMP_PULL`. If this parameter is left empty, there is no restriction on clients’ IP addresses.
-Note: This field may return `null`, indicating that no valid value was found.
+     * Get CIDR Whitelist List. Effective when Protocol is RTMP_PULL. Empty means no restriction on client IP. 
+     * @return AllowIpList CIDR Whitelist List. Effective when Protocol is RTMP_PULL. Empty means no restriction on client IP.
      */
     public String [] getAllowIpList() {
         return this.AllowIpList;
     }
 
     /**
-     * Set CIDR allowlist
-This parameter is valid if `Protocol` is set to `RTMP_PULL`. If this parameter is left empty, there is no restriction on clients’ IP addresses.
-Note: This field may return `null`, indicating that no valid value was found.
-     * @param AllowIpList CIDR allowlist
-This parameter is valid if `Protocol` is set to `RTMP_PULL`. If this parameter is left empty, there is no restriction on clients’ IP addresses.
-Note: This field may return `null`, indicating that no valid value was found.
+     * Set CIDR Whitelist List. Effective when Protocol is RTMP_PULL. Empty means no restriction on client IP.
+     * @param AllowIpList CIDR Whitelist List. Effective when Protocol is RTMP_PULL. Empty means no restriction on client IP.
      */
     public void setAllowIpList(String [] AllowIpList) {
         this.AllowIpList = AllowIpList;
     }
 
     /**
-     * Get  
-     * @return RTSPPullSettings 
+     * Get The output RTSP streaming configuration information. 
+     * @return RTSPPullSettings The output RTSP streaming configuration information.
      */
     public DescribeOutputRTSPPullSettings getRTSPPullSettings() {
         return this.RTSPPullSettings;
     }
 
     /**
-     * Set 
-     * @param RTSPPullSettings 
+     * Set The output RTSP streaming configuration information.
+     * @param RTSPPullSettings The output RTSP streaming configuration information.
      */
     public void setRTSPPullSettings(DescribeOutputRTSPPullSettings RTSPPullSettings) {
         this.RTSPPullSettings = RTSPPullSettings;
     }
 
     /**
-     * Get  
-     * @return HLSPullSettings 
+     * Get Output the HLS streaming configuration information. 
+     * @return HLSPullSettings Output the HLS streaming configuration information.
      */
     public DescribeOutputHLSPullSettings getHLSPullSettings() {
         return this.HLSPullSettings;
     }
 
     /**
-     * Set 
-     * @param HLSPullSettings 
+     * Set Output the HLS streaming configuration information.
+     * @param HLSPullSettings Output the HLS streaming configuration information.
      */
     public void setHLSPullSettings(DescribeOutputHLSPullSettings HLSPullSettings) {
         this.HLSPullSettings = HLSPullSettings;
     }
 
     /**
-     * Get  
-     * @return MaxConcurrent 
+     * Get The maximum number of concurrent streams is 4, with a default of 4. 
+     * @return MaxConcurrent The maximum number of concurrent streams is 4, with a default of 4.
      */
     public Long getMaxConcurrent() {
         return this.MaxConcurrent;
     }
 
     /**
-     * Set 
-     * @param MaxConcurrent 
+     * Set The maximum number of concurrent streams is 4, with a default of 4.
+     * @param MaxConcurrent The maximum number of concurrent streams is 4, with a default of 4.
      */
     public void setMaxConcurrent(Long MaxConcurrent) {
         this.MaxConcurrent = MaxConcurrent;
@@ -429,6 +461,106 @@ Note: This field may return `null`, indicating that no valid value was found.
      */
     public void setSecurityGroupIds(String [] SecurityGroupIds) {
         this.SecurityGroupIds = SecurityGroupIds;
+    }
+
+    /**
+     * Get The available zone currently only supports a maximum of one output. 
+     * @return Zones The available zone currently only supports a maximum of one output.
+     */
+    public String [] getZones() {
+        return this.Zones;
+    }
+
+    /**
+     * Set The available zone currently only supports a maximum of one output.
+     * @param Zones The available zone currently only supports a maximum of one output.
+     */
+    public void setZones(String [] Zones) {
+        this.Zones = Zones;
+    }
+
+    /**
+     * Get Output RIST configuration information. 
+     * @return RISTSettings Output RIST configuration information.
+     */
+    public DescribeOutputRISTSettings getRISTSettings() {
+        return this.RISTSettings;
+    }
+
+    /**
+     * Set Output RIST configuration information.
+     * @param RISTSettings Output RIST configuration information.
+     */
+    public void setRISTSettings(DescribeOutputRISTSettings RISTSettings) {
+        this.RISTSettings = RISTSettings;
+    }
+
+    /**
+     * Get For streams containing multiple audio/video tracks, you can specify the tracks that need to be used 
+     * @return PidSelector For streams containing multiple audio/video tracks, you can specify the tracks that need to be used
+     * @deprecated
+     */
+    @Deprecated
+    public PidSelector getPidSelector() {
+        return this.PidSelector;
+    }
+
+    /**
+     * Set For streams containing multiple audio/video tracks, you can specify the tracks that need to be used
+     * @param PidSelector For streams containing multiple audio/video tracks, you can specify the tracks that need to be used
+     * @deprecated
+     */
+    @Deprecated
+    public void setPidSelector(PidSelector PidSelector) {
+        this.PidSelector = PidSelector;
+    }
+
+    /**
+     * Get Output module types, including Pinpoint (single point output, supporting up to four concurrent outputs); MultiMesh (Multi output, supports concurrent outputs greater than four, currently up to 200). The default type is Pinpoint output. For a single Flow, a region can only have a maximum of one MultiMesh output. 
+     * @return OutputKind Output module types, including Pinpoint (single point output, supporting up to four concurrent outputs); MultiMesh (Multi output, supports concurrent outputs greater than four, currently up to 200). The default type is Pinpoint output. For a single Flow, a region can only have a maximum of one MultiMesh output.
+     */
+    public String getOutputKind() {
+        return this.OutputKind;
+    }
+
+    /**
+     * Set Output module types, including Pinpoint (single point output, supporting up to four concurrent outputs); MultiMesh (Multi output, supports concurrent outputs greater than four, currently up to 200). The default type is Pinpoint output. For a single Flow, a region can only have a maximum of one MultiMesh output.
+     * @param OutputKind Output module types, including Pinpoint (single point output, supporting up to four concurrent outputs); MultiMesh (Multi output, supports concurrent outputs greater than four, currently up to 200). The default type is Pinpoint output. For a single Flow, a region can only have a maximum of one MultiMesh output.
+     */
+    public void setOutputKind(String OutputKind) {
+        this.OutputKind = OutputKind;
+    }
+
+    /**
+     * Get Output module configuration, relevant URLs, including provided streaming addresses or configured output to third-party forwarding addresses 
+     * @return StreamUrls Output module configuration, relevant URLs, including provided streaming addresses or configured output to third-party forwarding addresses
+     */
+    public StreamUrlDetail [] getStreamUrls() {
+        return this.StreamUrls;
+    }
+
+    /**
+     * Set Output module configuration, relevant URLs, including provided streaming addresses or configured output to third-party forwarding addresses
+     * @param StreamUrls Output module configuration, relevant URLs, including provided streaming addresses or configured output to third-party forwarding addresses
+     */
+    public void setStreamUrls(StreamUrlDetail [] StreamUrls) {
+        this.StreamUrls = StreamUrls;
+    }
+
+    /**
+     * Get For streams containing multiple audio/video tracks, you can specify the tracks that need to be used 
+     * @return StreamSelector For streams containing multiple audio/video tracks, you can specify the tracks that need to be used
+     */
+    public StreamSelector getStreamSelector() {
+        return this.StreamSelector;
+    }
+
+    /**
+     * Set For streams containing multiple audio/video tracks, you can specify the tracks that need to be used
+     * @param StreamSelector For streams containing multiple audio/video tracks, you can specify the tracks that need to be used
+     */
+    public void setStreamSelector(StreamSelector StreamSelector) {
+        this.StreamSelector = StreamSelector;
     }
 
     public DescribeOutput() {
@@ -496,6 +628,30 @@ Note: This field may return `null`, indicating that no valid value was found.
                 this.SecurityGroupIds[i] = new String(source.SecurityGroupIds[i]);
             }
         }
+        if (source.Zones != null) {
+            this.Zones = new String[source.Zones.length];
+            for (int i = 0; i < source.Zones.length; i++) {
+                this.Zones[i] = new String(source.Zones[i]);
+            }
+        }
+        if (source.RISTSettings != null) {
+            this.RISTSettings = new DescribeOutputRISTSettings(source.RISTSettings);
+        }
+        if (source.PidSelector != null) {
+            this.PidSelector = new PidSelector(source.PidSelector);
+        }
+        if (source.OutputKind != null) {
+            this.OutputKind = new String(source.OutputKind);
+        }
+        if (source.StreamUrls != null) {
+            this.StreamUrls = new StreamUrlDetail[source.StreamUrls.length];
+            for (int i = 0; i < source.StreamUrls.length; i++) {
+                this.StreamUrls[i] = new StreamUrlDetail(source.StreamUrls[i]);
+            }
+        }
+        if (source.StreamSelector != null) {
+            this.StreamSelector = new StreamSelector(source.StreamSelector);
+        }
     }
 
 
@@ -519,6 +675,12 @@ Note: This field may return `null`, indicating that no valid value was found.
         this.setParamObj(map, prefix + "HLSPullSettings.", this.HLSPullSettings);
         this.setParamSimple(map, prefix + "MaxConcurrent", this.MaxConcurrent);
         this.setParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
+        this.setParamArraySimple(map, prefix + "Zones.", this.Zones);
+        this.setParamObj(map, prefix + "RISTSettings.", this.RISTSettings);
+        this.setParamObj(map, prefix + "PidSelector.", this.PidSelector);
+        this.setParamSimple(map, prefix + "OutputKind", this.OutputKind);
+        this.setParamArrayObj(map, prefix + "StreamUrls.", this.StreamUrls);
+        this.setParamObj(map, prefix + "StreamSelector.", this.StreamSelector);
 
     }
 }
