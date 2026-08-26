@@ -24,276 +24,276 @@ import java.util.HashMap;
 public class ListDataKeyDetailRequest extends AbstractModel {
 
     /**
-    * Meaning matches the Offset in SQL queries, indicates the retrieval starts from the Offset-th element in a sequentially arranged array, defaults to 0.
+    * <p>It means the same as the Offset in SQL queries, indicating that this retrieval starts from the Offset-th element of the sequentially arranged array. It defaults to 0.</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * Specifies the maximum number of elements to retrieve, same as the Limit in SQL queries. default value is 10. maximum value is 200.
+    * <p>The meaning is consistent with the Limit in SQL queries, indicating that this time up to Limit elements can be retrieved. The default value is 10, and the maximum value is 200.</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * Filter by creator role. default 0 means data keys created by the user, 1 means data keys automatically created by authorized cloud services.
+    * <p>Filter by creator role. Default value 0 indicates data keys created by the user, and 1 indicates data keys automatically created by authorized other Cloud services.</p>
     */
     @SerializedName("Role")
     @Expose
     private Long Role;
 
     /**
-    * Sorts according to the creation time of DataKey. 0 indicates descending sort. 1 indicates ascending sort.
+    * <p>Sort by DataKey creation time. 0 indicates sort in descending order, and 1 indicates sort in ascending order.</p>
     */
     @SerializedName("OrderType")
     @Expose
     private Long OrderType;
 
     /**
-    * Filter based on DataKey state. 0 means all datakeys, 1 means querying only Enabled datakeys, 2 means querying only Disabled datakeys, 3 means querying datakeys in PendingDelete state (keys in scheduled deletion status).
+    * <p>Filter by DataKey status. 0 indicates all DataKeys, 1 indicates querying only Enabled DataKeys, 2 indicates querying only Disabled DataKeys, and 3 indicates querying DataKeys in PendingDelete state (keys in scheduled deletion status).</p>
     */
     @SerializedName("KeyState")
     @Expose
     private Long KeyState;
 
     /**
-    * Performs a fuzzy match query based on DataKeyId or DataKeyName.
+    * <p>Perform a fuzzy match query by DataKeyId or DataKeyName</p>
     */
     @SerializedName("SearchKeyAlias")
     @Expose
     private String SearchKeyAlias;
 
     /**
-    * Filters data keys by DateKey type. "TENCENT_KMS" filters data keys with key material created by KMS. "EXTERNAL" filters EXTERNAL type data keys requiring user-imported key material. "ALL" or leave unset queries both types. case-sensitive.
+    * <p>Filter by DateKey type. "TENCENT_KMS" filters data keys with key material created by KMS. "EXTERNAL" filters EXTERNAL type data keys with key material to import. "ALL" or leave unset queries both types. Case-sensitive.</p>
     */
     @SerializedName("Origin")
     @Expose
     private String Origin;
 
     /**
-    * HSM cluster ID corresponding to KMS advanced edition.
+    * <p>HSM Cluster ID corresponding to the KMS advanced edition. When specifying a cluster ID, query the key list within the specified cluster. When specifying default, query the key list of the public cloud shared version. If empty, query all key lists by default, including cluster and non-cluster.</p>
     */
     @SerializedName("HsmClusterId")
     @Expose
     private String HsmClusterId;
 
     /**
-    * Specifies the globally unique identifier of the root key.
+    * <p>Root key globally unique identifier</p>
     */
     @SerializedName("KeyId")
     @Expose
     private String KeyId;
 
     /**
-    * Length of the data key.
+    * <p>Length of the data key</p>
     */
     @SerializedName("DataKeyLen")
     @Expose
     private Long DataKeyLen;
 
     /**
-    * Tag filtering conditions.
+    * <p>Tag filtering condition</p>
     */
     @SerializedName("TagFilters")
     @Expose
     private TagFilter [] TagFilters;
 
     /**
-    * Array of member account information.
+    * <p>Member account information array</p>
     */
     @SerializedName("MemberAccounts")
     @Expose
     private MemberAccount [] MemberAccounts;
 
     /**
-     * Get Meaning matches the Offset in SQL queries, indicates the retrieval starts from the Offset-th element in a sequentially arranged array, defaults to 0. 
-     * @return Offset Meaning matches the Offset in SQL queries, indicates the retrieval starts from the Offset-th element in a sequentially arranged array, defaults to 0.
+     * Get <p>It means the same as the Offset in SQL queries, indicating that this retrieval starts from the Offset-th element of the sequentially arranged array. It defaults to 0.</p> 
+     * @return Offset <p>It means the same as the Offset in SQL queries, indicating that this retrieval starts from the Offset-th element of the sequentially arranged array. It defaults to 0.</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Meaning matches the Offset in SQL queries, indicates the retrieval starts from the Offset-th element in a sequentially arranged array, defaults to 0.
-     * @param Offset Meaning matches the Offset in SQL queries, indicates the retrieval starts from the Offset-th element in a sequentially arranged array, defaults to 0.
+     * Set <p>It means the same as the Offset in SQL queries, indicating that this retrieval starts from the Offset-th element of the sequentially arranged array. It defaults to 0.</p>
+     * @param Offset <p>It means the same as the Offset in SQL queries, indicating that this retrieval starts from the Offset-th element of the sequentially arranged array. It defaults to 0.</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get Specifies the maximum number of elements to retrieve, same as the Limit in SQL queries. default value is 10. maximum value is 200. 
-     * @return Limit Specifies the maximum number of elements to retrieve, same as the Limit in SQL queries. default value is 10. maximum value is 200.
+     * Get <p>The meaning is consistent with the Limit in SQL queries, indicating that this time up to Limit elements can be retrieved. The default value is 10, and the maximum value is 200.</p> 
+     * @return Limit <p>The meaning is consistent with the Limit in SQL queries, indicating that this time up to Limit elements can be retrieved. The default value is 10, and the maximum value is 200.</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Specifies the maximum number of elements to retrieve, same as the Limit in SQL queries. default value is 10. maximum value is 200.
-     * @param Limit Specifies the maximum number of elements to retrieve, same as the Limit in SQL queries. default value is 10. maximum value is 200.
+     * Set <p>The meaning is consistent with the Limit in SQL queries, indicating that this time up to Limit elements can be retrieved. The default value is 10, and the maximum value is 200.</p>
+     * @param Limit <p>The meaning is consistent with the Limit in SQL queries, indicating that this time up to Limit elements can be retrieved. The default value is 10, and the maximum value is 200.</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get Filter by creator role. default 0 means data keys created by the user, 1 means data keys automatically created by authorized cloud services. 
-     * @return Role Filter by creator role. default 0 means data keys created by the user, 1 means data keys automatically created by authorized cloud services.
+     * Get <p>Filter by creator role. Default value 0 indicates data keys created by the user, and 1 indicates data keys automatically created by authorized other Cloud services.</p> 
+     * @return Role <p>Filter by creator role. Default value 0 indicates data keys created by the user, and 1 indicates data keys automatically created by authorized other Cloud services.</p>
      */
     public Long getRole() {
         return this.Role;
     }
 
     /**
-     * Set Filter by creator role. default 0 means data keys created by the user, 1 means data keys automatically created by authorized cloud services.
-     * @param Role Filter by creator role. default 0 means data keys created by the user, 1 means data keys automatically created by authorized cloud services.
+     * Set <p>Filter by creator role. Default value 0 indicates data keys created by the user, and 1 indicates data keys automatically created by authorized other Cloud services.</p>
+     * @param Role <p>Filter by creator role. Default value 0 indicates data keys created by the user, and 1 indicates data keys automatically created by authorized other Cloud services.</p>
      */
     public void setRole(Long Role) {
         this.Role = Role;
     }
 
     /**
-     * Get Sorts according to the creation time of DataKey. 0 indicates descending sort. 1 indicates ascending sort. 
-     * @return OrderType Sorts according to the creation time of DataKey. 0 indicates descending sort. 1 indicates ascending sort.
+     * Get <p>Sort by DataKey creation time. 0 indicates sort in descending order, and 1 indicates sort in ascending order.</p> 
+     * @return OrderType <p>Sort by DataKey creation time. 0 indicates sort in descending order, and 1 indicates sort in ascending order.</p>
      */
     public Long getOrderType() {
         return this.OrderType;
     }
 
     /**
-     * Set Sorts according to the creation time of DataKey. 0 indicates descending sort. 1 indicates ascending sort.
-     * @param OrderType Sorts according to the creation time of DataKey. 0 indicates descending sort. 1 indicates ascending sort.
+     * Set <p>Sort by DataKey creation time. 0 indicates sort in descending order, and 1 indicates sort in ascending order.</p>
+     * @param OrderType <p>Sort by DataKey creation time. 0 indicates sort in descending order, and 1 indicates sort in ascending order.</p>
      */
     public void setOrderType(Long OrderType) {
         this.OrderType = OrderType;
     }
 
     /**
-     * Get Filter based on DataKey state. 0 means all datakeys, 1 means querying only Enabled datakeys, 2 means querying only Disabled datakeys, 3 means querying datakeys in PendingDelete state (keys in scheduled deletion status). 
-     * @return KeyState Filter based on DataKey state. 0 means all datakeys, 1 means querying only Enabled datakeys, 2 means querying only Disabled datakeys, 3 means querying datakeys in PendingDelete state (keys in scheduled deletion status).
+     * Get <p>Filter by DataKey status. 0 indicates all DataKeys, 1 indicates querying only Enabled DataKeys, 2 indicates querying only Disabled DataKeys, and 3 indicates querying DataKeys in PendingDelete state (keys in scheduled deletion status).</p> 
+     * @return KeyState <p>Filter by DataKey status. 0 indicates all DataKeys, 1 indicates querying only Enabled DataKeys, 2 indicates querying only Disabled DataKeys, and 3 indicates querying DataKeys in PendingDelete state (keys in scheduled deletion status).</p>
      */
     public Long getKeyState() {
         return this.KeyState;
     }
 
     /**
-     * Set Filter based on DataKey state. 0 means all datakeys, 1 means querying only Enabled datakeys, 2 means querying only Disabled datakeys, 3 means querying datakeys in PendingDelete state (keys in scheduled deletion status).
-     * @param KeyState Filter based on DataKey state. 0 means all datakeys, 1 means querying only Enabled datakeys, 2 means querying only Disabled datakeys, 3 means querying datakeys in PendingDelete state (keys in scheduled deletion status).
+     * Set <p>Filter by DataKey status. 0 indicates all DataKeys, 1 indicates querying only Enabled DataKeys, 2 indicates querying only Disabled DataKeys, and 3 indicates querying DataKeys in PendingDelete state (keys in scheduled deletion status).</p>
+     * @param KeyState <p>Filter by DataKey status. 0 indicates all DataKeys, 1 indicates querying only Enabled DataKeys, 2 indicates querying only Disabled DataKeys, and 3 indicates querying DataKeys in PendingDelete state (keys in scheduled deletion status).</p>
      */
     public void setKeyState(Long KeyState) {
         this.KeyState = KeyState;
     }
 
     /**
-     * Get Performs a fuzzy match query based on DataKeyId or DataKeyName. 
-     * @return SearchKeyAlias Performs a fuzzy match query based on DataKeyId or DataKeyName.
+     * Get <p>Perform a fuzzy match query by DataKeyId or DataKeyName</p> 
+     * @return SearchKeyAlias <p>Perform a fuzzy match query by DataKeyId or DataKeyName</p>
      */
     public String getSearchKeyAlias() {
         return this.SearchKeyAlias;
     }
 
     /**
-     * Set Performs a fuzzy match query based on DataKeyId or DataKeyName.
-     * @param SearchKeyAlias Performs a fuzzy match query based on DataKeyId or DataKeyName.
+     * Set <p>Perform a fuzzy match query by DataKeyId or DataKeyName</p>
+     * @param SearchKeyAlias <p>Perform a fuzzy match query by DataKeyId or DataKeyName</p>
      */
     public void setSearchKeyAlias(String SearchKeyAlias) {
         this.SearchKeyAlias = SearchKeyAlias;
     }
 
     /**
-     * Get Filters data keys by DateKey type. "TENCENT_KMS" filters data keys with key material created by KMS. "EXTERNAL" filters EXTERNAL type data keys requiring user-imported key material. "ALL" or leave unset queries both types. case-sensitive. 
-     * @return Origin Filters data keys by DateKey type. "TENCENT_KMS" filters data keys with key material created by KMS. "EXTERNAL" filters EXTERNAL type data keys requiring user-imported key material. "ALL" or leave unset queries both types. case-sensitive.
+     * Get <p>Filter by DateKey type. "TENCENT_KMS" filters data keys with key material created by KMS. "EXTERNAL" filters EXTERNAL type data keys with key material to import. "ALL" or leave unset queries both types. Case-sensitive.</p> 
+     * @return Origin <p>Filter by DateKey type. "TENCENT_KMS" filters data keys with key material created by KMS. "EXTERNAL" filters EXTERNAL type data keys with key material to import. "ALL" or leave unset queries both types. Case-sensitive.</p>
      */
     public String getOrigin() {
         return this.Origin;
     }
 
     /**
-     * Set Filters data keys by DateKey type. "TENCENT_KMS" filters data keys with key material created by KMS. "EXTERNAL" filters EXTERNAL type data keys requiring user-imported key material. "ALL" or leave unset queries both types. case-sensitive.
-     * @param Origin Filters data keys by DateKey type. "TENCENT_KMS" filters data keys with key material created by KMS. "EXTERNAL" filters EXTERNAL type data keys requiring user-imported key material. "ALL" or leave unset queries both types. case-sensitive.
+     * Set <p>Filter by DateKey type. "TENCENT_KMS" filters data keys with key material created by KMS. "EXTERNAL" filters EXTERNAL type data keys with key material to import. "ALL" or leave unset queries both types. Case-sensitive.</p>
+     * @param Origin <p>Filter by DateKey type. "TENCENT_KMS" filters data keys with key material created by KMS. "EXTERNAL" filters EXTERNAL type data keys with key material to import. "ALL" or leave unset queries both types. Case-sensitive.</p>
      */
     public void setOrigin(String Origin) {
         this.Origin = Origin;
     }
 
     /**
-     * Get HSM cluster ID corresponding to KMS advanced edition. 
-     * @return HsmClusterId HSM cluster ID corresponding to KMS advanced edition.
+     * Get <p>HSM Cluster ID corresponding to the KMS advanced edition. When specifying a cluster ID, query the key list within the specified cluster. When specifying default, query the key list of the public cloud shared version. If empty, query all key lists by default, including cluster and non-cluster.</p> 
+     * @return HsmClusterId <p>HSM Cluster ID corresponding to the KMS advanced edition. When specifying a cluster ID, query the key list within the specified cluster. When specifying default, query the key list of the public cloud shared version. If empty, query all key lists by default, including cluster and non-cluster.</p>
      */
     public String getHsmClusterId() {
         return this.HsmClusterId;
     }
 
     /**
-     * Set HSM cluster ID corresponding to KMS advanced edition.
-     * @param HsmClusterId HSM cluster ID corresponding to KMS advanced edition.
+     * Set <p>HSM Cluster ID corresponding to the KMS advanced edition. When specifying a cluster ID, query the key list within the specified cluster. When specifying default, query the key list of the public cloud shared version. If empty, query all key lists by default, including cluster and non-cluster.</p>
+     * @param HsmClusterId <p>HSM Cluster ID corresponding to the KMS advanced edition. When specifying a cluster ID, query the key list within the specified cluster. When specifying default, query the key list of the public cloud shared version. If empty, query all key lists by default, including cluster and non-cluster.</p>
      */
     public void setHsmClusterId(String HsmClusterId) {
         this.HsmClusterId = HsmClusterId;
     }
 
     /**
-     * Get Specifies the globally unique identifier of the root key. 
-     * @return KeyId Specifies the globally unique identifier of the root key.
+     * Get <p>Root key globally unique identifier</p> 
+     * @return KeyId <p>Root key globally unique identifier</p>
      */
     public String getKeyId() {
         return this.KeyId;
     }
 
     /**
-     * Set Specifies the globally unique identifier of the root key.
-     * @param KeyId Specifies the globally unique identifier of the root key.
+     * Set <p>Root key globally unique identifier</p>
+     * @param KeyId <p>Root key globally unique identifier</p>
      */
     public void setKeyId(String KeyId) {
         this.KeyId = KeyId;
     }
 
     /**
-     * Get Length of the data key. 
-     * @return DataKeyLen Length of the data key.
+     * Get <p>Length of the data key</p> 
+     * @return DataKeyLen <p>Length of the data key</p>
      */
     public Long getDataKeyLen() {
         return this.DataKeyLen;
     }
 
     /**
-     * Set Length of the data key.
-     * @param DataKeyLen Length of the data key.
+     * Set <p>Length of the data key</p>
+     * @param DataKeyLen <p>Length of the data key</p>
      */
     public void setDataKeyLen(Long DataKeyLen) {
         this.DataKeyLen = DataKeyLen;
     }
 
     /**
-     * Get Tag filtering conditions. 
-     * @return TagFilters Tag filtering conditions.
+     * Get <p>Tag filtering condition</p> 
+     * @return TagFilters <p>Tag filtering condition</p>
      */
     public TagFilter [] getTagFilters() {
         return this.TagFilters;
     }
 
     /**
-     * Set Tag filtering conditions.
-     * @param TagFilters Tag filtering conditions.
+     * Set <p>Tag filtering condition</p>
+     * @param TagFilters <p>Tag filtering condition</p>
      */
     public void setTagFilters(TagFilter [] TagFilters) {
         this.TagFilters = TagFilters;
     }
 
     /**
-     * Get Array of member account information. 
-     * @return MemberAccounts Array of member account information.
+     * Get <p>Member account information array</p> 
+     * @return MemberAccounts <p>Member account information array</p>
      */
     public MemberAccount [] getMemberAccounts() {
         return this.MemberAccounts;
     }
 
     /**
-     * Set Array of member account information.
-     * @param MemberAccounts Array of member account information.
+     * Set <p>Member account information array</p>
+     * @param MemberAccounts <p>Member account information array</p>
      */
     public void setMemberAccounts(MemberAccount [] MemberAccounts) {
         this.MemberAccounts = MemberAccounts;

@@ -80,6 +80,13 @@ public class CreateStreamPackageHarvestJobRequest extends AbstractModel {
     private String Manifest;
 
     /**
+    * Callback address after recording completion
+    */
+    @SerializedName("CallbackURL")
+    @Expose
+    private String CallbackURL;
+
+    /**
      * Get HarvestJob ID, a globally unique identifier. 
      * @return ID HarvestJob ID, a globally unique identifier.
      */
@@ -207,6 +214,22 @@ public class CreateStreamPackageHarvestJobRequest extends AbstractModel {
         this.Manifest = Manifest;
     }
 
+    /**
+     * Get Callback address after recording completion 
+     * @return CallbackURL Callback address after recording completion
+     */
+    public String getCallbackURL() {
+        return this.CallbackURL;
+    }
+
+    /**
+     * Set Callback address after recording completion
+     * @param CallbackURL Callback address after recording completion
+     */
+    public void setCallbackURL(String CallbackURL) {
+        this.CallbackURL = CallbackURL;
+    }
+
     public CreateStreamPackageHarvestJobRequest() {
     }
 
@@ -239,6 +262,9 @@ public class CreateStreamPackageHarvestJobRequest extends AbstractModel {
         if (source.Manifest != null) {
             this.Manifest = new String(source.Manifest);
         }
+        if (source.CallbackURL != null) {
+            this.CallbackURL = new String(source.CallbackURL);
+        }
     }
 
 
@@ -254,6 +280,7 @@ public class CreateStreamPackageHarvestJobRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
         this.setParamSimple(map, prefix + "Destination", this.Destination);
         this.setParamSimple(map, prefix + "Manifest", this.Manifest);
+        this.setParamSimple(map, prefix + "CallbackURL", this.CallbackURL);
 
     }
 }

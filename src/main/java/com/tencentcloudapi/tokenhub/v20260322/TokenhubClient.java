@@ -78,6 +78,32 @@ Create terminology entries in batches under the designated Termbase. You can cre
     }
 
     /**
+     *Batch create TokenPlan API Keys.
+
+Import a name prefix and quantity to automatically generate names in the `{Api Key Name}-{serial number}` format (for example, aaa-1, aaa-2). Duplicate names are allowed. Partial success is supported for up to 100 entries.
+     * @param req CreateTokenPlanApiKeysRequest
+     * @return CreateTokenPlanApiKeysResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateTokenPlanApiKeysResponse CreateTokenPlanApiKeys(CreateTokenPlanApiKeysRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateTokenPlanApiKeys", CreateTokenPlanApiKeysResponse.class);
+    }
+
+    /**
+     *Purchase a package (This API is also used to reactivate and renew expired packages. The teamId of the expired package is required. After the renewal is successful, the total cycle count of the package will include historical cycles. The actual effective cycle of the package is determined by the effective time and expiration time.)
+
+Initiate an order for a TokenPlan package and complete payment. Return the order ID and associated sub-orders and resource information upon success.
+     * @param req CreateTokenPlanTeamOrderAndBuyRequest
+     * @return CreateTokenPlanTeamOrderAndBuyResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateTokenPlanTeamOrderAndBuyResponse CreateTokenPlanTeamOrderAndBuy(CreateTokenPlanTeamOrderAndBuyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateTokenPlanTeamOrderAndBuy", CreateTokenPlanTeamOrderAndBuyResponse.class);
+    }
+
+    /**
      *This API is used to delete specified api keys and clean up associated model binding relationships.
      * @param req DeleteApiKeyRequest
      * @return DeleteApiKeyResponse
@@ -112,6 +138,19 @@ Delete terminology entries in batches under the specified Termbase. You can dele
     public DeleteGlossaryEntriesResponse DeleteGlossaryEntries(DeleteGlossaryEntriesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteGlossaryEntries", DeleteGlossaryEntriesResponse.class);
+    }
+
+    /**
+     *Delete the Token Plan API key.
+
+Simultaneously delete the limit center sub-limit package and notify the Notification Gateway to purge cache.
+     * @param req DeleteTokenPlanApiKeyRequest
+     * @return DeleteTokenPlanApiKeyResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteTokenPlanApiKeyResponse DeleteTokenPlanApiKey(DeleteTokenPlanApiKeyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteTokenPlanApiKey", DeleteTokenPlanApiKeyResponse.class);
     }
 
     /**
@@ -165,6 +204,84 @@ Query specified entries in a Termbase. Support pagination.
     }
 
     /**
+     *Query the TokenPlan package details.
+
+Return the package basic info and the remaining quota of the package.
+     * @param req DescribeTokenPlanRequest
+     * @return DescribeTokenPlanResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTokenPlanResponse DescribeTokenPlan(DescribeTokenPlanRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeTokenPlan", DescribeTokenPlanResponse.class);
+    }
+
+    /**
+     *Query TokenPlan APIKey details.
+
+Return the complete APIKey information (including the plaintext key) and the remaining quota of the sub-quota package.
+     * @param req DescribeTokenPlanApiKeyRequest
+     * @return DescribeTokenPlanApiKeyResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTokenPlanApiKeyResponse DescribeTokenPlanApiKey(DescribeTokenPlanApiKeyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeTokenPlanApiKey", DescribeTokenPlanApiKeyResponse.class);
+    }
+
+    /**
+     *Query the list of Token Plan API keys.
+
+Returns the API key list under a specified package. Keys are masked. Root accounts can view all keys, while sub-accounts can only view keys created by themselves.
+     * @param req DescribeTokenPlanApiKeyListRequest
+     * @return DescribeTokenPlanApiKeyListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTokenPlanApiKeyListResponse DescribeTokenPlanApiKeyList(DescribeTokenPlanApiKeyListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeTokenPlanApiKeyList", DescribeTokenPlanApiKeyListResponse.class);
+    }
+
+    /**
+     *Query the TokenPlan APIKey (plaintext).
+
+Return the plaintext key value of the designated APIKey. Keep it safe.
+     * @param req DescribeTokenPlanApiKeySecretRequest
+     * @return DescribeTokenPlanApiKeySecretResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTokenPlanApiKeySecretResponse DescribeTokenPlanApiKeySecret(DescribeTokenPlanApiKeySecretRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeTokenPlanApiKeySecret", DescribeTokenPlanApiKeySecretResponse.class);
+    }
+
+    /**
+     *Query the Token Plan APIKey call detail.
+
+This API is used to query call details under a package from CLS log service, filter by team_id, and support cursor-based pagination.
+     * @param req DescribeTokenPlanApiKeyUsageDetailRequest
+     * @return DescribeTokenPlanApiKeyUsageDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTokenPlanApiKeyUsageDetailResponse DescribeTokenPlanApiKeyUsageDetail(DescribeTokenPlanApiKeyUsageDetailRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeTokenPlanApiKeyUsageDetail", DescribeTokenPlanApiKeyUsageDetailResponse.class);
+    }
+
+    /**
+     *Query the list of Token Plan package options.
+
+Supports pagination, filtering, and sorting. Root accounts can view all packages, while sub-accounts can only view packages created by themselves. Returned results include the main limit package details associated with each package in the limit center.
+     * @param req DescribeTokenPlanListRequest
+     * @return DescribeTokenPlanListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTokenPlanListResponse DescribeTokenPlanList(DescribeTokenPlanListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeTokenPlanList", DescribeTokenPlanListResponse.class);
+    }
+
+    /**
      *Refresh API key information.
 
 This API is used to update the remark information, IP allowlist and Token quota of an API key (recommended to use QuotaDesired parameter for quota modification). Passing no optional parameters means no modification.
@@ -199,6 +316,58 @@ This API is used to batch modify terminology entries in a designated Termbase. Y
     public ModifyGlossaryEntriesResponse ModifyGlossaryEntries(ModifyGlossaryEntriesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyGlossaryEntries", ModifyGlossaryEntriesResponse.class);
+    }
+
+    /**
+     *Modify the Token Plan APIKey configuration (field that the gateway focuses on).
+
+After modification, automatically notify the gateway to update the cache and sync the limit center.
+     * @param req ModifyTokenPlanApiKeyRequest
+     * @return ModifyTokenPlanApiKeyResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyTokenPlanApiKeyResponse ModifyTokenPlanApiKey(ModifyTokenPlanApiKeyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyTokenPlanApiKey", ModifyTokenPlanApiKeyResponse.class);
+    }
+
+    /**
+     *Reset the TokenPlan API Key.
+
+Regenerate the key value. The key version increments and the old key expires immediately. The API Key ID remains unchanged. After resetting, the new key can be queried through DescribeTokenPlanApiKeySecret.
+     * @param req ModifyTokenPlanApiKeySecretRequest
+     * @return ModifyTokenPlanApiKeySecretResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyTokenPlanApiKeySecretResponse ModifyTokenPlanApiKeySecret(ModifyTokenPlanApiKeySecretRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyTokenPlanApiKeySecret", ModifyTokenPlanApiKeySecretResponse.class);
+    }
+
+    /**
+     *Renew a package.
+
+Initiate a renewal order for an existing Token Plan package and complete payment. Return the order ID and associated sub-orders and resource information upon success.
+     * @param req RenewTokenPlanTeamOrderRequest
+     * @return RenewTokenPlanTeamOrderResponse
+     * @throws TencentCloudSDKException
+     */
+    public RenewTokenPlanTeamOrderResponse RenewTokenPlanTeamOrder(RenewTokenPlanTeamOrderRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "RenewTokenPlanTeamOrder", RenewTokenPlanTeamOrderResponse.class);
+    }
+
+    /**
+     *Upgrade the package.
+
+Initiate an upgrade order for an existing Token Plan package and complete payment to expand point or token limits. Return the order ID and associated sub-orders and resource information upon success. The new limit must be greater than the current limit.
+     * @param req UpgradeTokenPlanTeamOrderRequest
+     * @return UpgradeTokenPlanTeamOrderResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpgradeTokenPlanTeamOrderResponse UpgradeTokenPlanTeamOrder(UpgradeTokenPlanTeamOrderRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpgradeTokenPlanTeamOrder", UpgradeTokenPlanTeamOrderResponse.class);
     }
 
 }

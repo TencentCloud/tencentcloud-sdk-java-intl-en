@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeCustomerBillDetailResponse extends AbstractModel {
 
     /**
-    * Total number of data entries
+    * <p>total number of records</p>
     */
     @SerializedName("Total")
     @Expose
     private Long Total;
 
     /**
-    * Data detailsNote: This field may return null, indicating that no valid values can be obtained.
+    * <p>Data details</p>
     */
     @SerializedName("DetailSet")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeCustomerBillDetailResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Total number of data entries 
-     * @return Total Total number of data entries
+     * Get <p>total number of records</p> 
+     * @return Total <p>total number of records</p>
      */
     public Long getTotal() {
         return this.Total;
     }
 
     /**
-     * Set Total number of data entries
-     * @param Total Total number of data entries
+     * Set <p>total number of records</p>
+     * @param Total <p>total number of records</p>
      */
     public void setTotal(Long Total) {
         this.Total = Total;
     }
 
     /**
-     * Get Data detailsNote: This field may return null, indicating that no valid values can be obtained. 
-     * @return DetailSet Data detailsNote: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Data details</p> 
+     * @return DetailSet <p>Data details</p>
      */
     public BillDetailData [] getDetailSet() {
         return this.DetailSet;
     }
 
     /**
-     * Set Data detailsNote: This field may return null, indicating that no valid values can be obtained.
-     * @param DetailSet Data detailsNote: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Data details</p>
+     * @param DetailSet <p>Data details</p>
      */
     public void setDetailSet(BillDetailData [] DetailSet) {
         this.DetailSet = DetailSet;

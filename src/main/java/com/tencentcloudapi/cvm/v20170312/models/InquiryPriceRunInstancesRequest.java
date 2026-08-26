@@ -183,6 +183,13 @@ public class InquiryPriceRunInstancesRequest extends AbstractModel {
     private LaunchTemplate LaunchTemplate;
 
     /**
+    * Network interface configuration for instance creation, including VPCs, subnets, and IP address allocation for primary and secondary network interfaces. This feature is in beta test in selected regions. To use this feature, [submit a ticket](https://console.tencentcloud.com/workorder/category).
+    */
+    @SerializedName("NetworkInterfaces")
+    @Expose
+    private NetworkInterfaces [] NetworkInterfaces;
+
+    /**
      * Get Location of the instance. You can use this parameter to specify the attributes of the instance, such as its availability zone and project.
  <b>Note: `Placement` is required when `LaunchTemplate` is not specified. If both the parameters are passed in, `Placement` prevails.</b> 
      * @return Placement Location of the instance. You can use this parameter to specify the attributes of the instance, such as its availability zone and project.
@@ -554,6 +561,22 @@ public class InquiryPriceRunInstancesRequest extends AbstractModel {
         this.LaunchTemplate = LaunchTemplate;
     }
 
+    /**
+     * Get Network interface configuration for instance creation, including VPCs, subnets, and IP address allocation for primary and secondary network interfaces. This feature is in beta test in selected regions. To use this feature, [submit a ticket](https://console.tencentcloud.com/workorder/category). 
+     * @return NetworkInterfaces Network interface configuration for instance creation, including VPCs, subnets, and IP address allocation for primary and secondary network interfaces. This feature is in beta test in selected regions. To use this feature, [submit a ticket](https://console.tencentcloud.com/workorder/category).
+     */
+    public NetworkInterfaces [] getNetworkInterfaces() {
+        return this.NetworkInterfaces;
+    }
+
+    /**
+     * Set Network interface configuration for instance creation, including VPCs, subnets, and IP address allocation for primary and secondary network interfaces. This feature is in beta test in selected regions. To use this feature, [submit a ticket](https://console.tencentcloud.com/workorder/category).
+     * @param NetworkInterfaces Network interface configuration for instance creation, including VPCs, subnets, and IP address allocation for primary and secondary network interfaces. This feature is in beta test in selected regions. To use this feature, [submit a ticket](https://console.tencentcloud.com/workorder/category).
+     */
+    public void setNetworkInterfaces(NetworkInterfaces [] NetworkInterfaces) {
+        this.NetworkInterfaces = NetworkInterfaces;
+    }
+
     public InquiryPriceRunInstancesRequest() {
     }
 
@@ -637,6 +660,12 @@ public class InquiryPriceRunInstancesRequest extends AbstractModel {
         if (source.LaunchTemplate != null) {
             this.LaunchTemplate = new LaunchTemplate(source.LaunchTemplate);
         }
+        if (source.NetworkInterfaces != null) {
+            this.NetworkInterfaces = new NetworkInterfaces[source.NetworkInterfaces.length];
+            for (int i = 0; i < source.NetworkInterfaces.length; i++) {
+                this.NetworkInterfaces[i] = new NetworkInterfaces(source.NetworkInterfaces[i]);
+            }
+        }
     }
 
 
@@ -666,6 +695,7 @@ public class InquiryPriceRunInstancesRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "HpcClusterId", this.HpcClusterId);
         this.setParamObj(map, prefix + "CpuTopology.", this.CpuTopology);
         this.setParamObj(map, prefix + "LaunchTemplate.", this.LaunchTemplate);
+        this.setParamArrayObj(map, prefix + "NetworkInterfaces.", this.NetworkInterfaces);
 
     }
 }

@@ -255,6 +255,13 @@ If the dry run succeeds, the RequestId will be returned.
     private String [] ChcIds;
 
     /**
+    * Partition number of the partition placement group. Valid values depend on the number of partitions in the selected placement group. If the selected placement group is a partition placement group and this parameter is not specified, a partition is randomly assigned. This feature is in beta test.
+    */
+    @SerializedName("PartitionNumber")
+    @Expose
+    private Long PartitionNumber;
+
+    /**
     * Instance termination protection flag, indicating whether an instance is allowed to be deleted through an API. Valid values:<br><li>true: Instance protection is enabled, and the instance is not allowed to be deleted through the API.</li><br><li>false: Instance protection is disabled, and the instance is allowed to be deleted through the API.</li><br><br>Default value: false.
     */
     @SerializedName("DisableApiTermination")
@@ -267,6 +274,13 @@ If the dry run succeeds, the RequestId will be returned.
     @SerializedName("EnableJumboFrame")
     @Expose
     private Boolean EnableJumboFrame;
+
+    /**
+    * Network interface configuration for instance creation, including VPCs, subnets, and IP address allocation for primary and secondary network interfaces. This feature is in beta test in selected regions. To use this feature, [submit a ticket](https://console.tencentcloud.com/workorder/category).
+    */
+    @SerializedName("NetworkInterfaces")
+    @Expose
+    private NetworkInterfaces [] NetworkInterfaces;
 
     /**
      * Get Instance [billing type](https://www.tencentcloud.com/document/product/213/2180). <br><li>`PREPAID`: Monthly Subscription, used for at least one month <br><li>`POSTPAID_BY_HOUR`: Hourly-based pay-as-you-go <br><li>`CDHPAID`: [Dedicated CVM](https://www.tencentcloud.com/document/product/416/5068?lang=en&pg=) (associated with a dedicated host. Resource usage of the dedicated host is free of charge.) <br><li>`SPOTPAID`: [Spot instance](https://intl.cloud.tencent.com/document/product/213/17817)<br>Default value: `POSTPAID_BY_HOUR`. 
@@ -833,6 +847,22 @@ If the dry run succeeds, the RequestId will be returned.
     }
 
     /**
+     * Get Partition number of the partition placement group. Valid values depend on the number of partitions in the selected placement group. If the selected placement group is a partition placement group and this parameter is not specified, a partition is randomly assigned. This feature is in beta test. 
+     * @return PartitionNumber Partition number of the partition placement group. Valid values depend on the number of partitions in the selected placement group. If the selected placement group is a partition placement group and this parameter is not specified, a partition is randomly assigned. This feature is in beta test.
+     */
+    public Long getPartitionNumber() {
+        return this.PartitionNumber;
+    }
+
+    /**
+     * Set Partition number of the partition placement group. Valid values depend on the number of partitions in the selected placement group. If the selected placement group is a partition placement group and this parameter is not specified, a partition is randomly assigned. This feature is in beta test.
+     * @param PartitionNumber Partition number of the partition placement group. Valid values depend on the number of partitions in the selected placement group. If the selected placement group is a partition placement group and this parameter is not specified, a partition is randomly assigned. This feature is in beta test.
+     */
+    public void setPartitionNumber(Long PartitionNumber) {
+        this.PartitionNumber = PartitionNumber;
+    }
+
+    /**
      * Get Instance termination protection flag, indicating whether an instance is allowed to be deleted through an API. Valid values:<br><li>true: Instance protection is enabled, and the instance is not allowed to be deleted through the API.</li><br><li>false: Instance protection is disabled, and the instance is allowed to be deleted through the API.</li><br><br>Default value: false. 
      * @return DisableApiTermination Instance termination protection flag, indicating whether an instance is allowed to be deleted through an API. Valid values:<br><li>true: Instance protection is enabled, and the instance is not allowed to be deleted through the API.</li><br><li>false: Instance protection is disabled, and the instance is allowed to be deleted through the API.</li><br><br>Default value: false.
      */
@@ -862,6 +892,22 @@ If the dry run succeeds, the RequestId will be returned.
      */
     public void setEnableJumboFrame(Boolean EnableJumboFrame) {
         this.EnableJumboFrame = EnableJumboFrame;
+    }
+
+    /**
+     * Get Network interface configuration for instance creation, including VPCs, subnets, and IP address allocation for primary and secondary network interfaces. This feature is in beta test in selected regions. To use this feature, [submit a ticket](https://console.tencentcloud.com/workorder/category). 
+     * @return NetworkInterfaces Network interface configuration for instance creation, including VPCs, subnets, and IP address allocation for primary and secondary network interfaces. This feature is in beta test in selected regions. To use this feature, [submit a ticket](https://console.tencentcloud.com/workorder/category).
+     */
+    public NetworkInterfaces [] getNetworkInterfaces() {
+        return this.NetworkInterfaces;
+    }
+
+    /**
+     * Set Network interface configuration for instance creation, including VPCs, subnets, and IP address allocation for primary and secondary network interfaces. This feature is in beta test in selected regions. To use this feature, [submit a ticket](https://console.tencentcloud.com/workorder/category).
+     * @param NetworkInterfaces Network interface configuration for instance creation, including VPCs, subnets, and IP address allocation for primary and secondary network interfaces. This feature is in beta test in selected regions. To use this feature, [submit a ticket](https://console.tencentcloud.com/workorder/category).
+     */
+    public void setNetworkInterfaces(NetworkInterfaces [] NetworkInterfaces) {
+        this.NetworkInterfaces = NetworkInterfaces;
     }
 
     public RunInstancesRequest() {
@@ -977,11 +1023,20 @@ If the dry run succeeds, the RequestId will be returned.
                 this.ChcIds[i] = new String(source.ChcIds[i]);
             }
         }
+        if (source.PartitionNumber != null) {
+            this.PartitionNumber = new Long(source.PartitionNumber);
+        }
         if (source.DisableApiTermination != null) {
             this.DisableApiTermination = new Boolean(source.DisableApiTermination);
         }
         if (source.EnableJumboFrame != null) {
             this.EnableJumboFrame = new Boolean(source.EnableJumboFrame);
+        }
+        if (source.NetworkInterfaces != null) {
+            this.NetworkInterfaces = new NetworkInterfaces[source.NetworkInterfaces.length];
+            for (int i = 0; i < source.NetworkInterfaces.length; i++) {
+                this.NetworkInterfaces[i] = new NetworkInterfaces(source.NetworkInterfaces[i]);
+            }
         }
     }
 
@@ -1020,8 +1075,10 @@ If the dry run succeeds, the RequestId will be returned.
         this.setParamObj(map, prefix + "LaunchTemplate.", this.LaunchTemplate);
         this.setParamSimple(map, prefix + "DedicatedClusterId", this.DedicatedClusterId);
         this.setParamArraySimple(map, prefix + "ChcIds.", this.ChcIds);
+        this.setParamSimple(map, prefix + "PartitionNumber", this.PartitionNumber);
         this.setParamSimple(map, prefix + "DisableApiTermination", this.DisableApiTermination);
         this.setParamSimple(map, prefix + "EnableJumboFrame", this.EnableJumboFrame);
+        this.setParamArrayObj(map, prefix + "NetworkInterfaces.", this.NetworkInterfaces);
 
     }
 }

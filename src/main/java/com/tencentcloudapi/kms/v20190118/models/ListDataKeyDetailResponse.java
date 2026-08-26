@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class ListDataKeyDetailResponse extends AbstractModel {
 
     /**
-    * Returns the attribute information list.
+    * <p>Returned attribute information list.</p>
     */
     @SerializedName("DataKeyMetadatas")
     @Expose
     private DataKeyMetadata [] DataKeyMetadatas;
 
     /**
-    * Total number of datakeys.
+    * <p>Total number of DataKeys</p>
     */
     @SerializedName("TotalCount")
     @Expose
@@ -45,32 +45,32 @@ public class ListDataKeyDetailResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Returns the attribute information list. 
-     * @return DataKeyMetadatas Returns the attribute information list.
+     * Get <p>Returned attribute information list.</p> 
+     * @return DataKeyMetadatas <p>Returned attribute information list.</p>
      */
     public DataKeyMetadata [] getDataKeyMetadatas() {
         return this.DataKeyMetadatas;
     }
 
     /**
-     * Set Returns the attribute information list.
-     * @param DataKeyMetadatas Returns the attribute information list.
+     * Set <p>Returned attribute information list.</p>
+     * @param DataKeyMetadatas <p>Returned attribute information list.</p>
      */
     public void setDataKeyMetadatas(DataKeyMetadata [] DataKeyMetadatas) {
         this.DataKeyMetadatas = DataKeyMetadatas;
     }
 
     /**
-     * Get Total number of datakeys. 
-     * @return TotalCount Total number of datakeys.
+     * Get <p>Total number of DataKeys</p> 
+     * @return TotalCount <p>Total number of DataKeys</p>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set Total number of datakeys.
-     * @param TotalCount Total number of datakeys.
+     * Set <p>Total number of DataKeys</p>
+     * @param TotalCount <p>Total number of DataKeys</p>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

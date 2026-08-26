@@ -198,7 +198,7 @@ public enum IntlpartnersmgtErrorCode {
      /* Unauthorized operation. */
      UNAUTHORIZEDOPERATION("UnauthorizedOperation"),
      
-     /* The current user is not a customer. */
+     /* The current user is not a sub-user. */
      UNAUTHORIZEDOPERATION_NOTCUSTOMERUIN("UnauthorizedOperation.NotCustomerUin"),
      
      /* The current user doesn’t have permission for the operation. */

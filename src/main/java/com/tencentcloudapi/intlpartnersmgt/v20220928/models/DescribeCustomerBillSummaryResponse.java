@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeCustomerBillSummaryResponse extends AbstractModel {
 
     /**
-    * Total amount
+    * <p>Total amount</p>
     */
     @SerializedName("TotalCost")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeCustomerBillSummaryResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Total amount 
-     * @return TotalCost Total amount
+     * Get <p>Total amount</p> 
+     * @return TotalCost <p>Total amount</p>
      */
     public Float getTotalCost() {
         return this.TotalCost;
     }
 
     /**
-     * Set Total amount
-     * @param TotalCost Total amount
+     * Set <p>Total amount</p>
+     * @param TotalCost <p>Total amount</p>
      */
     public void setTotalCost(Float TotalCost) {
         this.TotalCost = TotalCost;

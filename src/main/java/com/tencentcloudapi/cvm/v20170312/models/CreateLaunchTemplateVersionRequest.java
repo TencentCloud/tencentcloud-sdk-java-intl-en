@@ -257,6 +257,13 @@ Note: this field is in beta test.
     private String TemplateDataModifyAction;
 
     /**
+    * Network interface configuration for instance creation, including VPCs, subnets, and IP address allocation for primary and secondary network interfaces. This feature is in beta test in selected regions. To use this feature, [submit a ticket](https://console.tencentcloud.com/workorder/category).
+    */
+    @SerializedName("NetworkInterfaces")
+    @Expose
+    private NetworkInterfaces [] NetworkInterfaces;
+
+    /**
      * Get Location of the instance. You can use this parameter to specify the attributes of the instance, such as its availability zone, project, and CDH (for dedicated CVMs) 
      * @return Placement Location of the instance. You can use this parameter to specify the attributes of the instance, such as its availability zone, project, and CDH (for dedicated CVMs)
      */
@@ -816,6 +823,22 @@ Note: this field is in beta test.
         this.TemplateDataModifyAction = TemplateDataModifyAction;
     }
 
+    /**
+     * Get Network interface configuration for instance creation, including VPCs, subnets, and IP address allocation for primary and secondary network interfaces. This feature is in beta test in selected regions. To use this feature, [submit a ticket](https://console.tencentcloud.com/workorder/category). 
+     * @return NetworkInterfaces Network interface configuration for instance creation, including VPCs, subnets, and IP address allocation for primary and secondary network interfaces. This feature is in beta test in selected regions. To use this feature, [submit a ticket](https://console.tencentcloud.com/workorder/category).
+     */
+    public NetworkInterfaces [] getNetworkInterfaces() {
+        return this.NetworkInterfaces;
+    }
+
+    /**
+     * Set Network interface configuration for instance creation, including VPCs, subnets, and IP address allocation for primary and secondary network interfaces. This feature is in beta test in selected regions. To use this feature, [submit a ticket](https://console.tencentcloud.com/workorder/category).
+     * @param NetworkInterfaces Network interface configuration for instance creation, including VPCs, subnets, and IP address allocation for primary and secondary network interfaces. This feature is in beta test in selected regions. To use this feature, [submit a ticket](https://console.tencentcloud.com/workorder/category).
+     */
+    public void setNetworkInterfaces(NetworkInterfaces [] NetworkInterfaces) {
+        this.NetworkInterfaces = NetworkInterfaces;
+    }
+
     public CreateLaunchTemplateVersionRequest() {
     }
 
@@ -929,6 +952,12 @@ Note: this field is in beta test.
         if (source.TemplateDataModifyAction != null) {
             this.TemplateDataModifyAction = new String(source.TemplateDataModifyAction);
         }
+        if (source.NetworkInterfaces != null) {
+            this.NetworkInterfaces = new NetworkInterfaces[source.NetworkInterfaces.length];
+            for (int i = 0; i < source.NetworkInterfaces.length; i++) {
+                this.NetworkInterfaces[i] = new NetworkInterfaces(source.NetworkInterfaces[i]);
+            }
+        }
     }
 
 
@@ -967,6 +996,7 @@ Note: this field is in beta test.
         this.setParamSimple(map, prefix + "EnableJumboFrame", this.EnableJumboFrame);
         this.setParamObj(map, prefix + "Metadata.", this.Metadata);
         this.setParamSimple(map, prefix + "TemplateDataModifyAction", this.TemplateDataModifyAction);
+        this.setParamArrayObj(map, prefix + "NetworkInterfaces.", this.NetworkInterfaces);
 
     }
 }

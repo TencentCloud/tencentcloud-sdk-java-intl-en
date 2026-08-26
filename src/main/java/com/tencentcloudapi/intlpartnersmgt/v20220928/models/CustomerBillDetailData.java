@@ -54,7 +54,7 @@ public class CustomerBillDetailData extends AbstractModel {
     /**
     * Billing mode
 .
-Monthly subscription.
+yearly/monthly subscription.
 Pay-As-You-Go resources.
 Standard ri reserved instances.
     */
@@ -237,6 +237,34 @@ Original cost = component list price * component usage * usage duration.
     private TagInfo [] Tags;
 
     /**
+    * Product code
+    */
+    @SerializedName("BusinessCode")
+    @Expose
+    private String BusinessCode;
+
+    /**
+    * Subproduct code
+    */
+    @SerializedName("ProductCode")
+    @Expose
+    private String ProductCode;
+
+    /**
+    * Component type code
+    */
+    @SerializedName("ComponentCode")
+    @Expose
+    private String ComponentCode;
+
+    /**
+    * Component code
+    */
+    @SerializedName("ItemCode")
+    @Expose
+    private String ItemCode;
+
+    /**
      * Get Distributor account. 
      * @return PayerAccountId Distributor account.
      */
@@ -303,12 +331,12 @@ Original cost = component list price * component usage * usage duration.
     /**
      * Get Billing mode
 .
-Monthly subscription.
+yearly/monthly subscription.
 Pay-As-You-Go resources.
 Standard ri reserved instances. 
      * @return BillingMode Billing mode
 .
-Monthly subscription.
+yearly/monthly subscription.
 Pay-As-You-Go resources.
 Standard ri reserved instances.
      */
@@ -319,12 +347,12 @@ Standard ri reserved instances.
     /**
      * Set Billing mode
 .
-Monthly subscription.
+yearly/monthly subscription.
 Pay-As-You-Go resources.
 Standard ri reserved instances.
      * @param BillingMode Billing mode
 .
-Monthly subscription.
+yearly/monthly subscription.
 Pay-As-You-Go resources.
 Standard ri reserved instances.
      */
@@ -740,6 +768,70 @@ Original cost = component list price * component usage * usage duration.
         this.Tags = Tags;
     }
 
+    /**
+     * Get Product code 
+     * @return BusinessCode Product code
+     */
+    public String getBusinessCode() {
+        return this.BusinessCode;
+    }
+
+    /**
+     * Set Product code
+     * @param BusinessCode Product code
+     */
+    public void setBusinessCode(String BusinessCode) {
+        this.BusinessCode = BusinessCode;
+    }
+
+    /**
+     * Get Subproduct code 
+     * @return ProductCode Subproduct code
+     */
+    public String getProductCode() {
+        return this.ProductCode;
+    }
+
+    /**
+     * Set Subproduct code
+     * @param ProductCode Subproduct code
+     */
+    public void setProductCode(String ProductCode) {
+        this.ProductCode = ProductCode;
+    }
+
+    /**
+     * Get Component type code 
+     * @return ComponentCode Component type code
+     */
+    public String getComponentCode() {
+        return this.ComponentCode;
+    }
+
+    /**
+     * Set Component type code
+     * @param ComponentCode Component type code
+     */
+    public void setComponentCode(String ComponentCode) {
+        this.ComponentCode = ComponentCode;
+    }
+
+    /**
+     * Get Component code 
+     * @return ItemCode Component code
+     */
+    public String getItemCode() {
+        return this.ItemCode;
+    }
+
+    /**
+     * Set Component code
+     * @param ItemCode Component code
+     */
+    public void setItemCode(String ItemCode) {
+        this.ItemCode = ItemCode;
+    }
+
     public CustomerBillDetailData() {
     }
 
@@ -838,6 +930,18 @@ Original cost = component list price * component usage * usage duration.
                 this.Tags[i] = new TagInfo(source.Tags[i]);
             }
         }
+        if (source.BusinessCode != null) {
+            this.BusinessCode = new String(source.BusinessCode);
+        }
+        if (source.ProductCode != null) {
+            this.ProductCode = new String(source.ProductCode);
+        }
+        if (source.ComponentCode != null) {
+            this.ComponentCode = new String(source.ComponentCode);
+        }
+        if (source.ItemCode != null) {
+            this.ItemCode = new String(source.ItemCode);
+        }
     }
 
 
@@ -874,6 +978,10 @@ Original cost = component list price * component usage * usage duration.
         this.setParamSimple(map, prefix + "TotalCost", this.TotalCost);
         this.setParamSimple(map, prefix + "Id", this.Id);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "BusinessCode", this.BusinessCode);
+        this.setParamSimple(map, prefix + "ProductCode", this.ProductCode);
+        this.setParamSimple(map, prefix + "ComponentCode", this.ComponentCode);
+        this.setParamSimple(map, prefix + "ItemCode", this.ItemCode);
 
     }
 }

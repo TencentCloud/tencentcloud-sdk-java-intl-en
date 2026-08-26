@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeBillDetailResponse extends AbstractModel {
 
     /**
-    * Data details.
+    * <p>Data details</p>
     */
     @SerializedName("DetailSet")
     @Expose
     private CustomerBillDetailData [] DetailSet;
 
     /**
-    * Total number of entries.
+    * <p>Total quantity.</p>
     */
     @SerializedName("Total")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeBillDetailResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Data details. 
-     * @return DetailSet Data details.
+     * Get <p>Data details</p> 
+     * @return DetailSet <p>Data details</p>
      */
     public CustomerBillDetailData [] getDetailSet() {
         return this.DetailSet;
     }
 
     /**
-     * Set Data details.
-     * @param DetailSet Data details.
+     * Set <p>Data details</p>
+     * @param DetailSet <p>Data details</p>
      */
     public void setDetailSet(CustomerBillDetailData [] DetailSet) {
         this.DetailSet = DetailSet;
     }
 
     /**
-     * Get Total number of entries. 
-     * @return Total Total number of entries.
+     * Get <p>Total quantity.</p> 
+     * @return Total <p>Total quantity.</p>
      */
     public Long getTotal() {
         return this.Total;
     }
 
     /**
-     * Set Total number of entries.
-     * @param Total Total number of entries.
+     * Set <p>Total quantity.</p>
+     * @param Total <p>Total quantity.</p>
      */
     public void setTotal(Long Total) {
         this.Total = Total;
