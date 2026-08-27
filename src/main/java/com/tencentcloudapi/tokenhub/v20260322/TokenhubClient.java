@@ -282,6 +282,29 @@ Supports pagination, filtering, and sorting. Root accounts can view all packages
     }
 
     /**
+     *Query the usage ranking list.
+
+Metric family (MetricType)
+- `tokens` (default): Token usage statistics. Supports Dimension = apikey / endpoint / model.
+Metrics returned: TotalToken (total) / InputTotalToken (input) / OutputTotalToken (output) / CacheTotalToken (read cache).
+- `search`: [To be launched] Online search usage statistics. Supports Dimension = apikey / endpoint / model.
+Returns metrics: SearchRequestCount (search request count)/SearchCount (search engine call count).
+
+content
+-The MetricType field is used to switch metric families. The response echoes back MetricType and MetricKeys.
+-TotalStats: The aggregated value of all objects over the entire time window.
+-PageStats: The aggregated value of objects on the current page.
+- TopList: A list of objects sorted by MetricKeys[0] in descending order, including the aggregated value over the entire period and point-in-time curves.
+     * @param req DescribeUsageRankListRequest
+     * @return DescribeUsageRankListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeUsageRankListResponse DescribeUsageRankList(DescribeUsageRankListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeUsageRankList", DescribeUsageRankListResponse.class);
+    }
+
+    /**
      *Refresh API key information.
 
 This API is used to update the remark information, IP allowlist and Token quota of an API key (recommended to use QuotaDesired parameter for quota modification). Passing no optional parameters means no modification.

@@ -1,10 +1,22 @@
 package com.tencentcloudapi.tokenhub.v20260322;
 public enum TokenhubErrorCode {
+     /* InternalError.BaradError */
+     INTERNALERROR_BARADERROR("InternalError.BaradError"),
+     
      /* InternalError.InternalError */
      INTERNALERROR_INTERNALERROR("InternalError.InternalError"),
      
      /* InvalidParameter.InvalidParameter */
      INVALIDPARAMETER_INVALIDPARAMETER("InvalidParameter.InvalidParameter"),
+     
+     /* InvalidParameter.PeriodExceedsSpan */
+     INVALIDPARAMETER_PERIODEXCEEDSSPAN("InvalidParameter.PeriodExceedsSpan"),
+     
+     /* InvalidParameter.PeriodTooFineForData */
+     INVALIDPARAMETER_PERIODTOOFINEFORDATA("InvalidParameter.PeriodTooFineForData"),
+     
+     /* InvalidParameter.TooManyObjects */
+     INVALIDPARAMETER_TOOMANYOBJECTS("InvalidParameter.TooManyObjects"),
      
      /* InvalidParameterValue.InvalidParameterValue */
      INVALIDPARAMETERVALUE_INVALIDPARAMETERVALUE("InvalidParameterValue.InvalidParameterValue"),
