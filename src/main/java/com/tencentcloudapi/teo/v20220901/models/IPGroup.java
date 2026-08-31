@@ -24,138 +24,141 @@ import java.util.HashMap;
 public class IPGroup extends AbstractModel {
 
     /**
-    * Group ID. Enter `0`.
+    * <p>IP group Id. Enter 0 when created.</p>
     */
     @SerializedName("GroupId")
     @Expose
     private Long GroupId;
 
     /**
-    * Group name.
+    * <p>IP group name.</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * IP group content, supports ip and ip range.
+    * <p>IP group content supports only IP and IP range.</p>
     */
     @SerializedName("Content")
     @Expose
     private String [] Content;
 
     /**
-    * Number of ips or ranges in effect in the IP group. valid as an output parameter, no need to specify this field as an input parameter.
+    * <p>Number of IPs or IP ranges that are effective in the IP group. Valid as an output parameter. Not required as an input parameter.</p>
     */
     @SerializedName("IPTotalCount")
     @Expose
     private Long IPTotalCount;
 
     /**
-    * Specifies the scheduled expiration information of the IP.
-Specifies the IP address or IP range configuration with scheduled expiration time as an input parameter.
-As an output parameter, contains the following two categories of information.
-<Li>Currently not expired scheduled expiration information: expiration configuration not triggered.</li>.
-<Li>Scheduled expiration information expired within a week: cache expiration configuration has been triggered.</li>.
+    * <p>Scheduled expiration information for IP.<br>As an input parameter, it is used to specify a scheduled expiration time for a given IP address or IP range.<br>As an output parameter, it contains the following two categories of information:</p><li>Current scheduled expiration information that has not expired: expiration configuration not triggered.</li><li>Scheduled expiration information that has expired within a week: expiration configuration that has been triggered.</li>
     */
     @SerializedName("IPExpireInfo")
     @Expose
     private IPExpireInfo [] IPExpireInfo;
 
     /**
-     * Get Group ID. Enter `0`. 
-     * @return GroupId Group ID. Enter `0`.
+    * <p>The number of IP groups referenced.</p>
+    */
+    @SerializedName("RefCount")
+    @Expose
+    private Long RefCount;
+
+    /**
+     * Get <p>IP group Id. Enter 0 when created.</p> 
+     * @return GroupId <p>IP group Id. Enter 0 when created.</p>
      */
     public Long getGroupId() {
         return this.GroupId;
     }
 
     /**
-     * Set Group ID. Enter `0`.
-     * @param GroupId Group ID. Enter `0`.
+     * Set <p>IP group Id. Enter 0 when created.</p>
+     * @param GroupId <p>IP group Id. Enter 0 when created.</p>
      */
     public void setGroupId(Long GroupId) {
         this.GroupId = GroupId;
     }
 
     /**
-     * Get Group name. 
-     * @return Name Group name.
+     * Get <p>IP group name.</p> 
+     * @return Name <p>IP group name.</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Group name.
-     * @param Name Group name.
+     * Set <p>IP group name.</p>
+     * @param Name <p>IP group name.</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get IP group content, supports ip and ip range. 
-     * @return Content IP group content, supports ip and ip range.
+     * Get <p>IP group content supports only IP and IP range.</p> 
+     * @return Content <p>IP group content supports only IP and IP range.</p>
      */
     public String [] getContent() {
         return this.Content;
     }
 
     /**
-     * Set IP group content, supports ip and ip range.
-     * @param Content IP group content, supports ip and ip range.
+     * Set <p>IP group content supports only IP and IP range.</p>
+     * @param Content <p>IP group content supports only IP and IP range.</p>
      */
     public void setContent(String [] Content) {
         this.Content = Content;
     }
 
     /**
-     * Get Number of ips or ranges in effect in the IP group. valid as an output parameter, no need to specify this field as an input parameter. 
-     * @return IPTotalCount Number of ips or ranges in effect in the IP group. valid as an output parameter, no need to specify this field as an input parameter.
+     * Get <p>Number of IPs or IP ranges that are effective in the IP group. Valid as an output parameter. Not required as an input parameter.</p> 
+     * @return IPTotalCount <p>Number of IPs or IP ranges that are effective in the IP group. Valid as an output parameter. Not required as an input parameter.</p>
      */
     public Long getIPTotalCount() {
         return this.IPTotalCount;
     }
 
     /**
-     * Set Number of ips or ranges in effect in the IP group. valid as an output parameter, no need to specify this field as an input parameter.
-     * @param IPTotalCount Number of ips or ranges in effect in the IP group. valid as an output parameter, no need to specify this field as an input parameter.
+     * Set <p>Number of IPs or IP ranges that are effective in the IP group. Valid as an output parameter. Not required as an input parameter.</p>
+     * @param IPTotalCount <p>Number of IPs or IP ranges that are effective in the IP group. Valid as an output parameter. Not required as an input parameter.</p>
      */
     public void setIPTotalCount(Long IPTotalCount) {
         this.IPTotalCount = IPTotalCount;
     }
 
     /**
-     * Get Specifies the scheduled expiration information of the IP.
-Specifies the IP address or IP range configuration with scheduled expiration time as an input parameter.
-As an output parameter, contains the following two categories of information.
-<Li>Currently not expired scheduled expiration information: expiration configuration not triggered.</li>.
-<Li>Scheduled expiration information expired within a week: cache expiration configuration has been triggered.</li>. 
-     * @return IPExpireInfo Specifies the scheduled expiration information of the IP.
-Specifies the IP address or IP range configuration with scheduled expiration time as an input parameter.
-As an output parameter, contains the following two categories of information.
-<Li>Currently not expired scheduled expiration information: expiration configuration not triggered.</li>.
-<Li>Scheduled expiration information expired within a week: cache expiration configuration has been triggered.</li>.
+     * Get <p>Scheduled expiration information for IP.<br>As an input parameter, it is used to specify a scheduled expiration time for a given IP address or IP range.<br>As an output parameter, it contains the following two categories of information:</p><li>Current scheduled expiration information that has not expired: expiration configuration not triggered.</li><li>Scheduled expiration information that has expired within a week: expiration configuration that has been triggered.</li> 
+     * @return IPExpireInfo <p>Scheduled expiration information for IP.<br>As an input parameter, it is used to specify a scheduled expiration time for a given IP address or IP range.<br>As an output parameter, it contains the following two categories of information:</p><li>Current scheduled expiration information that has not expired: expiration configuration not triggered.</li><li>Scheduled expiration information that has expired within a week: expiration configuration that has been triggered.</li>
      */
     public IPExpireInfo [] getIPExpireInfo() {
         return this.IPExpireInfo;
     }
 
     /**
-     * Set Specifies the scheduled expiration information of the IP.
-Specifies the IP address or IP range configuration with scheduled expiration time as an input parameter.
-As an output parameter, contains the following two categories of information.
-<Li>Currently not expired scheduled expiration information: expiration configuration not triggered.</li>.
-<Li>Scheduled expiration information expired within a week: cache expiration configuration has been triggered.</li>.
-     * @param IPExpireInfo Specifies the scheduled expiration information of the IP.
-Specifies the IP address or IP range configuration with scheduled expiration time as an input parameter.
-As an output parameter, contains the following two categories of information.
-<Li>Currently not expired scheduled expiration information: expiration configuration not triggered.</li>.
-<Li>Scheduled expiration information expired within a week: cache expiration configuration has been triggered.</li>.
+     * Set <p>Scheduled expiration information for IP.<br>As an input parameter, it is used to specify a scheduled expiration time for a given IP address or IP range.<br>As an output parameter, it contains the following two categories of information:</p><li>Current scheduled expiration information that has not expired: expiration configuration not triggered.</li><li>Scheduled expiration information that has expired within a week: expiration configuration that has been triggered.</li>
+     * @param IPExpireInfo <p>Scheduled expiration information for IP.<br>As an input parameter, it is used to specify a scheduled expiration time for a given IP address or IP range.<br>As an output parameter, it contains the following two categories of information:</p><li>Current scheduled expiration information that has not expired: expiration configuration not triggered.</li><li>Scheduled expiration information that has expired within a week: expiration configuration that has been triggered.</li>
      */
     public void setIPExpireInfo(IPExpireInfo [] IPExpireInfo) {
         this.IPExpireInfo = IPExpireInfo;
+    }
+
+    /**
+     * Get <p>The number of IP groups referenced.</p> 
+     * @return RefCount <p>The number of IP groups referenced.</p>
+     */
+    public Long getRefCount() {
+        return this.RefCount;
+    }
+
+    /**
+     * Set <p>The number of IP groups referenced.</p>
+     * @param RefCount <p>The number of IP groups referenced.</p>
+     */
+    public void setRefCount(Long RefCount) {
+        this.RefCount = RefCount;
     }
 
     public IPGroup() {
@@ -187,6 +190,9 @@ As an output parameter, contains the following two categories of information.
                 this.IPExpireInfo[i] = new IPExpireInfo(source.IPExpireInfo[i]);
             }
         }
+        if (source.RefCount != null) {
+            this.RefCount = new Long(source.RefCount);
+        }
     }
 
 
@@ -199,6 +205,7 @@ As an output parameter, contains the following two categories of information.
         this.setParamArraySimple(map, prefix + "Content.", this.Content);
         this.setParamSimple(map, prefix + "IPTotalCount", this.IPTotalCount);
         this.setParamArrayObj(map, prefix + "IPExpireInfo.", this.IPExpireInfo);
+        this.setParamSimple(map, prefix + "RefCount", this.RefCount);
 
     }
 }

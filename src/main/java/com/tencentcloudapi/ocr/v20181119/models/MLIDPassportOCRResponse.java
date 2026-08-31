@@ -24,49 +24,49 @@ import java.util.HashMap;
 public class MLIDPassportOCRResponse extends AbstractModel {
 
     /**
-    * Passport ID
+    * Parsed passport ID extracted from the MRZ (Machine-Readable Zone) of passport
     */
     @SerializedName("ID")
     @Expose
     private String ID;
 
     /**
-    * Name
+    * Parsed full name extracted from the MRZ (Machine-Readable Zone) of passport
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * Date of birth
+    * Parsed date of birth extracted from the MRZ (Machine-Readable Zone) of passport
     */
     @SerializedName("DateOfBirth")
     @Expose
     private String DateOfBirth;
 
     /**
-    * Gender (F: female, M: male)
+    * Parsed gender extracted from the MRZ (Machine-Readable Zone) of passport
     */
     @SerializedName("Sex")
     @Expose
     private String Sex;
 
     /**
-    * Expiration date
+    * Parsed expiry date extracted from the MRZ (Machine-Readable Zone) of passport
     */
     @SerializedName("DateOfExpiration")
     @Expose
     private String DateOfExpiration;
 
     /**
-    * Issuing country
+    * Parsed issuing country extracted from the MRZ (Machine-Readable Zone) of passport
     */
     @SerializedName("IssuingCountry")
     @Expose
     private String IssuingCountry;
 
     /**
-    * Nationality code (MRZ field)
+    * Parsed country-region code extracted from the MRZ (Machine-Readable Zone) of passport
     */
     @SerializedName("Nationality")
     @Expose
@@ -94,37 +94,35 @@ public class MLIDPassportOCRResponse extends AbstractModel {
     private String AdvancedInfo;
 
     /**
-    * The first row of the machine-readable zone (MRZ) at the bottom
+    * Parsed MRZ line 1 raw sequence extracted from the MRZ (Machine-Readable Zone) of passport
     */
     @SerializedName("CodeSet")
     @Expose
     private String CodeSet;
 
     /**
-    * The second row of the MRZ at the bottom
+    * Parsed MRZ line 2 raw sequence extracted from the MRZ (Machine-Readable Zone) of passport
     */
     @SerializedName("CodeCrc")
     @Expose
     private String CodeCrc;
 
     /**
-    * The surname.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Parsed surname extracted from the MRZ (Machine-Readable Zone) of passport
     */
     @SerializedName("Surname")
     @Expose
     private String Surname;
 
     /**
-    * The given name.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Parsed given name extracted from the MRZ (Machine-Readable Zone) of passport
     */
     @SerializedName("GivenName")
     @Expose
     private String GivenName;
 
     /**
-    * Type (in Machine Readable Zone)
+    * Parsed document type extracted from the MRZ (Machine-Readable Zone) of passport
     */
     @SerializedName("Type")
     @Expose
@@ -143,7 +141,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 -9101 Alarm for covered certificate
 -9102 Alarm for photocopied certificate
 -9103 Alarm for photographed certificate
--9104 Alarm for tamper certificate
+-9104 Alarm for PS certificate
 -9107 Alarm for reflective certificate
 -9108 Alarm for blurry certificate 
 -9109 This capability is not enabled. Please contact customer support to activate the alert service.
@@ -174,112 +172,112 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Passport ID 
-     * @return ID Passport ID
+     * Get Parsed passport ID extracted from the MRZ (Machine-Readable Zone) of passport 
+     * @return ID Parsed passport ID extracted from the MRZ (Machine-Readable Zone) of passport
      */
     public String getID() {
         return this.ID;
     }
 
     /**
-     * Set Passport ID
-     * @param ID Passport ID
+     * Set Parsed passport ID extracted from the MRZ (Machine-Readable Zone) of passport
+     * @param ID Parsed passport ID extracted from the MRZ (Machine-Readable Zone) of passport
      */
     public void setID(String ID) {
         this.ID = ID;
     }
 
     /**
-     * Get Name 
-     * @return Name Name
+     * Get Parsed full name extracted from the MRZ (Machine-Readable Zone) of passport 
+     * @return Name Parsed full name extracted from the MRZ (Machine-Readable Zone) of passport
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Name
-     * @param Name Name
+     * Set Parsed full name extracted from the MRZ (Machine-Readable Zone) of passport
+     * @param Name Parsed full name extracted from the MRZ (Machine-Readable Zone) of passport
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get Date of birth 
-     * @return DateOfBirth Date of birth
+     * Get Parsed date of birth extracted from the MRZ (Machine-Readable Zone) of passport 
+     * @return DateOfBirth Parsed date of birth extracted from the MRZ (Machine-Readable Zone) of passport
      */
     public String getDateOfBirth() {
         return this.DateOfBirth;
     }
 
     /**
-     * Set Date of birth
-     * @param DateOfBirth Date of birth
+     * Set Parsed date of birth extracted from the MRZ (Machine-Readable Zone) of passport
+     * @param DateOfBirth Parsed date of birth extracted from the MRZ (Machine-Readable Zone) of passport
      */
     public void setDateOfBirth(String DateOfBirth) {
         this.DateOfBirth = DateOfBirth;
     }
 
     /**
-     * Get Gender (F: female, M: male) 
-     * @return Sex Gender (F: female, M: male)
+     * Get Parsed gender extracted from the MRZ (Machine-Readable Zone) of passport 
+     * @return Sex Parsed gender extracted from the MRZ (Machine-Readable Zone) of passport
      */
     public String getSex() {
         return this.Sex;
     }
 
     /**
-     * Set Gender (F: female, M: male)
-     * @param Sex Gender (F: female, M: male)
+     * Set Parsed gender extracted from the MRZ (Machine-Readable Zone) of passport
+     * @param Sex Parsed gender extracted from the MRZ (Machine-Readable Zone) of passport
      */
     public void setSex(String Sex) {
         this.Sex = Sex;
     }
 
     /**
-     * Get Expiration date 
-     * @return DateOfExpiration Expiration date
+     * Get Parsed expiry date extracted from the MRZ (Machine-Readable Zone) of passport 
+     * @return DateOfExpiration Parsed expiry date extracted from the MRZ (Machine-Readable Zone) of passport
      */
     public String getDateOfExpiration() {
         return this.DateOfExpiration;
     }
 
     /**
-     * Set Expiration date
-     * @param DateOfExpiration Expiration date
+     * Set Parsed expiry date extracted from the MRZ (Machine-Readable Zone) of passport
+     * @param DateOfExpiration Parsed expiry date extracted from the MRZ (Machine-Readable Zone) of passport
      */
     public void setDateOfExpiration(String DateOfExpiration) {
         this.DateOfExpiration = DateOfExpiration;
     }
 
     /**
-     * Get Issuing country 
-     * @return IssuingCountry Issuing country
+     * Get Parsed issuing country extracted from the MRZ (Machine-Readable Zone) of passport 
+     * @return IssuingCountry Parsed issuing country extracted from the MRZ (Machine-Readable Zone) of passport
      */
     public String getIssuingCountry() {
         return this.IssuingCountry;
     }
 
     /**
-     * Set Issuing country
-     * @param IssuingCountry Issuing country
+     * Set Parsed issuing country extracted from the MRZ (Machine-Readable Zone) of passport
+     * @param IssuingCountry Parsed issuing country extracted from the MRZ (Machine-Readable Zone) of passport
      */
     public void setIssuingCountry(String IssuingCountry) {
         this.IssuingCountry = IssuingCountry;
     }
 
     /**
-     * Get Nationality code (MRZ field) 
-     * @return Nationality Nationality code (MRZ field)
+     * Get Parsed country-region code extracted from the MRZ (Machine-Readable Zone) of passport 
+     * @return Nationality Parsed country-region code extracted from the MRZ (Machine-Readable Zone) of passport
      */
     public String getNationality() {
         return this.Nationality;
     }
 
     /**
-     * Set Nationality code (MRZ field)
-     * @param Nationality Nationality code (MRZ field)
+     * Set Parsed country-region code extracted from the MRZ (Machine-Readable Zone) of passport
+     * @param Nationality Parsed country-region code extracted from the MRZ (Machine-Readable Zone) of passport
      */
     public void setNationality(String Nationality) {
         this.Nationality = Nationality;
@@ -342,88 +340,80 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get The first row of the machine-readable zone (MRZ) at the bottom 
-     * @return CodeSet The first row of the machine-readable zone (MRZ) at the bottom
+     * Get Parsed MRZ line 1 raw sequence extracted from the MRZ (Machine-Readable Zone) of passport 
+     * @return CodeSet Parsed MRZ line 1 raw sequence extracted from the MRZ (Machine-Readable Zone) of passport
      */
     public String getCodeSet() {
         return this.CodeSet;
     }
 
     /**
-     * Set The first row of the machine-readable zone (MRZ) at the bottom
-     * @param CodeSet The first row of the machine-readable zone (MRZ) at the bottom
+     * Set Parsed MRZ line 1 raw sequence extracted from the MRZ (Machine-Readable Zone) of passport
+     * @param CodeSet Parsed MRZ line 1 raw sequence extracted from the MRZ (Machine-Readable Zone) of passport
      */
     public void setCodeSet(String CodeSet) {
         this.CodeSet = CodeSet;
     }
 
     /**
-     * Get The second row of the MRZ at the bottom 
-     * @return CodeCrc The second row of the MRZ at the bottom
+     * Get Parsed MRZ line 2 raw sequence extracted from the MRZ (Machine-Readable Zone) of passport 
+     * @return CodeCrc Parsed MRZ line 2 raw sequence extracted from the MRZ (Machine-Readable Zone) of passport
      */
     public String getCodeCrc() {
         return this.CodeCrc;
     }
 
     /**
-     * Set The second row of the MRZ at the bottom
-     * @param CodeCrc The second row of the MRZ at the bottom
+     * Set Parsed MRZ line 2 raw sequence extracted from the MRZ (Machine-Readable Zone) of passport
+     * @param CodeCrc Parsed MRZ line 2 raw sequence extracted from the MRZ (Machine-Readable Zone) of passport
      */
     public void setCodeCrc(String CodeCrc) {
         this.CodeCrc = CodeCrc;
     }
 
     /**
-     * Get The surname.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Surname The surname.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Parsed surname extracted from the MRZ (Machine-Readable Zone) of passport 
+     * @return Surname Parsed surname extracted from the MRZ (Machine-Readable Zone) of passport
      */
     public String getSurname() {
         return this.Surname;
     }
 
     /**
-     * Set The surname.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Surname The surname.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Parsed surname extracted from the MRZ (Machine-Readable Zone) of passport
+     * @param Surname Parsed surname extracted from the MRZ (Machine-Readable Zone) of passport
      */
     public void setSurname(String Surname) {
         this.Surname = Surname;
     }
 
     /**
-     * Get The given name.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return GivenName The given name.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Parsed given name extracted from the MRZ (Machine-Readable Zone) of passport 
+     * @return GivenName Parsed given name extracted from the MRZ (Machine-Readable Zone) of passport
      */
     public String getGivenName() {
         return this.GivenName;
     }
 
     /**
-     * Set The given name.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param GivenName The given name.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Parsed given name extracted from the MRZ (Machine-Readable Zone) of passport
+     * @param GivenName Parsed given name extracted from the MRZ (Machine-Readable Zone) of passport
      */
     public void setGivenName(String GivenName) {
         this.GivenName = GivenName;
     }
 
     /**
-     * Get Type (in Machine Readable Zone) 
-     * @return Type Type (in Machine Readable Zone)
+     * Get Parsed document type extracted from the MRZ (Machine-Readable Zone) of passport 
+     * @return Type Parsed document type extracted from the MRZ (Machine-Readable Zone) of passport
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set Type (in Machine Readable Zone)
-     * @param Type Type (in Machine Readable Zone)
+     * Set Parsed document type extracted from the MRZ (Machine-Readable Zone) of passport
+     * @param Type Parsed document type extracted from the MRZ (Machine-Readable Zone) of passport
      */
     public void setType(String Type) {
         this.Type = Type;
@@ -451,7 +441,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 -9101 Alarm for covered certificate
 -9102 Alarm for photocopied certificate
 -9103 Alarm for photographed certificate
--9104 Alarm for tamper certificate
+-9104 Alarm for PS certificate
 -9107 Alarm for reflective certificate
 -9108 Alarm for blurry certificate 
 -9109 This capability is not enabled. Please contact customer support to activate the alert service. 
@@ -460,7 +450,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 -9101 Alarm for covered certificate
 -9102 Alarm for photocopied certificate
 -9103 Alarm for photographed certificate
--9104 Alarm for tamper certificate
+-9104 Alarm for PS certificate
 -9107 Alarm for reflective certificate
 -9108 Alarm for blurry certificate 
 -9109 This capability is not enabled. Please contact customer support to activate the alert service.
@@ -475,7 +465,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 -9101 Alarm for covered certificate
 -9102 Alarm for photocopied certificate
 -9103 Alarm for photographed certificate
--9104 Alarm for tamper certificate
+-9104 Alarm for PS certificate
 -9107 Alarm for reflective certificate
 -9108 Alarm for blurry certificate 
 -9109 This capability is not enabled. Please contact customer support to activate the alert service.
@@ -484,7 +474,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 -9101 Alarm for covered certificate
 -9102 Alarm for photocopied certificate
 -9103 Alarm for photographed certificate
--9104 Alarm for tamper certificate
+-9104 Alarm for PS certificate
 -9107 Alarm for reflective certificate
 -9108 Alarm for blurry certificate 
 -9109 This capability is not enabled. Please contact customer support to activate the alert service.

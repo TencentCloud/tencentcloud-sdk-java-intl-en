@@ -51,6 +51,17 @@ This API is applicable only to public network instances with `RouteMode=static`.
     }
 
     /**
+     *Enable the billing service for edge nodes.
+     * @param req CreateEdgeNodeServiceRequest
+     * @return CreateEdgeNodeServiceResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateEdgeNodeServiceResponse CreateEdgeNodeService(CreateEdgeNodeServiceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateEdgeNodeService", CreateEdgeNodeServiceResponse.class);
+    }
+
+    /**
      *This API is used to create a physical machine instance. The system automatically allocates physical machine resources and completes installation. If the user is not in the current availability zone, the system automatically enables billing. It supports concurrent allocation of physical machine resources and async execution of network assignment and installation tasks.
      * @param req CreateInstancesRequest
      * @return CreateInstancesResponse

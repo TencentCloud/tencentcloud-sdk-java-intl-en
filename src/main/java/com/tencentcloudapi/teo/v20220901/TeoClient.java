@@ -1207,6 +1207,17 @@ The feature is only supported in the enterprise plan and is currently in closed 
     }
 
     /**
+     *This API is used to query policy configurations that reference a specified IP group.
+     * @param req DescribeIPGroupReferencesRequest
+     * @return DescribeIPGroupReferencesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeIPGroupReferencesResponse DescribeIPGroupReferences(DescribeIPGroupReferencesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeIPGroupReferences", DescribeIPGroupReferencesResponse.class);
+    }
+
+    /**
      *This API is used to check if the IP is an EdgeOne IP.
      * @param req DescribeIPRegionRequest
      * @return DescribeIPRegionResponse
