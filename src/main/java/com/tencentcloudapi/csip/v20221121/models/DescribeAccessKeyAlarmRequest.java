@@ -38,14 +38,14 @@ public class DescribeAccessKeyAlarmRequest extends AbstractModel {
     private String [] MemberId;
 
     /**
-    * Access key ID.
+    * Access key ID
     */
     @SerializedName("AccessKeyID")
     @Expose
     private Long AccessKeyID;
 
     /**
-    * ID of the source IP.
+    * ID of the source IP
     */
     @SerializedName("SourceIPID")
     @Expose
@@ -91,32 +91,32 @@ public class DescribeAccessKeyAlarmRequest extends AbstractModel {
     }
 
     /**
-     * Get Access key ID. 
-     * @return AccessKeyID Access key ID.
+     * Get Access key ID 
+     * @return AccessKeyID Access key ID
      */
     public Long getAccessKeyID() {
         return this.AccessKeyID;
     }
 
     /**
-     * Set Access key ID.
-     * @param AccessKeyID Access key ID.
+     * Set Access key ID
+     * @param AccessKeyID Access key ID
      */
     public void setAccessKeyID(Long AccessKeyID) {
         this.AccessKeyID = AccessKeyID;
     }
 
     /**
-     * Get ID of the source IP. 
-     * @return SourceIPID ID of the source IP.
+     * Get ID of the source IP 
+     * @return SourceIPID ID of the source IP
      */
     public Long getSourceIPID() {
         return this.SourceIPID;
     }
 
     /**
-     * Set ID of the source IP.
-     * @param SourceIPID ID of the source IP.
+     * Set ID of the source IP
+     * @param SourceIPID ID of the source IP
      */
     public void setSourceIPID(Long SourceIPID) {
         this.SourceIPID = SourceIPID;

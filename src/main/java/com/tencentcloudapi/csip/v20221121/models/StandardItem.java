@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class StandardItem extends AbstractModel {
 
     /**
-    * Specification ID
+    * Regulation ID
     */
     @SerializedName("ID")
     @Expose
     private Long ID;
 
     /**
-    * Standard name
+    * Specification name
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-     * Get Specification ID 
-     * @return ID Specification ID
+     * Get Regulation ID 
+     * @return ID Regulation ID
      */
     public Long getID() {
         return this.ID;
     }
 
     /**
-     * Set Specification ID
-     * @param ID Specification ID
+     * Set Regulation ID
+     * @param ID Regulation ID
      */
     public void setID(Long ID) {
         this.ID = ID;
     }
 
     /**
-     * Get Standard name 
-     * @return Name Standard name
+     * Get Specification name 
+     * @return Name Specification name
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Standard name
-     * @param Name Standard name
+     * Set Specification name
+     * @param Name Specification name
      */
     public void setName(String Name) {
         this.Name = Name;

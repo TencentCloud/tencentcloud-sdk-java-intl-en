@@ -31,14 +31,14 @@ public class DescribeRiskCenterAssetViewWeakPasswordRiskListRequest extends Abst
     private String [] MemberId;
 
     /**
-    * Filter conditions
+    * Filtered Content
     */
     @SerializedName("Filter")
     @Expose
     private Filter Filter;
 
     /**
-    * Asset tags
+    * Asset tag
     */
     @SerializedName("Tags")
     @Expose
@@ -61,32 +61,32 @@ public class DescribeRiskCenterAssetViewWeakPasswordRiskListRequest extends Abst
     }
 
     /**
-     * Get Filter conditions 
-     * @return Filter Filter conditions
+     * Get Filtered Content 
+     * @return Filter Filtered Content
      */
     public Filter getFilter() {
         return this.Filter;
     }
 
     /**
-     * Set Filter conditions
-     * @param Filter Filter conditions
+     * Set Filtered Content
+     * @param Filter Filtered Content
      */
     public void setFilter(Filter Filter) {
         this.Filter = Filter;
     }
 
     /**
-     * Get Asset tags 
-     * @return Tags Asset tags
+     * Get Asset tag 
+     * @return Tags Asset tag
      */
     public AssetTag [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set Asset tags
-     * @param Tags Asset tags
+     * Set Asset tag
+     * @param Tags Asset tag
      */
     public void setTags(AssetTag [] Tags) {
         this.Tags = Tags;

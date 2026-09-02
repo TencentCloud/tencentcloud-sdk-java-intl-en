@@ -31,7 +31,7 @@ public class ScanTaskInfoList extends AbstractModel {
     private String TaskName;
 
     /**
-    * start time of the task
+    * Task start time
     */
     @SerializedName("StartTime")
     @Expose
@@ -199,7 +199,7 @@ public class ScanTaskInfoList extends AbstractModel {
     private Long ErrorCode;
 
     /**
-    * Exception information
+    * Exception message
     */
     @SerializedName("ErrorInfo")
     @Expose
@@ -234,7 +234,7 @@ public class ScanTaskInfoList extends AbstractModel {
     private Long CompleteAssetNumber;
 
     /**
-    * risk count
+    * Risk count
     */
     @SerializedName("RiskCount")
     @Expose
@@ -320,16 +320,16 @@ public class ScanTaskInfoList extends AbstractModel {
     }
 
     /**
-     * Get start time of the task 
-     * @return StartTime start time of the task
+     * Get Task start time 
+     * @return StartTime Task start time
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set start time of the task
-     * @param StartTime start time of the task
+     * Set Task start time
+     * @param StartTime Task start time
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
@@ -704,16 +704,16 @@ public class ScanTaskInfoList extends AbstractModel {
     }
 
     /**
-     * Get Exception information 
-     * @return ErrorInfo Exception information
+     * Get Exception message 
+     * @return ErrorInfo Exception message
      */
     public String getErrorInfo() {
         return this.ErrorInfo;
     }
 
     /**
-     * Set Exception information
-     * @param ErrorInfo Exception information
+     * Set Exception message
+     * @param ErrorInfo Exception message
      */
     public void setErrorInfo(String ErrorInfo) {
         this.ErrorInfo = ErrorInfo;
@@ -784,16 +784,16 @@ public class ScanTaskInfoList extends AbstractModel {
     }
 
     /**
-     * Get risk count 
-     * @return RiskCount risk count
+     * Get Risk count 
+     * @return RiskCount Risk count
      */
     public Long getRiskCount() {
         return this.RiskCount;
     }
 
     /**
-     * Set risk count
-     * @param RiskCount risk count
+     * Set Risk count
+     * @param RiskCount Risk count
      */
     public void setRiskCount(Long RiskCount) {
         this.RiskCount = RiskCount;

@@ -31,7 +31,7 @@ public class DescribeAIAgentAssetListRequest extends AbstractModel {
     private String [] MemberId;
 
     /**
-    * filter
+    * Filter
     */
     @SerializedName("Filter")
     @Expose
@@ -54,16 +54,16 @@ public class DescribeAIAgentAssetListRequest extends AbstractModel {
     }
 
     /**
-     * Get filter 
-     * @return Filter filter
+     * Get Filter 
+     * @return Filter Filter
      */
     public Filter getFilter() {
         return this.Filter;
     }
 
     /**
-     * Set filter
-     * @param Filter filter
+     * Set Filter
+     * @param Filter Filter
      */
     public void setFilter(Filter Filter) {
         this.Filter = Filter;

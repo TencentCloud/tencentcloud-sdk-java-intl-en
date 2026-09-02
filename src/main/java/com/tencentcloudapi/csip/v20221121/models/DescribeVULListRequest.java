@@ -31,7 +31,7 @@ public class DescribeVULListRequest extends AbstractModel {
     private String [] MemberId;
 
     /**
-    * Query condition.
+    * Query condition
     */
     @SerializedName("Filter")
     @Expose
@@ -54,16 +54,16 @@ public class DescribeVULListRequest extends AbstractModel {
     }
 
     /**
-     * Get Query condition. 
-     * @return Filter Query condition.
+     * Get Query condition 
+     * @return Filter Query condition
      */
     public Filter getFilter() {
         return this.Filter;
     }
 
     /**
-     * Set Query condition.
-     * @param Filter Query condition.
+     * Set Query condition
+     * @param Filter Query condition
      */
     public void setFilter(Filter Filter) {
         this.Filter = Filter;

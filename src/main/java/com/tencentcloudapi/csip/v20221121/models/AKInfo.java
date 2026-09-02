@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class AKInfo extends AbstractModel {
 
     /**
-    * ak id.
+    * id of the ak
     */
     @SerializedName("ID")
     @Expose
     private Long ID;
 
     /**
-    * ak specific value. returns temporary key when temporary key is used.
+    * `ak` specific value. This field returns the temporary key when the temporary key is used.
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * Associated account.
+    * Associated account
     */
     @SerializedName("User")
     @Expose
@@ -52,48 +52,48 @@ public class AKInfo extends AbstractModel {
     private String Remark;
 
     /**
-     * Get ak id. 
-     * @return ID ak id.
+     * Get id of the ak 
+     * @return ID id of the ak
      */
     public Long getID() {
         return this.ID;
     }
 
     /**
-     * Set ak id.
-     * @param ID ak id.
+     * Set id of the ak
+     * @param ID id of the ak
      */
     public void setID(Long ID) {
         this.ID = ID;
     }
 
     /**
-     * Get ak specific value. returns temporary key when temporary key is used. 
-     * @return Name ak specific value. returns temporary key when temporary key is used.
+     * Get `ak` specific value. This field returns the temporary key when the temporary key is used. 
+     * @return Name `ak` specific value. This field returns the temporary key when the temporary key is used.
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set ak specific value. returns temporary key when temporary key is used.
-     * @param Name ak specific value. returns temporary key when temporary key is used.
+     * Set `ak` specific value. This field returns the temporary key when the temporary key is used.
+     * @param Name `ak` specific value. This field returns the temporary key when the temporary key is used.
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get Associated account. 
-     * @return User Associated account.
+     * Get Associated account 
+     * @return User Associated account
      */
     public String getUser() {
         return this.User;
     }
 
     /**
-     * Set Associated account.
-     * @param User Associated account.
+     * Set Associated account
+     * @param User Associated account
      */
     public void setUser(String User) {
         this.User = User;

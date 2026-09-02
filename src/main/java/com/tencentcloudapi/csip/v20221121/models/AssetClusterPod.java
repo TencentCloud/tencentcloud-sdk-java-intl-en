@@ -31,14 +31,14 @@ public class AssetClusterPod extends AbstractModel {
     private Long AppId;
 
     /**
-    * Tenant UIN
+    * Tenant uin
     */
     @SerializedName("Uin")
     @Expose
     private String Uin;
 
     /**
-    * Tenant name
+    * Tenant Nickname
     */
     @SerializedName("Nick")
     @Expose
@@ -52,7 +52,7 @@ public class AssetClusterPod extends AbstractModel {
     private String Region;
 
     /**
-    * Pod ID
+    * pod id
     */
     @SerializedName("AssetId")
     @Expose
@@ -108,7 +108,7 @@ public class AssetClusterPod extends AbstractModel {
     private String MachineId;
 
     /**
-    * host name
+    * MachineName
     */
     @SerializedName("MachineName")
     @Expose
@@ -129,7 +129,7 @@ public class AssetClusterPod extends AbstractModel {
     private Long ServiceCount;
 
     /**
-    * Associated container number
+    * Number of associated containers
     */
     @SerializedName("ContainerCount")
     @Expose
@@ -180,32 +180,32 @@ public class AssetClusterPod extends AbstractModel {
     }
 
     /**
-     * Get Tenant UIN 
-     * @return Uin Tenant UIN
+     * Get Tenant uin 
+     * @return Uin Tenant uin
      */
     public String getUin() {
         return this.Uin;
     }
 
     /**
-     * Set Tenant UIN
-     * @param Uin Tenant UIN
+     * Set Tenant uin
+     * @param Uin Tenant uin
      */
     public void setUin(String Uin) {
         this.Uin = Uin;
     }
 
     /**
-     * Get Tenant name 
-     * @return Nick Tenant name
+     * Get Tenant Nickname 
+     * @return Nick Tenant Nickname
      */
     public String getNick() {
         return this.Nick;
     }
 
     /**
-     * Set Tenant name
-     * @param Nick Tenant name
+     * Set Tenant Nickname
+     * @param Nick Tenant Nickname
      */
     public void setNick(String Nick) {
         this.Nick = Nick;
@@ -228,16 +228,16 @@ public class AssetClusterPod extends AbstractModel {
     }
 
     /**
-     * Get Pod ID 
-     * @return AssetId Pod ID
+     * Get pod id 
+     * @return AssetId pod id
      */
     public String getAssetId() {
         return this.AssetId;
     }
 
     /**
-     * Set Pod ID
-     * @param AssetId Pod ID
+     * Set pod id
+     * @param AssetId pod id
      */
     public void setAssetId(String AssetId) {
         this.AssetId = AssetId;
@@ -356,16 +356,16 @@ public class AssetClusterPod extends AbstractModel {
     }
 
     /**
-     * Get host name 
-     * @return MachineName host name
+     * Get MachineName 
+     * @return MachineName MachineName
      */
     public String getMachineName() {
         return this.MachineName;
     }
 
     /**
-     * Set host name
-     * @param MachineName host name
+     * Set MachineName
+     * @param MachineName MachineName
      */
     public void setMachineName(String MachineName) {
         this.MachineName = MachineName;
@@ -404,16 +404,16 @@ public class AssetClusterPod extends AbstractModel {
     }
 
     /**
-     * Get Associated container number 
-     * @return ContainerCount Associated container number
+     * Get Number of associated containers 
+     * @return ContainerCount Number of associated containers
      */
     public Long getContainerCount() {
         return this.ContainerCount;
     }
 
     /**
-     * Set Associated container number
-     * @param ContainerCount Associated container number
+     * Set Number of associated containers
+     * @param ContainerCount Number of associated containers
      */
     public void setContainerCount(Long ContainerCount) {
         this.ContainerCount = ContainerCount;

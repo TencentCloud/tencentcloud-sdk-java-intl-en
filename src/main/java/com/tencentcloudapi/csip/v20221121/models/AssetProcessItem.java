@@ -24,28 +24,28 @@ import java.util.HashMap;
 public class AssetProcessItem extends AbstractModel {
 
     /**
-    * Cloud account ID.
+    * Cloud Account ID
     */
     @SerializedName("CloudAccountID")
     @Expose
     private String CloudAccountID;
 
     /**
-    * Instance name
+    * Instance name.
     */
     @SerializedName("InstanceName")
     @Expose
     private String InstanceName;
 
     /**
-    * Tenant ID.
+    * Tenant ID
     */
     @SerializedName("AppID")
     @Expose
     private Long AppID;
 
     /**
-    * Account name.
+    * Cloud account name
     */
     @SerializedName("CloudAccountName")
     @Expose
@@ -94,71 +94,71 @@ public class AssetProcessItem extends AbstractModel {
     private String CmdLine;
 
     /**
-    * Listening port list.
+    * Listening port list
     */
     @SerializedName("Port")
     @Expose
     private String Port;
 
     /**
-     * Get Cloud account ID. 
-     * @return CloudAccountID Cloud account ID.
+     * Get Cloud Account ID 
+     * @return CloudAccountID Cloud Account ID
      */
     public String getCloudAccountID() {
         return this.CloudAccountID;
     }
 
     /**
-     * Set Cloud account ID.
-     * @param CloudAccountID Cloud account ID.
+     * Set Cloud Account ID
+     * @param CloudAccountID Cloud Account ID
      */
     public void setCloudAccountID(String CloudAccountID) {
         this.CloudAccountID = CloudAccountID;
     }
 
     /**
-     * Get Instance name 
-     * @return InstanceName Instance name
+     * Get Instance name. 
+     * @return InstanceName Instance name.
      */
     public String getInstanceName() {
         return this.InstanceName;
     }
 
     /**
-     * Set Instance name
-     * @param InstanceName Instance name
+     * Set Instance name.
+     * @param InstanceName Instance name.
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;
     }
 
     /**
-     * Get Tenant ID. 
-     * @return AppID Tenant ID.
+     * Get Tenant ID 
+     * @return AppID Tenant ID
      */
     public Long getAppID() {
         return this.AppID;
     }
 
     /**
-     * Set Tenant ID.
-     * @param AppID Tenant ID.
+     * Set Tenant ID
+     * @param AppID Tenant ID
      */
     public void setAppID(Long AppID) {
         this.AppID = AppID;
     }
 
     /**
-     * Get Account name. 
-     * @return CloudAccountName Account name.
+     * Get Cloud account name 
+     * @return CloudAccountName Cloud account name
      */
     public String getCloudAccountName() {
         return this.CloudAccountName;
     }
 
     /**
-     * Set Account name.
-     * @param CloudAccountName Account name.
+     * Set Cloud account name
+     * @param CloudAccountName Cloud account name
      */
     public void setCloudAccountName(String CloudAccountName) {
         this.CloudAccountName = CloudAccountName;
@@ -261,16 +261,16 @@ public class AssetProcessItem extends AbstractModel {
     }
 
     /**
-     * Get Listening port list. 
-     * @return Port Listening port list.
+     * Get Listening port list 
+     * @return Port Listening port list
      */
     public String getPort() {
         return this.Port;
     }
 
     /**
-     * Set Listening port list.
-     * @param Port Listening port list.
+     * Set Listening port list
+     * @param Port Listening port list
      */
     public void setPort(String Port) {
         this.Port = Port;

@@ -24,61 +24,61 @@ import java.util.HashMap;
 public class SkillScanEngineResult extends AbstractModel {
 
     /**
-    * Sub-engine type
-Enumeration value:
+    * Sub-engine type.
+Enumeration values:
 AI: AI engine
-STATIC: Static analysis engine
+STATIC: static analysis engine
     */
     @SerializedName("ScanType")
     @Expose
     private String ScanType;
 
     /**
-    * The rule list hit by the engine
+    * Hit rule list.
     */
     @SerializedName("RuleList")
     @Expose
     private SkillScanRuleHit [] RuleList;
 
     /**
-     * Get Sub-engine type
-Enumeration value:
+     * Get Sub-engine type.
+Enumeration values:
 AI: AI engine
-STATIC: Static analysis engine 
-     * @return ScanType Sub-engine type
-Enumeration value:
+STATIC: static analysis engine 
+     * @return ScanType Sub-engine type.
+Enumeration values:
 AI: AI engine
-STATIC: Static analysis engine
+STATIC: static analysis engine
      */
     public String getScanType() {
         return this.ScanType;
     }
 
     /**
-     * Set Sub-engine type
-Enumeration value:
+     * Set Sub-engine type.
+Enumeration values:
 AI: AI engine
-STATIC: Static analysis engine
-     * @param ScanType Sub-engine type
-Enumeration value:
+STATIC: static analysis engine
+     * @param ScanType Sub-engine type.
+Enumeration values:
 AI: AI engine
-STATIC: Static analysis engine
+STATIC: static analysis engine
      */
     public void setScanType(String ScanType) {
         this.ScanType = ScanType;
     }
 
     /**
-     * Get The rule list hit by the engine 
-     * @return RuleList The rule list hit by the engine
+     * Get Hit rule list. 
+     * @return RuleList Hit rule list.
      */
     public SkillScanRuleHit [] getRuleList() {
         return this.RuleList;
     }
 
     /**
-     * Set The rule list hit by the engine
-     * @param RuleList The rule list hit by the engine
+     * Set Hit rule list.
+     * @param RuleList Hit rule list.
      */
     public void setRuleList(SkillScanRuleHit [] RuleList) {
         this.RuleList = RuleList;

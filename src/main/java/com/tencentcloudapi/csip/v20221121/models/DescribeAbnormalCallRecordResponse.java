@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeAbnormalCallRecordResponse extends AbstractModel {
 
     /**
-    * Invocation record list.
+    * Call record list
     */
     @SerializedName("Data")
     @Expose
     private CallRecord [] Data;
 
     /**
-    * Total number of records.
+    * Total number of call records
     */
     @SerializedName("Total")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeAbnormalCallRecordResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Invocation record list. 
-     * @return Data Invocation record list.
+     * Get Call record list 
+     * @return Data Call record list
      */
     public CallRecord [] getData() {
         return this.Data;
     }
 
     /**
-     * Set Invocation record list.
-     * @param Data Invocation record list.
+     * Set Call record list
+     * @param Data Call record list
      */
     public void setData(CallRecord [] Data) {
         this.Data = Data;
     }
 
     /**
-     * Get Total number of records. 
-     * @return Total Total number of records.
+     * Get Total number of call records 
+     * @return Total Total number of call records
      */
     public Long getTotal() {
         return this.Total;
     }
 
     /**
-     * Set Total number of records.
-     * @param Total Total number of records.
+     * Set Total number of call records
+     * @param Total Total number of call records
      */
     public void setTotal(Long Total) {
         this.Total = Total;

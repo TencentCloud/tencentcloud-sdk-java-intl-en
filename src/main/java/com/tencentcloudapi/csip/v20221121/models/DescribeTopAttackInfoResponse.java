@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeTopAttackInfoResponse extends AbstractModel {
 
     /**
-    * Top attack types/attackers by count
+    * Top attack types/attacker count
     */
     @SerializedName("TopAttackInfo")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeTopAttackInfoResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Top attack types/attackers by count 
-     * @return TopAttackInfo Top attack types/attackers by count
+     * Get Top attack types/attacker count 
+     * @return TopAttackInfo Top attack types/attacker count
      */
     public TagCount [] getTopAttackInfo() {
         return this.TopAttackInfo;
     }
 
     /**
-     * Set Top attack types/attackers by count
-     * @param TopAttackInfo Top attack types/attackers by count
+     * Set Top attack types/attacker count
+     * @param TopAttackInfo Top attack types/attacker count
      */
     public void setTopAttackInfo(TagCount [] TopAttackInfo) {
         this.TopAttackInfo = TopAttackInfo;

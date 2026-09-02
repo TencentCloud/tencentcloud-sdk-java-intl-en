@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeUserCallRecordResponse extends AbstractModel {
 
     /**
-    * Account call record list.
+    * List of call records of an account
     */
     @SerializedName("Data")
     @Expose
     private UserCallRecord [] Data;
 
     /**
-    * Total number of records.
+    * Total number of call records
     */
     @SerializedName("Total")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeUserCallRecordResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Account call record list. 
-     * @return Data Account call record list.
+     * Get List of call records of an account 
+     * @return Data List of call records of an account
      */
     public UserCallRecord [] getData() {
         return this.Data;
     }
 
     /**
-     * Set Account call record list.
-     * @param Data Account call record list.
+     * Set List of call records of an account
+     * @param Data List of call records of an account
      */
     public void setData(UserCallRecord [] Data) {
         this.Data = Data;
     }
 
     /**
-     * Get Total number of records. 
-     * @return Total Total number of records.
+     * Get Total number of call records 
+     * @return Total Total number of call records
      */
     public Long getTotal() {
         return this.Total;
     }
 
     /**
-     * Set Total number of records.
-     * @param Total Total number of records.
+     * Set Total number of call records
+     * @param Total Total number of call records
      */
     public void setTotal(Long Total) {
         this.Total = Total;

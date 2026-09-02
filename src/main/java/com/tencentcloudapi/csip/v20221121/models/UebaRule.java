@@ -38,9 +38,9 @@ public class UebaRule extends AbstractModel {
     private String RuleName;
 
     /**
-    * Policy type
-System policy
-custom policy
+    * Policy type.
+0: System policy
+1: Create custom policy
     */
     @SerializedName("RuleType")
     @Expose
@@ -48,7 +48,7 @@ custom policy
 
     /**
     * Policy level
-Prompt.
+0: Prompt.
 1: low
 2: Medium risk
 3: High risk
@@ -80,7 +80,7 @@ Prompt.
     private Long HitCount;
 
     /**
-    * Associated account Appid.
+    * Appid of the associated account
     */
     @SerializedName("AppID")
     @Expose
@@ -108,7 +108,7 @@ Prompt.
     private String Nickname;
 
     /**
-    * Custom rule specific content
+    * Specific content of the custom rule
     */
     @SerializedName("CustomRuleDetail")
     @Expose
@@ -116,7 +116,7 @@ Prompt.
 
     /**
     * Cloud type
-0 Tencent Cloud
+Tencent Cloud: 0
 aws:1
     */
     @SerializedName("CloudType")
@@ -156,24 +156,24 @@ aws:1
     }
 
     /**
-     * Get Policy type
-System policy
-custom policy 
-     * @return RuleType Policy type
-System policy
-custom policy
+     * Get Policy type.
+0: System policy
+1: Create custom policy 
+     * @return RuleType Policy type.
+0: System policy
+1: Create custom policy
      */
     public Long getRuleType() {
         return this.RuleType;
     }
 
     /**
-     * Set Policy type
-System policy
-custom policy
-     * @param RuleType Policy type
-System policy
-custom policy
+     * Set Policy type.
+0: System policy
+1: Create custom policy
+     * @param RuleType Policy type.
+0: System policy
+1: Create custom policy
      */
     public void setRuleType(Long RuleType) {
         this.RuleType = RuleType;
@@ -181,13 +181,13 @@ custom policy
 
     /**
      * Get Policy level
-Prompt.
+0: Prompt.
 1: low
 2: Medium risk
 3: High risk
 4: Critical 
      * @return RuleLevel Policy level
-Prompt.
+0: Prompt.
 1: low
 2: Medium risk
 3: High risk
@@ -199,13 +199,13 @@ Prompt.
 
     /**
      * Set Policy level
-Prompt.
+0: Prompt.
 1: low
 2: Medium risk
 3: High risk
 4: Critical
      * @param RuleLevel Policy level
-Prompt.
+0: Prompt.
 1: low
 2: Medium risk
 3: High risk
@@ -264,16 +264,16 @@ Prompt.
     }
 
     /**
-     * Get Associated account Appid. 
-     * @return AppID Associated account Appid.
+     * Get Appid of the associated account 
+     * @return AppID Appid of the associated account
      */
     public String getAppID() {
         return this.AppID;
     }
 
     /**
-     * Set Associated account Appid.
-     * @param AppID Associated account Appid.
+     * Set Appid of the associated account
+     * @param AppID Appid of the associated account
      */
     public void setAppID(String AppID) {
         this.AppID = AppID;
@@ -328,16 +328,16 @@ Prompt.
     }
 
     /**
-     * Get Custom rule specific content 
-     * @return CustomRuleDetail Custom rule specific content
+     * Get Specific content of the custom rule 
+     * @return CustomRuleDetail Specific content of the custom rule
      */
     public UebaCustomRule getCustomRuleDetail() {
         return this.CustomRuleDetail;
     }
 
     /**
-     * Set Custom rule specific content
-     * @param CustomRuleDetail Custom rule specific content
+     * Set Specific content of the custom rule
+     * @param CustomRuleDetail Specific content of the custom rule
      */
     public void setCustomRuleDetail(UebaCustomRule CustomRuleDetail) {
         this.CustomRuleDetail = CustomRuleDetail;
@@ -345,10 +345,10 @@ Prompt.
 
     /**
      * Get Cloud type
-0 Tencent Cloud
+Tencent Cloud: 0
 aws:1 
      * @return CloudType Cloud type
-0 Tencent Cloud
+Tencent Cloud: 0
 aws:1
      */
     public Long getCloudType() {
@@ -357,10 +357,10 @@ aws:1
 
     /**
      * Set Cloud type
-0 Tencent Cloud
+Tencent Cloud: 0
 aws:1
      * @param CloudType Cloud type
-0 Tencent Cloud
+Tencent Cloud: 0
 aws:1
      */
     public void setCloudType(Long CloudType) {

@@ -31,7 +31,7 @@ public class TrafficRuleState extends AbstractModel {
     private String Module;
 
     /**
-    * <p>Sandbox rule status</p><p>Enumeration value:</p><ul><li>ON: Enable</li><li>OFF: Disable</li></ul>
+    * <p>Sandbox rule status</p><p>Enumeration values:</p><ul><li>ON: Enable</li><li>OFF: Disable</li></ul>
     */
     @SerializedName("Status")
     @Expose
@@ -54,16 +54,16 @@ public class TrafficRuleState extends AbstractModel {
     }
 
     /**
-     * Get <p>Sandbox rule status</p><p>Enumeration value:</p><ul><li>ON: Enable</li><li>OFF: Disable</li></ul> 
-     * @return Status <p>Sandbox rule status</p><p>Enumeration value:</p><ul><li>ON: Enable</li><li>OFF: Disable</li></ul>
+     * Get <p>Sandbox rule status</p><p>Enumeration values:</p><ul><li>ON: Enable</li><li>OFF: Disable</li></ul> 
+     * @return Status <p>Sandbox rule status</p><p>Enumeration values:</p><ul><li>ON: Enable</li><li>OFF: Disable</li></ul>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set <p>Sandbox rule status</p><p>Enumeration value:</p><ul><li>ON: Enable</li><li>OFF: Disable</li></ul>
-     * @param Status <p>Sandbox rule status</p><p>Enumeration value:</p><ul><li>ON: Enable</li><li>OFF: Disable</li></ul>
+     * Set <p>Sandbox rule status</p><p>Enumeration values:</p><ul><li>ON: Enable</li><li>OFF: Disable</li></ul>
+     * @param Status <p>Sandbox rule status</p><p>Enumeration values:</p><ul><li>ON: Enable</li><li>OFF: Disable</li></ul>
      */
     public void setStatus(String Status) {
         this.Status = Status;

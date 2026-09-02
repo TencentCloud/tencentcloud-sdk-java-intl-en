@@ -24,25 +24,25 @@ import java.util.HashMap;
 public class TrafficPluginState extends AbstractModel {
 
     /**
-    * Plugin installation status (upper layer aggregation)
+    * Plugin installation status (upper-level aggregation)
 Enumeration value:
-NONE: Not installed
-INSTALLING
-INSTALLED: Installed
-INSTALL_FAIL: Installation failure
+NONE: not installed
+INSTALLING: installing
+INSTALLED: installed
+INSTALL_FAIL: installation failure
     */
     @SerializedName("InstallStatus")
     @Expose
     private String InstallStatus;
 
     /**
-    * Plugin installation sub-status. The value corresponds to InstallStatus: empty string when not installed (InstallStatus=UNINSTALL); SUCCESS when successfully installed (InstallStatus=INSTALLED); specific failure reason when installation failure (InstallStatus=INSTALL_FAIL).
+    * Plug-in installation sub-status. The value corresponds to InstallStatus: empty string when not installed (InstallStatus=UNINSTALL); SUCCESS when installation is successful (InstallStatus=INSTALLED); specific failure reason when installation fails (InstallStatus=INSTALL_FAIL).
 Enumeration value:
-NOT_SUPPORT: Unsupported environment
-CONTAINER_NOT_FOUND: Container does not exist.
-RESTART required
+NOT_SUPPORT: The environment does not support it
+CONTAINER_NOT_FOUND: container does not exist.
+REQUIRE_RESTART: restart required
 CA_FAILED: CA failed
-EBPF_FAILED: eBPF failed
+EBPF_FAILED: eBPF failure
 IPTABLE_FAILED: iptables failed.
 REDIRECT_FAILED: Traffic redirection failed.
     */
@@ -51,7 +51,7 @@ REDIRECT_FAILED: Traffic redirection failed.
     private String Status;
 
     /**
-    * Status copywriting (internationalization description derived from Status based on request language)
+    * Status copywriting (an internationalized description derived from Status based on the request language)
     */
     @SerializedName("Message")
     @Expose
@@ -59,65 +59,65 @@ REDIRECT_FAILED: Traffic redirection failed.
 
     /**
     * Recent activity time of the plug-in
-Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format).
+Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)
     */
     @SerializedName("ActivityTime")
     @Expose
     private String ActivityTime;
 
     /**
-     * Get Plugin installation status (upper layer aggregation)
+     * Get Plugin installation status (upper-level aggregation)
 Enumeration value:
-NONE: Not installed
-INSTALLING
-INSTALLED: Installed
-INSTALL_FAIL: Installation failure 
-     * @return InstallStatus Plugin installation status (upper layer aggregation)
+NONE: not installed
+INSTALLING: installing
+INSTALLED: installed
+INSTALL_FAIL: installation failure 
+     * @return InstallStatus Plugin installation status (upper-level aggregation)
 Enumeration value:
-NONE: Not installed
-INSTALLING
-INSTALLED: Installed
-INSTALL_FAIL: Installation failure
+NONE: not installed
+INSTALLING: installing
+INSTALLED: installed
+INSTALL_FAIL: installation failure
      */
     public String getInstallStatus() {
         return this.InstallStatus;
     }
 
     /**
-     * Set Plugin installation status (upper layer aggregation)
+     * Set Plugin installation status (upper-level aggregation)
 Enumeration value:
-NONE: Not installed
-INSTALLING
-INSTALLED: Installed
-INSTALL_FAIL: Installation failure
-     * @param InstallStatus Plugin installation status (upper layer aggregation)
+NONE: not installed
+INSTALLING: installing
+INSTALLED: installed
+INSTALL_FAIL: installation failure
+     * @param InstallStatus Plugin installation status (upper-level aggregation)
 Enumeration value:
-NONE: Not installed
-INSTALLING
-INSTALLED: Installed
-INSTALL_FAIL: Installation failure
+NONE: not installed
+INSTALLING: installing
+INSTALLED: installed
+INSTALL_FAIL: installation failure
      */
     public void setInstallStatus(String InstallStatus) {
         this.InstallStatus = InstallStatus;
     }
 
     /**
-     * Get Plugin installation sub-status. The value corresponds to InstallStatus: empty string when not installed (InstallStatus=UNINSTALL); SUCCESS when successfully installed (InstallStatus=INSTALLED); specific failure reason when installation failure (InstallStatus=INSTALL_FAIL).
+     * Get Plug-in installation sub-status. The value corresponds to InstallStatus: empty string when not installed (InstallStatus=UNINSTALL); SUCCESS when installation is successful (InstallStatus=INSTALLED); specific failure reason when installation fails (InstallStatus=INSTALL_FAIL).
 Enumeration value:
-NOT_SUPPORT: Unsupported environment
-CONTAINER_NOT_FOUND: Container does not exist.
-RESTART required
+NOT_SUPPORT: The environment does not support it
+CONTAINER_NOT_FOUND: container does not exist.
+REQUIRE_RESTART: restart required
 CA_FAILED: CA failed
-EBPF_FAILED: eBPF failed
+EBPF_FAILED: eBPF failure
 IPTABLE_FAILED: iptables failed.
 REDIRECT_FAILED: Traffic redirection failed. 
-     * @return Status Plugin installation sub-status. The value corresponds to InstallStatus: empty string when not installed (InstallStatus=UNINSTALL); SUCCESS when successfully installed (InstallStatus=INSTALLED); specific failure reason when installation failure (InstallStatus=INSTALL_FAIL).
+     * @return Status Plug-in installation sub-status. The value corresponds to InstallStatus: empty string when not installed (InstallStatus=UNINSTALL); SUCCESS when installation is successful (InstallStatus=INSTALLED); specific failure reason when installation fails (InstallStatus=INSTALL_FAIL).
 Enumeration value:
-NOT_SUPPORT: Unsupported environment
-CONTAINER_NOT_FOUND: Container does not exist.
-RESTART required
+NOT_SUPPORT: The environment does not support it
+CONTAINER_NOT_FOUND: container does not exist.
+REQUIRE_RESTART: restart required
 CA_FAILED: CA failed
-EBPF_FAILED: eBPF failed
+EBPF_FAILED: eBPF failure
 IPTABLE_FAILED: iptables failed.
 REDIRECT_FAILED: Traffic redirection failed.
      */
@@ -126,22 +126,22 @@ REDIRECT_FAILED: Traffic redirection failed.
     }
 
     /**
-     * Set Plugin installation sub-status. The value corresponds to InstallStatus: empty string when not installed (InstallStatus=UNINSTALL); SUCCESS when successfully installed (InstallStatus=INSTALLED); specific failure reason when installation failure (InstallStatus=INSTALL_FAIL).
+     * Set Plug-in installation sub-status. The value corresponds to InstallStatus: empty string when not installed (InstallStatus=UNINSTALL); SUCCESS when installation is successful (InstallStatus=INSTALLED); specific failure reason when installation fails (InstallStatus=INSTALL_FAIL).
 Enumeration value:
-NOT_SUPPORT: Unsupported environment
-CONTAINER_NOT_FOUND: Container does not exist.
-RESTART required
+NOT_SUPPORT: The environment does not support it
+CONTAINER_NOT_FOUND: container does not exist.
+REQUIRE_RESTART: restart required
 CA_FAILED: CA failed
-EBPF_FAILED: eBPF failed
+EBPF_FAILED: eBPF failure
 IPTABLE_FAILED: iptables failed.
 REDIRECT_FAILED: Traffic redirection failed.
-     * @param Status Plugin installation sub-status. The value corresponds to InstallStatus: empty string when not installed (InstallStatus=UNINSTALL); SUCCESS when successfully installed (InstallStatus=INSTALLED); specific failure reason when installation failure (InstallStatus=INSTALL_FAIL).
+     * @param Status Plug-in installation sub-status. The value corresponds to InstallStatus: empty string when not installed (InstallStatus=UNINSTALL); SUCCESS when installation is successful (InstallStatus=INSTALLED); specific failure reason when installation fails (InstallStatus=INSTALL_FAIL).
 Enumeration value:
-NOT_SUPPORT: Unsupported environment
-CONTAINER_NOT_FOUND: Container does not exist.
-RESTART required
+NOT_SUPPORT: The environment does not support it
+CONTAINER_NOT_FOUND: container does not exist.
+REQUIRE_RESTART: restart required
 CA_FAILED: CA failed
-EBPF_FAILED: eBPF failed
+EBPF_FAILED: eBPF failure
 IPTABLE_FAILED: iptables failed.
 REDIRECT_FAILED: Traffic redirection failed.
      */
@@ -150,16 +150,16 @@ REDIRECT_FAILED: Traffic redirection failed.
     }
 
     /**
-     * Get Status copywriting (internationalization description derived from Status based on request language) 
-     * @return Message Status copywriting (internationalization description derived from Status based on request language)
+     * Get Status copywriting (an internationalized description derived from Status based on the request language) 
+     * @return Message Status copywriting (an internationalized description derived from Status based on the request language)
      */
     public String getMessage() {
         return this.Message;
     }
 
     /**
-     * Set Status copywriting (internationalization description derived from Status based on request language)
-     * @param Message Status copywriting (internationalization description derived from Status based on request language)
+     * Set Status copywriting (an internationalized description derived from Status based on the request language)
+     * @param Message Status copywriting (an internationalized description derived from Status based on the request language)
      */
     public void setMessage(String Message) {
         this.Message = Message;
@@ -167,9 +167,9 @@ REDIRECT_FAILED: Traffic redirection failed.
 
     /**
      * Get Recent activity time of the plug-in
-Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format). 
+Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format) 
      * @return ActivityTime Recent activity time of the plug-in
-Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format).
+Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)
      */
     public String getActivityTime() {
         return this.ActivityTime;
@@ -177,9 +177,9 @@ Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format).
 
     /**
      * Set Recent activity time of the plug-in
-Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format).
+Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)
      * @param ActivityTime Recent activity time of the plug-in
-Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format).
+Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)
      */
     public void setActivityTime(String ActivityTime) {
         this.ActivityTime = ActivityTime;

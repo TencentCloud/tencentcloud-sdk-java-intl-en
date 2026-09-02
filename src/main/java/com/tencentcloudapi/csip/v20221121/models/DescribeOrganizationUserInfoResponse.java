@@ -38,14 +38,14 @@ public class DescribeOrganizationUserInfoResponse extends AbstractModel {
     private OrganizationUserInfo [] Data;
 
     /**
-    * Join method enumeration
+    * Joining method enumeration
     */
     @SerializedName("JoinTypeLst")
     @Expose
     private FilterDataObject [] JoinTypeLst;
 
     /**
-    * Cloud vendor enumeration
+    * Cloud service provider enumeration
     */
     @SerializedName("CloudTypeLst")
     @Expose
@@ -91,32 +91,32 @@ public class DescribeOrganizationUserInfoResponse extends AbstractModel {
     }
 
     /**
-     * Get Join method enumeration 
-     * @return JoinTypeLst Join method enumeration
+     * Get Joining method enumeration 
+     * @return JoinTypeLst Joining method enumeration
      */
     public FilterDataObject [] getJoinTypeLst() {
         return this.JoinTypeLst;
     }
 
     /**
-     * Set Join method enumeration
-     * @param JoinTypeLst Join method enumeration
+     * Set Joining method enumeration
+     * @param JoinTypeLst Joining method enumeration
      */
     public void setJoinTypeLst(FilterDataObject [] JoinTypeLst) {
         this.JoinTypeLst = JoinTypeLst;
     }
 
     /**
-     * Get Cloud vendor enumeration 
-     * @return CloudTypeLst Cloud vendor enumeration
+     * Get Cloud service provider enumeration 
+     * @return CloudTypeLst Cloud service provider enumeration
      */
     public FilterDataObject [] getCloudTypeLst() {
         return this.CloudTypeLst;
     }
 
     /**
-     * Set Cloud vendor enumeration
-     * @param CloudTypeLst Cloud vendor enumeration
+     * Set Cloud service provider enumeration
+     * @param CloudTypeLst Cloud service provider enumeration
      */
     public void setCloudTypeLst(FilterDataObject [] CloudTypeLst) {
         this.CloudTypeLst = CloudTypeLst;

@@ -24,9 +24,9 @@ import java.util.HashMap;
 public class DescribeKeySandboxCredentialListRequest extends AbstractModel {
 
     /**
-    * Filter criteria list: supported filter conditions as follows:
+    * Filter criteria list. Supported filter conditions are as follows:
 CredentialName - Credential name (fuzzy matching)
-CredentialType - Credential type (exact match). Parameter values: access, sts.
+CredentialType - Credential type (exact match). Valid values: access, sts
     */
     @SerializedName("Filter")
     @Expose
@@ -40,24 +40,24 @@ CredentialType - Credential type (exact match). Parameter values: access, sts.
     private String [] MemberId;
 
     /**
-     * Get Filter criteria list: supported filter conditions as follows:
+     * Get Filter criteria list. Supported filter conditions are as follows:
 CredentialName - Credential name (fuzzy matching)
-CredentialType - Credential type (exact match). Parameter values: access, sts. 
-     * @return Filter Filter criteria list: supported filter conditions as follows:
+CredentialType - Credential type (exact match). Valid values: access, sts 
+     * @return Filter Filter criteria list. Supported filter conditions are as follows:
 CredentialName - Credential name (fuzzy matching)
-CredentialType - Credential type (exact match). Parameter values: access, sts.
+CredentialType - Credential type (exact match). Valid values: access, sts
      */
     public Filter getFilter() {
         return this.Filter;
     }
 
     /**
-     * Set Filter criteria list: supported filter conditions as follows:
+     * Set Filter criteria list. Supported filter conditions are as follows:
 CredentialName - Credential name (fuzzy matching)
-CredentialType - Credential type (exact match). Parameter values: access, sts.
-     * @param Filter Filter criteria list: supported filter conditions as follows:
+CredentialType - Credential type (exact match). Valid values: access, sts
+     * @param Filter Filter criteria list. Supported filter conditions are as follows:
 CredentialName - Credential name (fuzzy matching)
-CredentialType - Credential type (exact match). Parameter values: access, sts.
+CredentialType - Credential type (exact match). Valid values: access, sts
      */
     public void setFilter(Filter Filter) {
         this.Filter = Filter;

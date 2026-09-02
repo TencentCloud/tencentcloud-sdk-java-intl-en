@@ -24,70 +24,70 @@ import java.util.HashMap;
 public class WebsiteRisk extends AbstractModel {
 
     /**
-    * Affected assets
+    * Affect assets
     */
     @SerializedName("AffectAsset")
     @Expose
     private String AffectAsset;
 
     /**
-    * Risk level, low - low risk, high - high risk, middle - medium risk, info - notification, extreme - critical.
+    * Risk level. low: low risk. high: high risk. middle: medium risk. info: notification. extreme: critical.
     */
     @SerializedName("Level")
     @Expose
     private String Level;
 
     /**
-    * Last detected
+    * Latest Recognition Time
     */
     @SerializedName("RecentTime")
     @Expose
     private String RecentTime;
 
     /**
-    * First detected
+    * First Recognition Time
     */
     @SerializedName("FirstTime")
     @Expose
     private String FirstTime;
 
     /**
-    * Status of the risk. `0`: Not handled, `1`: Handled; `2`: Ignored
+    * Status. 0-Unprocessed; 1-Disposed; 2-Ignored.
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * ID, use to handle risk
+    * ID, handle risks
     */
     @SerializedName("Id")
     @Expose
     private String Id;
 
     /**
-    * Frontend index
+    * Front-end Index
     */
     @SerializedName("Index")
     @Expose
     private String Index;
 
     /**
-    * Instance ID
+    * Instance ID.
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Instance name
+    * Instance name.
     */
     @SerializedName("InstanceName")
     @Expose
     private String InstanceName;
 
     /**
-    * User `appid`
+    * User appid.
     */
     @SerializedName("AppId")
     @Expose
@@ -108,14 +108,14 @@ public class WebsiteRisk extends AbstractModel {
     private String Uin;
 
     /**
-    * URL of the risk
+    * Risky link
     */
     @SerializedName("URL")
     @Expose
     private String URL;
 
     /**
-    * URL of the risk file
+    * Risk File Address
     */
     @SerializedName("URLPath")
     @Expose
@@ -129,188 +129,188 @@ public class WebsiteRisk extends AbstractModel {
     private String InstanceType;
 
     /**
-    * Check type.
+    * Type.
     */
     @SerializedName("DetectEngine")
     @Expose
     private String DetectEngine;
 
     /**
-    * Result description.
+    * Result Description
     */
     @SerializedName("ResultDescribe")
     @Expose
     private String ResultDescribe;
 
     /**
-    * Source URL
+    * Source Address URL
     */
     @SerializedName("SourceURL")
     @Expose
     private String SourceURL;
 
     /**
-    * Source file URL
+    * Source File Address
     */
     @SerializedName("SourceURLPath")
     @Expose
     private String SourceURLPath;
 
     /**
-     * Get Affected assets 
-     * @return AffectAsset Affected assets
+     * Get Affect assets 
+     * @return AffectAsset Affect assets
      */
     public String getAffectAsset() {
         return this.AffectAsset;
     }
 
     /**
-     * Set Affected assets
-     * @param AffectAsset Affected assets
+     * Set Affect assets
+     * @param AffectAsset Affect assets
      */
     public void setAffectAsset(String AffectAsset) {
         this.AffectAsset = AffectAsset;
     }
 
     /**
-     * Get Risk level, low - low risk, high - high risk, middle - medium risk, info - notification, extreme - critical. 
-     * @return Level Risk level, low - low risk, high - high risk, middle - medium risk, info - notification, extreme - critical.
+     * Get Risk level. low: low risk. high: high risk. middle: medium risk. info: notification. extreme: critical. 
+     * @return Level Risk level. low: low risk. high: high risk. middle: medium risk. info: notification. extreme: critical.
      */
     public String getLevel() {
         return this.Level;
     }
 
     /**
-     * Set Risk level, low - low risk, high - high risk, middle - medium risk, info - notification, extreme - critical.
-     * @param Level Risk level, low - low risk, high - high risk, middle - medium risk, info - notification, extreme - critical.
+     * Set Risk level. low: low risk. high: high risk. middle: medium risk. info: notification. extreme: critical.
+     * @param Level Risk level. low: low risk. high: high risk. middle: medium risk. info: notification. extreme: critical.
      */
     public void setLevel(String Level) {
         this.Level = Level;
     }
 
     /**
-     * Get Last detected 
-     * @return RecentTime Last detected
+     * Get Latest Recognition Time 
+     * @return RecentTime Latest Recognition Time
      */
     public String getRecentTime() {
         return this.RecentTime;
     }
 
     /**
-     * Set Last detected
-     * @param RecentTime Last detected
+     * Set Latest Recognition Time
+     * @param RecentTime Latest Recognition Time
      */
     public void setRecentTime(String RecentTime) {
         this.RecentTime = RecentTime;
     }
 
     /**
-     * Get First detected 
-     * @return FirstTime First detected
+     * Get First Recognition Time 
+     * @return FirstTime First Recognition Time
      */
     public String getFirstTime() {
         return this.FirstTime;
     }
 
     /**
-     * Set First detected
-     * @param FirstTime First detected
+     * Set First Recognition Time
+     * @param FirstTime First Recognition Time
      */
     public void setFirstTime(String FirstTime) {
         this.FirstTime = FirstTime;
     }
 
     /**
-     * Get Status of the risk. `0`: Not handled, `1`: Handled; `2`: Ignored 
-     * @return Status Status of the risk. `0`: Not handled, `1`: Handled; `2`: Ignored
+     * Get Status. 0-Unprocessed; 1-Disposed; 2-Ignored. 
+     * @return Status Status. 0-Unprocessed; 1-Disposed; 2-Ignored.
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Status of the risk. `0`: Not handled, `1`: Handled; `2`: Ignored
-     * @param Status Status of the risk. `0`: Not handled, `1`: Handled; `2`: Ignored
+     * Set Status. 0-Unprocessed; 1-Disposed; 2-Ignored.
+     * @param Status Status. 0-Unprocessed; 1-Disposed; 2-Ignored.
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get ID, use to handle risk 
-     * @return Id ID, use to handle risk
+     * Get ID, handle risks 
+     * @return Id ID, handle risks
      */
     public String getId() {
         return this.Id;
     }
 
     /**
-     * Set ID, use to handle risk
-     * @param Id ID, use to handle risk
+     * Set ID, handle risks
+     * @param Id ID, handle risks
      */
     public void setId(String Id) {
         this.Id = Id;
     }
 
     /**
-     * Get Frontend index 
-     * @return Index Frontend index
+     * Get Front-end Index 
+     * @return Index Front-end Index
      */
     public String getIndex() {
         return this.Index;
     }
 
     /**
-     * Set Frontend index
-     * @param Index Frontend index
+     * Set Front-end Index
+     * @param Index Front-end Index
      */
     public void setIndex(String Index) {
         this.Index = Index;
     }
 
     /**
-     * Get Instance ID 
-     * @return InstanceId Instance ID
+     * Get Instance ID. 
+     * @return InstanceId Instance ID.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Instance ID
-     * @param InstanceId Instance ID
+     * Set Instance ID.
+     * @param InstanceId Instance ID.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Instance name 
-     * @return InstanceName Instance name
+     * Get Instance name. 
+     * @return InstanceName Instance name.
      */
     public String getInstanceName() {
         return this.InstanceName;
     }
 
     /**
-     * Set Instance name
-     * @param InstanceName Instance name
+     * Set Instance name.
+     * @param InstanceName Instance name.
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;
     }
 
     /**
-     * Get User `appid` 
-     * @return AppId User `appid`
+     * Get User appid. 
+     * @return AppId User appid.
      */
     public String getAppId() {
         return this.AppId;
     }
 
     /**
-     * Set User `appid`
-     * @param AppId User `appid`
+     * Set User appid.
+     * @param AppId User appid.
      */
     public void setAppId(String AppId) {
         this.AppId = AppId;
@@ -349,32 +349,32 @@ public class WebsiteRisk extends AbstractModel {
     }
 
     /**
-     * Get URL of the risk 
-     * @return URL URL of the risk
+     * Get Risky link 
+     * @return URL Risky link
      */
     public String getURL() {
         return this.URL;
     }
 
     /**
-     * Set URL of the risk
-     * @param URL URL of the risk
+     * Set Risky link
+     * @param URL Risky link
      */
     public void setURL(String URL) {
         this.URL = URL;
     }
 
     /**
-     * Get URL of the risk file 
-     * @return URLPath URL of the risk file
+     * Get Risk File Address 
+     * @return URLPath Risk File Address
      */
     public String getURLPath() {
         return this.URLPath;
     }
 
     /**
-     * Set URL of the risk file
-     * @param URLPath URL of the risk file
+     * Set Risk File Address
+     * @param URLPath Risk File Address
      */
     public void setURLPath(String URLPath) {
         this.URLPath = URLPath;
@@ -397,64 +397,64 @@ public class WebsiteRisk extends AbstractModel {
     }
 
     /**
-     * Get Check type. 
-     * @return DetectEngine Check type.
+     * Get Type. 
+     * @return DetectEngine Type.
      */
     public String getDetectEngine() {
         return this.DetectEngine;
     }
 
     /**
-     * Set Check type.
-     * @param DetectEngine Check type.
+     * Set Type.
+     * @param DetectEngine Type.
      */
     public void setDetectEngine(String DetectEngine) {
         this.DetectEngine = DetectEngine;
     }
 
     /**
-     * Get Result description. 
-     * @return ResultDescribe Result description.
+     * Get Result Description 
+     * @return ResultDescribe Result Description
      */
     public String getResultDescribe() {
         return this.ResultDescribe;
     }
 
     /**
-     * Set Result description.
-     * @param ResultDescribe Result description.
+     * Set Result Description
+     * @param ResultDescribe Result Description
      */
     public void setResultDescribe(String ResultDescribe) {
         this.ResultDescribe = ResultDescribe;
     }
 
     /**
-     * Get Source URL 
-     * @return SourceURL Source URL
+     * Get Source Address URL 
+     * @return SourceURL Source Address URL
      */
     public String getSourceURL() {
         return this.SourceURL;
     }
 
     /**
-     * Set Source URL
-     * @param SourceURL Source URL
+     * Set Source Address URL
+     * @param SourceURL Source Address URL
      */
     public void setSourceURL(String SourceURL) {
         this.SourceURL = SourceURL;
     }
 
     /**
-     * Get Source file URL 
-     * @return SourceURLPath Source file URL
+     * Get Source File Address 
+     * @return SourceURLPath Source File Address
      */
     public String getSourceURLPath() {
         return this.SourceURLPath;
     }
 
     /**
-     * Set Source file URL
-     * @param SourceURLPath Source file URL
+     * Set Source File Address
+     * @param SourceURLPath Source File Address
      */
     public void setSourceURLPath(String SourceURLPath) {
         this.SourceURLPath = SourceURLPath;

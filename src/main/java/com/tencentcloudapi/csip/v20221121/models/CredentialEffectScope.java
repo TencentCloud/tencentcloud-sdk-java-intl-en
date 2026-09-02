@@ -24,66 +24,61 @@ import java.util.HashMap;
 public class CredentialEffectScope extends AbstractModel {
 
     /**
-    * Whether to exclude the mode
+    * Whether to exclude mode
 Enumeration values:
-0: Inclusion mode (only takes effect on the Real Server in Instances). At this point, Instances is required.
-1: Exclusion mode (Machines in Instances do not take effect, remaining machines take effect). At this point, Instances is selectable (Empty list means all machines take effect).
+0: Inclusion mode (only for the Real Server in Instances). At this point, Instances is required.
+1: Exclusion mode (machines in Instances do not take effect, remaining machines take effect). At this point, Instances is selectable. An empty list means all machines take effect.
     */
     @SerializedName("Exclude")
     @Expose
     private Long Exclude;
 
     /**
-    * Machine instance ID list. Required when Exclude is 0, means only these machines can access the credential; Option when Exclude is 1, means these machines cannot access the credential (Empty list means all machines take effect).
-Note: This field may return null, indicating that no valid values can be obtained.
+    * List of machine instance IDs. Required when Exclude is 0, means only these machines can access the credential. Optional when Exclude is 1, means these machines cannot access the credential (Empty list means all machines take effect)
     */
     @SerializedName("Instances")
     @Expose
     private String [] Instances;
 
     /**
-     * Get Whether to exclude the mode
+     * Get Whether to exclude mode
 Enumeration values:
-0: Inclusion mode (only takes effect on the Real Server in Instances). At this point, Instances is required.
-1: Exclusion mode (Machines in Instances do not take effect, remaining machines take effect). At this point, Instances is selectable (Empty list means all machines take effect). 
-     * @return Exclude Whether to exclude the mode
+0: Inclusion mode (only for the Real Server in Instances). At this point, Instances is required.
+1: Exclusion mode (machines in Instances do not take effect, remaining machines take effect). At this point, Instances is selectable. An empty list means all machines take effect. 
+     * @return Exclude Whether to exclude mode
 Enumeration values:
-0: Inclusion mode (only takes effect on the Real Server in Instances). At this point, Instances is required.
-1: Exclusion mode (Machines in Instances do not take effect, remaining machines take effect). At this point, Instances is selectable (Empty list means all machines take effect).
+0: Inclusion mode (only for the Real Server in Instances). At this point, Instances is required.
+1: Exclusion mode (machines in Instances do not take effect, remaining machines take effect). At this point, Instances is selectable. An empty list means all machines take effect.
      */
     public Long getExclude() {
         return this.Exclude;
     }
 
     /**
-     * Set Whether to exclude the mode
+     * Set Whether to exclude mode
 Enumeration values:
-0: Inclusion mode (only takes effect on the Real Server in Instances). At this point, Instances is required.
-1: Exclusion mode (Machines in Instances do not take effect, remaining machines take effect). At this point, Instances is selectable (Empty list means all machines take effect).
-     * @param Exclude Whether to exclude the mode
+0: Inclusion mode (only for the Real Server in Instances). At this point, Instances is required.
+1: Exclusion mode (machines in Instances do not take effect, remaining machines take effect). At this point, Instances is selectable. An empty list means all machines take effect.
+     * @param Exclude Whether to exclude mode
 Enumeration values:
-0: Inclusion mode (only takes effect on the Real Server in Instances). At this point, Instances is required.
-1: Exclusion mode (Machines in Instances do not take effect, remaining machines take effect). At this point, Instances is selectable (Empty list means all machines take effect).
+0: Inclusion mode (only for the Real Server in Instances). At this point, Instances is required.
+1: Exclusion mode (machines in Instances do not take effect, remaining machines take effect). At this point, Instances is selectable. An empty list means all machines take effect.
      */
     public void setExclude(Long Exclude) {
         this.Exclude = Exclude;
     }
 
     /**
-     * Get Machine instance ID list. Required when Exclude is 0, means only these machines can access the credential; Option when Exclude is 1, means these machines cannot access the credential (Empty list means all machines take effect).
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Instances Machine instance ID list. Required when Exclude is 0, means only these machines can access the credential; Option when Exclude is 1, means these machines cannot access the credential (Empty list means all machines take effect).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get List of machine instance IDs. Required when Exclude is 0, means only these machines can access the credential. Optional when Exclude is 1, means these machines cannot access the credential (Empty list means all machines take effect) 
+     * @return Instances List of machine instance IDs. Required when Exclude is 0, means only these machines can access the credential. Optional when Exclude is 1, means these machines cannot access the credential (Empty list means all machines take effect)
      */
     public String [] getInstances() {
         return this.Instances;
     }
 
     /**
-     * Set Machine instance ID list. Required when Exclude is 0, means only these machines can access the credential; Option when Exclude is 1, means these machines cannot access the credential (Empty list means all machines take effect).
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Instances Machine instance ID list. Required when Exclude is 0, means only these machines can access the credential; Option when Exclude is 1, means these machines cannot access the credential (Empty list means all machines take effect).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set List of machine instance IDs. Required when Exclude is 0, means only these machines can access the credential. Optional when Exclude is 1, means these machines cannot access the credential (Empty list means all machines take effect)
+     * @param Instances List of machine instance IDs. Required when Exclude is 0, means only these machines can access the credential. Optional when Exclude is 1, means these machines cannot access the credential (Empty list means all machines take effect)
      */
     public void setInstances(String [] Instances) {
         this.Instances = Instances;

@@ -38,14 +38,14 @@ public class DescribeSubUserInfoResponse extends AbstractModel {
     private SubUserInfo [] Data;
 
     /**
-    * Manufacturer list
+    * Manufacturer enumeration list
     */
     @SerializedName("CloudTypeLst")
     @Expose
     private FilterDataObject [] CloudTypeLst;
 
     /**
-    * Enumerate appid belonging to main account
+    * appid list of the main account
     */
     @SerializedName("OwnerAppIDLst")
     @Expose
@@ -91,32 +91,32 @@ public class DescribeSubUserInfoResponse extends AbstractModel {
     }
 
     /**
-     * Get Manufacturer list 
-     * @return CloudTypeLst Manufacturer list
+     * Get Manufacturer enumeration list 
+     * @return CloudTypeLst Manufacturer enumeration list
      */
     public FilterDataObject [] getCloudTypeLst() {
         return this.CloudTypeLst;
     }
 
     /**
-     * Set Manufacturer list
-     * @param CloudTypeLst Manufacturer list
+     * Set Manufacturer enumeration list
+     * @param CloudTypeLst Manufacturer enumeration list
      */
     public void setCloudTypeLst(FilterDataObject [] CloudTypeLst) {
         this.CloudTypeLst = CloudTypeLst;
     }
 
     /**
-     * Get Enumerate appid belonging to main account 
-     * @return OwnerAppIDLst Enumerate appid belonging to main account
+     * Get appid list of the main account 
+     * @return OwnerAppIDLst appid list of the main account
      */
     public FilterDataObject [] getOwnerAppIDLst() {
         return this.OwnerAppIDLst;
     }
 
     /**
-     * Set Enumerate appid belonging to main account
-     * @param OwnerAppIDLst Enumerate appid belonging to main account
+     * Set appid list of the main account
+     * @param OwnerAppIDLst appid list of the main account
      */
     public void setOwnerAppIDLst(FilterDataObject [] OwnerAppIDLst) {
         this.OwnerAppIDLst = OwnerAppIDLst;

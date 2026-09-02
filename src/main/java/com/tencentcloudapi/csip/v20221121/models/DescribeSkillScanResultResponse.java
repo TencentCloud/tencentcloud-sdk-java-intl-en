@@ -26,9 +26,9 @@ public class DescribeSkillScanResultResponse extends AbstractModel {
     /**
     * Detection status
 Enumeration value:
-SUCCESS: Detection completed, results returned.
-SCANNING: Detection in progress
-NOT_FOUND: No detection record.
+SUCCESS: Detection complete, results returned
+SCANNING: detection in progress
+NOT_FOUND: No detection record
 FAILED: Detection failed
     */
     @SerializedName("Status")
@@ -52,15 +52,15 @@ FAILED: Detection failed
     /**
      * Get Detection status
 Enumeration value:
-SUCCESS: Detection completed, results returned.
-SCANNING: Detection in progress
-NOT_FOUND: No detection record.
+SUCCESS: Detection complete, results returned
+SCANNING: detection in progress
+NOT_FOUND: No detection record
 FAILED: Detection failed 
      * @return Status Detection status
 Enumeration value:
-SUCCESS: Detection completed, results returned.
-SCANNING: Detection in progress
-NOT_FOUND: No detection record.
+SUCCESS: Detection complete, results returned
+SCANNING: detection in progress
+NOT_FOUND: No detection record
 FAILED: Detection failed
      */
     public String getStatus() {
@@ -70,15 +70,15 @@ FAILED: Detection failed
     /**
      * Set Detection status
 Enumeration value:
-SUCCESS: Detection completed, results returned.
-SCANNING: Detection in progress
-NOT_FOUND: No detection record.
+SUCCESS: Detection complete, results returned
+SCANNING: detection in progress
+NOT_FOUND: No detection record
 FAILED: Detection failed
      * @param Status Detection status
 Enumeration value:
-SUCCESS: Detection completed, results returned.
-SCANNING: Detection in progress
-NOT_FOUND: No detection record.
+SUCCESS: Detection complete, results returned
+SCANNING: detection in progress
+NOT_FOUND: No detection record
 FAILED: Detection failed
      */
     public void setStatus(String Status) {

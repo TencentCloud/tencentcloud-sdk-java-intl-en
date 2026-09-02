@@ -59,42 +59,42 @@ public class DescribeCFWAssetStatisticsResponse extends AbstractModel {
     private Long CVMAssetTotal;
 
     /**
-    * Configuration risk.
+    * Configuration risk
     */
     @SerializedName("CFGTotal")
     @Expose
     private Long CFGTotal;
 
     /**
-    * Port risk.
+    * Port risk
     */
     @SerializedName("PortTotal")
     @Expose
     private Long PortTotal;
 
     /**
-    * Content risk.
+    * Content risk
     */
     @SerializedName("WebsiteTotal")
     @Expose
     private Long WebsiteTotal;
 
     /**
-    * Risk service exposure.
+    * Risk service exposure
     */
     @SerializedName("ServerTotal")
     @Expose
     private Long ServerTotal;
 
     /**
-    * Weak password risk.
+    * Weak password risk
     */
     @SerializedName("WeakPasswordTotal")
     @Expose
     private Long WeakPasswordTotal;
 
     /**
-    * Vulnerability risk.
+    * Vulnerability risk
     */
     @SerializedName("VULTotal")
     @Expose
@@ -188,96 +188,96 @@ public class DescribeCFWAssetStatisticsResponse extends AbstractModel {
     }
 
     /**
-     * Get Configuration risk. 
-     * @return CFGTotal Configuration risk.
+     * Get Configuration risk 
+     * @return CFGTotal Configuration risk
      */
     public Long getCFGTotal() {
         return this.CFGTotal;
     }
 
     /**
-     * Set Configuration risk.
-     * @param CFGTotal Configuration risk.
+     * Set Configuration risk
+     * @param CFGTotal Configuration risk
      */
     public void setCFGTotal(Long CFGTotal) {
         this.CFGTotal = CFGTotal;
     }
 
     /**
-     * Get Port risk. 
-     * @return PortTotal Port risk.
+     * Get Port risk 
+     * @return PortTotal Port risk
      */
     public Long getPortTotal() {
         return this.PortTotal;
     }
 
     /**
-     * Set Port risk.
-     * @param PortTotal Port risk.
+     * Set Port risk
+     * @param PortTotal Port risk
      */
     public void setPortTotal(Long PortTotal) {
         this.PortTotal = PortTotal;
     }
 
     /**
-     * Get Content risk. 
-     * @return WebsiteTotal Content risk.
+     * Get Content risk 
+     * @return WebsiteTotal Content risk
      */
     public Long getWebsiteTotal() {
         return this.WebsiteTotal;
     }
 
     /**
-     * Set Content risk.
-     * @param WebsiteTotal Content risk.
+     * Set Content risk
+     * @param WebsiteTotal Content risk
      */
     public void setWebsiteTotal(Long WebsiteTotal) {
         this.WebsiteTotal = WebsiteTotal;
     }
 
     /**
-     * Get Risk service exposure. 
-     * @return ServerTotal Risk service exposure.
+     * Get Risk service exposure 
+     * @return ServerTotal Risk service exposure
      */
     public Long getServerTotal() {
         return this.ServerTotal;
     }
 
     /**
-     * Set Risk service exposure.
-     * @param ServerTotal Risk service exposure.
+     * Set Risk service exposure
+     * @param ServerTotal Risk service exposure
      */
     public void setServerTotal(Long ServerTotal) {
         this.ServerTotal = ServerTotal;
     }
 
     /**
-     * Get Weak password risk. 
-     * @return WeakPasswordTotal Weak password risk.
+     * Get Weak password risk 
+     * @return WeakPasswordTotal Weak password risk
      */
     public Long getWeakPasswordTotal() {
         return this.WeakPasswordTotal;
     }
 
     /**
-     * Set Weak password risk.
-     * @param WeakPasswordTotal Weak password risk.
+     * Set Weak password risk
+     * @param WeakPasswordTotal Weak password risk
      */
     public void setWeakPasswordTotal(Long WeakPasswordTotal) {
         this.WeakPasswordTotal = WeakPasswordTotal;
     }
 
     /**
-     * Get Vulnerability risk. 
-     * @return VULTotal Vulnerability risk.
+     * Get Vulnerability risk 
+     * @return VULTotal Vulnerability risk
      */
     public Long getVULTotal() {
         return this.VULTotal;
     }
 
     /**
-     * Set Vulnerability risk.
-     * @param VULTotal Vulnerability risk.
+     * Set Vulnerability risk
+     * @param VULTotal Vulnerability risk
      */
     public void setVULTotal(Long VULTotal) {
         this.VULTotal = VULTotal;

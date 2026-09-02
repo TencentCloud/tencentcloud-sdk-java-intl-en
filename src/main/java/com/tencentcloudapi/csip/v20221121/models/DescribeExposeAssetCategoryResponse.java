@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeExposeAssetCategoryResponse extends AbstractModel {
 
     /**
-    * Cloud boundary analytics asset classification list.
+    * Cloud boundary analysis asset classification list
     */
     @SerializedName("ExposeAssetTypeList")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeExposeAssetCategoryResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Cloud boundary analytics asset classification list. 
-     * @return ExposeAssetTypeList Cloud boundary analytics asset classification list.
+     * Get Cloud boundary analysis asset classification list 
+     * @return ExposeAssetTypeList Cloud boundary analysis asset classification list
      */
     public ExposeAssetTypeItem [] getExposeAssetTypeList() {
         return this.ExposeAssetTypeList;
     }
 
     /**
-     * Set Cloud boundary analytics asset classification list.
-     * @param ExposeAssetTypeList Cloud boundary analytics asset classification list.
+     * Set Cloud boundary analysis asset classification list
+     * @param ExposeAssetTypeList Cloud boundary analysis asset classification list
      */
     public void setExposeAssetTypeList(ExposeAssetTypeItem [] ExposeAssetTypeList) {
         this.ExposeAssetTypeList = ExposeAssetTypeList;

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class AccessKeyUser extends AbstractModel {
 
     /**
-    * Account ID.
+    * Account ID
     */
     @SerializedName("ID")
     @Expose
@@ -38,23 +38,23 @@ public class AccessKeyUser extends AbstractModel {
     private String Name;
 
     /**
-    * 0 root account 1 sub-account.
+    * 0 Root account 1 Sub-account
     */
     @SerializedName("Type")
     @Expose
     private Long Type;
 
     /**
-    * Access method.
+    * Access method
 0 API
-1 console and API.
+1 Console and API
     */
     @SerializedName("AccessType")
     @Expose
     private Long AccessType;
 
     /**
-    * Security recommendation enumerate 0 normal 1 process immediately 2 recommend reinforcement.
+    * Security advice. Enumerated values: 0: Normal. 1: Process now. 2: Hardening recommended.
     */
     @SerializedName("Advice")
     @Expose
@@ -75,42 +75,42 @@ public class AccessKeyUser extends AbstractModel {
     private AccessKeyAlarmInfo [] AccessKeyRiskList;
 
     /**
-    * Account associate APPID.
+    * APPID of the account
     */
     @SerializedName("AppID")
     @Expose
     private Long AppID;
 
     /**
-    * Nickname of the main account.
+    * Main account nickname
     */
     @SerializedName("Nickname")
     @Expose
     private String Nickname;
 
     /**
-    * Sub-Account nickname.
+    * Sub-account nickname
     */
     @SerializedName("SubNickname")
     @Expose
     private String SubNickname;
 
     /**
-    * Account Uin belonging to main account.
+    * Uin of the main account to which the account belongs
     */
     @SerializedName("Uin")
     @Expose
     private String Uin;
 
     /**
-    * Account self uin, same as root account uin when it is the root account.
+    * Account's own uin. For a root account, it is the same as the root account uin.
     */
     @SerializedName("SubUin")
     @Expose
     private String SubUin;
 
     /**
-    * Login IP.
+    * Login IP
     */
     @SerializedName("LoginIP")
     @Expose
@@ -124,7 +124,7 @@ public class AccessKeyUser extends AbstractModel {
     private String LoginLocation;
 
     /**
-    * Log-In time.
+    * Log-in time
     */
     @SerializedName("LoginTime")
     @Expose
@@ -138,48 +138,48 @@ public class AccessKeyUser extends AbstractModel {
     private String ISP;
 
     /**
-    * Whether operation protection is enabled.
-0 not enabled.
-1: enabled.
+    * Whether operation protection is enabled
+0: not enabled
+1: On.
     */
     @SerializedName("ActionFlag")
     @Expose
     private Long ActionFlag;
 
     /**
-    * Is login protection enabled?.
-0 not enabled.
-1: enabled.
+    * Whether login protection is enabled
+0: not enabled
+1: On.
     */
     @SerializedName("LoginFlag")
     @Expose
     private Long LoginFlag;
 
     /**
-    * 0 means detected. 1 means detecting.
+    * 0 indicates detected, and 1 indicates in-progress detection.
     */
     @SerializedName("CheckStatus")
     @Expose
     private Long CheckStatus;
 
     /**
-    * Cloud vendor type 0: tencent cloud 1: amazon web services 2: microsoft azure 3: google cloud 4: alibaba cloud 5: huawei cloud.
+    * Cloud vendor type. 0: Tencent Cloud. 1: Amazon Web Services. 2: Microsoft Azure. 3: Google Cloud. 4: Alibaba Cloud. 5: Huawei Cloud
     */
     @SerializedName("CloudType")
     @Expose
     private Long CloudType;
 
     /**
-     * Get Account ID. 
-     * @return ID Account ID.
+     * Get Account ID 
+     * @return ID Account ID
      */
     public Long getID() {
         return this.ID;
     }
 
     /**
-     * Set Account ID.
-     * @param ID Account ID.
+     * Set Account ID
+     * @param ID Account ID
      */
     public void setID(Long ID) {
         this.ID = ID;
@@ -202,56 +202,56 @@ public class AccessKeyUser extends AbstractModel {
     }
 
     /**
-     * Get 0 root account 1 sub-account. 
-     * @return Type 0 root account 1 sub-account.
+     * Get 0 Root account 1 Sub-account 
+     * @return Type 0 Root account 1 Sub-account
      */
     public Long getType() {
         return this.Type;
     }
 
     /**
-     * Set 0 root account 1 sub-account.
-     * @param Type 0 root account 1 sub-account.
+     * Set 0 Root account 1 Sub-account
+     * @param Type 0 Root account 1 Sub-account
      */
     public void setType(Long Type) {
         this.Type = Type;
     }
 
     /**
-     * Get Access method.
+     * Get Access method
 0 API
-1 console and API. 
-     * @return AccessType Access method.
+1 Console and API 
+     * @return AccessType Access method
 0 API
-1 console and API.
+1 Console and API
      */
     public Long getAccessType() {
         return this.AccessType;
     }
 
     /**
-     * Set Access method.
+     * Set Access method
 0 API
-1 console and API.
-     * @param AccessType Access method.
+1 Console and API
+     * @param AccessType Access method
 0 API
-1 console and API.
+1 Console and API
      */
     public void setAccessType(Long AccessType) {
         this.AccessType = AccessType;
     }
 
     /**
-     * Get Security recommendation enumerate 0 normal 1 process immediately 2 recommend reinforcement. 
-     * @return Advice Security recommendation enumerate 0 normal 1 process immediately 2 recommend reinforcement.
+     * Get Security advice. Enumerated values: 0: Normal. 1: Process now. 2: Hardening recommended. 
+     * @return Advice Security advice. Enumerated values: 0: Normal. 1: Process now. 2: Hardening recommended.
      */
     public Long getAdvice() {
         return this.Advice;
     }
 
     /**
-     * Set Security recommendation enumerate 0 normal 1 process immediately 2 recommend reinforcement.
-     * @param Advice Security recommendation enumerate 0 normal 1 process immediately 2 recommend reinforcement.
+     * Set Security advice. Enumerated values: 0: Normal. 1: Process now. 2: Hardening recommended.
+     * @param Advice Security advice. Enumerated values: 0: Normal. 1: Process now. 2: Hardening recommended.
      */
     public void setAdvice(Long Advice) {
         this.Advice = Advice;
@@ -290,96 +290,96 @@ public class AccessKeyUser extends AbstractModel {
     }
 
     /**
-     * Get Account associate APPID. 
-     * @return AppID Account associate APPID.
+     * Get APPID of the account 
+     * @return AppID APPID of the account
      */
     public Long getAppID() {
         return this.AppID;
     }
 
     /**
-     * Set Account associate APPID.
-     * @param AppID Account associate APPID.
+     * Set APPID of the account
+     * @param AppID APPID of the account
      */
     public void setAppID(Long AppID) {
         this.AppID = AppID;
     }
 
     /**
-     * Get Nickname of the main account. 
-     * @return Nickname Nickname of the main account.
+     * Get Main account nickname 
+     * @return Nickname Main account nickname
      */
     public String getNickname() {
         return this.Nickname;
     }
 
     /**
-     * Set Nickname of the main account.
-     * @param Nickname Nickname of the main account.
+     * Set Main account nickname
+     * @param Nickname Main account nickname
      */
     public void setNickname(String Nickname) {
         this.Nickname = Nickname;
     }
 
     /**
-     * Get Sub-Account nickname. 
-     * @return SubNickname Sub-Account nickname.
+     * Get Sub-account nickname 
+     * @return SubNickname Sub-account nickname
      */
     public String getSubNickname() {
         return this.SubNickname;
     }
 
     /**
-     * Set Sub-Account nickname.
-     * @param SubNickname Sub-Account nickname.
+     * Set Sub-account nickname
+     * @param SubNickname Sub-account nickname
      */
     public void setSubNickname(String SubNickname) {
         this.SubNickname = SubNickname;
     }
 
     /**
-     * Get Account Uin belonging to main account. 
-     * @return Uin Account Uin belonging to main account.
+     * Get Uin of the main account to which the account belongs 
+     * @return Uin Uin of the main account to which the account belongs
      */
     public String getUin() {
         return this.Uin;
     }
 
     /**
-     * Set Account Uin belonging to main account.
-     * @param Uin Account Uin belonging to main account.
+     * Set Uin of the main account to which the account belongs
+     * @param Uin Uin of the main account to which the account belongs
      */
     public void setUin(String Uin) {
         this.Uin = Uin;
     }
 
     /**
-     * Get Account self uin, same as root account uin when it is the root account. 
-     * @return SubUin Account self uin, same as root account uin when it is the root account.
+     * Get Account's own uin. For a root account, it is the same as the root account uin. 
+     * @return SubUin Account's own uin. For a root account, it is the same as the root account uin.
      */
     public String getSubUin() {
         return this.SubUin;
     }
 
     /**
-     * Set Account self uin, same as root account uin when it is the root account.
-     * @param SubUin Account self uin, same as root account uin when it is the root account.
+     * Set Account's own uin. For a root account, it is the same as the root account uin.
+     * @param SubUin Account's own uin. For a root account, it is the same as the root account uin.
      */
     public void setSubUin(String SubUin) {
         this.SubUin = SubUin;
     }
 
     /**
-     * Get Login IP. 
-     * @return LoginIP Login IP.
+     * Get Login IP 
+     * @return LoginIP Login IP
      */
     public String getLoginIP() {
         return this.LoginIP;
     }
 
     /**
-     * Set Login IP.
-     * @param LoginIP Login IP.
+     * Set Login IP
+     * @param LoginIP Login IP
      */
     public void setLoginIP(String LoginIP) {
         this.LoginIP = LoginIP;
@@ -402,16 +402,16 @@ public class AccessKeyUser extends AbstractModel {
     }
 
     /**
-     * Get Log-In time. 
-     * @return LoginTime Log-In time.
+     * Get Log-in time 
+     * @return LoginTime Log-in time
      */
     public String getLoginTime() {
         return this.LoginTime;
     }
 
     /**
-     * Set Log-In time.
-     * @param LoginTime Log-In time.
+     * Set Log-in time
+     * @param LoginTime Log-in time
      */
     public void setLoginTime(String LoginTime) {
         this.LoginTime = LoginTime;
@@ -434,80 +434,80 @@ public class AccessKeyUser extends AbstractModel {
     }
 
     /**
-     * Get Whether operation protection is enabled.
-0 not enabled.
-1: enabled. 
-     * @return ActionFlag Whether operation protection is enabled.
-0 not enabled.
-1: enabled.
+     * Get Whether operation protection is enabled
+0: not enabled
+1: On. 
+     * @return ActionFlag Whether operation protection is enabled
+0: not enabled
+1: On.
      */
     public Long getActionFlag() {
         return this.ActionFlag;
     }
 
     /**
-     * Set Whether operation protection is enabled.
-0 not enabled.
-1: enabled.
-     * @param ActionFlag Whether operation protection is enabled.
-0 not enabled.
-1: enabled.
+     * Set Whether operation protection is enabled
+0: not enabled
+1: On.
+     * @param ActionFlag Whether operation protection is enabled
+0: not enabled
+1: On.
      */
     public void setActionFlag(Long ActionFlag) {
         this.ActionFlag = ActionFlag;
     }
 
     /**
-     * Get Is login protection enabled?.
-0 not enabled.
-1: enabled. 
-     * @return LoginFlag Is login protection enabled?.
-0 not enabled.
-1: enabled.
+     * Get Whether login protection is enabled
+0: not enabled
+1: On. 
+     * @return LoginFlag Whether login protection is enabled
+0: not enabled
+1: On.
      */
     public Long getLoginFlag() {
         return this.LoginFlag;
     }
 
     /**
-     * Set Is login protection enabled?.
-0 not enabled.
-1: enabled.
-     * @param LoginFlag Is login protection enabled?.
-0 not enabled.
-1: enabled.
+     * Set Whether login protection is enabled
+0: not enabled
+1: On.
+     * @param LoginFlag Whether login protection is enabled
+0: not enabled
+1: On.
      */
     public void setLoginFlag(Long LoginFlag) {
         this.LoginFlag = LoginFlag;
     }
 
     /**
-     * Get 0 means detected. 1 means detecting. 
-     * @return CheckStatus 0 means detected. 1 means detecting.
+     * Get 0 indicates detected, and 1 indicates in-progress detection. 
+     * @return CheckStatus 0 indicates detected, and 1 indicates in-progress detection.
      */
     public Long getCheckStatus() {
         return this.CheckStatus;
     }
 
     /**
-     * Set 0 means detected. 1 means detecting.
-     * @param CheckStatus 0 means detected. 1 means detecting.
+     * Set 0 indicates detected, and 1 indicates in-progress detection.
+     * @param CheckStatus 0 indicates detected, and 1 indicates in-progress detection.
      */
     public void setCheckStatus(Long CheckStatus) {
         this.CheckStatus = CheckStatus;
     }
 
     /**
-     * Get Cloud vendor type 0: tencent cloud 1: amazon web services 2: microsoft azure 3: google cloud 4: alibaba cloud 5: huawei cloud. 
-     * @return CloudType Cloud vendor type 0: tencent cloud 1: amazon web services 2: microsoft azure 3: google cloud 4: alibaba cloud 5: huawei cloud.
+     * Get Cloud vendor type. 0: Tencent Cloud. 1: Amazon Web Services. 2: Microsoft Azure. 3: Google Cloud. 4: Alibaba Cloud. 5: Huawei Cloud 
+     * @return CloudType Cloud vendor type. 0: Tencent Cloud. 1: Amazon Web Services. 2: Microsoft Azure. 3: Google Cloud. 4: Alibaba Cloud. 5: Huawei Cloud
      */
     public Long getCloudType() {
         return this.CloudType;
     }
 
     /**
-     * Set Cloud vendor type 0: tencent cloud 1: amazon web services 2: microsoft azure 3: google cloud 4: alibaba cloud 5: huawei cloud.
-     * @param CloudType Cloud vendor type 0: tencent cloud 1: amazon web services 2: microsoft azure 3: google cloud 4: alibaba cloud 5: huawei cloud.
+     * Set Cloud vendor type. 0: Tencent Cloud. 1: Amazon Web Services. 2: Microsoft Azure. 3: Google Cloud. 4: Alibaba Cloud. 5: Huawei Cloud
+     * @param CloudType Cloud vendor type. 0: Tencent Cloud. 1: Amazon Web Services. 2: Microsoft Azure. 3: Google Cloud. 4: Alibaba Cloud. 5: Huawei Cloud
      */
     public void setCloudType(Long CloudType) {
         this.CloudType = CloudType;

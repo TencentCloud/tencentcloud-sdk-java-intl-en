@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class AssetViewWeakPassRisk extends AbstractModel {
 
     /**
-    * Affected assets
+    * Affect assets
     */
     @SerializedName("AffectAsset")
     @Expose
     private String AffectAsset;
 
     /**
-    * Risk level: low - low risk, high - high risk, middle - medium risk, info - notification, extreme - critical.
+    * Risk level. low: low risk, high: high risk, middle: medium risk, info: notification, extreme: critical.
     */
     @SerializedName("Level")
     @Expose
@@ -45,70 +45,70 @@ public class AssetViewWeakPassRisk extends AbstractModel {
     private String InstanceType;
 
     /**
-    * Components
+    * Component
     */
     @SerializedName("Component")
     @Expose
     private String Component;
 
     /**
-    * Service
+    * Service.
     */
     @SerializedName("Service")
     @Expose
     private String Service;
 
     /**
-    * Last detected 
+    * Latest Recognition Time
     */
     @SerializedName("RecentTime")
     @Expose
     private String RecentTime;
 
     /**
-    * First detected
+    * First Recognition Time
     */
     @SerializedName("FirstTime")
     @Expose
     private String FirstTime;
 
     /**
-    * Status of the risk. `0`: Not handled, `1`: Handled; `2`: Ignored
+    * Status. 0-Unprocessed; 1-Disposed; 2-Ignored.
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * ID, handle risk usage
+    * ID, fix risks
     */
     @SerializedName("Id")
     @Expose
     private String Id;
 
     /**
-    * Frontend index
+    * Front-end Index
     */
     @SerializedName("Index")
     @Expose
     private String Index;
 
     /**
-    * Instance ID
+    * Instance ID.
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Instance name
+    * Instance name.
     */
     @SerializedName("InstanceName")
     @Expose
     private String InstanceName;
 
     /**
-    * User AppId
+    * User appid.
     */
     @SerializedName("AppId")
     @Expose
@@ -136,7 +136,7 @@ public class AssetViewWeakPassRisk extends AbstractModel {
     private String PasswordType;
 
     /**
-    * Source of the task
+    * Source.
     */
     @SerializedName("From")
     @Expose
@@ -157,14 +157,14 @@ public class AssetViewWeakPassRisk extends AbstractModel {
     private String VULURL;
 
     /**
-    * Fix suggestion
+    * Fixing suggestion
     */
     @SerializedName("Fix")
     @Expose
     private String Fix;
 
     /**
-    * proof
+    * Proof
     */
     @SerializedName("Payload")
     @Expose
@@ -178,32 +178,32 @@ public class AssetViewWeakPassRisk extends AbstractModel {
     private Long Port;
 
     /**
-     * Get Affected assets 
-     * @return AffectAsset Affected assets
+     * Get Affect assets 
+     * @return AffectAsset Affect assets
      */
     public String getAffectAsset() {
         return this.AffectAsset;
     }
 
     /**
-     * Set Affected assets
-     * @param AffectAsset Affected assets
+     * Set Affect assets
+     * @param AffectAsset Affect assets
      */
     public void setAffectAsset(String AffectAsset) {
         this.AffectAsset = AffectAsset;
     }
 
     /**
-     * Get Risk level: low - low risk, high - high risk, middle - medium risk, info - notification, extreme - critical. 
-     * @return Level Risk level: low - low risk, high - high risk, middle - medium risk, info - notification, extreme - critical.
+     * Get Risk level. low: low risk, high: high risk, middle: medium risk, info: notification, extreme: critical. 
+     * @return Level Risk level. low: low risk, high: high risk, middle: medium risk, info: notification, extreme: critical.
      */
     public String getLevel() {
         return this.Level;
     }
 
     /**
-     * Set Risk level: low - low risk, high - high risk, middle - medium risk, info - notification, extreme - critical.
-     * @param Level Risk level: low - low risk, high - high risk, middle - medium risk, info - notification, extreme - critical.
+     * Set Risk level. low: low risk, high: high risk, middle: medium risk, info: notification, extreme: critical.
+     * @param Level Risk level. low: low risk, high: high risk, middle: medium risk, info: notification, extreme: critical.
      */
     public void setLevel(String Level) {
         this.Level = Level;
@@ -226,160 +226,160 @@ public class AssetViewWeakPassRisk extends AbstractModel {
     }
 
     /**
-     * Get Components 
-     * @return Component Components
+     * Get Component 
+     * @return Component Component
      */
     public String getComponent() {
         return this.Component;
     }
 
     /**
-     * Set Components
-     * @param Component Components
+     * Set Component
+     * @param Component Component
      */
     public void setComponent(String Component) {
         this.Component = Component;
     }
 
     /**
-     * Get Service 
-     * @return Service Service
+     * Get Service. 
+     * @return Service Service.
      */
     public String getService() {
         return this.Service;
     }
 
     /**
-     * Set Service
-     * @param Service Service
+     * Set Service.
+     * @param Service Service.
      */
     public void setService(String Service) {
         this.Service = Service;
     }
 
     /**
-     * Get Last detected  
-     * @return RecentTime Last detected 
+     * Get Latest Recognition Time 
+     * @return RecentTime Latest Recognition Time
      */
     public String getRecentTime() {
         return this.RecentTime;
     }
 
     /**
-     * Set Last detected 
-     * @param RecentTime Last detected 
+     * Set Latest Recognition Time
+     * @param RecentTime Latest Recognition Time
      */
     public void setRecentTime(String RecentTime) {
         this.RecentTime = RecentTime;
     }
 
     /**
-     * Get First detected 
-     * @return FirstTime First detected
+     * Get First Recognition Time 
+     * @return FirstTime First Recognition Time
      */
     public String getFirstTime() {
         return this.FirstTime;
     }
 
     /**
-     * Set First detected
-     * @param FirstTime First detected
+     * Set First Recognition Time
+     * @param FirstTime First Recognition Time
      */
     public void setFirstTime(String FirstTime) {
         this.FirstTime = FirstTime;
     }
 
     /**
-     * Get Status of the risk. `0`: Not handled, `1`: Handled; `2`: Ignored 
-     * @return Status Status of the risk. `0`: Not handled, `1`: Handled; `2`: Ignored
+     * Get Status. 0-Unprocessed; 1-Disposed; 2-Ignored. 
+     * @return Status Status. 0-Unprocessed; 1-Disposed; 2-Ignored.
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Status of the risk. `0`: Not handled, `1`: Handled; `2`: Ignored
-     * @param Status Status of the risk. `0`: Not handled, `1`: Handled; `2`: Ignored
+     * Set Status. 0-Unprocessed; 1-Disposed; 2-Ignored.
+     * @param Status Status. 0-Unprocessed; 1-Disposed; 2-Ignored.
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get ID, handle risk usage 
-     * @return Id ID, handle risk usage
+     * Get ID, fix risks 
+     * @return Id ID, fix risks
      */
     public String getId() {
         return this.Id;
     }
 
     /**
-     * Set ID, handle risk usage
-     * @param Id ID, handle risk usage
+     * Set ID, fix risks
+     * @param Id ID, fix risks
      */
     public void setId(String Id) {
         this.Id = Id;
     }
 
     /**
-     * Get Frontend index 
-     * @return Index Frontend index
+     * Get Front-end Index 
+     * @return Index Front-end Index
      */
     public String getIndex() {
         return this.Index;
     }
 
     /**
-     * Set Frontend index
-     * @param Index Frontend index
+     * Set Front-end Index
+     * @param Index Front-end Index
      */
     public void setIndex(String Index) {
         this.Index = Index;
     }
 
     /**
-     * Get Instance ID 
-     * @return InstanceId Instance ID
+     * Get Instance ID. 
+     * @return InstanceId Instance ID.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Instance ID
-     * @param InstanceId Instance ID
+     * Set Instance ID.
+     * @param InstanceId Instance ID.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Instance name 
-     * @return InstanceName Instance name
+     * Get Instance name. 
+     * @return InstanceName Instance name.
      */
     public String getInstanceName() {
         return this.InstanceName;
     }
 
     /**
-     * Set Instance name
-     * @param InstanceName Instance name
+     * Set Instance name.
+     * @param InstanceName Instance name.
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;
     }
 
     /**
-     * Get User AppId 
-     * @return AppId User AppId
+     * Get User appid. 
+     * @return AppId User appid.
      */
     public String getAppId() {
         return this.AppId;
     }
 
     /**
-     * Set User AppId
-     * @param AppId User AppId
+     * Set User appid.
+     * @param AppId User appid.
      */
     public void setAppId(String AppId) {
         this.AppId = AppId;
@@ -434,16 +434,16 @@ public class AssetViewWeakPassRisk extends AbstractModel {
     }
 
     /**
-     * Get Source of the task 
-     * @return From Source of the task
+     * Get Source. 
+     * @return From Source.
      */
     public String getFrom() {
         return this.From;
     }
 
     /**
-     * Set Source of the task
-     * @param From Source of the task
+     * Set Source.
+     * @param From Source.
      */
     public void setFrom(String From) {
         this.From = From;
@@ -482,32 +482,32 @@ public class AssetViewWeakPassRisk extends AbstractModel {
     }
 
     /**
-     * Get Fix suggestion 
-     * @return Fix Fix suggestion
+     * Get Fixing suggestion 
+     * @return Fix Fixing suggestion
      */
     public String getFix() {
         return this.Fix;
     }
 
     /**
-     * Set Fix suggestion
-     * @param Fix Fix suggestion
+     * Set Fixing suggestion
+     * @param Fix Fixing suggestion
      */
     public void setFix(String Fix) {
         this.Fix = Fix;
     }
 
     /**
-     * Get proof 
-     * @return Payload proof
+     * Get Proof 
+     * @return Payload Proof
      */
     public String getPayload() {
         return this.Payload;
     }
 
     /**
-     * Set proof
-     * @param Payload proof
+     * Set Proof
+     * @param Payload Proof
      */
     public void setPayload(String Payload) {
         this.Payload = Payload;

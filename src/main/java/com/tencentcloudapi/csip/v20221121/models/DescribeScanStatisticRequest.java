@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class DescribeScanStatisticRequest extends AbstractModel {
 
     /**
-    * Group Account Member ID
+    * <p>Group account member id</p>
     */
     @SerializedName("MemberId")
     @Expose
     private String [] MemberId;
 
     /**
-    * Health check task id.
+    * Health check task id
     */
     @SerializedName("TaskLogId")
     @Expose
     private String TaskLogId;
 
     /**
-     * Get Group Account Member ID 
-     * @return MemberId Group Account Member ID
+     * Get <p>Group account member id</p> 
+     * @return MemberId <p>Group account member id</p>
      */
     public String [] getMemberId() {
         return this.MemberId;
     }
 
     /**
-     * Set Group Account Member ID
-     * @param MemberId Group Account Member ID
+     * Set <p>Group account member id</p>
+     * @param MemberId <p>Group account member id</p>
      */
     public void setMemberId(String [] MemberId) {
         this.MemberId = MemberId;
     }
 
     /**
-     * Get Health check task id. 
-     * @return TaskLogId Health check task id.
+     * Get Health check task id 
+     * @return TaskLogId Health check task id
      */
     public String getTaskLogId() {
         return this.TaskLogId;
     }
 
     /**
-     * Set Health check task id.
-     * @param TaskLogId Health check task id.
+     * Set Health check task id
+     * @param TaskLogId Health check task id
      */
     public void setTaskLogId(String TaskLogId) {
         this.TaskLogId = TaskLogId;

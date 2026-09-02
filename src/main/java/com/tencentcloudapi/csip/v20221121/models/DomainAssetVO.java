@@ -31,7 +31,7 @@ public class DomainAssetVO extends AbstractModel {
     private String [] AssetId;
 
     /**
-    * Asset Name
+    * Asset name
     */
     @SerializedName("AssetName")
     @Expose
@@ -59,7 +59,7 @@ public class DomainAssetVO extends AbstractModel {
     private Long WAFStatus;
 
     /**
-    * Asset Creation Time
+    * Asset creation time
     */
     @SerializedName("AssetCreateTime")
     @Expose
@@ -101,7 +101,7 @@ public class DomainAssetVO extends AbstractModel {
     private Long IsCloud;
 
     /**
-    * network attack
+    * Network attack
     */
     @SerializedName("Attack")
     @Expose
@@ -157,7 +157,7 @@ public class DomainAssetVO extends AbstractModel {
     private String LastScanTime;
 
     /**
-    * port risk
+    * Port risk
     */
     @SerializedName("PortRisk")
     @Expose
@@ -227,14 +227,14 @@ public class DomainAssetVO extends AbstractModel {
     private Tag [] Tag;
 
     /**
-    * Associated instance type
+    * Type of the associated instance
     */
     @SerializedName("SourceType")
     @Expose
     private String SourceType;
 
     /**
-    * Member ID information
+    * memberId information
     */
     @SerializedName("MemberId")
     @Expose
@@ -313,16 +313,16 @@ public class DomainAssetVO extends AbstractModel {
     }
 
     /**
-     * Get Asset Name 
-     * @return AssetName Asset Name
+     * Get Asset name 
+     * @return AssetName Asset name
      */
     public String [] getAssetName() {
         return this.AssetName;
     }
 
     /**
-     * Set Asset Name
-     * @param AssetName Asset Name
+     * Set Asset name
+     * @param AssetName Asset name
      */
     public void setAssetName(String [] AssetName) {
         this.AssetName = AssetName;
@@ -377,16 +377,16 @@ public class DomainAssetVO extends AbstractModel {
     }
 
     /**
-     * Get Asset Creation Time 
-     * @return AssetCreateTime Asset Creation Time
+     * Get Asset creation time 
+     * @return AssetCreateTime Asset creation time
      */
     public String getAssetCreateTime() {
         return this.AssetCreateTime;
     }
 
     /**
-     * Set Asset Creation Time
-     * @param AssetCreateTime Asset Creation Time
+     * Set Asset creation time
+     * @param AssetCreateTime Asset creation time
      */
     public void setAssetCreateTime(String AssetCreateTime) {
         this.AssetCreateTime = AssetCreateTime;
@@ -473,16 +473,16 @@ public class DomainAssetVO extends AbstractModel {
     }
 
     /**
-     * Get network attack 
-     * @return Attack network attack
+     * Get Network attack 
+     * @return Attack Network attack
      */
     public Long getAttack() {
         return this.Attack;
     }
 
     /**
-     * Set network attack
-     * @param Attack network attack
+     * Set Network attack
+     * @param Attack Network attack
      */
     public void setAttack(Long Attack) {
         this.Attack = Attack;
@@ -601,16 +601,16 @@ public class DomainAssetVO extends AbstractModel {
     }
 
     /**
-     * Get port risk 
-     * @return PortRisk port risk
+     * Get Port risk 
+     * @return PortRisk Port risk
      */
     public Long getPortRisk() {
         return this.PortRisk;
     }
 
     /**
-     * Set port risk
-     * @param PortRisk port risk
+     * Set Port risk
+     * @param PortRisk Port risk
      */
     public void setPortRisk(Long PortRisk) {
         this.PortRisk = PortRisk;
@@ -761,32 +761,32 @@ public class DomainAssetVO extends AbstractModel {
     }
 
     /**
-     * Get Associated instance type 
-     * @return SourceType Associated instance type
+     * Get Type of the associated instance 
+     * @return SourceType Type of the associated instance
      */
     public String getSourceType() {
         return this.SourceType;
     }
 
     /**
-     * Set Associated instance type
-     * @param SourceType Associated instance type
+     * Set Type of the associated instance
+     * @param SourceType Type of the associated instance
      */
     public void setSourceType(String SourceType) {
         this.SourceType = SourceType;
     }
 
     /**
-     * Get Member ID information 
-     * @return MemberId Member ID information
+     * Get memberId information 
+     * @return MemberId memberId information
      */
     public String getMemberId() {
         return this.MemberId;
     }
 
     /**
-     * Set Member ID information
-     * @param MemberId Member ID information
+     * Set memberId information
+     * @param MemberId memberId information
      */
     public void setMemberId(String MemberId) {
         this.MemberId = MemberId;

@@ -31,14 +31,14 @@ public class DBAssetVO extends AbstractModel {
     private String AssetId;
 
     /**
-    * Asset name.
+    * Asset name
     */
     @SerializedName("AssetName")
     @Expose
     private String AssetName;
 
     /**
-    * Asset type.
+    * Asset type
     */
     @SerializedName("AssetType")
     @Expose
@@ -52,7 +52,7 @@ public class DBAssetVO extends AbstractModel {
     private String VpcId;
 
     /**
-    * vpc Tag.
+    * vpc tag
     */
     @SerializedName("VpcName")
     @Expose
@@ -87,21 +87,21 @@ public class DBAssetVO extends AbstractModel {
     private String LastScanTime;
 
     /**
-    * Configuration risk.
+    * Configuration risk
     */
     @SerializedName("ConfigurationRisk")
     @Expose
     private Long ConfigurationRisk;
 
     /**
-    * Network attack.
+    * Network attack
     */
     @SerializedName("Attack")
     @Expose
     private Long Attack;
 
     /**
-    * Network access.
+    * Network access
     */
     @SerializedName("Access")
     @Expose
@@ -201,32 +201,32 @@ public class DBAssetVO extends AbstractModel {
     }
 
     /**
-     * Get Asset name. 
-     * @return AssetName Asset name.
+     * Get Asset name 
+     * @return AssetName Asset name
      */
     public String getAssetName() {
         return this.AssetName;
     }
 
     /**
-     * Set Asset name.
-     * @param AssetName Asset name.
+     * Set Asset name
+     * @param AssetName Asset name
      */
     public void setAssetName(String AssetName) {
         this.AssetName = AssetName;
     }
 
     /**
-     * Get Asset type. 
-     * @return AssetType Asset type.
+     * Get Asset type 
+     * @return AssetType Asset type
      */
     public String getAssetType() {
         return this.AssetType;
     }
 
     /**
-     * Set Asset type.
-     * @param AssetType Asset type.
+     * Set Asset type
+     * @param AssetType Asset type
      */
     public void setAssetType(String AssetType) {
         this.AssetType = AssetType;
@@ -249,16 +249,16 @@ public class DBAssetVO extends AbstractModel {
     }
 
     /**
-     * Get vpc Tag. 
-     * @return VpcName vpc Tag.
+     * Get vpc tag 
+     * @return VpcName vpc tag
      */
     public String getVpcName() {
         return this.VpcName;
     }
 
     /**
-     * Set vpc Tag.
-     * @param VpcName vpc Tag.
+     * Set vpc tag
+     * @param VpcName vpc tag
      */
     public void setVpcName(String VpcName) {
         this.VpcName = VpcName;
@@ -329,48 +329,48 @@ public class DBAssetVO extends AbstractModel {
     }
 
     /**
-     * Get Configuration risk. 
-     * @return ConfigurationRisk Configuration risk.
+     * Get Configuration risk 
+     * @return ConfigurationRisk Configuration risk
      */
     public Long getConfigurationRisk() {
         return this.ConfigurationRisk;
     }
 
     /**
-     * Set Configuration risk.
-     * @param ConfigurationRisk Configuration risk.
+     * Set Configuration risk
+     * @param ConfigurationRisk Configuration risk
      */
     public void setConfigurationRisk(Long ConfigurationRisk) {
         this.ConfigurationRisk = ConfigurationRisk;
     }
 
     /**
-     * Get Network attack. 
-     * @return Attack Network attack.
+     * Get Network attack 
+     * @return Attack Network attack
      */
     public Long getAttack() {
         return this.Attack;
     }
 
     /**
-     * Set Network attack.
-     * @param Attack Network attack.
+     * Set Network attack
+     * @param Attack Network attack
      */
     public void setAttack(Long Attack) {
         this.Attack = Attack;
     }
 
     /**
-     * Get Network access. 
-     * @return Access Network access.
+     * Get Network access 
+     * @return Access Network access
      */
     public Long getAccess() {
         return this.Access;
     }
 
     /**
-     * Set Network access.
-     * @param Access Network access.
+     * Set Network access
+     * @param Access Network access
      */
     public void setAccess(Long Access) {
         this.Access = Access;

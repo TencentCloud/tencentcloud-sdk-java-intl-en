@@ -31,7 +31,7 @@ public class DescribeCheckViewRisksRequest extends AbstractModel {
     private String [] MemberId;
 
     /**
-    * <p>Filter content</p>
+    * <p>Filter content.</p>
     */
     @SerializedName("Filters")
     @Expose
@@ -82,16 +82,16 @@ public class DescribeCheckViewRisksRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>Filter content</p> 
-     * @return Filters <p>Filter content</p>
+     * Get <p>Filter content.</p> 
+     * @return Filters <p>Filter content.</p>
      */
     public Filters [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set <p>Filter content</p>
-     * @param Filters <p>Filter content</p>
+     * Set <p>Filter content.</p>
+     * @param Filters <p>Filter content.</p>
      */
     public void setFilters(Filters [] Filters) {
         this.Filters = Filters;

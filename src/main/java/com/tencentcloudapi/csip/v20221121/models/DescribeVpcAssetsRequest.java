@@ -31,7 +31,7 @@ public class DescribeVpcAssetsRequest extends AbstractModel {
     private String [] MemberId;
 
     /**
-    * Filter parameters
+    * Filter parameters.
     */
     @SerializedName("Filter")
     @Expose
@@ -54,16 +54,16 @@ public class DescribeVpcAssetsRequest extends AbstractModel {
     }
 
     /**
-     * Get Filter parameters 
-     * @return Filter Filter parameters
+     * Get Filter parameters. 
+     * @return Filter Filter parameters.
      */
     public Filter getFilter() {
         return this.Filter;
     }
 
     /**
-     * Set Filter parameters
-     * @param Filter Filter parameters
+     * Set Filter parameters.
+     * @param Filter Filter parameters.
      */
     public void setFilter(Filter Filter) {
         this.Filter = Filter;

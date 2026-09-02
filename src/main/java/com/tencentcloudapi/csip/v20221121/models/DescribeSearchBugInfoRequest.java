@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class DescribeSearchBugInfoRequest extends AbstractModel {
 
     /**
-    * 1 when return emergency vulnerability, 2 when return emergency vulnerability list, 3 when collocation input CVEId field display vulnerability data
+    * Return urgent vulnerabilities when the value is 1, return the emergency vulnerability list when the value is 2, and use with the CVEId field as input to display the vulnerability data when the value is 3.
     */
     @SerializedName("Id")
     @Expose
     private String Id;
 
     /**
-    * CVE number of the vulnerability. It's required when `Id=3`.
+    * Pass in this parameter when id=3.
     */
     @SerializedName("CVEId")
     @Expose
     private String CVEId;
 
     /**
-     * Get 1 when return emergency vulnerability, 2 when return emergency vulnerability list, 3 when collocation input CVEId field display vulnerability data 
-     * @return Id 1 when return emergency vulnerability, 2 when return emergency vulnerability list, 3 when collocation input CVEId field display vulnerability data
+     * Get Return urgent vulnerabilities when the value is 1, return the emergency vulnerability list when the value is 2, and use with the CVEId field as input to display the vulnerability data when the value is 3. 
+     * @return Id Return urgent vulnerabilities when the value is 1, return the emergency vulnerability list when the value is 2, and use with the CVEId field as input to display the vulnerability data when the value is 3.
      */
     public String getId() {
         return this.Id;
     }
 
     /**
-     * Set 1 when return emergency vulnerability, 2 when return emergency vulnerability list, 3 when collocation input CVEId field display vulnerability data
-     * @param Id 1 when return emergency vulnerability, 2 when return emergency vulnerability list, 3 when collocation input CVEId field display vulnerability data
+     * Set Return urgent vulnerabilities when the value is 1, return the emergency vulnerability list when the value is 2, and use with the CVEId field as input to display the vulnerability data when the value is 3.
+     * @param Id Return urgent vulnerabilities when the value is 1, return the emergency vulnerability list when the value is 2, and use with the CVEId field as input to display the vulnerability data when the value is 3.
      */
     public void setId(String Id) {
         this.Id = Id;
     }
 
     /**
-     * Get CVE number of the vulnerability. It's required when `Id=3`. 
-     * @return CVEId CVE number of the vulnerability. It's required when `Id=3`.
+     * Get Pass in this parameter when id=3. 
+     * @return CVEId Pass in this parameter when id=3.
      */
     public String getCVEId() {
         return this.CVEId;
     }
 
     /**
-     * Set CVE number of the vulnerability. It's required when `Id=3`.
-     * @param CVEId CVE number of the vulnerability. It's required when `Id=3`.
+     * Set Pass in this parameter when id=3.
+     * @param CVEId Pass in this parameter when id=3.
      */
     public void setCVEId(String CVEId) {
         this.CVEId = CVEId;

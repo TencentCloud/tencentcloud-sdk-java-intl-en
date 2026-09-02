@@ -1,0 +1,185 @@
+/*
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+package com.tencentcloudapi.csip.v20221121.models;
+
+import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.annotations.Expose;
+import java.util.HashMap;
+
+public class ModifyNotifySettingAkRequest extends AbstractModel {
+
+    /**
+    * <p>Alarm type/severity (Type: AbnBehavior - exception behavior, LeakDetect - leakage detection; Severity: 1 - notification, 2 - low risk, 3 - medium risk, 4 - high risk, 5 - critical)</p>
+    */
+    @SerializedName("Alert")
+    @Expose
+    private LevelOption [] Alert;
+
+    /**
+    * <p>Alarm notification granularity</p><p>Enumeration values:</p><ul><li>0: Push by alert aggregation</li><li>1: Push by invocation record</li></ul>
+    */
+    @SerializedName("AlertGranularity")
+    @Expose
+    private Long AlertGranularity;
+
+    /**
+    * <p>Asset event</p><p>Enumeration values:</p><ul><li>NewAk: newly-added AK</li></ul>
+    */
+    @SerializedName("Asset")
+    @Expose
+    private String [] Asset;
+
+    /**
+    * <p>Notification start time</p><p>Parameter format: hh:mm:ss</p>
+    */
+    @SerializedName("BeginTime")
+    @Expose
+    private String BeginTime;
+
+    /**
+    * <p>Notification end time</p><p>Parameter format: hh:mm:ss</p>
+    */
+    @SerializedName("EndTime")
+    @Expose
+    private String EndTime;
+
+    /**
+     * Get <p>Alarm type/severity (Type: AbnBehavior - exception behavior, LeakDetect - leakage detection; Severity: 1 - notification, 2 - low risk, 3 - medium risk, 4 - high risk, 5 - critical)</p> 
+     * @return Alert <p>Alarm type/severity (Type: AbnBehavior - exception behavior, LeakDetect - leakage detection; Severity: 1 - notification, 2 - low risk, 3 - medium risk, 4 - high risk, 5 - critical)</p>
+     */
+    public LevelOption [] getAlert() {
+        return this.Alert;
+    }
+
+    /**
+     * Set <p>Alarm type/severity (Type: AbnBehavior - exception behavior, LeakDetect - leakage detection; Severity: 1 - notification, 2 - low risk, 3 - medium risk, 4 - high risk, 5 - critical)</p>
+     * @param Alert <p>Alarm type/severity (Type: AbnBehavior - exception behavior, LeakDetect - leakage detection; Severity: 1 - notification, 2 - low risk, 3 - medium risk, 4 - high risk, 5 - critical)</p>
+     */
+    public void setAlert(LevelOption [] Alert) {
+        this.Alert = Alert;
+    }
+
+    /**
+     * Get <p>Alarm notification granularity</p><p>Enumeration values:</p><ul><li>0: Push by alert aggregation</li><li>1: Push by invocation record</li></ul> 
+     * @return AlertGranularity <p>Alarm notification granularity</p><p>Enumeration values:</p><ul><li>0: Push by alert aggregation</li><li>1: Push by invocation record</li></ul>
+     */
+    public Long getAlertGranularity() {
+        return this.AlertGranularity;
+    }
+
+    /**
+     * Set <p>Alarm notification granularity</p><p>Enumeration values:</p><ul><li>0: Push by alert aggregation</li><li>1: Push by invocation record</li></ul>
+     * @param AlertGranularity <p>Alarm notification granularity</p><p>Enumeration values:</p><ul><li>0: Push by alert aggregation</li><li>1: Push by invocation record</li></ul>
+     */
+    public void setAlertGranularity(Long AlertGranularity) {
+        this.AlertGranularity = AlertGranularity;
+    }
+
+    /**
+     * Get <p>Asset event</p><p>Enumeration values:</p><ul><li>NewAk: newly-added AK</li></ul> 
+     * @return Asset <p>Asset event</p><p>Enumeration values:</p><ul><li>NewAk: newly-added AK</li></ul>
+     */
+    public String [] getAsset() {
+        return this.Asset;
+    }
+
+    /**
+     * Set <p>Asset event</p><p>Enumeration values:</p><ul><li>NewAk: newly-added AK</li></ul>
+     * @param Asset <p>Asset event</p><p>Enumeration values:</p><ul><li>NewAk: newly-added AK</li></ul>
+     */
+    public void setAsset(String [] Asset) {
+        this.Asset = Asset;
+    }
+
+    /**
+     * Get <p>Notification start time</p><p>Parameter format: hh:mm:ss</p> 
+     * @return BeginTime <p>Notification start time</p><p>Parameter format: hh:mm:ss</p>
+     */
+    public String getBeginTime() {
+        return this.BeginTime;
+    }
+
+    /**
+     * Set <p>Notification start time</p><p>Parameter format: hh:mm:ss</p>
+     * @param BeginTime <p>Notification start time</p><p>Parameter format: hh:mm:ss</p>
+     */
+    public void setBeginTime(String BeginTime) {
+        this.BeginTime = BeginTime;
+    }
+
+    /**
+     * Get <p>Notification end time</p><p>Parameter format: hh:mm:ss</p> 
+     * @return EndTime <p>Notification end time</p><p>Parameter format: hh:mm:ss</p>
+     */
+    public String getEndTime() {
+        return this.EndTime;
+    }
+
+    /**
+     * Set <p>Notification end time</p><p>Parameter format: hh:mm:ss</p>
+     * @param EndTime <p>Notification end time</p><p>Parameter format: hh:mm:ss</p>
+     */
+    public void setEndTime(String EndTime) {
+        this.EndTime = EndTime;
+    }
+
+    public ModifyNotifySettingAkRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyNotifySettingAkRequest(ModifyNotifySettingAkRequest source) {
+        if (source.Alert != null) {
+            this.Alert = new LevelOption[source.Alert.length];
+            for (int i = 0; i < source.Alert.length; i++) {
+                this.Alert[i] = new LevelOption(source.Alert[i]);
+            }
+        }
+        if (source.AlertGranularity != null) {
+            this.AlertGranularity = new Long(source.AlertGranularity);
+        }
+        if (source.Asset != null) {
+            this.Asset = new String[source.Asset.length];
+            for (int i = 0; i < source.Asset.length; i++) {
+                this.Asset[i] = new String(source.Asset[i]);
+            }
+        }
+        if (source.BeginTime != null) {
+            this.BeginTime = new String(source.BeginTime);
+        }
+        if (source.EndTime != null) {
+            this.EndTime = new String(source.EndTime);
+        }
+    }
+
+
+    /**
+     * Internal implementation, normal users should not use it.
+     */
+    public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamArrayObj(map, prefix + "Alert.", this.Alert);
+        this.setParamSimple(map, prefix + "AlertGranularity", this.AlertGranularity);
+        this.setParamArraySimple(map, prefix + "Asset.", this.Asset);
+        this.setParamSimple(map, prefix + "BeginTime", this.BeginTime);
+        this.setParamSimple(map, prefix + "EndTime", this.EndTime);
+
+    }
+}
+

@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class ExposeAssetTypeItem extends AbstractModel {
 
     /**
-    * Cloud service provider.
+    * Cloud service provider
     */
     @SerializedName("Provider")
     @Expose
     private String Provider;
 
     /**
-    * Vendor name.
+    * Cloud vendor name
     */
     @SerializedName("ProviderName")
     @Expose
     private String ProviderName;
 
     /**
-    * Asset type.
+    * Asset type
     */
     @SerializedName("AssetType")
     @Expose
     private String AssetType;
 
     /**
-    * Asset type name.
+    * Asset type name
     */
     @SerializedName("AssetTypeName")
     @Expose
     private String AssetTypeName;
 
     /**
-     * Get Cloud service provider. 
-     * @return Provider Cloud service provider.
+     * Get Cloud service provider 
+     * @return Provider Cloud service provider
      */
     public String getProvider() {
         return this.Provider;
     }
 
     /**
-     * Set Cloud service provider.
-     * @param Provider Cloud service provider.
+     * Set Cloud service provider
+     * @param Provider Cloud service provider
      */
     public void setProvider(String Provider) {
         this.Provider = Provider;
     }
 
     /**
-     * Get Vendor name. 
-     * @return ProviderName Vendor name.
+     * Get Cloud vendor name 
+     * @return ProviderName Cloud vendor name
      */
     public String getProviderName() {
         return this.ProviderName;
     }
 
     /**
-     * Set Vendor name.
-     * @param ProviderName Vendor name.
+     * Set Cloud vendor name
+     * @param ProviderName Cloud vendor name
      */
     public void setProviderName(String ProviderName) {
         this.ProviderName = ProviderName;
     }
 
     /**
-     * Get Asset type. 
-     * @return AssetType Asset type.
+     * Get Asset type 
+     * @return AssetType Asset type
      */
     public String getAssetType() {
         return this.AssetType;
     }
 
     /**
-     * Set Asset type.
-     * @param AssetType Asset type.
+     * Set Asset type
+     * @param AssetType Asset type
      */
     public void setAssetType(String AssetType) {
         this.AssetType = AssetType;
     }
 
     /**
-     * Get Asset type name. 
-     * @return AssetTypeName Asset type name.
+     * Get Asset type name 
+     * @return AssetTypeName Asset type name
      */
     public String getAssetTypeName() {
         return this.AssetTypeName;
     }
 
     /**
-     * Set Asset type name.
-     * @param AssetTypeName Asset type name.
+     * Set Asset type name
+     * @param AssetTypeName Asset type name
      */
     public void setAssetTypeName(String AssetTypeName) {
         this.AssetTypeName = AssetTypeName;

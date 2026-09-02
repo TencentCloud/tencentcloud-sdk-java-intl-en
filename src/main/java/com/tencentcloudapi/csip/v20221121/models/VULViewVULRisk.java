@@ -24,42 +24,42 @@ import java.util.HashMap;
 public class VULViewVULRisk extends AbstractModel {
 
     /**
-    * Port
+    * Port.
     */
     @SerializedName("Port")
     @Expose
     private String Port;
 
     /**
-    * Affected assets
+    * Affect assets
     */
     @SerializedName("NoHandleCount")
     @Expose
     private Long NoHandleCount;
 
     /**
-    * Risk level, low - low risk, high - high risk, middle - medium risk, info - notification, extreme - critical.
+    * Risk level. low: low risk, high: high risk, middle: medium risk, info: notification, extreme: critical.
     */
     @SerializedName("Level")
     @Expose
     private String Level;
 
     /**
-    * Components
+    * Component
     */
     @SerializedName("Component")
     @Expose
     private String Component;
 
     /**
-    * Last detected 
+    * Latest Recognition Time
     */
     @SerializedName("RecentTime")
     @Expose
     private String RecentTime;
 
     /**
-    * First detected
+    * First Recognition Time
     */
     @SerializedName("FirstTime")
     @Expose
@@ -87,7 +87,7 @@ public class VULViewVULRisk extends AbstractModel {
     private String From;
 
     /**
-    * Frontend index
+    * Front-end Index
     */
     @SerializedName("Index")
     @Expose
@@ -108,7 +108,7 @@ public class VULViewVULRisk extends AbstractModel {
     private String VULName;
 
     /**
-    * CVE number
+    * cve
     */
     @SerializedName("CVE")
     @Expose
@@ -129,28 +129,28 @@ public class VULViewVULRisk extends AbstractModel {
     private String Payload;
 
     /**
-    * Affected component
+    * Vulnerability Impact Component
     */
     @SerializedName("AppName")
     @Expose
     private String AppName;
 
     /**
-    * Technology reference
+    * Technical reference
     */
     @SerializedName("References")
     @Expose
     private String References;
 
     /**
-    * Vulnerability Affected Version
+    * Affected versions
     */
     @SerializedName("AppVersion")
     @Expose
     private String AppVersion;
 
     /**
-    * risks
+    * Risk Points
     */
     @SerializedName("VULURL")
     @Expose
@@ -164,7 +164,7 @@ public class VULViewVULRisk extends AbstractModel {
     private String Nick;
 
     /**
-    * User `appid`
+    * User appid.
     */
     @SerializedName("AppId")
     @Expose
@@ -192,96 +192,96 @@ public class VULViewVULRisk extends AbstractModel {
     private Long EMGCVulType;
 
     /**
-     * Get Port 
-     * @return Port Port
+     * Get Port. 
+     * @return Port Port.
      */
     public String getPort() {
         return this.Port;
     }
 
     /**
-     * Set Port
-     * @param Port Port
+     * Set Port.
+     * @param Port Port.
      */
     public void setPort(String Port) {
         this.Port = Port;
     }
 
     /**
-     * Get Affected assets 
-     * @return NoHandleCount Affected assets
+     * Get Affect assets 
+     * @return NoHandleCount Affect assets
      */
     public Long getNoHandleCount() {
         return this.NoHandleCount;
     }
 
     /**
-     * Set Affected assets
-     * @param NoHandleCount Affected assets
+     * Set Affect assets
+     * @param NoHandleCount Affect assets
      */
     public void setNoHandleCount(Long NoHandleCount) {
         this.NoHandleCount = NoHandleCount;
     }
 
     /**
-     * Get Risk level, low - low risk, high - high risk, middle - medium risk, info - notification, extreme - critical. 
-     * @return Level Risk level, low - low risk, high - high risk, middle - medium risk, info - notification, extreme - critical.
+     * Get Risk level. low: low risk, high: high risk, middle: medium risk, info: notification, extreme: critical. 
+     * @return Level Risk level. low: low risk, high: high risk, middle: medium risk, info: notification, extreme: critical.
      */
     public String getLevel() {
         return this.Level;
     }
 
     /**
-     * Set Risk level, low - low risk, high - high risk, middle - medium risk, info - notification, extreme - critical.
-     * @param Level Risk level, low - low risk, high - high risk, middle - medium risk, info - notification, extreme - critical.
+     * Set Risk level. low: low risk, high: high risk, middle: medium risk, info: notification, extreme: critical.
+     * @param Level Risk level. low: low risk, high: high risk, middle: medium risk, info: notification, extreme: critical.
      */
     public void setLevel(String Level) {
         this.Level = Level;
     }
 
     /**
-     * Get Components 
-     * @return Component Components
+     * Get Component 
+     * @return Component Component
      */
     public String getComponent() {
         return this.Component;
     }
 
     /**
-     * Set Components
-     * @param Component Components
+     * Set Component
+     * @param Component Component
      */
     public void setComponent(String Component) {
         this.Component = Component;
     }
 
     /**
-     * Get Last detected  
-     * @return RecentTime Last detected 
+     * Get Latest Recognition Time 
+     * @return RecentTime Latest Recognition Time
      */
     public String getRecentTime() {
         return this.RecentTime;
     }
 
     /**
-     * Set Last detected 
-     * @param RecentTime Last detected 
+     * Set Latest Recognition Time
+     * @param RecentTime Latest Recognition Time
      */
     public void setRecentTime(String RecentTime) {
         this.RecentTime = RecentTime;
     }
 
     /**
-     * Get First detected 
-     * @return FirstTime First detected
+     * Get First Recognition Time 
+     * @return FirstTime First Recognition Time
      */
     public String getFirstTime() {
         return this.FirstTime;
     }
 
     /**
-     * Set First detected
-     * @param FirstTime First detected
+     * Set First Recognition Time
+     * @param FirstTime First Recognition Time
      */
     public void setFirstTime(String FirstTime) {
         this.FirstTime = FirstTime;
@@ -336,16 +336,16 @@ public class VULViewVULRisk extends AbstractModel {
     }
 
     /**
-     * Get Frontend index 
-     * @return Index Frontend index
+     * Get Front-end Index 
+     * @return Index Front-end Index
      */
     public String getIndex() {
         return this.Index;
     }
 
     /**
-     * Set Frontend index
-     * @param Index Frontend index
+     * Set Front-end Index
+     * @param Index Front-end Index
      */
     public void setIndex(String Index) {
         this.Index = Index;
@@ -384,16 +384,16 @@ public class VULViewVULRisk extends AbstractModel {
     }
 
     /**
-     * Get CVE number 
-     * @return CVE CVE number
+     * Get cve 
+     * @return CVE cve
      */
     public String getCVE() {
         return this.CVE;
     }
 
     /**
-     * Set CVE number
-     * @param CVE CVE number
+     * Set cve
+     * @param CVE cve
      */
     public void setCVE(String CVE) {
         this.CVE = CVE;
@@ -432,64 +432,64 @@ public class VULViewVULRisk extends AbstractModel {
     }
 
     /**
-     * Get Affected component 
-     * @return AppName Affected component
+     * Get Vulnerability Impact Component 
+     * @return AppName Vulnerability Impact Component
      */
     public String getAppName() {
         return this.AppName;
     }
 
     /**
-     * Set Affected component
-     * @param AppName Affected component
+     * Set Vulnerability Impact Component
+     * @param AppName Vulnerability Impact Component
      */
     public void setAppName(String AppName) {
         this.AppName = AppName;
     }
 
     /**
-     * Get Technology reference 
-     * @return References Technology reference
+     * Get Technical reference 
+     * @return References Technical reference
      */
     public String getReferences() {
         return this.References;
     }
 
     /**
-     * Set Technology reference
-     * @param References Technology reference
+     * Set Technical reference
+     * @param References Technical reference
      */
     public void setReferences(String References) {
         this.References = References;
     }
 
     /**
-     * Get Vulnerability Affected Version 
-     * @return AppVersion Vulnerability Affected Version
+     * Get Affected versions 
+     * @return AppVersion Affected versions
      */
     public String getAppVersion() {
         return this.AppVersion;
     }
 
     /**
-     * Set Vulnerability Affected Version
-     * @param AppVersion Vulnerability Affected Version
+     * Set Affected versions
+     * @param AppVersion Affected versions
      */
     public void setAppVersion(String AppVersion) {
         this.AppVersion = AppVersion;
     }
 
     /**
-     * Get risks 
-     * @return VULURL risks
+     * Get Risk Points 
+     * @return VULURL Risk Points
      */
     public String getVULURL() {
         return this.VULURL;
     }
 
     /**
-     * Set risks
-     * @param VULURL risks
+     * Set Risk Points
+     * @param VULURL Risk Points
      */
     public void setVULURL(String VULURL) {
         this.VULURL = VULURL;
@@ -512,16 +512,16 @@ public class VULViewVULRisk extends AbstractModel {
     }
 
     /**
-     * Get User `appid` 
-     * @return AppId User `appid`
+     * Get User appid. 
+     * @return AppId User appid.
      */
     public String getAppId() {
         return this.AppId;
     }
 
     /**
-     * Set User `appid`
-     * @param AppId User `appid`
+     * Set User appid.
+     * @param AppId User appid.
      */
     public void setAppId(String AppId) {
         this.AppId = AppId;

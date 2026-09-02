@@ -38,28 +38,28 @@ public class UpdateAccessKeyRemarkRequest extends AbstractModel {
     private String [] MemberId;
 
     /**
-    * Source IP name.
+    * Source IP Name
     */
     @SerializedName("SourceIPList")
     @Expose
     private String [] SourceIPList;
 
     /**
-    * ak name.
+    * ak name
     */
     @SerializedName("AccessKeyList")
     @Expose
     private String [] AccessKeyList;
 
     /**
-    * ID of the source IP.
+    * ID of the source IP
     */
     @SerializedName("SourceIPIDList")
     @Expose
     private Long [] SourceIPIDList;
 
     /**
-    * AK ID.
+    * ID of the AK
     */
     @SerializedName("AccessKeyIDList")
     @Expose
@@ -98,64 +98,64 @@ public class UpdateAccessKeyRemarkRequest extends AbstractModel {
     }
 
     /**
-     * Get Source IP name. 
-     * @return SourceIPList Source IP name.
+     * Get Source IP Name 
+     * @return SourceIPList Source IP Name
      */
     public String [] getSourceIPList() {
         return this.SourceIPList;
     }
 
     /**
-     * Set Source IP name.
-     * @param SourceIPList Source IP name.
+     * Set Source IP Name
+     * @param SourceIPList Source IP Name
      */
     public void setSourceIPList(String [] SourceIPList) {
         this.SourceIPList = SourceIPList;
     }
 
     /**
-     * Get ak name. 
-     * @return AccessKeyList ak name.
+     * Get ak name 
+     * @return AccessKeyList ak name
      */
     public String [] getAccessKeyList() {
         return this.AccessKeyList;
     }
 
     /**
-     * Set ak name.
-     * @param AccessKeyList ak name.
+     * Set ak name
+     * @param AccessKeyList ak name
      */
     public void setAccessKeyList(String [] AccessKeyList) {
         this.AccessKeyList = AccessKeyList;
     }
 
     /**
-     * Get ID of the source IP. 
-     * @return SourceIPIDList ID of the source IP.
+     * Get ID of the source IP 
+     * @return SourceIPIDList ID of the source IP
      */
     public Long [] getSourceIPIDList() {
         return this.SourceIPIDList;
     }
 
     /**
-     * Set ID of the source IP.
-     * @param SourceIPIDList ID of the source IP.
+     * Set ID of the source IP
+     * @param SourceIPIDList ID of the source IP
      */
     public void setSourceIPIDList(Long [] SourceIPIDList) {
         this.SourceIPIDList = SourceIPIDList;
     }
 
     /**
-     * Get AK ID. 
-     * @return AccessKeyIDList AK ID.
+     * Get ID of the AK 
+     * @return AccessKeyIDList ID of the AK
      */
     public Long [] getAccessKeyIDList() {
         return this.AccessKeyIDList;
     }
 
     /**
-     * Set AK ID.
-     * @param AccessKeyIDList AK ID.
+     * Set ID of the AK
+     * @param AccessKeyIDList ID of the AK
      */
     public void setAccessKeyIDList(Long [] AccessKeyIDList) {
         this.AccessKeyIDList = AccessKeyIDList;

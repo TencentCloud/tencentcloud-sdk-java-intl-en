@@ -31,7 +31,7 @@ public class DescribeScanReportListRequest extends AbstractModel {
     private String [] MemberId;
 
     /**
-    * Filter conditions
+    * List Filters
     */
     @SerializedName("Filter")
     @Expose
@@ -54,16 +54,16 @@ public class DescribeScanReportListRequest extends AbstractModel {
     }
 
     /**
-     * Get Filter conditions 
-     * @return Filter Filter conditions
+     * Get List Filters 
+     * @return Filter List Filters
      */
     public Filter getFilter() {
         return this.Filter;
     }
 
     /**
-     * Set Filter conditions
-     * @param Filter Filter conditions
+     * Set List Filters
+     * @param Filter List Filters
      */
     public void setFilter(Filter Filter) {
         this.Filter = Filter;

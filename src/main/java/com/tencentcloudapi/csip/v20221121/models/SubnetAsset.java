@@ -31,7 +31,7 @@ public class SubnetAsset extends AbstractModel {
     private String AppId;
 
     /**
-    * UIN
+    * uin
     */
     @SerializedName("Uin")
     @Expose
@@ -52,21 +52,21 @@ public class SubnetAsset extends AbstractModel {
     private String AssetName;
 
     /**
-    * Region
+    * Region.
     */
     @SerializedName("Region")
     @Expose
     private String Region;
 
     /**
-    * VPC ID
+    * VPC id
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * VPC name
+    * VPC Name
     */
     @SerializedName("VpcName")
     @Expose
@@ -80,14 +80,14 @@ public class SubnetAsset extends AbstractModel {
     private Tag [] Tag;
 
     /**
-    * User name
+    * Nickname
     */
     @SerializedName("Nick")
     @Expose
     private String Nick;
 
     /**
-    * CIDR block
+    * cidr
     */
     @SerializedName("CIDR")
     @Expose
@@ -101,35 +101,35 @@ public class SubnetAsset extends AbstractModel {
     private String Zone;
 
     /**
-    * Number of CVMs
+    * CVM Count
     */
     @SerializedName("CVM")
     @Expose
     private Long CVM;
 
     /**
-    * Number of available IPs
+    * Available IP Count
     */
     @SerializedName("AvailableIp")
     @Expose
     private Long AvailableIp;
 
     /**
-    * Creation time
+    * Creation time.
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * Configuration risks
+    * Configuration risk
     */
     @SerializedName("ConfigureRisk")
     @Expose
     private Long ConfigureRisk;
 
     /**
-    * Number of tasks.
+    * Number of tasks
     */
     @SerializedName("ScanTask")
     @Expose
@@ -173,16 +173,16 @@ public class SubnetAsset extends AbstractModel {
     }
 
     /**
-     * Get UIN 
-     * @return Uin UIN
+     * Get uin 
+     * @return Uin uin
      */
     public String getUin() {
         return this.Uin;
     }
 
     /**
-     * Set UIN
-     * @param Uin UIN
+     * Set uin
+     * @param Uin uin
      */
     public void setUin(String Uin) {
         this.Uin = Uin;
@@ -221,48 +221,48 @@ public class SubnetAsset extends AbstractModel {
     }
 
     /**
-     * Get Region 
-     * @return Region Region
+     * Get Region. 
+     * @return Region Region.
      */
     public String getRegion() {
         return this.Region;
     }
 
     /**
-     * Set Region
-     * @param Region Region
+     * Set Region.
+     * @param Region Region.
      */
     public void setRegion(String Region) {
         this.Region = Region;
     }
 
     /**
-     * Get VPC ID 
-     * @return VpcId VPC ID
+     * Get VPC id 
+     * @return VpcId VPC id
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set VPC ID
-     * @param VpcId VPC ID
+     * Set VPC id
+     * @param VpcId VPC id
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get VPC name 
-     * @return VpcName VPC name
+     * Get VPC Name 
+     * @return VpcName VPC Name
      */
     public String getVpcName() {
         return this.VpcName;
     }
 
     /**
-     * Set VPC name
-     * @param VpcName VPC name
+     * Set VPC Name
+     * @param VpcName VPC Name
      */
     public void setVpcName(String VpcName) {
         this.VpcName = VpcName;
@@ -285,32 +285,32 @@ public class SubnetAsset extends AbstractModel {
     }
 
     /**
-     * Get User name 
-     * @return Nick User name
+     * Get Nickname 
+     * @return Nick Nickname
      */
     public String getNick() {
         return this.Nick;
     }
 
     /**
-     * Set User name
-     * @param Nick User name
+     * Set Nickname
+     * @param Nick Nickname
      */
     public void setNick(String Nick) {
         this.Nick = Nick;
     }
 
     /**
-     * Get CIDR block 
-     * @return CIDR CIDR block
+     * Get cidr 
+     * @return CIDR cidr
      */
     public String getCIDR() {
         return this.CIDR;
     }
 
     /**
-     * Set CIDR block
-     * @param CIDR CIDR block
+     * Set cidr
+     * @param CIDR cidr
      */
     public void setCIDR(String CIDR) {
         this.CIDR = CIDR;
@@ -333,80 +333,80 @@ public class SubnetAsset extends AbstractModel {
     }
 
     /**
-     * Get Number of CVMs 
-     * @return CVM Number of CVMs
+     * Get CVM Count 
+     * @return CVM CVM Count
      */
     public Long getCVM() {
         return this.CVM;
     }
 
     /**
-     * Set Number of CVMs
-     * @param CVM Number of CVMs
+     * Set CVM Count
+     * @param CVM CVM Count
      */
     public void setCVM(Long CVM) {
         this.CVM = CVM;
     }
 
     /**
-     * Get Number of available IPs 
-     * @return AvailableIp Number of available IPs
+     * Get Available IP Count 
+     * @return AvailableIp Available IP Count
      */
     public Long getAvailableIp() {
         return this.AvailableIp;
     }
 
     /**
-     * Set Number of available IPs
-     * @param AvailableIp Number of available IPs
+     * Set Available IP Count
+     * @param AvailableIp Available IP Count
      */
     public void setAvailableIp(Long AvailableIp) {
         this.AvailableIp = AvailableIp;
     }
 
     /**
-     * Get Creation time 
-     * @return CreateTime Creation time
+     * Get Creation time. 
+     * @return CreateTime Creation time.
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set Creation time
-     * @param CreateTime Creation time
+     * Set Creation time.
+     * @param CreateTime Creation time.
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get Configuration risks 
-     * @return ConfigureRisk Configuration risks
+     * Get Configuration risk 
+     * @return ConfigureRisk Configuration risk
      */
     public Long getConfigureRisk() {
         return this.ConfigureRisk;
     }
 
     /**
-     * Set Configuration risks
-     * @param ConfigureRisk Configuration risks
+     * Set Configuration risk
+     * @param ConfigureRisk Configuration risk
      */
     public void setConfigureRisk(Long ConfigureRisk) {
         this.ConfigureRisk = ConfigureRisk;
     }
 
     /**
-     * Get Number of tasks. 
-     * @return ScanTask Number of tasks.
+     * Get Number of tasks 
+     * @return ScanTask Number of tasks
      */
     public Long getScanTask() {
         return this.ScanTask;
     }
 
     /**
-     * Set Number of tasks.
-     * @param ScanTask Number of tasks.
+     * Set Number of tasks
+     * @param ScanTask Number of tasks
      */
     public void setScanTask(Long ScanTask) {
         this.ScanTask = ScanTask;

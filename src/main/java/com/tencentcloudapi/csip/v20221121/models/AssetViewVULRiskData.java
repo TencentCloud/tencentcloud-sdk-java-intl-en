@@ -24,28 +24,28 @@ import java.util.HashMap;
 public class AssetViewVULRiskData extends AbstractModel {
 
     /**
-    * Impact assets.
+    * Affect assets
     */
     @SerializedName("AffectAsset")
     @Expose
     private String AffectAsset;
 
     /**
-    * Risk level: low - low risk, high - high risk, middle - medium risk, info - note, extreme - serious.
+    * Risk level. low: low risk. high: high risk. middle: medium risk. info: notification. extreme: critical.
     */
     @SerializedName("Level")
     @Expose
     private String Level;
 
     /**
-    * Asset type.
+    * Asset type
     */
     @SerializedName("InstanceType")
     @Expose
     private String InstanceType;
 
     /**
-    * Component.
+    * Component
     */
     @SerializedName("Component")
     @Expose
@@ -66,7 +66,7 @@ public class AssetViewVULRiskData extends AbstractModel {
     private String FirstTime;
 
     /**
-    * Status, 0 unprocessed, 1 tagged, 2 ignored, 3 processed, 4 under disposal, 5 detecting, 6 partially processed.
+    * Status. 0: unprocessed, 1: tagged processed, 2: ignored, 3: processed, 4: under disposal, 5: in-progress detection, 6: partially processed
     */
     @SerializedName("Status")
     @Expose
@@ -115,7 +115,7 @@ public class AssetViewVULRiskData extends AbstractModel {
     private String Uin;
 
     /**
-    * Vulnerability type.
+    * Vulnerability type
     */
     @SerializedName("VULType")
     @Expose
@@ -129,21 +129,21 @@ public class AssetViewVULRiskData extends AbstractModel {
     private String Port;
 
     /**
-    * Vulnerability impact component.
+    * Vulnerability Impact component
     */
     @SerializedName("AppName")
     @Expose
     private String AppName;
 
     /**
-    * Vulnerability impact version.
+    * Vulnerability Impact version
     */
     @SerializedName("AppVersion")
     @Expose
     private String AppVersion;
 
     /**
-    * Risks.
+    * Risk point
     */
     @SerializedName("VULURL")
     @Expose
@@ -213,7 +213,7 @@ public class AssetViewVULRiskData extends AbstractModel {
     private Float CVSS;
 
     /**
-    * Frontend index id.
+    * Frontend index id
     */
     @SerializedName("Index")
     @Expose
@@ -241,28 +241,28 @@ public class AssetViewVULRiskData extends AbstractModel {
     private String TaskId;
 
     /**
-    * Vulnerability Tag.
+    * Vulnerability tag
     */
     @SerializedName("VulTag")
     @Expose
     private String [] VulTag;
 
     /**
-    * Vulnerability disclosure time.
+    * Vulnerability disclosure time
     */
     @SerializedName("DisclosureTime")
     @Expose
     private String DisclosureTime;
 
     /**
-    * Attack intensity.
+    * Attack level
     */
     @SerializedName("AttackHeat")
     @Expose
     private Long AttackHeat;
 
     /**
-    * Whether the vulnerability is mandatory. 1 for yes, 0 for no.
+    * Whether vulnerability 1 is mandatory. 0 indicates false.
     */
     @SerializedName("IsSuggest")
     @Expose
@@ -276,99 +276,99 @@ public class AssetViewVULRiskData extends AbstractModel {
     private String HandleTaskId;
 
     /**
-    * Engine source.
+    * Engine source
     */
     @SerializedName("EngineSource")
     @Expose
     private String EngineSource;
 
     /**
-    * New vulnerability risk id (same as RiskId in the network-wide vulnerabilities table).
+    * New vulnerability risk id (same as RiskId in the network-wide vulnerability table)
     */
     @SerializedName("VulRiskId")
     @Expose
     private String VulRiskId;
 
     /**
-    * New version vulnerability id.
+    * Vulnerability id of the new version
     */
     @SerializedName("TvdID")
     @Expose
     private String TvdID;
 
     /**
-    * Is it possible to perform a one-click physical examination, 1 - yes, 0 - not allowed.
+    * Whether to perform one-click physical examination. 1: yes, 0: no.
     */
     @SerializedName("IsOneClick")
     @Expose
     private Long IsOneClick;
 
     /**
-    * Whether to perform a POC scan. valid values: 0 (not a POC), 1 (POC).
+    * Whether it is a POC scan. 0: non-POC; 1: POC
     */
     @SerializedName("IsPOC")
     @Expose
     private Long IsPOC;
 
     /**
-     * Get Impact assets. 
-     * @return AffectAsset Impact assets.
+     * Get Affect assets 
+     * @return AffectAsset Affect assets
      */
     public String getAffectAsset() {
         return this.AffectAsset;
     }
 
     /**
-     * Set Impact assets.
-     * @param AffectAsset Impact assets.
+     * Set Affect assets
+     * @param AffectAsset Affect assets
      */
     public void setAffectAsset(String AffectAsset) {
         this.AffectAsset = AffectAsset;
     }
 
     /**
-     * Get Risk level: low - low risk, high - high risk, middle - medium risk, info - note, extreme - serious. 
-     * @return Level Risk level: low - low risk, high - high risk, middle - medium risk, info - note, extreme - serious.
+     * Get Risk level. low: low risk. high: high risk. middle: medium risk. info: notification. extreme: critical. 
+     * @return Level Risk level. low: low risk. high: high risk. middle: medium risk. info: notification. extreme: critical.
      */
     public String getLevel() {
         return this.Level;
     }
 
     /**
-     * Set Risk level: low - low risk, high - high risk, middle - medium risk, info - note, extreme - serious.
-     * @param Level Risk level: low - low risk, high - high risk, middle - medium risk, info - note, extreme - serious.
+     * Set Risk level. low: low risk. high: high risk. middle: medium risk. info: notification. extreme: critical.
+     * @param Level Risk level. low: low risk. high: high risk. middle: medium risk. info: notification. extreme: critical.
      */
     public void setLevel(String Level) {
         this.Level = Level;
     }
 
     /**
-     * Get Asset type. 
-     * @return InstanceType Asset type.
+     * Get Asset type 
+     * @return InstanceType Asset type
      */
     public String getInstanceType() {
         return this.InstanceType;
     }
 
     /**
-     * Set Asset type.
-     * @param InstanceType Asset type.
+     * Set Asset type
+     * @param InstanceType Asset type
      */
     public void setInstanceType(String InstanceType) {
         this.InstanceType = InstanceType;
     }
 
     /**
-     * Get Component. 
-     * @return Component Component.
+     * Get Component 
+     * @return Component Component
      */
     public String getComponent() {
         return this.Component;
     }
 
     /**
-     * Set Component.
-     * @param Component Component.
+     * Set Component
+     * @param Component Component
      */
     public void setComponent(String Component) {
         this.Component = Component;
@@ -407,16 +407,16 @@ public class AssetViewVULRiskData extends AbstractModel {
     }
 
     /**
-     * Get Status, 0 unprocessed, 1 tagged, 2 ignored, 3 processed, 4 under disposal, 5 detecting, 6 partially processed. 
-     * @return Status Status, 0 unprocessed, 1 tagged, 2 ignored, 3 processed, 4 under disposal, 5 detecting, 6 partially processed.
+     * Get Status. 0: unprocessed, 1: tagged processed, 2: ignored, 3: processed, 4: under disposal, 5: in-progress detection, 6: partially processed 
+     * @return Status Status. 0: unprocessed, 1: tagged processed, 2: ignored, 3: processed, 4: under disposal, 5: in-progress detection, 6: partially processed
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Status, 0 unprocessed, 1 tagged, 2 ignored, 3 processed, 4 under disposal, 5 detecting, 6 partially processed.
-     * @param Status Status, 0 unprocessed, 1 tagged, 2 ignored, 3 processed, 4 under disposal, 5 detecting, 6 partially processed.
+     * Set Status. 0: unprocessed, 1: tagged processed, 2: ignored, 3: processed, 4: under disposal, 5: in-progress detection, 6: partially processed
+     * @param Status Status. 0: unprocessed, 1: tagged processed, 2: ignored, 3: processed, 4: under disposal, 5: in-progress detection, 6: partially processed
      */
     public void setStatus(Long Status) {
         this.Status = Status;
@@ -519,16 +519,16 @@ public class AssetViewVULRiskData extends AbstractModel {
     }
 
     /**
-     * Get Vulnerability type. 
-     * @return VULType Vulnerability type.
+     * Get Vulnerability type 
+     * @return VULType Vulnerability type
      */
     public String getVULType() {
         return this.VULType;
     }
 
     /**
-     * Set Vulnerability type.
-     * @param VULType Vulnerability type.
+     * Set Vulnerability type
+     * @param VULType Vulnerability type
      */
     public void setVULType(String VULType) {
         this.VULType = VULType;
@@ -551,48 +551,48 @@ public class AssetViewVULRiskData extends AbstractModel {
     }
 
     /**
-     * Get Vulnerability impact component. 
-     * @return AppName Vulnerability impact component.
+     * Get Vulnerability Impact component 
+     * @return AppName Vulnerability Impact component
      */
     public String getAppName() {
         return this.AppName;
     }
 
     /**
-     * Set Vulnerability impact component.
-     * @param AppName Vulnerability impact component.
+     * Set Vulnerability Impact component
+     * @param AppName Vulnerability Impact component
      */
     public void setAppName(String AppName) {
         this.AppName = AppName;
     }
 
     /**
-     * Get Vulnerability impact version. 
-     * @return AppVersion Vulnerability impact version.
+     * Get Vulnerability Impact version 
+     * @return AppVersion Vulnerability Impact version
      */
     public String getAppVersion() {
         return this.AppVersion;
     }
 
     /**
-     * Set Vulnerability impact version.
-     * @param AppVersion Vulnerability impact version.
+     * Set Vulnerability Impact version
+     * @param AppVersion Vulnerability Impact version
      */
     public void setAppVersion(String AppVersion) {
         this.AppVersion = AppVersion;
     }
 
     /**
-     * Get Risks. 
-     * @return VULURL Risks.
+     * Get Risk point 
+     * @return VULURL Risk point
      */
     public String getVULURL() {
         return this.VULURL;
     }
 
     /**
-     * Set Risks.
-     * @param VULURL Risks.
+     * Set Risk point
+     * @param VULURL Risk point
      */
     public void setVULURL(String VULURL) {
         this.VULURL = VULURL;
@@ -743,16 +743,16 @@ public class AssetViewVULRiskData extends AbstractModel {
     }
 
     /**
-     * Get Frontend index id. 
-     * @return Index Frontend index id.
+     * Get Frontend index id 
+     * @return Index Frontend index id
      */
     public String getIndex() {
         return this.Index;
     }
 
     /**
-     * Set Frontend index id.
-     * @param Index Frontend index id.
+     * Set Frontend index id
+     * @param Index Frontend index id
      */
     public void setIndex(String Index) {
         this.Index = Index;
@@ -807,64 +807,64 @@ public class AssetViewVULRiskData extends AbstractModel {
     }
 
     /**
-     * Get Vulnerability Tag. 
-     * @return VulTag Vulnerability Tag.
+     * Get Vulnerability tag 
+     * @return VulTag Vulnerability tag
      */
     public String [] getVulTag() {
         return this.VulTag;
     }
 
     /**
-     * Set Vulnerability Tag.
-     * @param VulTag Vulnerability Tag.
+     * Set Vulnerability tag
+     * @param VulTag Vulnerability tag
      */
     public void setVulTag(String [] VulTag) {
         this.VulTag = VulTag;
     }
 
     /**
-     * Get Vulnerability disclosure time. 
-     * @return DisclosureTime Vulnerability disclosure time.
+     * Get Vulnerability disclosure time 
+     * @return DisclosureTime Vulnerability disclosure time
      */
     public String getDisclosureTime() {
         return this.DisclosureTime;
     }
 
     /**
-     * Set Vulnerability disclosure time.
-     * @param DisclosureTime Vulnerability disclosure time.
+     * Set Vulnerability disclosure time
+     * @param DisclosureTime Vulnerability disclosure time
      */
     public void setDisclosureTime(String DisclosureTime) {
         this.DisclosureTime = DisclosureTime;
     }
 
     /**
-     * Get Attack intensity. 
-     * @return AttackHeat Attack intensity.
+     * Get Attack level 
+     * @return AttackHeat Attack level
      */
     public Long getAttackHeat() {
         return this.AttackHeat;
     }
 
     /**
-     * Set Attack intensity.
-     * @param AttackHeat Attack intensity.
+     * Set Attack level
+     * @param AttackHeat Attack level
      */
     public void setAttackHeat(Long AttackHeat) {
         this.AttackHeat = AttackHeat;
     }
 
     /**
-     * Get Whether the vulnerability is mandatory. 1 for yes, 0 for no. 
-     * @return IsSuggest Whether the vulnerability is mandatory. 1 for yes, 0 for no.
+     * Get Whether vulnerability 1 is mandatory. 0 indicates false. 
+     * @return IsSuggest Whether vulnerability 1 is mandatory. 0 indicates false.
      */
     public Long getIsSuggest() {
         return this.IsSuggest;
     }
 
     /**
-     * Set Whether the vulnerability is mandatory. 1 for yes, 0 for no.
-     * @param IsSuggest Whether the vulnerability is mandatory. 1 for yes, 0 for no.
+     * Set Whether vulnerability 1 is mandatory. 0 indicates false.
+     * @param IsSuggest Whether vulnerability 1 is mandatory. 0 indicates false.
      */
     public void setIsSuggest(Long IsSuggest) {
         this.IsSuggest = IsSuggest;
@@ -887,80 +887,80 @@ public class AssetViewVULRiskData extends AbstractModel {
     }
 
     /**
-     * Get Engine source. 
-     * @return EngineSource Engine source.
+     * Get Engine source 
+     * @return EngineSource Engine source
      */
     public String getEngineSource() {
         return this.EngineSource;
     }
 
     /**
-     * Set Engine source.
-     * @param EngineSource Engine source.
+     * Set Engine source
+     * @param EngineSource Engine source
      */
     public void setEngineSource(String EngineSource) {
         this.EngineSource = EngineSource;
     }
 
     /**
-     * Get New vulnerability risk id (same as RiskId in the network-wide vulnerabilities table). 
-     * @return VulRiskId New vulnerability risk id (same as RiskId in the network-wide vulnerabilities table).
+     * Get New vulnerability risk id (same as RiskId in the network-wide vulnerability table) 
+     * @return VulRiskId New vulnerability risk id (same as RiskId in the network-wide vulnerability table)
      */
     public String getVulRiskId() {
         return this.VulRiskId;
     }
 
     /**
-     * Set New vulnerability risk id (same as RiskId in the network-wide vulnerabilities table).
-     * @param VulRiskId New vulnerability risk id (same as RiskId in the network-wide vulnerabilities table).
+     * Set New vulnerability risk id (same as RiskId in the network-wide vulnerability table)
+     * @param VulRiskId New vulnerability risk id (same as RiskId in the network-wide vulnerability table)
      */
     public void setVulRiskId(String VulRiskId) {
         this.VulRiskId = VulRiskId;
     }
 
     /**
-     * Get New version vulnerability id. 
-     * @return TvdID New version vulnerability id.
+     * Get Vulnerability id of the new version 
+     * @return TvdID Vulnerability id of the new version
      */
     public String getTvdID() {
         return this.TvdID;
     }
 
     /**
-     * Set New version vulnerability id.
-     * @param TvdID New version vulnerability id.
+     * Set Vulnerability id of the new version
+     * @param TvdID Vulnerability id of the new version
      */
     public void setTvdID(String TvdID) {
         this.TvdID = TvdID;
     }
 
     /**
-     * Get Is it possible to perform a one-click physical examination, 1 - yes, 0 - not allowed. 
-     * @return IsOneClick Is it possible to perform a one-click physical examination, 1 - yes, 0 - not allowed.
+     * Get Whether to perform one-click physical examination. 1: yes, 0: no. 
+     * @return IsOneClick Whether to perform one-click physical examination. 1: yes, 0: no.
      */
     public Long getIsOneClick() {
         return this.IsOneClick;
     }
 
     /**
-     * Set Is it possible to perform a one-click physical examination, 1 - yes, 0 - not allowed.
-     * @param IsOneClick Is it possible to perform a one-click physical examination, 1 - yes, 0 - not allowed.
+     * Set Whether to perform one-click physical examination. 1: yes, 0: no.
+     * @param IsOneClick Whether to perform one-click physical examination. 1: yes, 0: no.
      */
     public void setIsOneClick(Long IsOneClick) {
         this.IsOneClick = IsOneClick;
     }
 
     /**
-     * Get Whether to perform a POC scan. valid values: 0 (not a POC), 1 (POC). 
-     * @return IsPOC Whether to perform a POC scan. valid values: 0 (not a POC), 1 (POC).
+     * Get Whether it is a POC scan. 0: non-POC; 1: POC 
+     * @return IsPOC Whether it is a POC scan. 0: non-POC; 1: POC
      */
     public Long getIsPOC() {
         return this.IsPOC;
     }
 
     /**
-     * Set Whether to perform a POC scan. valid values: 0 (not a POC), 1 (POC).
-     * @param IsPOC Whether to perform a POC scan. valid values: 0 (not a POC), 1 (POC).
+     * Set Whether it is a POC scan. 0: non-POC; 1: POC
+     * @param IsPOC Whether it is a POC scan. 0: non-POC; 1: POC
      */
     public void setIsPOC(Long IsPOC) {
         this.IsPOC = IsPOC;

@@ -192,7 +192,7 @@ public class AssetBaseInfoResponse extends AbstractModel {
     private Long SystemInstallationPackageNum;
 
     /**
-    * remaining protection duration
+    * Remaining protection duration
     */
     @SerializedName("SurplusProtectDay")
     @Expose
@@ -220,7 +220,7 @@ public class AssetBaseInfoResponse extends AbstractModel {
     private String ProtectLevel;
 
     /**
-    * protection duration
+    * Protection duration
     */
     @SerializedName("ProtectedDay")
     @Expose
@@ -611,16 +611,16 @@ public class AssetBaseInfoResponse extends AbstractModel {
     }
 
     /**
-     * Get remaining protection duration 
-     * @return SurplusProtectDay remaining protection duration
+     * Get Remaining protection duration 
+     * @return SurplusProtectDay Remaining protection duration
      */
     public Long getSurplusProtectDay() {
         return this.SurplusProtectDay;
     }
 
     /**
-     * Set remaining protection duration
-     * @param SurplusProtectDay remaining protection duration
+     * Set Remaining protection duration
+     * @param SurplusProtectDay Remaining protection duration
      */
     public void setSurplusProtectDay(Long SurplusProtectDay) {
         this.SurplusProtectDay = SurplusProtectDay;
@@ -675,16 +675,16 @@ public class AssetBaseInfoResponse extends AbstractModel {
     }
 
     /**
-     * Get protection duration 
-     * @return ProtectedDay protection duration
+     * Get Protection duration 
+     * @return ProtectedDay Protection duration
      */
     public Long getProtectedDay() {
         return this.ProtectedDay;
     }
 
     /**
-     * Set protection duration
-     * @param ProtectedDay protection duration
+     * Set Protection duration
+     * @param ProtectedDay Protection duration
      */
     public void setProtectedDay(Long ProtectedDay) {
         this.ProtectedDay = ProtectedDay;

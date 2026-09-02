@@ -24,56 +24,56 @@ import java.util.HashMap;
 public class DescribeRiskCenterAssetViewCFGRiskListResponse extends AbstractModel {
 
     /**
-    * Total number of entries
+    * Total quantity.
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * List of configuration risks
+    * Configuration Risk List from Asset's Perspective
     */
     @SerializedName("Data")
     @Expose
     private AssetViewCFGRisk [] Data;
 
     /**
-    * List of risk handling status
+    * Status list
     */
     @SerializedName("StatusLists")
     @Expose
     private FilterDataObject [] StatusLists;
 
     /**
-    * List of risk levels
+    * Danger Level List
     */
     @SerializedName("LevelLists")
     @Expose
     private FilterDataObject [] LevelLists;
 
     /**
-    * List of configuration names
+    * Configuration Name List
     */
     @SerializedName("CFGNameLists")
     @Expose
     private FilterDataObject [] CFGNameLists;
 
     /**
-    * List of check types
+    * Check Type List
     */
     @SerializedName("CheckTypeLists")
     @Expose
     private FilterDataObject [] CheckTypeLists;
 
     /**
-    * List of asset types
+    * Asset Type List
     */
     @SerializedName("InstanceTypeLists")
     @Expose
     private FilterDataObject [] InstanceTypeLists;
 
     /**
-    * List of check source
+    * Source List
     */
     @SerializedName("FromLists")
     @Expose
@@ -87,128 +87,128 @@ public class DescribeRiskCenterAssetViewCFGRiskListResponse extends AbstractMode
     private String RequestId;
 
     /**
-     * Get Total number of entries 
-     * @return TotalCount Total number of entries
+     * Get Total quantity. 
+     * @return TotalCount Total quantity.
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set Total number of entries
-     * @param TotalCount Total number of entries
+     * Set Total quantity.
+     * @param TotalCount Total quantity.
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get List of configuration risks 
-     * @return Data List of configuration risks
+     * Get Configuration Risk List from Asset's Perspective 
+     * @return Data Configuration Risk List from Asset's Perspective
      */
     public AssetViewCFGRisk [] getData() {
         return this.Data;
     }
 
     /**
-     * Set List of configuration risks
-     * @param Data List of configuration risks
+     * Set Configuration Risk List from Asset's Perspective
+     * @param Data Configuration Risk List from Asset's Perspective
      */
     public void setData(AssetViewCFGRisk [] Data) {
         this.Data = Data;
     }
 
     /**
-     * Get List of risk handling status 
-     * @return StatusLists List of risk handling status
+     * Get Status list 
+     * @return StatusLists Status list
      */
     public FilterDataObject [] getStatusLists() {
         return this.StatusLists;
     }
 
     /**
-     * Set List of risk handling status
-     * @param StatusLists List of risk handling status
+     * Set Status list
+     * @param StatusLists Status list
      */
     public void setStatusLists(FilterDataObject [] StatusLists) {
         this.StatusLists = StatusLists;
     }
 
     /**
-     * Get List of risk levels 
-     * @return LevelLists List of risk levels
+     * Get Danger Level List 
+     * @return LevelLists Danger Level List
      */
     public FilterDataObject [] getLevelLists() {
         return this.LevelLists;
     }
 
     /**
-     * Set List of risk levels
-     * @param LevelLists List of risk levels
+     * Set Danger Level List
+     * @param LevelLists Danger Level List
      */
     public void setLevelLists(FilterDataObject [] LevelLists) {
         this.LevelLists = LevelLists;
     }
 
     /**
-     * Get List of configuration names 
-     * @return CFGNameLists List of configuration names
+     * Get Configuration Name List 
+     * @return CFGNameLists Configuration Name List
      */
     public FilterDataObject [] getCFGNameLists() {
         return this.CFGNameLists;
     }
 
     /**
-     * Set List of configuration names
-     * @param CFGNameLists List of configuration names
+     * Set Configuration Name List
+     * @param CFGNameLists Configuration Name List
      */
     public void setCFGNameLists(FilterDataObject [] CFGNameLists) {
         this.CFGNameLists = CFGNameLists;
     }
 
     /**
-     * Get List of check types 
-     * @return CheckTypeLists List of check types
+     * Get Check Type List 
+     * @return CheckTypeLists Check Type List
      */
     public FilterDataObject [] getCheckTypeLists() {
         return this.CheckTypeLists;
     }
 
     /**
-     * Set List of check types
-     * @param CheckTypeLists List of check types
+     * Set Check Type List
+     * @param CheckTypeLists Check Type List
      */
     public void setCheckTypeLists(FilterDataObject [] CheckTypeLists) {
         this.CheckTypeLists = CheckTypeLists;
     }
 
     /**
-     * Get List of asset types 
-     * @return InstanceTypeLists List of asset types
+     * Get Asset Type List 
+     * @return InstanceTypeLists Asset Type List
      */
     public FilterDataObject [] getInstanceTypeLists() {
         return this.InstanceTypeLists;
     }
 
     /**
-     * Set List of asset types
-     * @param InstanceTypeLists List of asset types
+     * Set Asset Type List
+     * @param InstanceTypeLists Asset Type List
      */
     public void setInstanceTypeLists(FilterDataObject [] InstanceTypeLists) {
         this.InstanceTypeLists = InstanceTypeLists;
     }
 
     /**
-     * Get List of check source 
-     * @return FromLists List of check source
+     * Get Source List 
+     * @return FromLists Source List
      */
     public FilterDataObject [] getFromLists() {
         return this.FromLists;
     }
 
     /**
-     * Set List of check source
-     * @param FromLists List of check source
+     * Set Source List
+     * @param FromLists Source List
      */
     public void setFromLists(FilterDataObject [] FromLists) {
         this.FromLists = FromLists;

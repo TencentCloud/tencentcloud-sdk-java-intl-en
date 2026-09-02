@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class FilterDataObject extends AbstractModel {
 
     /**
-    * Filter value
+    * English Translation
     */
     @SerializedName("Value")
     @Expose
     private String Value;
 
     /**
-    * Filter name
+    * Chinese Translation
     */
     @SerializedName("Text")
     @Expose
     private String Text;
 
     /**
-     * Get Filter value 
-     * @return Value Filter value
+     * Get English Translation 
+     * @return Value English Translation
      */
     public String getValue() {
         return this.Value;
     }
 
     /**
-     * Set Filter value
-     * @param Value Filter value
+     * Set English Translation
+     * @param Value English Translation
      */
     public void setValue(String Value) {
         this.Value = Value;
     }
 
     /**
-     * Get Filter name 
-     * @return Text Filter name
+     * Get Chinese Translation 
+     * @return Text Chinese Translation
      */
     public String getText() {
         return this.Text;
     }
 
     /**
-     * Set Filter name
-     * @param Text Filter name
+     * Set Chinese Translation
+     * @param Text Chinese Translation
      */
     public void setText(String Text) {
         this.Text = Text;

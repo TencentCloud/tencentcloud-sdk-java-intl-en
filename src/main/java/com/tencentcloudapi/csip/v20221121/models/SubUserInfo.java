@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class SubUserInfo extends AbstractModel {
 
     /**
-    * <p>Primary key ID, with no business significance, only serves as a unique key.</p>
+    * <p>Primary key ID, no business significance, used only as a unique key</p>
     */
     @SerializedName("ID")
     @Expose
@@ -73,14 +73,14 @@ public class SubUserInfo extends AbstractModel {
     private String OwnerNickName;
 
     /**
-    * <p>Member ID information belonging to main account</p>
+    * <p>memberId information belonging to main account</p>
     */
     @SerializedName("OwnerMemberID")
     @Expose
     private String OwnerMemberID;
 
     /**
-    * <p>Account type. 0 indicates a Tencent Cloud account, and 1 indicates an AWS account.</p>
+    * <p>Account type. 0: Tencent Cloud account; 1: AWS account</p>
     */
     @SerializedName("CloudType")
     @Expose
@@ -136,14 +136,14 @@ public class SubUserInfo extends AbstractModel {
     private Boolean IsAccessCloudAudit;
 
     /**
-    * <p>Security check for configuration risk required or not</p>
+    * <p>Whether to configure a security check for risks</p>
     */
     @SerializedName("IsAccessCheck")
     @Expose
     private Boolean IsAccessCheck;
 
     /**
-    * <p>Whether configure user behavior management policy</p>
+    * <p>Whether to configure a user behavior management policy</p>
     */
     @SerializedName("IsAccessUeba")
     @Expose
@@ -157,16 +157,16 @@ public class SubUserInfo extends AbstractModel {
     private Long CreateTime;
 
     /**
-     * Get <p>Primary key ID, with no business significance, only serves as a unique key.</p> 
-     * @return ID <p>Primary key ID, with no business significance, only serves as a unique key.</p>
+     * Get <p>Primary key ID, no business significance, used only as a unique key</p> 
+     * @return ID <p>Primary key ID, no business significance, used only as a unique key</p>
      */
     public Long getID() {
         return this.ID;
     }
 
     /**
-     * Set <p>Primary key ID, with no business significance, only serves as a unique key.</p>
-     * @param ID <p>Primary key ID, with no business significance, only serves as a unique key.</p>
+     * Set <p>Primary key ID, no business significance, used only as a unique key</p>
+     * @param ID <p>Primary key ID, no business significance, used only as a unique key</p>
      */
     public void setID(Long ID) {
         this.ID = ID;
@@ -269,32 +269,32 @@ public class SubUserInfo extends AbstractModel {
     }
 
     /**
-     * Get <p>Member ID information belonging to main account</p> 
-     * @return OwnerMemberID <p>Member ID information belonging to main account</p>
+     * Get <p>memberId information belonging to main account</p> 
+     * @return OwnerMemberID <p>memberId information belonging to main account</p>
      */
     public String getOwnerMemberID() {
         return this.OwnerMemberID;
     }
 
     /**
-     * Set <p>Member ID information belonging to main account</p>
-     * @param OwnerMemberID <p>Member ID information belonging to main account</p>
+     * Set <p>memberId information belonging to main account</p>
+     * @param OwnerMemberID <p>memberId information belonging to main account</p>
      */
     public void setOwnerMemberID(String OwnerMemberID) {
         this.OwnerMemberID = OwnerMemberID;
     }
 
     /**
-     * Get <p>Account type. 0 indicates a Tencent Cloud account, and 1 indicates an AWS account.</p> 
-     * @return CloudType <p>Account type. 0 indicates a Tencent Cloud account, and 1 indicates an AWS account.</p>
+     * Get <p>Account type. 0: Tencent Cloud account; 1: AWS account</p> 
+     * @return CloudType <p>Account type. 0: Tencent Cloud account; 1: AWS account</p>
      */
     public Long getCloudType() {
         return this.CloudType;
     }
 
     /**
-     * Set <p>Account type. 0 indicates a Tencent Cloud account, and 1 indicates an AWS account.</p>
-     * @param CloudType <p>Account type. 0 indicates a Tencent Cloud account, and 1 indicates an AWS account.</p>
+     * Set <p>Account type. 0: Tencent Cloud account; 1: AWS account</p>
+     * @param CloudType <p>Account type. 0: Tencent Cloud account; 1: AWS account</p>
      */
     public void setCloudType(Long CloudType) {
         this.CloudType = CloudType;
@@ -413,32 +413,32 @@ public class SubUserInfo extends AbstractModel {
     }
 
     /**
-     * Get <p>Security check for configuration risk required or not</p> 
-     * @return IsAccessCheck <p>Security check for configuration risk required or not</p>
+     * Get <p>Whether to configure a security check for risks</p> 
+     * @return IsAccessCheck <p>Whether to configure a security check for risks</p>
      */
     public Boolean getIsAccessCheck() {
         return this.IsAccessCheck;
     }
 
     /**
-     * Set <p>Security check for configuration risk required or not</p>
-     * @param IsAccessCheck <p>Security check for configuration risk required or not</p>
+     * Set <p>Whether to configure a security check for risks</p>
+     * @param IsAccessCheck <p>Whether to configure a security check for risks</p>
      */
     public void setIsAccessCheck(Boolean IsAccessCheck) {
         this.IsAccessCheck = IsAccessCheck;
     }
 
     /**
-     * Get <p>Whether configure user behavior management policy</p> 
-     * @return IsAccessUeba <p>Whether configure user behavior management policy</p>
+     * Get <p>Whether to configure a user behavior management policy</p> 
+     * @return IsAccessUeba <p>Whether to configure a user behavior management policy</p>
      */
     public Boolean getIsAccessUeba() {
         return this.IsAccessUeba;
     }
 
     /**
-     * Set <p>Whether configure user behavior management policy</p>
-     * @param IsAccessUeba <p>Whether configure user behavior management policy</p>
+     * Set <p>Whether to configure a user behavior management policy</p>
+     * @param IsAccessUeba <p>Whether to configure a user behavior management policy</p>
      */
     public void setIsAccessUeba(Boolean IsAccessUeba) {
         this.IsAccessUeba = IsAccessUeba;

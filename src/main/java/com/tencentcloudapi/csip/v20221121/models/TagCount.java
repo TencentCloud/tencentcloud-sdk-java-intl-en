@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class TagCount extends AbstractModel {
 
     /**
-    * Product Name
+    * Product name
     */
     @SerializedName("Name")
     @Expose
@@ -38,16 +38,16 @@ public class TagCount extends AbstractModel {
     private Long Count;
 
     /**
-     * Get Product Name 
-     * @return Name Product Name
+     * Get Product name 
+     * @return Name Product name
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Product Name
-     * @param Name Product Name
+     * Set Product name
+     * @param Name Product name
      */
     public void setName(String Name) {
         this.Name = Name;

@@ -87,14 +87,14 @@ public class BugInfoDetail extends AbstractModel {
     private String ImpactOs;
 
     /**
-    * Affected component
+    * Components affected by the vulnerability
     */
     @SerializedName("ImpactCOMPENT")
     @Expose
     private String ImpactCOMPENT;
 
     /**
-    * Vulnerability Affected Version
+    * Vulnerability affected version
     */
     @SerializedName("ImpactVersion")
     @Expose
@@ -308,32 +308,32 @@ public class BugInfoDetail extends AbstractModel {
     }
 
     /**
-     * Get Affected component 
-     * @return ImpactCOMPENT Affected component
+     * Get Components affected by the vulnerability 
+     * @return ImpactCOMPENT Components affected by the vulnerability
      */
     public String getImpactCOMPENT() {
         return this.ImpactCOMPENT;
     }
 
     /**
-     * Set Affected component
-     * @param ImpactCOMPENT Affected component
+     * Set Components affected by the vulnerability
+     * @param ImpactCOMPENT Components affected by the vulnerability
      */
     public void setImpactCOMPENT(String ImpactCOMPENT) {
         this.ImpactCOMPENT = ImpactCOMPENT;
     }
 
     /**
-     * Get Vulnerability Affected Version 
-     * @return ImpactVersion Vulnerability Affected Version
+     * Get Vulnerability affected version 
+     * @return ImpactVersion Vulnerability affected version
      */
     public String getImpactVersion() {
         return this.ImpactVersion;
     }
 
     /**
-     * Set Vulnerability Affected Version
-     * @param ImpactVersion Vulnerability Affected Version
+     * Set Vulnerability affected version
+     * @param ImpactVersion Vulnerability affected version
      */
     public void setImpactVersion(String ImpactVersion) {
         this.ImpactVersion = ImpactVersion;

@@ -38,21 +38,21 @@ public class CreateAccessKeyCheckTaskRequest extends AbstractModel {
     private Long [] RiskIDList;
 
     /**
-    * Access key list.
+    * Access key list
     */
     @SerializedName("AccessKeyList")
     @Expose
     private String [] AccessKeyList;
 
     /**
-    * Account uin list.
+    * List of account uins
     */
     @SerializedName("SubUinList")
     @Expose
     private String [] SubUinList;
 
     /**
-    * Risk rule id list.
+    * List of risk rule IDs
     */
     @SerializedName("RiskRuleIDList")
     @Expose
@@ -91,48 +91,48 @@ public class CreateAccessKeyCheckTaskRequest extends AbstractModel {
     }
 
     /**
-     * Get Access key list. 
-     * @return AccessKeyList Access key list.
+     * Get Access key list 
+     * @return AccessKeyList Access key list
      */
     public String [] getAccessKeyList() {
         return this.AccessKeyList;
     }
 
     /**
-     * Set Access key list.
-     * @param AccessKeyList Access key list.
+     * Set Access key list
+     * @param AccessKeyList Access key list
      */
     public void setAccessKeyList(String [] AccessKeyList) {
         this.AccessKeyList = AccessKeyList;
     }
 
     /**
-     * Get Account uin list. 
-     * @return SubUinList Account uin list.
+     * Get List of account uins 
+     * @return SubUinList List of account uins
      */
     public String [] getSubUinList() {
         return this.SubUinList;
     }
 
     /**
-     * Set Account uin list.
-     * @param SubUinList Account uin list.
+     * Set List of account uins
+     * @param SubUinList List of account uins
      */
     public void setSubUinList(String [] SubUinList) {
         this.SubUinList = SubUinList;
     }
 
     /**
-     * Get Risk rule id list. 
-     * @return RiskRuleIDList Risk rule id list.
+     * Get List of risk rule IDs 
+     * @return RiskRuleIDList List of risk rule IDs
      */
     public Long [] getRiskRuleIDList() {
         return this.RiskRuleIDList;
     }
 
     /**
-     * Set Risk rule id list.
-     * @param RiskRuleIDList Risk rule id list.
+     * Set List of risk rule IDs
+     * @param RiskRuleIDList List of risk rule IDs
      */
     public void setRiskRuleIDList(Long [] RiskRuleIDList) {
         this.RiskRuleIDList = RiskRuleIDList;

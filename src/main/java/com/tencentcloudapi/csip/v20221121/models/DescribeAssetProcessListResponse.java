@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeAssetProcessListResponse extends AbstractModel {
 
     /**
-    * Process quantity.
+    * Process quantity
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * Process list.
+    * Process list
     */
     @SerializedName("AssetProcessList")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeAssetProcessListResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Process quantity. 
-     * @return TotalCount Process quantity.
+     * Get Process quantity 
+     * @return TotalCount Process quantity
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set Process quantity.
-     * @param TotalCount Process quantity.
+     * Set Process quantity
+     * @param TotalCount Process quantity
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get Process list. 
-     * @return AssetProcessList Process list.
+     * Get Process list 
+     * @return AssetProcessList Process list
      */
     public AssetProcessItem [] getAssetProcessList() {
         return this.AssetProcessList;
     }
 
     /**
-     * Set Process list.
-     * @param AssetProcessList Process list.
+     * Set Process list
+     * @param AssetProcessList Process list
      */
     public void setAssetProcessList(AssetProcessItem [] AssetProcessList) {
         this.AssetProcessList = AssetProcessList;

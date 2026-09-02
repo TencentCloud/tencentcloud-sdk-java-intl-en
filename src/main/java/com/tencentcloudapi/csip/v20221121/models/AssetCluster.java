@@ -31,7 +31,7 @@ public class AssetCluster extends AbstractModel {
     private Long AppId;
 
     /**
-    * Tenant uin.
+    * Tenant uin
     */
     @SerializedName("Uin")
     @Expose
@@ -87,65 +87,65 @@ public class AssetCluster extends AbstractModel {
     private String Status;
 
     /**
-    * Cluster protection status, enumerate on the left, display on the right.
-Protection status of the cluster. 
-0: not connected.
-Unprotected. 
-2: partial protection. 
-3: under protection. 
-4: access exception. 
-5: accessing. 
-Uninstalling. 
-7: uninstallation exception.
+    * Cluster protection status. Enumerations on the left and displays on the right.
+Cluster protection status 
+0: Not connected
+1: No protection 
+2: Partial protection 
+3: Under protection 
+4: Access exception 
+5: Accessing 
+6: Uninstalling 
+7: Uninstallation exception
     */
     @SerializedName("ProtectStatus")
     @Expose
     private Long ProtectStatus;
 
     /**
-    * Access information, being empty indicates no access exception info.
+    * Access information. Being not empty indicates an access exception message.
     */
     @SerializedName("ProtectInfo")
     @Expose
     private String ProtectInfo;
 
     /**
-    * VPC id.
+    * VPC id
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * VPC name.
+    * VPC name
     */
     @SerializedName("VpcName")
     @Expose
     private String VpcName;
 
     /**
-    * kubernetes version.
+    * kubernetes version
     */
     @SerializedName("KubernetesVersion")
     @Expose
     private String KubernetesVersion;
 
     /**
-    * Runtime component.
+    * Runtime component
     */
     @SerializedName("Component")
     @Expose
     private String Component;
 
     /**
-    * Runtime component version.
+    * Runtime component version
     */
     @SerializedName("ComponentVersion")
     @Expose
     private String ComponentVersion;
 
     /**
-    * Component status.
+    * Component status
     */
     @SerializedName("ComponentStatus")
     @Expose
@@ -159,7 +159,7 @@ Uninstalling.
     private String CheckTime;
 
     /**
-    * Associated hosts.
+    * Number of associated hosts
     */
     @SerializedName("MachineCount")
     @Expose
@@ -180,14 +180,14 @@ Uninstalling.
     private Long ServiceCount;
 
     /**
-    * Vulnerability risk.
+    * Vulnerability risk
     */
     @SerializedName("VulRisk")
     @Expose
     private Long VulRisk;
 
     /**
-    * Configuration risk.
+    * Configuration risk
     */
     @SerializedName("CFGRisk")
     @Expose
@@ -215,7 +215,7 @@ Uninstalling.
     private Long IsNewAsset;
 
     /**
-    * Cloud asset type: 0: tencent cloud, 1: aws, 2: azure.
+    * Cloud asset type: 0: Tencent Cloud, 1: aws, 2: azure
     */
     @SerializedName("CloudType")
     @Expose
@@ -238,16 +238,16 @@ Uninstalling.
     }
 
     /**
-     * Get Tenant uin. 
-     * @return Uin Tenant uin.
+     * Get Tenant uin 
+     * @return Uin Tenant uin
      */
     public String getUin() {
         return this.Uin;
     }
 
     /**
-     * Set Tenant uin.
-     * @param Uin Tenant uin.
+     * Set Tenant uin
+     * @param Uin Tenant uin
      */
     public void setUin(String Uin) {
         this.Uin = Uin;
@@ -366,164 +366,164 @@ Uninstalling.
     }
 
     /**
-     * Get Cluster protection status, enumerate on the left, display on the right.
-Protection status of the cluster. 
-0: not connected.
-Unprotected. 
-2: partial protection. 
-3: under protection. 
-4: access exception. 
-5: accessing. 
-Uninstalling. 
-7: uninstallation exception. 
-     * @return ProtectStatus Cluster protection status, enumerate on the left, display on the right.
-Protection status of the cluster. 
-0: not connected.
-Unprotected. 
-2: partial protection. 
-3: under protection. 
-4: access exception. 
-5: accessing. 
-Uninstalling. 
-7: uninstallation exception.
+     * Get Cluster protection status. Enumerations on the left and displays on the right.
+Cluster protection status 
+0: Not connected
+1: No protection 
+2: Partial protection 
+3: Under protection 
+4: Access exception 
+5: Accessing 
+6: Uninstalling 
+7: Uninstallation exception 
+     * @return ProtectStatus Cluster protection status. Enumerations on the left and displays on the right.
+Cluster protection status 
+0: Not connected
+1: No protection 
+2: Partial protection 
+3: Under protection 
+4: Access exception 
+5: Accessing 
+6: Uninstalling 
+7: Uninstallation exception
      */
     public Long getProtectStatus() {
         return this.ProtectStatus;
     }
 
     /**
-     * Set Cluster protection status, enumerate on the left, display on the right.
-Protection status of the cluster. 
-0: not connected.
-Unprotected. 
-2: partial protection. 
-3: under protection. 
-4: access exception. 
-5: accessing. 
-Uninstalling. 
-7: uninstallation exception.
-     * @param ProtectStatus Cluster protection status, enumerate on the left, display on the right.
-Protection status of the cluster. 
-0: not connected.
-Unprotected. 
-2: partial protection. 
-3: under protection. 
-4: access exception. 
-5: accessing. 
-Uninstalling. 
-7: uninstallation exception.
+     * Set Cluster protection status. Enumerations on the left and displays on the right.
+Cluster protection status 
+0: Not connected
+1: No protection 
+2: Partial protection 
+3: Under protection 
+4: Access exception 
+5: Accessing 
+6: Uninstalling 
+7: Uninstallation exception
+     * @param ProtectStatus Cluster protection status. Enumerations on the left and displays on the right.
+Cluster protection status 
+0: Not connected
+1: No protection 
+2: Partial protection 
+3: Under protection 
+4: Access exception 
+5: Accessing 
+6: Uninstalling 
+7: Uninstallation exception
      */
     public void setProtectStatus(Long ProtectStatus) {
         this.ProtectStatus = ProtectStatus;
     }
 
     /**
-     * Get Access information, being empty indicates no access exception info. 
-     * @return ProtectInfo Access information, being empty indicates no access exception info.
+     * Get Access information. Being not empty indicates an access exception message. 
+     * @return ProtectInfo Access information. Being not empty indicates an access exception message.
      */
     public String getProtectInfo() {
         return this.ProtectInfo;
     }
 
     /**
-     * Set Access information, being empty indicates no access exception info.
-     * @param ProtectInfo Access information, being empty indicates no access exception info.
+     * Set Access information. Being not empty indicates an access exception message.
+     * @param ProtectInfo Access information. Being not empty indicates an access exception message.
      */
     public void setProtectInfo(String ProtectInfo) {
         this.ProtectInfo = ProtectInfo;
     }
 
     /**
-     * Get VPC id. 
-     * @return VpcId VPC id.
+     * Get VPC id 
+     * @return VpcId VPC id
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set VPC id.
-     * @param VpcId VPC id.
+     * Set VPC id
+     * @param VpcId VPC id
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get VPC name. 
-     * @return VpcName VPC name.
+     * Get VPC name 
+     * @return VpcName VPC name
      */
     public String getVpcName() {
         return this.VpcName;
     }
 
     /**
-     * Set VPC name.
-     * @param VpcName VPC name.
+     * Set VPC name
+     * @param VpcName VPC name
      */
     public void setVpcName(String VpcName) {
         this.VpcName = VpcName;
     }
 
     /**
-     * Get kubernetes version. 
-     * @return KubernetesVersion kubernetes version.
+     * Get kubernetes version 
+     * @return KubernetesVersion kubernetes version
      */
     public String getKubernetesVersion() {
         return this.KubernetesVersion;
     }
 
     /**
-     * Set kubernetes version.
-     * @param KubernetesVersion kubernetes version.
+     * Set kubernetes version
+     * @param KubernetesVersion kubernetes version
      */
     public void setKubernetesVersion(String KubernetesVersion) {
         this.KubernetesVersion = KubernetesVersion;
     }
 
     /**
-     * Get Runtime component. 
-     * @return Component Runtime component.
+     * Get Runtime component 
+     * @return Component Runtime component
      */
     public String getComponent() {
         return this.Component;
     }
 
     /**
-     * Set Runtime component.
-     * @param Component Runtime component.
+     * Set Runtime component
+     * @param Component Runtime component
      */
     public void setComponent(String Component) {
         this.Component = Component;
     }
 
     /**
-     * Get Runtime component version. 
-     * @return ComponentVersion Runtime component version.
+     * Get Runtime component version 
+     * @return ComponentVersion Runtime component version
      */
     public String getComponentVersion() {
         return this.ComponentVersion;
     }
 
     /**
-     * Set Runtime component version.
-     * @param ComponentVersion Runtime component version.
+     * Set Runtime component version
+     * @param ComponentVersion Runtime component version
      */
     public void setComponentVersion(String ComponentVersion) {
         this.ComponentVersion = ComponentVersion;
     }
 
     /**
-     * Get Component status. 
-     * @return ComponentStatus Component status.
+     * Get Component status 
+     * @return ComponentStatus Component status
      */
     public String getComponentStatus() {
         return this.ComponentStatus;
     }
 
     /**
-     * Set Component status.
-     * @param ComponentStatus Component status.
+     * Set Component status
+     * @param ComponentStatus Component status
      */
     public void setComponentStatus(String ComponentStatus) {
         this.ComponentStatus = ComponentStatus;
@@ -546,16 +546,16 @@ Uninstalling.
     }
 
     /**
-     * Get Associated hosts. 
-     * @return MachineCount Associated hosts.
+     * Get Number of associated hosts 
+     * @return MachineCount Number of associated hosts
      */
     public Long getMachineCount() {
         return this.MachineCount;
     }
 
     /**
-     * Set Associated hosts.
-     * @param MachineCount Associated hosts.
+     * Set Number of associated hosts
+     * @param MachineCount Number of associated hosts
      */
     public void setMachineCount(Long MachineCount) {
         this.MachineCount = MachineCount;
@@ -594,32 +594,32 @@ Uninstalling.
     }
 
     /**
-     * Get Vulnerability risk. 
-     * @return VulRisk Vulnerability risk.
+     * Get Vulnerability risk 
+     * @return VulRisk Vulnerability risk
      */
     public Long getVulRisk() {
         return this.VulRisk;
     }
 
     /**
-     * Set Vulnerability risk.
-     * @param VulRisk Vulnerability risk.
+     * Set Vulnerability risk
+     * @param VulRisk Vulnerability risk
      */
     public void setVulRisk(Long VulRisk) {
         this.VulRisk = VulRisk;
     }
 
     /**
-     * Get Configuration risk. 
-     * @return CFGRisk Configuration risk.
+     * Get Configuration risk 
+     * @return CFGRisk Configuration risk
      */
     public Long getCFGRisk() {
         return this.CFGRisk;
     }
 
     /**
-     * Set Configuration risk.
-     * @param CFGRisk Configuration risk.
+     * Set Configuration risk
+     * @param CFGRisk Configuration risk
      */
     public void setCFGRisk(Long CFGRisk) {
         this.CFGRisk = CFGRisk;
@@ -674,16 +674,16 @@ Uninstalling.
     }
 
     /**
-     * Get Cloud asset type: 0: tencent cloud, 1: aws, 2: azure. 
-     * @return CloudType Cloud asset type: 0: tencent cloud, 1: aws, 2: azure.
+     * Get Cloud asset type: 0: Tencent Cloud, 1: aws, 2: azure 
+     * @return CloudType Cloud asset type: 0: Tencent Cloud, 1: aws, 2: azure
      */
     public Long getCloudType() {
         return this.CloudType;
     }
 
     /**
-     * Set Cloud asset type: 0: tencent cloud, 1: aws, 2: azure.
-     * @param CloudType Cloud asset type: 0: tencent cloud, 1: aws, 2: azure.
+     * Set Cloud asset type: 0: Tencent Cloud, 1: aws, 2: azure
+     * @param CloudType Cloud asset type: 0: Tencent Cloud, 1: aws, 2: azure
      */
     public void setCloudType(Long CloudType) {
         this.CloudType = CloudType;

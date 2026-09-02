@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeSkillScanPayInfoResponse extends AbstractModel {
 
     /**
-    * <p>AppID of the associated tenant for the order</p>
+    * <p>AppID of the associated tenant of the order</p>
     */
     @SerializedName("AppID")
     @Expose
     private Long AppID;
 
     /**
-    * <p>Order status<br>Enumeration value:<br>0: Not purchased<br>1: Normal<br>2: Isolated<br>6: In trial<br>7: Expired<br>8: Trial expiration</p>
+    * <p>Order status<br>Enumeration values:<br>0: Not purchased<br>1: Normal<br>2: Isolated<br>6: In trial<br>7: Expired<br>8: Trial expiration</p>
     */
     @SerializedName("OrderStatus")
     @Expose
@@ -45,21 +45,21 @@ public class DescribeSkillScanPayInfoResponse extends AbstractModel {
     private Long TotalQuota;
 
     /**
-    * <p>Consumed quota.</p>
+    * <p>Consumed quota</p>
     */
     @SerializedName("UsedCount")
     @Expose
     private Long UsedCount;
 
     /**
-    * <p>Payment mode<br>Enumeration value:<br>0: Postpaid<br>1: Prepaid</p>
+    * <p>Payment mode<br>Enumeration values:<br>0: postpaid<br>1: prepaid</p>
     */
     @SerializedName("PayMode")
     @Expose
     private Long PayMode;
 
     /**
-    * <p>Auto-renewal flag<br>Enumeration value:<br>0: not set<br>1: auto-renewal<br>2: no auto-renewal</p>
+    * <p>Auto-renewal flag<br>Enumeration values:<br>0: Not set<br>1: Auto-renewal<br>2: No auto-renewal</p>
     */
     @SerializedName("AutoRenew")
     @Expose
@@ -73,7 +73,7 @@ public class DescribeSkillScanPayInfoResponse extends AbstractModel {
     private String ResourceId;
 
     /**
-    * <p>Purchase period</p>
+    * <p>Purchase period.</p>
     */
     @SerializedName("TimeSpan")
     @Expose
@@ -101,7 +101,7 @@ public class DescribeSkillScanPayInfoResponse extends AbstractModel {
     private String EndTime;
 
     /**
-    * <p>Open beta end time is fixed as 2026-06-30 23:59:59</p>
+    * <p>Open beta end time, fixed as 2026-06-30 23:59:59</p>
     */
     @SerializedName("BetaEndTime")
     @Expose
@@ -136,32 +136,32 @@ public class DescribeSkillScanPayInfoResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get <p>AppID of the associated tenant for the order</p> 
-     * @return AppID <p>AppID of the associated tenant for the order</p>
+     * Get <p>AppID of the associated tenant of the order</p> 
+     * @return AppID <p>AppID of the associated tenant of the order</p>
      */
     public Long getAppID() {
         return this.AppID;
     }
 
     /**
-     * Set <p>AppID of the associated tenant for the order</p>
-     * @param AppID <p>AppID of the associated tenant for the order</p>
+     * Set <p>AppID of the associated tenant of the order</p>
+     * @param AppID <p>AppID of the associated tenant of the order</p>
      */
     public void setAppID(Long AppID) {
         this.AppID = AppID;
     }
 
     /**
-     * Get <p>Order status<br>Enumeration value:<br>0: Not purchased<br>1: Normal<br>2: Isolated<br>6: In trial<br>7: Expired<br>8: Trial expiration</p> 
-     * @return OrderStatus <p>Order status<br>Enumeration value:<br>0: Not purchased<br>1: Normal<br>2: Isolated<br>6: In trial<br>7: Expired<br>8: Trial expiration</p>
+     * Get <p>Order status<br>Enumeration values:<br>0: Not purchased<br>1: Normal<br>2: Isolated<br>6: In trial<br>7: Expired<br>8: Trial expiration</p> 
+     * @return OrderStatus <p>Order status<br>Enumeration values:<br>0: Not purchased<br>1: Normal<br>2: Isolated<br>6: In trial<br>7: Expired<br>8: Trial expiration</p>
      */
     public Long getOrderStatus() {
         return this.OrderStatus;
     }
 
     /**
-     * Set <p>Order status<br>Enumeration value:<br>0: Not purchased<br>1: Normal<br>2: Isolated<br>6: In trial<br>7: Expired<br>8: Trial expiration</p>
-     * @param OrderStatus <p>Order status<br>Enumeration value:<br>0: Not purchased<br>1: Normal<br>2: Isolated<br>6: In trial<br>7: Expired<br>8: Trial expiration</p>
+     * Set <p>Order status<br>Enumeration values:<br>0: Not purchased<br>1: Normal<br>2: Isolated<br>6: In trial<br>7: Expired<br>8: Trial expiration</p>
+     * @param OrderStatus <p>Order status<br>Enumeration values:<br>0: Not purchased<br>1: Normal<br>2: Isolated<br>6: In trial<br>7: Expired<br>8: Trial expiration</p>
      */
     public void setOrderStatus(Long OrderStatus) {
         this.OrderStatus = OrderStatus;
@@ -184,48 +184,48 @@ public class DescribeSkillScanPayInfoResponse extends AbstractModel {
     }
 
     /**
-     * Get <p>Consumed quota.</p> 
-     * @return UsedCount <p>Consumed quota.</p>
+     * Get <p>Consumed quota</p> 
+     * @return UsedCount <p>Consumed quota</p>
      */
     public Long getUsedCount() {
         return this.UsedCount;
     }
 
     /**
-     * Set <p>Consumed quota.</p>
-     * @param UsedCount <p>Consumed quota.</p>
+     * Set <p>Consumed quota</p>
+     * @param UsedCount <p>Consumed quota</p>
      */
     public void setUsedCount(Long UsedCount) {
         this.UsedCount = UsedCount;
     }
 
     /**
-     * Get <p>Payment mode<br>Enumeration value:<br>0: Postpaid<br>1: Prepaid</p> 
-     * @return PayMode <p>Payment mode<br>Enumeration value:<br>0: Postpaid<br>1: Prepaid</p>
+     * Get <p>Payment mode<br>Enumeration values:<br>0: postpaid<br>1: prepaid</p> 
+     * @return PayMode <p>Payment mode<br>Enumeration values:<br>0: postpaid<br>1: prepaid</p>
      */
     public Long getPayMode() {
         return this.PayMode;
     }
 
     /**
-     * Set <p>Payment mode<br>Enumeration value:<br>0: Postpaid<br>1: Prepaid</p>
-     * @param PayMode <p>Payment mode<br>Enumeration value:<br>0: Postpaid<br>1: Prepaid</p>
+     * Set <p>Payment mode<br>Enumeration values:<br>0: postpaid<br>1: prepaid</p>
+     * @param PayMode <p>Payment mode<br>Enumeration values:<br>0: postpaid<br>1: prepaid</p>
      */
     public void setPayMode(Long PayMode) {
         this.PayMode = PayMode;
     }
 
     /**
-     * Get <p>Auto-renewal flag<br>Enumeration value:<br>0: not set<br>1: auto-renewal<br>2: no auto-renewal</p> 
-     * @return AutoRenew <p>Auto-renewal flag<br>Enumeration value:<br>0: not set<br>1: auto-renewal<br>2: no auto-renewal</p>
+     * Get <p>Auto-renewal flag<br>Enumeration values:<br>0: Not set<br>1: Auto-renewal<br>2: No auto-renewal</p> 
+     * @return AutoRenew <p>Auto-renewal flag<br>Enumeration values:<br>0: Not set<br>1: Auto-renewal<br>2: No auto-renewal</p>
      */
     public Long getAutoRenew() {
         return this.AutoRenew;
     }
 
     /**
-     * Set <p>Auto-renewal flag<br>Enumeration value:<br>0: not set<br>1: auto-renewal<br>2: no auto-renewal</p>
-     * @param AutoRenew <p>Auto-renewal flag<br>Enumeration value:<br>0: not set<br>1: auto-renewal<br>2: no auto-renewal</p>
+     * Set <p>Auto-renewal flag<br>Enumeration values:<br>0: Not set<br>1: Auto-renewal<br>2: No auto-renewal</p>
+     * @param AutoRenew <p>Auto-renewal flag<br>Enumeration values:<br>0: Not set<br>1: Auto-renewal<br>2: No auto-renewal</p>
      */
     public void setAutoRenew(Long AutoRenew) {
         this.AutoRenew = AutoRenew;
@@ -248,16 +248,16 @@ public class DescribeSkillScanPayInfoResponse extends AbstractModel {
     }
 
     /**
-     * Get <p>Purchase period</p> 
-     * @return TimeSpan <p>Purchase period</p>
+     * Get <p>Purchase period.</p> 
+     * @return TimeSpan <p>Purchase period.</p>
      */
     public Long getTimeSpan() {
         return this.TimeSpan;
     }
 
     /**
-     * Set <p>Purchase period</p>
-     * @param TimeSpan <p>Purchase period</p>
+     * Set <p>Purchase period.</p>
+     * @param TimeSpan <p>Purchase period.</p>
      */
     public void setTimeSpan(Long TimeSpan) {
         this.TimeSpan = TimeSpan;
@@ -312,16 +312,16 @@ public class DescribeSkillScanPayInfoResponse extends AbstractModel {
     }
 
     /**
-     * Get <p>Open beta end time is fixed as 2026-06-30 23:59:59</p> 
-     * @return BetaEndTime <p>Open beta end time is fixed as 2026-06-30 23:59:59</p>
+     * Get <p>Open beta end time, fixed as 2026-06-30 23:59:59</p> 
+     * @return BetaEndTime <p>Open beta end time, fixed as 2026-06-30 23:59:59</p>
      */
     public String getBetaEndTime() {
         return this.BetaEndTime;
     }
 
     /**
-     * Set <p>Open beta end time is fixed as 2026-06-30 23:59:59</p>
-     * @param BetaEndTime <p>Open beta end time is fixed as 2026-06-30 23:59:59</p>
+     * Set <p>Open beta end time, fixed as 2026-06-30 23:59:59</p>
+     * @param BetaEndTime <p>Open beta end time, fixed as 2026-06-30 23:59:59</p>
      */
     public void setBetaEndTime(String BetaEndTime) {
         this.BetaEndTime = BetaEndTime;

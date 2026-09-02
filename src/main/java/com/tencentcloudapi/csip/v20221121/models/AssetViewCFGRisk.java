@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class AssetViewCFGRisk extends AbstractModel {
 
     /**
-    * The unique ID.
+    * Unique ID
     */
     @SerializedName("Id")
     @Expose
@@ -45,14 +45,14 @@ public class AssetViewCFGRisk extends AbstractModel {
     private String CheckType;
 
     /**
-    * Instance ID
+    * Instance ID.
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Instance name
+    * Instance name.
     */
     @SerializedName("InstanceName")
     @Expose
@@ -66,84 +66,84 @@ public class AssetViewCFGRisk extends AbstractModel {
     private String InstanceType;
 
     /**
-    * Affected assets
+    * Affect assets
     */
     @SerializedName("AffectAsset")
     @Expose
     private String AffectAsset;
 
     /**
-    * Risk level, low - low risk, high - high risk, middle - medium risk, info - notification, extreme - critical.
+    * Risk level. low: low risk. high: high risk. middle: medium risk. info: notification. extreme: critical.
     */
     @SerializedName("Level")
     @Expose
     private String Level;
 
     /**
-    * First detected
+    * First Recognition Time
     */
     @SerializedName("FirstTime")
     @Expose
     private String FirstTime;
 
     /**
-    * Last detected 
+    * Latest Recognition Time
     */
     @SerializedName("RecentTime")
     @Expose
     private String RecentTime;
 
     /**
-    * Source of the task
+    * Source.
     */
     @SerializedName("From")
     @Expose
     private String From;
 
     /**
-    * Status
+    * Status.
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * relevant standards
+    * Relevant standards
     */
     @SerializedName("CFGSTD")
     @Expose
     private String CFGSTD;
 
     /**
-    * Configuration details.
+    * Configuration detail
     */
     @SerializedName("CFGDescribe")
     @Expose
     private String CFGDescribe;
 
     /**
-    * Fix suggestion
+    * Fixing suggestion
     */
     @SerializedName("CFGFix")
     @Expose
     private String CFGFix;
 
     /**
-    * URL of the help documentation
+    * Help Document Link
     */
     @SerializedName("CFGHelpURL")
     @Expose
     private String CFGHelpURL;
 
     /**
-    * Data entry key
+    * Front-end Usage Index
     */
     @SerializedName("Index")
     @Expose
     private String Index;
 
     /**
-    * User AppId
+    * User appid.
     */
     @SerializedName("AppId")
     @Expose
@@ -164,23 +164,23 @@ public class AssetViewCFGRisk extends AbstractModel {
     private String Uin;
 
     /**
-    * When the asset type is LBL, show this field to locate the specific LB.
+    * This field is displayed when the asset type is LBL, to help locate the specific LB.
     */
     @SerializedName("ClbId")
     @Expose
     private String ClbId;
 
     /**
-     * Get The unique ID. 
-     * @return Id The unique ID.
+     * Get Unique ID 
+     * @return Id Unique ID
      */
     public String getId() {
         return this.Id;
     }
 
     /**
-     * Set The unique ID.
-     * @param Id The unique ID.
+     * Set Unique ID
+     * @param Id Unique ID
      */
     public void setId(String Id) {
         this.Id = Id;
@@ -219,32 +219,32 @@ public class AssetViewCFGRisk extends AbstractModel {
     }
 
     /**
-     * Get Instance ID 
-     * @return InstanceId Instance ID
+     * Get Instance ID. 
+     * @return InstanceId Instance ID.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Instance ID
-     * @param InstanceId Instance ID
+     * Set Instance ID.
+     * @param InstanceId Instance ID.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Instance name 
-     * @return InstanceName Instance name
+     * Get Instance name. 
+     * @return InstanceName Instance name.
      */
     public String getInstanceName() {
         return this.InstanceName;
     }
 
     /**
-     * Set Instance name
-     * @param InstanceName Instance name
+     * Set Instance name.
+     * @param InstanceName Instance name.
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;
@@ -267,192 +267,192 @@ public class AssetViewCFGRisk extends AbstractModel {
     }
 
     /**
-     * Get Affected assets 
-     * @return AffectAsset Affected assets
+     * Get Affect assets 
+     * @return AffectAsset Affect assets
      */
     public String getAffectAsset() {
         return this.AffectAsset;
     }
 
     /**
-     * Set Affected assets
-     * @param AffectAsset Affected assets
+     * Set Affect assets
+     * @param AffectAsset Affect assets
      */
     public void setAffectAsset(String AffectAsset) {
         this.AffectAsset = AffectAsset;
     }
 
     /**
-     * Get Risk level, low - low risk, high - high risk, middle - medium risk, info - notification, extreme - critical. 
-     * @return Level Risk level, low - low risk, high - high risk, middle - medium risk, info - notification, extreme - critical.
+     * Get Risk level. low: low risk. high: high risk. middle: medium risk. info: notification. extreme: critical. 
+     * @return Level Risk level. low: low risk. high: high risk. middle: medium risk. info: notification. extreme: critical.
      */
     public String getLevel() {
         return this.Level;
     }
 
     /**
-     * Set Risk level, low - low risk, high - high risk, middle - medium risk, info - notification, extreme - critical.
-     * @param Level Risk level, low - low risk, high - high risk, middle - medium risk, info - notification, extreme - critical.
+     * Set Risk level. low: low risk. high: high risk. middle: medium risk. info: notification. extreme: critical.
+     * @param Level Risk level. low: low risk. high: high risk. middle: medium risk. info: notification. extreme: critical.
      */
     public void setLevel(String Level) {
         this.Level = Level;
     }
 
     /**
-     * Get First detected 
-     * @return FirstTime First detected
+     * Get First Recognition Time 
+     * @return FirstTime First Recognition Time
      */
     public String getFirstTime() {
         return this.FirstTime;
     }
 
     /**
-     * Set First detected
-     * @param FirstTime First detected
+     * Set First Recognition Time
+     * @param FirstTime First Recognition Time
      */
     public void setFirstTime(String FirstTime) {
         this.FirstTime = FirstTime;
     }
 
     /**
-     * Get Last detected  
-     * @return RecentTime Last detected 
+     * Get Latest Recognition Time 
+     * @return RecentTime Latest Recognition Time
      */
     public String getRecentTime() {
         return this.RecentTime;
     }
 
     /**
-     * Set Last detected 
-     * @param RecentTime Last detected 
+     * Set Latest Recognition Time
+     * @param RecentTime Latest Recognition Time
      */
     public void setRecentTime(String RecentTime) {
         this.RecentTime = RecentTime;
     }
 
     /**
-     * Get Source of the task 
-     * @return From Source of the task
+     * Get Source. 
+     * @return From Source.
      */
     public String getFrom() {
         return this.From;
     }
 
     /**
-     * Set Source of the task
-     * @param From Source of the task
+     * Set Source.
+     * @param From Source.
      */
     public void setFrom(String From) {
         this.From = From;
     }
 
     /**
-     * Get Status 
-     * @return Status Status
+     * Get Status. 
+     * @return Status Status.
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Status
-     * @param Status Status
+     * Set Status.
+     * @param Status Status.
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get relevant standards 
-     * @return CFGSTD relevant standards
+     * Get Relevant standards 
+     * @return CFGSTD Relevant standards
      */
     public String getCFGSTD() {
         return this.CFGSTD;
     }
 
     /**
-     * Set relevant standards
-     * @param CFGSTD relevant standards
+     * Set Relevant standards
+     * @param CFGSTD Relevant standards
      */
     public void setCFGSTD(String CFGSTD) {
         this.CFGSTD = CFGSTD;
     }
 
     /**
-     * Get Configuration details. 
-     * @return CFGDescribe Configuration details.
+     * Get Configuration detail 
+     * @return CFGDescribe Configuration detail
      */
     public String getCFGDescribe() {
         return this.CFGDescribe;
     }
 
     /**
-     * Set Configuration details.
-     * @param CFGDescribe Configuration details.
+     * Set Configuration detail
+     * @param CFGDescribe Configuration detail
      */
     public void setCFGDescribe(String CFGDescribe) {
         this.CFGDescribe = CFGDescribe;
     }
 
     /**
-     * Get Fix suggestion 
-     * @return CFGFix Fix suggestion
+     * Get Fixing suggestion 
+     * @return CFGFix Fixing suggestion
      */
     public String getCFGFix() {
         return this.CFGFix;
     }
 
     /**
-     * Set Fix suggestion
-     * @param CFGFix Fix suggestion
+     * Set Fixing suggestion
+     * @param CFGFix Fixing suggestion
      */
     public void setCFGFix(String CFGFix) {
         this.CFGFix = CFGFix;
     }
 
     /**
-     * Get URL of the help documentation 
-     * @return CFGHelpURL URL of the help documentation
+     * Get Help Document Link 
+     * @return CFGHelpURL Help Document Link
      */
     public String getCFGHelpURL() {
         return this.CFGHelpURL;
     }
 
     /**
-     * Set URL of the help documentation
-     * @param CFGHelpURL URL of the help documentation
+     * Set Help Document Link
+     * @param CFGHelpURL Help Document Link
      */
     public void setCFGHelpURL(String CFGHelpURL) {
         this.CFGHelpURL = CFGHelpURL;
     }
 
     /**
-     * Get Data entry key 
-     * @return Index Data entry key
+     * Get Front-end Usage Index 
+     * @return Index Front-end Usage Index
      */
     public String getIndex() {
         return this.Index;
     }
 
     /**
-     * Set Data entry key
-     * @param Index Data entry key
+     * Set Front-end Usage Index
+     * @param Index Front-end Usage Index
      */
     public void setIndex(String Index) {
         this.Index = Index;
     }
 
     /**
-     * Get User AppId 
-     * @return AppId User AppId
+     * Get User appid. 
+     * @return AppId User appid.
      */
     public String getAppId() {
         return this.AppId;
     }
 
     /**
-     * Set User AppId
-     * @param AppId User AppId
+     * Set User appid.
+     * @param AppId User appid.
      */
     public void setAppId(String AppId) {
         this.AppId = AppId;
@@ -491,16 +491,16 @@ public class AssetViewCFGRisk extends AbstractModel {
     }
 
     /**
-     * Get When the asset type is LBL, show this field to locate the specific LB. 
-     * @return ClbId When the asset type is LBL, show this field to locate the specific LB.
+     * Get This field is displayed when the asset type is LBL, to help locate the specific LB. 
+     * @return ClbId This field is displayed when the asset type is LBL, to help locate the specific LB.
      */
     public String getClbId() {
         return this.ClbId;
     }
 
     /**
-     * Set When the asset type is LBL, show this field to locate the specific LB.
-     * @param ClbId When the asset type is LBL, show this field to locate the specific LB.
+     * Set This field is displayed when the asset type is LBL, to help locate the specific LB.
+     * @param ClbId This field is displayed when the asset type is LBL, to help locate the specific LB.
      */
     public void setClbId(String ClbId) {
         this.ClbId = ClbId;

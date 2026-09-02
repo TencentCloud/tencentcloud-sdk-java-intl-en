@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class TaskCenterCFGRiskInputParam extends AbstractModel {
 
     /**
-    * Check item ID
+    * Detection Item ID
     */
     @SerializedName("ItemId")
     @Expose
     private String ItemId;
 
     /**
-    * Whether to enable. `0`: no, `1`: yes.
+    * Whether to enable. 0-Not to Enable; 1-Enable.
     */
     @SerializedName("Enable")
     @Expose
     private Long Enable;
 
     /**
-    * Resource type
+    * Resource type.
     */
     @SerializedName("ResourceType")
     @Expose
     private String ResourceType;
 
     /**
-     * Get Check item ID 
-     * @return ItemId Check item ID
+     * Get Detection Item ID 
+     * @return ItemId Detection Item ID
      */
     public String getItemId() {
         return this.ItemId;
     }
 
     /**
-     * Set Check item ID
-     * @param ItemId Check item ID
+     * Set Detection Item ID
+     * @param ItemId Detection Item ID
      */
     public void setItemId(String ItemId) {
         this.ItemId = ItemId;
     }
 
     /**
-     * Get Whether to enable. `0`: no, `1`: yes. 
-     * @return Enable Whether to enable. `0`: no, `1`: yes.
+     * Get Whether to enable. 0-Not to Enable; 1-Enable. 
+     * @return Enable Whether to enable. 0-Not to Enable; 1-Enable.
      */
     public Long getEnable() {
         return this.Enable;
     }
 
     /**
-     * Set Whether to enable. `0`: no, `1`: yes.
-     * @param Enable Whether to enable. `0`: no, `1`: yes.
+     * Set Whether to enable. 0-Not to Enable; 1-Enable.
+     * @param Enable Whether to enable. 0-Not to Enable; 1-Enable.
      */
     public void setEnable(Long Enable) {
         this.Enable = Enable;
     }
 
     /**
-     * Get Resource type 
-     * @return ResourceType Resource type
+     * Get Resource type. 
+     * @return ResourceType Resource type.
      */
     public String getResourceType() {
         return this.ResourceType;
     }
 
     /**
-     * Set Resource type
-     * @param ResourceType Resource type
+     * Set Resource type.
+     * @param ResourceType Resource type.
      */
     public void setResourceType(String ResourceType) {
         this.ResourceType = ResourceType;

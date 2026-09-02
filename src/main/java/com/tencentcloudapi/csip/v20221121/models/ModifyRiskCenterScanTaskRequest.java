@@ -87,7 +87,7 @@ public class ModifyRiskCenterScanTaskRequest extends AbstractModel {
     private String [] SelfDefiningAssets;
 
     /**
-    * Advanced configuration.
+    * Advanced Configuration
     */
     @SerializedName("TaskAdvanceCFG")
     @Expose
@@ -101,7 +101,7 @@ public class ModifyRiskCenterScanTaskRequest extends AbstractModel {
     private Long TaskMode;
 
     /**
-    * Task complete callback webhook url.
+    * webhook URL for task completion callbacks
     */
     @SerializedName("FinishWebHook")
     @Expose
@@ -252,16 +252,16 @@ public class ModifyRiskCenterScanTaskRequest extends AbstractModel {
     }
 
     /**
-     * Get Advanced configuration. 
-     * @return TaskAdvanceCFG Advanced configuration.
+     * Get Advanced Configuration 
+     * @return TaskAdvanceCFG Advanced Configuration
      */
     public TaskAdvanceCFG getTaskAdvanceCFG() {
         return this.TaskAdvanceCFG;
     }
 
     /**
-     * Set Advanced configuration.
-     * @param TaskAdvanceCFG Advanced configuration.
+     * Set Advanced Configuration
+     * @param TaskAdvanceCFG Advanced Configuration
      */
     public void setTaskAdvanceCFG(TaskAdvanceCFG TaskAdvanceCFG) {
         this.TaskAdvanceCFG = TaskAdvanceCFG;
@@ -284,16 +284,16 @@ public class ModifyRiskCenterScanTaskRequest extends AbstractModel {
     }
 
     /**
-     * Get Task complete callback webhook url. 
-     * @return FinishWebHook Task complete callback webhook url.
+     * Get webhook URL for task completion callbacks 
+     * @return FinishWebHook webhook URL for task completion callbacks
      */
     public String getFinishWebHook() {
         return this.FinishWebHook;
     }
 
     /**
-     * Set Task complete callback webhook url.
-     * @param FinishWebHook Task complete callback webhook url.
+     * Set webhook URL for task completion callbacks
+     * @param FinishWebHook webhook URL for task completion callbacks
      */
     public void setFinishWebHook(String FinishWebHook) {
         this.FinishWebHook = FinishWebHook;

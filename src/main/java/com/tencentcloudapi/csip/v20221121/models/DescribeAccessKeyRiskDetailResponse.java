@@ -31,42 +31,42 @@ public class DescribeAccessKeyRiskDetailResponse extends AbstractModel {
     private AccessKeyRisk RiskInfo;
 
     /**
-    * Total number of CAM policies.
+    * Total number of CAM policies
     */
     @SerializedName("CamCount")
     @Expose
     private Long CamCount;
 
     /**
-    * Number of associated alarms for the account.
+    * Alarm count associated with the account
     */
     @SerializedName("AlarmCount")
     @Expose
     private Long AlarmCount;
 
     /**
-    * Access method 0 API 1 console and API.
+    * Access method. 0: API. 1: Console and API.
     */
     @SerializedName("AccessType")
     @Expose
     private Long AccessType;
 
     /**
-    * Access key Alarm count list.
+    * List of access key alarm counts
     */
     @SerializedName("AccessKeyAlarmCount")
     @Expose
     private AccessKeyAlarmCount [] AccessKeyAlarmCount;
 
     /**
-    * Whether operation protection is enabled. valid values: 0 (not enabled), 1 (enabled).
+    * Whether operation protection is enabled. 0: Not enabled; 1: Enabled.
     */
     @SerializedName("ActionFlag")
     @Expose
     private Long ActionFlag;
 
     /**
-    * Whether login protection is enabled. valid values: 0 (not enabled), 1 (enabled).
+    * Whether login protection is enabled. 0: not enabled; 1: enabled
     */
     @SerializedName("LoginFlag")
     @Expose
@@ -96,96 +96,96 @@ public class DescribeAccessKeyRiskDetailResponse extends AbstractModel {
     }
 
     /**
-     * Get Total number of CAM policies. 
-     * @return CamCount Total number of CAM policies.
+     * Get Total number of CAM policies 
+     * @return CamCount Total number of CAM policies
      */
     public Long getCamCount() {
         return this.CamCount;
     }
 
     /**
-     * Set Total number of CAM policies.
-     * @param CamCount Total number of CAM policies.
+     * Set Total number of CAM policies
+     * @param CamCount Total number of CAM policies
      */
     public void setCamCount(Long CamCount) {
         this.CamCount = CamCount;
     }
 
     /**
-     * Get Number of associated alarms for the account. 
-     * @return AlarmCount Number of associated alarms for the account.
+     * Get Alarm count associated with the account 
+     * @return AlarmCount Alarm count associated with the account
      */
     public Long getAlarmCount() {
         return this.AlarmCount;
     }
 
     /**
-     * Set Number of associated alarms for the account.
-     * @param AlarmCount Number of associated alarms for the account.
+     * Set Alarm count associated with the account
+     * @param AlarmCount Alarm count associated with the account
      */
     public void setAlarmCount(Long AlarmCount) {
         this.AlarmCount = AlarmCount;
     }
 
     /**
-     * Get Access method 0 API 1 console and API. 
-     * @return AccessType Access method 0 API 1 console and API.
+     * Get Access method. 0: API. 1: Console and API. 
+     * @return AccessType Access method. 0: API. 1: Console and API.
      */
     public Long getAccessType() {
         return this.AccessType;
     }
 
     /**
-     * Set Access method 0 API 1 console and API.
-     * @param AccessType Access method 0 API 1 console and API.
+     * Set Access method. 0: API. 1: Console and API.
+     * @param AccessType Access method. 0: API. 1: Console and API.
      */
     public void setAccessType(Long AccessType) {
         this.AccessType = AccessType;
     }
 
     /**
-     * Get Access key Alarm count list. 
-     * @return AccessKeyAlarmCount Access key Alarm count list.
+     * Get List of access key alarm counts 
+     * @return AccessKeyAlarmCount List of access key alarm counts
      */
     public AccessKeyAlarmCount [] getAccessKeyAlarmCount() {
         return this.AccessKeyAlarmCount;
     }
 
     /**
-     * Set Access key Alarm count list.
-     * @param AccessKeyAlarmCount Access key Alarm count list.
+     * Set List of access key alarm counts
+     * @param AccessKeyAlarmCount List of access key alarm counts
      */
     public void setAccessKeyAlarmCount(AccessKeyAlarmCount [] AccessKeyAlarmCount) {
         this.AccessKeyAlarmCount = AccessKeyAlarmCount;
     }
 
     /**
-     * Get Whether operation protection is enabled. valid values: 0 (not enabled), 1 (enabled). 
-     * @return ActionFlag Whether operation protection is enabled. valid values: 0 (not enabled), 1 (enabled).
+     * Get Whether operation protection is enabled. 0: Not enabled; 1: Enabled. 
+     * @return ActionFlag Whether operation protection is enabled. 0: Not enabled; 1: Enabled.
      */
     public Long getActionFlag() {
         return this.ActionFlag;
     }
 
     /**
-     * Set Whether operation protection is enabled. valid values: 0 (not enabled), 1 (enabled).
-     * @param ActionFlag Whether operation protection is enabled. valid values: 0 (not enabled), 1 (enabled).
+     * Set Whether operation protection is enabled. 0: Not enabled; 1: Enabled.
+     * @param ActionFlag Whether operation protection is enabled. 0: Not enabled; 1: Enabled.
      */
     public void setActionFlag(Long ActionFlag) {
         this.ActionFlag = ActionFlag;
     }
 
     /**
-     * Get Whether login protection is enabled. valid values: 0 (not enabled), 1 (enabled). 
-     * @return LoginFlag Whether login protection is enabled. valid values: 0 (not enabled), 1 (enabled).
+     * Get Whether login protection is enabled. 0: not enabled; 1: enabled 
+     * @return LoginFlag Whether login protection is enabled. 0: not enabled; 1: enabled
      */
     public Long getLoginFlag() {
         return this.LoginFlag;
     }
 
     /**
-     * Set Whether login protection is enabled. valid values: 0 (not enabled), 1 (enabled).
-     * @param LoginFlag Whether login protection is enabled. valid values: 0 (not enabled), 1 (enabled).
+     * Set Whether login protection is enabled. 0: not enabled; 1: enabled
+     * @param LoginFlag Whether login protection is enabled. 0: not enabled; 1: enabled
      */
     public void setLoginFlag(Long LoginFlag) {
         this.LoginFlag = LoginFlag;

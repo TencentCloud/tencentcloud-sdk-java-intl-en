@@ -66,7 +66,7 @@ public class DescribeDbAssetsResponse extends AbstractModel {
     private FilterDataObject [] AppIdList;
 
     /**
-    * Public network private network enumeration
+    * Public/private network enumeration
     */
     @SerializedName("PublicPrivateAttr")
     @Expose
@@ -176,16 +176,16 @@ public class DescribeDbAssetsResponse extends AbstractModel {
     }
 
     /**
-     * Get Public network private network enumeration 
-     * @return PublicPrivateAttr Public network private network enumeration
+     * Get Public/private network enumeration 
+     * @return PublicPrivateAttr Public/private network enumeration
      */
     public FilterDataObject [] getPublicPrivateAttr() {
         return this.PublicPrivateAttr;
     }
 
     /**
-     * Set Public network private network enumeration
-     * @param PublicPrivateAttr Public network private network enumeration
+     * Set Public/private network enumeration
+     * @param PublicPrivateAttr Public/private network enumeration
      */
     public void setPublicPrivateAttr(FilterDataObject [] PublicPrivateAttr) {
         this.PublicPrivateAttr = PublicPrivateAttr;

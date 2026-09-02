@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class StopRiskCenterTaskRequest extends AbstractModel {
 
     /**
-    * List of task IDs
+    * Task ID List
     */
     @SerializedName("TaskIdList")
     @Expose
@@ -38,16 +38,16 @@ public class StopRiskCenterTaskRequest extends AbstractModel {
     private String [] MemberId;
 
     /**
-     * Get List of task IDs 
-     * @return TaskIdList List of task IDs
+     * Get Task ID List 
+     * @return TaskIdList Task ID List
      */
     public TaskIdListKey [] getTaskIdList() {
         return this.TaskIdList;
     }
 
     /**
-     * Set List of task IDs
-     * @param TaskIdList List of task IDs
+     * Set Task ID List
+     * @param TaskIdList Task ID List
      */
     public void setTaskIdList(TaskIdListKey [] TaskIdList) {
         this.TaskIdList = TaskIdList;

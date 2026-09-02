@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DeleteRiskScanTaskRequest extends AbstractModel {
 
     /**
-    * task id and target AppID list
+    * Task id and target AppID list
     */
     @SerializedName("TaskIdList")
     @Expose
@@ -38,16 +38,16 @@ public class DeleteRiskScanTaskRequest extends AbstractModel {
     private String [] MemberId;
 
     /**
-     * Get task id and target AppID list 
-     * @return TaskIdList task id and target AppID list
+     * Get Task id and target AppID list 
+     * @return TaskIdList Task id and target AppID list
      */
     public TaskIdListKey [] getTaskIdList() {
         return this.TaskIdList;
     }
 
     /**
-     * Set task id and target AppID list
-     * @param TaskIdList task id and target AppID list
+     * Set Task id and target AppID list
+     * @param TaskIdList Task id and target AppID list
      */
     public void setTaskIdList(TaskIdListKey [] TaskIdList) {
         this.TaskIdList = TaskIdList;

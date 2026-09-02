@@ -38,7 +38,7 @@ public class CsipRiskCenterStatistics extends AbstractModel {
     private Long PortHighLevel;
 
     /**
-    * 	Total number of weak password risks.
+    * 	Total number of weak password risks
     */
     @SerializedName("WeakPasswordTotal")
     @Expose
@@ -73,7 +73,7 @@ public class CsipRiskCenterStatistics extends AbstractModel {
     private String LastScanTime;
 
     /**
-    * Number of vulnerability risks.
+    * Number of Vulnerability Risks
     */
     @SerializedName("VULTotal")
     @Expose
@@ -102,7 +102,6 @@ public class CsipRiskCenterStatistics extends AbstractModel {
 
     /**
     * Mapping Service Risk Count
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ServerTotal")
     @Expose
@@ -110,35 +109,34 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * High Mapping Service Risk Count
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ServerHighLevel")
     @Expose
     private Long ServerHighLevel;
 
     /**
-    * Number of host baseline risks.
+    * Number of host baseline risks
     */
     @SerializedName("HostBaseLineRiskTotal")
     @Expose
     private Long HostBaseLineRiskTotal;
 
     /**
-    * Number of high-risk risks.
+    * Number of high-risk risks in the host baseline
     */
     @SerializedName("HostBaseLineRiskHighLevel")
     @Expose
     private Long HostBaseLineRiskHighLevel;
 
     /**
-    * Baseline risk count of the container.
+    * Number of baseline risks in the container
     */
     @SerializedName("PodBaseLineRiskTotal")
     @Expose
     private Long PodBaseLineRiskTotal;
 
     /**
-    * Number of high-risk baseline risks in the container.
+    * Number of high-risk risks in the container baseline
     */
     @SerializedName("PodBaseLineRiskHighLevel")
     @Expose
@@ -177,16 +175,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get 	Total number of weak password risks. 
-     * @return WeakPasswordTotal 	Total number of weak password risks.
+     * Get 	Total number of weak password risks 
+     * @return WeakPasswordTotal 	Total number of weak password risks
      */
     public Long getWeakPasswordTotal() {
         return this.WeakPasswordTotal;
     }
 
     /**
-     * Set 	Total number of weak password risks.
-     * @param WeakPasswordTotal 	Total number of weak password risks.
+     * Set 	Total number of weak password risks
+     * @param WeakPasswordTotal 	Total number of weak password risks
      */
     public void setWeakPasswordTotal(Long WeakPasswordTotal) {
         this.WeakPasswordTotal = WeakPasswordTotal;
@@ -257,16 +255,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Number of vulnerability risks. 
-     * @return VULTotal Number of vulnerability risks.
+     * Get Number of Vulnerability Risks 
+     * @return VULTotal Number of Vulnerability Risks
      */
     public Long getVULTotal() {
         return this.VULTotal;
     }
 
     /**
-     * Set Number of vulnerability risks.
-     * @param VULTotal Number of vulnerability risks.
+     * Set Number of Vulnerability Risks
+     * @param VULTotal Number of Vulnerability Risks
      */
     public void setVULTotal(Long VULTotal) {
         this.VULTotal = VULTotal;
@@ -321,10 +319,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Mapping Service Risk Count
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Mapping Service Risk Count 
      * @return ServerTotal Mapping Service Risk Count
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getServerTotal() {
         return this.ServerTotal;
@@ -332,19 +328,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Mapping Service Risk Count
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param ServerTotal Mapping Service Risk Count
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setServerTotal(Long ServerTotal) {
         this.ServerTotal = ServerTotal;
     }
 
     /**
-     * Get High Mapping Service Risk Count
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get High Mapping Service Risk Count 
      * @return ServerHighLevel High Mapping Service Risk Count
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getServerHighLevel() {
         return this.ServerHighLevel;
@@ -352,73 +344,71 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set High Mapping Service Risk Count
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param ServerHighLevel High Mapping Service Risk Count
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setServerHighLevel(Long ServerHighLevel) {
         this.ServerHighLevel = ServerHighLevel;
     }
 
     /**
-     * Get Number of host baseline risks. 
-     * @return HostBaseLineRiskTotal Number of host baseline risks.
+     * Get Number of host baseline risks 
+     * @return HostBaseLineRiskTotal Number of host baseline risks
      */
     public Long getHostBaseLineRiskTotal() {
         return this.HostBaseLineRiskTotal;
     }
 
     /**
-     * Set Number of host baseline risks.
-     * @param HostBaseLineRiskTotal Number of host baseline risks.
+     * Set Number of host baseline risks
+     * @param HostBaseLineRiskTotal Number of host baseline risks
      */
     public void setHostBaseLineRiskTotal(Long HostBaseLineRiskTotal) {
         this.HostBaseLineRiskTotal = HostBaseLineRiskTotal;
     }
 
     /**
-     * Get Number of high-risk risks. 
-     * @return HostBaseLineRiskHighLevel Number of high-risk risks.
+     * Get Number of high-risk risks in the host baseline 
+     * @return HostBaseLineRiskHighLevel Number of high-risk risks in the host baseline
      */
     public Long getHostBaseLineRiskHighLevel() {
         return this.HostBaseLineRiskHighLevel;
     }
 
     /**
-     * Set Number of high-risk risks.
-     * @param HostBaseLineRiskHighLevel Number of high-risk risks.
+     * Set Number of high-risk risks in the host baseline
+     * @param HostBaseLineRiskHighLevel Number of high-risk risks in the host baseline
      */
     public void setHostBaseLineRiskHighLevel(Long HostBaseLineRiskHighLevel) {
         this.HostBaseLineRiskHighLevel = HostBaseLineRiskHighLevel;
     }
 
     /**
-     * Get Baseline risk count of the container. 
-     * @return PodBaseLineRiskTotal Baseline risk count of the container.
+     * Get Number of baseline risks in the container 
+     * @return PodBaseLineRiskTotal Number of baseline risks in the container
      */
     public Long getPodBaseLineRiskTotal() {
         return this.PodBaseLineRiskTotal;
     }
 
     /**
-     * Set Baseline risk count of the container.
-     * @param PodBaseLineRiskTotal Baseline risk count of the container.
+     * Set Number of baseline risks in the container
+     * @param PodBaseLineRiskTotal Number of baseline risks in the container
      */
     public void setPodBaseLineRiskTotal(Long PodBaseLineRiskTotal) {
         this.PodBaseLineRiskTotal = PodBaseLineRiskTotal;
     }
 
     /**
-     * Get Number of high-risk baseline risks in the container. 
-     * @return PodBaseLineRiskHighLevel Number of high-risk baseline risks in the container.
+     * Get Number of high-risk risks in the container baseline 
+     * @return PodBaseLineRiskHighLevel Number of high-risk risks in the container baseline
      */
     public Long getPodBaseLineRiskHighLevel() {
         return this.PodBaseLineRiskHighLevel;
     }
 
     /**
-     * Set Number of high-risk baseline risks in the container.
-     * @param PodBaseLineRiskHighLevel Number of high-risk baseline risks in the container.
+     * Set Number of high-risk risks in the container baseline
+     * @param PodBaseLineRiskHighLevel Number of high-risk risks in the container baseline
      */
     public void setPodBaseLineRiskHighLevel(Long PodBaseLineRiskHighLevel) {
         this.PodBaseLineRiskHighLevel = PodBaseLineRiskHighLevel;

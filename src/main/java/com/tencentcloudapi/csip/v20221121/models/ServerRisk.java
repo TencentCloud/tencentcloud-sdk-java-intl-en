@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ServerRisk extends AbstractModel {
 
     /**
-    * Service tag
+    * Mapping Tag
     */
     @SerializedName("ServiceTag")
     @Expose
@@ -38,21 +38,21 @@ public class ServerRisk extends AbstractModel {
     private Long Port;
 
     /**
-    * Affected assets
+    * Affect assets
     */
     @SerializedName("AffectAsset")
     @Expose
     private String AffectAsset;
 
     /**
-    * Instance ID
+    * Instance ID.
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Instance name
+    * Instance name.
     */
     @SerializedName("InstanceName")
     @Expose
@@ -66,42 +66,42 @@ public class ServerRisk extends AbstractModel {
     private String InstanceType;
 
     /**
-    * Risk level, low - low risk, high - high risk, middle - medium risk, info - notification, extreme - critical.
+    * Risk level. low: low risk. high: high risk. middle: medium risk. info: notification. extreme: critical
     */
     @SerializedName("Level")
     @Expose
     private String Level;
 
     /**
-    * Network protocol
+    * Protocol
     */
     @SerializedName("Protocol")
     @Expose
     private String Protocol;
 
     /**
-    * Components
+    * component
     */
     @SerializedName("Component")
     @Expose
     private String Component;
 
     /**
-    * Service
+    * Service.
     */
     @SerializedName("Service")
     @Expose
     private String Service;
 
     /**
-    * Last detected 
+    * Latest Recognition Time
     */
     @SerializedName("RecentTime")
     @Expose
     private String RecentTime;
 
     /**
-    * First detected
+    * First Recognition Time
     */
     @SerializedName("FirstTime")
     @Expose
@@ -122,21 +122,21 @@ public class ServerRisk extends AbstractModel {
     private String Suggestion;
 
     /**
-    * Status, 0 unprocessed, 1 processed, 2 ignored, 3 defended by cloud protection
+    * Status. 0-Unprocessed; 1-Disposed; 2-Ignored; 3-Defended by Cloud Firewall.
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * Unique ID of the asset
+    * Unique ID of Asset
     */
     @SerializedName("Id")
     @Expose
     private String Id;
 
     /**
-    * User `appid`
+    * User appid.
     */
     @SerializedName("AppId")
     @Expose
@@ -199,30 +199,30 @@ public class ServerRisk extends AbstractModel {
     private String StatusCode;
 
     /**
-    * New risk level, high_risk high risk suspect Suspected Normal Does not have risks currently
+    * New risk level. high_risk: high risk. suspect: suspected. Normal: no risk data yet.
     */
     @SerializedName("NewLevel")
     @Expose
     private String NewLevel;
 
     /**
-    * Status, 0 unprocessed, 1 processed, 2 ignored, 3 defended by cloud protection, 4 no action is required
+    * Status. 0: unprocessed; 1: processed; 2: ignored; 3: defended by Cloud Firewall; 4: no action is required.
     */
     @SerializedName("XspmStatus")
     @Expose
     private Long XspmStatus;
 
     /**
-     * Get Service tag 
-     * @return ServiceTag Service tag
+     * Get Mapping Tag 
+     * @return ServiceTag Mapping Tag
      */
     public String getServiceTag() {
         return this.ServiceTag;
     }
 
     /**
-     * Set Service tag
-     * @param ServiceTag Service tag
+     * Set Mapping Tag
+     * @param ServiceTag Mapping Tag
      */
     public void setServiceTag(String ServiceTag) {
         this.ServiceTag = ServiceTag;
@@ -245,48 +245,48 @@ public class ServerRisk extends AbstractModel {
     }
 
     /**
-     * Get Affected assets 
-     * @return AffectAsset Affected assets
+     * Get Affect assets 
+     * @return AffectAsset Affect assets
      */
     public String getAffectAsset() {
         return this.AffectAsset;
     }
 
     /**
-     * Set Affected assets
-     * @param AffectAsset Affected assets
+     * Set Affect assets
+     * @param AffectAsset Affect assets
      */
     public void setAffectAsset(String AffectAsset) {
         this.AffectAsset = AffectAsset;
     }
 
     /**
-     * Get Instance ID 
-     * @return InstanceId Instance ID
+     * Get Instance ID. 
+     * @return InstanceId Instance ID.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Instance ID
-     * @param InstanceId Instance ID
+     * Set Instance ID.
+     * @param InstanceId Instance ID.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Instance name 
-     * @return InstanceName Instance name
+     * Get Instance name. 
+     * @return InstanceName Instance name.
      */
     public String getInstanceName() {
         return this.InstanceName;
     }
 
     /**
-     * Set Instance name
-     * @param InstanceName Instance name
+     * Set Instance name.
+     * @param InstanceName Instance name.
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;
@@ -309,96 +309,96 @@ public class ServerRisk extends AbstractModel {
     }
 
     /**
-     * Get Risk level, low - low risk, high - high risk, middle - medium risk, info - notification, extreme - critical. 
-     * @return Level Risk level, low - low risk, high - high risk, middle - medium risk, info - notification, extreme - critical.
+     * Get Risk level. low: low risk. high: high risk. middle: medium risk. info: notification. extreme: critical 
+     * @return Level Risk level. low: low risk. high: high risk. middle: medium risk. info: notification. extreme: critical
      */
     public String getLevel() {
         return this.Level;
     }
 
     /**
-     * Set Risk level, low - low risk, high - high risk, middle - medium risk, info - notification, extreme - critical.
-     * @param Level Risk level, low - low risk, high - high risk, middle - medium risk, info - notification, extreme - critical.
+     * Set Risk level. low: low risk. high: high risk. middle: medium risk. info: notification. extreme: critical
+     * @param Level Risk level. low: low risk. high: high risk. middle: medium risk. info: notification. extreme: critical
      */
     public void setLevel(String Level) {
         this.Level = Level;
     }
 
     /**
-     * Get Network protocol 
-     * @return Protocol Network protocol
+     * Get Protocol 
+     * @return Protocol Protocol
      */
     public String getProtocol() {
         return this.Protocol;
     }
 
     /**
-     * Set Network protocol
-     * @param Protocol Network protocol
+     * Set Protocol
+     * @param Protocol Protocol
      */
     public void setProtocol(String Protocol) {
         this.Protocol = Protocol;
     }
 
     /**
-     * Get Components 
-     * @return Component Components
+     * Get component 
+     * @return Component component
      */
     public String getComponent() {
         return this.Component;
     }
 
     /**
-     * Set Components
-     * @param Component Components
+     * Set component
+     * @param Component component
      */
     public void setComponent(String Component) {
         this.Component = Component;
     }
 
     /**
-     * Get Service 
-     * @return Service Service
+     * Get Service. 
+     * @return Service Service.
      */
     public String getService() {
         return this.Service;
     }
 
     /**
-     * Set Service
-     * @param Service Service
+     * Set Service.
+     * @param Service Service.
      */
     public void setService(String Service) {
         this.Service = Service;
     }
 
     /**
-     * Get Last detected  
-     * @return RecentTime Last detected 
+     * Get Latest Recognition Time 
+     * @return RecentTime Latest Recognition Time
      */
     public String getRecentTime() {
         return this.RecentTime;
     }
 
     /**
-     * Set Last detected 
-     * @param RecentTime Last detected 
+     * Set Latest Recognition Time
+     * @param RecentTime Latest Recognition Time
      */
     public void setRecentTime(String RecentTime) {
         this.RecentTime = RecentTime;
     }
 
     /**
-     * Get First detected 
-     * @return FirstTime First detected
+     * Get First Recognition Time 
+     * @return FirstTime First Recognition Time
      */
     public String getFirstTime() {
         return this.FirstTime;
     }
 
     /**
-     * Set First detected
-     * @param FirstTime First detected
+     * Set First Recognition Time
+     * @param FirstTime First Recognition Time
      */
     public void setFirstTime(String FirstTime) {
         this.FirstTime = FirstTime;
@@ -437,48 +437,48 @@ public class ServerRisk extends AbstractModel {
     }
 
     /**
-     * Get Status, 0 unprocessed, 1 processed, 2 ignored, 3 defended by cloud protection 
-     * @return Status Status, 0 unprocessed, 1 processed, 2 ignored, 3 defended by cloud protection
+     * Get Status. 0-Unprocessed; 1-Disposed; 2-Ignored; 3-Defended by Cloud Firewall. 
+     * @return Status Status. 0-Unprocessed; 1-Disposed; 2-Ignored; 3-Defended by Cloud Firewall.
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Status, 0 unprocessed, 1 processed, 2 ignored, 3 defended by cloud protection
-     * @param Status Status, 0 unprocessed, 1 processed, 2 ignored, 3 defended by cloud protection
+     * Set Status. 0-Unprocessed; 1-Disposed; 2-Ignored; 3-Defended by Cloud Firewall.
+     * @param Status Status. 0-Unprocessed; 1-Disposed; 2-Ignored; 3-Defended by Cloud Firewall.
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get Unique ID of the asset 
-     * @return Id Unique ID of the asset
+     * Get Unique ID of Asset 
+     * @return Id Unique ID of Asset
      */
     public String getId() {
         return this.Id;
     }
 
     /**
-     * Set Unique ID of the asset
-     * @param Id Unique ID of the asset
+     * Set Unique ID of Asset
+     * @param Id Unique ID of Asset
      */
     public void setId(String Id) {
         this.Id = Id;
     }
 
     /**
-     * Get User `appid` 
-     * @return AppId User `appid`
+     * Get User appid. 
+     * @return AppId User appid.
      */
     public String getAppId() {
         return this.AppId;
     }
 
     /**
-     * Set User `appid`
-     * @param AppId User `appid`
+     * Set User appid.
+     * @param AppId User appid.
      */
     public void setAppId(String AppId) {
         this.AppId = AppId;
@@ -613,32 +613,32 @@ public class ServerRisk extends AbstractModel {
     }
 
     /**
-     * Get New risk level, high_risk high risk suspect Suspected Normal Does not have risks currently 
-     * @return NewLevel New risk level, high_risk high risk suspect Suspected Normal Does not have risks currently
+     * Get New risk level. high_risk: high risk. suspect: suspected. Normal: no risk data yet. 
+     * @return NewLevel New risk level. high_risk: high risk. suspect: suspected. Normal: no risk data yet.
      */
     public String getNewLevel() {
         return this.NewLevel;
     }
 
     /**
-     * Set New risk level, high_risk high risk suspect Suspected Normal Does not have risks currently
-     * @param NewLevel New risk level, high_risk high risk suspect Suspected Normal Does not have risks currently
+     * Set New risk level. high_risk: high risk. suspect: suspected. Normal: no risk data yet.
+     * @param NewLevel New risk level. high_risk: high risk. suspect: suspected. Normal: no risk data yet.
      */
     public void setNewLevel(String NewLevel) {
         this.NewLevel = NewLevel;
     }
 
     /**
-     * Get Status, 0 unprocessed, 1 processed, 2 ignored, 3 defended by cloud protection, 4 no action is required 
-     * @return XspmStatus Status, 0 unprocessed, 1 processed, 2 ignored, 3 defended by cloud protection, 4 no action is required
+     * Get Status. 0: unprocessed; 1: processed; 2: ignored; 3: defended by Cloud Firewall; 4: no action is required. 
+     * @return XspmStatus Status. 0: unprocessed; 1: processed; 2: ignored; 3: defended by Cloud Firewall; 4: no action is required.
      */
     public Long getXspmStatus() {
         return this.XspmStatus;
     }
 
     /**
-     * Set Status, 0 unprocessed, 1 processed, 2 ignored, 3 defended by cloud protection, 4 no action is required
-     * @param XspmStatus Status, 0 unprocessed, 1 processed, 2 ignored, 3 defended by cloud protection, 4 no action is required
+     * Set Status. 0: unprocessed; 1: processed; 2: ignored; 3: defended by Cloud Firewall; 4: no action is required.
+     * @param XspmStatus Status. 0: unprocessed; 1: processed; 2: ignored; 3: defended by Cloud Firewall; 4: no action is required.
      */
     public void setXspmStatus(Long XspmStatus) {
         this.XspmStatus = XspmStatus;

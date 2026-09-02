@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeScanStatisticResponse extends AbstractModel {
 
     /**
-    * Port service quantity.
+    * Number of port services
     */
     @SerializedName("PortServiceCount")
     @Expose
     private Long PortServiceCount;
 
     /**
-    * Number of Web services.
+    * Number of Web services
     */
     @SerializedName("WebAppCount")
     @Expose
@@ -45,35 +45,35 @@ public class DescribeScanStatisticResponse extends AbstractModel {
     private Long WeakPasswordCount;
 
     /**
-    * Vulnerability risk quantity.
+    * Vulnerability risk quantity
     */
     @SerializedName("VulCount")
     @Expose
     private Long VulCount;
 
     /**
-    * High-Risk port service quantity.
+    * Number of high-risk port services
     */
     @SerializedName("HighRiskPortServiceCount")
     @Expose
     private Long HighRiskPortServiceCount;
 
     /**
-    * Number of Web services at risk.
+    * Number of risky Web services
     */
     @SerializedName("RiskWebAppCount")
     @Expose
     private Long RiskWebAppCount;
 
     /**
-    * Newly-Added port services in the last 7 days.
+    * Number of new port services in the last 7 days
     */
     @SerializedName("PortServiceIncrement")
     @Expose
     private Long PortServiceIncrement;
 
     /**
-    * Newly-Added Web services in the last 7 days.
+    * Number of Web services added in the last 7 days
     */
     @SerializedName("WebAppIncrement")
     @Expose
@@ -87,32 +87,32 @@ public class DescribeScanStatisticResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Port service quantity. 
-     * @return PortServiceCount Port service quantity.
+     * Get Number of port services 
+     * @return PortServiceCount Number of port services
      */
     public Long getPortServiceCount() {
         return this.PortServiceCount;
     }
 
     /**
-     * Set Port service quantity.
-     * @param PortServiceCount Port service quantity.
+     * Set Number of port services
+     * @param PortServiceCount Number of port services
      */
     public void setPortServiceCount(Long PortServiceCount) {
         this.PortServiceCount = PortServiceCount;
     }
 
     /**
-     * Get Number of Web services. 
-     * @return WebAppCount Number of Web services.
+     * Get Number of Web services 
+     * @return WebAppCount Number of Web services
      */
     public Long getWebAppCount() {
         return this.WebAppCount;
     }
 
     /**
-     * Set Number of Web services.
-     * @param WebAppCount Number of Web services.
+     * Set Number of Web services
+     * @param WebAppCount Number of Web services
      */
     public void setWebAppCount(Long WebAppCount) {
         this.WebAppCount = WebAppCount;
@@ -135,80 +135,80 @@ public class DescribeScanStatisticResponse extends AbstractModel {
     }
 
     /**
-     * Get Vulnerability risk quantity. 
-     * @return VulCount Vulnerability risk quantity.
+     * Get Vulnerability risk quantity 
+     * @return VulCount Vulnerability risk quantity
      */
     public Long getVulCount() {
         return this.VulCount;
     }
 
     /**
-     * Set Vulnerability risk quantity.
-     * @param VulCount Vulnerability risk quantity.
+     * Set Vulnerability risk quantity
+     * @param VulCount Vulnerability risk quantity
      */
     public void setVulCount(Long VulCount) {
         this.VulCount = VulCount;
     }
 
     /**
-     * Get High-Risk port service quantity. 
-     * @return HighRiskPortServiceCount High-Risk port service quantity.
+     * Get Number of high-risk port services 
+     * @return HighRiskPortServiceCount Number of high-risk port services
      */
     public Long getHighRiskPortServiceCount() {
         return this.HighRiskPortServiceCount;
     }
 
     /**
-     * Set High-Risk port service quantity.
-     * @param HighRiskPortServiceCount High-Risk port service quantity.
+     * Set Number of high-risk port services
+     * @param HighRiskPortServiceCount Number of high-risk port services
      */
     public void setHighRiskPortServiceCount(Long HighRiskPortServiceCount) {
         this.HighRiskPortServiceCount = HighRiskPortServiceCount;
     }
 
     /**
-     * Get Number of Web services at risk. 
-     * @return RiskWebAppCount Number of Web services at risk.
+     * Get Number of risky Web services 
+     * @return RiskWebAppCount Number of risky Web services
      */
     public Long getRiskWebAppCount() {
         return this.RiskWebAppCount;
     }
 
     /**
-     * Set Number of Web services at risk.
-     * @param RiskWebAppCount Number of Web services at risk.
+     * Set Number of risky Web services
+     * @param RiskWebAppCount Number of risky Web services
      */
     public void setRiskWebAppCount(Long RiskWebAppCount) {
         this.RiskWebAppCount = RiskWebAppCount;
     }
 
     /**
-     * Get Newly-Added port services in the last 7 days. 
-     * @return PortServiceIncrement Newly-Added port services in the last 7 days.
+     * Get Number of new port services in the last 7 days 
+     * @return PortServiceIncrement Number of new port services in the last 7 days
      */
     public Long getPortServiceIncrement() {
         return this.PortServiceIncrement;
     }
 
     /**
-     * Set Newly-Added port services in the last 7 days.
-     * @param PortServiceIncrement Newly-Added port services in the last 7 days.
+     * Set Number of new port services in the last 7 days
+     * @param PortServiceIncrement Number of new port services in the last 7 days
      */
     public void setPortServiceIncrement(Long PortServiceIncrement) {
         this.PortServiceIncrement = PortServiceIncrement;
     }
 
     /**
-     * Get Newly-Added Web services in the last 7 days. 
-     * @return WebAppIncrement Newly-Added Web services in the last 7 days.
+     * Get Number of Web services added in the last 7 days 
+     * @return WebAppIncrement Number of Web services added in the last 7 days
      */
     public Long getWebAppIncrement() {
         return this.WebAppIncrement;
     }
 
     /**
-     * Set Newly-Added Web services in the last 7 days.
-     * @param WebAppIncrement Newly-Added Web services in the last 7 days.
+     * Set Number of Web services added in the last 7 days
+     * @param WebAppIncrement Number of Web services added in the last 7 days
      */
     public void setWebAppIncrement(Long WebAppIncrement) {
         this.WebAppIncrement = WebAppIncrement;

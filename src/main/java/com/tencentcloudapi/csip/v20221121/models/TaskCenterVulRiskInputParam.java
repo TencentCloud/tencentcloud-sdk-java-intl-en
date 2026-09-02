@@ -31,7 +31,7 @@ public class TaskCenterVulRiskInputParam extends AbstractModel {
     private String RiskId;
 
     /**
-    * Whether to enable. `0`: no, `1`: yes.
+    * Whether to enable. 0-Not to Enable; 1-Enable.
     */
     @SerializedName("Enable")
     @Expose
@@ -54,16 +54,16 @@ public class TaskCenterVulRiskInputParam extends AbstractModel {
     }
 
     /**
-     * Get Whether to enable. `0`: no, `1`: yes. 
-     * @return Enable Whether to enable. `0`: no, `1`: yes.
+     * Get Whether to enable. 0-Not to Enable; 1-Enable. 
+     * @return Enable Whether to enable. 0-Not to Enable; 1-Enable.
      */
     public Long getEnable() {
         return this.Enable;
     }
 
     /**
-     * Set Whether to enable. `0`: no, `1`: yes.
-     * @param Enable Whether to enable. `0`: no, `1`: yes.
+     * Set Whether to enable. 0-Not to Enable; 1-Enable.
+     * @param Enable Whether to enable. 0-Not to Enable; 1-Enable.
      */
     public void setEnable(Long Enable) {
         this.Enable = Enable;

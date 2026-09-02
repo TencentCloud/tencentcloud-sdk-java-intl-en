@@ -59,7 +59,7 @@ public class IpAssetListVO extends AbstractModel {
     private Long CFWStatus;
 
     /**
-    * Asset creation time
+    * Asset creation time.
     */
     @SerializedName("AssetCreateTime")
     @Expose
@@ -129,7 +129,7 @@ public class IpAssetListVO extends AbstractModel {
     private Long IsCloud;
 
     /**
-    * network attack
+    * Network attack
     */
     @SerializedName("Attack")
     @Expose
@@ -171,7 +171,7 @@ public class IpAssetListVO extends AbstractModel {
     private String InFlow;
 
     /**
-    * outbound traffic
+    * Outbound traffic
     */
     @SerializedName("OutFlow")
     @Expose
@@ -213,7 +213,7 @@ public class IpAssetListVO extends AbstractModel {
     private Long ScanTask;
 
     /**
-    * weak password
+    * Weak password
     */
     @SerializedName("WeakPassword")
     @Expose
@@ -241,14 +241,14 @@ public class IpAssetListVO extends AbstractModel {
     private String AddressId;
 
     /**
-    * Member ID information
+    * MemberId information
     */
     @SerializedName("MemberId")
     @Expose
     private String MemberId;
 
     /**
-    * risk service exposure
+    * Risk service exposure
     */
     @SerializedName("RiskExposure")
     @Expose
@@ -349,16 +349,16 @@ public class IpAssetListVO extends AbstractModel {
     }
 
     /**
-     * Get Asset creation time 
-     * @return AssetCreateTime Asset creation time
+     * Get Asset creation time. 
+     * @return AssetCreateTime Asset creation time.
      */
     public String getAssetCreateTime() {
         return this.AssetCreateTime;
     }
 
     /**
-     * Set Asset creation time
-     * @param AssetCreateTime Asset creation time
+     * Set Asset creation time.
+     * @param AssetCreateTime Asset creation time.
      */
     public void setAssetCreateTime(String AssetCreateTime) {
         this.AssetCreateTime = AssetCreateTime;
@@ -509,16 +509,16 @@ public class IpAssetListVO extends AbstractModel {
     }
 
     /**
-     * Get network attack 
-     * @return Attack network attack
+     * Get Network attack 
+     * @return Attack Network attack
      */
     public Long getAttack() {
         return this.Attack;
     }
 
     /**
-     * Set network attack
-     * @param Attack network attack
+     * Set Network attack
+     * @param Attack Network attack
      */
     public void setAttack(Long Attack) {
         this.Attack = Attack;
@@ -605,16 +605,16 @@ public class IpAssetListVO extends AbstractModel {
     }
 
     /**
-     * Get outbound traffic 
-     * @return OutFlow outbound traffic
+     * Get Outbound traffic 
+     * @return OutFlow Outbound traffic
      */
     public String getOutFlow() {
         return this.OutFlow;
     }
 
     /**
-     * Set outbound traffic
-     * @param OutFlow outbound traffic
+     * Set Outbound traffic
+     * @param OutFlow Outbound traffic
      */
     public void setOutFlow(String OutFlow) {
         this.OutFlow = OutFlow;
@@ -701,16 +701,16 @@ public class IpAssetListVO extends AbstractModel {
     }
 
     /**
-     * Get weak password 
-     * @return WeakPassword weak password
+     * Get Weak password 
+     * @return WeakPassword Weak password
      */
     public Long getWeakPassword() {
         return this.WeakPassword;
     }
 
     /**
-     * Set weak password
-     * @param WeakPassword weak password
+     * Set Weak password
+     * @param WeakPassword Weak password
      */
     public void setWeakPassword(Long WeakPassword) {
         this.WeakPassword = WeakPassword;
@@ -765,32 +765,32 @@ public class IpAssetListVO extends AbstractModel {
     }
 
     /**
-     * Get Member ID information 
-     * @return MemberId Member ID information
+     * Get MemberId information 
+     * @return MemberId MemberId information
      */
     public String getMemberId() {
         return this.MemberId;
     }
 
     /**
-     * Set Member ID information
-     * @param MemberId Member ID information
+     * Set MemberId information
+     * @param MemberId MemberId information
      */
     public void setMemberId(String MemberId) {
         this.MemberId = MemberId;
     }
 
     /**
-     * Get risk service exposure 
-     * @return RiskExposure risk service exposure
+     * Get Risk service exposure 
+     * @return RiskExposure Risk service exposure
      */
     public Long getRiskExposure() {
         return this.RiskExposure;
     }
 
     /**
-     * Set risk service exposure
-     * @param RiskExposure risk service exposure
+     * Set Risk service exposure
+     * @param RiskExposure Risk service exposure
      */
     public void setRiskExposure(Long RiskExposure) {
         this.RiskExposure = RiskExposure;

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CheckViewRiskItem extends AbstractModel {
 
     /**
-    * <p>Check item rule ID</p>
+    * <p>check item rule ID</p>
     */
     @SerializedName("RiskRuleId")
     @Expose
@@ -45,14 +45,14 @@ public class CheckViewRiskItem extends AbstractModel {
     private String CheckType;
 
     /**
-    * <p>Risk level</p>
+    * <p>Risk level.</p>
     */
     @SerializedName("Severity")
     @Expose
     private String Severity;
 
     /**
-    * <p>1 risk item exists</p>
+    * <p>There is 1 risk item</p>
     */
     @SerializedName("RiskDesc")
     @Expose
@@ -73,7 +73,7 @@ public class CheckViewRiskItem extends AbstractModel {
     private String UpdateTime;
 
     /**
-    * <p>Cloud vendor</p>
+    * <p>Cloud service provider.</p>
     */
     @SerializedName("Provider")
     @Expose
@@ -115,14 +115,14 @@ public class CheckViewRiskItem extends AbstractModel {
     private String EventType;
 
     /**
-    * <p>Disposal categorization</p>
+    * <p>Handling category</p>
     */
     @SerializedName("Classify")
     @Expose
     private String Classify;
 
     /**
-    * <p>cspm standard clauses</p>
+    * <p>cspm specification clause</p>
     */
     @SerializedName("StandardTerms")
     @Expose
@@ -136,16 +136,16 @@ public class CheckViewRiskItem extends AbstractModel {
     private String AssetTypeIconURL;
 
     /**
-     * Get <p>Check item rule ID</p> 
-     * @return RiskRuleId <p>Check item rule ID</p>
+     * Get <p>check item rule ID</p> 
+     * @return RiskRuleId <p>check item rule ID</p>
      */
     public String getRiskRuleId() {
         return this.RiskRuleId;
     }
 
     /**
-     * Set <p>Check item rule ID</p>
-     * @param RiskRuleId <p>Check item rule ID</p>
+     * Set <p>check item rule ID</p>
+     * @param RiskRuleId <p>check item rule ID</p>
      */
     public void setRiskRuleId(String RiskRuleId) {
         this.RiskRuleId = RiskRuleId;
@@ -184,32 +184,32 @@ public class CheckViewRiskItem extends AbstractModel {
     }
 
     /**
-     * Get <p>Risk level</p> 
-     * @return Severity <p>Risk level</p>
+     * Get <p>Risk level.</p> 
+     * @return Severity <p>Risk level.</p>
      */
     public String getSeverity() {
         return this.Severity;
     }
 
     /**
-     * Set <p>Risk level</p>
-     * @param Severity <p>Risk level</p>
+     * Set <p>Risk level.</p>
+     * @param Severity <p>Risk level.</p>
      */
     public void setSeverity(String Severity) {
         this.Severity = Severity;
     }
 
     /**
-     * Get <p>1 risk item exists</p> 
-     * @return RiskDesc <p>1 risk item exists</p>
+     * Get <p>There is 1 risk item</p> 
+     * @return RiskDesc <p>There is 1 risk item</p>
      */
     public String getRiskDesc() {
         return this.RiskDesc;
     }
 
     /**
-     * Set <p>1 risk item exists</p>
-     * @param RiskDesc <p>1 risk item exists</p>
+     * Set <p>There is 1 risk item</p>
+     * @param RiskDesc <p>There is 1 risk item</p>
      */
     public void setRiskDesc(String RiskDesc) {
         this.RiskDesc = RiskDesc;
@@ -248,16 +248,16 @@ public class CheckViewRiskItem extends AbstractModel {
     }
 
     /**
-     * Get <p>Cloud vendor</p> 
-     * @return Provider <p>Cloud vendor</p>
+     * Get <p>Cloud service provider.</p> 
+     * @return Provider <p>Cloud service provider.</p>
      */
     public String getProvider() {
         return this.Provider;
     }
 
     /**
-     * Set <p>Cloud vendor</p>
-     * @param Provider <p>Cloud vendor</p>
+     * Set <p>Cloud service provider.</p>
+     * @param Provider <p>Cloud service provider.</p>
      */
     public void setProvider(String Provider) {
         this.Provider = Provider;
@@ -344,32 +344,32 @@ public class CheckViewRiskItem extends AbstractModel {
     }
 
     /**
-     * Get <p>Disposal categorization</p> 
-     * @return Classify <p>Disposal categorization</p>
+     * Get <p>Handling category</p> 
+     * @return Classify <p>Handling category</p>
      */
     public String getClassify() {
         return this.Classify;
     }
 
     /**
-     * Set <p>Disposal categorization</p>
-     * @param Classify <p>Disposal categorization</p>
+     * Set <p>Handling category</p>
+     * @param Classify <p>Handling category</p>
      */
     public void setClassify(String Classify) {
         this.Classify = Classify;
     }
 
     /**
-     * Get <p>cspm standard clauses</p> 
-     * @return StandardTerms <p>cspm standard clauses</p>
+     * Get <p>cspm specification clause</p> 
+     * @return StandardTerms <p>cspm specification clause</p>
      */
     public StandardTerm [] getStandardTerms() {
         return this.StandardTerms;
     }
 
     /**
-     * Set <p>cspm standard clauses</p>
-     * @param StandardTerms <p>cspm standard clauses</p>
+     * Set <p>cspm specification clause</p>
+     * @param StandardTerms <p>cspm specification clause</p>
      */
     public void setStandardTerms(StandardTerm [] StandardTerms) {
         this.StandardTerms = StandardTerms;

@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class TaskCenterWeakPwdRiskInputParam extends AbstractModel {
 
     /**
-    * Check item ID
+    * Detection Item ID
     */
     @SerializedName("CheckItemId")
     @Expose
     private Long CheckItemId;
 
     /**
-    * Whether to enable. `0`: no, `1`: yes.
+    * Whether to enable. 0-Not to Enable; 1-Enable.
     */
     @SerializedName("Enable")
     @Expose
     private Long Enable;
 
     /**
-     * Get Check item ID 
-     * @return CheckItemId Check item ID
+     * Get Detection Item ID 
+     * @return CheckItemId Detection Item ID
      */
     public Long getCheckItemId() {
         return this.CheckItemId;
     }
 
     /**
-     * Set Check item ID
-     * @param CheckItemId Check item ID
+     * Set Detection Item ID
+     * @param CheckItemId Detection Item ID
      */
     public void setCheckItemId(Long CheckItemId) {
         this.CheckItemId = CheckItemId;
     }
 
     /**
-     * Get Whether to enable. `0`: no, `1`: yes. 
-     * @return Enable Whether to enable. `0`: no, `1`: yes.
+     * Get Whether to enable. 0-Not to Enable; 1-Enable. 
+     * @return Enable Whether to enable. 0-Not to Enable; 1-Enable.
      */
     public Long getEnable() {
         return this.Enable;
     }
 
     /**
-     * Set Whether to enable. `0`: no, `1`: yes.
-     * @param Enable Whether to enable. `0`: no, `1`: yes.
+     * Set Whether to enable. 0-Not to Enable; 1-Enable.
+     * @param Enable Whether to enable. 0-Not to Enable; 1-Enable.
      */
     public void setEnable(Long Enable) {
         this.Enable = Enable;

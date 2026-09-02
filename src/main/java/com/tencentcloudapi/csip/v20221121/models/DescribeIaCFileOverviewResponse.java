@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeIaCFileOverviewResponse extends AbstractModel {
 
     /**
-    * <p>Number of files.</p>
+    * <p>Number of files</p>
     */
     @SerializedName("TotalFile")
     @Expose
@@ -45,16 +45,16 @@ public class DescribeIaCFileOverviewResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get <p>Number of files.</p> 
-     * @return TotalFile <p>Number of files.</p>
+     * Get <p>Number of files</p> 
+     * @return TotalFile <p>Number of files</p>
      */
     public Long getTotalFile() {
         return this.TotalFile;
     }
 
     /**
-     * Set <p>Number of files.</p>
-     * @param TotalFile <p>Number of files.</p>
+     * Set <p>Number of files</p>
+     * @param TotalFile <p>Number of files</p>
      */
     public void setTotalFile(Long TotalFile) {
         this.TotalFile = TotalFile;

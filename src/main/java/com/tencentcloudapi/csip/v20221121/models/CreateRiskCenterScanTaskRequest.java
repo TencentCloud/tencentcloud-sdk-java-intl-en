@@ -24,28 +24,28 @@ import java.util.HashMap;
 public class CreateRiskCenterScanTaskRequest extends AbstractModel {
 
     /**
-    * Task name
+    * Task name.
     */
     @SerializedName("TaskName")
     @Expose
     private String TaskName;
 
     /**
-    * Values: `0` (Scan all); `1` (Scan specific assets); `2` (Scan all expect the specified assets); `3` (Custom assets). When `ScanAssetType=1/2`, `Assets` is required. When `ScanAssetType=3`, `SelfDefiningAssets` is required. 
+    * 0: Full Scan; 1: Specified Asset Scan; 2: Excluded Asset Scan; 3: Manual Entry Scan. 1 and 2 require the Assets field; 3 requires SelfDefiningAssets.
     */
     @SerializedName("ScanAssetType")
     @Expose
     private Long ScanAssetType;
 
     /**
-    * Project to scan: port/poc/weakpass/webcontent/configrisk/exposedserver
+    * Scan items. port/poc/weakpass/webcontent/configrisk/exposedserver.
     */
     @SerializedName("ScanItem")
     @Expose
     private String [] ScanItem;
 
     /**
-    * Task type. `0`: Scheduled task, `1`: Scan immediately; `2`: Scanned at the specified time; `3`: Custom. When ScanPlanType=0,2,3, `ScanPlanContent` is required.
+    * 0: Periodic Task; 1: Scan Now; 2: Scheduled Scan; 3: Custom. If 0, 2, 3, ScanPlanContent is required.
     */
     @SerializedName("ScanPlanType")
     @Expose
@@ -59,120 +59,120 @@ public class CreateRiskCenterScanTaskRequest extends AbstractModel {
     private String [] MemberId;
 
     /**
-    * List of assets to scan
+    * Scanned Asset Information List
     */
     @SerializedName("Assets")
     @Expose
     private TaskAssetObject [] Assets;
 
     /**
-    * Details of a scheduled scan task
+    * Scan Plan Details
     */
     @SerializedName("ScanPlanContent")
     @Expose
     private String ScanPlanContent;
 
     /**
-    * IP/Domain name/URL
+    * IP/Domain/URL Array
     */
     @SerializedName("SelfDefiningAssets")
     @Expose
     private String [] SelfDefiningAssets;
 
     /**
-    * Request initiation source, vss means vulnerability scan service, the user of CSC fill in csip, default csip
+    * Request initiation source. `vss` refers to Vulnerability Scan Service. Users of CSC should fill in `csip`. Default value: `csip`.
     */
     @SerializedName("ScanFrom")
     @Expose
     private String ScanFrom;
 
     /**
-    * Advanced settings
+    * Advanced configuration
     */
     @SerializedName("TaskAdvanceCFG")
     @Expose
     private TaskAdvanceCFG TaskAdvanceCFG;
 
     /**
-    * Scan task mode: `0` (Standard), `1` (Quick), `2` (Advanced). Default: `0`
+    * Checkup Mode. 0: Standard Mode; 1: Quick Mode; 2: Advanced Mode. Standard Mode by default.
     */
     @SerializedName("TaskMode")
     @Expose
     private Long TaskMode;
 
     /**
-    * Asset tags
+    * Asset tag
     */
     @SerializedName("Tags")
     @Expose
     private AssetTag Tags;
 
     /**
-    * Task completed callback webhook url
+    * webhook URL for task completion callback
     */
     @SerializedName("FinishWebHook")
     @Expose
     private String FinishWebHook;
 
     /**
-     * Get Task name 
-     * @return TaskName Task name
+     * Get Task name. 
+     * @return TaskName Task name.
      */
     public String getTaskName() {
         return this.TaskName;
     }
 
     /**
-     * Set Task name
-     * @param TaskName Task name
+     * Set Task name.
+     * @param TaskName Task name.
      */
     public void setTaskName(String TaskName) {
         this.TaskName = TaskName;
     }
 
     /**
-     * Get Values: `0` (Scan all); `1` (Scan specific assets); `2` (Scan all expect the specified assets); `3` (Custom assets). When `ScanAssetType=1/2`, `Assets` is required. When `ScanAssetType=3`, `SelfDefiningAssets` is required.  
-     * @return ScanAssetType Values: `0` (Scan all); `1` (Scan specific assets); `2` (Scan all expect the specified assets); `3` (Custom assets). When `ScanAssetType=1/2`, `Assets` is required. When `ScanAssetType=3`, `SelfDefiningAssets` is required. 
+     * Get 0: Full Scan; 1: Specified Asset Scan; 2: Excluded Asset Scan; 3: Manual Entry Scan. 1 and 2 require the Assets field; 3 requires SelfDefiningAssets. 
+     * @return ScanAssetType 0: Full Scan; 1: Specified Asset Scan; 2: Excluded Asset Scan; 3: Manual Entry Scan. 1 and 2 require the Assets field; 3 requires SelfDefiningAssets.
      */
     public Long getScanAssetType() {
         return this.ScanAssetType;
     }
 
     /**
-     * Set Values: `0` (Scan all); `1` (Scan specific assets); `2` (Scan all expect the specified assets); `3` (Custom assets). When `ScanAssetType=1/2`, `Assets` is required. When `ScanAssetType=3`, `SelfDefiningAssets` is required. 
-     * @param ScanAssetType Values: `0` (Scan all); `1` (Scan specific assets); `2` (Scan all expect the specified assets); `3` (Custom assets). When `ScanAssetType=1/2`, `Assets` is required. When `ScanAssetType=3`, `SelfDefiningAssets` is required. 
+     * Set 0: Full Scan; 1: Specified Asset Scan; 2: Excluded Asset Scan; 3: Manual Entry Scan. 1 and 2 require the Assets field; 3 requires SelfDefiningAssets.
+     * @param ScanAssetType 0: Full Scan; 1: Specified Asset Scan; 2: Excluded Asset Scan; 3: Manual Entry Scan. 1 and 2 require the Assets field; 3 requires SelfDefiningAssets.
      */
     public void setScanAssetType(Long ScanAssetType) {
         this.ScanAssetType = ScanAssetType;
     }
 
     /**
-     * Get Project to scan: port/poc/weakpass/webcontent/configrisk/exposedserver 
-     * @return ScanItem Project to scan: port/poc/weakpass/webcontent/configrisk/exposedserver
+     * Get Scan items. port/poc/weakpass/webcontent/configrisk/exposedserver. 
+     * @return ScanItem Scan items. port/poc/weakpass/webcontent/configrisk/exposedserver.
      */
     public String [] getScanItem() {
         return this.ScanItem;
     }
 
     /**
-     * Set Project to scan: port/poc/weakpass/webcontent/configrisk/exposedserver
-     * @param ScanItem Project to scan: port/poc/weakpass/webcontent/configrisk/exposedserver
+     * Set Scan items. port/poc/weakpass/webcontent/configrisk/exposedserver.
+     * @param ScanItem Scan items. port/poc/weakpass/webcontent/configrisk/exposedserver.
      */
     public void setScanItem(String [] ScanItem) {
         this.ScanItem = ScanItem;
     }
 
     /**
-     * Get Task type. `0`: Scheduled task, `1`: Scan immediately; `2`: Scanned at the specified time; `3`: Custom. When ScanPlanType=0,2,3, `ScanPlanContent` is required. 
-     * @return ScanPlanType Task type. `0`: Scheduled task, `1`: Scan immediately; `2`: Scanned at the specified time; `3`: Custom. When ScanPlanType=0,2,3, `ScanPlanContent` is required.
+     * Get 0: Periodic Task; 1: Scan Now; 2: Scheduled Scan; 3: Custom. If 0, 2, 3, ScanPlanContent is required. 
+     * @return ScanPlanType 0: Periodic Task; 1: Scan Now; 2: Scheduled Scan; 3: Custom. If 0, 2, 3, ScanPlanContent is required.
      */
     public Long getScanPlanType() {
         return this.ScanPlanType;
     }
 
     /**
-     * Set Task type. `0`: Scheduled task, `1`: Scan immediately; `2`: Scanned at the specified time; `3`: Custom. When ScanPlanType=0,2,3, `ScanPlanContent` is required.
-     * @param ScanPlanType Task type. `0`: Scheduled task, `1`: Scan immediately; `2`: Scanned at the specified time; `3`: Custom. When ScanPlanType=0,2,3, `ScanPlanContent` is required.
+     * Set 0: Periodic Task; 1: Scan Now; 2: Scheduled Scan; 3: Custom. If 0, 2, 3, ScanPlanContent is required.
+     * @param ScanPlanType 0: Periodic Task; 1: Scan Now; 2: Scheduled Scan; 3: Custom. If 0, 2, 3, ScanPlanContent is required.
      */
     public void setScanPlanType(Long ScanPlanType) {
         this.ScanPlanType = ScanPlanType;
@@ -195,128 +195,128 @@ public class CreateRiskCenterScanTaskRequest extends AbstractModel {
     }
 
     /**
-     * Get List of assets to scan 
-     * @return Assets List of assets to scan
+     * Get Scanned Asset Information List 
+     * @return Assets Scanned Asset Information List
      */
     public TaskAssetObject [] getAssets() {
         return this.Assets;
     }
 
     /**
-     * Set List of assets to scan
-     * @param Assets List of assets to scan
+     * Set Scanned Asset Information List
+     * @param Assets Scanned Asset Information List
      */
     public void setAssets(TaskAssetObject [] Assets) {
         this.Assets = Assets;
     }
 
     /**
-     * Get Details of a scheduled scan task 
-     * @return ScanPlanContent Details of a scheduled scan task
+     * Get Scan Plan Details 
+     * @return ScanPlanContent Scan Plan Details
      */
     public String getScanPlanContent() {
         return this.ScanPlanContent;
     }
 
     /**
-     * Set Details of a scheduled scan task
-     * @param ScanPlanContent Details of a scheduled scan task
+     * Set Scan Plan Details
+     * @param ScanPlanContent Scan Plan Details
      */
     public void setScanPlanContent(String ScanPlanContent) {
         this.ScanPlanContent = ScanPlanContent;
     }
 
     /**
-     * Get IP/Domain name/URL 
-     * @return SelfDefiningAssets IP/Domain name/URL
+     * Get IP/Domain/URL Array 
+     * @return SelfDefiningAssets IP/Domain/URL Array
      */
     public String [] getSelfDefiningAssets() {
         return this.SelfDefiningAssets;
     }
 
     /**
-     * Set IP/Domain name/URL
-     * @param SelfDefiningAssets IP/Domain name/URL
+     * Set IP/Domain/URL Array
+     * @param SelfDefiningAssets IP/Domain/URL Array
      */
     public void setSelfDefiningAssets(String [] SelfDefiningAssets) {
         this.SelfDefiningAssets = SelfDefiningAssets;
     }
 
     /**
-     * Get Request initiation source, vss means vulnerability scan service, the user of CSC fill in csip, default csip 
-     * @return ScanFrom Request initiation source, vss means vulnerability scan service, the user of CSC fill in csip, default csip
+     * Get Request initiation source. `vss` refers to Vulnerability Scan Service. Users of CSC should fill in `csip`. Default value: `csip`. 
+     * @return ScanFrom Request initiation source. `vss` refers to Vulnerability Scan Service. Users of CSC should fill in `csip`. Default value: `csip`.
      */
     public String getScanFrom() {
         return this.ScanFrom;
     }
 
     /**
-     * Set Request initiation source, vss means vulnerability scan service, the user of CSC fill in csip, default csip
-     * @param ScanFrom Request initiation source, vss means vulnerability scan service, the user of CSC fill in csip, default csip
+     * Set Request initiation source. `vss` refers to Vulnerability Scan Service. Users of CSC should fill in `csip`. Default value: `csip`.
+     * @param ScanFrom Request initiation source. `vss` refers to Vulnerability Scan Service. Users of CSC should fill in `csip`. Default value: `csip`.
      */
     public void setScanFrom(String ScanFrom) {
         this.ScanFrom = ScanFrom;
     }
 
     /**
-     * Get Advanced settings 
-     * @return TaskAdvanceCFG Advanced settings
+     * Get Advanced configuration 
+     * @return TaskAdvanceCFG Advanced configuration
      */
     public TaskAdvanceCFG getTaskAdvanceCFG() {
         return this.TaskAdvanceCFG;
     }
 
     /**
-     * Set Advanced settings
-     * @param TaskAdvanceCFG Advanced settings
+     * Set Advanced configuration
+     * @param TaskAdvanceCFG Advanced configuration
      */
     public void setTaskAdvanceCFG(TaskAdvanceCFG TaskAdvanceCFG) {
         this.TaskAdvanceCFG = TaskAdvanceCFG;
     }
 
     /**
-     * Get Scan task mode: `0` (Standard), `1` (Quick), `2` (Advanced). Default: `0` 
-     * @return TaskMode Scan task mode: `0` (Standard), `1` (Quick), `2` (Advanced). Default: `0`
+     * Get Checkup Mode. 0: Standard Mode; 1: Quick Mode; 2: Advanced Mode. Standard Mode by default. 
+     * @return TaskMode Checkup Mode. 0: Standard Mode; 1: Quick Mode; 2: Advanced Mode. Standard Mode by default.
      */
     public Long getTaskMode() {
         return this.TaskMode;
     }
 
     /**
-     * Set Scan task mode: `0` (Standard), `1` (Quick), `2` (Advanced). Default: `0`
-     * @param TaskMode Scan task mode: `0` (Standard), `1` (Quick), `2` (Advanced). Default: `0`
+     * Set Checkup Mode. 0: Standard Mode; 1: Quick Mode; 2: Advanced Mode. Standard Mode by default.
+     * @param TaskMode Checkup Mode. 0: Standard Mode; 1: Quick Mode; 2: Advanced Mode. Standard Mode by default.
      */
     public void setTaskMode(Long TaskMode) {
         this.TaskMode = TaskMode;
     }
 
     /**
-     * Get Asset tags 
-     * @return Tags Asset tags
+     * Get Asset tag 
+     * @return Tags Asset tag
      */
     public AssetTag getTags() {
         return this.Tags;
     }
 
     /**
-     * Set Asset tags
-     * @param Tags Asset tags
+     * Set Asset tag
+     * @param Tags Asset tag
      */
     public void setTags(AssetTag Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get Task completed callback webhook url 
-     * @return FinishWebHook Task completed callback webhook url
+     * Get webhook URL for task completion callback 
+     * @return FinishWebHook webhook URL for task completion callback
      */
     public String getFinishWebHook() {
         return this.FinishWebHook;
     }
 
     /**
-     * Set Task completed callback webhook url
-     * @param FinishWebHook Task completed callback webhook url
+     * Set webhook URL for task completion callback
+     * @param FinishWebHook webhook URL for task completion callback
      */
     public void setFinishWebHook(String FinishWebHook) {
         this.FinishWebHook = FinishWebHook;

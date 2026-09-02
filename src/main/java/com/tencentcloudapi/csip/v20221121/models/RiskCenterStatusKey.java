@@ -45,7 +45,7 @@ public class RiskCenterStatusKey extends AbstractModel {
     private String InstanceId;
 
     /**
-    * User AppId
+    * APP ID
     */
     @SerializedName("AppId")
     @Expose
@@ -100,16 +100,16 @@ public class RiskCenterStatusKey extends AbstractModel {
     }
 
     /**
-     * Get User AppId 
-     * @return AppId User AppId
+     * Get APP ID 
+     * @return AppId APP ID
      */
     public String getAppId() {
         return this.AppId;
     }
 
     /**
-     * Set User AppId
-     * @param AppId User AppId
+     * Set APP ID
+     * @param AppId APP ID
      */
     public void setAppId(String AppId) {
         this.AppId = AppId;

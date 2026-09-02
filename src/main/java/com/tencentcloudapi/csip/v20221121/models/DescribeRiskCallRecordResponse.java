@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeRiskCallRecordResponse extends AbstractModel {
 
     /**
-    * Risk call record list.
+    * Risk call record list
     */
     @SerializedName("Data")
     @Expose
     private RiskCallRecord [] Data;
 
     /**
-    * Total number of records.
+    * Total number of calls
     */
     @SerializedName("Total")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeRiskCallRecordResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Risk call record list. 
-     * @return Data Risk call record list.
+     * Get Risk call record list 
+     * @return Data Risk call record list
      */
     public RiskCallRecord [] getData() {
         return this.Data;
     }
 
     /**
-     * Set Risk call record list.
-     * @param Data Risk call record list.
+     * Set Risk call record list
+     * @param Data Risk call record list
      */
     public void setData(RiskCallRecord [] Data) {
         this.Data = Data;
     }
 
     /**
-     * Get Total number of records. 
-     * @return Total Total number of records.
+     * Get Total number of calls 
+     * @return Total Total number of calls
      */
     public Long getTotal() {
         return this.Total;
     }
 
     /**
-     * Set Total number of records.
-     * @param Total Total number of records.
+     * Set Total number of calls
+     * @param Total Total number of calls
      */
     public void setTotal(Long Total) {
         this.Total = Total;

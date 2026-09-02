@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeAccessKeyAlarmResponse extends AbstractModel {
 
     /**
-    * Alarm list.
+    * Alarm list
     */
     @SerializedName("Data")
     @Expose
@@ -45,16 +45,16 @@ public class DescribeAccessKeyAlarmResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Alarm list. 
-     * @return Data Alarm list.
+     * Get Alarm list 
+     * @return Data Alarm list
      */
     public AccessKeyAlarm [] getData() {
         return this.Data;
     }
 
     /**
-     * Set Alarm list.
-     * @param Data Alarm list.
+     * Set Alarm list
+     * @param Data Alarm list
      */
     public void setData(AccessKeyAlarm [] Data) {
         this.Data = Data;

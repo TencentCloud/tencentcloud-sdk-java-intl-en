@@ -24,28 +24,28 @@ import java.util.HashMap;
 public class DescribeVULRiskDetailResponse extends AbstractModel {
 
     /**
-    * Security product support.
+    * Security product support status
     */
     @SerializedName("ServiceSupport")
     @Expose
     private ServiceSupport [] ServiceSupport;
 
     /**
-    * Vulnerability trends.
+    * Vulnerability trends
     */
     @SerializedName("VulTrend")
     @Expose
     private VulTrend [] VulTrend;
 
     /**
-    * Vulnerability supplementary information.
+    * Vulnerability supplementary information
     */
     @SerializedName("VulData")
     @Expose
     private VULRiskInfo VulData;
 
     /**
-    * Assistant q&a id.
+    * Q&A id of the assistant
     */
     @SerializedName("QuestionId")
     @Expose
@@ -66,64 +66,64 @@ public class DescribeVULRiskDetailResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Security product support. 
-     * @return ServiceSupport Security product support.
+     * Get Security product support status 
+     * @return ServiceSupport Security product support status
      */
     public ServiceSupport [] getServiceSupport() {
         return this.ServiceSupport;
     }
 
     /**
-     * Set Security product support.
-     * @param ServiceSupport Security product support.
+     * Set Security product support status
+     * @param ServiceSupport Security product support status
      */
     public void setServiceSupport(ServiceSupport [] ServiceSupport) {
         this.ServiceSupport = ServiceSupport;
     }
 
     /**
-     * Get Vulnerability trends. 
-     * @return VulTrend Vulnerability trends.
+     * Get Vulnerability trends 
+     * @return VulTrend Vulnerability trends
      */
     public VulTrend [] getVulTrend() {
         return this.VulTrend;
     }
 
     /**
-     * Set Vulnerability trends.
-     * @param VulTrend Vulnerability trends.
+     * Set Vulnerability trends
+     * @param VulTrend Vulnerability trends
      */
     public void setVulTrend(VulTrend [] VulTrend) {
         this.VulTrend = VulTrend;
     }
 
     /**
-     * Get Vulnerability supplementary information. 
-     * @return VulData Vulnerability supplementary information.
+     * Get Vulnerability supplementary information 
+     * @return VulData Vulnerability supplementary information
      */
     public VULRiskInfo getVulData() {
         return this.VulData;
     }
 
     /**
-     * Set Vulnerability supplementary information.
-     * @param VulData Vulnerability supplementary information.
+     * Set Vulnerability supplementary information
+     * @param VulData Vulnerability supplementary information
      */
     public void setVulData(VULRiskInfo VulData) {
         this.VulData = VulData;
     }
 
     /**
-     * Get Assistant q&a id. 
-     * @return QuestionId Assistant q&a id.
+     * Get Q&A id of the assistant 
+     * @return QuestionId Q&A id of the assistant
      */
     public String getQuestionId() {
         return this.QuestionId;
     }
 
     /**
-     * Set Assistant q&a id.
-     * @param QuestionId Assistant q&a id.
+     * Set Q&A id of the assistant
+     * @param QuestionId Q&A id of the assistant
      */
     public void setQuestionId(String QuestionId) {
         this.QuestionId = QuestionId;

@@ -31,14 +31,14 @@ public class DescribeConfigCheckRulesResponse extends AbstractModel {
     private Long TotalCount;
 
     /**
-    * Risk rule list
+    * List of risk rules
     */
     @SerializedName("RuleList")
     @Expose
     private RiskRuleInfo [] RuleList;
 
     /**
-    * Cloud vendor type options
+    * Cloud vendor type option
     */
     @SerializedName("ProviderList")
     @Expose
@@ -52,7 +52,7 @@ public class DescribeConfigCheckRulesResponse extends AbstractModel {
     private AttributeOptionSet [] RiskLevelList;
 
     /**
-    * Disposal categorization options
+    * Disposal category options
     */
     @SerializedName("DispositionTypeList")
     @Expose
@@ -89,32 +89,32 @@ public class DescribeConfigCheckRulesResponse extends AbstractModel {
     }
 
     /**
-     * Get Risk rule list 
-     * @return RuleList Risk rule list
+     * Get List of risk rules 
+     * @return RuleList List of risk rules
      */
     public RiskRuleInfo [] getRuleList() {
         return this.RuleList;
     }
 
     /**
-     * Set Risk rule list
-     * @param RuleList Risk rule list
+     * Set List of risk rules
+     * @param RuleList List of risk rules
      */
     public void setRuleList(RiskRuleInfo [] RuleList) {
         this.RuleList = RuleList;
     }
 
     /**
-     * Get Cloud vendor type options 
-     * @return ProviderList Cloud vendor type options
+     * Get Cloud vendor type option 
+     * @return ProviderList Cloud vendor type option
      */
     public AttributeOptionSet [] getProviderList() {
         return this.ProviderList;
     }
 
     /**
-     * Set Cloud vendor type options
-     * @param ProviderList Cloud vendor type options
+     * Set Cloud vendor type option
+     * @param ProviderList Cloud vendor type option
      */
     public void setProviderList(AttributeOptionSet [] ProviderList) {
         this.ProviderList = ProviderList;
@@ -137,16 +137,16 @@ public class DescribeConfigCheckRulesResponse extends AbstractModel {
     }
 
     /**
-     * Get Disposal categorization options 
-     * @return DispositionTypeList Disposal categorization options
+     * Get Disposal category options 
+     * @return DispositionTypeList Disposal category options
      */
     public AttributeOptionSet [] getDispositionTypeList() {
         return this.DispositionTypeList;
     }
 
     /**
-     * Set Disposal categorization options
-     * @param DispositionTypeList Disposal categorization options
+     * Set Disposal category options
+     * @param DispositionTypeList Disposal category options
      */
     public void setDispositionTypeList(AttributeOptionSet [] DispositionTypeList) {
         this.DispositionTypeList = DispositionTypeList;

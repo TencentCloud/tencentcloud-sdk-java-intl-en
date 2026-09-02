@@ -24,15 +24,15 @@ import java.util.HashMap;
 public class UserCallRecord extends AbstractModel {
 
     /**
-    * Source IP of the call.
+    * Source IP of the api call
     */
     @SerializedName("SourceIP")
     @Expose
     private String SourceIP;
 
     /**
-    * Invocation type.
-0: console invocation.
+    * Invocation type
+0: Console invocation
 1:API
     */
     @SerializedName("EventType")
@@ -47,7 +47,7 @@ public class UserCallRecord extends AbstractModel {
     private Long CallCount;
 
     /**
-    * Error code.
+    * Call error code
 0: Successful
     */
     @SerializedName("Code")
@@ -55,42 +55,42 @@ public class UserCallRecord extends AbstractModel {
     private Long Code;
 
     /**
-    * First time call time.
+    * First call time
     */
     @SerializedName("FirstCallTime")
     @Expose
     private String FirstCallTime;
 
     /**
-    * Call time.
+    * Last call time
     */
     @SerializedName("LastCallTime")
     @Expose
     private String LastCallTime;
 
     /**
-    * Source IP of the call remark.
+    * Remark on source IP of the api call
     */
     @SerializedName("SourceIPRemark")
     @Expose
     private String SourceIPRemark;
 
     /**
-    * Source IP region of the call.
+    * Region of the source IP of the api call
     */
     @SerializedName("Region")
     @Expose
     private String Region;
 
     /**
-    * User/Role name.
+    * User/role name
     */
     @SerializedName("UserName")
     @Expose
     private String UserName;
 
     /**
-    * Aggregate date.
+    * Aggregation date
     */
     @SerializedName("Date")
     @Expose
@@ -104,34 +104,34 @@ public class UserCallRecord extends AbstractModel {
     private Long AppID;
 
     /**
-    * Carrier.
+    * Internet service provider.
     */
     @SerializedName("ISP")
     @Expose
     private String ISP;
 
     /**
-     * Get Source IP of the call. 
-     * @return SourceIP Source IP of the call.
+     * Get Source IP of the api call 
+     * @return SourceIP Source IP of the api call
      */
     public String getSourceIP() {
         return this.SourceIP;
     }
 
     /**
-     * Set Source IP of the call.
-     * @param SourceIP Source IP of the call.
+     * Set Source IP of the api call
+     * @param SourceIP Source IP of the api call
      */
     public void setSourceIP(String SourceIP) {
         this.SourceIP = SourceIP;
     }
 
     /**
-     * Get Invocation type.
-0: console invocation.
+     * Get Invocation type
+0: Console invocation
 1:API 
-     * @return EventType Invocation type.
-0: console invocation.
+     * @return EventType Invocation type
+0: Console invocation
 1:API
      */
     public Long getEventType() {
@@ -139,11 +139,11 @@ public class UserCallRecord extends AbstractModel {
     }
 
     /**
-     * Set Invocation type.
-0: console invocation.
+     * Set Invocation type
+0: Console invocation
 1:API
-     * @param EventType Invocation type.
-0: console invocation.
+     * @param EventType Invocation type
+0: Console invocation
 1:API
      */
     public void setEventType(Long EventType) {
@@ -167,9 +167,9 @@ public class UserCallRecord extends AbstractModel {
     }
 
     /**
-     * Get Error code.
+     * Get Call error code
 0: Successful 
-     * @return Code Error code.
+     * @return Code Call error code
 0: Successful
      */
     public Long getCode() {
@@ -177,9 +177,9 @@ public class UserCallRecord extends AbstractModel {
     }
 
     /**
-     * Set Error code.
+     * Set Call error code
 0: Successful
-     * @param Code Error code.
+     * @param Code Call error code
 0: Successful
      */
     public void setCode(Long Code) {
@@ -187,96 +187,96 @@ public class UserCallRecord extends AbstractModel {
     }
 
     /**
-     * Get First time call time. 
-     * @return FirstCallTime First time call time.
+     * Get First call time 
+     * @return FirstCallTime First call time
      */
     public String getFirstCallTime() {
         return this.FirstCallTime;
     }
 
     /**
-     * Set First time call time.
-     * @param FirstCallTime First time call time.
+     * Set First call time
+     * @param FirstCallTime First call time
      */
     public void setFirstCallTime(String FirstCallTime) {
         this.FirstCallTime = FirstCallTime;
     }
 
     /**
-     * Get Call time. 
-     * @return LastCallTime Call time.
+     * Get Last call time 
+     * @return LastCallTime Last call time
      */
     public String getLastCallTime() {
         return this.LastCallTime;
     }
 
     /**
-     * Set Call time.
-     * @param LastCallTime Call time.
+     * Set Last call time
+     * @param LastCallTime Last call time
      */
     public void setLastCallTime(String LastCallTime) {
         this.LastCallTime = LastCallTime;
     }
 
     /**
-     * Get Source IP of the call remark. 
-     * @return SourceIPRemark Source IP of the call remark.
+     * Get Remark on source IP of the api call 
+     * @return SourceIPRemark Remark on source IP of the api call
      */
     public String getSourceIPRemark() {
         return this.SourceIPRemark;
     }
 
     /**
-     * Set Source IP of the call remark.
-     * @param SourceIPRemark Source IP of the call remark.
+     * Set Remark on source IP of the api call
+     * @param SourceIPRemark Remark on source IP of the api call
      */
     public void setSourceIPRemark(String SourceIPRemark) {
         this.SourceIPRemark = SourceIPRemark;
     }
 
     /**
-     * Get Source IP region of the call. 
-     * @return Region Source IP region of the call.
+     * Get Region of the source IP of the api call 
+     * @return Region Region of the source IP of the api call
      */
     public String getRegion() {
         return this.Region;
     }
 
     /**
-     * Set Source IP region of the call.
-     * @param Region Source IP region of the call.
+     * Set Region of the source IP of the api call
+     * @param Region Region of the source IP of the api call
      */
     public void setRegion(String Region) {
         this.Region = Region;
     }
 
     /**
-     * Get User/Role name. 
-     * @return UserName User/Role name.
+     * Get User/role name 
+     * @return UserName User/role name
      */
     public String getUserName() {
         return this.UserName;
     }
 
     /**
-     * Set User/Role name.
-     * @param UserName User/Role name.
+     * Set User/role name
+     * @param UserName User/role name
      */
     public void setUserName(String UserName) {
         this.UserName = UserName;
     }
 
     /**
-     * Get Aggregate date. 
-     * @return Date Aggregate date.
+     * Get Aggregation date 
+     * @return Date Aggregation date
      */
     public String getDate() {
         return this.Date;
     }
 
     /**
-     * Set Aggregate date.
-     * @param Date Aggregate date.
+     * Set Aggregation date
+     * @param Date Aggregation date
      */
     public void setDate(String Date) {
         this.Date = Date;
@@ -299,16 +299,16 @@ public class UserCallRecord extends AbstractModel {
     }
 
     /**
-     * Get Carrier. 
-     * @return ISP Carrier.
+     * Get Internet service provider. 
+     * @return ISP Internet service provider.
      */
     public String getISP() {
         return this.ISP;
     }
 
     /**
-     * Set Carrier.
-     * @param ISP Carrier.
+     * Set Internet service provider.
+     * @param ISP Internet service provider.
      */
     public void setISP(String ISP) {
         this.ISP = ISP;

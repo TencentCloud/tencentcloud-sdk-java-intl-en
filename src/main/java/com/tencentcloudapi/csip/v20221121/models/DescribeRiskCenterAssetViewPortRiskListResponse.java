@@ -24,49 +24,49 @@ import java.util.HashMap;
 public class DescribeRiskCenterAssetViewPortRiskListResponse extends AbstractModel {
 
     /**
-    * Total number of entries
+    * Total quantity.
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * List of configuration risks
+    * Configuration Risk List from Asset's Perspective
     */
     @SerializedName("Data")
     @Expose
     private AssetViewPortRisk [] Data;
 
     /**
-    * List of risk handling status
+    * Status list
     */
     @SerializedName("StatusLists")
     @Expose
     private FilterDataObject [] StatusLists;
 
     /**
-    * List of risk levels
+    * Danger Level List
     */
     @SerializedName("LevelLists")
     @Expose
     private FilterDataObject [] LevelLists;
 
     /**
-    * List of fix suggestions 
+    * Recommendation List
     */
     @SerializedName("SuggestionLists")
     @Expose
     private FilterDataObject [] SuggestionLists;
 
     /**
-    * List of asset types
+    * Asset Type List
     */
     @SerializedName("InstanceTypeLists")
     @Expose
     private FilterDataObject [] InstanceTypeLists;
 
     /**
-    * List of check source
+    * Source List
     */
     @SerializedName("FromLists")
     @Expose
@@ -80,112 +80,112 @@ public class DescribeRiskCenterAssetViewPortRiskListResponse extends AbstractMod
     private String RequestId;
 
     /**
-     * Get Total number of entries 
-     * @return TotalCount Total number of entries
+     * Get Total quantity. 
+     * @return TotalCount Total quantity.
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set Total number of entries
-     * @param TotalCount Total number of entries
+     * Set Total quantity.
+     * @param TotalCount Total quantity.
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get List of configuration risks 
-     * @return Data List of configuration risks
+     * Get Configuration Risk List from Asset's Perspective 
+     * @return Data Configuration Risk List from Asset's Perspective
      */
     public AssetViewPortRisk [] getData() {
         return this.Data;
     }
 
     /**
-     * Set List of configuration risks
-     * @param Data List of configuration risks
+     * Set Configuration Risk List from Asset's Perspective
+     * @param Data Configuration Risk List from Asset's Perspective
      */
     public void setData(AssetViewPortRisk [] Data) {
         this.Data = Data;
     }
 
     /**
-     * Get List of risk handling status 
-     * @return StatusLists List of risk handling status
+     * Get Status list 
+     * @return StatusLists Status list
      */
     public FilterDataObject [] getStatusLists() {
         return this.StatusLists;
     }
 
     /**
-     * Set List of risk handling status
-     * @param StatusLists List of risk handling status
+     * Set Status list
+     * @param StatusLists Status list
      */
     public void setStatusLists(FilterDataObject [] StatusLists) {
         this.StatusLists = StatusLists;
     }
 
     /**
-     * Get List of risk levels 
-     * @return LevelLists List of risk levels
+     * Get Danger Level List 
+     * @return LevelLists Danger Level List
      */
     public FilterDataObject [] getLevelLists() {
         return this.LevelLists;
     }
 
     /**
-     * Set List of risk levels
-     * @param LevelLists List of risk levels
+     * Set Danger Level List
+     * @param LevelLists Danger Level List
      */
     public void setLevelLists(FilterDataObject [] LevelLists) {
         this.LevelLists = LevelLists;
     }
 
     /**
-     * Get List of fix suggestions  
-     * @return SuggestionLists List of fix suggestions 
+     * Get Recommendation List 
+     * @return SuggestionLists Recommendation List
      */
     public FilterDataObject [] getSuggestionLists() {
         return this.SuggestionLists;
     }
 
     /**
-     * Set List of fix suggestions 
-     * @param SuggestionLists List of fix suggestions 
+     * Set Recommendation List
+     * @param SuggestionLists Recommendation List
      */
     public void setSuggestionLists(FilterDataObject [] SuggestionLists) {
         this.SuggestionLists = SuggestionLists;
     }
 
     /**
-     * Get List of asset types 
-     * @return InstanceTypeLists List of asset types
+     * Get Asset Type List 
+     * @return InstanceTypeLists Asset Type List
      */
     public FilterDataObject [] getInstanceTypeLists() {
         return this.InstanceTypeLists;
     }
 
     /**
-     * Set List of asset types
-     * @param InstanceTypeLists List of asset types
+     * Set Asset Type List
+     * @param InstanceTypeLists Asset Type List
      */
     public void setInstanceTypeLists(FilterDataObject [] InstanceTypeLists) {
         this.InstanceTypeLists = InstanceTypeLists;
     }
 
     /**
-     * Get List of check source 
-     * @return FromLists List of check source
+     * Get Source List 
+     * @return FromLists Source List
      */
     public FilterDataObject [] getFromLists() {
         return this.FromLists;
     }
 
     /**
-     * Set List of check source
-     * @param FromLists List of check source
+     * Set Source List
+     * @param FromLists Source List
      */
     public void setFromLists(FilterDataObject [] FromLists) {
         this.FromLists = FromLists;

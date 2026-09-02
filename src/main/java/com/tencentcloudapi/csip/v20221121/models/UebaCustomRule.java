@@ -40,10 +40,10 @@ public class UebaCustomRule extends AbstractModel {
 
     /**
     * Occurrence time
-10 minutes
-2:1 hour
+1: 10 minutes
+2: 1 hour
 3: One day
-4: A week
+4: One week
 5: One month
     */
     @SerializedName("TimeInterval")
@@ -51,7 +51,7 @@ public class UebaCustomRule extends AbstractModel {
     private Long TimeInterval;
 
     /**
-    * Event
+    * Event that occurred
     */
     @SerializedName("EventContent")
     @Expose
@@ -66,8 +66,8 @@ public class UebaCustomRule extends AbstractModel {
 
     /**
     * Alarm type
-Prompt.
-1: low
+0: Notification
+1: Low risk
 2: Medium risk
 3: High risk
 4: Critical
@@ -91,7 +91,7 @@ Prompt.
     private String [] OperateObject;
 
     /**
-    * Operation method
+    * Operation method.
     */
     @SerializedName("OperateMethod")
     @Expose
@@ -105,7 +105,7 @@ Prompt.
     private String LogType;
 
     /**
-    * Chinese name in logs
+    * Log Chinese name
     */
     @SerializedName("LogTypeStr")
     @Expose
@@ -149,16 +149,16 @@ Prompt.
 
     /**
      * Get Occurrence time
-10 minutes
-2:1 hour
+1: 10 minutes
+2: 1 hour
 3: One day
-4: A week
+4: One week
 5: One month 
      * @return TimeInterval Occurrence time
-10 minutes
-2:1 hour
+1: 10 minutes
+2: 1 hour
 3: One day
-4: A week
+4: One week
 5: One month
      */
     public Long getTimeInterval() {
@@ -167,16 +167,16 @@ Prompt.
 
     /**
      * Set Occurrence time
-10 minutes
-2:1 hour
+1: 10 minutes
+2: 1 hour
 3: One day
-4: A week
+4: One week
 5: One month
      * @param TimeInterval Occurrence time
-10 minutes
-2:1 hour
+1: 10 minutes
+2: 1 hour
 3: One day
-4: A week
+4: One week
 5: One month
      */
     public void setTimeInterval(Long TimeInterval) {
@@ -184,16 +184,16 @@ Prompt.
     }
 
     /**
-     * Get Event 
-     * @return EventContent Event
+     * Get Event that occurred 
+     * @return EventContent Event that occurred
      */
     public UebaEventContent getEventContent() {
         return this.EventContent;
     }
 
     /**
-     * Set Event
-     * @param EventContent Event
+     * Set Event that occurred
+     * @param EventContent Event that occurred
      */
     public void setEventContent(UebaEventContent EventContent) {
         this.EventContent = EventContent;
@@ -217,14 +217,14 @@ Prompt.
 
     /**
      * Get Alarm type
-Prompt.
-1: low
+0: Notification
+1: Low risk
 2: Medium risk
 3: High risk
 4: Critical 
      * @return AlterLevel Alarm type
-Prompt.
-1: low
+0: Notification
+1: Low risk
 2: Medium risk
 3: High risk
 4: Critical
@@ -235,14 +235,14 @@ Prompt.
 
     /**
      * Set Alarm type
-Prompt.
-1: low
+0: Notification
+1: Low risk
 2: Medium risk
 3: High risk
 4: Critical
      * @param AlterLevel Alarm type
-Prompt.
-1: low
+0: Notification
+1: Low risk
 2: Medium risk
 3: High risk
 4: Critical
@@ -284,16 +284,16 @@ Prompt.
     }
 
     /**
-     * Get Operation method 
-     * @return OperateMethod Operation method
+     * Get Operation method. 
+     * @return OperateMethod Operation method.
      */
     public String [] getOperateMethod() {
         return this.OperateMethod;
     }
 
     /**
-     * Set Operation method
-     * @param OperateMethod Operation method
+     * Set Operation method.
+     * @param OperateMethod Operation method.
      */
     public void setOperateMethod(String [] OperateMethod) {
         this.OperateMethod = OperateMethod;
@@ -316,16 +316,16 @@ Prompt.
     }
 
     /**
-     * Get Chinese name in logs 
-     * @return LogTypeStr Chinese name in logs
+     * Get Log Chinese name 
+     * @return LogTypeStr Log Chinese name
      */
     public String getLogTypeStr() {
         return this.LogTypeStr;
     }
 
     /**
-     * Set Chinese name in logs
-     * @param LogTypeStr Chinese name in logs
+     * Set Log Chinese name
+     * @param LogTypeStr Log Chinese name
      */
     public void setLogTypeStr(String LogTypeStr) {
         this.LogTypeStr = LogTypeStr;

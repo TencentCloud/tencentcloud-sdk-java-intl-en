@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class DescribeRiskCenterServerRiskListResponse extends AbstractModel {
 
     /**
-    * Total number of entries
+    * Total quantity.
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * List of services in risk
+    * Risk Service List
     */
     @SerializedName("Data")
     @Expose
     private ServerRisk [] Data;
 
     /**
-    * List of asset types
+    * Asset Type Enumeration
     */
     @SerializedName("InstanceTypeLists")
     @Expose
@@ -52,48 +52,48 @@ public class DescribeRiskCenterServerRiskListResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Total number of entries 
-     * @return TotalCount Total number of entries
+     * Get Total quantity. 
+     * @return TotalCount Total quantity.
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set Total number of entries
-     * @param TotalCount Total number of entries
+     * Set Total quantity.
+     * @param TotalCount Total quantity.
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get List of services in risk 
-     * @return Data List of services in risk
+     * Get Risk Service List 
+     * @return Data Risk Service List
      */
     public ServerRisk [] getData() {
         return this.Data;
     }
 
     /**
-     * Set List of services in risk
-     * @param Data List of services in risk
+     * Set Risk Service List
+     * @param Data Risk Service List
      */
     public void setData(ServerRisk [] Data) {
         this.Data = Data;
     }
 
     /**
-     * Get List of asset types 
-     * @return InstanceTypeLists List of asset types
+     * Get Asset Type Enumeration 
+     * @return InstanceTypeLists Asset Type Enumeration
      */
     public FilterDataObject [] getInstanceTypeLists() {
         return this.InstanceTypeLists;
     }
 
     /**
-     * Set List of asset types
-     * @param InstanceTypeLists List of asset types
+     * Set Asset Type Enumeration
+     * @param InstanceTypeLists Asset Type Enumeration
      */
     public void setInstanceTypeLists(FilterDataObject [] InstanceTypeLists) {
         this.InstanceTypeLists = InstanceTypeLists;

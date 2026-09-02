@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class HighBaseLineRiskItem extends AbstractModel {
 
     /**
-    * Cloud account ID.
+    * Cloud Account ID
     */
     @SerializedName("CloudAccountID")
     @Expose
@@ -45,42 +45,42 @@ public class HighBaseLineRiskItem extends AbstractModel {
     private String InstanceStatus;
 
     /**
-    * Instance name
+    * Instance name.
     */
     @SerializedName("InstanceName")
     @Expose
     private String InstanceName;
 
     /**
-    * Risk name.
+    * Risk name
     */
     @SerializedName("RiskName")
     @Expose
     private String RiskName;
 
     /**
-    * Risk classification.
+    * Risk classification
     */
     @SerializedName("RiskCategory")
     @Expose
     private String RiskCategory;
 
     /**
-    * Risk level.
+    * Risk level
     */
     @SerializedName("RiskLevel")
     @Expose
     private String RiskLevel;
 
     /**
-    * Risk description.
+    * Risk description
     */
     @SerializedName("RiskDesc")
     @Expose
     private String RiskDesc;
 
     /**
-    * Risk result.
+    * Risk result
     */
     @SerializedName("RiskResult")
     @Expose
@@ -94,14 +94,14 @@ public class HighBaseLineRiskItem extends AbstractModel {
     private String FixAdvice;
 
     /**
-    * Linux vulnerability.
+    * Linux vulnerability
     */
     @SerializedName("RiskCategoryName")
     @Expose
     private String RiskCategoryName;
 
     /**
-    * Risk name.
+    * Risk level name
     */
     @SerializedName("RiskLevelName")
     @Expose
@@ -129,23 +129,23 @@ public class HighBaseLineRiskItem extends AbstractModel {
     private String UpdateTime;
 
     /**
-    * Tenant ID.
+    * Tenant ID
     */
     @SerializedName("AppID")
     @Expose
     private Long AppID;
 
     /**
-     * Get Cloud account ID. 
-     * @return CloudAccountID Cloud account ID.
+     * Get Cloud Account ID 
+     * @return CloudAccountID Cloud Account ID
      */
     public String getCloudAccountID() {
         return this.CloudAccountID;
     }
 
     /**
-     * Set Cloud account ID.
-     * @param CloudAccountID Cloud account ID.
+     * Set Cloud Account ID
+     * @param CloudAccountID Cloud Account ID
      */
     public void setCloudAccountID(String CloudAccountID) {
         this.CloudAccountID = CloudAccountID;
@@ -184,96 +184,96 @@ public class HighBaseLineRiskItem extends AbstractModel {
     }
 
     /**
-     * Get Instance name 
-     * @return InstanceName Instance name
+     * Get Instance name. 
+     * @return InstanceName Instance name.
      */
     public String getInstanceName() {
         return this.InstanceName;
     }
 
     /**
-     * Set Instance name
-     * @param InstanceName Instance name
+     * Set Instance name.
+     * @param InstanceName Instance name.
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;
     }
 
     /**
-     * Get Risk name. 
-     * @return RiskName Risk name.
+     * Get Risk name 
+     * @return RiskName Risk name
      */
     public String getRiskName() {
         return this.RiskName;
     }
 
     /**
-     * Set Risk name.
-     * @param RiskName Risk name.
+     * Set Risk name
+     * @param RiskName Risk name
      */
     public void setRiskName(String RiskName) {
         this.RiskName = RiskName;
     }
 
     /**
-     * Get Risk classification. 
-     * @return RiskCategory Risk classification.
+     * Get Risk classification 
+     * @return RiskCategory Risk classification
      */
     public String getRiskCategory() {
         return this.RiskCategory;
     }
 
     /**
-     * Set Risk classification.
-     * @param RiskCategory Risk classification.
+     * Set Risk classification
+     * @param RiskCategory Risk classification
      */
     public void setRiskCategory(String RiskCategory) {
         this.RiskCategory = RiskCategory;
     }
 
     /**
-     * Get Risk level. 
-     * @return RiskLevel Risk level.
+     * Get Risk level 
+     * @return RiskLevel Risk level
      */
     public String getRiskLevel() {
         return this.RiskLevel;
     }
 
     /**
-     * Set Risk level.
-     * @param RiskLevel Risk level.
+     * Set Risk level
+     * @param RiskLevel Risk level
      */
     public void setRiskLevel(String RiskLevel) {
         this.RiskLevel = RiskLevel;
     }
 
     /**
-     * Get Risk description. 
-     * @return RiskDesc Risk description.
+     * Get Risk description 
+     * @return RiskDesc Risk description
      */
     public String getRiskDesc() {
         return this.RiskDesc;
     }
 
     /**
-     * Set Risk description.
-     * @param RiskDesc Risk description.
+     * Set Risk description
+     * @param RiskDesc Risk description
      */
     public void setRiskDesc(String RiskDesc) {
         this.RiskDesc = RiskDesc;
     }
 
     /**
-     * Get Risk result. 
-     * @return RiskResult Risk result.
+     * Get Risk result 
+     * @return RiskResult Risk result
      */
     public String getRiskResult() {
         return this.RiskResult;
     }
 
     /**
-     * Set Risk result.
-     * @param RiskResult Risk result.
+     * Set Risk result
+     * @param RiskResult Risk result
      */
     public void setRiskResult(String RiskResult) {
         this.RiskResult = RiskResult;
@@ -296,32 +296,32 @@ public class HighBaseLineRiskItem extends AbstractModel {
     }
 
     /**
-     * Get Linux vulnerability. 
-     * @return RiskCategoryName Linux vulnerability.
+     * Get Linux vulnerability 
+     * @return RiskCategoryName Linux vulnerability
      */
     public String getRiskCategoryName() {
         return this.RiskCategoryName;
     }
 
     /**
-     * Set Linux vulnerability.
-     * @param RiskCategoryName Linux vulnerability.
+     * Set Linux vulnerability
+     * @param RiskCategoryName Linux vulnerability
      */
     public void setRiskCategoryName(String RiskCategoryName) {
         this.RiskCategoryName = RiskCategoryName;
     }
 
     /**
-     * Get Risk name. 
-     * @return RiskLevelName Risk name.
+     * Get Risk level name 
+     * @return RiskLevelName Risk level name
      */
     public String getRiskLevelName() {
         return this.RiskLevelName;
     }
 
     /**
-     * Set Risk name.
-     * @param RiskLevelName Risk name.
+     * Set Risk level name
+     * @param RiskLevelName Risk level name
      */
     public void setRiskLevelName(String RiskLevelName) {
         this.RiskLevelName = RiskLevelName;
@@ -376,16 +376,16 @@ public class HighBaseLineRiskItem extends AbstractModel {
     }
 
     /**
-     * Get Tenant ID. 
-     * @return AppID Tenant ID.
+     * Get Tenant ID 
+     * @return AppID Tenant ID
      */
     public Long getAppID() {
         return this.AppID;
     }
 
     /**
-     * Set Tenant ID.
-     * @param AppID Tenant ID.
+     * Set Tenant ID
+     * @param AppID Tenant ID
      */
     public void setAppID(Long AppID) {
         this.AppID = AppID;

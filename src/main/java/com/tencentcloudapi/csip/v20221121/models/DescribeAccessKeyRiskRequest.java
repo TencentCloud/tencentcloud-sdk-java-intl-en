@@ -38,7 +38,7 @@ public class DescribeAccessKeyRiskRequest extends AbstractModel {
     private String [] MemberId;
 
     /**
-    * Access key ID.
+    * Access key ID
     */
     @SerializedName("AccessKeyID")
     @Expose
@@ -84,16 +84,16 @@ public class DescribeAccessKeyRiskRequest extends AbstractModel {
     }
 
     /**
-     * Get Access key ID. 
-     * @return AccessKeyID Access key ID.
+     * Get Access key ID 
+     * @return AccessKeyID Access key ID
      */
     public Long getAccessKeyID() {
         return this.AccessKeyID;
     }
 
     /**
-     * Set Access key ID.
-     * @param AccessKeyID Access key ID.
+     * Set Access key ID
+     * @param AccessKeyID Access key ID
      */
     public void setAccessKeyID(Long AccessKeyID) {
         this.AccessKeyID = AccessKeyID;

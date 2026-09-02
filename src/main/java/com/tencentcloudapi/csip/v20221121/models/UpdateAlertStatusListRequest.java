@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class UpdateAlertStatusListRequest extends AbstractModel {
 
     /**
-    * Alarm ID list
+    * List of alarm IDs
     */
     @SerializedName("ID")
     @Expose
@@ -32,11 +32,11 @@ public class UpdateAlertStatusListRequest extends AbstractModel {
 
     /**
     * Operation type. 
-1: Revoke disposal 
-2: Marked with processed 
+1: Undo disposal 
+2: Marked as processed 
 3: Marked as ignored 
 4: Cancel tag disposal
-5: Unmark ignore
+5: Untag and ignore
     */
     @SerializedName("OperateType")
     @Expose
@@ -57,16 +57,16 @@ public class UpdateAlertStatusListRequest extends AbstractModel {
     private String [] OperatedMemberId;
 
     /**
-     * Get Alarm ID list 
-     * @return ID Alarm ID list
+     * Get List of alarm IDs 
+     * @return ID List of alarm IDs
      */
     public NewAlertKey [] getID() {
         return this.ID;
     }
 
     /**
-     * Set Alarm ID list
-     * @param ID Alarm ID list
+     * Set List of alarm IDs
+     * @param ID List of alarm IDs
      */
     public void setID(NewAlertKey [] ID) {
         this.ID = ID;
@@ -74,17 +74,17 @@ public class UpdateAlertStatusListRequest extends AbstractModel {
 
     /**
      * Get Operation type. 
-1: Revoke disposal 
-2: Marked with processed 
+1: Undo disposal 
+2: Marked as processed 
 3: Marked as ignored 
 4: Cancel tag disposal
-5: Unmark ignore 
+5: Untag and ignore 
      * @return OperateType Operation type. 
-1: Revoke disposal 
-2: Marked with processed 
+1: Undo disposal 
+2: Marked as processed 
 3: Marked as ignored 
 4: Cancel tag disposal
-5: Unmark ignore
+5: Untag and ignore
      */
     public Long getOperateType() {
         return this.OperateType;
@@ -92,17 +92,17 @@ public class UpdateAlertStatusListRequest extends AbstractModel {
 
     /**
      * Set Operation type. 
-1: Revoke disposal 
-2: Marked with processed 
+1: Undo disposal 
+2: Marked as processed 
 3: Marked as ignored 
 4: Cancel tag disposal
-5: Unmark ignore
+5: Untag and ignore
      * @param OperateType Operation type. 
-1: Revoke disposal 
-2: Marked with processed 
+1: Undo disposal 
+2: Marked as processed 
 3: Marked as ignored 
 4: Cancel tag disposal
-5: Unmark ignore
+5: Untag and ignore
      */
     public void setOperateType(Long OperateType) {
         this.OperateType = OperateType;

@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeExposuresResponse extends AbstractModel {
 
     /**
-    * Cloud boundary analytics number of assets.
+    * Number of assets in cloud boundary analysis
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * Cloud boundary analytics asset list.
+    * Cloud boundary analysis asset list
     */
     @SerializedName("ExposeList")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeExposuresResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Cloud boundary analytics number of assets. 
-     * @return TotalCount Cloud boundary analytics number of assets.
+     * Get Number of assets in cloud boundary analysis 
+     * @return TotalCount Number of assets in cloud boundary analysis
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set Cloud boundary analytics number of assets.
-     * @param TotalCount Cloud boundary analytics number of assets.
+     * Set Number of assets in cloud boundary analysis
+     * @param TotalCount Number of assets in cloud boundary analysis
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get Cloud boundary analytics asset list. 
-     * @return ExposeList Cloud boundary analytics asset list.
+     * Get Cloud boundary analysis asset list 
+     * @return ExposeList Cloud boundary analysis asset list
      */
     public ExposesItem [] getExposeList() {
         return this.ExposeList;
     }
 
     /**
-     * Set Cloud boundary analytics asset list.
-     * @param ExposeList Cloud boundary analytics asset list.
+     * Set Cloud boundary analysis asset list
+     * @param ExposeList Cloud boundary analysis asset list
      */
     public void setExposeList(ExposesItem [] ExposeList) {
         this.ExposeList = ExposeList;

@@ -38,7 +38,7 @@ public class DescribeDomainAssetsRequest extends AbstractModel {
     private Filter Filter;
 
     /**
-    * CSC tags of the asset
+    * Security Center Custom Tag
     */
     @SerializedName("Tags")
     @Expose
@@ -77,16 +77,16 @@ public class DescribeDomainAssetsRequest extends AbstractModel {
     }
 
     /**
-     * Get CSC tags of the asset 
-     * @return Tags CSC tags of the asset
+     * Get Security Center Custom Tag 
+     * @return Tags Security Center Custom Tag
      */
     public AssetTag [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set CSC tags of the asset
-     * @param Tags CSC tags of the asset
+     * Set Security Center Custom Tag
+     * @param Tags Security Center Custom Tag
      */
     public void setTags(AssetTag [] Tags) {
         this.Tags = Tags;

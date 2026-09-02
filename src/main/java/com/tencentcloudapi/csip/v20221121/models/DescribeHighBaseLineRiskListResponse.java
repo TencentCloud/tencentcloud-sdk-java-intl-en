@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeHighBaseLineRiskListResponse extends AbstractModel {
 
     /**
-    * Number of high-risk risks.
+    * Number of high-risk baseline risks
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * High-Risk baseline risk list.
+    * List of risks in high-risk baselines
     */
     @SerializedName("HighBaseLineRiskList")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeHighBaseLineRiskListResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Number of high-risk risks. 
-     * @return TotalCount Number of high-risk risks.
+     * Get Number of high-risk baseline risks 
+     * @return TotalCount Number of high-risk baseline risks
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set Number of high-risk risks.
-     * @param TotalCount Number of high-risk risks.
+     * Set Number of high-risk baseline risks
+     * @param TotalCount Number of high-risk baseline risks
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get High-Risk baseline risk list. 
-     * @return HighBaseLineRiskList High-Risk baseline risk list.
+     * Get List of risks in high-risk baselines 
+     * @return HighBaseLineRiskList List of risks in high-risk baselines
      */
     public HighBaseLineRiskItem [] getHighBaseLineRiskList() {
         return this.HighBaseLineRiskList;
     }
 
     /**
-     * Set High-Risk baseline risk list.
-     * @param HighBaseLineRiskList High-Risk baseline risk list.
+     * Set List of risks in high-risk baselines
+     * @param HighBaseLineRiskList List of risks in high-risk baselines
      */
     public void setHighBaseLineRiskList(HighBaseLineRiskItem [] HighBaseLineRiskList) {
         this.HighBaseLineRiskList = HighBaseLineRiskList;

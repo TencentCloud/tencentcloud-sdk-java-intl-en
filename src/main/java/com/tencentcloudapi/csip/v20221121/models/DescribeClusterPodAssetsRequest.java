@@ -31,7 +31,7 @@ public class DescribeClusterPodAssetsRequest extends AbstractModel {
     private String [] MemberId;
 
     /**
-    * Filter conditions
+    * Filter
     */
     @SerializedName("Filter")
     @Expose
@@ -54,16 +54,16 @@ public class DescribeClusterPodAssetsRequest extends AbstractModel {
     }
 
     /**
-     * Get Filter conditions 
-     * @return Filter Filter conditions
+     * Get Filter 
+     * @return Filter Filter
      */
     public Filter getFilter() {
         return this.Filter;
     }
 
     /**
-     * Set Filter conditions
-     * @param Filter Filter conditions
+     * Set Filter
+     * @param Filter Filter
      */
     public void setFilter(Filter Filter) {
         this.Filter = Filter;

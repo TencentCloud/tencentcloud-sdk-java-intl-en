@@ -38,7 +38,7 @@ public class DescribeUebaRuleResponse extends AbstractModel {
     private UebaRule [] Data;
 
     /**
-    * Alarm category enumeration for custom policy
+    * Enumeration of alarm types corresponding to a custom policy.
     */
     @SerializedName("AlterType")
     @Expose
@@ -84,16 +84,16 @@ public class DescribeUebaRuleResponse extends AbstractModel {
     }
 
     /**
-     * Get Alarm category enumeration for custom policy 
-     * @return AlterType Alarm category enumeration for custom policy
+     * Get Enumeration of alarm types corresponding to a custom policy. 
+     * @return AlterType Enumeration of alarm types corresponding to a custom policy.
      */
     public FilterDataObject [] getAlterType() {
         return this.AlterType;
     }
 
     /**
-     * Set Alarm category enumeration for custom policy
-     * @param AlterType Alarm category enumeration for custom policy
+     * Set Enumeration of alarm types corresponding to a custom policy.
+     * @param AlterType Enumeration of alarm types corresponding to a custom policy.
      */
     public void setAlterType(FilterDataObject [] AlterType) {
         this.AlterType = AlterType;

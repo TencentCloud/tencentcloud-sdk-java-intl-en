@@ -24,22 +24,22 @@ import java.util.HashMap;
 public class VULBaseInfo extends AbstractModel {
 
     /**
-    * Risk level.
-High - high risk, middle - medium risk, low - low risk, info - Note.
+    * Risk level
+high risk / Medium risk / low risk / Notification
     */
     @SerializedName("Level")
     @Expose
     private String Level;
 
     /**
-    * Component.
+    * Component
     */
     @SerializedName("Component")
     @Expose
     private String Component;
 
     /**
-    * Release date.
+    * Vulnerability release time
     */
     @SerializedName("PublishTime")
     @Expose
@@ -67,7 +67,7 @@ High - high risk, middle - medium risk, low - low risk, info - Note.
     private String RiskId;
 
     /**
-    * Vulnerability type.
+    * Vulnerability type
     */
     @SerializedName("VULType")
     @Expose
@@ -102,28 +102,28 @@ High - high risk, middle - medium risk, low - low risk, info - Note.
     private String Payload;
 
     /**
-    * Vulnerability impact component.
+    * Vulnerability Impact component
     */
     @SerializedName("AppName")
     @Expose
     private String AppName;
 
     /**
-    * Technology reference.
+    * Technical reference
     */
     @SerializedName("References")
     @Expose
     private String References;
 
     /**
-    * Vulnerability impact version.
+    * Vulnerability Impact version
     */
     @SerializedName("AppVersion")
     @Expose
     private String AppVersion;
 
     /**
-    * Risks.
+    * Risk point
     */
     @SerializedName("VULURL")
     @Expose
@@ -131,7 +131,6 @@ High - high risk, middle - medium risk, low - low risk, info - Note.
 
     /**
     * User Nickname
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Nick")
     @Expose
@@ -146,7 +145,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * User UIN
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Uin")
     @Expose
@@ -154,7 +152,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Fixing suggestion
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Fix")
     @Expose
@@ -162,7 +159,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Emergency Vulnerability Type. 1-Emergency Vulnerability; 0-Non-emergency Vulnerability.
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("EMGCVulType")
     @Expose
@@ -170,32 +166,28 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * CVSS score
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("CVSS")
     @Expose
     private Float CVSS;
 
     /**
-    * Attack intensity.
+    * Attack heat
 0/1/2/3 
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("AttackHeat")
     @Expose
     private Long AttackHeat;
 
     /**
-    * Detection status 0 unscanned 1 scan in progress 2 scan complete.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Detection status. 0: unscanned; 1: scan in progress; 2: scan complete
     */
     @SerializedName("ScanStatus")
     @Expose
     private Long ScanStatus;
 
     /**
-    * 1/0 whether compulsory.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Whether 1/0 is required
     */
     @SerializedName("IsSuggest")
     @Expose
@@ -203,23 +195,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Tag.
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("VulTag")
     @Expose
     private String [] VulTag;
 
     /**
-    * Support products: "cfw_waf_virtual", "cwp_detect", "cwp_defense", "cwp_fix" (comma-separated).
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Supported products, separate with commas: "cfw_waf_virtual", "cwp_detect", "cwp_defense", "cwp_fix"
     */
     @SerializedName("SupportProduct")
     @Expose
     private String SupportProduct;
 
     /**
-    * Vulnerability detection task id.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Vulnerability detection task id
     */
     @SerializedName("TaskId")
     @Expose
@@ -227,75 +216,72 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Primary key
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Index")
     @Expose
     private String Index;
 
     /**
-    * Vulnerability id old version.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Vulnerability id (legacy version)
     */
     @SerializedName("PcmgrID")
     @Expose
     private String PcmgrID;
 
     /**
-    * Vulnerability id new version.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Vulnerability id New version
     */
     @SerializedName("TvdID")
     @Expose
     private String TvdID;
 
     /**
-     * Get Risk level.
-High - high risk, middle - medium risk, low - low risk, info - Note. 
-     * @return Level Risk level.
-High - high risk, middle - medium risk, low - low risk, info - Note.
+     * Get Risk level
+high risk / Medium risk / low risk / Notification 
+     * @return Level Risk level
+high risk / Medium risk / low risk / Notification
      */
     public String getLevel() {
         return this.Level;
     }
 
     /**
-     * Set Risk level.
-High - high risk, middle - medium risk, low - low risk, info - Note.
-     * @param Level Risk level.
-High - high risk, middle - medium risk, low - low risk, info - Note.
+     * Set Risk level
+high risk / Medium risk / low risk / Notification
+     * @param Level Risk level
+high risk / Medium risk / low risk / Notification
      */
     public void setLevel(String Level) {
         this.Level = Level;
     }
 
     /**
-     * Get Component. 
-     * @return Component Component.
+     * Get Component 
+     * @return Component Component
      */
     public String getComponent() {
         return this.Component;
     }
 
     /**
-     * Set Component.
-     * @param Component Component.
+     * Set Component
+     * @param Component Component
      */
     public void setComponent(String Component) {
         this.Component = Component;
     }
 
     /**
-     * Get Release date. 
-     * @return PublishTime Release date.
+     * Get Vulnerability release time 
+     * @return PublishTime Vulnerability release time
      */
     public String getPublishTime() {
         return this.PublishTime;
     }
 
     /**
-     * Set Release date.
-     * @param PublishTime Release date.
+     * Set Vulnerability release time
+     * @param PublishTime Vulnerability release time
      */
     public void setPublishTime(String PublishTime) {
         this.PublishTime = PublishTime;
@@ -350,16 +336,16 @@ High - high risk, middle - medium risk, low - low risk, info - Note.
     }
 
     /**
-     * Get Vulnerability type. 
-     * @return VULType Vulnerability type.
+     * Get Vulnerability type 
+     * @return VULType Vulnerability type
      */
     public String getVULType() {
         return this.VULType;
     }
 
     /**
-     * Set Vulnerability type.
-     * @param VULType Vulnerability type.
+     * Set Vulnerability type
+     * @param VULType Vulnerability type
      */
     public void setVULType(String VULType) {
         this.VULType = VULType;
@@ -430,74 +416,72 @@ High - high risk, middle - medium risk, low - low risk, info - Note.
     }
 
     /**
-     * Get Vulnerability impact component. 
-     * @return AppName Vulnerability impact component.
+     * Get Vulnerability Impact component 
+     * @return AppName Vulnerability Impact component
      */
     public String getAppName() {
         return this.AppName;
     }
 
     /**
-     * Set Vulnerability impact component.
-     * @param AppName Vulnerability impact component.
+     * Set Vulnerability Impact component
+     * @param AppName Vulnerability Impact component
      */
     public void setAppName(String AppName) {
         this.AppName = AppName;
     }
 
     /**
-     * Get Technology reference. 
-     * @return References Technology reference.
+     * Get Technical reference 
+     * @return References Technical reference
      */
     public String getReferences() {
         return this.References;
     }
 
     /**
-     * Set Technology reference.
-     * @param References Technology reference.
+     * Set Technical reference
+     * @param References Technical reference
      */
     public void setReferences(String References) {
         this.References = References;
     }
 
     /**
-     * Get Vulnerability impact version. 
-     * @return AppVersion Vulnerability impact version.
+     * Get Vulnerability Impact version 
+     * @return AppVersion Vulnerability Impact version
      */
     public String getAppVersion() {
         return this.AppVersion;
     }
 
     /**
-     * Set Vulnerability impact version.
-     * @param AppVersion Vulnerability impact version.
+     * Set Vulnerability Impact version
+     * @param AppVersion Vulnerability Impact version
      */
     public void setAppVersion(String AppVersion) {
         this.AppVersion = AppVersion;
     }
 
     /**
-     * Get Risks. 
-     * @return VULURL Risks.
+     * Get Risk point 
+     * @return VULURL Risk point
      */
     public String getVULURL() {
         return this.VULURL;
     }
 
     /**
-     * Set Risks.
-     * @param VULURL Risks.
+     * Set Risk point
+     * @param VULURL Risk point
      */
     public void setVULURL(String VULURL) {
         this.VULURL = VULURL;
     }
 
     /**
-     * Get User Nickname
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get User Nickname 
      * @return Nick User Nickname
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getNick() {
         return this.Nick;
@@ -505,9 +489,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set User Nickname
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Nick User Nickname
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setNick(String Nick) {
         this.Nick = Nick;
@@ -530,10 +512,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get User UIN
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get User UIN 
      * @return Uin User UIN
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getUin() {
         return this.Uin;
@@ -541,19 +521,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set User UIN
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Uin User UIN
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setUin(String Uin) {
         this.Uin = Uin;
     }
 
     /**
-     * Get Fixing suggestion
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Fixing suggestion 
      * @return Fix Fixing suggestion
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getFix() {
         return this.Fix;
@@ -561,19 +537,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Fixing suggestion
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Fix Fixing suggestion
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setFix(String Fix) {
         this.Fix = Fix;
     }
 
     /**
-     * Get Emergency Vulnerability Type. 1-Emergency Vulnerability; 0-Non-emergency Vulnerability.
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Emergency Vulnerability Type. 1-Emergency Vulnerability; 0-Non-emergency Vulnerability. 
      * @return EMGCVulType Emergency Vulnerability Type. 1-Emergency Vulnerability; 0-Non-emergency Vulnerability.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getEMGCVulType() {
         return this.EMGCVulType;
@@ -581,19 +553,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Emergency Vulnerability Type. 1-Emergency Vulnerability; 0-Non-emergency Vulnerability.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param EMGCVulType Emergency Vulnerability Type. 1-Emergency Vulnerability; 0-Non-emergency Vulnerability.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setEMGCVulType(Long EMGCVulType) {
         this.EMGCVulType = EMGCVulType;
     }
 
     /**
-     * Get CVSS score
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get CVSS score 
      * @return CVSS CVSS score
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Float getCVSS() {
         return this.CVSS;
@@ -601,83 +569,67 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set CVSS score
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param CVSS CVSS score
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setCVSS(Float CVSS) {
         this.CVSS = CVSS;
     }
 
     /**
-     * Get Attack intensity.
+     * Get Attack heat
+0/1/2/3  
+     * @return AttackHeat Attack heat
 0/1/2/3 
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return AttackHeat Attack intensity.
-0/1/2/3 
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getAttackHeat() {
         return this.AttackHeat;
     }
 
     /**
-     * Set Attack intensity.
+     * Set Attack heat
 0/1/2/3 
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param AttackHeat Attack intensity.
+     * @param AttackHeat Attack heat
 0/1/2/3 
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setAttackHeat(Long AttackHeat) {
         this.AttackHeat = AttackHeat;
     }
 
     /**
-     * Get Detection status 0 unscanned 1 scan in progress 2 scan complete.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ScanStatus Detection status 0 unscanned 1 scan in progress 2 scan complete.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Detection status. 0: unscanned; 1: scan in progress; 2: scan complete 
+     * @return ScanStatus Detection status. 0: unscanned; 1: scan in progress; 2: scan complete
      */
     public Long getScanStatus() {
         return this.ScanStatus;
     }
 
     /**
-     * Set Detection status 0 unscanned 1 scan in progress 2 scan complete.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ScanStatus Detection status 0 unscanned 1 scan in progress 2 scan complete.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Detection status. 0: unscanned; 1: scan in progress; 2: scan complete
+     * @param ScanStatus Detection status. 0: unscanned; 1: scan in progress; 2: scan complete
      */
     public void setScanStatus(Long ScanStatus) {
         this.ScanStatus = ScanStatus;
     }
 
     /**
-     * Get 1/0 whether compulsory.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return IsSuggest 1/0 whether compulsory.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Whether 1/0 is required 
+     * @return IsSuggest Whether 1/0 is required
      */
     public Long getIsSuggest() {
         return this.IsSuggest;
     }
 
     /**
-     * Set 1/0 whether compulsory.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param IsSuggest 1/0 whether compulsory.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Whether 1/0 is required
+     * @param IsSuggest Whether 1/0 is required
      */
     public void setIsSuggest(Long IsSuggest) {
         this.IsSuggest = IsSuggest;
     }
 
     /**
-     * Get Tag.
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Tag. 
      * @return VulTag Tag.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String [] getVulTag() {
         return this.VulTag;
@@ -685,59 +637,47 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Tag.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param VulTag Tag.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setVulTag(String [] VulTag) {
         this.VulTag = VulTag;
     }
 
     /**
-     * Get Support products: "cfw_waf_virtual", "cwp_detect", "cwp_defense", "cwp_fix" (comma-separated).
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return SupportProduct Support products: "cfw_waf_virtual", "cwp_detect", "cwp_defense", "cwp_fix" (comma-separated).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Supported products, separate with commas: "cfw_waf_virtual", "cwp_detect", "cwp_defense", "cwp_fix" 
+     * @return SupportProduct Supported products, separate with commas: "cfw_waf_virtual", "cwp_detect", "cwp_defense", "cwp_fix"
      */
     public String getSupportProduct() {
         return this.SupportProduct;
     }
 
     /**
-     * Set Support products: "cfw_waf_virtual", "cwp_detect", "cwp_defense", "cwp_fix" (comma-separated).
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param SupportProduct Support products: "cfw_waf_virtual", "cwp_detect", "cwp_defense", "cwp_fix" (comma-separated).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Supported products, separate with commas: "cfw_waf_virtual", "cwp_detect", "cwp_defense", "cwp_fix"
+     * @param SupportProduct Supported products, separate with commas: "cfw_waf_virtual", "cwp_detect", "cwp_defense", "cwp_fix"
      */
     public void setSupportProduct(String SupportProduct) {
         this.SupportProduct = SupportProduct;
     }
 
     /**
-     * Get Vulnerability detection task id.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return TaskId Vulnerability detection task id.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Vulnerability detection task id 
+     * @return TaskId Vulnerability detection task id
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set Vulnerability detection task id.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param TaskId Vulnerability detection task id.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Vulnerability detection task id
+     * @param TaskId Vulnerability detection task id
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;
     }
 
     /**
-     * Get Primary key
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Primary key 
      * @return Index Primary key
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getIndex() {
         return this.Index;
@@ -745,49 +685,39 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Primary key
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Index Primary key
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setIndex(String Index) {
         this.Index = Index;
     }
 
     /**
-     * Get Vulnerability id old version.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return PcmgrID Vulnerability id old version.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Vulnerability id (legacy version) 
+     * @return PcmgrID Vulnerability id (legacy version)
      */
     public String getPcmgrID() {
         return this.PcmgrID;
     }
 
     /**
-     * Set Vulnerability id old version.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param PcmgrID Vulnerability id old version.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Vulnerability id (legacy version)
+     * @param PcmgrID Vulnerability id (legacy version)
      */
     public void setPcmgrID(String PcmgrID) {
         this.PcmgrID = PcmgrID;
     }
 
     /**
-     * Get Vulnerability id new version.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return TvdID Vulnerability id new version.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Vulnerability id New version 
+     * @return TvdID Vulnerability id New version
      */
     public String getTvdID() {
         return this.TvdID;
     }
 
     /**
-     * Set Vulnerability id new version.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param TvdID Vulnerability id new version.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Vulnerability id New version
+     * @param TvdID Vulnerability id New version
      */
     public void setTvdID(String TvdID) {
         this.TvdID = TvdID;

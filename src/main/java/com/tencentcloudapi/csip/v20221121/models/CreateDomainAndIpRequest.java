@@ -38,7 +38,7 @@ public class CreateDomainAndIpRequest extends AbstractModel {
     private String [] MemberId;
 
     /**
-    * Asset tags
+    * Asset tag
     */
     @SerializedName("Tags")
     @Expose
@@ -77,16 +77,16 @@ public class CreateDomainAndIpRequest extends AbstractModel {
     }
 
     /**
-     * Get Asset tags 
-     * @return Tags Asset tags
+     * Get Asset tag 
+     * @return Tags Asset tag
      */
     public AssetTag [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set Asset tags
-     * @param Tags Asset tags
+     * Set Asset tag
+     * @param Tags Asset tag
      */
     public void setTags(AssetTag [] Tags) {
         this.Tags = Tags;

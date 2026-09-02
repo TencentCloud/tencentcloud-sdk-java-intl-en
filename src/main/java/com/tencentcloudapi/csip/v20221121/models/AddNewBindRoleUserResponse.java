@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class AddNewBindRoleUserResponse extends AbstractModel {
 
     /**
-    * `0`: successful. Other values: failed.
+    * 0: Success; others: Failure.
     */
     @SerializedName("Status")
     @Expose
@@ -38,16 +38,16 @@ public class AddNewBindRoleUserResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get `0`: successful. Other values: failed. 
-     * @return Status `0`: successful. Other values: failed.
+     * Get 0: Success; others: Failure. 
+     * @return Status 0: Success; others: Failure.
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set `0`: successful. Other values: failed.
-     * @param Status `0`: successful. Other values: failed.
+     * Set 0: Success; others: Failure.
+     * @param Status 0: Success; others: Failure.
      */
     public void setStatus(Long Status) {
         this.Status = Status;

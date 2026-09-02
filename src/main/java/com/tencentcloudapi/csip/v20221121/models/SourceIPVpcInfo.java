@@ -45,7 +45,7 @@ public class SourceIPVpcInfo extends AbstractModel {
     private String VpcID;
 
     /**
-    * vpc name.
+    * VPC name.
     */
     @SerializedName("VpcName")
     @Expose
@@ -100,16 +100,16 @@ public class SourceIPVpcInfo extends AbstractModel {
     }
 
     /**
-     * Get vpc name. 
-     * @return VpcName vpc name.
+     * Get VPC name. 
+     * @return VpcName VPC name.
      */
     public String getVpcName() {
         return this.VpcName;
     }
 
     /**
-     * Set vpc name.
-     * @param VpcName vpc name.
+     * Set VPC name.
+     * @param VpcName VPC name.
      */
     public void setVpcName(String VpcName) {
         this.VpcName = VpcName;

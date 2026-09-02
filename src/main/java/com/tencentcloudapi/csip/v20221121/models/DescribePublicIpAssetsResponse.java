@@ -31,7 +31,7 @@ public class DescribePublicIpAssetsResponse extends AbstractModel {
     private IpAssetListVO [] Data;
 
     /**
-    * Total number of results
+    * Total number.
     */
     @SerializedName("Total")
     @Expose
@@ -103,16 +103,16 @@ public class DescribePublicIpAssetsResponse extends AbstractModel {
     }
 
     /**
-     * Get Total number of results 
-     * @return Total Total number of results
+     * Get Total number. 
+     * @return Total Total number.
      */
     public Long getTotal() {
         return this.Total;
     }
 
     /**
-     * Set Total number of results
-     * @param Total Total number of results
+     * Set Total number.
+     * @param Total Total number.
      */
     public void setTotal(Long Total) {
         this.Total = Total;

@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class CreateAccessKeySyncTaskResponse extends AbstractModel {
 
     /**
-    * Initiate a sync task.
+    * Trigger a sync task
     */
     @SerializedName("TaskID")
     @Expose
     private Long TaskID;
 
     /**
-    * 0: success; 1: failure.
+    * 0: Success; 1: Failure
     */
     @SerializedName("Code")
     @Expose
@@ -52,32 +52,32 @@ public class CreateAccessKeySyncTaskResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Initiate a sync task. 
-     * @return TaskID Initiate a sync task.
+     * Get Trigger a sync task 
+     * @return TaskID Trigger a sync task
      */
     public Long getTaskID() {
         return this.TaskID;
     }
 
     /**
-     * Set Initiate a sync task.
-     * @param TaskID Initiate a sync task.
+     * Set Trigger a sync task
+     * @param TaskID Trigger a sync task
      */
     public void setTaskID(Long TaskID) {
         this.TaskID = TaskID;
     }
 
     /**
-     * Get 0: success; 1: failure. 
-     * @return Code 0: success; 1: failure.
+     * Get 0: Success; 1: Failure 
+     * @return Code 0: Success; 1: Failure
      */
     public Long getCode() {
         return this.Code;
     }
 
     /**
-     * Set 0: success; 1: failure.
-     * @param Code 0: success; 1: failure.
+     * Set 0: Success; 1: Failure
+     * @param Code 0: Success; 1: Failure
      */
     public void setCode(Long Code) {
         this.Code = Code;

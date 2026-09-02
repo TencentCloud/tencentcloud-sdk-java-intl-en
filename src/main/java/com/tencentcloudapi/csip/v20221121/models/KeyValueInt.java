@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class KeyValueInt extends AbstractModel {
 
     /**
-    * <p>Key</p>
+    * <p>Key.</p>
     */
     @SerializedName("Key")
     @Expose
@@ -38,16 +38,16 @@ public class KeyValueInt extends AbstractModel {
     private Long Value;
 
     /**
-     * Get <p>Key</p> 
-     * @return Key <p>Key</p>
+     * Get <p>Key.</p> 
+     * @return Key <p>Key.</p>
      */
     public Long getKey() {
         return this.Key;
     }
 
     /**
-     * Set <p>Key</p>
-     * @param Key <p>Key</p>
+     * Set <p>Key.</p>
+     * @param Key <p>Key.</p>
      */
     public void setKey(Long Key) {
         this.Key = Key;

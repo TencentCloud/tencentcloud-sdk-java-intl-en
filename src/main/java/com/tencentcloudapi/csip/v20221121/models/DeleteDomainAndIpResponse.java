@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DeleteDomainAndIpResponse extends AbstractModel {
 
     /**
-    * Number of deleted assets
+    * Number of Deleted Assets
     */
     @SerializedName("Data")
     @Expose
@@ -38,16 +38,16 @@ public class DeleteDomainAndIpResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Number of deleted assets 
-     * @return Data Number of deleted assets
+     * Get Number of Deleted Assets 
+     * @return Data Number of Deleted Assets
      */
     public Long getData() {
         return this.Data;
     }
 
     /**
-     * Set Number of deleted assets
-     * @param Data Number of deleted assets
+     * Set Number of Deleted Assets
+     * @param Data Number of Deleted Assets
      */
     public void setData(Long Data) {
         this.Data = Data;

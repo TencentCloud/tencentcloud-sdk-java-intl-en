@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeKeySandboxCredentialListResponse extends AbstractModel {
 
     /**
-    * Credential data list
+    * Credential data list.
     */
     @SerializedName("Data")
     @Expose
@@ -45,16 +45,16 @@ public class DescribeKeySandboxCredentialListResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Credential data list 
-     * @return Data Credential data list
+     * Get Credential data list. 
+     * @return Data Credential data list.
      */
     public KeySandboxCredential [] getData() {
         return this.Data;
     }
 
     /**
-     * Set Credential data list
-     * @param Data Credential data list
+     * Set Credential data list.
+     * @param Data Credential data list.
      */
     public void setData(KeySandboxCredential [] Data) {
         this.Data = Data;

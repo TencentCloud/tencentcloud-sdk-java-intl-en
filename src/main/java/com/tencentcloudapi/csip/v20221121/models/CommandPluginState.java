@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class CommandPluginState extends AbstractModel {
 
     /**
-    * <p>Plug-in installation status (upper layer aggregation)<br>Enumeration value:<br>NONE: Not installed<br>INSTALLING: Installing<br>INSTALLED: Installed<br>INSTALL_FAIL: Installation failure</p>
+    * <p>Plug-in installation status (upper-layer aggregation)<br>Enumeration values:<br>NONE: not installed<br>INSTALLING: installing<br>INSTALLED: installed<br>INSTALL_FAIL: installation failure</p>
     */
     @SerializedName("InstallStatus")
     @Expose
     private String InstallStatus;
 
     /**
-     * Get <p>Plug-in installation status (upper layer aggregation)<br>Enumeration value:<br>NONE: Not installed<br>INSTALLING: Installing<br>INSTALLED: Installed<br>INSTALL_FAIL: Installation failure</p> 
-     * @return InstallStatus <p>Plug-in installation status (upper layer aggregation)<br>Enumeration value:<br>NONE: Not installed<br>INSTALLING: Installing<br>INSTALLED: Installed<br>INSTALL_FAIL: Installation failure</p>
+     * Get <p>Plug-in installation status (upper-layer aggregation)<br>Enumeration values:<br>NONE: not installed<br>INSTALLING: installing<br>INSTALLED: installed<br>INSTALL_FAIL: installation failure</p> 
+     * @return InstallStatus <p>Plug-in installation status (upper-layer aggregation)<br>Enumeration values:<br>NONE: not installed<br>INSTALLING: installing<br>INSTALLED: installed<br>INSTALL_FAIL: installation failure</p>
      */
     public String getInstallStatus() {
         return this.InstallStatus;
     }
 
     /**
-     * Set <p>Plug-in installation status (upper layer aggregation)<br>Enumeration value:<br>NONE: Not installed<br>INSTALLING: Installing<br>INSTALLED: Installed<br>INSTALL_FAIL: Installation failure</p>
-     * @param InstallStatus <p>Plug-in installation status (upper layer aggregation)<br>Enumeration value:<br>NONE: Not installed<br>INSTALLING: Installing<br>INSTALLED: Installed<br>INSTALL_FAIL: Installation failure</p>
+     * Set <p>Plug-in installation status (upper-layer aggregation)<br>Enumeration values:<br>NONE: not installed<br>INSTALLING: installing<br>INSTALLED: installed<br>INSTALL_FAIL: installation failure</p>
+     * @param InstallStatus <p>Plug-in installation status (upper-layer aggregation)<br>Enumeration values:<br>NONE: not installed<br>INSTALLING: installing<br>INSTALLED: installed<br>INSTALL_FAIL: installation failure</p>
      */
     public void setInstallStatus(String InstallStatus) {
         this.InstallStatus = InstallStatus;

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ServiceSupport extends AbstractModel {
 
     /**
-    * Product name.
+    * Product name:
 "cfw_waf_virtual", "cwp_detect", "cwp_defense", "cwp_fix"
     */
     @SerializedName("ServiceName")
@@ -32,30 +32,30 @@ public class ServiceSupport extends AbstractModel {
     private String ServiceName;
 
     /**
-    * Total number of processed assets.
+    * Total number of fixed assets
     */
     @SerializedName("SupportHandledCount")
     @Expose
     private Long SupportHandledCount;
 
     /**
-    * Total number of supported assets.
+    * Total number of supported assets
     */
     @SerializedName("SupportTotalCount")
     @Expose
     private Long SupportTotalCount;
 
     /**
-    * Whether the product is supported: 1 for supported; 0 for unsupported.
+    * Whether the product is supported. 1: supported; 0: not supported
     */
     @SerializedName("IsSupport")
     @Expose
     private Boolean IsSupport;
 
     /**
-     * Get Product name.
+     * Get Product name:
 "cfw_waf_virtual", "cwp_detect", "cwp_defense", "cwp_fix" 
-     * @return ServiceName Product name.
+     * @return ServiceName Product name:
 "cfw_waf_virtual", "cwp_detect", "cwp_defense", "cwp_fix"
      */
     public String getServiceName() {
@@ -63,9 +63,9 @@ public class ServiceSupport extends AbstractModel {
     }
 
     /**
-     * Set Product name.
+     * Set Product name:
 "cfw_waf_virtual", "cwp_detect", "cwp_defense", "cwp_fix"
-     * @param ServiceName Product name.
+     * @param ServiceName Product name:
 "cfw_waf_virtual", "cwp_detect", "cwp_defense", "cwp_fix"
      */
     public void setServiceName(String ServiceName) {
@@ -73,48 +73,48 @@ public class ServiceSupport extends AbstractModel {
     }
 
     /**
-     * Get Total number of processed assets. 
-     * @return SupportHandledCount Total number of processed assets.
+     * Get Total number of fixed assets 
+     * @return SupportHandledCount Total number of fixed assets
      */
     public Long getSupportHandledCount() {
         return this.SupportHandledCount;
     }
 
     /**
-     * Set Total number of processed assets.
-     * @param SupportHandledCount Total number of processed assets.
+     * Set Total number of fixed assets
+     * @param SupportHandledCount Total number of fixed assets
      */
     public void setSupportHandledCount(Long SupportHandledCount) {
         this.SupportHandledCount = SupportHandledCount;
     }
 
     /**
-     * Get Total number of supported assets. 
-     * @return SupportTotalCount Total number of supported assets.
+     * Get Total number of supported assets 
+     * @return SupportTotalCount Total number of supported assets
      */
     public Long getSupportTotalCount() {
         return this.SupportTotalCount;
     }
 
     /**
-     * Set Total number of supported assets.
-     * @param SupportTotalCount Total number of supported assets.
+     * Set Total number of supported assets
+     * @param SupportTotalCount Total number of supported assets
      */
     public void setSupportTotalCount(Long SupportTotalCount) {
         this.SupportTotalCount = SupportTotalCount;
     }
 
     /**
-     * Get Whether the product is supported: 1 for supported; 0 for unsupported. 
-     * @return IsSupport Whether the product is supported: 1 for supported; 0 for unsupported.
+     * Get Whether the product is supported. 1: supported; 0: not supported 
+     * @return IsSupport Whether the product is supported. 1: supported; 0: not supported
      */
     public Boolean getIsSupport() {
         return this.IsSupport;
     }
 
     /**
-     * Set Whether the product is supported: 1 for supported; 0 for unsupported.
-     * @param IsSupport Whether the product is supported: 1 for supported; 0 for unsupported.
+     * Set Whether the product is supported. 1: supported; 0: not supported
+     * @param IsSupport Whether the product is supported. 1: supported; 0: not supported
      */
     public void setIsSupport(Boolean IsSupport) {
         this.IsSupport = IsSupport;

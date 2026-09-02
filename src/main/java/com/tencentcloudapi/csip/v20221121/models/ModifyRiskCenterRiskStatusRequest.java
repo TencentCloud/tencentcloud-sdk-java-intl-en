@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class ModifyRiskCenterRiskStatusRequest extends AbstractModel {
 
     /**
-    * Data of risk assets
+    * Risky Asset Related Data
     */
     @SerializedName("RiskStatusKeys")
     @Expose
     private RiskCenterStatusKey [] RiskStatusKeys;
 
     /**
-    * Specify how you want to change the risk status. `1`: Change to Handled, `2`: Change to Ignored; `3`: Remove from Handled; `4`: Remove from Ignored
+    * Disposition status. 1: Handled; 2: Ignored; 3: Cancel disposed; 4: Cancel ignored.
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * Risk type. `0`: Port risk; `1`: Vulnerability; `2`: Weak password; `3`: Website content risk; `4`: Configuration risk; `5`: Risk services
+    * Risk Type. 0: Port Risk; 1: Vulnerability Risk; 2: Weak Password Risk; 3: Web Sites Content Risk; 4: Configuration Risk; 5: Exposed Risk Service
     */
     @SerializedName("Type")
     @Expose
@@ -52,48 +52,48 @@ public class ModifyRiskCenterRiskStatusRequest extends AbstractModel {
     private String [] MemberId;
 
     /**
-     * Get Data of risk assets 
-     * @return RiskStatusKeys Data of risk assets
+     * Get Risky Asset Related Data 
+     * @return RiskStatusKeys Risky Asset Related Data
      */
     public RiskCenterStatusKey [] getRiskStatusKeys() {
         return this.RiskStatusKeys;
     }
 
     /**
-     * Set Data of risk assets
-     * @param RiskStatusKeys Data of risk assets
+     * Set Risky Asset Related Data
+     * @param RiskStatusKeys Risky Asset Related Data
      */
     public void setRiskStatusKeys(RiskCenterStatusKey [] RiskStatusKeys) {
         this.RiskStatusKeys = RiskStatusKeys;
     }
 
     /**
-     * Get Specify how you want to change the risk status. `1`: Change to Handled, `2`: Change to Ignored; `3`: Remove from Handled; `4`: Remove from Ignored 
-     * @return Status Specify how you want to change the risk status. `1`: Change to Handled, `2`: Change to Ignored; `3`: Remove from Handled; `4`: Remove from Ignored
+     * Get Disposition status. 1: Handled; 2: Ignored; 3: Cancel disposed; 4: Cancel ignored. 
+     * @return Status Disposition status. 1: Handled; 2: Ignored; 3: Cancel disposed; 4: Cancel ignored.
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Specify how you want to change the risk status. `1`: Change to Handled, `2`: Change to Ignored; `3`: Remove from Handled; `4`: Remove from Ignored
-     * @param Status Specify how you want to change the risk status. `1`: Change to Handled, `2`: Change to Ignored; `3`: Remove from Handled; `4`: Remove from Ignored
+     * Set Disposition status. 1: Handled; 2: Ignored; 3: Cancel disposed; 4: Cancel ignored.
+     * @param Status Disposition status. 1: Handled; 2: Ignored; 3: Cancel disposed; 4: Cancel ignored.
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get Risk type. `0`: Port risk; `1`: Vulnerability; `2`: Weak password; `3`: Website content risk; `4`: Configuration risk; `5`: Risk services 
-     * @return Type Risk type. `0`: Port risk; `1`: Vulnerability; `2`: Weak password; `3`: Website content risk; `4`: Configuration risk; `5`: Risk services
+     * Get Risk Type. 0: Port Risk; 1: Vulnerability Risk; 2: Weak Password Risk; 3: Web Sites Content Risk; 4: Configuration Risk; 5: Exposed Risk Service 
+     * @return Type Risk Type. 0: Port Risk; 1: Vulnerability Risk; 2: Weak Password Risk; 3: Web Sites Content Risk; 4: Configuration Risk; 5: Exposed Risk Service
      */
     public Long getType() {
         return this.Type;
     }
 
     /**
-     * Set Risk type. `0`: Port risk; `1`: Vulnerability; `2`: Weak password; `3`: Website content risk; `4`: Configuration risk; `5`: Risk services
-     * @param Type Risk type. `0`: Port risk; `1`: Vulnerability; `2`: Weak password; `3`: Website content risk; `4`: Configuration risk; `5`: Risk services
+     * Set Risk Type. 0: Port Risk; 1: Vulnerability Risk; 2: Weak Password Risk; 3: Web Sites Content Risk; 4: Configuration Risk; 5: Exposed Risk Service
+     * @param Type Risk Type. 0: Port Risk; 1: Vulnerability Risk; 2: Weak Password Risk; 3: Web Sites Content Risk; 4: Configuration Risk; 5: Exposed Risk Service
      */
     public void setType(Long Type) {
         this.Type = Type;

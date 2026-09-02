@@ -24,86 +24,86 @@ import java.util.HashMap;
 public class AccessKeyAlarmInfo extends AbstractModel {
 
     /**
-    * Alarm type/risktype.
-Alarm type:.
-Abnormal calls.
-Leakage detection.
-2 custom.
+    * Alarm type/Risk type
+Alarm type:
+0Abnormal calls
+1. Leakage detection
+Custom parameter 2.
 
-Risk type:.
-Configuration risk.
-Custom risk.
+Risk type:
+0: Configuration risk
+1: Custom risk
     */
     @SerializedName("Type")
     @Expose
     private Long Type;
 
     /**
-    * Alarm count/number of risks.
+    * Alarm count / risk quantity
     */
     @SerializedName("Count")
     @Expose
     private Long Count;
 
     /**
-     * Get Alarm type/risktype.
-Alarm type:.
-Abnormal calls.
-Leakage detection.
-2 custom.
+     * Get Alarm type/Risk type
+Alarm type:
+0Abnormal calls
+1. Leakage detection
+Custom parameter 2.
 
-Risk type:.
-Configuration risk.
-Custom risk. 
-     * @return Type Alarm type/risktype.
-Alarm type:.
-Abnormal calls.
-Leakage detection.
-2 custom.
+Risk type:
+0: Configuration risk
+1: Custom risk 
+     * @return Type Alarm type/Risk type
+Alarm type:
+0Abnormal calls
+1. Leakage detection
+Custom parameter 2.
 
-Risk type:.
-Configuration risk.
-Custom risk.
+Risk type:
+0: Configuration risk
+1: Custom risk
      */
     public Long getType() {
         return this.Type;
     }
 
     /**
-     * Set Alarm type/risktype.
-Alarm type:.
-Abnormal calls.
-Leakage detection.
-2 custom.
+     * Set Alarm type/Risk type
+Alarm type:
+0Abnormal calls
+1. Leakage detection
+Custom parameter 2.
 
-Risk type:.
-Configuration risk.
-Custom risk.
-     * @param Type Alarm type/risktype.
-Alarm type:.
-Abnormal calls.
-Leakage detection.
-2 custom.
+Risk type:
+0: Configuration risk
+1: Custom risk
+     * @param Type Alarm type/Risk type
+Alarm type:
+0Abnormal calls
+1. Leakage detection
+Custom parameter 2.
 
-Risk type:.
-Configuration risk.
-Custom risk.
+Risk type:
+0: Configuration risk
+1: Custom risk
      */
     public void setType(Long Type) {
         this.Type = Type;
     }
 
     /**
-     * Get Alarm count/number of risks. 
-     * @return Count Alarm count/number of risks.
+     * Get Alarm count / risk quantity 
+     * @return Count Alarm count / risk quantity
      */
     public Long getCount() {
         return this.Count;
     }
 
     /**
-     * Set Alarm count/number of risks.
-     * @param Count Alarm count/number of risks.
+     * Set Alarm count / risk quantity
+     * @param Count Alarm count / risk quantity
      */
     public void setCount(Long Count) {
         this.Count = Count;

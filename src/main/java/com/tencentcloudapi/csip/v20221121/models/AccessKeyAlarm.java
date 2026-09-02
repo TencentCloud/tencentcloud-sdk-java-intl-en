@@ -31,7 +31,7 @@ public class AccessKeyAlarm extends AbstractModel {
     private String Name;
 
     /**
-    * <p>Alarm level<br>0-Unavailable 1-Notification 2-Low risk 3-Medium risk 4-High risk 5-Critical</p>
+    * <p>Alarm level<br>0 - Invalid, 1 - Notification, 2 - Low risk, 3 - Medium risk, 4 - High risk, 5 - Critical</p>
     */
     @SerializedName("Level")
     @Expose
@@ -52,7 +52,7 @@ public class AccessKeyAlarm extends AbstractModel {
     private Long AlarmRuleID;
 
     /**
-    * <p>Alarm type<br>0 Abnormal call<br>1 Leak monitoring</p>
+    * <p>Alarm type<br>0 Abnormal calls<br>1 Leak monitoring</p>
     */
     @SerializedName("AlarmType")
     @Expose
@@ -87,14 +87,14 @@ public class AccessKeyAlarm extends AbstractModel {
     private String LastAlarmTime;
 
     /**
-    * <p>Alarm status<br>0-unprocessed 1-processed 2-ignored</p>
+    * <p>Alarm status<br>0 - Unprocessed, 1 - Processed, 2 - Ignored</p>
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * <p>Aggregate date</p>
+    * <p>Aggregation date</p>
     */
     @SerializedName("Date")
     @Expose
@@ -129,14 +129,14 @@ public class AccessKeyAlarm extends AbstractModel {
     private String SubUin;
 
     /**
-    * <p>Sub-account nickname</p>
+    * <p>Belonging sub-account nickname</p>
     */
     @SerializedName("SubNickname")
     @Expose
     private String SubNickname;
 
     /**
-    * <p>Account type<br>0 Root account AK 1 Sub-account AK 2 Temporary key</p>
+    * <p>Account type<br>0: root account AK; 1: sub-account AK; 2: temporary key</p>
     */
     @SerializedName("Type")
     @Expose
@@ -157,7 +157,7 @@ public class AccessKeyAlarm extends AbstractModel {
     private String [] LeakEvidence;
 
     /**
-    * <p>Whether support editing trust account</p>
+    * <p>Whether editing trusted accounts is supported</p>
     */
     @SerializedName("IsSupportEditWhiteAccount")
     @Expose
@@ -171,28 +171,28 @@ public class AccessKeyAlarm extends AbstractModel {
     private String Evidence;
 
     /**
-    * <p>Alarm rule flag</p>
+    * <p>Alarm rule identifier</p>
     */
     @SerializedName("RuleKey")
     @Expose
     private String RuleKey;
 
     /**
-    * <p>Cloud vendor type 0:Tencent Cloud 1:Amazon Web Services 2:Microsoft Azure 3:Google Cloud 4:Alibaba Cloud 5:Huawei Cloud</p>
+    * <p>Cloud vendor type. 0: Tencent Cloud. 1: Amazon Web Services. 2: Microsoft Azure. 3: Google Cloud. 4: Alibaba Cloud. 5: Huawei Cloud</p>
     */
     @SerializedName("CloudType")
     @Expose
     private Long CloudType;
 
     /**
-    * <p>Alarm AI analysis status<br>-1 Analysis failed<br>0 Not analyzed<br>1 Under analysis<br>2 Analysis successful, real alarm<br>3 Analysis successful, suspicious alarm</p>
+    * <p>Alarm AI analysis status<br>-1: Analysis failed<br>0: Not analyzed<br>1: Under analysis<br>2: Analysis successful, real alarm<br>3: Analysis successful, suspicious alarm</p>
     */
     @SerializedName("AIStatus")
     @Expose
     private Long AIStatus;
 
     /**
-    * <p>First alarm timestamp (in seconds)</p>
+    * <p>Initial alarm timestamp (in seconds)</p>
     */
     @SerializedName("FirstAlarmTimestamp")
     @Expose
@@ -206,7 +206,7 @@ public class AccessKeyAlarm extends AbstractModel {
     private Long LastAlarmTimestamp;
 
     /**
-    * <p>AI analysis failure description. Empty string if not failed.</p>
+    * <p>AI analysis failure description, an empty string if no failure</p>
     */
     @SerializedName("AIFailedReason")
     @Expose
@@ -229,16 +229,16 @@ public class AccessKeyAlarm extends AbstractModel {
     }
 
     /**
-     * Get <p>Alarm level<br>0-Unavailable 1-Notification 2-Low risk 3-Medium risk 4-High risk 5-Critical</p> 
-     * @return Level <p>Alarm level<br>0-Unavailable 1-Notification 2-Low risk 3-Medium risk 4-High risk 5-Critical</p>
+     * Get <p>Alarm level<br>0 - Invalid, 1 - Notification, 2 - Low risk, 3 - Medium risk, 4 - High risk, 5 - Critical</p> 
+     * @return Level <p>Alarm level<br>0 - Invalid, 1 - Notification, 2 - Low risk, 3 - Medium risk, 4 - High risk, 5 - Critical</p>
      */
     public Long getLevel() {
         return this.Level;
     }
 
     /**
-     * Set <p>Alarm level<br>0-Unavailable 1-Notification 2-Low risk 3-Medium risk 4-High risk 5-Critical</p>
-     * @param Level <p>Alarm level<br>0-Unavailable 1-Notification 2-Low risk 3-Medium risk 4-High risk 5-Critical</p>
+     * Set <p>Alarm level<br>0 - Invalid, 1 - Notification, 2 - Low risk, 3 - Medium risk, 4 - High risk, 5 - Critical</p>
+     * @param Level <p>Alarm level<br>0 - Invalid, 1 - Notification, 2 - Low risk, 3 - Medium risk, 4 - High risk, 5 - Critical</p>
      */
     public void setLevel(Long Level) {
         this.Level = Level;
@@ -277,16 +277,16 @@ public class AccessKeyAlarm extends AbstractModel {
     }
 
     /**
-     * Get <p>Alarm type<br>0 Abnormal call<br>1 Leak monitoring</p> 
-     * @return AlarmType <p>Alarm type<br>0 Abnormal call<br>1 Leak monitoring</p>
+     * Get <p>Alarm type<br>0 Abnormal calls<br>1 Leak monitoring</p> 
+     * @return AlarmType <p>Alarm type<br>0 Abnormal calls<br>1 Leak monitoring</p>
      */
     public Long getAlarmType() {
         return this.AlarmType;
     }
 
     /**
-     * Set <p>Alarm type<br>0 Abnormal call<br>1 Leak monitoring</p>
-     * @param AlarmType <p>Alarm type<br>0 Abnormal call<br>1 Leak monitoring</p>
+     * Set <p>Alarm type<br>0 Abnormal calls<br>1 Leak monitoring</p>
+     * @param AlarmType <p>Alarm type<br>0 Abnormal calls<br>1 Leak monitoring</p>
      */
     public void setAlarmType(Long AlarmType) {
         this.AlarmType = AlarmType;
@@ -357,32 +357,32 @@ public class AccessKeyAlarm extends AbstractModel {
     }
 
     /**
-     * Get <p>Alarm status<br>0-unprocessed 1-processed 2-ignored</p> 
-     * @return Status <p>Alarm status<br>0-unprocessed 1-processed 2-ignored</p>
+     * Get <p>Alarm status<br>0 - Unprocessed, 1 - Processed, 2 - Ignored</p> 
+     * @return Status <p>Alarm status<br>0 - Unprocessed, 1 - Processed, 2 - Ignored</p>
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set <p>Alarm status<br>0-unprocessed 1-processed 2-ignored</p>
-     * @param Status <p>Alarm status<br>0-unprocessed 1-processed 2-ignored</p>
+     * Set <p>Alarm status<br>0 - Unprocessed, 1 - Processed, 2 - Ignored</p>
+     * @param Status <p>Alarm status<br>0 - Unprocessed, 1 - Processed, 2 - Ignored</p>
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get <p>Aggregate date</p> 
-     * @return Date <p>Aggregate date</p>
+     * Get <p>Aggregation date</p> 
+     * @return Date <p>Aggregation date</p>
      */
     public String getDate() {
         return this.Date;
     }
 
     /**
-     * Set <p>Aggregate date</p>
-     * @param Date <p>Aggregate date</p>
+     * Set <p>Aggregation date</p>
+     * @param Date <p>Aggregation date</p>
      */
     public void setDate(String Date) {
         this.Date = Date;
@@ -453,32 +453,32 @@ public class AccessKeyAlarm extends AbstractModel {
     }
 
     /**
-     * Get <p>Sub-account nickname</p> 
-     * @return SubNickname <p>Sub-account nickname</p>
+     * Get <p>Belonging sub-account nickname</p> 
+     * @return SubNickname <p>Belonging sub-account nickname</p>
      */
     public String getSubNickname() {
         return this.SubNickname;
     }
 
     /**
-     * Set <p>Sub-account nickname</p>
-     * @param SubNickname <p>Sub-account nickname</p>
+     * Set <p>Belonging sub-account nickname</p>
+     * @param SubNickname <p>Belonging sub-account nickname</p>
      */
     public void setSubNickname(String SubNickname) {
         this.SubNickname = SubNickname;
     }
 
     /**
-     * Get <p>Account type<br>0 Root account AK 1 Sub-account AK 2 Temporary key</p> 
-     * @return Type <p>Account type<br>0 Root account AK 1 Sub-account AK 2 Temporary key</p>
+     * Get <p>Account type<br>0: root account AK; 1: sub-account AK; 2: temporary key</p> 
+     * @return Type <p>Account type<br>0: root account AK; 1: sub-account AK; 2: temporary key</p>
      */
     public Long getType() {
         return this.Type;
     }
 
     /**
-     * Set <p>Account type<br>0 Root account AK 1 Sub-account AK 2 Temporary key</p>
-     * @param Type <p>Account type<br>0 Root account AK 1 Sub-account AK 2 Temporary key</p>
+     * Set <p>Account type<br>0: root account AK; 1: sub-account AK; 2: temporary key</p>
+     * @param Type <p>Account type<br>0: root account AK; 1: sub-account AK; 2: temporary key</p>
      */
     public void setType(Long Type) {
         this.Type = Type;
@@ -517,16 +517,16 @@ public class AccessKeyAlarm extends AbstractModel {
     }
 
     /**
-     * Get <p>Whether support editing trust account</p> 
-     * @return IsSupportEditWhiteAccount <p>Whether support editing trust account</p>
+     * Get <p>Whether editing trusted accounts is supported</p> 
+     * @return IsSupportEditWhiteAccount <p>Whether editing trusted accounts is supported</p>
      */
     public Boolean getIsSupportEditWhiteAccount() {
         return this.IsSupportEditWhiteAccount;
     }
 
     /**
-     * Set <p>Whether support editing trust account</p>
-     * @param IsSupportEditWhiteAccount <p>Whether support editing trust account</p>
+     * Set <p>Whether editing trusted accounts is supported</p>
+     * @param IsSupportEditWhiteAccount <p>Whether editing trusted accounts is supported</p>
      */
     public void setIsSupportEditWhiteAccount(Boolean IsSupportEditWhiteAccount) {
         this.IsSupportEditWhiteAccount = IsSupportEditWhiteAccount;
@@ -549,64 +549,64 @@ public class AccessKeyAlarm extends AbstractModel {
     }
 
     /**
-     * Get <p>Alarm rule flag</p> 
-     * @return RuleKey <p>Alarm rule flag</p>
+     * Get <p>Alarm rule identifier</p> 
+     * @return RuleKey <p>Alarm rule identifier</p>
      */
     public String getRuleKey() {
         return this.RuleKey;
     }
 
     /**
-     * Set <p>Alarm rule flag</p>
-     * @param RuleKey <p>Alarm rule flag</p>
+     * Set <p>Alarm rule identifier</p>
+     * @param RuleKey <p>Alarm rule identifier</p>
      */
     public void setRuleKey(String RuleKey) {
         this.RuleKey = RuleKey;
     }
 
     /**
-     * Get <p>Cloud vendor type 0:Tencent Cloud 1:Amazon Web Services 2:Microsoft Azure 3:Google Cloud 4:Alibaba Cloud 5:Huawei Cloud</p> 
-     * @return CloudType <p>Cloud vendor type 0:Tencent Cloud 1:Amazon Web Services 2:Microsoft Azure 3:Google Cloud 4:Alibaba Cloud 5:Huawei Cloud</p>
+     * Get <p>Cloud vendor type. 0: Tencent Cloud. 1: Amazon Web Services. 2: Microsoft Azure. 3: Google Cloud. 4: Alibaba Cloud. 5: Huawei Cloud</p> 
+     * @return CloudType <p>Cloud vendor type. 0: Tencent Cloud. 1: Amazon Web Services. 2: Microsoft Azure. 3: Google Cloud. 4: Alibaba Cloud. 5: Huawei Cloud</p>
      */
     public Long getCloudType() {
         return this.CloudType;
     }
 
     /**
-     * Set <p>Cloud vendor type 0:Tencent Cloud 1:Amazon Web Services 2:Microsoft Azure 3:Google Cloud 4:Alibaba Cloud 5:Huawei Cloud</p>
-     * @param CloudType <p>Cloud vendor type 0:Tencent Cloud 1:Amazon Web Services 2:Microsoft Azure 3:Google Cloud 4:Alibaba Cloud 5:Huawei Cloud</p>
+     * Set <p>Cloud vendor type. 0: Tencent Cloud. 1: Amazon Web Services. 2: Microsoft Azure. 3: Google Cloud. 4: Alibaba Cloud. 5: Huawei Cloud</p>
+     * @param CloudType <p>Cloud vendor type. 0: Tencent Cloud. 1: Amazon Web Services. 2: Microsoft Azure. 3: Google Cloud. 4: Alibaba Cloud. 5: Huawei Cloud</p>
      */
     public void setCloudType(Long CloudType) {
         this.CloudType = CloudType;
     }
 
     /**
-     * Get <p>Alarm AI analysis status<br>-1 Analysis failed<br>0 Not analyzed<br>1 Under analysis<br>2 Analysis successful, real alarm<br>3 Analysis successful, suspicious alarm</p> 
-     * @return AIStatus <p>Alarm AI analysis status<br>-1 Analysis failed<br>0 Not analyzed<br>1 Under analysis<br>2 Analysis successful, real alarm<br>3 Analysis successful, suspicious alarm</p>
+     * Get <p>Alarm AI analysis status<br>-1: Analysis failed<br>0: Not analyzed<br>1: Under analysis<br>2: Analysis successful, real alarm<br>3: Analysis successful, suspicious alarm</p> 
+     * @return AIStatus <p>Alarm AI analysis status<br>-1: Analysis failed<br>0: Not analyzed<br>1: Under analysis<br>2: Analysis successful, real alarm<br>3: Analysis successful, suspicious alarm</p>
      */
     public Long getAIStatus() {
         return this.AIStatus;
     }
 
     /**
-     * Set <p>Alarm AI analysis status<br>-1 Analysis failed<br>0 Not analyzed<br>1 Under analysis<br>2 Analysis successful, real alarm<br>3 Analysis successful, suspicious alarm</p>
-     * @param AIStatus <p>Alarm AI analysis status<br>-1 Analysis failed<br>0 Not analyzed<br>1 Under analysis<br>2 Analysis successful, real alarm<br>3 Analysis successful, suspicious alarm</p>
+     * Set <p>Alarm AI analysis status<br>-1: Analysis failed<br>0: Not analyzed<br>1: Under analysis<br>2: Analysis successful, real alarm<br>3: Analysis successful, suspicious alarm</p>
+     * @param AIStatus <p>Alarm AI analysis status<br>-1: Analysis failed<br>0: Not analyzed<br>1: Under analysis<br>2: Analysis successful, real alarm<br>3: Analysis successful, suspicious alarm</p>
      */
     public void setAIStatus(Long AIStatus) {
         this.AIStatus = AIStatus;
     }
 
     /**
-     * Get <p>First alarm timestamp (in seconds)</p> 
-     * @return FirstAlarmTimestamp <p>First alarm timestamp (in seconds)</p>
+     * Get <p>Initial alarm timestamp (in seconds)</p> 
+     * @return FirstAlarmTimestamp <p>Initial alarm timestamp (in seconds)</p>
      */
     public Long getFirstAlarmTimestamp() {
         return this.FirstAlarmTimestamp;
     }
 
     /**
-     * Set <p>First alarm timestamp (in seconds)</p>
-     * @param FirstAlarmTimestamp <p>First alarm timestamp (in seconds)</p>
+     * Set <p>Initial alarm timestamp (in seconds)</p>
+     * @param FirstAlarmTimestamp <p>Initial alarm timestamp (in seconds)</p>
      */
     public void setFirstAlarmTimestamp(Long FirstAlarmTimestamp) {
         this.FirstAlarmTimestamp = FirstAlarmTimestamp;
@@ -629,16 +629,16 @@ public class AccessKeyAlarm extends AbstractModel {
     }
 
     /**
-     * Get <p>AI analysis failure description. Empty string if not failed.</p> 
-     * @return AIFailedReason <p>AI analysis failure description. Empty string if not failed.</p>
+     * Get <p>AI analysis failure description, an empty string if no failure</p> 
+     * @return AIFailedReason <p>AI analysis failure description, an empty string if no failure</p>
      */
     public String getAIFailedReason() {
         return this.AIFailedReason;
     }
 
     /**
-     * Set <p>AI analysis failure description. Empty string if not failed.</p>
-     * @param AIFailedReason <p>AI analysis failure description. Empty string if not failed.</p>
+     * Set <p>AI analysis failure description, an empty string if no failure</p>
+     * @param AIFailedReason <p>AI analysis failure description, an empty string if no failure</p>
      */
     public void setAIFailedReason(String AIFailedReason) {
         this.AIFailedReason = AIFailedReason;

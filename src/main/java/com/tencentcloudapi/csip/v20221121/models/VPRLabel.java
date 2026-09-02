@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class VPRLabel extends AbstractModel {
 
     /**
-    * <p>Tag name<br>Enumeration VALUE:<br>INTRUSION: Exploitation IN THE WILD<br>EXP: Has EXP<br>POC: Has POC<br>INTERNET_EXPOSED: Public network exposure<br>NO_RESTART: NO RESTART required<br>HIGH_VALUE_ASSET: Important ASSET<br>MALWARE_WEAPONIZED: Weaponization</p>
+    * <p>Tag name<br>Enumeration values:<br>IN_THE_WILD: exploitation in the wild<br>EXP: has EXP<br>POC: has POC<br>INTERNET_EXPOSED: public network exposure<br>NO_RESTART: no restart required<br>HIGH_VALUE_ASSET: important asset<br>MALWARE_WEAPONIZED: weaponized</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * <p>Tag severity<br>Enumeration value:<br>HIGH: High<br>MEDIUM: Medium<br>LOW: Low</p>
+    * <p>Tag level<br>Enumeration values:<br>HIGH: High<br>MEDIUM: Medium<br>LOW: Low</p>
     */
     @SerializedName("Level")
     @Expose
@@ -45,32 +45,32 @@ public class VPRLabel extends AbstractModel {
     private String Remark;
 
     /**
-     * Get <p>Tag name<br>Enumeration VALUE:<br>INTRUSION: Exploitation IN THE WILD<br>EXP: Has EXP<br>POC: Has POC<br>INTERNET_EXPOSED: Public network exposure<br>NO_RESTART: NO RESTART required<br>HIGH_VALUE_ASSET: Important ASSET<br>MALWARE_WEAPONIZED: Weaponization</p> 
-     * @return Name <p>Tag name<br>Enumeration VALUE:<br>INTRUSION: Exploitation IN THE WILD<br>EXP: Has EXP<br>POC: Has POC<br>INTERNET_EXPOSED: Public network exposure<br>NO_RESTART: NO RESTART required<br>HIGH_VALUE_ASSET: Important ASSET<br>MALWARE_WEAPONIZED: Weaponization</p>
+     * Get <p>Tag name<br>Enumeration values:<br>IN_THE_WILD: exploitation in the wild<br>EXP: has EXP<br>POC: has POC<br>INTERNET_EXPOSED: public network exposure<br>NO_RESTART: no restart required<br>HIGH_VALUE_ASSET: important asset<br>MALWARE_WEAPONIZED: weaponized</p> 
+     * @return Name <p>Tag name<br>Enumeration values:<br>IN_THE_WILD: exploitation in the wild<br>EXP: has EXP<br>POC: has POC<br>INTERNET_EXPOSED: public network exposure<br>NO_RESTART: no restart required<br>HIGH_VALUE_ASSET: important asset<br>MALWARE_WEAPONIZED: weaponized</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set <p>Tag name<br>Enumeration VALUE:<br>INTRUSION: Exploitation IN THE WILD<br>EXP: Has EXP<br>POC: Has POC<br>INTERNET_EXPOSED: Public network exposure<br>NO_RESTART: NO RESTART required<br>HIGH_VALUE_ASSET: Important ASSET<br>MALWARE_WEAPONIZED: Weaponization</p>
-     * @param Name <p>Tag name<br>Enumeration VALUE:<br>INTRUSION: Exploitation IN THE WILD<br>EXP: Has EXP<br>POC: Has POC<br>INTERNET_EXPOSED: Public network exposure<br>NO_RESTART: NO RESTART required<br>HIGH_VALUE_ASSET: Important ASSET<br>MALWARE_WEAPONIZED: Weaponization</p>
+     * Set <p>Tag name<br>Enumeration values:<br>IN_THE_WILD: exploitation in the wild<br>EXP: has EXP<br>POC: has POC<br>INTERNET_EXPOSED: public network exposure<br>NO_RESTART: no restart required<br>HIGH_VALUE_ASSET: important asset<br>MALWARE_WEAPONIZED: weaponized</p>
+     * @param Name <p>Tag name<br>Enumeration values:<br>IN_THE_WILD: exploitation in the wild<br>EXP: has EXP<br>POC: has POC<br>INTERNET_EXPOSED: public network exposure<br>NO_RESTART: no restart required<br>HIGH_VALUE_ASSET: important asset<br>MALWARE_WEAPONIZED: weaponized</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get <p>Tag severity<br>Enumeration value:<br>HIGH: High<br>MEDIUM: Medium<br>LOW: Low</p> 
-     * @return Level <p>Tag severity<br>Enumeration value:<br>HIGH: High<br>MEDIUM: Medium<br>LOW: Low</p>
+     * Get <p>Tag level<br>Enumeration values:<br>HIGH: High<br>MEDIUM: Medium<br>LOW: Low</p> 
+     * @return Level <p>Tag level<br>Enumeration values:<br>HIGH: High<br>MEDIUM: Medium<br>LOW: Low</p>
      */
     public String getLevel() {
         return this.Level;
     }
 
     /**
-     * Set <p>Tag severity<br>Enumeration value:<br>HIGH: High<br>MEDIUM: Medium<br>LOW: Low</p>
-     * @param Level <p>Tag severity<br>Enumeration value:<br>HIGH: High<br>MEDIUM: Medium<br>LOW: Low</p>
+     * Set <p>Tag level<br>Enumeration values:<br>HIGH: High<br>MEDIUM: Medium<br>LOW: Low</p>
+     * @param Level <p>Tag level<br>Enumeration values:<br>HIGH: High<br>MEDIUM: Medium<br>LOW: Low</p>
      */
     public void setLevel(String Level) {
         this.Level = Level;

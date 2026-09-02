@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class AssetInstanceTypeMap extends AbstractModel {
 
     /**
-    * Asset type.
+    * Asset type
     */
     @SerializedName("Text")
     @Expose
     private String Text;
 
     /**
-    * Asset type.
+    * Asset type
     */
     @SerializedName("Value")
     @Expose
     private String Value;
 
     /**
-    * Mapping of asset type and instance type.
+    * Asset type and instance type mapping relationship
     */
     @SerializedName("InstanceTypeList")
     @Expose
     private FilterDataObject [] InstanceTypeList;
 
     /**
-     * Get Asset type. 
-     * @return Text Asset type.
+     * Get Asset type 
+     * @return Text Asset type
      */
     public String getText() {
         return this.Text;
     }
 
     /**
-     * Set Asset type.
-     * @param Text Asset type.
+     * Set Asset type
+     * @param Text Asset type
      */
     public void setText(String Text) {
         this.Text = Text;
     }
 
     /**
-     * Get Asset type. 
-     * @return Value Asset type.
+     * Get Asset type 
+     * @return Value Asset type
      */
     public String getValue() {
         return this.Value;
     }
 
     /**
-     * Set Asset type.
-     * @param Value Asset type.
+     * Set Asset type
+     * @param Value Asset type
      */
     public void setValue(String Value) {
         this.Value = Value;
     }
 
     /**
-     * Get Mapping of asset type and instance type. 
-     * @return InstanceTypeList Mapping of asset type and instance type.
+     * Get Asset type and instance type mapping relationship 
+     * @return InstanceTypeList Asset type and instance type mapping relationship
      */
     public FilterDataObject [] getInstanceTypeList() {
         return this.InstanceTypeList;
     }
 
     /**
-     * Set Mapping of asset type and instance type.
-     * @param InstanceTypeList Mapping of asset type and instance type.
+     * Set Asset type and instance type mapping relationship
+     * @param InstanceTypeList Asset type and instance type mapping relationship
      */
     public void setInstanceTypeList(FilterDataObject [] InstanceTypeList) {
         this.InstanceTypeList = InstanceTypeList;

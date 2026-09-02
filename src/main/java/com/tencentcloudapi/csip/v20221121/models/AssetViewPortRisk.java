@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class AssetViewPortRisk extends AbstractModel {
 
     /**
-    * Port
+    * Port.
     */
     @SerializedName("Port")
     @Expose
     private Long Port;
 
     /**
-    * Affected assets
+    * Affect assets
     */
     @SerializedName("AffectAsset")
     @Expose
     private String AffectAsset;
 
     /**
-    * Risk level, low - low risk, high - high risk, middle - medium risk, info - notification, extreme - critical.
+    * Risk level. low: low risk. high: high risk. middle: medium risk. info: notification. extreme: critical.
     */
     @SerializedName("Level")
     @Expose
@@ -52,49 +52,49 @@ public class AssetViewPortRisk extends AbstractModel {
     private String InstanceType;
 
     /**
-    * Network protocol
+    * Protocol
     */
     @SerializedName("Protocol")
     @Expose
     private String Protocol;
 
     /**
-    * Components
+    * Component
     */
     @SerializedName("Component")
     @Expose
     private String Component;
 
     /**
-    * Service
+    * Service.
     */
     @SerializedName("Service")
     @Expose
     private String Service;
 
     /**
-    * Last detected 
+    * Latest Recognition Time
     */
     @SerializedName("RecentTime")
     @Expose
     private String RecentTime;
 
     /**
-    * First detected
+    * First Recognition Time
     */
     @SerializedName("FirstTime")
     @Expose
     private String FirstTime;
 
     /**
-    * Suggested action. `0`: Keep as it is; `1`: Block access requests; `2`: Block the port
+    * Disposal Suggestions. 0: Maintain Status Quo; 1: Restrict Access; 2: Block Port.
     */
     @SerializedName("Suggestion")
     @Expose
     private Long Suggestion;
 
     /**
-    * Status, 0 unprocessed, 1 processed, 2 ignored, 3 defended by cloud protection
+    * Status. 0-Unprocessed; 1-Disposed; 2-Ignored; 3-Defended by Cloud Firewall.
     */
     @SerializedName("Status")
     @Expose
@@ -108,28 +108,28 @@ public class AssetViewPortRisk extends AbstractModel {
     private String Id;
 
     /**
-    * Frontend index
+    * Front-end Index
     */
     @SerializedName("Index")
     @Expose
     private String Index;
 
     /**
-    * Instance ID
+    * Instance ID.
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Instance name
+    * Instance name.
     */
     @SerializedName("InstanceName")
     @Expose
     private String InstanceName;
 
     /**
-    * User `appid`
+    * User appid.
     */
     @SerializedName("AppId")
     @Expose
@@ -157,62 +157,62 @@ public class AssetViewPortRisk extends AbstractModel {
     private String From;
 
     /**
-    * Service judgment, high-risk service, web service, other service
+    * Service judgment. high_risk_service: high-risk service. web_service: web service. other_service: other service.
     */
     @SerializedName("ServiceJudge")
     @Expose
     private String ServiceJudge;
 
     /**
-    * Status, 0 unprocessed, 1 processed, 2 ignored, 3 defended by cloud protection, 4 no action is required
+    * Status. 0: unprocessed; 1: processed; 2: ignored; 3: defended by Cloud Firewall; 4: no action is required.
     */
     @SerializedName("XspmStatus")
     @Expose
     private Long XspmStatus;
 
     /**
-     * Get Port 
-     * @return Port Port
+     * Get Port. 
+     * @return Port Port.
      */
     public Long getPort() {
         return this.Port;
     }
 
     /**
-     * Set Port
-     * @param Port Port
+     * Set Port.
+     * @param Port Port.
      */
     public void setPort(Long Port) {
         this.Port = Port;
     }
 
     /**
-     * Get Affected assets 
-     * @return AffectAsset Affected assets
+     * Get Affect assets 
+     * @return AffectAsset Affect assets
      */
     public String getAffectAsset() {
         return this.AffectAsset;
     }
 
     /**
-     * Set Affected assets
-     * @param AffectAsset Affected assets
+     * Set Affect assets
+     * @param AffectAsset Affect assets
      */
     public void setAffectAsset(String AffectAsset) {
         this.AffectAsset = AffectAsset;
     }
 
     /**
-     * Get Risk level, low - low risk, high - high risk, middle - medium risk, info - notification, extreme - critical. 
-     * @return Level Risk level, low - low risk, high - high risk, middle - medium risk, info - notification, extreme - critical.
+     * Get Risk level. low: low risk. high: high risk. middle: medium risk. info: notification. extreme: critical. 
+     * @return Level Risk level. low: low risk. high: high risk. middle: medium risk. info: notification. extreme: critical.
      */
     public String getLevel() {
         return this.Level;
     }
 
     /**
-     * Set Risk level, low - low risk, high - high risk, middle - medium risk, info - notification, extreme - critical.
-     * @param Level Risk level, low - low risk, high - high risk, middle - medium risk, info - notification, extreme - critical.
+     * Set Risk level. low: low risk. high: high risk. middle: medium risk. info: notification. extreme: critical.
+     * @param Level Risk level. low: low risk. high: high risk. middle: medium risk. info: notification. extreme: critical.
      */
     public void setLevel(String Level) {
         this.Level = Level;
@@ -235,112 +235,112 @@ public class AssetViewPortRisk extends AbstractModel {
     }
 
     /**
-     * Get Network protocol 
-     * @return Protocol Network protocol
+     * Get Protocol 
+     * @return Protocol Protocol
      */
     public String getProtocol() {
         return this.Protocol;
     }
 
     /**
-     * Set Network protocol
-     * @param Protocol Network protocol
+     * Set Protocol
+     * @param Protocol Protocol
      */
     public void setProtocol(String Protocol) {
         this.Protocol = Protocol;
     }
 
     /**
-     * Get Components 
-     * @return Component Components
+     * Get Component 
+     * @return Component Component
      */
     public String getComponent() {
         return this.Component;
     }
 
     /**
-     * Set Components
-     * @param Component Components
+     * Set Component
+     * @param Component Component
      */
     public void setComponent(String Component) {
         this.Component = Component;
     }
 
     /**
-     * Get Service 
-     * @return Service Service
+     * Get Service. 
+     * @return Service Service.
      */
     public String getService() {
         return this.Service;
     }
 
     /**
-     * Set Service
-     * @param Service Service
+     * Set Service.
+     * @param Service Service.
      */
     public void setService(String Service) {
         this.Service = Service;
     }
 
     /**
-     * Get Last detected  
-     * @return RecentTime Last detected 
+     * Get Latest Recognition Time 
+     * @return RecentTime Latest Recognition Time
      */
     public String getRecentTime() {
         return this.RecentTime;
     }
 
     /**
-     * Set Last detected 
-     * @param RecentTime Last detected 
+     * Set Latest Recognition Time
+     * @param RecentTime Latest Recognition Time
      */
     public void setRecentTime(String RecentTime) {
         this.RecentTime = RecentTime;
     }
 
     /**
-     * Get First detected 
-     * @return FirstTime First detected
+     * Get First Recognition Time 
+     * @return FirstTime First Recognition Time
      */
     public String getFirstTime() {
         return this.FirstTime;
     }
 
     /**
-     * Set First detected
-     * @param FirstTime First detected
+     * Set First Recognition Time
+     * @param FirstTime First Recognition Time
      */
     public void setFirstTime(String FirstTime) {
         this.FirstTime = FirstTime;
     }
 
     /**
-     * Get Suggested action. `0`: Keep as it is; `1`: Block access requests; `2`: Block the port 
-     * @return Suggestion Suggested action. `0`: Keep as it is; `1`: Block access requests; `2`: Block the port
+     * Get Disposal Suggestions. 0: Maintain Status Quo; 1: Restrict Access; 2: Block Port. 
+     * @return Suggestion Disposal Suggestions. 0: Maintain Status Quo; 1: Restrict Access; 2: Block Port.
      */
     public Long getSuggestion() {
         return this.Suggestion;
     }
 
     /**
-     * Set Suggested action. `0`: Keep as it is; `1`: Block access requests; `2`: Block the port
-     * @param Suggestion Suggested action. `0`: Keep as it is; `1`: Block access requests; `2`: Block the port
+     * Set Disposal Suggestions. 0: Maintain Status Quo; 1: Restrict Access; 2: Block Port.
+     * @param Suggestion Disposal Suggestions. 0: Maintain Status Quo; 1: Restrict Access; 2: Block Port.
      */
     public void setSuggestion(Long Suggestion) {
         this.Suggestion = Suggestion;
     }
 
     /**
-     * Get Status, 0 unprocessed, 1 processed, 2 ignored, 3 defended by cloud protection 
-     * @return Status Status, 0 unprocessed, 1 processed, 2 ignored, 3 defended by cloud protection
+     * Get Status. 0-Unprocessed; 1-Disposed; 2-Ignored; 3-Defended by Cloud Firewall. 
+     * @return Status Status. 0-Unprocessed; 1-Disposed; 2-Ignored; 3-Defended by Cloud Firewall.
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Status, 0 unprocessed, 1 processed, 2 ignored, 3 defended by cloud protection
-     * @param Status Status, 0 unprocessed, 1 processed, 2 ignored, 3 defended by cloud protection
+     * Set Status. 0-Unprocessed; 1-Disposed; 2-Ignored; 3-Defended by Cloud Firewall.
+     * @param Status Status. 0-Unprocessed; 1-Disposed; 2-Ignored; 3-Defended by Cloud Firewall.
      */
     public void setStatus(Long Status) {
         this.Status = Status;
@@ -363,64 +363,64 @@ public class AssetViewPortRisk extends AbstractModel {
     }
 
     /**
-     * Get Frontend index 
-     * @return Index Frontend index
+     * Get Front-end Index 
+     * @return Index Front-end Index
      */
     public String getIndex() {
         return this.Index;
     }
 
     /**
-     * Set Frontend index
-     * @param Index Frontend index
+     * Set Front-end Index
+     * @param Index Front-end Index
      */
     public void setIndex(String Index) {
         this.Index = Index;
     }
 
     /**
-     * Get Instance ID 
-     * @return InstanceId Instance ID
+     * Get Instance ID. 
+     * @return InstanceId Instance ID.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Instance ID
-     * @param InstanceId Instance ID
+     * Set Instance ID.
+     * @param InstanceId Instance ID.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Instance name 
-     * @return InstanceName Instance name
+     * Get Instance name. 
+     * @return InstanceName Instance name.
      */
     public String getInstanceName() {
         return this.InstanceName;
     }
 
     /**
-     * Set Instance name
-     * @param InstanceName Instance name
+     * Set Instance name.
+     * @param InstanceName Instance name.
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;
     }
 
     /**
-     * Get User `appid` 
-     * @return AppId User `appid`
+     * Get User appid. 
+     * @return AppId User appid.
      */
     public String getAppId() {
         return this.AppId;
     }
 
     /**
-     * Set User `appid`
-     * @param AppId User `appid`
+     * Set User appid.
+     * @param AppId User appid.
      */
     public void setAppId(String AppId) {
         this.AppId = AppId;
@@ -475,32 +475,32 @@ public class AssetViewPortRisk extends AbstractModel {
     }
 
     /**
-     * Get Service judgment, high-risk service, web service, other service 
-     * @return ServiceJudge Service judgment, high-risk service, web service, other service
+     * Get Service judgment. high_risk_service: high-risk service. web_service: web service. other_service: other service. 
+     * @return ServiceJudge Service judgment. high_risk_service: high-risk service. web_service: web service. other_service: other service.
      */
     public String getServiceJudge() {
         return this.ServiceJudge;
     }
 
     /**
-     * Set Service judgment, high-risk service, web service, other service
-     * @param ServiceJudge Service judgment, high-risk service, web service, other service
+     * Set Service judgment. high_risk_service: high-risk service. web_service: web service. other_service: other service.
+     * @param ServiceJudge Service judgment. high_risk_service: high-risk service. web_service: web service. other_service: other service.
      */
     public void setServiceJudge(String ServiceJudge) {
         this.ServiceJudge = ServiceJudge;
     }
 
     /**
-     * Get Status, 0 unprocessed, 1 processed, 2 ignored, 3 defended by cloud protection, 4 no action is required 
-     * @return XspmStatus Status, 0 unprocessed, 1 processed, 2 ignored, 3 defended by cloud protection, 4 no action is required
+     * Get Status. 0: unprocessed; 1: processed; 2: ignored; 3: defended by Cloud Firewall; 4: no action is required. 
+     * @return XspmStatus Status. 0: unprocessed; 1: processed; 2: ignored; 3: defended by Cloud Firewall; 4: no action is required.
      */
     public Long getXspmStatus() {
         return this.XspmStatus;
     }
 
     /**
-     * Set Status, 0 unprocessed, 1 processed, 2 ignored, 3 defended by cloud protection, 4 no action is required
-     * @param XspmStatus Status, 0 unprocessed, 1 processed, 2 ignored, 3 defended by cloud protection, 4 no action is required
+     * Set Status. 0: unprocessed; 1: processed; 2: ignored; 3: defended by Cloud Firewall; 4: no action is required.
+     * @param XspmStatus Status. 0: unprocessed; 1: processed; 2: ignored; 3: defended by Cloud Firewall; 4: no action is required.
      */
     public void setXspmStatus(Long XspmStatus) {
         this.XspmStatus = XspmStatus;

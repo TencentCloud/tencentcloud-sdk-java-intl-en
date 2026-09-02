@@ -31,7 +31,7 @@ public class ClbListenerListInfo extends AbstractModel {
     private String ListenerId;
 
     /**
-    * listener name
+    * Listener name
     */
     @SerializedName("ListenerName")
     @Expose
@@ -131,16 +131,16 @@ public class ClbListenerListInfo extends AbstractModel {
     }
 
     /**
-     * Get listener name 
-     * @return ListenerName listener name
+     * Get Listener name 
+     * @return ListenerName Listener name
      */
     public String getListenerName() {
         return this.ListenerName;
     }
 
     /**
-     * Set listener name
-     * @param ListenerName listener name
+     * Set Listener name
+     * @param ListenerName Listener name
      */
     public void setListenerName(String ListenerName) {
         this.ListenerName = ListenerName;

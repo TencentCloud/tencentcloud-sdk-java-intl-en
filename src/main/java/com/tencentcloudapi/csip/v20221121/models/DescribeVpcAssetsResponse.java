@@ -24,35 +24,35 @@ import java.util.HashMap;
 public class DescribeVpcAssetsResponse extends AbstractModel {
 
     /**
-    * Data list
+    * List
     */
     @SerializedName("Data")
     @Expose
     private Vpc [] Data;
 
     /**
-    * Total number of results
+    * Total number.
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * List of VPCs
+    * VPC List
     */
     @SerializedName("VpcList")
     @Expose
     private FilterDataObject [] VpcList;
 
     /**
-    * List of regions
+    * Region list
     */
     @SerializedName("RegionList")
     @Expose
     private FilterDataObject [] RegionList;
 
     /**
-    * List of AppIds
+    * AppID List
     */
     @SerializedName("AppIdList")
     @Expose
@@ -66,80 +66,80 @@ public class DescribeVpcAssetsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Data list 
-     * @return Data Data list
+     * Get List 
+     * @return Data List
      */
     public Vpc [] getData() {
         return this.Data;
     }
 
     /**
-     * Set Data list
-     * @param Data Data list
+     * Set List
+     * @param Data List
      */
     public void setData(Vpc [] Data) {
         this.Data = Data;
     }
 
     /**
-     * Get Total number of results 
-     * @return TotalCount Total number of results
+     * Get Total number. 
+     * @return TotalCount Total number.
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set Total number of results
-     * @param TotalCount Total number of results
+     * Set Total number.
+     * @param TotalCount Total number.
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get List of VPCs 
-     * @return VpcList List of VPCs
+     * Get VPC List 
+     * @return VpcList VPC List
      */
     public FilterDataObject [] getVpcList() {
         return this.VpcList;
     }
 
     /**
-     * Set List of VPCs
-     * @param VpcList List of VPCs
+     * Set VPC List
+     * @param VpcList VPC List
      */
     public void setVpcList(FilterDataObject [] VpcList) {
         this.VpcList = VpcList;
     }
 
     /**
-     * Get List of regions 
-     * @return RegionList List of regions
+     * Get Region list 
+     * @return RegionList Region list
      */
     public FilterDataObject [] getRegionList() {
         return this.RegionList;
     }
 
     /**
-     * Set List of regions
-     * @param RegionList List of regions
+     * Set Region list
+     * @param RegionList Region list
      */
     public void setRegionList(FilterDataObject [] RegionList) {
         this.RegionList = RegionList;
     }
 
     /**
-     * Get List of AppIds 
-     * @return AppIdList List of AppIds
+     * Get AppID List 
+     * @return AppIdList AppID List
      */
     public FilterDataObject [] getAppIdList() {
         return this.AppIdList;
     }
 
     /**
-     * Set List of AppIds
-     * @param AppIdList List of AppIds
+     * Set AppID List
+     * @param AppIdList AppID List
      */
     public void setAppIdList(FilterDataObject [] AppIdList) {
         this.AppIdList = AppIdList;

@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class DescribeAssetRiskListResponse extends AbstractModel {
 
     /**
-    * Number of risks from asset perspective
+    * Number of risks from the asset perspective
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * Risk list from asset perspective
+    * Risk list from the asset perspective
     */
     @SerializedName("AssetRiskList")
     @Expose
     private AssetRiskItem [] AssetRiskList;
 
     /**
-    * Standard name collection
+    * Collection of MLPS standard names
     */
     @SerializedName("StandardNameList")
     @Expose
@@ -59,48 +59,48 @@ public class DescribeAssetRiskListResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Number of risks from asset perspective 
-     * @return TotalCount Number of risks from asset perspective
+     * Get Number of risks from the asset perspective 
+     * @return TotalCount Number of risks from the asset perspective
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set Number of risks from asset perspective
-     * @param TotalCount Number of risks from asset perspective
+     * Set Number of risks from the asset perspective
+     * @param TotalCount Number of risks from the asset perspective
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get Risk list from asset perspective 
-     * @return AssetRiskList Risk list from asset perspective
+     * Get Risk list from the asset perspective 
+     * @return AssetRiskList Risk list from the asset perspective
      */
     public AssetRiskItem [] getAssetRiskList() {
         return this.AssetRiskList;
     }
 
     /**
-     * Set Risk list from asset perspective
-     * @param AssetRiskList Risk list from asset perspective
+     * Set Risk list from the asset perspective
+     * @param AssetRiskList Risk list from the asset perspective
      */
     public void setAssetRiskList(AssetRiskItem [] AssetRiskList) {
         this.AssetRiskList = AssetRiskList;
     }
 
     /**
-     * Get Standard name collection 
-     * @return StandardNameList Standard name collection
+     * Get Collection of MLPS standard names 
+     * @return StandardNameList Collection of MLPS standard names
      */
     public StandardItem [] getStandardNameList() {
         return this.StandardNameList;
     }
 
     /**
-     * Set Standard name collection
-     * @param StandardNameList Standard name collection
+     * Set Collection of MLPS standard names
+     * @param StandardNameList Collection of MLPS standard names
      */
     public void setStandardNameList(StandardItem [] StandardNameList) {
         this.StandardNameList = StandardNameList;

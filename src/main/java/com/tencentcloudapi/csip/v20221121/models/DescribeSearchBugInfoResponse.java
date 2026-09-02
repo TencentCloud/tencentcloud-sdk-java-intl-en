@@ -31,14 +31,14 @@ public class DescribeSearchBugInfoResponse extends AbstractModel {
     private DataSearchBug Data;
 
     /**
-    * Status code. Valid values: 0: successful; others: failed.
+    * Status value. 0: query successful. Non-zero: query failed.
     */
     @SerializedName("ReturnCode")
     @Expose
     private Long ReturnCode;
 
     /**
-    * Status message. Valid values: success: successful query; fail: failed query.
+    * Status information. success: query succeeded. fail: query failed.
     */
     @SerializedName("ReturnMsg")
     @Expose
@@ -68,32 +68,32 @@ public class DescribeSearchBugInfoResponse extends AbstractModel {
     }
 
     /**
-     * Get Status code. Valid values: 0: successful; others: failed. 
-     * @return ReturnCode Status code. Valid values: 0: successful; others: failed.
+     * Get Status value. 0: query successful. Non-zero: query failed. 
+     * @return ReturnCode Status value. 0: query successful. Non-zero: query failed.
      */
     public Long getReturnCode() {
         return this.ReturnCode;
     }
 
     /**
-     * Set Status code. Valid values: 0: successful; others: failed.
-     * @param ReturnCode Status code. Valid values: 0: successful; others: failed.
+     * Set Status value. 0: query successful. Non-zero: query failed.
+     * @param ReturnCode Status value. 0: query successful. Non-zero: query failed.
      */
     public void setReturnCode(Long ReturnCode) {
         this.ReturnCode = ReturnCode;
     }
 
     /**
-     * Get Status message. Valid values: success: successful query; fail: failed query. 
-     * @return ReturnMsg Status message. Valid values: success: successful query; fail: failed query.
+     * Get Status information. success: query succeeded. fail: query failed. 
+     * @return ReturnMsg Status information. success: query succeeded. fail: query failed.
      */
     public String getReturnMsg() {
         return this.ReturnMsg;
     }
 
     /**
-     * Set Status message. Valid values: success: successful query; fail: failed query.
-     * @param ReturnMsg Status message. Valid values: success: successful query; fail: failed query.
+     * Set Status information. success: query succeeded. fail: query failed.
+     * @param ReturnMsg Status information. success: query succeeded. fail: query failed.
      */
     public void setReturnMsg(String ReturnMsg) {
         this.ReturnMsg = ReturnMsg;

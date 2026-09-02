@@ -24,42 +24,42 @@ import java.util.HashMap;
 public class DescribeClusterPodAssetsResponse extends AbstractModel {
 
     /**
-    * Data list
+    * List
     */
     @SerializedName("Data")
     @Expose
     private AssetClusterPod [] Data;
 
     /**
-    * Total number of results
+    * Total number.
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * List of cluster pod status
+    * Cluster Pod Status Enumeration
     */
     @SerializedName("PodStatusList")
     @Expose
     private FilterDataObject [] PodStatusList;
 
     /**
-    * List of namespaces
+    * Namespace Enumeration
     */
     @SerializedName("NamespaceList")
     @Expose
     private FilterDataObject [] NamespaceList;
 
     /**
-    * List of regions
+    * Region Enumeration
     */
     @SerializedName("RegionList")
     @Expose
     private FilterDataObject [] RegionList;
 
     /**
-    * List of users (AppId)
+    * Tenant Enumeration
     */
     @SerializedName("AppIdList")
     @Expose
@@ -73,96 +73,96 @@ public class DescribeClusterPodAssetsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Data list 
-     * @return Data Data list
+     * Get List 
+     * @return Data List
      */
     public AssetClusterPod [] getData() {
         return this.Data;
     }
 
     /**
-     * Set Data list
-     * @param Data Data list
+     * Set List
+     * @param Data List
      */
     public void setData(AssetClusterPod [] Data) {
         this.Data = Data;
     }
 
     /**
-     * Get Total number of results 
-     * @return TotalCount Total number of results
+     * Get Total number. 
+     * @return TotalCount Total number.
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set Total number of results
-     * @param TotalCount Total number of results
+     * Set Total number.
+     * @param TotalCount Total number.
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get List of cluster pod status 
-     * @return PodStatusList List of cluster pod status
+     * Get Cluster Pod Status Enumeration 
+     * @return PodStatusList Cluster Pod Status Enumeration
      */
     public FilterDataObject [] getPodStatusList() {
         return this.PodStatusList;
     }
 
     /**
-     * Set List of cluster pod status
-     * @param PodStatusList List of cluster pod status
+     * Set Cluster Pod Status Enumeration
+     * @param PodStatusList Cluster Pod Status Enumeration
      */
     public void setPodStatusList(FilterDataObject [] PodStatusList) {
         this.PodStatusList = PodStatusList;
     }
 
     /**
-     * Get List of namespaces 
-     * @return NamespaceList List of namespaces
+     * Get Namespace Enumeration 
+     * @return NamespaceList Namespace Enumeration
      */
     public FilterDataObject [] getNamespaceList() {
         return this.NamespaceList;
     }
 
     /**
-     * Set List of namespaces
-     * @param NamespaceList List of namespaces
+     * Set Namespace Enumeration
+     * @param NamespaceList Namespace Enumeration
      */
     public void setNamespaceList(FilterDataObject [] NamespaceList) {
         this.NamespaceList = NamespaceList;
     }
 
     /**
-     * Get List of regions 
-     * @return RegionList List of regions
+     * Get Region Enumeration 
+     * @return RegionList Region Enumeration
      */
     public FilterDataObject [] getRegionList() {
         return this.RegionList;
     }
 
     /**
-     * Set List of regions
-     * @param RegionList List of regions
+     * Set Region Enumeration
+     * @param RegionList Region Enumeration
      */
     public void setRegionList(FilterDataObject [] RegionList) {
         this.RegionList = RegionList;
     }
 
     /**
-     * Get List of users (AppId) 
-     * @return AppIdList List of users (AppId)
+     * Get Tenant Enumeration 
+     * @return AppIdList Tenant Enumeration
      */
     public FilterDataObject [] getAppIdList() {
         return this.AppIdList;
     }
 
     /**
-     * Set List of users (AppId)
-     * @param AppIdList List of users (AppId)
+     * Set Tenant Enumeration
+     * @param AppIdList Tenant Enumeration
      */
     public void setAppIdList(FilterDataObject [] AppIdList) {
         this.AppIdList = AppIdList;

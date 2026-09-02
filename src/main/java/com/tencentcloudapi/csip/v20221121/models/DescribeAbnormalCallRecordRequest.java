@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeAbnormalCallRecordRequest extends AbstractModel {
 
     /**
-    * Alarm rule ID.
+    * Alarm rule ID
     */
     @SerializedName("AlarmRuleID")
     @Expose
@@ -38,14 +38,14 @@ public class DescribeAbnormalCallRecordRequest extends AbstractModel {
     private String [] MemberId;
 
     /**
-    * Access key.
+    * Access key
     */
     @SerializedName("AccessKey")
     @Expose
     private String AccessKey;
 
     /**
-    * Source IP of the call.
+    * Call source IP
     */
     @SerializedName("SourceIP")
     @Expose
@@ -59,16 +59,16 @@ public class DescribeAbnormalCallRecordRequest extends AbstractModel {
     private Filter Filter;
 
     /**
-     * Get Alarm rule ID. 
-     * @return AlarmRuleID Alarm rule ID.
+     * Get Alarm rule ID 
+     * @return AlarmRuleID Alarm rule ID
      */
     public Long getAlarmRuleID() {
         return this.AlarmRuleID;
     }
 
     /**
-     * Set Alarm rule ID.
-     * @param AlarmRuleID Alarm rule ID.
+     * Set Alarm rule ID
+     * @param AlarmRuleID Alarm rule ID
      */
     public void setAlarmRuleID(Long AlarmRuleID) {
         this.AlarmRuleID = AlarmRuleID;
@@ -91,32 +91,32 @@ public class DescribeAbnormalCallRecordRequest extends AbstractModel {
     }
 
     /**
-     * Get Access key. 
-     * @return AccessKey Access key.
+     * Get Access key 
+     * @return AccessKey Access key
      */
     public String getAccessKey() {
         return this.AccessKey;
     }
 
     /**
-     * Set Access key.
-     * @param AccessKey Access key.
+     * Set Access key
+     * @param AccessKey Access key
      */
     public void setAccessKey(String AccessKey) {
         this.AccessKey = AccessKey;
     }
 
     /**
-     * Get Source IP of the call. 
-     * @return SourceIP Source IP of the call.
+     * Get Call source IP 
+     * @return SourceIP Call source IP
      */
     public String getSourceIP() {
         return this.SourceIP;
     }
 
     /**
-     * Set Source IP of the call.
-     * @param SourceIP Source IP of the call.
+     * Set Call source IP
+     * @param SourceIP Call source IP
      */
     public void setSourceIP(String SourceIP) {
         this.SourceIP = SourceIP;

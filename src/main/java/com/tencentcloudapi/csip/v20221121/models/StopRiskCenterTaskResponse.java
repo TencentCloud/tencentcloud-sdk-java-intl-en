@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class StopRiskCenterTaskResponse extends AbstractModel {
 
     /**
-    * `0`: Operation succeeded; Others: failed
+    * Stopping succeeds when Status is 0.
     */
     @SerializedName("Status")
     @Expose
@@ -38,16 +38,16 @@ public class StopRiskCenterTaskResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get `0`: Operation succeeded; Others: failed 
-     * @return Status `0`: Operation succeeded; Others: failed
+     * Get Stopping succeeds when Status is 0. 
+     * @return Status Stopping succeeds when Status is 0.
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set `0`: Operation succeeded; Others: failed
-     * @param Status `0`: Operation succeeded; Others: failed
+     * Set Stopping succeeds when Status is 0.
+     * @param Status Stopping succeeds when Status is 0.
      */
     public void setStatus(Long Status) {
         this.Status = Status;

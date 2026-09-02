@@ -31,7 +31,7 @@ public class DescribeVULRiskDetailRequest extends AbstractModel {
     private String [] MemberId;
 
     /**
-    * Risk id.
+    * Risk id
     */
     @SerializedName("RiskId")
     @Expose
@@ -61,16 +61,16 @@ public class DescribeVULRiskDetailRequest extends AbstractModel {
     }
 
     /**
-     * Get Risk id. 
-     * @return RiskId Risk id.
+     * Get Risk id 
+     * @return RiskId Risk id
      */
     public String getRiskId() {
         return this.RiskId;
     }
 
     /**
-     * Set Risk id.
-     * @param RiskId Risk id.
+     * Set Risk id
+     * @param RiskId Risk id
      */
     public void setRiskId(String RiskId) {
         this.RiskId = RiskId;

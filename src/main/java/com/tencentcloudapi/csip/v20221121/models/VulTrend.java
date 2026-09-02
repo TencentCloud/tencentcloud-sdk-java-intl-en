@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class VulTrend extends AbstractModel {
 
     /**
-    * Number of affected assets.
+    * Number of affected assets
     */
     @SerializedName("AffectAssetCount")
     @Expose
     private Long AffectAssetCount;
 
     /**
-    * Number of users affected.
+    * Number of impacted users
     */
     @SerializedName("AffectUserCount")
     @Expose
     private Long AffectUserCount;
 
     /**
-    * Number of attacks.
+    * Number of attacks
     */
     @SerializedName("AttackCount")
     @Expose
@@ -52,48 +52,48 @@ public class VulTrend extends AbstractModel {
     private String Date;
 
     /**
-     * Get Number of affected assets. 
-     * @return AffectAssetCount Number of affected assets.
+     * Get Number of affected assets 
+     * @return AffectAssetCount Number of affected assets
      */
     public Long getAffectAssetCount() {
         return this.AffectAssetCount;
     }
 
     /**
-     * Set Number of affected assets.
-     * @param AffectAssetCount Number of affected assets.
+     * Set Number of affected assets
+     * @param AffectAssetCount Number of affected assets
      */
     public void setAffectAssetCount(Long AffectAssetCount) {
         this.AffectAssetCount = AffectAssetCount;
     }
 
     /**
-     * Get Number of users affected. 
-     * @return AffectUserCount Number of users affected.
+     * Get Number of impacted users 
+     * @return AffectUserCount Number of impacted users
      */
     public Long getAffectUserCount() {
         return this.AffectUserCount;
     }
 
     /**
-     * Set Number of users affected.
-     * @param AffectUserCount Number of users affected.
+     * Set Number of impacted users
+     * @param AffectUserCount Number of impacted users
      */
     public void setAffectUserCount(Long AffectUserCount) {
         this.AffectUserCount = AffectUserCount;
     }
 
     /**
-     * Get Number of attacks. 
-     * @return AttackCount Number of attacks.
+     * Get Number of attacks 
+     * @return AttackCount Number of attacks
      */
     public Long getAttackCount() {
         return this.AttackCount;
     }
 
     /**
-     * Set Number of attacks.
-     * @param AttackCount Number of attacks.
+     * Set Number of attacks
+     * @param AttackCount Number of attacks
      */
     public void setAttackCount(Long AttackCount) {
         this.AttackCount = AttackCount;

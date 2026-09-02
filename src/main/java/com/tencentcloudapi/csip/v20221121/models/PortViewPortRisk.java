@@ -31,49 +31,49 @@ public class PortViewPortRisk extends AbstractModel {
     private Long NoHandleCount;
 
     /**
-    * Risk level, low - low risk, high - high risk, middle - medium risk, info - notification, extreme - critical.
+    * Risk level. low: low risk, high: high risk, middle: medium risk, info: notification, extreme: severe.
     */
     @SerializedName("Level")
     @Expose
     private String Level;
 
     /**
-    * Network protocol
+    * Protocol
     */
     @SerializedName("Protocol")
     @Expose
     private String Protocol;
 
     /**
-    * Components
+    * Component
     */
     @SerializedName("Component")
     @Expose
     private String Component;
 
     /**
-    * Port
+    * Port.
     */
     @SerializedName("Port")
     @Expose
     private Long Port;
 
     /**
-    * Last detected 
+    * Latest Recognition Time
     */
     @SerializedName("RecentTime")
     @Expose
     private String RecentTime;
 
     /**
-    * First detected
+    * First Recognition Time
     */
     @SerializedName("FirstTime")
     @Expose
     private String FirstTime;
 
     /**
-    * Suggested action. `0`: Keep as it is; `1`: Block access requests; `2`: Block the port
+    * Disposal Suggestions. 0: Maintain Status Quo; 1: Restrict Access; 2: Block Port.
     */
     @SerializedName("Suggestion")
     @Expose
@@ -101,14 +101,14 @@ public class PortViewPortRisk extends AbstractModel {
     private String From;
 
     /**
-    * Data entry key
+    * Front-end Index
     */
     @SerializedName("Index")
     @Expose
     private String Index;
 
     /**
-    * User AppId
+    * User appid.
     */
     @SerializedName("AppId")
     @Expose
@@ -129,7 +129,7 @@ public class PortViewPortRisk extends AbstractModel {
     private String Uin;
 
     /**
-    * Service
+    * Service.
     */
     @SerializedName("Service")
     @Expose
@@ -152,112 +152,112 @@ public class PortViewPortRisk extends AbstractModel {
     }
 
     /**
-     * Get Risk level, low - low risk, high - high risk, middle - medium risk, info - notification, extreme - critical. 
-     * @return Level Risk level, low - low risk, high - high risk, middle - medium risk, info - notification, extreme - critical.
+     * Get Risk level. low: low risk, high: high risk, middle: medium risk, info: notification, extreme: severe. 
+     * @return Level Risk level. low: low risk, high: high risk, middle: medium risk, info: notification, extreme: severe.
      */
     public String getLevel() {
         return this.Level;
     }
 
     /**
-     * Set Risk level, low - low risk, high - high risk, middle - medium risk, info - notification, extreme - critical.
-     * @param Level Risk level, low - low risk, high - high risk, middle - medium risk, info - notification, extreme - critical.
+     * Set Risk level. low: low risk, high: high risk, middle: medium risk, info: notification, extreme: severe.
+     * @param Level Risk level. low: low risk, high: high risk, middle: medium risk, info: notification, extreme: severe.
      */
     public void setLevel(String Level) {
         this.Level = Level;
     }
 
     /**
-     * Get Network protocol 
-     * @return Protocol Network protocol
+     * Get Protocol 
+     * @return Protocol Protocol
      */
     public String getProtocol() {
         return this.Protocol;
     }
 
     /**
-     * Set Network protocol
-     * @param Protocol Network protocol
+     * Set Protocol
+     * @param Protocol Protocol
      */
     public void setProtocol(String Protocol) {
         this.Protocol = Protocol;
     }
 
     /**
-     * Get Components 
-     * @return Component Components
+     * Get Component 
+     * @return Component Component
      */
     public String getComponent() {
         return this.Component;
     }
 
     /**
-     * Set Components
-     * @param Component Components
+     * Set Component
+     * @param Component Component
      */
     public void setComponent(String Component) {
         this.Component = Component;
     }
 
     /**
-     * Get Port 
-     * @return Port Port
+     * Get Port. 
+     * @return Port Port.
      */
     public Long getPort() {
         return this.Port;
     }
 
     /**
-     * Set Port
-     * @param Port Port
+     * Set Port.
+     * @param Port Port.
      */
     public void setPort(Long Port) {
         this.Port = Port;
     }
 
     /**
-     * Get Last detected  
-     * @return RecentTime Last detected 
+     * Get Latest Recognition Time 
+     * @return RecentTime Latest Recognition Time
      */
     public String getRecentTime() {
         return this.RecentTime;
     }
 
     /**
-     * Set Last detected 
-     * @param RecentTime Last detected 
+     * Set Latest Recognition Time
+     * @param RecentTime Latest Recognition Time
      */
     public void setRecentTime(String RecentTime) {
         this.RecentTime = RecentTime;
     }
 
     /**
-     * Get First detected 
-     * @return FirstTime First detected
+     * Get First Recognition Time 
+     * @return FirstTime First Recognition Time
      */
     public String getFirstTime() {
         return this.FirstTime;
     }
 
     /**
-     * Set First detected
-     * @param FirstTime First detected
+     * Set First Recognition Time
+     * @param FirstTime First Recognition Time
      */
     public void setFirstTime(String FirstTime) {
         this.FirstTime = FirstTime;
     }
 
     /**
-     * Get Suggested action. `0`: Keep as it is; `1`: Block access requests; `2`: Block the port 
-     * @return Suggestion Suggested action. `0`: Keep as it is; `1`: Block access requests; `2`: Block the port
+     * Get Disposal Suggestions. 0: Maintain Status Quo; 1: Restrict Access; 2: Block Port. 
+     * @return Suggestion Disposal Suggestions. 0: Maintain Status Quo; 1: Restrict Access; 2: Block Port.
      */
     public Long getSuggestion() {
         return this.Suggestion;
     }
 
     /**
-     * Set Suggested action. `0`: Keep as it is; `1`: Block access requests; `2`: Block the port
-     * @param Suggestion Suggested action. `0`: Keep as it is; `1`: Block access requests; `2`: Block the port
+     * Set Disposal Suggestions. 0: Maintain Status Quo; 1: Restrict Access; 2: Block Port.
+     * @param Suggestion Disposal Suggestions. 0: Maintain Status Quo; 1: Restrict Access; 2: Block Port.
      */
     public void setSuggestion(Long Suggestion) {
         this.Suggestion = Suggestion;
@@ -312,32 +312,32 @@ public class PortViewPortRisk extends AbstractModel {
     }
 
     /**
-     * Get Data entry key 
-     * @return Index Data entry key
+     * Get Front-end Index 
+     * @return Index Front-end Index
      */
     public String getIndex() {
         return this.Index;
     }
 
     /**
-     * Set Data entry key
-     * @param Index Data entry key
+     * Set Front-end Index
+     * @param Index Front-end Index
      */
     public void setIndex(String Index) {
         this.Index = Index;
     }
 
     /**
-     * Get User AppId 
-     * @return AppId User AppId
+     * Get User appid. 
+     * @return AppId User appid.
      */
     public String getAppId() {
         return this.AppId;
     }
 
     /**
-     * Set User AppId
-     * @param AppId User AppId
+     * Set User appid.
+     * @param AppId User appid.
      */
     public void setAppId(String AppId) {
         this.AppId = AppId;
@@ -376,16 +376,16 @@ public class PortViewPortRisk extends AbstractModel {
     }
 
     /**
-     * Get Service 
-     * @return Service Service
+     * Get Service. 
+     * @return Service Service.
      */
     public String getService() {
         return this.Service;
     }
 
     /**
-     * Set Service
-     * @param Service Service
+     * Set Service.
+     * @param Service Service.
      */
     public void setService(String Service) {
         this.Service = Service;

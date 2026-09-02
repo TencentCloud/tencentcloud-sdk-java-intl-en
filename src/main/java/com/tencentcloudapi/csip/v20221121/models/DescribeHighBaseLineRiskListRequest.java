@@ -66,14 +66,14 @@ public class DescribeHighBaseLineRiskListRequest extends AbstractModel {
     private String By;
 
     /**
-    * Cloud account ID.
+    * Cloud account ID
     */
     @SerializedName("CloudAccountID")
     @Expose
     private String CloudAccountID;
 
     /**
-    * Cloud service provider.
+    * Cloud service provider
     */
     @SerializedName("Provider")
     @Expose
@@ -176,32 +176,32 @@ public class DescribeHighBaseLineRiskListRequest extends AbstractModel {
     }
 
     /**
-     * Get Cloud account ID. 
-     * @return CloudAccountID Cloud account ID.
+     * Get Cloud account ID 
+     * @return CloudAccountID Cloud account ID
      */
     public String getCloudAccountID() {
         return this.CloudAccountID;
     }
 
     /**
-     * Set Cloud account ID.
-     * @param CloudAccountID Cloud account ID.
+     * Set Cloud account ID
+     * @param CloudAccountID Cloud account ID
      */
     public void setCloudAccountID(String CloudAccountID) {
         this.CloudAccountID = CloudAccountID;
     }
 
     /**
-     * Get Cloud service provider. 
-     * @return Provider Cloud service provider.
+     * Get Cloud service provider 
+     * @return Provider Cloud service provider
      */
     public String getProvider() {
         return this.Provider;
     }
 
     /**
-     * Set Cloud service provider.
-     * @param Provider Cloud service provider.
+     * Set Cloud service provider
+     * @param Provider Cloud service provider
      */
     public void setProvider(String Provider) {
         this.Provider = Provider;

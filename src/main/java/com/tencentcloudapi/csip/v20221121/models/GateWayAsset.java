@@ -38,21 +38,21 @@ public class GateWayAsset extends AbstractModel {
     private String Uin;
 
     /**
-    * Asset ID.
+    * Asset ID
     */
     @SerializedName("AssetId")
     @Expose
     private String AssetId;
 
     /**
-    * Asset name.
+    * Asset name
     */
     @SerializedName("AssetName")
     @Expose
     private String AssetName;
 
     /**
-    * Asset type.
+    * Asset type
     */
     @SerializedName("AssetType")
     @Expose
@@ -80,7 +80,7 @@ public class GateWayAsset extends AbstractModel {
     private String Region;
 
     /**
-    * VPC id.
+    * VPC id
     */
     @SerializedName("VpcId")
     @Expose
@@ -101,14 +101,14 @@ public class GateWayAsset extends AbstractModel {
     private Tag [] Tag;
 
     /**
-    * Outbound peak bandwidth.
+    * Outbound peak bandwidth
     */
     @SerializedName("OutboundPeakBandwidth")
     @Expose
     private String OutboundPeakBandwidth;
 
     /**
-    * Inbound peak bandwidth.
+    * Inbound peak bandwidth
     */
     @SerializedName("InboundPeakBandwidth")
     @Expose
@@ -129,28 +129,28 @@ public class GateWayAsset extends AbstractModel {
     private String InboundCumulativeFlow;
 
     /**
-    * Network attack.
+    * Network attack
     */
     @SerializedName("NetworkAttack")
     @Expose
     private Long NetworkAttack;
 
     /**
-    * Expose ports.
+    * Exposed port
     */
     @SerializedName("ExposedPort")
     @Expose
     private Long ExposedPort;
 
     /**
-    * Exposed vulnerability.
+    * Exposed vulnerability
     */
     @SerializedName("ExposedVUL")
     @Expose
     private Long ExposedVUL;
 
     /**
-    * Configuration risk.
+    * Configuration risk
     */
     @SerializedName("ConfigureRisk")
     @Expose
@@ -158,15 +158,13 @@ public class GateWayAsset extends AbstractModel {
 
     /**
     * Creation time.
-
-
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * Number of tasks.
+    * Number of tasks
     */
     @SerializedName("ScanTask")
     @Expose
@@ -180,7 +178,7 @@ public class GateWayAsset extends AbstractModel {
     private String LastScanTime;
 
     /**
-    * Nickname.
+    * Nickname
     */
     @SerializedName("Nick")
     @Expose
@@ -201,7 +199,7 @@ public class GateWayAsset extends AbstractModel {
     private Long IsCore;
 
     /**
-    * Risk service exposure.
+    * Risk service exposure
     */
     @SerializedName("RiskExposure")
     @Expose
@@ -229,7 +227,7 @@ public class GateWayAsset extends AbstractModel {
     private String EngineRegion;
 
     /**
-    * Weak password risk.
+    * Weak password risk
     */
     @SerializedName("WeakPasswordRisk")
     @Expose
@@ -268,48 +266,48 @@ public class GateWayAsset extends AbstractModel {
     }
 
     /**
-     * Get Asset ID. 
-     * @return AssetId Asset ID.
+     * Get Asset ID 
+     * @return AssetId Asset ID
      */
     public String getAssetId() {
         return this.AssetId;
     }
 
     /**
-     * Set Asset ID.
-     * @param AssetId Asset ID.
+     * Set Asset ID
+     * @param AssetId Asset ID
      */
     public void setAssetId(String AssetId) {
         this.AssetId = AssetId;
     }
 
     /**
-     * Get Asset name. 
-     * @return AssetName Asset name.
+     * Get Asset name 
+     * @return AssetName Asset name
      */
     public String getAssetName() {
         return this.AssetName;
     }
 
     /**
-     * Set Asset name.
-     * @param AssetName Asset name.
+     * Set Asset name
+     * @param AssetName Asset name
      */
     public void setAssetName(String AssetName) {
         this.AssetName = AssetName;
     }
 
     /**
-     * Get Asset type. 
-     * @return AssetType Asset type.
+     * Get Asset type 
+     * @return AssetType Asset type
      */
     public String getAssetType() {
         return this.AssetType;
     }
 
     /**
-     * Set Asset type.
-     * @param AssetType Asset type.
+     * Set Asset type
+     * @param AssetType Asset type
      */
     public void setAssetType(String AssetType) {
         this.AssetType = AssetType;
@@ -364,16 +362,16 @@ public class GateWayAsset extends AbstractModel {
     }
 
     /**
-     * Get VPC id. 
-     * @return VpcId VPC id.
+     * Get VPC id 
+     * @return VpcId VPC id
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set VPC id.
-     * @param VpcId VPC id.
+     * Set VPC id
+     * @param VpcId VPC id
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
@@ -412,32 +410,32 @@ public class GateWayAsset extends AbstractModel {
     }
 
     /**
-     * Get Outbound peak bandwidth. 
-     * @return OutboundPeakBandwidth Outbound peak bandwidth.
+     * Get Outbound peak bandwidth 
+     * @return OutboundPeakBandwidth Outbound peak bandwidth
      */
     public String getOutboundPeakBandwidth() {
         return this.OutboundPeakBandwidth;
     }
 
     /**
-     * Set Outbound peak bandwidth.
-     * @param OutboundPeakBandwidth Outbound peak bandwidth.
+     * Set Outbound peak bandwidth
+     * @param OutboundPeakBandwidth Outbound peak bandwidth
      */
     public void setOutboundPeakBandwidth(String OutboundPeakBandwidth) {
         this.OutboundPeakBandwidth = OutboundPeakBandwidth;
     }
 
     /**
-     * Get Inbound peak bandwidth. 
-     * @return InboundPeakBandwidth Inbound peak bandwidth.
+     * Get Inbound peak bandwidth 
+     * @return InboundPeakBandwidth Inbound peak bandwidth
      */
     public String getInboundPeakBandwidth() {
         return this.InboundPeakBandwidth;
     }
 
     /**
-     * Set Inbound peak bandwidth.
-     * @param InboundPeakBandwidth Inbound peak bandwidth.
+     * Set Inbound peak bandwidth
+     * @param InboundPeakBandwidth Inbound peak bandwidth
      */
     public void setInboundPeakBandwidth(String InboundPeakBandwidth) {
         this.InboundPeakBandwidth = InboundPeakBandwidth;
@@ -476,76 +474,72 @@ public class GateWayAsset extends AbstractModel {
     }
 
     /**
-     * Get Network attack. 
-     * @return NetworkAttack Network attack.
+     * Get Network attack 
+     * @return NetworkAttack Network attack
      */
     public Long getNetworkAttack() {
         return this.NetworkAttack;
     }
 
     /**
-     * Set Network attack.
-     * @param NetworkAttack Network attack.
+     * Set Network attack
+     * @param NetworkAttack Network attack
      */
     public void setNetworkAttack(Long NetworkAttack) {
         this.NetworkAttack = NetworkAttack;
     }
 
     /**
-     * Get Expose ports. 
-     * @return ExposedPort Expose ports.
+     * Get Exposed port 
+     * @return ExposedPort Exposed port
      */
     public Long getExposedPort() {
         return this.ExposedPort;
     }
 
     /**
-     * Set Expose ports.
-     * @param ExposedPort Expose ports.
+     * Set Exposed port
+     * @param ExposedPort Exposed port
      */
     public void setExposedPort(Long ExposedPort) {
         this.ExposedPort = ExposedPort;
     }
 
     /**
-     * Get Exposed vulnerability. 
-     * @return ExposedVUL Exposed vulnerability.
+     * Get Exposed vulnerability 
+     * @return ExposedVUL Exposed vulnerability
      */
     public Long getExposedVUL() {
         return this.ExposedVUL;
     }
 
     /**
-     * Set Exposed vulnerability.
-     * @param ExposedVUL Exposed vulnerability.
+     * Set Exposed vulnerability
+     * @param ExposedVUL Exposed vulnerability
      */
     public void setExposedVUL(Long ExposedVUL) {
         this.ExposedVUL = ExposedVUL;
     }
 
     /**
-     * Get Configuration risk. 
-     * @return ConfigureRisk Configuration risk.
+     * Get Configuration risk 
+     * @return ConfigureRisk Configuration risk
      */
     public Long getConfigureRisk() {
         return this.ConfigureRisk;
     }
 
     /**
-     * Set Configuration risk.
-     * @param ConfigureRisk Configuration risk.
+     * Set Configuration risk
+     * @param ConfigureRisk Configuration risk
      */
     public void setConfigureRisk(Long ConfigureRisk) {
         this.ConfigureRisk = ConfigureRisk;
     }
 
     /**
-     * Get Creation time.
-
- 
+     * Get Creation time. 
      * @return CreateTime Creation time.
-
-
      */
     public String getCreateTime() {
         return this.CreateTime;
@@ -553,27 +547,23 @@ public class GateWayAsset extends AbstractModel {
 
     /**
      * Set Creation time.
-
-
      * @param CreateTime Creation time.
-
-
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get Number of tasks. 
-     * @return ScanTask Number of tasks.
+     * Get Number of tasks 
+     * @return ScanTask Number of tasks
      */
     public Long getScanTask() {
         return this.ScanTask;
     }
 
     /**
-     * Set Number of tasks.
-     * @param ScanTask Number of tasks.
+     * Set Number of tasks
+     * @param ScanTask Number of tasks
      */
     public void setScanTask(Long ScanTask) {
         this.ScanTask = ScanTask;
@@ -596,16 +586,16 @@ public class GateWayAsset extends AbstractModel {
     }
 
     /**
-     * Get Nickname. 
-     * @return Nick Nickname.
+     * Get Nickname 
+     * @return Nick Nickname
      */
     public String getNick() {
         return this.Nick;
     }
 
     /**
-     * Set Nickname.
-     * @param Nick Nickname.
+     * Set Nickname
+     * @param Nick Nickname
      */
     public void setNick(String Nick) {
         this.Nick = Nick;
@@ -644,16 +634,16 @@ public class GateWayAsset extends AbstractModel {
     }
 
     /**
-     * Get Risk service exposure. 
-     * @return RiskExposure Risk service exposure.
+     * Get Risk service exposure 
+     * @return RiskExposure Risk service exposure
      */
     public Long getRiskExposure() {
         return this.RiskExposure;
     }
 
     /**
-     * Set Risk service exposure.
-     * @param RiskExposure Risk service exposure.
+     * Set Risk service exposure
+     * @param RiskExposure Risk service exposure
      */
     public void setRiskExposure(Long RiskExposure) {
         this.RiskExposure = RiskExposure;
@@ -708,16 +698,16 @@ public class GateWayAsset extends AbstractModel {
     }
 
     /**
-     * Get Weak password risk. 
-     * @return WeakPasswordRisk Weak password risk.
+     * Get Weak password risk 
+     * @return WeakPasswordRisk Weak password risk
      */
     public Long getWeakPasswordRisk() {
         return this.WeakPasswordRisk;
     }
 
     /**
-     * Set Weak password risk.
-     * @param WeakPasswordRisk Weak password risk.
+     * Set Weak password risk
+     * @param WeakPasswordRisk Weak password risk
      */
     public void setWeakPasswordRisk(Long WeakPasswordRisk) {
         this.WeakPasswordRisk = WeakPasswordRisk;

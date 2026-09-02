@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class SourceIPAsset extends AbstractModel {
 
     /**
-    * id of the source IP.
+    * Source IP id
     */
     @SerializedName("ID")
     @Expose
     private Long ID;
 
     /**
-    * Source IP.
+    * Source IP
     */
     @SerializedName("SourceIP")
     @Expose
@@ -45,23 +45,23 @@ public class SourceIPAsset extends AbstractModel {
     private String Remark;
 
     /**
-    * Account associate APPID.
+    * APPID of the account
     */
     @SerializedName("AppID")
     @Expose
     private Long AppID;
 
     /**
-    * IP region.
+    * IP region
     */
     @SerializedName("Region")
     @Expose
     private String Region;
 
     /**
-    * API call method.
--1: uncounted.
-0: console invocation.
+    * Calling method
+-1: Uncounted
+0: Console invocation
 1:API
     */
     @SerializedName("EventType")
@@ -69,11 +69,11 @@ public class SourceIPAsset extends AbstractModel {
     private Long EventType;
 
     /**
-    * IP type.
-0: within the account (unremarked).
-1: external accounts (unremarked).
-2: within the account (remarked).
-3: external account (remarked).
+    * IP type
+0: within the account (no remark)
+1: Outside the account (no remarks)
+2: Within the account (remarked)
+3: Outside the account   (Remarks added)
     */
     @SerializedName("IPType")
     @Expose
@@ -87,7 +87,7 @@ public class SourceIPAsset extends AbstractModel {
     private AccessKeyAlarmInfo [] AccessKeyAlarmList;
 
     /**
-    * ak information list.
+    * ak information list
     */
     @SerializedName("AKInfo")
     @Expose
@@ -108,28 +108,28 @@ public class SourceIPAsset extends AbstractModel {
     private String LastAccessTime;
 
     /**
-    * IP associated instance ID. if an empty string, represents an asset not within the account.
+    * Associated instance ID of the IP. If it is an empty string, the asset is not within the account.
     */
     @SerializedName("InstanceID")
     @Expose
     private String InstanceID;
 
     /**
-    * Associated instance name.
+    * IP associated instance name
     */
     @SerializedName("InstanceName")
     @Expose
     private String InstanceName;
 
     /**
-    * Account associate Uin.
+    * Uin of the account
     */
     @SerializedName("Uin")
     @Expose
     private String Uin;
 
     /**
-    * Nickname.
+    * Nickname
     */
     @SerializedName("Nickname")
     @Expose
@@ -143,54 +143,54 @@ public class SourceIPAsset extends AbstractModel {
     private Boolean ShowStatus;
 
     /**
-    * ISP field.
+    * Carrier field
     */
     @SerializedName("ISP")
     @Expose
     private String ISP;
 
     /**
-    * vpc information outside the account.
+    * vpc information outside the account
     */
     @SerializedName("VpcInfo")
     @Expose
     private SourceIPVpcInfo [] VpcInfo;
 
     /**
-    * Cloud type.
-0 for tencent cloud.
+    * Cloud type
+0: Tencent Cloud
     */
     @SerializedName("CloudType")
     @Expose
     private Long CloudType;
 
     /**
-     * Get id of the source IP. 
-     * @return ID id of the source IP.
+     * Get Source IP id 
+     * @return ID Source IP id
      */
     public Long getID() {
         return this.ID;
     }
 
     /**
-     * Set id of the source IP.
-     * @param ID id of the source IP.
+     * Set Source IP id
+     * @param ID Source IP id
      */
     public void setID(Long ID) {
         this.ID = ID;
     }
 
     /**
-     * Get Source IP. 
-     * @return SourceIP Source IP.
+     * Get Source IP 
+     * @return SourceIP Source IP
      */
     public String getSourceIP() {
         return this.SourceIP;
     }
 
     /**
-     * Set Source IP.
-     * @param SourceIP Source IP.
+     * Set Source IP
+     * @param SourceIP Source IP
      */
     public void setSourceIP(String SourceIP) {
         this.SourceIP = SourceIP;
@@ -213,45 +213,45 @@ public class SourceIPAsset extends AbstractModel {
     }
 
     /**
-     * Get Account associate APPID. 
-     * @return AppID Account associate APPID.
+     * Get APPID of the account 
+     * @return AppID APPID of the account
      */
     public Long getAppID() {
         return this.AppID;
     }
 
     /**
-     * Set Account associate APPID.
-     * @param AppID Account associate APPID.
+     * Set APPID of the account
+     * @param AppID APPID of the account
      */
     public void setAppID(Long AppID) {
         this.AppID = AppID;
     }
 
     /**
-     * Get IP region. 
-     * @return Region IP region.
+     * Get IP region 
+     * @return Region IP region
      */
     public String getRegion() {
         return this.Region;
     }
 
     /**
-     * Set IP region.
-     * @param Region IP region.
+     * Set IP region
+     * @param Region IP region
      */
     public void setRegion(String Region) {
         this.Region = Region;
     }
 
     /**
-     * Get API call method.
--1: uncounted.
-0: console invocation.
+     * Get Calling method
+-1: Uncounted
+0: Console invocation
 1:API 
-     * @return EventType API call method.
--1: uncounted.
-0: console invocation.
+     * @return EventType Calling method
+-1: Uncounted
+0: Console invocation
 1:API
      */
     public Long getEventType() {
@@ -259,13 +259,13 @@ public class SourceIPAsset extends AbstractModel {
     }
 
     /**
-     * Set API call method.
--1: uncounted.
-0: console invocation.
+     * Set Calling method
+-1: Uncounted
+0: Console invocation
 1:API
-     * @param EventType API call method.
--1: uncounted.
-0: console invocation.
+     * @param EventType Calling method
+-1: Uncounted
+0: Console invocation
 1:API
      */
     public void setEventType(Long EventType) {
@@ -273,32 +273,32 @@ public class SourceIPAsset extends AbstractModel {
     }
 
     /**
-     * Get IP type.
-0: within the account (unremarked).
-1: external accounts (unremarked).
-2: within the account (remarked).
-3: external account (remarked). 
-     * @return IPType IP type.
-0: within the account (unremarked).
-1: external accounts (unremarked).
-2: within the account (remarked).
-3: external account (remarked).
+     * Get IP type
+0: within the account (no remark)
+1: Outside the account (no remarks)
+2: Within the account (remarked)
+3: Outside the account   (Remarks added) 
+     * @return IPType IP type
+0: within the account (no remark)
+1: Outside the account (no remarks)
+2: Within the account (remarked)
+3: Outside the account   (Remarks added)
      */
     public Long getIPType() {
         return this.IPType;
     }
 
     /**
-     * Set IP type.
-0: within the account (unremarked).
-1: external accounts (unremarked).
-2: within the account (remarked).
-3: external account (remarked).
-     * @param IPType IP type.
-0: within the account (unremarked).
-1: external accounts (unremarked).
-2: within the account (remarked).
-3: external account (remarked).
+     * Set IP type
+0: within the account (no remark)
+1: Outside the account (no remarks)
+2: Within the account (remarked)
+3: Outside the account   (Remarks added)
+     * @param IPType IP type
+0: within the account (no remark)
+1: Outside the account (no remarks)
+2: Within the account (remarked)
+3: Outside the account   (Remarks added)
      */
     public void setIPType(Long IPType) {
         this.IPType = IPType;
@@ -321,16 +321,16 @@ public class SourceIPAsset extends AbstractModel {
     }
 
     /**
-     * Get ak information list. 
-     * @return AKInfo ak information list.
+     * Get ak information list 
+     * @return AKInfo ak information list
      */
     public AKInfo [] getAKInfo() {
         return this.AKInfo;
     }
 
     /**
-     * Set ak information list.
-     * @param AKInfo ak information list.
+     * Set ak information list
+     * @param AKInfo ak information list
      */
     public void setAKInfo(AKInfo [] AKInfo) {
         this.AKInfo = AKInfo;
@@ -369,64 +369,64 @@ public class SourceIPAsset extends AbstractModel {
     }
 
     /**
-     * Get IP associated instance ID. if an empty string, represents an asset not within the account. 
-     * @return InstanceID IP associated instance ID. if an empty string, represents an asset not within the account.
+     * Get Associated instance ID of the IP. If it is an empty string, the asset is not within the account. 
+     * @return InstanceID Associated instance ID of the IP. If it is an empty string, the asset is not within the account.
      */
     public String getInstanceID() {
         return this.InstanceID;
     }
 
     /**
-     * Set IP associated instance ID. if an empty string, represents an asset not within the account.
-     * @param InstanceID IP associated instance ID. if an empty string, represents an asset not within the account.
+     * Set Associated instance ID of the IP. If it is an empty string, the asset is not within the account.
+     * @param InstanceID Associated instance ID of the IP. If it is an empty string, the asset is not within the account.
      */
     public void setInstanceID(String InstanceID) {
         this.InstanceID = InstanceID;
     }
 
     /**
-     * Get Associated instance name. 
-     * @return InstanceName Associated instance name.
+     * Get IP associated instance name 
+     * @return InstanceName IP associated instance name
      */
     public String getInstanceName() {
         return this.InstanceName;
     }
 
     /**
-     * Set Associated instance name.
-     * @param InstanceName Associated instance name.
+     * Set IP associated instance name
+     * @param InstanceName IP associated instance name
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;
     }
 
     /**
-     * Get Account associate Uin. 
-     * @return Uin Account associate Uin.
+     * Get Uin of the account 
+     * @return Uin Uin of the account
      */
     public String getUin() {
         return this.Uin;
     }
 
     /**
-     * Set Account associate Uin.
-     * @param Uin Account associate Uin.
+     * Set Uin of the account
+     * @param Uin Uin of the account
      */
     public void setUin(String Uin) {
         this.Uin = Uin;
     }
 
     /**
-     * Get Nickname. 
-     * @return Nickname Nickname.
+     * Get Nickname 
+     * @return Nickname Nickname
      */
     public String getNickname() {
         return this.Nickname;
     }
 
     /**
-     * Set Nickname.
-     * @param Nickname Nickname.
+     * Set Nickname
+     * @param Nickname Nickname
      */
     public void setNickname(String Nickname) {
         this.Nickname = Nickname;
@@ -449,52 +449,52 @@ public class SourceIPAsset extends AbstractModel {
     }
 
     /**
-     * Get ISP field. 
-     * @return ISP ISP field.
+     * Get Carrier field 
+     * @return ISP Carrier field
      */
     public String getISP() {
         return this.ISP;
     }
 
     /**
-     * Set ISP field.
-     * @param ISP ISP field.
+     * Set Carrier field
+     * @param ISP Carrier field
      */
     public void setISP(String ISP) {
         this.ISP = ISP;
     }
 
     /**
-     * Get vpc information outside the account. 
-     * @return VpcInfo vpc information outside the account.
+     * Get vpc information outside the account 
+     * @return VpcInfo vpc information outside the account
      */
     public SourceIPVpcInfo [] getVpcInfo() {
         return this.VpcInfo;
     }
 
     /**
-     * Set vpc information outside the account.
-     * @param VpcInfo vpc information outside the account.
+     * Set vpc information outside the account
+     * @param VpcInfo vpc information outside the account
      */
     public void setVpcInfo(SourceIPVpcInfo [] VpcInfo) {
         this.VpcInfo = VpcInfo;
     }
 
     /**
-     * Get Cloud type.
-0 for tencent cloud. 
-     * @return CloudType Cloud type.
-0 for tencent cloud.
+     * Get Cloud type
+0: Tencent Cloud 
+     * @return CloudType Cloud type
+0: Tencent Cloud
      */
     public Long getCloudType() {
         return this.CloudType;
     }
 
     /**
-     * Set Cloud type.
-0 for tencent cloud.
-     * @param CloudType Cloud type.
-0 for tencent cloud.
+     * Set Cloud type
+0: Tencent Cloud
+     * @param CloudType Cloud type
+0: Tencent Cloud
      */
     public void setCloudType(Long CloudType) {
         this.CloudType = CloudType;

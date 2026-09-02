@@ -31,21 +31,21 @@ public class VULViewVULRiskData extends AbstractModel {
     private String Port;
 
     /**
-    * Impact assets.
+    * Affect assets
     */
     @SerializedName("NoHandleCount")
     @Expose
     private Long NoHandleCount;
 
     /**
-    * Risk level: low - low risk, high - high risk, middle - medium risk, info - note, extreme - critical.
+    * Risk level. low: low risk. high: high risk. middle: medium risk. info: notification. extreme: critical.
     */
     @SerializedName("Level")
     @Expose
     private String Level;
 
     /**
-    * Component.
+    * Component
     */
     @SerializedName("Component")
     @Expose
@@ -94,7 +94,7 @@ public class VULViewVULRiskData extends AbstractModel {
     private String Index;
 
     /**
-    * Vulnerability type.
+    * Vulnerability type
     */
     @SerializedName("VULType")
     @Expose
@@ -122,21 +122,21 @@ public class VULViewVULRiskData extends AbstractModel {
     private String Payload;
 
     /**
-    * Vulnerability impact component.
+    * Vulnerability Impact component
     */
     @SerializedName("AppName")
     @Expose
     private String AppName;
 
     /**
-    * Vulnerability impact version.
+    * Affected versions of the vulnerability
     */
     @SerializedName("AppVersion")
     @Expose
     private String AppVersion;
 
     /**
-    * Risks.
+    * Risk point
     */
     @SerializedName("VULURL")
     @Expose
@@ -185,63 +185,63 @@ public class VULViewVULRiskData extends AbstractModel {
     private String PCMGRId;
 
     /**
-    * Vulnerability tag. during searching, emergency mandatory parameter VulTag=SuggestRepair/EMGCVul.
+    * Vulnerability tag. During searching, you must pass in `VulTag=SuggestRepair/EMGCVul` for emergency and mandatory vulnerabilities.
     */
     @SerializedName("VulTag")
     @Expose
     private String [] VulTag;
 
     /**
-    * Vulnerability disclosure time.
+    * Vulnerability disclosure time
     */
     @SerializedName("DisclosureTime")
     @Expose
     private String DisclosureTime;
 
     /**
-    * Attack intensity.
+    * Attack heat
     */
     @SerializedName("AttackHeat")
     @Expose
     private Long AttackHeat;
 
     /**
-    * Whether a mandatory vulnerability: 1 - yes; 0 - no.
+    * Whether it is a mandatory vulnerability. 1: yes, 0: no
     */
     @SerializedName("IsSuggest")
     @Expose
     private Long IsSuggest;
 
     /**
-    * Disposal task id.
+    * Disposal task id
     */
     @SerializedName("HandleTaskId")
     @Expose
     private String HandleTaskId;
 
     /**
-    * Engine source.
+    * Engine source
     */
     @SerializedName("EngineSource")
     @Expose
     private String EngineSource;
 
     /**
-    * New vulnerability risk id.
+    * New vulnerability risk id
     */
     @SerializedName("VulRiskId")
     @Expose
     private String VulRiskId;
 
     /**
-    * New version vulnerability id.
+    * New version vulnerability id
     */
     @SerializedName("TvdID")
     @Expose
     private String TvdID;
 
     /**
-    * Is it possible to perform a one-click physical examination. valid values: 1-yes, 0-not allowed.
+    * Is one-click physical examination possible? 1: allowed, 0: not allowed.
     */
     @SerializedName("IsOneClick")
     @Expose
@@ -264,48 +264,48 @@ public class VULViewVULRiskData extends AbstractModel {
     }
 
     /**
-     * Get Impact assets. 
-     * @return NoHandleCount Impact assets.
+     * Get Affect assets 
+     * @return NoHandleCount Affect assets
      */
     public Long getNoHandleCount() {
         return this.NoHandleCount;
     }
 
     /**
-     * Set Impact assets.
-     * @param NoHandleCount Impact assets.
+     * Set Affect assets
+     * @param NoHandleCount Affect assets
      */
     public void setNoHandleCount(Long NoHandleCount) {
         this.NoHandleCount = NoHandleCount;
     }
 
     /**
-     * Get Risk level: low - low risk, high - high risk, middle - medium risk, info - note, extreme - critical. 
-     * @return Level Risk level: low - low risk, high - high risk, middle - medium risk, info - note, extreme - critical.
+     * Get Risk level. low: low risk. high: high risk. middle: medium risk. info: notification. extreme: critical. 
+     * @return Level Risk level. low: low risk. high: high risk. middle: medium risk. info: notification. extreme: critical.
      */
     public String getLevel() {
         return this.Level;
     }
 
     /**
-     * Set Risk level: low - low risk, high - high risk, middle - medium risk, info - note, extreme - critical.
-     * @param Level Risk level: low - low risk, high - high risk, middle - medium risk, info - note, extreme - critical.
+     * Set Risk level. low: low risk. high: high risk. middle: medium risk. info: notification. extreme: critical.
+     * @param Level Risk level. low: low risk. high: high risk. middle: medium risk. info: notification. extreme: critical.
      */
     public void setLevel(String Level) {
         this.Level = Level;
     }
 
     /**
-     * Get Component. 
-     * @return Component Component.
+     * Get Component 
+     * @return Component Component
      */
     public String getComponent() {
         return this.Component;
     }
 
     /**
-     * Set Component.
-     * @param Component Component.
+     * Set Component
+     * @param Component Component
      */
     public void setComponent(String Component) {
         this.Component = Component;
@@ -408,16 +408,16 @@ public class VULViewVULRiskData extends AbstractModel {
     }
 
     /**
-     * Get Vulnerability type. 
-     * @return VULType Vulnerability type.
+     * Get Vulnerability type 
+     * @return VULType Vulnerability type
      */
     public String getVULType() {
         return this.VULType;
     }
 
     /**
-     * Set Vulnerability type.
-     * @param VULType Vulnerability type.
+     * Set Vulnerability type
+     * @param VULType Vulnerability type
      */
     public void setVULType(String VULType) {
         this.VULType = VULType;
@@ -472,48 +472,48 @@ public class VULViewVULRiskData extends AbstractModel {
     }
 
     /**
-     * Get Vulnerability impact component. 
-     * @return AppName Vulnerability impact component.
+     * Get Vulnerability Impact component 
+     * @return AppName Vulnerability Impact component
      */
     public String getAppName() {
         return this.AppName;
     }
 
     /**
-     * Set Vulnerability impact component.
-     * @param AppName Vulnerability impact component.
+     * Set Vulnerability Impact component
+     * @param AppName Vulnerability Impact component
      */
     public void setAppName(String AppName) {
         this.AppName = AppName;
     }
 
     /**
-     * Get Vulnerability impact version. 
-     * @return AppVersion Vulnerability impact version.
+     * Get Affected versions of the vulnerability 
+     * @return AppVersion Affected versions of the vulnerability
      */
     public String getAppVersion() {
         return this.AppVersion;
     }
 
     /**
-     * Set Vulnerability impact version.
-     * @param AppVersion Vulnerability impact version.
+     * Set Affected versions of the vulnerability
+     * @param AppVersion Affected versions of the vulnerability
      */
     public void setAppVersion(String AppVersion) {
         this.AppVersion = AppVersion;
     }
 
     /**
-     * Get Risks. 
-     * @return VULURL Risks.
+     * Get Risk point 
+     * @return VULURL Risk point
      */
     public String getVULURL() {
         return this.VULURL;
     }
 
     /**
-     * Set Risks.
-     * @param VULURL Risks.
+     * Set Risk point
+     * @param VULURL Risk point
      */
     public void setVULURL(String VULURL) {
         this.VULURL = VULURL;
@@ -616,144 +616,144 @@ public class VULViewVULRiskData extends AbstractModel {
     }
 
     /**
-     * Get Vulnerability tag. during searching, emergency mandatory parameter VulTag=SuggestRepair/EMGCVul. 
-     * @return VulTag Vulnerability tag. during searching, emergency mandatory parameter VulTag=SuggestRepair/EMGCVul.
+     * Get Vulnerability tag. During searching, you must pass in `VulTag=SuggestRepair/EMGCVul` for emergency and mandatory vulnerabilities. 
+     * @return VulTag Vulnerability tag. During searching, you must pass in `VulTag=SuggestRepair/EMGCVul` for emergency and mandatory vulnerabilities.
      */
     public String [] getVulTag() {
         return this.VulTag;
     }
 
     /**
-     * Set Vulnerability tag. during searching, emergency mandatory parameter VulTag=SuggestRepair/EMGCVul.
-     * @param VulTag Vulnerability tag. during searching, emergency mandatory parameter VulTag=SuggestRepair/EMGCVul.
+     * Set Vulnerability tag. During searching, you must pass in `VulTag=SuggestRepair/EMGCVul` for emergency and mandatory vulnerabilities.
+     * @param VulTag Vulnerability tag. During searching, you must pass in `VulTag=SuggestRepair/EMGCVul` for emergency and mandatory vulnerabilities.
      */
     public void setVulTag(String [] VulTag) {
         this.VulTag = VulTag;
     }
 
     /**
-     * Get Vulnerability disclosure time. 
-     * @return DisclosureTime Vulnerability disclosure time.
+     * Get Vulnerability disclosure time 
+     * @return DisclosureTime Vulnerability disclosure time
      */
     public String getDisclosureTime() {
         return this.DisclosureTime;
     }
 
     /**
-     * Set Vulnerability disclosure time.
-     * @param DisclosureTime Vulnerability disclosure time.
+     * Set Vulnerability disclosure time
+     * @param DisclosureTime Vulnerability disclosure time
      */
     public void setDisclosureTime(String DisclosureTime) {
         this.DisclosureTime = DisclosureTime;
     }
 
     /**
-     * Get Attack intensity. 
-     * @return AttackHeat Attack intensity.
+     * Get Attack heat 
+     * @return AttackHeat Attack heat
      */
     public Long getAttackHeat() {
         return this.AttackHeat;
     }
 
     /**
-     * Set Attack intensity.
-     * @param AttackHeat Attack intensity.
+     * Set Attack heat
+     * @param AttackHeat Attack heat
      */
     public void setAttackHeat(Long AttackHeat) {
         this.AttackHeat = AttackHeat;
     }
 
     /**
-     * Get Whether a mandatory vulnerability: 1 - yes; 0 - no. 
-     * @return IsSuggest Whether a mandatory vulnerability: 1 - yes; 0 - no.
+     * Get Whether it is a mandatory vulnerability. 1: yes, 0: no 
+     * @return IsSuggest Whether it is a mandatory vulnerability. 1: yes, 0: no
      */
     public Long getIsSuggest() {
         return this.IsSuggest;
     }
 
     /**
-     * Set Whether a mandatory vulnerability: 1 - yes; 0 - no.
-     * @param IsSuggest Whether a mandatory vulnerability: 1 - yes; 0 - no.
+     * Set Whether it is a mandatory vulnerability. 1: yes, 0: no
+     * @param IsSuggest Whether it is a mandatory vulnerability. 1: yes, 0: no
      */
     public void setIsSuggest(Long IsSuggest) {
         this.IsSuggest = IsSuggest;
     }
 
     /**
-     * Get Disposal task id. 
-     * @return HandleTaskId Disposal task id.
+     * Get Disposal task id 
+     * @return HandleTaskId Disposal task id
      */
     public String getHandleTaskId() {
         return this.HandleTaskId;
     }
 
     /**
-     * Set Disposal task id.
-     * @param HandleTaskId Disposal task id.
+     * Set Disposal task id
+     * @param HandleTaskId Disposal task id
      */
     public void setHandleTaskId(String HandleTaskId) {
         this.HandleTaskId = HandleTaskId;
     }
 
     /**
-     * Get Engine source. 
-     * @return EngineSource Engine source.
+     * Get Engine source 
+     * @return EngineSource Engine source
      */
     public String getEngineSource() {
         return this.EngineSource;
     }
 
     /**
-     * Set Engine source.
-     * @param EngineSource Engine source.
+     * Set Engine source
+     * @param EngineSource Engine source
      */
     public void setEngineSource(String EngineSource) {
         this.EngineSource = EngineSource;
     }
 
     /**
-     * Get New vulnerability risk id. 
-     * @return VulRiskId New vulnerability risk id.
+     * Get New vulnerability risk id 
+     * @return VulRiskId New vulnerability risk id
      */
     public String getVulRiskId() {
         return this.VulRiskId;
     }
 
     /**
-     * Set New vulnerability risk id.
-     * @param VulRiskId New vulnerability risk id.
+     * Set New vulnerability risk id
+     * @param VulRiskId New vulnerability risk id
      */
     public void setVulRiskId(String VulRiskId) {
         this.VulRiskId = VulRiskId;
     }
 
     /**
-     * Get New version vulnerability id. 
-     * @return TvdID New version vulnerability id.
+     * Get New version vulnerability id 
+     * @return TvdID New version vulnerability id
      */
     public String getTvdID() {
         return this.TvdID;
     }
 
     /**
-     * Set New version vulnerability id.
-     * @param TvdID New version vulnerability id.
+     * Set New version vulnerability id
+     * @param TvdID New version vulnerability id
      */
     public void setTvdID(String TvdID) {
         this.TvdID = TvdID;
     }
 
     /**
-     * Get Is it possible to perform a one-click physical examination. valid values: 1-yes, 0-not allowed. 
-     * @return IsOneClick Is it possible to perform a one-click physical examination. valid values: 1-yes, 0-not allowed.
+     * Get Is one-click physical examination possible? 1: allowed, 0: not allowed. 
+     * @return IsOneClick Is one-click physical examination possible? 1: allowed, 0: not allowed.
      */
     public Long getIsOneClick() {
         return this.IsOneClick;
     }
 
     /**
-     * Set Is it possible to perform a one-click physical examination. valid values: 1-yes, 0-not allowed.
-     * @param IsOneClick Is it possible to perform a one-click physical examination. valid values: 1-yes, 0-not allowed.
+     * Set Is one-click physical examination possible? 1: allowed, 0: not allowed.
+     * @param IsOneClick Is one-click physical examination possible? 1: allowed, 0: not allowed.
      */
     public void setIsOneClick(Long IsOneClick) {
         this.IsOneClick = IsOneClick;

@@ -31,14 +31,14 @@ public class DescribeVULRiskAdvanceCFGListRequest extends AbstractModel {
     private String [] MemberId;
 
     /**
-    * Task ID
+    * Task ID.
     */
     @SerializedName("TaskId")
     @Expose
     private String TaskId;
 
     /**
-    * Filter conditions.
+    * Filter criteria.
     */
     @SerializedName("Filter")
     @Expose
@@ -61,32 +61,32 @@ public class DescribeVULRiskAdvanceCFGListRequest extends AbstractModel {
     }
 
     /**
-     * Get Task ID 
-     * @return TaskId Task ID
+     * Get Task ID. 
+     * @return TaskId Task ID.
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set Task ID
-     * @param TaskId Task ID
+     * Set Task ID.
+     * @param TaskId Task ID.
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;
     }
 
     /**
-     * Get Filter conditions. 
-     * @return Filter Filter conditions.
+     * Get Filter criteria. 
+     * @return Filter Filter criteria.
      */
     public Filter getFilter() {
         return this.Filter;
     }
 
     /**
-     * Set Filter conditions.
-     * @param Filter Filter conditions.
+     * Set Filter criteria.
+     * @param Filter Filter criteria.
      */
     public void setFilter(Filter Filter) {
         this.Filter = Filter;

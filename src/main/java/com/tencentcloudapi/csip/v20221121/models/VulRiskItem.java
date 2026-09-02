@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class VulRiskItem extends AbstractModel {
 
     /**
-    * Cloud account ID.
+    * Cloud Account ID
     */
     @SerializedName("CloudAccountID")
     @Expose
@@ -45,7 +45,7 @@ public class VulRiskItem extends AbstractModel {
     private String InstanceStatus;
 
     /**
-    * Instance name
+    * Instance name.
     */
     @SerializedName("InstanceName")
     @Expose
@@ -53,8 +53,6 @@ public class VulRiskItem extends AbstractModel {
 
     /**
     * Creation time.
-
-
     */
     @SerializedName("CreateTime")
     @Expose
@@ -75,7 +73,7 @@ public class VulRiskItem extends AbstractModel {
     private String VulName;
 
     /**
-    * Vulnerability type.
+    * vulnerability type
     */
     @SerializedName("VulCategory")
     @Expose
@@ -89,7 +87,7 @@ public class VulRiskItem extends AbstractModel {
     private String VulLevel;
 
     /**
-    * CVE id.
+    * CVE ID
     */
     @SerializedName("CveID")
     @Expose
@@ -103,58 +101,58 @@ public class VulRiskItem extends AbstractModel {
     private String Description;
 
     /**
-    * Container ID.
+    * Container ID
     */
     @SerializedName("ContainerID")
     @Expose
     private String ContainerID;
 
     /**
-    * Vulnerability risk remediation recommendation.
+    * Vulnerability risk remediation recommendations
     */
     @SerializedName("Fix")
     @Expose
     private String Fix;
 
     /**
-    * Linux vulnerability.
+    * Linux vulnerability
     */
     @SerializedName("VulCategoryName")
     @Expose
     private String VulCategoryName;
 
     /**
-    * Vulnerability level name.
+    * Vulnerability level name
     */
     @SerializedName("VulLevelName")
     @Expose
     private String VulLevelName;
 
     /**
-    * Instance status chinese information.
+    * Chinese information of instance status
     */
     @SerializedName("InstanceStatusName")
     @Expose
     private String InstanceStatusName;
 
     /**
-    * Tenant ID.
+    * Tenant ID
     */
     @SerializedName("AppID")
     @Expose
     private Long AppID;
 
     /**
-     * Get Cloud account ID. 
-     * @return CloudAccountID Cloud account ID.
+     * Get Cloud Account ID 
+     * @return CloudAccountID Cloud Account ID
      */
     public String getCloudAccountID() {
         return this.CloudAccountID;
     }
 
     /**
-     * Set Cloud account ID.
-     * @param CloudAccountID Cloud account ID.
+     * Set Cloud Account ID
+     * @param CloudAccountID Cloud Account ID
      */
     public void setCloudAccountID(String CloudAccountID) {
         this.CloudAccountID = CloudAccountID;
@@ -193,28 +191,24 @@ public class VulRiskItem extends AbstractModel {
     }
 
     /**
-     * Get Instance name 
-     * @return InstanceName Instance name
+     * Get Instance name. 
+     * @return InstanceName Instance name.
      */
     public String getInstanceName() {
         return this.InstanceName;
     }
 
     /**
-     * Set Instance name
-     * @param InstanceName Instance name
+     * Set Instance name.
+     * @param InstanceName Instance name.
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;
     }
 
     /**
-     * Get Creation time.
-
- 
+     * Get Creation time. 
      * @return CreateTime Creation time.
-
-
      */
     public String getCreateTime() {
         return this.CreateTime;
@@ -222,11 +216,7 @@ public class VulRiskItem extends AbstractModel {
 
     /**
      * Set Creation time.
-
-
      * @param CreateTime Creation time.
-
-
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
@@ -265,16 +255,16 @@ public class VulRiskItem extends AbstractModel {
     }
 
     /**
-     * Get Vulnerability type. 
-     * @return VulCategory Vulnerability type.
+     * Get vulnerability type 
+     * @return VulCategory vulnerability type
      */
     public String getVulCategory() {
         return this.VulCategory;
     }
 
     /**
-     * Set Vulnerability type.
-     * @param VulCategory Vulnerability type.
+     * Set vulnerability type
+     * @param VulCategory vulnerability type
      */
     public void setVulCategory(String VulCategory) {
         this.VulCategory = VulCategory;
@@ -297,16 +287,16 @@ public class VulRiskItem extends AbstractModel {
     }
 
     /**
-     * Get CVE id. 
-     * @return CveID CVE id.
+     * Get CVE ID 
+     * @return CveID CVE ID
      */
     public String getCveID() {
         return this.CveID;
     }
 
     /**
-     * Set CVE id.
-     * @param CveID CVE id.
+     * Set CVE ID
+     * @param CveID CVE ID
      */
     public void setCveID(String CveID) {
         this.CveID = CveID;
@@ -329,96 +319,96 @@ public class VulRiskItem extends AbstractModel {
     }
 
     /**
-     * Get Container ID. 
-     * @return ContainerID Container ID.
+     * Get Container ID 
+     * @return ContainerID Container ID
      */
     public String getContainerID() {
         return this.ContainerID;
     }
 
     /**
-     * Set Container ID.
-     * @param ContainerID Container ID.
+     * Set Container ID
+     * @param ContainerID Container ID
      */
     public void setContainerID(String ContainerID) {
         this.ContainerID = ContainerID;
     }
 
     /**
-     * Get Vulnerability risk remediation recommendation. 
-     * @return Fix Vulnerability risk remediation recommendation.
+     * Get Vulnerability risk remediation recommendations 
+     * @return Fix Vulnerability risk remediation recommendations
      */
     public String getFix() {
         return this.Fix;
     }
 
     /**
-     * Set Vulnerability risk remediation recommendation.
-     * @param Fix Vulnerability risk remediation recommendation.
+     * Set Vulnerability risk remediation recommendations
+     * @param Fix Vulnerability risk remediation recommendations
      */
     public void setFix(String Fix) {
         this.Fix = Fix;
     }
 
     /**
-     * Get Linux vulnerability. 
-     * @return VulCategoryName Linux vulnerability.
+     * Get Linux vulnerability 
+     * @return VulCategoryName Linux vulnerability
      */
     public String getVulCategoryName() {
         return this.VulCategoryName;
     }
 
     /**
-     * Set Linux vulnerability.
-     * @param VulCategoryName Linux vulnerability.
+     * Set Linux vulnerability
+     * @param VulCategoryName Linux vulnerability
      */
     public void setVulCategoryName(String VulCategoryName) {
         this.VulCategoryName = VulCategoryName;
     }
 
     /**
-     * Get Vulnerability level name. 
-     * @return VulLevelName Vulnerability level name.
+     * Get Vulnerability level name 
+     * @return VulLevelName Vulnerability level name
      */
     public String getVulLevelName() {
         return this.VulLevelName;
     }
 
     /**
-     * Set Vulnerability level name.
-     * @param VulLevelName Vulnerability level name.
+     * Set Vulnerability level name
+     * @param VulLevelName Vulnerability level name
      */
     public void setVulLevelName(String VulLevelName) {
         this.VulLevelName = VulLevelName;
     }
 
     /**
-     * Get Instance status chinese information. 
-     * @return InstanceStatusName Instance status chinese information.
+     * Get Chinese information of instance status 
+     * @return InstanceStatusName Chinese information of instance status
      */
     public String getInstanceStatusName() {
         return this.InstanceStatusName;
     }
 
     /**
-     * Set Instance status chinese information.
-     * @param InstanceStatusName Instance status chinese information.
+     * Set Chinese information of instance status
+     * @param InstanceStatusName Chinese information of instance status
      */
     public void setInstanceStatusName(String InstanceStatusName) {
         this.InstanceStatusName = InstanceStatusName;
     }
 
     /**
-     * Get Tenant ID. 
-     * @return AppID Tenant ID.
+     * Get Tenant ID 
+     * @return AppID Tenant ID
      */
     public Long getAppID() {
         return this.AppID;
     }
 
     /**
-     * Set Tenant ID.
-     * @param AppID Tenant ID.
+     * Set Tenant ID
+     * @param AppID Tenant ID
      */
     public void setAppID(Long AppID) {
         this.AppID = AppID;

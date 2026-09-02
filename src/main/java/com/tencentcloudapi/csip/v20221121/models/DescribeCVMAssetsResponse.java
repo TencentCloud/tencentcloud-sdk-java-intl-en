@@ -101,21 +101,21 @@ public class DescribeCVMAssetsResponse extends AbstractModel {
     private FilterDataObject [] OsList;
 
     /**
-    * Mapping of asset type and instance type.
+    * Mapping between asset types and instance types
     */
     @SerializedName("AssetMapInstanceTypeList")
     @Expose
     private AssetInstanceTypeMap [] AssetMapInstanceTypeList;
 
     /**
-    * Public network private network enumeration.
+    * Public/private network enumeration
     */
     @SerializedName("PublicPrivateAttr")
     @Expose
     private FilterDataObject [] PublicPrivateAttr;
 
     /**
-    * Host protection status.
+    * Host protection status
     */
     @SerializedName("ProtectStatusList")
     @Expose
@@ -305,48 +305,48 @@ public class DescribeCVMAssetsResponse extends AbstractModel {
     }
 
     /**
-     * Get Mapping of asset type and instance type. 
-     * @return AssetMapInstanceTypeList Mapping of asset type and instance type.
+     * Get Mapping between asset types and instance types 
+     * @return AssetMapInstanceTypeList Mapping between asset types and instance types
      */
     public AssetInstanceTypeMap [] getAssetMapInstanceTypeList() {
         return this.AssetMapInstanceTypeList;
     }
 
     /**
-     * Set Mapping of asset type and instance type.
-     * @param AssetMapInstanceTypeList Mapping of asset type and instance type.
+     * Set Mapping between asset types and instance types
+     * @param AssetMapInstanceTypeList Mapping between asset types and instance types
      */
     public void setAssetMapInstanceTypeList(AssetInstanceTypeMap [] AssetMapInstanceTypeList) {
         this.AssetMapInstanceTypeList = AssetMapInstanceTypeList;
     }
 
     /**
-     * Get Public network private network enumeration. 
-     * @return PublicPrivateAttr Public network private network enumeration.
+     * Get Public/private network enumeration 
+     * @return PublicPrivateAttr Public/private network enumeration
      */
     public FilterDataObject [] getPublicPrivateAttr() {
         return this.PublicPrivateAttr;
     }
 
     /**
-     * Set Public network private network enumeration.
-     * @param PublicPrivateAttr Public network private network enumeration.
+     * Set Public/private network enumeration
+     * @param PublicPrivateAttr Public/private network enumeration
      */
     public void setPublicPrivateAttr(FilterDataObject [] PublicPrivateAttr) {
         this.PublicPrivateAttr = PublicPrivateAttr;
     }
 
     /**
-     * Get Host protection status. 
-     * @return ProtectStatusList Host protection status.
+     * Get Host protection status 
+     * @return ProtectStatusList Host protection status
      */
     public FilterDataObject [] getProtectStatusList() {
         return this.ProtectStatusList;
     }
 
     /**
-     * Set Host protection status.
-     * @param ProtectStatusList Host protection status.
+     * Set Host protection status
+     * @param ProtectStatusList Host protection status
      */
     public void setProtectStatusList(FilterDataObject [] ProtectStatusList) {
         this.ProtectStatusList = ProtectStatusList;

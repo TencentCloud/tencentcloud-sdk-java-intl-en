@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeRiskCenterPortViewPortRiskListResponse extends AbstractModel {
 
     /**
-    * Total number of entries
+    * Total quantity.
     */
     @SerializedName("TotalCount")
     @Expose
@@ -38,21 +38,21 @@ public class DescribeRiskCenterPortViewPortRiskListResponse extends AbstractMode
     private PortViewPortRisk [] Data;
 
     /**
-    * List of risk levels
+    * Danger Level List
     */
     @SerializedName("LevelLists")
     @Expose
     private FilterDataObject [] LevelLists;
 
     /**
-    * List of suggestions
+    * Disposal Suggestion List
     */
     @SerializedName("SuggestionLists")
     @Expose
     private FilterDataObject [] SuggestionLists;
 
     /**
-    * List of check source
+    * Source List
     */
     @SerializedName("FromLists")
     @Expose
@@ -66,16 +66,16 @@ public class DescribeRiskCenterPortViewPortRiskListResponse extends AbstractMode
     private String RequestId;
 
     /**
-     * Get Total number of entries 
-     * @return TotalCount Total number of entries
+     * Get Total quantity. 
+     * @return TotalCount Total quantity.
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set Total number of entries
-     * @param TotalCount Total number of entries
+     * Set Total quantity.
+     * @param TotalCount Total quantity.
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
@@ -98,48 +98,48 @@ public class DescribeRiskCenterPortViewPortRiskListResponse extends AbstractMode
     }
 
     /**
-     * Get List of risk levels 
-     * @return LevelLists List of risk levels
+     * Get Danger Level List 
+     * @return LevelLists Danger Level List
      */
     public FilterDataObject [] getLevelLists() {
         return this.LevelLists;
     }
 
     /**
-     * Set List of risk levels
-     * @param LevelLists List of risk levels
+     * Set Danger Level List
+     * @param LevelLists Danger Level List
      */
     public void setLevelLists(FilterDataObject [] LevelLists) {
         this.LevelLists = LevelLists;
     }
 
     /**
-     * Get List of suggestions 
-     * @return SuggestionLists List of suggestions
+     * Get Disposal Suggestion List 
+     * @return SuggestionLists Disposal Suggestion List
      */
     public FilterDataObject [] getSuggestionLists() {
         return this.SuggestionLists;
     }
 
     /**
-     * Set List of suggestions
-     * @param SuggestionLists List of suggestions
+     * Set Disposal Suggestion List
+     * @param SuggestionLists Disposal Suggestion List
      */
     public void setSuggestionLists(FilterDataObject [] SuggestionLists) {
         this.SuggestionLists = SuggestionLists;
     }
 
     /**
-     * Get List of check source 
-     * @return FromLists List of check source
+     * Get Source List 
+     * @return FromLists Source List
      */
     public FilterDataObject [] getFromLists() {
         return this.FromLists;
     }
 
     /**
-     * Set List of check source
-     * @param FromLists List of check source
+     * Set Source List
+     * @param FromLists Source List
      */
     public void setFromLists(FilterDataObject [] FromLists) {
         this.FromLists = FromLists;

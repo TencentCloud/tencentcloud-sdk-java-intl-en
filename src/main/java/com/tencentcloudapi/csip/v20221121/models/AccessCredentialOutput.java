@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class AccessCredentialOutput extends AbstractModel {
 
     /**
-    * Credential key name (original), such as SecretId, SecretKey, Token
+    * Credential key name (original text), for example, SecretId, SecretKey, and Token.
     */
     @SerializedName("Key")
     @Expose
@@ -32,23 +32,23 @@ public class AccessCredentialOutput extends AbstractModel {
 
     /**
     * Credential key-value (masked)
-Supplementary description: Reserve the first 3 and last 4 digits, replace the middle with ***; replace all with *** if the length is less than 7.
+Supplemental description: Reserve the first 3 and last 4 digits, replace the middle with ***; if the length is less than 7 digits, replace all with ***.
     */
     @SerializedName("Value")
     @Expose
     private String Value;
 
     /**
-     * Get Credential key name (original), such as SecretId, SecretKey, Token 
-     * @return Key Credential key name (original), such as SecretId, SecretKey, Token
+     * Get Credential key name (original text), for example, SecretId, SecretKey, and Token. 
+     * @return Key Credential key name (original text), for example, SecretId, SecretKey, and Token.
      */
     public String getKey() {
         return this.Key;
     }
 
     /**
-     * Set Credential key name (original), such as SecretId, SecretKey, Token
-     * @param Key Credential key name (original), such as SecretId, SecretKey, Token
+     * Set Credential key name (original text), for example, SecretId, SecretKey, and Token.
+     * @param Key Credential key name (original text), for example, SecretId, SecretKey, and Token.
      */
     public void setKey(String Key) {
         this.Key = Key;
@@ -56,9 +56,9 @@ Supplementary description: Reserve the first 3 and last 4 digits, replace the mi
 
     /**
      * Get Credential key-value (masked)
-Supplementary description: Reserve the first 3 and last 4 digits, replace the middle with ***; replace all with *** if the length is less than 7. 
+Supplemental description: Reserve the first 3 and last 4 digits, replace the middle with ***; if the length is less than 7 digits, replace all with ***. 
      * @return Value Credential key-value (masked)
-Supplementary description: Reserve the first 3 and last 4 digits, replace the middle with ***; replace all with *** if the length is less than 7.
+Supplemental description: Reserve the first 3 and last 4 digits, replace the middle with ***; if the length is less than 7 digits, replace all with ***.
      */
     public String getValue() {
         return this.Value;
@@ -66,9 +66,9 @@ Supplementary description: Reserve the first 3 and last 4 digits, replace the mi
 
     /**
      * Set Credential key-value (masked)
-Supplementary description: Reserve the first 3 and last 4 digits, replace the middle with ***; replace all with *** if the length is less than 7.
+Supplemental description: Reserve the first 3 and last 4 digits, replace the middle with ***; if the length is less than 7 digits, replace all with ***.
      * @param Value Credential key-value (masked)
-Supplementary description: Reserve the first 3 and last 4 digits, replace the middle with ***; replace all with *** if the length is less than 7.
+Supplemental description: Reserve the first 3 and last 4 digits, replace the middle with ***; if the length is less than 7 digits, replace all with ***.
      */
     public void setValue(String Value) {
         this.Value = Value;

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateDomainAndIpResponse extends AbstractModel {
 
     /**
-    * Number of created assets
+    * Returns the Number of Successful Creations
     */
     @SerializedName("Data")
     @Expose
@@ -38,16 +38,16 @@ public class CreateDomainAndIpResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Number of created assets 
-     * @return Data Number of created assets
+     * Get Returns the Number of Successful Creations 
+     * @return Data Returns the Number of Successful Creations
      */
     public Long getData() {
         return this.Data;
     }
 
     /**
-     * Set Number of created assets
-     * @param Data Number of created assets
+     * Set Returns the Number of Successful Creations
+     * @param Data Returns the Number of Successful Creations
      */
     public void setData(Long Data) {
         this.Data = Data;

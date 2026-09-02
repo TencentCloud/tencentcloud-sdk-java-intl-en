@@ -31,14 +31,14 @@ public class CVMAssetVO extends AbstractModel {
     private String AssetId;
 
     /**
-    * Asset name.
+    * Asset name
     */
     @SerializedName("AssetName")
     @Expose
     private String AssetName;
 
     /**
-    * Asset type.
+    * Asset type
     */
     @SerializedName("AssetType")
     @Expose
@@ -59,7 +59,7 @@ public class CVMAssetVO extends AbstractModel {
     private Long CWPStatus;
 
     /**
-    * Asset creation time.
+    * Asset creation time
     */
     @SerializedName("AssetCreateTime")
     @Expose
@@ -73,7 +73,7 @@ public class CVMAssetVO extends AbstractModel {
     private String PublicIp;
 
     /**
-    * Private IP.
+    * Private IP
     */
     @SerializedName("PrivateIp")
     @Expose
@@ -143,14 +143,14 @@ public class CVMAssetVO extends AbstractModel {
     private String SubnetName;
 
     /**
-    * CWP Agent UUID.
+    * Host security Agent UUID
     */
     @SerializedName("InstanceUuid")
     @Expose
     private String InstanceUuid;
 
     /**
-    * CVM host UUID.
+    * CVM UUID
     */
     @SerializedName("InstanceQUuid")
     @Expose
@@ -234,7 +234,7 @@ public class CVMAssetVO extends AbstractModel {
     private String ProcessCount;
 
     /**
-    * Software application.
+    * Software application
     */
     @SerializedName("AppCount")
     @Expose
@@ -248,14 +248,14 @@ public class CVMAssetVO extends AbstractModel {
     private Long PortCount;
 
     /**
-    * Network attack.
+    * Network attack
     */
     @SerializedName("Attack")
     @Expose
     private Long Attack;
 
     /**
-    * Network access.
+    * Network access
     */
     @SerializedName("Access")
     @Expose
@@ -269,28 +269,28 @@ public class CVMAssetVO extends AbstractModel {
     private Long Intercept;
 
     /**
-    * Inbound peak bandwidth.
+    * Inbound peak bandwidth
     */
     @SerializedName("InBandwidth")
     @Expose
     private String InBandwidth;
 
     /**
-    * Outbound peak bandwidth.
+    * Outbound peak bandwidth
     */
     @SerializedName("OutBandwidth")
     @Expose
     private String OutBandwidth;
 
     /**
-    * Total inbound traffic.
+    * Total inbound traffic
     */
     @SerializedName("InFlow")
     @Expose
     private String InFlow;
 
     /**
-    * Outbound cumulative traffic.
+    * Outbound cumulative traffic
     */
     @SerializedName("OutFlow")
     @Expose
@@ -304,28 +304,28 @@ public class CVMAssetVO extends AbstractModel {
     private String LastScanTime;
 
     /**
-    * Malicious outgoing request.
+    * Malicious outgoing request
     */
     @SerializedName("NetWorkOut")
     @Expose
     private Long NetWorkOut;
 
     /**
-    * Port risk.
+    * Port risk
     */
     @SerializedName("PortRisk")
     @Expose
     private Long PortRisk;
 
     /**
-    * Vulnerability risk.
+    * Vulnerability risk
     */
     @SerializedName("VulnerabilityRisk")
     @Expose
     private Long VulnerabilityRisk;
 
     /**
-    * Configuration risk.
+    * Configuration risk
     */
     @SerializedName("ConfigurationRisk")
     @Expose
@@ -360,7 +360,7 @@ public class CVMAssetVO extends AbstractModel {
     private String Os;
 
     /**
-    * Risk service exposure.
+    * Risk service exposure
     */
     @SerializedName("RiskExposure")
     @Expose
@@ -381,119 +381,119 @@ public class CVMAssetVO extends AbstractModel {
     private Long IsNewAsset;
 
     /**
-    * 0: not installed; 1: install; 2: installing.
+    * 0: not installed; 1: installed; 2: installing
     */
     @SerializedName("CVMAgentStatus")
     @Expose
     private Long CVMAgentStatus;
 
     /**
-    * 1: enable 0: not enabled.
+    * 1: Enable; 0: Not enabled
     */
     @SerializedName("CVMStatus")
     @Expose
     private Long CVMStatus;
 
     /**
-    * 1: client installed 0: not installed 2: Agentless.
+    * 1: Installed on the client 0: Not installed 2: Agentless
     */
     @SerializedName("DefenseModel")
     @Expose
     private Long DefenseModel;
 
     /**
-    * 1: installed 0: not installed.
+    * 1: installed; 0: not installed
     */
     @SerializedName("TatStatus")
     @Expose
     private Long TatStatus;
 
     /**
-    * cpu trend chart.
+    * cpu trend chart
     */
     @SerializedName("CpuTrend")
     @Expose
     private Element [] CpuTrend;
 
     /**
-    * Memory trend chart.
+    * Memory trend chart
     */
     @SerializedName("MemoryTrend")
     @Expose
     private Element [] MemoryTrend;
 
     /**
-    * 1: agent online 0: agent offline 2: host offline.
+    * 1: agent online 0: agent offline 2: Host offline
     */
     @SerializedName("AgentStatus")
     @Expose
     private Long AgentStatus;
 
     /**
-    * Number of shutdowns this month.
+    * Number of protection shutdowns this month
     */
     @SerializedName("CloseDefenseCount")
     @Expose
     private Long CloseDefenseCount;
 
     /**
-    * Running state.
+    * Running status.
     */
     @SerializedName("InstanceState")
     @Expose
     private String InstanceState;
 
     /**
-    * Security group data.
+    * Security group data
     */
     @SerializedName("SecurityGroupIds")
     @Expose
     private String [] SecurityGroupIds;
 
     /**
-    * Physical memory occupied KB.
+    * Physical memory usage in KB
     */
     @SerializedName("AgentMemRss")
     @Expose
     private Long AgentMemRss;
 
     /**
-    * CPU utilization percentage.
+    * CPU utilization percentage
     */
     @SerializedName("AgentCpuPer")
     @Expose
     private Float AgentCpuPer;
 
     /**
-    * Actual appid belonging to cvm.
+    * appid that the cvm actually belongs to
     */
     @SerializedName("RealAppid")
     @Expose
     private Long RealAppid;
 
     /**
-    * Cloud asset type: 0: tencent cloud, 1: aws, 2: azure.
+    * Cloud asset type: 0: Tencent Cloud, 1: aws, 2: azure
     */
     @SerializedName("CloudType")
     @Expose
     private Long CloudType;
 
     /**
-    * Host protection status enumeration.
-0: not installed.
-Basic edition protection.
-2: inclusive edition protection.
-3: protection by pro edition.
-4: ultimate edition protection.
-5: offline.
-6: shutdown.
+    * Host Protection Status Enumeration
+0: not installed
+1: In basic edition protection
+2: In inclusive edition protection
+3: Protection by pro edition
+4: Flagship edition protection
+5: offline
+6: Shutdown
     */
     @SerializedName("ProtectStatus")
     @Expose
     private Long ProtectStatus;
 
     /**
-    * Last offline time.
+    * Last offline time
     */
     @SerializedName("OfflineTime")
     @Expose
@@ -516,32 +516,32 @@ Basic edition protection.
     }
 
     /**
-     * Get Asset name. 
-     * @return AssetName Asset name.
+     * Get Asset name 
+     * @return AssetName Asset name
      */
     public String getAssetName() {
         return this.AssetName;
     }
 
     /**
-     * Set Asset name.
-     * @param AssetName Asset name.
+     * Set Asset name
+     * @param AssetName Asset name
      */
     public void setAssetName(String AssetName) {
         this.AssetName = AssetName;
     }
 
     /**
-     * Get Asset type. 
-     * @return AssetType Asset type.
+     * Get Asset type 
+     * @return AssetType Asset type
      */
     public String getAssetType() {
         return this.AssetType;
     }
 
     /**
-     * Set Asset type.
-     * @param AssetType Asset type.
+     * Set Asset type
+     * @param AssetType Asset type
      */
     public void setAssetType(String AssetType) {
         this.AssetType = AssetType;
@@ -580,16 +580,16 @@ Basic edition protection.
     }
 
     /**
-     * Get Asset creation time. 
-     * @return AssetCreateTime Asset creation time.
+     * Get Asset creation time 
+     * @return AssetCreateTime Asset creation time
      */
     public String getAssetCreateTime() {
         return this.AssetCreateTime;
     }
 
     /**
-     * Set Asset creation time.
-     * @param AssetCreateTime Asset creation time.
+     * Set Asset creation time
+     * @param AssetCreateTime Asset creation time
      */
     public void setAssetCreateTime(String AssetCreateTime) {
         this.AssetCreateTime = AssetCreateTime;
@@ -612,16 +612,16 @@ Basic edition protection.
     }
 
     /**
-     * Get Private IP. 
-     * @return PrivateIp Private IP.
+     * Get Private IP 
+     * @return PrivateIp Private IP
      */
     public String getPrivateIp() {
         return this.PrivateIp;
     }
 
     /**
-     * Set Private IP.
-     * @param PrivateIp Private IP.
+     * Set Private IP
+     * @param PrivateIp Private IP
      */
     public void setPrivateIp(String PrivateIp) {
         this.PrivateIp = PrivateIp;
@@ -772,32 +772,32 @@ Basic edition protection.
     }
 
     /**
-     * Get CWP Agent UUID. 
-     * @return InstanceUuid CWP Agent UUID.
+     * Get Host security Agent UUID 
+     * @return InstanceUuid Host security Agent UUID
      */
     public String getInstanceUuid() {
         return this.InstanceUuid;
     }
 
     /**
-     * Set CWP Agent UUID.
-     * @param InstanceUuid CWP Agent UUID.
+     * Set Host security Agent UUID
+     * @param InstanceUuid Host security Agent UUID
      */
     public void setInstanceUuid(String InstanceUuid) {
         this.InstanceUuid = InstanceUuid;
     }
 
     /**
-     * Get CVM host UUID. 
-     * @return InstanceQUuid CVM host UUID.
+     * Get CVM UUID 
+     * @return InstanceQUuid CVM UUID
      */
     public String getInstanceQUuid() {
         return this.InstanceQUuid;
     }
 
     /**
-     * Set CVM host UUID.
-     * @param InstanceQUuid CVM host UUID.
+     * Set CVM UUID
+     * @param InstanceQUuid CVM UUID
      */
     public void setInstanceQUuid(String InstanceQUuid) {
         this.InstanceQUuid = InstanceQUuid;
@@ -980,16 +980,16 @@ Basic edition protection.
     }
 
     /**
-     * Get Software application. 
-     * @return AppCount Software application.
+     * Get Software application 
+     * @return AppCount Software application
      */
     public String getAppCount() {
         return this.AppCount;
     }
 
     /**
-     * Set Software application.
-     * @param AppCount Software application.
+     * Set Software application
+     * @param AppCount Software application
      */
     public void setAppCount(String AppCount) {
         this.AppCount = AppCount;
@@ -1012,32 +1012,32 @@ Basic edition protection.
     }
 
     /**
-     * Get Network attack. 
-     * @return Attack Network attack.
+     * Get Network attack 
+     * @return Attack Network attack
      */
     public Long getAttack() {
         return this.Attack;
     }
 
     /**
-     * Set Network attack.
-     * @param Attack Network attack.
+     * Set Network attack
+     * @param Attack Network attack
      */
     public void setAttack(Long Attack) {
         this.Attack = Attack;
     }
 
     /**
-     * Get Network access. 
-     * @return Access Network access.
+     * Get Network access 
+     * @return Access Network access
      */
     public Long getAccess() {
         return this.Access;
     }
 
     /**
-     * Set Network access.
-     * @param Access Network access.
+     * Set Network access
+     * @param Access Network access
      */
     public void setAccess(Long Access) {
         this.Access = Access;
@@ -1060,64 +1060,64 @@ Basic edition protection.
     }
 
     /**
-     * Get Inbound peak bandwidth. 
-     * @return InBandwidth Inbound peak bandwidth.
+     * Get Inbound peak bandwidth 
+     * @return InBandwidth Inbound peak bandwidth
      */
     public String getInBandwidth() {
         return this.InBandwidth;
     }
 
     /**
-     * Set Inbound peak bandwidth.
-     * @param InBandwidth Inbound peak bandwidth.
+     * Set Inbound peak bandwidth
+     * @param InBandwidth Inbound peak bandwidth
      */
     public void setInBandwidth(String InBandwidth) {
         this.InBandwidth = InBandwidth;
     }
 
     /**
-     * Get Outbound peak bandwidth. 
-     * @return OutBandwidth Outbound peak bandwidth.
+     * Get Outbound peak bandwidth 
+     * @return OutBandwidth Outbound peak bandwidth
      */
     public String getOutBandwidth() {
         return this.OutBandwidth;
     }
 
     /**
-     * Set Outbound peak bandwidth.
-     * @param OutBandwidth Outbound peak bandwidth.
+     * Set Outbound peak bandwidth
+     * @param OutBandwidth Outbound peak bandwidth
      */
     public void setOutBandwidth(String OutBandwidth) {
         this.OutBandwidth = OutBandwidth;
     }
 
     /**
-     * Get Total inbound traffic. 
-     * @return InFlow Total inbound traffic.
+     * Get Total inbound traffic 
+     * @return InFlow Total inbound traffic
      */
     public String getInFlow() {
         return this.InFlow;
     }
 
     /**
-     * Set Total inbound traffic.
-     * @param InFlow Total inbound traffic.
+     * Set Total inbound traffic
+     * @param InFlow Total inbound traffic
      */
     public void setInFlow(String InFlow) {
         this.InFlow = InFlow;
     }
 
     /**
-     * Get Outbound cumulative traffic. 
-     * @return OutFlow Outbound cumulative traffic.
+     * Get Outbound cumulative traffic 
+     * @return OutFlow Outbound cumulative traffic
      */
     public String getOutFlow() {
         return this.OutFlow;
     }
 
     /**
-     * Set Outbound cumulative traffic.
-     * @param OutFlow Outbound cumulative traffic.
+     * Set Outbound cumulative traffic
+     * @param OutFlow Outbound cumulative traffic
      */
     public void setOutFlow(String OutFlow) {
         this.OutFlow = OutFlow;
@@ -1140,64 +1140,64 @@ Basic edition protection.
     }
 
     /**
-     * Get Malicious outgoing request. 
-     * @return NetWorkOut Malicious outgoing request.
+     * Get Malicious outgoing request 
+     * @return NetWorkOut Malicious outgoing request
      */
     public Long getNetWorkOut() {
         return this.NetWorkOut;
     }
 
     /**
-     * Set Malicious outgoing request.
-     * @param NetWorkOut Malicious outgoing request.
+     * Set Malicious outgoing request
+     * @param NetWorkOut Malicious outgoing request
      */
     public void setNetWorkOut(Long NetWorkOut) {
         this.NetWorkOut = NetWorkOut;
     }
 
     /**
-     * Get Port risk. 
-     * @return PortRisk Port risk.
+     * Get Port risk 
+     * @return PortRisk Port risk
      */
     public Long getPortRisk() {
         return this.PortRisk;
     }
 
     /**
-     * Set Port risk.
-     * @param PortRisk Port risk.
+     * Set Port risk
+     * @param PortRisk Port risk
      */
     public void setPortRisk(Long PortRisk) {
         this.PortRisk = PortRisk;
     }
 
     /**
-     * Get Vulnerability risk. 
-     * @return VulnerabilityRisk Vulnerability risk.
+     * Get Vulnerability risk 
+     * @return VulnerabilityRisk Vulnerability risk
      */
     public Long getVulnerabilityRisk() {
         return this.VulnerabilityRisk;
     }
 
     /**
-     * Set Vulnerability risk.
-     * @param VulnerabilityRisk Vulnerability risk.
+     * Set Vulnerability risk
+     * @param VulnerabilityRisk Vulnerability risk
      */
     public void setVulnerabilityRisk(Long VulnerabilityRisk) {
         this.VulnerabilityRisk = VulnerabilityRisk;
     }
 
     /**
-     * Get Configuration risk. 
-     * @return ConfigurationRisk Configuration risk.
+     * Get Configuration risk 
+     * @return ConfigurationRisk Configuration risk
      */
     public Long getConfigurationRisk() {
         return this.ConfigurationRisk;
     }
 
     /**
-     * Set Configuration risk.
-     * @param ConfigurationRisk Configuration risk.
+     * Set Configuration risk
+     * @param ConfigurationRisk Configuration risk
      */
     public void setConfigurationRisk(Long ConfigurationRisk) {
         this.ConfigurationRisk = ConfigurationRisk;
@@ -1268,16 +1268,16 @@ Basic edition protection.
     }
 
     /**
-     * Get Risk service exposure. 
-     * @return RiskExposure Risk service exposure.
+     * Get Risk service exposure 
+     * @return RiskExposure Risk service exposure
      */
     public Long getRiskExposure() {
         return this.RiskExposure;
     }
 
     /**
-     * Set Risk service exposure.
-     * @param RiskExposure Risk service exposure.
+     * Set Risk service exposure
+     * @param RiskExposure Risk service exposure
      */
     public void setRiskExposure(Long RiskExposure) {
         this.RiskExposure = RiskExposure;
@@ -1316,284 +1316,284 @@ Basic edition protection.
     }
 
     /**
-     * Get 0: not installed; 1: install; 2: installing. 
-     * @return CVMAgentStatus 0: not installed; 1: install; 2: installing.
+     * Get 0: not installed; 1: installed; 2: installing 
+     * @return CVMAgentStatus 0: not installed; 1: installed; 2: installing
      */
     public Long getCVMAgentStatus() {
         return this.CVMAgentStatus;
     }
 
     /**
-     * Set 0: not installed; 1: install; 2: installing.
-     * @param CVMAgentStatus 0: not installed; 1: install; 2: installing.
+     * Set 0: not installed; 1: installed; 2: installing
+     * @param CVMAgentStatus 0: not installed; 1: installed; 2: installing
      */
     public void setCVMAgentStatus(Long CVMAgentStatus) {
         this.CVMAgentStatus = CVMAgentStatus;
     }
 
     /**
-     * Get 1: enable 0: not enabled. 
-     * @return CVMStatus 1: enable 0: not enabled.
+     * Get 1: Enable; 0: Not enabled 
+     * @return CVMStatus 1: Enable; 0: Not enabled
      */
     public Long getCVMStatus() {
         return this.CVMStatus;
     }
 
     /**
-     * Set 1: enable 0: not enabled.
-     * @param CVMStatus 1: enable 0: not enabled.
+     * Set 1: Enable; 0: Not enabled
+     * @param CVMStatus 1: Enable; 0: Not enabled
      */
     public void setCVMStatus(Long CVMStatus) {
         this.CVMStatus = CVMStatus;
     }
 
     /**
-     * Get 1: client installed 0: not installed 2: Agentless. 
-     * @return DefenseModel 1: client installed 0: not installed 2: Agentless.
+     * Get 1: Installed on the client 0: Not installed 2: Agentless 
+     * @return DefenseModel 1: Installed on the client 0: Not installed 2: Agentless
      */
     public Long getDefenseModel() {
         return this.DefenseModel;
     }
 
     /**
-     * Set 1: client installed 0: not installed 2: Agentless.
-     * @param DefenseModel 1: client installed 0: not installed 2: Agentless.
+     * Set 1: Installed on the client 0: Not installed 2: Agentless
+     * @param DefenseModel 1: Installed on the client 0: Not installed 2: Agentless
      */
     public void setDefenseModel(Long DefenseModel) {
         this.DefenseModel = DefenseModel;
     }
 
     /**
-     * Get 1: installed 0: not installed. 
-     * @return TatStatus 1: installed 0: not installed.
+     * Get 1: installed; 0: not installed 
+     * @return TatStatus 1: installed; 0: not installed
      */
     public Long getTatStatus() {
         return this.TatStatus;
     }
 
     /**
-     * Set 1: installed 0: not installed.
-     * @param TatStatus 1: installed 0: not installed.
+     * Set 1: installed; 0: not installed
+     * @param TatStatus 1: installed; 0: not installed
      */
     public void setTatStatus(Long TatStatus) {
         this.TatStatus = TatStatus;
     }
 
     /**
-     * Get cpu trend chart. 
-     * @return CpuTrend cpu trend chart.
+     * Get cpu trend chart 
+     * @return CpuTrend cpu trend chart
      */
     public Element [] getCpuTrend() {
         return this.CpuTrend;
     }
 
     /**
-     * Set cpu trend chart.
-     * @param CpuTrend cpu trend chart.
+     * Set cpu trend chart
+     * @param CpuTrend cpu trend chart
      */
     public void setCpuTrend(Element [] CpuTrend) {
         this.CpuTrend = CpuTrend;
     }
 
     /**
-     * Get Memory trend chart. 
-     * @return MemoryTrend Memory trend chart.
+     * Get Memory trend chart 
+     * @return MemoryTrend Memory trend chart
      */
     public Element [] getMemoryTrend() {
         return this.MemoryTrend;
     }
 
     /**
-     * Set Memory trend chart.
-     * @param MemoryTrend Memory trend chart.
+     * Set Memory trend chart
+     * @param MemoryTrend Memory trend chart
      */
     public void setMemoryTrend(Element [] MemoryTrend) {
         this.MemoryTrend = MemoryTrend;
     }
 
     /**
-     * Get 1: agent online 0: agent offline 2: host offline. 
-     * @return AgentStatus 1: agent online 0: agent offline 2: host offline.
+     * Get 1: agent online 0: agent offline 2: Host offline 
+     * @return AgentStatus 1: agent online 0: agent offline 2: Host offline
      */
     public Long getAgentStatus() {
         return this.AgentStatus;
     }
 
     /**
-     * Set 1: agent online 0: agent offline 2: host offline.
-     * @param AgentStatus 1: agent online 0: agent offline 2: host offline.
+     * Set 1: agent online 0: agent offline 2: Host offline
+     * @param AgentStatus 1: agent online 0: agent offline 2: Host offline
      */
     public void setAgentStatus(Long AgentStatus) {
         this.AgentStatus = AgentStatus;
     }
 
     /**
-     * Get Number of shutdowns this month. 
-     * @return CloseDefenseCount Number of shutdowns this month.
+     * Get Number of protection shutdowns this month 
+     * @return CloseDefenseCount Number of protection shutdowns this month
      */
     public Long getCloseDefenseCount() {
         return this.CloseDefenseCount;
     }
 
     /**
-     * Set Number of shutdowns this month.
-     * @param CloseDefenseCount Number of shutdowns this month.
+     * Set Number of protection shutdowns this month
+     * @param CloseDefenseCount Number of protection shutdowns this month
      */
     public void setCloseDefenseCount(Long CloseDefenseCount) {
         this.CloseDefenseCount = CloseDefenseCount;
     }
 
     /**
-     * Get Running state. 
-     * @return InstanceState Running state.
+     * Get Running status. 
+     * @return InstanceState Running status.
      */
     public String getInstanceState() {
         return this.InstanceState;
     }
 
     /**
-     * Set Running state.
-     * @param InstanceState Running state.
+     * Set Running status.
+     * @param InstanceState Running status.
      */
     public void setInstanceState(String InstanceState) {
         this.InstanceState = InstanceState;
     }
 
     /**
-     * Get Security group data. 
-     * @return SecurityGroupIds Security group data.
+     * Get Security group data 
+     * @return SecurityGroupIds Security group data
      */
     public String [] getSecurityGroupIds() {
         return this.SecurityGroupIds;
     }
 
     /**
-     * Set Security group data.
-     * @param SecurityGroupIds Security group data.
+     * Set Security group data
+     * @param SecurityGroupIds Security group data
      */
     public void setSecurityGroupIds(String [] SecurityGroupIds) {
         this.SecurityGroupIds = SecurityGroupIds;
     }
 
     /**
-     * Get Physical memory occupied KB. 
-     * @return AgentMemRss Physical memory occupied KB.
+     * Get Physical memory usage in KB 
+     * @return AgentMemRss Physical memory usage in KB
      */
     public Long getAgentMemRss() {
         return this.AgentMemRss;
     }
 
     /**
-     * Set Physical memory occupied KB.
-     * @param AgentMemRss Physical memory occupied KB.
+     * Set Physical memory usage in KB
+     * @param AgentMemRss Physical memory usage in KB
      */
     public void setAgentMemRss(Long AgentMemRss) {
         this.AgentMemRss = AgentMemRss;
     }
 
     /**
-     * Get CPU utilization percentage. 
-     * @return AgentCpuPer CPU utilization percentage.
+     * Get CPU utilization percentage 
+     * @return AgentCpuPer CPU utilization percentage
      */
     public Float getAgentCpuPer() {
         return this.AgentCpuPer;
     }
 
     /**
-     * Set CPU utilization percentage.
-     * @param AgentCpuPer CPU utilization percentage.
+     * Set CPU utilization percentage
+     * @param AgentCpuPer CPU utilization percentage
      */
     public void setAgentCpuPer(Float AgentCpuPer) {
         this.AgentCpuPer = AgentCpuPer;
     }
 
     /**
-     * Get Actual appid belonging to cvm. 
-     * @return RealAppid Actual appid belonging to cvm.
+     * Get appid that the cvm actually belongs to 
+     * @return RealAppid appid that the cvm actually belongs to
      */
     public Long getRealAppid() {
         return this.RealAppid;
     }
 
     /**
-     * Set Actual appid belonging to cvm.
-     * @param RealAppid Actual appid belonging to cvm.
+     * Set appid that the cvm actually belongs to
+     * @param RealAppid appid that the cvm actually belongs to
      */
     public void setRealAppid(Long RealAppid) {
         this.RealAppid = RealAppid;
     }
 
     /**
-     * Get Cloud asset type: 0: tencent cloud, 1: aws, 2: azure. 
-     * @return CloudType Cloud asset type: 0: tencent cloud, 1: aws, 2: azure.
+     * Get Cloud asset type: 0: Tencent Cloud, 1: aws, 2: azure 
+     * @return CloudType Cloud asset type: 0: Tencent Cloud, 1: aws, 2: azure
      */
     public Long getCloudType() {
         return this.CloudType;
     }
 
     /**
-     * Set Cloud asset type: 0: tencent cloud, 1: aws, 2: azure.
-     * @param CloudType Cloud asset type: 0: tencent cloud, 1: aws, 2: azure.
+     * Set Cloud asset type: 0: Tencent Cloud, 1: aws, 2: azure
+     * @param CloudType Cloud asset type: 0: Tencent Cloud, 1: aws, 2: azure
      */
     public void setCloudType(Long CloudType) {
         this.CloudType = CloudType;
     }
 
     /**
-     * Get Host protection status enumeration.
-0: not installed.
-Basic edition protection.
-2: inclusive edition protection.
-3: protection by pro edition.
-4: ultimate edition protection.
-5: offline.
-6: shutdown. 
-     * @return ProtectStatus Host protection status enumeration.
-0: not installed.
-Basic edition protection.
-2: inclusive edition protection.
-3: protection by pro edition.
-4: ultimate edition protection.
-5: offline.
-6: shutdown.
+     * Get Host Protection Status Enumeration
+0: not installed
+1: In basic edition protection
+2: In inclusive edition protection
+3: Protection by pro edition
+4: Flagship edition protection
+5: offline
+6: Shutdown 
+     * @return ProtectStatus Host Protection Status Enumeration
+0: not installed
+1: In basic edition protection
+2: In inclusive edition protection
+3: Protection by pro edition
+4: Flagship edition protection
+5: offline
+6: Shutdown
      */
     public Long getProtectStatus() {
         return this.ProtectStatus;
     }
 
     /**
-     * Set Host protection status enumeration.
-0: not installed.
-Basic edition protection.
-2: inclusive edition protection.
-3: protection by pro edition.
-4: ultimate edition protection.
-5: offline.
-6: shutdown.
-     * @param ProtectStatus Host protection status enumeration.
-0: not installed.
-Basic edition protection.
-2: inclusive edition protection.
-3: protection by pro edition.
-4: ultimate edition protection.
-5: offline.
-6: shutdown.
+     * Set Host Protection Status Enumeration
+0: not installed
+1: In basic edition protection
+2: In inclusive edition protection
+3: Protection by pro edition
+4: Flagship edition protection
+5: offline
+6: Shutdown
+     * @param ProtectStatus Host Protection Status Enumeration
+0: not installed
+1: In basic edition protection
+2: In inclusive edition protection
+3: Protection by pro edition
+4: Flagship edition protection
+5: offline
+6: Shutdown
      */
     public void setProtectStatus(Long ProtectStatus) {
         this.ProtectStatus = ProtectStatus;
     }
 
     /**
-     * Get Last offline time. 
-     * @return OfflineTime Last offline time.
+     * Get Last offline time 
+     * @return OfflineTime Last offline time
      */
     public String getOfflineTime() {
         return this.OfflineTime;
     }
 
     /**
-     * Set Last offline time.
-     * @param OfflineTime Last offline time.
+     * Set Last offline time
+     * @param OfflineTime Last offline time
      */
     public void setOfflineTime(String OfflineTime) {
         this.OfflineTime = OfflineTime;

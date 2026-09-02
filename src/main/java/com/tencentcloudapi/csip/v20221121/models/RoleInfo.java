@@ -52,14 +52,14 @@ public class RoleInfo extends AbstractModel {
     private Long Port;
 
     /**
-    * asset ID
+    * Asset ID
     */
     @SerializedName("InstanceID")
     @Expose
     private String InstanceID;
 
     /**
-    * city
+    * City
     */
     @SerializedName("City")
     @Expose
@@ -73,7 +73,7 @@ public class RoleInfo extends AbstractModel {
     private String Province;
 
     /**
-    * nation
+    * national
     */
     @SerializedName("Country")
     @Expose
@@ -87,14 +87,14 @@ public class RoleInfo extends AbstractModel {
     private String Address;
 
     /**
-    * latitude
+    * Latitude
     */
     @SerializedName("Latitude")
     @Expose
     private String Latitude;
 
     /**
-    * longitude
+    * Longitude
     */
     @SerializedName("Longitude")
     @Expose
@@ -115,7 +115,7 @@ public class RoleInfo extends AbstractModel {
     private String Domain;
 
     /**
-    * Enterprise Name
+    * Enterprise name
     */
     @SerializedName("Name")
     @Expose
@@ -150,7 +150,7 @@ public class RoleInfo extends AbstractModel {
     private String MD5;
 
     /**
-    * Malicious process filename
+    * Malicious process file name
     */
     @SerializedName("FileName")
     @Expose
@@ -178,7 +178,7 @@ public class RoleInfo extends AbstractModel {
     private String ContainerName;
 
     /**
-    * container ID
+    * Container ID
     */
     @SerializedName("ContainerID")
     @Expose
@@ -249,32 +249,32 @@ public class RoleInfo extends AbstractModel {
     }
 
     /**
-     * Get asset ID 
-     * @return InstanceID asset ID
+     * Get Asset ID 
+     * @return InstanceID Asset ID
      */
     public String getInstanceID() {
         return this.InstanceID;
     }
 
     /**
-     * Set asset ID
-     * @param InstanceID asset ID
+     * Set Asset ID
+     * @param InstanceID Asset ID
      */
     public void setInstanceID(String InstanceID) {
         this.InstanceID = InstanceID;
     }
 
     /**
-     * Get city 
-     * @return City city
+     * Get City 
+     * @return City City
      */
     public String getCity() {
         return this.City;
     }
 
     /**
-     * Set city
-     * @param City city
+     * Set City
+     * @param City City
      */
     public void setCity(String City) {
         this.City = City;
@@ -297,16 +297,16 @@ public class RoleInfo extends AbstractModel {
     }
 
     /**
-     * Get nation 
-     * @return Country nation
+     * Get national 
+     * @return Country national
      */
     public String getCountry() {
         return this.Country;
     }
 
     /**
-     * Set nation
-     * @param Country nation
+     * Set national
+     * @param Country national
      */
     public void setCountry(String Country) {
         this.Country = Country;
@@ -329,32 +329,32 @@ public class RoleInfo extends AbstractModel {
     }
 
     /**
-     * Get latitude 
-     * @return Latitude latitude
+     * Get Latitude 
+     * @return Latitude Latitude
      */
     public String getLatitude() {
         return this.Latitude;
     }
 
     /**
-     * Set latitude
-     * @param Latitude latitude
+     * Set Latitude
+     * @param Latitude Latitude
      */
     public void setLatitude(String Latitude) {
         this.Latitude = Latitude;
     }
 
     /**
-     * Get longitude 
-     * @return Longitude longitude
+     * Get Longitude 
+     * @return Longitude Longitude
      */
     public String getLongitude() {
         return this.Longitude;
     }
 
     /**
-     * Set longitude
-     * @param Longitude longitude
+     * Set Longitude
+     * @param Longitude Longitude
      */
     public void setLongitude(String Longitude) {
         this.Longitude = Longitude;
@@ -393,16 +393,16 @@ public class RoleInfo extends AbstractModel {
     }
 
     /**
-     * Get Enterprise Name 
-     * @return Name Enterprise Name
+     * Get Enterprise name 
+     * @return Name Enterprise name
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Enterprise Name
-     * @param Name Enterprise Name
+     * Set Enterprise name
+     * @param Name Enterprise name
      */
     public void setName(String Name) {
         this.Name = Name;
@@ -473,16 +473,16 @@ public class RoleInfo extends AbstractModel {
     }
 
     /**
-     * Get Malicious process filename 
-     * @return FileName Malicious process filename
+     * Get Malicious process file name 
+     * @return FileName Malicious process file name
      */
     public String getFileName() {
         return this.FileName;
     }
 
     /**
-     * Set Malicious process filename
-     * @param FileName Malicious process filename
+     * Set Malicious process file name
+     * @param FileName Malicious process file name
      */
     public void setFileName(String FileName) {
         this.FileName = FileName;
@@ -537,16 +537,16 @@ public class RoleInfo extends AbstractModel {
     }
 
     /**
-     * Get container ID 
-     * @return ContainerID container ID
+     * Get Container ID 
+     * @return ContainerID Container ID
      */
     public String getContainerID() {
         return this.ContainerID;
     }
 
     /**
-     * Set container ID
-     * @param ContainerID container ID
+     * Set Container ID
+     * @param ContainerID Container ID
      */
     public void setContainerID(String ContainerID) {
         this.ContainerID = ContainerID;

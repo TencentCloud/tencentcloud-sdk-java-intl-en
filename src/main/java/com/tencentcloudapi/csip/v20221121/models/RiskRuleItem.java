@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class RiskRuleItem extends AbstractModel {
 
     /**
-    * Risk Check Item ID
+    * Risk check item ID
     */
     @SerializedName("ItemId")
     @Expose
     private String ItemId;
 
     /**
-    * Cloud vendor name
+    * Vendor name
     */
     @SerializedName("Provider")
     @Expose
@@ -52,7 +52,7 @@ public class RiskRuleItem extends AbstractModel {
     private String InstanceName;
 
     /**
-    * risk name
+    * Risk name
     */
     @SerializedName("RiskTitle")
     @Expose
@@ -80,32 +80,32 @@ public class RiskRuleItem extends AbstractModel {
     private String RiskInfluence;
 
     /**
-     * Get Risk Check Item ID 
-     * @return ItemId Risk Check Item ID
+     * Get Risk check item ID 
+     * @return ItemId Risk check item ID
      */
     public String getItemId() {
         return this.ItemId;
     }
 
     /**
-     * Set Risk Check Item ID
-     * @param ItemId Risk Check Item ID
+     * Set Risk check item ID
+     * @param ItemId Risk check item ID
      */
     public void setItemId(String ItemId) {
         this.ItemId = ItemId;
     }
 
     /**
-     * Get Cloud vendor name 
-     * @return Provider Cloud vendor name
+     * Get Vendor name 
+     * @return Provider Vendor name
      */
     public String getProvider() {
         return this.Provider;
     }
 
     /**
-     * Set Cloud vendor name
-     * @param Provider Cloud vendor name
+     * Set Vendor name
+     * @param Provider Vendor name
      */
     public void setProvider(String Provider) {
         this.Provider = Provider;
@@ -144,16 +144,16 @@ public class RiskRuleItem extends AbstractModel {
     }
 
     /**
-     * Get risk name 
-     * @return RiskTitle risk name
+     * Get Risk name 
+     * @return RiskTitle Risk name
      */
     public String getRiskTitle() {
         return this.RiskTitle;
     }
 
     /**
-     * Set risk name
-     * @param RiskTitle risk name
+     * Set Risk name
+     * @param RiskTitle Risk name
      */
     public void setRiskTitle(String RiskTitle) {
         this.RiskTitle = RiskTitle;

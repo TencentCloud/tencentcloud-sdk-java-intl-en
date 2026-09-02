@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class PublicIpDomainListKey extends AbstractModel {
 
     /**
-    * IP/Domain
+    * Asset Value
     */
     @SerializedName("Asset")
     @Expose
     private String Asset;
 
     /**
-     * Get IP/Domain 
-     * @return Asset IP/Domain
+     * Get Asset Value 
+     * @return Asset Asset Value
      */
     public String getAsset() {
         return this.Asset;
     }
 
     /**
-     * Set IP/Domain
-     * @param Asset IP/Domain
+     * Set Asset Value
+     * @param Asset Asset Value
      */
     public void setAsset(String Asset) {
         this.Asset = Asset;

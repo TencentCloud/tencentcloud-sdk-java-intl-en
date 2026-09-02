@@ -1597,6 +1597,17 @@ Live stream processing event notification supports HTTP callbacks and also suppo
     }
 
     /**
+     *Query the result corresponding to a Hunyuan3D task.
+     * @param req QueryHunyuan3DTaskRequest
+     * @return QueryHunyuan3DTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public QueryHunyuan3DTaskResponse QueryHunyuan3DTask(QueryHunyuan3DTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "QueryHunyuan3DTask", QueryHunyuan3DTaskResponse.class);
+    }
+
+    /**
      *This API is used to query an episode project.
      * @param req QueryProjectRequest
      * @return QueryProjectResponse
@@ -1627,6 +1638,17 @@ Live stream processing event notification supports HTTP callbacks and also suppo
     public ResetWorkflowResponse ResetWorkflow(ResetWorkflowRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ResetWorkflow", ResetWorkflowResponse.class);
+    }
+
+    /**
+     *Submit creation of a Hunyuan 3D task.
+     * @param req SubmitHunyuan3DTaskRequest
+     * @return SubmitHunyuan3DTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public SubmitHunyuan3DTaskResponse SubmitHunyuan3DTask(SubmitHunyuan3DTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "SubmitHunyuan3DTask", SubmitHunyuan3DTaskResponse.class);
     }
 
     /**

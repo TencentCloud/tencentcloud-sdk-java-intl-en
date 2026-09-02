@@ -31,21 +31,21 @@ public class DescribeAccessKeyAlarmDetailResponse extends AbstractModel {
     private AccessKeyAlarm AlarmInfo;
 
     /**
-    * Number of CAM policies in the associated account.
+    * Number of CAM policies of the associated account
     */
     @SerializedName("CamCount")
     @Expose
     private Long CamCount;
 
     /**
-    * Number of AK risks.
+    * Number of AK risks
     */
     @SerializedName("RiskCount")
     @Expose
     private Long RiskCount;
 
     /**
-    * Alarm policy description.
+    * Alarm policy description
     */
     @SerializedName("AlarmDesc")
     @Expose
@@ -75,48 +75,48 @@ public class DescribeAccessKeyAlarmDetailResponse extends AbstractModel {
     }
 
     /**
-     * Get Number of CAM policies in the associated account. 
-     * @return CamCount Number of CAM policies in the associated account.
+     * Get Number of CAM policies of the associated account 
+     * @return CamCount Number of CAM policies of the associated account
      */
     public Long getCamCount() {
         return this.CamCount;
     }
 
     /**
-     * Set Number of CAM policies in the associated account.
-     * @param CamCount Number of CAM policies in the associated account.
+     * Set Number of CAM policies of the associated account
+     * @param CamCount Number of CAM policies of the associated account
      */
     public void setCamCount(Long CamCount) {
         this.CamCount = CamCount;
     }
 
     /**
-     * Get Number of AK risks. 
-     * @return RiskCount Number of AK risks.
+     * Get Number of AK risks 
+     * @return RiskCount Number of AK risks
      */
     public Long getRiskCount() {
         return this.RiskCount;
     }
 
     /**
-     * Set Number of AK risks.
-     * @param RiskCount Number of AK risks.
+     * Set Number of AK risks
+     * @param RiskCount Number of AK risks
      */
     public void setRiskCount(Long RiskCount) {
         this.RiskCount = RiskCount;
     }
 
     /**
-     * Get Alarm policy description. 
-     * @return AlarmDesc Alarm policy description.
+     * Get Alarm policy description 
+     * @return AlarmDesc Alarm policy description
      */
     public String getAlarmDesc() {
         return this.AlarmDesc;
     }
 
     /**
-     * Set Alarm policy description.
-     * @param AlarmDesc Alarm policy description.
+     * Set Alarm policy description
+     * @param AlarmDesc Alarm policy description
      */
     public void setAlarmDesc(String AlarmDesc) {
         this.AlarmDesc = AlarmDesc;

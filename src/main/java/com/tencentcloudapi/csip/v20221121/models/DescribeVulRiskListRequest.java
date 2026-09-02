@@ -66,14 +66,14 @@ public class DescribeVulRiskListRequest extends AbstractModel {
     private String By;
 
     /**
-    * Cloud account ID.
+    * Cloud Account ID
     */
     @SerializedName("CloudAccountID")
     @Expose
     private String CloudAccountID;
 
     /**
-    * Cloud service provider.
+    * cloud service provider
     */
     @SerializedName("Provider")
     @Expose
@@ -176,32 +176,32 @@ public class DescribeVulRiskListRequest extends AbstractModel {
     }
 
     /**
-     * Get Cloud account ID. 
-     * @return CloudAccountID Cloud account ID.
+     * Get Cloud Account ID 
+     * @return CloudAccountID Cloud Account ID
      */
     public String getCloudAccountID() {
         return this.CloudAccountID;
     }
 
     /**
-     * Set Cloud account ID.
-     * @param CloudAccountID Cloud account ID.
+     * Set Cloud Account ID
+     * @param CloudAccountID Cloud Account ID
      */
     public void setCloudAccountID(String CloudAccountID) {
         this.CloudAccountID = CloudAccountID;
     }
 
     /**
-     * Get Cloud service provider. 
-     * @return Provider Cloud service provider.
+     * Get cloud service provider 
+     * @return Provider cloud service provider
      */
     public String getProvider() {
         return this.Provider;
     }
 
     /**
-     * Set Cloud service provider.
-     * @param Provider Cloud service provider.
+     * Set cloud service provider
+     * @param Provider cloud service provider
      */
     public void setProvider(String Provider) {
         this.Provider = Provider;

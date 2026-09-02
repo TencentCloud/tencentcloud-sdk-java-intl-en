@@ -24,138 +24,138 @@ import java.util.HashMap;
 public class AccessKeyAlarmCount extends AbstractModel {
 
     /**
-    * Access key ID.
+    * Access key ID
     */
     @SerializedName("ID")
     @Expose
     private Long ID;
 
     /**
-    * Access key.
+    * Access key
     */
     @SerializedName("AccessKey")
     @Expose
     private String AccessKey;
 
     /**
-    * Alarm count.
+    * Alarm count
     */
     @SerializedName("AlarmCount")
     @Expose
     private Long AlarmCount;
 
     /**
-    * Security credentials status. valid values: 0 (disabled), 1 (enabled), 2 (deleted).
+    * Access key status: `0`: disabled, `1`: enabled, `2`: deleted
     */
     @SerializedName("AccessKeyStatus")
     @Expose
     private Long AccessKeyStatus;
 
     /**
-    * AK creation time.
+    * AK creation time
     */
     @SerializedName("AccessKeyCreateTime")
     @Expose
     private String AccessKeyCreateTime;
 
     /**
-    * AK last usage time. returns "-" if never used.
+    * Last AK usage time. If it has never been used, "-" is returned.
     */
     @SerializedName("LastAccessTime")
     @Expose
     private String LastAccessTime;
 
     /**
-     * Get Access key ID. 
-     * @return ID Access key ID.
+     * Get Access key ID 
+     * @return ID Access key ID
      */
     public Long getID() {
         return this.ID;
     }
 
     /**
-     * Set Access key ID.
-     * @param ID Access key ID.
+     * Set Access key ID
+     * @param ID Access key ID
      */
     public void setID(Long ID) {
         this.ID = ID;
     }
 
     /**
-     * Get Access key. 
-     * @return AccessKey Access key.
+     * Get Access key 
+     * @return AccessKey Access key
      */
     public String getAccessKey() {
         return this.AccessKey;
     }
 
     /**
-     * Set Access key.
-     * @param AccessKey Access key.
+     * Set Access key
+     * @param AccessKey Access key
      */
     public void setAccessKey(String AccessKey) {
         this.AccessKey = AccessKey;
     }
 
     /**
-     * Get Alarm count. 
-     * @return AlarmCount Alarm count.
+     * Get Alarm count 
+     * @return AlarmCount Alarm count
      */
     public Long getAlarmCount() {
         return this.AlarmCount;
     }
 
     /**
-     * Set Alarm count.
-     * @param AlarmCount Alarm count.
+     * Set Alarm count
+     * @param AlarmCount Alarm count
      */
     public void setAlarmCount(Long AlarmCount) {
         this.AlarmCount = AlarmCount;
     }
 
     /**
-     * Get Security credentials status. valid values: 0 (disabled), 1 (enabled), 2 (deleted). 
-     * @return AccessKeyStatus Security credentials status. valid values: 0 (disabled), 1 (enabled), 2 (deleted).
+     * Get Access key status: `0`: disabled, `1`: enabled, `2`: deleted 
+     * @return AccessKeyStatus Access key status: `0`: disabled, `1`: enabled, `2`: deleted
      */
     public Long getAccessKeyStatus() {
         return this.AccessKeyStatus;
     }
 
     /**
-     * Set Security credentials status. valid values: 0 (disabled), 1 (enabled), 2 (deleted).
-     * @param AccessKeyStatus Security credentials status. valid values: 0 (disabled), 1 (enabled), 2 (deleted).
+     * Set Access key status: `0`: disabled, `1`: enabled, `2`: deleted
+     * @param AccessKeyStatus Access key status: `0`: disabled, `1`: enabled, `2`: deleted
      */
     public void setAccessKeyStatus(Long AccessKeyStatus) {
         this.AccessKeyStatus = AccessKeyStatus;
     }
 
     /**
-     * Get AK creation time. 
-     * @return AccessKeyCreateTime AK creation time.
+     * Get AK creation time 
+     * @return AccessKeyCreateTime AK creation time
      */
     public String getAccessKeyCreateTime() {
         return this.AccessKeyCreateTime;
     }
 
     /**
-     * Set AK creation time.
-     * @param AccessKeyCreateTime AK creation time.
+     * Set AK creation time
+     * @param AccessKeyCreateTime AK creation time
      */
     public void setAccessKeyCreateTime(String AccessKeyCreateTime) {
         this.AccessKeyCreateTime = AccessKeyCreateTime;
     }
 
     /**
-     * Get AK last usage time. returns "-" if never used. 
-     * @return LastAccessTime AK last usage time. returns "-" if never used.
+     * Get Last AK usage time. If it has never been used, "-" is returned. 
+     * @return LastAccessTime Last AK usage time. If it has never been used, "-" is returned.
      */
     public String getLastAccessTime() {
         return this.LastAccessTime;
     }
 
     /**
-     * Set AK last usage time. returns "-" if never used.
-     * @param LastAccessTime AK last usage time. returns "-" if never used.
+     * Set Last AK usage time. If it has never been used, "-" is returned.
+     * @param LastAccessTime Last AK usage time. If it has never been used, "-" is returned.
      */
     public void setLastAccessTime(String LastAccessTime) {
         this.LastAccessTime = LastAccessTime;

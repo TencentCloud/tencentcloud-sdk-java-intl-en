@@ -31,7 +31,7 @@ public class DescribeTaskLogListRequest extends AbstractModel {
     private String [] MemberId;
 
     /**
-    * Filter conditions
+    * Filtered Content
     */
     @SerializedName("Filter")
     @Expose
@@ -54,16 +54,16 @@ public class DescribeTaskLogListRequest extends AbstractModel {
     }
 
     /**
-     * Get Filter conditions 
-     * @return Filter Filter conditions
+     * Get Filtered Content 
+     * @return Filter Filtered Content
      */
     public Filter getFilter() {
         return this.Filter;
     }
 
     /**
-     * Set Filter conditions
-     * @param Filter Filter conditions
+     * Set Filtered Content
+     * @param Filter Filtered Content
      */
     public void setFilter(Filter Filter) {
         this.Filter = Filter;

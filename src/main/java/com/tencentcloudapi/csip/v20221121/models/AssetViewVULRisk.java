@@ -31,7 +31,7 @@ public class AssetViewVULRisk extends AbstractModel {
     private String AffectAsset;
 
     /**
-    * Risk level: low - low risk, high - high risk, middle - medium risk, info - note, extreme - critical.
+    * Risk level. low: low risk. high: high risk. middle: medium risk. info: notification. extreme: critical.
 
     */
     @SerializedName("Level")
@@ -46,35 +46,35 @@ public class AssetViewVULRisk extends AbstractModel {
     private String InstanceType;
 
     /**
-    * Components
+    * Component
     */
     @SerializedName("Component")
     @Expose
     private String Component;
 
     /**
-    * Service
+    * Service.
     */
     @SerializedName("Service")
     @Expose
     private String Service;
 
     /**
-    * Last detected 
+    * Latest Recognition Time
     */
     @SerializedName("RecentTime")
     @Expose
     private String RecentTime;
 
     /**
-    * First detected
+    * First Recognition Time
     */
     @SerializedName("FirstTime")
     @Expose
     private String FirstTime;
 
     /**
-    * Status of the risk. `0`: Not handled, `1`: Handled; `2`: Ignored
+    * Status. 0-Unprocessed; 1-Disposed; 2-Ignored.
     */
     @SerializedName("Status")
     @Expose
@@ -88,28 +88,28 @@ public class AssetViewVULRisk extends AbstractModel {
     private String Id;
 
     /**
-    * Frontend index
+    * Front-end Index
     */
     @SerializedName("Index")
     @Expose
     private String Index;
 
     /**
-    * Instance ID
+    * Instance ID.
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Instance name
+    * Instance name.
     */
     @SerializedName("InstanceName")
     @Expose
     private String InstanceName;
 
     /**
-    * User `appid`
+    * User appid.
     */
     @SerializedName("AppId")
     @Expose
@@ -137,7 +137,7 @@ public class AssetViewVULRisk extends AbstractModel {
     private String VULType;
 
     /**
-    * Port
+    * Port.
     */
     @SerializedName("Port")
     @Expose
@@ -151,28 +151,28 @@ public class AssetViewVULRisk extends AbstractModel {
     private String Describe;
 
     /**
-    * Vulnerability impact component.
+    * Affected component of the vulnerability
     */
     @SerializedName("AppName")
     @Expose
     private String AppName;
 
     /**
-    * Technology reference.
+    * Technical reference
     */
     @SerializedName("References")
     @Expose
     private String References;
 
     /**
-    * Vulnerability impact version.
+    * Vulnerability Impact version
     */
     @SerializedName("AppVersion")
     @Expose
     private String AppVersion;
 
     /**
-    * Risks.
+    * Risk point
     */
     @SerializedName("VULURL")
     @Expose
@@ -186,7 +186,7 @@ public class AssetViewVULRisk extends AbstractModel {
     private String VULName;
 
     /**
-    * CVE number
+    * cve
     */
     @SerializedName("CVE")
     @Expose
@@ -200,7 +200,7 @@ public class AssetViewVULRisk extends AbstractModel {
     private String Fix;
 
     /**
-    * POC ID
+    * pocid
     */
     @SerializedName("POCId")
     @Expose
@@ -214,21 +214,21 @@ public class AssetViewVULRisk extends AbstractModel {
     private String From;
 
     /**
-    * CWPP edition
+    * Host version.
     */
     @SerializedName("CWPVersion")
     @Expose
     private Long CWPVersion;
 
     /**
-    * Whether it can be fixed 
+    * Whether repair is supported
     */
     @SerializedName("IsSupportRepair")
     @Expose
     private Boolean IsSupportRepair;
 
     /**
-    * Whether it can be detected
+    * Whether scanning is supported.
     */
     @SerializedName("IsSupportDetect")
     @Expose
@@ -272,9 +272,9 @@ public class AssetViewVULRisk extends AbstractModel {
     }
 
     /**
-     * Get Risk level: low - low risk, high - high risk, middle - medium risk, info - note, extreme - critical.
+     * Get Risk level. low: low risk. high: high risk. middle: medium risk. info: notification. extreme: critical.
  
-     * @return Level Risk level: low - low risk, high - high risk, middle - medium risk, info - note, extreme - critical.
+     * @return Level Risk level. low: low risk. high: high risk. middle: medium risk. info: notification. extreme: critical.
 
      */
     public String getLevel() {
@@ -282,9 +282,9 @@ public class AssetViewVULRisk extends AbstractModel {
     }
 
     /**
-     * Set Risk level: low - low risk, high - high risk, middle - medium risk, info - note, extreme - critical.
+     * Set Risk level. low: low risk. high: high risk. middle: medium risk. info: notification. extreme: critical.
 
-     * @param Level Risk level: low - low risk, high - high risk, middle - medium risk, info - note, extreme - critical.
+     * @param Level Risk level. low: low risk. high: high risk. middle: medium risk. info: notification. extreme: critical.
 
      */
     public void setLevel(String Level) {
@@ -308,80 +308,80 @@ public class AssetViewVULRisk extends AbstractModel {
     }
 
     /**
-     * Get Components 
-     * @return Component Components
+     * Get Component 
+     * @return Component Component
      */
     public String getComponent() {
         return this.Component;
     }
 
     /**
-     * Set Components
-     * @param Component Components
+     * Set Component
+     * @param Component Component
      */
     public void setComponent(String Component) {
         this.Component = Component;
     }
 
     /**
-     * Get Service 
-     * @return Service Service
+     * Get Service. 
+     * @return Service Service.
      */
     public String getService() {
         return this.Service;
     }
 
     /**
-     * Set Service
-     * @param Service Service
+     * Set Service.
+     * @param Service Service.
      */
     public void setService(String Service) {
         this.Service = Service;
     }
 
     /**
-     * Get Last detected  
-     * @return RecentTime Last detected 
+     * Get Latest Recognition Time 
+     * @return RecentTime Latest Recognition Time
      */
     public String getRecentTime() {
         return this.RecentTime;
     }
 
     /**
-     * Set Last detected 
-     * @param RecentTime Last detected 
+     * Set Latest Recognition Time
+     * @param RecentTime Latest Recognition Time
      */
     public void setRecentTime(String RecentTime) {
         this.RecentTime = RecentTime;
     }
 
     /**
-     * Get First detected 
-     * @return FirstTime First detected
+     * Get First Recognition Time 
+     * @return FirstTime First Recognition Time
      */
     public String getFirstTime() {
         return this.FirstTime;
     }
 
     /**
-     * Set First detected
-     * @param FirstTime First detected
+     * Set First Recognition Time
+     * @param FirstTime First Recognition Time
      */
     public void setFirstTime(String FirstTime) {
         this.FirstTime = FirstTime;
     }
 
     /**
-     * Get Status of the risk. `0`: Not handled, `1`: Handled; `2`: Ignored 
-     * @return Status Status of the risk. `0`: Not handled, `1`: Handled; `2`: Ignored
+     * Get Status. 0-Unprocessed; 1-Disposed; 2-Ignored. 
+     * @return Status Status. 0-Unprocessed; 1-Disposed; 2-Ignored.
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Status of the risk. `0`: Not handled, `1`: Handled; `2`: Ignored
-     * @param Status Status of the risk. `0`: Not handled, `1`: Handled; `2`: Ignored
+     * Set Status. 0-Unprocessed; 1-Disposed; 2-Ignored.
+     * @param Status Status. 0-Unprocessed; 1-Disposed; 2-Ignored.
      */
     public void setStatus(Long Status) {
         this.Status = Status;
@@ -404,64 +404,64 @@ public class AssetViewVULRisk extends AbstractModel {
     }
 
     /**
-     * Get Frontend index 
-     * @return Index Frontend index
+     * Get Front-end Index 
+     * @return Index Front-end Index
      */
     public String getIndex() {
         return this.Index;
     }
 
     /**
-     * Set Frontend index
-     * @param Index Frontend index
+     * Set Front-end Index
+     * @param Index Front-end Index
      */
     public void setIndex(String Index) {
         this.Index = Index;
     }
 
     /**
-     * Get Instance ID 
-     * @return InstanceId Instance ID
+     * Get Instance ID. 
+     * @return InstanceId Instance ID.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Instance ID
-     * @param InstanceId Instance ID
+     * Set Instance ID.
+     * @param InstanceId Instance ID.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Instance name 
-     * @return InstanceName Instance name
+     * Get Instance name. 
+     * @return InstanceName Instance name.
      */
     public String getInstanceName() {
         return this.InstanceName;
     }
 
     /**
-     * Set Instance name
-     * @param InstanceName Instance name
+     * Set Instance name.
+     * @param InstanceName Instance name.
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;
     }
 
     /**
-     * Get User `appid` 
-     * @return AppId User `appid`
+     * Get User appid. 
+     * @return AppId User appid.
      */
     public String getAppId() {
         return this.AppId;
     }
 
     /**
-     * Set User `appid`
-     * @param AppId User `appid`
+     * Set User appid.
+     * @param AppId User appid.
      */
     public void setAppId(String AppId) {
         this.AppId = AppId;
@@ -516,16 +516,16 @@ public class AssetViewVULRisk extends AbstractModel {
     }
 
     /**
-     * Get Port 
-     * @return Port Port
+     * Get Port. 
+     * @return Port Port.
      */
     public String getPort() {
         return this.Port;
     }
 
     /**
-     * Set Port
-     * @param Port Port
+     * Set Port.
+     * @param Port Port.
      */
     public void setPort(String Port) {
         this.Port = Port;
@@ -548,64 +548,64 @@ public class AssetViewVULRisk extends AbstractModel {
     }
 
     /**
-     * Get Vulnerability impact component. 
-     * @return AppName Vulnerability impact component.
+     * Get Affected component of the vulnerability 
+     * @return AppName Affected component of the vulnerability
      */
     public String getAppName() {
         return this.AppName;
     }
 
     /**
-     * Set Vulnerability impact component.
-     * @param AppName Vulnerability impact component.
+     * Set Affected component of the vulnerability
+     * @param AppName Affected component of the vulnerability
      */
     public void setAppName(String AppName) {
         this.AppName = AppName;
     }
 
     /**
-     * Get Technology reference. 
-     * @return References Technology reference.
+     * Get Technical reference 
+     * @return References Technical reference
      */
     public String getReferences() {
         return this.References;
     }
 
     /**
-     * Set Technology reference.
-     * @param References Technology reference.
+     * Set Technical reference
+     * @param References Technical reference
      */
     public void setReferences(String References) {
         this.References = References;
     }
 
     /**
-     * Get Vulnerability impact version. 
-     * @return AppVersion Vulnerability impact version.
+     * Get Vulnerability Impact version 
+     * @return AppVersion Vulnerability Impact version
      */
     public String getAppVersion() {
         return this.AppVersion;
     }
 
     /**
-     * Set Vulnerability impact version.
-     * @param AppVersion Vulnerability impact version.
+     * Set Vulnerability Impact version
+     * @param AppVersion Vulnerability Impact version
      */
     public void setAppVersion(String AppVersion) {
         this.AppVersion = AppVersion;
     }
 
     /**
-     * Get Risks. 
-     * @return VULURL Risks.
+     * Get Risk point 
+     * @return VULURL Risk point
      */
     public String getVULURL() {
         return this.VULURL;
     }
 
     /**
-     * Set Risks.
-     * @param VULURL Risks.
+     * Set Risk point
+     * @param VULURL Risk point
      */
     public void setVULURL(String VULURL) {
         this.VULURL = VULURL;
@@ -628,16 +628,16 @@ public class AssetViewVULRisk extends AbstractModel {
     }
 
     /**
-     * Get CVE number 
-     * @return CVE CVE number
+     * Get cve 
+     * @return CVE cve
      */
     public String getCVE() {
         return this.CVE;
     }
 
     /**
-     * Set CVE number
-     * @param CVE CVE number
+     * Set cve
+     * @param CVE cve
      */
     public void setCVE(String CVE) {
         this.CVE = CVE;
@@ -660,16 +660,16 @@ public class AssetViewVULRisk extends AbstractModel {
     }
 
     /**
-     * Get POC ID 
-     * @return POCId POC ID
+     * Get pocid 
+     * @return POCId pocid
      */
     public String getPOCId() {
         return this.POCId;
     }
 
     /**
-     * Set POC ID
-     * @param POCId POC ID
+     * Set pocid
+     * @param POCId pocid
      */
     public void setPOCId(String POCId) {
         this.POCId = POCId;
@@ -692,48 +692,48 @@ public class AssetViewVULRisk extends AbstractModel {
     }
 
     /**
-     * Get CWPP edition 
-     * @return CWPVersion CWPP edition
+     * Get Host version. 
+     * @return CWPVersion Host version.
      */
     public Long getCWPVersion() {
         return this.CWPVersion;
     }
 
     /**
-     * Set CWPP edition
-     * @param CWPVersion CWPP edition
+     * Set Host version.
+     * @param CWPVersion Host version.
      */
     public void setCWPVersion(Long CWPVersion) {
         this.CWPVersion = CWPVersion;
     }
 
     /**
-     * Get Whether it can be fixed  
-     * @return IsSupportRepair Whether it can be fixed 
+     * Get Whether repair is supported 
+     * @return IsSupportRepair Whether repair is supported
      */
     public Boolean getIsSupportRepair() {
         return this.IsSupportRepair;
     }
 
     /**
-     * Set Whether it can be fixed 
-     * @param IsSupportRepair Whether it can be fixed 
+     * Set Whether repair is supported
+     * @param IsSupportRepair Whether repair is supported
      */
     public void setIsSupportRepair(Boolean IsSupportRepair) {
         this.IsSupportRepair = IsSupportRepair;
     }
 
     /**
-     * Get Whether it can be detected 
-     * @return IsSupportDetect Whether it can be detected
+     * Get Whether scanning is supported. 
+     * @return IsSupportDetect Whether scanning is supported.
      */
     public Boolean getIsSupportDetect() {
         return this.IsSupportDetect;
     }
 
     /**
-     * Set Whether it can be detected
-     * @param IsSupportDetect Whether it can be detected
+     * Set Whether scanning is supported.
+     * @param IsSupportDetect Whether scanning is supported.
      */
     public void setIsSupportDetect(Boolean IsSupportDetect) {
         this.IsSupportDetect = IsSupportDetect;

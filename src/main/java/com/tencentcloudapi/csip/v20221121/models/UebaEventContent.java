@@ -26,21 +26,21 @@ public class UebaEventContent extends AbstractModel {
     /**
     * Event type
 1: Statement retrieval
-2: Filter search
+2: Filter retrieval
     */
     @SerializedName("EventType")
     @Expose
     private Long EventType;
 
     /**
-    * Statement retrieval content
+    * Content for statement retrieval
     */
     @SerializedName("Content")
     @Expose
     private String Content;
 
     /**
-    * retrieval condition
+    * Retrieval criteria
 
     */
     @SerializedName("Filters")
@@ -57,10 +57,10 @@ public class UebaEventContent extends AbstractModel {
     /**
      * Get Event type
 1: Statement retrieval
-2: Filter search 
+2: Filter retrieval 
      * @return EventType Event type
 1: Statement retrieval
-2: Filter search
+2: Filter retrieval
      */
     public Long getEventType() {
         return this.EventType;
@@ -69,35 +69,35 @@ public class UebaEventContent extends AbstractModel {
     /**
      * Set Event type
 1: Statement retrieval
-2: Filter search
+2: Filter retrieval
      * @param EventType Event type
 1: Statement retrieval
-2: Filter search
+2: Filter retrieval
      */
     public void setEventType(Long EventType) {
         this.EventType = EventType;
     }
 
     /**
-     * Get Statement retrieval content 
-     * @return Content Statement retrieval content
+     * Get Content for statement retrieval 
+     * @return Content Content for statement retrieval
      */
     public String getContent() {
         return this.Content;
     }
 
     /**
-     * Set Statement retrieval content
-     * @param Content Statement retrieval content
+     * Set Content for statement retrieval
+     * @param Content Content for statement retrieval
      */
     public void setContent(String Content) {
         this.Content = Content;
     }
 
     /**
-     * Get retrieval condition
+     * Get Retrieval criteria
  
-     * @return Filters retrieval condition
+     * @return Filters Retrieval criteria
 
      */
     public WhereFilter [] getFilters() {
@@ -105,9 +105,9 @@ public class UebaEventContent extends AbstractModel {
     }
 
     /**
-     * Set retrieval condition
+     * Set Retrieval criteria
 
-     * @param Filters retrieval condition
+     * @param Filters Retrieval criteria
 
      */
     public void setFilters(WhereFilter [] Filters) {

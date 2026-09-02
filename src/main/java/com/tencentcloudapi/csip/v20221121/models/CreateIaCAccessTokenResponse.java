@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateIaCAccessTokenResponse extends AbstractModel {
 
     /**
-    * <p>Token integration</p>
+    * <p>Integration Token</p>
     */
     @SerializedName("Token")
     @Expose
@@ -38,16 +38,16 @@ public class CreateIaCAccessTokenResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get <p>Token integration</p> 
-     * @return Token <p>Token integration</p>
+     * Get <p>Integration Token</p> 
+     * @return Token <p>Integration Token</p>
      */
     public String getToken() {
         return this.Token;
     }
 
     /**
-     * Set <p>Token integration</p>
-     * @param Token <p>Token integration</p>
+     * Set <p>Integration Token</p>
+     * @param Token <p>Integration Token</p>
      */
     public void setToken(String Token) {
         this.Token = Token;

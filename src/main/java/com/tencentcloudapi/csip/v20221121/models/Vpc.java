@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class Vpc extends AbstractModel {
 
     /**
-    * Subnet (32-bit mask)
+    * Subnet (supports only 32-bit)
     */
     @SerializedName("Subnet")
     @Expose
     private Long Subnet;
 
     /**
-    * Connected VPC (32-bit mask)
+    * Interconnected VPC (supports only 32-bit)
     */
     @SerializedName("ConnectedVpc")
     @Expose
@@ -45,14 +45,14 @@ public class Vpc extends AbstractModel {
     private String AssetId;
 
     /**
-    * Region
+    * region
     */
     @SerializedName("Region")
     @Expose
     private String Region;
 
     /**
-    * CVM (only 32-bit)
+    * CVM (supports only 32-bit)
     */
     @SerializedName("CVM")
     @Expose
@@ -80,7 +80,7 @@ public class Vpc extends AbstractModel {
     private String AssetName;
 
     /**
-    * CIDR block
+    * CIDR Network Segmentation
     */
     @SerializedName("CIDR")
     @Expose
@@ -101,14 +101,14 @@ public class Vpc extends AbstractModel {
     private String AppId;
 
     /**
-    * UIN
+    * uin
     */
     @SerializedName("Uin")
     @Expose
     private String Uin;
 
     /**
-    * User name
+    * Nickname
     */
     @SerializedName("Nick")
     @Expose
@@ -129,32 +129,32 @@ public class Vpc extends AbstractModel {
     private Long IsCore;
 
     /**
-     * Get Subnet (32-bit mask) 
-     * @return Subnet Subnet (32-bit mask)
+     * Get Subnet (supports only 32-bit) 
+     * @return Subnet Subnet (supports only 32-bit)
      */
     public Long getSubnet() {
         return this.Subnet;
     }
 
     /**
-     * Set Subnet (32-bit mask)
-     * @param Subnet Subnet (32-bit mask)
+     * Set Subnet (supports only 32-bit)
+     * @param Subnet Subnet (supports only 32-bit)
      */
     public void setSubnet(Long Subnet) {
         this.Subnet = Subnet;
     }
 
     /**
-     * Get Connected VPC (32-bit mask) 
-     * @return ConnectedVpc Connected VPC (32-bit mask)
+     * Get Interconnected VPC (supports only 32-bit) 
+     * @return ConnectedVpc Interconnected VPC (supports only 32-bit)
      */
     public Long getConnectedVpc() {
         return this.ConnectedVpc;
     }
 
     /**
-     * Set Connected VPC (32-bit mask)
-     * @param ConnectedVpc Connected VPC (32-bit mask)
+     * Set Interconnected VPC (supports only 32-bit)
+     * @param ConnectedVpc Interconnected VPC (supports only 32-bit)
      */
     public void setConnectedVpc(Long ConnectedVpc) {
         this.ConnectedVpc = ConnectedVpc;
@@ -177,32 +177,32 @@ public class Vpc extends AbstractModel {
     }
 
     /**
-     * Get Region 
-     * @return Region Region
+     * Get region 
+     * @return Region region
      */
     public String getRegion() {
         return this.Region;
     }
 
     /**
-     * Set Region
-     * @param Region Region
+     * Set region
+     * @param Region region
      */
     public void setRegion(String Region) {
         this.Region = Region;
     }
 
     /**
-     * Get CVM (only 32-bit) 
-     * @return CVM CVM (only 32-bit)
+     * Get CVM (supports only 32-bit) 
+     * @return CVM CVM (supports only 32-bit)
      */
     public Long getCVM() {
         return this.CVM;
     }
 
     /**
-     * Set CVM (only 32-bit)
-     * @param CVM CVM (only 32-bit)
+     * Set CVM (supports only 32-bit)
+     * @param CVM CVM (supports only 32-bit)
      */
     public void setCVM(Long CVM) {
         this.CVM = CVM;
@@ -257,16 +257,16 @@ public class Vpc extends AbstractModel {
     }
 
     /**
-     * Get CIDR block 
-     * @return CIDR CIDR block
+     * Get CIDR Network Segmentation 
+     * @return CIDR CIDR Network Segmentation
      */
     public String getCIDR() {
         return this.CIDR;
     }
 
     /**
-     * Set CIDR block
-     * @param CIDR CIDR block
+     * Set CIDR Network Segmentation
+     * @param CIDR CIDR Network Segmentation
      */
     public void setCIDR(String CIDR) {
         this.CIDR = CIDR;
@@ -305,32 +305,32 @@ public class Vpc extends AbstractModel {
     }
 
     /**
-     * Get UIN 
-     * @return Uin UIN
+     * Get uin 
+     * @return Uin uin
      */
     public String getUin() {
         return this.Uin;
     }
 
     /**
-     * Set UIN
-     * @param Uin UIN
+     * Set uin
+     * @param Uin uin
      */
     public void setUin(String Uin) {
         this.Uin = Uin;
     }
 
     /**
-     * Get User name 
-     * @return Nick User name
+     * Get Nickname 
+     * @return Nick Nickname
      */
     public String getNick() {
         return this.Nick;
     }
 
     /**
-     * Set User name
-     * @param Nick User name
+     * Set Nickname
+     * @param Nick Nickname
      */
     public void setNick(String Nick) {
         this.Nick = Nick;

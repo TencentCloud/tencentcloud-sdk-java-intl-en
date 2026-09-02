@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class DescribeAKAnalysisDetailResponse extends AbstractModel {
 
     /**
-    * Alarm AI analysis status -1 Analysis failed 0 Not analyzed 1 Under analysis 2 Analysis successful, real alarm 3 Analysis successful, suspicious alarm
+    * Alarm AI analysis status. -1: analysis failed. 0: not analyzed. 1: under analysis. 2: analysis successful, real alarm. 3: analysis successful, suspicious alarm.
     */
     @SerializedName("AIStatus")
     @Expose
     private Long AIStatus;
 
     /**
-    * AI Analysis Task ID
+    * AI analysis task ID
     */
     @SerializedName("AITaskID")
     @Expose
     private String AITaskID;
 
     /**
-    * Alarm AI analysis result, base64 format, avoid data interception
+    * Alarm AI analysis result in base64 format to avoid data interception.
     */
     @SerializedName("AIResult")
     @Expose
@@ -52,7 +52,7 @@ public class DescribeAKAnalysisDetailResponse extends AbstractModel {
     private String Feedback;
 
     /**
-    * Feedback status  0 means no feedback, 1 means recognized, 2 means not recognized
+    * Feedback status. 0 means no feedback, 1 means recognized, and 2 means not recognized.
     */
     @SerializedName("FeedbackResult")
     @Expose
@@ -73,48 +73,48 @@ public class DescribeAKAnalysisDetailResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Alarm AI analysis status -1 Analysis failed 0 Not analyzed 1 Under analysis 2 Analysis successful, real alarm 3 Analysis successful, suspicious alarm 
-     * @return AIStatus Alarm AI analysis status -1 Analysis failed 0 Not analyzed 1 Under analysis 2 Analysis successful, real alarm 3 Analysis successful, suspicious alarm
+     * Get Alarm AI analysis status. -1: analysis failed. 0: not analyzed. 1: under analysis. 2: analysis successful, real alarm. 3: analysis successful, suspicious alarm. 
+     * @return AIStatus Alarm AI analysis status. -1: analysis failed. 0: not analyzed. 1: under analysis. 2: analysis successful, real alarm. 3: analysis successful, suspicious alarm.
      */
     public Long getAIStatus() {
         return this.AIStatus;
     }
 
     /**
-     * Set Alarm AI analysis status -1 Analysis failed 0 Not analyzed 1 Under analysis 2 Analysis successful, real alarm 3 Analysis successful, suspicious alarm
-     * @param AIStatus Alarm AI analysis status -1 Analysis failed 0 Not analyzed 1 Under analysis 2 Analysis successful, real alarm 3 Analysis successful, suspicious alarm
+     * Set Alarm AI analysis status. -1: analysis failed. 0: not analyzed. 1: under analysis. 2: analysis successful, real alarm. 3: analysis successful, suspicious alarm.
+     * @param AIStatus Alarm AI analysis status. -1: analysis failed. 0: not analyzed. 1: under analysis. 2: analysis successful, real alarm. 3: analysis successful, suspicious alarm.
      */
     public void setAIStatus(Long AIStatus) {
         this.AIStatus = AIStatus;
     }
 
     /**
-     * Get AI Analysis Task ID 
-     * @return AITaskID AI Analysis Task ID
+     * Get AI analysis task ID 
+     * @return AITaskID AI analysis task ID
      */
     public String getAITaskID() {
         return this.AITaskID;
     }
 
     /**
-     * Set AI Analysis Task ID
-     * @param AITaskID AI Analysis Task ID
+     * Set AI analysis task ID
+     * @param AITaskID AI analysis task ID
      */
     public void setAITaskID(String AITaskID) {
         this.AITaskID = AITaskID;
     }
 
     /**
-     * Get Alarm AI analysis result, base64 format, avoid data interception 
-     * @return AIResult Alarm AI analysis result, base64 format, avoid data interception
+     * Get Alarm AI analysis result in base64 format to avoid data interception. 
+     * @return AIResult Alarm AI analysis result in base64 format to avoid data interception.
      */
     public String getAIResult() {
         return this.AIResult;
     }
 
     /**
-     * Set Alarm AI analysis result, base64 format, avoid data interception
-     * @param AIResult Alarm AI analysis result, base64 format, avoid data interception
+     * Set Alarm AI analysis result in base64 format to avoid data interception.
+     * @param AIResult Alarm AI analysis result in base64 format to avoid data interception.
      */
     public void setAIResult(String AIResult) {
         this.AIResult = AIResult;
@@ -137,16 +137,16 @@ public class DescribeAKAnalysisDetailResponse extends AbstractModel {
     }
 
     /**
-     * Get Feedback status  0 means no feedback, 1 means recognized, 2 means not recognized 
-     * @return FeedbackResult Feedback status  0 means no feedback, 1 means recognized, 2 means not recognized
+     * Get Feedback status. 0 means no feedback, 1 means recognized, and 2 means not recognized. 
+     * @return FeedbackResult Feedback status. 0 means no feedback, 1 means recognized, and 2 means not recognized.
      */
     public Long getFeedbackResult() {
         return this.FeedbackResult;
     }
 
     /**
-     * Set Feedback status  0 means no feedback, 1 means recognized, 2 means not recognized
-     * @param FeedbackResult Feedback status  0 means no feedback, 1 means recognized, 2 means not recognized
+     * Set Feedback status. 0 means no feedback, 1 means recognized, and 2 means not recognized.
+     * @param FeedbackResult Feedback status. 0 means no feedback, 1 means recognized, and 2 means not recognized.
      */
     public void setFeedbackResult(Long FeedbackResult) {
         this.FeedbackResult = FeedbackResult;

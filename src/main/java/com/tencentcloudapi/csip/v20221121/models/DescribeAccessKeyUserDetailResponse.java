@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeAccessKeyUserDetailResponse extends AbstractModel {
 
     /**
-    * Account detailed information.
+    * Account details
     */
     @SerializedName("User")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeAccessKeyUserDetailResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Account detailed information. 
-     * @return User Account detailed information.
+     * Get Account details 
+     * @return User Account details
      */
     public AccessKeyUser getUser() {
         return this.User;
     }
 
     /**
-     * Set Account detailed information.
-     * @param User Account detailed information.
+     * Set Account details
+     * @param User Account details
      */
     public void setUser(AccessKeyUser User) {
         this.User = User;

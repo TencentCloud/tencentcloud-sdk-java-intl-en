@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class STSCredentialOutput extends AbstractModel {
 
     /**
-    * Credential provider flag (original text), such as tencentCam, aws, aliyun
+    * Credential provider identifier (original), for example tencentCam, aws, aliyun
     */
     @SerializedName("System")
     @Expose
@@ -32,7 +32,7 @@ public class STSCredentialOutput extends AbstractModel {
 
     /**
     * SecretID (masked)
-Supplementary description: Reserve the first 3 and last 4 digits, replace the middle with ***; replace all with *** if the length is less than 7.
+Supplemental description: Reserve the first 3 and last 4 digits, replace the middle with ***. If the length is less than 7, use *** as a complete replacement.
     */
     @SerializedName("SecretID")
     @Expose
@@ -40,23 +40,23 @@ Supplementary description: Reserve the first 3 and last 4 digits, replace the mi
 
     /**
     * SecretKey (masked)
-Supplementary description: Reserve the first 3 and last 4 digits, replace the middle with ***; replace all with *** if the length is less than 7.
+Supplemental description: Reserve the first 3 and last 4 digits, replace the middle with ***. If the length is less than 7, use *** as a complete replacement.
     */
     @SerializedName("SecretKey")
     @Expose
     private String SecretKey;
 
     /**
-     * Get Credential provider flag (original text), such as tencentCam, aws, aliyun 
-     * @return System Credential provider flag (original text), such as tencentCam, aws, aliyun
+     * Get Credential provider identifier (original), for example tencentCam, aws, aliyun 
+     * @return System Credential provider identifier (original), for example tencentCam, aws, aliyun
      */
     public String getSystem() {
         return this.System;
     }
 
     /**
-     * Set Credential provider flag (original text), such as tencentCam, aws, aliyun
-     * @param System Credential provider flag (original text), such as tencentCam, aws, aliyun
+     * Set Credential provider identifier (original), for example tencentCam, aws, aliyun
+     * @param System Credential provider identifier (original), for example tencentCam, aws, aliyun
      */
     public void setSystem(String System) {
         this.System = System;
@@ -64,9 +64,9 @@ Supplementary description: Reserve the first 3 and last 4 digits, replace the mi
 
     /**
      * Get SecretID (masked)
-Supplementary description: Reserve the first 3 and last 4 digits, replace the middle with ***; replace all with *** if the length is less than 7. 
+Supplemental description: Reserve the first 3 and last 4 digits, replace the middle with ***. If the length is less than 7, use *** as a complete replacement. 
      * @return SecretID SecretID (masked)
-Supplementary description: Reserve the first 3 and last 4 digits, replace the middle with ***; replace all with *** if the length is less than 7.
+Supplemental description: Reserve the first 3 and last 4 digits, replace the middle with ***. If the length is less than 7, use *** as a complete replacement.
      */
     public String getSecretID() {
         return this.SecretID;
@@ -74,9 +74,9 @@ Supplementary description: Reserve the first 3 and last 4 digits, replace the mi
 
     /**
      * Set SecretID (masked)
-Supplementary description: Reserve the first 3 and last 4 digits, replace the middle with ***; replace all with *** if the length is less than 7.
+Supplemental description: Reserve the first 3 and last 4 digits, replace the middle with ***. If the length is less than 7, use *** as a complete replacement.
      * @param SecretID SecretID (masked)
-Supplementary description: Reserve the first 3 and last 4 digits, replace the middle with ***; replace all with *** if the length is less than 7.
+Supplemental description: Reserve the first 3 and last 4 digits, replace the middle with ***. If the length is less than 7, use *** as a complete replacement.
      */
     public void setSecretID(String SecretID) {
         this.SecretID = SecretID;
@@ -84,9 +84,9 @@ Supplementary description: Reserve the first 3 and last 4 digits, replace the mi
 
     /**
      * Get SecretKey (masked)
-Supplementary description: Reserve the first 3 and last 4 digits, replace the middle with ***; replace all with *** if the length is less than 7. 
+Supplemental description: Reserve the first 3 and last 4 digits, replace the middle with ***. If the length is less than 7, use *** as a complete replacement. 
      * @return SecretKey SecretKey (masked)
-Supplementary description: Reserve the first 3 and last 4 digits, replace the middle with ***; replace all with *** if the length is less than 7.
+Supplemental description: Reserve the first 3 and last 4 digits, replace the middle with ***. If the length is less than 7, use *** as a complete replacement.
      */
     public String getSecretKey() {
         return this.SecretKey;
@@ -94,9 +94,9 @@ Supplementary description: Reserve the first 3 and last 4 digits, replace the mi
 
     /**
      * Set SecretKey (masked)
-Supplementary description: Reserve the first 3 and last 4 digits, replace the middle with ***; replace all with *** if the length is less than 7.
+Supplemental description: Reserve the first 3 and last 4 digits, replace the middle with ***. If the length is less than 7, use *** as a complete replacement.
      * @param SecretKey SecretKey (masked)
-Supplementary description: Reserve the first 3 and last 4 digits, replace the middle with ***; replace all with *** if the length is less than 7.
+Supplemental description: Reserve the first 3 and last 4 digits, replace the middle with ***. If the length is less than 7, use *** as a complete replacement.
      */
     public void setSecretKey(String SecretKey) {
         this.SecretKey = SecretKey;

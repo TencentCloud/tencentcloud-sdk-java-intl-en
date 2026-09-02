@@ -38,7 +38,7 @@ public class AlertExtraInfo extends AbstractModel {
     private String LeakContent;
 
     /**
-    * Leak API
+    * Leak APIs
     */
     @SerializedName("LeakAPI")
     @Expose
@@ -52,7 +52,7 @@ public class AlertExtraInfo extends AbstractModel {
     private String SecretID;
 
     /**
-    * hit rule
+    * Matched rule
     */
     @SerializedName("Rule")
     @Expose
@@ -80,7 +80,7 @@ public class AlertExtraInfo extends AbstractModel {
     private String AttackContent;
 
     /**
-    * Attack IP profiling
+    * Attack IP profiling.
     */
     @SerializedName("AttackIPProfile")
     @Expose
@@ -164,7 +164,7 @@ public class AlertExtraInfo extends AbstractModel {
     private String ServiceProcess;
 
     /**
-    * Filename
+    * File name
     */
     @SerializedName("FileName")
     @Expose
@@ -192,7 +192,7 @@ public class AlertExtraInfo extends AbstractModel {
     private String FileLastAccessTime;
 
     /**
-    * file modification time
+    * File modification time
     */
     @SerializedName("FileModifyTime")
     @Expose
@@ -227,14 +227,14 @@ public class AlertExtraInfo extends AbstractModel {
     private String VirusFileTags;
 
     /**
-    * behavioral characteristics
+    * Behavioral characteristics
     */
     @SerializedName("BehavioralCharacteristics")
     @Expose
     private String BehavioralCharacteristics;
 
     /**
-    * process name (PID)
+    * Process name (PID)
     */
     @SerializedName("ProcessNamePID")
     @Expose
@@ -248,7 +248,7 @@ public class AlertExtraInfo extends AbstractModel {
     private String ProcessPath;
 
     /**
-    * Command line of the process
+    * Process command line
     */
     @SerializedName("ProcessCommandLine")
     @Expose
@@ -269,14 +269,14 @@ public class AlertExtraInfo extends AbstractModel {
     private String ExecutedCommand;
 
     /**
-    * Affected Filename
+    * Affected file name
     */
     @SerializedName("AffectedFileName")
     @Expose
     private String AffectedFileName;
 
     /**
-    * bait path
+    * Bait path
     */
     @SerializedName("DecoyPath")
     @Expose
@@ -290,7 +290,7 @@ public class AlertExtraInfo extends AbstractModel {
     private String MaliciousProcessFileSize;
 
     /**
-    * Malicious process file MD5
+    * MD5 of the malicious process file
     */
     @SerializedName("MaliciousProcessFileMD5")
     @Expose
@@ -311,14 +311,14 @@ public class AlertExtraInfo extends AbstractModel {
     private String MaliciousProcessPath;
 
     /**
-    * malicious process start time
+    * Malicious process startup time
     */
     @SerializedName("MaliciousProcessStartTime")
     @Expose
     private String MaliciousProcessStartTime;
 
     /**
-    * command content
+    * Command
     */
     @SerializedName("CommandContent")
     @Expose
@@ -339,7 +339,7 @@ public class AlertExtraInfo extends AbstractModel {
     private String UserGroup;
 
     /**
-    * Add new permission
+    * Added permission
     */
     @SerializedName("NewPermissions")
     @Expose
@@ -360,14 +360,14 @@ public class AlertExtraInfo extends AbstractModel {
     private String ClassName;
 
     /**
-    * class loader
+    * Class loader to which it belongs
     */
     @SerializedName("ClassLoader")
     @Expose
     private String ClassLoader;
 
     /**
-    * File size
+    * Individual file size
     */
     @SerializedName("ClassFileSize")
     @Expose
@@ -388,7 +388,7 @@ public class AlertExtraInfo extends AbstractModel {
     private String ParentClassName;
 
     /**
-    * inherit an API
+    * Inherit interfaces
     */
     @SerializedName("InheritedInterface")
     @Expose
@@ -402,7 +402,7 @@ public class AlertExtraInfo extends AbstractModel {
     private String Comment;
 
     /**
-    * payload content
+    * Payload content
     */
     @SerializedName("PayloadContent")
     @Expose
@@ -437,21 +437,21 @@ public class AlertExtraInfo extends AbstractModel {
     private String FilePermission;
 
     /**
-    * Information field from log analysis
+    * Information fields that come from log analysis
     */
     @SerializedName("FromLogAnalysisData")
     @Expose
     private KeyValue [] FromLogAnalysisData;
 
     /**
-    * probe hit
+    * Cache hit probe
     */
     @SerializedName("HitProbe")
     @Expose
     private String HitProbe;
 
     /**
-    * hit honeypot
+    * Hit a honeypot
 
     */
     @SerializedName("HitHoneyPot")
@@ -459,14 +459,14 @@ public class AlertExtraInfo extends AbstractModel {
     private String HitHoneyPot;
 
     /**
-    * command list
+    * Command list
     */
     @SerializedName("CommandList")
     @Expose
     private String CommandList;
 
     /**
-    * Attack event description
+    * Description of the attack event
 
     */
     @SerializedName("AttackEventDesc")
@@ -474,14 +474,14 @@ public class AlertExtraInfo extends AbstractModel {
     private String AttackEventDesc;
 
     /**
-    * Process information
+    * Process information.
     */
     @SerializedName("ProcessInfo")
     @Expose
     private String ProcessInfo;
 
     /**
-    * Login username & password
+    * Use username and password
     */
     @SerializedName("UserNameAndPwd")
     @Expose
@@ -502,7 +502,7 @@ public class AlertExtraInfo extends AbstractModel {
     private String StrategyName;
 
     /**
-    * Host protection hit policy is a combination of policy ID and Policy Name
+    * Host protection hit policy, which is a combination of the policy ID and policy name.
     */
     @SerializedName("HitStrategy")
     @Expose
@@ -523,14 +523,14 @@ public class AlertExtraInfo extends AbstractModel {
     private String PID;
 
     /**
-    * Container Pod name
+    * Pod name of the container
     */
     @SerializedName("PodName")
     @Expose
     private String PodName;
 
     /**
-    * Container Pod ID
+    * Pod ID of the container
     */
     @SerializedName("PodID")
     @Expose
@@ -544,14 +544,14 @@ public class AlertExtraInfo extends AbstractModel {
     private String Response;
 
     /**
-    * system call
+    * System call
     */
     @SerializedName("SystemCall")
     @Expose
     private String SystemCall;
 
     /**
-    * Operation type
+    * Operation type.
     */
     @SerializedName("Verb")
     @Expose
@@ -586,70 +586,70 @@ public class AlertExtraInfo extends AbstractModel {
     private String Description;
 
     /**
-    * Destination address (container reverse shell)
+    * Target address (container reverse shell)
     */
     @SerializedName("TargetAddress")
     @Expose
     private String TargetAddress;
 
     /**
-    * Malicious request domain name (container malicious outbound connection)
+    * Malicious request domain name (malicious outbound connection of a container)
     */
     @SerializedName("MaliciousRequestDomain")
     @Expose
     private String MaliciousRequestDomain;
 
     /**
-    * Rule Type (Container K8sAPI Exception Request)
+    * Rule type (exceptional request of the K8s API in the container)
     */
     @SerializedName("RuleType")
     @Expose
     private String RuleType;
 
     /**
-    * Requested Resource (Container K8sAPI Exception Request)
+    * Requested resource (exceptional request for K8s API of a container)
     */
     @SerializedName("RequestURI")
     @Expose
     private String RequestURI;
 
     /**
-    * Request Initiating User (Container K8sAPI Exception Request)
+    * Request initiating user (container K8s API abnormal request)
     */
     @SerializedName("RequestUser")
     @Expose
     private String RequestUser;
 
     /**
-    * Request Object (Container K8sAPI Exception Request)
+    * Request object (exceptional K8s API request in a container)
     */
     @SerializedName("RequestObject")
     @Expose
     private String RequestObject;
 
     /**
-    * Response object (container K8sAPI exception request)
+    * object (for exceptional requests from the K8s API in a container)
     */
     @SerializedName("ResponseObject")
     @Expose
     private String ResponseObject;
 
     /**
-    * File type (Container file tamper)
+    * File type (container file tampering)
     */
     @SerializedName("FileType")
     @Expose
     private String FileType;
 
     /**
-    * Tag feature (malicious outbound connection of container)
+    * Tag feature (container malicious outbound connection)
     */
     @SerializedName("TIType")
     @Expose
     private String TIType;
 
     /**
-    * Source IP Address (Container K8sAPI Exception Request)
+    * Source IP address (exceptional request to the K8s API of a container)
     */
     @SerializedName("SourceIP")
     @Expose
@@ -688,16 +688,16 @@ public class AlertExtraInfo extends AbstractModel {
     }
 
     /**
-     * Get Leak API 
-     * @return LeakAPI Leak API
+     * Get Leak APIs 
+     * @return LeakAPI Leak APIs
      */
     public String getLeakAPI() {
         return this.LeakAPI;
     }
 
     /**
-     * Set Leak API
-     * @param LeakAPI Leak API
+     * Set Leak APIs
+     * @param LeakAPI Leak APIs
      */
     public void setLeakAPI(String LeakAPI) {
         this.LeakAPI = LeakAPI;
@@ -720,16 +720,16 @@ public class AlertExtraInfo extends AbstractModel {
     }
 
     /**
-     * Get hit rule 
-     * @return Rule hit rule
+     * Get Matched rule 
+     * @return Rule Matched rule
      */
     public String getRule() {
         return this.Rule;
     }
 
     /**
-     * Set hit rule
-     * @param Rule hit rule
+     * Set Matched rule
+     * @param Rule Matched rule
      */
     public void setRule(String Rule) {
         this.Rule = Rule;
@@ -784,16 +784,16 @@ public class AlertExtraInfo extends AbstractModel {
     }
 
     /**
-     * Get Attack IP profiling 
-     * @return AttackIPProfile Attack IP profiling
+     * Get Attack IP profiling. 
+     * @return AttackIPProfile Attack IP profiling.
      */
     public String getAttackIPProfile() {
         return this.AttackIPProfile;
     }
 
     /**
-     * Set Attack IP profiling
-     * @param AttackIPProfile Attack IP profiling
+     * Set Attack IP profiling.
+     * @param AttackIPProfile Attack IP profiling.
      */
     public void setAttackIPProfile(String AttackIPProfile) {
         this.AttackIPProfile = AttackIPProfile;
@@ -976,16 +976,16 @@ public class AlertExtraInfo extends AbstractModel {
     }
 
     /**
-     * Get Filename 
-     * @return FileName Filename
+     * Get File name 
+     * @return FileName File name
      */
     public String getFileName() {
         return this.FileName;
     }
 
     /**
-     * Set Filename
-     * @param FileName Filename
+     * Set File name
+     * @param FileName File name
      */
     public void setFileName(String FileName) {
         this.FileName = FileName;
@@ -1040,16 +1040,16 @@ public class AlertExtraInfo extends AbstractModel {
     }
 
     /**
-     * Get file modification time 
-     * @return FileModifyTime file modification time
+     * Get File modification time 
+     * @return FileModifyTime File modification time
      */
     public String getFileModifyTime() {
         return this.FileModifyTime;
     }
 
     /**
-     * Set file modification time
-     * @param FileModifyTime file modification time
+     * Set File modification time
+     * @param FileModifyTime File modification time
      */
     public void setFileModifyTime(String FileModifyTime) {
         this.FileModifyTime = FileModifyTime;
@@ -1120,32 +1120,32 @@ public class AlertExtraInfo extends AbstractModel {
     }
 
     /**
-     * Get behavioral characteristics 
-     * @return BehavioralCharacteristics behavioral characteristics
+     * Get Behavioral characteristics 
+     * @return BehavioralCharacteristics Behavioral characteristics
      */
     public String getBehavioralCharacteristics() {
         return this.BehavioralCharacteristics;
     }
 
     /**
-     * Set behavioral characteristics
-     * @param BehavioralCharacteristics behavioral characteristics
+     * Set Behavioral characteristics
+     * @param BehavioralCharacteristics Behavioral characteristics
      */
     public void setBehavioralCharacteristics(String BehavioralCharacteristics) {
         this.BehavioralCharacteristics = BehavioralCharacteristics;
     }
 
     /**
-     * Get process name (PID) 
-     * @return ProcessNamePID process name (PID)
+     * Get Process name (PID) 
+     * @return ProcessNamePID Process name (PID)
      */
     public String getProcessNamePID() {
         return this.ProcessNamePID;
     }
 
     /**
-     * Set process name (PID)
-     * @param ProcessNamePID process name (PID)
+     * Set Process name (PID)
+     * @param ProcessNamePID Process name (PID)
      */
     public void setProcessNamePID(String ProcessNamePID) {
         this.ProcessNamePID = ProcessNamePID;
@@ -1168,16 +1168,16 @@ public class AlertExtraInfo extends AbstractModel {
     }
 
     /**
-     * Get Command line of the process 
-     * @return ProcessCommandLine Command line of the process
+     * Get Process command line 
+     * @return ProcessCommandLine Process command line
      */
     public String getProcessCommandLine() {
         return this.ProcessCommandLine;
     }
 
     /**
-     * Set Command line of the process
-     * @param ProcessCommandLine Command line of the process
+     * Set Process command line
+     * @param ProcessCommandLine Process command line
      */
     public void setProcessCommandLine(String ProcessCommandLine) {
         this.ProcessCommandLine = ProcessCommandLine;
@@ -1216,32 +1216,32 @@ public class AlertExtraInfo extends AbstractModel {
     }
 
     /**
-     * Get Affected Filename 
-     * @return AffectedFileName Affected Filename
+     * Get Affected file name 
+     * @return AffectedFileName Affected file name
      */
     public String getAffectedFileName() {
         return this.AffectedFileName;
     }
 
     /**
-     * Set Affected Filename
-     * @param AffectedFileName Affected Filename
+     * Set Affected file name
+     * @param AffectedFileName Affected file name
      */
     public void setAffectedFileName(String AffectedFileName) {
         this.AffectedFileName = AffectedFileName;
     }
 
     /**
-     * Get bait path 
-     * @return DecoyPath bait path
+     * Get Bait path 
+     * @return DecoyPath Bait path
      */
     public String getDecoyPath() {
         return this.DecoyPath;
     }
 
     /**
-     * Set bait path
-     * @param DecoyPath bait path
+     * Set Bait path
+     * @param DecoyPath Bait path
      */
     public void setDecoyPath(String DecoyPath) {
         this.DecoyPath = DecoyPath;
@@ -1264,16 +1264,16 @@ public class AlertExtraInfo extends AbstractModel {
     }
 
     /**
-     * Get Malicious process file MD5 
-     * @return MaliciousProcessFileMD5 Malicious process file MD5
+     * Get MD5 of the malicious process file 
+     * @return MaliciousProcessFileMD5 MD5 of the malicious process file
      */
     public String getMaliciousProcessFileMD5() {
         return this.MaliciousProcessFileMD5;
     }
 
     /**
-     * Set Malicious process file MD5
-     * @param MaliciousProcessFileMD5 Malicious process file MD5
+     * Set MD5 of the malicious process file
+     * @param MaliciousProcessFileMD5 MD5 of the malicious process file
      */
     public void setMaliciousProcessFileMD5(String MaliciousProcessFileMD5) {
         this.MaliciousProcessFileMD5 = MaliciousProcessFileMD5;
@@ -1312,32 +1312,32 @@ public class AlertExtraInfo extends AbstractModel {
     }
 
     /**
-     * Get malicious process start time 
-     * @return MaliciousProcessStartTime malicious process start time
+     * Get Malicious process startup time 
+     * @return MaliciousProcessStartTime Malicious process startup time
      */
     public String getMaliciousProcessStartTime() {
         return this.MaliciousProcessStartTime;
     }
 
     /**
-     * Set malicious process start time
-     * @param MaliciousProcessStartTime malicious process start time
+     * Set Malicious process startup time
+     * @param MaliciousProcessStartTime Malicious process startup time
      */
     public void setMaliciousProcessStartTime(String MaliciousProcessStartTime) {
         this.MaliciousProcessStartTime = MaliciousProcessStartTime;
     }
 
     /**
-     * Get command content 
-     * @return CommandContent command content
+     * Get Command 
+     * @return CommandContent Command
      */
     public String getCommandContent() {
         return this.CommandContent;
     }
 
     /**
-     * Set command content
-     * @param CommandContent command content
+     * Set Command
+     * @param CommandContent Command
      */
     public void setCommandContent(String CommandContent) {
         this.CommandContent = CommandContent;
@@ -1376,16 +1376,16 @@ public class AlertExtraInfo extends AbstractModel {
     }
 
     /**
-     * Get Add new permission 
-     * @return NewPermissions Add new permission
+     * Get Added permission 
+     * @return NewPermissions Added permission
      */
     public String getNewPermissions() {
         return this.NewPermissions;
     }
 
     /**
-     * Set Add new permission
-     * @param NewPermissions Add new permission
+     * Set Added permission
+     * @param NewPermissions Added permission
      */
     public void setNewPermissions(String NewPermissions) {
         this.NewPermissions = NewPermissions;
@@ -1424,32 +1424,32 @@ public class AlertExtraInfo extends AbstractModel {
     }
 
     /**
-     * Get class loader 
-     * @return ClassLoader class loader
+     * Get Class loader to which it belongs 
+     * @return ClassLoader Class loader to which it belongs
      */
     public String getClassLoader() {
         return this.ClassLoader;
     }
 
     /**
-     * Set class loader
-     * @param ClassLoader class loader
+     * Set Class loader to which it belongs
+     * @param ClassLoader Class loader to which it belongs
      */
     public void setClassLoader(String ClassLoader) {
         this.ClassLoader = ClassLoader;
     }
 
     /**
-     * Get File size 
-     * @return ClassFileSize File size
+     * Get Individual file size 
+     * @return ClassFileSize Individual file size
      */
     public String getClassFileSize() {
         return this.ClassFileSize;
     }
 
     /**
-     * Set File size
-     * @param ClassFileSize File size
+     * Set Individual file size
+     * @param ClassFileSize Individual file size
      */
     public void setClassFileSize(String ClassFileSize) {
         this.ClassFileSize = ClassFileSize;
@@ -1488,16 +1488,16 @@ public class AlertExtraInfo extends AbstractModel {
     }
 
     /**
-     * Get inherit an API 
-     * @return InheritedInterface inherit an API
+     * Get Inherit interfaces 
+     * @return InheritedInterface Inherit interfaces
      */
     public String getInheritedInterface() {
         return this.InheritedInterface;
     }
 
     /**
-     * Set inherit an API
-     * @param InheritedInterface inherit an API
+     * Set Inherit interfaces
+     * @param InheritedInterface Inherit interfaces
      */
     public void setInheritedInterface(String InheritedInterface) {
         this.InheritedInterface = InheritedInterface;
@@ -1520,16 +1520,16 @@ public class AlertExtraInfo extends AbstractModel {
     }
 
     /**
-     * Get payload content 
-     * @return PayloadContent payload content
+     * Get Payload content 
+     * @return PayloadContent Payload content
      */
     public String getPayloadContent() {
         return this.PayloadContent;
     }
 
     /**
-     * Set payload content
-     * @param PayloadContent payload content
+     * Set Payload content
+     * @param PayloadContent Payload content
      */
     public void setPayloadContent(String PayloadContent) {
         this.PayloadContent = PayloadContent;
@@ -1600,41 +1600,41 @@ public class AlertExtraInfo extends AbstractModel {
     }
 
     /**
-     * Get Information field from log analysis 
-     * @return FromLogAnalysisData Information field from log analysis
+     * Get Information fields that come from log analysis 
+     * @return FromLogAnalysisData Information fields that come from log analysis
      */
     public KeyValue [] getFromLogAnalysisData() {
         return this.FromLogAnalysisData;
     }
 
     /**
-     * Set Information field from log analysis
-     * @param FromLogAnalysisData Information field from log analysis
+     * Set Information fields that come from log analysis
+     * @param FromLogAnalysisData Information fields that come from log analysis
      */
     public void setFromLogAnalysisData(KeyValue [] FromLogAnalysisData) {
         this.FromLogAnalysisData = FromLogAnalysisData;
     }
 
     /**
-     * Get probe hit 
-     * @return HitProbe probe hit
+     * Get Cache hit probe 
+     * @return HitProbe Cache hit probe
      */
     public String getHitProbe() {
         return this.HitProbe;
     }
 
     /**
-     * Set probe hit
-     * @param HitProbe probe hit
+     * Set Cache hit probe
+     * @param HitProbe Cache hit probe
      */
     public void setHitProbe(String HitProbe) {
         this.HitProbe = HitProbe;
     }
 
     /**
-     * Get hit honeypot
+     * Get Hit a honeypot
  
-     * @return HitHoneyPot hit honeypot
+     * @return HitHoneyPot Hit a honeypot
 
      */
     public String getHitHoneyPot() {
@@ -1642,9 +1642,9 @@ public class AlertExtraInfo extends AbstractModel {
     }
 
     /**
-     * Set hit honeypot
+     * Set Hit a honeypot
 
-     * @param HitHoneyPot hit honeypot
+     * @param HitHoneyPot Hit a honeypot
 
      */
     public void setHitHoneyPot(String HitHoneyPot) {
@@ -1652,25 +1652,25 @@ public class AlertExtraInfo extends AbstractModel {
     }
 
     /**
-     * Get command list 
-     * @return CommandList command list
+     * Get Command list 
+     * @return CommandList Command list
      */
     public String getCommandList() {
         return this.CommandList;
     }
 
     /**
-     * Set command list
-     * @param CommandList command list
+     * Set Command list
+     * @param CommandList Command list
      */
     public void setCommandList(String CommandList) {
         this.CommandList = CommandList;
     }
 
     /**
-     * Get Attack event description
+     * Get Description of the attack event
  
-     * @return AttackEventDesc Attack event description
+     * @return AttackEventDesc Description of the attack event
 
      */
     public String getAttackEventDesc() {
@@ -1678,9 +1678,9 @@ public class AlertExtraInfo extends AbstractModel {
     }
 
     /**
-     * Set Attack event description
+     * Set Description of the attack event
 
-     * @param AttackEventDesc Attack event description
+     * @param AttackEventDesc Description of the attack event
 
      */
     public void setAttackEventDesc(String AttackEventDesc) {
@@ -1688,32 +1688,32 @@ public class AlertExtraInfo extends AbstractModel {
     }
 
     /**
-     * Get Process information 
-     * @return ProcessInfo Process information
+     * Get Process information. 
+     * @return ProcessInfo Process information.
      */
     public String getProcessInfo() {
         return this.ProcessInfo;
     }
 
     /**
-     * Set Process information
-     * @param ProcessInfo Process information
+     * Set Process information.
+     * @param ProcessInfo Process information.
      */
     public void setProcessInfo(String ProcessInfo) {
         this.ProcessInfo = ProcessInfo;
     }
 
     /**
-     * Get Login username & password 
-     * @return UserNameAndPwd Login username & password
+     * Get Use username and password 
+     * @return UserNameAndPwd Use username and password
      */
     public String getUserNameAndPwd() {
         return this.UserNameAndPwd;
     }
 
     /**
-     * Set Login username & password
-     * @param UserNameAndPwd Login username & password
+     * Set Use username and password
+     * @param UserNameAndPwd Use username and password
      */
     public void setUserNameAndPwd(String UserNameAndPwd) {
         this.UserNameAndPwd = UserNameAndPwd;
@@ -1752,16 +1752,16 @@ public class AlertExtraInfo extends AbstractModel {
     }
 
     /**
-     * Get Host protection hit policy is a combination of policy ID and Policy Name 
-     * @return HitStrategy Host protection hit policy is a combination of policy ID and Policy Name
+     * Get Host protection hit policy, which is a combination of the policy ID and policy name. 
+     * @return HitStrategy Host protection hit policy, which is a combination of the policy ID and policy name.
      */
     public String getHitStrategy() {
         return this.HitStrategy;
     }
 
     /**
-     * Set Host protection hit policy is a combination of policy ID and Policy Name
-     * @param HitStrategy Host protection hit policy is a combination of policy ID and Policy Name
+     * Set Host protection hit policy, which is a combination of the policy ID and policy name.
+     * @param HitStrategy Host protection hit policy, which is a combination of the policy ID and policy name.
      */
     public void setHitStrategy(String HitStrategy) {
         this.HitStrategy = HitStrategy;
@@ -1800,32 +1800,32 @@ public class AlertExtraInfo extends AbstractModel {
     }
 
     /**
-     * Get Container Pod name 
-     * @return PodName Container Pod name
+     * Get Pod name of the container 
+     * @return PodName Pod name of the container
      */
     public String getPodName() {
         return this.PodName;
     }
 
     /**
-     * Set Container Pod name
-     * @param PodName Container Pod name
+     * Set Pod name of the container
+     * @param PodName Pod name of the container
      */
     public void setPodName(String PodName) {
         this.PodName = PodName;
     }
 
     /**
-     * Get Container Pod ID 
-     * @return PodID Container Pod ID
+     * Get Pod ID of the container 
+     * @return PodID Pod ID of the container
      */
     public String getPodID() {
         return this.PodID;
     }
 
     /**
-     * Set Container Pod ID
-     * @param PodID Container Pod ID
+     * Set Pod ID of the container
+     * @param PodID Pod ID of the container
      */
     public void setPodID(String PodID) {
         this.PodID = PodID;
@@ -1848,32 +1848,32 @@ public class AlertExtraInfo extends AbstractModel {
     }
 
     /**
-     * Get system call 
-     * @return SystemCall system call
+     * Get System call 
+     * @return SystemCall System call
      */
     public String getSystemCall() {
         return this.SystemCall;
     }
 
     /**
-     * Set system call
-     * @param SystemCall system call
+     * Set System call
+     * @param SystemCall System call
      */
     public void setSystemCall(String SystemCall) {
         this.SystemCall = SystemCall;
     }
 
     /**
-     * Get Operation type 
-     * @return Verb Operation type
+     * Get Operation type. 
+     * @return Verb Operation type.
      */
     public String getVerb() {
         return this.Verb;
     }
 
     /**
-     * Set Operation type
-     * @param Verb Operation type
+     * Set Operation type.
+     * @param Verb Operation type.
      */
     public void setVerb(String Verb) {
         this.Verb = Verb;
@@ -1944,160 +1944,160 @@ public class AlertExtraInfo extends AbstractModel {
     }
 
     /**
-     * Get Destination address (container reverse shell) 
-     * @return TargetAddress Destination address (container reverse shell)
+     * Get Target address (container reverse shell) 
+     * @return TargetAddress Target address (container reverse shell)
      */
     public String getTargetAddress() {
         return this.TargetAddress;
     }
 
     /**
-     * Set Destination address (container reverse shell)
-     * @param TargetAddress Destination address (container reverse shell)
+     * Set Target address (container reverse shell)
+     * @param TargetAddress Target address (container reverse shell)
      */
     public void setTargetAddress(String TargetAddress) {
         this.TargetAddress = TargetAddress;
     }
 
     /**
-     * Get Malicious request domain name (container malicious outbound connection) 
-     * @return MaliciousRequestDomain Malicious request domain name (container malicious outbound connection)
+     * Get Malicious request domain name (malicious outbound connection of a container) 
+     * @return MaliciousRequestDomain Malicious request domain name (malicious outbound connection of a container)
      */
     public String getMaliciousRequestDomain() {
         return this.MaliciousRequestDomain;
     }
 
     /**
-     * Set Malicious request domain name (container malicious outbound connection)
-     * @param MaliciousRequestDomain Malicious request domain name (container malicious outbound connection)
+     * Set Malicious request domain name (malicious outbound connection of a container)
+     * @param MaliciousRequestDomain Malicious request domain name (malicious outbound connection of a container)
      */
     public void setMaliciousRequestDomain(String MaliciousRequestDomain) {
         this.MaliciousRequestDomain = MaliciousRequestDomain;
     }
 
     /**
-     * Get Rule Type (Container K8sAPI Exception Request) 
-     * @return RuleType Rule Type (Container K8sAPI Exception Request)
+     * Get Rule type (exceptional request of the K8s API in the container) 
+     * @return RuleType Rule type (exceptional request of the K8s API in the container)
      */
     public String getRuleType() {
         return this.RuleType;
     }
 
     /**
-     * Set Rule Type (Container K8sAPI Exception Request)
-     * @param RuleType Rule Type (Container K8sAPI Exception Request)
+     * Set Rule type (exceptional request of the K8s API in the container)
+     * @param RuleType Rule type (exceptional request of the K8s API in the container)
      */
     public void setRuleType(String RuleType) {
         this.RuleType = RuleType;
     }
 
     /**
-     * Get Requested Resource (Container K8sAPI Exception Request) 
-     * @return RequestURI Requested Resource (Container K8sAPI Exception Request)
+     * Get Requested resource (exceptional request for K8s API of a container) 
+     * @return RequestURI Requested resource (exceptional request for K8s API of a container)
      */
     public String getRequestURI() {
         return this.RequestURI;
     }
 
     /**
-     * Set Requested Resource (Container K8sAPI Exception Request)
-     * @param RequestURI Requested Resource (Container K8sAPI Exception Request)
+     * Set Requested resource (exceptional request for K8s API of a container)
+     * @param RequestURI Requested resource (exceptional request for K8s API of a container)
      */
     public void setRequestURI(String RequestURI) {
         this.RequestURI = RequestURI;
     }
 
     /**
-     * Get Request Initiating User (Container K8sAPI Exception Request) 
-     * @return RequestUser Request Initiating User (Container K8sAPI Exception Request)
+     * Get Request initiating user (container K8s API abnormal request) 
+     * @return RequestUser Request initiating user (container K8s API abnormal request)
      */
     public String getRequestUser() {
         return this.RequestUser;
     }
 
     /**
-     * Set Request Initiating User (Container K8sAPI Exception Request)
-     * @param RequestUser Request Initiating User (Container K8sAPI Exception Request)
+     * Set Request initiating user (container K8s API abnormal request)
+     * @param RequestUser Request initiating user (container K8s API abnormal request)
      */
     public void setRequestUser(String RequestUser) {
         this.RequestUser = RequestUser;
     }
 
     /**
-     * Get Request Object (Container K8sAPI Exception Request) 
-     * @return RequestObject Request Object (Container K8sAPI Exception Request)
+     * Get Request object (exceptional K8s API request in a container) 
+     * @return RequestObject Request object (exceptional K8s API request in a container)
      */
     public String getRequestObject() {
         return this.RequestObject;
     }
 
     /**
-     * Set Request Object (Container K8sAPI Exception Request)
-     * @param RequestObject Request Object (Container K8sAPI Exception Request)
+     * Set Request object (exceptional K8s API request in a container)
+     * @param RequestObject Request object (exceptional K8s API request in a container)
      */
     public void setRequestObject(String RequestObject) {
         this.RequestObject = RequestObject;
     }
 
     /**
-     * Get Response object (container K8sAPI exception request) 
-     * @return ResponseObject Response object (container K8sAPI exception request)
+     * Get object (for exceptional requests from the K8s API in a container) 
+     * @return ResponseObject object (for exceptional requests from the K8s API in a container)
      */
     public String getResponseObject() {
         return this.ResponseObject;
     }
 
     /**
-     * Set Response object (container K8sAPI exception request)
-     * @param ResponseObject Response object (container K8sAPI exception request)
+     * Set object (for exceptional requests from the K8s API in a container)
+     * @param ResponseObject object (for exceptional requests from the K8s API in a container)
      */
     public void setResponseObject(String ResponseObject) {
         this.ResponseObject = ResponseObject;
     }
 
     /**
-     * Get File type (Container file tamper) 
-     * @return FileType File type (Container file tamper)
+     * Get File type (container file tampering) 
+     * @return FileType File type (container file tampering)
      */
     public String getFileType() {
         return this.FileType;
     }
 
     /**
-     * Set File type (Container file tamper)
-     * @param FileType File type (Container file tamper)
+     * Set File type (container file tampering)
+     * @param FileType File type (container file tampering)
      */
     public void setFileType(String FileType) {
         this.FileType = FileType;
     }
 
     /**
-     * Get Tag feature (malicious outbound connection of container) 
-     * @return TIType Tag feature (malicious outbound connection of container)
+     * Get Tag feature (container malicious outbound connection) 
+     * @return TIType Tag feature (container malicious outbound connection)
      */
     public String getTIType() {
         return this.TIType;
     }
 
     /**
-     * Set Tag feature (malicious outbound connection of container)
-     * @param TIType Tag feature (malicious outbound connection of container)
+     * Set Tag feature (container malicious outbound connection)
+     * @param TIType Tag feature (container malicious outbound connection)
      */
     public void setTIType(String TIType) {
         this.TIType = TIType;
     }
 
     /**
-     * Get Source IP Address (Container K8sAPI Exception Request) 
-     * @return SourceIP Source IP Address (Container K8sAPI Exception Request)
+     * Get Source IP address (exceptional request to the K8s API of a container) 
+     * @return SourceIP Source IP address (exceptional request to the K8s API of a container)
      */
     public String getSourceIP() {
         return this.SourceIP;
     }
 
     /**
-     * Set Source IP Address (Container K8sAPI Exception Request)
-     * @param SourceIP Source IP Address (Container K8sAPI Exception Request)
+     * Set Source IP address (exceptional request to the K8s API of a container)
+     * @param SourceIP Source IP address (exceptional request to the K8s API of a container)
      */
     public void setSourceIP(String SourceIP) {
         this.SourceIP = SourceIP;

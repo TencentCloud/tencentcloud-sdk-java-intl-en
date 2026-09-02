@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class UpdateAccessKeyAlarmStatusRequest extends AbstractModel {
 
     /**
-    * Status  0: unprocessed 1: fixed 2: ignored.
+    * Status. 0: unprocessed; 1: processed; 2: ignored
     */
     @SerializedName("Status")
     @Expose
@@ -38,30 +38,30 @@ public class UpdateAccessKeyAlarmStatusRequest extends AbstractModel {
     private String [] MemberId;
 
     /**
-    * Alarm ID list.
+    * List of alarm IDs
     */
     @SerializedName("AlarmIDList")
     @Expose
     private Long [] AlarmIDList;
 
     /**
-    * Risk ID list.
+    * Risk ID list
     */
     @SerializedName("RiskIDList")
     @Expose
     private Long [] RiskIDList;
 
     /**
-     * Get Status  0: unprocessed 1: fixed 2: ignored. 
-     * @return Status Status  0: unprocessed 1: fixed 2: ignored.
+     * Get Status. 0: unprocessed; 1: processed; 2: ignored 
+     * @return Status Status. 0: unprocessed; 1: processed; 2: ignored
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Status  0: unprocessed 1: fixed 2: ignored.
-     * @param Status Status  0: unprocessed 1: fixed 2: ignored.
+     * Set Status. 0: unprocessed; 1: processed; 2: ignored
+     * @param Status Status. 0: unprocessed; 1: processed; 2: ignored
      */
     public void setStatus(Long Status) {
         this.Status = Status;
@@ -84,32 +84,32 @@ public class UpdateAccessKeyAlarmStatusRequest extends AbstractModel {
     }
 
     /**
-     * Get Alarm ID list. 
-     * @return AlarmIDList Alarm ID list.
+     * Get List of alarm IDs 
+     * @return AlarmIDList List of alarm IDs
      */
     public Long [] getAlarmIDList() {
         return this.AlarmIDList;
     }
 
     /**
-     * Set Alarm ID list.
-     * @param AlarmIDList Alarm ID list.
+     * Set List of alarm IDs
+     * @param AlarmIDList List of alarm IDs
      */
     public void setAlarmIDList(Long [] AlarmIDList) {
         this.AlarmIDList = AlarmIDList;
     }
 
     /**
-     * Get Risk ID list. 
-     * @return RiskIDList Risk ID list.
+     * Get Risk ID list 
+     * @return RiskIDList Risk ID list
      */
     public Long [] getRiskIDList() {
         return this.RiskIDList;
     }
 
     /**
-     * Set Risk ID list.
-     * @param RiskIDList Risk ID list.
+     * Set Risk ID list
+     * @param RiskIDList Risk ID list
      */
     public void setRiskIDList(Long [] RiskIDList) {
         this.RiskIDList = RiskIDList;

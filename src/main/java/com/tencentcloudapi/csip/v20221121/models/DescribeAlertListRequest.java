@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeAlertListRequest extends AbstractModel {
 
     /**
-    * Tag search filter criteria
+    * Filter criteria for tag search
     */
     @SerializedName("Filter")
     @Expose
@@ -45,23 +45,23 @@ public class DescribeAlertListRequest extends AbstractModel {
     private String [] OperatedMemberId;
 
     /**
-    * 0: Default all 1: Asset ID 2: Domain name
+    * 0: Default: All; 1: Asset ID; 2: Domain name
     */
     @SerializedName("AssetType")
     @Expose
     private Long AssetType;
 
     /**
-     * Get Tag search filter criteria 
-     * @return Filter Tag search filter criteria
+     * Get Filter criteria for tag search 
+     * @return Filter Filter criteria for tag search
      */
     public Filter getFilter() {
         return this.Filter;
     }
 
     /**
-     * Set Tag search filter criteria
-     * @param Filter Tag search filter criteria
+     * Set Filter criteria for tag search
+     * @param Filter Filter criteria for tag search
      */
     public void setFilter(Filter Filter) {
         this.Filter = Filter;
@@ -100,16 +100,16 @@ public class DescribeAlertListRequest extends AbstractModel {
     }
 
     /**
-     * Get 0: Default all 1: Asset ID 2: Domain name 
-     * @return AssetType 0: Default all 1: Asset ID 2: Domain name
+     * Get 0: Default: All; 1: Asset ID; 2: Domain name 
+     * @return AssetType 0: Default: All; 1: Asset ID; 2: Domain name
      */
     public Long getAssetType() {
         return this.AssetType;
     }
 
     /**
-     * Set 0: Default all 1: Asset ID 2: Domain name
-     * @param AssetType 0: Default all 1: Asset ID 2: Domain name
+     * Set 0: Default: All; 1: Asset ID; 2: Domain name
+     * @param AssetType 0: Default: All; 1: Asset ID; 2: Domain name
      */
     public void setAssetType(Long AssetType) {
         this.AssetType = AssetType;

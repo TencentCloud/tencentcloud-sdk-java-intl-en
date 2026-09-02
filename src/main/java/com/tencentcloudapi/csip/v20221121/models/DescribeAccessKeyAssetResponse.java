@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeAccessKeyAssetResponse extends AbstractModel {
 
     /**
-    * Access key asset list.
+    * Access key asset list
     */
     @SerializedName("Data")
     @Expose
     private AccessKeyAsset [] Data;
 
     /**
-    * Total quantity.
+    * Total number
     */
     @SerializedName("Total")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeAccessKeyAssetResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Access key asset list. 
-     * @return Data Access key asset list.
+     * Get Access key asset list 
+     * @return Data Access key asset list
      */
     public AccessKeyAsset [] getData() {
         return this.Data;
     }
 
     /**
-     * Set Access key asset list.
-     * @param Data Access key asset list.
+     * Set Access key asset list
+     * @param Data Access key asset list
      */
     public void setData(AccessKeyAsset [] Data) {
         this.Data = Data;
     }
 
     /**
-     * Get Total quantity. 
-     * @return Total Total quantity.
+     * Get Total number 
+     * @return Total Total number
      */
     public Long getTotal() {
         return this.Total;
     }
 
     /**
-     * Set Total quantity.
-     * @param Total Total quantity.
+     * Set Total number
+     * @param Total Total number
      */
     public void setTotal(Long Total) {
         this.Total = Total;

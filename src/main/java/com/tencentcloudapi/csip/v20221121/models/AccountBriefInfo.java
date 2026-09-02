@@ -38,7 +38,7 @@ public class AccountBriefInfo extends AbstractModel {
     private String Nick;
 
     /**
-    * <p>account Uin</p>
+    * <p>Account Uin</p>
     */
     @SerializedName("Uin")
     @Expose
@@ -77,16 +77,16 @@ public class AccountBriefInfo extends AbstractModel {
     }
 
     /**
-     * Get <p>account Uin</p> 
-     * @return Uin <p>account Uin</p>
+     * Get <p>Account Uin</p> 
+     * @return Uin <p>Account Uin</p>
      */
     public String getUin() {
         return this.Uin;
     }
 
     /**
-     * Set <p>account Uin</p>
-     * @param Uin <p>account Uin</p>
+     * Set <p>Account Uin</p>
+     * @param Uin <p>Account Uin</p>
      */
     public void setUin(String Uin) {
         this.Uin = Uin;

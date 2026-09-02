@@ -52,7 +52,7 @@ public class RiskDetailItem extends AbstractModel {
     private String RiskContent;
 
     /**
-    * <p>Cloud service provider</p>
+    * <p>Cloud service provider.</p>
     */
     @SerializedName("Provider")
     @Expose
@@ -66,7 +66,7 @@ public class RiskDetailItem extends AbstractModel {
     private String ProviderName;
 
     /**
-    * <p>cloud account</p>
+    * <p>Cloud account</p>
     */
     @SerializedName("CloudAccountId")
     @Expose
@@ -87,7 +87,7 @@ public class RiskDetailItem extends AbstractModel {
     private String InstanceId;
 
     /**
-    * <p>Instance name</p>
+    * <p>Instance name.</p>
     */
     @SerializedName("InstanceName")
     @Expose
@@ -115,7 +115,7 @@ public class RiskDetailItem extends AbstractModel {
     private String CheckStatus;
 
     /**
-    * <p>User AppID</p>
+    * <p>User AppID.</p>
     */
     @SerializedName("AppID")
     @Expose
@@ -127,6 +127,13 @@ public class RiskDetailItem extends AbstractModel {
     @SerializedName("AssetType")
     @Expose
     private String AssetType;
+
+    /**
+    * <p>Risk ignore reason</p>
+    */
+    @SerializedName("Reason")
+    @Expose
+    private String Reason;
 
     /**
      * Get <p>First discovery time</p> 
@@ -193,16 +200,16 @@ public class RiskDetailItem extends AbstractModel {
     }
 
     /**
-     * Get <p>Cloud service provider</p> 
-     * @return Provider <p>Cloud service provider</p>
+     * Get <p>Cloud service provider.</p> 
+     * @return Provider <p>Cloud service provider.</p>
      */
     public String getProvider() {
         return this.Provider;
     }
 
     /**
-     * Set <p>Cloud service provider</p>
-     * @param Provider <p>Cloud service provider</p>
+     * Set <p>Cloud service provider.</p>
+     * @param Provider <p>Cloud service provider.</p>
      */
     public void setProvider(String Provider) {
         this.Provider = Provider;
@@ -225,16 +232,16 @@ public class RiskDetailItem extends AbstractModel {
     }
 
     /**
-     * Get <p>cloud account</p> 
-     * @return CloudAccountId <p>cloud account</p>
+     * Get <p>Cloud account</p> 
+     * @return CloudAccountId <p>Cloud account</p>
      */
     public String getCloudAccountId() {
         return this.CloudAccountId;
     }
 
     /**
-     * Set <p>cloud account</p>
-     * @param CloudAccountId <p>cloud account</p>
+     * Set <p>Cloud account</p>
+     * @param CloudAccountId <p>Cloud account</p>
      */
     public void setCloudAccountId(String CloudAccountId) {
         this.CloudAccountId = CloudAccountId;
@@ -273,16 +280,16 @@ public class RiskDetailItem extends AbstractModel {
     }
 
     /**
-     * Get <p>Instance name</p> 
-     * @return InstanceName <p>Instance name</p>
+     * Get <p>Instance name.</p> 
+     * @return InstanceName <p>Instance name.</p>
      */
     public String getInstanceName() {
         return this.InstanceName;
     }
 
     /**
-     * Set <p>Instance name</p>
-     * @param InstanceName <p>Instance name</p>
+     * Set <p>Instance name.</p>
+     * @param InstanceName <p>Instance name.</p>
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;
@@ -337,16 +344,16 @@ public class RiskDetailItem extends AbstractModel {
     }
 
     /**
-     * Get <p>User AppID</p> 
-     * @return AppID <p>User AppID</p>
+     * Get <p>User AppID.</p> 
+     * @return AppID <p>User AppID.</p>
      */
     public Long getAppID() {
         return this.AppID;
     }
 
     /**
-     * Set <p>User AppID</p>
-     * @param AppID <p>User AppID</p>
+     * Set <p>User AppID.</p>
+     * @param AppID <p>User AppID.</p>
      */
     public void setAppID(Long AppID) {
         this.AppID = AppID;
@@ -366,6 +373,22 @@ public class RiskDetailItem extends AbstractModel {
      */
     public void setAssetType(String AssetType) {
         this.AssetType = AssetType;
+    }
+
+    /**
+     * Get <p>Risk ignore reason</p> 
+     * @return Reason <p>Risk ignore reason</p>
+     */
+    public String getReason() {
+        return this.Reason;
+    }
+
+    /**
+     * Set <p>Risk ignore reason</p>
+     * @param Reason <p>Risk ignore reason</p>
+     */
+    public void setReason(String Reason) {
+        this.Reason = Reason;
     }
 
     public RiskDetailItem() {
@@ -421,6 +444,9 @@ public class RiskDetailItem extends AbstractModel {
         if (source.AssetType != null) {
             this.AssetType = new String(source.AssetType);
         }
+        if (source.Reason != null) {
+            this.Reason = new String(source.Reason);
+        }
     }
 
 
@@ -443,6 +469,7 @@ public class RiskDetailItem extends AbstractModel {
         this.setParamSimple(map, prefix + "CheckStatus", this.CheckStatus);
         this.setParamSimple(map, prefix + "AppID", this.AppID);
         this.setParamSimple(map, prefix + "AssetType", this.AssetType);
+        this.setParamSimple(map, prefix + "Reason", this.Reason);
 
     }
 }

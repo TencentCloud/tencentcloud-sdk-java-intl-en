@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class CFGViewCFGRisk extends AbstractModel {
 
     /**
-    * Impact assets.
+    * Affect assets
     */
     @SerializedName("NoHandleCount")
     @Expose
     private Long NoHandleCount;
 
     /**
-    * Risk level: low - low risk, high - high risk, middle - medium risk, info - note, extreme - critical.
+    * Risk level. low: low risk. high: high risk. middle: medium risk. info: notification. extreme: critical.
     */
     @SerializedName("Level")
     @Expose
@@ -88,7 +88,6 @@ public class CFGViewCFGRisk extends AbstractModel {
 
     /**
     * User Nickname
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Nick")
     @Expose
@@ -96,23 +95,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * User UIN
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Uin")
     @Expose
     private String Uin;
 
     /**
-    * Configuration name.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Configuration name
     */
     @SerializedName("CFGName")
     @Expose
     private String CFGName;
 
     /**
-    * Check type.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Check type
     */
     @SerializedName("CheckType")
     @Expose
@@ -120,7 +116,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * -
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("CFGSTD")
     @Expose
@@ -128,7 +123,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Description
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("CFGDescribe")
     @Expose
@@ -136,47 +130,45 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Fixing suggestion
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("CFGFix")
     @Expose
     private String CFGFix;
 
     /**
-    * Help documentation.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Help documentation
     */
     @SerializedName("CFGHelpURL")
     @Expose
     private String CFGHelpURL;
 
     /**
-     * Get Impact assets. 
-     * @return NoHandleCount Impact assets.
+     * Get Affect assets 
+     * @return NoHandleCount Affect assets
      */
     public Long getNoHandleCount() {
         return this.NoHandleCount;
     }
 
     /**
-     * Set Impact assets.
-     * @param NoHandleCount Impact assets.
+     * Set Affect assets
+     * @param NoHandleCount Affect assets
      */
     public void setNoHandleCount(Long NoHandleCount) {
         this.NoHandleCount = NoHandleCount;
     }
 
     /**
-     * Get Risk level: low - low risk, high - high risk, middle - medium risk, info - note, extreme - critical. 
-     * @return Level Risk level: low - low risk, high - high risk, middle - medium risk, info - note, extreme - critical.
+     * Get Risk level. low: low risk. high: high risk. middle: medium risk. info: notification. extreme: critical. 
+     * @return Level Risk level. low: low risk. high: high risk. middle: medium risk. info: notification. extreme: critical.
      */
     public String getLevel() {
         return this.Level;
     }
 
     /**
-     * Set Risk level: low - low risk, high - high risk, middle - medium risk, info - note, extreme - critical.
-     * @param Level Risk level: low - low risk, high - high risk, middle - medium risk, info - note, extreme - critical.
+     * Set Risk level. low: low risk. high: high risk. middle: medium risk. info: notification. extreme: critical.
+     * @param Level Risk level. low: low risk. high: high risk. middle: medium risk. info: notification. extreme: critical.
      */
     public void setLevel(String Level) {
         this.Level = Level;
@@ -295,10 +287,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get User Nickname
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get User Nickname 
      * @return Nick User Nickname
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getNick() {
         return this.Nick;
@@ -306,19 +296,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set User Nickname
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Nick User Nickname
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setNick(String Nick) {
         this.Nick = Nick;
     }
 
     /**
-     * Get User UIN
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get User UIN 
      * @return Uin User UIN
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getUin() {
         return this.Uin;
@@ -326,59 +312,47 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set User UIN
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Uin User UIN
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setUin(String Uin) {
         this.Uin = Uin;
     }
 
     /**
-     * Get Configuration name.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return CFGName Configuration name.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Configuration name 
+     * @return CFGName Configuration name
      */
     public String getCFGName() {
         return this.CFGName;
     }
 
     /**
-     * Set Configuration name.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param CFGName Configuration name.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Configuration name
+     * @param CFGName Configuration name
      */
     public void setCFGName(String CFGName) {
         this.CFGName = CFGName;
     }
 
     /**
-     * Get Check type.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return CheckType Check type.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Check type 
+     * @return CheckType Check type
      */
     public String getCheckType() {
         return this.CheckType;
     }
 
     /**
-     * Set Check type.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param CheckType Check type.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Check type
+     * @param CheckType Check type
      */
     public void setCheckType(String CheckType) {
         this.CheckType = CheckType;
     }
 
     /**
-     * Get -
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get - 
      * @return CFGSTD -
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getCFGSTD() {
         return this.CFGSTD;
@@ -386,19 +360,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set -
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param CFGSTD -
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setCFGSTD(String CFGSTD) {
         this.CFGSTD = CFGSTD;
     }
 
     /**
-     * Get Description
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Description 
      * @return CFGDescribe Description
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getCFGDescribe() {
         return this.CFGDescribe;
@@ -406,19 +376,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Description
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param CFGDescribe Description
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setCFGDescribe(String CFGDescribe) {
         this.CFGDescribe = CFGDescribe;
     }
 
     /**
-     * Get Fixing suggestion
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Fixing suggestion 
      * @return CFGFix Fixing suggestion
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getCFGFix() {
         return this.CFGFix;
@@ -426,29 +392,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Fixing suggestion
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param CFGFix Fixing suggestion
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setCFGFix(String CFGFix) {
         this.CFGFix = CFGFix;
     }
 
     /**
-     * Get Help documentation.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return CFGHelpURL Help documentation.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Help documentation 
+     * @return CFGHelpURL Help documentation
      */
     public String getCFGHelpURL() {
         return this.CFGHelpURL;
     }
 
     /**
-     * Set Help documentation.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param CFGHelpURL Help documentation.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Help documentation
+     * @param CFGHelpURL Help documentation
      */
     public void setCFGHelpURL(String CFGHelpURL) {
         this.CFGHelpURL = CFGHelpURL;

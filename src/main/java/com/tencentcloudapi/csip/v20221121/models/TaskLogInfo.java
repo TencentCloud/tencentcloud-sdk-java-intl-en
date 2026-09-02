@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class TaskLogInfo extends AbstractModel {
 
     /**
-    * report name
+    * Report Name
     */
     @SerializedName("TaskLogName")
     @Expose
     private String TaskLogName;
 
     /**
-    * Report ID.
+    * Report ID
     */
     @SerializedName("TaskLogId")
     @Expose
@@ -122,32 +122,32 @@ public class TaskLogInfo extends AbstractModel {
     private Long TemplateId;
 
     /**
-     * Get report name 
-     * @return TaskLogName report name
+     * Get Report Name 
+     * @return TaskLogName Report Name
      */
     public String getTaskLogName() {
         return this.TaskLogName;
     }
 
     /**
-     * Set report name
-     * @param TaskLogName report name
+     * Set Report Name
+     * @param TaskLogName Report Name
      */
     public void setTaskLogName(String TaskLogName) {
         this.TaskLogName = TaskLogName;
     }
 
     /**
-     * Get Report ID. 
-     * @return TaskLogId Report ID.
+     * Get Report ID 
+     * @return TaskLogId Report ID
      */
     public String getTaskLogId() {
         return this.TaskLogId;
     }
 
     /**
-     * Set Report ID.
-     * @param TaskLogId Report ID.
+     * Set Report ID
+     * @param TaskLogId Report ID
      */
     public void setTaskLogId(String TaskLogId) {
         this.TaskLogId = TaskLogId;

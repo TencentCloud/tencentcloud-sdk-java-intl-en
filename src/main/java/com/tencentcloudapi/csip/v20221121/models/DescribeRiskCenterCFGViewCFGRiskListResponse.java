@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeRiskCenterCFGViewCFGRiskListResponse extends AbstractModel {
 
     /**
-    * Total number of entries
+    * Total quantity.
     */
     @SerializedName("TotalCount")
     @Expose
@@ -87,16 +87,16 @@ public class DescribeRiskCenterCFGViewCFGRiskListResponse extends AbstractModel 
     private String RequestId;
 
     /**
-     * Get Total number of entries 
-     * @return TotalCount Total number of entries
+     * Get Total quantity. 
+     * @return TotalCount Total quantity.
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set Total number of entries
-     * @param TotalCount Total number of entries
+     * Set Total quantity.
+     * @param TotalCount Total quantity.
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

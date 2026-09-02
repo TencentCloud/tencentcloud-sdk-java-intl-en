@@ -26,8 +26,8 @@ public class StatisticalFilter extends AbstractModel {
     /**
     * 0: Not based on statistical testing
 1: Occurrence count higher than a fixed value
-2: Occurrence count exceeds 100 percent of the period average
-3: Occurrences higher than 50 percent of the user average
+2: Occurrence count exceeds the cycle average by percent
+3: Occurrences higher than the user average percent
     */
     @SerializedName("OperatorType")
     @Expose
@@ -43,12 +43,12 @@ public class StatisticalFilter extends AbstractModel {
     /**
      * Get 0: Not based on statistical testing
 1: Occurrence count higher than a fixed value
-2: Occurrence count exceeds 100 percent of the period average
-3: Occurrences higher than 50 percent of the user average 
+2: Occurrence count exceeds the cycle average by percent
+3: Occurrences higher than the user average percent 
      * @return OperatorType 0: Not based on statistical testing
 1: Occurrence count higher than a fixed value
-2: Occurrence count exceeds 100 percent of the period average
-3: Occurrences higher than 50 percent of the user average
+2: Occurrence count exceeds the cycle average by percent
+3: Occurrences higher than the user average percent
      */
     public Long getOperatorType() {
         return this.OperatorType;
@@ -57,12 +57,12 @@ public class StatisticalFilter extends AbstractModel {
     /**
      * Set 0: Not based on statistical testing
 1: Occurrence count higher than a fixed value
-2: Occurrence count exceeds 100 percent of the period average
-3: Occurrences higher than 50 percent of the user average
+2: Occurrence count exceeds the cycle average by percent
+3: Occurrences higher than the user average percent
      * @param OperatorType 0: Not based on statistical testing
 1: Occurrence count higher than a fixed value
-2: Occurrence count exceeds 100 percent of the period average
-3: Occurrences higher than 50 percent of the user average
+2: Occurrence count exceeds the cycle average by percent
+3: Occurrences higher than the user average percent
      */
     public void setOperatorType(Long OperatorType) {
         this.OperatorType = OperatorType;

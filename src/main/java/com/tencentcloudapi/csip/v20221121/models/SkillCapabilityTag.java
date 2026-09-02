@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class SkillCapabilityTag extends AbstractModel {
 
     /**
-    * Capacity tag identification, suitable for program judgment, filtering or aggregation usage
+    * Capacity tag identification
     */
     @SerializedName("ID")
     @Expose
     private String ID;
 
     /**
-    * Capacity Tag Display Name
+    * Display name of the capability tag
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-     * Get Capacity tag identification, suitable for program judgment, filtering or aggregation usage 
-     * @return ID Capacity tag identification, suitable for program judgment, filtering or aggregation usage
+     * Get Capacity tag identification 
+     * @return ID Capacity tag identification
      */
     public String getID() {
         return this.ID;
     }
 
     /**
-     * Set Capacity tag identification, suitable for program judgment, filtering or aggregation usage
-     * @param ID Capacity tag identification, suitable for program judgment, filtering or aggregation usage
+     * Set Capacity tag identification
+     * @param ID Capacity tag identification
      */
     public void setID(String ID) {
         this.ID = ID;
     }
 
     /**
-     * Get Capacity Tag Display Name 
-     * @return Name Capacity Tag Display Name
+     * Get Display name of the capability tag 
+     * @return Name Display name of the capability tag
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Capacity Tag Display Name
-     * @param Name Capacity Tag Display Name
+     * Set Display name of the capability tag
+     * @param Name Display name of the capability tag
      */
     public void setName(String Name) {
         this.Name = Name;

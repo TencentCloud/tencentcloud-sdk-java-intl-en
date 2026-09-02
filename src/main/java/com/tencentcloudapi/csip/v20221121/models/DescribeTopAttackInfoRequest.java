@@ -66,7 +66,7 @@ public class DescribeTopAttackInfoRequest extends AbstractModel {
     private String AssetName;
 
     /**
-    * 0: Default all 1: Asset ID 2: Domain name
+    * 0: Default: All; 1: Asset ID; 2: Domain name
     */
     @SerializedName("AssetType")
     @Expose
@@ -169,16 +169,16 @@ public class DescribeTopAttackInfoRequest extends AbstractModel {
     }
 
     /**
-     * Get 0: Default all 1: Asset ID 2: Domain name 
-     * @return AssetType 0: Default all 1: Asset ID 2: Domain name
+     * Get 0: Default: All; 1: Asset ID; 2: Domain name 
+     * @return AssetType 0: Default: All; 1: Asset ID; 2: Domain name
      */
     public Long getAssetType() {
         return this.AssetType;
     }
 
     /**
-     * Set 0: Default all 1: Asset ID 2: Domain name
-     * @param AssetType 0: Default all 1: Asset ID 2: Domain name
+     * Set 0: Default: All; 1: Asset ID; 2: Domain name
+     * @param AssetType 0: Default: All; 1: Asset ID; 2: Domain name
      */
     public void setAssetType(Long AssetType) {
         this.AssetType = AssetType;

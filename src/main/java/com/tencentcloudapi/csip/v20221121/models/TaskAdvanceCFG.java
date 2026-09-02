@@ -31,21 +31,21 @@ public class TaskAdvanceCFG extends AbstractModel {
     private PortRiskAdvanceCFGParamItem [] PortRisk;
 
     /**
-    * Advanced vulnerability scan configuration
+    * Vulnerability Risk Advanced Configuration
     */
     @SerializedName("VulRisk")
     @Expose
     private TaskCenterVulRiskInputParam [] VulRisk;
 
     /**
-    * Advanced weak password check configuration
+    * Weak Password Risk Advanced Configuration
     */
     @SerializedName("WeakPwdRisk")
     @Expose
     private TaskCenterWeakPwdRiskInputParam [] WeakPwdRisk;
 
     /**
-    * Advanced configuration risk scan configuration
+    * Advanced Configuration of Configuration Risk
     */
     @SerializedName("CFGRisk")
     @Expose
@@ -68,48 +68,48 @@ public class TaskAdvanceCFG extends AbstractModel {
     }
 
     /**
-     * Get Advanced vulnerability scan configuration 
-     * @return VulRisk Advanced vulnerability scan configuration
+     * Get Vulnerability Risk Advanced Configuration 
+     * @return VulRisk Vulnerability Risk Advanced Configuration
      */
     public TaskCenterVulRiskInputParam [] getVulRisk() {
         return this.VulRisk;
     }
 
     /**
-     * Set Advanced vulnerability scan configuration
-     * @param VulRisk Advanced vulnerability scan configuration
+     * Set Vulnerability Risk Advanced Configuration
+     * @param VulRisk Vulnerability Risk Advanced Configuration
      */
     public void setVulRisk(TaskCenterVulRiskInputParam [] VulRisk) {
         this.VulRisk = VulRisk;
     }
 
     /**
-     * Get Advanced weak password check configuration 
-     * @return WeakPwdRisk Advanced weak password check configuration
+     * Get Weak Password Risk Advanced Configuration 
+     * @return WeakPwdRisk Weak Password Risk Advanced Configuration
      */
     public TaskCenterWeakPwdRiskInputParam [] getWeakPwdRisk() {
         return this.WeakPwdRisk;
     }
 
     /**
-     * Set Advanced weak password check configuration
-     * @param WeakPwdRisk Advanced weak password check configuration
+     * Set Weak Password Risk Advanced Configuration
+     * @param WeakPwdRisk Weak Password Risk Advanced Configuration
      */
     public void setWeakPwdRisk(TaskCenterWeakPwdRiskInputParam [] WeakPwdRisk) {
         this.WeakPwdRisk = WeakPwdRisk;
     }
 
     /**
-     * Get Advanced configuration risk scan configuration 
-     * @return CFGRisk Advanced configuration risk scan configuration
+     * Get Advanced Configuration of Configuration Risk 
+     * @return CFGRisk Advanced Configuration of Configuration Risk
      */
     public TaskCenterCFGRiskInputParam [] getCFGRisk() {
         return this.CFGRisk;
     }
 
     /**
-     * Set Advanced configuration risk scan configuration
-     * @param CFGRisk Advanced configuration risk scan configuration
+     * Set Advanced Configuration of Configuration Risk
+     * @param CFGRisk Advanced Configuration of Configuration Risk
      */
     public void setCFGRisk(TaskCenterCFGRiskInputParam [] CFGRisk) {
         this.CFGRisk = CFGRisk;

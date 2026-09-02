@@ -24,161 +24,161 @@ import java.util.HashMap;
 public class Filter extends AbstractModel {
 
     /**
-    * Max number of returned results
+    * Query Quantity Limit
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * Query offset
+    * Query Offset Position
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * Sorting order. Values: `asc` (ascending), `desc` (descending).
+    * Sort by Ascending or Descending Order. Ascending: asc, Descending: desc.
     */
     @SerializedName("Order")
     @Expose
     private String Order;
 
     /**
-    * Specify the field used for sorting
+    * Fields to Sort
     */
     @SerializedName("By")
     @Expose
     private String By;
 
     /**
-    * Filtered columns and content
+    * Filtered Columns and Content
     */
     @SerializedName("Filters")
     @Expose
     private WhereFilter [] Filters;
 
     /**
-    * Start time of the query period. 
+    * Can be left blank. Log usage query time.
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * End time of the query period.
+    * Can be left blank. Log usage query time.
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-     * Get Max number of returned results 
-     * @return Limit Max number of returned results
+     * Get Query Quantity Limit 
+     * @return Limit Query Quantity Limit
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Max number of returned results
-     * @param Limit Max number of returned results
+     * Set Query Quantity Limit
+     * @param Limit Query Quantity Limit
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get Query offset 
-     * @return Offset Query offset
+     * Get Query Offset Position 
+     * @return Offset Query Offset Position
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Query offset
-     * @param Offset Query offset
+     * Set Query Offset Position
+     * @param Offset Query Offset Position
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get Sorting order. Values: `asc` (ascending), `desc` (descending). 
-     * @return Order Sorting order. Values: `asc` (ascending), `desc` (descending).
+     * Get Sort by Ascending or Descending Order. Ascending: asc, Descending: desc. 
+     * @return Order Sort by Ascending or Descending Order. Ascending: asc, Descending: desc.
      */
     public String getOrder() {
         return this.Order;
     }
 
     /**
-     * Set Sorting order. Values: `asc` (ascending), `desc` (descending).
-     * @param Order Sorting order. Values: `asc` (ascending), `desc` (descending).
+     * Set Sort by Ascending or Descending Order. Ascending: asc, Descending: desc.
+     * @param Order Sort by Ascending or Descending Order. Ascending: asc, Descending: desc.
      */
     public void setOrder(String Order) {
         this.Order = Order;
     }
 
     /**
-     * Get Specify the field used for sorting 
-     * @return By Specify the field used for sorting
+     * Get Fields to Sort 
+     * @return By Fields to Sort
      */
     public String getBy() {
         return this.By;
     }
 
     /**
-     * Set Specify the field used for sorting
-     * @param By Specify the field used for sorting
+     * Set Fields to Sort
+     * @param By Fields to Sort
      */
     public void setBy(String By) {
         this.By = By;
     }
 
     /**
-     * Get Filtered columns and content 
-     * @return Filters Filtered columns and content
+     * Get Filtered Columns and Content 
+     * @return Filters Filtered Columns and Content
      */
     public WhereFilter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set Filtered columns and content
-     * @param Filters Filtered columns and content
+     * Set Filtered Columns and Content
+     * @param Filters Filtered Columns and Content
      */
     public void setFilters(WhereFilter [] Filters) {
         this.Filters = Filters;
     }
 
     /**
-     * Get Start time of the query period.  
-     * @return StartTime Start time of the query period. 
+     * Get Can be left blank. Log usage query time. 
+     * @return StartTime Can be left blank. Log usage query time.
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set Start time of the query period. 
-     * @param StartTime Start time of the query period. 
+     * Set Can be left blank. Log usage query time.
+     * @param StartTime Can be left blank. Log usage query time.
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get End time of the query period. 
-     * @return EndTime End time of the query period.
+     * Get Can be left blank. Log usage query time. 
+     * @return EndTime Can be left blank. Log usage query time.
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set End time of the query period.
-     * @param EndTime End time of the query period.
+     * Set Can be left blank. Log usage query time.
+     * @param EndTime Can be left blank. Log usage query time.
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;

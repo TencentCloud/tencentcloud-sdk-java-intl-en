@@ -24,28 +24,28 @@ import java.util.HashMap;
 public class TaskAssetObject extends AbstractModel {
 
     /**
-    * Asset name.
+    * Asset name
     */
     @SerializedName("AssetName")
     @Expose
     private String AssetName;
 
     /**
-    * Asset type.
+    * Asset type
     */
     @SerializedName("InstanceType")
     @Expose
     private String InstanceType;
 
     /**
-    * Asset category.
+    * Asset category
     */
     @SerializedName("AssetType")
     @Expose
     private String AssetType;
 
     /**
-    * IP, domain name, asset ID, database ID, and more
+    * IP/Domain/Asset ID, Database ID, etc.
     */
     @SerializedName("Asset")
     @Expose
@@ -66,64 +66,64 @@ public class TaskAssetObject extends AbstractModel {
     private String Arn;
 
     /**
-     * Get Asset name. 
-     * @return AssetName Asset name.
+     * Get Asset name 
+     * @return AssetName Asset name
      */
     public String getAssetName() {
         return this.AssetName;
     }
 
     /**
-     * Set Asset name.
-     * @param AssetName Asset name.
+     * Set Asset name
+     * @param AssetName Asset name
      */
     public void setAssetName(String AssetName) {
         this.AssetName = AssetName;
     }
 
     /**
-     * Get Asset type. 
-     * @return InstanceType Asset type.
+     * Get Asset type 
+     * @return InstanceType Asset type
      */
     public String getInstanceType() {
         return this.InstanceType;
     }
 
     /**
-     * Set Asset type.
-     * @param InstanceType Asset type.
+     * Set Asset type
+     * @param InstanceType Asset type
      */
     public void setInstanceType(String InstanceType) {
         this.InstanceType = InstanceType;
     }
 
     /**
-     * Get Asset category. 
-     * @return AssetType Asset category.
+     * Get Asset category 
+     * @return AssetType Asset category
      */
     public String getAssetType() {
         return this.AssetType;
     }
 
     /**
-     * Set Asset category.
-     * @param AssetType Asset category.
+     * Set Asset category
+     * @param AssetType Asset category
      */
     public void setAssetType(String AssetType) {
         this.AssetType = AssetType;
     }
 
     /**
-     * Get IP, domain name, asset ID, database ID, and more 
-     * @return Asset IP, domain name, asset ID, database ID, and more
+     * Get IP/Domain/Asset ID, Database ID, etc. 
+     * @return Asset IP/Domain/Asset ID, Database ID, etc.
      */
     public String getAsset() {
         return this.Asset;
     }
 
     /**
-     * Set IP, domain name, asset ID, database ID, and more
-     * @param Asset IP, domain name, asset ID, database ID, and more
+     * Set IP/Domain/Asset ID, Database ID, etc.
+     * @param Asset IP/Domain/Asset ID, Database ID, etc.
      */
     public void setAsset(String Asset) {
         this.Asset = Asset;

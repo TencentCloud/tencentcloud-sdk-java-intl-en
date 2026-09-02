@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DataSearchBug extends AbstractModel {
 
     /**
-    * Query status code
+    * Return to Query Status
     */
     @SerializedName("StateCode")
     @Expose
@@ -38,7 +38,7 @@ public class DataSearchBug extends AbstractModel {
     private BugInfoDetail [] DataBug;
 
     /**
-    * Vulnerability impact assets details
+    * Vulnerability impact asset details
     */
     @SerializedName("DataAsset")
     @Expose
@@ -80,7 +80,7 @@ public class DataSearchBug extends AbstractModel {
     private Long CWPFix;
 
     /**
-    * Product Support Status
+    * Product support status
     */
     @SerializedName("DataSupport")
     @Expose
@@ -94,16 +94,16 @@ public class DataSearchBug extends AbstractModel {
     private String CveId;
 
     /**
-     * Get Query status code 
-     * @return StateCode Query status code
+     * Get Return to Query Status 
+     * @return StateCode Return to Query Status
      */
     public String getStateCode() {
         return this.StateCode;
     }
 
     /**
-     * Set Query status code
-     * @param StateCode Query status code
+     * Set Return to Query Status
+     * @param StateCode Return to Query Status
      */
     public void setStateCode(String StateCode) {
         this.StateCode = StateCode;
@@ -126,16 +126,16 @@ public class DataSearchBug extends AbstractModel {
     }
 
     /**
-     * Get Vulnerability impact assets details 
-     * @return DataAsset Vulnerability impact assets details
+     * Get Vulnerability impact asset details 
+     * @return DataAsset Vulnerability impact asset details
      */
     public AssetInfoDetail [] getDataAsset() {
         return this.DataAsset;
     }
 
     /**
-     * Set Vulnerability impact assets details
-     * @param DataAsset Vulnerability impact assets details
+     * Set Vulnerability impact asset details
+     * @param DataAsset Vulnerability impact asset details
      */
     public void setDataAsset(AssetInfoDetail [] DataAsset) {
         this.DataAsset = DataAsset;
@@ -222,16 +222,16 @@ public class DataSearchBug extends AbstractModel {
     }
 
     /**
-     * Get Product Support Status 
-     * @return DataSupport Product Support Status
+     * Get Product support status 
+     * @return DataSupport Product support status
      */
     public ProductSupport [] getDataSupport() {
         return this.DataSupport;
     }
 
     /**
-     * Set Product Support Status
-     * @param DataSupport Product Support Status
+     * Set Product support status
+     * @param DataSupport Product support status
      */
     public void setDataSupport(ProductSupport [] DataSupport) {
         this.DataSupport = DataSupport;

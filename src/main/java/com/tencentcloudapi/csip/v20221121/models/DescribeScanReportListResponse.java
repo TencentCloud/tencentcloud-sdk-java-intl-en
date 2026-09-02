@@ -38,7 +38,7 @@ public class DescribeScanReportListResponse extends AbstractModel {
     private ScanTaskInfo [] Data;
 
     /**
-    * List of account UINs
+    * Host Account ID List
     */
     @SerializedName("UINList")
     @Expose
@@ -84,16 +84,16 @@ public class DescribeScanReportListResponse extends AbstractModel {
     }
 
     /**
-     * Get List of account UINs 
-     * @return UINList List of account UINs
+     * Get Host Account ID List 
+     * @return UINList Host Account ID List
      */
     public String [] getUINList() {
         return this.UINList;
     }
 
     /**
-     * Set List of account UINs
-     * @param UINList List of account UINs
+     * Set Host Account ID List
+     * @param UINList Host Account ID List
      */
     public void setUINList(String [] UINList) {
         this.UINList = UINList;

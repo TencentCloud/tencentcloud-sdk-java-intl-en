@@ -38,7 +38,7 @@ public class AIAgentAsset extends AbstractModel {
     private String AgentName;
 
     /**
-    * <p>agent model name usage</p>
+    * <p>Model name used by the agent</p>
     */
     @SerializedName("AgentModel")
     @Expose
@@ -52,14 +52,14 @@ public class AIAgentAsset extends AbstractModel {
     private String InstanceID;
 
     /**
-    * <p>Instance name</p>
+    * <p>Instance name.</p>
     */
     @SerializedName("InstanceName")
     @Expose
     private String InstanceName;
 
     /**
-    * <p>metadata risk list. Has the following enumeration values: 1. AK_TMP 2. USER_DATA</p>
+    * <p>metadata risk list. It has the following enumeration values: 1. AK_TMP  2. USER_DATA</p>
     */
     @SerializedName("MetadataRiskList")
     @Expose
@@ -80,14 +80,14 @@ public class AIAgentAsset extends AbstractModel {
     private String IdentityTimeLast;
 
     /**
-    * <p>Detect method. Has the following enumeration values: 1. FINGER Detect via asset fingerprinting 2. NETWORK Detect via network access mode</p>
+    * <p>Detection method. It has the following enumeration values: 1. FINGER: detected by asset fingerprinting. 2. NETWORK: detected by network access mode</p>
     */
     @SerializedName("IdentityMethod")
     @Expose
     private String IdentityMethod;
 
     /**
-    * <p>Exposure status. Has the following enumeration values. 1. EXPOSED; 2. UNEXPOSED;</p><ol start="3"><li>UNKNOWN;</li></ol>
+    * <p>Exposure status. It has the following enumeration values: 1. EXPOSED; 2. UNEXPOSED;</p><ol start="3"><li>UNKNOWN;</li></ol>
     */
     @SerializedName("ExposureStatus")
     @Expose
@@ -101,7 +101,7 @@ public class AIAgentAsset extends AbstractModel {
     private String MetadataRiskURL;
 
     /**
-    * <p>None</p>
+    * <p>Credential Skill installation status</p>
     */
     @SerializedName("SkillState")
     @Expose
@@ -115,7 +115,7 @@ public class AIAgentAsset extends AbstractModel {
     private TrafficPluginState TrafficPluginState;
 
     /**
-    * <p>Sandbox rule status for traffic</p>
+    * <p>Traffic sandbox rule status</p>
     */
     @SerializedName("TrafficRuleState")
     @Expose
@@ -161,16 +161,16 @@ public class AIAgentAsset extends AbstractModel {
     }
 
     /**
-     * Get <p>agent model name usage</p> 
-     * @return AgentModel <p>agent model name usage</p>
+     * Get <p>Model name used by the agent</p> 
+     * @return AgentModel <p>Model name used by the agent</p>
      */
     public String [] getAgentModel() {
         return this.AgentModel;
     }
 
     /**
-     * Set <p>agent model name usage</p>
-     * @param AgentModel <p>agent model name usage</p>
+     * Set <p>Model name used by the agent</p>
+     * @param AgentModel <p>Model name used by the agent</p>
      */
     public void setAgentModel(String [] AgentModel) {
         this.AgentModel = AgentModel;
@@ -193,32 +193,32 @@ public class AIAgentAsset extends AbstractModel {
     }
 
     /**
-     * Get <p>Instance name</p> 
-     * @return InstanceName <p>Instance name</p>
+     * Get <p>Instance name.</p> 
+     * @return InstanceName <p>Instance name.</p>
      */
     public String getInstanceName() {
         return this.InstanceName;
     }
 
     /**
-     * Set <p>Instance name</p>
-     * @param InstanceName <p>Instance name</p>
+     * Set <p>Instance name.</p>
+     * @param InstanceName <p>Instance name.</p>
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;
     }
 
     /**
-     * Get <p>metadata risk list. Has the following enumeration values: 1. AK_TMP 2. USER_DATA</p> 
-     * @return MetadataRiskList <p>metadata risk list. Has the following enumeration values: 1. AK_TMP 2. USER_DATA</p>
+     * Get <p>metadata risk list. It has the following enumeration values: 1. AK_TMP  2. USER_DATA</p> 
+     * @return MetadataRiskList <p>metadata risk list. It has the following enumeration values: 1. AK_TMP  2. USER_DATA</p>
      */
     public String [] getMetadataRiskList() {
         return this.MetadataRiskList;
     }
 
     /**
-     * Set <p>metadata risk list. Has the following enumeration values: 1. AK_TMP 2. USER_DATA</p>
-     * @param MetadataRiskList <p>metadata risk list. Has the following enumeration values: 1. AK_TMP 2. USER_DATA</p>
+     * Set <p>metadata risk list. It has the following enumeration values: 1. AK_TMP  2. USER_DATA</p>
+     * @param MetadataRiskList <p>metadata risk list. It has the following enumeration values: 1. AK_TMP  2. USER_DATA</p>
      */
     public void setMetadataRiskList(String [] MetadataRiskList) {
         this.MetadataRiskList = MetadataRiskList;
@@ -257,32 +257,32 @@ public class AIAgentAsset extends AbstractModel {
     }
 
     /**
-     * Get <p>Detect method. Has the following enumeration values: 1. FINGER Detect via asset fingerprinting 2. NETWORK Detect via network access mode</p> 
-     * @return IdentityMethod <p>Detect method. Has the following enumeration values: 1. FINGER Detect via asset fingerprinting 2. NETWORK Detect via network access mode</p>
+     * Get <p>Detection method. It has the following enumeration values: 1. FINGER: detected by asset fingerprinting. 2. NETWORK: detected by network access mode</p> 
+     * @return IdentityMethod <p>Detection method. It has the following enumeration values: 1. FINGER: detected by asset fingerprinting. 2. NETWORK: detected by network access mode</p>
      */
     public String getIdentityMethod() {
         return this.IdentityMethod;
     }
 
     /**
-     * Set <p>Detect method. Has the following enumeration values: 1. FINGER Detect via asset fingerprinting 2. NETWORK Detect via network access mode</p>
-     * @param IdentityMethod <p>Detect method. Has the following enumeration values: 1. FINGER Detect via asset fingerprinting 2. NETWORK Detect via network access mode</p>
+     * Set <p>Detection method. It has the following enumeration values: 1. FINGER: detected by asset fingerprinting. 2. NETWORK: detected by network access mode</p>
+     * @param IdentityMethod <p>Detection method. It has the following enumeration values: 1. FINGER: detected by asset fingerprinting. 2. NETWORK: detected by network access mode</p>
      */
     public void setIdentityMethod(String IdentityMethod) {
         this.IdentityMethod = IdentityMethod;
     }
 
     /**
-     * Get <p>Exposure status. Has the following enumeration values. 1. EXPOSED; 2. UNEXPOSED;</p><ol start="3"><li>UNKNOWN;</li></ol> 
-     * @return ExposureStatus <p>Exposure status. Has the following enumeration values. 1. EXPOSED; 2. UNEXPOSED;</p><ol start="3"><li>UNKNOWN;</li></ol>
+     * Get <p>Exposure status. It has the following enumeration values: 1. EXPOSED; 2. UNEXPOSED;</p><ol start="3"><li>UNKNOWN;</li></ol> 
+     * @return ExposureStatus <p>Exposure status. It has the following enumeration values: 1. EXPOSED; 2. UNEXPOSED;</p><ol start="3"><li>UNKNOWN;</li></ol>
      */
     public String getExposureStatus() {
         return this.ExposureStatus;
     }
 
     /**
-     * Set <p>Exposure status. Has the following enumeration values. 1. EXPOSED; 2. UNEXPOSED;</p><ol start="3"><li>UNKNOWN;</li></ol>
-     * @param ExposureStatus <p>Exposure status. Has the following enumeration values. 1. EXPOSED; 2. UNEXPOSED;</p><ol start="3"><li>UNKNOWN;</li></ol>
+     * Set <p>Exposure status. It has the following enumeration values: 1. EXPOSED; 2. UNEXPOSED;</p><ol start="3"><li>UNKNOWN;</li></ol>
+     * @param ExposureStatus <p>Exposure status. It has the following enumeration values: 1. EXPOSED; 2. UNEXPOSED;</p><ol start="3"><li>UNKNOWN;</li></ol>
      */
     public void setExposureStatus(String ExposureStatus) {
         this.ExposureStatus = ExposureStatus;
@@ -305,16 +305,16 @@ public class AIAgentAsset extends AbstractModel {
     }
 
     /**
-     * Get <p>None</p> 
-     * @return SkillState <p>None</p>
+     * Get <p>Credential Skill installation status</p> 
+     * @return SkillState <p>Credential Skill installation status</p>
      */
     public SkillState getSkillState() {
         return this.SkillState;
     }
 
     /**
-     * Set <p>None</p>
-     * @param SkillState <p>None</p>
+     * Set <p>Credential Skill installation status</p>
+     * @param SkillState <p>Credential Skill installation status</p>
      */
     public void setSkillState(SkillState SkillState) {
         this.SkillState = SkillState;
@@ -337,16 +337,16 @@ public class AIAgentAsset extends AbstractModel {
     }
 
     /**
-     * Get <p>Sandbox rule status for traffic</p> 
-     * @return TrafficRuleState <p>Sandbox rule status for traffic</p>
+     * Get <p>Traffic sandbox rule status</p> 
+     * @return TrafficRuleState <p>Traffic sandbox rule status</p>
      */
     public TrafficRuleState [] getTrafficRuleState() {
         return this.TrafficRuleState;
     }
 
     /**
-     * Set <p>Sandbox rule status for traffic</p>
-     * @param TrafficRuleState <p>Sandbox rule status for traffic</p>
+     * Set <p>Traffic sandbox rule status</p>
+     * @param TrafficRuleState <p>Traffic sandbox rule status</p>
      */
     public void setTrafficRuleState(TrafficRuleState [] TrafficRuleState) {
         this.TrafficRuleState = TrafficRuleState;

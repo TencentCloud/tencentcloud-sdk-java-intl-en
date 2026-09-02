@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeRiskDetailListResponse extends AbstractModel {
 
     /**
-    * Risk detail count from asset perspective
+    * Number of risk details from the asset's perspective
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * Risk detail list from asset perspective
+    * Risk Detail List from Asset's Perspective
     */
     @SerializedName("AssetRiskDetailList")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeRiskDetailListResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Risk detail count from asset perspective 
-     * @return TotalCount Risk detail count from asset perspective
+     * Get Number of risk details from the asset's perspective 
+     * @return TotalCount Number of risk details from the asset's perspective
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set Risk detail count from asset perspective
-     * @param TotalCount Risk detail count from asset perspective
+     * Set Number of risk details from the asset's perspective
+     * @param TotalCount Number of risk details from the asset's perspective
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get Risk detail list from asset perspective 
-     * @return AssetRiskDetailList Risk detail list from asset perspective
+     * Get Risk Detail List from Asset's Perspective 
+     * @return AssetRiskDetailList Risk Detail List from Asset's Perspective
      */
     public RiskDetailItem [] getAssetRiskDetailList() {
         return this.AssetRiskDetailList;
     }
 
     /**
-     * Set Risk detail list from asset perspective
-     * @param AssetRiskDetailList Risk detail list from asset perspective
+     * Set Risk Detail List from Asset's Perspective
+     * @param AssetRiskDetailList Risk Detail List from Asset's Perspective
      */
     public void setAssetRiskDetailList(RiskDetailItem [] AssetRiskDetailList) {
         this.AssetRiskDetailList = AssetRiskDetailList;

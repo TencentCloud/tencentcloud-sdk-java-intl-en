@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class ReportTaskIdList extends AbstractModel {
 
     /**
-    * List of task IDs
+    * Task ID List
     */
     @SerializedName("TaskIdList")
     @Expose
     private String [] TaskIdList;
 
     /**
-    * User AppId
+    * Tenant ID
     */
     @SerializedName("AppId")
     @Expose
     private String AppId;
 
     /**
-     * Get List of task IDs 
-     * @return TaskIdList List of task IDs
+     * Get Task ID List 
+     * @return TaskIdList Task ID List
      */
     public String [] getTaskIdList() {
         return this.TaskIdList;
     }
 
     /**
-     * Set List of task IDs
-     * @param TaskIdList List of task IDs
+     * Set Task ID List
+     * @param TaskIdList Task ID List
      */
     public void setTaskIdList(String [] TaskIdList) {
         this.TaskIdList = TaskIdList;
     }
 
     /**
-     * Get User AppId 
-     * @return AppId User AppId
+     * Get Tenant ID 
+     * @return AppId Tenant ID
      */
     public String getAppId() {
         return this.AppId;
     }
 
     /**
-     * Set User AppId
-     * @param AppId User AppId
+     * Set Tenant ID
+     * @param AppId Tenant ID
      */
     public void setAppId(String AppId) {
         this.AppId = AppId;

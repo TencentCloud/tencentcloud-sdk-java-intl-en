@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class OrganizationInfo extends AbstractModel {
 
     /**
-    * member account name
+    * Member account name
     */
     @SerializedName("NickName")
     @Expose
@@ -66,7 +66,7 @@ public class OrganizationInfo extends AbstractModel {
     private String GroupName;
 
     /**
-    * administrator account name
+    * Admin account name
     */
     @SerializedName("AdminName")
     @Expose
@@ -108,7 +108,7 @@ public class OrganizationInfo extends AbstractModel {
     private Long SubAccountCount;
 
     /**
-    * Number of abnormal sub-accounts
+    * Number of exceptional sub-accounts
     */
     @SerializedName("AbnormalSubUserCount")
     @Expose
@@ -192,7 +192,7 @@ public class OrganizationInfo extends AbstractModel {
     private Long QuotaConsumer;
 
     /**
-    * Number of activations by admin/delegated admin
+    * Number of enabled admins/delegated admins
     */
     @SerializedName("EnableAdminCount")
     @Expose
@@ -213,16 +213,16 @@ public class OrganizationInfo extends AbstractModel {
     private Long AdminCount;
 
     /**
-     * Get member account name 
-     * @return NickName member account name
+     * Get Member account name 
+     * @return NickName Member account name
      */
     public String getNickName() {
         return this.NickName;
     }
 
     /**
-     * Set member account name
-     * @param NickName member account name
+     * Set Member account name
+     * @param NickName Member account name
      */
     public void setNickName(String NickName) {
         this.NickName = NickName;
@@ -309,16 +309,16 @@ public class OrganizationInfo extends AbstractModel {
     }
 
     /**
-     * Get administrator account name 
-     * @return AdminName administrator account name
+     * Get Admin account name 
+     * @return AdminName Admin account name
      */
     public String getAdminName() {
         return this.AdminName;
     }
 
     /**
-     * Set administrator account name
-     * @param AdminName administrator account name
+     * Set Admin account name
+     * @param AdminName Admin account name
      */
     public void setAdminName(String AdminName) {
         this.AdminName = AdminName;
@@ -405,16 +405,16 @@ public class OrganizationInfo extends AbstractModel {
     }
 
     /**
-     * Get Number of abnormal sub-accounts 
-     * @return AbnormalSubUserCount Number of abnormal sub-accounts
+     * Get Number of exceptional sub-accounts 
+     * @return AbnormalSubUserCount Number of exceptional sub-accounts
      */
     public Long getAbnormalSubUserCount() {
         return this.AbnormalSubUserCount;
     }
 
     /**
-     * Set Number of abnormal sub-accounts
-     * @param AbnormalSubUserCount Number of abnormal sub-accounts
+     * Set Number of exceptional sub-accounts
+     * @param AbnormalSubUserCount Number of exceptional sub-accounts
      */
     public void setAbnormalSubUserCount(Long AbnormalSubUserCount) {
         this.AbnormalSubUserCount = AbnormalSubUserCount;
@@ -597,16 +597,16 @@ public class OrganizationInfo extends AbstractModel {
     }
 
     /**
-     * Get Number of activations by admin/delegated admin 
-     * @return EnableAdminCount Number of activations by admin/delegated admin
+     * Get Number of enabled admins/delegated admins 
+     * @return EnableAdminCount Number of enabled admins/delegated admins
      */
     public Long getEnableAdminCount() {
         return this.EnableAdminCount;
     }
 
     /**
-     * Set Number of activations by admin/delegated admin
-     * @param EnableAdminCount Number of activations by admin/delegated admin
+     * Set Number of enabled admins/delegated admins
+     * @param EnableAdminCount Number of enabled admins/delegated admins
      */
     public void setEnableAdminCount(Long EnableAdminCount) {
         this.EnableAdminCount = EnableAdminCount;

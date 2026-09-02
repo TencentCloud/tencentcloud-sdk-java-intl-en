@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeAccessKeyAlarmDetailRequest extends AbstractModel {
 
     /**
-    * Alarm record ID.
+    * Alarm record ID
     */
     @SerializedName("ID")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeAccessKeyAlarmDetailRequest extends AbstractModel {
     private String [] MemberId;
 
     /**
-     * Get Alarm record ID. 
-     * @return ID Alarm record ID.
+     * Get Alarm record ID 
+     * @return ID Alarm record ID
      */
     public Long getID() {
         return this.ID;
     }
 
     /**
-     * Set Alarm record ID.
-     * @param ID Alarm record ID.
+     * Set Alarm record ID
+     * @param ID Alarm record ID
      */
     public void setID(Long ID) {
         this.ID = ID;

@@ -24,78 +24,78 @@ import java.util.HashMap;
 public class CallRecord extends AbstractModel {
 
     /**
-    * Invocation record ID.
+    * Call record ID
     */
     @SerializedName("CallID")
     @Expose
     private String CallID;
 
     /**
-    * Access key.
+    * Access key
     */
     @SerializedName("AccessKey")
     @Expose
     private String AccessKey;
 
     /**
-    * Access key remark.
+    * Access key remark
     */
     @SerializedName("AccessKeyRemark")
     @Expose
     private String AccessKeyRemark;
 
     /**
-    * Access key ID.
+    * Access Key ID
     */
     @SerializedName("AccessKeyID")
     @Expose
     private Long AccessKeyID;
 
     /**
-    * Source IP of the call.
+    * Source IP for calls
     */
     @SerializedName("SourceIP")
     @Expose
     private String SourceIP;
 
     /**
-    * Source IP of the call remark.
+    * Source IP remark of a call
     */
     @SerializedName("SourceIPRemark")
     @Expose
     private String SourceIPRemark;
 
     /**
-    * Source IP region of the call.
+    * Region of the source IP
     */
     @SerializedName("Region")
     @Expose
     private String Region;
 
     /**
-    * IP type 0: within the account (unremarked) 1: outside the account (unremarked) 2: within the account (remarked) 3: outside the account (remarked).
+    * IP type. 0: within the account (no remark). 1: outside the account (no remark). 2: within the account (remarked). 3: outside the account (remarked)
     */
     @SerializedName("IPType")
     @Expose
     private Long IPType;
 
     /**
-    * Call interface name.
+    * Name of the called API
     */
     @SerializedName("EventName")
     @Expose
     private String EventName;
 
     /**
-    * Call the product name.
+    * API call product name
     */
     @SerializedName("ProductName")
     @Expose
     private String ProductName;
 
     /**
-    * Invocation type.
-0: console invocation.
+    * Invocation type
+0: Console invocation
 1:API
     */
     @SerializedName("EventType")
@@ -103,7 +103,7 @@ public class CallRecord extends AbstractModel {
     private Long EventType;
 
     /**
-    * Type of user: CAMUser/root/AssumedRole.
+    * Type of user. Valid values: `CAMUser`, `root`, `AssumedRole`.
 
     */
     @SerializedName("UserType")
@@ -111,7 +111,7 @@ public class CallRecord extends AbstractModel {
     private String UserType;
 
     /**
-    * User/Role name.
+    * User/role name
     */
     @SerializedName("UserName")
     @Expose
@@ -125,14 +125,14 @@ public class CallRecord extends AbstractModel {
     private String [] PolicySet;
 
     /**
-    * Number of calls.
+    * Call count
     */
     @SerializedName("CallCount")
     @Expose
     private Long CallCount;
 
     /**
-    * Error code.
+    * Call error code
 0: Successful
     */
     @SerializedName("Code")
@@ -140,35 +140,35 @@ public class CallRecord extends AbstractModel {
     private Long Code;
 
     /**
-    * First time call time.
+    * First call time
     */
     @SerializedName("FirstCallTime")
     @Expose
     private String FirstCallTime;
 
     /**
-    * Call time.
+    * Last call time
     */
     @SerializedName("LastCallTime")
     @Expose
     private String LastCallTime;
 
     /**
-    * IP associated asset ID. if an empty string, means not associated with.
+    * ID of the associated asset for the IP. If it is an empty string, the IP is not associated with any asset.
     */
     @SerializedName("InstanceID")
     @Expose
     private String InstanceID;
 
     /**
-    * Associated asset name of the IP.
+    * IP associated asset name
     */
     @SerializedName("InstanceName")
     @Expose
     private String InstanceName;
 
     /**
-    * Aggregate date.
+    * Aggregation date
     */
     @SerializedName("Date")
     @Expose
@@ -189,192 +189,192 @@ public class CallRecord extends AbstractModel {
     private Boolean ShowStatus;
 
     /**
-    * Carrier.
+    * Internet service provider.
     */
     @SerializedName("ISP")
     @Expose
     private String ISP;
 
     /**
-    * vpc information list outside the account.
+    * List of vpc information outside the account
     */
     @SerializedName("VpcInfo")
     @Expose
     private SourceIPVpcInfo [] VpcInfo;
 
     /**
-    * Request client list.
+    * List of call request clients
     */
     @SerializedName("ReqClient")
     @Expose
     private String [] ReqClient;
 
     /**
-     * Get Invocation record ID. 
-     * @return CallID Invocation record ID.
+     * Get Call record ID 
+     * @return CallID Call record ID
      */
     public String getCallID() {
         return this.CallID;
     }
 
     /**
-     * Set Invocation record ID.
-     * @param CallID Invocation record ID.
+     * Set Call record ID
+     * @param CallID Call record ID
      */
     public void setCallID(String CallID) {
         this.CallID = CallID;
     }
 
     /**
-     * Get Access key. 
-     * @return AccessKey Access key.
+     * Get Access key 
+     * @return AccessKey Access key
      */
     public String getAccessKey() {
         return this.AccessKey;
     }
 
     /**
-     * Set Access key.
-     * @param AccessKey Access key.
+     * Set Access key
+     * @param AccessKey Access key
      */
     public void setAccessKey(String AccessKey) {
         this.AccessKey = AccessKey;
     }
 
     /**
-     * Get Access key remark. 
-     * @return AccessKeyRemark Access key remark.
+     * Get Access key remark 
+     * @return AccessKeyRemark Access key remark
      */
     public String getAccessKeyRemark() {
         return this.AccessKeyRemark;
     }
 
     /**
-     * Set Access key remark.
-     * @param AccessKeyRemark Access key remark.
+     * Set Access key remark
+     * @param AccessKeyRemark Access key remark
      */
     public void setAccessKeyRemark(String AccessKeyRemark) {
         this.AccessKeyRemark = AccessKeyRemark;
     }
 
     /**
-     * Get Access key ID. 
-     * @return AccessKeyID Access key ID.
+     * Get Access Key ID 
+     * @return AccessKeyID Access Key ID
      */
     public Long getAccessKeyID() {
         return this.AccessKeyID;
     }
 
     /**
-     * Set Access key ID.
-     * @param AccessKeyID Access key ID.
+     * Set Access Key ID
+     * @param AccessKeyID Access Key ID
      */
     public void setAccessKeyID(Long AccessKeyID) {
         this.AccessKeyID = AccessKeyID;
     }
 
     /**
-     * Get Source IP of the call. 
-     * @return SourceIP Source IP of the call.
+     * Get Source IP for calls 
+     * @return SourceIP Source IP for calls
      */
     public String getSourceIP() {
         return this.SourceIP;
     }
 
     /**
-     * Set Source IP of the call.
-     * @param SourceIP Source IP of the call.
+     * Set Source IP for calls
+     * @param SourceIP Source IP for calls
      */
     public void setSourceIP(String SourceIP) {
         this.SourceIP = SourceIP;
     }
 
     /**
-     * Get Source IP of the call remark. 
-     * @return SourceIPRemark Source IP of the call remark.
+     * Get Source IP remark of a call 
+     * @return SourceIPRemark Source IP remark of a call
      */
     public String getSourceIPRemark() {
         return this.SourceIPRemark;
     }
 
     /**
-     * Set Source IP of the call remark.
-     * @param SourceIPRemark Source IP of the call remark.
+     * Set Source IP remark of a call
+     * @param SourceIPRemark Source IP remark of a call
      */
     public void setSourceIPRemark(String SourceIPRemark) {
         this.SourceIPRemark = SourceIPRemark;
     }
 
     /**
-     * Get Source IP region of the call. 
-     * @return Region Source IP region of the call.
+     * Get Region of the source IP 
+     * @return Region Region of the source IP
      */
     public String getRegion() {
         return this.Region;
     }
 
     /**
-     * Set Source IP region of the call.
-     * @param Region Source IP region of the call.
+     * Set Region of the source IP
+     * @param Region Region of the source IP
      */
     public void setRegion(String Region) {
         this.Region = Region;
     }
 
     /**
-     * Get IP type 0: within the account (unremarked) 1: outside the account (unremarked) 2: within the account (remarked) 3: outside the account (remarked). 
-     * @return IPType IP type 0: within the account (unremarked) 1: outside the account (unremarked) 2: within the account (remarked) 3: outside the account (remarked).
+     * Get IP type. 0: within the account (no remark). 1: outside the account (no remark). 2: within the account (remarked). 3: outside the account (remarked) 
+     * @return IPType IP type. 0: within the account (no remark). 1: outside the account (no remark). 2: within the account (remarked). 3: outside the account (remarked)
      */
     public Long getIPType() {
         return this.IPType;
     }
 
     /**
-     * Set IP type 0: within the account (unremarked) 1: outside the account (unremarked) 2: within the account (remarked) 3: outside the account (remarked).
-     * @param IPType IP type 0: within the account (unremarked) 1: outside the account (unremarked) 2: within the account (remarked) 3: outside the account (remarked).
+     * Set IP type. 0: within the account (no remark). 1: outside the account (no remark). 2: within the account (remarked). 3: outside the account (remarked)
+     * @param IPType IP type. 0: within the account (no remark). 1: outside the account (no remark). 2: within the account (remarked). 3: outside the account (remarked)
      */
     public void setIPType(Long IPType) {
         this.IPType = IPType;
     }
 
     /**
-     * Get Call interface name. 
-     * @return EventName Call interface name.
+     * Get Name of the called API 
+     * @return EventName Name of the called API
      */
     public String getEventName() {
         return this.EventName;
     }
 
     /**
-     * Set Call interface name.
-     * @param EventName Call interface name.
+     * Set Name of the called API
+     * @param EventName Name of the called API
      */
     public void setEventName(String EventName) {
         this.EventName = EventName;
     }
 
     /**
-     * Get Call the product name. 
-     * @return ProductName Call the product name.
+     * Get API call product name 
+     * @return ProductName API call product name
      */
     public String getProductName() {
         return this.ProductName;
     }
 
     /**
-     * Set Call the product name.
-     * @param ProductName Call the product name.
+     * Set API call product name
+     * @param ProductName API call product name
      */
     public void setProductName(String ProductName) {
         this.ProductName = ProductName;
     }
 
     /**
-     * Get Invocation type.
-0: console invocation.
+     * Get Invocation type
+0: Console invocation
 1:API 
-     * @return EventType Invocation type.
-0: console invocation.
+     * @return EventType Invocation type
+0: Console invocation
 1:API
      */
     public Long getEventType() {
@@ -382,11 +382,11 @@ public class CallRecord extends AbstractModel {
     }
 
     /**
-     * Set Invocation type.
-0: console invocation.
+     * Set Invocation type
+0: Console invocation
 1:API
-     * @param EventType Invocation type.
-0: console invocation.
+     * @param EventType Invocation type
+0: Console invocation
 1:API
      */
     public void setEventType(Long EventType) {
@@ -394,9 +394,9 @@ public class CallRecord extends AbstractModel {
     }
 
     /**
-     * Get Type of user: CAMUser/root/AssumedRole.
+     * Get Type of user. Valid values: `CAMUser`, `root`, `AssumedRole`.
  
-     * @return UserType Type of user: CAMUser/root/AssumedRole.
+     * @return UserType Type of user. Valid values: `CAMUser`, `root`, `AssumedRole`.
 
      */
     public String getUserType() {
@@ -404,9 +404,9 @@ public class CallRecord extends AbstractModel {
     }
 
     /**
-     * Set Type of user: CAMUser/root/AssumedRole.
+     * Set Type of user. Valid values: `CAMUser`, `root`, `AssumedRole`.
 
-     * @param UserType Type of user: CAMUser/root/AssumedRole.
+     * @param UserType Type of user. Valid values: `CAMUser`, `root`, `AssumedRole`.
 
      */
     public void setUserType(String UserType) {
@@ -414,16 +414,16 @@ public class CallRecord extends AbstractModel {
     }
 
     /**
-     * Get User/Role name. 
-     * @return UserName User/Role name.
+     * Get User/role name 
+     * @return UserName User/role name
      */
     public String getUserName() {
         return this.UserName;
     }
 
     /**
-     * Set User/Role name.
-     * @param UserName User/Role name.
+     * Set User/role name
+     * @param UserName User/role name
      */
     public void setUserName(String UserName) {
         this.UserName = UserName;
@@ -446,25 +446,25 @@ public class CallRecord extends AbstractModel {
     }
 
     /**
-     * Get Number of calls. 
-     * @return CallCount Number of calls.
+     * Get Call count 
+     * @return CallCount Call count
      */
     public Long getCallCount() {
         return this.CallCount;
     }
 
     /**
-     * Set Number of calls.
-     * @param CallCount Number of calls.
+     * Set Call count
+     * @param CallCount Call count
      */
     public void setCallCount(Long CallCount) {
         this.CallCount = CallCount;
     }
 
     /**
-     * Get Error code.
+     * Get Call error code
 0: Successful 
-     * @return Code Error code.
+     * @return Code Call error code
 0: Successful
      */
     public Long getCode() {
@@ -472,9 +472,9 @@ public class CallRecord extends AbstractModel {
     }
 
     /**
-     * Set Error code.
+     * Set Call error code
 0: Successful
-     * @param Code Error code.
+     * @param Code Call error code
 0: Successful
      */
     public void setCode(Long Code) {
@@ -482,80 +482,80 @@ public class CallRecord extends AbstractModel {
     }
 
     /**
-     * Get First time call time. 
-     * @return FirstCallTime First time call time.
+     * Get First call time 
+     * @return FirstCallTime First call time
      */
     public String getFirstCallTime() {
         return this.FirstCallTime;
     }
 
     /**
-     * Set First time call time.
-     * @param FirstCallTime First time call time.
+     * Set First call time
+     * @param FirstCallTime First call time
      */
     public void setFirstCallTime(String FirstCallTime) {
         this.FirstCallTime = FirstCallTime;
     }
 
     /**
-     * Get Call time. 
-     * @return LastCallTime Call time.
+     * Get Last call time 
+     * @return LastCallTime Last call time
      */
     public String getLastCallTime() {
         return this.LastCallTime;
     }
 
     /**
-     * Set Call time.
-     * @param LastCallTime Call time.
+     * Set Last call time
+     * @param LastCallTime Last call time
      */
     public void setLastCallTime(String LastCallTime) {
         this.LastCallTime = LastCallTime;
     }
 
     /**
-     * Get IP associated asset ID. if an empty string, means not associated with. 
-     * @return InstanceID IP associated asset ID. if an empty string, means not associated with.
+     * Get ID of the associated asset for the IP. If it is an empty string, the IP is not associated with any asset. 
+     * @return InstanceID ID of the associated asset for the IP. If it is an empty string, the IP is not associated with any asset.
      */
     public String getInstanceID() {
         return this.InstanceID;
     }
 
     /**
-     * Set IP associated asset ID. if an empty string, means not associated with.
-     * @param InstanceID IP associated asset ID. if an empty string, means not associated with.
+     * Set ID of the associated asset for the IP. If it is an empty string, the IP is not associated with any asset.
+     * @param InstanceID ID of the associated asset for the IP. If it is an empty string, the IP is not associated with any asset.
      */
     public void setInstanceID(String InstanceID) {
         this.InstanceID = InstanceID;
     }
 
     /**
-     * Get Associated asset name of the IP. 
-     * @return InstanceName Associated asset name of the IP.
+     * Get IP associated asset name 
+     * @return InstanceName IP associated asset name
      */
     public String getInstanceName() {
         return this.InstanceName;
     }
 
     /**
-     * Set Associated asset name of the IP.
-     * @param InstanceName Associated asset name of the IP.
+     * Set IP associated asset name
+     * @param InstanceName IP associated asset name
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;
     }
 
     /**
-     * Get Aggregate date. 
-     * @return Date Aggregate date.
+     * Get Aggregation date 
+     * @return Date Aggregation date
      */
     public String getDate() {
         return this.Date;
     }
 
     /**
-     * Set Aggregate date.
-     * @param Date Aggregate date.
+     * Set Aggregation date
+     * @param Date Aggregation date
      */
     public void setDate(String Date) {
         this.Date = Date;
@@ -594,48 +594,48 @@ public class CallRecord extends AbstractModel {
     }
 
     /**
-     * Get Carrier. 
-     * @return ISP Carrier.
+     * Get Internet service provider. 
+     * @return ISP Internet service provider.
      */
     public String getISP() {
         return this.ISP;
     }
 
     /**
-     * Set Carrier.
-     * @param ISP Carrier.
+     * Set Internet service provider.
+     * @param ISP Internet service provider.
      */
     public void setISP(String ISP) {
         this.ISP = ISP;
     }
 
     /**
-     * Get vpc information list outside the account. 
-     * @return VpcInfo vpc information list outside the account.
+     * Get List of vpc information outside the account 
+     * @return VpcInfo List of vpc information outside the account
      */
     public SourceIPVpcInfo [] getVpcInfo() {
         return this.VpcInfo;
     }
 
     /**
-     * Set vpc information list outside the account.
-     * @param VpcInfo vpc information list outside the account.
+     * Set List of vpc information outside the account
+     * @param VpcInfo List of vpc information outside the account
      */
     public void setVpcInfo(SourceIPVpcInfo [] VpcInfo) {
         this.VpcInfo = VpcInfo;
     }
 
     /**
-     * Get Request client list. 
-     * @return ReqClient Request client list.
+     * Get List of call request clients 
+     * @return ReqClient List of call request clients
      */
     public String [] getReqClient() {
         return this.ReqClient;
     }
 
     /**
-     * Set Request client list.
-     * @param ReqClient Request client list.
+     * Set List of call request clients
+     * @param ReqClient List of call request clients
      */
     public void setReqClient(String [] ReqClient) {
         this.ReqClient = ReqClient;

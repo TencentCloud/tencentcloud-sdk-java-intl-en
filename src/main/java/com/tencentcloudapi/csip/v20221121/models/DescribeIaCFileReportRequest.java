@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeIaCFileReportRequest extends AbstractModel {
 
     /**
-    * <p>Asset ID</p>
+    * <p>Asset ID.</p>
     */
     @SerializedName("AssetId")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeIaCFileReportRequest extends AbstractModel {
     private String [] MemberId;
 
     /**
-     * Get <p>Asset ID</p> 
-     * @return AssetId <p>Asset ID</p>
+     * Get <p>Asset ID.</p> 
+     * @return AssetId <p>Asset ID.</p>
      */
     public Long getAssetId() {
         return this.AssetId;
     }
 
     /**
-     * Set <p>Asset ID</p>
-     * @param AssetId <p>Asset ID</p>
+     * Set <p>Asset ID.</p>
+     * @param AssetId <p>Asset ID.</p>
      */
     public void setAssetId(Long AssetId) {
         this.AssetId = AssetId;

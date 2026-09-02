@@ -31,7 +31,7 @@ public class DescribeVULRiskAdvanceCFGListResponse extends AbstractModel {
     private VULRiskAdvanceCFGList [] Data;
 
     /**
-    * Total number of results
+    * Total number.
     */
     @SerializedName("TotalCount")
     @Expose
@@ -89,16 +89,16 @@ public class DescribeVULRiskAdvanceCFGListResponse extends AbstractModel {
     }
 
     /**
-     * Get Total number of results 
-     * @return TotalCount Total number of results
+     * Get Total number. 
+     * @return TotalCount Total number.
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set Total number of results
-     * @param TotalCount Total number of results
+     * Set Total number.
+     * @param TotalCount Total number.
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

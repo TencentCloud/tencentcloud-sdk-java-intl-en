@@ -31,28 +31,28 @@ public class DescribeExposePathRequest extends AbstractModel {
     private String [] MemberId;
 
     /**
-    * Asset ID.
+    * Asset ID
     */
     @SerializedName("AssetId")
     @Expose
     private String AssetId;
 
     /**
-    * Asset IP.
+    * Asset IP
     */
     @SerializedName("Ip")
     @Expose
     private String Ip;
 
     /**
-    * Asset domain name.
+    * Asset domain
     */
     @SerializedName("Domain")
     @Expose
     private String Domain;
 
     /**
-    * Port or port range.
+    * Port or port range
     */
     @SerializedName("Port")
     @Expose
@@ -75,64 +75,64 @@ public class DescribeExposePathRequest extends AbstractModel {
     }
 
     /**
-     * Get Asset ID. 
-     * @return AssetId Asset ID.
+     * Get Asset ID 
+     * @return AssetId Asset ID
      */
     public String getAssetId() {
         return this.AssetId;
     }
 
     /**
-     * Set Asset ID.
-     * @param AssetId Asset ID.
+     * Set Asset ID
+     * @param AssetId Asset ID
      */
     public void setAssetId(String AssetId) {
         this.AssetId = AssetId;
     }
 
     /**
-     * Get Asset IP. 
-     * @return Ip Asset IP.
+     * Get Asset IP 
+     * @return Ip Asset IP
      */
     public String getIp() {
         return this.Ip;
     }
 
     /**
-     * Set Asset IP.
-     * @param Ip Asset IP.
+     * Set Asset IP
+     * @param Ip Asset IP
      */
     public void setIp(String Ip) {
         this.Ip = Ip;
     }
 
     /**
-     * Get Asset domain name. 
-     * @return Domain Asset domain name.
+     * Get Asset domain 
+     * @return Domain Asset domain
      */
     public String getDomain() {
         return this.Domain;
     }
 
     /**
-     * Set Asset domain name.
-     * @param Domain Asset domain name.
+     * Set Asset domain
+     * @param Domain Asset domain
      */
     public void setDomain(String Domain) {
         this.Domain = Domain;
     }
 
     /**
-     * Get Port or port range. 
-     * @return Port Port or port range.
+     * Get Port or port range 
+     * @return Port Port or port range
      */
     public String getPort() {
         return this.Port;
     }
 
     /**
-     * Set Port or port range.
-     * @param Port Port or port range.
+     * Set Port or port range
+     * @param Port Port or port range
      */
     public void setPort(String Port) {
         this.Port = Port;

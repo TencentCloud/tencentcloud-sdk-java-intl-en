@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeRiskCenterWebsiteRiskListResponse extends AbstractModel {
 
     /**
-    * Total number of entries
+    * Total quantity.
     */
     @SerializedName("TotalCount")
     @Expose
@@ -38,28 +38,28 @@ public class DescribeRiskCenterWebsiteRiskListResponse extends AbstractModel {
     private WebsiteRisk [] Data;
 
     /**
-    * List of risk handling status
+    * Status list
     */
     @SerializedName("StatusLists")
     @Expose
     private FilterDataObject [] StatusLists;
 
     /**
-    * List of risk levels
+    * Danger Level List
     */
     @SerializedName("LevelLists")
     @Expose
     private FilterDataObject [] LevelLists;
 
     /**
-    * List of asset types
+    * Asset Type List
     */
     @SerializedName("InstanceTypeLists")
     @Expose
     private FilterDataObject [] InstanceTypeLists;
 
     /**
-    * List of risk types
+    * Risk Type List
     */
     @SerializedName("DetectEngineLists")
     @Expose
@@ -73,16 +73,16 @@ public class DescribeRiskCenterWebsiteRiskListResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Total number of entries 
-     * @return TotalCount Total number of entries
+     * Get Total quantity. 
+     * @return TotalCount Total quantity.
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set Total number of entries
-     * @param TotalCount Total number of entries
+     * Set Total quantity.
+     * @param TotalCount Total quantity.
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
@@ -105,64 +105,64 @@ public class DescribeRiskCenterWebsiteRiskListResponse extends AbstractModel {
     }
 
     /**
-     * Get List of risk handling status 
-     * @return StatusLists List of risk handling status
+     * Get Status list 
+     * @return StatusLists Status list
      */
     public FilterDataObject [] getStatusLists() {
         return this.StatusLists;
     }
 
     /**
-     * Set List of risk handling status
-     * @param StatusLists List of risk handling status
+     * Set Status list
+     * @param StatusLists Status list
      */
     public void setStatusLists(FilterDataObject [] StatusLists) {
         this.StatusLists = StatusLists;
     }
 
     /**
-     * Get List of risk levels 
-     * @return LevelLists List of risk levels
+     * Get Danger Level List 
+     * @return LevelLists Danger Level List
      */
     public FilterDataObject [] getLevelLists() {
         return this.LevelLists;
     }
 
     /**
-     * Set List of risk levels
-     * @param LevelLists List of risk levels
+     * Set Danger Level List
+     * @param LevelLists Danger Level List
      */
     public void setLevelLists(FilterDataObject [] LevelLists) {
         this.LevelLists = LevelLists;
     }
 
     /**
-     * Get List of asset types 
-     * @return InstanceTypeLists List of asset types
+     * Get Asset Type List 
+     * @return InstanceTypeLists Asset Type List
      */
     public FilterDataObject [] getInstanceTypeLists() {
         return this.InstanceTypeLists;
     }
 
     /**
-     * Set List of asset types
-     * @param InstanceTypeLists List of asset types
+     * Set Asset Type List
+     * @param InstanceTypeLists Asset Type List
      */
     public void setInstanceTypeLists(FilterDataObject [] InstanceTypeLists) {
         this.InstanceTypeLists = InstanceTypeLists;
     }
 
     /**
-     * Get List of risk types 
-     * @return DetectEngineLists List of risk types
+     * Get Risk Type List 
+     * @return DetectEngineLists Risk Type List
      */
     public FilterDataObject [] getDetectEngineLists() {
         return this.DetectEngineLists;
     }
 
     /**
-     * Set List of risk types
-     * @param DetectEngineLists List of risk types
+     * Set Risk Type List
+     * @param DetectEngineLists Risk Type List
      */
     public void setDetectEngineLists(FilterDataObject [] DetectEngineLists) {
         this.DetectEngineLists = DetectEngineLists;

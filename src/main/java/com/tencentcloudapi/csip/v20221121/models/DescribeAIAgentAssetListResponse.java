@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeAIAgentAssetListResponse extends AbstractModel {
 
     /**
-    * asset list
+    * Asset list
     */
     @SerializedName("AssetList")
     @Expose
@@ -45,16 +45,16 @@ public class DescribeAIAgentAssetListResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get asset list 
-     * @return AssetList asset list
+     * Get Asset list 
+     * @return AssetList Asset list
      */
     public AIAgentAsset [] getAssetList() {
         return this.AssetList;
     }
 
     /**
-     * Set asset list
-     * @param AssetList asset list
+     * Set Asset list
+     * @param AssetList Asset list
      */
     public void setAssetList(AIAgentAsset [] AssetList) {
         this.AssetList = AssetList;

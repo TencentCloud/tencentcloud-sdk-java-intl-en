@@ -38,8 +38,8 @@ public class DescribeKeySandboxCredentialResponse extends AbstractModel {
     private String CredentialName;
 
     /**
-    * Credential Type
-Enumeration value:
+    * Credential type
+Enumeration values:
 access: standard key
 sts: STS temporary key
     */
@@ -48,7 +48,7 @@ sts: STS temporary key
     private String CredentialType;
 
     /**
-    * Effective machine scope
+    * Scope of effective machines
     */
     @SerializedName("CredentialEffectScope")
     @Expose
@@ -56,8 +56,7 @@ sts: STS temporary key
 
     /**
     * Normal key credential data (masked). Returned when CredentialType is access.
-Supplementary explanation: Key is the original text, and Value is the masked value (reserve the first 3 and last 4 digits, with *** as substitution in the middle).
-Note: This field may return null, indicating that no valid values can be obtained.
+Supplemental description: Key is the original text, and Value is the masked value (first 3 and last 4 characters retained, middle replaced by ***).
     */
     @SerializedName("Access")
     @Expose
@@ -65,8 +64,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * STS credential data (masked). Returned when CredentialType is sts.
-Supplementary description: System is the original text, SecretID and SecretKey are masked values (reserve the first 3 and last 4 characters, with *** as substitution in the middle).
-Note: This field may return null, indicating that no valid values can be obtained.
+Supplemental description: System is the original text. SecretID and SecretKey are masked values (first 3 and last 4 characters reserved, middle replaced with ***).
     */
     @SerializedName("STS")
     @Expose
@@ -74,7 +72,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Creation time.
-Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format).
+Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)
     */
     @SerializedName("CreateTime")
     @Expose
@@ -82,7 +80,7 @@ Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format).
 
     /**
     * Update time
-Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format).
+Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)
     */
     @SerializedName("UpdateTime")
     @Expose
@@ -128,12 +126,12 @@ Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format).
     }
 
     /**
-     * Get Credential Type
-Enumeration value:
+     * Get Credential type
+Enumeration values:
 access: standard key
 sts: STS temporary key 
-     * @return CredentialType Credential Type
-Enumeration value:
+     * @return CredentialType Credential type
+Enumeration values:
 access: standard key
 sts: STS temporary key
      */
@@ -142,12 +140,12 @@ sts: STS temporary key
     }
 
     /**
-     * Set Credential Type
-Enumeration value:
+     * Set Credential type
+Enumeration values:
 access: standard key
 sts: STS temporary key
-     * @param CredentialType Credential Type
-Enumeration value:
+     * @param CredentialType Credential type
+Enumeration values:
 access: standard key
 sts: STS temporary key
      */
@@ -156,16 +154,16 @@ sts: STS temporary key
     }
 
     /**
-     * Get Effective machine scope 
-     * @return CredentialEffectScope Effective machine scope
+     * Get Scope of effective machines 
+     * @return CredentialEffectScope Scope of effective machines
      */
     public CredentialEffectScope getCredentialEffectScope() {
         return this.CredentialEffectScope;
     }
 
     /**
-     * Set Effective machine scope
-     * @param CredentialEffectScope Effective machine scope
+     * Set Scope of effective machines
+     * @param CredentialEffectScope Scope of effective machines
      */
     public void setCredentialEffectScope(CredentialEffectScope CredentialEffectScope) {
         this.CredentialEffectScope = CredentialEffectScope;
@@ -173,11 +171,9 @@ sts: STS temporary key
 
     /**
      * Get Normal key credential data (masked). Returned when CredentialType is access.
-Supplementary explanation: Key is the original text, and Value is the masked value (reserve the first 3 and last 4 digits, with *** as substitution in the middle).
-Note: This field may return null, indicating that no valid values can be obtained. 
+Supplemental description: Key is the original text, and Value is the masked value (first 3 and last 4 characters retained, middle replaced by ***). 
      * @return Access Normal key credential data (masked). Returned when CredentialType is access.
-Supplementary explanation: Key is the original text, and Value is the masked value (reserve the first 3 and last 4 digits, with *** as substitution in the middle).
-Note: This field may return null, indicating that no valid values can be obtained.
+Supplemental description: Key is the original text, and Value is the masked value (first 3 and last 4 characters retained, middle replaced by ***).
      */
     public AccessCredentialOutput [] getAccess() {
         return this.Access;
@@ -185,11 +181,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Normal key credential data (masked). Returned when CredentialType is access.
-Supplementary explanation: Key is the original text, and Value is the masked value (reserve the first 3 and last 4 digits, with *** as substitution in the middle).
-Note: This field may return null, indicating that no valid values can be obtained.
+Supplemental description: Key is the original text, and Value is the masked value (first 3 and last 4 characters retained, middle replaced by ***).
      * @param Access Normal key credential data (masked). Returned when CredentialType is access.
-Supplementary explanation: Key is the original text, and Value is the masked value (reserve the first 3 and last 4 digits, with *** as substitution in the middle).
-Note: This field may return null, indicating that no valid values can be obtained.
+Supplemental description: Key is the original text, and Value is the masked value (first 3 and last 4 characters retained, middle replaced by ***).
      */
     public void setAccess(AccessCredentialOutput [] Access) {
         this.Access = Access;
@@ -197,11 +191,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get STS credential data (masked). Returned when CredentialType is sts.
-Supplementary description: System is the original text, SecretID and SecretKey are masked values (reserve the first 3 and last 4 characters, with *** as substitution in the middle).
-Note: This field may return null, indicating that no valid values can be obtained. 
+Supplemental description: System is the original text. SecretID and SecretKey are masked values (first 3 and last 4 characters reserved, middle replaced with ***). 
      * @return STS STS credential data (masked). Returned when CredentialType is sts.
-Supplementary description: System is the original text, SecretID and SecretKey are masked values (reserve the first 3 and last 4 characters, with *** as substitution in the middle).
-Note: This field may return null, indicating that no valid values can be obtained.
+Supplemental description: System is the original text. SecretID and SecretKey are masked values (first 3 and last 4 characters reserved, middle replaced with ***).
      */
     public STSCredentialOutput getSTS() {
         return this.STS;
@@ -209,11 +201,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set STS credential data (masked). Returned when CredentialType is sts.
-Supplementary description: System is the original text, SecretID and SecretKey are masked values (reserve the first 3 and last 4 characters, with *** as substitution in the middle).
-Note: This field may return null, indicating that no valid values can be obtained.
+Supplemental description: System is the original text. SecretID and SecretKey are masked values (first 3 and last 4 characters reserved, middle replaced with ***).
      * @param STS STS credential data (masked). Returned when CredentialType is sts.
-Supplementary description: System is the original text, SecretID and SecretKey are masked values (reserve the first 3 and last 4 characters, with *** as substitution in the middle).
-Note: This field may return null, indicating that no valid values can be obtained.
+Supplemental description: System is the original text. SecretID and SecretKey are masked values (first 3 and last 4 characters reserved, middle replaced with ***).
      */
     public void setSTS(STSCredentialOutput STS) {
         this.STS = STS;
@@ -221,9 +211,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get Creation time.
-Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format). 
+Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format) 
      * @return CreateTime Creation time.
-Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format).
+Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)
      */
     public String getCreateTime() {
         return this.CreateTime;
@@ -231,9 +221,9 @@ Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format).
 
     /**
      * Set Creation time.
-Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format).
+Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)
      * @param CreateTime Creation time.
-Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format).
+Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
@@ -241,9 +231,9 @@ Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format).
 
     /**
      * Get Update time
-Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format). 
+Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format) 
      * @return UpdateTime Update time
-Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format).
+Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)
      */
     public String getUpdateTime() {
         return this.UpdateTime;
@@ -251,9 +241,9 @@ Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format).
 
     /**
      * Set Update time
-Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format).
+Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)
      * @param UpdateTime Update time
-Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format).
+Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;

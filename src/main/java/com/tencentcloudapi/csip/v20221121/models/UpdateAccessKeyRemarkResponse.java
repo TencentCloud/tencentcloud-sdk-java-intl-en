@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class UpdateAccessKeyRemarkResponse extends AbstractModel {
 
     /**
-    * 0: success; 1: failure.
+    * 0: Success; 1: Failure
     */
     @SerializedName("Code")
     @Expose
@@ -45,16 +45,16 @@ public class UpdateAccessKeyRemarkResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 0: success; 1: failure. 
-     * @return Code 0: success; 1: failure.
+     * Get 0: Success; 1: Failure 
+     * @return Code 0: Success; 1: Failure
      */
     public Long getCode() {
         return this.Code;
     }
 
     /**
-     * Set 0: success; 1: failure.
-     * @param Code 0: success; 1: failure.
+     * Set 0: Success; 1: Failure
+     * @param Code 0: Success; 1: Failure
      */
     public void setCode(Long Code) {
         this.Code = Code;

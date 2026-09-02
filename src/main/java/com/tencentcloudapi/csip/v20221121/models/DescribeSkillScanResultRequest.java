@@ -32,18 +32,18 @@ Parameter format: sha256:<64-bit hex>
     private String ContentHash;
 
     /**
-    * Specify the engine version number
-Value for reference: API response of CreateSkillScan
+    * Specify the engine version number.
+Parameter value for reference: returned by the CreateSkillScan API.
     */
     @SerializedName("EngineVersion")
     @Expose
     private Long EngineVersion;
 
     /**
-    * Report signature address validity
+    * Address validity period of the report signature
 Unit: hr
-Default value: 8760 (1 year).
-Supplementary explanation: The returned ReportURL takes effect.
+Default value: 8760 (1 year)
+Supplementary description: It takes effect on the returned ReportURL.
     */
     @SerializedName("ReportURLExpireHours")
     @Expose
@@ -70,48 +70,48 @@ Parameter format: sha256:<64-bit hex>
     }
 
     /**
-     * Get Specify the engine version number
-Value for reference: API response of CreateSkillScan 
-     * @return EngineVersion Specify the engine version number
-Value for reference: API response of CreateSkillScan
+     * Get Specify the engine version number.
+Parameter value for reference: returned by the CreateSkillScan API. 
+     * @return EngineVersion Specify the engine version number.
+Parameter value for reference: returned by the CreateSkillScan API.
      */
     public Long getEngineVersion() {
         return this.EngineVersion;
     }
 
     /**
-     * Set Specify the engine version number
-Value for reference: API response of CreateSkillScan
-     * @param EngineVersion Specify the engine version number
-Value for reference: API response of CreateSkillScan
+     * Set Specify the engine version number.
+Parameter value for reference: returned by the CreateSkillScan API.
+     * @param EngineVersion Specify the engine version number.
+Parameter value for reference: returned by the CreateSkillScan API.
      */
     public void setEngineVersion(Long EngineVersion) {
         this.EngineVersion = EngineVersion;
     }
 
     /**
-     * Get Report signature address validity
+     * Get Address validity period of the report signature
 Unit: hr
-Default value: 8760 (1 year).
-Supplementary explanation: The returned ReportURL takes effect. 
-     * @return ReportURLExpireHours Report signature address validity
+Default value: 8760 (1 year)
+Supplementary description: It takes effect on the returned ReportURL. 
+     * @return ReportURLExpireHours Address validity period of the report signature
 Unit: hr
-Default value: 8760 (1 year).
-Supplementary explanation: The returned ReportURL takes effect.
+Default value: 8760 (1 year)
+Supplementary description: It takes effect on the returned ReportURL.
      */
     public Long getReportURLExpireHours() {
         return this.ReportURLExpireHours;
     }
 
     /**
-     * Set Report signature address validity
+     * Set Address validity period of the report signature
 Unit: hr
-Default value: 8760 (1 year).
-Supplementary explanation: The returned ReportURL takes effect.
-     * @param ReportURLExpireHours Report signature address validity
+Default value: 8760 (1 year)
+Supplementary description: It takes effect on the returned ReportURL.
+     * @param ReportURLExpireHours Address validity period of the report signature
 Unit: hr
-Default value: 8760 (1 year).
-Supplementary explanation: The returned ReportURL takes effect.
+Default value: 8760 (1 year)
+Supplementary description: It takes effect on the returned ReportURL.
      */
     public void setReportURLExpireHours(Long ReportURLExpireHours) {
         this.ReportURLExpireHours = ReportURLExpireHours;

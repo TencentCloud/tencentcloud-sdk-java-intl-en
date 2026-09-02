@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class ReportItemKey extends AbstractModel {
 
     /**
-    * List of report IDs.
+    * Log ID List
     */
     @SerializedName("TaskLogList")
     @Expose
     private String [] TaskLogList;
 
     /**
-     * Get List of report IDs. 
-     * @return TaskLogList List of report IDs.
+     * Get Log ID List 
+     * @return TaskLogList Log ID List
      */
     public String [] getTaskLogList() {
         return this.TaskLogList;
     }
 
     /**
-     * Set List of report IDs.
-     * @param TaskLogList List of report IDs.
+     * Set Log ID List
+     * @param TaskLogList Log ID List
      */
     public void setTaskLogList(String [] TaskLogList) {
         this.TaskLogList = TaskLogList;

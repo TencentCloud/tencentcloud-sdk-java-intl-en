@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeTaskLogURLResponse extends AbstractModel {
 
     /**
-    * Temp download URL of the report
+    * Return Report Temporary Download URL
     */
     @SerializedName("Data")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeTaskLogURLResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Temp download URL of the report 
-     * @return Data Temp download URL of the report
+     * Get Return Report Temporary Download URL 
+     * @return Data Return Report Temporary Download URL
      */
     public TaskLogURL [] getData() {
         return this.Data;
     }
 
     /**
-     * Set Temp download URL of the report
-     * @param Data Temp download URL of the report
+     * Set Return Report Temporary Download URL
+     * @param Data Return Report Temporary Download URL
      */
     public void setData(TaskLogURL [] Data) {
         this.Data = Data;

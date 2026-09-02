@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CloudCountDesc extends AbstractModel {
 
     /**
-    * 0 means Tencent Cloud
+    * 0 indicates Tencent Cloud
 1 indicates AWS
     */
     @SerializedName("CloudType")
@@ -46,9 +46,9 @@ public class CloudCountDesc extends AbstractModel {
     private String CloudDesc;
 
     /**
-     * Get 0 means Tencent Cloud
+     * Get 0 indicates Tencent Cloud
 1 indicates AWS 
-     * @return CloudType 0 means Tencent Cloud
+     * @return CloudType 0 indicates Tencent Cloud
 1 indicates AWS
      */
     public Long getCloudType() {
@@ -56,9 +56,9 @@ public class CloudCountDesc extends AbstractModel {
     }
 
     /**
-     * Set 0 means Tencent Cloud
+     * Set 0 indicates Tencent Cloud
 1 indicates AWS
-     * @param CloudType 0 means Tencent Cloud
+     * @param CloudType 0 indicates Tencent Cloud
 1 indicates AWS
      */
     public void setCloudType(Long CloudType) {

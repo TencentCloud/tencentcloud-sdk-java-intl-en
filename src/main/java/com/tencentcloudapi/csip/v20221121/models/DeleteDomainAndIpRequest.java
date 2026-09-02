@@ -31,35 +31,35 @@ public class DeleteDomainAndIpRequest extends AbstractModel {
     private String [] MemberId;
 
     /**
-    * asset
+    * Asset
     */
     @SerializedName("Content")
     @Expose
     private PublicIpDomainListKey [] Content;
 
     /**
-    * Whether to retain the path configuration. `1`: Retain; Others: Do not retain. It defaults to do not retain if not specified.
+    * Whether to retain path configuration. 1: Yes; Other: No. No if not specified by default.
     */
     @SerializedName("RetainPath")
     @Expose
     private Long RetainPath;
 
     /**
-    * Whether to ignore this asset in the future. `1`: Ignore; Others: Do not ignore. It defaults to ignore if not specified.
+    * Whether to ignore this asset in the future. 1: Yes; Other: No. No if not specified by default.
     */
     @SerializedName("IgnoreAsset")
     @Expose
     private Long IgnoreAsset;
 
     /**
-    * Asset tags
+    * Asset tag
     */
     @SerializedName("Tags")
     @Expose
     private AssetTag [] Tags;
 
     /**
-    * Deletion mode. Values: `ALL` (delete all). If it's not specified, `Content` is required.
+    * Delete type. ALL: deleting all, which will directly ignore the content of Content; Other value: not all, and Content is required. Other value by default.
     */
     @SerializedName("Type")
     @Expose
@@ -82,80 +82,80 @@ public class DeleteDomainAndIpRequest extends AbstractModel {
     }
 
     /**
-     * Get asset 
-     * @return Content asset
+     * Get Asset 
+     * @return Content Asset
      */
     public PublicIpDomainListKey [] getContent() {
         return this.Content;
     }
 
     /**
-     * Set asset
-     * @param Content asset
+     * Set Asset
+     * @param Content Asset
      */
     public void setContent(PublicIpDomainListKey [] Content) {
         this.Content = Content;
     }
 
     /**
-     * Get Whether to retain the path configuration. `1`: Retain; Others: Do not retain. It defaults to do not retain if not specified. 
-     * @return RetainPath Whether to retain the path configuration. `1`: Retain; Others: Do not retain. It defaults to do not retain if not specified.
+     * Get Whether to retain path configuration. 1: Yes; Other: No. No if not specified by default. 
+     * @return RetainPath Whether to retain path configuration. 1: Yes; Other: No. No if not specified by default.
      */
     public Long getRetainPath() {
         return this.RetainPath;
     }
 
     /**
-     * Set Whether to retain the path configuration. `1`: Retain; Others: Do not retain. It defaults to do not retain if not specified.
-     * @param RetainPath Whether to retain the path configuration. `1`: Retain; Others: Do not retain. It defaults to do not retain if not specified.
+     * Set Whether to retain path configuration. 1: Yes; Other: No. No if not specified by default.
+     * @param RetainPath Whether to retain path configuration. 1: Yes; Other: No. No if not specified by default.
      */
     public void setRetainPath(Long RetainPath) {
         this.RetainPath = RetainPath;
     }
 
     /**
-     * Get Whether to ignore this asset in the future. `1`: Ignore; Others: Do not ignore. It defaults to ignore if not specified. 
-     * @return IgnoreAsset Whether to ignore this asset in the future. `1`: Ignore; Others: Do not ignore. It defaults to ignore if not specified.
+     * Get Whether to ignore this asset in the future. 1: Yes; Other: No. No if not specified by default. 
+     * @return IgnoreAsset Whether to ignore this asset in the future. 1: Yes; Other: No. No if not specified by default.
      */
     public Long getIgnoreAsset() {
         return this.IgnoreAsset;
     }
 
     /**
-     * Set Whether to ignore this asset in the future. `1`: Ignore; Others: Do not ignore. It defaults to ignore if not specified.
-     * @param IgnoreAsset Whether to ignore this asset in the future. `1`: Ignore; Others: Do not ignore. It defaults to ignore if not specified.
+     * Set Whether to ignore this asset in the future. 1: Yes; Other: No. No if not specified by default.
+     * @param IgnoreAsset Whether to ignore this asset in the future. 1: Yes; Other: No. No if not specified by default.
      */
     public void setIgnoreAsset(Long IgnoreAsset) {
         this.IgnoreAsset = IgnoreAsset;
     }
 
     /**
-     * Get Asset tags 
-     * @return Tags Asset tags
+     * Get Asset tag 
+     * @return Tags Asset tag
      */
     public AssetTag [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set Asset tags
-     * @param Tags Asset tags
+     * Set Asset tag
+     * @param Tags Asset tag
      */
     public void setTags(AssetTag [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get Deletion mode. Values: `ALL` (delete all). If it's not specified, `Content` is required. 
-     * @return Type Deletion mode. Values: `ALL` (delete all). If it's not specified, `Content` is required.
+     * Get Delete type. ALL: deleting all, which will directly ignore the content of Content; Other value: not all, and Content is required. Other value by default. 
+     * @return Type Delete type. ALL: deleting all, which will directly ignore the content of Content; Other value: not all, and Content is required. Other value by default.
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set Deletion mode. Values: `ALL` (delete all). If it's not specified, `Content` is required.
-     * @param Type Deletion mode. Values: `ALL` (delete all). If it's not specified, `Content` is required.
+     * Set Delete type. ALL: deleting all, which will directly ignore the content of Content; Other value: not all, and Content is required. Other value by default.
+     * @param Type Delete type. ALL: deleting all, which will directly ignore the content of Content; Other value: not all, and Content is required. Other value by default.
      */
     public void setType(String Type) {
         this.Type = Type;

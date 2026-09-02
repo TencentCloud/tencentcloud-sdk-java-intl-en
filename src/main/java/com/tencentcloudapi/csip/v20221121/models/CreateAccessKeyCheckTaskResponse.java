@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateAccessKeyCheckTaskResponse extends AbstractModel {
 
     /**
-    * 0 indicates success. 1 indicates failure.
+    * 0: Indicates success; 1: Indicates failure
     */
     @SerializedName("Code")
     @Expose
@@ -45,16 +45,16 @@ public class CreateAccessKeyCheckTaskResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 0 indicates success. 1 indicates failure. 
-     * @return Code 0 indicates success. 1 indicates failure.
+     * Get 0: Indicates success; 1: Indicates failure 
+     * @return Code 0: Indicates success; 1: Indicates failure
      */
     public Long getCode() {
         return this.Code;
     }
 
     /**
-     * Set 0 indicates success. 1 indicates failure.
-     * @param Code 0 indicates success. 1 indicates failure.
+     * Set 0: Indicates success; 1: Indicates failure
+     * @param Code 0: Indicates success; 1: Indicates failure
      */
     public void setCode(Long Code) {
         this.Code = Code;

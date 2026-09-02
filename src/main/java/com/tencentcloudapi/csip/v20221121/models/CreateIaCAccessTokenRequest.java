@@ -31,7 +31,7 @@ public class CreateIaCAccessTokenRequest extends AbstractModel {
     private String Name;
 
     /**
-    * <p>Result storage duration (30/60/90/120/150/180 days)</p>
+    * <p>Storage duration of scanning results (30/60/90/120/150/180 days)</p>
     */
     @SerializedName("Period")
     @Expose
@@ -54,16 +54,16 @@ public class CreateIaCAccessTokenRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>Result storage duration (30/60/90/120/150/180 days)</p> 
-     * @return Period <p>Result storage duration (30/60/90/120/150/180 days)</p>
+     * Get <p>Storage duration of scanning results (30/60/90/120/150/180 days)</p> 
+     * @return Period <p>Storage duration of scanning results (30/60/90/120/150/180 days)</p>
      */
     public Long getPeriod() {
         return this.Period;
     }
 
     /**
-     * Set <p>Result storage duration (30/60/90/120/150/180 days)</p>
-     * @param Period <p>Result storage duration (30/60/90/120/150/180 days)</p>
+     * Set <p>Storage duration of scanning results (30/60/90/120/150/180 days)</p>
+     * @param Period <p>Storage duration of scanning results (30/60/90/120/150/180 days)</p>
      */
     public void setPeriod(Long Period) {
         this.Period = Period;

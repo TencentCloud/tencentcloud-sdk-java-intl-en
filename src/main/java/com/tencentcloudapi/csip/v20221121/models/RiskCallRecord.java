@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class RiskCallRecord extends AbstractModel {
 
     /**
-    * API name.
+    * API name
     */
     @SerializedName("EventName")
     @Expose
     private String EventName;
 
     /**
-    * Chinese description of the API.
+    * Chinese description of the api
     */
     @SerializedName("EventDescCN")
     @Expose
     private String EventDescCN;
 
     /**
-    * Interface description.
+    * Interface description
     */
     @SerializedName("EventDescEN")
     @Expose
@@ -66,48 +66,48 @@ public class RiskCallRecord extends AbstractModel {
     private Long CallCount;
 
     /**
-     * Get API name. 
-     * @return EventName API name.
+     * Get API name 
+     * @return EventName API name
      */
     public String getEventName() {
         return this.EventName;
     }
 
     /**
-     * Set API name.
-     * @param EventName API name.
+     * Set API name
+     * @param EventName API name
      */
     public void setEventName(String EventName) {
         this.EventName = EventName;
     }
 
     /**
-     * Get Chinese description of the API. 
-     * @return EventDescCN Chinese description of the API.
+     * Get Chinese description of the api 
+     * @return EventDescCN Chinese description of the api
      */
     public String getEventDescCN() {
         return this.EventDescCN;
     }
 
     /**
-     * Set Chinese description of the API.
-     * @param EventDescCN Chinese description of the API.
+     * Set Chinese description of the api
+     * @param EventDescCN Chinese description of the api
      */
     public void setEventDescCN(String EventDescCN) {
         this.EventDescCN = EventDescCN;
     }
 
     /**
-     * Get Interface description. 
-     * @return EventDescEN Interface description.
+     * Get Interface description 
+     * @return EventDescEN Interface description
      */
     public String getEventDescEN() {
         return this.EventDescEN;
     }
 
     /**
-     * Set Interface description.
-     * @param EventDescEN Interface description.
+     * Set Interface description
+     * @param EventDescEN Interface description
      */
     public void setEventDescEN(String EventDescEN) {
         this.EventDescEN = EventDescEN;

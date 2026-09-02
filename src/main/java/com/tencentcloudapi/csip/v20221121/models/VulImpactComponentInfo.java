@@ -31,7 +31,7 @@ public class VulImpactComponentInfo extends AbstractModel {
     private String Component;
 
     /**
-    * Version name.
+    * Version name
     */
     @SerializedName("Version")
     @Expose
@@ -54,16 +54,16 @@ public class VulImpactComponentInfo extends AbstractModel {
     }
 
     /**
-     * Get Version name. 
-     * @return Version Version name.
+     * Get Version name 
+     * @return Version Version name
      */
     public String getVersion() {
         return this.Version;
     }
 
     /**
-     * Set Version name.
-     * @param Version Version name.
+     * Set Version name
+     * @param Version Version name
      */
     public void setVersion(String Version) {
         this.Version = Version;

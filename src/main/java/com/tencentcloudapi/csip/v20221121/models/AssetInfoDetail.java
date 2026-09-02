@@ -31,7 +31,7 @@ public class AssetInfoDetail extends AbstractModel {
     private String AppID;
 
     /**
-    * CVE id
+    * CVE ID
     */
     @SerializedName("CVEId")
     @Expose
@@ -80,7 +80,7 @@ public class AssetInfoDetail extends AbstractModel {
     private Long TaskPercent;
 
     /**
-    * Task Time
+    * Task time
     */
     @SerializedName("TaskTime")
     @Expose
@@ -110,16 +110,16 @@ public class AssetInfoDetail extends AbstractModel {
     }
 
     /**
-     * Get CVE id 
-     * @return CVEId CVE id
+     * Get CVE ID 
+     * @return CVEId CVE ID
      */
     public String getCVEId() {
         return this.CVEId;
     }
 
     /**
-     * Set CVE id
-     * @param CVEId CVE id
+     * Set CVE ID
+     * @param CVEId CVE ID
      */
     public void setCVEId(String CVEId) {
         this.CVEId = CVEId;
@@ -222,16 +222,16 @@ public class AssetInfoDetail extends AbstractModel {
     }
 
     /**
-     * Get Task Time 
-     * @return TaskTime Task Time
+     * Get Task time 
+     * @return TaskTime Task time
      */
     public Long getTaskTime() {
         return this.TaskTime;
     }
 
     /**
-     * Set Task Time
-     * @param TaskTime Task Time
+     * Set Task time
+     * @param TaskTime Task time
      */
     public void setTaskTime(Long TaskTime) {
         this.TaskTime = TaskTime;

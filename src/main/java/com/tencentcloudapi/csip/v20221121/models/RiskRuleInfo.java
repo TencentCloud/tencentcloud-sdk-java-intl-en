@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class RiskRuleInfo extends AbstractModel {
 
     /**
-    * Risk Check Item ID
+    * Risk check item ID
     */
     @SerializedName("RuleID")
     @Expose
     private String RuleID;
 
     /**
-    * Cloud vendor name
+    * Vendor name
     */
     @SerializedName("Provider")
     @Expose
@@ -45,7 +45,7 @@ public class RiskRuleInfo extends AbstractModel {
     private String InstanceType;
 
     /**
-    * risk name
+    * Risk name
     */
     @SerializedName("RiskTitle")
     @Expose
@@ -80,39 +80,39 @@ public class RiskRuleInfo extends AbstractModel {
     private String RiskFixAdvance;
 
     /**
-    * Boundary control
+    * Boundary management and control
     */
     @SerializedName("DispositionType")
     @Expose
     private String DispositionType;
 
     /**
-     * Get Risk Check Item ID 
-     * @return RuleID Risk Check Item ID
+     * Get Risk check item ID 
+     * @return RuleID Risk check item ID
      */
     public String getRuleID() {
         return this.RuleID;
     }
 
     /**
-     * Set Risk Check Item ID
-     * @param RuleID Risk Check Item ID
+     * Set Risk check item ID
+     * @param RuleID Risk check item ID
      */
     public void setRuleID(String RuleID) {
         this.RuleID = RuleID;
     }
 
     /**
-     * Get Cloud vendor name 
-     * @return Provider Cloud vendor name
+     * Get Vendor name 
+     * @return Provider Vendor name
      */
     public String getProvider() {
         return this.Provider;
     }
 
     /**
-     * Set Cloud vendor name
-     * @param Provider Cloud vendor name
+     * Set Vendor name
+     * @param Provider Vendor name
      */
     public void setProvider(String Provider) {
         this.Provider = Provider;
@@ -135,16 +135,16 @@ public class RiskRuleInfo extends AbstractModel {
     }
 
     /**
-     * Get risk name 
-     * @return RiskTitle risk name
+     * Get Risk name 
+     * @return RiskTitle Risk name
      */
     public String getRiskTitle() {
         return this.RiskTitle;
     }
 
     /**
-     * Set risk name
-     * @param RiskTitle risk name
+     * Set Risk name
+     * @param RiskTitle Risk name
      */
     public void setRiskTitle(String RiskTitle) {
         this.RiskTitle = RiskTitle;
@@ -215,16 +215,16 @@ public class RiskRuleInfo extends AbstractModel {
     }
 
     /**
-     * Get Boundary control 
-     * @return DispositionType Boundary control
+     * Get Boundary management and control 
+     * @return DispositionType Boundary management and control
      */
     public String getDispositionType() {
         return this.DispositionType;
     }
 
     /**
-     * Set Boundary control
-     * @param DispositionType Boundary control
+     * Set Boundary management and control
+     * @param DispositionType Boundary management and control
      */
     public void setDispositionType(String DispositionType) {
         this.DispositionType = DispositionType;

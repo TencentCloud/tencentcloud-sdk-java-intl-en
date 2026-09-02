@@ -31,7 +31,7 @@ public class OrganizationUserInfo extends AbstractModel {
     private String Uin;
 
     /**
-    * member account name
+    * Member account name
     */
     @SerializedName("NickName")
     @Expose
@@ -171,9 +171,9 @@ public class OrganizationUserInfo extends AbstractModel {
     private Long AuthType;
 
     /**
-    * Tencent Cloud Group Account
-Tencent Cloud access account
-2: non-Tencent Cloud
+    * 0 Tencent Cloud Group Account
+1 Tencent Cloud access account
+2. Non-Tencent Cloud
     */
     @SerializedName("TcMemberType")
     @Expose
@@ -210,16 +210,16 @@ Tencent Cloud access account
     }
 
     /**
-     * Get member account name 
-     * @return NickName member account name
+     * Get Member account name 
+     * @return NickName Member account name
      */
     public String getNickName() {
         return this.NickName;
     }
 
     /**
-     * Set member account name
-     * @param NickName member account name
+     * Set Member account name
+     * @param NickName Member account name
      */
     public void setNickName(String NickName) {
         this.NickName = NickName;
@@ -530,24 +530,24 @@ Tencent Cloud access account
     }
 
     /**
-     * Get Tencent Cloud Group Account
-Tencent Cloud access account
-2: non-Tencent Cloud 
-     * @return TcMemberType Tencent Cloud Group Account
-Tencent Cloud access account
-2: non-Tencent Cloud
+     * Get 0 Tencent Cloud Group Account
+1 Tencent Cloud access account
+2. Non-Tencent Cloud 
+     * @return TcMemberType 0 Tencent Cloud Group Account
+1 Tencent Cloud access account
+2. Non-Tencent Cloud
      */
     public Long getTcMemberType() {
         return this.TcMemberType;
     }
 
     /**
-     * Set Tencent Cloud Group Account
-Tencent Cloud access account
-2: non-Tencent Cloud
-     * @param TcMemberType Tencent Cloud Group Account
-Tencent Cloud access account
-2: non-Tencent Cloud
+     * Set 0 Tencent Cloud Group Account
+1 Tencent Cloud access account
+2. Non-Tencent Cloud
+     * @param TcMemberType 0 Tencent Cloud Group Account
+1 Tencent Cloud access account
+2. Non-Tencent Cloud
      */
     public void setTcMemberType(Long TcMemberType) {
         this.TcMemberType = TcMemberType;

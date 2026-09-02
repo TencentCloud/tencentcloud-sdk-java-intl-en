@@ -38,9 +38,9 @@ public class KeySandboxCredential extends AbstractModel {
     private String CredentialName;
 
     /**
-    * Credential Type
+    * Credential type
 Enumeration value:
-access: normal Key (Key-Value pair)
+access: standard Key (Key-Value pair)
 sts: STS temporary key credential
     */
     @SerializedName("CredentialType")
@@ -48,7 +48,7 @@ sts: STS temporary key credential
     private String CredentialType;
 
     /**
-    * Effective machine scope
+    * Scope of effective machines
     */
     @SerializedName("CredentialEffectScope")
     @Expose
@@ -56,7 +56,7 @@ sts: STS temporary key credential
 
     /**
     * Creation time.
-Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format).
+Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)
     */
     @SerializedName("CreateTime")
     @Expose
@@ -64,7 +64,7 @@ Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format).
 
     /**
     * Update time
-Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format).
+Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)
     */
     @SerializedName("UpdateTime")
     @Expose
@@ -103,13 +103,13 @@ Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format).
     }
 
     /**
-     * Get Credential Type
+     * Get Credential type
 Enumeration value:
-access: normal Key (Key-Value pair)
+access: standard Key (Key-Value pair)
 sts: STS temporary key credential 
-     * @return CredentialType Credential Type
+     * @return CredentialType Credential type
 Enumeration value:
-access: normal Key (Key-Value pair)
+access: standard Key (Key-Value pair)
 sts: STS temporary key credential
      */
     public String getCredentialType() {
@@ -117,13 +117,13 @@ sts: STS temporary key credential
     }
 
     /**
-     * Set Credential Type
+     * Set Credential type
 Enumeration value:
-access: normal Key (Key-Value pair)
+access: standard Key (Key-Value pair)
 sts: STS temporary key credential
-     * @param CredentialType Credential Type
+     * @param CredentialType Credential type
 Enumeration value:
-access: normal Key (Key-Value pair)
+access: standard Key (Key-Value pair)
 sts: STS temporary key credential
      */
     public void setCredentialType(String CredentialType) {
@@ -131,16 +131,16 @@ sts: STS temporary key credential
     }
 
     /**
-     * Get Effective machine scope 
-     * @return CredentialEffectScope Effective machine scope
+     * Get Scope of effective machines 
+     * @return CredentialEffectScope Scope of effective machines
      */
     public CredentialEffectScope getCredentialEffectScope() {
         return this.CredentialEffectScope;
     }
 
     /**
-     * Set Effective machine scope
-     * @param CredentialEffectScope Effective machine scope
+     * Set Scope of effective machines
+     * @param CredentialEffectScope Scope of effective machines
      */
     public void setCredentialEffectScope(CredentialEffectScope CredentialEffectScope) {
         this.CredentialEffectScope = CredentialEffectScope;
@@ -148,9 +148,9 @@ sts: STS temporary key credential
 
     /**
      * Get Creation time.
-Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format). 
+Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format) 
      * @return CreateTime Creation time.
-Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format).
+Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)
      */
     public String getCreateTime() {
         return this.CreateTime;
@@ -158,9 +158,9 @@ Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format).
 
     /**
      * Set Creation time.
-Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format).
+Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)
      * @param CreateTime Creation time.
-Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format).
+Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
@@ -168,9 +168,9 @@ Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format).
 
     /**
      * Get Update time
-Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format). 
+Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format) 
      * @return UpdateTime Update time
-Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format).
+Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)
      */
     public String getUpdateTime() {
         return this.UpdateTime;
@@ -178,9 +178,9 @@ Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format).
 
     /**
      * Set Update time
-Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format).
+Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)
      * @param UpdateTime Update time
-Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format).
+Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;

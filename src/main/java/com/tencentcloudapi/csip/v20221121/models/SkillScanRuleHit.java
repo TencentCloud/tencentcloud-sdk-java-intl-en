@@ -24,46 +24,51 @@ import java.util.HashMap;
 public class SkillScanRuleHit extends AbstractModel {
 
     /**
-    * Fusion rule number (9xxxx) can be cross-referenced with RuleCatalog.
+    * Fusion rule number
+Parameter format: such as 9xxxx
     */
     @SerializedName("RuleID")
     @Expose
     private String RuleID;
 
     /**
-    * Current description of the specific detection for the matched rule, including file location, behavioral features, risks, etc.
+    * Risk discovery description
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-     * Get Fusion rule number (9xxxx) can be cross-referenced with RuleCatalog. 
-     * @return RuleID Fusion rule number (9xxxx) can be cross-referenced with RuleCatalog.
+     * Get Fusion rule number
+Parameter format: such as 9xxxx 
+     * @return RuleID Fusion rule number
+Parameter format: such as 9xxxx
      */
     public String getRuleID() {
         return this.RuleID;
     }
 
     /**
-     * Set Fusion rule number (9xxxx) can be cross-referenced with RuleCatalog.
-     * @param RuleID Fusion rule number (9xxxx) can be cross-referenced with RuleCatalog.
+     * Set Fusion rule number
+Parameter format: such as 9xxxx
+     * @param RuleID Fusion rule number
+Parameter format: such as 9xxxx
      */
     public void setRuleID(String RuleID) {
         this.RuleID = RuleID;
     }
 
     /**
-     * Get Current description of the specific detection for the matched rule, including file location, behavioral features, risks, etc. 
-     * @return Description Current description of the specific detection for the matched rule, including file location, behavioral features, risks, etc.
+     * Get Risk discovery description 
+     * @return Description Risk discovery description
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set Current description of the specific detection for the matched rule, including file location, behavioral features, risks, etc.
-     * @param Description Current description of the specific detection for the matched rule, including file location, behavioral features, risks, etc.
+     * Set Risk discovery description
+     * @param Description Risk discovery description
      */
     public void setDescription(String Description) {
         this.Description = Description;

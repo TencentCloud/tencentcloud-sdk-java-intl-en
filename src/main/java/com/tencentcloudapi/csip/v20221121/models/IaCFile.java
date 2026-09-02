@@ -80,28 +80,28 @@ public class IaCFile extends AbstractModel {
     private Long RiskTotalCnt;
 
     /**
-    * <p>Risk level count (0: Low risk, 1: Medium risk, 2: High risk, 3: Critical)</p>
+    * <p>Number of risk levels (0: low risk, 1: medium risk, 2: high risk, 3: critical)</p>
     */
     @SerializedName("RiskLevelCnt")
     @Expose
     private KeyValueInt [] RiskLevelCnt;
 
     /**
-    * <p>Scan time</p>
+    * <p>Scan time.</p>
     */
     @SerializedName("ScanTime")
     @Expose
     private String ScanTime;
 
     /**
-    * <p>Detection status (0: pending scan, 1: detecting, 2: completed, 3: detection exception)</p>
+    * <p>Detection status (0: Pending scan, 1: Detecting, 2: Completed, 3: Detection exception)</p>
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * <p>Scan failure type (0: No failure, 1: Detection timeout, 2: File format parsing failed, 3: Detection failed)</p>
+    * <p>Scan failure type (0: no failure, 1: detection timeout, 2: file format parsing failed, 3: detection failed)</p>
     */
     @SerializedName("FailType")
     @Expose
@@ -236,64 +236,64 @@ public class IaCFile extends AbstractModel {
     }
 
     /**
-     * Get <p>Risk level count (0: Low risk, 1: Medium risk, 2: High risk, 3: Critical)</p> 
-     * @return RiskLevelCnt <p>Risk level count (0: Low risk, 1: Medium risk, 2: High risk, 3: Critical)</p>
+     * Get <p>Number of risk levels (0: low risk, 1: medium risk, 2: high risk, 3: critical)</p> 
+     * @return RiskLevelCnt <p>Number of risk levels (0: low risk, 1: medium risk, 2: high risk, 3: critical)</p>
      */
     public KeyValueInt [] getRiskLevelCnt() {
         return this.RiskLevelCnt;
     }
 
     /**
-     * Set <p>Risk level count (0: Low risk, 1: Medium risk, 2: High risk, 3: Critical)</p>
-     * @param RiskLevelCnt <p>Risk level count (0: Low risk, 1: Medium risk, 2: High risk, 3: Critical)</p>
+     * Set <p>Number of risk levels (0: low risk, 1: medium risk, 2: high risk, 3: critical)</p>
+     * @param RiskLevelCnt <p>Number of risk levels (0: low risk, 1: medium risk, 2: high risk, 3: critical)</p>
      */
     public void setRiskLevelCnt(KeyValueInt [] RiskLevelCnt) {
         this.RiskLevelCnt = RiskLevelCnt;
     }
 
     /**
-     * Get <p>Scan time</p> 
-     * @return ScanTime <p>Scan time</p>
+     * Get <p>Scan time.</p> 
+     * @return ScanTime <p>Scan time.</p>
      */
     public String getScanTime() {
         return this.ScanTime;
     }
 
     /**
-     * Set <p>Scan time</p>
-     * @param ScanTime <p>Scan time</p>
+     * Set <p>Scan time.</p>
+     * @param ScanTime <p>Scan time.</p>
      */
     public void setScanTime(String ScanTime) {
         this.ScanTime = ScanTime;
     }
 
     /**
-     * Get <p>Detection status (0: pending scan, 1: detecting, 2: completed, 3: detection exception)</p> 
-     * @return Status <p>Detection status (0: pending scan, 1: detecting, 2: completed, 3: detection exception)</p>
+     * Get <p>Detection status (0: Pending scan, 1: Detecting, 2: Completed, 3: Detection exception)</p> 
+     * @return Status <p>Detection status (0: Pending scan, 1: Detecting, 2: Completed, 3: Detection exception)</p>
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set <p>Detection status (0: pending scan, 1: detecting, 2: completed, 3: detection exception)</p>
-     * @param Status <p>Detection status (0: pending scan, 1: detecting, 2: completed, 3: detection exception)</p>
+     * Set <p>Detection status (0: Pending scan, 1: Detecting, 2: Completed, 3: Detection exception)</p>
+     * @param Status <p>Detection status (0: Pending scan, 1: Detecting, 2: Completed, 3: Detection exception)</p>
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get <p>Scan failure type (0: No failure, 1: Detection timeout, 2: File format parsing failed, 3: Detection failed)</p> 
-     * @return FailType <p>Scan failure type (0: No failure, 1: Detection timeout, 2: File format parsing failed, 3: Detection failed)</p>
+     * Get <p>Scan failure type (0: no failure, 1: detection timeout, 2: file format parsing failed, 3: detection failed)</p> 
+     * @return FailType <p>Scan failure type (0: no failure, 1: detection timeout, 2: file format parsing failed, 3: detection failed)</p>
      */
     public Long getFailType() {
         return this.FailType;
     }
 
     /**
-     * Set <p>Scan failure type (0: No failure, 1: Detection timeout, 2: File format parsing failed, 3: Detection failed)</p>
-     * @param FailType <p>Scan failure type (0: No failure, 1: Detection timeout, 2: File format parsing failed, 3: Detection failed)</p>
+     * Set <p>Scan failure type (0: no failure, 1: detection timeout, 2: file format parsing failed, 3: detection failed)</p>
+     * @param FailType <p>Scan failure type (0: no failure, 1: detection timeout, 2: file format parsing failed, 3: detection failed)</p>
      */
     public void setFailType(Long FailType) {
         this.FailType = FailType;

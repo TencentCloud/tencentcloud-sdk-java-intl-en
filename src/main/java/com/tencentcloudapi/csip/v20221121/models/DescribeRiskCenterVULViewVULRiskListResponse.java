@@ -24,35 +24,35 @@ import java.util.HashMap;
 public class DescribeRiskCenterVULViewVULRiskListResponse extends AbstractModel {
 
     /**
-    * Total number of entries
+    * Total quantity.
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * List of vulnerabilities
+    * Vulnerability Risk List from Vulnerability Asset's Perspective
     */
     @SerializedName("Data")
     @Expose
     private VULViewVULRisk [] Data;
 
     /**
-    * List of risk levels
+    * Danger Level List
     */
     @SerializedName("LevelLists")
     @Expose
     private FilterDataObject [] LevelLists;
 
     /**
-    * List of check source
+    * Source List
     */
     @SerializedName("FromLists")
     @Expose
     private FilterDataObject [] FromLists;
 
     /**
-    * List of vulnerability types
+    * Vulnerability Type List
     */
     @SerializedName("VULTypeLists")
     @Expose
@@ -66,80 +66,80 @@ public class DescribeRiskCenterVULViewVULRiskListResponse extends AbstractModel 
     private String RequestId;
 
     /**
-     * Get Total number of entries 
-     * @return TotalCount Total number of entries
+     * Get Total quantity. 
+     * @return TotalCount Total quantity.
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set Total number of entries
-     * @param TotalCount Total number of entries
+     * Set Total quantity.
+     * @param TotalCount Total quantity.
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get List of vulnerabilities 
-     * @return Data List of vulnerabilities
+     * Get Vulnerability Risk List from Vulnerability Asset's Perspective 
+     * @return Data Vulnerability Risk List from Vulnerability Asset's Perspective
      */
     public VULViewVULRisk [] getData() {
         return this.Data;
     }
 
     /**
-     * Set List of vulnerabilities
-     * @param Data List of vulnerabilities
+     * Set Vulnerability Risk List from Vulnerability Asset's Perspective
+     * @param Data Vulnerability Risk List from Vulnerability Asset's Perspective
      */
     public void setData(VULViewVULRisk [] Data) {
         this.Data = Data;
     }
 
     /**
-     * Get List of risk levels 
-     * @return LevelLists List of risk levels
+     * Get Danger Level List 
+     * @return LevelLists Danger Level List
      */
     public FilterDataObject [] getLevelLists() {
         return this.LevelLists;
     }
 
     /**
-     * Set List of risk levels
-     * @param LevelLists List of risk levels
+     * Set Danger Level List
+     * @param LevelLists Danger Level List
      */
     public void setLevelLists(FilterDataObject [] LevelLists) {
         this.LevelLists = LevelLists;
     }
 
     /**
-     * Get List of check source 
-     * @return FromLists List of check source
+     * Get Source List 
+     * @return FromLists Source List
      */
     public FilterDataObject [] getFromLists() {
         return this.FromLists;
     }
 
     /**
-     * Set List of check source
-     * @param FromLists List of check source
+     * Set Source List
+     * @param FromLists Source List
      */
     public void setFromLists(FilterDataObject [] FromLists) {
         this.FromLists = FromLists;
     }
 
     /**
-     * Get List of vulnerability types 
-     * @return VULTypeLists List of vulnerability types
+     * Get Vulnerability Type List 
+     * @return VULTypeLists Vulnerability Type List
      */
     public FilterDataObject [] getVULTypeLists() {
         return this.VULTypeLists;
     }
 
     /**
-     * Set List of vulnerability types
-     * @param VULTypeLists List of vulnerability types
+     * Set Vulnerability Type List
+     * @param VULTypeLists Vulnerability Type List
      */
     public void setVULTypeLists(FilterDataObject [] VULTypeLists) {
         this.VULTypeLists = VULTypeLists;

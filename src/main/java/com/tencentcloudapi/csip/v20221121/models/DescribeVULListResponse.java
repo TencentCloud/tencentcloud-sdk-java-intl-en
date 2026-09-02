@@ -45,7 +45,7 @@ public class DescribeVULListResponse extends AbstractModel {
     private FilterDataObject [] VULTypeLists;
 
     /**
-    * Risk level list.
+    * Risk level list
     */
     @SerializedName("RiskLevels")
     @Expose
@@ -59,21 +59,21 @@ public class DescribeVULListResponse extends AbstractModel {
     private FilterDataObject [] Tags;
 
     /**
-    * Product support.
+    * Product support status
     */
     @SerializedName("ProductSupport")
     @Expose
     private FilterDataObject [] ProductSupport;
 
     /**
-    * Product support.
+    * Product support status
     */
     @SerializedName("CheckStatus")
     @Expose
     private FilterDataObject [] CheckStatus;
 
     /**
-    * Attack intensity enumeration.
+    * Attack level enumeration
     */
     @SerializedName("AttackHeat")
     @Expose
@@ -135,16 +135,16 @@ public class DescribeVULListResponse extends AbstractModel {
     }
 
     /**
-     * Get Risk level list. 
-     * @return RiskLevels Risk level list.
+     * Get Risk level list 
+     * @return RiskLevels Risk level list
      */
     public FilterDataObject [] getRiskLevels() {
         return this.RiskLevels;
     }
 
     /**
-     * Set Risk level list.
-     * @param RiskLevels Risk level list.
+     * Set Risk level list
+     * @param RiskLevels Risk level list
      */
     public void setRiskLevels(FilterDataObject [] RiskLevels) {
         this.RiskLevels = RiskLevels;
@@ -167,48 +167,48 @@ public class DescribeVULListResponse extends AbstractModel {
     }
 
     /**
-     * Get Product support. 
-     * @return ProductSupport Product support.
+     * Get Product support status 
+     * @return ProductSupport Product support status
      */
     public FilterDataObject [] getProductSupport() {
         return this.ProductSupport;
     }
 
     /**
-     * Set Product support.
-     * @param ProductSupport Product support.
+     * Set Product support status
+     * @param ProductSupport Product support status
      */
     public void setProductSupport(FilterDataObject [] ProductSupport) {
         this.ProductSupport = ProductSupport;
     }
 
     /**
-     * Get Product support. 
-     * @return CheckStatus Product support.
+     * Get Product support status 
+     * @return CheckStatus Product support status
      */
     public FilterDataObject [] getCheckStatus() {
         return this.CheckStatus;
     }
 
     /**
-     * Set Product support.
-     * @param CheckStatus Product support.
+     * Set Product support status
+     * @param CheckStatus Product support status
      */
     public void setCheckStatus(FilterDataObject [] CheckStatus) {
         this.CheckStatus = CheckStatus;
     }
 
     /**
-     * Get Attack intensity enumeration. 
-     * @return AttackHeat Attack intensity enumeration.
+     * Get Attack level enumeration 
+     * @return AttackHeat Attack level enumeration
      */
     public FilterDataObject [] getAttackHeat() {
         return this.AttackHeat;
     }
 
     /**
-     * Set Attack intensity enumeration.
-     * @param AttackHeat Attack intensity enumeration.
+     * Set Attack level enumeration
+     * @param AttackHeat Attack level enumeration
      */
     public void setAttackHeat(FilterDataObject [] AttackHeat) {
         this.AttackHeat = AttackHeat;

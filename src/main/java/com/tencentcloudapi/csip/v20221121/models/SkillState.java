@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class SkillState extends AbstractModel {
 
     /**
-    * SKILL Installation Status
+    * SKILL installation status
 Enumeration value:
 0: Not installed
-Installing
+1: Installing
 2: Installed
 3: Installation failure
 4: Uninstalling
-5: Uninstallation failed.
+5: Uninstallation failed
     */
     @SerializedName("SkillInstallStatus")
     @Expose
@@ -39,7 +39,7 @@ Installing
 
     /**
     * SKILL installation/uninstallation operation time
-Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format).
+Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)
     */
     @SerializedName("SkillInstallTime")
     @Expose
@@ -53,44 +53,44 @@ Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format).
     private String SkillInstallResult;
 
     /**
-     * Get SKILL Installation Status
+     * Get SKILL installation status
 Enumeration value:
 0: Not installed
-Installing
+1: Installing
 2: Installed
 3: Installation failure
 4: Uninstalling
-5: Uninstallation failed. 
-     * @return SkillInstallStatus SKILL Installation Status
+5: Uninstallation failed 
+     * @return SkillInstallStatus SKILL installation status
 Enumeration value:
 0: Not installed
-Installing
+1: Installing
 2: Installed
 3: Installation failure
 4: Uninstalling
-5: Uninstallation failed.
+5: Uninstallation failed
      */
     public Long getSkillInstallStatus() {
         return this.SkillInstallStatus;
     }
 
     /**
-     * Set SKILL Installation Status
+     * Set SKILL installation status
 Enumeration value:
 0: Not installed
-Installing
+1: Installing
 2: Installed
 3: Installation failure
 4: Uninstalling
-5: Uninstallation failed.
-     * @param SkillInstallStatus SKILL Installation Status
+5: Uninstallation failed
+     * @param SkillInstallStatus SKILL installation status
 Enumeration value:
 0: Not installed
-Installing
+1: Installing
 2: Installed
 3: Installation failure
 4: Uninstalling
-5: Uninstallation failed.
+5: Uninstallation failed
      */
     public void setSkillInstallStatus(Long SkillInstallStatus) {
         this.SkillInstallStatus = SkillInstallStatus;
@@ -98,9 +98,9 @@ Installing
 
     /**
      * Get SKILL installation/uninstallation operation time
-Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format). 
+Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format) 
      * @return SkillInstallTime SKILL installation/uninstallation operation time
-Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format).
+Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)
      */
     public String getSkillInstallTime() {
         return this.SkillInstallTime;
@@ -108,9 +108,9 @@ Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format).
 
     /**
      * Set SKILL installation/uninstallation operation time
-Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format).
+Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)
      * @param SkillInstallTime SKILL installation/uninstallation operation time
-Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format).
+Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)
      */
     public void setSkillInstallTime(String SkillInstallTime) {
         this.SkillInstallTime = SkillInstallTime;

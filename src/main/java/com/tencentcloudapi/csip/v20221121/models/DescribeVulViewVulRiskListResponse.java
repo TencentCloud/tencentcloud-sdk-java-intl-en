@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeVulViewVulRiskListResponse extends AbstractModel {
 
     /**
-    * Total number of entries
+    * Total quantity.
     */
     @SerializedName("TotalCount")
     @Expose
@@ -59,7 +59,7 @@ public class DescribeVulViewVulRiskListResponse extends AbstractModel {
     private FilterDataObject [] VULTypeLists;
 
     /**
-    * tag enumeration.
+    * tag enumeration
     */
     @SerializedName("Tags")
     @Expose
@@ -73,16 +73,16 @@ public class DescribeVulViewVulRiskListResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Total number of entries 
-     * @return TotalCount Total number of entries
+     * Get Total quantity. 
+     * @return TotalCount Total quantity.
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set Total number of entries
-     * @param TotalCount Total number of entries
+     * Set Total quantity.
+     * @param TotalCount Total quantity.
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
@@ -153,16 +153,16 @@ public class DescribeVulViewVulRiskListResponse extends AbstractModel {
     }
 
     /**
-     * Get tag enumeration. 
-     * @return Tags tag enumeration.
+     * Get tag enumeration 
+     * @return Tags tag enumeration
      */
     public FilterDataObject [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set tag enumeration.
-     * @param Tags tag enumeration.
+     * Set tag enumeration
+     * @param Tags tag enumeration
      */
     public void setTags(FilterDataObject [] Tags) {
         this.Tags = Tags;

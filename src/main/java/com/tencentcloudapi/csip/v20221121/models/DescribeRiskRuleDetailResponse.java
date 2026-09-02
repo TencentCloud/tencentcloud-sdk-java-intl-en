@@ -31,7 +31,7 @@ public class DescribeRiskRuleDetailResponse extends AbstractModel {
     private String RiskRuleId;
 
     /**
-    * <p>Cloud vendor</p>
+    * <p>Cloud service provider.</p>
     */
     @SerializedName("Provider")
     @Expose
@@ -45,7 +45,7 @@ public class DescribeRiskRuleDetailResponse extends AbstractModel {
     private String RiskName;
 
     /**
-    * <p>Risk damage</p>
+    * <p>Risk and damage</p>
     */
     @SerializedName("RiskInfluence")
     @Expose
@@ -89,16 +89,16 @@ public class DescribeRiskRuleDetailResponse extends AbstractModel {
     }
 
     /**
-     * Get <p>Cloud vendor</p> 
-     * @return Provider <p>Cloud vendor</p>
+     * Get <p>Cloud service provider.</p> 
+     * @return Provider <p>Cloud service provider.</p>
      */
     public String getProvider() {
         return this.Provider;
     }
 
     /**
-     * Set <p>Cloud vendor</p>
-     * @param Provider <p>Cloud vendor</p>
+     * Set <p>Cloud service provider.</p>
+     * @param Provider <p>Cloud service provider.</p>
      */
     public void setProvider(String Provider) {
         this.Provider = Provider;
@@ -121,16 +121,16 @@ public class DescribeRiskRuleDetailResponse extends AbstractModel {
     }
 
     /**
-     * Get <p>Risk damage</p> 
-     * @return RiskInfluence <p>Risk damage</p>
+     * Get <p>Risk and damage</p> 
+     * @return RiskInfluence <p>Risk and damage</p>
      */
     public String getRiskInfluence() {
         return this.RiskInfluence;
     }
 
     /**
-     * Set <p>Risk damage</p>
-     * @param RiskInfluence <p>Risk damage</p>
+     * Set <p>Risk and damage</p>
+     * @param RiskInfluence <p>Risk and damage</p>
      */
     public void setRiskInfluence(String RiskInfluence) {
         this.RiskInfluence = RiskInfluence;

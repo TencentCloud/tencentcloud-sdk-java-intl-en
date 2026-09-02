@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeIaCFileReportResponse extends AbstractModel {
 
     /**
-    * <p>Detect file</p>
+    * <p>Detection file.</p>
     */
     @SerializedName("File")
     @Expose
     private String File;
 
     /**
-    * <p>Detection status (0: pending scan, 1: detecting, 2: completed, 3: detection exception)</p>
+    * <p>Detection status (0: Pending scan, 1: Detecting, 2: Completed, 3: Detection exception)</p>
     */
     @SerializedName("Status")
     @Expose
@@ -59,32 +59,32 @@ public class DescribeIaCFileReportResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get <p>Detect file</p> 
-     * @return File <p>Detect file</p>
+     * Get <p>Detection file.</p> 
+     * @return File <p>Detection file.</p>
      */
     public String getFile() {
         return this.File;
     }
 
     /**
-     * Set <p>Detect file</p>
-     * @param File <p>Detect file</p>
+     * Set <p>Detection file.</p>
+     * @param File <p>Detection file.</p>
      */
     public void setFile(String File) {
         this.File = File;
     }
 
     /**
-     * Get <p>Detection status (0: pending scan, 1: detecting, 2: completed, 3: detection exception)</p> 
-     * @return Status <p>Detection status (0: pending scan, 1: detecting, 2: completed, 3: detection exception)</p>
+     * Get <p>Detection status (0: Pending scan, 1: Detecting, 2: Completed, 3: Detection exception)</p> 
+     * @return Status <p>Detection status (0: Pending scan, 1: Detecting, 2: Completed, 3: Detection exception)</p>
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set <p>Detection status (0: pending scan, 1: detecting, 2: completed, 3: detection exception)</p>
-     * @param Status <p>Detection status (0: pending scan, 1: detecting, 2: completed, 3: detection exception)</p>
+     * Set <p>Detection status (0: Pending scan, 1: Detecting, 2: Completed, 3: Detection exception)</p>
+     * @param Status <p>Detection status (0: Pending scan, 1: Detecting, 2: Completed, 3: Detection exception)</p>
      */
     public void setStatus(Long Status) {
         this.Status = Status;

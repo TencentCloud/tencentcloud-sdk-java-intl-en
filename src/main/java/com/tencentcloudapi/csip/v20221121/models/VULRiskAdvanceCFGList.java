@@ -38,14 +38,14 @@ public class VULRiskAdvanceCFGList extends AbstractModel {
     private String VULName;
 
     /**
-    * Risk level, low - low risk, high - high risk, middle - medium risk, info - notification, extreme - critical.
+    * Risk level. low: low risk. high: high risk. middle: medium risk. info: notification. extreme: critical.
     */
     @SerializedName("RiskLevel")
     @Expose
     private String RiskLevel;
 
     /**
-    * Source of the check task
+    * Recognition source
     */
     @SerializedName("CheckFrom")
     @Expose
@@ -59,14 +59,14 @@ public class VULRiskAdvanceCFGList extends AbstractModel {
     private Long Enable;
 
     /**
-    * Risk type.
+    * Risk type
     */
     @SerializedName("VULType")
     @Expose
     private String VULType;
 
     /**
-    * Affected versions
+    * Affected version
     */
     @SerializedName("ImpactVersion")
     @Expose
@@ -129,7 +129,7 @@ public class VULRiskAdvanceCFGList extends AbstractModel {
     private String Payload;
 
     /**
-    * Technology reference
+    * Technical reference
     */
     @SerializedName("References")
     @Expose
@@ -143,14 +143,14 @@ public class VULRiskAdvanceCFGList extends AbstractModel {
     private String CVSS;
 
     /**
-    * Attack intensity
+    * Attack level
     */
     @SerializedName("AttackHeat")
     @Expose
     private String AttackHeat;
 
     /**
-    * Security Product Support Status
+    * Security product support status
     */
     @SerializedName("ServiceSupport")
     @Expose
@@ -196,32 +196,32 @@ public class VULRiskAdvanceCFGList extends AbstractModel {
     }
 
     /**
-     * Get Risk level, low - low risk, high - high risk, middle - medium risk, info - notification, extreme - critical. 
-     * @return RiskLevel Risk level, low - low risk, high - high risk, middle - medium risk, info - notification, extreme - critical.
+     * Get Risk level. low: low risk. high: high risk. middle: medium risk. info: notification. extreme: critical. 
+     * @return RiskLevel Risk level. low: low risk. high: high risk. middle: medium risk. info: notification. extreme: critical.
      */
     public String getRiskLevel() {
         return this.RiskLevel;
     }
 
     /**
-     * Set Risk level, low - low risk, high - high risk, middle - medium risk, info - notification, extreme - critical.
-     * @param RiskLevel Risk level, low - low risk, high - high risk, middle - medium risk, info - notification, extreme - critical.
+     * Set Risk level. low: low risk. high: high risk. middle: medium risk. info: notification. extreme: critical.
+     * @param RiskLevel Risk level. low: low risk. high: high risk. middle: medium risk. info: notification. extreme: critical.
      */
     public void setRiskLevel(String RiskLevel) {
         this.RiskLevel = RiskLevel;
     }
 
     /**
-     * Get Source of the check task 
-     * @return CheckFrom Source of the check task
+     * Get Recognition source 
+     * @return CheckFrom Recognition source
      */
     public String getCheckFrom() {
         return this.CheckFrom;
     }
 
     /**
-     * Set Source of the check task
-     * @param CheckFrom Source of the check task
+     * Set Recognition source
+     * @param CheckFrom Recognition source
      */
     public void setCheckFrom(String CheckFrom) {
         this.CheckFrom = CheckFrom;
@@ -244,32 +244,32 @@ public class VULRiskAdvanceCFGList extends AbstractModel {
     }
 
     /**
-     * Get Risk type. 
-     * @return VULType Risk type.
+     * Get Risk type 
+     * @return VULType Risk type
      */
     public String getVULType() {
         return this.VULType;
     }
 
     /**
-     * Set Risk type.
-     * @param VULType Risk type.
+     * Set Risk type
+     * @param VULType Risk type
      */
     public void setVULType(String VULType) {
         this.VULType = VULType;
     }
 
     /**
-     * Get Affected versions 
-     * @return ImpactVersion Affected versions
+     * Get Affected version 
+     * @return ImpactVersion Affected version
      */
     public String getImpactVersion() {
         return this.ImpactVersion;
     }
 
     /**
-     * Set Affected versions
-     * @param ImpactVersion Affected versions
+     * Set Affected version
+     * @param ImpactVersion Affected version
      */
     public void setImpactVersion(String ImpactVersion) {
         this.ImpactVersion = ImpactVersion;
@@ -404,16 +404,16 @@ public class VULRiskAdvanceCFGList extends AbstractModel {
     }
 
     /**
-     * Get Technology reference 
-     * @return References Technology reference
+     * Get Technical reference 
+     * @return References Technical reference
      */
     public String getReferences() {
         return this.References;
     }
 
     /**
-     * Set Technology reference
-     * @param References Technology reference
+     * Set Technical reference
+     * @param References Technical reference
      */
     public void setReferences(String References) {
         this.References = References;
@@ -436,32 +436,32 @@ public class VULRiskAdvanceCFGList extends AbstractModel {
     }
 
     /**
-     * Get Attack intensity 
-     * @return AttackHeat Attack intensity
+     * Get Attack level 
+     * @return AttackHeat Attack level
      */
     public String getAttackHeat() {
         return this.AttackHeat;
     }
 
     /**
-     * Set Attack intensity
-     * @param AttackHeat Attack intensity
+     * Set Attack level
+     * @param AttackHeat Attack level
      */
     public void setAttackHeat(String AttackHeat) {
         this.AttackHeat = AttackHeat;
     }
 
     /**
-     * Get Security Product Support Status 
-     * @return ServiceSupport Security Product Support Status
+     * Get Security product support status 
+     * @return ServiceSupport Security product support status
      */
     public ServiceSupport [] getServiceSupport() {
         return this.ServiceSupport;
     }
 
     /**
-     * Set Security Product Support Status
-     * @param ServiceSupport Security Product Support Status
+     * Set Security product support status
+     * @param ServiceSupport Security product support status
      */
     public void setServiceSupport(ServiceSupport [] ServiceSupport) {
         this.ServiceSupport = ServiceSupport;

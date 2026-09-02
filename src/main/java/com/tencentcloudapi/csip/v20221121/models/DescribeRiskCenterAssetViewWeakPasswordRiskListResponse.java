@@ -24,49 +24,49 @@ import java.util.HashMap;
 public class DescribeRiskCenterAssetViewWeakPasswordRiskListResponse extends AbstractModel {
 
     /**
-    * Total number of entries
+    * Total quantity.
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * List of risks
+    * Risk list
     */
     @SerializedName("Data")
     @Expose
     private AssetViewWeakPassRisk [] Data;
 
     /**
-    * List of risk handling status
+    * Status list
     */
     @SerializedName("StatusLists")
     @Expose
     private FilterDataObject [] StatusLists;
 
     /**
-    * List of risk levels
+    * Danger Level List
     */
     @SerializedName("LevelLists")
     @Expose
     private FilterDataObject [] LevelLists;
 
     /**
-    * List of check source
+    * Source List
     */
     @SerializedName("FromLists")
     @Expose
     private FilterDataObject [] FromLists;
 
     /**
-    * List of asset types
+    * Asset Type List
     */
     @SerializedName("InstanceTypeLists")
     @Expose
     private FilterDataObject [] InstanceTypeLists;
 
     /**
-    * List of weak password types
+    * Weak Password Type List
     */
     @SerializedName("PasswordTypeLists")
     @Expose
@@ -80,112 +80,112 @@ public class DescribeRiskCenterAssetViewWeakPasswordRiskListResponse extends Abs
     private String RequestId;
 
     /**
-     * Get Total number of entries 
-     * @return TotalCount Total number of entries
+     * Get Total quantity. 
+     * @return TotalCount Total quantity.
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set Total number of entries
-     * @param TotalCount Total number of entries
+     * Set Total quantity.
+     * @param TotalCount Total quantity.
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get List of risks 
-     * @return Data List of risks
+     * Get Risk list 
+     * @return Data Risk list
      */
     public AssetViewWeakPassRisk [] getData() {
         return this.Data;
     }
 
     /**
-     * Set List of risks
-     * @param Data List of risks
+     * Set Risk list
+     * @param Data Risk list
      */
     public void setData(AssetViewWeakPassRisk [] Data) {
         this.Data = Data;
     }
 
     /**
-     * Get List of risk handling status 
-     * @return StatusLists List of risk handling status
+     * Get Status list 
+     * @return StatusLists Status list
      */
     public FilterDataObject [] getStatusLists() {
         return this.StatusLists;
     }
 
     /**
-     * Set List of risk handling status
-     * @param StatusLists List of risk handling status
+     * Set Status list
+     * @param StatusLists Status list
      */
     public void setStatusLists(FilterDataObject [] StatusLists) {
         this.StatusLists = StatusLists;
     }
 
     /**
-     * Get List of risk levels 
-     * @return LevelLists List of risk levels
+     * Get Danger Level List 
+     * @return LevelLists Danger Level List
      */
     public FilterDataObject [] getLevelLists() {
         return this.LevelLists;
     }
 
     /**
-     * Set List of risk levels
-     * @param LevelLists List of risk levels
+     * Set Danger Level List
+     * @param LevelLists Danger Level List
      */
     public void setLevelLists(FilterDataObject [] LevelLists) {
         this.LevelLists = LevelLists;
     }
 
     /**
-     * Get List of check source 
-     * @return FromLists List of check source
+     * Get Source List 
+     * @return FromLists Source List
      */
     public FilterDataObject [] getFromLists() {
         return this.FromLists;
     }
 
     /**
-     * Set List of check source
-     * @param FromLists List of check source
+     * Set Source List
+     * @param FromLists Source List
      */
     public void setFromLists(FilterDataObject [] FromLists) {
         this.FromLists = FromLists;
     }
 
     /**
-     * Get List of asset types 
-     * @return InstanceTypeLists List of asset types
+     * Get Asset Type List 
+     * @return InstanceTypeLists Asset Type List
      */
     public FilterDataObject [] getInstanceTypeLists() {
         return this.InstanceTypeLists;
     }
 
     /**
-     * Set List of asset types
-     * @param InstanceTypeLists List of asset types
+     * Set Asset Type List
+     * @param InstanceTypeLists Asset Type List
      */
     public void setInstanceTypeLists(FilterDataObject [] InstanceTypeLists) {
         this.InstanceTypeLists = InstanceTypeLists;
     }
 
     /**
-     * Get List of weak password types 
-     * @return PasswordTypeLists List of weak password types
+     * Get Weak Password Type List 
+     * @return PasswordTypeLists Weak Password Type List
      */
     public FilterDataObject [] getPasswordTypeLists() {
         return this.PasswordTypeLists;
     }
 
     /**
-     * Set List of weak password types
-     * @param PasswordTypeLists List of weak password types
+     * Set Weak Password Type List
+     * @param PasswordTypeLists Weak Password Type List
      */
     public void setPasswordTypeLists(FilterDataObject [] PasswordTypeLists) {
         this.PasswordTypeLists = PasswordTypeLists;

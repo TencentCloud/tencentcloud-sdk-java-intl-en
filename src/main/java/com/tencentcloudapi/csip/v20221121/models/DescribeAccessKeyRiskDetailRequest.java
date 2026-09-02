@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeAccessKeyRiskDetailRequest extends AbstractModel {
 
     /**
-    * Risk record ID.
+    * Risk record ID
     */
     @SerializedName("ID")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeAccessKeyRiskDetailRequest extends AbstractModel {
     private String [] MemberId;
 
     /**
-     * Get Risk record ID. 
-     * @return ID Risk record ID.
+     * Get Risk record ID 
+     * @return ID Risk record ID
      */
     public Long getID() {
         return this.ID;
     }
 
     /**
-     * Set Risk record ID.
-     * @param ID Risk record ID.
+     * Set Risk record ID
+     * @param ID Risk record ID
      */
     public void setID(Long ID) {
         this.ID = ID;

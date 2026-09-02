@@ -31,14 +31,14 @@ public class DescribeScanTaskListRequest extends AbstractModel {
     private String [] MemberId;
 
     /**
-    * Filter conditions
+    * Filtered Content
     */
     @SerializedName("Filter")
     @Expose
     private Filter Filter;
 
     /**
-    * Tags
+    * Tag.
     */
     @SerializedName("Tags")
     @Expose
@@ -61,32 +61,32 @@ public class DescribeScanTaskListRequest extends AbstractModel {
     }
 
     /**
-     * Get Filter conditions 
-     * @return Filter Filter conditions
+     * Get Filtered Content 
+     * @return Filter Filtered Content
      */
     public Filter getFilter() {
         return this.Filter;
     }
 
     /**
-     * Set Filter conditions
-     * @param Filter Filter conditions
+     * Set Filtered Content
+     * @param Filter Filtered Content
      */
     public void setFilter(Filter Filter) {
         this.Filter = Filter;
     }
 
     /**
-     * Get Tags 
-     * @return Tags Tags
+     * Get Tag. 
+     * @return Tags Tag.
      */
     public Tags [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set Tags
-     * @param Tags Tags
+     * Set Tag.
+     * @param Tags Tag.
      */
     public void setTags(Tags [] Tags) {
         this.Tags = Tags;

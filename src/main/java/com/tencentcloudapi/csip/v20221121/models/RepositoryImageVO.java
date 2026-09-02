@@ -38,21 +38,21 @@ public class RepositoryImageVO extends AbstractModel {
     private String Uin;
 
     /**
-    * Nickname.
+    * Nickname
     */
     @SerializedName("NickName")
     @Expose
     private String NickName;
 
     /**
-    * Mirror id.
+    * Image id
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Image name.
+    * Image Name
     */
     @SerializedName("InstanceName")
     @Expose
@@ -73,7 +73,7 @@ public class RepositoryImageVO extends AbstractModel {
     private String InstanceSize;
 
     /**
-    * Build times.
+    * Build Times
     */
     @SerializedName("BuildCount")
     @Expose
@@ -87,14 +87,14 @@ public class RepositoryImageVO extends AbstractModel {
     private String InstanceType;
 
     /**
-    * Authorization status.
+    * Authorization status
     */
     @SerializedName("AuthStatus")
     @Expose
     private Long AuthStatus;
 
     /**
-    * Mirror version.
+    * Mirror version
     */
     @SerializedName("InstanceVersion")
     @Expose
@@ -108,14 +108,14 @@ public class RepositoryImageVO extends AbstractModel {
     private String Region;
 
     /**
-    * Repository address.
+    * Repository address
     */
     @SerializedName("RepositoryUrl")
     @Expose
     private String RepositoryUrl;
 
     /**
-    * Repository name.
+    * Repository name
     */
     @SerializedName("RepositoryName")
     @Expose
@@ -129,14 +129,14 @@ public class RepositoryImageVO extends AbstractModel {
     private Long IsCore;
 
     /**
-    * Vulnerability risk.
+    * Vulnerability risk
     */
     @SerializedName("VulRisk")
     @Expose
     private Long VulRisk;
 
     /**
-    * Check task.
+    * Check task
     */
     @SerializedName("CheckCount")
     @Expose
@@ -189,48 +189,48 @@ public class RepositoryImageVO extends AbstractModel {
     }
 
     /**
-     * Get Nickname. 
-     * @return NickName Nickname.
+     * Get Nickname 
+     * @return NickName Nickname
      */
     public String getNickName() {
         return this.NickName;
     }
 
     /**
-     * Set Nickname.
-     * @param NickName Nickname.
+     * Set Nickname
+     * @param NickName Nickname
      */
     public void setNickName(String NickName) {
         this.NickName = NickName;
     }
 
     /**
-     * Get Mirror id. 
-     * @return InstanceId Mirror id.
+     * Get Image id 
+     * @return InstanceId Image id
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Mirror id.
-     * @param InstanceId Mirror id.
+     * Set Image id
+     * @param InstanceId Image id
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Image name. 
-     * @return InstanceName Image name.
+     * Get Image Name 
+     * @return InstanceName Image Name
      */
     public String getInstanceName() {
         return this.InstanceName;
     }
 
     /**
-     * Set Image name.
-     * @param InstanceName Image name.
+     * Set Image Name
+     * @param InstanceName Image Name
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;
@@ -269,16 +269,16 @@ public class RepositoryImageVO extends AbstractModel {
     }
 
     /**
-     * Get Build times. 
-     * @return BuildCount Build times.
+     * Get Build Times 
+     * @return BuildCount Build Times
      */
     public Long getBuildCount() {
         return this.BuildCount;
     }
 
     /**
-     * Set Build times.
-     * @param BuildCount Build times.
+     * Set Build Times
+     * @param BuildCount Build Times
      */
     public void setBuildCount(Long BuildCount) {
         this.BuildCount = BuildCount;
@@ -301,32 +301,32 @@ public class RepositoryImageVO extends AbstractModel {
     }
 
     /**
-     * Get Authorization status. 
-     * @return AuthStatus Authorization status.
+     * Get Authorization status 
+     * @return AuthStatus Authorization status
      */
     public Long getAuthStatus() {
         return this.AuthStatus;
     }
 
     /**
-     * Set Authorization status.
-     * @param AuthStatus Authorization status.
+     * Set Authorization status
+     * @param AuthStatus Authorization status
      */
     public void setAuthStatus(Long AuthStatus) {
         this.AuthStatus = AuthStatus;
     }
 
     /**
-     * Get Mirror version. 
-     * @return InstanceVersion Mirror version.
+     * Get Mirror version 
+     * @return InstanceVersion Mirror version
      */
     public String getInstanceVersion() {
         return this.InstanceVersion;
     }
 
     /**
-     * Set Mirror version.
-     * @param InstanceVersion Mirror version.
+     * Set Mirror version
+     * @param InstanceVersion Mirror version
      */
     public void setInstanceVersion(String InstanceVersion) {
         this.InstanceVersion = InstanceVersion;
@@ -349,32 +349,32 @@ public class RepositoryImageVO extends AbstractModel {
     }
 
     /**
-     * Get Repository address. 
-     * @return RepositoryUrl Repository address.
+     * Get Repository address 
+     * @return RepositoryUrl Repository address
      */
     public String getRepositoryUrl() {
         return this.RepositoryUrl;
     }
 
     /**
-     * Set Repository address.
-     * @param RepositoryUrl Repository address.
+     * Set Repository address
+     * @param RepositoryUrl Repository address
      */
     public void setRepositoryUrl(String RepositoryUrl) {
         this.RepositoryUrl = RepositoryUrl;
     }
 
     /**
-     * Get Repository name. 
-     * @return RepositoryName Repository name.
+     * Get Repository name 
+     * @return RepositoryName Repository name
      */
     public String getRepositoryName() {
         return this.RepositoryName;
     }
 
     /**
-     * Set Repository name.
-     * @param RepositoryName Repository name.
+     * Set Repository name
+     * @param RepositoryName Repository name
      */
     public void setRepositoryName(String RepositoryName) {
         this.RepositoryName = RepositoryName;
@@ -397,32 +397,32 @@ public class RepositoryImageVO extends AbstractModel {
     }
 
     /**
-     * Get Vulnerability risk. 
-     * @return VulRisk Vulnerability risk.
+     * Get Vulnerability risk 
+     * @return VulRisk Vulnerability risk
      */
     public Long getVulRisk() {
         return this.VulRisk;
     }
 
     /**
-     * Set Vulnerability risk.
-     * @param VulRisk Vulnerability risk.
+     * Set Vulnerability risk
+     * @param VulRisk Vulnerability risk
      */
     public void setVulRisk(Long VulRisk) {
         this.VulRisk = VulRisk;
     }
 
     /**
-     * Get Check task. 
-     * @return CheckCount Check task.
+     * Get Check task 
+     * @return CheckCount Check task
      */
     public Long getCheckCount() {
         return this.CheckCount;
     }
 
     /**
-     * Set Check task.
-     * @param CheckCount Check task.
+     * Set Check task
+     * @param CheckCount Check task
      */
     public void setCheckCount(Long CheckCount) {
         this.CheckCount = CheckCount;

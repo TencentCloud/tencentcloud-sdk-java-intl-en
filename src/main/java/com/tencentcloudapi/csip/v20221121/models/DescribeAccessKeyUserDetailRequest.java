@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeAccessKeyUserDetailRequest extends AbstractModel {
 
     /**
-    * Account uin itself.
+    * Account's own uin
     */
     @SerializedName("SubUin")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeAccessKeyUserDetailRequest extends AbstractModel {
     private String [] MemberId;
 
     /**
-     * Get Account uin itself. 
-     * @return SubUin Account uin itself.
+     * Get Account's own uin 
+     * @return SubUin Account's own uin
      */
     public String getSubUin() {
         return this.SubUin;
     }
 
     /**
-     * Set Account uin itself.
-     * @param SubUin Account uin itself.
+     * Set Account's own uin
+     * @param SubUin Account's own uin
      */
     public void setSubUin(String SubUin) {
         this.SubUin = SubUin;

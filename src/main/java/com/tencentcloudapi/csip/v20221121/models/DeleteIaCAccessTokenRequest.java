@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DeleteIaCAccessTokenRequest extends AbstractModel {
 
     /**
-    * <p>Delete ID list</p>
+    * <p>List of deleted IDs</p>
     */
     @SerializedName("Id")
     @Expose
     private Long [] Id;
 
     /**
-     * Get <p>Delete ID list</p> 
-     * @return Id <p>Delete ID list</p>
+     * Get <p>List of deleted IDs</p> 
+     * @return Id <p>List of deleted IDs</p>
      */
     public Long [] getId() {
         return this.Id;
     }
 
     /**
-     * Set <p>Delete ID list</p>
-     * @param Id <p>Delete ID list</p>
+     * Set <p>List of deleted IDs</p>
+     * @param Id <p>List of deleted IDs</p>
      */
     public void setId(Long [] Id) {
         this.Id = Id;

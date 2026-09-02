@@ -31,7 +31,7 @@ public class VULRiskInfo extends AbstractModel {
     private String Fix;
 
     /**
-    * Technology reference/reference link.
+    * Technical reference/Reference link
     */
     @SerializedName("References")
     @Expose
@@ -45,7 +45,7 @@ public class VULRiskInfo extends AbstractModel {
     private String Describe;
 
     /**
-    * Affected component.
+    * Affected component
     */
     @SerializedName("ImpactComponent")
     @Expose
@@ -68,16 +68,16 @@ public class VULRiskInfo extends AbstractModel {
     }
 
     /**
-     * Get Technology reference/reference link. 
-     * @return References Technology reference/reference link.
+     * Get Technical reference/Reference link 
+     * @return References Technical reference/Reference link
      */
     public String getReferences() {
         return this.References;
     }
 
     /**
-     * Set Technology reference/reference link.
-     * @param References Technology reference/reference link.
+     * Set Technical reference/Reference link
+     * @param References Technical reference/Reference link
      */
     public void setReferences(String References) {
         this.References = References;
@@ -100,16 +100,16 @@ public class VULRiskInfo extends AbstractModel {
     }
 
     /**
-     * Get Affected component. 
-     * @return ImpactComponent Affected component.
+     * Get Affected component 
+     * @return ImpactComponent Affected component
      */
     public VulImpactComponentInfo [] getImpactComponent() {
         return this.ImpactComponent;
     }
 
     /**
-     * Set Affected component.
-     * @param ImpactComponent Affected component.
+     * Set Affected component
+     * @param ImpactComponent Affected component
      */
     public void setImpactComponent(VulImpactComponentInfo [] ImpactComponent) {
         this.ImpactComponent = ImpactComponent;

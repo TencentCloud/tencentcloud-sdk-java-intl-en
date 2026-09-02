@@ -80,7 +80,7 @@ public class DescribeClusterAssetsResponse extends AbstractModel {
     private FilterDataObject [] AppIdList;
 
     /**
-    * Cluster protection status enumeration.
+    * Cluster Protection Status Enumeration
     */
     @SerializedName("ProtectStatusList")
     @Expose
@@ -222,16 +222,16 @@ public class DescribeClusterAssetsResponse extends AbstractModel {
     }
 
     /**
-     * Get Cluster protection status enumeration. 
-     * @return ProtectStatusList Cluster protection status enumeration.
+     * Get Cluster Protection Status Enumeration 
+     * @return ProtectStatusList Cluster Protection Status Enumeration
      */
     public FilterDataObject [] getProtectStatusList() {
         return this.ProtectStatusList;
     }
 
     /**
-     * Set Cluster protection status enumeration.
-     * @param ProtectStatusList Cluster protection status enumeration.
+     * Set Cluster Protection Status Enumeration
+     * @param ProtectStatusList Cluster Protection Status Enumeration
      */
     public void setProtectStatusList(FilterDataObject [] ProtectStatusList) {
         this.ProtectStatusList = ProtectStatusList;

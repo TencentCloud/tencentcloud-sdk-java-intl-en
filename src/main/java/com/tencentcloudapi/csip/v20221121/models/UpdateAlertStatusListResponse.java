@@ -31,7 +31,7 @@ public class UpdateAlertStatusListResponse extends AbstractModel {
     private String Msg;
 
     /**
-    * Result Code
+    * Result code
     */
     @SerializedName("Code")
     @Expose
@@ -61,16 +61,16 @@ public class UpdateAlertStatusListResponse extends AbstractModel {
     }
 
     /**
-     * Get Result Code 
-     * @return Code Result Code
+     * Get Result code 
+     * @return Code Result code
      */
     public String getCode() {
         return this.Code;
     }
 
     /**
-     * Set Result Code
-     * @param Code Result Code
+     * Set Result code
+     * @param Code Result code
      */
     public void setCode(String Code) {
         this.Code = Code;

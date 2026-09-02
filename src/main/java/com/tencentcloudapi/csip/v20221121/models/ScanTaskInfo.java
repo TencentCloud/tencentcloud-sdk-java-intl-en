@@ -52,21 +52,21 @@ public class ScanTaskInfo extends AbstractModel {
     private Long Progress;
 
     /**
-    * Task Completion Time
+    * Task completion time
     */
     @SerializedName("TaskTime")
     @Expose
     private String TaskTime;
 
     /**
-    * report ID
+    * Report ID
     */
     @SerializedName("ReportId")
     @Expose
     private String ReportId;
 
     /**
-    * report name
+    * Report name
     */
     @SerializedName("ReportName")
     @Expose
@@ -172,48 +172,48 @@ public class ScanTaskInfo extends AbstractModel {
     }
 
     /**
-     * Get Task Completion Time 
-     * @return TaskTime Task Completion Time
+     * Get Task completion time 
+     * @return TaskTime Task completion time
      */
     public String getTaskTime() {
         return this.TaskTime;
     }
 
     /**
-     * Set Task Completion Time
-     * @param TaskTime Task Completion Time
+     * Set Task completion time
+     * @param TaskTime Task completion time
      */
     public void setTaskTime(String TaskTime) {
         this.TaskTime = TaskTime;
     }
 
     /**
-     * Get report ID 
-     * @return ReportId report ID
+     * Get Report ID 
+     * @return ReportId Report ID
      */
     public String getReportId() {
         return this.ReportId;
     }
 
     /**
-     * Set report ID
-     * @param ReportId report ID
+     * Set Report ID
+     * @param ReportId Report ID
      */
     public void setReportId(String ReportId) {
         this.ReportId = ReportId;
     }
 
     /**
-     * Get report name 
-     * @return ReportName report name
+     * Get Report name 
+     * @return ReportName Report name
      */
     public String getReportName() {
         return this.ReportName;
     }
 
     /**
-     * Set report name
-     * @param ReportName report name
+     * Set Report name
+     * @param ReportName Report name
      */
     public void setReportName(String ReportName) {
         this.ReportName = ReportName;

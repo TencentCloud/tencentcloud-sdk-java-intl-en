@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class AlertInfo extends AbstractModel {
 
     /**
-    * alarm ID
+    * Alarm ID
     */
     @SerializedName("ID")
     @Expose
     private String ID;
 
     /**
-    * alarm name
+    * Alarm name
     */
     @SerializedName("Name")
     @Expose
@@ -39,7 +39,7 @@ public class AlertInfo extends AbstractModel {
 
     /**
     * Alarm source
-CFW: Cloud Firewall
+CFW: Cloud firewall
 WAF: Web application firewall
 CWP: Host Security
 CSIP: Cloud Security Center
@@ -49,9 +49,9 @@ CSIP: Cloud Security Center
     private String Source;
 
     /**
-    * alarm level
-Prompt.
-2: Low risk
+    * Alarm level
+1: Prompt
+2: Low-risk
 3: Medium risk
 4: High risk
 5: Critical
@@ -61,28 +61,28 @@ Prompt.
     private Long Level;
 
     /**
-    * attacker
+    * Attacker
     */
     @SerializedName("Attacker")
     @Expose
     private RoleInfo Attacker;
 
     /**
-    * victim
+    * Victim.
     */
     @SerializedName("Victim")
     @Expose
     private RoleInfo Victim;
 
     /**
-    * Evidence data (such as attack content, base64 encoded)
+    * Evidence data (for example, attack content, base64 encoded)
     */
     @SerializedName("EvidenceData")
     @Expose
     private String EvidenceData;
 
     /**
-    * evidence location (for example protocol port)
+    * Evidence location (such as protocol port)
     */
     @SerializedName("EvidenceLocation")
     @Expose
@@ -96,7 +96,7 @@ Prompt.
     private String EvidencePath;
 
     /**
-    * Initial alarm time
+    * First alarm time
     */
     @SerializedName("CreateTime")
     @Expose
@@ -132,7 +132,7 @@ Prompt.
 
     /**
     * Processing status
-0: unprocessed, 1: ignored, 2: processed
+0: Unprocessed; 1: Ignored; 2: Processed.
     */
     @SerializedName("Status")
     @Expose
@@ -195,21 +195,21 @@ Prompt.
     private String NickName;
 
     /**
-    * account ID
+    * Account ID
     */
     @SerializedName("Uin")
     @Expose
     private String Uin;
 
     /**
-    * Behavior
+    * Action
     */
     @SerializedName("Action")
     @Expose
     private Long Action;
 
     /**
-    * risk detection
+    * Risk detection
     */
     @SerializedName("RiskInvestigation")
     @Expose
@@ -223,7 +223,7 @@ Prompt.
     private String RiskTreatment;
 
     /**
-    * log type
+    * Log type
     */
     @SerializedName("LogType")
     @Expose
@@ -237,32 +237,32 @@ Prompt.
     private String LogSearch;
 
     /**
-     * Get alarm ID 
-     * @return ID alarm ID
+     * Get Alarm ID 
+     * @return ID Alarm ID
      */
     public String getID() {
         return this.ID;
     }
 
     /**
-     * Set alarm ID
-     * @param ID alarm ID
+     * Set Alarm ID
+     * @param ID Alarm ID
      */
     public void setID(String ID) {
         this.ID = ID;
     }
 
     /**
-     * Get alarm name 
-     * @return Name alarm name
+     * Get Alarm name 
+     * @return Name Alarm name
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set alarm name
-     * @param Name alarm name
+     * Set Alarm name
+     * @param Name Alarm name
      */
     public void setName(String Name) {
         this.Name = Name;
@@ -270,12 +270,12 @@ Prompt.
 
     /**
      * Get Alarm source
-CFW: Cloud Firewall
+CFW: Cloud firewall
 WAF: Web application firewall
 CWP: Host Security
 CSIP: Cloud Security Center 
      * @return Source Alarm source
-CFW: Cloud Firewall
+CFW: Cloud firewall
 WAF: Web application firewall
 CWP: Host Security
 CSIP: Cloud Security Center
@@ -286,12 +286,12 @@ CSIP: Cloud Security Center
 
     /**
      * Set Alarm source
-CFW: Cloud Firewall
+CFW: Cloud firewall
 WAF: Web application firewall
 CWP: Host Security
 CSIP: Cloud Security Center
      * @param Source Alarm source
-CFW: Cloud Firewall
+CFW: Cloud firewall
 WAF: Web application firewall
 CWP: Host Security
 CSIP: Cloud Security Center
@@ -301,15 +301,15 @@ CSIP: Cloud Security Center
     }
 
     /**
-     * Get alarm level
-Prompt.
-2: Low risk
+     * Get Alarm level
+1: Prompt
+2: Low-risk
 3: Medium risk
 4: High risk
 5: Critical 
-     * @return Level alarm level
-Prompt.
-2: Low risk
+     * @return Level Alarm level
+1: Prompt
+2: Low-risk
 3: Medium risk
 4: High risk
 5: Critical
@@ -319,15 +319,15 @@ Prompt.
     }
 
     /**
-     * Set alarm level
-Prompt.
-2: Low risk
+     * Set Alarm level
+1: Prompt
+2: Low-risk
 3: Medium risk
 4: High risk
 5: Critical
-     * @param Level alarm level
-Prompt.
-2: Low risk
+     * @param Level Alarm level
+1: Prompt
+2: Low-risk
 3: Medium risk
 4: High risk
 5: Critical
@@ -337,64 +337,64 @@ Prompt.
     }
 
     /**
-     * Get attacker 
-     * @return Attacker attacker
+     * Get Attacker 
+     * @return Attacker Attacker
      */
     public RoleInfo getAttacker() {
         return this.Attacker;
     }
 
     /**
-     * Set attacker
-     * @param Attacker attacker
+     * Set Attacker
+     * @param Attacker Attacker
      */
     public void setAttacker(RoleInfo Attacker) {
         this.Attacker = Attacker;
     }
 
     /**
-     * Get victim 
-     * @return Victim victim
+     * Get Victim. 
+     * @return Victim Victim.
      */
     public RoleInfo getVictim() {
         return this.Victim;
     }
 
     /**
-     * Set victim
-     * @param Victim victim
+     * Set Victim.
+     * @param Victim Victim.
      */
     public void setVictim(RoleInfo Victim) {
         this.Victim = Victim;
     }
 
     /**
-     * Get Evidence data (such as attack content, base64 encoded) 
-     * @return EvidenceData Evidence data (such as attack content, base64 encoded)
+     * Get Evidence data (for example, attack content, base64 encoded) 
+     * @return EvidenceData Evidence data (for example, attack content, base64 encoded)
      */
     public String getEvidenceData() {
         return this.EvidenceData;
     }
 
     /**
-     * Set Evidence data (such as attack content, base64 encoded)
-     * @param EvidenceData Evidence data (such as attack content, base64 encoded)
+     * Set Evidence data (for example, attack content, base64 encoded)
+     * @param EvidenceData Evidence data (for example, attack content, base64 encoded)
      */
     public void setEvidenceData(String EvidenceData) {
         this.EvidenceData = EvidenceData;
     }
 
     /**
-     * Get evidence location (for example protocol port) 
-     * @return EvidenceLocation evidence location (for example protocol port)
+     * Get Evidence location (such as protocol port) 
+     * @return EvidenceLocation Evidence location (such as protocol port)
      */
     public String getEvidenceLocation() {
         return this.EvidenceLocation;
     }
 
     /**
-     * Set evidence location (for example protocol port)
-     * @param EvidenceLocation evidence location (for example protocol port)
+     * Set Evidence location (such as protocol port)
+     * @param EvidenceLocation Evidence location (such as protocol port)
      */
     public void setEvidenceLocation(String EvidenceLocation) {
         this.EvidenceLocation = EvidenceLocation;
@@ -417,16 +417,16 @@ Prompt.
     }
 
     /**
-     * Get Initial alarm time 
-     * @return CreateTime Initial alarm time
+     * Get First alarm time 
+     * @return CreateTime First alarm time
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set Initial alarm time
-     * @param CreateTime Initial alarm time
+     * Set First alarm time
+     * @param CreateTime First alarm time
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
@@ -498,9 +498,9 @@ Prompt.
 
     /**
      * Get Processing status
-0: unprocessed, 1: ignored, 2: processed 
+0: Unprocessed; 1: Ignored; 2: Processed. 
      * @return Status Processing status
-0: unprocessed, 1: ignored, 2: processed
+0: Unprocessed; 1: Ignored; 2: Processed.
      */
     public Long getStatus() {
         return this.Status;
@@ -508,9 +508,9 @@ Prompt.
 
     /**
      * Set Processing status
-0: unprocessed, 1: ignored, 2: processed
+0: Unprocessed; 1: Ignored; 2: Processed.
      * @param Status Processing status
-0: unprocessed, 1: ignored, 2: processed
+0: Unprocessed; 1: Ignored; 2: Processed.
      */
     public void setStatus(Long Status) {
         this.Status = Status;
@@ -645,48 +645,48 @@ Prompt.
     }
 
     /**
-     * Get account ID 
-     * @return Uin account ID
+     * Get Account ID 
+     * @return Uin Account ID
      */
     public String getUin() {
         return this.Uin;
     }
 
     /**
-     * Set account ID
-     * @param Uin account ID
+     * Set Account ID
+     * @param Uin Account ID
      */
     public void setUin(String Uin) {
         this.Uin = Uin;
     }
 
     /**
-     * Get Behavior 
-     * @return Action Behavior
+     * Get Action 
+     * @return Action Action
      */
     public Long getAction() {
         return this.Action;
     }
 
     /**
-     * Set Behavior
-     * @param Action Behavior
+     * Set Action
+     * @param Action Action
      */
     public void setAction(Long Action) {
         this.Action = Action;
     }
 
     /**
-     * Get risk detection 
-     * @return RiskInvestigation risk detection
+     * Get Risk detection 
+     * @return RiskInvestigation Risk detection
      */
     public String getRiskInvestigation() {
         return this.RiskInvestigation;
     }
 
     /**
-     * Set risk detection
-     * @param RiskInvestigation risk detection
+     * Set Risk detection
+     * @param RiskInvestigation Risk detection
      */
     public void setRiskInvestigation(String RiskInvestigation) {
         this.RiskInvestigation = RiskInvestigation;
@@ -709,16 +709,16 @@ Prompt.
     }
 
     /**
-     * Get log type 
-     * @return LogType log type
+     * Get Log type 
+     * @return LogType Log type
      */
     public String getLogType() {
         return this.LogType;
     }
 
     /**
-     * Set log type
-     * @param LogType log type
+     * Set Log type
+     * @param LogType Log type
      */
     public void setLogType(String LogType) {
         this.LogType = LogType;

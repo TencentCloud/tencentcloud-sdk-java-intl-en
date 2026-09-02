@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeExposePathResponse extends AbstractModel {
 
     /**
-    * Cloud boundary analysis path within node.
+    * Content within the cloud boundary analysis path node
     */
     @SerializedName("Content")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeExposePathResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Cloud boundary analysis path within node. 
-     * @return Content Cloud boundary analysis path within node.
+     * Get Content within the cloud boundary analysis path node 
+     * @return Content Content within the cloud boundary analysis path node
      */
     public String getContent() {
         return this.Content;
     }
 
     /**
-     * Set Cloud boundary analysis path within node.
-     * @param Content Cloud boundary analysis path within node.
+     * Set Content within the cloud boundary analysis path node
+     * @param Content Content within the cloud boundary analysis path node
      */
     public void setContent(String Content) {
         this.Content = Content;

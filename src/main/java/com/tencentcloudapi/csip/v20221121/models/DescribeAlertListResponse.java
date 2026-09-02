@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeAlertListResponse extends AbstractModel {
 
     /**
-    * All alarms list
+    * All Alarm List
     */
     @SerializedName("AlertList")
     @Expose
     private AlertInfo [] AlertList;
 
     /**
-    * Number of Major Categories of Alarm
+    * Number of major alarm categories
     */
     @SerializedName("AlertTypeCount")
     @Expose
@@ -52,7 +52,7 @@ public class DescribeAlertListResponse extends AbstractModel {
     private Long ReturnCode;
 
     /**
-    * Return status
+    * Returned status information.
     */
     @SerializedName("ReturnMsg")
     @Expose
@@ -66,32 +66,32 @@ public class DescribeAlertListResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get All alarms list 
-     * @return AlertList All alarms list
+     * Get All Alarm List 
+     * @return AlertList All Alarm List
      */
     public AlertInfo [] getAlertList() {
         return this.AlertList;
     }
 
     /**
-     * Set All alarms list
-     * @param AlertList All alarms list
+     * Set All Alarm List
+     * @param AlertList All Alarm List
      */
     public void setAlertList(AlertInfo [] AlertList) {
         this.AlertList = AlertList;
     }
 
     /**
-     * Get Number of Major Categories of Alarm 
-     * @return AlertTypeCount Number of Major Categories of Alarm
+     * Get Number of major alarm categories 
+     * @return AlertTypeCount Number of major alarm categories
      */
     public TagCount [] getAlertTypeCount() {
         return this.AlertTypeCount;
     }
 
     /**
-     * Set Number of Major Categories of Alarm
-     * @param AlertTypeCount Number of Major Categories of Alarm
+     * Set Number of major alarm categories
+     * @param AlertTypeCount Number of major alarm categories
      */
     public void setAlertTypeCount(TagCount [] AlertTypeCount) {
         this.AlertTypeCount = AlertTypeCount;
@@ -130,16 +130,16 @@ public class DescribeAlertListResponse extends AbstractModel {
     }
 
     /**
-     * Get Return status 
-     * @return ReturnMsg Return status
+     * Get Returned status information. 
+     * @return ReturnMsg Returned status information.
      */
     public String getReturnMsg() {
         return this.ReturnMsg;
     }
 
     /**
-     * Set Return status
-     * @param ReturnMsg Return status
+     * Set Returned status information.
+     * @param ReturnMsg Returned status information.
      */
     public void setReturnMsg(String ReturnMsg) {
         this.ReturnMsg = ReturnMsg;

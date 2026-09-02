@@ -31,28 +31,28 @@ public class DescribeCallRecordRequest extends AbstractModel {
     private String [] MemberId;
 
     /**
-    * Access key ID.
+    * Access key ID
     */
     @SerializedName("AccessKeyID")
     @Expose
     private Long AccessKeyID;
 
     /**
-    * ID of the source IP for the call.
+    * ID of the call source IP
     */
     @SerializedName("SourceIPID")
     @Expose
     private Long SourceIPID;
 
     /**
-    * Access account uin.
+    * Access account uin
     */
     @SerializedName("AccUin")
     @Expose
     private String AccUin;
 
     /**
-    * Access key. Note: Temporary key is unsupported.
+    * Access key. Note: unsupported for temporary keys.
     */
     @SerializedName("AccessKey")
     @Expose
@@ -82,64 +82,64 @@ public class DescribeCallRecordRequest extends AbstractModel {
     }
 
     /**
-     * Get Access key ID. 
-     * @return AccessKeyID Access key ID.
+     * Get Access key ID 
+     * @return AccessKeyID Access key ID
      */
     public Long getAccessKeyID() {
         return this.AccessKeyID;
     }
 
     /**
-     * Set Access key ID.
-     * @param AccessKeyID Access key ID.
+     * Set Access key ID
+     * @param AccessKeyID Access key ID
      */
     public void setAccessKeyID(Long AccessKeyID) {
         this.AccessKeyID = AccessKeyID;
     }
 
     /**
-     * Get ID of the source IP for the call. 
-     * @return SourceIPID ID of the source IP for the call.
+     * Get ID of the call source IP 
+     * @return SourceIPID ID of the call source IP
      */
     public Long getSourceIPID() {
         return this.SourceIPID;
     }
 
     /**
-     * Set ID of the source IP for the call.
-     * @param SourceIPID ID of the source IP for the call.
+     * Set ID of the call source IP
+     * @param SourceIPID ID of the call source IP
      */
     public void setSourceIPID(Long SourceIPID) {
         this.SourceIPID = SourceIPID;
     }
 
     /**
-     * Get Access account uin. 
-     * @return AccUin Access account uin.
+     * Get Access account uin 
+     * @return AccUin Access account uin
      */
     public String getAccUin() {
         return this.AccUin;
     }
 
     /**
-     * Set Access account uin.
-     * @param AccUin Access account uin.
+     * Set Access account uin
+     * @param AccUin Access account uin
      */
     public void setAccUin(String AccUin) {
         this.AccUin = AccUin;
     }
 
     /**
-     * Get Access key. Note: Temporary key is unsupported. 
-     * @return AccessKey Access key. Note: Temporary key is unsupported.
+     * Get Access key. Note: unsupported for temporary keys. 
+     * @return AccessKey Access key. Note: unsupported for temporary keys.
      */
     public String getAccessKey() {
         return this.AccessKey;
     }
 
     /**
-     * Set Access key. Note: Temporary key is unsupported.
-     * @param AccessKey Access key. Note: Temporary key is unsupported.
+     * Set Access key. Note: unsupported for temporary keys.
+     * @param AccessKey Access key. Note: unsupported for temporary keys.
      */
     public void setAccessKey(String AccessKey) {
         this.AccessKey = AccessKey;

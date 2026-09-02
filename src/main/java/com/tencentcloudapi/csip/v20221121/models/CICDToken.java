@@ -52,14 +52,14 @@ public class CICDToken extends AbstractModel {
     private String Token;
 
     /**
-    * <p>Scanning result storage duration</p>
+    * <p>Result storage duration of scan</p>
     */
     @SerializedName("Period")
     @Expose
     private Long Period;
 
     /**
-    * <p>Scanned file</p>
+    * <p>Scanned file.</p>
     */
     @SerializedName("FileCnt")
     @Expose
@@ -144,32 +144,32 @@ public class CICDToken extends AbstractModel {
     }
 
     /**
-     * Get <p>Scanning result storage duration</p> 
-     * @return Period <p>Scanning result storage duration</p>
+     * Get <p>Result storage duration of scan</p> 
+     * @return Period <p>Result storage duration of scan</p>
      */
     public Long getPeriod() {
         return this.Period;
     }
 
     /**
-     * Set <p>Scanning result storage duration</p>
-     * @param Period <p>Scanning result storage duration</p>
+     * Set <p>Result storage duration of scan</p>
+     * @param Period <p>Result storage duration of scan</p>
      */
     public void setPeriod(Long Period) {
         this.Period = Period;
     }
 
     /**
-     * Get <p>Scanned file</p> 
-     * @return FileCnt <p>Scanned file</p>
+     * Get <p>Scanned file.</p> 
+     * @return FileCnt <p>Scanned file.</p>
      */
     public Long getFileCnt() {
         return this.FileCnt;
     }
 
     /**
-     * Set <p>Scanned file</p>
-     * @param FileCnt <p>Scanned file</p>
+     * Set <p>Scanned file.</p>
+     * @param FileCnt <p>Scanned file.</p>
      */
     public void setFileCnt(Long FileCnt) {
         this.FileCnt = FileCnt;

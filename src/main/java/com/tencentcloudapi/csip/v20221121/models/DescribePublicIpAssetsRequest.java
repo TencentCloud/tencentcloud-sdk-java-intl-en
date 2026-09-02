@@ -31,14 +31,14 @@ public class DescribePublicIpAssetsRequest extends AbstractModel {
     private String [] MemberId;
 
     /**
-    * Filter parameters
+    * Filter parameter
     */
     @SerializedName("Filter")
     @Expose
     private Filter Filter;
 
     /**
-    * CSC tags of the asset
+    * Security Center Custom Tag
     */
     @SerializedName("Tags")
     @Expose
@@ -61,32 +61,32 @@ public class DescribePublicIpAssetsRequest extends AbstractModel {
     }
 
     /**
-     * Get Filter parameters 
-     * @return Filter Filter parameters
+     * Get Filter parameter 
+     * @return Filter Filter parameter
      */
     public Filter getFilter() {
         return this.Filter;
     }
 
     /**
-     * Set Filter parameters
-     * @param Filter Filter parameters
+     * Set Filter parameter
+     * @param Filter Filter parameter
      */
     public void setFilter(Filter Filter) {
         this.Filter = Filter;
     }
 
     /**
-     * Get CSC tags of the asset 
-     * @return Tags CSC tags of the asset
+     * Get Security Center Custom Tag 
+     * @return Tags Security Center Custom Tag
      */
     public AssetTag [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set CSC tags of the asset
-     * @param Tags CSC tags of the asset
+     * Set Security Center Custom Tag
+     * @param Tags Security Center Custom Tag
      */
     public void setTags(AssetTag [] Tags) {
         this.Tags = Tags;

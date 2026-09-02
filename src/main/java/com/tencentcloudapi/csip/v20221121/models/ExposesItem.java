@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ExposesItem extends AbstractModel {
 
     /**
-    * <p>Cloud vendor</p>
+    * <p>Cloud service provider.</p>
     */
     @SerializedName("Provider")
     @Expose
@@ -38,14 +38,14 @@ public class ExposesItem extends AbstractModel {
     private String CloudAccountName;
 
     /**
-    * <p>Cloud Account</p>
+    * <p>Cloud account</p>
     */
     @SerializedName("CloudAccountId")
     @Expose
     private String CloudAccountId;
 
     /**
-    * <p>Domain name</p>
+    * <p>Domain Name.</p>
     */
     @SerializedName("Domain")
     @Expose
@@ -94,14 +94,14 @@ public class ExposesItem extends AbstractModel {
     private String AclList;
 
     /**
-    * <p>Asset ID</p>
+    * <p>Asset ID.</p>
     */
     @SerializedName("AssetId")
     @Expose
     private String AssetId;
 
     /**
-    * <p>Instance name</p>
+    * <p>Instance name.</p>
     */
     @SerializedName("InstanceName")
     @Expose
@@ -143,14 +143,14 @@ public class ExposesItem extends AbstractModel {
     private Long RiskWebAppCount;
 
     /**
-    * <p>Number of weak passwords.</p>
+    * <p>Number of weak passwords</p>
     */
     @SerializedName("WeakPasswordCount")
     @Expose
     private Long WeakPasswordCount;
 
     /**
-    * <p>Vulnerability count</p>
+    * <p>Number of vulnerabilities</p>
     */
     @SerializedName("VulCount")
     @Expose
@@ -255,51 +255,51 @@ public class ExposesItem extends AbstractModel {
     private String Tag;
 
     /**
-    * <p>Remark</p>
+    * <p>Remarks.</p>
     */
     @SerializedName("Comment")
     @Expose
     private String Comment;
 
     /**
-    * <p>Number of risks to be governed</p>
+    * <p>Number of risks pending governance</p>
     */
     @SerializedName("ToGovernedRiskCount")
     @Expose
     private Long ToGovernedRiskCount;
 
     /**
-    * <p>Risk content to be governed</p>
+    * <p>Risk content pending governance</p>
     */
     @SerializedName("ToGovernedRiskContent")
     @Expose
     private String ToGovernedRiskContent;
 
     /**
-    * <p>Type icon of asset</p>
+    * <p>Asset type icon</p>
     */
     @SerializedName("AssetTypeIconURL")
     @Expose
     private String AssetTypeIconURL;
 
     /**
-    * <p>Asset type 3D icon</p>
+    * <p>3D icon of asset type</p>
     */
     @SerializedName("AssetTypeIconSolidURL")
     @Expose
     private String AssetTypeIconSolidURL;
 
     /**
-     * Get <p>Cloud vendor</p> 
-     * @return Provider <p>Cloud vendor</p>
+     * Get <p>Cloud service provider.</p> 
+     * @return Provider <p>Cloud service provider.</p>
      */
     public String getProvider() {
         return this.Provider;
     }
 
     /**
-     * Set <p>Cloud vendor</p>
-     * @param Provider <p>Cloud vendor</p>
+     * Set <p>Cloud service provider.</p>
+     * @param Provider <p>Cloud service provider.</p>
      */
     public void setProvider(String Provider) {
         this.Provider = Provider;
@@ -322,32 +322,32 @@ public class ExposesItem extends AbstractModel {
     }
 
     /**
-     * Get <p>Cloud Account</p> 
-     * @return CloudAccountId <p>Cloud Account</p>
+     * Get <p>Cloud account</p> 
+     * @return CloudAccountId <p>Cloud account</p>
      */
     public String getCloudAccountId() {
         return this.CloudAccountId;
     }
 
     /**
-     * Set <p>Cloud Account</p>
-     * @param CloudAccountId <p>Cloud Account</p>
+     * Set <p>Cloud account</p>
+     * @param CloudAccountId <p>Cloud account</p>
      */
     public void setCloudAccountId(String CloudAccountId) {
         this.CloudAccountId = CloudAccountId;
     }
 
     /**
-     * Get <p>Domain name</p> 
-     * @return Domain <p>Domain name</p>
+     * Get <p>Domain Name.</p> 
+     * @return Domain <p>Domain Name.</p>
      */
     public String getDomain() {
         return this.Domain;
     }
 
     /**
-     * Set <p>Domain name</p>
-     * @param Domain <p>Domain name</p>
+     * Set <p>Domain Name.</p>
+     * @param Domain <p>Domain Name.</p>
      */
     public void setDomain(String Domain) {
         this.Domain = Domain;
@@ -450,32 +450,32 @@ public class ExposesItem extends AbstractModel {
     }
 
     /**
-     * Get <p>Asset ID</p> 
-     * @return AssetId <p>Asset ID</p>
+     * Get <p>Asset ID.</p> 
+     * @return AssetId <p>Asset ID.</p>
      */
     public String getAssetId() {
         return this.AssetId;
     }
 
     /**
-     * Set <p>Asset ID</p>
-     * @param AssetId <p>Asset ID</p>
+     * Set <p>Asset ID.</p>
+     * @param AssetId <p>Asset ID.</p>
      */
     public void setAssetId(String AssetId) {
         this.AssetId = AssetId;
     }
 
     /**
-     * Get <p>Instance name</p> 
-     * @return InstanceName <p>Instance name</p>
+     * Get <p>Instance name.</p> 
+     * @return InstanceName <p>Instance name.</p>
      */
     public String getInstanceName() {
         return this.InstanceName;
     }
 
     /**
-     * Set <p>Instance name</p>
-     * @param InstanceName <p>Instance name</p>
+     * Set <p>Instance name.</p>
+     * @param InstanceName <p>Instance name.</p>
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;
@@ -562,32 +562,32 @@ public class ExposesItem extends AbstractModel {
     }
 
     /**
-     * Get <p>Number of weak passwords.</p> 
-     * @return WeakPasswordCount <p>Number of weak passwords.</p>
+     * Get <p>Number of weak passwords</p> 
+     * @return WeakPasswordCount <p>Number of weak passwords</p>
      */
     public Long getWeakPasswordCount() {
         return this.WeakPasswordCount;
     }
 
     /**
-     * Set <p>Number of weak passwords.</p>
-     * @param WeakPasswordCount <p>Number of weak passwords.</p>
+     * Set <p>Number of weak passwords</p>
+     * @param WeakPasswordCount <p>Number of weak passwords</p>
      */
     public void setWeakPasswordCount(Long WeakPasswordCount) {
         this.WeakPasswordCount = WeakPasswordCount;
     }
 
     /**
-     * Get <p>Vulnerability count</p> 
-     * @return VulCount <p>Vulnerability count</p>
+     * Get <p>Number of vulnerabilities</p> 
+     * @return VulCount <p>Number of vulnerabilities</p>
      */
     public Long getVulCount() {
         return this.VulCount;
     }
 
     /**
-     * Set <p>Vulnerability count</p>
-     * @param VulCount <p>Vulnerability count</p>
+     * Set <p>Number of vulnerabilities</p>
+     * @param VulCount <p>Number of vulnerabilities</p>
      */
     public void setVulCount(Long VulCount) {
         this.VulCount = VulCount;
@@ -818,80 +818,80 @@ public class ExposesItem extends AbstractModel {
     }
 
     /**
-     * Get <p>Remark</p> 
-     * @return Comment <p>Remark</p>
+     * Get <p>Remarks.</p> 
+     * @return Comment <p>Remarks.</p>
      */
     public String getComment() {
         return this.Comment;
     }
 
     /**
-     * Set <p>Remark</p>
-     * @param Comment <p>Remark</p>
+     * Set <p>Remarks.</p>
+     * @param Comment <p>Remarks.</p>
      */
     public void setComment(String Comment) {
         this.Comment = Comment;
     }
 
     /**
-     * Get <p>Number of risks to be governed</p> 
-     * @return ToGovernedRiskCount <p>Number of risks to be governed</p>
+     * Get <p>Number of risks pending governance</p> 
+     * @return ToGovernedRiskCount <p>Number of risks pending governance</p>
      */
     public Long getToGovernedRiskCount() {
         return this.ToGovernedRiskCount;
     }
 
     /**
-     * Set <p>Number of risks to be governed</p>
-     * @param ToGovernedRiskCount <p>Number of risks to be governed</p>
+     * Set <p>Number of risks pending governance</p>
+     * @param ToGovernedRiskCount <p>Number of risks pending governance</p>
      */
     public void setToGovernedRiskCount(Long ToGovernedRiskCount) {
         this.ToGovernedRiskCount = ToGovernedRiskCount;
     }
 
     /**
-     * Get <p>Risk content to be governed</p> 
-     * @return ToGovernedRiskContent <p>Risk content to be governed</p>
+     * Get <p>Risk content pending governance</p> 
+     * @return ToGovernedRiskContent <p>Risk content pending governance</p>
      */
     public String getToGovernedRiskContent() {
         return this.ToGovernedRiskContent;
     }
 
     /**
-     * Set <p>Risk content to be governed</p>
-     * @param ToGovernedRiskContent <p>Risk content to be governed</p>
+     * Set <p>Risk content pending governance</p>
+     * @param ToGovernedRiskContent <p>Risk content pending governance</p>
      */
     public void setToGovernedRiskContent(String ToGovernedRiskContent) {
         this.ToGovernedRiskContent = ToGovernedRiskContent;
     }
 
     /**
-     * Get <p>Type icon of asset</p> 
-     * @return AssetTypeIconURL <p>Type icon of asset</p>
+     * Get <p>Asset type icon</p> 
+     * @return AssetTypeIconURL <p>Asset type icon</p>
      */
     public String getAssetTypeIconURL() {
         return this.AssetTypeIconURL;
     }
 
     /**
-     * Set <p>Type icon of asset</p>
-     * @param AssetTypeIconURL <p>Type icon of asset</p>
+     * Set <p>Asset type icon</p>
+     * @param AssetTypeIconURL <p>Asset type icon</p>
      */
     public void setAssetTypeIconURL(String AssetTypeIconURL) {
         this.AssetTypeIconURL = AssetTypeIconURL;
     }
 
     /**
-     * Get <p>Asset type 3D icon</p> 
-     * @return AssetTypeIconSolidURL <p>Asset type 3D icon</p>
+     * Get <p>3D icon of asset type</p> 
+     * @return AssetTypeIconSolidURL <p>3D icon of asset type</p>
      */
     public String getAssetTypeIconSolidURL() {
         return this.AssetTypeIconSolidURL;
     }
 
     /**
-     * Set <p>Asset type 3D icon</p>
-     * @param AssetTypeIconSolidURL <p>Asset type 3D icon</p>
+     * Set <p>3D icon of asset type</p>
+     * @param AssetTypeIconSolidURL <p>3D icon of asset type</p>
      */
     public void setAssetTypeIconSolidURL(String AssetTypeIconSolidURL) {
         this.AssetTypeIconSolidURL = AssetTypeIconSolidURL;

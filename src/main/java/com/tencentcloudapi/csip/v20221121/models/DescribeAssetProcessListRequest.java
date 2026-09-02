@@ -66,7 +66,7 @@ public class DescribeAssetProcessListRequest extends AbstractModel {
     private String By;
 
     /**
-    * Cloud service provider.
+    * Cloud service provider
     */
     @SerializedName("Provider")
     @Expose
@@ -169,16 +169,16 @@ public class DescribeAssetProcessListRequest extends AbstractModel {
     }
 
     /**
-     * Get Cloud service provider. 
-     * @return Provider Cloud service provider.
+     * Get Cloud service provider 
+     * @return Provider Cloud service provider
      */
     public String getProvider() {
         return this.Provider;
     }
 
     /**
-     * Set Cloud service provider.
-     * @param Provider Cloud service provider.
+     * Set Cloud service provider
+     * @param Provider Cloud service provider
      */
     public void setProvider(String Provider) {
         this.Provider = Provider;

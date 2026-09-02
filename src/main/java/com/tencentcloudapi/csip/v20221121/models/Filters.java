@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class Filters extends AbstractModel {
 
     /**
-    * Filter criterion name. Parameter: Status (Execution result, Values: SUCCESS/FAILED/USER_CANCELED/CHECKING).
+    * Filter criterion name. Parameter value: Status (Execution result. Values: SUCCESS/FAILED/USER_CANCELED/CHECKING)
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * Filter condition value list
+    * List of filter condition values
     */
     @SerializedName("Values")
     @Expose
     private String [] Values;
 
     /**
-    * Exact match: 1 - exact match; default - fuzzy matching
+    * Exact match: 1 for exact match; fuzzy match by default
     */
     @SerializedName("ExactMatch")
     @Expose
     private String ExactMatch;
 
     /**
-     * Get Filter criterion name. Parameter: Status (Execution result, Values: SUCCESS/FAILED/USER_CANCELED/CHECKING). 
-     * @return Name Filter criterion name. Parameter: Status (Execution result, Values: SUCCESS/FAILED/USER_CANCELED/CHECKING).
+     * Get Filter criterion name. Parameter value: Status (Execution result. Values: SUCCESS/FAILED/USER_CANCELED/CHECKING) 
+     * @return Name Filter criterion name. Parameter value: Status (Execution result. Values: SUCCESS/FAILED/USER_CANCELED/CHECKING)
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Filter criterion name. Parameter: Status (Execution result, Values: SUCCESS/FAILED/USER_CANCELED/CHECKING).
-     * @param Name Filter criterion name. Parameter: Status (Execution result, Values: SUCCESS/FAILED/USER_CANCELED/CHECKING).
+     * Set Filter criterion name. Parameter value: Status (Execution result. Values: SUCCESS/FAILED/USER_CANCELED/CHECKING)
+     * @param Name Filter criterion name. Parameter value: Status (Execution result. Values: SUCCESS/FAILED/USER_CANCELED/CHECKING)
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get Filter condition value list 
-     * @return Values Filter condition value list
+     * Get List of filter condition values 
+     * @return Values List of filter condition values
      */
     public String [] getValues() {
         return this.Values;
     }
 
     /**
-     * Set Filter condition value list
-     * @param Values Filter condition value list
+     * Set List of filter condition values
+     * @param Values List of filter condition values
      */
     public void setValues(String [] Values) {
         this.Values = Values;
     }
 
     /**
-     * Get Exact match: 1 - exact match; default - fuzzy matching 
-     * @return ExactMatch Exact match: 1 - exact match; default - fuzzy matching
+     * Get Exact match: 1 for exact match; fuzzy match by default 
+     * @return ExactMatch Exact match: 1 for exact match; fuzzy match by default
      */
     public String getExactMatch() {
         return this.ExactMatch;
     }
 
     /**
-     * Set Exact match: 1 - exact match; default - fuzzy matching
-     * @param ExactMatch Exact match: 1 - exact match; default - fuzzy matching
+     * Set Exact match: 1 for exact match; fuzzy match by default
+     * @param ExactMatch Exact match: 1 for exact match; fuzzy match by default
      */
     public void setExactMatch(String ExactMatch) {
         this.ExactMatch = ExactMatch;

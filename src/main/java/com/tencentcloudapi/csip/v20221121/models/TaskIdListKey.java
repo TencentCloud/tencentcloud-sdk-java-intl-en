@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class TaskIdListKey extends AbstractModel {
 
     /**
-    * Task ID
+    * Task ID.
     */
     @SerializedName("TaskId")
     @Expose
@@ -38,16 +38,16 @@ public class TaskIdListKey extends AbstractModel {
     private String TargetAppId;
 
     /**
-     * Get Task ID 
-     * @return TaskId Task ID
+     * Get Task ID. 
+     * @return TaskId Task ID.
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set Task ID
-     * @param TaskId Task ID
+     * Set Task ID.
+     * @param TaskId Task ID.
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;

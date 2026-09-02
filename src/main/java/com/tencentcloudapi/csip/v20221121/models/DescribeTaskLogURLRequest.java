@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeTaskLogURLRequest extends AbstractModel {
 
     /**
-    * Type of the task. `0`: Preview; `1`: Download
+    * 0: Preview; 1: Download
     */
     @SerializedName("Type")
     @Expose
@@ -38,30 +38,30 @@ public class DescribeTaskLogURLRequest extends AbstractModel {
     private String [] MemberId;
 
     /**
-    * List of task report IDs
+    * Task Report ID List
     */
     @SerializedName("ReportItemKeyList")
     @Expose
     private ReportItemKey [] ReportItemKeyList;
 
     /**
-    * List of task IDs in the report
+    * List of Task IDs in the Report
     */
     @SerializedName("ReportTaskIdList")
     @Expose
     private ReportTaskIdList [] ReportTaskIdList;
 
     /**
-     * Get Type of the task. `0`: Preview; `1`: Download 
-     * @return Type Type of the task. `0`: Preview; `1`: Download
+     * Get 0: Preview; 1: Download 
+     * @return Type 0: Preview; 1: Download
      */
     public Long getType() {
         return this.Type;
     }
 
     /**
-     * Set Type of the task. `0`: Preview; `1`: Download
-     * @param Type Type of the task. `0`: Preview; `1`: Download
+     * Set 0: Preview; 1: Download
+     * @param Type 0: Preview; 1: Download
      */
     public void setType(Long Type) {
         this.Type = Type;
@@ -84,32 +84,32 @@ public class DescribeTaskLogURLRequest extends AbstractModel {
     }
 
     /**
-     * Get List of task report IDs 
-     * @return ReportItemKeyList List of task report IDs
+     * Get Task Report ID List 
+     * @return ReportItemKeyList Task Report ID List
      */
     public ReportItemKey [] getReportItemKeyList() {
         return this.ReportItemKeyList;
     }
 
     /**
-     * Set List of task report IDs
-     * @param ReportItemKeyList List of task report IDs
+     * Set Task Report ID List
+     * @param ReportItemKeyList Task Report ID List
      */
     public void setReportItemKeyList(ReportItemKey [] ReportItemKeyList) {
         this.ReportItemKeyList = ReportItemKeyList;
     }
 
     /**
-     * Get List of task IDs in the report 
-     * @return ReportTaskIdList List of task IDs in the report
+     * Get List of Task IDs in the Report 
+     * @return ReportTaskIdList List of Task IDs in the Report
      */
     public ReportTaskIdList [] getReportTaskIdList() {
         return this.ReportTaskIdList;
     }
 
     /**
-     * Set List of task IDs in the report
-     * @param ReportTaskIdList List of task IDs in the report
+     * Set List of Task IDs in the Report
+     * @param ReportTaskIdList List of Task IDs in the Report
      */
     public void setReportTaskIdList(ReportTaskIdList [] ReportTaskIdList) {
         this.ReportTaskIdList = ReportTaskIdList;

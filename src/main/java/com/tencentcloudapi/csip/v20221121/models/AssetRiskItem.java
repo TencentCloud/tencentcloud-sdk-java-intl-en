@@ -31,7 +31,7 @@ public class AssetRiskItem extends AbstractModel {
     private Long AppId;
 
     /**
-    * <p>Cloud vendor</p>
+    * <p>Cloud service provider.</p>
     */
     @SerializedName("Provider")
     @Expose
@@ -59,7 +59,7 @@ public class AssetRiskItem extends AbstractModel {
     private String CloudAccountId;
 
     /**
-    * <p>Instance name</p>
+    * <p>Instance name.</p>
     */
     @SerializedName("InstanceName")
     @Expose
@@ -108,7 +108,7 @@ public class AssetRiskItem extends AbstractModel {
     private String CheckType;
 
     /**
-    * <p>Risk level</p>
+    * <p>Risk level.</p>
     */
     @SerializedName("Severity")
     @Expose
@@ -122,7 +122,7 @@ public class AssetRiskItem extends AbstractModel {
     private String RiskRuleId;
 
     /**
-    * <p>Disposal categorization</p>
+    * <p>Handling category</p>
     */
     @SerializedName("Classify")
     @Expose
@@ -173,16 +173,16 @@ public class AssetRiskItem extends AbstractModel {
     }
 
     /**
-     * Get <p>Cloud vendor</p> 
-     * @return Provider <p>Cloud vendor</p>
+     * Get <p>Cloud service provider.</p> 
+     * @return Provider <p>Cloud service provider.</p>
      */
     public String getProvider() {
         return this.Provider;
     }
 
     /**
-     * Set <p>Cloud vendor</p>
-     * @param Provider <p>Cloud vendor</p>
+     * Set <p>Cloud service provider.</p>
+     * @param Provider <p>Cloud service provider.</p>
      */
     public void setProvider(String Provider) {
         this.Provider = Provider;
@@ -237,16 +237,16 @@ public class AssetRiskItem extends AbstractModel {
     }
 
     /**
-     * Get <p>Instance name</p> 
-     * @return InstanceName <p>Instance name</p>
+     * Get <p>Instance name.</p> 
+     * @return InstanceName <p>Instance name.</p>
      */
     public String getInstanceName() {
         return this.InstanceName;
     }
 
     /**
-     * Set <p>Instance name</p>
-     * @param InstanceName <p>Instance name</p>
+     * Set <p>Instance name.</p>
+     * @param InstanceName <p>Instance name.</p>
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;
@@ -349,16 +349,16 @@ public class AssetRiskItem extends AbstractModel {
     }
 
     /**
-     * Get <p>Risk level</p> 
-     * @return Severity <p>Risk level</p>
+     * Get <p>Risk level.</p> 
+     * @return Severity <p>Risk level.</p>
      */
     public String getSeverity() {
         return this.Severity;
     }
 
     /**
-     * Set <p>Risk level</p>
-     * @param Severity <p>Risk level</p>
+     * Set <p>Risk level.</p>
+     * @param Severity <p>Risk level.</p>
      */
     public void setSeverity(String Severity) {
         this.Severity = Severity;
@@ -381,16 +381,16 @@ public class AssetRiskItem extends AbstractModel {
     }
 
     /**
-     * Get <p>Disposal categorization</p> 
-     * @return Classify <p>Disposal categorization</p>
+     * Get <p>Handling category</p> 
+     * @return Classify <p>Handling category</p>
      */
     public String getClassify() {
         return this.Classify;
     }
 
     /**
-     * Set <p>Disposal categorization</p>
-     * @param Classify <p>Disposal categorization</p>
+     * Set <p>Handling category</p>
+     * @param Classify <p>Handling category</p>
      */
     public void setClassify(String Classify) {
         this.Classify = Classify;

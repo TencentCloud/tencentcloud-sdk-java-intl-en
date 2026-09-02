@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateSkillScanResponse extends AbstractModel {
 
     /**
-    * SHA256 Hash of the file, used for polling the DescribeSkillScanResult API
+    * SHA256 Hash of the file, used for polling the DescribeSkillScanResult API.
 Parameter format: sha256:<64-bit hex>
     */
     @SerializedName("ContentHash")
@@ -32,14 +32,14 @@ Parameter format: sha256:<64-bit hex>
     private String ContentHash;
 
     /**
-    * Engine version number actually bound to the current request. The caller should save and explicitly input it in the follow-up DescribeSkillScanResult.
+    * Engine version number actually bound to the current request. The caller should save it and explicitly input it in subsequent DescribeSkillScanResult calls.
     */
     @SerializedName("EngineVersion")
     @Expose
     private Long EngineVersion;
 
     /**
-    * Task status, fixed as SCANNING, indicates the task is received.
+    * Task status, fixed as SCANNING, indicating the task has been received.
     */
     @SerializedName("Status")
     @Expose
@@ -60,9 +60,9 @@ Parameter format: sha256:<64-bit hex>
     private String RequestId;
 
     /**
-     * Get SHA256 Hash of the file, used for polling the DescribeSkillScanResult API
+     * Get SHA256 Hash of the file, used for polling the DescribeSkillScanResult API.
 Parameter format: sha256:<64-bit hex> 
-     * @return ContentHash SHA256 Hash of the file, used for polling the DescribeSkillScanResult API
+     * @return ContentHash SHA256 Hash of the file, used for polling the DescribeSkillScanResult API.
 Parameter format: sha256:<64-bit hex>
      */
     public String getContentHash() {
@@ -70,9 +70,9 @@ Parameter format: sha256:<64-bit hex>
     }
 
     /**
-     * Set SHA256 Hash of the file, used for polling the DescribeSkillScanResult API
+     * Set SHA256 Hash of the file, used for polling the DescribeSkillScanResult API.
 Parameter format: sha256:<64-bit hex>
-     * @param ContentHash SHA256 Hash of the file, used for polling the DescribeSkillScanResult API
+     * @param ContentHash SHA256 Hash of the file, used for polling the DescribeSkillScanResult API.
 Parameter format: sha256:<64-bit hex>
      */
     public void setContentHash(String ContentHash) {
@@ -80,32 +80,32 @@ Parameter format: sha256:<64-bit hex>
     }
 
     /**
-     * Get Engine version number actually bound to the current request. The caller should save and explicitly input it in the follow-up DescribeSkillScanResult. 
-     * @return EngineVersion Engine version number actually bound to the current request. The caller should save and explicitly input it in the follow-up DescribeSkillScanResult.
+     * Get Engine version number actually bound to the current request. The caller should save it and explicitly input it in subsequent DescribeSkillScanResult calls. 
+     * @return EngineVersion Engine version number actually bound to the current request. The caller should save it and explicitly input it in subsequent DescribeSkillScanResult calls.
      */
     public Long getEngineVersion() {
         return this.EngineVersion;
     }
 
     /**
-     * Set Engine version number actually bound to the current request. The caller should save and explicitly input it in the follow-up DescribeSkillScanResult.
-     * @param EngineVersion Engine version number actually bound to the current request. The caller should save and explicitly input it in the follow-up DescribeSkillScanResult.
+     * Set Engine version number actually bound to the current request. The caller should save it and explicitly input it in subsequent DescribeSkillScanResult calls.
+     * @param EngineVersion Engine version number actually bound to the current request. The caller should save it and explicitly input it in subsequent DescribeSkillScanResult calls.
      */
     public void setEngineVersion(Long EngineVersion) {
         this.EngineVersion = EngineVersion;
     }
 
     /**
-     * Get Task status, fixed as SCANNING, indicates the task is received. 
-     * @return Status Task status, fixed as SCANNING, indicates the task is received.
+     * Get Task status, fixed as SCANNING, indicating the task has been received. 
+     * @return Status Task status, fixed as SCANNING, indicating the task has been received.
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Task status, fixed as SCANNING, indicates the task is received.
-     * @param Status Task status, fixed as SCANNING, indicates the task is received.
+     * Set Task status, fixed as SCANNING, indicating the task has been received.
+     * @param Status Task status, fixed as SCANNING, indicating the task has been received.
      */
     public void setStatus(String Status) {
         this.Status = Status;

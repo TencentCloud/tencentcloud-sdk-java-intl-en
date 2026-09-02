@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class DescribeCheckViewRisksResponse extends AbstractModel {
 
     /**
-    * <p>Number of risks from check perspective</p>
+    * <p>Number of risks in the check perspective</p>
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * <p>Risk list in check perspective</p>
+    * <p>Risk list from the check perspective</p>
     */
     @SerializedName("CheckViewRiskList")
     @Expose
     private CheckViewRiskItem [] CheckViewRiskList;
 
     /**
-    * <p>Tag list of cspm standard from a checking perspective</p>
+    * <p>cspm specification tag list from the checking perspective</p>
     */
     @SerializedName("StandardNameList")
     @Expose
@@ -66,48 +66,48 @@ public class DescribeCheckViewRisksResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get <p>Number of risks from check perspective</p> 
-     * @return TotalCount <p>Number of risks from check perspective</p>
+     * Get <p>Number of risks in the check perspective</p> 
+     * @return TotalCount <p>Number of risks in the check perspective</p>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set <p>Number of risks from check perspective</p>
-     * @param TotalCount <p>Number of risks from check perspective</p>
+     * Set <p>Number of risks in the check perspective</p>
+     * @param TotalCount <p>Number of risks in the check perspective</p>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get <p>Risk list in check perspective</p> 
-     * @return CheckViewRiskList <p>Risk list in check perspective</p>
+     * Get <p>Risk list from the check perspective</p> 
+     * @return CheckViewRiskList <p>Risk list from the check perspective</p>
      */
     public CheckViewRiskItem [] getCheckViewRiskList() {
         return this.CheckViewRiskList;
     }
 
     /**
-     * Set <p>Risk list in check perspective</p>
-     * @param CheckViewRiskList <p>Risk list in check perspective</p>
+     * Set <p>Risk list from the check perspective</p>
+     * @param CheckViewRiskList <p>Risk list from the check perspective</p>
      */
     public void setCheckViewRiskList(CheckViewRiskItem [] CheckViewRiskList) {
         this.CheckViewRiskList = CheckViewRiskList;
     }
 
     /**
-     * Get <p>Tag list of cspm standard from a checking perspective</p> 
-     * @return StandardNameList <p>Tag list of cspm standard from a checking perspective</p>
+     * Get <p>cspm specification tag list from the checking perspective</p> 
+     * @return StandardNameList <p>cspm specification tag list from the checking perspective</p>
      */
     public StandardItem [] getStandardNameList() {
         return this.StandardNameList;
     }
 
     /**
-     * Set <p>Tag list of cspm standard from a checking perspective</p>
-     * @param StandardNameList <p>Tag list of cspm standard from a checking perspective</p>
+     * Set <p>cspm specification tag list from the checking perspective</p>
+     * @param StandardNameList <p>cspm specification tag list from the checking perspective</p>
      */
     public void setStandardNameList(StandardItem [] StandardNameList) {
         this.StandardNameList = StandardNameList;

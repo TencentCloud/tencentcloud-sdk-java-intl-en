@@ -24,8 +24,8 @@ import java.util.HashMap;
 public class CreateSkillScanRequest extends AbstractModel {
 
     /**
-    * Base64 encoding of the ZIP file content
-Input limit: File size limit 7MB (before encoding), only effective ZIP format.
+    * Base64-encoded ZIP file content
+Input limits: file size limit 7 MB (before encoding). Only valid ZIP format is accepted.
     */
     @SerializedName("FileBase64")
     @Expose
@@ -40,20 +40,20 @@ Parameter format: such as my-skill.zip
     private String FileName;
 
     /**
-     * Get Base64 encoding of the ZIP file content
-Input limit: File size limit 7MB (before encoding), only effective ZIP format. 
-     * @return FileBase64 Base64 encoding of the ZIP file content
-Input limit: File size limit 7MB (before encoding), only effective ZIP format.
+     * Get Base64-encoded ZIP file content
+Input limits: file size limit 7 MB (before encoding). Only valid ZIP format is accepted. 
+     * @return FileBase64 Base64-encoded ZIP file content
+Input limits: file size limit 7 MB (before encoding). Only valid ZIP format is accepted.
      */
     public String getFileBase64() {
         return this.FileBase64;
     }
 
     /**
-     * Set Base64 encoding of the ZIP file content
-Input limit: File size limit 7MB (before encoding), only effective ZIP format.
-     * @param FileBase64 Base64 encoding of the ZIP file content
-Input limit: File size limit 7MB (before encoding), only effective ZIP format.
+     * Set Base64-encoded ZIP file content
+Input limits: file size limit 7 MB (before encoding). Only valid ZIP format is accepted.
+     * @param FileBase64 Base64-encoded ZIP file content
+Input limits: file size limit 7 MB (before encoding). Only valid ZIP format is accepted.
      */
     public void setFileBase64(String FileBase64) {
         this.FileBase64 = FileBase64;

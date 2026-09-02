@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class AccessKeyAsset extends AbstractModel {
 
     /**
-    * AK id.
+    * id of the AK
     */
     @SerializedName("ID")
     @Expose
     private Long ID;
 
     /**
-    * AK name.
+    * AK name
     */
     @SerializedName("Name")
     @Expose
@@ -45,54 +45,54 @@ public class AccessKeyAsset extends AbstractModel {
     private String Remark;
 
     /**
-    * Account associate APPID.
+    * APPID of the account
     */
     @SerializedName("AppID")
     @Expose
     private Long AppID;
 
     /**
-    * Account associate Uin belonging to main account.
+    * Uin of the main account
     */
     @SerializedName("Uin")
     @Expose
     private String Uin;
 
     /**
-    * Nickname of the main account.
+    * Account nickname
     */
     @SerializedName("Nickname")
     @Expose
     private String Nickname;
 
     /**
-    * Sub-Account Uin belonging to.
+    * Sub-account Uin it belongs to
     */
     @SerializedName("SubUin")
     @Expose
     private String SubUin;
 
     /**
-    * Sub-Account nickname.
+    * Sub-account nickname
     */
     @SerializedName("SubNickname")
     @Expose
     private String SubNickname;
 
     /**
-    * Root account AK.
-Sub-Account AK.
-2 temporary key.
+    * 0 root account AK
+1 Sub-account AK
+2 Temporary key
     */
     @SerializedName("Type")
     @Expose
     private Long Type;
 
     /**
-    * Security advice enumeration.
-Normal.
-Process now.
-2 recommend reinforcement.
+    * Security advice Enumerate
+0 Normal
+1 Process now
+2. Hardening is recommended.
     */
     @SerializedName("Advice")
     @Expose
@@ -113,7 +113,7 @@ Process now.
     private AccessKeyAlarmInfo [] AccessKeyRiskList;
 
     /**
-    * Source IP quantity.
+    * Source IP quantity
     */
     @SerializedName("IPCount")
     @Expose
@@ -121,8 +121,6 @@ Process now.
 
     /**
     * Creation time.
-
-
     */
     @SerializedName("CreateTime")
     @Expose
@@ -136,57 +134,57 @@ Process now.
     private String LastAccessTime;
 
     /**
-    * AK status. 
-0: disabled.
-1: enabled.
-2: deleted (deleted in cam, the security center still retains the previous log).
+    * AK status 
+0: Disable
+1: Enabled
+2: Deleted (already deleted on the cam side, and the security center still retains earlier records)
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * 0 means detected.
-1 indicates detecting.
+    * 0 indicates detected
+1: Indicates detection in progress
     */
     @SerializedName("CheckStatus")
     @Expose
     private Long CheckStatus;
 
     /**
-    * Cloud vendor type 0: tencent cloud 1: amazon web services 2: microsoft azure 3: google cloud 4: alibaba cloud 5: huawei cloud.
+    * Cloud vendor type. 0: Tencent Cloud. 1: Amazon Web Services. 2: Microsoft Azure. 3: Google Cloud. 4: Alibaba Cloud. 5: Huawei Cloud
     */
     @SerializedName("CloudType")
     @Expose
     private Long CloudType;
 
     /**
-     * Get AK id. 
-     * @return ID AK id.
+     * Get id of the AK 
+     * @return ID id of the AK
      */
     public Long getID() {
         return this.ID;
     }
 
     /**
-     * Set AK id.
-     * @param ID AK id.
+     * Set id of the AK
+     * @param ID id of the AK
      */
     public void setID(Long ID) {
         this.ID = ID;
     }
 
     /**
-     * Get AK name. 
-     * @return Name AK name.
+     * Get AK name 
+     * @return Name AK name
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set AK name.
-     * @param Name AK name.
+     * Set AK name
+     * @param Name AK name
      */
     public void setName(String Name) {
         this.Name = Name;
@@ -209,132 +207,132 @@ Process now.
     }
 
     /**
-     * Get Account associate APPID. 
-     * @return AppID Account associate APPID.
+     * Get APPID of the account 
+     * @return AppID APPID of the account
      */
     public Long getAppID() {
         return this.AppID;
     }
 
     /**
-     * Set Account associate APPID.
-     * @param AppID Account associate APPID.
+     * Set APPID of the account
+     * @param AppID APPID of the account
      */
     public void setAppID(Long AppID) {
         this.AppID = AppID;
     }
 
     /**
-     * Get Account associate Uin belonging to main account. 
-     * @return Uin Account associate Uin belonging to main account.
+     * Get Uin of the main account 
+     * @return Uin Uin of the main account
      */
     public String getUin() {
         return this.Uin;
     }
 
     /**
-     * Set Account associate Uin belonging to main account.
-     * @param Uin Account associate Uin belonging to main account.
+     * Set Uin of the main account
+     * @param Uin Uin of the main account
      */
     public void setUin(String Uin) {
         this.Uin = Uin;
     }
 
     /**
-     * Get Nickname of the main account. 
-     * @return Nickname Nickname of the main account.
+     * Get Account nickname 
+     * @return Nickname Account nickname
      */
     public String getNickname() {
         return this.Nickname;
     }
 
     /**
-     * Set Nickname of the main account.
-     * @param Nickname Nickname of the main account.
+     * Set Account nickname
+     * @param Nickname Account nickname
      */
     public void setNickname(String Nickname) {
         this.Nickname = Nickname;
     }
 
     /**
-     * Get Sub-Account Uin belonging to. 
-     * @return SubUin Sub-Account Uin belonging to.
+     * Get Sub-account Uin it belongs to 
+     * @return SubUin Sub-account Uin it belongs to
      */
     public String getSubUin() {
         return this.SubUin;
     }
 
     /**
-     * Set Sub-Account Uin belonging to.
-     * @param SubUin Sub-Account Uin belonging to.
+     * Set Sub-account Uin it belongs to
+     * @param SubUin Sub-account Uin it belongs to
      */
     public void setSubUin(String SubUin) {
         this.SubUin = SubUin;
     }
 
     /**
-     * Get Sub-Account nickname. 
-     * @return SubNickname Sub-Account nickname.
+     * Get Sub-account nickname 
+     * @return SubNickname Sub-account nickname
      */
     public String getSubNickname() {
         return this.SubNickname;
     }
 
     /**
-     * Set Sub-Account nickname.
-     * @param SubNickname Sub-Account nickname.
+     * Set Sub-account nickname
+     * @param SubNickname Sub-account nickname
      */
     public void setSubNickname(String SubNickname) {
         this.SubNickname = SubNickname;
     }
 
     /**
-     * Get Root account AK.
-Sub-Account AK.
-2 temporary key. 
-     * @return Type Root account AK.
-Sub-Account AK.
-2 temporary key.
+     * Get 0 root account AK
+1 Sub-account AK
+2 Temporary key 
+     * @return Type 0 root account AK
+1 Sub-account AK
+2 Temporary key
      */
     public Long getType() {
         return this.Type;
     }
 
     /**
-     * Set Root account AK.
-Sub-Account AK.
-2 temporary key.
-     * @param Type Root account AK.
-Sub-Account AK.
-2 temporary key.
+     * Set 0 root account AK
+1 Sub-account AK
+2 Temporary key
+     * @param Type 0 root account AK
+1 Sub-account AK
+2 Temporary key
      */
     public void setType(Long Type) {
         this.Type = Type;
     }
 
     /**
-     * Get Security advice enumeration.
-Normal.
-Process now.
-2 recommend reinforcement. 
-     * @return Advice Security advice enumeration.
-Normal.
-Process now.
-2 recommend reinforcement.
+     * Get Security advice Enumerate
+0 Normal
+1 Process now
+2. Hardening is recommended. 
+     * @return Advice Security advice Enumerate
+0 Normal
+1 Process now
+2. Hardening is recommended.
      */
     public Long getAdvice() {
         return this.Advice;
     }
 
     /**
-     * Set Security advice enumeration.
-Normal.
-Process now.
-2 recommend reinforcement.
-     * @param Advice Security advice enumeration.
-Normal.
-Process now.
-2 recommend reinforcement.
+     * Set Security advice Enumerate
+0 Normal
+1 Process now
+2. Hardening is recommended.
+     * @param Advice Security advice Enumerate
+0 Normal
+1 Process now
+2. Hardening is recommended.
      */
     public void setAdvice(Long Advice) {
         this.Advice = Advice;
@@ -373,28 +371,24 @@ Process now.
     }
 
     /**
-     * Get Source IP quantity. 
-     * @return IPCount Source IP quantity.
+     * Get Source IP quantity 
+     * @return IPCount Source IP quantity
      */
     public Long getIPCount() {
         return this.IPCount;
     }
 
     /**
-     * Set Source IP quantity.
-     * @param IPCount Source IP quantity.
+     * Set Source IP quantity
+     * @param IPCount Source IP quantity
      */
     public void setIPCount(Long IPCount) {
         this.IPCount = IPCount;
     }
 
     /**
-     * Get Creation time.
-
- 
+     * Get Creation time. 
      * @return CreateTime Creation time.
-
-
      */
     public String getCreateTime() {
         return this.CreateTime;
@@ -402,11 +396,7 @@ Process now.
 
     /**
      * Set Creation time.
-
-
      * @param CreateTime Creation time.
-
-
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
@@ -429,64 +419,64 @@ Process now.
     }
 
     /**
-     * Get AK status. 
-0: disabled.
-1: enabled.
-2: deleted (deleted in cam, the security center still retains the previous log). 
-     * @return Status AK status. 
-0: disabled.
-1: enabled.
-2: deleted (deleted in cam, the security center still retains the previous log).
+     * Get AK status 
+0: Disable
+1: Enabled
+2: Deleted (already deleted on the cam side, and the security center still retains earlier records) 
+     * @return Status AK status 
+0: Disable
+1: Enabled
+2: Deleted (already deleted on the cam side, and the security center still retains earlier records)
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set AK status. 
-0: disabled.
-1: enabled.
-2: deleted (deleted in cam, the security center still retains the previous log).
-     * @param Status AK status. 
-0: disabled.
-1: enabled.
-2: deleted (deleted in cam, the security center still retains the previous log).
+     * Set AK status 
+0: Disable
+1: Enabled
+2: Deleted (already deleted on the cam side, and the security center still retains earlier records)
+     * @param Status AK status 
+0: Disable
+1: Enabled
+2: Deleted (already deleted on the cam side, and the security center still retains earlier records)
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 0 means detected.
-1 indicates detecting. 
-     * @return CheckStatus 0 means detected.
-1 indicates detecting.
+     * Get 0 indicates detected
+1: Indicates detection in progress 
+     * @return CheckStatus 0 indicates detected
+1: Indicates detection in progress
      */
     public Long getCheckStatus() {
         return this.CheckStatus;
     }
 
     /**
-     * Set 0 means detected.
-1 indicates detecting.
-     * @param CheckStatus 0 means detected.
-1 indicates detecting.
+     * Set 0 indicates detected
+1: Indicates detection in progress
+     * @param CheckStatus 0 indicates detected
+1: Indicates detection in progress
      */
     public void setCheckStatus(Long CheckStatus) {
         this.CheckStatus = CheckStatus;
     }
 
     /**
-     * Get Cloud vendor type 0: tencent cloud 1: amazon web services 2: microsoft azure 3: google cloud 4: alibaba cloud 5: huawei cloud. 
-     * @return CloudType Cloud vendor type 0: tencent cloud 1: amazon web services 2: microsoft azure 3: google cloud 4: alibaba cloud 5: huawei cloud.
+     * Get Cloud vendor type. 0: Tencent Cloud. 1: Amazon Web Services. 2: Microsoft Azure. 3: Google Cloud. 4: Alibaba Cloud. 5: Huawei Cloud 
+     * @return CloudType Cloud vendor type. 0: Tencent Cloud. 1: Amazon Web Services. 2: Microsoft Azure. 3: Google Cloud. 4: Alibaba Cloud. 5: Huawei Cloud
      */
     public Long getCloudType() {
         return this.CloudType;
     }
 
     /**
-     * Set Cloud vendor type 0: tencent cloud 1: amazon web services 2: microsoft azure 3: google cloud 4: alibaba cloud 5: huawei cloud.
-     * @param CloudType Cloud vendor type 0: tencent cloud 1: amazon web services 2: microsoft azure 3: google cloud 4: alibaba cloud 5: huawei cloud.
+     * Set Cloud vendor type. 0: Tencent Cloud. 1: Amazon Web Services. 2: Microsoft Azure. 3: Google Cloud. 4: Alibaba Cloud. 5: Huawei Cloud
+     * @param CloudType Cloud vendor type. 0: Tencent Cloud. 1: Amazon Web Services. 2: Microsoft Azure. 3: Google Cloud. 4: Alibaba Cloud. 5: Huawei Cloud
      */
     public void setCloudType(Long CloudType) {
         this.CloudType = CloudType;

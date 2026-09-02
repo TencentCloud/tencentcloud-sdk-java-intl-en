@@ -24,7 +24,8 @@ import java.util.HashMap;
 public class SkillRuleCatalogItem extends AbstractModel {
 
     /**
-    * Fusion rule ID (9xxxx)
+    * Fusion rule ID
+Parameter format: such as 9xxxx
     */
     @SerializedName("RuleID")
     @Expose
@@ -38,16 +39,20 @@ public class SkillRuleCatalogItem extends AbstractModel {
     private String RuleName;
 
     /**
-     * Get Fusion rule ID (9xxxx) 
-     * @return RuleID Fusion rule ID (9xxxx)
+     * Get Fusion rule ID
+Parameter format: such as 9xxxx 
+     * @return RuleID Fusion rule ID
+Parameter format: such as 9xxxx
      */
     public String getRuleID() {
         return this.RuleID;
     }
 
     /**
-     * Set Fusion rule ID (9xxxx)
-     * @param RuleID Fusion rule ID (9xxxx)
+     * Set Fusion rule ID
+Parameter format: such as 9xxxx
+     * @param RuleID Fusion rule ID
+Parameter format: such as 9xxxx
      */
     public void setRuleID(String RuleID) {
         this.RuleID = RuleID;

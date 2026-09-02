@@ -31,14 +31,14 @@ public class CreateRiskCenterScanTaskResponse extends AbstractModel {
     private String TaskId;
 
     /**
-    * `0`: Task created successfully. `-1`: There are unauthorized assets. 
+    * 0: Task creation succeeded; less than 0: Failed; -1: Unauthenticated assets exist.
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * List of unauthorized assets
+    * Unauthenticated Asset List
     */
     @SerializedName("UnAuthAsset")
     @Expose
@@ -68,32 +68,32 @@ public class CreateRiskCenterScanTaskResponse extends AbstractModel {
     }
 
     /**
-     * Get `0`: Task created successfully. `-1`: There are unauthorized assets.  
-     * @return Status `0`: Task created successfully. `-1`: There are unauthorized assets. 
+     * Get 0: Task creation succeeded; less than 0: Failed; -1: Unauthenticated assets exist. 
+     * @return Status 0: Task creation succeeded; less than 0: Failed; -1: Unauthenticated assets exist.
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set `0`: Task created successfully. `-1`: There are unauthorized assets. 
-     * @param Status `0`: Task created successfully. `-1`: There are unauthorized assets. 
+     * Set 0: Task creation succeeded; less than 0: Failed; -1: Unauthenticated assets exist.
+     * @param Status 0: Task creation succeeded; less than 0: Failed; -1: Unauthenticated assets exist.
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get List of unauthorized assets 
-     * @return UnAuthAsset List of unauthorized assets
+     * Get Unauthenticated Asset List 
+     * @return UnAuthAsset Unauthenticated Asset List
      */
     public String [] getUnAuthAsset() {
         return this.UnAuthAsset;
     }
 
     /**
-     * Set List of unauthorized assets
-     * @param UnAuthAsset List of unauthorized assets
+     * Set Unauthenticated Asset List
+     * @param UnAuthAsset Unauthenticated Asset List
      */
     public void setUnAuthAsset(String [] UnAuthAsset) {
         this.UnAuthAsset = UnAuthAsset;

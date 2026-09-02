@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class IaCFileRisk extends AbstractModel {
 
     /**
-    * <p>Risk level (0: low-risk, 1: medium-risk, 2: high-risk, 3: critical)</p>
+    * <p>Risk level (0: low risk, 1: medium risk, 2: high risk, 3: critical)</p>
     */
     @SerializedName("Level")
     @Expose
     private Long Level;
 
     /**
-    * <p>Row count of risk location</p>
+    * <p>Line count where the risk resides</p>
     */
     @SerializedName("Line")
     @Expose
@@ -45,46 +45,46 @@ public class IaCFileRisk extends AbstractModel {
     private String RuleName;
 
     /**
-    * <p>Problem description</p>
+    * <p>Issue description</p>
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * <p>Repair recommendation</p>
+    * <p>Fixing suggestion</p>
     */
     @SerializedName("Suggestion")
     @Expose
     private String Suggestion;
 
     /**
-     * Get <p>Risk level (0: low-risk, 1: medium-risk, 2: high-risk, 3: critical)</p> 
-     * @return Level <p>Risk level (0: low-risk, 1: medium-risk, 2: high-risk, 3: critical)</p>
+     * Get <p>Risk level (0: low risk, 1: medium risk, 2: high risk, 3: critical)</p> 
+     * @return Level <p>Risk level (0: low risk, 1: medium risk, 2: high risk, 3: critical)</p>
      */
     public Long getLevel() {
         return this.Level;
     }
 
     /**
-     * Set <p>Risk level (0: low-risk, 1: medium-risk, 2: high-risk, 3: critical)</p>
-     * @param Level <p>Risk level (0: low-risk, 1: medium-risk, 2: high-risk, 3: critical)</p>
+     * Set <p>Risk level (0: low risk, 1: medium risk, 2: high risk, 3: critical)</p>
+     * @param Level <p>Risk level (0: low risk, 1: medium risk, 2: high risk, 3: critical)</p>
      */
     public void setLevel(Long Level) {
         this.Level = Level;
     }
 
     /**
-     * Get <p>Row count of risk location</p> 
-     * @return Line <p>Row count of risk location</p>
+     * Get <p>Line count where the risk resides</p> 
+     * @return Line <p>Line count where the risk resides</p>
      */
     public Long getLine() {
         return this.Line;
     }
 
     /**
-     * Set <p>Row count of risk location</p>
-     * @param Line <p>Row count of risk location</p>
+     * Set <p>Line count where the risk resides</p>
+     * @param Line <p>Line count where the risk resides</p>
      */
     public void setLine(Long Line) {
         this.Line = Line;
@@ -107,32 +107,32 @@ public class IaCFileRisk extends AbstractModel {
     }
 
     /**
-     * Get <p>Problem description</p> 
-     * @return Description <p>Problem description</p>
+     * Get <p>Issue description</p> 
+     * @return Description <p>Issue description</p>
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set <p>Problem description</p>
-     * @param Description <p>Problem description</p>
+     * Set <p>Issue description</p>
+     * @param Description <p>Issue description</p>
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get <p>Repair recommendation</p> 
-     * @return Suggestion <p>Repair recommendation</p>
+     * Get <p>Fixing suggestion</p> 
+     * @return Suggestion <p>Fixing suggestion</p>
      */
     public String getSuggestion() {
         return this.Suggestion;
     }
 
     /**
-     * Set <p>Repair recommendation</p>
-     * @param Suggestion <p>Repair recommendation</p>
+     * Set <p>Fixing suggestion</p>
+     * @param Suggestion <p>Fixing suggestion</p>
      */
     public void setSuggestion(String Suggestion) {
         this.Suggestion = Suggestion;

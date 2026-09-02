@@ -31,7 +31,7 @@ public class DescribeClusterAssetsRequest extends AbstractModel {
     private String [] MemberId;
 
     /**
-    * Filter.
+    * Filter
     */
     @SerializedName("Filter")
     @Expose
@@ -54,16 +54,16 @@ public class DescribeClusterAssetsRequest extends AbstractModel {
     }
 
     /**
-     * Get Filter. 
-     * @return Filter Filter.
+     * Get Filter 
+     * @return Filter Filter
      */
     public Filter getFilter() {
         return this.Filter;
     }
 
     /**
-     * Set Filter.
-     * @param Filter Filter.
+     * Set Filter
+     * @param Filter Filter
      */
     public void setFilter(Filter Filter) {
         this.Filter = Filter;

@@ -38,7 +38,7 @@ public class DescribeDbAssetsRequest extends AbstractModel {
     private Filter Filter;
 
     /**
-    * Asset types. Values: MYSQL/MARIADB/REDIS/MONGODB/POSTGRES/CTS/ES/KAFKA/COS/CBS/CFS
+    * Asset type: MYSQL/MARIADB/REDIS/MONGODB/POSTGRES/CTS/ES/KAFKA/COS/CBS/CFS
     */
     @SerializedName("AssetTypes")
     @Expose
@@ -77,16 +77,16 @@ public class DescribeDbAssetsRequest extends AbstractModel {
     }
 
     /**
-     * Get Asset types. Values: MYSQL/MARIADB/REDIS/MONGODB/POSTGRES/CTS/ES/KAFKA/COS/CBS/CFS 
-     * @return AssetTypes Asset types. Values: MYSQL/MARIADB/REDIS/MONGODB/POSTGRES/CTS/ES/KAFKA/COS/CBS/CFS
+     * Get Asset type: MYSQL/MARIADB/REDIS/MONGODB/POSTGRES/CTS/ES/KAFKA/COS/CBS/CFS 
+     * @return AssetTypes Asset type: MYSQL/MARIADB/REDIS/MONGODB/POSTGRES/CTS/ES/KAFKA/COS/CBS/CFS
      */
     public String [] getAssetTypes() {
         return this.AssetTypes;
     }
 
     /**
-     * Set Asset types. Values: MYSQL/MARIADB/REDIS/MONGODB/POSTGRES/CTS/ES/KAFKA/COS/CBS/CFS
-     * @param AssetTypes Asset types. Values: MYSQL/MARIADB/REDIS/MONGODB/POSTGRES/CTS/ES/KAFKA/COS/CBS/CFS
+     * Set Asset type: MYSQL/MARIADB/REDIS/MONGODB/POSTGRES/CTS/ES/KAFKA/COS/CBS/CFS
+     * @param AssetTypes Asset type: MYSQL/MARIADB/REDIS/MONGODB/POSTGRES/CTS/ES/KAFKA/COS/CBS/CFS
      */
     public void setAssetTypes(String [] AssetTypes) {
         this.AssetTypes = AssetTypes;

@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class WhereFilter extends AbstractModel {
 
     /**
-    * Filter item
+    * Filtered Items
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * Filter value
+    * Filtered Value
     */
     @SerializedName("Values")
     @Expose
     private String [] Values;
 
     /**
-    * Central platform definition:.
-1 equal 2 larger than 3 less than 4 greater than or equal to 5 less than or equal to 6 not equal to 9 fuzzy matching 13 non-fuzzy matching 14 bitwise and.
-Exact match fills 7. fuzzy matching fills 9. 
+    * Central platform definition:
+1 equal 2 greater than 3 less than 4 greater than or equal to 5 less than or equal to 6 not equal to 9 fuzzy matching 13 exact matching 14 bitwise AND
+Enter 7 for exact match and 9 for fuzzy matching. 
 
     */
     @SerializedName("OperatorType")
@@ -48,45 +48,45 @@ Exact match fills 7. fuzzy matching fills 9.
     private Long OperatorType;
 
     /**
-     * Get Filter item 
-     * @return Name Filter item
+     * Get Filtered Items 
+     * @return Name Filtered Items
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Filter item
-     * @param Name Filter item
+     * Set Filtered Items
+     * @param Name Filtered Items
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get Filter value 
-     * @return Values Filter value
+     * Get Filtered Value 
+     * @return Values Filtered Value
      */
     public String [] getValues() {
         return this.Values;
     }
 
     /**
-     * Set Filter value
-     * @param Values Filter value
+     * Set Filtered Value
+     * @param Values Filtered Value
      */
     public void setValues(String [] Values) {
         this.Values = Values;
     }
 
     /**
-     * Get Central platform definition:.
-1 equal 2 larger than 3 less than 4 greater than or equal to 5 less than or equal to 6 not equal to 9 fuzzy matching 13 non-fuzzy matching 14 bitwise and.
-Exact match fills 7. fuzzy matching fills 9. 
+     * Get Central platform definition:
+1 equal 2 greater than 3 less than 4 greater than or equal to 5 less than or equal to 6 not equal to 9 fuzzy matching 13 exact matching 14 bitwise AND
+Enter 7 for exact match and 9 for fuzzy matching. 
  
-     * @return OperatorType Central platform definition:.
-1 equal 2 larger than 3 less than 4 greater than or equal to 5 less than or equal to 6 not equal to 9 fuzzy matching 13 non-fuzzy matching 14 bitwise and.
-Exact match fills 7. fuzzy matching fills 9. 
+     * @return OperatorType Central platform definition:
+1 equal 2 greater than 3 less than 4 greater than or equal to 5 less than or equal to 6 not equal to 9 fuzzy matching 13 exact matching 14 bitwise AND
+Enter 7 for exact match and 9 for fuzzy matching. 
 
      */
     public Long getOperatorType() {
@@ -94,13 +94,13 @@ Exact match fills 7. fuzzy matching fills 9.
     }
 
     /**
-     * Set Central platform definition:.
-1 equal 2 larger than 3 less than 4 greater than or equal to 5 less than or equal to 6 not equal to 9 fuzzy matching 13 non-fuzzy matching 14 bitwise and.
-Exact match fills 7. fuzzy matching fills 9. 
+     * Set Central platform definition:
+1 equal 2 greater than 3 less than 4 greater than or equal to 5 less than or equal to 6 not equal to 9 fuzzy matching 13 exact matching 14 bitwise AND
+Enter 7 for exact match and 9 for fuzzy matching. 
 
-     * @param OperatorType Central platform definition:.
-1 equal 2 larger than 3 less than 4 greater than or equal to 5 less than or equal to 6 not equal to 9 fuzzy matching 13 non-fuzzy matching 14 bitwise and.
-Exact match fills 7. fuzzy matching fills 9. 
+     * @param OperatorType Central platform definition:
+1 equal 2 greater than 3 less than 4 greater than or equal to 5 less than or equal to 6 not equal to 9 fuzzy matching 13 exact matching 14 bitwise AND
+Enter 7 for exact match and 9 for fuzzy matching. 
 
      */
     public void setOperatorType(Long OperatorType) {

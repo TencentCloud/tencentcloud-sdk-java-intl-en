@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeRiskCallRecordRequest extends AbstractModel {
 
     /**
-    * Risk record ID.
+    * Risk record ID
     */
     @SerializedName("RiskID")
     @Expose
@@ -45,16 +45,16 @@ public class DescribeRiskCallRecordRequest extends AbstractModel {
     private Filter Filter;
 
     /**
-     * Get Risk record ID. 
-     * @return RiskID Risk record ID.
+     * Get Risk record ID 
+     * @return RiskID Risk record ID
      */
     public Long getRiskID() {
         return this.RiskID;
     }
 
     /**
-     * Set Risk record ID.
-     * @param RiskID Risk record ID.
+     * Set Risk record ID
+     * @param RiskID Risk record ID
      */
     public void setRiskID(Long RiskID) {
         this.RiskID = RiskID;
