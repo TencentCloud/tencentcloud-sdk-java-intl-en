@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateLaunchConfigurationResponse extends AbstractModel {
 
     /**
-    * This parameter is returned when a launch configuration is created through this API, indicating the launch configuration ID.
+    * <p>When creating a launch configuration through this interface, this parameter will be returned, indicating the launch configuration ID.</p>
     */
     @SerializedName("LaunchConfigurationId")
     @Expose
@@ -38,16 +38,16 @@ public class CreateLaunchConfigurationResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get This parameter is returned when a launch configuration is created through this API, indicating the launch configuration ID. 
-     * @return LaunchConfigurationId This parameter is returned when a launch configuration is created through this API, indicating the launch configuration ID.
+     * Get <p>When creating a launch configuration through this interface, this parameter will be returned, indicating the launch configuration ID.</p> 
+     * @return LaunchConfigurationId <p>When creating a launch configuration through this interface, this parameter will be returned, indicating the launch configuration ID.</p>
      */
     public String getLaunchConfigurationId() {
         return this.LaunchConfigurationId;
     }
 
     /**
-     * Set This parameter is returned when a launch configuration is created through this API, indicating the launch configuration ID.
-     * @param LaunchConfigurationId This parameter is returned when a launch configuration is created through this API, indicating the launch configuration ID.
+     * Set <p>When creating a launch configuration through this interface, this parameter will be returned, indicating the launch configuration ID.</p>
+     * @param LaunchConfigurationId <p>When creating a launch configuration through this interface, this parameter will be returned, indicating the launch configuration ID.</p>
      */
     public void setLaunchConfigurationId(String LaunchConfigurationId) {
         this.LaunchConfigurationId = LaunchConfigurationId;

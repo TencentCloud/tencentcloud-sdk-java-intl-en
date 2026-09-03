@@ -42,8 +42,7 @@ public class InstanceNameSettings extends AbstractModel {
     private String InstanceNameStyle;
 
     /**
-    * CVM instance name suffix. The suffix for a CVM instance name must be 1 to 105 characters in length. Additionally, the combined character count of the base instance name and the suffix must not exceed 107 characters.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Name suffix of a CVM instance. The suffix length must be 1 to 105 characters, and the total length of the InstanceName value plus the suffix cannot exceed 107 characters.
     */
     @SerializedName("InstanceNameSuffix")
     @Expose
@@ -112,20 +111,16 @@ Delimiter used for concatenating instance name, index, and suffix. Assuming inst
     }
 
     /**
-     * Get CVM instance name suffix. The suffix for a CVM instance name must be 1 to 105 characters in length. Additionally, the combined character count of the base instance name and the suffix must not exceed 107 characters.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return InstanceNameSuffix CVM instance name suffix. The suffix for a CVM instance name must be 1 to 105 characters in length. Additionally, the combined character count of the base instance name and the suffix must not exceed 107 characters.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Name suffix of a CVM instance. The suffix length must be 1 to 105 characters, and the total length of the InstanceName value plus the suffix cannot exceed 107 characters. 
+     * @return InstanceNameSuffix Name suffix of a CVM instance. The suffix length must be 1 to 105 characters, and the total length of the InstanceName value plus the suffix cannot exceed 107 characters.
      */
     public String getInstanceNameSuffix() {
         return this.InstanceNameSuffix;
     }
 
     /**
-     * Set CVM instance name suffix. The suffix for a CVM instance name must be 1 to 105 characters in length. Additionally, the combined character count of the base instance name and the suffix must not exceed 107 characters.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param InstanceNameSuffix CVM instance name suffix. The suffix for a CVM instance name must be 1 to 105 characters in length. Additionally, the combined character count of the base instance name and the suffix must not exceed 107 characters.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Name suffix of a CVM instance. The suffix length must be 1 to 105 characters, and the total length of the InstanceName value plus the suffix cannot exceed 107 characters.
+     * @param InstanceNameSuffix Name suffix of a CVM instance. The suffix length must be 1 to 105 characters, and the total length of the InstanceName value plus the suffix cannot exceed 107 characters.
      */
     public void setInstanceNameSuffix(String InstanceNameSuffix) {
         this.InstanceNameSuffix = InstanceNameSuffix;

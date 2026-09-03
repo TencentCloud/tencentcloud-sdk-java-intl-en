@@ -66,6 +66,28 @@ public class ResourceInfo extends AbstractModel {
     private GpuDetail [] RealGpuDetailSet;
 
     /**
+    * Indicates whether to enable RDMA.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("EnableRDMA")
+    @Expose
+    private Boolean EnableRDMA;
+
+    /**
+    * 
+    */
+    @SerializedName("RootDisk")
+    @Expose
+    private Long RootDisk;
+
+    /**
+    * 
+    */
+    @SerializedName("DataDisk")
+    @Expose
+    private Long DataDisk;
+
+    /**
      * Get Processor resource, in 1/1000 cores.Note: This field may return null, indicating that no valid values can be obtained. 
      * @return Cpu Processor resource, in 1/1000 cores.Note: This field may return null, indicating that no valid values can be obtained.
      */
@@ -161,6 +183,58 @@ public class ResourceInfo extends AbstractModel {
         this.RealGpuDetailSet = RealGpuDetailSet;
     }
 
+    /**
+     * Get Indicates whether to enable RDMA.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return EnableRDMA Indicates whether to enable RDMA.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Boolean getEnableRDMA() {
+        return this.EnableRDMA;
+    }
+
+    /**
+     * Set Indicates whether to enable RDMA.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param EnableRDMA Indicates whether to enable RDMA.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setEnableRDMA(Boolean EnableRDMA) {
+        this.EnableRDMA = EnableRDMA;
+    }
+
+    /**
+     * Get  
+     * @return RootDisk 
+     */
+    public Long getRootDisk() {
+        return this.RootDisk;
+    }
+
+    /**
+     * Set 
+     * @param RootDisk 
+     */
+    public void setRootDisk(Long RootDisk) {
+        this.RootDisk = RootDisk;
+    }
+
+    /**
+     * Get  
+     * @return DataDisk 
+     */
+    public Long getDataDisk() {
+        return this.DataDisk;
+    }
+
+    /**
+     * Set 
+     * @param DataDisk 
+     */
+    public void setDataDisk(Long DataDisk) {
+        this.DataDisk = DataDisk;
+    }
+
     public ResourceInfo() {
     }
 
@@ -190,6 +264,15 @@ public class ResourceInfo extends AbstractModel {
                 this.RealGpuDetailSet[i] = new GpuDetail(source.RealGpuDetailSet[i]);
             }
         }
+        if (source.EnableRDMA != null) {
+            this.EnableRDMA = new Boolean(source.EnableRDMA);
+        }
+        if (source.RootDisk != null) {
+            this.RootDisk = new Long(source.RootDisk);
+        }
+        if (source.DataDisk != null) {
+            this.DataDisk = new Long(source.DataDisk);
+        }
     }
 
 
@@ -203,6 +286,9 @@ public class ResourceInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "GpuType", this.GpuType);
         this.setParamSimple(map, prefix + "RealGpu", this.RealGpu);
         this.setParamArrayObj(map, prefix + "RealGpuDetailSet.", this.RealGpuDetailSet);
+        this.setParamSimple(map, prefix + "EnableRDMA", this.EnableRDMA);
+        this.setParamSimple(map, prefix + "RootDisk", this.RootDisk);
+        this.setParamSimple(map, prefix + "DataDisk", this.DataDisk);
 
     }
 }

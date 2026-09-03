@@ -73,6 +73,13 @@ public class ImageInfo extends AbstractModel {
     private Boolean SupportDataPipeline;
 
     /**
+    * 
+    */
+    @SerializedName("ImageSecret")
+    @Expose
+    private ImageSecret ImageSecret;
+
+    /**
      * Get Image type. Valid values: TCR ( which indicates a Tencent Container Registry (TCR) image), CCR (which indicates a TCR Personal Edition image), PreSet (which indicates a platform preset image), and CUSTOM (which indicates a third-party custom image). 
      * @return ImageType Image type. Valid values: TCR ( which indicates a Tencent Container Registry (TCR) image), CCR (which indicates a TCR Personal Edition image), PreSet (which indicates a platform preset image), and CUSTOM (which indicates a third-party custom image).
      */
@@ -184,6 +191,22 @@ public class ImageInfo extends AbstractModel {
         this.SupportDataPipeline = SupportDataPipeline;
     }
 
+    /**
+     * Get  
+     * @return ImageSecret 
+     */
+    public ImageSecret getImageSecret() {
+        return this.ImageSecret;
+    }
+
+    /**
+     * Set 
+     * @param ImageSecret 
+     */
+    public void setImageSecret(ImageSecret ImageSecret) {
+        this.ImageSecret = ImageSecret;
+    }
+
     public ImageInfo() {
     }
 
@@ -213,6 +236,9 @@ public class ImageInfo extends AbstractModel {
         if (source.SupportDataPipeline != null) {
             this.SupportDataPipeline = new Boolean(source.SupportDataPipeline);
         }
+        if (source.ImageSecret != null) {
+            this.ImageSecret = new ImageSecret(source.ImageSecret);
+        }
     }
 
 
@@ -227,6 +253,7 @@ public class ImageInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "AllowSaveAllContent", this.AllowSaveAllContent);
         this.setParamSimple(map, prefix + "ImageName", this.ImageName);
         this.setParamSimple(map, prefix + "SupportDataPipeline", this.SupportDataPipeline);
+        this.setParamObj(map, prefix + "ImageSecret.", this.ImageSecret);
 
     }
 }

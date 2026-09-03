@@ -116,6 +116,17 @@ public class TdmysqlClient extends AbstractClient{
     }
 
     /**
+     *This API is used to obtain the DB engine version list.
+     * @param req DescribeDBEnginesRequest
+     * @return DescribeDBEnginesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDBEnginesResponse DescribeDBEngines(DescribeDBEnginesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDBEngines", DescribeDBEnginesResponse.class);
+    }
+
+    /**
      *This API is used to query instance details.
      * @param req DescribeDBInstanceDetailRequest
      * @return DescribeDBInstanceDetailResponse
@@ -498,17 +509,6 @@ public class TdmysqlClient extends AbstractClient{
     public ModifyUserPrivilegesResponse ModifyUserPrivileges(ModifyUserPrivilegesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyUserPrivileges", ModifyUserPrivilegesResponse.class);
-    }
-
-    /**
-     *This API is used to reset user password.
-     * @param req ResetUserPasswordRequest
-     * @return ResetUserPasswordResponse
-     * @throws TencentCloudSDKException
-     */
-    public ResetUserPasswordResponse ResetUserPassword(ResetUserPasswordRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "ResetUserPassword", ResetUserPasswordResponse.class);
     }
 
     /**

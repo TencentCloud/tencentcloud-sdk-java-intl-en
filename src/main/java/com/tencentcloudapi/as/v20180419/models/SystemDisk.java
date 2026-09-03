@@ -24,94 +24,95 @@ import java.util.HashMap;
 public class SystemDisk extends AbstractModel {
 
     /**
-    * System disk type. for restrictions on the system disk type, see [cloud block storage types](https://intl.cloud.tencent.com/document/product/362/2353?from_cn_redirect=1). valid values:.
-<Li>LOCAL_BASIC: local hard disk.</li>.
-<Li>LOCAL_SSD: local ssd.</li>.
-<Li>CLOUD_BASIC: general cloud disk.</li>.
-<Li>CLOUD_PREMIUM: high-performance cloud block storage</li>.
-<Li>CLOUD_SSD: cloud ssd</li>.
-<Li>CLOUD_BSSD: universal ssd cloud disk</li>.
-<Li>CLOUD_HSSD: enhanced ssd cloud disk</li>.
-<Li>CLOUD_TSSD: ultra ssd.</li>.
-<li>Default value: CLOUD_PREMIUM.</li>
+    * <p>System disk type. For restrictions on system disk types, see <a href="https://www.tencentcloud.com/document/product/362/2353?from_cn_redirect=1">Cloud Disk Types</a>. Value range:</p><li>LOCAL_BASIC: local hard disk</li><li>LOCAL_SSD: local SSD</li><li>CLOUD_BASIC: basic cloud disk</li><li>CLOUD_PREMIUM: high-performance cloud block storage</li><li>CLOUD_SSD: SSD cloud disk</li><li>CLOUD_BSSD: universal SSD cloud disk</li><li>CLOUD_HSSD: enhanced SSD cloud disk</li><li>CLOUD_TSSD: ultra-fast SSD CBS</li><li>Default value: CLOUD_PREMIUM.</li>
     */
     @SerializedName("DiskType")
     @Expose
     private String DiskType;
 
     /**
-    * System disk size, in GB. Default value: 50.
+    * <p>System disk size (GB). Default value: 50</p>
     */
     @SerializedName("DiskSize")
     @Expose
     private Long DiskSize;
 
     /**
-     * Get System disk type. for restrictions on the system disk type, see [cloud block storage types](https://intl.cloud.tencent.com/document/product/362/2353?from_cn_redirect=1). valid values:.
-<Li>LOCAL_BASIC: local hard disk.</li>.
-<Li>LOCAL_SSD: local ssd.</li>.
-<Li>CLOUD_BASIC: general cloud disk.</li>.
-<Li>CLOUD_PREMIUM: high-performance cloud block storage</li>.
-<Li>CLOUD_SSD: cloud ssd</li>.
-<Li>CLOUD_BSSD: universal ssd cloud disk</li>.
-<Li>CLOUD_HSSD: enhanced ssd cloud disk</li>.
-<Li>CLOUD_TSSD: ultra ssd.</li>.
-<li>Default value: CLOUD_PREMIUM.</li> 
-     * @return DiskType System disk type. for restrictions on the system disk type, see [cloud block storage types](https://intl.cloud.tencent.com/document/product/362/2353?from_cn_redirect=1). valid values:.
-<Li>LOCAL_BASIC: local hard disk.</li>.
-<Li>LOCAL_SSD: local ssd.</li>.
-<Li>CLOUD_BASIC: general cloud disk.</li>.
-<Li>CLOUD_PREMIUM: high-performance cloud block storage</li>.
-<Li>CLOUD_SSD: cloud ssd</li>.
-<Li>CLOUD_BSSD: universal ssd cloud disk</li>.
-<Li>CLOUD_HSSD: enhanced ssd cloud disk</li>.
-<Li>CLOUD_TSSD: ultra ssd.</li>.
-<li>Default value: CLOUD_PREMIUM.</li>
+    * <p>Whether to encrypt the system disk. TRUE means encrypted, FALSE means not encrypted. The specific disk type, region, and KMS rules are validated by CVM.</p>
+    */
+    @SerializedName("Encrypt")
+    @Expose
+    private Boolean Encrypt;
+
+    /**
+    * <p>KMS Key ID used for system disk encryption. The key validity, permission, as well as adaptability to disk type and region are validated by CVM.</p>
+    */
+    @SerializedName("KmsKeyId")
+    @Expose
+    private String KmsKeyId;
+
+    /**
+     * Get <p>System disk type. For restrictions on system disk types, see <a href="https://www.tencentcloud.com/document/product/362/2353?from_cn_redirect=1">Cloud Disk Types</a>. Value range:</p><li>LOCAL_BASIC: local hard disk</li><li>LOCAL_SSD: local SSD</li><li>CLOUD_BASIC: basic cloud disk</li><li>CLOUD_PREMIUM: high-performance cloud block storage</li><li>CLOUD_SSD: SSD cloud disk</li><li>CLOUD_BSSD: universal SSD cloud disk</li><li>CLOUD_HSSD: enhanced SSD cloud disk</li><li>CLOUD_TSSD: ultra-fast SSD CBS</li><li>Default value: CLOUD_PREMIUM.</li> 
+     * @return DiskType <p>System disk type. For restrictions on system disk types, see <a href="https://www.tencentcloud.com/document/product/362/2353?from_cn_redirect=1">Cloud Disk Types</a>. Value range:</p><li>LOCAL_BASIC: local hard disk</li><li>LOCAL_SSD: local SSD</li><li>CLOUD_BASIC: basic cloud disk</li><li>CLOUD_PREMIUM: high-performance cloud block storage</li><li>CLOUD_SSD: SSD cloud disk</li><li>CLOUD_BSSD: universal SSD cloud disk</li><li>CLOUD_HSSD: enhanced SSD cloud disk</li><li>CLOUD_TSSD: ultra-fast SSD CBS</li><li>Default value: CLOUD_PREMIUM.</li>
      */
     public String getDiskType() {
         return this.DiskType;
     }
 
     /**
-     * Set System disk type. for restrictions on the system disk type, see [cloud block storage types](https://intl.cloud.tencent.com/document/product/362/2353?from_cn_redirect=1). valid values:.
-<Li>LOCAL_BASIC: local hard disk.</li>.
-<Li>LOCAL_SSD: local ssd.</li>.
-<Li>CLOUD_BASIC: general cloud disk.</li>.
-<Li>CLOUD_PREMIUM: high-performance cloud block storage</li>.
-<Li>CLOUD_SSD: cloud ssd</li>.
-<Li>CLOUD_BSSD: universal ssd cloud disk</li>.
-<Li>CLOUD_HSSD: enhanced ssd cloud disk</li>.
-<Li>CLOUD_TSSD: ultra ssd.</li>.
-<li>Default value: CLOUD_PREMIUM.</li>
-     * @param DiskType System disk type. for restrictions on the system disk type, see [cloud block storage types](https://intl.cloud.tencent.com/document/product/362/2353?from_cn_redirect=1). valid values:.
-<Li>LOCAL_BASIC: local hard disk.</li>.
-<Li>LOCAL_SSD: local ssd.</li>.
-<Li>CLOUD_BASIC: general cloud disk.</li>.
-<Li>CLOUD_PREMIUM: high-performance cloud block storage</li>.
-<Li>CLOUD_SSD: cloud ssd</li>.
-<Li>CLOUD_BSSD: universal ssd cloud disk</li>.
-<Li>CLOUD_HSSD: enhanced ssd cloud disk</li>.
-<Li>CLOUD_TSSD: ultra ssd.</li>.
-<li>Default value: CLOUD_PREMIUM.</li>
+     * Set <p>System disk type. For restrictions on system disk types, see <a href="https://www.tencentcloud.com/document/product/362/2353?from_cn_redirect=1">Cloud Disk Types</a>. Value range:</p><li>LOCAL_BASIC: local hard disk</li><li>LOCAL_SSD: local SSD</li><li>CLOUD_BASIC: basic cloud disk</li><li>CLOUD_PREMIUM: high-performance cloud block storage</li><li>CLOUD_SSD: SSD cloud disk</li><li>CLOUD_BSSD: universal SSD cloud disk</li><li>CLOUD_HSSD: enhanced SSD cloud disk</li><li>CLOUD_TSSD: ultra-fast SSD CBS</li><li>Default value: CLOUD_PREMIUM.</li>
+     * @param DiskType <p>System disk type. For restrictions on system disk types, see <a href="https://www.tencentcloud.com/document/product/362/2353?from_cn_redirect=1">Cloud Disk Types</a>. Value range:</p><li>LOCAL_BASIC: local hard disk</li><li>LOCAL_SSD: local SSD</li><li>CLOUD_BASIC: basic cloud disk</li><li>CLOUD_PREMIUM: high-performance cloud block storage</li><li>CLOUD_SSD: SSD cloud disk</li><li>CLOUD_BSSD: universal SSD cloud disk</li><li>CLOUD_HSSD: enhanced SSD cloud disk</li><li>CLOUD_TSSD: ultra-fast SSD CBS</li><li>Default value: CLOUD_PREMIUM.</li>
      */
     public void setDiskType(String DiskType) {
         this.DiskType = DiskType;
     }
 
     /**
-     * Get System disk size, in GB. Default value: 50. 
-     * @return DiskSize System disk size, in GB. Default value: 50.
+     * Get <p>System disk size (GB). Default value: 50</p> 
+     * @return DiskSize <p>System disk size (GB). Default value: 50</p>
      */
     public Long getDiskSize() {
         return this.DiskSize;
     }
 
     /**
-     * Set System disk size, in GB. Default value: 50.
-     * @param DiskSize System disk size, in GB. Default value: 50.
+     * Set <p>System disk size (GB). Default value: 50</p>
+     * @param DiskSize <p>System disk size (GB). Default value: 50</p>
      */
     public void setDiskSize(Long DiskSize) {
         this.DiskSize = DiskSize;
+    }
+
+    /**
+     * Get <p>Whether to encrypt the system disk. TRUE means encrypted, FALSE means not encrypted. The specific disk type, region, and KMS rules are validated by CVM.</p> 
+     * @return Encrypt <p>Whether to encrypt the system disk. TRUE means encrypted, FALSE means not encrypted. The specific disk type, region, and KMS rules are validated by CVM.</p>
+     */
+    public Boolean getEncrypt() {
+        return this.Encrypt;
+    }
+
+    /**
+     * Set <p>Whether to encrypt the system disk. TRUE means encrypted, FALSE means not encrypted. The specific disk type, region, and KMS rules are validated by CVM.</p>
+     * @param Encrypt <p>Whether to encrypt the system disk. TRUE means encrypted, FALSE means not encrypted. The specific disk type, region, and KMS rules are validated by CVM.</p>
+     */
+    public void setEncrypt(Boolean Encrypt) {
+        this.Encrypt = Encrypt;
+    }
+
+    /**
+     * Get <p>KMS Key ID used for system disk encryption. The key validity, permission, as well as adaptability to disk type and region are validated by CVM.</p> 
+     * @return KmsKeyId <p>KMS Key ID used for system disk encryption. The key validity, permission, as well as adaptability to disk type and region are validated by CVM.</p>
+     */
+    public String getKmsKeyId() {
+        return this.KmsKeyId;
+    }
+
+    /**
+     * Set <p>KMS Key ID used for system disk encryption. The key validity, permission, as well as adaptability to disk type and region are validated by CVM.</p>
+     * @param KmsKeyId <p>KMS Key ID used for system disk encryption. The key validity, permission, as well as adaptability to disk type and region are validated by CVM.</p>
+     */
+    public void setKmsKeyId(String KmsKeyId) {
+        this.KmsKeyId = KmsKeyId;
     }
 
     public SystemDisk() {
@@ -128,6 +129,12 @@ public class SystemDisk extends AbstractModel {
         if (source.DiskSize != null) {
             this.DiskSize = new Long(source.DiskSize);
         }
+        if (source.Encrypt != null) {
+            this.Encrypt = new Boolean(source.Encrypt);
+        }
+        if (source.KmsKeyId != null) {
+            this.KmsKeyId = new String(source.KmsKeyId);
+        }
     }
 
 
@@ -137,6 +144,8 @@ public class SystemDisk extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DiskType", this.DiskType);
         this.setParamSimple(map, prefix + "DiskSize", this.DiskSize);
+        this.setParamSimple(map, prefix + "Encrypt", this.Encrypt);
+        this.setParamSimple(map, prefix + "KmsKeyId", this.KmsKeyId);
 
     }
 }

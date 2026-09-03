@@ -39,6 +39,17 @@ public class TioneClient extends AbstractClient{
     }
 
     /**
+     *This API is used to create a model training task.
+     * @param req CreateTrainingTaskRequest
+     * @return CreateTrainingTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateTrainingTaskResponse CreateTrainingTask(CreateTrainingTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateTrainingTask", CreateTrainingTaskResponse.class);
+    }
+
+    /**
      *This API is used to list online inference service groups.
      * @param req DescribeModelServiceGroupsRequest
      * @return DescribeModelServiceGroupsResponse

@@ -171,7 +171,9 @@ public class DescribeModelServiceGroupsRequest extends AbstractModel {
     /**
      * Get Service classification. 
      * @return ServiceCategory Service classification.
+     * @deprecated
      */
+    @Deprecated
     public String getServiceCategory() {
         return this.ServiceCategory;
     }
@@ -179,7 +181,9 @@ public class DescribeModelServiceGroupsRequest extends AbstractModel {
     /**
      * Set Service classification.
      * @param ServiceCategory Service classification.
+     * @deprecated
      */
+    @Deprecated
     public void setServiceCategory(String ServiceCategory) {
         this.ServiceCategory = ServiceCategory;
     }

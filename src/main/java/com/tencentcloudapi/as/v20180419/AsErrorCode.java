@@ -27,7 +27,7 @@ public enum AsErrorCode {
      /* The notification service API call failed. */
      INTERNALERROR_CALLNOTIFICATIONERROR("InternalError.CallNotificationError"),
      
-     /* The STS API call failed. */
+     /* STS API call failure. */
      INTERNALERROR_CALLSTSERROR("InternalError.CallStsError"),
      
      /* Failed to call the Tencent Automation Tools (TAT) API. */
@@ -78,7 +78,7 @@ public enum AsErrorCode {
      /* The specified CLB does not exist in the current scaling group. */
      INVALIDPARAMETER_LOADBALANCERNOTINAUTOSCALINGGROUP("InvalidParameter.LoadBalancerNotInAutoScalingGroup"),
      
-     /* A parameter is missing. One of the two parameters must be specified. */
+     /* Missing parameter. One of the two parameters must be specified. */
      INVALIDPARAMETER_MUSTONEPARAMETER("InvalidParameter.MustOneParameter"),
      
      /* This parameter has been disused. */
@@ -86,6 +86,9 @@ public enum AsErrorCode {
      
      /* Some parameters cannot coexist and should be deleted. */
      INVALIDPARAMETER_PARAMETERMUSTBEDELETED("InvalidParameter.ParameterMustBeDeleted"),
+     
+     /* NetworkInterfaces does not support combined use with basic network, IPv6, or spot instance billing mode. */
+     INVALIDPARAMETERCOMBINATION_NETWORKINTERFACESCONFLICT("InvalidParameterCombination.NetworkInterfacesConflict"),
      
      /* The two parameters specified conflict and cannot co-exist. */
      INVALIDPARAMETERCONFLICT("InvalidParameterConflict"),
@@ -192,7 +195,7 @@ public enum AsErrorCode {
      /* Invalid instance type. */
      INVALIDPARAMETERVALUE_INVALIDINSTANCETYPE("InvalidParameterValue.InvalidInstanceType"),
      
-     /* Invalid launch configuration */
+     /* Invalid launch configuration input. */
      INVALIDPARAMETERVALUE_INVALIDLAUNCHCONFIGURATION("InvalidParameterValue.InvalidLaunchConfiguration"),
      
      /* Invalid launch configuration ID. */
@@ -213,7 +216,7 @@ public enum AsErrorCode {
      /* Invalid security group ID. */
      INVALIDPARAMETERVALUE_INVALIDSECURITYGROUPID("InvalidParameterValue.InvalidSecurityGroupId"),
      
-     /* Invalid snapshot ID. */
+     /* Snapshot ID is invalid. */
      INVALIDPARAMETERVALUE_INVALIDSNAPSHOTID("InvalidParameterValue.InvalidSnapshotId"),
      
      /* Invalid subnet ID. */
@@ -234,7 +237,7 @@ public enum AsErrorCode {
      /* The value exceeds the limit. */
      INVALIDPARAMETERVALUE_LIMITEXCEEDED("InvalidParameterValue.LimitExceeded"),
      
-     /* Target group listeners are not supported. */
+     /* Listeners of the target group type are not supported. */
      INVALIDPARAMETERVALUE_LISTENERTARGETTYPENOTSUPPORTED("InvalidParameterValue.ListenerTargetTypeNotSupported"),
      
      /* The maximum additional quantity is too large. */
@@ -242,6 +245,12 @@ public enum AsErrorCode {
      
      /* The bandwidth package ID is required. */
      INVALIDPARAMETERVALUE_MISSINGBANDWIDTHPACKAGEID("InvalidParameterValue.MissingBandwidthPackageId"),
+     
+     /* Invalid Multi-NIC parameter NetworkInterfaces. */
+     INVALIDPARAMETERVALUE_NETWORKINTERFACESINVALID("InvalidParameterValue.NetworkInterfacesInvalid"),
+     
+     /* The number of network interface cards in NetworkInterfaces exceeds the upper limit 17. */
+     INVALIDPARAMETERVALUE_NETWORKINTERFACESLIMITEXCEEDED("InvalidParameterValue.NetworkInterfacesLimitExceeded"),
      
      /* No resource permission. */
      INVALIDPARAMETERVALUE_NORESOURCEPERMISSION("InvalidParameterValue.NoResourcePermission"),
@@ -252,7 +261,7 @@ public enum AsErrorCode {
      /* The account only supports VPCs. */
      INVALIDPARAMETERVALUE_ONLYVPC("InvalidParameterValue.OnlyVpc"),
      
-     /* The project ID does not exist. */
+     /* Project ID does not exist. */
      INVALIDPARAMETERVALUE_PROJECTIDNOTFOUND("InvalidParameterValue.ProjectIdNotFound"),
      
      /* The value is outside the specified range. */
@@ -324,7 +333,7 @@ public enum AsErrorCode {
      /* Too many values for the specified filter */
      LIMITEXCEEDED_FILTERVALUESTOOLONG("LimitExceeded.FilterValuesTooLong"),
      
-     /* You are short of the launch configuration quota. */
+     /* Insufficient launch configuration quotas. */
      LIMITEXCEEDED_LAUNCHCONFIGURATIONQUOTANOTENOUGH("LimitExceeded.LaunchConfigurationQuotaNotEnough"),
      
      /* The maximum number of instances exceeds the limit. */
@@ -348,7 +357,7 @@ public enum AsErrorCode {
      /* A parameter is missing in a specific scenario. */
      MISSINGPARAMETER_INSCENARIO("MissingParameter.InScenario"),
      
-     /* The `InstanceMarketOptions` parameter of the spot instance is missing. */
+     /* The InstanceMarketOptions parameter is required for spot billing type. */
      MISSINGPARAMETER_INSTANCEMARKETOPTIONS("MissingParameter.InstanceMarketOptions"),
      
      /* The auto scaling group is performing a scaling activity. */
@@ -462,7 +471,7 @@ public enum AsErrorCode {
      /* The instance and the auto scaling group are in different VPCs. */
      RESOURCEUNAVAILABLE_CVMVPCINCONSISTENT("ResourceUnavailable.CvmVpcInconsistent"),
      
-     /* You cannot modify the VPC of a scaling group bound with a load balancer. */
+     /* Scaling groups bound to a load balancer cannot modify the Vpc. */
      RESOURCEUNAVAILABLE_FORBIDDENMODIFYVPC("ResourceUnavailable.ForbiddenModifyVpc"),
      
      /* The instance reinstallation quotation failed, because the new image conflicts with other parameters of the instance or the new image does not exist. */
@@ -525,7 +534,7 @@ public enum AsErrorCode {
      /* The specified availability zone is unavailable. */
      RESOURCEUNAVAILABLE_ZONEUNAVAILABLE("ResourceUnavailable.ZoneUnavailable"),
      
-     /* You have not assigned the CAM role AS-QCSRole to Auto Scaling. Please go to the AS console to complete authorization first. */
+     /* Unauthorized preset service role AS_QCSRole for Auto Scaling. Please visit the Auto Scaling console to authorize. */
      UNAUTHORIZEDOPERATION_AUTOSCALINGROLEUNAUTHORIZED("UnauthorizedOperation.AutoScalingRoleUnauthorized"),
      
      /* Unsupported operation. */

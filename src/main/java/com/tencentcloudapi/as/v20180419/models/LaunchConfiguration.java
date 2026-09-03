@@ -24,797 +24,785 @@ import java.util.HashMap;
 public class LaunchConfiguration extends AbstractModel {
 
     /**
-    * Project ID of the instance.
+    * <p>Project ID of the instance.</p>
     */
     @SerializedName("ProjectId")
     @Expose
     private Long ProjectId;
 
     /**
-    * Launch configuration ID
+    * <p>Launch configuration ID.</p>
     */
     @SerializedName("LaunchConfigurationId")
     @Expose
     private String LaunchConfigurationId;
 
     /**
-    * Launch configuration name.
+    * <p>Startup configuration name.</p>
     */
     @SerializedName("LaunchConfigurationName")
     @Expose
     private String LaunchConfigurationName;
 
     /**
-    * Instance model.
+    * <p>Instance model.</p>
     */
     @SerializedName("InstanceType")
     @Expose
     private String InstanceType;
 
     /**
-    * Information of the instance's system disk configuration.
+    * <p>Instance system disk configuration information.</p>
     */
     @SerializedName("SystemDisk")
     @Expose
     private SystemDisk SystemDisk;
 
     /**
-    * Information of the instance's data disk configuration.
+    * <p>Instance data disk configuration information.</p>
     */
     @SerializedName("DataDisks")
     @Expose
     private DataDisk [] DataDisks;
 
     /**
-    * Instance login settings.
+    * <p>Instance login settings.</p>
     */
     @SerializedName("LoginSettings")
     @Expose
     private LimitedLoginSettings LoginSettings;
 
     /**
-    * Information of the public network bandwidth configuration.
+    * <p>Public network bandwidth-related information settings.</p>
     */
     @SerializedName("InternetAccessible")
     @Expose
     private InternetAccessible InternetAccessible;
 
     /**
-    * Security group of the instance.
+    * <p>Security group to which an instance belongs.</p>
     */
     @SerializedName("SecurityGroupIds")
     @Expose
     private String [] SecurityGroupIds;
 
     /**
-    * Auto scaling group associated with the launch configuration.
+    * <p>The scaling group bound to the launch configuration.</p>
     */
     @SerializedName("AutoScalingGroupAbstractSet")
     @Expose
     private AutoScalingGroupAbstract [] AutoScalingGroupAbstractSet;
 
     /**
-    * Custom data.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Custom data.</p>
     */
     @SerializedName("UserData")
     @Expose
     private String UserData;
 
     /**
-    * Specifies the startup configuration creation time. uses UTC standard time.
+    * <p>Launch configuration creation time, in standard <code>UTC</code> time.</p>
     */
     @SerializedName("CreatedTime")
     @Expose
     private String CreatedTime;
 
     /**
-    * Conditions of enhancement services for the instance and their settings.
+    * <p>Enhanced services enabling situation of the instance and its settings.</p>
     */
     @SerializedName("EnhancedService")
     @Expose
     private EnhancedService EnhancedService;
 
     /**
-    * Image ID.
+    * <p>Image ID.</p>
     */
     @SerializedName("ImageId")
     @Expose
     private String ImageId;
 
     /**
-    * Current status of the launch configuration. Valid values: <li>NORMAL: Normal.</li> <li>IMAGE_ABNORMAL: Image exception in the launch configuration.</li> <li>CBS_SNAP_ABNORMAL: Exception with data disk snapshot in the launch configuration.</li> <li>SECURITY_GROUP_ABNORMAL: Security group exception in the launch configuration.</li>
+    * <p>Current status of the launch configuration. Value range: <li>NORMAL: Normal</li><li>IMAGE_ABNORMAL: The launch configuration image is exceptional</li><li>CBS_SNAP_ABNORMAL: The launch configuration data disk snapshot is exceptional</li><li>SECURITY_GROUP_ABNORMAL: The launch configuration security group is exceptional</li></p>
     */
     @SerializedName("LaunchConfigurationStatus")
     @Expose
     private String LaunchConfigurationStatus;
 
     /**
-    * Instance billing type. valid values:.
-<Li>POSTPAID_BY_HOUR: pay-as-you-go hourly</li>.
-<Li>SPOTPAID: spot payment</li>.
-<Li>PREPAID: prepaid, i.e., monthly subscription</li>.
-<Li>CDCPAID: dedicated cluster payment</li>.
+    * <p>Instance billing type. The value range is as follows:</p><li>POSTPAID_BY_HOUR: hourly postpaid</li><li>SPOTPAID: spot payment</li><li>PREPAID: prepaid, i.e. monthly subscription</li><li>CDCPAID: dedicated cluster payment</li>
     */
     @SerializedName("InstanceChargeType")
     @Expose
     private String InstanceChargeType;
 
     /**
-    * Market options of the instance, such as parameters related to spot instances. This parameter is required for spot instances.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Market-related options of the instance, such as spot instance parameters. If the payment mode of the specified instance is spot payment, this parameter is required.</p>
     */
     @SerializedName("InstanceMarketOptions")
     @Expose
     private InstanceMarketOptionsRequest InstanceMarketOptions;
 
     /**
-    * List of instance models.
+    * <p>Instance model list.</p>
     */
     @SerializedName("InstanceTypes")
     @Expose
     private String [] InstanceTypes;
 
     /**
-    * List of instance tags, which will be added to instances created by the scale-out activity. Up to 10 tags allowed.
+    * <p>Instance tag list. Instances scaled out will automatically come with tags, supporting up to 10 tags.</p>
     */
     @SerializedName("InstanceTags")
     @Expose
     private InstanceTag [] InstanceTags;
 
     /**
-    * Tag list. this parameter specifies tags only used for binding the launch configuration and will not be passed to CVM instances scaled out based on it.
+    * <p>Tag list. The tags in this parameter are only used to bind launch configurations and will not be passed to CVM instances scaled out based on the launch configuration.</p>
     */
     @SerializedName("Tags")
     @Expose
     private Tag [] Tags;
 
     /**
-    * Version
+    * <p>Version number.</p>
     */
     @SerializedName("VersionNumber")
     @Expose
     private Long VersionNumber;
 
     /**
-    * Last update time is in standard UTC time.
+    * <p>Update time in standard <code>UTC</code> format.</p>
     */
     @SerializedName("UpdatedTime")
     @Expose
     private String UpdatedTime;
 
     /**
-    * Role name of the CAM role. can be obtained from roleName in the return value from the [DescribeRoleList API](https://intl.cloud.tencent.com/document/product/598/36223?from_cn_redirect=1).
+    * <p>CAM role name, which can be obtained from the roleName in the return value from the <a href="https://www.tencentcloud.com/document/product/598/36223?from_cn_redirect=1">DescribeRoleList</a> API.</p>
     */
     @SerializedName("CamRoleName")
     @Expose
     private String CamRoleName;
 
     /**
-    * Value of InstanceTypesCheckPolicy upon the last operation.
+    * <p>The value of InstanceTypesCheckPolicy last time when operating.</p>
     */
     @SerializedName("LastOperationInstanceTypesCheckPolicy")
     @Expose
     private String LastOperationInstanceTypesCheckPolicy;
 
     /**
-    * CVM hostname settings.
+    * <p>Related settings for the CVM host name (HostName).</p>
     */
     @SerializedName("HostNameSettings")
     @Expose
     private HostNameSettings HostNameSettings;
 
     /**
-    * Settings of CVM instance names
+    * <p>Related settings for the cloud server instance name (InstanceName).</p>
     */
     @SerializedName("InstanceNameSettings")
     @Expose
     private InstanceNameSettings InstanceNameSettings;
 
     /**
-    * Details of the monthly subscription, including the purchase period, auto-renewal. It is required if the `InstanceChargeType` is `PREPAID`.
+    * <p>Prepaid mode, i.e., parameter settings related to monthly/annual subscription. By specifying this parameter, you can specify the purchase duration of annual and monthly subscription instances, whether to enable auto-renewal, and other attributes. This parameter is required if the billing mode for the specified instance is prepaid.</p>
     */
     @SerializedName("InstanceChargePrepaid")
     @Expose
     private InstanceChargePrepaid InstanceChargePrepaid;
 
     /**
-    * Cloud disk type selection policy. Valid values: <li>ORIGINAL: Use the set cloud disk type.</li> <li>AUTOMATIC: Automatically select available cloud disk types in the current availability zone.</li>
+    * <p>Cloud disk type selection policy. Parameter value range: <li>ORIGINAL: use the set cloud disk type</li><li>AUTOMATIC: automatically select available cloud disk types in the current AZ</li></p>
     */
     @SerializedName("DiskTypePolicy")
     @Expose
     private String DiskTypePolicy;
 
     /**
-    * HPC ID<br>
-Note: This field is default to empty
+    * <p>Hyper Computing Cluster ID.<br><br>Note: This field is empty by default.</p>
     */
     @SerializedName("HpcClusterId")
     @Expose
     private String HpcClusterId;
 
     /**
-    * IPv6 public network bandwidth configuration.
+    * <p>IPv6 public network bandwidth-related information settings.</p>
     */
     @SerializedName("IPv6InternetAccessible")
     @Expose
     private IPv6InternetAccessible IPv6InternetAccessible;
 
     /**
-    * Placement group ID, supporting specification of only one.
+    * <p>Placement Group id. Only one can be specified.</p>
     */
     @SerializedName("DisasterRecoverGroupIds")
     @Expose
     private String [] DisasterRecoverGroupIds;
 
     /**
-    * Image family name.
+    * <p>Image family name.</p>
     */
     @SerializedName("ImageFamily")
     @Expose
     private String ImageFamily;
 
     /**
-    * CDC ID.
+    * <p>Local dedicated cluster ID.</p>
     */
     @SerializedName("DedicatedClusterId")
     @Expose
     private String DedicatedClusterId;
 
     /**
-     * Get Project ID of the instance. 
-     * @return ProjectId Project ID of the instance.
+    * <p>ENI configuration of the launch configuration.</p>
+    */
+    @SerializedName("NetworkInterfaces")
+    @Expose
+    private NetworkInterface [] NetworkInterfaces;
+
+    /**
+     * Get <p>Project ID of the instance.</p> 
+     * @return ProjectId <p>Project ID of the instance.</p>
      */
     public Long getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set Project ID of the instance.
-     * @param ProjectId Project ID of the instance.
+     * Set <p>Project ID of the instance.</p>
+     * @param ProjectId <p>Project ID of the instance.</p>
      */
     public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;
     }
 
     /**
-     * Get Launch configuration ID 
-     * @return LaunchConfigurationId Launch configuration ID
+     * Get <p>Launch configuration ID.</p> 
+     * @return LaunchConfigurationId <p>Launch configuration ID.</p>
      */
     public String getLaunchConfigurationId() {
         return this.LaunchConfigurationId;
     }
 
     /**
-     * Set Launch configuration ID
-     * @param LaunchConfigurationId Launch configuration ID
+     * Set <p>Launch configuration ID.</p>
+     * @param LaunchConfigurationId <p>Launch configuration ID.</p>
      */
     public void setLaunchConfigurationId(String LaunchConfigurationId) {
         this.LaunchConfigurationId = LaunchConfigurationId;
     }
 
     /**
-     * Get Launch configuration name. 
-     * @return LaunchConfigurationName Launch configuration name.
+     * Get <p>Startup configuration name.</p> 
+     * @return LaunchConfigurationName <p>Startup configuration name.</p>
      */
     public String getLaunchConfigurationName() {
         return this.LaunchConfigurationName;
     }
 
     /**
-     * Set Launch configuration name.
-     * @param LaunchConfigurationName Launch configuration name.
+     * Set <p>Startup configuration name.</p>
+     * @param LaunchConfigurationName <p>Startup configuration name.</p>
      */
     public void setLaunchConfigurationName(String LaunchConfigurationName) {
         this.LaunchConfigurationName = LaunchConfigurationName;
     }
 
     /**
-     * Get Instance model. 
-     * @return InstanceType Instance model.
+     * Get <p>Instance model.</p> 
+     * @return InstanceType <p>Instance model.</p>
      */
     public String getInstanceType() {
         return this.InstanceType;
     }
 
     /**
-     * Set Instance model.
-     * @param InstanceType Instance model.
+     * Set <p>Instance model.</p>
+     * @param InstanceType <p>Instance model.</p>
      */
     public void setInstanceType(String InstanceType) {
         this.InstanceType = InstanceType;
     }
 
     /**
-     * Get Information of the instance's system disk configuration. 
-     * @return SystemDisk Information of the instance's system disk configuration.
+     * Get <p>Instance system disk configuration information.</p> 
+     * @return SystemDisk <p>Instance system disk configuration information.</p>
      */
     public SystemDisk getSystemDisk() {
         return this.SystemDisk;
     }
 
     /**
-     * Set Information of the instance's system disk configuration.
-     * @param SystemDisk Information of the instance's system disk configuration.
+     * Set <p>Instance system disk configuration information.</p>
+     * @param SystemDisk <p>Instance system disk configuration information.</p>
      */
     public void setSystemDisk(SystemDisk SystemDisk) {
         this.SystemDisk = SystemDisk;
     }
 
     /**
-     * Get Information of the instance's data disk configuration. 
-     * @return DataDisks Information of the instance's data disk configuration.
+     * Get <p>Instance data disk configuration information.</p> 
+     * @return DataDisks <p>Instance data disk configuration information.</p>
      */
     public DataDisk [] getDataDisks() {
         return this.DataDisks;
     }
 
     /**
-     * Set Information of the instance's data disk configuration.
-     * @param DataDisks Information of the instance's data disk configuration.
+     * Set <p>Instance data disk configuration information.</p>
+     * @param DataDisks <p>Instance data disk configuration information.</p>
      */
     public void setDataDisks(DataDisk [] DataDisks) {
         this.DataDisks = DataDisks;
     }
 
     /**
-     * Get Instance login settings. 
-     * @return LoginSettings Instance login settings.
+     * Get <p>Instance login settings.</p> 
+     * @return LoginSettings <p>Instance login settings.</p>
      */
     public LimitedLoginSettings getLoginSettings() {
         return this.LoginSettings;
     }
 
     /**
-     * Set Instance login settings.
-     * @param LoginSettings Instance login settings.
+     * Set <p>Instance login settings.</p>
+     * @param LoginSettings <p>Instance login settings.</p>
      */
     public void setLoginSettings(LimitedLoginSettings LoginSettings) {
         this.LoginSettings = LoginSettings;
     }
 
     /**
-     * Get Information of the public network bandwidth configuration. 
-     * @return InternetAccessible Information of the public network bandwidth configuration.
+     * Get <p>Public network bandwidth-related information settings.</p> 
+     * @return InternetAccessible <p>Public network bandwidth-related information settings.</p>
      */
     public InternetAccessible getInternetAccessible() {
         return this.InternetAccessible;
     }
 
     /**
-     * Set Information of the public network bandwidth configuration.
-     * @param InternetAccessible Information of the public network bandwidth configuration.
+     * Set <p>Public network bandwidth-related information settings.</p>
+     * @param InternetAccessible <p>Public network bandwidth-related information settings.</p>
      */
     public void setInternetAccessible(InternetAccessible InternetAccessible) {
         this.InternetAccessible = InternetAccessible;
     }
 
     /**
-     * Get Security group of the instance. 
-     * @return SecurityGroupIds Security group of the instance.
+     * Get <p>Security group to which an instance belongs.</p> 
+     * @return SecurityGroupIds <p>Security group to which an instance belongs.</p>
      */
     public String [] getSecurityGroupIds() {
         return this.SecurityGroupIds;
     }
 
     /**
-     * Set Security group of the instance.
-     * @param SecurityGroupIds Security group of the instance.
+     * Set <p>Security group to which an instance belongs.</p>
+     * @param SecurityGroupIds <p>Security group to which an instance belongs.</p>
      */
     public void setSecurityGroupIds(String [] SecurityGroupIds) {
         this.SecurityGroupIds = SecurityGroupIds;
     }
 
     /**
-     * Get Auto scaling group associated with the launch configuration. 
-     * @return AutoScalingGroupAbstractSet Auto scaling group associated with the launch configuration.
+     * Get <p>The scaling group bound to the launch configuration.</p> 
+     * @return AutoScalingGroupAbstractSet <p>The scaling group bound to the launch configuration.</p>
      */
     public AutoScalingGroupAbstract [] getAutoScalingGroupAbstractSet() {
         return this.AutoScalingGroupAbstractSet;
     }
 
     /**
-     * Set Auto scaling group associated with the launch configuration.
-     * @param AutoScalingGroupAbstractSet Auto scaling group associated with the launch configuration.
+     * Set <p>The scaling group bound to the launch configuration.</p>
+     * @param AutoScalingGroupAbstractSet <p>The scaling group bound to the launch configuration.</p>
      */
     public void setAutoScalingGroupAbstractSet(AutoScalingGroupAbstract [] AutoScalingGroupAbstractSet) {
         this.AutoScalingGroupAbstractSet = AutoScalingGroupAbstractSet;
     }
 
     /**
-     * Get Custom data.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return UserData Custom data.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Custom data.</p> 
+     * @return UserData <p>Custom data.</p>
      */
     public String getUserData() {
         return this.UserData;
     }
 
     /**
-     * Set Custom data.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param UserData Custom data.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Custom data.</p>
+     * @param UserData <p>Custom data.</p>
      */
     public void setUserData(String UserData) {
         this.UserData = UserData;
     }
 
     /**
-     * Get Specifies the startup configuration creation time. uses UTC standard time. 
-     * @return CreatedTime Specifies the startup configuration creation time. uses UTC standard time.
+     * Get <p>Launch configuration creation time, in standard <code>UTC</code> time.</p> 
+     * @return CreatedTime <p>Launch configuration creation time, in standard <code>UTC</code> time.</p>
      */
     public String getCreatedTime() {
         return this.CreatedTime;
     }
 
     /**
-     * Set Specifies the startup configuration creation time. uses UTC standard time.
-     * @param CreatedTime Specifies the startup configuration creation time. uses UTC standard time.
+     * Set <p>Launch configuration creation time, in standard <code>UTC</code> time.</p>
+     * @param CreatedTime <p>Launch configuration creation time, in standard <code>UTC</code> time.</p>
      */
     public void setCreatedTime(String CreatedTime) {
         this.CreatedTime = CreatedTime;
     }
 
     /**
-     * Get Conditions of enhancement services for the instance and their settings. 
-     * @return EnhancedService Conditions of enhancement services for the instance and their settings.
+     * Get <p>Enhanced services enabling situation of the instance and its settings.</p> 
+     * @return EnhancedService <p>Enhanced services enabling situation of the instance and its settings.</p>
      */
     public EnhancedService getEnhancedService() {
         return this.EnhancedService;
     }
 
     /**
-     * Set Conditions of enhancement services for the instance and their settings.
-     * @param EnhancedService Conditions of enhancement services for the instance and their settings.
+     * Set <p>Enhanced services enabling situation of the instance and its settings.</p>
+     * @param EnhancedService <p>Enhanced services enabling situation of the instance and its settings.</p>
      */
     public void setEnhancedService(EnhancedService EnhancedService) {
         this.EnhancedService = EnhancedService;
     }
 
     /**
-     * Get Image ID. 
-     * @return ImageId Image ID.
+     * Get <p>Image ID.</p> 
+     * @return ImageId <p>Image ID.</p>
      */
     public String getImageId() {
         return this.ImageId;
     }
 
     /**
-     * Set Image ID.
-     * @param ImageId Image ID.
+     * Set <p>Image ID.</p>
+     * @param ImageId <p>Image ID.</p>
      */
     public void setImageId(String ImageId) {
         this.ImageId = ImageId;
     }
 
     /**
-     * Get Current status of the launch configuration. Valid values: <li>NORMAL: Normal.</li> <li>IMAGE_ABNORMAL: Image exception in the launch configuration.</li> <li>CBS_SNAP_ABNORMAL: Exception with data disk snapshot in the launch configuration.</li> <li>SECURITY_GROUP_ABNORMAL: Security group exception in the launch configuration.</li> 
-     * @return LaunchConfigurationStatus Current status of the launch configuration. Valid values: <li>NORMAL: Normal.</li> <li>IMAGE_ABNORMAL: Image exception in the launch configuration.</li> <li>CBS_SNAP_ABNORMAL: Exception with data disk snapshot in the launch configuration.</li> <li>SECURITY_GROUP_ABNORMAL: Security group exception in the launch configuration.</li>
+     * Get <p>Current status of the launch configuration. Value range: <li>NORMAL: Normal</li><li>IMAGE_ABNORMAL: The launch configuration image is exceptional</li><li>CBS_SNAP_ABNORMAL: The launch configuration data disk snapshot is exceptional</li><li>SECURITY_GROUP_ABNORMAL: The launch configuration security group is exceptional</li></p> 
+     * @return LaunchConfigurationStatus <p>Current status of the launch configuration. Value range: <li>NORMAL: Normal</li><li>IMAGE_ABNORMAL: The launch configuration image is exceptional</li><li>CBS_SNAP_ABNORMAL: The launch configuration data disk snapshot is exceptional</li><li>SECURITY_GROUP_ABNORMAL: The launch configuration security group is exceptional</li></p>
      */
     public String getLaunchConfigurationStatus() {
         return this.LaunchConfigurationStatus;
     }
 
     /**
-     * Set Current status of the launch configuration. Valid values: <li>NORMAL: Normal.</li> <li>IMAGE_ABNORMAL: Image exception in the launch configuration.</li> <li>CBS_SNAP_ABNORMAL: Exception with data disk snapshot in the launch configuration.</li> <li>SECURITY_GROUP_ABNORMAL: Security group exception in the launch configuration.</li>
-     * @param LaunchConfigurationStatus Current status of the launch configuration. Valid values: <li>NORMAL: Normal.</li> <li>IMAGE_ABNORMAL: Image exception in the launch configuration.</li> <li>CBS_SNAP_ABNORMAL: Exception with data disk snapshot in the launch configuration.</li> <li>SECURITY_GROUP_ABNORMAL: Security group exception in the launch configuration.</li>
+     * Set <p>Current status of the launch configuration. Value range: <li>NORMAL: Normal</li><li>IMAGE_ABNORMAL: The launch configuration image is exceptional</li><li>CBS_SNAP_ABNORMAL: The launch configuration data disk snapshot is exceptional</li><li>SECURITY_GROUP_ABNORMAL: The launch configuration security group is exceptional</li></p>
+     * @param LaunchConfigurationStatus <p>Current status of the launch configuration. Value range: <li>NORMAL: Normal</li><li>IMAGE_ABNORMAL: The launch configuration image is exceptional</li><li>CBS_SNAP_ABNORMAL: The launch configuration data disk snapshot is exceptional</li><li>SECURITY_GROUP_ABNORMAL: The launch configuration security group is exceptional</li></p>
      */
     public void setLaunchConfigurationStatus(String LaunchConfigurationStatus) {
         this.LaunchConfigurationStatus = LaunchConfigurationStatus;
     }
 
     /**
-     * Get Instance billing type. valid values:.
-<Li>POSTPAID_BY_HOUR: pay-as-you-go hourly</li>.
-<Li>SPOTPAID: spot payment</li>.
-<Li>PREPAID: prepaid, i.e., monthly subscription</li>.
-<Li>CDCPAID: dedicated cluster payment</li>. 
-     * @return InstanceChargeType Instance billing type. valid values:.
-<Li>POSTPAID_BY_HOUR: pay-as-you-go hourly</li>.
-<Li>SPOTPAID: spot payment</li>.
-<Li>PREPAID: prepaid, i.e., monthly subscription</li>.
-<Li>CDCPAID: dedicated cluster payment</li>.
+     * Get <p>Instance billing type. The value range is as follows:</p><li>POSTPAID_BY_HOUR: hourly postpaid</li><li>SPOTPAID: spot payment</li><li>PREPAID: prepaid, i.e. monthly subscription</li><li>CDCPAID: dedicated cluster payment</li> 
+     * @return InstanceChargeType <p>Instance billing type. The value range is as follows:</p><li>POSTPAID_BY_HOUR: hourly postpaid</li><li>SPOTPAID: spot payment</li><li>PREPAID: prepaid, i.e. monthly subscription</li><li>CDCPAID: dedicated cluster payment</li>
      */
     public String getInstanceChargeType() {
         return this.InstanceChargeType;
     }
 
     /**
-     * Set Instance billing type. valid values:.
-<Li>POSTPAID_BY_HOUR: pay-as-you-go hourly</li>.
-<Li>SPOTPAID: spot payment</li>.
-<Li>PREPAID: prepaid, i.e., monthly subscription</li>.
-<Li>CDCPAID: dedicated cluster payment</li>.
-     * @param InstanceChargeType Instance billing type. valid values:.
-<Li>POSTPAID_BY_HOUR: pay-as-you-go hourly</li>.
-<Li>SPOTPAID: spot payment</li>.
-<Li>PREPAID: prepaid, i.e., monthly subscription</li>.
-<Li>CDCPAID: dedicated cluster payment</li>.
+     * Set <p>Instance billing type. The value range is as follows:</p><li>POSTPAID_BY_HOUR: hourly postpaid</li><li>SPOTPAID: spot payment</li><li>PREPAID: prepaid, i.e. monthly subscription</li><li>CDCPAID: dedicated cluster payment</li>
+     * @param InstanceChargeType <p>Instance billing type. The value range is as follows:</p><li>POSTPAID_BY_HOUR: hourly postpaid</li><li>SPOTPAID: spot payment</li><li>PREPAID: prepaid, i.e. monthly subscription</li><li>CDCPAID: dedicated cluster payment</li>
      */
     public void setInstanceChargeType(String InstanceChargeType) {
         this.InstanceChargeType = InstanceChargeType;
     }
 
     /**
-     * Get Market options of the instance, such as parameters related to spot instances. This parameter is required for spot instances.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return InstanceMarketOptions Market options of the instance, such as parameters related to spot instances. This parameter is required for spot instances.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Market-related options of the instance, such as spot instance parameters. If the payment mode of the specified instance is spot payment, this parameter is required.</p> 
+     * @return InstanceMarketOptions <p>Market-related options of the instance, such as spot instance parameters. If the payment mode of the specified instance is spot payment, this parameter is required.</p>
      */
     public InstanceMarketOptionsRequest getInstanceMarketOptions() {
         return this.InstanceMarketOptions;
     }
 
     /**
-     * Set Market options of the instance, such as parameters related to spot instances. This parameter is required for spot instances.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param InstanceMarketOptions Market options of the instance, such as parameters related to spot instances. This parameter is required for spot instances.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Market-related options of the instance, such as spot instance parameters. If the payment mode of the specified instance is spot payment, this parameter is required.</p>
+     * @param InstanceMarketOptions <p>Market-related options of the instance, such as spot instance parameters. If the payment mode of the specified instance is spot payment, this parameter is required.</p>
      */
     public void setInstanceMarketOptions(InstanceMarketOptionsRequest InstanceMarketOptions) {
         this.InstanceMarketOptions = InstanceMarketOptions;
     }
 
     /**
-     * Get List of instance models. 
-     * @return InstanceTypes List of instance models.
+     * Get <p>Instance model list.</p> 
+     * @return InstanceTypes <p>Instance model list.</p>
      */
     public String [] getInstanceTypes() {
         return this.InstanceTypes;
     }
 
     /**
-     * Set List of instance models.
-     * @param InstanceTypes List of instance models.
+     * Set <p>Instance model list.</p>
+     * @param InstanceTypes <p>Instance model list.</p>
      */
     public void setInstanceTypes(String [] InstanceTypes) {
         this.InstanceTypes = InstanceTypes;
     }
 
     /**
-     * Get List of instance tags, which will be added to instances created by the scale-out activity. Up to 10 tags allowed. 
-     * @return InstanceTags List of instance tags, which will be added to instances created by the scale-out activity. Up to 10 tags allowed.
+     * Get <p>Instance tag list. Instances scaled out will automatically come with tags, supporting up to 10 tags.</p> 
+     * @return InstanceTags <p>Instance tag list. Instances scaled out will automatically come with tags, supporting up to 10 tags.</p>
      */
     public InstanceTag [] getInstanceTags() {
         return this.InstanceTags;
     }
 
     /**
-     * Set List of instance tags, which will be added to instances created by the scale-out activity. Up to 10 tags allowed.
-     * @param InstanceTags List of instance tags, which will be added to instances created by the scale-out activity. Up to 10 tags allowed.
+     * Set <p>Instance tag list. Instances scaled out will automatically come with tags, supporting up to 10 tags.</p>
+     * @param InstanceTags <p>Instance tag list. Instances scaled out will automatically come with tags, supporting up to 10 tags.</p>
      */
     public void setInstanceTags(InstanceTag [] InstanceTags) {
         this.InstanceTags = InstanceTags;
     }
 
     /**
-     * Get Tag list. this parameter specifies tags only used for binding the launch configuration and will not be passed to CVM instances scaled out based on it. 
-     * @return Tags Tag list. this parameter specifies tags only used for binding the launch configuration and will not be passed to CVM instances scaled out based on it.
+     * Get <p>Tag list. The tags in this parameter are only used to bind launch configurations and will not be passed to CVM instances scaled out based on the launch configuration.</p> 
+     * @return Tags <p>Tag list. The tags in this parameter are only used to bind launch configurations and will not be passed to CVM instances scaled out based on the launch configuration.</p>
      */
     public Tag [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set Tag list. this parameter specifies tags only used for binding the launch configuration and will not be passed to CVM instances scaled out based on it.
-     * @param Tags Tag list. this parameter specifies tags only used for binding the launch configuration and will not be passed to CVM instances scaled out based on it.
+     * Set <p>Tag list. The tags in this parameter are only used to bind launch configurations and will not be passed to CVM instances scaled out based on the launch configuration.</p>
+     * @param Tags <p>Tag list. The tags in this parameter are only used to bind launch configurations and will not be passed to CVM instances scaled out based on the launch configuration.</p>
      */
     public void setTags(Tag [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get Version 
-     * @return VersionNumber Version
+     * Get <p>Version number.</p> 
+     * @return VersionNumber <p>Version number.</p>
      */
     public Long getVersionNumber() {
         return this.VersionNumber;
     }
 
     /**
-     * Set Version
-     * @param VersionNumber Version
+     * Set <p>Version number.</p>
+     * @param VersionNumber <p>Version number.</p>
      */
     public void setVersionNumber(Long VersionNumber) {
         this.VersionNumber = VersionNumber;
     }
 
     /**
-     * Get Last update time is in standard UTC time. 
-     * @return UpdatedTime Last update time is in standard UTC time.
+     * Get <p>Update time in standard <code>UTC</code> format.</p> 
+     * @return UpdatedTime <p>Update time in standard <code>UTC</code> format.</p>
      */
     public String getUpdatedTime() {
         return this.UpdatedTime;
     }
 
     /**
-     * Set Last update time is in standard UTC time.
-     * @param UpdatedTime Last update time is in standard UTC time.
+     * Set <p>Update time in standard <code>UTC</code> format.</p>
+     * @param UpdatedTime <p>Update time in standard <code>UTC</code> format.</p>
      */
     public void setUpdatedTime(String UpdatedTime) {
         this.UpdatedTime = UpdatedTime;
     }
 
     /**
-     * Get Role name of the CAM role. can be obtained from roleName in the return value from the [DescribeRoleList API](https://intl.cloud.tencent.com/document/product/598/36223?from_cn_redirect=1). 
-     * @return CamRoleName Role name of the CAM role. can be obtained from roleName in the return value from the [DescribeRoleList API](https://intl.cloud.tencent.com/document/product/598/36223?from_cn_redirect=1).
+     * Get <p>CAM role name, which can be obtained from the roleName in the return value from the <a href="https://www.tencentcloud.com/document/product/598/36223?from_cn_redirect=1">DescribeRoleList</a> API.</p> 
+     * @return CamRoleName <p>CAM role name, which can be obtained from the roleName in the return value from the <a href="https://www.tencentcloud.com/document/product/598/36223?from_cn_redirect=1">DescribeRoleList</a> API.</p>
      */
     public String getCamRoleName() {
         return this.CamRoleName;
     }
 
     /**
-     * Set Role name of the CAM role. can be obtained from roleName in the return value from the [DescribeRoleList API](https://intl.cloud.tencent.com/document/product/598/36223?from_cn_redirect=1).
-     * @param CamRoleName Role name of the CAM role. can be obtained from roleName in the return value from the [DescribeRoleList API](https://intl.cloud.tencent.com/document/product/598/36223?from_cn_redirect=1).
+     * Set <p>CAM role name, which can be obtained from the roleName in the return value from the <a href="https://www.tencentcloud.com/document/product/598/36223?from_cn_redirect=1">DescribeRoleList</a> API.</p>
+     * @param CamRoleName <p>CAM role name, which can be obtained from the roleName in the return value from the <a href="https://www.tencentcloud.com/document/product/598/36223?from_cn_redirect=1">DescribeRoleList</a> API.</p>
      */
     public void setCamRoleName(String CamRoleName) {
         this.CamRoleName = CamRoleName;
     }
 
     /**
-     * Get Value of InstanceTypesCheckPolicy upon the last operation. 
-     * @return LastOperationInstanceTypesCheckPolicy Value of InstanceTypesCheckPolicy upon the last operation.
+     * Get <p>The value of InstanceTypesCheckPolicy last time when operating.</p> 
+     * @return LastOperationInstanceTypesCheckPolicy <p>The value of InstanceTypesCheckPolicy last time when operating.</p>
      */
     public String getLastOperationInstanceTypesCheckPolicy() {
         return this.LastOperationInstanceTypesCheckPolicy;
     }
 
     /**
-     * Set Value of InstanceTypesCheckPolicy upon the last operation.
-     * @param LastOperationInstanceTypesCheckPolicy Value of InstanceTypesCheckPolicy upon the last operation.
+     * Set <p>The value of InstanceTypesCheckPolicy last time when operating.</p>
+     * @param LastOperationInstanceTypesCheckPolicy <p>The value of InstanceTypesCheckPolicy last time when operating.</p>
      */
     public void setLastOperationInstanceTypesCheckPolicy(String LastOperationInstanceTypesCheckPolicy) {
         this.LastOperationInstanceTypesCheckPolicy = LastOperationInstanceTypesCheckPolicy;
     }
 
     /**
-     * Get CVM hostname settings. 
-     * @return HostNameSettings CVM hostname settings.
+     * Get <p>Related settings for the CVM host name (HostName).</p> 
+     * @return HostNameSettings <p>Related settings for the CVM host name (HostName).</p>
      */
     public HostNameSettings getHostNameSettings() {
         return this.HostNameSettings;
     }
 
     /**
-     * Set CVM hostname settings.
-     * @param HostNameSettings CVM hostname settings.
+     * Set <p>Related settings for the CVM host name (HostName).</p>
+     * @param HostNameSettings <p>Related settings for the CVM host name (HostName).</p>
      */
     public void setHostNameSettings(HostNameSettings HostNameSettings) {
         this.HostNameSettings = HostNameSettings;
     }
 
     /**
-     * Get Settings of CVM instance names 
-     * @return InstanceNameSettings Settings of CVM instance names
+     * Get <p>Related settings for the cloud server instance name (InstanceName).</p> 
+     * @return InstanceNameSettings <p>Related settings for the cloud server instance name (InstanceName).</p>
      */
     public InstanceNameSettings getInstanceNameSettings() {
         return this.InstanceNameSettings;
     }
 
     /**
-     * Set Settings of CVM instance names
-     * @param InstanceNameSettings Settings of CVM instance names
+     * Set <p>Related settings for the cloud server instance name (InstanceName).</p>
+     * @param InstanceNameSettings <p>Related settings for the cloud server instance name (InstanceName).</p>
      */
     public void setInstanceNameSettings(InstanceNameSettings InstanceNameSettings) {
         this.InstanceNameSettings = InstanceNameSettings;
     }
 
     /**
-     * Get Details of the monthly subscription, including the purchase period, auto-renewal. It is required if the `InstanceChargeType` is `PREPAID`. 
-     * @return InstanceChargePrepaid Details of the monthly subscription, including the purchase period, auto-renewal. It is required if the `InstanceChargeType` is `PREPAID`.
+     * Get <p>Prepaid mode, i.e., parameter settings related to monthly/annual subscription. By specifying this parameter, you can specify the purchase duration of annual and monthly subscription instances, whether to enable auto-renewal, and other attributes. This parameter is required if the billing mode for the specified instance is prepaid.</p> 
+     * @return InstanceChargePrepaid <p>Prepaid mode, i.e., parameter settings related to monthly/annual subscription. By specifying this parameter, you can specify the purchase duration of annual and monthly subscription instances, whether to enable auto-renewal, and other attributes. This parameter is required if the billing mode for the specified instance is prepaid.</p>
      */
     public InstanceChargePrepaid getInstanceChargePrepaid() {
         return this.InstanceChargePrepaid;
     }
 
     /**
-     * Set Details of the monthly subscription, including the purchase period, auto-renewal. It is required if the `InstanceChargeType` is `PREPAID`.
-     * @param InstanceChargePrepaid Details of the monthly subscription, including the purchase period, auto-renewal. It is required if the `InstanceChargeType` is `PREPAID`.
+     * Set <p>Prepaid mode, i.e., parameter settings related to monthly/annual subscription. By specifying this parameter, you can specify the purchase duration of annual and monthly subscription instances, whether to enable auto-renewal, and other attributes. This parameter is required if the billing mode for the specified instance is prepaid.</p>
+     * @param InstanceChargePrepaid <p>Prepaid mode, i.e., parameter settings related to monthly/annual subscription. By specifying this parameter, you can specify the purchase duration of annual and monthly subscription instances, whether to enable auto-renewal, and other attributes. This parameter is required if the billing mode for the specified instance is prepaid.</p>
      */
     public void setInstanceChargePrepaid(InstanceChargePrepaid InstanceChargePrepaid) {
         this.InstanceChargePrepaid = InstanceChargePrepaid;
     }
 
     /**
-     * Get Cloud disk type selection policy. Valid values: <li>ORIGINAL: Use the set cloud disk type.</li> <li>AUTOMATIC: Automatically select available cloud disk types in the current availability zone.</li> 
-     * @return DiskTypePolicy Cloud disk type selection policy. Valid values: <li>ORIGINAL: Use the set cloud disk type.</li> <li>AUTOMATIC: Automatically select available cloud disk types in the current availability zone.</li>
+     * Get <p>Cloud disk type selection policy. Parameter value range: <li>ORIGINAL: use the set cloud disk type</li><li>AUTOMATIC: automatically select available cloud disk types in the current AZ</li></p> 
+     * @return DiskTypePolicy <p>Cloud disk type selection policy. Parameter value range: <li>ORIGINAL: use the set cloud disk type</li><li>AUTOMATIC: automatically select available cloud disk types in the current AZ</li></p>
      */
     public String getDiskTypePolicy() {
         return this.DiskTypePolicy;
     }
 
     /**
-     * Set Cloud disk type selection policy. Valid values: <li>ORIGINAL: Use the set cloud disk type.</li> <li>AUTOMATIC: Automatically select available cloud disk types in the current availability zone.</li>
-     * @param DiskTypePolicy Cloud disk type selection policy. Valid values: <li>ORIGINAL: Use the set cloud disk type.</li> <li>AUTOMATIC: Automatically select available cloud disk types in the current availability zone.</li>
+     * Set <p>Cloud disk type selection policy. Parameter value range: <li>ORIGINAL: use the set cloud disk type</li><li>AUTOMATIC: automatically select available cloud disk types in the current AZ</li></p>
+     * @param DiskTypePolicy <p>Cloud disk type selection policy. Parameter value range: <li>ORIGINAL: use the set cloud disk type</li><li>AUTOMATIC: automatically select available cloud disk types in the current AZ</li></p>
      */
     public void setDiskTypePolicy(String DiskTypePolicy) {
         this.DiskTypePolicy = DiskTypePolicy;
     }
 
     /**
-     * Get HPC ID<br>
-Note: This field is default to empty 
-     * @return HpcClusterId HPC ID<br>
-Note: This field is default to empty
+     * Get <p>Hyper Computing Cluster ID.<br><br>Note: This field is empty by default.</p> 
+     * @return HpcClusterId <p>Hyper Computing Cluster ID.<br><br>Note: This field is empty by default.</p>
      */
     public String getHpcClusterId() {
         return this.HpcClusterId;
     }
 
     /**
-     * Set HPC ID<br>
-Note: This field is default to empty
-     * @param HpcClusterId HPC ID<br>
-Note: This field is default to empty
+     * Set <p>Hyper Computing Cluster ID.<br><br>Note: This field is empty by default.</p>
+     * @param HpcClusterId <p>Hyper Computing Cluster ID.<br><br>Note: This field is empty by default.</p>
      */
     public void setHpcClusterId(String HpcClusterId) {
         this.HpcClusterId = HpcClusterId;
     }
 
     /**
-     * Get IPv6 public network bandwidth configuration. 
-     * @return IPv6InternetAccessible IPv6 public network bandwidth configuration.
+     * Get <p>IPv6 public network bandwidth-related information settings.</p> 
+     * @return IPv6InternetAccessible <p>IPv6 public network bandwidth-related information settings.</p>
      */
     public IPv6InternetAccessible getIPv6InternetAccessible() {
         return this.IPv6InternetAccessible;
     }
 
     /**
-     * Set IPv6 public network bandwidth configuration.
-     * @param IPv6InternetAccessible IPv6 public network bandwidth configuration.
+     * Set <p>IPv6 public network bandwidth-related information settings.</p>
+     * @param IPv6InternetAccessible <p>IPv6 public network bandwidth-related information settings.</p>
      */
     public void setIPv6InternetAccessible(IPv6InternetAccessible IPv6InternetAccessible) {
         this.IPv6InternetAccessible = IPv6InternetAccessible;
     }
 
     /**
-     * Get Placement group ID, supporting specification of only one. 
-     * @return DisasterRecoverGroupIds Placement group ID, supporting specification of only one.
+     * Get <p>Placement Group id. Only one can be specified.</p> 
+     * @return DisasterRecoverGroupIds <p>Placement Group id. Only one can be specified.</p>
      */
     public String [] getDisasterRecoverGroupIds() {
         return this.DisasterRecoverGroupIds;
     }
 
     /**
-     * Set Placement group ID, supporting specification of only one.
-     * @param DisasterRecoverGroupIds Placement group ID, supporting specification of only one.
+     * Set <p>Placement Group id. Only one can be specified.</p>
+     * @param DisasterRecoverGroupIds <p>Placement Group id. Only one can be specified.</p>
      */
     public void setDisasterRecoverGroupIds(String [] DisasterRecoverGroupIds) {
         this.DisasterRecoverGroupIds = DisasterRecoverGroupIds;
     }
 
     /**
-     * Get Image family name. 
-     * @return ImageFamily Image family name.
+     * Get <p>Image family name.</p> 
+     * @return ImageFamily <p>Image family name.</p>
      */
     public String getImageFamily() {
         return this.ImageFamily;
     }
 
     /**
-     * Set Image family name.
-     * @param ImageFamily Image family name.
+     * Set <p>Image family name.</p>
+     * @param ImageFamily <p>Image family name.</p>
      */
     public void setImageFamily(String ImageFamily) {
         this.ImageFamily = ImageFamily;
     }
 
     /**
-     * Get CDC ID. 
-     * @return DedicatedClusterId CDC ID.
+     * Get <p>Local dedicated cluster ID.</p> 
+     * @return DedicatedClusterId <p>Local dedicated cluster ID.</p>
      */
     public String getDedicatedClusterId() {
         return this.DedicatedClusterId;
     }
 
     /**
-     * Set CDC ID.
-     * @param DedicatedClusterId CDC ID.
+     * Set <p>Local dedicated cluster ID.</p>
+     * @param DedicatedClusterId <p>Local dedicated cluster ID.</p>
      */
     public void setDedicatedClusterId(String DedicatedClusterId) {
         this.DedicatedClusterId = DedicatedClusterId;
+    }
+
+    /**
+     * Get <p>ENI configuration of the launch configuration.</p> 
+     * @return NetworkInterfaces <p>ENI configuration of the launch configuration.</p>
+     */
+    public NetworkInterface [] getNetworkInterfaces() {
+        return this.NetworkInterfaces;
+    }
+
+    /**
+     * Set <p>ENI configuration of the launch configuration.</p>
+     * @param NetworkInterfaces <p>ENI configuration of the launch configuration.</p>
+     */
+    public void setNetworkInterfaces(NetworkInterface [] NetworkInterfaces) {
+        this.NetworkInterfaces = NetworkInterfaces;
     }
 
     public LaunchConfiguration() {
@@ -945,6 +933,12 @@ Note: This field is default to empty
         if (source.DedicatedClusterId != null) {
             this.DedicatedClusterId = new String(source.DedicatedClusterId);
         }
+        if (source.NetworkInterfaces != null) {
+            this.NetworkInterfaces = new NetworkInterface[source.NetworkInterfaces.length];
+            for (int i = 0; i < source.NetworkInterfaces.length; i++) {
+                this.NetworkInterfaces[i] = new NetworkInterface(source.NetworkInterfaces[i]);
+            }
+        }
     }
 
 
@@ -985,6 +979,7 @@ Note: This field is default to empty
         this.setParamArraySimple(map, prefix + "DisasterRecoverGroupIds.", this.DisasterRecoverGroupIds);
         this.setParamSimple(map, prefix + "ImageFamily", this.ImageFamily);
         this.setParamSimple(map, prefix + "DedicatedClusterId", this.DedicatedClusterId);
+        this.setParamArrayObj(map, prefix + "NetworkInterfaces.", this.NetworkInterfaces);
 
     }
 }

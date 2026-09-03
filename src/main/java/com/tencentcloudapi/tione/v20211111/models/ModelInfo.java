@@ -66,7 +66,8 @@ public class ModelInfo extends AbstractModel {
     private CosPathInfo CosPathInfo;
 
     /**
-    * GooseFSx configurations, and is valid when ModelSource is GooseFSx.
+    * GooseFSx configuration. This parameter takes effect if ModelSource is GooseFSx.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("GooseFSx")
     @Expose
@@ -211,16 +212,20 @@ public class ModelInfo extends AbstractModel {
     }
 
     /**
-     * Get GooseFSx configurations, and is valid when ModelSource is GooseFSx. 
-     * @return GooseFSx GooseFSx configurations, and is valid when ModelSource is GooseFSx.
+     * Get GooseFSx configuration. This parameter takes effect if ModelSource is GooseFSx.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return GooseFSx GooseFSx configuration. This parameter takes effect if ModelSource is GooseFSx.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public GooseFSx getGooseFSx() {
         return this.GooseFSx;
     }
 
     /**
-     * Set GooseFSx configurations, and is valid when ModelSource is GooseFSx.
-     * @param GooseFSx GooseFSx configurations, and is valid when ModelSource is GooseFSx.
+     * Set GooseFSx configuration. This parameter takes effect if ModelSource is GooseFSx.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param GooseFSx GooseFSx configuration. This parameter takes effect if ModelSource is GooseFSx.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setGooseFSx(GooseFSx GooseFSx) {
         this.GooseFSx = GooseFSx;

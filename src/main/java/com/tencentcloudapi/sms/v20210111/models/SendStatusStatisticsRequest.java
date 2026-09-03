@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class SendStatusStatisticsRequest extends AbstractModel {
 
     /**
-    * Start time in the format of `yyyymmddhh` accurate to the hour, such as 2021050113 (13:00 on May 1, 2021).
+    * Start time in the format of `yyyymmddhh` accurate to the hour, such as 2021050113 (13:00 on May 1, 2021).Note: the statistical range includes the current hour.
     */
     @SerializedName("BeginTime")
     @Expose
@@ -32,7 +32,7 @@ public class SendStatusStatisticsRequest extends AbstractModel {
 
     /**
     * End time in the format of `yyyymmddhh` accurate to the hour, such as 2021050118 (18:00 on May 1, 2021).
-Note: `EndTime` must be after `BeginTime`.
+Note: `EndTime` must be after `BeginTime`, and the statistical range includes the current hour.
     */
     @SerializedName("EndTime")
     @Expose
@@ -62,16 +62,16 @@ Note: this parameter is currently fixed at 0.
     private Long Offset;
 
     /**
-     * Get Start time in the format of `yyyymmddhh` accurate to the hour, such as 2021050113 (13:00 on May 1, 2021). 
-     * @return BeginTime Start time in the format of `yyyymmddhh` accurate to the hour, such as 2021050113 (13:00 on May 1, 2021).
+     * Get Start time in the format of `yyyymmddhh` accurate to the hour, such as 2021050113 (13:00 on May 1, 2021).Note: the statistical range includes the current hour. 
+     * @return BeginTime Start time in the format of `yyyymmddhh` accurate to the hour, such as 2021050113 (13:00 on May 1, 2021).Note: the statistical range includes the current hour.
      */
     public String getBeginTime() {
         return this.BeginTime;
     }
 
     /**
-     * Set Start time in the format of `yyyymmddhh` accurate to the hour, such as 2021050113 (13:00 on May 1, 2021).
-     * @param BeginTime Start time in the format of `yyyymmddhh` accurate to the hour, such as 2021050113 (13:00 on May 1, 2021).
+     * Set Start time in the format of `yyyymmddhh` accurate to the hour, such as 2021050113 (13:00 on May 1, 2021).Note: the statistical range includes the current hour.
+     * @param BeginTime Start time in the format of `yyyymmddhh` accurate to the hour, such as 2021050113 (13:00 on May 1, 2021).Note: the statistical range includes the current hour.
      */
     public void setBeginTime(String BeginTime) {
         this.BeginTime = BeginTime;
@@ -79,9 +79,9 @@ Note: this parameter is currently fixed at 0.
 
     /**
      * Get End time in the format of `yyyymmddhh` accurate to the hour, such as 2021050118 (18:00 on May 1, 2021).
-Note: `EndTime` must be after `BeginTime`. 
+Note: `EndTime` must be after `BeginTime`, and the statistical range includes the current hour. 
      * @return EndTime End time in the format of `yyyymmddhh` accurate to the hour, such as 2021050118 (18:00 on May 1, 2021).
-Note: `EndTime` must be after `BeginTime`.
+Note: `EndTime` must be after `BeginTime`, and the statistical range includes the current hour.
      */
     public String getEndTime() {
         return this.EndTime;
@@ -89,9 +89,9 @@ Note: `EndTime` must be after `BeginTime`.
 
     /**
      * Set End time in the format of `yyyymmddhh` accurate to the hour, such as 2021050118 (18:00 on May 1, 2021).
-Note: `EndTime` must be after `BeginTime`.
+Note: `EndTime` must be after `BeginTime`, and the statistical range includes the current hour.
      * @param EndTime End time in the format of `yyyymmddhh` accurate to the hour, such as 2021050118 (18:00 on May 1, 2021).
-Note: `EndTime` must be after `BeginTime`.
+Note: `EndTime` must be after `BeginTime`, and the statistical range includes the current hour.
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
